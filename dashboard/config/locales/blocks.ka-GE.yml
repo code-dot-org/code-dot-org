@@ -660,16 +660,20 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"costume"': კოსტუმი
-            '"direction"': მოძრაობის მიმართულება
-            '"rotation"': მოტრიალება ან მიმართულება
-            '"tint"': შეფერადება
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': სხვა
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
       binary_move:
         options:
           DIR:

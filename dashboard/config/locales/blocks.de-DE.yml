@@ -852,14 +852,16 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-            '"direction"': Bewegungsrichtung
-            '"tint"': Farbton
+          CONDITION:
+            '"when"': wenn
+            '"while"': solange
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': wenn
+            '"while"': solange
       binary_move:
         options:
           DIR:

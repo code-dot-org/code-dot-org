@@ -1176,6 +1176,8 @@ id:
         courseA_artist_loops2_a: Tidak tahu cara menggambar garis? Mulai melampirkan blok ke blok <block type="when_run"/></xml> untuk melihat apa yang terjadi.
       courseA_artist_loops2_2018_authored_hint:
         courseA_artist_loops2_a: Tidak tahu cara menggambar garis? Mulai melampirkan blok ke blok <block type="when_run"/></xml> untuk melihat apa yang terjadi.
+      courseA_artist_loops2_2019_authored_hint:
+        courseA_artist_loops2_a: Tidak tahu cara menggambar garis? Mulai melampirkan blok ke blok <block type="when_run"/></xml> untuk melihat apa yang terjadi.
       courseA_artist_loops3_authored_hint:
         courseA_artist_loops3_a: Jejak perlahan-lahan melalui program dengan jari anda untuk melihat di mana ia salah pergi.
         courseA_artist_loops3_b: |-
@@ -1183,6 +1185,12 @@ id:
 
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops3_2018_authored_hint:
+        courseA_artist_loops3_a: Jejak perlahan-lahan melalui program dengan jari anda untuk melihat di mana ia salah pergi.
+        courseA_artist_loops3_b: |-
+          Kamu sangat dianjurkan menggunakan blok seperti ini untuk memecahkan teka-teki ini.
+
+          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+      courseA_artist_loops3_2019_authored_hint:
         courseA_artist_loops3_a: Jejak perlahan-lahan melalui program dengan jari anda untuk melihat di mana ia salah pergi.
         courseA_artist_loops3_b: |-
           Kamu sangat dianjurkan menggunakan blok seperti ini untuk memecahkan teka-teki ini.
@@ -1198,18 +1206,30 @@ id:
         courseA_artist_loops4_b: |-
           Kamu hanya bisa menggunakan satu blok <xml> <block type = "simple_move_right" /> </ xml>
           coba letakkan di dalam lingkaran <block type = "controls_repeat_simplified_dropdown"> <title name = "TIMES" config = "2-6"> 5 </ title> </ block> loop.
+      courseA_artist_loops4_2019_authored_hint:
+        courseA_artist_loops4_a: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
+        courseA_artist_loops4_b: |-
+          Kamu hanya bisa menggunakan satu blok <xml> <block type = "simple_move_right" /> </ xml>
+          coba letakkan di dalam lingkaran <block type = "controls_repeat_simplified_dropdown"> <title name = "TIMES" config = "2-6"> 5 </ title> </ block> loop.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_b: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
       courseA_artist_loops5_2018_authored_hint:
+        courseA_artist_loops5_b: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
+      courseA_artist_loops5_2019_authored_hint:
         courseA_artist_loops5_b: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_b: Anda akan perlu 2 blok dalam 2 arah untuk memecahkan teka-teki ini.
       courseA_artist_loops6_2018_authored_hint:
         courseA_artist_loops6_b: Anda akan perlu 2 blok dalam 2 arah untuk memecahkan teka-teki ini.
+      courseA_artist_loops6_2019_authored_hint:
+        courseA_artist_loops6_b: Anda akan perlu 2 blok dalam 2 arah untuk memecahkan teka-teki ini.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
       courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
+        courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
+      courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
       courseA_artist_loops7_forVideo_authored_hint:
@@ -1221,11 +1241,18 @@ id:
       courseA_artist_loops8_2018_authored_hint:
         courseA_artist_loops8_a: Cobalah menjalankan kode untuk melihat apa yang telah ditulis untuk anda.
         courseA_artist_loops8_b: Bagaimana anda akan mengulang kode loop yang telah diberikan kepada anda?
+      courseA_artist_loops8_2019_authored_hint:
+        courseA_artist_loops8_a: Cobalah menjalankan kode untuk melihat apa yang telah ditulis untuk anda.
+        courseA_artist_loops8_b: Bagaimana anda akan mengulang kode loop yang telah diberikan kepada anda?
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Tambahkan blok lain pada kode yang anda berikan untuk menarik sisa tangga.
         courseA_artist_loops9_b: "Blok yang Anda tambahkan harus masuk ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>"
         courseA_artist_loops9_c: Jika kamu tidak tahu di mana meletakkan loop, coba tulis kode kamu pelan-pelan dan lihatlah polanya.
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: Tambahkan blok lain pada kode yang anda berikan untuk menarik sisa tangga.
+        courseA_artist_loops9_b: "Blok yang Anda tambahkan harus masuk ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>"
+        courseA_artist_loops9_c: Jika kamu tidak tahu di mana meletakkan loop, coba tulis kode kamu pelan-pelan dan lihatlah polanya.
+      courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Tambahkan blok lain pada kode yang anda berikan untuk menarik sisa tangga.
         courseA_artist_loops9_b: "Blok yang Anda tambahkan harus masuk ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>"
         courseA_artist_loops9_c: Jika kamu tidak tahu di mana meletakkan loop, coba tulis kode kamu pelan-pelan dan lihatlah polanya.
@@ -1238,19 +1265,28 @@ id:
       courseA_artist_loops_challenge2a_2018_authored_hint:
         courseA_artist_loops_challenge2_b: Saat Anda menyelesaikan satu tenda, `melompat` dua kali untuk sampai ke berikutnya!
         courseA_artist_loops_challenge2_c: Semua Anda blok akan perlu dalam sebuah lingkaran untuk menyelesaikan ini teka-teki.
+      courseA_artist_loops_challenge2a_2019_authored_hint:
+        courseA_artist_loops_challenge2_b: Saat Anda menyelesaikan satu tenda, `melompat` dua kali untuk sampai ke berikutnya!
+        courseA_artist_loops_challenge2_c: Semua Anda blok akan perlu dalam sebuah lingkaran untuk menyelesaikan ini teka-teki.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain.
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_b: Solusi mudah adalah bergerak ke Timur 2 kali, lalu dapatkan harta karun.
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_b: Solusi mudah adalah bergerak ke Timur 2 kali, lalu dapatkan harta karun.
+      courseA_collector_loops1_2019_authored_hint:
+        courseA_collector_loops1_b: Solusi mudah adalah bergerak ke Timur 2 kali, lalu dapatkan harta karun.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
+      courseA_collector_loops2_2019_authored_hint:
+        courseA_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
       courseA_collector_loops4_2018_authored_hint:
+        courseA_collector_loops4_a: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
+      courseA_collector_loops4_2019_authored_hint:
         courseA_collector_loops4_a: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Jika anda tidak mengetahui jawabannya segera, coba gunakan selembar kertas untuk mengetahui panah apa yang akan anda butuhkan dan cari sebuah pola.
@@ -1258,13 +1294,20 @@ id:
       courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: Jika anda tidak mengetahui jawabannya segera, coba gunakan selembar kertas untuk mengetahui panah apa yang akan anda butuhkan dan cari sebuah pola.
         courseA_collector_loops5_b: Cobalah membelah masalah ke dalam 2 bagian, bergerak menyamping dan turun ke bawah.
+      courseA_collector_loops5_2019_authored_hint:
+        courseA_collector_loops5_a: Jika anda tidak mengetahui jawabannya segera, coba gunakan selembar kertas untuk mengetahui panah apa yang akan anda butuhkan dan cari sebuah pola.
+        courseA_collector_loops5_b: Cobalah membelah masalah ke dalam 2 bagian, bergerak menyamping dan turun ke bawah.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseA_collector_loops6_2018_authored_hint:
         courseA_collector_loops6_a: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
+      courseA_collector_loops6_2019_authored_hint:
+        courseA_collector_loops6_a: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Jika Anda tidak tahu apa yang akan terjadi selanjutnya, cobalah menjalankan kode untuk melihat di mana Laurel berakhir.
       courseA_collector_loops7_2018_authored_hint:
+        courseA_collector_loops7_a: Jika Anda tidak tahu apa yang akan terjadi selanjutnya, cobalah menjalankan kode untuk melihat di mana Laurel berakhir.
+      courseA_collector_loops7_2019_authored_hint:
         courseA_collector_loops7_a: Jika Anda tidak tahu apa yang akan terjadi selanjutnya, cobalah menjalankan kode untuk melihat di mana Laurel berakhir.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: Jika anda mempunyai masalah untuk memecahkan teka-teki ini, cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
@@ -1274,15 +1317,25 @@ id:
         courseA_collector_loops8_a: Jika anda mempunyai masalah untuk memecahkan teka-teki ini, cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
         courseA_collector_loops8_b: Cobalah memecahkan teka - teki ini menjadi 3 masalah terpisah, dan tuliskan loop untuk masing-masing.
         courseA_collector_loops8_c: Ingat Anda dapat menulis satu bagian dari kode pada satu waktu, kemudian tekan "Run" untuk mencari tahu dari mana Anda harus pergi dari sana.
+      courseA_collector_loops8_2019_authored_hint:
+        courseA_collector_loops8_a: Jika anda mempunyai masalah untuk memecahkan teka-teki ini, cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
+        courseA_collector_loops8_b: Cobalah memecahkan teka - teki ini menjadi 3 masalah terpisah, dan tuliskan loop untuk masing-masing.
+        courseA_collector_loops8_c: Ingat Anda dapat menulis satu bagian dari kode pada satu waktu, kemudian tekan "Run" untuk mencari tahu dari mana Anda harus pergi dari sana.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'Jika anda tidak dapat menemukan tempat terbaik untuk menggunakan loop, cobalah mengkodekannya langkah demi langkah dan mencari sebuah pola. '
       courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: 'Jika anda tidak dapat menemukan tempat terbaik untuk menggunakan loop, cobalah mengkodekannya langkah demi langkah dan mencari sebuah pola. '
+      courseA_collector_loops9_2019_authored_hint:
         courseA_collector_loops9_a: 'Jika anda tidak dapat menemukan tempat terbaik untuk menggunakan loop, cobalah mengkodekannya langkah demi langkah dan mencari sebuah pola. '
       courseA_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Coba ubah angka di setiap loop jika ada yang salah.
         courseA_collector_loops_challenge1_b: Anda tidak perlu menggunakan sebuah lingkaran jika Anda hanya melakukan sesuatu satu waktu.
         courseA_collector_loops_challenge1_c: Terdapat 6 permata di sisi kanan gua saat anda memulai, tetapi anda hanya perlu bergerak untuk mendapatkan harta karun 5 kali ke Selatan. Anda tahu kenapa?
       courseA_collector_loops_challenge1_2018_authored_hint:
+        courseA_collector_loops_challenge1_a: Coba ubah angka di setiap loop jika ada yang salah.
+        courseA_collector_loops_challenge1_b: Anda tidak perlu menggunakan sebuah lingkaran jika Anda hanya melakukan sesuatu satu waktu.
+        courseA_collector_loops_challenge1_c: Terdapat 6 permata di sisi kanan gua saat anda memulai, tetapi anda hanya perlu bergerak untuk mendapatkan harta karun 5 kali ke Selatan. Anda tahu kenapa?
+      courseA_collector_loops_challenge1_2019_authored_hint:
         courseA_collector_loops_challenge1_a: Coba ubah angka di setiap loop jika ada yang salah.
         courseA_collector_loops_challenge1_b: Anda tidak perlu menggunakan sebuah lingkaran jika Anda hanya melakukan sesuatu satu waktu.
         courseA_collector_loops_challenge1_c: Terdapat 6 permata di sisi kanan gua saat anda memulai, tetapi anda hanya perlu bergerak untuk mendapatkan harta karun 5 kali ke Selatan. Anda tahu kenapa?
@@ -1295,20 +1348,50 @@ id:
       courseA_collector_loops_challenge2kp_2018_authored_hint:
         courseA_collector_loops_challenge2kp_b: Cobalah jalan ini untuk membuat anda mendapatkan sebuah solusi.
         courseA_collector_loops_challenge2kp_a: Bisakah Anda menggunakan loop untuk memecahkan teka-teki ini?
+      courseA_collector_loops_challenge2kp_2019_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Cobalah jalan ini untuk membuat anda mendapatkan sebuah solusi.
+        courseA_collector_loops_challenge2kp_a: Bisakah Anda menggunakan loop untuk memecahkan teka-teki ini?
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: Anda harus pergi dua arah yang berbeda untuk mendapatkan satu permata!
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_b: "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
+      courseA_harvester_loops3_2019_authored_hint:
+        courseA_harvester_loops3_b: "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
       courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
+      courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_a: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: |-
           Anda akan membutuhkan satu ` ulangi ` lingkaran demi satu.
+      courseA_harvester_loops5a_2019_authored_hint:
+        courseA_harvester_loops5a_a: |-
+          Anda akan membutuhkan satu ` ulangi ` lingkaran demi satu.
       courseA_harvester_loops6_authored_hint:
+        courseA_harvester_loops6_a: Jika Anda terjebak, cobalah menulis langkah di atas kertas dan mencari pola berulang.
+      courseA_harvester_loops6_2019_authored_hint:
         courseA_harvester_loops6_a: Jika Anda terjebak, cobalah menulis langkah di atas kertas dan mencari pola berulang.
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_b: Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
+      courseA_harvester_seq2_2019_authored_hint:
+        courseA_harvester_seq2_b: Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1345,7 +1428,45 @@ id:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1386,11 +1507,46 @@ id:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
         courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1412,10 +1568,16 @@ id:
       courseA_maze_seq10_2018_authored_hint:
         courseA_maze_seq10_a: Jika anda mengalami masalah, coba tuliskan langkah-langkah di selembar kertas terlebih dahulu.
         courseA_maze_seq10_b: Anda perlu pergi 3 arah untuk memecahkan teka-teki ini.
+      courseA_maze_seq10_2019_authored_hint:
+        courseA_maze_seq10_a: Jika anda mengalami masalah, coba tuliskan langkah-langkah di selembar kertas terlebih dahulu.
+        courseA_maze_seq10_b: Anda perlu pergi 3 arah untuk memecahkan teka-teki ini.
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Jika jalur yang anda butuhkan tidak jelas, gunakan jari anda untuk melacak jalan anda dari burung ke babi.
         courseA_maze_seq13_b: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan jalankan kode untuk melihat apa yang terjadi.
       courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_a: Jika jalur yang anda butuhkan tidak jelas, gunakan jari anda untuk melacak jalan anda dari burung ke babi.
+        courseA_maze_seq13_b: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan jalankan kode untuk melihat apa yang terjadi.
+      courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: Jika jalur yang anda butuhkan tidak jelas, gunakan jari anda untuk melacak jalan anda dari burung ke babi.
         courseA_maze_seq13_b: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan jalankan kode untuk melihat apa yang terjadi.
       courseA_maze_seq2_authored_hint:
@@ -1447,12 +1609,23 @@ id:
           You will need to use this block:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
+        '1': Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Kode terakhir anda harus memiliki 3 blok gerakan.
         courseA_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
       courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_a: Kode terakhir anda harus memiliki 3 blok gerakan.
+        courseA_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
+      courseA_maze_seq6_2019_authored_hint:
         courseA_maze_seq6_a: Kode terakhir anda harus memiliki 3 blok gerakan.
         courseA_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
       courseA_maze_seq7_authored_hint:
@@ -1464,6 +1637,8 @@ id:
       courseA_maze_seq8_authored_hint:
         courseA_maze_seq8_a: Jika anda terjebak, coba gambar di atas kertas untuk melihat bagaimana burung harus bergerak.
       courseA_maze_seq8_2018_authored_hint:
+        courseA_maze_seq8_a: Jika anda terjebak, coba gambar di atas kertas untuk melihat bagaimana burung harus bergerak.
+      courseA_maze_seq8_2019_authored_hint:
         courseA_maze_seq8_a: Jika anda terjebak, coba gambar di atas kertas untuk melihat bagaimana burung harus bergerak.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Terjebak? Cobalah menelusuri jalan burung dengan jari anda.
@@ -1477,19 +1652,30 @@ id:
         courseA_maze_seq_challenge1_a: Terdapat dua solusi untuk teka-teki ini.
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: Terdapat dua solusi untuk teka-teki ini.
+      courseA_maze_seq_challenge1_2019_authored_hint:
+        courseA_maze_seq_challenge1_a: Terdapat dua solusi untuk teka-teki ini.
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: Cobalah menghitung spasi dengan jari Anda. Ingatlah untuk tidak menghitung ruang di mana Anda memulai!
       courseA_maze_seq_challenge2_2018_authored_hint:
+        courseA_maze_seq_challenge2_a: Cobalah menghitung spasi dengan jari Anda. Ingatlah untuk tidak menghitung ruang di mana Anda memulai!
+      courseA_maze_seq_challenge2_2019_authored_hint:
         courseA_maze_seq_challenge2_a: Cobalah menghitung spasi dengan jari Anda. Ingatlah untuk tidak menghitung ruang di mana Anda memulai!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: Carilah blok yang membuat anjing mengatakan sesuatu.
       courseA_playLab_events2_2018_authored_hint:
         courseA_playLab_events2_a: Carilah blok yang membuat anjing mengatakan sesuatu.
+      courseA_playLab_events2_2019_authored_hint:
+        courseA_playLab_events2_a: Carilah blok yang membuat anjing mengatakan sesuatu.
       courseA_playLab_events3_authored_hint:
         courseA_playLab_events3_b: Ingatlah untuk menggunakan tombol panah kiri untuk memindahkan Jorge ke bendera setelah Anda menulis program Anda. Saat bendera berubah menjadi hijau, Anda sudah selesai!
       courseA_playLab_events3_2018_authored_hint:
         courseA_playLab_events3_b: Ingatlah untuk menggunakan tombol panah kiri untuk memindahkan Jorge ke bendera setelah Anda menulis program Anda. Saat bendera berubah menjadi hijau, Anda sudah selesai!
+      courseA_playLab_events3_2019_authored_hint:
+        courseA_playLab_events3_b: Ingatlah untuk menggunakan tombol panah kiri untuk memindahkan Jorge ke bendera setelah Anda menulis program Anda. Saat bendera berubah menjadi hijau, Anda sudah selesai!
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -1508,7 +1694,42 @@ id:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1546,7 +1767,45 @@ id:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1581,16 +1840,39 @@ id:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
         courseB_artist_loops2_b: Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir.
       courseB_artist_loops2_2018_authored_hint:
         courseB_artist_loops2_a: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
         courseB_artist_loops2_b: Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir.
+      courseB_artist_loops2_2019_authored_hint:
+        courseB_artist_loops2_a: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
+        courseB_artist_loops2_b: Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir.
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
         courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
       courseB_artist_loops3_2018_authored_hint:
+        courseB_artist_loops3_a: |-
+          Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
+        courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
+      courseB_artist_loops3_2019_authored_hint:
         courseB_artist_loops3_a: |-
           Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
         courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
@@ -1602,23 +1884,37 @@ id:
         courseB_artist_loops4_a: Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.
         courseB_artist_loops4_b: Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.
         courseB_artist_loops4_c: Jangan lupa untuk mengubah berapa kali pengulangan loop.
+      courseB_artist_loops4_2019_authored_hint:
+        courseB_artist_loops4_a: Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.
+        courseB_artist_loops4_b: Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.
+        courseB_artist_loops4_c: Jangan lupa untuk mengubah berapa kali pengulangan loop.
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
       courseB_artist_loops5_2018_authored_hint:
+        courseB_artist_loops5_a: |-
+          Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
+      courseB_artist_loops5_2019_authored_hint:
         courseB_artist_loops5_a: |-
           Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola.
       courseB_artist_loops6_2018_authored_hint:
         courseB_artist_loops6_b: Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola.
+      courseB_artist_loops6_2019_authored_hint:
+        courseB_artist_loops6_b: Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola.
       courseB_artist_loops7_authored_hint:
         courseB_artist_loops7_a: Tantangan ini menggunakan loop** 4 **, satu demi satu!
       courseB_artist_loops7_2018_authored_hint:
+        courseB_artist_loops7_a: Tantangan ini menggunakan loop** 4 **, satu demi satu!
+      courseB_artist_loops7_2019_authored_hint:
         courseB_artist_loops7_a: Tantangan ini menggunakan loop** 4 **, satu demi satu!
       courseB_artist_loops8_authored_hint:
         courseB_artist_loops8_a: Berapa kali anda harus mengulangi pola untuk membuat tangga?
         courseB_artist_loops8_b: Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya.
       courseB_artist_loops8_2018_authored_hint:
+        courseB_artist_loops8_a: Berapa kali anda harus mengulangi pola untuk membuat tangga?
+        courseB_artist_loops8_b: Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya.
+      courseB_artist_loops8_2019_authored_hint:
         courseB_artist_loops8_a: Berapa kali anda harus mengulangi pola untuk membuat tangga?
         courseB_artist_loops8_b: Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya.
       courseB_artist_loops9_authored_hint:
@@ -1629,10 +1925,17 @@ id:
         courseB_artist_loops9_a: Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.
         courseB_artist_loops9_b: Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.
         courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
+      courseB_artist_loops9_2019_authored_hint:
+        courseB_artist_loops9_a: Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.
+        courseB_artist_loops9_b: Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.
+        courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk ` langkah ` atau `jump` lebih beberapa garis yang sama dua kali. '
       courseB_artist_loops_challenge1_2018_authored_hint:
+        courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!
+        courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk ` langkah ` atau `jump` lebih beberapa garis yang sama dua kali. '
+      courseB_artist_loops_challenge1_2019_authored_hint:
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk ` langkah ` atau `jump` lebih beberapa garis yang sama dua kali. '
       courseB_artist_loops_challenge2_authored_hint:
@@ -1641,19 +1944,29 @@ id:
       courseB_artist_loops_challenge2_2018_authored_hint:
         courseB_artist_loops_challenge2_a: Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.
         courseB_artist_loops_challenge2_b: Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain.
+      courseB_artist_loops_challenge2_2019_authored_hint:
+        courseB_artist_loops_challenge2_a: Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.
+        courseB_artist_loops_challenge2_b: Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: Jika anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.
         courseB_collector_loops10_b: Cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
       courseB_collector_loops10_2018_authored_hint:
         courseB_collector_loops10_a: Jika anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.
         courseB_collector_loops10_b: Cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
+      courseB_collector_loops10_2019_authored_hint:
+        courseB_collector_loops10_a: Jika anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.
+        courseB_collector_loops10_b: Cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
       courseB_collector_loops2_2018_authored_hint:
         courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
+      courseB_collector_loops2_2019_authored_hint:
+        courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran.
       courseB_collector_loops3_2018_authored_hint:
+        courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran.
+      courseB_collector_loops3_2019_authored_hint:
         courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran.
       courseB_collector_loops3_predict1_authored_hint:
         courseB_collector_prog3_a: Coba gunakan blok `repeat` untuk mengumpulkan emas anda.
@@ -1666,10 +1979,18 @@ id:
         courseB_collector_loops4_b: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
         courseB_collector_loops4_c: |-
           Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
+      courseB_collector_loops4_2019_authored_hint:
+        courseB_collector_loops4_a: Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.
+        courseB_collector_loops4_b: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
+        courseB_collector_loops4_c: |-
+          Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.
         courseB_collector_loops5_b: Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseB_collector_loops5_2018_authored_hint:
+        courseB_collector_loops5_a: Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.
+        courseB_collector_loops5_b: Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
+      courseB_collector_loops5_2019_authored_hint:
         courseB_collector_loops5_a: Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.
         courseB_collector_loops5_b: Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseB_collector_loops6_authored_hint:
@@ -1683,20 +2004,34 @@ id:
         courseB_collector_loops6_c: |-
           Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
         courseB_collector_loops6_d: Jika Anda bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian.
+      courseB_collector_loops6_2019_authored_hint:
+        courseB_collector_loops6_a: Tidak tahu di mana hal-hal yang salah? Gunakan tombol "step" untuk menjalankan program anda satu blok setiap kalinya.
+        courseB_collector_loops6_b: Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada "3" dan memilih sebuah nomor yang berbeda.
+        courseB_collector_loops6_c: |-
+          Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
+        courseB_collector_loops6_d: Jika Anda bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.
         courseB_collector_loops7_b: Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!
       courseB_collector_loops7_2018_authored_hint:
         courseB_collector_loops7_a: Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.
         courseB_collector_loops7_b: Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!
+      courseB_collector_loops7_2019_authored_hint:
+        courseB_collector_loops7_a: Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.
+        courseB_collector_loops7_b: Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!
       courseB_collector_loops8_authored_hint:
         courseB_collector_loops8_challenge_a: Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola.
       courseB_collector_loops8_2018_authored_hint:
+        courseB_collector_loops8_challenge_a: Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola.
+      courseB_collector_loops8_2019_authored_hint:
         courseB_collector_loops8_challenge_a: Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola.
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_a: 'Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.'
         courseB_collector_loops9_b: Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini.
       courseB_collector_loops9_2018_authored_hint:
+        courseB_collector_loops9_a: 'Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.'
+        courseB_collector_loops9_b: Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini.
+      courseB_collector_loops9_2019_authored_hint:
         courseB_collector_loops9_a: 'Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.'
         courseB_collector_loops9_b: Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini.
       courseB_collector_loops_challenge2_authored_hint:
@@ -1711,9 +2046,15 @@ id:
       courseB_collector_loops_challenge2a_2018_authored_hint:
         courseB_collector_loops_challenge2a_a: Jika sesuatu yang tidak beres, cobalah debug itu. Jangan menyerah!
         courseB_collector_loops_challenge2a_b: "Lihatlah pilihan ini untuk melewati labirin.\nApakah Anda melihat sebuah pola yang dapat Anda mengulangi?"
+      courseB_collector_loops_challenge2a_2019_authored_hint:
+        courseB_collector_loops_challenge2a_a: Jika sesuatu yang tidak beres, cobalah debug itu. Jangan menyerah!
+        courseB_collector_loops_challenge2a_b: "Lihatlah pilihan ini untuk melewati labirin.\nApakah Anda melihat sebuah pola yang dapat Anda mengulangi?"
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Coba gunakan blok `repeat` untuk mengumpulkan emas anda.
       courseB_iceage_loops3_authored_hint:
+        courseB_iceage_loops3_b: |-
+          Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
+      courseB_iceage_loops3_2019_authored_hint:
         courseB_iceage_loops3_b: |-
           Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
       courseB_maze_seq10_authored_hint:
@@ -1738,11 +2079,17 @@ id:
         courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai anda tiba di babi.
       courseB_maze_seq4_2018_authored_hint:
         courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai anda tiba di babi.
+      courseB_maze_seq4_2019_authored_hint:
+        courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai anda tiba di babi.
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.
         courseB_maze_seq5_b: Terdapat 2 cara untuk memecahkan teka-teki ini!
         courseB_maze_seq5_c: Tidak yakin bagaimana cara menuju ke babi? Coba ini jalan.
       courseB_maze_seq5_2018_authored_hint:
+        courseB_maze_seq5_a: Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.
+        courseB_maze_seq5_b: Terdapat 2 cara untuk memecahkan teka-teki ini!
+        courseB_maze_seq5_c: Tidak yakin bagaimana cara menuju ke babi? Coba ini jalan.
+      courseB_maze_seq5_2019_authored_hint:
         courseB_maze_seq5_a: Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.
         courseB_maze_seq5_b: Terdapat 2 cara untuk memecahkan teka-teki ini!
         courseB_maze_seq5_c: Tidak yakin bagaimana cara menuju ke babi? Coba ini jalan.
@@ -1756,6 +2103,11 @@ id:
         courseB_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka-teki dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.
         courseB_maze_seq5_c: Ada dua cara untuk memecahkan teka-teki ini.
         courseB_maze_seq5_d: Tidak yakin bagaimana cara menuju ke babi? Coba jalan ini!
+      courseB_maze_seq6_2019_authored_hint:
+        courseB_maze_seq6_a: Kode akhir anda harus memiliki tiga blok gerakan.
+        courseB_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka-teki dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.
+        courseB_maze_seq5_c: Ada dua cara untuk memecahkan teka-teki ini.
+        courseB_maze_seq5_d: Tidak yakin bagaimana cara menuju ke babi? Coba jalan ini!
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_a: Tambahkan 1 blok untuk memindahkan burung ke babi.
         courseB_maze_seq7_b: Coba jalankan kode yang diberikan kepada Anda dan lihat di mana Anda berakhir.
@@ -1764,11 +2116,19 @@ id:
         courseB_maze_seq7_a: Tambahkan 1 blok untuk memindahkan burung ke babi.
         courseB_maze_seq7_b: Coba jalankan kode yang diberikan kepada Anda dan lihat di mana Anda berakhir.
         courseB_maze_seq7_c: Tidak bisa sampai ke babi? Coba jalan ini!
+      courseB_maze_seq7_2019_authored_hint:
+        courseB_maze_seq7_a: Tambahkan 1 blok untuk memindahkan burung ke babi.
+        courseB_maze_seq7_b: Coba jalankan kode yang diberikan kepada Anda dan lihat di mana Anda berakhir.
+        courseB_maze_seq7_c: Tidak bisa sampai ke babi? Coba jalan ini!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.
         courseB_maze_seq8_b: Ada dua alternatif untuk menyelesaikan teka-teki ini!
         courseB_maze_seq8_c: Tidak tahu pergi ke jalan yang mana? Coba jalan ini!
       courseB_maze_seq8_2018_authored_hint:
+        courseB_maze_seq8_a: Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.
+        courseB_maze_seq8_b: Ada dua alternatif untuk menyelesaikan teka-teki ini!
+        courseB_maze_seq8_c: Tidak tahu pergi ke jalan yang mana? Coba jalan ini!
+      courseB_maze_seq8_2019_authored_hint:
         courseB_maze_seq8_a: Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.
         courseB_maze_seq8_b: Ada dua alternatif untuk menyelesaikan teka-teki ini!
         courseB_maze_seq8_c: Tidak tahu pergi ke jalan yang mana? Coba jalan ini!
@@ -1782,6 +2142,11 @@ id:
         courseB_maze_seq9_b: Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.
         courseB_maze_seq9_c: Ada dua cara untuk memecahkan teka-teki ini.
         courseB_maze_seq9_d: Terjebak? Coba jalan ini!
+      courseB_maze_seq9_2019_authored_hint:
+        courseB_maze_seq9_a: Coba tulis semua langkah di selembar kertas terlebih dahulu.
+        courseB_maze_seq9_b: Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.
+        courseB_maze_seq9_c: Ada dua cara untuk memecahkan teka-teki ini.
+        courseB_maze_seq9_d: Terjebak? Coba jalan ini!
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Terjebak? Cobalah menelusuri jalan burung dengan jari anda.
       courseB_maze_seqOld_authored_hint:
@@ -1790,15 +2155,22 @@ id:
         courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat ini.
       courseB_maze_seq_challenge1_2018_authored_hint:
         courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat ini.
+      courseB_maze_seq_challenge1_2019_authored_hint:
+        courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat ini.
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.
         courseB_maze_seq_challenge2_b: Susun ulang balok dan ambil jalan pola tangga.
       courseB_maze_seq_challenge2_2018_authored_hint:
         courseB_maze_seq_challenge2_a: Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.
         courseB_maze_seq_challenge2_b: Susun ulang balok dan ambil jalan pola tangga.
+      courseB_maze_seq_challenge2_2019_authored_hint:
+        courseB_maze_seq_challenge2_a: Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.
+        courseB_maze_seq_challenge2_b: Susun ulang balok dan ambil jalan pola tangga.
       courseB_playlab_events6_authored_hint:
         courseB_playlab_events6_c: Sampai ke semua bendera yang lewat!
       courseB_playlab_events6_2018_authored_hint:
+        courseB_playlab_events6_c: Sampai ke semua bendera yang lewat!
+      courseB_playlab_events6_2019_authored_hint:
         courseB_playlab_events6_c: Sampai ke semua bendera yang lewat!
       courseB_playlab_events_challenge2_authored_hint:
         courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap saat disadap. Itu juga harus kembali setelah satu atau dua detik!
@@ -1808,6 +2180,13 @@ id:
           Buat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.
           Mengubah suasana hati binatang!
       courseB_playlab_events_challenge2_2018_authored_hint:
+        courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap saat disadap. Itu juga harus kembali setelah satu atau dua detik!
+        courseB_playlab_events_challenge2_d: |-
+          Campurkan itu!
+
+          Buat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.
+          Mengubah suasana hati binatang!
+      courseB_playlab_events_challenge2_2019_authored_hint:
         courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap saat disadap. Itu juga harus kembali setelah satu atau dua detik!
         courseB_playlab_events_challenge2_d: |-
           Campurkan itu!
@@ -1835,13 +2214,24 @@ id:
 
           Buat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.
           Mengubah suasana hati binatang!
+      courseB_playlab_events_challenge2_template_2019_authored_hint:
+        courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap saat disadap. Itu juga harus kembali setelah satu atau dua detik!
+        courseB_playlab_events_challenge2_d: |-
+          Campurkan itu!
+
+          Buat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.
+          Mengubah suasana hati binatang!
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run" untuk melihat apa yang terjadi.
       courseB_starWars_prog1_2018_authored_hint:
         courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run" untuk melihat apa yang terjadi.
+      courseB_starWars_prog1_2019_authored_hint:
+        courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run" untuk melihat apa yang terjadi.
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain.
       courseB_starWars_prog2_2018_authored_hint:
+        courseB_starWars_prog2_a: Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain.
+      courseB_starWars_prog2_2019_authored_hint:
         courseB_starWars_prog2_a: Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain.
       courseB_starWars_prog3_authored_hint:
         courseB_starWars_prog3_a: Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.
@@ -1849,9 +2239,14 @@ id:
       courseB_starWars_prog3_2018_authored_hint:
         courseB_starWars_prog3_a: Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.
         courseB_starWars_prog3_b: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
+      courseB_starWars_prog3_2019_authored_hint:
+        courseB_starWars_prog3_a: Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.
+        courseB_starWars_prog3_b: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
       courseB_starWars_prog4_authored_hint:
         courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
       courseB_starWars_prog4_2018_authored_hint:
+        courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
+      courseB_starWars_prog4_2019_authored_hint:
         courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
@@ -1861,9 +2256,15 @@ id:
         courseB_starWars_prog5_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
         courseB_starWars_prog5_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
         courseB_starWars_prog5_c: Trace pola ini dengan jari Anda. Hitung potongan logam saat Anda bergerak.
+      courseB_starWars_prog5_2019_authored_hint:
+        courseB_starWars_prog5_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
+        courseB_starWars_prog5_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
+        courseB_starWars_prog5_c: Trace pola ini dengan jari Anda. Hitung potongan logam saat Anda bergerak.
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!
       courseB_starWars_prog6_2018_authored_hint:
+        courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!
+      courseB_starWars_prog6_2019_authored_hint:
         courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!
       courseB_starWars_prog7_authored_hint:
         courseB_starWars_prog7_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
@@ -1873,15 +2274,26 @@ id:
         courseB_starWars_prog7_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
         courseB_starWars_prog7_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
         courseB_starWars_prog7_c: Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?
+      courseB_starWars_prog7_2019_authored_hint:
+        courseB_starWars_prog7_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
+        courseB_starWars_prog7_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
+        courseB_starWars_prog7_c: Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?
       courseB_starWars_prog8_authored_hint:
         courseB_starWars_prog8_a: Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.
       courseB_starWars_prog8_2018_authored_hint:
+        courseB_starWars_prog8_a: Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.
+      courseB_starWars_prog8_2019_authored_hint:
         courseB_starWars_prog8_a: Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
         courseB_starWars_prog9_b: Terdapat banyak cara untuk memecahkan teka-teki ini.
         courseB_starWars_prog9_c: Bisakah sebuah loop ` ulangi` membantu di sini?
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+        courseB_starWars_prog9_b: Terdapat banyak cara untuk memecahkan teka-teki ini.
+        courseB_starWars_prog9_c: |-
+          Bisakah sebuah loop ` ulangi` membantu di sini?
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
         courseB_starWars_prog9_b: Terdapat banyak cara untuk memecahkan teka-teki ini.
         courseB_starWars_prog9_c: |-

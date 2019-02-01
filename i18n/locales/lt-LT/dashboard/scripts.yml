@@ -1566,3 +1566,27 @@ lt:
               name: Dvejetainės apyrankės
         gamelab:
           title: Žaidimų laboratorija
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+            Going Places Safely:
+              name: Saugus naršymas internete
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Judėk, judėk
+            Your Digital Footprint:
+              name: Virtualūs pirštų antspaudai
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Judėk, judėk
+            Your Digital Footprint:
+              name: Virtualūs pirštų antspaudai
+            Spelling Bee:
+              name: Rašanti bitė
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'

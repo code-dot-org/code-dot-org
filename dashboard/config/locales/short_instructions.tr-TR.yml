@@ -2220,6 +2220,7 @@ tr:
         ve kedinin 400 piksel yukarı ve sonra 400 piksel aşağı hareket etmesini sağla.
       RyanTest3: Bu seviyede şekil-değiştirme açık! Farklı değişkenleri görmek için
         yenileyin.
+      Ryan_Demo: Geyiği 4 ölçü sonra yeni bir harekete başlatın!
       SG Add Subgoals practice: Kaplumbağanın önüne ve sağına olabildiğince etkili
         şekilde 3x3'lük bir ızgara çizin. Kaplumbağa başlangıç noktasında, başlangıç
         yönüne yüzü dönük şekilde bitirmeli. (Tam talimatları görmek için tıklayın)
@@ -2571,6 +2572,7 @@ tr:
       allHallows2017: 320 piksellik kenarlara sahip bir dörtgen çizerek Code.org çalışanlarını
         pastel boya kutusuna hapsedin!
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Bunu yap
+      allthethings_ttscsf contained: Eğer marul ise marul topla. değilse, mısır al.
       artistDebugVideo1: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
       artistFunctionsVideo1: Kendi fonksiyonunu yapmak için yönergeleri izleyin.
       beeDebugVideo1: Tüm nektarları toplamak için bir döngü kullanabilir misin?
@@ -2858,25 +2860,36 @@ tr:
       courseA_artist_loops10: Taşları yerleştireme yardımcı olun böylece içine düşmem!
       courseA_artist_loops10_2018: Taşları yerleştireme yardımcı olun böylece içine
         düşmem!
+      courseA_artist_loops10_2019: Taşları yerleştireme yardımcı olun böylece içine
+        düşmem!
       courseA_artist_loops11: Yelken açan gemiyi izlemek için gerekli adımları yapmama
         yardım et.
       courseA_artist_loops11_2018: Yelken açan gemiyi izlemek için gerekli adımları
+        yapmama yardım et.
+      courseA_artist_loops11_2019: Yelken açan gemiyi izlemek için gerekli adımları
         yapmama yardım et.
       courseA_artist_loops12: Sanatçı uzaktan komik bir şey gördü.  Gördüğünü sandığı
         şeyi çizin.
       courseA_artist_loops12_2018: Sanatçı uzaktan komik bir şey gördü.  Gördüğünü
         sandığı şeyi çizin.
+      courseA_artist_loops12_2019: Sanatçı uzaktan komik bir şey gördü.  Gördüğünü
+        sandığı şeyi çizin.
       courseA_artist_loops3: Ileriye doğru 5 kez çizgi çizin.
       courseA_artist_loops3_2018: Ileriye doğru 5 kez çizgi çizin.
+      courseA_artist_loops3_2019: Ileriye doğru 5 kez çizgi çizin.
       courseA_artist_loops7: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
       courseA_artist_loops7_2018: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
+      courseA_artist_loops7_2019: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
       courseA_artist_loops7_forVideo: "'Tekrar' döngüsü kullanarak suya dalga ekleyin."
       courseA_artist_loops9: 'Meydan okuma: Merdivenleri düzelt.'
       courseA_artist_loops9_2018: 'Meydan okuma: Merdivenleri düzelt.'
+      courseA_artist_loops9_2019: 'Meydan okuma: Merdivenleri düzelt.'
       courseA_artist_loops_challenge2: Tweet tweet! İki kuş evi yapmama yardımcı olabilir
         misin?
       courseA_artist_loops_challenge2a: "*Bu üç çadırı kurmak için bana yardım et!*"
       courseA_artist_loops_challenge2a_2018: "*Bu üç çadırı kurmak için bana yardım
+        et!*"
+      courseA_artist_loops_challenge2a_2019: "*Bu üç çadırı kurmak için bana yardım
         et!*"
       courseA_artist_loops_challenge3: Bir oyun oynayalım! Çizebildiğin kadar X çiz!
         Üst üste 3 alabilir miyim?
@@ -2886,40 +2899,60 @@ tr:
         edin.
       courseA_collector_loops10_2018: Laurel'in derin vadiden tüm hazineyi almasına
         yardım edin.
+      courseA_collector_loops10_2019: Laurel'in derin vadiden tüm hazineyi almasına
+        yardım edin.
       courseA_collector_loops11: Laurel'in çukurdan tüm hazineyi almasına yardım edin.
       courseA_collector_loops11_2018: Laurel'in çukurdan tüm hazineyi almasına yardım
         edin.
+      courseA_collector_loops11_2019: Laurel'in çukurdan tüm hazineyi almasına yardım
+        edin.
       courseA_collector_loops12: Haydi!  Mümkün olduğu kadar hazineyi alın!
       courseA_collector_loops12_2018: Haydi!  Mümkün olduğu kadar hazineyi alın!
+      courseA_collector_loops12_2019: Haydi!  Mümkün olduğu kadar hazineyi alın!
       courseA_collector_loops1_2018: Laureli etrafta dolaştırın ve alabileceğiniz
+        kadar hazine alın!
+      courseA_collector_loops1_2019: Laureli etrafta dolaştırın ve alabileceğiniz
         kadar hazine alın!
       courseA_collector_loops2: Bu seviyeyi geçmek için üç yığını da toplayın.
       courseA_collector_loops2_2018: Bu seviyeyi geçmek için üç yığını da toplayın.
+      courseA_collector_loops2_2019: Bu seviyeyi geçmek için üç yığını da toplayın.
       courseA_collector_loops4: Tüm bu hazineyi almak için Laurel'ın yolunu düzeltin.
       courseA_collector_loops4_2018: Tüm bu hazineyi almak için Laurel'ın yolunu düzeltin.
+      courseA_collector_loops4_2019: Tüm bu hazineyi almak için Laurel'ın yolunu düzeltin.
       courseA_collector_loops5: Tüm hazine almak için öğrendiklerinizi kullanın.
       courseA_collector_loops5_2018: Tüm hazine almak için öğrendiklerinizi kullanın.
+      courseA_collector_loops5_2019: Tüm hazine almak için öğrendiklerinizi kullanın.
       courseA_collector_loops6: Blok tüm hazine almak için bloklar ekleyin.
       courseA_collector_loops6_2018: Blok tüm hazine almak için bloklar ekleyin.
+      courseA_collector_loops6_2019: Blok tüm hazine almak için bloklar ekleyin.
       courseA_collector_loops7: Hazinenin tümünü almak için hangi blokları eklemek
         gerekir?
       courseA_collector_loops7_2018: Hazinenin tümünü almak için hangi blokları eklemek
         gerekir?
+      courseA_collector_loops7_2019: Hazinenin tümünü almak için hangi blokları eklemek
+        gerekir?
       courseA_collector_loops8: Tüm bu hazineyi almak için kod yazın.
       courseA_collector_loops8_2018: Tüm bu hazineyi almak için kod yazın.
+      courseA_collector_loops8_2019: Tüm bu hazineyi almak için kod yazın.
       courseA_collector_loops9: "** Meydan: Okuma** Hazine bu merdivenlerden yukarı
         gider!  Laurel yardım için kod yazın."
       courseA_collector_loops9_2018: "** Meydan: Okuma** Hazine bu merdivenlerden
         yukarı gider!  Laurel yardım için kod yazın."
+      courseA_collector_loops9_2019: "** Meydan: Okuma** Hazine bu merdivenlerden
+        yukarı gider!  Laurel yardım için kod yazın."
       courseA_collector_loops_challenge1: Hatalar bulmama yardımcı olabilir misin?
         Hangi yoldan gitmek gerektiğini biliyorum fakat kaç adım bilmiyorum.
       courseA_collector_loops_challenge1_2018: Hatalar bulmama yardımcı olabilir misin?
+        Hangi yoldan gitmek gerektiğini biliyorum fakat kaç adım bilmiyorum.
+      courseA_collector_loops_challenge1_2019: Hatalar bulmama yardımcı olabilir misin?
         Hangi yoldan gitmek gerektiğini biliyorum fakat kaç adım bilmiyorum.
       courseA_collector_loops_challenge2: 'Bu sefer sadece ok bloklrından birini kullanabilirsiniz.
         Tüm hazineyi al! '
       courseA_collector_loops_challenge2kp: Bu seviyeyi geçmek için en az *3* tane
         hazine topla.
       courseA_collector_loops_challenge2kp_2018: Bu seviyeyi geçmek için en az *3*
+        tane hazine topla.
+      courseA_collector_loops_challenge2kp_2019: Bu seviyeyi geçmek için en az *3*
         tane hazine topla.
       courseA_collector_preLoops1: "Bu maceracı Laurel!\r\n\r\nOnun hazineye doğru
         yürüdüğünü ve onu aldığını görmek için \"Çalıştır\"a basın."
@@ -2937,16 +2970,22 @@ tr:
       courseA_maze_ramp3_2018: Kuşun ezilmesine sebep olacak bir fazla blok var. O
         bloğu bulup araç kurtusuna geri at.
       courseA_maze_ramp5a_2018: "** Meydan okuma: ** kKuşu domuza ulaştır!"
+      courseA_maze_ramp5a_2019: "** Meydan okuma: ** kKuşu domuza ulaştır!"
       courseA_maze_seq1: Kuşu domuza ulaştırın!
       courseA_maze_seq10: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu domuza eriştirin! '
       courseA_maze_seq11: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür.
       courseA_maze_seq11_2018: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza
         götür.
+      courseA_maze_seq11_2019: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza
+        götür.
       courseA_maze_seq12: 'Domuzcuğu yakala! '
       courseA_maze_seq12_2018: 'Domuzcuğu yakala! '
+      courseA_maze_seq12_2019: 'Domuzcuğu yakala! '
       courseA_maze_seq13: Domuza ulaşın!
       courseA_maze_seq13_2018: Domuza ulaşın!
+      courseA_maze_seq13_2019: Domuza ulaşın!
       courseA_maze_seq1_2018: Kuşu domuza ulaştırın!
+      courseA_maze_seq1_2019: Kuşu domuza ulaştırın!
       courseA_maze_seq2: Beni domuza götürmek için kodu değiştir!
       courseA_maze_seq2_2018: Beni domuza götürmek için kodu değiştir!
       courseA_maze_seq3: Kuşu domuza ulaştırmak için kodu düzeltin!
@@ -2956,102 +2995,147 @@ tr:
       courseA_maze_seq4a: Kuşu en az sayıda blok kullanarak domuzcuğa ulaştır.
       courseA_maze_seq6: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq6_2018: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
+      courseA_maze_seq6_2019: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq7: Ne eksik olduğunu bulun ve bana domuza ulaşmak için blok
         ekleyin!
       courseA_maze_seq7_2018: Ne eksik olduğunu bulun ve bana domuza ulaşmak için
         blok ekleyin!
       courseA_maze_seq8: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
       courseA_maze_seq8_2018: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
+      courseA_maze_seq8_2019: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
       courseA_maze_seq9: Blok ekleyerek kuşu domuza ulaştırın!
       courseA_maze_seq9_2018: Blok ekleyerek kuşu domuza ulaştırın!
       courseA_maze_seq_challenge1: Hata ayıklama. İlave blokları kaldırın ve eksik
         blokları ekleyin. Kuşu domuza ulaştırın!
       courseA_maze_seq_challenge1_2018: Hata ayıklama. İlave blokları kaldırın ve
         eksik blokları ekleyin. Kuşu domuza ulaştırın!
+      courseA_maze_seq_challenge1_2019: Hata ayıklama. İlave blokları kaldırın ve
+        eksik blokları ekleyin. Kuşu domuza ulaştırın!
       courseA_maze_seq_challenge2: Yolu takip et ve beni sersem domuza götür. Patlayıcılardan
         uzak dur yoksa bu tüylerim havaya uçacak!
       courseA_maze_seq_challenge2_2018: Yolu takip et ve beni sersem domuza götür.
         Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
+      courseA_maze_seq_challenge2_2019: Yolu takip et ve beni sersem domuza götür.
+        Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
       courseA_playLab_events3: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu bağla."
       courseA_playLab_events3_2018: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu
+        bağla."
+      courseA_playLab_events3_2019: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu
         bağla."
       courseA_playlab_events_challenge1: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesib. Kim en hızlı koşar?
       courseA_playlab_events_challenge1_2018: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesib. Kim en hızlı koşar?
+      courseA_playlab_events_challenge1_2019: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
+        aşağı ilerlesib. Kim en hızlı koşar?
       courseA_playlab_events_challenge2: Bir parti verelim! Her arkadaş tıkladığında
         yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
       courseA_playlab_events_challenge2_2018: Bir parti verelim! Her arkadaş tıkladığında
+        yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
+      courseA_playlab_events_challenge2_2019: Bir parti verelim! Her arkadaş tıkladığında
         yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
       courseA_playlab_events_challengeClone: Benim arkadaşlarım nerede saklanıyor?
         Geri kalan arkadaşlarımı göstermek için kod yazabilir misiniz?
       courseA_toMakeLoopsVideo_Collector: Döngüler içinde ne varsa tekrar tekrar yapmana
         izin verir!
       courseB_Scrat_ramp5a_2018: "** Meydan okuma: ** kKuşu domuza ulaştır!"
+      courseB_Scrat_ramp5a_2019: "** Meydan okuma: ** kKuşu domuza ulaştır!"
       courseB_artist_loops2: Sanatçı **6** kere bir çizgi çizmeyi deniyor ama doğru
         yapamıyor. Yardım edebilir misin?
       courseB_artist_loops2_2018: Sanatçı **6** kere bir çizgi çizmeyi deniyor ama
         doğru yapamıyor. Yardım edebilir misin?
+      courseB_artist_loops2_2019: Sanatçı **6** kere bir çizgi çizmeyi deniyor ama
+        doğru yapamıyor. Yardım edebilir misin?
       courseB_artist_loops3: Bahçe duvarı yapmak için 7 kere bir çizgi çizin.
       courseB_artist_loops3_2018: Bahçe duvarı yapmak için 7 kere bir çizgi çizin.
+      courseB_artist_loops3_2019: Bahçe duvarı yapmak için 7 kere bir çizgi çizin.
       courseB_artist_loops5: Merdivenleri düzeltme zamanı! Bu deseni **5** kere tekrarlayın
         ki sanatçı çalıların tepesine ulaşabilsin.
       courseB_artist_loops5_2018: Merdivenleri düzeltme zamanı! Bu deseni **5** kere
         tekrarlayın ki sanatçı çalıların tepesine ulaşabilsin.
+      courseB_artist_loops5_2019: Merdivenleri düzeltme zamanı! Bu deseni **5** kere
+        tekrarlayın ki sanatçı çalıların tepesine ulaşabilsin.
       courseB_artist_loops6: Asmaya tırmanın ve nereye gittiğini görün?
       courseB_artist_loops6_2018: Asmaya tırmanın ve nereye gittiğini görün?
+      courseB_artist_loops6_2019: Asmaya tırmanın ve nereye gittiğini görün?
       courseB_artist_loops7: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops7_2018: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
+      courseB_artist_loops7_2019: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops8: Eve dönme vakti. Sanatçıya yardımcı olmak için sadece
         bir blok kullanarak bu merdiveni tamir edebilir misin?
       courseB_artist_loops8_2018: Eve dönme vakti. Sanatçıya yardımcı olmak için sadece
+        bir blok kullanarak bu merdiveni tamir edebilir misin?
+      courseB_artist_loops8_2019: Eve dönme vakti. Sanatçıya yardımcı olmak için sadece
         bir blok kullanarak bu merdiveni tamir edebilir misin?
       courseB_artist_loops_challenge1: Zar atma zamanı! Çizmek için yardımcı olabilir
         misin?
       courseB_artist_loops_challenge1_2018: Zar atma zamanı! Çizmek için yardımcı
         olabilir misin?
+      courseB_artist_loops_challenge1_2019: Zar atma zamanı! Çizmek için yardımcı
+        olabilir misin?
       courseB_artist_loops_challenge2: Bir oyun oynayalım! Çizebildiğin kadar X çiz!
         Üst üste 3 alabilir miyim?
       courseB_artist_loops_challenge2_2018: Bir oyun oynayalım! Çizebildiğin kadar
+        X çiz! Üst üste 3 alabilir miyim?
+      courseB_artist_loops_challenge2_2019: Bir oyun oynayalım! Çizebildiğin kadar
         X çiz! Üst üste 3 alabilir miyim?
       courseB_collector_loops1: Laurel maceracı bu!  Onu hareket ettir ve hazine alabilir
         misin?
       courseB_collector_loops10: Laurel'in çukurdan tüm hazineyi almasına yardım edin.
       courseB_collector_loops10_2018: Laurel'in çukurdan tüm hazineyi almasına yardım
         edin.
+      courseB_collector_loops10_2019: Laurel'in çukurdan tüm hazineyi almasına yardım
+        edin.
       courseB_collector_loops11: Haydi!  Mümkün olduğu kadar hazineyi alın!
       courseB_collector_loops11_2018: Haydi!  Mümkün olduğu kadar hazineyi alın!
+      courseB_collector_loops11_2019: Haydi!  Mümkün olduğu kadar hazineyi alın!
       courseB_collector_loops1_2018: Laurel maceracı bu!  Onu hareket ettir ve hazine
+        alabilir misin?
+      courseB_collector_loops1_2019: Laurel maceracı bu!  Onu hareket ettir ve hazine
         alabilir misin?
       courseB_collector_loops2: Bu seviyeyi geçmek için dört yığını da toplayın.
       courseB_collector_loops2_2018: Bu seviyeyi geçmek için dört yığını da toplayın.
+      courseB_collector_loops2_2019: Bu seviyeyi geçmek için dört yığını da toplayın.
       courseB_collector_loops3: Laurel '[E-->]' sadece bir blok kullanarak beş yığını
         nasıl toplayabilir?
       courseB_collector_loops3_2018: Laurel '[E-->]' sadece bir blok kullanarak beş
+        yığını nasıl toplayabilir?
+      courseB_collector_loops3_2019: Laurel '[E-->]' sadece bir blok kullanarak beş
         yığını nasıl toplayabilir?
       courseB_collector_loops3_predict1: Laurel '[E-->]' sadece bir blok kullanarak
         beş yığını nasıl toplayabilir?
       courseB_collector_loops4: Tüm bu hazineyi almak için Laurel'ın yolunu düzeltin!
       courseB_collector_loops4_2018: Tüm bu hazineyi almak için Laurel'ın yolunu düzeltin!
+      courseB_collector_loops4_2019: Tüm bu hazineyi almak için Laurel'ın yolunu düzeltin!
       courseB_collector_loops5: 'Tüm hazineyi almak için son bulmacaya kod ekleyin. '
       courseB_collector_loops5_2018: 'Tüm hazineyi almak için son bulmacaya kod ekleyin. '
+      courseB_collector_loops5_2019: 'Tüm hazineyi almak için son bulmacaya kod ekleyin. '
       courseB_collector_loops6: Laurel tüm hazineyi almasına yardımcı olacak kodu
         yazın!
       courseB_collector_loops6_2018: Laurel tüm hazineyi almasına yardımcı olacak
         kodu yazın!
+      courseB_collector_loops6_2019: Laurel tüm hazineyi almasına yardımcı olacak
+        kodu yazın!
       courseB_collector_loops7: Tüm bu hazineyi almak için kod yazın.
       courseB_collector_loops7_2018: Tüm bu hazineyi almak için kod yazın.
+      courseB_collector_loops7_2019: Tüm bu hazineyi almak için kod yazın.
       courseB_collector_loops8: "** Meydan: Okuma** Hazine bu merdivenlerden yukarı
         gider!  Laurel yardım için kod yazın."
       courseB_collector_loops8_2018: "** Meydan: Okuma** Hazine bu merdivenlerden
+        yukarı gider!  Laurel yardım için kod yazın."
+      courseB_collector_loops8_2019: "** Meydan: Okuma** Hazine bu merdivenlerden
         yukarı gider!  Laurel yardım için kod yazın."
       courseB_collector_loops9: '* "Bu derin vadiden hazine çıkarmama yardım et."
         *'
       courseB_collector_loops9_2018: '* "Bu derin vadiden hazine çıkarmama yardım
         et." *'
+      courseB_collector_loops9_2019: '* "Bu derin vadiden hazine çıkarmama yardım
+        et." *'
       courseB_collector_loops_challenge1: 'Bu sefer sadece ok bloklrından birini kullanabilirsiniz.
         Tüm hazineyi al! '
       courseB_collector_loops_challenge1_2018: 'Bu sefer sadece ok bloklrından birini
+        kullanabilirsiniz. Tüm hazineyi al! '
+      courseB_collector_loops_challenge1_2019: 'Bu sefer sadece ok bloklrından birini
         kullanabilirsiniz. Tüm hazineyi al! '
       courseB_collector_loops_challenge2: Hazineyi alalım! Her satır boyunca ilerleyip
         bir sonraki satır için geri dön. Bir tekrar bulabilirsiniz mi?
@@ -3061,6 +3145,8 @@ tr:
         tane hazine bulmasına yardım edin.
       courseB_collector_loops_challenge2a_2018: Bu bulmacayı bitirmek için Laurel'in
         **5** tane hazine bulmasına yardım edin.
+      courseB_collector_loops_challenge2a_2019: Bu bulmacayı bitirmek için Laurel'in
+        **5** tane hazine bulmasına yardım edin.
       courseB_collector_loops_challenge`: 'Bu sefer sadece ok bloklrından birini kullanabilirsiniz.
         Tüm hazineyi al! '
       courseB_collector_prog1: Laurel maceracı bu!  Onu hareket ettir ve altın alabilir
@@ -3068,11 +3154,13 @@ tr:
       courseB_collector_prog3: Laurel '[E-->]' sadece bir blok kullanarak beş yığını
         nasıl toplayabilir?
       courseB_iceage_loops11: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseB_iceage_loops11_2019: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_iceage_loops11_forVideo: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_maze_seq1: "Bu blokların kuşa ne yaptığı görmek için bu bloklarla oyna!
         \r\n\r\nBölümü tamamlamak için kuşu domuza götür."
       courseB_maze_seq12: Domuza ulaşın!
       courseB_maze_seq12_2018: Domuza ulaşın!
+      courseB_maze_seq12_2019: Domuza ulaşın!
       courseB_maze_seq2: Beni domuza götürmek için kodu değiştir
       courseB_maze_seq6: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseB_maze_seq7: Ne eksik olduğunu bulun ve bana domuza ulaşmak için blok
@@ -3086,63 +3174,96 @@ tr:
         bloklarını bitirmeden bir çözüm yolu bulabilir misin?
       courseB_maze_seq_challenge1_2018: Her yönde yalnızca 4 kez ilerleyebilirsin.
         Kod bloklarını bitirmeden bir çözüm yolu bulabilir misin?
+      courseB_maze_seq_challenge1_2019: Her yönde yalnızca 4 kez ilerleyebilirsin.
+        Kod bloklarını bitirmeden bir çözüm yolu bulabilir misin?
       courseB_maze_seq_challenge2: Bu bölümün hatalarını ayıkla. Bunlar doğru bloklar,
         ama yanlış sıradalar!
       courseB_maze_seq_challenge2_2018: Bu bölümün hatalarını ayıkla. Bunlar doğru
         bloklar, ama yanlış sıradalar!
+      courseB_maze_seq_challenge2_2019: Bu bölümün hatalarını ayıkla. Bunlar doğru
+        bloklar, ama yanlış sıradalar!
       courseB_playLab_events1: Her bir bloğun ne yaptığını anlamaya çalış.
       courseB_playLab_events1_2018: Her bir bloğun ne yaptığını anlamaya çalış.
+      courseB_playLab_events1_2019: Her bir bloğun ne yaptığını anlamaya çalış.
       courseB_playlab_events_challenge1: Bu oyun eğlenceli hale getirmek için  şovalye
         dragona geldiğinde yok olmasını sağlayın!  Daha gerçekçi olmasını istiyorsan
         çarptığında ses çal.
       courseB_playlab_events_challenge1_2018: Bu oyun eğlenceli hale getirmek için  şovalye
         dragona geldiğinde yok olmasını sağlayın!  Daha gerçekçi olmasını istiyorsan
         çarptığında ses çal.
+      courseB_playlab_events_challenge1_2019: Bu oyun eğlenceli hale getirmek için  şovalye
+        dragona geldiğinde yok olmasını sağlayın!  Daha gerçekçi olmasını istiyorsan
+        çarptığında ses çal.
       courseB_playlab_events_challenge2: Üstlerine tıkladığınızda hayvanların yok
         olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli bir oyun yapabilirsiniz!
       courseB_playlab_events_challenge2_2018: Üstlerine tıkladığınızda hayvanların
+        yok olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli bir oyun yapabilirsiniz!
+      courseB_playlab_events_challenge2_2019: Üstlerine tıkladığınızda hayvanların
         yok olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli bir oyun yapabilirsiniz!
       courseB_playlab_events_challenge2_embed: İşte senin bitmiş oyunun!
       courseB_playlab_events_challenge2_template: Üstlerine tıkladığınızda hayvanların
         yok olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli bir oyun yapabilirsiniz!
       courseB_playlab_events_challenge2_template_2018: Üstlerine tıkladığınızda hayvanların
         yok olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli bir oyun yapabilirsiniz!
+      courseB_playlab_events_challenge2_template_2019: Üstlerine tıkladığınızda hayvanların
+        yok olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli bir oyun yapabilirsiniz!
       courseB_starWars_prog1: BB-8 e hurda metal almak için yardım et!
       courseB_starWars_prog10: BB-8 e parlak hurda metal toplamak için yardım et
       courseB_starWars_prog10_2018: BB-8 e parlak hurda metal toplamak için yardım
         et
+      courseB_starWars_prog10_2019: BB-8 e parlak hurda metal toplamak için yardım
+        et
       courseB_starWars_prog11: BB-8 e parlak hurda metal toplamak için yardım et
       courseB_starWars_prog11_2018: BB-8 e parlak hurda metal toplamak için yardım
         et
+      courseB_starWars_prog11_2019: BB-8 e parlak hurda metal toplamak için yardım
+        et
       courseB_starWars_prog1_2018: BB-8 e hurda metal almak için yardım et!
+      courseB_starWars_prog1_2019: BB-8 e hurda metal almak için yardım et!
       courseB_starWars_prog2: BB-8 e bütün parlak hurda metalleri toplamak için yardım
         et
       courseB_starWars_prog2_2018: BB-8 e bütün parlak hurda metalleri toplamak için
+        yardım et
+      courseB_starWars_prog2_2019: BB-8 e bütün parlak hurda metalleri toplamak için
         yardım et
       courseB_starWars_prog3: BB-8 e bütün parlak hurda metalleri toplamak için yardım
         et
       courseB_starWars_prog3_2018: BB-8 e bütün parlak hurda metalleri toplamak için
         yardım et
+      courseB_starWars_prog3_2019: BB-8 e bütün parlak hurda metalleri toplamak için
+        yardım et
       courseB_starWars_prog4: BB-8 e bütün parlak hurda metalleri toplamak için yardım
         et
       courseB_starWars_prog4_2018: BB-8 e bütün parlak hurda metalleri toplamak için
         yardım et
+      courseB_starWars_prog4_2019: BB-8 e bütün parlak hurda metalleri toplamak için
+        yardım et
       courseB_starWars_prog5: BB-8 e parlak hurda metal toplamak için yardım et
       courseB_starWars_prog5_2018: BB-8 e parlak hurda metal toplamak için yardım
+        et
+      courseB_starWars_prog5_2019: BB-8 e parlak hurda metal toplamak için yardım
         et
       courseB_starWars_prog6: BB-8 e bütün parlak hurda metalleri toplamak için yardım
         et
       courseB_starWars_prog6_2018: BB-8 e bütün parlak hurda metalleri toplamak için
         yardım et
+      courseB_starWars_prog6_2019: BB-8 e bütün parlak hurda metalleri toplamak için
+        yardım et
       courseB_starWars_prog7: BB-8 e parlak hurda metal toplamak için yardım et
       courseB_starWars_prog7_2018: BB-8 e parlak hurda metal toplamak için yardım
+        et
+      courseB_starWars_prog7_2019: BB-8 e parlak hurda metal toplamak için yardım
         et
       courseB_starWars_prog8: "**Meydan okuma**BB-8 e parlak hurda metal toplamak
         için yardım et"
       courseB_starWars_prog8_2018: "**Meydan okuma**BB-8 e parlak hurda metal toplamak
         için yardım et"
+      courseB_starWars_prog8_2019: "**Meydan okuma**BB-8 e parlak hurda metal toplamak
+        için yardım et"
       courseB_starWars_prog9: BB-8 e parlak hurda metal toplamak için yardım et
       courseB_starWars_prog9_2018: BB-8 e parlak hurda metal toplamak için yardım
+        et
+      courseB_starWars_prog9_2019: BB-8 e parlak hurda metal toplamak için yardım
         et
       courseC19_playLab_EOC5: Şimdi oyunun sizin istediğiniz gibi çalıştığına emin
         olmak için biraz zaman harcayın. Oyun kazanma ve kaybetme durumlarını belirleyin

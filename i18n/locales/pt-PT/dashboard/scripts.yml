@@ -1496,3 +1496,27 @@ pt:
               name: 'Algoritmos da Vida Real: Aviões de Papel'
             Binary Bracelets:
               name: Pulseiras binárias
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da Vida Real: Plante uma Semente'
+            Going Places Safely:
+              name: Ir a Locais de um modo Seguro
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Criando caminhos
+            Your Digital Footprint:
+              name: Seu rastro digital
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Criando caminhos
+            Your Digital Footprint:
+              name: Seu rastro digital
+            Spelling Bee:
+              name: Escrever com a abelha
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da Vida Real: Plante uma Semente'

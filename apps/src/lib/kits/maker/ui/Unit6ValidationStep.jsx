@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import {Unit6Intention} from "../util/discountLogic";
 
 const styles = {
   unit6Form: {
@@ -86,11 +87,11 @@ export default class Unit6ValidationStep extends Component {
                 {i18n.eligibilityReqYearConfirmInstructions()}
               </strong>
               {[
-                ['no', i18n.eligibilityYearNo()],
-                ['yes1819', i18n.eligibilityYearYes1819()],
-                ['yes1920', i18n.eligibilityYearYes1920()],
-                ['yesAfter', i18n.eligibilityYearAfter()],
-                ['unsure', i18n.eligibilityYearUnknown()],
+                [Unit6Intention.NO, i18n.eligibilityYearNo()],
+                [Unit6Intention.YES_18_19, i18n.eligibilityYearYes1819()],
+                [Unit6Intention.YES_19_20, i18n.eligibilityYearYes1920()],
+                [Unit6Intention.YES_AFTER, i18n.eligibilityYearAfter()],
+                [Unit6Intention.UNSURE, i18n.eligibilityYearUnknown()],
               ].map(([value, description]) =>
                 <label key={value}>
                   <input
