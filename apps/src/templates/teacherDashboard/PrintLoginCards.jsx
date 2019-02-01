@@ -4,6 +4,12 @@ import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 
+/**
+ * Rendered from the /print_login_cards route in teacher dashboard.
+ * Gives teachers information about allowing students to join their section, and prints
+ * login cards for word/picture sections. *NOTE* this component should only be used for
+ * word, picture, and email sections. It will return null for any other section login types.
+ */
 class PrintLoginCards extends React.Component {
   static propTypes = {
     // Provided by redux.
