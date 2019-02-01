@@ -46,15 +46,15 @@ RUN apt-get update && \
 		  python python-dev
 
 # install node
-RUN wget https://nodejs.org/dist/v8.4.0/node-v8.4.0.tar.gz && \
-    tar -xzvf node-v8.4.0.tar.gz && \
-    rm node-v8.4.0.tar.gz && \
-    cd node-v8.4.0 && \
+RUN wget https://nodejs.org/dist/v8.15.0/node-v8.15.0.tar.gz && \
+    tar -xzvf node-v8.15.0.tar.gz && \
+    rm node-v8.15.0.tar.gz && \
+    cd node-v8.15.0 && \
     ./configure && \
     make -j4 && \
     make install && \
     cd .. && \
-    rm -r node-v8.4.0
+    rm -r node-v8.15.0
 
 # more more tools
 RUN apt-get install -y unzip
@@ -133,6 +133,7 @@ RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 # We need git >= 2.15 to use git rev-parse --is-shallow-clone feature
 # TODO: consolidate apt-get installs
 RUN sudo apt-get install -y software-properties-common && sudo add-apt-repository ppa:git-core/ppa && sudo apt-get update && sudo apt-get install -y git
+RUN sudo apt-get install -y jq
 
 # en_US.UTF-8 locale not available by default
 RUN sudo locale-gen en_US.UTF-8
