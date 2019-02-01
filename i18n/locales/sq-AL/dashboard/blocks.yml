@@ -300,10 +300,16 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': madhësia
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
       binary_move:
         options:
           DIR:

@@ -1465,3 +1465,27 @@ eu:
               name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
             Binary Bracelets:
               name: Eskumuturreko bitarrak
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+            Going Places Safely:
+              name: Joan segurtasunez
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Mugi ezazu, mugi ezazu!
+            Your Digital Footprint:
+              name: Zure aztarna digitala
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Mugi ezazu, mugi ezazu!
+            Your Digital Footprint:
+              name: Zure aztarna digitala
+            Spelling Bee:
+              name: Letraz-letra
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'

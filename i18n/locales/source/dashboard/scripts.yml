@@ -10430,6 +10430,10 @@ en:
               description_teacher: ''
             'End of Course Project: Play Lab':
               name: 'End of Course Project: Play Lab'
+            Create a Design with Loops:
+              name: Create a Design with Loops
+            'End of Course Project: Create a Play Lab Game':
+              name: 'End of Course Project: Create a Play Lab Game'
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -10448,3 +10452,207 @@ en:
           description_audience: ''
           description_short: ''
           description: Teacher-facing tutorials for development in Game Lab.  These tutorials go beyond the concepts covered in CSD.
+        coursea-2019:
+          title: Course A (2019)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+              description_student: ''
+              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r\n"
+            Sequencing in Maze:
+              name: Sequencing in Maze
+              description_student: ''
+              description_teacher: ''
+            'Programming: Happy Maps':
+              name: 'Programming: Happy Maps'
+              description_student: ''
+              description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
+            Programming in Harvester:
+              name: Programming in Harvester
+              description_student: ''
+              description_teacher: ''
+            Going Places Safely:
+              name: Going Places Safely
+              description_student: ''
+              description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
+            'Loops: Happy Loops':
+              name: 'Loops: Happy Loops'
+              description_student: ''
+              description_teacher: Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.
+            Loops in Harvester:
+              name: Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+        courseb-2019:
+          title: Course B (2019)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_audience: 'Ages: 5-8'
+          stages:
+            Move It, Move It:
+              name: Move It, Move It
+              description_student: ''
+              description_teacher: ''
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Your Digital Footprint
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+              description_student: ''
+              description_teacher: ''
+            Copyright and Creativity:
+              name: Copyright and Creativity
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+        pre-express-2019:
+          title: Pre-reader Express (2019)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Move It, Move It
+              description_student: ''
+              description_teacher: ''
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Your Digital Footprint
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+              description_student: ''
+              description_teacher: ''
+            Copyright and Creativity:
+              name: Copyright and Creativity
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Spelling Bee
+              description_student: ''
+              description_teacher: ''
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+          title: Removed from CSF for 2019
+          description_audience: ''
+          description_short: ''
+          description: ''

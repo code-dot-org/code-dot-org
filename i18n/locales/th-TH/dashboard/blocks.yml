@@ -144,7 +144,7 @@ th:
             measures: ห้องดนตรี
             seconds: ขั้นคู่สอง
       Dancelab_everyVerseChorus:
-        text: 'ทุก [หน่วย][0] '
+        text: 'ทุก {UNIT} '
         options:
           UNIT:
             '"verse"': ท่อนร้อง
@@ -167,7 +167,7 @@ th:
             '"y"': อยู่ที่แกน Y
             '"tint"': ระดับอ่อนสี
       Dancelab_getTime:
-        text: "[หน่วย][0] ล่วงผ่าน"
+        text: "{UNIT} ล่วงผ่าน"
         options:
           UNIT:
             '"measures"': ห้องดนตรี
@@ -895,14 +895,16 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       binary_move:
         options:
           DIR:
@@ -952,7 +954,7 @@ th:
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeBlock:
-        text: วาง [blockType][0]
+        text: วาง {blockType}
         options:
           blockType:
             '"strippedOak"': ชิ้นไม้โอ็ค

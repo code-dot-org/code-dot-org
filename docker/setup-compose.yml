@@ -20,6 +20,7 @@ services:
       - nodemodules:/home/circleci/code-dot-org/apps/node_modules
       - rbenv:/home/circleci/.rbenv
       - mysqldata:/var/lib/mysql
+      - yarncache:/home/circleci/.cache
     env_file:
       - env.list
     ports:
@@ -30,3 +31,4 @@ volumes:
   nodemodules:
   mysqldata:
   rbenv:
+  yarncache:

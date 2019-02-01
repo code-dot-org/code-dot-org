@@ -1024,19 +1024,23 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione del movimento
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
       aalab_createPropertyGroup:
         text: crea un nuovo gruppo di personaggi chiamato {VAR} tutto composto da
           {COSTUME}
-      aalab_spritesWhere:
+      aalab_getThisSprite:
         options:
-          PROPERTY:
-            '"scale"': dimensione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"costume"': costume
-            '"direction"': direzione del movimento
-            '"rotation"': rotazione o direzione
-            '"tint"': tonalità
+          CHOICE:
+            '"other"': altro
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
       binary_move:
         options:
           DIR:

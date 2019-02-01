@@ -163,35 +163,6 @@ module Pd::Application
       end
     end
 
-    test 'assign_default_workshop! saves the default workshop' do
-      @application.expects(:find_default_workshop).returns(@fit_workshop)
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      @application.update! pd_workshop_id: @fit_workshop.id
-      @application.expects(:find_default_workshop).never
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! saves the default fit workshop' do
-      @application.expects(:find_default_fit_workshop).returns(@fit_workshop)
-
-      @application.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application.reload.fit_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
-      @application_with_fit_workshop.expects(:find_default_fit_workshop).never
-
-      @application_with_fit_workshop.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
-    end
-
     test 'fit_workshop returns the workshop associated with the assigned fit workshop id' do
       assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
     end

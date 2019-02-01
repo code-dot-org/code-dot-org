@@ -674,6 +674,13 @@ ko:
       PS copy 2-3 Bee Conditionals 5: "이 마술 자주색 꽃들은 변화 합니다!\r\n\r\n퍼즐을 실행 할때마다 1개의
         꽃꿀을 가지고 있을 수도 있고 없을 수도 있습니다.\n하지만 꽃꿀을 가지고 있는지는 코드를 실행전에 알 수 없습니다.\r\n\r\n꽃꿀이
         없는 자주색 꽃에서 꽃꿀을 모으지 않도록 주의하세요.\r\n먼저 '꽃꿀이 있으면' 블록을 이용해서 꽃꿀의 양이 1인지(=있는지) 확인해야합니다."
+      Ryan_Demo: |-
+        이 사슴을 춤추게 해볼까요!
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 블록을 작업공간에 드래그하세요. <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 블록 밑에 연결하세요. 4번째 마디 후에는 댄서가 새로운 동작을 시작해야 합니다.
+
+
+        **박자**는 음악에서 시간 계산에 사용됩니다. 이 튜토리얼에서 한 마디는 네 박자 길이입니다.
       Testing Quantum Farmer: "와! 진짜 깊은 구덩이를 발견했습니다. \r\n\r\n얼마나 흙을 메워야 할지 모르겠어요.
         \r\n\"메우기\" 블록을 사용하여 구덩이가 다 메워질 때까지 계속 흙을 채우는 프로그램을 작성해 보세요.  "
       Underground Avoiding Lava: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약)

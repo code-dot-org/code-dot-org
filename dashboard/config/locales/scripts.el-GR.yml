@@ -1635,3 +1635,27 @@ el:
               name: Δυαδικά Βραχιόλια
         gamelab:
           title: Game Lab
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Going Places Safely:
+              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Μετακίνησέ το, Μετακίνησέ το
+            Your Digital Footprint:
+              name: Το Ψηφιακό σου Αποτύπωμα
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Μετακίνησέ το, Μετακίνησέ το
+            Your Digital Footprint:
+              name: Το Ψηφιακό σου Αποτύπωμα
+            Spelling Bee:
+              name: Η μέλισσα της ορθογραφίας
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'

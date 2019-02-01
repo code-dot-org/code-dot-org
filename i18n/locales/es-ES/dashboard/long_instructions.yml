@@ -1184,6 +1184,13 @@ es:
       PS copy 2-3 Bee Conditionals 5: "Estas flores púrpura cambian!\\r\n\\r\nCada vez que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero no sabrás el número hasta que ejecutes el código! \\r\n\\r\nTen cuidado de no recolectar néctar de una flor púrpura si no tiene. \\r\nPrimero deberás comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
       Pixelation - Lesson 15 - Complete 3-bit color: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
+      Ryan_Demo: |-
+        ¡Pongamos a este alce a bailar!
+
+        Arrastra el bloque de «floss» <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo bajo el bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Tu bailarín debería iniciar un nuevo movimiento después del cuarto compás.
+
+
+        Los **compases** se utilizan para contar el tiempo en música. En este tutorial, un compás tiene cuatro tiempos.
       Testing Quantum Farmer: "Wow, mira eso! \\r\n\\r\nYo no\nse cuántas palas de tierra necesita este hoyo. \\r\n¿Puedes tu escribir un programa\nque siga usando el bloque `llenar` hasta que el suelo esté parejo?\n  "
       course1_artist_loops_challenge2: "¡Vamos a jugar un juego!! Dibuja tantas X como tú\npuedas! ¿Puedes obtener 3 en una fila?"
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)

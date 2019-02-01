@@ -69,6 +69,7 @@ class XhrProxyController < ApplicationController
     runescape.com
     sheets.googleapis.com
     spreadsheets.google.com
+    stats.minecraftservers.org
     swapi.co
     transitchicago.com
     translate.yandex.net

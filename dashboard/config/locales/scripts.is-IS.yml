@@ -4185,3 +4185,37 @@ is:
               name: Stafræn armbönd
         gamelab:
           title: Leikjasmiðjan
+        coursea-2019:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Going Places Safely:
+              name: Ferðast í öryggi
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+        pre-express-2019:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Spelling Bee:
+              name: Stafsetning
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
