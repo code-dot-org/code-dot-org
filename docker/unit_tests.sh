@@ -6,6 +6,8 @@
 
 set -xe
 
+mispipe "echo 'Starting timestamp'" ts
+
 export CI=true
 export RAILS_ENV=test
 export RACK_ENV=test
@@ -15,19 +17,21 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # circle.rake has logic which depends on these branches existing. If we're doing a shallow clone, e.g.
 # in a CI environment, then they don't exist by default.
 if $(git rev-parse --is-shallow-repository); then
-    git remote set-branches --add origin staging
-    git remote set-branches --add origin test
-    git remote set-branches --add origin production
-    git fetch --depth 5 -v
+    git remote set-branches --add origin staging test production
+    git remote show origin
+    mispipe "git fetch --depth 50 origin staging test production" ts
     git branch -a
 fi
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+git --no-pager diff --name-only $current_branch $(git merge-base $current_branch origin/staging)
 
 mysql -V
 
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
-bundle install --verbose
+mispipe "bundle install --verbose" ts
 
 # set up locals.yml
 set +x
@@ -61,3 +65,5 @@ RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:
 
 # unit tests
 bundle exec rake circle:run_tests --trace
+
+mispipe "echo 'Ending timestamp'" ts

@@ -19,7 +19,7 @@ jobs:
         - /dtl_candidate_.*/
     parallelism: 2
     docker:
-      - image: wjordan/code-dot-org:0.5
+      - image: jmkulwik/code-dot-org:0.7
         environment:
           RAILS_ENV: test
           RACK_ENV: test

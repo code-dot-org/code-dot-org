@@ -107,6 +107,7 @@ level 'courseE_aboutme_1'
 level 'courseE_aboutme_2'
 level 'courseE_aboutme_3'
 level 'courseE_aboutme_4'
+level 'courseE_aboutme_5'
 level 'courseE_aboutme_freeplay'
 
 stage 'Nested Loops in Bee', flex_category: 'csf_e_2'

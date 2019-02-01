@@ -13,6 +13,7 @@ export default class WorkshopEnrollment extends React.Component {
     enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
     workshopId: PropTypes.string.isRequired,
     workshopCourse: PropTypes.string.isRequired,
+    workshopSubject: PropTypes.string,
     workshopDate: PropTypes.string.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
@@ -46,6 +47,7 @@ export default class WorkshopEnrollment extends React.Component {
         accountRequiredForAttendance={this.props.accountRequiredForAttendance}
         onDelete={this.props.onDelete}
         workshopCourse={this.props.workshopCourse}
+        workshopSubject={this.props.workshopSubject}
       />
     );
 
