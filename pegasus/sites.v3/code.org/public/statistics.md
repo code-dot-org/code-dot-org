@@ -193,6 +193,17 @@ It's never too late to start teaching CS!
 
 <div style="clear: both;"></div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
+
+<br>
+
+Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students! 
+</div>
+
+<div style="clear: both;"></div>
+
 <br>
 
 ## Statistics at a glance
