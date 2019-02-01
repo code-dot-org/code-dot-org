@@ -4265,6 +4265,12 @@ nl:
           doen aan elke honingkorf?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Dit is een test hint.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+          * De danser moet na 4 maten een nieuwe move doen.
+
+          *Dit level eindigt na 8 maten.*
       aE3_authored_hint:
         aE3_d: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw"
           klikken en het opnieuw proberen!
@@ -4895,6 +4901,9 @@ nl:
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_b: Een eenvoudige oplossing is om 2 keer naar het
           oosten te bewegen, en dan de schat te machtigen.
+      courseA_collector_loops1_2019_authored_hint:
+        courseA_collector_loops1_b: Een eenvoudige oplossing is om 2 keer naar het
+          oosten te bewegen, en dan de schat te machtigen.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_b: De kortste oplossing heeft 2 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lussen. De één achter
@@ -4903,10 +4912,17 @@ nl:
         courseA_collector_loops6_b: De kortste oplossing heeft 2 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lussen. De één achter
           de andere.
+      courseA_collector_loops6_2019_authored_hint:
+        courseA_collector_loops6_b: De kortste oplossing heeft 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> lussen. De één achter
+          de andere.
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_b: Probeer dit pad om een oplossing te
           krijgen.
       courseA_collector_loops_challenge2kp_2018_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Probeer dit pad om een oplossing te
+          krijgen.
+      courseA_collector_loops_challenge2kp_2019_authored_hint:
         courseA_collector_loops_challenge2kp_b: Probeer dit pad om een oplossing te
           krijgen.
       courseA_maze_ramp2_2018_authored_hint:
@@ -4925,9 +4941,44 @@ nl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -4965,7 +5016,45 @@ nl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -5000,7 +5089,29 @@ nl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -5008,9 +5119,13 @@ nl:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Deze puzzel heeft twee oplossingen.
       courseA_maze_seq_challenge1_2018_authored_hint:
+        courseA_maze_seq_challenge1_a: Deze puzzel heeft twee oplossingen.
+      courseA_maze_seq_challenge1_2019_authored_hint:
         courseA_maze_seq_challenge1_a: Deze puzzel heeft twee oplossingen.
       courseA_playlab_events_challenge1a_authored_hint:
         courseA_playlab_events_challenge1_c: |-
@@ -5087,7 +5202,37 @@ nl:
           </block>
           </next>
           </block></xml>
+      courseA_playlab_events_challenge2_2019_authored_hint:
+        courseA_playlab_events_challenge2_c: |-
+          Je kan een boos monster laten grommen.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
@@ -5108,7 +5253,42 @@ nl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -5146,7 +5326,45 @@ nl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -5181,16 +5399,38 @@ nl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_b: Probeer deze code eerst uit te voeren om te zien
           waar de artiest eindigt.
       courseB_artist_loops2_2018_authored_hint:
         courseB_artist_loops2_b: Probeer deze code eerst uit te voeren om te zien
           waar de artiest eindigt.
+      courseB_artist_loops2_2019_authored_hint:
+        courseB_artist_loops2_b: Probeer deze code eerst uit te voeren om te zien
+          waar de artiest eindigt.
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_b: De artiest zal naar het zuiden willen gaan om zijn
           zijn te kunnen tekenen.
       courseB_artist_loops3_2018_authored_hint:
+        courseB_artist_loops3_b: De artiest zal naar het zuiden willen gaan om zijn
+          zijn te kunnen tekenen.
+      courseB_artist_loops3_2019_authored_hint:
         courseB_artist_loops3_b: De artiest zal naar het zuiden willen gaan om zijn
           zijn te kunnen tekenen.
       courseB_collector_loops1_authored_hint:
@@ -5201,16 +5441,26 @@ nl:
         courseB_collector_loops1_a: De <xml><block type="collector_collect_simplified"/></xml>
           blok kan gebruikt worden om schatten op te pikken wanneer je er bovenop
           staat.
+      courseB_collector_loops1_2019_authored_hint:
+        courseB_collector_loops1_a: De <xml><block type="collector_collect_simplified"/></xml>
+          blok kan gebruikt worden om schatten op te pikken wanneer je er bovenop
+          staat.
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_b: Probeer de code enkele keren uit te voeren om
           te zien wat er gebeurt.
       courseB_collector_loops5_2018_authored_hint:
         courseB_collector_loops5_b: Probeer de code enkele keren uit te voeren om
           te zien wat er gebeurt.
+      courseB_collector_loops5_2019_authored_hint:
+        courseB_collector_loops5_b: Probeer de code enkele keren uit te voeren om
+          te zien wat er gebeurt.
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_b: Je hebt 3 `herhaal` lussen nodig. De één achter
           de andere.
       courseB_collector_loops9_2018_authored_hint:
+        courseB_collector_loops9_b: Je hebt 3 `herhaal` lussen nodig. De één achter
+          de andere.
+      courseB_collector_loops9_2019_authored_hint:
         courseB_collector_loops9_b: Je hebt 3 `herhaal` lussen nodig. De één achter
           de andere.
       courseB_collector_loops_challenge1_authored_hint:
@@ -5222,6 +5472,14 @@ nl:
             </xml>
           Je kan dit doen met slechts 14 blokken. De volgende hint bevat de oplossing.
       courseB_collector_loops_challenge1_2018_authored_hint:
+        courseB_collector_loops_challenge1_c: |
+          Beweeg tweemaal naar het oosten tussen elk pad.
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+          Je kan dit doen met slechts 14 blokken. De volgende hint bevat de oplossing.
+      courseB_collector_loops_challenge1_2019_authored_hint:
         courseB_collector_loops_challenge1_c: |
           Beweeg tweemaal naar het oosten tussen elk pad.
           <xml>
@@ -5326,12 +5584,20 @@ nl:
       courseB_maze_seq4_2018_authored_hint:
         courseB_maze_seq4_b: Je zal het <xml><block type="maze_moveEast"/></xml> blok
           willen gebruiken om deze puzzel op te lossen.
+      courseB_maze_seq4_2019_authored_hint:
+        courseB_maze_seq4_b: Je zal het <xml><block type="maze_moveEast"/></xml> blok
+          willen gebruiken om deze puzzel op te lossen.
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: Als je vastzit, probeer dan het pad uit te tekenen op
           een blad papier.
         courseB_maze_seq5_b: Er zijn 2 manieren om deze puzzel op te lossen!
         courseB_maze_seq5_c: Niet zeker hoe het varken te bereiken? Probeer dit pad.
       courseB_maze_seq5_2018_authored_hint:
+        courseB_maze_seq5_a: Als je vastzit, probeer dan het pad uit te tekenen op
+          een blad papier.
+        courseB_maze_seq5_b: Er zijn 2 manieren om deze puzzel op te lossen!
+        courseB_maze_seq5_c: Niet zeker hoe het varken te bereiken? Probeer dit pad.
+      courseB_maze_seq5_2019_authored_hint:
         courseB_maze_seq5_a: Als je vastzit, probeer dan het pad uit te tekenen op
           een blad papier.
         courseB_maze_seq5_b: Er zijn 2 manieren om deze puzzel op te lossen!
@@ -5346,11 +5612,20 @@ nl:
           twee delen, één zijwaarts en één boven-en-beneden.
         courseB_maze_seq5_c: Er zijn meerdere manieren om deze puzzel op te lossen.
         courseB_maze_seq5_d: Niet zeker hoe het varken te bereiken? Probeer dit pad!
+      courseB_maze_seq6_2019_authored_hint:
+        courseB_maze_seq6_b: Als je vastzit, probeer dan de puzzel op te lossen in
+          twee delen, één zijwaarts en één boven-en-beneden.
+        courseB_maze_seq5_c: Er zijn meerdere manieren om deze puzzel op te lossen.
+        courseB_maze_seq5_d: Niet zeker hoe het varken te bereiken? Probeer dit pad!
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_b: Probeer de code uit te voeren die je gegeven wordt om
           te zien waar je eindigt.
         courseB_maze_seq7_c: Kan je het varken niet bereiken? Probeer dit pad!
       courseB_maze_seq7_2018_authored_hint:
+        courseB_maze_seq7_b: Probeer de code uit te voeren die je gegeven wordt om
+          te zien waar je eindigt.
+        courseB_maze_seq7_c: Kan je het varken niet bereiken? Probeer dit pad!
+      courseB_maze_seq7_2019_authored_hint:
         courseB_maze_seq7_b: Probeer de code uit te voeren die je gegeven wordt om
           te zien waar je eindigt.
         courseB_maze_seq7_c: Kan je het varken niet bereiken? Probeer dit pad!
@@ -5360,12 +5635,20 @@ nl:
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_b: Er zijn 2 manieren om deze puzzel op te lossen!
         courseB_maze_seq8_c: Weet je niet welke weg te gaan? Probeer dit pad!
+      courseB_maze_seq8_2019_authored_hint:
+        courseB_maze_seq8_b: Er zijn 2 manieren om deze puzzel op te lossen!
+        courseB_maze_seq8_c: Weet je niet welke weg te gaan? Probeer dit pad!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_b: Bouw je programma één blok per keer en test terwijl je
           bouwt.
         courseB_maze_seq9_c: Er zijn meerdere manieren om deze puzzel op te lossen.
         courseB_maze_seq9_d: Zit je vast? Probeer dit pad!
       courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_b: Bouw je programma één blok per keer en test terwijl je
+          bouwt.
+        courseB_maze_seq9_c: Er zijn meerdere manieren om deze puzzel op te lossen.
+        courseB_maze_seq9_d: Zit je vast? Probeer dit pad!
+      courseB_maze_seq9_2019_authored_hint:
         courseB_maze_seq9_b: Bouw je programma één blok per keer en test terwijl je
           bouwt.
         courseB_maze_seq9_c: Er zijn meerdere manieren om deze puzzel op te lossen.
@@ -5380,6 +5663,11 @@ nl:
           deze keer.
         courseB_maze_seq_challenge1_b: Probeer om met de <xml><block type="maze_moveWest"/></xml>
           blok te starten.
+      courseB_maze_seq_challenge1_2019_authored_hint:
+        courseB_maze_seq_challenge1_a: Het kan zijn dat het kortste pad niet werkt
+          deze keer.
+        courseB_maze_seq_challenge1_b: Probeer om met de <xml><block type="maze_moveWest"/></xml>
+          blok te starten.
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: Je hoeft geen blokken toe te voegen of te verwijderen
           om deze puzzel op te lossen.
@@ -5390,12 +5678,22 @@ nl:
           om deze puzzel op te lossen.
         courseB_maze_seq_challenge2_b: Herorder de blokken en gebruik het pad in de
           vorm van een trap.
+      courseB_maze_seq_challenge2_2019_authored_hint:
+        courseB_maze_seq_challenge2_a: Je hoeft geen blokken toe te voegen of te verwijderen
+          om deze puzzel op te lossen.
+        courseB_maze_seq_challenge2_b: Herorder de blokken en gebruik het pad in de
+          vorm van een trap.
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_da: |-
           Bekijk wat er gebeurt wanneer je dezelfde oplossing zou gebruiken als de trap-stap puzzel:
 
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2018_authored_hint:
+        courseB_starWars_prog5_da: |-
+          Bekijk wat er gebeurt wanneer je dezelfde oplossing zou gebruiken als de trap-stap puzzel:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
+      courseB_starWars_prog5_2019_authored_hint:
         courseB_starWars_prog5_da: |-
           Bekijk wat er gebeurt wanneer je dezelfde oplossing zou gebruiken als de trap-stap puzzel:
 

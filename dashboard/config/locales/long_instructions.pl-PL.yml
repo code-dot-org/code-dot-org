@@ -910,6 +910,12 @@ pl:
         ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\r\nMusisz
         sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if
         nectar`."
+      Ryan_Demo: |-
+        Stwórzmy ten taniec łosi!
+
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+
+        **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Testing Quantum Farmer: "Wow, popatrz! \r \r Nie wiem, ile szufelek śmieci potrzebuje
         ten otwór.  \r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\"
         aż wypełni ten otwór do poziomu ziemi?  "
@@ -957,6 +963,8 @@ pl:
         którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
       courseA_collector_loops_challenge1_2018: '*"Czy możesz mi pomóc znaleźć błędy?
         Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
+      courseA_collector_loops_challenge1_2019: '*"Czy możesz mi pomóc znaleźć błędy?
+        Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
       courseA_playlab_events_challenge1: "*\"Gdzie ukrywają się moi przyjaciele? W
         tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
@@ -967,14 +975,24 @@ pl:
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
         pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
+      courseA_playlab_events_challenge1_2019: "*\"Gdzie ukrywają się moi przyjaciele?
+        W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
+        na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
+        postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
+        pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseB_artist_loops6: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz
         wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops6_2018: Za krzakami jest piękna winorośl pełna kwiatów.
+        Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
+      courseB_artist_loops6_2019: Za krzakami jest piękna winorośl pełna kwiatów.
         Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops_challenge2: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_artist_loops_challenge2_2018: |-
+        Zagrajmy w grę!
+        Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseB_artist_loops_challenge2_2019: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops3_predict1: W jaki sposób Laurel może zebrać wszystkie
@@ -989,11 +1007,18 @@ pl:
       courseB_playlab_events_challenge1_2018: "Czas na Wielki Wyścig Zwierząt! Zrób
         aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\r\n\r\nKto będzie biegł
         szybciej?\r\n"
+      courseB_playlab_events_challenge1_2019: "Czas na Wielki Wyścig Zwierząt! Zrób
+        aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\r\n\r\nKto będzie biegł
+        szybciej?\r\n"
       courseB_playlab_events_challenge2: "Zrób tak, aby zwierzęta po kliknięciu na
         nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
         do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
         Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
       courseB_playlab_events_challenge2_2018: "Zrób tak, aby zwierzęta po kliknięciu
+        na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
+        do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
+        Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+      courseB_playlab_events_challenge2_2019: "Zrób tak, aby zwierzęta po kliknięciu
         na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
         do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
         Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"

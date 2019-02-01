@@ -1009,16 +1009,16 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': גודל
-            '"x"': מיקום בציר x
-            '"y"': מיקום בציר y
-            '"costume"': תחפושת
-            '"direction"': כיוון תנועה
-            '"rotation"': סיבוב או כיוון
-            '"tint"': גוון
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
       binary_move:
         options:
           DIR:

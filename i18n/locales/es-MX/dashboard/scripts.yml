@@ -4441,3 +4441,81 @@ es-MX:
               name: Pulseras binarias
         gamelab:
           title: Laboratorio de juegos
+        coursea-2019:
+          description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: Una introducción a las ciencias de la computación para pre lectores.
+          description_audience: 'Edades de 4 a 7 años'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuración: Errores desapercibidos'
+              description_teacher: 'Esta lección guiará a los estudiantes a través de los pasos de depuración. Los estudiantes aprenderán el mantra: "¿Que ocurrió? ¿Qué se suponia que pasara? ¿Eso que te dice?"'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la vida real: Planta una semilla'
+              description_teacher: "En esta lección, los estudiantes relacionan el concepto de algoritmos a actividades cotidianas, plantando una semilla. El objetivo aquí es empezar a construir habilidades para traducir situaciones del mundo real en escenarios en linea y viceversa.\\r\n"
+            'Programming: Happy Maps':
+              name: 'Programación: Mapas felices'
+              description_teacher: El puente de algoritmos a programación puede ser corto si los estudiantes entienden la diferencia entre planificación de una secuencia y codificación de la secuencia en el idioma apropiado.  Esta actividad ayudará a los estudiantes a adquirir experiencia de lectura y escritura de código.
+            Programming in Maze:
+              name: Programación en Laberinto
+              description_teacher: En esta serie de acertijos en linea, los estudiantes aprenderán sobre algoritmos, depuración y conocimientos generales de computación. Presentando personajes del juego Angry Birds, los estudiantes desarrollaran algoritmos secuenciales para llevar el pajaro al puerco sin estrellarse con paredes o TNT. Se han mezclado acertijos de depuración en este nivel para practicar la resolución de problemas y pensamiento crítico.
+            Going Places Safely:
+              name: Ir a sitios seguros
+              description_teacher: En colaboración con [r common-sense-media], esta lección ayuda a los estudiantes a aprender que muchos sitios piden información privada y discute como manejar esas solicitudes. Los estudiantes tambien descubren que pueden ir a lugares emocionantes en linea, pero necesitan seguir ciertas reglas para estar seguros.
+            'Loops: Happy Loops':
+              description_teacher: Los ciclos son una herramienta muy util y poderosa en la programación. Para entender cuan útiles pueden ser, los estudiantes deben ser motivador a querer resolver problemas mundanos de manera mas facil.
+            Loops in Harvester:
+              name: Ciclos en Harvester
+            Loops in Collector:
+              description_teacher: Trabajando sobre el concepto de repetir instrucciones de "Ciclos felices", en este nivel los estudiantes usaran ciclos para recoger tesoro mas eficientemente en Code.org.
+            Loops in Artist:
+              description_teacher: Regresando a los ciclos, los estudiantes aprenden a dibujar imagenes ciclando secuencias simples de instrucciones. En la lección desconectada previa, los ciclos fueron usados para recorrer un laberinto y recoger tesoro. Aquí, los ciclos estan creando patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imagenes usando ciclos.
+            'Events: The Big Event':
+              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo preescrito. A veces deseas que el programa responda al usuario exactamente cuando éste lo desea. Para esto son los eventos.
+            Events in Play Lab:
+              description_teacher: En esta actividad en linea, los estudiantes tendrán la oportunidad de aprender como usar eventos en Play Lab y de aplicar las habilidades de código que han aprendidod para crear un juego animado. ¡Es tiempo de ponerse creativo y hacer una historia en Play Lab!
+        courseb-2019:
+          description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_audience: 'Edades de 5 a 8 años'
+          stages:
+            Move It, Move It:
+              name: Muévelo, Muévelo
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Your Digital Footprint:
+              name: Tu huella dactilar
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Ciclos: Mis amigos roboticos'
+            Loops in Ice Age:
+              name: Ciclos en Ice Age
+        pre-express-2019:
+          description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'Introducción a las ciencias de la computación para preescolar: combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuración: Errores desapercibidos'
+            Move It, Move It:
+              name: Muévelo, Muévelo
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Your Digital Footprint:
+              name: Tu huella dactilar
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Ciclos: Mis amigos roboticos'
+            Loops in Ice Age:
+              name: Ciclos en Ice Age
+            Spelling Bee:
+              name: Concurso de ortografía
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuración: Errores desapercibidos'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la vida real: Planta una semilla'

@@ -1314,6 +1314,12 @@ pl:
         turn_at_honeycomb_pointer: Poza wytwarzaniem miodu, czy zauważasz cokolwiek innego, co musisz zrobić z każdym plastrem miodu?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Jest to testowa wskazówka.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+
+          * Ten poziom kończy się po 7 taktach.
       Underground Avoiding Lava_authored_hint:
         mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji `if` czy po niej?
       Underground Avoiding Lava_2018_authored_hint:
@@ -1486,23 +1492,33 @@ pl:
         courseA_artist_loops4_a: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
+      courseA_artist_loops4_2019_authored_hint:
+        courseA_artist_loops4_a: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_b: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
       courseA_artist_loops5_2018_authored_hint:
+        courseA_artist_loops5_b: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
+      courseA_artist_loops5_2019_authored_hint:
         courseA_artist_loops5_b: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_b: Będziesz potrzebował 2 bloków w 2 kierunkach aby rozwiązać tą zagadkę.
       courseA_artist_loops6_2018_authored_hint:
         courseA_artist_loops6_b: Będziesz potrzebował 2 bloków w 2 kierunkach aby rozwiązać tą zagadkę.
+      courseA_artist_loops6_2019_authored_hint:
+        courseA_artist_loops6_b: Będziesz potrzebował 2 bloków w 2 kierunkach aby rozwiązać tą zagadkę.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz aby narysować pozostałe dwie.
       courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz aby narysować pozostałe dwie.
+      courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz aby narysować pozostałe dwie.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz aby narysować pozostałe dwie.
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_c: Jeśli nie wiesz gdzie umieścić pętlę, spróbuj pisać swój kod krok po kroku oraz szukać wzorców.
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_c: Jeśli nie wiesz gdzie umieścić pętlę, spróbuj pisać swój kod krok po kroku oraz szukać wzorców.
+      courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_c: Jeśli nie wiesz gdzie umieścić pętlę, spróbuj pisać swój kod krok po kroku oraz szukać wzorców.
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_b: Kiedy skończysz jeden dom dla ptaków, `jump` do następnego!
@@ -1513,11 +1529,16 @@ pl:
       courseA_artist_loops_challenge2a_2018_authored_hint:
         courseA_artist_loops_challenge2_b: Jak skończysz jeden namiot, `jump` podwójnie aby przejść do następnego!
         courseA_artist_loops_challenge2_c: Wszystkie Twoje bloki muszą być wewnątrz pętli aby ukończyć tą zagadkę.
+      courseA_artist_loops_challenge2a_2019_authored_hint:
+        courseA_artist_loops_challenge2_b: Jak skończysz jeden namiot, `jump` podwójnie aby przejść do następnego!
+        courseA_artist_loops_challenge2_c: Wszystkie Twoje bloki muszą być wewnątrz pętli aby ukończyć tą zagadkę.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: Możesz użyć bloków 'Skocz' aby przenieść się w inne miejsce.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
       courseA_collector_loops2_2018_authored_hint:
+        courseA_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
+      courseA_collector_loops2_2019_authored_hint:
         courseA_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Jeśli nie możesz zgadnąć odpowiedzi od razu, spróbuj użyć kartki papieru aby rozwiązać jakich strzałek będziesz potrzebował i poszukaj wzorca.
@@ -1525,18 +1546,28 @@ pl:
       courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: Jeśli nie możesz zgadnąć odpowiedzi od razu, spróbuj użyć kartki papieru aby rozwiązać jakich strzałek będziesz potrzebował i poszukaj wzorca.
         courseA_collector_loops5_b: Spróbuj rozdzielić problem na 2 części, poruszaj się bokiem i potem na dół.
+      courseA_collector_loops5_2019_authored_hint:
+        courseA_collector_loops5_a: Jeśli nie możesz zgadnąć odpowiedzi od razu, spróbuj użyć kartki papieru aby rozwiązać jakich strzałek będziesz potrzebował i poszukaj wzorca.
+        courseA_collector_loops5_b: Spróbuj rozdzielić problem na 2 części, poruszaj się bokiem i potem na dół.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseA_collector_loops6_2018_authored_hint:
+        courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseA_collector_loops6_2019_authored_hint:
         courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby zobaczyć gdzie Laurel skończy.
       courseA_collector_loops7_2018_authored_hint:
         courseA_collector_loops7_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby zobaczyć gdzie Laurel skończy.
+      courseA_collector_loops7_2019_authored_hint:
+        courseA_collector_loops7_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby zobaczyć gdzie Laurel skończy.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_b: Spróbuj rozbić tą zagadkę na 3 oddzielne części, i napisać pętle dla każdej z nich.
         courseA_collector_loops8_c: Pamiętaj, że możesz napisać jeden fragment kodu, nacisnąć "Idź" aby dowiedzieć się gdzie musisz iść.
       courseA_collector_loops8_2018_authored_hint:
+        courseA_collector_loops8_b: Spróbuj rozbić tą zagadkę na 3 oddzielne części, i napisać pętle dla każdej z nich.
+        courseA_collector_loops8_c: Pamiętaj, że możesz napisać jeden fragment kodu, nacisnąć "Idź" aby dowiedzieć się gdzie musisz iść.
+      courseA_collector_loops8_2019_authored_hint:
         courseA_collector_loops8_b: Spróbuj rozbić tą zagadkę na 3 oddzielne części, i napisać pętle dla każdej z nich.
         courseA_collector_loops8_c: Pamiętaj, że możesz napisać jeden fragment kodu, nacisnąć "Idź" aby dowiedzieć się gdzie musisz iść.
       courseA_collector_loops_challenge1_authored_hint:
@@ -1545,15 +1576,38 @@ pl:
       courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Spróbuj zmienić wartości w każdej pętli, jeśli coś wydaje się źle.
         courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz coś tylko jeden raz.
+      courseA_collector_loops_challenge1_2019_authored_hint:
+        courseA_collector_loops_challenge1_a: Spróbuj zmienić wartości w każdej pętli, jeśli coś wydaje się źle.
+        courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz coś tylko jeden raz.
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: Potrzebujesz tylko 1 bloku, aby to rozwiązać.
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: Będziesz musiał iść w dwóch różnych kierunkach aby dostać klejnot!
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_b: "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
+      courseA_harvester_loops3_2019_authored_hint:
+        courseA_harvester_loops3_b: "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.
+      courseA_harvester_loops5_2019_authored_hint:
+        courseA_harvester_loops5_a: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1572,6 +1626,25 @@ pl:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1609,7 +1682,45 @@ pl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1644,9 +1755,27 @@ pl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchom kod, aby zobaczyć co się stanie.
       courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchom kod, aby zobaczyć co się stanie.
+      courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchom kod, aby zobaczyć co się stanie.
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_b: Spróbuj najpierw uruchomić kod, aby zobaczyć gdzie ptak skończy. Dokąd musisz stąd iść?
@@ -1670,11 +1799,21 @@ pl:
           You will need to use this block:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_b: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.
       courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_b: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.
+      courseA_maze_seq6_2019_authored_hint:
         courseA_maze_seq6_b: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_b: Jesli nie jesteś pewien co zrobić, naciśnij "Start over" i uruchom kod aby zobaczyć co idzie nie tak.
@@ -1683,6 +1822,9 @@ pl:
         courseA_maze_seq9_b: Jesli nie jesteś pewien co zrobić, naciśnij "Start over" i uruchom kod aby zobaczyć co idzie nie tak.
         courseA_maze_seq9_c: Będziesz musiał poruszać się w 3 kierunkach aby rozwiązać tą łamigłówkę.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -1701,7 +1843,42 @@ pl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1739,7 +1916,45 @@ pl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1774,17 +1989,39 @@ pl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
       courseB_artist_loops2_2018_authored_hint:
+        courseB_artist_loops2_a: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
+      courseB_artist_loops2_2019_authored_hint:
         courseB_artist_loops2_a: Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_b: Artysta będzie chciał przenieść się na południe aby rysować linię.
       courseB_artist_loops3_2018_authored_hint:
         courseB_artist_loops3_b: Artysta będzie chciał przenieść się na południe aby rysować linię.
+      courseB_artist_loops3_2019_authored_hint:
+        courseB_artist_loops3_b: Artysta będzie chciał przenieść się na południe aby rysować linię.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_c: Nie zapomnij zmienić ilości powtórzeń pętli.
       courseB_artist_loops4_2018_authored_hint:
+        courseB_artist_loops4_c: Nie zapomnij zmienić ilości powtórzeń pętli.
+      courseB_artist_loops4_2019_authored_hint:
         courseB_artist_loops4_c: Nie zapomnij zmienić ilości powtórzeń pętli.
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_a: Pamiętaj, że blok skoku możę być wykorzystany aby poruszać się bez rysowania linii.
@@ -1792,9 +2029,14 @@ pl:
       courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_a: Pamiętaj, że blok skoku możę być wykorzystany aby poruszać się bez rysowania linii.
         courseB_artist_loops9_b: Będziesz musiał użyć bloku W, aby rozwiązać tą zagadkę.
+      courseB_artist_loops9_2019_authored_hint:
+        courseB_artist_loops9_a: Pamiętaj, że blok skoku możę być wykorzystany aby poruszać się bez rysowania linii.
+        courseB_artist_loops9_b: Będziesz musiał użyć bloku W, aby rozwiązać tą zagadkę.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie nad niektórymi liniami. '
       courseB_artist_loops_challenge1_2018_authored_hint:
+        courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie nad niektórymi liniami. '
+      courseB_artist_loops_challenge1_2019_authored_hint:
         courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie nad niektórymi liniami. '
       courseB_artist_loops_challenge2_authored_hint:
         courseB_artist_loops_challenge2_a: Kod aby narysować X jest już Ci dany. Wszystko co musisz zrobić, to powtórzyć X i skoczyć do następnego miejsca.
@@ -1802,31 +2044,48 @@ pl:
       courseB_artist_loops_challenge2_2018_authored_hint:
         courseB_artist_loops_challenge2_a: Kod aby narysować X jest już Ci dany. Wszystko co musisz zrobić, to powtórzyć X i skoczyć do następnego miejsca.
         courseB_artist_loops_challenge2_b: Możesz użyć bloków 'Skocz' aby przenieść się w inne miejsce.
+      courseB_artist_loops_challenge2_2019_authored_hint:
+        courseB_artist_loops_challenge2_a: Kod aby narysować X jest już Ci dany. Wszystko co musisz zrobić, to powtórzyć X i skoczyć do następnego miejsca.
+        courseB_artist_loops_challenge2_b: Możesz użyć bloków 'Skocz' aby przenieść się w inne miejsce.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_b: Spróbuj zapisać ruchy na kartce papieru i znaleźć wzór.
       courseB_collector_loops10_2018_authored_hint:
+        courseB_collector_loops10_b: Spróbuj zapisać ruchy na kartce papieru i znaleźć wzór.
+      courseB_collector_loops10_2019_authored_hint:
         courseB_collector_loops10_b: Spróbuj zapisać ruchy na kartce papieru i znaleźć wzór.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
       courseB_collector_loops2_2018_authored_hint:
         courseB_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
+      courseB_collector_loops2_2019_authored_hint:
+        courseB_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_b: Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz powtarzającej się pętli.
       courseB_collector_loops3_2018_authored_hint:
+        courseB_collector_prog3_b: Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz powtarzającej się pętli.
+      courseB_collector_loops3_2019_authored_hint:
         courseB_collector_prog3_b: Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz powtarzającej się pętli.
       courseB_collector_loops4_authored_hint:
         courseB_collector_loops4_c: Laurel musi iść na dół i zebrać skarb po zakończeniu pętli `repeat`!
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_c: |-
           Laurel musi iść na dół i zebrać skarb po zakończeniu pętli `repeat`!
+      courseB_collector_loops4_2019_authored_hint:
+        courseB_collector_loops4_c: |-
+          Laurel musi iść na dół i zebrać skarb po zakończeniu pętli `repeat`!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_b: Spróbuj uruchomić kod kilka razy, aby zobaczyć, co się dzieje.
       courseB_collector_loops5_2018_authored_hint:
+        courseB_collector_loops5_b: Spróbuj uruchomić kod kilka razy, aby zobaczyć, co się dzieje.
+      courseB_collector_loops5_2019_authored_hint:
         courseB_collector_loops5_b: Spróbuj uruchomić kod kilka razy, aby zobaczyć, co się dzieje.
       courseB_collector_loops6_authored_hint:
         courseB_collector_loops6_b: Możesz zmienić ilość powtarzania się pętli poprzez kliknięcie w "3" i wybranie innej wartości.
         courseB_collector_loops6_d: Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części.
       courseB_collector_loops6_2018_authored_hint:
+        courseB_collector_loops6_b: Możesz zmienić ilość powtarzania się pętli poprzez kliknięcie w "3" i wybranie innej wartości.
+        courseB_collector_loops6_d: Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części.
+      courseB_collector_loops6_2019_authored_hint:
         courseB_collector_loops6_b: Możesz zmienić ilość powtarzania się pętli poprzez kliknięcie w "3" i wybranie innej wartości.
         courseB_collector_loops6_d: Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części.
       courseB_collector_loops_challenge2_authored_hint:
@@ -1841,7 +2100,13 @@ pl:
       courseB_collector_loops_challenge2a_2018_authored_hint:
         courseB_collector_loops_challenge2a_a: Jeśli coś idzie źle, spróbuj to debugować. Nie poddawaj się!
         courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
+      courseB_collector_loops_challenge2a_2019_authored_hint:
+        courseB_collector_loops_challenge2a_a: Jeśli coś idzie źle, spróbuj to debugować. Nie poddawaj się!
+        courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
       courseB_iceage_loops3_authored_hint:
+        courseB_iceage_loops3_b: |-
+          Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.
+      courseB_iceage_loops3_2019_authored_hint:
         courseB_iceage_loops3_b: |-
           Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.
       courseB_maze_seq10_authored_hint:
@@ -1854,28 +2119,43 @@ pl:
       courseB_maze_seq5_2018_authored_hint:
         courseB_maze_seq5_a: Jeśli gdzieś utkniesz, spróbuj narysować ścieżkę na papierze.
         courseB_maze_seq5_c: Nie jesteś pewny, jak dostać się do świnki? Spróbuj tej ścieżki.
+      courseB_maze_seq5_2019_authored_hint:
+        courseB_maze_seq5_a: Jeśli gdzieś utkniesz, spróbuj narysować ścieżkę na papierze.
+        courseB_maze_seq5_c: Nie jesteś pewny, jak dostać się do świnki? Spróbuj tej ścieżki.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Istnieją dwa sposoby, aby rozwiązać ten problem!
         courseB_maze_seq8_c: Nie wiesz, w którą stronę iść? Wypróbuj tę ścieżkę!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_b: Istnieją dwa sposoby, aby rozwiązać ten problem!
         courseB_maze_seq8_c: Nie wiesz, w którą stronę iść? Wypróbuj tę ścieżkę!
+      courseB_maze_seq8_2019_authored_hint:
+        courseB_maze_seq8_b: Istnieją dwa sposoby, aby rozwiązać ten problem!
+        courseB_maze_seq8_c: Nie wiesz, w którą stronę iść? Wypróbuj tę ścieżkę!
       courseB_maze_seq_challenge1_authored_hint:
         courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
       courseB_maze_seq_challenge1_2018_authored_hint:
+        courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
+      courseB_maze_seq_challenge1_2019_authored_hint:
         courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać tą zagadkę.
       courseB_maze_seq_challenge2_2018_authored_hint:
         courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać tą zagadkę.
+      courseB_maze_seq_challenge2_2019_authored_hint:
+        courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać tą zagadkę.
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_c: Śledź ten wzór swoim palcem. Licz kawałki metalu jak się poruszasz.
       courseB_starWars_prog5_2018_authored_hint:
+        courseB_starWars_prog5_c: Śledź ten wzór swoim palcem. Licz kawałki metalu jak się poruszasz.
+      courseB_starWars_prog5_2019_authored_hint:
         courseB_starWars_prog5_c: Śledź ten wzór swoim palcem. Licz kawałki metalu jak się poruszasz.
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+        courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
       courseC_PlayLab_events6_authored_hint:

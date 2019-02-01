@@ -893,14 +893,16 @@ et:
             '"x"': x asukoht
             '"y"': y asukoht
             '"direction"': liikumise suund
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
-            '"direction"': liikumise suund
-            '"tint"': toon
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
       binary_move:
         options:
           DIR:
