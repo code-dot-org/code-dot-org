@@ -38,6 +38,7 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 (Note: Scholarship availability varies by region. Outside the US, the teacher prep course is online. All the classroom resources are <strong>completely free of charge</strong>.)
 
+
 <br>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1645" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
