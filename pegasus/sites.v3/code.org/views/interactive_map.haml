@@ -27,36 +27,37 @@
   %h1.tablet-feature Choose a State
 
 #map.tablet-feature
-#infobox.col-33
-  %p.info
-    Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
+#right.col-33
+  #infobox
+    %p.info
+      Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
 
-  %strong= hs_access_count
-  states have adopted a policy to give all high school students access to CS courses (and of those, only
-  = k12_access_count
-  states give all K-12 students access)
+    %strong= hs_access_count
+    states have adopted a policy to give all high school students access to CS courses (and of those, only
+    = k12_access_count
+    states give all K-12 students access)
 
-  %strong= format_integer_with_commas(jobs_nationwide)
-  Open computing jobs nationwide
+    %strong= format_integer_with_commas(jobs_nationwide)
+    Open computing jobs nationwide
 
-  %strong
-    = format_integer_with_commas(grads_nationwide)
-  Computer science students graduated into the workforce last year
+    %strong
+      = format_integer_with_commas(grads_nationwide)
+    Computer science students graduated into the workforce last year
 
-  .summary-button
-    %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'}
-      %button
-        See a summary of state efforts
+    .summary-button
+      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'}
+        %button
+          See a summary of state efforts
 
-%p#sources.col-33
-  %span
-    Sources:
-  %a{href: "http://www.conference-board.org/", target: '_blank'} The Conference Board
-  and
-  =succeed "." do
-    %a{href: "http://nces.ed.gov/", target: '_blank'} National Center for Education Statistics
-  =succeed "." do
-    %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", target: '_blank'} More info
+  %p#sources
+    %span
+      Sources:
+    %a{href: "http://www.conference-board.org/", target: '_blank'} The Conference Board
+    and
+    =succeed "." do
+      %a{href: "http://nces.ed.gov/", target: '_blank'} National Center for Education Statistics
+    =succeed "." do
+      %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", target: '_blank'} More info
 
 :javascript
   var webServiceLocation = '/promote/state/';

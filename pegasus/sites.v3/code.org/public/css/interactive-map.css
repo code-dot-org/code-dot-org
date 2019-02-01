@@ -6,6 +6,11 @@
   margin-top: 100px;
 }
 
+#right {
+  float: right;
+  overflow:hidden;
+}
+
 #infobox {
   text-align: center;
   float: right;
@@ -114,6 +119,7 @@
   text-align: center;
   color: dimgrey;
   opacity: 0.8;
+  padding-top: 10px;
 }
 
 #sources a{
