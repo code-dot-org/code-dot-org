@@ -11,7 +11,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
      ```
      ruby --version  # --> ruby 2.5.0
-     node --version  # --> v6.9.0
+     node --version  # --> v8.15.0
      npm --version   # --> 3.10.8
      yarn --version  # --> 1.6.0
      ```
@@ -19,17 +19,17 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler -v 1.17`
 1. `rbenv rehash`
 1. `cd code-dot-org`
-1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.) 
+1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.)
 1. `rake install:hooks`
     <details>
         <summary>Troubleshoot: `rake aborted!..` </summary>
-      
-        If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this." 
+
+        If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this."
             * Follow the instructions and add `bundle exec` in front of the command
     </details>
     <details>
         <summary>Troubleshoot: wrong version of rake </summary>
-        
+
         You might get a message at some point about having the wrong version of rake. If so, try:
         $> gem uninstall rake
         $> bundle update rake
@@ -50,13 +50,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite`
     <details>
         <summary>Troubleshoot: `Formula.sha1` is disabled</summary>
-      
+
         If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
     </details>
-    
+
     <details>
           <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
-          
+
           If it complains about an old version of `&lt;package&gt;`, run `brew unlink &lt;package&gt;` and run `brew install &lt;package&gt;` again
     </details>
 
@@ -87,7 +87,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node, npm, and yarn
-    1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
+    1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
     1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0`
     1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan only) Ensure that openssl is linked: `brew link --force openssl`
@@ -100,18 +100,18 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. make sure that `ulimit -n` returns 8192
 1. Install the Xcode Command Line Tools:
     1. `xcode-select --install`
-    
+
     <details>
               <summary>Troubleshoot: command line tools already installed</summary>
-              
-              If it complains 
-              
+
+              If it complains
+
               ```xcode-select: error: command line tools are already installed, use "Software Update" to install updates```
-              
+
               check to make sure XCode is downloaded and up to date manually.
-              
+
     </details>
-    
+
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
@@ -119,7 +119,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. Install Node and Nodejs
-    1. Type `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+    1. Type `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
     1. And then `sudo apt-get install -y nodejs`
 1. Ensure rbenv and ruby-build are properly installed
     1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#installation) to verify rbenv is set up correctly.
@@ -157,7 +157,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. Goto step 2 of the common setup instructions
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
-  1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard: 
+  1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
      * Select Ubuntu Server 16.04 with at least 8GiB memory and 30GiB storage size.
      * In "Configure Security Group", under "Source", use the IP address of the machine you will be connecting from.
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
@@ -230,7 +230,7 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 If you run into an issue about therubyracer while running `bundle install` try :
 - `gem uninstall libv8`
 - `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find the current version in the [Gemfile.lock](./Gemfile.lock)).
-- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` 
+- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8`
 
 (Steps from [this stackoverflow question](https://stackoverflow.com/questions/19577759/installing-libv8-gem-on-os-x-10-9))
 
