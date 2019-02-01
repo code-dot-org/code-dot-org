@@ -10,7 +10,7 @@ steps:
   image: wintercdo/code-dot-org:0.7
   pull: always
   commands:
-    - env
+    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
     - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
     - echo $head_repo
     - |
@@ -113,6 +113,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 9f72be71d82bcfea9865aad1a6c4ed47fe6b29d8f1be25cc00b895005a846e94
+hmac: 0c5e95289edcfeeb24457e5fe38440cdfe9deade2bf0e52903b46c446a3d43ce
 
 ...
