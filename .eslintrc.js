@@ -5,9 +5,9 @@
 module.exports = {
   plugins: ["react", "mocha", "babel"],
   extends: [
+    "plugin:prettier/recommended",
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended"
   ],
   env: {
     browser: true,
