@@ -119,9 +119,14 @@
 
 #sources {
   clear: both;
+  float: right;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  color: dimgrey;
   opacity: 0.8;
-  color: #BCC2C6;
+}
+
+#sources a{
+  color: #7665a0;
 }
