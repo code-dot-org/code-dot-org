@@ -410,10 +410,7 @@ Dashboard::Application.routes.draw do
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
-      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-      post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
-      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
-      post 'teachercon_lead_facilitator_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
+      # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
@@ -489,12 +486,8 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
-    get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
-    get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
 
-    delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
     delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
