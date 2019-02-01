@@ -40,6 +40,7 @@ $(document).ready(() => {
     <Provider store={store}>
       <ProjectHeader
         canViewAdvancedTools={projectsData.canViewAdvancedTools}
+        projectCount={projectsData.projectCount}
       />
     </Provider>,
     document.getElementById('projects-header')

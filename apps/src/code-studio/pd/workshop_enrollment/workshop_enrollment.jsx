@@ -218,6 +218,7 @@ export default class WorkshopEnrollment extends React.Component {
                         first_name={this.props.enrollment.first_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
+                        workshop_subject={this.props.workshop.subject}
                       />
                     </div>
                   </div>
