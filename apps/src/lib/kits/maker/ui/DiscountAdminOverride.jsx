@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import i18n from "@cdo/locale";
 import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import {isUnit6IntentionEligible} from '../util/discountLogic';
 import Unit6ValidationStep from './Unit6ValidationStep';
 
 const styles = {
@@ -75,8 +76,7 @@ export default class DiscountAdminOverride extends Component {
       submitting: false,
       statusPD: application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED,
       statusStudentCount: application.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED,
-      statusYear: (application.unit_6_intention === 'yes1718' ||
-        application.unit_6_intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
+      statusYear: isUnit6IntentionEligible(application.unit_6_intention) ? Status.SUCCEEDED : Status.FAILED,
       unit6Intention: application.unit_6_intention,
       userSchool: application.user_school,
       applicationSchool: application.application_school,
