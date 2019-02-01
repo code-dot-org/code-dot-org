@@ -10,6 +10,13 @@ steps:
   image: wintercdo/code-dot-org:0.7
   commands:
     - env
+    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
+    - echo $head_repo
+    - |
+      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
+        echo "Pull request is from fork $head_repo; exiting."
+        exit 1
+      fi
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   volumes:
