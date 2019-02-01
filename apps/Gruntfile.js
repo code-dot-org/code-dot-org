@@ -471,11 +471,12 @@ describe('entry tests', () => {
     'courses/show':                        './src/sites/studio/pages/courses/show.js',
     'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
     'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
-    'teacher_dashboard/index':              './src/sites/studio/pages/teacher_dashboard/index.js'
+    'teacher_dashboard/show':              './src/sites/studio/pages/teacher_dashboard/show.js'
   };
 
   var internalEntries = {
     'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
+    'blocks/index':                  './src/sites/studio/pages/blocks/index.js',
     'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',

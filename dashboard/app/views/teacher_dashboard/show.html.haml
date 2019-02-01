@@ -1,0 +1,8 @@
+:ruby
+  teacher_dashboard_data = {}
+  teacher_dashboard_data[:allSections] = @all_sections
+  teacher_dashboard_data[:section] = @section
+
+%script{src: minifiable_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
+
+#teacher-dashboard
