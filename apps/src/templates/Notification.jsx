@@ -255,7 +255,7 @@ class Notification extends Component {
               </div>
             </div>
             <div style={desktop ? null : styles.buttonsMobile}>
-              {buttonText && (
+              {buttonText && buttonLink && (
                 <Button
                   href={buttonLink}
                   color={Button.ButtonColor.gray}
