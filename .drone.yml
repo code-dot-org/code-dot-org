@@ -8,6 +8,7 @@ clone:
 steps:
 - name: verify-pr
   image: wintercdo/code-dot-org:0.7
+  pull: always
   commands:
     - env
     - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
