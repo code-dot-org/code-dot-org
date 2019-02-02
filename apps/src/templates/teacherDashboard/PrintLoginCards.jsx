@@ -90,19 +90,19 @@ class WordOrPictureLoginCards extends React.Component {
     return (
       <div>
         <h1>{i18n.printLoginCards_signingIn()}</h1>
-        <p>{i18n.printLoginCards_steps()}</p>
+        <p>{i18n.printLoginCards_signinSteps()}</p>
         <ol>
           {/* TODO: make code.org/join link below dynamic */}
-          <li>{i18n.printLoginCards_step1({joinUrl: "http://code.org/join"})}</li>
-          <li>{i18n.printLoginCards_step2({code: section.code})}</li>
-          <li>{i18n.printLoginCards_step3()}</li>
+          <li>{i18n.printLoginCards_signinStep1({joinUrl: "http://code.org/join"})}</li>
+          <li>{i18n.printLoginCards_signinStep2({code: section.code})}</li>
+          <li>{i18n.printLoginCards_signinStep3()}</li>
           {section.loginType === SectionLoginType.picture &&
-            <li>{i18n.printLoginCards_step4_secretPicture()}</li>
+            <li>{i18n.printLoginCards_signinStep4_secretPicture()}</li>
           }
           {section.loginType === SectionLoginType.word &&
-            <li>{i18n.printLoginCards_step4_secretWords()}</li>
+            <li>{i18n.printLoginCards_signinStep4_secretWords()}</li>
           }
-          <li>{i18n.printLoginCards_step5()}</li>
+          <li>{i18n.printLoginCards_signinStep5()}</li>
         </ol>
         <p>{i18n.printLoginCards_stepsReset({wordOrPicture: section.loginType})}</p>
         <br/>
