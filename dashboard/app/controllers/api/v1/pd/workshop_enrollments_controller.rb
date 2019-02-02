@@ -100,7 +100,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       grades_teaching: params[:grades_teaching],
       attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
       csf_course_experience: params[:csf_course_experience],
-      csf_courses_planned: params[:csf_courses_planned]
+      csf_courses_planned: params[:csf_courses_planned],
+      csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide]
     }
   end
 
