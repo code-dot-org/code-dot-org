@@ -108,10 +108,8 @@ export default class ProjectCard extends React.Component {
       Object.assign(thumbnailStyle, styles.fullThumbnail);
     }
 
-    const noTimeOnCardStyle = {};
-    if (!this.props.isDetailView) {
-      Object.assign(noTimeOnCardStyle, styles.noTime);
-    }
+    const shouldShowPublishedAt = isPublicGallery && isDetailView && projectData.publishedAt;
+    const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
 
     return (
       <div className="project_card">
@@ -154,7 +152,7 @@ export default class ProjectCard extends React.Component {
               </span>
             )}
           </div>
-          {isPublicGallery && isDetailView && projectData.publishedAt && (
+          {shouldShowPublishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time
