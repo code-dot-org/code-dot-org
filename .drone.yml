@@ -30,12 +30,6 @@ steps:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
-    PROPERTIES_ENCRYPTION_KEY:
-      from_secret: PROPERTIES_ENCRYPTION_KEY
-    AWS_ACCESS_KEY_ID:
-      from_secret: AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY:
-      from_secret: AWS_SECRET_ACCESS_KEY
   commands:
     - pwd
     - sudo chown -R circleci:circleci .
@@ -113,6 +107,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 0c5e95289edcfeeb24457e5fe38440cdfe9deade2bf0e52903b46c446a3d43ce
+hmac: 5bae41905e6905fe9681c1535af15e6eb5283d722e42e1718fee6a288048c5e9
 
 ...
