@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
+import oauthSignupButtons from '../../../static/teacherDashboard/oauthSignupButtons.png';
 
 /**
  * Rendered from the /print_login_cards route in teacher dashboard.
@@ -28,6 +29,9 @@ class PrintLoginCards extends React.Component {
             students={students}
           />
         }
+        {section.loginType === SectionLoginType.email &&
+          <EmailLogins sectionCode={section.code}/>
+        }
       </div>
     );
   }
@@ -39,6 +43,38 @@ export default connect(state => ({
   section: state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.sectionData.section.students,
 }))(PrintLoginCards);
+
+class EmailLogins extends React.Component {
+  static propTypes = {
+    sectionCode: PropTypes.string.isRequired,
+  };
+
+  render() {
+    const {sectionCode} = this.props;
+
+    return (
+      <div>
+        <h1>{i18n.printLoginCards_joinTitle()}</h1>
+        <p>{i18n.printLoginCards_joinBody()}</p>
+        <ol>
+          {/* TODO: fix link below */}
+          <li>
+            {i18n.printLoginCards_joinStep1({url: "https://studio.code.org/users/sign_up"})}
+            <img src={oauthSignupButtons}/>
+          </li>
+          <li>{i18n.printLoginCards_joinStep2()}</li>
+          {/* TODO: fix link below */}
+          <li>{i18n.printLoginCards_joinStep3({url: "https://code.org/join", code: sectionCode})}</li>
+          <li>{i18n.printLoginCards_joinStep4()}</li>
+        </ol>
+        <h1>{i18n.printLoginCards_signingIn()}</h1>
+        <p>{i18n.printLoginCards_signingInDescription()}</p>
+        <h1>{i18n.printLoginCards_resetTitle()}</h1>
+        <p>{i18n.printLoginCards_resetPasswordBody()}</p>
+      </div>
+    );
+  }
+}
 
 const styles = {
   container: {
@@ -104,10 +140,10 @@ class WordOrPictureLoginCards extends React.Component {
           }
           <li>{i18n.printLoginCards_signinStep5()}</li>
         </ol>
-        <p>{i18n.printLoginCards_stepsReset({wordOrPicture: section.loginType})}</p>
+        <p>{i18n.printLoginCards_signinStepsReset({wordOrPicture: section.loginType})}</p>
         <br/>
         <h1>{i18n.printLoginCards_resetTitle()}</h1>
-        <p>{i18n.printLoginCards_resetBody()}</p>
+        <p>{i18n.printLoginCards_resetSecretBody()}</p>
         <br/>
         <h1>{i18n.printLoginCards_loginCardsTitle()}</h1>
         <Button
@@ -142,12 +178,12 @@ class LoginCard extends React.Component {
       <div style={styles.card}>
         <p style={styles.text}>
           {/* TODO: fix link below */}
-          {i18n.loginCard_instructions({url: "http://code.org/join", code: section.code})}
+          {i18n.loginCard_instructions({url: "https://code.org/join", code: section.code})}
         </p>
         <p style={styles.text}>
           <span style={styles.bold}>{i18n.loginCard_directUrl()}</span>
           {/* TODO: fix link below */}
-          {` studio.code.org/sections/${section.code}`}
+          {` https://studio.code.org/sections/${section.code}`}
         </p>
         <p style={styles.text}>
           <span style={styles.bold}>{i18n.loginCard_sectionName()}</span>
