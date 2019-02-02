@@ -1,0 +1,14 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "playSound",
+    "blockText": "playSound {SOUND}",
+    "args": [
+      {
+        "name": "SOUND",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}
