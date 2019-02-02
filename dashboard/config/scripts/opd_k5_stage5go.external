@@ -1,29 +1,27 @@
 name 'OPD-K5 Stage5Go'
 skip_dialog true
 markdown <<MARKDOWN
-# Conditionals > Reflection
-
-In this stage, we explored how conditionals help programmers add logic to their code. In the next stage, we'll look at how functions can help you take your coding to the next level.  
+# Conditionals > Unplugged Lessons
 
 
-**Take a moment now to review how conditionals are introduced in the Code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+**1. Review "[Conditionals with Cards](https://curriculum.code.org/csf-18/coursed/13/)" Lesson Plan from Course D:** 
+<br/>
+Course D is meant for Grade 3 students. Conditionals comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
 
----
-
-## Unplugged Lesson Plans
-
-**1. Review "Conditionals with Cards" Lesson Plan:** [Course D](https://levelbuilder.code.org/curriculum/coursed/10/Teacher)
 <br/><br/>
 
 **2. Watch the student video: Conditionals with Cards**
+<br/>
+This is a video that you would show your students to help introduce the concept of conditionals and kick off the unplugged lesson.
 
 <iframe width="640" height="390" src="https://www.youtube.com/embed/UymN4lTL50s" frameborder="0" allowfullscreen></iframe> 
-
-<br/><br/>
-
+<br/>
 [Can't see the video? Click here](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
 
+<br/>
 **3. Watch a teacher model this lesson: "Conditionals with Cards"**
+<br/>
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
 
 <iframe width="640" height="390" src="https://www.youtube.com/embed/2m2Rn9VxHfU" frameborder="0" allowfullscreen></iframe>
 
@@ -54,4 +52,8 @@ Explore more online lessons from Course D:
 > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc">Discuss in the forums >></button></a>
 
 After commenting in the forum, return here and click below to move on to the next stage.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
 MARKDOWN
