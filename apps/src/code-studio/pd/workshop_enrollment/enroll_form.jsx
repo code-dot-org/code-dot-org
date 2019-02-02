@@ -61,14 +61,18 @@ const CSF_COURSES = {
   "courseE" : "Course E",
   "courseF" : "Course F",
   "express" : "Express",
-  "courses14" :  "Courses 1-4",
-  "accelerated" : "Accelerated"
+  "courses14_accelerated" :  "Courses 1-4 or Accelerated"
 };
 
 const ATTENDED_CSF_COURSES_OPTIONS = {
   "Yes, I attended a CS Fundamentals Intro workshop this academic year." : "Yes, this year",
   "Yes, I attended a CS Fundamentals Intro workshop in a previous academic year." : "Yes, prior year",
   "Nope, I have never attended a CS Fundamentals workshop." : "No"
+};
+
+const CSF_HAS_CURIICULUM_COPY_OPTIONS = {
+  "Yes, and I will bring it to the workshop." : "Yes",
+  "Nope. I will need a new copy provided. Thanks!" : "No"
 };
 
 export default class EnrollForm extends React.Component {
@@ -229,6 +233,7 @@ export default class EnrollForm extends React.Component {
       csf_courses_planned: this.csfCoursesPlanned(),
       explain_csf_course_other: this.state.explain_csf_course_other,
       attended_csf_intro_workshop: ATTENDED_CSF_COURSES_OPTIONS[this.state.attended_csf_intro_workshop],
+      csf_has_physical_curriculum_guide: CSF_HAS_CURIICULUM_COPY_OPTIONS[this.state.csf_has_physical_curriculum_guide],
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -283,7 +288,7 @@ export default class EnrollForm extends React.Component {
       }
     ]);
     const csfCourses = Object.keys(CSF_COURSES)
-      .filter(key => key !== "accelerated" && key !== "courses14")
+      .filter(key => key !== "courses14_accelerated")
       .map(key => CSF_COURSES[key])
       .concat([
       {
@@ -428,6 +433,19 @@ export default class EnrollForm extends React.Component {
             type="radio"
             required={true}
           />
+          <ButtonList
+            id="csf_has_physical_curriculum_guide"
+            key="csf_has_physical_curriculum_guide"
+            answers={Object.keys(CSF_HAS_CURIICULUM_COPY_OPTIONS)}
+            groupName="csf_has_physical_curriculum_guide"
+            label="Do you have a physical copy of the 2019-2020 CS Fundamentals Curriculum Guide that you can bring to the workshop?"
+            onChange={this.handleChange}
+            selectedItems={this.state.csf_has_physical_curriculum_guide}
+            validationState={this.state.errors.hasOwnProperty("csf_has_physical_curriculum_guide") ? VALIDATION_STATE_ERROR : null}
+            errorText={this.state.errors.csf_has_physical_curriculum_guide}
+            type="radio"
+            require={true}
+          />
         </FormGroup>
         }
         <p>
@@ -470,6 +488,7 @@ export default class EnrollForm extends React.Component {
       requiredFields.push('grades_teaching');
       if (this.props.workshop_subject === DEEP_DIVE) {
         requiredFields.push('attended_csf_intro_workshop');
+        requiredFields.push('csf_has_physical_curriculum_guide');
       }
     }
 
