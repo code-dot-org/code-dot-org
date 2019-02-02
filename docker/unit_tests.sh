@@ -37,7 +37,6 @@ mispipe "bundle install --verbose" ts
 set +x
 echo "
 bundler_use_sudo: false
-properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 ignore_eyes_mismatches: true
