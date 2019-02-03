@@ -38,6 +38,8 @@ steps:
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
+  - name: yarncache
+    path: /home/circleci/.cache
   - name: mysql
     path: /var/lib/mysql
   environment:
@@ -50,12 +52,15 @@ steps:
     - sudo chown -R circleci:circleci .
     - # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0" /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems || true
+    - cp -rn "$(pwd)/home/circleci/.cache" /home/circleci || true
     - /entrypoint.sh docker/unit_tests.sh
 - name: update-cache
   image: plugins/s3-cache
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
+  - name: yarncache
+    path: /home/circleci/.cache
   settings:
     pull: true
     rebuild: true
@@ -66,6 +71,8 @@ steps:
       from_secret: S3_CACHE_SECRET_KEY
     mount:
       - /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
+      - apps/node_modules
+      - /home/circleci/.cache
       #- /var/lib/mysql
       #- /home/circleci/.cache
       #- /home/circleci/code-dot-org/apps/node_modules
@@ -74,6 +81,8 @@ volumes:
 - name: rbenv
   temp: {}
 - name: mysql
+  temp: {}
+- name: yarncache
   temp: {}
 
 trigger:
