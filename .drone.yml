@@ -60,7 +60,7 @@ steps:
   settings:
     pull: true
     rebuild: true
-    debug: true
+    #debug: true
     access_key:
       from_secret: S3_CACHE_ACCESS_KEY
     secret_key:
