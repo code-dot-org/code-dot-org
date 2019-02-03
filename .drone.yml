@@ -25,10 +25,13 @@ steps:
       fi
 - name: restore-cache
   image: plugins/s3-cache
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
   settings:
     pull: true
     restore: true
-    debug: true
+    #debug: true
     access_key:
       from_secret: S3_CACHE_ACCESS_KEY
     secret_key:
@@ -37,7 +40,7 @@ steps:
   image: wintercdo/code-dot-org:0.7
   volumes:
   - name: rbenv
-    path: /home/circleci/.rbenv
+    path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
   - name: mysql
     path: /var/lib/mysql
   environment:
@@ -51,6 +54,9 @@ steps:
     - /entrypoint.sh docker/unit_tests.sh
 - name: update-cache
   image: plugins/s3-cache
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
   settings:
     pull: true
     rebuild: true
@@ -60,10 +66,10 @@ steps:
     secret_key:
       from_secret: S3_CACHE_SECRET_KEY
     mount:
-      - /home/circleci/.rbenv
-      - /var/lib/mysql
-      - /home/circleci/.cache
-      - /home/circleci/code-dot-org/apps/node_modules
+      - /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
+      #- /var/lib/mysql
+      #- /home/circleci/.cache
+      #- /home/circleci/code-dot-org/apps/node_modules
 
 volumes:
 - name: rbenv
@@ -138,6 +144,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 5cf470ac4f4c66dec787272aedbf10f941ff79af3da4f3bd70bee573c30e220a
+hmac: c9f0facfd4364b12bfce97bff9203bb9823026bf5bd8019f2c3a17152e0b0a82
 
 ...
