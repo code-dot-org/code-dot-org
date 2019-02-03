@@ -88,6 +88,7 @@ class RegionalPartnerSearch extends Component {
 
     const partnerId = queryString.parse(window.location.search).partner;
     const zip = queryString.parse(window.location.search).zip;
+    const nominated = queryString.parse(window.location.search).nominated;
 
     if (partnerId) {
       if (partnerId === "0") {
@@ -115,7 +116,8 @@ class RegionalPartnerSearch extends Component {
       partnerInfo: undefined,
       zipValue: zipValue,
       error: error,
-      loading: loading
+      loading: loading,
+      nominated: nominated
     };
   }
 
@@ -185,6 +187,11 @@ class RegionalPartnerSearch extends Component {
     const appState = partnerInfo && partnerInfo.application_state.state;
     const appsOpenDate = partnerInfo && partnerInfo.application_state.earliest_open_date;
 
+    let applicationLink = studio("/pd/application/teacher");
+    if (this.state.nominated) {
+      applicationLink += "?nominated=true";
+    }
+
     return (
       <div>
         {this.state.showZip && (
@@ -214,7 +221,7 @@ class RegionalPartnerSearch extends Component {
           <div>
             <br/>
             <div>We are unable to find this ZIP code.  You can still apply directly:</div>
-            <a href={studio("/pd/application/teacher")}>
+            <a href={applicationLink}>
               <button style={styles.bigButton}>
                 Start application
               </button>
@@ -248,7 +255,7 @@ class RegionalPartnerSearch extends Component {
               <a href="/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
-            <a href={studio("/pd/application/teacher")}>
+            <a href={applicationLink}>
               <button style={styles.bigButton}>
                 Start application
               </button>
@@ -287,7 +294,7 @@ class RegionalPartnerSearch extends Component {
               )}
 
               {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
-                <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={studio("/pd/application/teacher")}>
+                <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={applicationLink}>
                   <button style={styles.bigButton}>Start application</button>
                 </a>
               )}
@@ -354,7 +361,7 @@ class RegionalPartnerSearch extends Component {
 
             {/* These two links duplicate the buttons that appear above. */}
             {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
-              <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={studio("/pd/application/teacher")}>
+              <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={applicationLink}>
                 Start application
               </a>
             )}
