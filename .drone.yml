@@ -29,6 +29,10 @@ steps:
     pull: true
     restore: true
     debug: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   volumes:
@@ -51,6 +55,10 @@ steps:
     pull: true
     rebuild: true
     debug: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
     mount:
       - /home/circleci/rbenv
       - /var/lib/mysql
@@ -130,6 +138,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 5bae41905e6905fe9681c1535af15e6eb5283d722e42e1718fee6a288048c5e9
+hmac: 045409ddc237c95448c5856c8e97f1acf91ec2d5438f1a98e44d9be00a7262a1
 
 ...
