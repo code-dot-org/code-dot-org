@@ -51,6 +51,8 @@ steps:
   commands:
     - pwd
     - sudo chown -R circleci:circleci .
+    - # cache is restored to source directory, so we need to copy it into the right place
+    - cp -rns "$(pwd)/home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0" /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems
     - /entrypoint.sh docker/unit_tests.sh
 - name: update-cache
   image: plugins/s3-cache
