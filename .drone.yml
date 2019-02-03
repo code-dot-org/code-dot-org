@@ -18,12 +18,6 @@ steps:
         echo "Pull request is from fork $head_repo; exiting."
         exit 1
       fi
-- name: restore-cache
-  image: plugins/s3-cache
-  settings:
-    pull: true
-    restore: true
-    debug: true
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   volumes:
@@ -40,17 +34,6 @@ steps:
     - pwd
     - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/unit_tests.sh
-- name: update-cache
-  image: plugins/s3-cache
-  settings:
-    pull: true
-    rebuild: true
-    debug: true
-    mount:
-      - /home/circleci/rbenv
-      - /var/lib/mysql
-      - /home/circleci/.cache
-      - /home/circleci/code-dot-org/apps/node_modules
 
 volumes:
 - name: rbenv
@@ -62,7 +45,6 @@ trigger:
   event:
     include:
     - pull_request
-    - push
 
 # ---
 # kind: pipeline
