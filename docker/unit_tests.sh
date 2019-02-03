@@ -18,7 +18,6 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # in a CI environment, then they don't exist by default.
 if $(git rev-parse --is-shallow-repository); then
     git remote set-branches --add origin staging test production
-    git remote show origin
     mispipe "git fetch --depth 50 origin staging test production" ts
     git branch -a
 fi
@@ -52,6 +51,7 @@ localize_apps: true
 dashboard_enable_pegasus: true
 dashboard_workers: 5
 skip_seed_all: true
+google_maps_api_key: boguskey
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 set -x
