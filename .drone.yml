@@ -60,7 +60,7 @@ steps:
     secret_key:
       from_secret: S3_CACHE_SECRET_KEY
     mount:
-      - /home/circleci/rbenv
+      - /home/circleci/.rbenv
       - /var/lib/mysql
       - /home/circleci/.cache
       - /home/circleci/code-dot-org/apps/node_modules
@@ -138,6 +138,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 045409ddc237c95448c5856c8e97f1acf91ec2d5438f1a98e44d9be00a7262a1
+hmac: 5cf470ac4f4c66dec787272aedbf10f941ff79af3da4f3bd70bee573c30e220a
 
 ...
