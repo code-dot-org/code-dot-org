@@ -10,6 +10,11 @@ steps:
   image: wintercdo/code-dot-org:0.7
   pull: always
   commands:
+    - |
+      if [ -z "$DRONE_PULL_REQUEST" ]; then
+        echo "Not a pull request."
+        exit 0
+      fi
     # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
     - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
     - echo $head_repo
