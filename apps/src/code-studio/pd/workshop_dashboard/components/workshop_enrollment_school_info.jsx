@@ -91,6 +91,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{this.formatCsfCourseExperience(enrollment.csf_course_experience)}</td>}
           {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{enrollment.csf_courses_planned ? enrollment.csf_courses_planned.join(', ') : NA}</td>}
           {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{enrollment.attended_csf_intro_workshop}</td>}
+          {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{enrollment.csf_has_physical_curriculum_guide}</td>}
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
         </tr>
       );
@@ -130,6 +131,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <th style={styles.th}>Prior CSF experience</th>}
             {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <th style={styles.th}>Courses Planning to Teach</th>}
             {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <th style={styles.th}>Attended Intro Workshop?</th>}
+            {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <th style={styles.th}>Has Physical Copy of Curriculum?</th>}
             {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
           </tr>
         </thead>

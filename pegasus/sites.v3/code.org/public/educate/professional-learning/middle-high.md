@@ -18,16 +18,8 @@ theme: responsive
 <br/>
 
 <div class="col-50">
-<%= view :course_wide_block, cta_link: '/educate/professional-learning/program-information', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Scholarships Available', description: '<p>Generous scholarships or discounts are available across the country for the Code.org Professional Learning Program.</p>
-<p><b>Enter your school’s zip code to learn more.</b></p>
-<form action="/educate/professional-learning/program-information" method="get">
-  	<span style="font-size:1.2em">Zip:</span>
-  <input type="text" name="zip" style="padding:10px">
-  <input type="submit" value="Submit" style="color:white; background-color:orange; padding:10px; font-size:1.2em">
-  
-</form>
+<%= view :regional_partner_zip_form %>
 
-'%>
 </div>
 <div class="col-50" width="75%" style='padding-top: 10px'>
 <center>
@@ -41,7 +33,7 @@ theme: responsive
 <%= view :three_circles, circles: [] %>
 
 
-## Who is the Professional Learning program for? 
+## Who is the Professional Learning program for?
 
 Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support. We’ve designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
 
@@ -168,9 +160,11 @@ Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vS
 
 ## Ready to apply?
 
-<a href="https://code.org/educate/professional-learning/program-information"><button>Get started!</button>
-
-
+<%=
+link = "/educate/professional-learning/program-information"
+link += "?nominated=true" if params[:nominated]
+"<a href='#{link}'><button>Get started!</button></a>"
+%>
 
 <!--
 
