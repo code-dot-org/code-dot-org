@@ -71,6 +71,7 @@ class EmailLogins extends React.Component {
         <ol>
           <li>
             {i18n.printLoginCards_joinStep1({url: `${studioUrlPrefix}/users/sign_up`})}
+            <br/>
             <img src={oauthSignupButtons}/>
           </li>
           <li>{i18n.printLoginCards_joinStep2()}</li>
