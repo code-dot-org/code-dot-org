@@ -1,6 +1,3 @@
-import $ from 'jquery';
-import _ from 'lodash';
-
 /**
  * Loader for table displaying workshop summaries based on a supplied query.
  * It requires exactly one child component that expects workshops in its props.
@@ -8,7 +5,8 @@ import _ from 'lodash';
  * component or displays "None" if no workshops are returned.
  * It optionally handles deleting workshops.
  */
-
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -1,14 +1,11 @@
-import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 /**
  * A non-protected div that wraps our ProtectedStatefulDiv codeWorkspace, allowing
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
-
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import * as utils from '../utils';

@@ -1,10 +1,8 @@
-import { ColumnType } from './dataUtils';
-import FontAwesome from '../../templates/FontAwesome';
-
 /**
  * @overview Component for the dropdown menu and icon in the column header.
  */
-
+import { ColumnType } from './dataUtils';
+import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
 

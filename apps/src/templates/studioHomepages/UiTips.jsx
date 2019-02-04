@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 // UiTips: A small manager for showing UI tips, particularly for new or changed UI.
 // Note that "triggered" tips (e.g. show a tip when the user clicks a certain
 // DOM element) work on elements outside of the React DOM.  The current
@@ -7,7 +5,7 @@ import $ from 'jquery';
 // per page, and it expects that instance to live for the duration of the page.
 // It doesn't do proper cleanup of the click handler for the non-React component
 // if UiTips goes away.
-
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import UiTip from './UiTip';

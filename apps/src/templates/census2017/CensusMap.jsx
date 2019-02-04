@@ -1,8 +1,6 @@
-import $ from 'jquery';
-
 /* global google */
 import PropTypes from 'prop-types';
-
+import $ from 'jquery';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
