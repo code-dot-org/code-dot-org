@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import progress from './progress';
-import Dialog from './LegacyDialog';
 import { getStore } from '../redux';
 import { shareProject } from './headerShare';
 import { convertBlocksXml } from '../craft/code-connection/utils';
@@ -404,26 +403,6 @@ header.showProjectHeader = function () {
   });
   $projectMorePopup.click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it.
-  });
-
-  $('.project_delete').click(function (e) {
-    e.preventDefault(); // Don't change the hash.
-    var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">' +
-        '<div id="confirm-delete" class="modal-content">' +
-        '<p class="dialog-title">' + dashboard.i18n.t('project.delete_confirm_title') + '</p>' +
-        '<p>' + dashboard.i18n.t('project.delete_confirm_text') + '</p>' +
-        '<button id="again-button">' + dashboard.i18n.t('project.cancel') + '</button>' +
-        '<button id="continue-button" style="float: right">' + dashboard.i18n.t('project.delete') + '</button></div>'
-    });
-    dialog.show();
-    $('#confirm-delete #continue-button').click(function () {
-      dashboard.project.delete(function () {
-        location.href = dashboard.project.appToProjectUrl();
-      });
-    });
-    $('#confirm-delete #again-button').click(function () {
-      dialog.hide();
-    });
   });
 
   $('.project_new').click(dashboard.project.createNew);
