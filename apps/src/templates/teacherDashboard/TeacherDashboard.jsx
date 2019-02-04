@@ -16,7 +16,7 @@ export default class TeacherDashboard extends Component {
     pegasusUrlPrefix: PropTypes.string.isRequired,
 
     // Provided by React router
-    location: PropTypes.object,
+    location: PropTypes.object.isRequired,
   };
 
   render() {
