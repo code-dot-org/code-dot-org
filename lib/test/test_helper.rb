@@ -1,4 +1,4 @@
-require_relative '../../shared/test/common_test_helper' 
+require_relative '../../shared/test/common_test_helper'
 
 # Set up JUnit output for Circle
 reporters = [Minitest::Reporters::SpecReporter.new]
