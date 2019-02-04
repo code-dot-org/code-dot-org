@@ -8,7 +8,8 @@
   %form{action: "/educate/professional-learning/program-information", method: "get"}
     %span{style: "font-size:1.2em"} Zip:
     %input{type: "text", name: "zip", style: "padding:10px"}
-    %input{type: "text", name: "nominated", value: params[:nominated], hidden: "true"}
+    - if params[:nominated]
+      %input{type: "text", name: "nominated", value: params[:nominated], hidden: "true"}
     %input{type: "submit", value: "Submit", style: "color:white; background-color:orange; padding:10px; font-size:1.2em"}
 
 = view :course_wide_block, cta_link: link, img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Scholarships Available', description: body
