@@ -24,8 +24,19 @@ steps:
         exit 1
       fi
 
+- name: restore-cache
+  image: plugins/s3-cache
+  settings:
+    pull: true
+    restore: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
+  pull: always
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
