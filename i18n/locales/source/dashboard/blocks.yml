@@ -873,6 +873,8 @@ en:
         text: move [SPRITE][0] distance [DISTANCE][1] toward [TARGET][2]
       gamelab_moveUp:
         text: "[THIS][0] move up"
+      gamelab_playSound:
+        text: playSound [SOUND][0]
       gamelab_pointInDirection:
         text: point [SPRITE][0] [DIRECTION][1]
         options:
@@ -1374,6 +1376,8 @@ en:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      SpriteLab2Beta_spriteSay:
+        text: sprite [SPRITE][0] say [TEXT][1] for [SECONDS][2] seconds
       Vector_createSpriteWith:
         text: |-
           create sprite
@@ -1401,12 +1405,16 @@ en:
             "'shapeColor'": color
       aalab_addBehaviorForDuration:
         text: aalab sprite [SPRITE][0] begins [BEHAVIOR][1] for [SECONDS][2] seconds
+      aalab_addBehaviorSimpleFlexible:
+        text: aalab sprite [SPRITE][0] begins [BEHAVIOR][1]
       aalab_addBehaviorUntilBoolean:
         text: aalab sprite [SPRITE][0] begins [BEHAVIOR][1] until [CONDITION][2]
       aalab_addToSpriteGroup:
         text: add sprite [SPRITE][0] to group [GROUP][1]
-      aalab_changeGroupPropBy:
-        text: change group [GROUP][0] [PROPERTY][1] by [VAL][2]
+      aalab_allSpritesWithCostume:
+        text: aalab [COSTUME][0]
+      aalab_changePropByFlexible:
+        text: aalab change [SPRITE][0] [PROPERTY][1] by [VAL][2]
         options:
           PROPERTY:
             '"scale"': size
