@@ -63,11 +63,11 @@
   top: 43%;
 }
 .carousel .slide-prev > span {
-  border-right: 20px solid #808080;
+  border-right: 20px solid #b9bf11;
   left: 8px;
 }
 .carousel .slide-next > span {
-  border-left: 20px solid #808080;
+  border-left: 20px solid #b9bf11;
   right: 8px;
 }
 .carousel .slide-prev span.label,
