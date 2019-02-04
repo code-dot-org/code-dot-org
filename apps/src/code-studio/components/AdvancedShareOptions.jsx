@@ -60,6 +60,10 @@ const style = {
   expoButtonLast: {
     marginRight: 0,
   },
+  expoButtonApk: {
+    marginBottom: 10,
+    maxWidth: 280,
+  },
   expoContainer: {
     display: 'flex',
     flexDirection: 'column',
@@ -150,15 +154,38 @@ class AdvancedShareOptions extends React.Component {
   publishExpoExport = async () => {
     this.setState({exportingExpo: 'publish'});
     try {
-      const expoUri = await this.props.exportApp({ mode: 'expoPublish' });
+      const { expoUri, expoSnackId } = await this.props.exportApp({ mode: 'expoPublish' });
       this.setState({
         exportingExpo: null,
         expoUri,
+        expoSnackId,
       });
     } catch (e) {
       this.setState({
         exportingExpo: null,
+        expoUri: null,
+        expoSnackId: null,
         exportExpoError: 'Failed to publish project to Expo. Please try again later.',
+      });
+    }
+  };
+
+  generateExpoApk = async () => {
+    const { expoSnackId } = this.state;
+    this.setState({generatingExpoApk: true});
+    try {
+      const expoApkUri = await this.props.exportApp({
+        mode: 'expoGenerateApk',
+        expoSnackId,
+      });
+      this.setState({
+        generatingExpoApk: false,
+        expoApkUri,
+      });
+    } catch (e) {
+      this.setState({
+        generatingExpoApk: false,
+        generatingExpoApkError: 'Failed to create Android app. Please try again later.',
       });
     }
   };
@@ -238,17 +265,25 @@ class AdvancedShareOptions extends React.Component {
   };
 
   renderExportExpoTab() {
-    const { expoUri, exportedExpoZip } = this.state;
+    const { expoUri, exportedExpoZip, expoApkUri, generatingExpoApk } = this.state;
     const exportSpinner = this.state.exportingExpo === 'zip' ?
           <i className="fa fa-spinner fa-spin"></i> :
           null;
     const publishSpinner = this.state.exportingExpo === 'publish' ?
           <i className="fa fa-spinner fa-spin"></i> :
           null;
+    const generateApkSpinner = generatingExpoApk ?
+          <i className="fa fa-spinner fa-spin"></i> :
+          null;
     // TODO: Make this use a nice UI component from somewhere.
     const alert = this.state.exportExpoError ? (
       <div className="alert fade in">
         {this.state.exportExpoError}
+      </div>
+    ) : null;
+    const apkAlert = this.state.generatingExpoApkError ? (
+      <div className="alert fade in">
+        {this.state.generatingExpoApkError}
       </div>
     ) : null;
 
@@ -292,6 +327,24 @@ class AdvancedShareOptions extends React.Component {
                   value={expoUri}
                   style={style.expoInput}
                 />
+                <button onClick={this.generateExpoApk} style={[style.expoButton, style.expoButtonApk]}>
+                  {generateApkSpinner}
+                  Create Android App
+                </button>
+                {!!expoApkUri && <div>
+                  <p style={[style.p, style.bold]}>
+                    Send this URL to an Android phone:
+                  </p>
+                </div>}
+                {!!expoApkUri &&
+                  <input
+                    type="text"
+                    onClick={this.onInputSelect}
+                    readOnly="true"
+                    value={expoApkUri}
+                    style={style.expoInput}
+                  />}
+                {apkAlert}
               </div>
             </div>
           </div>}
