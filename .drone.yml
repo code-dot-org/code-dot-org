@@ -23,6 +23,7 @@ steps:
         echo "Pull request is from fork $head_repo; exiting."
         exit 1
       fi
+
 - name: restore-cache
   image: plugins/s3-cache
   settings:
@@ -33,6 +34,7 @@ steps:
       from_secret: S3_CACHE_ACCESS_KEY
     secret_key:
       from_secret: S3_CACHE_SECRET_KEY
+
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   volumes:
@@ -54,6 +56,7 @@ steps:
     - cp -rn "$(pwd)/home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0" /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems || true
     - cp -rn "$(pwd)/home/circleci/.cache" /home/circleci || true
     - /entrypoint.sh docker/unit_tests.sh
+
 - name: update-cache
   image: plugins/s3-cache
   volumes:
@@ -89,7 +92,6 @@ trigger:
   event:
     include:
     - pull_request
-    - push
 
 # ---
 # kind: pipeline

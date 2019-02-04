@@ -51,6 +51,7 @@ localize_apps: true
 dashboard_enable_pegasus: true
 dashboard_workers: 5
 skip_seed_all: true
+google_maps_api_key: boguskey
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 set -x
