@@ -1,3 +1,8 @@
+/**
+ * Entry point to build a bundle containing a set of globals used when displaying
+ * tutorialExplorer.  Includes the TutorialExplorer React class.
+ */
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
@@ -22,14 +27,6 @@ import {
 } from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
-
-/**
- * Entry point to build a bundle containing a set of globals used when displaying
- * tutorialExplorer.  Includes the TutorialExplorer React class.
- */
-
-import PropTypes from 'prop-types';
-
 import queryString from 'query-string';
 import { StickyContainer } from 'react-sticky';
 
