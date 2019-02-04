@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -129,8 +130,10 @@ class WordOrPictureLoginCards extends React.Component {
 
   printLoginCards = () => {
     const printArea = document.getElementById('printArea').outerHTML;
-    // TODO: add uniqueId to window name
-    let printWindow = window.open('', 'printWindow', '');
+    // Adding a unique ID to the window name allows for multiple instances of this window
+    // to be open at once without affecting each other.
+    const windowName = `printWindow-${_.uniqueId()}`;
+    let printWindow = window.open('', windowName, '');
     const {section} = this.props;
 
     printWindow.document.write(`<html><head><title>${i18n.printLoginCards_windowTitle({sectionName: section.name})}</title></head>`);
