@@ -10,6 +10,11 @@ steps:
   image: wintercdo/code-dot-org:0.7
   pull: always
   commands:
+    - |
+      if [ -z "$DRONE_PULL_REQUEST" ]; then
+        echo "Not a pull request."
+        exit 0
+      fi
     # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
     - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
     - echo $head_repo
@@ -18,11 +23,24 @@ steps:
         echo "Pull request is from fork $head_repo; exiting."
         exit 1
       fi
+
+- name: restore-cache
+  image: plugins/s3-cache
+  settings:
+    pull: true
+    restore: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   volumes:
   - name: rbenv
-    path: /home/circleci/.rbenv
+    path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
+  - name: yarncache
+    path: /home/circleci/.cache
   - name: mysql
     path: /var/lib/mysql
   environment:
@@ -33,12 +51,36 @@ steps:
   commands:
     - pwd
     - sudo chown -R circleci:circleci .
+    - # cache is restored to source directory, so we need to copy it into the right place
+    - cp -rn "$(pwd)/home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0" /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems || true
+    - cp -rn "$(pwd)/home/circleci/.cache" /home/circleci || true
     - /entrypoint.sh docker/unit_tests.sh
+
+- name: update-cache
+  image: plugins/s3-cache
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
+  - name: yarncache
+    path: /home/circleci/.cache
+  settings:
+    pull: true
+    rebuild: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+    mount:
+      - /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
+      - apps/node_modules
+      - /home/circleci/.cache
 
 volumes:
 - name: rbenv
   temp: {}
 - name: mysql
+  temp: {}
+- name: yarncache
   temp: {}
 
 trigger:
@@ -107,6 +149,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 5bae41905e6905fe9681c1535af15e6eb5283d722e42e1718fee6a288048c5e9
+hmac: 41f0921ccaed873a43f2608c4cabddf3911828cfc8044955f4420bf9fbaa8b98
 
 ...
