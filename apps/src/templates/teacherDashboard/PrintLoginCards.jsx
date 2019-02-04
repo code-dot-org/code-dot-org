@@ -13,24 +13,34 @@ import oauthSignupButtons from '../../../static/teacherDashboard/oauthSignupButt
  */
 class PrintLoginCards extends React.Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string.isRequired,
+    pegasusUrlPrefix: PropTypes.string.isRequired,
+
     // Provided by redux.
+    // TODO: (madelynkasula) make loginType required and equal word/picture/email.
     section: PropTypes.object.isRequired,
     students: PropTypes.array.isRequired,
   };
 
   render() {
-    const {section, students} = this.props;
+    const {studioUrlPrefix, pegasusUrlPrefix, section, students} = this.props;
 
     return (
       <div>
         {[SectionLoginType.word, SectionLoginType.picture].includes(section.loginType) &&
           <WordOrPictureLoginCards
+            studioUrlPrefix={studioUrlPrefix}
+            pegasusUrlPrefix={pegasusUrlPrefix}
             section={section}
             students={students}
           />
         }
         {section.loginType === SectionLoginType.email &&
-          <EmailLogins sectionCode={section.code}/>
+          <EmailLogins
+            studioUrlPrefix={studioUrlPrefix}
+            pegasusUrlPrefix={pegasusUrlPrefix}
+            sectionCode={section.code}
+          />
         }
       </div>
     );
@@ -46,25 +56,25 @@ export default connect(state => ({
 
 class EmailLogins extends React.Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string.isRequired,
+    pegasusUrlPrefix: PropTypes.string.isRequired,
     sectionCode: PropTypes.string.isRequired,
   };
 
   render() {
-    const {sectionCode} = this.props;
+    const {studioUrlPrefix, pegasusUrlPrefix, sectionCode} = this.props;
 
     return (
       <div>
         <h1>{i18n.printLoginCards_joinTitle()}</h1>
         <p>{i18n.printLoginCards_joinBody()}</p>
         <ol>
-          {/* TODO: fix link below */}
           <li>
-            {i18n.printLoginCards_joinStep1({url: "https://studio.code.org/users/sign_up"})}
+            {i18n.printLoginCards_joinStep1({url: `${studioUrlPrefix}/users/sign_up`})}
             <img src={oauthSignupButtons}/>
           </li>
           <li>{i18n.printLoginCards_joinStep2()}</li>
-          {/* TODO: fix link below */}
-          <li>{i18n.printLoginCards_joinStep3({url: "https://code.org/join", code: sectionCode})}</li>
+          <li>{i18n.printLoginCards_joinStep3({url: `${pegasusUrlPrefix}/join`, code: sectionCode})}</li>
           <li>{i18n.printLoginCards_joinStep4()}</li>
         </ol>
         <h1>{i18n.printLoginCards_signingIn()}</h1>
@@ -104,6 +114,8 @@ const styles = {
 
 class WordOrPictureLoginCards extends React.Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string.isRequired,
+    pegasusUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     students: PropTypes.array.isRequired,
   };
@@ -121,15 +133,14 @@ class WordOrPictureLoginCards extends React.Component {
   };
 
   render() {
-    const {section, students} = this.props;
+    const {studioUrlPrefix, pegasusUrlPrefix, section, students} = this.props;
 
     return (
       <div>
         <h1>{i18n.printLoginCards_signingIn()}</h1>
         <p>{i18n.printLoginCards_signinSteps()}</p>
         <ol>
-          {/* TODO: make code.org/join link below dynamic */}
-          <li>{i18n.printLoginCards_signinStep1({joinUrl: "http://code.org/join"})}</li>
+          <li>{i18n.printLoginCards_signinStep1({joinUrl: `${pegasusUrlPrefix}/join`})}</li>
           <li>{i18n.printLoginCards_signinStep2({code: section.code})}</li>
           <li>{i18n.printLoginCards_signinStep3()}</li>
           {section.loginType === SectionLoginType.picture &&
@@ -154,7 +165,13 @@ class WordOrPictureLoginCards extends React.Component {
         <br/>
         <div id="printArea" style={styles.container}>
           {(students || []).map(student => (
-            <LoginCard key={student.id} section={section} student={student}/>
+            <LoginCard
+              key={student.id}
+              studioUrlPrefix={studioUrlPrefix}
+              pegasusUrlPrefix={pegasusUrlPrefix}
+              section={section}
+              student={student}
+            />
           ))}
         </div>
       </div>
@@ -167,23 +184,23 @@ class WordOrPictureLoginCards extends React.Component {
  */
 class LoginCard extends React.Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string.isRequired,
+    pegasusUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     student: PropTypes.object.isRequired,
   };
 
   render() {
-    const {section, student} = this.props;
+    const {studioUrlPrefix, pegasusUrlPrefix, section, student} = this.props;
 
     return (
       <div style={styles.card}>
         <p style={styles.text}>
-          {/* TODO: fix link below */}
-          {i18n.loginCard_instructions({url: "https://code.org/join", code: section.code})}
+          {i18n.loginCard_instructions({url: `${pegasusUrlPrefix}/join`, code: section.code})}
         </p>
         <p style={styles.text}>
           <span style={styles.bold}>{i18n.loginCard_directUrl()}</span>
-          {/* TODO: fix link below */}
-          {` https://studio.code.org/sections/${section.code}`}
+          {` ${studioUrlPrefix}/sections/${section.code}`}
         </p>
         <p style={styles.text}>
           <span style={styles.bold}>{i18n.loginCard_sectionName()}</span>
@@ -197,8 +214,7 @@ class LoginCard extends React.Component {
           <p style={styles.text}>
             <span style={styles.bold}>{i18n.loginCard_secretPicture()}</span>
             <br/>
-            {/* TODO: fix link below */}
-            <img src={'http://localhost.code.org:3000/images/' + student.secret_picture_path} style={styles.img}/>
+            <img src={`${pegasusUrlPrefix}/images/${student.secret_picture_path}`} style={styles.img}/>
           </p>
         }
         {section.loginType === SectionLoginType.word &&

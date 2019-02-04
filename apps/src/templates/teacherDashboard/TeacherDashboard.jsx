@@ -12,14 +12,15 @@ import PrintLoginCards from '@cdo/apps/templates/teacherDashboard/PrintLoginCard
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string,
+    studioUrlPrefix: PropTypes.string.isRequired,
+    pegasusUrlPrefix: PropTypes.string.isRequired,
 
     // Provided by React router
     location: PropTypes.object,
   };
 
   render() {
-    const {location, studioUrlPrefix} = this.props;
+    const {location, studioUrlPrefix, pegasusUrlPrefix} = this.props;
     // Include header components unless we are on the /print_login_cards page.
     const includeHeader = location.pathname !== "/print_login_cards";
 
@@ -58,7 +59,7 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/print_login_cards"
-            component={props => <PrintLoginCards/>}
+            component={props => <PrintLoginCards studioUrlPrefix={studioUrlPrefix} pegasusUrlPrefix={pegasusUrlPrefix}/>}
           />
           {/* Render <SectionProgress/> by default */}
           <Route component={props => <SectionProgress/>} />
