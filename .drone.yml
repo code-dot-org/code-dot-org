@@ -24,9 +24,22 @@ steps:
         exit 1
       fi
 
+- name: restore-cache
+  image: plugins/s3-cache
+  settings:
+    pull: true
+    restore: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
+  pull: always
   volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
   - name: mysql
     path: /var/lib/mysql
   environment:
@@ -37,9 +50,28 @@ steps:
   commands:
     - pwd
     - sudo chown -R circleci:circleci .
+    - # cache is restored to source directory, so we need to copy it into the right place
+    - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
     - /entrypoint.sh docker/unit_tests.sh
 
+- name: update-cache
+  image: plugins/s3-cache
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  settings:
+    pull: true
+    rebuild: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+    mount:
+      - /home/circleci/.rbenv
+
 volumes:
+- name: rbenv
+  temp: {}
 - name: mysql
   temp: {}
 
@@ -109,6 +141,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 41f0921ccaed873a43f2608c4cabddf3911828cfc8044955f4420bf9fbaa8b98
+hmac: a37b3ff8767d1c25c2bd719f6372de50b2bfdef6c26cfb06075b5fcc05785a64
 
 ...
