@@ -9,7 +9,7 @@ import oauthSignupButtons from '../../../static/teacherDashboard/oauthSignupButt
  * Rendered from the /print_login_cards route in teacher dashboard.
  * Gives teachers information about allowing students to join their section, and prints
  * login cards for word/picture sections. *NOTE* this component should only be used for
- * word, picture, and email sections. It will return null for any other section login types.
+ * word, picture, and email sections.
  */
 class PrintLoginCards extends React.Component {
   static propTypes = {
@@ -17,8 +17,9 @@ class PrintLoginCards extends React.Component {
     pegasusUrlPrefix: PropTypes.string.isRequired,
 
     // Provided by redux.
-    // TODO: (madelynkasula) make loginType required and equal word/picture/email.
-    section: PropTypes.object.isRequired,
+    section: PropTypes.shape({
+      loginType: PropTypes.oneOf([SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email]).isRequired,
+    }).isRequired,
     students: PropTypes.array.isRequired,
   };
 
@@ -111,7 +112,6 @@ const styles = {
     marginTop: 10,
   }
 };
-
 
 class WordOrPictureLoginCards extends React.Component {
   static propTypes = {
