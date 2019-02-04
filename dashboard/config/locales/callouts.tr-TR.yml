@@ -518,6 +518,8 @@ tr:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
+      Ryan_Demo_callout:
+        dance_callout_02: Bu bloğu programınıza ekleyin!
       SG U3L08 how to add comments_callout:
         comment_highlight: Buradan kodunuza bir yorum karesi sürükleyin
       SG U3L2_Turtle3by3Grid_callout:
@@ -613,10 +615,15 @@ tr:
         courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
           gelir.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
+          gelir.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
           gelir.
       courseA_artist_loops7_forVideo_callout:
@@ -628,16 +635,25 @@ tr:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
           biliyor muydun?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
+          biliyor muydun?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
+          aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
+          söylüyor.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
       courseA_collector_preLoops1_callout:
@@ -660,6 +676,9 @@ tr:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
@@ -673,6 +692,8 @@ tr:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Programda adım adım gitmek için adım düğmesini
@@ -690,9 +711,13 @@ tr:
         courseA_playlab_events4_callout1: Bu bir belirtme
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Bu bir belirtme
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Bu bir belirtme
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
@@ -700,13 +725,22 @@ tr:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
           durumlarda ''rastgele" bir ses seçmene izin verir!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
+          durumlarda ''rastgele" bir ses seçmene izin verir!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
           Onu nasıl kullanacaksın?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
+          Onu nasıl kullanacaksın?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
           Onu nasıl kullanacaksın?
       courseB_artist_loops5_callout:
@@ -717,9 +751,14 @@ tr:
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
+          aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Programda adım adım gitmek için adım düğmesini
@@ -735,6 +774,9 @@ tr:
         courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
           kullan.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
+          kullan.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
           kullan.
       courseC19_playLab_EOC3_callout:
@@ -1367,6 +1409,9 @@ tr:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Bu değişkene nasıl değer atadığını göstermektedir.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
       coursef_maze_ramp3_callout:

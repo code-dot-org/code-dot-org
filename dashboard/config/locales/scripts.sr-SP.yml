@@ -1296,3 +1296,23 @@ sr:
               name: 'Стварни алгоритми: Папирни авиони'
             Binary Bracelets:
               name: Бинарне наруквице
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Прави алгоритми: Засади семе'
+            Going Places Safely:
+              name: Сигурна путања
+        courseb-2019:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+        pre-express-2019:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+            Spelling Bee:
+              name: Пчелица словарица
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Прави алгоритми: Засади семе'

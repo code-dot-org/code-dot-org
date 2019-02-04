@@ -3820,3 +3820,38 @@ zh-TW:
               name: 二進制手環
         gamelab:
           title: Game Lab
+        coursea-2019:
+          description_short: 給學齡前兒童的電腦科學指南
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: '生活中的演算法 - 植物種植'
+            'Programming: Happy Maps':
+              name: '程式設計：快樂地圖'
+            Programming in Maze:
+              name: 迷宮中的程式設計
+            Going Places Safely:
+              name: 安全的到達地點
+            'Loops: Happy Loops':
+              name: '迴圈：快樂迴圈'
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: 移動它，移動它
+            Your Digital Footprint:
+              name: 你的數位足跡
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: 移動它，移動它
+            Your Digital Footprint:
+              name: 你的數位足跡
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
+            Spelling Bee:
+              name: 拼字蜜蜂
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: '生活中的演算法 - 植物種植'

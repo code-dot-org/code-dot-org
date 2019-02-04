@@ -1610,3 +1610,27 @@ fi:
               name: Binäärikorut
         gamelab:
           title: Pelilabra
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Tosielämän algoritmit: kylvä siemen'
+            Going Places Safely:
+              name: Menossa turvallisesti
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Liikuta, liikuta
+            Your Digital Footprint:
+              name: Digitaalinen jalanjälkesi
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Liikuta, liikuta
+            Your Digital Footprint:
+              name: Digitaalinen jalanjälkesi
+            Spelling Bee:
+              name: Kirjurimehiläinen
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Tosielämän algoritmit: kylvä siemen'

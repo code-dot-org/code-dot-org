@@ -357,6 +357,8 @@ zh-CN:
         4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
+      Ryan_Demo_callout:
+        dance_callout_02: 向程序里增加这个模块！
       SG U3L08 how to add comments_callout:
         comment_highlight: 将注释块从这里拖到代码中
       SG U3L2_Turtle3by3Grid_callout:
@@ -435,9 +437,13 @@ zh-CN:
         courseA_artist_loops4_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
@@ -445,13 +451,19 @@ zh-CN:
         courseA_artist_loops8_1: 你知道在任何时候，都能往回画线吗？
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: 你知道在任何时候，都能往回画线吗？
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: 你知道在任何时候，都能往回画线吗？
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: 点击这里来观看代码运行!
@@ -467,6 +479,8 @@ zh-CN:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseA_maze_ramp3_2018_callout:
@@ -477,6 +491,8 @@ zh-CN:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: 当您需要提示时点击灯泡!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: 当您需要提示时点击灯泡!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: 当您需要提示时点击灯泡!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
@@ -490,19 +506,29 @@ zh-CN:
         courseA_playlab_events4_callout1: 这是一个标注
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: 这是一个标注
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: 这是一个标注
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: 单击此处可更改事件箭头的方向。
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: 单击此处可更改事件箭头的方向。
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: 单击此处可更改事件箭头的方向。
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: 这让你选择一个 "随机" 的声音，这意味着在你听到声音前，不知道你会得到什么!
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: 这让你选择一个 "随机" 的声音，这意味着在你听到声音前，不知道你会得到什么!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: 这让你选择一个 "随机" 的声音，这意味着在你听到声音前，不知道你会得到什么!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
@@ -510,9 +536,13 @@ zh-CN:
         courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseB_maze_seq1_callout:
         courseB_maze_seq1: 当您需要提示时点击灯泡!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: 当您需要提示时点击灯泡!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: 当您需要提示时点击灯泡!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
@@ -525,6 +555,8 @@ zh-CN:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: 让演员到这个标志移动到下一层。
@@ -1015,6 +1047,8 @@ zh-CN:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: 这是设置变量值的方法。
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。

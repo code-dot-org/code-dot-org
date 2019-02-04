@@ -309,3 +309,23 @@ it:
       PaperPlanes_2019:
         title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso specifico costruire un aeroplano di carta. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
+      PlantASeed_2019:
+        title: 'Algoritmi della Vita Reale: Piantare un Seme'
+        desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
+      UnplugHappyMaps_2019:
+        title: Mappe Felici
+        desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
+      GoingPlacesSafely_2019:
+        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
+      courseA_unplugged_loops_2019:
+        title: 'Cicli: Lezioni Tradizionali'
+        desc: In questa lezione, si parlerà di cicli!
+      MoveItMoveIt_2019:
+        title: Muovilo, muovilo
+      DigitalFootprint_2019:
+        title: La tua Impronta Digitale
+        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
+      courseB_unplugged_CnC_2019:
+        title: È Fantastico Creare e Comportarsi Lealmente
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.

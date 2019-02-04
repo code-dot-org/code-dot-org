@@ -686,6 +686,7 @@ sk:
       Overworld Shear Sheep_2019: Je čas na strihanie oviec! Použi príkaz “ostrihaj“ na to, aby si z oviec zozbieral vlnu.
       PS - test - pixelation: Dokončite tvar X písaním núl a jednotiek
       PS copy 2-3 Bee Conditionals 5: "Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.\nNajskôr musíš skontrolovať, či je tam nektár s použitím bloku \"ak nektár\"."
+      Ryan_Demo: Donúť soba začať nový krok po 4 taktoch!
       SpecialFrozenLevel: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
       Standalone_Artist_1: Vitaj v kurze Umelec! Najskôr si vyskúšajme jednoduchý štvorec použitím blokov "Otoč sa vpravo" a "Posuň sa dopredu". Každá strana má mať 100 pixelov.
       Standalone_Artist_2: Nakresli tento diamant so 120 a 60 stupňovými uhlami a dĺžkou strán 150 pixelov.
@@ -752,26 +753,176 @@ sk:
       course3_playlab_stage17_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj", keď na ňu klikneš?
       course3_playlab_stage17_2: Viete napísať program na pohyb tučniaka použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele?
       course3_playlab_stage17_3: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval hore a dole?
+      course3_playlab_stage17_4: Dokážeš to spraviť tak, aby Waddles povedal "Au!" a prehral zvuk "úderu" ak narazí do dinosaura? Umožni mu pohybovať sa pomocou šípok aby si to zvládol.
       course3_playlab_stage17_5: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice a potom ho presunúť šípkami až kým neskóruje?
       course3_playlab_stage17_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
       course3_playlab_stage17_7: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
+      courseC_PlayLab_events1: Sprav to tak, aby pes Jorge (postava 1) povedal "Ahoj všetci.".
+      courseC_PlayLab_events1_2018: Sprav to tak, aby pes Jorge (postava 1) povedal "Ahoj všetci.".
+      courseC_PlayLab_events1_2019: Sprav to tak, aby pes Jorge (postava 1) povedal "Ahoj všetci.".
+      courseC_PlayLab_events2: Dokážeš aby pes Jorge (postava 1) niečo povedal a následne po ňom niečo povedala aj mačka Olive (postava 2)?
+      courseC_PlayLab_events2_2018: Dokážeš aby pes Jorge (postava 1) niečo povedal a následne po ňom niečo povedala aj mačka Olive (postava 2)?
+      courseC_PlayLab_events2_2019: Dokážeš aby pes Jorge (postava 1) niečo povedal a následne po ňom niečo povedala aj mačka Olive (postava 2)?
+      courseC_PlayLab_events4: Dokážeš napísať program v ktorom sa Jorge (postava 1) posunie k mačke Olive a tá povie "Ahoj všetci." keď sa k nej Jorge dostane?
+      courseC_PlayLab_events4_2018: Dokážeš napísať program v ktorom sa Jorge (postava 1) posunie k mačke Olive a tá povie "Ahoj všetci." keď sa k nej Jorge dostane?
+      courseC_PlayLab_events4_2019: Dokážeš napísať program v ktorom sa Jorge (postava 1) posunie k mačke Olive a tá povie "Ahoj všetci." keď sa k nej Jorge dostane?
+      courseC_PlayLab_events5: Naprogramuj chobotnicu Octaviu aby povedala "Čo je nové?" potom čo na ňu klikneš.
+      courseC_PlayLab_events5_2018: Naprogramuj chobotnicu Octaviu aby povedala "Čo je nové?" potom čo na ňu klikneš.
+      courseC_PlayLab_events5_2019: Naprogramuj chobotnicu Octaviu aby povedala "Čo je nové?" potom čo na ňu klikneš.
+      courseC_PlayLab_events6: Napíš program na pohyb tučniaka Waddles použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
+      courseC_PlayLab_events6_2018: Napíš program na pohyb tučniaka Waddles použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
+      courseC_PlayLab_events6_2019: Napíš program na pohyb tučniaka Waddles použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
+      courseC_PlayLab_events7: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
+      courseC_PlayLab_events7_2018: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
+      courseC_PlayLab_events7_2019: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
       courseC_flappy_events10: 'Vytvor vlastnú hru Flappy! '
       courseC_flappy_events10_2018: 'Vytvor vlastnú hru Flappy! '
       courseC_flappy_events10_2019: 'Vytvor vlastnú hru Flappy! '
+      courseD_Frozen_nested1: 'Nakresli malý geometrický tvar, široký **20 až 50** pixelov. Môže mať akýkoľvek tvar aký sa ti páči.  '
+      courseD_Frozen_nested2: Teraz vezmi svoj geometrický tvar a nakresli dva alebo tri za sebou!
       courseD_Frozen_nested5: Zahraj sa so snehovými vločkami!
+      courseD_artist_1_2018: "Nakresli šesťuholník so stranami dlhými **50** pixelov.\n"
+      courseD_artist_1_2018_2019: "Nakresli šesťuholník so stranami dlhými **50** pixelov.\n"
+      courseD_artist_2_2018: 'Teraz sa otoč o **60** stupňov, nakresli rovnú čiaru dlhú **150** pixelov a skoč späť do stredu hracej plochy.  '
+      courseD_artist_2_2018_2019: 'Teraz sa otoč o **60** stupňov, nakresli rovnú čiaru dlhú **150** pixelov a skoč späť do stredu hracej plochy.  '
+      courseD_artist_3_2018: 'Vnor celý kód dovnútra ďalšieho cyklu ''opakuj'' a nastav ho aby zbehol celkovo **6** krát. '
+      courseD_artist_3_2018_2019: 'Vnor celý kód dovnútra ďalšieho cyklu ''opakuj'' a nastav ho aby zbehol celkovo **6** krát. '
+      courseD_artist_4_2018: Pridaj malý geometrický tvar na koniec tvojho riadku!
+      courseD_artist_4_2018_2019: Pridaj malý geometrický tvar na koniec tvojho riadku!
       courseD_artist_5_2018: Zahraj sa so snehovými vločkami!
       courseD_artist_5_2018_2019: Zahraj sa so snehovými vločkami!
       courseD_artist_binary1: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_binary1_2018: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_binary1_2019: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
+      courseD_artist_binary2: Spusti si tento kód, aby si videl, ako umelec používa binárne čísla na nakreslenie tohto vzoru.
+      courseD_artist_binary2_2018: Spusti si tento kód, aby si videl, ako umelec používa binárne čísla na nakreslenie tohto vzoru.
+      courseD_artist_binary2_2019: Spusti si tento kód, aby si videl, ako umelec používa binárne čísla na nakreslenie tohto vzoru.
+      courseD_artist_binary5: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
+      courseD_artist_binary5_2018: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
+      courseD_artist_binary5_2019: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
+      courseD_artist_binary8: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binary8_2018: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binary8_2019: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binary8_predict1: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binary8_predict1_2018: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binaryFP: |-
+        Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
+
+        Pozri čo sa stane, keď začneme byť kreatívni s bitmi!
+      courseD_artist_binaryFP8: "**Voľná hra:** Nakresli čo len chceš binárnymi číslami! "
+      courseD_artist_binaryFP_2018: |-
+        Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
+
+        Pozri čo sa stane, keď začneme byť kreatívni s bitmi!
+      courseD_artist_binaryFP_2019: |-
+        Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
+
+        Pozri čo sa stane, keď začneme byť kreatívni s bitmi!
+      courseD_artist_binary_challenge0: Skús na dokončenie tejto kresby použiť vnorené cykly.
       courseD_artist_embed_frozen: Stlač tlačidlo "Spustiť" aby sa ti ukázal dizajn snehovej vločky!
       courseD_artist_embed_frozen2: Stlač tlačidlo"Spustiť", aby sa ti ukázal dizajn tvojej snehovej vločky.
+      courseD_artist_functions10: Tento krát použi čiary z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+      courseD_artist_functions2: "Tentokrát použi na vytvorenie okuliarov funkciu ' nakresli štvorec '.\n"
+      courseD_artist_functions3: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
+      courseD_artist_functions4: Teraz keď už vieš nakresliť hviezdu, skús nakresliť štyri hviezdy!
+      courseD_artist_functions5: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby si dokončil túto úlohu.
+      courseD_artist_functions6: Vytvor toto okno tak, že nakreslíš štvorec, potom sa otočís o 90 stupňov, nakreslíš ďalší, a tak ďalej.
+      courseD_artist_nestedLoops2: Tentokrát vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
+      courseD_artist_nestedLoops2_2018: Tentokrát vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
+      courseD_artist_nestedLoops2_2019: Tentokrát vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
+      courseD_artist_nestedLoops3: |-
+        Použi svoje nové schopnosti na rýchle nakreslenie posledného radu okien na tejto budove.
+
+        Okná sú štvorce široké 20 pixelov, vzdialené od seba 20 pixelov.
+      courseD_artist_nestedLoops3_2018: |-
+        Použi svoje nové schopnosti na rýchle nakreslenie posledného radu okien na tejto budove.
+
+        Okná sú štvorce široké 20 pixelov, vzdialené od seba 20 pixelov.
+      courseD_artist_nestedLoops3_2019: |-
+        Použi svoje nové schopnosti na rýchle nakreslenie posledného radu okien na tejto budove.
+
+        Okná sú štvorce široké 20 pixelov, vzdialené od seba 20 pixelov.
+      courseD_artist_nestedLoops4: Skvelé! Sprav to isté s týmito kruhmi.
+      courseD_artist_nestedLoops4_2018: Skvelé! Sprav to isté s týmito kruhmi.
+      courseD_artist_nestedLoops4_2019: Skvelé! Sprav to isté s týmito kruhmi.
+      courseD_artist_nestedLoops5: Čo sa stane ak sa medzi nakreslením kruhov otočíš o 90 stupňov?
+      courseD_artist_nestedLoops5_2018: Čo sa stane ak sa medzi nakreslením kruhov otočíš o 90 stupňov?
+      courseD_artist_nestedLoops5_2019: Čo sa stane ak sa medzi nakreslením kruhov otočíš o 90 stupňov?
+      courseD_artist_nestedLoops6: Na vytvorenie tohto obrázku zmeň bloky svojho existujúceho kódu.
+      courseD_artist_nestedLoops7: Na vytvorenie tejto kresby použi získané znalosti.
+      courseD_artist_nestedLoops7_2018: Na vytvorenie tejto kresby použi získané znalosti.
+      courseD_artist_nestedLoops7_2019: Na vytvorenie tejto kresby použi získané znalosti.
+      courseD_artist_project1: 'Nakresli malý geometrický tvar, široký **20 až 50** pixelov. Môže mať akýkoľvek tvar aký sa ti páči.  '
+      courseD_artist_project1_2018: 'Nakresli malý geometrický tvar, široký **20 až 50** pixelov. Môže mať akýkoľvek tvar aký sa ti páči.  '
+      courseD_artist_project1_2019: 'Nakresli malý geometrický tvar, široký **20 až 50** pixelov. Môže mať akýkoľvek tvar aký sa ti páči.  '
+      courseD_artist_project2: Teraz vezmi svoj geometrický tvar a nakresli dva alebo tri za sebou!
+      courseD_artist_project2_2018: Teraz vezmi svoj geometrický tvar a nakresli dva alebo tri za sebou!
+      courseD_artist_project2_2019: Teraz vezmi svoj geometrický tvar a nakresli dva alebo tri za sebou!
       courseD_artist_project5: Zahraj sa so snehovými vločkami!
       courseD_artist_project5_2018: Zahraj sa so snehovými vločkami!
       courseD_artist_project5_2019: Zahraj sa so snehovými vločkami!
+      courseD_autorun_binary2_2019: Spusti si tento kód, aby si videl, ako umelec používa binárne čísla na nakreslenie tohto vzoru.
+      courseD_autorun_binary5_2019: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
+      courseD_autorun_binary8_2019: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_autorun_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
       courseD_bee_debugging3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       courseD_debugging_3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      courseD_farmer_condLoops_challenge1: Na dokončenie úlohy pozbieraj celú úrodu. Na každé skrytom políčku je len jedna kukurica alebo šalát.
+      courseD_farmer_condLoops_challenge1_2018: Na dokončenie úlohy pozbieraj celú úrodu. Na každé skrytom políčku je len jedna kukurica alebo šalát.
+      courseD_farmer_condLoops_challenge1_2019: Na dokončenie úlohy pozbieraj celú úrodu. Na každé skrytom políčku je len jedna kukurica alebo šalát.
+      courseD_farmer_conditionals1: Presuň sa na kopu hliny a použi blok "odstráň" na jej odstránenie.
+      courseD_farmer_conditionals10: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_conditionals2: Presuň sa k diere a naplň ju 6 lopatami hliny, použitím bloku "naplň".
+      courseD_farmer_conditionals3: Na vyriešenie tejto úlohy použi čo najmenej blokov.
+      courseD_farmer_conditionals4: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      courseD_farmer_conditionals5: 'Pomôž mi odstrániť všetku túto hlinu. '
+      courseD_farmer_conditionals6: Použi cyklus "pokiaľ" na naplnenie všetkých dier.
+      courseD_farmer_conditionals9: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while1: Presuň sa na kopu hliny a použi blok "odstráň" na jej odstránenie.
+      courseD_farmer_while10: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while10_2018: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while10_2019: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while10_predict2: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while10_predict2_2018: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while10_predict2_2019: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while1_2018: Presuň sa na kopu hliny a použi blok "odstráň" na jej odstránenie.
+      courseD_farmer_while1_2019: Presuň sa na kopu hliny a použi blok "odstráň" na jej odstránenie.
+      courseD_farmer_while2: Presuň sa k diere a naplň ju 6 lopatami hliny, použitím bloku "naplň".
+      courseD_farmer_while2_2018: Presuň sa k diere a naplň ju 6 lopatami hliny, použitím bloku "naplň".
+      courseD_farmer_while2_2019: Presuň sa k diere a naplň ju 6 lopatami hliny, použitím bloku "naplň".
+      courseD_farmer_while3: Na vyriešenie tejto úlohy použi čo najmenej blokov.
+      courseD_farmer_while3_2018: Na vyriešenie tejto úlohy použi čo najmenej blokov.
+      courseD_farmer_while3_2019: Na vyriešenie tejto úlohy použi čo najmenej blokov.
+      courseD_farmer_while4: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      courseD_farmer_while4_2018: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      courseD_farmer_while4_2019: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      courseD_farmer_while4_predict1: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      courseD_farmer_while4_predict1_2018: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      courseD_farmer_while4_predict1_2019: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      courseD_farmer_while5: 'Pomôž mi odstrániť všetku túto hlinu. '
+      courseD_farmer_while5_2018: 'Pomôž mi odstrániť všetku túto hlinu. '
+      courseD_farmer_while5_2019: 'Pomôž mi odstrániť všetku túto hlinu. '
+      courseD_farmer_while6: Použi cyklus "pokiaľ" na naplnenie všetkých dier.
+      courseD_farmer_while6_2018: Použi cyklus "pokiaľ" na naplnenie všetkých dier.
+      courseD_farmer_while6_2019: Použi cyklus "pokiaľ" na naplnenie všetkých dier.
+      courseD_farmer_while9: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while9_2018: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_farmer_while9_2019: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      courseD_scrat_ramp5: Vyhni sa prasknutému ľadu.
+      courseD_scrat_ramp5_2018: Vyhni sa prasknutému ľadu.
+      courseE_artist_functions10: Tento krát použi čiary z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+      courseE_artist_functions10_2018: Tento krát použi čiary z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+      courseE_artist_functions10_2019: Tento krát použi čiary z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+      courseE_artist_functions3: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
+      courseE_artist_functions4: Teraz keď už vieš nakresliť hviezdu, skús nakresliť štyri hviezdy!
+      courseE_artist_functions4_2018: Teraz keď už vieš nakresliť hviezdu, skús nakresliť štyri hviezdy!
+      courseE_artist_functions5: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby si dokončil túto úlohu.
+      courseE_artist_functions5_2018: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby si dokončil túto úlohu.
+      courseE_artist_functions5_2019: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby si dokončil túto úlohu.
+      courseE_artist_functions6: Vytvor toto okno tak, že nakreslíš štvorec, potom sa otočís o 90 stupňov, nakreslíš ďalší, a tak ďalej.
+      courseE_artist_functions6_2018: Vytvor toto okno tak, že nakreslíš štvorec, potom sa otočís o 90 stupňov, nakreslíš ďalší, a tak ďalej.
       courseE_bee_functions1: Zozbieraj všetok nektár z každého kvetu.
       courseE_bee_functions1_2018: Zozbieraj všetok nektár z každého kvetu.
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov.
@@ -966,13 +1117,22 @@ sk:
       grade3_maze_nestedLoops2: Vieš sa dostať k prasaťu použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
       grade3_maze_nestedLoops3: Dostaňte ma k prasiatku! Teraz môžete použiť len jeden blok posunúť dopredu
       grade3_maze_nestedLoops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa s najmenším možným počtom blokov!
+      grade3_robotFarmer_ConditionalsIntro4: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
+      grade3_robotFarmer_ConditionalsIntro_10a: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
       grade3_robotFarmer_ConditionalsIntro_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tu je hromada, odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho menu v bloku "if".'
+      grade3_robotFarmer_ConditionalsIntro_11a: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
+      grade3_robotFarmer_ConditionalsIntro_5: 'Pomôž mi odstrániť všetku túto hlinu. '
       grade3_robotFarmer_ConditionalsIntro_6: Odstráň všetky hromady hliny pomocou tak málo blokov ako sa len dá. Nové možnosti v rozbaľovacej ponuke v bloku "pokiaľ" mi hovoria či stojím na hromade alebo diere.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Pomôž mi vyplniť všetky tieto diery 5 plnými lopatami hliny. Poznámka: môžeš vložiť blok "opakuj" do bloku "pokiaľ".'
       grade4_arist_nested_loop_circles1: 'Hodnotenie: Dokonči dizajn použitím vnoreného cyklu.'
       grade4_arist_nested_loop_polygons1: "Zopakujte tento dizajn 10 krát. \n\nO koľko sa musíte otočiť pri každej slučke?"
       grade4_arist_nested_loop_polygons2: "Zopakujte tento tvar 6 krát. \n\nO koľko sa musíte otočiť pri každej slučke? "
       grade4_artist_functions2: "Funkcie Vám umožnia definovať nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."
+      grade4_artist_functions3b: Tento krát použi čiary z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+      grade4_artist_functions_stars0: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
+      grade4_artist_functions_stars1: Teraz keď už vieš nakresliť hviezdu, skús nakresliť štyri hviezdy!
+      grade4_artist_functions_stars2: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby si dokončil túto úlohu.
+      grade4_artist_functions_windows0: Vytvor toto okno tak, že nakreslíš štvorec, potom sa otočís o 90 stupňov, nakreslíš ďalší, a tak ďalej.
       grade4_artist_nested_loop_circles1: 'Hodnotenie: Dokonči dizajn použitím vnoreného cyklu.'
       grade4_artist_nested_loop_polygons1: "Zopakujte tento dizajn 10 krát. \n\nO koľko sa musíte otočiť pri každej slučke?"
       grade4_bee_conditionals_quantum1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!

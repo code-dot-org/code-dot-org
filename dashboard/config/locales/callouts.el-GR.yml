@@ -201,6 +201,8 @@ el:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+      Ryan_Demo_callout:
+        dance_callout_02: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
           προσθέσεις μία εντολή για να προχωρήσεις μπροστά;

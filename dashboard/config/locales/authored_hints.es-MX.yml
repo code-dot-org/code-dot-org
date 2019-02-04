@@ -4418,6 +4418,12 @@ es-MX:
           que hacer en cada panal?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Esta es una pista de prueba.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.
+
+          *Este nivel termina después de 8 medidas.*
       Tortoise and Hare_authored_hint:
         behavior hint: |-
           ¡Intenta editar los comportamientos!
@@ -4612,6 +4618,10 @@ es-MX:
         allHallows2017_b: 'Baker dice: "El crayón Chicago solo funciona en la * línea
           verde *"'
         allHallows2017_f: 'Amy dice: "¡Puede hacerlo! Solo piense fuera de la caja"'
+      allthethings_ttscsf contained_authored_hint:
+        courseE_farmer_ramp12a: No dudes en volver al último acertijo si necesitas
+          un recordatorio de cómo recoger cultivos solo **mientras** hay cultivos
+          para recoger.
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: "¿Puede imaginar donde colocar el loop? Intente escribir
           el código paso a paso y busque un patrón."
@@ -5973,6 +5983,11 @@ es-MX:
           a la <xml><block type="when_run"/></xml> para ver qué pasa.
         courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
           para resolver este rompecabezas.
+      courseA_artist_loops2_2019_authored_hint:
+        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir bloques
+          a la <xml><block type="when_run"/></xml> para ver qué pasa.
+        courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
+          para resolver este rompecabezas.
       courseA_artist_loops3_authored_hint:
         courseA_artist_loops3_a: Rastree lentamente el programa con el dedo para ver
           dónde esta el error.
@@ -5985,6 +6000,12 @@ es-MX:
         courseA_artist_loops3_b: "Querrá utilizar un bloque como este para resolver
           este rompecabezas . \n\n![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49
           AM.png)"
+      courseA_artist_loops3_2019_authored_hint:
+        courseA_artist_loops3_a: Rastree lentamente el programa con el dedo para ver
+          dónde esta el error.
+        courseA_artist_loops3_b: "Querrá utilizar un bloque como este para resolver
+          este rompecabezas . \n\n![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49
+          AM.png)"
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: Si desea que el ciclo se repita más de 4 veces, puede
           cambiar el número en la parte superior del bloque.
@@ -5992,6 +6013,12 @@ es-MX:
           Dado que solo puede utilizar un bloque <xml><block type="simple_move_right"/></xml>
           trate de poner dentro del ciclo <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>.
       courseA_artist_loops4_2018_authored_hint:
+        courseA_artist_loops4_a: Si desea que el loop se repita más de 4 veces, puede
+          cambiar el número en la parte superior del bloque.
+        courseA_artist_loops4_b: |-
+          Dado que solo puede utilizar un bloque <xml><block type="simple_move_right"/></xml>
+          trate de poner dentro del ciclo <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>.
+      courseA_artist_loops4_2019_authored_hint:
         courseA_artist_loops4_a: Si desea que el loop se repita más de 4 veces, puede
           cambiar el número en la parte superior del bloque.
         courseA_artist_loops4_b: |-
@@ -6015,12 +6042,26 @@ es-MX:
         courseA_artist_loops5_c: |-
           Dado que sólo puede utilizar un bloque <xml><block type="simple_move_right"/></xml> trate de poner dentro del ciclo
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>.
+      courseA_artist_loops5_2019_authored_hint:
+        courseA_artist_loops5_a: Intenta usar lo que has aprendido sobre bloques <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          para completar este rompecabezas!
+        courseA_artist_loops5_b: Si desea que el loop se repita más de 4 veces, puede
+          cambiar el número en la parte superior del bloque.
+        courseA_artist_loops5_c: |-
+          Dado que sólo puede utilizar un bloque <xml><block type="simple_move_right"/></xml> trate de poner dentro del ciclo
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>.
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: "¿Puede imaginar cómo hacer la colina? Intenta jugar
           con los bloques para ver qué dibuja cada uno."
         courseA_artist_loops6_b: Necesitarás 2 bloques en 2 direcciones para resolver
           este rompecabezas.
       courseA_artist_loops6_2018_authored_hint:
+        courseA_artist_loops6_a: "¿Puede imaginar cómo hacer la colina? Intenta jugar
+          con los bloques para ver qué dibuja cada uno."
+        courseA_artist_loops6_b: Necesitarás 2 bloques en 2 direcciones para resolver
+          este rompecabezas.
+      courseA_artist_loops6_2019_authored_hint:
         courseA_artist_loops6_a: "¿Puede imaginar cómo hacer la colina? Intenta jugar
           con los bloques para ver qué dibuja cada uno."
         courseA_artist_loops6_b: Necesitarás 2 bloques en 2 direcciones para resolver
@@ -6035,6 +6076,15 @@ es-MX:
           <title name="TIMES">???</title>
           </block></xml>.
       courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_a: "¿Puede imaginar donde colocar el loop? Intente escribir
+          el código paso a paso y busque un patrón."
+        courseA_artist_loops7_b: Primero escribe el código para una ola y luego repítelo
+          para dibujar las otras dos.
+        courseA_artist_loops7_c: |-
+          Recuerda que puedes poner más de un bloque en un ciclo <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml>.
+      courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_a: "¿Puede imaginar donde colocar el loop? Intente escribir
           el código paso a paso y busque un patrón."
         courseA_artist_loops7_b: Primero escribe el código para una ola y luego repítelo
@@ -6064,6 +6114,12 @@ es-MX:
         courseA_artist_loops8_b: "¿Cómo enlazarías el código que se te ha dado?"
         courseA_artist_loops8_c: "¿Qué hace el código?   \n¿Qué se supone que haga?
           \  \n¿Qué te dice eso?"
+      courseA_artist_loops8_2019_authored_hint:
+        courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que se ha
+          escrito para ti.
+        courseA_artist_loops8_b: "¿Cómo enlazarías el código que se te ha dado?"
+        courseA_artist_loops8_c: "¿Qué hace el código?   \n¿Qué se supone que haga?
+          \  \n¿Qué te dice eso?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Agregue otro bloque al código que le dan para dibujar
           el resto de las escaleras.
@@ -6073,6 +6129,14 @@ es-MX:
         courseA_artist_loops9_c: Si no imagina donde colocar el loop, intente escribir
           su código paso a paso y busque patrones.
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: Agregue otro bloque al código que le dan para dibujar
+          el resto de las escaleras.
+        courseA_artist_loops9_b: |-
+          El bloque que agregue debería ir dentro del loop <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>.
+        courseA_artist_loops9_c: Si no imagina donde colocar el loop, intente escribir
+          su código paso a paso y busque patrones.
+      courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Agregue otro bloque al código que le dan para dibujar
           el resto de las escaleras.
         courseA_artist_loops9_b: |-
@@ -6095,6 +6159,13 @@ es-MX:
         courseA_artist_loops_challenge2_c: Todos tus bloques necesitarán estar dentro
           de un loop para terminar este puzzle.
       courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_a: Bloques como este <xml>  <block type="simple_move_up_left"/></xml>
+          le permitirán a su artista moverse de forma inclinada!
+        courseA_artist_loops_challenge2_b: Cuando termines una tienda, ¡salta dos
+          veces para pasar a la siguiente!
+        courseA_artist_loops_challenge2_c: Todos tus bloques necesitarán estar dentro
+          de un loop para terminar este puzzle.
+      courseA_artist_loops_challenge2a_2019_authored_hint:
         courseA_artist_loops_challenge2_a: Bloques como este <xml>  <block type="simple_move_up_left"/></xml>
           le permitirán a su artista moverse de forma inclinada!
         courseA_artist_loops_challenge2_b: Cuando termines una tienda, ¡salta dos
@@ -6127,6 +6198,12 @@ es-MX:
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una solución simple sería moverse al este 2 veces,
           luego obtener el tesoro.
+      courseA_collector_loops1_2019_authored_hint:
+        courseA_collector_loops1_a: |-
+          Luego que se haya movido hacia un cuadrado con tesoro, use este bloque para tomarlo.
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Una solución simple sería moverse al este 2 veces,
+          luego obtener el tesoro.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Tendrás que moverte antes de poder recolectar
           cualquier tesoro.
@@ -6134,6 +6211,12 @@ es-MX:
           Luego que se haya movido hacia un cuadrado con tesoro, use este bloque para tomarlo.
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_authored_hint:
+        courseA_collector_loops2_a: Tendrás que moverte antes de poder recolectar
+          cualquier tesoro.
+        courseA_collector_loops2_b: |-
+          Luego que se haya movido hacia un cuadrado con tesoro, use este bloque para tomarlo.
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2019_authored_hint:
         courseA_collector_loops2_a: Tendrás que moverte antes de poder recolectar
           cualquier tesoro.
         courseA_collector_loops2_b: |-
@@ -6153,6 +6236,13 @@ es-MX:
           Recuerda que puedes poner más de un bloque en un ciclo <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml>.
+      courseA_collector_loops3_2019_authored_hint:
+        courseA_collector_loops3_a: Intenta usar un loop <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>!
+        courseA_collector_loops3_b: |-
+          Recuerda que puedes poner más de un bloque en un ciclo <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml>.
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Para cambiar qué tan lejos va Laurel, cambie la
           cantidad de veces que se ejecuta el ciclo.
@@ -6160,6 +6250,12 @@ es-MX:
           el tesoro después de que ella termine el ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>!
       courseA_collector_loops4_2018_authored_hint:
+        courseA_collector_loops4_a: Para cambiar qué tan lejos va Laurel, cambie la
+          cantidad de veces que se ejecuta el ciclo.
+        courseA_collector_loops4_b: No olvides que Laurel necesita caminar y recoger
+          el tesoro después de que ella termine el ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>!
+      courseA_collector_loops4_2019_authored_hint:
         courseA_collector_loops4_a: Para cambiar qué tan lejos va Laurel, cambie la
           cantidad de veces que se ejecuta el ciclo.
         courseA_collector_loops4_b: No olvides que Laurel necesita caminar y recoger
@@ -6183,6 +6279,15 @@ es-MX:
         courseA_collector_loops5_c: Deberá comenzar con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> que mueve a Laurel
           hacia el oeste y recoge el tesoro.
+      courseA_collector_loops5_2019_authored_hint:
+        courseA_collector_loops5_a: Si usted no puede encontrar la respuesta de inmediato,
+          trate de usar un trozo de papel para averiguar las flechas que se necesita
+          y mirar un patrón.
+        courseA_collector_loops5_b: Intente dividir el problema en 2 partes, moviéndose
+          de lado y luego hacia abajo.
+        courseA_collector_loops5_c: Deberá comenzar con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> que mueve a Laurel
+          hacia el oeste y recoge el tesoro.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: "¿No puede descubrir qué pasa? Intenta ejecutar
           el código un par de veces para ver qué pasa."
@@ -6195,10 +6300,19 @@ es-MX:
         courseA_collector_loops6_b: La solución más corta tiene 2 ciclos, <xml><block
           type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
           uno después del otro.
+      courseA_collector_loops6_2019_authored_hint:
+        courseA_collector_loops6_a: "¿No puede descubrir qué pasa? Intenta ejecutar
+          el código un par de veces para ver qué pasa."
+        courseA_collector_loops6_b: La solución más corta tiene 2 ciclos, <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
+          uno después del otro.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Si no puede descubrir qué viene después, intente
           ejecutar el código para ver dónde termina Laurel.
       courseA_collector_loops7_2018_authored_hint:
+        courseA_collector_loops7_a: Si no puede descubrir qué viene después, intente
+          ejecutar el código para ver dónde termina Laurel.
+      courseA_collector_loops7_2019_authored_hint:
         courseA_collector_loops7_a: Si no puede descubrir qué viene después, intente
           ejecutar el código para ver dónde termina Laurel.
       courseA_collector_loops8_authored_hint:
@@ -6219,6 +6333,15 @@ es-MX:
         courseA_collector_loops8_c: Recuerde que puede escribir una parte del código
           a la vez, luego presione "Ejecutar" para descubrir hacia dónde debe dirigirse
           desde allí.
+      courseA_collector_loops8_2019_authored_hint:
+        courseA_collector_loops8_a: Si usted está teniendo problemas para encontrar
+          este rompecabezas, trate de escribir los movimientos hacia abajo en un pedazo
+          de papel y mirando a un patrón.
+        courseA_collector_loops8_b: Intenta dividir este rompecabezas en 3 problemas
+          separados y escribir ciclos para cada uno.
+        courseA_collector_loops8_c: Recuerde que puede escribir una parte del código
+          a la vez, luego presione "Ejecutar" para descubrir hacia dónde debe dirigirse
+          desde allí.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'Si no puede identificar los mejores lugares para
           usar loops, intente codificar paso a paso y encontrar un patrón. '
@@ -6226,6 +6349,12 @@ es-MX:
           name="TIMES" config="3-10">???</title></block></xml> dentro de otro ciclo
           que hacen el código más corto!
       courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: 'Si no puede identificar los mejores lugares para
+          usar loops, intente codificar paso a paso y encontrar un patrón. '
+        courseA_collector_loops9_b: Intenta poner dos de tus ciclos <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> dentro de otro ciclo
+          que hacen el código más corto!
+      courseA_collector_loops9_2019_authored_hint:
         courseA_collector_loops9_a: 'Si no puede identificar los mejores lugares para
           usar loops, intente codificar paso a paso y encontrar un patrón. '
         courseA_collector_loops9_b: Intenta poner dos de tus ciclos <xml><block type="controls_repeat_simplified_dropdown"><title
@@ -6275,6 +6404,28 @@ es-MX:
           </block>
           </next>
           </block></xml>
+      courseA_collector_loops_challenge1_2019_authored_hint:
+        courseA_collector_loops_challenge1_a: Intenta cambiar los números en cada
+          loop si algo parece incorrecto.
+        courseA_collector_loops_challenge1_b: No necesita usar un ciclo si solo está
+          haciendo algo una vez.
+        courseA_collector_loops_challenge1_c: Hay 6 gemas en el lado derecho de la
+          cueva cuando comienzas, pero solo necesitas moverte 5 veces al sur para
+          obtener el tesoro. ¿Sabes por qué?
+        courseA_collector_loops_challenge1_d: |-
+          El programa de inicio no recoge las últimas 2 gemas. Intente agregar este código al final: <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: Solo necesitas usar 1 bloque para resolver
           esto.
@@ -6286,6 +6437,11 @@ es-MX:
         courseA_collector_loops_challenge2kp_a: "¿Puedes usar loops para resolver
           este puzzle?"
       courseA_collector_loops_challenge2kp_2018_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Prueba este camino para llegar a una
+          solución.
+        courseA_collector_loops_challenge2kp_a: "¿Puedes usar loops para resolver
+          este puzzle?"
+      courseA_collector_loops_challenge2kp_2019_authored_hint:
         courseA_collector_loops_challenge2kp_b: Prueba este camino para llegar a una
           solución.
         courseA_collector_loops_challenge2kp_a: "¿Puedes usar loops para resolver
@@ -6315,10 +6471,25 @@ es-MX:
         courseA_harvester_loops1_a: |-
           ¡Una vez que se mueva hacia el maíz, use este bloque para recogerlo!
           <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops1_2019_authored_hint:
+        courseA_harvester_loops1_a: |-
+          ¡Una vez que se mueva hacia el maíz, use este bloque para recogerlo!
+          <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
         courseA_harvester_loops2_a: 'Su código tendrá ** cuatro ** bloques `de mover
           el oeste` y ** cuatro ** bloques de` selección de maíz`. '
+      courseA_harvester_loops2_2019_authored_hint:
+        courseA_harvester_loops2_a: 'Su código tendrá ** cuatro ** bloques `de mover
+          el oeste` y ** cuatro ** bloques de` selección de maíz`. '
       courseA_harvester_loops3_authored_hint:
+        courseA_harvester_loops3_a: |-
+          Use un bloque de repetición como este para ayudarlo.
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">4</title>
+          </block></xml>
+        courseA_harvester_loops3_b: Para repetir código, arrastra un ciclo ´repetir´,
+          luego coloca dentro el bloque que quieres repetir.
+      courseA_harvester_loops3_2019_authored_hint:
         courseA_harvester_loops3_a: |-
           Use un bloque de repetición como este para ayudarlo.
           <xml><block type="controls_repeat_simplified_dropdown">
@@ -6331,7 +6502,18 @@ es-MX:
           ver qué pasa!"
         courseA_harvester_loops4_b: "¿Cuántas piezas de maíz hay? ¿Cuántas veces se
           repite tu código?"
+      courseA_harvester_loops4_2019_authored_hint:
+        courseA_harvester_loops4_a: "¡No tengas miedo de presionar `Ejecutar` para
+          ver qué pasa!"
+        courseA_harvester_loops4_b: "¿Cuántas piezas de maíz hay? ¿Cuántas veces se
+          repite tu código?"
       courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: Si te quedas atascado, intenta resolver el rompecabezas
+          en 2 partes, una parte antes de la esquina y una parte después de la esquina.
+        courseA_harvester_loops5_b: El código final tendrá ** un ** ciclo, ** un **
+          bloque de 'mover al sur', y ** un ** bloque 'mover al Este'.
+        courseA_harvester_loops5_c: "¡Utilizar esta ruta para recoger el maíz!"
+      courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_a: Si te quedas atascado, intenta resolver el rompecabezas
           en 2 partes, una parte antes de la esquina y una parte después de la esquina.
         courseA_harvester_loops5_b: El código final tendrá ** un ** ciclo, ** un **
@@ -6344,7 +6526,20 @@ es-MX:
           mover al este`.
         courseA_harvester_loops5a_c: Utilizar este camino para mover una forma y luego
           el otro.
+      courseA_harvester_loops5a_2019_authored_hint:
+        courseA_harvester_loops5a_a: Necesitará un ciclo de repetición después de
+          otro.
+        courseA_harvester_loops5a_b: Un ciclo repetirá `mover al sur`, y el otro repetirá`
+          mover al este`.
+        courseA_harvester_loops5a_c: Utilizar este camino para mover una forma y luego
+          el otro.
       courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: Presiona `Ejecutar` y mira lo que sucede!
+        courseA_harvester_loops5b_b: "¿Se repiten sus loops el correcto número de
+          veces?"
+        courseA_harvester_loops5b_c: Muevete de una forma, luego de la otra con este
+          camino.
+      courseA_harvester_loops5b_2019_authored_hint:
         courseA_harvester_loops5b_a: Presiona `Ejecutar` y mira lo que sucede!
         courseA_harvester_loops5b_b: "¿Se repiten sus loops el correcto número de
           veces?"
@@ -6355,10 +6550,25 @@ es-MX:
           en un papel y busca los patrones que se repiten.
         courseA_harvester_loops6_b: Este es el camino que debes tomar para recoger
           el maíz.
+      courseA_harvester_loops6_2019_authored_hint:
+        courseA_harvester_loops6_a: Si te quedas atascado, intenta escribir los pasos
+          en un papel y busca los patrones que se repiten.
+        courseA_harvester_loops6_b: Este es el camino que debes tomar para recoger
+          el maíz.
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: Necesitará dos loops de repetición, uno tras otro!
         courseA_harvester_loops7_b: Utiliza dos loops para seguir este camino.
+      courseA_harvester_loops7_2019_authored_hint:
+        courseA_harvester_loops7_a: Necesitará dos loops de repetición, uno tras otro!
+        courseA_harvester_loops7_b: Utiliza dos loops para seguir este camino.
       courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_a: Divide este rompecabezas en tres partes diferentes.
+          Una parte en la primera esquina, una parte en la segunda esquina y una parte
+          hasta el final.
+        courseA_harvester_loops9_b: "¡No tengas miedo de ejecutar tu código después
+          de cada parte para ver qué pasa!"
+        courseA_harvester_loops9_c: "¡Sigue esta ruta para recoger todo el maíz."
+      courseA_harvester_loops9_2019_authored_hint:
         courseA_harvester_loops9_a: Divide este rompecabezas en tres partes diferentes.
           Una parte en la primera esquina, una parte en la segunda esquina y una parte
           hasta el final.
@@ -6382,10 +6592,35 @@ es-MX:
         courseA_harvester_seq10_b: Necesitas `Mover al este`, luego` Mover al norte`.
           Haz esto dos veces. ¡No te olvides de obtener todo el maíz también!
         courseA_harvester_seq10_c: "¡Utiliza esta ruta para recoger todo el maíz."
+      courseA_harvester_seq10_2019_authored_hint:
+        courseA_harvester_seq10_a: "¿Estás atascado? Trate de anotar primero los pasos
+          en una hoja de papel."
+        courseA_harvester_seq10_b: Necesitas `Mover al este`, luego` Mover al norte`.
+          Haz esto dos veces. ¡No te olvides de obtener todo el maíz también!
+        courseA_harvester_seq10_c: "¡Utiliza esta ruta para recoger todo el maíz."
       courseA_harvester_seq13_authored_hint:
         courseA_bee_seq1_a: Utiliza este bloque para recoger maiz una vez que la cosechadora
           llegue ahí
+      courseA_harvester_seq13_2019_authored_hint:
+        courseA_bee_seq1_a: Utiliza este bloque para recoger maiz una vez que la cosechadora
+          llegue ahí
+      courseA_harvester_seq1_2019_authored_hint:
+        courseA_harvester_seq1_a: |-
+          ¡Usa este bloque para recoger el maíz cuando la cosechadora lo encuentre!
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          La cosechadora deberá moverse al este tres veces para llegar al maíz. Utilice este bloque:
+          <xml>
+          <block type="maze_moveEast"/>
+          </xml>
       courseA_harvester_seq2_authored_hint:
+        courseA_harvester_seq2_a: ¡No olvides utilizar <xml><block type="harvester_corn"/></xml>
+          para recoger el maíz!
+        courseA_harvester_seq2_b: "¡Intenta escribir los pasos en papel para encontrar
+          una solución!"
+      courseA_harvester_seq2_2019_authored_hint:
         courseA_harvester_seq2_a: ¡No olvides utilizar <xml><block type="harvester_corn"/></xml>
           para recoger el maíz!
         courseA_harvester_seq2_b: "¡Intenta escribir los pasos en papel para encontrar
@@ -6396,7 +6631,19 @@ es-MX:
           <xml><block type="harvester_corn"/></xml>
         courseA_harvester_seq3_b: Diga los pasos en voz alta y vea si le ayudan a
           encontrar la respuesta.
+      courseA_harvester_seq3_2019_authored_hint:
+        courseA_harvester_seq3_a: |-
+          ¿Recordaste usar este bloque?
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Diga los pasos en voz alta y vea si le ayudan a
+          encontrar la respuesta.
       courseA_harvester_seq4_authored_hint:
+        courseA_harvester_seq4_a: "¿Cuántos espacios hay entre el Harvester y el maíz?
+          ¿Cuántos bloques hay en tu espacio de trabajo?"
+        courseA_harvester_seq4_b: |-
+          Necesitará cinco bloques mover al este y un bloque` Tomar maíz`:
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq4_2019_authored_hint:
         courseA_harvester_seq4_a: "¿Cuántos espacios hay entre el Harvester y el maíz?
           ¿Cuántos bloques hay en tu espacio de trabajo?"
         courseA_harvester_seq4_b: |-
@@ -6409,7 +6656,17 @@ es-MX:
         courseA_harvester_seq5_c: |-
           ¡Tira este bloque a la basura!
           <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq5_2019_authored_hint:
+        courseA_harvester_seq5_a: "¿Qué bloque mueve a la cosechadora de la manera
+          incorrecta?"
+        courseA_harvester_seq5_b: Es necesario eliminar un bloque.
+        courseA_harvester_seq5_c: |-
+          ¡Tira este bloque a la basura!
+          <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq6_authored_hint:
+        courseA_harvester_seq6_a: Si estás atascado, trata de decir los pasos en voz
+          alta. Podría ayudarte a descubrir el camino correcto.
+      courseA_harvester_seq6_2019_authored_hint:
         courseA_harvester_seq6_a: Si estás atascado, trata de decir los pasos en voz
           alta. Podría ayudarte a descubrir el camino correcto.
       courseA_harvester_seq7_authored_hint:
@@ -6417,7 +6674,15 @@ es-MX:
           parte antes de la esquina y una parte después de la esquina.
         courseA_harvester_seq7_b: "¿Tienes problemas? Este es el camino que debe tomar
           la cosechadora."
+      courseA_harvester_seq7_2019_authored_hint:
+        courseA_harvester_seq7_a: Intenta resolver el rompecabezas en 2 partes, una
+          parte antes de la esquina y una parte después de la esquina.
+        courseA_harvester_seq7_b: "¿Tienes problemas? Este es el camino que debe tomar
+          la cosechadora."
       courseA_harvester_seq8_authored_hint:
+        courseA_harvester_seq8_a: Tu código final debe tener ** 4 ** bloques de movimiento
+          y ** 2 ** bloques de selección.
+      courseA_harvester_seq8_2019_authored_hint:
         courseA_harvester_seq8_a: Tu código final debe tener ** 4 ** bloques de movimiento
           y ** 2 ** bloques de selección.
       courseA_harvester_seq9_authored_hint:
@@ -6426,7 +6691,28 @@ es-MX:
         courseA_harvester_seq9_b: "¡No te olvides de recoger todo el maíz! Necesitarás
           bloques de maíz ** ** **."
         courseA_harvester_seq9_c: Sigue esta ruta para recoger todo el maíz.
+      courseA_harvester_seq9_2019_authored_hint:
+        courseA_harvester_seq9_a: Ejecute el código varias veces para ver qué sucede.
+          ¿Dónde se detiene la cosechadora?
+        courseA_harvester_seq9_b: "¡No te olvides de recoger todo el maíz! Necesitarás
+          bloques de maíz ** ** **."
+        courseA_harvester_seq9_c: Sigue esta ruta para recoger todo el maíz.
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Su código debe verse así:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Su código debe verse así:
           <xml>
@@ -6469,7 +6755,45 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
+        '1': |
+          Su código debe verse así:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Tu código deberia verse asi;
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
         '1': |
           Tu código deberia verse asi;
 
@@ -6514,6 +6838,25 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
+        '1': |-
+          Su código debe verse así:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Intente usar el botón "Paso" para ejecutar su
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
@@ -6523,6 +6866,22 @@ es-MX:
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
       courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Su código debe verse así:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
         '1': |-
           Su código debe verse así:
 
@@ -6556,6 +6915,11 @@ es-MX:
           en una hoja de papel.
         courseA_maze_seq10_b: Tendrá que ir en 3 direcciones diferentes para resolver
           este rompecabezas.
+      courseA_maze_seq10_2019_authored_hint:
+        courseA_maze_seq10_a: Si tiene problemas, primero intente anotar los pasos
+          en una hoja de papel.
+        courseA_maze_seq10_b: Tendrá que ir en 3 direcciones diferentes para resolver
+          este rompecabezas.
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Si el camino que necesita no está claro, use su dedo
           para seguir el camino del pájaro hasta el cerdo.
@@ -6572,7 +6936,24 @@ es-MX:
         courseA_maze_seq13_c: |-
           Estos bloques le ayudarán a moverse más cerca del cerdo <xml><block type="maze_moveNorth"/></xml>
           <xml><block type="maze_moveEast"/></xml>.
+      courseA_maze_seq13_2019_authored_hint:
+        courseA_maze_seq13_a: Si el camino que necesita no está claro, use su dedo
+          para seguir el camino del pájaro hasta el cerdo.
+        courseA_maze_seq13_b: "¡No tengas miedo de cometer un error! Intenta agregar
+          bloques y ejecutar el código para ver qué sucederá."
+        courseA_maze_seq13_c: |-
+          Estos bloques le ayudarán a moverse más cerca del cerdo <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml>.
       courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          Si usted está teniendo problemas para conseguir que el pájaro se mueva, asegurar que los bloques encajen en su lugar
+          <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          El ave tendrá que moverse hacia el oeste 3 veces para llegar al cerdo. Utilice este bloque:
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019_authored_hint:
         courseA_maze_seq1_a: |-
           Si usted está teniendo problemas para conseguir que el pájaro se mueva, asegurar que los bloques encajen en su lugar
           <xml>
@@ -6625,13 +7006,22 @@ es-MX:
       courseA_maze_seq5_2018_authored_hint:
         '1': "¡Intenta escribir los pasos en papel para encontrar una solución!"
         '2': "Deberá usar este bloque: \n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseA_maze_seq5_2019_authored_hint:
+        '1': "¡Intenta escribir los pasos en papel para encontrar una solución!"
+        '2': "Deberá usar este bloque: \n<xml><block type=\"maze_moveEast\"/></xml>"
       courseA_maze_seq5a_2018_authored_hint:
+        '1': Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta.
+      courseA_maze_seq5a_2019_authored_hint:
         '1': Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Tu código final debe tener 3 bloques de movimiento.
         courseA_maze_seq6_b: Si te quedas atascado, intenta resolver el rompecabezas
           en 2 partes, una parte antes de la esquina y una parte después de la esquina.
       courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_a: Tu código final debe tener 3 bloques de movimiento.
+        courseA_maze_seq6_b: Si te quedas atascado, intenta resolver el rompecabezas
+          en 2 partes, una parte antes de la esquina y una parte después de la esquina.
+      courseA_maze_seq6_2019_authored_hint:
         courseA_maze_seq6_a: Tu código final debe tener 3 bloques de movimiento.
         courseA_maze_seq6_b: Si te quedas atascado, intenta resolver el rompecabezas
           en 2 partes, una parte antes de la esquina y una parte después de la esquina.
@@ -6649,6 +7039,9 @@ es-MX:
         courseA_maze_seq8_a: Si estás atascado, intenta dibujar la imagen en papel
           para ver cómo se debe mover el pájaro.
       courseA_maze_seq8_2018_authored_hint:
+        courseA_maze_seq8_a: Si estás atascado, intenta dibujar la imagen en papel
+          para ver cómo se debe mover el pájaro.
+      courseA_maze_seq8_2019_authored_hint:
         courseA_maze_seq8_a: Si estás atascado, intenta dibujar la imagen en papel
           para ver cómo se debe mover el pájaro.
       courseA_maze_seq9_authored_hint:
@@ -6669,10 +7062,15 @@ es-MX:
         courseA_maze_seq_challenge1_a: Hay dos soluciones para este rompecabezas.
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: Hay dos soluciones para este rompecabezas.
+      courseA_maze_seq_challenge1_2019_authored_hint:
+        courseA_maze_seq_challenge1_a: Hay dos soluciones para este rompecabezas.
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: Intenta contar los espacios con tu dedo. ¡Recuerda
           no contar el espacio donde comienzas!
       courseA_maze_seq_challenge2_2018_authored_hint:
+        courseA_maze_seq_challenge2_a: Intenta contar los espacios con tu dedo. ¡Recuerda
+          no contar el espacio donde comienzas!
+      courseA_maze_seq_challenge2_2019_authored_hint:
         courseA_maze_seq_challenge2_a: Intenta contar los espacios con tu dedo. ¡Recuerda
           no contar el espacio donde comienzas!
       courseA_playLab_events2_authored_hint:
@@ -6703,6 +7101,20 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseA_playLab_events2_2019_authored_hint:
+        courseA_playLab_events2_a: Mira el bloque que hace decir algo al perro.
+        courseA_playLab_events2_b: |-
+          Este es el código que necesita para completar este rompecabezas:
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_playLab_events3_authored_hint:
         courseA_playLab_events3_a: |-
           Arrastre este bloque <xml><block type="studio_move">
@@ -6715,6 +7127,17 @@ es-MX:
           mover a Jorge a la bandera una vez que haya escrito su programa. Cuando
           la bandera se pone verde, ¡has terminado!
       courseA_playLab_events3_2018_authored_hint:
+        courseA_playLab_events3_a: |-
+          Arrastre este bloque <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> out and snap it to the bottom of <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Recuerde usar la tecla de flecha izquierda para
+          mover a Jorge a la bandera una vez que haya escrito su programa. Cuando
+          la bandera se pone verde, ¡has terminado!
+      courseA_playLab_events3_2019_authored_hint:
         courseA_playLab_events3_a: |-
           Arrastre este bloque <xml><block type="studio_move">
           <title name="SPRITE">1</title>
@@ -6759,6 +7182,23 @@ es-MX:
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
           </block></next></block></xml>
+      courseA_playLab_events4_2019_authored_hint:
+        courseA_playLab_events4_a: |-
+          Aquí está el bloque de eventos que necesitará para que Jorge se mueva hacia la derecha:
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          Este es el código que necesitará para completar este rompecabezas:
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "Aquí están los bloques de eventos que deberá usar
           para mover a Jorge arriba y abajo:\n<xml><block type=\"studio_whenArrow\">\n
@@ -6768,6 +7208,14 @@ es-MX:
           del evento haciendo clic en la imagen del bloque y eligiendo una nueva?
           ! [] (https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
       courseA_playLab_events5_2018_authored_hint:
+        courseA_playLab_events5_a: "Aquí están los bloques de eventos que deberá usar
+          para mover a Jorge arriba y abajo:\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: "¿Sabía que puede cambiar la clave de   la flecha
+          del evento haciendo clic en la imagen del bloque y eligiendo una nueva?
+          ! [] (https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+      courseA_playLab_events5_2019_authored_hint:
         courseA_playLab_events5_a: "Aquí están los bloques de eventos que deberá usar
           para mover a Jorge arriba y abajo:\n<xml><block type=\"studio_whenArrow\">\n
           \   <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block
@@ -6807,6 +7255,22 @@ es-MX:
           <xml><block type="studio_playSound">
           <title name="SOUND">random</title>
           </block></xml>
+      courseA_playLab_events6_2019_authored_hint:
+        courseA_playLab_events6_a: |-
+          Aquí está el bloque de eventos que usaría para que Jorge haga algo cuando se haga clic:
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
+        courseA_playLab_events6_b: |-
+          Aquí está el bloque que usaría para cambiar el fondo:
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
+        courseA_playLab_events6_c: |-
+          Aquí está el bloque que usaría para reproducir un sonido aleatorio:
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
       courseA_playLab_events7_authored_hint:
         courseA_playLab_events7_a: |-
           Usa este bloque para controlar lo que sucede cuando los actores colisionan.
@@ -6815,6 +7279,13 @@ es-MX:
           <title name="SPRITE2">0</title>
           </block></xml>
       courseA_playLab_events7_2018_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa este bloque para controlar lo que sucede cuando los actores colisionan.
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
+      courseA_playLab_events7_2019_authored_hint:
         courseA_playLab_events7_a: |-
           Usa este bloque para controlar lo que sucede cuando los actores colisionan.
           <xml><block type="studio_whenSpriteCollided">
@@ -6845,6 +7316,29 @@ es-MX:
         courseA_playlab_events_challenge1_e: Finalmente, haz que Wendel el Mago se
           muestre cuando haces clic en Spiff
       courseA_playlab_events_challenge1_2018_authored_hint:
+        courseA_playlab_events_challenge1_a: "¡Haz que Waddles the Penguin se muestre
+          al hacer clic en Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "¡Haz el espectáculo de Boo the Ghost
+          cuando haces clic en Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "¡Haz que Jayden realice el Show de Fuzzy
+          Monster cuando haces clic en Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "¡Haz que Spiff the Robot se muestre
+          cuando haces clic en el monstruo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: Finalmente, haz que Wendel el Mago se
+          muestre cuando haces clic en Spiff
+      courseA_playlab_events_challenge1_2019_authored_hint:
         courseA_playlab_events_challenge1_a: "¡Haz que Waddles the Penguin se muestre
           al hacer clic en Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
@@ -6969,6 +7463,40 @@ es-MX:
           </block>
           </next>
           </block></xml>
+      courseA_playlab_events_challenge2_2019_authored_hint:
+        courseA_playlab_events_challenge2_a: "Puedes hacer cantar a un pájaro.\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Puedes hacer un pitido de robot.\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Puedes hacer gruñir a un monstruo enojado.
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
         courseA_playlab_events_challenge1_a: "¡Haz que Waddles the Penguin se muestre
           al hacer clic en Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
@@ -7000,6 +7528,11 @@ es-MX:
           en ambos bloques al mismo tiempo, luego haz clic en "ejecutar" otra vez.
         '2': "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona,
           prueba con algo más!"
+      courseB_Scrat_ramp1_2019_authored_hint:
+        '1': Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic
+          en ambos bloques al mismo tiempo, luego haz clic en "ejecutar" otra vez.
+        '2': "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona,
+          prueba con algo más!"
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Su código debe verse así:
@@ -7015,7 +7548,41 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Su código debe verse así:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Su código debe verse así:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Su código debe verse así:
 
@@ -7053,7 +7620,45 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Tu código deberia verse asi;
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Su código debe verse así:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Su código debe verse así:
 
@@ -7088,6 +7693,22 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Su código debe verse así:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Si desea que el loop se repita más de 4 veces, puede
           cambiar el número en la parte superior del bloque.
@@ -7098,12 +7719,22 @@ es-MX:
           cambiar el número en la parte superior del bloque.
         courseB_artist_loops2_b: Intenta ejecutar el código primero para ver dónde
           termina el artista.
+      courseB_artist_loops2_2019_authored_hint:
+        courseB_artist_loops2_a: Si desea que el loop se repita más de 4 veces, puede
+          cambiar el número en la parte superior del bloque.
+        courseB_artist_loops2_b: Intenta ejecutar el código primero para ver dónde
+          termina el artista.
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: ¡Recuerde usar un loop de "repetición" para un mejor
           código!
         courseB_artist_loops3_b: El artista querrá moverse hacia el sur para dibujar
           esta línea.
       courseB_artist_loops3_2018_authored_hint:
+        courseB_artist_loops3_a: Recuerde utilizar un loop de "repetición" para un
+          mejor código!
+        courseB_artist_loops3_b: El artista querrá moverse hacia el sur para dibujar
+          esta línea.
+      courseB_artist_loops3_2019_authored_hint:
         courseB_artist_loops3_a: Recuerde utilizar un loop de "repetición" para un
           mejor código!
         courseB_artist_loops3_b: El artista querrá moverse hacia el sur para dibujar
@@ -7122,16 +7753,29 @@ es-MX:
           para resolver este rompecabezas.
         courseB_artist_loops4_c: No olvides cambiar la cantidad de veces que el loop
           se repite.
+      courseB_artist_loops4_2019_authored_hint:
+        courseB_artist_loops4_a: Utilice el bloque de salto para avanzar sin dibujar
+          una línea.
+        courseB_artist_loops4_b: Deberá agregar un bloque dentro del ciclo de repetición
+          para resolver este rompecabezas.
+        courseB_artist_loops4_c: No olvides cambiar la cantidad de veces que el loop
+          se repite.
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Arrastre un loop de "repetición", luego coloque los
           otros bloques dentro de él. ¿Cuántas veces necesita repetir?
       courseB_artist_loops5_2018_authored_hint:
         courseB_artist_loops5_a: Arrastre un loop de "repetición", luego coloque otros
           bloques dentro de él. ¿Cuántas veces necesita repetir?
+      courseB_artist_loops5_2019_authored_hint:
+        courseB_artist_loops5_a: Arrastre un loop de "repetición", luego coloque otros
+          bloques dentro de él. ¿Cuántas veces necesita repetir?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Intenta escribir los movimientos en un papel y busca
           un patrón.
       courseB_artist_loops6_2018_authored_hint:
+        courseB_artist_loops6_b: Intenta escribir los movimientos en un papel y busca
+          un patrón.
+      courseB_artist_loops6_2019_authored_hint:
         courseB_artist_loops6_b: Intenta escribir los movimientos en un papel y busca
           un patrón.
       courseB_artist_loops7_authored_hint:
@@ -7176,12 +7820,38 @@ es-MX:
           -Loop 4:
           -Izquierda
           -Abajo
+      courseB_artist_loops7_2019_authored_hint:
+        courseB_artist_loops7_a: Este desafío usa **4** loops, ¡uno tras de otro!
+        courseB_artist_loops7_b: Observe que cada ciclo hace un patrón de escalera
+          que va en una dirección diferente. ! [] (https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: |-
+          Los loops deberían hacer esto:
+          Loo 1
+          -Derecha
+          -Abajo
+
+          Loop 2
+          -Derecha
+          -Arriba
+
+          Loop 3:
+          -Izquierda
+          -Arriba
+
+          -Loop 4:
+          -Izquierda
+          -Abajo
       courseB_artist_loops8_authored_hint:
         courseB_artist_loops8_a: "¿Cuántas veces debes repetir el patrón para hacer
           la escalera?"
         courseB_artist_loops8_b: Intenta ejecutar el código que se te ha dado para
           ver lo que hace.
       courseB_artist_loops8_2018_authored_hint:
+        courseB_artist_loops8_a: "¿Cuántas veces debes repetir el patrón para hacer
+          la escalera?"
+        courseB_artist_loops8_b: Intenta ejecutar el código que se te ha dado para
+          ver lo que hace.
+      courseB_artist_loops8_2019_authored_hint:
         courseB_artist_loops8_a: "¿Cuántas veces debes repetir el patrón para hacer
           la escalera?"
         courseB_artist_loops8_b: Intenta ejecutar el código que se te ha dado para
@@ -7193,6 +7863,12 @@ es-MX:
         courseB_artist_loops9_c: "¿Puede imaginar donde colocar el loop? Intente escribir
           el código paso a paso y busque un patrón."
       courseB_artist_loops9_2018_authored_hint:
+        courseB_artist_loops9_a: Recuerde que los bloques de salto se pueden usar
+          para moverse sin dibujar una línea.
+        courseB_artist_loops9_b: Querrá usar el bloque W para resolver este puzzle.
+        courseB_artist_loops9_c: "¿Puede imaginar donde colocar el loop? Intente escribir
+          el código paso a paso y busque un patrón."
+      courseB_artist_loops9_2019_authored_hint:
         courseB_artist_loops9_a: Recuerde que los bloques de salto se pueden usar
           para moverse sin dibujar una línea.
         courseB_artist_loops9_b: Querrá usar el bloque W para resolver este puzzle.
@@ -7212,6 +7888,13 @@ es-MX:
           al próximo!
         courseB_artist_loops_challenge1_c: 'Tendrá que `mover` o` saltar` sobre algunas
           de las mismas líneas dos veces. '
+      courseB_artist_loops_challenge1_2019_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Bloques como este: <xml>  <block type="simple_move_up_right"/></xml>
+          permitirá que tu artista se mueva de forma inclinada!'
+        courseB_artist_loops_challenge1_b: Cuando termines uno de los dados, ¡"salta"
+          al próximo!
+        courseB_artist_loops_challenge1_c: 'Tendrá que `mover` o` saltar` sobre algunas
+          de las mismas líneas dos veces. '
       courseB_artist_loops_challenge2_authored_hint:
         courseB_artist_loops_challenge2_a: El código para dibujar una X ya se te ha
           dado. Todo lo que necesitas hacer es repetir la X y "saltar" al siguiente
@@ -7219,6 +7902,12 @@ es-MX:
         courseB_artist_loops_challenge2_b: Puede usar los bloques "saltar" para moverse
           a otros espacios sin dibujar.
       courseB_artist_loops_challenge2_2018_authored_hint:
+        courseB_artist_loops_challenge2_a: El código para dibujar una X ya se te ha
+          dado. Todo lo que necesitas hacer es repetir la X y "saltar" al siguiente
+          punto.
+        courseB_artist_loops_challenge2_b: Puede usar los bloques "saltar" para moverse
+          a otros espacios sin dibujar.
+      courseB_artist_loops_challenge2_2019_authored_hint:
         courseB_artist_loops_challenge2_a: El código para dibujar una X ya se te ha
           dado. Todo lo que necesitas hacer es repetir la X y "saltar" al siguiente
           punto.
@@ -7237,7 +7926,15 @@ es-MX:
           escriba paso a paso el código y busque un patrón.
         courseB_collector_loops10_b: Intente escribir los movimientos en un papel
           tratando de encontrar un patrón.
+      courseB_collector_loops10_2019_authored_hint:
+        courseB_collector_loops10_a: Si no puede averiguar donde poner los loops "repetir",
+          escriba paso a paso el código y busque un patrón.
+        courseB_collector_loops10_b: Intente escribir los movimientos en un papel
+          tratando de encontrar un patrón.
       courseB_collector_loops1_2018_authored_hint:
+        courseB_collector_loops1_a: El bloque <xml><block type="collector_collect_simplified"/></xml
+          puede ser usado para tomar el tesoro cuando estés parado en su parte superior.
+      courseB_collector_loops1_2019_authored_hint:
         courseB_collector_loops1_a: El bloque <xml><block type="collector_collect_simplified"/></xml
           puede ser usado para tomar el tesoro cuando estés parado en su parte superior.
       courseB_collector_loops2_authored_hint:
@@ -7250,12 +7947,22 @@ es-MX:
           cualquier tesoro.
         courseB_collector_loops2_b: Cuando haya llegado a un punto de tesoros, utilice
           el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
+      courseB_collector_loops2_2019_authored_hint:
+        courseB_collector_loops2_a: Tendrás que moverte antes de poder recolectar
+          cualquier tesoro.
+        courseB_collector_loops2_b: Cuando haya llegado a un punto de tesoros, utilice
+          el <xml><block type="collector_collect"/></xml> bloque para recogerlo.
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_a: Intente usar un bloque <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">5</title></block></xm para recoger su tesoro.
         courseB_collector_prog3_b: Recuerde que puede poner más de un bloque dentro
           de un loop de repetición.
       courseB_collector_loops3_2018_authored_hint:
+        courseB_collector_prog3_a: Intente usar un bloque <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">5</title></block></xm para recoger su tesoro.
+        courseB_collector_prog3_b: Recuerde que puede poner más de un bloque dentro
+          de un loop de repetición.
+      courseB_collector_loops3_2019_authored_hint:
         courseB_collector_prog3_a: Intente usar un bloque <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">5</title></block></xm para recoger su tesoro.
         courseB_collector_prog3_b: Recuerde que puede poner más de un bloque dentro
@@ -7279,11 +7986,24 @@ es-MX:
           Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop "repetir" <xml><block type="controls_repeat_simplified">
           <title name="TIMES">???</title>
           </block></xml!
+      courseB_collector_loops4_2019_authored_hint:
+        courseB_collector_loops4_a: Pruebe usar el botón de paso para descubrir dónde
+          van las cosas mal.
+        courseB_collector_loops4_b: Para cambiar qué tan lejos va Laurel, cambie la
+          cantidad de veces que se ejecuta el ciclo.
+        courseB_collector_loops4_c: |-
+          Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop "repetir" <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Use más de un loop para finalizar el trabajo.
         courseB_collector_loops5_b: Intenta ejecutar el código un par de veces para
           ver qué pasa.
       courseB_collector_loops5_2018_authored_hint:
+        courseB_collector_loops5_a: Use más de un loop para finalizar el trabajo.
+        courseB_collector_loops5_b: Intenta ejecutar el código un par de veces para
+          ver qué pasa.
+      courseB_collector_loops5_2019_authored_hint:
         courseB_collector_loops5_a: Use más de un loop para finalizar el trabajo.
         courseB_collector_loops5_b: Intenta ejecutar el código un par de veces para
           ver qué pasa.
@@ -7306,6 +8026,16 @@ es-MX:
           <title name="TIMES">???</title>.
         courseB_collector_loops6_d: Si está confundido, intente dividir este puzzle
           en 3 partes.
+      courseB_collector_loops6_2019_authored_hint:
+        courseB_collector_loops6_a: ¿No puede imaginarse dónde las cosas empiezan
+          a ir mal? Use el botón "Paso" para ejecutar su programa un bloque a la vez.
+        courseB_collector_loops6_b: Puede cambiar el número de veces que el loop se
+          repite y ejecutar haciendo clic en "3" y eligiendo un número distino.
+        courseB_collector_loops6_c: |-
+          Querrá utilizar 3 loops de repetición para resolver este puzzle <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>.
+        courseB_collector_loops6_d: Si está confundido, intente dividir este puzzle
+          en 3 partes.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Si tiene dificultades con este puzzle, intente
           dibujarlo en un papel para ayudar a resolverlo.
@@ -7316,10 +8046,18 @@ es-MX:
           dibujarlo en un papel para ayudar a resolverlo.
         courseB_collector_loops7_b: Necesitará 3 loops de repetición para resolver
           este puzzle, ¡y no se olvida el tesoro extra al final!
+      courseB_collector_loops7_2019_authored_hint:
+        courseB_collector_loops7_a: Si tiene dificultades con este puzzle, intente
+          dibujarlo en un papel para ayudar a resolverlo.
+        courseB_collector_loops7_b: Necesitará 3 loops de repetición para resolver
+          este puzzle, ¡y no se olvida el tesoro extra al final!
       courseB_collector_loops8_authored_hint:
         courseB_collector_loops8_challenge_a: Si no puede averiguar donde poner los
           loops de repetición, escriba su código paso a paso y busque un patrón.
       courseB_collector_loops8_2018_authored_hint:
+        courseB_collector_loops8_challenge_a: Si no puede averiguar donde poner los
+          loops de repetición, escriba su código paso a paso y busque un patrón.
+      courseB_collector_loops8_2019_authored_hint:
         courseB_collector_loops8_challenge_a: Si no puede averiguar donde poner los
           loops de repetición, escriba su código paso a paso y busque un patrón.
       courseB_collector_loops9_authored_hint:
@@ -7328,6 +8066,11 @@ es-MX:
         courseB_collector_loops9_b: Se necesitan 3 loops de repetición, uno después
           de otro, para esta solución.
       courseB_collector_loops9_2018_authored_hint:
+        courseB_collector_loops9_a: "¿Parece esto muy difícil? Divídalo en 3 pequeños
+          problemas para que sea más fácil.  "
+        courseB_collector_loops9_b: Se necesitan 3 loops de repetición, uno después
+          de otro, para esta solución.
+      courseB_collector_loops9_2019_authored_hint:
         courseB_collector_loops9_a: "¿Parece esto muy difícil? Divídalo en 3 pequeños
           problemas para que sea más fácil.  "
         courseB_collector_loops9_b: Se necesitan 3 loops de repetición, uno después
@@ -7409,6 +8152,82 @@ es-MX:
           </block>
           </xml>
       courseB_collector_loops_challenge1_2018_authored_hint:
+        courseB_collector_loops_challenge1_b: |
+          Comience haciendo loop a los siguientes comandos:
+          <xml>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"></block>
+          </next>
+          </block>
+          </xml>
+        courseB_collector_loops_challenge1_c: |
+          Muévete hacia el este dos veces entre cada camino.
+
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+          Puedes hacer esto con solo 14 bloques. Haga clic para obtener una sugerencia más para ver una solución.
+        courseB_collector_loops_challenge1_d: |-
+          ¡Prueba esto!
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge1_2019_authored_hint:
         courseB_collector_loops_challenge1_b: |
           Comience haciendo loop a los siguientes comandos:
           <xml>
@@ -7624,6 +8443,14 @@ es-MX:
         courseB_collector_loops_challenge2a_c: Para recoger todo el tesoro, tendrá
           que añadir dos bloques dentro de su ciclo <xml> <block type="collector_collect"/></xml>,
           o poner el bloque en el interior de su propio bloque de repetición.
+      courseB_collector_loops_challenge2a_2019_authored_hint:
+        courseB_collector_loops_challenge2a_a: Si algo sale mal, intenta depurarlo.
+          No te rindas!
+        courseB_collector_loops_challenge2a_b: Mire esta opción para atravesar el
+          laberinto. ¿Ves un patrón que puedes repetir?
+        courseB_collector_loops_challenge2a_c: Para recoger todo el tesoro, tendrá
+          que añadir dos bloques dentro de su ciclo <xml> <block type="collector_collect"/></xml>,
+          o poner el bloque en el interior de su propio bloque de repetición.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: "¡Solo necesita usar un bloque ! []
           (Https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
@@ -7642,7 +8469,21 @@ es-MX:
         courseB_iceage_loops10_b: Intente decir los pasos en voz alta o escríbalos
           en un pedazo de papel. ¿Ves algún patrón?
         courseB_iceage_loops10_c: "¡Este es un acertijo muy largo! Sigue este camino."
+      courseB_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: Cuidado con de hielo roto! ¡Scrat caerá al agua!
+        courseB_iceage_loops10_b: Intente decir los pasos en voz alta o escríbalos
+          en un pedazo de papel. ¿Ves algún patrón?
+        courseB_iceage_loops10_c: "¡Este es un acertijo muy largo! Sigue este camino."
+      courseB_iceage_loops1_2019_authored_hint:
+        courseB_iceage_loops1_a: Cuidado con de hielo roto! ¡Scrat caerá a la perfección!
+        courseB_iceage_loops1_b: "Deberá usar este bloque: \n<xml><block type=\"maze_moveEast\"/></xml>"
       courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_a: Rompe este puzzle en dos partes, una antes de la
+          esquina y otra después de la esquina.
+        courseB_iceage_loops2_b: Si te quedas atascado, trata de decir los pasos en
+          voz alta.
+        courseB_iceage_loops2_c: Sigue este camino para que Scrat llegue a la bellota.
+      courseB_iceage_loops2_2019_authored_hint:
         courseB_iceage_loops2_a: Rompe este puzzle en dos partes, una antes de la
           esquina y otra después de la esquina.
         courseB_iceage_loops2_b: Si te quedas atascado, trata de decir los pasos en
@@ -7656,7 +8497,21 @@ es-MX:
           </block></xml>
         courseB_iceage_loops3_b: Para repetir código, arrastra un ciclo ´repetir´,
           luego coloca dentro el bloque que quieres repetir.
+      courseB_iceage_loops3_2019_authored_hint:
+        courseB_iceage_loops3_a: |-
+          Usa este nuevo bloque!
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">5</title>
+          </block></xml>
+        courseB_iceage_loops3_b: Para repetir código, arrastra un ciclo ´repetir´,
+          luego coloca dentro el bloque que quieres repetir.
       courseB_iceage_loops4_authored_hint:
+        courseB_iceage_loops4_a: Intente anotar los pasos que Scrat tomaría para llegar
+          a la bellota. ¿Ves un patrón?
+        courseB_iceage_loops4_b: "¡No tengas miedo de ejecutar tu código y ver qué
+          pasa!"
+        courseB_iceage_loops4_c: Este es el camino que Scrat deberia tomar.
+      courseB_iceage_loops4_2019_authored_hint:
         courseB_iceage_loops4_a: Intente anotar los pasos que Scrat tomaría para llegar
           a la bellota. ¿Ves un patrón?
         courseB_iceage_loops4_b: "¡No tengas miedo de ejecutar tu código y ver qué
@@ -7666,7 +8521,16 @@ es-MX:
         courseB_iceage_loops6_a: Su código final tendrá ** tres ** bloques de movimiento.
         courseB_iceage_loops6_b: "¡Solo necesita agregar un ciclo más!"
         courseB_iceage_loops6_c: La ruta final debe verse así.
+      courseB_iceage_loops6_2019_authored_hint:
+        courseB_iceage_loops6_a: Su código final tendrá ** tres ** bloques de movimiento.
+        courseB_iceage_loops6_b: "¡Solo necesita agregar un ciclo más!"
+        courseB_iceage_loops6_c: La ruta final debe verse así.
       courseB_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: Si te quedas atascado, prueba a escribir pasos en
+          una hoja de papel. ¿Ves un patrón?
+        courseB_iceage_loops7_b: Este es el camino que Scrat debe tomar para llegar
+          a la bellota.
+      courseB_iceage_loops7_2019_authored_hint:
         courseB_iceage_loops7_a: Si te quedas atascado, prueba a escribir pasos en
           una hoja de papel. ¿Ves un patrón?
         courseB_iceage_loops7_b: Este es el camino que Scrat debe tomar para llegar
@@ -7678,7 +8542,19 @@ es-MX:
           segundo **5** veces, el cuarto **4** veces, y el último **4** veces.
         courseB_iceage_loops8_c: Utiliza ciclos para ayudar a Scrat a que siga este
           camino.
+      courseB_iceage_loops8_2019_authored_hint:
+        courseB_iceage_loops8_a: "¿Los bloques de movimiento son correctos? ¿Qué más
+          puedes cambiar?"
+        courseB_iceage_loops8_b: El primer ciclo deberia repetirse **3** veces, el
+          segundo **5** veces, el cuarto **4** veces, y el último **4** veces.
+        courseB_iceage_loops8_c: Utiliza ciclos para ayudar a Scrat a que siga este
+          camino.
       courseB_iceage_loops9_authored_hint:
+        courseB_iceage_loops9_a: "¿Tiene problemas? Intente dividir este puzzle en
+          partes más pequeñas. No tema ejecutar su puzzle mientras codifica!"
+        courseB_iceage_loops9_b: Su código final debería tner **4** loops.
+        courseB_iceage_loops9_c: Scrat deberia seguir esta ruta para llegar a la bellota.
+      courseB_iceage_loops9_2019_authored_hint:
         courseB_iceage_loops9_a: "¿Tiene problemas? Intente dividir este puzzle en
           partes más pequeñas. No tema ejecutar su puzzle mientras codifica!"
         courseB_iceage_loops9_b: Su código final debería tner **4** loops.
@@ -7698,6 +8574,12 @@ es-MX:
         courseB_maze_seq11_b: 'Resuelve el rompecabezas en dos partes: una antes de
           la esquina y otra después de la esquina.'
       courseB_maze_seq1_2018_authored_hint:
+        courseB_maze_seq1_a: Conecta los bloques al bloque <xml><block type="when_run"/></xml>
+          Scrat hará movimiento!
+        courseB_maze_seq1_b: Arrastre tres de estas <xml><block type="maze_moveSouth"/></xml>
+          flechas y conectalas al bloque <xml><block type="when_run"/></xml> para
+          que Scrat llegue a la bellota.
+      courseB_maze_seq1_2019_authored_hint:
         courseB_maze_seq1_a: Conecta los bloques al bloque <xml><block type="when_run"/></xml>
           Scrat hará movimiento!
         courseB_maze_seq1_b: Arrastre tres de estas <xml><block type="maze_moveSouth"/></xml>
@@ -7735,12 +8617,22 @@ es-MX:
           a la bellota.
         courseB_maze_seq4_b: Usted tendrá que utilizar el <xml><block type="maze_moveEast"/></xml>
           bloque para resolver este rompecabezas.
+      courseB_maze_seq4_2019_authored_hint:
+        courseB_maze_seq4_a: Intente agregar una instrucción a la vez hasta que llegue
+          a la bellota.
+        courseB_maze_seq4_b: Usted tendrá que utilizar el <xml><block type="maze_moveEast"/></xml>
+          bloque para resolver este rompecabezas.
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: Si te quedas atascado, intenta dibujar la ruta en papel.
         courseB_maze_seq5_b: "¡Hay 2 formas de resolver este rompecabezas!"
         courseB_maze_seq5_c: "¿No estás seguro de cómo llegar al cerdo? Prueba este
           camino."
       courseB_maze_seq5_2018_authored_hint:
+        courseB_maze_seq5_a: Si te quedas atascado, intenta dibujar la ruta en papel.
+        courseB_maze_seq5_b: "¡Hay 2 formas de resolver este rompecabezas!"
+        courseB_maze_seq5_c: "¿No estás seguro de cómo llegar a la bellota? Prueba
+          este camino."
+      courseB_maze_seq5_2019_authored_hint:
         courseB_maze_seq5_a: Si te quedas atascado, intenta dibujar la ruta en papel.
         courseB_maze_seq5_b: "¡Hay 2 formas de resolver este rompecabezas!"
         courseB_maze_seq5_c: "¿No estás seguro de cómo llegar a la bellota? Prueba
@@ -7759,11 +8651,22 @@ es-MX:
         courseB_maze_seq5_c: Hay dos formas de resolver este rompecabezas.
         courseB_maze_seq5_d: "¿No estás seguro de cómo llegar a la bellota? ¡Prueba
           este camino!"
+      courseB_maze_seq6_2019_authored_hint:
+        courseB_maze_seq6_a: Tu código final debe tener tres bloques de movimiento.
+        courseB_maze_seq6_b: Si te quedas atascado, intenta resolver el rompecabezas
+          en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.
+        courseB_maze_seq5_c: Hay dos formas de resolver este rompecabezas.
+        courseB_maze_seq5_d: "¿No estás seguro de cómo llegar a la bellota? ¡Prueba
+          este camino!"
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_a: Agregue 1 bloque para mover el pájaro al cerdo.
         courseB_maze_seq7_b: Intente ejecutar el código que se le da y vea dónde termina.
         courseB_maze_seq7_c: "¿No puedes llegar al cerdo? ¡Prueba este camino!"
       courseB_maze_seq7_2018_authored_hint:
+        courseB_maze_seq7_a: Agregue 1 bloque para mover Scrat a la bellota.
+        courseB_maze_seq7_b: Intente ejecutar el código que se le da y vea dónde termina.
+        courseB_maze_seq7_c: No se puede llegar a la bellota? ¡Prueba este camino!
+      courseB_maze_seq7_2019_authored_hint:
         courseB_maze_seq7_a: Agregue 1 bloque para mover Scrat a la bellota.
         courseB_maze_seq7_b: Intente ejecutar el código que se le da y vea dónde termina.
         courseB_maze_seq7_c: No se puede llegar a la bellota? ¡Prueba este camino!
@@ -7777,6 +8680,11 @@ es-MX:
           el acertijo.
         courseB_maze_seq8_b: "¡Hay más de una manera para resolver este puzzle!"
         courseB_maze_seq8_c: "¿No sabes qué camino tomar? ¡Prueba este camino!"
+      courseB_maze_seq8_2019_authored_hint:
+        courseB_maze_seq8_a: Intenta agregar un bloque a la vez hasta que resuelvas
+          el acertijo.
+        courseB_maze_seq8_b: "¡Hay más de una manera para resolver este puzzle!"
+        courseB_maze_seq8_c: "¿No sabes qué camino tomar? ¡Prueba este camino!"
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: Primero escriba todos los pasos en un papel.
         courseB_maze_seq9_b: Construye tu programa de un bloque a la vez y prueba
@@ -7784,6 +8692,12 @@ es-MX:
         courseB_maze_seq9_c: Hay dos formas de resolver este rompecabezas.
         courseB_maze_seq9_d: "¿Atascado? ¡Prueba este camino!"
       courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_a: Primero escriba todos los pasos en un papel.
+        courseB_maze_seq9_b: Construye tu programa de un bloque a la vez y prueba
+          a medida que lo construyes.
+        courseB_maze_seq9_c: Hay dos formas de resolver este rompecabezas.
+        courseB_maze_seq9_d: "¿Atascado? ¡Prueba este camino!"
+      courseB_maze_seq9_2019_authored_hint:
         courseB_maze_seq9_a: Primero escriba todos los pasos en un papel.
         courseB_maze_seq9_b: Construye tu programa de un bloque a la vez y prueba
           a medida que lo construyes.
@@ -7808,12 +8722,22 @@ es-MX:
           vez.
         courseB_maze_seq_challenge1_b: Trata de usar el <xml><block type="maze_moveWest"/></xml>
           bloque para comenzar.
+      courseB_maze_seq_challenge1_2019_authored_hint:
+        courseB_maze_seq_challenge1_a: El camino más corto podría no funcionar esta
+          vez.
+        courseB_maze_seq_challenge1_b: Trata de usar el <xml><block type="maze_moveWest"/></xml>
+          bloque para comenzar.
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: No necesita agregar o eliminar bloques para
           resolver este rompecabezas.
         courseB_maze_seq_challenge2_b: Reorganiza los bloques y toma la ruta del patrón
           de la escalera.
       courseB_maze_seq_challenge2_2018_authored_hint:
+        courseB_maze_seq_challenge2_a: No necesita agregar o eliminar bloques para
+          resolver este rompecabezas.
+        courseB_maze_seq_challenge2_b: Reorganiza los bloques y toma la ruta del patrón
+          de la escalera.
+      courseB_maze_seq_challenge2_2019_authored_hint:
         courseB_maze_seq_challenge2_a: No necesita agregar o eliminar bloques para
           resolver este rompecabezas.
         courseB_maze_seq_challenge2_b: Reorganiza los bloques y toma la ruta del patrón
@@ -7828,6 +8752,15 @@ es-MX:
           </block>
           </xml>
       courseB_playlab_events2_2018_authored_hint:
+        courseB_playlab_events2_a: |-
+          Este es el bloque para que Margarita diga algo:
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+      courseB_playlab_events2_2019_authored_hint:
         courseB_playlab_events2_a: |-
           Este es el bloque para que Margarita diga algo:
           <xml>
@@ -7868,6 +8801,22 @@ es-MX:
           <title name="VALUE">random</title>
           </block>
           </xml>
+      courseB_playlab_events3_2019_authored_hint:
+        courseB_playlab_events3_a: |-
+          Este es el bloque que debe usar para agregar el evento:
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          </block>
+          </xml>
+        courseB_playlab_events3_b: |-
+          Este es el bloque que necesita para cambiar el estado de ánimo de Daisy:
+          <xml>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">random</title>
+          </block>
+          </xml>
       courseB_playlab_events4_authored_hint:
         courseB_playlab_events4_a: |-
           Este es el evento que controla la flecha izquierda:
@@ -7879,6 +8828,16 @@ es-MX:
         courseB_playlab_events4_b: Este es el bloque que hace que el caballero se
           mueva a la izquierda
       courseB_playlab_events4_2018_authored_hint:
+        courseB_playlab_events4_a: |-
+          Este es el evento que controla la flecha izquierda:
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block>
+          </xml>
+        courseB_playlab_events4_b: Este es el bloque que hace que el caballero se
+          mueva a la izquierda
+      courseB_playlab_events4_2019_authored_hint:
         courseB_playlab_events4_a: |-
           Este es el evento que controla la flecha izquierda:
           <xml>
@@ -7905,6 +8864,22 @@ es-MX:
             </block>
           </xml>
       courseB_playlab_events5_2018_authored_hint:
+        courseB_playlab_events5_a: |-
+          Este es el bloque de eventos  que controla la flecha derecha:
+          <xml>
+            <block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+            </block>
+            </xml>
+        courseB_playlab_events5_b: |-
+          Este es el bloque que hace huir al caballero.
+          <xml>
+          <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block>
+          </xml>
+      courseB_playlab_events5_2019_authored_hint:
         courseB_playlab_events5_a: |-
           Este es el bloque de eventos  que controla la flecha derecha:
           <xml>
@@ -7952,6 +8927,22 @@ es-MX:
 
           ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: "¡Llega a todas las banderas para pasar!"
+      courseB_playlab_events6_2019_authored_hint:
+        courseB_playlab_events6_a: |-
+          Necesitará estos bloques de eventos:
+          <xml>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">up</title>
+          </block>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">down</title>
+          </block>
+          </xml>
+        courseB_playlab_events6_b: |-
+          Use las flechas desplegables en verde `cuando la flecha ___ presionó` bloques de eventos para elegir diferentes direcciones.
+
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: "¡Llega a todas las banderas para pasar!"
       courseB_playlab_events7_authored_hint:
         courseB_playlab_events7_a: |-
           Este es el bloque de eventos que necesitará:
@@ -7976,6 +8967,29 @@ es-MX:
           </block>
           </xml>
       courseB_playlab_events7_2018_authored_hint:
+        courseB_playlab_events7_a: |-
+          Este es el bloque de eventos que necesitará:
+          <xml>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Este es el bloque que necesitas para reproducir un sonido.
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Este es el bloque que necesitas para que el caballero desaparezca:
+          <xml>
+          <block type="studio_vanish">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+      courseB_playlab_events7_2019_authored_hint:
         courseB_playlab_events7_a: |-
           Este es el bloque de eventos que necesitará:
           <xml>
@@ -8061,6 +9075,34 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseB_playlab_events_challenge1_2019_authored_hint:
+        courseB_playlab_events_challenge1_a: |-
+          Haga que los otros animales se muevan hacia abajo cuando presione `▼`
+          <xml>
+            <block type="studio_whenArrow" movable="false">
+              <title name="VALUE">down</title>
+            </block>
+          </xml>
+        courseB_playlab_events_challenge1_b: |
+          Cambie la velocidad de los animales usando este bloque:
+          <xml>
+          <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+          </block></xml>
+        courseB_playlab_events_challenge1_c: |-
+          ¿Qué dirán todos cuando termine la carrera? Haga que hablen con este evento:
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">Woo hoo!</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_playlab_events_challenge2_authored_hint:
         courseB_playlab_events_challenge2_a: Cada animal en el juego debería desaparecer
           al hacer clic. ¡También debería volver después de uno o dos segundos!
@@ -8084,6 +9126,28 @@ es-MX:
           Haz que algunos animales den más puntos que otros. Usa diferentes sonidos.
           ¡Cambia los estados de ánimo de los animales!
       courseB_playlab_events_challenge2_2018_authored_hint:
+        courseB_playlab_events_challenge2_a: Cada animal en el juego debería desaparecer
+          al hacer clic. ¡También debería volver después de uno o dos segundos!
+        courseB_playlab_events_challenge2_b: |-
+          Usa otros bloques de eventos para hacer desaparecer a los otros animales.
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          ¡Usa comandos adicionales para reproducir sonidos o ganar puntos cuando haces clic en los animales!
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          ¡Mezclar!
+
+          Haz que algunos animales den más puntos que otros. Usa diferentes sonidos.
+          ¡Cambia los estados de ánimo de los animales!
+      courseB_playlab_events_challenge2_2019_authored_hint:
         courseB_playlab_events_challenge2_a: Cada animal en el juego debería desaparecer
           al hacer clic. ¡También debería volver después de uno o dos segundos!
         courseB_playlab_events_challenge2_b: |-
@@ -8171,6 +9235,28 @@ es-MX:
 
           Haz que algunos animales den más puntos que otros. Usa diferentes sonidos.
           ¡Cambia los estados de ánimo de los animales!
+      courseB_playlab_events_challenge2_template_2019_authored_hint:
+        courseB_playlab_events_challenge2_a: Cada animal en el juego debe desaparecer
+          cuando se golpea. ¡También debería volver después de uno o dos segundos!
+        courseB_playlab_events_challenge2_b: |-
+          Usa otros bloques de eventos para hacer desaparecer a los otros animales.
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          ¡Usa comandos adicionales para reproducir sonidos o ganar puntos cuando haces clic en los animales!
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          ¡Mezclar!
+
+          Haz que algunos animales den más puntos que otros. Usa diferentes sonidos.
+          ¡Cambia los estados de ánimo de los animales!
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: Intenta agregar bloques de uno en uno, luego haz
           clic en "Ejecutar" para ver qué sucede.
@@ -8183,10 +9269,19 @@ es-MX:
         courseB_starWars_prog1_b: |
           Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesita moverse?
           <xml><block type="studio_moveEast"/></xml>
+      courseB_starWars_prog1_2019_authored_hint:
+        courseB_starWars_prog1_a: Intenta agregar bloques de uno en uno, luego haz
+          clic en "Ejecutar" para ver qué sucede.
+        courseB_starWars_prog1_b: |
+          Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesita moverse?
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: Divida este problema en dos partes. Consigue una
           sola pila de chatarra y luego descubre cómo llegar a la otra.
       courseB_starWars_prog2_2018_authored_hint:
+        courseB_starWars_prog2_a: Divida este problema en dos partes. Consigue una
+          sola pila de chatarra y luego descubre cómo llegar a la otra.
+      courseB_starWars_prog2_2019_authored_hint:
         courseB_starWars_prog2_a: Divida este problema en dos partes. Consigue una
           sola pila de chatarra y luego descubre cómo llegar a la otra.
       courseB_starWars_prog3_authored_hint:
@@ -8195,6 +9290,11 @@ es-MX:
         courseB_starWars_prog3_b: Construye una pieza de código a la vez. Ejecútelo
           para descubrir a dónde ir desde allí.
       courseB_starWars_prog3_2018_authored_hint:
+        courseB_starWars_prog3_a: Necesitará moverse de 3 maneras para resolver este
+          puzzle.
+        courseB_starWars_prog3_b: Construye una pieza de código a la vez. Ejecútelo
+          para descubrir a dónde ir desde allí.
+      courseB_starWars_prog3_2019_authored_hint:
         courseB_starWars_prog3_a: Necesitará moverse de 3 maneras para resolver este
           puzzle.
         courseB_starWars_prog3_b: Construye una pieza de código a la vez. Ejecútelo
@@ -8217,6 +9317,15 @@ es-MX:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog4_2019_authored_hint:
+        courseB_starWars_prog4_a: Construye una pieza de código a la vez. Ejecútelo
+          para descubrir a dónde ir desde allí.
+        courseB_starWars_prog4_b: |-
+          Intenta usar el bloque de repetición para un código más corto.
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: "¿Este patrón no se parece un poco al último rompecabezas?"
         courseB_starWars_prog5_b: BB-8 agarrará la chatarra mientras rueda sobre ella.
@@ -8225,6 +9334,13 @@ es-MX:
         courseB_starWars_prog5_da: Mira lo que sucede si usas la misma solución que
           el acertijo de escalera :! [] (Https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2018_authored_hint:
+        courseB_starWars_prog5_a: "¿Este patrón no se parece un poco al último rompecabezas?"
+        courseB_starWars_prog5_b: BB-8 agarrará la chatarra mientras rueda sobre ella.
+        courseB_starWars_prog5_c: Rastrea este patrón con tu dedo. Cuente las piezas
+          de metal mientras se mueve.
+        courseB_starWars_prog5_da: Mira lo que sucede si usas la misma solución que
+          el acertijo de escalera :! [] (Https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
+      courseB_starWars_prog5_2019_authored_hint:
         courseB_starWars_prog5_a: "¿Este patrón no se parece un poco al último rompecabezas?"
         courseB_starWars_prog5_b: BB-8 agarrará la chatarra mientras rueda sobre ella.
         courseB_starWars_prog5_c: Rastrea este patrón con tu dedo. Cuente las piezas
@@ -8249,12 +9365,26 @@ es-MX:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog6_2019_authored_hint:
+        courseB_starWars_prog6_a: Este patrón es solo un paso de escalera con dos
+          movimientos por dirección!
+        courseB_starWars_prog6_b: |-
+          Intenta usar el bloque de repetición para un código más corto.
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog7_authored_hint:
         courseB_starWars_prog7_a: "¿Este patrón no se parece un poco al último rompecabezas?"
         courseB_starWars_prog7_b: BB-8 agarrará la chatarra mientras rueda sobre ella.
         courseB_starWars_prog7_c: Trate de dibujar el patrón de paso de escalera grande
           sobre este rompecabezas. ¿Cubre todo el metal de desecho?
       courseB_starWars_prog7_2018_authored_hint:
+        courseB_starWars_prog7_a: "¿Este patrón no se parece un poco al último rompecabezas?"
+        courseB_starWars_prog7_b: BB-8 agarrará la chatarra mientras rueda sobre ella.
+        courseB_starWars_prog7_c: Trate de dibujar el patrón de paso de escalera grande
+          sobre este rompecabezas. ¿Cubre todo el metal de desecho?
+      courseB_starWars_prog7_2019_authored_hint:
         courseB_starWars_prog7_a: "¿Este patrón no se parece un poco al último rompecabezas?"
         courseB_starWars_prog7_b: BB-8 agarrará la chatarra mientras rueda sobre ella.
         courseB_starWars_prog7_c: Trate de dibujar el patrón de paso de escalera grande
@@ -8279,12 +9409,27 @@ es-MX:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog8_2019_authored_hint:
+        courseB_starWars_prog8_a: Está bien volver sobre un conjunto de espacios en
+          los que ya ha viajado.
+        courseB_starWars_prog8_b: |-
+          Intenta usar el bloque de repetición para ver qué sucede con el código que colocas dentro.
+          <xml>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: "¡No tengas miedo de cometer un error! Ejecute el
           código para ver qué sucede, incluso si aún no ha resuelto el acertijo."
         courseB_starWars_prog9_b: Hay muchas formas de resolver este rompecabezas.
         courseB_starWars_prog9_c: ¿Podría un loop de "repetición" ayudar aquí?
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: "¡No tengas miedo de cometer un error! Ejecute el
+          código para ver qué sucede, incluso si aún no ha resuelto el acertijo."
+        courseB_starWars_prog9_b: Hay muchas formas de resolver este rompecabezas.
+        courseB_starWars_prog9_c: "¿Podría un ciclo de repetición ayudar aquí?"
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: "¡No tengas miedo de cometer un error! Ejecute el
           código para ver qué sucede, incluso si aún no ha resuelto el acertijo."
         courseB_starWars_prog9_b: Hay muchas formas de resolver este rompecabezas.
@@ -14810,6 +15955,18 @@ es-MX:
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Crea una función que lleva al agricultor al maíz,
           obtiene todo el maíz, da la vuelta y vuelve.
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Empieza este desafío codificando la misma
+          función que hiciste en el último desafío.
+        courseE_farmer_functions8a1_2018b: Después de ejecutar la función por primera
+          vez, necesitarás hacer un giro adicional antes de que se puede ejecutar
+          otra vez.
+      courseE_farmer_functions8a1_2019_authored_hint:
+        courseE_farmer_functions8a1_2018a: Empieza este desafío codificando la misma
+          función que hiciste en el último desafío.
+        courseE_farmer_functions8a1_2018b: Después de ejecutar la función por primera
+          vez, necesitarás hacer un giro adicional antes de que se puede ejecutar
+          otra vez.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Intenta ejecutar el código dado para ver lo
           que hace. ¿Qué se necesita después de esto?
@@ -19851,6 +21008,12 @@ es-MX:
 
           ¡Haz que un amigo pruebe tu apliación cuando termines!
       coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: Si el pájaro no está llegando al cerdo, asegurate
+          de que los bloques están totalmente juntos, a continuación, y haz clic en
+          "Ejecutar" de nuevo.
+        courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! ¡Prueba
+          algo y si no funciona, prueba con algo más!"
+      coursea_maze_ramp1_2019_authored_hint:
         courseC_maze_programming1_a: Si el pájaro no está llegando al cerdo, asegurate
           de que los bloques están totalmente juntos, a continuación, y haz clic en
           "Ejecutar" de nuevo.

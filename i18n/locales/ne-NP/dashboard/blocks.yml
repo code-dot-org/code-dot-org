@@ -284,10 +284,16 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': size
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       binary_move:
         options:
           DIR:
