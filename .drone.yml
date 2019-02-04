@@ -29,7 +29,6 @@ steps:
   settings:
     pull: true
     restore: true
-    #debug: true
     access_key:
       from_secret: S3_CACHE_ACCESS_KEY
     secret_key:
@@ -67,7 +66,6 @@ steps:
   settings:
     pull: true
     rebuild: true
-    #debug: true
     access_key:
       from_secret: S3_CACHE_ACCESS_KEY
     secret_key:
@@ -76,9 +74,6 @@ steps:
       - /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
       - apps/node_modules
       - /home/circleci/.cache
-      #- /var/lib/mysql
-      #- /home/circleci/.cache
-      #- /home/circleci/code-dot-org/apps/node_modules
 
 volumes:
 - name: rbenv
@@ -154,6 +149,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: c9f0facfd4364b12bfce97bff9203bb9823026bf5bd8019f2c3a17152e0b0a82
+hmac: 41f0921ccaed873a43f2608c4cabddf3911828cfc8044955f4420bf9fbaa8b98
 
 ...
