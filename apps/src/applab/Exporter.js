@@ -3,7 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from 'snack-sdk';
+import {SnackSession} from '@code-dot-org/snack-sdk';
 
 import * as applabConstants from './constants';
 import * as assetPrefix from '../assetManagement/assetPrefix';
@@ -27,6 +27,7 @@ import exportExpoSplashPng from '../templates/export/expo/splash.png';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
+import { EXPO_SESSION_SECRET } from '../constants';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -529,6 +530,24 @@ export default {
     return exportExpoPackagedFilesEjs({ entries });
   },
 
+  async generateExpoApk(snackId) {
+    const session = new SnackSession({
+      sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
+      name: `project-${project.getCurrentId()}`,
+      sdkVersion: '31.0.0',
+      snackId,
+      user: {
+        sessionSecret: EXPO_SESSION_SECRET,
+      },
+    });
+
+    const appJson = session.generateAppJson();
+
+    const artifactUrl = await session.getApkUrlAsync(appJson);
+
+    return artifactUrl;
+  },
+
   async publishToExpo(appName, code, levelHtml) {
     const { css, outerHTML } = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
@@ -572,6 +591,9 @@ export default {
       files,
       name: project.getCurrentName(),
       sdkVersion: '31.0.0',
+      user: {
+        sessionSecret: EXPO_SESSION_SECRET,
+      },
     });
 
     // Important that index.html comes first:
@@ -630,9 +652,13 @@ export default {
 
     await session.sendCodeAsync(files);
     const saveResult = await session.saveAsync();
-    const expoURL = `exp://expo.io/@snack/${saveResult.id}`;
+    const expoUri = `exp://expo.io/${saveResult.id}`;
+    const expoSnackId = saveResult.id;
 
-    return expoURL;
+    return {
+      expoUri,
+      expoSnackId,
+    };
   }
 };
 
