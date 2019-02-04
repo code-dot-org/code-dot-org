@@ -1,17 +1,13 @@
-import ConfirmDeleteButton from './ConfirmDeleteButton';
-import ConfirmImportButton from './ConfirmImportButton';
-
 /**
  * @overview Component containing UI controls for modifying the table, including
  * import, export, adding a new column, and deleting the entire table.
  */
-
+import ConfirmDeleteButton from './ConfirmDeleteButton';
+import ConfirmImportButton from './ConfirmImportButton';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
-
 import * as dataStyles from './dataStyles';
 
 const styles = {

@@ -1,9 +1,7 @@
+/** @file controls below an animation looping toggle */
 import React from 'react';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
-
-/** @file controls below an animation looping toggle */
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 
 const styles = {

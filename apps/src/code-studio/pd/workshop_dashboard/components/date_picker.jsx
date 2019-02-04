@@ -1,14 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 /**
  * DatePicker control.
  * It's basically a wrapper around react-datepicker (with limited props) that displays
  * as a React-Bootstrap select with a calendar icon Addon.
  */
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 import ReactDatePicker from 'react-datepicker';
 import {DATE_FORMAT} from '../workshopConstants';

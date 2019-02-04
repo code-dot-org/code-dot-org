@@ -1,9 +1,7 @@
+/** List item placeholder for adding a new item */
 import React from 'react';
 import color from '../../util/color';
-
-/** List item placeholder for adding a new item */
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 
 const styles = {

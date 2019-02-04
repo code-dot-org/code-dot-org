@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import _ from 'lodash';
-
 /** @file Divide a region into a set of panels and allow resizing them.
  *
  *  Similar to react-split-pane (MIT license) but supports more than two panes
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 
 const styles = {
