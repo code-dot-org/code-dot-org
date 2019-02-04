@@ -83,8 +83,10 @@ class EmailLogins extends React.Component {
           <li>{i18n.printLoginCards_joinStep3({url: `${pegasusUrlPrefix}/join`, code: sectionCode})}</li>
           <li>{i18n.printLoginCards_joinStep4()}</li>
         </ol>
+        <br/>
         <h1>{i18n.printLoginCards_signingIn()}</h1>
         <p>{i18n.printLoginCards_signingInDescription()}</p>
+        <br/>
         <h1>{i18n.printLoginCards_resetTitle()}</h1>
         <p>{i18n.printLoginCards_resetPasswordBody()}</p>
       </div>
