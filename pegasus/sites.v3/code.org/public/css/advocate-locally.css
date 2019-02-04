@@ -5,7 +5,6 @@
 
 .left-side-image {
     width: 50%;
-    height: auto;
 }
 
 .join-coalition-wrapper .right{
@@ -38,8 +37,11 @@
     font-size: 16px;
 }
 
-@media screen and (min-width: 971px)
+@media screen and (max-width: 971px)
 {
-    .full-resource-block { flex-direction: column; }
-    .full-resource-block > * { width: 50%; }
+    .join-coalition-wrapper { flex-direction: column; }
+    .left-side-image {
+        width: 100%;
+        height: auto;
+    }
 }

@@ -23,7 +23,7 @@
     .info
       Computer science graduates
 
-%p.fact
+.policy-title.fact
   = precede "Policy Environment (" do
     = succeed "):" do
       %a{href: 'http://bit.ly/9policiesrubric', target: '_blank'} rubric
@@ -32,8 +32,8 @@
   .fact.icon-fact
     - if data[:pd_funding_s] == "No"
       .fa-stack
-        %i.fa.fa-circle.fa-stack-2x.icon-background
-        %i.fa.fa-times-circle.fa-lock.fa-stack-1x
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         No dedicated state funding for CS PD
     - elsif data[:pd_funding_s] == "Yes"
@@ -47,8 +47,8 @@
   .fact.icon-fact
     - if data[:require_hs_s] == "No"
       .fa-stack
-        %i.fa.fa-circle.fa-stack-2x.icon-background
-        %i.fa.fa-times-circle.fa-lock.fa-stack-1x
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         Does not require all high schools to offer CS
     - elsif data[:require_hs_s] == "Yes"
@@ -63,8 +63,8 @@
   .fact.icon-fact
     - if data[:cs_standards_s] == "No"
       .fa-stack
-        %i.fa.fa-circle.fa-stack-2x.icon-background
-        %i.fa.fa-times-circle.fa-lock.fa-stack-1x
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         No K-12 CS curriculum standards
     - elsif data[:cs_standards_s] == "Yes"
