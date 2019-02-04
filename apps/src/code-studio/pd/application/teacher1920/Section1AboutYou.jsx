@@ -116,12 +116,14 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
         {nominated && (
           <div>
-            <h4>When will I hear back about the scholarships?</h4>
+            <h4>When will I hear back about the scholarships and discounts?</h4>
             <p>
-              In general, you should expect to hear back from your local partner within 2
-              weeks of your application. Even if you don’t get selected for the scholarship,
-              you will still be able to attend if your school can pay a discounted price
-              (thanks to our generous donors).
+              In most regions, applications are accepted on a rolling basis. Our
+              local partner will get back to you within 2 weeks to let you know
+              your application status. Even if you don’t get selected for the
+              scholarship, you will still be able to attend if you are an eligible
+              teacher and your school can pay a discounted price (thanks to our
+              generous donors).
             </p>
           </div>
         )}
