@@ -314,7 +314,7 @@ module Api::V1::Pd
     end
 
     def prefetch(applications, role: nil)
-      type = TYPES_BY_ROLE[role.try(&:to_sym)] || Pd::Application::WorkshopAutoenrolledApplication
+      type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
     end
   end
