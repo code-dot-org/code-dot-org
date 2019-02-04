@@ -18,7 +18,11 @@ class PrintLoginCards extends React.Component {
 
     // Provided by redux.
     section: PropTypes.shape({
-      loginType: PropTypes.oneOf([SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email]).isRequired,
+      loginType: PropTypes.oneOf([
+        SectionLoginType.word,
+        SectionLoginType.picture,
+        SectionLoginType.email
+      ]).isRequired,
     }).isRequired,
     students: PropTypes.array.isRequired,
   };
@@ -158,23 +162,30 @@ class WordOrPictureLoginCards extends React.Component {
         <p>{i18n.printLoginCards_resetSecretBody()}</p>
         <br/>
         <h1>{i18n.printLoginCards_loginCardsTitle()}</h1>
-        <Button
-          text={i18n.printLoginCards_loginCardsButton()}
-          color="orange"
-          onClick={this.printLoginCards}
-        />
-        <br/>
-        <div id="printArea" style={styles.container}>
-          {(students || []).map(student => (
-            <LoginCard
-              key={student.id}
-              studioUrlPrefix={studioUrlPrefix}
-              pegasusUrlPrefix={pegasusUrlPrefix}
-              section={section}
-              student={student}
+        {students.length < 1 &&
+          <p><em>{i18n.printLoginCards_noStudents()}</em></p>
+        }
+        {students.length >= 1 &&
+          <span>
+            <Button
+              text={i18n.printLoginCards_loginCardsButton()}
+              color="orange"
+              onClick={this.printLoginCards}
             />
-          ))}
-        </div>
+            <br/>
+            <div id="printArea" style={styles.container}>
+              {students.map(student => (
+                <LoginCard
+                  key={student.id}
+                  studioUrlPrefix={studioUrlPrefix}
+                  pegasusUrlPrefix={pegasusUrlPrefix}
+                  section={section}
+                  student={student}
+                />
+              ))}
+            </div>
+          </span>
+        }
       </div>
     );
   }
