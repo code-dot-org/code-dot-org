@@ -70,6 +70,9 @@ const styles = {
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
   },
+  noTime: {
+    paddingBottom: 10
+  }
 };
 
 export default class ProjectCard extends React.Component {
@@ -105,6 +108,9 @@ export default class ProjectCard extends React.Component {
       Object.assign(thumbnailStyle, styles.fullThumbnail);
     }
 
+    const shouldShowPublishedAt = isPublicGallery && isDetailView && projectData.publishedAt;
+    const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
+
     return (
       <div className="project_card">
         <div style={styles.card}>
@@ -132,7 +138,7 @@ export default class ProjectCard extends React.Component {
               {projectData.name}
             </div>
           </a>
-          <span>
+          <div style={noTimeOnCardStyle}>
             {isPublicGallery && projectData.studentName && (
               <span style={styles.firstInitial}>
                 {i18n.by()}:&nbsp;
@@ -145,8 +151,8 @@ export default class ProjectCard extends React.Component {
                 <span style={styles.bold}>{projectData.studentAgeRange}</span>
               </span>
             )}
-          </span>
-          {isPublicGallery && isDetailView && projectData.publishedAt && (
+          </div>
+          {shouldShowPublishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time
