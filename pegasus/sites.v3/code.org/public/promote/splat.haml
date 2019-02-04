@@ -21,7 +21,6 @@ theme: responsive
 %link{:href=>"/css/interactive-map.css", :rel=>"stylesheet"}
 
 #promote-page
-  %h1 Promote Computer Science
 
   .col-80.clear{:id=>'thank-you-box'}
     %p{:id=>'thank-you-message'}
@@ -29,32 +28,31 @@ theme: responsive
       = view :share_buttons, facebook:facebook, twitter:twitter
 
   %div{:id=>'us_content'}
-    - if state != "thanks"
-      #interactive-map.section.clear
-        = view :interactive_map, use_url: true
 
+    %h1 Computer Science Education Stats
     #stats-section.section.clear.desktop-feature
-      %h2 What’s wrong with this picture? Share these stats.
       = view :stats_carousel
 
     #stats-section-mobile.section.clear.mobile-feature
-      %h2 Computer Science Education Stats
       = view :stats_mobile
 
+    %h1 Code.org’s impact in schools
+    #impact-section.section.clear.desktop-feature
+      = view :stats_impact_carousel
+
+    #impact-section-mobile.section.clear.mobile-feature
+      = view :stats_impact_carousel_mobile
+
+    %h1 Join the Movement
     #petition-section.section.clear
       = view :petition
 
-    #tools-section.section.clear
-      %h2 Tools to help you advocate locally
-      = view :promote_tools, state:nil, section_name: 'local_tools'
-
-    #resources-section.section.clear
-      %h2 Policy development resources
-      = view :promote_tools, state:nil, section_name: 'policy_resources'
-
-  - if state == "thanks"
     #interactive-map.section.clear
       = view :interactive_map, use_url: true
+
+    %h1 Advocate for computer science locally
+    #advocate-locally.section.clear
+      = view :stats_advocate_locally
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear
