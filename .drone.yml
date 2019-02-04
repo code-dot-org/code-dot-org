@@ -1,3 +1,4 @@
+---
 kind: pipeline
 name: unit
 
@@ -5,11 +6,27 @@ clone:
   depth: 50
 
 steps:
+- name: verify-pr
+  image: wintercdo/code-dot-org:0.7
+  pull: always
+  commands:
+    - |
+      if [ -z "$DRONE_PULL_REQUEST" ]; then
+        echo "Not a pull request."
+        exit 0
+      fi
+    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
+    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
+    - echo $head_repo
+    - |
+      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
+        echo "Pull request is from fork $head_repo; exiting."
+        exit 1
+      fi
+
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
   - name: mysql
     path: /var/lib/mysql
   environment:
@@ -17,20 +34,12 @@ steps:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
-    PROPERTIES_ENCRYPTION_KEY:
-      from_secret: PROPERTIES_ENCRYPTION_KEY
-    AWS_ACCESS_KEY_ID:
-      from_secret: AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY:
-      from_secret: AWS_SECRET_ACCESS_KEY
   commands:
     - pwd
     - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/unit_tests.sh
 
 volumes:
-- name: rbenv
-  temp: {}
 - name: mysql
   temp: {}
 
@@ -98,3 +107,8 @@ trigger:
 #   event:
 #     include:
 #     - pull_request
+---
+kind: signature
+hmac: 41f0921ccaed873a43f2608c4cabddf3911828cfc8044955f4420bf9fbaa8b98
+
+...

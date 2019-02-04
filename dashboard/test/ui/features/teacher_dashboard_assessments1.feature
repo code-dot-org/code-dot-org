@@ -1,4 +1,3 @@
-@no_ie
 @no_mobile
 @dashboard_db_access
 @pegasus_db_access
