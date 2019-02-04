@@ -57,12 +57,12 @@ echo "Wrote secrets from env vars into locals.yml."
 set -x
 
 # name: rake install
-RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
+RAKE_VERBOSE=true mispipe "bundle exec rake install --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # name: rake build
 RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # unit tests
-bundle exec rake circle:run_tests --trace
+#bundle exec rake circle:run_tests --trace
 
 mispipe "echo 'Ending timestamp'" ts
