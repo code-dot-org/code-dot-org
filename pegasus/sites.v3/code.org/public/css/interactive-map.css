@@ -66,29 +66,38 @@
   width: 270px;
 }
 
-.fact i {
-  display: inline-block;
-  font-size: 48px;
-  vertical-align: middle;
+.policy-title{
+  padding: 10px 0px;
 }
 
 .icon-fact .fa-times-circle{
   color: lightgray;
+  font-size: 48px;
 }
 
 .fa-circle{
   color: dimgray;
+  font-size: 48px;
 }
 
 .icon-fact .fa-check-circle{
   color: dimgray;
+  display: inline-block;
+  font-size: 48px;
+  vertical-align: middle;
+  height: 48px;
+  width: 48px;
+}
+
+.fa-stack {
+  height: 48px;
+  width: 48px;
 }
 
 .fact .fact-text {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-  padding-left: 10px;
   width: 80%;
 }
 
