@@ -79,7 +79,6 @@ trigger:
   event:
     include:
     - pull_request
-    - push
 
 # ---
 # kind: pipeline
@@ -142,6 +141,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 41f0921ccaed873a43f2608c4cabddf3911828cfc8044955f4420bf9fbaa8b98
+hmac: a37b3ff8767d1c25c2bd719f6372de50b2bfdef6c26cfb06075b5fcc05785a64
 
 ...
