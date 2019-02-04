@@ -6,7 +6,7 @@
       1,
       0.74
     ],
-    "func": "clickedOnFlexible",
+    "func": "clickedOn",
     "blockText": "{CONDITION} {SPRITE} clicked",
     "args": [
       {
@@ -24,8 +24,7 @@
       },
       {
         "name": "SPRITE",
-        "type": "Sprite",
-        "defer": false
+        "type": "Sprite"
       }
     ],
     "eventBlock": true
