@@ -2,8 +2,9 @@ import BaseDialog from './BaseDialog';
 import Confetti from 'react-dom-confetti';
 import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';
 

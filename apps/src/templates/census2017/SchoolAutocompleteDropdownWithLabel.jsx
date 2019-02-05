@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';

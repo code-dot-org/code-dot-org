@@ -3,7 +3,8 @@
  * the applicationData prop of the child component.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
   FormGroup,
   ControlLabel,

@@ -1,9 +1,10 @@
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
 import moment from "moment/moment";
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 
 const styles = {

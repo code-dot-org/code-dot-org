@@ -5,9 +5,9 @@
 // per page, and it expects that instance to live for the duration of the page.
 // It doesn't do proper cleanup of the click handler for the non-React component
 // if UiTips goes away.
-
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';
 import _ from 'lodash';

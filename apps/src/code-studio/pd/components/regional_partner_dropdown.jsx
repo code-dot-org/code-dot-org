@@ -3,7 +3,8 @@
  * RegionalPartner's applications to view
  */
 
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
