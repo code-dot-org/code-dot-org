@@ -22,8 +22,8 @@ describe('the export module', () => {
         }
         it(`exposes a ${block.func} function`, () => {
           if (globals.indexOf(block.func) < 0) {
+            // eslint-disable-next-line no-eval
             if (!eval(`window.${block.func}`)) {
-              //eslint-disable-line no-eval
               assert(
                 false,
                 `expected exported globals to include ${block.func}`

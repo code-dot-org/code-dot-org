@@ -113,7 +113,7 @@ export default class UsPhoneNumberInput extends React.Component {
       errorMessage,
       required,
       // pull value and onChange so they don't get included in ...props
-      value,
+      value, // eslint-disable-line no-unused-vars
       onChange, // eslint-disable-line no-unused-vars
       ...props
     } = this.props;
