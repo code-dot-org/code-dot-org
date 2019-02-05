@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "0-  True and False statement\r\n\r\nif ( 1 < 5) {\r\n  console.log(\"Hello\");\r\n}",
+    "long_instructions": "0-  True and False statement\r\n\r\nif ( 1 < 5) {\r\n  console.log(\"Hello\");\r\n}",
     "start_blocks": "if ( 1 < 5) {\r\n  console.log(\"Hello\");\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",

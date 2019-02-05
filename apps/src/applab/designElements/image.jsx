@@ -76,6 +76,7 @@ class ImageProperties extends React.Component {
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')}
+          elementId={elementUtils.getId(element)}
         />
         {iconColorPicker}
         <EnumPropertyRow

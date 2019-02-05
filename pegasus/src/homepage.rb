@@ -408,6 +408,14 @@ class Homepage
     }
   end
 
+  def self.show_curriculum_banner(request)
+    false
+  end
+
+  def self.show_professional_learning_banner(request)
+    request.language == "en"
+  end
+
   def self.get_dance_stars
     stars = [
       "Ace of Base", "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Bruce Springsteen", "Calvin Harris",

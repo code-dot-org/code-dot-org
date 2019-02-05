@@ -24,8 +24,6 @@
 #
 
 require 'nokogiri'
-require 'cdo/i18n_backend'
-
 class Blockly < Level
   include SolutionBlocks
   before_save :fix_examples
@@ -282,18 +280,16 @@ class Blockly < Level
 
       # For historical reasons, `localized_instructions` and
       # `localized_authored_hints` should happen independent of `should_localize?`
-      # TODO: elijah: update these instructions values to new names once we
-      # migrate to the new keys
-      set_unless_nil(level_options, 'instructions', localized_short_instructions)
+      set_unless_nil(level_options, 'shortInstructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
       if should_localize?
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
         if script && !script.localize_long_instructions?
-          level_options.delete('markdownInstructions')
+          level_options.delete('longInstructions')
         else
-          set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
+          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         end
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
@@ -412,20 +408,22 @@ class Blockly < Level
     options.freeze
   end
 
-  # @param resolve [Boolean] if true (default), localize property using I18n#t.
-  #   if false, just return computed property key directly.
   # @param extra_identifier [Boolean] we for some reason use the property name
   #   twice in the internationalization key: once pluralized as a category name,
   #   and once again singularized as an addition to the level name itself. This
   #   is unnecessary, so we are gradually removing the extra key. If this is
   #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
   #   instances of this extra key and then this property.
-  def get_localized_property(property_name, resolve: true, extra_identifier: true)
+  def get_localized_property(property_name, extra_identifier: true)
     if should_localize? && try(property_name)
-      key = "data.#{property_name.pluralize}.#{name}"
+      key = name
       key += "_#{property_name.singularize}" if extra_identifier
-      return key unless resolve
-      I18n.t(key, default: nil)
+      I18n.t(
+        key,
+        scope: [:data, property_name.pluralize],
+        default: nil,
+        smart: true
+      )
     end
   end
 
@@ -441,16 +439,14 @@ class Blockly < Level
     return unless authored_hints
 
     if should_localize?
-      authored_hints_key = get_localized_property("authored_hints", resolve: false)
-
-      return unless authored_hints_key
+      scope = [:data, :authored_hints, "#{name}_authored_hint"]
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
         # Skip empty hints, or hints with videos (these aren't translated).
         next if hint['hint_markdown'].nil? || hint['hint_id'].nil? || hint['hint_video'].present?
 
         translated_text = hint['hint_id'].empty? ? nil :
-          I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
+          I18n.t(hint['hint_id'], scope: scope, default: nil, smart: true)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -579,8 +575,8 @@ class Blockly < Level
       block_text_translation = I18n.t(
         "text",
         scope: [:data, :blocks, level_object[:name]],
-        separator: Cdo::I18nSmartTranslate.get_valid_separator(level_object[:name]),
         default: nil,
+        smart: true
       )
       level_object[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
       arguments = level_object[:config]["args"]
@@ -598,8 +594,8 @@ class Blockly < Level
           option_translation = I18n.t(
             option_value,
             scope: [:data, :blocks, level_object[:name], :options, argument['name']],
-            separator: Cdo::I18nSmartTranslate.get_valid_separator(option_value + level_object[:name] + argument['name']),
             default: nil,
+            smart: true
           )
           # Update the key (the first element) with the new translated value
           argument["options"][i][0] = option_translation unless option_translation.nil?

@@ -105,13 +105,20 @@ fr:
         bon te semble à l'intérieur d'une ou de plusieurs boucles pour faire des images
         que tu pourras partager avec tes amis. Appuie sur « Exécuter » pour voir un
         exemple.
+      2-3 Artist Functions 2 a: 'Sers-toi du petit bloc vert « dessiner un carré »
+        pour appeler cette fonction et dessiner les lunettes. '
       2-3 Artist Functions 2: Les fonctions te permettent de définir de nouveaux blocs
         ! Nous avons déplacé les blocs pour dessiner un carré dans une fonction appelée
         «Dessiner un carré». Peut-tu utiliser la fonction «Dessiner un carré» pour
         créer les lunettes ? Les carrés sont à 75 pixels les uns des autres.
+      2-3 Artist Functions 3 a: "Modifie la fonction ˋdessine un carré` pour dessiner
+        des lunettes avec une monture de 115px de chaque côté. \n\nLes carrés sont
+        maintenant à 45 pixels les uns des autres."
       2-3 Artist Functions 3: Modifie la fonction pour dessiner un carré de 115 pixels
         de côté et dessine de plus grands verres. Les carrés sont maintenant à 45
         pixels les uns des autres.
+      2-3 Artist Functions 4 a: Maintenant, met cette fonction dans une boucle et
+        ajoute un autre tour pour dessiner ces trois carrés.
       2-3 Artist Functions 4: Utilise le bloc « Répéter » pour dessiner ces 3 carrés.
       2-3 Artist Functions 7: 'Utilise la fonction «Dessiner une maison» pour dessiner
         deux maisons à l''aide de deux paramètres différents. (Indice: la première
@@ -829,6 +836,12 @@ fr:
         sol ?  Indice : Utilise la boucle «Tant que» pour les deux."
       4-5 While Loops Assessment 1: Il y a beaucoup de trous et de tas.  Aide-moi
         à les remplir et à les enlever pour niveler le sol.
+      AB_Debug_PlayLab2: |-
+        Pourquoi ce jeu ne fait rien ?
+
+        Peux-tu trouver les bugs « cachés » ? Certains sont plus faciles que d’autres.
+      AB_Debug_PlayLab3: Déplace le chevalier vers chacun des drapeaux. Si quelque
+        chose ne va pas, cherche les bugs !
       AlgPD DR Free Play: Crée une fonction basée sur ton propre puzzle verbal.
       Alien Defender: 'Idée de projet: Faire un jeu de type Defender dans Play Lab!'
       Alien Defender_2018: 'Idée de projet: Faire un jeu de type Defender dans Play
@@ -2376,6 +2389,8 @@ fr:
       Ryan Test Locked Blocks: Voici une fonction appelée «Patrouille». Modifie-la
         pour déplacer le Chat vers le haut de 400 pixels, puis vers le bas de 400
         pixels.
+      Ryan_Demo: Faites que l'orignal commence un nouveau mouvement après 4 mesures
+        !
       SpecialFrozenLevel: Tu es officiellement devenu un artiste maître ! Crée un
         merveilleux paysage hivernal.
       Standalone_Artist_1: Bienvenue à l'Artiste ! Tout d'abord, nous allons essayer
@@ -2465,13 +2480,13 @@ fr:
       Underground Mining Coal_2019: Les ressources les plus précieuses sont en sous-sol,
         mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins
         2 blocs de charbon.
-      aE1: "Tu as choisi de faire une serviette carrée ! \r\n\r\nPour terminer, trace
+      aE1: "Tu as choisi de faire une serviette carrée ! \n\nPour terminer, trace
         un carré de 20 pixels de côté. "
       aE2: Si tu places ta boucle de carré à l'intérieur d'une autre boucle, on appelle
         ça une boucle imbriquée. Que faut-il ajouter à ta boucle externe pour s'assurer
         que les 14 serviettes sont bien alignées côte à côte ?
-      aE3: "Nous devons avoir une nappe!  \r\n\r\nPrenez votre rangée de 14 serviettes
-        et cousez-les ensemble grâce à une autre **boucle externe** pour fabriquer
+      aE3: "Nous avons besoin d’une nappe !  \n\nPrends ta rangée de 14 serviettes
+        et couds-les ensemble grâce à une autre **boucle externe** pour fabriquer
         une nappe."
       aE3alternate: Alternative
       aE3alternateB: Alternative
@@ -2681,28 +2696,42 @@ fr:
       courseA_artist_loops12_2018: |-
         L'artiste a vu quelque chose d'étrange
         au loin. Dessine ce que tu penses qu'il a vu.
+      courseA_artist_loops12_2019: |-
+        L'artiste a vu quelque chose d'étrange
+        au loin. Dessine ce que tu penses qu'il a vu.
       courseA_artist_loops7: Utilisez la boucle `repeat` pour ajouter des vagues dans
         l'eau.
       courseA_artist_loops7_2018: Utilisez la boucle `repeat` pour ajouter des vagues
+        dans l'eau.
+      courseA_artist_loops7_2019: Utilisez la boucle `repeat` pour ajouter des vagues
         dans l'eau.
       courseA_artist_loops7_forVideo: Utilisez la boucle `repeat` pour ajouter des
         vagues dans l'eau.
       courseA_artist_loops9: 'Défi : Réparer l’escalier.'
       courseA_artist_loops9_2018: 'Défi : Réparer l’escalier.'
+      courseA_artist_loops9_2019: 'Défi : Réparer l’escalier.'
       courseA_collector_loops1: Déplace Laurel et récupère autant de trésors que tu
         peux!
       courseA_collector_loops10: Aide Laurel à récupérer tous les trésors de cette
         vallée profonde.
       courseA_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de
         cette vallée profonde.
+      courseA_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de
+        cette vallée profonde.
       courseA_collector_loops11: Aide Laurel à récupérer tous les trésors de cette
         cave.
       courseA_collector_loops11_2018: Aide Laurel à récupérer tous les trésors de
         cette cave.
+      courseA_collector_loops11_2019: Aide Laurel à récupérer tous les trésors de
+        cette cave.
       courseA_collector_loops12: Eurêka !  Récupère autant de trésors que tu peux!
       courseA_collector_loops12_2018: Eurêka !  Récupère autant de trésors que tu
         peux!
+      courseA_collector_loops12_2019: Eurêka !  Récupère autant de trésors que tu
+        peux!
       courseA_collector_loops1_2018: Déplace Laurel et récupère autant de trésors
+        que tu peux!
+      courseA_collector_loops1_2019: Déplace Laurel et récupère autant de trésors
         que tu peux!
       courseA_collector_preLoops1: "This is Laurel the Adventurer!\n\r\n\r\nPress
         \"Run\" to see her walk up to the treasure and grab it."
@@ -2714,8 +2743,12 @@ fr:
         cave.
       courseB_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de
         cette cave.
+      courseB_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de
+        cette cave.
       courseB_collector_loops11: Eurêka !  Récupère autant de trésors que tu peux!
       courseB_collector_loops11_2018: Eurêka !  Récupère autant de trésors que tu
+        peux!
+      courseB_collector_loops11_2019: Eurêka !  Récupère autant de trésors que tu
         peux!
       courseC_PlayLab_events3: |-
         Peux-tu écrire un programme pour que ce c

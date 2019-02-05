@@ -546,6 +546,7 @@ fi:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla! Matkaa halki Minecraftin koodin matkassa"
     unplugged:
       title: "Oppitunnit ilman tietokonetta"
       audience: "4+ -vuotiaille"
@@ -790,6 +791,7 @@ fi:
   return_unit_overview: 'Siirry sarjan yleisesittelyyn'
   return_course_overview: 'Siirry sarjan yleisesittelyyn'
   view_all_units: 'Näytä kaikki sarjat'
+  view_teacher_guide: 'Katso opettajan opas'
   pd:
     form_labels:
       email: 'Sähköposti'

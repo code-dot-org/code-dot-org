@@ -68,7 +68,7 @@ sk:
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Každý predmet potrebuje vlastnú slučku "while".
       Artist Inspiration_authored_hint:
-        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".
+        double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".
       Course 4 Artist For Loops Challenge_a_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
       Dance short test 2_authored_hint:
@@ -271,6 +271,16 @@ sk:
       Function intro Ryan_2019_authored_hint:
         Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju
           volať dvakrát, aby ste vyriešili tento hlavolam.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Pozri sa na **Morské lampáše** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Ako ich môžeš použiť v podmienke, aby si sa s nimi dostal k oceánskemu monumentu?
+          \ \n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Môžeš použiť blok s podmienkou ak, ktorý ti pomôže urobiť otočenia
+          vpravo.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vidíš červené a modré koralové bloky? Použi ich ako ukazovatele
+          cesty v útese na otočenie do prava a do ľava.
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -357,7 +367,7 @@ sk:
 
           *Táto úroveň končí po 8 taktoch.*
       Inspirational Artwork_authored_hint:
-        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".
+        double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík,
           aby si mohol objavovať svet!
@@ -365,15 +375,15 @@ sk:
         MC_HOC_2017_01_Cole_a: Pomocou klávesov so šípkami nasmeruj hráča do domu.
           Skonči na oranžovom štvorci, aby si vyhral.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok "posuň sa dopredu"
-          do pracovného priestoru a prichyť ho na mieste pod blokom "pri spustení".
+        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok 'posuň sa dopredu'
+          do pracovného priestoru a prichyť ho na mieste pod blokom 'pri spustení'.
         MC_HOC_2017_01_RETRY_b: Nezabudni kliknúť na tlačidlo "Spustiť", aby sa spustil
           kód pre agenta.
         MC_HOC_2017_01_RETRY_c: Keď agent prejde všetok svoj kód, môžeš posúvať hráča
           pomocou klávesov so šípkami!
       MC_HOC_2017_01_RETRY_2019_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok "posuň sa dopredu"
-          do pracovného priestoru a prichyť ho na mieste pod blokom "pri spustení".
+        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok 'posuň sa dopredu'
+          do pracovného priestoru a prichyť ho na mieste pod blokom 'pri spustení'.
         MC_HOC_2017_01_RETRY_b: Nezabudni kliknúť na tlačidlo "Spustiť", aby sa spustil
           kód pre agenta.
         MC_HOC_2017_01_RETRY_c: Keď agent prejde všetok svoj kód, môžeš posúvať hráča
@@ -409,27 +419,29 @@ sk:
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Keď dostaneš agenta k prítlačnej doske, pomocou klávesov
           so šípkami môžeš presunúť hráča ku kompasu!
-        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus "opakuj"
+        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus 'opakuj'
           a uvidíš, či prídeš na to, ako ho skrátiť!
       MC_HOC_2017_03_Cole_2019_authored_hint:
         MC_HOC_2017_03_Cole_a: Keď dostaneš agenta k prítlačnej doske, pomocou klávesov
           so šípkami môžeš presunúť hráča ku kompasu!
-        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus "opakuj"
+        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus 'opakuj'
           a uvidíš, či prídeš na to, ako ho skrátiť!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Ak prejdeš po týchto dvoch prítlačných doskách,
           hráčovi sa sprístupní cesta. \n\n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku "Otoč sa v pravo" zmeň smer agenta '
+        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku ''otoč sa v pravo'' zmeň smer
+          agenta '
         MC_HOC_2017_04POINT5_RYAN_a: Agentovi sa stačí dostať k prvej prítlačnej doske,
           aby Alex alebo Steve mohli prejsť k sekere.
       MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku "Otoč sa v pravo" zmeň smer agenta '
+        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku ''otoč sa v pravo'' zmeň smer
+          agenta '
         MC_HOC_2017_04POINT5_RYAN_a: Agentovi sa stačí dostať k prvej prítlačnej doske,
           aby Alex alebo Steve mohli prejsť k sekere.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz "posuň sa dopredu" 7-krát.
-          Ako môžeš použiť cyklus "opakuj", aby sa to stalo?
+        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz 'posuň sa dopredu' 7-krát.
+          Ako môžeš použiť cyklus 'opakuj', aby sa to stalo?
         MC_HOC_2017_04_Cole_c: |-
           Stlač tlačidlo "Spustiť"!
 
@@ -437,8 +449,8 @@ sk:
         MC_HOC_2017_04_Cole_b: Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi
           dvere.
       MC_HOC_2017_04_Cole_2019_authored_hint:
-        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz "posuň sa dopredu" 7-krát.
-          Ako môžeš použiť cyklus "opakuj", aby sa to stalo?
+        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz 'posuň sa dopredu' 7-krát.
+          Ako môžeš použiť cyklus 'opakuj', aby sa to stalo?
         MC_HOC_2017_04_Cole_c: |-
           Stlač tlačidlo "Spustiť"!
 
@@ -447,19 +459,19 @@ sk:
           dvere.
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok
-          kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu "opakuj",
+          kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj',
           aby si dokončil túto úlohu.
         MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu popri tom,
           ako kráčaš.
       MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok
-          kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu "opakuj",
+          kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj',
           aby si dokončil túto úlohu.
         MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu popri tom,
           ako kráčaš.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok
-          kódu? Skús do cyklu "opakuj" pridať príkazy na umiestnenie dosky a pohyb
+          kódu? Skús do cyklu 'opakuj' pridať príkazy na umiestnenie dosky a pohyb
           dopredu.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Koľkokrát sa tento cyklus spustí? Koľkokrát *by sa
@@ -470,12 +482,12 @@ sk:
           mal* spustiť?
         MC_HOC_2017_06_Cole_b: 'Pomôž agentovi postaviť most po celej šírke rieky! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Skús do cyklu"opakuj" vložiť viac ako jeden pokyn!
+        MC_HOC_2017_06_Cole_a: Skús do cyklu 'opakuj' vložiť viac ako jeden pokyn!
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: Všetko, čo musíš spraviť s agentom je vyčistiť chodník
           k banskému vozíku.
         MC_HOC_2017_07_Cole_a: Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia
-          "uvoľni cestu". Z panela s nástrojmi vyber malý zelený blok "uvoľni cestu"
+          'uvoľni cestu'. Z panela s nástrojmi vyber malý zelený blok 'uvoľni cestu'
           toľkokrát, koľko potrebuješ.
         MC_HOC_2017_07_Cole_b: Skús zmiešať bloky funkcie s ďalšími blokmi z panela
           s nástrojmi, aby si vyriešil túto úlohu.
@@ -483,7 +495,7 @@ sk:
         MC_HOC_2017_07_Cole_c: Všetko, čo musíš spraviť s agentom je vyčistiť chodník
           k banskému vozíku.
         MC_HOC_2017_07_Cole_a: Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia
-          "uvoľni cestu". Z panela s nástrojmi vyber malý zelený blok "uvoľni cestu"
+          'uvoľni cestu'. Z panela s nástrojmi vyber malý zelený blok 'uvoľni cestu'
           toľkokrát, koľko potrebuješ.
         MC_HOC_2017_07_Cole_b: Skús zmiešať bloky funkcie s ďalšími blokmi z panela
           s nástrojmi, aby si vyriešil túto úlohu.
@@ -520,8 +532,7 @@ sk:
           Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
         MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam.
           Skús niektoré z nich!
-        MC_HOC_2017_08_RY_c: Skús nasledovať bodkovanú čiaru pre jednoduchú cestu
-          cez lávu.
+        MC_HOC_2017_08_RY_c: Cez lávu sa najľahšie dostaneš po prerušovanej čiare.
       MC_HOC_2017_Ali_2019_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Stlač tlačidlo "Spustiť"!
@@ -529,8 +540,7 @@ sk:
           Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
         MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam.
           Skús niektoré z nich!
-        MC_HOC_2017_08_RY_c: Skús nasledovať bodkovanú čiaru pre jednoduchú cestu
-          cez lávu.
+        MC_HOC_2017_08_RY_c: Cez lávu sa najľahšie dostaneš po prerušovanej čiare.
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík,
           aby si mohol objavovať svet!
@@ -538,7 +548,7 @@ sk:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík,
           aby si mohol objavovať svet!
       NEW Course 4 Artist Params inspire_authored_hint:
-        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".
+        double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo
           Steve mohli prechádzať za okrajmi mapy.
@@ -554,7 +564,29 @@ sk:
         mc_13_a: Použi príkaz "Polož koľajnice", ktorým uložíš koľajnice na misto,
           na ktorom stojíš.
         mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Tanečník musí po 4 taktoch zmeniť kroky.
+
+          *Úroveň končí po 7 taktoch.*
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -573,6 +605,25 @@ sk:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -610,7 +661,45 @@ sk:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -645,7 +734,29 @@ sk:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -653,7 +764,14 @@ sk:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
@@ -674,7 +792,42 @@ sk:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -712,6 +865,25 @@ sk:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -731,7 +903,42 @@ sk:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -792,4 +999,4 @@ sk:
       grade5_artist_for_loops10_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
       grade5_artist_functionparameters10_authored_hint:
-        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".
+        double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".

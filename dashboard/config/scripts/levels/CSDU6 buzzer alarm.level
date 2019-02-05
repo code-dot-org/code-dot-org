@@ -79,7 +79,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSD Alarm Template",
-    "markdown_instructions": "# Noisy Alarm\r\n\r\nBack to the Alarm now - now with the buzzer we can make this thing really sound like an alarm. Using `buzzer.frequency()` and `buzzer.stop()` make your alarm play a sound when it goes off.",
+    "long_instructions": "# Noisy Alarm\r\n\r\nBack to the Alarm now - now with the buzzer we can make this thing really sound like an alarm. Using `buzzer.frequency()` and `buzzer.stop()` make your alarm play a sound when it goes off.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

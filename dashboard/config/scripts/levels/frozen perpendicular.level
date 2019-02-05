@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
+    "short_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
     "x": "150",
     "y": "180",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
+    "long_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

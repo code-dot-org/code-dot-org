@@ -49,6 +49,10 @@ class HttpCache
     CACHED_SCRIPTS_MAP.keys
   end
 
+  ALLOWED_WEB_REQUEST_HEADERS = %w(
+    Authorization
+  )
+
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
   # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
   # This hash provides extra application-specific configuration for whitelisting specific request headers and
@@ -130,9 +134,9 @@ class HttpCache
             cookies: whitelisted_cookies
           }
         ],
-        # Remaining Pegasus paths are cached, and vary only on language and default cookies.
+        # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
         default: {
-          headers: LANGUAGE_HEADER,
+          headers: LANGUAGE_HEADER + COUNTRY_HEADER,
           cookies: default_cookies
         }
       },
@@ -222,6 +226,11 @@ class HttpCache
             ),
             headers: [],
             cookies: 'none'
+          },
+          {
+            path: '/xhr*',
+            headers: WHITELISTED_HEADERS + ALLOWED_WEB_REQUEST_HEADERS,
+            cookies: whitelisted_cookies
           },
         ],
         # Default Dashboard paths are session-specific, whitelist all session cookies and language header.

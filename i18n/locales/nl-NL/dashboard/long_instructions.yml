@@ -446,6 +446,13 @@ nl:
       Overworld Move to Sheep: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Overworld Move to Sheep_2018: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
+      Ryan_Demo: |-
+        Laten we deze eland aan het dansen krijgen!
+
+        Sleep het blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> naar de werkruimte. Verbind hem onder het blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Je danser zou na de vierde maat een nieuwe move moeten beginnen.
+
+
+        **Maten** worden in de muziek gebruikt om de tijd te tellen. In deze tutorial is de maat vier beats lang.
       Testing Quantum Farmer: "Wow, ik heb een heel diep gat gevonden! Ik weet niet hoeveel scheppen vuil daarvoor nodig zijn. Kan je een programma schrijven dat het gat vult tot boven vult? Hint: probeer dit keer een zolang-lus."
       course1_artist_loops_challenge2: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       course1_maze_debugging_challenge2: Debug dit level. Dit zijn de correct blokken, maar ze staan in de verkeerde volgorde!
@@ -463,10 +470,13 @@ nl:
       course4_artist_fwp_challenge1: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
       courseA_collector_preLoops1: "Dit is Laurel de avonturier! \n\nKlik op\n\"Run\" om haar naar de schat te zien wandelen en het te bemachtigen."
       courseA_maze_seq8_2018: Los dit niveau op en krijg de vogel naar het varken!
+      courseA_maze_seq8_2019: Los dit niveau op en krijg de vogel naar het varken!
       courseB_artist_loops7: "**Uitdaging:** Dit is een verborgen tuin!\nLaten we rondwandelen."
       courseB_artist_loops7_2018: "**Uitdaging:** Dit is een verborgen tuin!\nLaten we rondwandelen."
+      courseB_artist_loops7_2019: "**Uitdaging:** Dit is een verborgen tuin!\nLaten we rondwandelen."
       courseB_artist_loops_challenge2: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseB_artist_loops_challenge2_2018: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
+      courseB_artist_loops_challenge2_2019: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseB_maze_seq9_challenge1: "*Waar verbergt dat varken zich nu?*"
       courseC_artist_loops2a: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
       courseC_artist_loops2a_2018: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.

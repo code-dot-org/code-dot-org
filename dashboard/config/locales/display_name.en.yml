@@ -498,7 +498,7 @@ en:
       CSD onBoardEvent Map: Responding to Board Events
       CSD onBoardEvent Map_2018: Responding to Board Events
       CSD-Arrays: Modifying and Creating Arrays
-      CSD-Arrays_2018: Modifying and Creating Arrays
+      CSD-Arrays_2018: Modifying Arrays
       'CSD: Animating Sprite Movement': 'Video: Sprite Movement'
       'CSD: Animating Sprite Movement_2018': 'Video: Sprite Movement'
       'CSD: Animation Tab': 'Video: The Animation Tab'
@@ -507,6 +507,7 @@ en:
       'CSD: Drawing in Game Lab 1_2018': 'Video: Drawing in Game Lab - Part 1'
       'CSD: Drawing in Game Lab 2': 'Video: Drawing in Game Lab - Part 2'
       'CSD: Drawing in Game Lab 2_2018': 'Video: Drawing in Game Lab - Part 2'
+      'CSD: For Loop_2018': For Loops
       'CSD: Introduction to Lists - Part 1': Introduction to Lists - Part 1
       'CSD: Introduction to Lists - Part 2': Introduction to Lists - Part 2
       'CSD: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
@@ -666,6 +667,7 @@ en:
       Intro to Web Lab - Part 1_2018: 'Video: Intro to Web Lab - Part 1'
       Intro to Web Lab - Part 2: 'Video: Intro to Web Lab - Part 2'
       Intro to Web Lab - Part 2_2018: 'Video: Intro to Web Lab - Part 2'
+      Introduction to Variables - Part 1_2018: Introduction to Variables
       Kiki_StarWars_Test: Star Wars Project Prototype
       Kiki_StarWars_Test_2: Star Wars Project Prototype
       Kiki_StarWars_Test_3: Star Wars Project Prototype
@@ -737,6 +739,7 @@ en:
       MC_HOC_2017_Ryan_03: A River...
       MC_HOC_2017_Ryan_05: Desert Temple
       MC_HOC_Kiki_02: Meet the Agent
+      Making Music_2018: Making Music
       New Dance Lab Project: New Dance Party Project
       New Minecraft Hero Project: Freeplay
       PS - test - pixelation: Black and White Pixelation Widget
@@ -769,6 +772,8 @@ en:
       U5-AP-Algorithm-Does-It-Count: AP Practice Response - Score the Response
       U5-AP-Algorithm-Does-It-Count_2018: AP Practice Response - Score the Response
       Using Accelerometer Events_2018: Using Accelerometer Events
+      'Video: Intro to CSS Part 2_2018': 'Video: Intro to CSS Part 2'
+      'Video: Intro to CSS_2018': 'Video: Intro to CSS'
       'Widget: Black and White Pixelation_2018': 'Widget: Black and White Pixelation'
       'Widget: Color Pixelation_2018': 'Widget: Color Pixelation'
       'Widget: Text Compression_2018': 'Widget: Text Compression'
@@ -777,8 +782,10 @@ en:
       courseA_bee_intro: change my video
       courseA_video_Stevie: Stevie and the Big Project
       courseA_video_Stevie_2018: Stevie and the Big Project
+      courseA_video_Stevie_2019: Stevie and the Big Project
       courseB_video_Unspotted: Unspotted Bugs
       courseB_video_Unspotted_2018: Unspotted Bugs
+      courseB_video_Unspotted_2019: Unspotted Bugs
       courseE_Dogger_2: Dogger Example
       courseE_Dogger_2_2019: Dogger Example
       courseF_artist_for1: For Loops Freeplay (Beginning)
@@ -791,7 +798,7 @@ en:
       courseF_video_csMatters_2019: 'Video: CS Matters'
       coursee_explore_4: Alien Defender
       cp1dlp-q1: Lesson Connections and Philosophy
-      csd U3 conditional statements video: 'Video: Conditional Statements'
+      csd U3 conditional statements video: 'Video: "If/Else" Statements'
       csd u5 recommender sample: Sample App
       csd-thursday-facilitation: Facilitation Reflection
       csd-thursday-pedagogy: Teacher Pedagogy Reflection

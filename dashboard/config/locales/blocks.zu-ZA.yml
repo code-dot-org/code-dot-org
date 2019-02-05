@@ -94,6 +94,14 @@ zu:
             '"height"': ubude
       RyanLab_moveForward:
         text: qubekela phambili
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': nini
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': nini
       craft_ifPath:
         options:
           DIR:

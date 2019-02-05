@@ -6,14 +6,15 @@ export const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '
 
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
- * NOTE: this is pretty similarly to a component in dashboard's
- * ReportAbuseForm.jsx. In an ideal world, we would have a better way of
- * sharing components between dashboard/apps and have any difference between
- * the two version controlled by props.
- */
+**/
+
 export default class AgeDropdown extends Component {
   static propTypes = {
-    style: PropTypes.object
+    style: PropTypes.object,
+    age: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ])
   };
 
   /**
@@ -24,12 +25,15 @@ export default class AgeDropdown extends Component {
   }
 
   render() {
+    const age = this.props.age && this.props.age.toString();
+
     return (
       <select
         ref={element => this.root = element}
         name="age"
         style={this.props.style}
         id="uitest-age-selector"
+        defaultValue={age}
       >
        {ages.map(age => <option key={age} value={age}>{age}</option>)}
       </select>

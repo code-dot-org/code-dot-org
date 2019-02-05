@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Free Response: Function Parameters",
-    "markdown_instructions": "It is said that *functions with parameters generalize the behavior of a more specific command and allow programmers to use functions instead of duplicated code.* Explain what this means to you using the difference between turnLeft() and turnLeft(angle) as an example.\r\n",
+    "long_instructions": "It is said that *functions with parameters generalize the behavior of a more specific command and allow programmers to use functions instead of duplicated code.* Explain what this means to you using the difference between turnLeft() and turnLeft(angle) as an example.\r\n",
     "encrypted_solution": "yXOaE/lwFDSzrde7mezh2B5/BbK/g/xdU9VJfSJybMC0s9e9ESbuAo5dgP60\niqCVKPja3ezWh9sT46Ki8tbmHJrAf5TzpqSAaMjWXTNV6ISbM9pQ8Hl6HXOe\ncWyBvKtagkJDDT0r0PMGQrq2xOYdlWdDV2MTt5RQ/bmwZr+fELtHx9/3FLtl\n6aKeUllchHCaWObe9WUe0/JKv3dojEnOEbUHaX3PX9CxRanrxUWD67NAGHzX\nl79ha/+4rhqCEjgIzZAcOSfuZ5lo+2iCLq2JS6wGPLjGVyjbvuoWQH2vfN3B\nPe73hmIwPRj1tP74n6fErFN7x6kRuuyNkEmMVTfx4XJ10K2bBUX9ZF8U3O1s\nEsLCmRhw6rmP/0gemVbiTPzSmzW19AEMbYdooZ/BWgVgkqDqiyrn8/RniSbg\n0sGsHeE2g9QgAqEo6QRopYMRcSiJcPHRi1yoEGfrYtAaBYvN68IXIFfzt2ZO\nMaj4xaatXWht0GUCns0eGYJfFQ9ETZJ83+cZTUtqkQ30qpvsubUZ9Q==\n",
     "skip_dialog": true,
     "skip_sound": true,

@@ -25,6 +25,19 @@ ________________
 ## Announcements
 - [New Process to secure substitute CS Discoveries and CS Principles Facilitators](#subfac)
 - [Updated CS Discoveries/Principles Facilitator Travel Policy](#docs)
+- [Preparing for Facilitator Interviews](#interviews)
+
+________________
+
+<a id="interviews"></a>
+### Interviewing Facilitators 
+
+Keep these three important things on your radar as you prepare for upcoming facilitator interviews. Watch this [very quick recording](https://code.zoom.us/recording/play/_kbC3EU3s8sHFBPeessecWvewQcZLofgK0dFZXzOFL2BU8SYM-gorH_WBj6vuXQ-?startTime=1548267193000) for more details, and read below for the highlights.
+
+1.  **Interview Scheduling:** 
+All Group 1 - 3 Regional Partners are responsible for scheduling interviews with their candidates during the interview period of Feb. 11 - March 1. Interviews should be booked for 30 minutes, and should include a video chat (e.g., Google hangout, Zoom, etc.) if they’re not hosted in-person. However, we recommend you block an hour on your calendar for prepare and review. Remember that many candidates are teachers who have limited availability during the school day, so please be prepared to host interviews in the late-afternoon or early evening.
+2.  **Interview Support:** All Group 1 - 3 Regional Partners are responsible for hosting interviews on their own, without the support of a Code.org-contracted co-interviewer. This means that Regional Partners will need to plan ahead to make sure they are able to conduct the interview while taking notes in the application dashboard.
+3.  **Interview Questions and Process:** We will cover the interview process and required interview questions in detail during the February Regional Partner Summit.
 
 ________________
 
@@ -63,7 +76,7 @@ ________________
 - [2019-20 Facilitator Selection Process Doc] (https://docs.google.com/document/d/1c6wXrVZ0u4yjV1eJg2INzqacvZV71hwfIxWIQHCM9_I/edit)
 - [2019-20 Facilitator Application Questions & Rubric](https://docs.google.com/document/d/1r7Cmn9j7BibblU979dDHKg_5yRtbrEJeMLThMsbbSMo/edit?usp=sharing)
 - [Facilitator Program Landing Page](https://code.org/facilitator) on the Code.org website
-- [Facilitator Development Program Overview](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit#heading=h.psnytlkvnqcd)
+- [Facilitator Development Program Overview](https://code.org/files/facilitator/overview-2019-20.pdf)
 - [CS Fundamentals Facilitator Commitments](https://code.org/files/facilitator/csf-commitments.pdf)
 - [CS Discoveries Facilitator Commitments](https://code.org/files/facilitator/csd-commitments.pdf)
 - [CS Principles Facilitator Commitments](https://code.org/files/facilitator/csp-commitments.pdf)

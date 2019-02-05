@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Hi! I'm Elsa of Arendelle. Help me create a single line.",
+    "short_instructions": "Hi! I'm Elsa of Arendelle. Help me create a single line.",
     "x": "150",
     "y": "200",
     "start_direction": "90",

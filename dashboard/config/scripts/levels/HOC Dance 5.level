@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "markdown_instructions": "We need more dancers!\r\n\r\nUse the <xml>\r\n  <block type=\"Dancelab_makeNewDanceSprite\">\r\n    <title name=\"COSTUME\">\"DUCK\"</title>\r\n    <title name=\"NAME\">backup_dancer1</title>\r\n    <title name=\"LOCATION\">{x: 300, y: 200}</title>\r\n  </block></xml> block to create a backup dancer called `backup_dancer1` to dance with the cat.",
+    "long_instructions": "We need more dancers!\r\n\r\nUse the <xml>\r\n  <block type=\"Dancelab_makeNewDanceSprite\">\r\n    <title name=\"COSTUME\">\"DUCK\"</title>\r\n    <title name=\"NAME\">backup_dancer1</title>\r\n    <title name=\"LOCATION\">{x: 300, y: 200}</title>\r\n  </block></xml> block to create a backup dancer called `backup_dancer1` to dance with the cat.",
     "parent_level_id": 14505,
     "validation_code": "if(getTime(\"measures\") > 6){\r\n  if (sprites.length >1) {\r\n  \tlevelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
     "block_pool": "Dancelab",

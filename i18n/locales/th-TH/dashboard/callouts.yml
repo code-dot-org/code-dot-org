@@ -68,6 +68,8 @@ th:
         4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
       Robot_callout:
         4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Ryan_Demo_callout:
+        dance_callout_02: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม
       Underground Avoiding Lava_2018_callout:
@@ -90,13 +92,19 @@ th:
         courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
@@ -112,15 +120,23 @@ th:
         courseA_maze_seq1_1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseA_maze_seq1_2019_callout:
+        courseA_maze_seq1_1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
       courseB_maze_seq1_callout:
         courseB_maze_seq1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: เริ่มต้นด้วยการใช้บล็อกอันนี้เพื่อส่งศิลปินไปที่ใจกลางของหน้าจอ
@@ -163,6 +179,8 @@ th:
       courseF_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด " เริ่ม " เพื่อให้โปรแกรมของคุณเริ่มทำงาน
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด " เริ่ม " เพื่อให้โปรแกรมของคุณเริ่มทำงาน
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน

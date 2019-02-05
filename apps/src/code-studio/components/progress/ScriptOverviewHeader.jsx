@@ -6,10 +6,11 @@ import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import ScriptAnnouncements from './ScriptAnnouncements';
-import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import { dismissedRedirectWarning, onDismissRedirectWarning } from '@cdo/apps/util/dismissVersionRedirect';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -42,6 +43,13 @@ const styles = {
   },
 };
 
+export const scriptVersionShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  version_year: PropTypes.string.isRequired,
+  version_title: PropTypes.string.isRequired,
+  can_view_version: PropTypes.bool.isRequired,
+});
+
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -68,12 +76,10 @@ class ScriptOverviewHeader extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired,
-      version_title: PropTypes.string.isRequired,
-    })).isRequired,
+    showRedirectWarning: PropTypes.bool,
+    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
+    courseName: PropTypes.string,
   };
 
   componentDidMount() {
@@ -99,33 +105,58 @@ class ScriptOverviewHeader extends Component {
     });
   };
 
+  /*
+  Processes all of the announcements for the script and determines if they should be shown based
+  on the their visibility setting and the current view. For example a teacher should only see
+  announcements for Teacher-only or Teacher and Student.
+  Also defaults to old announcements without a visibility to be Teacher-only.
+  Lastly checks if the non-verified teacher announcement should be shown to a teacher and
+  adds the announcement if needed.
+   */
+  filterAnnouncements = (currentView) => {
+    const currentAnnouncements = [];
+    this.props.announcements.forEach(element => {
+      if (element.visibility === VisibilityType.teacherAndStudent) {
+        currentAnnouncements.push(element);
+      } else if (currentView === "Teacher" && (element.visibility === VisibilityType.teacher || element.visibility === undefined)) {
+        currentAnnouncements.push(element);
+      } else if (currentView === "Student" && element.visibility === VisibilityType.student ) {
+        currentAnnouncements.push(element);
+      }
+    });
+
+    // Checks if the non-verified teacher announcement should be shown
+    if (currentView === "Teacher") {
+      if (!this.props.isVerifiedTeacher && this.props.hasVerifiedResources) {
+        currentAnnouncements.push({
+          notice: i18n.verifiedResourcesNotice(),
+          details: i18n.verifiedResourcesDetails(),
+          link: "https://support.code.org/hc/en-us/articles/115001550131",
+          type: NotificationType.information,
+        });
+      }
+    }
+    return currentAnnouncements;
+  };
+
   render() {
     const {
       plcHeaderProps,
-      announcements,
       scriptName,
       scriptTitle,
       scriptDescription,
       betaTitle,
       viewAs,
       isSignedIn,
-      isVerifiedTeacher,
-      hasVerifiedResources,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
+      showRedirectWarning,
       versions,
       showHiddenUnitWarning,
+      courseName,
     } = this.props;
 
-    let verifiedResourcesAnnounce = [];
-    if (!isVerifiedTeacher && hasVerifiedResources) {
-      verifiedResourcesAnnounce.push({
-        notice: i18n.verifiedResourcesNotice(),
-        details: i18n.verifiedResourcesDetails(),
-        link: "https://support.code.org/hc/en-us/articles/115001550131",
-        type: NotificationType.information,
-      });
-    }
+    const displayVersionWarning = showRedirectWarning && !dismissedRedirectWarning(courseName || scriptName);
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -133,6 +164,9 @@ class ScriptOverviewHeader extends Component {
     } else if (showScriptVersionWarning) {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
+
+    // Only display viewable versions in script version dropdown.
+    const filteredVersions = versions.filter(version => version.can_view_version);
 
     return (
       <div>
@@ -142,10 +176,20 @@ class ScriptOverviewHeader extends Component {
             course_view_path={plcHeaderProps.courseViewPath}
           />
         }
-        {viewAs === ViewType.Teacher && isSignedIn &&
+        {isSignedIn &&
           <ScriptAnnouncements
-            announcements={verifiedResourcesAnnounce.concat(announcements)}
+            announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
+          />
+        }
+        {displayVersionWarning &&
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.redirectCourseVersionWarningDetails()}
+            dismissible={true}
+            width={SCRIPT_OVERVIEW_WIDTH}
+            onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
           />
         }
         {versionWarningDetails &&
@@ -179,7 +223,7 @@ class ScriptOverviewHeader extends Component {
                 <span className="betatext">{betaTitle}</span>
                 }
               </h1>
-              {versions.length > 1 &&
+              {filteredVersions.length > 1 &&
                 <span style={styles.versionWrapper}>
                   <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
                   <select
@@ -188,7 +232,7 @@ class ScriptOverviewHeader extends Component {
                     style={styles.versionDropdown}
                     id="version-selector"
                   >
-                    {versions.map(version => (
+                    {filteredVersions.map(version => (
                       <option key={version.name} value={version.name}>
                         {version.version_year}
                       </option>

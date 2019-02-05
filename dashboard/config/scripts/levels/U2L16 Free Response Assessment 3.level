@@ -7,7 +7,7 @@
   "properties": {
     "title": "Assessment 3",
     "placeholder": "Enter answer here",
-    "markdown_instructions": "Why are computationally-hard problems important in encryption strategies?",
+    "long_instructions": "Why are computationally-hard problems important in encryption strategies?",
     "encrypted_solution": "Lzf8yD94pUcdHt3zs5byDXHNm20bD2lI1Z7wSVxlhJdZsD4H3HXcyoB+TxCN\n+rY+KAG/DOBSTIgkV0LDsn2EOsnPuvjWdoB1wJFJZaeAwZem2Ot1V4JhwZlB\nYfVpv/ZQUDYVr4nJGFoBG+zZMexe9LU9CYbtSPomxYH1PbjpcH+SSgTQ9AF0\nEl68VIKzGBIKik/7ZyR3psaynhlcQ3lfWg==\n",
     "skip_dialog": true,
     "skip_sound": true

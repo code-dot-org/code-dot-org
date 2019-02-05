@@ -53,7 +53,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Click Key\r\n\r\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00 PM.png\" style=\"width:170px;float:right\">\r\n\r\nOnce a user clicks the key you will want to show they are holding it. You can do this by moving the key to the bottom corner of the room. \r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for when the user clicks the key. \r\n* Inside the `onEvent` block:\r\n\t* Use `setPosition` to move the key to the bottom corner of the screen",
+    "long_instructions": "# Click Key\r\n\r\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00 PM.png\" style=\"width:170px;float:right\">\r\n\r\nOnce a user clicks the key you will want to show they are holding it. You can do this by moving the key to the bottom corner of the room. \r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for when the user clicks the key. \r\n* Inside the `onEvent` block:\r\n\t* Use `setPosition` to move the key to the bottom corner of the screen",
     "contained_level_names": null
   },
   "published": true,

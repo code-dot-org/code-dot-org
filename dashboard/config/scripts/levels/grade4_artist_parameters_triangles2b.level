@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you complete this drawing? The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides.",
+    "short_instructions": "Can you complete this drawing? The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".5",
-    "markdown_instructions": "Can you complete this drawing? \r\n\r\nThe sides of each triangle are 25 pixels larger than the last.  \r\nThe first triangle has 25 pixel sides.",
+    "long_instructions": "Can you complete this drawing? \r\n\r\nThe sides of each triangle are 25 pixels larger than the last.  \r\nThe first triangle has 25 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

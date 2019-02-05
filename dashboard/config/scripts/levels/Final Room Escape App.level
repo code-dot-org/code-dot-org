@@ -74,7 +74,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# You've done it!\r\n\r\nYou made a room escape! Now its time to customize it. \r\n\r\nConsider:\r\n\r\n* Add more style to the room\r\n* Adding more things users can interact with in the room\r\n* Try to make your secret code random\r\n* Adding more rooms",
+    "long_instructions": "# You've done it!\r\n\r\nYou made a room escape! Now its time to customize it. \r\n\r\nConsider:\r\n\r\n* Add more style to the room\r\n* Adding more things users can interact with in the room\r\n* Try to make your secret code random\r\n* Adding more rooms",
     "encrypted_examples": "Cie21/xpN2Mgf75oM2qEuXQRm8vDMYvz4OB4z6WwOwLvRJfEgAVuq0494Jd4\nJg0r\n",
     "contained_level_names": null
   },

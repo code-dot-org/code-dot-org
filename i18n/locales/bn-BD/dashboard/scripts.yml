@@ -453,7 +453,7 @@ bn:
             Bounce:
               name: বল লাফানো
         csd3-2017:
-          description_short: "প্রোগ্রামিং"
+          description_short: প্রোগ্রামিং
           stages:
             Functions:
               name: ফাংশনগুলি
@@ -899,3 +899,7 @@ bn:
           stages:
             'null':
               name: 'শূন্য'
+        pre-express-2019:
+          stages:
+            Spelling Bee:
+              name: বানান মৌমাছি

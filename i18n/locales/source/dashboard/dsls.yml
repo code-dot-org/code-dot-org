@@ -1990,8 +1990,11 @@ en:
         description here: description here
         title: title
       OPD-K5 Stage4Go: {}
+      OPD-K5 Stage4Go2: {}
+      OPD-K5 Stage4Review: {}
       OPD-K5 Stage4Start: {}
       OPD-K5 Stage5Go: {}
+      OPD-K5 Stage5Review: {}
       OPD-K5 Stage5Start: {}
       OPD-K5 Stage6Go: {}
       OPD-K5 Stage6Start: {}
@@ -3987,6 +3990,9 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      test-uid-passthrough:
+        test user id passthrough: test user id passthrough
+        testing to see if i can get the user id to passthrough via a markdown level: testing to see if i can get the user id to passthrough via a markdown level
       test123: {}
       text compression intro: {}
       text compression lesson plan: {}
@@ -4209,6 +4215,7 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
+        CSD U1 End of Unit Test: {}
         CSD Unit 1 Post Project Assessment 2018: {}
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
@@ -6853,68 +6860,68 @@ en:
       AP_practice_Qs_rqb_99_CSP_4_1_1:
         ? |-
           <pre>
-          xPos <- 3
-          yPos <- 3
+          xPos &lt;- 3
+          yPos &lt;- 3
           REPEAT 3 TIMES
-              {
-                  drawCircle(xPos, yPos, 3)
-                   xPos <- xPos + 6
-                   yPos <- yPos + 6
-              }
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+              yPos &lt;- yPos + 6
+          }
           </pre>
         : |-
           <pre>
-          xPos <- 3
-          yPos <- 3
+          xPos &lt;- 3
+          yPos &lt;- 3
           REPEAT 3 TIMES
-              {
-                  drawCircle(xPos, yPos, 3)
-                   xPos <- xPos + 6
-                   yPos <- yPos + 6
-              }
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+              yPos &lt;- yPos + 6
+          }
           </pre>
         ? |-
           <pre>
-          xPos <- 3
-          yPos <- 3
+          xPos &lt;- 3
+          yPos &lt;- 3
           REPEAT 3 TIMES
-              {
-                  drawCircle(xPos, yPos, 3)
-                   yPos <- yPos + 6
-              }
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+          }
           </pre>
         : |-
           <pre>
-          xPos <- 3
-          yPos <- 3
+          xPos &lt;- 3
+          yPos &lt;- 3
           REPEAT 3 TIMES
-              {
-                  drawCircle(xPos, yPos, 3)
-                   yPos <- yPos + 6
-              }
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+          }
           </pre>
         ? |-
           <pre>
-          xPos <- 3
-          yPos <- 3
+          xPos &lt;- 3
+          yPos &lt;- 3
           REPEAT 3 TIMES
-              {
-                  drawCircle(xPos, yPos, 3)
-                  xPos <- xPos + 6
-              }
+          {
+              drawCircle(xPos, yPos, 3)
+              yPos &lt;- yPos + 6
+          }
           </pre>
         : |-
           <pre>
-          xPos <- 3
-          yPos <- 3
+          xPos &lt;- 3
+          yPos &lt;- 3
           REPEAT 3 TIMES
-              {
-                  drawCircle(xPos, yPos, 3)
-                  xPos <- xPos + 6
-              }
+          {
+              drawCircle(xPos, yPos, 3)
+              yPos &lt;- yPos + 6
+          }
           </pre>
-        ? "<pre>\nxPos <- 3\nyPos <- 3\nREPEAT 3 TIMES\n    {\n        drawCircle(xPos, yPos, 3)\n     }  \n xPos <- xPos - 6\n yPos <- yPos - 6\n</pre>"
-        : "<pre>\nxPos <- 3\nyPos <- 3\nREPEAT 3 TIMES\n    {\n        drawCircle(xPos, yPos, 3)\n     }  \n xPos <- xPos - 6\n yPos <- yPos - 6\n</pre>"
+        ? "<pre>\nxPos &lt;- 3\nyPos &lt;- 3\nREPEAT 3 TIMES\n{\n    drawCircle(xPos, yPos, 3)\n}  \nxPos &lt;- xPos - 6\nyPos &lt;- yPos - 6\n</pre>"
+        : "<pre>\nxPos &lt;- 3\nyPos &lt;- 3\nREPEAT 3 TIMES\n{\n    drawCircle(xPos, yPos, 3)\n}  \nxPos &lt;- xPos - 6\nyPos &lt;- yPos - 6\n</pre>"
       AP_practice_Qs_rqb_9_CSP_3_1_1:
         Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
         Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
@@ -11787,6 +11794,16 @@ en:
         Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!
         Scrat will move forward, then turn and crash.: Scrat will move forward, then turn and crash.
         This code uses a new block. What do you think will happen when you press "Run"?: This code uses a new block. What do you think will happen when you press "Run"?
+      courseE_aboutme_3_multi:
+        Great idea! Rikki can't be identified through cartoon drawings.: Great idea! Rikki can't be identified through cartoon drawings.
+        'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend? ': 'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend? '
+        No! Rikki's email address should only be shared directly with people or websites she can trust.: No! Rikki's email address should only be shared directly with people or websites she can trust.
+        No! Someone could steal Rikki's identity with her student ID number!: No! Someone could steal Rikki's identity with her student ID number!
+        No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!: No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!
+        Rikki could share a photograph of her family.: Rikki could share a photograph of her family.
+        Rikki could share cartoon drawings of herself.: Rikki could share cartoon drawings of herself.
+        Rikki could share her email address: Rikki could share her email address
+        Rikki could share her student ID number.: Rikki could share her student ID number.
       courseE_multi_artist_predict1:
         Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
         Correct!: Correct!
@@ -12568,6 +12585,51 @@ en:
         Not sure what this is: Not sure what this is
         Web Development: Web Development
         'Yes': 'Yes'
+      csd-post-survey-2019-I like cs:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-I like cs class:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-I want more cs:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-able to learn cs:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-comfort in cs class:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-post-survey-q26:
         A few classes: A few classes
         About half the class sessions: About half the class sessions

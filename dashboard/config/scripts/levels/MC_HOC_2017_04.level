@@ -45,8 +45,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "...Runs through it.",
-    "instructions": "Change the loop from the last puzzle to help the Agent make a path over the wider part of this river.",
-    "markdown_instructions": "Change the loop from the last puzzle to help the Agent make a path over the wider part of this river.",
+    "short_instructions": "Change the loop from the last puzzle to help the Agent make a path over the wider part of this river.",
+    "long_instructions": "Change the loop from the last puzzle to help the Agent make a path over the wider part of this river.",
     "agent_start_direction": "0",
     "is_agent_level": "false",
     "contained_level_names": null
