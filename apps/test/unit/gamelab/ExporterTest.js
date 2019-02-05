@@ -4,7 +4,6 @@ import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import Exporter from '@cdo/apps/gamelab/Exporter';
-const assets = require('@cdo/apps/code-studio/assets');
 
 const emptyAnimationOpts = {
   "animationList": {
@@ -73,7 +72,7 @@ describe('The Gamelab Exporter,', function () {
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
-    assets.listStore.list.returns([
+    window.dashboard.assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
       {filename: 'zoo.mp3'},
