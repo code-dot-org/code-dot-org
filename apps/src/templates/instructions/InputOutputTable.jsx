@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 /**
  * A table of inputs and expected outputs that is only used by Calc and Studio.

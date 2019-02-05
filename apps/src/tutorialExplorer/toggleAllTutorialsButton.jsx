@@ -2,7 +2,8 @@
  * to show/hide the set of all tutorials and filters for all languages.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {

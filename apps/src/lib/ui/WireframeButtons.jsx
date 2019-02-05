@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
 import SendToPhone from '../../code-studio/components/SendToPhone';
 import project from '../../code-studio/initApp/project';

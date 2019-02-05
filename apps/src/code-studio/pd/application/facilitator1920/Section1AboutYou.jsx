@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {FormGroup} from "react-bootstrap";
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";

@@ -1,5 +1,7 @@
 /** @file Maker Board setup checker */
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';

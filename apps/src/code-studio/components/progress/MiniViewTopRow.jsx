@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
 import ProgressDetailToggle from "@cdo/apps/templates/progress/ProgressDetailToggle";

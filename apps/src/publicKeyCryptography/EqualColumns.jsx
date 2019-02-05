@@ -1,5 +1,6 @@
 /** @file Arranges child components as columns of equal width, filling available space */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Radium from 'radium';
 import {AnyChildren} from './types';
 

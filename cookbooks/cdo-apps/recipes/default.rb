@@ -118,3 +118,5 @@ include_recipe 'cdo-analytics' if %w[production-daemon production-console].inclu
 
 # Daemon-specific configuration for SSH access to frontend instances.
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
+
+include_recipe 'cdo-apps::lighthouse' if node.chef_environment == 'test'
