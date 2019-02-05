@@ -72,12 +72,13 @@
 
 .icon-fact .fa-times-circle {
   color: lightgray;
-  font-size: 49px;
+  font-size: 48px;
 }
 
 .fa-circle {
   color: dimgray;
-  font-size: 48px;
+  font-size: 44px;
+  padding-top: 2px;
 }
 
 .icon-fact .fa-check-circle {
