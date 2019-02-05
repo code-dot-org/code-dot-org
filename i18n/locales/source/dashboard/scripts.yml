@@ -10080,6 +10080,8 @@ en:
               name: End of Course Project
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
+            About Me:
+              name: About Me
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -10516,6 +10518,8 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
         courseb-2019:
           title: Course B (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -10653,6 +10657,14 @@ en:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
           title: Removed from CSF for 2019
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dani-test-script:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

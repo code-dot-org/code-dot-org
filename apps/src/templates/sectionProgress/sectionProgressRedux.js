@@ -1,6 +1,6 @@
 import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
 import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
 import {
   NAME_COLUMN_WIDTH,
   PROGRESS_BUBBLE_WIDTH,

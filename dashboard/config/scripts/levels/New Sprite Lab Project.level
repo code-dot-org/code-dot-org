@@ -54,8 +54,7 @@
     "include_shared_functions": "true",
     "block_pool": "gamelab",
     "block_pools": [
-      "GamelabJr",
-      "aalab"
+      "GamelabJr"
     ],
     "contained_level_names": null,
     "preload_asset_list": null,

@@ -3,7 +3,8 @@
  * can put a text header and subheader over that banner image.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from "../util/color";
 import {connect} from 'react-redux';
 
@@ -97,7 +98,7 @@ class HeaderBanner extends React.Component {
     description: PropTypes.string,
     children: PropTypes.node,
     short: PropTypes.bool,
-    responsiveSize: React.PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   };
 
   render() {

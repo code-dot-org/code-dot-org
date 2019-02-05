@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { ContractMatchErrorDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';

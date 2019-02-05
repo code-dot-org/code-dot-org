@@ -1,5 +1,7 @@
 /** Pagination controls */
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Radium, {Style} from 'radium';
 import color from "../util/color";
 import Pagination from "react-bootstrap/lib/Pagination";

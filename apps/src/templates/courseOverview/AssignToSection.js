@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
