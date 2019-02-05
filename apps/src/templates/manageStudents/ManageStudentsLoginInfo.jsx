@@ -17,7 +17,7 @@ class ManageStudentsLoginInfo extends Component {
     sectionCode: PropTypes.string,
     loginType: PropTypes.string,
     // The prefix for the code studio url in the current environment,
-    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
+    // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string,
   };
 
@@ -33,14 +33,14 @@ class ManageStudentsLoginInfo extends Component {
             </p>
             <p>
               {i18n.joinSectionExplanation()}
-              <a target="_blank" href={`${window.location.origin}/join`}>
-                {`${window.location.origin}/join`}
+              <a target="_blank" href={`${studioUrlPrefix}/join`}>
+                {`${studioUrlPrefix}/join`}
               </a>
             </p>
             <p>
               {i18n.sectionSignInInfo()}
-              <a target="_blank" href={`http:${studioUrlPrefix}/sections/${sectionCode}`}>
-                {`http:${studioUrlPrefix}/sections/${sectionCode}`}
+              <a target="_blank" href={`${studioUrlPrefix}/sections/${sectionCode}`}>
+                {`${studioUrlPrefix}/sections/${sectionCode}`}
               </a>
             </p>
             <p>
@@ -55,7 +55,7 @@ class ManageStudentsLoginInfo extends Component {
             <p>
               {i18n.joinSectionAsk()}
               <a target="_blank" href={`http:${studioUrlPrefix}/join/${sectionCode}`}>
-                {`http:${studioUrlPrefix}/join/${sectionCode}`}
+                {`${studioUrlPrefix}/join/${sectionCode}`}
               </a>
             </p>
           </div>
