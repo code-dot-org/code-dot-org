@@ -10,7 +10,7 @@ import manageStudents, {
   convertStudentServerData,
   toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import teacherSections, {setSections, selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {setSections, selectSection, setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
@@ -33,6 +33,7 @@ $(document).ready(function () {
   store.dispatch(setSections(allSections));
 
   store.dispatch(selectSection(section.id));
+  store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(asyncSetCompletedLevelCount(section.id));
 
