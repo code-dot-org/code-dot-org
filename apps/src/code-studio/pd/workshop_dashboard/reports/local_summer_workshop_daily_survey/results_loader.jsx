@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import $ from "jquery";
 import Spinner from '../../../components/spinner';
 import Results from './results';

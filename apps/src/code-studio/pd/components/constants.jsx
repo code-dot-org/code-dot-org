@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 const SchoolInfoPropType = PropTypes.shape({
   school_id: PropTypes.string,

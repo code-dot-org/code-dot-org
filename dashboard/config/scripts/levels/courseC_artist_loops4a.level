@@ -35,7 +35,7 @@
     "y": "70",
     "long_instructions": "Add a block to your code so that the artist jumps forward by 75 pixels between stamping the bird and the bat. In this puzzle, make sure you have `jump to 200 over 200 down` inside of your loop, so you stay in the center!\r\n___\r\n\r\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
-    "tts_markdown_instructions_override": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat.",
+    "tts_long_instructions_override": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to jump forward:\\n\\n<xml>\\n<block type=\\\"jump_by_constant\\\">\\n    <title name=\\\"DIR\\\">jumpForward</title>\\n    <title name=\\\"VALUE\\\">100</title>\\n  </block>\\n</xml>\\n\\nDon't forget to change how far!\",\"hint_id\":\"courseC_artist_loops4a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/676f99f63eb8b7e29c7abc89cec89a09/courseC_artist_loops4a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

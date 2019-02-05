@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {ApplabInterfaceMode} from './constants';
 import {Provider} from 'react-redux';
 import {action} from '@storybook/addon-actions';

@@ -130,17 +130,17 @@ function clickedOn(condition, sprite, event) {
     if(!Array.isArray(sprite)) {
       inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
     } else {
-      for(var i = 0; i < sprite.length; i++) {
-      	inputEvents.push({type: whenSpriteClicked, event: event, param: sprite[i]});
-      }
+      sprite.forEach(function(s) {
+      	inputEvents.push({type: whenSpriteClicked, event: event, param: s});
+      });
     }
   } else {
     if(!Array.isArray(sprite)) {
       inputEvents.push({type: mousePressedOver, event: event, param: sprite});
     } else {
-      for(var j = 0; j < sprite.length; j++) {
-      	inputEvents.push({type: mousePressedOver, event: event, param: sprite[j]});
-      }
+      sprite.forEach(function(s) {
+      	inputEvents.push({type: mousePressedOver, event: event, param: s});
+      });
     }
   }
 }
@@ -325,7 +325,6 @@ function runInputEvents() {
   var eventType;
   var event;
   var param;
-  console.log("inputEvents: " + inputEvents.length);
   for (var i = 0; i < inputEvents.length; i++) {
     eventType = inputEvents[i].type;
     event = inputEvents[i].event;

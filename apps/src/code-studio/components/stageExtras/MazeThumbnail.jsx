@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import skins from "@cdo/apps/maze/skins";
 import assetUrl from '@cdo/apps/code-studio/assetUrl';

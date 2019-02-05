@@ -1,5 +1,6 @@
 import onClickOutside from 'react-onclickoutside';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const PANEL_MIN_WIDTH = 163;
 
@@ -53,21 +54,21 @@ export default onClickOutside(class AutocompleteSelector extends React.Component
         {this.props.options.map((option, index) => {
           const isSelected = index === this.props.currentIndex;
           return (
-          <div
-            key={option}
-            className="autocomplete-option"
-            onClick={(e) => {
-              this.props.onOptionClicked(option);
-              e.preventDefault();
-            }}
-            onMouseOver={() => this.props.onOptionHovered(index)}
-            style={{
-              ...styles.autocompleteOption,
-              ...isSelected ? styles.selectedStyle : {}
-            }}
-          >
-            {option}
-          </div>
+            <div
+              key={option}
+              className="autocomplete-option"
+              onClick={(e) => {
+                this.props.onOptionClicked(option);
+                e.preventDefault();
+              }}
+              onMouseOver={() => this.props.onOptionHovered(index)}
+              style={{
+                ...styles.autocompleteOption,
+                ...(isSelected ? styles.selectedStyle : {})
+              }}
+            >
+              {option}
+            </div>
           );
         })}
       </div>

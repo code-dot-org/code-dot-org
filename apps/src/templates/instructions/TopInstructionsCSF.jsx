@@ -1,6 +1,7 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import classNames from 'classnames';
 import { connect } from 'react-redux';

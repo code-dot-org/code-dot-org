@@ -1,7 +1,8 @@
 /* TutorialSet: The overall tutorial area in TutorialExplorer.  Contains a set of tutorials.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
