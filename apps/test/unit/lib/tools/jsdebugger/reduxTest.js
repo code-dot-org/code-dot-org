@@ -33,9 +33,9 @@ describe('The JSDebugger redux duck', () => {
     sinon.spy(interpreter, 'handleStepOver');
 
     // override evalInCurrentScope so we don't have to set up the full interpreter.
-    // eslint-disable-next-line no-eval
     sinon
       .stub(interpreter, 'evalInCurrentScope')
+      // eslint-disable-next-line no-eval
       .callsFake(input => eval(input));
   });
   afterEach(() => {

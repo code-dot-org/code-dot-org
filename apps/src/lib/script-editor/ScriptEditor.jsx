@@ -60,13 +60,13 @@ export default class ScriptEditor extends React.Component {
   handleClearProjectWidgetSelectClick = () => {
     $(this.projectWidgetSelect)
       .children('option')
-      ['removeAttr']('selected', true);
+      .removeAttr('selected', true);
   };
 
   handleClearSupportedLocalesSelectClick = () => {
     $(this.supportedLocaleSelect)
       .children('option')
-      ['removeAttr']('selected', true);
+      .removeAttr('selected', true);
   };
 
   presubmit = e => {

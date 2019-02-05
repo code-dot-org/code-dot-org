@@ -38,11 +38,11 @@ function initPage() {
   function make_selection_handler(flag) {
     return function(e) {
       e.preventDefault();
-      $(this)
+      const options = $(this)
         .parent()
         .siblings('select')
-        .children('option')
-        [flag ? 'attr' : 'removeAttr']('selected', true);
+        .children('option');
+      options[flag ? 'attr' : 'removeAttr']('selected', true);
     };
   }
 
