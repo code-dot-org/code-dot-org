@@ -48,7 +48,7 @@ steps:
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
-    - pwd
+    - df -h
     - sudo chown -R circleci:circleci .
     - # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -141,6 +141,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: a37b3ff8767d1c25c2bd719f6372de50b2bfdef6c26cfb06075b5fcc05785a64
+hmac: 85bf71e91bbb85284b075768b4df3288bf99fce202b02e28835cfea417026b7e
 
 ...
