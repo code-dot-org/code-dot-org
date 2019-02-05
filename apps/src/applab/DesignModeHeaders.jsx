@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
 import commonStyles from '../commonStyles';

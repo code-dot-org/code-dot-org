@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";

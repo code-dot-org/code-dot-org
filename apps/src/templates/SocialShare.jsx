@@ -1,6 +1,8 @@
 /* global dashboard */
 
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import i18n from '@cdo/locale';
 import color from '../util/color';
 import testImageAccess from '../code-studio/url_test';

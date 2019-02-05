@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {toggleSharingColumn} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";

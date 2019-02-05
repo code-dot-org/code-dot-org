@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
 import Section2ChooseYourProgram from './Section2ChooseYourProgram';

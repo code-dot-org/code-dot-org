@@ -1,5 +1,6 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import * as actions from './errorDialogStackModule';
 import {connect} from 'react-redux';
 import BaseDialog from '../templates/BaseDialog.jsx';

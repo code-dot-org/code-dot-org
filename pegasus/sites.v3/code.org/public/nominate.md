@@ -41,7 +41,7 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1645" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0" height="1645" onload="if (window.formLoaded) { $('html, body').animate({scrollTop: $('#nomination_form').offset().top}, 1000); } else { window.formLoaded = true; }" id="nomination_form">Loading...</iframe>
 
 <br>
 

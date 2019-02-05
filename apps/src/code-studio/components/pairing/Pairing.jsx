@@ -1,7 +1,7 @@
 /* global $ */
-
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import SectionSelector from './SectionSelector.jsx';
 import StudentSelector from './StudentSelector.jsx';
 import i18n from "@cdo/locale";

@@ -38,7 +38,7 @@
     "images": "[\r\n  {\"filename\": \"https://images.code.org/3a6de65cfa4cf228b89cf61ba712f3f5-image-1477123431903.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "Challenge: The stairs down to the dock are broken.  Help me fix them.",
+    "tts_long_instructions_override": "Challenge: The stairs down to the dock are broken.  Help me fix them.",
     "disable_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null

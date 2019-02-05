@@ -1,7 +1,8 @@
 /**
  * Report Table
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {orderBy} from 'lodash';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';

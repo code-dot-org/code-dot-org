@@ -31,8 +31,8 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "Get me to the pig as quickly as possible!",
-    "tts_markdown_instructions_override": "Get me to the pig as quickly as possible!",
+    "tts_short_instructions_override": "Get me to the pig as quickly as possible!",
+    "tts_long_instructions_override": "Get me to the pig as quickly as possible!",
     "shape_shift": "false",
     "contained_level_names": null
   },

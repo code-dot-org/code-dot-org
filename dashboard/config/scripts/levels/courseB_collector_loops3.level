@@ -35,9 +35,9 @@
     "min_collected": "5",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "How can Laurel get all five piles of treasure using only one East block?",
+    "tts_short_instructions_override": "How can Laurel get all five piles of treasure using only one East block?",
     "shape_shift": "false",
-    "tts_markdown_instructions_override": "How can Laurel get all five piles of treasure using only one East block?",
+    "tts_long_instructions_override": "How can Laurel get all five piles of treasure using only one East block?",
     "disable_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
