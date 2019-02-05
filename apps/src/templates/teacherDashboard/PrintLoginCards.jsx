@@ -140,6 +140,7 @@ class WordOrPictureLoginCards extends React.Component {
     printWindow.document.write('<body onafterprint="self.close()">');
     printWindow.document.write(printArea);
     printWindow.document.write('</body></html>');
+    printWindow.print();
   };
 
   render() {
