@@ -51,7 +51,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the event block that you will need to get Jorge to move right:\\n\\n<xml><block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">2</title>\\n  </block></xml>\",\"hint_id\":\"courseA_playLab_events4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/18040c96ad827073ee04d73bfbe5ef34/courseA_playLab_events4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the code you will need to complete this puzzle:\\n\\n<xml><block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">right</title>\\n    <next>\\n  <block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">2</title>\\n  </block></next></block></xml>\",\"hint_id\":\"courseA_playLab_events4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4a2d790296ae7eab7e5cf5a78e1e1ae4/courseA_playLab_events4.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "Now, get Jorge to move right when the right arrow button is clicked.",
+    "tts_long_instructions_override": "Now, get Jorge to move right when the right arrow button is clicked.",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 11639,
     "name_suffix": "_2019",

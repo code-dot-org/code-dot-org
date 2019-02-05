@@ -8,9 +8,7 @@ function createNewSprite(name,costume,location) {
   if(costumeGroups.hasOwnProperty(costume)) {
      costumeGroups[costume].push(newSprite);
   } else {
-    var group = [];
-    group.push(newSprite);
-    costumeGroups[costume] = group;
+    costumeGroups[costume] = [newSprite];
   }
   return newSprite;
 }
