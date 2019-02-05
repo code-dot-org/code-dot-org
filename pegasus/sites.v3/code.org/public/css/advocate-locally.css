@@ -38,8 +38,7 @@
   font-size: 16px;
 }
 
-@media screen and (max-width: 971px)
-{
+@media screen and (max-width: 971px) {
   .join-coalition-wrapper { flex-direction: column; }
   .left-side-image {
     width: 100%;

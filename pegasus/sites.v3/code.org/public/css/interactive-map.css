@@ -8,7 +8,7 @@
 
 #right {
   float: right;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #infobox {
@@ -18,7 +18,7 @@
   color: dimgrey;
   padding: 20px;
   text-align: center;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .info {
@@ -66,21 +66,21 @@
   width: 270px;
 }
 
-.policy-title{
+.policy-title {
   padding: 10px 0px;
 }
 
-.icon-fact .fa-times-circle{
+.icon-fact .fa-times-circle {
   color: lightgray;
   font-size: 48px;
 }
 
-.fa-circle{
+.fa-circle {
   color: dimgray;
   font-size: 48px;
 }
 
-.icon-fact .fa-check-circle{
+.icon-fact .fa-check-circle {
   color: dimgray;
   display: inline-block;
   font-size: 48px;
@@ -131,6 +131,6 @@
   padding-top: 10px;
 }
 
-#sources a{
+#sources a {
   color: #7665a0;
 }

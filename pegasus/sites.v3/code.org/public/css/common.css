@@ -224,8 +224,7 @@
   border-left-color: #fff;
 }
 
-@media screen and (max-width: 319px)
-{
+@media screen and (max-width: 319px) {
   .learnpage {
     width: 100%;
   }
@@ -376,8 +375,6 @@
   .course-carousel .btn-carousel-slide {
   }
 
-
-
   .fullwidth-carousel .slide  {
     padding: 0 0;
   }
@@ -414,7 +411,6 @@
 button {
   margin-top: 10px;
 }
-
 
 /* Promote page */
 #promote-page h1 {
@@ -473,7 +469,7 @@ button {
 
 /* Stats carousels */
 #stats-carousel,
-#stats-impact-carousel{
+#stats-impact-carousel {
   width: 100%;
   margin: 0;
   position: relative;
@@ -504,7 +500,7 @@ button {
 #stats-carousel .slide-prev,
 #stats-carousel .slide-next,
 #stats-impact-carousel .slide-prev,
-#stats-impact-carousel .slide-next{
+#stats-impact-carousel .slide-next {
   position: absolute;
   top: 0;
   width: 40px;
@@ -512,11 +508,11 @@ button {
   background-color: #f7f7f7;
 }
 #stats-carousel .slide-prev,
-#stats-impact-carousel .slide-prev{
+#stats-impact-carousel .slide-prev {
   left: 0;
 }
 #stats-carousel .slide-next,
-#stats-impact-carousel .slide-next{
+#stats-impact-carousel .slide-next {
   right: 0;
 }
 
@@ -539,13 +535,13 @@ button {
   font-weight: normal;
 }
 
-.impact-stats-link{
+.impact-stats-link {
   width: 100%;
   color: white;
   background-color: #7665a0;
   margin-top: 20px;
   margin-bottom: 20px;
-  overflow:hidden;
+  overflow: hidden;
   padding: 16px;
 }
 
@@ -573,8 +569,6 @@ button {
   height: 50px;
   font-family: 'Gotham 5r', sans-serif;
 }
-
-
 
 @media screen and (min-width: 970px) {
   #stats-carousel .slide .slide-img,
