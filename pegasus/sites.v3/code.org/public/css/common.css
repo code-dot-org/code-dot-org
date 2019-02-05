@@ -493,7 +493,7 @@ button {
 #stats-carousel .slide img,
 #stats-impact-carousel .slide img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 #stats-carousel .slide-prev,
