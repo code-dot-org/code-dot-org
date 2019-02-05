@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';

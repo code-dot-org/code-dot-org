@@ -21255,6 +21255,7 @@ en:
       Fish Tank 4: Our fish tank needs some water! Use the `set background color` block to make the background blue.
       Fish Tank 5-validated: Our fish is getting a little lonely. Add another sprite to the fish tank.
       Fish Tank 5-validated_2019: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 5-validated_2019_implicitGroupTest: Our fish is getting a little lonely. Add another sprite to the fish tank.
       Fish Tank 5-validated_simple: The fish wants a friend.   Add a new sprite.
       Fish Tank 5: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
       Fish Tank 6-validated: "What do you want your fish’s new friend to do?   \n\nAdd a behavior and watch them go!"
@@ -22907,7 +22908,6 @@ en:
         * Shrink the size of the instructions area to resize how tall the web page is
       Search Engine Optimizer: "# Search Engine Optimizer (SEO)\n\n**Search Engine Optimization** is the process of maximizing the number of visitors to a particular website by ensuring that the site appears high on the list of results returned by a search engine.  A **Search Engine Optimizer** is a tool that analyzes a website on different qualities that lead to a higher rank on different search engines.\n\n# Do This\n\n* Open the SEO tool linked below in another tab\n* Try each of the websites on your list on the SEO:\n\t* Look at the score each website receives\n    * Does your ranking generally correlate to the SEO scores?\n* Take a look at how the SEO is rating websites:\n    * Look through the different sections of the rating\n    ![](https://images.code.org/dc938c470e578683f788d641c22a2699-image-1476900428201.05.20 PM.png) \n    * What factors does the SEO use to score websites? \n    * Are there new factors you could use in your algorithm that you had not thought of before?"
       Software Accessibility: "# Software Accessibility: Validator\n\nHTML is designed to display the same way on all computers, but sometimes you’ll notice that different web browsers, or even different versions of the same browser, display a website differently. Often this is because you either missed a rule of HTML, or didn’t describe your content specifically enough. Fortunately there’s a tool called the Validator that can check your code for errors!\n\n# Do This\n\n* Open up the <a href=\"https://validator.w3.org/#validate_by_input\" target=\"_blank\">Validator - Website</a>\n* For each html file in your project\n\t* Copy the html into the box\n    * Click check to see if there are an error\n\t* Make a list of all unique errors.\n    * For each error, write in your own words what you think it means\n    * For each error, search to find a potential solution."
-      Standalone_Artist_1: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.\n\n"
       Standalone_Artist_2: "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.\n\n"
       Standalone_Artist_3: "Can you draw this hexagon with 100 pixel sides and 60 degree turns?\n\n"
       Standalone_Artist_4: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?\n\n"
@@ -32651,7 +32651,30 @@ en:
       courseD_scrat_ramp7_2018: Help Scrat get to the acorn!
       courseD_scrat_ramp8: "**Challenge:** Use what you've learned to get Scrat to the acorn!"
       courseD_scrat_ramp8_2018: "**Challenge:** Use what you've learned to get Scrat to the acorn!"
-      courseE_aboutme_2: Ritchie loves to talk, so let's make him share some **Personal Information** when he is clicked! Just be careful that he doesn't accidentally share any **Private Information** as well, such as his full name, his address, his phone number, his parent's credit card number, or anything else that can identify him on the web. Instead, perhaps he can share his hobbies, his favorite video games, or even the lyrics to a song he wrote? You decide!
+      courseE_aboutme_2: |-
+        Rikki has so many cool things to share! In addition to her greeting, let's make her share some **Personal Information** when she is clicked.
+
+        Feel free to use your imagination to help Rikki. Just be careful that she doesn't accidentally share any **Private Information** as well!
+
+        **SAFE - Personal Information**
+        * first name
+        * favorite video games, books, or TV shows
+        * respectful opinions (no insults or bad language)
+
+        **UNSAFE - Private Information**
+        * full name
+        * home address
+        * phone number
+      courseE_aboutme_freeplay: |-
+        **Freeplay:** The world is yours! Express yourself by creating an **interactive poster**. Use custom sprite costumes, messages, and events to tell the world about yourself!
+
+        **Remember! Only share SAFE information.** Do not share anything that someone could use to identify you (address, full name, date of birth, etc).
+
+        Try some of these ideas:
+        * Create sprites with costumes that represent your personality and tastes!
+        * Draw yourself, your pets, or your favorite foods!
+        * Assign behaviors to your sprites! Make a sprite move around when clicked!
+        * Make events trigger messages! Perhaps sprites "talk" when they touch each other?
       courseE_artist_concept1: "Recreate this image. \n\n- The hexagons have sides of 50 pixels\n- The hexagons are 100 pixels apart\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."
       courseE_artist_concept1_2018: "Recreate this image. \n\n- The hexagons have sides of 50 pixels\n- The hexagons are 100 pixels apart\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."
       courseE_artist_concept1_2019: "Recreate this image. \n\n- The hexagons have sides of 50 pixels\n- The hexagons are 100 pixels apart\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."
@@ -34434,6 +34457,7 @@ en:
 
         * What are facilitators doing?
         * What are teachers doing?
+      elijah - test toolboxes: Here's a block! <xml><block type="math_number"><title name="NUM">255</title></block></xml> Yay!
       engagement-monday: |+
         # Day 1: Engagement
 

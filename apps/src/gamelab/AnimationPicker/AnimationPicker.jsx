@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {createUuid} from '../../utils';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';

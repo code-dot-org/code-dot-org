@@ -1,5 +1,6 @@
 /** @file The Alice character panel from the crypto widget */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';

@@ -3,7 +3,8 @@
  * view for a given lesson.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';

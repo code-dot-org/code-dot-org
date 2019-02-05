@@ -2,7 +2,9 @@
  * Teacher Landing Page
  */
 
-import React, {PropTypes, Component} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './EnrolledWorkshops';

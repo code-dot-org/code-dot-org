@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';

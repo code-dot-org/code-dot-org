@@ -1,14 +1,14 @@
 /**
  * @overview Component for editing key/value pairs.
  */
-
 import _ from 'lodash';
 import AddKeyRow from './AddKeyRow';
 import { DataView } from '../constants';
 import EditKeyRow from './EditKeyRow';
 import FontAwesome from '../../templates/FontAwesome';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
