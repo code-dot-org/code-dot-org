@@ -180,6 +180,16 @@ hi:
         text: बाएँ मुड़ें
       RyanLab_turnRight:
         text: दाएँ मुड़ें
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       binary_whenKey:
         options:
           KEY:

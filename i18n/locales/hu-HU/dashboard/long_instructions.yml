@@ -195,8 +195,14 @@ hu:
         bizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal felhasználási feltételeit.\r
         \r
 
+      Course 4 Artist 1: "Segíts nekem befejezni a dobozom rajzolását. (Minden vonal 200 pixel hosszú)\n\n"
       Course 4 Artist 13: Még mindig játszol? Itt egy üres vászon, amire azt rajzolsz, amit csak akarsz!
-      Course 4 Artist 6: "Egészítsd ki a kódot, hogy kirajzolódjanak a háromszögek.\nSegítség: a 3 háromszög egy kör belsejében vannak."
+      Course 4 Artist 2: "Ciklusba tudnád rakni ezt a kód részletet, hogy a szürke négyzet kirajzolódjon? (Minden oldal 300 pixel hosszú)"
+      Course 4 Artist 3: "Rendben, most próbáld meg kitalálni, hogy mi fog történni, ha futtatod ezt a kódot (vagy futtasd le). Aztán, ismételd meg a kódot annyiszor, hogy kirajzolódjon a teljes ábra."
+      Course 4 Artist 4: "Hány fokból áll egy kör? A hiányzó helyre írd be a helyes választ, hogy egy színes kört készíts."
+      Course 4 Artist 5: "Rajzold meg a másik felét ennek a szimmetrikus mintának. A háromszögek minden oldala 50 pixel hosszú.\nLehet, hogy többször is le kell futtatnod a kódot, hogy megtaláld, pontosan milyen blokkokra is van szükséged."
+      Course 4 Artist 6: Egészítsd ki a kódot, hogy kirajzolódjon ez a három egyenlő oldalú háromszög.
+      Course 4 Artist 7: 'Az alábbi ismétlést ágyazd be egy másik ismétlésbe, hogy így rajzolj 10 elforgatott háromszöget.'
       Course 4 Artist 8: Rajzold meg ezt a napocskát egy ciklussal, ami 12 háromszöget rajzol.
       Course 4 Artist 8a: Emlékszel erre az alakzatra? Most megrajzolhatod úgy, hogy nincsenek kiinduló blokkok!
       Course 4 Artist Binary 1a: "Ez egy olyan függvény, amely egy egyesekből és nullákból álló bináris számsorozatot kap, és a művésszel megrajzoltatja balról jobbra, felülről lefelé. A művész kitölti a négyzetet, amikor egyet lát, és kihagyja a négyzetet, amikor nullát lát.\\r\n\\r\nFuttasd a kódot, és nézd meg, hogyan rajzolja meg a művész a mintát a bináris sorozatot használva."
@@ -204,6 +210,9 @@ hu:
       Course 4 Artist For Loops 6a: Végezz el három kis módosítást az előző kódon, hogy ezt kapd!
       Course 4 Artist For Loops 8a: Egyetlen kis módosítás az előző kódon ezt a képet eredményezi. Kitalálod, hogy mit kell módosítani?
       Course 4 Artist For Loops Challenge_a: "**Kihívás:** Kitalálod, hogy az eddig tanultak felhasználásával, hogyan hozhatod\nlétre ezt a 40 képpont oldalhosszúságú sokszögekből álló képet?"
+      Course 4 Bee 1: "A méh nem tudja, mi van a felhő alatt! \nHasználd a 'ha' blokkot, hogy megtudd, virág van-e a felhő alatt. \nCsak akkor gyűjts nektárt, ha tényleg virágot találsz."
+      Course 4 Bee 2: "Használd a \"ha/különben\" blokkot, és ellenőrizd, hogy egy virágnál vagy egy lépnél állsz-e. Ha virágnál állsz, akkor gyűjts egy nektárt, különben pedig készíts mézet!"
+      Course 4 Bee 3: "Az ismeretlen objektum vagy virág vagy lép. Használd a ha/különben blokkot nektár gyűjtéséhez, ha ez virág, különben pedig készíts mézet (mert ez egy lép)."
       Course 4 Bee Params 1: Használd a "gyűjts 3 nektárt" függvényt, amelynek hatására elfordulok, mozgok, nektárt gyűjtök és aztán visszatérek a kiindulási pontra. Írj egy kódot a "gyűjts 3 nektárt" függvény felhasználásával, amellyel az összes nektárt összegyűjtjük.
       Course 4 Play Lab Params 4: "Itt van egy `patrol` nevű függvény.\n\\r\n\\r\nSzerkeszd a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele menjen."
       Course 4 Play Lab Params 8: Használd az "amikor a szereplő megérinti" blokkot, és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint más szereplőket.
@@ -446,6 +455,13 @@ hu:
       Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd a bárányt.
       Overworld Move to Sheep_2018: Adj hozzá egy második előrelépni parancsot, hogy elérd a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy elérd a bárányt.
+      Ryan_Demo: |-
+        Táncoltassuk meg ezt a jávorszarvast!
+
+        Húzd ki az <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokk alá. A táncosod a negyedik ütem után elkezd táncolni.
+
+
+        A zenében **ütemekben** mérjük az időt. Ebben a bemutatóban az ütemek négy negyed hosszúak.
       Testing Quantum Farmer: "Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az \"amíg van\" ciklust használd."
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár törölheti az egészet, és írhat helyette valami teljesen mást)
       courseD_bee_nestedLoops5: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'

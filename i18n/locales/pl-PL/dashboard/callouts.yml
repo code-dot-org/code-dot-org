@@ -356,6 +356,8 @@ pl:
         4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
+      Ryan_Demo_callout:
+        dance_callout_02: Dodaj ten blok do swojego programu!
       SG U3L08 how to add comments_callout:
         comment_highlight: Przeciągnij blok komentarza stąd do twojego kodu
       SG U3L2_Turtle3by3Grid_callout:
@@ -434,9 +436,13 @@ pl:
         courseA_artist_loops4_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Ta liczba znaczy, że tylko jeden spośród bloków tego typu może być użyty w ostatecznej odpowiedzi.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Ta liczba znaczy, że tylko jeden spośród bloków tego typu może być użyty w ostatecznej odpowiedzi.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Ta liczba znaczy, że tylko jeden spośród bloków tego typu może być użyty w ostatecznej odpowiedzi.
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: Ta liczba znaczy, że tylko jeden spośród bloków tego typu może być użyty w ostatecznej odpowiedzi.
@@ -444,9 +450,13 @@ pl:
         courseA_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Kliknij tutaj, aby zobaczyć, jak kod działa!
@@ -466,6 +476,8 @@ pl:
         courseA_maze_seq1_1: Kliknij żarówkę, gdy potrzebujesz wskazówki!
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: Kliknij żarówkę, gdy potrzebujesz wskazówki!
+      courseA_maze_seq1_2019_callout:
+        courseA_maze_seq1_1: Kliknij żarówkę, gdy potrzebujesz wskazówki!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Użyj przycisku kroku, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!
       courseA_maze_seq2_2018_callout:
@@ -478,9 +490,13 @@ pl:
         courseA_playlab_events4_callout1: To jest wywołanie
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: To jest wywołanie
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: To jest wywołanie
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Kliknij tutaj, aby zmienić kierunek strzałki zdarzenia.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Kliknij tutaj, aby zmienić kierunek strzałki zdarzenia.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Kliknij tutaj, aby zmienić kierunek strzałki zdarzenia.
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Ta liczba znaczy, że w przyborniku nie ma więcej bloków tego typu.
@@ -488,9 +504,13 @@ pl:
         courseB_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Kliknij żarówkę, gdy potrzebujesz wskazówki!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Kliknij żarówkę, gdy potrzebujesz wskazówki!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Kliknij żarówkę, gdy potrzebujesz wskazówki!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Użyj przycisku kroku, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!
@@ -503,6 +523,8 @@ pl:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Użyj zielonej strzałki w dół, by zmieniać kierunki.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Użyj zielonej strzałki w dół, by zmieniać kierunki.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Użyj zielonej strzałki w dół, by zmieniać kierunki.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Przesuń aktora do tej flagi, aby przejść do następnego poziomu.

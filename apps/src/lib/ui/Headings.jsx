@@ -1,5 +1,7 @@
 /** @file Reusable heading components for the 2017 dashboard redesign */
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import color from '../../util/color';
 
 const baseHeadingStyle = {

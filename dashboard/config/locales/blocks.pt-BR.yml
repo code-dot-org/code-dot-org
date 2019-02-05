@@ -1093,6 +1093,7 @@ pt-BR:
             '"y"': posição y
             '"direction"': direção do movimento
       Mikelab_groupCreateNewSprite:
+        text: fazer um(a) novo(a) {COSTUME} em {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": parte de cima
@@ -1106,6 +1107,7 @@ pt-BR:
             "{x: 300, y: 300}": canto inferior direito
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
       Mikelab_groupDestroy:
+        text: remover{SELECT}{COSTUME}
         options:
           SELECT:
             '"all"': todos
@@ -1289,23 +1291,26 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       aalab_createPropertyGroup:
         text: |-
           faça um novo grupo de sprite chamado {VAR}
           de todos os sprites {COSTUME}
       aalab_createSpriteGroup:
         text: faça um novo grupo de personagens chamado {VAR}
-      aalab_spritesWhere:
-        text: personagens onde {PROPERTY} é {VALUE}
+      aalab_getThisSprite:
         options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-            '"costume"': fantasia
-            '"direction"': direção do movimento
-            '"rotation"': rotação ou direção
-            '"tint"': tonalidade
+          CHOICE:
+            '"this"': este
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       binary_drawPixelHere:
         options:
           VAL:

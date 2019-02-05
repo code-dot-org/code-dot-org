@@ -1,5 +1,6 @@
 import {showVideoDialog} from "@cdo/apps/code-studio/videos";
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {videoDataShape} from './types';
 
 const styles = {

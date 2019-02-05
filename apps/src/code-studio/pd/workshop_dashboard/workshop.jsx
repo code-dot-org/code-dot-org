@@ -4,10 +4,10 @@
  *   /workshops/:workshopId
  *   /Workshops/:workshopId/edit
  */
-
 import $ from 'jquery';
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import {
@@ -716,6 +716,7 @@ export class Workshop extends React.Component {
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
           workshopCourse={this.state.workshop.course}
+          workshopSubject={this.state.workshop.subject}
           workshopDate={firstSessionDate}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}

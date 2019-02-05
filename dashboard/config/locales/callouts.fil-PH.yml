@@ -458,6 +458,10 @@ fil:
         courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
           loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
           ang mga ito sa mamayang yugto.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
+          loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
+          ang mga ito sa mamayang yugto.
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
           loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
@@ -481,6 +485,9 @@ fil:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita
           mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita
+          mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita
           mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
@@ -496,6 +503,8 @@ fil:
         courseA_maze_seq1_1: I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!
+      courseA_maze_seq1_2019_callout:
+        courseA_maze_seq1_1: I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Gamitin hakbang na pindutan para makapunta sa
           bawat hakbang sa programa. Ito ay makakatulong sa iyo na maghanap ng bug!
@@ -510,13 +519,23 @@ fil:
         courseA_playLab_events6_1: Ito ay nagbibigay-daan sa iyo na makapili ng "random"
           na tunog, kung saan nangangahulugan na hindi mo alam kung ano ang makukuha
           mo hanggang marinig mo ito!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Ito ay nagbibigay-daan sa iyo na makapili ng "random"
+          na tunog, kung saan nangangahulugan na hindi mo alam kung ano ang makukuha
+          mo hanggang marinig mo ito!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
+          ang "Run" para simulan ang iyong programa.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
           ang "Run" para simulan ang iyong programa.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Mayroong isa lang sa mga blokeng ito sa loob ng toolbox.
           Paano mo ito magagamit?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Mayroong isa lang sa mga blokeng ito sa loob ng toolbox.
+          Paano mo ito magagamit?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Mayroong isa lang sa mga blokeng ito sa loob ng toolbox.
           Paano mo ito magagamit?
       courseB_artist_loops5_callout:
@@ -530,9 +549,15 @@ fil:
         courseB_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
           loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
           ang mga ito sa mamayang yugto.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa
+          loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
+          ang mga ito sa mamayang yugto.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Gamitin hakbang na pindutan para makapunta sa
@@ -550,6 +575,9 @@ fil:
         courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin
           ang mga direksyon.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin
+          ang mga direksyon.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin
           ang mga direksyon.
       courseC_PlayLab_events_challenge1_callout:
@@ -996,6 +1024,9 @@ fil:
         sign_in_to_save_project: Gusto mong ma-access ang iyong proyekto mamaya? Mag-signin
           para mai-save ang proyektong ito sa iyong account!
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
+          ang "Run" para simulan ang iyong programa.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
           ang "Run" para simulan ang iyong programa.
       coursef_maze_ramp3_callout:

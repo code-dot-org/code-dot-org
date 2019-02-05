@@ -232,3 +232,16 @@ ca:
       PaperPlanes_2019:
         title: 'Algoritmes de la vida quotidiana: Avions de paper'
         desc: Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida diària, concretament fent avions de paper. La unitat també se centra en un panorama més ampli de la informàtica i com els algoritmes juguen un rol essencial.
+      PlantASeed_2019:
+        title: 'Algoritmes reals: Planta una llavor'
+        desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important.
+      UnplugHappyMaps_2019:
+        title: Mapes feliços
+        desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
+      GoingPlacesSafely_2019:
+        title: Anant a llocs segurs
+        desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
+      MoveItMoveIt_2019:
+        title: Mou-lo, Mou-lo
+      DigitalFootprint_2019:
+        title: La vostra empremta digital

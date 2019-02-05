@@ -568,6 +568,13 @@ vi:
         đến con cừu.
       Overworld Move to Sheep_2019: Hãy thêm một lệnh "move forward" thứ hai để đi
         đến con cừu.
+      Ryan_Demo: |-
+        Hãy làm con nai sừng tấm này nhảy múa nào!
+
+        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
+
+
+        **Nhịp** được sử dụng để tính thời gian trong âm nhạc. Trong hướng dẫn này, một nhịp dài bốn phách.
       course4_artist_fwp_challenge1: Thử chạy chương trình này, và tạo vài thay đổi
         để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa
         nó và thay thế nó bằng một cái gì đó hoàn toàn khác)

@@ -516,3 +516,25 @@ nl:
         desc: Deze les Laat zien hoe we dagelijks algoritmes gebruiken, met name bij
           het maken van papieren vliegtuigjes. Deze les richt zich op het grotere
           geheel van computerkunde en hoe algoritmen een hoofdrol spelen.
+      PlantASeed_2019:
+        title: 'Algoritmen in het echte leven: Plant een zaadje'
+        desc: Deze les laat zien hoe we algoritmen in het dagelijkse leven gebruiken,
+          waarbij het planten van een zaadje als voorbeeld wordt gebruikt. Het richt
+          zich ook op het grotere geheel van computerkunde en hoe algoritmen een belangrijke
+          rol spelen.
+      UnplugHappyMaps_2019:
+        title: Vrolijke Routes
+        desc: Leerlingen maken eenvoudige algoritmen (reeks instructies) om een figuurtje
+          door een doolhof te bewegen waarbij ze een enkel commando gebruiken.
+      GoingPlacesSafely_2019:
+        title: Veilig Reizen
+        desc: Het internet is een krachtige, maar soms gevaarlijke plek. Leraren vertellen
+          hoe je het veilig kunt houden wanneer je op internet surft.
+      courseA_unplugged_loops_2019:
+        desc: In deze les leert je over lussen!
+      MoveItMoveIt_2019:
+        title: verplaats het, verplaats het
+      DigitalFootprint_2019:
+        title: Jouw Digitale Voetafdruk
+        desc: Leerkrachten introduceren de leerlingen dat het online maken van persoonlijke
+          gegevens een digitale voetprent van "slierten" maakt die gevolgen hebben.

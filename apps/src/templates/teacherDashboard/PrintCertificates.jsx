@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from "../../util/color";
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const STANDARD_PADDING = 20;

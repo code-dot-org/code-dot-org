@@ -640,14 +640,16 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
       binary_move:
         options:
           DIR:

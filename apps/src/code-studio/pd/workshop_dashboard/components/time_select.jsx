@@ -5,7 +5,8 @@
  * intervals. The text box can also be edited directly.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import moment from 'moment';
 import {
   FormControl,

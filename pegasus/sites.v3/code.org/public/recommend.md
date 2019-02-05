@@ -25,7 +25,7 @@ social:
 
 <br>
 
-Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach CS, to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
+Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach computer science (CS), to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
 
 <br>
 
@@ -37,6 +37,7 @@ Do you know a teacher who loves learning? [Our workshops](https://code.org/educa
 The [Code.org course pathway](https://code.org/educate) ranges from kindergarten through high school, so you can nominate any teacher for a scholarship to participate in this wonderful program. Thanks to our generous [donors](https://code.org/about/donors), eligible teachers can receive full scholarships and <strong>all</strong> teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
 
 (Note: Scholarship availability varies by region. Outside the US, the teacher prep course is online. All the classroom resources are <strong>completely free of charge</strong>.)
+
 
 <br>
 

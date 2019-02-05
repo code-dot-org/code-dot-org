@@ -1,10 +1,12 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from "@cdo/locale";
 import color from "@cdo/apps/util/color";
 import DiscountCodeSchoolChoice from "./DiscountCodeSchoolChoice";
 import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
+import {isUnit6IntentionEligible} from '../util/discountLogic';
 import Unit6ValidationStep from "./Unit6ValidationStep";
 import EligibilityConfirmDialog from "./EligibilityConfirmDialog";
 import DiscountCodeInstructions from './DiscountCodeInstructions';
@@ -50,8 +52,7 @@ export default class EligibilityChecklist extends React.Component {
       this.state = {
         ...this.state,
         yearChoice: props.unit6Intention,
-        statusYear: ['yes1718', 'yes1819', 'yes1920'].includes(props.unit6Intention) ?
-          Status.SUCCEEDED : Status.FAILED,
+        statusYear: isUnit6IntentionEligible(props.unit6Intention) ? Status.SUCCEEDED : Status.FAILED,
       };
     }
 

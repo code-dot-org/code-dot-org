@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -50,7 +51,13 @@ class ResourceLink extends React.Component {
     dialogSelected: false
   };
 
-  selectResource = () => {
+  selectResource = (e) => {
+    if (e.shiftKey || e.metaKey || e.altKey) {
+      // Don't open modal, just open link in new tab/window
+      return;
+    }
+    // Don't open link, just open modal.
+    e.preventDefault();
     var dialog = new LegacyDialog({
       body: $('<iframe>')
         .addClass('instructions-container')
@@ -89,7 +96,7 @@ class ResourceLink extends React.Component {
               title={text}
             />
           </span>
-          <a style={styles.textLink}>
+          <a href={this.props.reference} style={styles.textLink}>
             {text}
           </a>
         </div>

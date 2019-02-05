@@ -300,10 +300,16 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': আকার
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
       binary_move:
         options:
           DIR:

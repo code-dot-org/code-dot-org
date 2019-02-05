@@ -1,7 +1,8 @@
 /**
  * Displays nicely-formatted session time for a workshop.
 */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import _ from 'lodash';
 import {Tabs, Tab} from 'react-bootstrap';
 import {enrollmentShape} from "../types";
@@ -13,6 +14,7 @@ export default class WorkshopEnrollment extends React.Component {
     enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
     workshopId: PropTypes.string.isRequired,
     workshopCourse: PropTypes.string.isRequired,
+    workshopSubject: PropTypes.string,
     workshopDate: PropTypes.string.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
@@ -46,6 +48,7 @@ export default class WorkshopEnrollment extends React.Component {
         accountRequiredForAttendance={this.props.accountRequiredForAttendance}
         onDelete={this.props.onDelete}
         workshopCourse={this.props.workshopCourse}
+        workshopSubject={this.props.workshopSubject}
       />
     );
 

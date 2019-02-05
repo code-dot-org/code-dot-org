@@ -17,6 +17,9 @@ module.exports = function (grunt) {
 
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
+    if (path.resolve(process.env.mocha_entry).indexOf('/apps/test/integration') > -1) {
+      throw new Error('Cannot use karma:entry to run integration tests');
+    }
     const isDirectory = fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory();
     const loadContext = isDirectory ?
       `let testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\\.jsx?$/);` :
@@ -471,11 +474,12 @@ describe('entry tests', () => {
     'courses/show':                        './src/sites/studio/pages/courses/show.js',
     'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
     'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
-    'teacher_dashboard/index':              './src/sites/studio/pages/teacher_dashboard/index.js'
+    'teacher_dashboard/show':              './src/sites/studio/pages/teacher_dashboard/show.js'
   };
 
   var internalEntries = {
     'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
+    'blocks/index':                  './src/sites/studio/pages/blocks/index.js',
     'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
@@ -522,7 +526,6 @@ describe('entry tests', () => {
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
     'pd/fit_weekend_registration/new': './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
     'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',

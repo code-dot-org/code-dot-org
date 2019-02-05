@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "tts_markdown_instructions_override": "# Unit Reflection: Thursday\r\n\r\nAdd Question",
+    "tts_long_instructions_override": "# Unit Reflection: Thursday\r\n\r\nAdd Question",
     "instructions_important": "false",
     "display_name": "Unit Reflection",
     "allow_user_uploads": "false",

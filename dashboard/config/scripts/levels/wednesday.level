@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "false",
     "maze": "[[{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16}],[{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16},{\"tileType\":16}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "tts_instructions_override": "This is a test",
+    "tts_short_instructions_override": "This is a test",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

@@ -784,6 +784,13 @@ uk:
         щоб дістатись до вівці.
       Overworld Move to Sheep_2019: Додай другу команду "рухатись вперед" для того,
         щоб дістатись до вівці.
+      Ryan_Demo: |-
+        Хай цей лось потанцює!
+
+        Перетягни блок <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> на робочу область. З'єднай його з блоком <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Танцівник повинен розпочати новий рух після чотирьох кроків.
+
+
+        **Кроки** використовуються як одиниця виміру часу. У цьому підручнику крок триває чотири удари.
       Testing Quantum Farmer: 'Ого, я знайшла дуже глибоку яму! Я не знаю, скільки
         відер землі для неї потрібно. Можеш написати програму, яка наповнює їх, поки
         земля не стане рівною? Підказка: на цей раз спробуй скористатись циклом поки.'

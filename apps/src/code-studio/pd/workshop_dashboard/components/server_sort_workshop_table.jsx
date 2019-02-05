@@ -5,7 +5,8 @@
  * and by re-querying the server for another limited ordered set when it's limited.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import WorkshopTableLoader from './workshop_table_loader';
 import WorkshopTable from './workshop_table';
 
