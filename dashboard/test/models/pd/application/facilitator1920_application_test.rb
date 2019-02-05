@@ -333,7 +333,6 @@ module Pd::Application
               currently_involved_in_cs_education: 5,
               grades_taught: 5,
               experience_teaching_this_course: 5,
-              completed_pd: 5,
               why_should_all_have_access: 5,
               skills_areas_to_improve: 5,
               inquiry_based_learning: 5,
@@ -350,15 +349,15 @@ module Pd::Application
 
       assert_equal(
         {
-          total_score: "65 / 65",
-          application_score: "40 / 40",
+          total_score: "60 / 60",
+          application_score: "35 / 35",
           interview_score: "25 / 25",
           teaching_experience_score: "10 / 10",
           leadership_score: "5 / 5",
           champion_for_cs_score: "5 / 5",
           equity_score: "15 / 15",
           growth_minded_score: "15 / 15",
-          content_knowledge_score: "10 / 10",
+          content_knowledge_score: "5 / 5",
           program_commitment_score: "5 / 5"
         }, @application.all_scores
       )
