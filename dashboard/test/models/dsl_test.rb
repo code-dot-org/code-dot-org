@@ -64,7 +64,7 @@ class DslTest < ActiveSupport::TestCase
         # make sure we're encrypting the .external file
         contents =~ /^encrypted/
       else
-        # second write is the i18n strings .yml file, don't bother checking it
+        # second write is the i18n strings .json file, don't bother checking it
         true
       end
     end

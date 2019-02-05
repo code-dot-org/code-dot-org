@@ -238,7 +238,7 @@ wrong 'w3'
       }
     }
     assert_equal expected, output
-    assert_equal i18n_expected.to_yaml, i18n.to_yaml
+    assert_equal JSON.pretty_generate(i18n_expected), JSON.pretty_generate(i18n)
   end
 
   test 'test empty i18n' do

@@ -38,7 +38,7 @@ CDO.rack_env = :test if defined? CDO
 Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
-I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
+I18n.load_path += Dir[Rails.root.join('test', 'en.json')]
 I18n.backend.reload!
 CDO.override_pegasus = nil
 CDO.override_dashboard = nil

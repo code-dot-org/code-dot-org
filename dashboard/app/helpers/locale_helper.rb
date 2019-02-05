@@ -56,14 +56,14 @@ module LocaleHelper
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data.en.json for details.
   def data_t(dotted_path, key)
     # Escape separator in provided key to support keys containing dot characters.
     try_t(key, scope: ['data'] + dotted_path.split('.'), separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR, default: nil)
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data.en.json for details.
   def data_t_suffix(dotted_path, key, suffix, options = {})
     I18n.t("data.#{dotted_path}.#{key}.#{suffix}", options)
   end

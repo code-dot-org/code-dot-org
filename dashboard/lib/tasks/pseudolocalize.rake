@@ -26,21 +26,21 @@ task pseudolocalize: :environment do
     when Array
       pseudolocalize_array(x)
     else
-      raise "Unexpected type in messages YML: #{x.class}"
+      raise "Unexpected type in messages: #{x.class}"
     end
   end
 
   SOURCE_LOCALE = 'en'.freeze
   PSEUDO_LOCALE = 'en-PLOC'.freeze
 
-  srcs = Dir.glob("#{Rails.root}/config/locales/*#{SOURCE_LOCALE}.yml")
+  srcs = Dir.glob("#{Rails.root}/config/locales/*#{SOURCE_LOCALE}.json")
   srcs.each do |src|
     puts "converting: #{src}"
-    dest = src.gsub("#{SOURCE_LOCALE}.yml", "#{PSEUDO_LOCALE}.yml")
-    messages = YAML.load_file(src)
+    dest = src.gsub("#{SOURCE_LOCALE}.json", "#{PSEUDO_LOCALE}.json")
+    messages = JSON.parse(File.read(src))
     File.open(dest, 'w') do |f|
       transformed = {PSEUDO_LOCALE => pseudolocalize(messages[SOURCE_LOCALE])}
-      YAML.dump(transformed, f)
+      File.write(f, JSON.pretty_generate(transformed))
     end
   end
 end

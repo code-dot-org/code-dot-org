@@ -13,7 +13,7 @@ module NotesHelper
     return nil if slides.empty?
     return slides if I18n.locale == I18n.default_locale
 
-    # If we're in a non-english locale, fold in the English yaml's slides for
+    # If we're in a non-english locale, fold in the English data's slides for
     # image references to avoid previously translation-broken asset paths
     slides_english = {}
     1.step.each do |n|

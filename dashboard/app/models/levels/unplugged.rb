@@ -50,9 +50,9 @@ class Unplugged < Level
 
   def update_i18n(name, new_strings)
     return unless name
-    unplugged_yml = File.expand_path('config/locales/unplugged.en.yml')
-    i18n = File.exist?(unplugged_yml) ? YAML.load_file(unplugged_yml) : {}
+    unplugged_file = File.expand_path('config/locales/unplugged.en.json')
+    i18n = File.exist?(unplugged_file) ? JSON.parse(File.read(unplugged_file)) : {}
     i18n.deep_merge!({'en' => {'data' => {'unplugged' => {name => new_strings}}}})
-    File.write(unplugged_yml, i18n.to_yaml(line_width: -1))
+    File.write(unplugged_file, JSON.pretty_generate(i18n))
   end
 end

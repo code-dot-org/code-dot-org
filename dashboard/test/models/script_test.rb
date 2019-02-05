@@ -918,28 +918,28 @@ class ScriptTest < ActiveSupport::TestCase
   test "update_i18n without metdata" do
     # This simulates us doing a seed after adding new stages to multiple of
     # our script files. Doing so should update our object with the new stage
-    # names (which we would then persist to sripts.en.yml)
-    original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
+    # names (which we would then persist to sripts.en.json)
+    original_data = JSON.parse(File.read(Rails.root.join('test', 'en.json')))
 
-    course3_yml = {'stages' => {'course3' => {'name' => 'course3'}}}
-    course4_yml = {'stages' => {'course4' => {'name' => 'course4'}}}
+    course3_data = {'stages' => {'course3' => {'name' => 'course3'}}}
+    course4_data = {'stages' => {'course4' => {'name' => 'course4'}}}
 
     stages_i18n = {'en' => {'data' => {'script' => {'name' => {
-      'course3' => course3_yml,
-      'course4' => course4_yml
+      'course3' => course3_data,
+      'course4' => course4_data
     }}}}}
 
-    # updated represents what will get written to scripts.en.yml
-    updated = Script.update_i18n(original_yml, stages_i18n)
+    # updated represents what will get written to scripts.en.json
+    updated = Script.update_i18n(original_data, stages_i18n)
 
-    assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
-    assert_equal course4_yml, updated['en']['data']['script']['name']['course4']
+    assert_equal course3_json, updated['en']['data']['script']['name']['course3']
+    assert_equal course4_json, updated['en']['data']['script']['name']['course4']
   end
 
   test "update_i18n with metadata" do
     # In this case, we're modifying a stage description without changing any
     # stage names
-    original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
+    original_data = JSON.parse(File.read(Rails.root.join('test', 'en.json')))
 
     # No updates to stage names
     stages_i18n = {'en' => {'data' => {'name' => {}}}}
@@ -956,7 +956,7 @@ class ScriptTest < ActiveSupport::TestCase
       }].to_json
     }
 
-    updated = Script.update_i18n(original_yml, stages_i18n, script_name, metadata)
+    updated = Script.update_i18n(original_data, stages_i18n, script_name, metadata)
 
     updated_report_script = updated['en']['data']['script']['name']['Report Script']
 

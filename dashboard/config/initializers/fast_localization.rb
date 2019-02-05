@@ -1,9 +1,9 @@
-# Because loading YAML locales is super-slow, only load english yml locale files in development
+# Because loading locale data is super-slow, only load english locale files in development
 # To load all locales for testing, add "load_locales: true" to locals.yml config
 
 if (CDO.skip_locales || Rails.env.development?) && (!CDO.load_locales)
   Dashboard::Application.config.i18n.railties_load_path.each do |path|
-    path.glob = "*{es-ES,en}.yml"
+    path.glob = "*{es-ES,en}.json"
   end
 end
 

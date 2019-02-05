@@ -215,7 +215,7 @@ class ScriptsControllerTest < ActionController::TestCase
       wrapup_video 'hoc_wrapup'
 
     TEXT
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.json'}.once
     File.stubs(:write).with('config/scripts/test-script-create.script', expected_contents).once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
@@ -262,7 +262,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.json')}
 
     post :update, params: {
       id: script.id,
