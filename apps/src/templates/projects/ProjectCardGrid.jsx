@@ -53,6 +53,9 @@ class ProjectCardGrid extends Component {
   }
 
   onSelectApp = (appType) => {
+    const projectGridDiv = document.getElementById('projectCardGrid');
+    const projectGridRect = projectGridDiv.getBoundingClientRect();
+    window.scrollTo(projectGridRect.left + window.pageXOffset, projectGridRect.top + window.pageYOffset);
     this.setState({showAll: false, showApp: appType});
   };
 
@@ -65,7 +68,7 @@ class ProjectCardGrid extends Component {
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
 
     return (
-      <div style={styles.grid}>
+      <div id={'projectCardGrid'} style={styles.grid}>
         {(this.state.showAll) &&
           <div>
             <ProjectAppTypeArea
