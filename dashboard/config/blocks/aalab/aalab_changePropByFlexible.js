@@ -5,8 +5,8 @@ function changePropByFlexible(sprite, property, val) {
   if(!Array.isArray(sprite)) {
   	changePropBy(sprite, property, val);
   } else {
-  	for(var i = 0; i < sprite.length; i++) {
-      changePropBy(sprite[i], property, val);
-    }
+    sprite.forEach(function(s) {
+      changePropBy(s, property, val);
+    });
   }
 }
