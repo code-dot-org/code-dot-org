@@ -1,6 +1,7 @@
 import MD5 from 'crypto-js/md5';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';

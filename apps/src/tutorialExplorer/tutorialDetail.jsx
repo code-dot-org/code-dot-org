@@ -1,7 +1,8 @@
 /* A pop-up modal displaying information about a single tutorial in TutorialExplorer.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString, DoNotShow } from './util';
 import Image from './image';

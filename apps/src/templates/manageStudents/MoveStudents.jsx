@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import {Table, sort} from 'reactabular';
@@ -86,7 +87,7 @@ const DEFAULT_SORT = {
 class MoveStudents extends Component {
   static propTypes = {
     studentData: PropTypes.arrayOf(
-      React.PropTypes.shape({
+      PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
       })

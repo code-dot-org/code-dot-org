@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import ResourceType, { stringForType, resourceShape } from './resourceType';

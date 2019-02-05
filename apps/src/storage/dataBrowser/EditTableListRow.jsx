@@ -2,8 +2,9 @@ import ConfirmDeleteButton from './ConfirmDeleteButton';
 import { DataView } from '../constants';
 import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import * as dataStyles from './dataStyles';
 
 class EditTableListRow extends React.Component {

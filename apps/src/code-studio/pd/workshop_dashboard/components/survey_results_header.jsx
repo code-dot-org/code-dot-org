@@ -1,7 +1,9 @@
 /** Workshop Survey page. Displays survey results. ...*/
+
 import $ from 'jquery';
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
   Button,
   Row,

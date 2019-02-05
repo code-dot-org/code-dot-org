@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
 /**
  * If custom PropType shapes are required in more than one file,
  * we define them here.

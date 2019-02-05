@@ -1,7 +1,8 @@
 /*
  * Info box prompting user to sign in on workshop enrollment page
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export default class SignInPrompt extends React.Component {
   static propTypes = {

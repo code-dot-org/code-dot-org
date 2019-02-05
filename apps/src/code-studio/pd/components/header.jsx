@@ -2,7 +2,8 @@
  * Header present throughout the workshop dashboard UI.
  * Displays navigation breadcrumbs.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Breadcrumb} from 'react-bootstrap';
 
 export default class Header extends React.Component {

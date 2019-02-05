@@ -1,5 +1,6 @@
 /** Animation picker dialog search bar */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from '../../util/color';
 
 const BORDER_WIDTH = 1;

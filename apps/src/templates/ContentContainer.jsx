@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 // ContentContainer provides a full-width container which will render whatever
