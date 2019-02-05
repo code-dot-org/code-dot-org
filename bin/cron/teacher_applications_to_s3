@@ -14,12 +14,13 @@ def main
       app.status,
       app.scholarship_status,
       app.school_type,
-      app.sanitize_form_data_hash[:pay_fee]
+      app.sanitize_form_data_hash[:pay_fee],
+      app.email
     ])
   end
 
   output = CSV.generate(col_sep: "\t") do |csv|
-    csv << %w(course regional_partner status scholarship_status school_type pay_fee)
+    csv << %w(course regional_partner status scholarship_status school_type pay_fee email)
     applications.each {|row| csv << row}
   end
 
