@@ -40,15 +40,13 @@ steps:
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
-  - name: mysql
-    path: /var/lib/mysql
   environment:
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
-    - pwd
+    - df -h
     - sudo chown -R circleci:circleci .
     - # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -71,8 +69,6 @@ steps:
 
 volumes:
 - name: rbenv
-  temp: {}
-- name: mysql
   temp: {}
 
 trigger:
@@ -141,6 +137,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: a37b3ff8767d1c25c2bd719f6372de50b2bfdef6c26cfb06075b5fcc05785a64
+hmac: a56d76b8583cfc4e2efcaf0f41ae851ba073c9512f1696b935510f3c94f3b6bf
 
 ...
