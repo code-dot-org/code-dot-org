@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ProgressBox from './ProgressBox';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -10,7 +10,7 @@ const styles = {
     float: 'left',
     display: 'inline-block',
     marginTop: 20,
-    boxSizing: 'content-box',
+    boxSizing: 'content-box'
   },
   progressBox: {
     float: 'left',
@@ -18,12 +18,12 @@ const styles = {
     borderColor: color.lightest_gray,
     borderWidth: 2,
     borderBottomStyle: 'solid',
-    borderRightStyle: 'solid',
+    borderRightStyle: 'solid'
   },
   leftBorder: {
     borderColor: color.lightest_gray,
     borderWidth: 2,
-    borderLeftStyle: 'solid',
+    borderLeftStyle: 'solid'
   },
   heading: {
     fontSize: 18,
@@ -32,16 +32,16 @@ const styles = {
     float: 'left',
     paddingTop: 10,
     paddingBottom: 10,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   label: {
     fontSize: 14,
     fontWeight: 900,
-    color: color.charcoal,
+    color: color.charcoal
   },
   parenthetical: {
     fontSize: 10,
-    color: color.charcoal,
+    color: color.charcoal
   },
   labelBox: {
     padding: 10,
@@ -51,7 +51,7 @@ const styles = {
     textAlign: 'center'
   },
   boxContainer: {
-    padding: '15px 50px',
+    padding: '15px 50px'
   }
 };
 
@@ -61,7 +61,7 @@ export default class SummaryViewLegend extends Component {
   };
 
   render() {
-    const { showCSFProgressBox } = this.props;
+    const {showCSFProgressBox} = this.props;
     const headingStyle = {
       ...styles.heading,
       width: showCSFProgressBox ? '48%' : '100%'
@@ -71,9 +71,9 @@ export default class SummaryViewLegend extends Component {
       <div style={styles.legendBox}>
         <div>
           <div style={headingStyle}>{i18n.lessonStatus()}</div>
-          {showCSFProgressBox &&
+          {showCSFProgressBox && (
             <div style={headingStyle}>{i18n.completionStatus()}</div>
-          }
+          )}
         </div>
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
@@ -104,9 +104,9 @@ export default class SummaryViewLegend extends Component {
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
             <div>{i18n.completed()}</div>
-            {showCSFProgressBox &&
+            {showCSFProgressBox && (
               <div style={styles.parenthetical}>({i18n.perfect()})</div>
-            }
+            )}
           </div>
           <div style={styles.boxContainer}>
             <ProgressBox
@@ -117,7 +117,7 @@ export default class SummaryViewLegend extends Component {
             />
           </div>
         </div>
-        {showCSFProgressBox &&
+        {showCSFProgressBox && (
           <div style={styles.progressBox}>
             <div style={styles.labelBox}>
               <div>{i18n.completed()}</div>
@@ -132,7 +132,7 @@ export default class SummaryViewLegend extends Component {
               />
             </div>
           </div>
-        }
+        )}
       </div>
     );
   }

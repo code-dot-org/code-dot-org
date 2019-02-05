@@ -12,10 +12,12 @@
  * @returns {boolean}
  */
 export function allowAnimationMode({pageConstants}) {
-  return pageConstants.showAnimationMode &&
-      !pageConstants.isEmbedView &&
-      !pageConstants.isReadOnlyWorkspace &&
-      !pageConstants.isShareView;
+  return (
+    pageConstants.showAnimationMode &&
+    !pageConstants.isEmbedView &&
+    !pageConstants.isReadOnlyWorkspace &&
+    !pageConstants.isShareView
+  );
 }
 
 /**
@@ -33,8 +35,9 @@ function allowCodeMode() {
  * @returns {number}
  */
 function countAllowedModes(state) {
-  return [allowCodeMode(state), allowAnimationMode(state)]
-      .reduce((m, n) => m + (n ? 1 : 0));
+  return [allowCodeMode(state), allowAnimationMode(state)].reduce(
+    (m, n) => m + (n ? 1 : 0)
+  );
 }
 
 /**

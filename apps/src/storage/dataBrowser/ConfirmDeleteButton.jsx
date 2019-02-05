@@ -12,7 +12,7 @@ class ConfirmDeleteButton extends React.Component {
     buttonText: PropTypes.string.isRequired,
     confirmText: PropTypes.string,
     containerStyle: PropTypes.any,
-    onConfirmDelete: PropTypes.func.isRequired,
+    onConfirmDelete: PropTypes.func.isRequired
   };
 
   state = {
@@ -28,7 +28,7 @@ class ConfirmDeleteButton extends React.Component {
 
   render() {
     let {confirmText, ...otherProps} = this.props;
-    confirmText = confirmText || "Delete";
+    confirmText = confirmText || 'Delete';
     return (
       <div style={[{display: 'inline-block'}, this.props.containerStyle]}>
         <Dialog

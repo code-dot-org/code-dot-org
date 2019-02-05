@@ -134,7 +134,9 @@ describe('ChangeUserTypeController', () => {
 
       expect(dropdown.prop('disabled')).to.be.false;
       expect(button.prop('disabled')).to.be.false;
-      expect(status.text()).to.equal(i18n.changeUserTypeModal_unexpectedError());
+      expect(status.text()).to.equal(
+        i18n.changeUserTypeModal_unexpectedError()
+      );
     });
   });
 

@@ -8,7 +8,7 @@ export default class ColorPickerPropertyRow extends React.Component {
   static propTypes = {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func,
-    desc: PropTypes.node,
+    desc: PropTypes.node
   };
 
   state = {
@@ -24,7 +24,7 @@ export default class ColorPickerPropertyRow extends React.Component {
     window.removeEventListener('mousedown', this.handlePageClick);
   }
 
-  handlePageClick = (e) => {
+  handlePageClick = e => {
     if (e.target === ReactDOM.findDOMNode(this.refs.button)) {
       return;
     }
@@ -34,16 +34,18 @@ export default class ColorPickerPropertyRow extends React.Component {
     }
   };
 
-  handleChangeInternal = (event) => {
+  handleChangeInternal = event => {
     this.changeColor(event.target.value);
   };
 
-  handleColorChange = (color) => {
+  handleColorChange = color => {
     if (color.rgb.a === 1) {
       // no transparency set
       this.changeColor(color.hex);
     } else {
-      this.changeColor(`rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`);
+      this.changeColor(
+        `rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`
+      );
     }
   };
 
@@ -82,8 +84,7 @@ export default class ColorPickerPropertyRow extends React.Component {
             className={this.state.value === '' ? 'rainbow-gradient' : undefined}
             style={buttonStyle}
             onClick={this.toggleColorPicker}
-          >
-          </button>
+          />
           {colorPicker}
         </div>
       </div>

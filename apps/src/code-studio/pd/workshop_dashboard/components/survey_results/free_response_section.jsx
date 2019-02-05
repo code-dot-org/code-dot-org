@@ -15,9 +15,9 @@ export default class FreeResponseSection extends React.Component {
         <li key={i}>
           {facilitator_name}
           <ul>
-            {
-              answers[facilitator_name].map((feedback, j) => this.renderBullet(feedback, j))
-            }
+            {answers[facilitator_name].map((feedback, j) =>
+              this.renderBullet(feedback, j)
+            )}
           </ul>
         </li>
       );
@@ -31,11 +31,7 @@ export default class FreeResponseSection extends React.Component {
   renderBullet(text, key) {
     const trimmedText = _.trim(text);
     if (trimmedText) {
-      return (
-        <li key={key}>
-          {trimmedText}
-        </li>
-      );
+      return <li key={key}>{trimmedText}</li>;
     }
   }
 
@@ -52,18 +48,16 @@ export default class FreeResponseSection extends React.Component {
   render() {
     return (
       <div>
-        {
-          this.props.questions.map((question, i) => {
-            return (
-              <Well key={i}>
-                <b>
-                  {question['text']}
-                </b>
-                {this.renderResponseSection(this.props.responseData[question.key])}
-              </Well>
-            );
-          })
-        }
+        {this.props.questions.map((question, i) => {
+          return (
+            <Well key={i}>
+              <b>{question['text']}</b>
+              {this.renderResponseSection(
+                this.props.responseData[question.key]
+              )}
+            </Well>
+          );
+        })}
       </div>
     );
   }

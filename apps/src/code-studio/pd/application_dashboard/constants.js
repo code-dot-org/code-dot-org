@@ -13,33 +13,33 @@ const STATUS_GREEN = {
  * Mapping of application statuses to their background and text colors.
  */
 export const StatusColors = {
-  'unreviewed': {
+  unreviewed: {
     backgroundColor: color.charcoal,
     color: color.white
   },
-  'pending': {
+  pending: {
     backgroundColor: color.lighter_orange,
     color: color.black
   },
-  'interview': {
+  interview: {
     backgroundColor: color.orange,
     color: color.black
   },
-  'waitlisted': {
+  waitlisted: {
     backgroundColor: color.level_passed,
     color: color.black
   },
-  'accepted': STATUS_GREEN,
-  'accepted_not_notified': STATUS_GREEN,
-  'accepted_notified_by_partner': STATUS_GREEN,
-  'accepted_no_cost_registration': STATUS_GREEN,
-  'registration_sent': STATUS_GREEN,
-  'paid': STATUS_GREEN,
-  'declined': {
+  accepted: STATUS_GREEN,
+  accepted_not_notified: STATUS_GREEN,
+  accepted_notified_by_partner: STATUS_GREEN,
+  accepted_no_cost_registration: STATUS_GREEN,
+  registration_sent: STATUS_GREEN,
+  paid: STATUS_GREEN,
+  declined: {
     backgroundColor: color.red,
     color: color.white
   },
-  'withdrawn': {
+  withdrawn: {
     backgroundColor: color.lightest_red,
     color: color.black
   }
@@ -50,7 +50,7 @@ export const StatusColors = {
  * Format per application type is {value: label}
  */
 export const ApplicationStatuses = {
-  'teacher': {
+  teacher: {
     unreviewed: 'Unreviewed',
     pending: 'Pending',
     waitlisted: 'Waitlisted',
@@ -62,7 +62,7 @@ export const ApplicationStatuses = {
     paid: 'Paid',
     withdrawn: 'Withdrawn'
   },
-  'facilitator': {
+  facilitator: {
     unreviewed: 'Unreviewed',
     pending: 'Pending',
     interview: 'Interview',

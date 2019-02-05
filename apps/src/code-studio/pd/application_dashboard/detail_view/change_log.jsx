@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  Table
-} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 
 const styles = {
   table: {
@@ -25,32 +23,20 @@ export default class ChangeLog extends React.Component {
   render() {
     return (
       <div>
-        <h3>
-          Timestamp log
-        </h3>
+        <h3>Timestamp log</h3>
         <Table style={styles.table} striped bordered>
           <tbody>
-          {
-            this.props.changeLog.map((entry, i) => (
+            {this.props.changeLog.map((entry, i) => (
               <tr key={i}>
+                <td>{entry['time']}</td>
+                <td>{entry['title']}</td>
                 <td>
-                  {entry['time']}
-                </td>
-                <td>
-                  {entry['title']}
-                </td>
-                <td>
-                  {
-                    entry['changing_user'] && (
-                      <span>
-                        Status changed by {entry['changing_user']}
-                      </span>
-                    )
-                  }
+                  {entry['changing_user'] && (
+                    <span>Status changed by {entry['changing_user']}</span>
+                  )}
                 </td>
               </tr>
-            ))
-          }
+            ))}
           </tbody>
         </Table>
       </div>

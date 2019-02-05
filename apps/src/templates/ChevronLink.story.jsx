@@ -1,7 +1,7 @@
 import React from 'react';
 import SmallChevronLink from './SmallChevronLink';
 import LargeChevronLink from './LargeChevronLink';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 export default storybook => {
   return storybook
@@ -29,6 +29,6 @@ export default storybook => {
             isRtl={false}
           />
         )
-      },
+      }
     ]);
 };

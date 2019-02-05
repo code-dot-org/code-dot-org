@@ -15,13 +15,11 @@ describe('MakerStatusOverlay', () => {
     handleTryAgain: () => {},
     handleDisableMaker: () => {},
     handleOpenSetupPage: () => {},
-    useFakeBoardOnNextRun: () => {},
+    useFakeBoardOnNextRun: () => {}
   };
 
   it('renders nothing by default', () => {
-    const wrapper = mount(
-      <UnconnectedMakerStatusOverlay {...testProps}/>
-    );
+    const wrapper = mount(<UnconnectedMakerStatusOverlay {...testProps} />);
     expect(wrapper.html()).to.be.null;
   });
 
@@ -69,10 +67,7 @@ describe('MakerStatusOverlay', () => {
 
     it('sets no transform if scale property is absent', () => {
       const wrapper = mount(
-        <UnconnectedMakerStatusOverlay
-          {...testProps}
-          isConnecting
-        />
+        <UnconnectedMakerStatusOverlay {...testProps} isConnecting />
       );
       expect(wrapper).not.to.have.style('transform');
       expect(wrapper).not.to.have.style('msTransform');
@@ -85,10 +80,7 @@ describe('MakerStatusOverlay', () => {
 
     beforeEach(() => {
       wrapper = mount(
-        <UnconnectedMakerStatusOverlay
-          {...testProps}
-          isConnecting
-        />
+        <UnconnectedMakerStatusOverlay {...testProps} isConnecting />
       );
     });
 
@@ -141,7 +133,9 @@ describe('MakerStatusOverlay', () => {
     it('and a "Setup Instructions" button', () => {
       const selector = 'button.setup-instructions';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Get Code.org Maker App');
+      expect(wrapper.find(selector).text()).to.include(
+        'Get Code.org Maker App'
+      );
     });
 
     it('that navigates to the Maker Setup page', () => {

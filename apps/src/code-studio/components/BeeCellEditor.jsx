@@ -5,7 +5,7 @@
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import { cells } from '@code-dot-org/maze';
+import {cells} from '@code-dot-org/maze';
 
 const BeeCell = cells.BeeCell;
 
@@ -14,9 +14,9 @@ export default class BeeCellEditor extends CellEditor {
    * @override
    */
   getSelectFieldNames() {
-    return super.getSelectFieldNames().concat([
-      'featureType', 'cloudType', 'flowerColor'
-    ]);
+    return super
+      .getSelectFieldNames()
+      .concat(['featureType', 'cloudType', 'flowerColor']);
   }
 
   /**
@@ -54,7 +54,12 @@ export default class BeeCellEditor extends CellEditor {
         {super.renderFields(values)}
 
         <label htmlFor="featureType">Feature Type:</label>
-        <select name="featureType" value={values.featureType} disabled={this.props.cell.isVariableCloud()} onChange={this.handleChange}>
+        <select
+          name="featureType"
+          value={values.featureType}
+          disabled={this.props.cell.isVariableCloud()}
+          onChange={this.handleChange}
+        >
           <option value="undefined">none</option>
           <option value={BeeCell.FeatureType.HIVE}>hive</option>
           <option value={BeeCell.FeatureType.FLOWER}>flower</option>
@@ -62,17 +67,32 @@ export default class BeeCellEditor extends CellEditor {
         </select>
 
         <label htmlFor="cloudType">Cloud Type:</label>
-        <select name="cloudType" value={values.cloudType} onChange={this.handleChange}>
+        <select
+          name="cloudType"
+          value={values.cloudType}
+          onChange={this.handleChange}
+        >
           <option value="undefined">none</option>
           <option value={BeeCell.CloudType.STATIC}>classic</option>
-          <option value={BeeCell.CloudType.HIVE_OR_FLOWER}>hive or flower</option>
-          <option value={BeeCell.CloudType.FLOWER_OR_NOTHING}>flower or nothing</option>
-          <option value={BeeCell.CloudType.HIVE_OR_NOTHING}>hive or nothing</option>
+          <option value={BeeCell.CloudType.HIVE_OR_FLOWER}>
+            hive or flower
+          </option>
+          <option value={BeeCell.CloudType.FLOWER_OR_NOTHING}>
+            flower or nothing
+          </option>
+          <option value={BeeCell.CloudType.HIVE_OR_NOTHING}>
+            hive or nothing
+          </option>
           <option value={BeeCell.CloudType.ANY}>any</option>
         </select>
 
         <label htmlFor="flowerColor">Flower Color:</label>
-        <select name="flowerColor" value={values.flowerColor} disabled={!this.props.cell.isFlower()} onChange={this.handleChange}>
+        <select
+          name="flowerColor"
+          value={values.flowerColor}
+          disabled={!this.props.cell.isFlower()}
+          onChange={this.handleChange}
+        >
           <option value="undefined">default</option>
           <option value={BeeCell.FlowerColor.RED}>red</option>
           <option value={BeeCell.FlowerColor.PURPLE}>purple</option>

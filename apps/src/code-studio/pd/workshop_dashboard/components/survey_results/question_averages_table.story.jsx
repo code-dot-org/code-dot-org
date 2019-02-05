@@ -4,7 +4,11 @@ import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator'
 
 export default storybook => {
   const questions = [
-    {text: 'Was the facilitator good at brooding?', key: 'question_1', score_base: 5},
+    {
+      text: 'Was the facilitator good at brooding?',
+      key: 'question_1',
+      score_base: 5
+    },
     {text: 'How was the session?', key: 'question_2', score_base: 5}
   ];
 
@@ -18,16 +22,16 @@ export default storybook => {
           <QuestionAveragesTable
             questions={questions}
             thisWorkshopData={{
-              'question_1': 5,
-              'question_2': 5
+              question_1: 5,
+              question_2: 5
             }}
             allMyWorkshopsData={{
-              'question_1': 4,
-              'question_2': 4.1,
+              question_1: 4,
+              question_2: 4.1
             }}
             allWorkshopsData={{
-              'question_1': 3.5,
-              'question_2': 3.6
+              question_1: 3.5,
+              question_2: 3.6
             }}
             allWorkshops
             facilitatorNames={['Jon Snow', 'Tyrion Lannister']}
@@ -44,19 +48,19 @@ export default storybook => {
             facilitatorNames={['Jon Snow', 'Tyrion Lannister']}
             facilitatorBreakdown={true}
             thisWorkshopData={{
-              'question_1': {
+              question_1: {
                 'Jon Snow': 5,
                 'Tyrion Lannister': 3
               },
-              'question_2': 5
+              question_2: 5
             }}
             allMyWorkshopsData={{
-              'question_1': 4,
-              'question_2': 4.1
+              question_1: 4,
+              question_2: 4.1
             }}
             allWorkshopsData={{
-              'question_1': 3.5,
-              'question_2': 3.6
+              question_1: 3.5,
+              question_2: 3.6
             }}
             workshopType="TeacherCons"
           />

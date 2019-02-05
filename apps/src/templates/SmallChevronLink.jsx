@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import FontAwesome from './FontAwesome';
-import color from "../util/color";
+import color from '../util/color';
 
 const styles = {
   link: {
@@ -17,42 +17,40 @@ const styles = {
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginLeft: 8,
+    marginLeft: 8
   },
   chevronRtl: {
     display: 'inline',
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginRight: 8,
+    marginRight: 8
   },
   linkBox: {
     display: 'block',
     textDecoration: 'none'
-  },
+  }
 };
 
 export default class SmallChevronLink extends Component {
   static propTypes = {
     linkText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const { link, linkText, isRtl }= this.props;
+    const {link, linkText, isRtl} = this.props;
 
-    const icon = isRtl ? "chevron-left" : "chevron-right";
+    const icon = isRtl ? 'chevron-left' : 'chevron-right';
 
     return (
       <div style={styles.linkBox}>
         <a href={link} style={styles.link}>
-          <h3 style={styles.link}>
-            {linkText}
-          </h3>
+          <h3 style={styles.link}>{linkText}</h3>
           <FontAwesome
             icon={icon}
-            style={isRtl? styles.chevronRtl : styles.chevron}
+            style={isRtl ? styles.chevronRtl : styles.chevron}
           />
         </a>
       </div>

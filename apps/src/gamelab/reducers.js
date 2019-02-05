@@ -4,7 +4,7 @@ import {
   CHANGE_INTERFACE_MODE,
   VIEW_ANIMATION_JSON,
   HIDE_ANIMATION_JSON,
-  TOGGLE_GRID_OVERLAY,
+  TOGGLE_GRID_OVERLAY
 } from './actions';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 import animationList from './animationListModule';
@@ -13,7 +13,6 @@ import animationTab from './AnimationTab/animationTabModule';
 import locationPicker from './locationPickerModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
-
 
 function interfaceMode(state, action) {
   state = state || GameLabInterfaceMode.CODE;
@@ -59,5 +58,5 @@ module.exports = {
   interfaceMode,
   animationJsonViewer,
   gridOverlay,
-  locationPicker,
+  locationPicker
 };

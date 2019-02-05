@@ -1,19 +1,24 @@
 /** @file Maker connection status visualization overlay */
 import PropTypes from 'prop-types';
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {getVisualizationScale} from '../../../../redux/layout';
-import {isConnecting, hasConnectionError, getConnectionError, useFakeBoardOnNextRun} from '../redux';
+import {
+  isConnecting,
+  hasConnectionError,
+  getConnectionError,
+  useFakeBoardOnNextRun
+} from '../redux';
 import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
 
 const overlayDimensionsPropTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  scale: PropTypes.number,
+  scale: PropTypes.number
 };
 
 /**
@@ -29,16 +34,24 @@ export class UnconnectedMakerStatusOverlay extends Component {
     handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func.isRequired,
     useFakeBoardOnNextRun: PropTypes.func.isRequired,
-    handleOpenSetupPage: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired
   };
 
   render() {
-    const {width, height, scale, isConnecting, isWrongBrowser,
-      hasConnectionError, handleTryAgain, handleDisableMaker,
-      handleOpenSetupPage} = this.props;
+    const {
+      width,
+      height,
+      scale,
+      isConnecting,
+      isWrongBrowser,
+      hasConnectionError,
+      handleTryAgain,
+      handleDisableMaker,
+      handleOpenSetupPage
+    } = this.props;
     const dimensions = {width, height, scale};
     if (isConnecting) {
-      return <WaitingToConnect {...dimensions}/>;
+      return <WaitingToConnect {...dimensions} />;
     } else if (isWrongBrowser) {
       return (
         <UnsupportedBrowser
@@ -64,12 +77,14 @@ export default connect(
   state => ({
     scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
-    isWrongBrowser: getConnectionError(state) instanceof UnsupportedBrowserError,
+    isWrongBrowser:
+      getConnectionError(state) instanceof UnsupportedBrowserError,
     hasConnectionError: hasConnectionError(state),
     handleOpenSetupPage: () => {
       window.open('/maker/setup', '_blank');
     }
-  }), {
+  }),
+  {
     useFakeBoardOnNextRun
   }
 )(UnconnectedMakerStatusOverlay);
@@ -86,35 +101,35 @@ const style = {
     flexDirection: 'column',
     alignItems: 'center',
     color: color.charcoal,
-    backgroundColor: color.lighter_gray,
+    backgroundColor: color.lighter_gray
   },
   padding: {
-    flex: '1 0 auto',
+    flex: '1 0 auto'
   },
   content: {
     flex: '0 0 auto',
     padding: '1em',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   icon: {
-    display: 'block',
+    display: 'block'
   },
   text: {
-    margin: '1em',
+    margin: '1em'
   }
 };
 
 class Overlay extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
-    children: PropTypes.any,
+    children: PropTypes.any
   };
 
   render() {
     let rootStyle = {
       ...style.root,
       width: this.props.width,
-      height: this.props.height,
+      height: this.props.height
     };
 
     // If scale is undefined we are still letting media queries handle the
@@ -128,11 +143,9 @@ class Overlay extends Component {
     }
     return (
       <div style={rootStyle}>
-        <div style={style.padding}/>
-        <div style={style.content}>
-          {this.props.children}
-        </div>
-        <div style={style.padding}/>
+        <div style={style.padding} />
+        <div style={style.content}>{this.props.children}</div>
+        <div style={style.padding} />
       </div>
     );
   }
@@ -144,7 +157,7 @@ class WaitingToConnect extends Component {
   render() {
     return (
       <Overlay {...this.props}>
-        <Icon icon="cog" spin/>
+        <Icon icon="cog" spin />
         <Text>Waiting for board to connect...</Text>
       </Overlay>
     );
@@ -155,16 +168,18 @@ class UnsupportedBrowser extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     handleDisableMaker: PropTypes.func.isRequired,
-    handleOpenSetupPage: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired
   };
 
   render() {
     const {handleDisableMaker, handleOpenSetupPage} = this.props;
     return (
       <Overlay {...this.props}>
-        <Icon icon="exclamation-triangle"/>
+        <Icon icon="exclamation-triangle" />
         <Text>
-          This level requires the<br/>Code.org Maker App
+          This level requires the
+          <br />
+          Code.org Maker App
         </Text>
         <UniformWidth>
           <OverlayButton
@@ -189,7 +204,7 @@ class BoardNotFound extends Component {
     ...overlayDimensionsPropTypes,
     handleTryAgain: PropTypes.func.isRequired,
     useFakeBoardOnNextRun: PropTypes.func.isRequired,
-    handleOpenSetupPage: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired
   };
 
   handleRunWithoutBoard = () => {
@@ -200,7 +215,7 @@ class BoardNotFound extends Component {
   render() {
     return (
       <Overlay {...this.props}>
-        <Icon icon="exclamation-triangle"/>
+        <Icon icon="exclamation-triangle" />
         <Text>Make sure your board is plugged in.</Text>
         <UniformWidth>
           <OverlayButton
@@ -231,26 +246,26 @@ class BoardNotFound extends Component {
  */
 function UniformWidth({children}) {
   return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center'
+      }}
+    >
       <div
         style={{
           display: 'flex',
-          flexDirection:'row',
-          justifyContent:'center',
+          flexDirection: 'column'
         }}
       >
-        <div
-          style={{
-            display:'flex',
-            flexDirection:'column',
-          }}
-        >
-          {children}
-        </div>
+        {children}
       </div>
+    </div>
   );
 }
 UniformWidth.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any
 };
 
 /**
@@ -260,13 +275,13 @@ function Text({children}) {
   return <div style={style.text}>{children}</div>;
 }
 Text.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any
 };
 
 /**
  * Render a font-awesome icon in the overlay style.
  */
-function Icon({icon, spin=false}) {
+function Icon({icon, spin = false}) {
   const classNames = ['fa-5x'];
   if (spin) {
     classNames.push('fa-spin');
@@ -281,5 +296,5 @@ function Icon({icon, spin=false}) {
 }
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
-  spin: PropTypes.bool,
+  spin: PropTypes.bool
 };
