@@ -35,7 +35,7 @@
     "authored_hints": "[]",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "tts_markdown_instructions_override": "Great!  Now you get to add code yourself!  \r\n\r\nSnap a `get treasure` block into the bottom of the program and click \"Run\".",
+    "tts_long_instructions_override": "Great!  Now you get to add code yourself!  \r\n\r\nSnap a `get treasure` block into the bottom of the program and click \"Run\".",
     "contained_level_names": null
   },
   "published": true,
