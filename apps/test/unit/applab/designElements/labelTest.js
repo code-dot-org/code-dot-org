@@ -46,7 +46,10 @@ function expectWiderAlignCenter(newRect, oldRect) {
   expectWider(newRect, oldRect);
   expect(newRect.left).is.below(oldRect.left, 'should move left');
   const deltaWidth = newRect.width - oldRect.width;
-  expect(newRect.left).is.above(oldRect.left - deltaWidth, 'should not move too far left');
+  expect(newRect.left).is.above(
+    oldRect.left - deltaWidth,
+    'should not move too far left'
+  );
 }
 
 function expectWiderAlignRight(newRect, oldRect) {
@@ -55,14 +58,19 @@ function expectWiderAlignRight(newRect, oldRect) {
   expect(newRect.left).is.equal(oldRect.left - deltaWidth, 'should move left');
 }
 
-describe('Applab designElements/label component', function () {
-
+describe('Applab designElements/label component', function() {
   let e;
   const NEW_TEXT = 'longer text';
-  const LONG_TEXT = 'very long text string that is almost certainly guaranteed to wrap the screen width';
+  const LONG_TEXT =
+    'very long text string that is almost certainly guaranteed to wrap the screen width';
 
   beforeEach(() => {
-    e = library.createElement(library.ElementType.LABEL, 50 /* left */, 40 /* top */, true /* withoutId */);
+    e = library.createElement(
+      library.ElementType.LABEL,
+      50 /* left */,
+      40 /* top */,
+      true /* withoutId */
+    );
   });
 
   it('changing text changes size to fit', () => {
@@ -158,28 +166,28 @@ describe('Applab designElements/label component', function () {
   });
 
   it('after resizing, changing text does not change size to fit', () => {
-    e.style.width = (getRect(e).width + 20) + 'px';
+    e.style.width = getRect(e).width + 20 + 'px';
     const oldRect = getRect(e);
     setText(e, NEW_TEXT);
     expect(getRect(e)).to.deep.equal(oldRect);
   });
 
   it('after resizing, changing font size does not change size to fit', () => {
-    e.style.width = (getRect(e).width + 20) + 'px';
+    e.style.width = getRect(e).width + 20 + 'px';
     const oldRect = getRect(e);
     setFontSize(e, 28);
     expect(getRect(e)).to.deep.equal(oldRect);
   });
 
   it('after resizing close enough, changing text changes size to fit', () => {
-    e.style.width = (getRect(e).width + 4) + 'px';
+    e.style.width = getRect(e).width + 4 + 'px';
     const oldRect = getRect(e);
     setText(e, NEW_TEXT);
     expectWiderAlignLeft(getRect(e), oldRect);
   });
 
   it('after resizing close enough, changing font size changes size to fit', () => {
-    e.style.width = (getRect(e).width + 4) + 'px';
+    e.style.width = getRect(e).width + 4 + 'px';
     const oldRect = getRect(e);
     setFontSize(e, 28);
     expectWiderAlignLeft(getRect(e), oldRect);

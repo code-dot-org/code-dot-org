@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 import SelectSectionDropdown from './SelectSectionDropdown';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
@@ -20,36 +20,33 @@ export default class TeacherDashboard extends Component {
 
     return (
       <div>
-        <SelectSectionDropdown/>
-        <TeacherDashboardNavigation/>
+        <SelectSectionDropdown />
+        <TeacherDashboardNavigation />
         <Switch>
-          <Route
-            path="/stats"
-            component={props => <StatsTableWithData/>}
-          />
-          <Route
-            path="/progress"
-            component={props => <SectionProgress/>}
-          />
+          <Route path="/stats" component={props => <StatsTableWithData />} />
+          <Route path="/progress" component={props => <SectionProgress />} />
           <Route
             path="/manage_students"
-            component={props => <ManageStudents studioUrlPrefix={studioUrlPrefix}/>
-            }
+            component={props => (
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+            )}
           />
           <Route
             path="/projects"
-            component={props => <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix}/>}
+            component={props => (
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )}
           />
           <Route
             path="/text_responses"
-            component={props => <TextResponses/>}
+            component={props => <TextResponses />}
           />
           <Route
             path="/assessments"
-            component={props => <SectionAssessments/>}
+            component={props => <SectionAssessments />}
           />
           {/* Render <SectionProgress/> by default */}
-          <Route component={props => <SectionProgress/>} />
+          <Route component={props => <SectionProgress />} />
         </Switch>
       </div>
     );

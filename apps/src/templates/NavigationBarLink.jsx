@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "@cdo/apps/util/color";
-import { NavLink } from 'react-router-dom';
+import color from '@cdo/apps/util/color';
+import {NavLink} from 'react-router-dom';
 
 const styles = {
   link: {
@@ -11,19 +11,19 @@ const styles = {
     color: color.white,
     textDecoration: 'none',
     cursor: 'pointer',
-    opacity: 0.75,
+    opacity: 0.75
   },
   activeLink: {
     opacity: 1,
     paddingBottom: 5,
-    borderBottom: '3px solid orange',
-  },
+    borderBottom: '3px solid orange'
+  }
 };
 
 export default class NavigationBarLink extends React.Component {
   static propTypes = {
     label: PropTypes.string,
-    url: PropTypes.string,
+    url: PropTypes.string
   };
 
   render() {

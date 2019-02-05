@@ -1,7 +1,7 @@
 /* global google */
 import PropTypes from 'prop-types';
 import $ from 'jquery';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 class CensusMapInfoWindow extends Component {
@@ -18,47 +18,52 @@ class CensusMapInfoWindow extends Component {
   render() {
     let censusMessage;
     let missingCensusData = false;
-    let color = "";
+    let color = '';
 
     switch (this.props.teachesCs) {
       case 'YES':
-        censusMessage = "We believe this school offers Computer Science.";
-        color = "green";
+        censusMessage = 'We believe this school offers Computer Science.';
+        color = 'green';
         break;
       case 'NO':
-        censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
-        color = "blue";
+        censusMessage =
+          'We believe this school offers limited or no Computer Science opportunities.';
+        color = 'blue';
         break;
       case 'HISTORICAL_YES':
-        censusMessage = "We believe this school historically offered Computer Science.";
-        color = "green";
+        censusMessage =
+          'We believe this school historically offered Computer Science.';
+        color = 'green';
         break;
       case 'HISTORICAL_NO':
-        censusMessage = "We believe this school historically offered limited or no Computer Science opportunities.";
-        color = "blue";
+        censusMessage =
+          'We believe this school historically offered limited or no Computer Science opportunities.';
+        color = 'blue';
         break;
       case 'MAYBE':
       case 'HISTORICAL_MAYBE':
-        censusMessage = "We have conflicting data for this school.";
-        color = "yellow";
+        censusMessage = 'We have conflicting data for this school.';
+        color = 'yellow';
         break;
       default:
-        censusMessage = "We need data for this school.";
+        censusMessage = 'We need data for this school.';
         missingCensusData = true;
-        color = "white";
+        color = 'white';
     }
 
     const schoolDropdownOption = {
       value: this.props.schoolId,
-      label: `${this.props.schoolName} - ${this.props.city}, ${this.props.state}`,
+      label: `${this.props.schoolName} - ${this.props.city}, ${
+        this.props.state
+      }`,
       school: {
         nces_id: this.props.schoolId,
         name: this.props.schoolName,
         city: this.props.city,
         state: this.props.state,
         latitude: this.props.location.split(',')[0],
-        longitude: this.props.location.split(',')[1],
-      },
+        longitude: this.props.location.split(',')[1]
+      }
     };
 
     const colorClass = `color-small ${color}`;
@@ -66,23 +71,17 @@ class CensusMapInfoWindow extends Component {
     return (
       <div id="census-info-window" className="census-info-window">
         <h4>
-          <b>
-            {this.props.schoolName}
-          </b>
-          <br />
-          ({this.props.city}, {this.props.state})
+          <b>{this.props.schoolName}</b>
+          <br />({this.props.city}, {this.props.state})
         </h4>
         <hr />
         <div className="census-message">
-          <div className={colorClass}></div>
+          <div className={colorClass} />
           {censusMessage}
           {!missingCensusData && (
             <span>
               &nbsp;
-              <a
-                href="/yourschool/about"
-                target="_blank"
-              >
+              <a href="/yourschool/about" target="_blank">
                 (Why?)
               </a>
             </span>
@@ -90,23 +89,35 @@ class CensusMapInfoWindow extends Component {
         </div>
         <div className="button-container">
           <div className="button-link-div">
-            <a onClick={() => this.props.onTakeSurveyClick(schoolDropdownOption, false)}>
+            <a
+              onClick={() =>
+                this.props.onTakeSurveyClick(schoolDropdownOption, false)
+              }
+            >
               <div className="button">
-                <div className="button-text">Take the survey for this school</div>
+                <div className="button-text">
+                  Take the survey for this school
+                </div>
               </div>
             </a>
           </div>
           <div className="button-link-div">
             <a href="/yourschool/letter" target="_blank">
               <div className="button">
-                <div className="button-text">Send the survey to a teacher at this school</div>
+                <div className="button-text">
+                  Send the survey to a teacher at this school
+                </div>
               </div>
             </a>
           </div>
         </div>
         {!missingCensusData && (
           <div className="inaccuracy-link">
-            <a onClick={() => this.props.onTakeSurveyClick(schoolDropdownOption, true)}>
+            <a
+              onClick={() =>
+                this.props.onTakeSurveyClick(schoolDropdownOption, true)
+              }
+            >
               I believe that the categorization for this school is inaccurate.
             </a>
           </div>
@@ -120,7 +131,7 @@ export default class CensusMap extends Component {
   static propTypes = {
     onTakeSurveyClick: PropTypes.func.isRequired,
     fusionTableId: PropTypes.string.isRequired,
-    school: PropTypes.object,
+    school: PropTypes.object
   };
 
   gmap = undefined;
@@ -146,13 +157,16 @@ export default class CensusMap extends Component {
     $(window).resize(() => {
       // Throttle calling of resizeMap
       clearTimeout(this.resizeThrottleTimerId);
-      this.resizeThrottleTimerId = setTimeout(this.resizeMap, this.resizeThrottleTimeoutMs);
+      this.resizeThrottleTimerId = setTimeout(
+        this.resizeMap,
+        this.resizeThrottleTimeoutMs
+      );
     });
   };
 
   initializeMap = () => {
     var mapOptions = {
-      center: new google.maps.LatLng(37.6642776,-97.7238747),
+      center: new google.maps.LatLng(37.6642776, -97.7238747),
       zoom: 4,
       minZoom: 1,
       scrollwheel: this.scrollwheelOption,
@@ -160,81 +174,95 @@ export default class CensusMap extends Component {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    this.gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+    this.gmap = new google.maps.Map(
+      document.getElementById('gmap'),
+      mapOptions
+    );
 
     var layer = new google.maps.FusionTablesLayer({
       suppressInfoWindows: true,
       query: {
         select: 'location',
         from: this.props.fusionTableId,
-        where: "location NOT IN ''",
+        where: "location NOT IN ''"
       },
       styles: [
         {
           where: "teaches_cs IN ''",
           markerOptions: {
-            iconName: "measle_white"
+            iconName: 'measle_white'
           }
         },
         {
           where: "teaches_cs IN ('YES', 'HISTORICAL_YES')",
           markerOptions: {
-            iconName: "grn_blank"
+            iconName: 'grn_blank'
           }
         },
         {
           where: "teaches_cs IN ('NO', 'HISTORICAL_NO')",
           markerOptions: {
-            iconName: "small_blue"
+            iconName: 'small_blue'
           }
         },
 
         {
           where: "teaches_cs IN ('MAYBE', 'HISTORICAL_MAYBE')",
           markerOptions: {
-            iconName: "small_yellow"
+            iconName: 'small_yellow'
           }
-        },
-      ],
+        }
+      ]
     });
 
     var legend = document.createElement('div');
     legend.id = 'inmaplegend';
     legend.className = 'legend';
     legend.index = 1;
-    $("#belowmaplegend div").clone().appendTo(legend);
+    $('#belowmaplegend div')
+      .clone()
+      .appendTo(legend);
 
     this.gmap.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
     layer.setMap(this.gmap);
 
-    google.maps.event.addListener(layer, 'click', (event) => {
+    google.maps.event.addListener(layer, 'click', event => {
       this.enableDrag();
       const latitude = event.row['location'].value.split(',')[0];
       const longitude = event.row['location'].value.split(',')[1];
       const location = new google.maps.LatLng(latitude, longitude);
       this.infoWindow.close();
-      this.infoWindow.setContent(this.generateInfoWindowElement(
-        event.row['school_id'].value,
-        event.row['school_name'].value,
-        event.row['city'].value,
-        event.row['state_code'].value,
-        event.row['location'].value,
-        event.row['teaches_cs'].value
-      ));
+      this.infoWindow.setContent(
+        this.generateInfoWindowElement(
+          event.row['school_id'].value,
+          event.row['school_name'].value,
+          event.row['city'].value,
+          event.row['state_code'].value,
+          event.row['location'].value,
+          event.row['teaches_cs'].value
+        )
+      );
       this.infoWindow.setPosition(location);
       this.infoWindow.open(this.gmap);
     });
-    google.maps.event.addListener(this.gmap, 'zoom_changed', (event) => {
+    google.maps.event.addListener(this.gmap, 'zoom_changed', event => {
       this.enableDrag();
     });
-    google.maps.event.addListener(this.gmap, 'click', (event) => {
+    google.maps.event.addListener(this.gmap, 'click', event => {
       this.enableDrag();
     });
   };
 
-  generateInfoWindowElement = (schoolId, schoolName, city, state, location, teachesCs) => {
-    const infoWindowDom = document.createElement("div");
+  generateInfoWindowElement = (
+    schoolId,
+    schoolName,
+    city,
+    state,
+    location,
+    teachesCs
+  ) => {
+    const infoWindowDom = document.createElement('div');
     ReactDOM.render(
       <CensusMapInfoWindow
         onTakeSurveyClick={this.props.onTakeSurveyClick}
@@ -244,43 +272,54 @@ export default class CensusMap extends Component {
         state={state}
         location={location}
         teachesCs={teachesCs}
-      />, infoWindowDom);
+      />,
+      infoWindowDom
+    );
     return infoWindowDom;
   };
 
-  updateCensusMapSchool = (school) => {
+  updateCensusMapSchool = school => {
     if (school && school.latitude && school.longitude) {
-      const schoolLocation = new google.maps.LatLng(school.latitude, school.longitude);
+      const schoolLocation = new google.maps.LatLng(
+        school.latitude,
+        school.longitude
+      );
       const map_options = {
         center: schoolLocation,
         zoom: 14,
         scrollwheel: this.scrollwheelOption,
-        draggable: this.draggableOption,
+        draggable: this.draggableOption
       };
       this.gmap.setOptions(map_options);
       const tableId = this.props.fusionTableId;
-      const query = encodeURIComponent(`SELECT * FROM ${tableId} WHERE school_id in '${school.nces_id}'`);
-      const gvizQuery = new google.visualization.Query(`https://www.google.com/fusiontables/gvizdata?tq=${query}`);
+      const query = encodeURIComponent(
+        `SELECT * FROM ${tableId} WHERE school_id in '${school.nces_id}'`
+      );
+      const gvizQuery = new google.visualization.Query(
+        `https://www.google.com/fusiontables/gvizdata?tq=${query}`
+      );
 
-      gvizQuery.send((response) => {
+      gvizQuery.send(response => {
         const datatable = response.getDataTable();
         if (datatable && datatable.getNumberOfRows()) {
-          const schoolId = datatable.getValue(0,0);
-          const schoolName = datatable.getValue(0,2);
-          const city = datatable.getValue(0,3);
-          const state = datatable.getValue(0,4);
-          const location = datatable.getValue(0,5);
-          const teachesCs = datatable.getValue(0,6);
+          const schoolId = datatable.getValue(0, 0);
+          const schoolName = datatable.getValue(0, 2);
+          const city = datatable.getValue(0, 3);
+          const state = datatable.getValue(0, 4);
+          const location = datatable.getValue(0, 5);
+          const teachesCs = datatable.getValue(0, 6);
 
           this.infoWindow.close();
-          this.infoWindow.setContent(this.generateInfoWindowElement(
-            schoolId,
-            schoolName,
-            city,
-            state,
-            location,
-            teachesCs
-          ));
+          this.infoWindow.setContent(
+            this.generateInfoWindowElement(
+              schoolId,
+              schoolName,
+              city,
+              state,
+              location,
+              teachesCs
+            )
+          );
           this.infoWindow.setPosition(schoolLocation);
           this.infoWindow.open(this.gmap);
         }
@@ -312,7 +351,7 @@ export default class CensusMap extends Component {
     var window_aspect_ratio = $(window).innerHeight() / $(window).innerWidth();
 
     let map_height;
-    if  (window_aspect_ratio < 1) {
+    if (window_aspect_ratio < 1) {
       // Landscape window. Use the current 1:2 ratio map size.
       map_height = map_width / 2;
 
@@ -356,40 +395,25 @@ export default class CensusMap extends Component {
       <div>
         <div id="gmap" className="full-width" />
         <div id="belowmaplegend" className="legend">
-          <div className="legend-title">
-            Legend
-          </div>
+          <div className="legend-title">Legend</div>
           <div className="color green" />
-          <div className="caption">
-            Offers computer science
-          </div>
+          <div className="caption">Offers computer science</div>
           <div className="color blue" />
-          <div className="caption">
-            Limited or no CS opportunities
-          </div>
+          <div className="caption">Limited or no CS opportunities</div>
           <div className="color yellow" />
-          <div className="caption">
-            Inconclusive data
-          </div>
+          <div className="caption">Inconclusive data</div>
           <div className="color white" />
-          <div className="caption">
-            No Data
-          </div>
+          <div className="caption">No Data</div>
         </div>
         <div id="map-footer">
           <div id="left">
-            <a
-              href="/yourschool/about"
-              target="_blank"
-            >
+            <a href="/yourschool/about" target="_blank">
               Summary of the data sources we use
             </a>
           </div>
           <div id="right">
-            <span id="footer-text">
-              In partnership with
-            </span>
-            <img src="/images/fit-200/avatars/computer_science_teachers_association.png"/>
+            <span id="footer-text">In partnership with</span>
+            <img src="/images/fit-200/avatars/computer_science_teachers_association.png" />
           </div>
         </div>
         <br />

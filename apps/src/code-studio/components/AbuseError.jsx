@@ -27,13 +27,11 @@ export default class AbuseError extends React.Component {
         <p
           style={this.props.textStyle}
           dangerouslySetInnerHTML={{__html: this.props.i18n.tos}}
-        >
-        </p>
+        />
         <p
           style={this.props.textStyle}
           dangerouslySetInnerHTML={{__html: this.props.i18n.contact_us}}
-        >
-        </p>
+        />
       </div>
     );
   }

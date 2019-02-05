@@ -9,7 +9,7 @@ import {
   Col
 } from 'react-bootstrap';
 
-const REQUIRED = (<span style={{color: 'red'}}>&nbsp;*</span>);
+const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
 
 export default class FieldGroup extends React.Component {
   constructor(props) {
@@ -19,18 +19,16 @@ export default class FieldGroup extends React.Component {
 
   handleChange(event) {
     const value = event.target.value;
-    this.props.onChange && this.props.onChange({
-      [this.props.id]: value
-    });
+    this.props.onChange &&
+      this.props.onChange({
+        [this.props.id]: value
+      });
   }
 
   renderControl(controlWidth, children, props) {
     return (
       <Col {...controlWidth}>
-        <FormControl
-          onChange={this.handleChange}
-          {...props}
-        >
+        <FormControl onChange={this.handleChange} {...props}>
           {children}
         </FormControl>
       </Col>
@@ -57,17 +55,16 @@ export default class FieldGroup extends React.Component {
       <FormGroup controlId={id} validationState={validationState}>
         <Row>
           <Col {...labelWidth}>
-            <ControlLabel>{label}{required && REQUIRED}</ControlLabel>
+            <ControlLabel>
+              {label}
+              {required && REQUIRED}
+            </ControlLabel>
           </Col>
           {inlineControl && this.renderControl(controlWidth, children, props)}
         </Row>
-        {
-          !inlineControl && (
-            <Row>
-              {this.renderControl(controlWidth, children, props)}
-            </Row>
-          )
-        }
+        {!inlineControl && (
+          <Row>{this.renderControl(controlWidth, children, props)}</Row>
+        )}
         <HelpBlock>{errorMessage}</HelpBlock>
       </FormGroup>
     );
@@ -81,10 +78,7 @@ FieldGroup.defaultProps = {
 
 FieldGroup.propTypes = {
   id: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element
-  ]).isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   required: PropTypes.bool,
   validationState: PropTypes.string,
   errorMessage: PropTypes.string,

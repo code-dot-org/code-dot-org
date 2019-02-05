@@ -1,5 +1,7 @@
-const PROGRAM_CSD = "Computer Science Discoveries (appropriate for 6th - 10th grade)";
-const PROGRAM_CSP = "Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)";
+const PROGRAM_CSD =
+  'Computer Science Discoveries (appropriate for 6th - 10th grade)';
+const PROGRAM_CSP =
+  'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)';
 
 const styles = {
   indented: {
@@ -18,8 +20,4 @@ const styles = {
   }
 };
 
-export {
-  PROGRAM_CSD,
-  PROGRAM_CSP,
-  styles
-};
+export {PROGRAM_CSD, PROGRAM_CSP, styles};

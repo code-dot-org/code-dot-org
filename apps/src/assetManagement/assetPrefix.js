@@ -1,4 +1,4 @@
-import { unicode } from '@cdo/apps/code-studio/components/icons';
+import {unicode} from '@cdo/apps/code-studio/components/icons';
 
 // For proxying non-https assets
 const MEDIA_PROXY = '//' + location.host + '/media?u=';
@@ -7,7 +7,10 @@ const MEDIA_PROXY = '//' + location.host + '/media?u=';
 const ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
 // absolute URL to curriculum.code.org (which doesn't require media proxy)
-const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp('^https://curriculum.code.org/', 'i');
+const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
+  '^https://curriculum.code.org/',
+  'i'
+);
 
 export const ICON_PREFIX = 'icon://';
 export const ICON_PREFIX_REGEX = new RegExp('^icon://');
@@ -44,7 +47,6 @@ export function fixPath(filename) {
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
   if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
-
     if (ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename)) {
       // We know that files served from this location will respond with the
       // access-control-allow-origin: * header, meaning no CORS issue & no need

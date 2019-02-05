@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "@cdo/apps/util/color";
-import i18n from "@cdo/locale";
-import ProgressDetailToggle from "@cdo/apps/templates/progress/ProgressDetailToggle";
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import Button from '@cdo/apps/templates/Button';
-import { stringifyQueryParams } from '@cdo/apps/utils';
+import {stringifyQueryParams} from '@cdo/apps/utils';
 
 const styles = {
   main: {
@@ -41,28 +41,24 @@ export default class MiniViewTopRow extends React.Component {
     scriptName: PropTypes.string.isRequired,
     // May not have this (i.e if not logged in)
     linesOfCodeText: PropTypes.string,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   render() {
-    const { scriptName, linesOfCodeText, selectedSectionId } = this.props;
-      const queryParams = selectedSectionId ?
-          stringifyQueryParams({section_id: selectedSectionId}) : '';
-      return (
+    const {scriptName, linesOfCodeText, selectedSectionId} = this.props;
+    const queryParams = selectedSectionId
+      ? stringifyQueryParams({section_id: selectedSectionId})
+      : '';
+    return (
       <div style={styles.main}>
         <Button
           text={i18n.viewUnitOverview()}
           href={`/s/${scriptName}${queryParams}`}
           color={Button.ButtonColor.gray}
         />
-        <span style={styles.linesOfCodeText}>
-          {linesOfCodeText}
-        </span>
+        <span style={styles.linesOfCodeText}>{linesOfCodeText}</span>
         <div style={styles.toggle}>
-          <ProgressDetailToggle
-            activeColor={color.teal}
-            whiteBorder={true}
-          />
+          <ProgressDetailToggle activeColor={color.teal} whiteBorder={true} />
         </div>
       </div>
     );

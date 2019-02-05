@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import color from "@cdo/apps/util/color";
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { isScriptHiddenForSection, toggleHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  isScriptHiddenForSection,
+  toggleHiddenScript
+} from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
@@ -18,7 +21,7 @@ const styles = {
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
-    marginBottom: 12,
+    marginBottom: 12
   },
   content: {
     padding: 20
@@ -29,7 +32,7 @@ const styles = {
   },
   title: {
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   // TODO: share better with ProgressLesson
   hidden: {
@@ -38,8 +41,8 @@ const styles = {
     marginTop: 0,
     marginBottom: 12,
     marginLeft: 0,
-    marginRight: 0,
-  },
+    marginRight: 0
+  }
 };
 
 class CourseScript extends Component {
@@ -54,11 +57,11 @@ class CourseScript extends Component {
     selectedSectionId: PropTypes.string.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenScript: PropTypes.func.isRequired,
+    toggleHiddenScript: PropTypes.func.isRequired
   };
 
   onClickHiddenToggle = value => {
-    const { name, selectedSectionId, id, toggleHiddenScript } = this.props;
+    const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
   };
 
@@ -74,7 +77,11 @@ class CourseScript extends Component {
       hasNoSections
     } = this.props;
 
-    const isHidden = isScriptHiddenForSection(hiddenStageState, selectedSectionId, id);
+    const isHidden = isScriptHiddenForSection(
+      hiddenStageState,
+      selectedSectionId,
+      id
+    );
 
     if (isHidden && viewAs === ViewType.Student) {
       return null;
@@ -99,23 +106,27 @@ class CourseScript extends Component {
             className="uitest-go-to-unit-button"
           />
         </div>
-        {viewAs === ViewType.Teacher && !hasNoSections &&
+        {viewAs === ViewType.Teacher && !hasNoSections && (
           <CourseScriptTeacherInfo
             disabled={!selectedSectionId}
             isHidden={isHidden}
             onToggleHiddenScript={this.onClickHiddenToggle}
           />
-        }
+        )}
       </div>
     );
   }
 }
 export const UnconnectedCourseScript = CourseScript;
 
-export default connect(state => ({
-  viewAs: state.viewAs,
-  selectedSectionId: state.teacherSections.selectedSectionId,
-  hiddenStageState: state.hiddenStage,
-  hasNoSections: state.teacherSections.sectionsAreLoaded &&
-    state.teacherSections.sectionIds.length === 0,
-}), { toggleHiddenScript })(CourseScript);
+export default connect(
+  state => ({
+    viewAs: state.viewAs,
+    selectedSectionId: state.teacherSections.selectedSectionId,
+    hiddenStageState: state.hiddenStage,
+    hasNoSections:
+      state.teacherSections.sectionsAreLoaded &&
+      state.teacherSections.sectionIds.length === 0
+  }),
+  {toggleHiddenScript}
+)(CourseScript);

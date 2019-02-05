@@ -10,10 +10,10 @@ import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   tutorialSetNoTutorials: {
-    backgroundColor: "#d6d6d6",
+    backgroundColor: '#d6d6d6',
     padding: 20,
     margin: 60,
-    whiteSpace: "pre-wrap"
+    whiteSpace: 'pre-wrap'
   }
 };
 
@@ -31,11 +31,13 @@ export default class TutorialSet extends React.Component {
     chosenItem: null
   };
 
-  tutorialClicked = item => this.setState({showingDetail: true, chosenItem: item});
+  tutorialClicked = item =>
+    this.setState({showingDetail: true, chosenItem: item});
 
-  tutorialDetailClosed = () => this.setState({showingDetail: false, chosenItem: null});
+  tutorialDetailClosed = () =>
+    this.setState({showingDetail: false, chosenItem: null});
 
-  changeTutorial = (delta) => {
+  changeTutorial = delta => {
     const index = this.props.tutorials.indexOf(this.state.chosenItem);
     let nextItem = this.props.tutorials[index + delta];
     if (nextItem) {
@@ -44,8 +46,10 @@ export default class TutorialSet extends React.Component {
   };
 
   render() {
-    const disabledTutorial = this.state.showingDetail &&
-      this.props.disabledTutorials.indexOf(this.state.chosenItem.short_code) !== -1;
+    const disabledTutorial =
+      this.state.showingDetail &&
+      this.props.disabledTutorials.indexOf(this.state.chosenItem.short_code) !==
+        -1;
 
     return (
       <div>

@@ -21,7 +21,7 @@ export default function reducer(state = initialState, action) {
       autoClose: action.autoClose,
       imgOnly: action.imgOnly,
       hintsOnly: action.hintsOnly,
-      imgUrl: action.imgUrl,
+      imgUrl: action.imgUrl
     };
   }
 
@@ -41,7 +41,7 @@ export const openDialog = ({autoClose, imgOnly, hintsOnly, imgUrl}) => ({
   autoClose,
   imgOnly,
   hintsOnly,
-  imgUrl,
+  imgUrl
 });
 
-export const closeDialog = () => ({ type: CLOSE_DIALOG });
+export const closeDialog = () => ({type: CLOSE_DIALOG});

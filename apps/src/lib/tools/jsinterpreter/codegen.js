@@ -17,23 +17,26 @@ exports.ForStatementMode = {
 // Blockly specific codegen functions:
 //
 
-var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+var INFINITE_LOOP_TRAP =
+  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
-var LOOP_HIGHLIGHT_RE =
-    new RegExp(LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)') + '\\s*', 'g');
+var LOOP_HIGHLIGHT_RE = new RegExp(
+  LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)') + '\\s*',
+  'g'
+);
 
 /**
  * Returns javascript code to call a timeout check
  */
-exports.loopTrap = function () {
+exports.loopTrap = function() {
   return INFINITE_LOOP_TRAP;
 };
 
-exports.loopHighlight = function (apiName, blockId) {
+exports.loopHighlight = function(apiName, blockId) {
   var args = "'block_id_" + blockId + "'";
   if (blockId === undefined) {
-    args = "%1";
+    args = '%1';
   }
   return '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
 };
@@ -43,44 +46,53 @@ exports.loopHighlight = function (apiName, blockId) {
  * @param {string} code Generated code.
  * @return {string} The code without serial numbers and timeout checks.
  */
-exports.strip = function (code) {
-  return (code
-    // Strip out serial numbers.
-    .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
-    // Remove timeouts.
-    .replace(new RegExp(utils.escapeRegExp(INFINITE_LOOP_TRAP), 'g'), '')
-    // Strip out loop highlight
-    .replace(LOOP_HIGHLIGHT_RE, '')
-    // Strip out class namespaces.
-    .replace(/(StudioApp|Maze|Turtle)\./g, '')
-    // Strip out particular helper functions.
-    .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
-    // Collapse consecutive blank lines.
-    .replace(/\n\n+/gm, '\n\n')
-    // Trim.
-    .replace(/^\s+|\s+$/g, '')
+exports.strip = function(code) {
+  return (
+    code
+      // Strip out serial numbers.
+      .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
+      // Remove timeouts.
+      .replace(new RegExp(utils.escapeRegExp(INFINITE_LOOP_TRAP), 'g'), '')
+      // Strip out loop highlight
+      .replace(LOOP_HIGHLIGHT_RE, '')
+      // Strip out class namespaces.
+      .replace(/(StudioApp|Maze|Turtle)\./g, '')
+      // Strip out particular helper functions.
+      .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
+      // Collapse consecutive blank lines.
+      .replace(/\n\n+/gm, '\n\n')
+      // Trim.
+      .replace(/^\s+|\s+$/g, '')
   );
 };
 
 /**
  * Extract the user's code as raw JavaScript.
  */
-exports.workspaceCode = function (blockly) {
+exports.workspaceCode = function(blockly) {
   var code = blockly.Generator.blockSpaceToCode('JavaScript', null, false);
   return exports.strip(code);
 };
 
-function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj, options) {
+function populateFunctionsIntoScope(
+  interpreter,
+  scope,
+  funcsObj,
+  parentObj,
+  options
+) {
   for (var prop in funcsObj) {
     var func = funcsObj[prop];
     if (func instanceof Function) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = interpreter.makeNativeMemberFunction(utils.extend(options, {
-        nativeFunc: func,
-        nativeParentObj: parent,
-      }));
+      var wrapper = interpreter.makeNativeMemberFunction(
+        utils.extend(options, {
+          nativeFunc: func,
+          nativeParentObj: parent
+        })
+      );
       interpreter.setProperty(
         scope,
         prop,
@@ -93,8 +105,10 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj, opt
 function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
-    if (block.parent &&
-        (!blockFilter || typeof blockFilter[block.func] !== 'undefined')) {
+    if (
+      block.parent &&
+      (!blockFilter || typeof blockFilter[block.func] !== 'undefined')
+    ) {
       var funcScope = scope;
       var funcName = block.func;
       var funcComponents = funcName.split('.');
@@ -110,13 +124,13 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
         funcName = funcComponents[1];
       }
       var func = block.parent[funcName];
-      const { dontMarshal, nativeIsAsync, nativeCallsBackInterpreter } = block;
+      const {dontMarshal, nativeIsAsync, nativeCallsBackInterpreter} = block;
       var wrapper = interpreter.makeNativeMemberFunction({
-          nativeFunc: func,
-          nativeParentObj: block.parent,
-          dontMarshal,
-          nativeIsAsync,
-          nativeCallsBackInterpreter,
+        nativeFunc: func,
+        nativeParentObj: block.parent,
+        dontMarshal,
+        nativeIsAsync,
+        nativeCallsBackInterpreter
       });
       var intFunc;
       if (block.nativeIsAsync) {
@@ -133,13 +147,19 @@ function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
 
   // Add String.prototype.includes
-  var wrapper = function (searchStr) {
+  var wrapper = function(searchStr) {
     // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
     return interpreter.createPrimitive(
-      String.prototype.indexOf.apply(this, arguments) !== -1);
+      String.prototype.indexOf.apply(this, arguments) !== -1
+    );
   };
-  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
-    interpreter.createNativeFunction(wrapper), false, true);
+  interpreter.setProperty(
+    interpreter.STRING.properties.prototype,
+    'includes',
+    interpreter.createNativeFunction(wrapper),
+    false,
+    true
+  );
 }
 
 /**
@@ -154,7 +174,13 @@ function populateJSFunctions(interpreter) {
  * globalObjects (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, globalObjects) {
+exports.initJSInterpreter = function(
+  interpreter,
+  blocks,
+  blockFilter,
+  scope,
+  globalObjects
+) {
   for (var globalObj in globalObjects) {
     // The globalObjects object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
@@ -167,23 +193,21 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
     // Marshal return values with a maxDepth of 2 (just an object and its child
     // methods and properties only)
     populateFunctionsIntoScope(
-        interpreter,
-        obj,
-        globalObjects[globalObj],
-        null,
-        { maxDepth: 2 });
+      interpreter,
+      obj,
+      globalObjects[globalObj],
+      null,
+      {maxDepth: 2}
+    );
   }
   populateGlobalFunctions(
-      interpreter,
-      dropletGlobalConfigBlocks,
-      blockFilter,
-      scope);
+    interpreter,
+    dropletGlobalConfigBlocks,
+    blockFilter,
+    scope
+  );
   if (blocks) {
-    populateGlobalFunctions(
-        interpreter,
-        blocks,
-        blockFilter,
-        scope);
+    populateGlobalFunctions(interpreter, blocks, blockFilter, scope);
   }
   populateJSFunctions(interpreter);
 };
@@ -192,18 +216,18 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
  * Check to see if it is safe to step the interpreter while we are unwinding.
  * (Called repeatedly after completing a step where the node was marked 'done')
  */
-exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+exports.isNextStepSafeWhileUnwinding = function(interpreter) {
   var state = interpreter.peekStackFrame();
   var type = state.node.type;
   if (state.done_) {
     return true;
   }
-  if (type === "SwitchStatement") {
+  if (type === 'SwitchStatement') {
     // Safe to skip over SwitchStatement's except the very start (before a
     // switchValue has been set):
     return typeof state.switchValue_ !== 'undefined';
   }
-  if (type === "VariableDeclaration") {
+  if (type === 'VariableDeclaration') {
     // Only stop the first time this VariableDeclaration is processed (the
     // interpreter will stop on this node multiple times, but with different
     // `state.n` representing which VariableDeclarator is being executed).
@@ -212,30 +236,30 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   /* eslint-disable no-fallthrough */
   switch (type) {
     // Declarations:
-    case "VariableDeclarator":
+    case 'VariableDeclarator':
     // Statements:
-    case "BlockStatement":
-    case "BreakStatement":
+    case 'BlockStatement':
+    case 'BreakStatement':
     // All Expressions:
-    case "ThisExpression":
-    case "ArrayExpression":
-    case "ObjectExpression":
-    case "ArrowExpression":
-    case "SequenceExpression":
-    case "UnaryExpression":
-    case "BinaryExpression":
-    case "UpdateExpression":
-    case "LogicalExpression":
-    case "ConditionalExpression":
-    case "NewExpression":
-    case "CallExpression":
-    case "MemberExpression":
-    case "FunctionExpression":
-    case "AssignmentExpression":
+    case 'ThisExpression':
+    case 'ArrayExpression':
+    case 'ObjectExpression':
+    case 'ArrowExpression':
+    case 'SequenceExpression':
+    case 'UnaryExpression':
+    case 'BinaryExpression':
+    case 'UpdateExpression':
+    case 'LogicalExpression':
+    case 'ConditionalExpression':
+    case 'NewExpression':
+    case 'CallExpression':
+    case 'MemberExpression':
+    case 'FunctionExpression':
+    case 'AssignmentExpression':
     // Other:
-    case "Identifier":
-    case "Literal":
-    case "Program":
+    case 'Identifier':
+    case 'Literal':
+    case 'Program':
       return true;
   }
   /* eslint-enable  no-fallthrough */
@@ -246,8 +270,9 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
 // Usage
 // var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
-exports.calculateCumulativeLength = function (code) {
-  var regex = /\n/g, result = [];
+exports.calculateCumulativeLength = function(code) {
+  var regex = /\n/g,
+    result = [];
   do {
     result.push(regex.lastIndex);
     regex.exec(code);
@@ -262,7 +287,7 @@ exports.calculateCumulativeLength = function (code) {
 // Usage
 // var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
 // tries to find 2512th character lies in which row.
-exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
+exports.aceFindRow = function(cumulativeLength, rows, rowe, pos) {
   if (rows > rowe) {
     return null;
   }
@@ -280,7 +305,7 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
   return mid;
 };
 
-exports.isAceBreakpointRow = function (session, userCodeRow) {
+exports.isAceBreakpointRow = function(session, userCodeRow) {
   if (!session) {
     return false;
   }
@@ -307,7 +332,14 @@ function clearAllHighlightedAceLines(aceEditor) {
  *
  * If the row parameters are not supplied, just clear the last highlight.
  */
-function highlightAceLines(aceEditor, className, startRow, startColumn, endRow, endColumn) {
+function highlightAceLines(
+  aceEditor,
+  className,
+  startRow,
+  startColumn,
+  endRow,
+  endColumn
+) {
   var session = aceEditor.getSession();
   className = className || 'ace_step';
   if (lastHighlightMarkerIds[className]) {
@@ -316,8 +348,15 @@ function highlightAceLines(aceEditor, className, startRow, startColumn, endRow, 
   }
   if (typeof startRow !== 'undefined') {
     lastHighlightMarkerIds[className] = session.addMarker(
-        new (window.ace.require('ace/range').Range)(
-            startRow, startColumn, endRow, endColumn), className, 'text');
+      new (window.ace.require('ace/range')).Range(
+        startRow,
+        startColumn,
+        endRow,
+        endColumn
+      ),
+      className,
+      'text'
+    );
     if (!aceEditor.isRowFullyVisible(startRow)) {
       aceEditor.scrollToLine(startRow, true);
     }
@@ -330,7 +369,7 @@ function highlightAceLines(aceEditor, className, startRow, startColumn, endRow, 
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowColError = function (editor, row, col) {
+exports.selectEditorRowColError = function(editor, row, col) {
   if (!editor) {
     return;
   }
@@ -351,8 +390,9 @@ exports.selectEditorRowColError = function (editor, row, col) {
     // scrolling to the right
     selection.setSelectionRange(range, true);
   }
-  lastHighlightMarkerIds.ace_error = editor.aceEditor.getSession()
-      .highlightLines(row, row, 'ace_error').id;
+  lastHighlightMarkerIds.ace_error = editor.aceEditor
+    .getSession()
+    .highlightLines(row, row, 'ace_error').id;
 };
 
 /**
@@ -362,7 +402,7 @@ exports.selectEditorRowColError = function (editor, row, col) {
  * @param {boolean} allClasses When set to true, remove all classes of
  * highlights (including ace_step, ace_error, and anything else)
  */
-exports.clearDropletAceHighlighting = function (editor, allClasses) {
+exports.clearDropletAceHighlighting = function(editor, allClasses) {
   if (editor.session && editor.session.currentlyUsingBlocks) {
     editor.clearLineMarks();
   }
@@ -375,17 +415,39 @@ exports.clearDropletAceHighlighting = function (editor, allClasses) {
   }
 };
 
-function highlightCode(aceEditor, cumulativeLength, start, end, highlightClass) {
+function highlightCode(
+  aceEditor,
+  cumulativeLength,
+  start,
+  end,
+  highlightClass
+) {
   var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
-  range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.row = exports.aceFindRow(
+    cumulativeLength,
+    0,
+    cumulativeLength.length,
+    start
+  );
   range.start.column = start - cumulativeLength[range.start.row];
-  range.end.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.row = exports.aceFindRow(
+    cumulativeLength,
+    0,
+    cumulativeLength.length,
+    end
+  );
   range.end.column = end - cumulativeLength[range.end.row];
 
-  highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
-      range.start.column, range.end.row, range.end.column);
+  highlightAceLines(
+    aceEditor,
+    highlightClass || 'ace_step',
+    range.start.row,
+    range.start.column,
+    range.end.row,
+    range.end.column
+  );
 }
 
 /**
@@ -396,18 +458,21 @@ function highlightCode(aceEditor, cumulativeLength, start, end, highlightClass) 
  *
  * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
-exports.selectCurrentCode = function (interpreter,
-                                      cumulativeLength,
-                                      userCodeStartOffset,
-                                      userCodeLength,
-                                      editor,
-                                      highlightClass) {
+exports.selectCurrentCode = function(
+  interpreter,
+  cumulativeLength,
+  userCodeStartOffset,
+  userCodeLength,
+  editor,
+  highlightClass
+) {
   var userCodeRow = -1;
   if (interpreter && interpreter.peekStackFrame()) {
     var node = interpreter.peekStackFrame().node;
 
     if (node.type === 'ForStatement') {
-      var mode = interpreter.peekStackFrame().mode_ || 0, subNode;
+      var mode = interpreter.peekStackFrame().mode_ || 0,
+        subNode;
       switch (mode) {
         case exports.ForStatementMode.INIT:
           subNode = node.init;
@@ -422,7 +487,7 @@ exports.selectCurrentCode = function (interpreter,
           subNode = node.update;
           break;
         default:
-          throw new Error("unknown mode", mode);
+          throw new Error('unknown mode', mode);
       }
       node = subNode || node;
     }
@@ -436,14 +501,32 @@ exports.selectCurrentCode = function (interpreter,
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
     if (start >= 0 && start < userCodeLength && end <= userCodeLength) {
-      userCodeRow = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      userCodeRow = exports.aceFindRow(
+        cumulativeLength,
+        0,
+        cumulativeLength.length,
+        start
+      );
       // Highlight the code being executed in each step:
       if (editor.session && editor.session.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
         editor.clearLineMarks();
-        editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow], type: 'block'}, style);
+        editor.mark(
+          {
+            row: userCodeRow,
+            col: start - cumulativeLength[userCodeRow],
+            type: 'block'
+          },
+          style
+        );
       } else {
-        highlightCode(editor.aceEditor, cumulativeLength, start, end, highlightClass);
+        highlightCode(
+          editor.aceEditor,
+          cumulativeLength,
+          start,
+          end,
+          highlightClass
+        );
       }
     } else {
       exports.clearDropletAceHighlighting(editor);

@@ -2,10 +2,10 @@ import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
-import { ViewType } from '../viewAsRedux';
-import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { isStageHiddenForSection } from '../hiddenStageRedux';
+import {connect} from 'react-redux';
+import {ViewType} from '../viewAsRedux';
+import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
+import {isStageHiddenForSection} from '../hiddenStageRedux';
 
 const styles = {
   container: {
@@ -42,13 +42,19 @@ class TeacherContentToggle extends React.Component {
       throw new Error('Expected level-body');
     }
     // Show this element, as parent div (refs.lockMessage) now owns visibility
-    $('#locked-stage').appendTo(this.refs.lockMessage).show();
-    $('#hidden-stage').appendTo(this.refs.hiddenMessage).show();
+    $('#locked-stage')
+      .appendTo(this.refs.lockMessage)
+      .show();
+    $('#hidden-stage')
+      .appendTo(this.refs.hiddenMessage)
+      .show();
     // Server initially sets level-body visibility to hidden when viewAs=Student
     // so that student view doesnt show content while we make async calls. Once
     // this component has mounted, we move level-body into our first div, which
     // will now own toggling visibility
-    $('#level-body').css('visibility', '').appendTo(this.refs.content);
+    $('#level-body')
+      .css('visibility', '')
+      .appendTo(this.refs.content);
   }
 
   render() {
@@ -71,7 +77,7 @@ class TeacherContentToggle extends React.Component {
     let contentStyle = {
       height: '100%'
     };
-    let hasOverlayFrame = (isLockedStage || isHiddenStage);
+    let hasOverlayFrame = isLockedStage || isHiddenStage;
 
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_stages and
@@ -98,9 +104,15 @@ class TeacherContentToggle extends React.Component {
     // our children as we rerender is their style.
     return (
       <div style={styles.container}>
-        <div style={contentStyle} ref="content"/>
-        <div style={[frameStyle, !showLockedStageMessage && styles.hidden]} ref="lockMessage"/>
-        <div style={[frameStyle, !showHiddenStageMessage && styles.hidden]} ref="hiddenMessage"/>
+        <div style={contentStyle} ref="content" />
+        <div
+          style={[frameStyle, !showLockedStageMessage && styles.hidden]}
+          ref="lockMessage"
+        />
+        <div
+          style={[frameStyle, !showHiddenStageMessage && styles.hidden]}
+          ref="hiddenMessage"
+        />
       </div>
     );
   }
@@ -114,16 +126,21 @@ export const mapStateToProps = state => {
 
   let isLockedStage = false;
   let isHiddenStage = false;
-  const { currentStageId } = state.progress;
+  const {currentStageId} = state.progress;
   if (viewAs === ViewType.Student) {
-    const { selectedSectionId } = state.teacherSections;
+    const {selectedSectionId} = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
-    isHiddenStage = isStageHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
+    isHiddenStage = isStageHiddenForSection(
+      state.hiddenStage,
+      selectedSectionId,
+      currentStageId
+    );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
-    isLockedStage = state.progress.stages.some(stage =>
-      stage.id === currentStageId && stage.lockable);
+    isLockedStage = state.progress.stages.some(
+      stage => stage.id === currentStageId && stage.lockable
+    );
   }
 
   return {

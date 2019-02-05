@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
-import { castValue, displayableValue, editableValue } from './dataUtils';
+import {castValue, displayableValue, editableValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 
@@ -43,7 +43,7 @@ class EditTableRow extends React.Component {
     const newInput = Object.assign({}, this.state.newInput, {
       [columnName]: event.target.value
     });
-    this.setState({ newInput });
+    this.setState({newInput});
   }
 
   handleSave = () => {
@@ -67,7 +67,7 @@ class EditTableRow extends React.Component {
   handleEdit = () => {
     this.setState({
       isEditing: true,
-      newInput: _.mapValues(this.props.record, editableValue),
+      newInput: _.mapValues(this.props.record, editableValue)
     });
   };
 
@@ -81,7 +81,7 @@ class EditTableRow extends React.Component {
     );
   };
 
-  handleKeyUp = (event) => {
+  handleKeyUp = event => {
     if (event.key === 'Enter') {
       this.handleSave();
     } else if (event.key === 'Escape') {
@@ -92,57 +92,49 @@ class EditTableRow extends React.Component {
   render() {
     return (
       <tr style={dataStyles.row}>
-        {
-          this.props.columnNames.map(columnName => (
-            <td key={columnName} style={dataStyles.cell}>
-              {
-                (this.state.isEditing && columnName !== 'id') ?
-                  <input
-                    style={dataStyles.input}
-                    value={this.state.newInput[columnName] || ''}
-                    onChange={event => this.handleChange(columnName, event)}
-                    onKeyUp={this.handleKeyUp}
-                  /> :
-                  displayableValue(this.props.record[columnName])
-              }
-            </td>
-          ))
-        }
+        {this.props.columnNames.map(columnName => (
+          <td key={columnName} style={dataStyles.cell}>
+            {this.state.isEditing && columnName !== 'id' ? (
+              <input
+                style={dataStyles.input}
+                value={this.state.newInput[columnName] || ''}
+                onChange={event => this.handleChange(columnName, event)}
+                onKeyUp={this.handleKeyUp}
+              />
+            ) : (
+              displayableValue(this.props.record[columnName])
+            )}
+          </td>
+        ))}
 
-        <td style={dataStyles.cell}/>
+        <td style={dataStyles.cell} />
 
         <td style={dataStyles.editButtonCell}>
-          {
-            !this.state.isDeleting && (
-              this.state.isEditing ?
-                <PendingButton
-                  isPending={this.state.isSaving}
-                  onClick={this.handleSave}
-                  pendingText="Saving..."
-                  style={dataStyles.saveButton}
-                  text="Save"
-                /> :
-                <button
-                  style={dataStyles.editButton}
-                  onClick={this.handleEdit}
-                >
-                  Edit
-                </button>
-            )
-          }
-
-          {
-            !this.state.isSaving && (
+          {!this.state.isDeleting &&
+            (this.state.isEditing ? (
               <PendingButton
-                isPending={this.state.isDeleting}
-                onClick={this.handleDelete}
-                pendingStyle={{float: 'right'}}
-                pendingText="Deleting..."
-                style={dataStyles.redButton}
-                text="Delete"
+                isPending={this.state.isSaving}
+                onClick={this.handleSave}
+                pendingText="Saving..."
+                style={dataStyles.saveButton}
+                text="Save"
               />
-            )
-          }
+            ) : (
+              <button style={dataStyles.editButton} onClick={this.handleEdit}>
+                Edit
+              </button>
+            ))}
+
+          {!this.state.isSaving && (
+            <PendingButton
+              isPending={this.state.isDeleting}
+              onClick={this.handleDelete}
+              pendingStyle={{float: 'right'}}
+              pendingText="Deleting..."
+              style={dataStyles.redButton}
+              text="Delete"
+            />
+          )}
         </td>
       </tr>
     );

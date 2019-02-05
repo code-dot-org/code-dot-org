@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedDeleteProjectDialog as DeleteProjectDialog} from './DeleteProjectDialog';
-import { action } from '@storybook/addon-actions';
+import {action} from '@storybook/addon-actions';
 
 const PROJECT_ID = 'MY_PROJECT_ID';
 
@@ -18,7 +18,7 @@ export default storybook => {
             isDeletePending={false}
             projectId={PROJECT_ID}
             onClose={action('close')}
-            deleteProject={() => console.log("Delete project")}
+            deleteProject={() => console.log('Delete project')}
           />
         )
       },
@@ -31,7 +31,7 @@ export default storybook => {
             isDeletePending={true}
             projectId={PROJECT_ID}
             onClose={action('close')}
-            deleteProject={() => console.log("Delete project")}
+            deleteProject={() => console.log('Delete project')}
           />
         )
       }

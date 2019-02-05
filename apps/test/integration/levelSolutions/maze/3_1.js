@@ -1,12 +1,12 @@
 import {TestResults} from '@cdo/apps/constants';
 
 module.exports = {
-  app: "maze",
-  levelFile: "levels",
-  levelId: "3_1",
+  app: 'maze',
+  levelFile: 'levels',
+  levelId: '3_1',
   tests: [
     {
-      description: "Verify solution",
+      description: 'Verify solution',
       editCode: true,
       expected: {
         result: true,
@@ -15,7 +15,7 @@ module.exports = {
       xml: 'moveForward();moveForward();moveForward();'
     },
     {
-      description: "Single move forward block",
+      description: 'Single move forward block',
       editCode: true,
       expected: {
         result: false,

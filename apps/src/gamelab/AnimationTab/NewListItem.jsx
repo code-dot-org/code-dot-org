@@ -60,10 +60,16 @@ class NewListItem extends React.Component {
   render() {
     const hovered = Radium.getState(this.state, 'main', ':hover');
     return (
-      <div style={styles.tile} onClick={this.props.onClick} className="newListItem">
+      <div
+        style={styles.tile}
+        onClick={this.props.onClick}
+        className="newListItem"
+      >
         <div style={styles.wrapper}>
-          <div style={[styles.dottedBorder, hovered && styles.dottedBorderHovered]}>
-            <i className="fa fa-plus-circle" style={styles.addButton}></i>
+          <div
+            style={[styles.dottedBorder, hovered && styles.dottedBorderHovered]}
+          >
+            <i className="fa fa-plus-circle" style={styles.addButton} />
           </div>
         </div>
         <div className="animation-name" style={styles.animationName}>

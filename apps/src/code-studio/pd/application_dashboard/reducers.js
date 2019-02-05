@@ -1,8 +1,9 @@
-const SET_WORKSHOP_ADMIN_PERMISSION = 'application_dashboard/SET_WORKSHOP_ADMIN_PERMISSION';
-const SET_LOCK_APPLICATION_PERMISSION = 'application_dashboard/SET_LOCK_APPLICATION_PERMISSION';
+const SET_WORKSHOP_ADMIN_PERMISSION =
+  'application_dashboard/SET_WORKSHOP_ADMIN_PERMISSION';
+const SET_LOCK_APPLICATION_PERMISSION =
+  'application_dashboard/SET_LOCK_APPLICATION_PERMISSION';
 
 const initialState = {
-
   permissions: {}
 };
 
@@ -30,12 +31,12 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
-export const setWorkshopAdminPermission = (enabled) => ({
+export const setWorkshopAdminPermission = enabled => ({
   type: SET_WORKSHOP_ADMIN_PERMISSION,
   enabled
 });
 
-export const setLockApplicationPermission = (enabled) => ({
+export const setLockApplicationPermission = enabled => ({
   type: SET_LOCK_APPLICATION_PERMISSION,
   enabled
 });

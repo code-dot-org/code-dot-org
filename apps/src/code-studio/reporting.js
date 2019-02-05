@@ -2,8 +2,8 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import { TestResults } from '@cdo/apps/constants';
-import { PostMilestoneMode } from '@cdo/apps/util/sharedConstants';
+import {TestResults} from '@cdo/apps/constants';
+import {PostMilestoneMode} from '@cdo/apps/util/sharedConstants';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -11,7 +11,7 @@ var lastServerResponse = {};
 
 var reporting = module.exports;
 
-reporting.getLastServerResponse = function () {
+reporting.getLastServerResponse = function() {
   return lastServerResponse;
 };
 
@@ -27,11 +27,13 @@ function validateType(key, value, type) {
   if (type === 'array') {
     typeIsValid = typeIsValid || Array.isArray(value);
   } else {
-    typeIsValid = typeIsValid || (typeof value === type);
+    typeIsValid = typeIsValid || typeof value === type;
   }
 
   if (!typeIsValid) {
-    console.error(`Expected ${key} to be of type '${type}'. Got '${typeof value}'`);
+    console.error(
+      `Expected ${key} to be of type '${type}'. Got '${typeof value}'`
+    );
   }
 }
 
@@ -50,7 +52,8 @@ function validateReport(report) {
     }
 
     const inLevelGroup = report.allowMultipleSends === true;
-    const isContainedLevel = report.testResult === TestResults.CONTAINED_LEVEL_RESULT;
+    const isContainedLevel =
+      report.testResult === TestResults.CONTAINED_LEVEL_RESULT;
 
     const value = report[key];
     switch (key) {
@@ -115,13 +118,19 @@ function validateReport(report) {
         validateType('testResult', value, 'number');
         break;
       case 'submitted':
-        if (report.app === 'applab' || report.app === 'gamelab' || report.app === 'weblab') {
+        if (
+          report.app === 'applab' ||
+          report.app === 'gamelab' ||
+          report.app === 'weblab'
+        ) {
           validateType('submitted', value, 'boolean');
         } else {
           // In sendResultsCompletion this becomes either "true" (the string) or false (the boolean).
           // Would probably be better long term if it was always a string or always a boolean.
-          if (value !== "true" && value !== false) {
-            console.error('Expected submitted to be either string "true" or value false');
+          if (value !== 'true' && value !== false) {
+            console.error(
+              'Expected submitted to be either string "true" or value false'
+            );
           }
         }
         break;
@@ -159,7 +168,9 @@ function validateReport(report) {
         // Eventually we'd probably prefer to throw here, but I don't have enough
         // confidence that this validation is 100% correct to start breaking things
         // if it isnt.
-        console.error(`Unexpected report key '${key}' of type '${typeof report[key]}'`);
+        console.error(
+          `Unexpected report key '${key}' of type '${typeof report[key]}'`
+        );
         break;
     }
   }
@@ -205,7 +216,7 @@ function validateReport(report) {
  *
  * @param {MilestoneReport} report
  */
-reporting.sendReport = function (report) {
+reporting.sendReport = function(report) {
   // The list of report fields we want to send to the server
   const serverFields = [
     'program',
@@ -233,12 +244,19 @@ reporting.sendReport = function (report) {
   }
   const queryString = queryItems.join('&');
 
-  clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
+  clientState.trackProgress(
+    report.result,
+    report.lines,
+    report.testResult,
+    appOptions.scriptName,
+    report.serverLevelId || appOptions.serverLevelId
+  );
 
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  const postMilestoneMode = appOptions.postMilestoneMode || PostMilestoneMode.all;
+  const postMilestoneMode =
+    appOptions.postMilestoneMode || PostMilestoneMode.all;
   let postMilestone;
 
   switch (postMilestoneMode) {
@@ -252,7 +270,7 @@ reporting.sendReport = function (report) {
       postMilestone = appOptions.level.final_level;
       break;
     default:
-      console.error("Unexpected postMilestoneMode " + postMilestoneMode);
+      console.error('Unexpected postMilestoneMode ' + postMilestoneMode);
       postMilestone = true;
       break;
   }
@@ -268,10 +286,13 @@ reporting.sendReport = function (report) {
       data: queryString,
       dataType: 'json',
       jsonp: false,
-      beforeSend: function (xhr) {
-        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader(
+          'X-CSRF-Token',
+          $('meta[name="csrf-token"]').attr('content')
+        );
       },
-      success: function (response) {
+      success: function(response) {
         if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
@@ -291,7 +312,7 @@ reporting.sendReport = function (report) {
         }
         reportComplete(report, response);
       },
-      error: function (xhr, textStatus, thrownError) {
+      error: function(xhr, textStatus, thrownError) {
         if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
@@ -305,14 +326,13 @@ reporting.sendReport = function (report) {
     //There's a potential race condition here - we show the dialog after animation completion, but also after the report
     //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
     //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
-    setTimeout(function () {
+    setTimeout(function() {
       reportComplete(report, getFallbackResponse(report));
     }, 1000);
   }
-
 };
 
-reporting.cancelReport = function () {
+reporting.cancelReport = function() {
   if (lastAjaxRequest) {
     lastAjaxRequest.abort();
   }
@@ -344,7 +364,8 @@ function reportComplete(report, response) {
     lastServerResponse.nextRedirect = response.redirect;
     lastServerResponse.videoInfo = response.video_info;
     lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
-    lastServerResponse.previousStageInfo = response.stage_changing && response.stage_changing.previous;
+    lastServerResponse.previousStageInfo =
+      response.stage_changing && response.stage_changing.previous;
   }
   if (report.onComplete) {
     report.onComplete(response);

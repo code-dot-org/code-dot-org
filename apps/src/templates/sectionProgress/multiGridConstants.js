@@ -1,4 +1,4 @@
-import color from "../../util/color";
+import color from '../../util/color';
 
 export const ROW_HEIGHT = 42;
 export const LAST_ROW_MARGIN_HEIGHT = 18;
@@ -39,43 +39,43 @@ export const progressStyles = {
   multigrid: {
     border: '1px solid',
     borderColor: color.border_gray,
-    padding: 0,
+    padding: 0
   },
   bottomLeft: {
     borderRight: '2px solid',
-    borderColor: color.border_gray,
+    borderColor: color.border_gray
   },
   topLeft: {
     borderBottom: '2px solid',
     borderRight: '2px solid',
     borderColor: color.border_gray,
-    backgroundColor: color.table_header,
+    backgroundColor: color.table_header
   },
   topRight: {
     borderBottom: '2px solid',
     borderRight: '1px solid',
     borderColor: color.border_gray,
-    backgroundColor: color.table_header,
+    backgroundColor: color.table_header
   },
   icon: {
     paddingLeft: 10,
     paddingRight: 10,
     paddingTop: 12,
     width: PROGRESS_BUBBLE_WIDTH,
-    fontSize: 20,
+    fontSize: 20
   },
   unpluggedIcon: {
     width: PILL_BUBBLE_WIDTH,
     fontSize: 20,
     paddingRight: 10,
     paddingLeft: 10,
-    paddingTop: 12,
+    paddingTop: 12
   },
   link: {
-    color: color.teal,
+    color: color.teal
   },
   summaryCell: {
-    margin: '9px 7px',
+    margin: '9px 7px'
   },
   nameCell: {
     margin: 10,
@@ -85,7 +85,7 @@ export const progressStyles = {
   },
   cell: {
     borderRight: '1px solid',
-    borderColor: color.border_gray,
+    borderColor: color.border_gray
   }
 };
 

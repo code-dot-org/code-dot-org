@@ -7,23 +7,24 @@ import ArrowButtons from '../../templates/ArrowButtons';
 var BelowVisualization = require('../../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 
-var CraftVisualizationColumn = function (props) {
+var CraftVisualizationColumn = function(props) {
   return (
     <span>
       <ProtectedVisualizationDiv>
         <div id="minecraft-frame">
-          <div id="phaser-game">
-          </div>
+          <div id="phaser-game" />
         </div>
       </ProtectedVisualizationDiv>
       <GameButtons>
         <ArrowButtons />
 
-        {props.showFinishButton && <div id="right-button-cell">
-          <button id="finishButton" className="share mc-share-button">
-            <div>{msg.finish()}</div>
-          </button>
-        </div>}
+        {props.showFinishButton && (
+          <div id="right-button-cell">
+            <button id="finishButton" className="share mc-share-button">
+              <div>{msg.finish()}</div>
+            </button>
+          </div>
+        )}
       </GameButtons>
       <BelowVisualization />
     </span>

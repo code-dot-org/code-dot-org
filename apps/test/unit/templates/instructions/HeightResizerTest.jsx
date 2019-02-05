@@ -8,10 +8,7 @@ describe('HeightResizer', () => {
   it('handles a drag event', () => {
     const onResizeCallback = sinon.stub().returnsArg(0);
     const wrapper = mount(
-      <HeightResizer
-        position={0}
-        onResize={onResizeCallback}
-      />
+      <HeightResizer position={0} onResize={onResizeCallback} />
     );
 
     // Simulate mouseDown
@@ -31,8 +28,7 @@ describe('HeightResizer', () => {
     });
     wrapper.simulate('mouseMove', mouseMoveEvent);
 
-    expect(onResizeCallback).to.have.been.calledOnce
-      .and.calledWith(10);
+    expect(onResizeCallback).to.have.been.calledOnce.and.calledWith(10);
     expect(mouseMoveEvent.stopPropagation).to.have.been.called;
     expect(mouseMoveEvent.preventDefault).to.have.been.called;
 
@@ -49,12 +45,7 @@ describe('HeightResizer', () => {
   });
 
   it('ignores secondary mouse buttons', () => {
-    const wrapper = mount(
-      <HeightResizer
-        position={0}
-        onResize={() => {}}
-      />
-    );
+    const wrapper = mount(<HeightResizer position={0} onResize={() => {}} />);
     sinon.spy(wrapper.instance(), 'setState');
 
     // Simulate mouseDown with non-primary mouse button
@@ -72,10 +63,7 @@ describe('HeightResizer', () => {
   it('ignores mouseMove events if not dragging', () => {
     const onResizeCallback = sinon.stub().returnsArg(0);
     const wrapper = mount(
-      <HeightResizer
-        position={0}
-        onResize={onResizeCallback}
-      />
+      <HeightResizer position={0} onResize={onResizeCallback} />
     );
     sinon.spy(wrapper.instance(), 'setState');
 
@@ -95,6 +83,6 @@ function mouseEvent(props) {
   return {
     stopPropagation: sinon.spy(),
     preventDefault: sinon.spy(),
-    ...props,
+    ...props
   };
 }

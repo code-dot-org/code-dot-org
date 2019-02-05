@@ -33,7 +33,11 @@ export default storybook => {
                 level_name: 'Intro to Dracarys',
                 submission_date: '2/19/2017',
                 escalation_date: '4/3/2/2017',
-                review_ids: [[3, 'accepted'], [4, 'rejected'], [5, 'escalated']],
+                review_ids: [
+                  [3, 'accepted'],
+                  [4, 'rejected'],
+                  [5, 'escalated']
+                ],
                 status: 'escalated',
                 accepted_reviews: 1,
                 rejected_reviews: 0,

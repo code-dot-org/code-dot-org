@@ -11,10 +11,10 @@ const styles = {
   }
 };
 
-const BackButton = (props) => (
+const BackButton = props => (
   <a href="/learn">
     <button style={styles.backButton}>
-      <i className="fa fa-arrow-left" aria-hidden={true}/>
+      <i className="fa fa-arrow-left" aria-hidden={true} />
       &nbsp;
       {i18n.backButtonBack()}
     </button>

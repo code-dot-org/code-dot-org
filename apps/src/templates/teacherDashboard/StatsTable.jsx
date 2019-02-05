@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import i18n from "@cdo/locale";
+import React, {Component} from 'react';
+import i18n from '@cdo/locale';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
 
 const styles = {
@@ -52,7 +52,7 @@ class StatsTable extends Component {
     return this.state.sortingColumns || {};
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     return [
       {
         property: 'name',
@@ -62,7 +62,8 @@ class StatsTable extends Component {
             className: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -70,7 +71,8 @@ class StatsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
       },
       {
@@ -81,7 +83,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...styles.rightAlignText
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -89,7 +92,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.rightAlignText
-          }}
+            }
+          }
         }
       },
       {
@@ -100,7 +104,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...styles.rightAlignText
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -108,14 +113,15 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.rightAlignText
-          }}
+            }
+          }
         }
       }
     ];
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -132,14 +138,18 @@ class StatsTable extends Component {
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.studentsWithCompletedLevelCount());
 
     return (

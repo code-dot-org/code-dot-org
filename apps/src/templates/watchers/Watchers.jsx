@@ -7,7 +7,7 @@ import {add, update, remove} from '../../redux/watchedExpressions';
 import TetherComponent from 'react-tether';
 import AutocompleteSelector from './AutocompleteSelector';
 
-const WATCH_VALUE_NOT_RUNNING = "undefined";
+const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [
   'World.mouseX',
   'World.mouseY',
@@ -20,7 +20,7 @@ const OPTIONS_GAMELAB = [
   'sprite.velocityX',
   'sprite.velocityY',
   'sprite.width',
-  'sprite.height',
+  'sprite.height'
 ];
 
 const buttonSize = '34px';
@@ -64,7 +64,7 @@ const styles = {
     lineHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
-    width: valueAndInputWidth,
+    width: valueAndInputWidth
   },
   watchInputSection: {
     clear: 'both'
@@ -72,7 +72,7 @@ const styles = {
   watchInput: {
     width: valueAndInputWidth,
     marginTop: 0,
-    height: inputElementHeight,
+    height: inputElementHeight
   }
 };
 
@@ -93,9 +93,10 @@ class Watchers extends React.Component {
 
   constructor(props) {
     super(props);
-    this.defaultAutocompleteOptions = props.appType === 'gamelab' ? OPTIONS_GAMELAB : [];
+    this.defaultAutocompleteOptions =
+      props.appType === 'gamelab' ? OPTIONS_GAMELAB : [];
     this.state = {
-      text: "",
+      text: '',
       history: [],
       editing: false,
       autocompleteSelecting: false,
@@ -113,7 +114,7 @@ class Watchers extends React.Component {
    */
   renderValue(obj) {
     if (!this.props.isRunning) {
-      return (<span className="watch-value">{WATCH_VALUE_NOT_RUNNING}</span>);
+      return <span className="watch-value">{WATCH_VALUE_NOT_RUNNING}</span>;
     }
 
     const descriptor = nonValueDescriptor(obj);
@@ -164,15 +165,18 @@ class Watchers extends React.Component {
       return;
     }
     this.props.add(inputText);
-    this.setState({
-      history: [inputText].concat(this.state.history),
-      editing: false,
-      historyIndex: -1,
-      text: ''
-    }, () => {
-      this.scrollToBottom();
-      this.filterOptions();
-    });
+    this.setState(
+      {
+        history: [inputText].concat(this.state.history),
+        editing: false,
+        historyIndex: -1,
+        text: ''
+      },
+      () => {
+        this.scrollToBottom();
+        this.filterOptions();
+      }
+    );
   }
 
   closeAutocomplete = () => {
@@ -184,26 +188,32 @@ class Watchers extends React.Component {
   };
 
   clearInput = () => {
-    this.setState({
-      editing: false,
-      text: '',
-    }, () => {
-      this.filterOptions();
-      this.setState({editing: true});
-    });
+    this.setState(
+      {
+        editing: false,
+        text: ''
+      },
+      () => {
+        this.filterOptions();
+        this.setState({editing: true});
+      }
+    );
   };
 
   selectHistoryIndex(historyIndex) {
-    this.setState({
-      editing: false,
-      text: this.state.history[historyIndex],
-      historyIndex: historyIndex,
-      autocompleteSelecting: false,
-      autocompleteOpen: false,
-    }, () => {
-      this.filterOptions();
-      this.setState({editing: true,});
-    });
+    this.setState(
+      {
+        editing: false,
+        text: this.state.history[historyIndex],
+        historyIndex: historyIndex,
+        autocompleteSelecting: false,
+        autocompleteOpen: false
+      },
+      () => {
+        this.filterOptions();
+        this.setState({editing: true});
+      }
+    );
   }
 
   selectAutocompleteIndex(autocompleteIndex) {
@@ -214,32 +224,51 @@ class Watchers extends React.Component {
   }
 
   historyDown() {
-    const historyIndex = wrapValue(this.state.historyIndex - 1, this.state.history.length);
+    const historyIndex = wrapValue(
+      this.state.historyIndex - 1,
+      this.state.history.length
+    );
     this.selectHistoryIndex(historyIndex);
   }
 
   historyUp() {
-    const atTopmostHistoryItem = this.state.historyIndex === this.state.history.length - 1;
+    const atTopmostHistoryItem =
+      this.state.historyIndex === this.state.history.length - 1;
     if (atTopmostHistoryItem) {
       return;
     }
 
-    const historyIndex = wrapValue(this.state.historyIndex + 1, this.state.history.length);
+    const historyIndex = wrapValue(
+      this.state.historyIndex + 1,
+      this.state.history.length
+    );
     this.selectHistoryIndex(historyIndex);
   }
 
   autocompleteDown() {
-    this.selectAutocompleteIndex(wrapValue(this.state.autocompleteIndex + 1, this.state.autocompleteOptions.length));
+    this.selectAutocompleteIndex(
+      wrapValue(
+        this.state.autocompleteIndex + 1,
+        this.state.autocompleteOptions.length
+      )
+    );
   }
 
   autocompleteUp() {
-    this.selectAutocompleteIndex(wrapValue(this.state.autocompleteIndex - 1, this.state.autocompleteOptions.length));
+    this.selectAutocompleteIndex(
+      wrapValue(
+        this.state.autocompleteIndex - 1,
+        this.state.autocompleteOptions.length
+      )
+    );
   }
 
   onKeyDown = e => {
     if (e.key === 'Enter') {
       if (this.state.autocompleteOpen && this.state.autocompleteSelecting) {
-        this.addFromInput(this.state.autocompleteOptions[this.state.autocompleteIndex]);
+        this.addFromInput(
+          this.state.autocompleteOptions[this.state.autocompleteIndex]
+        );
       } else {
         this.addFromInput();
       }
@@ -291,44 +320,56 @@ class Watchers extends React.Component {
 
   filterOptions = () => {
     const text = this.state.text;
-    const filteredOptions = this.defaultAutocompleteOptions.filter((option) => option.match(new RegExp(text, 'i')));
-    const completeMatch = filteredOptions.length === 1 && filteredOptions[0] === text;
+    const filteredOptions = this.defaultAutocompleteOptions.filter(option =>
+      option.match(new RegExp(text, 'i'))
+    );
+    const completeMatch =
+      filteredOptions.length === 1 && filteredOptions[0] === text;
     const navigatingHistory = this.navigatingHistory();
-    const historyTextModified = navigatingHistory && this.state.history[this.state.historyIndex] !== text;
+    const historyTextModified =
+      navigatingHistory && this.state.history[this.state.historyIndex] !== text;
     this.setState({
-      autocompleteIndex: this.state.autocompleteIndex > filteredOptions.length ? 0 : this.state.autocompleteIndex,
+      autocompleteIndex:
+        this.state.autocompleteIndex > filteredOptions.length
+          ? 0
+          : this.state.autocompleteIndex,
       autocompleteOptions: filteredOptions,
-      autocompleteOpen: text.length && filteredOptions.length && !completeMatch && (!navigatingHistory || historyTextModified)
+      autocompleteOpen:
+        text.length &&
+        filteredOptions.length &&
+        !completeMatch &&
+        (!navigatingHistory || historyTextModified)
     });
   };
 
-  onAutocompleteOptionClicked = (text) => {
+  onAutocompleteOptionClicked = text => {
     this.addFromInput(text);
   };
 
   onChange = e => {
-    this.setState({
-      text: e.target.value
-    }, this.filterOptions);
+    this.setState(
+      {
+        text: e.target.value
+      },
+      this.filterOptions
+    );
   };
 
   render() {
     return (
-      <div
-        id="debugger-watch-container"
-        style={styles.watchContainer}
-      >
+      <div id="debugger-watch-container" style={styles.watchContainer}>
         <div
           id="debug-watch"
-          ref={scrollableContainer => this.scrollableContainer = scrollableContainer}
+          ref={scrollableContainer =>
+            (this.scrollableContainer = scrollableContainer)
+          }
           className="debug-watch"
           style={this.props.style}
         >
-          {
-            this.props.watchedExpressions.map(wv => {
-              const varName = wv.get('expression');
-              const varValue = wv.get('lastValue');
-              return (
+          {this.props.watchedExpressions.map(wv => {
+            const varName = wv.get('expression');
+            const varValue = wv.get('lastValue');
+            return (
               <div className="debug-watch-item" key={wv.get('uuid')}>
                 <div
                   style={styles.watchRemoveButton}
@@ -336,31 +377,27 @@ class Watchers extends React.Component {
                 >
                   ×
                 </div>
-                <div
-                  style={styles.watchValue}
-                >
+                <div style={styles.watchValue}>
                   <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
                   {this.renderValue(varValue)}
                 </div>
               </div>
-                );
-              })
-            }
+            );
+          })}
           <div style={styles.watchInputSection}>
-            <div
-              style={styles.watchAddButton}
-              onClick={this.addButtonClick}
-            >
+            <div style={styles.watchAddButton} onClick={this.addButtonClick}>
               +
             </div>
             <TetherComponent
               attachment="bottom left"
               targetAttachment="top left"
-              constraints={[{
-                to: 'scrollParent',
-                attachment: 'together'
-              }]}
+              constraints={[
+                {
+                  to: 'scrollParent',
+                  attachment: 'together'
+                }
+              ]}
             >
               <input
                 placeholder="Variable / Property"
@@ -371,17 +408,24 @@ class Watchers extends React.Component {
                 value={this.state.text}
                 style={styles.watchInput}
               />
-              {this.state.autocompleteOpen &&
-              <AutocompleteSelector
-                options={this.state.autocompleteOptions}
-                currentIndex={this.state.autocompleteSelecting ? this.state.autocompleteIndex : -1}
-                onOptionClicked={this.onAutocompleteOptionClicked}
-                onOptionHovered={(index) => this.setState({
-                  autocompleteSelecting: true,
-                  autocompleteIndex: index
-                })}
-                onClickOutside={this.closeAutocomplete}
-              />}
+              {this.state.autocompleteOpen && (
+                <AutocompleteSelector
+                  options={this.state.autocompleteOptions}
+                  currentIndex={
+                    this.state.autocompleteSelecting
+                      ? this.state.autocompleteIndex
+                      : -1
+                  }
+                  onOptionClicked={this.onAutocompleteOptionClicked}
+                  onOptionHovered={index =>
+                    this.setState({
+                      autocompleteSelecting: true,
+                      autocompleteIndex: index
+                    })
+                  }
+                  onClickOutside={this.closeAutocomplete}
+                />
+              )}
             </TetherComponent>
           </div>
         </div>
@@ -391,20 +435,28 @@ class Watchers extends React.Component {
 }
 
 export const UnconnectedWatchers = Watchers;
-export default connect(state => ({
-  watchedExpressions: state.watchedExpressions,
-  isRunning: state.runState.isRunning,
-  appType: state.pageConstants.appType
-}), {
-  add,
-  update,
-  remove
-}, null, {withRef: true})(Watchers);
-
+export default connect(
+  state => ({
+    watchedExpressions: state.watchedExpressions,
+    isRunning: state.runState.isRunning,
+    appType: state.pageConstants.appType
+  }),
+  {
+    add,
+    update,
+    remove
+  },
+  null,
+  {withRef: true}
+)(Watchers);
 
 // http://stackoverflow.com/a/7390612
 function nonValueDescriptor(obj) {
-  return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
+  return {}.toString
+    .call(obj)
+    .split(' ')[1]
+    .slice(0, -1)
+    .toLowerCase();
 }
 
 function wrapValue(index, length) {

@@ -37,7 +37,7 @@ export function createCircuitPlaygroundComponents(board) {
   return Promise.all([
     initializeSoundSensor(board),
     initializeLightSensor(board),
-    initializeThermometer(board),
+    initializeThermometer(board)
   ]).then(([soundSensor, lightSensor, tempSensor]) => {
     return {
       colorLeds: initializeColorLeds(board),
@@ -170,7 +170,7 @@ function initializeSoundSensor(board) {
   return new Promise(resolve => {
     const sensor = new five.Sensor({
       board,
-      pin: "A4",
+      pin: 'A4',
       freq: 100
     });
     addSensorFeatures(five.Board.fmap, sensor);
@@ -182,7 +182,7 @@ function initializeLightSensor(board) {
   return new Promise(resolve => {
     const sensor = new five.Sensor({
       board,
-      pin: "A5",
+      pin: 'A5',
       freq: 100
     });
     addSensorFeatures(five.Board.fmap, sensor);
@@ -210,7 +210,7 @@ function addSensorFeatures(fmap, sensor) {
       sensor.lookbackLogger.addData(sensor.raw);
     });
   };
-  sensor.getAveragedValue = (n) => {
+  sensor.getAveragedValue = n => {
     const [low, high] = scale || [0, 1023];
     return fmap(sensor.lookbackLogger.getLast(n), 0, 1023, low, high);
   };
@@ -228,7 +228,7 @@ function initializeThermometer(board) {
     const thermometer = new five.Thermometer({
       board,
       controller: Thermometer,
-      pin: "A0",
+      pin: 'A0',
       freq: 100
     });
     thermometer.once('data', () => resolve(thermometer));
@@ -240,10 +240,10 @@ function initializeAccelerometer(board) {
     board,
     controller: PlaygroundIO.Accelerometer
   });
-  accelerometer.start = function () {
+  accelerometer.start = function() {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
-  accelerometer.getOrientation = function (orientationType) {
+  accelerometer.getOrientation = function(orientationType) {
     if (undefined === orientationType) {
       return [
         accelerometer.getOrientation('x'),
@@ -253,7 +253,7 @@ function initializeAccelerometer(board) {
     }
     return accelerometer[orientationType];
   };
-  accelerometer.getAcceleration = function (accelerationDirection) {
+  accelerometer.getAcceleration = function(accelerationDirection) {
     if (undefined === accelerationDirection) {
       return [
         accelerometer.getAcceleration('x'),

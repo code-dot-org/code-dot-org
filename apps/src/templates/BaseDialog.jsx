@@ -35,7 +35,7 @@ export default class BaseDialog extends React.Component {
     this.focusDialog();
   }
 
-  handleKeyDown = (event) => {
+  handleKeyDown = event => {
     if (event.key === 'Escape') {
       this.closeDialog();
     }
@@ -59,8 +59,10 @@ export default class BaseDialog extends React.Component {
   focusDialog() {
     // Don't steal focus if the active element is already a descendant of the
     // dialog - prevents focus loss on updates of open BaseDialog components.
-    const descendantIsActive = document.activeElement && this.refs.dialog &&
-        this.refs.dialog.contains(document.activeElement);
+    const descendantIsActive =
+      document.activeElement &&
+      this.refs.dialog &&
+      this.refs.dialog.contains(document.activeElement);
     if (this.props.isOpen && !descendantIsActive) {
       this.refs.dialog.focus();
     }
@@ -68,7 +70,7 @@ export default class BaseDialog extends React.Component {
 
   render() {
     if (!this.props.isOpen && !this.props.hideBackdrop) {
-      return <div/>;
+      return <div />;
     }
 
     let bodyStyle, modalBodyStyle, xCloseStyle;
@@ -85,26 +87,27 @@ export default class BaseDialog extends React.Component {
       };
     }
 
-    let wrapperClassNames = "";
-    let modalClassNames = "modal";
-    let modalBodyClassNames = "modal-body";
-    let modalBackdropClassNames = "modal-backdrop";
+    let wrapperClassNames = '';
+    let modalClassNames = 'modal';
+    let modalBodyClassNames = 'modal-body';
+    let modalBackdropClassNames = 'modal-backdrop';
 
     if (this.props.useUpdatedStyles) {
-      wrapperClassNames = "dashboard-styles";
-      modalBodyClassNames = "";
+      wrapperClassNames = 'dashboard-styles';
+      modalBodyClassNames = '';
       modalBodyStyle = {
         background: '#fff',
         height: this.props.fixedHeight,
         maxHeight: !this.props.fixedHeight && '80vh',
         overflowX: 'hidden',
-        overflowY: (this.props.fixedHeight || this.props.fullHeight) ? 'hidden' : 'auto',
-        borderRadius: 4,
+        overflowY:
+          this.props.fixedHeight || this.props.fullHeight ? 'hidden' : 'auto',
+        borderRadius: 4
       };
       bodyStyle = {
         ...bodyStyle,
         width: this.props.fixedWidth || 700,
-        marginLeft: (-this.props.fixedWidth / 2) || -350,
+        marginLeft: -this.props.fixedWidth / 2 || -350
       };
       xCloseStyle = {
         position: 'absolute',
@@ -113,17 +116,17 @@ export default class BaseDialog extends React.Component {
         padding: 10,
         color: '#ddd',
         cursor: 'pointer',
-        fontSize: 24,
+        fontSize: 24
       };
     } else if (this.props.noModalStyles) {
-      modalClassNames = "";
-      modalBodyClassNames = "";
+      modalClassNames = '';
+      modalBodyClassNames = '';
     }
     bodyStyle = {
       ...bodyStyle,
       ...(this.props.hideBackdrop && {
         position: 'initial',
-        marginLeft: 0,
+        marginLeft: 0
       }),
       ...this.props.style
     };
@@ -136,10 +139,22 @@ export default class BaseDialog extends React.Component {
         onKeyDown={this.handleKeyDown}
       >
         <div style={modalBodyStyle} className={modalBodyClassNames}>
-          {!this.props.uncloseable && !this.props.hideCloseButton && (this.props.useUpdatedStyles ?
-            <i id="x-close" className="fa fa-times" style={xCloseStyle} onClick={this.closeDialog}/> :
-            <div id="x-close" className="x-close" onClick={this.closeDialog}></div>
-          )}
+          {!this.props.uncloseable &&
+            !this.props.hideCloseButton &&
+            (this.props.useUpdatedStyles ? (
+              <i
+                id="x-close"
+                className="fa fa-times"
+                style={xCloseStyle}
+                onClick={this.closeDialog}
+              />
+            ) : (
+              <div
+                id="x-close"
+                className="x-close"
+                onClick={this.closeDialog}
+              />
+            ))}
           {this.props.children}
         </div>
       </div>
@@ -151,7 +166,7 @@ export default class BaseDialog extends React.Component {
 
     return (
       <div className={wrapperClassNames}>
-        <div className={modalBackdropClassNames} onClick={this.closeDialog}></div>
+        <div className={modalBackdropClassNames} onClick={this.closeDialog} />
         {body}
       </div>
     );

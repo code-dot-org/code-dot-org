@@ -9,22 +9,22 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    marginBottom: 10,
+    marginBottom: 10
   },
   dropdown: {
     marginLeft: 10,
-    marginBottom: 0,
-  },
+    marginBottom: 0
+  }
 };
 
 class SelectSectionDropdown extends React.Component {
   static propTypes = {
     // Provided by redux.
     sections: PropTypes.object,
-    selectedSectionId: PropTypes.number,
+    selectedSectionId: PropTypes.number
   };
 
-  onChange = (event) => {
+  onChange = event => {
     const sectionId = event.target.value;
     navigateToHref(`/teacher_dashboard/sections/${sectionId}`);
   };
@@ -35,7 +35,11 @@ class SelectSectionDropdown extends React.Component {
     return (
       <div style={styles.container}>
         <span>{i18n.switchSection()}</span>
-        <select onChange={this.onChange} value={selectedSectionId} style={styles.dropdown}>
+        <select
+          onChange={this.onChange}
+          value={selectedSectionId}
+          style={styles.dropdown}
+        >
           {Object.keys(sections).map(id => (
             <option key={id} value={id}>
               {sections[id].name}
@@ -51,5 +55,5 @@ export const UnconnectedSelectSectionDropdown = SelectSectionDropdown;
 
 export default connect(state => ({
   sections: state.teacherSections.sections,
-  selectedSectionId: state.teacherSections.selectedSectionId,
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(SelectSectionDropdown);

@@ -13,9 +13,9 @@ export default class Teacher1920Application extends FormController {
     accountEmail: PropTypes.string.isRequired
   };
 
-  static submitButtonText = "Complete and Send";
+  static submitButtonText = 'Complete and Send';
 
-  static sessionStorageKey = "Teacher1920Application";
+  static sessionStorageKey = 'Teacher1920Application';
 
   /**
    * @override

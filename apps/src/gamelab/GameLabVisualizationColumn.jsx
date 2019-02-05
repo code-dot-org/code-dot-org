@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
-import { GAME_HEIGHT, GAME_WIDTH, GAMELAB_DPAD_CONTAINER_ID } from './constants';
+import {GAME_HEIGHT, GAME_WIDTH, GAMELAB_DPAD_CONTAINER_ID} from './constants';
 import CompletionButton from '../templates/CompletionButton';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
@@ -20,9 +20,9 @@ import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
-  isPickingLocation,
+  isPickingLocation
 } from './locationPickerModule';
-import { calculateOffsetCoordinates } from '../utils';
+import {calculateOffsetCoordinates} from '../utils';
 
 const MODAL_Z_INDEX = 1050;
 
@@ -48,7 +48,7 @@ class GameLabVisualizationColumn extends React.Component {
     toggleShowGrid: PropTypes.func.isRequired,
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
-    updatePicker: PropTypes.func.isRequired,
+    updatePicker: PropTypes.func.isRequired
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -60,21 +60,17 @@ class GameLabVisualizationColumn extends React.Component {
 
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
-      this.props.updatePicker(calculateOffsetCoordinates(
-        this.divGameLab,
-        e.clientX,
-        e.clientY,
-      ));
+      this.props.updatePicker(
+        calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
+      );
     }
   };
 
   pickerPointerUp = e => {
     if (this.props.pickingLocation) {
-      this.props.selectPicker(calculateOffsetCoordinates(
-        this.divGameLab,
-        e.clientX,
-        e.clientY,
-      ));
+      this.props.selectPicker(
+        calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
+      );
     }
   };
 
@@ -82,17 +78,19 @@ class GameLabVisualizationColumn extends React.Component {
     // Use jQuery to turn on and off the grid since it lives in a protected div
     if (nextProps.showGrid !== this.props.showGrid) {
       if (nextProps.showGrid) {
-        $("#grid-checkbox")[0].className = "fa fa-check-square-o";
-        $("#grid-overlay")[0].style.display = '';
+        $('#grid-checkbox')[0].className = 'fa fa-check-square-o';
+        $('#grid-overlay')[0].style.display = '';
       } else {
-        $("#grid-checkbox")[0].className = "fa fa-square-o";
-        $("#grid-overlay")[0].style.display = 'none';
+        $('#grid-checkbox')[0].className = 'fa fa-square-o';
+        $('#grid-overlay')[0].style.display = 'none';
       }
     }
     // Also manually raise/lower the zIndex of the playspace when selecting a
     // location because of the protected div
     const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
-    const visualizationOverlay = document.getElementById('visualizationOverlay');
+    const visualizationOverlay = document.getElementById(
+      'visualizationOverlay'
+    );
     this.divGameLab.style.zIndex = zIndex;
     visualizationOverlay.style.zIndex = zIndex;
   }
@@ -103,7 +101,12 @@ class GameLabVisualizationColumn extends React.Component {
     const {mouseX, mouseY} = this.state;
     if (this.props.isShareView) {
       return null;
-    } else if (mouseX < 0 || mouseY < 0 || mouseX > GAME_WIDTH || mouseY > GAME_HEIGHT) {
+    } else if (
+      mouseX < 0 ||
+      mouseY < 0 ||
+      mouseX > GAME_WIDTH ||
+      mouseY > GAME_HEIGHT
+    ) {
       // Render placeholder space so layout is stable.
       return <div>&nbsp;</div>;
     }
@@ -112,26 +115,25 @@ class GameLabVisualizationColumn extends React.Component {
         <span style={{display: 'inline-block', minWidth: '3.5em'}}>
           x: {Math.floor(mouseX)},
         </span>
-        <span>
-          y: {Math.floor(mouseY)}
-        </span>
+        <span>y: {Math.floor(mouseY)}</span>
       </div>
     );
   }
 
   renderGridCheckbox() {
     return (
-      <div style={{textAlign: 'left'}} onClick={() => this.props.toggleShowGrid(!this.props.showGrid)}>
+      <div
+        style={{textAlign: 'left'}}
+        onClick={() => this.props.toggleShowGrid(!this.props.showGrid)}
+      >
         <i id="grid-checkbox" className="fa fa-square-o" style={{width: 14}} />
-        <span style={{marginLeft: 5}}>
-          Show grid
-        </span>
+        <span style={{marginLeft: 5}}>Show grid</span>
       </div>
     );
   }
 
   render() {
-    const { isResponsive, isShareView } = this.props;
+    const {isResponsive, isShareView} = this.props;
     const divGameLabStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
@@ -151,7 +153,7 @@ class GameLabVisualizationColumn extends React.Component {
             tabIndex="1"
             onPointerMove={this.pickerPointerMove}
             onPointerUp={this.pickerPointerUp}
-            elementRef={el => this.divGameLab = el}
+            elementRef={el => (this.divGameLab = el)}
           />
           <VisualizationOverlay
             width={GAME_WIDTH}
@@ -160,12 +162,11 @@ class GameLabVisualizationColumn extends React.Component {
           >
             <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
             <CrosshairOverlay flip={spriteLab} />
-            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]}/>
+            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <GameButtons>
-
-          <ArrowButtons/>
+          <ArrowButtons />
 
           <CompletionButton />
 
@@ -182,24 +183,31 @@ class GameLabVisualizationColumn extends React.Component {
           </div>
         )}
         <BelowVisualization />
-        {this.props.pickingLocation &&
-          <div className={"modal-backdrop"} onClick={() => this.props.cancelPicker()} />}
+        {this.props.pickingLocation && (
+          <div
+            className={'modal-backdrop'}
+            onClick={() => this.props.cancelPicker()}
+          />
+        )}
       </span>
     );
   }
 }
 
-export default connect(state => ({
-  isResponsive: state.pageConstants.isResponsive,
-  isShareView: state.pageConstants.isShareView,
-  isProjectLevel: state.pageConstants.isProjectLevel,
-  spriteLab: state.pageConstants.isBlockly,
-  awaitingContainedResponse: state.runState.awaitingContainedResponse,
-  showGrid: state.gridOverlay,
-  pickingLocation: isPickingLocation(state.locationPicker),
-}), dispatch => ({
-  toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
-  cancelPicker: () => dispatch(cancelLocationSelection()),
-  updatePicker: loc => dispatch(updateLocation(loc)),
-  selectPicker: loc => dispatch(selectLocation(loc)),
-}))(GameLabVisualizationColumn);
+export default connect(
+  state => ({
+    isResponsive: state.pageConstants.isResponsive,
+    isShareView: state.pageConstants.isShareView,
+    isProjectLevel: state.pageConstants.isProjectLevel,
+    spriteLab: state.pageConstants.isBlockly,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
+    showGrid: state.gridOverlay,
+    pickingLocation: isPickingLocation(state.locationPicker)
+  }),
+  dispatch => ({
+    toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
+    cancelPicker: () => dispatch(cancelLocationSelection()),
+    updatePicker: loc => dispatch(updateLocation(loc)),
+    selectPicker: loc => dispatch(selectLocation(loc))
+  })
+)(GameLabVisualizationColumn);

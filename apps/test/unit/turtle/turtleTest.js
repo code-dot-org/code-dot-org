@@ -17,8 +17,12 @@ describe('Artist', () => {
       artist.visualization = new Artist.Visualization();
       joints = 0;
       segments = [];
-      artist.visualization.drawJointAtTurtle_ = () => { joints += 1; };
-      artist.visualization.drawForwardLine_ = (dist) => { segments.push(dist); };
+      artist.visualization.drawJointAtTurtle_ = () => {
+        joints += 1;
+      };
+      artist.visualization.drawForwardLine_ = dist => {
+        segments.push(dist);
+      };
     });
     it('draws 2 joints on a short segment', () => {
       artist.visualization.drawForwardWithJoints_(50, false);
@@ -67,10 +71,23 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternBackwardSpy = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      const setDrawPatternBackwardSpy = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.visualization.drawForwardLineWithPattern_(-100);
 
-      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(img, 100, 0, -100, 100, -25, -50, -50, 100);
+      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(
+        img,
+        100,
+        0,
+        -100,
+        100,
+        -25,
+        -50,
+        -50,
+        100
+      );
 
       setDrawPatternBackwardSpy.restore();
     });
@@ -83,10 +100,23 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternForwardSpy = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      const setDrawPatternForwardSpy = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.visualization.drawForwardLineWithPattern_(100);
 
-      expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(img, 0, 0, 100, 100, -25, -50, 150, 100);
+      expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(
+        img,
+        0,
+        0,
+        100,
+        100,
+        -25,
+        -50,
+        150,
+        100
+      );
 
       setDrawPatternForwardSpy.restore();
     });
@@ -97,15 +127,28 @@ describe('Artist', () => {
       let artist = new Artist();
       const img = new Image(100, 100);
       let size = null;
-      let blockId = "block_id_4";
+      let blockId = 'block_id_4';
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      artist.stickers = {Alien:img};
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
+      artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
+      expect(setStickerSize).to.be.have.been.calledWith(
+        img,
+        0,
+        0,
+        100,
+        100,
+        -50,
+        -100,
+        100,
+        100
+      );
 
       setStickerSize.restore();
     });
@@ -113,15 +156,28 @@ describe('Artist', () => {
       let artist = new Artist();
       const img = new Image(100, 100);
       let size = 0;
-      let blockId = "block_id_4";
+      let blockId = 'block_id_4';
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      artist.stickers = {Alien:img};
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
+      artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -0, -0, 0, 0);
+      expect(setStickerSize).to.be.have.been.calledWith(
+        img,
+        0,
+        0,
+        100,
+        100,
+        -0,
+        -0,
+        0,
+        0
+      );
 
       setStickerSize.restore();
     });
@@ -129,15 +185,28 @@ describe('Artist', () => {
       let artist = new Artist();
       const img = new Image(100, 100);
       let size = 50;
-      let blockId = "block_id_4";
+      let blockId = 'block_id_4';
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      artist.stickers = {Alien:img};
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
+      artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -25, -50, 50, 50);
+      expect(setStickerSize).to.be.have.been.calledWith(
+        img,
+        0,
+        0,
+        100,
+        100,
+        -25,
+        -50,
+        50,
+        50
+      );
 
       setStickerSize.restore();
     });
@@ -146,15 +215,28 @@ describe('Artist', () => {
       let artist = new Artist();
       const img = new Image(100, 100);
       let size = 200;
-      let blockId = "block_id_4";
+      let blockId = 'block_id_4';
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      artist.stickers = {Alien:img};
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
+      artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
+      expect(setStickerSize).to.be.have.been.calledWith(
+        img,
+        0,
+        0,
+        100,
+        100,
+        -50,
+        -100,
+        100,
+        100
+      );
 
       setStickerSize.restore();
     });
@@ -163,15 +245,28 @@ describe('Artist', () => {
       // Test condition when width > height
       const img = new Image(100, 40);
       let size = 30;
-      let blockId = "block_id_4";
+      let blockId = 'block_id_4';
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      artist.stickers = {Alien:img};
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
+      artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 40, -15, -12, 30, 12);
+      expect(setStickerSize).to.be.have.been.calledWith(
+        img,
+        0,
+        0,
+        100,
+        40,
+        -15,
+        -12,
+        30,
+        12
+      );
 
       setStickerSize.restore();
     });
@@ -186,7 +281,7 @@ describe('Artist', () => {
 
     it('can point to a specific direction', () => {
       const absoluteDirection = [0, 30, 45, 60, 180, 270];
-      const blockId = "block_id_4";
+      const blockId = 'block_id_4';
       const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
 
       absoluteDirection.forEach(angle => {
@@ -198,7 +293,7 @@ describe('Artist', () => {
 
     it('can point to a 50 degrees', () => {
       let angle = 50;
-      let blockId = "block_id_5";
+      let blockId = 'block_id_5';
 
       artist.visualization.angle = 50;
       artist.step('PT', [angle, blockId]);
@@ -208,7 +303,7 @@ describe('Artist', () => {
 
     it('should call setHeading', () => {
       let angle = 60;
-      let blockId = "block_id_8";
+      let blockId = 'block_id_8';
 
       const setHeadingStub = sinon.stub(artist.visualization, 'setHeading');
       artist.step('PT', [angle, blockId]);
@@ -240,15 +335,15 @@ describe('Artist', () => {
 
     it('can jump to a position', () => {
       const expectations = {
-        TOPLEFT:      [0, 0],
-        TOPCENTER:    [200, 0],
-        TOPRIGHT:     [400, 0],
-        MIDDLELEFT:   [0, 200],
+        TOPLEFT: [0, 0],
+        TOPCENTER: [200, 0],
+        TOPRIGHT: [400, 0],
+        MIDDLELEFT: [0, 200],
         MIDDLECENTER: [200, 200],
-        MIDDLERIGHT:  [400, 200],
-        BOTTOMLEFT:   [0, 400],
+        MIDDLERIGHT: [400, 200],
+        BOTTOMLEFT: [0, 400],
         BOTTOMCENTER: [200, 400],
-        BOTTOMRIGHT:  [400, 400]
+        BOTTOMRIGHT: [400, 400]
       };
 
       Object.keys(expectations).forEach(position => {
@@ -267,12 +362,15 @@ describe('Artist', () => {
       const artist = new Artist();
       const execute = sinon.stub(artist, 'execute');
       artist.injectStudioApp(studioApp);
-      artist.init({
-        skin: {},
-        level: {
-          autoRun: true,
-        },
-      }).then(done).catch(() => done());
+      artist
+        .init({
+          skin: {},
+          level: {
+            autoRun: true
+          }
+        })
+        .then(done)
+        .catch(() => done());
 
       artist.resetButtonClick();
 
@@ -287,13 +385,16 @@ describe('Artist', () => {
       container.id = 'artistContainer';
       document.body.appendChild(container);
       artist.injectStudioApp(studioApp);
-      artist.init({
-        skin: {},
-        level: {
-          autoRun: true,
-        },
-        containerId: 'artistContainer',
-      }).then(done).catch(() => done());
+      artist
+        .init({
+          skin: {},
+          level: {
+            autoRun: true
+          },
+          containerId: 'artistContainer'
+        })
+        .then(done)
+        .catch(() => done());
       studioApp.runChangeHandlers();
 
       expect(execute).to.have.been.called;
@@ -306,7 +407,7 @@ describe('Artist', () => {
 
     beforeEach(() => {
       artist = new Artist();
-      artist.skin = { id: 'artist' };
+      artist.skin = {id: 'artist'};
 
       oldXml = `
         <block type="when_run">
@@ -331,8 +432,8 @@ describe('Artist', () => {
           }
         },
         mainBlockSpace: {
-          clear() {},
-        },
+          clear() {}
+        }
       };
     });
 
@@ -346,53 +447,65 @@ describe('Artist', () => {
 
     it('adds moveTo block if initialX is set', () => {
       artist.level = {
-        initialX: 30,
+        initialX: 30
       };
       artist.prepareForRemix();
 
-      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
-          .firstChild.wholeText).to.equal("30");
+      expect(
+        newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
+          .firstChild.wholeText
+      ).to.equal('30');
     });
 
     it('adds moveTo block if initialX and initialY are set', () => {
       artist.level = {
         initialX: 30,
-        initialY: 50,
+        initialY: 50
       };
       artist.prepareForRemix();
 
-      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
-          .firstChild.wholeText).to.equal("30");
-      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
-          .firstChild.wholeText).to.equal("50");
+      expect(
+        newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
+          .firstChild.wholeText
+      ).to.equal('30');
+      expect(
+        newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
+          .firstChild.wholeText
+      ).to.equal('50');
     });
 
     it('adds a moveTo block with 200 for the y coordinate if initialY is not specified in the level', () => {
       artist.level = {
-        initialX: 30,
+        initialX: 30
       };
       artist.prepareForRemix();
 
-      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
-          .firstChild.wholeText).to.equal("200");
+      expect(
+        newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
+          .firstChild.wholeText
+      ).to.equal('200');
     });
 
     it('adds moveTo and turn blocks if initialX and startDirection are set', () => {
       artist.level = {
         initialX: 30,
-        startDirection: 45,
+        startDirection: 45
       };
       artist.prepareForRemix();
 
-      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
-          .firstChild.wholeText).to.equal("30");
-      expect(newDom.querySelector('block[type="draw_turn"] title[name="NUM"]')
-          .firstChild.wholeText).to.equal("-45");
+      expect(
+        newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
+          .firstChild.wholeText
+      ).to.equal('30');
+      expect(
+        newDom.querySelector('block[type="draw_turn"] title[name="NUM"]')
+          .firstChild.wholeText
+      ).to.equal('-45');
     });
 
     it('adds a whenRun block if none is present', () => {
       artist.level = {
-        initialX: 30,
+        initialX: 30
       };
       oldXml = '';
 
@@ -408,7 +521,7 @@ describe('Artist', () => {
 
     artist.evalCode('while(true) executionInfo.checkTimeout();', {
       ...DEFAULT_EXECUTION_INFO,
-      ticks: 10, // Declare an infinite loop after 10 ticks
+      ticks: 10 // Declare an infinite loop after 10 ticks
     });
 
     expect(alertStub).to.not.have.been.called;
