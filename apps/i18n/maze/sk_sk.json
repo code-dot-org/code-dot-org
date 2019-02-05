@@ -95,7 +95,7 @@
   "removeSquare": "odstráň štvorec",
   "removeStack": "odstráň naraz {shovelfuls} hromady",
   "repeatCarefullyError": "Aby si toto vyriešil, starostlivo popremýšľaj o opakovaní dvoch pohybov a otočke, ktoré pridáš do bloku \"opakuj\".  Je v poriadku, ak máš na konci otočku navyše.",
-  "repeatUntil": "opakovať dokiaľ",
+  "repeatUntil": "opakuj dovtedy (kým)",
   "repeatUntilBlocked": "pokiaľ je cesta vpred",
   "repeatUntilFinish": "opakuj do konca",
   "soil": "pôda",

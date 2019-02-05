@@ -1279,6 +1279,7 @@
   "subtitle": "grafičko okruženje za programiranje",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Promijeni odjeljenje:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Vaš program sadrži grešku. Molimo uklonite redak {lineNumber} i pokušajte ponovo.",

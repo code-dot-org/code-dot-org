@@ -1279,6 +1279,7 @@
   "subtitle": "en visuell programmeringsmiljö",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Byt sektion:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Programmet innehåller ett stavfel. Ta bort raden {lineNumber} och försök igen.",
