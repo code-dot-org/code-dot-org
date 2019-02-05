@@ -37,7 +37,7 @@ describe('The Gamelab Exporter,', function () {
   var server;
   let stashedCookieKey;
 
-  testUtils.setExternalGlobals();
+  testUtils.setExternalGlobals(beforeEach, afterEach);
 
   beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
