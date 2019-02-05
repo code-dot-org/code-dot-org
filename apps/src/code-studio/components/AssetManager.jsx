@@ -50,9 +50,6 @@ export default class AssetManager extends React.Component {
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
-
-    // For logging purposes
-    imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
     projectId: PropTypes.string,
     elementId: PropTypes.string
   };
@@ -180,7 +177,7 @@ export default class AssetManager extends React.Component {
           <div>{i18n.audioInitializeError()}</div>
         }
         {displayAudioRecorder &&
-          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved} imagePicker={this.props.imagePicker}/>
+          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved}/>
         }
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
@@ -238,7 +235,6 @@ export default class AssetManager extends React.Component {
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
             soundPlayer={this.props.soundPlayer}
-            imagePicker={this.props.imagePicker}
             projectId={this.props.projectId}
             elementId={this.props.elementId}
           />

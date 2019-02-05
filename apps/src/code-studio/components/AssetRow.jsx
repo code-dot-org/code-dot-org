@@ -27,9 +27,6 @@ export default class AssetRow extends React.Component {
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
-
-    // For logging purposes
-    imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
     elementId: PropTypes.string
   };
 
@@ -81,17 +78,6 @@ export default class AssetRow extends React.Component {
   };
 
   chooseAsset = () => {
-    if (!this.props.imagePicker) {
-      firehoseClient.putRecord(
-        {
-          study: 'sound-dialog-2',
-          study_group: 'library-tab',
-          event: 'choose-uploaded-sound',
-          data_json: this.props.name
-        },
-        {includeUserId: true}
-      );
-    }
     this.props.onChoose();
   };
 

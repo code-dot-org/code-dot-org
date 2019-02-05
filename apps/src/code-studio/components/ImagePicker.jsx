@@ -23,7 +23,6 @@ export default class ImagePicker extends React.Component {
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
-    //For logging purposes
     projectId: PropTypes.string,
     elementId: PropTypes.string
   };
@@ -92,7 +91,7 @@ export default class ImagePicker extends React.Component {
         useFilesApi={this.props.useFilesApi}
         projectId={this.props.projectId}
         soundPlayer={this.props.soundPlayer}
-        disableAudioRecording={this.props.disableAudioRecording}
+        disableAudioRecording={true}
         imagePicker={true}
         elementId={this.props.elementId}
       /> :

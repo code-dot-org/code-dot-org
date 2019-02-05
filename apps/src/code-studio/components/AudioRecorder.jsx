@@ -24,10 +24,7 @@ const RECORD_MAX_TIME = 30000;
 export default class AudioRecorder extends React.Component {
   static propTypes = {
     onUploadDone: PropTypes.func,
-    afterAudioSaved: PropTypes.func,
-
-    //Temporary prop for logging - indicates user chose 'Manage Assets'
-    imagePicker: PropTypes.bool
+    afterAudioSaved: PropTypes.func
   };
 
   constructor(props) {
@@ -106,12 +103,11 @@ export default class AudioRecorder extends React.Component {
   };
 
   startRecording = () => {
-    const studyGroup = this.props.imagePicker ? 'manage-assets' : 'library-tab';
     this.recorder.start();
     firehoseClient.putRecord(
       {
         study: 'sound-dialog-2',
-        study_group: studyGroup,
+        study_group: 'library-tab',
         event: 'record-sound',
         data_json: this.state.audioName,
       },
