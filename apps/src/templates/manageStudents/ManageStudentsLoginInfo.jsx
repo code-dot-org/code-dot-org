@@ -21,6 +21,18 @@ class ManageStudentsLoginInfo extends Component {
     studioUrlPrefix: PropTypes.string,
   };
 
+  // TODO: (madelynkasula) Delete this method once the old pegasus-served teacher dashboard
+  // has been fully removed.
+  printLoginCardsUrl = () => {
+    const {studioUrlPrefix, sectionId} = this.props;
+
+    if (studioUrlPrefix === window.location.origin) {
+      return `/teacher_dashboard/sections/${sectionId}/print_login_cards`;
+    } else {
+      return `/teacher-dashboard#/sections/${sectionId}/print_signin_cards`;
+    }
+  };
+
   render() {
     const {loginType, sectionId, sectionCode, studioUrlPrefix} = this.props;
     return (
@@ -44,7 +56,7 @@ class ManageStudentsLoginInfo extends Component {
               </a>
             </p>
             <p>
-              <a target="_blank" href={`/teacher-dashboard#/sections/${sectionId}/print_signin_cards`}>
+              <a target="_blank" href={this.printLoginCardsUrl()}>
                 {i18n.printLoginCardExplanation()}
               </a>
             </p>
