@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import WorkshopTableLoader from './components/workshop_table_loader';
 import SurveyResultsHeader from './components/survey_results_header';

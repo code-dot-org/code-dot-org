@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import ProgressBubble from './ProgressBubble';

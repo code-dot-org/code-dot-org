@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
 import { NotificationType } from '@cdo/apps/templates/Notification';

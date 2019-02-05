@@ -1,5 +1,6 @@
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import RotateContainer from '../templates/RotateContainer';
 import {connect} from 'react-redux';
 

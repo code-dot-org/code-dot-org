@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
 import { SET_SECTION } from '@cdo/apps/redux/sectionDataRedux';
 
 // Reducer for script selection in teacher dashboard.

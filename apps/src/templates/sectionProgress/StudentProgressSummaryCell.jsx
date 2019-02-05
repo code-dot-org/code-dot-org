@@ -1,6 +1,7 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import { summarizeProgressInStage } from '@cdo/apps/templates/progress/progressHelpers';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 class StudentProgressSummaryCell extends Component {
