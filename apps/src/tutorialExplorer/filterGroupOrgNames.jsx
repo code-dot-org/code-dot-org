@@ -1,7 +1,8 @@
 /* OrgNames: A list of unique org names.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import { TutorialsOrgName } from './util';
 import i18n from '@cdo/tutorialExplorer/locale';

@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import color from "../../util/color";
 import commonStyles from '../../commonStyles';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const styles = {

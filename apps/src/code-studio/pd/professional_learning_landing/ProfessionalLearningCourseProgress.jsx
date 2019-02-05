@@ -2,7 +2,9 @@
  *  Progress for professional learning courses as rendered on the landing page
  */
 
-import React, {PropTypes, Component} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import PlcEnrollment from './plcElements/PlcEnrollment';
 
 

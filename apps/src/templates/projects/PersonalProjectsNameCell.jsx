@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {tableLayoutStyles} from "../tables/tableConstants";
 import {updateProjectName} from './projectsRedux';
@@ -55,8 +56,8 @@ class PersonalProjectsNameCell extends Component {
   }
 }
 
- export default connect(state => ({}), dispatch => ({
-  updateProjectName(projectId, updatedName) {
-    dispatch(updateProjectName(projectId, updatedName));
-  },
+export default connect(state => ({}), dispatch => ({
+ updateProjectName(projectId, updatedName) {
+   dispatch(updateProjectName(projectId, updatedName));
+ },
 }))(PersonalProjectsNameCell);

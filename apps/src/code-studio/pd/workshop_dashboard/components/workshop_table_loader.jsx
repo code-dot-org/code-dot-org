@@ -5,10 +5,10 @@
  * component or displays "None" if no workshops are returned.
  * It optionally handles deleting workshops.
  */
-
 import $ from 'jquery';
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from '../../components/spinner';
 
