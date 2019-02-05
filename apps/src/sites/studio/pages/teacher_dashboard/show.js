@@ -12,7 +12,8 @@ import manageStudents, {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections,
-  selectSection
+  selectSection,
+  setRosterProvider
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats, {
@@ -53,6 +54,7 @@ $(document).ready(function() {
   store.dispatch(setSections(allSections));
 
   store.dispatch(selectSection(section.id));
+  store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(asyncSetCompletedLevelCount(section.id));
 
@@ -99,7 +101,11 @@ $(document).ready(function() {
           <Route
             path="/"
             component={props => (
-              <TeacherDashboard {...props} studioUrlPrefix="" />
+              <TeacherDashboard
+                {...props}
+                studioUrlPrefix={scriptData.studioUrlPrefix}
+                pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
+              />
             )}
           />
         </Router>
