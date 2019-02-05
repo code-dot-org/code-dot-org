@@ -17,6 +17,7 @@ export default class ImagePickerPropertyRow extends React.Component {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func,
     desc: PropTypes.node,
+    elementId: PropTypes.string
   };
 
   componentDidMount() {
@@ -61,7 +62,8 @@ export default class ImagePickerPropertyRow extends React.Component {
     // However today the `createModalDialog` function and `Dialog` component
     // are intertwined with `StudioApp` which is why we have this direct call.
     dashboard.assets.showAssetManager(this.changeImage, 'image', null, {
-      showUnderageWarning: !getStore().getState().pageConstants.is13Plus
+      showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
+      elementId: this.props.elementId
     });
   };
 

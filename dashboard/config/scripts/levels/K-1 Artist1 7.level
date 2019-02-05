@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the jump block to move without drawing. Jump up and draw a line."
+    "short_instructions": "Use the jump block to move without drawing. Jump up and draw a line."
   }
 }]]></config>
   <blocks>

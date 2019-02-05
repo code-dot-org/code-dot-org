@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free play - try your hand at making a pattern of your own!",
+    "short_instructions": "Free play - try your hand at making a pattern of your own!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -15,7 +15,7 @@
     "slider_speed": ".6",
     "free_play": "true",
     "embed": "false",
-    "markdown_instructions": "Free play - try your hand at making a pattern of your own!",
+    "long_instructions": "Free play - try your hand at making a pattern of your own!",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

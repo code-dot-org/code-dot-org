@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge: Explore!\r\n\r\nNow that you've tested the waters a bit, go explore the full extent of this tool. On this level you'll see lots of new blocks and even some completely new areas of functionality (like a database backend!). Feel free to go back to previous levels for inspiration, or go off and building something completely your own.",
+    "long_instructions": "# Challenge: Explore!\r\n\r\nNow that you've tested the waters a bit, go explore the full extent of this tool. On this level you'll see lots of new blocks and even some completely new areas of functionality (like a database backend!). Feel free to go back to previous levels for inspiration, or go off and building something completely your own.",
     "instructions_important": "false",
     "display_name": "Challenge: Explore!",
     "is_k1": "false",

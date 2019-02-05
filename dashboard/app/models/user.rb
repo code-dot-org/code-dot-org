@@ -296,6 +296,18 @@ class User < ActiveRecord::Base
     student? || deduplicate_school_info(school_info_attr, self)
   end
 
+  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
+  # a user's current school information.
+  # overwrites if:
+  # new school info object has a NCES school ID associated with it
+  # old school info object doesn't have a NCES school ID associated with it
+  # @param new_school_info a school_info object to compare to the user current school information.
+  def update_school_info(new_school_info)
+    if school_info.try(&:school).nil? || new_school_info.try(&:school)
+      update_column(:school_info_id, new_school_info.id)
+    end
+  end
+
   # Not deployed to everyone, so we don't require this for anybody, yet
   def school_info_optional?
     true # update if/when A/B test is done and accepted
@@ -349,6 +361,10 @@ class User < ActiveRecord::Base
     (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
       where(username: identifier).first ||
       find_by_email_or_hashed_email(identifier)
+  rescue ActiveModel::RangeError
+    # Given too large of a user id this can produce a range error
+    # @see https://app.honeybadger.io/projects/3240/faults/44740400
+    nil
   end
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
@@ -1487,6 +1503,14 @@ class User < ActiveRecord::Base
     section_courses.map(&:summarize_short)
   end
 
+  def assigned_course?(course)
+    section_courses.include?(course)
+  end
+
+  def assigned_script?(script)
+    section_scripts.include?(script) || section_courses.include?(script&.course)
+  end
+
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
     scripts.map(&:course).compact.concat(section_courses).uniq
@@ -1590,6 +1614,23 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # Figures out the unique set of scripts assigned to sections that this user
+  # is a part of. Includes default scripts for any assigned courses as well.
+  # @return [Array<Script>]
+  def section_scripts
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+    all_scripts = []
+    all_sections.each do |section|
+      if section.script.present?
+        all_scripts << section.script
+      elsif section.course.present?
+        all_scripts.concat(section.course.default_scripts)
+      end
+    end
+
+    all_scripts
   end
 
   # return the id of the section the user most recently created.
@@ -1795,6 +1836,18 @@ class User < ActiveRecord::Base
 
       if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
         PeerReview.create_for_submission(user_level, level_source_id)
+
+        # See if there are created peer reviews, if not, raise to honey badger
+        unless PeerReview.where(
+          submitter_id: user_level.user_id,
+          level: user_level.level,
+          level_source_id: level_source_id
+        ).size >= 2
+          Honeybadger.notify(
+            error_class: "Failed to create peer review objects for submission",
+            error_message: "Failed to create peer reviews for user_level #{user_level.id}"
+          )
+        end
       end
     end
 

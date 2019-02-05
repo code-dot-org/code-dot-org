@@ -7,8 +7,8 @@
   "properties": {
     "skin": "pvz",
     "maze": "[[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,3,1],[0,0,0,0,0,1,1,0],[0,0,0,0,1,1,0,0],[0,0,0,1,1,0,0,0],[0,0,1,1,0,0,0,0],[0,1,1,0,0,0,0,0],[2,1,0,0,0,0,0,0]]",
-    "instructions": "Can you get the zombie to the sunflower using only the blocks that are available?",
-    "markdown_instructions": "*\"Dear person. Me zombie. Me hungry. Must... get... to sunflower...\"*\r\n\r\nCan you get the zombie to the sunflower using only the blocks that are available?",
+    "short_instructions": "Can you get the zombie to the sunflower using only the blocks that are available?",
+    "long_instructions": "*\"Dear person. Me zombie. Me hungry. Must... get... to sunflower...\"*\r\n\r\nCan you get the zombie to the sunflower using only the blocks that are available?",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

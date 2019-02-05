@@ -54,6 +54,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       enrollment = ::Pd::Enrollment.new workshop: @workshop
       enrollment.school_info_attributes = school_info_params
       if enrollment.update enrollment_params
+        if user
+          user.update_school_info(enrollment.school_info)
+        end
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
@@ -94,7 +97,11 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       role: params[:role],
-      grades_teaching: params[:grades_teaching]
+      grades_teaching: params[:grades_teaching],
+      attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
+      csf_course_experience: params[:csf_course_experience],
+      csf_courses_planned: params[:csf_courses_planned],
+      csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide]
     }
   end
 

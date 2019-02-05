@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "For this activity, connect to a router with the others in your group. Important note: The router will only properly route messages where the first 4 bits are the To: address and the second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support hierarchical addresses. For now, level is set up for 4 bit to and from addresses]",
+    "short_instructions": "For this activity, connect to a router with the others in your group. Important note: The router will only properly route messages where the first 4 bits are the To: address and the second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support hierarchical addresses. For now, level is set up for 4 bit to and from addresses]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

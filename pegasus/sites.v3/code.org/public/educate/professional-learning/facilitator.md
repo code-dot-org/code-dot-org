@@ -15,11 +15,11 @@ theme: responsive
 
 ## Change the face of computer science education - become a Code.org facilitator.
 
-Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science (CS) educators. 
+Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science educators. 
 
-Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
+Applications for the Code.org Facilitator Development Program will open January 2020. **If you are interested in joining the program in 2020-2021, please sign up below to receive a reminder when applications open.**
 
-<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=_"blank"><button>Tell me when applications open!</button></a>
 
 [/col-50]
 
@@ -180,10 +180,9 @@ Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zz
 
 ## Interested in applying?
 
-Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
+Applications for the Code.org Facilitator Development Program will open January 2020. **If you are interested in joining the program in 2020-2021, please sign up below to receive a reminder when applications open.**
 
-<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
-
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=_"blank"><button>Tell me when applications open!</button></a>
 
 In the meantime, be sure to visit our curriculum pages for additional information about our three courses.
 
@@ -193,6 +192,18 @@ In the meantime, be sure to visit our curriculum pages for additional informatio
 
 
 <!--
+
+Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
+
+<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
+
+
+
+Ready to take your leadership to the next level?
+
+[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
+
+Our online applications take 25-30 minutes to complete, and are not optimized for mobile devices. The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.**
 
 ## Apply now!
 
@@ -205,10 +216,12 @@ Ready to apply? Follow these steps:
 
 1. Set aside 25-30 minutes to complete the online application. Note that our application is not optimized for mobile devices; we suggest completing it on a laptop or desktop.
 
-<button>Apply now!</button></a>
+[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
 
+The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.** Any appliaction submitted after January 31 will be considered if space is available.
 
 In addition, we recommend that you make sure you're able to receive emails from facilitators@code.org at the email address you will use for your application. If this address is blocked by your district's firewall, please contact the appropriate IT representative at your school district to whitelist the address.
+
 
 -->
 

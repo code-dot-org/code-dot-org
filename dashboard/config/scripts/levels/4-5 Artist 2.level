@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Loop this code using the `repeat` block to complete the square.",
+    "short_instructions": "Loop this code using the `repeat` block to complete the square.",
     "x": "350",
     "y": "50",
     "start_direction": "180",
@@ -16,7 +16,7 @@
     "ideal": "4",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "Loop this code using the `repeat` block to complete the square.",
+    "long_instructions": "Loop this code using the `repeat` block to complete the square.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

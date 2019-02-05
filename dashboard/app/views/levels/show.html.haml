@@ -14,6 +14,12 @@
     %li
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
+- if @script_level
+  - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.course&.name }
+  %script{ src: minifiable_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
+  -# Mount point for RedirectDialog React component.
+  %div#redirect-dialog
+
 -#
   level-body is used for some semi-strange DOM manipulation. When a teacher toggles to viewAs a student,
   in some cases we want to give them an entirely different rendering (i.e. hidden/locked stages). We do
@@ -31,8 +37,8 @@
     = render partial: 'levels/not_started'
   - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks && !@level.is_a?(Applab) && !@level.is_a?(Gamelab) && !@level.is_a?(Weblab)
     #title
-      - if @level.properties['instructions'].present?
-        %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= brakeman_no_warn(@level.properties['instructions'])
+      - if @level.properties['short_instructions'].present?
+        %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= brakeman_no_warn(@level.properties['short_instructions'])
     -# Pass special parameters to Blockly partial for embedded level type.
     = render partial: 'levels/blockly'
   - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink) || @level.is_a?(CurriculumReference)

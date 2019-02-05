@@ -41,7 +41,20 @@ describe("DetailViewContents", () => {
         taughtInPast: 'No',
       },
       response_scores: {
-        committed: 'Yes'
+        meets_minimum_criteria_scores: {
+          committed: 'Yes'
+        },
+        bonus_points_scores: {
+          committed: 5,
+          question_1: 5,
+          question_2: 5,
+          question_3: 5,
+          question_4: 5,
+          question_5: 5
+        },
+        meets_scholarship_criteria_scores: {
+          principal_approval: 'Yes'
+        }
       },
       school_stats: {}
     };
@@ -72,7 +85,7 @@ describe("DetailViewContents", () => {
     it("Uses default value for facilitator applications with no notes", () => {
       const facilitatorDetailView = mountDetailView('Facilitator', {applicationData: {notes: ''}});
       expect(facilitatorDetailView.state().notes).to.eql(
-        "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
+        "Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:"
       );
     });
 
@@ -211,6 +224,29 @@ describe("DetailViewContents", () => {
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
         expect(detailView.find('#notes').prop('disabled')).to.be.true;
         expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
+      });
+    });
+
+    describe('Scholarship Teacher? row', () => {
+      it('on teacher applications', () => {
+        const detailView = mountDetailView('Teacher');
+        const lastRow = detailView.find('tr').filterWhere(row => row.text().includes('Scholarship Teacher?'));
+        const dropdown = lastRow.find('Select');
+
+        // Dropdown is disabled
+        expect(dropdown).to.have.prop('disabled', true);
+
+        // Click "Edit"
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+        // Dropdown is enabled
+        expect(dropdown).to.have.prop('disabled', false);
+
+        // Click "Save"
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+        // Dropdown is disabled
+        expect(dropdown).to.have.prop('disabled', true);
       });
     });
   }

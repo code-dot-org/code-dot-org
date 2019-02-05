@@ -1,19 +1,19 @@
 require_relative '../test_helper'
 require 'cdo/i18n_backend'
 
-class TestI18n < ::I18n::Backend::Simple
-  include Cdo::I18nSmartTranslate
+class TestI18nBackend < ::I18n::Backend::Simple
+  include Cdo::I18n::SmartTranslate
 end
 
 class I18nSmartTranslateTest < Minitest::Test
   def test_get_valid_separator
-    test_strings = Cdo::I18nSmartTranslate::SEPARATORS.map do |separator|
+    test_strings = Cdo::I18n::SmartTranslate::SEPARATORS.map do |separator|
       "some#{separator}string"
     end
 
     # will return a separator not in the original string
     test_strings.each do |test_string|
-      separator = Cdo::I18nSmartTranslate.get_valid_separator test_string
+      separator = Cdo::I18n::SmartTranslate.get_valid_separator test_string
       refute test_string.include? separator
       refute_nil separator
     end
@@ -22,7 +22,7 @@ class I18nSmartTranslateTest < Minitest::Test
     test_strings.each do |first_string|
       test_strings.each do |second_string|
         test_string = first_string + second_string
-        separator = Cdo::I18nSmartTranslate.get_valid_separator test_string
+        separator = Cdo::I18n::SmartTranslate.get_valid_separator test_string
         refute test_string.include? separator
         refute_nil separator
       end
@@ -30,7 +30,7 @@ class I18nSmartTranslateTest < Minitest::Test
 
     # cannot accomodate strings that include all possible separators
     all_test_string = test_strings.join('')
-    assert_nil Cdo::I18nSmartTranslate.get_valid_separator all_test_string
+    assert_nil Cdo::I18n::SmartTranslate.get_valid_separator all_test_string
   end
 
   def test_get_smart_translate_options
@@ -39,22 +39,22 @@ class I18nSmartTranslateTest < Minitest::Test
 
     # can smartly find a valid separator if given an explicit scope
     scope_options = {scope: ["some", "scope", "with", "a|pipe"]}
-    smart_options = Cdo::I18nSmartTranslate.get_smart_translate_options(locale, key, scope_options)
+    smart_options = Cdo::I18n::SmartTranslate.get_smart_translate_options(locale, key, scope_options)
     assert_equal ",", smart_options[:separator]
 
     # will not attempt to find a separator if explicitly given a separator
     scope_options[:separator] = '.'
-    smart_options = Cdo::I18nSmartTranslate.get_smart_translate_options(locale, key, scope_options)
+    smart_options = Cdo::I18n::SmartTranslate.get_smart_translate_options(locale, key, scope_options)
     assert_equal ".", smart_options[:separator]
 
     # will not attempt to find a separator unless given a scope
-    smart_options = Cdo::I18nSmartTranslate.get_smart_translate_options(locale, key)
+    smart_options = Cdo::I18n::SmartTranslate.get_smart_translate_options(locale, key)
     assert_nil smart_options[:separator]
   end
 
   def test_smart_translate
     test_locale = :'te-ST'
-    backend = TestI18n.new
+    backend = TestI18nBackend.new
 
     # with smart translate, we can successfully retrieve translations that use periods as keys
     period_separated_i18n = {

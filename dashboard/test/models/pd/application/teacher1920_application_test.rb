@@ -111,64 +111,6 @@ module Pd::Application
       end
     end
 
-    test 'find_default_workshop finds no workshop for applications without a regional partner' do
-      application = build :pd_teacher1920_application
-      assert_nil application.find_default_workshop
-    end
-
-    test 'find_default_workshop finds a teachercon workshop for applications with a G3 partner' do
-      # stub process_location to prevent making Geocoder requests in test
-      Pd::Workshop.any_instance.stubs(:process_location)
-
-      teachercon_workshops = {}
-      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
-        TEACHERCONS.each do |teachercon|
-          city = teachercon[:city]
-          teachercon_workshops[[course, city]] = create :pd_workshop,
-            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-            location_address: city, sessions_from: Date.new(2019, 7, 1)
-        end
-      end
-
-      g3_partner_name = REGIONAL_PARTNER_TC_MAPPING.keys.sample
-      g3_partner = build :regional_partner, group: 3, name: g3_partner_name
-      application = build :pd_teacher1920_application, regional_partner: g3_partner
-
-      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
-        city = get_matching_teachercon(g3_partner)[:city]
-        workshop = teachercon_workshops[[course, city]]
-
-        application.course = course === Pd::Workshop::COURSE_CSD ? 'csd' : 'csp'
-        assert_equal workshop, application.find_default_workshop
-      end
-    end
-
-    test 'find_default_workshop find an appropriate partner workshop for G1 and G2 partners' do
-      partner = create :regional_partner
-      program_manager = create :program_manager, regional_partner: partner
-
-      # where "appropriate workshop" is the earliest teachercon or local summer
-      # workshop matching the application course.
-
-      invalid_workshop = create :pd_workshop, organizer: program_manager
-      create :pd_session,
-        workshop: invalid_workshop,
-        start: Date.new(2018, 1, 10)
-
-      earliest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
-      create :pd_session,
-        workshop: earliest_valid_workshop,
-        start: Date.new(2018, 1, 15)
-
-      latest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
-      create :pd_session,
-        workshop: latest_valid_workshop,
-        start: Date.new(2018, 12, 15)
-
-      application = build :pd_teacher1920_application, course: 'csp', regional_partner: partner
-      assert_equal earliest_valid_workshop, application.find_default_workshop
-    end
-
     test 'school_info_attr for specific school' do
       school = create :school
       form_data_hash = build :pd_teacher1920_application_hash, school: school
@@ -343,24 +285,6 @@ module Pd::Application
       assert_equal workshop_1, application_2.get_first_selected_workshop
     end
 
-    test 'assign_default_workshop! saves the default workshop' do
-      application = create :pd_teacher1920_application
-      workshop = create :pd_workshop
-      application.expects(:find_default_workshop).returns(workshop)
-
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      workshop = create :pd_workshop
-      application = create :pd_teacher1920_application, pd_workshop_id: workshop.id
-      application.expects(:find_default_workshop).never
-
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
-    end
-
     test 'can_see_locked_status? is always false' do
       teacher = create :teacher
       g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
@@ -395,12 +319,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 106, csv_header_csd.length
+      assert_equal 107, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 108, csv_header_csp.length
+      assert_equal 109, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -529,16 +453,16 @@ module Pd::Application
 
       # old contact field
       partner.contact = contact
-      assert_equal "#{contact.name} <#{contact.email}>", application.formatted_partner_contact_email
+      assert_equal "\"#{contact.name}\" <#{contact.email}>", application.formatted_partner_contact_email
 
       # program manager but no contact_name or contact_email
       program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
-      assert_equal "#{program_manager.name} <#{program_manager.email}>", application.formatted_partner_contact_email
+      assert_equal "\"#{program_manager.name}\" <#{program_manager.email}>", application.formatted_partner_contact_email
 
       # name and email
       partner.contact_name = 'We Teach Code'
       partner.contact_email = 'we_teach_code@ex.net'
-      assert_equal 'We Teach Code <we_teach_code@ex.net>', application.formatted_partner_contact_email
+      assert_equal "\"We Teach Code\" <we_teach_code@ex.net>", application.formatted_partner_contact_email
     end
 
     test 'test non course dynamically required fields' do
@@ -1068,6 +992,19 @@ module Pd::Application
 
       application.scholarship_status = 'invalid status'
       refute application.save
+    end
+
+    test 'associated models cache prefetch' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1920_application, pd_workshop_id: workshop.id
+      # Workshops, Sessions, Enrollments, Schools, School districts
+      assert_queries 5 do
+        Teacher1920Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal workshop, application.workshop
+      end
     end
 
     private

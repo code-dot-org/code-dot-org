@@ -7,8 +7,8 @@
   "properties": {
     "skin": "bee",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
-    "markdown_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

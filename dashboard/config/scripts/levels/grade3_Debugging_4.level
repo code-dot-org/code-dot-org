@@ -33,7 +33,7 @@
     "instructions_important": "false",
     "honey_goal": "15",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "markdown_instructions": "*\"These blocks are really bugging me.\"*\r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
+    "long_instructions": "*\"These blocks are really bugging me.\"*\r\n\r\nFix the error(s) to collect all of the nectar and make all of the honey.",
     "contained_level_names": null
   },
   "published": true,

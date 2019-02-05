@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this diamond with 200 pixel sides.",
+    "short_instructions": "Draw this diamond with 200 pixel sides.",
     "x": "63",
     "y": "209",
     "start_direction": "135",
@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "*\"Now a tag for Belle!\"*\r\n\r\nDraw this diamond with 200 pixel sides.",
+    "long_instructions": "*\"Now a tag for Belle!\"*\r\n\r\nDraw this diamond with 200 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

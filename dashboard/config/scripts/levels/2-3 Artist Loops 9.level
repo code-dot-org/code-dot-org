@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "We're going to loop the same elements, but now we're going to add some distance between them.\r\nUse the same code as before, but add a step forward at the end of the outer loop.",
+    "short_instructions": "We're going to loop the same elements, but now we're going to add some distance between them.\r\nUse the same code as before, but add a step forward at the end of the outer loop.",
     "x": "100",
     "y": "150",
     "start_direction": "0",

@@ -602,7 +602,6 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@skip')
   arguments += tag('@eyes', eyes? && !browser['mobile'])
   arguments += tag('@eyes_mobile', eyes? && browser['mobile'])
-  arguments += skip_tag('@local_only') unless options.local
   arguments += skip_tag('@no_mobile') if browser['mobile']
   arguments += skip_tag('@only_mobile') unless browser['mobile']
   arguments += skip_tag('@no_circle') if options.is_circle

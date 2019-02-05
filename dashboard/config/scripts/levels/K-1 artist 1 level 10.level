@@ -6,7 +6,7 @@
   "user_id": 14,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the dashed line by using both the jump and draw blocks",
+    "short_instructions": "Draw the dashed line by using both the jump and draw blocks",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "start_direction": "270",

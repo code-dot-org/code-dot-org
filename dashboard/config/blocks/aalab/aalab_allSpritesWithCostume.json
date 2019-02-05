@@ -1,0 +1,20 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "allSpritesWithCostume",
+    "inline": false,
+    "blockText": "aalab {COSTUME}",
+    "returnType": "Sprite",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

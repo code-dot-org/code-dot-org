@@ -257,8 +257,12 @@ class Course < ApplicationRecord
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
-      versions: summarize_versions
+      versions: summarize_versions(user)
     }
+  end
+
+  def link
+    Rails.application.routes.url_helpers.course_path(self)
   end
 
   def summarize_short
@@ -266,17 +270,17 @@ class Course < ApplicationRecord
       name: name,
       title: I18n.t("data.course.name.#{name}.title", default: ''),
       description: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      link: Rails.application.routes.url_helpers.course_path(self),
+      link: link,
     }
   end
 
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
-  def summarize_versions
+  def summarize_versions(user = nil)
     return [] unless family_name
     Course.
       where("properties -> '$.family_name' = ?", family_name).
-      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
+      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title, can_view_version: c.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end
@@ -346,16 +350,37 @@ class Course < ApplicationRecord
   end
 
   # @param user [User]
-  # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user)
-    return nil unless user
-    # Restrictions only apply to students.
-    return true if user.teacher?
+  # @return [String] URL to the course the user should be redirected to.
+  def redirect_to_course_url(user)
+    # Only redirect students.
+    return nil unless user && user.student?
+    # No redirect unless user is allowed to view this course version, they are not assigned to the course,
+    # and it is versioned.
+    return nil unless can_view_version?(user) && !user.assigned_course?(self) && version_year
 
-    # A student can view the course version if...
-    # it is the latest, they are assigned to it, or they have progress in it.
+    # Redirect user to the latest assigned course in this course family,
+    # if one exists and it is newer than the current course.
+    latest_assigned_version = Course.latest_assigned_version(family_name, user)
+    latest_assigned_version_year = latest_assigned_version&.version_year
+    return nil unless latest_assigned_version_year && latest_assigned_version_year > version_year
+    latest_assigned_version.link
+  end
+
+  # @param user [User]
+  # @return [Boolean] Whether the user can view the course.
+  def can_view_version?(user = nil)
     latest_course_version = Course.latest_version(family_name)
-    latest_course_version == self || user.section_courses.include?(self) || has_progress?(user)
+    is_latest = latest_course_version == self
+
+    # All users can see the latest course version.
+    return true if is_latest
+
+    # Restrictions only apply to students and logged out users.
+    return false if user.nil?
+    return true unless user.student?
+
+    # A student can view the course version if they are assigned to it or they have progress in it.
+    user.section_courses.include?(self) || has_progress?(user)
   end
 
   # @param family_name [String] The family name for a course family.

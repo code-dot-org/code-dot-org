@@ -351,6 +351,12 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
       fieldsToClear.add(REPLACE_COURSE_FIELDS);
     }
 
+    // Sanitize numeric fields (necessary for older browsers that don't
+    // automatically enforce numeric inputs)
+    ['freeLunchPercent', ...RACE_LIST].forEach((field) => {
+      changes[field] = parseFloat(data[field]).toString();
+    });
+
     return changes;
   }
 }

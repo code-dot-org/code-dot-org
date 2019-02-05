@@ -1,3 +1,5 @@
+require 'honeybadger/ruby'
+
 module Pd::WorkshopSurveyResultsHelper
   LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY = [
     :how_much_learned,
@@ -204,7 +206,7 @@ module Pd::WorkshopSurveyResultsHelper
 
     related_workshops = find_related_workshops(workshop)
 
-    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions) if related_workshops
+    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions) if related_workshops.present?
 
     summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
@@ -390,7 +392,11 @@ module Pd::WorkshopSurveyResultsHelper
     # responses, which the reduce_summary function does (see below)
     flattened_this_workshop_histograms = reduce_summary(summary[:this_workshop].values.flat_map(&:values).select {|x| x.is_a? Hash})
 
-    flattened_all_my_workshop_histograms = reduce_summary(summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash})
+    flattened_all_my_workshop_histograms = if summary[:all_my_workshops]
+                                             reduce_summary(summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash})
+                                           else
+                                             {}
+                                           end
 
     # Questions are also sorted by day and general vs. facilitator - that distinction needs
     # to be removed. Then we need to map each response option to the value that we assign it
@@ -416,22 +422,61 @@ module Pd::WorkshopSurveyResultsHelper
         # histogram. Do the same thing for both this_workshop and all_my_workshops.
         # When all_workshops is implemented, it will be in S3 and not computed on the fly
         histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
+
+        if histogram_for_this_workshop.values.first.is_a? Hash
+          next unless histogram_for_this_workshop.key? facilitator
+        end
+
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
+
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
         histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
-
-        next if histogram_for_this_workshop.nil?
 
         # Now that we have the histogram, the average is just the sum of option values
         # divided by the total number of responses for this particular question
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
 
-        total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
+        total_answer_for_this_workshop_sum = histogram_for_this_workshop.map do |k, v|
+          option = question[:option_map][k]
+
+          if option.nil?
+            # special case for cases where in the scale we changed the value
+            option = question[:option_map].select {|k1, _| k1.start_with? k.to_s}.values.first
+          end
+
+          if option
+            option * v
+          else
+            Honeybadger.notify(
+              error_class: "Unknown option for question during survey result aggregation",
+              error_message: "Unknown option #{k} for question #{question[:text]} found during survey result aggregation, acceptable responses are #{question[:option_map]}"
+            )
+            0
+          end
+        end.reduce(:+) || 0
+
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
 
-        total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
-        total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
-        facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
+        total_responses_for_all_workshops = histogram_for_all_my_workshops&.values&.reduce(:+) || 0
+        total_answer_for_all_workshops_sum = histogram_for_all_my_workshops&.map do |k, v|
+          option = question[:option_map][k]
+
+          if option.nil?
+            # special case for cases where in the scale we changed the value
+            option = question[:option_map].select {|k1, _| k1.start_with? k.to_s}.values.first
+          end
+
+          if option
+            option * v
+          else
+
+            0
+          end
+        end&.reduce(:+) || 0
+
+        facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = if total_answer_for_all_workshops_sum != 0 && total_responses_for_all_workshops != 0
+                                                                                              (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
+                                                                                            end
       end
 
       # Finally, keep hold of the question text to render in the averages table
