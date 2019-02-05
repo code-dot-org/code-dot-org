@@ -1,0 +1,6 @@
+name 'courseE_aboutme_3_multi'
+question 'Help! Rikki doesn\'t know what other information is safe for her to share. Which ONE of the following would you recommend? '
+wrong 'Rikki could share her student ID number.', feedback: 'No! Someone could steal Rikki\'s identity with her student ID number!'
+wrong 'Rikki could share a photograph of her family.', feedback: 'No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!'
+right 'Rikki could share cartoon drawings of herself.', feedback: 'Great idea! Rikki can\'t be identified through cartoon drawings.'
+wrong 'Rikki could share her email address', feedback: 'No! Rikki\'s email address should only be shared directly with people or websites she can trust.'
