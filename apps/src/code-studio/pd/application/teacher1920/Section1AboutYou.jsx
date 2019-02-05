@@ -15,6 +15,7 @@ import {
   Button
 } from 'react-bootstrap';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import queryString from 'query-string';
 import {styles} from "./TeacherApplicationConstants";
 import _ from 'lodash';
 
@@ -75,13 +76,27 @@ export default class Section1AboutYou extends LabeledFormComponent {
   }
 
   render() {
+    const nominated = queryString.parse(window.location.search).nominated;
+
     return (
       <FormGroup>
-        <p>
-          Thanks for your interest in the Code.org Professional Learning Program!
-          This application should take 10 - 15 minutes to complete. Fields marked with a
-          {' '}<span style={{color: "red"}}>*</span>{' '} are required.
-        </p>
+
+        {!nominated && (
+          <p>
+            Thanks for your interest in the Code.org Professional Learning Program!
+            This application should take 10 - 15 minutes to complete. Fields marked with a
+            {' '}<span style={{color: "red"}}>*</span>{' '} are required.
+          </p>
+        )}
+        {nominated && (
+          <p>
+            Congratulations on your nomination for a scholarship to the Code.org Professional
+            Learning Program! This application should take 10 - 15 minutes to complete. Fields
+            marked with a {' '}<span style={{color: "red"}}>*</span>{' '} are required. We will
+            let your local partner know that you’ve been nominated as they consider your application
+            for the regional scholarships or discounts they have available.
+          </p>
+        )}
         <p>
           If you need more information about the program before you apply,
           please visit
@@ -98,6 +113,20 @@ export default class Section1AboutYou extends LabeledFormComponent {
             {' '}contact your Regional Partner.
           </a>
         </p>
+
+        {nominated && (
+          <div>
+            <h4>When will I hear back about the scholarships and discounts?</h4>
+            <p>
+              In most regions, applications are accepted on a rolling basis. And in
+              most cases, our local partner will get back to you within 2 weeks
+              to let you know your application status. Even if you don’t get selected
+              for the scholarship, you will still be able to attend if you are an
+              eligible teacher and your school can pay a discounted price (thanks
+              to our generous donors).
+            </p>
+          </div>
+        )}
 
         <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>
 

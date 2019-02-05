@@ -13,11 +13,18 @@
     "encrypted_examples": "AXw0E4ulgcjmPDwYnx77f+dkqqKwpq96sMuMpjZBIdM2BM2uZi84QjaRW9W3\nqCCiuu64eXzmvFysG5JcdVUEGw==\n",
     "submittable": "false",
     "parent_level_id": 9117,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/images-in-html/"
+    ],
+    "map_reference": "/docs/concepts/html/formatting-html/"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 23:43:07 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-30 17:38:45 +0000\",\"changed\":[\"markdown_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-07-26 18:14:24 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 23:43:07 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-30 17:38:45 +0000\",\"changed\":[\"markdown_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-07-26 18:14:24 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 02:42:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
