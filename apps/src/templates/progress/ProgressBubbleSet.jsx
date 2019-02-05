@@ -1,8 +1,8 @@
 /**
  * An ordered set of progress bubbles.
  */
-
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from "@cdo/apps/util/color";

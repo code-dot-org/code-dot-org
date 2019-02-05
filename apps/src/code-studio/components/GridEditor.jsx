@@ -3,7 +3,8 @@
  * Used in LevelBuilder, and relies on some apps code for validation.
  * Supports both Bee and Farmer skins.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import {cells, utils as mazeUtils} from '@code-dot-org/maze';
 

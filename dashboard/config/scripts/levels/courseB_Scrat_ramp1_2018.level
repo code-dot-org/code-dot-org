@@ -38,7 +38,7 @@
     "name_suffix": "_2018",
     "parent_level_id": 12153,
     "top_level_procedure_autopopulate": "false",
-    "tts_markdown_instructions_override": "To get Scrat to the acorn, snap the \"East\" block to the bottom of the \"when run\" block, then press run.",
+    "tts_long_instructions_override": "To get Scrat to the acorn, snap the \"East\" block to the bottom of the \"when run\" block, then press run.",
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "contained_level_names": null,

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { dropdownStyles } from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import { ALL_STUDENT_FILTER } from './sectionAssessmentsRedux';
 import i18n from '@cdo/locale';

@@ -1,7 +1,8 @@
 /**
  * Workshop Details section of the workshop enrollment form
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {WorkshopPropType} from './enrollmentConstants';
 
 const styles = {

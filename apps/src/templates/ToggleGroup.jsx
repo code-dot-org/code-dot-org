@@ -1,5 +1,7 @@
 /** @file Row of buttons for switching editor modes. */
-import React, {PropTypes, Component} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import ToggleButton from './ToggleButton';
 
 export default class ToggleGroup extends Component {
