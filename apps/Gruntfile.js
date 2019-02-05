@@ -17,6 +17,9 @@ module.exports = function (grunt) {
 
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
+    if (path.resolve(process.env.mocha_entry).indexOf('/apps/test/integration') > -1) {
+      throw new Error('Cannot use karma:entry to run integration tests');
+    }
     const isDirectory = fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory();
     const loadContext = isDirectory ?
       `let testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\\.jsx?$/);` :
@@ -476,6 +479,7 @@ describe('entry tests', () => {
 
   var internalEntries = {
     'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
+    'blocks/index':                  './src/sites/studio/pages/blocks/index.js',
     'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',

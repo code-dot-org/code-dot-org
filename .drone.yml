@@ -1,3 +1,4 @@
+---
 kind: pipeline
 name: unit
 
@@ -5,8 +6,37 @@ clone:
   depth: 50
 
 steps:
+- name: verify-pr
+  image: wintercdo/code-dot-org:0.7
+  pull: always
+  commands:
+    - |
+      if [ -z "$DRONE_PULL_REQUEST" ]; then
+        echo "Not a pull request."
+        exit 0
+      fi
+    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
+    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
+    - echo $head_repo
+    - |
+      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
+        echo "Pull request is from fork $head_repo; exiting."
+        exit 1
+      fi
+
+- name: restore-cache
+  image: plugins/s3-cache
+  settings:
+    pull: true
+    restore: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
+  pull: always
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
@@ -17,16 +47,27 @@ steps:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
-    PROPERTIES_ENCRYPTION_KEY:
-      from_secret: PROPERTIES_ENCRYPTION_KEY
-    AWS_ACCESS_KEY_ID:
-      from_secret: AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY:
-      from_secret: AWS_SECRET_ACCESS_KEY
   commands:
-    - pwd
+    - df -h
     - sudo chown -R circleci:circleci .
+    - # cache is restored to source directory, so we need to copy it into the right place
+    - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
     - /entrypoint.sh docker/unit_tests.sh
+
+- name: update-cache
+  image: plugins/s3-cache
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  settings:
+    pull: true
+    rebuild: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+    mount:
+      - /home/circleci/.rbenv
 
 volumes:
 - name: rbenv
@@ -98,3 +139,8 @@ trigger:
 #   event:
 #     include:
 #     - pull_request
+---
+kind: signature
+hmac: 85bf71e91bbb85284b075768b4df3288bf99fce202b02e28835cfea417026b7e
+
+...

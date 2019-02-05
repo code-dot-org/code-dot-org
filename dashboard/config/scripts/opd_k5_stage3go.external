@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Sequencing > Reflect
 
-Congratulations! You just wrote some code. You are officially a programmer! Code Studio will track how many lines of code you've written.
+Congratulations! You just wrote some code. You are officially a programmer! Our platform tracks how many lines of code you've written, and will tell you after every puzzle!
 
 ---
 
@@ -13,6 +13,6 @@ Did you notice that the last puzzle was a little more difficult?  It was a **cha
 
 ---
 
-**Take a moment now to review how sequencing (including programming and algorithims) are introduced in the Code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+**Take a moment now to review how sequencing (including programming and algorithms) are introduced in the CS Fundamentals curriculum, and think about how you might implement the suggested activities in your classroom.**
 
 MARKDOWN

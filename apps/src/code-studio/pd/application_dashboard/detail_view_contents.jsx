@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 import {
   Row,
@@ -491,24 +492,16 @@ export class DetailViewContents extends React.Component {
   };
 
   renderScholarshipStatusAnswer = () => {
-    if (this.state.editing && this.props.isWorkshopAdmin) {
-      return (
-        <FormGroup>
-          <Select
-            value={this.state.scholarship_status}
-            onChange={this.handleScholarshipStatusChange}
-            options={ScholarshipDropdownOptions}
-          />
-        </FormGroup>
-      );
-    }
-
-    const option = ScholarshipDropdownOptions.find((option) => {
-      return option.value === this.state.scholarship_status;
-    });
-    if (option) {
-      return option.label;
-    }
+    return (
+      <FormGroup>
+        <Select
+          value={this.state.scholarship_status}
+          onChange={this.handleScholarshipStatusChange}
+          options={ScholarshipDropdownOptions}
+          disabled={!this.state.editing}
+        />
+      </FormGroup>
+    );
   };
 
   renderEditButtons = () => {
