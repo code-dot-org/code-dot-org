@@ -32,7 +32,7 @@ Code.org&reg; is a nonprofit dedicated to expanding access to computer science i
 
 ## The majority of our students are girls or underrepresented minorities</h2>
 
-<img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" class ="col-95">
+<img src="/images/infographics/fit-700/diversity-courses-2018-web.png" class ="col-95">
 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. 
 
