@@ -1,5 +1,6 @@
 /** @file Grid over visualization */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export const styles = {
   line: {

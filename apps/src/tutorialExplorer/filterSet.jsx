@@ -1,7 +1,8 @@
 /* FilterSet: The overall search area in TutorialExplorer.  Contains a set of filter groups.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
 import FilterGroupSortBy from './filterGroupSortBy';

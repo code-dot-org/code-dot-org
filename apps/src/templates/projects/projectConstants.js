@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 import i18n from "@cdo/locale";
 
 export const projectDataPropType = PropTypes.shape({

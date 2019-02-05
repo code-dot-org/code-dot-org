@@ -1,5 +1,6 @@
 /** @file Upload button wrapping a hidden uploader component. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import HiddenUploader from './HiddenUploader.jsx';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import Button from "../../templates/Button";

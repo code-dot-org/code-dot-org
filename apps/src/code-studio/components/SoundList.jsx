@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import SoundListEntry from './SoundListEntry';
 import {searchAssets} from '../assets/searchAssets';
 import soundLibrary from '../soundLibrary.json';

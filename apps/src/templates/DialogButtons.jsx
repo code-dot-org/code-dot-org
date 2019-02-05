@@ -1,5 +1,6 @@
 import LegacyButton from './LegacyButton';
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import msg from '@cdo/locale';
 import Lightbulb from './Lightbulb';
 
