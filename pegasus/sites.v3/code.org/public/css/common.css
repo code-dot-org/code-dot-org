@@ -474,9 +474,7 @@ button {
   position: relative;
   background: #fff;
 }
-#stats-carousel .slides,
-#stats-impact-carousel .slides {
-}
+
 #stats-carousel .slide,
 #stats-impact-carousel .slide {
   display: block;
@@ -484,7 +482,7 @@ button {
   float: left;
   background: #ebecec;
   margin: 0;
-  padding: 0 60px 10px 60px;
+  padding: 0 0px 10px 60px;
 }
 #stats-carousel .slide-img,
 #stats-impact-carousel .slide-img {
