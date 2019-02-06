@@ -3833,6 +3833,8 @@ zh-TW:
               name: 安全的到達地點
             'Loops: Happy Loops':
               name: '迴圈：快樂迴圈'
+            Learn to Drag and Drop:
+              name: 學習滑鼠的拖放
         courseb-2019:
           stages:
             Move It, Move It:
@@ -3855,3 +3857,7 @@ zh-TW:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: '生活中的演算法 - 植物種植'
+        dani-test-script:
+          stages:
+            new stage:
+              name: 新的階段

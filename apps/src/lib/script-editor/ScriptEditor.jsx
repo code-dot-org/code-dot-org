@@ -40,7 +40,7 @@ export default class ScriptEditor extends React.Component {
     loginRequired: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
-    professionalLearningCourse: PropTypes.bool,
+    professionalLearningCourse: PropTypes.string,
     peerReviewsRequired: PropTypes.number,
     wrapupVideo: PropTypes.string,
     excludeCsfColumnInLegend: PropTypes.bool,

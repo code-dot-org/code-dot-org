@@ -1279,6 +1279,7 @@
   "subtitle": "一个可视化的编程环境",
   "success": "成功!",
   "summaryAssessmentsOverview": "多选题概述",
+  "switchSection": "切换学习小组",
   "syncClever": "从Clever 上同步学生资料",
   "syncGoogleClassroom": "从谷歌教室同步学生资料",
   "syntaxErrorMsg": "你的程序包含一个错别字。请删除第{lineNumber} 行并再试一次。",

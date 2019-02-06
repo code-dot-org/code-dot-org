@@ -1279,6 +1279,7 @@
   "subtitle": "et visuelt programmerings miljø",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Skift hold:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Dit program indeholder en fejl. Fjern linje {lineNumber} og prøv igen.",

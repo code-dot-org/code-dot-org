@@ -37,6 +37,12 @@ ro:
         age: Vârsta
         gender: Sex
         edit_header: Editează detaliile contului
+        finish_sign_up_header: Finalizați crearea contului dvs
+        finish_sign_up_subheader: Completaţi următoarele informaţii pentru a finaliza
+          crearea unui cont de Code.org pentru <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider: Completaţi următoarele informaţii pentru
+          a finaliza crearea unui cont la Code.org cu <strong>%{provider}</strong>
+          pentru<strong>%{email}</strong>.
         error:
           future: nu poate fi în viitor
   hello: Salutare lume
@@ -86,6 +92,7 @@ ro:
   prize: premiu
   more_info: Mai multe informaţii
   auth:
+    continue_with: Continuați cu %{provider}
     sign_in_with: Loghează-te cu %{provider}
     signed_in: Înregistrat!
     signed_out: Te-ai delogat de pe <a href="%{url}">Code.org</a>.
@@ -101,6 +108,9 @@ ro:
     clever: Cont inteligent
     powerschool: Cont de SuperȘcoală
     forgot_password: Ai uitat parola?
+    migration_success: Succes! V-ați actualizat experiența la noul nostru tip de cont.
+    demigration_success: Experienţa la noul nostru tip de cont este dezactivată acum
+      pentru dvs.
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
     not_linked: Ne pare rău, contul Code.org nu este conectat la furnizorul dvs. %{provider}.
@@ -109,7 +119,10 @@ ro:
       Vă rugăm să vă conectați prin Portalul dvs. Inteligent.
     unable_to_connect_provider: Nu s-a reușit efectuarea conectării contului dvs.
       Code.org la contul dvs. %{provider}. Vă rugăm să încercați din nou.
+    already_in_use: Contul dvs %{provider} este deja conectat la alt cont de Code.org.
+    already_linked: Contul dvs %{provider} este deja folosit la alt cont de Code.org.
   signup_form:
+    email_signup: Înregistrează-te cu adresa ta de e-mail
     student_count: "%{count} studenţi s-au înregistrat deja."
     teacher_count: "%{count} profesori s-au înregistrat deja."
     overview: Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona
@@ -139,6 +152,7 @@ ro:
     age: Vârsta
     user_type: Ești student sau profesor?
     submit: Înregistrează-te
+    go_to_account: Du-te la contul meu
     teacher: Ești profesor?
     valid_username: Disponibil!
     invalid_username: Numele de utilizator trebuie să aibe cel puțin 5 caractere
@@ -151,6 +165,8 @@ ro:
       confidențialitate</a>.
     under_13_consent: Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui
       sau tutorelui meu legal de a utiliza serviciile Code.org.
+    student_consent: Confirm că am permisiunea părintelui sau tutorelui meu legal
+      de a utiliza serviciile Code.org.
     agree_us_website: Sunt de acord să folosesc un site web din Statele Unite.
     my_data_to_us: Datele obținute în urma utilizării de către mine a acestui site
       pot fi trimise și stocate sau prelucrate în Statele Unite.
@@ -258,6 +274,7 @@ ro:
     code_with_teacher: "%{section_code} cu %{teacher_name}"
     confirm:
       remove: Sigur doriţi să părăsiţi această secţiune?
+    default_name: Secțiune fără titlu
     remove: "(eliminaţi secţiunea)"
     type:
       picture: Poză - parolă
@@ -363,6 +380,7 @@ ro:
       signin: Loghează-te
       signup: Creează un cont
       already_registered: Eşti deja înregistrat?
+      pair_programming: Programare prin împerechere
       team: Echipa
       driver: Conducătorul
       navigator: Navigator
@@ -408,6 +426,7 @@ ro:
       example: Exemplu soluţie
       example_with_number: Exemplu soluţie %{solution_number}
       submitted_on: Trimis la data %{date}
+      last_updated: 'Ultima actualizare:'
       unsubmit: Retrage
       worked_with: A lucrat cu
       update_lock_settings: Actualizează setările de blocare aici.
@@ -624,6 +643,11 @@ ro:
       minunate</a>! Distribuiți <a href='%{video_url}' target='_blank'>acest videoclip</a>
       pentru ca elevii dvs. să poată afla de colegi de breaslă din întreaga țară care
       susțin și ei acest examen.
+    announcement_csp_deadline: Ultimul apel pentru profesorii de liceu! Preluați conducerea
+      în implementarea informaticii în școala dvs. și aplicați la programele noastre
+      profesionale de învățare de înaltă calitate <strong>la absolut nici un cost
+      pentru dumneavoastră sau școala dvs</strong>de învăţare. Aplicațiile se primesc
+      până la data de 14 aprilie.
     announcement_applab_export: Laboratorul de aplicații, mediul nostru de programare
       pe web, acceptă acum exportul codului dvs.! Puteți să începeți să construiți
       aplicații cu blocuri JavaScript drag-and-drop, apoi să exportați codul pentru
@@ -741,6 +765,19 @@ ro:
         din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii,
         dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare.
       link: Află mai mult
+      applab_unsupported_tablet: Laboratorul de aplicații funcționează cel mai bine
+        pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să
+        întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent.
+      gamelab_unsupported_tablet: Laboratorul de jocuri funcționează cel mai bine
+        pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să
+        întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent.
+      weblab_unsupported_browser: Din păcate, în prezent, întâmpinăm probleme cu încărcarea
+        Laboratorului de web în acest browser. Poate doriți să utilizați un browser
+        diferit până când acest lucru este rezolvat. Ne cerem scuze pentru neplăcerile
+        create.
+      weblab_unsupported_locale_storage: S-ar putea să întâmpinați probleme la utilizarea
+        Laboratorului de web în modul de navigare privată. Vă rugăm, reîncărcați proiectul
+        în modul normal. Ne pare rău pentru inconveniență.
   slow_loading: Aceasta durează mai mult decât de obicei...
   try_reloading: Încearcă să reîncarci pagina
   next_stage: Ai terminat! Continuă cu următoarea etapă
@@ -809,12 +846,19 @@ ro:
         de utilizatorii noștri
     gamelab:
       title: Laborator de jocuri
+      body: Laboratorul de jocuri este un mediu de programare în care puteți crea
+        animații simple și jocuri cu obiecte și personaje care interacționează unul
+        cu celălalt.
       audience: Vârste 13 +
       cta: Află cum
     hoc-encryption:
       title: Criptare simplă
+      body: Elevii vor învăţa tehnici pentru a crea şi a sparge mesaje criptate.
     weblab:
       title: Laborator Web (beta)
+      body: Laboratorul de web este un mediu de programare în care puteți crea pagini
+        de web simple folosind HTML și CSS. Proiectați paginile dvs. de web și distribuiți
+        site-ul dvs în câteva secunde.
       audience: Vârste 13 +
       cta: Află cum
     frozen:
@@ -838,6 +882,10 @@ ro:
       title: Minecraft
     sports:
       title: Sporturi
+      body: Creați un joc de basketball sau un "mix and match" din toate sporturile.
+    text-compression:
+      body: În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru
+        a comprima textul prin înlocuirea modelelor cu simboluri.
     unplugged:
       title: Lecţii offline
       audience: Vârsta +4 ani
@@ -849,8 +897,13 @@ ro:
         ta.
     unplugged_conditionals:
       title: Condiţionale
+      body: Aflați mai multe despre algoritmii și instrucțiunile condiționale din
+        această activitate "deconectată" utilizând un pachet de cărți.
     widgets:
       title: Widget-uri
+      body: Elevii pot explora concepte la cursul nostru de Principii în Informatică,
+        cu ajutorul acestor instrumente digitale. Utilizați widget-urile pe cont propriu
+        sau creați o lecție cu un singur concept pentru clasa dvs.
       audience: Vârste 14+
       cta: Află cum
   gallery:
@@ -903,6 +956,10 @@ ro:
     hide_survey_last_answer: Acest studiu este anonim.  Vă rugăm să vizitaţi tabloul
       de profesor pentru rezultatele agregate.  Reţineţi că rezultatele sunt vizibile
       în cazul în care cel puțin cinci studenţi transmit chestionarul.
+    survey_submission_thankyou: Vă mulțumim pentru trimiterea acestui sondaj de opinie!
+      Sondajul a fost eliminat, astfel încât răspunsurile dvs. să rămână anonime.
+      Rețineți că profesorul dvs. va putea totuși să vadă răspunsuri din întreaga
+      clasă, dar fără nume atașat.
   level_group-submittable:
     wrong_title: Mulţumesc
     wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
@@ -986,6 +1043,11 @@ ro:
       înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: Revedeţi termenii actualizati
   school_info_interstitial:
+    title: Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne
+      putea urmări progresul!
+    message: Vă rugăm introduceți informațiile despre școala dumneavoastră mai jos.
+    message_with_suggestion: Vă rugăm să verificați dacă informațiile următoare sunt
+      corecte sau actualizați-le dacă este necesar.
     save: Salvează
   race_interstitial:
     title: 'Optional: Ajuta-ne sa urmarim progresul fata de imbunatatirea nivelului
@@ -1047,6 +1109,8 @@ ro:
       cu alţii în şcoala dumneavoastră.
     embed: Încorporat
     advanced_share: Afişaţi opţiunile avansate
+    no_projects: În prezent, nu aveți nici un proiect. Faceți clic pe unul dintre
+      butoanele de mai sus pentru a începe un proiect.
     close: Închide
     more: Mai mult
     name: Nume
@@ -1057,6 +1121,9 @@ ro:
       la proiectele tale oricând.
     need_help: Incearca acesta cursuri daca I nevoie de ajutor pentru a incepe noul
       tau proiect
+    thumbnail_help: Nu vedeți miniatura corectă pentru proiectul dvs.? Rulați aplicația
+      pentru a genera o miniatură nouă. Rețineți că poate dura vreo două ore pentru
+      ca miniatura să se actualizeze peste tot.
     really_delete: Șterge?
     delete_yes: Da
     delete_no: Nu
@@ -1071,6 +1138,10 @@ ro:
     remix: Remix
     click_to_remix: Fă clic pe "Remix" pentru a-ți crea propria ta versiune!
     edit_project: Editare proiect
+    sharing_disabled: Ne pare rău, acest proiect nu este disponibil pentru distribuire.
+      Dacă acesta este proiectul dumneavoastră sau proiectul unuia dintre elevii dvs.,
+      vă rugăm <a href='https://studio.code.org/users/sign_in'>logați-vă</a> în contul
+      dumneavoastră pentru a vizualiza proiectul.
     abuse:
       tos: Acest proiect a fost raportat pentru încălcarea Code.org pe <a href='http://code.org/tos'>
         Termenii de serviciu</a> şi nu pot fi partajate cu alţii.
@@ -1127,6 +1198,22 @@ ro:
     content: Conţinut
     practice: Practicile de predare
     peer_review: Împerecheaţi dispozitivele
+    ramp_up: Avansare
+    main_course: Curs principal
+    extra_course_content: Conținut curs suplimentar
+    csf_e_1: Avansare la Cursul E (Opțional)
+    csf_e_2: Conținut curs E
+    csf_f_1: Avansare la Cursul F (Opțional)
+    csf_f_2: Conținut curs F
+    csd1_1: 'Capitolul 1: Procesul de rezolvare a problemelor'
+    csd1_2: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+    csd2_1: 'Capitolul 1: Conţinutul Web şi HTML'
+    csd2_2: 'Capitolul 2: Styling şi CSS'
+    csd3_1: 'Capitolul 1: Imagini şi animaţii'
+    csd3_2: 'Capitolul 2: Cum facem jocuri'
+    csd4_1: 'Capitolul 1: Design orientat spre utilizator'
+    csd4_2: 'Capitolul 2: Prototipare aplicații'
+    csd5_1: 'Capitolul 1: Reprezentarea informaţiilor'
     cspSurvey: Sondaj
     cspAssessment: Evaluare capitol
     csp2_1_2018: 'Unitatea 2: Informaţii digitale'
@@ -1248,16 +1335,62 @@ ro:
         tynker: Tynker
       robotics:
         kodable: Kodable
+        raspberry: Raspberry Pi
+        wonder: Atelierul minune
       workshop_course:
+        csf_af: Fundamentele informaticii (Cursuri A-F)
+        csf_express: Fundamentele informaticii (pre-Express sau Express)
         csd: Descoperiri informatice
         csp: Principle Informaticii
       email_opt_in:
         opt_in_yes: Da
         opt_in_no: Nu
+    international_opt_in:
+      title: Prezență în atelier
+      intro: Vă mulțumim pentru timpul acordat pentru completarea trainingului în
+        curriculumul Code.org. Misiunea noastră de a aduce oportunități de educație
+        în informatică tuturor copiilor din toate școlile din întreaga lume nu ar
+        fi posibilă fără tine.
+      instructions: Vă rugăm să completați formularul de mai jos pentru a indica faptul
+        că 1) ați participat la un atelier de instruire condus de unul dintre partenerii
+        internaționali Code.org și 2) sunteți de acord cu utilizarea informațiilor
+        dvs. de către partenerul nostru internațional în țara dvs., pentru a ca acesta
+        să vă poată ajuta și sprijini în călătoria dumneavoastră ca profesor de informatică.
+      thanks: Vă mulțumim că ați trimis! Așteptăm cu nerăbdare să vă susținem pe măsură
+        ce vă familiarizați cu curriculumul și instrumentele Code.org. Vă rugăm să
+        continuați să ne faceți cunoscute întrebările și feedback-ul dvs. scriindu-ne
+        la <a href='%{support_email_url}'>support@code.org</a> sau prin postarea pe
+        <a href='%{teacher_forum_url}' target='_blank'>forumul profesorilor</a>!
+    logged_out:
+      heading: Vă mulțumim pentru interesul acordat Programului profesional de învățare!
+      body: Pentru a începe, trebuie mai întâi să vă conectați la contul Code.org.
+        Dacă doriți mai multe informații despre program înainte de a vă începe aplicația,
+        vă rugăm consultați <a href="%{url}">Prezentarea generală a programului de
+        învățare profesională</a>.
+    not_teacher:
+      body: Vă mulțumim pentru interesul acordat Programului de învățare profesională
+        Code.org. Momentan sunteți conectat(ă) la un cont de elev. Vă rugăm să creați
+        un cont de profesor sau <a href="%{user_settings}">accesați setările dvs de
+        utilizator</a> pentru a vă upgrada contul de la elev la profesor.
+      more: Dacă doriți mai multe informații despre program înainte de a vă începe
+        aplicația, vă rugăm să consultați <a href="%{pl_overview}">Prezentarea generală
+        a programului de învățare profesională</a>.
+    no_teacher_email:
+      body: Contul dvs. nu are o adresă de e-mail. Vă rugăm <a href="%{user_registration}">vizitați
+        setările contului dvs</a> pentru a vă adăuga adresa de e-mail înainte de a
+        completa acest formular.
   courses_category: Toate cursurile
   cookie_banner:
+    message: Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt
+      de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul
+      dumneavoastră.
+    more_information: Consultaţi Politica de confidenţialitate a Code.org.
     accept: Sunt de acord
   gdpr_dialog:
+    heading: Sunteţi de acord să folosiți un site web localizat în Statele Unite?
     message: Datele obținute în urma utilizării de către dumneavoastră a acestui site
       pot fi trimise și stocate sau prelucrate în Statele Unite.
+    link_intro: Pentru detalii vedeți a noastră
+    privacy_policy: politică de confidențialitate
+    logout: Deconectare
     true: Da
