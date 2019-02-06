@@ -23,7 +23,7 @@ mkdir $CIRCLE_ARTIFACTS
 # in a CI environment, then they don't exist by default.
 if $(git rev-parse --is-shallow-repository); then
     git remote set-branches --add origin staging test production
-    git fetch --depth 50 origin staging test production"
+    git fetch --depth 50 origin staging test production
     git branch -a
 fi
 
