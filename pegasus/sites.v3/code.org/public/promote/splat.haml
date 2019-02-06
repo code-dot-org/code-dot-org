@@ -36,7 +36,7 @@ theme: responsive
     #stats-section-mobile.section.clear.mobile-feature
       = view :stats_mobile
 
-    %h1 Code.org’s impact in schools
+    %h1 Code.org’s Impact in Schools
     #impact-section.section.clear.desktop-feature
       = view :stats_impact_carousel
 
@@ -47,22 +47,23 @@ theme: responsive
     #petition-section.section.clear
       = view :petition
 
+    %h1.tablet-feature Choose a State
     #interactive-map.section.clear
       = view :interactive_map, use_url: true
 
-    %h1 Advocate for computer science locally
+    %h1 Advocate for Computer Science Locally
     #advocate-locally.section.clear
       = view :stats_advocate_locally
 
   %div{:id=>'universal_content'}
 
-    %h1 Tell the world!
+    %h1 Tell the World!
     #youtube-section.section.clear
-      %h2 Share the Code.org video
+      %h2 Share the Code.org Video
       = view :youtube_videos
 
     #quotes-section.section.clear
-      %h2 Leaders and trendsetters agree more students should learn computer science
+      %h2 Leaders and Trendsetters Agree More Students Should Learn Computer Science
       = view :top_quotes
 
 = view 'popup_window.js'
