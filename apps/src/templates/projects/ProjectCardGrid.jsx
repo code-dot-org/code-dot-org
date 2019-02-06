@@ -70,7 +70,7 @@ class ProjectCardGrid extends Component {
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
 
     return (
-      <div id={'projectCardGrid'} style={styles.grid}>
+      <div id="projectCardGrid" style={styles.grid}>
         {(this.state.showAll) &&
           <div>
             <ProjectAppTypeArea
