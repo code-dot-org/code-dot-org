@@ -6,6 +6,7 @@ import Section3TeachingBackground from './Section3TeachingBackground';
 import Section4ProfessionalLearningProgramRequirements from './Section4ProfessionalLearningProgramRequirements';
 import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
 import Section6Submission from './Section6Submission';
+/* global ga */
 
 export default class Teacher1920Application extends FormController {
   static propTypes = {
@@ -47,5 +48,14 @@ export default class Teacher1920Application extends FormController {
   onSuccessfulSubmit() {
     // Let the server display a confirmation page as appropriate
     window.location.reload(true);
+  }
+
+  /**
+   * @override
+   */
+  onSetPage(newPage) {
+    // Report a unique page view to GA.
+    ga('set', 'page', '/pd/application/teacher/' + newPage + 1);
+    ga('send', 'pageview');
   }
 }

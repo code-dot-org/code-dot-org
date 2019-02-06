@@ -47,6 +47,7 @@ export default class FormController extends React.Component {
   }
 
   componentWillMount() {
+    let newPage;
     if (
       this.constructor.sessionStorageKey &&
       sessionStorage[this.constructor.sessionStorageKey]
@@ -55,7 +56,12 @@ export default class FormController extends React.Component {
         sessionStorage[this.constructor.sessionStorageKey]
       );
       this.setState(reloadedState);
+      newPage = reloadedState.currentPage;
+    } else {
+      newPage = this.state.currentPage;
     }
+
+    this.onSetPage(newPage);
   }
 
   /**
@@ -173,6 +179,13 @@ export default class FormController extends React.Component {
    * Called when we get a successful response from the API submission
    */
   onSuccessfulSubmit() {
+    // Intentional noop; overridden by child classes
+  }
+
+  /**
+   * Called when we set a new page.
+   */
+  onSetPage(newPage) {
     // Intentional noop; overridden by child classes
   }
 
@@ -413,6 +426,8 @@ export default class FormController extends React.Component {
       });
 
       this.saveToSessionStorage({currentPage: newPage});
+
+      this.onSetPage(newPage);
     }
   }
 
