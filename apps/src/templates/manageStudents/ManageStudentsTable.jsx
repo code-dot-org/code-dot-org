@@ -298,7 +298,7 @@ class ManageStudentsTable extends Component {
 
   projectSharingHeaderFormatter = () => {
     return (
-      <span>
+      <span style={styles.verticalAlign}>
         <div
           style={styles.headerName}
           data-for="explain-sharing"
