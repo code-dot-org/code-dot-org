@@ -44,6 +44,7 @@ import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
   ApplicationTypes,
+  ScholarshipStatusRequiredStatuses
 } from './constants';
 import {
   FacilitatorScoringFields
@@ -115,14 +116,6 @@ const styles = {
     marginLeft: '30px'
   }
 };
-
-const SCHOLARSHIP_STATUS_REQUIRED_STATUSES = [
-  'accepted_not_notified',
-  'accepted_notified_by_partner',
-  'accepted_no_cost_registration',
-  'registration_sent',
-  'paid'
-];
 
 const NA = "N/A";
 
@@ -282,7 +275,7 @@ export class DetailViewContents extends React.Component {
 
   handleStatusChange = (event) => {
     const workshopAssigned = this.props.applicationData.pd_workshop_id || this.props.applicationData.fit_workshop_id;
-    if (this.props.applicationData.application_type === ApplicationTypes.teacher && !this.state.scholarship_status && SCHOLARSHIP_STATUS_REQUIRED_STATUSES.includes(event.target.value)) {
+    if (this.props.applicationData.application_type === ApplicationTypes.teacher && !this.state.scholarship_status && ScholarshipStatusRequiredStatuses.includes(event.target.value)) {
       this.setState({
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${ApplicationStatuses[this.props.viewType][event.target.value]}.`,
