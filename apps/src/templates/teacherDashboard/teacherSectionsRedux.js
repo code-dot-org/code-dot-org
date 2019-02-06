@@ -696,13 +696,14 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === SET_ROSTER_PROVIDER) {
-    if (!OAuthSectionTypes[action.rosterProvider]) {
-      throw new Error(`SET_ROSTER_PROVIDER called with invalid provider type '${action.rosterProvider}'`);
+    // No-op if this action is called with a non-OAuth section type,
+    // since this action is triggered on every section load.
+    if (OAuthSectionTypes[action.rosterProvider]) {
+      return {
+        ...state,
+        rosterProvider: action.rosterProvider,
+      };
     }
-    return {
-      ...state,
-      rosterProvider: action.rosterProvider,
-    };
   }
 
   //
