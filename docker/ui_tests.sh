@@ -23,8 +23,7 @@ mkdir $CIRCLE_ARTIFACTS
 # in a CI environment, then they don't exist by default.
 if $(git rev-parse --is-shallow-repository); then
     git remote set-branches --add origin staging test production
-    git remote show origin
-    mispipe "git fetch --depth 50 origin staging test production" ts
+    git fetch --depth 50 origin staging test production"
     git branch -a
 fi
 
@@ -68,7 +67,7 @@ echo "Wrote secrets from env vars into locals.yml."
 set -x
 
 # name: rake install
-RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
+RAKE_VERBOSE=true mispipe "bundle exec rake install --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # name: rake build
 RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
@@ -87,7 +86,9 @@ sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 " >> locals.yml
 
 # name: seed ui tests
-bundle exec rake circle:seed_ui_test
+mispipe "bundle exec rake circle:seed_ui_test --trace" ts
 
 # name: run ui tests
-bundle exec rake circle:run_ui_tests --trace
+mispipe "bundle exec rake circle:run_ui_tests --trace" ts
+
+mispipe "echo 'Ending timestamp'" ts
