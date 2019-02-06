@@ -918,6 +918,7 @@ zh-CN:
       Fish Tank 4-validated_simple: 加入`"background-color"`（背景颜色）模块将背景改为蓝色。
       Fish Tank 5-validated: 鱼有些孤单。在鱼缸内创造一个新的精灵。
       Fish Tank 5-validated_2019: 鱼有些孤单。在鱼缸内创造一个新的精灵。
+      Fish Tank 5-validated_2019_implicitGroupTest: 鱼有些孤单。在鱼缸内创造一个新的精灵。
       Fish Tank 5-validated_simple: 鱼想要一个朋友。  添加新的精灵。
       Fish Tank 6-validated: 给鱼的新朋友添加一种新行为。
       Fish Tank 6-validated_2019: 给鱼的新朋友添加一种新行为。
@@ -3047,6 +3048,7 @@ zh-CN:
       courseD_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseD_iceage_loops9_2019: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseD_maze_intro5a_2019: 注意顺序，看看你能否找出如何到达那头猪！
+      courseD_maze_intro5c_2019: 小心TNT炸药！帮助小鸟到达猪的位置。
       courseD_maze_loops_challenge1: |-
         让我们寻找宝藏
         - 使用循环！帮助收集器只使用工具箱中的模块来得到至少两堆宝藏。

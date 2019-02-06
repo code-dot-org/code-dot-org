@@ -44,6 +44,7 @@ import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
   ApplicationTypes,
+  ScholarshipStatusRequiredStatuses
 } from './constants';
 import {
   FacilitatorScoringFields
@@ -119,6 +120,11 @@ const styles = {
 const NA = "N/A";
 
 const DEFAULT_NOTES = "Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:";
+
+const WORKSHOP_REQUIRED = `Please assign a summer workshop to this applicant before setting this
+                          applicant's status to "Accepted - No Cost Registration" or "Registration Sent".
+                          These statuses will trigger an automated email with a registration link to their
+                          assigned workshop.`;
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
@@ -235,7 +241,8 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
-      bonus_point_questions: bonusPoints
+      bonus_point_questions: bonusPoints,
+      cantSaveStatusReason: ''
     };
   }
 
@@ -268,8 +275,15 @@ export class DetailViewContents extends React.Component {
 
   handleStatusChange = (event) => {
     const workshopAssigned = this.props.applicationData.pd_workshop_id || this.props.applicationData.fit_workshop_id;
-    if (this.props.applicationData.regional_partner_emails_sent_by_system && !workshopAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
+    if (this.props.applicationData.application_type === ApplicationTypes.teacher && !this.state.scholarship_status && ScholarshipStatusRequiredStatuses.includes(event.target.value)) {
       this.setState({
+        cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
+                              applicant's status to ${ApplicationStatuses[this.props.viewType][event.target.value]}.`,
+        showCantSaveStatusDialog: true
+      });
+    } else if (this.props.applicationData.regional_partner_emails_sent_by_system && !workshopAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
+      this.setState({
+        cantSaveStatusReason: WORKSHOP_REQUIRED,
         showCantSaveStatusDialog: true
       });
     } else {
@@ -281,6 +295,7 @@ export class DetailViewContents extends React.Component {
 
   handleCantSaveStatusOk = (event) => {
     this.setState({
+      cantSaveStatusReason: '',
       showCantSaveStatusDialog: false
     });
   };
@@ -495,6 +510,7 @@ export class DetailViewContents extends React.Component {
     return (
       <FormGroup>
         <Select
+          clearable={false}
           value={this.state.scholarship_status}
           onChange={this.handleScholarshipStatusChange}
           options={ScholarshipDropdownOptions}
@@ -606,12 +622,7 @@ export class DetailViewContents extends React.Component {
           show={this.state.showCantSaveStatusDialog}
           onOk={this.handleCantSaveStatusOk}
           headerText="Cannot save applicant status"
-          bodyText={
-            `Please assign a summer workshop to this applicant before setting this
-            applicant's status to "Accepted - No Cost Registration" or "Registration Sent".
-            These statuses will trigger an automated email with a registration link to their
-            assigned workshop.`
-          }
+          bodyText={this.state.cantSaveStatusReason}
           okText="OK"
         />
       </div>

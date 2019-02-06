@@ -12,3 +12,10 @@
     = link_to 'https://code.org/educate', 'https://code.org/educate'
     for additional resources and opportunities to connect with other computer science educators.
     Thank you for supporting computer science for all!
+
+:javascript
+  $(document).ready(function() {
+    // Report a unique page view to GA.
+    ga('set', 'page', '/pd/application/teacher/submitted');
+    ga('send', 'pageview');
+  });

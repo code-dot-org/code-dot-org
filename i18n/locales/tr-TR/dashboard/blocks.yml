@@ -894,7 +894,7 @@ tr:
         text: merkez
       Vector_randomLocation:
         text: rastgele konum
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': boyut

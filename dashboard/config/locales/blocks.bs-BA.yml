@@ -899,7 +899,7 @@ bs:
         text: okreni desno
       Vector_positionCenter:
         text: centralna
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': veličina

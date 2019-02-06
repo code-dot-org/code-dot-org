@@ -1068,6 +1068,22 @@ pt-BR:
         **Como:** Adicione um segundo bloco `onEvent()` abaixo do primeiro. Em seguida, defina a `"cor de fundo"` da tela e `"cor do texto"` do rótulo.
 
         **Emperrado? Mostre-me:** ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)
+      AppLab Intro 6 - playSound Template: "<img src=\"https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16
+        PM.png\" style=\"float:right;height:200px\">\n\n**Objetivo:** Adicionar um
+        animal ao quadro de sons. Se você não quer achar uma imagem do seu animal,
+        então mude a cor do ícone do microfone para uma que você goste.\n\n**Como:**
+        Adicione um `noEvento()` e use `executarSom()` dentro disso. Ache um som de
+        animal que você goste na biblioteca de sons. Para a imagem, você pode fazer
+        o upload de uma imagem e mudar a propriedade `\"imagem\"` ou apenas mudar
+        a `\"cor-icone\"`. \n\n**Travado? Click Aqui:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)"
+      AppLab Intro 6 - playSound: "<img src=\"https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16
+        PM.png\" style=\"float:right;height:200px\">\n\n**Objetivo:** Adicionar um
+        animal ao quadro de sons. Se você não quer achar uma imagem do seu animal,
+        então mude a cor do ícone do microfone para uma que você goste.\n\n**Como:**
+        Adicione um `noEvento()` e use `executarSom()` dentro disso. Ache um som de
+        animal que você goste na biblioteca de sons. Para a imagem, você pode fazer
+        o upload de uma imagem e mudar a propriedade `\"imagem\"` ou apenas mudar
+        a `\"cor-icone\"`. \n\n**Travado? Click Aqui:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)"
       AppLab Intro 6 - quizApp: |-
         **Objetivo:** Construir três perguntas neste aplicativo de Quiz. Você pode sempre fazer mais perguntas, duplicando telas. Então envie para um amigo!
 
@@ -1076,6 +1092,22 @@ pt-BR:
         botão na tela que diz \"Certo!\"\n\n**Como:** No modo de Design, arraste um
         novo botão. Posicione e redimensione-o. Em seguida, defina seu '\"texto\"
         ', '\"cor de fundo\" ' e \"'`tamanho da fonte\"`\n\n**Mostre-me:** "
+      AppLab Intro 6 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Objetivo:** Adicionar na tela um segundo botão que diz "Certo!"
+
+        **Como:** No Modo Design, arraste um novo botão. Posicione-o e altere seu tamanho. Então, defina seu `"texto"`, `"cor de fundo"` e `"tamanho da fonte"`
+
+        **Travou? Clique aqui:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 6 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Objetivo:** Crie uma nova tela chamada `"telaDireita"`. Adicione uma curta descrição na tela.
+
+        **Como:** Em Modo Design, adicione uma nova tela. Mude o `"id"` da tela para `"telaDireita"`. Então, arraste uma descrição para a tela com uma curta mensagem para o usuário. Você pode duplicar a `"telaEsquerda"` para fazer isso.
+
+        **Travado? Clique Aqui:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 6 - thisOrThatPersonalize: |-
         <img src="https://images.code.org/762507aef26d512f820c42fb2e7fc6f1-image-1508386296370.11.19 PM.png" style="float:right;height:200px">
 
@@ -1097,6 +1129,20 @@ pt-BR:
 
 
         </details>
+      AppLab Intro 6 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Objetivo:** A tela muda para `"TelaDireita"` quando o usuário clica no botão "Direito!".
+
+        **Como:** No modo de código, adicione um novo `onEvent()` para o seu programa ao seu botão "Direito!". Adicione um bloco `setScreen()` dentro disso que mudar as telas para `"AquelaTela"`.
+
+        **Preso? Clique Aqui:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\\t<img
+        src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\"> \n</div>\n\n**Objetivo:** Fazer a tela ficar
+        verde.\n\n**Como:** Arraste um bloco do `DefinirPropriedade()`. Use os menus
+        suspensos para definir a tela `\"cor-de-fundo\"` para `\"verde\"`. Então pressione
+        \"Correr\".\n\n**Preso? Clique Aqui:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       AppLab Intro 7 - Change Text 2: |-
         <div style="float:right">
         <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
@@ -1107,6 +1153,43 @@ pt-BR:
         **Como:** Você precisará de duas linhas de código. Dê a `"label1"` um `"font-size"` de `80` e `"text-color"` de `"azul"`.
 
         **Ficou preso? Clique aqui:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab_test02: "# Este é o título\n\n- Marcador 1 \n- Faça isso\n- Então isso\n\n![](https://images.code.org/982f9167cf54c24251922fbd0a7f60b3-image-1436470853351.png)"
+      Applab AllTheThings ResourcesTab AllResources: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      Applab AllTheThings ResourcesTab MapReference: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      Applab AllTheThings ResourcesTab ReferenceLinks: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       Applab allthethings onRecordEvent: Por favor, faça o login para testar os níveis
         do applab (Por design, os níveis do applab só funcionam se estiverem conectados.
         Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável
@@ -1119,6 +1202,12 @@ pt-BR:
       Artist Autorun Test: |-
         Agora coloque a função dentro de um laço
         para desenhar esses três quadrados.
+      Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
+        width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu
+        tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
+        inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
+        \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem
+        para fora."
       Bergeron Robot Maze1: "Você pode me ajudar a pegar o porco malvado? \n\nJunte
         alguns blocos `mover para frente` abaixo do bloco `quando executar` e clique
         em \"Executar\". "
@@ -1131,6 +1220,10 @@ pt-BR:
         A função `atualização-alvo` pega o valor x atual do alvo e retorna um valor atualizado.
 
         Complete a `atualização-alvo` para que seja adicionado ao valor x toda vez que for chamado. Quanto mais você adicionar ao x, mais rápido o alvo irá.
+      Big Game Animation 3: "A função \"atualizar-perigo\" deve funcionar como a função
+        \"atualizar-alvo\", exceto pelo fato de que o inimigo deve se mover do lado
+        direito para o lado esquerdo. \nComplete a função \"atualizar-inimigo\" para
+        fazer o perigo voar pela tela."
       Big Game Animation 4: "Nesse ponto do seu jogo, seu inimigo deve percorrer a
         tela da direita para a esquerda e seu alvo deve percorrer a tela da esquerda
         para a direita.\nEles nunca voltam para a tela uma vez que tenham saído, mas
@@ -1142,6 +1235,14 @@ pt-BR:
         voltaram. Clique em "Executar" para ver como seu jogo está funcionando agora e depois clique
         em concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem
         saído.
+      Big Game Booleans 2: |-
+        Agora que a sua função `onscreen?` está verificando `safe-left?` e `safe-right?, precisamos corrigir essas funções.
+
+        Quando os usamos para Sam o Bat, queríamos evitar que Sam saísse da tela, mas agora queremos que o Alvo e o Perigo realmente saiam da tela antes de voltar para o lado oposto.
+
+        Vá para a seção "Funções" da caixa de ferramentas e complete a função "safe-left?" Para que ela retorne *verdadeiro* se a coordenada x do sprite for maior que -50.
+
+        Se tiver corrido bem, deverá ver o Perigo ir todo o caminho para o lado esquerdo antes de voltar para o lado direito.
       Big Game Booleans 3: "Agora que você tem `esquerda-segura?` funcionando, vamos
         consertar a `direita-segura?` - \n\nEla deve receber a coordenada de x do
         sprite e retornar verdadeiro se essa coordenada for menor que 450. \n\nUma
@@ -1217,11 +1318,71 @@ pt-BR:
       Brad Spooky House: "Atividade livre: aqui estão as funções que você escreveu
         e mais algumas para você usar. Brinque com a largura da caneta para ver como
         seus desenhos ficam diferentes!\n\n"
+      Brand Book Example: |
+        # Livro Marca
+
+        Confira o exemplo de um livro de marca
+      CSD - Predict - Array Length List Printing: |-
+        # Laço Para - Usando o tamanho da lista em um Laço Para
+
+        Uma das formas mais comuns de usar laçso é com listas. Neste exemplo, a condição depende da lista.
+
+        O que isso vai imprimir na tela?
+      CSD - Predict List Accessing: |
+        # Prever
+
+        O código abaixo tem 4 coisas que serão registradas na tela. O que você acha que vai imprimir na tela como resultado desse código?
+      CSD For Loops - Check For Understanding: |
+        # Entrada
+
+        Na caixa abaixo, explique as 3 partes diferentes do laço para. Por que cada um é importante?
+      CSD U1 - Image Filter Demo show Binary: |-
+        # Oh Não
+        Esta árvore deveria ser verde, mas está azul. Você pode usar os blocos de filtro para mudar todos os pixels azuis para verde?
+      CSD U1 - Image Filter Demo: |-
+        # Oh Não
+        Esta árvore deveria ser verde, mas está azul. Você pode usar os blocos de filtro para mudar todos os pixels azuis para verde?
       CSD U1 - PixFilter FreePlay: |-
         # Jogo Livre
 
         Faça o que você quiser, faça algo incrível
       CSD U1 - PixFilter Full: "# Instruções Aqui"
+      CSD U2 Project Start: |-
+        # Inicie seu projeto
+
+        Agora que você tem um plano para o seu site pessoal, você pode iniciar a codificá-lo aqui.  Não se preocupe se você não pode fazer tudo o que você quer hoje.  Você terá muitas chances de melhorar seu trabalho conforme você aprende mais sobre desenvolvimento de sites.
+
+        # Faça isto
+        * Use HTML para criar a página que você desenhou.  Certifique-se de que a página inclui
+        * Pelo menos ** dois capítulos de diferentes tamanhos **
+        * Pelo menos ** um parágrafo **
+        *** Assemelha *** a sua página, comparando ao seu desenho e mostrando ao seu parceiro
+      CSD U2 Project Start_2018: |-
+        # Inicie seu projeto
+
+        Agora que você tem um plano para o seu site pessoal, você pode iniciar a codificá-lo aqui.  Não se preocupe se você não pode fazer tudo o que você quer hoje.  Você terá muitas chances de melhorar seu trabalho conforme você aprende mais sobre desenvolvimento de sites.
+
+        # Faça isto
+        * Use HTML para criar a página que você desenhou.  Certifique-se de que a página inclui
+        * Pelo menos ** dois capítulos de diferentes tamanhos **
+        * Pelo menos ** um parágrafo **
+        *** Assemelha *** a sua página, comparando ao seu desenho e mostrando ao seu parceiro
+      CSD U2 add content: |
+        # Adicione HTML
+
+        Agora, você deve adicionar o HTML nas suas páginas.
+
+        # Faça isso
+        * Para cada uma das novas páginas que você criou, adicione HTML para fazer a página que você desenhou no seu guia de projeto.
+        * Você pode também adicionar mais HTML em suas páginas que você já criou.
+      CSD U2 add content_2018: |
+        # Adicione HTML
+
+        Agora, você deve adicionar o HTML nas suas páginas.
+
+        # Faça isso
+        * Para cada uma das novas páginas que você criou, adicione HTML para fazer a página que você desenhou no seu guia de projeto.
+        * Você pode também adicionar mais HTML em suas páginas que você já criou.
       CSD U3 - images - Embed Project: Exemplo do Projeto Final
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema
         é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo
@@ -1563,6 +1724,12 @@ pt-BR:
         com seus amigos.
       HOC Dance Predraw: Entre no ritmo! Crie sua própria dança para compartilhar
         com seus amigos.
+      Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
+        width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu
+        tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
+        inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
+        \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem
+        para fora."
       'Introduction to Conditionals: Boolean Expressions': |-
         ### Pontos para prestar atenção:
 
@@ -1810,6 +1977,12 @@ pt-BR:
       NEW Course 4 Artist Params 4: |-
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
+      NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
+        width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu
+        tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
+        inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
+        \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem
+        para fora."
       NEW Course 4 Artist Vars 12: |-
         Agora, recrie o algoritmo do último
         nível para criar um pentágono de lados 150.
@@ -1822,6 +1995,10 @@ pt-BR:
         os lugares?"
       New Minecraft Hero Project: "**Jogo Livre:** Agora é com você! Use o código
         do Agent para ajudá-lo a explorar este mundo."
+      Nike Example Brand Book: |
+        # Livro Marca
+
+        Confira o exemplo de um livro de marca
       October15 bat: "Atividade livre: aqui estão as funções que você escreveu e mais
         algumas para você usar. Brinque com a largura da caneta para ver como seus
         desenhos ficam diferentes!\n\n"
@@ -1873,6 +2050,18 @@ pt-BR:
         Excelente! Agora, você consegue atualizar essa função para
         que nosso foguete se mova mais rapidamente? Lembre-se de atualizar a instrução de finalidade,
         os exemplos e a definição da função para lançar um foguete a 40 metros por segundo.
+      Poorva copy U3L2 Using Simple Commands: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       Ryan_Demo: |-
         Faça esse alce entrar na dança!
 
@@ -1893,6 +2082,30 @@ pt-BR:
       U3 Variables misconceptions 2: Qual a saída do Programa 2?
       U3 Variables misconceptions 3: Qual a saída do Programa 3?
       U3 Variables misconceptions 4: Qual a saída do Programa 4?
+      U3L2 Using Simple Commands: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      U3L2 Using Simple Commands_2018: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       U4L02 - Objects - Template1: "# Modelo"
       U4L02 - Objects - Template1_2018: "# Modelo"
       U5 Booleans: |-
@@ -3207,6 +3420,12 @@ pt-BR:
       grade5_artist_for_loops5: "Apenas uma pequena alteração no código\nda última
         imagem pode criar este desenho. Você consegue descobrir qual é\nessa alteração?\r\n\r\nDica:
         algo precisa ser removido!"
+      grade5_artist_functionparameters10: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
+        width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu
+        tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
+        inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
+        \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem
+        para fora."
       grade5_artist_parameters_triangles2a: |-
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
@@ -3272,4 +3491,28 @@ pt-BR:
         de 200 pixels.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado com lados
         de 200 pixels.
+      subgoal U3 L4 introducing subgoal labels: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      subgoal U3L2 Using Simple Commands: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
+        align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
+        Aplicativo de Laboratório para completar os desenhos em cada um dos desafios
+        abaixo. Seu objetivo é escrever um código que resolva o problema da forma
+        mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\"
+        significa? Na ciência da computação isso pode significar várias coisas diferentes
+        dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente
+        resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar
+        sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"
+        align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda
+        da tartaruga da forma mais eficiente possível. O programa deve parar quando
+        a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       test_sarah: oi

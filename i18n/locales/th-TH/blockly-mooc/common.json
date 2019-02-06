@@ -1279,6 +1279,7 @@
   "subtitle": "สภาพแวดล้อมการเขียนโปรแกรมแบบวิชวล",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "สลับกลุ่ม",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "โปรแกรมของคุณมีการพิมพ์ผิด กรุณาลบบรรทัดที่ {lineNumber} แล้วลองอีกครั้ง",

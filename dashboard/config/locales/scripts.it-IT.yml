@@ -3115,6 +3115,8 @@ it:
               name: Divertiti usando i Cicli con Contatore
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Binary Bracelets:
@@ -3233,6 +3235,10 @@ it:
               name: Introduzione agli Esercizi Online
             Nested Loops in Maze:
               name: Cicli Annidati nel Labirinto
+        jr-test:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         coursec-2018:
           title: Corso C (2018)
           assignment_family_title: Corso C
@@ -3423,6 +3429,8 @@ it:
               name: Funzioni con Minecraft
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Copyright and Creativity:
@@ -3587,6 +3595,8 @@ it:
               name: Modifica delle Variabili con l'Artista
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Functions in Minecraft:
@@ -3620,6 +3630,10 @@ it:
               name: Cicli "Mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+        spritelab:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         pre-express-2018:
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
@@ -3662,10 +3676,22 @@ it:
               name: Cicli con Scrat
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie e il Grande Progetto
+        spritelab-validated:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         2018hoc-ab:
           stages:
             Labyrinth:
               name: Labirinto
+        spritelab-simple:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
+        spritelab-ee:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         frozen-2018:
           stages:
             Artist:
@@ -3792,6 +3818,8 @@ it:
                 gli esercizi combinando i concetti di variabili, cicli e cicli con
                 contatore per creare progetti complessi. Alla fine avranno la possibilità
                 di creare il proprio progetto in un esercizio libero.
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di Progetto
               description_student: È tempo di trovare l'ispirazione! Questi esercizi
@@ -3985,6 +4013,8 @@ it:
                 concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging,
                 cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre`
                 e funzioni.
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di Progetto
               description_teacher: |-
@@ -4104,6 +4134,8 @@ it:
               name: Variabili e Buste
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di Progetto
             The Design Process:
@@ -4262,6 +4294,8 @@ it:
                 una storia nel Laboratorio!
             Ocean Scene with Loops:
               name: Al mare con i Cicli
+            Learn to Drag and Drop:
+              name: Impara come Trascinare i Blocchi
         courseb-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
