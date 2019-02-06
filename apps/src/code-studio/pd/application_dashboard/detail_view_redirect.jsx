@@ -5,7 +5,8 @@
  *   e.g. /csf_facilitators/1
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ApplicationLoader from './application_loader';
 
 export default class DetailViewRedirect extends React.Component {

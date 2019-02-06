@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import SkipButton from './SkipButton';
 import { connect } from 'react-redux';

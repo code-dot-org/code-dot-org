@@ -2,8 +2,8 @@
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.  Includes the TutorialExplorer React class.
  */
-
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
