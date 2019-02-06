@@ -1,8 +1,14 @@
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
-import {ApplicationStatuses, ApplicationFinalStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+import {
+  ApplicationStatuses,
+  ApplicationFinalStatuses,
+  ScholarshipStatusRequiredStatuses
+} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
 import _ from 'lodash';
 import {expect} from '../../../../util/configuredChai';
+import {getPortalContent} from '../../../../util/reactTestUtils';
+
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 
@@ -226,28 +232,68 @@ describe("DetailViewContents", () => {
         expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
       });
     });
-
-    describe('Scholarship Teacher? row', () => {
-      it('on teacher applications', () => {
-        const detailView = mountDetailView('Teacher');
-        const lastRow = detailView.find('tr').filterWhere(row => row.text().includes('Scholarship Teacher?'));
-        const dropdown = lastRow.find('Select');
-
-        // Dropdown is disabled
-        expect(dropdown).to.have.prop('disabled', true);
-
-        // Click "Edit"
-        detailView.find('#DetailViewHeader Button').last().simulate('click');
-
-        // Dropdown is enabled
-        expect(dropdown).to.have.prop('disabled', false);
-
-        // Click "Save"
-        detailView.find('#DetailViewHeader Button').last().simulate('click');
-
-        // Dropdown is disabled
-        expect(dropdown).to.have.prop('disabled', true);
-      });
-    });
   }
+
+  describe('Scholarship Teacher? row', () => {
+    it('on teacher applications', () => {
+      const detailView = mountDetailView('Teacher');
+      const lastRow = detailView.find('tr').filterWhere(row => row.text().includes('Scholarship Teacher?'));
+      const dropdown = lastRow.find('Select');
+
+      // Dropdown is disabled
+      expect(dropdown).to.have.prop('disabled', true);
+
+      // Click "Edit"
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+      // Dropdown is enabled
+      expect(dropdown).to.have.prop('disabled', false);
+
+      // Click "Save"
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+      // Dropdown is disabled
+      expect(dropdown).to.have.prop('disabled', true);
+    });
+  });
+
+  describe('Teacher application scholarship status', () => {
+    it('is required in order to set certain application statuses', async () => {
+      for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
+        const detailView = mountDetailView('Teacher', {status: 'unreviewed', scholarshipStatus: null});
+        const modal = detailView.find('ConfirmationDialog').filterWhere((dialog) => dialog.prop("headerText") === "Cannot save applicant status").first();
+
+        expect(!!modal.prop("show")).to.be.false;
+        detailView.find('#DetailViewHeader select').simulate('change', { target: { value: applicationStatus } });
+
+        const modals = detailView.find('.modal-dialog .modal-title');
+        console.log(modals.length);
+
+        expect(modal.prop("show")).to.be.true;
+
+        const okButton = modal.find('Button[bsStyle="primary"]');
+
+        await new Promise(r => setTimeout(r, 20));
+
+        console.log(modal.debug());
+        const portalContents = getPortalContent(modal);
+        console.log(portalContents.debug());
+        okButton.simulate('click');
+        expect(!!modal.prop("show")).to.be.false;
+
+        // clear dialog
+        // set scholarship status
+        // set it to application status
+        // assert dialog not present
+      }
+    });
+
+    // it('is not required for other application statuses', () => {
+    //   for (const applicationStatus of ['unreviewed', 'pending', 'waitlisted', 'declined', 'withdrawn']) {
+    //     const detailView = mountDetailView('Teacher', {status: 'unreviewed', scholarshipStatus: null});
+    //     // set it to application status
+    //     // assert dialog not present
+    //   }
+    // });
+  });
 });
