@@ -180,7 +180,7 @@ export default class AssetManager extends React.Component {
           <div>{i18n.audioInitializeError()}</div>
         }
         {displayAudioRecorder &&
-          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved} imagePicker={this.props.imagePicker}/>
+          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved}/>
         }
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
