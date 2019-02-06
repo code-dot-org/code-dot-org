@@ -50,6 +50,7 @@ export default class FormController extends React.Component {
     this.prevPage = this.prevPage.bind(this);
 
     this.onSuccessfulSetPage(0);
+    this.onInitialize();
   }
 
   componentWillMount() {
@@ -160,6 +161,13 @@ export default class FormController extends React.Component {
     return {
       form_data: this.state.data,
     };
+  }
+
+  /**
+   * Called when we initialize the form.
+   */
+  onInitialize() {
+    // Intentional noop; overridden by child classes
   }
 
   /**
