@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 
 export default class SurveySupportSection extends React.Component {

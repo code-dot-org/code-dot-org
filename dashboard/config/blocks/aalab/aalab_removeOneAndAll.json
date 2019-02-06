@@ -6,8 +6,8 @@
       1,
       0.74
     ],
-    "func": "removeAdvanced",
-    "blockText": "removeAdvanced {THIS}",
+    "func": "removeOneAndAll",
+    "blockText": "aalab remove {THIS}",
     "args": [
       {
         "name": "THIS",

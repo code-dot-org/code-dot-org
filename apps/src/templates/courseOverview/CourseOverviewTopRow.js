@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
 import { stringForType, resourceShape } from './resourceType';

@@ -25,7 +25,7 @@ social:
 
 <br>
 
-Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach CS, to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
+Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach computer science (CS), to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
 
 <br>
 
@@ -41,7 +41,7 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHTxkXeN2NViw-rRGnJKJTdsZLa1sbIwX6WjZmjJxuT4Vl_g/viewform?embedded=true" width="100%" height="1475" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0" height="1645" onload="if (window.formLoaded) { $('html, body').animate({scrollTop: $('#nomination_form').offset().top}, 1000); } else { window.formLoaded = true; }" id="nomination_form">Loading...</iframe>
 
 <br>
 

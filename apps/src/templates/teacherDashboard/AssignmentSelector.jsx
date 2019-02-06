@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';

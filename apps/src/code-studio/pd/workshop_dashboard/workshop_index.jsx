@@ -2,7 +2,8 @@
  * Workshop Index. Displays workshop summaries and controls for CRUD actions.
  * Route: /workshops
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';

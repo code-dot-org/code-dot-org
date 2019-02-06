@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';

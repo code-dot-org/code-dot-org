@@ -252,6 +252,12 @@ describe('teacherSectionsRedux', () => {
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.rosterProvider, 'google_classroom');
     });
+
+    it('does not set section\'s roster provider if it is not an OAuth provider', () => {
+      const action = setRosterProvider('word');
+      const nextState = reducer(initialState, action);
+      assert.deepEqual(nextState.rosterProvider, null);
+    });
   });
 
   describe('setValidGrades', () => {

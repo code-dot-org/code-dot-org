@@ -3,7 +3,8 @@
  * Based on http://buildwithreact.com/article/fade-in-image-recipe
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class Image extends React.Component {

@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import color from "../../util/color";
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
