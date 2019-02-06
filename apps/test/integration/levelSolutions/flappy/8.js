@@ -1,10 +1,12 @@
 var setRandomBackgroundRequiredBlock = {
   test: function test(block) {
-    return (
-      (block.type === 'flappy_setBackground' ||
+    // for some reason, formatting this method with prettier causes the
+    // associated integration test to fail
+    /* eslint-disable prettier/prettier */
+    return (block.type === 'flappy_setBackground' ||
         block.type === 'flappy_setPlayer') &&
-      block.getTitleValue('VALUE') === 'random'
-    );
+      block.getTitleValue('VALUE') === 'random';
+    /* eslint-enable prettier/prettier */
   },
   type: 'flappy_setBackground',
   titles: {
