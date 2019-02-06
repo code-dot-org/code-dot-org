@@ -1,0 +1,44 @@
+%legend.control-legend{data: {toggle: "collapse", target: "#mini_rubric"}}
+  Mini Rubric
+
+#mini_rubric.in.collapse
+  %p
+    These levels may contain an optional mini-rubric that teachers can use to evaluate student learning.
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :mini_rubric, description: "Show a mini-rubric on this level"}
+
+  .rubric-concept
+    = f.label :rubric_key_concept, 'Mini-rubric key concept'
+    = f.text_area :rubric_key_concept,
+  placeholder: 'Display to teachers and students as part of the mini-rubric',
+  rows: 3, class: "input-block-level"
+
+  .rubric-performance
+    = f.label :rubric_criterias, 'Mini-rubric criteria'
+    .rubric-criteria
+      = f.label :rubric_exceeds, 'Exceeds'
+      .row
+        .span6
+          = f.text_area :rubric_exceeds,
+          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          rows: 3, class: "input-block-level"
+    .rubric-criteria
+      = f.label :rubric_meets, 'Meets'
+      .row
+        .span6
+          = f.text_area :rubric_meets,
+          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          rows: 3, class: "input-block-level"
+    .rubric-criteria
+      = f.label :rubric_approaches, 'Approaches'
+      .row
+        .span6
+          = f.text_area :rubric_approaches,
+          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          rows: 3, class: "input-block-level"
+    .rubric-criteria
+      = f.label :rubric_no_evidence, 'No Evidence'
+      .row
+        .span6
+          = f.text_area :rubric_no_evidence,
+          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          rows: 3, class: "input-block-level"
