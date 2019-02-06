@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import WorkshopAssignmentLoader, {SUBJECT_TYPES} from "./workshop_assignment_loader";
 
 export default class DetailViewWorkshopAssignmentResponse extends React.Component {

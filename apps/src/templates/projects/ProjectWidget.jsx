@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PersonalRecentProjects from './PersonalRecentProjects.jsx';
 import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";

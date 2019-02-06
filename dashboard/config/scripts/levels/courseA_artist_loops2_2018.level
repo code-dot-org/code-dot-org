@@ -38,7 +38,7 @@
     "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "Help the artist draw this line two times forward.",
+    "tts_long_instructions_override": "Help the artist draw this line two times forward.",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 5908,
     "name_suffix": "_2018",

@@ -2,7 +2,8 @@
  * Creates a new workshop.
  * Route: /workshops/new
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import WorkshopForm from './components/workshop_form';
 
 export default class NewWorkshop extends React.Component {

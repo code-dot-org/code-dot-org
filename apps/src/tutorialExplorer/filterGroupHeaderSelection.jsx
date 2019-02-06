@@ -2,7 +2,8 @@
  * filter group, shown in the header on desktop widths.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const styles = {
   container: {

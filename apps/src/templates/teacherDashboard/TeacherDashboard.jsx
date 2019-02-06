@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
 import SelectSectionDropdown from './SelectSectionDropdown';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
@@ -8,19 +9,30 @@ import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
+import PrintLoginCards from '@cdo/apps/templates/teacherDashboard/PrintLoginCards';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string.isRequired,
+    pegasusUrlPrefix: PropTypes.string.isRequired,
+
+    // Provided by React router in parent.
+    location: PropTypes.object.isRequired,
   };
 
   render() {
-    const {studioUrlPrefix} = this.props;
+    const {location, studioUrlPrefix, pegasusUrlPrefix} = this.props;
+    // Include header components unless we are on the /print_login_cards page.
+    const includeHeader = location.pathname !== "/print_login_cards";
 
     return (
       <div>
-        <SelectSectionDropdown/>
-        <TeacherDashboardNavigation/>
+        {includeHeader &&
+          <div>
+            <SelectSectionDropdown/>
+            <TeacherDashboardNavigation/>
+          </div>
+        }
         <Switch>
           <Route
             path="/stats"
@@ -32,8 +44,7 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/manage_students"
-            component={props => <ManageStudents studioUrlPrefix={studioUrlPrefix}/>
-            }
+            component={props => <ManageStudents studioUrlPrefix={studioUrlPrefix}/>}
           />
           <Route
             path="/projects"
@@ -46,6 +57,10 @@ export default class TeacherDashboard extends Component {
           <Route
             path="/assessments"
             component={props => <SectionAssessments/>}
+          />
+          <Route
+            path="/print_login_cards"
+            component={props => <PrintLoginCards studioUrlPrefix={studioUrlPrefix} pegasusUrlPrefix={pegasusUrlPrefix}/>}
           />
           {/* Render <SectionProgress/> by default */}
           <Route component={props => <SectionProgress/>} />

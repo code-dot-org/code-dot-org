@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { ButtonList } from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';

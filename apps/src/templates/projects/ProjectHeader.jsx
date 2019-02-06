@@ -1,5 +1,6 @@
 /** @file Header banner and start new project buttons for the project gallery */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from "@cdo/locale";
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
