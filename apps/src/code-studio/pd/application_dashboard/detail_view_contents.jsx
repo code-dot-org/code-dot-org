@@ -116,6 +116,14 @@ const styles = {
   }
 };
 
+const SCHOLARSHIP_STATUS_REQUIRED_STATUSES = [
+  'accepted_not_notified',
+  'accepted_notified_by_partner',
+  'accepted_no_cost_registration',
+  'registration_sent',
+  'paid'
+];
+
 const NA = "N/A";
 
 const DEFAULT_NOTES = "Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:";
@@ -240,7 +248,8 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
-      bonus_point_questions: bonusPoints
+      bonus_point_questions: bonusPoints,
+      cantSaveStatusReason: ''
     };
   }
 
@@ -273,10 +282,16 @@ export class DetailViewContents extends React.Component {
 
   handleStatusChange = (event) => {
     const workshopAssigned = this.props.applicationData.pd_workshop_id || this.props.applicationData.fit_workshop_id;
-    if (this.props.applicationData.regional_partner_emails_sent_by_system && !workshopAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
+    if (this.props.applicationData.application_type === ApplicationTypes.teacher && !this.props.applicationData.scholarship_status && SCHOLARSHIP_STATUS_REQUIRED_STATUSES.includes(event.target.value)) {
       this.setState({
-        showCantSaveStatusDialog: true,
-        cantSaveStatusReason: WORKSHOP_REQUIRED
+        cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
+                              applicant's status to ${ApplicationStatuses[this.props.viewType][event.target.value]}.`,
+        showCantSaveStatusDialog: true
+      });
+    } else if (this.props.applicationData.regional_partner_emails_sent_by_system && !workshopAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
+      this.setState({
+        cantSaveStatusReason: WORKSHOP_REQUIRED,
+        showCantSaveStatusDialog: true
       });
     } else {
       this.setState({
@@ -287,8 +302,8 @@ export class DetailViewContents extends React.Component {
 
   handleCantSaveStatusOk = (event) => {
     this.setState({
-      showCantSaveStatusDialog: false,
-      cantSaveStatusReason: null
+      cantSaveStatusReason: '',
+      showCantSaveStatusDialog: false
     });
   };
 
