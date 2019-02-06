@@ -48,6 +48,8 @@ export default class FormController extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.nextPage = this.nextPage.bind(this);
     this.prevPage = this.prevPage.bind(this);
+
+    this.onSuccessfulSetPage(0);
   }
 
   componentWillMount() {
@@ -164,6 +166,13 @@ export default class FormController extends React.Component {
    * Called when we get a successful response from the API submission
    */
   onSuccessfulSubmit() {
+    // Intentional noop; overridden by child classes
+  }
+
+  /**
+   * Called when we succesfully set a new page.
+   */
+  onSuccessfulSetPage(newPage) {
     // Intentional noop; overridden by child classes
   }
 
@@ -399,6 +408,8 @@ export default class FormController extends React.Component {
       });
 
       this.saveToSessionStorage({currentPage: newPage});
+
+      this.onSuccessfulSetPage(newPage);
     }
   }
 
