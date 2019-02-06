@@ -60,8 +60,8 @@ export default class TeacherDashboard extends Component {
             path="/print_login_cards"
             component={props => <PrintLoginCards studioUrlPrefix={studioUrlPrefix} pegasusUrlPrefix={pegasusUrlPrefix}/>}
           />
-          {/* Render <SectionProgress/> by default */}
-          <Route component={props => <SectionProgress/>} />
+          {/* Render <ManageStudents/> by default */}
+          <Route component={props => <ManageStudents studioUrlPrefix={studioUrlPrefix}/>} />
         </Switch>
       </div>
     );
