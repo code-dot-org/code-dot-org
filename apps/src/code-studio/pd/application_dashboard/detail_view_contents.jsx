@@ -517,6 +517,7 @@ export class DetailViewContents extends React.Component {
     return (
       <FormGroup>
         <Select
+          clearable={false}
           value={this.state.scholarship_status}
           onChange={this.handleScholarshipStatusChange}
           options={ScholarshipDropdownOptions}
