@@ -800,7 +800,7 @@ ca:
         text: gira a la dreta
       Vector_positionCenter:
         text: centre
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': mida

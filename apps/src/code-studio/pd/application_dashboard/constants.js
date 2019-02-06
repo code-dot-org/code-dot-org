@@ -87,3 +87,14 @@ export const ApplicationTypes = {
   teacher: 'Teacher',
   facilitator: 'Facilitator'
 };
+
+/**
+ * Application statuses for which we require a scholarship status
+ */
+export const ScholarshipStatusRequiredStatuses = [
+  'accepted_not_notified',
+  'accepted_notified_by_partner',
+  'accepted_no_cost_registration',
+  'registration_sent',
+  'paid'
+];

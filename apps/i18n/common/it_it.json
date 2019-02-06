@@ -1279,6 +1279,7 @@
   "subtitle": "un ambiente di programmazione visuale",
   "success": "Fatto!",
   "summaryAssessmentsOverview": "Panoramica del questionario a risposta multipla",
+  "switchSection": "Cambia classe:",
   "syncClever": "Sincronizza gli studenti da Clever",
   "syncGoogleClassroom": "Sincronizza studenti da Google Classroom",
   "syntaxErrorMsg": "Il programma contiene un errore di battitura. Rimuovi per favore la linea {lineNumber} e riprova.",

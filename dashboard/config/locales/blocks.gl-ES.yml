@@ -321,7 +321,7 @@ gl:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': tamaño

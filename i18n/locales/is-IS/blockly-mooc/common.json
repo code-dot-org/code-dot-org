@@ -1279,6 +1279,7 @@
   "subtitle": "sjónrænt forritunarumhverfi",
   "success": "Það tókst!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Skipta um hóp:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Forritið þitt inniheldur ritvillu. Vinsamlegast fjarlægðu {lineNumber} og reyndu aftur.",

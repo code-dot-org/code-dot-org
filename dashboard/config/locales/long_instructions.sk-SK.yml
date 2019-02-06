@@ -57,7 +57,7 @@ sk:
       2-3 Artist Functions 12: "Funkcie sú skvelé na opakované kreslenie zložitých
         vecí. \r \r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu) na
         vyplnenie zvyšku kvetináča? \r Medzery medzi rastlinami sú veľké 100 pixelov."
-      2-3 Artist Functions 2: "Funkcie Vám umožnia definovať nové bloky! \n\nPresunuli
+      2-3 Artist Functions 2: "Funkcie vám umožnia definovať nové bloky! \n\nPresunuli
         sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\".
         Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce
         sú od seba vzdialené 75 pixelov."
@@ -200,22 +200,23 @@ sk:
         med v plástoch. \n\nPoužite vnorenú slučku. "
       4-5 Bee Nested Loops Assessment 1: "**Hodnotenie:** Pozbierajte všetok nektár
         a spravte všetok med pomocou slučiek."
-      4-5 Maze 9: "Teraz tu máme nový blok \"opakuj dokiaľ\".  \nToto nám umožní opakovať
-        príkazy až kým sa zombík nedostane k slnečnici.  \n\nPouži nový blok \"opakuj
-        dokiaľ\" pre vyriešenie tejto úlohy s čo najmenším možným počtom príkazov."
-      4-5 Maze Conditionals 1: Použi blok "opakuj dokiaľ", aby sa zombík dostal k
+      4-5 Maze 9: "Teraz tu máme nový blok \"opakuj dovtedy (kým)\".  \nToto nám umožní
+        opakovať príkazy až kým sa zombík nedostane k slnečnici.  \n\nPouži nový blok
+        \"opakuj dokiaľ\" pre vyriešenie tejto úlohy s čo najmenším možným počtom
+        príkazov."
+      4-5 Maze Conditionals 1: Použi blok "opakuj dovtedy", aby sa zombík dostal k
         slnečnici.
       4-5 Maze Conditionals 10: "Viete pridať len 3 bloky a pomôcť zombíkovi dostať
         sa cez zložitejšie bludisko? \n\nAk to urobíte správne, môže prejsť všetkými
         krivolakými cestami bez ohľadu na ich dĺžku!"
-      4-5 Maze Conditionals 2: Použi blok "opakuj dokiaľ", aby sa zombík dostal k
+      4-5 Maze Conditionals 2: Použi blok "opakuj dovtedy", aby sa zombík dostal k
         slnečnici.
       4-5 Maze Conditionals 3: 'Použite blok "if" pre pomoc s rozhodnutím sa, kedy
         mám zabočiť.
 
 '
       4-5 Maze Conditionals 4: Ok, toto vyriešiš podobne ako predchádzajúcu úlohu,
-        len si musíš spomenúť, ako si spolu použil bloky "ak" a "opakuj dokiaľ".
+        len si musíš spomenúť, ako si spolu použil bloky "ak" a "opakuj dovtedy".
       4-5 Maze Conditionals 5: |-
         "Ja chcieť slnečnica!"
 
@@ -718,6 +719,17 @@ sk:
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
         a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž
         a nahraď niečim úplne iným)
+      courseA_maze_ramp3_2018: |-
+        *"Toto prasiatko mi nedá spať."*
+
+        Na pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.
+        Odpoj ho od ostatných blokov a presuň ho späť do panela nástrojov.
+      courseA_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
+        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseA_maze_ramp5_2018: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
       courseC_collector_prog7: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky
         usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky
         z panela nástrojov na to, aby si pozbieral všetky poklady."
@@ -739,8 +751,81 @@ sk:
         zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď
         škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
         aj tvoji kamaráti."
+      courseC_maze_programming4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
+        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseC_maze_programming4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
+        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseC_maze_programming4_2019: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
+        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseC_maze_programming5: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseC_maze_programming5_2018: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseC_maze_programming5_2019: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
       courseD_bounce_events1: Dostaň sa k vlajke! Pripoj blok ku bloku "keď šípka
         vľavo". Stlač "Spustiť" a šípkou presuň hráča k vlajke.
+      courseD_maze_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na
+        tlačítko "Spustiť" a sleduj, čo sa stane.
+      courseD_maze_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni
+        na tlačítko "Spustiť" a sleduj, čo sa stane.
+      courseD_maze_ramp1_2019: V tejto hre pospájaj všetky bloky dokopy, potom klikni
+        na tlačítko "Spustiť" a sleduj, čo sa stane.
+      courseD_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
+        napojených na blok `pri spustení`.
+      courseD_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
+        napojených na blok `pri spustení`.
+      courseD_maze_ramp2_2019: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
+        napojených na blok `pri spustení`.
+      courseD_maze_ramp3: |-
+        *"Toto prasiatko mi nedá spať."*
+
+        Na pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.
+        Odpoj ho od ostatných blokov a presuň ho späť do panela nástrojov.
+      courseD_maze_ramp3_2018: |-
+        *"Toto prasiatko mi nedá spať."*
+
+        Na pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.
+        Odpoj ho od ostatných blokov a presuň ho späť do panela nástrojov.
+      courseD_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni
+        sa TNT, inak bude lietať perie!"
+      courseD_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
+        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseD_maze_ramp5: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseD_maze_ramp5_2018: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseD_maze_ramp5_2019: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseD_maze_ramp5a: Skús zistiť, ako správne zoradiť blokoy, aby si sa dostal
+        k tomu prasiatku!
+      courseD_maze_ramp5a_2018: Skús zistiť, ako správne zoradiť blokoy, aby si sa
+        dostal k tomu prasiatku!
+      courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni
+        na tlačítko "Spustiť" a sleduj, čo sa stane.
+      courseD_scrat_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni
+        na tlačítko "Spustiť" a sleduj, čo sa stane.
+      courseD_scrat_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
+        napojených na blok `pri spustení`.
+      courseD_scrat_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
+        napojených na blok `pri spustení`.
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu
         "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si
         mal ideálny počet blokov.
@@ -751,12 +836,46 @@ sk:
         do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať
         na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej
         slučky, aby nakreslil celú mriežku?
+      courseE_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
+        napojených na blok `pri spustení`.
+      courseE_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
+        napojených na blok `pri spustení`.
+      courseE_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni
+        sa TNT, inak bude lietať perie!"
+      courseE_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
+        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseE_maze_ramp5: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseE_maze_ramp5_2018: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseE_multi_maze_ramp5: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
       courseF_bee_for_challenge2: Vyriešte túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyriešte túto úlohu použitím čo najmenšieho
         možného počtu blokov.
       courseF_bee_for_challenge2_2019: Vyriešte túto úlohu použitím čo najmenšieho
         možného počtu blokov.
+      courseF_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni
+        sa TNT, inak bude lietať perie!"
+      courseF_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
+        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseF_maze_ramp5: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
+      courseF_maze_ramp5_2018: |-
+        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+
+        Vyhnis sa TNT.
       frozen circle function in circle: Teraz si vytvorme 20 prekrývajúcich sa kružníc
         a po každej z nich sa otočíme o 18 stupňov.
       frozen circle function in circle_b: Teraz vytvor **20** prekrývajúcich sa kružníc,
@@ -1041,7 +1160,7 @@ sk:
         sa musíte otočiť pri každej slučke?"
       grade4_arist_nested_loop_polygons2: "Zopakujte tento tvar 6 krát. \n\nO koľko
         sa musíte otočiť pri každej slučke? "
-      grade4_artist_functions2: "Funkcie Vám umožnia definovať nové bloky! \n\nPresunuli
+      grade4_artist_functions2: "Funkcie vám umožnia definovať nové bloky! \n\nPresunuli
         sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\".
         Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce
         sú od seba vzdialené 75 pixelov."

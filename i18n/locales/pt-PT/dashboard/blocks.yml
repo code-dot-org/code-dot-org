@@ -369,7 +369,7 @@ pt:
         text: virar à esquerda
       RyanLab_turnRight:
         text: virar à direita
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': tamanho

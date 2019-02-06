@@ -1279,6 +1279,7 @@
   "subtitle": "Візуальне середовище програмування",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Перемикач груп:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "У твоїй програмі помилка друку. Видали рядок {lineNumber} і спробуй знову.",
