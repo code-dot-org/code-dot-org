@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "true",
-    "instructions": "These clouds are bugging me! Some of the clouds have flowers inside, and some don't. I should check each cloud, and only get nectar from the flowers.",
+    "short_instructions": "These clouds are bugging me! Some of the clouds have flowers inside, and some don't. I should check each cloud, and only get nectar from the flowers.",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"feeling_stuck_callout_test\",\r\n  \"callout_text\": \" Feeling Stuck?<br />Click the lightbulb for a hint!\",\r\n  \"element_id\": \"#lightbulb\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

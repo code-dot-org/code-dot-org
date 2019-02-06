@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
 import { NotificationType } from '@cdo/apps/templates/Notification';
 
@@ -45,11 +46,26 @@ const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
       Type
       <div>
         <select
+          className="uitest-announcement-type"
           value={announcement.type}
           onChange={event => onChange(index, 'type', event.target.value)}
         >
           {Object.values(NotificationType).map(type => (
             <option key={type} value={type}>{type}</option>
+          ))}
+        </select>
+      </div>
+    </label>
+    <label>
+      Visibility
+      <div>
+        <select
+          className="uitest-announcement-visibility"
+          value={announcement.visibility}
+          onChange={event => onChange(index, 'visibility', event.target.value)}
+        >
+          {Object.values(VisibilityType).map(visibility => (
+            <option key={visibility} value={visibility}>{visibility}</option>
           ))}
         </select>
       </div>
@@ -90,7 +106,8 @@ export default class ScriptAnnouncementsEditor extends Component {
         notice: '',
         details: '',
         link: '',
-        type: NotificationType.information
+        type: NotificationType.information,
+        visibility: VisibilityType.teacher,
       })
     });
   };
@@ -124,7 +141,7 @@ export default class ScriptAnnouncementsEditor extends Component {
         <h4>Script Announcements</h4>
         <div>
           This can be used to provide one or more announcements that will show
-          up for signed in teachers on the script overview page.
+          up for signed in teachers, students, or teachers and students on the script overview page.
         </div>
         {announcements.map((announce, index) => (
           <Announce

@@ -800,7 +800,7 @@ kk:
             'Farmer: While Loops':
               name: 'Фермер: While (Шарт орындалғанша) Ілмектері'
         csd3-2017:
-          description_short: "Бағдарламалау"
+          description_short: Бағдарламалау
           stages:
             Functions:
               name: Функциялар
@@ -1464,3 +1464,39 @@ kk:
               name: Ғаламтор
             Crowdsourcing:
               name: Кроудсорсинг
+        andrea-test:
+          stages:
+            'null':
+              name: 'бос жиын'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Ғимарат Салу
+            'Real-life Algorithms: Paper Planes':
+              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
+            Binary Bracelets:
+              name: Екілік Білезіктер
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+            Going Places Safely:
+              name: Қауіпсіз Жерді Табу
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Қозғал, Қозғал
+            Your Digital Footprint:
+              name: Сіздің сандық іздеріңіз
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Қозғал, Қозғал
+            Your Digital Footprint:
+              name: Сіздің сандық іздеріңіз
+            Spelling Bee:
+              name: Сөз жазушы Ара
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'

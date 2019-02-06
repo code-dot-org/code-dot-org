@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {Table} from 'reactabular';
 import Button from '../Button';
 import color from "../../util/color";

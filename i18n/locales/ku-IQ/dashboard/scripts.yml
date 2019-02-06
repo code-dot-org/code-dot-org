@@ -151,3 +151,7 @@ ku:
           stages:
             The Artist:
               name: هونەرەكە
+        andrea-test:
+          stages:
+            'null':
+              name: 'بەتاڵ'

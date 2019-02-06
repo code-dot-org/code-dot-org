@@ -136,3 +136,7 @@ my:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'

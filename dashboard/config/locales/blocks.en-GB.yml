@@ -160,6 +160,20 @@ en-GB:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': space
       craft_ifPath:
         options:
           DIR:

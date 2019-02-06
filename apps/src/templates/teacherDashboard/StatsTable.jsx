@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import i18n from "@cdo/locale";
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -19,7 +20,7 @@ class StatsTable extends Component {
     section: PropTypes.shape({
       id: PropTypes.number,
       students: PropTypes.array
-    }),
+    }).isRequired,
     studentsCompletedLevelCount: PropTypes.object
   };
 
@@ -27,7 +28,7 @@ class StatsTable extends Component {
 
   studentsWithCompletedLevelCount = () => {
     const {section, studentsCompletedLevelCount} = this.props;
-    return section.students.map(student => ({
+    return (section.students || []).map(student => ({
       ...student,
       completed_levels_count: studentsCompletedLevelCount[student.id] || 0
     }));

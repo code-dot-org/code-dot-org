@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
@@ -25,6 +26,12 @@ const styles = {
   },
   notesCell: {
     maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
   }
 };
 
@@ -139,18 +146,6 @@ export default class AdminCohortViewTable extends React.Component {
           format: this.formatBoolean
         }
       }, {
-        property: 'teachercon_assigned_at_registration',
-        header: {
-          label: 'Teachercon Assigned at Registration',
-          transforms: [sortable]
-        }
-      }, {
-        property: 'accepted_teachercon',
-        header: {
-          label: 'Accepted Teachercon',
-          transforms: [sortable]
-        }
-      }, {
         property: 'assigned_fit',
         header: {
           label: 'Assigned FiT',
@@ -181,7 +176,7 @@ export default class AdminCohortViewTable extends React.Component {
     ];
 
     [
-      {property: 'notes', label: 'Notes'},
+      {property: 'notes', label: 'General Notes'},
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},

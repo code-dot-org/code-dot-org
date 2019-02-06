@@ -343,3 +343,11 @@ uz:
           stages:
             Relay Programming:
               name: Estafetali dasturlash
+        andrea-test:
+          stages:
+            'null':
+              name: 'nol'
+        pre-express-2019:
+          stages:
+            Spelling Bee:
+              name: Bilimdon Ari

@@ -1222,6 +1222,13 @@ ca:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          stages:
+            Aquatic:
+              name: Aquàtiques
+          title: 'Minecraft: Viatge aquàtic'
+          description_short: Minecraft torna amb una activitat del tot nova de l'Hora
+            del Codi!
         dance--draft:
           stages:
             Dance Party:
@@ -1288,3 +1295,43 @@ ca:
               name: Internet
             Crowdsourcing:
               name: Col·laboració oberta
+        andrea-test:
+          stages:
+            'null':
+              name: nul
+        dance-extras-gallery:
+          title: Seguir ballant
+          description: Anar més enllà de la primera hora amb idees desenvolupades
+            del projecte.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Posant les bases
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmes de la vida quotidiana: Avions de paper'
+            Binary Bracelets:
+              name: Polseres binàries
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmes reals: Planta una llavor'
+            Going Places Safely:
+              name: Anant a llocs segurs
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Mou-lo, Mou-lo
+            Your Digital Footprint:
+              name: La vostra empremta digital
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Mou-lo, Mou-lo
+            Your Digital Footprint:
+              name: La vostra empremta digital
+            Spelling Bee:
+              name: Abella ortogràfica
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmes reals: Planta una llavor'

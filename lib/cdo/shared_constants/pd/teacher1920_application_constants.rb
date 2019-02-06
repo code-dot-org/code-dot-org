@@ -150,10 +150,11 @@ module Pd
         meets_scholarship_criteria: "Meets scholarship requirements?",
         friendly_scholarship_status: "Scholarship teacher?",
         regional_partner_name: "Regional Partner",
+        application_url: "Link to Application",
         assigned_workshop: "Assigned Workshop",
         friendly_registered_workshop: "Registered for workshop?",
         total_score: "Bonus Points",
-        notes: "Notes",
+        notes: "General Notes",
         notes_2: "Notes 2",
         notes_3: "Notes 3",
         notes_4: "Notes 4",
@@ -278,6 +279,7 @@ module Pd
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       principal_diversity_recruitment: YES_NO,
+      principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       # Scholarship requirements
       previous_yearlong_cdo_pd: YES_NO,
       # Bonus Points
@@ -286,8 +288,7 @@ module Pd
       taught_in_past: [2, 0],
       free_lunch_percent: [5, 0],
       underrepresented_minority_percent: [5, 0],
-      race: [2, 0],
-      principal_implementation: [2, 0]
+      race: [2, 0]
     }
 
     # Need to explicitly list these for the shared constant generation to work.
@@ -374,6 +375,7 @@ module Pd
         :assigned_workshop,
         :friendly_registered_workshop,
         :regional_partner_name,
+        :application_url,
         :phone,
         :address,
         :city,

@@ -99,33 +99,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
   end
 
-  # Asserts that each expected directive is contained in the cache-control header,
-  # delimited by commas and optional whitespace
-  def assert_cache_control_match(expected_directives, cache_control_header)
-    expected_directives.each do |directive|
-      assert_match(/(^|,)\s*#{directive}\s*(,|$)/, cache_control_header)
-    end
-  end
-
-  def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
-  end
-
-  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
-    expected_directives = [
-      'public',
-      "max-age=#{max_age}",
-      "s-maxage=#{proxy_max_age}"
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
-  end
-
   test 'should not log an activity monitor start for netsim' do
     allthethings_script = Script.find_by_name('allthethings')
     netsim_level = allthethings_script.levels.find {|level| level.game == Game.netsim}
@@ -396,6 +369,42 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         id: '99999999999999999999999999'
       }
     end
+  end
+
+  test "show: redirect to latest stable script version in family for logged out user if one exists" do
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
+    Script.stubs(:latest_stable_version).returns(courseg_2018)
+
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017'
+    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+
+    get :show, params: {
+      script_id: courseg_2017.id,
+      stage_position: courseg_2017_stage_1.relative_position,
+      id: courseg_2017_stage_1_script_level.position,
+    }
+
+    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+  end
+
+  test "show: redirect to latest assigned script version in family for student if one exists" do
+    sign_in @student
+
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
+    Script.stubs(:latest_assigned_version).returns(courseg_2018)
+
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017'
+    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+
+    get :show, params: {
+      script_id: courseg_2017.id,
+      stage_position: courseg_2017_stage_1.relative_position,
+      id: courseg_2017_stage_1_script_level.position,
+    }
+
+    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
   end
 
   test "updated routing for 20 hour script" do

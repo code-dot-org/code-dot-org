@@ -826,7 +826,7 @@ pt:
             'Farmer: While Loops':
               name: 'Fazendeira: Laços Enquanto'
         csd3-2017:
-          description_short: "Programação"
+          description_short: Programação
           stages:
             Functions:
               name: Funções
@@ -1484,3 +1484,39 @@ pt:
               name: Internet
             Crowdsourcing:
               name: Aberto ao público
+        andrea-test:
+          stages:
+            'null':
+              name: 'nulo'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Criar uma base
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos da Vida Real: Aviões de Papel'
+            Binary Bracelets:
+              name: Pulseiras binárias
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da Vida Real: Plante uma Semente'
+            Going Places Safely:
+              name: Ir a Locais de um modo Seguro
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Criando caminhos
+            Your Digital Footprint:
+              name: Seu rastro digital
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Criando caminhos
+            Your Digital Footprint:
+              name: Seu rastro digital
+            Spelling Bee:
+              name: Escrever com a abelha
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da Vida Real: Plante uma Semente'

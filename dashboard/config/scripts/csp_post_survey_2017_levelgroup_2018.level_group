@@ -1,10 +1,10 @@
 name 'csp-post-survey-2017-levelgroup_2018'
-title 'CSP Principles Mid-Course Survey'
+title 'CS Principles Mid-Course Survey'
 submittable 'true'
 anonymous 'true'
 
 page
-text 'csp-post-survey-2017 preamble 1_2018'
+text 'csp-post-survey-2017 preamble 1_2018_2019'
 level 'csp-post-survey-2017-q1_2018'
 level 'csp-post-survey-2017-q2_2018'
 level 'csp-post-survey-2017-q3_2018'
@@ -52,7 +52,7 @@ level 'csp-post-survey-2017-q32_2018'
 level 'csp-post-survey-2017-q33_2018'
 
 page
-text 'csp-post-survey-2017-preamble 5 implementation-teacher_2018'
+text 'csp-post-survey-2017-preamble 5 implementation-teacher_2018_2019'
 text 'csp-post-survey-2017 preamble how often did teacher ask you to_2018'
 level 'csp-post-survey-2017-q50_2018'
 level 'csp-post-survey-2017-q51_2018'

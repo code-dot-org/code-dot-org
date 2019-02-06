@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
@@ -191,10 +192,26 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         }
       });
+    } else {
+      columns.push(
+        {
+          property: 'meets_criteria',
+          header: {
+            label: 'Meets Criteria',
+            transforms: [sortable]
+          }
+        }, {
+          property: 'total_score',
+          header: {
+            label: 'Total Score',
+            transforms: [sortable]
+          }
+        }
+      );
     }
 
     [
-      {property: 'notes', label: 'Notes'},
+      {property: 'notes', label: 'General Notes'},
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},

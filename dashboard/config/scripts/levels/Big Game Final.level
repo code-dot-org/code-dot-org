@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "You made it! At this point your game should be fully functioning, take some time to enjoy your new game and make any final tweaks to it. When you're happy with the final product, click Finish and you'll have an opportunity to share a link to your game. Good work!",
+    "short_instructions": "You made it! At this point your game should be fully functioning, take some time to enjoy your new game and make any final tweaks to it. When you're happy with the final product, click Finish and you'll have an opportunity to share a link to your game. Good work!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -41,7 +41,7 @@
       "upButton"
     ],
     "disable_examples": "false",
-    "markdown_instructions": "You made it!\r\n\r\nAt this point your game should be fully functioning, take some time to enjoy your new game and make any final tweaks to it.\r\n\r\nWhen you're happy with the final product, click Finish and you'll have an opportunity to share a link to your game.\r\n\r\nGood work!",
+    "long_instructions": "You made it!\r\n\r\nAt this point your game should be fully functioning, take some time to enjoy your new game and make any final tweaks to it.\r\n\r\nWhen you're happy with the final product, click Finish and you'll have an opportunity to share a link to your game.\r\n\r\nGood work!",
     "maze_data": null
   }
 }]]></config>

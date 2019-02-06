@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,0,0,1,0,0],[0,3,0,0,0,1,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Can you fix this code? ",
+    "short_instructions": "Can you fix this code? ",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",
@@ -33,7 +33,7 @@
     "parent_level_id": 12168,
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "markdown_instructions": "Can you fix this code? ",
+    "long_instructions": "Can you fix this code? ",
     "ideal": "9",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Are the movement blocks right? What else can you change?\",\"hint_id\":\"courseB_iceage_loops8_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7dfb0480bc260274673ca77d5a98ecf2/courseB_iceage_loops8.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"The first loop should repeat **3** times, the second should repeat **5** times, the third loop should repeat **4** times, and the last loop should repeat **4** times.\",\"hint_id\":\"courseB_iceage_loops8_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/145446b8c4fdff02db57006f31356e15/courseB_iceage_loops8.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use loops to help Scrat follow this path.\",\"hint_id\":\"courseB_iceage_loops8_c\",\"hint_type\":\"general\",\"hint_path\":\"[[2,6],[5,6],[5,1],[1,1],[1,5]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ca2ab0a162e907702a751ec7e9a8c16b/courseB_iceage_loops8.mp3\"}]",
     "contained_level_names": null,

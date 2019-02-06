@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "markdown_instructions": "Every dancer has a set of _properties_ that control what it looks like. This program uses the Duck's \"size\" property to make it smaller. Can you use the <xml>\r\n  <block type=\"Dancelab_setProp\">\r\n    <title name=\"SPRITE\">dancer1</title>\r\n    <title name=\"PROPERTY\">\"scale\"</title>\r\n    <title name=\"VAL\">50</title>\r\n  </block></xml> block to make `backup_dancer2` smaller too?",
+    "long_instructions": "Every dancer has a set of _properties_ that control what it looks like. This program uses the Duck's \"size\" property to make it smaller. Can you use the <xml>\r\n  <block type=\"Dancelab_setProp\">\r\n    <title name=\"SPRITE\">dancer1</title>\r\n    <title name=\"PROPERTY\">\"scale\"</title>\r\n    <title name=\"VAL\">50</title>\r\n  </block></xml> block to make `backup_dancer2` smaller too?",
     "parent_level_id": 14506,
     "validation_code": "if(World.frameCount == 1){\r\n  validationProps.changedCount = 0;\r\n}\r\nif(getTime(\"measures\") > 6){\r\n  sprites.forEach(function(sprite) {\r\n    if (sprite.scale != 1) validationProps.changedCount++;\r\n  });\r\n  if (validationProps.changedCount > 1) {\r\n  \tlevelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
     "block_pool": "Dancelab",

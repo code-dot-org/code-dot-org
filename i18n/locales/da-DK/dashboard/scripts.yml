@@ -737,6 +737,10 @@ da:
           stages:
             Evaluation Blocks:
               name: Evalueringsblokke
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: Spil Laboratoriet
         MikeTest:
           stages:
             Artist Functions:
@@ -820,7 +824,7 @@ da:
             'Farmer: While Loops':
               name: 'Landmand: Når sløjfer'
         csd3-2017:
-          description_short: "Programmering"
+          description_short: Programmering
           stages:
             Functions:
               name: Funktioner
@@ -1429,6 +1433,12 @@ da:
           stages:
             Artist:
               name: Kunstner
+        aquatic:
+          stages:
+            Aquatic:
+              name: Akvatisk
+          title: 'Minecraft: Akvatisk rejse'
+          description_short: Minecraft er tilbage med en splinterny aktivitet for En Times Kodning!
         dance--draft:
           stages:
             Dance Party:
@@ -1502,3 +1512,44 @@ da:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'nul'
+        dance-extras-gallery:
+          title: Bliv ved med at danse
+          description: Overskrid den første time med udvidede projektideer.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life algoritmer: Papir fly'
+            Binary Bracelets:
+              name: Binære armbånd
+        gamelab:
+          title: Spil Laboratoriet
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life algoritmer: Plante et frø'
+            Going Places Safely:
+              name: Gå til sikre steder
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Flyt det, flyt det
+            Your Digital Footprint:
+              name: Dit digitale fodspor
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Flyt det, flyt det
+            Your Digital Footprint:
+              name: Dit digitale fodspor
+            Spelling Bee:
+              name: Stave-bien
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life algoritmer: Plante et frø'

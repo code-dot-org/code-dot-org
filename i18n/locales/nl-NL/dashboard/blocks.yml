@@ -173,6 +173,9 @@ nl:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
+          OP:
+            '">"': ">"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} ga naar {LOCATION}"
         options:
@@ -299,14 +302,32 @@ nl:
       Dancelab_setBackground:
         text: stel {COLOR} in als achtergrondkleur
       Dancelab_setBackgroundEffect:
-        text: stel {EFFECT} in als achtergrondeffect
+        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
           EFFECT:
             '"none"': Geen
-            '"disco"': Vierkanten
-            '"rainbow"': Kleuren
+            '"circles"': Tunnel
+            '"color_cycle"': Kleuren
             '"diamonds"': Ruiten
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Willekeurig)"
+            '"disco_ball"': Discobal
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"splatter"': Verfspetters
+            '"rainbow"': Regenboog
+            '"snowflakes"': Sneeuw
+            '"text"': Titel van het lied
+            '"galaxy"': Ruimte
+            '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
+            '"disco"': Vierkanten
+            '"stars"': Sterren
+          PALETTE:
+            '"rave"': Zwart-wit
+            '"cool"': Blauw
+            '"default"': Licht
+            '"neon"': Neon
+            '"tropical"': Tropisch
+            '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
         text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
@@ -314,22 +335,27 @@ nl:
             '"none"': Geen
             '"rand"': "(Willekeurig)"
             '"circles"': Tunnel
+            '"color_cycle"': Kleuren
             '"diamonds"': Ruiten
             '"disco_ball"': Discobal
             '"kaleidoscope"': Caleidoscoop
             '"lasers"': Laser-dansvloer
             '"splatter"': Verfspetters
-            '"rainbow"': Kleuren
+            '"rainbow"': Regenboog
+            '"snowflakes"': Sneeuw
             '"text"': Titel van het lied
+            '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
             '"disco"': Vierkanten
             '"stars"': Sterren
           PALETTE:
             '"rave"': Zwart-wit
             '"cool"': Blauw
             '"default"': Licht
+            '"neon"': Neon
             '"tropical"': Tropisch
-            '"warm"': Rood
+            '"warm"': Warm
       Dancelab_setDanceSpeed:
         text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
@@ -365,21 +391,29 @@ nl:
         options:
           EFFECT:
             '"none"': Geen
-            '"rain"': Regen
-            '"raining_tacos"': Taco‘s
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Willekeurig)"
-      Dancelab_setForegroundEffectExtended:
-        text: stel {EFFECT} in als voorgrondeffect
-        options:
-          EFFECT:
-            '"none"': Geen
-            '"rand"': "(Willekeurig)"
+            '"bubbles"': Bubbels
             '"hearts_red"': Hartjes
             '"music_notes"': Muzieknoten
             '"pineapples"': Ananassen
             '"smiling_poop"': Poep
             '"rain"': Regen
             '"floating_rainbows"': Regenboog
+            '"smile_face"': Smiley
+            '"raining_tacos"': Taco‘s
+      Dancelab_setForegroundEffectExtended:
+        text: stel {EFFECT} in als voorgrondeffect
+        options:
+          EFFECT:
+            '"none"': Geen
+            '"rand"': "(Willekeurig)"
+            '"bubbles"': Bubbels
+            '"hearts_red"': Hartjes
+            '"music_notes"': Muzieknoten
+            '"pineapples"': Ananassen
+            '"smiling_poop"': Poep
+            '"rain"': Regen
+            '"floating_rainbows"': Regenboog
+            '"smile_face"': Smiley
             '"raining_tacos"': Taco‘s
       Dancelab_setProp:
         text: 'stel {SPRITE} {PROPERTY} in op {VAL} '
@@ -497,8 +531,27 @@ nl:
             '"down"': omlaag
             '"right"': rechts
             '"space"': ruimte
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"s"': s
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: als {RANGE} piek
       gamelab_changeColor:
@@ -594,6 +647,9 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+          OP:
+            '"="': "="
+            '">"': ">"
       gamelab_turn:
         options:
           DIRECTION:
@@ -608,6 +664,10 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -623,6 +683,10 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -643,7 +707,29 @@ nl:
             "{x: 300, y: 100}": rechtsboven
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': alles
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": boven
@@ -655,11 +741,11 @@ nl:
             "{x: 300, y: 100}": rechtsboven
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': alles
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': grootte
@@ -667,6 +753,46 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': alles
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_ifDanceIs:
+        text: |-
+          als {SPRITE} {DANCE} doet
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Clown
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Roll: Bodyroll
+            MOVES.Kick: Ster
+            MOVES.ThisOrThat: Dit of dat.
+            MOVES.Rest: Geen
       Mikelab_randomColor:
         text: willekeurige kleur
       Mikelab_setBG:
@@ -686,6 +812,18 @@ nl:
           CORNER:
             '"right"': rechts
             '"left"': links
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 300}": onder
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: 200, y: 200}": midden
+            "{x: 100, y: 100}": linksboven
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 300}": linksonder
+            "{x: 300, y: 300}": rechtsonder
       Mikelab_whenKeyPressed:
         text: als {KEY} ingedrukt
         options:
@@ -732,13 +870,36 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+      binary_move:
+        options:
+          DIR:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+      binary_whenKey:
+        text: als {KEY} ingedrukt
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           als pad {DIR}

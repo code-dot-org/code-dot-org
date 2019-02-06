@@ -1,9 +1,12 @@
 /** @file Confirm Dialog for Maker Discount Codes */
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import i18n from "@cdo/locale";
 import BaseDialog from "@cdo/apps/templates/BaseDialog";
 import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
 import Button from "@cdo/apps/templates/Button";
+import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
 
 const styles = {
   subtitle: {
@@ -133,7 +136,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <strong style={styles.bold}>Electronic Signature</strong> {i18n.typeName()}
+              <UnsafeRenderedMarkdown markdown={verifySignatureMd}/>
             </div>
             <input
               value={this.state.signature}
@@ -143,7 +146,9 @@ export default class EligibilityConfirmDialog extends Component {
             />
           </label>
         </form>
-        <div>{i18n.contactSupport()}</div>
+        <div>
+          <UnsafeRenderedMarkdown markdown={contactSupportMd}/>
+        </div>
         {this.state.error &&
           <div style={styles.error}>{this.state.error}</div>
         }
@@ -163,3 +168,11 @@ export default class EligibilityConfirmDialog extends Component {
     );
   }
 }
+
+const verifySignatureMd = `
+**Electronic Signature** (type your first and last name below):
+`;
+
+const contactSupportMd = `
+Please contact [teacher@code.org](mailto:teacher@code.org) for any questions or concerns.
+`;

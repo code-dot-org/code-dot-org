@@ -6,7 +6,7 @@
   "user_id": 7,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw two squares to make a rectangle!",
+    "short_instructions": "Draw two squares to make a rectangle!",
     "x": "150",
     "y": "200",
     "start_direction": "89",

@@ -135,6 +135,10 @@ ur:
         options:
           KEY:
             '"space"': خلاء
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: کوئی بھی نہیں
       Mikelab_randomColor:
         text: بے ترتیب رنگ
       Mikelab_setBG:
@@ -161,6 +165,20 @@ ur:
         text: بائیں طرف مڑیں
       RyanLab_turnRight:
         text: دائیں طرف مڑیں
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': خلاء
       craft_ifPath:
         options:
           DIR:

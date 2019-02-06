@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
@@ -140,7 +141,6 @@ class VirtualizedSummaryView extends Component {
           cellRenderer={this.cellRenderer}
           columnWidth={this.getColumnWidth}
           columnCount={columnCount}
-          enableFixedColumnScroll
           rowHeight={ROW_HEIGHT}
           height={tableHeight}
           scrollToColumn={lessonOfInterest}

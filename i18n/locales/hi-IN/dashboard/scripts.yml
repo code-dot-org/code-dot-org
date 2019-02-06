@@ -183,3 +183,7 @@ hi:
           stages:
             Conditionals:
               name: शर्तें
+        andrea-test:
+          stages:
+            'null':
+              name: 'शून्य'

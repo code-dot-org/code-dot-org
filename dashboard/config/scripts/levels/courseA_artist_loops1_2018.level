@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
+    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

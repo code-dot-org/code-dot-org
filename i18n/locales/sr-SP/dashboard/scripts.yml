@@ -754,7 +754,7 @@ sr:
             'Farmer: While Loops':
               name: 'Фармер: Условне петље'
         csd3-2017:
-          description_short: "Programming"
+          description_short: Programming
           stages:
             Velocity:
               name: Брзина
@@ -1255,3 +1255,35 @@ sr:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'ништа'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Изградња темеља
+            'Real-life Algorithms: Paper Planes':
+              name: 'Стварни алгоритми: Папирни авиони'
+            Binary Bracelets:
+              name: Бинарне наруквице
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Прави алгоритми: Засади семе'
+            Going Places Safely:
+              name: Сигурна путања
+        courseb-2019:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+        pre-express-2019:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+            Spelling Bee:
+              name: Пчелица словарица
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Прави алгоритми: Засади семе'

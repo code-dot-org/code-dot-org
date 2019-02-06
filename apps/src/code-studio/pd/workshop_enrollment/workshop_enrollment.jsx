@@ -1,7 +1,8 @@
 /**
  * New workshop enrollment page
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';
@@ -218,6 +219,7 @@ export default class WorkshopEnrollment extends React.Component {
                         first_name={this.props.enrollment.first_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
+                        workshop_subject={this.props.workshop.subject}
                       />
                     </div>
                   </div>

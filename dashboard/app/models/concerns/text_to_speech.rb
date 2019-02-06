@@ -72,38 +72,9 @@ module TextToSpeech
     before_save :tts_update
 
     serialized_attrs %w(
-      tts_instructions_override
-      tts_markdown_instructions_override
+      tts_short_instructions_override
+      tts_long_instructions_override
     )
-  end
-
-  module ClassMethods
-    def permitted_params
-      super.concat(['tts_short_instructions_override', 'tts_long_instructions_override'])
-    end
-  end
-
-  # Temporary aliases while we transition between naming schemes.
-  # TODO: elijah: migrate the data to these new field names and remove these
-  define_method('tts_short_instructions_override') {read_attribute('properties')['tts_instructions_override']}
-  define_method('tts_short_instructions_override=') {|value| read_attribute('properties')['tts_instructions_override'] = value}
-  define_method('tts_short_instructions_override?') {!!JSONValue.value(read_attribute('properties')['tts_instructions_override'])}
-  define_method('tts_long_instructions_override') {read_attribute('properties')['tts_markdown_instructions_override']}
-  define_method('tts_long_instructions_override=') {|value| read_attribute('properties')['tts_markdown_instructions_override'] = value}
-  define_method('tts_long_instructions_override?') {!!JSONValue.value(read_attribute('properties')['tts_markdown_instructions_override'])}
-
-  def assign_attributes(new_attributes)
-    attributes = new_attributes.stringify_keys
-
-    # TODO: elijah: migrate the data to these new field names and remove these
-    if attributes.key?('tts_short_instructions_override')
-      attributes['tts_instructions_override'] = attributes.delete('tts_short_instructions_override')
-    end
-    if attributes.key?('tts_long_instructions_override')
-      attributes['tts_markdown_instructions_override'] = attributes.delete('tts_long_instructions_override')
-    end
-
-    super(attributes)
   end
 
   def self.locale_supported?(locale)
@@ -178,16 +149,46 @@ module TextToSpeech
   end
 
   def tts_should_update_short_instructions?
-    relevant_property = tts_short_instructions_override ? 'tts_instructions_override' : 'instructions'
+    relevant_property = tts_short_instructions_override ? 'tts_short_instructions_override' : 'short_instructions'
     return tts_should_update(relevant_property)
   end
 
   def tts_long_instructions_text
-    tts_long_instructions_override || TextToSpeech.sanitize(long_instructions || "")
+    # Instructions in contained levels are used as TTS instead of the instructions of the containing level
+    tts_long_instructions_override || TextToSpeech.sanitize(tts_for_contained_level || long_instructions || "")
+  end
+
+  def tts_for_contained_level
+    all_instructions = []
+
+    contained_levels.each {|contained| all_instructions.push(contained_level_text(contained))}
+    all_instructions.empty? ? nil : all_instructions * "\n"
+  end
+
+  def contained_level_text(contained)
+    # For multi questions, create a string for TTS of the markdown, question, and answers
+    if contained.long_instructions.nil?
+      combined_text = contained.properties["markdown"].nil? ? "" : contained.properties["markdown"] + "\n"
+      if contained.properties["questions"]
+        contained.properties["questions"].each do |question|
+          combined_text += question["text"] + "\n"
+        end
+      end
+      if contained.properties["answers"]
+        contained.properties["answers"].each do |answer|
+          combined_text += answer["text"] + "\n"
+        end
+      end
+      combined_text
+    else
+      #For free response, create a string for TTS of the instructions
+      contained.long_instructions
+
+    end
   end
 
   def tts_should_update_long_instructions?
-    relevant_property = tts_long_instructions_override ? 'tts_markdown_instructions_override' : 'markdown_instructions'
+    relevant_property = tts_long_instructions_override ? 'tts_long_instructions_override' : 'long_instructions'
     return tts_should_update(relevant_property)
   end
 

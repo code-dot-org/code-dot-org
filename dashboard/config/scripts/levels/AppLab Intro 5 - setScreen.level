@@ -33,7 +33,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Write code to let the user switch to your second screen.\r\n\r\n**How:** Add an `onEvent()` for the button you just created. Use `setScreen()` to switch between screens.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/9ac5102ec678c1ecd0278446560ba617-image-1507571425597.gif)",
+    "long_instructions": "**Goal:** Write code to let the user switch to your second screen.\r\n\r\n**How:** Add an `onEvent()` for the button you just created. Use `setScreen()` to switch between screens.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/9ac5102ec678c1ecd0278446560ba617-image-1507571425597.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

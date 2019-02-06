@@ -64,6 +64,7 @@ class RegionalPartner < ActiveRecord::Base
     additional_program_information
     contact_name
     contact_email
+    has_csf
   )
 
   PRINCIPAL_APPROVAL_TYPES = [

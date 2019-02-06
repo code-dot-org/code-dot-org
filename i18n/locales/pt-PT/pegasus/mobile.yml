@@ -416,6 +416,7 @@
   volunteer_engineer_submission_field_email: "Endereço de e-mail"
   volunteer_engineer_submission_field_email_desc: "O seu endereço de e-mail nunca será partilhado, mas vamos enviar-lhe as solicitações dos professores."
   volunteer_engineer_submission_field_email_placeholder: "Endereço de e-mail"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nossa política de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sim'
   volunteer_engineer_submission_field_email_preference_no: 'Não'
   volunteer_engineer_submission_final_paragraph: "Você será listado no mapa para professores locais para que o contactem para a Hora do Código ou para outras oportunidades de voluntariado. O seu e-mail e endereço exato nunca serão partilhados por nós. Mas as outras informações (incluindo a localização aproximada) será visível publicamente por professores na sua zona."
@@ -1132,11 +1133,13 @@
   applab_tile_start_tutorial: "Começar"
   hoc_overview_start_tutorial: "Começar"
   hoc2018_creativity_create: "Criar"
+  hoc2018_creativity_what_will_you_create: "O que vais criar?"
   hoc2018_mc_designer_title: "Designer de Minecraft"
   hoc2018_mc_designer_description: "Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais."
   hoc2018_mc_start: "Começar"
   hoc2018_mc_educators_box2_button: "Transferir"
   hoc2018_mc_video_title_inspire_girl: "Inspirar uma rapariga"
+  hoc2018_mc_homepage_what_create: "O que vais criar?"
   hoc2018_mc_homepage_join_us: "Junta-te a nós"
   hoc2018_mc_homepage_try_it: "Experimentar"
   hoc2018_dance_party_button: "Começar"

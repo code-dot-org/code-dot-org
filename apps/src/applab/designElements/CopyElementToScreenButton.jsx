@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import commonStyles from '../../commonStyles';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
 import {connect} from "react-redux";
@@ -12,6 +13,10 @@ const styles = {
     float: 'right'
   },
   screen: {
+  },
+  menu: {
+    maxHeight: '200px',
+    overflowY: 'auto',
   },
 };
 
@@ -104,6 +109,7 @@ class CopyElementToScreenButton extends React.Component {
               targetPoint={targetPoint}
               offset={{x: 0, y: 0}}
               beforeClose={this.beforeClose}
+              style={styles.menu}
             >
               {otherScreens}
             </PopUpMenu>

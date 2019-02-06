@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -42,8 +43,8 @@ const styles = {
  * If you click the import button, it grabs new descriptions from curriculum
  * builder and shows both sets.
  */
-const StageDescriptions = React.createClass({
-  propTypes: {
+export default class StageDescriptions extends React.Component {
+  static propTypes = {
     scriptName: PropTypes.string.isRequired,
     currentDescriptions: PropTypes.arrayOf(
       PropTypes.shape({
@@ -52,25 +53,23 @@ const StageDescriptions = React.createClass({
         descriptionTeacher: PropTypes.string.isRequired,
       })
     ).isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
+  state = {
       // start collapsed
       collapsed: true,
       buttonText: null,
       importedDescriptions: [],
       mismatchedStages: [],
-    };
-  },
+  };
 
-  expand() {
+  expand = () => {
     this.setState({
       collapsed: false
     });
-  },
+  };
 
-  processImport(result) {
+  processImport = (result) => {
     let importedDescriptions = [];
     const { currentDescriptions } = this.props;
 
@@ -99,9 +98,9 @@ const StageDescriptions = React.createClass({
       importedDescriptions,
       mismatchedStages
     });
-  },
+  };
 
-  importDescriptions() {
+  importDescriptions = () => {
     this.setState({
       buttonText: 'Querying server...'
     });
@@ -113,9 +112,9 @@ const StageDescriptions = React.createClass({
         buttonText: jqXHR.statusText
       });
     });
-  },
+  };
 
-  updatedStageDescriptions() {
+  updatedStageDescriptions = () => {
     const { currentDescriptions } = this.props;
     const { importedDescriptions } = this.state;
 
@@ -125,7 +124,7 @@ const StageDescriptions = React.createClass({
       descriptionStudent: importedDescriptions[index].descriptionStudent,
       descriptionTeacher: importedDescriptions[index].descriptionTeacher,
     }));
-  },
+  };
 
   render() {
     const { currentDescriptions } = this.props;
@@ -212,6 +211,4 @@ const StageDescriptions = React.createClass({
       </div>
     );
   }
-});
-
-export default StageDescriptions;
+}

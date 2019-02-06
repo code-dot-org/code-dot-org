@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "We've added one last function for you. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3 to move to the next puzzle. ",
+    "short_instructions": "We've added one last function for you. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3 to move to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "We've added one last function for you.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function only when `player_score` becomes greater than a certain number.<br/><br/>\r\n</h4>\r\n<i>For example: `player_score` > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it to level 3 to move to the next puzzle.</i>",
+    "long_instructions": "We've added one last function for you.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function only when `player_score` becomes greater than a certain number.<br/><br/>\r\n</h4>\r\n<i>For example: `player_score` > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it to level 3 to move to the next puzzle.</i>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

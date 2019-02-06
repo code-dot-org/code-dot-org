@@ -20,7 +20,7 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/2018-apstats.png"></a>
+<a href="https://twitter.com/codeorg/status/1075805534681485312" target="_blank"><img src="/images/statistics/fit-250/2018-apstats.png"></a>
 
 <br>
 
@@ -30,21 +30,21 @@ And, many of these test-takers were female or minority students.
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/1073278358870507520" target="_blank"><img src="/images/statistics/fit-250/experienced-teachers.png"></a>
+<a href="https://twitter.com/codeorg/status/1085626759146586112" target="_blank"><img src="/images/statistics/fit-250/where-teachers-came-from.png"></a>
 
 <br>
 
-It's never too late to start teaching CS!
+Two-thirds of computing jobs are outside the tech sector, which is why we need teachers from diverse backgrounds. Teachers at our 2018 summer workshops came with varied experience from all over the country!
 
 </div>
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/903629740640149505" target="_blank"><img src="/images/statistics/fit-250/less-cs.png"></a>
+<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
 
 <br>
 
-Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
+Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science. 
 
 </div>
 
@@ -72,7 +72,7 @@ Teachers from any background can teach computer science.
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/codeorg-growth.gif"></a>
+<a href="https://twitter.com/codeorg/status/1079103772297740289" target="_blank"><img src="/images/statistics/fit-250/codeorg-growth.gif"></a>
 
 <br>
 
@@ -167,10 +167,39 @@ We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computi
 
 </div>
 
-<div style="clear: both;"></div>
-
 <div class="col-33" style="padding-right: 20px;">
 
+</div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/903629740640149505" target="_blank"><img src="/images/statistics/fit-250/less-cs.png"></a>
+
+<br>
+
+Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
+
+</div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1073278358870507520" target="_blank"><img src="/images/statistics/fit-250/experienced-teachers.png"></a>
+
+<br>
+
+It's never too late to start teaching CS!
+
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
+
+<br>
+
+Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students! 
 </div>
 
 <div style="clear: both;"></div>

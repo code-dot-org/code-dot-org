@@ -40,7 +40,6 @@ class Level < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
 
   after_save :write_custom_level_file
-  after_save :update_key_list
   after_destroy :delete_custom_level_file
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
@@ -61,47 +60,9 @@ class Level < ActiveRecord::Base
     name_suffix
     parent_level_id
     hint_prompt_attempts_threshold
+    short_instructions
+    long_instructions
   )
-
-  # Temporary aliases while we transition between naming schemes.
-  # TODO: elijah: migrate the data to these new field names and remove these
-  def short_instructions
-    read_attribute('properties')['short_instructions'] || read_attribute('properties')['instructions']
-  end
-  alias_method :instructions, :short_instructions
-
-  def short_instructions=(value)
-    read_attribute('properties')['short_instructions'] = value
-    read_attribute('properties')['instructions'] = nil
-  end
-  alias_method :instructions=, :short_instructions=
-
-  def short_instructions?
-    !!JSONValue.value(read_attribute('properties')['short_instructions']) ||
-    !!JSONValue.value(read_attribute('properties')['instructions'])
-  end
-  alias_method :instructions?, :short_instructions?
-
-  def long_instructions
-    read_attribute('properties')['long_instructions'] || read_attribute('properties')['markdown_instructions']
-  end
-  alias_method :markdown_instructions, :long_instructions
-
-  def long_instructions=(value)
-    read_attribute('properties')['long_instructions'] = value
-    read_attribute('properties')['markdown_instructions'] = nil
-  end
-  alias_method :markdown_instructions=, :long_instructions=
-
-  def long_instructions?
-    !!JSONValue.value(read_attribute('properties')['long_instructions']) ||
-    !!JSONValue.value(read_attribute('properties')['markdown_instructions'])
-  end
-  alias_method :markdown_instructions?, :long_instructions?
-
-  def self.permitted_params
-    super.concat(['short_instructions', 'long_instructions'])
-  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -120,14 +81,6 @@ class Level < ActiveRecord::Base
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
 
-    # TODO: elijah: migrate the data to these new field names and remove these
-    if attributes.key?('instructions')
-      attributes['short_instructions'] = attributes.delete('instructions')
-    end
-    if attributes.key?('markdown_instructions')
-      attributes['long_instructions'] = attributes.delete('markdown_instructions')
-    end
-
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     if concept_difficulty_attributes
       assign_nested_attributes_for_one_to_one_association(
@@ -145,16 +98,6 @@ class Level < ActiveRecord::Base
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
     @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
-  end
-
-  def self.key_list
-    @@all_level_keys ||= Level.all.map {|l| [l.id, l.key]}.to_h
-    @@all_level_keys
-  end
-
-  def update_key_list
-    @@all_level_keys ||= nil
-    @@all_level_keys[id] = key if @@all_level_keys
   end
 
   def summarize_concepts

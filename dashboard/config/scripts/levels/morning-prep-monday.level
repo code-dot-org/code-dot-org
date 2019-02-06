@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 1: Morning Prep\r\n\r\nWhat did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?",
+    "long_instructions": "# Day 1: Morning Prep\r\n\r\nWhat did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?",
     "parent_level_id": 14288
   },
   "published": true,

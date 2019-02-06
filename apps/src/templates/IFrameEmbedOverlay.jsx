@@ -1,5 +1,6 @@
 import * as color from "../util/color";
-import React, {PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {singleton as studioApp} from '../StudioApp';
 
@@ -55,36 +56,31 @@ var styles = {
   },
 };
 
-var IFrameEmbedOverlay = React.createClass({
-
-  propTypes: {
+class IFrameEmbedOverlay extends Component {
+  static propTypes = {
     appWidth: PropTypes.number.isRequired,
     appHeight: PropTypes.number.isRequired,
     style: PropTypes.object,
     playButtonStyle: PropTypes.object,
-  },
+  };
 
-  getInitialState() {
-    return {
-      tooYoung: false
-    };
-  },
+  state = {
+    tooYoung: false
+  };
 
-  getDefaultProps() {
-    return {
-      showPlayButton: true,
-    };
-  },
+  static defaultProps = {
+    showPlayButton: true
+  };
 
-  handleTooYoung() {
+  handleTooYoung = () => {
     this.setState({tooYoung: true});
-  },
+  };
 
-  onClick() {
+  onClick = () => {
     if (!this.state.tooYoung) {
       studioApp().startIFrameEmbeddedApp(this.handleTooYoung);
     }
-  },
+  };
 
   render() {
     return (
@@ -124,7 +120,7 @@ var IFrameEmbedOverlay = React.createClass({
         }
       </div>
     );
-  },
-});
+  }
+}
 
 export default Radium(IFrameEmbedOverlay);

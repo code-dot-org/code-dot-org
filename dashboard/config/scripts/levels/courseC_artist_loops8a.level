@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Now try something on your own!",
+    "short_instructions": "Now try something on your own!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -33,8 +33,8 @@
     "start_direction": "90",
     "x": "70",
     "y": "70",
-    "markdown_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\n___\r\nNeed an idea? Try making a design like this one.\r\n\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)",
-    "tts_markdown_instructions_override": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\nNeed an idea? Try making a design like this one.",
+    "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\n___\r\nNeed an idea? Try making a design like this one.\r\n\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)",
+    "tts_long_instructions_override": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\nNeed an idea? Try making a design like this one.",
     "disable_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null

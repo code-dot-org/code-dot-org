@@ -29,6 +29,30 @@ class UserTest < ActiveSupport::TestCase
     @student = create :student
   end
 
+  test 'from_identifier finds user by id' do
+    student = create :student
+    assert_equal student, User.from_identifier(student.id.to_s)
+  end
+
+  test 'from_identifier finds user by username' do
+    student = create :student
+    assert_equal student, User.from_identifier(student.username)
+  end
+
+  test 'from_identifier finds user by email' do
+    teacher = create :teacher
+    assert_equal teacher, User.from_identifier(teacher.email)
+  end
+
+  test 'from_identifier finds user by hashed_email' do
+    student = create :student, email: 'fakestudentemail@example.com'
+    assert_equal student, User.from_identifier('fakestudentemail@example.com')
+  end
+
+  test 'from_identifier returns nil when id exceeds allowed integer size' do
+    assert_nil User.from_identifier('3423423423')
+  end
+
   test 'make_teachers_21' do
     teacher = create :teacher, birthday: Time.now - 18.years
     assert_equal '21+', teacher.age
@@ -78,6 +102,34 @@ class UserTest < ActiveSupport::TestCase
     }
     teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
     assert_equal teachers[0].school_info, teachers[1].school_info
+  end
+
+  test 'update_school_info with specific school overwrites user school info' do
+    user = create :teacher, :with_school_info
+    new_school_info = create :school_info
+
+    user.update_school_info(new_school_info)
+    assert_equal new_school_info, user.school_info
+  end
+
+  test 'update_school_info with custom school does nothing when the user already has a specific school' do
+    original_school_info = create :school_info
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    assert_equal original_school_info, user.school_info
+  end
+
+  test 'update_school_info with custom school updates user info when user does not have a specific school' do
+    original_school_info = create :school_info_us_other
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    refute_equal original_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
   end
 
   test 'single user experiment is enabled' do
@@ -3209,6 +3261,23 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "section_scripts returns an empty array if user has no sections" do
+    user = create :user
+    assert_empty user.section_scripts
+  end
+
+  test "section_scripts returns assigned scripts and default scripts in assigned courses" do
+    student = create :student
+    single_script = create :script
+    (create :section, script: single_script).students << student
+    course_script = create :script
+    course_with_script = create :course
+    create :course_script, course: course_with_script, script: course_script, position: 1
+    (create :section, course: course_with_script).students << student
+
+    assert_equal [single_script, course_script], student.section_scripts
+  end
+
   test "last_joined_section returns the most recently joined section" do
     student = create :student
     teacher = create :teacher
@@ -4082,16 +4151,16 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_channel_owner finds channel owner' do
     student = create :student
-    with_channel_for student do |channel_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, channel_id
+    with_channel_for student do |storage_app_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
       result = User.find_channel_owner encrypted_channel_id
       assert_equal student, result
     end
   end
 
   test 'find_channel_owner returns nil for channel with no owner' do
-    with_anonymous_channel do |channel_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, channel_id
+    with_anonymous_channel do |storage_app_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
       result = User.find_channel_owner encrypted_channel_id
       assert_nil result
     end

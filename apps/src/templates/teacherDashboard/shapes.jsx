@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { makeEnum } from '@cdo/apps/utils';
 
@@ -16,6 +16,33 @@ export const sectionShape = PropTypes.shape({
   scriptId: PropTypes.number,
   grade: PropTypes.string,
   providerManaged: PropTypes.bool.isRequired,
+});
+
+// Used on the Teacher Dashboard for components that
+// require more specific information.
+export const summarizedSectionShape = PropTypes.shape({
+  assignedTitle: PropTypes.string.isRequired,
+  code: PropTypes.string.isRequired,
+  course_id: PropTypes.number,
+  currentUnitTitle: PropTypes.string,
+  grade: PropTypes.string,
+  hidden: PropTypes.bool,
+  id: PropTypes.number.isRequired,
+  linkToAssigned: PropTypes.string,
+  linkToCurrentUnit: PropTypes.string,
+  linkToProgress: PropTypes.string,
+  linkToStudents: PropTypes.string,
+  login_type: PropTypes.string,
+  name: PropTypes.string,
+  numberOfStudents: PropTypes.number,
+  pairing_allowed: PropTypes.bool,
+  providerManaged: PropTypes.bool,
+  script: PropTypes.object,
+  sharing_disabled: PropTypes.bool,
+  stage_extras: PropTypes.bool,
+  studentCount: PropTypes.number,
+  students: PropTypes.array,
+  teacherName: PropTypes.string
 });
 
 // An assignment is a course or script that a user can be assigned to.

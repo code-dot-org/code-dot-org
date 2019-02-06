@@ -1,0 +1,152 @@
+---
+kind: pipeline
+name: unit
+
+clone:
+  disable: true
+
+steps:
+- name: clone
+  image: docker:git
+  commands:
+  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 50 $DRONE_GIT_HTTP_URL .
+  - git reset --hard $DRONE_COMMIT
+
+- name: verify-pr
+  image: wintercdo/code-dot-org:0.7
+  pull: always
+  commands:
+    - |
+      if [ -z "$DRONE_PULL_REQUEST" ]; then
+        echo "Not a pull request."
+        exit 0
+      fi
+    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
+    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
+    - echo $head_repo
+    - |
+      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
+        echo "Pull request is from fork $head_repo; exiting."
+        exit 1
+      fi
+
+- name: restore-cache
+  image: plugins/s3-cache
+  settings:
+    pull: true
+    restore: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+
+- name: unit-tests
+  image: wintercdo/code-dot-org:0.7
+  pull: always
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  - name: mysql
+    path: /var/lib/mysql
+  environment:
+    CLOUDFRONT_KEY_PAIR_ID:
+      from_secret: CLOUDFRONT_KEY_PAIR_ID
+    CLOUDFRONT_PRIVATE_KEY:
+      from_secret: CLOUDFRONT_PRIVATE_KEY
+  commands:
+    - df -h
+    - sudo chown -R circleci:circleci .
+    - # cache is restored to source directory, so we need to copy it into the right place
+    - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+    - /entrypoint.sh docker/unit_tests.sh
+
+- name: update-cache
+  image: plugins/s3-cache
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  settings:
+    pull: true
+    rebuild: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+    mount:
+      - /home/circleci/.rbenv
+
+volumes:
+- name: rbenv
+  temp: {}
+- name: mysql
+  temp: {}
+
+trigger:
+  event:
+    include:
+    - pull_request
+
+# ---
+# kind: pipeline
+# name: ui
+
+# clone:
+#   depth: 50
+
+# services:
+# - name: ui-tests-redis
+#   image: redis
+#   ports:
+#   - 6379
+
+# steps:
+# - name: ui-tests
+#   image: wintercdo/code-dot-org:0.7
+#   volumes:
+#   - name: rbenv
+#     path: /home/circleci/.rbenv
+#   - name: mysql
+#     path: /var/lib/mysql
+#   environment:
+#     CLOUDFRONT_KEY_PAIR_ID:
+#       from_secret: CLOUDFRONT_KEY_PAIR_ID
+#     CLOUDFRONT_PRIVATE_KEY:
+#       from_secret: CLOUDFRONT_PRIVATE_KEY
+#     PROPERTIES_ENCRYPTION_KEY:
+#       from_secret: PROPERTIES_ENCRYPTION_KEY
+#     AWS_ACCESS_KEY_ID:
+#       from_secret: AWS_ACCESS_KEY_ID
+#     AWS_SECRET_ACCESS_KEY:
+#       from_secret: AWS_SECRET_ACCESS_KEY
+#     APPLITOOLS_KEY:
+#       from_secret: APPLITOOLS_KEY
+#     FIREBASE_NAME:
+#       from_secret: FIREBASE_NAME
+#     SAUCE_USERNAME:
+#       from_secret: SAUCE_USERNAME
+#     SAUCE_ACCESS_KEY:
+#       from_secret: SAUCE_ACCESS_KEY
+#   commands:
+#     - pwd
+#     - whoami
+#     - id -u
+#     - id -g
+#     - ls -alh
+#     - sudo chown -R circleci:circleci .
+#     - /entrypoint.sh docker/ui_tests.sh
+
+# volumes:
+# - name: rbenv
+#   temp: {}
+# - name: mysql
+#   temp: {}
+
+# trigger:
+#   event:
+#     include:
+#     - pull_request
+---
+kind: signature
+hmac: 4ef30caa9dc7941b06d4ed3e8427def6b650ee9b3ceb3b161e2ffe83e603cae4
+
+...

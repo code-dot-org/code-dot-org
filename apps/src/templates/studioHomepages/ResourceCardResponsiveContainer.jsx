@@ -1,5 +1,6 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const styles = {
@@ -31,7 +32,7 @@ class ResourceCardResponsiveContainer extends Component {
   };
 
   render() {
-    const colCount = ({xl: 3, lg: 3, md: 2, xs: 1})[this.props.responsiveSize];
+    const colCount = ({lg: 3, md: 2, sm: 1, xs: 1})[this.props.responsiveSize];
 
     return (
       <div>

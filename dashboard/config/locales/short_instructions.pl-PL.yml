@@ -1663,6 +1663,9 @@ pl:
         liczby dodatnie i ujemne).
       Course 4 Variables Assessment: Czy mógłbyś utworzyć ten obraz używając zmiennej
         dla boków? Każda linia powinna mieć długość 50 pikseli.
+      Course E MC Conditionals1: Najcenniejsze surowce znajdują się pod ziemią, ale
+        robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co najmniej
+        2 bloków.
       Course1BeePuzzle12: Zbierz trzy nektary i następnie zrób dwa miody
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu,
         po prostu naciśnij "Graj"! '
@@ -1772,7 +1775,7 @@ pl:
         gry w zgadywanie numeru!
       HOC 2018 Level_1: Weź łódkę z kufra.
       HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
-      HOC 2018 Level_11: 'Zbuduj kanał z Prismarine wewnątrz Oceanicznego Monumentu.  '
+      HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego Monumentu.  '
       HOC 2018 Level_12: Zaprojektuj swój własny podwodny świat, to Ty decydujesz!
       HOC 2018 Level_2: Skieruj się do końca doku.
       HOC 2018 Level_3: Kieruj się przez otwarte morza do dorsza.
@@ -2409,6 +2412,7 @@ pl:
       Ryan Test Locked Blocks: |-
         Mamy tu funkcję, która nosi nazwę "patrol" (patrol).
         Zmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400 pikseli w dół.
+      Ryan_Demo: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
       SG U3L03 Draw a T using turnAround: Narysuj kształt plusa korzystając z dostępnej
         wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       SG U3L06 Challenge 2 purple square: Przeczytaj dokumentacje dla funkcji penColor()
@@ -2760,15 +2764,20 @@ pl:
         go i zastąp go czymś zupełnie inny)
       courseA_artist_loops10: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2018: Pomóż mi położyć kamienie niżej, a nie spadnę!
+      courseA_artist_loops10_2019: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops12: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co
         Twoim zdaniem zobaczył.
       courseA_artist_loops12_2018: Artysta zobaczył w oddali coś śmiesznego. Narysuj,
         co Twoim zdaniem zobaczył.
+      courseA_artist_loops12_2019: Artysta zobaczył w oddali coś śmiesznego. Narysuj,
+        co Twoim zdaniem zobaczył.
       courseA_artist_loops7: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2018: Użyj pętli `repeat` aby dodać fale na wodzie.
+      courseA_artist_loops7_2019: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_forVideo: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops9: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2018: 'Wyzwanie: Napraw schody.'
+      courseA_artist_loops9_2019: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops_challenge3: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
@@ -2776,20 +2785,29 @@ pl:
         skarby?
       courseA_collector_loops7_2018: Co powinieneś dodać do tego kodu, aby zebrać
         wszystkie skarby?
+      courseA_collector_loops7_2019: Co powinieneś dodać do tego kodu, aby zebrać
+        wszystkie skarby?
       courseA_collector_loops_challenge2kp: Zbierz przynajmniej *3* części skarbu
         aby przejść ten poziom.
       courseA_collector_loops_challenge2kp_2018: Zbierz przynajmniej *3* części skarbu
         aby przejść ten poziom.
+      courseA_collector_loops_challenge2kp_2019: Zbierz przynajmniej *3* części skarbu
+        aby przejść ten poziom.
       courseA_collector_preLoops4: Dasz radę rozwiązać tą zagadkę?
       courseA_forVideoTest_artist: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_maze_ramp5a_2018: Doprowadź ptaka do świnki!
+      courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
       courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!
       courseA_maze_seq2_2018: Zmień kod, aby doprowadzić mnie do świnki!
       courseB_Scrat_ramp5a_2018: Doprowadź ptaka do świnki!
+      courseB_Scrat_ramp5a_2019: Doprowadź ptaka do świnki!
       courseB_artist_loops_challenge2: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_artist_loops_challenge2_2018: |-
+        Zagrajmy w grę!
+        Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseB_artist_loops_challenge2_2019: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops3_predict1: W jaki sposób Laurel może zebrać wszystkie
@@ -2801,12 +2819,16 @@ pl:
         złej kolejności!
       courseB_maze_seq_challenge2_2018: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
+      courseB_maze_seq_challenge2_2019: Debuguj ten poziom. Te bloki są poprawne,
+        ale w złej kolejności!
       courseC19_playLab_EOC5: Teraz poświęć trochę czasu, żeby upewnić się, że gra
         działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa twoją
         grę, a następnie zagraj, aby spełnić jeden z tych warunków.
       courseC_PlayLab_events3: Czy możesz napisać program, który sprawia, że Jorge
         (postać 1) idzie w kierunku Kota Oliwek?
       courseC_PlayLab_events3_2018: Czy możesz napisać program, który sprawia, że
+        Jorge (postać 1) idzie w kierunku Kota Oliwek?
+      courseC_PlayLab_events3_2019: Czy możesz napisać program, który sprawia, że
         Jorge (postać 1) idzie w kierunku Kota Oliwek?
       courseC_artist_loops5a: Spróbuj nowych nalepek!
       courseC_artist_loops5a_2018: Spróbuj nowych nalepek!
@@ -2924,24 +2946,34 @@ pl:
         spróbuj ustawić wynik z powrotem na 0.
       courseC_harvester_loops10: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops10_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops10_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops11_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops4_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops5: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops5_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops5_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops6: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops6_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops6_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops7_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops9_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops_challenge1: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge1a: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge1a_2018: Zbierz całą kukurydzę.
+      courseC_harvester_loops_challenge1a_2019: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
       courseC_harvester_loops_challenge2_2018: Zbierz wszystkie sałaty. Unikaj drzew
+        i pól!
+      courseC_harvester_loops_challenge2_2019: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
       courseC_harvester_loops_forVid: Zbierz wszystkie kukurydze i dynie.
       courseC_maze_debugging10: Napraw ten program przestawiając lub zmieniając bloki,

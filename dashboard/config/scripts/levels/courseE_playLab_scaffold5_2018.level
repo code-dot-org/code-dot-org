@@ -35,10 +35,10 @@
     "disable_sharing": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
+    "short_instructions": "Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
     "project_template_level_name": "grade4_scaffolded_template_2018",
     "first_sprite_index": "0",
-    "markdown_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
+    "long_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
     "instructions_important": "false",
     "soft_buttons": [
       "leftButton",

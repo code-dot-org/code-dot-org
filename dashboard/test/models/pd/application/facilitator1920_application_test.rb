@@ -2,6 +2,9 @@ require 'test_helper'
 
 module Pd::Application
   class Facilitator1920ApplicationTest < ActiveSupport::TestCase
+    include Pd::Application::ApplicationConstants
+    include Pd::Facilitator1920ApplicationConstants
+
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
@@ -47,11 +50,11 @@ module Pd::Application
       assert_equal @regional_partner, application.regional_partner
     end
 
-    test 'open until Feb 1, 2019' do
-      Timecop.freeze Time.zone.local(2019, 1, 31, 23, 59) do
+    test 'open until April 1, 2019' do
+      Timecop.freeze Time.zone.local(2019, 3, 31, 23, 59) do
         assert Facilitator1920Application.open?
       end
-      Timecop.freeze Time.zone.local(2019, 2, 1) do
+      Timecop.freeze Time.zone.local(2019, 4, 1) do
         refute Facilitator1920Application.open?
       end
     end
@@ -105,10 +108,19 @@ module Pd::Application
       application = build :pd_facilitator1920_application, form_data_hash: application_hash, course: :csf
 
       answers = application.full_answers
-      assert answers.key? :csf_availability
-      assert answers.key? :csf_partial_attendance_reason
-      refute answers.key? :csd_csp_fit_availability
-      refute answers.key? :csd_csp_teachercon_availability
+      [
+        :csf_good_standing_requirement,
+        :csf_summit_requirement,
+        :csf_workshop_requirement,
+        :csf_community_requirement
+      ].each {|x| assert answers.key? x}
+      [
+        :csd_csp_good_standing_requirement,
+        :csd_csp_lead_summer_workshop_requirement,
+        :csd_csp_workshop_requirement,
+        :csd_csp_lead_summer_workshop_requirement,
+        :csd_csp_deeper_learning_requirement
+      ].each {|x| refute answers.key? x}
     end
 
     test 'csd and csp applications have csf answers filtered out' do
@@ -119,119 +131,80 @@ module Pd::Application
         application = build :pd_facilitator1920_application, form_data_hash: application_hash, course: course
 
         answers = application.full_answers
-        refute answers.key? :csf_availability
-        refute answers.key? :csf_partial_attendance_reason
-        assert answers.key? :csd_csp_fit_availability
-        assert answers.key? :csd_csp_teachercon_availability
+
+        [
+          :csf_good_standing_requirement,
+          :csf_summit_requirement,
+          :csf_workshop_requirement,
+          :csf_community_requirement
+        ].each {|x| refute answers.key? x}
+        [
+          :csd_csp_good_standing_requirement,
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_workshop_requirement,
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_deeper_learning_requirement
+        ].each {|x| assert(answers.key?(x), "Expected #{x} to be in the hash")}
       end
+    end
+
+    test 'columns_to_remove' do
+      ['csf', 'csd', 'csp'].each do |course|
+        columns = Facilitator1920Application.columns_to_remove(course)
+        columns.each do |k|
+          if course == 'csf'
+            refute k.to_s.starts_with?('csf')
+          elsif course == 'csd'
+            refute k.to_s.starts_with?("#{course}_training")
+          else
+            refute k.to_s.starts_with?('csd_csp', "#{course}_training")
+          end
+        end
+      end
+    end
+
+    test 'csv_filtered_labels' do
+      csv_filtered_labels_csf = Facilitator1920Application.csv_filtered_labels('csf')
+      assert csv_filtered_labels_csf.include? :csf_good_standing_requirement
+      refute csv_filtered_labels_csf.include? :csd_csp_good_standing_requirement
+
+      csv_filtered_labels_csd = Facilitator1920Application.csv_filtered_labels('csd')
+      assert csv_filtered_labels_csd.include? :csd_csp_good_standing_requirement
+      refute csv_filtered_labels_csd.include? :csp_training
+      refute csv_filtered_labels_csd.include? :csf_good_standing_requirement
+
+      csv_filtered_labels_csp = Facilitator1920Application.csv_filtered_labels('csp')
+      assert csv_filtered_labels_csp.include? :csd_csp_good_standing_requirement
+      refute csv_filtered_labels_csp.include? :csd_training
+      refute csv_filtered_labels_csp.include? :csf_good_standing_requirement
     end
 
     test 'to_csv_row method' do
       @application.update!(regional_partner: @regional_partner, status: 'accepted', notes: 'notes')
 
-      csv_row = @application.to_csv_row(nil)
+      csv_row = @application.to_csv_row(@application.course)
       csv_answers = csv_row.split(',')
-      assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
-      assert_equal 'notes', csv_answers[-6]
-      assert_equal 'false', csv_answers[-7]
-      assert_equal 'accepted', csv_answers[-8]
+      assert_equal @regional_partner.name, csv_answers[36]
+      assert_equal 'notes', csv_answers[15]
+      assert_equal 'accepted', csv_answers[2]
+      assert csv_answers[37].include?("/pd/application_dashboard/#{@application.course}_facilitators/#{@application.id}")
     end
 
     test 'csv_header and row return same number of columns' do
-      mock_user = mock
-
-      header = Facilitator1920Application.csv_header('csp', mock_user)
-      row = @application.to_csv_row(mock_user)
+      course = 'csp'
+      header = Facilitator1920Application.csv_header(course)
+      row = @application.to_csv_row(course)
       assert_equal CSV.parse(header).length, CSV.parse(row).length,
         "Expected header and row to have the same number of columns"
     end
 
-    test 'to_cohort_csv' do
-      optional_columns = {registered_workshop: true, accepted_teachercon: false}
-      assert (header = Facilitator1920Application.cohort_csv_header(optional_columns))
-      assert (row = @application.to_cohort_csv_row(optional_columns))
-      assert_equal CSV.parse(header).length, CSV.parse(row).length,
-        "Expected header and row to have the same number of columns"
-    end
-
-    test 'locking an application with fit_workshop_id automatically enrolls user' do
+    test 'locking an accepted application with fit_workshop_id does not automatically enroll user' do
       @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
 
-      assert_creates(Pd::Enrollment) do
+      refute_creates(Pd::Enrollment) do
         @application.lock!
       end
-      assert_equal Pd::Enrollment.last.workshop, @fit_workshop
-      assert_equal Pd::Enrollment.last.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'updating and re-locking an application with an auto-assigned FIT enrollment will delete old enrollment' do
-      first_workshop = @fit_workshop
-      second_workshop = create :pd_workshop, :fit
-
-      @application.fit_workshop_id = first_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.fit_workshop_id = second_workshop.id
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'upading the application to unaccepted will also delete the autoenrollment' do
-      @application.fit_workshop_id = @fit_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.status = "waitlisted"
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-
-      @application.unlock!
-      @application.status = "accepted"
-
-      assert_creates(Pd::Enrollment) do
-        @application.lock!
-      end
-
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'assign_default_workshop! saves the default workshop' do
-      @application.expects(:find_default_workshop).returns(@fit_workshop)
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      @application.update! pd_workshop_id: @fit_workshop.id
-      @application.expects(:find_default_workshop).never
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! saves the default fit workshop' do
-      @application.expects(:find_default_fit_workshop).returns(@fit_workshop)
-
-      @application.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application.reload.fit_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
-      @application_with_fit_workshop.expects(:find_default_fit_workshop).never
-
-      @application_with_fit_workshop.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
     end
 
     test 'fit_workshop returns the workshop associated with the assigned fit workshop id' do
@@ -287,7 +260,6 @@ module Pd::Application
     end
 
     test 'fit_cohort' do
-      skip "update when 1920 fit registration is implemented"
       included = [
         create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :accepted),
         create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :waitlisted)
@@ -318,14 +290,159 @@ module Pd::Application
       Facilitator1920Application::FILTERED_LABELS.clear
 
       filtered_labels_csd = Facilitator1920Application.filtered_labels('csd')
-      assert filtered_labels_csd.key? :csd_csp_fit_availability
-      refute filtered_labels_csd.key? :csf_availability
+      assert filtered_labels_csd.key? :csd_csp_lead_summer_workshop_requirement
+      refute filtered_labels_csd.key? :csf_good_standing_requirement
       assert_equal ['csd'], Facilitator1920Application::FILTERED_LABELS.keys
 
       filtered_labels_csf = Facilitator1920Application.filtered_labels('csf')
-      refute filtered_labels_csf.key? :csd_csp_fit_availability
-      assert filtered_labels_csf.key? :csf_availability
+      refute filtered_labels_csf.key? :csd_csp_lead_summer_workshop_requirement
+      assert filtered_labels_csf.key? :csf_good_standing_requirement
       assert_equal ['csd', 'csf'], Facilitator1920Application::FILTERED_LABELS.keys
+    end
+
+    test 'meets_criteria says yes if everything is set to YES, no if anything is NO, and INCOMPLETE if anything is unset' do
+      %w(csf csd csp).each do |course|
+        application = create :pd_facilitator1920_application, course: course
+        score_hash = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym].map {|key| [key, YES]}.to_h
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash}.to_json
+        )
+
+        assert_equal YES, application.meets_criteria
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash.merge({teaching_experience: NO})}.to_json
+        )
+
+        assert_equal NO, application.meets_criteria
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash.merge({teaching_experience: nil})}.to_json
+        )
+
+        assert_equal REVIEWING_INCOMPLETE, application.meets_criteria
+      end
+    end
+
+    test 'scoring works as expected' do
+      @application.update(
+        response_scores: @application.default_response_score_hash.deep_merge(
+          {
+            bonus_points_scores: {
+              currently_involved_in_cs_education: 5,
+              grades_taught: 5,
+              experience_teaching_this_course: 5,
+              why_should_all_have_access: 5,
+              skills_areas_to_improve: 5,
+              inquiry_based_learning: 5,
+              why_interested: 5,
+              question_1: 5,
+              question_2: 5,
+              question_3: 5,
+              question_4: 5,
+              question_5: 5
+            }
+          }
+        ).to_json
+      )
+
+      assert_equal(
+        {
+          total_score: "60 / 60",
+          application_score: "35 / 35",
+          interview_score: "25 / 25",
+          teaching_experience_score: "10 / 10",
+          leadership_score: "5 / 5",
+          champion_for_cs_score: "5 / 5",
+          equity_score: "15 / 15",
+          growth_minded_score: "15 / 15",
+          content_knowledge_score: "5 / 5",
+          program_commitment_score: "5 / 5"
+        }, @application.all_scores
+      )
+    end
+
+    test 'clear out extraneous csd and csp answers for a csf application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csf, :with_csd_csp_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csf', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      refute application_hash.key? :csp_training_requirement
+    end
+
+    test 'clear out extraneous csf answers for a csd application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csd, :with_csf_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csd', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      refute application_hash.key? :csp_training_requirement
+    end
+
+    test 'clear out extraneous csf answers for a csp application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csp, :with_csf_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csp', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      assert application_hash.key? :csp_training_requirement
+    end
+
+    test 'associated models cache prefetch' do
+      workshop = create :pd_workshop
+      fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, pd_workshop_id: workshop.id, fit_workshop_id: fit_workshop.id
+      # Workshops, Sessions, Enrollments
+      assert_queries 3 do
+        Facilitator1920Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal workshop, application.workshop
+      end
+    end
+
+    test 'enroll_user creates enrollment' do
+      fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id
+
+      assert_nil application.auto_assigned_fit_enrollment_id
+      assert_creates(Pd::Enrollment) do
+        application.enroll_user
+      end
+
+      assert application.auto_assigned_fit_enrollment_id
+    end
+
+    test 'enroll_user for a different workshop deletes previous enrollment' do
+      original_fit_workshop = create :pd_workshop, :fit
+      new_fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, fit_workshop_id: original_fit_workshop.id
+
+      application.enroll_user
+      original_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+      assert_equal original_fit_workshop.id, original_enrollment.pd_workshop_id
+
+      application.fit_workshop_id = new_fit_workshop.id
+
+      # actually creates a new enrollment and destroys the old one,
+      # and this method checks that the total enrollment count does not change
+      refute_creates_or_destroys(Pd::Enrollment) do
+        application.enroll_user
+      end
+      new_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+      assert_equal new_fit_workshop.id, new_enrollment.pd_workshop_id
     end
   end
 end

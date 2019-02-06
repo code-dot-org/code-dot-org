@@ -1,5 +1,6 @@
 import msg from '@cdo/locale';
-import React, {PropTypes, Component} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
@@ -41,7 +42,7 @@ class CompletionButton extends Component {
       return <div/>;
     }
 
-    if (this.props.isSubmittable) {
+    if (this.props.isSubmittable || this.props.isSubmitted) {
       if (this.props.isSubmitted) {
         id = 'unsubmitButton';
         contents = msg.unsubmit();
@@ -72,6 +73,8 @@ class CompletionButton extends Component {
   }
 }
 
+export const UnconnectedCompletionButton = CompletionButton;
+
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isSubmittable: state.pageConstants.isSubmittable,
@@ -80,7 +83,3 @@ export default connect(state => ({
 }))(CompletionButton);
 
 export {styles};
-
-export var __TestInterface__ = {
-  UnconnectedCompletionButton: CompletionButton
-};

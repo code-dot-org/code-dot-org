@@ -1,0 +1,30 @@
+{
+  "category": "",
+  "config": {
+    "func": "move",
+    "blockText": "move {DIR}",
+    "args": [
+      {
+        "name": "DIR",
+        "options": [
+          [
+            "up",
+            "\"up\""
+          ],
+          [
+            "down",
+            "\"down\""
+          ],
+          [
+            "left",
+            "\"left\""
+          ],
+          [
+            "right",
+            "\"right\""
+          ]
+        ]
+      }
+    ]
+  }
+}

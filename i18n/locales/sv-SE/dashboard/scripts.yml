@@ -1860,3 +1860,42 @@ sv:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'
+        dance-extras-gallery:
+          title: Fortsätt att dansa
+          description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Bygga en grund
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmer i verkliga livet: Pappersflygplan'
+            Binary Bracelets:
+              name: Binära armband
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verklighetsalgoritmer: Så ett frö'
+            Going Places Safely:
+              name: Trygg resa
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Flytta det, flytta den
+            Your Digital Footprint:
+              name: Ditt digitala fotavtryck
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Flytta det, flytta den
+            Your Digital Footprint:
+              name: Ditt digitala fotavtryck
+            Spelling Bee:
+              name: Stavnings-bi
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verklighetsalgoritmer: Så ett frö'

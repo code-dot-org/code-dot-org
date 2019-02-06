@@ -1,6 +1,6 @@
 ---
 title: Computer Science Principles
-nav: educate_nav
+
 ---
 
 # CS Principles Monthly Status Updates
@@ -9,9 +9,13 @@ Sign up below to receive monthly email updates on  Code.org’s Computer Science
 
 ## Sign-up information
 
-<iframe src="http://go.pardot.com/l/153401/2017-08-24/jjjm14" width="100%" height="200" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+<iframe src="http://go.pardot.com/l/153401/2017-08-24/jjjm14" width="100%" height="250" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 
 ## <a name="previous"></a>Previous updates
+
+### 2019
+
+- <a href="http://go.pardot.com/webmail/153401/518258898/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">January 2019</a>
 
 ### 2018
 

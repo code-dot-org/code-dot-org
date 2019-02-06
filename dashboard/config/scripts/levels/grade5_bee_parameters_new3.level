@@ -35,7 +35,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade5_bee_parameters_new3_1\",\r\n  \"callout_text\": \"This same function can be used when checking for empty spaces as well as clouds.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will run no matter which direction you're facing.\",\"hint_id\":\"grade5_bee_parameters_new3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/03e76450542ed7078c03955258ecdfa6/grade5_bee_parameters_new3.mp3\"}]",
     "instructions_important": "false",
-    "markdown_instructions": "Time to put the function to the test! \r\n\r\nLet's see if it makes collecting these three rows of nectar any easier.",
+    "long_instructions": "Time to put the function to the test! \r\n\r\nLet's see if it makes collecting these three rows of nectar any easier.",
     "contained_level_names": null
   },
   "published": true,

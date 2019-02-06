@@ -68,7 +68,7 @@ is:
   courses: Námskeið
   courses_page:
     title_student: Lærðu í Kóðastúdíóinu
-    title_teacher: Kenna með Kóðastúdíóinu
+    title_teacher: Kenna Tölvunarfræði
   unplugged_activity: Verkefni án tölvu
   of: af
   more: MEIRA
@@ -90,11 +90,11 @@ is:
       hér</a> til að skrá þig út af %{provider}.
     already_signedup: Búin/n að skrá þig?
     notyet_signedup: Ekki skráð þig enn?
-    google_oauth2: Google reikning
+    google_oauth2: Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft reikning
-    microsoft_v2_auth: Microsoft reikning
+    windowslive: Microsoft
+    microsoft_v2_auth: Microsoft
     clever: Clever aðgangur
     forgot_password: Gleymdir þú lykilorðinu þínu ?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
@@ -139,12 +139,9 @@ is:
     valid_password: Gilt lykilorð!
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
-    student_terms: Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a>
-      Code.org. Ef ég er yngri en 13 ára, staðfesti ég með því að senda inn þetta
-      form að ég hef leyfi foreldra eða löglegs forráðamanns til að nota þjónustu
-      Code.org.<br/><br/>Netföng eru ekki geymd á sniði sem gerir okkur kleift að
-      hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til
-      að endurstilla aðgangsorð. Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a>
+    student_terms: Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband
+      við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla
+      aðgangsorð. Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a>
       okkar.
     teacher_terms: Ég samþykki að hlíta þjónustuskilmálum Code.org. Nánari upplýsingar
       um persónuvernd má finna í <a href='http://code.org/privacy'>persónuverndarstefnu</a>
@@ -293,7 +290,7 @@ is:
           Þú getur nú skráð þig inn með notendanafni (%{username}) og leyniorði
   nav:
     header:
-      finished_hoc: Ég hef lokið við mína Klukkustund kóðunar
+      finished_hoc: Ég kláraði!
       sign_in_to_save: Skráðu þig inn til að vista framvinduna
       free_play:
         playlab: Búa til Leikjasmiðju-app
@@ -401,8 +398,9 @@ is:
     new_password_hint: "(hafðu autt ef þú vilt ekki breyta því)"
     current_password_hint: "(við þurfum að fá núverandi lykilorð þitt til að staðfesta
       breytingarnar)"
-    delete: Eyða aðgangi þínum
-    delete_text: Að smella á hnappinn fyrir neðan eyðir aðgangi þínum.
+    delete: Eyða aðgangi
+    delete_text: Ef aðgangi er eytt þurrkar það út allar upplýsingar sem tengjast
+      aðganginum, svo sem árangur í verkefnum.
     delete_text_teacher_note: 'Vinsamlegast athugaðu: þó þú eyðir þínum aðgangi, eyðir
       það ekki aðgangi nemenda þinna.'
     delete_confirm: Ertu viss um að þú viljir eyða aðgangi þínum?
@@ -410,7 +408,7 @@ is:
     no_password_because_oauth: Ekkert lykilorð því þú skráir þig inn frá þriðja aðila.
     no_password_because_sponsored: Ræddu við kennarann þinn varðandi umsjón lykilorðs
       þíns.
-    create_personal_login: Búa til einkaaðgang
+    create_personal_login: Búa til eigin aðgang með lykilorði
     create_personal_login_under_13_info: Ef þú vilt halda áfram að nota Code.org aðganginn
       þó að skólinn sé búinn, getur þú beðið foreldri/forráðamann að hjálpa þér að
       stofna þinn eigin persónulega aðgang hér fyrir neðan.
@@ -420,8 +418,8 @@ is:
       skólaársins, getur þú stofnað þinn eigin aðgang hér fyrir neðan.
     create_personal_login_terms: Með því að stofna minn eigin aðgang, samþykki ég
       að undirgangast <a href='%{terms_of_service_url}', target='_blank'>þjónustuskilmála</a>
-      Code.org. Ef ég er yngri en 13 ára, staðfesti ég að ég hef leyfi foreldris eða
-      löglegs forráðamanns til að nota þjónustu Code.org án kennara.
+      Code.org. Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til
+      að nota þjónustu Code.org án kennara.
     create_personal_login_email_note: 'Athugið: Netföng eru ekki vistuð þannig að
       við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá
       Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar
@@ -628,10 +626,10 @@ is:
       <a href="https://code.org/about/partners">samstarfsaðila</a>, <a href="https://code.org/about/team">allra
       í vinnuteyminu</a>, þeirra sem koma fram í myndböndum og <a href="https://code.org/about/advisors">fræðsluráðgjafa</a>
       fyrir stuðninginn við gerð Kóðastúdíósins.
-    help_from_html: Við viljum sérstaklega nefna tæknifólkið hjá Google, Microsoft,
-      Facebook, Twitter og marga aðra sem aðstoðuðu við gerð þessa kennsluefnis.
-    help_from_html_old: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðaði
-      við gerð þessa kennsluefnis.
+    help_from_html: Við viljum sérstaklega nefna tæknifólkið hjá Amazon, Google og
+      Microsoft sem aðstoðaði við gerð þessa kennsluefnis.
+    help_from_html_old: Tæknifólk hjá Amazon, Google og Microsoft aðstoðaði við gerð
+      þessa kennsluefnis.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Öll réttindi
       áskilin.<br />Star Wars&#8482;  &copy; %{current_year} Disney og Lucasfilm.
       Öll réttindi áskilin.<br />Frozen&#8482; &copy; %{current_year} Disney. Öll
@@ -949,8 +947,8 @@ is:
     tos: Skilmálar
     privacy: Persónuvernd
     privacy_notice: Tilkynning um persónuvernd
-    accept_label: Ég samþykki hina breyttu <a href="%{tos_url}" target="_blank">þjónustuskilmála</a>
-      og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a>
+    accept_label: Ég samþykki <a href="%{tos_url}" target="_blank">þjónustuskilmálana</a>
+      og <a href="%{privacy_url}" target="_blank">persónuverndarstefnuna</a>.
     accept: Samþykkja
     print: Prenta
     reminder_desc: Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a>
@@ -1127,8 +1125,8 @@ is:
     csd4_2: 'Kafli 2: Frumgerðir appa'
     csd5_1: 'Kafli 1: Kóðun upplýsinga'
     csd5_2: 'Kafli 2: Lausn vandamála með gögn'
-    csd6_1: 'Kafli 1: Úttak vélbúnaðar'
-    csd6_2: 'Kafli 2: Inntak vélbúnaðar'
+    csd6_1: 'Kafli 1: Forritun vélbúnaðar'
+    csd6_2: 'Kafli 2: Smíði frumgerða vélbúnaðar'
     csp1_1: 'Kafli 1: Framsetning og flutningur upplýsinga'
     csp1_2: 'Kafli 2: Að finna upp internetið'
     csp2_1: 'Kafli 1: Að umkóða og þjappa margbrotnar upplýsingar'
@@ -1252,7 +1250,7 @@ is:
   courses_category: Heil námskeið
   cookie_banner:
     message: Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki"
-      samþykkir þú vistun smygilda (cookies) á tölvu þinni eða tæki.
+      samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.
     more_information: Sjá persónuverndarstefnu Code.org.
     accept: Sammála
   gdpr_dialog:

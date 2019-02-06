@@ -1013,7 +1013,7 @@ de:
             'Farmer: While Loops':
               name: 'Bauer: Solange-Schleifen'
         csd3-2017:
-          description_short: "Programmierung"
+          description_short: Programmierung
           stages:
             Functions:
               name: Funktionen
@@ -1741,3 +1741,44 @@ de:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'nichts'
+        dance-extras-gallery:
+          title: Tanzt weiter
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            'Real-life Algorithms: Paper Planes':
+              name: 'Alltagsalgorithmen: Papierflieger'
+            Binary Bracelets:
+              name: Binäre Armbänder
+        gamelab:
+          title: Spielelabor
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-Life-Algorithmen: Pflanze Samen'
+            Going Places Safely:
+              name: Sicher unterwegs
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Bewegung, Bewegung
+            Your Digital Footprint:
+              name: Dein digitaler Fußabdruck
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Bewegung, Bewegung
+            Your Digital Footprint:
+              name: Dein digitaler Fußabdruck
+            Spelling Bee:
+              name: Buchstabierwettbewerb
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-Life-Algorithmen: Pflanze Samen'

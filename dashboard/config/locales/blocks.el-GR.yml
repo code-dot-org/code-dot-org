@@ -309,14 +309,34 @@ el:
       Dancelab_setBackground:
         text: ορισμός χρώματος φόντου {COLOR}
       Dancelab_setBackgroundEffect:
-        text: ορισμός εφέ φόντου {EFFECT}
+        text: ορισμός εφέ φόντου {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Κανένα
-            '"disco"': Τετράγωνα
-            '"rainbow"': Χρώματα
+            '"circles"': Σήραγγα
+            '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Τυχαίο)"
+            '"disco_ball"': Ντισκομπάλα
+            '"swirl"': Ύπνωση
+            '"kaleidoscope"': Καλειδοσκόπιο
+            '"lasers"': Πίστα χορού λέιζερ
+            '"splatter"': Πιτσιλιές χρωμάτων
+            '"rainbow"': Ουράνιο τόξο
+            '"snowflakes"': Χιόνι
+            '"text"': Τίτλος τραγουδιού
+            '"galaxy"': Διάστημα
+            '"sparkles"': Αστράκια
+            '"spiral"': Σπιράλ
+            '"disco"': Τετράγωνα
+            '"stars"': Αστέρια
+          PALETTE:
+            '"rave"': Ασπρόμαυρο
+            '"cool"': Μπλουζ
+            '"default"': Φωτεινό
+            '"neon"': Νέον
+            '"tropical"': Τροπικό
+            '"vintage"': Βίντατζ
+            '"warm"': Κόκκινα
       Dancelab_setBackgroundEffectWithPalette:
         text: ορισμός εφέ φόντου {EFFECT} {PALETTE}
         options:
@@ -324,14 +344,19 @@ el:
             '"none"': Κανένα
             '"rand"': "(Τυχαίο)"
             '"circles"': Σήραγγα
+            '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
             '"disco_ball"': Ντισκομπάλα
+            '"swirl"': Ύπνωση
             '"kaleidoscope"': Καλειδοσκόπιο
             '"lasers"': Πίστα χορού λέιζερ
             '"splatter"': Πιτσιλιές χρωμάτων
-            '"rainbow"': Χρώματα
+            '"rainbow"': Ουράνιο τόξο
+            '"snowflakes"': Χιόνι
             '"text"': Τίτλος τραγουδιού
+            '"galaxy"': Διάστημα
             '"sparkles"': Αστράκια
+            '"spiral"': Σπιράλ
             '"disco"': Τετράγωνα
             '"stars"': Αστέρια
           PALETTE:
@@ -377,15 +402,7 @@ el:
         options:
           EFFECT:
             '"none"': Κανένα
-            '"rain"': Βροχή
-            '"raining_tacos"': Τάκο
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Τυχαίο)"
-      Dancelab_setForegroundEffectExtended:
-        text: ορισμός εφέ προσκηνίου {EFFECT}
-        options:
-          EFFECT:
-            '"none"': Κανένα
-            '"rand"': "(Τυχαίο)"
+            '"bubbles"': Μπουρμπουλήθρες
             '"confetti"': Κομφετί
             '"hearts_red"': Καρδιές
             '"music_notes"': Νότες μουσικής
@@ -393,6 +410,23 @@ el:
             '"smiling_poop"': Κακάκια
             '"rain"': Βροχή
             '"floating_rainbows"': Ουράνιο τόξο
+            '"smile_face"': Χαμογελαστή φατσούλα
+            '"raining_tacos"': Τάκο
+      Dancelab_setForegroundEffectExtended:
+        text: ορισμός εφέ προσκηνίου {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Κανένα
+            '"rand"': "(Τυχαίο)"
+            '"bubbles"': Μπουρμπουλήθρες
+            '"confetti"': Κομφετί
+            '"hearts_red"': Καρδιές
+            '"music_notes"': Νότες μουσικής
+            '"pineapples"': Ανανάδες
+            '"smiling_poop"': Κακάκια
+            '"rain"': Βροχή
+            '"floating_rainbows"': Ουράνιο τόξο
+            '"smile_face"': Χαμογελαστή φατσούλα
             '"raining_tacos"': Τάκο
       Dancelab_setProp:
         text: 'ορισμός {SPRITE} {PROPERTY} σε {VAL} '
@@ -684,7 +718,29 @@ el:
             "{x: 300, y: 100}": πάνω δεξιά
             "{x: 100, y: 300}": κάτω αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"rotation"': περιστροφή
+            '"x"': θέση x
+            '"y"': θέση y
+            '"direction"': κατεύθυνση κίνησης
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': όλα
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': όλα
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"rotation"': περιστροφή
+            '"x"': θέση x
+            '"y"': θέση y
+            '"direction"': κατεύθυνση κίνησης
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": πάνω
@@ -696,11 +752,11 @@ el:
             "{x: 300, y: 100}": πάνω δεξιά
             "{x: 100, y: 300}": κάτω αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': όλα
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -708,6 +764,46 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': όλα
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': όλα
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': όλα
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': όλα
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"rotation"': περιστροφή
+            '"x"': θέση x
+            '"y"': θέση y
+            '"direction"': κατεύθυνση κίνησης
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': όλα
+      Mikelab_ifDanceIs:
+        text: |-
+          εάν {SPRITE} κάνει {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.DoubleJam: Διπλό κάτω
+            MOVES.Fresh: Φρέσκο
+            MOVES.Roll: Κύλιση σώματος
+            MOVES.Kick: Αστέρι
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Rest: Κανένα
       Mikelab_randomColor:
         text: τυχαίο χρώμα
       Mikelab_setBG:
@@ -727,6 +823,18 @@ el:
           CORNER:
             '"right"': δεξιά
             '"left"': αριστερά
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 300}": κάτω μέρος
+            "{x: 100, y: 200}": αριστερά
+            "{x: 300, y: 200}": δεξιά
+            "{x: 200, y: 200}": κέντρο
+            "{x: 100, y: 100}": πάνω αριστερά
+            "{x: 300, y: 100}": πάνω δεξιά
+            "{x: 100, y: 300}": κάτω αριστερά
+            "{x: 300, y: 300}": κάτω δεξιά
       Mikelab_whenKeyPressed:
         text: όταν πιέζεται {KEY}
         options:
@@ -773,14 +881,32 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
-            '"tint"': απόχρωση
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+      binary_move:
+        options:
+          DIR:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+      binary_whenKey:
+        text: όταν πιέζεται {KEY}
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
       craft_ifPath:
         text: |-
           αν διαδρομή {DIR}

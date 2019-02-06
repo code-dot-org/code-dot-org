@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
@@ -28,6 +29,12 @@ const styles = {
   statusCell: StatusColors,
   notesCell: {
     maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
   }
 };
 
@@ -191,16 +198,6 @@ export class CohortViewTable extends React.Component {
       }
     });
 
-    if ([WorkshopTypes["teachercon"], WorkshopTypes["both"]].includes(this.workshopType)) {
-      columns.push({
-        property: 'accepted_teachercon',
-        header: {
-          label: 'Accepted Teachercon',
-          transforms: [sortable]
-        }
-      });
-    }
-
     if ([WorkshopTypes["local_summer"], WorkshopTypes["both"]].includes(this.workshopType)) {
       columns.push({
         property: 'registered_workshop',
@@ -212,7 +209,7 @@ export class CohortViewTable extends React.Component {
     }
 
     [
-      {property: 'notes', label: 'Notes'},
+      {property: 'notes', label: 'General Notes'},
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},

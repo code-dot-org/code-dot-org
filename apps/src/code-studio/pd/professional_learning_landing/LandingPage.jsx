@@ -2,7 +2,9 @@
  * Teacher Landing Page
  */
 
-import React, {PropTypes, Component} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
@@ -38,22 +40,14 @@ export default class LandingPage extends Component {
   };
 
   render() {
-    const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
-    const subHeading = CSF ?
-      i18n.plLandingSubheadingCSF() :
-      i18n.plLandingSubheading();
-    const description = CSF ?
-      i18n.plLandingDescriptionCSF() :
-      i18n.plLandingDescription();
-
     return (
       <div>
         <HeaderImage/>
         <br/>
         {this.props.lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
-            subHeading={subHeading}
-            description={description}
+            subHeading={i18n.plLandingSubheading()}
+            description={i18n.plLandingDescription({course: this.props.lastWorkshopSurveyCourse})}
             surveyUrl={this.props.lastWorkshopSurveyUrl}
           />
        )}

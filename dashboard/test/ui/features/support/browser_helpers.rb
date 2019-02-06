@@ -54,6 +54,14 @@ module BrowserHelpers
     expect(element_css_value(selector, property)).to eq(expected_value)
   end
 
+  def element_has_css_multiple_properties(selector, properties, expected_value)
+    expected = false
+    properties.each do |property|
+      expected ||= (element_css_value(selector, property) === (expected_value))
+    end
+    expected
+  end
+
   def element_css_value(selector, property)
     @browser.execute_script("return $(\"#{selector}\").css(\"#{property}\");")
   end

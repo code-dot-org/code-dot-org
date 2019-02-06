@@ -3,7 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from '@code-dot-org/snack-sdk';
+import {SnackSession} from 'snack-sdk';
 
 import * as applabConstants from './constants';
 import * as assetPrefix from '../assetManagement/assetPrefix';
@@ -18,6 +18,7 @@ import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
 import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
 import exportExpoDataWarningJs from '../templates/export/expo/DataWarning.exported_js';
+import exportExpoMetroConfigJs from '../templates/export/expo/metro.config.exported_js';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 import exportExpoWarningPng from '../templates/export/expo/warning.png';
@@ -386,10 +387,11 @@ export default {
       zip.file(appName + "/App.js", appJs);
       zip.file(appName + "/CustomAsset.js", exportExpoCustomAssetJs);
       zip.file(appName + "/DataWarning.js", exportExpoDataWarningJs);
+      zip.file(appName + "/metro.config.js", exportExpoMetroConfigJs);
     }
-    // NOTE: for expoMode, it is important that index.html comes first...
+    zip.file(appName + "/README.txt", readme);
+    // NOTE: for expoMode, it is important that index.html comes first in the assets zip folder...
     zip.file(mainProjectFilesPrefix + "index.html", rewriteAssetUrls(appAssets, html));
-    zip.file(mainProjectFilesPrefix + "README.txt", readme);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
     zip.file(mainProjectFilesPrefix + "style.css", fontAwesomeCSS + rewriteAssetUrls(appAssets, css));
     zip.file(mainProjectFilesPrefix + (expoMode ? "code.j" : "code.js"), rewriteAssetUrls(appAssets, code));
@@ -569,7 +571,7 @@ export default {
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
       name: project.getCurrentName(),
-      sdkVersion: '25.0.0',
+      sdkVersion: '31.0.0',
     });
 
     // Important that index.html comes first:

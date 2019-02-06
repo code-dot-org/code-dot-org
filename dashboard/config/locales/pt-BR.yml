@@ -394,6 +394,7 @@ pt-BR:
       artist: Artista
       gamelab: Laboratório de Jogos
       playlab: Laboratório
+      spritelab: Laboratório de Sprite
       minecraft: Minecraft
       flappy: Flappy bird
       dance: Festa dançante
@@ -743,7 +744,7 @@ pt-BR:
     report_abuse: Reportar abuso
     built_on_code_studio: Criado no Code Studio
     make_my_own_app: Criar meu próprio aplicativo
-    how_it_works: Como funciona
+    how_it_works: Como funciona (Ver o Código)
     try_hour_of_code: Faça uma Hora do Código!
   reference_area:
     title: Precisa de ajuda?

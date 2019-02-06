@@ -349,7 +349,7 @@ sl:
       4-5 While Loops 7: Vau, zdaj so kupi zemlje kar trije! Lahko napišeš program, ki odstrani vse tri, tako da so tla ravna?
       4-5 While Loops 8: "Tukaj je res globoka luknja in visok kup zemlje. Kolikokrat je treba zamahniti z lopato, da zravnaš tla?"
       4-5 While Loops Assessment 1: Zdaj je lukenj in kupov zemlje več. Pomagaj mi zapolniti luknje in odstraniti zemljo, da bodo tla ravna.
-      App Lab test: preizkusi
+      App Lab test: preizkus
       Artist - Nested Loops 1: 'Dokončaj kodo tako, da izriše te trikotnike. Prvi je že narejen. Namig: trije trikotniki v 360 stopinjski rotaciji.'
       Artist - Nested Loops 11: Lahko narišeš 10 kvadratov, ki predstavljajo pločnik, z uporabo ugnezdene zanke? Vsak kvadrat ima stranico dolgo 30 pikslov.
       Artist - Nested Loops 12: Lahko narišeš 36 trikotnikov z uporabo ugnezdene zanke?
@@ -440,6 +440,7 @@ sl:
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       Course 4 Play Lab Vars 7: Fino, zdaj pa igro naredimo bolj zapleteno. Vsakič, ko psa (igralec 1) zadane sendvič, ki ga je vrgel maček (igralec 2), igralec 1 točko izgubi. Začni z 10 točkami, da ne bo pretežko. Zmanjšaj tvoje število točk iz 10 na nič, da končaš to nalogo.
       Course 4 SCF 1: Uporabi predlagane funkcije za izris štirih vrst šestkotnikov. Opaziš, kako so sode vrstice zamaknjene v desno?
+      Course E MC Conditionals1: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       CourseF_PlayLab_vars2: Igra v prejšnji nalogi ni bila najbolj poštena. Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
       CourseF_PlayLab_vars3: Uporabi puščici levo in desno za premikanje psa in puščico gor za skok. Ali lahko zbereš vse zastave?
       CourseF_PlayLab_vars6: |-
@@ -736,6 +737,7 @@ sl:
       course4_artist_fwp_challenge1: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
       courseC_PlayLab_events3: Lahko narediš program, da bo pes šel do mačke?
       courseC_PlayLab_events3_2018: Lahko narediš program, da bo pes šel do mačke?
+      courseC_PlayLab_events3_2019: Lahko narediš program, da bo pes šel do mačke?
       courseC_artist_prog5: |-
         Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
       courseC_artist_prog5_2018: |-

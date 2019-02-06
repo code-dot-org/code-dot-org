@@ -4,7 +4,9 @@
  * manage their own accounts via email/oauth, or to sync students with an
  * external service like Microsoft Classroom or Clever.
  */
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
@@ -67,15 +69,12 @@ class LoginTypePicker extends Component {
         <CardContainer>
           <PictureLoginCard
             onClick={setLoginType}
-            disabled={disabled}
           />
           <WordLoginCard
             onClick={setLoginType}
-            disabled={disabled}
           />
           <EmailLoginCard
             onClick={setLoginType}
-            disabled={disabled}
           />
         </CardContainer>
         <div>
@@ -91,19 +90,16 @@ class LoginTypePicker extends Component {
               {withGoogle &&
                 <GoogleClassroomCard
                   onClick={this.openImportDialog}
-                  disabled={disabled}
                 />
               }
               {withMicrosoft &&
                 <MicrosoftClassroomCard
                   onClick={this.openImportDialog}
-                  disabled={disabled}
                 />
               }
               {withClever &&
                 <CleverCard
                   onClick={this.openImportDialog}
-                  disabled={disabled}
                 />
               }
             </CardContainer>
@@ -133,9 +129,7 @@ const PictureLoginCard = (props) => (
     title={i18n.loginTypePicture()}
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}
-    buttonText={i18n.loginTypePictureButton()}
     onClick={() => props.onClick('picture')}
-    disabled={props.disabled}
   />
 );
 PictureLoginCard.propTypes = {
@@ -149,9 +143,7 @@ const WordLoginCard = (props) => (
     title={i18n.loginTypeWord()}
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
-    buttonText={i18n.loginTypeWordButton()}
     onClick={() => props.onClick('word')}
-    disabled={props.disabled}
   />
 );
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -162,9 +154,7 @@ const EmailLoginCard = (props) => (
     title={i18n.loginTypePersonal()}
     subtitle={i18n.loginTypeEmailAgeGroup()}
     description={i18n.loginTypeEmailDescription()}
-    buttonText={i18n.loginTypeEmailButton()}
     onClick={() => props.onClick('email')}
-    disabled={props.disabled}
   />
 );
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -173,9 +163,7 @@ const GoogleClassroomCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeGoogleClassroom()}
     description={i18n.loginTypeGoogleClassroomDescription()}
-    buttonText={i18n.loginTypeGoogleClassroomButton()}
     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
-    disabled={props.disabled}
   />
 );
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -184,9 +172,7 @@ const MicrosoftClassroomCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeMicrosoftClassroom()}
     description={i18n.loginTypeMicrosoftClassroomDescription()}
-    buttonText={i18n.loginTypeMicrosoftClassroomButton()}
     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
-    disabled={props.disabled}
   />
 );
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -195,9 +181,7 @@ const CleverCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeClever()}
     description={i18n.loginTypeCleverDescription()}
-    buttonText={i18n.loginTypeCleverButton()}
     onClick={() => props.onClick(OAuthSectionTypes.clever)}
-    disabled={props.disabled}
   />
 );
 CleverCard.propTypes = PictureLoginCard.propTypes;

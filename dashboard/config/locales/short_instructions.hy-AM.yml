@@ -1830,6 +1830,10 @@ hy:
       Course 4 Variables Assessment: |-
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
+      Course E MC Conditionals1: |-
+        You’ll find the most valuable resources
+        underground, but it can get dark. Place at least 2 torches and mine at least
+        2 coal.
       CourseF_PlayLab_vars10: "Free Play time! Here are all of the\nvariables we've
         played with so far in this stage, as well as a few more in\ncase you want
         them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox that
@@ -2681,6 +2685,8 @@ hy:
       courseC_PlayLab_events3: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող 1) մետենա
         դեպի կատվին:'
       courseC_PlayLab_events3_2018: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող
+        1) մետենա դեպի կատվին:'
+      courseC_PlayLab_events3_2019: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող
         1) մետենա դեպի կատվին:'
       courseC_artist_prog5: |-
         This house needs a roof! Draw the triangle.  Hint:

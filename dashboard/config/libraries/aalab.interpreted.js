@@ -36,6 +36,8 @@ var show_score = false;
 var title = '';
 var subTitle = '';
 var spriteGroups = {};
+var thisSprite;
+var otherSprite;
 
 
 function initialize(setupHandler) {
@@ -75,6 +77,9 @@ function Behavior(func, extraArgs) {
   }
   this.func = func;
   this.extraArgs = extraArgs;
+  this.checkTerminate = function() {return false;};
+  this.timeStarted = new Date().getTime();
+  this.duration = Number.MAX_VALUE;
 }
 
 function normalizeBehavior(behavior) {
@@ -166,17 +171,54 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
-function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+function clickedOn(condition, group, event) {
+  var spriteGroup = group();
+  var typeOfClick = condition === "when" ? mouseIsOver : mousePressedOver;
+  for(var i = 0; i < spriteGroup.length; i++) {
+    var sprite = helperGetSpriteFromArray(spriteGroup, i);
+    touchEvents.push({type: typeOfClick, event: event, sprite: sprite});
+  }
+}
+
+function helperGetSpriteFromArray(spriteGroup, index) {
+	return function() {
+    	return spriteGroup[index];
+    };
 }
 
 function spriteDestroyed(sprite, event) {
   inputEvents.push({type: isDestroyed, event: event, param: sprite});
 }
 
+function whenTouching(condition, groupA, groupB, event) {
+  var spriteGroupA = groupA();
+  var spriteGroupB = groupB();
+  var isWhen = condition === "when" ? true : false;
+  var a, b; //individual sprites from each group
+  if(isWhen) {
+  	for(i = 0; i < spriteGroupA.length; i++) {
+      a = helperGetSpriteFromArray(spriteGroupA, i);
+      for(j = 0; j < spriteGroupB.length; j++) {
+      	b = helperGetSpriteFromArray(spriteGroupB, j);
+        collisionEvents.push({a: a, b: b, event: event});
+      }
+    }
+  } else {
+  	for(i = 0; i < spriteGroupA.length; i++) {
+      a = helperGetSpriteFromArray(spriteGroupA, i);
+      for(j = 0; j < spriteGroupB.length; j++) {
+      	b = helperGetSpriteFromArray(spriteGroupB, j);
+        collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
+      }
+    }
+  }
+}
+
+/*
 function whenTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event});
 }
+*/
 
 function whileTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
@@ -346,7 +388,12 @@ function draw() {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
       sprite.behaviors.forEach(function (behavior) {
-        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+        var timeElapsed = new Date().getTime() - behavior.timeStarted;
+        if(behavior.checkTerminate() || timeElapsed >= behavior.duration) {
+          removeBehavior(sprite, behavior);
+        } else {
+          behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+        }
       });
     });
 
@@ -368,11 +415,21 @@ function draw() {
     // Run touch events
     for (i = 0; i < touchEvents.length; i++) {
       eventType = touchEvents[i].type;
+      /*
+      if(eventType === mousePressedOver) {
+      	eventType = mouseIsOver;
+      }
+      */
       event = touchEvents[i].event;
       param = touchEvents[i].sprite ?
         touchEvents[i].sprite() :
         touchEvents[i].param;
-      if (param && eventType(param)) {
+      thisSprite = param;
+      // Just for experimentation, I'm breaking mouseIsOver for this to work
+      if(param && eventType === mouseIsOver && eventType(param) && mouseWentDown("leftButton")) {
+        event();
+      }
+      else if(param && eventType(param) && eventType !== mouseIsOver) {
         event();
       }
     }
@@ -380,7 +437,9 @@ function draw() {
     var createCollisionHandler = function (collisionEvent) {
       return function (sprite1, sprite2) {
         if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
+          thisSprite = sprite1;
+          otherSprite = sprite2;
+          collisionEvent.event(thisSprite, otherSprite);
         }
       };
     };
@@ -463,4 +522,3 @@ function removeTextBox(sprite) {
     sprite.textBox = {};
   };
 }
-

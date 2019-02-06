@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import { CourseBlocksAll } from './CourseBlocks';
@@ -51,7 +52,7 @@ class Courses extends Component {
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
     );
     const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
-    const showSpecialTeacherAnnouncement = false;
+    const showSpecialTeacherAnnouncement = true;
 
     return (
       <div style={styles.content}>

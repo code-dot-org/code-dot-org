@@ -1404,6 +1404,9 @@ et:
         positiivseid ja negatiivseid arve).
       Course 4 Variables Assessment: Kas oskad luua selle pildi, kasutades külgede
         jaoks muutujat? Iga joon peab olema 50 piksli pikkune.
+      Course E MC Conditionals1: Kõige väärtuslikumad maavarad leiad maa alt, kuid
+        seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt
+        kaks sütt.
       CourseF_PlayLab_vars10: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme
         selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \r \r
         Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on
@@ -1458,15 +1461,16 @@ et:
       Dance_Party_09: Kasuta `määra toon` plokki, et tantsija värvi muuta.
       Dance_Party_10: Pane teine tantsija muusikale vastavalt liikuma, kasutades `hakkab
         järgnema` plokki.
-      Dance_Party_11.5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
       Dance_Party_11.5_test: Kasuta "kõik pardid" plokke, et panna kõik pardid koos
         tantsima.
       Dance_Party_11: Plokk `kui vajutad ülesse` laseb koodi käivitada siis, kui vajutatakse
         ülemist nooleklahvi. Proovi panna tantsija kiireid liigutusi tegema kui vajutad
         ülemist nooleklahvi.
+      Dance_Party_11_5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
       Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi
         ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi. Kükita-plaksuta
         nii kiiresti kui võimalik!
+      Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       Food Fight!: "Lisasime sinu jaoks ühe viimase funktsiooni. \r \r Kasuta avaldist
         „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“
         ületab teatud arvu.\r \r Näide: „mängija_skoor“ 6 > 6\r \r Mängi mängu ja
@@ -2048,6 +2052,7 @@ et:
         end lill. Kui leiad lille, kogu sellelt nektar.
       Ryan Test Locked Blocks: Siin on funktsioon nimega „patrull“. Muuda seda, et
         liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
+      Ryan_Demo: Las põder alustab uue liigutusega peale 4 ühikut!
       SpecialFrozenLevel: Sa oled ametlikult meister kunstnik! Loo talve võlumaa.
       Standalone_Artist_1: Tere tulemast rakendusse Kunstnik! Proovime kõigepealt
         teha lihtsa ruudu, kasutades paremale pööramise plokki ja edasiliikumise plokki.
@@ -2292,21 +2297,29 @@ et:
         lisa selle asemel hoopis midagi muud)
       courseA_collector_loops8: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops8_2018: Kirjutage kood, et saada kätte kõik aare.
+      courseA_collector_loops8_2019: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops9: "** Väljakutse: ** Aare läheb treppide üles välja!
         Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_collector_loops9_2018: "** Väljakutse: ** Aare läheb treppide üles välja!
+        Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      courseA_collector_loops9_2019: "** Väljakutse: ** Aare läheb treppide üles välja!
         Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_maze_seq2: Muud koodi, et jõuaksin põrsani!
       courseA_maze_seq2_2018: Muud koodi, et jõuaksin põrsani!
       courseB_collector_loops7: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops7_2018: Kirjutage kood, et saada kätte kõik aare.
+      courseB_collector_loops7_2019: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops8: "** Väljakutse: ** Aare läheb treppidest alla välja!
         Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseB_collector_loops8_2018: "** Väljakutse: ** Aare läheb treppidest alla
         välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
+      courseB_collector_loops8_2019: "** Väljakutse: ** Aare läheb treppidest alla
+        välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseC_PlayLab_events3: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane
         1) liikuma kass Olive poole?
       courseC_PlayLab_events3_2018: Kas sa saad kirjutada programmi, mis paneks Jorge
+        (tegelane 1) liikuma kass Olive poole?
+      courseC_PlayLab_events3_2019: Kas sa saad kirjutada programmi, mis paneks Jorge
         (tegelane 1) liikuma kass Olive poole?
       courseC_artist_prog5: 'Sellele majale on katust vaja! Joonista kolmnurk. Vihje:
         kõik kolm külge on sama pikad.'

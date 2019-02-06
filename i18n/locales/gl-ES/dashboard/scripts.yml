@@ -1413,3 +1413,39 @@ gl:
               name: Internet
             Crowdsourcing:
               name: Colaboración Aberta
+        andrea-test:
+          stages:
+            'null':
+              name: 'nulo'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Construíndo unha base
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos da vida real: avión de papel'
+            Binary Bracelets:
+              name: Pulseiras Binarias
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da Vida Real: Planta unha Semente'
+            Going Places Safely:
+              name: Ir a Sitios en modo Seguro
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Creando camiños
+            Your Digital Footprint:
+              name: A túa pegada dixital
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Creando camiños
+            Your Digital Footprint:
+              name: A túa pegada dixital
+            Spelling Bee:
+              name: Abella que Soletrea
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da Vida Real: Planta unha Semente'

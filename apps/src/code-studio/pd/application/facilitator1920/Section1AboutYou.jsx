@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {FormGroup} from "react-bootstrap";
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
@@ -7,7 +8,6 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {YES} from '../ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
@@ -22,12 +22,8 @@ export default class Section1AboutYou extends LabeledFormComponent {
   static labels = PageLabels.section1AboutYou;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section1AboutYou),
-    "institutionType_other",
-    "completedCsCoursesAndActivities_other",
-    "howHeard_facilitator",
-    "howHeard_codeOrgStaff",
-    "howHeard_other"
+    ...Object.keys(PageLabels.section1AboutYou).slice(0, 13),
+    "institutionType_other"
   ];
 
   render() {
@@ -38,7 +34,8 @@ export default class Section1AboutYou extends LabeledFormComponent {
         </p>
         <p>
           This application should take 30 - 45 minutes to complete and includes both multiple choice and
-          free response questions. Fields marked with a
+          free response questions. The application should be submitted during a single session. An
+          incomplete application will not be saved. Fields marked with a
           {' '}<span style={{color: "red"}}>*</span>{' '}
           are required. If you need more information about the program before you apply, please visit
           {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}
@@ -57,7 +54,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
           placeholder: "Select a title"
         })}
         {this.inputFor("firstName")}
-        {this.inputFor("preferredFirstName", {required: false})}
         {this.inputFor("lastName")}
 
         {this.inputFor("accountEmail", {
@@ -74,57 +70,14 @@ export default class Section1AboutYou extends LabeledFormComponent {
         {this.selectFor("state", {placeholder: "Select a state"})}
         {this.inputFor("zipCode")}
 
-        {this.radioButtonsFor("genderIdentity")}
-        {this.checkBoxesFor("race")}
-
         {this.checkBoxesWithAdditionalTextFieldsFor("institutionType", {
           [TextFields.otherWithText] : "other"
         })}
 
         {this.inputFor("currentEmployer")}
         {this.inputFor("jobTitle")}
-
-        {this.largeInputFor("resumeLink")}
-
-        {this.radioButtonsFor("workedInCsJob")}
-
-        {this.props.data.workedInCsJob === YES &&
-          this.largeInputFor("csRelatedJobRequirements", this.indented())
-        }
-
-        {this.checkBoxesWithAdditionalTextFieldsFor("completedCsCoursesAndActivities", {
-          [TextFields.otherWithText] : "other"
-        })}
-
-        {this.radioButtonsFor("diversityTraining")}
-        {this.props.data.diversityTraining === YES &&
-          this.largeInputFor("diversityTrainingDescription", this.indented())
-        }
-
-        {this.checkBoxesWithAdditionalTextFieldsFor("howHeard", {
-          [TextFields.howHeardFacilitator] : "facilitator",
-          [TextFields.howHeardCodeOrgStaff] : "codeOrgStaff",
-          [TextFields.howHeardRegionalPartner] : "regionalPartner",
-          [TextFields.otherWithText] : "other"
-        })}
       </FormGroup>
     );
-  }
-
-  /**
-   * @override
-   */
-  static getDynamicallyRequiredFields(data) {
-    const requiredFields = [];
-
-    if (data.workedInCsJob === YES) {
-      requiredFields.push("csRelatedJobRequirements");
-    }
-    if (data.diversityTraining === YES) {
-      requiredFields.push("diversityTrainingDescription");
-    }
-
-    return requiredFields;
   }
 
   /**
@@ -146,21 +99,5 @@ export default class Section1AboutYou extends LabeledFormComponent {
     }
 
     return formatErrors;
-  }
-
-  /**
-   * @override
-   */
-  static processPageData(data) {
-    const changes = {};
-
-    if (data.workedInCsJob !== YES) {
-      changes.csRelatedJobRequirements = undefined;
-    }
-    if (data.diversityTraining !== YES) {
-      changes.diversityTrainingDescription = undefined;
-    }
-
-    return changes;
   }
 }

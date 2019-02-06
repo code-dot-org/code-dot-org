@@ -1,6 +1,6 @@
-
-import React, {PropTypes} from 'react';
-const msg = require('@cdo/locale');
+import PropTypes from 'prop-types';
+import React from 'react';
+import msg from '@cdo/locale';
 
 // NOTE: We still have a media query style associated with this component
 // in RotateContainer.scss which controls the display attribute (none vs block)
@@ -40,10 +40,10 @@ const styles = {
 /**
  * "Rotate your device" overlay.
  */
-const RotateContainer = React.createClass({
-  propTypes: {
+export default class RotateContainer extends React.Component {
+  static propTypes = {
     assetUrl: PropTypes.func.isRequired
-  },
+  };
 
   render() {
     // In StudioApp.prototype.fixViewportForSmallScreens_ we end up scaling our
@@ -74,6 +74,5 @@ const RotateContainer = React.createClass({
           </div>
       </div>
     );
-  },
-});
-module.exports = RotateContainer;
+  }
+}

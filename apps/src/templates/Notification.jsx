@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
@@ -255,7 +256,7 @@ class Notification extends Component {
               </div>
             </div>
             <div style={desktop ? null : styles.buttonsMobile}>
-              {buttonText && (
+              {buttonText && buttonLink && (
                 <Button
                   href={buttonLink}
                   color={Button.ButtonColor.gray}

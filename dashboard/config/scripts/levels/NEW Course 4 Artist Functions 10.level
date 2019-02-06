@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Click \"edit\" to fill out the blocks in the function definition to make a 40 pixel square.",
+    "short_instructions": "Click \"edit\" to fill out the blocks in the function definition to make a 40 pixel square.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -23,7 +23,7 @@
     "disable_sharing": "false",
     "callout_json": "[]",
     "ideal": "9",
-    "markdown_instructions": "Click \"edit\" to fill out the blocks in the function definition to make a 40 pixel square.\r\n\r\n",
+    "long_instructions": "Click \"edit\" to fill out the blocks in the function definition to make a 40 pixel square.\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

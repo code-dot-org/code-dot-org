@@ -1,6 +1,7 @@
 /** @file App Lab-specific Tooltip Overlay */
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import { getId } from './designElements/elementUtils';
 import { draggedElementDropPoint } from './gridUtils';

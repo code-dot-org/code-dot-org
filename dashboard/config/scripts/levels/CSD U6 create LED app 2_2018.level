@@ -156,7 +156,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Make Your App - The Code\r\n\r\nNext, you'll need to add the code that makes your app work.\r\n\r\n# Do This\r\n\r\n* Discuss with your partner what code you will need in your app.  Do you need...\r\n  * Events?\r\n  * Variables?\r\n  * Setters?\r\n  * Random Numbers?\r\n* In Code Mode, add in the code that will make your app work.",
+    "long_instructions": "# Make Your App - The Code\r\n\r\nNext, you'll need to add the code that makes your app work.\r\n\r\n# Do This\r\n\r\n* Discuss with your partner what code you will need in your app.  Do you need...\r\n  * Events?\r\n  * Variables?\r\n  * Setters?\r\n  * Random Numbers?\r\n* In Code Mode, add in the code that will make your app work.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
