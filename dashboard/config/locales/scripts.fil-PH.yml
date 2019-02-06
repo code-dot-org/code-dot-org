@@ -11819,6 +11819,8 @@ fil:
                 sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
                 na natutunan nila para lumikha ng isang laro na naka-animate. Oras
                 na para maging malikhain at gumawa ng istorya sa Play Lab!
+            Learn to Drag and Drop:
+              name: Matutong Mag-Drag at Mag-Drop
         courseb-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -11864,3 +11866,7 @@ fil:
               name: 'Pag-dedebug: Hindi nakitang mga Bug'
             'Real-life Algorithms: Plant a Seed':
               name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+        dani-test-script:
+          stages:
+            new stage:
+              name: bagong yugto

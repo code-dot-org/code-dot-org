@@ -1279,6 +1279,7 @@
   "subtitle": "визуалдык програмдоо чөйрөсү",
   "success": "Ийгилик!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Програмыңыздын ката терилген жери бар. {lineNumber}-сапты жок кылып, кайра иштеткиле.",

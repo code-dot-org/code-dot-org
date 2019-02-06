@@ -358,7 +358,6 @@
   homepage_slot_text_link_donate: "Venuj dar"
   homepage_slot_text_link_shop: "Tričká, čiapky a ďalšie"
   homepage_slot_text_link_administrators: "Prines Informatiku na tvoju školu"
-  homepage_header_codestudio: "Viac ako 25 miliónov projektov vytvorených na code.org"
   homepage_header_donors: "Code.org ďakuje za podporu"
   homepage_donors_seall: "Zobraziť všetky"
   homepage_donors_donate: "Prispejte"
@@ -534,11 +533,11 @@
   volunteer_engineer_submission_field_email: "Emailová adresa"
   volunteer_engineer_submission_field_email_desc: "Vaša e-mailová adresa nebude nikdy zdieľaná, ale zašleme vám žiadosti od učiteľov."
   volunteer_engineer_submission_field_email_placeholder: "Emailová adresa"
-  volunteer_engineer_submission_field_email_preference: "Môžeme Vám zasielať emailom aktualizácie o našich školeniach, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike?"
+  volunteer_engineer_submission_field_email_preference: "Môžeme vám zasielať emailom aktualizácie o našich školeniach, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike?"
   volunteer_engineer_submission_field_email_preference_privacy: "(Prezrite si naše Zásady ochrany osobných údajov)"
   volunteer_engineer_submission_field_email_preference_yes: 'Áno'
   volunteer_engineer_submission_field_email_preference_no: 'Nie'
-  volunteer_engineer_submission_final_paragraph: "Budete uvedení na mape, aby Vás miestni učitelia mohli kontaktovať počas Hodiny Kódu alebo iné dobrovoľnícke príležitosti. Váš email a presnú adresu se nikdy nezdieľame. Ale ostatné informácie (vrátane približného umiestnenia) budú verejne viditeľné."
+  volunteer_engineer_submission_final_paragraph: "Budete uvedení na mape, aby Vás miestni učitelia mohli kontaktovať počas Hodiny Kódu alebo iné dobrovoľnícke príležitosti. váš email a presnú adresu se nikdy nezdieľame. Ale ostatné informácie (vrátane približného umiestnenia) budú verejne viditeľné."
   volunteer_engineer_submission_checkbox_contact: 'Súhlasím, že učitelia ma môžu kontaktovať pre dobrovoľné priespievanie (Poznámka: Vaša e-mailová adresa nebude zverejnená)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Potvrdzujem, že už som dovŕšil 18 rokov."
   volunteer_engineer_submission_submit: "Odoslať"
@@ -605,7 +604,7 @@
   dashboard_hoc_courses_desc: "Skúste s Vašimi študentmi niektorý z týchto hodinových návodov!"
   dashboard_hoc_courses_desc_and_cta: "Skúste tieto krátke jedno-hodinové cvičenia so študentmi. <a href=\"https://hourofcode.com\"> pripojte sa k hnutiu Hodina Kódu</a> počas týždňa vyučovania informatiky."
   dashboard_k5_courses: "20-hodinové kurzy pre prvý stupeň ZŠ"
-  dashboard_k5_courses_desc: "Tieto kurzy kombinujú samostatné online aktivity s aktivitami bez počítača. Každý kurz sa skladá z približne 20 lekcií, ktoré môžy byť využité samostatne, alebo ako celoročný kurz. Vhodné už pre deti v materských školách. Aby sme Vám pomohli v začiatkoch, ponúkame v USA bezplatné kurzy pre učiteľov. <a href=\"/professional-development-workshops\">Nájdi jeden v tvojom okolí!</a>"
+  dashboard_k5_courses_desc: "Tieto kurzy kombinujú samostatné online aktivity s aktivitami bez počítača. Každý kurz sa skladá z približne 20 lekcií, ktoré môžy byť využité samostatne, alebo ako celoročný kurz. Vhodné už pre deti v materských školách. Aby sme vám pomohli v začiatkoch, ponúkame v USA bezplatné kurzy pre učiteľov. <a href=\"/professional-development-workshops\">Nájdi jeden v tvojom okolí!</a>"
   dashboard_middle_courses: "20 hodinové kurzy pre druhý stupeň ZŠ"
   dashboard_middle_courses_desc: "Naše kurikulum pre druhý stupeň ZŠ využíva informatiku a programovanie v kontexte druhostupňovej matematiky a vedných predmetov - ako nástroj na výučbu matematických a vedeckých konceptov. Pre registráciu na školenie pre učiteľov sa uchádzajte <a href=\"/educate/districts\">o partnerstvo</a> s code.org."
   dashboard_high_courses: "Celoročné kurzy pre stredné školy"
@@ -852,7 +851,7 @@
   how_to_teach_hoc: "Ako učiť \"Hodinu kódu\""
   more_resources_educators: "Ďalšie materiály pre učiteľov"
   beyond_submission: "Chcete pridať svoj kurz medzi kurzy Nad rámec Hodiny Kódu? Pozrite si kritéria a prihlasovací formulár."
-  third_party_submission: "Chcete aby Váš kurz bol zaradený tu? <a href=\"%{submission_url}\">Pozri si naše kritériá a prihlasovací formulár.</a>"
+  third_party_submission: "Chcete aby váš kurz bol zaradený tu? <a href=\"%{submission_url}\">Pozri si naše kritériá a prihlasovací formulár.</a>"
   participants: "účastníci"
   teachers_notes: "Poznámky učiteľa"
   teachers_notes_hoc: 'Učitelia: Prečítajte si dôležité pedagogické poznámky'
@@ -925,13 +924,17 @@
   coursee-2017_name: Kurz E (2017)
   coursef-2017_name: Kurz F (2017)
   coursea-2018_name: Kurz A (2018)
+  courseb-2018_name: Kurz B (2018)
   coursec-2018_name: Kurz C (2018)
   coursed-2018_name: Kurz D (2018)
+  coursee-2018_name: Kurz E (2018)
+  coursef-2018_name: Kurz F (2018)
   accelerated_name: "Zrýchlený kurz"
   express_name: "Zrýchlený kurz"
   pre-express_name: Zrýchlený kurz pre predškolákov
   express-2017_name: Zrýchlený kurz (2017)
   pre-express-2017_name: Zrýchlený kurz pre predškolákov (2017)
+  express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   cspunit1_name: "(staré) Lekcia 2: Digitálne informácie"
   cspunit2_name: "(staré) Lekcia 2: Internet"
@@ -1156,23 +1159,23 @@
   course3_shortdescription_congrats: "Ste pripravení ísť ďalej? Kurz 3 je určený pre študentov, ktorí absolvovali kurz 2. Študenti hlbšie preniknú do témy programovania predstavenej v predchádzajúcich kurzoch, s cieľom vytvoriť flexibilné riešenie komplexnejších problémov. Absolvovaním tohoto kurzu je študent schopný vytvoriť interaktívne príbehy a hry, ktoré môže zdieľať s kýmkoľvek. Kurz je odporúčaný pre žiakov 4. a 5. ročníka."
   course4_shortdescription_congrats: "Ste pripravení ísť ďalej? Študenti preniknú hlbšie do témy programovania predstavenej v predchádzajúcich kurzoch s cieľom nájsť flexibilné riešenie zložitejších problémov. Do konca tohto kurzu študenti vytvoria interaktívne príbehy a hry, ktoré môžu zdieľať s kýmkoľvek. Doporučené pre druhý stupeň ZŠ."
   coursea_shortdescription_congrats: "Predstavenie informatiky pre predškolákov."
-  courseb_shortdescription_congrats: "Predstavenie informatiky pre prvákov. (podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)"
+  courseb_shortdescription_congrats: "Predstavenie informatiky pre prvákov. (Podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)"
   coursec_shortdescription_congrats: "Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry."
-  coursed_shortdescription_congrats: "Rýchlo pokryte pojmy z kurzu C, potom pokračujte ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami."
-  coursee_shortdescription_congrats: "Rýchlo pokryjeme koncepty z kurzov C & D a budeme pokračovať s funkciami."
-  coursef_shortdescription_congrats: "Nauč sa všetky koncepty v kurze Základy informatiky a vytvor vlastné umelecké diela, príbeh alebo hru."
+  coursed_shortdescription_congrats: "Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami, vnorenými cyklami, podmienkami a viac."
+  coursee_shortdescription_congrats: "Rýchlo si zopakuj koncepty z kurzov C & D a potom pokračuj s funkciami."
+  coursef_shortdescription_congrats: "Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru."
   coursea-2017_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
-  courseb-2017_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
+  courseb-2017_shortdescription_congrats: Predstavenie informatiky pre prvákov. (Podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
   coursec-2017_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry.
-  coursed-2017_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom pokračujte ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
-  coursee-2017_shortdescription_congrats: Rýchlo pokryjeme koncepty z kurzov C & D a budeme pokračovať s funkciami.
-  coursef-2017_shortdescription_congrats: Nauč sa všetky koncepty v kurze Základy informatiky a vytvor vlastné umelecké diela, príbeh alebo hru.
+  coursed-2017_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami, vnorenými cyklami, podmienkami a viac.
+  coursee-2017_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C & D a potom pokračuj s funkciami.
+  coursef-2017_shortdescription_congrats: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
   coursea-2018_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
-  courseb-2018_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
+  courseb-2018_shortdescription_congrats: Predstavenie informatiky pre prvákov. (Podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
   coursec-2018_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry.
-  coursed-2018_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom pokračujte ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
-  coursee-2018_shortdescription_congrats: Rýchlo pokryjeme koncepty z kurzov C & D a budeme pokračovať s funkciami.
-  coursef-2018_shortdescription_congrats: Nauč sa všetky koncepty v kurze Základy informatiky a vytvor vlastné umelecké diela, príbeh alebo hru.
+  coursed-2018_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami, vnorenými cyklami, podmienkami a viac.
+  coursee-2018_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C & D a potom pokračuj s funkciami.
+  coursef-2018_shortdescription_congrats: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
   codeorg_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   codeintl_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1451,7 +1454,7 @@
   applab_tile_start_tutorial: "Spustiť"
   applab_tile_teacher_guide: "Zobraziť príručku pre učiteľa"
   aquatic_name: 'Minecraft Vodné Dobrodužstvo'
-  account_sign_up_email_opt_in: "Môžeme Vám zasielať emailom aktualizácie o lekciách, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne raz za mesiac)"
+  account_sign_up_email_opt_in: "Môžeme vám zasielať emailom aktualizácie o lekciách, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne raz za mesiac)"
   account_sign_up_child_accept_terms: "Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať stránkua služby Code.org."
   hoc_overview_dance_title: "Tanečná Párty"
   hoc_overview_dance_subtitle: "Nakóduj si vlastnú Tanečnú párty a zdieľaj ju kamarátmi! Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 ďalších!"
@@ -1492,7 +1495,7 @@
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition obsahuje kompletné učebné osnovy pre vyučovanie programovania v Minecrafte.'
   hoc2018_mc_educators_box1_button: "Začať"
   hoc2018_mc_educators_box2_title: "Stiahnuť príručku"
-  hoc2018_mc_educators_box2_desc: "Tieto materiály Vám pomôžu efektívne viesť Hodinu Kódu a zaujať Vašich študentov informatikou."
+  hoc2018_mc_educators_box2_desc: "Tieto materiály vám pomôžu efektívne viesť Hodinu Kódu a zaujať Vašich študentov informatikou."
   hoc2018_mc_educators_box2_button: "Stiahnuť"
   hoc2018_mc_educators_box3_title: "Zúčastniť sa workshopu pre študentov"
   hoc2018_mc_educators_box3_desc: "Navštívte Microsoft obchod vo Vašej oblasti a vyhľadajte workshop pre Hodinu Kódu. Pre účastníkov od 6 rokov."
@@ -1547,7 +1550,7 @@
   hoc2018_dance_teacher_resources_tile1_button: "Plán lekcie"
   hoc2018_dance_teacher_resources_tile2_title: "Tanečná Párty bez počítača"
   hoc2018_dance_teacher_resources_tile2_description: "Počítače nie sú potrebné! Naučte sa programátorské koncepty, s ktorými spoločne vytvoríte tanečnú párty."
-  hoc2018_dance_teacher_resources_tile2_button: "Aktivity bez počítača"
+  hoc2018_dance_teacher_resources_tile2_button: "Aktivita bez počítača"
   hoc2018_dance_featured_student_creations_title: "Vybrané výtvory žiakov"
   hoc2018_dance_videos_section_heading: "Nechajte sa inšpirovať"
   hoc2018_dance_video_title_what_is_creativity: "Čo je Kreativita?"

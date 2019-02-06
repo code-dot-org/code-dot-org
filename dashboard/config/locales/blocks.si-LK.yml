@@ -296,7 +296,7 @@ si:
         text: වමට හැරෙන්න
       RyanLab_turnRight:
         text: දකුණට හැරෙන්න
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
