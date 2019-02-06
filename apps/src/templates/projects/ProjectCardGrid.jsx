@@ -54,8 +54,10 @@ class ProjectCardGrid extends Component {
 
   onSelectApp = (appType) => {
     const projectGridDiv = document.getElementById('projectCardGrid');
-    const projectGridRect = projectGridDiv.getBoundingClientRect();
-    window.scrollTo(projectGridRect.left + window.pageXOffset, projectGridRect.top + window.pageYOffset);
+    if (projectGridDiv) {
+      const projectGridRect = projectGridDiv.getBoundingClientRect();
+      window.scrollTo(projectGridRect.left + window.pageXOffset, projectGridRect.top + window.pageYOffset);
+    }
     this.setState({showAll: false, showApp: appType});
   };
 
