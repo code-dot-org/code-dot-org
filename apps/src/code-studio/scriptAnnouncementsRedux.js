@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
 import { NotificationType } from '@cdo/apps/templates/Notification';
 
 const ADD_ANNOUNCEMENT = 'scriptAnnouncements/ADD_ANNOUNCEMENT';

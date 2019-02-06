@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import locale from '@cdo/locale';
 import color from '@cdo/apps/util/color';

@@ -3,9 +3,15 @@ kind: pipeline
 name: unit
 
 clone:
-  depth: 50
+  disable: true
 
 steps:
+- name: clone
+  image: docker:git
+  commands:
+  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 50 $DRONE_GIT_HTTP_URL .
+  - git reset --hard $DRONE_COMMIT
+
 - name: verify-pr
   image: wintercdo/code-dot-org:0.7
   pull: always
@@ -36,11 +42,10 @@ steps:
 
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
+  pull: always
   volumes:
   - name: rbenv
-    path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
-  - name: yarncache
-    path: /home/circleci/.cache
+    path: /home/circleci/.rbenv
   - name: mysql
     path: /var/lib/mysql
   environment:
@@ -49,20 +54,17 @@ steps:
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
-    - pwd
+    - df -h
     - sudo chown -R circleci:circleci .
     - # cache is restored to source directory, so we need to copy it into the right place
-    - cp -rn "$(pwd)/home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0" /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems || true
-    - cp -rn "$(pwd)/home/circleci/.cache" /home/circleci || true
+    - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
     - /entrypoint.sh docker/unit_tests.sh
 
 - name: update-cache
   image: plugins/s3-cache
   volumes:
   - name: rbenv
-    path: /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
-  - name: yarncache
-    path: /home/circleci/.cache
+    path: /home/circleci/.rbenv
   settings:
     pull: true
     rebuild: true
@@ -71,16 +73,12 @@ steps:
     secret_key:
       from_secret: S3_CACHE_SECRET_KEY
     mount:
-      - /home/circleci/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0
-      - apps/node_modules
-      - /home/circleci/.cache
+      - /home/circleci/.rbenv
 
 volumes:
 - name: rbenv
   temp: {}
 - name: mysql
-  temp: {}
-- name: yarncache
   temp: {}
 
 trigger:
@@ -149,6 +147,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 41f0921ccaed873a43f2608c4cabddf3911828cfc8044955f4420bf9fbaa8b98
+hmac: 4ef30caa9dc7941b06d4ed3e8427def6b650ee9b3ceb3b161e2ffe83e603cae4
 
 ...

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import StageDescriptions from './StageDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import LegendSelector from './LegendSelector';
@@ -36,7 +37,7 @@ export default class ScriptEditor extends React.Component {
     loginRequired: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
-    professionalLearningCourse: PropTypes.bool,
+    professionalLearningCourse: PropTypes.string,
     peerReviewsRequired: PropTypes.number,
     wrapupVideo: PropTypes.string,
     excludeCsfColumnInLegend: PropTypes.bool,

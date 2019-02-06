@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import Button from '@cdo/apps/templates/Button';

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 import VariableFormGroup from './VariableFormGroup';
 import FormComponent from '../form_components/FormComponent';

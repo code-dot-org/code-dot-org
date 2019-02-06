@@ -2,7 +2,8 @@
  * Contains a heading and a collection of filter choices.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import FilterChoice from './filterChoice';
 

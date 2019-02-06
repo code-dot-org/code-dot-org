@@ -1089,8 +1089,13 @@ class Script < ActiveRecord::Base
   def update_teacher_resources(types, links)
     return if types.nil? || links.nil? || types.length != links.length
     # Only take those pairs in which we have both a type and a link
-    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    save!
+    resources = types.zip(links).select {|type, link| type.present? && link.present?}
+    update!(
+      {
+        teacher_resources: resources,
+        skip_name_format_validation: true
+      }
+    )
   end
 
   def self.rake

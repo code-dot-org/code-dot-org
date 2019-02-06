@@ -4,9 +4,10 @@
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const styles = {
