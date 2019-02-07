@@ -49,6 +49,8 @@ export default class FormController extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.nextPage = this.nextPage.bind(this);
     this.prevPage = this.prevPage.bind(this);
+
+    this.onInitialize();
   }
 
   componentWillMount() {
@@ -165,6 +167,13 @@ export default class FormController extends React.Component {
     return {
       form_data: this.state.data,
     };
+  }
+
+  /**
+   * Called when we initialize the form.
+   */
+  onInitialize() {
+    // Intentional noop; overridden by child classes
   }
 
   /**
