@@ -6,17 +6,19 @@ import Section3TeachingBackground from './Section3TeachingBackground';
 import Section4ProfessionalLearningProgramRequirements from './Section4ProfessionalLearningProgramRequirements';
 import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
 import Section6Submission from './Section6Submission';
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 /* global ga */
 
 export default class Teacher1920Application extends FormController {
   static propTypes = {
     ...FormController.propTypes,
-    accountEmail: PropTypes.string.isRequired
+    accountEmail: PropTypes.string.isRequired,
+    userId: PropTypes.number.isRequired
   };
 
-  static submitButtonText = "Complete and Send";
+  static submitButtonText = 'Complete and Send';
 
-  static sessionStorageKey = "Teacher1920Application";
+  static sessionStorageKey = 'Teacher1920Application';
 
   /**
    * @override
@@ -40,6 +42,21 @@ export default class Teacher1920Application extends FormController {
       ...super.getPageProps(),
       accountEmail: this.props.accountEmail
     };
+  }
+
+  /**
+   * @override
+   */
+  onInitialize() {
+    // Log the user ID to firehose.
+    firehoseClient.putRecord(
+      {
+        userId: this.props.userId,
+        study: 'application-funnel',
+        event: 'started-teacher1920-application'
+      },
+      {includeUserId: false}
+    );
   }
 
   /**

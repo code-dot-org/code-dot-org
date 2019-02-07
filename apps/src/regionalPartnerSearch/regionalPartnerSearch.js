@@ -18,9 +18,7 @@ function showRegionalPartnerSearch() {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <RegionalPartnerSearch
-        sourcePageId={sourcePageId}
-      />
+      <RegionalPartnerSearch sourcePageId={sourcePageId} />
     </Provider>,
     regionalPartnerSearchElement[0]
   );

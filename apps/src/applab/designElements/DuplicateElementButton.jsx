@@ -19,7 +19,7 @@ class DuplicateElementButton extends React.Component {
     handleDuplicate: PropTypes.func.isRequired
   };
 
-  handleDuplicate = (event) => this.props.handleDuplicate();
+  handleDuplicate = event => this.props.handleDuplicate();
 
   render() {
     return (
@@ -30,7 +30,7 @@ class DuplicateElementButton extends React.Component {
         >
           Duplicate
         </button>
-    </div>
+      </div>
     );
   }
 }

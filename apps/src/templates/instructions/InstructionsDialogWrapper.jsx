@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 /**
  * A component for managing our instructions dialog. Right now the entirety of
@@ -31,5 +31,5 @@ export class UnwrappedInstructionsDialogWrapper extends React.Component {
 
 export default connect(state => ({
   isOpen: state.instructionsDialog.open,
-  autoClose: state.instructionsDialog.autoClose,
+  autoClose: state.instructionsDialog.autoClose
 }))(UnwrappedInstructionsDialogWrapper);

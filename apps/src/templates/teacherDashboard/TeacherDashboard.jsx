@@ -17,51 +17,61 @@ export default class TeacherDashboard extends Component {
     sectionName: PropTypes.string.isRequired,
 
     // Provided by React router in parent.
-    location: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired
   };
 
   render() {
-    const {location, studioUrlPrefix, pegasusUrlPrefix, sectionName} = this.props;
+    const {
+      location,
+      studioUrlPrefix,
+      pegasusUrlPrefix,
+      sectionName
+    } = this.props;
 
     // Include header components unless we are on the /print_login_cards page.
-    const includeHeader = location.pathname !== "/print_login_cards";
+    const includeHeader = location.pathname !== '/print_login_cards';
 
     return (
       <div>
-        {includeHeader &&
-          <TeacherDashboardHeader sectionName={sectionName}/>
-        }
+        {includeHeader && <TeacherDashboardHeader sectionName={sectionName} />}
         <Switch>
-          <Route
-            path="/stats"
-            component={props => <StatsTableWithData/>}
-          />
-          <Route
-            path="/progress"
-            component={props => <SectionProgress/>}
-          />
+          <Route path="/stats" component={props => <StatsTableWithData />} />
+          <Route path="/progress" component={props => <SectionProgress />} />
           <Route
             path="/manage_students"
-            component={props => <ManageStudents studioUrlPrefix={studioUrlPrefix}/>}
+            component={props => (
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+            )}
           />
           <Route
             path="/projects"
-            component={props => <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix}/>}
+            component={props => (
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )}
           />
           <Route
             path="/text_responses"
-            component={props => <TextResponses/>}
+            component={props => <TextResponses />}
           />
           <Route
             path="/assessments"
-            component={props => <SectionAssessments/>}
+            component={props => <SectionAssessments />}
           />
           <Route
             path="/print_login_cards"
-            component={props => <PrintLoginCards studioUrlPrefix={studioUrlPrefix} pegasusUrlPrefix={pegasusUrlPrefix}/>}
+            component={props => (
+              <PrintLoginCards
+                studioUrlPrefix={studioUrlPrefix}
+                pegasusUrlPrefix={pegasusUrlPrefix}
+              />
+            )}
           />
           {/* Render <ManageStudents/> by default */}
-          <Route component={props => <ManageStudents studioUrlPrefix={studioUrlPrefix}/>} />
+          <Route
+            component={props => (
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+            )}
+          />
         </Switch>
       </div>
     );

@@ -14,9 +14,13 @@ import './polyfills';
  * @returns boolean - whether or not subsequence is really a subsequence of sequence.
  */
 export function isSubsequence(sequence, subsequence) {
-  let superIndex = 0, subIndex = 0;
+  let superIndex = 0,
+    subIndex = 0;
   while (subIndex < subsequence.length) {
-    while (superIndex < sequence.length && subsequence[subIndex] !== sequence[superIndex]) {
+    while (
+      superIndex < sequence.length &&
+      subsequence[subIndex] !== sequence[superIndex]
+    ) {
       superIndex++;
     }
     if (superIndex >= sequence.length) {
@@ -68,11 +72,11 @@ export function extend(defaults, options) {
 
 export function escapeHtml(unsafe) {
   return unsafe
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
 /**
@@ -101,7 +105,7 @@ export function range(start, end) {
  * second function if and only if the first function returns true
  */
 export function executeIfConditional(conditional, fn) {
-  return function () {
+  return function() {
     if (conditional()) {
       return fn.apply(this, arguments);
     }
@@ -114,13 +118,13 @@ export function executeIfConditional(conditional, fn) {
  * @returns {string} string without quotes
  */
 export function stripQuotes(inputString) {
-  return inputString.replace(/["']/g, "");
+  return inputString.replace(/["']/g, '');
 }
 
 /**
  * Defines an inheritance relationship between parent class and this class.
  */
-Function.prototype.inherits = function (parent) {
+Function.prototype.inherits = function(parent) {
   this.prototype = Object.create(parent.prototype);
   this.prototype.constructor = this;
   this.superPrototype = parent.prototype;
@@ -134,14 +138,14 @@ export function wrapNumberValidatorsForLevelBuilder() {
   var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
   var numVal = Blockly.FieldTextInput.numberValidator;
 
-  Blockly.FieldTextInput.nonnegativeIntegerValidator = function (text) {
+  Blockly.FieldTextInput.nonnegativeIntegerValidator = function(text) {
     if (text === '???') {
       return text;
     }
     return nonNeg(text);
   };
 
-  Blockly.FieldTextInput.numberValidator = function (text) {
+  Blockly.FieldTextInput.numberValidator = function(text) {
     if (text === '???') {
       return text;
     }
@@ -175,8 +179,9 @@ export function randomKey(obj) {
  * @returns {string} RFC4122-compliant UUID
  */
 export function createUuid() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = (Math.random() * 16) | 0,
+      v = c === 'x' ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
 }
@@ -196,7 +201,6 @@ export function valueOr(val, defaultVal) {
   return val === undefined ? defaultVal : val;
 }
 
-
 /**
  * Attempts to analyze whether or not err represents infinite recursion having
  * occurred. This error differs per browser, and it's possible that we don't
@@ -206,8 +210,10 @@ export function valueOr(val, defaultVal) {
  */
 export function isInfiniteRecursionError(err) {
   // Chrome/Safari: message ends in a period in Safari, not in Chrome
-  if (err instanceof RangeError &&
-    /^Maximum call stack size exceeded/.test(err.message)) {
+  if (
+    err instanceof RangeError &&
+    /^Maximum call stack size exceeded/.test(err.message)
+  ) {
     return true;
   }
 
@@ -215,15 +221,17 @@ export function isInfiniteRecursionError(err) {
   /*eslint-disable */
   // Linter doesn't like our use of InternalError, even though we gate on its
   // existence.
-  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
-      err.message === 'too much recursion') {
+  if (
+    typeof InternalError !== 'undefined' &&
+    err instanceof InternalError &&
+    err.message === 'too much recursion'
+  ) {
     return true;
   }
   /*eslint-enable */
 
   // IE
-  if (err instanceof Error &&
-      err.message === 'Out of stack space') {
+  if (err instanceof Error && err.message === 'Out of stack space') {
     return true;
   }
 
@@ -270,9 +278,9 @@ export function unescapeText(text) {
 
   cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
   cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
-  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
-  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
-  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
+  cleanedText = cleanedText.replace(/&gt;/gi, '>'); // Unescape >
+  cleanedText = cleanedText.replace(/&lt;/gi, '<'); // Unescape <
+  cleanedText = cleanedText.replace(/&amp;/gi, '&'); // Unescape & (must happen last!)
   return cleanedText;
 }
 
@@ -283,10 +291,10 @@ export function unescapeText(text) {
  */
 export function escapeText(text) {
   var escapedText = text.toString();
-  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
-  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
-  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
-  escapedText = escapedText.replace(/ {2}/g,' &nbsp;'); // Escape doubled spaces
+  escapedText = escapedText.replace(/&/g, '&amp;'); // Escape & (must happen first!)
+  escapedText = escapedText.replace(/</g, '&lt;'); // Escape <
+  escapedText = escapedText.replace(/>/g, '&gt;'); // Escape >
+  escapedText = escapedText.replace(/ {2}/g, ' &nbsp;'); // Escape doubled spaces
 
   // Now wrap each line except the first line in a <div>,
   // replacing blank lines with <div><br><div>
@@ -300,35 +308,42 @@ export function escapeText(text) {
   }
 
   // Wrap the rest of the lines
-  return first + rest.map(function (line) {
-    return '<div>' + (line.length ? line : '<br>') + '</div>';
-  }).join('');
+  return (
+    first +
+    rest
+      .map(function(line) {
+        return '<div>' + (line.length ? line : '<br>') + '</div>';
+      })
+      .join('')
+  );
 }
 
 export function showGenericQtip(targetElement, title, message, position) {
-  $(targetElement).qtip({
-    content: {
-      text: `
+  $(targetElement)
+    .qtip({
+      content: {
+        text: `
         <h4>${title}</h4>
         <p>${message}</p>
       `,
-      title: {
-        button: $('<div class="tooltip-x-close"/>')
-      }
-    },
-    position,
-    style: {
-      classes: "cdo-qtips",
-      tip: {
-        width: 20,
-        height: 20
-      }
-    },
-    hide: {
-      event: 'unfocus'
-    },
-    show: false // don't show on mouseover
-  }).qtip('show');
+        title: {
+          button: $('<div class="tooltip-x-close"/>')
+        }
+      },
+      position,
+      style: {
+        classes: 'cdo-qtips',
+        tip: {
+          width: 20,
+          height: 20
+        }
+      },
+      hide: {
+        event: 'unfocus'
+      },
+      show: false // don't show on mouseover
+    })
+    .qtip('show');
 }
 
 export function showUnusedBlockQtip(targetElement) {
@@ -337,7 +352,7 @@ export function showUnusedBlockQtip(targetElement) {
   const message = msg.unattachedBlockTipBody();
   const position = {
     my: 'bottom left',
-    at: 'top right',
+    at: 'top right'
   };
 
   showGenericQtip(targetElement, title, message, position);
@@ -350,7 +365,7 @@ export function showUnusedBlockQtip(targetElement) {
  */
 export function tryGetLocalStorage(key, defaultValue) {
   if (defaultValue === undefined) {
-    throw "tryGetLocalStorage requires defaultValue";
+    throw 'tryGetLocalStorage requires defaultValue';
   }
   let returnValue = defaultValue;
   try {
@@ -379,7 +394,7 @@ export function trySetLocalStorage(item, value) {
 
 export function tryGetSessionStorage(key, defaultValue) {
   if (defaultValue === undefined) {
-    throw "tryGetSessionStorage requires defaultValue";
+    throw 'tryGetSessionStorage requires defaultValue';
   }
   let returnValue = defaultValue;
   try {
@@ -402,7 +417,7 @@ export function trySetSessionStorage(item, value) {
     sessionStorage.setItem(item, value);
     return true;
   } catch (e) {
-    if (e.name !== "QuotaExceededError") {
+    if (e.name !== 'QuotaExceededError') {
       throw e;
     }
     return false;
@@ -419,11 +434,14 @@ export function trySetSessionStorage(item, value) {
  *   // etc...
  */
 export function makeEnum() {
-  var result = {}, key;
+  var result = {},
+    key;
   for (var i = 0; i < arguments.length; i++) {
     key = String(arguments[i]);
     if (result[key]) {
-      throw new Error('Key "' + key + '" occurred twice while constructing enum');
+      throw new Error(
+        'Key "' + key + '" occurred twice while constructing enum'
+      );
     }
     result[key] = key;
   }
@@ -441,7 +459,7 @@ export function makeEnum() {
  */
 export function ellipsify(inputText, maxLength) {
   if (inputText && inputText.length > maxLength) {
-    return inputText.substr(0, maxLength - 3) + "...";
+    return inputText.substr(0, maxLength - 3) + '...';
   }
   return inputText || '';
 }
@@ -492,7 +510,7 @@ export function deepMergeConcatArrays(baseObject, overrides) {
 export function createEvent(type, bubbles = false, cancelable = false) {
   var customEvent;
   try {
-    customEvent = new Event(type, { bubbles, cancelable });
+    customEvent = new Event(type, {bubbles, cancelable});
   } catch (e) {
     customEvent = document.createEvent('Event');
     customEvent.initEvent(type, bubbles, cancelable);
@@ -506,7 +524,7 @@ export function createEvent(type, bubbles = false, cancelable = false) {
  *   the argument also had length 0)
  */
 export function normalize(vector) {
-  var mag = Math.sqrt((vector.x * vector.x) + (vector.y * vector.y));
+  var mag = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
   if (mag === 0) {
     return vector;
   }
@@ -624,11 +642,14 @@ export function levenshtein(a, b) {
         continue;
       }
 
-      matrix[i][j] = b.charAt(i - 1) === a.charAt(j - 1) ? matrix[i - 1][j - 1] : Math.min(
-        matrix[i - 1][j - 1] + 1,
-        matrix[i][j - 1] + 1,
-        matrix[i - 1][j] + 1
-      );
+      matrix[i][j] =
+        b.charAt(i - 1) === a.charAt(j - 1)
+          ? matrix[i - 1][j - 1]
+          : Math.min(
+              matrix[i - 1][j - 1] + 1,
+              matrix[i][j - 1] + 1,
+              matrix[i - 1][j] + 1
+            );
     }
   }
 
@@ -658,7 +679,7 @@ export function flatten(array) {
   return array.reduce(
     (flat, toFlatten) =>
       flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten),
-    [],
+    []
   );
 }
 
@@ -714,7 +735,7 @@ export function resetAniGif(element) {
   }
   const src = element.src;
   element.src = '#';
-  setTimeout(() => element.src = src, 0);
+  setTimeout(() => (element.src = src), 0);
 }
 
 /**
@@ -754,20 +775,24 @@ export function getTabId() {
 
 export function createHiddenPrintWindow(src) {
   dataURIFromURI(src).then(data => {
-    var iframe = $('<iframe style="position: absolute; visibility: hidden;"></iframe>'); // Created a hidden iframe with just the desired image as its contents
-    iframe.appendTo("body");
-    iframe[0].contentWindow.document.write(`<img src="${data}" style="border: 1px solid #000;" onload="if (document.execCommand('print', false, null)) {  } else { window.print(); }"/>`);
+    var iframe = $(
+      '<iframe style="position: absolute; visibility: hidden;"></iframe>'
+    ); // Created a hidden iframe with just the desired image as its contents
+    iframe.appendTo('body');
+    iframe[0].contentWindow.document.write(
+      `<img src="${data}" style="border: 1px solid #000;" onload="if (document.execCommand('print', false, null)) {  } else { window.print(); }"/>`
+    );
   });
 }
 
 export function calculateOffsetCoordinates(element, clientX, clientY) {
   const rect = element.getBoundingClientRect();
   return {
-    x: Math.round((clientX - rect.left) * element.offsetWidth / rect.width),
-    y: Math.round((clientY - rect.top) * element.offsetHeight / rect.height),
+    x: Math.round(((clientX - rect.left) * element.offsetWidth) / rect.width),
+    y: Math.round(((clientY - rect.top) * element.offsetHeight) / rect.height)
   };
 }
 
 export function escapeRegExp(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }

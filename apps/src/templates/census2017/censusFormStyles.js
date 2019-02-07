@@ -1,4 +1,4 @@
-import color from "../../util/color";
+import color from '../../util/color';
 
 export const styles = {
   formHeading: {
@@ -28,13 +28,13 @@ export const styles = {
     color: color.charcoal,
     paddingBottom: 10,
     paddingTop: 10,
-    marginLeft: 18,
+    marginLeft: 18
   },
   share: {
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
+    color: color.charcoal
   },
-  otherCS : {
+  otherCS: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
     marginRight: 20,
@@ -46,7 +46,7 @@ export const styles = {
     marginRight: 20,
     marginLeft: 20
   },
-  existingInaccuracyTooltip : {
+  existingInaccuracyTooltip: {
     width: 270
   },
   option: {
@@ -80,10 +80,10 @@ export const styles = {
     marginTop: 5,
     width: 250
   },
-  wideDropdown : {
+  wideDropdown: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
-    height: 30,
+    height: 30
   },
   dropdownBox: {
     width: '100%'
@@ -107,7 +107,7 @@ export const styles = {
     width: 390,
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5,
-    maxWidth: "80%"
+    maxWidth: '80%'
   },
   textArea: {
     height: 100,
@@ -138,7 +138,7 @@ export const styles = {
   asterisk: {
     fontSize: 20,
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red,
+    color: color.red
   },
   leftMargin: {
     leftMargin: 20
@@ -146,10 +146,10 @@ export const styles = {
   field: {
     float: 'left',
     height: '80px',
-    width: '450px',
+    width: '450px'
   },
   clear: {
     width: '100%',
     clear: 'both'
-  },
+  }
 };

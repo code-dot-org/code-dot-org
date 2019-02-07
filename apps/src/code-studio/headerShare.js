@@ -4,14 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
-import { Provider } from 'react-redux';
-import { getStore } from '../redux';
-import { showShareDialog } from './components/shareDialogRedux';
-import { AllPublishableProjectTypes } from '../util/sharedConstants';
+import {Provider} from 'react-redux';
+import {getStore} from '../redux';
+import {showShareDialog} from './components/shareDialogRedux';
+import {AllPublishableProjectTypes} from '../util/sharedConstants';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {
-
     var i18n = window.dashboard.i18n;
 
     var dialogDom = document.getElementById('project-share-dialog');
@@ -30,7 +29,8 @@ export function shareProject(shareUrl) {
     let canShareSocial;
     if (appType === 'dance') {
       const is13Plus = sessionStorage.getItem('ad_anon_over13') === 'true';
-      canShareSocial = pageConstants.is13Plus || (!pageConstants.isSignedIn && is13Plus);
+      canShareSocial =
+        pageConstants.is13Plus || (!pageConstants.isSignedIn && is13Plus);
     } else {
       canShareSocial = pageConstants.is13Plus || !pageConstants.isSignedIn;
     }
@@ -38,8 +38,8 @@ export function shareProject(shareUrl) {
     // Allow publishing for any project type that students can publish.
     // Younger students can now get to the share dialog if their teacher allows
     // it, and should be able to publish in that case.
-    const canPublish = !!appOptions.isSignedIn &&
-      AllPublishableProjectTypes.includes(appType);
+    const canPublish =
+      !!appOptions.isSignedIn && AllPublishableProjectTypes.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -51,7 +51,7 @@ export function shareProject(shareUrl) {
           selectedSong={selectedSong}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
-          canPrint={appType === "artist"}
+          canPrint={appType === 'artist'}
           canPublish={canPublish}
           isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}

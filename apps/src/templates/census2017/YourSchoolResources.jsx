@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import ResourceCard from '../studioHomepages/ResourceCard';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   container: {
     width: '100%',
-    display: "flex",
-    justifyContent: "space-between",
-    flexWrap: 'wrap',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
   },
   card: {
     marginBottom: 20

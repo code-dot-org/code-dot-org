@@ -9,10 +9,7 @@ export default class TeacherconSurvey extends FormController {
    * @override
    */
   getPageComponents() {
-    return [
-      FridayOnly,
-      WholeWeek
-    ];
+    return [FridayOnly, WholeWeek];
   }
 
   /**
@@ -23,7 +20,7 @@ export default class TeacherconSurvey extends FormController {
       ...super.getPageProps(),
       facilitatorNames: this.props.facilitatorNames,
       course: this.props.course,
-      subject: this.props.subject,
+      subject: this.props.subject
     };
   }
 
@@ -46,7 +43,7 @@ export default class TeacherconSurvey extends FormController {
   serializeFormData() {
     return {
       ...super.serializeFormData(),
-      pd_enrollment_code: this.props.pdEnrollmentCode,
+      pd_enrollment_code: this.props.pdEnrollmentCode
     };
   }
 
@@ -64,5 +61,5 @@ TeacherconSurvey.propTypes = {
   course: PropTypes.string.isRequired,
   subject: PropTypes.string,
   pdEnrollmentCode: PropTypes.string.isRequired,
-  facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired
 };

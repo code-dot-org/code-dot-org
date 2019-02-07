@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {Heading1, h3Style} from "../../lib/ui/Headings";
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {Heading1, h3Style} from '../../lib/ui/Headings';
 import * as styleConstants from '@cdo/apps/styleConstants';
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
+import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
@@ -13,9 +13,12 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
-  stageExtrasAvailable,
+  stageExtrasAvailable
 } from './teacherSectionsRedux';
-import { isScriptHiddenForSection, updateHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {
+  isScriptHiddenForSection,
+  updateHiddenScript
+} from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmAssignment from '../courseOverview/ConfirmAssignment';
 
 const style = {
@@ -26,7 +29,7 @@ const style = {
     right: 20
   },
   dropdown: {
-    padding: '0.3em',
+    padding: '0.3em'
   },
   sectionNameInput: {
     // Full-width, large happy text, lots of space.
@@ -34,13 +37,13 @@ const style = {
     width: '100%',
     boxSizing: 'border-box',
     fontSize: 'large',
-    padding: '0.5em',
+    padding: '0.5em'
   },
   scroll: {
     position: 'absolute',
     top: 80,
     overflowY: 'scroll',
-    height: 'calc(80vh - 200px)',
+    height: 'calc(80vh - 200px)'
   }
 };
 
@@ -64,18 +67,20 @@ class EditSectionForm extends Component {
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
-    updateHiddenScript: PropTypes.func.isRequired,
+    updateHiddenScript: PropTypes.func.isRequired
   };
 
   state = {
-    showHiddenUnitWarning: false,
+    showHiddenUnitWarning: false
   };
 
   onSaveClick = () => {
     const {section, hiddenStageState} = this.props;
     const sectionId = section.id;
     const scriptId = section.scriptId;
-    const isScriptHidden = sectionId && scriptId &&
+    const isScriptHidden =
+      sectionId &&
+      scriptId &&
       isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
 
     if (isScriptHidden) {
@@ -86,7 +91,7 @@ class EditSectionForm extends Component {
   };
 
   handleConfirmAssign = () => {
-    const { section, updateHiddenScript } = this.props;
+    const {section, updateHiddenScript} = this.props;
 
     // Avoid incorrectly showing the hidden unit warning twice.
     updateHiddenScript(section.id.toString(), section.scriptId, false);
@@ -113,16 +118,14 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
-      assignedScriptName,
+      assignedScriptName
     } = this.props;
     if (!section) {
       return null;
     }
     return (
       <div style={style.root}>
-        <Heading1>
-          {title}
-        </Heading1>
+        <Heading1>{title}</Heading1>
         <div style={style.scroll}>
           <SectionNameField
             value={section.name}
@@ -142,13 +145,13 @@ class EditSectionForm extends Component {
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
           />
-          {stageExtrasAvailable(section.scriptId) &&
+          {stageExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
               value={section.stageExtras}
               onChange={stageExtras => editSectionProperties({stageExtras})}
               disabled={isSaveInProgress}
             />
-          }
+          )}
           <PairProgrammingField
             value={section.pairingAllowed}
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
@@ -172,7 +175,7 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
           />
         </DialogFooter>
-        {this.state.showHiddenUnitWarning &&
+        {this.state.showHiddenUnitWarning && (
           <ConfirmAssignment
             sectionName={section.name}
             assignmentName={assignedScriptName}
@@ -180,7 +183,7 @@ class EditSectionForm extends Component {
             onConfirm={this.handleConfirmAssign}
             isHiddenFromSection={true}
           />
-        }
+        )}
       </div>
     );
   }
@@ -188,37 +191,36 @@ class EditSectionForm extends Component {
 
 export const UnconnectedEditSectionForm = EditSectionForm;
 
-export default connect(state => ({
-  validGrades: state.teacherSections.validGrades,
-  validAssignments: state.teacherSections.validAssignments,
-  assignmentFamilies: state.teacherSections.assignmentFamilies,
-  sections: state.teacherSections.sections,
-  section: state.teacherSections.sectionBeingEdited,
-  isSaveInProgress: state.teacherSections.saveInProgress,
-  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-  hiddenStageState: state.hiddenStage,
-  assignedScriptName: assignedScriptName(state),
-}), {
-  editSectionProperties,
-  updateHiddenScript,
-  handleSave: finishEditingSection,
-  handleClose: cancelEditingSection,
-})(EditSectionForm);
+export default connect(
+  state => ({
+    validGrades: state.teacherSections.validGrades,
+    validAssignments: state.teacherSections.validAssignments,
+    assignmentFamilies: state.teacherSections.assignmentFamilies,
+    sections: state.teacherSections.sections,
+    section: state.teacherSections.sectionBeingEdited,
+    isSaveInProgress: state.teacherSections.saveInProgress,
+    stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+    hiddenStageState: state.hiddenStage,
+    assignedScriptName: assignedScriptName(state)
+  }),
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: finishEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);
 
 const FieldProps = {
   value: PropTypes.any,
   onChange: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 const SectionNameField = ({value, onChange, disabled}) => (
   <div>
-    <FieldName>
-      {i18n.sectionName()}
-    </FieldName>
-    <FieldDescription>
-      {i18n.addSectionName()}
-    </FieldDescription>
+    <FieldName>{i18n.sectionName()}</FieldName>
+    <FieldDescription>{i18n.addSectionName()}</FieldDescription>
     <input
       value={value}
       placeholder={i18n.addSectionNameHint()}
@@ -231,24 +233,22 @@ const SectionNameField = ({value, onChange, disabled}) => (
 SectionNameField.propTypes = FieldProps;
 
 const GradeField = ({value, onChange, validGrades, disabled}) => {
-  const gradeOptions = [""]
-    .concat(validGrades)
-    .map(grade => ({
-      value: grade,
-      text: grade === 'Other' ? 'Other/Mixed' : grade,
-    }));
+  const gradeOptions = [''].concat(validGrades).map(grade => ({
+    value: grade,
+    text: grade === 'Other' ? 'Other/Mixed' : grade
+  }));
   return (
     <div>
-      <FieldName>
-        {i18n.grade()}
-      </FieldName>
+      <FieldName>{i18n.grade()}</FieldName>
       <Dropdown
         value={value}
         onChange={event => onChange(event.target.value)}
         disabled={disabled}
       >
         {gradeOptions.map((grade, index) => (
-          <option key={index} value={grade.value}>{grade.text}</option>
+          <option key={index} value={grade.value}>
+            {grade.text}
+          </option>
         ))}
       </Dropdown>
     </div>
@@ -264,15 +264,11 @@ const AssignmentField = ({
   onChange,
   validAssignments,
   assignmentFamilies,
-  disabled,
+  disabled
 }) => (
   <div>
-    <FieldName>
-      {i18n.course()}
-    </FieldName>
-    <FieldDescription>
-      {i18n.whichCourse()}
-    </FieldDescription>
+    <FieldName>{i18n.course()}</FieldName>
+    <FieldDescription>{i18n.whichCourse()}</FieldDescription>
     <AssignmentSelector
       section={section}
       onChange={ids => onChange(ids)}
@@ -289,17 +285,14 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 const LessonExtrasField = ({value, onChange, disabled}) => (
   <div>
-    <FieldName>
-      {i18n.enableLessonExtras()}
-    </FieldName>
+    <FieldName>{i18n.enableLessonExtras()}</FieldName>
     <FieldDescription>
-      {i18n.explainLessonExtras()}
-      {' '}
+      {i18n.explainLessonExtras()}{' '}
       <a
         href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
         target="_blank"
@@ -318,12 +311,9 @@ LessonExtrasField.propTypes = FieldProps;
 
 const PairProgrammingField = ({value, onChange, disabled}) => (
   <div>
-    <FieldName>
-      {i18n.enablePairProgramming()}
-    </FieldName>
+    <FieldName>{i18n.enablePairProgramming()}</FieldName>
     <FieldDescription>
-      {i18n.explainPairProgramming()}
-      {' '}
+      {i18n.explainPairProgramming()}{' '}
       <a
         href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
         target="_blank"
@@ -345,7 +335,7 @@ const FieldName = props => (
     style={{
       ...h3Style,
       marginTop: 20,
-      marginBottom: 0,
+      marginBottom: 0
     }}
     {...props}
   />
@@ -354,15 +344,13 @@ const FieldName = props => (
 const FieldDescription = props => (
   <div
     style={{
-      marginBottom: 5,
+      marginBottom: 5
     }}
     {...props}
   />
 );
 
-const Dropdown = props => (
-  <select style={style.dropdown} {...props}/>
-);
+const Dropdown = props => <select style={style.dropdown} {...props} />;
 
 const YesNoDropdown = ({value, onChange, disabled}) => (
   <Dropdown

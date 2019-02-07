@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import color from "@cdo/apps/util/color";
+import React, {Component} from 'react';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   box: {
@@ -8,7 +8,7 @@ const styles = {
     width: 20,
     borderWidth: 1,
     borderStyle: 'solid',
-    boxSizing: 'content-box',
+    boxSizing: 'content-box'
   },
   filler: {
     width: 20
@@ -21,7 +21,7 @@ export default class ProgressBox extends Component {
     incomplete: PropTypes.number,
     imperfect: PropTypes.number,
     perfect: PropTypes.number,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   render() {
@@ -30,7 +30,7 @@ export default class ProgressBox extends Component {
     const boxWithBorderStyle = {
       ...styles.box,
       borderColor: started ? color.level_perfect : color.light_gray,
-      ...this.props.style,
+      ...this.props.style
     };
 
     const perfectLevels = {
@@ -53,9 +53,9 @@ export default class ProgressBox extends Component {
 
     return (
       <div style={boxWithBorderStyle}>
-        <div style={incompleteLevels}/>
-        <div style={imperfectLevels}/>
-        <div className={"uitest-perfect-bar"} style={perfectLevels}/>
+        <div style={incompleteLevels} />
+        <div style={imperfectLevels} />
+        <div className={'uitest-perfect-bar'} style={perfectLevels} />
       </div>
     );
   }

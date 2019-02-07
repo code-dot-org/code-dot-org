@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ProgressBox from './ProgressBox';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 const styles = {
   header: {
     fontWeight: 'bold',
     color: color.charcoal,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   th: {
     backgroundColor: color.lightest_gray,
@@ -17,14 +17,14 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     textAlign: 'center',
-    padding: 15,
+    padding: 15
   },
   td: {
     border: `1px solid ${color.lightest_gray}`,
-    padding: 15,
+    padding: 15
   },
   boxStyle: {
-    margin: '0 auto',
+    margin: '0 auto'
   }
 };
 
@@ -45,31 +45,31 @@ export default class SummaryViewLegend extends Component {
               <td colSpan={headerColSpan}>
                 <h3 style={styles.header}>{i18n.lessonStatus()}</h3>
               </td>
-              {showCSFProgressBox &&
+              {showCSFProgressBox && (
                 <td colSpan={2}>
                   <h3 style={styles.header}>{i18n.completionStatus()}</h3>
                 </td>
-              }
+              )}
             </tr>
             <tr>
               <th style={styles.th}>{i18n.notStarted()}</th>
               <th style={styles.th}>{i18n.inProgress()}</th>
               <th style={styles.th}>
                 {i18n.completed()}
-                {showCSFProgressBox &&
+                {showCSFProgressBox && (
                   <span>
-                    <br/>
+                    <br />
                     {`(${i18n.perfect()})`}
                   </span>
-                }
+                )}
               </th>
-              {showCSFProgressBox &&
+              {showCSFProgressBox && (
                 <th style={styles.th}>
                   {i18n.completed()}
-                  <br/>
+                  <br />
                   {`(${i18n.tooManyBlocks()})`}
                 </th>
-              }
+              )}
             </tr>
           </thead>
           <tbody>
@@ -101,7 +101,7 @@ export default class SummaryViewLegend extends Component {
                   perfect={20}
                 />
               </td>
-              {showCSFProgressBox &&
+              {showCSFProgressBox && (
                 <td style={styles.td}>
                   <ProgressBox
                     style={styles.boxStyle}
@@ -111,7 +111,7 @@ export default class SummaryViewLegend extends Component {
                     perfect={0}
                   />
                 </td>
-              }
+              )}
             </tr>
           </tbody>
         </table>

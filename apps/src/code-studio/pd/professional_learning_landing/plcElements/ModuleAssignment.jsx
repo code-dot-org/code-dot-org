@@ -51,9 +51,10 @@ export default class ModuleAssignment extends React.Component {
               style={Object.assign(
                 {},
                 styles.ribbon,
-                styles.ribbonStylesForStatus[`${this.props.moduleAssignmentData.status}`]
-              )
-            }
+                styles.ribbonStylesForStatus[
+                  `${this.props.moduleAssignmentData.status}`
+                ]
+              )}
             />
           </div>
         </div>

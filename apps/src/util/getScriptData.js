@@ -21,7 +21,7 @@ export default function getScriptData(name) {
   try {
     return JSON.parse(script.dataset[name]);
   } catch (e) {
-    console.error("Failed to parse script data for script", name);
+    console.error('Failed to parse script data for script', name);
     throw e;
   }
 }

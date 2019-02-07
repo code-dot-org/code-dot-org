@@ -10,9 +10,8 @@ import CustomSchoolInfo from './customSchoolInfo';
 import {SchoolInfoPropType} from './constants';
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 
-
-const VALIDATION_STATE_ERROR = "error";
-const OTHER_SCHOOL_VALUE = "-1";
+const VALIDATION_STATE_ERROR = 'error';
+const OTHER_SCHOOL_VALUE = '-1';
 
 export default class SchoolAutocompleteDropdownWithCustomFields extends React.Component {
   static propTypes = {
@@ -29,19 +28,21 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
     };
   }
 
-  handleSchoolDropdownChange = (selection) => {
-    const showCustomFields = !!(selection && selection.value === OTHER_SCHOOL_VALUE);
+  handleSchoolDropdownChange = selection => {
+    const showCustomFields = !!(
+      selection && selection.value === OTHER_SCHOOL_VALUE
+    );
     this.setState({showCustomFields});
     if (!showCustomFields && selection) {
-        this.props.onSchoolInfoChange({
-          school_info: {
-            school_id: selection.school.nces_id,
-            school_name: selection.school.name,
-            school_state: selection.school.state,
-            school_zip: selection.school.zip,
-            school_type: selection.school.school_type
-          }
-        });
+      this.props.onSchoolInfoChange({
+        school_info: {
+          school_id: selection.school.nces_id,
+          school_name: selection.school.name,
+          school_state: selection.school.state,
+          school_zip: selection.school.zip,
+          school_type: selection.school.school_type
+        }
+      });
     } else {
       this.props.onSchoolInfoChange({school_info: {}});
     }
@@ -50,10 +51,14 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
   render() {
     return (
       <div>
-        {!this.state.showCustomFields &&
+        {!this.state.showCustomFields && (
           <FormGroup
             id="school_id"
-            validationState={this.props.errors.hasOwnProperty("school_id") ? VALIDATION_STATE_ERROR : null}
+            validationState={
+              this.props.errors.hasOwnProperty('school_id')
+                ? VALIDATION_STATE_ERROR
+                : null
+            }
           >
             <Row>
               <Col md={6}>
@@ -66,30 +71,32 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
             <Row>
               <Col md={12}>
                 <SchoolAutocompleteDropdown
-                  value={this.props.school_info && this.props.school_info.school_id}
+                  value={
+                    this.props.school_info && this.props.school_info.school_id
+                  }
                   onChange={this.handleSchoolDropdownChange}
                 />
               </Col>
             </Row>
             <HelpBlock>{this.props.errors.school_id}</HelpBlock>
           </FormGroup>
-        }
-        {this.state.showCustomFields &&
+        )}
+        {this.state.showCustomFields && (
           <CustomSchoolInfo
             school_info={this.props.school_info}
             onSchoolInfoChange={this.props.onSchoolInfoChange}
             errors={this.props.errors}
           />
-        }
+        )}
       </div>
     );
   }
 
- /*
-  * Returns an object containing the fields with errors in the form
-  * {"field_id": "error message"}
-  * If a required field is missing, the error message is an empty string
-  */
+  /*
+   * Returns an object containing the fields with errors in the form
+   * {"field_id": "error message"}
+   * If a required field is missing, the error message is an empty string
+   */
   static validate(school_info) {
     let errors = [];
 
@@ -104,7 +111,7 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
       'school_type'
     ];
 
-    if (["Public school", "Charter school"].includes(school_info.school_type)) {
+    if (['Public school', 'Charter school'].includes(school_info.school_type)) {
       requiredFields.push('school_district_name');
     }
 
@@ -116,13 +123,13 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
 
     if (school_info && school_info.school_zip) {
       if (!isZipCode(school_info.school_zip)) {
-        errors.school_zip = "Must be a valid zip code";
+        errors.school_zip = 'Must be a valid zip code';
       }
     }
 
     if (missingRequiredFields.length || Object.keys(errors).length) {
       let requiredFieldsErrors = {};
-      missingRequiredFields.forEach((f) => {
+      missingRequiredFields.forEach(f => {
         requiredFieldsErrors[f] = '';
       });
       errors = {...errors, ...requiredFieldsErrors};

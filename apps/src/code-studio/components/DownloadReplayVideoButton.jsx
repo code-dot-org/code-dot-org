@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
-import color from "../../util/color";
+import color from '../../util/color';
 
 /**
  * Trigger a download from the given url with the given name.
@@ -14,7 +14,7 @@ import color from "../../util/color";
  */
 function downloadRemoteUrl(url, downloadName) {
   fetch(url, {
-    method: 'GET',
+    method: 'GET'
   })
     .then(response => response.blob())
     .then(blob => {
@@ -39,10 +39,10 @@ const styles = {
   disabledLink: {
     backgroundColor: color.lighter_gray,
     borderColor: color.lighter_gray,
-    boxShadow: 'none',
+    boxShadow: 'none'
   },
   icon: {
-    fontSize: 17,
+    fontSize: 17
   },
   span: {
     paddingLeft: 10
@@ -60,13 +60,13 @@ class DownloadReplayVideoButton extends React.Component {
     channelId: PropTypes.string,
     onError: PropTypes.func,
     replayLog: PropTypes.array,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   state = {
     videoExists: false,
     downloadInitiated: false,
-    checkVideoAttempts: 0,
+    checkVideoAttempts: 0
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -91,13 +91,9 @@ class DownloadReplayVideoButton extends React.Component {
   }
 
   getUploadUrl = () =>
-    window &&
-    window.appOptions &&
-    window.appOptions.signedReplayLogUrl;
+    window && window.appOptions && window.appOptions.signedReplayLogUrl;
 
-  hasReplayVideo = () =>
-    this.props.appType === 'dance' &&
-    this.getUploadUrl();
+  hasReplayVideo = () => this.props.appType === 'dance' && this.getUploadUrl();
 
   shouldCreateReplayVideo = () =>
     this.hasReplayVideo() &&
@@ -107,7 +103,7 @@ class DownloadReplayVideoButton extends React.Component {
   tryCreateReplayVideo = () => {
     if (this.shouldCreateReplayVideo()) {
       fetch(this.getUploadUrl(), {
-        method: "PUT",
+        method: 'PUT',
         body: JSON.stringify(this.props.replayLog)
       });
     }
@@ -120,7 +116,7 @@ class DownloadReplayVideoButton extends React.Component {
   // enabled on initial load, until the first time the user clicks it
   buttonEnabled = () => this.state.videoExists || !this.state.downloadInitiated;
 
-  tryDownloadVideo = (event) => {
+  tryDownloadVideo = event => {
     if (!this.state.downloadInitiated) {
       this.setState({
         downloadInitiated: true
@@ -144,10 +140,10 @@ class DownloadReplayVideoButton extends React.Component {
 
   checkVideo() {
     return fetch(this.getVideoUrl(), {
-      method: 'HEAD',
-    }).then((response) => {
+      method: 'HEAD'
+    }).then(response => {
       this.setState({
-        videoExists: response.ok,
+        videoExists: response.ok
       });
 
       return response;
@@ -175,12 +171,15 @@ class DownloadReplayVideoButton extends React.Component {
       return;
     }
 
-    this.checkVideo().then((response) => {
+    this.checkVideo().then(response => {
       this.checkVideoUntilSuccessTimeout = null;
       let attempts = this.state.checkVideoAttempts;
 
       if (!response.ok) {
-        this.checkVideoUntilSuccessTimeout = setTimeout(this.checkVideoUntilSuccess, delay);
+        this.checkVideoUntilSuccessTimeout = setTimeout(
+          this.checkVideoUntilSuccess,
+          delay
+        );
         attempts += 1;
       }
 
@@ -195,9 +194,9 @@ class DownloadReplayVideoButton extends React.Component {
       return null;
     }
 
-    let icon = "fa-download";
+    let icon = 'fa-download';
     if (this.state.downloadInitiated) {
-      icon = "fa-spinner fa-pulse";
+      icon = 'fa-spinner fa-pulse';
     }
 
     const style = Object.assign({}, this.props.style);
@@ -212,10 +211,7 @@ class DownloadReplayVideoButton extends React.Component {
         disabled={!this.buttonEnabled()}
         onClick={this.tryDownloadVideo}
       >
-        <i
-          className={`fa ${icon}`}
-          style={styles.icon}
-        />
+        <i className={`fa ${icon}`} style={styles.icon} />
         <span style={styles.span}>
           {i18n.downloadReplayVideoButtonDownload()}
         </span>
@@ -229,5 +225,5 @@ export const UnconnectedDownloadReplayVideoButton = DownloadReplayVideoButton;
 export default connect(state => ({
   appType: state.pageConstants.appType,
   channelId: state.pageConstants.channelId,
-  replayLog: state.shareDialog.replayLog,
+  replayLog: state.shareDialog.replayLog
 }))(DownloadReplayVideoButton);

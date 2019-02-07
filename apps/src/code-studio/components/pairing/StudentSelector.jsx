@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { studentsShape } from './types';
-import i18n from "@cdo/locale";
+import {studentsShape} from './types';
+import i18n from '@cdo/locale';
 
 /**
  * A component for selecting one or more students in a section.
@@ -16,7 +16,7 @@ export default class StudentSelector extends React.Component {
     selectedStudentIds: []
   };
 
-  handleStudentClicked = (event) => {
+  handleStudentClicked = event => {
     const selectedStudentIds = [...this.state.selectedStudentIds];
     const studentId = +event.target.getAttribute('data-id');
     const index = selectedStudentIds.indexOf(studentId);
@@ -30,7 +30,7 @@ export default class StudentSelector extends React.Component {
     this.setState({selectedStudentIds});
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     this.props.handleSubmit(this.state.selectedStudentIds);
     event.preventDefault();
   };
@@ -62,15 +62,12 @@ export default class StudentSelector extends React.Component {
     return (
       <div>
         {studentDivs}
-        <div className="clear"/>
-        {(this.state.selectedStudentIds.length !== 0) &&
-          <button
-            onClick={this.handleSubmit}
-            className="addPartners"
-          >
+        <div className="clear" />
+        {this.state.selectedStudentIds.length !== 0 && (
+          <button onClick={this.handleSubmit} className="addPartners">
             {i18n.addPartners()}
           </button>
-        }
+        )}
       </div>
     );
   }

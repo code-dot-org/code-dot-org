@@ -11,7 +11,7 @@ export const initialState = {
   authenticationOptions: {},
   userHasPassword: false,
   isGoogleClassroomStudent: false,
-  isCleverStudent: false,
+  isCleverStudent: false
 };
 
 const INITIALIZE_STATE = 'manageLinkedAccounts/INITIALIZE_STATE';
@@ -20,17 +20,26 @@ const SET_AUTH_OPTION_ERROR = 'manageLinkedAccounts/SET_AUTH_OPTION_ERROR';
 
 export const initializeState = state => ({type: INITIALIZE_STATE, state});
 export const removeAuthOption = id => ({type: REMOVE_AUTH_OPTION, id});
-export const setAuthOptionError = (id, error) => ({type: SET_AUTH_OPTION_ERROR, id, error});
+export const setAuthOptionError = (id, error) => ({
+  type: SET_AUTH_OPTION_ERROR,
+  id,
+  error
+});
 
-export default function manageLinkedAccounts(state=initialState, action) {
+export default function manageLinkedAccounts(state = initialState, action) {
   if (action.type === INITIALIZE_STATE) {
-    const {authenticationOptions, userHasPassword, isGoogleClassroomStudent, isCleverStudent} = action.state;
+    const {
+      authenticationOptions,
+      userHasPassword,
+      isGoogleClassroomStudent,
+      isCleverStudent
+    } = action.state;
     return {
       ...state,
       authenticationOptions,
       userHasPassword,
       isGoogleClassroomStudent,
-      isCleverStudent,
+      isCleverStudent
     };
   }
 
@@ -69,20 +78,20 @@ const findAuthOption = (state, id) => {
   return authOption;
 };
 
-export const convertServerAuthOptions = (authOptions) => {
+export const convertServerAuthOptions = authOptions => {
   let optionLookup = {};
   authOptions.forEach(option => {
     optionLookup[option.id] = {
       id: option.id,
       credentialType: option.credential_type,
       email: option.email,
-      error: '',
+      error: ''
     };
   });
   return optionLookup;
 };
 
-export const disconnect = (id) => {
+export const disconnect = id => {
   return (dispatch, _) => {
     disconnectOnServer(id, error => {
       if (error) {
@@ -99,13 +108,15 @@ export const disconnectOnServer = (id, onComplete) => {
   $.ajax({
     url: `/users/auth/${id}/disconnect`,
     method: 'DELETE'
-  }).done(_ => {
-    onComplete(null);
-  }).fail((jqXhr, _) => {
-    if (jqXhr.responseText) {
-      onComplete(jqXhr.responseText);
-    } else {
-      onComplete(`Unexpected failure: ${jqXhr.status}`);
-    }
-  });
+  })
+    .done(_ => {
+      onComplete(null);
+    })
+    .fail((jqXhr, _) => {
+      if (jqXhr.responseText) {
+        onComplete(jqXhr.responseText);
+      } else {
+        onComplete(`Unexpected failure: ${jqXhr.status}`);
+      }
+    });
 };

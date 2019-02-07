@@ -33,6 +33,8 @@ function convertScssToJs(scssPath, jsPath) {
 
   var out = fs.createWriteStream(jsPath);
   out.write([
+    '/* eslint-disable */',
+    '',
     '// ' + relativeJS,
     '// GENERATED FILE: DO NOT MODIFY DIRECTLY',
     '// This generated file exports all variables defined in ' + relativeScss,

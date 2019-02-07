@@ -14,7 +14,7 @@ var tweens = require('./tweens');
  *
  * @constructor
  */
-var NetSimVizElement = module.exports =  function () {
+var NetSimVizElement = (module.exports = function() {
   /**
    * @type {number}
    */
@@ -55,12 +55,12 @@ var NetSimVizElement = module.exports =  function () {
    * @private
    */
   this.isDead_ = false;
-};
+});
 
 /**
  * @returns {jQuery} wrapper around root <g> element
  */
-NetSimVizElement.prototype.getRoot = function () {
+NetSimVizElement.prototype.getRoot = function() {
   return this.rootGroup_;
 };
 
@@ -69,7 +69,7 @@ NetSimVizElement.prototype.getRoot = function () {
  * process cannot be stopped.
  * This method can be overridden to trigger an "on-death" animation.
  */
-NetSimVizElement.prototype.kill = function () {
+NetSimVizElement.prototype.kill = function() {
   this.isDead_ = true;
 };
 
@@ -79,7 +79,7 @@ NetSimVizElement.prototype.kill = function () {
  *          The default implementation here returns TRUE as soon as kill()
  *          is called and all animations are completed.
  */
-NetSimVizElement.prototype.isDead = function () {
+NetSimVizElement.prototype.isDead = function() {
   return this.isDead_ && this.tweens_.length === 0;
 };
 
@@ -88,7 +88,7 @@ NetSimVizElement.prototype.isDead = function () {
  *          and will be ready to be cleaned up by the visualization manager
  *          soon.
  */
-NetSimVizElement.prototype.isDying = function () {
+NetSimVizElement.prototype.isDying = function() {
   return this.isDead_ && this.tweens_.length > 0;
 };
 
@@ -97,15 +97,14 @@ NetSimVizElement.prototype.isDying = function () {
  * probably modify its properties) and then remove any tweens that are completed
  * from the list.
  */
-NetSimVizElement.prototype.tick = function () {
-};
+NetSimVizElement.prototype.tick = function() {};
 
 /**
  * Update the root group's properties to reflect our current position
  * and scale.
  * @param {RunLoop.Clock} [clock] - sometimes omitted during setup
  */
-NetSimVizElement.prototype.render = function (clock) {
+NetSimVizElement.prototype.render = function(clock) {
   if (!clock) {
     return;
   }
@@ -117,19 +116,24 @@ NetSimVizElement.prototype.render = function (clock) {
   var scale = this.scale;
 
   // Update tweens in the render loop so they are very smooth
-  this.tweens_.forEach(function (tween) {
+  this.tweens_.forEach(function(tween) {
     tween.tick(clock);
   });
-  this.tweens_ = this.tweens_.filter(function (tween) {
+  this.tweens_ = this.tweens_.filter(function(tween) {
     return !tween.isFinished;
   });
 
   // If nothing has changed, don't bother to update transform
-  if (posX !== this.posX ||
-      posY !== this.posY ||
-      scale !== this.scale) {
-    var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
-        ' scale(' + this.scale + ')';
+  if (posX !== this.posX || posY !== this.posY || scale !== this.scale) {
+    var transform =
+      'translate(' +
+      this.posX +
+      ' ' +
+      this.posY +
+      ')' +
+      ' scale(' +
+      this.scale +
+      ')';
     this.rootGroup_.attr('transform', transform);
   }
 };
@@ -137,14 +141,14 @@ NetSimVizElement.prototype.render = function (clock) {
 /**
  * @param {boolean} isForeground
  */
-NetSimVizElement.prototype.onDepthChange = function (isForeground) {
+NetSimVizElement.prototype.onDepthChange = function(isForeground) {
   this.isForeground = isForeground;
 };
 
 /**
  * Throw away all existing tweens on this object.
  */
-NetSimVizElement.prototype.stopAllAnimation = function () {
+NetSimVizElement.prototype.stopAllAnimation = function() {
   this.tweens_.length = 0;
 };
 
@@ -156,8 +160,12 @@ NetSimVizElement.prototype.stopAllAnimation = function () {
  * @param {number} [duration=600] in milliseconds
  * @param {TweenFunction} [tweenFunction=linear]
  */
-NetSimVizElement.prototype.tweenToPosition = function (newX, newY, duration,
-    tweenFunction) {
+NetSimVizElement.prototype.tweenToPosition = function(
+  newX,
+  newY,
+  duration,
+  tweenFunction
+) {
   // Don't accept new animation commands if we've already been killed
   if (this.isDying() || this.isDead()) {
     return;
@@ -168,15 +176,16 @@ NetSimVizElement.prototype.tweenToPosition = function (newX, newY, duration,
 
   // Add two new tweens, one for each axis
   if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'posX', newX, duration,
-        tweenFunction));
-    this.tweens_.push(new tweens.TweenValueTo(this, 'posY', newY, duration,
-        tweenFunction));
+    this.tweens_.push(
+      new tweens.TweenValueTo(this, 'posX', newX, duration, tweenFunction)
+    );
+    this.tweens_.push(
+      new tweens.TweenValueTo(this, 'posY', newY, duration, tweenFunction)
+    );
   } else {
     this.posX = newX;
     this.posY = newY;
   }
-
 };
 
 /**
@@ -184,7 +193,7 @@ NetSimVizElement.prototype.tweenToPosition = function (newX, newY, duration,
  * @param {number} newX given in SVG points
  * @param {number} newY given in SVG points
  */
-NetSimVizElement.prototype.snapToPosition = function (newX, newY) {
+NetSimVizElement.prototype.snapToPosition = function(newX, newY) {
   this.tweenToPosition(newX, newY, 0);
 };
 
@@ -196,21 +205,25 @@ NetSimVizElement.prototype.snapToPosition = function (newX, newY) {
  * @param {number} [duration=600] in milliseconds
  * @param {TweenFunction} [tweenFunction=linear]
  */
-NetSimVizElement.prototype.tweenToScale = function (newScale, duration,
-    tweenFunction) {
+NetSimVizElement.prototype.tweenToScale = function(
+  newScale,
+  duration,
+  tweenFunction
+) {
   // Remove existing scale tweens
   this.removeAllTweensOnProperty('scale');
 
   // On nonzero duration, add tween to target scale.  Otherwise just set it.
   if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'scale', newScale, duration,
-        tweenFunction));
+    this.tweens_.push(
+      new tweens.TweenValueTo(this, 'scale', newScale, duration, tweenFunction)
+    );
   } else {
     this.scale = newScale;
   }
 };
 
-NetSimVizElement.prototype.doAfterDelay = function (delay, callback) {
+NetSimVizElement.prototype.doAfterDelay = function(delay, callback) {
   if (delay > 0) {
     this.tweens_.push(new tweens.DoAfterDelay(this, delay, callback));
   } else {
@@ -223,7 +236,7 @@ NetSimVizElement.prototype.doAfterDelay = function (delay, callback) {
  * visualization entity.
  * @param {string} propertyName
  */
-NetSimVizElement.prototype.removeAllTweensOnProperty = function (propertyName) {
+NetSimVizElement.prototype.removeAllTweensOnProperty = function(propertyName) {
   this.removeAllTweensOnProperties([propertyName]);
 };
 
@@ -232,10 +245,12 @@ NetSimVizElement.prototype.removeAllTweensOnProperty = function (propertyName) {
  * on this visualization entity.
  * @param {string[]} propertyNames
  */
-NetSimVizElement.prototype.removeAllTweensOnProperties = function (propertyNames) {
-  this.tweens_ = this.tweens_.filter(function (tween) {
+NetSimVizElement.prototype.removeAllTweensOnProperties = function(
+  propertyNames
+) {
+  this.tweens_ = this.tweens_.filter(function(tween) {
     var targetsThisEntity = tween.target === this;
-    var isRemovableProperty = propertyNames.some(function (name) {
+    var isRemovableProperty = propertyNames.some(function(name) {
       return tween.propertyName === name;
     });
 
@@ -249,6 +264,6 @@ NetSimVizElement.prototype.removeAllTweensOnProperties = function (propertyNames
  * Alias for calling tweenToScale with a zero duration.
  * @param {number} newScale where 1.0 is 100% (unscaled)
  */
-NetSimVizElement.prototype.snapToScale = function (newScale) {
+NetSimVizElement.prototype.snapToScale = function(newScale) {
   this.tweenToScale(newScale, 0);
 };

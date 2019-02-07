@@ -1,6 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
 
-
 // Test saySprite
 
 function spriteTalking(spriteIndex) {
@@ -11,11 +10,11 @@ function spriteTalking(spriteIndex) {
 var levelDef = {
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0, 0, 0, 0],
+    [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
@@ -27,14 +26,15 @@ var levelDef = {
 };
 
 module.exports = {
-  app: "studio",
-  skinId: "studio",
+  app: 'studio',
+  skinId: 'studio',
   levelDefinition: levelDef,
   tests: [
     {
-      description: "saySprite with visible actor",
+      description: 'saySprite with visible actor',
       // make sprite visible, have them say something
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '  <block type="when_run" deletable="false">' +
         '    <next>' +
         '      <block type="studio_setSprite">' +
@@ -50,25 +50,29 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        setTimeout(function() {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function (assert) {
-        assert(spriteTalking(0) || Studio.sayComplete === 1, "Actor is talking");
+      customValidator: function(assert) {
+        assert(
+          spriteTalking(0) || Studio.sayComplete === 1,
+          'Actor is talking'
+        );
         return true;
       },
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     },
     {
-      description: "saySprite with non-visible actor",
+      description: 'saySprite with non-visible actor',
       // say something having never made sprite visible
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '  <block type="when_run" deletable="false">' +
         '    <next>' +
         '      <block type="studio_saySprite">' +
@@ -78,26 +82,27 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        setTimeout(function() {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function (assert) {
-        assert(spriteTalking(1) === false, "Not talking");
-        assert(Studio.sayComplete === 0, "Nothing said");
+      customValidator: function(assert) {
+        assert(spriteTalking(1) === false, 'Not talking');
+        assert(Studio.sayComplete === 0, 'Nothing said');
         return true;
       },
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     },
     {
-      description: "saySprite after vanishing actor",
+      description: 'saySprite after vanishing actor',
       // say something having never made sprite visible
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '  <block type="when_run" deletable="false">' +
         '    <next>' +
         '      <block type="studio_setSprite">' +
@@ -118,21 +123,21 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        setTimeout(function() {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function (assert) {
-        assert(spriteTalking(1) === false, "Not talking");
-        assert(Studio.sayComplete === 0, "Nothing said");
+      customValidator: function(assert) {
+        assert(spriteTalking(1) === false, 'Not talking');
+        assert(Studio.sayComplete === 0, 'Nothing said');
         return true;
       },
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     }
   ]
 };

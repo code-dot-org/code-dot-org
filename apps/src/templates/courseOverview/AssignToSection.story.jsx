@@ -7,35 +7,29 @@ const defaultProps = {
   sectionsInfo: [
     {
       id: 11,
-      name: "brent_section"
+      name: 'brent_section'
     },
     {
       id: 12,
-      name: "section2"
+      name: 'section2'
     },
     {
       id: 307,
-      name: "plc"
+      name: 'plc'
     },
     {
       id: 338,
-      name: "section_with_course"
+      name: 'section_with_course'
     }
   ],
-  updateHiddenScript: () => {},
+  updateHiddenScript: () => {}
 };
 
 export default storybook => {
-  storybook
-    .storiesOf('AssignToSection', module)
-    .addStoryTable([
-      {
-        name: 'AssignToSection dropdown',
-        story: () => (
-          <AssignToSection
-            {...defaultProps}
-          />
-        )
-      },
-    ]);
+  storybook.storiesOf('AssignToSection', module).addStoryTable([
+    {
+      name: 'AssignToSection dropdown',
+      story: () => <AssignToSection {...defaultProps} />
+    }
+  ]);
 };

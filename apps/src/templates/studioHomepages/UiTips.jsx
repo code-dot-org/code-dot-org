@@ -21,7 +21,7 @@ export default class UiTips extends React.Component {
     showInitialTips: PropTypes.bool,
     beforeDialog: PropTypes.object,
     afterDialog: PropTypes.object,
-    tips: PropTypes.array.isRequired,
+    tips: PropTypes.array.isRequired
   };
 
   constructor(props) {
@@ -30,12 +30,13 @@ export default class UiTips extends React.Component {
     const showInitialTips = this.props.showInitialTips;
 
     // We might start by showing the "before" dialog.
-    const showingDialog = (showInitialTips && this.props.beforeDialog) ? "before" : null;
+    const showingDialog =
+      showInitialTips && this.props.beforeDialog ? 'before' : null;
 
     // If we want to show the initial tips but there is no dialog, show the initial tips immediately.
     if (showInitialTips && !showingDialog) {
       this.props.tips.forEach((tip, index) => {
-        if (tip.type === "initial") {
+        if (tip.type === 'initial') {
           tipsShowing[index] = true;
         }
       });
@@ -49,7 +50,7 @@ export default class UiTips extends React.Component {
     };
   }
 
-  closeClicked = (index) => {
+  closeClicked = index => {
     // Update state so it's no longer showing.
     const newTipsShowing = [...this.state.tipsShowing];
     newTipsShowing[index] = false;
@@ -66,14 +67,13 @@ export default class UiTips extends React.Component {
       });
 
       if (!tipRemaining) {
-        $.post(
-          `/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`,
-          { tip: this.props.tipId }
-        );
+        $.post(`/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`, {
+          tip: this.props.tipId
+        });
 
         // Show a concluding dialog if there is one.
         if (this.props.afterDialog) {
-          newState = {...newState, showingDialog: "after"};
+          newState = {...newState, showingDialog: 'after'};
         }
 
         // Don't show initial tips any more.
@@ -87,27 +87,26 @@ export default class UiTips extends React.Component {
   afterDialogCancel = () => {
     this.setState({...this.state, showingDialog: null});
 
-    trackEvent("ui_tips", this.props.tipId, "after_dialog_cancel");
+    trackEvent('ui_tips', this.props.tipId, 'after_dialog_cancel');
   };
 
   afterDialogConfirm = () => {
-    if (this.props.afterDialog.onConfirm.action === "url") {
-      window.open(this.props.afterDialog.onConfirm.url, "_blank");
+    if (this.props.afterDialog.onConfirm.action === 'url') {
+      window.open(this.props.afterDialog.onConfirm.url, '_blank');
     }
     this.setState({...this.state, showingDialog: null});
 
-    trackEvent("ui_tips", this.props.tipId, "after_dialog_confirm");
+    trackEvent('ui_tips', this.props.tipId, 'after_dialog_confirm');
   };
 
   beforeDialogCancel = () => {
     this.setState({...this.state, showInitialTips: false, showingDialog: null});
 
-    $.post(
-      `/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`,
-      { tip: this.props.tipId }
-    );
+    $.post(`/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`, {
+      tip: this.props.tipId
+    });
 
-    trackEvent("ui_tips", this.props.tipId, "before_dialog_cancel");
+    trackEvent('ui_tips', this.props.tipId, 'before_dialog_cancel');
   };
 
   beforeDialogConfirm = () => {
@@ -115,15 +114,19 @@ export default class UiTips extends React.Component {
 
     if (this.state.showInitialTips) {
       this.props.tips.forEach((tip, index) => {
-        if (tip.type === "initial") {
+        if (tip.type === 'initial') {
           tipsShowing[index] = true;
         }
       });
     }
 
-    this.setState({...this.state, tipsShowing: tipsShowing, showingDialog: null});
+    this.setState({
+      ...this.state,
+      tipsShowing: tipsShowing,
+      showingDialog: null
+    });
 
-    trackEvent("ui_tips", this.props.tipId, "before_dialog_confirm");
+    trackEvent('ui_tips', this.props.tipId, 'before_dialog_confirm');
   };
 
   componentDidMount() {
@@ -132,7 +135,7 @@ export default class UiTips extends React.Component {
     // For each triggered tip, just use jquery to set up an onClick handler
     // that will call back into us and set state to show that tip.
     this.props.tips.forEach((tip, index) => {
-      if (tip.type === "triggered") {
+      if (tip.type === 'triggered') {
         $(`#${tip.triggerId}`).click(e => {
           if (!this.state.showInitialTips) {
             let newTipsShowing = [...this.state.tipsShowing];
@@ -147,36 +150,37 @@ export default class UiTips extends React.Component {
   }
 
   onResize = () => {
-    this.setState({mobileWidth: $(window).width() <= styleConstants['content-width']});
+    this.setState({
+      mobileWidth: $(window).width() <= styleConstants['content-width']
+    });
   };
 
   render() {
-    const { tips } = this.props;
+    const {tips} = this.props;
 
     if (this.state.mobileWidth) {
-      return (
-        <div/>
-      );
+      return <div />;
     }
 
     return (
       <div>
-        {tips.map((tip, index) => (
-          (this.state.tipsShowing[index] && (
-            <UiTip
-              key = {index}
-              index = {index}
-              position = {tip.position}
-              text = {tip.text}
-              arrowDirection={tip.arrowDirection}
-              closeClicked={this.closeClicked}
-            />
-          )
-        )))}
+        {tips.map(
+          (tip, index) =>
+            this.state.tipsShowing[index] && (
+              <UiTip
+                key={index}
+                index={index}
+                position={tip.position}
+                text={tip.text}
+                arrowDirection={tip.arrowDirection}
+                closeClicked={this.closeClicked}
+              />
+            )
+        )}
 
         {this.props.beforeDialog && (
           <Dialog
-            isOpen={this.state.showingDialog === "before"}
+            isOpen={this.state.showingDialog === 'before'}
             title={this.props.beforeDialog.title}
             body={this.props.beforeDialog.body}
             confirmText={this.props.beforeDialog.confirm}
@@ -189,7 +193,7 @@ export default class UiTips extends React.Component {
 
         {this.props.afterDialog && (
           <Dialog
-            isOpen={this.state.showingDialog === "after"}
+            isOpen={this.state.showingDialog === 'after'}
             title={this.props.afterDialog.title}
             body={this.props.afterDialog.body}
             confirmText={this.props.afterDialog.confirm}

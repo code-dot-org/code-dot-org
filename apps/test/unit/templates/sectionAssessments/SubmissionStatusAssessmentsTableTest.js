@@ -35,7 +35,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
         studentOverviewData={studentOverviewData}
         icon="check-circle"
       />
-  );
+    );
 
     const icon = wrapper.find('FontAwesome');
     assert(icon);

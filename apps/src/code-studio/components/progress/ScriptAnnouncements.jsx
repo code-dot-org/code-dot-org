@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
@@ -25,5 +25,5 @@ export default function ScriptAnnouncements({announcements, width}) {
 
 ScriptAnnouncements.propTypes = {
   announcements: PropTypes.arrayOf(announcementShape).isRequired,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };

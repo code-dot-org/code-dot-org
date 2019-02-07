@@ -12,7 +12,10 @@ import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';
 import styleConstants from '../../../styleConstants';
 import Watchers from '../../../templates/watchers/Watchers';
-import PaneHeader, {PaneSection, PaneButton} from '../../../templates/PaneHeader';
+import PaneHeader, {
+  PaneSection,
+  PaneButton
+} from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
 import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
@@ -34,7 +37,7 @@ import {
   isAttached,
   isOpen,
   canRunNext,
-  getCommandHistory,
+  getCommandHistory
 } from './redux';
 
 const styles = {
@@ -53,7 +56,7 @@ const styles = {
     MozUserSelect: 'none',
     WebkitUserSelect: 'none',
     msUserSelect: 'none',
-    userSelect: 'none',
+    userSelect: 'none'
   },
   showHideIcon: {
     position: 'absolute',
@@ -120,7 +123,7 @@ class JsDebugger extends React.Component {
     // passed from above
     onSlideShut: PropTypes.func,
     onSlideOpen: PropTypes.func,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   constructor(props) {
@@ -140,7 +143,8 @@ class JsDebugger extends React.Component {
     }
     let commandsWidth = 0;
     if (document.getElementById('debug-commands-header')) {
-      commandsWidth = document.getElementById('debug-commands-header').offsetWidth;
+      commandsWidth = document.getElementById('debug-commands-header')
+        .offsetWidth;
     }
     let watchersWidth = 0;
     if (document.getElementById('debug-watch-header')) {
@@ -163,10 +167,7 @@ class JsDebugger extends React.Component {
     // Attach handlers for the debug area resize control
     // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
     // all touchend events on the page, breaking click events...
-    document.body.addEventListener(
-      'mouseup',
-      this.onMouseUpDebugResizeBar
-    );
+    document.body.addEventListener('mouseup', this.onMouseUpDebugResizeBar);
     if (mouseUpTouchEventName) {
       document.body.addEventListener(
         mouseUpTouchEventName,
@@ -176,10 +177,7 @@ class JsDebugger extends React.Component {
 
     // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
     // all touchend events on the page, breaking click events...
-    document.body.addEventListener(
-      'mouseup',
-      this.onMouseUpWatchersResizeBar
-    );
+    document.body.addEventListener('mouseup', this.onMouseUpWatchersResizeBar);
     if (mouseUpTouchEventName) {
       document.body.addEventListener(
         mouseUpTouchEventName,
@@ -189,22 +187,18 @@ class JsDebugger extends React.Component {
 
     let watchersReferences = {};
     function getWatchersElements() {
-      watchersReferences.watchersResizeBar = (
+      watchersReferences.watchersResizeBar =
         watchersReferences.watchersResizeBar ||
-        document.getElementById('watchersResizeBar')
-      );
-      watchersReferences.watchersDiv = (
+        document.getElementById('watchersResizeBar');
+      watchersReferences.watchersDiv =
         watchersReferences.watchersDiv ||
-        document.getElementById('debug-watch')
-      );
-      watchersReferences.watchersHeaderDiv = (
+        document.getElementById('debug-watch');
+      watchersReferences.watchersHeaderDiv =
         watchersReferences.watchersHeaderDiv ||
-        document.getElementById('debug-watch-header')
-      );
-      watchersReferences.debugConsoleDiv = (
+        document.getElementById('debug-watch-header');
+      watchersReferences.debugConsoleDiv =
         watchersReferences.debugConsoleDiv ||
-        document.getElementById('debug-console')
-      );
+        document.getElementById('debug-console');
       return watchersReferences;
     }
 
@@ -238,10 +232,7 @@ class JsDebugger extends React.Component {
       );
     }
 
-    document.body.removeEventListener(
-      'mouseup',
-      this.onMouseUpDebugResizeBar
-    );
+    document.body.removeEventListener('mouseup', this.onMouseUpDebugResizeBar);
     if (mouseUpTouchEventName) {
       document.body.removeEventListener(
         mouseUpTouchEventName,
@@ -255,7 +246,10 @@ class JsDebugger extends React.Component {
   onMouseUpDebugResizeBar = () => {
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingDebugResizeBar) {
-      document.body.removeEventListener('mousemove', this.onMouseMoveDebugResizeBar);
+      document.body.removeEventListener(
+        'mousemove',
+        this.onMouseMoveDebugResizeBar
+      );
       const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
       if (mouseMoveTouchEventName) {
         document.body.removeEventListener(
@@ -268,13 +262,15 @@ class JsDebugger extends React.Component {
   };
 
   slideShut() {
-    const closedHeight = $(this.root).find('#debug-area-header').height() +
-                         $(this._debugResizeBar).height();
+    const closedHeight =
+      $(this.root)
+        .find('#debug-area-header')
+        .height() + $(this._debugResizeBar).height();
     this.setState({
       transitionType: 'closing',
       open: false,
       openedHeight: $(this.root).height(),
-      closedHeight,
+      closedHeight
     });
     this.props.onSlideShut && this.props.onSlideShut(closedHeight);
   }
@@ -282,7 +278,7 @@ class JsDebugger extends React.Component {
   slideOpen() {
     this.setState({
       open: true,
-      transitionType: 'opening',
+      transitionType: 'opening'
     });
     this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
   }
@@ -305,12 +301,15 @@ class JsDebugger extends React.Component {
 
   onTransitionEnd = () => this.setState({transitionType: null});
 
-  onMouseDownDebugResizeBar = (event) => {
+  onMouseDownDebugResizeBar = event => {
     // When we see a mouse down in the resize bar, start tracking mouse moves:
     const eventSourceElm = event.srcElement || event.target;
     if (eventSourceElm.id === 'debugResizeBar') {
       this._draggingDebugResizeBar = true;
-      document.body.addEventListener('mousemove', this.onMouseMoveDebugResizeBar);
+      document.body.addEventListener(
+        'mousemove',
+        this.onMouseMoveDebugResizeBar
+      );
       const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
       if (mouseMoveTouchEventName) {
         document.body.addEventListener(
@@ -326,7 +325,7 @@ class JsDebugger extends React.Component {
   /**
    *  Handle mouse moves while dragging the debug resize bar.
    */
-  onMouseMoveDebugResizeBar = (event) => {
+  onMouseMoveDebugResizeBar = event => {
     const codeApp = document.getElementById('codeApp');
     const codeTextbox = document.getElementById('codeTextbox');
     if (!codeApp || !codeTextbox) {
@@ -339,24 +338,22 @@ class JsDebugger extends React.Component {
 
     const resizeBar = this._debugResizeBar;
     const rect = resizeBar.getBoundingClientRect();
-    const offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
-                   rect.height / 2;
+    const offset =
+      (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
+      rect.height / 2;
     const newDbgHeight = Math.max(
       MIN_DEBUG_AREA_HEIGHT,
-      Math.min(
-        MAX_DEBUG_AREA_HEIGHT,
-        (window.innerHeight - event.pageY) - offset
-      )
+      Math.min(MAX_DEBUG_AREA_HEIGHT, window.innerHeight - event.pageY - offset)
     );
     if (!this.props.isOpen) {
       this.props.open();
       this.setState({
         open: true,
-        openedHeight: newDbgHeight,
+        openedHeight: newDbgHeight
       });
     } else {
       this.setState({
-        openedHeight: newDbgHeight,
+        openedHeight: newDbgHeight
       });
     }
 
@@ -375,12 +372,15 @@ class JsDebugger extends React.Component {
     utils.fireResizeEvent();
   };
 
-  onMouseDownWatchersResizeBar = (event) => {
+  onMouseDownWatchersResizeBar = event => {
     // When we see a mouse down in the resize bar, start tracking mouse moves:
     const eventSourceElm = event.srcElement || event.target;
     if (eventSourceElm.id === 'watchersResizeBar') {
       this._draggingWatchersResizeBar = true;
-      document.body.addEventListener('mousemove', this.onMouseMoveWatchersResizeBar);
+      document.body.addEventListener(
+        'mousemove',
+        this.onMouseMoveWatchersResizeBar
+      );
       const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
       if (mouseMoveTouchEventName) {
         document.body.addEventListener(
@@ -396,7 +396,10 @@ class JsDebugger extends React.Component {
   onMouseUpWatchersResizeBar = () => {
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingWatchersResizeBar) {
-      document.body.removeEventListener('mousemove', this.onMouseMoveWatchersResizeBar);
+      document.body.removeEventListener(
+        'mousemove',
+        this.onMouseMoveWatchersResizeBar
+      );
       const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
       if (mouseMoveTouchEventName) {
         document.body.removeEventListener(
@@ -411,7 +414,7 @@ class JsDebugger extends React.Component {
   /**
    *  Handle mouse moves while dragging the debug resize bar.
    */
-  onMouseMoveWatchersResizeBar = (event) => {
+  onMouseMoveWatchersResizeBar = event => {
     const watchers = this._watchers.getWrappedInstance();
     const watchersRect = watchers.scrollableContainer.getBoundingClientRect();
     const movement = watchersRect.left - event.clientX;
@@ -422,16 +425,18 @@ class JsDebugger extends React.Component {
     );
 
     const watchersResizeRect = this._watchersResizeBar.getBoundingClientRect();
-    const watchersResizeRight = (newWatchersWidth - watchersResizeRect.width / 2);
+    const watchersResizeRight = newWatchersWidth - watchersResizeRect.width / 2;
 
     watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
-    this._debugConsole.getWrappedInstance().root.style.right = newWatchersWidth + 'px';
+    this._debugConsole.getWrappedInstance().root.style.right =
+      newWatchersWidth + 'px';
     this._watchersResizeBar.style.right = watchersResizeRight + 'px';
 
     const headerLBorderWidth = 1;
     const watchersLRBorderWidth = 2;
     const extraWidthForHeader = watchersLRBorderWidth - headerLBorderWidth;
-    this._debugWatchHeader.root.style.width = newWatchersWidth + extraWidthForHeader + 'px';
+    this._debugWatchHeader.root.style.width =
+      newWatchersWidth + extraWidthForHeader + 'px';
 
     this.handleResizeConsole();
   };
@@ -457,7 +462,9 @@ class JsDebugger extends React.Component {
     if (!this.state.open && this.state.transitionType !== 'closing') {
       openStyle.display = 'none';
     }
-    let height = this.state.open ? this.state.openedHeight : this.state.closedHeight;
+    let height = this.state.open
+      ? this.state.openedHeight
+      : this.state.closedHeight;
     if (!height && this.props.style) {
       height = this.props.style.height;
     }
@@ -466,15 +473,19 @@ class JsDebugger extends React.Component {
     return (
       <div
         id="debug-area"
-        style={[{transition: debugAreaTransitionValue}, this.props.style, {height}]}
+        style={[
+          {transition: debugAreaTransitionValue},
+          this.props.style,
+          {height}
+        ]}
         onTransitionEnd={this.onTransitionEnd}
-        ref={root => this.root = root}
+        ref={root => (this.root = root)}
       >
         <div
           id="debugResizeBar"
           className="fa fa-ellipsis-h"
           onMouseDown={this.onMouseDownDebugResizeBar}
-          ref={(debugResizeBar) => this._debugResizeBar = debugResizeBar}
+          ref={debugResizeBar => (this._debugResizeBar = debugResizeBar)}
         />
         <PaneHeader
           id="debug-area-header"
@@ -495,61 +506,73 @@ class JsDebugger extends React.Component {
             style={styles.showHideIcon}
             onClick={this.slideToggle}
           />
-          {this.props.debugButtons &&
-          <PaneSection id="debug-commands-header">
-            <FontAwesome
-              id="running-spinner"
-              style={!isAttached || canRunNext ? commonStyles.hidden : {}}
-              icon="spinner"
-              className="fa-spin"
-            />
-            <FontAwesome
-              id="paused-icon"
-              style={!isAttached || !canRunNext ? commonStyles.hidden : {}}
-              icon="pause"
-            />
-            <span
-              style={styles.noUserSelect}
-              className="header-text"
-            >
-              {this.state.open ? i18n.debugCommandsHeaderWhenOpen() : i18n.debugCommandsHeaderWhenClosed()}
-            </span>
-          </PaneSection>
-          }
-          {this.props.debugWatch &&
-          <PaneSection
-            id="debug-watch-header"
-            ref={debugWatchHeader => this._debugWatchHeader = debugWatchHeader}
-            onClick={() => {
-              // reset resizer-overridden styles
-              // (remove once resize logic migrated to React)
-              if (!this.state.watchersHidden) {
-                const resetResizeEvent = document.createEvent('Event');
-                resetResizeEvent.initEvent('resetWatchersResizableElements', true, true);
-                document.dispatchEvent(resetResizeEvent);
+          {this.props.debugButtons && (
+            <PaneSection id="debug-commands-header">
+              <FontAwesome
+                id="running-spinner"
+                style={!isAttached || canRunNext ? commonStyles.hidden : {}}
+                icon="spinner"
+                className="fa-spin"
+              />
+              <FontAwesome
+                id="paused-icon"
+                style={!isAttached || !canRunNext ? commonStyles.hidden : {}}
+                icon="pause"
+              />
+              <span style={styles.noUserSelect} className="header-text">
+                {this.state.open
+                  ? i18n.debugCommandsHeaderWhenOpen()
+                  : i18n.debugCommandsHeaderWhenClosed()}
+              </span>
+            </PaneSection>
+          )}
+          {this.props.debugWatch && (
+            <PaneSection
+              id="debug-watch-header"
+              ref={debugWatchHeader =>
+                (this._debugWatchHeader = debugWatchHeader)
               }
+              onClick={() => {
+                // reset resizer-overridden styles
+                // (remove once resize logic migrated to React)
+                if (!this.state.watchersHidden) {
+                  const resetResizeEvent = document.createEvent('Event');
+                  resetResizeEvent.initEvent(
+                    'resetWatchersResizableElements',
+                    true,
+                    true
+                  );
+                  document.dispatchEvent(resetResizeEvent);
+                }
 
-              this.setState({watchersHidden: !this.state.watchersHidden});
-            }}
-            style={this.state.watchersHidden ? {
-              borderLeft: 'none',
-              textAlign: 'right',
-              marginRight: '30px'
-            } : {}}
-          >
-            <FontAwesome
-              id="hide-toolbox-icon"
-              style={styles.showDebugWatchIcon}
-              icon={this.state.watchersHidden ? "chevron-circle-left" : "chevron-circle-right"}
-            />
-            <span
-              style={styles.noUserSelect}
-              className="header-text"
+                this.setState({watchersHidden: !this.state.watchersHidden});
+              }}
+              style={
+                this.state.watchersHidden
+                  ? {
+                      borderLeft: 'none',
+                      textAlign: 'right',
+                      marginRight: '30px'
+                    }
+                  : {}
+              }
             >
-              {this.state.watchersHidden ? 'Show Watch' : i18n.debugWatchHeader()}
-            </span>
-          </PaneSection>
-          }
+              <FontAwesome
+                id="hide-toolbox-icon"
+                style={styles.showDebugWatchIcon}
+                icon={
+                  this.state.watchersHidden
+                    ? 'chevron-circle-left'
+                    : 'chevron-circle-right'
+                }
+              />
+              <span style={styles.noUserSelect} className="header-text">
+                {this.state.watchersHidden
+                  ? 'Show Watch'
+                  : i18n.debugWatchHeader()}
+              </span>
+            </PaneSection>
+          )}
           <PaneButton
             id="clear-console-header"
             iconClass="fa fa-eraser"
@@ -559,46 +582,58 @@ class JsDebugger extends React.Component {
             onClick={this.onClearDebugOutput}
           />
           {isRunning && canShowDebugSprites && (
-              <PaneButton
-                iconClass="fa fa-bug"
-                label="Debug Sprites: Off"
-                headerHasFocus={hasFocus}
-                isRtl={false}
-                isPressed={this.props.isDebuggingSprites}
-                pressedLabel="Debug Sprites: On"
-                onClick={this.onToggleDebugSprites}
-              />)}
-          {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
+            <PaneButton
+              iconClass="fa fa-bug"
+              label="Debug Sprites: Off"
+              headerHasFocus={hasFocus}
+              isRtl={false}
+              isPressed={this.props.isDebuggingSprites}
+              pressedLabel="Debug Sprites: On"
+              onClick={this.onToggleDebugSprites}
+            />
+          )}
+          {this.props.debugSlider && (
+            <SpeedSlider
+              style={sliderStyle}
+              hasFocus={hasFocus}
+              value={this.props.stepSpeed}
+              lineWidth={130}
+              onChange={this.props.setStepSpeed}
+            />
+          )}
         </PaneHeader>
-        {this.props.debugButtons &&
-         <DebugButtons style={openStyle}/>}
+        {this.props.debugButtons && <DebugButtons style={openStyle} />}
         {this.props.debugConsole && (
-           <DebugConsole
-             style={openStyle}
-             debugButtons={this.props.debugButtons}
-             debugWatch={showWatchPane}
-             ref={debugConsole => this._debugConsole = debugConsole}
-           />)}
+          <DebugConsole
+            style={openStyle}
+            debugButtons={this.props.debugButtons}
+            debugWatch={showWatchPane}
+            ref={debugConsole => (this._debugConsole = debugConsole)}
+          />
+        )}
         <div style={{display: showWatchPane ? 'initial' : 'none'}}>
           <div
             id="watchersResizeBar"
-            ref={watchersResizeBar => this._watchersResizeBar = watchersResizeBar}
+            ref={watchersResizeBar =>
+              (this._watchersResizeBar = watchersResizeBar)
+            }
             onMouseDown={this.onMouseDownWatchersResizeBar}
           />
         </div>
-        {showWatchPane &&
-         <Watchers
-           style={openStyle}
-           ref={watchers => this._watchers = watchers}
-           debugButtons={this.props.debugButtons}
-         />}
+        {showWatchPane && (
+          <Watchers
+            style={openStyle}
+            ref={watchers => (this._watchers = watchers)}
+            debugButtons={this.props.debugButtons}
+          />
+        )}
       </div>
     );
   }
 }
 
 export default connect(
-  (state) => ({
+  state => ({
     debugButtons: !!state.pageConstants.showDebugButtons,
     debugConsole: !!state.pageConstants.showDebugConsole,
     debugWatch: !!state.pageConstants.showDebugWatch,
@@ -611,7 +646,7 @@ export default connect(
     isOpen: isOpen(state),
     isAttached: isAttached(state),
     canRunNext: canRunNext(state),
-    commandHistory: getCommandHistory(state),
+    commandHistory: getCommandHistory(state)
   }),
   {
     setStepSpeed,
@@ -620,6 +655,6 @@ export default connect(
     removeWatchExpression,
     clearLog,
     open,
-    close,
+    close
   }
 )(Radium(JsDebugger));
