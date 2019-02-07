@@ -651,7 +651,7 @@ ro:
         text: locație aleatorie
       Vector_vectorNorth:
         text: nord
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': dimensiune
@@ -659,16 +659,16 @@ ro:
             '"x"': poziţie x
             '"y"': poziţie y
             '"direction"': direcţie de mişcare
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': dimensiune
-            '"x"': poziţie x
-            '"y"': poziţie y
-            '"costume"': costum
-            '"direction"': direcţie de mişcare
-            '"rotation"': rotire sau direcţie
-            '"tint"': tentă
+          CONDITION:
+            '"when"': când
+            '"while"': în timp ce
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': când
+            '"while"': în timp ce
       binary_move:
         options:
           DIR:

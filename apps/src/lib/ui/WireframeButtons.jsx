@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
 import SendToPhone from '../../code-studio/components/SendToPhone';
 import project from '../../code-studio/initApp/project';
@@ -9,11 +10,7 @@ import project from '../../code-studio/initApp/project';
  * types will have a "How it works" button on the app itself, viewable on mobile
  * devices.
  */
-const APP_TYPES_WITH_VIEW_CODE = [
-  'applab',
-  'gamelab',
-  'makerlab',
-];
+const APP_TYPES_WITH_VIEW_CODE = ['applab', 'gamelab', 'makerlab'];
 
 /**
  * Url to which the "Make my own" button should go to, based on the type of the
@@ -27,7 +24,7 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
   gamelab: 'https://code.org/educate/gamelab',
   gamelab_legacy: 'https://code.org/educate/gamelab',
   playlab: '/p/playlab',
-  playlab_legacy: '/s/playlab',
+  playlab_legacy: '/s/playlab'
 };
 
 /**
@@ -37,7 +34,7 @@ export default class WireframeButtons extends React.Component {
   static propTypes = {
     channelId: PropTypes.string,
     appType: PropTypes.string.isRequired,
-    isLegacyShare: PropTypes.bool.isRequired,
+    isLegacyShare: PropTypes.bool.isRequired
   };
 
   state = {
@@ -58,20 +55,20 @@ export default class WireframeButtons extends React.Component {
     const newProjectUrl = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     return (
       <div style={styles.main}>
-        {showViewCode && <ViewCodeButton/>}
-        {newProjectUrl && <NewProjectButton url={newProjectUrl}/>}
+        {showViewCode && <ViewCodeButton />}
+        {newProjectUrl && <NewProjectButton url={newProjectUrl} />}
         <SendToPhoneButton
           active={clickedSendToPhone}
           onClick={this.handleClickSendToPhone}
         />
         <br />
-        {clickedSendToPhone &&
+        {clickedSendToPhone && (
           <SendToPhoneControls
             appType={appType}
             channelId={channelId}
             isLegacyShare={isLegacyShare}
           />
-        }
+        )}
       </div>
     );
   }
@@ -79,8 +76,11 @@ export default class WireframeButtons extends React.Component {
 
 const ViewCodeButton = () => (
   <span style={{display: 'inline-block'}}>
-    <a className="WireframeButtons_button" href={project.getProjectUrl('/view')}>
-      <i className="fa fa-code"/> {i18n.viewCode()}
+    <a
+      className="WireframeButtons_button"
+      href={project.getProjectUrl('/view')}
+    >
+      <i className="fa fa-code" /> {i18n.viewCode()}
     </a>
   </span>
 );
@@ -88,12 +88,12 @@ const ViewCodeButton = () => (
 const NewProjectButton = ({url}) => (
   <span style={{display: 'inline-block'}}>
     <a className="WireframeButtons_button" href={url}>
-      <i className="fa fa-pencil-square-o"/> {i18n.makeMyOwn()}
+      <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
     </a>
   </span>
 );
 NewProjectButton.propTypes = {
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 };
 
 const SendToPhoneButton = ({active, onClick}) => (
@@ -102,13 +102,13 @@ const SendToPhoneButton = ({active, onClick}) => (
       className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
       onClick={onClick}
     >
-      <i className="fa fa-mobile"/> {i18n.sendToPhone()}
+      <i className="fa fa-mobile" /> {i18n.sendToPhone()}
     </a>
   </span>
 );
 SendToPhoneButton.propTypes = {
   active: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
@@ -124,22 +124,22 @@ const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
 SendToPhoneControls.propTypes = _.pick(WireframeButtons.propTypes, [
   'appType',
   'channelId',
-  'isLegacyShare',
+  'isLegacyShare'
 ]);
 
 const styles = {
   main: {
-    font: '12pt "Gotham 5r", sans-serif',
+    font: '12pt "Gotham 5r", sans-serif'
   },
   sendToPhone: {
     label: {
       font: '12pt "Gotham 5r", sans-serif',
       lineHeight: 'normal',
-      cursor: 'default',
+      cursor: 'default'
     },
     div: {
       margin: 0,
-      lineHeight: 'normal',
-    },
+      lineHeight: 'normal'
+    }
   }
 };

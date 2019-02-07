@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import commonStyles from '../../commonStyles';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const styles = {
@@ -18,7 +19,7 @@ class DuplicateElementButton extends React.Component {
     handleDuplicate: PropTypes.func.isRequired
   };
 
-  handleDuplicate = (event) => this.props.handleDuplicate();
+  handleDuplicate = event => this.props.handleDuplicate();
 
   render() {
     return (
@@ -29,7 +30,7 @@ class DuplicateElementButton extends React.Component {
         >
           Duplicate
         </button>
-    </div>
+      </div>
     );
   }
 }

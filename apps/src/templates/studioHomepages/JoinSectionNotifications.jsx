@@ -1,19 +1,22 @@
 /** @file Notifications showing results of the join/leave section operation. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Notification from '@cdo/apps/templates/Notification';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 export default function JoinSectionNotifications({action, result, name, id}) {
   if (action === 'join' && result === 'success') {
-    return <JoinSectionSuccessNotification sectionName={name}/>;
+    return <JoinSectionSuccessNotification sectionName={name} />;
   } else if (action === 'leave' && result === 'success') {
-    return <LeaveSectionSuccessNotification sectionName={name} sectionId={id}/>;
+    return (
+      <LeaveSectionSuccessNotification sectionName={name} sectionId={id} />
+    );
   } else if (action === 'join' && result === 'section_notfound') {
-    return <JoinSectionNotFoundNotification sectionId={id}/>;
+    return <JoinSectionNotFoundNotification sectionId={id} />;
   } else if (action === 'join' && result === 'fail') {
-    return <JoinSectionFailNotification sectionId={id}/>;
+    return <JoinSectionFailNotification sectionId={id} />;
   } else if (action === 'join' && result === 'exists') {
-    return <JoinSectionExistsNotification sectionName={name}/>;
+    return <JoinSectionExistsNotification sectionName={name} />;
   }
   return null;
 }
@@ -44,7 +47,8 @@ const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
     dismissible={true}
   />
 );
-LeaveSectionSuccessNotification.propTypes = JoinSectionSuccessNotification.propTypes;
+LeaveSectionSuccessNotification.propTypes =
+  JoinSectionSuccessNotification.propTypes;
 
 const JoinSectionNotFoundNotification = ({sectionId}) => (
   <Notification
@@ -66,7 +70,8 @@ const JoinSectionFailNotification = ({sectionId}) => (
     dismissible={true}
   />
 );
-JoinSectionFailNotification.propTypes = JoinSectionNotFoundNotification.propTypes;
+JoinSectionFailNotification.propTypes =
+  JoinSectionNotFoundNotification.propTypes;
 
 const JoinSectionExistsNotification = ({sectionName}) => (
   <Notification
@@ -76,4 +81,5 @@ const JoinSectionExistsNotification = ({sectionName}) => (
     dismissible={true}
   />
 );
-JoinSectionExistsNotification.propTypes = JoinSectionSuccessNotification.propTypes;
+JoinSectionExistsNotification.propTypes =
+  JoinSectionSuccessNotification.propTypes;

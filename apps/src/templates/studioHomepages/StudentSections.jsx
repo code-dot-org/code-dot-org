@@ -1,5 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import i18n from "@cdo/locale";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import i18n from '@cdo/locale';
 import ContentContainer from '../ContentContainer';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
@@ -23,7 +24,7 @@ export default class StudentSections extends Component {
     };
   }
 
-  updateSections = (sections) => this.setState({sections});
+  updateSections = sections => this.setState({sections});
 
   updateSectionsResult = (action, result, name, id) => {
     this.setState({
@@ -39,27 +40,24 @@ export default class StudentSections extends Component {
     const {sections, action, result, resultName, resultId} = this.state;
     const enrolledInASection = sections.length > 0;
     const heading = isTeacher ? i18n.sectionsJoined() : i18n.sectionsTitle();
-    const description = isTeacher ? "" : i18n.enrollmentDescription();
+    const description = isTeacher ? '' : i18n.enrollmentDescription();
 
     return (
-      <ContentContainer
-        heading={heading}
-        description={description}
-      >
+      <ContentContainer heading={heading} description={description}>
         <JoinSectionNotifications
           action={action}
           result={result}
           name={resultName}
           id={resultId}
         />
-        {enrolledInASection &&
+        {enrolledInASection && (
           <SectionsAsStudentTable
             sections={sections}
             canLeave={!!isTeacher}
             updateSections={this.updateSections}
             updateSectionsResult={this.updateSectionsResult}
           />
-        }
+        )}
         <JoinSection
           enrolledInASection={enrolledInASection}
           updateSections={this.updateSections}

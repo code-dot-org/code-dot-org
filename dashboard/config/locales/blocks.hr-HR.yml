@@ -322,18 +322,22 @@ hr:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': veličina
-            '"x"': x pozicija
-            '"y"': y pozicija
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
       binary_move:
         options:
           DIR:

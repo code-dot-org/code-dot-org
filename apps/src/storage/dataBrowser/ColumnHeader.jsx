@@ -1,41 +1,41 @@
 /**
  * @overview Component for adding a new column to the specified table.
  */
-
 import ColumnMenu from './ColumnMenu';
 import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
-import color from "../../util/color";
+import React from 'react';
+import color from '../../util/color';
 import * as dataStyles from './dataStyles';
-import { valueOr } from '../../utils';
+import {valueOr} from '../../utils';
 
 const styles = {
   columnName: {
     display: 'inline-block',
     maxWidth: dataStyles.maxCellWidth,
     overflow: 'hidden',
-    whiteSpace: 'nowrap',
+    whiteSpace: 'nowrap'
   },
   container: {
     justifyContent: 'space-between',
-    padding: '6px 0',
+    padding: '6px 0'
   },
   iconWrapper: {
     alignSelf: 'flex-end',
-    paddingLeft: 5,
+    paddingLeft: 5
   },
   icon: {
     color: 'white',
-    cursor: 'pointer',
+    cursor: 'pointer'
   }
 };
 
 const INITIAL_STATE = {
   newName: undefined,
   hasEnteredText: false,
-  isDialogOpen: false,
+  isDialogOpen: false
 };
 
 class ColumnHeader extends React.Component {
@@ -48,7 +48,7 @@ class ColumnHeader extends React.Component {
     isEditable: PropTypes.bool.isRequired,
     isEditing: PropTypes.bool.isRequired,
     isPending: PropTypes.bool.isRequired,
-    renameColumn: PropTypes.func.isRequired,
+    renameColumn: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
@@ -74,10 +74,10 @@ class ColumnHeader extends React.Component {
 
   handleBlur = () => this.handleRenameConfirm();
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
       newName: event.target.value,
-      hasEnteredText: true,
+      hasEnteredText: true
     });
   };
 
@@ -90,7 +90,7 @@ class ColumnHeader extends React.Component {
     this.props.deleteColumn(this.props.columnName);
   };
 
-  handleKeyUp = (event) => {
+  handleKeyUp = event => {
     if (event.key === 'Enter') {
       this.handleRenameConfirm();
     } else if (event.key === 'Escape') {
@@ -123,23 +123,32 @@ class ColumnHeader extends React.Component {
   /**
    * @param {ColumnType} type
    */
-  coerceColumn = (type) => this.props.coerceColumn(this.props.columnName, type);
+  coerceColumn = type => this.props.coerceColumn(this.props.columnName, type);
 
   isInputValid() {
     // The current name is always valid.
     const newName = this.state.newName;
-    return this.props.columnName === newName || !this.props.columnNames.includes(newName);
+    return (
+      this.props.columnName === newName ||
+      !this.props.columnNames.includes(newName)
+    );
   }
 
   render() {
-    const containerStyle = [styles.container, {
-      display: this.props.isEditing ? 'none' : null,
-    }];
-    const inputStyle = [dataStyles.input, {
-      display: this.props.isEditing ? null : 'none',
-      backgroundColor: this.isInputValid() ? null : color.lightest_red,
-      minWidth: 80,
-    }];
+    const containerStyle = [
+      styles.container,
+      {
+        display: this.props.isEditing ? 'none' : null
+      }
+    ];
+    const inputStyle = [
+      dataStyles.input,
+      {
+        display: this.props.isEditing ? null : 'none',
+        backgroundColor: this.isInputValid() ? null : color.lightest_red,
+        minWidth: 80
+      }
+    ];
     return (
       <th style={dataStyles.headerCell}>
         <div style={containerStyle} className="flex">
@@ -147,17 +156,20 @@ class ColumnHeader extends React.Component {
             {this.props.columnName}
           </div>
           <div style={styles.iconWrapper}>
-            {
-              this.props.isPending ?
-                <FontAwesome icon="spinner" className="fa-spin" style={styles.icon}/> :
-                <ColumnMenu
-                  coerceColumn={this.coerceColumn}
-                  handleDelete={this.handleDelete}
-                  handleRename={this.handleRename}
-                  isEditable={this.props.isEditable}
-                />
-            }
-
+            {this.props.isPending ? (
+              <FontAwesome
+                icon="spinner"
+                className="fa-spin"
+                style={styles.icon}
+              />
+            ) : (
+              <ColumnMenu
+                coerceColumn={this.coerceColumn}
+                handleDelete={this.handleDelete}
+                handleRename={this.handleRename}
+                isEditable={this.props.isEditable}
+              />
+            )}
           </div>
         </div>
         <Dialog
@@ -172,7 +184,7 @@ class ColumnHeader extends React.Component {
           title="Delete column"
         />
         <input
-          ref={input => this.input = input}
+          ref={input => (this.input = input)}
           style={inputStyle}
           value={valueOr(this.state.newName, this.props.columnName)}
           onBlur={this.handleBlur}

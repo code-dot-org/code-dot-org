@@ -1674,3 +1674,27 @@ sq:
               name: 'Algoritmet e Jetës-Reale: Planet në Letër'
             Binary Bracelets:
               name: Byzylykët Binarë
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
+            Going Places Safely:
+              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Lëvize atë, lëvize atë
+            Your Digital Footprint:
+              name: Gjurmët e Tua Dixhitale
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Lëvize atë, lëvize atë
+            Your Digital Footprint:
+              name: Gjurmët e Tua Dixhitale
+            Spelling Bee:
+              name: Bleta Gërmëzuese
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmet e jetës-Reale: Mbill një Farë'

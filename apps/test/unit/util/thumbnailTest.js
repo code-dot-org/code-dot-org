@@ -1,5 +1,9 @@
 import {createThumbnail} from '@cdo/apps/util/thumbnail';
-import {canvasFromImage, dataURIFromURI, imageFromURI} from '@cdo/apps/imageUtils';
+import {
+  canvasFromImage,
+  dataURIFromURI,
+  imageFromURI
+} from '@cdo/apps/imageUtils';
 import {expect} from '../../util/configuredChai';
 import squarePlayspaceImage from './squarePlayspaceImage.png';
 import squarePlayspaceThumbnail from './squarePlayspaceThumbnail.png';

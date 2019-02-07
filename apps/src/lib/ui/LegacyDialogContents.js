@@ -3,7 +3,8 @@
  * create LegacyDialogs. LegacyDialog expects a semi-specific format.
  */
 
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 
@@ -24,7 +25,7 @@ export const SingleLevelGroupDialog = ({id, title, body}) => (
 SingleLevelGroupDialog.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired
 };
 
 export const UnsubmitDialog = (
@@ -41,7 +42,7 @@ export const MatchAngiGifDialog = () => (
       <p className="dialog-title">{i18n.instructions()}</p>
       <p>{i18n.dragBlocksToMatch()}</p>
       <div className="aniGif example-image" style={{overflow: 'hidden'}}>
-        <img src="/script_assets/images/matching_ani.gif"/>
+        <img src="/script_assets/images/matching_ani.gif" />
       </div>
       <div className="farSide">
         <button id="ok-button">{i18n.ok()}</button>
@@ -107,9 +108,7 @@ export const StartOverDialog = () => (
       <p className="dialog-title">{i18n.startOverTitle()}</p>
       <p>{i18n.startOverBody()}</p>
       <div id="buttons">
-        <button id="cancel-button">
-          {i18n.cancel()}
-        </button>
+        <button id="cancel-button">{i18n.cancel()}</button>
         <button id="ok-button" className="btn-danger" style={{float: 'right'}}>
           {i18n.startOver()}
         </button>
@@ -123,10 +122,10 @@ export const InstructionsDialog = ({title, markdownContent}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon markdown-instructions-container">
       <p className="dialog-title">{title}</p>
-      <p/>
+      <p />
       <div
         className="instructions-markdown scrollable-element"
-        dangerouslySetInnerHTML={{ __html: markdownContent }}
+        dangerouslySetInnerHTML={{__html: markdownContent}}
       />
       <div id="buttons">
         <button id="ok-button" style={{float: 'right'}}>
@@ -138,7 +137,7 @@ export const InstructionsDialog = ({title, markdownContent}) => (
 );
 InstructionsDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  markdownContent: PropTypes.string.isRequired,
+  markdownContent: PropTypes.string.isRequired
 };
 
 export const SuccessDialog = ({title, body}) => (
@@ -154,5 +153,5 @@ export const SuccessDialog = ({title, body}) => (
 );
 SuccessDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired
 };

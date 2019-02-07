@@ -1,56 +1,30 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ProgressBox from './ProgressBox';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 const styles = {
-  legendBox: {
-    borderWidth: 1,
-    float: 'left',
-    display: 'inline-block',
-    marginTop: 20,
-    boxSizing: 'content-box',
-  },
-  progressBox: {
-    float: 'left',
-    width: 130,
-    borderColor: color.lightest_gray,
-    borderWidth: 2,
-    borderBottomStyle: 'solid',
-    borderRightStyle: 'solid',
-  },
-  leftBorder: {
-    borderColor: color.lightest_gray,
-    borderWidth: 2,
-    borderLeftStyle: 'solid',
-  },
-  heading: {
-    fontSize: 18,
+  header: {
     fontWeight: 'bold',
     color: color.charcoal,
-    float: 'left',
-    paddingTop: 10,
-    paddingBottom: 10,
-    textAlign: 'center',
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: 900,
-    color: color.charcoal,
-  },
-  parenthetical: {
-    fontSize: 10,
-    color: color.charcoal,
-  },
-  labelBox: {
-    padding: 10,
-    height: 60,
-    width: '100%',
-    backgroundColor: color.lightest_gray,
     textAlign: 'center'
   },
-  boxContainer: {
-    padding: '15px 50px',
+  th: {
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    border: `1px solid ${color.lightest_gray}`,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    textAlign: 'center',
+    padding: 15
+  },
+  td: {
+    border: `1px solid ${color.lightest_gray}`,
+    padding: 15
+  },
+  boxStyle: {
+    margin: '0 auto'
   }
 };
 
@@ -60,78 +34,87 @@ export default class SummaryViewLegend extends Component {
   };
 
   render() {
-    const { showCSFProgressBox } = this.props;
-    const headingStyle = {
-      ...styles.heading,
-      width: showCSFProgressBox ? '48%' : '100%'
-    };
+    const {showCSFProgressBox} = this.props;
+    const headerColSpan = showCSFProgressBox ? 2 : 3;
 
     return (
-      <div style={styles.legendBox}>
-        <div>
-          <div style={headingStyle}>{i18n.lessonStatus()}</div>
-          {showCSFProgressBox &&
-            <div style={headingStyle}>{i18n.completionStatus()}</div>
-          }
-        </div>
-        <div style={styles.progressBox}>
-          <div style={styles.labelBox}>
-            <div>{i18n.notStarted()}</div>
-          </div>
-          <div style={{...styles.boxContainer, ...styles.leftBorder}}>
-            <ProgressBox
-              started={false}
-              incomplete={20}
-              imperfect={0}
-              perfect={0}
-            />
-          </div>
-        </div>
-        <div style={styles.progressBox}>
-          <div style={styles.labelBox}>
-            <div>{i18n.inProgress()}</div>
-          </div>
-          <div style={styles.boxContainer}>
-            <ProgressBox
-              started={true}
-              incomplete={20}
-              imperfect={0}
-              perfect={0}
-            />
-          </div>
-        </div>
-        <div style={styles.progressBox}>
-          <div style={styles.labelBox}>
-            <div>{i18n.completed()}</div>
-            {showCSFProgressBox &&
-              <div style={styles.parenthetical}>({i18n.perfect()})</div>
-            }
-          </div>
-          <div style={styles.boxContainer}>
-            <ProgressBox
-              started={true}
-              incomplete={0}
-              imperfect={0}
-              perfect={20}
-            />
-          </div>
-        </div>
-        {showCSFProgressBox &&
-          <div style={styles.progressBox}>
-            <div style={styles.labelBox}>
-              <div>{i18n.completed()}</div>
-              <div style={styles.parenthetical}>({i18n.tooManyBlocks()})</div>
-            </div>
-            <div style={styles.boxContainer}>
-              <ProgressBox
-                started={true}
-                incomplete={0}
-                imperfect={20}
-                perfect={0}
-              />
-            </div>
-          </div>
-        }
+      <div style={{marginTop: 60}}>
+        <table>
+          <thead>
+            <tr>
+              <td colSpan={headerColSpan}>
+                <h3 style={styles.header}>{i18n.lessonStatus()}</h3>
+              </td>
+              {showCSFProgressBox && (
+                <td colSpan={2}>
+                  <h3 style={styles.header}>{i18n.completionStatus()}</h3>
+                </td>
+              )}
+            </tr>
+            <tr>
+              <th style={styles.th}>{i18n.notStarted()}</th>
+              <th style={styles.th}>{i18n.inProgress()}</th>
+              <th style={styles.th}>
+                {i18n.completed()}
+                {showCSFProgressBox && (
+                  <span>
+                    <br />
+                    {`(${i18n.perfect()})`}
+                  </span>
+                )}
+              </th>
+              {showCSFProgressBox && (
+                <th style={styles.th}>
+                  {i18n.completed()}
+                  <br />
+                  {`(${i18n.tooManyBlocks()})`}
+                </th>
+              )}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={styles.td}>
+                <ProgressBox
+                  style={styles.boxStyle}
+                  started={false}
+                  incomplete={20}
+                  imperfect={0}
+                  perfect={0}
+                />
+              </td>
+              <td style={styles.td}>
+                <ProgressBox
+                  style={styles.boxStyle}
+                  started={true}
+                  incomplete={20}
+                  imperfect={0}
+                  perfect={0}
+                />
+              </td>
+              <td style={styles.td}>
+                <ProgressBox
+                  style={styles.boxStyle}
+                  started={true}
+                  incomplete={0}
+                  imperfect={0}
+                  perfect={20}
+                />
+              </td>
+              {showCSFProgressBox && (
+                <td style={styles.td}>
+                  <ProgressBox
+                    style={styles.boxStyle}
+                    started={true}
+                    incomplete={0}
+                    imperfect={20}
+                    perfect={0}
+                  />
+                </td>
+              )}
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   }

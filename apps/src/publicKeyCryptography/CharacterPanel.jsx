@@ -1,6 +1,7 @@
 /** @file Panel with title, used for each character in crypto widget */
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../util/color';
 import {AnyChildren} from './types';
 
 const style = {
@@ -18,12 +19,8 @@ const style = {
 export default function CharacterPanel({title, children}) {
   return (
     <div className={`panel-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-      <div style={style.header}>
-        {title}
-      </div>
-      <div>
-        {children}
-      </div>
+      <div style={style.header}>{title}</div>
+      <div>{children}</div>
     </div>
   );
 }

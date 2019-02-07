@@ -1140,7 +1140,7 @@ fr:
         text: lieu aléatoire
       Vector_vectorNorth:
         text: nord
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': taille
@@ -1148,16 +1148,20 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': taille
-            '"x"': position x
-            '"y"': position y
-            '"costume"': costume
-            '"direction"': direction du mouvement
-            '"rotation"': rotation ou direction
-            '"tint"': nuance
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': ceci
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
       binary_drawPixelHere:
         options:
           VAL:

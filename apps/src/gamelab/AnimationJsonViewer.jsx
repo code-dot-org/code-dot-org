@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import Dialog, {Body} from '../templates/Dialog';
 import {hideAnimationJson} from './actions';
@@ -21,9 +22,7 @@ class AnimationJsonViewer extends React.Component {
     return (
       <Dialog isOpen={this.props.isOpen} handleClose={this.props.handleClose}>
         <Body>
-          <pre style={style.pre}>
-            {this.props.content}
-          </pre>
+          <pre style={style.pre}>{this.props.content}</pre>
         </Body>
       </Dialog>
     );

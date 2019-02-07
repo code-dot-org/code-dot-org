@@ -887,7 +887,7 @@ th:
         text: หันขวา
       Vector_positionCenter:
         text: ตรงกลาง
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -895,14 +895,16 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       binary_move:
         options:
           DIR:

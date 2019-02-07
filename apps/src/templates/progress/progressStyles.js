@@ -1,5 +1,5 @@
-import color from "@cdo/apps/util/color";
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import color from '@cdo/apps/util/color';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 export const DOT_SIZE = 30;
 export const DIAMOND_DOT_SIZE = 22;
@@ -19,32 +19,32 @@ export const hoverStyle = {
 const statusStyle = {
   [LevelStatus.perfect]: {
     backgroundColor: color.level_perfect,
-    color: color.white,
+    color: color.white
   },
   [LevelStatus.free_play_complete]: {
     backgroundColor: color.level_perfect,
-    color: color.white,
+    color: color.white
   },
   [LevelStatus.passed]: {
-    backgroundColor: color.level_passed,
+    backgroundColor: color.level_passed
   },
   // Note: There are submittable levels that are not assessments.
   [LevelStatus.submitted]: {
     borderColor: color.level_submitted,
     backgroundColor: color.level_submitted,
-    color: color.white,
+    color: color.white
   },
   // Note: There are submittable levels that are not assessments.
   [LevelStatus.readonly]: {
     borderColor: color.level_submitted,
     backgroundColor: color.level_submitted,
-    color: color.white,
+    color: color.white
   },
   // Below three are used by peer reviews
   [LevelStatus.review_rejected]: {
     color: color.white,
     borderColor: color.level_review_rejected,
-    backgroundColor: color.level_review_rejected,
+    backgroundColor: color.level_review_rejected
   },
   [LevelStatus.review_accepted]: {
     color: color.white,
@@ -52,7 +52,7 @@ const statusStyle = {
   },
   [LevelStatus.locked]: {
     // Don't want our green border even though status isn't not_tried
-    borderColor: color.lighter_gray,
+    borderColor: color.lighter_gray
   }
 };
 
@@ -64,13 +64,13 @@ export const levelProgressStyle = (level, disabled) => {
   let style = {
     borderWidth: 2,
     color: color.charcoal,
-    backgroundColor: color.level_not_tried,
+    backgroundColor: color.level_not_tried
   };
 
   if (disabled) {
     style = {
       ...style,
-      ...!disabled && hoverStyle
+      ...(!disabled && hoverStyle)
     };
   } else {
     if (level.status !== LevelStatus.not_tried) {

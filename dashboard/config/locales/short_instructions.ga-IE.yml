@@ -2088,6 +2088,8 @@ ga:
       aEfreeplay: Saorimirt!
       allHallows2017: Sáinnigh na fostaithe Code.org sa mbosca crián trí chearnóg
         a tharraingt le gach taobh 320 picteilín ar fad!
+      allthethings_ttscsf contained: Bailigh an leitís go léir (má tá leitís le bailiú
+        ann.)
       artistDebugVideo1: Úsáid an bloc "athdhéan" chun tonnta a chur ar an uisce.
       artistFunctionsVideo1: Lean na treoracha chun d'fheidhm féin a dhéanamh.
       artistLoopsK1: Seo cineál nua dúshláin darb ainm "Ealaíontóir". Bain triail
@@ -2352,38 +2354,56 @@ ga:
         mé isteach!
       courseA_artist_loops10_2018: Cabhraigh liom clocha a leagan síos sa chaoi nach
         dtitfidh mé isteach!
+      courseA_artist_loops10_2019: Cabhraigh liom clocha a leagan síos sa chaoi nach
+        dtitfidh mé isteach!
       courseA_artist_loops11: Cabhraigh liom céimeanna a thógáil chun breathnú ar
         imeacht an bháid.
       courseA_artist_loops11_2018: Cabhraigh liom céimeanna a thógáil chun breathnú
+        ar imeacht an bháid.
+      courseA_artist_loops11_2019: Cabhraigh liom céimeanna a thógáil chun breathnú
         ar imeacht an bháid.
       courseA_artist_loops12: Chonaic an t-ealaíontóir rud éigin greannmhar i bhfad
         uaidh. Déan pictiúr den rud a chonaic sé, dar leat.
       courseA_artist_loops12_2018: Chonaic an t-ealaíontóir rud éigin greannmhar i
         bhfad uaidh. Déan pictiúr den rud a chonaic sé, dar leat.
+      courseA_artist_loops12_2019: Chonaic an t-ealaíontóir rud éigin greannmhar i
+        bhfad uaidh. Déan pictiúr den rud a chonaic sé, dar leat.
       courseA_artist_loops1_2018: Seo cineál nua dúshláin darb ainm "Ealaíontóir".
+        Bain triail as an leibhéal agus tarraing rud éigin spraíúil.
+      courseA_artist_loops1_2019: Seo cineál nua dúshláin darb ainm "Ealaíontóir".
         Bain triail as an leibhéal agus tarraing rud éigin spraíúil.
       courseA_artist_loops2: Cabhraigh leis an ealaíontóir an líne seo a tharraingt
         ar aghaidh dhá uair.
       courseA_artist_loops2_2018: Cabhraigh leis an ealaíontóir an líne seo a tharraingt
         ar aghaidh dhá uair.
+      courseA_artist_loops2_2019: Cabhraigh leis an ealaíontóir an líne seo a tharraingt
+        ar aghaidh dhá uair.
       courseA_artist_loops3: Tarraing líne ar aghaidh cúig huaire.
       courseA_artist_loops3_2018: Tarraing líne ar aghaidh cúig huaire.
+      courseA_artist_loops3_2019: Tarraing líne ar aghaidh cúig huaire.
       courseA_artist_loops6: Cuirimis cnoc deas sa chúlra.
       courseA_artist_loops6_2018: Cuirimis cnoc deas sa chúlra.
+      courseA_artist_loops6_2019: Cuirimis cnoc deas sa chúlra.
       courseA_artist_loops7: Úsáid an bloc "athdhéan" chun tonnta a chur ar an uisce.
       courseA_artist_loops7_2018: Úsáid an bloc "athdhéan" chun tonnta a chur ar an
+        uisce.
+      courseA_artist_loops7_2019: Úsáid an bloc "athdhéan" chun tonnta a chur ar an
         uisce.
       courseA_artist_loops7_forVideo: Úsáid an bloc "athdhéan" chun tonnta a chur
         ar an uisce.
       courseA_artist_loops8: Teastaíonn uainn dréimire suas go dtí an bád.
       courseA_artist_loops8_2018: Teastaíonn uainn dréimire suas go dtí an bád.
+      courseA_artist_loops8_2019: Teastaíonn uainn dréimire suas go dtí an bád.
       courseA_artist_loops9: 'Dúshlán: Deisigh an staighre.'
       courseA_artist_loops9_2018: 'Dúshlán: Deisigh an staighre.'
+      courseA_artist_loops9_2019: 'Dúshlán: Deisigh an staighre.'
       courseA_artist_loops_challenge2: '"An gcabhróidh tú liom dhá theachín éin a
         dhéanamh?"'
       courseA_artist_loops_challenge2a: '*"Cabhraigh liom na trí phuball seo a chur
         suas!"*'
       courseA_artist_loops_challenge2a_2018: '*"Cabhraigh liom na trí phuball seo
+        a chur suas!"*'
+      courseA_artist_loops_challenge2a_2019: '*"Cabhraigh liom na trí phuball seo
         a chur suas!"*'
       courseA_bee_seq1: Úsáid na blocanna seo chun cabhrú leis an mbeach *neachtar
         amháin* a bhailiú.
@@ -2405,45 +2425,68 @@ ga:
         feadh an chosáin seo.
       courseA_collector_loops10_2018: Cabhraigh le Laurel na seoda go léir a bhailiú
         ar feadh an chosáin seo.
+      courseA_collector_loops10_2019: Cabhraigh le Laurel na seoda go léir a bhailiú
+        ar feadh an chosáin seo.
       courseA_collector_loops11: Cabhraigh le Laurel na seoda go léir a bhailiú ón
         bpluais seo.
       courseA_collector_loops11_2018: Cabhraigh le Laurel na seoda go léir a bhailiú
         ón bpluais seo.
+      courseA_collector_loops11_2019: Cabhraigh le Laurel na seoda go léir a bhailiú
+        ón bpluais seo.
       courseA_collector_loops12: '*"Iúiríce! Bailigh an oiread seod agus is féidir!"*'
       courseA_collector_loops12_2018: '*"Iúiríce! Bailigh an oiread seod agus is féidir!"*'
+      courseA_collector_loops12_2019: '*"Iúiríce! Bailigh an oiread seod agus is féidir!"*'
       courseA_collector_loops1_2018: Bog Laurel thart agus bailigh an méid is mó óir
+        agus is féidir!
+      courseA_collector_loops1_2019: Bog Laurel thart agus bailigh an méid is mó óir
         agus is féidir!
       courseA_collector_loops2: Bailigh na trí charn chun an leibhéal seo a chríochnú.
       courseA_collector_loops2_2018: Bailigh na trí charn chun an leibhéal seo a chríochnú.
+      courseA_collector_loops2_2019: Bailigh na trí charn chun an leibhéal seo a chríochnú.
       courseA_collector_loops4: Deisigh cosán Laurel chun an t-ór go léir a bhailiú.
       courseA_collector_loops4_2018: Deisigh cosán Laurel chun an t-ór go léir a bhailiú.
+      courseA_collector_loops4_2019: Deisigh cosán Laurel chun an t-ór go léir a bhailiú.
       courseA_collector_loops5: Úsáid ar fhoghlaim tú go dtí seo chun na seoda go
         léir a bhailiú.
       courseA_collector_loops5_2018: Úsáid ar fhoghlaim tú go dtí seo chun na seoda
+        go léir a bhailiú.
+      courseA_collector_loops5_2019: Úsáid ar fhoghlaim tú go dtí seo chun na seoda
         go léir a bhailiú.
       courseA_collector_loops6: Cuir blocanna leis an gcód seo chun na boinn go léir
         a bhailiú.
       courseA_collector_loops6_2018: Cuir blocanna leis an gcód seo chun na boinn
         go léir a bhailiú.
+      courseA_collector_loops6_2019: Cuir blocanna leis an gcód seo chun na boinn
+        go léir a bhailiú.
       courseA_collector_loops7: Cad ba chóir duit cur leis an gcód seo chun na seoda
         go léir a bhailiú?
       courseA_collector_loops7_2018: Cad ba chóir duit cur leis an gcód seo chun na
         seoda go léir a bhailiú?
+      courseA_collector_loops7_2019: Cad ba chóir duit cur leis an gcód seo chun na
+        seoda go léir a bhailiú?
       courseA_collector_loops8: Scríobh cód chun na seoda go léir a bhailiú.
       courseA_collector_loops8_2018: Scríobh cód chun na seoda go léir a bhailiú.
+      courseA_collector_loops8_2019: Scríobh cód chun na seoda go léir a bhailiú.
       courseA_collector_loops9: "**Dúshlán:** Aimseoidh tú ór i rith an bhealaigh
         go barr an staighre! Scríobh an cód agus cabhraigh le Laurel an t-ór go léir
         a bhailiú."
       courseA_collector_loops9_2018: "**Dúshlán:** Aimseoidh tú ór i rith an bhealaigh
         go barr an staighre! Scríobh an cód agus cabhraigh le Laurel an t-ór go léir
         a bhailiú."
+      courseA_collector_loops9_2019: "**Dúshlán:** Aimseoidh tú ór i rith an bhealaigh
+        go barr an staighre! Scríobh an cód agus cabhraigh le Laurel an t-ór go léir
+        a bhailiú."
       courseA_collector_loops_challenge1: '*"An gcabhróidh tú liom fabhtanna a aimsiú?"*'
       courseA_collector_loops_challenge1_2018: '*"An gcabhróidh tú liom fabhtanna
+        a aimsiú?"*'
+      courseA_collector_loops_challenge1_2019: '*"An gcabhróidh tú liom fabhtanna
         a aimsiú?"*'
       courseA_collector_loops_challenge2: 'Bailigh na seoda go léir! '
       courseA_collector_loops_challenge2kp: Bailigh ar a laghad **3** sheoid chun
         an leibhéal seo a chríochnú.
       courseA_collector_loops_challenge2kp_2018: Bailigh ar a laghad **3** sheoid
+        chun an leibhéal seo a chríochnú.
+      courseA_collector_loops_challenge2kp_2019: Bailigh ar a laghad **3** sheoid
         chun an leibhéal seo a chríochnú.
       courseA_collector_preLoops4: An féidir leat an dúshlán seo a réiteach?
       courseA_collector_preLoops6: Caithfidh tú an dá sheoid a bhailiú chun an dúshlán
@@ -2457,44 +2500,79 @@ ga:
         a bhailiú!
       courseA_harvester_loops10: Cabhraigh leis an mbuainteoir na cúig dhias arbhair
         a bhailiú!
+      courseA_harvester_loops10_2019: Cabhraigh leis an mbuainteoir na cúig dhias
+        arbhair a bhailiú!
       courseA_harvester_loops11: 'Bain triail as ceann amháin eile as do stuaim féin! '
+      courseA_harvester_loops11_2019: 'Bain triail as ceann amháin eile as do stuaim
+        féin! '
+      courseA_harvester_loops1_2019: Cabhraigh leis an mbuainteoir an t-arbhar go
+        léir a bhailiú!
       courseA_harvester_loops2: Ní mór duit an t-arbhar go léir a bhaint!
+      courseA_harvester_loops2_2019: Ní mór duit an t-arbhar go léir a bhaint!
       courseA_harvester_loops3: An féidir leat an t-arbhar go léir a bhaint gan ach
         **bloc amháin** `téigh ar aghaidh` a úsáid?
+      courseA_harvester_loops3_2019: An féidir leat an t-arbhar go léir a bhaint gan
+        ach **bloc amháin** `téigh ar aghaidh` a úsáid?
       courseA_harvester_loops4: Cabhraigh leis an mbuainteoir an fabht ina cód a aimsiú.
+      courseA_harvester_loops4_2019: Cabhraigh leis an mbuainteoir an fabht ina cód
+        a aimsiú.
       courseA_harvester_loops7: 'Bain triail as! '
+      courseA_harvester_loops7_2019: 'Bain triail as! '
       courseA_harvester_loops8: Seo é an dúshlán céanna, ach anois caithfidh tú é
         a dhéanamh **trí huaire**!
       courseA_harvester_loops9: An féidir leat an t-arbhar go léir a bhailiú?
+      courseA_harvester_loops9_2019: An féidir leat an t-arbhar go léir a bhailiú?
       courseA_harvester_seq1: Úsáid na blocanna seo chun cabhrú leis an mbuainteoir
         an dias arbhair a bhaint.
       courseA_harvester_seq10: Ní mór duit an t-arbhar go léir a bhaint!
+      courseA_harvester_seq10_2019: Ní mór duit an t-arbhar go léir a bhaint!
       courseA_harvester_seq11: Déan é as do stuaim féin! Bailigh an t-arbhar go léir.
+      courseA_harvester_seq11_2019: Déan é as do stuaim féin! Bailigh an t-arbhar
+        go léir.
       courseA_harvester_seq12: Bailigh an t-arbhar go léir.
+      courseA_harvester_seq12_2019: Bailigh an t-arbhar go léir.
       courseA_harvester_seq13: Úsáid na blocanna seo chun cabhrú leis an mbuainteoir
         *arbhar amháin* a bhaint.
+      courseA_harvester_seq13_2019: Úsáid na blocanna seo chun cabhrú leis an mbuainteoir
+        *arbhar amháin* a bhaint.
+      courseA_harvester_seq1_2019: Úsáid na blocanna seo chun cabhrú leis an mbuainteoir
+        an dias arbhair a bhaint.
       courseA_harvester_seq4: Cuir bloc amháin leis chun cabhrú leis an mbuainteoir
         an t-arbhar a bhaint.
+      courseA_harvester_seq4_2019: Cuir bloc amháin leis chun cabhrú leis an mbuainteoir
+        an t-arbhar a bhaint.
       courseA_harvester_seq5: Aimsigh an fabht agus deisigh é!
+      courseA_harvester_seq5_2019: Aimsigh an fabht agus deisigh é!
       courseA_harvester_seq6: Bain triail as!
+      courseA_harvester_seq6_2019: Bain triail as!
       courseA_harvester_seq7: Bain triail as!
+      courseA_harvester_seq7_2019: Bain triail as!
       courseA_harvester_seq9: Cuir dhá bhloc leis chun an dúshlán a chríochnú!
+      courseA_harvester_seq9_2019: Cuir dhá bhloc leis chun an dúshlán a chríochnú!
       courseA_maze_ramp4_2018: Seachain TNT nó pléascfaidh na cleití!
       courseA_maze_ramp5_2018: Seachain an TNT.
       courseA_maze_ramp5a_2018: Cabhraigh leis an éan an mhuc a bhaint amach!
+      courseA_maze_ramp5a_2019: Cabhraigh leis an éan an mhuc a bhaint amach!
       courseA_maze_seq1: Cabhraigh leis an éan an mhuc dhána a bhaint amach!
       courseA_maze_seq10: 'Dúshlán: Treoraigh an t-éan timpeall an TNT go dtí an mhuc! '
       courseA_maze_seq10_2018: 'Dúshlán: Seachain an TNT agus cabhraigh leis an éan
+        an mhuc a shroicheadh! '
+      courseA_maze_seq10_2019: 'Dúshlán: Seachain an TNT agus cabhraigh leis an éan
         an mhuc a shroicheadh! '
       courseA_maze_seq11: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú leis
         an éan an mhuc a shroicheadh.
       courseA_maze_seq11_2018: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
         leis an éan an mhuc a shroicheadh.
+      courseA_maze_seq11_2019: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
+        leis an éan an mhuc a shroicheadh.
       courseA_maze_seq12: 'Bain an mhuc amach! '
       courseA_maze_seq12_2018: 'Bain an mhuc amach! '
+      courseA_maze_seq12_2019: 'Bain an mhuc amach! '
       courseA_maze_seq13: Bain an mhuc amach cibé slí is féidir leat!
       courseA_maze_seq13_2018: Bain an mhuc amach cibé slí is féidir leat!
+      courseA_maze_seq13_2019: Bain an mhuc amach cibé slí is féidir leat!
       courseA_maze_seq1_2018: Cabhraigh leis an éan an mhuc dhána a bhaint amach!
+      courseA_maze_seq1_2019: Cabhraigh leis an éan an mhuc dhána a bhaint amach!
       courseA_maze_seq2: Fabht! Deisigh an cód agus treoraigh go dtí an mhuc mé.
       courseA_maze_seq2_2018: Fabht! Deisigh an cód agus treoraigh go dtí an mhuc
         mé.
@@ -2506,11 +2584,16 @@ ga:
         agus is féidir.
       courseA_maze_seq5: Bain triail as an gceann seo as an nua.
       courseA_maze_seq5_2018: Bain triail as.
+      courseA_maze_seq5_2019: Bain triail as.
       courseA_maze_seq5a_2018: Cad is féidir leat cur le deireadh an chóid seo chun
+        an t-éan a threorú go dtí an mhuc?
+      courseA_maze_seq5a_2019: Cad is féidir leat cur le deireadh an chóid seo chun
         an t-éan a threorú go dtí an mhuc?
       courseA_maze_seq6: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú leis
         an éan an mhuc a shroicheadh!
       courseA_maze_seq6_2018: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
+        leis an éan an mhuc a shroicheadh!
+      courseA_maze_seq6_2019: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
         leis an éan an mhuc a shroicheadh!
       courseA_maze_seq7: Déan amach céard atá ar iarraidh, cuir blocanna leis an gcód,
         agus treoraigh an t-éan go dtí an mhuc!
@@ -2520,6 +2603,8 @@ ga:
         a shroicheadh!
       courseA_maze_seq8_2018: Réitigh an dúshlán seo agus cabhraigh leis an éan an
         mhuc a shroicheadh!
+      courseA_maze_seq8_2019: Réitigh an dúshlán seo agus cabhraigh leis an éan an
+        mhuc a shroicheadh!
       courseA_maze_seq9: Cuir blocanna leis an gcód chun é a cheartú agus cabhraigh
         leis an éan an mhuc a shroicheadh!
       courseA_maze_seq9_2018: Cuir blocanna leis an gcód chun é a cheartú agus cabhraigh
@@ -2528,21 +2613,31 @@ ga:
         treoraigh an t-éan go dtí an mhuc!
       courseA_maze_seq_challenge1_2018: Tá rud éigin mícheart anseo. Deisigh an cód
         agus treoraigh an t-éan go dtí an mhuc!
+      courseA_maze_seq_challenge1_2019: Tá rud éigin mícheart anseo. Deisigh an cód
+        agus treoraigh an t-éan go dtí an mhuc!
       courseA_maze_seq_challenge2: Lean an cosán agus treoraigh chuig an mhuc amaideach
         mé. Seachain TNT nó pléascfaidh na cleití!
       courseA_maze_seq_challenge2_2018: Lean an cosán agus treoraigh chuig an mhuc
+        amaideach mé. Seachain TNT nó pléascfaidh na cleití!
+      courseA_maze_seq_challenge2_2019: Lean an cosán agus treoraigh chuig an mhuc
         amaideach mé. Seachain TNT nó pléascfaidh na cleití!
       courseA_playLab_events1: Is leibhéal Spraotharlann é seo. Aistrigh blocanna
         go dtí an spás oibre le féachaint cad a tharlóidh!
       courseA_playLab_events1_2018: Is leibhéal Spraotharlann é seo. Aistrigh blocanna
         go dtí an spás oibre le féachaint cad a tharlóidh!
+      courseA_playLab_events1_2019: Is leibhéal Spraotharlann é seo. Aistrigh blocanna
+        go dtí an spás oibre le féachaint cad a tharlóidh!
       courseA_playLab_events2: Ba mhaith le Jorge an Madra "Dia dhaoibh." a rá. An
         féidir leat cabhrú leis?
       courseA_playLab_events2_2018: Ba mhaith le Jorge an Madra "Dia dhaoibh." a rá.
         An féidir leat cabhrú leis?
+      courseA_playLab_events2_2019: Ba mhaith le Jorge an Madra "Dia dhaoibh." a rá.
+        An féidir leat cabhrú leis?
       courseA_playLab_events3: Ceangail an bloc "téigh ar chlé" leis an mbloc "nuair
         a bhrúitear an tsaighead chlé" atá sa spás oibre cheana.
       courseA_playLab_events3_2018: Ceangail an bloc "téigh ar chlé" leis an mbloc
+        "nuair a bhrúitear an tsaighead chlé" atá sa spás oibre cheana.
+      courseA_playLab_events3_2019: Ceangail an bloc "téigh ar chlé" leis an mbloc
         "nuair a bhrúitear an tsaighead chlé" atá sa spás oibre cheana.
       courseA_playlab_events_challenge1: An féidir leat cód a scríobh chun an chuid
         eile de mo chairde a thaispeáint? Cabhróidh na leideanna leat an tionscadal
@@ -2550,20 +2645,30 @@ ga:
       courseA_playlab_events_challenge1_2018: An féidir leat cód a scríobh chun an
         chuid eile de mo chairde a thaispeáint? Cabhróidh na leideanna leat an tionscadal
         seo a dhéanamh céim ar chéim.
+      courseA_playlab_events_challenge1_2019: An féidir leat cód a scríobh chun an
+        chuid eile de mo chairde a thaispeáint? Cabhróidh na leideanna leat an tionscadal
+        seo a dhéanamh céim ar chéim.
       courseA_playlab_events_challengeClone: Cá bhfuil mo chairde ina bhfolach? An
         féidir leat cód a scríobh chun an chuid eile de mo chairde a thaispeáint?
       courseB_Scrat_ramp5a_2018: Cabhraigh leis an éan an mhuc a bhaint amach!
+      courseB_Scrat_ramp5a_2019: Cabhraigh leis an éan an mhuc a bhaint amach!
       courseB_artist_loops1: Seo cineál nua dúshláin darb ainm "Ealaíontóir". Bain
         triail as an leibhéal agus tarraing rud éigin spraíúil.
       courseB_artist_loops1_2018: Seo cineál nua dúshláin darb ainm "Ealaíontóir".
+        Bain triail as an leibhéal agus tarraing rud éigin spraíúil.
+      courseB_artist_loops1_2019: Seo cineál nua dúshláin darb ainm "Ealaíontóir".
         Bain triail as an leibhéal agus tarraing rud éigin spraíúil.
       courseB_artist_loops2: Tá an tEalaíontóir ag iarraidh líne a tharraingt **6**
         huaire, ach níl ag éirí rómhaith leis. An féidir leat cabhrú leis?
       courseB_artist_loops2_2018: Tá an tEalaíontóir ag iarraidh líne a tharraingt
         **6** huaire, ach níl ag éirí rómhaith leis. An féidir leat cabhrú leis?
+      courseB_artist_loops2_2019: Tá an tEalaíontóir ag iarraidh líne a tharraingt
+        **6** huaire, ach níl ag éirí rómhaith leis. An féidir leat cabhrú leis?
       courseB_artist_loops3: Cabhraigh leis an ealaíontóir líne a tharraingt 7 n-uaire
         chun balla garraí a dhéanamh.
       courseB_artist_loops3_2018: Cabhraigh leis an ealaíontóir líne a tharraingt
+        7 n-uaire chun balla garraí a dhéanamh.
+      courseB_artist_loops3_2019: Cabhraigh leis an ealaíontóir líne a tharraingt
         7 n-uaire chun balla garraí a dhéanamh.
       courseB_artist_loops5: Tá sé in am an staighre a dheisiú! Athdhéan an patrún
         seo **5** huaire sa chaoi go mbeidh an t-ealaíontóir in ann barr na dtor a
@@ -2571,16 +2676,26 @@ ga:
       courseB_artist_loops5_2018: Tá sé in am an staighre a dheisiú! Athdhéan an patrún
         seo **5** huaire sa chaoi go mbeidh an t-ealaíontóir in ann barr na dtor a
         bhaint amach.
+      courseB_artist_loops5_2019: Tá sé in am an staighre a dheisiú! Athdhéan an patrún
+        seo **5** huaire sa chaoi go mbeidh an t-ealaíontóir in ann barr na dtor a
+        bhaint amach.
       courseB_artist_loops6: Dreap an fhéith chun fáil amach cá bhfuil sí ag dul?
       courseB_artist_loops6_2018: Dreap an fhéith chun fáil amach cá bhfuil sí ag
         dul?
+      courseB_artist_loops6_2019: Dreap an fhéith chun fáil amach cá bhfuil sí ag
+        dul?
       courseB_artist_loops7: "**Dúshlán:** Garraí faoi cheilt atá ann! Siúlaimis thart."
       courseB_artist_loops7_2018: "**Dúshlán:** Garraí faoi cheilt atá ann! Siúlaimis
+        thart."
+      courseB_artist_loops7_2019: "**Dúshlán:** Garraí faoi cheilt atá ann! Siúlaimis
         thart."
       courseB_artist_loops8: Tá sé in am dul abhaile. An féidir leat an dréimire seo
         a dheisiú gan ach bloc amháin a úsáid chun cabhrú leis an ealaíontóir teacht
         anuas?
       courseB_artist_loops8_2018: Tá sé in am dul abhaile. An féidir leat an dréimire
+        seo a dheisiú gan ach bloc amháin a úsáid chun cabhrú leis an ealaíontóir
+        teacht anuas?
+      courseB_artist_loops8_2019: Tá sé in am dul abhaile. An féidir leat an dréimire
         seo a dheisiú gan ach bloc amháin a úsáid chun cabhrú leis an ealaíontóir
         teacht anuas?
       courseB_collector_loops1: Seo Laurel an tEachtránaí! An féidir leat í a bhogadh
@@ -2589,38 +2704,58 @@ ga:
         bpluais seo.
       courseB_collector_loops10_2018: Cabhraigh le Laurel na seoda go léir a bhailiú
         ón bpluais seo.
+      courseB_collector_loops10_2019: Cabhraigh le Laurel na seoda go léir a bhailiú
+        ón bpluais seo.
       courseB_collector_loops11: Iúiríce! Bailigh an oiread seod agus is féidir!
       courseB_collector_loops11_2018: Iúiríce! Bailigh an oiread seod agus is féidir!
+      courseB_collector_loops11_2019: Iúiríce! Bailigh an oiread seod agus is féidir!
       courseB_collector_loops1_2018: Seo Laurel an tEachtránaí! An féidir leat í a
+        bhogadh thart chun ór a fháil?
+      courseB_collector_loops1_2019: Seo Laurel an tEachtránaí! An féidir leat í a
         bhogadh thart chun ór a fháil?
       courseB_collector_loops2: Bailigh na ceithre charn chun an leibhéal seo a chríochnú.
       courseB_collector_loops2_2018: Bailigh na ceithre charn chun an leibhéal seo
         a chríochnú.
+      courseB_collector_loops2_2019: Bailigh na ceithre charn chun an leibhéal seo
+        a chríochnú.
       courseB_collector_loops4: Deisigh cosán Laurel chun an t-ór go léir a bhailiú!
       courseB_collector_loops4_2018: Deisigh cosán Laurel chun an t-ór go léir a bhailiú!
+      courseB_collector_loops4_2019: Deisigh cosán Laurel chun an t-ór go léir a bhailiú!
       courseB_collector_loops5: 'Cuir leis an gcód ón dúshlán roimhe seo chun na seoda
         go léir a bhailiú. '
       courseB_collector_loops5_2018: 'Cuir leis an gcód ón dúshlán roimhe seo chun
+        na seoda go léir a bhailiú. '
+      courseB_collector_loops5_2019: 'Cuir leis an gcód ón dúshlán roimhe seo chun
         na seoda go léir a bhailiú. '
       courseB_collector_loops6: Scríobh an cód chun cabhrú le Laurel an t-ór go léir
         a bhailiú!
       courseB_collector_loops6_2018: Scríobh an cód chun cabhrú le Laurel an t-ór
         go léir a bhailiú!
+      courseB_collector_loops6_2019: Scríobh an cód chun cabhrú le Laurel an t-ór
+        go léir a bhailiú!
       courseB_collector_loops7: Scríobh an cód chun na seoda go léir a bhailiú.
       courseB_collector_loops7_2018: Scríobh an cód chun na seoda go léir a bhailiú.
+      courseB_collector_loops7_2019: Scríobh an cód chun na seoda go léir a bhailiú.
       courseB_collector_loops8: "**Dúshlán:** Aimseoidh tú ór i rith an bhealaigh
         go bun an staighre! Scríobh an cód agus cabhraigh le Laurel an t-ór go léir
         a bhailiú."
       courseB_collector_loops8_2018: "**Dúshlán:** Aimseoidh tú ór i rith an bhealaigh
         go bun an staighre! Scríobh an cód agus cabhraigh le Laurel an t-ór go léir
         a bhailiú."
+      courseB_collector_loops8_2019: "**Dúshlán:** Aimseoidh tú ór i rith an bhealaigh
+        go bun an staighre! Scríobh an cód agus cabhraigh le Laurel an t-ór go léir
+        a bhailiú."
       courseB_collector_loops9: '*"Cabhraigh liom an t-ór a bhailiú ón ngleann domhain
         seo."*'
       courseB_collector_loops9_2018: '*"Cabhraigh liom an t-ór a bhailiú ón ngleann
         domhain seo."*'
+      courseB_collector_loops9_2019: '*"Cabhraigh liom an t-ór a bhailiú ón ngleann
+        domhain seo."*'
       courseB_collector_loops_challenge1: 'An uair seo tá teorainn ar an líon blocanna
         atá agat. Bailigh na seoda go léir! '
       courseB_collector_loops_challenge1_2018: 'An uair seo tá teorainn ar an líon
+        blocanna atá agat. Bailigh na seoda go léir! '
+      courseB_collector_loops_challenge1_2019: 'An uair seo tá teorainn ar an líon
         blocanna atá agat. Bailigh na seoda go léir! '
       courseB_collector_loops_challenge2: Bailímis na seoda go léir! Cabhraigh liom
         dul trí gach ró ansin filleadh ar thús an chéad ró eile. An bhfeiceann tú
@@ -2632,48 +2767,72 @@ ga:
         a bhailiú chun an dúshlán seo a chríochnú.
       courseB_collector_loops_challenge2a_2018: Cabhraigh le Laurel ar a laghad **5**
         sheoid a bhailiú chun an dúshlán seo a chríochnú.
+      courseB_collector_loops_challenge2a_2019: Cabhraigh le Laurel ar a laghad **5**
+        sheoid a bhailiú chun an dúshlán seo a chríochnú.
       courseB_collector_prog1: Seo Laurel an tEachtránaí! An féidir leat í a bhogadh
         thart chun ór a fháil?
       courseB_collector_prog2: Ceithre charn óir! Bailigh iad go léir.
       courseB_iceage_loops1: Cabhraigh le Scrat an t-oighear a thrasnú chun an dearcán
         a fháil!
       courseB_iceage_loops10: Cabhraigh le Scrat an dearcán a fháil!
+      courseB_iceage_loops10_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseB_iceage_loops11: Cabhraigh le Scrat an dearcán a fháil!
+      courseB_iceage_loops11_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseB_iceage_loops11_forVideo: Cabhraigh le Scrat an dearcán a fháil!
       courseB_iceage_loops12: Faigh an dearcán cibé slí is féidir leat!
+      courseB_iceage_loops12_2019: Faigh an dearcán cibé slí is féidir leat!
+      courseB_iceage_loops1_2019: Cabhraigh le Scrat an t-oighear a thrasnú chun an
+        dearcán a fháil!
       courseB_iceage_loops5: An féidir leat lúb amháin eile a chur leis an gcód chun
         an dearcán a fháil?
       courseB_iceage_loops6: An féidir leat lúb a chur leis an gcód chun an dearcán
         a fháil?
+      courseB_iceage_loops6_2019: An féidir leat lúb a chur leis an gcód chun an dearcán
+        a fháil?
       courseB_iceage_loops8: 'An féidir leat an cód seo a dheisiú? '
+      courseB_iceage_loops8_2019: 'An féidir leat an cód seo a dheisiú? '
       courseB_iceage_loops9: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat lúba
         a úsáid chun cabhrú le Scrat é a fháil?
+      courseB_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat
+        lúba a úsáid chun cabhrú le Scrat é a fháil?
       courseB_maze_seq10: Réitigh na fadhbanna agus treoraigh an t-éan go dtí an mhuc.
       courseB_maze_seq10_2018: Deisigh an cód chun Scrat a threorú go dtí an dearcán.
+      courseB_maze_seq10_2019: Deisigh an cód chun Scrat a threorú go dtí an dearcán.
       courseB_maze_seq11: Is ortsa an cúram! Treoraigh an t-éan go dtí an mhuc.
       courseB_maze_seq11_2018: Is ortsa an cúram! Treoraigh Scrat go dtí an dearcán.
+      courseB_maze_seq11_2019: Is ortsa an cúram! Treoraigh Scrat go dtí an dearcán.
       courseB_maze_seq12: Anois bain an mhuc amach cibé slí is féidir leat!
       courseB_maze_seq12_2018: Anois bain an mhuc amach cibé slí is féidir leat!
+      courseB_maze_seq12_2019: Anois bain an mhuc amach cibé slí is féidir leat!
       courseB_maze_seq2: '*"Fabht! Deisigh an cód agus treoraigh go dtí an mhuc mé."*'
       courseB_maze_seq2_2018: Fabht! Deisigh an cód chun Scrat a threorú go dtí an
         dearcán!
       courseB_maze_seq4: Cuir dhá bhloc leis chun an t-éan a threorú go dtí an mhuc.
       courseB_maze_seq5: Anois bain triail as an dúshlán seo as an nua!
       courseB_maze_seq5_2018: Tá an dúshlán seo beagáinín deacair!
+      courseB_maze_seq5_2019: Tá an dúshlán seo beagáinín deacair!
       courseB_maze_seq6: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú leis
         an éan an mhuc a shroicheadh!
       courseB_maze_seq6_2018: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
+        le Scrat an dearcán a bhaint amach!
+      courseB_maze_seq6_2019: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
         le Scrat an dearcán a bhaint amach!
       courseB_maze_seq7: Déan amach céard atá ar iarraidh, cuir blocanna leis an gcód,
         agus treoraigh an t-éan go dtí an mhuc!
       courseB_maze_seq7_2018: Déan amach céard atá ar iarraidh, ansin cuir blocanna
         leis chun Scrat a threorú go dtí an dearcán!
+      courseB_maze_seq7_2019: Déan amach céard atá ar iarraidh, ansin cuir blocanna
+        leis chun Scrat a threorú go dtí an dearcán!
       courseB_maze_seq8: Tusa anois! Cad ba chóir duit a dhéanamh chun cabhrú leis
         an éan an mhuc a shroicheadh?
       courseB_maze_seq8_2018: Tusa anois! Cad ba chóir duit a dhéanamh chun cabhrú
         le Scrat an dearcán a shroicheadh?
+      courseB_maze_seq8_2019: Tusa anois! Cad ba chóir duit a dhéanamh chun cabhrú
+        le Scrat an dearcán a shroicheadh?
       courseB_maze_seq9: 'Dúshlán: Treoraigh an t-éan timpeall an TNT go dtí an mhuc.'
       courseB_maze_seq9_2018: 'Dúshlán: An t-oighear scoilte a sheachaint chun Scrat
+        a threorú go dtí an dearcán.'
+      courseB_maze_seq9_2019: 'Dúshlán: An t-oighear scoilte a sheachaint chun Scrat
         a threorú go dtí an dearcán.'
       courseB_maze_seq9_challenge1: "*Cá bhfuil an mhuc sin ina folach anois?*"
       courseB_maze_seqCold: 'Dúshlán: Cuir blocanna leis an gcód chun é a cheartú
@@ -2683,13 +2842,19 @@ ga:
         rite as blocanna?
       courseB_maze_seq_challenge1_2018: An féidir leat an cosán a aimsiú sula mbeidh
         tú rite as blocanna?
+      courseB_maze_seq_challenge1_2019: An féidir leat an cosán a aimsiú sula mbeidh
+        tú rite as blocanna?
       courseB_maze_seq_challenge2: Dífhabhtaigh an leibhéal seo. Tá na blocanna cearta
         agat, ach tá siad san ord mícheart!
       courseB_maze_seq_challenge2_2018: Dífhabhtaigh an leibhéal seo. Tá na blocanna
         cearta agat, ach tá siad san ord mícheart!
+      courseB_maze_seq_challenge2_2019: Dífhabhtaigh an leibhéal seo. Tá na blocanna
+        cearta agat, ach tá siad san ord mícheart!
       courseB_playLab_events1: An féidir leat déanamh amach céard a dhéanann gach
         bloc?
       courseB_playLab_events1_2018: An féidir leat déanamh amach céard a dhéanann
+        gach bloc?
+      courseB_playLab_events1_2019: An féidir leat déanamh amach céard a dhéanann
         gach bloc?
       courseB_playlab_events8: Scaoil le do shamhlaíocht. Cad is féidir leat a dhéanamh
         chun níos mó spraoi a chur sa gcluiche seo?
@@ -2700,25 +2865,36 @@ ga:
       courseB_starWars_prog1: '"Bailigh an dramh-mhiotal, a BhB-8!"'
       courseB_starWars_prog10: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
       courseB_starWars_prog10_2018: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
+      courseB_starWars_prog10_2019: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
       courseB_starWars_prog11: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
       courseB_starWars_prog11_2018: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
+      courseB_starWars_prog11_2019: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
       courseB_starWars_prog1_2018: '"Bailigh an dramh-mhiotal, a BhB-8!"'
+      courseB_starWars_prog1_2019: '"Bailigh an dramh-mhiotal, a BhB-8!"'
       courseB_starWars_prog2: Bailigh an miotal go léir.
       courseB_starWars_prog2_2018: Bailigh an miotal go léir.
+      courseB_starWars_prog2_2019: Bailigh an miotal go léir.
       courseB_starWars_prog3: Bailigh an dramh-mhiotal go léir
       courseB_starWars_prog3_2018: Bailigh an dramh-mhiotal go léir
+      courseB_starWars_prog3_2019: Bailigh an dramh-mhiotal go léir
       courseB_starWars_prog4: Bailigh an dramh-mhiotal go léir
       courseB_starWars_prog4_2018: Bailigh an dramh-mhiotal go léir
+      courseB_starWars_prog4_2019: Bailigh an dramh-mhiotal go léir
       courseB_starWars_prog5: Bailigh an dramh-mhiotal
       courseB_starWars_prog5_2018: Bailigh an dramh-mhiotal
+      courseB_starWars_prog5_2019: Bailigh an dramh-mhiotal
       courseB_starWars_prog6: Bailigh an dramh-mhiotal go léir
       courseB_starWars_prog6_2018: Bailigh an dramh-mhiotal go léir
+      courseB_starWars_prog6_2019: Bailigh an dramh-mhiotal go léir
       courseB_starWars_prog8: "**Dúshlán:** Cabhraigh le BB-8 an dramh-mhiotal lonrach
         a bhailiú"
       courseB_starWars_prog8_2018: "**Dúshlán:** Cabhraigh le BB-8 an dramh-mhiotal
         lonrach a bhailiú"
+      courseB_starWars_prog8_2019: "**Dúshlán:** Cabhraigh le BB-8 an dramh-mhiotal
+        lonrach a bhailiú"
       courseB_starWars_prog9: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
       courseB_starWars_prog9_2018: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
+      courseB_starWars_prog9_2019: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
       courseC_PlayLab_events2: An féidir leat tabhairt ar Jorge an Madra (aisteoir
         1) rud éigin a rá, ansin Olive an Cat (aisteoir 2) rud éigin eile a rá ina
         dhiaidh?

@@ -248,17 +248,6 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    # Temporary conversion from old instructions naming scheme to new
-    #TODO: elijah: remove this override once we have fully converted
-    if @app_options[:level]
-      # Level types are unfortunately inconsistent in their use of strings vs
-      # symbols for keys, forcing us to consider both here.
-      @app_options[:level]['shortInstructions'] = @app_options[:level].delete('instructions') if @app_options[:level]['instructions']
-      @app_options[:level]['longInstructions'] = @app_options[:level].delete('markdownInstructions') if @app_options[:level]['markdownInstructions']
-      @app_options[:level][:shortInstructions] = @app_options[:level].delete(:instructions) if @app_options[:level][:instructions]
-      @app_options[:level][:longInstructions] = @app_options[:level].delete(:markdownInstructions) if @app_options[:level][:markdownInstructions]
-    end
-
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?) && I18n.en?
 
@@ -780,7 +769,7 @@ module LevelsHelper
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
-    return false unless level.game == Game.applab || level.game == Game.gamelab
+    return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
     return false if level.is_a? GamelabJr
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?

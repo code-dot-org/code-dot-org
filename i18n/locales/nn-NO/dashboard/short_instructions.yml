@@ -1215,6 +1215,7 @@ nn:
       Ryan - Bee Conditionals: Bia vil berre ha nektar akkurat nå. Ikkje alle objekta er blomar, så sjekk under KVAR EINASTE SKY for å sjå om det gøymer seg ein blome der. Om det gjer det kan du samle nektar.
       Ryan Test Locked Blocks: Her er ein funksjon som heiter "patruljar". Endre han slik at Katt flytter seg 400 pikslar opp og så 400 pikslar ned.
       RyanTest3: Dette brettet har form-skift aktivert! Oppdatér for å sjå ulike variantar.
+      Ryan_Demo: Få elgen til å gjere eit nytt dansetrinn etter 4 taktar!
       SG Add Subgoals practice: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L03 Draw a T using turnAround: Teikn eit plussteikn som brukar den oppgjevne versjonen av turnAround().  (Trykk for å sjå fullstendige instruksjonar)
       SG U3L03 Three Steps: Definer ein funksjon kalla drawSide() som teiknar tre steg og flyttar skilpadda for å førebu seg på den neste sida (Trykk for å sjå fullstendige instruksjonar)
@@ -1359,6 +1360,7 @@ nn:
       aE7: "Kva skjer om du kopierer løkka og snur mot venstre i staden for mot høgre? \\r\n\\r\nKan du du bruke ei gjenta-blokk til å teikne denne bølgja?"
       aE8: "La oss no gjere det heile opp att fire gonger for å lage biletramme. Sjå opp for hjørna – du kan ikkje berre snu deg 90 gradar!\\r\n\\r \nEin halvsirkel kan du lage ved å repetere 3 gradar 60 gonger. Så kva for nokre kodeblokkar må du bruke for å lage ein kvart-sirkel til hjørna?"
       allHallows2017: Fang Code.org-ansatte i tegnestiftboksen ved å tegne eit kvadrat med 320 pixel lange sider!
+      allthethings_ttscsf contained: Plukk all salaten (berre kor det er noko å plukke.)
       artistDebugVideo1: Bruk "løkka" for å lage bølgjer på vatnet.
       artistFunctionsVideo1: Følg instruksjonane for å lage ein eigen funksjon.
       beeDebugVideo1: Kan du bruke ei løkke for å samle inn all nektaren?
@@ -1479,46 +1481,65 @@ nn:
       course4_harvester_nested_loops_challenge1: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseA_artist_loops10: Hjelp meg leggje ned steinar så eg ikkje fell!
       courseA_artist_loops10_2018: Hjelp meg leggje ned steinar så eg ikkje fell!
+      courseA_artist_loops10_2019: Hjelp meg leggje ned steinar så eg ikkje fell!
       courseA_artist_loops11: Hjelp meg å byggje trappar slik at eg kan sjå skipet seile sin veg.
       courseA_artist_loops11_2018: Hjelp meg å byggje trappar slik at eg kan sjå skipet seile sin veg.
+      courseA_artist_loops11_2019: Hjelp meg å byggje trappar slik at eg kan sjå skipet seile sin veg.
       courseA_artist_loops12: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
       courseA_artist_loops12_2018: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
+      courseA_artist_loops12_2019: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
       courseA_artist_loops3: Teikn ei linje framover fem gongar.
       courseA_artist_loops3_2018: Teikn ei linje framover fem gongar.
+      courseA_artist_loops3_2019: Teikn ei linje framover fem gongar.
       courseA_artist_loops7: Bruk "løkka" for å lage bølgjer på vatnet.
       courseA_artist_loops7_2018: Bruk "løkka" for å lage bølgjer på vatnet.
+      courseA_artist_loops7_2019: Bruk "løkka" for å lage bølgjer på vatnet.
       courseA_artist_loops7_forVideo: Bruk "løkka" for å lage bølgjer på vatnet.
       courseA_artist_loops9: 'Utfordring: Fiks trappa.'
       courseA_artist_loops9_2018: 'Utfordring: Fiks trappa.'
+      courseA_artist_loops9_2019: 'Utfordring: Fiks trappa.'
       courseA_artist_loops_challenge2: '"Kan du hjelpe meg å lage to fuglehus?"'
       courseA_artist_loops_challenge3: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarar du tre på rad?
       courseA_collector_loops1: Flytt Laurel rundt og få så mykje gull som mogleg!
       courseA_collector_loops10: Hjelp Laurel til å få tak i alle skattane langs stien.
       courseA_collector_loops10_2018: Hjelp Laurel til å få tak i alle skattane langs stien.
+      courseA_collector_loops10_2019: Hjelp Laurel til å få tak i alle skattane langs stien.
       courseA_collector_loops11: Hjelp Laurel til å få tak i alle skattane i grotta.
       courseA_collector_loops11_2018: Hjelp Laurel til å få tak i alle skattane i grotta.
+      courseA_collector_loops11_2019: Hjelp Laurel til å få tak i alle skattane i grotta.
       courseA_collector_loops12: 'Eureka!  Få tak i så mange skattar du berre kan!'
       courseA_collector_loops12_2018: 'Eureka!  Få tak i så mange skattar du berre kan!'
+      courseA_collector_loops12_2019: 'Eureka!  Få tak i så mange skattar du berre kan!'
       courseA_collector_loops1_2018: Flytt Laurel rundt og få så mykje gull som mogleg!
+      courseA_collector_loops1_2019: Flytt Laurel rundt og få så mykje gull som mogleg!
       courseA_collector_loops2: Samle inn alle haugane for å klare dette nivået.
       courseA_collector_loops2_2018: Samle inn alle haugane for å klare dette nivået.
+      courseA_collector_loops2_2019: Samle inn alle haugane for å klare dette nivået.
       courseA_collector_loops4: Fiks Laurel si bane for å få tak i alle skattane.
       courseA_collector_loops4_2018: Fiks Laurel si bane for å få tak i alle skattane.
+      courseA_collector_loops4_2019: Fiks Laurel si bane for å få tak i alle skattane.
       courseA_collector_loops5: Bruk det du har lært for å få tak i alle skattane.
       courseA_collector_loops5_2018: Bruk det du har lært for å få tak i alle skattane.
+      courseA_collector_loops5_2019: Bruk det du har lært for å få tak i alle skattane.
       courseA_collector_loops6: Legg til blokkar til denne koden for å få heile skatten.
       courseA_collector_loops6_2018: Legg til blokkar til denne koden for å få heile skatten.
+      courseA_collector_loops6_2019: Legg til blokkar til denne koden for å få heile skatten.
       courseA_collector_loops7: Kva må du leggje til denne koden for å få tak i heile skatten?
       courseA_collector_loops7_2018: Kva må du leggje til denne koden for å få tak i heile skatten?
+      courseA_collector_loops7_2019: Kva må du leggje til denne koden for å få tak i heile skatten?
       courseA_collector_loops8: Skriv koden for å få tak i heile skatten.
       courseA_collector_loops8_2018: Skriv koden for å få tak i heile skatten.
+      courseA_collector_loops8_2019: Skriv koden for å få tak i heile skatten.
       courseA_collector_loops9: "**Utfordring:** Skatten går heile vegen opp trappa! Skriv koden slik at Laurel får tak i alt."
       courseA_collector_loops9_2018: "**Utfordring:** Skatten går heile vegen opp trappa! Skriv koden slik at Laurel får tak i alt."
+      courseA_collector_loops9_2019: "**Utfordring:** Skatten går heile vegen opp trappa! Skriv koden slik at Laurel får tak i alt."
       courseA_collector_loops_challenge1: '*"Kan du hjelpe med å oppdage nokre feil? Eg veit kva veg eg vil gå, men er ikkje sikker på kor mange skritt eg må ta"*'
       courseA_collector_loops_challenge1_2018: '*"Kan du hjelpe med å oppdage nokre feil? Eg veit kva veg eg vil gå, men er ikkje sikker på kor mange skritt eg må ta"*'
+      courseA_collector_loops_challenge1_2019: '*"Kan du hjelpe med å oppdage nokre feil? Eg veit kva veg eg vil gå, men er ikkje sikker på kor mange skritt eg må ta"*'
       courseA_collector_loops_challenge2: 'Få tak i heile skatten! '
       courseA_collector_loops_challenge2kp: Samle minst *3* delar av skatten for å klare dette nivået.
       courseA_collector_loops_challenge2kp_2018: Samle minst *3* delar av skatten for å klare dette nivået.
+      courseA_collector_loops_challenge2kp_2019: Samle minst *3* delar av skatten for å klare dette nivået.
       courseA_collector_preLoops1: "Dette er eventyraren Laurel! \\r\n\\r\nTrykk \"Køyr\" for å sjå ho gå opp til skatten og ta den."
       courseA_collector_preLoops2: "Flott! No kan du kode sjølv! \\r\n\\r\nSett ein \"ta skatten\"-blokk til botnen av programmet og klikk \"Køyr\"."
       courseA_collector_preLoops3: Fest to "E-->"-blokker og ei "få skatt"-blokk saman til botnen av programmet og klikk "kjør".
@@ -1528,15 +1549,20 @@ nn:
       courseA_collector_preLoops7: Samle inn alle haugane for å klare dette nivået.
       courseA_forVideoTest_artist: Bruk "løkka" for å lage bølgjer på vatnet.
       courseA_maze_ramp5a_2018: Få fuglen til grisen!
+      courseA_maze_ramp5a_2019: Få fuglen til grisen!
       courseA_maze_seq1: Få fuglen til den slemme grisen!
       courseA_maze_seq10: 'Utfordring: Gå rundt dynamitten for å få fuglen bort til grisen! '
       courseA_maze_seq11: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen.
       courseA_maze_seq11_2018: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen.
+      courseA_maze_seq11_2019: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen.
       courseA_maze_seq12: 'Få tak i grisen! '
       courseA_maze_seq12_2018: 'Få tak i grisen! '
+      courseA_maze_seq12_2019: 'Få tak i grisen! '
       courseA_maze_seq13: Få tak i grisen!
       courseA_maze_seq13_2018: Få tak i grisen!
+      courseA_maze_seq13_2019: Få tak i grisen!
       courseA_maze_seq1_2018: Få fuglen til den slemme grisen!
+      courseA_maze_seq1_2019: Få fuglen til den slemme grisen!
       courseA_maze_seq2: Endre denne koden for å få meg bort til grisen!
       courseA_maze_seq2_2018: Endre denne koden for å få meg bort til grisen!
       courseA_maze_seq3: Endre denne koden for å få meg bort til grisen!
@@ -1546,65 +1572,93 @@ nn:
       courseA_maze_seq4a: Få fuglen bort til grisen med færrast mogleg blokkar.
       courseA_maze_seq6: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen!
       courseA_maze_seq6_2018: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen!
+      courseA_maze_seq6_2019: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen!
       courseA_maze_seq7: Finn ut kva som manglar og legg så til dei manglande blokkane for å få fuglen bort til grisen!
       courseA_maze_seq7_2018: Finn ut kva som manglar og legg så til dei manglande blokkane for å få fuglen bort til grisen!
       courseA_maze_seq8: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq8_2018: Løys dette nivået og få fuglen bort til grisen!
+      courseA_maze_seq8_2019: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq9: Feilsøk dette nivået ved å leggje til blokkar for å få fuglen bort til grisen!
       courseA_maze_seq9_2018: Feilsøk dette nivået ved å leggje til blokkar for å få fuglen bort til grisen!
       courseA_maze_seq_challenge1: Noko er galt her. Endre koden for å få fuglen bort til grisen!
       courseA_maze_seq_challenge1_2018: Noko er galt her. Endre koden for å få fuglen bort til grisen!
+      courseA_maze_seq_challenge1_2019: Noko er galt her. Endre koden for å få fuglen bort til grisen!
       courseA_maze_seq_challenge2: Følg stien og led meg til grisen. Unngå dynamitten om du ikkje vil at eg skal forsvinne i ei sky av fjør!
       courseA_maze_seq_challenge2_2018: Følg stien og led meg til grisen. Unngå dynamitten om du ikkje vil at eg skal forsvinne i ei sky av fjør!
+      courseA_maze_seq_challenge2_2019: Følg stien og led meg til grisen. Unngå dynamitten om du ikkje vil at eg skal forsvinne i ei sky av fjør!
       courseA_playLab_events3: Sett sammen "flytt venstre"-blokka med "når venstre"-blokka som allereie er i arbeidsområdet.
       courseA_playLab_events3_2018: Sett sammen "flytt venstre"-blokka med "når venstre"-blokka som allereie er i arbeidsområdet.
+      courseA_playLab_events3_2019: Sett sammen "flytt venstre"-blokka med "når venstre"-blokka som allereie er i arbeidsområdet.
       courseA_playlab_events_challenge1: '"Kor har venene mine gøymd seg? Kan du skrive koden slik at venene mine kjem fram?"'
       courseA_playlab_events_challenge1_2018: '"Kor har venene mine gøymd seg? Kan du skrive koden slik at venene mine kjem fram?"'
+      courseA_playlab_events_challenge1_2019: '"Kor har venene mine gøymd seg? Kan du skrive koden slik at venene mine kjem fram?"'
       courseA_playlab_events_challenge2: '"La oss ha ein fest! Gi venene mine noko å gjere når du klikkar eller trykker på dei."'
       courseA_playlab_events_challenge2_2018: '"La oss ha ein fest! Gi venene mine noko å gjere når du klikkar eller trykker på dei."'
+      courseA_playlab_events_challenge2_2019: '"La oss ha ein fest! Gi venene mine noko å gjere når du klikkar eller trykker på dei."'
       courseA_playlab_events_challengeClone: Kor har venene mine gøymd seg? Kan du skrive koden slik at venene mine kjem fram?
       courseA_toMakeLoopsVideo_Collector: Løkker lar deg gjere det som er inni igjen og igjen!
       courseB_Scrat_ramp5a_2018: Få fuglen til grisen!
+      courseB_Scrat_ramp5a_2019: Få fuglen til grisen!
       courseB_artist_loops2: Kunstnaren prøver å teikne ei linje **6** gongar, men kan ikkje få det riktig. Kan du hjelpe?
       courseB_artist_loops2_2018: Kunstnaren prøver å teikne ei linje **6** gongar, men kan ikkje få det riktig. Kan du hjelpe?
+      courseB_artist_loops2_2019: Kunstnaren prøver å teikne ei linje **6** gongar, men kan ikkje få det riktig. Kan du hjelpe?
       courseB_artist_loops3: Hjelp kunstnaren med å teike ei linje 7 gongar slik at han kan lage ein vegg i hagen.
       courseB_artist_loops3_2018: Hjelp kunstnaren med å teike ei linje 7 gongar slik at han kan lage ein vegg i hagen.
+      courseB_artist_loops3_2019: Hjelp kunstnaren med å teike ei linje 7 gongar slik at han kan lage ein vegg i hagen.
       courseB_artist_loops5: På tide å fikse trappa! Gjenta dette mønsteret **5** gongar slik at kunstnaren kan nå toppen av buskane.
       courseB_artist_loops5_2018: På tide å fikse trappa! Gjenta dette mønsteret **5** gongar slik at kunstnaren kan nå toppen av buskane.
+      courseB_artist_loops5_2019: På tide å fikse trappa! Gjenta dette mønsteret **5** gongar slik at kunstnaren kan nå toppen av buskane.
       courseB_artist_loops6: Klatr opp slyngplanta og sjå kor det endar?
       courseB_artist_loops6_2018: Klatr opp slyngplanta og sjå kor det endar?
+      courseB_artist_loops6_2019: Klatr opp slyngplanta og sjå kor det endar?
       courseB_artist_loops7: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops7_2018: "**Utfordring:** Det er en skjult hage! La oss går rundt."
+      courseB_artist_loops7_2019: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops8: På tide å dra heim. Kan du fikse denne stigen med berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops8_2018: På tide å dra heim. Kan du fikse denne stigen med berre ei blokk for å hjelpe kunstnaren ned?
+      courseB_artist_loops8_2019: På tide å dra heim. Kan du fikse denne stigen med berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops_challenge1: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
       courseB_artist_loops_challenge1_2018: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
+      courseB_artist_loops_challenge1_2019: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
       courseB_artist_loops_challenge2: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
       courseB_artist_loops_challenge2_2018: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
+      courseB_artist_loops_challenge2_2019: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
       courseB_collector_loops1: Dette er Laurel, eventyraren!  Kan du flytte henne og få ein skatt?
       courseB_collector_loops10: Hjelp Laurel til å få tak i alle skattane i grotta.
       courseB_collector_loops10_2018: Hjelp Laurel til å få tak i alle skattane i grotta.
+      courseB_collector_loops10_2019: Hjelp Laurel til å få tak i alle skattane i grotta.
       courseB_collector_loops11: Eureka!  Få tak i så mange skattar du berre kan!
       courseB_collector_loops11_2018: Eureka!  Få tak i så mange skattar du berre kan!
+      courseB_collector_loops11_2019: Eureka!  Få tak i så mange skattar du berre kan!
       courseB_collector_loops1_2018: Dette er Laurel, eventyraren!  Kan du flytte henne og få ein skatt?
+      courseB_collector_loops1_2019: Dette er Laurel, eventyraren!  Kan du flytte henne og få ein skatt?
       courseB_collector_loops2: Samle inn alle fire haugane for å klare dette nivået.
       courseB_collector_loops2_2018: Samle inn alle fire haugane for å klare dette nivået.
+      courseB_collector_loops2_2019: Samle inn alle fire haugane for å klare dette nivået.
       courseB_collector_loops3: Korleis kan Laurel få alle dei fem skattehaugane med berre ei "E-->"-blokk?
       courseB_collector_loops3_2018: Korleis kan Laurel få alle dei fem skattehaugane med berre ei "E-->"-blokk?
+      courseB_collector_loops3_2019: Korleis kan Laurel få alle dei fem skattehaugane med berre ei "E-->"-blokk?
       courseB_collector_loops4: Fiks Laurel si bane for å få tak i all skatten!
       courseB_collector_loops4_2018: Fiks Laurel si bane for å få tak i all skatten!
+      courseB_collector_loops4_2019: Fiks Laurel si bane for å få tak i all skatten!
       courseB_collector_loops5: 'Legg til meir i koden frå forrige oppgåve for å få all skatten. '
       courseB_collector_loops5_2018: 'Legg til meir i koden frå forrige oppgåve for å få all skatten. '
+      courseB_collector_loops5_2019: 'Legg til meir i koden frå forrige oppgåve for å få all skatten. '
       courseB_collector_loops6: "Finn koden som hjelper Laurel\ntil å få tak i heile skatten!"
       courseB_collector_loops6_2018: "Finn koden som hjelper Laurel\ntil å få tak i heile skatten!"
+      courseB_collector_loops6_2019: "Finn koden som hjelper Laurel\ntil å få tak i heile skatten!"
       courseB_collector_loops7: Skriv koden for å få tak i heile skatten.
       courseB_collector_loops7_2018: Skriv koden for å få tak i heile skatten.
+      courseB_collector_loops7_2019: Skriv koden for å få tak i heile skatten.
       courseB_collector_loops8: "**Utfordring:** Skatten går heile vegen opp trappa! \nSkriv koden slik at Laurel får tak i alt."
       courseB_collector_loops8_2018: "**Utfordring:** Skatten går heile vegen opp trappa! \nSkriv koden slik at Laurel får tak i alt."
+      courseB_collector_loops8_2019: "**Utfordring:** Skatten går heile vegen opp trappa! \nSkriv koden slik at Laurel får tak i alt."
       courseB_collector_loops9: '*"Hjelp meg med å få skatten frå denne djupe dalen."*'
       courseB_collector_loops9_2018: '*"Hjelp meg med å få skatten frå denne djupe dalen."*'
+      courseB_collector_loops9_2019: '*"Hjelp meg med å få skatten frå denne djupe dalen."*'
       courseB_collector_loops_challenge1: "Denne gangen har du avgrensa tal \npå blokker. Få tak i heile skatten! "
       courseB_collector_loops_challenge1_2018: "Denne gangen har du avgrensa tal \npå blokker. Få tak i heile skatten! "
+      courseB_collector_loops_challenge1_2019: "Denne gangen har du avgrensa tal \npå blokker. Få tak i heile skatten! "
       courseB_collector_loops_challenge2: "La oss få tak i skatten! Hjelp \nmeg over kvar rad og kom deretter tilbake for å starte neste rad. Kan du finne eit mønster?"
       courseB_collector_loops_challenge2_2018: "La oss få tak i skatten! Hjelp \nmeg over kvar rad og kom deretter tilbake for å starte neste rad. Kan du finne eit mønster?"
       courseB_collector_loops_challenge`: 'Denne gongen kan du berre bruke ein av kvar pil-blokk. Få tak i heile skatten! '
@@ -1612,6 +1666,7 @@ nn:
       courseB_maze_seq1: "Spel med desse blokkene å sjå kva dei får \nfuglen til å gjere! \n\nFå fuglen til grisen for å fullføre nivået."
       courseB_maze_seq12: Få tak i grisen!
       courseB_maze_seq12_2018: Få tak i grisen!
+      courseB_maze_seq12_2019: Få tak i grisen!
       courseB_maze_seq2: '*"Ein feil! Endre koden for å få meg bort til grisen."*'
       courseB_maze_seq6: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen!
       courseB_maze_seq7: Finn ut kva som manglar og legg så til dei manglande blokkane for å få fuglen bort til grisen!
@@ -1622,39 +1677,56 @@ nn:
       courseB_maze_seqOld: 'Gå rundt dynamitten for å få meg bort til grisen! '
       courseB_maze_seq_challenge1: "Du kan bare flytte opp til fire gonger \ni kvar retning. Finn du ein bane før du går tom for blokker?"
       courseB_maze_seq_challenge1_2018: "Du kan bare flytte opp til fire gonger \ni kvar retning. Finn du ein bane før du går tom for blokker?"
+      courseB_maze_seq_challenge1_2019: "Du kan bare flytte opp til fire gonger \ni kvar retning. Finn du ein bane før du går tom for blokker?"
       courseB_maze_seq_challenge2: "Feilsøk dette nivået. Dette er dei rette\nblokkene, men dei ligg i feil rekkefølgje!"
       courseB_maze_seq_challenge2_2018: "Feilsøk dette nivået. Dette er dei rette\nblokkene, men dei ligg i feil rekkefølgje!"
+      courseB_maze_seq_challenge2_2019: "Feilsøk dette nivået. Dette er dei rette\nblokkene, men dei ligg i feil rekkefølgje!"
       courseB_playLab_events1: Sjå om du kan finne ut kva kvar blokk gjer.
       courseB_playLab_events1_2018: Sjå om du kan finne ut kva kvar blokk gjer.
+      courseB_playLab_events1_2019: Sjå om du kan finne ut kva kvar blokk gjer.
       courseB_playlab_events_challenge1: 'Få dyra til å flytte seg ned når du trykkar på ▼. '
       courseB_playlab_events_challenge1_2018: 'Få dyra til å flytte seg ned når du trykkar på ▼. '
+      courseB_playlab_events_challenge1_2019: 'Få dyra til å flytte seg ned når du trykkar på ▼. '
       courseB_playlab_events_challenge2: La oss få dyra til å forsvinne når du trykkar på dei.
       courseB_playlab_events_challenge2_2018: La oss få dyra til å forsvinne når du trykkar på dei.
+      courseB_playlab_events_challenge2_2019: La oss få dyra til å forsvinne når du trykkar på dei.
       courseB_playlab_events_challenge2_embed: Her er det ferdige spelet!
       courseB_playlab_events_challenge2_template: La oss få dyra til å forsvinne når du trykkar på dei! Du kan også leggje til lydar og poengsummar for å lage eit sisten-spel!
       courseB_playlab_events_challenge2_template_2018: La oss få dyra til å forsvinne når du trykkar på dei! Du kan også leggje til lydar og poengsummar for å lage eit sisten-spel!
+      courseB_playlab_events_challenge2_template_2019: La oss få dyra til å forsvinne når du trykkar på dei! Du kan også leggje til lydar og poengsummar for å lage eit sisten-spel!
       courseB_starWars_prog1: '"Få tak i skrapmetallet, BB-8!"'
       courseB_starWars_prog10: Hjelp BB-8 å samle det glødande skrapmetallet
       courseB_starWars_prog10_2018: Hjelp BB-8 å samle det glødande skrapmetallet
+      courseB_starWars_prog10_2019: Hjelp BB-8 å samle det glødande skrapmetallet
       courseB_starWars_prog11: Hjelp BB-8 å samle det glødande skrapmetallet
       courseB_starWars_prog11_2018: Hjelp BB-8 å samle det glødande skrapmetallet
+      courseB_starWars_prog11_2019: Hjelp BB-8 å samle det glødande skrapmetallet
       courseB_starWars_prog1_2018: '"Få tak i skrapmetallet, BB-8!"'
+      courseB_starWars_prog1_2019: '"Få tak i skrapmetallet, BB-8!"'
       courseB_starWars_prog2: Få tak i alt metallet.
       courseB_starWars_prog2_2018: Få tak i alt metallet.
+      courseB_starWars_prog2_2019: Få tak i alt metallet.
       courseB_starWars_prog3: Få tak i alt skrapmetallet
       courseB_starWars_prog3_2018: Få tak i alt skrapmetallet
+      courseB_starWars_prog3_2019: Få tak i alt skrapmetallet
       courseB_starWars_prog4: Få tak i alt skrapmetallet
       courseB_starWars_prog4_2018: Få tak i alt skrapmetallet
+      courseB_starWars_prog4_2019: Få tak i alt skrapmetallet
       courseB_starWars_prog5: Få tak i skrapmetallet
       courseB_starWars_prog5_2018: Få tak i skrapmetallet
+      courseB_starWars_prog5_2019: Få tak i skrapmetallet
       courseB_starWars_prog6: Få tak i alt skrapmetallet
       courseB_starWars_prog6_2018: Få tak i alt skrapmetallet
+      courseB_starWars_prog6_2019: Få tak i alt skrapmetallet
       courseB_starWars_prog7: Gå og hent det!
       courseB_starWars_prog7_2018: Gå og hent det!
+      courseB_starWars_prog7_2019: Gå og hent det!
       courseB_starWars_prog8: "**Utfordring:** Hjelp BB-8 å samle det glødande skrapmetallet"
       courseB_starWars_prog8_2018: "**Utfordring:** Hjelp BB-8 å samle det glødande skrapmetallet"
+      courseB_starWars_prog8_2019: "**Utfordring:** Hjelp BB-8 å samle det glødande skrapmetallet"
       courseB_starWars_prog9: Hjelp BB-8 å samle det glødande skrapmetallet
       courseB_starWars_prog9_2018: Hjelp BB-8 å samle det glødande skrapmetallet
+      courseB_starWars_prog9_2019: Hjelp BB-8 å samle det glødande skrapmetallet
       courseC_PlayLab_events3: "Kan du lage eit program som gjer at Jorge \n(figur 1) flytter seg mot Katten Olive?"
       courseC_PlayLab_events3_2018: "Kan du lage eit program som gjer at Jorge \n(figur 1) flytter seg mot Katten Olive?"
       courseC_PlayLab_events3_2019: "Kan du lage eit program som gjer at Jorge \n(figur 1) flytter seg mot Katten Olive?"

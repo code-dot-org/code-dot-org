@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 var msg = require('@cdo/locale');
 
 var GameButtons = require('../templates/GameButtons').default;
@@ -9,22 +10,24 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
   return (
     <span>
       <ProtectedVisualizationDiv>
-        <svg version="1.1" id="svgFlappy"/>
+        <svg version="1.1" id="svgFlappy" />
       </ProtectedVisualizationDiv>
       <GameButtons>
-        {showFinishButton && <div id="right-button-cell">
-          <button id="rightButton" className="share">
-            <img src="/blockly/media/1x1.gif"/>
-            {msg.finish()}
-          </button>
-        </div>}
+        {showFinishButton && (
+          <div id="right-button-cell">
+            <button id="rightButton" className="share">
+              <img src="/blockly/media/1x1.gif" />
+              {msg.finish()}
+            </button>
+          </div>
+        )}
       </GameButtons>
-      <BelowVisualization/>
+      <BelowVisualization />
     </span>
   );
 };
 FlappyVisualizationColumn.propTypes = {
-  showFinishButton: PropTypes.bool.isRequired,
+  showFinishButton: PropTypes.bool.isRequired
 };
 
 module.exports = FlappyVisualizationColumn;

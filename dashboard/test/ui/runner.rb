@@ -101,6 +101,7 @@ def parse_options
     options.csedweek_domain = 'test.csedweek.org'
     options.advocacy_domain = 'test-advocacy.code.org'
     options.local = nil
+    options.local_headless = true
     options.html = nil
     options.maximize = nil
     options.auto_retry = false
@@ -139,6 +140,9 @@ def parse_options
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
         options.advocacy_domain = 'localhost-advocacy.code.org:3000'
+      end
+      opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
+        options.local_headless = false
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -673,6 +677,7 @@ def run_feature(browser, feature, options)
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
   run_environment['ADVOCACY_TEST_DOMAIN'] = options.advocacy_domain if options.advocacy_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
   run_environment['FAIL_FAST'] = options.fail_fast ? "true" : nil

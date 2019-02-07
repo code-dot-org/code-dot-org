@@ -1,15 +1,11 @@
-import React, {PropTypes} from 'react';
-import {
-  Radio,
-  ControlLabel,
-  FormGroup,
-  Table
-} from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {Radio, ControlLabel, FormGroup, Table} from 'react-bootstrap';
 
 const questionPropType = PropTypes.shape({
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  required: PropTypes.bool,
+  required: PropTypes.bool
 });
 
 class QuestionRow extends React.Component {
@@ -21,16 +17,20 @@ class QuestionRow extends React.Component {
   }
 
   getValidationState() {
-    if (this.props.errors && this.props.errors.includes(this.props.question.name)) {
+    if (
+      this.props.errors &&
+      this.props.errors.includes(this.props.question.name)
+    ) {
       return 'error';
     }
   }
 
   handleChange(event) {
     const value = event.target.value;
-    this.props.onChange && this.props.onChange({
-      [this.props.question.name]: value
-    });
+    this.props.onChange &&
+      this.props.onChange({
+        [this.props.question.name]: value
+      });
   }
 
   buildColumn(option, i) {
@@ -39,10 +39,7 @@ class QuestionRow extends React.Component {
 
     return (
       <td key={key + i}>
-        <FormGroup
-          controlId={key}
-          validationState={this.getValidationState()}
-        >
+        <FormGroup controlId={key} validationState={this.getValidationState()}>
           <Radio
             name={key}
             value={option}
@@ -64,7 +61,9 @@ class QuestionRow extends React.Component {
           >
             <ControlLabel>
               {this.props.question.label}
-              {this.props.question.required && <span className="form-required-field"> *</span>}
+              {this.props.question.required && (
+                <span className="form-required-field"> *</span>
+              )}
             </ControlLabel>
           </FormGroup>
         </td>
@@ -79,7 +78,7 @@ QuestionRow.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  question: questionPropType,
+  question: questionPropType
 };
 
 export default class QuestionsTable extends React.Component {
@@ -87,46 +86,44 @@ export default class QuestionsTable extends React.Component {
     const columns = this.props.options.length + this.props.labelSpan;
 
     const thStyle = {
-      width: `${100 / (columns)}%`,
-      backgroundColor: "#00b2c0",
-      color: "white"
+      width: `${100 / columns}%`,
+      backgroundColor: '#00b2c0',
+      color: 'white'
     };
 
     const labelThStyle = {
       ...thStyle,
-      width: `${this.props.labelSpan * 100 / (columns)}%`,
+      width: `${(this.props.labelSpan * 100) / columns}%`
     };
 
     return (
-      <Table striped bordered>
-        <thead>
-          <tr>
-            <th style={labelThStyle} />
-            {this.props.options.map(option => (
-              <th
-                key={option}
-                style={thStyle}
-              >
-                <ControlLabel>
-                  {option}
-                </ControlLabel>
-              </th>
+      <FormGroup>
+        <ControlLabel>{this.props.label}</ControlLabel>
+        <Table striped bordered>
+          <thead>
+            <tr>
+              <th style={labelThStyle} />
+              {this.props.options.map(option => (
+                <th key={option} style={thStyle}>
+                  <ControlLabel>{option}</ControlLabel>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.questions.map(question => (
+              <QuestionRow
+                key={question.name}
+                question={question}
+                data={this.props.data}
+                errors={this.props.errors}
+                onChange={this.props.onChange}
+                options={this.props.options}
+              />
             ))}
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.questions.map(question =>
-            <QuestionRow
-              key={question.name}
-              question={question}
-              data={this.props.data}
-              errors={this.props.errors}
-              onChange={this.props.onChange}
-              options={this.props.options}
-            />
-          )}
-        </tbody>
-      </Table>
+          </tbody>
+        </Table>
+      </FormGroup>
     );
   }
 }
@@ -137,7 +134,8 @@ QuestionsTable.propTypes = {
   labelSpan: PropTypes.number,
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  questions: PropTypes.arrayOf(questionPropType).isRequired
+  questions: PropTypes.arrayOf(questionPropType).isRequired,
+  label: PropTypes.string
 };
 
 QuestionsTable.defaultProps = {

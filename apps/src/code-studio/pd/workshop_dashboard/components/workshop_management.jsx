@@ -1,16 +1,13 @@
 /**
  * Workshop management buttons (view, edit, delete).
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
-import {
-  PermissionPropType,
-  Organizer,
-  ProgramManager
-} from '../permission';
+import {PermissionPropType, Organizer, ProgramManager} from '../permission';
 
 export class WorkshopManagement extends React.Component {
   static contextTypes = {
@@ -41,21 +38,21 @@ export class WorkshopManagement extends React.Component {
       let surveyBaseUrl;
 
       if (
-          (
-            [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(props.subject)
-            && new Date(this.props.date).getFullYear() >= 2018
-          ) ||
-          (
-            ['CS Discoveries', 'CS Principles'].includes(props.course)
-            && props.subject !== 'Code.org Facilitator Weekend'
-            && new Date(this.props.date) >= new Date('2018-08-01')
-          )
+        ([WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(
+          props.subject
+        ) &&
+          new Date(this.props.date).getFullYear() >= 2018) ||
+        (['CS Discoveries', 'CS Principles'].includes(props.course) &&
+          props.subject !== 'Code.org Facilitator Weekend' &&
+          new Date(this.props.date) >= new Date('2018-08-01'))
       ) {
-        surveyBaseUrl = "daily_survey_results";
+        surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
-        surveyBaseUrl = "local_summer_workshop_survey_results";
+        surveyBaseUrl = 'local_summer_workshop_survey_results';
       } else {
-        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager) ? "organizer_survey_results" : "survey_results";
+        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager)
+          ? 'organizer_survey_results'
+          : 'survey_results';
       }
 
       this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
@@ -66,12 +63,12 @@ export class WorkshopManagement extends React.Component {
     showDeleteConfirmation: false
   };
 
-  handleViewClick = (event) => {
+  handleViewClick = event => {
     event.preventDefault();
     this.context.router.push(this.props.viewUrl);
   };
 
-  handleEditClick = (event) => {
+  handleEditClick = event => {
     event.preventDefault();
     this.context.router.push(this.props.editUrl);
   };
@@ -89,7 +86,7 @@ export class WorkshopManagement extends React.Component {
     this.props.onDelete(this.props.workshopId);
   };
 
-  handleSurveyClick = (event) => {
+  handleSurveyClick = event => {
     event.preventDefault();
     this.context.router.push(this.surveyUrl);
   };

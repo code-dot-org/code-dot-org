@@ -6,41 +6,38 @@ import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesT
 const responses = [
   {
     puzzle: 2,
-    question: "Free Response",
-    response: "Lorem ipsum dolor sit amet, postea pericula",
-    stage: "Lesson 1",
+    question: 'Free Response',
+    response: 'Lorem ipsum dolor sit amet, postea pericula',
+    stage: 'Lesson 1',
     studentId: 1,
-    studentName: "Student A",
-    url: "http://fake.url"
+    studentName: 'Student A',
+    url: 'http://fake.url'
   },
   {
     puzzle: 3,
-    question: "Free Response",
-    response: "Lorem ipsum dolor sit amet, postea pericula",
-    stage: "Lesson 1",
+    question: 'Free Response',
+    response: 'Lorem ipsum dolor sit amet, postea pericula',
+    stage: 'Lesson 1',
     studentId: 3,
-    studentName: "Student C",
-    url: "http://fake.url"
+    studentName: 'Student C',
+    url: 'http://fake.url'
   },
   {
     puzzle: 1,
-    question: "Free Response",
-    response: "Lorem ipsum dolor sit amet, postea pericula",
-    stage: "Lesson 1",
+    question: 'Free Response',
+    response: 'Lorem ipsum dolor sit amet, postea pericula',
+    stage: 'Lesson 1',
     studentId: 2,
-    studentName: "Student B",
-    url: "http://fake.url"
-  },
+    studentName: 'Student B',
+    url: 'http://fake.url'
+  }
 ];
 const sectionId = 1;
 
 describe('TextResponsesTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
-      <TextResponsesTable
-        responses={responses}
-        sectionId={sectionId}
-      />
+      <TextResponsesTable responses={responses} sectionId={sectionId} />
     );
 
     expect(wrapper.find('table')).to.exist;
@@ -48,10 +45,7 @@ describe('TextResponsesTable', () => {
 
   it('renders responses as table rows', () => {
     const wrapper = mount(
-      <TextResponsesTable
-        responses={responses}
-        sectionId={sectionId}
-      />
+      <TextResponsesTable responses={responses} sectionId={sectionId} />
     );
 
     const responseRows = wrapper.find('tbody').find('tr');
@@ -60,10 +54,7 @@ describe('TextResponsesTable', () => {
 
   it('sorts responses by student name upon clicking student name header cell', () => {
     const wrapper = mount(
-      <TextResponsesTable
-        responses={responses}
-        sectionId={sectionId}
-      />
+      <TextResponsesTable responses={responses} sectionId={sectionId} />
     );
 
     // should default to response order
@@ -94,10 +85,7 @@ describe('TextResponsesTable', () => {
 
   it('renders an empty message element if there are no responses', () => {
     const wrapper = mount(
-      <TextResponsesTable
-        responses={[]}
-        sectionId={sectionId}
-      />
+      <TextResponsesTable responses={[]} sectionId={sectionId} />
     );
 
     expect(wrapper.find('#uitest-empty-responses')).to.exist;

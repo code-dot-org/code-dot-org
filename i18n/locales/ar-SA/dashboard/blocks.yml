@@ -907,7 +907,7 @@ ar:
         text: اتجه إلى اليمين
       Vector_positionCenter:
         text: المنتصف
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -915,14 +915,16 @@ ar:
             '"x"': الموضع س
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
       binary_move:
         options:
           DIR:

@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import QuickActionsCell from "../tables/QuickActionsCell";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
-import color from "../../util/color";
+import QuickActionsCell from '../tables/QuickActionsCell';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
 import i18n from '@cdo/locale';
@@ -10,14 +11,14 @@ import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
-  remix,
+  remix
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 
 export const styles = {
   xIcon: {
-    paddingRight: 5,
-  },
+    paddingRight: 5
+  }
 };
 
 class PersonalProjectsTableActionsCell extends Component {
@@ -31,7 +32,7 @@ class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
-    remix: PropTypes.func.isRequired,
+    remix: PropTypes.func.isRequired
   };
 
   onDelete = () => {
@@ -59,29 +60,22 @@ class PersonalProjectsTableActionsCell extends Component {
 
     return (
       <div>
-        {!isEditing  &&
+        {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item
-              onClick={this.onRename}
-            >
+            <PopUpMenu.Item onClick={this.onRename}>
               {i18n.rename()}
             </PopUpMenu.Item>
-            <PopUpMenu.Item
-              onClick={this.onRemix}
-            >
+            <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
-            <MenuBreak/>
-            <PopUpMenu.Item
-              onClick={this.onDelete}
-              color={color.red}
-            >
-              <FontAwesome icon="times-circle" style={styles.xIcon}/>
+            <MenuBreak />
+            <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+              <FontAwesome icon="times-circle" style={styles.xIcon} />
               {i18n.delete()}
             </PopUpMenu.Item>
           </QuickActionsCell>
-        }
-        {isEditing &&
+        )}
+        {isEditing && (
           <div>
             <Button
               onClick={this.onSave}
@@ -91,33 +85,36 @@ class PersonalProjectsTableActionsCell extends Component {
               disabled={isSaving}
               className="ui-projects-rename-save"
             />
-            <br/>
+            <br />
             <Button
               onClick={this.onCancel}
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}
             />
           </div>
-        }
+        )}
       </div>
     );
   }
 }
 
-export default connect(state => ({}), dispatch => ({
-  showDeleteDialog(projectId) {
-    dispatch(showDeleteDialog(projectId));
-  },
-  startRenamingProject(projectId, updatedName) {
-    dispatch(startRenamingProject(projectId, updatedName));
-  },
-  cancelRenamingProject(projectId) {
-    dispatch(cancelRenamingProject(projectId));
-  },
-  saveProjectName(projectId, updatedName, lastUpdatedAt) {
-    dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
-  },
-  remix(projectId, projectType) {
-    dispatch(remix(projectId, projectType));
-  },
-}))(PersonalProjectsTableActionsCell);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    showDeleteDialog(projectId) {
+      dispatch(showDeleteDialog(projectId));
+    },
+    startRenamingProject(projectId, updatedName) {
+      dispatch(startRenamingProject(projectId, updatedName));
+    },
+    cancelRenamingProject(projectId) {
+      dispatch(cancelRenamingProject(projectId));
+    },
+    saveProjectName(projectId, updatedName, lastUpdatedAt) {
+      dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
+    },
+    remix(projectId, projectType) {
+      dispatch(remix(projectId, projectType));
+    }
+  })
+)(PersonalProjectsTableActionsCell);

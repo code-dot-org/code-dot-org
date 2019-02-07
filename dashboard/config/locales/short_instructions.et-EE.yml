@@ -2052,6 +2052,7 @@ et:
         end lill. Kui leiad lille, kogu sellelt nektar.
       Ryan Test Locked Blocks: Siin on funktsioon nimega „patrull“. Muuda seda, et
         liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
+      Ryan_Demo: Las põder alustab uue liigutusega peale 4 ühikut!
       SpecialFrozenLevel: Sa oled ametlikult meister kunstnik! Loo talve võlumaa.
       Standalone_Artist_1: Tere tulemast rakendusse Kunstnik! Proovime kõigepealt
         teha lihtsa ruudu, kasutades paremale pööramise plokki ja edasiliikumise plokki.
@@ -2296,17 +2297,23 @@ et:
         lisa selle asemel hoopis midagi muud)
       courseA_collector_loops8: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops8_2018: Kirjutage kood, et saada kätte kõik aare.
+      courseA_collector_loops8_2019: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops9: "** Väljakutse: ** Aare läheb treppide üles välja!
         Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_collector_loops9_2018: "** Väljakutse: ** Aare läheb treppide üles välja!
+        Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      courseA_collector_loops9_2019: "** Väljakutse: ** Aare läheb treppide üles välja!
         Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_maze_seq2: Muud koodi, et jõuaksin põrsani!
       courseA_maze_seq2_2018: Muud koodi, et jõuaksin põrsani!
       courseB_collector_loops7: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops7_2018: Kirjutage kood, et saada kätte kõik aare.
+      courseB_collector_loops7_2019: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops8: "** Väljakutse: ** Aare läheb treppidest alla välja!
         Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseB_collector_loops8_2018: "** Väljakutse: ** Aare läheb treppidest alla
+        välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
+      courseB_collector_loops8_2019: "** Väljakutse: ** Aare läheb treppidest alla
         välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseC_PlayLab_events3: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane
         1) liikuma kass Olive poole?

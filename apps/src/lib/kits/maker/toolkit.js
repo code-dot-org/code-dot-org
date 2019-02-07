@@ -11,7 +11,7 @@ import * as dropletConfig from './dropletConfig';
 import MakerError, {
   ConnectionCanceledError,
   UnsupportedBrowserError,
-  wrapKnownMakerErrors,
+  wrapKnownMakerErrors
 } from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
@@ -31,7 +31,9 @@ let currentBoard = null;
  */
 export function enable() {
   if (!redux.isAvailable(getStore().getState())) {
-    throw new MakerError('Maker cannot be enabled: Its reducer was not registered.');
+    throw new MakerError(
+      'Maker cannot be enabled: Its reducer was not registered.'
+    );
   }
   getStore().dispatch(redux.enable());
 }
@@ -52,13 +54,21 @@ export function enable() {
  */
 export function connect({interpreter, onDisconnect}) {
   if (!redux.isEnabled(getStore().getState())) {
-    return Promise.reject(new Error('Attempted to connect to a maker board, ' +
-        'but Maker Toolkit is not enabled.'));
+    return Promise.reject(
+      new Error(
+        'Attempted to connect to a maker board, ' +
+          'but Maker Toolkit is not enabled.'
+      )
+    );
   }
 
   if (currentBoard) {
-    return Promise.reject(new Error('Attempted to connect Maker Toolkit when ' +
-        'an existing board is already connected.'));
+    return Promise.reject(
+      new Error(
+        'Attempted to connect Maker Toolkit when ' +
+          'an existing board is already connected.'
+      )
+    );
   }
 
   const store = getStore();
@@ -66,40 +76,40 @@ export function connect({interpreter, onDisconnect}) {
   dispatch(redux.startConnecting());
 
   return confirmSupportedBrowser()
-      .then(getBoard)
-      .then(board => {
-        if (!isConnecting()) {
-          // Must've called reset() - exit the promise chain.
-          return Promise.reject(new ConnectionCanceledError());
-        }
-        currentBoard = board;
-        return currentBoard.connect();
-      })
-      .then(() => {
-        if (!isConnecting()) {
-          // Must've called reset() - exit the promise chain.
-          return Promise.reject(new ConnectionCanceledError());
-        }
-        commands.injectBoardController(currentBoard);
-        currentBoard.installOnInterpreter(interpreter);
-        if (typeof onDisconnect === 'function') {
-          currentBoard.once('disconnect', onDisconnect);
-        }
-        dispatch(redux.reportConnected());
-        trackEvent('Maker', 'ConnectionSuccess');
-      })
-      .catch(error => {
-        if (error instanceof ConnectionCanceledError) {
-          // This was intentional, and we don't need an error screen.
-          return Promise.reject(error);
-        } else {
-          // Something went wrong, so show the error screen.
-          error = wrapKnownMakerErrors(error);
-          dispatch(redux.reportConnectionError(error));
-          trackEvent('Maker', 'ConnectionError');
-          return Promise.reject(error);
-        }
-      });
+    .then(getBoard)
+    .then(board => {
+      if (!isConnecting()) {
+        // Must've called reset() - exit the promise chain.
+        return Promise.reject(new ConnectionCanceledError());
+      }
+      currentBoard = board;
+      return currentBoard.connect();
+    })
+    .then(() => {
+      if (!isConnecting()) {
+        // Must've called reset() - exit the promise chain.
+        return Promise.reject(new ConnectionCanceledError());
+      }
+      commands.injectBoardController(currentBoard);
+      currentBoard.installOnInterpreter(interpreter);
+      if (typeof onDisconnect === 'function') {
+        currentBoard.once('disconnect', onDisconnect);
+      }
+      dispatch(redux.reportConnected());
+      trackEvent('Maker', 'ConnectionSuccess');
+    })
+    .catch(error => {
+      if (error instanceof ConnectionCanceledError) {
+        // This was intentional, and we don't need an error screen.
+        return Promise.reject(error);
+      } else {
+        // Something went wrong, so show the error screen.
+        error = wrapKnownMakerErrors(error);
+        dispatch(redux.reportConnectionError(error));
+        trackEvent('Maker', 'ConnectionError');
+        return Promise.reject(error);
+      }
+    });
 }
 
 /**
@@ -123,8 +133,9 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    return findPortWithViableDevice()
-        .then(port => new CircuitPlaygroundBoard(port));
+    return findPortWithViableDevice().then(
+      port => new CircuitPlaygroundBoard(port)
+    );
   }
 }
 

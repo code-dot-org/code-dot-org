@@ -8,53 +8,54 @@ import teacherSections, {
 } from '../teacherDashboard/teacherSectionsRedux';
 import TeacherSections from './TeacherSections';
 
-export default storybook => storybook
-  .storiesOf('Homepages/Teachers/TeacherSections', module)
-  .addStoryTable(storyTable);
+export default storybook =>
+  storybook
+    .storiesOf('Homepages/Teachers/TeacherSections', module)
+    .addStoryTable(storyTable);
 
 const sections = [
   {
     id: 11,
-    name: "Algebra Period 1",
-    teacherName: "Ms. Frizzle",
-    linkToProgress: "to Progress tab",
-    assignedTitle: "CS in Algebra",
-    linkToAssigned: "to Course",
+    name: 'Algebra Period 1',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: 'to Progress tab',
+    assignedTitle: 'CS in Algebra',
+    linkToAssigned: 'to Course',
     studentCount: 14,
-    linkToStudents: "to Manage Students tab",
+    linkToStudents: 'to Manage Students tab',
     loginType: 'word',
-    code: "ABCDEF",
+    code: 'ABCDEF',
     providerManaged: false,
-    hidden: false,
+    hidden: false
   },
   {
     id: 12,
-    name: "Algebra Period 2",
-    teacherName: "Ms. Frizzle",
-    linkToProgress: "to Progress tab",
-    assignedTitle: "CS in Algebra",
-    linkToAssigned: "to Course",
+    name: 'Algebra Period 2',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: 'to Progress tab',
+    assignedTitle: 'CS in Algebra',
+    linkToAssigned: 'to Course',
     studentCount: 19,
-    linkToStudents: "to Manage Students tab",
+    linkToStudents: 'to Manage Students tab',
     loginType: 'word',
-    code: "EEB206",
+    code: 'EEB206',
     providerManaged: false,
-    hidden: false,
+    hidden: false
   },
   {
     id: 13,
-    name: "Period 3",
-    teacherName: "Ms. Frizzle",
-    linkToProgress: "to Progress tab",
-    assignedTitle: "Course 4",
-    linkToAssigned: "to Course",
+    name: 'Period 3',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: 'to Progress tab',
+    assignedTitle: 'Course 4',
+    linkToAssigned: 'to Course',
     studentCount: 22,
-    linkToStudents: "to Manage Students tab",
+    linkToStudents: 'to Manage Students tab',
     loginType: 'word',
-    code: "HPRWHG",
+    code: 'HPRWHG',
     providerManaged: false,
-    hidden: false,
-  },
+    hidden: false
+  }
 ];
 const serverSections = sections.map(serverSectionFromSection);
 
@@ -69,37 +70,46 @@ const storyTable = [
       store.dispatch(setSections(serverSections));
       return (
         <Provider store={store}>
-          <TeacherSections/>
+          <TeacherSections />
         </Provider>
       );
     }
   },
   {
     name: 'teacher, no sections yet',
-    description: 'shows a set up message if the teacher does not have any sections yet',
+    description:
+      'shows a set up message if the teacher does not have any sections yet',
     story: () => {
       withFakeServer();
       registerReducers({teacherSections});
       const store = createStoreWithReducers();
       return (
         <Provider store={store}>
-          <TeacherSections/>
+          <TeacherSections />
         </Provider>
       );
     }
-  },
+  }
 ];
 
 function withFakeServer({courses = [], sections = []} = {}) {
   const server = sinon.fakeServer.create({
-    autoRespond: true,
+    autoRespond: true
   });
-  const successResponse = (body) => [
+  const successResponse = body => [
     200,
-    {"Content-Type": "application/json"},
+    {'Content-Type': 'application/json'},
     JSON.stringify(body)
   ];
   server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
-  server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
-  server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse([]));
+  server.respondWith(
+    'GET',
+    '/dashboardapi/sections',
+    successResponse(sections)
+  );
+  server.respondWith(
+    'GET',
+    '/dashboardapi/sections/valid_scripts',
+    successResponse([])
+  );
 }

@@ -300,14 +300,20 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': اندازه
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': اندازه
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
       binary_move:
         options:
           DIR:

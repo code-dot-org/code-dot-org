@@ -379,14 +379,20 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ölçü
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': ölçü
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
       binary_move:
         options:
           DIR:

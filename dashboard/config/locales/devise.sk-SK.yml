@@ -38,13 +38,13 @@ sk:
       updated: Vaše heslo bolo úspešne zmenené. Ste prihlásený.
       updated_not_active: Vaše heslo bolo úspešne zmenené.
     registrations:
-      destroyed: Dovidenia! Váš účet sa úspešne zmazal. Dúfame, že sa ešte niekedy
+      destroyed: Dovidenia! váš účet sa úspešne zmazal. Dúfame, že sa ešte niekedy
         uvidíme.
       signed_up: Vitajte! Úspešne ste sa zaregistrovali.
       signed_up_but_inactive: Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie
-        nie je možné, pretože Váš účet ešte nie je aktivovaný.
+        nie je možné, pretože váš účet ešte nie je aktivovaný.
       signed_up_but_locked: Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie nie
-        je možné, pretože Váš účet je uzamknutý.
+        je možné, pretože váš účet je uzamknutý.
       signed_up_but_unconfirmed: Správa s potvrdzujúcim odkazom bola odoslaná na Vašu
         e-mailovú adresu. Pre aktivovanie účtu otvorte daný odkaz.
       update_needs_confirmation: Úspešne ste aktualizovali konto. Prosím, skontrolujte
@@ -90,5 +90,5 @@ sk:
         someone_invited_you: Niekto Vás pozval na %{url}, môžete to prijať cez nižšie
           uvedený odkaz.
         accept: Prijať pozvánku
-        ignore: Ak nechcete prijať pozvanie, prosím ignorujte tento e-mail.<br />Váš
+        ignore: Ak nechcete prijať pozvanie, prosím ignorujte tento e-mail.<br />váš
           účet sa nevytvorí, pokým neprejdete na odkaz vyššie a nenastavíte si heslo.

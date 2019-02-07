@@ -1262,6 +1262,7 @@ fil:
       aE7: "Kung ikaw ay maglilikha ng isa pang loop gaya ng isang ito, ngunit liliko pakaliwa sa halip na pakanan, ano ang mangyayari? \\r\n\\r\nMaaari mo bang ulitin ang lahat ng mga ito para maiguhit ang alon na ito?"
       aE8: "Ngayon ay ating i-loop ang buong bagay nang apat na beses para malikha ang kuwadro ng larawang ito. Mag-ingat sa mga sulok - hindi ka makakaikot nang basta-basta nang 90 degrees! \\r\n\\r\nKung ang pag-loop ng 3 degree na pag-ikot nang 60 na beses ay nakakagawa ng isang kalahating bilog, alin sa mga bloke ng code na ito ang makakagawa ng karagdagang pang-apat na bilog para sa mga sulok?"
       allHallows2017: Bihagin ang mga empleyado ng Code.org sa isang kahon ng krayola sa pamamagitan ng pagguhit ng isang parisukat na may gilid na 320 pixels!
+      allthethings_ttscsf contained: Pulutin ang lahat ng mga letsugas (kapay maayrong ilang lang na mapupulot.)
       artistDebugVideo1: Gamitin ang `repeat` na loop para magdagdag ng mga alon sa tubig.
       artistFunctionsVideo1: Sundin ang mga tagubilin para makagawa ng iyong sariling function.
       artistLoopsK1: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
@@ -1403,61 +1404,88 @@ fil:
       courseA_artist_loops1: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseA_artist_loops10: Tulungan akong ilagay ang mga bato para hindi ako mahulog!
       courseA_artist_loops10_2018: Tulungan akong ilagay ang mga bato para hindi ako mahulog!
+      courseA_artist_loops10_2019: Tulungan akong ilagay ang mga bato para hindi ako mahulog!
       courseA_artist_loops11: Tulungan akong gumawa ng mga hakbang para tingnang ang barko na maglayag palayo.
       courseA_artist_loops11_2018: Tulungan akong gumawa ng mga hakbang para tingnang ang barko na maglayag palayo.
+      courseA_artist_loops11_2019: Tulungan akong gumawa ng mga hakbang para tingnang ang barko na maglayag palayo.
       courseA_artist_loops12: Ang artist ay gumuguhit ng isang bagay na nakakatawa mula sa malayo. Iguhit ang kung ano ang naiisip mo na nakita mo.
       courseA_artist_loops12_2018: Ang artist ay gumuguhit ng isang bagay na nakakatawa mula sa malayo. Iguhit ang kung ano ang naiisip mo na nakita mo.
+      courseA_artist_loops12_2019: Ang artist ay gumuguhit ng isang bagay na nakakatawa mula sa malayo. Iguhit ang kung ano ang naiisip mo na nakita mo.
       courseA_artist_loops1_2018: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
+      courseA_artist_loops1_2019: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseA_artist_loops2: Tulungan ang artista na iguhit ang linyang ito nang dalawang beses pasulong.
       courseA_artist_loops2_2018: Tulungan ang artista na iguhit ang linyang ito nang dalawang beses pasulong.
+      courseA_artist_loops2_2019: Tulungan ang artista na iguhit ang linyang ito nang dalawang beses pasulong.
       courseA_artist_loops3: Gumuhit ng linya pasulong nang limang beses.
       courseA_artist_loops3_2018: Gumuhit ng linya pasulong nang limang beses.
+      courseA_artist_loops3_2019: Gumuhit ng linya pasulong nang limang beses.
       courseA_artist_loops4: Ngayon, gumamit ng `repeat` na loop para maiguhit ang linyang ito nang limang beses!
       courseA_artist_loops4_2018: Ngayon, gumamit ng `repeat` na loop para maiguhit ang linyang ito nang limang beses!
+      courseA_artist_loops4_2019: Ngayon, gumamit ng `repeat` na loop para maiguhit ang linyang ito nang limang beses!
       courseA_artist_loops5: Gumuhit ng linya na mas mahaba ng pitong hakbang. Ito ay magiging isa sa aming papawirin.
       courseA_artist_loops5_2018: Gumuhit ng linya na mas mahaba ng pitong hakbang. Ito ay magiging isa sa aming papawirin.
+      courseA_artist_loops5_2019: Gumuhit ng linya na mas mahaba ng pitong hakbang. Ito ay magiging isa sa aming papawirin.
       courseA_artist_loops6: Ilagay natin ang isang magang burol sa likod.
       courseA_artist_loops6_2018: Ilagay natin ang isang magang burol sa likod.
+      courseA_artist_loops6_2019: Ilagay natin ang isang magang burol sa likod.
       courseA_artist_loops7: Gamitin ang `repeat` na loop para magdagdag ng mga alon sa tubig.
       courseA_artist_loops7_2018: Gamitin ang `repeat` na loop para magdagdag ng mga alon sa tubig.
+      courseA_artist_loops7_2019: Gamitin ang `repeat` na loop para magdagdag ng mga alon sa tubig.
       courseA_artist_loops7_forVideo: Gamitin ang `repeat` na loop para magdagdag ng mga alon sa tubig.
       courseA_artist_loops8: Kailangan natin ng hagdanan hanggang sa barko.
       courseA_artist_loops8_2018: Kailangan natin ng hagdanan hanggang sa barko.
+      courseA_artist_loops8_2019: Kailangan natin ng hagdanan hanggang sa barko.
       courseA_artist_loops9: 'Hamon: Ayusin ang hagdanan.'
       courseA_artist_loops9_2018: 'Hamon: Ayusin ang hagdanan.'
+      courseA_artist_loops9_2019: 'Hamon: Ayusin ang hagdanan.'
       courseA_artist_loops_challenge1: Maaari ka bang makaguhit ng bahay? Gawin ito ayon sa kagustohan mo!
       courseA_artist_loops_challenge1_2018: Maaari ka bang makaguhit ng bahay? Gawin ito ayon sa kagustohan mo!
+      courseA_artist_loops_challenge1_2019: Maaari ka bang makaguhit ng bahay? Gawin ito ayon sa kagustohan mo!
       courseA_artist_loops_challenge2: '"Makakatulong ka ba sa paggawa ng dalawang bahay ng ibon?"'
       courseA_artist_loops_challenge2a: '*"Tulungan akong i-setup ang tatlong tent na mga ito!"*'
       courseA_artist_loops_challenge2a_2018: '*"Tulungan akong i-setup ang tatlong tent na mga ito!"*'
+      courseA_artist_loops_challenge2a_2019: '*"Tulungan akong i-setup ang tatlong tent na mga ito!"*'
       courseA_artist_loops_challenge3: Tayo ay maglaro ng isang laro! Magguhit nang maraming mga X hangga't kaya mo! Maaari ka bang makakuha ng 3 sa isang hanay?
       courseA_collector_loops1: Ilipag si Laurel sa paligid at kumuha ng maraming kayamanan hangga't kaya mo!
       courseA_collector_loops10: Tulungan si Laurel na kumuha sa lahat ng mga kayamanan na nasa landas na ito.
       courseA_collector_loops10_2018: Tulungan si Laurel na kumuha sa lahat ng mga kayamanan na nasa landas na ito.
+      courseA_collector_loops10_2019: Tulungan si Laurel na kumuha sa lahat ng mga kayamanan na nasa landas na ito.
       courseA_collector_loops11: Tulungan si Laurel na kunin ang lahat ng mga kayamanan mula sa kuwebang ito.
       courseA_collector_loops11_2018: Tulungan si Laurel na kunin ang lahat ng mga kayamanan mula sa kuwebang ito.
+      courseA_collector_loops11_2019: Tulungan si Laurel na kunin ang lahat ng mga kayamanan mula sa kuwebang ito.
       courseA_collector_loops12: '*"Eureka! Kumuha ng maraming kayamanan hangga''t maaari!"*'
       courseA_collector_loops12_2018: '*"Eureka! Kumuha ng maraming kayamanan hangga''t maaari!"*'
+      courseA_collector_loops12_2019: '*"Eureka! Kumuha ng maraming kayamanan hangga''t maaari!"*'
       courseA_collector_loops1_2018: Ilipag si Laurel sa paligid at kumuha ng maraming kayamanan hangga't kaya mo!
+      courseA_collector_loops1_2019: Ilipag si Laurel sa paligid at kumuha ng maraming kayamanan hangga't kaya mo!
       courseA_collector_loops2: Kunin ang lahat ng tatlong mga bunton para malampasan ang antas na ito.
       courseA_collector_loops2_2018: Kunin ang lahat ng tatlong mga bunton para malampasan ang antas na ito.
+      courseA_collector_loops2_2019: Kunin ang lahat ng tatlong mga bunton para malampasan ang antas na ito.
       courseA_collector_loops4: Ayusin ang daanan ni Laurel para makuha ang lahat ng mga kayamanang ito.
       courseA_collector_loops4_2018: Ayusin ang daanan ni Laurel para makuha ang lahat ng mga kayamanang ito.
+      courseA_collector_loops4_2019: Ayusin ang daanan ni Laurel para makuha ang lahat ng mga kayamanang ito.
       courseA_collector_loops5: Gamitin ang iyong natutunan para makuha ang lahat ng mga kayamanan.
       courseA_collector_loops5_2018: Gamitin ang iyong natutunan para makuha ang lahat ng mga kayamanan.
+      courseA_collector_loops5_2019: Gamitin ang iyong natutunan para makuha ang lahat ng mga kayamanan.
       courseA_collector_loops6: Magdagdag ng mga bloke sa code na ito para makuha ang lahat ng mga kayamanan.
       courseA_collector_loops6_2018: Magdagdag ng mga bloke sa code na ito para makuha ang lahat ng mga kayamanan.
+      courseA_collector_loops6_2019: Magdagdag ng mga bloke sa code na ito para makuha ang lahat ng mga kayamanan.
       courseA_collector_loops7: Ano dapat ang idadagdag mo sa code na ito para makuha ang lahat ng mga kayamanan?
       courseA_collector_loops7_2018: Ano dapat ang idadagdag mo sa code na ito para makuha ang lahat ng mga kayamanan?
+      courseA_collector_loops7_2019: Ano dapat ang idadagdag mo sa code na ito para makuha ang lahat ng mga kayamanan?
       courseA_collector_loops8: Magsulat ng code para makuha ang lahat ng mga kayamanang ito.
       courseA_collector_loops8_2018: Magsulat ng code para makuha ang lahat ng mga kayamanang ito.
+      courseA_collector_loops8_2019: Magsulat ng code para makuha ang lahat ng mga kayamanang ito.
       courseA_collector_loops9: "**Hamon:** Ang kayamanan ay umaabot hanggang sa mga hagdanan na mga ito! Magsulat ng code para matulungan si Laurel na makuha ang lahat ng ito."
       courseA_collector_loops9_2018: "**Hamon:** Ang kayamanan ay umaabot hanggang sa mga hagdanan na mga ito! Magsulat ng code para matulungan si Laurel na makuha ang lahat ng ito."
+      courseA_collector_loops9_2019: "**Hamon:** Ang kayamanan ay umaabot hanggang sa mga hagdanan na mga ito! Magsulat ng code para matulungan si Laurel na makuha ang lahat ng ito."
       courseA_collector_loops_challenge1: '*"Maaari mo ba akong tulungan na makita ang ilang mga bug?"*'
       courseA_collector_loops_challenge1_2018: '*"Maaari mo ba akong tulungan na makita ang ilang mga bug?"*'
+      courseA_collector_loops_challenge1_2019: '*"Maaari mo ba akong tulungan na makita ang ilang mga bug?"*'
       courseA_collector_loops_challenge2: 'Kunin ang lahat ng mga kayamanan! '
       courseA_collector_loops_challenge2kp: Magkolekta nang hindi bababa sa **3** mga piraso ng kayamanan para maipasa ang antas na ito.
       courseA_collector_loops_challenge2kp_2018: Magkolekta nang hindi bababa sa **3** mga piraso ng kayamanan para maipasa ang antas na ito.
+      courseA_collector_loops_challenge2kp_2019: Magkolekta nang hindi bababa sa **3** mga piraso ng kayamanan para maipasa ang antas na ito.
       courseA_collector_preLoops1: "Ito si Laurel ang Manggagalugad! \\r\n\\r\nPindutin ang \"Run\" para makita siyang maglakad sa mga kayaman para kunin ito."
       courseA_collector_preLoops2: "Magaling! Ngayon ay magdadag ka ng code nang ikaw lang! \\r\n\\r\nMag-snap ng `get a treasure` na bloke sa ilalim ng programa at pindutin ang \"Run\"."
       courseA_collector_preLoops3: Mag-snap ng dalawang `E-->` na mga bloke at kumuha ng `get treasure` na bloke sa ilalim ng programa, pagkatapos ay pindutin ang "Run".
@@ -1470,15 +1498,20 @@ fil:
       courseA_maze_ramp4_2018: Iwasan ang TNT para hindi lilipad ang mga balahibo!
       courseA_maze_ramp5_2018: Iwasan ang mga TNT.
       courseA_maze_ramp5a_2018: Dalhin ang ibon sa baboy!
+      courseA_maze_ramp5a_2019: Dalhin ang ibon sa baboy!
       courseA_maze_seq1: Puntahan ang masamang baboy!
       courseA_maze_seq10: 'Hamon: Libutin ang TNT para mapapunta ang ibon sa baboy! '
       courseA_maze_seq11: Galawin ang isang daan, pagkatapos ay ang isa pa para mapapunta ang ibon sa baboy.
       courseA_maze_seq11_2018: Galawin ang isang daan, pagkatapos ay ang isa pa para mapapunta ang ibon sa baboy.
+      courseA_maze_seq11_2019: Galawin ang isang daan, pagkatapos ay ang isa pa para mapapunta ang ibon sa baboy.
       courseA_maze_seq12: 'Kunin ang baboy na iyan! '
       courseA_maze_seq12_2018: 'Kunin ang baboy na iyan! '
+      courseA_maze_seq12_2019: 'Kunin ang baboy na iyan! '
       courseA_maze_seq13: Kunin ang baboy sa kahit anong paraan na kaya mo!
       courseA_maze_seq13_2018: Kunin ang baboy sa kahit anong paraan na kaya mo!
+      courseA_maze_seq13_2019: Kunin ang baboy sa kahit anong paraan na kaya mo!
       courseA_maze_seq1_2018: Puntahan ang masamang baboy!
+      courseA_maze_seq1_2019: Puntahan ang masamang baboy!
       courseA_maze_seq2: Ayusin ang code para mapapunta ang ibon sa baboy.
       courseA_maze_seq2_2018: Ayusin ang code para mapapunta ang ibon sa baboy.
       courseA_maze_seq3: Ayusin ang code para mapapunta ang ibon sa baboy!
@@ -1489,101 +1522,141 @@ fil:
       courseA_maze_seq5: Subakan mo ang isang ito mula sa simula.
       courseA_maze_seq6: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta ang ibon sa baboy!
       courseA_maze_seq6_2018: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta ang ibon sa baboy!
+      courseA_maze_seq6_2019: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta ang ibon sa baboy!
       courseA_maze_seq7: Alamin kung ano ang nawala at pagkatapos ay magdagdag ng mga bloke para mapapunta ang ibon sa baboy!
       courseA_maze_seq7_2018: Alamin kung ano ang nawala at pagkatapos ay magdagdag ng mga bloke para mapapunta ang ibon sa baboy!
       courseA_maze_seq8: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
       courseA_maze_seq8_2018: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
+      courseA_maze_seq8_2019: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
       courseA_maze_seq9: I-debug ang antas na ito sa pamamagitan ng pagdagdag ng mga bloke para mapapunta ang ibon sa baboy!
       courseA_maze_seq9_2018: I-debug ang antas na ito sa pamamagitan ng pagdagdag ng mga bloke para mapapunta ang ibon sa baboy!
       courseA_maze_seq_challenge1: May problema dito. Tulungang ayusin ang code para mapapunta ang ibon sa baboy!
       courseA_maze_seq_challenge1_2018: May problema dito. Tulungang ayusin ang code para mapapunta ang ibon sa baboy!
+      courseA_maze_seq_challenge1_2019: May problema dito. Tulungang ayusin ang code para mapapunta ang ibon sa baboy!
       courseA_maze_seq_challenge2: Sundan ang landas para gabayan ang ibon papunta sa baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
       courseA_maze_seq_challenge2_2018: Sundan ang landas para gabayan ang ibon papunta sa baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
+      courseA_maze_seq_challenge2_2019: Sundan ang landas para gabayan ang ibon papunta sa baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
       courseA_playLab_events1: Ito ay isang Play Lab na antas. Maglipat ng mga bloke sa workspace at tingnan kung ano ang mangyayari!
       courseA_playLab_events1_2018: Ito ay isang Play Lab na antas. Maglipat ng mga bloke sa workspace at tingnan kung ano ang mangyayari!
+      courseA_playLab_events1_2019: Ito ay isang Play Lab na antas. Maglipat ng mga bloke sa workspace at tingnan kung ano ang mangyayari!
       courseA_playLab_events2: Si Jorge ang Aso ay gustong magsabi ang "Hi sa iyo." Maaari mo ba siyang matulungan?
       courseA_playLab_events2_2018: Si Jorge ang Aso ay gustong magsabi ang "Hi sa iyo." Maaari mo ba siyang matulungan?
+      courseA_playLab_events2_2019: Si Jorge ang Aso ay gustong magsabi ang "Hi sa iyo." Maaari mo ba siyang matulungan?
       courseA_playLab_events3: Ikonekta ang `move left` na bloke sa `when left` na pangyayari na bloke na nasa workspace na.
       courseA_playLab_events3_2018: Ikonekta ang `move left` na bloke sa `when left` na pangyayari na bloke na nasa workspace na.
+      courseA_playLab_events3_2019: Ikonekta ang `move left` na bloke sa `when left` na pangyayari na bloke na nasa workspace na.
       courseA_playLab_events4: Ngayon, pagalawin si Jorge pakanan kapag ang `right` na button ay napindot.
       courseA_playLab_events5: Magdagdag ng mga pangyayari para mapagalaw si Jorge pataas at pababa kapag ang `up` at `down` na mga button ay napindot.
       courseA_playLab_events5_2018: Magdagdag ng mga pangyayari para mapagalaw si Jorge pataas at pababa kapag ang `up` at `down` na mga button ay napindot.
+      courseA_playLab_events5_2019: Magdagdag ng mga pangyayari para mapagalaw si Jorge pataas at pababa kapag ang `up` at `down` na mga button ay napindot.
       courseA_playLab_events6: Gawin itong mas kawili-wili sa pamamagitan nang pagpalit ng background at pagpapatunog na random na tunog kapag si Jorge ay na-click.
       courseA_playLab_events6_2018: Gawin itong mas kawili-wili sa pamamagitan nang pagpalit ng background at pagpapatunog na random na tunog kapag si Jorge ay na-click.
+      courseA_playLab_events6_2019: Gawin itong mas kawili-wili sa pamamagitan nang pagpalit ng background at pagpapatunog na random na tunog kapag si Jorge ay na-click.
       courseA_playLab_events7: Magdagdag ng kahit anong gusto mo sa larong ito. Maaari mo bang mapawala ang dinosaur kapag si Jorge ay nakatagpo nito?
       courseA_playlab_events_challenge1: Maaari ka bang magsulat ng code para makita ang natira kong mga kaibigan? Ang mga hint ay makakatulong sa iyo na gawin ang proyektong ito sa bawat hakbang.
       courseA_playlab_events_challenge1_2018: Maaari ka bang magsulat ng code para makita ang natira kong mga kaibigan? Ang mga hint ay makakatulong sa iyo na gawin ang proyektong ito sa bawat hakbang.
+      courseA_playlab_events_challenge1_2019: Maaari ka bang magsulat ng code para makita ang natira kong mga kaibigan? Ang mga hint ay makakatulong sa iyo na gawin ang proyektong ito sa bawat hakbang.
       courseA_playlab_events_challenge2: Bigyan ang lahat ng isang gawain kapag na-click mo sila.
       courseA_playlab_events_challenge2_2018: Bigyan ang lahat ng isang gawain kapag na-click mo sila.
+      courseA_playlab_events_challenge2_2019: Bigyan ang lahat ng isang gawain kapag na-click mo sila.
       courseA_playlab_events_challengeClone: Nasaan nagtago ang aking mga kaibigan? Maaari ka bang magsulat ng code para ipakita ang natira kong mga kaibigan?
       courseA_toMakeLoopsVideo_Collector: Ang loops ay nagbibigay-daan sa iyo na gawin ang anumang nasa loob nang paulit-ulit!
       courseA_video_events: Nangangailangan ng mas mahusay na playlab/pangyayari na combo
       courseA_video_events_2018: Nangangailangan ng mas mahusay na playlab/pangyayari na combo
+      courseA_video_events_2019: Nangangailangan ng mas mahusay na playlab/pangyayari na combo
       courseB_Scrat_ramp5a_2018: Dalhin ang ibon sa baboy!
+      courseB_Scrat_ramp5a_2019: Dalhin ang ibon sa baboy!
       courseB_artist_loops1: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseB_artist_loops10: Gamitin ang natutunan mo para maiguhit ang larawan kung ano ang naisip mo na makikita ng artist pag-uwi niya sa bahay.
       courseB_artist_loops10_2018: Gamitin ang natutunan mo para maiguhit ang larawan kung ano ang naisip mo na makikita ng artist pag-uwi niya sa bahay.
+      courseB_artist_loops10_2019: Gamitin ang natutunan mo para maiguhit ang larawan kung ano ang naisip mo na makikita ng artist pag-uwi niya sa bahay.
       courseB_artist_loops1_2018: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
+      courseB_artist_loops1_2019: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseB_artist_loops2: Ang Artist ay sinusubukang gumuhit ng linya mga **6** na beses, ngunit hindi magawa ito ng tama. Maaari ka bang tumulong?
       courseB_artist_loops2_2018: Ang Artist ay sinusubukang gumuhit ng linya mga **6** na beses, ngunit hindi magawa ito ng tama. Maaari ka bang tumulong?
+      courseB_artist_loops2_2019: Ang Artist ay sinusubukang gumuhit ng linya mga **6** na beses, ngunit hindi magawa ito ng tama. Maaari ka bang tumulong?
       courseB_artist_loops3: Tulungan ang artista na gumuhit ng linya ng mga 7 beses para makagawa ng pader sa halamanan.
       courseB_artist_loops3_2018: Tulungan ang artista na gumuhit ng linya ng mga 7 beses para makagawa ng pader sa halamanan.
+      courseB_artist_loops3_2019: Tulungan ang artista na gumuhit ng linya ng mga 7 beses para makagawa ng pader sa halamanan.
       courseB_artist_loops4: 'Ngayon ay kailangan nating ihanda ang lupa para sa pagtanim. Hanapin ang mga bug sa code at tulungan ang artista na maghanda sa lupa. '
       courseB_artist_loops4_2018: 'Ngayon ay kailangan nating ihanda ang lupa para sa pagtanim. Hanapin ang mga bug sa code at tulungan ang artista na maghanda sa lupa. '
+      courseB_artist_loops4_2019: 'Ngayon ay kailangan nating ihanda ang lupa para sa pagtanim. Hanapin ang mga bug sa code at tulungan ang artista na maghanda sa lupa. '
       courseB_artist_loops5: Oras na para ayusin ang hagdanan! Ulitin ang pattern na ito nang **5** beses para maabot ng artista ang itaas ng mga palumpong.
       courseB_artist_loops5_2018: Oras na para ayusin ang hagdanan! Ulitin ang pattern na ito nang **5** beses para maabot ng artista ang itaas ng mga palumpong.
+      courseB_artist_loops5_2019: Oras na para ayusin ang hagdanan! Ulitin ang pattern na ito nang **5** beses para maabot ng artista ang itaas ng mga palumpong.
       courseB_artist_loops6: Akyatin ang baging at tingnan kung saan ito tutungo?
       courseB_artist_loops6_2018: Akyatin ang baging at tingnan kung saan ito tutungo?
+      courseB_artist_loops6_2019: Akyatin ang baging at tingnan kung saan ito tutungo?
       courseB_artist_loops7: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
       courseB_artist_loops7_2018: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
+      courseB_artist_loops7_2019: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
       courseB_artist_loops8: Oras na para umuwi. Maaari mo bang ayusin ang hagdanang ito gamit ang isang bloke lang para matulungan ang artista na bumaba?
       courseB_artist_loops8_2018: Oras na para umuwi. Maaari mo bang ayusin ang hagdanang ito gamit ang isang bloke lang para matulungan ang artista na bumaba?
+      courseB_artist_loops8_2019: Oras na para umuwi. Maaari mo bang ayusin ang hagdanang ito gamit ang isang bloke lang para matulungan ang artista na bumaba?
       courseB_artist_loops9: Ating daanan ang maikling daan pauwi, sa itaas ng lanaw. Maaari mo bang matulungan ang artista na manatili sa mga bato?
       courseB_artist_loops9_2018: Ating daanan ang maikling daan pauwi, sa itaas ng lanaw. Maaari mo bang matulungan ang artista na manatili sa mga bato?
+      courseB_artist_loops9_2019: Ating daanan ang maikling daan pauwi, sa itaas ng lanaw. Maaari mo bang matulungan ang artista na manatili sa mga bato?
       courseB_artist_loops_challenge1: '"Oras na para ihagis ang dice! Maaari mo ba akong tulungan na iguhit ang mga ito?"'
       courseB_artist_loops_challenge1_2018: '"Oras na para ihagis ang dice! Maaari mo ba akong tulungan na iguhit ang mga ito?"'
+      courseB_artist_loops_challenge1_2019: '"Oras na para ihagis ang dice! Maaari mo ba akong tulungan na iguhit ang mga ito?"'
       courseB_artist_loops_challenge2: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_artist_loops_challenge2_2018: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
+      courseB_artist_loops_challenge2_2019: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_collector_loops1: Ito si Laurel ang Abenturero! Maaari mo ba siyang pagalawin sa paligid at magkuha ng kayamanan?
       courseB_collector_loops10: Tulungan si Laurel na kunin ang lahat ng mga kayamanan mula sa kuwebang ito.
       courseB_collector_loops10_2018: Tulungan si Laurel na kunin ang lahat ng mga kayamanan mula sa kuwebang ito.
+      courseB_collector_loops10_2019: Tulungan si Laurel na kunin ang lahat ng mga kayamanan mula sa kuwebang ito.
       courseB_collector_loops11: Eureka! Magkuha ng maraming mga yaman hangga't kaya mo!
       courseB_collector_loops11_2018: Eureka! Magkuha ng maraming mga yaman hangga't kaya mo!
+      courseB_collector_loops11_2019: Eureka! Magkuha ng maraming mga yaman hangga't kaya mo!
       courseB_collector_loops1_2018: Ito si Laurel ang Abenturero! Maaari mo ba siyang pagalawin sa paligid at magkuha ng kayamanan?
+      courseB_collector_loops1_2019: Ito si Laurel ang Abenturero! Maaari mo ba siyang pagalawin sa paligid at magkuha ng kayamanan?
       courseB_collector_loops2: Kunin ang lahat ng apat na mga bunton para maipasa ang antas na ito.
       courseB_collector_loops2_2018: Kunin ang lahat ng apat na mga bunton para maipasa ang antas na ito.
+      courseB_collector_loops2_2019: Kunin ang lahat ng apat na mga bunton para maipasa ang antas na ito.
       courseB_collector_loops3: Paano makuha ni Laurel ang lahat ng mga bunton ng yaman gamit lang ang isang `E -->`na bloke?
       courseB_collector_loops3_2018: Paano makuha ni Laurel ang lahat ng mga bunton ng yaman gamit lang ang isang `E -->`na bloke?
+      courseB_collector_loops3_2019: Paano makuha ni Laurel ang lahat ng mga bunton ng yaman gamit lang ang isang `E -->`na bloke?
       courseB_collector_loops3_predict1: Paano makolekta ni Laurel ang lahat ng limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
       courseB_collector_loops4: Ayusin ang daanan ni Laurel para makuha ang lahat ng mga yaman!
       courseB_collector_loops4_2018: Ayusin ang daanan ni Laurel para makuha ang lahat ng mga yaman!
+      courseB_collector_loops4_2019: Ayusin ang daanan ni Laurel para makuha ang lahat ng mga yaman!
       courseB_collector_loops5: 'Magdagdag sa code mula sa huling palaisipan para makuha ang lahat ng mga yaman. '
       courseB_collector_loops5_2018: 'Magdagdag sa code mula sa huling palaisipan para makuha ang lahat ng mga yaman. '
+      courseB_collector_loops5_2019: 'Magdagdag sa code mula sa huling palaisipan para makuha ang lahat ng mga yaman. '
       courseB_collector_loops6: Alamin ang code para matulungan si Laurel na makuha ang lahat ng mga yaman!
       courseB_collector_loops6_2018: Alamin ang code para matulungan si Laurel na makuha ang lahat ng mga yaman!
+      courseB_collector_loops6_2019: Alamin ang code para matulungan si Laurel na makuha ang lahat ng mga yaman!
       courseB_collector_loops7: Isulat ang code para makuha ang lahat ng mga yamang ito.
       courseB_collector_loops7_2018: Isulat ang code para makuha ang lahat ng mga yamang ito.
+      courseB_collector_loops7_2019: Isulat ang code para makuha ang lahat ng mga yamang ito.
       courseB_collector_loops8: "**Hamon:** Ang kayamanan ay umabot hanggang sa mga hagdanang ito! Magsulat ng code para matulungan si Laurel na makuha ang lahat ng ito."
       courseB_collector_loops8_2018: "**Hamon:** Ang kayamanan ay umabot hanggang sa mga hagdanang ito! Magsulat ng code para matulungan si Laurel na makuha ang lahat ng ito."
+      courseB_collector_loops8_2019: "**Hamon:** Ang kayamanan ay umabot hanggang sa mga hagdanang ito! Magsulat ng code para matulungan si Laurel na makuha ang lahat ng ito."
       courseB_collector_loops9: '*"Tulungan akong makuha ang kayamanan mula sa malalim na lambak na ito."*'
       courseB_collector_loops9_2018: '*"Tulungan akong makuha ang kayamanan mula sa malalim na lambak na ito."*'
+      courseB_collector_loops9_2019: '*"Tulungan akong makuha ang kayamanan mula sa malalim na lambak na ito."*'
       courseB_collector_loops_challenge1: 'Sa oras na ito, mayroon ka lang limitadong mga bloke. Kunin ang lahat ng mga yaman! '
       courseB_collector_loops_challenge1_2018: 'Sa oras na ito, mayroon ka lang limitadong mga bloke. Kunin ang lahat ng mga yaman! '
+      courseB_collector_loops_challenge1_2019: 'Sa oras na ito, mayroon ka lang limitadong mga bloke. Kunin ang lahat ng mga yaman! '
       courseB_collector_loops_challenge2: Ating kunin ang mga kayamanan! Tulungan akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para simulan ang sunod na hanay. Maaari ka bang makahanap ng pattern?
       courseB_collector_loops_challenge2_2018: Ating kunin ang mga kayamanan! Tulungan akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para simulan ang sunod na hanay. Maaari ka bang makahanap ng pattern?
       courseB_collector_loops_challenge2a: Tulungan si Laurel na makakuha ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang palaisipang ito.
       courseB_collector_loops_challenge2a_2018: Tulungan si Laurel na makakuha ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang palaisipang ito.
+      courseB_collector_loops_challenge2a_2019: Tulungan si Laurel na makakuha ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang palaisipang ito.
       courseB_collector_loops_challenge`: 'Sa oras na ito, maaari ka lang gumamit ng isa sa bawat arrow na bloke. Kunin ang lahat ng mga yaman! '
       courseB_collector_prog1: Ito si Laurel ang Abenturero! Maaari mo ba siyang ilibot at kumuha ng ginto?
       courseB_collector_prog2: Apat na bunton ng ginto! Kolektahin ang lahat ng apat.
       courseB_collector_prog3: Paano makolekta ni Laurel ang lahat ng limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
       courseB_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseB_iceage_loops11_2019: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseB_iceage_loops11_forVideo: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseB_maze_seq1: "Maglaro sa mga blokeng ito para makita kung ano ang pinagawa nila sa ibon! \\r\n\\r\nPapuntahin ang ibon sa baboy para makompleto ang antas."
       courseB_maze_seq10: Ayusin ang mga bugs para mapapunta ang ibon sa baboy.
       courseB_maze_seq11: Ang lahat ng ito ay ikaw lang! Papuntahin ang ibon sa baboy.
       courseB_maze_seq12: Ngayon ay kunin ang baboy na iyan sa kahit anong paraan na kaya mo!
       courseB_maze_seq12_2018: Ngayon ay kunin ang baboy na iyan sa kahit anong paraan na kaya mo!
+      courseB_maze_seq12_2019: Ngayon ay kunin ang baboy na iyan sa kahit anong paraan na kaya mo!
       courseB_maze_seq2: '*"May bug! Ayusin ang code para mapapunta ako sa baboy."*'
       courseB_maze_seq4: Magdagdag ng 2 mga bloke para mapapunta ang ibon sa baboy.
       courseB_maze_seq5: Ngayon ay subukan ang palaisipang ito mula sa simula!
@@ -1596,18 +1669,25 @@ fil:
       courseB_maze_seqOld: 'Umikot sa TNT para mapapunta ang ibon sa baboy! '
       courseB_maze_seq_challenge1: Maaari mo bang mahanap ang landas bago ka maubusan ng mga bloke?
       courseB_maze_seq_challenge1_2018: Maaari mo bang mahanap ang landas bago ka maubusan ng mga bloke?
+      courseB_maze_seq_challenge1_2019: Maaari mo bang mahanap ang landas bago ka maubusan ng mga bloke?
       courseB_maze_seq_challenge2: I-debug ang antas na ito. Ito ang tamang mga bloke, ngunit sila ay nasa maling pagkasunod-sunod!
       courseB_maze_seq_challenge2_2018: I-debug ang antas na ito. Ito ang tamang mga bloke, ngunit sila ay nasa maling pagkasunod-sunod!
+      courseB_maze_seq_challenge2_2019: I-debug ang antas na ito. Ito ang tamang mga bloke, ngunit sila ay nasa maling pagkasunod-sunod!
       courseB_playLab_events1: Tingnan kung maaari mong matukoy kung ano ang ginagawa ng bawat bloke.
       courseB_playLab_events1_2018: Tingnan kung maaari mong matukoy kung ano ang ginagawa ng bawat bloke.
+      courseB_playLab_events1_2019: Tingnan kung maaari mong matukoy kung ano ang ginagawa ng bawat bloke.
       courseB_playlab_events2: Pasalitain ang Daisy na Dragon kapag na-click mo ang "Run".
       courseB_playlab_events2_2018: Pasalitain ang Daisy na Dragon kapag na-click mo ang "Run".
+      courseB_playlab_events2_2019: Pasalitain ang Daisy na Dragon kapag na-click mo ang "Run".
       courseB_playlab_events3: Gumamit ng event para magawa ng Daisy na Dragon na magpalit sa isang random na mood kapag na click mo ito.
       courseB_playlab_events3_2018: Gumamit ng event para magawa ng Daisy na Dragon na magpalit sa isang random na mood kapag na click mo ito.
+      courseB_playlab_events3_2019: Gumamit ng event para magawa ng Daisy na Dragon na magpalit sa isang random na mood kapag na click mo ito.
       courseB_playlab_events4: Oras na ng kabalyero! Magdagdag ng pangyayari para ang kabalyero ay gagalaw patungo sa dragon kapag ang kaliwang arrow ay na-click.
       courseB_playlab_events4_2018: Oras na ng kabalyero! Magdagdag ng pangyayari para ang kabalyero ay gagalaw patungo sa dragon kapag ang kaliwang arrow ay na-click.
+      courseB_playlab_events4_2019: Oras na ng kabalyero! Magdagdag ng pangyayari para ang kabalyero ay gagalaw patungo sa dragon kapag ang kaliwang arrow ay na-click.
       courseB_playlab_events5: Ngayon ay magdagdag ng pangyayari para ang kabalyero ay tatakbo palayo sa dragon kapag napindot mo ang kanang arrow.
       courseB_playlab_events5_2018: Ngayon ay magdagdag ng pangyayari para ang kabalyero ay tatakbo palayo sa dragon kapag napindot mo ang kanang arrow.
+      courseB_playlab_events5_2019: Ngayon ay magdagdag ng pangyayari para ang kabalyero ay tatakbo palayo sa dragon kapag napindot mo ang kanang arrow.
       courseB_playlab_events6: |-
         Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
         \r
@@ -1616,40 +1696,59 @@ fil:
         Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
         \r
         Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.
+      courseB_playlab_events6_2019: |-
+        Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
+        \r
+        Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.
       courseB_playlab_events7: Gawing masaya ang laro sa pamamagitan ng pagtakda sa kabalyero na maglaho kapag nakatagpo siya ng dragon sa daan niya para magkuha ng mga bandila! Magpatugtog ng tunog kapag sila ay nagkabangga para gawin itong mas maging totoo.
       courseB_playlab_events7_2018: "Gawing masaya ang laro sa pamamagitan ng pagtakda sa kabalyero na maglaho kapag nakatagpo siya ng dragon sa daan niya para magkuha ng mga bandila! Magpatugtog ng tunog kapag sila ay nagkabangga para gawin itong mas maging totoo."
+      courseB_playlab_events7_2019: "Gawing masaya ang laro sa pamamagitan ng pagtakda sa kabalyero na maglaho kapag nakatagpo siya ng dragon sa daan niya para magkuha ng mga bandila! Magpatugtog ng tunog kapag sila ay nagkabangga para gawin itong mas maging totoo."
       courseB_playlab_events8: Gamitin ang iyong imahenasyon. Ano ang maaari mong gawin para gawing mas masaya ang larong ito?
       courseB_playlab_eventsFP: Gamitin ang iyong imahenasyon. Ano ang maaari mong gawin para gawing mas masaya ang larong ito?
       courseB_playlab_eventsToolbox: Tapusin sa pamamagitan ng pagpapatunog ng tunog at pagpagawa sa kabalyero na maglaho kapag nakatagpo niya ang dragon!
       courseB_playlab_events_challenge1: 'Gawin ang mga hayop na gumalaw pababa kapag napindot mo ang ▼. '
       courseB_playlab_events_challenge1_2018: 'Gawin ang mga hayop na gumalaw pababa kapag napindot mo ang ▼. '
+      courseB_playlab_events_challenge1_2019: 'Gawin ang mga hayop na gumalaw pababa kapag napindot mo ang ▼. '
       courseB_playlab_events_challenge2: Pawalain ang mga hayop kapag na-click mo sila.
       courseB_playlab_events_challenge2_2018: Pawalain ang mga hayop kapag na-click mo sila.
+      courseB_playlab_events_challenge2_2019: Pawalain ang mga hayop kapag na-click mo sila.
       courseB_playlab_events_challenge2_embed: Narito ang iyong natapos na laro!
       courseB_playlab_events_challenge2_template: Ating pawalain ang mga hayop kapag na-click mo ang mga ito! Maaari ka ring magdagdag ng mga tunog at mag-iskor ng mga puntos para makalikha ng isang masayang laro ng Animal Tag!
       courseB_playlab_events_challenge2_template_2018: Ating pawalain ang mga hayop kapag na-click mo ang mga ito! Maaari ka ring magdagdag ng mga tunog at mag-iskor ng mga puntos para makalikha ng isang masayang laro ng Animal Tag!
+      courseB_playlab_events_challenge2_template_2019: Ating pawalain ang mga hayop kapag na-click mo ang mga ito! Maaari ka ring magdagdag ng mga tunog at mag-iskor ng mga puntos para makalikha ng isang masayang laro ng Animal Tag!
       courseB_starWars_prog1: '"Pumunta at kumuha ng mga metal na scrap, BB-8!"'
       courseB_starWars_prog10: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
       courseB_starWars_prog10_2018: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
+      courseB_starWars_prog10_2019: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
       courseB_starWars_prog11: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
       courseB_starWars_prog11_2018: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
+      courseB_starWars_prog11_2019: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
       courseB_starWars_prog1_2018: '"Pumunta at kumuha ng mga metal na scrap, BB-8!"'
+      courseB_starWars_prog1_2019: '"Pumunta at kumuha ng mga metal na scrap, BB-8!"'
       courseB_starWars_prog2: Kunin ang lahat ng mga metal.
       courseB_starWars_prog2_2018: Kunin ang lahat ng mga metal.
+      courseB_starWars_prog2_2019: Kunin ang lahat ng mga metal.
       courseB_starWars_prog3: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog3_2018: Kunin ang lahat ng mga scrap na metal
+      courseB_starWars_prog3_2019: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog4: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog4_2018: Kunin ang lahat ng mga scrap na metal
+      courseB_starWars_prog4_2019: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog5: Kunin ang scrap na metal
       courseB_starWars_prog5_2018: Kunin ang scrap na metal
+      courseB_starWars_prog5_2019: Kunin ang scrap na metal
       courseB_starWars_prog6: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog6_2018: Kunin ang lahat ng mga scrap na metal
+      courseB_starWars_prog6_2019: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog7: Pumunta at kunin ito!
       courseB_starWars_prog7_2018: Pumunta at kunin ito!
+      courseB_starWars_prog7_2019: Pumunta at kunin ito!
       courseB_starWars_prog8: "**Hamon:** Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal"
       courseB_starWars_prog8_2018: "**Hamon:** Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal"
+      courseB_starWars_prog8_2019: "**Hamon:** Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal"
       courseB_starWars_prog9: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
       courseB_starWars_prog9_2018: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
+      courseB_starWars_prog9_2019: Tulungan si BB-8 na magtipon ng mga nagbabagang mga scrap na metal
       courseC19_playLab_EOC1: Pumili ng background at mapa, at pumili ng isang aktor para maging bayani sa iyong laro.
       courseC19_playLab_EOC2: Gamitin ang mga handler ng pangyayari at mga aksyon para mapagalaw ang bayani.
       courseC19_playLab_EOC3: Magdagdag ng dalawa o higit pang mga aktor sa iyong laro at pagalawin ang mga ito.

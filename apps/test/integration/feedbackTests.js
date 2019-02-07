@@ -11,121 +11,132 @@ import {TestResults} from '@cdo/apps/constants';
  * checkForEmptyContainerBlockFailure_ and validates
  * that the result matches the expected result.
  */
-describe("checkForEmptyContainerBlockFailure_", function () {
+describe('checkForEmptyContainerBlockFailure_', function() {
   var studioApp;
 
   testUtils.setExternalGlobals();
 
   // create our environment
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
-    var blockInstallOptions = { isK1: false };
+    var blockInstallOptions = {isK1: false};
     var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
 
     studioApp = getStudioAppSingleton();
   });
 
-  var checkResultForBlocks = function (args) {
+  var checkResultForBlocks = function(args) {
     studioApp.loadBlocks(args.blockXml);
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
     var loaded = Blockly.Xml.domToText(
-        Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-    assert(!args.blockXml || loaded, "either we didnt have  input xml" +
-        "or we did, and we loaded something");
+      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+    );
+    assert(
+      !args.blockXml || loaded,
+      'either we didnt have  input xml' + 'or we did, and we loaded something'
+    );
 
-    assert.equal(args.result,
-        studioApp.feedback_.checkForEmptyContainerBlockFailure_());
+    assert.equal(
+      args.result,
+      studioApp.feedback_.checkForEmptyContainerBlockFailure_()
+    );
   };
 
-  it("returns ALL_PASS when no blocks are present", function () {
+  it('returns ALL_PASS when no blocks are present', function() {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml><block type="when_run"><next></next></block></xml>'
     });
   });
 
-  it ("returns ALL_PASS when no container blocks are present", function () {
+  it('returns ALL_PASS when no container blocks are present', function() {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: '<xml><block type="when_run"><next><block type="text_print"></block></next></block></xml>'
+      blockXml:
+        '<xml><block type="when_run"><next><block type="text_print"></block></next></block></xml>'
     });
   });
 
-  it ("returns EMPTY_BLOCK_FAIL when an empty container block is present", function () {
+  it('returns EMPTY_BLOCK_FAIL when an empty container block is present', function() {
     checkResultForBlocks({
       result: TestResults.EMPTY_BLOCK_FAIL,
-      blockXml: '<xml>' +
-                  '<block type="when_run"><next>' +
-                    '<block type="controls_repeat">' +
-                      '<title name="TIMES">4</title>' +
-                    '</block>' +
-                  '</next></block>' +
-                '</xml>'
+      blockXml:
+        '<xml>' +
+        '<block type="when_run"><next>' +
+        '<block type="controls_repeat">' +
+        '<title name="TIMES">4</title>' +
+        '</block>' +
+        '</next></block>' +
+        '</xml>'
     });
   });
 
-  it ("returns ALL_PASS when all container blocks are filled", function () {
+  it('returns ALL_PASS when all container blocks are filled', function() {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: '<xml>' +
-                  '<block type="when_run"><next>' +
-                    '<block type="controls_repeat">' +
-                      '<title name="TIMES">4</title>' +
-                      '<statement name="DO">' +
-                        '<block type="text_print"></block>' +
-                      '</statement>' +
-                    '</block>' +
-                  '</next></block>' +
-                '</xml>'
+      blockXml:
+        '<xml>' +
+        '<block type="when_run"><next>' +
+        '<block type="controls_repeat">' +
+        '<title name="TIMES">4</title>' +
+        '<statement name="DO">' +
+        '<block type="text_print"></block>' +
+        '</statement>' +
+        '</block>' +
+        '</next></block>' +
+        '</xml>'
     });
   });
 
-  it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
+  it('returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present', function() {
     checkResultForBlocks({
       result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
-      blockXml: '<xml>' +
-                  '<block type="when_run"><next>' +
-                    '<block type="procedures_callnoreturn">' +
-                      '<title name="NAME">do something</title>' +
-                    '</block>' +
-                  '</next></block>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                  '</block>' +
-                '</xml>'
+      blockXml:
+        '<xml>' +
+        '<block type="when_run"><next>' +
+        '<block type="procedures_callnoreturn">' +
+        '<title name="NAME">do something</title>' +
+        '</block>' +
+        '</next></block>' +
+        '<block type="procedures_defnoreturn">' +
+        '<mutation/>' +
+        '<title name="NAME">do something</title>' +
+        '</block>' +
+        '</xml>'
     });
   });
 
-  it ("returns ALL_PASS when an empty function block is present, but not called", function () {
+  it('returns ALL_PASS when an empty function block is present, but not called', function() {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: '<xml>' +
-                  '<block type="when_run"><next></next></block>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                  '</block>' +
-                '</xml>'
+      blockXml:
+        '<xml>' +
+        '<block type="when_run"><next></next></block>' +
+        '<block type="procedures_defnoreturn">' +
+        '<mutation/>' +
+        '<title name="NAME">do something</title>' +
+        '</block>' +
+        '</xml>'
     });
   });
 
-  it ("returns ALL_PASS when all function blocks are filled", function () {
+  it('returns ALL_PASS when all function blocks are filled', function() {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: '<xml>' +
-                  '<block type="when_run"><next></next></block>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                    '<statement name="STACK">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
-                '</xml>'
+      blockXml:
+        '<xml>' +
+        '<block type="when_run"><next></next></block>' +
+        '<block type="procedures_defnoreturn">' +
+        '<mutation/>' +
+        '<title name="NAME">do something</title>' +
+        '<statement name="STACK">' +
+        '<block type="text_print"></block>' +
+        '</statement>' +
+        '</block>' +
+        '</xml>'
     });
   });
 });
@@ -135,18 +146,19 @@ describe("checkForEmptyContainerBlockFailure_", function () {
  * checkForEmptyContainerBlockFailure_ and validates
  * that the result matches the expected result.
  */
-describe("throwOnInvalidExampleBlocks", function () {
+describe('throwOnInvalidExampleBlocks', function() {
   var studioApp;
 
   // create our environment
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
     sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
   });
 
-  it("throws on unfilled result", function () {
-    studioApp.loadBlocks('<xml>' +
+  it('throws on unfilled result', function() {
+    studioApp.loadBlocks(
+      '<xml>' +
         '  <block type="functional_example" inline="false">' +
         '  <functional_input name="ACTUAL">' +
         '    <block type="functional_call" inline="false">' +
@@ -164,19 +176,30 @@ describe("throwOnInvalidExampleBlocks", function () {
         '    <block type="functional_plus" inline="false"></block>' +
         '  </functional_input>' +
         ' </block>' +
-        '</xml>');
-    assert.throws(function () {
-      var exampleBlock = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
-        return block.type === "functional_example";
-      })[0];
-      var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
-      var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
-      studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
-    }, Error, "Result has unfilled inputs");
+        '</xml>'
+    );
+    assert.throws(
+      function() {
+        var exampleBlock = Blockly.mainBlockSpace
+          .getTopBlocks()
+          .filter(function(block) {
+            return block.type === 'functional_example';
+          })[0];
+        var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
+        var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
+        studioApp.feedback_.throwOnInvalidExampleBlocks(
+          actualBlock,
+          expectedBlock
+        );
+      },
+      Error,
+      'Result has unfilled inputs'
+    );
   });
 
-  it("throws on unfilled call", function () {
-    studioApp.loadBlocks('<xml>' +
+  it('throws on unfilled call', function() {
+    studioApp.loadBlocks(
+      '<xml>' +
         '<block type="functional_example" inline="false">' +
         '  <functional_input name="ACTUAL">' +
         '    <block type="functional_call" inline="false">' +
@@ -200,19 +223,30 @@ describe("throwOnInvalidExampleBlocks", function () {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>');
-    assert.throws(function () {
-      var exampleBlock = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
-        return block.type === "functional_example";
-      })[0];
-      var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
-      var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
-      studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
-    }, Error, "Call has unfilled inputs");
+        '</xml>'
+    );
+    assert.throws(
+      function() {
+        var exampleBlock = Blockly.mainBlockSpace
+          .getTopBlocks()
+          .filter(function(block) {
+            return block.type === 'functional_example';
+          })[0];
+        var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
+        var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
+        studioApp.feedback_.throwOnInvalidExampleBlocks(
+          actualBlock,
+          expectedBlock
+        );
+      },
+      Error,
+      'Call has unfilled inputs'
+    );
   });
 
-  it("doesn't throw on filled call and result blocks", function () {
-    studioApp.loadBlocks('<xml>' +
+  it("doesn't throw on filled call and result blocks", function() {
+    studioApp.loadBlocks(
+      '<xml>' +
         '  <block type="functional_example" inline="false">' +
         '    <functional_input name="ACTUAL">' +
         '      <block type="functional_call" inline="false">' +
@@ -241,23 +275,29 @@ describe("throwOnInvalidExampleBlocks", function () {
         '      </block>' +
         '    </functional_input>' +
         '  </block>' +
-        '</xml>');
-    assert.doesNotThrow(function () {
-      var exampleBlock = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
-        return block.type === "functional_example";
-      })[0];
-      var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
-      var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
-      studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+        '</xml>'
+    );
+    assert.doesNotThrow(function() {
+      var exampleBlock = Blockly.mainBlockSpace
+        .getTopBlocks()
+        .filter(function(block) {
+          return block.type === 'functional_example';
+        })[0];
+      var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
+      var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
+      studioApp.feedback_.throwOnInvalidExampleBlocks(
+        actualBlock,
+        expectedBlock
+      );
     }, Error);
   });
 });
 
-describe("getUserBlocks_", function () {
+describe('getUserBlocks_', function() {
   var studioApp;
 
   // create our environment
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
   });
@@ -267,14 +307,16 @@ describe("getUserBlocks_", function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+    var loaded = Blockly.Xml.domToText(
+      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+    );
     assert(loaded, "we didn't correctly load our test blocks");
 
     var userBlocks = studioApp.feedback_.getUserBlocks_();
     assert.equal(userBlocks.length, expectedNum);
   }
 
-  it("usually ignores noneditable blocks", function () {
+  it('usually ignores noneditable blocks', function() {
     var testBlockXml = [
       '<xml>',
       '<block editable="false" type="text_print"></block>',
@@ -286,7 +328,7 @@ describe("getUserBlocks_", function () {
     validateNumUserBlocks(testBlockXml.join(''), 0);
   });
 
-  it("considers noneditable blocks when Blockly.readOnly === true", function () {
+  it('considers noneditable blocks when Blockly.readOnly === true', function() {
     var testBlockXml = [
       '<xml>',
       '<block editable="false" type="text_print"></block>',
@@ -302,13 +344,12 @@ describe("getUserBlocks_", function () {
   });
 });
 
-
 /**
  * Loads options.startBlocks into the workspace, then calls
  * getMissingBlocks and validates that the result matches the
  * options.expectedResult
  */
-describe("getMissingBlocks_ tests", function () {
+describe('getMissingBlocks_ tests', function() {
   var studioApp;
 
   /**
@@ -331,27 +372,39 @@ describe("getMissingBlocks_ tests", function () {
 
     // Convert a function to a string and remove whitespace
     function functionText(f) {
-      return f.toString().replace(/\s/gm,"");
+      return f.toString().replace(/\s/gm, '');
     }
 
     function validateKey(key) {
-      assert.equal(typeof(block[key]), typeof(expectedBlock[key]),
-        "members are of same type");
-      if (typeof(block[key]) === "function") {
+      assert.equal(
+        typeof block[key],
+        typeof expectedBlock[key],
+        'members are of same type'
+      );
+      if (typeof block[key] === 'function') {
         // compare contents of functions rather than whether they are the same
         // object in memory
-        assert.equal(functionText(block[key]), functionText(expectedBlock[key]));
+        assert.equal(
+          functionText(block[key]),
+          functionText(expectedBlock[key])
+        );
       } else {
-        assert.deepEqual(block[key], expectedBlock[key],
-          "values for '" + key + "' are equal");
+        assert.deepEqual(
+          block[key],
+          expectedBlock[key],
+          "values for '" + key + "' are equal"
+        );
       }
     }
 
     for (var i = 0; i < result.length; i++) {
       block = result[i];
       expectedBlock = expectedResult[i];
-      assert.deepEqual(Object.keys(block), Object.keys(expectedBlock),
-        "Blocks have same keys");
+      assert.deepEqual(
+        Object.keys(block),
+        Object.keys(expectedBlock),
+        'Blocks have same keys'
+      );
       Object.keys(block).forEach(validateKey);
     }
   }
@@ -366,36 +419,42 @@ describe("getMissingBlocks_ tests", function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-    assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
-      "or we did, and we loaded something");
+    var loaded = Blockly.Xml.domToText(
+      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+    );
+    assert(
+      !options.userBlockXml || loaded,
+      'either we didnt have  input xml' + 'or we did, and we loaded something'
+    );
 
     var missing = studioApp.feedback_.getMissingBlocks_(
-        options.requiredBlocks, options.numToFlag);
+      options.requiredBlocks,
+      options.numToFlag
+    );
     validateMissingBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 
   // create our environment
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
   });
 
   // missing multiple blocks
 
-  describe("required blocks look for existence of string in code", function () {
+  describe('required blocks look for existence of string in code', function() {
     var testBlocks = [
       {
-        'test': 'someAwesomeVariable',
-        'type': 'variables_get'
+        test: 'someAwesomeVariable',
+        type: 'variables_get'
       },
       {
-        'test': 'TextContent',
-        'type': 'text'
+        test: 'TextContent',
+        type: 'text'
       },
       {
-        'test': '10;',
-        'type': 'math_number'
+        test: '10;',
+        type: 'math_number'
       }
     ];
 
@@ -407,25 +466,25 @@ describe("getMissingBlocks_ tests", function () {
     runTests(testBlocks, testBlockXml);
   });
 
-  describe("required blocks use function to check for existence", function () {
+  describe('required blocks use function to check for existence', function() {
     var testBlocks = [
       {
-        'test': function (block) {
+        test: function(block) {
           return block.type === 'variables_get';
         },
-        'type': 'variables_get'
+        type: 'variables_get'
       },
       {
-        'test': function (block) {
+        test: function(block) {
           return block.type === 'text';
         },
-        'type': 'text'
+        type: 'text'
       },
       {
-        'test': function (block) {
+        test: function(block) {
           return block.type === 'math_number';
         },
-        'type': 'math_number'
+        type: 'math_number'
       }
     ];
 
@@ -439,127 +498,116 @@ describe("getMissingBlocks_ tests", function () {
   });
 
   function runTests(testBlocks, testBlockXml) {
-    it ("expect 1 block, empty workspace, told block missing", function () {
+    it('expect 1 block, empty workspace, told block missing', function() {
       validateBlocks({
-        requiredBlocks: [
-          [testBlocks[0]]
-        ],
+        requiredBlocks: [[testBlocks[0]]],
         numToFlag: 1,
-        userBlockXml: "",
-        expectedResult: [testBlocks[0]],
-      });
-    });
-
-    it ("expect 1 block, wrong block present, told block missing", function () {
-      validateBlocks({
-        requiredBlocks: [
-          [testBlocks[0]]
-        ],
-        numToFlag: 1,
-        userBlockXml: "<xml>" + testBlockXml[1] + '</xml>',
+        userBlockXml: '',
         expectedResult: [testBlocks[0]]
       });
     });
 
-    it ("expect 1 block, block is there, told no blocks missing", function () {
+    it('expect 1 block, wrong block present, told block missing', function() {
       validateBlocks({
-        requiredBlocks: [
-          [testBlocks[0]]
-        ],
+        requiredBlocks: [[testBlocks[0]]],
         numToFlag: 1,
-        userBlockXml: "<xml>" + testBlockXml[0] + '</xml>',
+        userBlockXml: '<xml>' + testBlockXml[1] + '</xml>',
+        expectedResult: [testBlocks[0]]
+      });
+    });
+
+    it('expect 1 block, block is there, told no blocks missing', function() {
+      validateBlocks({
+        requiredBlocks: [[testBlocks[0]]],
+        numToFlag: 1,
+        userBlockXml: '<xml>' + testBlockXml[0] + '</xml>',
         expectedResult: []
       });
     });
 
-    it ("expect 2 blocks, numToFlag = 1, both missing, told first block missing", function () {
+    it('expect 2 blocks, numToFlag = 1, both missing, told first block missing', function() {
       validateBlocks({
-        requiredBlocks: [
-          [testBlocks[0]],
-          [testBlocks[1]]
-        ],
+        requiredBlocks: [[testBlocks[0]], [testBlocks[1]]],
         numToFlag: 1,
-        userBlockXml: "",
+        userBlockXml: '',
         expectedResult: [testBlocks[0]]
       });
     });
-    it ("expect 2 blocks, numToFlag = 2, both missing, told both missing", function () {
+    it('expect 2 blocks, numToFlag = 2, both missing, told both missing', function() {
       validateBlocks({
-        requiredBlocks: [
-          [testBlocks[0]],
-          [testBlocks[1]]
-        ],
+        requiredBlocks: [[testBlocks[0]], [testBlocks[1]]],
         numToFlag: 2,
-        userBlockXml: "",
+        userBlockXml: '',
         expectedResult: [testBlocks[0], testBlocks[1]]
       });
     });
-    it ("expect 2 blocks, numToFlag = 2, first block missing, told second block missing", function () {
+    it('expect 2 blocks, numToFlag = 2, first block missing, told second block missing', function() {
       validateBlocks({
-        requiredBlocks: [
-          [testBlocks[0]],
-          [testBlocks[1]]
-        ],
+        requiredBlocks: [[testBlocks[0]], [testBlocks[1]]],
         numToFlag: 2,
-        userBlockXml: "<xml>" + testBlockXml[0] + '</xml>',
+        userBlockXml: '<xml>' + testBlockXml[0] + '</xml>',
         expectedResult: [testBlocks[1]]
       });
     });
-    it ("expect 2 blocks, numToFlag = 2, second block missing, told first block missing", function () {
+    it('expect 2 blocks, numToFlag = 2, second block missing, told first block missing', function() {
       validateBlocks({
-        requiredBlocks: [
-          [testBlocks[0]],
-          [testBlocks[1]]
-        ],
+        requiredBlocks: [[testBlocks[0]], [testBlocks[1]]],
         numToFlag: 2,
-        userBlockXml: "<xml>" + testBlockXml[0] + testBlockXml[1] + '</xml>',
+        userBlockXml: '<xml>' + testBlockXml[0] + testBlockXml[1] + '</xml>',
         expectedResult: [],
-        assertMessage: "no blocks missing"
+        assertMessage: 'no blocks missing'
       });
     });
 
     // todo - maybe also do a combo of both a single a double missing
 
-    it ("expect 1 of 2 blocks, empty workspace, told of both missing blocks", function () {
+    it('expect 1 of 2 blocks, empty workspace, told of both missing blocks', function() {
       // empty workspace
       validateBlocks({
         requiredBlocks: [
           [testBlocks[1], testBlocks[2]] // allow text or number
         ],
         numToFlag: 1,
-        userBlockXml: "",
+        userBlockXml: '',
         expectedResult: [testBlocks[1]]
       });
     });
 
-    it ("expect 1 of 2 blocks, first block there, told none missing", function () {
+    it('expect 1 of 2 blocks, first block there, told none missing', function() {
       // should work with either block
       validateBlocks({
         requiredBlocks: [
           [testBlocks[1], testBlocks[2]] // allow text or number
         ],
         numToFlag: 1,
-        userBlockXml: "<xml>" + testBlockXml[1] + "</xml>",
+        userBlockXml: '<xml>' + testBlockXml[1] + '</xml>',
         expectedResult: []
       });
     });
 
-    it ("expect 1 of 2 blocks, second block there, told none missing", function () {
+    it('expect 1 of 2 blocks, second block there, told none missing', function() {
       validateBlocks({
         requiredBlocks: [
           [testBlocks[1], testBlocks[2]] // allow text or number
         ],
         numToFlag: 1,
-        userBlockXml: "<xml>" + testBlockXml[2] + "</xml>",
+        userBlockXml: '<xml>' + testBlockXml[2] + '</xml>',
         expectedResult: []
       });
     });
   }
 
-  function validateMissingBlocksFromLevelTest(testCollection, testData, dataItem) {
-    var level = testCollectionUtils.getLevelFromCollection(testCollection,
-      testData, dataItem);
-    assert(global.Blockly, "Blockly is in global namespace");
+  function validateMissingBlocksFromLevelTest(
+    testCollection,
+    testData,
+    dataItem
+  ) {
+    var level = testCollectionUtils.getLevelFromCollection(
+      testCollection,
+      testData,
+      dataItem
+    );
+    assert(global.Blockly, 'Blockly is in global namespace');
 
     var skinForTests;
     if (testCollection.skinId) {
@@ -567,13 +615,13 @@ describe("getMissingBlocks_ tests", function () {
       skinForTests = appSkins.load(studioApp.assetUrl, testCollection.skinId);
     } else {
       skinForTests = {
-        assetUrl: function (str) {
+        assetUrl: function(str) {
           return str;
         }
       };
     }
 
-    var blockInstallOptions = { skin: skinForTests, isK1: false };
+    var blockInstallOptions = {skin: skinForTests, isK1: false};
     var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
     var blocks = require('@cdo/apps/' + testCollection.app + '/blocks');
@@ -583,22 +631,26 @@ describe("getMissingBlocks_ tests", function () {
       requiredBlocks: level.requiredBlocks,
       numToFlag: 1,
       userBlockXml: testData.xml,
-      expectedResult: testData.missingBlocks,
+      expectedResult: testData.missingBlocks
     });
   }
 
-  describe("required blocks for specific levels", function () {
+  describe('required blocks for specific levels', function() {
     var collections = testCollectionUtils.getCollections();
-    collections.forEach(function (item) {
+    collections.forEach(function(item) {
       var testCollection = item.data;
       var app = testCollection.app;
 
-      testCollection.tests.forEach(function (testData, index) {
+      testCollection.tests.forEach(function(testData, index) {
         var dataItem = require('./util/data')(app);
 
         if (testData.missingBlocks) {
-          it('MissingBlocks: ' + testData.description, function () {
-            validateMissingBlocksFromLevelTest(testCollection, testData, dataItem);
+          it('MissingBlocks: ' + testData.description, function() {
+            validateMissingBlocksFromLevelTest(
+              testCollection,
+              testData,
+              dataItem
+            );
           });
         }
       });
@@ -606,11 +658,11 @@ describe("getMissingBlocks_ tests", function () {
   });
 });
 
-describe("getCountableBlocks_", function () {
+describe('getCountableBlocks_', function() {
   var blocks = require('@cdo/apps/turtle/blocks');
   var blockInstallOptions = {
     skin: {
-      assetUrl: function (str) {
+      assetUrl: function(str) {
         return str;
       }
     },
@@ -619,23 +671,25 @@ describe("getCountableBlocks_", function () {
   var studioApp;
 
   // create our environment
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
     blocks.install(Blockly, blockInstallOptions);
     studioApp = getStudioAppSingleton();
   });
 
-  var countBlocks = function (xml) {
+  var countBlocks = function(xml) {
     studioApp.loadBlocks(xml);
     return studioApp.feedback_.getCountableBlocks_().length;
   };
 
-  it("does not count disabled blocks", function () {
-    var count = countBlocks('<xml><block type="text_print" disabled="true"></block></xml>');
+  it('does not count disabled blocks', function() {
+    var count = countBlocks(
+      '<xml><block type="text_print" disabled="true"></block></xml>'
+    );
     assert.equal(0, count);
   });
 
-  it("does not count draw_colour or alpha blocks or their children", function () {
+  it('does not count draw_colour or alpha blocks or their children', function() {
     var count;
 
     count = countBlocks('<xml><block type="draw_colour"></block></xml>');
@@ -644,161 +698,174 @@ describe("getCountableBlocks_", function () {
     count = countBlocks('<xml><block type="alpha"></block></xml>');
     assert.equal(0, count);
 
-    count = countBlocks('<xml>' +
+    count = countBlocks(
+      '<xml>' +
         '<block type="alpha">' +
-          '<value name="VALUE">' +
-            '<block type="math_number">' +
-              '<title name="NUM">100</title>' +
-            '</block>' +
-          '</value>' +
+        '<value name="VALUE">' +
+        '<block type="math_number">' +
+        '<title name="NUM">100</title>' +
         '</block>' +
-      '</xml>');
+        '</value>' +
+        '</block>' +
+        '</xml>'
+    );
     assert.equal(0, count);
 
-    count = countBlocks('<xml>' +
+    count = countBlocks(
+      '<xml>' +
         '<block type="draw_colour">' +
-          '<value name="COLOUR">' +
-            '<block type="colour_picker">' +
-              '<title name="COLOUR">#ff0000</title>' +
-            '</block>' +
-          '</value>' +
+        '<value name="COLOUR">' +
+        '<block type="colour_picker">' +
+        '<title name="COLOUR">#ff0000</title>' +
         '</block>' +
-      '</xml>');
+        '</value>' +
+        '</block>' +
+        '</xml>'
+    );
     assert.equal(0, count);
   });
 
-  it("counts all other blocks", function () {
+  it('counts all other blocks', function() {
     var count;
 
-    count = countBlocks('<xml>' +
+    count = countBlocks(
+      '<xml>' +
         '<block type="controls_repeat">' +
-          '<title name="TIMES">4</title>' +
-          '<statement name="DO">' +
-            '<block type="text_print"></block>' +
-          '</statement>' +
+        '<title name="TIMES">4</title>' +
+        '<statement name="DO">' +
+        '<block type="text_print"></block>' +
+        '</statement>' +
         '</block>' +
-      '</xml>');
+        '</xml>'
+    );
     assert.equal(2, count);
 
-    count = countBlocks('<xml>' +
+    count = countBlocks(
+      '<xml>' +
         '<block type="procedures_defnoreturn">' +
-          '<mutation/>' +
-          '<title name="NAME">do something</title>' +
+        '<mutation/>' +
+        '<title name="NAME">do something</title>' +
         '</block>' +
-      '</xml>');
+        '</xml>'
+    );
     assert.equal(3, count);
 
-    count = countBlocks('<xml>' +
+    count = countBlocks(
+      '<xml>' +
         '<block type="procedures_defnoreturn">' +
-          '<mutation/>' +
-          '<title name="NAME">do something</title>' +
-          '<statement name="STACK">' +
-            '<block type="text_print"></block>' +
-          '</statement>' +
+        '<mutation/>' +
+        '<title name="NAME">do something</title>' +
+        '<statement name="STACK">' +
+        '<block type="text_print"></block>' +
+        '</statement>' +
         '</block>' +
-      '</xml>');
+        '</xml>'
+    );
     assert.equal(5, count);
 
-    count = countBlocks('<xml>' +
-      ' <block type="variables_set">' +
-      '   <title name="VAR">length</title>' +
-      '   <value name="VALUE">' +
-      '     <block type="math_number">' +
-      '       <title name="NUM">50</title>' +
-      '     </block>' +
-      '   </value>' +
-      '   <next>' +
-      '     <block type="controls_repeat_ext">' +
-      '       <value name="TIMES">' +
-      '         <block type="math_number">' +
-      '           <title name="NUM">100</title>' +
-      '         </block>' +
-      '       </value>' +
-      '       <statement name="DO">' +
-      '         <block type="controls_repeat_ext">' +
-      '           <value name="TIMES">' +
-      '             <block type="math_number">' +
-      '               <title name="NUM">3</title>' +
-      '             </block>' +
-      '           </value>' +
-      '           <statement name="DO">' +
-      '             <block type="draw_move">' +
-      '               <title name="DIR">moveForward</title>' +
-      '               <value name="VALUE">' +
-      '                 <block type="variables_get">' +
-      '                   <title name="VAR">length</title>' +
-      '                 </block>' +
-      '               </value>' +
-      '               <next>' +
-      '                 <block type="draw_turn">' +
-      '                   <title name="DIR">turnLeft</title>' +
-      '                   <value name="VALUE">' +
-      '                     <block type="math_number">' +
-      '                       <title name="NUM">120</title>' +
-      '                     </block>' +
-      '                   </value>' +
-      '                 </block>' +
-      '               </next>' +
-      '             </block>' +
-      '           </statement>' +
-      '           <next>' +
-      '             <block type="draw_move">' +
-      '               <title name="DIR">moveForward</title>' +
-      '               <value name="VALUE">' +
-      '                 <block type="variables_get">' +
-      '                   <title name="VAR">length</title>' +
-      '                 </block>' +
-      '               </value>' +
-      '             </block>' +
-      '           </next>' +
-      '         </block>' +
-      '       </statement>' +
-      '     </block>' +
-      '   </next>' +
-      ' </block>' +
-      '</xml>');
+    count = countBlocks(
+      '<xml>' +
+        ' <block type="variables_set">' +
+        '   <title name="VAR">length</title>' +
+        '   <value name="VALUE">' +
+        '     <block type="math_number">' +
+        '       <title name="NUM">50</title>' +
+        '     </block>' +
+        '   </value>' +
+        '   <next>' +
+        '     <block type="controls_repeat_ext">' +
+        '       <value name="TIMES">' +
+        '         <block type="math_number">' +
+        '           <title name="NUM">100</title>' +
+        '         </block>' +
+        '       </value>' +
+        '       <statement name="DO">' +
+        '         <block type="controls_repeat_ext">' +
+        '           <value name="TIMES">' +
+        '             <block type="math_number">' +
+        '               <title name="NUM">3</title>' +
+        '             </block>' +
+        '           </value>' +
+        '           <statement name="DO">' +
+        '             <block type="draw_move">' +
+        '               <title name="DIR">moveForward</title>' +
+        '               <value name="VALUE">' +
+        '                 <block type="variables_get">' +
+        '                   <title name="VAR">length</title>' +
+        '                 </block>' +
+        '               </value>' +
+        '               <next>' +
+        '                 <block type="draw_turn">' +
+        '                   <title name="DIR">turnLeft</title>' +
+        '                   <value name="VALUE">' +
+        '                     <block type="math_number">' +
+        '                       <title name="NUM">120</title>' +
+        '                     </block>' +
+        '                   </value>' +
+        '                 </block>' +
+        '               </next>' +
+        '             </block>' +
+        '           </statement>' +
+        '           <next>' +
+        '             <block type="draw_move">' +
+        '               <title name="DIR">moveForward</title>' +
+        '               <value name="VALUE">' +
+        '                 <block type="variables_get">' +
+        '                   <title name="VAR">length</title>' +
+        '                 </block>' +
+        '               </value>' +
+        '             </block>' +
+        '           </next>' +
+        '         </block>' +
+        '       </statement>' +
+        '     </block>' +
+        '   </next>' +
+        ' </block>' +
+        '</xml>'
+    );
     assert.equal(17, count);
   });
 });
 
-describe("unusedBlocks", function () {
+describe('unusedBlocks', function() {
   var studioApp;
-  var blockXml= '<xml><block type="text_print"></block></xml>';
+  var blockXml = '<xml><block type="text_print"></block></xml>';
 
   // create our environment
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
-    var blockInstallOptions = { isK1: false };
+    var blockInstallOptions = {isK1: false};
     var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
 
     studioApp = getStudioAppSingleton();
   });
 
-  afterEach(function () {
+  afterEach(function() {
     Blockly.showUnusedBlocks = false;
   });
 
-  var checkResultForBlocks = function (args) {
+  var checkResultForBlocks = function(args) {
     studioApp.loadBlocks(blockXml);
     Blockly.showUnusedBlocks = args.unusedBlocksEnabled;
 
-    assert.equal(args.result,
-        studioApp.feedback_.getTestResults(true, [], [], true, {}));
+    assert.equal(
+      args.result,
+      studioApp.feedback_.getTestResults(true, [], [], true, {})
+    );
   };
 
-  it ("fails when unused blocks are disabled", function () {
+  it('fails when unused blocks are disabled', function() {
     checkResultForBlocks({
       result: TestResults.EXTRA_TOP_BLOCKS_FAIL,
       unusedBlocksEnabled: false
     });
   });
 
-  it ("passes when unused blocks are enabled", function () {
+  it('passes when unused blocks are enabled', function() {
     checkResultForBlocks({
       result: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS,
       unusedBlocksEnabled: true
     });
   });
-
 });

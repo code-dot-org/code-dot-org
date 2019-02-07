@@ -35,7 +35,7 @@
     "authored_hints": "[]",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "tts_markdown_instructions_override": "Snap two `East` blocks and one `get treasure` block to the bottom of the program, then click \"Run\".",
+    "tts_long_instructions_override": "Snap two `East` blocks and one `get treasure` block to the bottom of the program, then click \"Run\".",
     "contained_level_names": null
   },
   "published": true,

@@ -360,14 +360,20 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': izmērs
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': izmērs
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
       binary_move:
         options:
           DIR:

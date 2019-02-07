@@ -660,7 +660,7 @@ eu:
         text: ezkerrera biratu
       RyanLab_turnRight:
         text: eskuinera biratu
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -668,14 +668,16 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': tamaina
-            '"x"': x posizioa
-            '"y"': y posizioa
-            '"direction"': mugimentuaren norantza
-            '"tint"': tinta
+          CONDITION:
+            '"when"': "\\-enean"
+            '"while"': bitartean
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': "\\-enean"
+            '"while"': bitartean
       binary_move:
         options:
           DIR:

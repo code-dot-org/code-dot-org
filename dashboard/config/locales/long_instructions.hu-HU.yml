@@ -155,24 +155,61 @@ hu:
         Használd az "amíg nektár" ciklust az összes nektár összegyűjtéséhez. Ez a
         ciklus addig fog futni, amíg a megadott feltétel teljesül, jelen esetben amíg
         a nektárok száma > 0.
+      2-3 Maze 13: Hadd jussak el a malachoz! Egyszerre csak egy 'előrelépni' blokkot
+        használhatsz!
       2-3 Maze 15: Használd a ciklusokat, hogy kevesebb blokkal jussunk a malacig.
       2-3 Maze Loops 18: Juttass el a napraforgóhoz!
+      2-3 Maze Loops 19: |-
+        Emeljük ezt egy másik szintre!
+
+        Használj ismétléseket, hogy eljussak a napraforgóhoz a lehető legkevesebb blokk felhasználásával.
+      2-3 Maze Loops Assessment 1: 'Értékelés: juttass el a napraforgóhoz csak 5 blokk
+        felhasználásával! '
+      4-5 Artist 1: "Segíts befejezni a doboz rajzolását! (Minden vonal 300 képpont
+        hosszú.)\n\n"
       4-5 Artist 10: Nyomd meg a "Futtatás" gombot, hogy kipróbáld a kódot. Majd ismételd,
         hogy befejezd a rajzot. A színek mindig különbözni fognak.
+      4-5 Artist 11: Rajzold meg a zöld vonalakat! A vonalak 300 képpont hosszúak
+        és 15 képpont távolságra vannak egymástól.
       4-5 Artist 2: Megtudnád adni ciklussal a kódot, hogy kitöltsd a négyzetet?
+      4-5 Artist 3.5: Rendben, most próbáld meg kitalálni, hogy mi fog történni, ha
+        futtatod ezt a kódot (vagy futtasd le). Aztán, ismételd meg a kódot annyiszor,
+        hogy kirajzolódjon a teljes ábra!
+      4-5 Artist 3: "Ennek a téglalap alakú virágágyásnak a kerülete 600 képpont.
+        A hosszabbik oldala 200 képpont hosszú. \n\nRajzold meg a téglalapot a lehető
+        legkevesebb blokk felhasználásával."
+      4-5 Artist 4: "Hány fokos a kör? \n\nIsmételd a blokkokat hogy elkészüljön a
+        színes kör!"
       4-5 Artist 5: Milyen szöget használsz?
       4-5 Artist 6: Az egyenlő oldalú háromszög szögei 60, 60 és 60 fokosak. Minden
         oldal 200 képpont hosszú. Készítsd el a rajzot!
+      4-5 Artist 7: "A derékszögű háromszög szögei 30, 60 és 90 fokosak. A ferde oldal
+        hossza kétszer annyi, mint a 100 képpontos magasság. \n\nKészítsd el a rajzot!"
+      4-5 Artist 8: "A futballpálya felezővonala merőleges az oldalvonalakra. A pálya
+        kerülete 800 képpont és a hossza 240 képpont. Milyen széles? \n\nRajzold meg
+        a határokat és a felezővonalat!"
+      4-5 Artist 9: "Rajzold meg a másik oldalát is, hogy szimmetrikus legyen a rajz!
+        \nA háromszögek egyenlő oldalúak, oldalaik 50 képpont hosszúak."
+      4-5 Artist Assessment 1: 'Értékelés: használj ciklust egy egyenlő oldalú háromszög
+        rajzolásához! Minden oldal 300 képpont hosszú.'
       4-5 Artist Free Draw 1: Szabadon rajzolhatsz! Rajzolj bármit, amihez kedved
         van.
       4-5 Artist Patterns 1: Tudsz négyzetet rajzolni egy ciklus segítségével? Minden
         oldala legyen 20 pixeles.
+      4-5 Artist Patterns 10: 'Ez a kód két sor hatszöget rajzol – ismételd meg az
+        egészet négyszer, hogy egy teljes méhsejtet rajzolj. Tipp: Vissza kell ugranod
+        120 pixelt a legkülső ciklusban, hogy a művész ne menjen ki a képernyőből.'
+      4-5 Artist Patterns 11: Hányszor kell megismételned a gyémántot, hogy a virágot
+        lerajzold?
       4-5 Artist Patterns 12: Hogyha lemásolod a ciklust és balra fordulsz jobb helyett,
         mi történik? Tudod úgy ismételni, hogy ezt a hullámot rajzolja le?
       4-5 Artist Patterns 13: Most ismételjük a ciklust négyszer, hogy elkészüljön
         ez a képkeret. Figyelj a sarkokra - nem fordulhatsz csak úgy 90 fokot! Ha
         egy 3 fokos fordulatot 60-szor ismételve egy félkört kapunk, melyik blokkal
         kapunk a sarkokhoz egy negyed kört?
+      4-5 Artist Patterns 2: Ha egy ciklust egy másik ciklusba helyezünk, azt beágyazott
+        ciklusnak hívják. Mit kell a külső ciklushoz adni, hogy mind a 15 négyzet
+        egy sorba kerüljön?
       4-5 Artist Patterns 3: |-
         Most menjünk egy szinttel mélyebbre! Már beágyaztuk az egész kódblokkot egy másik ciklusba, de a
         művészt vissza kell helyezned, hogy megrajzold a következő vonalat. Melyik blokkot kell a külső ciklus végére
@@ -287,11 +324,24 @@ hu:
         a\n [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\r\n* Minden oldal
         esetén\nbizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal
         felhasználási feltételeit.\r\n\r"
+      Course 4 Artist 1: "Segíts nekem befejezni a dobozom rajzolását. (Minden vonal
+        200 pixel hosszú)\n\n"
       Course 4 Artist 13: Még mindig játszol? Itt egy üres vászon, amire azt rajzolsz,
         amit csak akarsz!
-      Course 4 Artist 6: |-
-        Egészítsd ki a kódot, hogy kirajzolódjanak a háromszögek.
-        Segítség: a 3 háromszög egy kör belsejében vannak.
+      Course 4 Artist 2: Ciklusba tudnád rakni ezt a kód részletet, hogy a szürke
+        négyzet kirajzolódjon? (Minden oldal 300 pixel hosszú)
+      Course 4 Artist 3: Rendben, most próbáld meg kitalálni, hogy mi fog történni,
+        ha futtatod ezt a kódot (vagy futtasd le). Aztán, ismételd meg a kódot annyiszor,
+        hogy kirajzolódjon a teljes ábra.
+      Course 4 Artist 4: Hány fokból áll egy kör? A hiányzó helyre írd be a helyes
+        választ, hogy egy színes kört készíts.
+      Course 4 Artist 5: |-
+        Rajzold meg a másik felét ennek a szimmetrikus mintának. A háromszögek minden oldala 50 pixel hosszú.
+        Lehet, hogy többször is le kell futtatnod a kódot, hogy megtaláld, pontosan milyen blokkokra is van szükséged.
+      Course 4 Artist 6: Egészítsd ki a kódot, hogy kirajzolódjon ez a három egyenlő
+        oldalú háromszög.
+      Course 4 Artist 7: Az alábbi ismétlést ágyazd be egy másik ismétlésbe, hogy
+        így rajzolj 10 elforgatott háromszöget.
       Course 4 Artist 8: Rajzold meg ezt a napocskát egy ciklussal, ami 12 háromszöget
         rajzol.
       Course 4 Artist 8a: Emlékszel erre az alakzatra? Most megrajzolhatod úgy, hogy
@@ -312,6 +362,15 @@ hu:
       Course 4 Artist For Loops Challenge_a: |-
         **Kihívás:** Kitalálod, hogy az eddig tanultak felhasználásával, hogyan hozhatod
         létre ezt a 40 képpont oldalhosszúságú sokszögekből álló képet?
+      Course 4 Bee 1: "A méh nem tudja, mi van a felhő alatt! \nHasználd a 'ha' blokkot,
+        hogy megtudd, virág van-e a felhő alatt. \nCsak akkor gyűjts nektárt, ha tényleg
+        virágot találsz."
+      Course 4 Bee 2: Használd a "ha/különben" blokkot, és ellenőrizd, hogy egy virágnál
+        vagy egy lépnél állsz-e. Ha virágnál állsz, akkor gyűjts egy nektárt, különben
+        pedig készíts mézet!
+      Course 4 Bee 3: Az ismeretlen objektum vagy virág vagy lép. Használd a ha/különben
+        blokkot nektár gyűjtéséhez, ha ez virág, különben pedig készíts mézet (mert
+        ez egy lép).
       Course 4 Bee Params 1: Használd a "gyűjts 3 nektárt" függvényt, amelynek hatására
         elfordulok, mozgok, nektárt gyűjtök és aztán visszatérek a kiindulási pontra.
         Írj egy kódot a "gyűjts 3 nektárt" függvény felhasználásával, amellyel az
@@ -734,6 +793,13 @@ hu:
         elérd a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
+      Ryan_Demo: |-
+        Táncoltassuk meg ezt a jávorszarvast!
+
+        Húzd ki az <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokk alá. A táncosod a negyedik ütem után elkezd táncolni.
+
+
+        A zenében **ütemekben** mérjük az időt. Ebben a bemutatóban az ütemek négy negyed hosszúak.
       Testing Quantum Farmer: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom,
         hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen
         feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
@@ -874,7 +940,10 @@ hu:
       grade3_bee_conditionals_quantum2: A méh most csak nektárt akar gyűjteni. Emlékezz
         rá, hogy nem minden elrejtett objektum virág, így először ellenőrizni kell,
         mert csak virágról tud nektárt gyűjteni.
+      grade3_maze_Loop1: 'Értékelés: juttass el a napraforgóhoz csak 5 blokk felhasználásával! '
       grade3_maze_loops2: Juttass el a napraforgóhoz!
+      grade3_maze_nestedLoops3: Hadd jussak el a malachoz! Egyszerre csak egy 'előrelépni'
+        blokkot használhatsz!
       grade3_maze_nestedLoops4: Használd a ciklusokat, hogy kevesebb blokkal jussunk
         a malacig.
       grade4_arist_nested_loop_flags1: Ismételd meg a megadott kódot annyiszor, hogy

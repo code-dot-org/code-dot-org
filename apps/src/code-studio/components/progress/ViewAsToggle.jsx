@@ -1,10 +1,11 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import { ViewType, setViewType } from '../../viewAsRedux';
-import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
+import {ViewType, setViewType} from '../../viewAsRedux';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 const styles = {
   main: {
@@ -15,8 +16,8 @@ const styles = {
     margin: 10
   },
   toggleGroup: {
-    margin: 10,
-  },
+    margin: 10
+  }
 };
 
 /**
@@ -32,12 +33,12 @@ class ViewAsToggle extends React.Component {
   componentDidMount() {
     // Upon loading, toggle hide-as-student appropriately (this is so that if we
     // load a page with ?viewAs=Student we still hide stuff)
-    const { viewAs } = this.props;
-    $(".hide-as-student").toggle(viewAs === ViewType.Teacher);
+    const {viewAs} = this.props;
+    $('.hide-as-student').toggle(viewAs === ViewType.Teacher);
   }
 
-  onChange = (viewType) => {
-    const { setViewType } = this.props;
+  onChange = viewType => {
+    const {setViewType} = this.props;
 
     updateQueryParam('viewAs', viewType);
 
@@ -48,28 +49,27 @@ class ViewAsToggle extends React.Component {
       // Ideally all the things we would want to hide would be redux backed, and
       // would just update automatically. However, we're not in such a world. Instead,
       // explicitly hide or show elements with this class name based on new toggle state.
-      $(".hide-as-student").toggle(viewType === ViewType.Teacher);
+      $('.hide-as-student').toggle(viewType === ViewType.Teacher);
     }
 
     setViewType(viewType);
   };
 
   render() {
-    const { viewAs } = this.props;
+    const {viewAs} = this.props;
 
     return (
       /*{ className used by some code that looks at this element to determine sizing}*/
       <div className="non-scrollable-wrapper" style={styles.main}>
-        <div style={styles.viewAs}>
-          {commonMsg.viewPageAs()}
-        </div>
+        <div style={styles.viewAs}>{commonMsg.viewPageAs()}</div>
         <div style={styles.toggleGroup}>
-          <ToggleGroup
-            selected={viewAs}
-            onChange={this.onChange}
-          >
-            <button className="uitest-viewAsStudent" value={ViewType.Student}>{commonMsg.student()}</button>
-            <button className="uitest-viewAsTeacher" value={ViewType.Teacher}>{commonMsg.teacher()}</button>
+          <ToggleGroup selected={viewAs} onChange={this.onChange}>
+            <button className="uitest-viewAsStudent" value={ViewType.Student}>
+              {commonMsg.student()}
+            </button>
+            <button className="uitest-viewAsTeacher" value={ViewType.Teacher}>
+              {commonMsg.teacher()}
+            </button>
           </ToggleGroup>
         </div>
       </div>
@@ -77,10 +77,13 @@ class ViewAsToggle extends React.Component {
   }
 }
 export const UnconnectedViewAsToggle = ViewAsToggle;
-export default connect(state => ({
-  viewAs: state.viewAs
-}), dispatch => ({
-  setViewType(viewAs) {
-    dispatch(setViewType(viewAs));
-  }
-}))(UnconnectedViewAsToggle);
+export default connect(
+  state => ({
+    viewAs: state.viewAs
+  }),
+  dispatch => ({
+    setViewType(viewAs) {
+      dispatch(setViewType(viewAs));
+    }
+  })
+)(UnconnectedViewAsToggle);

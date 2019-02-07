@@ -1341,7 +1341,7 @@ fi:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Koodaustunti
-          description: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla! Matkaa
+          description: Minecraft on palannut Hour of Code:hin uusilla toiminnoilla! Matkaa
             halki Minecraftin koodin matkassa
         course-e-2018:
           stages:
@@ -1574,7 +1574,7 @@ fi:
             Aquatic:
               name: merellinen
           title: 'Minecraft: Merellinen matka'
-          description_short: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla!
+          description_short: Minecraft on palannut Hour of Code:hin uusilla toiminnoilla!
         dance-extras:
           title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
@@ -1653,3 +1653,27 @@ fi:
               name: Binäärikorut
         gamelab:
           title: Pelilabra
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Tosielämän algoritmit: kylvä siemen'
+            Going Places Safely:
+              name: Menossa turvallisesti
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Liikuta, liikuta
+            Your Digital Footprint:
+              name: Digitaalinen jalanjälkesi
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Liikuta, liikuta
+            Your Digital Footprint:
+              name: Digitaalinen jalanjälkesi
+            Spelling Bee:
+              name: Kirjurimehiläinen
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Tosielämän algoritmit: kylvä siemen'

@@ -2,12 +2,10 @@ import React from 'react';
 import {expect} from '../../../util/configuredChai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {
-  UnconnectedStageLock as StageLock,
-} from '@cdo/apps/templates/progress/StageLock';
+import {UnconnectedStageLock as StageLock} from '@cdo/apps/templates/progress/StageLock';
 import StageLockDialog from '@cdo/apps/code-studio/components/progress/StageLockDialog';
 import Button from '@cdo/apps/templates/Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 const FAKE_SECTION_ID = 'fake-section-id';
 const FAKE_LESSON_ID = 33;
@@ -16,31 +14,24 @@ const DEFAULT_PROPS = {
     name: '',
     id: FAKE_LESSON_ID,
     lockable: false,
-    isFocusArea: false,
+    isFocusArea: false
   },
   sectionId: FAKE_SECTION_ID,
   sectionsAreLoaded: false,
   saving: false,
   openLockDialog: () => {},
-  closeLockDialog: () => {},
+  closeLockDialog: () => {}
 };
 
 describe('StageLock', () => {
   it('renders a loading message before sections are loaded', () => {
-    const wrapper = shallow(
-      <StageLock {...DEFAULT_PROPS}/>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <div>{i18n.loading()}</div>
-    );
+    const wrapper = shallow(<StageLock {...DEFAULT_PROPS} />);
+    expect(wrapper).to.containMatchingElement(<div>{i18n.loading()}</div>);
   });
 
   it('renders a button and dialog after sections are loaded', () => {
     const wrapper = shallow(
-      <StageLock
-        {...DEFAULT_PROPS}
-        sectionsAreLoaded={true}
-      />
+      <StageLock {...DEFAULT_PROPS} sectionsAreLoaded={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -51,21 +42,17 @@ describe('StageLock', () => {
             icon="lock"
           />
         </div>
-        <StageLockDialog/>
+        <StageLockDialog />
       </div>
     );
   });
 
   it('changes button text while saving', () => {
     const wrapper = shallow(
-      <StageLock
-        {...DEFAULT_PROPS}
-        sectionsAreLoaded={true}
-        saving={true}
-      />
+      <StageLock {...DEFAULT_PROPS} sectionsAreLoaded={true} saving={true} />
     );
     expect(wrapper).to.containMatchingElement(
-      <Button text={i18n.saving()} icon="lock"/>
+      <Button text={i18n.saving()} icon="lock" />
     );
   });
 
@@ -83,12 +70,18 @@ describe('StageLock', () => {
 
     // Close callback gets passed through to the dialog unchanged.
     expect(wrapper).to.containMatchingElement(
-      <StageLockDialog handleClose={closeSpy}/>
+      <StageLockDialog handleClose={closeSpy} />
     );
 
     // Open callback gets called when button is clicked.
-    wrapper.find(Button).first().props().onClick();
-    expect(openSpy).to.have.been.calledOnce
-      .and.calledWith(FAKE_SECTION_ID, FAKE_LESSON_ID);
+    wrapper
+      .find(Button)
+      .first()
+      .props()
+      .onClick();
+    expect(openSpy).to.have.been.calledOnce.and.calledWith(
+      FAKE_SECTION_ID,
+      FAKE_LESSON_ID
+    );
   });
 });

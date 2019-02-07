@@ -369,18 +369,22 @@ pt:
         text: virar à esquerda
       RyanLab_turnRight:
         text: virar à direita
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       binary_move:
         options:
           DIR:

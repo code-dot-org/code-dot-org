@@ -1,5 +1,5 @@
-
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import RotateContainer from '../templates/RotateContainer';
 import {connect} from 'react-redux';
 
@@ -12,7 +12,7 @@ class StudioAppWrapper extends React.Component {
     assetUrl: PropTypes.func.isRequired,
     isEmbedView: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   requiresLandscape() {
@@ -22,9 +22,11 @@ class StudioAppWrapper extends React.Component {
   render() {
     return (
       <div>
-        {this.requiresLandscape() && <RotateContainer assetUrl={this.props.assetUrl} />}
+        {this.requiresLandscape() && (
+          <RotateContainer assetUrl={this.props.assetUrl} />
+        )}
         {this.props.children}
-        <div className="clear"></div>
+        <div className="clear" />
       </div>
     );
   }
