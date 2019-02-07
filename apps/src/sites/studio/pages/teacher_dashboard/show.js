@@ -6,8 +6,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
-  setStudents,
-  convertStudentServerData,
+  asyncSetStudents,
   toggleSharingColumn
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
@@ -54,6 +53,7 @@ $(document).ready(function() {
   store.dispatch(setSections(allSections));
 
   store.dispatch(selectSection(section.id));
+  store.dispatch(asyncSetStudents(section.id, section.login_type));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(asyncSetCompletedLevelCount(section.id));
@@ -66,19 +66,6 @@ $(document).ready(function() {
   ) {
     store.dispatch(toggleSharingColumn());
   }
-
-  $.ajax({
-    method: 'GET',
-    url: `/dashboardapi/sections/${section.id}/students`,
-    dataType: 'json'
-  }).done(studentData => {
-    const convertedStudentData = convertStudentServerData(
-      studentData,
-      section.login_type,
-      section.id
-    );
-    store.dispatch(setStudents(convertedStudentData));
-  });
 
   $.ajax({
     method: 'GET',
