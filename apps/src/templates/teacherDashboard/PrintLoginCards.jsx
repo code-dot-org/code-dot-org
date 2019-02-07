@@ -5,13 +5,15 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
-import oauthSignupButtons from '../../../static/teacherDashboard/oauthSignupButtons.png';
+import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
+import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
+import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
+import syncClever from '../../../static/teacherDashboard/syncClever.png';
 
 /**
  * Rendered from the /print_login_cards route in teacher dashboard.
- * Gives teachers information about allowing students to join their section, and prints
- * login cards for word/picture sections. *NOTE* this component should only be used for
- * word, picture, and email sections.
+ * Gives teachers information about signing in, allowing students to join their section, and prints
+ * login cards for word/picture sections.
  */
 class PrintLoginCards extends React.Component {
   static propTypes = {
@@ -20,11 +22,7 @@ class PrintLoginCards extends React.Component {
 
     // Provided by redux.
     section: PropTypes.shape({
-      loginType: PropTypes.oneOf([
-        SectionLoginType.word,
-        SectionLoginType.picture,
-        SectionLoginType.email
-      ]).isRequired,
+      loginType: PropTypes.string.isRequired,
     }).isRequired,
     students: PropTypes.array.isRequired,
   };
@@ -49,6 +47,9 @@ class PrintLoginCards extends React.Component {
             sectionCode={section.code}
           />
         }
+        {[SectionLoginType.google_classroom, SectionLoginType.clever].includes(section.loginType) &&
+          <OAuthLogins loginType={section.loginType}/>
+        }
       </div>
     );
   }
@@ -60,6 +61,49 @@ export default connect(state => ({
   section: state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.sectionData.section.students,
 }))(PrintLoginCards);
+
+class OAuthLogins extends React.Component {
+  static propTypes = {
+    loginType: PropTypes.oneOf([SectionLoginType.google_classroom, SectionLoginType.clever]).isRequired,
+  };
+
+  render() {
+    const {loginType} = this.props;
+    let loginTypeLabel = '';
+    let syncSectionImgSrc = '';
+    if (loginType === SectionLoginType.google_classroom) {
+      loginTypeLabel = i18n.loginTypeGoogleClassroom();
+      syncSectionImgSrc = syncGoogleClassroom;
+    } else if (loginType === SectionLoginType.clever) {
+      loginTypeLabel = i18n.loginTypeClever();
+      syncSectionImgSrc = syncClever;
+    }
+
+    return (
+      <div>
+        <h1>{i18n.printLoginCards_signingIn()}</h1>
+        {loginType === SectionLoginType.google_classroom &&
+          <p>
+            {i18n.printLoginCards_signingInDescription()}
+            {i18n.printLoginCards_signingInGoogle()}
+            <br/>
+            <img src={googleSignInButton}/>
+          </p>
+        }
+        {loginType === SectionLoginType.clever &&
+          <p>{i18n.printLoginCards_signingInClever()}</p>
+        }
+        <br/>
+        <h1>{i18n.syncingYourStudents()}</h1>
+        <p>
+          {i18n.syncingYourStudentsDescription({loginType: loginTypeLabel})}
+          <br/>
+          <img src={syncSectionImgSrc}/>
+        </p>
+      </div>
+    );
+  }
+}
 
 class EmailLogins extends React.Component {
   static propTypes = {
@@ -79,7 +123,7 @@ class EmailLogins extends React.Component {
           <li>
             {i18n.printLoginCards_joinStep1({url: `${studioUrlPrefix}/users/sign_up`})}
             <br/>
-            <img src={oauthSignupButtons}/>
+            <img src={oauthSignInButtons}/>
           </li>
           <li>{i18n.printLoginCards_joinStep2()}</li>
           <li>{i18n.printLoginCards_joinStep3({url: `${pegasusUrlPrefix}/join`, code: sectionCode})}</li>
