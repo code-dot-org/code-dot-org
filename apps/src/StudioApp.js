@@ -2003,7 +2003,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         }
       }
 
-      if (!options.embed && (!options.noHowItWorks || this.config.droplet === false)) {
+      if (!options.embed && !options.noHowItWorks) {
         const buttonRow = document.getElementById('gameButtons');
         const openWorkspace = document.createElement('button');
         openWorkspace.setAttribute('id', 'open-workspace');
