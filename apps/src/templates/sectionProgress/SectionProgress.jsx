@@ -48,15 +48,9 @@ const styles = {
   lessonSelectorContainer: {
     float: 'right'
   },
-  viewCourseLink: {
-    float: 'right',
-    marginTop: 10
-  },
   viewCourseLinkBox: {
     width: '100%',
-    height: 10,
-    lineHeight: '10px',
-    clear: 'both'
+    textAlign: 'right'
   }
 };
 
@@ -133,17 +127,15 @@ class SectionProgress extends Component {
 
     return (
       <div>
-        <div style={styles.viewCourseLinkBox}>
-          <div style={styles.viewCourseLink}>
-            {linkToOverview && (
-              <SmallChevronLink
-                link={linkToOverview}
-                linkText={i18n.viewCourse()}
-                isRtl={false}
-              />
-            )}
+        {linkToOverview && (
+          <div style={styles.viewCourseLinkBox}>
+            <SmallChevronLink
+              link={linkToOverview}
+              linkText={i18n.viewCourse()}
+              isRtl={false}
+            />
           </div>
-        </div>
+        )}
         <div style={styles.selectorContainer}>
           <div style={styles.scriptSelectorContainer}>
             <div style={{...h3Style, ...styles.heading}}>

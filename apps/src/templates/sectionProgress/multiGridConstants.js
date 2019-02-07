@@ -11,6 +11,8 @@ export const PILL_BUBBLE_WIDTH = 180;
 export const progressStyles = {
   lessonHeading: {
     fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    color: color.charcoal,
     paddingTop: 10,
     paddingLeft: 8
   },
@@ -24,7 +26,8 @@ export const progressStyles = {
     ':hover': {
       cursor: 'pointer'
     },
-    textAlign: 'center'
+    textAlign: 'center',
+    height: '100%'
   },
   lessonOfInterest: {
     backgroundColor: color.teal,
@@ -81,11 +84,11 @@ export const progressStyles = {
     margin: 10,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontSize: 14
   },
   cell: {
-    borderRight: '1px solid',
-    borderColor: color.border_gray
+    borderRight: `1px solid ${color.border_gray}`
   }
 };
 
