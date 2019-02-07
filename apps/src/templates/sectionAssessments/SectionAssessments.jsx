@@ -188,7 +188,7 @@ class SectionAssessments extends Component {
                   </div>
                 }
                 {totalStudentSubmissions <= 0 &&
-                  <h3>{i18n.emptyAssessmentSubmissions()}</h3>
+                  <div>{i18n.emptyAssessmentSubmissions()}</div>
                 }
                 <SubmissionStatusAssessmentsContainer />
                 {totalStudentSubmissions > 0 &&
@@ -224,8 +224,8 @@ class SectionAssessments extends Component {
                     />
                   </div>
                 }
-                {totalStudentSubmissions <=0 &&
-                  <h3>{i18n.emptySurveyOverviewTable()}</h3>
+                {totalStudentSubmissions <= 0 &&
+                  <div>{i18n.emptySurveyOverviewTable()}</div>
                 }
               </div>
             }
@@ -245,11 +245,7 @@ class SectionAssessments extends Component {
           </div>
         }
         {(!isLoading && assessmentList.length === 0) &&
-          <div style={styles.empty}>
-            <h3>
-              {i18n.noAssessments()}
-            </h3>
-          </div>
+          <div style={styles.empty}>{i18n.noAssessments()}</div>
         }
       </div>
     );
