@@ -97,6 +97,10 @@ export default class FormController extends React.Component {
         200
       );
     }
+
+    if (newPage) {
+      this.onSetPage(this.state.currentPage);
+    }
   }
 
   /**
@@ -435,8 +439,6 @@ export default class FormController extends React.Component {
       });
 
       this.saveToSessionStorage({currentPage: newPage});
-
-      this.onSetPage(newPage);
     }
   }
 
