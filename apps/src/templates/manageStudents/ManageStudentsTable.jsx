@@ -48,6 +48,10 @@ const styles = {
   },
   buttonWithMargin: {
     marginRight: 5
+  },
+  verticalAlign: {
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -288,7 +292,7 @@ class ManageStudentsTable extends Component {
           />
         )}
         {numberOfEditingRows <= 1 && (
-          <span>
+          <span style={styles.verticalAlign}>
             <div style={styles.headerName}>{i18n.actions()}</div>
             <div style={styles.headerIcon}>
               <ManageStudentsActionsHeaderCell
@@ -304,7 +308,7 @@ class ManageStudentsTable extends Component {
 
   projectSharingHeaderFormatter = () => {
     return (
-      <span>
+      <span style={styles.verticalAlign}>
         <div style={styles.headerName} data-for="explain-sharing" data-tip="">
           {i18n.projectSharingColumnHeader()}
         </div>
