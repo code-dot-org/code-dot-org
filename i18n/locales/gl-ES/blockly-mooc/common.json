@@ -1279,6 +1279,7 @@
   "subtitle": "un entorno de programación visual",
   "success": "Feito!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Trocar de sección:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "O teu programa contén un error tipográfico. Por favor, elimina a liña {lineNumber} e inténtao de novo.",

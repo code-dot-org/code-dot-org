@@ -844,7 +844,7 @@ de:
         text: nach rechts drehen
       Vector_positionCenter:
         text: Mitte
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': Größe

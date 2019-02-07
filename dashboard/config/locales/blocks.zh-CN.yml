@@ -1264,8 +1264,7 @@ zh-CN:
             "'shapeColor'": 颜色
       aalab_addToSpriteGroup:
         text: 向组 {GROUP} 添加精灵 {SPRITE}
-      aalab_changeGroupPropBy:
-        text: 将组 {GROUP} {PROPERTY} 改为 {VAL}
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': 大小

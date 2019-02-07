@@ -5863,6 +5863,9 @@ pt-BR:
         imagem como esta?
       course2_artist_nestedLoops_challenge2: Você consegue descobrir como fazer uma
         imagem como esta?
+      course2_artist_prog_challenge1: Desenhe quartos para cada um dos animais. Existem
+        muitos jeitos de solucionar esse quebra cabeças, então se divirta. O caminho
+        mais curto para a solução é usando 6 blocos, mas use quantos você quiser!
       course2_bee_conditionals_challenge1: Colete todo o néctar ou faça todo o mel.
       course2_bee_conditionals_challenge2: Colete todo o néctar ou faça todo o mel.
       course2_collector_loops_challenge2: Pegar todos os tesouros!
@@ -5870,6 +5873,8 @@ pt-BR:
         as *10* peças do tesouro?
       course2_collector_prog_challenge2: Há 20 peças de tesouro para serem encontradas.
         Colete pelo menos metade para finalizar este desafio!
+      course2_maze_loops_challenge1: 'Agora Scrat quer tentar usar as repetições para
+        achar sua noz! '
       course2_maze_seq_challenge1: Desenhe o caminho e leve-me até aquele porco bobalhão.
         Não passe pelas dinamites, senão penas vão voar!
       course2_playlab_stage17_1: |-
@@ -5896,15 +5901,33 @@ pt-BR:
       course2_playlab_stage17_6: |-
         Agora escreva um programa que faça Valfredo
         se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!
+      course2_playlab_stage17_7: O bloco `repita para sempre` permite rodar códigos
+        para várias vezes sempre. Você consegue colocar blocos para mover o dinossauro
+        Chomp (ator 2) para cima ou para baixo para sempre?
       course2_playlab_stage17_8: "Você pode fazer Valfredo (personagem 1) dizer\n\"Ai!\"
         e reproduzir um som de \"batida\" se ele encontrar Chomp? \r\n\r\nQuando\nterminar,
         jogue para que isso aconteça."
       course2_playlab_stage17_9: "Você pode adicionar um bloco para marcar um ponto\nquando
         Valfredo se encontrar com Otávia (personagem 3)? \r\nJogue e mova Valfredo\ncom
         as setas do teclado até marcar ponto!"
+      course3_artist_concept_challenge1: Fique a vontade para usar tentativa e erro.
+        Não esperamos que você seja perfeito na primeira vez. Quer ver mais dicas?
+        Clique aqui!
+      course3_artist_functions_challenge2: Tente esse código para ver como funciona,
+        então faça um programa do seu jeito!
+      course3_bee_functions_challenge1: Você está por conta própria nesse desafio.
+        Isso pode ser mais difícil do que parece!
       course3_collector_debugging_challenge2: Você é um especialista em laços aninhados?
         Use o que você aprendeu até agora para coletar todo o tesouro!
+      course3_farmer_condLoops_challenge1: Vire à direita nas abóboras. Colete tudo
+        para completar o nível. Cada cultura oculta tem apenas um milho ou alface.
       course3_farmer_condLoops_challenge2: Colete tudo para completar o nível.
+      course3_maze_debugging_challenge2: '* "Se eu virar muitas vezes, fico tonto!
+        Me ajude a alcançar a noz com apenas quatro comandos ''virar''." *'
+      course3_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes,
+        ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
+        e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria.
+        \nClique as dicas para ideias!"
       course3_playlab_stage16_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
       course3_playlab_stage16_2: |-
         Você pode fazer o cachorro dizer alguma coisa e,
@@ -5946,6 +5969,8 @@ pt-BR:
       course3_playlab_stage17_7: |-
         Crie sua própria história. Quando terminar,
         clique em "Concluir" para que seus amigos testem sua história em seus celulares.
+      course4_artist_functions_challenge2: Tente esse código para ver como funciona,
+        então faça um programa do seu jeito!
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para
         ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e
         substitua-o por algo totalmente diferente)
@@ -6828,6 +6853,14 @@ pt-BR:
       courseC_maze_loops8: 'Desafio: Combine ideias dos últimos desafios para completar
         este nível.'
       courseC_maze_loops9: Você está indo bem! Continuem assim!
+      courseC_maze_loops_challenge1: 'Agora Scrat quer tentar usar as repetições para
+        achar sua noz! '
+      courseC_maze_loops_challenge1a: 'Agora Scrat quer tentar usar as repetições
+        para achar sua noz! '
+      courseC_maze_loops_challenge1a_2018: 'Agora Scrat quer tentar usar as repetições
+        para achar sua noz! '
+      courseC_maze_loops_challenge1a_2019: 'Agora Scrat quer tentar usar as repetições
+        para achar sua noz! '
       courseC_maze_programming4: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2019: Evite a(s) TNT(s) ou penas irão voar!
@@ -7326,6 +7359,12 @@ pt-BR:
         este quebra-cabeça.
       courseE_artist_functions8a_2018: Crie uma função para um único quadrado.
       courseE_artist_functions8a_2019: Crie uma função para um único quadrado.
+      courseE_artist_functions_challenge2: Tente esse código para ver como funciona,
+        então faça um programa do seu jeito!
+      courseE_artist_functions_challenge2_2018: Tente esse código para ver como funciona,
+        então faça um programa do seu jeito!
+      courseE_artist_functions_challenge2_2019: Tente esse código para ver como funciona,
+        então faça um programa do seu jeito!
       courseE_artist_ramp12: Use o que você aprendeu para desenhar este triângulo
         dentro de um quadrado.
       courseE_bee_concept1: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
@@ -7354,6 +7393,10 @@ pt-BR:
       courseE_bee_functions4_2018: "A função \"mova e obtenha néctar\" vira\na abelha,
         coleta néctar, e então retorna a abelha para onde ela começou. \r\n\r\nUse\na
         função para coletar todo o néctar."
+      courseE_bee_functions_challenge1: Você está por conta própria nesse desafio.
+        Isso pode ser mais difícil do que parece!
+      courseE_bee_functions_challenge1_2018: Você está por conta própria nesse desafio.
+        Isso pode ser mais difícil do que parece!
       courseE_collector_ramp10: Ajude Laurel a coletar todo o tesouro.
       courseE_collector_ramp8: Ajude Laurel a coletar todo o tesouro.
       courseE_collector_ramp9: Ajude Laurel a coletar todo o tesouro.
@@ -7394,6 +7437,14 @@ pt-BR:
       courseE_maze_ramp5: Desvie da TNT.
       courseE_maze_ramp5_2018: Desvie da TNT.
       courseE_multi_maze_ramp5: Desvie da TNT.
+      courseE_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes,
+        ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
+        e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria.
+        \nClique as dicas para ideias!"
+      courseE_playLab_challenge1_2018: "Algo deve acontecer quando tiver pontos suficientes,
+        ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
+        e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria.
+        \nClique as dicas para ideias!"
       courseF_artist_for7: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
@@ -7767,6 +7818,9 @@ pt-BR:
       grade2_playlab_project_1: |-
         Agora escreva um programa que faça Valfredo
         se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!
+      grade2_playlab_project_2: O bloco `repita para sempre` permite rodar códigos
+        para várias vezes sempre. Você consegue colocar blocos para mover o dinossauro
+        Chomp (ator 2) para cima ou para baixo para sempre?
       grade2_playlab_project_3: "Você pode fazer Valfredo (personagem 1) dizer\n\"Ai!\"
         e reproduzir um som de \"batida\" se ele encontrar Chomp? \r\n\r\nQuando\nterminar,
         jogue para que isso aconteça."

@@ -16,6 +16,7 @@ cs:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Vše co je třeba pro dokončení domu je nakreslit čtverec!
       2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: 'Pro nakreslení těchto malých úhlů se musíš ještě otočit pokaždé, když namaluješ čtverec.   '
         2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
         2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana čtverce... 100 pixelů!
       2-3 Artist 7_authored_hint:
@@ -48,6 +49,10 @@ cs:
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: Umělec se potřebuje otočit o 60 stupňů více doleva, než začne kreslit!
         2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok. Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
@@ -156,8 +161,19 @@ cs:
         2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt blokované cesty prstem.
       4-5 Artist 4_authored_hint:
         4-5_Artist_4_a: "V kruhu je 360 stupňů!\n\nTo je, kolikrát je potřeba kód opakovat (s otočením o 1 stupeň pokaždé), aby se kruh dokončil!"
+      4-5 Artist Patterns 2_authored_hint:
+        4-5_Artist_Patterns_2_a: Pokud jsou čtverce 20 pixelů dlouhé, bude třeba před nakreslením dalšího čtverce skočit o 20 pixelů.
+      4-5 Artist Patterns 3_authored_hint:
+        4-5_Artist_Patterns_3_a: Vytáhni celý blok kódu z panelu příkazů.
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      Course 4 Artist 11_authored_hint:
+        Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      Course 4 Artist Binary Free Play 2b_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_c: V každém opakování potřebuješ "counter" pro jedničky a "16-(2 x counter)" pro nuly.
+      Course 4 Artist Inspire_authored_hint:
+        Course_4_Artist_Inspire_a: Po dokončení jednoho čtverce zkus skok vpřed o jeho poloviční délku před otočkou a kreslením dalšího čtverce.
+        Course_4_Artist_Inspire_b: Každý čtverec a skok se opakuje čtyřikrát ( s otočkou vlevo mezi ) k nakreslení celého větrníku kola.
       Dance short test 2_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
@@ -601,6 +617,8 @@ cs:
           Pokud jste se dostali až sem, potřebujete jen `otočit vlevo` a pak párkrát `posunout vpřed`. Nevzdávejte to!
 
           ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+      course3_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -1069,10 +1087,22 @@ cs:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
+      courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen med.
       courseE_bee_ramp14_2018_authored_hint:
         courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen med.
+      courseE_farmer_concept4_authored_hint:
+        4-5_Artist_Patterns_3_a: Vytáhni celý blok kódu z panelu příkazů.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseE_maze_ramp6_2018_authored_hint:
@@ -1141,10 +1171,15 @@ cs:
         grade3_maze_loops2_b: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt blokované cesty prstem.
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
+      grade4_artist_nestedLoops_challenge2_authored_hint:
+        Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení o 90° doprava".
       grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: 'Pro nakreslení těchto malých úhlů se musíš ještě otočit pokaždé, když namaluješ čtverec.   '
         2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
         2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana čtverce... 100 pixelů!
       grade4_review_bee1_authored_hint:
@@ -1153,6 +1188,10 @@ cs:
         2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
       grade4_review_bee3_authored_hint:
         2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      grade5_artist_binary10_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_c: V každém opakování potřebuješ "counter" pro jedničky a "16-(2 x counter)" pro nuly.
+      grade5_artist_variables_freeplay15_authored_hint:
+        Course_4_Artist_Inspire_b: Každý čtverec a skok se opakuje čtyřikrát ( s otočkou vlevo mezi ) k nakreslení celého větrníku kola.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
       level 'grade3_Loops_11_authored_hint:

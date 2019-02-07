@@ -795,7 +795,7 @@ bg:
         text: завий надясно
       Vector_vectorNorth:
         text: север
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': размер
