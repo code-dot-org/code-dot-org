@@ -60,7 +60,8 @@ pd_enrollments_with_year as
     last_name, 
     email, 
     user_id, 
-    school_year
+    school_year,
+    json_extract_path_text(properties, 'role') as role
   from dashboard_production_pii.pd_enrollments pde
     join dashboard_production_pii.pd_workshops pw
         on pde.pd_workshop_id = pw.id
@@ -86,6 +87,7 @@ select
          FIRST_VALUE(pde.first_name) OVER (PARTITION BY d.user_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
          FIRST_VALUE(pde.last_name) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.last_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as last_name,
          FIRST_VALUE(pde.email) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email,
+         FIRST_VALUE(pde.role) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as role,
          'CS Fundamentals'::varchar as course,
          sy.school_year as school_year_trained,
          month_trained,
@@ -179,7 +181,7 @@ select
          AND sa.school_year >= sy.school_year 
   LEFT JOIN started s
        ON s.user_id = d.user_id
-      AND s.school_year >= sy.school_year 
+      AND s.school_year = sa.school_year 
       AND s.script_name = sa.script_name
   LEFT JOIN completed c
          ON c.user_id = d.user_id
@@ -197,5 +199,5 @@ WITH NO SCHEMA BINDING
 ;
 
 GRANT INSERT, TRIGGER, UPDATE, REFERENCES, RULE, DELETE, SELECT ON analysis_pii.regional_partner_stats_csf_view TO dev;
-GRANT SELECT ON analysis_pii.regional_partner_stats_csf_view TO reader_pii;
-GRANT REFERENCES, TRIGGER, UPDATE, SELECT, INSERT, RULE, DELETE ON analysis_pii.regional_partner_stats_csf_view TO admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csf_view TO GROUP reader_pii;
+GRANT REFERENCES, TRIGGER, UPDATE, SELECT, INSERT, RULE, DELETE ON analysis_pii.regional_partner_stats_csf_view TO GROUP admin;

@@ -178,7 +178,7 @@ select
          AND sa.school_year >= sy.school_year 
   LEFT JOIN started s
        ON s.user_id = d.user_id
-      AND s.school_year >= sy.school_year 
+      AND s.school_year = sa.school_year 
       AND s.script_name = sa.script_name
   LEFT JOIN completed c
          ON c.user_id = d.user_id

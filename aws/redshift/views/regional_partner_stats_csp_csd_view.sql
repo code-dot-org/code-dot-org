@@ -107,7 +107,7 @@ select tt17.*, u.studio_person_id
   LEFT JOIN started s
        ON s.studio_person_id = d.studio_person_id
       AND s.course = d.course
-      AND s.school_year >= d.school_year
+      AND s.school_year = sa.school_year
   LEFT JOIN completed c
          ON c.studio_person_id = d.studio_person_id
         AND c.course = d.course   
@@ -115,10 +115,9 @@ select tt17.*, u.studio_person_id
   LEFT JOIN analysis.teacher_most_progress_csp_csd tmp 
          ON tmp.studio_person_id = d.studio_person_id
          AND tmp.school_year = sa.school_year
-WITH NO SCHEMA BINDING
+WITH NO SCHEMA BINDING;
 
-;
 
 GRANT INSERT, TRIGGER, UPDATE, REFERENCES, RULE, DELETE, SELECT ON analysis_pii.regional_partner_stats_csp_csd_view TO dev;
-GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd_view TO reader_pii;
-GRANT REFERENCES, TRIGGER, UPDATE, SELECT, INSERT, RULE, DELETE ON analysis_pii.regional_partner_stats_csp_csd_view TO admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd_view  TO GROUP reader_pii;
+GRANT REFERENCES, TRIGGER, UPDATE, SELECT, INSERT, RULE, DELETE ON analysis_pii.regional_partner_stats_csp_csd_view  TO GROUP admin;
