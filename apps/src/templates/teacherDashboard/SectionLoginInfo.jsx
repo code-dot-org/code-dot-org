@@ -84,8 +84,7 @@ class OAuthLogins extends React.Component {
         <h1>{i18n.loginInfo_signingIn()}</h1>
         {loginType === SectionLoginType.google_classroom &&
           <p>
-            {i18n.loginInfo_signingInDescription()}
-            {i18n.loginInfo_signingInGoogle()}
+            {`${i18n.loginInfo_signingInDescription()} ${i18n.loginInfo_signingInGoogle()}`}
             <br/>
             <img src={googleSignInButton}/>
           </p>
