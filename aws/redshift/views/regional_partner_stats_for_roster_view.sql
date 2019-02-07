@@ -76,7 +76,8 @@ GROUP BY 1,
          3,
          4,
          5,
-         6);
+         6)
+with no schema binding;
 
 GRANT ALL PRIVILEGES
   ON analysis_pii.regional_partner_stats_for_roster_view

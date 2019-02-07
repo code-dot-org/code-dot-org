@@ -39,12 +39,18 @@ student_activity as
            us.user_id student_id,
            u_students.gender gender
   FROM analysis.csf_started_teachers cst
-      JOIN  dashboard_production.sections se -- no filter on section creation date, section course assignment
+      JOIN analysis.school_years sy 
+       ON sy.school_year = cst.school_year
+      JOIN  dashboard_production.sections se -- no filter on section creation date, section course assignment; date filter comes at user_scripts level
        ON cst.user_id = se.user_id
       JOIN dashboard_production.followers fo 
         ON fo.section_id = se.id
       JOIN dashboard_production.user_scripts us
         ON us.user_id = fo.student_user_id 
+        AND  us.started_at between sy.started_at and sy.ended_at
+      JOIN csf_started cs
+        ON cs.user_id = us.user_id
+        AND cs.started_at between sy.started_at and sy.ended_at
       JOIN csf_script_ids csi
         ON csi.script_id = us.script_id
        AND csi.script_name = cst.script_name
@@ -53,9 +59,7 @@ student_activity as
       JOIN dashboard_production_pii.users u_students
         ON u_students.id = us.user_id 
        AND u_students.user_type = 'student'
-      JOIN analysis.school_years sy 
-        on  us.started_at between sy.started_at and sy.ended_at
-        AND sy.school_year = cst.school_year),
+),
       
 scripts as 
     (SELECT user_id,

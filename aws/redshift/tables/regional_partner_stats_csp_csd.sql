@@ -107,7 +107,7 @@ select tt17.*, u.studio_person_id
   LEFT JOIN started s
        ON s.studio_person_id = d.studio_person_id
       AND s.course = d.course
-      AND s.school_year >= d.school_year
+      AND s.school_year = sa.school_year
   LEFT JOIN completed c
          ON c.studio_person_id = d.studio_person_id
         AND c.course = d.course   
