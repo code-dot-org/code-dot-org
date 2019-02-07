@@ -337,6 +337,15 @@ export var blocks = [
     params: ['250', '0', '75', '0.5'],
     type: 'value'
   },
+  {
+    func: 'open',
+    parent: api,
+    category: 'UI controls',
+    paletteParams: ['url'],
+    params: [
+      '"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"'
+    ]
+  },
 
   {
     func: 'createCanvas',
