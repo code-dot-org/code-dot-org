@@ -265,12 +265,7 @@ GameLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.responsiveEmbedded = true;
-  if (!config.droplet) {
-    config.noHowItWorks = false;
-  } else {
-    config.noHowItWorks = true;
-  }
-
+  config.noHowItWorks = config.droplet;
 
   config.shareWarningInfo = {
     hasDataAPIs: function () {
