@@ -8,6 +8,7 @@ const styles = {
   header: {
     fontWeight: 'bold',
     color: color.charcoal,
+    textAlign: 'center',
   },
   th: {
     backgroundColor: color.lightest_gray,
@@ -34,12 +35,22 @@ export default class SummaryViewLegend extends Component {
 
   render() {
     const {showCSFProgressBox} = this.props;
+    const headerColSpan = showCSFProgressBox ? 2 : 3;
 
     return (
-      <div style={{marginTop: 30}}>
-        <h4 style={styles.header}>{i18n.lessonStatus()}</h4>
+      <div style={{marginTop: 60}}>
         <table>
           <thead>
+            <tr>
+              <td colSpan={headerColSpan}>
+                <h3 style={styles.header}>{i18n.lessonStatus()}</h3>
+              </td>
+              {showCSFProgressBox &&
+                <td colSpan={2}>
+                  <h3 style={styles.header}>{i18n.completionStatus()}</h3>
+                </td>
+              }
+            </tr>
             <tr>
               <th style={styles.th}>{i18n.notStarted()}</th>
               <th style={styles.th}>{i18n.inProgress()}</th>
