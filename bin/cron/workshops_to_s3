@@ -8,14 +8,14 @@ require 'cdo/aws/s3'
 # if an admin clicked the "Download CSV" option
 # in the workshop dashboard.
 def main
-  include Api::CsvDownload
+  extend Api::CsvDownload
 
   workshops = Pd::Workshop.
     where({
             course: [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD],
             subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
           }
-         ).scheduled_start_on_or_after(Date.new(2019, 5, 1))
+        ).scheduled_start_on_or_after(Date.new(2019, 5, 1))
 
   workshop_hash = workshops.map {|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}
 
