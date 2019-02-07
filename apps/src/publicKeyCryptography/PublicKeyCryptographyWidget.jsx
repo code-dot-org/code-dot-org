@@ -46,9 +46,10 @@ export default class PublicKeyCryptographyWidget extends React.Component {
     selectedCharacter: null
   };
 
-  setSelectedCharacter = selectedCharacter => this.setState({selectedCharacter});
+  setSelectedCharacter = selectedCharacter =>
+    this.setState({selectedCharacter});
 
-  setPublicModulus = (publicModulus) => {
+  setPublicModulus = publicModulus => {
     // Anyone can set the public modulus.  Inform everyone.
     this.alice && this.alice.setPublicModulus(publicModulus);
     this.bob && this.bob.setPublicModulus(publicModulus);
@@ -56,13 +57,13 @@ export default class PublicKeyCryptographyWidget extends React.Component {
     this.setState({publicModulus});
   };
 
-  setPublicKey = (publicKey) => {
+  setPublicKey = publicKey => {
     // Only Alice can set the public key.  Inform Bob and Eve.
     this.bob && this.bob.setPublicKey(publicKey);
     this.eve && this.eve.setPublicKey(publicKey);
   };
 
-  setPublicNumber = (publicNumber) => {
+  setPublicNumber = publicNumber => {
     // Only Bob can set the public number.  Inform Alice and Eve.
     this.alice && this.alice.setPublicNumber(publicNumber);
     this.eve && this.eve.setPublicNumber(publicNumber);
@@ -71,7 +72,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
   runModuloClock = (dividend, onStep, onComplete) => {
     const duration = 1000;
     this.setState({animating: true});
-    this.moduloClock.animateTo(dividend, duration, onStep, (finalValue) => {
+    this.moduloClock.animateTo(dividend, duration, onStep, finalValue => {
       this.setState({animating: false});
       onComplete(finalValue);
     });
@@ -88,7 +89,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
     if (ALICE_VIEW === selectedCharacter) {
       return (
         <EqualColumns intercolumnarDistance={20}>
-          <AliceInstructions/>
+          <AliceInstructions />
           {this.renderAliceControls()}
           {this.renderModuloClockPanel()}
         </EqualColumns>
@@ -96,7 +97,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
     } else if (EVE_VIEW === selectedCharacter) {
       return (
         <EqualColumns intercolumnarDistance={20}>
-          <EveInstructions/>
+          <EveInstructions />
           {this.renderEveControls()}
           {this.renderModuloClockPanel()}
         </EqualColumns>
@@ -104,7 +105,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
     } else if (BOB_VIEW === selectedCharacter) {
       return (
         <EqualColumns intercolumnarDistance={20}>
-          <BobInstructions/>
+          <BobInstructions />
           {this.renderBobControls()}
           {this.renderModuloClockPanel()}
         </EqualColumns>
@@ -131,7 +132,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
   renderAliceControls() {
     return (
       <Alice
-        ref={x => this.alice = x}
+        ref={x => (this.alice = x)}
         disabled={this.state.animating}
         setPublicModulus={this.setPublicModulus}
         setPublicKey={this.setPublicKey}
@@ -143,7 +144,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
   renderEveControls() {
     return (
       <Eve
-        ref={x => this.eve = x}
+        ref={x => (this.eve = x)}
         disabled={this.state.animating}
         setPublicModulus={this.setPublicModulus}
         runModuloClock={this.runModuloClock}
@@ -154,7 +155,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
   renderBobControls() {
     return (
       <Bob
-        ref={x => this.bob = x}
+        ref={x => (this.bob = x)}
         disabled={this.state.animating}
         setPublicModulus={this.setPublicModulus}
         setPublicNumber={this.setPublicNumber}
@@ -174,7 +175,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
   renderModuloClock() {
     return (
       <ModuloClock
-        ref={x => this.moduloClock = x}
+        ref={x => (this.moduloClock = x)}
         modulus={this.state.publicModulus || 1}
       />
     );
@@ -188,8 +189,10 @@ export default class PublicKeyCryptographyWidget extends React.Component {
           selectedCharacter={selectedCharacter}
           onChange={this.setSelectedCharacter}
         />
-        {selectedCharacter && <WidgetContinueButton/>}
-        {selectedCharacter && <StartOverButton onClick={this.onStartOverClick}/>}
+        {selectedCharacter && <WidgetContinueButton />}
+        {selectedCharacter && (
+          <StartOverButton onClick={this.onStartOverClick} />
+        )}
         <div style={style.characterViewWrapper}>
           {this.renderCharacterView(selectedCharacter)}
         </div>
@@ -204,14 +207,19 @@ export default class PublicKeyCryptographyWidget extends React.Component {
 const CharacterSelect = props => (
   <span>
     <strong style={characterSelectTextStyle}>Pick a character:</strong>
-    <ToggleGroup
-      selected={props.selectedCharacter}
-      onChange={props.onChange}
-    >
-      <button value={ALICE_VIEW}><FontAwesome icon="user"/> Alice</button>
-      <button value={EVE_VIEW}><FontAwesome icon="user-secret"/> Eve</button>
-      <button value={BOB_VIEW}><FontAwesome icon="user"/> Bob</button>
-      <button value={ALL_VIEW}><FontAwesome icon="users"/> All</button>
+    <ToggleGroup selected={props.selectedCharacter} onChange={props.onChange}>
+      <button value={ALICE_VIEW}>
+        <FontAwesome icon="user" /> Alice
+      </button>
+      <button value={EVE_VIEW}>
+        <FontAwesome icon="user-secret" /> Eve
+      </button>
+      <button value={BOB_VIEW}>
+        <FontAwesome icon="user" /> Bob
+      </button>
+      <button value={ALL_VIEW}>
+        <FontAwesome icon="users" /> All
+      </button>
     </ToggleGroup>
   </span>
 );

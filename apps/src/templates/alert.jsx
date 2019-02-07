@@ -9,11 +9,11 @@ import {valueOr} from '../utils';
 export default class Alert extends React.Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
-    type: PropTypes.oneOf(["error", "warning", "notification"]).isRequired,
+    type: PropTypes.oneOf(['error', 'warning', 'notification']).isRequired,
     onClose: PropTypes.func.isRequired,
     closeDelayMillis: PropTypes.number,
     sideMargin: PropTypes.number,
-    childPadding: PropTypes.string,
+    childPadding: PropTypes.string
   };
 
   render() {
@@ -23,7 +23,7 @@ export default class Alert extends React.Component {
         zIndex: 1000,
         marginTop: 20,
         marginLeft: valueOr(this.props.sideMargin, 50),
-        marginRight: valueOr(this.props.sideMargin, 50),
+        marginRight: valueOr(this.props.sideMargin, 50)
       },
       typeSpecific: {
         error: {
@@ -40,7 +40,7 @@ export default class Alert extends React.Component {
           borderColor: color.light_green,
           backgroundColor: color.lighter_green,
           color: color.realgreen
-        },
+        }
       },
       child: {
         // from bootstrap's alert
@@ -48,7 +48,7 @@ export default class Alert extends React.Component {
         marginBottom: 20,
         textShadoow: '0 1px 0 rgba(255, 255, 255, 0.5)',
         border: '1px solid',
-        borderRadius: 4,
+        borderRadius: 4
       },
       closeButton: {
         margin: 0,
@@ -71,15 +71,19 @@ export default class Alert extends React.Component {
       }
     };
 
-    const childStyle = {...styles.child, ...(styles.typeSpecific[this.props.type])};
+    const childStyle = {
+      ...styles.child,
+      ...styles.typeSpecific[this.props.type]
+    };
     let closeButton = '';
     if (this.props.closeDelayMillis) {
       setTimeout(this.props.onClose, this.props.closeDelayMillis);
     } else {
       closeButton = (
-          <button style={styles.closeButton} onClick={this.props.onClose}>
-            <span>&times;</span>
-          </button>);
+        <button style={styles.closeButton} onClick={this.props.onClose}>
+          <span>&times;</span>
+        </button>
+      );
     }
 
     return (

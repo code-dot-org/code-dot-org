@@ -3,13 +3,13 @@ import {assert} from '../../util/configuredChai';
 var Token = require('@cdo/apps/calc/token');
 var jsnums = require('@code-dot-org/js-numbers');
 
-describe('Token', function () {
-  it('handles repeated decimals properly', function () {
+describe('Token', function() {
+  it('handles repeated decimals properly', function() {
     function createJsnum(num, denom) {
       var n = jsnums.makeFloat(num).toExact();
       var d = jsnums.makeFloat(denom).toExact();
       var val = jsnums.divide(n, d);
-      if (typeof(val) === 'number') {
+      if (typeof val === 'number') {
         val = jsnums.makeFloat(val);
       }
       return val;
@@ -36,20 +36,20 @@ describe('Token', function () {
     validateFromNumeratorDenominator(7, 3, '2.', '3');
     validateFromNumeratorDenominator(1, 0.9, '1.', '1');
 
-    validate(jsnums.makeFloat(0.25), "0.25", null);
+    validate(jsnums.makeFloat(0.25), '0.25', null);
   });
 
-  it('can convert a number to a string with commas', function () {
-    assert.equal(Token.numberWithCommas_(1), "1");
-    assert.equal(Token.numberWithCommas_(100), "100");
-    assert.equal(Token.numberWithCommas_(1000), "1,000");
-    assert.equal(Token.numberWithCommas_(10000), "10,000");
-    assert.equal(Token.numberWithCommas_(1000000), "1,000,000");
+  it('can convert a number to a string with commas', function() {
+    assert.equal(Token.numberWithCommas_(1), '1');
+    assert.equal(Token.numberWithCommas_(100), '100');
+    assert.equal(Token.numberWithCommas_(1000), '1,000');
+    assert.equal(Token.numberWithCommas_(10000), '10,000');
+    assert.equal(Token.numberWithCommas_(1000000), '1,000,000');
 
-    assert.equal(Token.numberWithCommas_(1.123), "1.123");
-    assert.equal(Token.numberWithCommas_(100.123), "100.123");
-    assert.equal(Token.numberWithCommas_(1000.123), "1,000.123");
-    assert.equal(Token.numberWithCommas_(10000.123), "10,000.123");
-    assert.equal(Token.numberWithCommas_(1000000.123), "1,000,000.123");
+    assert.equal(Token.numberWithCommas_(1.123), '1.123');
+    assert.equal(Token.numberWithCommas_(100.123), '100.123');
+    assert.equal(Token.numberWithCommas_(1000.123), '1,000.123');
+    assert.equal(Token.numberWithCommas_(10000.123), '10,000.123');
+    assert.equal(Token.numberWithCommas_(1000000.123), '1,000,000.123');
   });
 });

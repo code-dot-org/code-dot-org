@@ -7,7 +7,7 @@ import AssetRow from './AssetRow';
 import assetListStore from '../assets/assetListStore';
 import AudioRecorder from './AudioRecorder';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import AddAssetButtonRow from "./AddAssetButtonRow";
+import AddAssetButtonRow from './AddAssetButtonRow';
 import i18n from '@cdo/locale';
 
 export const AudioErrorType = {
@@ -24,8 +24,9 @@ const errorMessages = {
   unknown: 'An unknown error occurred.'
 };
 
-const errorUploadDisabled = "This project has been reported for abusive content, " +
-  "so uploading new assets is disabled.";
+const errorUploadDisabled =
+  'This project has been reported for abusive content, ' +
+  'so uploading new assets is disabled.';
 
 function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
@@ -86,10 +87,12 @@ export default class AssetManager extends React.Component {
    * current list of assets.
    * @param result
    */
-  onAssetListReceived = (result) => {
+  onAssetListReceived = result => {
     assetListStore.reset(result.files);
     if (this._isMounted) {
-      this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
+      this.setState({
+        assets: assetListStore.list(this.props.allowedExtensions)
+      });
     }
   };
 
@@ -98,20 +101,21 @@ export default class AssetManager extends React.Component {
    * when loading the current list of assets.
    * @param xhr
    */
-  onAssetListFailure = (xhr) => {
+  onAssetListFailure = xhr => {
     if (this._isMounted) {
       this.setState({
-        statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
+        statusMessage:
+          'Error loading asset list: ' + getErrorMessage(xhr.status)
       });
     }
   };
 
-  onUploadStart = (data) => {
+  onUploadStart = data => {
     this.setState({statusMessage: 'Uploading...'});
     data.submit();
   };
 
-  onUploadDone = (result) => {
+  onUploadDone = result => {
     assetListStore.add(result);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
@@ -122,43 +126,41 @@ export default class AssetManager extends React.Component {
     });
   };
 
-  onUploadError = (status) => {
-    this.setState({statusMessage: 'Error uploading file: ' +
-      getErrorMessage(status)});
-    firehoseClient.putRecord(
-      {
-        study: 'project-data-integrity',
-        study_group: 'v4',
-        event: 'asset-upload-error',
-        project_id: this.props.projectId,
-        data_int: status
-      },
-    );
+  onUploadError = status => {
+    this.setState({
+      statusMessage: 'Error uploading file: ' + getErrorMessage(status)
+    });
+    firehoseClient.putRecord({
+      study: 'project-data-integrity',
+      study_group: 'v4',
+      event: 'asset-upload-error',
+      project_id: this.props.projectId,
+      data_int: status
+    });
   };
 
   onSelectRecord = () => {
     this.setState({recordingAudio: true});
   };
 
-  deleteAssetRow = (name) => {
+  deleteAssetRow = name => {
     assetListStore.remove(name);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
-    firehoseClient.putRecord(
-      {
-        study: 'delete-asset',
-        study_group: this.props.assetChosen && typeof this.props.assetChosen === 'function' ? 'choose-assets' : 'manage-assets',
-        event: 'confirm',
-        project_id: this.props.projectId,
-        data_json: JSON.stringify(
-          {
-            assetName: name,
-            elementId: this.props.elementId
-          }
-        )
-      }
-    );
+    firehoseClient.putRecord({
+      study: 'delete-asset',
+      study_group:
+        this.props.assetChosen && typeof this.props.assetChosen === 'function'
+          ? 'choose-assets'
+          : 'manage-assets',
+      event: 'confirm',
+      project_id: this.props.projectId,
+      data_json: JSON.stringify({
+        assetName: name,
+        elementId: this.props.elementId
+      })
+    });
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
@@ -166,23 +168,29 @@ export default class AssetManager extends React.Component {
     });
   };
 
-  afterAudioSaved = (err) => {
+  afterAudioSaved = err => {
     this.setState({recordingAudio: false, audioErrorType: err});
   };
 
   render() {
-    const displayAudioRecorder = this.state.audioErrorType !== AudioErrorType.INITIALIZE && this.state.recordingAudio;
+    const displayAudioRecorder =
+      this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
+      this.state.recordingAudio;
     const buttons = (
       <div>
-        {this.state.audioErrorType === AudioErrorType.SAVE &&
+        {this.state.audioErrorType === AudioErrorType.SAVE && (
           <div>{i18n.audioSaveError()}</div>
-        }
-        {this.state.audioErrorType === AudioErrorType.INITIALIZE &&
+        )}
+        {this.state.audioErrorType === AudioErrorType.INITIALIZE && (
           <div>{i18n.audioInitializeError()}</div>
-        }
-        {displayAudioRecorder &&
-          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved} imagePicker={this.props.imagePicker}/>
-        }
+        )}
+        {displayAudioRecorder && (
+          <AudioRecorder
+            onUploadDone={this.onUploadDone}
+            afterAudioSaved={this.afterAudioSaved}
+            imagePicker={this.props.imagePicker}
+          />
+        )}
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
@@ -205,54 +213,63 @@ export default class AssetManager extends React.Component {
     if (this.state.assets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
     } else if (this.state.assets.length === 0) {
-      const emptyText = this.props.allowedExtensions === '.mp3'?
-        (<div>
-          <div>Go to the "Sound library" to find sounds for your project.</div>
-          <div>To upload your own sound, click "Upload File." Your uploaded assets will appear here.</div>
-          </div>)
-        : ('Your assets will appear here. Click "Upload File" to add a new asset for this project.');
+      const emptyText =
+        this.props.allowedExtensions === '.mp3' ? (
+          <div>
+            <div>
+              Go to the "Sound library" to find sounds for your project.
+            </div>
+            <div>
+              To upload your own sound, click "Upload File." Your uploaded
+              assets will appear here.
+            </div>
+          </div>
+        ) : (
+          'Your assets will appear here. Click "Upload File" to add a new asset for this project.'
+        );
       assetList = (
         <div>
-          <div style={styles.emptyText}>
-            {emptyText}
-          </div>
+          <div style={styles.emptyText}>{emptyText}</div>
           {buttons}
         </div>
       );
     } else {
-      const rows = this.state.assets.map(function (asset) {
-        const choose = this.props.assetChosen && this.props.assetChosen.bind(this,
-            asset.filename);
+      const rows = this.state.assets.map(
+        function(asset) {
+          const choose =
+            this.props.assetChosen &&
+            this.props.assetChosen.bind(this, asset.filename);
 
-        return (
-          <AssetRow
-            key={asset.filename}
-            name={asset.filename}
-            timestamp={asset.timestamp}
-            type={asset.category}
-            size={asset.size}
-            useFilesApi={this.props.useFilesApi}
-            onChoose={choose}
-            onDelete={this.deleteAssetRow.bind(this, asset.filename)}
-            soundPlayer={this.props.soundPlayer}
-            imagePicker={this.props.imagePicker}
-            projectId={this.props.projectId}
-            elementId={this.props.elementId}
-          />
-        );
-      }.bind(this));
+          return (
+            <AssetRow
+              key={asset.filename}
+              name={asset.filename}
+              timestamp={asset.timestamp}
+              type={asset.category}
+              size={asset.size}
+              useFilesApi={this.props.useFilesApi}
+              onChoose={choose}
+              onDelete={this.deleteAssetRow.bind(this, asset.filename)}
+              soundPlayer={this.props.soundPlayer}
+              imagePicker={this.props.imagePicker}
+              projectId={this.props.projectId}
+              elementId={this.props.elementId}
+            />
+          );
+        }.bind(this)
+      );
 
       assetList = (
         <div>
-          <div style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0'}}>
+          <div
+            style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0'}}
+          >
             <table style={{width: '100%'}}>
-              <tbody>
-                {rows}
-              </tbody>
+              <tbody>{rows}</tbody>
             </table>
           </div>
           {buttons}

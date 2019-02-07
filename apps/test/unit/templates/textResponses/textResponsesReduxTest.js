@@ -74,7 +74,7 @@ describe('textResponsesRedux', () => {
             id: 2,
             name: 'Student 2'
           }
-        },
+        }
       ];
       const expectedTextResponses = [
         {
@@ -88,10 +88,12 @@ describe('textResponsesRedux', () => {
           response: 'Response 2',
           studentId: 2,
           studentName: 'Student 2'
-        },
+        }
       ];
 
-      const convertedTextResponses = convertTextResponseServerData(serverTextResponses);
+      const convertedTextResponses = convertTextResponseServerData(
+        serverTextResponses
+      );
       assert.deepEqual(convertedTextResponses, expectedTextResponses);
     });
   });

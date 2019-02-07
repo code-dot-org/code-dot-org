@@ -22,9 +22,7 @@ class AnimationJsonViewer extends React.Component {
     return (
       <Dialog isOpen={this.props.isOpen} handleClose={this.props.handleClose}>
         <Body>
-          <pre style={style.pre}>
-            {this.props.content}
-          </pre>
+          <pre style={style.pre}>{this.props.content}</pre>
         </Body>
       </Dialog>
     );

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from './FontAwesome';
-import color from "../util/color";
+import color from '../util/color';
 import {makeEnum} from '@cdo/apps/utils';
 
 const styles = {
@@ -18,19 +18,19 @@ const styles = {
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginLeft: 8,
+    marginLeft: 8
   },
   chevronRtl: {
     display: 'inline',
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginRight: 8,
+    marginRight: 8
   },
   linkBox: {
     display: 'block',
     textDecoration: 'none'
-  },
+  }
 };
 
 const ChevronSide = makeEnum('left', 'right');
@@ -40,12 +40,12 @@ export default class SmallChevronLink extends Component {
     linkText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    chevronSide: PropTypes.oneOf(Object.values(ChevronSide)),
+    chevronSide: PropTypes.oneOf(Object.values(ChevronSide))
   };
 
   renderChevron = () => {
     const {isRtl} = this.props;
-    const icon = isRtl ? "chevron-left" : "chevron-right";
+    const icon = isRtl ? 'chevron-left' : 'chevron-right';
 
     return (
       <FontAwesome
@@ -61,15 +61,10 @@ export default class SmallChevronLink extends Component {
     return (
       <div style={styles.linkBox}>
         <a href={link} style={styles.link}>
-          {chevronSide === ChevronSide.left &&
-            this.renderChevron()
-          }
-          <h3 style={styles.link}>
-            {linkText}
-          </h3>
+          {chevronSide === ChevronSide.left && this.renderChevron()}
+          <h3 style={styles.link}>{linkText}</h3>
           {(!chevronSide || chevronSide === ChevronSide.right) &&
-            this.renderChevron()
-          }
+            this.renderChevron()}
         </a>
       </div>
     );

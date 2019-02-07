@@ -1,13 +1,10 @@
 /**
  * Displays nicely-formatted session time for a workshop.
-*/
+ */
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import {
-  TIME_FORMAT,
-  DATETIME_FORMAT
-} from '../workshopConstants';
+import {TIME_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
 
 export default class SessionTime extends React.Component {
   static propTypes = {
@@ -18,8 +15,10 @@ export default class SessionTime extends React.Component {
   };
 
   render() {
-    const formattedTime = moment.utc(this.props.session.start).format(DATETIME_FORMAT) +
-      '-' + moment.utc(this.props.session.end).format(TIME_FORMAT);
+    const formattedTime =
+      moment.utc(this.props.session.start).format(DATETIME_FORMAT) +
+      '-' +
+      moment.utc(this.props.session.end).format(TIME_FORMAT);
 
     return <div>{formattedTime}</div>;
   }

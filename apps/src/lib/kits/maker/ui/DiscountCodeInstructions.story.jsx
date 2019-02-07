@@ -7,7 +7,8 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Full Discount',
-        description: 'Discount Code Instructions when qualified for a full discount',
+        description:
+          'Discount Code Instructions when qualified for a full discount',
         story: () => (
           <DiscountCodeInstructions
             discountCode="123abc"

@@ -48,9 +48,7 @@ describe('ShareWarningsDialog', () => {
     expect(shareWarnings).to.containMatchingElement(
       <div>
         {commonMsg.shareWarningsStoreDataBeforeHighlight()}
-        <span>
-          {commonMsg.shareWarningsStoreDataHighlight()}
-        </span>
+        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
         {commonMsg.shareWarningsStoreDataAfterHighlight()}
       </div>
     );
@@ -81,9 +79,7 @@ describe('ShareWarningsDialog', () => {
     expect(shareWarnings).to.containMatchingElement(
       <div>
         {commonMsg.shareWarningsStoreDataBeforeHighlight()}
-        <span>
-          {commonMsg.shareWarningsStoreDataHighlight()}
-        </span>
+        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
         {commonMsg.shareWarningsStoreDataAfterHighlight()}
       </div>
     );
@@ -116,9 +112,7 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>
-        {commonMsg.dialogOK()}
-      </button>
+      <button>{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     dialog.find('button').simulate('click');
@@ -139,9 +133,7 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>
-        {commonMsg.dialogOK()}
-      </button>
+      <button>{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     dialog.find('button').simulate('click');
@@ -162,16 +154,14 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>
-        {commonMsg.dialogOK()}
-      </button>
+      <button>{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     const ageDropdown = dialog.find('AgeDropdown');
     const select = ageDropdown.find('select');
     const selectDOMNode = select.getDOMNode();
     selectDOMNode.value = '15';
-    select.simulate('change', { target: selectDOMNode });
+    select.simulate('change', {target: selectDOMNode});
     dialog.find('button').simulate('click');
     expect(closeSpy).to.have.been.called;
     expect(tooYoungSpy).not.to.have.been.called;
@@ -191,9 +181,7 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>
-        {commonMsg.dialogOK()}
-      </button>
+      <button>{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     expect(tooYoungSpy).not.to.have.been.called;
@@ -201,11 +189,10 @@ describe('ShareWarningsDialog', () => {
     const select = ageDropdown.find('select');
     const selectDOMNode = select.getDOMNode();
     selectDOMNode.value = '10';
-    select.simulate('change', { target: selectDOMNode });
+    select.simulate('change', {target: selectDOMNode});
     dialog.find('button').simulate('click');
     expect(tooYoungSpy).to.have.been.called;
     expect(closeSpy).not.to.have.been.called;
     expect(dialog.state('modalIsOpen')).to.be.false;
   });
-
 });

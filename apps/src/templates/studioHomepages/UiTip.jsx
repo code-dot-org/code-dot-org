@@ -15,7 +15,7 @@ export default class UiTip extends React.Component {
   };
 
   render() {
-    const { position, text, arrowDirection } = this.props;
+    const {position, text, arrowDirection} = this.props;
     return (
       <div>
         <div
@@ -23,12 +23,10 @@ export default class UiTip extends React.Component {
           onClick={this.closeClicked}
           style={position}
         >
-          <div style={{textAlign: "right"}}>
-            <i className="fa fa-times"/>
+          <div style={{textAlign: 'right'}}>
+            <i className="fa fa-times" />
           </div>
-          <div>
-            {text}
-          </div>
+          <div>{text}</div>
         </div>
       </div>
     );

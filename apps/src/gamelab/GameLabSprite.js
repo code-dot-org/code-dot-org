@@ -1,14 +1,14 @@
 var jsInterpreter;
-module.exports.injectJSInterpreter = function (jsi) {
+module.exports.injectJSInterpreter = function(jsi) {
   jsInterpreter = jsi;
 };
 
 var createWithDebug;
-module.exports.setCreateWithDebug = function (debug) {
+module.exports.setCreateWithDebug = function(debug) {
   createWithDebug = debug;
 };
 
-module.exports.createSprite = function (x, y, width, height) {
+module.exports.createSprite = function(x, y, width, height) {
   /*
    * Copied code from p5play from createSprite()
    *
@@ -41,7 +41,7 @@ module.exports.createSprite = function (x, y, width, height) {
   s.displace = displace;
   s.bounce = bounce;
 
-  s.depth = this.allSprites.maxDepth()+1;
+  s.depth = this.allSprites.maxDepth() + 1;
   this.allSprites.add(s);
 
   return s;
@@ -59,7 +59,7 @@ function createGroupState(type, target, callback) {
       if (!state.__subState) {
         // Before we call _collideWith (another stateful function), hang a __subState
         // off of state, so it can use that instead to track its state:
-        state.__subState = { doneExec_: true };
+        state.__subState = {doneExec_: true};
       }
       var didTouch = this._collideWith(type, target[state.__i], callback);
       if (state.__subState.doneExec_) {
@@ -125,7 +125,7 @@ function bounceOff(target, callback) {
  * Copied code from p5play from Sprite() with targeted modifications that
  * use the additional state parameter to be compatible with the interpreter.
  */
-var _collideWith = function (p5Inst, type, target, callback) {
+var _collideWith = function(p5Inst, type, target, callback) {
   if (this.removed) {
     return false;
   }
@@ -165,7 +165,7 @@ var _collideWith = function (p5Inst, type, target, callback) {
         state.__others = target;
       }
     } else {
-      throw('Error: overlap can only be checked between sprites or groups');
+      throw 'Error: overlap can only be checked between sprites or groups';
     }
   } else {
     state.__i++;
@@ -174,9 +174,11 @@ var _collideWith = function (p5Inst, type, target, callback) {
   // Second half of this method: Check collision with _next_ Sprite in
   // state.__others and call callback if overlap happened.
   if (state.__i < state.__others.length) {
-    state.__result = this._collideWithOne(type, state.__others[state.__i], callback) || state.__result;
+    state.__result =
+      this._collideWithOne(type, state.__others[state.__i], callback) ||
+      state.__result;
     // Not done, unless we're on the last item in __others:
-    state.doneExec_ = state.__i >= (state.__others.length - 1);
+    state.doneExec_ = state.__i >= state.__others.length - 1;
   } else {
     state.doneExec_ = true;
   }
@@ -232,21 +234,23 @@ function _collideWithOne(p5Inst, type, other, callback) {
     return false;
   }
 
-  if (displacement.x > 0)
-    this.touching.left = true;
-  if (displacement.x < 0)
-    this.touching.right = true;
-  if (displacement.y < 0)
-    this.touching.bottom = true;
-  if (displacement.y > 0)
-    this.touching.top = true;
+  if (displacement.x > 0) this.touching.left = true;
+  if (displacement.x < 0) this.touching.right = true;
+  if (displacement.y < 0) this.touching.bottom = true;
+  if (displacement.y > 0) this.touching.top = true;
 
   // Apply displacement out of collision
   if (type === 'displace' && !other.immovable) {
     other.position.sub(displacement);
-  } else if ((type === 'collide' || type === 'bounce' || type === 'bounceOff') && !this.immovable) {
+  } else if (
+    (type === 'collide' || type === 'bounce' || type === 'bounceOff') &&
+    !this.immovable
+  ) {
     this.position.add(displacement);
-    this.previousPosition = p5Inst.createVector(this.position.x, this.position.y);
+    this.previousPosition = p5Inst.createVector(
+      this.position.x,
+      this.position.y
+    );
     this.newPosition = p5Inst.createVector(this.position.x, this.position.y);
     this.collider.updateFromSprite(this);
   }
@@ -295,11 +299,17 @@ function _collideWithOne(p5Inst, type, other, callback) {
       p5.Vector.mult(thisInitialVelocity, thisMass),
       p5.Vector.mult(otherInitialVelocity, otherMass)
     );
-    var thisFinalVelocity = p5.Vector.sub(otherInitialVelocity, thisInitialVelocity)
+    var thisFinalVelocity = p5.Vector.sub(
+      otherInitialVelocity,
+      thisInitialVelocity
+    )
       .mult(otherMass * coefficientOfRestitution)
       .add(initialMomentum)
       .div(combinedMass);
-    var otherFinalVelocity = p5.Vector.sub(thisInitialVelocity, otherInitialVelocity)
+    var otherFinalVelocity = p5.Vector.sub(
+      thisInitialVelocity,
+      otherInitialVelocity
+    )
       .mult(thisMass * coefficientOfRestitution)
       .add(initialMomentum)
       .div(combinedMass);

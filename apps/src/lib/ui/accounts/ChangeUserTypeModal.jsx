@@ -20,19 +20,19 @@ export default class ChangeUserTypeModal extends React.Component {
     /**
      * @type {function()}
      */
-    handleCancel: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired
   };
 
   state = {
     saveState: STATE_INITIAL,
     values: {
       email: '',
-      emailOptIn: '',
+      emailOptIn: ''
     },
     serverErrors: {
       email: undefined,
-      emailOptIn: undefined,
-    },
+      emailOptIn: undefined
+    }
   };
 
   save = () => {
@@ -44,18 +44,20 @@ export default class ChangeUserTypeModal extends React.Component {
 
     const {values} = this.state;
     this.setState({saveState: STATE_SAVING});
-    this.props.handleSubmit(values)
-      .catch(this.onSubmitFailure);
+    this.props.handleSubmit(values).catch(this.onSubmitFailure);
   };
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitFailure = (error) => {
+  onSubmitFailure = error => {
     if (error && error.hasOwnProperty('serverErrors')) {
-      this.setState({
-        saveState: STATE_INITIAL,
-        serverErrors: error.serverErrors,
-      }, () => this.changeUserTypeForm.focusOnAnError());
+      this.setState(
+        {
+          saveState: STATE_INITIAL,
+          serverErrors: error.serverErrors
+        },
+        () => this.changeUserTypeForm.focusOnAnError()
+      );
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
     }
@@ -69,7 +71,7 @@ export default class ChangeUserTypeModal extends React.Component {
     const {serverErrors} = this.state;
     return {
       email: serverErrors.email || this.getEmailValidationError(),
-      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError(),
+      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError()
     };
   }
 
@@ -92,10 +94,10 @@ export default class ChangeUserTypeModal extends React.Component {
     return null;
   };
 
-  onFormChange = (newValues) => {
+  onFormChange = newValues => {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
-    ['email', 'emailOptIn'].forEach((fieldName) => {
+    ['email', 'emailOptIn'].forEach(fieldName => {
       if (newValues[fieldName] !== oldValues[fieldName]) {
         newServerErrors[fieldName] = undefined;
       }
@@ -118,9 +120,9 @@ export default class ChangeUserTypeModal extends React.Component {
         uncloseable={STATE_SAVING === saveState}
       >
         <div style={styles.container}>
-          <Header text={i18n.changeUserTypeModal_title()}/>
+          <Header text={i18n.changeUserTypeModal_title()} />
           <ChangeUserTypeForm
-            ref={x => this.changeUserTypeForm = x}
+            ref={x => (this.changeUserTypeForm = x)}
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
@@ -135,10 +137,10 @@ export default class ChangeUserTypeModal extends React.Component {
             disableCancel={STATE_SAVING === saveState}
             tabIndex="2"
           >
-            {(STATE_SAVING === saveState) &&
-              <em>{i18n.saving()}</em>}
-            {(STATE_UNKNOWN_ERROR === saveState) &&
-              <em>{i18n.changeUserTypeModal_unexpectedError()}</em>}
+            {STATE_SAVING === saveState && <em>{i18n.saving()}</em>}
+            {STATE_UNKNOWN_ERROR === saveState && (
+              <em>{i18n.changeUserTypeModal_unexpectedError()}</em>
+            )}
           </ConfirmCancelFooter>
         </div>
       </BaseDialog>
@@ -149,6 +151,6 @@ export default class ChangeUserTypeModal extends React.Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal,
+    color: color.charcoal
   }
 };

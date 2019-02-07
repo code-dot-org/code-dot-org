@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from '@cdo/locale';
@@ -13,7 +13,7 @@ class PersonalProjectsPublishedCell extends Component {
     isPublished: PropTypes.bool.isRequired,
     isPublishable: PropTypes.bool.isRequired,
     showPublishDialog: PropTypes.func.isRequired,
-    unpublishProject: PropTypes.func.isRequired,
+    unpublishProject: PropTypes.func.isRequired
   };
 
   onPublish = () => {
@@ -31,32 +31,35 @@ class PersonalProjectsPublishedCell extends Component {
 
     return (
       <div>
-        {showPublishButton &&
+        {showPublishButton && (
           <Button
             onClick={this.onPublish}
             color={Button.ButtonColor.gray}
             text={i18n.publish()}
             className="ui-personal-projects-publish-button"
           />
-        }
-        {showUnpublishButton &&
+        )}
+        {showUnpublishButton && (
           <Button
             onClick={this.onUnpublish}
             color={Button.ButtonColor.gray}
             text={i18n.unpublish()}
             className="ui-personal-projects-unpublish-button"
           />
-        }
+        )}
       </div>
     );
   }
 }
 
-export default connect(state => ({}), dispatch => ({
-  showPublishDialog(projectId, projectType) {
-    dispatch(showPublishDialog(projectId, projectType));
-  },
-  unpublishProject(projectId) {
-    dispatch(unpublishProject(projectId));
-  },
-}))(PersonalProjectsPublishedCell);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    showPublishDialog(projectId, projectType) {
+      dispatch(showPublishDialog(projectId, projectType));
+    },
+    unpublishProject(projectId) {
+      dispatch(unpublishProject(projectId));
+    }
+  })
+)(PersonalProjectsPublishedCell);

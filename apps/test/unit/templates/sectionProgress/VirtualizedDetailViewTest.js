@@ -3,7 +3,12 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedVirtualizedDetailView} from '@cdo/apps/templates/sectionProgress/VirtualizedDetailView';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 
 const studentData = [
@@ -33,14 +38,12 @@ describe('VirtualizedSummaryView', () => {
         stages: [
           {
             id: 456,
-            levels: [
-              {id: 789}
-            ],
+            levels: [{id: 789}]
           }
         ]
       },
       columnWidths: [150, 100],
-      setLessonOfInterest: () => {},
+      setLessonOfInterest: () => {}
     };
   });
 
@@ -50,9 +53,7 @@ describe('VirtualizedSummaryView', () => {
 
   it('renders a MultiGrid', () => {
     const wrapper = shallow(
-      <UnconnectedVirtualizedDetailView
-        {...defaultProps}
-      />
+      <UnconnectedVirtualizedDetailView {...defaultProps} />
     );
     expect(wrapper.find('MultiGrid').exists()).to.be.true;
   });
@@ -60,9 +61,7 @@ describe('VirtualizedSummaryView', () => {
   it('renders a SectionProgressNameCell for each student', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
-        <UnconnectedVirtualizedDetailView
-          {...defaultProps}
-        />
+        <UnconnectedVirtualizedDetailView {...defaultProps} />
       </Provider>
     );
     const studentNames = wrapper.find('SectionProgressNameCell');
@@ -74,9 +73,7 @@ describe('VirtualizedSummaryView', () => {
   it('renders a detail progress cell for each stage for each student', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
-        <UnconnectedVirtualizedDetailView
-          {...defaultProps}
-        />
+        <UnconnectedVirtualizedDetailView {...defaultProps} />
       </Provider>
     );
     expect(wrapper.find('StudentProgressDetailCell')).to.have.length(3);

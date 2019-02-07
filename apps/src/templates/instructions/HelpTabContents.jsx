@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
 import NetworkResourceLink from './NetworkResourceLink';
 
 const styles = {
   referenceArea: {
-    marginTop: 20,
-  },
+    marginTop: 20
+  }
 };
 
 export default class HelpTabContents extends Component {
@@ -20,27 +20,20 @@ export default class HelpTabContents extends Component {
   render() {
     return (
       <div style={styles.referenceArea}>
-        {this.props.videoData &&
-          <VideoThumbnail
-            video={this.props.videoData}
-          />
-        }
-        {this.props.mapReference &&
+        {this.props.videoData && (
+          <VideoThumbnail video={this.props.videoData} />
+        )}
+        {this.props.mapReference && (
           <NetworkResourceLink
             highlight
             icon="map"
             reference={this.props.mapReference}
           />
-        }
+        )}
         {this.props.referenceLinks &&
           this.props.referenceLinks.map((link, index) => (
-            <NetworkResourceLink
-              key={index}
-              icon="book"
-              reference={link}
-            />
-          ))
-        }
+            <NetworkResourceLink key={index} icon="book" reference={link} />
+          ))}
       </div>
     );
   }

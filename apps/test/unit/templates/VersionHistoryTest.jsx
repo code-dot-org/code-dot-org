@@ -13,20 +13,18 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
 const FAKE_VERSION_LIST_RESPONSE = {
-  responseText: JSON.stringify(
-    [
-      {
-        versionId: FAKE_CURRENT_VERSION,
-        lastModified: new Date('2018-08-01T03:00:00'),
-        isLatest: true,
-      },
-      {
-        versionId: FAKE_PREVIOUS_VERSION,
-        lastModified: new Date('2018-07-31T02:00:00'),
-        isLatest: false,
-      }
-    ]
-  )
+  responseText: JSON.stringify([
+    {
+      versionId: FAKE_CURRENT_VERSION,
+      lastModified: new Date('2018-08-01T03:00:00'),
+      isLatest: true
+    },
+    {
+      versionId: FAKE_PREVIOUS_VERSION,
+      lastModified: new Date('2018-07-31T02:00:00'),
+      isLatest: false
+    }
+  ])
 };
 
 describe('VersionHistory', () => {
@@ -66,11 +64,14 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         useFilesApi: false
       },
-      finishVersionHistoryLoad: () => sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE),
+      finishVersionHistoryLoad: () =>
+        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE),
       failVersionHistoryLoad: () => sourcesApi.ajax.firstCall.args[3](),
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
-      finishRestoreVersion: () => sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
-      failRestoreVersion: () => sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
+      finishRestoreVersion: () =>
+        sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
+      failRestoreVersion: () =>
+        sourcesApi.restorePreviousFileVersion.firstCall.args[3]()
     });
   });
 
@@ -90,11 +91,17 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         useFilesApi: true
       },
-      finishVersionHistoryLoad: () => filesApi.getVersionHistory.firstCall.args[0](FAKE_VERSION_LIST_RESPONSE),
-      failVersionHistoryLoad: () => filesApi.getVersionHistory.firstCall.args[1](),
+      finishVersionHistoryLoad: () =>
+        filesApi.getVersionHistory.firstCall.args[0](
+          FAKE_VERSION_LIST_RESPONSE
+        ),
+      failVersionHistoryLoad: () =>
+        filesApi.getVersionHistory.firstCall.args[1](),
       restoreSpy: () => filesApi.restorePreviousVersion,
-      finishRestoreVersion: () => filesApi.restorePreviousVersion.firstCall.args[1](),
-      failRestoreVersion: () => filesApi.restorePreviousVersion.firstCall.args[2](),
+      finishRestoreVersion: () =>
+        filesApi.restorePreviousVersion.firstCall.args[1](),
+      failRestoreVersion: () =>
+        filesApi.restorePreviousVersion.firstCall.args[2]()
     });
   });
 
@@ -107,32 +114,26 @@ describe('VersionHistory', () => {
     failRestoreVersion
   }) {
     it('renders loading spinner at first', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       expect(wrapper).to.containMatchingElement(
-        <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}/>
+        <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
       );
     });
 
     it('renders an error on failed version history load', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       failVersionHistoryLoad();
       expect(wrapper).to.contain.text('An error occurred.');
     });
 
     it('renders a version list on successful version history load', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       // Call third argument, the success handler
       finishVersionHistoryLoad();
 
       // Spinner goes away
       expect(wrapper).not.to.containMatchingElement(
-        <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}/>
+        <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
       );
 
       // Rendered two version rows
@@ -140,33 +141,36 @@ describe('VersionHistory', () => {
     });
 
     it('attempts to restore a chosen version when clicking restore button', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
-      wrapper.find('.btn-info').first().simulate('click');
+      wrapper
+        .find('.btn-info')
+        .first()
+        .simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('.btn-info').first().simulate('click');
+      wrapper
+        .find('.btn-info')
+        .first()
+        .simulate('click');
 
       failRestoreVersion();
       expect(wrapper).to.contain.text('An error occurred.');
     });
 
     it('reloads the page on successful restore', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('.btn-info').first().simulate('click');
+      wrapper
+        .find('.btn-info')
+        .first()
+        .simulate('click');
       expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();
@@ -174,9 +178,7 @@ describe('VersionHistory', () => {
     });
 
     it('shows a confirmation after clicking Start Over', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
 
       // Click "Start Over"
@@ -193,9 +195,7 @@ describe('VersionHistory', () => {
     });
 
     it('goes back to version list after cancelling Start Over', () => {
-      wrapper = mount(
-        <VersionHistory {...props}/>
-      );
+      wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
 
       // Click "Start Over"
@@ -223,17 +223,16 @@ describe('VersionHistory', () => {
       beforeEach(() => {
         sinon.stub(firehoseClient, 'putRecord');
         sinon.stub(project, 'getCurrentId').returns('fake-project-id');
-        sinon.stub(project, 'getCurrentSourceVersionId').returns(FAKE_CURRENT_VERSION);
+        sinon
+          .stub(project, 'getCurrentSourceVersionId')
+          .returns(FAKE_CURRENT_VERSION);
         sinon.stub(project, 'getShareUrl').returns('fake-share-url');
         sinon.stub(project, 'isOwner').returns(true);
         sinon.stub(project, 'save');
 
         handleClearPuzzle = sinon.stub().returns(Promise.resolve());
         wrapper = mount(
-          <VersionHistory
-            {...props}
-            handleClearPuzzle={handleClearPuzzle}
-          />
+          <VersionHistory {...props} handleClearPuzzle={handleClearPuzzle} />
         );
         finishVersionHistoryLoad();
         wrapper.find('.btn-danger').simulate('click');
@@ -252,7 +251,7 @@ describe('VersionHistory', () => {
 
       it('immediately renders spinner', () => {
         expect(wrapper).to.containMatchingElement(
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}/>
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         );
       });
 
@@ -267,8 +266,8 @@ describe('VersionHistory', () => {
               isOwner: true,
               currentUrl: window.location.href,
               shareUrl: 'fake-share-url',
-              currentSourceVersionId: FAKE_CURRENT_VERSION,
-            }),
+              currentSourceVersionId: FAKE_CURRENT_VERSION
+            })
           },
           {includeUserId: true}
         );
@@ -292,7 +291,7 @@ describe('VersionHistory', () => {
 });
 
 async function wasCalled(spy) {
-  await new Promise((resolve) => {
+  await new Promise(resolve => {
     const interval = setInterval(() => {
       if (spy.callCount > 0) {
         clearInterval(interval);

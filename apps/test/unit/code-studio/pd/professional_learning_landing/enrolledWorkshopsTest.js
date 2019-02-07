@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
 import {expect} from 'chai';
 
-describe("Tests for the upcoming workshops page", () => {
+describe('Tests for the upcoming workshops page', () => {
   const workshops = [
     {
       id: 1,
@@ -58,22 +58,27 @@ describe("Tests for the upcoming workshops page", () => {
     }
   ];
 
-  it("Clicking cancel enrollment cancels the enrollment", () => {
+  it('Clicking cancel enrollment cancels the enrollment', () => {
     const enrolledWorkshopsTable = shallow(
-      <EnrolledWorkshopsTable
-        workshops={workshops}
-      />
+      <EnrolledWorkshopsTable workshops={workshops} />
     );
 
     // We expect there to be a table with 3 rows in the body, two of which have two buttons
     expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(3);
     expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(5);
     expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.false;
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
+      undefined
+    );
 
     // Pushing the button should bring up the modal
-    enrolledWorkshopsTable.find('tbody tr Button').first().simulate('click');
+    enrolledWorkshopsTable
+      .find('tbody tr Button')
+      .first()
+      .simulate('click');
     expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.true;
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal('code1');
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
+      'code1'
+    );
   });
 });
