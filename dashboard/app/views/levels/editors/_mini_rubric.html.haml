@@ -9,7 +9,7 @@
   .rubric-concept
     = f.label :rubric_key_concept, 'Mini-rubric key concept'
     = f.text_area :rubric_key_concept,
-  placeholder: 'Display to teachers and students as part of the mini-rubric',
+  placeholder: 'Key concept the rubric evaluates. Shown to teachers and students',
   rows: 3, class: "input-block-level"
 
   .rubric-performance
@@ -19,26 +19,26 @@
       .row
         .span6
           = f.text_area :rubric_exceeds,
-          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
           rows: 3, class: "input-block-level"
     .rubric-criteria
       = f.label :rubric_meets, 'Meets'
       .row
         .span6
           = f.text_area :rubric_meets,
-          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
           rows: 3, class: "input-block-level"
     .rubric-criteria
       = f.label :rubric_approaches, 'Approaches'
       .row
         .span6
           = f.text_area :rubric_approaches,
-          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
           rows: 3, class: "input-block-level"
     .rubric-criteria
       = f.label :rubric_no_evidence, 'No Evidence'
       .row
         .span6
           = f.text_area :rubric_no_evidence,
-          placeholder: 'Display to teachers and students as part of the mini-rubric',
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
           rows: 3, class: "input-block-level"
