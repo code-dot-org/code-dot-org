@@ -6,6 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import moment from "moment/moment";
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   content: {
@@ -33,6 +34,24 @@ const styles = {
   footer:{
     display: 'flex',
     justifyContent: 'flex-start'
+  },
+  rubricHeader:{
+    fontWeight: 'bold',
+    color: color.charcoal,
+    textAlign: 'center'
+  },
+  rubricTH:{
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    border: `1px solid ${color.lightest_gray}`,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    textAlign: 'center',
+    padding: 15
+  },
+  rubricTD:{
+    border: `1px solid ${color.lightest_gray}`,
+    padding: 15
   }
 };
 
@@ -136,6 +155,36 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         }
+        <table >
+          <thead>
+            <tr>
+              <th style={styles.rubricTH}>
+                <h4 style={styles.rubricHeader}>Key Concept</h4>
+              </th>
+              <th style={styles.rubricTH}>
+                <h4 style={styles.rubricHeader}>Exceeds</h4>
+              </th>
+              <th style={styles.rubricTH}>
+                <h4 style={styles.rubricHeader}>Meets</h4>
+              </th>
+              <th style={styles.rubricTH}>
+                <h4 style={styles.rubricHeader}>Approaches</h4>
+              </th>
+              <th style={styles.rubricTH}>
+                <h4 style={styles.rubricHeader}>No Evidence</h4>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={styles.rubricTD}>The key concept for this is awesome!</td>
+              <td style={styles.rubricTD}>This is how you should exceed</td>
+              <td style={styles.rubricTD}>This is how you should meet</td>
+              <td style={styles.rubricTD}>This is how you should approach</td>
+              <td style={styles.rubricTD}>Show some evidence</td>
+            </tr>
+          </tbody>
+        </table>
         <textarea
           id="ui-test-feedback-input"
           style={styles.textInput}
