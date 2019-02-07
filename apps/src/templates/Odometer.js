@@ -1,26 +1,26 @@
-import { Motion, spring } from 'react-motion';
+import {Motion, spring} from 'react-motion';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 const styles = {
   slot: {
     height: 36,
     display: 'inline-block',
-    overflowY: 'hidden',
+    overflowY: 'hidden'
   },
   digit: {
     paddingTop: 15,
     height: 36,
     width: 21,
-    overflowX: 'hidden',
-  },
+    overflowX: 'hidden'
+  }
 };
 
 export default class Odometer extends Component {
   static propTypes = {
     defaultValue: PropTypes.number,
     value: PropTypes.number.isRequired,
-    onRest: PropTypes.func,
+    onRest: PropTypes.func
   };
 
   render() {
@@ -35,7 +35,9 @@ export default class Odometer extends Component {
           onRest={i === 1 ? this.props.onRest : undefined}
           key={i}
         >
-          {interpolatingStyle => <OdometerDigit value={interpolatingStyle.value} />}
+          {interpolatingStyle => (
+            <OdometerDigit value={interpolatingStyle.value} />
+          )}
         </Motion>
       );
     }
@@ -46,7 +48,7 @@ export default class Odometer extends Component {
 
 class OdometerDigit extends Component {
   static propTypes = {
-    value: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired
   };
 
   render() {
@@ -54,10 +56,20 @@ class OdometerDigit extends Component {
     const progress = (this.props.value % 10) - digit;
     return (
       <span style={styles.slot}>
-        <div style={{...styles.digit, transform: `translateY(-${100 * (1 - progress)}%)`}}>
+        <div
+          style={{
+            ...styles.digit,
+            transform: `translateY(-${100 * (1 - progress)}%)`
+          }}
+        >
           {(digit + 1) % 10}
         </div>
-        <div style={{...styles.digit, transform: `translateY(-${100 * (1 - progress)}%)`}}>
+        <div
+          style={{
+            ...styles.digit,
+            transform: `translateY(-${100 * (1 - progress)}%)`
+          }}
+        >
           {digit}
         </div>
       </span>

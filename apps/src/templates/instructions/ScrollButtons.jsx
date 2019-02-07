@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import color from "../../util/color";
+import color from '../../util/color';
 
-import { addMouseUpTouchEvent } from '../../dom';
-import { connect } from 'react-redux';
-import { getOuterHeight, scrollBy } from './utils';
+import {addMouseUpTouchEvent} from '../../dom';
+import {connect} from 'react-redux';
+import {getOuterHeight, scrollBy} from './utils';
 
 const WIDTH = 20;
 const HEIGHT = WIDTH;
@@ -49,12 +49,12 @@ const styles = {
   },
   arrowUp: {
     borderBottomWidth: HEIGHT,
-    borderBottomColor: color.purple,
+    borderBottomColor: color.purple
   },
   arrowDown: {
     borderTopWidth: HEIGHT,
-    borderTopColor: color.purple,
-  },
+    borderTopColor: color.purple
+  }
 };
 
 const MARGIN = 5;
@@ -69,7 +69,7 @@ class ScrollButtons extends React.Component {
     visible: PropTypes.bool.isRequired,
     height: PropTypes.number.isRequired,
     getScrollTarget: PropTypes.func.isRequired,
-    isMinecraft: PropTypes.bool.isRequired,
+    isMinecraft: PropTypes.bool.isRequired
   };
 
   getMargin() {
@@ -77,9 +77,10 @@ class ScrollButtons extends React.Component {
   }
 
   getMinHeight() {
-    const scrollButtonsHeight = getOuterHeight(this.scrollUp, true) +
-        getOuterHeight(this.scrollDown, true);
-    return scrollButtonsHeight + (this.getMargin() * 2);
+    const scrollButtonsHeight =
+      getOuterHeight(this.scrollUp, true) +
+      getOuterHeight(this.scrollDown, true);
+    return scrollButtonsHeight + this.getMargin() * 2;
   }
 
   scrollStartUp = () => {
@@ -101,15 +102,21 @@ class ScrollButtons extends React.Component {
 
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
-    this.scrollTimeout = setTimeout(function () {
-      this.scrollInterval = setInterval(function () {
-        let dist = CONTINUOUS_SCROLL_BY;
-        if (dir === DIRECTIONS.UP) {
-          dist *= -1;
-        }
-        scrollBy(contentContainer, dist, false);
-      }.bind(this), CONTINUOUS_SCROLL_INTERVAL);
-    }.bind(this), CONTINUOUS_SCROLL_TIMEOUT);
+    this.scrollTimeout = setTimeout(
+      function() {
+        this.scrollInterval = setInterval(
+          function() {
+            let dist = CONTINUOUS_SCROLL_BY;
+            if (dir === DIRECTIONS.UP) {
+              dist *= -1;
+            }
+            scrollBy(contentContainer, dist, false);
+          }.bind(this),
+          CONTINUOUS_SCROLL_INTERVAL
+        );
+      }.bind(this),
+      CONTINUOUS_SCROLL_TIMEOUT
+    );
 
     this.unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
   }
@@ -124,7 +131,6 @@ class ScrollButtons extends React.Component {
   };
 
   render() {
-
     const upStyle = {
       opacity: this.props.visible ? 1 : 0,
       top: this.getMargin()
@@ -139,55 +145,51 @@ class ScrollButtons extends React.Component {
     // minecraft, we use a special button element to stylistically align
     // with the other buttons on the screen.
 
-    const upButton = (this.props.isMinecraft) ?
+    const upButton = this.props.isMinecraft ? (
       <button
         className="arrow"
-        ref={(c) => { this.scrollUp = c; }}
+        ref={c => {
+          this.scrollUp = c;
+        }}
         key="scrollUp"
         onMouseDown={this.scrollStartUp}
-        style={[
-          styles.all,
-          upStyle
-        ]}
+        style={[styles.all, upStyle]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
-      </button> :
+      </button>
+    ) : (
       <div
-        ref={(c) => { this.scrollUp = c; }}
+        ref={c => {
+          this.scrollUp = c;
+        }}
         key="scrollUp"
         onMouseDown={this.scrollStartUp}
-        style={[
-          styles.all,
-          styles.arrow,
-          styles.arrowUp,
-          upStyle
-        ]}
-      />;
+        style={[styles.all, styles.arrow, styles.arrowUp, upStyle]}
+      />
+    );
 
-    const downButton = (this.props.isMinecraft) ?
+    const downButton = this.props.isMinecraft ? (
       <button
         className="arrow"
-        ref={(c) => { this.scrollDown = c; }}
+        ref={c => {
+          this.scrollDown = c;
+        }}
         key="scrollDown"
         onMouseDown={this.scrollStartDown}
-        style={[
-          styles.all,
-          downStyle
-        ]}
+        style={[styles.all, downStyle]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
-      </button> :
+      </button>
+    ) : (
       <div
-        ref={(c) => { this.scrollDown = c; }}
+        ref={c => {
+          this.scrollDown = c;
+        }}
         key="scrollDown"
         onMouseDown={this.scrollStartDown}
-        style={[
-          styles.all,
-          styles.arrow,
-          styles.arrowDown,
-          downStyle
-        ]}
-      />;
+        style={[styles.all, styles.arrow, styles.arrowDown, downStyle]}
+      />
+    );
 
     return (
       <div style={this.props.style}>
@@ -199,10 +201,15 @@ class ScrollButtons extends React.Component {
 }
 
 export const UnconnectedScrollButtons = Radium(ScrollButtons);
-export default connect(function propsFromStore(state) {
-  return {
-    isMinecraft: !!state.pageConstants.isMinecraft,
-  };
-}, undefined, undefined, {
-  withRef: true
-})(Radium(ScrollButtons));
+export default connect(
+  function propsFromStore(state) {
+    return {
+      isMinecraft: !!state.pageConstants.isMinecraft
+    };
+  },
+  undefined,
+  undefined,
+  {
+    withRef: true
+  }
+)(Radium(ScrollButtons));

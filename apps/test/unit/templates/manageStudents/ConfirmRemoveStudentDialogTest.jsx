@@ -2,10 +2,18 @@ import React from 'react';
 import {mount} from 'enzyme';
 import i18n from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
-import ConfirmRemoveStudentDialog, {MINIMUM_TEST_PROPS} from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
+import ConfirmRemoveStudentDialog, {
+  MINIMUM_TEST_PROPS
+} from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
 import Button from '@cdo/apps/templates/Button';
-import {Header, ConfirmCancelFooter} from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
-import {ADD_A_PERSONAL_LOGIN_HELP_URL, RELEASE_OR_DELETE_RECORDS_EXPLANATION} from '@cdo/apps/lib/util/urlHelpers';
+import {
+  Header,
+  ConfirmCancelFooter
+} from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
+import {
+  ADD_A_PERSONAL_LOGIN_HELP_URL,
+  RELEASE_OR_DELETE_RECORDS_EXPLANATION
+} from '@cdo/apps/lib/util/urlHelpers';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const studentName = MINIMUM_TEST_PROPS.studentName;
@@ -13,10 +21,7 @@ const studentName = MINIMUM_TEST_PROPS.studentName;
 describe('ConfirmRemoveStudentDialog', () => {
   it('renders nothing if not open', () => {
     const wrapper = mount(
-      <ConfirmRemoveStudentDialog
-        {...MINIMUM_TEST_PROPS}
-        isOpen={false}
-      />
+      <ConfirmRemoveStudentDialog {...MINIMUM_TEST_PROPS} isOpen={false} />
     );
     expect(wrapper).to.be.empty;
   });
@@ -30,7 +35,7 @@ describe('ConfirmRemoveStudentDialog', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Header text={i18n.removeUnusedStudentHeader({studentName})}/>
+        <Header text={i18n.removeUnusedStudentHeader({studentName})} />
         <ConfirmCancelFooter
           confirmText={i18n.removeStudent()}
           confirmColor={Button.ButtonColor.red}
@@ -53,11 +58,9 @@ describe('ConfirmRemoveStudentDialog', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
+        <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
         <div>
-          <UnsafeRenderedMarkdown
-            markdown={i18n.removeStudentBody1()}
-          />
+          <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
           <p>
             <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
               {i18n.learnMore()}
@@ -87,20 +90,16 @@ describe('ConfirmRemoveStudentDialog', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
+        <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
         <div>
-          <UnsafeRenderedMarkdown
-            markdown={i18n.removeStudentBody1()}
-          />
+          <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
           <p>
             <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
               {i18n.learnMore()}
             </a>
           </p>
           <div>
-            <p>
-              {i18n.removeStudentBody2()}
-            </p>
+            <p>{i18n.removeStudentBody2()}</p>
             <Button
               text={i18n.removeStudentSendHomeInstructions()}
               target="_blank"

@@ -1,12 +1,25 @@
-import { TestResults } from '@cdo/apps/constants';
+import {TestResults} from '@cdo/apps/constants';
 
 const levelDef = {
   isTestLevel: true,
   gridWidth: 4,
   gridHeight: 3,
-  groundPlane: ["grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass"],
-  groundDecorationPlane: ["","","","","","","","","","","",""],
-  actionPlane: ["","","","","grass","grass","","grass","","","",""],
+  groundPlane: [
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass',
+    'grass'
+  ],
+  groundDecorationPlane: ['', '', '', '', '', '', '', '', '', '', '', ''],
+  actionPlane: ['', '', '', '', 'grass', 'grass', '', 'grass', '', '', '', ''],
   playerStartPosition: [0, 1],
   playerStartDirection: 1,
   verificationFunction: `
@@ -16,7 +29,7 @@ const levelDef = {
         "grass", "grass", "planksBirch", "grass",
         "", "", "", ""
       ]) && verificationAPI.isPlayerAt([3, 1]);
-    }`,
+    }`
 };
 
 export default {
@@ -49,8 +62,8 @@ export default {
         </xml>`,
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS,
-      },
+        testResult: TestResults.ALL_PASS
+      }
     },
     {
       description: 'Craft fall into hole',
@@ -72,8 +85,8 @@ export default {
         </xml>`,
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL,
-      },
-    },
-  ],
+        testResult: TestResults.APP_SPECIFIC_FAIL
+      }
+    }
+  ]
 };

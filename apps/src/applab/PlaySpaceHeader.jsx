@@ -34,18 +34,29 @@ class PlaySpaceHeader extends React.Component {
 
     if (!this.shouldHideToggle()) {
       leftSide = (
-        <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
-          <button id="codeModeButton" value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
-          <button id="designModeButton" value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
-          {this.props.hasDataMode &&
-            <button id="dataModeButton" value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
-          }
+        <ToggleGroup
+          selected={this.props.interfaceMode}
+          onChange={this.props.onInterfaceModeChange}
+        >
+          <button id="codeModeButton" value={ApplabInterfaceMode.CODE}>
+            {msg.codeMode()}
+          </button>
+          <button id="designModeButton" value={ApplabInterfaceMode.DESIGN}>
+            {msg.designMode()}
+          </button>
+          {this.props.hasDataMode && (
+            <button id="dataModeButton" value={ApplabInterfaceMode.DATA}>
+              {msg.dataMode()}
+            </button>
+          )}
         </ToggleGroup>
       );
     }
 
-    if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
-        !this.props.playspacePhoneFrame) {
+    if (
+      this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
+      !this.props.playspacePhoneFrame
+    ) {
       rightSide = (
         <ScreenSelector
           screenIds={this.props.screenIds}
@@ -73,19 +84,22 @@ class PlaySpaceHeader extends React.Component {
   }
 }
 
-export default connect(function propsFromStore(state) {
-  return {
-    channelId: state.pageConstants.channelId,
-    hasDataMode: state.pageConstants.hasDataMode,
-    hasDesignMode: state.pageConstants.hasDesignMode,
-    isShareView: state.pageConstants.isShareView,
-    interfaceMode: state.interfaceMode,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
-    onInterfaceModeChange: function (mode) {
-      dispatch(actions.changeInterfaceMode(mode));
-    }
-  };
-})(PlaySpaceHeader);
+export default connect(
+  function propsFromStore(state) {
+    return {
+      channelId: state.pageConstants.channelId,
+      hasDataMode: state.pageConstants.hasDataMode,
+      hasDesignMode: state.pageConstants.hasDesignMode,
+      isShareView: state.pageConstants.isShareView,
+      interfaceMode: state.interfaceMode,
+      playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+    };
+  },
+  function propsFromDispatch(dispatch) {
+    return {
+      onInterfaceModeChange: function(mode) {
+        dispatch(actions.changeInterfaceMode(mode));
+      }
+    };
+  }
+)(PlaySpaceHeader);

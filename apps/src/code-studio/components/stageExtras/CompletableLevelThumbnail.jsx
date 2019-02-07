@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "../../../util/color";
+import color from '../../../util/color';
 
 const styles = {
   wrapper: {
     display: 'inline-block',
     position: 'relative',
-    transformOrigin: '0 0',
+    transformOrigin: '0 0'
   },
   overlay: {
     width: 400,
@@ -15,21 +15,21 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: 0,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   check: {
     fontSize: 350,
     lineHeight: '400px',
     color: '#fff',
-    opacity: 0.8,
-  },
+    opacity: 0.8
+  }
 };
 
 export default class CompletableLevelThumbnail extends React.Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
     size: PropTypes.number,
-    completed: PropTypes.bool,
+    completed: PropTypes.bool
   };
 
   render() {
@@ -51,14 +51,11 @@ export default class CompletableLevelThumbnail extends React.Component {
           }}
         >
           {this.props.children}
-          {this.props.completed &&
+          {this.props.completed && (
             <div style={styles.overlay}>
-              <i
-                className="fa fa-check"
-                style={styles.check}
-              />
+              <i className="fa fa-check" style={styles.check} />
             </div>
-          }
+          )}
         </div>
       </div>
     );

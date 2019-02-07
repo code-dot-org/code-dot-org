@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Table, sort} from 'reactabular';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -9,19 +9,19 @@ import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
   NAME: 0,
-  ANSWER: 1,
+  ANSWER: 1
 };
 
 const studentAnswerPropType = PropTypes.shape({
-  id:  PropTypes.number,
+  id: PropTypes.number,
   name: PropTypes.string,
   answer: PropTypes.string,
-  correct: PropTypes.bool,
+  correct: PropTypes.bool
 });
 
 class MultipleChoiceByQuestionTable extends Component {
-  static propTypes= {
-    studentAnswers: PropTypes.arrayOf(studentAnswerPropType),
+  static propTypes = {
+    studentAnswers: PropTypes.arrayOf(studentAnswerPropType)
   };
 
   state = {
@@ -35,27 +35,30 @@ class MultipleChoiceByQuestionTable extends Component {
     return this.state.sortingColumns || {};
   };
 
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc',
+          desc: 'asc'
         },
         selectedColumn
       })
     });
   };
 
-  answerCellFormatter = (answer, {rowData, columnIndex, rowIndex, property}) => {
+  answerCellFormatter = (
+    answer,
+    {rowData, columnIndex, rowIndex, property}
+  ) => {
     return (
-        <MultipleChoiceAnswerCell
-          id={rowData.id}
-          displayAnswer={answer}
-          isCorrectAnswer={rowData.correct}
-        />
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        displayAnswer={answer}
+        isCorrectAnswer={rowData.correct}
+      />
     );
   };
 
@@ -66,13 +69,13 @@ class MultipleChoiceByQuestionTable extends Component {
         header: {
           label: i18n.studentName(),
           props: {
-            style: tableLayoutStyles.headerCell,
-          },
+            style: tableLayoutStyles.headerCell
+          }
         },
         cell: {
           props: {
-            style: tableLayoutStyles.cell,
-          },
+            style: tableLayoutStyles.cell
+          }
         }
       },
       {
@@ -80,29 +83,33 @@ class MultipleChoiceByQuestionTable extends Component {
         header: {
           label: i18n.answer(),
           props: {
-            style: tableLayoutStyles.headerCell,
+            style: tableLayoutStyles.headerCell
           },
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: this.answerCellFormatter,
-          props: {style:tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell}
         }
-      },
+      }
     ];
     return dataColumns;
   };
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.props.studentAnswers);
 
     return (

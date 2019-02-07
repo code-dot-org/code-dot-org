@@ -7,10 +7,10 @@ export const setPlcHeader = (unitName, courseViewPath) => ({
 
 const initialState = {
   unitName: '',
-  courseViewPath: '',
+  courseViewPath: ''
 };
 
-export default function plcHeader(state=initialState, action) {
+export default function plcHeader(state = initialState, action) {
   if (action.type === SET_PLC_HEADER) {
     return {
       unitName: action.unitName,

@@ -1,7 +1,7 @@
-import { ApplabInterfaceMode } from './constants';
+import {ApplabInterfaceMode} from './constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 class ProtectedDesignWorkspace extends React.Component {
   static propTypes = {
@@ -17,27 +17,33 @@ class ProtectedDesignWorkspace extends React.Component {
     // disallow rerendering, since that would prevent us from being able to
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
-    Object.keys(nextProps).forEach(function (key) {
-      // interfaceMode only affects style, and can be updated
-      if (key === 'interfaceMode') {
-        return;
-      }
+    Object.keys(nextProps).forEach(
+      function(key) {
+        // interfaceMode only affects style, and can be updated
+        if (key === 'interfaceMode') {
+          return;
+        }
 
-      if (nextProps[key] !== this.props[key]) {
-        throw new Error('Attempting to change key ' + key + ' in ProtectedDesignWorkspace');
-      }
-    }.bind(this));
+        if (nextProps[key] !== this.props[key]) {
+          throw new Error(
+            'Attempting to change key ' + key + ' in ProtectedDesignWorkspace'
+          );
+        }
+      }.bind(this)
+    );
 
     return true;
   }
 
   componentWillUnmount() {
-    throw new Error("Unmounting ProtectedDesignWorkspace is not allowed.");
+    throw new Error('Unmounting ProtectedDesignWorkspace is not allowed.');
   }
 
   render() {
-    const visible = (ApplabInterfaceMode.DESIGN === this.props.interfaceMode);
-    return <div id="designWorkspace" style={{display: visible ? 'block' : 'none'}}/>;
+    const visible = ApplabInterfaceMode.DESIGN === this.props.interfaceMode;
+    return (
+      <div id="designWorkspace" style={{display: visible ? 'block' : 'none'}} />
+    );
   }
 }
 export default connect(state => ({

@@ -9,17 +9,17 @@ import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import UiTip from '@cdo/apps/templates/studioHomepages/UiTip';
 
 const INITIAL_TIP = {
-  type: "initial",
+  type: 'initial',
   position: {top: 80, right: 15},
   text: 'Test Initial Tip',
-  arrowDirection: "up_corner"
+  arrowDirection: 'up_corner'
 };
 
 const TRIGGERED_TIP = {
   ...INITIAL_TIP,
-  type: "triggered",
-  triggerId: "logo_home_link",
-  text: 'Test Triggered Tip',
+  type: 'triggered',
+  triggerId: 'logo_home_link',
+  text: 'Test Triggered Tip'
 };
 
 const TEST_BEFORE_DIALOG = {
@@ -41,7 +41,8 @@ const MAX_MOBILE_WIDTH = styleConstants['content-width'];
 describe('UiTips', () => {
   beforeEach(() => {
     // $(window).width() is used to determine viewport width in this component
-    sinon.stub($.fn, 'width')
+    sinon
+      .stub($.fn, 'width')
       // Default to a desktop width for these tests
       .returns(MAX_MOBILE_WIDTH + 1);
 
@@ -57,26 +58,16 @@ describe('UiTips', () => {
   it('renders empty at mobile width', () => {
     $.fn.width.returns(MAX_MOBILE_WIDTH);
     const wrapper = mount(
-      <UiTips
-        {...DEFAULT_PROPS}
-        tips={[INITIAL_TIP]}
-        showInitialTips
-      />
+      <UiTips {...DEFAULT_PROPS} tips={[INITIAL_TIP]} showInitialTips />
     );
     expect(wrapper.find(UiTip)).not.to.exist;
-    expect(wrapper).to.containMatchingElement(
-      <div/>
-    );
+    expect(wrapper).to.containMatchingElement(<div />);
   });
 
   describe('initial state', () => {
     it('renders initial tips if showInitialTips is true', () => {
       const wrapper = mount(
-        <UiTips
-          {...DEFAULT_PROPS}
-          tips={[INITIAL_TIP]}
-          showInitialTips
-        />
+        <UiTips {...DEFAULT_PROPS} tips={[INITIAL_TIP]} showInitialTips />
       );
       expect(wrapper.find(UiTip)).to.exist;
       expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
@@ -95,11 +86,7 @@ describe('UiTips', () => {
 
     it('does not render triggered tips even if showInitialTips is true', () => {
       const wrapper = mount(
-        <UiTips
-          {...DEFAULT_PROPS}
-          tips={[TRIGGERED_TIP]}
-          showInitialTips
-        />
+        <UiTips {...DEFAULT_PROPS} tips={[TRIGGERED_TIP]} showInitialTips />
       );
       expect(wrapper.find(UiTip)).not.to.exist;
     });
@@ -113,7 +100,10 @@ describe('UiTips', () => {
         />
       );
       expect(wrapper.find(Dialog)).to.exist;
-      expect(wrapper.find(Dialog)).to.have.prop('title', TEST_BEFORE_DIALOG.title);
+      expect(wrapper.find(Dialog)).to.have.prop(
+        'title',
+        TEST_BEFORE_DIALOG.title
+      );
       expect(wrapper.find(Dialog)).to.have.prop('isOpen', true);
     });
 
@@ -126,7 +116,10 @@ describe('UiTips', () => {
         />
       );
       expect(wrapper.find(Dialog)).to.exist;
-      expect(wrapper.find(Dialog)).to.have.prop('title', TEST_BEFORE_DIALOG.title);
+      expect(wrapper.find(Dialog)).to.have.prop(
+        'title',
+        TEST_BEFORE_DIALOG.title
+      );
       expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
     });
 
@@ -139,7 +132,10 @@ describe('UiTips', () => {
         />
       );
       expect(wrapper.find(Dialog)).to.exist;
-      expect(wrapper.find(Dialog)).to.have.prop('title', TEST_AFTER_DIALOG.title);
+      expect(wrapper.find(Dialog)).to.have.prop(
+        'title',
+        TEST_AFTER_DIALOG.title
+      );
       expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
     });
   });
@@ -160,10 +156,7 @@ describe('UiTips', () => {
 
     it('show when the target element is clicked', () => {
       const wrapper = mount(
-        <UiTips
-          {...DEFAULT_PROPS}
-          tips={[TRIGGERED_TIP]}
-        />
+        <UiTips {...DEFAULT_PROPS} tips={[TRIGGERED_TIP]} />
       );
       expect(wrapper.find(UiTip)).not.to.exist;
 
@@ -197,13 +190,17 @@ describe('UiTips', () => {
         />
       );
       expect(wrapper.find(UiTip)).to.have.length(2);
-      wrapper.find(UiTip).forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
+      wrapper
+        .find(UiTip)
+        .forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
 
       // Click the target element
       // Expect nothing to happen, initial tips are still open
       $(targetElement).click();
       expect(wrapper.find(UiTip)).to.have.length(2);
-      wrapper.find(UiTip).forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
+      wrapper
+        .find(UiTip)
+        .forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
 
       // Close one of the initial tips
       const firstTip = wrapper.find(UiTip).first();
@@ -235,10 +232,7 @@ describe('UiTips', () => {
 
     it('can be shown again after closing', () => {
       const wrapper = mount(
-        <UiTips
-          {...DEFAULT_PROPS}
-          tips={[TRIGGERED_TIP]}
-        />
+        <UiTips {...DEFAULT_PROPS} tips={[TRIGGERED_TIP]} />
       );
       expect(wrapper.find(UiTip)).not.to.exist;
 
@@ -281,8 +275,8 @@ describe('UiTips', () => {
     it('only initial tips appear when beforeDialog is confirmed', () => {
       wrapper.instance().beforeDialogConfirm();
       expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
-      expect(wrapper.find(UiTip)).to.exist
-        .and.to.have.length(1)
+      expect(wrapper.find(UiTip))
+        .to.exist.and.to.have.length(1)
         .and.to.have.prop('text', INITIAL_TIP.text);
     });
 
@@ -309,8 +303,8 @@ describe('UiTips', () => {
 
     it('appears after initial tips are closed', () => {
       expect(wrapper.find(Dialog)).to.exist.and.to.have.prop('isOpen', false);
-      expect(wrapper.find(UiTip)).to.exist
-        .and.to.have.length(1)
+      expect(wrapper.find(UiTip))
+        .to.exist.and.to.have.length(1)
         .and.to.have.prop('text', INITIAL_TIP.text);
 
       // Close one of the initial tips

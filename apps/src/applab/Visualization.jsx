@@ -4,11 +4,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
-import color from "../util/color";
+import color from '../util/color';
 import {singleton as studioApp} from '../StudioApp';
 import project from '../code-studio/initApp/project';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
-import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+import {
+  VISUALIZATION_DIV_ID,
+  isResponsiveFromState
+} from '../templates/ProtectedVisualizationDiv';
 import * as applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
@@ -65,7 +68,8 @@ class Visualization extends React.Component {
 
   render() {
     const appWidth = applabConstants.APP_WIDTH;
-    const appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
+    const appHeight =
+      applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
       <div
@@ -78,14 +82,12 @@ class Visualization extends React.Component {
           !this.props.isResponsive && styles.nonResponsive,
           this.props.isShareView && styles.share,
           this.props.playspacePhoneFrame && styles.phoneFrame,
-          this.props.playspacePhoneFrame && this.props.isRunning && styles.phoneFrameRunning
+          this.props.playspacePhoneFrame &&
+            this.props.isRunning &&
+            styles.phoneFrameRunning
         ]}
       >
-        <div
-          id="divApplab"
-          className="appModern"
-          tabIndex="1"
-        />
+        <div id="divApplab" className="appModern" tabIndex="1" />
         <div
           id="designModeViz"
           className="appModern"
@@ -93,8 +95,8 @@ class Visualization extends React.Component {
           style={commonStyles.hidden}
         />
         <VisualizationOverlay width={appWidth} height={appHeight}>
-          <AppLabCrosshairOverlay/>
-          <AppLabTooltipOverlay/>
+          <AppLabCrosshairOverlay />
+          <AppLabTooltipOverlay />
         </VisualizationOverlay>
         <MakerStatusOverlay
           width={appWidth}
@@ -105,7 +107,8 @@ class Visualization extends React.Component {
         <div
           style={[
             styles.screenBlock,
-            !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
+            !(this.props.isPaused && this.props.playspacePhoneFrame) &&
+              commonStyles.hidden
           ]}
         />
       </div>

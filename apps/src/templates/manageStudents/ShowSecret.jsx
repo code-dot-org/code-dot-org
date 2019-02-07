@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '../Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {setSecretImage, setSecretWords} from './manageStudentsRedux';
 
 const styles = {
   reset: {
-    marginRight: 10,
+    marginRight: 10
   },
   image: {
     width: 45
@@ -25,11 +25,11 @@ class ShowSecret extends Component {
     sectionId: PropTypes.number.isRequired,
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
-    setSecretWords: PropTypes.func.isRequired,
+    setSecretWords: PropTypes.func.isRequired
   };
 
   state = {
-    isShowing: !!this.props.initialIsShowing,
+    isShowing: !!this.props.initialIsShowing
   };
 
   show = () => {
@@ -46,47 +46,67 @@ class ShowSecret extends Component {
 
   reset = () => {
     const dataToUpdate = {
-      secrets: "reset_secrets",
+      secrets: 'reset_secrets',
       student: {id: this.props.id}
     };
 
     $.ajax({
-      url: `/dashboardapi/sections/${this.props.sectionId}/students/${this.props.id}`,
+      url: `/dashboardapi/sections/${this.props.sectionId}/students/${
+        this.props.id
+      }`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToUpdate),
-    }).done((data) => {
-      if (this.props.loginType === SectionLoginType.picture) {
-        this.props.setSecretImage(this.props.id, data.secret_picture_path);
-      } else if (this.props.loginType === SectionLoginType.word) {
-        this.props.setSecretWords(this.props.id, data.secret_words);
-      }
-    }).fail((jqXhr, status) => {
-      // We may want to handle this more cleanly in the future, but for now this
-      // matches the experience we got in angular
-      alert(i18n.unexpectedError());
-      console.error(status);
-    });
+      data: JSON.stringify(dataToUpdate)
+    })
+      .done(data => {
+        if (this.props.loginType === SectionLoginType.picture) {
+          this.props.setSecretImage(this.props.id, data.secret_picture_path);
+        } else if (this.props.loginType === SectionLoginType.word) {
+          this.props.setSecretWords(this.props.id, data.secret_words);
+        }
+      })
+      .fail((jqXhr, status) => {
+        // We may want to handle this more cleanly in the future, but for now this
+        // matches the experience we got in angular
+        alert(i18n.unexpectedError());
+        console.error(status);
+      });
   };
 
   render() {
     return (
       <div>
-        {!this.state.isShowing &&
-          <Button onClick={this.show} color={Button.ButtonColor.white} text={i18n.showSecret()} />
-        }
-        {this.state.isShowing &&
+        {!this.state.isShowing && (
+          <Button
+            onClick={this.show}
+            color={Button.ButtonColor.white}
+            text={i18n.showSecret()}
+          />
+        )}
+        {this.state.isShowing && (
           <div>
-            {this.props.loginType === SectionLoginType.word &&
+            {this.props.loginType === SectionLoginType.word && (
               <p>{this.props.secretWord}</p>
-            }
-            {this.props.loginType === SectionLoginType.picture &&
-              <img src={'/images/' + this.props.secretPicture} style={styles.image} />
-            }
-            <Button onClick={this.reset} color={Button.ButtonColor.blue} text={i18n.reset()} style={styles.reset} />
-            <Button onClick={this.hide} color={Button.ButtonColor.white} text={i18n.hideSecret()} />
+            )}
+            {this.props.loginType === SectionLoginType.picture && (
+              <img
+                src={'/images/' + this.props.secretPicture}
+                style={styles.image}
+              />
+            )}
+            <Button
+              onClick={this.reset}
+              color={Button.ButtonColor.blue}
+              text={i18n.reset()}
+              style={styles.reset}
+            />
+            <Button
+              onClick={this.hide}
+              color={Button.ButtonColor.white}
+              text={i18n.hideSecret()}
+            />
           </div>
-        }
+        )}
       </div>
     );
   }
@@ -94,11 +114,14 @@ class ShowSecret extends Component {
 
 export const UnconnectedShowSecret = ShowSecret;
 
-export default connect(state => ({}), dispatch => ({
-  setSecretImage(id, image) {
-    dispatch(setSecretImage(id, image));
-  },
-  setSecretWords(id, words) {
-    dispatch(setSecretWords(id, words));
-  },
-}))(ShowSecret);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    setSecretImage(id, image) {
+      dispatch(setSecretImage(id, image));
+    },
+    setSecretWords(id, words) {
+      dispatch(setSecretWords(id, words));
+    }
+  })
+)(ShowSecret);

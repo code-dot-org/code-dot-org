@@ -24,7 +24,7 @@ const STUB_PROJECTS_DATA = [
     thumbnailUrl: '/media/common_images/stickers/bat.png',
     type: 'gamelab',
     updatedAt: '2017-01-01T00:00:00.001-08:00'
-  },
+  }
 ];
 
 export default storybook => {
@@ -57,6 +57,6 @@ export default storybook => {
             />
           );
         }
-      },
+      }
     ]);
 };

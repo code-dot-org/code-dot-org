@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import AssetUploader from './AssetUploader';
-import Button from "../../templates/Button";
+import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
 
 export const assetButtonStyles = {
@@ -69,12 +69,13 @@ export default class AddAssetButtonRow extends React.Component {
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
-        {!this.props.hideAudioRecording &&
-          <RecordButton onSelectRecord={this.props.onSelectRecord} disabled={this.props.recordDisabled}/>
-        }
-        <span id="manage-asset-status">
-          {this.props.statusMessage}
-        </span>
+        {!this.props.hideAudioRecording && (
+          <RecordButton
+            onSelectRecord={this.props.onSelectRecord}
+            disabled={this.props.recordDisabled}
+          />
+        )}
+        <span id="manage-asset-status">{this.props.statusMessage}</span>
       </div>
     );
   }

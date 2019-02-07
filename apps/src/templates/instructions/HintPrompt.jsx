@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from "../../util/color";
+import color from '../../util/color';
 import ChatBubble from './ChatBubble';
 import msg from '@cdo/locale';
 
-const HintPrompt = ({ onConfirm, onDismiss, borderColor }) => {
+const HintPrompt = ({onConfirm, onDismiss, borderColor}) => {
   const buttonStyles = {
     common: {
       color: 'white',
@@ -13,11 +13,11 @@ const HintPrompt = ({ onConfirm, onDismiss, borderColor }) => {
     },
     yes: {
       backgroundColor: color.orange,
-      borderColor: color.orange,
+      borderColor: color.orange
     },
     no: {
       backgroundColor: color.green,
-      borderColor: color.green,
+      borderColor: color.green
     }
   };
 
@@ -26,8 +26,18 @@ const HintPrompt = ({ onConfirm, onDismiss, borderColor }) => {
   return (
     <ChatBubble borderColor={borderColor} ttsMessage={message}>
       <p>{message}</p>
-      <button onClick={onConfirm} style={[buttonStyles.common, buttonStyles.yes]}>{msg.yes()}</button>
-      <button onClick={onDismiss} style={[buttonStyles.common, buttonStyles.no]}>{msg.no()}</button>
+      <button
+        onClick={onConfirm}
+        style={[buttonStyles.common, buttonStyles.yes]}
+      >
+        {msg.yes()}
+      </button>
+      <button
+        onClick={onDismiss}
+        style={[buttonStyles.common, buttonStyles.no]}
+      >
+        {msg.no()}
+      </button>
     </ChatBubble>
   );
 };
@@ -35,7 +45,7 @@ const HintPrompt = ({ onConfirm, onDismiss, borderColor }) => {
 HintPrompt.propTypes = {
   borderColor: PropTypes.string,
   onConfirm: PropTypes.func.isRequired,
-  onDismiss: PropTypes.func.isRequired,
+  onDismiss: PropTypes.func.isRequired
 };
 
 export default Radium(HintPrompt);

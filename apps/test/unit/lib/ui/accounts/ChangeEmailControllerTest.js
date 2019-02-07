@@ -102,16 +102,18 @@ describe('ChangeEmailController', () => {
       controller = newController(13, 'student');
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD,
+        currentPassword: TEST_PASSWORD
       });
-      expect(form.find('#change-email-modal_user_email').val()).to.equal(TEST_EMAIL);
+      expect(form.find('#change-email-modal_user_email').val()).to.equal(
+        TEST_EMAIL
+      );
     });
 
     it('clears email field if user is under 13', async () => {
       controller = newController(12, 'student');
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD,
+        currentPassword: TEST_PASSWORD
       });
       expect(form.find('#change-email-modal_user_email').val()).to.equal('');
     });
@@ -119,55 +121,60 @@ describe('ChangeEmailController', () => {
     it('sets hashed email field', async () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD,
+        currentPassword: TEST_PASSWORD
       });
-      expect(form.find('#change-email-modal_user_hashed_email').val())
-        .to.equal(hashEmail(TEST_EMAIL));
+      expect(form.find('#change-email-modal_user_hashed_email').val()).to.equal(
+        hashEmail(TEST_EMAIL)
+      );
     });
 
     it('sets email_preference_opt_in if "yes"', async () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
-        emailOptIn: 'yes',
+        emailOptIn: 'yes'
       });
-      expect(form.find('#change-email-modal_user_email_preference_opt_in').val())
-        .to.equal('yes');
+      expect(
+        form.find('#change-email-modal_user_email_preference_opt_in').val()
+      ).to.equal('yes');
     });
 
     it('sets email_preference_opt_in if "no"', async () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
-        emailOptIn: 'no',
+        emailOptIn: 'no'
       });
-      expect(form.find('#change-email-modal_user_email_preference_opt_in').val())
-        .to.equal('no');
+      expect(
+        form.find('#change-email-modal_user_email_preference_opt_in').val()
+      ).to.equal('no');
     });
 
     it('does not set email_preference_opt_in otherwise', async () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
-        emailOptIn: undefined,
+        emailOptIn: undefined
       });
-      expect(form.find('#change-email-modal_user_email_preference_opt_in').val())
-        .to.equal('');
+      expect(
+        form.find('#change-email-modal_user_email_preference_opt_in').val()
+      ).to.equal('');
     });
 
     it('sets current password field', async () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD,
+        currentPassword: TEST_PASSWORD
       });
-      expect(form.find('#change-email-modal_user_current_password').val())
-        .to.equal(TEST_PASSWORD);
+      expect(
+        form.find('#change-email-modal_user_current_password').val()
+      ).to.equal(TEST_PASSWORD);
     });
 
     it('resolves to new email on success', async () => {
       const newEmail = await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD,
+        currentPassword: TEST_PASSWORD
       });
       expect(newEmail).to.equal(TEST_EMAIL);
     });
@@ -175,27 +182,35 @@ describe('ChangeEmailController', () => {
     it('rejects on failure', async () => {
       // Simulate failure
       form.submit.callsFake(() => form.trigger('ajax:error', [{}]));
-      await expect(controller.submitEmailChange({
-        newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD,
-      })).to.eventually.be.rejectedWith(Error);
+      await expect(
+        controller.submitEmailChange({
+          newEmail: TEST_EMAIL,
+          currentPassword: TEST_PASSWORD
+        })
+      ).to.eventually.be.rejectedWith(Error);
     });
 
     it('rejects with server errors when they are returned', async () => {
       // Simulate failure with server-provided validation errors
-      form.submit.callsFake(() => form.trigger('ajax:error', [{
-        responseJSON: {
-          email: ['test-email-error'],
-          current_password: ['test-current-password-error']
-        }
-      }]));
-      await expect(controller.submitEmailChange({
-        newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD,
-      })).to.eventually.be.rejectedWith({
+      form.submit.callsFake(() =>
+        form.trigger('ajax:error', [
+          {
+            responseJSON: {
+              email: ['test-email-error'],
+              current_password: ['test-current-password-error']
+            }
+          }
+        ])
+      );
+      await expect(
+        controller.submitEmailChange({
+          newEmail: TEST_EMAIL,
+          currentPassword: TEST_PASSWORD
+        })
+      ).to.eventually.be.rejectedWith({
         serverErrors: {
           email: 'test-email-error',
-          currentPassword: 'test-current-password-error',
+          currentPassword: 'test-current-password-error'
         }
       });
     });
@@ -219,13 +234,10 @@ describe('ChangeEmailController', () => {
       controller = newController(21, 'student');
       expect(displayedUserEmail.effect).not.to.have.been.called;
       controller.onEmailChanged(TEST_EMAIL);
-      expect(displayedUserEmail.effect).to.have.been.calledWith(
-        'highlight',
-        {
-          duration: 1500,
-          color: color.orange,
-        }
-      );
+      expect(displayedUserEmail.effect).to.have.been.calledWith('highlight', {
+        duration: 1500,
+        color: color.orange
+      });
     });
 
     it('calls the emailChangeCallback with new email and hashed email', () => {

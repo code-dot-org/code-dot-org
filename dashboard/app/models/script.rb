@@ -102,6 +102,7 @@ class Script < ActiveRecord::Base
         unit_description: I18n.t("data.script.name.#{name}.description")
       )
 
+      stages.reload
       stages.each do |stage|
         lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
         lm.update!(

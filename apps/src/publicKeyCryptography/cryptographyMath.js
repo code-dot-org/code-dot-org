@@ -49,30 +49,30 @@ export const privateKeyList = memoize(publicModulus => {
  * @param {number} m - public modulus
  * @return {number} public key
  */
-export const computePublicKey = memoize((a,m) => {
+export const computePublicKey = memoize((a, m) => {
   // Disable linting - code copied from original widget,
   // does some wonky stuff to convert a private key to
   // a public key
   /* eslint-disable */
   var v = 1;
   var d = a;
-  var u = (a == 1);
-  var t = 1-u;
+  var u = a == 1;
+  var t = 1 - u;
   if (t == 1) {
     var c = m % a;
-    u = Math.floor(m/a);
+    u = Math.floor(m / a);
     while (c != 1 && t == 1) {
-      var q = Math.floor(d/c);
+      var q = Math.floor(d / c);
       d = d % c;
-      v = v + q*u;
-      t = (d != 1);
+      v = v + q * u;
+      t = d != 1;
       if (t == 1) {
-        q = Math.floor(c/d);
+        q = Math.floor(c / d);
         c = c % d;
-        u = u + q*v;
+        u = u + q * v;
       }
     }
-    u = v*(1 - t) + t*(m - u);
+    u = v * (1 - t) + t * (m - u);
   }
   return u;
   /* eslint-enable */
