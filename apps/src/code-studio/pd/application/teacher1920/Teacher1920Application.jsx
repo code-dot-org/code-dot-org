@@ -12,7 +12,8 @@ import firehoseClient from "@cdo/apps/lib/util/firehose";
 export default class Teacher1920Application extends FormController {
   static propTypes = {
     ...FormController.propTypes,
-    accountEmail: PropTypes.string.isRequired
+    accountEmail: PropTypes.string.isRequired,
+    userId: PropTypes.number.isRequired
   };
 
   static submitButtonText = "Complete and Send";
@@ -50,10 +51,11 @@ export default class Teacher1920Application extends FormController {
     // Log the user ID to firehose.
     firehoseClient.putRecord(
       {
+        userId: this.props.userId,
         study: 'application-funnel',
         event: 'started-teacher1920-application'
       },
-      {includeUserId: true}
+      {includeUserId: false}
     );
   }
 
