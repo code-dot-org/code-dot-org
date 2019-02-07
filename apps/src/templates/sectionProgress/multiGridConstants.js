@@ -84,7 +84,8 @@ export const progressStyles = {
     margin: 10,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontSize: 14,
   },
   cell: {
     borderRight: `1px solid ${color.border_gray}`,
