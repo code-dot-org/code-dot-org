@@ -6,11 +6,9 @@ import {
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
 import _ from 'lodash';
-import {expect} from '../../../../util/configuredChai';
-import {getPortalContent} from '../../../../util/reactTestUtils';
-
-import {mount} from 'enzyme';
 import sinon from 'sinon';
+import {expect} from '../../../../util/configuredChai';
+import {mount, ReactWrapper} from 'enzyme';
 
 describe("DetailViewContents", () => {
   // We aren't testing any of the responses of the workshop selector control, so just
@@ -258,42 +256,41 @@ describe("DetailViewContents", () => {
   });
 
   describe('Teacher application scholarship status', () => {
-    it('is required in order to set certain application statuses', async () => {
-      for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
-        const detailView = mountDetailView('Teacher', {status: 'unreviewed', scholarshipStatus: null});
+    afterEach(() => { detailView.unmount(); });
+
+    let detailView;
+    for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
+      it(`is required in order to set application status to ${applicationStatus}`, () => {
+        // Initially scholarship status is not set
+        detailView = mountDetailView('Teacher', {status: 'unreviewed', scholarshipStatus: null});
         const modal = detailView.find('ConfirmationDialog').filterWhere((dialog) => dialog.prop("headerText") === "Cannot save applicant status").first();
-
         expect(!!modal.prop("show")).to.be.false;
+
+        // Set application status, modal appears
         detailView.find('#DetailViewHeader select').simulate('change', { target: { value: applicationStatus } });
-
-        const modals = detailView.find('.modal-dialog .modal-title');
-        console.log(modals.length);
-
         expect(modal.prop("show")).to.be.true;
 
-        const okButton = modal.find('Button[bsStyle="primary"]');
-
-        await new Promise(r => setTimeout(r, 20));
-
-        console.log(modal.debug());
-        const portalContents = getPortalContent(modal);
-        console.log(portalContents.debug());
+        const okButton = new ReactWrapper(document.querySelector('button.btn-primary'), true);
         okButton.simulate('click');
         expect(!!modal.prop("show")).to.be.false;
 
-        // clear dialog
-        // set scholarship status
+        // Click 'Edit', set scholarship status
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
+        const scholarshipDropdown = detailView.find('tr').filterWhere(row => row.text().includes('Scholarship Teacher?')).find('Select');
+        scholarshipDropdown.simulate('change', { target: { value: 'no' } });
+
+        // Set application status, modal does not appear
+        detailView.find('#DetailViewHeader select').simulate('change', { target: { value: applicationStatus } });
+        expect(!!modal.prop("show")).to.be.false;
+      });
+    }
+
+    for (const applicationStatus of ['unreviewed', 'pending', 'waitlisted', 'declined', 'withdrawn']) {
+      it(`is not required to set application status to ${applicationStatus}`, () => {
+        // const detailView = mountDetailView('Teacher', {status: 'unreviewed', scholarshipStatus: null});
         // set it to application status
         // assert dialog not present
-      }
-    });
-
-    // it('is not required for other application statuses', () => {
-    //   for (const applicationStatus of ['unreviewed', 'pending', 'waitlisted', 'declined', 'withdrawn']) {
-    //     const detailView = mountDetailView('Teacher', {status: 'unreviewed', scholarshipStatus: null});
-    //     // set it to application status
-    //     // assert dialog not present
-    //   }
-    // });
+      });
+    }
   });
 });
