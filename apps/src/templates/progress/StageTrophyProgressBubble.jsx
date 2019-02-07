@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import color from "@cdo/apps/util/color";
 import trophy from '!!file-loader!./images/trophy.svg';
 

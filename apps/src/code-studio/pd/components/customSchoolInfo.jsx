@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';

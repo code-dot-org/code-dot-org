@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import msg from '@cdo/locale';
 import trackEvent from '../../util/trackEvent';
 

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Lesson 17 Puzzle 9](/s/csd3/stage/17/puzzle/9) and `playerFall` in [Lesson 17 Puzzle 14](/s/csd3/stage/17/puzzle/14).\r\n\r\nFor each movement:\r\n* Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
+    "long_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Lesson 21 Puzzle 9](../../../stage/21/puzzle/9) and `playerFall` in [Lesson 21 Puzzle 14](../../../stage/21/puzzle/14).\r\n\r\nFor each movement:\r\n* Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -43,11 +43,14 @@
     "expand_debugger": "false",
     "parent_level_id": 6979,
     "name_suffix": "_2018",
+    "preload_asset_list": null,
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-06 17:42:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-06 17:42:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-06 01:28:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":34,\"changed_by_email\":\"brad@code.org\"},{\"changed_at\":\"2019-02-06 01:31:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -32,7 +32,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "tts_markdown_instructions_override": "Get that pig!",
+    "tts_long_instructions_override": "Get that pig!",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 11596,
     "name_suffix": "_2019",
