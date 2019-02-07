@@ -11,11 +11,11 @@ import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClas
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
 
 /**
- * Rendered from the /print_login_cards route in teacher dashboard.
+ * Rendered from the /login_info route in teacher dashboard.
  * Gives teachers information about signing in, allowing students to join their section, and prints
  * login cards for word/picture sections.
  */
-class PrintLoginCards extends React.Component {
+class SectionLoginInfo extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
     pegasusUrlPrefix: PropTypes.string.isRequired,
@@ -33,7 +33,7 @@ class PrintLoginCards extends React.Component {
     return (
       <div>
         {[SectionLoginType.word, SectionLoginType.picture].includes(section.loginType) &&
-          <WordOrPictureLoginCards
+          <WordOrPictureLogins
             studioUrlPrefix={studioUrlPrefix}
             pegasusUrlPrefix={pegasusUrlPrefix}
             section={section}
@@ -55,12 +55,12 @@ class PrintLoginCards extends React.Component {
   }
 }
 
-export const UnconnectedPrintLoginCards = PrintLoginCards;
+export const UnconnectedSectionLoginInfo = SectionLoginInfo;
 
 export default connect(state => ({
   section: state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.sectionData.section.students,
-}))(PrintLoginCards);
+}))(SectionLoginInfo);
 
 class OAuthLogins extends React.Component {
   static propTypes = {
@@ -81,17 +81,17 @@ class OAuthLogins extends React.Component {
 
     return (
       <div>
-        <h1>{i18n.printLoginCards_signingIn()}</h1>
+        <h1>{i18n.loginInfo_signingIn()}</h1>
         {loginType === SectionLoginType.google_classroom &&
           <p>
-            {i18n.printLoginCards_signingInDescription()}
-            {i18n.printLoginCards_signingInGoogle()}
+            {i18n.loginInfo_signingInDescription()}
+            {i18n.loginInfo_signingInGoogle()}
             <br/>
             <img src={googleSignInButton}/>
           </p>
         }
         {loginType === SectionLoginType.clever &&
-          <p>{i18n.printLoginCards_signingInClever()}</p>
+          <p>{i18n.loginInfo_signingInClever()}</p>
         }
         <br/>
         <h1>{i18n.syncingYourStudents()}</h1>
@@ -117,24 +117,24 @@ class EmailLogins extends React.Component {
 
     return (
       <div>
-        <h1>{i18n.printLoginCards_joinTitle()}</h1>
-        <p>{i18n.printLoginCards_joinBody()}</p>
+        <h1>{i18n.loginInfo_joinTitle()}</h1>
+        <p>{i18n.loginInfo_joinBody()}</p>
         <ol>
           <li>
-            {i18n.printLoginCards_joinStep1({url: `${studioUrlPrefix}/users/sign_up`})}
+            {i18n.loginInfo_joinStep1({url: `${studioUrlPrefix}/users/sign_up`})}
             <br/>
             <img src={oauthSignInButtons}/>
           </li>
-          <li>{i18n.printLoginCards_joinStep2()}</li>
-          <li>{i18n.printLoginCards_joinStep3({url: `${pegasusUrlPrefix}/join`, code: sectionCode})}</li>
-          <li>{i18n.printLoginCards_joinStep4()}</li>
+          <li>{i18n.loginInfo_joinStep2()}</li>
+          <li>{i18n.loginInfo_joinStep3({url: `${pegasusUrlPrefix}/join`, code: sectionCode})}</li>
+          <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
         <br/>
-        <h1>{i18n.printLoginCards_signingIn()}</h1>
-        <p>{i18n.printLoginCards_signingInDescription()}</p>
+        <h1>{i18n.loginInfo_signingIn()}</h1>
+        <p>{i18n.loginInfo_signingInDescription()}</p>
         <br/>
-        <h1>{i18n.printLoginCards_resetTitle()}</h1>
-        <p>{i18n.printLoginCards_resetPasswordBody()}</p>
+        <h1>{i18n.loginInfo_resetTitle()}</h1>
+        <p>{i18n.loginInfo_resetPasswordBody()}</p>
       </div>
     );
   }
@@ -165,7 +165,7 @@ const styles = {
   }
 };
 
-class WordOrPictureLoginCards extends React.Component {
+class WordOrPictureLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
     pegasusUrlPrefix: PropTypes.string.isRequired,
@@ -193,33 +193,33 @@ class WordOrPictureLoginCards extends React.Component {
 
     return (
       <div>
-        <h1>{i18n.printLoginCards_signingIn()}</h1>
-        <p>{i18n.printLoginCards_signinSteps()}</p>
+        <h1>{i18n.loginInfo_signingIn()}</h1>
+        <p>{i18n.loginInfo_signinSteps()}</p>
         <ol>
-          <li>{i18n.printLoginCards_signinStep1({joinUrl: `${pegasusUrlPrefix}/join`})}</li>
-          <li>{i18n.printLoginCards_signinStep2({code: section.code})}</li>
-          <li>{i18n.printLoginCards_signinStep3()}</li>
+          <li>{i18n.loginInfo_signinStep1({joinUrl: `${pegasusUrlPrefix}/join`})}</li>
+          <li>{i18n.loginInfo_signinStep2({code: section.code})}</li>
+          <li>{i18n.loginInfo_signinStep3()}</li>
           {section.loginType === SectionLoginType.picture &&
-            <li>{i18n.printLoginCards_signinStep4_secretPicture()}</li>
+            <li>{i18n.loginInfo_signinStep4_secretPicture()}</li>
           }
           {section.loginType === SectionLoginType.word &&
-            <li>{i18n.printLoginCards_signinStep4_secretWords()}</li>
+            <li>{i18n.loginInfo_signinStep4_secretWords()}</li>
           }
-          <li>{i18n.printLoginCards_signinStep5()}</li>
+          <li>{i18n.loginInfo_signinStep5()}</li>
         </ol>
-        <p>{i18n.printLoginCards_signinStepsReset({wordOrPicture: section.loginType})}</p>
+        <p>{i18n.loginInfo_signinStepsReset({wordOrPicture: section.loginType})}</p>
         <br/>
-        <h1>{i18n.printLoginCards_resetTitle()}</h1>
-        <p>{i18n.printLoginCards_resetSecretBody()}</p>
+        <h1>{i18n.loginInfo_resetTitle()}</h1>
+        <p>{i18n.loginInfo_resetSecretBody()}</p>
         <br/>
-        <h1>{i18n.printLoginCards_loginCardsTitle()}</h1>
+        <h1>{i18n.printLoginCards_title()}</h1>
         {students.length < 1 &&
-          <p><em>{i18n.printLoginCards_noStudents()}</em></p>
+          <p><em>{i18n.loginInfo_noStudents()}</em></p>
         }
         {students.length >= 1 &&
           <span>
             <Button
-              text={i18n.printLoginCards_loginCardsButton()}
+              text={i18n.printLoginCards_button()}
               color="orange"
               onClick={this.printLoginCards}
             />
