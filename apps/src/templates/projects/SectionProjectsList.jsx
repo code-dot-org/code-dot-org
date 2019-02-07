@@ -9,8 +9,7 @@ const styles = {
     float: 'right',
   },
   filterRow: {
-    backgroundColor: 'transparent',
-    padding: 10,
+    paddingBottom: 10,
   },
   clearDiv: {
     clear: 'both'
