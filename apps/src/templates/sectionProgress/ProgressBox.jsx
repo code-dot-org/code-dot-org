@@ -20,7 +20,8 @@ export default class ProgressBox extends Component {
     started: PropTypes.bool,
     incomplete: PropTypes.number,
     imperfect: PropTypes.number,
-    perfect: PropTypes.number
+    perfect: PropTypes.number,
+    style: PropTypes.object
   };
 
   render() {
@@ -28,7 +29,8 @@ export default class ProgressBox extends Component {
 
     const boxWithBorderStyle = {
       ...styles.box,
-      borderColor: started ? color.level_perfect : color.light_gray
+      borderColor: started ? color.level_perfect : color.light_gray,
+      ...this.props.style
     };
 
     const perfectLevels = {
