@@ -5,9 +5,13 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
-
 
 const EXAMPLE_CODE = `
 for (var i = 0; i < 10; i++) {
@@ -25,7 +29,7 @@ describe('The DebugConsole component', () => {
       studioApp: {
         // set hideSource to true so interpreter doesn't try to look up
         // non-existent ace editor
-        hideSource: true,
+        hideSource: true
       }
     });
     sinon.spy(interpreter, 'handleStepOver');
@@ -57,14 +61,14 @@ describe('The DebugConsole component', () => {
     continueButton: () => root.find('#continueButton'),
     stepOverButton: () => root.find('#stepOverButton'),
     stepOutButton: () => root.find('#stepOutButton'),
-    stepInButton: () => root.find('#stepInButton'),
+    stepInButton: () => root.find('#stepInButton')
   };
 
   function isVisible(selector) {
     const wrapper = selector();
-    return wrapper.exists() && (
-      !wrapper.props().style ||
-      wrapper.props().style.display !== 'none'
+    return (
+      wrapper.exists() &&
+      (!wrapper.props().style || wrapper.props().style.display !== 'none')
     );
   }
 
@@ -80,24 +84,22 @@ describe('The DebugConsole component', () => {
     return Object.keys(buttons).filter(key => isEnabled(buttons[key]));
   }
 
-  describe("before anything has happend", () => {
-    it("the pause, step over, step out, and step in buttons are visible", () => {
+  describe('before anything has happend', () => {
+    it('the pause, step over, step out, and step in buttons are visible', () => {
       expect(getVisibleButtons()).to.deep.equal([
         'pauseButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton',
+        'stepInButton'
       ]);
     });
 
-    it("only the step in button is enabled", () => {
-      expect(getEnabledButtons()).to.deep.equal([
-        'stepInButton',
-      ]);
+    it('only the step in button is enabled', () => {
+      expect(getEnabledButtons()).to.deep.equal(['stepInButton']);
     });
   });
 
-  describe("After clicking the step in button", () => {
+  describe('After clicking the step in button', () => {
     beforeEach(() => {
       buttons.stepInButton().simulate('click');
       // kick the interpreter so that it updates it's state.
@@ -107,71 +109,68 @@ describe('The DebugConsole component', () => {
       interpreter.executeInterpreter(false);
     });
 
-    it("the handlePauseContinue method of the interpreter gets called", () => {
+    it('the handlePauseContinue method of the interpreter gets called', () => {
       expect(interpreter.handlePauseContinue).to.have.been.called;
     });
 
-    it("the handleStepIn method of the interpreter gets called", () => {
+    it('the handleStepIn method of the interpreter gets called', () => {
       expect(interpreter.handleStepIn).to.have.been.called;
     });
 
-    it("the continue, step over, step out, and step in buttons are visible and enabled", () => {
+    it('the continue, step over, step out, and step in buttons are visible and enabled', () => {
       expect(getVisibleButtons()).to.deep.equal([
         'continueButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton',
+        'stepInButton'
       ]);
       expect(getEnabledButtons()).to.deep.equal([
         'continueButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton',
+        'stepInButton'
       ]);
     });
 
-    describe("when the step over button is clicked", () => {
+    describe('when the step over button is clicked', () => {
       beforeEach(() => buttons.stepOverButton().simulate('click'));
       it("the interpreter's handleStepOver method is called", () => {
         expect(interpreter.handleStepOver).to.have.been.called;
       });
     });
 
-    describe("when the step out button is clicked", () => {
+    describe('when the step out button is clicked', () => {
       beforeEach(() => buttons.stepOutButton().simulate('click'));
       it("the interpreter's handleStepOut method is called", () => {
         expect(interpreter.handleStepOut).to.have.been.called;
       });
     });
 
-    describe("when the step in button is clicked", () => {
+    describe('when the step in button is clicked', () => {
       beforeEach(() => buttons.stepInButton().simulate('click'));
       it("the interpreter's handleStepIn method is called", () => {
         expect(interpreter.handleStepIn).to.have.been.called;
       });
     });
-
   });
 
-  describe("When the interpreter is started from somewhere else", () => {
+  describe('When the interpreter is started from somewhere else', () => {
     beforeEach(runApp);
 
-    it("the pause, step over, step in, and step out buttons are visible", () => {
+    it('the pause, step over, step in, and step out buttons are visible', () => {
       expect(getVisibleButtons()).to.deep.equal([
         'pauseButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton',
+        'stepInButton'
       ]);
     });
 
-    it("only the pause button is enabled", () => {
-      expect(getEnabledButtons()).to.deep.equal([
-        'pauseButton',
-      ]);
+    it('only the pause button is enabled', () => {
+      expect(getEnabledButtons()).to.deep.equal(['pauseButton']);
     });
 
-    describe("and the pause button is clicked", () => {
+    describe('and the pause button is clicked', () => {
       beforeEach(() => buttons.pauseButton().simulate('click'));
 
       it("the interpreter's handlePauseContinue method is called", () => {
@@ -183,16 +182,15 @@ describe('The DebugConsole component', () => {
           'continueButton',
           'stepOverButton',
           'stepOutButton',
-          'stepInButton',
+          'stepInButton'
         ]);
         expect(getEnabledButtons()).to.deep.equal([
           'continueButton',
           'stepOverButton',
           'stepOutButton',
-          'stepInButton',
+          'stepInButton'
         ]);
       });
     });
   });
-
 });

@@ -2,15 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Checkbox} from 'react-bootstrap';
 
-const REQUIRED = (<span style={{color: 'red'}}>&nbsp;*</span>);
+const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
 
 export default class SingleCheckbox extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    label: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element
-    ]).isRequired,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+      .isRequired,
     value: PropTypes.bool,
     required: PropTypes.bool,
     validationState: PropTypes.string,
@@ -18,10 +16,11 @@ export default class SingleCheckbox extends React.Component {
     style: PropTypes.object
   };
 
-  handleChange = (event) => {
-    this.props.onChange && this.props.onChange({
-      [this.props.name]: event.target.checked
-    });
+  handleChange = event => {
+    this.props.onChange &&
+      this.props.onChange({
+        [this.props.name]: event.target.checked
+      });
   };
 
   render() {
@@ -33,7 +32,8 @@ export default class SingleCheckbox extends React.Component {
         validationState={this.props.validationState}
         style={this.props.style}
       >
-        {this.props.label}{this.props.required && REQUIRED}
+        {this.props.label}
+        {this.props.required && REQUIRED}
       </Checkbox>
     );
   }

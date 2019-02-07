@@ -14,19 +14,23 @@ describe('ChangeUserTypeModal', () => {
 
   const DEFAULT_PROPS = {
     handleSubmit: () => {},
-    handleCancel: () => {},
+    handleCancel: () => {}
   };
 
   // Helpers for selecting particular elements/components
   const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
   const emailOptInSelect = wrapper => wrapper.find(EMAIL_OPT_IN_SELECTOR);
-  const submitButton = wrapper => wrapper.find(Button)
-    .filterWhere(n => n.prop('text') === i18n.changeUserTypeModal_save_teacher());
-  const cancelButton = wrapper => wrapper.find(Button)
-    .filterWhere(n => n.prop('text') === i18n.cancel());
+  const submitButton = wrapper =>
+    wrapper
+      .find(Button)
+      .filterWhere(
+        n => n.prop('text') === i18n.changeUserTypeModal_save_teacher()
+      );
+  const cancelButton = wrapper =>
+    wrapper.find(Button).filterWhere(n => n.prop('text') === i18n.cancel());
 
   beforeEach(() => {
-    wrapper = mount(<ChangeUserTypeModal {...DEFAULT_PROPS}/>);
+    wrapper = mount(<ChangeUserTypeModal {...DEFAULT_PROPS} />);
   });
 
   afterEach(() => {
@@ -44,7 +48,9 @@ describe('ChangeUserTypeModal', () => {
 
   it('shows unknown error text when an unknown error occurs', () => {
     wrapper.setState({saveState: 'unknown-error'});
-    expect(wrapper.text()).to.include(i18n.changeUserTypeModal_unexpectedError());
+    expect(wrapper.text()).to.include(
+      i18n.changeUserTypeModal_unexpectedError()
+    );
   });
 
   it('calls handleCancel when clicking the cancel button', () => {
@@ -60,22 +66,26 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: '',
-          emailOptIn: 'yes',
+          emailOptIn: 'yes'
         }
       });
 
-      expect(wrapper.text()).to.include(i18n.changeUserTypeModal_email_isRequired());
+      expect(wrapper.text()).to.include(
+        i18n.changeUserTypeModal_email_isRequired()
+      );
     });
 
     it('checks that email is valid', () => {
       wrapper.setState({
         values: {
           email: 'invalidEmail@nowhere',
-          emailOptIn: 'yes',
+          emailOptIn: 'yes'
         }
       });
 
-      expect(wrapper.text()).to.include(i18n.changeUserTypeModal_email_invalid());
+      expect(wrapper.text()).to.include(
+        i18n.changeUserTypeModal_email_invalid()
+      );
     });
 
     it('reports email server errors', () => {
@@ -83,10 +93,10 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: '',
-          emailOptIn: 'yes',
+          emailOptIn: 'yes'
         },
         serverErrors: {
-          email: serverError,
+          email: serverError
         }
       });
 
@@ -98,11 +108,13 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: email,
-          emailOptIn: '',
+          emailOptIn: ''
         }
       });
 
-      expect(wrapper.text()).to.include(i18n.changeUserTypeModal_emailOptIn_isRequired());
+      expect(wrapper.text()).to.include(
+        i18n.changeUserTypeModal_emailOptIn_isRequired()
+      );
     });
 
     it('reports email opt-in server errors', () => {
@@ -111,10 +123,10 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: email,
-          emailOptIn: '',
+          emailOptIn: ''
         },
         serverErrors: {
-          emailOptIn: serverError,
+          emailOptIn: serverError
         }
       });
 
@@ -125,7 +137,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: '',
-          emailOptIn: '',
+          emailOptIn: ''
         }
       });
 
@@ -136,7 +148,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: 'me@example.com',
-          emailOptIn: 'yes',
+          emailOptIn: 'yes'
         }
       });
 
@@ -148,22 +160,26 @@ describe('ChangeUserTypeModal', () => {
     it('on email', () => {
       wrapper.setState({
         serverErrors: {
-          email: 'test-server-error',
+          email: 'test-server-error'
         }
       });
       expect(wrapper.state().serverErrors.email).to.equal('test-server-error');
-      emailInput(wrapper).simulate('change', {target:{value:'me@example.com'}});
+      emailInput(wrapper).simulate('change', {
+        target: {value: 'me@example.com'}
+      });
       expect(wrapper.state().serverErrors.email).to.be.undefined;
     });
 
     it('on email opt-in', () => {
       wrapper.setState({
         serverErrors: {
-          emailOptIn: 'test-server-error',
+          emailOptIn: 'test-server-error'
         }
       });
-      expect(wrapper.state().serverErrors.emailOptIn).to.equal('test-server-error');
-      emailOptInSelect(wrapper).simulate('change', {target:{value:'yes'}});
+      expect(wrapper.state().serverErrors.emailOptIn).to.equal(
+        'test-server-error'
+      );
+      emailOptInSelect(wrapper).simulate('change', {target: {value: 'yes'}});
       expect(wrapper.state().serverErrors.emailOptIn).to.be.undefined;
     });
   });
@@ -179,18 +195,18 @@ describe('ChangeUserTypeModal', () => {
       expect(wrapper.state().saveState).to.equal('initial');
       expect(wrapper.state().serverErrors).to.deep.equal({
         email: undefined,
-        emailOptIn: undefined,
+        emailOptIn: undefined
       });
       wrapper.instance().onSubmitFailure({
         serverErrors: {
           email: 'test-email-server-error',
-          emailOptIn: 'test-opt-in-server-error',
+          emailOptIn: 'test-opt-in-server-error'
         }
       });
       expect(wrapper.state().saveState).to.equal('initial');
       expect(wrapper.state().serverErrors).to.deep.equal({
         email: 'test-email-server-error',
-        emailOptIn: 'test-opt-in-server-error',
+        emailOptIn: 'test-opt-in-server-error'
       });
     });
   });

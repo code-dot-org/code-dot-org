@@ -24,7 +24,7 @@ export function isNumber(val) {
  * @returns {boolean} Whether the value represents a boolean.
  */
 export function isBoolean(val) {
-  return (val === true || val === false || val === 'true' || val === 'false');
+  return val === true || val === false || val === 'true' || val === 'false';
 }
 
 export function toBoolean(val) {

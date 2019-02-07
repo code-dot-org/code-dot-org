@@ -19,7 +19,9 @@ import manageStudents, {
   setLoginType,
   setStudents
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import teacherSections, {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setSections
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
@@ -32,7 +34,7 @@ describe('ManageStudentsTable', () => {
       {id: 2, name: 'studentf', rowType: RowType.NEW_STUDENT}
     ];
     const columnIndexList = [];
-    const orderList = ["asc"];
+    const orderList = ['asc'];
     const sortedList = sortRows(rowData, columnIndexList, orderList);
     expect(sortedList[0].id).to.equal(0);
     expect(sortedList[1].id).to.equal(2);
@@ -77,18 +79,18 @@ describe('ManageStudentsTable', () => {
       hasEverSignedIn: true,
       dependsOnThisSectionForLogin: true,
       loginType: 'picture',
-      rowType: RowType.STUDENT,
+      rowType: RowType.STUDENT
     };
     const fakeStudents = {
       [fakeStudent.id]: fakeStudent
     };
     const fakeSection = {
       id: 101,
-      location: "/v2/sections/101",
-      name: "My Section",
-      login_type: "picture",
-      grade: "2",
-      code: "PMTKVH",
+      location: '/v2/sections/101',
+      name: 'My Section',
+      login_type: 'picture',
+      grade: '2',
+      code: 'PMTKVH',
       stage_extras: false,
       pairing_allowed: true,
       sharing_disabled: false,
@@ -96,7 +98,7 @@ describe('ManageStudentsTable', () => {
       course_id: 29,
       studentCount: 10,
       students: Object.values(fakeStudents),
-      hidden: false,
+      hidden: false
     };
 
     beforeEach(() => {
@@ -116,7 +118,7 @@ describe('ManageStudentsTable', () => {
     it('renders an action cell for each student', () => {
       const wrapper = mount(
         <Provider store={getStore()}>
-          <ManageStudentsTable/>
+          <ManageStudentsTable />
         </Provider>
       );
       expect(wrapper).to.containMatchingElement(
@@ -127,7 +129,9 @@ describe('ManageStudentsTable', () => {
           loginType={fakeStudent.loginType}
           studentName={fakeStudent.name}
           hasEverSignedIn={fakeStudent.hasEverSignedIn}
-          dependsOnThisSectionForLogin={fakeStudent.dependsOnThisSectionForLogin}
+          dependsOnThisSectionForLogin={
+            fakeStudent.dependsOnThisSectionForLogin
+          }
         />
       );
     });

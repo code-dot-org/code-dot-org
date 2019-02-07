@@ -3,7 +3,12 @@
  * of code studio apps.
  */
 
-import {canvasFromImage, canvasToBlob, imageFromURI, svgToDataURI} from '../imageUtils';
+import {
+  canvasFromImage,
+  canvasToBlob,
+  imageFromURI,
+  svgToDataURI
+} from '../imageUtils';
 import {getStore} from '../redux';
 import project from '../code-studio/initApp/project';
 import {html2canvas} from '../util/htmlToCanvasWrapper';
@@ -27,9 +32,14 @@ let lastCaptureTimeMs = 0;
  * since the last capture.
  * @returns {boolean}
  */
- function shouldCapture(captureIntervalMs = MIN_CAPTURE_INTERVAL_MS) {
+function shouldCapture(captureIntervalMs = MIN_CAPTURE_INTERVAL_MS) {
   const {isShareView, isEmbedView} = getStore().getState().pageConstants;
-  if (!project.getCurrentId() || !project.isOwner() || isShareView || isEmbedView) {
+  if (
+    !project.getCurrentId() ||
+    !project.isOwner() ||
+    isShareView ||
+    isEmbedView
+  ) {
     return false;
   }
 
@@ -54,7 +64,9 @@ export function captureThumbnailFromSvg(svg) {
     return;
   }
   if (!SVGElement.prototype.toDataURL) {
-    console.warn('Thumbnail capture failed: SVGElement.prototype.toDataURL undefined.');
+    console.warn(
+      'Thumbnail capture failed: SVGElement.prototype.toDataURL undefined.'
+    );
     return;
   }
   if (!shouldCapture()) {
@@ -122,7 +134,11 @@ export function setThumbnailBlobFromCanvas(canvas) {
    * to 5000ms (5 seconds). The thumbnail will then be saved to the server when the project is saved.
    */
   const OVERRIDE_MIN_CAPTURE_INTERVAL_MS = 5000;
-  getThumbnailFromCanvas(canvas, OVERRIDE_MIN_CAPTURE_INTERVAL_MS, project.setThumbnailPngBlob);
+  getThumbnailFromCanvas(
+    canvas,
+    OVERRIDE_MIN_CAPTURE_INTERVAL_MS,
+    project.setThumbnailPngBlob
+  );
 }
 
 /**
@@ -145,7 +161,6 @@ export function isCaptureComplete() {
   return lastCaptureTimeMs > 0 && !isCapturePending;
 }
 
-
 /**
  * Copies the image from the element, shrinks it to a width equal to
  * THUMBNAIL_WIDTH preserving aspect ratio, and saves it to the server.
@@ -164,34 +179,37 @@ export function captureThumbnailFromElement(element) {
   isCapturePending = true;
 
   const options = {
-    background: '#eee',
+    background: '#eee'
   };
 
   // html2canvas can take up to 2 seconds to capture the element contents
   // onto the canvas.
-  return html2canvas(element, options).then(canvas => {
-    if (!isCapturePending) {
-      // We most likely got here because a level test triggered a screenshot
-      // capture, the test completed, and then another test started before the
-      // capture completed.
-      console.log('not saving screenshot because no capture is pending');
-      return;
-    }
+  return html2canvas(element, options)
+    .then(canvas => {
+      if (!isCapturePending) {
+        // We most likely got here because a level test triggered a screenshot
+        // capture, the test completed, and then another test started before the
+        // capture completed.
+        console.log('not saving screenshot because no capture is pending');
+        return;
+      }
 
-    // Center-crop and scale the image down so we don't send so much data over
-    // the network.
-    const thumbnailCanvas = createThumbnail(canvas);
+      // Center-crop and scale the image down so we don't send so much data over
+      // the network.
+      const thumbnailCanvas = createThumbnail(canvas);
 
-    return new Promise((resolve, reject) => {
-      thumbnailCanvas.toBlob(pngBlob => {
-        project.saveThumbnail(pngBlob).then(resolve, reject);
+      return new Promise((resolve, reject) => {
+        thumbnailCanvas.toBlob(pngBlob => {
+          project.saveThumbnail(pngBlob).then(resolve, reject);
+        });
       });
+    })
+    .catch(e => {
+      console.log(`error capturing screenshot: ${e}`);
+    })
+    .then(() => {
+      isCapturePending = false;
     });
-  }).catch(e => {
-    console.log(`error capturing screenshot: ${e}`);
-  }).then(() => {
-    isCapturePending = false;
-  });
 }
 
 /**
@@ -209,8 +227,19 @@ export function createThumbnail(canvas) {
   // Make sure any empty areas appear white.
   const thumbnailContext = thumbnailCanvas.getContext('2d');
   thumbnailContext.fillStyle = 'white';
-  thumbnailContext.fillRect(0, 0, thumbnailCanvas.width, thumbnailCanvas.height);
+  thumbnailContext.fillRect(
+    0,
+    0,
+    thumbnailCanvas.width,
+    thumbnailCanvas.height
+  );
 
-  thumbnailContext.drawImage(canvas, 0, 0, thumbnailCanvas.width, thumbnailCanvas.height);
+  thumbnailContext.drawImage(
+    canvas,
+    0,
+    0,
+    thumbnailCanvas.width,
+    thumbnailCanvas.height
+  );
   return thumbnailCanvas;
 }

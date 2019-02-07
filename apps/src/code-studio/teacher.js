@@ -5,25 +5,29 @@ import debounce from 'lodash/debounce';
 import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { getStore } from './redux';
+import {Provider} from 'react-redux';
+import {getStore} from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
-import { setSectionLockStatus } from './stageLockRedux';
-import { ViewType, setViewType } from './viewAsRedux';
-import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import { getHiddenStages } from './hiddenStageRedux';
+import {setSectionLockStatus} from './stageLockRedux';
+import {ViewType, setViewType} from './viewAsRedux';
+import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  setSections,
+  selectSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getHiddenStages} from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 
 function resizeScrollable() {
-  var newHeight = $('.teacher-panel').innerHeight() -
-      $('.teacher-panel h3').outerHeight() -
-      15 - // magic..
-      $('.non-scrollable-wrapper').outerHeight();
+  var newHeight =
+    $('.teacher-panel').innerHeight() -
+    $('.teacher-panel h3').outerHeight() -
+    15 - // magic..
+    $('.non-scrollable-wrapper').outerHeight();
   $('.scrollable-wrapper').css('max-height', newHeight);
 }
 
@@ -33,13 +37,13 @@ export function onReady() {
   resizeScrollable();
 
   var submittedTimestamp = $('#submitted .timestamp');
-  submittedTimestamp.text((new Date(submittedTimestamp.text())).toLocaleString());
+  submittedTimestamp.text(new Date(submittedTimestamp.text()).toLocaleString());
 
-  $('select#sections').change(function (ev) {
+  $('select#sections').change(function(ev) {
     window.location.href = ev.target.value;
   });
 
-  $('#unsubmit').click(function (ev) {
+  $('#unsubmit').click(function(ev) {
     $.ajax({
       url: $(ev.target).attr('data-user-level-url'),
       method: 'PUT',
@@ -49,20 +53,24 @@ export function onReady() {
           submitted: false
         }
       }
-    }).done(data => {
-      // Let's just refresh so that the dots are correct, etc.
-      location.reload();
-    }).fail(err => console.error(err));
+    })
+      .done(data => {
+        // Let's just refresh so that the dots are correct, etc.
+        location.reload();
+      })
+      .fail(err => console.error(err));
   });
 
-  $("#clear-response").click(ev => {
+  $('#clear-response').click(ev => {
     $.ajax({
       url: $(ev.target).attr('data-user-level-url'),
       method: 'DELETE'
-    }).done(data => {
-      // Refresh, so that we no longer have the students response loaded
-      location.reload();
-    }).fail(err => console.error(err));
+    })
+      .done(data => {
+        // Refresh, so that we no longer have the students response loaded
+        location.reload();
+      })
+      .fail(err => console.error(err));
   });
 
   renderIntoLessonTeacherPanel();
@@ -74,15 +82,12 @@ export function onReady() {
  */
 function queryLockStatus(store, scriptId) {
   return new Promise((resolve, reject) => {
-    $.ajax(
-      '/api/lock_status',
-      {
-        data: {
-          user_id: clientState.queryParams('user_id'),
-          script_id: scriptId
-        }
+    $.ajax('/api/lock_status', {
+      data: {
+        user_id: clientState.queryParams('user_id'),
+        script_id: scriptId
       }
-    ).done(data => {
+    }).done(data => {
       // Extract the state that teacherSectionsRedux cares about
       const teacherSections = Object.values(data).map(section => ({
         id: section.section_id,
@@ -110,7 +115,7 @@ export function renderTeacherPanel(store, scriptId) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <ScriptTeacherPanel/>
+      <ScriptTeacherPanel />
     </Provider>,
     div
   );
@@ -125,7 +130,9 @@ export function renderTeacherPanel(store, scriptId) {
 function renderIntoLessonTeacherPanel() {
   const teacherPanelViewAs = document.getElementById('teacher-panel-viewas');
   const stageLockedText = document.getElementById('stage-locked-text');
-  const teacherPanelSections = document.getElementById('teacher-panel-sections');
+  const teacherPanelSections = document.getElementById(
+    'teacher-panel-sections'
+  );
 
   if (teacherPanelViewAs) {
     renderViewAsToggle(teacherPanelViewAs);
@@ -146,9 +153,7 @@ function renderIntoLessonTeacherPanel() {
     if (stageLockedText) {
       const state = store.getState();
 
-
-
-      const { currentStageId } = state.progress;
+      const {currentStageId} = state.progress;
       if (lessonIsLockedForAllStudents(currentStageId, state)) {
         $(stageLockedText).text(commonMsg.stageLocked());
       } else {
@@ -168,7 +173,7 @@ function renderViewAsToggle(element) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <ViewAsToggle/>
+      <ViewAsToggle />
     </Provider>,
     element
   );
@@ -177,10 +182,7 @@ function renderViewAsToggle(element) {
 function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <SectionSelector
-        style={{margin: 10}}
-        reloadOnChange={true}
-      />
+      <SectionSelector style={{margin: 10}} reloadOnChange={true} />
     </Provider>,
     element
   );
@@ -191,24 +193,26 @@ function renderTeacherPanelSections(element) {
  * Render a content toggle component that does this for us.
  */
 function renderContentToggle() {
-  if (typeof(window.appOptions) === 'undefined') {
+  if (typeof window.appOptions === 'undefined') {
     // This can happen if student hasn't attempted level
     return;
   }
   // We can remove this element once we get rid of the experiment
-  $("#try-it-yourself").hide();
+  $('#try-it-yourself').hide();
 
   const levelContent = $('#level-body');
-  const element = $('<div/>').css('height', '100%').insertAfter(levelContent)[0];
+  const element = $('<div/>')
+    .css('height', '100%')
+    .insertAfter(levelContent)[0];
   const store = getStore();
 
-  const { scriptName } = store.getState().progress;
+  const {scriptName} = store.getState().progress;
 
   store.dispatch(getHiddenStages(scriptName, false));
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app}/>
+      <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app} />
     </Provider>,
     element
   );

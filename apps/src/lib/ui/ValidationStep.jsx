@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
 
@@ -17,24 +17,24 @@ const style = {
     marginBottom: 15,
     marginTop: 15,
     marginLeft: 0,
-    marginRight: 0,
+    marginRight: 0
   },
   header: {
     fontSize: 26,
-    lineHeight: 'normal',
+    lineHeight: 'normal'
   },
   body: {
     marginBottom: 15,
     marginTop: 15,
     marginLeft: 40,
     marginRight: 0,
-    fontSize: 14,
+    fontSize: 14
   },
   icon: {
-    float: 'left',
+    float: 'left'
   },
   headerText: {
-    marginLeft: 40,
+    marginLeft: 40
   }
 };
 
@@ -58,11 +58,7 @@ export default class ValidationStep extends Component {
           <div style={style.icon}>{iconFor(stepStatus)}</div>
           <div style={style.headerText}>{stepName}</div>
         </div>
-        {showChildren &&
-          <div style={style.body}>
-            {children}
-          </div>
-        }
+        {showChildren && <div style={style.body}>{children}</div>}
       </div>
     );
   }
@@ -96,21 +92,39 @@ function styleFor(stepStatus) {
  */
 function iconFor(stepStatus) {
   const iconStyle = {
-    marginRight: 6,
+    marginRight: 6
   };
   switch (stepStatus) {
     case Status.WAITING:
-      return <FontAwesome icon="clock-o" className="fa-fw" style={iconStyle}/>;
+      return <FontAwesome icon="clock-o" className="fa-fw" style={iconStyle} />;
     case Status.ATTEMPTING:
-      return <FontAwesome icon="spinner" className="fa-fw fa-spin" style={iconStyle}/>;
+      return (
+        <FontAwesome
+          icon="spinner"
+          className="fa-fw fa-spin"
+          style={iconStyle}
+        />
+      );
     case Status.SUCCEEDED:
-      return <FontAwesome icon="check-circle" className="fa-fw" style={iconStyle}/>;
+      return (
+        <FontAwesome icon="check-circle" className="fa-fw" style={iconStyle} />
+      );
     case Status.CELEBRATING:
-      return <FontAwesome icon="thumbs-o-up" className="fa-fw" style={iconStyle}/>;
+      return (
+        <FontAwesome icon="thumbs-o-up" className="fa-fw" style={iconStyle} />
+      );
     case Status.FAILED:
-      return <FontAwesome icon="times-circle" className="fa-fw" style={iconStyle}/>;
+      return (
+        <FontAwesome icon="times-circle" className="fa-fw" style={iconStyle} />
+      );
     case Status.UNKNOWN:
-      return <FontAwesome icon="question-circle" className="fa-fw" style={iconStyle}/>;
+      return (
+        <FontAwesome
+          icon="question-circle"
+          className="fa-fw"
+          style={iconStyle}
+        />
+      );
     default:
       throw new Error(`Unknown step status ${stepStatus}.`);
   }

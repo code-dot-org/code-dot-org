@@ -7,11 +7,10 @@ import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps
 const DEFAULT_PROPS = {
   id: 2,
   isEditing: false,
-  editedValue: 13,
+  editedValue: 13
 };
 
 describe('ManageStudentAgeCell', () => {
-
   let editStudent, setSharingDefault;
 
   beforeEach(() => {
@@ -58,7 +57,7 @@ describe('ManageStudentAgeCell', () => {
     );
     expect(editStudent.callCount).to.equal(0);
     expect(setSharingDefault.callCount).to.equal(0);
-    wrapper.find('select').simulate('change', {target: { value : '21+'}});
+    wrapper.find('select').simulate('change', {target: {value: '21+'}});
     expect(editStudent.callCount).to.equal(1);
     // setSharing default should not be called because the age was changed from
     // 10 to  21+ and we only call setSharingDefault if initial age is ''.
@@ -77,7 +76,7 @@ describe('ManageStudentAgeCell', () => {
     );
     expect(editStudent.callCount).to.equal(0);
     expect(setSharingDefault.callCount).to.equal(0);
-    wrapper.find('select').simulate('change', {target: { value : 13}});
+    wrapper.find('select').simulate('change', {target: {value: 13}});
     expect(editStudent.callCount).to.equal(1);
     // setSharing default should be called because initial age was ''.
     expect(setSharingDefault.callCount).to.equal(1);

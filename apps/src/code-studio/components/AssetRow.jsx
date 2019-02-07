@@ -3,8 +3,8 @@ import React from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
-import firehoseClient from "@cdo/apps/lib/util/firehose";
-import color from "@cdo/apps/util/color";
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   deleteWarning: {
@@ -44,20 +44,19 @@ export default class AssetRow extends React.Component {
    */
   confirmDelete = () => {
     this.setState({action: 'confirming delete', actionText: ''});
-    firehoseClient.putRecord(
-      {
-        study: 'delete-asset',
-        study_group: this.props.onChoose && typeof this.props.onChoose === 'function' ? 'choose-assets' : 'manage-assets',
-        event: 'initiate',
-        project_id: this.props.projectId,
-        data_json: JSON.stringify(
-          {
-            assetName: this.props.name,
-            elementId: this.props.elementId
-          }
-        )
-      }
-    );
+    firehoseClient.putRecord({
+      study: 'delete-asset',
+      study_group:
+        this.props.onChoose && typeof this.props.onChoose === 'function'
+          ? 'choose-assets'
+          : 'manage-assets',
+      event: 'initiate',
+      project_id: this.props.projectId,
+      data_json: JSON.stringify({
+        assetName: this.props.name,
+        elementId: this.props.elementId
+      })
+    });
   };
 
   /**
@@ -76,8 +75,10 @@ export default class AssetRow extends React.Component {
 
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     api.deleteFile(this.props.name, this.props.onDelete, () => {
-      this.setState({action: 'confirming delete',
-        actionText: i18n.errorDeleting()});
+      this.setState({
+        action: 'confirming delete',
+        actionText: i18n.errorDeleting()
+      });
     });
   };
 
@@ -112,7 +113,7 @@ export default class AssetRow extends React.Component {
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
             <button className="btn-danger" onClick={this.confirmDelete}>
-              <i className="fa fa-trash-o"/>
+              <i className="fa fa-trash-o" />
             </button>
           </td>
         );

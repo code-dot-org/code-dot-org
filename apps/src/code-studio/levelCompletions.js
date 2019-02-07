@@ -8,7 +8,7 @@ import $ from 'jquery';
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-exports.hideAndShowDomElements = function (isSampled, startDatePresent) {
+exports.hideAndShowDomElements = function(isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
   }
@@ -22,22 +22,29 @@ exports.hideAndShowDomElements = function (isSampled, startDatePresent) {
  * on the percentage.
  */
 function successRateRenderer(
-    instance, td, row, col, prop, value, cellProperties) {
+  instance,
+  td,
+  row,
+  col,
+  prop,
+  value,
+  cellProperties
+) {
   var conditions = [
-      [0.7, '#00FF00'],
-      [0.5, '#b4ff00'],
-      [0.45, '#ccff00'],
-      [0.4, '#ffff00'],
-      [0.3, '#ffdf00'],
-      [0.2, '#ff8100'],
-      [0.15, '#ff9900'],
-      [0.1, '#ff0000'],
-      [0.05, '#a61c00'],
-      [0, '#5b0f00']
+    [0.7, '#00FF00'],
+    [0.5, '#b4ff00'],
+    [0.45, '#ccff00'],
+    [0.4, '#ffff00'],
+    [0.3, '#ffdf00'],
+    [0.2, '#ff8100'],
+    [0.15, '#ff9900'],
+    [0.1, '#ff0000'],
+    [0.05, '#a61c00'],
+    [0, '#5b0f00']
   ];
   Handsontable.renderers.NumericRenderer.apply(this, arguments);
   var val = parseFloat(value);
-  for (var i=0; i < conditions.length; i++) {
+  for (var i = 0; i < conditions.length; i++) {
     if (val >= conditions[i][0]) {
       td.style.background = conditions[i][1];
       return;
@@ -50,7 +57,14 @@ function successRateRenderer(
  * depending on the percentage.
  */
 function uniqueSuccessRateRenderer(
-    instance, td, row, col, prop, value, cellProperties) {
+  instance,
+  td,
+  row,
+  col,
+  prop,
+  value,
+  cellProperties
+) {
   var conditions = [
     [0.98, '#00FF00'],
     [0.95, '#94ff20'],
@@ -65,7 +79,7 @@ function uniqueSuccessRateRenderer(
   ];
   Handsontable.renderers.NumericRenderer.apply(this, arguments);
   var val = parseFloat(value);
-  for (var i=0; i < conditions.length; i++) {
+  for (var i = 0; i < conditions.length; i++) {
     if (val >= conditions[i][0]) {
       td.style.background = conditions[i][1];
       return;
@@ -78,26 +92,33 @@ function uniqueSuccessRateRenderer(
  * background is colored gray.
  */
 function timeOnSiteRenderer(
-    instance, td, row, col, prop, value, cellProperties) {
+  instance,
+  td,
+  row,
+  col,
+  prop,
+  value,
+  cellProperties
+) {
   var percent = 0;
   if (value) {
     var val = parseFloat(value);
     var minutes = Math.floor(val / 60);
-    var seconds = val - minutes*60;
+    var seconds = val - minutes * 60;
     value = ('0' + minutes).substr(-2) + ':' + ('0' + seconds).substr(-2);
     percent = Math.min(1, val / 600);
   }
   Handsontable.renderers.TextRenderer.apply(this, arguments);
   td.style['font-family'] = 'monospace';
-  td.style['background'] = 'linear-gradient(90deg, silver '
-      + percent*100 + '%, white 0%)';
+  td.style['background'] =
+    'linear-gradient(90deg, silver ' + percent * 100 + '%, white 0%)';
 }
 
 /**
  * Populates the completionTable DOM element.
  */
-exports.populateTable = function (headers, data) {
-  $("#completionTable").handsontable({
+exports.populateTable = function(headers, data) {
+  $('#completionTable').handsontable({
     data: data,
     startRows: 10,
     startCols: 9,
@@ -111,45 +132,45 @@ exports.populateTable = function (headers, data) {
         data: 'Puzzle'
       },
       {
-        data: "TotalAttempt",
+        data: 'TotalAttempt',
         type: 'numeric'
       },
       {
-        data: "TotalSuccess",
+        data: 'TotalSuccess',
         type: 'numeric'
       },
       {
-        data: "Avg Success Rate",
+        data: 'Avg Success Rate',
         type: 'numeric',
         format: '0.00%'
       },
       {
-        data: "Avg attempts per completion",
+        data: 'Avg attempts per completion',
         type: 'numeric',
         format: '0.00'
       },
       {
-        data: "UniqueAttempt",
+        data: 'UniqueAttempt',
         type: 'numeric'
       },
       {
-        data: "UniqueSuccess",
+        data: 'UniqueSuccess',
         type: 'numeric'
       },
       {
-        data: "Perceived Dropout",
+        data: 'Perceived Dropout',
         type: 'numeric'
       },
       {
-        data: "Avg Unique Success Rate",
+        data: 'Avg Unique Success Rate',
         type: 'numeric',
         format: '0.00%'
       },
       {
-        data: "timeOnSite"
+        data: 'timeOnSite'
       }
     ],
-    cells: function (row, col, prop) {
+    cells: function(row, col, prop) {
       if (col === 3) {
         return {renderer: successRateRenderer};
       } else if (col === 8) {

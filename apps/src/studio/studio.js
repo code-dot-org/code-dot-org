@@ -5,7 +5,6 @@
  *
  */
 
-
 import $ from 'jquery';
 import * as constants from './constants';
 import * as utils from '../utils';
@@ -13,7 +12,7 @@ import _ from 'lodash';
 import AppView from '../templates/AppView';
 import BigGameLogic from './customLogic/bigGameLogic';
 import CollisionMaskWalls from './collisionMaskWalls';
-import Hammer from "../third-party/hammer";
+import Hammer from '../third-party/hammer';
 import GlowFilter from './starwars/GlowFilter';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
@@ -39,13 +38,10 @@ import dropletConfig from './dropletConfig';
 import paramLists from './paramLists.js';
 import studioCell from './cell';
 import studioMsg from './locale';
-import { GridTurn, GridMove, GridMoveAndCancel } from './spriteActions';
-import { Provider } from 'react-redux';
-import { singleton as studioApp } from '../StudioApp';
-import {
-  outputError,
-  injectErrorHandler
-} from '../lib/util/javascriptMode';
+import {GridTurn, GridMove, GridMoveAndCancel} from './spriteActions';
+import {Provider} from 'react-redux';
+import {singleton as studioApp} from '../StudioApp';
+import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
@@ -109,19 +105,18 @@ const DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
 
-const EdgeClassNames = [
-  'top',
-  'left',
-  'bottom',
-  'right'
-];
+const EdgeClassNames = ['top', 'left', 'bottom', 'right'];
 
 let level;
 let skin;
 
 // These skins can be published as projects.
 const PUBLISHABLE_SKINS = [
-  'gumball', 'studio', 'iceage', 'infinity', 'hoc2015'
+  'gumball',
+  'studio',
+  'iceage',
+  'infinity',
+  'hoc2015'
 ];
 
 //TODO: Make configurable.
@@ -133,25 +128,22 @@ var AUTO_HANDLER_MAP = {
   whenUp: 'when-up',
   whenLeft: 'when-left',
   whenRight: 'when-right',
-  whenGetCharacter: 'whenSpriteCollided-' +
-      (Studio.protagonistSpriteIndex || 0) +
-      '-any_item',
-  whenTouchCharacter: 'whenSpriteCollided-' +
-      (Studio.protagonistSpriteIndex || 0) +
-      '-any_item',
-  whenTouchObstacle: 'whenSpriteCollided-' +
-      (Studio.protagonistSpriteIndex || 0) +
-      '-wall',
+  whenGetCharacter:
+    'whenSpriteCollided-' + (Studio.protagonistSpriteIndex || 0) + '-any_item',
+  whenTouchCharacter:
+    'whenSpriteCollided-' + (Studio.protagonistSpriteIndex || 0) + '-any_item',
+  whenTouchObstacle:
+    'whenSpriteCollided-' + (Studio.protagonistSpriteIndex || 0) + '-wall',
   whenGetAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
-  whenScore1000: 'whenScore1000',
+  whenScore1000: 'whenScore1000'
 };
 
 // Default Scalings
 Studio.scale = {
-  'snapRadius': 1,
-  'stepSpeed': 33
+  snapRadius: 1,
+  stepSpeed: 33
 };
 
 var TITLE_SCREEN_TIMEOUT = 5000;
@@ -164,8 +156,9 @@ var TITLE_SCREEN_TEXT_TOP_MARGIN = 5;
 var TITLE_SCREEN_TEXT_V_PADDING = 15;
 var TITLE_SCREEN_TEXT_WIDTH = 360;
 var TITLE_SCREEN_TEXT_HEIGHT =
-      TITLE_SCREEN_TEXT_TOP_MARGIN + TITLE_SCREEN_TEXT_V_PADDING +
-      (TITLE_SCREEN_TEXT_MAX_LINES * TITLE_SCREEN_TEXT_LINE_HEIGHT);
+  TITLE_SCREEN_TEXT_TOP_MARGIN +
+  TITLE_SCREEN_TEXT_V_PADDING +
+  TITLE_SCREEN_TEXT_MAX_LINES * TITLE_SCREEN_TEXT_LINE_HEIGHT;
 
 var SPEECH_BUBBLE_RADIUS = 20;
 var SPEECH_BUBBLE_H_OFFSET = 50;
@@ -184,7 +177,7 @@ var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
 var twitterOptions = {
   text: studioMsg.shareStudioTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: "StudioCode"
+  hashtag: 'StudioCode'
 };
 
 /** @type {JsInterpreterLogger} */
@@ -194,13 +187,13 @@ var consoleLogger = null;
 // Project" level.
 const DEFAULT_MAP = [
   [16, 0, 0, 16, 0, 0, 16, 0],
-  [0,  0, 0,  0, 0, 0,  0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
   [16, 0, 0, 16, 0, 0, 16, 0],
-  [0,  0, 0,  0, 0, 0,  0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
   [16, 0, 0, 16, 0, 0, 16, 0],
-  [0,  0, 0,  0, 0, 0,  0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
   [16, 0, 0, 16, 0, 0, 16, 0],
-  [0,  0, 0,  0, 0, 0,  0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 const REMIX_PROPS = [
@@ -208,163 +201,207 @@ const REMIX_PROPS = [
     defaultValues: {
       map: DEFAULT_MAP,
       firstSpriteIndex: 1,
-      spritesHiddenToStart: true,
+      spritesHiddenToStart: true
     },
     generateBlocks: args => {
       const blocks = [];
       let spriteIndex = 1;
       const getDefaultSpriteLocation = () => ({
         x: ((spriteIndex - 1) % 3) * 3,
-        y: (parseInt((spriteIndex - 1) / 3)) * 2,
+        y: parseInt((spriteIndex - 1) / 3) * 2
       });
       for (let y = 0; y < Studio.ROWS; y++) {
         for (let x = 0; x < Studio.COLS; x++) {
           const cell = Studio.map[y][x].serialize();
           if (cell.tileType & constants.SquareType.SPRITESTART) {
             const defaultSpriteLocation = getDefaultSpriteLocation();
-            if ((level.firstSpriteIndex !== 1 || cell.sprite) && !level.spritesHiddenToStart) {
-              blocks.push(blockAsXmlNode('studio_setSpriteParams', {
-                titles: {
-                  'VALUE': `"${Studio.startAvatars[cell.sprite ? cell.sprite : spriteIndex + (level.firstSpriteIndex || 0)]}"`,
-                },
-                values: {
-                  'SPRITE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: spriteIndex,
+            if (
+              (level.firstSpriteIndex !== 1 || cell.sprite) &&
+              !level.spritesHiddenToStart
+            ) {
+              blocks.push(
+                blockAsXmlNode('studio_setSpriteParams', {
+                  titles: {
+                    VALUE: `"${
+                      Studio.startAvatars[
+                        cell.sprite
+                          ? cell.sprite
+                          : spriteIndex + (level.firstSpriteIndex || 0)
+                      ]
+                    }"`
                   },
-                },
-              }));
+                  values: {
+                    SPRITE: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue: spriteIndex
+                    }
+                  }
+                })
+              );
             }
-            if (x !== defaultSpriteLocation.x || y !== defaultSpriteLocation.y) {
-              blocks.push(blockAsXmlNode('studio_setSpriteXY', {
-                values: {
-                  'SPRITE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: spriteIndex,
-                  },
-                  'XPOS': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: x * Studio.SQUARE_SIZE +
-                        Studio.sprite[spriteIndex - 1].width / 2,
-                  },
-                  'YPOS': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: y * Studio.SQUARE_SIZE +
-                        Studio.sprite[spriteIndex - 1].height / 2,
-                  },
-                },
-              }));
+            if (
+              x !== defaultSpriteLocation.x ||
+              y !== defaultSpriteLocation.y
+            ) {
+              blocks.push(
+                blockAsXmlNode('studio_setSpriteXY', {
+                  values: {
+                    SPRITE: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue: spriteIndex
+                    },
+                    XPOS: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue:
+                        x * Studio.SQUARE_SIZE +
+                        Studio.sprite[spriteIndex - 1].width / 2
+                    },
+                    YPOS: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue:
+                        y * Studio.SQUARE_SIZE +
+                        Studio.sprite[spriteIndex - 1].height / 2
+                    }
+                  }
+                })
+              );
             }
-            if (cell.speed !== undefined && cell.speed !== constants.DEFAULT_SPRITE_SPEED) {
-              blocks.push(blockAsXmlNode('studio_setSpriteSpeedParams', {
-                values: {
-                  'SPRITE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: spriteIndex,
-                  },
-                  'VALUE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: cell.speed,
-                  },
-                },
-              }));
+            if (
+              cell.speed !== undefined &&
+              cell.speed !== constants.DEFAULT_SPRITE_SPEED
+            ) {
+              blocks.push(
+                blockAsXmlNode('studio_setSpriteSpeedParams', {
+                  values: {
+                    SPRITE: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue: spriteIndex
+                    },
+                    VALUE: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue: cell.speed
+                    }
+                  }
+                })
+              );
             }
-            if (cell.size !== undefined && cell.size !== constants.DEFAULT_SPRITE_SIZE) {
-              blocks.push(blockAsXmlNode('studio_setSpriteSizeParams', {
-                values: {
-                  'SPRITE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: spriteIndex,
-                  },
-                  'VALUE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: cell.size,
-                  },
-                },
-              }));
+            if (
+              cell.size !== undefined &&
+              cell.size !== constants.DEFAULT_SPRITE_SIZE
+            ) {
+              blocks.push(
+                blockAsXmlNode('studio_setSpriteSizeParams', {
+                  values: {
+                    SPRITE: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue: spriteIndex
+                    },
+                    VALUE: {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue: cell.size
+                    }
+                  }
+                })
+              );
             }
             if (cell.emotion && cell.emotion !== Emotions.NORMAL) {
-              blocks.push(blockAsXmlNode('studio_setSpriteEmotion', {
-                titles: {
-                  'SPRITE':  spriteIndex,
-                  'VALUE':  cell.emotion,
-                },
-              }));
+              blocks.push(
+                blockAsXmlNode('studio_setSpriteEmotion', {
+                  titles: {
+                    SPRITE: spriteIndex,
+                    VALUE: cell.emotion
+                  }
+                })
+              );
             }
 
             spriteIndex++;
           }
           if (cell.tileType & constants.SquareType.SPRITEFINISH) {
-            blocks.push(blockAsXmlNode('sudio_addGoalXY', {
-              values: {
-                'XPOS': {
-                  type: 'math_number',
-                  titleName: 'NUM',
-                  titleValue: x * Studio.SQUARE_SIZE,
-                },
-                'YPOS': {
-                  type: 'math_number',
-                  titleName: 'NUM',
-                  titleValue: y * Studio.SQUARE_SIZE,
-                },
-              },
-            }));
+            blocks.push(
+              blockAsXmlNode('sudio_addGoalXY', {
+                values: {
+                  XPOS: {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: x * Studio.SQUARE_SIZE
+                  },
+                  YPOS: {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: y * Studio.SQUARE_SIZE
+                  }
+                }
+              })
+            );
           }
         }
       }
 
       return blocks;
-    },
+    }
   },
   {
     defaultValues: {
-      allowSpritesOutsidePlayspace: false,
+      allowSpritesOutsidePlayspace: false
     },
     generateBlocks: args => {
-      return [blockAsXmlNode('studio_allowSpritesOutsidePlayspace', {
-        titles: {
-          'VALUE': 'true',
-        },
-      })];
-    },
+      return [
+        blockAsXmlNode('studio_allowSpritesOutsidePlayspace', {
+          titles: {
+            VALUE: 'true'
+          }
+        })
+      ];
+    }
   }
 ];
 
-Studio.loadLevel = function () {
+Studio.loadLevel = function() {
   // Load maps.
-  Studio.map = level.map.map(row => row.map(cell => {
-    // Each cell should be either an integer (in which case we are
-    // dealing with the legacy format and should treat that value as
-    // the tileType for the cell) or an object (in which case we are
-    // dealing with the new format and should treat that value as a
-    // serialization of the cell).
-    const value = isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell);
-    if (value.tileType_ & constants.WallCoordsMask) {
-      Studio.wallMapCollisions = true;
-    }
-    return value;
-  }));
-  Studio.wallMap = null;  // The map name actually being used.
+  Studio.map = level.map.map(row =>
+    row.map(cell => {
+      // Each cell should be either an integer (in which case we are
+      // dealing with the legacy format and should treat that value as
+      // the tileType for the cell) or an object (in which case we are
+      // dealing with the new format and should treat that value as a
+      // serialization of the cell).
+      const value = isNaN(parseInt(cell))
+        ? studioCell.deserialize(cell)
+        : new studioCell(cell);
+      if (value.tileType_ & constants.WallCoordsMask) {
+        Studio.wallMapCollisions = true;
+      }
+      return value;
+    })
+  );
+  Studio.wallMap = null; // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.allowSpritesOutsidePlayspace = level.allowSpritesOutsidePlayspace;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowExecutionFactor = skin.slowExecutionFactor || 1;
   Studio.gridAlignedExtraPauseSteps = skin.gridAlignedExtraPauseSteps || 0;
-  Studio.ticksBeforeFaceSouth = Studio.slowExecutionFactor +
-      utils.valueOr(level.ticksBeforeFaceSouth,
-          constants.IDLE_TICKS_BEFORE_FACE_SOUTH);
+  Studio.ticksBeforeFaceSouth =
+    Studio.slowExecutionFactor +
+    utils.valueOr(
+      level.ticksBeforeFaceSouth,
+      constants.IDLE_TICKS_BEFORE_FACE_SOUTH
+    );
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
-  Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
+  Studio.protagonistSpriteIndex = utils.valueOr(
+    level.protagonistSpriteIndex,
+    level.protaganistSpriteIndex
+  );
 
   switch (level.customGameType) {
     case 'Big Game':
@@ -380,7 +417,6 @@ Studio.loadLevel = function () {
       Studio.customLogic = new BigGameLogic(Studio, {
         staticPlayer: true
       });
-
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
 
@@ -390,8 +426,10 @@ Studio.loadLevel = function () {
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
   } else {
-    Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
-      level.firstSpriteIndex);
+    Studio.startAvatars = reorderedStartAvatars(
+      skin.avatarList,
+      level.firstSpriteIndex
+    );
   }
 
   // Override scalars.
@@ -424,11 +462,24 @@ function loadWalls() {
   if (skin.customObstacleZones) {
     return new ObstacleZoneWalls(level, skin, Studio.drawDebugRect);
   } else if (skin.wallMaps) {
-    return new CollisionMaskWalls(level, skin, Studio.drawDebugRect,
-        Studio.drawDebugOverlay, Studio.MAZE_WIDTH, Studio.MAZE_HEIGHT);
+    return new CollisionMaskWalls(
+      level,
+      skin,
+      Studio.drawDebugRect,
+      Studio.drawDebugOverlay,
+      Studio.MAZE_WIDTH,
+      Studio.MAZE_HEIGHT
+    );
   } else {
-    return new TileWalls(level, skin, Studio.drawDebugRect, Studio.SQUARE_SIZE,
-        Studio.ROWS, Studio.COLS, Studio.getWallValue);
+    return new TileWalls(
+      level,
+      skin,
+      Studio.drawDebugRect,
+      Studio.SQUARE_SIZE,
+      Studio.ROWS,
+      Studio.COLS,
+      Studio.getWallValue
+    );
   }
 }
 
@@ -444,7 +495,7 @@ function reorderedStartAvatars(avatarList, firstSpriteIndex) {
   ]);
 }
 
-var drawMap = function () {
+var drawMap = function() {
   var svg = document.getElementById('svgStudio');
   var i;
 
@@ -454,8 +505,8 @@ var drawMap = function () {
 
   // Attach click handler.
   var hammerSvg = new Hammer(svg);
-  hammerSvg.on("tap", Studio.onSvgClicked);
-  hammerSvg.on("drag", Studio.onSvgDrag);
+  hammerSvg.on('tap', Studio.onSvgClicked);
+  hammerSvg.on('drag', Studio.onSvgDrag);
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -467,8 +518,11 @@ var drawMap = function () {
 
   if (Studio.background && skin[Studio.background].background) {
     var tile = document.createElementNS(SVG_NS, 'image');
-    tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                        skin[Studio.background].background);
+    tile.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      skin[Studio.background].background
+    );
     tile.setAttribute('id', 'background');
     tile.setAttribute('height', Studio.MAZE_HEIGHT);
     tile.setAttribute('width', Studio.MAZE_WIDTH);
@@ -479,7 +533,11 @@ var drawMap = function () {
 
   if (skin.showGrid) {
     const tile = document.createElementNS(SVG_NS, 'image');
-    tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', studioApp().assetUrl('media/skins/studio/grid.svg'));
+    tile.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      studioApp().assetUrl('media/skins/studio/grid.svg')
+    );
     tile.setAttribute('height', Studio.MAZE_HEIGHT);
     tile.setAttribute('width', Studio.MAZE_WIDTH);
     tile.setAttribute('x', 0);
@@ -592,13 +650,19 @@ var drawMap = function () {
     resetTextB.setAttribute('visibility', 'visible');
     overlayGroup.appendChild(resetTextB);
     var touchDragIcon = document.createElementNS(SVG_NS, 'image');
-    touchDragIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        studioApp().assetUrl('media/common_images/touch-drag.png'));
+    touchDragIcon.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      studioApp().assetUrl('media/common_images/touch-drag.png')
+    );
     var touchIconSize = 300;
     touchDragIcon.setAttribute('width', touchIconSize);
     touchDragIcon.setAttribute('height', touchIconSize);
     touchDragIcon.setAttribute('x', (Studio.MAZE_WIDTH - touchIconSize) / 2);
-    touchDragIcon.setAttribute('y', (Studio.MAZE_HEIGHT - touchIconSize) / 2 - 25);
+    touchDragIcon.setAttribute(
+      'y',
+      (Studio.MAZE_HEIGHT - touchIconSize) / 2 - 25
+    );
     overlayGroup.appendChild(touchDragIcon);
   } else {
     var resetText = document.createElementNS(SVG_NS, 'text');
@@ -606,7 +670,9 @@ var drawMap = function () {
     resetText.setAttribute('class', 'studio-reset-text');
     resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
     resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
-    resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
+    resetText.appendChild(
+      document.createTextNode(studioMsg.tapOrClickToReset())
+    );
     resetText.setAttribute('visibility', 'visible');
     overlayGroup.appendChild(resetText);
   }
@@ -637,8 +703,9 @@ var drawMap = function () {
   titleScreenTextGroup.setAttribute('x', xPosTextGroup);
   titleScreenTextGroup.setAttribute('y', TITLE_SCREEN_TEXT_Y_POSITION);
   titleScreenTextGroup.setAttribute(
-      'transform',
-      'translate(' + xPosTextGroup + ',' + TITLE_SCREEN_TEXT_Y_POSITION + ')');
+    'transform',
+    'translate(' + xPosTextGroup + ',' + TITLE_SCREEN_TEXT_Y_POSITION + ')'
+  );
   titleScreenTextGroup.setAttribute('visibility', 'hidden');
 
   var titleScreenTextRect = document.createElementNS(SVG_NS, 'rect');
@@ -661,10 +728,10 @@ var drawMap = function () {
 };
 
 function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
-  return (Math.abs(x1 - x2) <= xVariance) && (Math.abs(y1 - y2) <= yVariance);
+  return Math.abs(x1 - x2) <= xVariance && Math.abs(y1 - y2) <= yVariance;
 }
 
-Studio.allGoals_ = function () {
+Studio.allGoals_ = function() {
   return Studio.spriteGoals_.concat(Studio.dynamicSpriteGoals_);
 };
 
@@ -678,7 +745,7 @@ Studio.allGoals_ = function () {
  *        created elements
  * @param {object} goal
  */
-Studio.createGoalElements = function (i, goal) {
+Studio.createGoalElements = function(i, goal) {
   var svg = document.getElementById('svgStudio');
   var spriteLayer = document.getElementById('backgroundLayer');
 
@@ -700,18 +767,24 @@ Studio.createGoalElements = function (i, goal) {
   // The fallback dimensions of both spritesheet and sprite are studio's default
   // MARKER_WIDTH/HEIGHT.
 
-  var spritesheetWidth = skin.goalSpriteWidth ? (skin.goalSpriteWidth * numFrames) :
-    utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
-  var spritesheetHeight = skin.goalSpriteHeight ? skin.goalSpriteHeight :
-    utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
+  var spritesheetWidth = skin.goalSpriteWidth
+    ? skin.goalSpriteWidth * numFrames
+    : utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
+  var spritesheetHeight = skin.goalSpriteHeight
+    ? skin.goalSpriteHeight
+    : utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
 
   var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
   var spriteHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
 
-  var offsetX = utils.valueOr(goalOverride.goalRenderOffsetX,
-      utils.valueOr(skin.goalRenderOffsetX, 0));
-  var offsetY = utils.valueOr(goalOverride.goalRenderOffsetY,
-      utils.valueOr(skin.goalRenderOffsetY, 0));
+  var offsetX = utils.valueOr(
+    goalOverride.goalRenderOffsetX,
+    utils.valueOr(skin.goalRenderOffsetX, 0)
+  );
+  var offsetY = utils.valueOr(
+    goalOverride.goalRenderOffsetY,
+    utils.valueOr(skin.goalRenderOffsetY, 0)
+  );
 
   // Add finish markers.
   goal.clipPath = document.createElementNS(SVG_NS, 'clipPath');
@@ -733,8 +806,11 @@ Studio.createGoalElements = function (i, goal) {
   }
   goal.marker.setAttribute('x', goal.x + offsetX);
   goal.marker.setAttribute('y', goal.y + offsetY);
-  goal.marker.setAttributeNS('http://www.w3.org/1999/xlink',
-      'xlink:href', Studio.getGoalAssetFromSkin());
+  goal.marker.setAttributeNS(
+    'http://www.w3.org/1999/xlink',
+    'xlink:href',
+    Studio.getGoalAssetFromSkin()
+  );
   goal.marker.setAttribute('opacity', 1);
   goal.clipRect.setAttribute('x', goal.x + offsetX);
   goal.clipRect.setAttribute('y', goal.y + offsetY);
@@ -748,14 +824,14 @@ var goalFilterEffect = null;
  * Apply the effect specified in skin.goalEffect to all of the goal objects
  * in the level.
  */
-Studio.applyGoalEffect = function () {
+Studio.applyGoalEffect = function() {
   if (!goalFilterEffect) {
     var svg = document.getElementById('svgStudio');
     goalFilterEffect = new GlowFilter(svg);
   }
 
   if (goalFilterEffect) {
-    Studio.allGoals_().forEach(function (goal) {
+    Studio.allGoals_().forEach(function(goal) {
       goalFilterEffect.applyTo(goal.marker);
     });
   }
@@ -765,12 +841,12 @@ Studio.applyGoalEffect = function () {
  * Remove the effect specified in skin.goalEffect from all of the goal objects
  * in the level.
  */
-Studio.removeGoalEffect = function () {
+Studio.removeGoalEffect = function() {
   if (!goalFilterEffect) {
     return;
   }
 
-  Studio.allGoals_().forEach(function (goal) {
+  Studio.allGoals_().forEach(function(goal) {
     goalFilterEffect.removeFrom(goal.marker);
   });
 };
@@ -782,28 +858,32 @@ Studio.removeGoalEffect = function () {
  *   function is also passed arguments, the data is appended to the arguments
  *   list. If the data is an Array, each item is appended as a new argument.
  */
-var delegate = function (scope, func, data) {
-  return function () {
+var delegate = function(scope, func, data) {
+  return function() {
     var args = Array.prototype.slice.apply(arguments).concat(data);
     func.apply(scope, args);
   };
 };
 
-var calcMoveDistanceFromQueues = function (index, modifyQueues) {
+var calcMoveDistanceFromQueues = function(index, modifyQueues) {
   var totalDelta = {x: 0, y: 0};
 
-  Studio.eventHandlers.forEach(function (handler) {
+  Studio.eventHandlers.forEach(function(handler) {
     var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
-      var distThisMove = Math.min(cmd.opts.queuedDistance || Infinity,
-                                  Studio.sprite[cmd.opts.spriteIndex].speed);
-      var moveDirection = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
+      var distThisMove = Math.min(
+        cmd.opts.queuedDistance || Infinity,
+        Studio.sprite[cmd.opts.spriteIndex].speed
+      );
+      var moveDirection = utils.normalize(
+        Direction.getUnitVector(cmd.opts.dir)
+      );
       totalDelta.x += distThisMove * moveDirection.x;
       totalDelta.y += distThisMove * moveDirection.y;
 
       if (modifyQueues && (moveDirection.x !== 0 || moveDirection.y !== 0)) {
-        cmd.opts.queuedDistance -=  distThisMove;
-        if ("0.00" === Math.abs(cmd.opts.queuedDistance).toFixed(2)) {
+        cmd.opts.queuedDistance -= distThisMove;
+        if ('0.00' === Math.abs(cmd.opts.queuedDistance).toFixed(2)) {
           handler.cmdQueue.shift();
         }
       }
@@ -813,9 +893,8 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
   return totalDelta;
 };
 
-
-var cancelQueuedMovements = function (index, yAxis) {
-  Studio.eventHandlers.forEach(function (handler) {
+var cancelQueuedMovements = function(index, yAxis) {
+  Studio.eventHandlers.forEach(function(handler) {
     var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
       var dir = cmd.opts.dir;
@@ -836,7 +915,7 @@ var cancelQueuedMovements = function (index, yAxis) {
 // NOTE: position values returned are not clamped to playspace boundaries
 //
 
-var getNextPosition = function (i, modifyQueues) {
+var getNextPosition = function(i, modifyQueues) {
   var delta = calcMoveDistanceFromQueues(i, modifyQueues);
   if (delta.x === 0 && delta.y === 0) {
     return Studio.sprite[i].getNextPosition();
@@ -850,7 +929,7 @@ var getNextPosition = function (i, modifyQueues) {
 //
 // Perform Queued Moves in the X and Y axes (called from inside onTick)
 //
-var performQueuedMoves = function (i) {
+var performQueuedMoves = function(i) {
   var sprite = Studio.sprite[i];
 
   var origX = sprite.x;
@@ -866,15 +945,19 @@ var performQueuedMoves = function (i) {
     var playspaceBoundaries = Studio.getPlayspaceBoundaries(sprite);
 
     // Clamp nextPosition.x to boundaries as newX:
-    newX = Math.min(playspaceBoundaries.right,
-                        Math.max(playspaceBoundaries.left, nextPosition.x));
+    newX = Math.min(
+      playspaceBoundaries.right,
+      Math.max(playspaceBoundaries.left, nextPosition.x)
+    );
     if (nextPosition.x !== newX) {
       cancelQueuedMovements(i, false);
     }
 
     // Clamp nextPosition.y to boundaries as newY:
-    newY = Math.min(playspaceBoundaries.bottom,
-                        Math.max(playspaceBoundaries.top, nextPosition.y));
+    newY = Math.min(
+      playspaceBoundaries.bottom,
+      Math.max(playspaceBoundaries.top, nextPosition.y)
+    );
     if (nextPosition.y !== newY) {
       cancelQueuedMovements(i, true);
     }
@@ -922,7 +1005,7 @@ var performQueuedMoves = function (i) {
 // opts.sideMargin: left & right margin (deducted from total width)
 //
 
-var setSvgText = Studio.setSvgText = function (opts) {
+var setSvgText = (Studio.setSvgText = function(opts) {
   var width = opts.width;
   var words = opts.text.toString().split(' ');
   var longWord = false;
@@ -936,9 +1019,15 @@ var setSvgText = Studio.setSvgText = function (opts) {
     var wordIndex = 0;
     for (var line = 1; line <= opts.maxLines; line++) {
       // Create new tspan element
-      var tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-      tspan.setAttribute("x", width / 2);
-      tspan.setAttribute("dy", opts.lineHeight + (line === 1 ? opts.topMargin : 0));
+      var tspan = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'tspan'
+      );
+      tspan.setAttribute('x', width / 2);
+      tspan.setAttribute(
+        'dy',
+        opts.lineHeight + (line === 1 ? opts.topMargin : 0)
+      );
       // Create text in tspan element
       var text_node = document.createTextNode(words[wordIndex]);
       wordIndex++;
@@ -948,10 +1037,16 @@ var setSvgText = Studio.setSvgText = function (opts) {
       // Add tspan element to DOM
       opts.svgText.appendChild(tspan);
 
-      if (tspan.getComputedTextLength &&
-          tspan.getComputedTextLength() > width - 2 * opts.sideMargin && width < opts.maxWidth) {
+      if (
+        tspan.getComputedTextLength &&
+        tspan.getComputedTextLength() > width - 2 * opts.sideMargin &&
+        width < opts.maxWidth
+      ) {
         // We have a really long word, try to expand to fit it.
-        width = Math.min(tspan.getComputedTextLength() + 2 * opts.sideMargin, opts.maxWidth);
+        width = Math.min(
+          tspan.getComputedTextLength() + 2 * opts.sideMargin,
+          opts.maxWidth
+        );
         longWord = true;
         break;
       }
@@ -961,17 +1056,19 @@ var setSvgText = Studio.setSvgText = function (opts) {
         if (wordIndex === words.length) {
           return {
             height: opts.fullHeight - (opts.maxLines - line) * opts.lineHeight,
-            width: width,
+            width: width
           };
         }
 
         // Find number of letters in string
         previousLength = tspan.firstChild.data.length;
         // Add next word
-        tspan.firstChild.data += " " + words[wordIndex];
+        tspan.firstChild.data += ' ' + words[wordIndex];
         wordIndex++;
-      } while (tspan.getComputedTextLength &&
-          tspan.getComputedTextLength() <= width - 2 * opts.sideMargin);
+      } while (
+        tspan.getComputedTextLength &&
+        tspan.getComputedTextLength() <= width - 2 * opts.sideMargin
+      );
 
       // The last added word made the line too long, remove it
       tspan.firstChild.data = tspan.firstChild.data.slice(0, previousLength);
@@ -982,15 +1079,15 @@ var setSvgText = Studio.setSvgText = function (opts) {
       longWord = false;
     } else if (width < opts.maxWidth) {
       // Try again with a wider speech bubble
-      width = Math.min(width * words.length / wordIndex, opts.maxWidth);
+      width = Math.min((width * words.length) / wordIndex, opts.maxWidth);
     } else {
       return {
         height: opts.fullHeight,
-        width: width,
+        width: width
       };
     }
   }
-};
+});
 
 /**
  * Execute the code for all of the event handlers that match an event name
@@ -1019,18 +1116,20 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
     }
     if (moveDir) {
       Studio.queueCmd(null, 'move', {
-        'spriteIndex': Studio.protagonistSpriteIndex || 0,
-        'dir': moveDir
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: moveDir
       });
     }
   }
 
-  Studio.eventHandlers.forEach(function (handler) {
+  Studio.eventHandlers.forEach(function(handler) {
     if (studioApp().isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
-      if (handler.name === name &&
-          (allowQueueExtension || (0 === handler.cmdQueue.length))) {
+      if (
+        handler.name === name &&
+        (allowQueueExtension || 0 === handler.cmdQueue.length)
+      ) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
           if (Studio.legacyRuntime) {
@@ -1053,10 +1152,12 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
   });
 }
 
-Studio.initAutoHandlers = function (map) {
+Studio.initAutoHandlers = function(map) {
   for (var funcName in map) {
     var func = Studio.JSInterpreter.findGlobalFunction(funcName);
-    var nativeFunc = CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
+    var nativeFunc = CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(
+      func
+    );
     if (func) {
       registerEventHandler(Studio.eventHandlers, map[funcName], nativeFunc);
     }
@@ -1108,12 +1209,21 @@ function sortDrawOrder() {
   for (var i = 0; i < Studio.items.length; i++) {
     drawItem = {
       element: Studio.items[i].getElement(),
-      y: Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y
+      y:
+        Studio.items[i].y +
+        Studio.items[i].height / 2 +
+        Studio.items[i].renderOffset.y
     };
     drawArray.push(drawItem);
 
-    Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
-    Studio.drawDebugRect("itemBottom", Studio.items[i].x, drawItem.y, 4, 4);
+    Studio.drawDebugRect(
+      'itemLocation',
+      Studio.items[i].x,
+      Studio.items[i].y,
+      4,
+      4
+    );
+    Studio.drawDebugRect('itemBottom', Studio.items[i].x, drawItem.y, 4, 4);
   }
 
   // Add sprite elements (both legacy and normal) and explosions.
@@ -1145,7 +1255,7 @@ function sortDrawOrder() {
       drawArray.push(drawItem);
     }
 
-    Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
+    Studio.drawDebugRect('spriteBottom', Studio.sprite[i].x, sprite.y, 4, 4);
   }
 
   // Add wall tiles.
@@ -1158,7 +1268,7 @@ function sortDrawOrder() {
 
   // Add goals.
   var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
-  Studio.allGoals_().forEach(function (goal) {
+  Studio.allGoals_().forEach(function(goal) {
     drawArray.push({
       element: goal.marker,
       y: goal.y + goalHeight
@@ -1189,14 +1299,14 @@ function sortDrawOrder() {
  * calling the handler - which results in func being executed to generate a
  * command queue - and then executing the command queue.
  */
-Studio.callApiCode = function (name, func) {
+Studio.callApiCode = function(name, func) {
   registerEventHandler(Studio.eventHandlers, name, func);
   // generate the cmdQueue
   callHandler(name);
   Studio.executeQueue(name);
 };
 
-Studio.onTick = function () {
+Studio.onTick = function() {
   Studio.tickCount++;
   var i;
 
@@ -1206,8 +1316,9 @@ Studio.onTick = function () {
     captureThumbnailFromSvg(document.getElementById('svgStudio'));
   }
 
-  var animationOnlyFrame = Studio.pauseInterpreter ||
-      (0 !== (Studio.tickCount - 1) % Studio.slowExecutionFactor);
+  var animationOnlyFrame =
+    Studio.pauseInterpreter ||
+    0 !== (Studio.tickCount - 1) % Studio.slowExecutionFactor;
 
   if (!animationOnlyFrame && Studio.yieldExecutionTicks > 0) {
     Studio.yieldExecutionTicks--;
@@ -1233,8 +1344,10 @@ Studio.onTick = function () {
 
     // Run key event handlers for any keys that are down:
     for (var key in KeyCodes) {
-      if (Studio.keyState[KeyCodes[key]] &&
-          Studio.keyState[KeyCodes[key]] === "keydown") {
+      if (
+        Studio.keyState[KeyCodes[key]] &&
+        Studio.keyState[KeyCodes[key]] === 'keydown'
+      ) {
         switch (KeyCodes[key]) {
           case KeyCodes.LEFT:
             callHandler('when-left');
@@ -1253,8 +1366,10 @@ Studio.onTick = function () {
     }
 
     for (var btn in ArrowIds) {
-      if (Studio.btnState[ArrowIds[btn]] &&
-          Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
+      if (
+        Studio.btnState[ArrowIds[btn]] &&
+        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN
+      ) {
         switch (ArrowIds[btn]) {
           case ArrowIds.LEFT:
             callHandler('when-left');
@@ -1308,9 +1423,11 @@ Studio.onTick = function () {
     checkForCollisions();
   }
 
-  if (Studio.JSInterpreter &&
-      !animationOnlyFrame &&
-      Studio.yieldExecutionTicks === 0) {
+  if (
+    Studio.JSInterpreter &&
+    !animationOnlyFrame &&
+    Studio.yieldExecutionTicks === 0
+  ) {
     Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
   }
 
@@ -1326,7 +1443,7 @@ Studio.onTick = function () {
     // After 5 ticks of no movement, turn sprite forward.
     if (
       sprite.shouldFaceSouthOnIdle() &&
-      (Studio.tickCount - sprite.lastMove > Studio.ticksBeforeFaceSouth)
+      Studio.tickCount - sprite.lastMove > Studio.ticksBeforeFaceSouth
     ) {
       sprite.setDirection(Direction.NONE);
       Studio.movementAudioOff();
@@ -1339,7 +1456,13 @@ Studio.onTick = function () {
       spritesNeedMoreAnimationFrames = true;
     }
 
-    Studio.drawDebugRect("spriteCenter", Studio.sprite[i].x, Studio.sprite[i].y, 5, 5);
+    Studio.drawDebugRect(
+      'spriteCenter',
+      Studio.sprite[i].x,
+      Studio.sprite[i].y,
+      5,
+      5
+    );
   }
 
   // Animate goals
@@ -1372,9 +1495,12 @@ Studio.onTick = function () {
     Studio.executeQueue('whenTouchGoal');
   }
 
-  if (Studio.succeededTime &&
-      !spritesNeedMoreAnimationFrames &&
-      (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
+  if (
+    Studio.succeededTime &&
+    !spritesNeedMoreAnimationFrames &&
+    (!level.delayCompletion ||
+      currentTime > Studio.succeededTime + level.delayCompletion)
+  ) {
     Studio.onPuzzleComplete();
   }
 
@@ -1402,14 +1528,16 @@ Studio.onTick = function () {
  * @param {boolean} Whether this is for the Y axis.  If false, then X axis.
  */
 function spriteCollisionDistance(i1, i2, yAxis) {
-  var sprite1Width  = skin.spriteCollisionRectWidth  || Studio.sprite[i1].width;
-  var sprite1Height = skin.spriteCollisionRectHeight || Studio.sprite[i1].height;
-  var sprite2Width  = skin.spriteCollisionRectWidth  || Studio.sprite[i2].width;
-  var sprite2Height = skin.spriteCollisionRectHeight || Studio.sprite[i2].height;
+  var sprite1Width = skin.spriteCollisionRectWidth || Studio.sprite[i1].width;
+  var sprite1Height =
+    skin.spriteCollisionRectHeight || Studio.sprite[i1].height;
+  var sprite2Width = skin.spriteCollisionRectWidth || Studio.sprite[i2].width;
+  var sprite2Height =
+    skin.spriteCollisionRectHeight || Studio.sprite[i2].height;
 
   var dim1 = yAxis ? sprite1Height : sprite1Width;
   var dim2 = yAxis ? sprite2Height : sprite2Width;
-  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+  return (constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2)) / 2;
 }
 
 /**
@@ -1425,7 +1553,7 @@ function spriteCollidableCollisionDistance(iS, collidable, yAxis) {
   var collidableHeight = skin.itemCollisionRectHeight || collidable.height;
   var dim1 = yAxis ? spriteHeight : spriteWidth;
   var dim2 = yAxis ? collidableHeight : collidableWidth;
-  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+  return (constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2)) / 2;
 }
 
 /**
@@ -1450,12 +1578,17 @@ function edgeCollidableCollisionDistance(collidable, edgeName, yAxis) {
  * executeCollision, which is expected to be called afterwards by the caller.
  */
 function handleActorCollisionsWithCollidableList(
-           spriteIndex, xCenter, yCenter, list, autoDisappear) {
+  spriteIndex,
+  xCenter,
+  yCenter,
+  list,
+  autoDisappear
+) {
   var collidable, next, className, numItemsOfClass;
   var distanceScaling = constants.SPRITE_COLLIDE_DISTANCE_SCALING;
 
   // For collisions, only consider sprites/items that are not already fading out.
-  var activeCollidables = list.filter(function (collidable) {
+  var activeCollidables = list.filter(function(collidable) {
     return !(collidable.isFading && collidable.isFading());
   });
 
@@ -1465,26 +1598,35 @@ function handleActorCollisionsWithCollidableList(
     collidable = activeCollidables[i];
     next = collidable.getNextPosition();
 
-    Studio.drawDebugRect("itemCollision",
+    Studio.drawDebugRect(
+      'itemCollision',
       next.x,
       next.y,
       distanceScaling * (skin.itemCollisionRectWidth || collidable.width),
-      distanceScaling * (skin.itemCollisionRectHeight || collidable.height));
-    Studio.drawDebugRect("spriteCollision",
+      distanceScaling * (skin.itemCollisionRectHeight || collidable.height)
+    );
+    Studio.drawDebugRect(
+      'spriteCollision',
       xCenter,
       yCenter,
-      distanceScaling * (skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width),
-      distanceScaling * (skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height));
+      distanceScaling *
+        (skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width),
+      distanceScaling *
+        (skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height)
+    );
 
-    if (collisionTest(
-          xCenter,
-          next.x,
-          spriteCollidableCollisionDistance(spriteIndex, collidable, false),
-          yCenter,
-          next.y,
-          spriteCollidableCollisionDistance(spriteIndex, collidable, true))) {
+    if (
+      collisionTest(
+        xCenter,
+        next.x,
+        spriteCollidableCollisionDistance(spriteIndex, collidable, false),
+        yCenter,
+        next.y,
+        spriteCollidableCollisionDistance(spriteIndex, collidable, true)
+      )
+    ) {
       if (collidable.startCollision(spriteIndex)) {
-        Studio.currentEventParams = { eventObject: collidable };
+        Studio.currentEventParams = {eventObject: collidable};
         // Allow cmdQueue extension (pass true) since this handler
         // may be called for multiple collidables before executing the queue
         // below
@@ -1509,7 +1651,7 @@ function handleActorCollisionsWithCollidableList(
             }
 
             className = collidable.className;
-            numItemsOfClass = activeCollidables.reduce(function (sum, nextItem) {
+            numItemsOfClass = activeCollidables.reduce(function(sum, nextItem) {
               return sum + (className === nextItem.className ? 1 : 0);
             }, 0);
 
@@ -1539,7 +1681,11 @@ function handleActorCollisionsWithCollidableList(
  * detected. executeCollision() is expected to be called later by the caller.
  */
 function handleEdgeCollisions(collidable, xPos, yPos, onCollided) {
-  for (var i = 0; i < EdgeClassNames.length && !Studio.allowSpritesOutsidePlayspace; i++) {
+  for (
+    var i = 0;
+    i < EdgeClassNames.length && !Studio.allowSpritesOutsidePlayspace;
+    i++
+  ) {
     var edgeXCenter, edgeYCenter;
     var edgeClass = EdgeClassNames[i];
     switch (edgeClass) {
@@ -1560,13 +1706,16 @@ function handleEdgeCollisions(collidable, xPos, yPos, onCollided) {
         edgeYCenter = Studio.MAZE_HEIGHT / 2;
         break;
     }
-    if (collisionTest(
-          xPos,
-          edgeXCenter,
-          edgeCollidableCollisionDistance(collidable, edgeClass, false),
-          yPos,
-          edgeYCenter,
-          edgeCollidableCollisionDistance(collidable, edgeClass, true))) {
+    if (
+      collisionTest(
+        xPos,
+        edgeXCenter,
+        edgeCollidableCollisionDistance(collidable, edgeClass, false),
+        yPos,
+        edgeYCenter,
+        edgeCollidableCollisionDistance(collidable, edgeClass, true)
+      )
+    ) {
       if (collidable.startCollision(edgeClass)) {
         onCollided(edgeClass);
       }
@@ -1579,7 +1728,7 @@ function handleEdgeCollisions(collidable, xPos, yPos, onCollided) {
 /* Create an edge collision handler callback for a specific spriteIndex
  */
 function createActorEdgeCollisionHandler(spriteIndex) {
-  return function (edgeClass) {
+  return function(edgeClass) {
     handleCollision(spriteIndex, edgeClass);
   };
 }
@@ -1589,7 +1738,6 @@ function createActorEdgeCollisionHandler(spriteIndex) {
  * the actual movements take place)
  */
 function checkForCollisions() {
-
   checkForItemCollisions();
 
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1609,12 +1757,16 @@ function checkForCollisions() {
       var jPos = getNextPosition(j, false);
       var jXCenter = jPos.x + Studio.sprite[j].width / 2;
       var jYCenter = jPos.y + Studio.sprite[j].height / 2;
-      if (collisionTest(iXCenter,
-                        jXCenter,
-                        spriteCollisionDistance(i, j, false),
-                        iYCenter,
-                        jYCenter,
-                        spriteCollisionDistance(i, j, true))) {
+      if (
+        collisionTest(
+          iXCenter,
+          jXCenter,
+          spriteCollisionDistance(i, j, false),
+          iYCenter,
+          jYCenter,
+          spriteCollisionDistance(i, j, true)
+        )
+      ) {
         Studio.collideSpriteWith(i, j);
       } else {
         sprite.endCollision(j);
@@ -1622,21 +1774,26 @@ function checkForCollisions() {
       executeCollision(i, j);
     }
     if (sprite.visible) {
-      handleActorCollisionsWithCollidableList(i,
-                                              iXCenter,
-                                              iYCenter,
-                                              Studio.projectiles);
-      handleActorCollisionsWithCollidableList(i,
-                                              iXCenter,
-                                              iYCenter,
-                                              Studio.items,
-                                              level.removeItemsWhenActorCollides);
+      handleActorCollisionsWithCollidableList(
+        i,
+        iXCenter,
+        iYCenter,
+        Studio.projectiles
+      );
+      handleActorCollisionsWithCollidableList(
+        i,
+        iXCenter,
+        iYCenter,
+        Studio.items,
+        level.removeItemsWhenActorCollides
+      );
 
       handleEdgeCollisions(
-          sprite,
-          iXCenter,
-          iYCenter,
-          createActorEdgeCollisionHandler(i));
+        sprite,
+        iXCenter,
+        iYCenter,
+        createActorEdgeCollisionHandler(i)
+      );
 
       if (Studio.wallMapCollisions) {
         if (Studio.willSpriteTouchWall(sprite, iPos.x, iPos.y)) {
@@ -1653,7 +1810,6 @@ function checkForCollisions() {
         }
       }
     }
-
 
     // Don't execute actor collision queue(s) until we've handled all
     // wall, projectile, item, and edge collisions. Not sure this is strictly
@@ -1680,8 +1836,8 @@ function checkForCollisions() {
 /* Create an edge collision handler callback for a specific item
  */
 function createItemEdgeCollisionHandler(item) {
-  return function (edgeClass) {
-    Studio.currentEventParams = { eventObject: item };
+  return function(edgeClass) {
+    Studio.currentEventParams = {eventObject: item};
     // Allow cmdQueue extension (pass true) since this handler
     // may be called for multiple items before executing the queue
     // below
@@ -1721,7 +1877,7 @@ function checkForItemCollisions() {
 
     if (Studio.wallMapCollisions) {
       if (Studio.walls.willCollidableTouchWall(item, next.x, next.y)) {
-        Studio.currentEventParams = { eventObject: item };
+        Studio.currentEventParams = {eventObject: item};
         // Allow cmdQueue extension (pass true) since this handler
         // may be called for multiple items before executing the queue
         // below
@@ -1734,10 +1890,11 @@ function checkForItemCollisions() {
 
     if (!Studio.allowSpritesOutsidePlayspace) {
       handleEdgeCollisions(
-          item,
-          next.x,
-          next.y,
-          createItemEdgeCollisionHandler(item));
+        item,
+        next.x,
+        next.y,
+        createItemEdgeCollisionHandler(item)
+      );
     }
 
     // After collisions have been handled for these items, now execute the
@@ -1753,7 +1910,7 @@ function checkForItemCollisions() {
  * Test to see if an actor sprite will be touching a wall given particular X/Y
  * position coordinates (top-left)
  */
-Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
+Studio.willSpriteTouchWall = function(sprite, xPos, yPos) {
   var xCenter = xPos + sprite.width / 2;
   var yCenter = yPos + sprite.height / 2;
   return Studio.walls.willCollidableTouchWall(sprite, xCenter, yCenter);
@@ -1766,10 +1923,14 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
  * @param {number} xPos
  * @param {number} yPos
  */
-Studio.willSpriteLeavePlayspace = function (sprite, xPos, yPos) {
+Studio.willSpriteLeavePlayspace = function(sprite, xPos, yPos) {
   var boundary = Studio.getPlayspaceBoundaries(sprite);
-  return (xPos < boundary.left) || (xPos > boundary.right) ||
-      (yPos < boundary.top) || (yPos > boundary.bottom);
+  return (
+    xPos < boundary.left ||
+    xPos > boundary.right ||
+    yPos < boundary.top ||
+    yPos > boundary.bottom
+  );
 };
 
 /**
@@ -1777,61 +1938,73 @@ Studio.willSpriteLeavePlayspace = function (sprite, xPos, yPos) {
  * from a 16x16 grid shifted into bits 16-23).
  */
 
-Studio.getWallValue = function (row, col) {
+Studio.getWallValue = function(row, col) {
   if (row < 0 || row >= Studio.ROWS || col < 0 || col >= Studio.COLS) {
     return 0;
   }
 
   if (Studio.wallMap) {
-    return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
+    return skin[Studio.wallMap]
+      ? skin[Studio.wallMap][row][col] << constants.WallCoordsShift
+      : 0;
   } else {
     return Studio.map[row][col].getTileType() & constants.WallAnyMask;
   }
 };
 
-Studio.onSvgDrag = function (e) {
+Studio.onSvgDrag = function(e) {
   if (Studio.tickCount > 0) {
-    Studio.gesturesObserved[e.gesture.direction] =
-      Math.round(e.gesture.distance / DRAG_DISTANCE_TO_MOVE_RATIO);
+    Studio.gesturesObserved[e.gesture.direction] = Math.round(
+      e.gesture.distance / DRAG_DISTANCE_TO_MOVE_RATIO
+    );
     e.gesture.preventDefault();
   }
 };
 
-Studio.onKey = function (e) {
+Studio.onKey = function(e) {
   // Store the most recent event type per-key
   Studio.keyState[e.keyCode] = e.type;
 
   // If we are actively running our tick loop, suppress default event handling
-  if (Studio.tickCount > 0 &&
-      e.keyCode >= KeyCodes.LEFT && e.keyCode <= KeyCodes.DOWN) {
+  if (
+    Studio.tickCount > 0 &&
+    e.keyCode >= KeyCodes.LEFT &&
+    e.keyCode <= KeyCodes.DOWN
+  ) {
     e.preventDefault();
   }
 };
 
-Studio.onArrowButtonDown = function (e, idBtn) {
+Studio.onArrowButtonDown = function(e, idBtn) {
   // Store the most recent event type per-button
   Studio.btnState[idBtn] = ButtonState.DOWN;
-  e.preventDefault();  // Stop normal events so we see mouseup later.
+  e.preventDefault(); // Stop normal events so we see mouseup later.
 };
 
-Studio.onSpriteClicked = function (e, spriteIndex) {
+Studio.onSpriteClicked = function(e, spriteIndex) {
   // If we are "running", call the event handler if registered.
   if (Studio.tickCount > 0) {
     callHandler('whenSpriteClicked-' + spriteIndex);
   }
-  e.preventDefault();  // Stop normal events.
+  e.preventDefault(); // Stop normal events.
 };
 
-Studio.onSvgClicked = function (e) {
-  if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.WAITING) {
+Studio.onSvgClicked = function(e) {
+  if (
+    level.tapSvgToRunAndReset &&
+    Studio.gameState === Studio.GameStates.WAITING
+  ) {
     Studio.runButtonClick();
-  } else if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.OVER) {
+  } else if (
+    level.tapSvgToRunAndReset &&
+    Studio.gameState === Studio.GameStates.OVER
+  ) {
     studioApp().resetButtonClick();
   } else if (Studio.tickCount > 0) {
     // If we are "running", check the cmdQueues.
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
-    Studio.eventHandlers.forEach(function (handler) {
+    Studio.eventHandlers.forEach(function(handler) {
       var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.opts.waitForClick && !cmd.opts.complete) {
@@ -1842,20 +2015,20 @@ Studio.onSvgClicked = function (e) {
       }
     });
   }
-  e.preventDefault();  // Stop normal events.
+  e.preventDefault(); // Stop normal events.
 };
 
-Studio.onArrowButtonUp = function (e, idBtn) {
+Studio.onArrowButtonUp = function(e, idBtn) {
   // Store the most recent event type per-button
   Studio.btnState[idBtn] = ButtonState.UP;
 };
 
-Studio.onMouseUp = function (e) {
+Studio.onMouseUp = function(e) {
   // Reset btnState on mouse up
   Studio.btnState = {};
 };
 
-Studio.initSprites = function () {
+Studio.initSprites = function() {
   Studio.spriteCount = 0;
   Studio.sprite = [];
   Studio.startTime = null;
@@ -1868,9 +2041,11 @@ Studio.initSprites = function () {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
       if (Studio.map[row][col].getTileType() & SquareType.SPRITEFINISH) {
-        Studio.spriteGoals_.push({x: col * Studio.SQUARE_SIZE,
-                                  y: row * Studio.SQUARE_SIZE,
-                                  finished: false});
+        Studio.spriteGoals_.push({
+          x: col * Studio.SQUARE_SIZE,
+          y: row * Studio.SQUARE_SIZE,
+          finished: false
+        });
       } else if (Studio.map[row][col].getTileType() & SquareType.SPRITESTART) {
         let cell = Studio.map[row][col].serialize();
         if (0 === Studio.spriteCount) {
@@ -1885,9 +2060,9 @@ Studio.initSprites = function () {
             Studio.startAvatars[adjustedSprite];
         }
         Studio.spriteStart_[Studio.spriteCount] = Object.assign({}, cell, {
-              x: col * Studio.SQUARE_SIZE,
-              y: row * Studio.SQUARE_SIZE
-            });
+          x: col * Studio.SQUARE_SIZE,
+          y: row * Studio.SQUARE_SIZE
+        });
         Studio.spriteCount++;
       }
     }
@@ -1910,7 +2085,7 @@ Studio.initSprites = function () {
  * Initialize Blockly and Studio for read-only (blocks feedback).
  * Called on iframe load for read-only.
  */
-Studio.initReadonly = function (config) {
+Studio.initReadonly = function(config) {
   // Do some minimal level loading and sprite initialization so that
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
@@ -1931,7 +2106,7 @@ Studio.initReadonly = function (config) {
 /**
  * Initialize Blockly and the Studio app.  Called on page load.
  */
-Studio.init = function (config) {
+Studio.init = function(config) {
   // replace studioApp() methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
@@ -1940,7 +2115,7 @@ Studio.init = function (config) {
   // right from the start without requiring the user to adjust focus.
   // (Required for IE11 at least, and takes focus away from text mode editor
   // in droplet.)
-  $(window).on('run_button_pressed', function () {
+  $(window).on('run_button_pressed', function() {
     document.getElementById('runButton').focus();
   });
 
@@ -1966,10 +2141,9 @@ Studio.init = function (config) {
   consoleLogger = new JsInterpreterLogger(window.console);
   // Set up an error handler for student errors and warnings
   // in JavaScript/Droplet mode.
-  injectErrorHandler(new JavaScriptModeErrorHandler(
-    () => Studio.JSInterpreter,
-    consoleLogger
-  ));
+  injectErrorHandler(
+    new JavaScriptModeErrorHandler(() => Studio.JSInterpreter, consoleLogger)
+  );
 
   // Allow any studioMsg string to be re-mapped on a per-level basis:
   for (var prop in level.msgStringOverrides) {
@@ -1996,12 +2170,12 @@ Studio.init = function (config) {
     skin.winAvatar = null;
   }
 
-  window.addEventListener("keydown", Studio.onKey, false);
-  window.addEventListener("keyup", Studio.onKey, false);
+  window.addEventListener('keydown', Studio.onKey, false);
+  window.addEventListener('keyup', Studio.onKey, false);
 
   var levelTracks = [];
   if (level.music && skin.musicMetadata) {
-    levelTracks = skin.musicMetadata.filter(function (trackMetadata) {
+    levelTracks = skin.musicMetadata.filter(function(trackMetadata) {
       return level.music.indexOf(trackMetadata.name) !== -1;
     });
   }
@@ -2013,7 +2187,10 @@ Studio.init = function (config) {
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      Sounds.getSingleton(), skin.assetUrl, levelTracks);
+    Sounds.getSingleton(),
+    skin.assetUrl,
+    levelTracks
+  );
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -2023,21 +2200,27 @@ Studio.init = function (config) {
    */
   Studio.movementAudioEffects = {};
 
-  config.loadAudio = function () {
+  config.loadAudio = function() {
     var soundFileNames = [];
     // We want to load the built-in sounds in the skin
     soundFileNames.push.apply(soundFileNames, skin.builtinSounds);
     // We also want to load the student accessible list of effects available in the skin
     soundFileNames.push.apply(soundFileNames, skin.sounds);
     // We also want to load the movement sounds used in hoc2015
-    soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
+    soundFileNames.push.apply(
+      soundFileNames,
+      Studio.getMovementSoundFileNames(skin)
+    );
     // No need to load anything twice, so de-dupe our list.
     soundFileNames = _.uniq(soundFileNames);
 
     skin.soundFiles = {};
-    soundFileNames.forEach(function (sound) {
+    soundFileNames.forEach(function(sound) {
       sound = sound.toLowerCase();
-      skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
+      skin.soundFiles[sound] = [
+        skin.assetUrl(sound + '.mp3'),
+        skin.assetUrl(sound + '.ogg')
+      ];
       studioApp().loadAudio(skin.soundFiles[sound], sound);
     });
 
@@ -2047,21 +2230,23 @@ Studio.init = function (config) {
 
   // Add a post-video hook to start the background music, if available.
   config.level.afterVideoBeforeInstructionsFn = showInstructions => {
-    Sounds.getSingleton().whenAudioUnlocked(() => Studio.musicController.play());
+    Sounds.getSingleton().whenAudioUnlocked(() =>
+      Studio.musicController.play()
+    );
     showInstructions();
   };
 
-  config.afterInject = function () {
+  config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
-                               delegate(this,
-                                        Studio.onArrowButtonUp,
-                                        ArrowIds[btn]));
-      dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
-                                 delegate(this,
-                                          Studio.onArrowButtonDown,
-                                          ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(
+        document.getElementById(ArrowIds[btn]),
+        delegate(this, Studio.onArrowButtonUp, ArrowIds[btn])
+      );
+      dom.addMouseDownTouchEvent(
+        document.getElementById(ArrowIds[btn]),
+        delegate(this, Studio.onArrowButtonDown, ArrowIds[btn])
+      );
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
@@ -2077,30 +2262,32 @@ Studio.init = function (config) {
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
 
       if (Blockly.contractEditor) {
-        Blockly.contractEditor.registerTestHandler(Studio.getStudioExampleFailure);
+        Blockly.contractEditor.registerTestHandler(
+          Studio.getStudioExampleFailure
+        );
       }
     }
 
     drawMap();
   };
 
-  config.afterClearPuzzle = function () {
+  config.afterClearPuzzle = function() {
     studioApp().resetButtonClick();
   };
 
   // Since we allow "show code" for some blockly levels with move blocks,
   // we supply a polishCodeHook function here to make the generated code look
   // more readable:
-  config.polishCodeHook = function (code) {
+  config.polishCodeHook = function(code) {
     if (studioApp().isUsingBlockly()) {
       var regexpMoveUpBlock = /Studio.move\('\S*', 0, 1\);/g;
-      code = code.replace(regexpMoveUpBlock, "moveUp();");
+      code = code.replace(regexpMoveUpBlock, 'moveUp();');
       var regexpMoveRightBlock = /Studio.move\('\S*', 0, 2\);/g;
-      code = code.replace(regexpMoveRightBlock, "moveRight();");
+      code = code.replace(regexpMoveRightBlock, 'moveRight();');
       var regexpMoveDownBlock = /Studio.move\('\S*', 0, 4\);/g;
-      code = code.replace(regexpMoveDownBlock, "moveDown();");
+      code = code.replace(regexpMoveDownBlock, 'moveDown();');
       var regexpMoveLeftBlock = /Studio.move\('\S*', 0, 8\);/g;
-      code = code.replace(regexpMoveLeftBlock, "moveLeft();");
+      code = code.replace(regexpMoveLeftBlock, 'moveLeft();');
     }
     return code;
   };
@@ -2116,13 +2303,14 @@ Studio.init = function (config) {
   config.makeYourOwn = config.share;
 
   config.makeString = studioMsg.makeYourOwn();
-  config.makeUrl = "http://code.org/studio";
+  config.makeUrl = 'http://code.org/studio';
   config.makeImage = studioApp().assetUrl('media/promo.png');
 
   // Disable "show code" button in feedback dialog and workspace if blockly,
   // unless the level specifically requests it
-  config.enableShowCode =
-    studioApp().editCode ? true : utils.valueOr(level.enableShowCode, false);
+  config.enableShowCode = studioApp().editCode
+    ? true
+    : utils.valueOr(level.enableShowCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
@@ -2130,8 +2318,10 @@ Studio.init = function (config) {
   config.unusedConfig = [];
   for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
-        'whenSpriteCollided-' +
-        (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
+      'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-' +
+      skin.AutohandlerTouchItems[prop];
   }
   for (prop in skin.AutohandlerGetAllItems) {
     AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerGetAllItems[prop];
@@ -2149,7 +2339,7 @@ Studio.init = function (config) {
 
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
-  var onMount = function () {
+  var onMount = function() {
     studioApp().init(config);
 
     var finishButton = document.getElementById('finishButton');
@@ -2169,7 +2359,8 @@ Studio.init = function (config) {
 
   // Override Page constants
   const appSpecificConstants = {
-    hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/),
+    hideCoordinateOverlay:
+      !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
   };
 
   if (
@@ -2186,35 +2377,37 @@ Studio.init = function (config) {
 
   // for hoc2015x, we only have permission to show the Rey avatar for approved
   // scripts. For all others, we override the avatars with an empty image
-  if (config.skin.avatarAllowedScripts &&
-      !config.skin.avatarAllowedScripts.includes(config.scriptName)) {
+  if (
+    config.skin.avatarAllowedScripts &&
+    !config.skin.avatarAllowedScripts.includes(config.scriptName)
+  ) {
     appSpecificConstants.smallStaticAvatar = config.skin.blankAvatar;
     appSpecificConstants.failureAvatar = config.skin.blankAvatar;
   }
   studioApp().setPageConstants(config, appSpecificConstants);
 
   var visualizationColumn = (
-    <StudioVisualizationColumn
-      finishButton={!level.isProjectLevel}
-    />
+    <StudioVisualizationColumn finishButton={!level.isProjectLevel} />
   );
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={visualizationColumn}
-        onMount={onMount}
-      />
+      <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
     </Provider>,
     document.getElementById(config.containerId)
   );
 };
 
-Studio.prepareForRemix = function () {
-  if (!level.initializationBlocks &&
-      REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
-        level[prop] === undefined ||
-            level[prop] === group.defaultValues[prop]))) {
+Studio.prepareForRemix = function() {
+  if (
+    !level.initializationBlocks &&
+    REMIX_PROPS.every(group =>
+      Object.keys(group.defaultValues).every(
+        prop =>
+          level[prop] === undefined || level[prop] === group.defaultValues[prop]
+      )
+    )
+  ) {
     // Do nothing if all the props match the defaults
     return Promise.resolve();
   }
@@ -2269,7 +2462,10 @@ Studio.prepareForRemix = function () {
     const topNodes = root.childNodes;
     for (let i = topNodes.length - 1; i >= 0; i--) {
       const topBlock = topNodes[i];
-      if (topBlock.getAttribute && topBlock.getAttribute('type') === 'when_run') {
+      if (
+        topBlock.getAttribute &&
+        topBlock.getAttribute('type') === 'when_run'
+      ) {
         let lastBlock = topBlock;
         let firstBlock = null;
         let foundNextBlock = true;
@@ -2279,7 +2475,10 @@ Studio.prepareForRemix = function () {
             if (block.tagName && block.tagName.toLowerCase() === 'next') {
               for (let j = 0; j < block.childNodes.length; j++) {
                 const childBlock = block.childNodes[j];
-                if (childBlock.tagName && childBlock.tagName.toLowerCase() === 'block') {
+                if (
+                  childBlock.tagName &&
+                  childBlock.tagName.toLowerCase() === 'block'
+                ) {
                   lastBlock = childBlock;
                   break;
                 }
@@ -2322,35 +2521,38 @@ Studio.prepareForRemix = function () {
  * @returns {string[]} which may contain duplicates but will not have any
  *          undefined entries.
  */
-Studio.getMovementSoundFileNames = function (fromSkin) {
+Studio.getMovementSoundFileNames = function(fromSkin) {
   var avatarList = fromSkin.avatarList || [];
-  return avatarList.map(function (avatarName) {
-    var movementAudio = fromSkin[avatarName].movementAudio || [];
-    return movementAudio.reduce(function (memo, nextOption) {
-      return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
-    }, []);
-  }).reduce(function (memo, next) {
-    return memo.concat(next);
-  }, []).filter(function (fileName) {
-    return fileName !== undefined;
-  });
+  return avatarList
+    .map(function(avatarName) {
+      var movementAudio = fromSkin[avatarName].movementAudio || [];
+      return movementAudio.reduce(function(memo, nextOption) {
+        return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+      }, []);
+    })
+    .reduce(function(memo, next) {
+      return memo.concat(next);
+    }, [])
+    .filter(function(fileName) {
+      return fileName !== undefined;
+    });
 };
 
-var preloadImage = function (url) {
+var preloadImage = function(url) {
   if (url) {
     var img = new Image();
     img.src = url;
   }
 };
 
-var preloadBackgroundImages = function () {
+var preloadBackgroundImages = function() {
   var imageChoices = skin.backgroundChoicesK1;
   for (var i = 0; i < imageChoices.length; i++) {
     preloadImage(imageChoices[i][0]);
   }
 };
 
-var preloadProjectileAndItemImages = function () {
+var preloadProjectileAndItemImages = function() {
   for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
     preloadImage(skin[skin.ProjectileClassNames[i]]);
   }
@@ -2359,7 +2561,7 @@ var preloadProjectileAndItemImages = function () {
   }
 };
 
-var preloadActorImages = function () {
+var preloadActorImages = function() {
   for (var i = 0; i < skin.avatarList.length; i++) {
     preloadImage(skin[skin.avatarList[i]].sprite);
     preloadImage(skin[skin.avatarList[i]].walk);
@@ -2380,10 +2582,10 @@ function resetItemOrProjectileList(list) {
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Studio.clearEventHandlersKillTickLoop = function () {
+Studio.clearEventHandlersKillTickLoop = function() {
   // Check the first command in all of the cmdQueues and clear the timeout
   // if there is a pending wait command
-  Studio.eventHandlers.forEach(function (handler) {
+  Studio.eventHandlers.forEach(function(handler) {
     var cmd = handler.cmdQueue[0];
 
     if (cmd && cmd.opts && cmd.opts.waitTimeout && !cmd.opts.complete) {
@@ -2392,7 +2594,7 @@ Studio.clearEventHandlersKillTickLoop = function () {
     }
   });
   Studio.eventHandlers = [];
-  Studio.perExecutionTimeouts.forEach(function (timeout) {
+  Studio.perExecutionTimeouts.forEach(function(timeout) {
     clearTimeout(timeout);
   });
   Studio.pauseExecution();
@@ -2406,7 +2608,6 @@ Studio.clearEventHandlersKillTickLoop = function () {
   }
 };
 
-
 /**
  * Return the name (can be dereferenced as skin[name]) of the default background
  * (1st priority is to force to grid if specified by the level, the 2nd priority
@@ -2414,8 +2615,9 @@ Studio.clearEventHandlersKillTickLoop = function () {
  * fall back to the skin's value, which is also used for the blockly block).
  */
 function getDefaultBackgroundName() {
-  return level.coordinateGridBackground ? 'grid' :
-          (level.background || skin.defaultBackground);
+  return level.coordinateGridBackground
+    ? 'grid'
+    : level.background || skin.defaultBackground;
 }
 
 function getDefaultMapName() {
@@ -2426,7 +2628,7 @@ function getDefaultMapName() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Studio.reset = function (first) {
+Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   Studio.hideInputPrompt();
@@ -2448,7 +2650,9 @@ Studio.reset = function (first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
+    $('#soft-buttons')
+      .removeClass('soft-buttons-none')
+      .addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay
@@ -2456,17 +2660,15 @@ Studio.reset = function (first) {
   Studio.message = null;
   Studio.pauseInterpreter = false;
 
-   // True if we have set testResults using level progressConditions
+  // True if we have set testResults using level progressConditions
   Studio.progressConditionTestResult = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
   Studio.victoryText = '';
-  document.getElementById('score')
-    .setAttribute('visibility', 'hidden');
-  document.getElementById('victoryText')
-    .setAttribute('visibility', 'hidden');
+  document.getElementById('score').setAttribute('visibility', 'hidden');
+  document.getElementById('victoryText').setAttribute('visibility', 'hidden');
   if (dom.isMobile() || dom.isWindowsTouch()) {
     var resetTextA = document.getElementById('resetTextA');
     var resetTextB = document.getElementById('resetTextB');
@@ -2491,12 +2693,15 @@ Studio.reset = function (first) {
     }
   }
   if (level.floatingScore) {
-    document.getElementById('floatingScore')
+    document
+      .getElementById('floatingScore')
       .setAttribute('visibility', 'hidden');
   }
-  document.getElementById('titleScreenTitle')
+  document
+    .getElementById('titleScreenTitle')
     .setAttribute('visibility', 'hidden');
-  document.getElementById('titleScreenTextGroup')
+  document
+    .getElementById('titleScreenTextGroup')
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
@@ -2507,7 +2712,11 @@ Studio.reset = function (first) {
   Studio.setBackground({value: getDefaultBackgroundName()});
   var wallOverlay = document.getElementById('wallOverlay');
   if (wallOverlay) {
-    wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '');
+    wallOverlay.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      ''
+    );
   }
 
   // Reset currentCmdQueue and various counts:
@@ -2602,7 +2811,8 @@ Studio.reset = function (first) {
     };
     Studio.setSprite(opts);
     Studio.displaySprite(i);
-    document.getElementById('speechBubble' + i)
+    document
+      .getElementById('speechBubble' + i)
       .setAttribute('visibility', 'hidden');
 
     Studio.sprite[i].setOpacity(1);
@@ -2619,7 +2829,8 @@ Studio.reset = function (first) {
   }
   Studio.itemActivity = {};
   for (className in skin.specialItemProperties) {
-    Studio.itemActivity[className] = skin.specialItemProperties[className].activity;
+    Studio.itemActivity[className] =
+      skin.specialItemProperties[className].activity;
   }
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
@@ -2652,14 +2863,18 @@ Studio.reset = function (first) {
  * Move all goal sprites to their original positions, and reset their completion
  * state, both visual and logical.
  */
-Studio.resetGoalSprites = function () {
+Studio.resetGoalSprites = function() {
   Studio.touchAllGoalsEventFired = false;
 
   var goalOverride = utils.valueOr(level.goalOverride, {});
-  var offsetX = utils.valueOr(goalOverride.goalRenderOffsetX,
-      utils.valueOr(skin.goalRenderOffsetX, 0));
-  var offsetY = utils.valueOr(goalOverride.goalRenderOffsetY,
-      utils.valueOr(skin.goalRenderOffsetY, 0));
+  var offsetX = utils.valueOr(
+    goalOverride.goalRenderOffsetX,
+    utils.valueOr(skin.goalRenderOffsetX, 0)
+  );
+  var offsetY = utils.valueOr(
+    goalOverride.goalRenderOffsetY,
+    utils.valueOr(skin.goalRenderOffsetY, 0)
+  );
 
   var goal, i;
 
@@ -2673,8 +2888,11 @@ Studio.resetGoalSprites = function () {
     // Move the finish icons into position.
     goal.marker.setAttribute('x', goal.x + offsetX);
     goal.marker.setAttribute('y', goal.y + offsetY);
-    goal.marker.setAttributeNS('http://www.w3.org/1999/xlink',
-        'xlink:href', Studio.getGoalAssetFromSkin());
+    goal.marker.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      Studio.getGoalAssetFromSkin()
+    );
     goal.marker.setAttribute('opacity', 1);
     goal.clipRect.setAttribute('x', goal.x + offsetX);
     goal.clipRect.setAttribute('y', goal.y + offsetY);
@@ -2689,7 +2907,7 @@ Studio.resetGoalSprites = function () {
 };
 
 /** @returns {string} URL of the asset to use for goal objects */
-Studio.getGoalAssetFromSkin = function () {
+Studio.getGoalAssetFromSkin = function() {
   var goalAsset = skin.goal;
   if (level.goalOverride) {
     if (level.goalOverride.goalAnimation) {
@@ -2706,26 +2924,37 @@ Studio.getGoalAssetFromSkin = function () {
  * @param exampleBlock
  * @returns {string} string to display after example execution
  */
-Studio.getStudioExampleFailure = function (exampleBlock) {
+Studio.getStudioExampleFailure = function(exampleBlock) {
   try {
-    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
-    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+    var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
+    var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
 
-    studioApp().feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+    studioApp().feedback_.throwOnInvalidExampleBlocks(
+      actualBlock,
+      expectedBlock
+    );
 
-    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
-    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
+    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', [
+      'functional_definition'
+    ]);
+    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [
+      exampleBlock
+    ]);
     if (exampleCode) {
-      var resultBoolean = CustomMarshalingInterpreter.evalWith(defCode + '; return' + exampleCode, {
-        Studio: api,
-        Globals: Studio.Globals
-      }, {legacy: true});
-      return resultBoolean ? null : "Does not match definition.";
+      var resultBoolean = CustomMarshalingInterpreter.evalWith(
+        defCode + '; return' + exampleCode,
+        {
+          Studio: api,
+          Globals: Studio.Globals
+        },
+        {legacy: true}
+      );
+      return resultBoolean ? null : 'Does not match definition.';
     } else {
-      return "No example code.";
+      return 'No example code.';
     }
   } catch (error) {
-    return "Execution error: " + error.message;
+    return 'Execution error: ' + error.message;
   }
 };
 
@@ -2733,7 +2962,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Studio.runButtonClick = function () {
+Studio.runButtonClick = function() {
   if (level.edit_blocks) {
     Studio.onPuzzleComplete();
   }
@@ -2759,8 +2988,11 @@ Studio.runButtonClick = function () {
   Studio.execute();
   Studio.gameState = Studio.GameStates.ACTIVE;
 
-  if (level.freePlay && !level.isProjectLevel &&
-      (!studioApp().hideSource || level.showFinish)) {
+  if (
+    level.freePlay &&
+    !level.isProjectLevel &&
+    (!studioApp().hideSource || level.showFinish)
+  ) {
     var shareCell = document.getElementById('share-cell');
     if (shareCell.className !== 'share-cell-enabled') {
       shareCell.className = 'share-cell-enabled';
@@ -2783,31 +3015,40 @@ Studio.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-Studio.displayFeedback = function () {
+Studio.displayFeedback = function() {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
-  if ((level.freePlay || Studio.testResults >= TestResults.MINIMUM_OPTIMAL_RESULT) &&
-      !(Studio.customLogic instanceof BigGameLogic)) {
+  if (
+    (level.freePlay ||
+      Studio.testResults >= TestResults.MINIMUM_OPTIMAL_RESULT) &&
+    !(Studio.customLogic instanceof BigGameLogic)
+  ) {
     tryAgainText = commonMsg.keepPlaying();
   } else {
     tryAgainText = commonMsg.tryAgain();
   }
 
   // Let the level override feedback dialog strings.
-  var stringFunctions = Object.assign({
-    continueText: level.freePlay ? commonMsg.nextPuzzle : function () {},
-    reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
-    sharingText: studioMsg.shareGame
-  }, level.appStringsFunctions);
+  var stringFunctions = Object.assign(
+    {
+      continueText: level.freePlay ? commonMsg.nextPuzzle : function() {},
+      reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
+      sharingText: studioMsg.shareGame
+    },
+    level.appStringsFunctions
+  );
   var appStrings = {
     continueText: stringFunctions.continueText(),
-    reinfFeedbackMsg: stringFunctions.reinfFeedbackMsg({backButton: tryAgainText}),
+    reinfFeedbackMsg: stringFunctions.reinfFeedbackMsg({
+      backButton: tryAgainText
+    }),
     sharingText: stringFunctions.sharingText()
   };
 
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
-    const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+    const isSignedIn =
+      getStore().getState().progress.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
       feedbackType: Studio.testResults,
@@ -2816,18 +3057,24 @@ Studio.displayFeedback = function () {
       continueText: appStrings.continueText,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
-          !level.projectTemplateLevelName,
+      showingSharing:
+        !level.disableSharing &&
+        level.freePlay &&
+        !Studio.preExecutionFailure &&
+        !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      saveToLegacyGalleryUrl:
+        level.freePlay &&
+        Studio.response &&
+        Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      disablePrinting: level.disablePrinting,
+      disablePrinting: level.disablePrinting
     });
   }
 };
@@ -2836,24 +3083,28 @@ Studio.displayFeedback = function () {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Studio.onReportComplete = function (response) {
+Studio.onReportComplete = function(response) {
   Studio.response = response;
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
   Studio.displayFeedback();
 };
 
-var registerEventHandler = function (handlers, name, func) {
+var registerEventHandler = function(handlers, name, func) {
   handlers.push({
     name: name,
     func: func,
-    cmdQueue: []});
+    cmdQueue: []
+  });
 };
 
-var registerHandlersForCode = function (handlers, blockName, code, args = []) {
+var registerHandlersForCode = function(handlers, blockName, code, args = []) {
   if (Studio.legacyRuntime) {
-    registerEventHandler(handlers, blockName,
-      new Function('Studio', 'Globals', ...args, code));
+    registerEventHandler(
+      handlers,
+      blockName,
+      new Function('Studio', 'Globals', ...args, code)
+    );
   } else {
     const event = Studio.interpretedHandlers[blockName];
     if (event) {
@@ -2868,11 +3119,16 @@ var registerHandlersForCode = function (handlers, blockName, code, args = []) {
   }
 };
 
-var registerHandlers =
-      function (handlers, blockName, eventNameBase,
-                nameParam1, matchParam1Val,
-                nameParam2, matchParam2Val,
-                argNames) {
+var registerHandlers = function(
+  handlers,
+  blockName,
+  eventNameBase,
+  nameParam1,
+  matchParam1Val,
+  nameParam2,
+  matchParam2Val,
+  argNames
+) {
   var blocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var x = 0; blocks[x]; x++) {
     var block = blocks[x];
@@ -2880,11 +3136,11 @@ var registerHandlers =
     // and no title value is set through a dropdown
     var titleVal1 = block.getTitleValue(nameParam1) || '0';
     var titleVal2 = block.getTitleValue(nameParam2) || '0';
-    if (block.type === blockName &&
-        (!nameParam1 ||
-         matchParam1Val === titleVal1) &&
-        (!nameParam2 ||
-         matchParam2Val === titleVal2)) {
+    if (
+      block.type === blockName &&
+      (!nameParam1 || matchParam1Val === titleVal1) &&
+      (!nameParam2 || matchParam2Val === titleVal2)
+    ) {
       var code = Blockly.Generator.blocksToCode('JavaScript', [block]);
       if (code) {
         var eventName = eventNameBase;
@@ -2900,77 +3156,149 @@ var registerHandlers =
   }
 };
 
-var registerHandlersWithSingleSpriteParam =
-      function (handlers, blockName, eventNameBase, blockParam) {
+var registerHandlersWithSingleSpriteParam = function(
+  handlers,
+  blockName,
+  eventNameBase,
+  blockParam
+) {
   for (var i = 0; i < Studio.spriteCount; i++) {
     registerHandlers(handlers, blockName, eventNameBase, blockParam, String(i));
   }
 };
 
-var registerHandlersWithTitleParam =
-      function (handlers, blockName, eventNameBase, titleParam, values) {
+var registerHandlersWithTitleParam = function(
+  handlers,
+  blockName,
+  eventNameBase,
+  titleParam,
+  values
+) {
   for (var i = 0; i < values.length; i++) {
     registerHandlers(handlers, blockName, eventNameBase, titleParam, values[i]);
   }
 };
 
-var registerHandlersWithMultipleSpriteParams =
-      function (handlers, blockName, eventNameBase, blockParam1, blockParam2) {
+var registerHandlersWithMultipleSpriteParams = function(
+  handlers,
+  blockName,
+  eventNameBase,
+  blockParam1,
+  blockParam2
+) {
   var i;
-  var registerHandlersForClassName = function (className) {
-    registerHandlers(handlers,
-                     blockName,
-                     eventNameBase,
-                     blockParam1,
-                     String(i),
-                     blockParam2,
-                     className);
+  var registerHandlersForClassName = function(className) {
+    registerHandlers(
+      handlers,
+      blockName,
+      eventNameBase,
+      blockParam1,
+      String(i),
+      blockParam2,
+      className
+    );
   };
   for (i = 0; i < Studio.spriteCount; i++) {
     for (var j = 0; j < Studio.spriteCount; j++) {
       if (i === j) {
         continue;
       }
-      registerHandlers(handlers,
-                       blockName,
-                       eventNameBase,
-                       blockParam1,
-                       String(i),
-                       blockParam2,
-                       String(j));
+      registerHandlers(
+        handlers,
+        blockName,
+        eventNameBase,
+        blockParam1,
+        String(i),
+        blockParam2,
+        String(j)
+      );
     }
     skin.ProjectileClassNames.forEach(registerHandlersForClassName);
     skin.ItemClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'any_actor');
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'any_edge');
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'any_projectile');
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'anything');
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'goal');
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'wall');
+    registerHandlers(
+      handlers,
+      blockName,
+      eventNameBase,
+      blockParam1,
+      String(i),
+      blockParam2,
+      'any_actor'
+    );
+    registerHandlers(
+      handlers,
+      blockName,
+      eventNameBase,
+      blockParam1,
+      String(i),
+      blockParam2,
+      'any_edge'
+    );
+    registerHandlers(
+      handlers,
+      blockName,
+      eventNameBase,
+      blockParam1,
+      String(i),
+      blockParam2,
+      'any_projectile'
+    );
+    registerHandlers(
+      handlers,
+      blockName,
+      eventNameBase,
+      blockParam1,
+      String(i),
+      blockParam2,
+      'anything'
+    );
+    registerHandlers(
+      handlers,
+      blockName,
+      eventNameBase,
+      blockParam1,
+      String(i),
+      blockParam2,
+      'goal'
+    );
+    registerHandlers(
+      handlers,
+      blockName,
+      eventNameBase,
+      blockParam1,
+      String(i),
+      blockParam2,
+      'wall'
+    );
   }
 };
 
-var registerHandlersWithSpriteAndGroupParams = function (
-    handlers,
-    blockName,
-    eventNameBase,
-    blockParam1,
-    blockParam2,
-    argNames) {
-  var spriteNames = skin.spriteChoices.filter(opt =>
-      opt[1] !== constants.HIDDEN_VALUE && opt[1] !== constants.RANDOM_VALUE
-  ).map(opt => opt[1]);
+var registerHandlersWithSpriteAndGroupParams = function(
+  handlers,
+  blockName,
+  eventNameBase,
+  blockParam1,
+  blockParam2,
+  argNames
+) {
+  var spriteNames = skin.spriteChoices
+    .filter(
+      opt =>
+        opt[1] !== constants.HIDDEN_VALUE && opt[1] !== constants.RANDOM_VALUE
+    )
+    .map(opt => opt[1]);
   for (var i = 0; i < Studio.spriteCount; i++) {
     for (var j = 0; j < spriteNames.length; j++) {
-      registerHandlers(handlers, blockName, eventNameBase, blockParam1,
-          String(i), blockParam2, spriteNames[j], argNames);
+      registerHandlers(
+        handlers,
+        blockName,
+        eventNameBase,
+        blockParam1,
+        String(i),
+        blockParam2,
+        spriteNames[j],
+        argNames
+      );
     }
   }
 };
@@ -2981,28 +3309,34 @@ var registerHandlersWithSpriteAndGroupParams = function (
 // block type that defines functions.
 //
 
-var defineProcedures = function (blockType) {
+var defineProcedures = function(blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try {
-    CustomMarshalingInterpreter.evalWith(code, {
-      Studio: api,
-      Globals: Studio.Globals
-    }, {legacy: true});
-  } catch (e) { }
+    CustomMarshalingInterpreter.evalWith(
+      code,
+      {
+        Studio: api,
+        Globals: Studio.Globals
+      },
+      {legacy: true}
+    );
+  } catch (e) {}
 };
 
 /**
  * Looks for failures that should prevent execution in blockly mode.
  * @returns {boolean} True if we have a pre-execution failure
  */
-Studio.checkForBlocklyPreExecutionFailure = function () {
+Studio.checkForBlocklyPreExecutionFailure = function() {
   if (studioApp().hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     // Some of our levels (i.e. big game) have a different top level block, but
     // those should be undeletable/unmovable and not hit this. If they do,
     // they'll still get the generic unfilled block message
-    Studio.message = studioApp().getUnfilledFunctionalBlockError('functional_start_setValue');
+    Studio.message = studioApp().getUnfilledFunctionalBlockError(
+      'functional_start_setValue'
+    );
     Studio.preExecutionFailure = true;
     return true;
   }
@@ -3038,7 +3372,7 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
  * @returns {number} outcome.testResults
  * @returns {string} outcome.message
  */
-Studio.checkExamples_ = function () {
+Studio.checkExamples_ = function() {
   var outcome = {};
   if (!level.examplesRequired) {
     return outcome;
@@ -3048,7 +3382,9 @@ Studio.checkExamples_ = function () {
   if (exampleless) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({
+      functionName: exampleless
+    });
     return outcome;
   }
 
@@ -3057,17 +3393,23 @@ Studio.checkExamples_ = function () {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
 
-    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+    var name = unfilled
+      .getRootBlock()
+      .getInputTargetBlock('ACTUAL')
       .getTitleValue('NAME');
     outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
     return outcome;
   }
 
-  var failingBlockName = studioApp().checkForFailingExamples(Studio.getStudioExampleFailure);
+  var failingBlockName = studioApp().checkForFailingExamples(
+    Studio.getStudioExampleFailure
+  );
   if (failingBlockName) {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+    outcome.message = commonMsg.exampleErrorMessage({
+      functionName: failingBlockName
+    });
   }
 
   return outcome;
@@ -3077,7 +3419,7 @@ Studio.checkExamples_ = function () {
  * Looks for failures that should prevent execution in editCode mode.
  * @returns {boolean} True if we have a pre-execution failure
  */
-Studio.checkForEditCodePreExecutionFailure = function () {
+Studio.checkForEditCodePreExecutionFailure = function() {
   var funcName = Studio.hasUnexpectedFunction_();
   if (funcName) {
     Studio.result = false;
@@ -3106,10 +3448,12 @@ Studio.checkForEditCodePreExecutionFailure = function () {
 /**
  * @returns {string} the name of the first unexpected function found
  */
-Studio.hasUnexpectedFunction_ = function () {
-  if (studioApp().editCode &&
-      level.preventUserDefinedFunctions &&
-      Studio.JSInterpreter) {
+Studio.hasUnexpectedFunction_ = function() {
+  if (
+    studioApp().editCode &&
+    level.preventUserDefinedFunctions &&
+    Studio.JSInterpreter
+  ) {
     var funcNames = Studio.JSInterpreter.getGlobalFunctionNames();
     for (var name in AUTO_HANDLER_MAP) {
       var index = funcNames.indexOf(name);
@@ -3126,9 +3470,8 @@ Studio.hasUnexpectedFunction_ = function () {
 /**
  * @returns {string} the name of the first unexpected local function found
  */
-Studio.hasUnexpectedLocalFunction_ = function () {
-  if (studioApp().editCode &&
-      Studio.JSInterpreter) {
+Studio.hasUnexpectedLocalFunction_ = function() {
+  if (studioApp().editCode && Studio.JSInterpreter) {
     var funcNames = Studio.JSInterpreter.getLocalFunctionNames();
     for (var name in AUTO_HANDLER_MAP) {
       var index = funcNames.indexOf(name);
@@ -3141,7 +3484,7 @@ Studio.hasUnexpectedLocalFunction_ = function () {
 
 function handleExecutionError(err, lineNumber, outputString) {
   outputError(outputString, lineNumber);
-  Studio.executionError = { err: err, lineNumber: lineNumber };
+  Studio.executionError = {err: err, lineNumber: lineNumber};
 
   // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
   if (err instanceof SyntaxError) {
@@ -3158,7 +3501,7 @@ function handleExecutionError(err, lineNumber, outputString) {
 /**
  * Execute the story
  */
-Studio.execute = function () {
+Studio.execute = function() {
   Studio.result = studioApp().UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
@@ -3173,12 +3516,13 @@ Studio.execute = function () {
     Studio.interpretedHandlers = {};
 
     if (studioApp().initializationBlocks) {
-      studioApp().initializationBlocks.forEach(function (topBlock) {
+      studioApp().initializationBlocks.forEach(function(topBlock) {
         // by default, blocks are queued to run once at game start.
         // Repeat forever blocks, however, need their own handler.
-        const handlerType = (topBlock.type === 'studio_repeatForever') ?
-          'repeatForever' :
-          'whenGameStarts';
+        const handlerType =
+          topBlock.type === 'studio_repeatForever'
+            ? 'repeatForever'
+            : 'whenGameStarts';
         const code = Blockly.Generator.blocksToCode('JavaScript', [topBlock]);
         registerHandlersForCode(handlers, handlerType, code);
       });
@@ -3186,74 +3530,89 @@ Studio.execute = function () {
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
-        'whenGameStarts');
+    registerHandlers(
+      handlers,
+      'functional_start_setBackgroundAndSpeeds',
+      'whenGameStarts'
+    );
     registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
     registerHandlers(handlers, 'studio_whenDown', 'when-down');
-    registerHandlersWithTitleParam(handlers,
-                                    'studio_whenArrow',
-                                    'when',
-                                    'VALUE',
-                                    ['left', 'right', 'up', 'down']);
+    registerHandlersWithTitleParam(
+      handlers,
+      'studio_whenArrow',
+      'when',
+      'VALUE',
+      ['left', 'right', 'up', 'down']
+    );
     registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
-    registerHandlers(handlers,
-                     'studio_whenTouchCharacter',
-                     'whenSpriteCollided-' +
-                       (Studio.protagonistSpriteIndex || 0) +
-                       '-any_item');
-    registerHandlers(handlers,
-                     'studio_whenGetAllCharacters',
-                     'whenGetAllItems');
-    registerHandlersWithTitleParam(handlers,
-                                   'studio_whenGetAllCharacterClass',
-                                   'whenGetAll',
-                                   'VALUE',
-                                   skin.ItemClassNames);
-    registerHandlersWithTitleParam(handlers,
-                                   'studio_whenGetCharacter',
-                                   'whenSpriteCollided-' +
-                                     (Studio.protagonistSpriteIndex || 0),
-                                   'VALUE',
-                                   ['any_item'].concat(skin.ItemClassNames));
+    registerHandlers(
+      handlers,
+      'studio_whenTouchCharacter',
+      'whenSpriteCollided-' + (Studio.protagonistSpriteIndex || 0) + '-any_item'
+    );
+    registerHandlers(
+      handlers,
+      'studio_whenGetAllCharacters',
+      'whenGetAllItems'
+    );
+    registerHandlersWithTitleParam(
+      handlers,
+      'studio_whenGetAllCharacterClass',
+      'whenGetAll',
+      'VALUE',
+      skin.ItemClassNames
+    );
+    registerHandlersWithTitleParam(
+      handlers,
+      'studio_whenGetCharacter',
+      'whenSpriteCollided-' + (Studio.protagonistSpriteIndex || 0),
+      'VALUE',
+      ['any_item'].concat(skin.ItemClassNames)
+    );
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (Studio.wallMapCollisions) {
-      registerHandlers(handlers,
-                       'studio_whenTouchObstacle',
-                       'whenSpriteCollided-' +
-                         (Studio.protagonistSpriteIndex || 0) +
-                         '-wall');
+      registerHandlers(
+        handlers,
+        'studio_whenTouchObstacle',
+        'whenSpriteCollided-' + (Studio.protagonistSpriteIndex || 0) + '-wall'
+      );
     }
-    registerHandlersWithSingleSpriteParam(handlers,
-                                    'studio_whenSpriteClicked',
-                                    'whenSpriteClicked',
-                                    'SPRITE');
-    registerHandlersWithMultipleSpriteParams(handlers,
-                                     'studio_whenSpriteCollided',
-                                     'whenSpriteCollided',
-                                     'SPRITE1',
-                                     'SPRITE2');
+    registerHandlersWithSingleSpriteParam(
+      handlers,
+      'studio_whenSpriteClicked',
+      'whenSpriteClicked',
+      'SPRITE'
+    );
+    registerHandlersWithMultipleSpriteParams(
+      handlers,
+      'studio_whenSpriteCollided',
+      'whenSpriteCollided',
+      'SPRITE1',
+      'SPRITE2'
+    );
     registerHandlersWithSpriteAndGroupParams(
-        handlers,
-        'studio_whenSpriteAndGroupCollideSimple',
-        'whenSpriteCollided',
-        'SPRITE',
-        'SPRITENAME');
+      handlers,
+      'studio_whenSpriteAndGroupCollideSimple',
+      'whenSpriteCollided',
+      'SPRITE',
+      'SPRITENAME'
+    );
     registerHandlersWithSpriteAndGroupParams(
-        handlers,
-        'studio_whenSpriteAndGroupCollide',
-        'whenSpriteCollided',
-        'SPRITE',
-        'SPRITENAME',
-        ['touchedSpriteIndex']);
-
+      handlers,
+      'studio_whenSpriteAndGroupCollide',
+      'whenSpriteCollided',
+      'SPRITE',
+      'SPRITENAME',
+      ['touchedSpriteIndex']
+    );
   }
 
   if (utils.valueOr(level.playStartSound, true)) {
-    Studio.playSound({ soundName: 'start' });
+    Studio.playSound({soundName: 'start'});
   }
 
   studioApp().reset(false);
@@ -3275,7 +3634,7 @@ Studio.execute = function () {
       enableEvents: true
     });
     if (!Studio.JSInterpreter.initialized()) {
-        return;
+      return;
     }
     if (Studio.checkForEditCodePreExecutionFailure()) {
       return Studio.onPuzzleComplete();
@@ -3289,12 +3648,17 @@ Studio.execute = function () {
       defineProcedures('procedures_defnoreturn');
       defineProcedures('functional_definition');
     } else {
-      const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+      const generator = Blockly.Generator.blockSpaceToCode.bind(
+        Blockly.Generator,
+        'JavaScript'
+      );
       const code = [
         'procedures_defreturn',
         'procedures_defnoreturn',
         'functional_definition'
-      ].map(generator).join(';');
+      ]
+        .map(generator)
+        .join(';');
 
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
@@ -3308,9 +3672,11 @@ Studio.execute = function () {
         if (hook.name === 'getGlobals') {
           // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
           Object.defineProperty(Studio, 'Globals', {
-            get: () => {return hook.func() || {};},
+            get: () => {
+              return hook.func() || {};
+            },
             set: () => {},
-            configurable: true,
+            configurable: true
           });
         } else {
           registerEventHandler(handlers, hook.name, hook.func);
@@ -3322,7 +3688,10 @@ Studio.execute = function () {
     Studio.eventHandlers = handlers;
   }
 
-  $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr('visibility', 'hidden');
+  $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr(
+    'visibility',
+    'hidden'
+  );
 
   Studio.perExecutionTimeouts = [];
   Studio.resumeExecution();
@@ -3331,7 +3700,7 @@ Studio.execute = function () {
 /**
  * Pause calling `Studio.onTick`.
  */
-Studio.pauseExecution = function () {
+Studio.pauseExecution = function() {
   Studio.paused = true;
   window.clearInterval(Studio.tickIntervalId);
 };
@@ -3339,19 +3708,24 @@ Studio.pauseExecution = function () {
 /**
  * Resume calling `Studio.onTick`.
  */
-Studio.resumeExecution = function () {
+Studio.resumeExecution = function() {
   Studio.paused = false;
-  Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
+  Studio.tickIntervalId = window.setInterval(
+    Studio.onTick,
+    Studio.scale.stepSpeed
+  );
 };
 
 Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
-Studio.onPuzzleComplete = function () {
+Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (studioApp().hasContainedLevels ||
-      (level.freePlay && !Studio.preExecutionFailure)) {
+  } else if (
+    studioApp().hasContainedLevels ||
+    (level.freePlay && !Studio.preExecutionFailure)
+  ) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -3366,15 +3740,18 @@ Studio.onPuzzleComplete = function () {
   }
 
   // If we know they succeeded, mark levelComplete true
-  var levelComplete = (Studio.result === ResultType.SUCCESS);
+  var levelComplete = Studio.result === ResultType.SUCCESS;
 
   // If preExecutionFailure or progressConditionTestResult, then testResults
   // should already be set
-  if (!Studio.preExecutionFailure && ! Studio.progressConditionTestResult) {
+  if (!Studio.preExecutionFailure && !Studio.progressConditionTestResult) {
     // If the current level is a free play, always return the free play
     // result type
-    Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
-      studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
+    Studio.testResults = level.freePlay
+      ? TestResults.FREE_PLAY
+      : studioApp().getTestResults(levelComplete, {
+          executionError: Studio.executionError
+        });
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
@@ -3408,7 +3785,7 @@ Studio.onPuzzleComplete = function () {
 
   Studio.waitingForReport = true;
 
-  var sendReport = function () {
+  var sendReport = function() {
     studioApp().report({
       app: 'studio',
       level: level.id,
@@ -3425,10 +3802,12 @@ Studio.onPuzzleComplete = function () {
   if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
-    document.getElementById('svgStudio').toDataURL("image/jpeg", {
-      callback: function (imageDataUrl) {
+    document.getElementById('svgStudio').toDataURL('image/jpeg', {
+      callback: function(imageDataUrl) {
         Studio.feedbackImage = imageDataUrl;
-        Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
+        Studio.encodedFeedbackImage = encodeURIComponent(
+          Studio.feedbackImage.split(',')[1]
+        );
 
         sendReport();
       }
@@ -3437,11 +3816,15 @@ Studio.onPuzzleComplete = function () {
 };
 
 /* Return the frame count for items or projectiles
-*/
+ */
 function getFrameCount(className, exceptionList, defaultCount) {
   if (/.gif$/.test(skin[className])) {
     return 1;
-  } else if (exceptionList && exceptionList[className] && exceptionList[className].frames) {
+  } else if (
+    exceptionList &&
+    exceptionList[className] &&
+    exceptionList[className].frames
+  ) {
     return exceptionList[className].frames;
   }
   return defaultCount;
@@ -3452,19 +3835,19 @@ function getFrameCount(className, exceptionList, defaultCount) {
  * CSS class name.
  */
 
-Studio.drawDebugRect = function (className, x, y, width, height) {
+Studio.drawDebugRect = function(className, x, y, width, height) {
   if (!showDebugInfo) {
     return;
   }
 
   var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
-  group.setAttribute('class', className + " debugRect");
+  group.setAttribute('class', className + ' debugRect');
   var background = document.createElementNS(SVG_NS, 'rect');
   background.setAttribute('width', width);
   background.setAttribute('height', height);
-  background.setAttribute('x', x - width/2);
-  background.setAttribute('y', y - height/2);
+  background.setAttribute('x', x - width / 2);
+  background.setAttribute('y', y - height / 2);
   background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
   background.setAttribute('stroke', '#000000');
   background.setAttribute('stroke-width', 1);
@@ -3481,7 +3864,7 @@ Studio.drawDebugRect = function (className, x, y, width, height) {
  * @param {number} y2
  * @param {string} [color] - defaults to black
  */
-Studio.drawDebugLine = function (className, x1, y1, x2, y2, color) {
+Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
   if (!showDebugInfo) {
     return;
   }
@@ -3490,7 +3873,7 @@ Studio.drawDebugLine = function (className, x1, y1, x2, y2, color) {
 
   var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
-  group.setAttribute('class', className + " debugLine");
+  group.setAttribute('class', className + ' debugLine');
   var line = document.createElementNS(SVG_NS, 'line');
   line.setAttribute('x1', x1);
   line.setAttribute('y1', y1);
@@ -3509,12 +3892,12 @@ Studio.drawDebugLine = function (className, x1, y1, x2, y2, color) {
  * level.showTimeoutRect should be a valid color that can be passed to an SVG
  * 'fill'.
  */
-Studio.drawTimeoutRect = function () {
+Studio.drawTimeoutRect = function() {
   if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
     return;
   }
 
-  $(".timeoutRect").remove();
+  $('.timeoutRect').remove();
 
   // The fraction of the entire level duration that we start and end the
   // fade-in.
@@ -3525,16 +3908,20 @@ Studio.drawTimeoutRect = function () {
   var currentFraction = timeRemaining / Studio.timeoutFailureTick;
 
   if (currentFraction <= startFadeInAt) {
-    var opacity = currentFraction < endFadeInAt ? 1 :
-      1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
+    var opacity =
+      currentFraction < endFadeInAt
+        ? 1
+        : 1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
 
-    var width = timeRemaining * Studio.MAZE_WIDTH / (Studio.timeoutFailureTick * startFadeInAt);
+    var width =
+      (timeRemaining * Studio.MAZE_WIDTH) /
+      (Studio.timeoutFailureTick * startFadeInAt);
     var height = 6;
 
     if (width > 0) {
       var svg = document.getElementById('svgStudio');
       var group = document.createElementNS(SVG_NS, 'g');
-      group.setAttribute('class', "timeoutRect");
+      group.setAttribute('class', 'timeoutRect');
       var background = document.createElementNS(SVG_NS, 'rect');
       background.setAttribute('opacity', opacity);
       background.setAttribute('width', width);
@@ -3552,7 +3939,7 @@ Studio.drawTimeoutRect = function () {
  * Draw an image with 0.5 opacity over the entire play area. Only allow one
  * at a time.
  */
-Studio.drawDebugOverlay = function (src) {
+Studio.drawDebugOverlay = function(src) {
   if (showDebugInfo && $('.debugImage').length === 0) {
     const svg = document.getElementById('svgStudio');
     const group = document.createElementNS(SVG_NS, 'g');
@@ -3573,20 +3960,20 @@ Studio.drawDebugOverlay = function (src) {
  * Clear the debug rectangles.
  */
 
-Studio.clearDebugElements = function () {
+Studio.clearDebugElements = function() {
   $('.debugRect').remove();
   $('.debugLine').remove();
   $('.debugImage').remove();
 };
 
-Studio.drawWallTile = function (svg, wallVal, row, col) {
+Studio.drawWallTile = function(svg, wallVal, row, col) {
   var srcRow, srcCol;
 
   // Defaults for regular tiles:
   var tiles = skin.tiles;
   var srcWallType = 0;
   var tileSize = Studio.SQUARE_SIZE;
-  var addOffset = 0;  // Added to X & Y to offset drawn tile.
+  var addOffset = 0; // Added to X & Y to offset drawn tile.
   var numSrcRows = 8;
   var numSrcCols = 8;
 
@@ -3601,14 +3988,16 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
     srcRow = Math.floor(Math.random() * constants.WallRandomCoordMax);
     // Since [0,0] is not a valid wall tile, ensure that we avoid column zero
     // when row zero was chosen at random
-    srcCol = srcRow ?
-                Math.floor(Math.random() * constants.WallRandomCoordMax) :
-                1 + Math.floor(Math.random() * (constants.WallRandomCoordMax - 1));
+    srcCol = srcRow
+      ? Math.floor(Math.random() * constants.WallRandomCoordMax)
+      : 1 + Math.floor(Math.random() * (constants.WallRandomCoordMax - 1));
   } else {
     // This wall value has been explicitly set.  It encodes the row & col from
     // the spritesheet of wall tile images.
-    srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
-    srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
+    srcRow =
+      (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
+    srcCol =
+      (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
     srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
 
     if (srcWallType === constants.WallType.JUMBO_SIZE) {
@@ -3628,7 +4017,11 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   // Attempt to load tiles that match the current background, if specified.
   if (Studio.background && !jumboSize && skin[Studio.background].tiles) {
     tiles = skin[Studio.background].tiles;
-  } else if (Studio.background && jumboSize && skin[Studio.background].jumboTiles) {
+  } else if (
+    Studio.background &&
+    jumboSize &&
+    skin[Studio.background].jumboTiles
+  ) {
     tiles = skin[Studio.background].jumboTiles;
     addOffset = skin[Studio.background].jumboTilesAddOffset;
   }
@@ -3636,7 +4029,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + Studio.tiles.length;
   clipPath.setAttribute('id', clipId);
-  clipPath.setAttribute('class', "tile");
+  clipPath.setAttribute('class', 'tile');
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', tileSize);
   rect.setAttribute('height', tileSize);
@@ -3646,13 +4039,19 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   svg.appendChild(clipPath);
 
   var tile = document.createElementNS(SVG_NS, 'image');
-  var tileId = 'tile_' + (Studio.tiles.length);
+  var tileId = 'tile_' + Studio.tiles.length;
   tile.setAttribute('id', tileId);
-  tile.setAttribute('class', "tileClip");
+  tile.setAttribute('class', 'tileClip');
   tile.setAttribute('width', numSrcCols * tileSize);
   tile.setAttribute('height', numSrcRows * tileSize);
-  tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
-  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset);
+  tile.setAttribute(
+    'x',
+    col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset
+  );
+  tile.setAttribute(
+    'y',
+    row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset
+  );
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
@@ -3663,14 +4062,16 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   Studio.tiles.push(tileEntry);
 };
 
-Studio.createLevelItems = function (svg) {
+Studio.createLevelItems = function(svg) {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
       var mapVal = Studio.map[row][col].getTileType();
       for (var index = 0; index < skin.ItemClassNames.length; index++) {
         if (constants.squareHasItemClass(index, mapVal)) {
           // Create item:
-          var classOptions = Studio.getItemOptionsForItemClass(skin.ItemClassNames[index]);
+          var classOptions = Studio.getItemOptionsForItemClass(
+            skin.ItemClassNames[index]
+          );
           var itemOptions = Object.assign({}, classOptions, {
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
             y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row
@@ -3688,8 +4089,7 @@ Studio.createLevelItems = function (svg) {
   }
 };
 
-Studio.drawMapTiles = function (svg) {
-
+Studio.drawMapTiles = function(svg) {
   // If we're just using the level's own map, then draw it only once.
   if (!Studio.wallMap && Studio.tilesDrawn) {
     return;
@@ -3721,9 +4121,12 @@ Studio.drawMapTiles = function (svg) {
       wallOverlay.setAttribute('y', 0);
       backgroundLayer.appendChild(wallOverlay);
     }
-    wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', overlayURI);
+    wallOverlay.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      overlayURI
+    );
   }
-
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -3734,13 +4137,14 @@ Studio.drawMapTiles = function (svg) {
           continue;
         }
 
-        var srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
+        var srcWallType =
+          (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
 
         if (srcWallType === constants.WallType.DOUBLE_SIZE) {
           tilesDrawn[row][col] = true;
-          tilesDrawn[row][col+1] = true;
-          tilesDrawn[row+1][col] = true;
-          tilesDrawn[row+1][col+1] = true;
+          tilesDrawn[row][col + 1] = true;
+          tilesDrawn[row + 1][col] = true;
+          tilesDrawn[row + 1][col + 1] = true;
         }
 
         Studio.drawWallTile(backgroundLayer, wallVal, row, col);
@@ -3749,24 +4153,28 @@ Studio.drawMapTiles = function (svg) {
   }
 };
 
-var updateSpeechBubblePath = function (element) {
+var updateSpeechBubblePath = function(element) {
   var height = +element.getAttribute('height');
   var width = +element.getAttribute('width');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   var tipOffset = +element.getAttribute('tipOffset');
-  element.setAttribute('d',
-                       createSpeechBubblePath(0,
-                                              0,
-                                              width,
-                                              height,
-                                              SPEECH_BUBBLE_RADIUS,
-                                              onTop,
-                                              onRight,
-                                              tipOffset));
+  element.setAttribute(
+    'd',
+    createSpeechBubblePath(
+      0,
+      0,
+      width,
+      height,
+      SPEECH_BUBBLE_RADIUS,
+      onTop,
+      onRight,
+      tipOffset
+    )
+  );
 };
 
-Studio.displaySprite = function (i) {
+Studio.displaySprite = function(i) {
   var sprite = Studio.sprite[i];
 
   // avoid lots of unnecessary changes to hidden sprites
@@ -3787,7 +4195,7 @@ Studio.displaySprite = function (i) {
 
     var curDrawPos = sprite.getCurrentDrawPosition();
 
-    if ((curDrawPos.x !== lastDrawPos.x) || (curDrawPos.y !== lastDrawPos.y)) {
+    if (curDrawPos.x !== lastDrawPos.x || curDrawPos.y !== lastDrawPos.y) {
       if (curDrawPos.x < lastDrawPos.x) {
         newDir |= Direction.WEST;
       } else if (curDrawPos.x > lastDrawPos.x) {
@@ -3811,7 +4219,7 @@ Studio.displaySprite = function (i) {
   if (sprite.dir !== sprite.displayDir) {
     // Every other frame, assign a new displayDir from state table
     // (only one turn at a time):
-    if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
+    if (Studio.tickCount && 0 === Studio.tickCount % 2) {
       sprite.displayDir = NextTurn[sprite.displayDir][sprite.dir];
     }
   }
@@ -3825,7 +4233,7 @@ Studio.displaySprite = function (i) {
   }
 };
 
-Studio.renderSpeechBubble = function (i) {
+Studio.renderSpeechBubble = function(i) {
   var sprite = Studio.sprite[i];
 
   var speechBubble = document.getElementById('speechBubble' + i);
@@ -3837,24 +4245,36 @@ Studio.renderSpeechBubble = function (i) {
   var bubbleWidth = +speechBubblePath.getAttribute('width');
 
   var newBubblePosition = Studio.calculateBubblePosition(
-      sprite, bubbleHeight, bubbleWidth, Studio.MAZE_WIDTH);
+    sprite,
+    bubbleHeight,
+    bubbleWidth,
+    Studio.MAZE_WIDTH
+  );
 
   speechBubblePath.setAttribute('onTop', newBubblePosition.onTop);
   speechBubblePath.setAttribute('onRight', newBubblePosition.onRight);
   speechBubblePath.setAttribute('tipOffset', newBubblePosition.tipOffset);
 
-  if (wasOnTop !== newBubblePosition.onTop ||
-      wasOnRight !== newBubblePosition.onRight ||
-      oldTipOffset !== newBubblePosition.tipOffset) {
+  if (
+    wasOnTop !== newBubblePosition.onTop ||
+    wasOnRight !== newBubblePosition.onRight ||
+    oldTipOffset !== newBubblePosition.tipOffset
+  ) {
     updateSpeechBubblePath(speechBubblePath);
   }
 
-  speechBubble.setAttribute('transform',
-      `translate(${newBubblePosition.xSpeech}, ${newBubblePosition.ySpeech})`);
+  speechBubble.setAttribute(
+    'transform',
+    `translate(${newBubblePosition.xSpeech}, ${newBubblePosition.ySpeech})`
+  );
 };
 
-Studio.calculateBubblePosition = function (
-    sprite, bubbleHeight, bubbleWidth, studioWidth) {
+Studio.calculateBubblePosition = function(
+  sprite,
+  bubbleHeight,
+  bubbleWidth,
+  studioWidth
+) {
   let onTop = true;
   let ySpeech = sprite.y - (bubbleHeight + SPEECH_BUBBLE_PADDING);
   if (ySpeech < SPEECH_BUBBLE_TOP_MARGIN) {
@@ -3865,7 +4285,7 @@ Studio.calculateBubblePosition = function (
   let onRight;
   let xSpeech;
   let tipOffset = 0;
-  if (sprite.x > (studioWidth- sprite.width) / 2) {
+  if (sprite.x > (studioWidth - sprite.width) / 2) {
     onRight = false;
     xSpeech = sprite.x + sprite.width - (bubbleWidth + SPEECH_BUBBLE_H_OFFSET);
     if (xSpeech < SPEECH_BUBBLE_SIDE_MARGIN) {
@@ -3887,11 +4307,11 @@ Studio.calculateBubblePosition = function (
     onRight,
     tipOffset,
     xSpeech,
-    ySpeech,
+    ySpeech
   };
 };
 
-Studio.displayScore = function () {
+Studio.displayScore = function() {
   var score = document.getElementById('score');
   if (Studio.scoreText) {
     score.textContent = Studio.scoreText;
@@ -3903,7 +4323,7 @@ Studio.displayScore = function () {
   score.setAttribute('visibility', 'visible');
 };
 
-Studio.displayVictoryText = function () {
+Studio.displayVictoryText = function() {
   var victoryText = document.getElementById('victoryText');
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
@@ -3923,7 +4343,7 @@ Studio.displayVictoryText = function () {
   }
 };
 
-Studio.animateGoals = function () {
+Studio.animateGoals = function() {
   var currentTime = new Date();
 
   var animate = level.goalOverride && level.goalOverride.goalAnimation;
@@ -3943,12 +4363,14 @@ Studio.animateGoals = function () {
   // animation is significantly out of sync.
   var animationOffset = 7;
 
-  Studio.allGoals_().forEach(function (goal, i) {
+  Studio.allGoals_().forEach(function(goal, i) {
     // Keep animating the goal unless it's finished and we're not fading out.
     if (!goal.finished || goal.startFadeTime) {
       if (animate) {
         var baseX = parseInt(goal.clipRect.getAttribute('x'), 10);
-        var frame = (i * animationOffset + Math.floor(elapsed / frameDuration)) % numFrames;
+        var frame =
+          (i * animationOffset + Math.floor(elapsed / frameDuration)) %
+          numFrames;
 
         goal.marker.setAttribute('x', baseX - frame * frameWidth);
       }
@@ -3971,12 +4393,11 @@ Studio.animateGoals = function () {
   });
 };
 
-
 /**
  * Load clouds for the current background if it features them, or hide
  * them if they shouldn't currently be shown.
  */
-Studio.loadClouds = function () {
+Studio.loadClouds = function() {
   var cloud, i;
   var showClouds = Studio.background && skin[Studio.background].clouds;
 
@@ -3993,8 +4414,11 @@ Studio.loadClouds = function () {
       cloud = document.getElementById('cloud' + i);
       cloud.setAttribute('width', constants.CLOUD_SIZE);
       cloud.setAttribute('height', constants.CLOUD_SIZE);
-      cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        skin[Studio.background].clouds[i]);
+      cloud.setAttributeNS(
+        'http://www.w3.org/1999/xlink',
+        'xlink:href',
+        skin[Studio.background].clouds[i]
+      );
       cloud.setAttribute('opacity', constants.CLOUD_OPACITY);
 
       var location = Studio.getCloudLocation(i);
@@ -4004,11 +4428,10 @@ Studio.loadClouds = function () {
   }
 };
 
-
 /**
  * Animate clouds if the current background features them.
  */
-Studio.animateClouds = function () {
+Studio.animateClouds = function() {
   var showClouds = Studio.background && skin[Studio.background].clouds;
   if (!showClouds) {
     return;
@@ -4024,14 +4447,13 @@ Studio.animateClouds = function () {
   }
 };
 
-
 /** Gets the current location of a specified cloud.
  * @param {number} cloudIndex
  * @returns {Object} location
  * @returns {number} location.x
  * @returns {number} location.y
  */
-Studio.getCloudLocation = function (cloudIndex) {
+Studio.getCloudLocation = function(cloudIndex) {
   // How many milliseconds to move one pixel.  Higher values mean slower clouds,
   // and making them different causes the clouds to animate out of sync.
   var intervals = [50, 60];
@@ -4042,25 +4464,24 @@ Studio.getCloudLocation = function (cloudIndex) {
   var distance = Studio.MAZE_WIDTH + constants.CLOUD_SIZE;
 
   var totalTime = Studio.cloudStep * 30;
-  var xOffset = totalTime / intervals[cloudIndex] % distance;
+  var xOffset = (totalTime / intervals[cloudIndex]) % distance;
 
   var x, y;
 
   if (cloudIndex === 0) {
     // The first cloud animates from top-left to bottom-right, in the upper-right
     // half of the screen.
-    x = xOffset - Studio.MAZE_WIDTH/4;
-    y = x - Studio.MAZE_HEIGHT/2;
+    x = xOffset - Studio.MAZE_WIDTH / 4;
+    y = x - Studio.MAZE_HEIGHT / 2;
   } else {
     // The second cloud animates from bottom-right to top-left, in the lower-left
     // half of the screen.
     x = Studio.MAZE_WIDTH - xOffset;
-    y = x + Studio.MAZE_HEIGHT/2;
+    y = x + Studio.MAZE_HEIGHT / 2;
   }
 
-  return { x: x, y: y };
+  return {x: x, y: y};
 };
-
 
 /**
  * Start showing an upwards-floating score at the location of sprite 0.
@@ -4069,21 +4490,21 @@ Studio.getCloudLocation = function (cloudIndex) {
  @param {number} changeValue The value that is displayed.
  */
 
-Studio.displayFloatingScore = function (changeValue) {
+Studio.displayFloatingScore = function(changeValue) {
   if (!level.floatingScore) {
     return;
   }
 
   var sprite = Studio.sprite[0];
   var floatingScore = document.getElementById('floatingScore');
-  floatingScore.textContent = changeValue > 0 ? ("+" + changeValue) : changeValue;
-  floatingScore.setAttribute('x', sprite.x + sprite.width/2);
-  floatingScore.setAttribute('y', sprite.y + sprite.height/2);
+  floatingScore.textContent = changeValue > 0 ? '+' + changeValue : changeValue;
+  floatingScore.setAttribute('x', sprite.x + sprite.width / 2);
+  floatingScore.setAttribute('y', sprite.y + sprite.height / 2);
   floatingScore.setAttribute('opacity', 1);
   floatingScore.setAttribute('visibility', 'visible');
 };
 
-Studio.updateFloatingScore = function () {
+Studio.updateFloatingScore = function() {
   if (!level.floatingScore) {
     return;
   }
@@ -4099,7 +4520,7 @@ Studio.updateFloatingScore = function () {
   }
 };
 
-Studio.showCoordinates = function () {
+Studio.showCoordinates = function() {
   var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
   if (!sprite) {
     return;
@@ -4112,11 +4533,11 @@ Studio.showCoordinates = function () {
   Studio.setScoreText({text: 'x: ' + x + ' y: ' + y});
 };
 
-Studio.queueCmd = function (id, name, opts) {
+Studio.queueCmd = function(id, name, opts) {
   var cmd = {
-    'id': id,
-    'name': name,
-    'opts': opts
+    id: id,
+    name: name,
+    opts: opts
   };
   if (studioApp().isUsingBlockly() && Studio.currentCmdQueue) {
     if (Studio.currentEventParams) {
@@ -4138,8 +4559,8 @@ Studio.queueCmd = function (id, name, opts) {
 // If Studio.yieldExecutionTicks is positive, execution of commands will stop
 //
 
-Studio.executeQueue = function (name, oneOnly) {
-  Studio.eventHandlers.forEach(function (handler) {
+Studio.executeQueue = function(name, oneOnly) {
+  Studio.eventHandlers.forEach(function(handler) {
     if (Studio.paused || Studio.yieldExecutionTicks > 0) {
       return;
     }
@@ -4168,7 +4589,7 @@ Studio.executeQueue = function (name, oneOnly) {
 // Return true if the command is complete
 //
 
-Studio.callCmd = function (cmd) {
+Studio.callCmd = function(cmd) {
   switch (cmd.name) {
     case 'endGame':
       studioApp().highlight(cmd.id);
@@ -4290,35 +4711,35 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.EAST,
+        dir: Direction.EAST
       });
       break;
     case 'moveLeft':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.WEST,
+        dir: Direction.WEST
       });
       break;
     case 'moveUp':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.NORTH,
+        dir: Direction.NORTH
       });
       break;
     case 'moveDown':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.SOUTH,
+        dir: Direction.SOUTH
       });
       break;
     case 'moveForward':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Studio.lastMoveSingleDir,
+        dir: Studio.lastMoveSingleDir
       });
       break;
     case 'moveBackward':
@@ -4333,14 +4754,14 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.turnSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: turnRight90(Studio.lastMoveSingleDir),
+        dir: turnRight90(Studio.lastMoveSingleDir)
       });
       break;
     case 'turnLeft':
       studioApp().highlight(cmd.id);
       Studio.turnSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: turnLeft90(Studio.lastMoveSingleDir),
+        dir: turnLeft90(Studio.lastMoveSingleDir)
       });
       break;
     case 'moveDistance':
@@ -4423,16 +4844,18 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
-Studio.makeThrottledPlaySound = function () {
-  Studio.throttledPlaySound = _.throttle(studioApp().playAudio.bind(studioApp()),
-    constants.SOUND_THROTTLE_TIME);
+Studio.makeThrottledPlaySound = function() {
+  Studio.throttledPlaySound = _.throttle(
+    studioApp().playAudio.bind(studioApp()),
+    constants.SOUND_THROTTLE_TIME
+  );
 };
 
-Studio.makeThrottledSpriteWallCollisionHelpers = function () {
+Studio.makeThrottledSpriteWallCollisionHelpers = function() {
   Studio.throttledCollideSpriteWithWallFunctions = [];
 
-  var makeCollideHelper = function (spriteIndex) {
-    return function () {
+  var makeCollideHelper = function(spriteIndex) {
+    return function() {
       // For the case where this is used (blockMovingIntoWalls), we prevented
       // the wall collision, so we need to queue a wall collision event and
       // immediately reset the collision state since we didn't actually overlap:
@@ -4442,15 +4865,16 @@ Studio.makeThrottledSpriteWallCollisionHelpers = function () {
   };
 
   for (var i = 0; i < Studio.spriteCount; i++) {
-    Studio.throttledCollideSpriteWithWallFunctions[i] =
-      _.throttle(makeCollideHelper(i), constants.TOUCH_OBSTACLE_THROTTLE_TIME);
+    Studio.throttledCollideSpriteWithWallFunctions[i] = _.throttle(
+      makeCollideHelper(i),
+      constants.TOUCH_OBSTACLE_THROTTLE_TIME
+    );
   }
 };
 
-Studio.playSound = function (opts) {
-
+Studio.playSound = function(opts) {
   if (typeof opts.soundName !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.soundName);
+    throw new TypeError('Incorrect parameter: ' + opts.soundName);
   }
 
   var soundVal = opts.soundName.toLowerCase().trim();
@@ -4459,9 +4883,11 @@ Studio.playSound = function (opts) {
 
   if (soundVal === constants.RANDOM_VALUE) {
     // Choose a sound at random:
-    soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
+    soundVal = allValues[
+      Math.floor(Math.random() * allValues.length)
+    ].toLowerCase();
   } else {
-    var isInAllValues = function (value) {
+    var isInAllValues = function(value) {
       return allValues.indexOf(value) !== -1;
     };
     for (var group in skin.soundGroups) {
@@ -4470,26 +4896,35 @@ Studio.playSound = function (opts) {
         // Choose a sound at random from this group (intersect sounds in this group
         // based on the suffix range with the allValues array)
         var groupValues = [];
-        for (var suffix = groupData.minSuffix; suffix <= groupData.maxSuffix; suffix++) {
+        for (
+          var suffix = groupData.minSuffix;
+          suffix <= groupData.maxSuffix;
+          suffix++
+        ) {
           groupValues.push(group + suffix);
         }
         groupValues.filter(isInAllValues);
-        soundVal = groupValues[Math.floor(Math.random() * groupValues.length)].toLowerCase();
+        soundVal = groupValues[
+          Math.floor(Math.random() * groupValues.length)
+        ].toLowerCase();
         break;
       }
     }
   }
 
   if (!skin.soundFiles[soundVal]) {
-    throw new RangeError("Incorrect parameter: " + opts.soundName);
+    throw new RangeError('Incorrect parameter: ' + opts.soundName);
   }
 
   var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
-  var playbackOptions = Object.assign({
-    volume: 1.0
-  }, _.find(skinSoundMetadata, function (metadata) {
-    return metadata.name.toLowerCase().trim() === soundVal;
-  }));
+  var playbackOptions = Object.assign(
+    {
+      volume: 1.0
+    },
+    _.find(skinSoundMetadata, function(metadata) {
+      return metadata.name.toLowerCase().trim() === soundVal;
+    })
+  );
 
   Studio.throttledPlaySound(soundVal, playbackOptions);
   Studio.playSoundCount++;
@@ -4502,43 +4937,54 @@ Studio.playSound = function (opts) {
  * @param {string} itemClass
  * @returns {Object} options object that can be passed to item constructor.
  */
-Studio.getItemOptionsForItemClass = function (itemClass) {
-  var classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
+Studio.getItemOptionsForItemClass = function(itemClass) {
+  var classProperties = utils.valueOr(
+    skin.specialItemProperties[itemClass],
+    {}
+  );
   return {
     className: itemClass,
     image: skin[itemClass],
-    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
+    frames: getFrameCount(
+      itemClass,
+      skin.specialItemProperties,
+      skin.itemFrames
+    ),
     loop: true,
     width: classProperties.width,
     height: classProperties.height,
     dir: Direction.NONE,
     speed: Studio.itemSpeed[itemClass],
     normalSpeed: classProperties.speed,
-    activity: utils.valueOr(Studio.itemActivity[itemClass], constants.BEHAVIOR_WANDER),
+    activity: utils.valueOr(
+      Studio.itemActivity[itemClass],
+      constants.BEHAVIOR_WANDER
+    ),
     isHazard: classProperties.isHazard,
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
-    renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
+    renderOffset: utils.valueOr(classProperties.renderOffset, {x: 0, y: 0}),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationFrameDuration: classProperties.animationFrameDuration
   };
 };
 
-Studio.addItem = function (opts) {
-
+Studio.addItem = function(opts) {
   if (typeof opts.className !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.className);
+    throw new TypeError('Incorrect parameter: ' + opts.className);
   }
 
   var itemClass = opts.className.toLowerCase().trim();
 
   if (itemClass === constants.RANDOM_VALUE) {
     itemClass =
-        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+      skin.ItemClassNames[
+        Math.floor(Math.random() * skin.ItemClassNames.length)
+      ];
   }
 
   var skinItem = skin[itemClass];
   if (!skinItem) {
-    throw new RangeError("Incorrect parameter: " + opts.className);
+    throw new RangeError('Incorrect parameter: ' + opts.className);
   }
 
   var directions = [
@@ -4549,7 +4995,7 @@ Studio.addItem = function (opts) {
     Direction.NORTHEAST,
     Direction.SOUTHEAST,
     Direction.SOUTHWEST,
-    Direction.NORTHWEST,
+    Direction.NORTHWEST
   ];
 
   // Create stationary, grid-aligned items when skin.gridAlignedMovement,
@@ -4557,34 +5003,43 @@ Studio.addItem = function (opts) {
   // Assumes that sprite[0] is in use, and avoids placing the item too close
   // to that sprite.
 
-  var generateRandomItemPosition = function () {
+  var generateRandomItemPosition = function() {
     // TODO (cpirich): check for edge collisions? (currently avoided by placing
     // the items within the coordinate space (x/y min of Studio.HALF_SQUARE,
     // max of max - Studio.HALF_SQUARE)
 
     var pos = {};
     if (level.itemGridAlignedMovement) {
-      pos.x = Studio.HALF_SQUARE +
-                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
-      pos.y = Studio.HALF_SQUARE +
-                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.ROWS);
+      pos.x =
+        Studio.HALF_SQUARE +
+        Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
+      pos.y =
+        Studio.HALF_SQUARE +
+        Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.ROWS);
     } else {
-      pos.x = Studio.HALF_SQUARE +
-                Math.floor(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
-      pos.y = Studio.HALF_SQUARE +
-                Math.floor(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+      pos.x =
+        Studio.HALF_SQUARE +
+        Math.floor(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
+      pos.y =
+        Studio.HALF_SQUARE +
+        Math.floor(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
     }
     return pos;
   };
 
   var pos = generateRandomItemPosition();
-  var dir = level.itemGridAlignedMovement ? Direction.NONE :
-      directions[Math.floor(Math.random() * directions.length)];
-  var itemOptions = Object.assign({}, Studio.getItemOptionsForItemClass(itemClass), {
-    x: pos.x,
-    y: pos.y,
-    dir: dir
-  });
+  var dir = level.itemGridAlignedMovement
+    ? Direction.NONE
+    : directions[Math.floor(Math.random() * directions.length)];
+  var itemOptions = Object.assign(
+    {},
+    Studio.getItemOptionsForItemClass(itemClass),
+    {
+      x: pos.x,
+      y: pos.y,
+      dir: dir
+    }
+  );
   var item = new Item(itemOptions);
 
   if (Studio.wallMapCollisions) {
@@ -4593,10 +5048,15 @@ Studio.addItem = function (opts) {
 
     var numTries = 0;
     var minDistanceFromSprite = 100;
-    while (Studio.walls.willCollidableTouchWall(item, item.x, item.y) ||
-           Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
-                              Studio.sprite[0].y + Studio.sprite[0].height/2,
-                              item.x, item.y) < minDistanceFromSprite) {
+    while (
+      Studio.walls.willCollidableTouchWall(item, item.x, item.y) ||
+      Studio.getDistance(
+        Studio.sprite[0].x + Studio.sprite[0].width / 2,
+        Studio.sprite[0].y + Studio.sprite[0].height / 2,
+        item.x,
+        item.y
+      ) < minDistanceFromSprite
+    ) {
       var newPos = generateRandomItemPosition();
       item.x = newPos.x;
       item.y = newPos.y;
@@ -4611,37 +5071,38 @@ Studio.addItem = function (opts) {
   Studio.items.push(item);
 };
 
-
-Studio.getDistance = function (x1, y1, x2, y2) {
-  return Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+Studio.getDistance = function(x1, y1, x2, y2) {
+  return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 };
 
-
-Studio.setItemActivity = function (opts) {
-
+Studio.setItemActivity = function(opts) {
   if (typeof opts.className !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.className);
+    throw new TypeError('Incorrect parameter: ' + opts.className);
   }
 
   var itemClass = opts.className.toLowerCase().trim();
 
   if (itemClass === constants.RANDOM_VALUE) {
     itemClass =
-        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+      skin.ItemClassNames[
+        Math.floor(Math.random() * skin.ItemClassNames.length)
+      ];
   }
 
   var skinItem = skin[itemClass];
   if (!skinItem) {
-    throw new RangeError("Incorrect parameter: " + opts.className);
+    throw new RangeError('Incorrect parameter: ' + opts.className);
   }
 
-  if (opts.type === constants.BEHAVIOR_WANDER ||
-      opts.type === constants.BEHAVIOR_CHASE ||
-      opts.type === constants.BEHAVIOR_FLEE ||
-      opts.type === constants.BEHAVIOR_STOP) {
+  if (
+    opts.type === constants.BEHAVIOR_WANDER ||
+    opts.type === constants.BEHAVIOR_CHASE ||
+    opts.type === constants.BEHAVIOR_FLEE ||
+    opts.type === constants.BEHAVIOR_STOP
+  ) {
     // retain this activity type for items of this class created in the future:
     Studio.itemActivity[itemClass] = opts.type;
-    Studio.items.forEach(function (item) {
+    Studio.items.forEach(function(item) {
       if (item.className === itemClass) {
         item.setActivity(opts.type, 0);
 
@@ -4662,27 +5123,30 @@ Studio.setItemActivity = function (opts) {
   }
 };
 
-Studio.setItemSpeed = function (opts) {
-
+Studio.setItemSpeed = function(opts) {
   if (typeof opts.className !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.className);
+    throw new TypeError('Incorrect parameter: ' + opts.className);
   }
 
   var itemClass = opts.className.toLowerCase().trim();
 
   if (itemClass === constants.RANDOM_VALUE) {
     itemClass =
-        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+      skin.ItemClassNames[
+        Math.floor(Math.random() * skin.ItemClassNames.length)
+      ];
   }
 
   var skinItem = skin[itemClass];
   if (!skinItem) {
-    throw new RangeError("Incorrect parameter: " + opts.className);
+    throw new RangeError('Incorrect parameter: ' + opts.className);
   }
 
   // convert speed string parameter to appropriate numerical speed for this class:
-  var newSpeed = utils.valueOr(skin.specialItemProperties[itemClass].speed,
-      constants.DEFAULT_ITEM_SPEED);
+  var newSpeed = utils.valueOr(
+    skin.specialItemProperties[itemClass].speed,
+    constants.DEFAULT_ITEM_SPEED
+  );
 
   if (opts.speed.toLowerCase() === 'fast') {
     newSpeed = Math.floor(newSpeed * 2);
@@ -4692,23 +5156,23 @@ Studio.setItemSpeed = function (opts) {
 
   // retain this speed value for items of this class created in the future:
   Studio.itemSpeed[itemClass] = newSpeed;
-  Studio.items.forEach(function (item) {
+  Studio.items.forEach(function(item) {
     if (item.className === itemClass) {
       item.setSpeed(newSpeed);
     }
   });
 };
 
-Studio.showDebugInfo = function (opts) {
+Studio.showDebugInfo = function(opts) {
   showDebugInfo = opts.value;
 };
 
-Studio.vanishActor = function (opts) {
+Studio.vanishActor = function(opts) {
   var spriteLayer = document.getElementById('spriteLayer');
 
   var spriteIndex = opts.spriteIndex;
   if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
-    throw new RangeError("Incorrect parameter: " + spriteIndex);
+    throw new RangeError('Incorrect parameter: ' + spriteIndex);
   }
   var sprite = Studio.sprite[spriteIndex];
   var spriteShowing = sprite.visible || sprite.isFading();
@@ -4733,9 +5197,14 @@ Studio.vanishActor = function (opts) {
     explosion = document.createElementNS(SVG_NS, 'image');
     explosion.setAttribute('id', 'explosion' + spriteIndex);
     explosion.setAttribute('visibility', 'hidden');
-    explosion.setAttribute('clip-path', 'url(#explosionClipPath' + spriteIndex + ')');
-    spriteLayer.insertBefore(explosion,
-        sprite.getElement() || sprite.getLegacyElement());
+    explosion.setAttribute(
+      'clip-path',
+      'url(#explosionClipPath' + spriteIndex + ')'
+    );
+    spriteLayer.insertBefore(
+      explosion,
+      sprite.getElement() || sprite.getLegacyElement()
+    );
   }
 
   // TODO (cpirich): use displayWidth / displayHeight to make vanish explosions
@@ -4756,7 +5225,9 @@ Studio.vanishActor = function (opts) {
 
   explosion.setAttribute('visibility', 'visible');
 
-  explosionClipRect = document.getElementById('explosionClipRect' + spriteIndex);
+  explosionClipRect = document.getElementById(
+    'explosionClipRect' + spriteIndex
+  );
   explosionClipRect.setAttribute('x', topLeftPos.x);
   explosionClipRect.setAttribute('y', topLeftPos.y);
 
@@ -4769,43 +5240,52 @@ Studio.vanishActor = function (opts) {
     });
   }
 
-  _.range(0, numFrames).forEach(function (i) {
-    Studio.perExecutionTimeouts.push(setTimeout(function () {
-      explosion.setAttribute('x', topLeftPos.x - i * frameWidth);
-    }, i * skin.timePerExplosionFrame));
+  _.range(0, numFrames).forEach(function(i) {
+    Studio.perExecutionTimeouts.push(
+      setTimeout(function() {
+        explosion.setAttribute('x', topLeftPos.x - i * frameWidth);
+      }, i * skin.timePerExplosionFrame)
+    );
   });
-  Studio.perExecutionTimeouts.push(setTimeout(function () {
-    explosion.setAttribute('visibility', 'hidden');
-    if (skin.fadeExplosion) {
-      // hide the sprite
-      Studio.setSprite({
-        spriteIndex: spriteIndex,
-        value: 'hidden'
-      });
-      // restore the normal opacity
-      sprite.setOpacity(1);
-    }
-  }, skin.timePerExplosionFrame * (numFrames + 1)));
+  Studio.perExecutionTimeouts.push(
+    setTimeout(function() {
+      explosion.setAttribute('visibility', 'hidden');
+      if (skin.fadeExplosion) {
+        // hide the sprite
+        Studio.setSprite({
+          spriteIndex: spriteIndex,
+          value: 'hidden'
+        });
+        // restore the normal opacity
+        sprite.setOpacity(1);
+      }
+    }, skin.timePerExplosionFrame * (numFrames + 1))
+  );
 
   // we append the url with the spriteIndex so that each sprites explosion gets
   // treated as being different, otherwise chrome will animate all existing
   // explosions anytime we try to animate one of them
-  explosion.setAttributeNS('http://www.w3.org/1999/xlink',
-    'xlink:href', skin.explosion + "?spriteIndex=" + spriteIndex);
+  explosion.setAttributeNS(
+    'http://www.w3.org/1999/xlink',
+    'xlink:href',
+    skin.explosion + '?spriteIndex=' + spriteIndex
+  );
 };
 
-Studio.setSpriteEmotion = function (opts) {
+Studio.setSpriteEmotion = function(opts) {
   Studio.sprite[opts.spriteIndex].emotion = opts.value;
 };
 
-Studio.getSpriteEmotion = function (opts) {
+Studio.getSpriteEmotion = function(opts) {
   let emotion = Studio.sprite[opts.spriteIndex].emotion;
   Studio.queueCallback(opts.callback, [emotion]);
 };
 
-Studio.setSpriteSpeed = function (opts) {
-  var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
-      constants.SpriteSpeed.VERY_FAST);
+Studio.setSpriteSpeed = function(opts) {
+  var speed = Math.min(
+    Math.max(opts.value, constants.SpriteSpeed.SLOW),
+    constants.SpriteSpeed.VERY_FAST
+  );
   Studio.sprite[opts.spriteIndex].setSpeed(speed);
 };
 
@@ -4815,10 +5295,9 @@ var DROID_SPEEDS = {
   fast: constants.SpriteSpeed.VERY_FAST
 };
 
-Studio.setDroidSpeed = function (opts) {
-
+Studio.setDroidSpeed = function(opts) {
   if (typeof opts.value !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.value);
+    throw new TypeError('Incorrect parameter: ' + opts.value);
   }
 
   var speedValue = opts.value.toLowerCase().trim();
@@ -4829,7 +5308,7 @@ Studio.setDroidSpeed = function (opts) {
 
   var speedNumericVal = DROID_SPEEDS[speedValue];
   if (typeof speedNumericVal === 'undefined') {
-    throw new RangeError("Incorrect parameter: " + opts.value);
+    throw new RangeError('Incorrect parameter: ' + opts.value);
   }
 
   opts.value = speedNumericVal;
@@ -4837,7 +5316,7 @@ Studio.setDroidSpeed = function (opts) {
   Studio.setSpriteSpeed(opts);
 };
 
-Studio.setSpriteSize = function (opts) {
+Studio.setSpriteSize = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   if (sprite.size === opts.value) {
     return;
@@ -4874,28 +5353,29 @@ Studio.setSpriteSize = function (opts) {
   }
 };
 
-Studio.changeScore = function (opts) {
+Studio.changeScore = function(opts) {
   Studio.adjustScore(Studio.paramAsNumber(opts.value));
 };
 
-Studio.reduceScore = function (opts) {
+Studio.reduceScore = function(opts) {
   Studio.adjustScore(-1 * Studio.paramAsNumber(opts.value));
 };
 
-Studio.setScore = function (value) {
+Studio.setScore = function(value) {
   Studio.adjustScore(Studio.paramAsNumber(value) - Studio.playerScore);
 };
 
-Studio.paramAsNumber = function (value) {
-  if (typeof value !== 'number' &&
-      (typeof value !== 'string' || isNaN(value))) {
-    throw new TypeError("Incorrect parameter: " + value);
+Studio.paramAsNumber = function(value) {
+  if (
+    typeof value !== 'number' &&
+    (typeof value !== 'string' || isNaN(value))
+  ) {
+    throw new TypeError('Incorrect parameter: ' + value);
   }
   return Number(value);
 };
 
-Studio.adjustScore = function (value) {
-
+Studio.adjustScore = function(value) {
   Studio.playerScore += value;
 
   Studio.displayFloatingScore(value);
@@ -4905,41 +5385,39 @@ Studio.adjustScore = function (value) {
   }
 };
 
-
-Studio.setScoreText = function (opts) {
+Studio.setScoreText = function(opts) {
   Studio.scoreText = opts.text;
   Studio.displayScore();
 };
 
-Studio.setVictoryText = function (opts) {
+Studio.setVictoryText = function(opts) {
   Studio.victoryText = opts.text;
   Studio.displayVictoryText();
 };
 
-Studio.endGame = function (opts) {
+Studio.endGame = function(opts) {
   if (typeof opts.value !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.value);
+    throw new TypeError('Incorrect parameter: ' + opts.value);
   }
 
   var winValue = opts.value.toLowerCase().trim();
 
-  if (winValue === "win") {
+  if (winValue === 'win') {
     Studio.trackedBehavior.hasWonGame = true;
     Studio.setVictoryText({text: studioMsg.winMessage()});
-  } else if (winValue === "lose") {
+  } else if (winValue === 'lose') {
     Studio.trackedBehavior.hasLostGame = true;
     Studio.setVictoryText({text: studioMsg.loseMessage()});
   } else {
-    throw new RangeError("Incorrect parameter: " + opts.value);
+    throw new RangeError('Incorrect parameter: ' + opts.value);
   }
 
   Studio.gameState = Studio.GameStates.OVER;
 };
 
-Studio.setBackground = function (opts) {
-
+Studio.setBackground = function(opts) {
   if (typeof opts.value !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.value);
+    throw new TypeError('Incorrect parameter: ' + opts.value);
   }
 
   var backgroundValue = opts.value.toLowerCase().trim();
@@ -4949,15 +5427,17 @@ Studio.setBackground = function (opts) {
     // presumed to be the "random" item for blockly
     // NOTE: the [1] index in the array contains the name parameter with an
     // additional set of quotes
-    var quotedBackground = skin.backgroundChoicesK1[
-        Math.floor(Math.random() * (skin.backgroundChoicesK1.length - 1))][1];
+    var quotedBackground =
+      skin.backgroundChoicesK1[
+        Math.floor(Math.random() * (skin.backgroundChoicesK1.length - 1))
+      ][1];
     // Remove the outer quotes:
     backgroundValue = quotedBackground.replace(/^"(.*)"$/, '$1');
   }
 
   var skinBackground = skin[backgroundValue];
   if (!skinBackground) {
-    throw new RangeError("Incorrect parameter: " + opts.value);
+    throw new RangeError('Incorrect parameter: ' + opts.value);
   }
 
   if (backgroundValue !== Studio.background) {
@@ -4965,8 +5445,11 @@ Studio.setBackground = function (opts) {
     Studio.walls.setBackground(backgroundValue);
 
     var element = document.getElementById('background');
-    element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skinBackground.background);
+    element.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      skinBackground.background
+    );
 
     // Draw the tiles (again) now that we know which background we're using.
     if (Studio.wallMapCollisions) {
@@ -4988,10 +5471,9 @@ Studio.setBackground = function (opts) {
  * @param {boolean} opts.forceRedraw - Force drawing map, even if it's already set.
  * @param {string} opts.color - The color to draw the wall, for collisionMaskWalls
  */
-Studio.setMap = function (opts) {
-
+Studio.setMap = function(opts) {
   if (typeof opts.value !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.value);
+    throw new TypeError('Incorrect parameter: ' + opts.value);
   }
 
   var mapValue = opts.value.toLowerCase().trim();
@@ -5001,8 +5483,10 @@ Studio.setMap = function (opts) {
     // presumed to be the "random" item for blockly
     // NOTE: the [1] index in the array contains the name parameter with an
     // additional set of quotes
-    var quotedMap = skin.mapChoices[
-        Math.floor(1 + Math.random() * (skin.mapChoices.length - 1))][1];
+    var quotedMap =
+      skin.mapChoices[
+        Math.floor(1 + Math.random() * (skin.mapChoices.length - 1))
+      ][1];
     // Remove the outer quotes:
     mapValue = quotedMap.replace(/^"(.*)"$/, '$1');
   }
@@ -5020,13 +5504,19 @@ Studio.setMap = function (opts) {
     useMap = mapValue;
   }
 
-  if (useMap !== null && !skin[useMap] &&
-      !(skin.wallMaps && skin.wallMaps[useMap])) {
-    throw new RangeError("Incorrect parameter: " + opts.value);
+  if (
+    useMap !== null &&
+    !skin[useMap] &&
+    !(skin.wallMaps && skin.wallMaps[useMap])
+  ) {
+    throw new RangeError('Incorrect parameter: ' + opts.value);
   }
 
-  if (!opts.forceRedraw && useMap === Studio.wallMap &&
-      (!opts.color || opts.color === Studio.wallColor)) {
+  if (
+    !opts.forceRedraw &&
+    useMap === Studio.wallMap &&
+    (!opts.color || opts.color === Studio.wallColor)
+  ) {
     return;
   }
 
@@ -5044,10 +5534,9 @@ Studio.setMap = function (opts) {
     Studio.walls.setColor(opts.color);
   }
 
-
   // Draw the tiles (again) now that we know which background we're using.
-  $(".tileClip").remove();
-  $(".tile").remove();
+  $('.tileClip').remove();
+  $('.tile').remove();
   Studio.tiles = [];
   Studio.drawMapTiles();
 
@@ -5061,23 +5550,27 @@ Studio.setMap = function (opts) {
  * find a new nearby location for the sprite that doesn't have a wall.
  * Currently a work in progress with known issues.
  */
-Studio.fixSpriteLocation = function () {
+Studio.fixSpriteLocation = function() {
   if (Studio.wallMapCollisions) {
-
-    for (var spriteIndex = 0; spriteIndex < Studio.sprite.length; spriteIndex++) {
+    for (
+      var spriteIndex = 0;
+      spriteIndex < Studio.sprite.length;
+      spriteIndex++
+    ) {
       var sprite = Studio.sprite[spriteIndex];
       var position = getNextPosition(spriteIndex, false);
 
       if (Studio.willSpriteTouchWall(sprite, position.x, position.y)) {
-
         // Let's assume that one of the surrounding 8 squares is available.
         // (Note: this is a major assumption predicated on level design.)
 
         var xCenter = position.x + sprite.width / 2;
         var yCenter = position.y + sprite.height / 2;
 
-        xCenter += skin.wallCollisionRectOffsetX + skin.wallCollisionRectWidth / 2;
-        yCenter += skin.wallCollisionRectOffsetY + skin.wallCollisionRectHeight / 2;
+        xCenter +=
+          skin.wallCollisionRectOffsetX + skin.wallCollisionRectWidth / 2;
+        yCenter +=
+          skin.wallCollisionRectOffsetY + skin.wallCollisionRectHeight / 2;
 
         var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
         var yGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
@@ -5089,10 +5582,16 @@ Studio.fixSpriteLocation = function () {
 
         for (var row = minRow; row <= maxRow; row++) {
           for (var col = minCol; col <= maxCol; col++) {
-            var tryX = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
-                skin.wallCollisionRectOffsetX;
-            var tryY = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
-                skin.wallCollisionRectOffsetY;
+            var tryX =
+              Studio.HALF_SQUARE +
+              Studio.SQUARE_SIZE * col -
+              sprite.width / 2 -
+              skin.wallCollisionRectOffsetX;
+            var tryY =
+              Studio.HALF_SQUARE +
+              Studio.SQUARE_SIZE * row -
+              sprite.height / 2 -
+              skin.wallCollisionRectOffsetY;
             if (!Studio.willSpriteTouchWall(sprite, tryX, tryY)) {
               sprite.x = tryX;
               sprite.y = tryY;
@@ -5111,30 +5610,30 @@ Studio.fixSpriteLocation = function () {
  * @param opts.value {string} Name of sprite, or 'hidden'
  * @param opts.spriteIndex {number} Index of the sprite
  */
-Studio.setSprite = function (opts) {
-
+Studio.setSprite = function(opts) {
   if (typeof opts.value !== 'string') {
-    throw new TypeError("Incorrect parameter: " + opts.value);
+    throw new TypeError('Incorrect parameter: ' + opts.value);
   }
 
   var spriteValue = opts.value.toLowerCase().trim();
 
   if (spriteValue === constants.RANDOM_VALUE) {
-    spriteValue = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
+    spriteValue =
+      skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
   }
 
   var skinSprite = skin[spriteValue];
   if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
-    throw new RangeError("Incorrect parameter: " + opts.value);
+    throw new RangeError('Incorrect parameter: ' + opts.value);
   }
 
   var spriteIndex = opts.spriteIndex;
   if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
-    throw new RangeError("Incorrect parameter: " + spriteIndex);
+    throw new RangeError('Incorrect parameter: ' + spriteIndex);
   }
   var sprite = Studio.sprite[spriteIndex];
 
-  sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
+  sprite.visible = spriteValue !== 'hidden' && !opts.forceHidden;
 
   sprite.value = opts.forceHidden ? 'hidden' : spriteValue;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
@@ -5155,9 +5654,9 @@ Studio.setSprite = function (opts) {
     sprite.drawWidth = sprite.drawScale * sprite.size * skin.spriteWidth;
   } else {
     sprite.drawHeight = sprite.height =
-        sprite.drawScale * sprite.size * skin.spriteHeight;
+      sprite.drawScale * sprite.size * skin.spriteHeight;
     sprite.drawWidth = sprite.width =
-        sprite.drawScale * sprite.size * skin.spriteWidth;
+      sprite.drawScale * sprite.size * skin.spriteWidth;
   }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
@@ -5173,13 +5672,17 @@ Studio.setSprite = function (opts) {
 
   var element = sprite.getLegacyElement();
   if (element) {
-    dom.addMouseDownTouchEvent(sprite.getLegacyElement(),
-        delegate(this, Studio.onSpriteClicked, spriteIndex));
+    dom.addMouseDownTouchEvent(
+      sprite.getLegacyElement(),
+      delegate(this, Studio.onSpriteClicked, spriteIndex)
+    );
   }
   element = sprite.getElement();
   if (element) {
-    dom.addMouseDownTouchEvent(sprite.getElement(),
-        delegate(this, Studio.onSpriteClicked, spriteIndex));
+    dom.addMouseDownTouchEvent(
+      sprite.getElement(),
+      delegate(this, Studio.onSpriteClicked, spriteIndex)
+    );
   }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
@@ -5189,50 +5692,57 @@ Studio.setSprite = function (opts) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
-    Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+    Studio.movementAudioEffects[spriteValue] = audioConfig.map(function(
+      audioOption
+    ) {
       return new ThreeSliceAudio(Sounds.getSingleton(), audioOption);
     });
   }
-  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
+  Studio.currentSpriteMovementAudioEffects =
+    Studio.movementAudioEffects[spriteValue];
 
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
 };
 
-Studio.getSpriteVisibility = function (opts) {
+Studio.getSpriteVisibility = function(opts) {
   let visibility = Studio.sprite[opts.spriteIndex].visible;
   Studio.queueCallback(opts.callback, [visibility]);
 };
 
-Studio.getSpriteValue = function (opts) {
+Studio.getSpriteValue = function(opts) {
   let value = Studio.sprite[opts.spriteIndex].value;
   Studio.queueCallback(opts.callback, [value]);
 };
 
 var moveAudioState = false;
-Studio.isMovementAudioOn = function () {
+Studio.isMovementAudioOn = function() {
   return moveAudioState;
 };
 
-Studio.movementAudioOn = function () {
+Studio.movementAudioOn = function() {
   Studio.movementAudioOff();
-  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
-      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
+  Studio.currentMovementAudio =
+    Studio.currentSpriteMovementAudioEffects[
+      Math.floor(
+        Math.random() * Studio.currentSpriteMovementAudioEffects.length
+      )
+    ];
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
   moveAudioState = true;
 };
 
-Studio.movementAudioOff = function () {
+Studio.movementAudioOff = function() {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.off();
   }
   moveAudioState = false;
 };
 
-var p = function (x,y) {
-  return x + " " + y + " ";
+var p = function(x, y) {
+  return x + ' ' + y + ' ';
 };
 
 var TIP_HEIGHT = 15;
@@ -5253,37 +5763,63 @@ var TIP_X_SHIFT = 10;
 http://www.remy-mellet.com/blog/179-draw-rectangle-with-123-or-4-rounded-corner/
 */
 
-var createSpeechBubblePath = function (x, y, w, h, r, onTop, onRight, tipOffset) {
-  var strPath = "M"+p(x+r,y); //A
+var createSpeechBubblePath = function(
+  x,
+  y,
+  w,
+  h,
+  r,
+  onTop,
+  onRight,
+  tipOffset
+) {
+  var strPath = 'M' + p(x + r, y); //A
   if (!onTop) {
     if (onRight) {
-      strPath+="L"+p(x+r+tipOffset,y);
-      strPath+="L"+p(x+r-TIP_X_SHIFT+tipOffset,y-TIP_HEIGHT)+"L"+p(x+r+TIP_WIDTH+tipOffset,y);
+      strPath += 'L' + p(x + r + tipOffset, y);
+      strPath +=
+        'L' +
+        p(x + r - TIP_X_SHIFT + tipOffset, y - TIP_HEIGHT) +
+        'L' +
+        p(x + r + TIP_WIDTH + tipOffset, y);
     } else {
-      strPath+="L"+p(x+w-r-TIP_WIDTH-tipOffset,y)+"L"+p(x+w-TIP_X_SHIFT-tipOffset,y-TIP_HEIGHT);
-      strPath+="L"+p(x+w-r-tipOffset,y);
+      strPath +=
+        'L' +
+        p(x + w - r - TIP_WIDTH - tipOffset, y) +
+        'L' +
+        p(x + w - TIP_X_SHIFT - tipOffset, y - TIP_HEIGHT);
+      strPath += 'L' + p(x + w - r - tipOffset, y);
     }
   }
-  strPath+="L"+p(x+w-r,y);
-  strPath+="Q"+p(x+w,y)+p(x+w,y+r); //B
-  strPath+="L"+p(x+w,y+h-r)+"Q"+p(x+w,y+h)+p(x+w-r,y+h); //C
+  strPath += 'L' + p(x + w - r, y);
+  strPath += 'Q' + p(x + w, y) + p(x + w, y + r); //B
+  strPath +=
+    'L' + p(x + w, y + h - r) + 'Q' + p(x + w, y + h) + p(x + w - r, y + h); //C
   if (onTop) {
     if (onRight) {
-      strPath+="L"+p(x+r+TIP_WIDTH+tipOffset,y+h)+"L"+p(x+r-TIP_X_SHIFT+tipOffset,y+h+TIP_HEIGHT);
-      strPath+="L"+p(x+r+tipOffset,y+h);
+      strPath +=
+        'L' +
+        p(x + r + TIP_WIDTH + tipOffset, y + h) +
+        'L' +
+        p(x + r - TIP_X_SHIFT + tipOffset, y + h + TIP_HEIGHT);
+      strPath += 'L' + p(x + r + tipOffset, y + h);
     } else {
-      strPath+="L"+p(x+w-r-tipOffset,y+h);
-      strPath+="L"+p(x+w-TIP_X_SHIFT-tipOffset,y+h+TIP_HEIGHT)+"L"+p(x+w-r-TIP_WIDTH-tipOffset,y+h);
+      strPath += 'L' + p(x + w - r - tipOffset, y + h);
+      strPath +=
+        'L' +
+        p(x + w - TIP_X_SHIFT - tipOffset, y + h + TIP_HEIGHT) +
+        'L' +
+        p(x + w - r - TIP_WIDTH - tipOffset, y + h);
     }
   }
-  strPath+="L"+p(x+r,y+h);
-  strPath+="Q"+p(x,y+h)+p(x,y+h-r); //D
-  strPath+="L"+p(x,y+r)+"Q"+p(x,y)+p(x+r,y); //A
-  strPath+="Z";
+  strPath += 'L' + p(x + r, y + h);
+  strPath += 'Q' + p(x, y + h) + p(x, y + h - r); //D
+  strPath += 'L' + p(x, y + r) + 'Q' + p(x, y) + p(x + r, y); //A
+  strPath += 'Z';
   return strPath;
 };
 
-var onWaitComplete = function (opts) {
+var onWaitComplete = function(opts) {
   if (!opts.complete) {
     if (opts.waitCallback) {
       opts.waitCallback();
@@ -5292,7 +5828,7 @@ var onWaitComplete = function (opts) {
   }
 };
 
-Studio.wait = function (opts) {
+Studio.wait = function(opts) {
   if (!opts.started) {
     opts.started = true;
 
@@ -5303,14 +5839,15 @@ Studio.wait = function (opts) {
     } else {
       opts.waitTimeout = window.setTimeout(
         delegate(this, onWaitComplete, opts),
-        opts.value);
+        opts.value
+      );
     }
   }
 
   return opts.complete;
 };
 
-Studio.hideTitleScreen = function (opts) {
+Studio.hideTitleScreen = function(opts) {
   var tsTitle = document.getElementById('titleScreenTitle');
   var tsTextGroup = document.getElementById('titleScreenTextGroup');
   tsTitle.setAttribute('visibility', 'hidden');
@@ -5319,7 +5856,7 @@ Studio.hideTitleScreen = function (opts) {
   opts.complete = true;
 };
 
-Studio.showTitleScreen = function (opts) {
+Studio.showTitleScreen = function(opts) {
   if (!opts.started) {
     opts.started = true;
     var tsTitle = document.getElementById('titleScreenTitle');
@@ -5328,15 +5865,15 @@ Studio.showTitleScreen = function (opts) {
     var tsTextRect = document.getElementById('titleScreenTextRect');
     tsTitle.textContent = opts.title;
     var svgTextOpts = {
-      'svgText': tsText,
-      'text': opts.text,
-      'width': TITLE_SCREEN_TEXT_WIDTH,
-      'maxWidth': TITLE_SCREEN_TEXT_WIDTH,
-      'lineHeight': TITLE_SCREEN_TEXT_LINE_HEIGHT,
-      'topMargin': TITLE_SCREEN_TEXT_TOP_MARGIN,
-      'sideMargin': TITLE_SCREEN_TEXT_SIDE_MARGIN,
-      'maxLines': TITLE_SCREEN_TEXT_MAX_LINES,
-      'fullHeight': TITLE_SCREEN_TEXT_HEIGHT
+      svgText: tsText,
+      text: opts.text,
+      width: TITLE_SCREEN_TEXT_WIDTH,
+      maxWidth: TITLE_SCREEN_TEXT_WIDTH,
+      lineHeight: TITLE_SCREEN_TEXT_LINE_HEIGHT,
+      topMargin: TITLE_SCREEN_TEXT_TOP_MARGIN,
+      sideMargin: TITLE_SCREEN_TEXT_SIDE_MARGIN,
+      maxLines: TITLE_SCREEN_TEXT_MAX_LINES,
+      fullHeight: TITLE_SCREEN_TEXT_HEIGHT
     };
     var tsTextHeight = setSvgText(svgTextOpts).height;
     tsTextRect.setAttribute('height', tsTextHeight);
@@ -5348,16 +5885,17 @@ Studio.showTitleScreen = function (opts) {
     opts.waitForClick = true;
     opts.waitCallback = delegate(this, Studio.hideTitleScreen, opts);
     opts.waitTimeout = window.setTimeout(
-        delegate(this, onWaitComplete, opts),
-        TITLE_SCREEN_TIMEOUT);
+      delegate(this, onWaitComplete, opts),
+      TITLE_SCREEN_TIMEOUT
+    );
   }
 
   return opts.complete;
 };
 
-Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
+Studio.isCmdCurrentInQueue = function(cmdName, queueName) {
   var foundCmd = false;
-  Studio.eventHandlers.forEach(function (handler) {
+  Studio.eventHandlers.forEach(function(handler) {
     if (handler.name === queueName) {
       var cmd = handler.cmdQueue[0];
 
@@ -5379,7 +5917,7 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
  * @param {function} the method to be queued
  * @param {Array} the arguments to be passed to that method
  */
-Studio.queueCallback = function (callback, args) {
+Studio.queueCallback = function(callback, args) {
   let handlerName = `callbackQueue${Studio.callbackQueueIndex}`;
   Studio.callbackQueueIndex++;
 
@@ -5390,10 +5928,10 @@ Studio.queueCallback = function (callback, args) {
   var state = {
     node: {
       type: 'CallExpression',
-      arguments: intArgs, /* this just needs to be an array of the same size */
+      arguments: intArgs /* this just needs to be an array of the same size */,
       // give this node an end so that the interpreter doesn't treat it
       // like polyfill code and do weird weird scray terrible things.
-      end: 1,
+      end: 1
     },
     doneCallee_: true,
     func_: callback,
@@ -5423,7 +5961,7 @@ Studio.queueCallback = function (callback, args) {
  * @param question
  * @param callback
  */
-Studio.askForInput = function (question, callback) {
+Studio.askForInput = function(question, callback) {
   Studio.pauseExecution();
 
   const viz = document.getElementById('visualization');
@@ -5433,7 +5971,7 @@ Studio.askForInput = function (question, callback) {
     top: 0,
     left: 0,
     width: '400px',
-    height: '400px',
+    height: '400px'
   });
   viz.appendChild(target);
   studioApp().resizeVisualization();
@@ -5452,7 +5990,7 @@ Studio.askForInput = function (question, callback) {
   );
 };
 
-Studio.hideInputPrompt = function () {
+Studio.hideInputPrompt = function() {
   const target = Studio.inputPromptElement;
 
   if (target) {
@@ -5462,7 +6000,7 @@ Studio.hideInputPrompt = function () {
   }
 };
 
-Studio.hideSpeechBubble = function (opts) {
+Studio.hideSpeechBubble = function(opts) {
   var speechBubble = document.getElementById('speechBubble' + opts.spriteIndex);
   speechBubble.setAttribute('visibility', 'hidden');
   speechBubble.removeAttribute('onTop');
@@ -5474,7 +6012,7 @@ Studio.hideSpeechBubble = function (opts) {
   Studio.sayComplete++;
 };
 
-Studio.saySprite = function (opts) {
+Studio.saySprite = function(opts) {
   if (opts.started) {
     return opts.complete;
   }
@@ -5508,42 +6046,51 @@ Studio.saySprite = function (opts) {
   sprite.bubbleVisible = true;
   sprite.bubbleText = opts.text;
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
-  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
-    opts.seconds * 1000);
+  sprite.bubbleTimeout = window.setTimeout(
+    sprite.bubbleTimeoutFunc,
+    opts.seconds * 1000
+  );
 
   return opts.complete;
 };
 
-var createSpeechBubble = function (spriteIndex, text) {
+var createSpeechBubble = function(spriteIndex, text) {
   // Start creating the new speech bubble:
   var bblText = document.getElementById('speechBubbleText' + spriteIndex);
   var sprite = Studio.sprite[spriteIndex];
 
   var availableHeight = (Studio.MAZE_HEIGHT - sprite.height) / 2;
   var maxLines = Math.floor(
-      (availableHeight - 2 * SPEECH_BUBBLE_PADDING - 2 * SPEECH_BUBBLE_TOP_MARGIN) /
-      SPEECH_BUBBLE_LINE_HEIGHT);
+    (availableHeight -
+      2 * SPEECH_BUBBLE_PADDING -
+      2 * SPEECH_BUBBLE_TOP_MARGIN) /
+      SPEECH_BUBBLE_LINE_HEIGHT
+  );
   var svgTextOpts = {
-    'svgText': bblText,
-    'text': text,
-    'width': SPEECH_BUBBLE_MIN_WIDTH,
-    'maxWidth': SPEECH_BUBBLE_MAX_WIDTH,
-    'lineHeight': SPEECH_BUBBLE_LINE_HEIGHT,
-    'topMargin': SPEECH_BUBBLE_TOP_MARGIN,
-    'sideMargin': SPEECH_BUBBLE_SIDE_MARGIN,
-    'maxLines': maxLines,
-    'fullHeight': maxLines * SPEECH_BUBBLE_LINE_HEIGHT +
-      2 * SPEECH_BUBBLE_PADDING + 2 * SPEECH_BUBBLE_TOP_MARGIN,
+    svgText: bblText,
+    text: text,
+    width: SPEECH_BUBBLE_MIN_WIDTH,
+    maxWidth: SPEECH_BUBBLE_MAX_WIDTH,
+    lineHeight: SPEECH_BUBBLE_LINE_HEIGHT,
+    topMargin: SPEECH_BUBBLE_TOP_MARGIN,
+    sideMargin: SPEECH_BUBBLE_SIDE_MARGIN,
+    maxLines: maxLines,
+    fullHeight:
+      maxLines * SPEECH_BUBBLE_LINE_HEIGHT +
+      2 * SPEECH_BUBBLE_PADDING +
+      2 * SPEECH_BUBBLE_TOP_MARGIN
   };
   var bblSize = setSvgText(svgTextOpts);
-  var speechBubblePath = document.getElementById('speechBubblePath' + spriteIndex);
+  var speechBubblePath = document.getElementById(
+    'speechBubblePath' + spriteIndex
+  );
 
   speechBubblePath.setAttribute('height', bblSize.height);
   speechBubblePath.setAttribute('width', bblSize.width);
   updateSpeechBubblePath(speechBubblePath);
 };
 
-Studio.stop = function (opts) {
+Studio.stop = function(opts) {
   cancelQueuedMovements(opts.spriteIndex, true);
   cancelQueuedMovements(opts.spriteIndex, false);
   Studio.sprite[opts.spriteIndex].setActivity(constants.BEHAVIOR_STOP);
@@ -5571,13 +6118,13 @@ Studio.stop = function (opts) {
  * Launch a projectile from the sprite at options.spriteIndex. If the source
  * sprite isn't visible, do nothing.
  */
-Studio.throwProjectile = function (options) {
+Studio.throwProjectile = function(options) {
   if (options.started) {
     return options.complete;
   }
   options.started = true;
   options.complete = false;
-  window.setTimeout(function () {
+  window.setTimeout(function() {
     options.complete = true;
   }, MIN_TIME_BETWEEN_PROJECTILES);
 
@@ -5586,10 +6133,15 @@ Studio.throwProjectile = function (options) {
     return;
   }
 
-  var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
+  var preventLoop =
+    skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
   var projectileOptions = {
-    frames: getFrameCount(options.className, skin.specialProjectileProperties, skin.projectileFrames),
+    frames: getFrameCount(
+      options.className,
+      skin.specialProjectileProperties,
+      skin.projectileFrames
+    ),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -5597,7 +6149,7 @@ Studio.throwProjectile = function (options) {
     spriteX: sourceSprite.x,
     spriteY: sourceSprite.y,
     spriteHeight: sourceSprite.projectileSpriteHeight || sourceSprite.height,
-    spriteWidth: sourceSprite.projectileSpriteWidth || sourceSprite.width,
+    spriteWidth: sourceSprite.projectileSpriteWidth || sourceSprite.width
   };
 
   var projectile = new Projectile(projectileOptions);
@@ -5611,7 +6163,7 @@ Studio.throwProjectile = function (options) {
 // Return value: true if projectile was removed from the projectiles array
 //
 
-var doMakeProjectile = function (projectile, action) {
+var doMakeProjectile = function(projectile, action) {
   if (action === 'bounce') {
     projectile.bounce();
   } else if (action === 'disappear') {
@@ -5622,12 +6174,12 @@ var doMakeProjectile = function (projectile, action) {
       return true;
     }
   } else {
-    throw "unknown action in doMakeProjectile";
+    throw 'unknown action in doMakeProjectile';
   }
   return false;
 };
 
-Studio.makeProjectile = function (opts) {
+Studio.makeProjectile = function(opts) {
   // opts.eventObject will be set when we've had a collision with a particular
   // projectile, otherwise we operate all all of that class
   if (opts.eventObject) {
@@ -5635,8 +6187,10 @@ Studio.makeProjectile = function (opts) {
   } else {
     // No "current" projectile, so apply action to all of them of this class
     for (var i = 0; i < Studio.projectiles.length; i++) {
-      if (Studio.projectiles[i].className === opts.className &&
-          doMakeProjectile(Studio.projectiles[i], opts.action)) {
+      if (
+        Studio.projectiles[i].className === opts.className &&
+        doMakeProjectile(Studio.projectiles[i], opts.action)
+      ) {
         // if this returned true, the projectile was deleted
 
         // decrement i because we just removed an item from the array. We want
@@ -5647,13 +6201,12 @@ Studio.makeProjectile = function (opts) {
   }
 };
 
-
 /**
  * Actors have a class name in the form "0". Returns true if this class is
  * an actor
  */
 function isActorClass(className) {
-  return (/^\d*$/).test(className);
+  return /^\d*$/.test(className);
 }
 
 function isEdgeClass(className) {
@@ -5679,8 +6232,7 @@ function handleCollision(src, target, allowQueueExtension) {
   // If dest is just a number, we're colliding with another actor
   if (isActorClass(target)) {
     callHandler(prefix + 'any_actor', allowQueueExtension);
-    callHandler(prefix + Studio.sprite[target].imageName, false,
-        [target]);
+    callHandler(prefix + Studio.sprite[target].imageName, false, [target]);
   } else if (isEdgeClass(target)) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
   } else if (isProjectileClass(target)) {
@@ -5749,7 +6301,7 @@ function executeCollision(src, target) {
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
  */
-Studio.collideItemWith = function (item, target, allowQueueExtension) {
+Studio.collideItemWith = function(item, target, allowQueueExtension) {
   if (item.startCollision(target)) {
     handleItemCollision(item.className, target, allowQueueExtension);
   }
@@ -5763,41 +6315,43 @@ Studio.collideItemWith = function (item, target, allowQueueExtension) {
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
  */
-Studio.collideSpriteWith = function (spriteIndex, target, allowQueueExtension) {
+Studio.collideSpriteWith = function(spriteIndex, target, allowQueueExtension) {
   var sprite = Studio.sprite[spriteIndex];
   if (sprite.startCollision(target)) {
     handleCollision(spriteIndex, target, allowQueueExtension);
   }
 };
 
-Studio.setSpritePosition = function (opts) {
+Studio.setSpritePosition = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   if (opts.value) {
     // fill in .x and .y from the constants.Position value in opts.value
     opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
     opts.y = utils.yFromPosition(opts.value, Studio.MAZE_HEIGHT, sprite.height);
   }
-  var samePosition = (sprite.x === opts.x && sprite.y === opts.y);
+  var samePosition = sprite.x === opts.x && sprite.y === opts.y;
 
   // Don't reset collisions inside stop() if we're in the same position
-  Studio.stop({'spriteIndex': opts.spriteIndex,
-               'dontResetCollisions': samePosition});
+  Studio.stop({
+    spriteIndex: opts.spriteIndex,
+    dontResetCollisions: samePosition
+  });
   sprite.displayX = sprite.x = opts.x;
   sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
   sprite.setDirection(Direction.NONE);
 };
 
-Studio.setSpriteXY = function (opts) {
+Studio.setSpriteXY = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   var x = opts.x - sprite.width / 2;
   var y = opts.y - sprite.height / 2;
-  var samePosition = (sprite.x === x && sprite.y === y);
+  var samePosition = sprite.x === x && sprite.y === y;
 
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({
-    'spriteIndex': opts.spriteIndex,
-    'dontResetCollisions': samePosition
+    spriteIndex: opts.spriteIndex,
+    dontResetCollisions: samePosition
   });
   sprite.displayX = sprite.x = x;
   sprite.displayY = sprite.y = y;
@@ -5805,51 +6359,59 @@ Studio.setSpriteXY = function (opts) {
   sprite.setDirection(Direction.NONE);
 };
 
-Studio.getSpriteXY = function (opts) {
+Studio.getSpriteXY = function(opts) {
   let sprite = Studio.sprite[opts.spriteIndex];
   Studio.queueCallback(opts.callback, [sprite.x, sprite.y]);
 };
 
 function getSpritesByName(name) {
   return Studio.sprite.filter(
-      sprite => sprite.imageName === name && sprite.visible);
+    sprite => sprite.imageName === name && sprite.visible
+  );
 }
 
-Studio.setSpriteBehavior = function (opts) {
-  Studio.sprite[opts.spriteIndex].setActivity(opts.behavior,
-      opts.targetSpriteIndex);
+Studio.setSpriteBehavior = function(opts) {
+  Studio.sprite[opts.spriteIndex].setActivity(
+    opts.behavior,
+    opts.targetSpriteIndex
+  );
 };
 
-Studio.setSpritesWander = function (opts) {
+Studio.setSpritesWander = function(opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity(constants.BEHAVIOR_WANDER));
+    sprite.setActivity(constants.BEHAVIOR_WANDER)
+  );
 };
 
-Studio.setSpritesStop = function (opts) {
+Studio.setSpritesStop = function(opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity(constants.BEHAVIOR_STOP));
+    sprite.setActivity(constants.BEHAVIOR_STOP)
+  );
 };
 
-Studio.setSpritesChase = function (opts) {
+Studio.setSpritesChase = function(opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex));
+    sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex)
+  );
 };
 
-Studio.setSpritesFlee = function (opts) {
+Studio.setSpritesFlee = function(opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex));
+    sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex)
+  );
 };
 
-Studio.setSpritesSpeed = function (opts) {
-  getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.speed = opts.speed);
+Studio.setSpritesSpeed = function(opts) {
+  getSpritesByName(opts.spriteName).forEach(
+    sprite => (sprite.speed = opts.speed)
+  );
 };
 
-Studio.addGoal = function (opts) {
+Studio.addGoal = function(opts) {
   if (opts.value) {
     var sprite = {
-      width : utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH),
-      height : utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT),
+      width: utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH),
+      height: utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT)
     };
     // fill in .x and .y from the constants.Position value in opts.value
     opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
@@ -5867,15 +6429,33 @@ Studio.addGoal = function (opts) {
   sortDrawOrder();
 };
 
-Studio.getPlayspaceBoundaries = function (sprite) {
+Studio.getPlayspaceBoundaries = function(sprite) {
   var boundaries;
 
-  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !skin.gridAlignedMovement) {
+  if (
+    skin.wallCollisionRectWidth &&
+    skin.wallCollisionRectHeight &&
+    !skin.gridAlignedMovement
+  ) {
     boundaries = {
-      top:    0 - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
-      right:  Studio.MAZE_WIDTH - skin.wallCollisionRectWidth - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX,
-      bottom: Studio.MAZE_HEIGHT - skin.wallCollisionRectHeight - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
-      left:   0 - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX
+      top:
+        0 -
+        (sprite.height - skin.wallCollisionRectHeight) / 2 -
+        skin.wallCollisionRectOffsetY,
+      right:
+        Studio.MAZE_WIDTH -
+        skin.wallCollisionRectWidth -
+        (sprite.width - skin.wallCollisionRectWidth) / 2 -
+        skin.wallCollisionRectOffsetX,
+      bottom:
+        Studio.MAZE_HEIGHT -
+        skin.wallCollisionRectHeight -
+        (sprite.height - skin.wallCollisionRectHeight) / 2 -
+        skin.wallCollisionRectOffsetY,
+      left:
+        0 -
+        (sprite.width - skin.wallCollisionRectWidth) / 2 -
+        skin.wallCollisionRectOffsetX
     };
   } else {
     boundaries = {
@@ -5889,7 +6469,7 @@ Studio.getPlayspaceBoundaries = function (sprite) {
   return boundaries;
 };
 
-Studio.getSkin = function () {
+Studio.getSkin = function() {
   return skin;
 };
 
@@ -5901,8 +6481,8 @@ Studio.getSkin = function () {
  * @see Studio.turnSingle
  * @see Studio.moveSingle
  */
-Studio.yieldGridAlignedTicks = function () {
-  Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
+Studio.yieldGridAlignedTicks = function() {
+  Studio.yieldExecutionTicks += 1 + Studio.gridAlignedExtraPauseSteps;
   if (Studio.JSInterpreter) {
     // Stop executing the interpreter in a tight loop and yield the current
     // execution tick:
@@ -5926,9 +6506,9 @@ Studio.yieldGridAlignedTicks = function () {
  * @param {boolean} opts.backward - whether the sprite should move toward
  *        (default) or away from the given direction
  */
-Studio.turnSingle = function (opts) {
+Studio.turnSingle = function(opts) {
   if (!skin.gridAlignedMovement) {
-    throw new TypeError("Studio.turnSingle is only valid in grid-aligned mode");
+    throw new TypeError('Studio.turnSingle is only valid in grid-aligned mode');
   }
 
   const sprite = Studio.sprite[opts.spriteIndex];
@@ -5951,13 +6531,14 @@ Studio.turnSingle = function (opts) {
  * @param {boolean} opts.backward - whether the sprite should move toward
  *        (default) or away from the given direction
  */
-Studio.moveSingle = function (opts) {
+Studio.moveSingle = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
   var distance = skin.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
-  var deltaX = 0, deltaY = 0;
+  var deltaX = 0,
+    deltaY = 0;
 
   switch (opts.dir) {
     case Direction.NORTH:
@@ -5982,8 +6563,10 @@ Studio.moveSingle = function (opts) {
   var projectedX = sprite.x + deltaX;
   var projectedY = sprite.y + deltaY;
 
-  if (Studio.wallMapCollisions &&
-      Studio.willSpriteTouchWall(sprite, projectedX, projectedY)) {
+  if (
+    Studio.wallMapCollisions &&
+    Studio.willSpriteTouchWall(sprite, projectedX, projectedY)
+  ) {
     wallCollision = true;
 
     // Since we never overlap the wall/obstacle when blockMovingIntoWalls
@@ -5993,19 +6576,28 @@ Studio.moveSingle = function (opts) {
     Studio.throttledCollideSpriteWithWallFunctions[opts.spriteIndex]();
   }
 
-  if (!Studio.allowSpritesOutsidePlayspace &&
-      Studio.willSpriteLeavePlayspace(sprite, projectedX, projectedY)) {
+  if (
+    !Studio.allowSpritesOutsidePlayspace &&
+    Studio.willSpriteLeavePlayspace(sprite, projectedX, projectedY)
+  ) {
     playspaceEdgeCollision = true;
   }
 
   if (skin.gridAlignedMovement) {
     sprite.setActivity(constants.BEHAVIOR_GRID_ALIGNED);
     if (wallCollision || playspaceEdgeCollision) {
-      sprite.addAction(new GridMoveAndCancel(
-          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
+      sprite.addAction(
+        new GridMoveAndCancel(
+          deltaX,
+          deltaY,
+          skin.slowExecutionFactor,
+          opts.backward
+        )
+      );
     } else {
-      sprite.addAction(new GridMove(
-          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
+      sprite.addAction(
+        new GridMove(deltaX, deltaY, skin.slowExecutionFactor, opts.backward)
+      );
     }
 
     Studio.yieldGridAlignedTicks();
@@ -6013,8 +6605,14 @@ Studio.moveSingle = function (opts) {
     if (!wallCollision) {
       if (playspaceEdgeCollision) {
         var boundary = Studio.getPlayspaceBoundaries(sprite);
-        projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
-        projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+        projectedX = Math.max(
+          boundary.left,
+          Math.min(boundary.right, projectedX)
+        );
+        projectedY = Math.max(
+          boundary.top,
+          Math.min(boundary.bottom, projectedY)
+        );
       }
       sprite.x = projectedX;
       sprite.y = projectedY;
@@ -6028,7 +6626,7 @@ Studio.moveSingle = function (opts) {
   Studio.lastMoveSingleDir = opts.dir;
 };
 
-Studio.moveDistance = function (opts) {
+Studio.moveDistance = function(opts) {
   if (!opts.started) {
     opts.started = true;
     if (skin.gridAlignedMovement) {
@@ -6038,10 +6636,10 @@ Studio.moveDistance = function (opts) {
     opts.queuedDistance = opts.distance;
   }
 
-  return (0 === opts.queuedDistance);
+  return 0 === opts.queuedDistance;
 };
 
-Studio.onEvent = function (opts) {
+Studio.onEvent = function(opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 
@@ -6049,26 +6647,30 @@ Studio.onEvent = function (opts) {
  * Return true if all of the blocks underneath when_run blocks have had their
  * commands executed
  */
-Studio.allWhenRunBlocksComplete = function () {
+Studio.allWhenRunBlocksComplete = function() {
   for (var i = 0; i < Studio.eventHandlers.length; i++) {
-    if (Studio.eventHandlers[i].name === 'whenGameStarts' &&
-        Studio.eventHandlers[i].cmdQueue.length !== 0) {
+    if (
+      Studio.eventHandlers[i].name === 'whenGameStarts' &&
+      Studio.eventHandlers[i].cmdQueue.length !== 0
+    ) {
       return false;
     }
   }
   return true;
 };
 
-Studio.timedOut = function () {
+Studio.timedOut = function() {
   if (level.timeoutAfterWhenRun) {
     if (level.editCode) {
       // If the interpreter has started handling events, the main body of the
       // program is complete:
       return Studio.JSInterpreter && Studio.JSInterpreter.startedHandlingEvents;
-    } else if (Studio.eventHandlers.length === 0 ||
-               (Studio.eventHandlers.length === 1 &&
-                  Studio.eventHandlers[0].name === 'whenGameStarts' &&
-                  Studio.allWhenRunBlocksComplete())) {
+    } else if (
+      Studio.eventHandlers.length === 0 ||
+      (Studio.eventHandlers.length === 1 &&
+        Studio.eventHandlers[0].name === 'whenGameStarts' &&
+        Studio.allWhenRunBlocksComplete())
+    ) {
       // If the only event block that had children is when_run, and those commands
       // are finished executing, don't wait for the timeout.
       // If we have additional event blocks that DO have children, we don't timeout
@@ -6088,7 +6690,8 @@ function spriteAtGoal(sprite, goal) {
   var goalHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
 
   var goalCollisionWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
-  var goalCollisionHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+  var goalCollisionHeight =
+    skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
 
   var spriteCollisionWidth = skin.itemCollisionRectWidth || sprite.width;
   var spriteCollisionHeight = skin.itemCollisionRectHeight || sprite.height;
@@ -6096,41 +6699,50 @@ function spriteAtGoal(sprite, goal) {
   var xSpriteCenter = sprite.x + sprite.width / 2;
   var ySpriteCenter = sprite.y + sprite.height / 2;
 
-  var xFinCenter = goal.x + goalWidth / 2 + utils.valueOr(skin.goalRenderOffsetX, 0);
-  var yFinCenter = goal.y + goalHeight / 2 + utils.valueOr(skin.goalRenderOffsetY, 0);
+  var xFinCenter =
+    goal.x + goalWidth / 2 + utils.valueOr(skin.goalRenderOffsetX, 0);
+  var yFinCenter =
+    goal.y + goalHeight / 2 + utils.valueOr(skin.goalRenderOffsetY, 0);
 
-  var distanceScaling =
-    utils.valueOr(skin.finishCollideDistanceScaling, constants.FINISH_COLLIDE_DISTANCE_SCALING);
+  var distanceScaling = utils.valueOr(
+    skin.finishCollideDistanceScaling,
+    constants.FINISH_COLLIDE_DISTANCE_SCALING
+  );
 
-  Studio.drawDebugRect("goalCollisionSprite",
-                       xSpriteCenter,
-                       ySpriteCenter,
-                       distanceScaling * spriteCollisionWidth,
-                       distanceScaling * spriteCollisionHeight);
+  Studio.drawDebugRect(
+    'goalCollisionSprite',
+    xSpriteCenter,
+    ySpriteCenter,
+    distanceScaling * spriteCollisionWidth,
+    distanceScaling * spriteCollisionHeight
+  );
 
-  Studio.drawDebugRect("goalCollisionGoal",
-                       xFinCenter,
-                       yFinCenter,
-                       distanceScaling * goalCollisionWidth,
-                       distanceScaling * goalCollisionHeight);
+  Studio.drawDebugRect(
+    'goalCollisionGoal',
+    xFinCenter,
+    yFinCenter,
+    distanceScaling * goalCollisionWidth,
+    distanceScaling * goalCollisionHeight
+  );
 
-  var finishCollisionDistance = function (yAxis) {
+  var finishCollisionDistance = function(yAxis) {
     var dim1 = yAxis ? spriteCollisionHeight : spriteCollisionWidth;
     var dim2 = yAxis ? goalCollisionHeight : goalCollisionWidth;
 
-
-    return distanceScaling * (dim1 + dim2) / 2;
+    return (distanceScaling * (dim1 + dim2)) / 2;
   };
 
-  return collisionTest(xSpriteCenter,
+  return collisionTest(
+    xSpriteCenter,
     xFinCenter,
     finishCollisionDistance(false),
     ySpriteCenter,
     yFinCenter,
-    finishCollisionDistance(true));
+    finishCollisionDistance(true)
+  );
 }
 
-Studio.allGoalsVisited = function () {
+Studio.allGoalsVisited = function() {
   var playSound;
   // If protagonistSpriteIndex is set, the sprite with this index must navigate
   // to the goals.  Otherwise any sprite can navigate to each goal.
@@ -6147,7 +6759,7 @@ Studio.allGoalsVisited = function () {
     return false;
   }
 
-  Studio.allGoals_().forEach(function (goal) {
+  Studio.allGoals_().forEach(function(goal) {
     if (!goal.finished) {
       if (protagonistSprite) {
         var wasGoalFinished = goal.finished;
@@ -6157,16 +6769,18 @@ Studio.allGoalsVisited = function () {
         // If goal was just finished, then call the "when actor touches anything handler"
         if (!wasGoalFinished && goal.finished) {
           var allowQueueExtension = false;
-          var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
+          var prefix =
+            'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
           callHandler(prefix + 'anything', allowQueueExtension);
           callHandler(prefix + 'goal', allowQueueExtension);
         }
-
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {
-          if (Studio.sprite[j].visible &&
-              spriteAtGoal(Studio.sprite[j], goal)) {
+          if (
+            Studio.sprite[j].visible &&
+            spriteAtGoal(Studio.sprite[j], goal)
+          ) {
             goal.finished = true;
             if (skin.fadeOutGoal) {
               goal.startFadeTime = new Date().getTime();
@@ -6187,9 +6801,12 @@ Studio.allGoalsVisited = function () {
 
       // Play a sound unless we've hit the last flag (though that can be
       // overridden by the skin)
-      if (playSound &&
-          (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
-        Studio.playSound({ soundName: 'flag' });
+      if (
+        playSound &&
+        (finishedGoals !== Studio.spriteGoals_.length ||
+          skin.playFinalGoalSound)
+      ) {
+        Studio.playSound({soundName: 'flag'});
       }
 
       if (skin.goalSuccess) {
@@ -6198,8 +6815,11 @@ Studio.allGoalsVisited = function () {
         if (level.goalOverride && level.goalOverride.successImage) {
           successAsset = skin[level.goalOverride.successImage];
         }
-        goal.marker.setAttributeNS('http://www.w3.org/1999/xlink',
-          'xlink:href', successAsset);
+        goal.marker.setAttributeNS(
+          'http://www.w3.org/1999/xlink',
+          'xlink:href',
+          successAsset
+        );
       }
     }
   });
@@ -6217,7 +6837,7 @@ Studio.allGoalsVisited = function () {
 /**
  * Returns true if the specified criteria, provided as an Object, is satisfied.
  */
-Studio.conditionSatisfied = function (required) {
+Studio.conditionSatisfied = function(required) {
   var tracked = Studio.trackedBehavior;
   var valueNames = Object.keys(required);
 
@@ -6229,35 +6849,49 @@ Studio.conditionSatisfied = function (required) {
       return false;
     }
 
-    if (valueName === 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+    if (
+      valueName === 'collectedItemsAtOrAbove' &&
+      tracked.removedItemCount < value
+    ) {
       return false;
     }
 
-    if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+    if (
+      valueName === 'collectedItemsBelow' &&
+      tracked.removedItemCount >= value
+    ) {
       return false;
     }
 
-    if (valueName === 'collectedSpecificItemsAtOrAbove' &&
-        (tracked.removedItems[value.className] === undefined ||
-         tracked.removedItems[value.className] < value.count)) {
+    if (
+      valueName === 'collectedSpecificItemsAtOrAbove' &&
+      (tracked.removedItems[value.className] === undefined ||
+        tracked.removedItems[value.className] < value.count)
+    ) {
       return false;
     }
 
-    if (valueName === 'collectedSpecificItemsBelow' &&
-        tracked.removedItems[value.className] !== undefined &&
-        tracked.removedItems[value.className] >= value.count) {
+    if (
+      valueName === 'collectedSpecificItemsBelow' &&
+      tracked.removedItems[value.className] !== undefined &&
+      tracked.removedItems[value.className] >= value.count
+    ) {
       return false;
     }
 
-    if (valueName === 'createdSpecificItemsAtOrAbove' &&
-        (tracked.createdItems[value.className] === undefined ||
-         tracked.createdItems[value.className] < value.count)) {
+    if (
+      valueName === 'createdSpecificItemsAtOrAbove' &&
+      (tracked.createdItems[value.className] === undefined ||
+        tracked.createdItems[value.className] < value.count)
+    ) {
       return false;
     }
 
-    if (valueName === 'createdSpecificItemsBelow' &&
-        tracked.createdItems[value.className] !== undefined &&
-        tracked.createdItems[value.className] >= value.count) {
+    if (
+      valueName === 'createdSpecificItemsBelow' &&
+      tracked.createdItems[value.className] !== undefined &&
+      tracked.createdItems[value.className] >= value.count
+    ) {
       return false;
     }
 
@@ -6265,7 +6899,10 @@ Studio.conditionSatisfied = function (required) {
       return false;
     }
 
-    if (valueName === 'touchedHazardsAtOrAbove' && tracked.touchedHazardCount < value) {
+    if (
+      valueName === 'touchedHazardsAtOrAbove' &&
+      tracked.touchedHazardCount < value
+    ) {
       return false;
     }
 
@@ -6293,7 +6930,10 @@ Studio.conditionSatisfied = function (required) {
       return false;
     }
 
-    if (valueName === 'throwProjectile' && tracked.hasThrownProjectile !== value) {
+    if (
+      valueName === 'throwProjectile' &&
+      tracked.hasThrownProjectile !== value
+    ) {
       return false;
     }
 
@@ -6321,7 +6961,7 @@ Studio.conditionSatisfied = function (required) {
  * @param {Array} conditions.
  * @returns {ProgressConditionOutcome|null}
  */
-Studio.checkProgressConditions = function () {
+Studio.checkProgressConditions = function() {
   if (!level.progressConditions) {
     return null;
   }
@@ -6337,27 +6977,35 @@ Studio.checkProgressConditions = function () {
   return null;
 };
 
-var checkFinished = function () {
-
+var checkFinished = function() {
   var hasGoals = Studio.allGoals_().length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
   var progressConditionResult = Studio.checkProgressConditions();
-  var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
-  var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
-  var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+  var hasSuccessCondition =
+    level.goal && level.goal.successCondition ? true : false;
+  var achievedOptionalSuccessCondition =
+    !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+  var achievedRequiredSuccessCondition =
+    hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
 
   if (progressConditionResult) {
-    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.result = progressConditionResult.success
+      ? ResultType.SUCCESS
+      : ResultType.FAILURE;
     if (!progressConditionResult.success && progressConditionResult.canPass) {
       Studio.testResults = TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
       Studio.progressConditionTestResult = true;
     }
     var progressMessage = progressConditionResult.message;
     if (studioApp().isUsingBlockly()) {
-      progressMessage = progressConditionResult.blocklyMessage || progressMessage;
+      progressMessage =
+        progressConditionResult.blocklyMessage || progressMessage;
     }
     Studio.message = utils.valueOr(progressMessage, null);
-    Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
+    Studio.pauseInterpreter = utils.valueOr(
+      progressConditionResult.pauseInterpreter,
+      false
+    );
     return true;
   }
 
@@ -6369,14 +7017,22 @@ var checkFinished = function () {
   // In the remainder of levels which do not have goals, they simply require a success condition
   // that returns true.
 
-  if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
-      (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
-      (!hasGoals && achievedRequiredSuccessCondition)) {
+  if (
+    (hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
+    (hasGoals &&
+      level.completeOnSuccessConditionNotGoals &&
+      achievedRequiredSuccessCondition) ||
+    (!hasGoals && achievedRequiredSuccessCondition)
+  ) {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
 
-  if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
+  if (
+    level.goal &&
+    level.goal.failureCondition &&
+    level.goal.failureCondition()
+  ) {
     Studio.result = ResultType.FAILURE;
     return true;
   }
@@ -6395,7 +7051,7 @@ var checkFinished = function () {
 };
 
 if (IN_UNIT_TEST) {
-  module.exports.setLevel = (newLevel) => {
+  module.exports.setLevel = newLevel => {
     level = newLevel;
   };
 }

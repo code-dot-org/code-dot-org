@@ -6,7 +6,15 @@ const BITS_PER_BYTE = 8;
 const WALL_COLOR = '#7F7F7F';
 
 export default class CollisionMaskWalls extends Walls {
-  constructor(level, skin, drawDebugRect, drawDebugOverlay, width, height, onload) {
+  constructor(
+    level,
+    skin,
+    drawDebugRect,
+    drawDebugOverlay,
+    width,
+    height,
+    onload
+  ) {
     super(level, skin, drawDebugRect);
 
     this.width = width;
@@ -14,24 +22,30 @@ export default class CollisionMaskWalls extends Walls {
     this.drawDebugOverlay = drawDebugOverlay;
     this.bytesPerRow = Math.ceil(width / BITS_PER_BYTE);
     this.wallMaps = {};
-    Promise.all(Object.keys(skin.wallMaps).map(mapName => {
-      return imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(imageData => {
-        const wallMap = this.wallMapFromImageData(imageData.data);
-        this.wallMaps[mapName] = {
-          srcData: imageData,
-          wallColor: WALL_COLOR,
-          wallMap: wallMap,
-          overlayURI: this.wallOverlayURI(imageData, wallMap),
-          srcUrl: skin.wallMaps[mapName].srcUrl
-        };
+    Promise.all(
+      Object.keys(skin.wallMaps).map(mapName => {
+        return imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(
+          imageData => {
+            const wallMap = this.wallMapFromImageData(imageData.data);
+            this.wallMaps[mapName] = {
+              srcData: imageData,
+              wallColor: WALL_COLOR,
+              wallMap: wallMap,
+              overlayURI: this.wallOverlayURI(imageData, wallMap),
+              srcUrl: skin.wallMaps[mapName].srcUrl
+            };
+          }
+        );
+      })
+    )
+      .then(() => {
+        if (onload) {
+          onload();
+        }
+      })
+      .catch(err => {
+        console.error(err);
       });
-    })).then(() => {
-      if (onload) {
-        onload();
-      }
-    }).catch(err => {
-      console.error(err);
-    });
   }
 
   /**
@@ -70,7 +84,7 @@ export default class CollisionMaskWalls extends Walls {
 
             // Build a series of (end - start) 1's and shift them over by
             // start's offset within the byte.
-            const mask = ((1 << (end - start)) - 1) << (start % BITS_PER_BYTE);
+            const mask = ((1 << (end - start)) - 1) << start % BITS_PER_BYTE;
             if (wallMap[firstByteInRow + x] & mask) {
               return true;
             }
@@ -94,12 +108,14 @@ export default class CollisionMaskWalls extends Walls {
       for (let x = 0; x < this.width; x += BITS_PER_BYTE) {
         let bits = 0;
         for (let k = 0; k < BITS_PER_BYTE; k++) {
-          if (x + k < this.width &&
-              data[BYTES_PER_PIXEL * ((y * this.width) + x + k)] === 0) {
+          if (
+            x + k < this.width &&
+            data[BYTES_PER_PIXEL * (y * this.width + x + k)] === 0
+          ) {
             bits = bits | (1 << k);
           }
         }
-        arr[(y * this.bytesPerRow) + (x / BITS_PER_BYTE)] = bits;
+        arr[y * this.bytesPerRow + x / BITS_PER_BYTE] = bits;
       }
     }
     return arr;
@@ -114,10 +130,10 @@ export default class CollisionMaskWalls extends Walls {
     const color = CollisionMaskWalls.hexToRgb(hexColor);
     for (let y = 0; y < this.height; y++) {
       for (let x = 0; x < this.width; x += BITS_PER_BYTE) {
-        const currentByte = wallMap[(y * this.bytesPerRow) + (x / BITS_PER_BYTE)];
+        const currentByte = wallMap[y * this.bytesPerRow + x / BITS_PER_BYTE];
         for (let k = 0; k < BITS_PER_BYTE; k++) {
           const map = 1 << k;
-          const imageDataIndex = ((y * this.width) + x + k) * BYTES_PER_PIXEL;
+          const imageDataIndex = (y * this.width + x + k) * BYTES_PER_PIXEL;
           if (currentByte & map) {
             // Wall pixel, set color
             data[imageDataIndex + 0] = color.R;
@@ -146,7 +162,10 @@ export default class CollisionMaskWalls extends Walls {
         return;
       }
       wallMapData.overlayURI = this.wallOverlayURI(
-          wallMapData.srcData, wallMapData.wallMap, color);
+        wallMapData.srcData,
+        wallMapData.wallMap,
+        color
+      );
       wallMapData.wallColor = color;
     });
   }
@@ -157,12 +176,12 @@ export default class CollisionMaskWalls extends Walls {
       const R = parseInt(hexColor.substr(1, 1), 16) * 0x11;
       const G = parseInt(hexColor.substr(2, 1), 16) * 0x11;
       const B = parseInt(hexColor.substr(3, 1), 16) * 0x11;
-      return { R, G, B };
+      return {R, G, B};
     }
 
     const R = parseInt(hexColor.substr(1, 2), 16);
     const G = parseInt(hexColor.substr(3, 2), 16);
     const B = parseInt(hexColor.substr(5, 2), 16);
-    return { R, G, B };
+    return {R, G, B};
   }
 }

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
@@ -10,22 +10,18 @@ export default class CourseScriptTeacherInfo extends Component {
   static propTypes = {
     disabled: PropTypes.bool.isRequired,
     isHidden: PropTypes.bool.isRequired,
-    onToggleHiddenScript: PropTypes.func.isRequired,
+    onToggleHiddenScript: PropTypes.func.isRequired
   };
 
   render() {
-    const { disabled, isHidden, onToggleHiddenScript } = this.props;
+    const {disabled, isHidden, onToggleHiddenScript} = this.props;
 
     // Note: Students should always have no (owned) sections
     const tooltipId = _.uniqueId();
 
     return (
       <TeacherInfoBox>
-        <div
-          data-tip
-          data-for={tooltipId}
-          aria-describedby={tooltipId}
-        >
+        <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
           <HiddenForSectionToggle
             hidden={isHidden}
             disabled={disabled}

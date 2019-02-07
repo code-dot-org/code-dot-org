@@ -13,12 +13,14 @@ import PropTypes from 'prop-types';
  * going to document the parts of section that we use here
  */
 export const sectionDataPropType = PropTypes.shape({
- id: PropTypes.number.isRequired,
- script: PropTypes.object,
- students: PropTypes.arrayOf(PropTypes.shape({
-   id: PropTypes.number.isRequired,
-   name: PropTypes.string.isRequired,
- })).isRequired
+  id: PropTypes.number.isRequired,
+  script: PropTypes.object,
+  students: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired
+    })
+  ).isRequired
 });
 
 /**
@@ -29,37 +31,39 @@ export const SET_SECTION = 'sectionData/SET_SECTION';
 /**
  * Action creators
  */
-export const setSection = (section) => {
+export const setSection = section => {
   // Sort section.students by name.
-  const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
+  const sortedStudents = section.students.sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 
   // Filter data to match sectionDataPropType
   const filteredSectionData = {
     id: section.id,
     script: section.script,
-    students: sortedStudents,
+    students: sortedStudents
   };
-  return { type: SET_SECTION, section: filteredSectionData };
+  return {type: SET_SECTION, section: filteredSectionData};
 };
 
 /**
  * Initial state of sectionDataRedux
  */
 const initialState = {
-  section: {},
+  section: {}
 };
 
 /**
  * Reducer
  */
-export default function sectionData(state=initialState, action) {
+export default function sectionData(state = initialState, action) {
   if (action.type === SET_SECTION) {
     // Setting the section is the first action to be called when switching
     // sections, which requires us to reset our state. This might need to change
     // once switching sections is in react/redux.
     return {
       ...initialState,
-      section: action.section,
+      section: action.section
     };
   }
 
@@ -69,10 +73,10 @@ export default function sectionData(state=initialState, action) {
 /**
  * Selector functions
  */
-export const getTotalStudentCount = (state) => {
+export const getTotalStudentCount = state => {
   return state.sectionData.section.students.length;
 };
 
-export const getStudentList = (state) => {
+export const getStudentList = state => {
   return state.sectionData.section.students;
 };

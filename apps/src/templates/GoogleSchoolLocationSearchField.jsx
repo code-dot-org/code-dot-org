@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 /* globals google */
 
 /**
@@ -19,7 +19,7 @@ export default class GoogleSchoolLocationSearchField extends React.Component {
     isControlledInput: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   value() {
@@ -46,14 +46,16 @@ export default class GoogleSchoolLocationSearchField extends React.Component {
   }
 
   render() {
-    const conditionalProps = this.props.isControlledInput ? {
-      value: this.props.value,
-      onChange: this.props.onChange,
-    } : {};
+    const conditionalProps = this.props.isControlledInput
+      ? {
+          value: this.props.value,
+          onChange: this.props.onChange
+        }
+      : {};
 
     return (
       <input
-        ref={el => this.searchBoxRef = el}
+        ref={el => (this.searchBoxRef = el)}
         type="text"
         name={this.props.name}
         placeholder={i18n.schoolLocationSearchPlaceholder()}

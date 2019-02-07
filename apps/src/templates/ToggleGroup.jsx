@@ -1,7 +1,7 @@
 /** @file Row of buttons for switching editor modes. */
 import PropTypes from 'prop-types';
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ToggleButton from './ToggleButton';
 
 export default class ToggleGroup extends Component {
@@ -13,7 +13,9 @@ export default class ToggleGroup extends Component {
       const prop = props[propName];
       let error;
       if (React.Children.count(prop) < 1) {
-        error = new Error(`${componentName} must have at least one child button.`);
+        error = new Error(
+          `${componentName} must have at least one child button.`
+        );
       }
 
       React.Children.forEach(prop, child => {
@@ -22,8 +24,9 @@ export default class ToggleGroup extends Component {
           return;
         }
         if (child.type !== 'button') {
-          error = new Error(`${componentName} should only have buttons as ` +
-              'child elements.');
+          error = new Error(
+            `${componentName} should only have buttons as ` + 'child elements.'
+          );
         }
       });
       return error;
@@ -40,7 +43,9 @@ export default class ToggleGroup extends Component {
 
   renderChildren() {
     // Remove falsy children to make sure first and last buttons are rounded properly.
-    const children = React.Children.toArray(this.props.children).filter(child => !!child);
+    const children = React.Children.toArray(this.props.children).filter(
+      child => !!child
+    );
     return children.map((child, index) => {
       const isSelected = child.props.value === this.props.selected;
       return (
@@ -54,7 +59,11 @@ export default class ToggleGroup extends Component {
           activeColor={this.props.activeColor}
           title={child.props.title}
           style={child.props.style}
-          onClick={isSelected ? undefined : this.setSelected.bind(this, child.props.value)}
+          onClick={
+            isSelected
+              ? undefined
+              : this.setSelected.bind(this, child.props.value)
+          }
         >
           {child.props.children}
         </ToggleButton>

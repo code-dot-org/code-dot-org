@@ -42,7 +42,7 @@ export default class AnimationPickerSearchBar extends React.Component {
     onChange: PropTypes.func.isRequired
   };
 
-  onChange = (evt) => this.props.onChange(evt.target.value);
+  onChange = evt => this.props.onChange(evt.target.value);
 
   componentDidMount() {
     this.searchBox.focus();
@@ -51,13 +51,15 @@ export default class AnimationPickerSearchBar extends React.Component {
   render() {
     return (
       <div style={styles.search}>
-        <span className="fa fa-search" style={styles.icon}></span>
+        <span className="fa fa-search" style={styles.icon} />
         <input
           style={styles.input}
           placeholder="Search for images"
           value={this.props.value}
           onChange={this.onChange}
-          ref={(input) => { this.searchBox = input; }}
+          ref={input => {
+            this.searchBox = input;
+          }}
         />
       </div>
     );

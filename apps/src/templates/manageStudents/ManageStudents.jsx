@@ -9,7 +9,7 @@ class ManageStudents extends React.Component {
     studioUrlPrefix: PropTypes.string,
 
     // Provided by redux
-    sectionId: PropTypes.number,
+    sectionId: PropTypes.number
   };
 
   render() {
@@ -17,8 +17,8 @@ class ManageStudents extends React.Component {
 
     return (
       <div>
-        <SyncOmniAuthSectionControl sectionId={sectionId}/>
-        <ManageStudentsTable studioUrlPrefix={studioUrlPrefix}/>
+        <SyncOmniAuthSectionControl sectionId={sectionId} />
+        <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
       </div>
     );
   }
@@ -27,5 +27,5 @@ class ManageStudents extends React.Component {
 export const UnconnectedManageStudents = ManageStudents;
 
 export default connect(state => ({
-  sectionId: state.sectionData.section.id,
+  sectionId: state.sectionData.section.id
 }))(ManageStudents);

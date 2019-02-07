@@ -18,7 +18,7 @@ import {
 } from './permission';
 import $ from 'jquery';
 
-const FILTER_API_URL = "/api/v1/pd/workshops/filter";
+const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
   date_order: 'desc',
   limit: 5
@@ -64,7 +64,7 @@ export class WorkshopIndex extends React.Component {
     this.context.router.push('/survey_results');
   };
 
-  handleFilterClick = (e) => {
+  handleFilterClick = e => {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
   };
@@ -75,26 +75,52 @@ export class WorkshopIndex extends React.Component {
 
   render() {
     const showOrganizer = this.props.permission.has(WorkshopAdmin);
-    const canDelete = this.props.permission.hasAny(WorkshopAdmin, Organizer, ProgramManager);
-    const canCreate = this.props.permission.hasAny(WorkshopAdmin, Organizer, ProgramManager, CsfFacilitator);
-    const canSeeAttendanceReports = this.props.permission.hasAny(WorkshopAdmin, Organizer, ProgramManager);
+    const canDelete = this.props.permission.hasAny(
+      WorkshopAdmin,
+      Organizer,
+      ProgramManager
+    );
+    const canCreate = this.props.permission.hasAny(
+      WorkshopAdmin,
+      Organizer,
+      ProgramManager,
+      CsfFacilitator
+    );
+    const canSeeAttendanceReports = this.props.permission.hasAny(
+      WorkshopAdmin,
+      Organizer,
+      ProgramManager
+    );
 
     return (
       <div>
         <h1>Your Workshops</h1>
         <ButtonToolbar>
-          {canCreate &&
-            (
-              <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
-                New Workshop
-              </Button>
-            )
-          }
-          {canSeeAttendanceReports && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
-          {this.props.permission.has(Partner) && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
-          {this.props.permission.hasAny(Facilitator, CsfFacilitator) && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
+          {canCreate && (
+            <Button
+              className="btn-primary"
+              onClick={this.handleNewWorkshopClick}
+            >
+              New Workshop
+            </Button>
+          )}
+          {canSeeAttendanceReports && (
+            <Button onClick={this.handleAttendanceReportsClick}>
+              Attendance Reports
+            </Button>
+          )}
+          {this.props.permission.has(Partner) && (
+            <Button onClick={this.handleOrganizerSurveyResultsClick}>
+              Organizer Survey Results
+            </Button>
+          )}
+          {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (
+            <Button onClick={this.handleSurveyResultsClick}>
+              Facilitator Survey Results
+            </Button>
+          )}
           <Button
-            href={this.context.router.createHref("/workshops/filter")}
+            href={this.context.router.createHref('/workshops/filter')}
             onClick={this.handleFilterClick}
           >
             Filter View

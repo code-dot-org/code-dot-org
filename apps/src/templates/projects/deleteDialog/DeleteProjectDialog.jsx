@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
 import i18n from '@cdo/locale';
-import { hideDeleteDialog, deleteProject } from './deleteProjectDialogRedux';
+import {hideDeleteDialog, deleteProject} from './deleteProjectDialogRedux';
 
 const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20,
-  },
+    paddingBottom: 20
+  }
 };
 
 class DeleteProjectDialog extends Component {
@@ -21,7 +21,7 @@ class DeleteProjectDialog extends Component {
     projectId: PropTypes.string,
     isDeletePending: PropTypes.bool,
     onClose: PropTypes.func.isRequired,
-    deleteProject: PropTypes.func.isRequired,
+    deleteProject: PropTypes.func.isRequired
   };
 
   close = () => this.props.onClose();
@@ -36,12 +36,8 @@ class DeleteProjectDialog extends Component {
         useUpdatedStyles
         style={styles.dialog}
       >
-        <h2 className="delete-dialog-title">
-          {i18n.deleteProject()}
-        </h2>
-        <div style={{marginBottom: 10}}>
-          {i18n.deleteProjectConfirm()}
-        </div>
+        <h2 className="delete-dialog-title">{i18n.deleteProject()}</h2>
+        <div style={{marginBottom: 10}}>{i18n.deleteProjectConfirm()}</div>
         <DialogFooter>
           <Button
             text={i18n.dialogCancel()}
@@ -65,15 +61,18 @@ class DeleteProjectDialog extends Component {
 
 export const UnconnectedDeleteProjectDialog = DeleteProjectDialog;
 
-export default connect(state => ({
-  isOpen: state.deleteDialog.isOpen,
-  isDeletePending: state.deleteDialog.isDeletePending,
-  projectId: state.deleteDialog.projectId,
-}), dispatch => ({
-  onClose() {
-    dispatch(hideDeleteDialog());
-  },
-  deleteProject(projectId) {
-    return dispatch(deleteProject(projectId));
-  },
-}))(DeleteProjectDialog);
+export default connect(
+  state => ({
+    isOpen: state.deleteDialog.isOpen,
+    isDeletePending: state.deleteDialog.isDeletePending,
+    projectId: state.deleteDialog.projectId
+  }),
+  dispatch => ({
+    onClose() {
+      dispatch(hideDeleteDialog());
+    },
+    deleteProject(projectId) {
+      return dispatch(deleteProject(projectId));
+    }
+  })
+)(DeleteProjectDialog);

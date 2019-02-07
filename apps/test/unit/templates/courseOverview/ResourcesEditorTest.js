@@ -1,6 +1,6 @@
-import { assert } from '../../../util/configuredChai';
+import {assert} from '../../../util/configuredChai';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
@@ -13,11 +13,7 @@ const defaultProps = {
 
 describe('ResourcesEditor', () => {
   it('adds empty resources if passed none', () => {
-    const wrapper = shallow(
-      <ResourcesEditor
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
     assert.deepEqual(wrapper.state('resources'), [
       {type: '', link: ''},
       {type: '', link: ''},
@@ -29,9 +25,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
-          { type: ResourceType.curriculum, link: '/foo' }
-        ]}
+        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
       />
     );
     assert.deepEqual(wrapper.state('resources'), [
@@ -45,9 +39,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
-          { type: ResourceType.curriculum, link: '/foo' }
-        ]}
+        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
       />
     );
     assert.strictEqual(wrapper.find('Resource').length, 2);
@@ -57,9 +49,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
-          { type: ResourceType.curriculum, link: '/foo' }
-        ]}
+        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
       />
     );
     const fakeEvent = {
@@ -75,9 +65,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
-          { type: ResourceType.curriculum, link: '/foo' }
-        ]}
+        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
       />
     );
     const fakeEvent = {
@@ -86,16 +74,15 @@ describe('ResourcesEditor', () => {
       }
     };
     wrapper.instance().handleChangeType(fakeEvent, 1);
-    assert.strictEqual(wrapper.state('errorString'), 'Your resource types contains a duplicate');
+    assert.strictEqual(
+      wrapper.state('errorString'),
+      'Your resource types contains a duplicate'
+    );
   });
 
   describe('Resource', () => {
     it('has a type selector and a link input', () => {
-      const wrapper = mount(
-        <ResourcesEditor
-          {...defaultProps}
-        />
-      );
+      const wrapper = mount(<ResourcesEditor {...defaultProps} />);
       const resource = wrapper.find('Resource').at(0);
       assert.equal(resource.find('select').length, 1);
       assert.equal(resource.find('option').length, 10);

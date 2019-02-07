@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import ScriptOverview from './ScriptOverview';
 import MiniViewTopRow from './MiniViewTopRow';
-import { hasGroups } from '@cdo/apps/code-studio/progressRedux';
+import {hasGroups} from '@cdo/apps/code-studio/progressRedux';
 
 const styles = {
   // For the detail view (without groups) we want some margins
@@ -28,18 +28,25 @@ class MiniView extends React.Component {
     hasGroups: PropTypes.bool.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasFullProgress: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   render() {
-    const { linesOfCodeText, isSummaryView, hasGroups, scriptName, hasFullProgress, selectedSectionId } = this.props;
+    const {
+      linesOfCodeText,
+      isSummaryView,
+      hasGroups,
+      scriptName,
+      hasFullProgress,
+      selectedSectionId
+    } = this.props;
 
     let body;
     if (!hasFullProgress) {
       // Ideally we would specify inline CSS instead of using a classname here,
       // but the image used here gets digested by rails, and we don't know the
       // digested path
-      body = <div className="loading"/>;
+      body = <div className="loading" />;
     } else {
       body = (
         <div
@@ -77,5 +84,5 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
   hasGroups: hasGroups(state.progress),
-  selectedSectionId: state.teacherSections.selectedSectionId,
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(MiniView);

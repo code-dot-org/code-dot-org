@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
@@ -8,15 +8,16 @@ import SetUpMessage from './SetUpMessage';
 class SetUpSections extends Component {
   static propTypes = {
     beginEditingNewSection: PropTypes.func.isRequired,
-    hasSections: PropTypes.bool,
+    hasSections: PropTypes.bool
   };
 
   // Wrapped to avoid passing event args
   beginEditingNewSection = () => this.props.beginEditingNewSection();
 
   render() {
-    const headingText = this.props.hasSections ?
-      i18n.newSectionAdd() : i18n.setUpClassroom();
+    const headingText = this.props.hasSections
+      ? i18n.newSectionAdd()
+      : i18n.setUpClassroom();
 
     return (
       <SetUpMessage
@@ -33,6 +34,9 @@ class SetUpSections extends Component {
   }
 }
 export const UnconnectedSetUpSections = SetUpSections;
-export default connect(undefined, {
-  beginEditingNewSection,
-})(SetUpSections);
+export default connect(
+  undefined,
+  {
+    beginEditingNewSection
+  }
+)(SetUpSections);

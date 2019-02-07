@@ -9,7 +9,7 @@ import initResponsive from '@cdo/apps/code-studio/responsive';
 
 registerReducers({isRtl, responsive});
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   initResponsive();
 
   const container = document.getElementById('regional-partner-playbook');
@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <Provider store={getStore()}>
       <RegionalPartnerPlaybook />
     </Provider>,
-    container,
+    container
   );
 });
