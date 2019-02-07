@@ -7,9 +7,7 @@ import {navigateToHref} from '@cdo/apps/utils';
 const styles = {
   container: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    marginBottom: 10
+    alignItems: 'center'
   },
   dropdown: {
     marginLeft: 10,

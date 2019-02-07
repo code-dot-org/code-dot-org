@@ -30,7 +30,12 @@ class ManageStudentAgeCell extends Component {
       <div>
         {!this.props.isEditing && <div>{age}</div>}
         {this.props.isEditing && (
-          <select name="age" value={editedValue} onChange={this.onChangeAge}>
+          <select
+            style={{width: 50}}
+            name="age"
+            value={editedValue}
+            onChange={this.onChangeAge}
+          >
             {ages.map(age => (
               <option key={age} value={age}>
                 {age}
