@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 const workshopShape = PropTypes.shape({
   id: PropTypes.number.isRequired,

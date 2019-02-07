@@ -1279,6 +1279,7 @@
   "subtitle": "графичко окружење за програмирање",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Промените групу:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "У вашем програму постоји грешка у куцању. Молим вас уклоните линију {lineNumber} па покушајте поново.",

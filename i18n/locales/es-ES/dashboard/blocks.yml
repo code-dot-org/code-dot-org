@@ -1259,6 +1259,8 @@ es:
         text: girar a la izquierda
       RyanLab_turnRight:
         text: girar a la derecha
+      SpriteLab2Beta_spriteSay:
+        text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           crear gráfico
@@ -1290,8 +1292,7 @@ es:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_addToSpriteGroup:
         text: añadir gráfico {SPRITE} a grupo {GROUP}
-      aalab_changeGroupPropBy:
-        text: cambiar grupo {GROUP} {PROPERTY} por {VAL}
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -1300,25 +1301,38 @@ es:
             '"y"': posición y
             '"direction"': dirección del movimiento
       aalab_clickedOn:
+        text: "{CONDITION} {SPRITE} pulsado"
         options:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      aalab_createNewSpriteAdvanced:
+        text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en {LOCATION}"
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}
           de todos los gráficos {COSTUME}
       aalab_createSpriteGroup:
         text: hacer un nuevo grupo de gráficos llamado {VAR}
+      aalab_getSpritesByName:
+        text: cualquier gráfico llamado {NAME}
       aalab_getThisSprite:
+        text: "{CHOICE} gráfico"
         options:
           CHOICE:
             '"this"': este
+      aalab_nameStringSay:
+        text: "{NAMESTRING} dice {MESSAGE}"
       aalab_prompt:
         text: preguntar {MESSAGE}
+      aalab_removeAdvanced:
+        text: eliminarAvanzado {THIS}
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} dice {MESSAGE}"
       aalab_spriteSay:
         text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
       aalab_whenTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
           CONDITION:
             '"when"': cuando

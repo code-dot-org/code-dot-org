@@ -1279,6 +1279,7 @@
   "subtitle": "eine visuelle Programmierumgebung",
   "success": "Geschafft!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Lerngruppe wechseln:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Dein Programm enthält einen Tippfehler. Bitte entferne Zeile {lineNumber} und versuche es erneut.",

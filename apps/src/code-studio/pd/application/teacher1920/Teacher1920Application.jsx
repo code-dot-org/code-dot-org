@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
 import Section2ChooseYourProgram from './Section2ChooseYourProgram';
@@ -70,9 +70,9 @@ export default class Teacher1920Application extends FormController {
   /**
    * @override
    */
-  onSuccessfulSetPage(newPage) {
+  onSetPage(newPage) {
     // Report a unique page view to GA.
-    ga('set', 'page', '/pd/application/teacher/' + newPage);
+    ga('set', 'page', '/pd/application/teacher/' + newPage + 1);
     ga('send', 'pageview');
   }
 }

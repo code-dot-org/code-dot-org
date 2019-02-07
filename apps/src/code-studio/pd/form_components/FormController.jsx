@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import $ from 'jquery';
 import {
   Button,
@@ -49,15 +50,20 @@ export default class FormController extends React.Component {
     this.nextPage = this.nextPage.bind(this);
     this.prevPage = this.prevPage.bind(this);
 
-    this.onSuccessfulSetPage(0);
     this.onInitialize();
   }
 
   componentWillMount() {
+    let newPage;
     if (this.constructor.sessionStorageKey && sessionStorage[this.constructor.sessionStorageKey]) {
       const reloadedState = JSON.parse(sessionStorage[this.constructor.sessionStorageKey]);
       this.setState(reloadedState);
+      newPage = reloadedState.currentPage;
+    } else {
+      newPage = this.state.currentPage;
     }
+
+    this.onSetPage(newPage);
   }
 
   /**
@@ -178,9 +184,9 @@ export default class FormController extends React.Component {
   }
 
   /**
-   * Called when we succesfully set a new page.
+   * Called when we set a new page.
    */
-  onSuccessfulSetPage(newPage) {
+  onSetPage(newPage) {
     // Intentional noop; overridden by child classes
   }
 
@@ -417,7 +423,7 @@ export default class FormController extends React.Component {
 
       this.saveToSessionStorage({currentPage: newPage});
 
-      this.onSuccessfulSetPage(newPage);
+      this.onSetPage(newPage);
     }
   }
 

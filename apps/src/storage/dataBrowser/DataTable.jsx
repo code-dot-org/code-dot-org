@@ -1,7 +1,6 @@
 /**
  * @overview Component for editing a data table.
  */
-
 import TableControls from './TableControls';
 import AddTableRow from './AddTableRow';
 import { DataView } from '../constants';
@@ -9,8 +8,9 @@ import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from "../../util/color";

@@ -14,10 +14,13 @@ eu:
     errors:
       messages:
         blank: beharrezkoa da
+        invalid: okerra da
+        invalid_plural: okerrak dira
     attributes:
       user:
         name: Izena Erakutsi
         email: E-posta
+        parent_email: Guraso/tutore emaila
         username: Erabiltzaile-izena
         password: Pasahitza
         password_confirmation: Pasahitza errepikatu
@@ -32,6 +35,8 @@ eu:
   welcome_back: Ongi etorria berriro, %{name}
   submit: Bidali
   unsubmit: Bidalketa ezeztatu
+  previous_page: Aurreko orrialdea
+  next_page: Hurrengo orria
   cancel: Ezeztatu
   okay: Ongi da
   or: edo

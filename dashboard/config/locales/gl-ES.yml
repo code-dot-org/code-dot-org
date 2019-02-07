@@ -138,6 +138,7 @@ gl:
     age: Idade
     user_type: Alumno ou profesor?
     submit: Crear conta
+    go_to_account: Ir a miña conta
     teacher: É un profesor?
     valid_username: Dispoñíbel!
     invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres
@@ -145,6 +146,8 @@ gl:
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
     mismatch_password: Os dous contrasinais que metiches non se corresponden
+    agree_tos_privacy: Acepto os <a href='http://code.org/tos'> termos de servicio</a>
+      e <a href='http://code.org/privacy'> a Política de privacidade.
     under_13_consent: De ter menos de 13 anos, confirmo que teño autorización de meus
       pais ou titores legais para empregar os servizos de Code.org.
     student_consent: Confirmo que teño autorización de meus pais ou titores legais

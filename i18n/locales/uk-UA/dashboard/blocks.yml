@@ -791,7 +791,7 @@ uk:
         text: посередині
       Vector_setSize:
         text: встановити ширину {WIDTH} висоту {HEIGHT}
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': розмір

@@ -3,9 +3,9 @@
  * It has a tab for each session which lists all enrolled teachers and their status.
  * Route: /workshops/:workshopId/attendance(/:sessionIndex)
  */
-
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import SessionTime from '../components/session_time';
 import Spinner from '../../components/spinner';

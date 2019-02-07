@@ -651,7 +651,7 @@ ro:
         text: locație aleatorie
       Vector_vectorNorth:
         text: nord
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': dimensiune

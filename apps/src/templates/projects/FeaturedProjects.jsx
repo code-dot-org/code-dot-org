@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
 import {featuredProjectDataPropType, featuredProjectTableTypes} from './projectConstants';
 

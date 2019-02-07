@@ -42,7 +42,7 @@
     "ideal": "6",
     "callout_json": "[]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing all of the moves down on a piece of paper and looking for a pattern.\",\"hint_id\":\"courseC_starWars_loops6_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7788c6c324b1e68357c13a524a4a3fd3/courseC_starWars_loops6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want to use less code, you can put one `repeat` loop inside of another!   \\nThis is called a **nested loop**.\",\"hint_id\":\"courseC_starWars_loops6_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e19e1fc82a66571deb5ae7102097f2d/courseC_starWars_loops6.mp3\"}]",
-    "tts_markdown_instructions_override": "Loops even work with more than one block inside!  Can you loop this sequence?",
+    "tts_long_instructions_override": "Loops even work with more than one block inside!  Can you loop this sequence?",
     "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Can you get it all?\"_\r\n\r\nLoops even work with more than one block inside!  Can you loop this sequence?",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/7c7f4cda9fafc59aedd07102657cd43a=levelbuilder/34326.png",

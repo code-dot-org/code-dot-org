@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "step_speed": "2",
-    "tts_instructions_override": "Challenge puzzle! Combine ideas from the last few puzzles to complete this.",
+    "tts_short_instructions_override": "Challenge puzzle! Combine ideas from the last few puzzles to complete this.",
     "long_instructions": "**Challenge:** Combine ideas from the last few puzzles to complete this level.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

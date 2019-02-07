@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {projectPropType, Galleries} from './projectConstants';
 import i18n from "@cdo/locale";
@@ -53,6 +54,11 @@ class ProjectCardGrid extends Component {
   }
 
   onSelectApp = (appType) => {
+    const projectGridDiv = document.getElementById('projectCardGrid');
+    if (projectGridDiv) {
+      const projectGridRect = projectGridDiv.getBoundingClientRect();
+      window.scrollTo(projectGridRect.left + window.pageXOffset, projectGridRect.top + window.pageYOffset);
+    }
     this.setState({showAll: false, showApp: appType});
   };
 
@@ -65,7 +71,7 @@ class ProjectCardGrid extends Component {
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
 
     return (
-      <div style={styles.grid}>
+      <div id="projectCardGrid" style={styles.grid}>
         {(this.state.showAll) &&
           <div>
             <ProjectAppTypeArea
