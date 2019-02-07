@@ -24,7 +24,7 @@ const JSDebuggerState = Immutable.Record({
   commandHistory: null,
   logOutput: '',
   maxLogLevel: '',
-  isOpen: false,
+  isOpen: false
 });
 
 export function getRoot(state) {
@@ -87,7 +87,7 @@ export const selectors = {
   canRunNext,
   getLogOutput,
   getMaxLogLevel,
-  isOpen,
+  isOpen
 };
 
 // actions
@@ -117,34 +117,29 @@ export function clearLog() {
 export function attach(jsInterpreter) {
   return (dispatch, getState) => {
     const observer = new Observer();
-    observer.observe(
-      jsInterpreter.onPause,
-      () => {
-        dispatch(togglePause());
-        dispatch(open());
-      }
-    );
-    observer.observe(
-      jsInterpreter.onExecutionWarning,
-      (output) => dispatch(appendLog(output, 'WARNING'))
+    observer.observe(jsInterpreter.onPause, () => {
+      dispatch(togglePause());
+      dispatch(open());
+    });
+    observer.observe(jsInterpreter.onExecutionWarning, output =>
+      dispatch(appendLog(output, 'WARNING'))
     );
 
-    const watchIntervalId = setInterval(
-      () => {
-        const jsInterpreter = getJSInterpreter(getState());
-        getState().watchedExpressions.forEach(we => {
-          const currentValue = jsInterpreter.evaluateWatchExpression(we.get('expression'));
-          dispatch(updateWatchExpressions(we.get('expression'), currentValue));
-        });
-      },
-      WATCH_TIMER_PERIOD
-    );
+    const watchIntervalId = setInterval(() => {
+      const jsInterpreter = getJSInterpreter(getState());
+      getState().watchedExpressions.forEach(we => {
+        const currentValue = jsInterpreter.evaluateWatchExpression(
+          we.get('expression')
+        );
+        dispatch(updateWatchExpressions(we.get('expression'), currentValue));
+      });
+    }, WATCH_TIMER_PERIOD);
     dispatch(clearLog());
     dispatch({
       type: ATTACH,
       observer,
       watchIntervalId,
-      jsInterpreter,
+      jsInterpreter
     });
   };
 }
@@ -184,12 +179,12 @@ export function stepIn() {
       if (runApp) {
         runApp();
       } else {
-        throw new Error("jsdebugger has not been initialized yet");
+        throw new Error('jsdebugger has not been initialized yet');
       }
       dispatch(togglePause());
       jsInterpreter = getJSInterpreter(getState());
       if (!jsInterpreter) {
-        throw new Error("runApp should have attached an interpreter");
+        throw new Error('runApp should have attached an interpreter');
       }
     }
     jsInterpreter.handleStepIn();
@@ -202,7 +197,7 @@ export function stepOver() {
     if (jsInterpreter) {
       jsInterpreter.handleStepOver();
     } else {
-      throw new Error("No interpreter has been attached");
+      throw new Error('No interpreter has been attached');
     }
   };
 }
@@ -213,7 +208,7 @@ export function stepOut() {
     if (jsInterpreter) {
       jsInterpreter.handleStepOut();
     } else {
-      throw new Error("No interpreter has been attached");
+      throw new Error('No interpreter has been attached');
     }
   };
 }
@@ -224,7 +219,7 @@ export function evalInCurrentScope(input) {
     if (jsInterpreter) {
       return jsInterpreter.evalInCurrentScope(input);
     } else {
-      throw new Error("No interpreter has been attached");
+      throw new Error('No interpreter has been attached');
     }
   };
 }
@@ -241,7 +236,7 @@ export const actions = {
   stepIn,
   stepOver,
   stepOut,
-  evalInCurrentScope,
+  evalInCurrentScope
 };
 
 // reducer
@@ -271,31 +266,31 @@ function computeNewMaxLogLevel(prevMaxLogLevel, newLogLevel) {
 export function reducer(state, action) {
   if (!state) {
     state = new JSDebuggerState({
-      isOpen: false,
+      isOpen: false
     });
   }
   if (action.type === INITIALIZE) {
     return state.merge({
       runApp: action.runApp,
-      commandHistory: new CommandHistory(),
+      commandHistory: new CommandHistory()
     });
   } else if (action.type === ATTACH) {
     return state.merge({
       jsInterpreter: action.jsInterpreter,
       observer: action.observer,
-      watchIntervalId: action.watchIntervalId,
+      watchIntervalId: action.watchIntervalId
     });
   } else if (action.type === APPEND_LOG) {
     return state.merge({
       logOutput: appendLogOutput(state.logOutput, action.output),
-      maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel),
+      maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel)
     });
   } else if (action.type === CLEAR_LOG) {
     return state.merge({logOutput: '', maxLogLevel: ''});
   } else if (action.type === DETACH) {
     return state.merge({
       jsInterpreter: null,
-      watchIntervalId: 0,
+      watchIntervalId: 0
     });
   } else if (action.type === CLOSE) {
     return state.set('isOpen', false);
@@ -309,5 +304,5 @@ export function reducer(state, action) {
 export const reducers = {
   jsdebugger: reducer,
   watchedExpressions,
-  runState,
+  runState
 };

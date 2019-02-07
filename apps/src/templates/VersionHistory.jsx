@@ -36,10 +36,18 @@ export default class VersionHistory extends React.Component {
 
   componentWillMount() {
     if (this.props.useFilesApi) {
-      filesApi.getVersionHistory(this.onVersionListReceived, this.onAjaxFailure);
+      filesApi.getVersionHistory(
+        this.onVersionListReceived,
+        this.onAjaxFailure
+      );
     } else {
       // TODO: Use Dave's client api when it's finished.
-      sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
+      sourcesApi.ajax(
+        'GET',
+        'main.json/versions',
+        this.onVersionListReceived,
+        this.onAjaxFailure
+      );
     }
   }
 
@@ -48,7 +56,7 @@ export default class VersionHistory extends React.Component {
    * current list of versions.
    * @param xhr
    */
-  onVersionListReceived = (xhr) => {
+  onVersionListReceived = xhr => {
     this.setState({versions: JSON.parse(xhr.responseText), showSpinner: false});
   };
 
@@ -70,11 +78,20 @@ export default class VersionHistory extends React.Component {
    * Called when the user chooses a previous version to restore.
    * @param versionId
    */
-  onChooseVersion = (versionId) => {
+  onChooseVersion = versionId => {
     if (this.props.useFilesApi) {
-      filesApi.restorePreviousVersion(versionId, this.onRestoreSuccess, this.onAjaxFailure);
+      filesApi.restorePreviousVersion(
+        versionId,
+        this.onRestoreSuccess,
+        this.onAjaxFailure
+      );
     } else {
-      sourcesApi.restorePreviousFileVersion('main.json', versionId, this.onRestoreSuccess, this.onAjaxFailure);
+      sourcesApi.restorePreviousFileVersion(
+        'main.json',
+        versionId,
+        this.onRestoreSuccess,
+        this.onAjaxFailure
+      );
     }
 
     // Show the spinner.
@@ -101,13 +118,14 @@ export default class VersionHistory extends React.Component {
           isOwner: project.isOwner(),
           currentUrl: window.location.href,
           shareUrl: project.getShareUrl(),
-          currentSourceVersionId: project.getCurrentSourceVersionId(),
-        }),
+          currentSourceVersionId: project.getCurrentSourceVersionId()
+        })
       },
       {includeUserId: true}
     );
 
-    this.props.handleClearPuzzle()
+    this.props
+      .handleClearPuzzle()
       .then(() => project.save(true))
       .then(() => utils.reload());
   };
@@ -116,34 +134,46 @@ export default class VersionHistory extends React.Component {
     let body;
     if (this.state.showSpinner) {
       body = (
-          <div style={{margin: '1em 0', textAlign: 'center'}}>
-            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}/>
-          </div>
+        <div style={{margin: '1em 0', textAlign: 'center'}}>
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+        </div>
       );
     } else if (this.state.confirmingClearPuzzle) {
       body = (
         <div>
           <p>Are you sure you want to clear all progress for this level&#63;</p>
-          <button id="confirm-button" style={{float: 'right'}} onClick={this.onClearPuzzle}>Start Over</button>
-          <button id="again-button" onClick={this.onCancelClearPuzzle}>Cancel</button>
+          <button
+            id="confirm-button"
+            style={{float: 'right'}}
+            onClick={this.onClearPuzzle}
+          >
+            Start Over
+          </button>
+          <button id="again-button" onClick={this.onCancelClearPuzzle}>
+            Cancel
+          </button>
         </div>
       );
     } else {
-      const rows = this.state.versions.map(function (version) {
-        return (
-          <VersionRow
-            key={version.versionId}
-            versionId={version.versionId}
-            lastModified={new Date(version.lastModified)}
-            isLatest={version.isLatest}
-            onChoose={this.onChooseVersion.bind(this, version.versionId)}
-          />
-        );
-      }.bind(this));
+      const rows = this.state.versions.map(
+        function(version) {
+          return (
+            <VersionRow
+              key={version.versionId}
+              versionId={version.versionId}
+              lastModified={new Date(version.lastModified)}
+              isLatest={version.isLatest}
+              onChoose={this.onChooseVersion.bind(this, version.versionId)}
+            />
+          );
+        }.bind(this)
+      );
 
       body = (
         <div>
-          <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
+          <div
+            style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}
+          >
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
@@ -152,9 +182,13 @@ export default class VersionHistory extends React.Component {
                     <p style={{margin: 0}}>Initial version</p>
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
-                  <button className="btn-danger" onClick={this.onConfirmClearPuzzle} style={{float: 'right'}}>
-                    Start over
-                  </button>
+                    <button
+                      className="btn-danger"
+                      onClick={this.onConfirmClearPuzzle}
+                      style={{float: 'right'}}
+                    >
+                      Start over
+                    </button>
                   </td>
                 </tr>
               </tbody>

@@ -1,7 +1,15 @@
 import {assert} from 'chai';
 import {stub} from 'sinon';
-import reducer, { ViewType, setViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
+import reducer, {
+  ViewType,
+  setViewType
+} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 

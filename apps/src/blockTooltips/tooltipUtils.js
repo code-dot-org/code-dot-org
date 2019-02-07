@@ -39,12 +39,16 @@ function openerMatchesCloser(opener, closer) {
  * @param position
  * @returns {parameterSlotInfo|null}
  */
-exports.findFunctionAndParamNumber = function (editor, position) {
+exports.findFunctionAndParamNumber = function(editor, position) {
   var seenCloserStack = [];
   var sameDepthPrecedingCommaCount = 0;
 
-  var TokenIterator = ace.require("./token_iterator").TokenIterator;
-  var iterator = new TokenIterator(editor.session, position.row, position.column);
+  var TokenIterator = ace.require('./token_iterator').TokenIterator;
+  var iterator = new TokenIterator(
+    editor.session,
+    position.row,
+    position.column
+  );
 
   var token = iterator.getCurrentToken();
 
@@ -54,12 +58,14 @@ exports.findFunctionAndParamNumber = function (editor, position) {
     // At beginning of a line. Step back one for first token.
     token = iterator.stepBackward();
   } else if (token && token.type.match(/^comment/)) {
-    var isBlockComment = token.type === "comment.doc" ||
-      token.value.match(START_OF_BLOCK_COMMENT);
+    var isBlockComment =
+      token.type === 'comment.doc' || token.value.match(START_OF_BLOCK_COMMENT);
     if (isBlockComment) {
       var tokenIsEndOfDocComment = token.value.match(ENDING_OF_BLOCK_COMMENT);
-      var cursorIsEndOfToken = (token.start + token.value.length) === position.column;
-      var cursorIsEndOfBlockComment = (tokenIsEndOfDocComment && cursorIsEndOfToken);
+      var cursorIsEndOfToken =
+        token.start + token.value.length === position.column;
+      var cursorIsEndOfBlockComment =
+        tokenIsEndOfDocComment && cursorIsEndOfToken;
       if (!cursorIsEndOfBlockComment) {
         // Starting within a block comment
         return null;
@@ -72,14 +78,14 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
   while (token) {
     switch (token.type) {
-      case "paren.rparen":
+      case 'paren.rparen':
         var closers = token.value.split();
         for (var i = closers.length - 1; i >= 0; i--) {
           var currentCloser = closers[i];
           seenCloserStack.push(currentCloser);
         }
         break;
-      case "paren.lparen":
+      case 'paren.lparen':
         var openers = token.value.split();
         for (var j = openers.length - 1; j >= 0; j--) {
           var currentOpener = openers[j];
@@ -110,31 +116,40 @@ exports.findFunctionAndParamNumber = function (editor, position) {
           }
         }
         break;
-      case "punctuation.operator":
+      case 'punctuation.operator':
         if (seenCloserStack.length === 0) {
           if (_.includes(token.value, ';')) {
             return null;
           }
           if (_.includes(token.value, ',')) {
-            sameDepthPrecedingCommaCount += countNumberOfCharacter(token.value, ',');
+            sameDepthPrecedingCommaCount += countNumberOfCharacter(
+              token.value,
+              ','
+            );
           }
         }
         break;
-      case "comment":
-      case "comment.doc":
+      case 'comment':
+      case 'comment.doc':
         break;
-      case "text":
+      case 'text':
         // Whitespace or random non-identifier characters
-        if (seenCloserStack.length !== 0 || token.value.match(ONLY_WHITESPACE_REGEXP)) {
+        if (
+          seenCloserStack.length !== 0 ||
+          token.value.match(ONLY_WHITESPACE_REGEXP)
+        ) {
           break;
         }
         return null;
-      case "string":
-      case "storage.type":
-      case "identifier":
-        /* falls through */
+      case 'string':
+      case 'storage.type':
+      case 'identifier':
+      /* falls through */
       default:
-        if (seenCloserStack.length === 0 && sameDepthPrecedingCommaCount === 0) {
+        if (
+          seenCloserStack.length === 0 &&
+          sameDepthPrecedingCommaCount === 0
+        ) {
           // Something substantial between cursor and start of parameter slot
           return null;
         }

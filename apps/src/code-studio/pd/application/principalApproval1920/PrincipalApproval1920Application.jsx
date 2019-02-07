@@ -33,9 +33,7 @@ export default class PrincipalApproval1920Application extends FormController {
    * @override
    */
   getPageComponents() {
-    return [
-      PrincipalApproval1920Component
-    ];
+    return [PrincipalApproval1920Component];
   }
 
   /**

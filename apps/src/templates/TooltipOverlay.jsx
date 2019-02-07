@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { isPointInBounds } from '../applab/gridUtils';
+import {isPointInBounds} from '../applab/gridUtils';
 
 const TOOLTIP_MARGIN = 6;
 const EDGE_MARGIN = 5;
@@ -43,8 +43,8 @@ export default class TooltipOverlay extends React.Component {
 
   getTooltipStrings() {
     return (this.props.providers || [])
-        .map(provider => provider(this.props))
-        .filter(s => typeof s === 'string');
+      .map(provider => provider(this.props))
+      .filter(s => typeof s === 'string');
   }
 
   /**
@@ -56,7 +56,9 @@ export default class TooltipOverlay extends React.Component {
     const tooltipCount = this.getTooltipStrings().length;
     return {
       width: TEXT_RECT_WIDTH,
-      height: tooltipCount * TEXT_RECT_HEIGHT + Math.max(0, tooltipCount-1) * BETWEEN_RECT_MARGIN
+      height:
+        tooltipCount * TEXT_RECT_HEIGHT +
+        Math.max(0, tooltipCount - 1) * BETWEEN_RECT_MARGIN
     };
   }
 
@@ -70,14 +72,18 @@ export default class TooltipOverlay extends React.Component {
     rectX = this.props.mouseX + TOOLTIP_MARGIN;
     if (rectX + tooltipSize.width + EDGE_MARGIN > this.props.width) {
       // This response gives a smooth horizontal reposition when near the edge
-      rectX -= (rectX + tooltipSize.width + EDGE_MARGIN - this.props.width);
+      rectX -= rectX + tooltipSize.width + EDGE_MARGIN - this.props.width;
       // This response snaps the text to the other side when near the edge
       //rectX = this.props.mouseX - TOOLTIP_MARGIN - tooltipSize.width;
     }
 
-    const abovePosition = this.props.mouseY - TOOLTIP_MARGIN - tooltipSize.height;
+    const abovePosition =
+      this.props.mouseY - TOOLTIP_MARGIN - tooltipSize.height;
     const belowPosition = this.props.mouseY + TOOLTIP_MARGIN;
-    if (belowPosition + tooltipSize.height + TOOLTIP_MARGIN > this.props.height) {
+    if (
+      belowPosition + tooltipSize.height + TOOLTIP_MARGIN >
+      this.props.height
+    ) {
       rectY = abovePosition;
     } else if (abovePosition - TOOLTIP_MARGIN < 0) {
       rectY = belowPosition;
@@ -119,9 +125,16 @@ export default class TooltipOverlay extends React.Component {
   }
 
   render() {
-    if (!isPointInBounds(this.props.mouseX, this.props.mouseY,
-        this.props.width, this.props.height) ||
-      !this.props.providers || !this.props.providers.length) {
+    if (
+      !isPointInBounds(
+        this.props.mouseX,
+        this.props.mouseY,
+        this.props.width,
+        this.props.height
+      ) ||
+      !this.props.providers ||
+      !this.props.providers.length
+    ) {
       return null;
     }
     return <g className="tooltip-overlay">{this.renderTooltips()}</g>;
@@ -148,7 +161,7 @@ export function textProvider(label) {
  * @returns {function(): string}
  */
 export function coordinatesProvider(flip) {
-  return (props) => {
+  return props => {
     const y = flip ? props.height - props.mouseY : props.mouseY;
     return `x: ${Math.floor(props.mouseX)}, y: ${Math.floor(y)}`;
   };

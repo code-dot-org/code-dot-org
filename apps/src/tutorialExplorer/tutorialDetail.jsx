@@ -4,7 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import shapes from './shapes';
-import { getTagString, getTutorialDetailString, DoNotShow } from './util';
+import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
 /* global ga */
@@ -30,32 +30,32 @@ const styles = {
     width: '100%'
   },
   tutorialDetailImageOuterContainer: {
-    float: "left",
+    float: 'left',
     paddingBottom: 10
   },
   tutorialDetailImageContainer: {
-    position: "relative",
-    width: "100%",
+    position: 'relative',
+    width: '100%',
     height: 0,
-    paddingTop: "75%"
+    paddingTop: '75%'
   },
   tutorialDetailImageBackground: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     right: 0,
     left: 0,
     bottom: 0,
-    backgroundColor: "#f1f1f1",
-    border: "solid 1px #cecece"
+    backgroundColor: '#f1f1f1',
+    border: 'solid 1px #cecece'
   },
   tutorialDetailImage: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
-    width: "100%"
+    width: '100%'
   },
   tutorialDetailInfoContainer: {
-    float: "left",
+    float: 'left',
     paddingLeft: 20
   },
   tutorialDetailName: {
@@ -82,7 +82,7 @@ const styles = {
     paddingTop: 40
   },
   tutorialDetailDisabledIcon: {
-    color: "#d9534f"
+    color: '#d9534f'
   },
   tutorialDetailsTable: {
     marginTop: 20,
@@ -101,7 +101,7 @@ const styles = {
   tutorialDetailsTableBodyNoWrap: {
     padding: 5,
     border: '1px solid lightgrey',
-    whiteSpace: "pre-wrap"
+    whiteSpace: 'pre-wrap'
   }
 };
 
@@ -157,31 +157,60 @@ export default class TutorialDetail extends React.Component {
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
       // Reserve key 1 for the optional short link.
-      {key: 2, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
-      {key: 3, title: i18n.filterPlatform(),          body: this.props.item.string_platforms},
-      {key: 4, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 5, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      {key: 6, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
-      {key: 7, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
+      {
+        key: 2,
+        title: i18n.filterStudentExperience(),
+        body: getTagString(
+          'student_experience',
+          this.props.item.tags_student_experience
+        )
+      },
+      {
+        key: 3,
+        title: i18n.filterPlatform(),
+        body: this.props.item.string_platforms
+      },
+      {
+        key: 4,
+        title: i18n.filterTopics(),
+        body: getTagString('subject', this.props.item.tags_subject)
+      },
+      {
+        key: 5,
+        title: i18n.filterActivityType(),
+        body: getTagString('activity_type', this.props.item.tags_activity_type)
+      },
+      {
+        key: 6,
+        title: i18n.filterLength(),
+        body: getTagString('length', this.props.item.tags_length)
+      },
+      {
+        key: 7,
+        title: i18n.tutorialDetailInternationalLanguages(),
+        body: this.props.item.language
+      }
       // Reserve key 8 for the optional standards.
     ];
 
-    const imageSrc = this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg");
+    const imageSrc = this.props.item.image
+      .replace('/images/', '/images/fill-480x360/')
+      .replace('.png', '.jpg');
 
     const imageComponent = (
-      <div style={styles.tutorialDetailImageOuterContainer} className="col-xs-12 col-sm-6">
+      <div
+        style={styles.tutorialDetailImageOuterContainer}
+        className="col-xs-12 col-sm-6"
+      >
         <div style={styles.tutorialDetailImageContainer}>
-          <div style={styles.tutorialDetailImageBackground}/>
-          <Image style={styles.tutorialDetailImage} src={imageSrc}/>
+          <div style={styles.tutorialDetailImageBackground} />
+          <Image style={styles.tutorialDetailImage} src={imageSrc} />
         </div>
       </div>
     );
 
     return (
-      <div
-        id="tutorialPopupFullWidth"
-        style={styles.popupFullWidth}
-      >
+      <div id="tutorialPopupFullWidth" style={styles.popupFullWidth}>
         <div
           className="modal"
           id="tutorialPopup"
@@ -190,7 +219,7 @@ export default class TutorialDetail extends React.Component {
         >
           <div
             className="modal-dialog modal-lg"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
             <div className="modal-content">
               <div
@@ -204,10 +233,7 @@ export default class TutorialDetail extends React.Component {
                   type="button"
                   onClick={this.props.closeClicked}
                 >
-                  <span
-                    aria-hidden="true"
-                    style={{fontSize: 48}}
-                  >
+                  <span aria-hidden="true" style={{fontSize: 48}}>
                     ×
                   </span>
                   <span className="sr-only">Close</span>
@@ -227,18 +253,20 @@ export default class TutorialDetail extends React.Component {
                     {imageComponent}
                   </a>
                 )}
-                {this.props.disabledTutorial &&
-                  imageComponent
-                }
+                {this.props.disabledTutorial && imageComponent}
 
-                <div style={styles.tutorialDetailInfoContainer} className="col-xs-12 col-sm-6">
+                <div
+                  style={styles.tutorialDetailInfoContainer}
+                  className="col-xs-12 col-sm-6"
+                >
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>
-                  {this.props.item.orgname !== DoNotShow &&
+                  {this.props.item.orgname !== DoNotShow && (
                     <div style={styles.tutorialDetailPublisher}>
                       {this.props.item.orgname}
-                    </div>}
+                    </div>
+                  )}
                   <div style={styles.tutorialDetailSub}>
                     {getTutorialDetailString(this.props.item)}
                   </div>
@@ -247,7 +275,10 @@ export default class TutorialDetail extends React.Component {
                   </div>
                   {this.props.disabledTutorial && (
                     <div style={styles.tutorialDetailDisabled}>
-                      <i className="fa fa-warning warning-sign" style={styles.tutorialDetailDisabledIcon}/>
+                      <i
+                        className="fa fa-warning warning-sign"
+                        style={styles.tutorialDetailDisabledIcon}
+                      />
                       &nbsp;
                       {i18n.tutorialDetailDisabled()}
                     </div>
@@ -258,11 +289,13 @@ export default class TutorialDetail extends React.Component {
                       target="_blank"
                       onClick={this.startTutorialClicked}
                     >
-                      <button style={{marginTop: 20}}>{i18n.startButton()}</button>
+                      <button style={{marginTop: 20}}>
+                        {i18n.startButton()}
+                      </button>
                     </a>
                   )}
                 </div>
-                <div style={{clear: 'both'}}/>
+                <div style={{clear: 'both'}} />
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
                     {this.props.item.teachers_notes && (
@@ -271,8 +304,14 @@ export default class TutorialDetail extends React.Component {
                           More resources
                         </td>
                         <td style={styles.tutorialDetailsTableBody}>
-                          <a href={this.props.item.teachers_notes} target="_blank">
-                            <i className="fa fa-external-link" aria-hidden={true}/>
+                          <a
+                            href={this.props.item.teachers_notes}
+                            target="_blank"
+                          >
+                            <i
+                              className="fa fa-external-link"
+                              aria-hidden={true}
+                            />
                             &nbsp;
                             {i18n.tutorialDetailsTeacherNotes()}
                           </a>
@@ -280,19 +319,28 @@ export default class TutorialDetail extends React.Component {
                       </tr>
                     )}
                     {!this.props.disabledTutorial &&
-                     this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 && (
-                      <tr key={1}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {i18n.tutorialDetailsShortLink()}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBody}>
-                          <a href={`https://hourofcode.com/${this.props.item.short_code}`} target="_blank">
-                            {`https://hourofcode.com/${this.props.item.short_code}`}
-                          </a>
-                        </td>
-                      </tr>
-                    )}
-                    {tableEntries.map(item =>
+                      this.props.item.tags_activity_type
+                        .split(',')
+                        .indexOf('online-tutorial') !== -1 && (
+                        <tr key={1}>
+                          <td style={styles.tutorialDetailsTableTitle}>
+                            {i18n.tutorialDetailsShortLink()}
+                          </td>
+                          <td style={styles.tutorialDetailsTableBody}>
+                            <a
+                              href={`https://hourofcode.com/${
+                                this.props.item.short_code
+                              }`}
+                              target="_blank"
+                            >
+                              {`https://hourofcode.com/${
+                                this.props.item.short_code
+                              }`}
+                            </a>
+                          </td>
+                        </tr>
+                      )}
+                    {tableEntries.map(item => (
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           {item.title}
@@ -301,17 +349,18 @@ export default class TutorialDetail extends React.Component {
                           {item.body}
                         </td>
                       </tr>
-                    )}
-                    {this.props.localeEnglish && this.props.item.string_standards && (
-                      <tr key={8}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {i18n.tutorialDetailStandards()}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBodyNoWrap}>
-                          {this.props.item.string_standards}
-                        </td>
-                      </tr>
-                    )}
+                    ))}
+                    {this.props.localeEnglish &&
+                      this.props.item.string_standards && (
+                        <tr key={8}>
+                          <td style={styles.tutorialDetailsTableTitle}>
+                            {i18n.tutorialDetailStandards()}
+                          </td>
+                          <td style={styles.tutorialDetailsTableBodyNoWrap}>
+                            {this.props.item.string_standards}
+                          </td>
+                        </tr>
+                      )}
                   </tbody>
                 </table>
               </div>

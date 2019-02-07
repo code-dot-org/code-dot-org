@@ -4,7 +4,7 @@ import {
   blocks,
   getBoardEventDropdownForParam,
   stringifySong,
-  MAKER_CATEGORY,
+  MAKER_CATEGORY
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import * as commands from '@cdo/apps/lib/kits/maker/commands';
 
@@ -77,10 +77,9 @@ describe('maker/dropletConfig.js', () => {
     describe.skip('touchPads', () => {
       [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
         it(`touchPad${pin} dropdown`, () => {
-          expect(getBoardEventDropdownForParam(`touchPad${pin}`)).to.deep.equal([
-            '"down"',
-            '"up"'
-          ]);
+          expect(getBoardEventDropdownForParam(`touchPad${pin}`)).to.deep.equal(
+            ['"down"', '"up"']
+          );
         });
       });
     });
@@ -88,12 +87,10 @@ describe('maker/dropletConfig.js', () => {
 
   describe('stringifySong', () => {
     it('formats note arrays indented with one note per line', () => {
-      expect(stringifySong([['A1', 1/4], ['B2', 1/4], ['C3', 1/2]])).to.equal(
-        '[\n' +
-        '  ["A1",0.25],\n' +
-        '  ["B2",0.25],\n' +
-        '  ["C3",0.5]\n' +
-        ']'
+      expect(
+        stringifySong([['A1', 1 / 4], ['B2', 1 / 4], ['C3', 1 / 2]])
+      ).to.equal(
+        '[\n' + '  ["A1",0.25],\n' + '  ["B2",0.25],\n' + '  ["C3",0.5]\n' + ']'
       );
     });
   });

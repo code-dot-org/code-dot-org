@@ -6,12 +6,12 @@ const CustomMarshaler = require('./CustomMarshaler');
 const DEFAULT_MAX_STEPS = 5e5;
 export const DEFAULT_EXECUTION_INFO = {
   ticks: DEFAULT_MAX_STEPS,
-  checkTimeout: function () {
+  checkTimeout: function() {
     if (this.ticks-- < 0) {
       throw new Error('Infinity');
     }
   },
-  isTerminated: () => false,
+  isTerminated: () => false
 };
 
 /**
@@ -21,12 +21,12 @@ export const DEFAULT_EXECUTION_INFO = {
 function safeReadProperty(object, property) {
   try {
     return object[property];
-  } catch (e) { }
+  } catch (e) {}
 }
 
 function isCanvasImageData(nativeVar) {
   // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
-  if (typeof(Uint8ClampedArray) !== "undefined") {
+  if (typeof Uint8ClampedArray !== 'undefined') {
     return nativeVar instanceof Uint8ClampedArray;
   }
   return nativeVar instanceof CanvasPixelArray;
@@ -36,7 +36,9 @@ export default class CustomMarshalingInterpreter extends Interpreter {
   constructor(code, customMarshaler, opt_initFunc) {
     super(code, (thisInterpreter, scope) => {
       if (!(customMarshaler instanceof CustomMarshaler)) {
-        throw new Error("You must provide a CustomMarshaler to CustomMarshalingInterpreter");
+        throw new Error(
+          'You must provide a CustomMarshaler to CustomMarshalingInterpreter'
+        );
       }
       thisInterpreter.asyncFunctionList = [];
       thisInterpreter.customMarshaler = customMarshaler;
@@ -50,7 +52,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    * Look at a single frame on the stack.
    * @param {number} [i] - optional index to look down to on the stack
    */
-  peekStackFrame(i=0) {
+  peekStackFrame(i = 0) {
     return this.stateStack[this.stateStack.length - 1 - i];
   }
 
@@ -136,8 +138,13 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       }
     }
     var type = typeof customMarshalValue;
-    if (type === 'number' || type === 'boolean' || type === 'string' ||
-        type === 'undefined' || customMarshalValue === null) {
+    if (
+      type === 'number' ||
+      type === 'boolean' ||
+      type === 'string' ||
+      type === 'undefined' ||
+      customMarshalValue === null
+    ) {
       return this.createPrimitive(customMarshalValue);
     } else {
       return this.marshalNativeToInterpreter(customMarshalValue, obj.data);
@@ -197,7 +204,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       if (this.shouldBlockCustomMarshalling_(name, obj)) {
         return false;
       } else {
-        return (name in obj.data) || super.hasProperty(obj, name);
+        return name in obj.data || super.hasProperty(obj, name);
       }
     } else {
       if (this.getNativeParent_(obj, name)) {
@@ -219,16 +226,14 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    *     needs to be called, otherwise undefined.
    * @override
    */
-  setProperty(
-    obj,
-    name,
-    value,
-    opt_descriptor
-  ) {
+  setProperty(obj, name, value, opt_descriptor) {
     name = name.toString();
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
-        if (!obj.data.hasOwnProperty(name) && value instanceof Interpreter.Object) {
+        if (
+          !obj.data.hasOwnProperty(name) &&
+          value instanceof Interpreter.Object
+        ) {
           // When assigning an interpreter object as a property on a
           // CustomMarshal object that doesn't already have a native property
           // with the same name, assume that we expect the object to be
@@ -276,7 +281,6 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     return super.step();
   }
 
-
   // The following overridden methods need to be patched in order to support custom marshaling.
 
   // These changes revert a 10% speedup commit that bypassed hasProperty,
@@ -305,8 +309,10 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     }
     // Typeof operator is unique: it can safely look at non-defined variables.
     var prevNode = this.stateStack[this.stateStack.length - 1].node;
-    if (prevNode['type'] === 'UnaryExpression' &&
-        prevNode['operator'] === 'typeof') {
+    if (
+      prevNode['type'] === 'UnaryExpression' &&
+      prevNode['operator'] === 'typeof'
+    ) {
       return this.UNDEFINED;
     }
     this.throwException(this.REFERENCE_ERROR, nameStr + ' is not defined');
@@ -411,7 +417,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     const hooks = [];
     const apis = {
       executionInfo: DEFAULT_EXECUTION_INFO,
-      ...scope,
+      ...scope
     };
 
     Object.keys(events).forEach(event => {
@@ -422,32 +428,50 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       code.forEach((c, index) => {
         const eventId = `${event}-${index}`;
         // Create a hook that triggers an event inside the interpreter.
-        hooks.push({name: event, func: (...args) => {
-          const eventArgs = {name: eventId, args};
-          currentCallback(interpreter.marshalNativeToInterpreter(eventArgs, null, 5));
-          interpreter.run();
-          return lastReturnValue;
-        }});
-        evalCode += `this['${eventId}']=function(${args ? args.join() : ''}){${c}};`;
+        hooks.push({
+          name: event,
+          func: (...args) => {
+            const eventArgs = {name: eventId, args};
+            currentCallback(
+              interpreter.marshalNativeToInterpreter(eventArgs, null, 5)
+            );
+            interpreter.run();
+            return lastReturnValue;
+          }
+        });
+        evalCode += `this['${eventId}']=function(${
+          args ? args.join() : ''
+        }){${c}};`;
       });
     });
 
     // The event loop pauses the interpreter until the native async function
     // `currentCallback` returns a value. The value contains the name of the event
     // to call, and any arguments.
-    const eventLoop = ';while(true){var _event=_wait();setReturnValue(this[_event.name].apply(null,_event.args));}';
+    const eventLoop =
+      ';while(true){var _event=_wait();setReturnValue(this[_event.name].apply(null,_event.args));}';
 
     interpreter = new CustomMarshalingInterpreter(
       evalCode + eventLoop,
       new CustomMarshaler({objectList: customMarshalObjectList}),
       (interpreter, scope) => {
         interpreter.marshalNativeToInterpreterObject(apis, 5, scope);
-        interpreter.setProperty(scope, '_wait', interpreter.createAsyncFunction(callback => {
-          currentCallback = callback;
-        }));
-        interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
-          lastReturnValue = interpreter.marshalInterpreterToNative(returnValue);
-        }));
+        interpreter.setProperty(
+          scope,
+          '_wait',
+          interpreter.createAsyncFunction(callback => {
+            currentCallback = callback;
+          })
+        );
+        interpreter.setProperty(
+          scope,
+          'setReturnValue',
+          interpreter.createNativeFunction(returnValue => {
+            lastReturnValue = interpreter.marshalInterpreterToNative(
+              returnValue
+            );
+          })
+        );
       }
     );
     interpreter.run();
@@ -466,29 +490,23 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    * @param {Object} interpreterObject Optional existing interpreter object
    * @return {!Object} The interpreter object, which was created if needed.
    */
-  marshalNativeToInterpreterObject(
-    nativeObject,
-    maxDepth,
-    interpreterObject
-  ) {
+  marshalNativeToInterpreterObject(nativeObject, maxDepth, interpreterObject) {
     var retVal = interpreterObject || this.createObject(this.OBJECT);
     var isFunc = this.isa(retVal, this.FUNCTION);
     for (var prop in nativeObject) {
       var value = safeReadProperty(nativeObject, prop);
-      if (isFunc &&
-          (value === Function.prototype.trigger ||
-           value === Function.prototype.inherits)) {
+      if (
+        isFunc &&
+        (value === Function.prototype.trigger ||
+          value === Function.prototype.inherits)
+      ) {
         // Don't marshal these that were added by jquery or else we will recurse
         continue;
       }
       this.setProperty(
         retVal,
         prop,
-        this.marshalNativeToInterpreter(
-          value,
-          nativeObject,
-          maxDepth
-        )
+        this.marshalNativeToInterpreter(value, nativeObject, maxDepth)
       );
     }
     return retVal;
@@ -511,16 +529,26 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       return this.UNDEFINED;
     }
     var i, retVal;
-    if (typeof maxDepth === "undefined") {
+    if (typeof maxDepth === 'undefined') {
       maxDepth = Infinity; // default to infinite levels of depth
     }
-    if (this.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
-      return this.customMarshaler.createCustomMarshalObject(this, nativeVar, nativeParentObj);
+    if (
+      this.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)
+    ) {
+      return this.customMarshaler.createCustomMarshalObject(
+        this,
+        nativeVar,
+        nativeParentObj
+      );
     }
     if (nativeVar instanceof Array) {
       retVal = this.createObject(this.ARRAY);
       for (i = 0; i < nativeVar.length; i++) {
-        retVal.properties[i] = this.marshalNativeToInterpreter(nativeVar[i], null, maxDepth - 1);
+        retVal.properties[i] = this.marshalNativeToInterpreter(
+          nativeVar[i],
+          null,
+          maxDepth - 1
+        );
       }
       retVal.length = nativeVar.length;
     } else if (isCanvasImageData(nativeVar)) {
@@ -533,13 +561,16 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     } else if (nativeVar instanceof Function) {
       var makeNativeOpts = {
         nativeFunc: nativeVar,
-        nativeParentObj: nativeParentObj,
+        nativeParentObj: nativeParentObj
       };
       if (this.asyncFunctionList.indexOf(nativeVar) !== -1) {
         // Mark if this should be nativeIsAsync:
         makeNativeOpts.nativeIsAsync = true;
       }
-      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(nativeParentObj, nativeVar);
+      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(
+        nativeParentObj,
+        nativeVar
+      );
       // Add extra options if the parent of this function is in our custom marshal
       // modified object list:
       for (var prop in extraOpts) {
@@ -585,10 +616,10 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    *     otherwise it will use the js interpreter.
    * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
    */
-  static evalWith(code, scope, {asyncFunctionList, legacy}={}) {
+  static evalWith(code, scope, {asyncFunctionList, legacy} = {}) {
     const globals = {
       executionInfo: DEFAULT_EXECUTION_INFO,
-      ...scope,
+      ...scope
     };
 
     if (legacy) {
@@ -600,7 +631,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
         args.push(globals[k]);
       }
       params.push(code);
-      var ctor = function () {
+      var ctor = function() {
         return Function.apply(this, params);
       };
       ctor.prototype = Function.prototype;
@@ -628,23 +659,33 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       var nativeArray = [];
       nativeArray.length = interpreterVar.length;
       for (var i = 0; i < nativeArray.length; i++) {
-        nativeArray[i] = this.marshalInterpreterToNative(interpreterVar.properties[i]);
+        nativeArray[i] = this.marshalInterpreterToNative(
+          interpreterVar.properties[i]
+        );
       }
       return nativeArray;
-    } else if (this.isa(interpreterVar, this.OBJECT) ||
-               interpreterVar.type === 'object') {
+    } else if (
+      this.isa(interpreterVar, this.OBJECT) ||
+      interpreterVar.type === 'object'
+    ) {
       var nativeObject = {};
       for (var prop in interpreterVar.properties) {
         if (interpreterVar.notEnumerable[prop]) {
           // skip properties which are not enumerable.
           continue;
         }
-        nativeObject[prop] = this.marshalInterpreterToNative(interpreterVar.properties[prop]);
+        nativeObject[prop] = this.marshalInterpreterToNative(
+          interpreterVar.properties[prop]
+        );
       }
       return nativeObject;
     } else if (this.isa(interpreterVar, this.FUNCTION)) {
-      if (CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction) {
-        return CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(interpreterVar);
+      if (
+        CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction
+      ) {
+        return CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(
+          interpreterVar
+        );
       } else {
         // Just return the interpreter object if we can't convert it. This is needed
         // for passing interpreter callback functions into native.
@@ -671,11 +712,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
   createNativeCallbackForAsyncFunction_(opts, callback) {
     return nativeValue => {
       callback(
-        this.marshalNativeToInterpreter(
-          nativeValue,
-          null,
-          opts.maxDepth
-        )
+        this.marshalNativeToInterpreter(nativeValue, null, opts.maxDepth)
       );
     };
   }
@@ -694,20 +731,18 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    */
   createNativeInterpreterCallback_(opts, intFunc) {
     return (...args) => {
-      const intArgs = args.map(arg => this.marshalNativeToInterpreter(
-        arg,
-        null,
-        opts.maxDepth
-      ));
+      const intArgs = args.map(arg =>
+        this.marshalNativeToInterpreter(arg, null, opts.maxDepth)
+      );
       // Shift a CallExpression node on the stack that already has its func_,
       // arguments, and other state populated:
       var state = opts.callbackState || {};
       state.node = {
         type: 'CallExpression',
-        arguments: intArgs, /* this just needs to be an array of the same size */
+        arguments: intArgs /* this just needs to be an array of the same size */,
         // give this node an end so that the interpreter doesn't treat it
         // like polyfill code and do weird weird scray terrible things.
-        end: 1,
+        end: 1
       };
       state.doneCallee_ = true;
       state.func_ = intFunc;
@@ -761,7 +796,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       nativeParentObj,
       maxDepth,
       nativeIsAsync,
-      nativeCallsBackInterpreter,
+      nativeCallsBackInterpreter
     } = opts;
     return (...args) => {
       let nativeArgs = [];
@@ -770,17 +805,25 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       } else {
         // Call the native function after marshalling parameters:
         for (var i = 0; i < args.length; i++) {
-          if (nativeIsAsync && (i === args.length - 1)) {
+          if (nativeIsAsync && i === args.length - 1) {
             // Async functions receive a native callback method as their last
             // parameter, and we want to wrap that callback to ease marshalling:
-            nativeArgs[i] = this.createNativeCallbackForAsyncFunction_(opts, args[i]);
-          } else if (nativeCallsBackInterpreter &&
-                     typeof args[i] === 'object' &&
-                     this.isa(args[i], this.FUNCTION)) {
+            nativeArgs[i] = this.createNativeCallbackForAsyncFunction_(
+              opts,
+              args[i]
+            );
+          } else if (
+            nativeCallsBackInterpreter &&
+            typeof args[i] === 'object' &&
+            this.isa(args[i], this.FUNCTION)
+          ) {
             // A select class of native functions is aware of the interpreter and
             // capable of calling the interpreter on the stack immediately. We
             // marshal these differently:
-            nativeArgs[i] = this.createNativeInterpreterCallback_(opts, args[i]);
+            nativeArgs[i] = this.createNativeInterpreterCallback_(
+              opts,
+              args[i]
+            );
           } else {
             nativeArgs[i] = this.marshalInterpreterToNative(args[i]);
           }
@@ -791,18 +834,15 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       } catch (e) {
         if (!(e instanceof Error)) {
           e = new Error(e);
-          e.stack = 'Error does not have stack information. Throw `new Error()` '
-            + 'instead of a string to get a full stack trace. Exception thrown '
-            + `when calling ${nativeFunc} on ${nativeParentObj}`;
+          e.stack =
+            'Error does not have stack information. Throw `new Error()` ' +
+            'instead of a string to get a full stack trace. Exception thrown ' +
+            `when calling ${nativeFunc} on ${nativeParentObj}`;
         }
         e.native = true;
         throw e;
       }
-      return this.marshalNativeToInterpreter(
-        nativeRetVal,
-        null,
-        maxDepth
-      );
+      return this.marshalNativeToInterpreter(nativeRetVal, null, maxDepth);
     };
   }
 }

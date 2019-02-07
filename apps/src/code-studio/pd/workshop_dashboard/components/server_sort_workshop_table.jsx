@@ -25,10 +25,10 @@ export default class ServerSortWorkshopTable extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {orderBy: "date desc"};
+    this.state = {orderBy: 'date desc'};
   }
 
-  handleWorkshopsReceived = (workshops) => {
+  handleWorkshopsReceived = workshops => {
     this.workshops = workshops;
   };
 
@@ -38,7 +38,7 @@ export default class ServerSortWorkshopTable extends React.Component {
     }
   };
 
-  handleTableSort = (sort) => {
+  handleTableSort = sort => {
     const limit = this.workshops.limit;
     const workshopCount = this.workshops.total_count;
 

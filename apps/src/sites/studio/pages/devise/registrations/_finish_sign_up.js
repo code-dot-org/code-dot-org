@@ -1,13 +1,22 @@
 import $ from 'jquery';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import firehoseClient from "@cdo/apps/lib/util/firehose";
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-radio"];
-const STUDENT_ONLY_FIELDS = ["#student-name-label", "#gender-dropdown", "#age-dropdown", "#student-consent"];
+const TEACHER_ONLY_FIELDS = [
+  '#teacher-name-label',
+  '#school-info-inputs',
+  '#email-preference-radio'
+];
+const STUDENT_ONLY_FIELDS = [
+  '#student-name-label',
+  '#gender-dropdown',
+  '#age-dropdown',
+  '#student-consent'
+];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -17,11 +26,11 @@ const {usIp, signUpUID} = scriptData;
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
   country: usIp ? 'United States' : '',
-  countryCode: usIp ? 'US' : '',
+  countryCode: usIp ? 'US' : ''
 };
 
 $(document).ready(() => {
-  const schoolInfoMountPoint = document.getElementById("school-info-inputs");
+  const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   init();
 
   function init() {
@@ -29,34 +38,38 @@ $(document).ready(() => {
     renderSchoolInfo();
   }
 
-  $(".finish-signup").submit(function () {
+  $('.finish-signup').submit(function() {
     // Clean up school data and set age for teachers.
-    if (getUserType() === "teacher") {
+    if (getUserType() === 'teacher') {
       cleanSchoolInfo();
-      $("#user_age").val("21+");
+      $('#user_age').val('21+');
     }
   });
 
   function cleanSchoolInfo() {
     // The country set in our form is the long-form string name of the country.
     // We want it to be the 2-letter country code, so we change the value on form submission.
-    const countryInputEl = $('input[name="user[school_info_attributes][country]"]');
+    const countryInputEl = $(
+      'input[name="user[school_info_attributes][country]"]'
+    );
     countryInputEl.val(schoolData.countryCode);
 
     // Clear school_id if the searched school is not found.
     if (schoolData.ncesSchoolId === '-1') {
-      const schoolIdEl = $('input[name="user[school_info_attributes][school_id]"]');
-      schoolIdEl.val("");
+      const schoolIdEl = $(
+        'input[name="user[school_info_attributes][school_id]"]'
+      );
+      schoolIdEl.val('');
     }
   }
 
-  $("#user_user_type").change(function () {
+  $('#user_user_type').change(function() {
     var value = $(this).val();
     setUserType(value);
   });
 
   function getUserType() {
-    return $("#user_user_type")[0].value;
+    return $('#user_user_type')[0].value;
   }
 
   function setUserType(userType) {
@@ -64,7 +77,7 @@ $(document).ready(() => {
       trackUserType(userType);
     }
 
-    if (userType === "teacher") {
+    if (userType === 'teacher') {
       switchToTeacher();
     } else {
       // Show student fields by default.
@@ -87,7 +100,7 @@ $(document).ready(() => {
       study: 'account-sign-up-v5',
       study_group: 'experiment-v4',
       event: 'select-' + type,
-      data_string: signUpUID,
+      data_string: signUpUID
     });
   }
 
@@ -104,7 +117,7 @@ $(document).ready(() => {
       ReactDOM.render(
         <div style={{padding: 10}}>
           <h5>{i18n.schoolInformationHeader()}</h5>
-          <hr/>
+          <hr />
           <SchoolInfoInputs
             schoolType={schoolData.schoolType}
             country={schoolData.country}

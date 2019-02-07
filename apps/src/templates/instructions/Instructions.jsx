@@ -11,7 +11,7 @@ const styles = {
   },
   notInTopPane: {
     overflow: 'auto'
-  },
+  }
 };
 
 /**
@@ -29,11 +29,9 @@ class Instructions extends React.Component {
     longInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
-    inputOutputTable: PropTypes.arrayOf(
-      PropTypes.arrayOf(PropTypes.number)
-    ),
+    inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
-    onResize: PropTypes.func,
+    onResize: PropTypes.func
   };
 
   render() {
@@ -48,34 +46,34 @@ class Instructions extends React.Component {
     // These instructions may contain spans and images as determined by
     // substituteInstructionImages
     return (
-      <div style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}>
-        {this.props.longInstructions &&
+      <div
+        style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
+      >
+        {this.props.longInstructions && (
           <MarkdownInstructions
             markdown={this.props.longInstructions}
             onResize={this.props.onResize}
             inTopPane={this.props.inTopPane}
           />
-        }
-        { /* Note: In this case props.shortInstructions might be undefined, but we
+        )}
+        {/* Note: In this case props.shortInstructions might be undefined, but we
           still want to render NonMarkdownInstructions to get the puzzle title */
-        !this.props.longInstructions &&
+        !this.props.longInstructions && (
           <NonMarkdownInstructions
             puzzleTitle={this.props.puzzleTitle}
             shortInstructions={this.props.shortInstructions}
             instructions2={this.props.instructions2}
           />
-        }
+        )}
 
-        {this.props.inputOutputTable &&
-          <InputOutputTable data={this.props.inputOutputTable}/>
-        }
+        {this.props.inputOutputTable && (
+          <InputOutputTable data={this.props.inputOutputTable} />
+        )}
 
-        {this.props.imgURL && !this.props.inTopPane &&
-          <img className="aniGif example-image" src={this.props.imgURL}/>
-        }
-        {this.props.imgURL && this.props.inTopPane &&
-          <AniGifPreview/>
-        }
+        {this.props.imgURL && !this.props.inTopPane && (
+          <img className="aniGif example-image" src={this.props.imgURL} />
+        )}
+        {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
         {this.props.authoredHints}
       </div>
     );

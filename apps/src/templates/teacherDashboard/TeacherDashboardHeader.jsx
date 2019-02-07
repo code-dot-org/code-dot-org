@@ -8,13 +8,13 @@ import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 const styles = {
   headerContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
-  },
+    justifyContent: 'space-between'
+  }
 };
 
 export default class TeacherDashboardHeader extends React.Component {
   static propTypes = {
-    sectionName: PropTypes.string.isRequired,
+    sectionName: PropTypes.string.isRequired
   };
 
   render() {
@@ -28,9 +28,9 @@ export default class TeacherDashboardHeader extends React.Component {
         />
         <div style={styles.headerContainer}>
           <h1>{this.props.sectionName}</h1>
-          <SelectSectionDropdown/>
+          <SelectSectionDropdown />
         </div>
-        <TeacherDashboardNavigation/>
+        <TeacherDashboardNavigation />
       </div>
     );
   }

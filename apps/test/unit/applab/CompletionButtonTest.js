@@ -4,7 +4,6 @@ import {mount} from 'enzyme';
 import {UnconnectedCompletionButton as CompletionButton} from '@cdo/apps/templates/CompletionButton';
 
 describe('CompletionButton', () => {
-
   it('non-project level, can submit, havent', () => {
     const completionButton = mount(
       <CompletionButton

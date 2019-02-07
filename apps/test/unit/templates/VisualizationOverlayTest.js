@@ -5,7 +5,8 @@ import {mount} from 'enzyme';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 
 describe('VisualizationOverlay', () => {
-  const TEST_APP_WIDTH = 300, TEST_APP_HEIGHT = 200;
+  const TEST_APP_WIDTH = 300,
+    TEST_APP_HEIGHT = 200;
 
   it('renders no children if no children are given', () => {
     const visualizationOverlay = mount(
@@ -68,7 +69,9 @@ describe('VisualizationOverlay', () => {
     expect(svg.props().baseProfile).to.equal('full');
     expect(svg.props().width).to.equal(TEST_APP_WIDTH);
     expect(svg.props().height).to.equal(TEST_APP_HEIGHT);
-    expect(svg.props().viewBox).to.equal(`0 0 ${TEST_APP_WIDTH} ${TEST_APP_HEIGHT}`);
+    expect(svg.props().viewBox).to.equal(
+      `0 0 ${TEST_APP_WIDTH} ${TEST_APP_HEIGHT}`
+    );
     expect(svg.props().pointerEvents).to.equal('none');
   }
 

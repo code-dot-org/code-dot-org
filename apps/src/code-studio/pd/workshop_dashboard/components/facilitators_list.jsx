@@ -23,10 +23,6 @@ export default class FacilitatorsList extends React.Component {
       );
     });
 
-    return (
-      <ul>
-        {listItems}
-      </ul>
-    );
+    return <ul>{listItems}</ul>;
   }
 }

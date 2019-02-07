@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Button from './Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import BaseDialog from './BaseDialog';
-import DialogFooter from "./teacherDashboard/DialogFooter";
+import DialogFooter from './teacherDashboard/DialogFooter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
@@ -41,12 +41,7 @@ export default class FallbackPlayerCaptionDialogLink extends React.Component {
           isDialogOpen={this.state.open}
           handleClose={this.close}
         />
-        {!this.props.inDialog && (
-          <span>
-            |
-            &nbsp;
-          </span>
-        )}
+        {!this.props.inDialog && <span>| &nbsp;</span>}
         <a
           className="ui-test-fallback-player-caption-dialog-link"
           onClick={this.open}
@@ -76,9 +71,7 @@ class FallbackPlayerCaptionDialog extends Component {
         <h2 className="ui-test-fallback-player-caption-dialog">
           {i18n.fallbackVideoClosedCaptioningDialogHeading()}
         </h2>
-        <div>
-          {i18n.fallbackVideoClosedCaptioningDialogBody()}
-        </div>
+        <div>{i18n.fallbackVideoClosedCaptioningDialogBody()}</div>
         <div style={styles.dialogLinkContainer}>
           <a
             style={styles.dialogLink}

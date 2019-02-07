@@ -1,22 +1,20 @@
-import {
-  channels as channelsApi,
-} from '../../clientApi';
+import {channels as channelsApi} from '../../clientApi';
 
 // Action types
 
 const SHOW_SHARE_DIALOG = 'shareDialog/SHOW_SHARE_DIALOG';
 const HIDE_SHARE_DIALOG = 'shareDialog/HIDE_SHARE_DIALOG';
-const UNPUBLISH_REQUEST  = 'shareDialog/UNPUBLISH_REQUEST';
-const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
-const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
-const SAVE_REPLAY_LOG  = 'shareDialog/SAVE_REPLAY_LOG';
+const UNPUBLISH_REQUEST = 'shareDialog/UNPUBLISH_REQUEST';
+const UNPUBLISH_SUCCESS = 'shareDialog/UNPUBLISH_SUCCESS';
+const UNPUBLISH_FAILURE = 'shareDialog/UNPUBLISH_FAILURE';
+const SAVE_REPLAY_LOG = 'shareDialog/SAVE_REPLAY_LOG';
 
 // Reducer
 
 const initialState = {
   isOpen: false,
   isUnpublishPending: false,
-  didUnpublish: false,
+  didUnpublish: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -25,28 +23,28 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         ...initialState,
-        isOpen: true,
+        isOpen: true
       };
     case HIDE_SHARE_DIALOG:
       return {
         ...state,
-        ...initialState,
+        ...initialState
       };
     case UNPUBLISH_REQUEST:
       return {
         ...state,
-        isUnpublishPending: true,
+        isUnpublishPending: true
       };
     case UNPUBLISH_SUCCESS:
       return {
         ...state,
         ...initialState,
-        didUnpublish: true,
+        didUnpublish: true
       };
     case UNPUBLISH_FAILURE:
       return {
         ...state,
-        isUnpublishPending: false,
+        isUnpublishPending: false
       };
     case SAVE_REPLAY_LOG:
       return {

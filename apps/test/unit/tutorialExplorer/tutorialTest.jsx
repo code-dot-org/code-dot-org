@@ -18,29 +18,26 @@ const FAKE_TUTORIAL = {
   tags_programming_language: '008',
   string_detail_grades: 'Ages 8 and up.',
   string_detail_programming_languages: 'FORTRAN',
-  string_detail_platforms: 'iOS',
+  string_detail_platforms: 'iOS'
 };
 
 describe('Tutorial', () => {
   it('renders with tutorial details', () => {
     const wrapper = shallow(
-      <Tutorial
-        item={FAKE_TUTORIAL}
-        tutorialClicked={CALLBACK}
-      />
+      <Tutorial item={FAKE_TUTORIAL} tutorialClicked={CALLBACK} />
     );
     expect(wrapper).to.containMatchingElement(
       <div onClick={CALLBACK}>
         <div>
-          <div/>
+          <div />
           <LazyLoad offset={1000}>
             <Image
               src="/images/fill-480x360/httyd.jpg"
               style={{
-                position: "absolute",
+                position: 'absolute',
                 top: 0,
                 left: 0,
-                width: "100%"
+                width: '100%'
               }}
             />
           </LazyLoad>

@@ -2,20 +2,16 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
-import Button from "@cdo/apps/templates/Button";
+import Button from '@cdo/apps/templates/Button';
 import SetUpMessage from '@cdo/apps/templates/studioHomepages/SetUpMessage';
-import {
-  UnconnectedSetUpSections as SetUpSections,
-} from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import { combineReducers, createStore } from 'redux';
+import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import {combineReducers, createStore} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {
     const wrapper = shallow(
-      <SetUpSections
-        beginEditingNewSection={() => {}}
-      />
+      <SetUpSections beginEditingNewSection={() => {}} />
     );
     const instance = wrapper.instance();
 
@@ -33,11 +29,9 @@ describe('SetUpSections', () => {
   it('calls beginEditingNewSection with no arguments when button is clicked', () => {
     const store = createStore(combineReducers({isRtl}));
     const spy = sinon.spy();
-    const wrapper = shallow(
-      <SetUpSections
-        beginEditingNewSection={spy}
-      />
-    ).dive({context: {store}}).dive();
+    const wrapper = shallow(<SetUpSections beginEditingNewSection={spy} />)
+      .dive({context: {store}})
+      .dive();
     expect(spy).not.to.have.been.called;
 
     wrapper.find(Button).simulate('click', {fake: 'event'});
