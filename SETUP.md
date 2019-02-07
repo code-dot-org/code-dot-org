@@ -20,7 +20,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `rbenv rehash`
 1. `cd code-dot-org`
 1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.)
-1. `bundle exec rake install:hooks`
+1. `rake install:hooks`
+    <details>
+        <summary>Troubleshoot: `rake aborted!..` </summary>
+
+        If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this."
+            * Follow the instructions and add `bundle exec` in front of the command
+    </details>
     <details>
         <summary>Troubleshoot: wrong version of rake </summary>
 
