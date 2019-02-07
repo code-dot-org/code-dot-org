@@ -186,9 +186,6 @@ function makeNewSpriteLocation(animation, loc) {
 // Updated
 function setAnimation(sprite, animation) {
   var setOneAnimation = function(sprite) {
-    if(sprite.getAnimationLabel()) {
-      removeFromCostumeGroup(sprite);
-    }
     sprite.setAnimation(animation);
     sprite.scale /= sprite.baseScale;
     sprite.baseScale = 100 / Math.max(100,
@@ -198,9 +195,18 @@ function setAnimation(sprite, animation) {
     addToCostumeGroup(sprite);
   };
   if(!Array.isArray(sprite)) {
-    setOneAnimation(sprite);
+    if(sprite.getAnimationLabel()) {
+      removeFromCostumeGroup(sprite, sprite.getAnimationLabel());
+    }
+  	setOneAnimation(sprite);
   } else {
-    sprite.forEach(function(s) { setOneAnimation(s); });
+    console.log(sprite.length);
+    if(sprite.length > 0) {
+      if(sprite[0].getAnimationLabel()) {
+        delete costumeGroups[sprite[0].getAnimationLabel()];
+      }
+      sprite.forEach(function(s) { setOneAnimation(s); });
+    }
   }
 }
 
@@ -215,11 +221,13 @@ function addToCostumeGroup(sprite) {
 }
 
 // New
-function removeFromCostumeGroup(sprite) {
-  var array = costumeGroups[sprite.getAnimationLabel()];
+function removeFromCostumeGroup(sprite, oldCostume) {
+  var array = costumeGroups[oldCostume];
   var index = array.indexOf(sprite);
   array.splice(index, 1);
-  console.log(array.toString());
+  if(costumeGroups[oldCostume].length < 1) {
+    delete costumeGroups[oldCostume];
+  }
 }
 
 function makeNewSprite(animation, x, y) {
