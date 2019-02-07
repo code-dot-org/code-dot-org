@@ -49,6 +49,10 @@ const styles = {
   buttonWithMargin: {
     marginRight: 5
   },
+  verticalAlign: {
+    display: 'flex',
+    alignItems: 'center',
+  },
 };
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
@@ -276,7 +280,7 @@ class ManageStudentsTable extends Component {
           />
         }
         {numberOfEditingRows <= 1 &&
-          <span>
+          <span style={styles.verticalAlign}>
             <div style={styles.headerName}>
               {i18n.actions()}
             </div>
@@ -294,7 +298,7 @@ class ManageStudentsTable extends Component {
 
   projectSharingHeaderFormatter = () => {
     return (
-      <span>
+      <span style={styles.verticalAlign}>
         <div
           style={styles.headerName}
           data-for="explain-sharing"

@@ -73,7 +73,14 @@ $(document).ready(function () {
         <Router basename={baseUrl}>
           <Route
             path="/"
-            component={props => <TeacherDashboard {...props} studioUrlPrefix={scriptData.studioUrlPrefix} pegasusUrlPrefix={scriptData.pegasusUrlPrefix}/>}
+            component={props =>
+              <TeacherDashboard
+                {...props}
+                studioUrlPrefix={scriptData.studioUrlPrefix}
+                pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
+                sectionName={section.name}
+              />
+            }
           />
         </Router>
       </Provider>,

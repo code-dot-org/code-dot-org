@@ -8,8 +8,6 @@ const styles = {
   container: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end',
-    marginBottom: 10,
   },
   dropdown: {
     marginLeft: 10,
