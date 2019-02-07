@@ -16,7 +16,7 @@ export default class DesignModeHeaders extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    showMakerToggle: PropTypes.bool.isRequired,
+    showMakerToggle: PropTypes.bool.isRequired
   };
 
   onToggleToolbox = () => this.props.onToggleToolbox();
@@ -32,8 +32,8 @@ export default class DesignModeHeaders extends React.Component {
       cursor: 'pointer',
       color: this.props.isRunning ? color.dark_charcoal : color.lighter_purple,
       ':hover': {
-        color: color.white,
-      },
+        color: color.white
+      }
     };
 
     if (collapse) {
@@ -78,8 +78,8 @@ export default class DesignModeHeaders extends React.Component {
       showToolboxClickable: {
         marginLeft: 18,
         ':hover': {
-          color: color.white,
-        },
+          color: color.white
+        }
       },
       iconContainer: {
         float: 'right',
@@ -110,7 +110,11 @@ export default class DesignModeHeaders extends React.Component {
         hasFocus={hasFocus}
         style={{color: 'white'}}
       >
-        <PaneSection id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
+        <PaneSection
+          id="design-toolbox-header"
+          className="workspace-header"
+          style={styles.toolboxHeader}
+        >
           {this.hideToolboxIcon()}
           {settingsCog}
           <span>{applabMsg.designToolboxHeader()}</span>
@@ -139,7 +143,9 @@ export default class DesignModeHeaders extends React.Component {
           onClick={this.props.handleVersionHistory}
         />
         <PaneSection id="design-workspace-header" className="workspace-header">
-          {this.props.showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon/>}
+          {this.props.showProjectTemplateWorkspaceIcon && (
+            <ProjectTemplateWorkspaceIcon />
+          )}
           <span>{applabMsg.designWorkspaceHeader()}</span>
         </PaneSection>
       </PaneHeader>

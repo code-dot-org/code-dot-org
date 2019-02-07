@@ -5,9 +5,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
-import color from "@cdo/apps/util/color";
-import { levelType } from './progressTypes';
-import { DOT_SIZE, DIAMOND_DOT_SIZE } from './progressStyles';
+import color from '@cdo/apps/util/color';
+import {levelType} from './progressTypes';
+import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 
 const styles = {
   main: {
@@ -25,14 +25,14 @@ const styles = {
     left: 0,
     right: 0,
     // dot size, plus borders, plus margin, minus our height of "background"
-    top: (DOT_SIZE + 4 + 6 - 10) / 2,
+    top: (DOT_SIZE + 4 + 6 - 10) / 2
   },
   backgroundDiamond: {
-    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2,
+    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2
   },
   backgroundPill: {
     // pill has height of 18, border of 2, padding of 6, margin of 3
-    top: (18 + 4 + 12 + 6 - 10) / 2,
+    top: (18 + 4 + 12 + 6 - 10) / 2
   },
   backgroundFirst: {
     left: 15
@@ -41,16 +41,16 @@ const styles = {
     right: 15
   },
   container: {
-    position: 'relative',
+    position: 'relative'
   },
   diamondContainer: {
     // Height needed only by IE to get diamonds to line up properly
-    height: 36,
+    height: 36
   },
   pillContainer: {
     marginRight: 2,
     // Height needed only by IE to get pill to line up properly
-    height: 37,
+    height: 37
   }
 };
 
@@ -62,26 +62,29 @@ class ProgressBubbleSet extends React.Component {
     //TODO: (ErinB) probably change to use just number during post launch clean-up.
     selectedSectionId: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number,
+      PropTypes.number
     ]),
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number,
+      PropTypes.number
     ]),
     hideToolTips: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool
   };
 
   render() {
-    const { levels, disabled, style, selectedSectionId, selectedStudentId } = this.props;
+    const {
+      levels,
+      disabled,
+      style,
+      selectedSectionId,
+      selectedStudentId
+    } = this.props;
 
     return (
       <div style={{...styles.main, ...style}}>
         {levels.map((level, index) => (
-          <div
-            style={styles.withBackground}
-            key={index}
-          >
+          <div style={styles.withBackground} key={index}>
             <div
               style={[
                 styles.background,
@@ -95,7 +98,7 @@ class ProgressBubbleSet extends React.Component {
               style={[
                 styles.container,
                 level.isUnplugged && styles.pillContainer,
-                level.isConceptLevel && styles.diamondContainer,
+                level.isConceptLevel && styles.diamondContainer
               ]}
             >
               <ProgressBubble

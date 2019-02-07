@@ -9,11 +9,11 @@ export const dismissedRedirect = (sessionKey, name) => {
   return (dismissedRedirects || '').split(',').includes(name);
 };
 
-export const dismissedRedirectWarning = (name) => {
+export const dismissedRedirectWarning = name => {
   return dismissedRedirect(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, name);
 };
 
-export const dismissedRedirectDialog = (name) => {
+export const dismissedRedirectDialog = name => {
   return dismissedRedirect(DISMISSED_REDIRECT_DIALOGS_SESSION_KEY, name);
 };
 
@@ -27,10 +27,10 @@ export const onDismissRedirect = (sessionKey, name) => {
   sessionStorage.setItem(sessionKey, dismissedRedirects);
 };
 
-export const onDismissRedirectWarning = (name) => {
+export const onDismissRedirectWarning = name => {
   return onDismissRedirect(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, name);
 };
 
-export const onDismissRedirectDialog = (name) => {
+export const onDismissRedirectDialog = name => {
   return onDismissRedirect(DISMISSED_REDIRECT_DIALOGS_SESSION_KEY, name);
 };

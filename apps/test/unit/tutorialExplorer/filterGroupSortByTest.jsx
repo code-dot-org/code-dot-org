@@ -8,8 +8,8 @@ import i18n from '@cdo/tutorialExplorer/locale';
 
 const FAKE_ON_SORT_BY = () => {};
 const DEFAULT_PROPS = {
-  defaultSortBy: "popularityrank",
-  sortBy: "popularityrank",
+  defaultSortBy: 'popularityrank',
+  sortBy: 'popularityrank',
   onUserInput: FAKE_ON_SORT_BY
 };
 
@@ -36,13 +36,11 @@ describe('FilterGroupSortBy', () => {
   it('hits a callback when sort settings change', () => {
     const spy = sinon.spy();
     const wrapper = shallow(
-      <FilterGroupSortBy
-        {...DEFAULT_PROPS}
-        onUserInput={spy}
-      />
+      <FilterGroupSortBy {...DEFAULT_PROPS} onUserInput={spy} />
     );
-    wrapper.find('select').simulate('change', {target:{value: 'displayweight'}});
+    wrapper
+      .find('select')
+      .simulate('change', {target: {value: 'displayweight'}});
     expect(spy).to.have.been.calledOnce.and.calledWith('displayweight');
   });
-
 });

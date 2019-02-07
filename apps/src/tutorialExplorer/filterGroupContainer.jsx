@@ -4,11 +4,11 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getResponsiveValue } from './responsive';
+import {getResponsiveValue} from './responsive';
 
 const styles = {
   filterGroupOuter: {
-    float: "left",
+    float: 'left',
     paddingBottom: 20,
     paddingRight: 40,
     paddingLeft: 10
@@ -33,9 +33,7 @@ export default class FilterGroupContainer extends React.Component {
 
     return (
       <div style={filterGroupOuterStyle}>
-        <div style={styles.filterGroupText}>
-          {this.props.text}
-        </div>
+        <div style={styles.filterGroupText}>{this.props.text}</div>
         {this.props.children}
       </div>
     );

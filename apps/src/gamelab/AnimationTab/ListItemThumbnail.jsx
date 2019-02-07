@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
-import color from "../../util/color";
+import color from '../../util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
@@ -81,7 +81,9 @@ export default class ListItemThumbnail extends React.Component {
   render() {
     const styles = _.merge({}, staticStyles, {
       root: {
-        border: 'solid 2px ' + (this.props.isSelected ? color.purple : color.light_gray)
+        border:
+          'solid 2px ' +
+          (this.props.isSelected ? color.purple : color.light_gray)
       }
     });
     let playBehavior;

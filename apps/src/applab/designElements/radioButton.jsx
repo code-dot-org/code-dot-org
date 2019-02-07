@@ -72,7 +72,8 @@ class RadioButtonProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
 
     // TODO:
     // enabled (p2)
@@ -89,8 +90,14 @@ class RadioButtonEvents extends React.Component {
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' checked? " + getChecked("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -102,8 +109,9 @@ class RadioButtonEvents extends React.Component {
   render() {
     const element = this.props.element;
     const changeName = 'Change';
-    const changeDesc = 'Triggered when the radio button state changes ' +
-        'both from selected to de-selected, and from de-selected to selected.';
+    const changeDesc =
+      'Triggered when the radio button state changes ' +
+      'both from selected to de-selected, and from de-selected to selected.';
 
     return (
       <div id="eventRowContainer">
@@ -113,7 +121,7 @@ class RadioButtonEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -135,9 +143,11 @@ function getInitialGroupId() {
   // Get the most recently added button on the current screen
   const lastRadioButton = getLastRadioButtonOnCurrentScreen();
 
-  if (lastRadioButton && lastRadioButton.getAttribute('name') &&
-      lastRadioButton.getAttribute('name').trim() !== '') {
-
+  if (
+    lastRadioButton &&
+    lastRadioButton.getAttribute('name') &&
+    lastRadioButton.getAttribute('name').trim() !== ''
+  ) {
     // We have an existing radio button, use that group id
     return lastRadioButton.getAttribute('name');
   }
@@ -177,7 +187,7 @@ export default {
   PropertyTab: RadioButtonProperties,
   EventTab: RadioButtonEvents,
 
-  create: function (withoutId) {
+  create: function(withoutId) {
     const element = document.createElement('input');
     element.type = 'radio';
     element.style.width = '12px';
@@ -193,9 +203,9 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
     // Disable click events unless running
-    $(element).on('click', function (e) {
+    $(element).on('click', function(e) {
       if (!Applab.isRunning()) {
         element.checked = !element.checked;
       }

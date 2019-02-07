@@ -1,54 +1,60 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {SignInState} from '@cdo/apps/code-studio/progressRedux';
 import ScriptAnnouncements from './ScriptAnnouncements';
-import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import {
+  announcementShape,
+  VisibilityType
+} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import { dismissedRedirectWarning, onDismissRedirectWarning } from '@cdo/apps/util/dismissVersionRedirect';
+import {
+  dismissedRedirectWarning,
+  onDismissRedirectWarning
+} from '@cdo/apps/util/dismissVersionRedirect';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
 const styles = {
   heading: {
-    width: '100%',
+    width: '100%'
   },
   titleWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    alignItems: 'flex-end'
   },
   title: {
-    display: 'inline-block',
+    display: 'inline-block'
   },
   versionWrapper: {
     display: 'flex',
-    alignItems: 'baseline',
+    alignItems: 'baseline'
   },
   versionLabel: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 15,
-    color: color.charcoal,
+    color: color.charcoal
   },
   versionDropdown: {
-    marginBottom: 13,
+    marginBottom: 13
   },
   description: {
-    width: 700,
-  },
+    width: 700
+  }
 };
 
 export const scriptVersionShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   version_year: PropTypes.string.isRequired,
   version_title: PropTypes.string.isRequired,
-  can_view_version: PropTypes.bool.isRequired,
+  can_view_version: PropTypes.bool.isRequired
 });
 
 /**
@@ -63,7 +69,7 @@ class ScriptOverviewHeader extends Component {
   static propTypes = {
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
-      courseViewPath: PropTypes.string.isRequired,
+      courseViewPath: PropTypes.string.isRequired
     }),
     announcements: PropTypes.arrayOf(announcementShape),
     scriptId: PropTypes.number.isRequired,
@@ -80,7 +86,7 @@ class ScriptOverviewHeader extends Component {
     showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
-    courseName: PropTypes.string,
+    courseName: PropTypes.string
   };
 
   componentDidMount() {
@@ -102,7 +108,7 @@ class ScriptOverviewHeader extends Component {
       url: `/api/v1/user_scripts/${this.props.scriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true}),
+      data: JSON.stringify({version_warning_dismissed: true})
     });
   };
 
@@ -114,26 +120,33 @@ class ScriptOverviewHeader extends Component {
   Lastly checks if the non-verified teacher announcement should be shown to a teacher and
   adds the announcement if needed.
    */
-  filterAnnouncements = (currentView) => {
+  filterAnnouncements = currentView => {
     const currentAnnouncements = [];
     this.props.announcements.forEach(element => {
       if (element.visibility === VisibilityType.teacherAndStudent) {
         currentAnnouncements.push(element);
-      } else if (currentView === "Teacher" && (element.visibility === VisibilityType.teacher || element.visibility === undefined)) {
+      } else if (
+        currentView === 'Teacher' &&
+        (element.visibility === VisibilityType.teacher ||
+          element.visibility === undefined)
+      ) {
         currentAnnouncements.push(element);
-      } else if (currentView === "Student" && element.visibility === VisibilityType.student ) {
+      } else if (
+        currentView === 'Student' &&
+        element.visibility === VisibilityType.student
+      ) {
         currentAnnouncements.push(element);
       }
     });
 
     // Checks if the non-verified teacher announcement should be shown
-    if (currentView === "Teacher") {
+    if (currentView === 'Teacher') {
       if (!this.props.isVerifiedTeacher && this.props.hasVerifiedResources) {
         currentAnnouncements.push({
           notice: i18n.verifiedResourcesNotice(),
           details: i18n.verifiedResourcesDetails(),
-          link: "https://support.code.org/hc/en-us/articles/115001550131",
-          type: NotificationType.information,
+          link: 'https://support.code.org/hc/en-us/articles/115001550131',
+          type: NotificationType.information
         });
       }
     }
@@ -154,10 +167,12 @@ class ScriptOverviewHeader extends Component {
       showRedirectWarning,
       versions,
       showHiddenUnitWarning,
-      courseName,
+      courseName
     } = this.props;
 
-    const displayVersionWarning = showRedirectWarning && !dismissedRedirectWarning(courseName || scriptName);
+    const displayVersionWarning =
+      showRedirectWarning &&
+      !dismissedRedirectWarning(courseName || scriptName);
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -167,23 +182,25 @@ class ScriptOverviewHeader extends Component {
     }
 
     // Only display viewable versions in script version dropdown.
-    const filteredVersions = versions.filter(version => version.can_view_version);
+    const filteredVersions = versions.filter(
+      version => version.can_view_version
+    );
 
     return (
       <div>
-        {plcHeaderProps &&
+        {plcHeaderProps && (
           <PlcHeader
             unit_name={plcHeaderProps.unitName}
             course_view_path={plcHeaderProps.courseViewPath}
           />
-        }
-        {isSignedIn &&
+        )}
+        {isSignedIn && (
           <ScriptAnnouncements
             announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
-        }
-        {displayVersionWarning &&
+        )}
+        {displayVersionWarning && (
           <Notification
             type={NotificationType.warning}
             notice=""
@@ -192,8 +209,8 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
             onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
           />
-        }
-        {versionWarningDetails &&
+        )}
+        {versionWarningDetails && (
           <Notification
             type={NotificationType.warning}
             notice={i18n.wrongCourseVersionWarningNotice()}
@@ -202,8 +219,8 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
             onDismiss={this.onDismissVersionWarning}
           />
-        }
-        {showHiddenUnitWarning &&
+        )}
+        {showHiddenUnitWarning && (
           <Notification
             type={NotificationType.warning}
             notice={i18n.hiddenUnitWarningNotice()}
@@ -213,20 +230,20 @@ class ScriptOverviewHeader extends Component {
             buttonText={i18n.learnMore()}
             buttonLink="https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses"
           />
-        }
+        )}
         <div id="lesson">
           <div id="heading" style={styles.heading}>
             <div style={styles.titleWrapper}>
               <h1 style={styles.title} id="script-title">
-                {scriptTitle}
-                {" "}
-                {betaTitle &&
-                <span className="betatext">{betaTitle}</span>
-                }
+                {scriptTitle}{' '}
+                {betaTitle && <span className="betatext">{betaTitle}</span>}
               </h1>
-              {filteredVersions.length > 1 &&
+              {filteredVersions.length > 1 && (
                 <span style={styles.versionWrapper}>
-                  <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
+                  <span style={styles.versionLabel}>
+                    {i18n.courseOverviewVersionLabel()}
+                  </span>
+                  &nbsp;
                   <select
                     onChange={this.onChangeVersion}
                     value={scriptName}
@@ -240,15 +257,11 @@ class ScriptOverviewHeader extends Component {
                     ))}
                   </select>
                 </span>
-              }
+              )}
             </div>
-            <p style={styles.description}>
-              {scriptDescription}
-            </p>
+            <p style={styles.description}>{scriptDescription}</p>
           </div>
-          <ProtectedStatefulDiv
-            ref={element => this.protected = element}
-          />
+          <ProtectedStatefulDiv ref={element => (this.protected = element)} />
         </div>
       </div>
     );
@@ -268,5 +281,5 @@ export default connect(state => ({
   isSignedIn: state.progress.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
 }))(ScriptOverviewHeader);

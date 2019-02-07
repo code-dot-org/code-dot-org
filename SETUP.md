@@ -188,6 +188,20 @@ If waiting around for javascript builds is making you sad, consider sending buil
 
     new_relic_license_key: <license key here>
 
+## Editor configuration
+
+We enforce linting rules for all our code, and we recommend you set up your editor to integrate with that linting.
+
+### Javascript
+
+We use [eslint](https://eslint.org/) to lint our Javascript; see [the official integrations guide](https://eslint.org/docs/user-guide/integrations) for instructions for your editor of choice.
+
+Our lint configuration uses formatting rules provided by [Prettier](https://prettier.io/). You can configure your editor to auto-format your code to meet our requirements, in addition to the error highlighting provided by eslint. See [the official integrations guide](https://prettier.io/docs/en/editors.html) for instructions for your editor of choice.
+
+### Ruby
+
+We use [RuboCop](https://docs.rubocop.org/en/latest/) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/en/latest/integration_with_other_tools/) for instructions for your editor of choice.
+
 ## More Information
 Please also see our other documentation, including our:
 * [Main README](./README.md)

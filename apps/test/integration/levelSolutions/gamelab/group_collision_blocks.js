@@ -2,12 +2,12 @@ import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 
 module.exports = {
-  app: "gamelab",
-  skinId: "gamelab",
+  app: 'gamelab',
+  skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,
   tests: [
     testAsyncProgramGameLab(
-      "Not-overlapping group and target do not collide",
+      'Not-overlapping group and target do not collide',
       `
         var one = createSprite(200, 200);
         var two = createSprite(300, 200);
@@ -181,6 +181,6 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'collided');
       }
-    ),
+    )
   ]
 };

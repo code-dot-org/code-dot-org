@@ -1,8 +1,8 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import cookies from 'js-cookie';
-import { getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/initSigninState';
-import { allowConsoleErrors } from '../../util/testUtils';
-import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
+import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
+import {allowConsoleErrors} from '../../util/testUtils';
+import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 describe('initSigninStateTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
@@ -51,7 +51,12 @@ describe('initSigninStateTest', () => {
 
     it('returns true if cookie is not defined but DOM contains id', () => {
       // Make sure this DOM didn't leak in from some other test
-      assert.equal(document.querySelector('.header_button.header_user.user_menu .display_name'), null);
+      assert.equal(
+        document.querySelector(
+          '.header_button.header_user.user_menu .display_name'
+        ),
+        null
+      );
 
       createHeaderDom(123);
       assert.strictEqual(getUserSignedInFromCookieAndDom(), true);
@@ -59,7 +64,12 @@ describe('initSigninStateTest', () => {
 
     it('returns false if cookie is not defined and DOM does not contain id', () => {
       // Make sure this DOM didn't leak in from some other test
-      assert.equal(document.querySelector('.header_button.header_user.user_menu .display_name'), null);
+      assert.equal(
+        document.querySelector(
+          '.header_button.header_user.user_menu .display_name'
+        ),
+        null
+      );
 
       createHeaderDom();
       assert.strictEqual(getUserSignedInFromCookieAndDom(), false);

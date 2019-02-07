@@ -1,11 +1,14 @@
-import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
-import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  getLevelResult,
+  levelsByLesson
+} from '@cdo/apps/code-studio/progressRedux';
+import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import PropTypes from 'prop-types';
 import {
   NAME_COLUMN_WIDTH,
   PROGRESS_BUBBLE_WIDTH,
   DIAMOND_BUBBLE_WIDTH,
-  PILL_BUBBLE_WIDTH,
+  PILL_BUBBLE_WIDTH
 } from './multiGridConstants';
 import _ from 'lodash';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -21,13 +24,18 @@ const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
 
 // Action creators
-export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
-export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
-export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
-export const addLevelsByLesson = (scriptId, levelsByLesson) => (
-  { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
-);
+export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
+export const finishLoadingProgress = () => ({type: FINISH_LOADING_PROGRESS});
+export const setLessonOfInterest = lessonOfInterest => ({
+  type: SET_LESSON_OF_INTEREST,
+  lessonOfInterest
+});
+export const setCurrentView = viewType => ({type: SET_CURRENT_VIEW, viewType});
+export const addLevelsByLesson = (scriptId, levelsByLesson) => ({
+  type: ADD_LEVELS_BY_LESSON,
+  scriptId,
+  levelsByLesson
+});
 export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
@@ -35,36 +43,40 @@ export const addScriptData = (scriptId, scriptData) => {
     excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
     title: scriptData.title,
     path: scriptData.path,
-    stages: scriptData.stages,
+    stages: scriptData.stages
   };
-  return { type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData };
+  return {type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData};
 };
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
-  type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
+  type: ADD_STUDENT_LEVEL_PROGRESS,
+  scriptId,
+  studentLevelProgress
 });
 export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
   const data = studentLevelPairing;
-  const isValid = Object.keys(data).every((userId) => (
-    Object.keys(data[userId]).every((levelId) => (
-      typeof data[userId][levelId] === "boolean"
-    ))
- ));
+  const isValid = Object.keys(data).every(userId =>
+    Object.keys(data[userId]).every(
+      levelId => typeof data[userId][levelId] === 'boolean'
+    )
+  );
   if (!isValid) {
-    throw new Error("Input is invalid");
+    throw new Error('Input is invalid');
   }
 
   return {
-    type: ADD_STUDENT_LEVEL_PAIRING, scriptId, studentLevelPairing
+    type: ADD_STUDENT_LEVEL_PAIRING,
+    scriptId,
+    studentLevelPairing
   };
 };
 
-export const jumpToLessonDetails = (lessonOfInterest) => {
+export const jumpToLessonDetails = lessonOfInterest => {
   return (dispatch, getState) => {
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
   };
 };
-export const processScriptAndProgress = (scriptId) => {
+export const processScriptAndProgress = scriptId => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
     const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
@@ -89,8 +101,8 @@ const NUM_STUDENTS_PER_PAGE = 50;
 
 // Types of views of the progress tab
 export const ViewType = {
-  SUMMARY: "summary",
-  DETAIL: "detail",
+  SUMMARY: 'summary',
+  DETAIL: 'detail'
 };
 
 /**
@@ -104,9 +116,11 @@ export const scriptDataPropType = PropTypes.shape({
   excludeCsfColumnInLegend: PropTypes.bool,
   title: PropTypes.string,
   path: PropTypes.string,
-  stages: PropTypes.arrayOf(PropTypes.shape({
-    levels: PropTypes.arrayOf(PropTypes.object).isRequired
-  })),
+  stages: PropTypes.arrayOf(
+    PropTypes.shape({
+      levels: PropTypes.arrayOf(PropTypes.object).isRequired
+    })
+  )
 });
 
 /**
@@ -128,14 +142,14 @@ const initialState = {
   studentLevelPairingByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
-  isLoadingProgress: true,
+  isLoadingProgress: true
 };
 
-export default function sectionProgress(state=initialState, action) {
+export default function sectionProgress(state = initialState, action) {
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
-      lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
+      lessonOfInterest: INITIAL_LESSON_OF_INTEREST
     };
   }
   if (action.type === SET_CURRENT_VIEW) {
@@ -167,7 +181,7 @@ export default function sectionProgress(state=initialState, action) {
     // sections, which requires us to reset our state. This might need to change
     // once switching sections is in react/redux.
     return {
-      ...initialState,
+      ...initialState
     };
   }
   if (action.type === ADD_SCRIPT_DATA) {
@@ -175,7 +189,7 @@ export default function sectionProgress(state=initialState, action) {
       ...state,
       scriptDataByScript: {
         ...state.scriptDataByScript,
-        [action.scriptId]: action.scriptData,
+        [action.scriptId]: action.scriptData
       }
     };
   }
@@ -184,7 +198,7 @@ export default function sectionProgress(state=initialState, action) {
       ...state,
       levelsByLessonByScript: {
         ...state.levelsByLessonByScript,
-        [action.scriptId]: action.levelsByLesson,
+        [action.scriptId]: action.levelsByLesson
       }
     };
   }
@@ -195,8 +209,8 @@ export default function sectionProgress(state=initialState, action) {
         ...state.studentLevelProgressByScript,
         [action.scriptId]: {
           ...state.studentLevelProgressByScript[action.scriptId],
-          ...action.studentLevelProgress,
-        },
+          ...action.studentLevelProgress
+        }
       }
     };
   }
@@ -207,8 +221,8 @@ export default function sectionProgress(state=initialState, action) {
         ...state.studentLevelPairingByScript,
         [action.scriptId]: {
           ...state.studentLevelPairingByScript[action.scriptId],
-          ...action.studentLevelPairing,
-        },
+          ...action.studentLevelPairing
+        }
       }
     };
   }
@@ -219,20 +233,23 @@ export default function sectionProgress(state=initialState, action) {
 // Selector functions
 
 /**
-  * Retrieves the progress for the section in the selected script
-  * @returns {studentLevelProgressPropType} keys are student ids, values are
-  * objects of {levelIds: LevelStatus}
-  */
-export const getCurrentProgress = (state) => {
-  return state.sectionProgress.studentLevelProgressByScript[state.scriptSelection.scriptId];
+ * Retrieves the progress for the section in the selected script
+ * @returns {studentLevelProgressPropType} keys are student ids, values are
+ * objects of {levelIds: LevelStatus}
+ */
+export const getCurrentProgress = state => {
+  return state.sectionProgress.studentLevelProgressByScript[
+    state.scriptSelection.scriptId
+  ];
 };
 
 /**
  * Retrieves the script data for the section in the selected script
  * @returns {scriptDataPropType} object containing metadata about the script structure
  */
-export const getCurrentScriptData = (state) => {
-  const script = state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId];
+export const getCurrentScriptData = state => {
+  const script =
+    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId];
 
   if (script) {
     const stages = script.stages.map(stage => {
@@ -245,7 +262,7 @@ export const getCurrentScriptData = (state) => {
     });
     return {
       ...script,
-      stages: stages,
+      stages: stages
     };
   }
 
@@ -255,8 +272,10 @@ export const getCurrentScriptData = (state) => {
 /**
  * Retrieves the combined script and progress data for the current scriptId for the entire section.
  */
-export const getLevelsByLesson = (state) => {
-  return state.sectionProgress.levelsByLessonByScript[state.scriptSelection.scriptId];
+export const getLevelsByLesson = state => {
+  return state.sectionProgress.levelsByLessonByScript[
+    state.scriptSelection.scriptId
+  ];
 };
 
 /**
@@ -267,12 +286,11 @@ export const getLevels = (state, studentId, stageId) => {
   return getLevelsByLesson(state)[studentId][stageId];
 };
 
-
 /**
  * Calculate the width of each column in the detail view based on types of levels
  * @returns {Array} array of integers indicating the length of each column
  */
-export const getColumnWidthsForDetailView = (state) => {
+export const getColumnWidthsForDetailView = state => {
   let columnLengths = [NAME_COLUMN_WIDTH];
   const stages = getCurrentScriptData(state).stages;
 
@@ -297,50 +315,68 @@ export const getColumnWidthsForDetailView = (state) => {
   return columnLengths;
 };
 
-
 /**
  * Query the server for script data (info about the levels in the script) and
  * also for user progress on that script
  * @param {string} scriptId to load data for
  */
-export const loadScript = (scriptId) => {
+export const loadScript = scriptId => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
     const sectionData = getState().sectionData.section;
 
     // Don't load data if it's already stored in redux.
-    if (state.studentLevelProgressByScript[scriptId] && state.scriptDataByScript[scriptId]) {
+    if (
+      state.studentLevelProgressByScript[scriptId] &&
+      state.scriptDataByScript[scriptId]
+    ) {
       return;
     }
 
     dispatch(startLoadingProgress());
-    const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {credentials: 'include'})
+    const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
+      credentials: 'include'
+    })
       .then(response => response.json())
-      .then((scriptData) => {
+      .then(scriptData => {
         dispatch(addScriptData(scriptId, scriptData));
       });
 
     const numStudents = sectionData.students.length;
     const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
 
-    const requests = _.range(1, numPages + 1).map((currentPage) => {
-      const url = `/dashboardapi/section_level_progress/${sectionData.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
-      return fetch(url, { credentials: 'include' })
+    const requests = _.range(1, numPages + 1).map(currentPage => {
+      const url = `/dashboardapi/section_level_progress/${
+        sectionData.id
+      }?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
+      return fetch(url, {credentials: 'include'})
         .then(response => response.json())
-        .then((data) => {
+        .then(data => {
           const dataByStudent = data.students;
-          dispatch(addStudentLevelProgress(scriptId, getStudentLevelResult(dataByStudent)));
-          dispatch(addStudentLevelPairing(scriptId, getStudentPairing(dataByStudent)));
+          dispatch(
+            addStudentLevelProgress(
+              scriptId,
+              getStudentLevelResult(dataByStudent)
+            )
+          );
+          dispatch(
+            addStudentLevelPairing(scriptId, getStudentPairing(dataByStudent))
+          );
         });
     });
 
     requests.push(scriptRequest);
-    Promise.all(requests).then(() => dispatch(processScriptAndProgress(scriptId)));
+    Promise.all(requests).then(() =>
+      dispatch(processScriptAndProgress(scriptId))
+    );
   };
 };
 
 export function getStudentPairing(dataByStudent) {
-  return getInfoByStudentByLevel(dataByStudent, levelData => !!levelData.paired);
+  return getInfoByStudentByLevel(
+    dataByStudent,
+    levelData => !!levelData.paired
+  );
 }
 
 export function getStudentLevelResult(dataByStudent) {
@@ -348,6 +384,7 @@ export function getStudentLevelResult(dataByStudent) {
 }
 
 function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
-  return _.mapValues(dataByStudent, (studentData) =>
-    _.mapValues(studentData, infoFromLevelData));
+  return _.mapValues(dataByStudent, studentData =>
+    _.mapValues(studentData, infoFromLevelData)
+  );
 }

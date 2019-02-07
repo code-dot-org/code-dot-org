@@ -18,15 +18,11 @@ export default class SessionTimesList extends React.Component {
     const listItems = this.props.sessions.map(session => {
       return (
         <li key={session.id} style={{whiteSpace: 'nowrap'}}>
-          <SessionTime session={session}/>
+          <SessionTime session={session} />
         </li>
       );
     });
 
-    return (
-      <ul className="unstyled">
-        {listItems}
-      </ul>
-    );
+    return <ul className="unstyled">{listItems}</ul>;
   }
 }

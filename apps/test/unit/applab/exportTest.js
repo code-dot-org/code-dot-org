@@ -3,9 +3,8 @@ import {blocks as applabBlocks} from '@cdo/apps/applab/dropletConfig';
 import {getExportedGlobals} from '@cdo/apps/applab/export';
 import {dropletGlobalConfigBlocks} from '@cdo/apps/dropletUtils';
 
-describe("the export module", () => {
-  describe("the getExportedGlobals function", () => {
-
+describe('the export module', () => {
+  describe('the getExportedGlobals function', () => {
     let globals;
     before(() => {
       globals = Object.keys(getExportedGlobals());
@@ -23,8 +22,12 @@ describe("the export module", () => {
         }
         it(`exposes a ${block.func} function`, () => {
           if (globals.indexOf(block.func) < 0) {
-            if (!eval(`window.${block.func}`)) { //eslint-disable-line no-eval
-              assert(false, `expected exported globals to include ${block.func}`);
+            // eslint-disable-next-line no-eval
+            if (!eval(`window.${block.func}`)) {
+              assert(
+                false,
+                `expected exported globals to include ${block.func}`
+              );
             }
           }
         });
@@ -33,6 +36,5 @@ describe("the export module", () => {
 
     testIncludesBlocks(applabBlocks);
     testIncludesBlocks(dropletGlobalConfigBlocks);
-
   });
 });

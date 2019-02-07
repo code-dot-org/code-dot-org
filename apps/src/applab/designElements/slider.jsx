@@ -83,7 +83,8 @@ class SliderProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -97,8 +98,14 @@ class SliderEvents extends React.Component {
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "input", function(event) {\n' +
-      '  console.log("' + id + ' value: " + getNumber("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "input", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' value: " + getNumber("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -121,7 +128,7 @@ class SliderEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={inputName}
           desc={inputDesc}
@@ -136,7 +143,7 @@ export default {
   PropertyTab: SliderProperties,
   EventTab: SliderEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('input');
     element.type = 'range';
     element.style.margin = '0px';
@@ -151,7 +158,7 @@ export default {
     return element;
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'defaultValue':
         element.defaultValue = value;
@@ -174,7 +181,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'defaultValue':
         return element.defaultValue;

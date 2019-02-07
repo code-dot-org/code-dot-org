@@ -1,5 +1,5 @@
 import {assert} from '../../util/configuredChai';
-import {assertOwnProperty} from "../../util/assertions";
+import {assertOwnProperty} from '../../util/assertions';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var _ = require('lodash');
 var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
@@ -14,15 +14,13 @@ var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var Packet = require('@cdo/apps/netsim/Packet');
 
-
 var asciiToBinary = DataConverters.asciiToBinary;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 var DnsMode = NetSimConstants.DnsMode;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-
-describe("NetSimRouterNode", function () {
+describe('NetSimRouterNode', function() {
   var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder;
 
   /**
@@ -30,7 +28,7 @@ describe("NetSimRouterNode", function () {
    * @param {RouterRow} [row]
    * @returns {NetSimRouterNode}
    */
-  var makeLocalRouter = function (row) {
+  var makeLocalRouter = function(row) {
     return new NetSimRouterNode(testShard, row);
   };
 
@@ -38,12 +36,12 @@ describe("NetSimRouterNode", function () {
    * Synchronous router creation on shard for test
    * @returns {NetSimRouterNode}
    */
-  var makeRemoteRouter = function () {
+  var makeRemoteRouter = function() {
     var newRouter;
-    NetSimRouterNode.create(testShard, function (e, r) {
+    NetSimRouterNode.create(testShard, function(e, r) {
       newRouter = r;
     });
-    assert.isDefined(newRouter, "Failed to create a remote router.");
+    assert.isDefined(newRouter, 'Failed to create a remote router.');
     return newRouter;
   };
 
@@ -52,12 +50,12 @@ describe("NetSimRouterNode", function () {
    * @param {string} displayName
    * @returns {NetSimLocalClientNode}
    */
-  var makeRemoteClient = function (displayName) {
+  var makeRemoteClient = function(displayName) {
     var newClient;
-    NetSimLocalClientNode.create(testShard, displayName, function (e, n) {
+    NetSimLocalClientNode.create(testShard, displayName, function(e, n) {
       newClient = n;
     });
-    assert.isDefined(newClient, "Failed to create a remote client.");
+    assert.isDefined(newClient, 'Failed to create a remote client.');
     return newClient;
   };
 
@@ -66,9 +64,9 @@ describe("NetSimRouterNode", function () {
    * @param {string} tableName
    * @returns {Array}
    */
-  var getRows = function (tableName) {
+  var getRows = function(tableName) {
     var rows;
-    testShard[tableName].refresh(function () {
+    testShard[tableName].refresh(function() {
       rows = testShard[tableName].readAll();
     });
     return rows;
@@ -79,7 +77,7 @@ describe("NetSimRouterNode", function () {
    * @param {string} tableName
    * @returns {number}
    */
-  var countRows = function (tableName) {
+  var countRows = function(tableName) {
     return getRows(tableName).length;
   };
 
@@ -88,10 +86,12 @@ describe("NetSimRouterNode", function () {
    * @param {string} tableName
    * @returns {Object}
    */
-  var getLatestRow = function (tableName) {
+  var getLatestRow = function(tableName) {
     var rows = getRows(tableName);
     if (rows.length === 0) {
-      throw new Error("Now rows in " + tableName + ", unable to retrieve latest row.");
+      throw new Error(
+        'Now rows in ' + tableName + ', unable to retrieve latest row.'
+      );
     }
     return rows[rows.length - 1];
   };
@@ -101,10 +101,12 @@ describe("NetSimRouterNode", function () {
    * @param {string} propertyName
    * @returns {*}
    */
-  var getFirstMessageProperty = function (propertyName) {
+  var getFirstMessageProperty = function(propertyName) {
     var messageRows = getRows('messageTable');
     if (messageRows.length === 0) {
-      throw new Error("No rows in message table, unable to check first message.");
+      throw new Error(
+        'No rows in message table, unable to check first message.'
+      );
     }
 
     return new NetSimMessage(testShard, messageRows[0])[propertyName];
@@ -116,11 +118,17 @@ describe("NetSimRouterNode", function () {
    * @param {string} propertyName
    * @param {*} expectedValue
    */
-  var assertFirstMessageProperty = function (propertyName, expectedValue) {
+  var assertFirstMessageProperty = function(propertyName, expectedValue) {
     var realValue = getFirstMessageProperty(propertyName);
-    assert(_.isEqual(realValue, expectedValue),
-        "Expected first message." + propertyName + " to be " +
-        expectedValue + ", but got " + realValue);
+    assert(
+      _.isEqual(realValue, expectedValue),
+      'Expected first message.' +
+        propertyName +
+        ' to be ' +
+        expectedValue +
+        ', but got ' +
+        realValue
+    );
   };
 
   /**
@@ -129,7 +137,7 @@ describe("NetSimRouterNode", function () {
    * @param {string} headerType
    * @returns {*}
    */
-  var getFirstMessageHeader = function (headerType) {
+  var getFirstMessageHeader = function(headerType) {
     var payload = getFirstMessageProperty('payload');
     if (Packet.isAddressField(headerType)) {
       return encoder.getHeaderAsAddressString(headerType, payload);
@@ -144,11 +152,17 @@ describe("NetSimRouterNode", function () {
    * @param {string} headerType
    * @param {*} expectedValue
    */
-  var assertFirstMessageHeader = function (headerType, expectedValue) {
+  var assertFirstMessageHeader = function(headerType, expectedValue) {
     var headerValue = getFirstMessageHeader(headerType);
-    assert(_.isEqual(headerValue, expectedValue), "Expected first message " +
-    headerType + " header to be " + expectedValue + ", but got " +
-    headerValue);
+    assert(
+      _.isEqual(headerValue, expectedValue),
+      'Expected first message ' +
+        headerType +
+        ' header to be ' +
+        expectedValue +
+        ', but got ' +
+        headerValue
+    );
   };
 
   /**
@@ -156,7 +170,7 @@ describe("NetSimRouterNode", function () {
    * current message format and encoder settings.
    * @returns {string}
    */
-  var getFirstMessageAsciiBody = function () {
+  var getFirstMessageAsciiBody = function() {
     var payload = getFirstMessageProperty('payload');
     return encoder.getBodyAsAscii(payload, BITS_PER_BYTE);
   };
@@ -165,10 +179,17 @@ describe("NetSimRouterNode", function () {
    * Assert if the body of the first message does not match the expected value.
    * @param {string} expectedValue
    */
-  var assertFirstMessageAsciiBody = function (expectedValue) {
+  var assertFirstMessageAsciiBody = function(expectedValue) {
     var bodyAscii = getFirstMessageAsciiBody();
-    assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
-    "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
+    assert(
+      _.isEqual(bodyAscii, expectedValue),
+      'Expected first message ' +
+        "body to be '" +
+        expectedValue +
+        "', but got '" +
+        bodyAscii +
+        "'"
+    );
   };
 
   /**
@@ -179,7 +200,7 @@ describe("NetSimRouterNode", function () {
    * @param {number} [timeStep] default 1
    * @returns {number} Next tick time after stabilized
    */
-  var tickUntilLogsStabilize = function (tickable, startTime, timeStep) {
+  var tickUntilLogsStabilize = function(tickable, startTime, timeStep) {
     var t = utils.valueOr(startTime, 1);
     timeStep = utils.valueOr(timeStep, 1);
     var lastLogCount;
@@ -198,13 +219,13 @@ describe("NetSimRouterNode", function () {
    * to the sent/received log UI components.
    * @returns {{log: Function, getLatest: Function}}
    */
-  var makeFakeMessageLog = function () {
+  var makeFakeMessageLog = function() {
     var archive = [];
     return {
-      log: function (payload) {
+      log: function(payload) {
         archive.push(payload);
       },
-      getLatest: function () {
+      getLatest: function() {
         if (archive.length === 0) {
           throw new Error('Nothing has been logged.');
         }
@@ -217,14 +238,17 @@ describe("NetSimRouterNode", function () {
    * Set the test-global address format for routers and auto-DNS
    * @param {string} newFormat
    */
-  var setAddressFormat = function (newFormat) {
+  var setAddressFormat = function(newFormat) {
     addressFormat = newFormat;
     NetSimGlobals.getLevelConfig().addressFormat = addressFormat;
-    encoder = new Packet.Encoder(addressFormat, packetCountBitWidth,
-        packetHeaderSpec);
+    encoder = new Packet.Encoder(
+      addressFormat,
+      packetCountBitWidth,
+      packetHeaderSpec
+    );
   };
 
-  beforeEach(function () {
+  beforeEach(function() {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
     NetSimTestUtils.initializeGlobalsToDefaultValues();
 
@@ -241,13 +265,16 @@ describe("NetSimRouterNode", function () {
     NetSimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
     NetSimGlobals.getLevelConfig().broadcastMode = false;
 
-    encoder = new Packet.Encoder(addressFormat, packetCountBitWidth,
-        packetHeaderSpec);
+    encoder = new Packet.Encoder(
+      addressFormat,
+      packetCountBitWidth,
+      packetHeaderSpec
+    );
 
     testShard = fakeShard();
   });
 
-  it("has expected row structure and default values", function () {
+  it('has expected row structure and default values', function() {
     var router = new NetSimRouterNode(testShard);
     var row = router.buildRow();
 
@@ -273,81 +300,81 @@ describe("NetSimRouterNode", function () {
     assert.strictEqual(row.randomDropChance, 0);
   });
 
-  describe("constructing from a table row", function () {
+  describe('constructing from a table row', function() {
     var routerFromRow;
 
-    it("routerNumber", function () {
-      routerFromRow = makeLocalRouter({ routerNumber: 42 });
+    it('routerNumber', function() {
+      routerFromRow = makeLocalRouter({routerNumber: 42});
       assert.equal(42, routerFromRow.routerNumber);
     });
 
-    it("creationTime", function () {
-      routerFromRow = makeLocalRouter({ creationTime: 42 });
+    it('creationTime', function() {
+      routerFromRow = makeLocalRouter({creationTime: 42});
       assert.closeTo(routerFromRow.creationTime, 42, 10);
     });
 
-    it("dnsMode", function () {
-      routerFromRow = makeLocalRouter({ dnsMode: DnsMode.AUTOMATIC });
+    it('dnsMode', function() {
+      routerFromRow = makeLocalRouter({dnsMode: DnsMode.AUTOMATIC});
       assert.equal(DnsMode.AUTOMATIC, routerFromRow.dnsMode);
     });
 
-    it("dnsNodeID", function () {
-      routerFromRow = makeLocalRouter({ dnsNodeID: 42 });
+    it('dnsNodeID', function() {
+      routerFromRow = makeLocalRouter({dnsNodeID: 42});
       assert.equal(42, routerFromRow.dnsNodeID);
     });
 
-    it("bandwidth", function () {
-      routerFromRow = makeLocalRouter({ bandwidth: 1024 });
+    it('bandwidth', function() {
+      routerFromRow = makeLocalRouter({bandwidth: 1024});
       assert.equal(1024, routerFromRow.bandwidth);
 
       // Special case: Bandwidth should be able to serialize in Infinity
       // from the string 'Infinity' in the database.
-      routerFromRow = makeLocalRouter({ bandwidth: 'Infinity' });
+      routerFromRow = makeLocalRouter({bandwidth: 'Infinity'});
       assert.equal(Infinity, routerFromRow.bandwidth);
     });
 
-    it("memory", function () {
-      routerFromRow = makeLocalRouter({ memory: 1024 });
+    it('memory', function() {
+      routerFromRow = makeLocalRouter({memory: 1024});
       assert.equal(1024, routerFromRow.memory);
 
       // Special case: Memory should be able to serialize in Infinity
       // from the string 'Infinity' in the database.
-      routerFromRow = makeLocalRouter({ memory: 'Infinity' });
+      routerFromRow = makeLocalRouter({memory: 'Infinity'});
       assert.equal(Infinity, routerFromRow.memory);
     });
 
-    it("randomDropChance", function () {
-      routerFromRow = makeLocalRouter({ randomDropChance: 0.1 });
+    it('randomDropChance', function() {
+      routerFromRow = makeLocalRouter({randomDropChance: 0.1});
       assert.equal(0.1, routerFromRow.randomDropChance);
     });
   });
 
-  describe("static method get", function () {
+  describe('static method get', function() {
     var err, result, routerID;
     var routerA;
 
-    beforeEach(function () {
+    beforeEach(function() {
       routerA = makeRemoteRouter();
       err = undefined;
       result = undefined;
       routerID = 0;
     });
 
-    it("returns an Error object when router cannot be found", function () {
-      NetSimRouterNode.get(routerID, testShard, function (_err, _result) {
+    it('returns an Error object when router cannot be found', function() {
+      NetSimRouterNode.get(routerID, testShard, function(_err, _result) {
         err = _err;
         result = _result;
       });
 
       assert.equal(null, result);
-      assert(err instanceof Error, "Returned an error object");
+      assert(err instanceof Error, 'Returned an error object');
       assert.equal('Not Found', err.message);
     });
 
-    it("returns null for error and a NetSimRouterNode when router is found", function () {
+    it('returns null for error and a NetSimRouterNode when router is found', function() {
       routerID = routerA.entityID;
 
-      NetSimRouterNode.get(routerID, testShard, function (_err, _result) {
+      NetSimRouterNode.get(routerID, testShard, function(_err, _result) {
         err = _err;
         result = _result;
       });
@@ -358,46 +385,66 @@ describe("NetSimRouterNode", function () {
     });
   });
 
-  describe("getConnections", function () {
+  describe('getConnections', function() {
     var routerA;
 
-    beforeEach(function () {
+    beforeEach(function() {
       routerA = makeRemoteRouter();
     });
 
-    it("returns an empty array when no wires are present", function () {
+    it('returns an empty array when no wires are present', function() {
       var wires = routerA.getConnections();
       assert.isArray(wires);
       assert.strictEqual(wires.length, 0);
     });
 
-    it("returns wires that have a remote end attached to the router", function () {
-      NetSimWire.create(testShard, {
-            localNodeID: 0,
-            remoteNodeID: routerA.entityID
-          }, function () {});
+    it('returns wires that have a remote end attached to the router', function() {
+      NetSimWire.create(
+        testShard,
+        {
+          localNodeID: 0,
+          remoteNodeID: routerA.entityID
+        },
+        function() {}
+      );
       assert.equal(1, routerA.getConnections().length);
     });
 
-    it("returns NetSimWire objects", function () {
-      NetSimWire.create(testShard, {
-            localNodeID: 0,
-            remoteNodeID: routerA.entityID
-          }, function () {});
-      assert.instanceOf(routerA.getConnections()[0], NetSimWire, "Got a NetSimWire back");
+    it('returns NetSimWire objects', function() {
+      NetSimWire.create(
+        testShard,
+        {
+          localNodeID: 0,
+          remoteNodeID: routerA.entityID
+        },
+        function() {}
+      );
+      assert.instanceOf(
+        routerA.getConnections()[0],
+        NetSimWire,
+        'Got a NetSimWire back'
+      );
     });
 
-    it("skips wires that aren't connected to the router", function () {
-      NetSimWire.create(testShard, {
-            localNodeID: 0,
-            remoteNodeID: routerA.entityID,
-            localHostname: 'theRightOne'
-          }, function () {});
-      NetSimWire.create(testShard, {
-            localNodeID: 0,
-            remoteNodeID: routerA.entityID + 1,
-            localHostname: 'theWrongOne'
-          }, function () {});
+    it("skips wires that aren't connected to the router", function() {
+      NetSimWire.create(
+        testShard,
+        {
+          localNodeID: 0,
+          remoteNodeID: routerA.entityID,
+          localHostname: 'theRightOne'
+        },
+        function() {}
+      );
+      NetSimWire.create(
+        testShard,
+        {
+          localNodeID: 0,
+          remoteNodeID: routerA.entityID + 1,
+          localHostname: 'theWrongOne'
+        },
+        function() {}
+      );
 
       // Only get the one wire back.
       assert.equal(1, routerA.getConnections().length);
@@ -412,46 +459,58 @@ describe("NetSimRouterNode", function () {
    * @const
    */
   var CONNECTION_LIMIT = 6;
-  describe("acceptConnection", function () {
+  describe('acceptConnection', function() {
     var routerA;
 
-    beforeEach(function () {
+    beforeEach(function() {
       routerA = makeRemoteRouter();
     });
 
-    it("accepts connection if total connections are at or below limit", function () {
-      for (var wireID = routerA.entityID + 1;
-           wireID < routerA.entityID + CONNECTION_LIMIT + 1;
-           wireID++) {
-        NetSimWire.create(testShard, {
-          localNodeID: wireID,
-          remoteNodeID: routerA.entityID,
-          localAddress: wireID.toString(10)
-        }, function () {});
+    it('accepts connection if total connections are at or below limit', function() {
+      for (
+        var wireID = routerA.entityID + 1;
+        wireID < routerA.entityID + CONNECTION_LIMIT + 1;
+        wireID++
+      ) {
+        NetSimWire.create(
+          testShard,
+          {
+            localNodeID: wireID,
+            remoteNodeID: routerA.entityID,
+            localAddress: wireID.toString(10)
+          },
+          function() {}
+        );
       }
       assertTableSize(testShard, 'wireTable', CONNECTION_LIMIT);
 
       var accepted;
-      routerA.acceptConnection(null, function (err, isAccepted) {
+      routerA.acceptConnection(null, function(err, isAccepted) {
         accepted = isAccepted;
       });
 
       assert.isTrue(accepted);
     });
 
-    it("rejects connection if total connections are beyond limit", function () {
-      for (var wireID = routerA.entityID + 1;
-           wireID < routerA.entityID + CONNECTION_LIMIT + 2;
-           wireID++) {
-        NetSimWire.create(testShard, {
-          localNodeID: wireID,
-          remoteNodeID: routerA.entityID
-        }, function () {});
+    it('rejects connection if total connections are beyond limit', function() {
+      for (
+        var wireID = routerA.entityID + 1;
+        wireID < routerA.entityID + CONNECTION_LIMIT + 2;
+        wireID++
+      ) {
+        NetSimWire.create(
+          testShard,
+          {
+            localNodeID: wireID,
+            remoteNodeID: routerA.entityID
+          },
+          function() {}
+        );
       }
       assertTableSize(testShard, 'wireTable', CONNECTION_LIMIT + 1);
 
       var error, accepted;
-      routerA.acceptConnection(null, function (err, isAccepted) {
+      routerA.acceptConnection(null, function(err, isAccepted) {
         error = err;
         accepted = isAccepted;
       });
@@ -461,23 +520,31 @@ describe("NetSimRouterNode", function () {
       assert.equal(error.message, 'Too many connections.');
     });
 
-    it("rejects connection if an address collision exists", function () {
+    it('rejects connection if an address collision exists', function() {
       var address = '14.4';
 
-      NetSimWire.create(testShard, {
-        localNodeID: 10,
-        remoteNodeID: routerA.entityID,
-        localAddress: address
-      }, function () {});
+      NetSimWire.create(
+        testShard,
+        {
+          localNodeID: 10,
+          remoteNodeID: routerA.entityID,
+          localAddress: address
+        },
+        function() {}
+      );
 
-      NetSimWire.create(testShard, {
-        localNodeID: 11,
-        remoteNodeID: routerA.entityID,
-        localAddress: address
-      }, function () {});
+      NetSimWire.create(
+        testShard,
+        {
+          localNodeID: 11,
+          remoteNodeID: routerA.entityID,
+          localAddress: address
+        },
+        function() {}
+      );
 
       var error, accepted;
-      routerA.acceptConnection(null, function (err, isAccepted) {
+      routerA.acceptConnection(null, function(err, isAccepted) {
         error = err;
         accepted = isAccepted;
       });
@@ -487,7 +554,7 @@ describe("NetSimRouterNode", function () {
     });
   });
 
-  it("numbers created routers in sequence, starting with 1", function () {
+  it('numbers created routers in sequence, starting with 1', function() {
     var newRouter;
     for (var i = 0; i < 128; i++) {
       newRouter = makeRemoteRouter();
@@ -495,7 +562,7 @@ describe("NetSimRouterNode", function () {
     }
   });
 
-  it("numbers routers in sequence in spite of creating client nodes", function () {
+  it('numbers routers in sequence in spite of creating client nodes', function() {
     var newRouter, newClient;
 
     // Start with a client, since this is the typical scenario on a new shard.
@@ -521,26 +588,30 @@ describe("NetSimRouterNode", function () {
     assert.equal(3, newRouter.getRouterNumber());
   });
 
-  describe("address assignment rules", function () {
+  describe('address assignment rules', function() {
     var routerA;
 
     function makeWire(nodeIDOffset) {
       var newWire;
-      NetSimWire.create(testShard, {
-        localNodeID: routerA.entityID + nodeIDOffset,
-        remoteNodeID: routerA.entityID
-      }, function (e, w) {
-        newWire = w;
-      });
+      NetSimWire.create(
+        testShard,
+        {
+          localNodeID: routerA.entityID + nodeIDOffset,
+          remoteNodeID: routerA.entityID
+        },
+        function(e, w) {
+          newWire = w;
+        }
+      );
       return newWire;
     }
 
-    beforeEach(function () {
+    beforeEach(function() {
       routerA = makeRemoteRouter();
     });
 
-    describe("getting addresses", function () {
-      beforeEach(function () {
+    describe('getting addresses', function() {
+      beforeEach(function() {
         NetSimGlobals.setRandomSeed('address assignment test');
         makeWire(1);
         makeWire(2);
@@ -548,79 +619,97 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'wireTable', 3);
       });
 
-      describe("in simple four-bit format", function () {
-        beforeEach(function () {
+      describe('in simple four-bit format', function() {
+        beforeEach(function() {
           setAddressFormat('4');
         });
 
-        it("creates single-number addresses when using single-number address format", function () {
+        it('creates single-number addresses when using single-number address format', function() {
           assert.equal('11', routerA.getRandomAvailableClientAddress());
           assert.equal('1', routerA.getRandomAvailableClientAddress());
           assert.equal('3', routerA.getRandomAvailableClientAddress());
         });
 
-        it("sets own address as zero", function () {
+        it('sets own address as zero', function() {
           assert.equal('0', routerA.getAddress());
         });
       });
 
-      describe("in two-part format", function () {
-        beforeEach(function () {
+      describe('in two-part format', function() {
+        beforeEach(function() {
           setAddressFormat('4.4');
         });
 
-        it("creates two-part addresses where the first part is the router number", function () {
-          assert.equal(routerA.entityID + '.11', routerA.getRandomAvailableClientAddress());
-          assert.equal(routerA.entityID + '.1', routerA.getRandomAvailableClientAddress());
-          assert.equal(routerA.entityID + '.3', routerA.getRandomAvailableClientAddress());
+        it('creates two-part addresses where the first part is the router number', function() {
+          assert.equal(
+            routerA.entityID + '.11',
+            routerA.getRandomAvailableClientAddress()
+          );
+          assert.equal(
+            routerA.entityID + '.1',
+            routerA.getRandomAvailableClientAddress()
+          );
+          assert.equal(
+            routerA.entityID + '.3',
+            routerA.getRandomAvailableClientAddress()
+          );
         });
 
-        it("sets own address as router#.0", function () {
+        it('sets own address as router#.0', function() {
           assert.equal(routerA.entityID + '.0', routerA.getAddress());
         });
       });
 
-      describe("in four-part format", function () {
-        beforeEach(function () {
+      describe('in four-part format', function() {
+        beforeEach(function() {
           setAddressFormat('8.8.8.8');
         });
 
-        it("uses zeros for all except last two parts", function () {
+        it('uses zeros for all except last two parts', function() {
           // You get higher random addresses here, because of the larger
           // addressable space.
-          assert.equal('0.0.' + routerA.entityID + '.200', routerA.getRandomAvailableClientAddress());
-          assert.equal('0.0.' + routerA.entityID + '.7', routerA.getRandomAvailableClientAddress());
-          assert.equal('0.0.' + routerA.entityID + '.43', routerA.getRandomAvailableClientAddress());
+          assert.equal(
+            '0.0.' + routerA.entityID + '.200',
+            routerA.getRandomAvailableClientAddress()
+          );
+          assert.equal(
+            '0.0.' + routerA.entityID + '.7',
+            routerA.getRandomAvailableClientAddress()
+          );
+          assert.equal(
+            '0.0.' + routerA.entityID + '.43',
+            routerA.getRandomAvailableClientAddress()
+          );
         });
 
-        it("sets own address as 0.0.router#.0", function () {
+        it('sets own address as 0.0.router#.0', function() {
           assert.equal('0.0.' + routerA.entityID + '.0', routerA.getAddress());
         });
       });
     });
 
-    describe("keeping multipart addresses within addressable space", function () {
+    describe('keeping multipart addresses within addressable space', function() {
       var routerB, routerC, routerD, routerE;
 
-      beforeEach(function () {
+      beforeEach(function() {
         routerB = makeRemoteRouter();
         routerC = makeRemoteRouter();
         routerD = makeRemoteRouter();
         routerE = makeRemoteRouter();
       });
 
-      it("leaves router number unchanged for one-part addresses", function () {
+      it('leaves router number unchanged for one-part addresses', function() {
         setAddressFormat('4');
 
         var newRouter;
         for (var i = 0; i < 128; i++) {
           newRouter = makeRemoteRouter();
           assert.equal(newRouter.routerNumber, newRouter.getRouterNumber());
-          assert.equal("0", newRouter.getAddress());
+          assert.equal('0', newRouter.getAddress());
         }
       });
 
-      it("Constrains router number to addressable space", function () {
+      it('Constrains router number to addressable space', function() {
         // Four possible router addresses
         setAddressFormat('2.8');
 
@@ -643,39 +732,39 @@ describe("NetSimRouterNode", function () {
         assert.equal(1, routerE.getRouterNumber());
       });
 
-      it("Wraps router names/IDs to match the router number", function () {
+      it('Wraps router names/IDs to match the router number', function() {
         // Four possible router addresses
         setAddressFormat('2.8');
 
         // Initial node starts at routerNumber 1
         assert.equal(1, routerA.routerNumber);
-        assert.equal("Router 1", routerA.getDisplayName());
-        assert.equal("1.0", routerA.getAddress());
+        assert.equal('Router 1', routerA.getDisplayName());
+        assert.equal('1.0', routerA.getAddress());
 
         assert.equal(2, routerB.routerNumber);
-        assert.equal("Router 2", routerB.getDisplayName());
-        assert.equal("2.0", routerB.getAddress());
+        assert.equal('Router 2', routerB.getDisplayName());
+        assert.equal('2.0', routerB.getAddress());
 
         assert.equal(3, routerC.routerNumber);
-        assert.equal("Router 3", routerC.getDisplayName());
-        assert.equal("3.0", routerC.getAddress());
+        assert.equal('Router 3', routerC.getDisplayName());
+        assert.equal('3.0', routerC.getAddress());
 
         // At 4 (our assignable space) router number and address wrap to zero
         assert.equal(4, routerD.routerNumber);
-        assert.equal("Router 0", routerD.getDisplayName());
-        assert.equal("0.0", routerD.getAddress());
+        assert.equal('Router 0', routerD.getDisplayName());
+        assert.equal('0.0', routerD.getAddress());
 
         // Collisions are possible
         assert.equal(5, routerE.routerNumber);
-        assert.equal("Router 1", routerE.getDisplayName());
-        assert.equal("1.0", routerE.getAddress());
+        assert.equal('Router 1', routerE.getDisplayName());
+        assert.equal('1.0', routerE.getAddress());
       });
     });
 
-    describe("random address assignment order", function () {
+    describe('random address assignment order', function() {
       var router, clients;
 
-      beforeEach(function () {
+      beforeEach(function() {
         router = makeRemoteRouter();
         router.maxClientConnections_ = Infinity;
         clients = [];
@@ -684,7 +773,7 @@ describe("NetSimRouterNode", function () {
         }
       });
 
-      it("assigns every address in addressable space", function () {
+      it('assigns every address in addressable space', function() {
         NetSimGlobals.setRandomSeed('Coverage!');
         setAddressFormat('4');
         // Addressable space is 0-15
@@ -716,7 +805,7 @@ describe("NetSimRouterNode", function () {
         assert.equal(undefined, clients[14].getAddress());
       });
 
-      it("can assign addresses in a different order", function () {
+      it('can assign addresses in a different order', function() {
         NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('4');
 
@@ -739,7 +828,7 @@ describe("NetSimRouterNode", function () {
         assert.equal('7', clients[13].getAddress());
       });
 
-      it("shrinks addressable space according to address format", function () {
+      it('shrinks addressable space according to address format', function() {
         NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('2');
 
@@ -754,7 +843,7 @@ describe("NetSimRouterNode", function () {
         assert.equal(undefined, clients[3].getAddress());
       });
 
-      it("grows addressable space according to address format", function () {
+      it('grows addressable space according to address format', function() {
         NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('8');
 
@@ -768,10 +857,9 @@ describe("NetSimRouterNode", function () {
         assert.equal('29', clients[2].getAddress());
       });
     });
-
   });
 
-  it("still simulates/routes after connect-disconnect-connect cycle", function () {
+  it('still simulates/routes after connect-disconnect-connect cycle', function() {
     var routerA = makeRemoteRouter();
     var clientA = makeRemoteClient();
 
@@ -781,12 +869,17 @@ describe("NetSimRouterNode", function () {
 
     clientA.initializeSimulation(null, fakeReceivedLog);
 
-    var assertLoopbackWorks = function (forClient) {
+    var assertLoopbackWorks = function(forClient) {
       // Construct a message with a timestamp payload, to ensure calls to
       // this method don't conflict with one another.
-      var headers = encoder.makeBinaryHeaders({ toAddress: forClient.getAddress()});
-      var payload = encoder.concatenateBinary(headers, new Date().getTime().toString(2));
-      forClient.sendMessage(payload, function () {});
+      var headers = encoder.makeBinaryHeaders({
+        toAddress: forClient.getAddress()
+      });
+      var payload = encoder.concatenateBinary(
+        headers,
+        new Date().getTime().toString(2)
+      );
+      forClient.sendMessage(payload, function() {});
       time = tickUntilLogsStabilize(forClient, time);
       assert.equal(payload, fakeReceivedLog.getLatest());
     };
@@ -801,10 +894,10 @@ describe("NetSimRouterNode", function () {
     assertLoopbackWorks(clientA);
   });
 
-  describe("message routing rules", function () {
+  describe('message routing rules', function() {
     var routerA, clientA, clientB;
 
-    beforeEach(function () {
+    beforeEach(function() {
       routerA = makeRemoteRouter();
       clientA = makeRemoteClient();
       clientB = makeRemoteClient();
@@ -829,26 +922,27 @@ describe("NetSimRouterNode", function () {
       routerA.tick({time: 0});
     });
 
-    it("ignores messages sent to itself from other clients", function () {
-      clientB.sendMessage('00000', function () {});
+    it('ignores messages sent to itself from other clients', function() {
+      clientB.sendMessage('00000', function() {});
       routerA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', clientB.entityID);
       assertFirstMessageProperty('toNodeID', routerA.entityID);
     });
 
-    it("ignores messages sent to others", function () {
+    it('ignores messages sent to others', function() {
       var from = clientA.entityID;
       var to = clientB.entityID;
       NetSimMessage.send(
-          testShard,
-          {
-            fromNodeID: from,
-            toNodeID: to,
-            simulatedBy: from,
-            payload: '00000'
-          },
-          function () {});
+        testShard,
+        {
+          fromNodeID: from,
+          toNodeID: to,
+          simulatedBy: from,
+          payload: '00000'
+        },
+        function() {}
+      );
       routerA.tick({time: 1000});
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 0);
@@ -856,29 +950,32 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('toNodeID', to);
     });
 
-    it("does not forward malformed packets", function () {
+    it('does not forward malformed packets', function() {
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
-      clientA.sendMessage('00000', function () {});
+      clientA.sendMessage('00000', function() {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
     });
 
-    it("does not forward packets with no match in the local network", function () {
-      var payload = encoder.concatenateBinary({
-        toAddress: '1111',
-        fromAddress: '1111'
-      }, '101010101');
-      clientA.sendMessage(payload, function () {});
+    it('does not forward packets with no match in the local network', function() {
+      var payload = encoder.concatenateBinary(
+        {
+          toAddress: '1111',
+          fromAddress: '1111'
+        },
+        '101010101'
+      );
+      clientA.sendMessage(payload, function() {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
     });
 
-    it("forwards packets when the toAddress is found in the network", function () {
+    it('forwards packets when the toAddress is found in the network', function() {
       var fromAddress = clientA.getAddress();
       var toAddress = clientB.getAddress();
 
@@ -887,7 +984,7 @@ describe("NetSimRouterNode", function () {
         fromAddress: fromAddress
       });
       var payload = encoder.concatenateBinary(headers, '101010101');
-      clientA.sendMessage(payload, function () {});
+      clientA.sendMessage(payload, function() {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 1);
@@ -898,11 +995,10 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('toNodeID', clientB.entityID);
     });
 
-
-    describe("broadcast mode", function () {
+    describe('broadcast mode', function() {
       var clientC;
 
-      beforeEach(function () {
+      beforeEach(function() {
         clientC = makeRemoteClient();
 
         // Put level in broadcast mode
@@ -917,8 +1013,8 @@ describe("NetSimRouterNode", function () {
         routerA.initializeSimulation(clientA.entityID);
       });
 
-      it("forwards all messages it receives to every connected node", function () {
-        clientA.sendMessage("00001111", function () {});
+      it('forwards all messages it receives to every connected node', function() {
+        clientA.sendMessage('00001111', function() {});
         routerA.tick({time: 1000});
 
         // Router should log having picked up one message
@@ -930,20 +1026,22 @@ describe("NetSimRouterNode", function () {
       });
     });
 
-    describe("Router bandwidth limits", function () {
+    describe('Router bandwidth limits', function() {
       var fromAddress, toAddress;
 
-      var sendMessageOfSize = function (messageSizeBits) {
+      var sendMessageOfSize = function(messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: toAddress,
           fromAddress: fromAddress
         });
-        var payload = encoder.concatenateBinary(headers,
-            '0'.repeat(messageSizeBits - encoder.getHeaderLength()));
-        clientA.sendMessage(payload, function () {});
+        var payload = encoder.concatenateBinary(
+          headers,
+          '0'.repeat(messageSizeBits - encoder.getHeaderLength())
+        );
+        clientA.sendMessage(payload, function() {});
       };
 
-      beforeEach(function () {
+      beforeEach(function() {
         fromAddress = clientA.getAddress();
         toAddress = clientB.getAddress();
 
@@ -952,7 +1050,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 0);
       });
 
-      it("requires variable time to forward packets based on bandwidth", function () {
+      it('requires variable time to forward packets based on bandwidth', function() {
         routerA.bandwidth = 1000; // 1 bit / ms
 
         // Router detects message immediately, but does not send it until
@@ -968,7 +1066,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 1);
       });
 
-      it("respects bandwidth setting", function () {
+      it('respects bandwidth setting', function() {
         // 0.1 bit / ms, so 10ms / bit
         routerA.bandwidth = 100;
 
@@ -982,7 +1080,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 1);
       });
 
-      it("routes packet on first tick if bandwidth is infinite", function () {
+      it('routes packet on first tick if bandwidth is infinite', function() {
         routerA.bandwidth = Infinity;
 
         // Message is detected immediately, though that's not obvious here.
@@ -994,7 +1092,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 1);
       });
 
-      it("routes 'batches' of packets when multiple packets fit in the bandwidth", function () {
+      it("routes 'batches' of packets when multiple packets fit in the bandwidth", function() {
         routerA.bandwidth = 1000; // 1 bit / ms
 
         // Router should schedule these all as soon as they show up, for
@@ -1030,7 +1128,7 @@ describe("NetSimRouterNode", function () {
       // message to t=80. You might argue that same information exists in
       // this first test case, and it does - but it wouldn't if the first
       // message was being simulated by a remote client.
-      it("is pessimistic when scheduling new packets", function () {
+      it('is pessimistic when scheduling new packets', function() {
         routerA.bandwidth = 1000; // 1 bit / ms
 
         // Router 'starts sending' this message now, expected to finish
@@ -1060,7 +1158,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 2);
       });
 
-      it("normally corrects pessimistic estimates with rescheduling", function () {
+      it('normally corrects pessimistic estimates with rescheduling', function() {
         routerA.bandwidth = 1000; // 1 bit / ms
 
         // Router 'starts sending' this message now, expected to finish
@@ -1090,7 +1188,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 2);
       });
 
-      it("adjusts routing schedule when router bandwidth changes", function () {
+      it('adjusts routing schedule when router bandwidth changes', function() {
         routerA.bandwidth = 1000; // 1 bit / ms
 
         // Five 100-bit messages, scheduled for t=100-500 respectively.
@@ -1152,7 +1250,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 5);
       });
 
-      it("drops packets after ten minutes in the router queue", function () {
+      it('drops packets after ten minutes in the router queue', function() {
         routerA.bandwidth = 1; // 1 bit / second
         var tenMinutesInBits = 600;
         var tenMinutesInMillis = 600000;
@@ -1179,7 +1277,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 0);
       });
 
-      it("smaller packets can expire if backed up behind large ones", function () {
+      it('smaller packets can expire if backed up behind large ones', function() {
         routerA.bandwidth = 1; // 1 bit / second
         var oneMinuteInBits = 60;
         var oneMinuteInMillis = 60000;
@@ -1209,7 +1307,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 1);
       });
 
-      it("removing expired packets allows packets further down the queue to be processed sooner", function () {
+      it('removing expired packets allows packets further down the queue to be processed sooner', function() {
         routerA.bandwidth = 1; // 1 bit / second
         var oneMinuteInBits = 60;
         var oneMinuteInMillis = 60000;
@@ -1252,43 +1350,62 @@ describe("NetSimRouterNode", function () {
       });
     });
 
-    describe("Router memory limits", function () {
-      var sendMessageOfSize = function (messageSizeBits) {
+    describe('Router memory limits', function() {
+      var sendMessageOfSize = function(messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
           fromAddress: clientA.getAddress()
         });
-        var payload = encoder.concatenateBinary(headers,
-            '0'.repeat(messageSizeBits - encoder.getHeaderLength()));
+        var payload = encoder.concatenateBinary(
+          headers,
+          '0'.repeat(messageSizeBits - encoder.getHeaderLength())
+        );
 
-        clientA.sendMessage(payload, function () {});
+        clientA.sendMessage(payload, function() {});
       };
 
-      var assertRouterQueueSize = function (expectedQueueSizeBits) {
-        var queueSize = getRows('messageTable').filter(function (m) {
-          return m.toNodeID === routerA.entityID;
-        }).map(function (m) {
-          return m.base64Payload.len;
-        }).reduce(function (p, c) {
-          return p + c;
-        }, 0);
-        assert(expectedQueueSizeBits === queueSize, "Expected router queue to " +
-            "contain " + expectedQueueSizeBits + " bits, but it contained " +
-            queueSize + " bits");
+      var assertRouterQueueSize = function(expectedQueueSizeBits) {
+        var queueSize = getRows('messageTable')
+          .filter(function(m) {
+            return m.toNodeID === routerA.entityID;
+          })
+          .map(function(m) {
+            return m.base64Payload.len;
+          })
+          .reduce(function(p, c) {
+            return p + c;
+          }, 0);
+        assert(
+          expectedQueueSizeBits === queueSize,
+          'Expected router queue to ' +
+            'contain ' +
+            expectedQueueSizeBits +
+            ' bits, but it contained ' +
+            queueSize +
+            ' bits'
+        );
       };
 
-      var assertHowManyDropped = function (expectedDropCount) {
-        var droppedPackets = getRows('logTable').map(function (l) {
-          return l.status === NetSimLogEntry.LogStatus.DROPPED ? 1 : 0;
-        }).reduce(function (p, c) {
-          return p + c;
-        }, 0);
-        assert(droppedPackets === expectedDropCount, "Expected that " +
-            expectedDropCount + " packets would be dropped, " +
-            "but logs only report " + droppedPackets + " dropped packets");
+      var assertHowManyDropped = function(expectedDropCount) {
+        var droppedPackets = getRows('logTable')
+          .map(function(l) {
+            return l.status === NetSimLogEntry.LogStatus.DROPPED ? 1 : 0;
+          })
+          .reduce(function(p, c) {
+            return p + c;
+          }, 0);
+        assert(
+          droppedPackets === expectedDropCount,
+          'Expected that ' +
+            expectedDropCount +
+            ' packets would be dropped, ' +
+            'but logs only report ' +
+            droppedPackets +
+            ' dropped packets'
+        );
       };
 
-      beforeEach(function () {
+      beforeEach(function() {
         // Establish time baseline of zero
         routerA.tick({time: 0});
         routerA.bandwidth = Infinity;
@@ -1296,7 +1413,7 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 0);
       });
 
-      it("allows messages that fit in router memory", function () {
+      it('allows messages that fit in router memory', function() {
         // Exact fit is okay
         // Log table is empty because routing is not complete
         sendMessageOfSize(64 * 8);
@@ -1305,7 +1422,7 @@ describe("NetSimRouterNode", function () {
         assertHowManyDropped(0);
       });
 
-      it("rejects messages that exceed router memory", function () {
+      it('rejects messages that exceed router memory', function() {
         // Over by one bit gets dropped!
         // Adds a log entry with a "dropped" status, or some such.
         sendMessageOfSize(64 * 8 + 1);
@@ -1314,7 +1431,7 @@ describe("NetSimRouterNode", function () {
         assertHowManyDropped(1);
       });
 
-      it("rejects messages when they would put queue over its limit", function () {
+      it('rejects messages when they would put queue over its limit', function() {
         // Three messages: 62 bytes, 2 bytes, 4 bytes
         sendMessageOfSize(62 * 8);
         sendMessageOfSize(2 * 8);
@@ -1326,21 +1443,24 @@ describe("NetSimRouterNode", function () {
         assertHowManyDropped(1);
       });
 
-      it("accepts messages queued beyond memory limit if clearing packets ahead" +
-          "of them allows them to fit in memory", function () {
-        // Three messages: 4 bytes, 64 bytes, 2 bytes
-        sendMessageOfSize(4 * 8);
-        sendMessageOfSize(62 * 8);
-        sendMessageOfSize(2 * 8);
+      it(
+        'accepts messages queued beyond memory limit if clearing packets ahead' +
+          'of them allows them to fit in memory',
+        function() {
+          // Three messages: 4 bytes, 64 bytes, 2 bytes
+          sendMessageOfSize(4 * 8);
+          sendMessageOfSize(62 * 8);
+          sendMessageOfSize(2 * 8);
 
-        // The second message should drop, but the third message should fit
-        // because the second message was dropped.
-        assertTableSize(testShard, 'messageTable', 2);
-        assertRouterQueueSize(6 * 8);
-        assertHowManyDropped(1);
-      });
+          // The second message should drop, but the third message should fit
+          // because the second message was dropped.
+          assertTableSize(testShard, 'messageTable', 2);
+          assertRouterQueueSize(6 * 8);
+          assertHowManyDropped(1);
+        }
+      );
 
-      it("can drop multiple packets queued beyond memory limit", function () {
+      it('can drop multiple packets queued beyond memory limit', function() {
         sendMessageOfSize(63 * 8);
         sendMessageOfSize(2 * 8);
         sendMessageOfSize(4 * 8);
@@ -1353,7 +1473,7 @@ describe("NetSimRouterNode", function () {
         assertHowManyDropped(4);
       });
 
-      it("drops packets when memory capacity is reduced below queue size", function () {
+      it('drops packets when memory capacity is reduced below queue size', function() {
         sendMessageOfSize(16 * 8);
         sendMessageOfSize(16 * 8);
         sendMessageOfSize(16 * 8);
@@ -1373,28 +1493,31 @@ describe("NetSimRouterNode", function () {
         assertHowManyDropped(1);
       });
 
-      it("can drop multiple packets when memory capacity is reduced below" +
-          " queue size", function () {
-        sendMessageOfSize(20 * 8);
-        sendMessageOfSize(20 * 8);
-        sendMessageOfSize(8 * 8);
+      it(
+        'can drop multiple packets when memory capacity is reduced below' +
+          ' queue size',
+        function() {
+          sendMessageOfSize(20 * 8);
+          sendMessageOfSize(20 * 8);
+          sendMessageOfSize(8 * 8);
 
-        // All three should fit in our 64-byte memory
-        assertTableSize(testShard, 'messageTable', 3);
-        assertRouterQueueSize(48 * 8);
-        assertHowManyDropped(0);
+          // All three should fit in our 64-byte memory
+          assertTableSize(testShard, 'messageTable', 3);
+          assertRouterQueueSize(48 * 8);
+          assertHowManyDropped(0);
 
-        // Cut router memory to 32 bytes.
-        routerA.setMemory(16 * 8);
+          // Cut router memory to 32 bytes.
+          routerA.setMemory(16 * 8);
 
-        // This should kick the first and second messages out of memory, but
-        // the third message should fit.
-        assertTableSize(testShard, 'messageTable', 1);
-        assertRouterQueueSize(8 * 8);
-        assertHowManyDropped(2);
-      });
+          // This should kick the first and second messages out of memory, but
+          // the third message should fit.
+          assertTableSize(testShard, 'messageTable', 1);
+          assertRouterQueueSize(8 * 8);
+          assertHowManyDropped(2);
+        }
+      );
 
-      it("getMemoryInUse() reports correct memory usage", function () {
+      it('getMemoryInUse() reports correct memory usage', function() {
         routerA.setMemory(Infinity);
         assertRouterQueueSize(0);
         assert.equal(0, routerA.getMemoryInUse());
@@ -1417,40 +1540,49 @@ describe("NetSimRouterNode", function () {
         assertRouterQueueSize(6 * 8);
         assert.equal(6 * 8, routerA.getMemoryInUse());
       });
-
     });
 
-    describe("Random drop chance", function () {
-      var sendMessageOfSize = function (messageSizeBits) {
+    describe('Random drop chance', function() {
+      var sendMessageOfSize = function(messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
           fromAddress: clientA.getAddress()
         });
-        var payload = encoder.concatenateBinary(headers,
-            '0'.repeat(messageSizeBits - encoder.getHeaderLength()));
+        var payload = encoder.concatenateBinary(
+          headers,
+          '0'.repeat(messageSizeBits - encoder.getHeaderLength())
+        );
 
-        clientA.sendMessage(payload, function () {});
+        clientA.sendMessage(payload, function() {});
       };
 
-      var sendXMessagesAndTickUntilStable = function (numToSend) {
+      var sendXMessagesAndTickUntilStable = function(numToSend) {
         for (var i = 0; i < numToSend; i++) {
           sendMessageOfSize(8);
         }
         tickUntilLogsStabilize(routerA);
       };
 
-      var assertHowManyDropped = function (expectedDropCount) {
-        var droppedPackets = getRows('logTable').map(function (l) {
-          return l.status === NetSimLogEntry.LogStatus.DROPPED ? 1 : 0;
-        }).reduce(function (p, c) {
-          return p + c;
-        }, 0);
-        assert(droppedPackets === expectedDropCount, "Expected that " +
-            expectedDropCount + " packets would be dropped, " +
-            "but logs only report " + droppedPackets + " dropped packets");
+      var assertHowManyDropped = function(expectedDropCount) {
+        var droppedPackets = getRows('logTable')
+          .map(function(l) {
+            return l.status === NetSimLogEntry.LogStatus.DROPPED ? 1 : 0;
+          })
+          .reduce(function(p, c) {
+            return p + c;
+          }, 0);
+        assert(
+          droppedPackets === expectedDropCount,
+          'Expected that ' +
+            expectedDropCount +
+            ' packets would be dropped, ' +
+            'but logs only report ' +
+            droppedPackets +
+            ' dropped packets'
+        );
       };
 
-      beforeEach(function () {
+      beforeEach(function() {
         // Establish time baseline of zero
         routerA.tick({time: 0});
         assertTableSize(testShard, 'logTable', 0);
@@ -1458,42 +1590,42 @@ describe("NetSimRouterNode", function () {
         assert.equal(Infinity, routerA.memory);
       });
 
-      it("zero chance drops nothing", function () {
+      it('zero chance drops nothing', function() {
         routerA.randomDropChance = 0;
         sendXMessagesAndTickUntilStable(10);
         assertTableSize(testShard, 'messageTable', 10);
         assertHowManyDropped(0);
       });
 
-      it("100% chance drops everything", function () {
+      it('100% chance drops everything', function() {
         routerA.randomDropChance = 1;
         sendXMessagesAndTickUntilStable(10);
         assertTableSize(testShard, 'messageTable', 0);
         assertHowManyDropped(10);
       });
 
-      it("50% drops about half", function () {
+      it('50% drops about half', function() {
         NetSimGlobals.setRandomSeed('a');
         routerA.randomDropChance = 0.5;
         sendXMessagesAndTickUntilStable(20);
         assertHowManyDropped(9);
       });
 
-      it("50% drops about half (example two)", function () {
+      it('50% drops about half (example two)', function() {
         NetSimGlobals.setRandomSeed('b');
         routerA.randomDropChance = 0.5;
         sendXMessagesAndTickUntilStable(20);
         assertHowManyDropped(11);
       });
 
-      it("10% drops a few", function () {
+      it('10% drops a few', function() {
         NetSimGlobals.setRandomSeed('c');
         routerA.randomDropChance = 0.1;
         sendXMessagesAndTickUntilStable(30);
         assertHowManyDropped(2);
       });
 
-      it("10% drops a few (example two)", function () {
+      it('10% drops a few (example two)', function() {
         NetSimGlobals.setRandomSeed('d');
         routerA.randomDropChance = 0.1;
         sendXMessagesAndTickUntilStable(30);
@@ -1501,26 +1633,28 @@ describe("NetSimRouterNode", function () {
       });
     });
 
-    describe("Auto-DNS behavior", function () {
+    describe('Auto-DNS behavior', function() {
       var autoDnsAddress;
 
-      var sendToAutoDns = function (fromNode, asciiPayload) {
+      var sendToAutoDns = function(fromNode, asciiPayload) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: autoDnsAddress,
           fromAddress: fromNode.getAddress()
         });
-        var payload = encoder.concatenateBinary(headers,
-            asciiToBinary(asciiPayload, BITS_PER_BYTE));
-        fromNode.sendMessage(payload, function () {});
+        var payload = encoder.concatenateBinary(
+          headers,
+          asciiToBinary(asciiPayload, BITS_PER_BYTE)
+        );
+        fromNode.sendMessage(payload, function() {});
       };
 
-      beforeEach(function () {
+      beforeEach(function() {
         routerA.setDnsMode(DnsMode.AUTOMATIC);
         autoDnsAddress = routerA.getAutoDnsAddress();
         routerA.tick({time: 0});
       });
 
-      it("can round-trip to auto-DNS service and back",function () {
+      it('can round-trip to auto-DNS service and back', function() {
         sendToAutoDns(clientA, '');
 
         // No routing has occurred yet; our original message is still in the table.
@@ -1530,7 +1664,10 @@ describe("NetSimRouterNode", function () {
         assertFirstMessageProperty('toNodeID', routerA.entityID);
         assertFirstMessageProperty('simulatedBy', clientA.entityID);
         assertFirstMessageHeader(Packet.HeaderType.TO_ADDRESS, autoDnsAddress);
-        assertFirstMessageHeader(Packet.HeaderType.FROM_ADDRESS, clientA.getAddress());
+        assertFirstMessageHeader(
+          Packet.HeaderType.FROM_ADDRESS,
+          clientA.getAddress()
+        );
 
         // On first tick (at infinite bandwidth) message should be routed to
         // auto-DNS service.
@@ -1548,8 +1685,14 @@ describe("NetSimRouterNode", function () {
         assertFirstMessageProperty('fromNodeID', routerA.entityID);
         assertFirstMessageProperty('toNodeID', routerA.entityID);
         assertFirstMessageProperty('simulatedBy', clientA.entityID);
-        assertFirstMessageHeader(Packet.HeaderType.TO_ADDRESS, clientA.getAddress());
-        assertFirstMessageHeader(Packet.HeaderType.FROM_ADDRESS, autoDnsAddress);
+        assertFirstMessageHeader(
+          Packet.HeaderType.TO_ADDRESS,
+          clientA.getAddress()
+        );
+        assertFirstMessageHeader(
+          Packet.HeaderType.FROM_ADDRESS,
+          autoDnsAddress
+        );
 
         // On second tick, router forwards DNS response back to client
         routerA.tick({time: 2});
@@ -1558,11 +1701,17 @@ describe("NetSimRouterNode", function () {
         assertFirstMessageProperty('fromNodeID', routerA.entityID);
         assertFirstMessageProperty('toNodeID', clientA.entityID);
         assertFirstMessageProperty('simulatedBy', clientA.entityID);
-        assertFirstMessageHeader(Packet.HeaderType.TO_ADDRESS, clientA.getAddress());
-        assertFirstMessageHeader(Packet.HeaderType.FROM_ADDRESS, autoDnsAddress);
+        assertFirstMessageHeader(
+          Packet.HeaderType.TO_ADDRESS,
+          clientA.getAddress()
+        );
+        assertFirstMessageHeader(
+          Packet.HeaderType.FROM_ADDRESS,
+          autoDnsAddress
+        );
       });
 
-      it("ignores auto-DNS messages from remote clients", function () {
+      it('ignores auto-DNS messages from remote clients', function() {
         sendToAutoDns(clientB, '');
 
         // No routing has occurred yet; our original message is still in the table.
@@ -1585,40 +1734,42 @@ describe("NetSimRouterNode", function () {
         assert.deepEqual(originalMessages, getRows('messageTable'));
       });
 
-      it("produces a usage message for any badly-formed request", function () {
+      it('produces a usage message for any badly-formed request', function() {
         sendToAutoDns(clientA, 'Would you tea for stay like to?');
         tickUntilLogsStabilize(routerA);
 
         assertTableSize(testShard, 'messageTable', 1);
-        assertFirstMessageAsciiBody("Automatic DNS Node" +
-            "\nUsage: GET hostname [hostname [hostname ...]]");
+        assertFirstMessageAsciiBody(
+          'Automatic DNS Node' +
+            '\nUsage: GET hostname [hostname [hostname ...]]'
+        );
       });
 
-      it("responds with NOT_FOUND when it can't find the requested hostname", function () {
+      it("responds with NOT_FOUND when it can't find the requested hostname", function() {
         sendToAutoDns(clientA, 'GET wagner14');
         tickUntilLogsStabilize(routerA);
 
         assertTableSize(testShard, 'messageTable', 1);
-        assertFirstMessageAsciiBody("wagner14:NOT_FOUND");
+        assertFirstMessageAsciiBody('wagner14:NOT_FOUND');
       });
 
-      it("responds to well-formed requests with a matching number of responses", function () {
+      it('responds to well-formed requests with a matching number of responses', function() {
         sendToAutoDns(clientA, 'GET bert ernie');
         tickUntilLogsStabilize(routerA);
 
         assertTableSize(testShard, 'messageTable', 1);
-        assertFirstMessageAsciiBody("bert:NOT_FOUND ernie:NOT_FOUND");
+        assertFirstMessageAsciiBody('bert:NOT_FOUND ernie:NOT_FOUND');
       });
 
-      it("knows its own hostname and address", function () {
+      it('knows its own hostname and address', function() {
         sendToAutoDns(clientA, 'GET dns');
         tickUntilLogsStabilize(routerA);
 
         assertTableSize(testShard, 'messageTable', 1);
-        assertFirstMessageAsciiBody("dns:15");
+        assertFirstMessageAsciiBody('dns:15');
       });
 
-      it("knows the router hostname and address", function () {
+      it('knows the router hostname and address', function() {
         sendToAutoDns(clientA, 'GET ' + routerA.getHostname());
         tickUntilLogsStabilize(routerA);
 
@@ -1626,25 +1777,32 @@ describe("NetSimRouterNode", function () {
         assertFirstMessageAsciiBody(routerA.getHostname() + ':0');
       });
 
-      it("can look up the client addresses by hostname", function () {
-        sendToAutoDns(clientA, 'GET ' +
-            clientA.getHostname() + ' ' +
-            clientB.getHostname());
+      it('can look up the client addresses by hostname', function() {
+        sendToAutoDns(
+          clientA,
+          'GET ' + clientA.getHostname() + ' ' + clientB.getHostname()
+        );
         tickUntilLogsStabilize(routerA);
 
         assertTableSize(testShard, 'messageTable', 1);
         assertFirstMessageAsciiBody(
-            clientA.getHostname() + ':' + clientA.getAddress() + ' ' +
-            clientB.getHostname() + ':' + clientB.getAddress());
+          clientA.getHostname() +
+            ':' +
+            clientA.getAddress() +
+            ' ' +
+            clientB.getHostname() +
+            ':' +
+            clientB.getAddress()
+        );
       });
     });
   });
 
-  describe("routing to other routers", function () {
+  describe('routing to other routers', function() {
     var routerA, routerB;
     var clientA, clientB;
 
-    beforeEach(function () {
+    beforeEach(function() {
       routerA = makeRemoteRouter();
       routerB = makeRemoteRouter();
       clientA = makeRemoteClient();
@@ -1664,17 +1822,17 @@ describe("NetSimRouterNode", function () {
       routerB.tick({time: 0});
     });
 
-    it("inter-router message is dropped when 'connectedRouters' are disabled",
-        function () {
+    it("inter-router message is dropped when 'connectedRouters' are disabled", function() {
       NetSimGlobals.getLevelConfig().connectedRouters = false;
 
       var packetBinary = encoder.concatenateBinary(
-          encoder.makeBinaryHeaders({
-            toAddress: clientB.getAddress(),
-            fromAddress: clientA.getAddress()
-          }),
-          DataConverters.asciiToBinary('wop'));
-      clientA.sendMessage(packetBinary, function () {});
+        encoder.makeBinaryHeaders({
+          toAddress: clientB.getAddress(),
+          fromAddress: clientA.getAddress()
+        }),
+        DataConverters.asciiToBinary('wop')
+      );
+      clientA.sendMessage(packetBinary, function() {});
 
       // t=0; nothing has happened yet
       assertTableSize(testShard, 'logTable', 0);
@@ -1694,7 +1852,7 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'messageTable', 0);
     });
 
-    it("can send a message to another router", function () {
+    it('can send a message to another router', function() {
       var logRow, log;
 
       // This test reads better with slower routing.
@@ -1703,15 +1861,16 @@ describe("NetSimRouterNode", function () {
       // routers are registered with each client.
       routerA.setBandwidth(50); // Requires 1 second for routing
       routerB.setBandwidth(25); // Requires 2 seconds for routing, buts starts
-                                // on first tick
+      // on first tick
 
       var packetBinary = encoder.concatenateBinary(
-          encoder.makeBinaryHeaders({
-            toAddress: routerB.getAddress(),
-            fromAddress: clientA.getAddress()
-          }),
-          DataConverters.asciiToBinary('flop'));
-      clientA.sendMessage(packetBinary, function () {});
+        encoder.makeBinaryHeaders({
+          toAddress: routerB.getAddress(),
+          fromAddress: clientA.getAddress()
+        }),
+        DataConverters.asciiToBinary('flop')
+      );
+      clientA.sendMessage(packetBinary, function() {});
 
       // t=0; nothing has happened yet
       assertTableSize(testShard, 'logTable', 0);
@@ -1742,7 +1901,7 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'messageTable', 0);
     });
 
-    it("can send a message to client on another router", function () {
+    it('can send a message to client on another router', function() {
       var logRow, log;
 
       // This test reads better with slower routing.
@@ -1751,15 +1910,16 @@ describe("NetSimRouterNode", function () {
       // routers are registered with each client.
       routerA.setBandwidth(50); // Requires 1 second for routing
       routerB.setBandwidth(25); // Requires 2 seconds for routing, buts starts
-                                // on first tick
+      // on first tick
 
       var packetBinary = encoder.concatenateBinary(
-          encoder.makeBinaryHeaders({
-            toAddress: clientB.getAddress(),
-            fromAddress: clientA.getAddress()
-          }),
-          DataConverters.asciiToBinary('wop'));
-      clientA.sendMessage(packetBinary, function () {});
+        encoder.makeBinaryHeaders({
+          toAddress: clientB.getAddress(),
+          fromAddress: clientA.getAddress()
+        }),
+        DataConverters.asciiToBinary('wop')
+      );
+      clientA.sendMessage(packetBinary, function() {});
 
       // t=0; nothing has happened yet
       assertTableSize(testShard, 'logTable', 0);
@@ -1792,7 +1952,7 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('toNodeID', clientB.entityID);
     });
 
-    it("can make one extra hop", function () {
+    it('can make one extra hop', function() {
       var routerC = makeRemoteRouter();
       NetSimGlobals.getLevelConfig().minimumExtraHops = 1;
       NetSimGlobals.getLevelConfig().maximumExtraHops = 1;
@@ -1803,12 +1963,13 @@ describe("NetSimRouterNode", function () {
       routerC.setBandwidth(25);
 
       var packetBinary = encoder.concatenateBinary(
-          encoder.makeBinaryHeaders({
-            toAddress: clientB.getAddress(),
-            fromAddress: clientA.getAddress()
-          }),
-          DataConverters.asciiToBinary('wop'));
-      clientA.sendMessage(packetBinary, function () {});
+        encoder.makeBinaryHeaders({
+          toAddress: clientB.getAddress(),
+          fromAddress: clientA.getAddress()
+        }),
+        DataConverters.asciiToBinary('wop')
+      );
+      clientA.sendMessage(packetBinary, function() {});
 
       // t=0; nothing has happened yet
       assertTableSize(testShard, 'logTable', 0);
@@ -1831,7 +1992,10 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('fromNodeID', routerC.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 0);
-      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID]);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID,
+        routerC.entityID
+      ]);
 
       // t=3; router B picks up message, forwards to client B
       clientA.tick({time: 3000});
@@ -1839,10 +2003,14 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 0);
-      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID, routerB.entityID]);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID,
+        routerC.entityID,
+        routerB.entityID
+      ]);
     });
 
-    it("can make two extra hops", function () {
+    it('can make two extra hops', function() {
       NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
       NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
       NetSimGlobals.setRandomSeed('two-hops');
@@ -1858,12 +2026,13 @@ describe("NetSimRouterNode", function () {
       routerD.setBandwidth(25);
 
       var packetBinary = encoder.concatenateBinary(
-          encoder.makeBinaryHeaders({
-            toAddress: clientB.getAddress(),
-            fromAddress: clientA.getAddress()
-          }),
-          DataConverters.asciiToBinary('wop'));
-      clientA.sendMessage(packetBinary, function () {});
+        encoder.makeBinaryHeaders({
+          toAddress: clientB.getAddress(),
+          fromAddress: clientA.getAddress()
+        }),
+        DataConverters.asciiToBinary('wop')
+      );
+      clientA.sendMessage(packetBinary, function() {});
 
       // t=0; nothing has happened yet
       assertTableSize(testShard, 'logTable', 0);
@@ -1878,8 +2047,7 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('fromNodeID', routerA.entityID);
       assertFirstMessageProperty('toNodeID', routerC.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 1);
-      assertFirstMessageProperty('visitedNodeIDs', [
-        routerA.entityID]);
+      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID]);
 
       // t=2; router C picks up message, forwards to router D
       clientA.tick({time: 2000});
@@ -1888,7 +2056,9 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('toNodeID', routerD.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 0);
       assertFirstMessageProperty('visitedNodeIDs', [
-        routerA.entityID, routerC.entityID]);
+        routerA.entityID,
+        routerC.entityID
+      ]);
 
       // t=3; router D picks up message, forwards to router B
       clientA.tick({time: 3000});
@@ -1897,7 +2067,10 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('toNodeID', routerB.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 0);
       assertFirstMessageProperty('visitedNodeIDs', [
-        routerA.entityID, routerC.entityID, routerD.entityID]);
+        routerA.entityID,
+        routerC.entityID,
+        routerD.entityID
+      ]);
 
       // t=4; router B picks up message, forwards to client B
       clientA.tick({time: 4000});
@@ -1906,33 +2079,36 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('toNodeID', clientB.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 0);
       assertFirstMessageProperty('visitedNodeIDs', [
-        routerA.entityID, routerC.entityID, routerD.entityID, routerB.entityID]);
+        routerA.entityID,
+        routerC.entityID,
+        routerD.entityID,
+        routerB.entityID
+      ]);
     });
 
-
-    describe("extra hop randomization", function () {
+    describe('extra hop randomization', function() {
       var routerC, routerD, routerE, routerF;
 
-      beforeEach(function () {
+      beforeEach(function() {
         routerC = makeRemoteRouter();
         routerD = makeRemoteRouter();
         routerE = makeRemoteRouter();
         routerF = makeRemoteRouter();
       });
 
-      var sendFromAToB = function () {
+      var sendFromAToB = function() {
         var packetBinary = encoder.concatenateBinary(
-            encoder.makeBinaryHeaders({
-              toAddress: clientB.getAddress(),
-              fromAddress: clientA.getAddress()
-            }),
-            DataConverters.asciiToBinary('wop'));
-        clientA.sendMessage(packetBinary, function () {});
+          encoder.makeBinaryHeaders({
+            toAddress: clientB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          DataConverters.asciiToBinary('wop')
+        );
+        clientA.sendMessage(packetBinary, function() {});
         tickUntilLogsStabilize(clientA);
       };
 
-
-      it("uses one order here", function () {
+      it('uses one order here', function() {
         NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
         NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
         NetSimGlobals.setRandomSeed('two-hops');
@@ -1945,7 +2121,7 @@ describe("NetSimRouterNode", function () {
         ]);
       });
 
-      it("uses a different order here", function () {
+      it('uses a different order here', function() {
         NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
         NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
         NetSimGlobals.setRandomSeed('for something completely different');
@@ -1958,7 +2134,7 @@ describe("NetSimRouterNode", function () {
         ]);
       });
 
-      it("uses one number of hops here", function () {
+      it('uses one number of hops here', function() {
         NetSimGlobals.getLevelConfig().minimumExtraHops = 0;
         NetSimGlobals.getLevelConfig().maximumExtraHops = 3;
         NetSimGlobals.setRandomSeed('some random seed');
@@ -1972,7 +2148,7 @@ describe("NetSimRouterNode", function () {
         ]);
       });
 
-      it("uses a different number of hops here", function () {
+      it('uses a different number of hops here', function() {
         NetSimGlobals.getLevelConfig().minimumExtraHops = 0;
         NetSimGlobals.getLevelConfig().maximumExtraHops = 3;
         NetSimGlobals.setRandomSeed('second random seed');
@@ -1985,7 +2161,7 @@ describe("NetSimRouterNode", function () {
       });
     });
 
-    it("only makes one extra hop if two would require backtracking", function () {
+    it('only makes one extra hop if two would require backtracking', function() {
       NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
       NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
 
@@ -1997,12 +2173,13 @@ describe("NetSimRouterNode", function () {
       routerC.setBandwidth(25);
 
       var packetBinary = encoder.concatenateBinary(
-          encoder.makeBinaryHeaders({
-            toAddress: clientB.getAddress(),
-            fromAddress: clientA.getAddress()
-          }),
-          DataConverters.asciiToBinary('wop'));
-      clientA.sendMessage(packetBinary, function () {});
+        encoder.makeBinaryHeaders({
+          toAddress: clientB.getAddress(),
+          fromAddress: clientA.getAddress()
+        }),
+        DataConverters.asciiToBinary('wop')
+      );
+      clientA.sendMessage(packetBinary, function() {});
 
       // t=0; nothing has happened yet
       assertTableSize(testShard, 'logTable', 0);
@@ -2027,7 +2204,10 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('fromNodeID', routerC.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 0);
-      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID]);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID,
+        routerC.entityID
+      ]);
 
       // t=3; router B picks up message, forwards to client B
       clientA.tick({time: 3000});
@@ -2035,57 +2215,68 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);
       assertFirstMessageProperty('extraHopsRemaining', 0);
-      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID, routerB.entityID]);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID,
+        routerC.entityID,
+        routerB.entityID
+      ]);
     });
 
-    describe("full-shard Auto-DNS", function () {
-
-      var sendToAutoDnsA = function (fromNode, asciiPayload) {
+    describe('full-shard Auto-DNS', function() {
+      var sendToAutoDnsA = function(fromNode, asciiPayload) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: routerA.getAutoDnsAddress(),
           fromAddress: fromNode.getAddress()
         });
-        var payload = encoder.concatenateBinary(headers,
-            asciiToBinary(asciiPayload, BITS_PER_BYTE));
-        fromNode.sendMessage(payload, function () {});
+        var payload = encoder.concatenateBinary(
+          headers,
+          asciiToBinary(asciiPayload, BITS_PER_BYTE)
+        );
+        fromNode.sendMessage(payload, function() {});
       };
 
-      beforeEach(function () {
+      beforeEach(function() {
         routerA.setDnsMode(DnsMode.AUTOMATIC);
       });
 
-      it("cannot get addresses out of subnet when whole-shard routing is disabled", function () {
+      it('cannot get addresses out of subnet when whole-shard routing is disabled', function() {
         NetSimGlobals.getLevelConfig().connectedRouters = false;
-        sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname() + ' ' +
-            clientB.getHostname());
+        sendToAutoDnsA(
+          clientA,
+          'GET ' + routerB.getHostname() + ' ' + clientB.getHostname()
+        );
         tickUntilLogsStabilize(clientA);
 
         assertTableSize(testShard, 'messageTable', 1);
         assertFirstMessageAsciiBody(
-            routerB.getHostname() + ':NOT_FOUND ' +
-            clientB.getHostname() + ':NOT_FOUND');
+          routerB.getHostname() +
+            ':NOT_FOUND ' +
+            clientB.getHostname() +
+            ':NOT_FOUND'
+        );
       });
 
-      it("can get remote router hostname and address", function () {
+      it('can get remote router hostname and address', function() {
         sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname());
         tickUntilLogsStabilize(clientA);
 
         assertTableSize(testShard, 'messageTable', 1);
         assertFirstMessageAsciiBody(
-            routerB.getHostname() + ':' + routerB.getAddress());
+          routerB.getHostname() + ':' + routerB.getAddress()
+        );
       });
 
-
-      it("can look up remote client addresses by hostname", function () {
+      it('can look up remote client addresses by hostname', function() {
         sendToAutoDnsA(clientA, 'GET ' + clientB.getHostname());
         tickUntilLogsStabilize(clientA);
 
         assertTableSize(testShard, 'messageTable', 1);
         assertFirstMessageAsciiBody(
-            clientB.getHostname() + ':' + clientB.getAddress());
+          clientB.getHostname() + ':' + clientB.getAddress()
+        );
       });
 
-      it("can query another router's Auto-DNS", function () {
+      it("can query another router's Auto-DNS", function() {
         // Client B should send a request to router A's auto-dns and
         // get a response
         sendToAutoDnsA(clientB, 'GET ' + clientA.getHostname());
@@ -2103,14 +2294,14 @@ describe("NetSimRouterNode", function () {
         assertFirstMessageProperty('fromNodeID', routerB.entityID);
         assertFirstMessageProperty('toNodeID', routerA.entityID);
 
-
         // 3. Message forwarded from router A to auto-DNS A
         // 4. Auto-DNS A generates response back to router A
         clientB.tick({time: 2});
         assertFirstMessageProperty('fromNodeID', routerA.entityID);
         assertFirstMessageProperty('toNodeID', routerA.entityID);
         assertFirstMessageAsciiBody(
-            clientA.getHostname() + ':' + clientA.getAddress());
+          clientA.getHostname() + ':' + clientA.getAddress()
+        );
 
         // 5. Message forwarded from router A to router B
         // 6. And forwarded from router B to client B
@@ -2118,7 +2309,8 @@ describe("NetSimRouterNode", function () {
         assertFirstMessageProperty('fromNodeID', routerB.entityID);
         assertFirstMessageProperty('toNodeID', clientB.entityID);
         assertFirstMessageAsciiBody(
-            clientA.getHostname() + ':' + clientA.getAddress());
+          clientA.getHostname() + ':' + clientA.getAddress()
+        );
       });
     });
   });

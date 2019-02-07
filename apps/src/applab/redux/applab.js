@@ -1,5 +1,5 @@
 /** @file App Lab redux module */
-import { ApplabInterfaceMode } from '../constants';
+import {ApplabInterfaceMode} from '../constants';
 import data from '../../storage/redux/data';
 import screens from './screens';
 import {reducers as jsDebuggerReducers} from '../../lib/tools/jsdebugger/redux';
@@ -19,7 +19,7 @@ const CHANGE_INTERFACE_MODE = 'applab/CHANGE_INTERFACE_MODE';
  */
 function changeInterfaceMode(interfaceMode) {
   if (!interfaceMode) {
-    throw new Error("Expected an interace mode!");
+    throw new Error('Expected an interace mode!');
   }
   return {
     type: CHANGE_INTERFACE_MODE,
@@ -28,7 +28,7 @@ function changeInterfaceMode(interfaceMode) {
 }
 
 export const actions = {
-  changeInterfaceMode,
+  changeInterfaceMode
 };
 
 // Reducers
@@ -49,5 +49,5 @@ export const reducers = {
   maker,
   data,
   interfaceMode,
-  screens,
+  screens
 };

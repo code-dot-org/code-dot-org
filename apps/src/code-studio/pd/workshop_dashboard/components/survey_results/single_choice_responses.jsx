@@ -16,7 +16,9 @@ export default class SingleChoiceResponses extends React.Component {
   getTotalAnswers() {
     if (this.props.perFacilitator) {
       return Object.values(this.props.answers).reduce((sum, answers) => {
-        return sum + Object.values(answers).reduce((subSum, x) => subSum + x, 0);
+        return (
+          sum + Object.values(answers).reduce((subSum, x) => subSum + x, 0)
+        );
       }, 0);
     } else {
       return Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
@@ -46,19 +48,14 @@ export default class SingleChoiceResponses extends React.Component {
 
   renderSingleAnswerCounts() {
     return this.props.possibleAnswers.map((possibleAnswer, i) => {
-      let count = this.props.answers[this.getAnswerIndex(possibleAnswer, i)] || 0;
+      let count =
+        this.props.answers[this.getAnswerIndex(possibleAnswer, i)] || 0;
 
       return (
         <tr key={i}>
-          <td>
-            {this.formatPercentage(count / this.getTotalAnswers())}
-          </td>
-          <td style={{paddingLeft: '20px'}}>
-            {count}
-          </td>
-          <td style={{paddingLeft: '20px'}}>
-            {possibleAnswer}
-          </td>
+          <td>{this.formatPercentage(count / this.getTotalAnswers())}</td>
+          <td style={{paddingLeft: '20px'}}>{count}</td>
+          <td style={{paddingLeft: '20px'}}>{possibleAnswer}</td>
         </tr>
       );
     });
@@ -68,40 +65,62 @@ export default class SingleChoiceResponses extends React.Component {
     const facilitatorNames = Object.keys(this.props.answers);
     const showTotalCount = facilitatorNames.length > 1;
     const totalCountsPerFacilitator = facilitatorNames.map(name => {
-        return Object.values(this.props.answers[name]).reduce((sum, count) => sum + count, 0);
+      return Object.values(this.props.answers[name]).reduce(
+        (sum, count) => sum + count,
+        0
+      );
     });
 
     const headerRow = (
       <tr key="header">
-        <td></td>
-        {facilitatorNames.map((name, i) => <td colSpan={2} style={{paddingLeft: '20px'}} key={i}>{name}</td>)}
-        {showTotalCount && <td colSpan={2} style={{paddingLeft: '20px'}}>Total Responses</td>}
+        <td />
+        {facilitatorNames.map((name, i) => (
+          <td colSpan={2} style={{paddingLeft: '20px'}} key={i}>
+            {name}
+          </td>
+        ))}
+        {showTotalCount && (
+          <td colSpan={2} style={{paddingLeft: '20px'}}>
+            Total Responses
+          </td>
+        )}
       </tr>
     );
 
     const contentRows = this.props.possibleAnswers.map((possibleAnswer, i) => {
       const countsByFacilitator = facilitatorNames.map(name => {
-        return this.props.answers[name][this.getAnswerIndex(possibleAnswer, i)] || 0;
+        return (
+          this.props.answers[name][this.getAnswerIndex(possibleAnswer, i)] || 0
+        );
       });
-      const totalCount = countsByFacilitator.reduce((sum, count) => sum + count, 0);
+      const totalCount = countsByFacilitator.reduce(
+        (sum, count) => sum + count,
+        0
+      );
 
       return (
         <tr key={i}>
           <td>{possibleAnswer}</td>
-          {countsByFacilitator.map((count, j) => ([
-            <td style={{ paddingLeft: '20px' }} key={`${j}.count`}>
+          {countsByFacilitator.map((count, j) => [
+            <td style={{paddingLeft: '20px'}} key={`${j}.count`}>
               {count}
             </td>,
-            <td style={{ paddingLeft: '4px' }} key ={`${j}.percentage`}>
-              {`(${this.formatPercentage(count / totalCountsPerFacilitator[j])})`}
+            <td style={{paddingLeft: '4px'}} key={`${j}.percentage`}>
+              {`(${this.formatPercentage(
+                count / totalCountsPerFacilitator[j]
+              )})`}
             </td>
-          ]))}
-          {showTotalCount && <td style={{paddingLeft: '20px'}}>
-            {totalCount}
-          </td>}
-          {showTotalCount && <td style={{ paddingLeft: '4px' }}>
-            {`(${this.formatPercentage(totalCount / this.getTotalAnswers())})`}
-          </td>}
+          ])}
+          {showTotalCount && (
+            <td style={{paddingLeft: '20px'}}>{totalCount}</td>
+          )}
+          {showTotalCount && (
+            <td style={{paddingLeft: '4px'}}>
+              {`(${this.formatPercentage(
+                totalCount / this.getTotalAnswers()
+              )})`}
+            </td>
+          )}
         </tr>
       );
     });
@@ -112,15 +131,24 @@ export default class SingleChoiceResponses extends React.Component {
   render() {
     // The split is needed for scale questions. The top and bottom responses have text
     // like "1 - not ready / 5 - very ready" and we need to extract the number
-    let possibleAnswers = this.props.answerType === 'scale' ? this.props.possibleAnswers.map((x) => x.split(' ')[0]) : this.props.possibleAnswers;
+    let possibleAnswers =
+      this.props.answerType === 'scale'
+        ? this.props.possibleAnswers.map(x => x.split(' ')[0])
+        : this.props.possibleAnswers;
     let otherAnswers;
     if (this.props.perFacilitator) {
-      let givenAnswers = Object.values(this.props.answers).reduce((set, answers) => {
-        return new Set(Object.keys(answers).concat(...set.values()));
-      }, new Set());
+      let givenAnswers = Object.values(this.props.answers).reduce(
+        (set, answers) => {
+          return new Set(Object.keys(answers).concat(...set.values()));
+        },
+        new Set()
+      );
       otherAnswers = _.difference(givenAnswers, possibleAnswers);
     } else {
-      otherAnswers = _.difference(Object.keys(this.props.answers), possibleAnswers);
+      otherAnswers = _.difference(
+        Object.keys(this.props.answers),
+        possibleAnswers
+      );
     }
 
     return (
@@ -128,35 +156,33 @@ export default class SingleChoiceResponses extends React.Component {
         {this.props.question}
         <table style={{marginTop: '1em'}}>
           <tbody>
-          {this.props.perFacilitator ? this.renderPerFacilitatorAnswerCounts() : this.renderSingleAnswerCounts()}
-          {
-            this.props.otherText && (
+            {this.props.perFacilitator
+              ? this.renderPerFacilitatorAnswerCounts()
+              : this.renderSingleAnswerCounts()}
+            {this.props.otherText && (
               <tr>
                 <td>
-                  {this.formatPercentage(otherAnswers.length / this.getTotalAnswers())}
+                  {this.formatPercentage(
+                    otherAnswers.length / this.getTotalAnswers()
+                  )}
                 </td>
-                <td style={{paddingLeft: '20px'}}>
-                  {otherAnswers.length}
-                </td>
-                <td style={{paddingLeft: '20px'}}>
-                  {this.props.otherText}
-                </td>
+                <td style={{paddingLeft: '20px'}}>{otherAnswers.length}</td>
+                <td style={{paddingLeft: '20px'}}>{this.props.otherText}</td>
               </tr>
-            )
-          }
+            )}
           </tbody>
         </table>
-        {
-          this.props.otherText && otherAnswers.length > 0 && (
-            <div>
-              <br/>
-              {this.props.otherText}
-              <ul>
-                {_.compact(otherAnswers).map((answer, i) => (<li key={i}>{answer}</li>))}
-              </ul>
-            </div>
-          )
-        }
+        {this.props.otherText && otherAnswers.length > 0 && (
+          <div>
+            <br />
+            {this.props.otherText}
+            <ul>
+              {_.compact(otherAnswers).map((answer, i) => (
+                <li key={i}>{answer}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </Panel>
     );
   }

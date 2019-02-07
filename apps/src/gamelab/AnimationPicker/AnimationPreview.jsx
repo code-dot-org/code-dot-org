@@ -15,7 +15,10 @@ export default class AnimationPreview extends React.Component {
     sourceUrl: PropTypes.string, // of spritesheet
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
-    playBehavior: PropTypes.oneOf([PlayBehavior.ALWAYS_PLAY, PlayBehavior.NEVER_PLAY])
+    playBehavior: PropTypes.oneOf([
+      PlayBehavior.ALWAYS_PLAY,
+      PlayBehavior.NEVER_PLAY
+    ])
   };
 
   state = {
@@ -35,7 +38,10 @@ export default class AnimationPreview extends React.Component {
     this.precalculateRenderProps(nextProps);
     if (nextProps.playBehavior === PlayBehavior.ALWAYS_PLAY && !this.timeout_) {
       this.advanceFrame();
-    } else if (nextProps.playBehavior !== PlayBehavior.ALWAYS_PLAY && this.timeout_) {
+    } else if (
+      nextProps.playBehavior !== PlayBehavior.ALWAYS_PLAY &&
+      this.timeout_
+    ) {
       this.stopAndResetAnimation();
     }
   }
@@ -62,7 +68,10 @@ export default class AnimationPreview extends React.Component {
     });
     clearTimeout(this.timeout_);
     // 33 maps to a 30 fps frameRate
-    this.timeout_ = setTimeout(this.advanceFrame, 33 * this.props.animationProps.frameDelay);
+    this.timeout_ = setTimeout(
+      this.advanceFrame,
+      33 * this.props.animationProps.frameDelay
+    );
   };
 
   stopAndResetAnimation() {
@@ -70,7 +79,7 @@ export default class AnimationPreview extends React.Component {
       clearTimeout(this.timeout_);
       this.timeout_ = undefined;
     }
-    this.setState({ currentFrame: 0 });
+    this.setState({currentFrame: 0});
   }
 
   precalculateRenderProps(nextProps) {
@@ -82,7 +91,9 @@ export default class AnimationPreview extends React.Component {
     const scale = Math.min(1, Math.min(xScale, yScale));
     const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
     const sourceUrl = nextProps.sourceUrl ? nextProps.sourceUrl : EMPTY_IMAGE;
-    const sourceSize = nextAnimation.sourceSize ? nextAnimation.sourceSize : {x: 1, y: 1};
+    const sourceSize = nextAnimation.sourceSize
+      ? nextAnimation.sourceSize
+      : {x: 1, y: 1};
     this.setState({
       framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x),
       scaledSourceSize: scaleVector2(sourceSize, scale),
@@ -93,8 +104,14 @@ export default class AnimationPreview extends React.Component {
   }
 
   render() {
-    const { currentFrame, framesPerRow, scaledSourceSize, scaledFrameSize,
-        extraTopMargin, wrappedSourceUrl } = this.state;
+    const {
+      currentFrame,
+      framesPerRow,
+      scaledSourceSize,
+      scaledFrameSize,
+      extraTopMargin,
+      wrappedSourceUrl
+    } = this.state;
 
     const row = Math.floor(currentFrame / framesPerRow);
     const column = currentFrame % framesPerRow;
@@ -123,8 +140,16 @@ export default class AnimationPreview extends React.Component {
       <div
         ref="root"
         style={containerStyle}
-        onMouseOver={this.props.playBehavior !== PlayBehavior.ALWAYS_PLAY ? this.onMouseOver : null}
-        onMouseOut={this.props.playBehavior !== PlayBehavior.ALWAYS_PLAY ? this.onMouseOut : null}
+        onMouseOver={
+          this.props.playBehavior !== PlayBehavior.ALWAYS_PLAY
+            ? this.onMouseOver
+            : null
+        }
+        onMouseOut={
+          this.props.playBehavior !== PlayBehavior.ALWAYS_PLAY
+            ? this.onMouseOut
+            : null
+        }
       >
         <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>

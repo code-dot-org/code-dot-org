@@ -25,74 +25,72 @@ export default class Results extends React.Component {
    * Render results for either the facilitator specific or general questions
    */
   renderResultsForSessionQuestionSection(section, questions, answers) {
-    return _.compact(Object.keys(questions).map((questionId, i) => {
-      let question = questions[questionId];
+    return _.compact(
+      Object.keys(questions).map((questionId, i) => {
+        let question = questions[questionId];
 
-      if (!question || _.isEmpty(answers[questionId])) {
-        return null;
-      }
+        if (!question || _.isEmpty(answers[questionId])) {
+          return null;
+        }
 
-      if (['scale', 'singleSelect'].includes(question['answer_type'])) {
-        return (
-          <SingleChoiceResponses
-            perFacilitator={section === "facilitator"}
-            question={question['text']}
-            answers={answers[questionId]}
-            possibleAnswers={question['options']}
-            key={i}
-            answerType={question['answer_type']}
-            otherText={question['other_text']}
-          />
-        );
-      } else if (question['answer_type'] === 'text') {
-        return (
-          <TextResponses
-            question={question['text']}
-            answers={answers[questionId]}
-            key={i}
-          />
-        );
-      }
-    }));
+        if (['scale', 'singleSelect'].includes(question['answer_type'])) {
+          return (
+            <SingleChoiceResponses
+              perFacilitator={section === 'facilitator'}
+              question={question['text']}
+              answers={answers[questionId]}
+              possibleAnswers={question['options']}
+              key={i}
+              answerType={question['answer_type']}
+              otherText={question['other_text']}
+            />
+          );
+        } else if (question['answer_type'] === 'text') {
+          return (
+            <TextResponses
+              question={question['text']}
+              answers={answers[questionId]}
+              key={i}
+            />
+          );
+        }
+      })
+    );
   }
 
   renderResultsForSession(session) {
     return (
       <div>
-        <h3>
-          General Questions
-        </h3>
-        {
-          this.renderResultsForSessionQuestionSection(
-            'general',
-            this.props.questions[session]['general'],
-            this.props.thisWorkshop[session]['general']
-          )
-        }
-        {
-          !_.isEmpty(this.props.questions[session]['facilitator']) && (
-            <div>
-              <h3>
-                Facilitator Specific Questions
-              </h3>
-              {
-                this.renderResultsForSessionQuestionSection(
-                  'facilitator',
-                  this.props.questions[session]['facilitator'],
-                  this.props.thisWorkshop[session]['facilitator']
-                )
-              }
-            </div>
-          )
-        }
+        <h3>General Questions</h3>
+        {this.renderResultsForSessionQuestionSection(
+          'general',
+          this.props.questions[session]['general'],
+          this.props.thisWorkshop[session]['general']
+        )}
+        {!_.isEmpty(this.props.questions[session]['facilitator']) && (
+          <div>
+            <h3>Facilitator Specific Questions</h3>
+            {this.renderResultsForSessionQuestionSection(
+              'facilitator',
+              this.props.questions[session]['facilitator'],
+              this.props.thisWorkshop[session]['facilitator']
+            )}
+          </div>
+        )}
       </div>
     );
   }
 
   renderAllSessionsResults() {
     return this.props.sessions.map((session, i) => (
-      <Tab eventKey={i + 1} key={i} title={`${session} (${this.props.thisWorkshop[session]['response_count'] || 0})`}>
-        <br/>
+      <Tab
+        eventKey={i + 1}
+        key={i}
+        title={`${session} (${this.props.thisWorkshop[session][
+          'response_count'
+        ] || 0})`}
+      >
+        <br />
         {this.renderResultsForSession(session)}
       </Tab>
     ));
@@ -100,9 +98,17 @@ export default class Results extends React.Component {
 
   renderFacilitatorAverages() {
     return Object.keys(this.props.facilitators).map((facilitator_id, i) => (
-      <Tab eventKey={this.props.sessions.length + i + 1} key={i} title={this.props.facilitators[facilitator_id]}>
+      <Tab
+        eventKey={this.props.sessions.length + i + 1}
+        key={i}
+        title={this.props.facilitators[facilitator_id]}
+      >
         <FacilitatorAveragesTable
-          facilitatorAverages={this.props.facilitatorAverages[this.props.facilitators[facilitator_id]]}
+          facilitatorAverages={
+            this.props.facilitatorAverages[
+              this.props.facilitators[facilitator_id]
+            ]
+          }
           facilitatorId={parseInt(facilitator_id, 10)}
           facilitatorName={this.props.facilitators[facilitator_id]}
           questions={this.props.facilitatorAverages['questions']}

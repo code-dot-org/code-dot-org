@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 
 const styles = {
   category: {

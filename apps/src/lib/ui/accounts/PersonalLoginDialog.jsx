@@ -12,10 +12,10 @@ const GUTTER = 20;
 const styles = {
   container: {
     margin: GUTTER,
-    color: color.charcoal,
+    color: color.charcoal
   },
   dangerText: {
-    color: color.red,
+    color: color.red
   },
   studentBox: {
     padding: GUTTER / 2,
@@ -24,27 +24,29 @@ const styles = {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 4,
     height: 50,
-    overflowY: 'scroll',
+    overflowY: 'scroll'
   },
   button: {
     display: 'block',
     textAlign: 'center',
-    marginBottom: '1em',
+    marginBottom: '1em'
   }
 };
 
-export const dependentStudentsShape = PropTypes.arrayOf(PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-})).isRequired;
+export const dependentStudentsShape = PropTypes.arrayOf(
+  PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired
+  })
+).isRequired;
 
 export default class PersonalLoginDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     dependentStudents: dependentStudentsShape,
     onCancel: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired,
+    onConfirm: PropTypes.func.isRequired
   };
 
   render() {
@@ -59,10 +61,16 @@ export default class PersonalLoginDialog extends React.Component {
         handleClose={onCancel}
       >
         <div style={styles.container}>
-          <Header text={i18n.deleteAccountDialog_header()}/>
+          <Header text={i18n.deleteAccountDialog_header()} />
           <p>
-            <strong style={styles.dangerText}>{i18n.personalLoginDialog_body1({numStudents: dependentStudents.length})}</strong>
-            {i18n.personalLoginDialog_body2({numStudents: dependentStudents.length})}
+            <strong style={styles.dangerText}>
+              {i18n.personalLoginDialog_body1({
+                numStudents: dependentStudents.length
+              })}
+            </strong>
+            {i18n.personalLoginDialog_body2({
+              numStudents: dependentStudents.length
+            })}
           </p>
           <div style={styles.studentBox}>
             {sortedStudents.map((student, index) => {
@@ -87,9 +95,7 @@ export default class PersonalLoginDialog extends React.Component {
             style={styles.button}
             tabIndex="1"
           />
-          <p>
-            {i18n.personalLoginDialog_body6()}
-          </p>
+          <p>{i18n.personalLoginDialog_body6()}</p>
           <ConfirmCancelFooter
             confirmText={i18n.personalLoginDialog_button()}
             onConfirm={onConfirm}

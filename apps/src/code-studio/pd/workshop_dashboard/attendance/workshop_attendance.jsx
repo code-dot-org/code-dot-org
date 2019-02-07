@@ -10,20 +10,9 @@ import {connect} from 'react-redux';
 import SessionTime from '../components/session_time';
 import Spinner from '../../components/spinner';
 import SessionAttendance from './session_attendance';
-import {
-  PermissionPropType,
-  WorkshopAdmin,
-  Organizer
-} from "../permission";
+import {PermissionPropType, WorkshopAdmin, Organizer} from '../permission';
 import color from '@cdo/apps/util/color';
-import {
-  Row,
-  Col,
-  ButtonToolbar,
-  Button,
-  Tabs,
-  Tab
-} from 'react-bootstrap';
+import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap';
 
 const styles = {
   saveStatus: {
@@ -65,12 +54,15 @@ export class WorkshopAttendance extends React.Component {
 
   loadSummary() {
     this.loadSummaryRequest = $.ajax({
-      method: "GET",
+      method: 'GET',
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/summary`,
-      dataType: "json"
+      dataType: 'json'
     }).done(data => {
       // No session Id, or an invalid session Id in the Url? Redirect to the first one.
-      if (!this.activeSessionId() || !data.sessions.find(s => s.id === this.activeSessionId())) {
+      if (
+        !this.activeSessionId() ||
+        !data.sessions.find(s => s.id === this.activeSessionId())
+      ) {
         this.updateUrlWithSession(data.sessions[0].id);
       }
       this.setState({
@@ -94,10 +86,12 @@ export class WorkshopAttendance extends React.Component {
   }
 
   updateUrlWithSession(sessionId) {
-    this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionId}`);
+    this.context.router.replace(
+      `/workshops/${this.props.params.workshopId}/attendance/${sessionId}`
+    );
   }
 
-  handleNavSelect = (sessionId) => {
+  handleNavSelect = sessionId => {
     this.updateUrlWithSession(sessionId);
   };
 
@@ -106,7 +100,9 @@ export class WorkshopAttendance extends React.Component {
   };
 
   handleDownloadCsvClick = () => {
-    window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`);
+    window.open(
+      `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`
+    );
   };
 
   // returns workshopId from the router params, in number form
@@ -116,7 +112,9 @@ export class WorkshopAttendance extends React.Component {
 
   // returns the active sessionId from the router params, in number form (or null if non specified).
   activeSessionId() {
-    return this.props.params.sessionId ? parseInt(this.props.params.sessionId, 10) : null;
+    return this.props.params.sessionId
+      ? parseInt(this.props.params.sessionId, 10)
+      : null;
   }
 
   handleSaving = () => {
@@ -124,7 +122,7 @@ export class WorkshopAttendance extends React.Component {
     this.setState({numPendingSaves});
   };
 
-  handleSaved = (value) => {
+  handleSaved = value => {
     const lastSaveFailed = !!value.error;
     const numPendingSaves = this.state.numPendingSaves - 1;
     this.setState({
@@ -135,47 +133,55 @@ export class WorkshopAttendance extends React.Component {
 
   render() {
     if (this.state.loadingSummary) {
-      return <Spinner/>;
+      return <Spinner />;
     }
 
-    const isReadOnly = this.hasWorkshopEnded() && !this.props.permission.hasAny(WorkshopAdmin, Organizer);
+    const isReadOnly =
+      this.hasWorkshopEnded() &&
+      !this.props.permission.hasAny(WorkshopAdmin, Organizer);
 
     let intro = null;
     if (isReadOnly) {
       intro = (
-        <p>
-          This workshop has ended. The attendance view is now read-only.
-        </p>
+        <p>This workshop has ended. The attendance view is now read-only.</p>
       );
     } else if (this.hasWorkshopEnded()) {
       intro = (
         <p>
-          This workshop has ended. You can still update attendance, but note this will not be
-          reflected in the payment report if it has already gone out.
+          This workshop has ended. You can still update attendance, but note
+          this will not be reflected in the payment report if it has already
+          gone out.
         </p>
       );
     } else {
       const activeSession = this.state.sessions.find(s => s['show_link?']);
-      const attendanceUrl = activeSession ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${activeSession.code}` : null;
+      const attendanceUrl = activeSession
+        ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${
+            activeSession.code
+          }`
+        : null;
       intro = (
         <div>
-          {attendanceUrl &&
+          {attendanceUrl && (
             <p>
               To take attendance, direct your attendees to go to&nbsp;
               <a href={attendanceUrl} target="_blank">
                 {attendanceUrl}
               </a>
             </p>
-          }
+          )}
           <p>
-            Ask your participants to log into Code Studio and go to the link provided so they can
-            get credit for attending your workshop today.&nbsp;
+            Ask your participants to log into Code Studio and go to the link
+            provided so they can get credit for attending your workshop
+            today.&nbsp;
             <strong>
               Remember: they need to do this EVERY day of the workshop.
-            </strong>&nbsp;
+            </strong>
+            &nbsp;
           </p>
           <p>
-            You can double-check that they are marking themselves as attended by looking for their names below.
+            You can double-check that they are marking themselves as attended by
+            looking for their names below.
           </p>
         </div>
       );
@@ -183,31 +189,31 @@ export class WorkshopAttendance extends React.Component {
 
     const saveStatus = {};
     if (this.state.lastSaveFailed) {
-      saveStatus.text = "Unable to save changes. Please try again.";
+      saveStatus.text = 'Unable to save changes. Please try again.';
       saveStatus.style = styles.saveStatus.error;
     } else if (this.state.numPendingSaves > 0) {
-      saveStatus.text = "Saving...";
+      saveStatus.text = 'Saving...';
     } else {
-      saveStatus.text = "All changes have been saved.";
+      saveStatus.text = 'All changes have been saved.';
     }
 
     return (
       <div>
-        <h1>
-          Workshop Session Attendance
-        </h1>
+        <h1>Workshop Session Attendance</h1>
         {intro}
-        <p style={saveStatus.style} >
-          {saveStatus.text}
-        </p>
-        <Tabs activeKey={this.activeSessionId()} onSelect={this.handleNavSelect} id="attendance-tabs">
-          {this.state.sessions.map((session) =>
+        <p style={saveStatus.style}>{saveStatus.text}</p>
+        <Tabs
+          activeKey={this.activeSessionId()}
+          onSelect={this.handleNavSelect}
+          id="attendance-tabs"
+        >
+          {this.state.sessions.map(session => (
             <Tab
               key={session.id}
               eventKey={session.id}
-              title={<SessionTime session={session}/>}
+              title={<SessionTime session={session} />}
             />
-          )}
+          ))}
         </Tabs>
         <SessionAttendance
           workshopId={this.workshopId()}
@@ -222,9 +228,7 @@ export class WorkshopAttendance extends React.Component {
         <Row>
           <Col sm={10}>
             <ButtonToolbar>
-              <Button
-                onClick={this.handleDownloadCsvClick}
-              >
+              <Button onClick={this.handleDownloadCsvClick}>
                 Download CSV
               </Button>
               <Button onClick={this.handleBackClick}>Back</Button>

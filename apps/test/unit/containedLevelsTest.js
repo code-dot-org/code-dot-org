@@ -4,11 +4,20 @@ import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import * as callouts from '@cdo/apps/code-studio/callouts';
-import { getContainedLevelResultInfo, getValidatedResult, initializeContainedLevel } from '@cdo/apps/containedLevels';
-import { getStore, registerReducers, stubRedux, restoreRedux } from '@cdo/apps/redux';
+import {
+  getContainedLevelResultInfo,
+  getValidatedResult,
+  initializeContainedLevel
+} from '@cdo/apps/containedLevels';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import UnconnectedGameButtons from '@cdo/apps/templates/GameButtons';
-import { TestResults } from '@cdo/apps/constants';
+import {TestResults} from '@cdo/apps/constants';
 import $ from 'jquery';
 import {setInstructionsConstants} from '@cdo/apps/redux/instructions';
 
@@ -31,22 +40,26 @@ describe('getContainedLevelResultInfo', () => {
   let attemptedRunButtonClickListener;
 
   beforeEach(() => {
-    sinon.stub(codeStudioLevels, 'getContainedLevelResult')
-        .returns(containedLevelResult);
+    sinon
+      .stub(codeStudioLevels, 'getContainedLevelResult')
+      .returns(containedLevelResult);
     sinon.stub(codeStudioLevels, 'hasValidContainedLevelResult');
     stubRedux();
     registerReducers(commonReducers);
 
     gameButtons = document.createElement('div');
-    ReactDOM.render(React.createElement(UnconnectedGameButtons, {
-      hideRunButton: false,
-      runButtonText: 'Run',
-      playspacePhoneFrame: false,
-      nextLevelUrl: 'nextUrl',
-      showSkipButton: true,
-      showFinishButton: true,
-      store: getStore(),
-    }), gameButtons);
+    ReactDOM.render(
+      React.createElement(UnconnectedGameButtons, {
+        hideRunButton: false,
+        runButtonText: 'Run',
+        playspacePhoneFrame: false,
+        nextLevelUrl: 'nextUrl',
+        showSkipButton: true,
+        showFinishButton: true,
+        store: getStore()
+      }),
+      gameButtons
+    );
     document.body.appendChild(gameButtons);
 
     sinon.stub(codeStudioLevels, 'lockContainedLevelAnswers');
@@ -69,17 +82,18 @@ describe('getContainedLevelResultInfo', () => {
   });
 
   it('returns the right info', () => {
-      const info = getContainedLevelResultInfo();
-      assert.deepEqual(info, {
-        app: 'multi',
-        level: 6669,
-        callback: 'http://localhost-studio.code.org:3000/milestone/2023/16504/6669',
-        result: true,
-        testResult: TestResults.CONTAINED_LEVEL_RESULT,
-        program: 1,
-        feedback: 'This is feedback',
-        submitted: false
-      });
+    const info = getContainedLevelResultInfo();
+    assert.deepEqual(info, {
+      app: 'multi',
+      level: 6669,
+      callback:
+        'http://localhost-studio.code.org:3000/milestone/2023/16504/6669',
+      result: true,
+      testResult: TestResults.CONTAINED_LEVEL_RESULT,
+      program: 1,
+      feedback: 'This is feedback',
+      submitted: false
+    });
   });
 
   it('returns an unvalidated result', () => {
@@ -104,10 +118,12 @@ describe('getContainedLevelResultInfo', () => {
    */
   function setHasContainedLevels(newValue) {
     const store = getStore();
-    store.dispatch(setInstructionsConstants({
-      ...store.getState().instructions,
-      hasContainedLevels: newValue,
-    }));
+    store.dispatch(
+      setInstructionsConstants({
+        ...store.getState().instructions,
+        hasContainedLevels: newValue
+      })
+    );
   }
 
   it('does not disable run button when level not contained', () => {

@@ -148,8 +148,9 @@ export function getSerializedAnimationList(animationList) {
   return {
     orderedKeys: animationList.orderedKeys,
     propsByKey: _.pick(
-        _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
-        animationList.orderedKeys)
+      _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
+      animationList.orderedKeys
+    )
   };
 }
 
@@ -157,8 +158,13 @@ export function getSerializedAnimationList(animationList) {
  * @param {!SerializedAnimationList} serializedAnimationList
  * @throws {Error} if the list is not in a valid format.
  */
-export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
-  if (typeof serializedAnimationList !== 'object' || serializedAnimationList === null) {
+export function throwIfSerializedAnimationListIsInvalid(
+  serializedAnimationList
+) {
+  if (
+    typeof serializedAnimationList !== 'object' ||
+    serializedAnimationList === null
+  ) {
     throw new Error(`serializedAnimationList is not an object`);
   }
 
@@ -166,7 +172,9 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
   if (!Array.isArray(serializedAnimationList.orderedKeys)) {
     throw new Error(`orderedKeys is not an array`);
   }
-  serializedAnimationList.orderedKeys = _.uniq(serializedAnimationList.orderedKeys);
+  serializedAnimationList.orderedKeys = _.uniq(
+    serializedAnimationList.orderedKeys
+  );
 
   const {orderedKeys, propsByKey} = serializedAnimationList;
 
@@ -175,11 +183,15 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
     throw new Error(`propsByKey is not an object`);
   }
   for (const animationKey in propsByKey) {
-    ['name', 'frameSize', 'frameCount', 'looping', 'frameDelay'].forEach(requiredPropName => {
-      if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
-        throw new Error(`Required prop '${requiredPropName}' is missing from animation with key '${animationKey}'.`);
+    ['name', 'frameSize', 'frameCount', 'looping', 'frameDelay'].forEach(
+      requiredPropName => {
+        if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
+          throw new Error(
+            `Required prop '${requiredPropName}' is missing from animation with key '${animationKey}'.`
+          );
+        }
       }
-    });
+    );
   }
 
   // The ordered keys set and the keys from propsByKey should match (but can
@@ -194,17 +206,24 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
     }
   }
   if (orderedKeysNotInProps.length > 0) {
-    throw new Error('Animation List has ' +
-        (orderedKeysNotInProps.length === 1 ? 'key' : 'keys') + ' ' +
+    throw new Error(
+      'Animation List has ' +
+        (orderedKeysNotInProps.length === 1 ? 'key' : 'keys') +
+        ' ' +
         orderedKeysNotInProps.map(k => `"${k}"`).join(', ') +
-        ' but not associated props');
+        ' but not associated props'
+    );
   }
   if (propsNotInOrderedKeys.length > 0) {
-    throw new Error('Animation List has a props for ' +
+    throw new Error(
+      'Animation List has a props for ' +
         propsNotInOrderedKeys.map(k => `"${k}"`).join(', ') +
         ' but ' +
-        (propsNotInOrderedKeys.length === 1 ? "that key isn't" : "those keys aren't") +
-        ' in the orderedKeys list');
+        (propsNotInOrderedKeys.length === 1
+          ? "that key isn't"
+          : "those keys aren't") +
+        ' in the orderedKeys list'
+    );
   }
 
   // Catch duplicate names (not a fatal problem, but not great either)
