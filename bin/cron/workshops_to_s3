@@ -19,9 +19,6 @@ def main
 
   workshop_hash = workshops.map {|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}
 
-  # Generate throwaway class that has functionality
-  # from Api::CsvDownload module to emulate what happens in
-  # controller/api/vi/pd/workshop_controller's filter method
   output = generate_csv workshop_hash
 
   AWS::S3.upload_to_bucket('cdo-data-sharing-internal', 'summer_workshops.csv', output, no_random: true)
