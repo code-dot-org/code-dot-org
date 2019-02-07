@@ -86,7 +86,7 @@ class OAuthLogins extends React.Component {
           <p>
             {`${i18n.loginInfo_signingInDescription()} ${i18n.loginInfo_signingInGoogle()}`}
             <br/>
-            <img src={googleSignInButton}/>
+            <img src={googleSignInButton} style={{maxWidth: '50%'}}/>
           </p>
         }
         {loginType === SectionLoginType.clever &&
@@ -97,7 +97,7 @@ class OAuthLogins extends React.Component {
         <p>
           {i18n.syncingYourStudentsDescription({loginType: loginTypeLabel})}
           <br/>
-          <img src={syncSectionImgSrc}/>
+          <img src={syncSectionImgSrc} style={{maxWidth: '50%'}}/>
         </p>
       </div>
     );
