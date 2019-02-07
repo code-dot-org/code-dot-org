@@ -3,7 +3,7 @@
   "config": {
     "func": "allSpritesWithCostume",
     "inline": false,
-    "blockText": "aalab {COSTUME}",
+    "blockText": "aalab all {COSTUME}",
     "returnType": "Sprite",
     "color": [
       355,

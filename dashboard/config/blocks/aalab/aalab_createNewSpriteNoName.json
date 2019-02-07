@@ -3,18 +3,13 @@
   "config": {
     "func": "createNewSpriteNoName",
     "inline": false,
-    "blockText": "aalab make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}",
+    "blockText": "aalab make new {COSTUME} sprite at {LOCATION}",
     "color": [
       355,
       ".7",
       ".7"
     ],
     "args": [
-      {
-        "name": "NAME",
-        "assignment": true,
-        "customInput": "spritePicker"
-      },
       {
         "name": "COSTUME",
         "customInput": "costumePicker"
