@@ -1,8 +1,10 @@
 /** Pagination controls */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium, {Style} from 'radium';
-import color from "../util/color";
-import Pagination from "react-bootstrap/lib/Pagination";
+import color from '../util/color';
+import Pagination from 'react-bootstrap/lib/Pagination';
 
 /**
  * Pagination control for navigating between pages of a list.
@@ -42,7 +44,7 @@ class PaginationWrapper extends Component {
           }}
         />
         <Pagination
-          bsSize={"small"}
+          bsSize={'small'}
           items={this.props.totalPages}
           activePage={this.props.currentPage}
           onSelect={this.props.onChangePage}

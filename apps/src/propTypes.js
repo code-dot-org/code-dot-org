@@ -22,7 +22,7 @@ import {isSubsequence} from './utils';
  * @param ...validChildrenTypes array<constructor> - a list of types to allow as children
  */
 export function childrenOfType(...validChildrenTypes) {
-  return function (props, propName, componentName) {
+  return function(props, propName, componentName) {
     if (propName !== 'children') {
       return new Error(
         'The childrenOfType prop type should only be used on the children prop.'
@@ -32,14 +32,16 @@ export function childrenOfType(...validChildrenTypes) {
     if (!prop) {
       return;
     }
-    const actualChildrenTypes = React.Children.map(prop, el => el && el.type) || [];
+    const actualChildrenTypes =
+      React.Children.map(prop, el => el && el.type) || [];
     if (!isSubsequence(validChildrenTypes, actualChildrenTypes)) {
       return new Error(
         componentName +
-        ' was given children of types ' +
-        actualChildrenTypes.map(t => `<${t.name}>`).join(', ') +
-        ' but only accepts one of each child in the following order: ' +
-        validChildrenTypes.map(t => `<${t.name}>`).join(', ') + '.'
+          ' was given children of types ' +
+          actualChildrenTypes.map(t => `<${t.name}>`).join(', ') +
+          ' but only accepts one of each child in the following order: ' +
+          validChildrenTypes.map(t => `<${t.name}>`).join(', ') +
+          '.'
       );
     }
   };
@@ -76,17 +78,20 @@ export function childrenOfType(...validChildrenTypes) {
  *
  */
 export function whenNoChildOfTypes(...unexpectedChildTypes) {
-  return function (props, propName, componentName) {
+  return function(props, propName, componentName) {
     if (!props.children || !props[propName]) {
       return;
     }
     let error;
-    const actualChildrenTypes = React.Children.map(props['children'], el => el.type);
+    const actualChildrenTypes = React.Children.map(
+      props['children'],
+      el => el.type
+    );
     for (const childType of actualChildrenTypes) {
       if (unexpectedChildTypes.includes(childType)) {
         error = new Error(
           `${componentName} was given a ${propName} prop and a ` +
-          `<${childType.name}> child, but only one of those is allowed.`
+            `<${childType.name}> child, but only one of those is allowed.`
         );
         break;
       }

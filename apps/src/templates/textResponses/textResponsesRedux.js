@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
 // Shape for an individual text response
@@ -12,23 +12,37 @@ export const textResponsePropType = PropTypes.shape({
   url: PropTypes.string.isRequired
 });
 
- // Initial state of textResponsesRedux
- // responseDataByScript - object - key is scriptId, value is array of textResponsePropType
+// Initial state of textResponsesRedux
+// responseDataByScript - object - key is scriptId, value is array of textResponsePropType
 const initialState = {
   responseDataByScript: {},
   isLoadingResponses: false
 };
 
 const SET_TEXT_RESPONSES = 'textResponses/SET_TEXT_RESPONSES';
-const START_LOADING_TEXT_RESPONSES = 'textResponses/START_LOADING_TEXT_RESPONSES';
-const FINISH_LOADING_TEXT_RESPONSES = 'textResponses/FINISH_LOADING_TEXT_RESPONSES';
+const START_LOADING_TEXT_RESPONSES =
+  'textResponses/START_LOADING_TEXT_RESPONSES';
+const FINISH_LOADING_TEXT_RESPONSES =
+  'textResponses/FINISH_LOADING_TEXT_RESPONSES';
 
 // Action creators
-export const setTextResponses = (scriptId, responseData) => ({ type: SET_TEXT_RESPONSES, scriptId, responseData});
-export const startLoadingResponses = () => ({ type: START_LOADING_TEXT_RESPONSES });
-export const finishLoadingResponses = () => ({ type: FINISH_LOADING_TEXT_RESPONSES });
+export const setTextResponses = (scriptId, responseData) => ({
+  type: SET_TEXT_RESPONSES,
+  scriptId,
+  responseData
+});
+export const startLoadingResponses = () => ({
+  type: START_LOADING_TEXT_RESPONSES
+});
+export const finishLoadingResponses = () => ({
+  type: FINISH_LOADING_TEXT_RESPONSES
+});
 
-export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
+export const asyncLoadTextResponses = (
+  sectionId,
+  scriptId,
+  onComplete = () => {}
+) => {
   return (dispatch, getState) => {
     const state = getState().textResponses;
 
@@ -51,7 +65,7 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
   };
 };
 
-export default function textResponses(state=initialState, action) {
+export default function textResponses(state = initialState, action) {
   if (action.type === SET_SECTION) {
     // Setting the section is the first action to be called when switching
     // sections, which requires us to reset our state. This might need to change
@@ -86,7 +100,7 @@ export default function textResponses(state=initialState, action) {
 }
 
 // Flatten text responses returned from server to remove nested student object
-export const convertTextResponseServerData = (textResponses) => {
+export const convertTextResponseServerData = textResponses => {
   let responses = [];
   textResponses.forEach(response => {
     const {id, name} = response.student;
@@ -115,9 +129,11 @@ const loadTextResponsesFromServer = (sectionId, scriptId, onComplete) => {
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload
-  }).done(responseData => {
-    onComplete(null, convertTextResponseServerData(responseData));
-  }).fail((jqXhr, status) => {
-    onComplete(status, jqXhr.responseJSON);
-  });
+  })
+    .done(responseData => {
+      onComplete(null, convertTextResponseServerData(responseData));
+    })
+    .fail((jqXhr, status) => {
+      onComplete(status, jqXhr.responseJSON);
+    });
 };

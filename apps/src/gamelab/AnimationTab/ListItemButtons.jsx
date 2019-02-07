@@ -1,7 +1,8 @@
 /** @file controls below an animation thumbnail */
-import React, {PropTypes} from 'react';
-import {OverlayTrigger, Tooltip} from "react-bootstrap";
-import color from "../../util/color";
+import React from 'react';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import color from '../../util/color';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import SpeedSlider from '../../templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
@@ -63,27 +64,41 @@ class ListItemButtons extends React.Component {
 
   openDeleteDialog = () => this.setState({isDeleteDialogOpen: true});
 
-  onDeleteItem = (evt) => {
+  onDeleteItem = evt => {
     this.closeDeleteDialog();
     this.props.onDeleteClick();
     evt.stopPropagation();
   };
 
   render() {
-    const trashTooltip = (<Tooltip id={0}>Delete</Tooltip>);
-    const cloneTooltip = (<Tooltip id={0}>Duplicate</Tooltip>);
+    const trashTooltip = <Tooltip id={0}>Delete</Tooltip>;
+    const cloneTooltip = <Tooltip id={0}>Duplicate</Tooltip>;
     let props = this.props;
     return (
       <div>
         <div style={styles.root}>
-          {!props.singleFrameAnimation &&
-            <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
-          }
+          {!props.singleFrameAnimation && (
+            <SpeedSlider
+              style={sliderStyle}
+              hasFocus={true}
+              value={props.frameDelay}
+              lineWidth={120}
+              onChange={props.onFrameDelayChanged}
+            />
+          )}
           <div style={styles.previewControls}>
-            {!props.singleFrameAnimation &&
-              <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
-            }
-            <OverlayTrigger overlay={trashTooltip} placement="bottom" delayShow={500}>
+            {!props.singleFrameAnimation && (
+              <ItemLoopToggle
+                style={styles.looping}
+                onToggleChange={props.onLoopingChanged}
+                looping={props.looping}
+              />
+            )}
+            <OverlayTrigger
+              overlay={trashTooltip}
+              placement="bottom"
+              delayShow={500}
+            >
               <i
                 key="trash"
                 className="fa fa-trash-o"
@@ -91,7 +106,11 @@ class ListItemButtons extends React.Component {
                 onClick={this.openDeleteDialog}
               />
             </OverlayTrigger>
-            <OverlayTrigger overlay={cloneTooltip} placement="bottom" delayShow={500}>
+            <OverlayTrigger
+              overlay={cloneTooltip}
+              placement="bottom"
+              delayShow={500}
+            >
               <i
                 key="clone"
                 className="fa fa-clone"

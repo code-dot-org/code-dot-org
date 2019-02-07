@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import _ from 'lodash';
 import {
   Radio,
@@ -20,38 +21,36 @@ const styles = {
 class ButtonList extends React.Component {
   static propTypes = {
     type: PropTypes.oneOf(['radio', 'check']).isRequired,
-    label: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element
-    ]).isRequired,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+      .isRequired,
     groupName: PropTypes.string.isRequired,
     answers: PropTypes.arrayOf(
-     PropTypes.oneOfType([
-       // Standard string answer
-       PropTypes.string,
+      PropTypes.oneOfType([
+        // Standard string answer
+        PropTypes.string,
 
-       // or an answer followed by an input for additional text
-       PropTypes.shape({
-         answerText: PropTypes.string.isRequired,
-         inputId: PropTypes.string,
-         inputValue: PropTypes.string,
-         onInputChange: PropTypes.func
-       }),
-       PropTypes.shape({
-        answerText: PropTypes.string.isRequired,
-        answerValue: PropTypes.string.isRequired
-       })
-     ])
+        // or an answer followed by an input for additional text
+        PropTypes.shape({
+          answerText: PropTypes.string.isRequired,
+          inputId: PropTypes.string,
+          inputValue: PropTypes.string,
+          onInputChange: PropTypes.func
+        }),
+        PropTypes.shape({
+          answerText: PropTypes.string.isRequired,
+          answerValue: PropTypes.string.isRequired
+        })
+      ])
     ).isRequired,
     includeOther: PropTypes.bool,
     onChange: PropTypes.func,
     selectedItems: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     required: PropTypes.bool,
     validationState: PropTypes.string,
-    errorText: PropTypes.string,
+    errorText: PropTypes.string
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     let value;
     if (this.props.type === 'radio') {
       value = event.target.value;
@@ -89,12 +88,18 @@ class ButtonList extends React.Component {
     }
 
     const options = answers.map((answer, i) => {
-      const answerText = typeof answer === "string" ? answer : answer.answerText;
-      const answerValue = typeof answer === "string" ? answer : (answer.answerValue || answerText);
+      const answerText =
+        typeof answer === 'string' ? answer : answer.answerText;
+      const answerValue =
+        typeof answer === 'string' ? answer : answer.answerValue || answerText;
 
-      const checked = this.props.type === 'radio' ?
-          (this.props.selectedItems === answerValue) :
-          !!(this.props.selectedItems && this.props.selectedItems.indexOf(answerValue) >= 0);
+      const checked =
+        this.props.type === 'radio'
+          ? this.props.selectedItems === answerValue
+          : !!(
+              this.props.selectedItems &&
+              this.props.selectedItems.indexOf(answerValue) >= 0
+            );
 
       return (
         <InputComponent
@@ -105,23 +110,27 @@ class ButtonList extends React.Component {
           onChange={this.props.onChange ? this.handleChange : undefined}
           checked={this.props.onChange ? checked : undefined}
         >
-          {(typeof answer === "object" && answer.answerValue === undefined) ?
+          {typeof answer === 'object' && answer.answerValue === undefined ? (
             <div>
-              <span style={styles.inputLabel}>
-                {answerText}
-              </span>
+              <span style={styles.inputLabel}>{answerText}</span>
               &nbsp;
               <input
                 type="text"
-                value={answer.onInputChange ? answer.inputValue || "" : undefined}
+                value={
+                  answer.onInputChange ? answer.inputValue || '' : undefined
+                }
                 id={answer.inputId}
                 maxLength="200"
-                onChange={answer.onInputChange ? this.handleAnswerInputChange.bind(this, answer) : undefined}
+                onChange={
+                  answer.onInputChange
+                    ? this.handleAnswerInputChange.bind(this, answer)
+                    : undefined
+                }
               />
             </div>
-            :
+          ) : (
             answerText
-          }
+          )}
         </InputComponent>
       );
     });
@@ -142,20 +151,15 @@ class ButtonList extends React.Component {
       >
         <ControlLabel>
           {this.props.label}
-          {this.props.required && (<span style={{color: 'red'}}> *</span>)}
+          {this.props.required && <span style={{color: 'red'}}> *</span>}
         </ControlLabel>
-        <FormGroup>
-          {this.renderInputComponents()}
-        </FormGroup>
+        <FormGroup>{this.renderInputComponents()}</FormGroup>
         {this.props.errorText && <HelpBlock>{this.props.errorText}</HelpBlock>}
-        <br/>
+        <br />
       </FormGroup>
     );
   }
 }
 
 export default ButtonList;
-export {
-  ButtonList,
-  otherString
-};
+export {ButtonList, otherString};

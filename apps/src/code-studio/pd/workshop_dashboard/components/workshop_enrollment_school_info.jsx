@@ -1,11 +1,13 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Table} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
-import {enrollmentShape} from "../types";
-import {workshopEnrollmentStyles as styles} from "../workshop_enrollment_styles";
+import {enrollmentShape} from '../types';
+import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
 
-const CSF = "CS Fundamentals";
-const NA = "N/A";
+const CSF = 'CS Fundamentals';
+const DEEP_DIVE = 'Deep Dive';
+const NA = 'N/A';
 
 export default class WorkshopEnrollmentSchoolInfo extends React.Component {
   constructor(props) {
@@ -45,6 +47,16 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.props.onDelete(pendingDeleteId);
   }
 
+  formatCsfCourseExperience(csf_course_experience) {
+    if (!csf_course_experience) {
+      return NA;
+    }
+    const strs = Object.keys(csf_course_experience).map(
+      key => key + ': ' + csf_course_experience[key]
+    );
+    return strs.join(', ');
+  }
+
   render() {
     const enrollmentRows = this.props.enrollments.map((enrollment, i) => {
       let deleteCell;
@@ -75,9 +87,43 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.email}</td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
-          {this.props.workshopCourse === CSF && <td>{enrollment.role ? enrollment.role : NA}</td>}
-          {this.props.workshopCourse === CSF && <td>{enrollment.grades_teaching ? enrollment.grades_teaching.join(', ') : NA}</td>}
-          {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
+          {this.props.workshopCourse === CSF && (
+            <td>{enrollment.role ? enrollment.role : NA}</td>
+          )}
+          {this.props.workshopCourse === CSF && (
+            <td>
+              {enrollment.grades_teaching
+                ? enrollment.grades_teaching.join(', ')
+                : NA}
+            </td>
+          )}
+          {this.props.workshopCourse === CSF &&
+            this.props.workshopSubject === DEEP_DIVE && (
+              <td>
+                {this.formatCsfCourseExperience(
+                  enrollment.csf_course_experience
+                )}
+              </td>
+            )}
+          {this.props.workshopCourse === CSF &&
+            this.props.workshopSubject === DEEP_DIVE && (
+              <td>
+                {enrollment.csf_courses_planned
+                  ? enrollment.csf_courses_planned.join(', ')
+                  : NA}
+              </td>
+            )}
+          {this.props.workshopCourse === CSF &&
+            this.props.workshopSubject === DEEP_DIVE && (
+              <td>{enrollment.attended_csf_intro_workshop}</td>
+            )}
+          {this.props.workshopCourse === CSF &&
+            this.props.workshopSubject === DEEP_DIVE && (
+              <td>{enrollment.csf_has_physical_curriculum_guide}</td>
+            )}
+          {this.props.accountRequiredForAttendance && (
+            <td>{enrollment.user_id ? 'Yes' : 'No'}</td>
+          )}
         </tr>
       );
     });
@@ -85,8 +131,11 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
     let confirmationDialog = null;
     const pendingDelete = this.state.pendingDelete;
     if (!!pendingDelete) {
-      const bodyText = "Are you sure you want to delete the enrollment for " +
-        `${pendingDelete.first_name} ${pendingDelete.last_name} (${pendingDelete.email})?`;
+      const bodyText =
+        'Are you sure you want to delete the enrollment for ' +
+        `${pendingDelete.first_name} ${pendingDelete.last_name} (${
+          pendingDelete.email
+        })?`;
 
       confirmationDialog = (
         <ConfirmationDialog
@@ -111,14 +160,34 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             <th style={styles.th}>Email</th>
             <th style={styles.th}>District</th>
             <th style={styles.th}>School</th>
-            {this.props.workshopCourse === CSF && <th style={styles.th}>Current Role</th>}
-            {this.props.workshopCourse === CSF && <th style={styles.th}>Grades Teaching This Year</th>}
-            {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
+            {this.props.workshopCourse === CSF && (
+              <th style={styles.th}>Current Role</th>
+            )}
+            {this.props.workshopCourse === CSF && (
+              <th style={styles.th}>Grades Teaching This Year</th>
+            )}
+            {this.props.workshopCourse === CSF &&
+              this.props.workshopSubject === DEEP_DIVE && (
+                <th style={styles.th}>Prior CSF experience</th>
+              )}
+            {this.props.workshopCourse === CSF &&
+              this.props.workshopSubject === DEEP_DIVE && (
+                <th style={styles.th}>Courses Planning to Teach</th>
+              )}
+            {this.props.workshopCourse === CSF &&
+              this.props.workshopSubject === DEEP_DIVE && (
+                <th style={styles.th}>Attended Intro Workshop?</th>
+              )}
+            {this.props.workshopCourse === CSF &&
+              this.props.workshopSubject === DEEP_DIVE && (
+                <th style={styles.th}>Has Physical Copy of Curriculum?</th>
+              )}
+            {this.props.accountRequiredForAttendance && (
+              <th style={styles.th}>Code Studio Account?</th>
+            )}
           </tr>
         </thead>
-        <tbody>
-          {enrollmentRows}
-        </tbody>
+        <tbody>{enrollmentRows}</tbody>
       </Table>
     );
   }
@@ -128,5 +197,6 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
   accountRequiredForAttendance: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
-  workshopCourse: PropTypes.string.isRequired
+  workshopCourse: PropTypes.string.isRequired,
+  workshopSubject: PropTypes.string
 };

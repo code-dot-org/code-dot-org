@@ -1,7 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 
 const defaultIcons = {
   image: 'fa fa-picture-o',
@@ -59,7 +60,7 @@ class AssetThumbnail extends React.Component {
     iconStyle: PropTypes.object,
     useFilesApi: PropTypes.bool,
     projectId: PropTypes.string,
-    soundPlayer: PropTypes.object,
+    soundPlayer: PropTypes.object
   };
 
   constructor(props) {
@@ -91,28 +92,33 @@ class AssetThumbnail extends React.Component {
       this.props.soundPlayer.stopPlayingURL(this.srcPath);
     } else if (this.props.soundPlayer) {
       this.setState({isPlayingAudio: true});
-      this.props.soundPlayer.play(this.srcPath, {onEnded: ()=>{this.setState({isPlayingAudio: false});}});
+      this.props.soundPlayer.play(this.srcPath, {
+        onEnded: () => {
+          this.setState({isPlayingAudio: false});
+        }
+      });
     }
   };
 
   render() {
-    const {
-      type,
-      iconStyle,
-      style
-    } = this.props;
+    const {type, iconStyle, style} = this.props;
 
     return (
       <div className="assetThumbnail">
-        {type === 'audio' ?
-          <AudioThumbnail clickSoundControl={this.clickSoundControl} isPlaying={this.state.isPlayingAudio}/> :
+        {type === 'audio' ? (
+          <AudioThumbnail
+            clickSoundControl={this.clickSoundControl}
+            isPlaying={this.state.isPlayingAudio}
+          />
+        ) : (
           <div style={[styles.wrapper, style, styles.background]}>
-            {type === 'image' ?
-              <ImageThumbnail src={this.srcPath}/> :
-              <DefaultThumbnail type={type} iconStyle={iconStyle}/>
-            }
+            {type === 'image' ? (
+              <ImageThumbnail src={this.srcPath} />
+            ) : (
+              <DefaultThumbnail type={type} iconStyle={iconStyle} />
+            )}
           </div>
-        }
+        )}
       </div>
     );
   }
@@ -120,52 +126,66 @@ class AssetThumbnail extends React.Component {
 
 export default Radium(AssetThumbnail);
 
-const AudioThumbnail = Radium(class extends React.Component {
-  static propTypes = {
-    clickSoundControl: PropTypes.func,
-    isPlaying: PropTypes.bool
-  };
+const AudioThumbnail = Radium(
+  class extends React.Component {
+    static propTypes = {
+      clickSoundControl: PropTypes.func,
+      isPlaying: PropTypes.bool
+    };
 
-  render() {
-    const playIcon = this.props.isPlaying ? 'fa-pause-circle' : 'fa-play-circle';
+    render() {
+      const playIcon = this.props.isPlaying
+        ? 'fa-pause-circle'
+        : 'fa-play-circle';
 
-    return (
-      <div style={[styles.wrapper, styles.audioWrapper]}>
-        <i onClick={this.props.clickSoundControl} className={'fa '+ playIcon +' fa-4x'} style={styles.audioIcon} />
-      </div>
-    );
+      return (
+        <div style={[styles.wrapper, styles.audioWrapper]}>
+          <i
+            onClick={this.props.clickSoundControl}
+            className={'fa ' + playIcon + ' fa-4x'}
+            style={styles.audioIcon}
+          />
+        </div>
+      );
+    }
   }
-});
+);
 
-const ImageThumbnail = Radium(class extends React.Component {
-  static propTypes = {
-    src: PropTypes.string
-  };
+const ImageThumbnail = Radium(
+  class extends React.Component {
+    static propTypes = {
+      src: PropTypes.string
+    };
 
-  render() {
-    return (
-      <a
-        href={this.props.src}
-        target="_blank"
-      >
-        <img src={this.props.src} style={assetThumbnailStyle} id="ui-image-thumbnail"/>
-      </a>
-    );
+    render() {
+      return (
+        <a href={this.props.src} target="_blank">
+          <img
+            src={this.props.src}
+            style={assetThumbnailStyle}
+            id="ui-image-thumbnail"
+          />
+        </a>
+      );
+    }
   }
-});
+);
 
-const DefaultThumbnail = Radium(class extends React.Component {
-  static propTypes = {
-    type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
-    iconStyle: PropTypes.object
-  };
+const DefaultThumbnail = Radium(
+  class extends React.Component {
+    static propTypes = {
+      type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc'])
+        .isRequired,
+      iconStyle: PropTypes.object
+    };
 
-  render() {
-    return (
-      <i
-        className={defaultIcons[this.props.type] || defaultIcons.unknown}
-        style={[assetIconStyle, this.props.iconStyle]}
-      />
-    );
+    render() {
+      return (
+        <i
+          className={defaultIcons[this.props.type] || defaultIcons.unknown}
+          style={[assetIconStyle, this.props.iconStyle]}
+        />
+      );
+    }
   }
-});
+);

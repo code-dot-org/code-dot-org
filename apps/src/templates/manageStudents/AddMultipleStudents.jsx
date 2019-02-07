@@ -1,10 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {addMultipleAddRows} from './manageStudentsRedux';
 import Button from '../Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
-import DialogFooter from "../teacherDashboard/DialogFooter";
+import DialogFooter from '../teacherDashboard/DialogFooter';
 
 const styles = {
   dialog: {
@@ -17,11 +18,11 @@ const styles = {
 class AddMultipleStudents extends Component {
   static propTypes = {
     // Provided by redux
-    addMultipleStudents: PropTypes.func.isRequired,
+    addMultipleStudents: PropTypes.func.isRequired
   };
 
   state = {
-    isDialogOpen: false,
+    isDialogOpen: false
   };
 
   openDialog = () => {
@@ -34,7 +35,7 @@ class AddMultipleStudents extends Component {
 
   add = () => {
     const value = this.refs.studentsTextBox.value;
-    this.props.addMultipleStudents(value.split("\n"));
+    this.props.addMultipleStudents(value.split('\n'));
     this.closeDialog();
   };
 
@@ -53,11 +54,8 @@ class AddMultipleStudents extends Component {
           handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>
-            {i18n.addStudentsMultipleInstructions()}
-          </div>
-          <textarea name="textarea" rows="15" cols="70" ref="studentsTextBox">
-          </textarea>
+          <div>{i18n.addStudentsMultipleInstructions()}</div>
+          <textarea name="textarea" rows="15" cols="70" ref="studentsTextBox" />
           <DialogFooter>
             <Button
               text={i18n.dialogCancel()}
@@ -76,8 +74,11 @@ class AddMultipleStudents extends Component {
   }
 }
 
-export default connect(state => ({}), dispatch => ({
-  addMultipleStudents(names) {
-    dispatch(addMultipleAddRows(names));
-  },
-}))(AddMultipleStudents);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    addMultipleStudents(names) {
+      dispatch(addMultipleAddRows(names));
+    }
+  })
+)(AddMultipleStudents);

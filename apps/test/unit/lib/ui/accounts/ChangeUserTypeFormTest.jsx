@@ -18,9 +18,9 @@ describe('ChangeUserTypeForm', () => {
   describe('calls onChange', () => {
     let onChange, wrapper;
 
-    const initialValues= {
+    const initialValues = {
       email: 'initialEmail@example.com',
-      emailOptIn: 'no',
+      emailOptIn: 'no'
     };
 
     beforeEach(() => {
@@ -38,7 +38,9 @@ describe('ChangeUserTypeForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const changedEmail = 'currentEmail@example.com';
-      wrapper.find(EMAIL_SELECTOR).simulate('change', {target:{value: changedEmail}});
+      wrapper
+        .find(EMAIL_SELECTOR)
+        .simulate('change', {target: {value: changedEmail}});
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
@@ -51,7 +53,9 @@ describe('ChangeUserTypeForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const newOptIn = 'yes';
-      wrapper.find(OPT_IN_SELECTOR).simulate('change', {target:{value: newOptIn}});
+      wrapper
+        .find(OPT_IN_SELECTOR)
+        .simulate('change', {target: {value: newOptIn}});
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
@@ -67,10 +71,7 @@ describe('ChangeUserTypeForm', () => {
     beforeEach(() => {
       onSubmit = sinon.spy();
       wrapper = mount(
-        <ChangeUserTypeForm
-          {...DEFAULT_PROPS}
-          onSubmit={onSubmit}
-        />
+        <ChangeUserTypeForm {...DEFAULT_PROPS} onSubmit={onSubmit} />
       );
     });
 
@@ -117,12 +118,7 @@ describe('ChangeUserTypeForm', () => {
     let wrapper;
 
     beforeEach(() => {
-      wrapper = mount(
-        <ChangeUserTypeForm
-          {...DEFAULT_PROPS}
-          disabled
-        />
-      );
+      wrapper = mount(<ChangeUserTypeForm {...DEFAULT_PROPS} disabled />);
     });
 
     it('the email field is disabled', () => {
@@ -138,9 +134,7 @@ describe('ChangeUserTypeForm', () => {
     let wrapper, emailSpy;
 
     beforeEach(() => {
-      wrapper = mount(
-        <ChangeUserTypeForm{...DEFAULT_PROPS}/>
-      );
+      wrapper = mount(<ChangeUserTypeForm {...DEFAULT_PROPS} />);
       emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
     });
 

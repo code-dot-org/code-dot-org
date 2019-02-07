@@ -37,19 +37,15 @@ describe('SetupChecklist', () => {
 
     it('renders success', () => {
       const wrapper = mount(
-        <SetupChecklist
-          setupChecker={checker}
-          stepDelay={STEP_DELAY_MS}
-        />
+        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
       );
       expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
       expect(wrapper.find(WAITING_ICON)).to.have.length(4);
-      return yieldUntilDoneDetecting(wrapper)
-          .then(() => {
-            expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
-            expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-            expect(window.console.error).not.to.have.been.called;
-          });
+      return yieldUntilDoneDetecting(wrapper).then(() => {
+        expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        expect(window.console.error).not.to.have.been.called;
+      });
     });
 
     describe('test with expected console.error', () => {
@@ -59,28 +55,21 @@ describe('SetupChecklist', () => {
       it('reloads the page on re-detect if plugin not installed', () => {
         checker.detectChromeAppInstalled.rejects(new Error('not installed'));
         const wrapper = mount(
-          <SetupChecklist
-            setupChecker={checker}
-            stepDelay={STEP_DELAY_MS}
-          />
+          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
         );
-        return yieldUntilDoneDetecting(wrapper)
-          .then(() => {
-            expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
-            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
-            wrapper.find(REDETECT_BUTTON).simulate('click');
-            expect(utils.reload).to.have.been.called;
-          });
+        return yieldUntilDoneDetecting(wrapper).then(() => {
+          expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
+          expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+          expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+          wrapper.find(REDETECT_BUTTON).simulate('click');
+          expect(utils.reload).to.have.been.called;
+        });
       });
     });
 
     it('does not reload the page on re-detect if successful', () => {
       const wrapper = mount(
-        <SetupChecklist
-          setupChecker={checker}
-          stepDelay={STEP_DELAY_MS}
-        />
+        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
       );
       return yieldUntilDoneDetecting(wrapper)
         .then(() => {
@@ -104,19 +93,15 @@ describe('SetupChecklist', () => {
 
     it('renders success', () => {
       const wrapper = mount(
-        <SetupChecklist
-          setupChecker={checker}
-          stepDelay={STEP_DELAY_MS}
-        />
+        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
       );
       expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
       expect(wrapper.find(WAITING_ICON)).to.have.length(4);
-      return yieldUntilDoneDetecting(wrapper)
-        .then(() => {
-          expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
-          expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-          expect(window.console.error).not.to.have.been.called;
-        });
+      return yieldUntilDoneDetecting(wrapper).then(() => {
+        expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        expect(window.console.error).not.to.have.been.called;
+      });
     });
 
     describe('test with expected console.error', () => {
@@ -127,45 +112,34 @@ describe('SetupChecklist', () => {
         const error = new Error('test error');
         checker.detectSupportedBrowser.rejects(error);
         const wrapper = mount(
-          <SetupChecklist
-            setupChecker={checker}
-            stepDelay={STEP_DELAY_MS}
-          />
+          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
         );
         expect(wrapper.find(WAITING_ICON)).to.have.length(4);
-        return yieldUntilDoneDetecting(wrapper)
-          .then(() => {
-            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
-            expect(window.console.error).to.have.been.calledWith(error);
-          });
+        return yieldUntilDoneDetecting(wrapper).then(() => {
+          expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+          expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+          expect(window.console.error).to.have.been.calledWith(error);
+        });
       });
 
       it('reloads the page on re-detect if browser check fails', () => {
         checker.detectSupportedBrowser.rejects(new Error('test error'));
         const wrapper = mount(
-          <SetupChecklist
-            setupChecker={checker}
-            stepDelay={STEP_DELAY_MS}
-          />
+          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
         );
-        return yieldUntilDoneDetecting(wrapper)
-          .then(() => {
-            expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
-            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
-            wrapper.find(REDETECT_BUTTON).simulate('click');
-            expect(utils.reload).to.have.been.called;
-          });
+        return yieldUntilDoneDetecting(wrapper).then(() => {
+          expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
+          expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+          expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+          wrapper.find(REDETECT_BUTTON).simulate('click');
+          expect(utils.reload).to.have.been.called;
+        });
       });
     });
 
     it('does not reload the page on re-detect if successful', () => {
       const wrapper = mount(
-        <SetupChecklist
-          setupChecker={checker}
-          stepDelay={STEP_DELAY_MS}
-        />
+        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
       );
       return yieldUntilDoneDetecting(wrapper)
         .then(() => {

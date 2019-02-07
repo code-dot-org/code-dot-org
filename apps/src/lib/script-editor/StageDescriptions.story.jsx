@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import StageDescriptions from './StageDescriptions';
 
 const currentDescriptions = [
@@ -17,8 +18,10 @@ const currentDescriptions = [
 const importedDescriptions = [
   {
     name: 'The internet',
-    descriptionStudent: 'This is the new description of what the student will see',
-    descriptionTeacher: 'This is the new description of what the teacher will see'
+    descriptionStudent:
+      'This is the new description of what the student will see',
+    descriptionTeacher:
+      'This is the new description of what the teacher will see'
   },
   {
     name: 'The Need for Addressing',
@@ -32,7 +35,7 @@ const importedDescriptions = [
  */
 class ModifyState extends React.Component {
   static propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.element
   };
 
   componentDidMount() {
@@ -41,64 +44,60 @@ class ModifyState extends React.Component {
 
   render() {
     const child = this.props.children;
-    return <child.type ref="child" {...child.props}/>;
+    return <child.type ref="child" {...child.props} />;
   }
 }
 
 export default storybook => {
-  storybook
-    .storiesOf('StageDescriptions', module)
-    .addStoryTable([
-      {
-        name:'collapsed stage descriptions',
-        story: () => (
+  storybook.storiesOf('StageDescriptions', module).addStoryTable([
+    {
+      name: 'collapsed stage descriptions',
+      story: () => (
+        <StageDescriptions
+          scriptName="csd2"
+          currentDescriptions={currentDescriptions}
+        />
+      )
+    },
+    {
+      name: 'uncollapsed before import',
+      story: () => (
+        <ModifyState collapsed={false}>
           <StageDescriptions
             scriptName="csd2"
             currentDescriptions={currentDescriptions}
           />
-        )
-      },
-      {
-        name:'uncollapsed before import',
-        story: () => (
-          <ModifyState collapsed={false}>
-            <StageDescriptions
-              scriptName="csd2"
-              currentDescriptions={currentDescriptions}
-            />
-          </ModifyState>
-        )
-      },
-      {
-        name:'While importing',
-        story: () => (
-          <ModifyState
-            buttonText="Querying server..."
-            collapsed={false}
-          >
-            <StageDescriptions
-              scriptName="csd2"
-              currentDescriptions={currentDescriptions}
-            />
-          </ModifyState>
-        )
-      },
-      {
-        name:'stage descriptions with changes after merging',
-        description: 'Simulates one of the stages being named slightly differently on CB',
-        story: () => (
-          <ModifyState
-            collapsed={false}
-            importedDescriptions={importedDescriptions}
-            mismatchedStages={['The internet']}
-            buttonText="Imported"
-          >
-            <StageDescriptions
-              scriptName="csd2"
-              currentDescriptions={currentDescriptions}
-            />
-          </ModifyState>
-        )
-      }
-    ]);
+        </ModifyState>
+      )
+    },
+    {
+      name: 'While importing',
+      story: () => (
+        <ModifyState buttonText="Querying server..." collapsed={false}>
+          <StageDescriptions
+            scriptName="csd2"
+            currentDescriptions={currentDescriptions}
+          />
+        </ModifyState>
+      )
+    },
+    {
+      name: 'stage descriptions with changes after merging',
+      description:
+        'Simulates one of the stages being named slightly differently on CB',
+      story: () => (
+        <ModifyState
+          collapsed={false}
+          importedDescriptions={importedDescriptions}
+          mismatchedStages={['The internet']}
+          buttonText="Imported"
+        >
+          <StageDescriptions
+            scriptName="csd2"
+            currentDescriptions={currentDescriptions}
+          />
+        </ModifyState>
+      )
+    }
+  ]);
 };

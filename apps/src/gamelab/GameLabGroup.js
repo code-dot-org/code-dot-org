@@ -1,10 +1,10 @@
 var jsInterpreter;
 
-module.exports.injectJSInterpreter = function (jsi) {
+module.exports.injectJSInterpreter = function(jsi) {
   jsInterpreter = jsi;
 };
 
-module.exports.Group = function (baseConstructor) {
+module.exports.Group = function(baseConstructor) {
   var array = baseConstructor();
 
   /*
@@ -43,9 +43,13 @@ module.exports.Group = function (baseConstructor) {
       if (!state.__subState) {
         // Before we call _collideWith (another stateful function), hang a __subState
         // off of state, so it can use that instead to track its state:
-        state.__subState = { doneExec_: true };
+        state.__subState = {doneExec_: true};
       }
-      var result_collideWith = this.get(state.__i)._collideWith(type, target, callback);
+      var result_collideWith = this.get(state.__i)._collideWith(
+        type,
+        target,
+        callback
+      );
       if (state.__subState.doneExec_) {
         state.__didCollide = result_collideWith || state.__didCollide;
         delete state.__subState;

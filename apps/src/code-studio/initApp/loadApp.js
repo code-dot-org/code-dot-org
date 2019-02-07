@@ -2,11 +2,11 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { TestResults } from '@cdo/apps/constants';
-import { getStore } from '../redux';
-import { SignInState, mergeProgress } from '../progressRedux';
-import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import { files } from '@cdo/apps/clientApi';
+import {TestResults} from '@cdo/apps/constants';
+import {getStore} from '../redux';
+import {SignInState, mergeProgress} from '../progressRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
@@ -22,7 +22,7 @@ var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
 import {
   lockContainedLevelAnswers,
-  getContainedLevelId,
+  getContainedLevelId
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
@@ -90,12 +90,17 @@ export function setupApp(appOptions) {
   var baseOptions = {
     containerId: 'codeApp',
     position: {blockYCoordinateInterval: 25},
-    onInitialize: function () {
+    onInitialize: function() {
       createCallouts(this.level.callouts || this.callouts);
       if (userAgentParser.isChrome34()) {
         chrome34Fix.fixup();
       }
-      if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab' || appOptions.app === 'weblab') {
+      if (
+        appOptions.level.projectTemplateLevelName ||
+        appOptions.app === 'applab' ||
+        appOptions.app === 'gamelab' ||
+        appOptions.app === 'weblab'
+      ) {
         $('#clear-puzzle-header').hide();
         // Only show Version History button if the user owns this project
         if (project.isEditable()) {
@@ -104,16 +109,19 @@ export function setupApp(appOptions) {
       }
       $(document).trigger('appInitialized');
     },
-    onAttempt: function (/*MilestoneReport*/report) {
+    onAttempt: function(/*MilestoneReport*/ report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return tryToUploadShareImageToS3({
           image: report.image,
-          level: appOptions.level,
+          level: appOptions.level
         });
       }
 
-      if (appOptions.channel && !appOptions.level.edit_blocks &&
-          !appOptions.hasContainedLevels) {
+      if (
+        appOptions.channel &&
+        !appOptions.level.edit_blocks &&
+        !appOptions.hasContainedLevels
+      ) {
         // Unless we are actually editing blocks and not really completing a
         // level, or if this is a contained level, don't send the levelSource or
         // image to Dashboard for channel-backed levels (The levelSource is
@@ -128,11 +136,16 @@ export function setupApp(appOptions) {
 
         // If the program is the result for a contained level, store it with
         // the contained level id
-        const levelId = (appOptions.hasContainedLevels && !appOptions.level.edit_blocks) ?
-          getContainedLevelId() :
-          (appOptions.serverProjectLevelId || appOptions.serverLevelId);
-        clientState.writeSourceForLevel(appOptions.scriptName, levelId,
-            +new Date(), lastSavedProgram);
+        const levelId =
+          appOptions.hasContainedLevels && !appOptions.level.edit_blocks
+            ? getContainedLevelId()
+            : appOptions.serverProjectLevelId || appOptions.serverLevelId;
+        clientState.writeSourceForLevel(
+          appOptions.scriptName,
+          levelId,
+          +new Date(),
+          lastSavedProgram
+        );
       }
       // report.callback will already have the correct milestone post URL in
       // the contained level case, unless we're editing blocks
@@ -150,31 +163,36 @@ export function setupApp(appOptions) {
       }
       reporting.sendReport(report);
     },
-    onComplete: function (/*LiveMilestoneResponse*/response) {
+    onComplete: function(/*LiveMilestoneResponse*/ response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
         clientState.writeSourceForLevel(
-            appOptions.scriptName,
-            appOptions.serverProjectLevelId || appOptions.serverLevelId,
-            response.timestamp,
-            lastSavedProgram);
+          appOptions.scriptName,
+          appOptions.serverProjectLevelId || appOptions.serverLevelId,
+          response.timestamp,
+          lastSavedProgram
+        );
       }
     },
-    onResetPressed: function () {
+    onResetPressed: function() {
       reporting.cancelReport();
     },
-    onContinue: function () {
+    onContinue: function() {
       var lastServerResponse = reporting.getLastServerResponse();
       if (lastServerResponse.videoInfo) {
         showVideoDialog(lastServerResponse.videoInfo);
       } else if (lastServerResponse.endOfStageExperience) {
         const body = document.createElement('div');
         const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+        const stageName = `${window.dashboard.i18n.t('stage')} ${
+          stageInfo.position
+        }: ${stageInfo.name}`;
         ReactDOM.render(
           <PlayZone
             stageName={stageName}
-            onContinue={() => { dialog.hide(); }}
+            onContinue={() => {
+              dialog.hide();
+            }}
             i18n={window.dashboard.i18n}
           />,
           body
@@ -189,7 +207,7 @@ export function setupApp(appOptions) {
         window.location.href = lastServerResponse.nextRedirect;
       }
     },
-    showInstructionsWrapper: function (showInstructions) {
+    showInstructionsWrapper: function(showInstructions) {
       // Always skip all pre-level popups on share levels or when configured thus
       if (this.share || appOptions.level.skipInstructionsPopup) {
         return;
@@ -197,14 +215,15 @@ export function setupApp(appOptions) {
 
       var afterVideoCallback = showInstructions;
       if (appOptions.level.afterVideoBeforeInstructionsFn) {
-        afterVideoCallback = function () {
+        afterVideoCallback = function() {
           appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
         };
       }
 
       var hasVideo = !!appOptions.autoplayVideo;
-      var hasInstructions = !!(appOptions.level.shortInstructions ||
-                               appOptions.level.aniGifURL);
+      var hasInstructions = !!(
+        appOptions.level.shortInstructions || appOptions.level.aniGifURL
+      );
       var noAutoplay = !!queryString.parse(location.search).noautoplay;
 
       if (hasVideo && !noAutoplay) {
@@ -235,8 +254,7 @@ export function setupApp(appOptions) {
         try {
           // eslint-disable-next-line no-eval
           node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-        } catch (e) {
-        }
+        } catch (e) {}
       } else {
         fixUpFunctions(node[i]);
       }
@@ -284,11 +302,17 @@ function loadProjectAndCheckAbuse(appOptions) {
         return;
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(project, window.dashboard.i18n.t('project.abuse.policy_violation'));
+        renderAbusive(
+          project,
+          window.dashboard.i18n.t('project.abuse.policy_violation')
+        );
         return;
       }
       if (project.getSharingDisabled()) {
-        renderAbusive(project, window.dashboard.i18n.t('project.sharing_disabled'));
+        renderAbusive(
+          project,
+          window.dashboard.i18n.t('project.sharing_disabled')
+        );
         return;
       }
       resolve(appOptions);
@@ -303,17 +327,17 @@ function loadProjectAndCheckAbuse(appOptions) {
 function loadAppAsync(appOptions) {
   setupApp(appOptions);
 
-  var isViewingSolution = (clientState.queryParams('solution') === 'true');
+  var isViewingSolution = clientState.queryParams('solution') === 'true';
   var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
-  if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
+  if (
+    appOptions.share &&
+    !window.navigator.standalone &&
+    userAgentParser.isSafari()
+  ) {
     // show a little instruction panel for how to add this app to your home screen
     // on an iPhone
-    window.addEventListener(
-      "load",
-      () => addToHome.show(true),
-      false
-    );
+    window.addEventListener('load', () => addToHome.show(true), false);
   }
 
   if (isViewingSolution) {
@@ -350,58 +374,67 @@ function loadAppAsync(appOptions) {
 
     $.ajax(
       `/api/user_progress` +
-      `/${appOptions.scriptName}` +
-      `/${appOptions.stagePosition}` +
-      `/${appOptions.levelPosition}` +
-      `/${appOptions.serverLevelId}`
-    ).done(data => {
-      appOptions.disableSocialShare = data.disableSocialShare;
+        `/${appOptions.scriptName}` +
+        `/${appOptions.stagePosition}` +
+        `/${appOptions.levelPosition}` +
+        `/${appOptions.serverLevelId}`
+    )
+      .done(data => {
+        appOptions.disableSocialShare = data.disableSocialShare;
 
-      // Merge progress from server (loaded via AJAX)
-      const serverProgress = data.progress || {};
-      mergeProgressData(appOptions.scriptName, serverProgress);
+        // Merge progress from server (loaded via AJAX)
+        const serverProgress = data.progress || {};
+        mergeProgressData(appOptions.scriptName, serverProgress);
 
-      if (!lastAttemptLoaded) {
-        if (data.lastAttempt) {
-          lastAttemptLoaded = true;
+        if (!lastAttemptLoaded) {
+          if (data.lastAttempt) {
+            lastAttemptLoaded = true;
 
-          var timestamp = data.lastAttempt.timestamp;
-          var source = data.lastAttempt.source;
+            var timestamp = data.lastAttempt.timestamp;
+            var source = data.lastAttempt.source;
 
-          var cachedProgram = clientState.sourceForLevel(
-            appOptions.scriptName, appOptions.serverLevelId, timestamp);
-          if (cachedProgram !== undefined) {
-            // Client version is newer
-            appOptions.level.lastAttempt = cachedProgram;
-          } else if (source && source.length) {
-            // Sever version is newer
-            appOptions.level.lastAttempt = source;
+            var cachedProgram = clientState.sourceForLevel(
+              appOptions.scriptName,
+              appOptions.serverLevelId,
+              timestamp
+            );
+            if (cachedProgram !== undefined) {
+              // Client version is newer
+              appOptions.level.lastAttempt = cachedProgram;
+            } else if (source && source.length) {
+              // Sever version is newer
+              appOptions.level.lastAttempt = source;
 
-            // Write down the lastAttempt from server in sessionStorage
-            clientState.writeSourceForLevel(appOptions.scriptName,
-                                            appOptions.serverLevelId, timestamp, source);
+              // Write down the lastAttempt from server in sessionStorage
+              clientState.writeSourceForLevel(
+                appOptions.scriptName,
+                appOptions.serverLevelId,
+                timestamp,
+                source
+              );
+            }
+            resolve(appOptions);
+          } else {
+            loadLastAttemptFromSessionStorage();
           }
-          resolve(appOptions);
-        } else {
-          loadLastAttemptFromSessionStorage();
+
+          if (data.pairingDriver) {
+            appOptions.level.pairingDriver = data.pairingDriver;
+            appOptions.level.pairingAttempt = data.pairingAttempt;
+            appOptions.level.pairingChannelId = data.pairingChannelId;
+          }
         }
 
-        if (data.pairingDriver) {
-          appOptions.level.pairingDriver = data.pairingDriver;
-          appOptions.level.pairingAttempt = data.pairingAttempt;
-          appOptions.level.pairingChannelId = data.pairingChannelId;
+        const store = getStore();
+        const signInState = store.getState().progress.signInState;
+        if (signInState === SignInState.SignedIn) {
+          progress.showDisabledBubblesAlert();
         }
-      }
-
-      const store = getStore();
-      const signInState = store.getState().progress.signInState;
-      if (signInState === SignInState.SignedIn) {
-        progress.showDisabledBubblesAlert();
-      }
-      if (data.isVerifiedTeacher) {
-        store.dispatch(setVerified());
-      }
-    }).fail(loadLastAttemptFromSessionStorage);
+        if (data.isVerifiedTeacher) {
+          store.dispatch(setVerified());
+        }
+      })
+      .fail(loadLastAttemptFromSessionStorage);
 
     // Use this instead of a timeout on the AJAX request because we still want
     // the header progress data even if the last attempt data takes too long.
@@ -451,14 +484,17 @@ const sourceHandler = {
         resolve(appOptions.getCode());
       } else if (window.Blockly) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
-                 Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+        source = Blockly.mainBlockSpace.isReadOnly()
+          ? currentLevelSource
+          : Blockly.Xml.domToText(
+              Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+            );
         resolve(source);
       } else if (appOptions.getCode) {
         source = appOptions.getCode();
         resolve(source);
       } else if (appOptions.getCodeAsync) {
-        appOptions.getCodeAsync().then((source) => {
+        appOptions.getCodeAsync().then(source => {
           resolve(source);
         });
       }
@@ -502,7 +538,7 @@ export function setAppOptions(appOptions) {
 export function getAppOptions() {
   if (!APP_OPTIONS) {
     throw new Error(
-      "App Options have not been loaded yet! Did you forget to call loadAppOptions()?"
+      'App Options have not been loaded yet! Did you forget to call loadAppOptions()?'
     );
   }
   return APP_OPTIONS;
@@ -532,11 +568,10 @@ export default function loadAppOptions() {
       // immediately
       resolve(appOptions);
     } else {
-      loadAppAsync(appOptions)
-        .then((appOptions) => {
-          project.init(sourceHandler);
-          resolve(appOptions);
-        });
+      loadAppAsync(appOptions).then(appOptions => {
+        project.init(sourceHandler);
+        resolve(appOptions);
+      });
     }
   });
 }

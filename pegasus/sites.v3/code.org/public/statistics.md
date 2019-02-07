@@ -40,7 +40,7 @@ Two-thirds of computing jobs are outside the tech sector, which is why we need t
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
+<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
 
 <br>
 
@@ -189,6 +189,17 @@ Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg
 
 It's never too late to start teaching CS!
 
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1093197136974544896" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
+
+<br>
+
+Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students! 
 </div>
 
 <div style="clear: both;"></div>

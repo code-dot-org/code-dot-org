@@ -104,6 +104,34 @@ class UserTest < ActiveSupport::TestCase
     assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
+  test 'update_school_info with specific school overwrites user school info' do
+    user = create :teacher, :with_school_info
+    new_school_info = create :school_info
+
+    user.update_school_info(new_school_info)
+    assert_equal new_school_info, user.school_info
+  end
+
+  test 'update_school_info with custom school does nothing when the user already has a specific school' do
+    original_school_info = create :school_info
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    assert_equal original_school_info, user.school_info
+  end
+
+  test 'update_school_info with custom school updates user info when user does not have a specific school' do
+    original_school_info = create :school_info_us_other
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    refute_equal original_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+  end
+
   test 'single user experiment is enabled' do
     experiment = create(:single_user_experiment, min_user_id: @user.id)
     assert_equal [experiment[:name]], @user.get_active_experiment_names

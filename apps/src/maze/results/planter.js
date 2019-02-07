@@ -1,11 +1,11 @@
 import ResultsHandler from './resultsHandler';
 import mazeMsg from '../locale';
-import { TestResults } from '../../constants.js';
+import {TestResults} from '../../constants.js';
 
 export default class PlanterHandler extends ResultsHandler {
   static TerminationValue = {
     PLANT_IN_NON_SOIL: 0,
-    DID_NOT_PLANT_EVERYWHERE: 1,
+    DID_NOT_PLANT_EVERYWHERE: 1
   };
 
   constructor(maze, config) {
@@ -14,7 +14,9 @@ export default class PlanterHandler extends ResultsHandler {
     // Initialize subtype-specific event listeners
 
     this.maze_.subtype.on('plantInNonSoil', () => {
-      this.executionInfo.terminateWithValue(PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL);
+      this.executionInfo.terminateWithValue(
+        PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL
+      );
     });
   }
 
@@ -30,7 +32,9 @@ export default class PlanterHandler extends ResultsHandler {
    * there zero Soil cells?
    */
   plantedEverything() {
-    const anySoilCells = this.maze_.map.getAllCells().some(cell => cell.isSoil());
+    const anySoilCells = this.maze_.map
+      .getAllCells()
+      .some(cell => cell.isSoil());
     return !anySoilCells;
   }
 
@@ -48,7 +52,9 @@ export default class PlanterHandler extends ResultsHandler {
     const executionInfo = this.executionInfo;
 
     if (!this.plantedEverything()) {
-      executionInfo.terminateWithValue(PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE);
+      executionInfo.terminateWithValue(
+        PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE
+      );
     }
   }
 
@@ -65,7 +71,10 @@ export default class PlanterHandler extends ResultsHandler {
         // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
         // a suboptimal solution, so in those cases we want to return our
         // app specific fail. Same goes for BLOCK_LIMIT_FAIL.
-        if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL || testResults === TestResults.BLOCK_LIMIT_FAIL) {
+        if (
+          testResults >= TestResults.TOO_MANY_BLOCKS_FAIL ||
+          testResults === TestResults.BLOCK_LIMIT_FAIL
+        ) {
           testResults = TestResults.APP_SPECIFIC_FAIL;
         }
         return testResults;

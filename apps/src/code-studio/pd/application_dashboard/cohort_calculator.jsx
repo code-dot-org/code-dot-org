@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Table} from 'react-bootstrap';
 import {RegionalPartnerValuePropType} from '../components/regional_partner_dropdown';
 import $ from 'jquery';
@@ -24,7 +25,7 @@ export default class CohortCalculator extends React.Component {
       loading: true,
       capacity: null,
       accepted: null,
-      registered: null,
+      registered: null
     };
     this.loadRequest = null;
   }
@@ -53,18 +54,19 @@ export default class CohortCalculator extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/regional_partners/capacity?role=${this.props.role}&regional_partner_value=${regionalPartnerFilterValue}`,
+      url: `/api/v1/regional_partners/capacity?role=${
+        this.props.role
+      }&regional_partner_value=${regionalPartnerFilterValue}`,
       dataType: 'json'
-    })
-      .done(data => {
-        this.setState({
-          loading: false,
-          capacity: data.capacity,
-          accepted: this.props.accepted,
-          registered: this.props.registered
-        });
-        this.loadRequest = null;
+    }).done(data => {
+      this.setState({
+        loading: false,
+        capacity: data.capacity,
+        accepted: this.props.accepted,
+        registered: this.props.registered
       });
+      this.loadRequest = null;
+    });
   }
 
   render() {
@@ -76,43 +78,27 @@ export default class CohortCalculator extends React.Component {
         <Table striped condensed>
           <caption>Cohort Calculator</caption>
           <thead>
-              <tr>
-                <th />
-                <th>Total</th>
-              </tr>
+            <tr>
+              <th />
+              <th>Total</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                Available Seats
-              </td>
-              <td>
-                {this.state.capacity}
-              </td>
+              <td>Available Seats</td>
+              <td>{this.state.capacity}</td>
             </tr>
             <tr>
-              <td>
-                Accepted
-              </td>
-              <td>
-                {this.state.accepted}
-              </td>
+              <td>Accepted</td>
+              <td>{this.state.accepted}</td>
             </tr>
             <tr>
-              <td>
-                Remaining Capacity
-              </td>
-              <td>
-                {this.state.capacity - this.state.accepted}
-              </td>
+              <td>Remaining Capacity</td>
+              <td>{this.state.capacity - this.state.accepted}</td>
             </tr>
             <tr>
-              <td>
-                Registered
-              </td>
-              <td>
-                {this.state.registered}
-              </td>
+              <td>Registered</td>
+              <td>{this.state.registered}</td>
             </tr>
           </tbody>
         </Table>

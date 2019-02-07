@@ -1,7 +1,8 @@
 /** Body of the animation picker dialog */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Radium from 'radium';
-import color from "../../util/color";
+import color from '../../util/color';
 import {AnimationCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
@@ -17,12 +18,12 @@ const animationPickerStyles = {
   allAnimations: {
     color: color.purple,
     fontFamily: "'Gotham 7r', sans-serif",
-    cursor: "pointer"
+    cursor: 'pointer'
   },
   breadCrumbs: {
-    margin: "8px 0",
+    margin: '8px 0',
     fontSize: 14,
-    display: "inline-block"
+    display: 'inline-block'
   },
   pagination: {
     float: 'right',
@@ -52,11 +53,11 @@ class AnimationPickerBody extends React.Component {
     currentPage: 0
   };
 
-  onSearchQueryChange = (value) => {
+  onSearchQueryChange = value => {
     this.setState({searchQuery: value, currentPage: 0});
   };
 
-  onCategoryChange = (event) => {
+  onCategoryChange = event => {
     this.setState({categoryQuery: event.target.className, currentPage: 0});
   };
 
@@ -64,68 +65,87 @@ class AnimationPickerBody extends React.Component {
     this.setState({categoryQuery: '', searchQuery: '', currentPage: 0});
   };
 
-  onChangePageNumber = (number) => {
+  onChangePageNumber = number => {
     this.setState({currentPage: number - 1});
   };
 
   animationCategoriesRendering() {
-    return Object.keys(AnimationCategories).map(category =>
+    return Object.keys(AnimationCategories).map(category => (
       <AnimationPickerListItem
         key={category}
         label={AnimationCategories[category]}
         category={category}
         onClick={this.onCategoryChange}
       />
-    );
+    ));
   }
 
   animationItemsRendering(animations) {
-    return animations.map(animationProps =>
+    return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={animationProps.name}
         animationProps={animationProps}
         onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
         playAnimations={this.props.playAnimations}
-      />);
+      />
+    ));
   }
 
   render() {
-    let {results, pageCount} = searchAssets(this.state.searchQuery, this.state.categoryQuery, animationLibrary, this.state.currentPage, MAX_SEARCH_RESULTS);
+    let {results, pageCount} = searchAssets(
+      this.state.searchQuery,
+      this.state.categoryQuery,
+      animationLibrary,
+      this.state.currentPage,
+      MAX_SEARCH_RESULTS
+    );
     return (
       <div>
-        <h1 style={styles.title}>
-          {gamelabMsg.animationPicker_title()}
-        </h1>
-        {this.props.is13Plus ||
-          <WarningLabel>
-            {gamelabMsg.animationPicker_warning()}
-          </WarningLabel>
-        }
+        <h1 style={styles.title}>{gamelabMsg.animationPicker_title()}</h1>
+        {this.props.is13Plus || (
+          <WarningLabel>{gamelabMsg.animationPicker_warning()}</WarningLabel>
+        )}
         <AnimationPickerSearchBar
           value={this.state.searchQuery}
           onChange={this.onSearchQueryChange}
         />
-        {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+        {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') && (
           <div style={animationPickerStyles.navigation}>
-            {this.state.categoryQuery !== '' &&
+            {this.state.categoryQuery !== '' && (
               <div style={animationPickerStyles.breadCrumbs}>
-                <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
+                <span
+                  onClick={this.onClearCategories}
+                  style={animationPickerStyles.allAnimations}
+                >
+                  {'All categories > '}
+                </span>
                 <span>{AnimationCategories[this.state.categoryQuery]}</span>
               </div>
-            }
-            {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+            )}
+            {(this.state.searchQuery !== '' ||
+              this.state.categoryQuery !== '') && (
               <div style={animationPickerStyles.pagination}>
-                <PaginationWrapper totalPages={pageCount} currentPage={this.state.currentPage + 1} onChangePage={this.onChangePageNumber}/>
+                <PaginationWrapper
+                  totalPages={pageCount}
+                  currentPage={this.state.currentPage + 1}
+                  onChangePage={this.onChangePageNumber}
+                />
               </div>
-            }
+            )}
           </div>
-        }
-        <ScrollableList style={{maxHeight: 420}}> {/* TODO: Is this maxHeight appropriate? */}
-          {pageCount === 0 &&
-            <div style={animationPickerStyles.emptyResults}>Sorry, no results found.</div>
-          }
-          {((this.state.searchQuery === '' && this.state.categoryQuery === '') || pageCount === 0) &&
+        )}
+        <ScrollableList style={{maxHeight: 420}}>
+          {' '}
+          {/* TODO: Is this maxHeight appropriate? */}
+          {pageCount === 0 && (
+            <div style={animationPickerStyles.emptyResults}>
+              Sorry, no results found.
+            </div>
+          )}
+          {((this.state.searchQuery === '' &&
+            this.state.categoryQuery === '') ||
+            pageCount === 0) && (
             <div>
               <AnimationPickerListItem
                 label={gamelabMsg.animationPicker_drawYourOwn()}
@@ -138,13 +158,12 @@ class AnimationPickerBody extends React.Component {
                 onClick={this.props.onUploadClick}
               />
             </div>
-          }
-          {this.state.searchQuery === '' && this.state.categoryQuery === '' &&
-            this.animationCategoriesRendering()
-          }
+          )}
+          {this.state.searchQuery === '' &&
+            this.state.categoryQuery === '' &&
+            this.animationCategoriesRendering()}
           {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-            this.animationItemsRendering(results)
-          }
+            this.animationItemsRendering(results)}
         </ScrollableList>
       </div>
     );
@@ -154,9 +173,7 @@ class AnimationPickerBody extends React.Component {
 export default Radium(AnimationPickerBody);
 
 export const WarningLabel = ({children}) => (
-    <span style={{color: color.red}}>
-      {children}
-    </span>
+  <span style={{color: color.red}}>{children}</span>
 );
 WarningLabel.propTypes = {
   children: PropTypes.node

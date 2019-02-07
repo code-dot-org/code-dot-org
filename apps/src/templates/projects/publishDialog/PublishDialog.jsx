@@ -1,18 +1,19 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
 import i18n from '@cdo/locale';
-import { hidePublishDialog, publishProject } from './publishDialogRedux';
+import {hidePublishDialog, publishProject} from './publishDialogRedux';
 
 const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20,
-  },
+    paddingBottom: 20
+  }
 };
 
 class PublishDialog extends Component {
@@ -32,7 +33,7 @@ class PublishDialog extends Component {
 
     // specify additional behavior after successful call to onConfirmPublish,
     // if not overridden by onConfirmPublishOverride.
-    afterPublish: PropTypes.func,
+    afterPublish: PropTypes.func
   };
 
   confirm = () => {
@@ -40,10 +41,9 @@ class PublishDialog extends Component {
       this.props.onConfirmPublishOverride();
       return;
     }
-    this.props.onConfirmPublish(
-      this.props.projectId,
-      this.props.projectType,
-    ).then(this.props.afterPublish);
+    this.props
+      .onConfirmPublish(this.props.projectId, this.props.projectType)
+      .then(this.props.afterPublish);
   };
 
   close = () => this.props.onClose();
@@ -86,16 +86,19 @@ class PublishDialog extends Component {
 
 export const UnconnectedPublishDialog = Radium(PublishDialog);
 
-export default connect(state => ({
-  isOpen: state.publishDialog.isOpen,
-  isPublishPending: state.publishDialog.isPublishPending,
-  projectId: state.publishDialog.projectId,
-  projectType: state.publishDialog.projectType,
-}), dispatch => ({
-  onClose() {
-    dispatch(hidePublishDialog());
-  },
-  onConfirmPublish(projectId, projectType) {
-    return dispatch(publishProject(projectId, projectType));
-  },
-}))(Radium(PublishDialog));
+export default connect(
+  state => ({
+    isOpen: state.publishDialog.isOpen,
+    isPublishPending: state.publishDialog.isPublishPending,
+    projectId: state.publishDialog.projectId,
+    projectType: state.publishDialog.projectType
+  }),
+  dispatch => ({
+    onClose() {
+      dispatch(hidePublishDialog());
+    },
+    onConfirmPublish(projectId, projectType) {
+      return dispatch(publishProject(projectId, projectType));
+    }
+  })
+)(Radium(PublishDialog));

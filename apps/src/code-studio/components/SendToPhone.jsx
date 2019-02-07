@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import trackEvent from '../../util/trackEvent';
 
 // Similar UI exists in sharing.html.ejs. At some point int he future, it may
@@ -26,7 +27,7 @@ function sendButtonString(sendState) {
       return 'Error!';
     default:
       throw new Error('unexpected');
-    }
+  }
 }
 
 const baseStyles = {
@@ -44,7 +45,7 @@ export default class SendToPhone extends React.Component {
     appType: PropTypes.string.isRequired,
     styles: PropTypes.shape({
       label: PropTypes.object,
-      div: PropTypes.object,
+      div: PropTypes.object
     })
   };
 
@@ -61,12 +62,12 @@ export default class SendToPhone extends React.Component {
 
     var phone = this.refs.phone;
     $(phone).mask('(000) 000-0000', {
-      onComplete: function () {
+      onComplete: function() {
         this.setState({sendState: SendState.canSubmit});
       }.bind(this),
-      onChange: function () {
+      onChange: function() {
         this.setState({sendState: SendState.invalidVal});
-      }.bind(this),
+      }.bind(this)
     });
     phone.focus();
   }
@@ -82,7 +83,7 @@ export default class SendToPhone extends React.Component {
 
     const params = {
       type: this.props.appType,
-      phone: $(phone).val(),
+      phone: $(phone).val()
     };
     if (this.props.isLegacyShare) {
       params.level_source = +location.pathname.split('/')[2];
@@ -91,38 +92,46 @@ export default class SendToPhone extends React.Component {
     }
 
     $.post('/sms/send', $.param(params))
-      .done(function () {
-        this.setState({sendState: SendState.sent});
-        trackEvent('SendToPhone', 'success');
-      }.bind(this))
-      .fail(function () {
-        this.setState({sendState: SendState.error});
-        trackEvent('SendToPhone', 'error');
-      }.bind(this));
+      .done(
+        function() {
+          this.setState({sendState: SendState.sent});
+          trackEvent('SendToPhone', 'success');
+        }.bind(this)
+      )
+      .fail(
+        function() {
+          this.setState({sendState: SendState.error});
+          trackEvent('SendToPhone', 'error');
+        }.bind(this)
+      );
   };
 
   render() {
     const styles = {...baseStyles, ...this.props.styles};
     return (
       <div>
-        <label style={styles.label} htmlFor="phone">Enter a US phone number:</label>
+        <label style={styles.label} htmlFor="phone">
+          Enter a US phone number:
+        </label>
         <input
           type="text"
           ref="phone"
           name="phone"
           style={{height: 32, margin: 0}}
-          disabled={this.state.sendState !== SendState.invalidVal &&
-                      this.state.sendState !== SendState.canSubmit}
+          disabled={
+            this.state.sendState !== SendState.invalidVal &&
+            this.state.sendState !== SendState.canSubmit
+          }
         />
         <button
           disabled={this.state.sendState === SendState.invalidVal}
           onClick={this.handleSubmit}
         >
-            {sendButtonString(this.state.sendState)}
+          {sendButtonString(this.state.sendState)}
         </button>
         <div style={styles.div}>
-          A text message will be sent via <a href="http://twilio.com">Twilio</a>.
-          Charges may apply to the recipient.
+          A text message will be sent via <a href="http://twilio.com">Twilio</a>
+          . Charges may apply to the recipient.
         </div>
       </div>
     );

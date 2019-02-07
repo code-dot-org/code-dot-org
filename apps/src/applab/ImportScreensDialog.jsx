@@ -1,5 +1,7 @@
 /* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import * as applabConstants from './constants';
@@ -10,14 +12,14 @@ import AssetThumbnail, {
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles
 } from '../templates/MultiCheckboxSelector';
-import color from "../util/color";
+import color from '../util/color';
 import {toggleImportScreen, importIntoProject} from './redux/screens';
 import {
   importableAssetShape,
   importableScreenShape,
   importableProjectShape
 } from './import';
-import Sounds from "../Sounds";
+import Sounds from '../Sounds';
 
 const SCALE = 0.1;
 const MARGIN = 10;
@@ -26,38 +28,38 @@ const ICON_HEIGHT = applabConstants.APP_HEIGHT * SCALE;
 // TODO: ditch color and fontSize in favor of more unified style components when they exist.
 const styles = {
   section: {
-    marginTop: MARGIN * 2,
+    marginTop: MARGIN * 2
   },
   warning: {
     color: color.red,
     fontSize: 'smaller',
-    margin: 0,
+    margin: 0
   },
   subtext: {
-    color: color.black,
+    color: color.black
   },
   screenListItem: {
     display: 'flex',
     alignItems: 'center',
-    color: color.black,
+    color: color.black
   },
   disabledScreenListItem: {
-    color: color.light_gray,
+    color: color.light_gray
   },
   assetListItem: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   assetThumbnail: {
     margin: 0,
     height: ICON_HEIGHT,
     width: ICON_HEIGHT,
-    color: color.black,
+    color: color.black
   },
   assetThumbnailIcon: {
     fontSize: 25,
     margin: 0,
-    lineHeight: ''+ICON_HEIGHT+'px',
+    lineHeight: '' + ICON_HEIGHT + 'px'
   },
   assetListItemText: {
     marginLeft: MARGIN
@@ -68,7 +70,7 @@ const styles = {
     height: ICON_HEIGHT,
     border: assetThumbnailStyles.wrapper.border,
     position: 'relative',
-    marginRight: MARGIN,
+    marginRight: MARGIN
   },
   miniScreen: {
     display: 'inline-block',
@@ -76,21 +78,21 @@ const styles = {
     left: 0,
     transform: `scale(${SCALE})`,
     transformOrigin: 'top left',
-    width: applabConstants.APP_WIDTH,
+    width: applabConstants.APP_WIDTH
   },
   checkbox: {
-    marginRight: MARGIN,
+    marginRight: MARGIN
   },
   selectAllCheckbox: {
     marginRight: MARGIN,
     position: 'relative',
-    bottom: 4,
+    bottom: 4
   },
-  scrollable:{
+  scrollable: {
     overflow: 'hidden',
     overflowY: 'scroll',
     maxHeight: '400px'
-  },
+  }
 };
 
 // TODO: possibly refactor AssetRow to make it work here instead of
@@ -116,10 +118,12 @@ class AssetListItemUnwrapped extends React.Component {
         />
         <div style={[styles.assetListItemText, styles.subtext]}>
           {asset.filename}
-          {asset.willReplace &&
-           <p style={styles.warning}>
-             Warning: Importing this will replace your existing "{asset.filename}".
-           </p>}
+          {asset.willReplace && (
+            <p style={styles.warning}>
+              Warning: Importing this will replace your existing "
+              {asset.filename}".
+            </p>
+          )}
         </div>
       </div>
     );
@@ -133,7 +137,7 @@ function quotedCommaJoin(strings) {
 
 class ScreenListItemUnwrapped extends React.Component {
   static propTypes = {
-    screen: importableScreenShape,
+    screen: importableScreenShape
   };
 
   render() {
@@ -153,20 +157,24 @@ class ScreenListItemUnwrapped extends React.Component {
         </div>
         <div>
           {screen.id}
-          {screen.conflictingIds.length === 0 && screen.willReplace &&
-           <p style={styles.warning}>
-             Importing this will replace your existing screen: "{screen.id}".
-           </p>}
-          {screen.conflictingIds.length === 0 && screen.assetsToReplace.length > 0 &&
-           <p style={styles.warning}>
-             Importing this will replace your existing
-             assets: {quotedCommaJoin(screen.assetsToReplace)}.
-           </p>
-          }
-          {screen.conflictingIds.length > 0 &&
-           <p style={styles.warning}>
-             Uses existing element IDs: {quotedCommaJoin(screen.conflictingIds)}.
-           </p>}
+          {screen.conflictingIds.length === 0 && screen.willReplace && (
+            <p style={styles.warning}>
+              Importing this will replace your existing screen: "{screen.id}".
+            </p>
+          )}
+          {screen.conflictingIds.length === 0 &&
+            screen.assetsToReplace.length > 0 && (
+              <p style={styles.warning}>
+                Importing this will replace your existing assets:{' '}
+                {quotedCommaJoin(screen.assetsToReplace)}.
+              </p>
+            )}
+          {screen.conflictingIds.length > 0 && (
+            <p style={styles.warning}>
+              Uses existing element IDs:{' '}
+              {quotedCommaJoin(screen.conflictingIds)}.
+            </p>
+          )}
         </div>
       </div>
     );
@@ -179,14 +187,14 @@ export class ImportScreensDialog extends React.Component {
     ...Dialog.propTypes,
     project: importableProjectShape,
     onImport: PropTypes.func.isRequired,
-    isImporting: PropTypes.bool,
+    isImporting: PropTypes.bool
   };
 
   static defaultProps = {isImporting: false};
 
   state = {
     selectedScreens: [],
-    selectedAssets: [],
+    selectedAssets: []
   };
 
   componentDidMount() {
@@ -197,17 +205,24 @@ export class ImportScreensDialog extends React.Component {
     if (!this.props.project) {
       return null;
     }
-    const nonImportableScreens = this.props.project.screens.filter(s => !s.canBeImported);
-    const importableScreens = this.props.project.screens.filter(s => s.canBeImported);
-    const canImport = importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
+    const nonImportableScreens = this.props.project.screens.filter(
+      s => !s.canBeImported
+    );
+    const importableScreens = this.props.project.screens.filter(
+      s => s.canBeImported
+    );
+    const canImport =
+      importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
     const buttons = canImport ? (
       <Buttons>
         <Confirm
-          onClick={() => this.props.onImport(
+          onClick={() =>
+            this.props.onImport(
               this.props.project.id,
               this.state.selectedScreens,
               this.state.selectedAssets
-            )}
+            )
+          }
           disabled={this.props.isImporting}
         >
           {this.props.isImporting && <span className="fa fa-spin fa-spinner" />}
@@ -217,7 +232,7 @@ export class ImportScreensDialog extends React.Component {
       </Buttons>
     ) : (
       <Buttons>
-        <Cancel onClick={this.props.handleClose}/>
+        <Cancel onClick={this.props.handleClose} />
       </Buttons>
     );
 
@@ -229,52 +244,54 @@ export class ImportScreensDialog extends React.Component {
       >
         <Body>
           <div style={styles.scrollable}>
-            {importableScreens.length > 0 &&
-             <MultiCheckboxSelector
-               style={styles.section}
-               header="Screens"
-               items={importableScreens}
-               selected={this.state.selectedScreens}
-               onChange={selectedScreens => this.setState({selectedScreens})}
-               itemPropName="screen"
-               disabled={this.props.isImporting}
-             >
-               <ScreenListItem />
-             </MultiCheckboxSelector>}
-            {this.props.project.otherAssets.length > 0 &&
-             <MultiCheckboxSelector
-               style={styles.section}
-               header="Other Assets"
-               items={this.props.project.otherAssets}
-               selected={this.state.selectedAssets}
-               onChange={selectedAssets => this.setState({selectedAssets})}
-               itemPropName="asset"
-               disabled={this.props.isImporting}
-             >
-               <AssetListItem
-                 projectId={this.props.project.id}
-                 soundPlayer={this.sounds}
-               />
-             </MultiCheckboxSelector>}
-            {nonImportableScreens.length > 0 &&
-             <div style={styles.section}>
-               <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
-               <p style={styles.subtext}>
-                 Cannot import the following screens because they contain design elements
-                 with IDs already used in your existing project. Fix the IDs in either
-                 project so they aren't duplicated across different screens before trying
-                 to import the following.
-               </p>
-               <ul style={multiCheckboxStyles.list}>
-                 {nonImportableScreens.map(
-                    screen => (
-                      <li key={screen.id} style={multiCheckboxStyles.listItem}>
-                        <ScreenListItem screen={screen}/>
-                      </li>
-                    )
-                  )}
-               </ul>
-             </div>}
+            {importableScreens.length > 0 && (
+              <MultiCheckboxSelector
+                style={styles.section}
+                header="Screens"
+                items={importableScreens}
+                selected={this.state.selectedScreens}
+                onChange={selectedScreens => this.setState({selectedScreens})}
+                itemPropName="screen"
+                disabled={this.props.isImporting}
+              >
+                <ScreenListItem />
+              </MultiCheckboxSelector>
+            )}
+            {this.props.project.otherAssets.length > 0 && (
+              <MultiCheckboxSelector
+                style={styles.section}
+                header="Other Assets"
+                items={this.props.project.otherAssets}
+                selected={this.state.selectedAssets}
+                onChange={selectedAssets => this.setState({selectedAssets})}
+                itemPropName="asset"
+                disabled={this.props.isImporting}
+              >
+                <AssetListItem
+                  projectId={this.props.project.id}
+                  soundPlayer={this.sounds}
+                />
+              </MultiCheckboxSelector>
+            )}
+            {nonImportableScreens.length > 0 && (
+              <div style={styles.section}>
+                <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
+                <p style={styles.subtext}>
+                  Cannot import the following screens because they contain
+                  design elements with IDs already used in your existing
+                  project. Fix the IDs in either project so they aren't
+                  duplicated across different screens before trying to import
+                  the following.
+                </p>
+                <ul style={multiCheckboxStyles.list}>
+                  {nonImportableScreens.map(screen => (
+                    <li key={screen.id} style={multiCheckboxStyles.listItem}>
+                      <ScreenListItem screen={screen} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </Body>
         {buttons}
@@ -285,8 +302,11 @@ export class ImportScreensDialog extends React.Component {
 
 export default connect(
   state => ({
-    isOpen: !!(state.screens.isImportingScreen && state.screens.importProject.fetchedProject),
-    project: state.screens.importProject.importableProject,
+    isOpen: !!(
+      state.screens.isImportingScreen &&
+      state.screens.importProject.fetchedProject
+    ),
+    project: state.screens.importProject.importableProject
   }),
   dispatch => ({
     onImport(projectId, screens, assets) {
@@ -294,6 +314,6 @@ export default connect(
     },
     handleClose() {
       dispatch(toggleImportScreen(false));
-    },
+    }
   })
 )(ImportScreensDialog);

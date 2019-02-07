@@ -1,11 +1,12 @@
 /** @file Root of the animation editor interface mode for GameLab */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Radium from 'radium';
-import { connect } from 'react-redux';
-import color from "../../util/color";
+import {connect} from 'react-redux';
+import color from '../../util/color';
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
-import { setColumnSizes } from './animationTabModule';
+import {setColumnSizes} from './animationTabModule';
 import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
@@ -83,7 +84,7 @@ class AnimationTab extends React.Component {
             <AnimationList />
           </div>
           <div style={styles.editorColumn}>
-            <PiskelEditor style={styles.piskelEl}/>
+            <PiskelEditor style={styles.piskelEl} />
             <div style={[hidePiskelStyle, styles.emptyPiskelEl]}>
               <div style={styles.helpText}>
                 Add a new animation on the left to begin
@@ -99,11 +100,14 @@ class AnimationTab extends React.Component {
     );
   }
 }
-export default connect(state => ({
-  columnSizes: state.animationTab.columnSizes,
-  selectedAnimation: state.animationTab.selectedAnimation
-}), dispatch => ({
-  onColumnWidthsChange(widths) {
-    dispatch(setColumnSizes(widths));
-  }
-}))(Radium(AnimationTab));
+export default connect(
+  state => ({
+    columnSizes: state.animationTab.columnSizes,
+    selectedAnimation: state.animationTab.selectedAnimation
+  }),
+  dispatch => ({
+    onColumnWidthsChange(widths) {
+      dispatch(setColumnSizes(widths));
+    }
+  })
+)(Radium(AnimationTab));

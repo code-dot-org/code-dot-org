@@ -1,7 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-import color from "../util/color";
+import color from '../util/color';
 
 /**
  * This file at one point represented our "default" button component. It has since
@@ -24,27 +25,27 @@ export const style = {
     marginRight: 0,
     ':hover': {
       boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
-    },
+    }
   },
   large: {
     fontSize: 35,
     lineHeight: 'normal',
     paddingLeft: 14,
-    paddingRight: 14,
+    paddingRight: 14
   },
   arrow: {
     base: {
       position: 'relative',
       height: ARROW_HEIGHT,
       textAlign: 'left',
-      display: 'inline-block',
+      display: 'inline-block'
     },
     left: {
-      paddingLeft: ARROW_WIDTH,
+      paddingLeft: ARROW_WIDTH
     },
     right: {
-      paddingRight: ARROW_WIDTH,
-    },
+      paddingRight: ARROW_WIDTH
+    }
   },
   arrowHead: {
     base: {
@@ -53,44 +54,49 @@ export const style = {
       height: 0,
       borderColor: 'transparent',
       borderWidth: ARROW_WIDTH,
-      borderStyle: 'solid',
+      borderStyle: 'solid'
     },
     left: color => ({
       left: 10 - ARROW_WIDTH,
-      borderRightColor: color,
+      borderRightColor: color
     }),
     right: color => ({
       right: 10 - ARROW_WIDTH,
-      borderLeftColor: color,
-    }),
-  },
+      borderLeftColor: color
+    })
+  }
 };
 
 style.withArrow = {
   base: {
     position: 'relative',
-    top: (ARROW_HEIGHT - style.base.borderWidth - ARROW_BUTTON_PADDING * 2 - ARROW_BUTTON_HEIGHT)/2,
+    top:
+      (ARROW_HEIGHT -
+        style.base.borderWidth -
+        ARROW_BUTTON_PADDING * 2 -
+        ARROW_BUTTON_HEIGHT) /
+      2,
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 0,
     marginRight: 0,
     ':hover': {
-      boxShadow: 'none',
-    },
+      boxShadow: 'none'
+    }
   },
   left: {
-    paddingLeft: 0,
+    paddingLeft: 0
   },
   right: {
-    paddingRight: 0,
-  },
+    paddingRight: 0
+  }
 };
 
-function buttonStyle(buttonColor, textColor=color.white) {
+function buttonStyle(buttonColor, textColor = color.white) {
   return {
     backgroundColor: buttonColor,
     borderColor: buttonColor,
-    color: textColor,
+    color: textColor
   };
 }
 
@@ -99,24 +105,29 @@ export const BUTTON_TYPES = {
     style: {
       backgroundColor: color.white,
       borderColor: color.charcoal,
-      color: color.charcoal,
-    },
+      color: color.charcoal
+    }
   },
   cancel: {
-    style: buttonStyle(color.green),
+    style: buttonStyle(color.green)
   },
   primary: {
-    style: buttonStyle(color.orange),
+    style: buttonStyle(color.orange)
   },
   danger: {
-    style: buttonStyle(color.red),
+    style: buttonStyle(color.red)
   },
   action: {
-    style: buttonStyle(color.purple),
-  },
+    style: buttonStyle(color.purple)
+  }
 };
 
-const BaseButton = Radium(function BaseButton({type, children, size, ...props}) {
+const BaseButton = Radium(function BaseButton({
+  type,
+  children,
+  size,
+  ...props
+}) {
   const sizeStyle = style[size || 'normal'];
   const config = BUTTON_TYPES[type];
   let styleArray = [style.base, config.style, sizeStyle];
@@ -129,7 +140,7 @@ const BaseButton = Radium(function BaseButton({type, children, size, ...props}) 
 BaseButton.propTypes = {
   type: PropTypes.oneOf(Object.keys(BUTTON_TYPES)),
   children: PropTypes.node,
-  size: PropTypes.oneOf(['normal', 'large']),
+  size: PropTypes.oneOf(['normal', 'large'])
 };
 
 const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
@@ -140,13 +151,7 @@ const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
     }
   }
   return (
-    <div
-      style={[
-        style.arrow.base,
-        style.arrow[arrow],
-        props.style
-      ]}
-    >
+    <div style={[style.arrow.base, style.arrow[arrow], props.style]}>
       <div
         style={[
           style.arrowHead.base,
@@ -155,16 +160,13 @@ const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
       />
       <BaseButton
         {...props}
-        style={[
-          style.withArrow.base,
-          style.withArrow[arrow]
-        ]}
+        style={[style.withArrow.base, style.withArrow[arrow]]}
       />
     </div>
   );
 });
 ArrowButton.propTypes = Object.assign({}, BaseButton.propTypes, {
-  arrow: PropTypes.oneOf(['left', 'right']).isRequired,
+  arrow: PropTypes.oneOf(['left', 'right']).isRequired
 });
 
 const LegacyButton = Radium(function Button(props) {
@@ -175,7 +177,7 @@ const LegacyButton = Radium(function Button(props) {
   }
 });
 LegacyButton.propTypes = Object.assign({}, BaseButton.propTypes, {
-  arrow: PropTypes.oneOf(['left', 'right']),
+  arrow: PropTypes.oneOf(['left', 'right'])
 });
 
 export default LegacyButton;

@@ -1,11 +1,12 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
-import $ from "jquery";
+import $ from 'jquery';
 
 class CanvasProperties extends React.Component {
   static propTypes = {
@@ -58,7 +59,8 @@ class CanvasProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -72,9 +74,15 @@ class CanvasEvents extends React.Component {
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
-      '  setActiveCanvas("' + id + '");\n' +
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
+      '  setActiveCanvas("' +
+      id +
+      '");\n' +
       '  circle(event.offsetX, event.offsetY, 10);\n' +
       '});\n';
     return code;
@@ -85,7 +93,8 @@ class CanvasEvents extends React.Component {
   render() {
     const element = this.props.element;
     const clickName = 'Click';
-    const clickDesc = 'Triggered when the canvas is clicked with a mouse or tapped on a screen.';
+    const clickDesc =
+      'Triggered when the canvas is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -95,7 +104,7 @@ class CanvasEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={clickName}
           desc={clickDesc}
@@ -106,11 +115,10 @@ class CanvasEvents extends React.Component {
   }
 }
 
-
 export default {
   PropertyTab: CanvasProperties,
   EventTab: CanvasEvents,
-  create: function () {
+  create: function() {
     const element = document.createElement('canvas');
     element.setAttribute('width', '100px');
     element.setAttribute('height', '100px');

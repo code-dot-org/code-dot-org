@@ -1,5 +1,7 @@
 /** Button for use in Maker connection status overlays */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import color from '../../../../util/color';
 
@@ -25,14 +27,14 @@ const style = {
     borderColor: color.white,
     backgroundColor: color.white,
     cursor: 'pointer',
-    boxShadow: 'none',
-  },
+    boxShadow: 'none'
+  }
 };
 
 const primaryStyle = {
   backgroundColor: color.charcoal,
   borderColor: color.charcoal,
-  color: color.lighter_gray,
+  color: color.lighter_gray
 };
 
 class OverlayButton extends Component {
@@ -40,13 +42,13 @@ class OverlayButton extends Component {
     className: PropTypes.string,
     primary: PropTypes.bool,
     text: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired
   };
 
   render() {
     const composedStyle = {
       ...style,
-      ...(this.props.primary && primaryStyle),
+      ...(this.props.primary && primaryStyle)
     };
 
     return (

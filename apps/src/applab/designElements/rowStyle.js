@@ -1,4 +1,4 @@
-import color from "../../util/color";
+import color from '../../util/color';
 
 export var input = {
   display: 'inline-block',

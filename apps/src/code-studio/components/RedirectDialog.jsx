@@ -1,17 +1,18 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from "@cdo/apps/templates/Button";
-import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
-import { navigateToHref } from '@cdo/apps/utils';
+import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const styles = {
   dialog: {
-    padding: 20,
+    padding: 20
   },
   dialogHeader: {
-    marginTop: 0,
-  },
+    marginTop: 0
+  }
 };
 
 export default class RedirectDialog extends React.Component {
@@ -20,7 +21,7 @@ export default class RedirectDialog extends React.Component {
     details: PropTypes.string.isRequired,
     handleClose: PropTypes.func.isRequired,
     redirectUrl: PropTypes.string.isRequired,
-    redirectButtonText: PropTypes.string.isRequired,
+    redirectButtonText: PropTypes.string.isRequired
   };
 
   redirect = () => {

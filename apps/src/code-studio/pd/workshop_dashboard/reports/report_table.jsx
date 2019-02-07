@@ -1,7 +1,8 @@
 /**
  * Report Table
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {orderBy} from 'lodash';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
@@ -30,7 +31,7 @@ export default class ReportTable extends React.Component {
 
   getSortingColumns = () => this.state.sortingColumns || {};
 
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     const sortingColumns = sort.byColumn({
       sortingColumns: this.state.sortingColumns,
       // Custom sortingOrder removes 'no-sort' from the cycle
@@ -50,14 +51,10 @@ export default class ReportTable extends React.Component {
   };
 
   getSortableTransform() {
-    return wrappedSortable(
-      this.getSortingColumns,
-      this.onSort,
-      {
-        container: {whiteSpace: 'nowrap'},
-        default: {color: color.light_gray}
-      }
-    );
+    return wrappedSortable(this.getSortingColumns, this.onSort, {
+      container: {whiteSpace: 'nowrap'},
+      default: {color: color.light_gray}
+    });
   }
 
   addTransform(element, transform) {
@@ -68,7 +65,7 @@ export default class ReportTable extends React.Component {
   // Apply to all headers
   applyHeaderTransforms(columns) {
     const sortableTransform = this.getSortableTransform();
-    columns.forEach( column => {
+    columns.forEach(column => {
       this.addTransform(column.header, sortableTransform);
     });
 
@@ -77,7 +74,7 @@ export default class ReportTable extends React.Component {
 
   render() {
     // Since there may not be a unique id per row, add a rowKey based on pre-sorted index.
-    const rows = this.props.rows.map( (row, i) => ({
+    const rows = this.props.rows.map((row, i) => ({
       ...row,
       rowKey: i + 1
     }));
@@ -92,13 +89,12 @@ export default class ReportTable extends React.Component {
 
     return (
       <div style={styles.container}>
-
         <Table.Provider
           className="table table-bordered table-striped table-condensed"
           columns={columns}
         >
           <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="rowKey"/>
+          <Table.Body rows={sortedRows} rowKey="rowKey" />
         </Table.Provider>
       </div>
     );

@@ -1,4 +1,4 @@
-import { getDatabase } from './firebaseUtils';
+import {getDatabase} from './firebaseUtils';
 import _ from 'lodash';
 
 export function getColumnsRef(tableName) {
@@ -12,14 +12,19 @@ export function getColumnsRef(tableName) {
  * none exists.
  */
 export function getColumnRefByName(tableName, columnName) {
-  return getColumnsRef(tableName).once('value').then(columnsSnapshot => {
-    const columns = columnsSnapshot.val();
-    const key = _.findKey(columns, column => column.columnName === columnName);
-    if (key) {
-      return getColumnsRef(tableName).child(key);
-    }
-    return Promise.resolve();
-  });
+  return getColumnsRef(tableName)
+    .once('value')
+    .then(columnsSnapshot => {
+      const columns = columnsSnapshot.val();
+      const key = _.findKey(
+        columns,
+        column => column.columnName === columnName
+      );
+      if (key) {
+        return getColumnsRef(tableName).child(key);
+      }
+      return Promise.resolve();
+    });
 }
 
 export function getColumnNamesFromRecords(records) {
@@ -50,7 +55,9 @@ export function getColumnNames(tableName) {
 export function addColumnName(tableName, columnName) {
   return getColumnRefByName(tableName, columnName).then(columnRef => {
     if (!columnRef) {
-      return getColumnsRef(tableName).push().set({columnName});
+      return getColumnsRef(tableName)
+        .push()
+        .set({columnName});
     }
     return Promise.resolve();
   });
@@ -70,7 +77,9 @@ export function renameColumnName(tableName, oldName, newName) {
     if (columnRef) {
       return columnRef.set({columnName: newName});
     } else {
-      return getColumnsRef(tableName).push().set({columnName: newName});
+      return getColumnsRef(tableName)
+        .push()
+        .set({columnName: newName});
     }
   });
 }
@@ -91,14 +100,18 @@ export function onColumnNames(tableName, callback) {
  */
 export function addMissingColumns(tableName) {
   return getColumnNames(tableName).then(existingColumnNames => {
-    const recordsRef = getDatabase().child(`storage/tables/${tableName}/records`);
+    const recordsRef = getDatabase().child(
+      `storage/tables/${tableName}/records`
+    );
     return recordsRef.once('value').then(snapshot => {
       const recordsData = snapshot.val() || {};
       getColumnNamesFromRecords(recordsData).forEach(columnName => {
         if (!existingColumnNames.includes(columnName)) {
-          getColumnsRef(tableName).push().set({columnName});
+          getColumnsRef(tableName)
+            .push()
+            .set({columnName});
         }
       });
     });
-  }) ;
+  });
 }

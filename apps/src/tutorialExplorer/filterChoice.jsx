@@ -2,7 +2,8 @@
  * Contains a checkbox and text describing that choice.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const styles = {
   filterChoiceOuter: {
@@ -12,7 +13,7 @@ const styles = {
     MsUserSelect: 'none'
   },
   filterChoiceLabel: {
-    fontFamily: "\"Gotham 4r\", sans-serif",
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 13,
     paddingBottom: 0,
     marginBottom: 0,
@@ -33,7 +34,7 @@ export default class FilterChoice extends React.Component {
     singleEntry: PropTypes.bool.isRequired
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.props.onUserInput(
       this.props.groupName,
       this.props.name,
@@ -42,7 +43,7 @@ export default class FilterChoice extends React.Component {
   };
 
   render() {
-    const type = this.props.singleEntry ? "radio" : "checkbox";
+    const type = this.props.singleEntry ? 'radio' : 'checkbox';
 
     return (
       <div style={styles.filterChoiceOuter}>

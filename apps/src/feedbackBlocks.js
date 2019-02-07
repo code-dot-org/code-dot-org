@@ -13,13 +13,19 @@ var parseXmlElement = require('./xml').parseElement;
  * @param {DisplayBlocks} missingRecommendedBlocks
  * @constructor
  */
-var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommendedBlocks) {
+var FeedbackBlocks = function(
+  options,
+  missingRequiredBlocks,
+  missingRecommendedBlocks
+) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
-  if (options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED &&
-      options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED &&
-      options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED) {
+  if (
+    options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
+    options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED &&
+    options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED &&
+    options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED
+  ) {
     return;
   }
 
@@ -30,7 +36,7 @@ var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommende
     handleMissingBlocks(missingRecommendedBlocks);
   }
 
-  function handleMissingBlocks(/**DisplayBlocks*/blocks) {
+  function handleMissingBlocks(/**DisplayBlocks*/ blocks) {
     blocksToDisplay = blocks.blocksToDisplay;
     if (blocks.message) {
       options.message = blocks.message;
@@ -52,18 +58,21 @@ var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommende
 
 module.exports = FeedbackBlocks;
 
-FeedbackBlocks.prototype.render = function () {
+FeedbackBlocks.prototype.render = function() {
   // Only render if this.div exists in the DOM
   if (!document.body.contains(this.div)) {
     return;
   }
 
   var parsedXml = parseXmlElement(this.xml);
-  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(this.div, parsedXml);
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+    this.div,
+    parsedXml
+  );
   this.blockSpaceEditor = blockSpace.blockSpaceEditor;
 };
 
-FeedbackBlocks.prototype.show = function () {
+FeedbackBlocks.prototype.show = function() {
   this.div.style.visibility = '';
   this.div.style.height = '';
   if (this.blockSpaceEditor) {
@@ -71,7 +80,7 @@ FeedbackBlocks.prototype.show = function () {
   }
 };
 
-FeedbackBlocks.prototype.hide = function () {
+FeedbackBlocks.prototype.hide = function() {
   this.div.style.visibility = 'hidden';
   this.div.style.height = '0px';
 };
@@ -81,7 +90,7 @@ FeedbackBlocks.prototype.hide = function () {
  * @param {!TestableBlock[]} blocks An array of blocks to display (with optional args).
  * @return {string} The generated string of XML.
  */
-FeedbackBlocks.generateXMLForBlocks = function (blocks) {
+FeedbackBlocks.generateXMLForBlocks = function(blocks) {
   var blockXMLStrings = ['<xml>'];
   var blockX = 10; // Prevent left output plugs from being cut off.
   var blockY = 0;
@@ -95,22 +104,40 @@ FeedbackBlocks.generateXMLForBlocks = function (blocks) {
       blockXMLStrings.push(block.blockDisplayXML);
       continue;
     }
-    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-        blockX.toString(), '" y="', blockY, '">');
+    blockXMLStrings.push(
+      '<block',
+      ' type="',
+      block.type,
+      '" x="',
+      blockX.toString(),
+      '" y="',
+      blockY,
+      '">'
+    );
     if (block.titles) {
       var titleNames = Object.keys(block.titles);
       for (k = 0; k < titleNames.length; k++) {
         name = titleNames[k];
-        blockXMLStrings.push('<title name="', name, '">',
-            block.titles[name], '</title>');
+        blockXMLStrings.push(
+          '<title name="',
+          name,
+          '">',
+          block.titles[name],
+          '</title>'
+        );
       }
     }
     if (block.values) {
       var valueNames = Object.keys(block.values);
       for (k = 0; k < valueNames.length; k++) {
         name = valueNames[k];
-        blockXMLStrings.push('<value name="', name, '">',
-            block.values[name], '</value>');
+        blockXMLStrings.push(
+          '<value name="',
+          name,
+          '">',
+          block.values[name],
+          '</value>'
+        );
       }
     }
     if (block.extra) {

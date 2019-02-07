@@ -6,9 +6,10 @@
  *        /csp_teachers/(:applicationId)
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ApplicationLoader from './application_loader';
-import DetailViewContents from "./detail_view_contents";
+import DetailViewContents from './detail_view_contents';
 
 export default class DetailView extends React.Component {
   static propTypes = {
@@ -31,8 +32,13 @@ export default class DetailView extends React.Component {
 
     // Wrong course or application type? No problem. Redirect to the correct route.
     // Note this will re-query the API for application data
-    if (course !== this.props.route.course || application_type.toLowerCase() !== this.props.route.viewType) {
-      this.context.router.replace(`/${course}_${application_type.toLowerCase()}s/${applicationId}`);
+    if (
+      course !== this.props.route.course ||
+      application_type.toLowerCase() !== this.props.route.viewType
+    ) {
+      this.context.router.replace(
+        `/${course}_${application_type.toLowerCase()}s/${applicationId}`
+      );
     }
   };
 

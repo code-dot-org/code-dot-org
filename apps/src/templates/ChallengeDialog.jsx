@@ -2,8 +2,9 @@ import BaseDialog from './BaseDialog';
 import Confetti from 'react-dom-confetti';
 import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';
 
@@ -11,7 +12,7 @@ const styles = {
   dialog: {
     top: '20%',
     border: `5px solid ${color.purple}`,
-    borderRadius: 10,
+    borderRadius: 10
   },
   banner: {
     backgroundPosition: 'top center',
@@ -19,23 +20,25 @@ const styles = {
     backgroundImage: `url(${assetUrl('media/dialog/challenge_target.svg')})`,
     position: 'relative',
     marginTop: -85,
-    height: 135,
+    height: 135
   },
   bannerComplete: {
-    backgroundImage: `url(${assetUrl('media/dialog/challenge_target_complete.svg')})`,
+    backgroundImage: `url(${assetUrl(
+      'media/dialog/challenge_target_complete.svg'
+    )})`,
     marginTop: -99,
-    height: 149,
+    height: 149
   },
   content: {
     color: color.purple,
     position: 'relative',
     textAlign: 'center',
-    marginBottom: 30,
+    marginBottom: 30
   },
   text: {
     margin: '0px 40px 20px',
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: 18
   },
   title: {
     textAlign: 'center',
@@ -48,21 +51,21 @@ const styles = {
     left: '25%',
     fontSize: '150%',
     height: 30,
-    lineHeight: '30px',
+    lineHeight: '30px'
   },
   confetti: {
     position: 'relative',
     left: '50%',
-    top: 150,
+    top: 150
   },
   primaryButton: {
-    float: 'right',
+    float: 'right'
   },
   footer: {
     marginTop: 20,
     paddingTop: 20,
-    borderTop: '2px solid #ccc',
-  },
+    borderTop: '2px solid #ccc'
+  }
 };
 
 class ChallengeDialog extends React.Component {
@@ -82,7 +85,7 @@ class ChallengeDialog extends React.Component {
     primaryButtonLabel: PropTypes.string,
     showPuzzleRatingButtons: PropTypes.bool,
     text: PropTypes.string,
-    title: PropTypes.string,
+    title: PropTypes.string
   };
 
   constructor(props) {
@@ -90,34 +93,34 @@ class ChallengeDialog extends React.Component {
     this.state = {
       isOpen: this.props.isOpen === undefined || this.props.isOpen,
       confettiActive: false,
-      confettiOnTop: false,
+      confettiOnTop: false
     };
   }
 
   handlePrimary = () => {
     this.props.handlePrimary && this.props.handlePrimary();
-    this.setState({ isOpen: false });
+    this.setState({isOpen: false});
   };
 
   handleCancel = () => {
     this.props.handleCancel && this.props.handleCancel();
-    this.setState({ isOpen: false });
+    this.setState({isOpen: false});
   };
 
   componentDidMount() {
     if (this.props.complete && !this.props.isIntro) {
       // The confetti only starts when the `active` prop transitions from false
       // to true, so this defaults to false but is immediately set to true
-      window.setTimeout(() => this.setState({ confettiActive: true }), 0);
+      window.setTimeout(() => this.setState({confettiActive: true}), 0);
 
       // I want the confetti to shoot up from behind the dialog and fall in
       // front of it. Fake it by changing the z-index from -1 to 1 after 700ms
-      window.setTimeout(() => this.setState({ confettiOnTop: true }), 700);
+      window.setTimeout(() => this.setState({confettiOnTop: true}), 700);
     }
   }
 
   render() {
-    const confettiZIndex = this.state.confettiOnTop ? 1: -1;
+    const confettiZIndex = this.state.confettiOnTop ? 1 : -1;
     return (
       <BaseDialog
         isOpen={this.state.isOpen}
@@ -141,9 +144,7 @@ class ChallengeDialog extends React.Component {
           </div>
         </div>
         <div style={styles.content}>
-          <div style={styles.text}>
-            {this.props.text}
-          </div>
+          <div style={styles.text}>{this.props.text}</div>
           {this.props.children}
         </div>
         <LegacyButton
@@ -161,9 +162,11 @@ class ChallengeDialog extends React.Component {
         >
           {this.props.primaryButtonLabel}
         </LegacyButton>
-        {this.props.showPuzzleRatingButtons && <div style={styles.footer}>
-          <PuzzleRatingButtons useLegacyStyles/>
-        </div>}
+        {this.props.showPuzzleRatingButtons && (
+          <div style={styles.footer}>
+            <PuzzleRatingButtons useLegacyStyles />
+          </div>
+        )}
       </BaseDialog>
     );
   }

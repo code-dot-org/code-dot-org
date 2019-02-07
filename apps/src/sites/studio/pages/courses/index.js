@@ -22,9 +22,10 @@ function showCourses() {
   const signedOut = coursesData.signedout;
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
-  const modernElementaryCoursesAvailable = coursesData.modernelementarycoursesavailable;
+  const modernElementaryCoursesAvailable =
+    coursesData.modernelementarycoursesavailable;
 
-  ReactDOM.render (
+  ReactDOM.render(
     <Provider store={getStore()}>
       <Courses
         isEnglish={isEnglish}

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import IconList from './IconList';
 import i18n from '@cdo/locale';
 
@@ -13,7 +14,7 @@ export default class IconLibrary extends React.Component {
 
   state = {search: ''};
 
-  search = (e) => {
+  search = e => {
     this.setState({
       search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, '')
     });
@@ -49,7 +50,7 @@ export default class IconLibrary extends React.Component {
             style={styles.input}
             placeholder={i18n.iconSearchPlaceholder()}
           />
-          <i className="fa fa-search" style={styles.icon}/>
+          <i className="fa fa-search" style={styles.icon} />
         </div>
         <IconList
           assetChosen={this.props.assetChosen}

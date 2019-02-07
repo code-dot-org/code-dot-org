@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from '../../../../util/color';
 
 const styles = {
@@ -50,9 +51,10 @@ export default class ModuleAssignment extends React.Component {
               style={Object.assign(
                 {},
                 styles.ribbon,
-                styles.ribbonStylesForStatus[`${this.props.moduleAssignmentData.status}`]
-              )
-            }
+                styles.ribbonStylesForStatus[
+                  `${this.props.moduleAssignmentData.status}`
+                ]
+              )}
             />
           </div>
         </div>

@@ -8,41 +8,54 @@ import {combineReducers, createStore} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 const announcement = {
-  heading: "Go beyond an Hour of Code",
-  buttonText: "Go Beyond",
-  description: "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
-  link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"
+  heading: 'Go beyond an Hour of Code',
+  buttonText: 'Go Beyond',
+  description:
+    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
+  link:
+    'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the'
+};
+
+const announcementNoLink = {
+  heading: 'Go beyond an Hour of Code',
+  buttonText: 'Go Beyond',
+  description:
+    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom."
 };
 
 const information = {
-  notice: "Did you know Clark Kent grew up in Kansas?",
-  details: "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
+  notice: 'Did you know Clark Kent grew up in Kansas?',
+  details:
+    "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
   dismissible: true
 };
 
 const success = {
-  notice: "Wonder Woman Saved the Day",
-  details: "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
+  notice: 'Wonder Woman Saved the Day',
+  details:
+    "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
   dismissible: true
 };
 
 const failure = {
-  notice: "Lex Luthor Attacked Metropolis",
-  details: "If you're in the Metropolis area, get to saftey as quickly as possible",
+  notice: 'Lex Luthor Attacked Metropolis',
+  details:
+    "If you're in the Metropolis area, get to saftey as quickly as possible",
   dismissible: false
 };
 
 const warning = {
-  notice: "Batman is on Vacation in the Bahamas",
-  details: "Now is probably not the best time to be in Gotham City. Watch your back.",
+  notice: 'Batman is on Vacation in the Bahamas',
+  details:
+    'Now is probably not the best time to be in Gotham City. Watch your back.',
   dismissible: true
 };
 
 const findCourse = {
-  notice: "Find a course",
-  details: "Try new courses to add them to your homepage.",
-  buttonText: "Find a course",
-  link: "/courses",
+  notice: 'Find a course',
+  details: 'Try new courses to add them to your homepage.',
+  buttonText: 'Find a course',
+  link: '/courses',
   dismissible: false
 };
 
@@ -60,22 +73,19 @@ describe('Notification', () => {
         buttonLink={announcement.link}
         newWindow={true}
         analyticId={announcement.id}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
           <div>
-            <FontAwesome icon="bullhorn"/>
+            <FontAwesome icon="bullhorn" />
           </div>
           <div>
             <div>
-              <div>
-                {announcement.heading}
-              </div>
-              <div>
-                {announcement.description}
-              </div>
+              <div>{announcement.heading}</div>
+              <div>{announcement.description}</div>
             </div>
             <div>
               <Button
@@ -86,7 +96,39 @@ describe('Notification', () => {
             </div>
           </div>
         </div>
-        <div/>
+        <div />
+      </div>
+    );
+  });
+  it('renders an announcement notification with no button because no link provided', () => {
+    const wrapper = shallow(
+      <Notification
+        type="bullhorn"
+        notice={announcementNoLink.heading}
+        details={announcementNoLink.description}
+        dismissible={false}
+        buttonText={announcementNoLink.buttonText}
+        buttonLink={announcementNoLink.link}
+        newWindow={true}
+        analyticId={announcementNoLink.id}
+      />,
+      {context: {store}}
+    ).dive();
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <div>
+          <div>
+            <FontAwesome icon="bullhorn" />
+          </div>
+          <div>
+            <div>
+              <div>{announcementNoLink.heading}</div>
+              <div>{announcementNoLink.description}</div>
+            </div>
+            <div />
+          </div>
+        </div>
+        <div />
       </div>
     );
   });
@@ -97,27 +139,24 @@ describe('Notification', () => {
         notice={information.notice}
         details={information.details}
         dismissible={false}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
           <div>
-            <FontAwesome icon="info-circle"/>
+            <FontAwesome icon="info-circle" />
           </div>
           <div>
             <div>
-              <div>
-                {information.notice}
-              </div>
-              <div>
-                {information.details}
-              </div>
+              <div>{information.notice}</div>
+              <div>{information.details}</div>
             </div>
-            <div/>
+            <div />
           </div>
         </div>
-        <div/>
+        <div />
       </div>
     );
   });
@@ -128,27 +167,24 @@ describe('Notification', () => {
         notice={success.notice}
         details={success.details}
         dismissible={false}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
           <div>
-            <FontAwesome icon="check-circle"/>
+            <FontAwesome icon="check-circle" />
           </div>
           <div>
             <div>
-              <div>
-                {success.notice}
-              </div>
-              <div>
-                {success.details}
-              </div>
+              <div>{success.notice}</div>
+              <div>{success.details}</div>
             </div>
-            <div/>
+            <div />
           </div>
         </div>
-        <div/>
+        <div />
       </div>
     );
   });
@@ -159,27 +195,24 @@ describe('Notification', () => {
         notice={failure.notice}
         details={failure.details}
         dismissible={false}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
           <div>
-            <FontAwesome icon="exclamation-triangle"/>
+            <FontAwesome icon="exclamation-triangle" />
           </div>
           <div>
             <div>
-              <div>
-                {failure.notice}
-              </div>
-              <div>
-                {failure.details}
-              </div>
+              <div>{failure.notice}</div>
+              <div>{failure.details}</div>
             </div>
-            <div/>
+            <div />
           </div>
         </div>
-        <div/>
+        <div />
       </div>
     );
   });
@@ -190,27 +223,24 @@ describe('Notification', () => {
         notice={warning.notice}
         details={warning.details}
         dismissible={false}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
           <div>
-            <FontAwesome icon="exclamation-triangle"/>
+            <FontAwesome icon="exclamation-triangle" />
           </div>
           <div>
             <div>
-              <div>
-                {warning.notice}
-              </div>
-              <div>
-                {warning.details}
-              </div>
+              <div>{warning.notice}</div>
+              <div>{warning.details}</div>
             </div>
-            <div/>
+            <div />
           </div>
         </div>
-        <div/>
+        <div />
       </div>
     );
   });
@@ -224,19 +254,16 @@ describe('Notification', () => {
         buttonText={findCourse.buttonText}
         buttonLink={findCourse.link}
         newWindow={true}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
           <div>
             <div>
-              <div>
-                {findCourse.notice}
-              </div>
-              <div>
-                {findCourse.details}
-              </div>
+              <div>{findCourse.notice}</div>
+              <div>{findCourse.details}</div>
             </div>
             <div>
               <Button
@@ -247,7 +274,7 @@ describe('Notification', () => {
             </div>
           </div>
         </div>
-        <div/>
+        <div />
       </div>
     );
   });
@@ -258,10 +285,21 @@ describe('Notification', () => {
         notice={information.notice}
         details={information.details}
         dismissible={true}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper.find('FontAwesome').length).to.equal(2);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('info-circle');
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');
+    expect(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon
+    ).to.equal('info-circle');
+    expect(
+      wrapper
+        .find('FontAwesome')
+        .at(1)
+        .props().icon
+    ).to.equal('times');
   });
 });

@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import msg from '@cdo/locale';
 
 /**
@@ -32,7 +33,7 @@ export default class VersionRow extends React.Component {
         <button
           className="btn-default"
           disabled="disabled"
-          style={{cursor: "default"}}
+          style={{cursor: 'default'}}
         >
           {msg.currentVersion()}
         </button>
@@ -41,18 +42,19 @@ export default class VersionRow extends React.Component {
       button = [
         <a
           key={0}
-          href={location.origin + location.pathname + '?version=' + this.props.versionId}
+          href={
+            location.origin +
+            location.pathname +
+            '?version=' +
+            this.props.versionId
+          }
           target="_blank"
         >
           <button className="version-preview">
-            <i className="fa fa-eye"/>
+            <i className="fa fa-eye" />
           </button>
         </a>,
-        <button
-          key={1}
-          className="btn-info"
-          onClick={this.props.onChoose}
-        >
+        <button key={1} className="btn-info" onClick={this.props.onChoose}>
           {msg.restoreThisVersion()}
         </button>
       ];
@@ -62,7 +64,13 @@ export default class VersionRow extends React.Component {
       <tr className="versionRow">
         <td>
           <p>
-            Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getLastModifiedTimestamp()}</time>
+            Saved{' '}
+            <time
+              className="versionTimestamp"
+              dateTime={this.props.lastModified.toISOString()}
+            >
+              {this.getLastModifiedTimestamp()}
+            </time>
           </p>
           {this.getLastModifiedTimestamp()}
         </td>

@@ -1,15 +1,15 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ProjectsList from './ProjectsList';
 import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
 import _ from 'lodash';
 
 const styles = {
   filterComponent: {
-    float: 'right',
+    float: 'right'
   },
   filterRow: {
-    backgroundColor: 'transparent',
-    padding: 10,
+    paddingBottom: 10
   },
   clearDiv: {
     clear: 'both'
@@ -22,17 +22,19 @@ class SectionProjectsList extends Component {
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string.isRequired,
-    showProjectThumbnails: PropTypes.bool.isRequired,
+    showProjectThumbnails: PropTypes.bool.isRequired
   };
 
   constructor(props) {
     super(props);
 
-    const studentNames = SectionProjectsList.getStudentNames(props.projectsData);
+    const studentNames = SectionProjectsList.getStudentNames(
+      props.projectsData
+    );
 
     this.state = {
       studentNames,
-      selectedStudent: ALL_STUDENTS,
+      selectedStudent: ALL_STUDENTS
     };
   }
 
@@ -49,7 +51,9 @@ class SectionProjectsList extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const studentNames = SectionProjectsList.getStudentNames(nextProps.projectsData);
+    const studentNames = SectionProjectsList.getStudentNames(
+      nextProps.projectsData
+    );
     let newState = {studentNames};
 
     if (!studentNames.includes(this.state.selectedStudent)) {
@@ -59,9 +63,11 @@ class SectionProjectsList extends Component {
   }
 
   render() {
-    const filteredProjectsData = this.props.projectsData.filter(project => (
-      [ALL_STUDENTS, project['studentName']].includes(this.state.selectedStudent)
-    ));
+    const filteredProjectsData = this.props.projectsData.filter(project =>
+      [ALL_STUDENTS, project['studentName']].includes(
+        this.state.selectedStudent
+      )
+    );
 
     return (
       <div>
@@ -72,7 +78,7 @@ class SectionProjectsList extends Component {
             studentNames={this.state.studentNames}
             style={styles.filterComponent}
           />
-          <div style={styles.clearDiv}></div>
+          <div style={styles.clearDiv} />
         </div>
         <ProjectsList
           projectsData={filteredProjectsData}

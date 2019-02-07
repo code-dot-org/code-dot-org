@@ -38,7 +38,7 @@
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
     "parent_level_id": 12154,
-    "tts_markdown_instructions_override": "Snap both move east blocks to the bottom of the when run block to finish your code, then click run!",
+    "tts_long_instructions_override": "Snap both move east blocks to the bottom of the when run block to finish your code, then click run!",
     "show_type_hints": "false",
     "contained_level_names": null,
     "preload_asset_list": null
