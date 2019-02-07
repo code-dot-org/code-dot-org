@@ -786,7 +786,6 @@
   "loginTypeEmailDescription": "Each student will create their own Code.org account using their email address (kept 100% private*).",
   "loginTypeEmailResetDescription": "You may reset a student's password at any time by choosing Reset password, entering a new password, and clicking Save.",
   "loginTypeEmailLongDescription": "This section uses email logins. It means that each of your students manages their own account using their own email and password. Students should sign in through the Sign in button found at the top of the page.",
-  "loginTypeGoogle": "Google",
   "loginTypeGoogleClassroom": "Google Classroom",
   "loginTypeGoogleClassroomButton": "Use Google Classroom",
   "loginTypeGoogleClassroomDescription": "Sync your Code.org section with an existing Google Classroom.",
