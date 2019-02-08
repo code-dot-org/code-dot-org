@@ -51,7 +51,7 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
   
   <p>
 
-  <a href="https://code.org/nominate">Nominate another teacher!</a>
+  <a href="https://code.org/recommend">Nominate another teacher!</a>
 
 </div>
 
