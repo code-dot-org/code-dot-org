@@ -1,16 +1,21 @@
 %ol
   %li
-    Sign up for a
-    = link_to 'teacher account', 'http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher'
-    at Code.org if you don’t already have one.
+    - if @workshop.subject == Pd::Workshop::SUBJECT_CSF_101
+      Sign up for a
+      = link_to 'teacher account', 'http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher'
+      at Code.org if you don’t already have one.
+    - else
+      Fill out this
+      = link_to 'pre-workshop survey', 'https://form.jotform.com/90066184161150'
+      to provide more information about your experience with CS Fundamentals and help your facilitator make this workshop as effective and useful as possible!
 
   %li
-    Update your name in your Code Studio account settings to be the name you want to appear on your PD completion certificate.
+    Update your name in your Code.org account settings to be the name you want to appear on your professional development completion certificate.
     %br
     To do so:
     %ul
       %li Log into your account
-      %li Click the orange block in the upper right hand corner that says "Hi [Your Name]"
-      %li Select "My account"
+      %li Click the block in the upper right hand corner that says your name
+      %li Select "Account settings"
       %li Change your "Display name"
-      %li Click "Update"
+      %li Click "Update Account"

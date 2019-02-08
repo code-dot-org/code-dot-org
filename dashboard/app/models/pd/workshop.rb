@@ -365,6 +365,7 @@ class Pd::Workshop < ActiveRecord::Base
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
+    #send_follow_up(30)
   end
 
   def self.process_ended_workshop_async(id)
