@@ -259,11 +259,15 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page
-    if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
+    const viewAs =
+      queryString.parse(location.search).viewAs || ViewType.Teacher;
+    if (
+      (data.isTeacher || viewAs === ViewType.Teacher) &&
+      !data.professionalLearningCourse &&
+      onOverviewPage
+    ) {
       store.dispatch(showTeacherInfo());
 
-      const viewAs =
-        queryString.parse(location.search).viewAs || ViewType.Teacher;
       if (viewAs !== initialViewAs) {
         // We don't want to redispatch if our viewAs is the same as the initial
         // one, since the user might have manually changed the view while making
