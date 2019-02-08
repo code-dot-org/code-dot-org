@@ -1,0 +1,20 @@
+name 'U1 L02 CYU MC'
+wrong '1'
+right 'The score is: 1’
+wrong '3'
+wrong 'The score is: score'
+
+markdown <<MARKDOWN
+## Multiple Choice: What's the value?
+
+
+What will the value of `score` be at the end of the program?
+
+`score <- 3`
+<br>
+`score <- score + 1`
+<br>
+`score <- "The score is: " + score;`
+
+
+MARKDOWN

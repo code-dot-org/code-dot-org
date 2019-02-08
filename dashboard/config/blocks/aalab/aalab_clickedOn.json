@@ -24,7 +24,8 @@
       },
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "type": "Sprite",
+        "defer": true
       }
     ],
     "eventBlock": true
