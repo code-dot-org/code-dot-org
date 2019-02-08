@@ -8,7 +8,7 @@ stage 'Variables Investigate'
 level 'U4 L02 Thermostat App v1', progression: 'Thermostat App v1'
 level 'U4 L02 Thermostat App v1 Code', progression: 'Thermostat App v1'
 named_level 'U4 Counter Pattern with Event', progression: 'Counter Pattern with Event'
-named_level 'U4 String Concatenation Pattern', progression: 'String Concatenation Pattern'
+named_level 'U4 Variable with String Concatenation Pattern', progression: 'Variable with String Concatenation Pattern'
 named_level 'U4 L02 Thermostat App v2', progression: 'Thermostat App v2'
 named_level 'U1 L02 CYU MC', progression: 'Check Your Understanding'
 
