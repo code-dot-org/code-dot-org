@@ -12,7 +12,7 @@ export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
-export CIRCLE_BUILD_NUM=$RANDOM$RANDOM
+export CIRCLE_BUILD_NUM=$DRONE_BUILD_NUMBER
 export CIRCLE_NODE_INDEX=1
 export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
 export CIRCLE_ARTIFACTS=/home/circleci/artifacts
@@ -41,10 +41,10 @@ echo "
 netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
 bundler_use_sudo: false
-properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
-applitools_eyes_api_key: $APPLITOOLS_KEY
-cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
-cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+#properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+#applitools_eyes_api_key: $APPLITOOLS_KEY
+#cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
+#cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 saucelabs_username: $SAUCE_USERNAME
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 ignore_eyes_mismatches: true
