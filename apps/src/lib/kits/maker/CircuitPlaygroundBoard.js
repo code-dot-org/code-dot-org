@@ -17,7 +17,7 @@ import {
   SONG_ASCENDING,
   SONG_CONCLUSION,
   CP_COMMAND,
-  J5_CONSTANTS,
+  J5_CONSTANTS
 } from './PlaygroundConstants';
 import Button from './Button';
 import Led from './Led';
@@ -30,8 +30,7 @@ process.hrtime = require('browser-process-hrtime');
 const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
-const pinMapping = {"A0": 12, "A1": 6, "A2": 9, "A3": 10, "A4": 3, "A5": 2, "A6": 0, "A7": 1};
-
+const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -65,9 +64,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connect() {
     return Promise.resolve()
-        .then(() => this.connectToFirmware())
-        .then(() => this.initializeComponents())
-        .then(() => this.initializeEventForwarding());
+      .then(() => this.connectToFirmware())
+      .then(() => this.initializeComponents())
+      .then(() => this.initializeEventForwarding());
   }
 
   /**
@@ -79,7 +78,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connectToFirmware() {
     return new Promise((resolve, reject) => {
       const serialPort = CircuitPlaygroundBoard.openSerialPort(this.portName_);
-      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
+      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
+        serialPort
+      );
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.serialPort_ = serialPort;
@@ -100,16 +101,20 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   initializeComponents() {
     if (!this.fiveBoard_) {
-      throw new Error('Cannot initialize components: Not connected to board firmware.');
+      throw new Error(
+        'Cannot initialize components: Not connected to board firmware.'
+      );
     }
 
-    return createCircuitPlaygroundComponents(this.fiveBoard_).then(components => {
-      this.prewiredComponents_ = {
-        board: this.fiveBoard_,
-        ...components,
-        ...J5_CONSTANTS
-      };
-    });
+    return createCircuitPlaygroundComponents(this.fiveBoard_).then(
+      components => {
+        this.prewiredComponents_ = {
+          board: this.fiveBoard_,
+          ...components,
+          ...J5_CONSTANTS
+        };
+      }
+    );
   }
 
   /**
@@ -120,7 +125,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   initializeEventForwarding() {
     if (!this.fiveBoard_) {
-      throw new Error('Cannot initialize event forwarding: Not connected to board firmware.');
+      throw new Error(
+        'Cannot initialize event forwarding: Not connected to board firmware.'
+      );
     }
 
     this.fiveBoard_.on('disconnect', () => this.emit('disconnect'));
@@ -161,7 +168,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     }
     delete Playground.hasRegisteredSysexResponse;
 
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       // It can take a moment for the reset() command to reach the board, so defer
       // closing the serialport for a moment.
       setTimeout(() => {
@@ -186,7 +193,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   installOnInterpreter(jsInterpreter) {
     Object.keys(componentConstructors).forEach(key => {
-      jsInterpreter.addCustomMarshalObject({instance: componentConstructors[key]});
+      jsInterpreter.addCustomMarshalObject({
+        instance: componentConstructors[key]
+      });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
 
@@ -213,7 +222,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     function forEachLedInSequence(func, delay) {
       return new Promise(resolve => {
         colorLeds.forEach((led, i) => {
-          setTimeout(() => func(led), delay * (i+1));
+          setTimeout(() => func(led), delay * (i + 1));
         });
         setTimeout(resolve, delay * colorLeds.length);
       });
@@ -223,13 +232,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       {notes: SONG_CHARGE, tempo: 104},
       {notes: SONG_LEVEL_COMPLETE, tempo: 80},
       {notes: SONG_ASCENDING, tempo: 180},
-      {notes: SONG_CONCLUSION, tempo: 130},
+      {notes: SONG_CONCLUSION, tempo: 130}
     ]);
 
     return Promise.resolve()
-        .then(() => buzzer.play(song.notes, song.tempo))
-        .then(() => forEachLedInSequence(led => led.color('green'), 80))
-        .then(() => forEachLedInSequence(led => led.off(), 80));
+      .then(() => buzzer.play(song.notes, song.tempo))
+      .then(() => forEachLedInSequence(led => led.color('green'), 80))
+      .then(() => forEachLedInSequence(led => led.off(), 80));
   }
 
   mappedPin(pin) {
@@ -291,8 +300,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     //
     // Code.org connector app case: ChromeSerialPort bridges through the Chrome
     // app, implements SerialPort 3's interface.
-    const SerialPortType = isNodeSerialAvailable() ?
-      SerialPort : ChromeSerialPort.SerialPort;
+    const SerialPortType = isNodeSerialAvailable()
+      ? SerialPort
+      : ChromeSerialPort.SerialPort;
 
     return new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
@@ -305,16 +315,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Playground}
    */
   static makePlaygroundTransport(serialPort) {
-    const playground = new Playground({ port: serialPort });
+    const playground = new Playground({port: serialPort});
     // Circuit Playground Firmata does not seem to proactively report its
     // version, meaning we were hitting the default 5000ms timeout waiting
     // for this on every connection attempt.
     // Here we explicitly request a version as soon as the serialport is open
     // to speed up the connection process.
-    playground.on("open", function () {
+    playground.on('open', function() {
       // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
-      playground.reportVersion(function () {});
-      playground.queryFirmware(function () {});
+      playground.reportVersion(function() {});
+      playground.queryFirmware(function() {});
     });
     return playground;
   }

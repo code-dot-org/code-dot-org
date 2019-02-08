@@ -43,7 +43,7 @@ export default class Alice extends React.Component {
     this.clearSecretNumber();
   }
 
-  onPublicModulusChange = (publicModulus) => {
+  onPublicModulusChange = publicModulus => {
     this.setPublicModulus(publicModulus);
     this.props.setPublicModulus(publicModulus);
   };
@@ -53,19 +53,21 @@ export default class Alice extends React.Component {
     this.clearSecretNumber();
   }
 
-  onPrivateKeyChange = (privateKey) => {
+  onPrivateKeyChange = privateKey => {
     const {publicModulus} = this.state;
     this.setPrivateKey(privateKey);
     this.props.setPublicKey(this.getPublicKey({privateKey, publicModulus}));
   };
 
-  setPublicNumber = (publicNumber) => {
+  setPublicNumber = publicNumber => {
     this.setState({publicNumber});
     this.clearSecretNumber();
   };
 
   getPublicKey({privateKey, publicModulus}) {
-    return privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : null;
+    return privateKey && publicModulus
+      ? computePublicKey(privateKey, publicModulus)
+      : null;
   }
 
   computeSecretNumber = () => {
@@ -74,11 +76,15 @@ export default class Alice extends React.Component {
     if ([publicModulus, privateKey, publicNumber].every(Number.isInteger)) {
       const dividend = publicNumber * privateKey;
       const secretNumber = dividend % publicModulus;
-      runModuloClock(dividend, currentDividend => {
-        this.setState({secretNumber: currentDividend % publicModulus});
-      }, () => {
-        this.setState({secretNumber});
-      });
+      runModuloClock(
+        dividend,
+        currentDividend => {
+          this.setState({secretNumber: currentDividend % publicModulus});
+        },
+        () => {
+          this.setState({secretNumber});
+        }
+      );
     } else {
       this.clearSecretNumber();
     }
@@ -90,19 +96,14 @@ export default class Alice extends React.Component {
 
   render() {
     const {disabled} = this.props;
-    const {
-      publicModulus,
-      privateKey,
-      publicNumber,
-      secretNumber
-    } = this.state;
+    const {publicModulus, privateKey, publicNumber, secretNumber} = this.state;
     const publicKey = this.getPublicKey({privateKey, publicModulus});
 
     return (
       <CharacterPanel title="Alice">
         <NumberedSteps>
           <Step>
-            Set a <KeywordPublicModulus/>:
+            Set a <KeywordPublicModulus />:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
@@ -110,7 +111,7 @@ export default class Alice extends React.Component {
             />
           </Step>
           <Step requires={[publicModulus].every(Number.isInteger)}>
-            Set a <KeywordPrivateKey/>:
+            Set a <KeywordPrivateKey />:
             <PrivateKeyDropdown
               publicModulus={publicModulus}
               value={privateKey}
@@ -118,13 +119,17 @@ export default class Alice extends React.Component {
               disabled={disabled}
             />
             <div>
-              Your computed <KeywordPublicKey/>
+              Your computed <KeywordPublicKey />
               {' is '}
-              <IntegerField className="public-key" color={COLORS.publicKey} value={publicKey}/>
+              <IntegerField
+                className="public-key"
+                color={COLORS.publicKey}
+                value={publicKey}
+              />
             </div>
           </Step>
           <Step requires={[publicModulus, privateKey].every(Number.isInteger)}>
-            Enter Bob's <KeywordPublicNumber/>:
+            Enter Bob's <KeywordPublicNumber />:
             <IntegerTextbox
               value={publicNumber}
               onChange={this.setPublicNumber}
@@ -132,31 +137,40 @@ export default class Alice extends React.Component {
               color={COLORS.publicNumber}
             />
           </Step>
-          <Step requires={[publicModulus, privateKey, publicNumber].every(Number.isInteger)}>
-            Calculate Bob's <KeywordSecretNumber/>.
+          <Step
+            requires={[publicModulus, privateKey, publicNumber].every(
+              Number.isInteger
+            )}
+          >
+            Calculate Bob's <KeywordSecretNumber />.
             <div>
               (
-              <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
+              <IntegerField color={COLORS.publicNumber} value={publicNumber} />
               {' x '}
-              <IntegerField color={COLORS.privateKey} value={privateKey}/>
+              <IntegerField color={COLORS.privateKey} value={privateKey} />
               {') MOD '}
-              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+              <IntegerField
+                color={COLORS.publicModulus}
+                value={publicModulus}
+              />
               <GoButton
                 onClick={this.computeSecretNumber}
                 disabled={disabled}
               />
             </div>
             <div>
-              Bob's <KeywordSecretNumber/>
+              Bob's <KeywordSecretNumber />
               {' is '}
               <IntegerField
                 className="secret-number"
                 color={COLORS.secretNumber}
                 value={secretNumber}
-              />!
+              />
+              !
             </div>
           </Step>
         </NumberedSteps>
-      </CharacterPanel>);
+      </CharacterPanel>
+    );
   }
 }

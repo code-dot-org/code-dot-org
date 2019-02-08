@@ -76,10 +76,11 @@ function onPuzzleUnsubmit() {
 function unsubmit() {
   $.post(
     unsubmitUrl,
-    {"_method": 'PUT', user_level: {submitted: false}},
-    function () {
+    {_method: 'PUT', user_level: {submitted: false}},
+    function() {
       location.reload();
-    });
+    }
+  );
 }
 
 /**
@@ -90,19 +91,26 @@ function unsubmit() {
  * @param {string} [filterSelector] Optional selector to filter for.
  */
 function showConfirmationDialog(config) {
-  config.text = config.text || "";
-  config.title = config.title || "";
+  config.text = config.text || '';
+  config.title = config.title || '';
 
   const contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '<p class="dialog-title">' + config.title + '</p>' +
-      '<p>' + config.text + '</p>';
+  contentDiv.innerHTML =
+    '<p class="dialog-title">' +
+    config.title +
+    '</p>' +
+    '<p>' +
+    config.text +
+    '</p>';
 
   const buttons = document.createElement('div');
   ReactDOM.render(
     <DialogButtons
       confirmText={commonMsg.dialogOK()}
       cancelText={commonMsg.dialogCancel()}
-    />, buttons);
+    />,
+    buttons
+  );
   contentDiv.appendChild(buttons);
 
   const dialog = studioApp.createModalDialog({
@@ -112,14 +120,14 @@ function showConfirmationDialog(config) {
 
   const cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function () {
+    dom.addClickTouchEvent(cancelButton, function() {
       dialog.hide();
     });
   }
 
   const confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function () {
+    dom.addClickTouchEvent(confirmButton, function() {
       if (config.onConfirm) {
         config.onConfirm();
       }

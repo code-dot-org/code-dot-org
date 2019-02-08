@@ -17,7 +17,9 @@ export default class DisabledBubblesAlert extends React.Component {
     super(props);
 
     // Once alert has been dismissed, don't show again.
-    const disabledBubblesAlertSeen = sessionStorage.getItem('disabledBubblesAlertSeen');
+    const disabledBubblesAlertSeen = sessionStorage.getItem(
+      'disabledBubblesAlertSeen'
+    );
     this.state = {
       visible: !disabledBubblesAlertSeen
     };
@@ -36,8 +38,8 @@ export default class DisabledBubblesAlert extends React.Component {
     return (
       <Alert onClose={this.onClose} type={'error'}>
         <div>
-          <span style={styles.bold}>{i18n.disabledButtonsWarning() + " "}</span>
-          <span>{i18n.disabledButtonsInfo()  + " "}</span>
+          <span style={styles.bold}>{i18n.disabledButtonsWarning() + ' '}</span>
+          <span>{i18n.disabledButtonsInfo() + ' '}</span>
           <a
             target="_blank"
             href="https://support.code.org/hc/en-us/articles/115002660852"

@@ -3,8 +3,8 @@ import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
-import {connect} from "react-redux";
-import throttle from "lodash/debounce";
+import {connect} from 'react-redux';
+import throttle from 'lodash/debounce';
 
 const styles = {
   copyElementToScreenButton: {
@@ -12,12 +12,11 @@ const styles = {
     color: 'white',
     float: 'right'
   },
-  screen: {
-  },
+  screen: {},
   menu: {
     maxHeight: '200px',
-    overflowY: 'auto',
-  },
+    overflowY: 'auto'
+  }
 };
 
 /**
@@ -30,26 +29,26 @@ class CopyElementToScreenButton extends React.Component {
 
     // Passed explicitly
     handleCopyElementToScreen: PropTypes.func.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   state = {
     opened: false,
     menuTop: 0, // location of dropdown menu
     menuLeft: 0,
-    currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
+    currWindowWidth: window.innerWidth // used to calculate location of menu on resize
   };
 
   // Overrides base class implementation
   setState(newState) {
     if (newState.opened && !this.resizeListener) {
       this.resizeListener = throttle(this.updateMenuLocation, 50);
-      window.addEventListener("resize", this.resizeListener);
+      window.addEventListener('resize', this.resizeListener);
       let loc = this.getMenuLocation();
       newState.menuTop = loc.menuTop;
       newState.menuLeft = loc.menuLeft;
     } else if (!newState.opened && this.resizeListener) {
-      window.removeEventListener("resize", this.resizeListener);
+      window.removeEventListener('resize', this.resizeListener);
       this.resizeListener = null;
     }
     super.setState(newState);
@@ -59,7 +58,7 @@ class CopyElementToScreenButton extends React.Component {
     const rect = this.element.firstChild.getBoundingClientRect();
     return {
       menuTop: rect.bottom + window.pageYOffset,
-      menuLeft: rect.left + window.pageXOffset,
+      menuLeft: rect.left + window.pageXOffset
     };
   }
 
@@ -67,11 +66,11 @@ class CopyElementToScreenButton extends React.Component {
     this.setState(this.getMenuLocation());
   };
 
-  handleDropdownClick = (event) => {
+  handleDropdownClick = event => {
     this.setState({opened: !this.state.opened});
   };
 
-  handleMenuClick = (screenId) => {
+  handleMenuClick = screenId => {
     this.closeMenu();
     this.props.handleCopyElementToScreen(screenId);
   };
@@ -88,39 +87,42 @@ class CopyElementToScreenButton extends React.Component {
   render() {
     const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
     const otherScreens = this.props.screenIds
-        .filter((screenId) => screenId !== this.props.currentScreenId)
-            .map((screenId) =>
-                <PopUpMenu.Item
-                  key={screenId}
-                  onClick={() => this.handleMenuClick(screenId)}
-                >{screenId}</PopUpMenu.Item>);
+      .filter(screenId => screenId !== this.props.currentScreenId)
+      .map(screenId => (
+        <PopUpMenu.Item
+          key={screenId}
+          onClick={() => this.handleMenuClick(screenId)}
+        >
+          {screenId}
+        </PopUpMenu.Item>
+      ));
 
     return (
-        <div style={styles.main} ref={element => this.element = element}>
-          <button
-            style={[commonStyles.button, styles.copyElementToScreenButton]}
-            onClick={this.handleDropdownClick}
+      <div style={styles.main} ref={element => (this.element = element)}>
+        <button
+          style={[commonStyles.button, styles.copyElementToScreenButton]}
+          onClick={this.handleDropdownClick}
+        >
+          Copy to screen <i className="fa fa-chevron-down" />
+        </button>
+        {this.state.opened && (
+          <PopUpMenu
+            isOpen={this.state.opened}
+            targetPoint={targetPoint}
+            offset={{x: 0, y: 0}}
+            beforeClose={this.beforeClose}
+            style={styles.menu}
           >
-            Copy to screen <i className="fa fa-chevron-down" />
-          </button>
-          {this.state.opened &&
-            <PopUpMenu
-              isOpen={this.state.opened}
-              targetPoint={targetPoint}
-              offset={{x: 0, y: 0}}
-              beforeClose={this.beforeClose}
-              style={styles.menu}
-            >
-              {otherScreens}
-            </PopUpMenu>
-          }
-        </div>
+            {otherScreens}
+          </PopUpMenu>
+        )}
+      </div>
     );
   }
 }
 
 export default connect(function propsFromStore(state) {
   return {
-    currentScreenId: state.screens.currentScreenId,
+    currentScreenId: state.screens.currentScreenId
   };
 })(Radium(CopyElementToScreenButton));

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
-import {getStore} from "../redux";
+import {getStore} from '../redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
 var dom = require('../dom');
@@ -11,13 +11,21 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty, ResourceLoader} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
-import {reducers, setSelectedSong, setSongData, setRunIsStarting} from './redux';
+import {
+  reducers,
+  setSelectedSong,
+  setSongData,
+  setRunIsStarting
+} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {captureThumbnailFromCanvas, setThumbnailBlobFromCanvas} from '../util/thumbnail';
-import project from "../code-studio/initApp/project";
+import {
+  captureThumbnailFromCanvas,
+  setThumbnailBlobFromCanvas
+} from '../util/thumbnail';
+import project from '../code-studio/initApp/project';
 import {
   getSongManifest,
   getSelectedSong,
@@ -25,21 +33,21 @@ import {
   loadSongMetadata,
   parseSongOptions,
   unloadSong,
-  fetchSignedCookies,
+  fetchSignedCookies
 } from './songs';
-import { SongTitlesToArtistTwitterHandle } from '../code-studio/dancePartySongArtistTags';
+import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const ButtonState = {
   UP: 0,
-  DOWN: 1,
+  DOWN: 1
 };
 
 const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton',
+  DOWN: 'downButton'
 };
 
 /**
@@ -47,7 +55,7 @@ const ArrowIds = {
  * @constructor
  * @implements LogTarget
  */
-var Dance = function () {
+var Dance = function() {
   this.skin = null;
   this.level = null;
   this.btnState = {};
@@ -63,7 +71,7 @@ var Dance = function () {
     // Time the run button was last clicked
     lastRunButtonClick: null,
     // Time between last run click and last time the song actually started playing
-    lastRunButtonDelay: null,
+    lastRunButtonDelay: null
   };
 };
 
@@ -72,7 +80,7 @@ module.exports = Dance;
 /**
  * Inject the studioApp singleton.
  */
-Dance.prototype.injectStudioApp = function (studioApp) {
+Dance.prototype.injectStudioApp = function(studioApp) {
   this.studioApp_ = studioApp;
   this.studioApp_.reset = this.reset.bind(this);
   this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
@@ -85,9 +93,9 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-Dance.prototype.init = function (config) {
+Dance.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error("GameLab requires a StudioApp");
+    throw new Error('GameLab requires a StudioApp');
   }
 
   this.level = config.level;
@@ -103,7 +111,7 @@ Dance.prototype.init = function (config) {
   this.level.softButtons = this.level.softButtons || {};
   this.initialThumbnailCapture = true;
 
-  config.afterClearPuzzle = function () {
+  config.afterClearPuzzle = function() {
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -124,18 +132,20 @@ Dance.prototype.init = function (config) {
     }
   };
 
-  const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
+  const showFinishButton =
+    this.level.freePlay ||
+    (!this.level.isProjectLevel && !this.level.validationCode);
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
-    isProjectLevel: !!config.level.isProjectLevel,
+    isProjectLevel: !!config.level.isProjectLevel
   });
 
   this.initSongsPromise = this.initSongs(config);
 
   this.awaitTimingMetrics();
 
-  ReactDOM.render((
+  ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={
@@ -146,14 +156,15 @@ Dance.prototype.init = function (config) {
         }
         onMount={onMount}
       />
-    </Provider>
-  ), document.getElementById(config.containerId));
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
  * Fire-and-forget asynchronous waits to update timing metrics.
  */
-Dance.prototype.awaitTimingMetrics = function () {
+Dance.prototype.awaitTimingMetrics = function() {
   $(document).one('appInitialized', () => {
     this.performanceData_.timeToInteractive = performance.now();
   });
@@ -166,7 +177,7 @@ Dance.prototype.awaitTimingMetrics = function () {
     });
 };
 
-Dance.prototype.initSongs = async function (config) {
+Dance.prototype.initSongs = async function(config) {
   const songManifest = await getSongManifest(config.useRestrictedSongs);
   const songData = parseSongOptions(songManifest);
   const selectedSong = getSelectedSong(songManifest, config);
@@ -184,8 +195,8 @@ Dance.prototype.initSongs = async function (config) {
           event: 'initial-auth-error',
           data_json: JSON.stringify({
             currentUrl: window.location.href,
-            channelId: config.channel,
-          }),
+            channelId: config.channel
+          })
         },
         {includeUserId: true}
       );
@@ -202,7 +213,7 @@ Dance.prototype.initSongs = async function (config) {
   }
 };
 
-Dance.prototype.setSongCallback = function (songId) {
+Dance.prototype.setSongCallback = function(songId) {
   const lastSongId = getStore().getState().songs.selectedSong;
   const songData = getStore().getState().songs.songData;
 
@@ -216,22 +227,24 @@ Dance.prototype.setSongCallback = function (songId) {
   loadSong(songId, songData, status => {
     if (status === 403) {
       // The cloudfront signed cookies may have expired.
-      fetchSignedCookies().then(() => loadSong(songId, songData, status => {
-        if (status === 403) {
-          // Something is wrong, because we just re-fetched cloudfront credentials.
-          firehoseClient.putRecord(
-            {
-              study: 'restricted-song-auth',
-              event: 'repeated-auth-error',
-              data_json: JSON.stringify({
-                currentUrl: window.location.href,
-                channelId: getStore().getState().pageConstants.channelId,
-              }),
-            },
-            {includeUserId: true}
-          );
-        }
-      }));
+      fetchSignedCookies().then(() =>
+        loadSong(songId, songData, status => {
+          if (status === 403) {
+            // Something is wrong, because we just re-fetched cloudfront credentials.
+            firehoseClient.putRecord(
+              {
+                study: 'restricted-song-auth',
+                event: 'repeated-auth-error',
+                data_json: JSON.stringify({
+                  currentUrl: window.location.href,
+                  channelId: getStore().getState().pageConstants.channelId
+                })
+              },
+              {includeUserId: true}
+            );
+          }
+        })
+      );
     }
   });
 
@@ -243,7 +256,7 @@ Dance.prototype.setSongCallback = function (songId) {
   }
 };
 
-Dance.prototype.loadAudio_ = function () {
+Dance.prototype.loadAudio_ = function() {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
@@ -253,7 +266,7 @@ const KeyCodes = {
   LEFT_ARROW: 37,
   UP_ARROW: 38,
   RIGHT_ARROW: 39,
-  DOWN_ARROW: 40,
+  DOWN_ARROW: 40
 };
 
 function keyCodeFromArrow(idBtn) {
@@ -269,22 +282,22 @@ function keyCodeFromArrow(idBtn) {
   }
 }
 
-Dance.prototype.onArrowButtonDown = function (buttonId, e) {
+Dance.prototype.onArrowButtonDown = function(buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.DOWN;
-  e.preventDefault();  // Stop normal events so we see mouseup later.
+  e.preventDefault(); // Stop normal events so we see mouseup later.
 
   this.nativeAPI.onKeyDown(keyCodeFromArrow(buttonId));
 };
 
-Dance.prototype.onArrowButtonUp = function (buttonId, e) {
+Dance.prototype.onArrowButtonUp = function(buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.UP;
 
   this.nativeAPI.onKeyUp(keyCodeFromArrow(buttonId));
 };
 
-Dance.prototype.onMouseUp = function (e) {
+Dance.prototype.onMouseUp = function(e) {
   // Reset all arrow buttons on "global mouse up" - this handles the case where
   // the mouse moved off the arrow button and was released somewhere else
 
@@ -302,33 +315,41 @@ Dance.prototype.onMouseUp = function (e) {
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
-Dance.prototype.afterInject_ = function () {
-
+Dance.prototype.afterInject_ = function() {
   // Connect up arrow button event handlers
   for (const btn in ArrowIds) {
-    dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
-        this.onArrowButtonUp.bind(this, ArrowIds[btn]));
-    dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
-        this.onArrowButtonDown.bind(this, ArrowIds[btn]));
+    dom.addMouseUpTouchEvent(
+      document.getElementById(ArrowIds[btn]),
+      this.onArrowButtonUp.bind(this, ArrowIds[btn])
+    );
+    dom.addMouseDownTouchEvent(
+      document.getElementById(ArrowIds[btn]),
+      this.onArrowButtonDown.bind(this, ArrowIds[btn])
+    );
   }
   // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
   // all touchend events on the page, breaking click events...
   document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
   const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
   if (mouseUpTouchEventName) {
-    document.body.addEventListener(mouseUpTouchEventName, this.onMouseUp.bind(this));
+    document.body.addEventListener(
+      mouseUpTouchEventName,
+      this.onMouseUp.bind(this)
+    );
   }
 
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, validation variables.
-    Blockly.JavaScript.addReservedWords([
-      'code',
-      'validationState',
-      'validationResult',
-      'validationProps',
-      'levelSuccess',
-      'levelFailure',
-    ].join(','));
+    Blockly.JavaScript.addReservedWords(
+      [
+        'code',
+        'validationState',
+        'validationResult',
+        'validationProps',
+        'levelSuccess',
+        'levelFailure'
+      ].join(',')
+    );
   }
 
   // record a replay log (and generate a video) for both project levels and any
@@ -340,28 +361,36 @@ Dance.prototype.afterInject_ = function () {
     recordReplayLog,
     showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
-    onInit: async (nativeAPI) => {
+    onInit: async nativeAPI => {
       if (this.share) {
         // In the share scenario, we call ensureSpritesAreLoaded() early since the
         // student code can't change. This way, we can start fetching assets while
         // waiting for the user to press the Run button.
         await this.studioAppInitPromise;
-        const charactersReferenced = this.computeCharactersReferenced(this.studioApp_.getCode());
+        const charactersReferenced = this.computeCharactersReferenced(
+          this.studioApp_.getCode()
+        );
         await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
       }
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
       const logSampleRate = 1;
-      logToCloud.addPageAction(logToCloud.PageAction.DancePartyOnInit, {
-        logSampleRate,
-        share: this.share
-      }, logSampleRate);
+      logToCloud.addPageAction(
+        logToCloud.PageAction.DancePartyOnInit,
+        {
+          logSampleRate,
+          share: this.share
+        },
+        logSampleRate
+      );
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
-    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181127/'),
+    resourceLoader: new ResourceLoader(
+      'https://curriculum.code.org/images/sprites/dance_20181127/'
+    )
   });
 
   // Expose an interface for testing
@@ -380,20 +409,24 @@ Dance.prototype.afterInject_ = function () {
   }
 };
 
-Dance.prototype.playSong = function (url, callback, onEnded) {
-  audioCommands.playSound({url: url, callback: callback, onEnded: () => {
-    onEnded();
-    this.studioApp_.toggleRunReset('run');
-  }});
+Dance.prototype.playSong = function(url, callback, onEnded) {
+  audioCommands.playSound({
+    url: url,
+    callback: callback,
+    onEnded: () => {
+      onEnded();
+      this.studioApp_.toggleRunReset('run');
+    }
+  });
 };
 
 /**
  * Reset Dance to its initial state.
  */
-Dance.prototype.reset = function () {
+Dance.prototype.reset = function() {
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
-    clickToRunImage.style.display = "block";
+    clickToRunImage.style.display = 'block';
   }
 
   Sounds.getSingleton().stopAllAudio();
@@ -406,11 +439,13 @@ Dance.prototype.reset = function () {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
+    $('#soft-buttons')
+      .removeClass('soft-buttons-none')
+      .addClass('soft-buttons-' + softButtonCount);
   }
 };
 
-Dance.prototype.onPuzzleComplete = function (result, message) {
+Dance.prototype.onPuzzleComplete = function(result, message) {
   // Stop everything on screen.
   this.reset();
 
@@ -446,7 +481,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
       result: levelComplete,
       testResult: this.testResults,
       program: program,
-      onComplete: this.onReportComplete.bind(this),
+      onComplete: this.onReportComplete.bind(this)
     });
   };
 
@@ -457,7 +492,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Dance.prototype.onReportComplete = function (response) {
+Dance.prototype.onReportComplete = function(response) {
   this.response = response;
   this.studioApp_.onReportComplete(response);
   this.displayFeedback_();
@@ -466,10 +501,10 @@ Dance.prototype.onReportComplete = function (response) {
 /**
  * Click the run button.  Start the program.
  */
-Dance.prototype.runButtonClick = async function () {
+Dance.prototype.runButtonClick = async function() {
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
-    clickToRunImage.style.display = "none";
+    clickToRunImage.style.display = 'none';
   }
 
   // Block re-entrancy since starting a run is async
@@ -518,11 +553,14 @@ Dance.prototype.runButtonClick = async function () {
   }
 };
 
-Dance.prototype.execute = async function () {
+Dance.prototype.execute = async function() {
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
-  if (this.studioApp_.hasUnwantedExtraTopBlocks() || this.studioApp_.hasDuplicateVariablesInForLoops()) {
+  if (
+    this.studioApp_.hasUnwantedExtraTopBlocks() ||
+    this.studioApp_.hasDuplicateVariablesInForLoops()
+  ) {
     // Immediately check answer, which will fail and report top level blocks.
     this.onPuzzleComplete();
     return;
@@ -536,7 +574,13 @@ Dance.prototype.execute = async function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
 
-  const validationCallback = new Function('World', 'nativeAPI', 'sprites', 'events', this.level.validationCode);
+  const validationCallback = new Function(
+    'World',
+    'nativeAPI',
+    'sprites',
+    'events',
+    this.level.validationCode
+  );
   this.nativeAPI.registerValidation(validationCallback);
 
   // songMetadataPromise will resolve immediately if the request which populates
@@ -554,7 +598,7 @@ Dance.prototype.execute = async function () {
   });
 };
 
-Dance.prototype.initInterpreter = function () {
+Dance.prototype.initInterpreter = function() {
   const nativeAPI = this.nativeAPI;
   const sprites = [];
 
@@ -583,12 +627,14 @@ Dance.prototype.initInterpreter = function () {
       nativeAPI.setForegroundEffect(effect.toString());
     },
     makeNewDanceSprite: (costume, name, location) => {
-      return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
+      return Number(
+        sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1
+      );
     },
     makeNewDanceSpriteGroup: (n, costume, layout) => {
       nativeAPI.makeNewDanceSpriteGroup(n, costume, layout);
     },
-    getCurrentDance: (spriteIndex) => {
+    getCurrentDance: spriteIndex => {
       return nativeAPI.getCurrentDance(sprites[spriteIndex]);
     },
     changeMoveLR: (spriteIndex, move, dir) => {
@@ -668,7 +714,7 @@ Dance.prototype.initInterpreter = function () {
     },
     getCurrentTime: () => {
       return nativeAPI.getCurrentTime();
-    },
+    }
   };
 
   const studentCode = this.studioApp_.getCode();
@@ -679,19 +725,26 @@ Dance.prototype.initInterpreter = function () {
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
     runUserEvents: {code: 'runUserEvents(events);', args: ['events']},
-    getCueList: {code: 'return getCueList();'},
+    getCueList: {code: 'return getCueList();'}
   };
 
-  this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
+  this.hooks = CustomMarshalingInterpreter.evalWithEvents(
+    api,
+    events,
+    code
+  ).hooks;
 
   return this.computeCharactersReferenced(studentCode);
 };
 
-Dance.prototype.computeCharactersReferenced = function (studentCode) {
+Dance.prototype.computeCharactersReferenced = function(studentCode) {
   // Process studentCode to determine which characters are referenced and create
   // charactersReferencedSet with the results:
   const charactersReferencedSet = new Set();
-  const charactersRegExp = new RegExp(/^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/, 'gm');
+  const charactersRegExp = new RegExp(
+    /^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/,
+    'gm'
+  );
   let match;
   while ((match = charactersRegExp.exec(studentCode))) {
     const characterName = match[1];
@@ -700,18 +753,18 @@ Dance.prototype.computeCharactersReferenced = function (studentCode) {
   return Array.from(charactersReferencedSet);
 };
 
-Dance.prototype.shouldShowSharing = function () {
+Dance.prototype.shouldShowSharing = function() {
   return !!this.level.freePlay;
 };
 
-Dance.prototype.updateSongMetadata = function (id) {
+Dance.prototype.updateSongMetadata = function(id) {
   this.songMetadataPromise = loadSongMetadata(id);
 };
 
 /**
  * This is called while DanceParty is in a draw() call.
  */
-Dance.prototype.onHandleEvents = function (currentFrameEvents) {
+Dance.prototype.onHandleEvents = function(currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
   this.captureThumbnailImage();
 };
@@ -720,12 +773,17 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-Dance.prototype.displayFeedback_ = function () {
-  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+Dance.prototype.displayFeedback_ = function() {
+  const isSignedIn =
+    getStore().getState().progress.signInState === SignInState.SignedIn;
 
-  const artistTwitterHandle = SongTitlesToArtistTwitterHandle[this.level.selectedSong];
+  const artistTwitterHandle =
+    SongTitlesToArtistTwitterHandle[this.level.selectedSong];
 
-  const twitterText = "Check out the dance I made featuring @" + artistTwitterHandle + " on @codeorg!";
+  const twitterText =
+    'Check out the dance I made featuring @' +
+    artistTwitterHandle +
+    ' on @codeorg!';
 
   let feedbackOptions = {
     feedbackType: this.testResults,
@@ -736,7 +794,7 @@ Dance.prototype.displayFeedback_ = function () {
     saveToProjectGallery: true,
     disableSaveToGallery: !isSignedIn,
     appStrings: {
-      reinfFeedbackMsg: 'TODO: localized feedback message.',
+      reinfFeedbackMsg: 'TODO: localized feedback message.'
     },
     disablePrinting: true,
     twitter: {text: twitterText}
@@ -751,7 +809,7 @@ Dance.prototype.displayFeedback_ = function () {
   this.studioApp_.displayFeedback(feedbackOptions);
 };
 
-Dance.prototype.getAppReducers = function () {
+Dance.prototype.getAppReducers = function() {
   return reducers;
 };
 
@@ -760,7 +818,7 @@ Dance.prototype.getAppReducers = function () {
  * will be saved to the server. Every thumbnail captured after the initial capture will be
  * stored in memory until the project is saved.
  */
-Dance.prototype.captureThumbnailImage = function () {
+Dance.prototype.captureThumbnailImage = function() {
   const canvas = document.getElementById('defaultCanvas0');
   if (this.initialThumbnailCapture) {
     this.initialThumbnailCapture = false;

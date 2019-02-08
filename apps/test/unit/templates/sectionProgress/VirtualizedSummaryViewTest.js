@@ -3,7 +3,12 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedVirtualizedSummaryView} from '@cdo/apps/templates/sectionProgress/VirtualizedSummaryView';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 
 const studentData = [
@@ -36,9 +41,7 @@ describe('VirtualizedSummaryView', () => {
             position: 1,
             relative_position: 2,
             lockable: true,
-            levels: [
-              {id: 789}
-            ],
+            levels: [{id: 789}]
           }
         ]
       },
@@ -52,9 +55,7 @@ describe('VirtualizedSummaryView', () => {
 
   it('renders a MultiGrid', () => {
     const wrapper = shallow(
-      <UnconnectedVirtualizedSummaryView
-        {...defaultProps}
-      />
+      <UnconnectedVirtualizedSummaryView {...defaultProps} />
     );
     expect(wrapper.find('MultiGrid').exists()).to.be.true;
   });
@@ -62,9 +63,7 @@ describe('VirtualizedSummaryView', () => {
   it('renders a SectionProgressNameCell for each student', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
-        <UnconnectedVirtualizedSummaryView
-          {...defaultProps}
-        />
+        <UnconnectedVirtualizedSummaryView {...defaultProps} />
       </Provider>
     );
     const studentNames = wrapper.find('SectionProgressNameCell');
@@ -76,9 +75,7 @@ describe('VirtualizedSummaryView', () => {
   it('renders a summary cell for each stage for each student', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
-        <UnconnectedVirtualizedSummaryView
-          {...defaultProps}
-        />
+        <UnconnectedVirtualizedSummaryView {...defaultProps} />
       </Provider>
     );
     expect(wrapper.find('StudentProgressSummaryCell')).to.have.length(3);

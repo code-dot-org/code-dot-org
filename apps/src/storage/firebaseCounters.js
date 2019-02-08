@@ -1,5 +1,5 @@
 import Firebase from 'firebase';
-import { loadConfig, getDatabase, showRateLimitAlert } from './firebaseUtils';
+import {loadConfig, getDatabase, showRateLimitAlert} from './firebaseUtils';
 
 /**
  * @fileoverview
@@ -23,10 +23,16 @@ import { loadConfig, getDatabase, showRateLimitAlert } from './firebaseUtils';
 export function enforceTableCount(config, tableName) {
   const tablesRef = getDatabase().child(`counters/tables`);
   return tablesRef.once('value').then(snapshot => {
-    if (snapshot.numChildren() >= config.maxTableCount &&
-      snapshot.child(tableName).val() === null) {
-      return Promise.reject(`Table '${tableName}' cannot be written to because the ` +
-        `maximum number of tables (${config.maxTableCount}) has been exceeded.`);
+    if (
+      snapshot.numChildren() >= config.maxTableCount &&
+      snapshot.child(tableName).val() === null
+    ) {
+      return Promise.reject(
+        `Table '${tableName}' cannot be written to because the ` +
+          `maximum number of tables (${
+            config.maxTableCount
+          }) has been exceeded.`
+      );
     }
     return Promise.resolve(config);
   });
@@ -42,15 +48,21 @@ export function enforceTableCount(config, tableName) {
  *   will contain the next record id to assign.
  */
 export function updateTableCounters(tableName, rowCountChange, updateNextId) {
-  return loadConfig().then(config => {
-    if (rowCountChange > 0) {
-      return enforceTableCount(config, tableName);
-    }
-    return Promise.resolve(config);
-  }).then(config => {
-    const tableRef = getDatabase().child(`counters/tables/${tableName}`);
-    return updateTableCountersHelper(tableRef, updateNextId, rowCountChange, config)
-      .catch(error => {
+  return loadConfig()
+    .then(config => {
+      if (rowCountChange > 0) {
+        return enforceTableCount(config, tableName);
+      }
+      return Promise.resolve(config);
+    })
+    .then(config => {
+      const tableRef = getDatabase().child(`counters/tables/${tableName}`);
+      return updateTableCountersHelper(
+        tableRef,
+        updateNextId,
+        rowCountChange,
+        config
+      ).catch(error => {
         if (String(error).includes('disconnect')) {
           // Sometimes a transaction fails because the response from the
           // server is lost on the network, so we don't know whether the
@@ -58,42 +70,67 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
           // the consequences of double-incrementing are relatively low.
           setTimeout(() => {
             // Make this event visible in UI test output and New Relic.
-            throw new Error('retrying updateTableCountersHelper after network disconnect');
+            throw new Error(
+              'retrying updateTableCountersHelper after network disconnect'
+            );
           }, 0);
-          return updateTableCountersHelper(tableRef, updateNextId, rowCountChange, config);
+          return updateTableCountersHelper(
+            tableRef,
+            updateNextId,
+            rowCountChange,
+            config
+          );
         } else {
           return Promise.reject(error);
         }
       });
-  });
+    });
 }
 
-function updateTableCountersHelper(tableRef, updateNextId, rowCountChange, config) {
-  return tableRef.transaction(tableData => {
-    tableData = tableData || {};
-    if (updateNextId) {
-      if (rowCountChange !== 1) {
-        throw new Error('expected rowCountChange to equal 1 when updateNextId is true');
+function updateTableCountersHelper(
+  tableRef,
+  updateNextId,
+  rowCountChange,
+  config
+) {
+  return tableRef
+    .transaction(tableData => {
+      tableData = tableData || {};
+      if (updateNextId) {
+        if (rowCountChange !== 1) {
+          throw new Error(
+            'expected rowCountChange to equal 1 when updateNextId is true'
+          );
+        }
+        tableData.lastId = (tableData.lastId || 0) + 1;
       }
-      tableData.lastId = (tableData.lastId || 0) + 1;
-    }
-    if (tableData.rowCount + rowCountChange > config.maxTableRows) {
-      // Abort the transaction.
-      return;
-    }
-    tableData.rowCount = Math.max(0, (tableData.rowCount || 0) + rowCountChange);
-    return tableData;
-  }).then(transactionData => {
-    if (!transactionData.committed) {
-      const rowCount = transactionData.snapshot.child('rowCount').val();
-      if (rowCount + rowCountChange > config.maxTableRows) {
-        return Promise.reject(`The record could not be created. ` +
-          `A table may only contain ${config.maxTableRows} rows.`);
+      if (tableData.rowCount + rowCountChange > config.maxTableRows) {
+        // Abort the transaction.
+        return;
       }
-      throw new Error('An unexpected error occurred while updating table counters.');
-    }
-    return updateNextId ? transactionData.snapshot.child('lastId').val() : null;
-  });
+      tableData.rowCount = Math.max(
+        0,
+        (tableData.rowCount || 0) + rowCountChange
+      );
+      return tableData;
+    })
+    .then(transactionData => {
+      if (!transactionData.committed) {
+        const rowCount = transactionData.snapshot.child('rowCount').val();
+        if (rowCount + rowCountChange > config.maxTableRows) {
+          return Promise.reject(
+            `The record could not be created. ` +
+              `A table may only contain ${config.maxTableRows} rows.`
+          );
+        }
+        throw new Error(
+          'An unexpected error occurred while updating table counters.'
+        );
+      }
+      return updateNextId
+        ? transactionData.snapshot.child('lastId').val()
+        : null;
+    });
 }
 
 /**
@@ -106,34 +143,42 @@ function updateTableCountersHelper(tableRef, updateNextId, rowCountChange, confi
 function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
   const limitRef = getDatabase().child(`counters/limits/${interval}`);
   const intervalMs = Number(interval) * 1000;
-  return limitRef.transaction(limitData => {
-    limitData = limitData || {};
-    limitData.lastResetTime = limitData.lastResetTime || 0;
-    limitData.writeCount = (limitData.writeCount || 0) + 1;
-    if (limitData.writeCount <= maxWriteCount) {
-      return limitData;
-    } else if (limitData.lastResetTime + intervalMs < currentTimeMs) {
-      // The maximum number of writes has been exceeded in more than `interval` seconds.
-      // Reset the counters.
-      limitData.writeCount = 1;
-      limitData.lastResetTime = Firebase.ServerValue.TIMESTAMP;
-      return limitData;
-    } else {
-      // The maximum number of writes has been exceeded in less than `interval` seconds.
-      // Abort the transaction.
-      return;
-    }
-  }).then(transactionData => {
-    if (!transactionData.committed) {
-      const lastResetTimeMs = transactionData.snapshot.child('lastResetTime').val();
-      const nextResetTimeMs = lastResetTimeMs + intervalMs;
-      const timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
-      showRateLimitAlert();
-      return Promise.reject(`rate limit exceeded. please wait ${timeRemaining} seconds before retrying.`);
-    } else {
-      return Promise.resolve();
-    }
-  });
+  return limitRef
+    .transaction(limitData => {
+      limitData = limitData || {};
+      limitData.lastResetTime = limitData.lastResetTime || 0;
+      limitData.writeCount = (limitData.writeCount || 0) + 1;
+      if (limitData.writeCount <= maxWriteCount) {
+        return limitData;
+      } else if (limitData.lastResetTime + intervalMs < currentTimeMs) {
+        // The maximum number of writes has been exceeded in more than `interval` seconds.
+        // Reset the counters.
+        limitData.writeCount = 1;
+        limitData.lastResetTime = Firebase.ServerValue.TIMESTAMP;
+        return limitData;
+      } else {
+        // The maximum number of writes has been exceeded in less than `interval` seconds.
+        // Abort the transaction.
+        return;
+      }
+    })
+    .then(transactionData => {
+      if (!transactionData.committed) {
+        const lastResetTimeMs = transactionData.snapshot
+          .child('lastResetTime')
+          .val();
+        const nextResetTimeMs = lastResetTimeMs + intervalMs;
+        const timeRemaining = Math.ceil(
+          (nextResetTimeMs - currentTimeMs) / 1000
+        );
+        showRateLimitAlert();
+        return Promise.reject(
+          `rate limit exceeded. please wait ${timeRemaining} seconds before retrying.`
+        );
+      } else {
+        return Promise.resolve();
+      }
+    });
 }
 
 /**
@@ -159,25 +204,35 @@ export function incrementRateLimitCounters() {
 
     // Issue one transaction per interval in parallel to increment or reset the
     // rate-limiting counters associated with that interval.
-    return Promise.all(Object.keys(config.limits).map(interval => {
-      const maxWriteCount = config.limits[interval];
-      const tooFrequentMsg = 'Some of the data could not be written because the ' +
-        'app is writing data too many times per second. Please try writing data ' +
-        'less frequently.';
-      return incrementIntervalCounters(maxWriteCount, interval, currentTimeMs)
-        .catch(error => {
+    return Promise.all(
+      Object.keys(config.limits).map(interval => {
+        const maxWriteCount = config.limits[interval];
+        const tooFrequentMsg =
+          'Some of the data could not be written because the ' +
+          'app is writing data too many times per second. Please try writing data ' +
+          'less frequently.';
+        return incrementIntervalCounters(
+          maxWriteCount,
+          interval,
+          currentTimeMs
+        ).catch(error => {
           if (String(error).includes('permission_denied')) {
             // For reasons not fully understood, firebase security rules sometimes fail
             // when incrementing rate limit counts shortly after they have been reset,
             // even under low contention. Work around this by attempting a single retry.
-            return incrementIntervalCounters(maxWriteCount, interval, currentTimeMs)
-              .catch(error => {
-                if (String(error).includes('permission_denied')) {
-                  // Under high contention (e.g. createRecord in a tight loop), increments
-                  // begin to fail with permission_denied regardless of resets.
-                  return Promise.reject(`${tooFrequentMsg} Error code: permission_denied`);
-                }
-              });
+            return incrementIntervalCounters(
+              maxWriteCount,
+              interval,
+              currentTimeMs
+            ).catch(error => {
+              if (String(error).includes('permission_denied')) {
+                // Under high contention (e.g. createRecord in a tight loop), increments
+                // begin to fail with permission_denied regardless of resets.
+                return Promise.reject(
+                  `${tooFrequentMsg} Error code: permission_denied`
+                );
+              }
+            });
           } else if (String(error).includes('maxretry')) {
             // Under medium contention (e.g. two app users writing 10x/sec), increments
             // occasionally fail with max_retry. It's possible these would succeed on
@@ -190,14 +245,21 @@ export function incrementRateLimitCounters() {
             // the consequences of double-incrementing are relatively low.
             setTimeout(() => {
               // Make this event visible in UI test output and New Relic.
-              throw new Error('retrying incrementIntervalCounters after network disconnect');
+              throw new Error(
+                'retrying incrementIntervalCounters after network disconnect'
+              );
             }, 0);
-            return incrementIntervalCounters(maxWriteCount, interval, currentTimeMs);
+            return incrementIntervalCounters(
+              maxWriteCount,
+              interval,
+              currentTimeMs
+            );
           } else {
             return Promise.reject(error);
           }
         });
-    }));
+      })
+    );
   });
 }
 

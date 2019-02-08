@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 const fontSize = 18;
 const styles = {
@@ -7,22 +7,22 @@ const styles = {
     margin: 10,
     background: '#fff',
     border: '3px solid #000',
-    borderRadius: 5,
+    borderRadius: 5
   },
   wrapper: {
-    margin: 20,
+    margin: 20
   },
   question: {
-    fontSize: fontSize,
+    fontSize: fontSize
   },
   input: {
     fontSize: fontSize,
     width: '100%',
     height: '2em',
-    boxSizing: 'border-box',
+    boxSizing: 'border-box'
   },
   submit: {
-    fontSize: fontSize,
+    fontSize: fontSize
   }
 };
 
@@ -32,10 +32,10 @@ const styles = {
 export default class InputPrompt extends Component {
   static propTypes = {
     question: PropTypes.string.isRequired,
-    onInputReceived: PropTypes.func.isRequired,
+    onInputReceived: PropTypes.func.isRequired
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     this.props.onInputReceived(this.refs.answer.value);
   };

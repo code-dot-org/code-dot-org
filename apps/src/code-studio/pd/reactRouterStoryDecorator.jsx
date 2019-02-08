@@ -5,7 +5,7 @@
  *    storybook.addDecorator(reactRouterStoryDecorator)
  */
 import React from 'react';
-import WithContext from "react-with-context";
+import WithContext from 'react-with-context';
 
 const context = {
   router: {
@@ -15,8 +15,4 @@ const context = {
   }
 };
 
-export default (story) => (
-  <WithContext context={context}>
-    {story()}
-  </WithContext>
-);
+export default story => <WithContext context={context}>{story()}</WithContext>;

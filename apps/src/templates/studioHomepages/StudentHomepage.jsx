@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
@@ -15,27 +15,24 @@ export default class StudentHomepage extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     sections: shapes.sections,
-    canViewAdvancedTools: PropTypes.bool,
+    canViewAdvancedTools: PropTypes.bool
   };
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
+    $('#flashes')
+      .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
+      .show();
   }
 
   render() {
-    const { courses, sections, topCourse } = this.props;
-    const { canViewAdvancedTools } = this.props;
+    const {courses, sections, topCourse} = this.props;
+    const {canViewAdvancedTools} = this.props;
 
     return (
       <div>
-        <HeaderBanner
-          headingText={i18n.homepageHeading()}
-          short={true}
-        />
-        <ProtectedStatefulDiv
-          ref="flashes"
-        />
+        <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
+        <ProtectedStatefulDiv ref="flashes" />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
@@ -45,9 +42,7 @@ export default class StudentHomepage extends Component {
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <StudentSections
-          initialSections={sections}
-        />
+        <StudentSections initialSections={sections} />
       </div>
     );
   }

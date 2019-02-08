@@ -19,15 +19,12 @@ const DEFAULT_PROPS = {
 describe('FilterChoice', () => {
   it('renders unchecked without error', () => {
     const wrapper = shallow(
-      <FilterChoice
-        {...DEFAULT_PROPS}
-        selected={false}
-      />
+      <FilterChoice {...DEFAULT_PROPS} selected={false} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <label>
-          <input type="checkbox" checked={false}/>
+          <input type="checkbox" checked={false} />
           {TEST_TEXT}
         </label>
       </div>
@@ -36,15 +33,12 @@ describe('FilterChoice', () => {
 
   it('renders checked without error', () => {
     const wrapper = shallow(
-      <FilterChoice
-        {...DEFAULT_PROPS}
-        selected={true}
-      />
+      <FilterChoice {...DEFAULT_PROPS} selected={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <label>
-          <input type="checkbox" checked={true}/>
+          <input type="checkbox" checked={true} />
           {TEST_TEXT}
         </label>
       </div>
@@ -53,16 +47,12 @@ describe('FilterChoice', () => {
 
   it('renders unchecked radio button without error', () => {
     const wrapper = shallow(
-      <FilterChoice
-        {...DEFAULT_PROPS}
-        selected={false}
-        singleEntry={true}
-      />
+      <FilterChoice {...DEFAULT_PROPS} selected={false} singleEntry={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <label>
-          <input type="radio" checked={false}/>
+          <input type="radio" checked={false} />
           {TEST_TEXT}
         </label>
       </div>
@@ -73,10 +63,7 @@ describe('FilterChoice', () => {
     const callback = sinon.spy();
     const testNewCheckedValue = Math.random() < 0.5;
     const wrapper = shallow(
-      <FilterChoice
-        {...DEFAULT_PROPS}
-        onUserInput={callback}
-      />
+      <FilterChoice {...DEFAULT_PROPS} onUserInput={callback} />
     );
 
     wrapper.find('input').simulate('change', {
@@ -85,7 +72,10 @@ describe('FilterChoice', () => {
       }
     });
 
-    expect(callback).to.have.been.calledOnce
-      .and.calledWith(TEST_GROUP_NAME, TEST_NAME, testNewCheckedValue);
+    expect(callback).to.have.been.calledOnce.and.calledWith(
+      TEST_GROUP_NAME,
+      TEST_NAME,
+      testNewCheckedValue
+    );
   });
 });

@@ -6,7 +6,7 @@ export default class BooleanPropertyRow extends React.Component {
   static propTypes = {
     initialValue: PropTypes.bool.isRequired,
     handleChange: PropTypes.func,
-    desc: PropTypes.node,
+    desc: PropTypes.node
   };
 
   state = {

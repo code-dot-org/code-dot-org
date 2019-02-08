@@ -8,7 +8,7 @@ class ProjectWidgetWithData extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     projectList: PropTypes.array,
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool, // Default: true
+    canViewAdvancedTools: PropTypes.bool // Default: true
   };
 
   state = {
@@ -31,7 +31,7 @@ class ProjectWidgetWithData extends React.Component {
   }
 
   render() {
-    const { canViewAdvancedTools, canViewFullList } = this.props;
+    const {canViewAdvancedTools, canViewFullList} = this.props;
 
     return (
       <ProjectWidget

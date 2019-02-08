@@ -4,7 +4,7 @@
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -28,7 +28,7 @@ const styles = {
     height: '100%',
     ':hover': {
       transition: 'all 2s ease',
-      borderColor: 'rgba(0, 0, 0, 0.5)',
+      borderColor: 'rgba(0, 0, 0, 0.5)'
     }
   }
 };
@@ -92,7 +92,7 @@ class ResizablePanes extends Component {
 
   onMouseUp = () => {
     if (this.state.dragging) {
-      this.setState({ dragging: false });
+      this.setState({dragging: false});
     }
   };
 
@@ -107,15 +107,17 @@ class ResizablePanes extends Component {
   getClonedChild(child, index) {
     const columnSize = this.props.columnSizes[index];
     const style = _.assign(
-        {flex: '1'},
-        child.props.style,
-        (typeof columnSize !== 'undefined' ? {flex: `0 0 ${columnSize}px`} : undefined)
+      {flex: '1'},
+      child.props.style,
+      typeof columnSize !== 'undefined'
+        ? {flex: `0 0 ${columnSize}px`}
+        : undefined
     );
 
     return React.cloneElement(child, {
       ref: `pane-${index}`,
       key: `pane-${index}`,
-      style,
+      style
     });
   }
 
@@ -141,27 +143,34 @@ class ResizablePanes extends Component {
   getChildren() {
     const childCount = React.Children.count(this.props.children);
     const computedChildren = [];
-    React.Children.forEach(this.props.children, (child, index) => {
-      if (!child) {
-        return;
-      }
-      computedChildren.push(this.getClonedChild(child, index));
-      const isLockedColumn = this.isColumnLocked(index);
-      const isFinalColumn = index === childCount - 1;
-      if (!isFinalColumn && !isLockedColumn) {
-        computedChildren.push(this.getResizer(index));
-      }
-    }, this);
+    React.Children.forEach(
+      this.props.children,
+      (child, index) => {
+        if (!child) {
+          return;
+        }
+        computedChildren.push(this.getClonedChild(child, index));
+        const isLockedColumn = this.isColumnLocked(index);
+        const isFinalColumn = index === childCount - 1;
+        if (!isFinalColumn && !isLockedColumn) {
+          computedChildren.push(this.getResizer(index));
+        }
+      },
+      this
+    );
     return computedChildren;
   }
 
   render() {
     const styles = {
-      root: _.assign({
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'nowrap'
-      }, this.props.style)
+      root: _.assign(
+        {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'nowrap'
+        },
+        this.props.style
+      )
     };
 
     return (
