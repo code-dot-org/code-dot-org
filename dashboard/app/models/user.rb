@@ -1394,15 +1394,17 @@ class User < ActiveRecord::Base
       return not_found_user
     end
 
+    unique_users = users.uniq
+
     # Normal case: single user, owner of the email attached to this account
-    if users.length == 1 && (users.first.email == email || users.first.hashed_email == User.hash_email(email))
-      primary_user = users.first
+    if unique_users.length == 1 && (unique_users.first.email == email || unique_users.first.hashed_email == User.hash_email(email))
+      primary_user = unique_users.first
       primary_user.raw_token = primary_user.send_reset_password_instructions(email) # protected in the superclass
       return primary_user
     end
 
     # One or more users are associated with parent email, generate reset tokens for each one
-    users.each do |user|
+    unique_users.each do |user|
       raw, enc = Devise.token_generator.generate(User, :reset_password_token)
       user.raw_token = raw
       user.reset_password_token   = enc
@@ -1413,7 +1415,7 @@ class User < ActiveRecord::Base
     begin
       # Send the password reset to the parent
       raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
-      self.child_users = users
+      self.child_users = unique_users
       send_devise_notification(:reset_password_instructions, raw, {to: email})
     rescue ArgumentError
       errors.add :base, I18n.t('password.reset_errors.invalid_email')
