@@ -72,7 +72,7 @@ export default class Teacher1920Application extends FormController {
    */
   onSetPage(newPage) {
     // Report a unique page view to GA.
-    ga('set', 'page', '/pd/application/teacher/' + newPage + 1);
+    ga('set', 'page', '/pd/application/teacher/' + (newPage + 1));
     ga('send', 'pageview');
   }
 }
