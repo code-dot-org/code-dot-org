@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 
 /**
@@ -26,7 +26,7 @@ export default class LegendSelector extends Component {
   };
 
   render() {
-    const { inputStyle } = this.props;
+    const {inputStyle} = this.props;
     return (
       <label>
         Exclude CSF Progress Bubbles From Legend
@@ -37,7 +37,7 @@ export default class LegendSelector extends Component {
           onChange={this.handleChange}
           style={inputStyle}
         />
-        <ProgressLegend excludeCsfColumn={this.state.checked}/>
+        <ProgressLegend excludeCsfColumn={this.state.checked} />
       </label>
     );
   }

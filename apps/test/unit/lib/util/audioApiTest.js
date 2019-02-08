@@ -7,12 +7,11 @@ import {
 } from '@cdo/apps/lib/util/audioApi';
 import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 
-describe('Audio API', function () {
-
+describe('Audio API', function() {
   // Check that every command, has an executor, has a droplet config entry.
   // May eventually need to allow droplet config entries to not have a matching
   // executor because they get aliased.
-  it('is internally complete', function () {
+  it('is internally complete', function() {
     for (let commandName in commands) {
       if (!commands.hasOwnProperty(commandName)) {
         continue;
@@ -40,11 +39,14 @@ describe('Audio API', function () {
     }
   });
 
-  describe('playSound', function () {
-    it('has two arguments, "url" and "loop"', function () {
+  describe('playSound', function() {
+    it('has two arguments, "url" and "loop"', function() {
       const funcName = 'playSound';
       // Check droplet config for the 2 documented params
-      expect(dropletConfig[funcName].paletteParams).to.deep.equal(['url', 'loop']);
+      expect(dropletConfig[funcName].paletteParams).to.deep.equal([
+        'url',
+        'loop'
+      ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
@@ -52,12 +54,16 @@ describe('Audio API', function () {
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two', 'three', 'four');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({url: 'one', loop: 'two', callback: 'three'});
+      expect(spy.firstCall.args[2]).to.deep.equal({
+        url: 'one',
+        loop: 'two',
+        callback: 'three'
+      });
     });
   });
 
-  describe('stopSound', function () {
-    it('has one argument, "url"', function () {
+  describe('stopSound', function() {
+    it('has one argument, "url"', function() {
       const funcName = 'stopSound';
       // Check droplet config
       expect(dropletConfig[funcName].paletteParams).to.deep.equal(['url']);

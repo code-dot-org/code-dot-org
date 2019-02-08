@@ -167,7 +167,7 @@ var DnsMode = NetSimConstants.DnsMode;
 /*
  * Configuration for all levels.
  */
-var levels = module.exports = {};
+var levels = (module.exports = {});
 
 /**
  * A default level configuration so that we can define the others by delta.
@@ -176,7 +176,6 @@ var levels = module.exports = {};
  * @type {NetSimLevelConfiguration}
  */
 levels.custom = {
-
   // Lobby configuration
   showClientsInLobby: false,
   showRoutersInLobby: false,
@@ -245,7 +244,6 @@ levels.custom = {
  * @type {NetSimLevelConfiguration}
  */
 levels.playground = {
-
   // Lobby configuration
   showClientsInLobby: false,
   showRoutersInLobby: true,
@@ -287,8 +285,20 @@ levels.playground = {
   // "My Device" tab and its controls
   showPulseRateSlider: false,
   showMetronome: false,
-  showEncodingControls: ['a_and_b', 'binary', 'hexadecimal', 'decimal', 'ascii'],
-  defaultEnabledEncodings: ['a_and_b', 'binary', 'hexadecimal', 'decimal', 'ascii'],
+  showEncodingControls: [
+    'a_and_b',
+    'binary',
+    'hexadecimal',
+    'decimal',
+    'ascii'
+  ],
+  defaultEnabledEncodings: [
+    'a_and_b',
+    'binary',
+    'hexadecimal',
+    'decimal',
+    'ascii'
+  ],
   showBitRateControl: true,
   lockBitRateControl: false,
   defaultBitRateBitsPerSecond: Infinity,

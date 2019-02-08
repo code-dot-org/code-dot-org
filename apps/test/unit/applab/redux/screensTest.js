@@ -5,56 +5,56 @@ import sinon from 'sinon';
 import {
   sources as sourcesApi,
   channels as channelsApi,
-  assets as assetsApi,
+  assets as assetsApi
 } from '@cdo/apps/clientApi';
 import {createStore} from '../../../util/redux';
 import screensReducer, {
   toggleImportScreen,
   changeScreen,
   fetchProject,
-  importIntoProject,
+  importIntoProject
 } from '@cdo/apps/applab/redux/screens';
 import * as importFuncs from '@cdo/apps/applab/import';
 
-
-describe("Applab Screens Reducer", function () {
-
+describe('Applab Screens Reducer', function() {
   var store;
 
   beforeEach(() => {
     store = createStore(screensReducer);
   });
 
-  it("should initialize to the following", function () {
+  it('should initialize to the following', function() {
     expect(store.getState().isImportingScreen).to.equal(false);
     expect(store.getState().currentScreenId).to.equal(null);
   });
 
-  describe("the toggleImportScreen action", () => {
-    it("will toggle the isImportingScreen state", () => {
+  describe('the toggleImportScreen action', () => {
+    it('will toggle the isImportingScreen state', () => {
       store.dispatch(toggleImportScreen(true));
       expect(store.getState().isImportingScreen).to.equal(true);
     });
 
-    it("will reset the importProject state", () => {
+    it('will reset the importProject state', () => {
       store.dispatch(toggleImportScreen(true));
       const initialImportProject = store.getState().importProject;
       store.dispatch(fetchProject('invalid url'));
-      expect(store.getState().importProject.equals(initialImportProject)).to.be.false;
+      expect(store.getState().importProject.equals(initialImportProject)).to.be
+        .false;
 
       store.dispatch(toggleImportScreen(false));
-      expect(store.getState().importProject.equals(initialImportProject)).to.be.true;
+      expect(store.getState().importProject.equals(initialImportProject)).to.be
+        .true;
     });
   });
 
-  describe("the changeScreen action", () => {
-    it("will set the currentScreenId state", () => {
+  describe('the changeScreen action', () => {
+    it('will set the currentScreenId state', () => {
       store.dispatch(changeScreen('new screen id'));
       expect(store.getState().currentScreenId).to.equal('new screen id');
     });
   });
 
-  describe("the fetchProject action", () => {
+  describe('the fetchProject action', () => {
     let xhr;
     let lastRequest;
 
@@ -83,8 +83,8 @@ describe("Applab Screens Reducer", function () {
       xhr.restore();
     });
 
-    describe("when given an invalid url", () => {
-      it("will set the errorFetchingProject state", () => {
+    describe('when given an invalid url', () => {
+      it('will set the errorFetchingProject state', () => {
         store.dispatch(fetchProject('invalid url'));
         lastRequest.respond(404);
 
@@ -94,29 +94,35 @@ describe("Applab Screens Reducer", function () {
       });
     });
 
-    describe("when given a valid url", () => {
+    describe('when given a valid url', () => {
       beforeEach(() => {
-        store.dispatch(fetchProject('http://studio.code.org:3000/projects/applab/GmBgH7e811sZP7-5bALAxQ/edit'));
+        store.dispatch(
+          fetchProject(
+            'http://studio.code.org:3000/projects/applab/GmBgH7e811sZP7-5bALAxQ/edit'
+          )
+        );
       });
 
-      it("will set the isFetchingProject state to true", () => {
+      it('will set the isFetchingProject state to true', () => {
         var state = store.getState();
         expect(state.importProject.isFetchingProject).to.be.true;
       });
 
-      it("will fetch the channel via the channels api", () => {
+      it('will fetch the channel via the channels api', () => {
         expect(channelsApi.ajax.called).to.be.true;
       });
 
-      it("will fetch the sources via the sources api", () => {
+      it('will fetch the sources via the sources api', () => {
         expect(sourcesApi.ajax.called).to.be.true;
       });
 
-      describe("and when sources and channels finish loading", () => {
-        var sourcesSuccess, sourcesFail,
-            channelsSuccess, channelsFail,
-            assetsSuccess,
-            existingAssetsSuccess;
+      describe('and when sources and channels finish loading', () => {
+        var sourcesSuccess,
+          sourcesFail,
+          channelsSuccess,
+          channelsFail,
+          assetsSuccess,
+          existingAssetsSuccess;
         beforeEach(() => {
           [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
           [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
@@ -124,44 +130,51 @@ describe("Applab Screens Reducer", function () {
           [assetsSuccess] = assetsApi.getFiles.secondCall.args;
         });
 
-        describe("and sources fail", () => {
+        describe('and sources fail', () => {
           beforeEach(() => sourcesFail());
-          it("will set isFetchingProject=false and errorFetchingProject=true", () => {
-            expect(store.getState().importProject.isFetchingProject).to.be.false;
-            expect(store.getState().importProject.errorFetchingProject).to.be.true;
+          it('will set isFetchingProject=false and errorFetchingProject=true', () => {
+            expect(store.getState().importProject.isFetchingProject).to.be
+              .false;
+            expect(store.getState().importProject.errorFetchingProject).to.be
+              .true;
           });
         });
-        describe("and channels fail", () => {
+        describe('and channels fail', () => {
           beforeEach(() => channelsFail());
-          it("will set isFetchingProject=false and errorFetchingProject=true", () => {
-            expect(store.getState().importProject.isFetchingProject).to.be.false;
-            expect(store.getState().importProject.errorFetchingProject).to.be.true;
+          it('will set isFetchingProject=false and errorFetchingProject=true', () => {
+            expect(store.getState().importProject.isFetchingProject).to.be
+              .false;
+            expect(store.getState().importProject.errorFetchingProject).to.be
+              .true;
           });
         });
-        describe("and everything succeeds", () => {
+        describe('and everything succeeds', () => {
           beforeEach(() => {
             channelsSuccess({response: '"bar"'});
             sourcesSuccess({response: '"foo"'});
             assetsSuccess({files: []});
             existingAssetsSuccess({files: []});
           });
-          it("will set isFetchingProject=false and fetchedProject=the fetched results", () => {
-            expect(store.getState().importProject.isFetchingProject).to.be.false;
-            expect(store.getState().importProject.fetchedProject).to.deep.equal({
-              channel: 'bar',
-              sources: 'foo',
-              assets: [],
-              existingAssets: [],
-            });
-            expect(store.getState().importProject.importableProject).not.to.be.null;
+          it('will set isFetchingProject=false and fetchedProject=the fetched results', () => {
+            expect(store.getState().importProject.isFetchingProject).to.be
+              .false;
+            expect(store.getState().importProject.fetchedProject).to.deep.equal(
+              {
+                channel: 'bar',
+                sources: 'foo',
+                assets: [],
+                existingAssets: []
+              }
+            );
+            expect(store.getState().importProject.importableProject).not.to.be
+              .null;
           });
         });
-
       });
     });
   });
 
-  describe("the importIntoProject action", () => {
+  describe('the importIntoProject action', () => {
     allowConsoleErrors();
 
     var resolve, reject;
@@ -179,7 +192,7 @@ describe("Applab Screens Reducer", function () {
       importFuncs.importScreensAndAssets.restore();
     });
 
-    it("will set the isImportingProject flag to true at first", () => {
+    it('will set the isImportingProject flag to true at first', () => {
       expect(store.getState().importProject.isImportingProject).to.be.false;
       store.dispatch(importIntoProject('some-project', [], []));
       expect(store.getState().importProject.isImportingProject).to.be.true;
@@ -195,7 +208,7 @@ describe("Applab Screens Reducer", function () {
         store.dispatch(importIntoProject('some-project', [], []));
       });
 
-      it('will set the isImportingProject flag to false on success', (done) => {
+      it('will set the isImportingProject flag to false on success', done => {
         resolve();
         setTimeout(() => {
           expect(store.getState().importProject.isImportingProject).to.be.false;
@@ -203,7 +216,7 @@ describe("Applab Screens Reducer", function () {
         }, 0);
       });
 
-      it('will set the isImportingScreen flag to false on success', (done) => {
+      it('will set the isImportingScreen flag to false on success', done => {
         resolve();
         setTimeout(() => {
           expect(store.getState().isImportingScreen).to.be.false;
@@ -211,7 +224,7 @@ describe("Applab Screens Reducer", function () {
         }, 0);
       });
 
-      it('will set the isImportingProject flag to false on failure', (done) => {
+      it('will set the isImportingProject flag to false on failure', done => {
         reject();
         setTimeout(() => {
           expect(store.getState().importProject.isImportingProject).to.be.false;
@@ -219,7 +232,5 @@ describe("Applab Screens Reducer", function () {
         }, 0);
       });
     });
-
   });
-
 });

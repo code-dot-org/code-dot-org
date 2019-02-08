@@ -1,15 +1,15 @@
 import LegacyButton from './LegacyButton';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import msg from '@cdo/locale';
 import Lightbulb from './Lightbulb';
 
 const styles = {
   confirmButton: {
-    'float': 'right'
+    float: 'right'
   },
   nextButton: {
-    'float': 'right'
+    float: 'right'
   },
   lightbulb: {
     margin: '-9px 0px -9px -5px'
@@ -35,7 +35,12 @@ export default class DialogButtons extends Component {
   };
 
   render() {
-    let okButton, cancelButton, confirmButton, hintButton, againButton, nextButton;
+    let okButton,
+      cancelButton,
+      confirmButton,
+      hintButton,
+      againButton,
+      nextButton;
 
     if (this.props.ok) {
       okButton = (
@@ -49,7 +54,11 @@ export default class DialogButtons extends Component {
 
     if (this.props.cancelText) {
       cancelButton = (
-        <LegacyButton type="cancel" id="again-button" className={this.props.cancelButtonClass || ''}>
+        <LegacyButton
+          type="cancel"
+          id="again-button"
+          className={this.props.cancelButtonClass || ''}
+        >
           {this.props.cancelText}
         </LegacyButton>
       );
@@ -57,7 +66,12 @@ export default class DialogButtons extends Component {
 
     if (this.props.confirmText) {
       confirmButton = (
-        <LegacyButton type="primary" id="confirm-button" className="launch" style={styles.confirmButton}>
+        <LegacyButton
+          type="primary"
+          id="confirm-button"
+          className="launch"
+          style={styles.confirmButton}
+        >
           {this.props.confirmText}
         </LegacyButton>
       );
@@ -79,8 +93,12 @@ export default class DialogButtons extends Component {
       } else {
         if (this.props.shouldPromptForHint) {
           hintButton = (
-            <LegacyButton type="default" id="hint-request-button" style={styles.hintButton}>
-              <Lightbulb size={32} style={styles.lightbulb}/>
+            <LegacyButton
+              type="default"
+              id="hint-request-button"
+              style={styles.hintButton}
+            >
+              <Lightbulb size={32} style={styles.lightbulb} />
               {msg.hintRequest()}
             </LegacyButton>
           );
@@ -94,28 +112,28 @@ export default class DialogButtons extends Component {
     }
 
     if (this.props.nextLevel) {
-      nextButton = (this.props.isK1 && !this.props.freePlay) ?
-                   (
-                     <LegacyButton
-                       type="primary"
-                       size="large"
-                       arrow="right"
-                       id="continue-button"
-                       className="launch"
-                       style={styles.nextButton}
-                     >
-                       {this.props.continueText}
-                     </LegacyButton>
-                   ) : (
-                     <LegacyButton
-                       type="primary"
-                       id="continue-button"
-                       className="launch"
-                       style={styles.nextButton}
-                     >
-                       {this.props.continueText}
-                     </LegacyButton>
-                   );
+      nextButton =
+        this.props.isK1 && !this.props.freePlay ? (
+          <LegacyButton
+            type="primary"
+            size="large"
+            arrow="right"
+            id="continue-button"
+            className="launch"
+            style={styles.nextButton}
+          >
+            {this.props.continueText}
+          </LegacyButton>
+        ) : (
+          <LegacyButton
+            type="primary"
+            id="continue-button"
+            className="launch"
+            style={styles.nextButton}
+          >
+            {this.props.continueText}
+          </LegacyButton>
+        );
     }
 
     return (

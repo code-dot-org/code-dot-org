@@ -18,6 +18,6 @@ export default storybook => {
             studentAnswerData={studentData}
           />
         )
-      },
+      }
     ]);
 };

@@ -2,35 +2,38 @@ import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 
 module.exports = {
-  app: "eval",
+  app: 'eval',
   skinId: 'eval',
   levelDefinition: {
     solutionBlocks: blockUtils.mathBlockXml('functional_ellipse', {
-      'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-      'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
+      WIDTH: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
+      HEIGHT: blockUtils.mathBlockXml('functional_math_number', null, {
+        NUM: 100
+      }),
+      COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
+      STYLE: blockUtils.mathBlockXml('functional_string', null, {
+        VAL: 'outline'
+      })
     }),
     requiredBlocks: '',
     freePlay: false
   },
   tests: [
     {
-      description: "Nothing",
+      description: 'Nothing',
       expected: {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      xml: '<xml>' +
-      '</xml>'
+      xml: '<xml>' + '</xml>'
     },
     {
-      description: "correct answer",
+      description: 'correct answer',
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         var user = document.getElementById('user');
         var ellipse = user.querySelector('ellipse');
         var fill = ellipse.getAttribute('fill');
@@ -42,14 +45,23 @@ module.exports = {
         assert(ellipse.getAttribute('ry', 50));
         return true;
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         blockUtils.mathBlockXml('functional_ellipse', {
-          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
-          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
-          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
+          WIDTH: blockUtils.mathBlockXml('functional_math_number', null, {
+            NUM: 50
+          }),
+          HEIGHT: blockUtils.mathBlockXml('functional_math_number', null, {
+            NUM: 100
+          }),
+          COLOR: blockUtils.mathBlockXml('functional_string', null, {
+            VAL: 'red'
+          }),
+          STYLE: blockUtils.mathBlockXml('functional_string', null, {
+            VAL: 'outline'
+          })
         }) +
-      '</xml>'
+        '</xml>'
     }
   ]
 };

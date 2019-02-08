@@ -3,8 +3,7 @@ import {shallow} from 'enzyme';
 import {assert} from '../../../../../util/configuredChai';
 import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
-import {Unit6Intention} from "@cdo/apps/lib/kits/maker/util/discountLogic";
-
+import {Unit6Intention} from '@cdo/apps/lib/kits/maker/util/discountLogic';
 
 describe('EligibilityChecklist', () => {
   const defaultProps = {
@@ -12,26 +11,20 @@ describe('EligibilityChecklist', () => {
     statusStudentCount: Status.SUCCEEDED,
     hasConfirmedSchool: false,
     adminSetStatus: false,
-    currentlyDistributingDiscountCodes: true,
+    currentlyDistributingDiscountCodes: true
   };
 
   it('renders a div if we have no discountCode', () => {
-    const wrapper = shallow(
-      <EligibilityChecklist
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<EligibilityChecklist {...defaultProps} />);
     assert(wrapper.is('div'));
   });
 
   it('does not render Unit6ValidationStep until we answer school choice question', () => {
-    const wrapper = shallow(
-      <EligibilityChecklist
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<EligibilityChecklist {...defaultProps} />);
     assert.equal(wrapper.find('Unit6ValidationStep').length, 0);
-    wrapper.instance().handleSchoolConfirmed({schoolId: '1', fullDiscount: true});
+    wrapper
+      .instance()
+      .handleSchoolConfirmed({schoolId: '1', fullDiscount: true});
     assert.equal(wrapper.find('Unit6ValidationStep').length, 1);
   });
 
@@ -104,7 +97,9 @@ describe('EligibilityChecklist', () => {
       />
     );
     wrapper.find('Button').simulate('click');
-    wrapper.instance().handleSuccessDialog('MYCODE', '2018-12-31T00:00:00.000Z');
+    wrapper
+      .instance()
+      .handleSuccessDialog('MYCODE', '2018-12-31T00:00:00.000Z');
     assert(wrapper.is('DiscountCodeInstructions'));
   });
 

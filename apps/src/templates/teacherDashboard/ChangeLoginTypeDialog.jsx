@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -8,7 +8,7 @@ import BaseDialog from '../BaseDialog';
 import Button from '../Button';
 import LoginTypePicker from './LoginTypePicker';
 import {sectionShape} from './shapes';
-import DialogFooter from "./DialogFooter";
+import DialogFooter from './DialogFooter';
 import PadAndCenter from './PadAndCenter';
 import {editSectionLoginType, isSaveInProgress} from './teacherSectionsRedux';
 
@@ -24,7 +24,7 @@ class ChangeLoginTypeDialog extends Component {
     // Provided by Redux
     section: sectionShape,
     isSaveInProgress: PropTypes.bool,
-    editSectionLoginType: PropTypes.func.isRequired,
+    editSectionLoginType: PropTypes.func.isRequired
   };
 
   changeLoginType = newType => {
@@ -127,9 +127,7 @@ class ChangeLoginTypeDialog extends Component {
         style={style}
         uncloseable={isSaveInProgress}
       >
-        <PadAndCenter>
-          {this.renderOptions()}
-        </PadAndCenter>
+        <PadAndCenter>{this.renderOptions()}</PadAndCenter>
       </BaseDialog>
     );
   }
@@ -137,22 +135,21 @@ class ChangeLoginTypeDialog extends Component {
 
 export const UnconnectedChangeLoginTypeDialog = ChangeLoginTypeDialog;
 
-export default connect((state, props) => ({
-  section: state.teacherSections.sections[props.sectionId],
-  isSaveInProgress: isSaveInProgress(state),
-}), {
-  editSectionLoginType,
-})(ChangeLoginTypeDialog);
+export default connect(
+  (state, props) => ({
+    section: state.teacherSections.sections[props.sectionId],
+    isSaveInProgress: isSaveInProgress(state)
+  }),
+  {
+    editSectionLoginType
+  }
+)(ChangeLoginTypeDialog);
 
 const LimitedChangeView = ({description, children, onCancel, disabled}) => (
   <div style={{marginLeft: 20, marginRight: 20}}>
-    <Heading1>
-      {i18n.changeLoginTypeQuestion()}
-    </Heading1>
-    <hr/>
-    <div>
-      {description}
-    </div>
+    <Heading1>{i18n.changeLoginTypeQuestion()}</Heading1>
+    <hr />
+    <div>{description}</div>
     <DialogFooter>
       <Button
         onClick={onCancel}
@@ -161,9 +158,7 @@ const LimitedChangeView = ({description, children, onCancel, disabled}) => (
         text={i18n.dialogCancel()}
         disabled={disabled}
       />
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </DialogFooter>
   </div>
 );
@@ -171,13 +166,13 @@ LimitedChangeView.propTypes = {
   description: PropTypes.node,
   onCancel: PropTypes.func.isRequired,
   children: PropTypes.any,
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 const buttonPropTypes = {
   changeLoginType: PropTypes.func.isRequired,
   style: PropTypes.any,
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 const UsePictureLoginButton = ({changeLoginType, disabled}) => (

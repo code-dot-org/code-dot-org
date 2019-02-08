@@ -9,21 +9,12 @@ export default storybook => {
       {
         name: 'Free responses for survey 1',
         description: 'Display anonymous responses',
-        story: () => (
-          <FreeResponsesSurveyTable
-            freeResponses={surveyOne}
-          />
-        )
+        story: () => <FreeResponsesSurveyTable freeResponses={surveyOne} />
       },
       {
         name: 'Free responses for survey 2',
         description: 'Table not displayed if less than 5 surveys are submitted',
-        story: () => (
-          <FreeResponsesSurveyTable
-            freeResponses={surveyTwo}
-          />
-        )
-      },
+        story: () => <FreeResponsesSurveyTable freeResponses={surveyTwo} />
+      }
     ]);
-
 };

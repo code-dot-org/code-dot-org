@@ -6,15 +6,13 @@ import {getStore} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import MakerLanding from '@cdo/apps/templates/MakerLanding';
 
-$(function () {
+$(function() {
   const store = getStore();
   const course = getScriptData('makerHome').course;
 
   ReactDOM.render(
     <Provider store={store}>
-      <MakerLanding
-        topCourse={course}
-      />
+      <MakerLanding topCourse={course} />
     </Provider>,
     document.getElementById('maker-home')
   );

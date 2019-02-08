@@ -1,112 +1,114 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
-import color from "../../util/color";
+import color from '../../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 
 const PROJECT_INFO = {
-  'playlab': {
+  playlab: {
     label: i18n.projectTypePlaylab(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_playlab.png'
   },
-  'playlab_k1': {
+  playlab_k1: {
     label: i18n.projectTypePlaylabPreReader(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_playlab.png'
   },
-  'artist': {
+  artist: {
     label: i18n.projectTypeArtist(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_artist.png'
   },
-  'artist_k1': {
+  artist_k1: {
     label: i18n.projectTypeArtistPreReader(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_artist.png'
   },
-  'applab': {
+  applab: {
     label: i18n.projectTypeApplab(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_applab_square.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_applab_square.png'
   },
-  'gamelab': {
+  gamelab: {
     label: i18n.projectTypeGamelab(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_gamelab_square.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_gamelab_square.png'
   },
-  'weblab': {
+  weblab: {
     label: i18n.projectTypeWeblab(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_weblab.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_weblab.png'
   },
-  'calc': {
+  calc: {
     label: i18n.projectTypeCalc(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_calc.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_calc.png'
   },
-  'eval': {
+  eval: {
     label: i18n.projectTypeEval(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_eval.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_eval.png'
   },
-  'frozen': {
+  frozen: {
     label: i18n.projectTypeFrozen(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_frozen.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_frozen.png'
   },
-  'minecraft_adventurer': {
+  minecraft_adventurer: {
     label: i18n.projectTypeMinecraftAdventurer(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_mc.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_mc.png'
   },
-  'minecraft_designer': {
+  minecraft_designer: {
     label: i18n.projectTypeMinecraftDesigner(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_minecraft.png'
   },
-  'minecraft_hero': {
+  minecraft_hero: {
     label: i18n.projectTypeMinecraftHero(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft_hero_square.jpg"
+    thumbnail:
+      '/shared/images/fill-70x70/courses/logo_minecraft_hero_square.jpg'
   },
-  'minecraft_aquatic': {
+  minecraft_aquatic: {
     label: i18n.projectTypeMinecraftAquatic(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft_aquatic_square.jpg"
+    thumbnail:
+      '/shared/images/fill-70x70/courses/logo_minecraft_aquatic_square.jpg'
   },
-  'starwars': {
+  starwars: {
     label: i18n.projectTypeStarwars(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_starwars.png'
   },
-  'starwarsblocks': {
+  starwarsblocks: {
     label: i18n.projectTypeStarwarsBlocks(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_starwarsblocks.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_starwarsblocks.png'
   },
-  'flappy': {
+  flappy: {
     label: i18n.projectTypeFlappy(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_flappy.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_flappy.png'
   },
-  'sports': {
+  sports: {
     label: i18n.projectTypeSports(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_sports.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_sports.png'
   },
-  'basketball': {
+  basketball: {
     label: i18n.projectTypeBasketball(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_basketball.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_basketball.png'
   },
-  'bounce': {
+  bounce: {
     label: i18n.projectTypeBounce(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_bounce.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_bounce.png'
   },
-  'infinity': {
+  infinity: {
     label: i18n.projectTypeInfinity(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_infinity.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_infinity.png'
   },
-  'iceage': {
+  iceage: {
     label: i18n.projectTypeIceage(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_iceage.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_iceage.png'
   },
-  'gumball': {
+  gumball: {
     label: i18n.projectTypeGumball(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_gumball.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_gumball.png'
   },
-  'spritelab': {
+  spritelab: {
     label: i18n.projectTypeSpriteLab(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_spritelab.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_spritelab.png'
   },
-  'dance': {
+  dance: {
     label: i18n.projectTypeDance(),
-    thumbnail: "/shared/images/fill-70x70/courses/logo_dance.png"
+    thumbnail: '/shared/images/fill-70x70/courses/logo_dance.png'
   }
 };
 
@@ -114,10 +116,10 @@ const styles = {
   fullsize: {
     width: styleConstants['content-width'],
     marginTop: 20,
-    marginBottom: 10,
+    marginBottom: 10
   },
   row: {
-    marginBottom: 10,
+    marginBottom: 10
   },
   tile: {
     width: 214,
@@ -130,7 +132,7 @@ const styles = {
     alignItems: 'center'
   },
   tilePadding: {
-    marginRight: 35,
+    marginRight: 35
   },
   thumbnail: {
     borderTopLeftRadius: 2,
@@ -151,7 +153,7 @@ const styles = {
     paddingBottom: 10,
     fontSize: 14,
     fontFamily: '"Gotham 5r"',
-    color: color.charcoal,
+    color: color.charcoal
   }
 };
 
@@ -161,40 +163,46 @@ class NewProjectButtons extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
-    description: PropTypes.string,
+    description: PropTypes.string
   };
 
   render() {
-    const { description, isRtl, projectTypes } = this.props;
+    const {description, isRtl, projectTypes} = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
 
     return (
       <div style={styles.fullsize}>
         {description && <div style={styles.description}>{description}</div>}
-        {
-          _.chunk(projectTypes, TILES_PER_ROW).map((projectTypesRow, rowIndex) => (
+        {_.chunk(projectTypes, TILES_PER_ROW).map(
+          (projectTypesRow, rowIndex) => (
             <div style={styles.row} key={rowIndex}>
-              {
-                projectTypesRow.map((projectType, index) => (
-                  <a key={index} href={"/projects/" + projectType + "/new"}>
-                    <div style={[styles.tile, index < (TILES_PER_ROW - 1) && styles.tilePadding]}>
-                      <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
-                      <div style={styles.label}>
-                        {PROJECT_INFO[projectType].label}
-                      </div>
+              {projectTypesRow.map((projectType, index) => (
+                <a key={index} href={'/projects/' + projectType + '/new'}>
+                  <div
+                    style={[
+                      styles.tile,
+                      index < TILES_PER_ROW - 1 && styles.tilePadding
+                    ]}
+                  >
+                    <img
+                      style={thumbnailStyle}
+                      src={PROJECT_INFO[projectType].thumbnail}
+                    />
+                    <div style={styles.label}>
+                      {PROJECT_INFO[projectType].label}
                     </div>
-                  </a>
-                ))
-              }
-              <div style={{clear: 'both'}}/>
+                  </div>
+                </a>
+              ))}
+              <div style={{clear: 'both'}} />
             </div>
-          ))
-        }
+          )
+        )}
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(Radium(NewProjectButtons));

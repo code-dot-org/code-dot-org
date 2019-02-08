@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
-import EditSectionForm from "./EditSectionForm";
+import EditSectionForm from './EditSectionForm';
 import PadAndCenter from './PadAndCenter';
 import {isEditingSection} from './teacherSectionsRedux';
 
@@ -13,7 +13,7 @@ import {isEditingSection} from './teacherSectionsRedux';
  */
 class EditSectionDialog extends Component {
   static propTypes = {
-    isOpen: PropTypes.bool.isRequired, // From Redux
+    isOpen: PropTypes.bool.isRequired // From Redux
   };
 
   render() {
@@ -26,7 +26,7 @@ class EditSectionDialog extends Component {
         uncloseable
       >
         <PadAndCenter>
-          <EditSectionForm title={i18n.editSectionDetails()}/>
+          <EditSectionForm title={i18n.editSectionDetails()} />
         </PadAndCenter>
       </BaseDialog>
     );
@@ -34,5 +34,5 @@ class EditSectionDialog extends Component {
 }
 
 export default connect(state => ({
-  isOpen: isEditingSection(state.teacherSections),
+  isOpen: isEditingSection(state.teacherSections)
 }))(EditSectionDialog);

@@ -14,8 +14,9 @@ export default storybook => {
             title="Delete table?"
             body="Are you sure you want to delete the table?"
             buttonText="Delete table"
-            onConfirmDelete={action("delete table")}
+            onConfirmDelete={action('delete table')}
           />
         )
-      }]);
+      }
+    ]);
 };

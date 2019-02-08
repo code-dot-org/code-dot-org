@@ -51,12 +51,11 @@ describe(`Testing promise chains`, () => {
   });
 
   it(`but Promise.then doesn't happen immediately, even after Promise.resolve()`, done => {
-    Promise.resolve()
-        .then(() => {
-          sequence.push('C');
-          expect(sequence).to.deep.equal(['A', 'B', 'C']);
-          done();
-        });
+    Promise.resolve().then(() => {
+      sequence.push('C');
+      expect(sequence).to.deep.equal(['A', 'B', 'C']);
+      done();
+    });
     sequence.push('A');
     clock.tick(0); // Does _not_ cause Promise.then to occur
     sequence.push('B');
@@ -92,64 +91,80 @@ describe(`Testing promise chains`, () => {
 
   it(`But this is not always true`, done => {
     const promiseChainBeingTested = Promise.resolve()
-        .then(() => {
-          sequence.push('B');
-          return new Promise(resolve => setTimeout(() => {
+      .then(() => {
+        sequence.push('B');
+        return new Promise(resolve =>
+          setTimeout(() => {
             sequence.push('D');
             resolve();
-          }, 1));
-        })
-        .then(() => {
-          sequence.push('F');
-        });
+          }, 1)
+        );
+      })
+      .then(() => {
+        sequence.push('F');
+      });
 
     sequence.push('a');
     const testCode = Promise.resolve()
-        .then(() => {
-          sequence.push('c');
-          clock.tick(1);
-          sequence.push('e');
-        })
-        .then(() => {
-          sequence.push('g');
-        })
-        .then(() => {
-          sequence.push('h');
-        });
+      .then(() => {
+        sequence.push('c');
+        clock.tick(1);
+        sequence.push('e');
+      })
+      .then(() => {
+        sequence.push('g');
+      })
+      .then(() => {
+        sequence.push('h');
+      });
 
-    Promise.all([promiseChainBeingTested, testCode]).then(() => {
-      // If then() callbacks occurred in the order of the then() calls (FIFO)
-      // we might expect the sequence:
-      //                               a    B    c    D    e    F    g    h
-      // But instead we get:
-      expect(sequence).to.deep.equal(['a', 'B', 'c', 'D', 'e', 'g', 'F', 'h']);
-      done();
-    }).catch(done);
+    Promise.all([promiseChainBeingTested, testCode])
+      .then(() => {
+        // If then() callbacks occurred in the order of the then() calls (FIFO)
+        // we might expect the sequence:
+        //                               a    B    c    D    e    F    g    h
+        // But instead we get:
+        expect(sequence).to.deep.equal([
+          'a',
+          'B',
+          'c',
+          'D',
+          'e',
+          'g',
+          'F',
+          'h'
+        ]);
+        done();
+      })
+      .catch(done);
   });
 
   it(`By wrapping _real_ setTimeout our test can yield to the promise chain.`, done => {
     Promise.resolve()
-        .then(() => {
-          sequence.push('B');
-        })
-        .then(() => {
-          sequence.push('C');
-          return new Promise(resolve => setTimeout(() => {
+      .then(() => {
+        sequence.push('B');
+      })
+      .then(() => {
+        sequence.push('C');
+        return new Promise(resolve =>
+          setTimeout(() => {
             sequence.push('E');
             resolve();
-          }, 1));
-        })
-        .then(() => {
-          sequence.push('F');
-          return new Promise(resolve => setTimeout(() => {
+          }, 1)
+        );
+      })
+      .then(() => {
+        sequence.push('F');
+        return new Promise(resolve =>
+          setTimeout(() => {
             sequence.push('H');
             resolve();
-          }, 1));
-        })
-        .then(() => {
-          sequence.push('I');
-        });
-
+          }, 1)
+        );
+      })
+      .then(() => {
+        sequence.push('I');
+      });
 
     // This causes more nesting, but otherwise less complicated test code
     // that's somewhat less tied to implementation
@@ -162,7 +177,18 @@ describe(`Testing promise chains`, () => {
         clock.tick(1);
         yieldToPromiseChain(() => {
           sequence.push('j');
-          expect(sequence).to.deep.equal(['a', 'B', 'C', 'd', 'E', 'F', 'g', 'H', 'I', 'j']);
+          expect(sequence).to.deep.equal([
+            'a',
+            'B',
+            'C',
+            'd',
+            'E',
+            'F',
+            'g',
+            'H',
+            'I',
+            'j'
+          ]);
           done();
         });
       });

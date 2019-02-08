@@ -24,7 +24,7 @@ export default class ChangeEmailModal extends React.Component {
     handleCancel: PropTypes.func.isRequired,
     userType: PropTypes.oneOf(['student', 'teacher']).isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
-    currentHashedEmail: PropTypes.string,
+    currentHashedEmail: PropTypes.string
   };
 
   state = {
@@ -32,13 +32,13 @@ export default class ChangeEmailModal extends React.Component {
     values: {
       newEmail: '',
       currentPassword: '',
-      emailOptIn: '',
+      emailOptIn: ''
     },
     serverErrors: {
       newEmail: '',
       currentPassword: '',
-      emailOptIn: '',
-    },
+      emailOptIn: ''
+    }
   };
 
   save = () => {
@@ -50,18 +50,20 @@ export default class ChangeEmailModal extends React.Component {
 
     const {values} = this.state;
     this.setState({saveState: STATE_SAVING});
-    this.props.handleSubmit(values)
-      .catch(this.onSubmitFailure);
+    this.props.handleSubmit(values).catch(this.onSubmitFailure);
   };
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitFailure = (error) => {
+  onSubmitFailure = error => {
     if (error && error.hasOwnProperty('serverErrors')) {
-      this.setState({
-        saveState: STATE_INITIAL,
-        serverErrors: error.serverErrors
-      }, () => this.changeEmailForm.focusOnAnError());
+      this.setState(
+        {
+          saveState: STATE_INITIAL,
+          serverErrors: error.serverErrors
+        },
+        () => this.changeEmailForm.focusOnAnError()
+      );
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
     }
@@ -75,8 +77,10 @@ export default class ChangeEmailModal extends React.Component {
     const {serverErrors} = this.state;
     return {
       newEmail: serverErrors.newEmail || this.getNewEmailValidationError(),
-      currentPassword: serverErrors.currentPassword || this.getCurrentPasswordValidationError(),
-      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError(),
+      currentPassword:
+        serverErrors.currentPassword ||
+        this.getCurrentPasswordValidationError(),
+      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError()
     };
   }
 
@@ -112,10 +116,10 @@ export default class ChangeEmailModal extends React.Component {
     return null;
   };
 
-  onFormChange = (newValues) => {
+  onFormChange = newValues => {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
-    ['newEmail', 'currentPassword', 'emailOptIn'].forEach((fieldName) => {
+    ['newEmail', 'currentPassword', 'emailOptIn'].forEach(fieldName => {
       if (newValues[fieldName] !== oldValues[fieldName]) {
         newServerErrors[fieldName] = undefined;
       }
@@ -139,9 +143,9 @@ export default class ChangeEmailModal extends React.Component {
         uncloseable={STATE_SAVING === saveState}
       >
         <div style={styles.container}>
-          <Header text={i18n.changeEmailModal_title()}/>
+          <Header text={i18n.changeEmailModal_title()} />
           <ChangeEmailForm
-            ref={x => this.changeEmailForm = x}
+            ref={x => (this.changeEmailForm = x)}
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
@@ -158,10 +162,10 @@ export default class ChangeEmailModal extends React.Component {
             disableCancel={STATE_SAVING === saveState}
             tabIndex="2"
           >
-            {(STATE_SAVING === saveState) &&
-              <em>{i18n.saving()}</em>}
-            {(STATE_UNKNOWN_ERROR === saveState) &&
-              <em>{i18n.changeEmailModal_unexpectedError()}</em>}
+            {STATE_SAVING === saveState && <em>{i18n.saving()}</em>}
+            {STATE_UNKNOWN_ERROR === saveState && (
+              <em>{i18n.changeEmailModal_unexpectedError()}</em>
+            )}
           </ConfirmCancelFooter>
         </div>
       </BaseDialog>
@@ -172,6 +176,6 @@ export default class ChangeEmailModal extends React.Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal,
+    color: color.charcoal
   }
 };

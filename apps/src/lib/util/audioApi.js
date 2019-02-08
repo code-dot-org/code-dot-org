@@ -1,9 +1,6 @@
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {
-  apiValidateType,
-  OPTIONAL
-} from './javascriptMode';
+import {apiValidateType, OPTIONAL} from './javascriptMode';
 import Sounds from '../../Sounds';
 
 /**
@@ -21,7 +18,6 @@ export function injectExecuteCmd(fn) {
  * Must be mixed in to the app's command list (see applab/commands.js)
  */
 export const commands = {
-
   /**
    * Start playing a sound.
    * @param {string} opts.url The sound to play.
@@ -39,8 +35,22 @@ export const commands = {
   playSound(opts) {
     apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
     apiValidateType(opts, 'playSound', 'loop', opts.loop, 'boolean', OPTIONAL);
-    apiValidateType(opts, 'playSound', 'callback', opts.callback, 'function', OPTIONAL);
-    apiValidateType(opts, 'playSound', 'onEnded', opts.onEnded, 'function', OPTIONAL);
+    apiValidateType(
+      opts,
+      'playSound',
+      'callback',
+      opts.callback,
+      'function',
+      OPTIONAL
+    );
+    apiValidateType(
+      opts,
+      'playSound',
+      'onEnded',
+      opts.onEnded,
+      'function',
+      OPTIONAL
+    );
 
     const url = assetPrefix.fixPath(opts.url);
     if (Sounds.getSingleton().isPlayingURL(url)) {
@@ -80,7 +90,7 @@ export const commands = {
       forceHTML5: forceHTML5,
       allowHTML5Mobile: true,
       callback: opts.callback,
-      onEnded: opts.onEnded,
+      onEnded: opts.onEnded
     });
   },
 
@@ -99,7 +109,7 @@ export const commands = {
     } else {
       Sounds.getSingleton().stopAllAudio();
     }
-  },
+  }
 };
 
 /**
@@ -107,8 +117,8 @@ export const commands = {
  * arguments converted to an options object.
  */
 export const executors = {
-  playSound: (url, loop = false, callback) => executeCmd(null, 'playSound', {url, loop, callback}),
-  stopSound: (url) => executeCmd(null, 'stopSound', {url})
+  playSound: (url, loop = false, callback) =>
+    executeCmd(null, 'playSound', {url, loop, callback}),
+  stopSound: url => executeCmd(null, 'stopSound', {url})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?
-

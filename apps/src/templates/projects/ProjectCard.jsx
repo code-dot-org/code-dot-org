@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "../../util/color";
-import i18n from "@cdo/locale";
+import color from '../../util/color';
+import i18n from '@cdo/locale';
 import $ from 'jquery';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
@@ -61,9 +61,9 @@ const styles = {
     overflow: 'hidden'
   },
   fullThumbnail: {
-    height: 214,
+    height: 214
   },
-  image:{
+  image: {
     flexShrink: 0,
     width: '100%',
     weight: '100%'
@@ -81,7 +81,7 @@ export default class ProjectCard extends React.Component {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
-    isDetailView: PropTypes.bool,
+    isDetailView: PropTypes.bool
   };
 
   getLastModifiedTimestamp(timestamp) {
@@ -98,24 +98,27 @@ export default class ProjectCard extends React.Component {
   }
 
   render() {
-    const { projectData, currentGallery, isDetailView } = this.props;
-    const { type, channel } = this.props.projectData;
+    const {projectData, currentGallery, isDetailView} = this.props;
+    const {type, channel} = this.props.projectData;
     const isPersonalGallery = currentGallery === 'personal';
     const isPublicGallery = currentGallery === 'public';
-    const url = isPersonalGallery ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
+    const url = isPersonalGallery
+      ? `/projects/${type}/${channel}/edit`
+      : `/projects/${type}/${channel}`;
 
     const thumbnailStyle = styles.thumbnail;
     if (this.props.showFullThumbnail) {
       Object.assign(thumbnailStyle, styles.fullThumbnail);
     }
 
-    const shouldShowPublishedAt = isPublicGallery && isDetailView && projectData.publishedAt;
+    const shouldShowPublishedAt =
+      isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
 
     return (
       <div className="project_card">
         <div style={styles.card}>
-          <div style={thumbnailStyle} >
+          <div style={thumbnailStyle}>
             <a
               href={url}
               style={{width: '100%'}}

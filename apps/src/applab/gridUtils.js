@@ -53,8 +53,10 @@ export function isMouseEventInBounds(mouseEvent, container) {
   const clientRect = container[0].getBoundingClientRect();
 
   return (
-    clientX > clientRect.left && clientX < clientRect.right &&
-    clientY > clientRect.top && clientY < clientRect.bottom
+    clientX > clientRect.left &&
+    clientX < clientRect.right &&
+    clientY > clientRect.top &&
+    clientY < clientRect.bottom
   );
 }
 
@@ -96,7 +98,7 @@ export function draggedElementDropPoint() {
  */
 export function snapToGridSize(coordinate) {
   const halfGrid = GRID_SIZE / 2;
-  return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
+  return coordinate - (((coordinate + halfGrid) % GRID_SIZE) - halfGrid);
 }
 
 export {isPointInBounds};

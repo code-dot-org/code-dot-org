@@ -8,14 +8,12 @@ export default class DateConfirm extends FormComponent {
   render() {
     let followup;
     if (this.props.data.confirmTeacherconDate === 'No') {
-      followup = (
-        this.buildFieldGroup({
-          name: "declineTeacherconNotes",
-          componentClass: "textarea",
-          label: "Why Not?",
-          required: true,
-        })
-      );
+      followup = this.buildFieldGroup({
+        name: 'declineTeacherconNotes',
+        componentClass: 'textarea',
+        label: 'Why Not?',
+        required: true
+      });
     }
 
     const label = `
@@ -26,9 +24,9 @@ export default class DateConfirm extends FormComponent {
     return (
       <FormGroup>
         {this.buildButtonsFromOptions({
-          name: "confirmTeacherconDate",
+          name: 'confirmTeacherconDate',
           label: label,
-          type: "radio"
+          type: 'radio'
         })}
         {followup}
       </FormGroup>
@@ -39,10 +37,10 @@ export default class DateConfirm extends FormComponent {
 DateConfirm.propTypes = {
   ...FormComponent.propTypes,
   teacherconLocation: PropTypes.string.isRequired,
-  teacherconDates: PropTypes.string.isRequired,
+  teacherconDates: PropTypes.string.isRequired
 };
 
 DateConfirm.associatedFields = [
-  "confirmTeacherconDate",
-  "declineTeacherconNotes",
+  'confirmTeacherconDate',
+  'declineTeacherconNotes'
 ];
