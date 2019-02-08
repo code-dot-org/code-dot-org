@@ -12,23 +12,21 @@ export const importableScreenShape = PropTypes.shape({
   assetsToImport: PropTypes.arrayOf(PropTypes.string).isRequired,
   conflictingIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   html: PropTypes.string.isRequired,
-  canBeImported: PropTypes.bool.isRequired,
+  canBeImported: PropTypes.bool.isRequired
 });
 
 export const importableAssetShape = PropTypes.shape({
   filename: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  willReplace: PropTypes.bool.isRequired,
+  willReplace: PropTypes.bool.isRequired
 });
 
 export const importableProjectShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   screens: PropTypes.arrayOf(importableScreenShape).isRequired,
-  otherAssets: PropTypes.arrayOf(importableAssetShape).isRequired,
+  otherAssets: PropTypes.arrayOf(importableAssetShape).isRequired
 });
-
-
 
 /**
  * Helper function that takes a dom node and returns an object that conforms
@@ -67,7 +65,6 @@ function getImportableScreen(dom) {
     return true;
   });
 
-
   return {
     id,
     willReplace,
@@ -75,7 +72,7 @@ function getImportableScreen(dom) {
     assetsToImport,
     conflictingIds,
     html: dom.outerHTML,
-    canBeImported: conflictingIds.length === 0,
+    canBeImported: conflictingIds.length === 0
   };
 }
 
@@ -97,25 +94,25 @@ export function getImportableProject(project) {
       screens.push(getImportableScreen(screen));
     });
   const usedAssets = {};
-  screens.forEach(
-    screen => screen.assetsToImport.concat(screen.assetsToReplace).forEach(
-      asset => usedAssets[asset] = true
-    )
+  screens.forEach(screen =>
+    screen.assetsToImport
+      .concat(screen.assetsToReplace)
+      .forEach(asset => (usedAssets[asset] = true))
   );
   const existingAssetNames = {};
-  existingAssets.forEach(asset => existingAssetNames[asset.filename] = true);
+  existingAssets.forEach(asset => (existingAssetNames[asset.filename] = true));
   var otherAssets = assets
     .filter(asset => !usedAssets[asset.filename])
     .map(asset => ({
       filename: asset.filename,
       category: asset.category,
-      willReplace: !!existingAssetNames[asset.filename],
+      willReplace: !!existingAssetNames[asset.filename]
     }));
   return {
     id: channel.id,
     name: channel.name,
     screens,
-    otherAssets,
+    otherAssets
   };
 }
 
@@ -128,11 +125,15 @@ export function getImportableProject(project) {
 export function importScreensAndAssets(projectId, screens, assets) {
   return new Promise((resolve, reject) => {
     var allAssetsToCopy = {};
-    assets.forEach(asset => allAssetsToCopy[asset.filename] = true);
+    assets.forEach(asset => (allAssetsToCopy[asset.filename] = true));
 
     screens.forEach(importableScreen => {
-      importableScreen.assetsToReplace.forEach(asset => allAssetsToCopy[asset] = true);
-      importableScreen.assetsToImport.forEach(asset => allAssetsToCopy[asset] = true);
+      importableScreen.assetsToReplace.forEach(
+        asset => (allAssetsToCopy[asset] = true)
+      );
+      importableScreen.assetsToImport.forEach(
+        asset => (allAssetsToCopy[asset] = true)
+      );
     });
 
     function finishImporting(xhr) {
@@ -144,7 +145,9 @@ export function importScreensAndAssets(projectId, screens, assets) {
         // If we delete it first, then design mode will try to load the
         // "default" screen. If this screen we are deleting is the only screen
         // then loading the "default" screen will create a new one!
-        var deleteAfterAdd = elementUtils.getPrefixedElementById(importableScreen.id);
+        var deleteAfterAdd = elementUtils.getPrefixedElementById(
+          importableScreen.id
+        );
         designMode.attachElement(
           designMode.parseScreenFromLevelHtml(
             newScreen,
@@ -163,15 +166,10 @@ export function importScreensAndAssets(projectId, screens, assets) {
 
     allAssetsToCopy = Object.keys(allAssetsToCopy);
     if (allAssetsToCopy.length > 0) {
-      assetsApi.copyAssets(
-        projectId,
-        allAssetsToCopy,
-        finishImporting,
-        xhr => {
-          console.error("Failed to copy assets:", xhr);
-          reject(xhr);
-        }
-      );
+      assetsApi.copyAssets(projectId, allAssetsToCopy, finishImporting, xhr => {
+        console.error('Failed to copy assets:', xhr);
+        reject(xhr);
+      });
     } else {
       finishImporting();
     }

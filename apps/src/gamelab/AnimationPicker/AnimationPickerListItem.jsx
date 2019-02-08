@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Radium from 'radium';
-import color from "../../util/color";
+import color from '../../util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
@@ -70,33 +70,40 @@ class AnimationPickerListItem extends React.Component {
       this.props.icon && styles.thumbnailIcon
     ];
 
-    const labelStyle = [
-      styles.label,
-      this.props.icon && styles.labelIcon
-    ];
+    const labelStyle = [styles.label, this.props.icon && styles.labelIcon];
 
-    const iconImageSrc = this.props.category ? `/blockly/media/gamelab/animation-previews/${this.props.category}.png` : '';
+    const iconImageSrc = this.props.category
+      ? `/blockly/media/gamelab/animation-previews/${this.props.category}.png`
+      : '';
 
     return (
-      <div style={styles.root} onClick={this.props.onClick} className="uitest-animation-picker-item">
+      <div
+        style={styles.root}
+        onClick={this.props.onClick}
+        className="uitest-animation-picker-item"
+      >
         <div style={thumbnailStyle}>
-          {this.props.animationProps &&
-              <AnimationPreview
-                animationProps={this.props.animationProps}
-                sourceUrl={this.props.animationProps.sourceUrl}
-                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-                playBehavior={!this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null}
-              />
-          }
-          {this.props.icon && <i className={"fa fa-" + this.props.icon} />}
-          {this.props.category &&
-            <img className={this.props.category} style={styles.categoryImage} src={iconImageSrc}/>
-          }
+          {this.props.animationProps && (
+            <AnimationPreview
+              animationProps={this.props.animationProps}
+              sourceUrl={this.props.animationProps.sourceUrl}
+              width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+              height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+              playBehavior={
+                !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
+              }
+            />
+          )}
+          {this.props.icon && <i className={'fa fa-' + this.props.icon} />}
+          {this.props.category && (
+            <img
+              className={this.props.category}
+              style={styles.categoryImage}
+              src={iconImageSrc}
+            />
+          )}
         </div>
-        <div style={labelStyle}>
-          {this.props.label}
-        </div>
+        <div style={labelStyle}>{this.props.label}</div>
       </div>
     );
   }

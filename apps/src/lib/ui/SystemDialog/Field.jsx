@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
-import {createUuid} from "../../../utils";
+import {createUuid} from '../../../utils';
 
 /**
  * Field wrapper for a "System" dialog style.
@@ -18,7 +18,7 @@ export default class Field extends React.Component {
     labelDetails: PropTypes.node,
     error: PropTypes.any,
     children: PropTypes.element.isRequired,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   constructor(props) {
@@ -32,35 +32,27 @@ export default class Field extends React.Component {
       <div
         style={{
           marginBottom: 15,
-          ...style,
+          ...style
         }}
       >
-        {(label || labelDetails) &&
-        <label
-          htmlFor={this.uniqueId}
-          style={{
-            display: 'block',
-            color: color.charcoal,
-          }}
-        >
-          {label &&
-            <span style={{fontWeight: 'bold', marginRight: '1em'}}>
-              {label}
-            </span>
-          }
-          {labelDetails &&
-            <span>
-              {labelDetails}
-            </span>
-          }
-        </label>
-        }
+        {(label || labelDetails) && (
+          <label
+            htmlFor={this.uniqueId}
+            style={{
+              display: 'block',
+              color: color.charcoal
+            }}
+          >
+            {label && (
+              <span style={{fontWeight: 'bold', marginRight: '1em'}}>
+                {label}
+              </span>
+            )}
+            {labelDetails && <span>{labelDetails}</span>}
+          </label>
+        )}
         {React.cloneElement(children, {id: this.uniqueId})}
-        {error &&
-          <FieldError>
-            {error}
-          </FieldError>
-        }
+        {error && <FieldError>{error}</FieldError>}
       </div>
     );
   }
@@ -70,11 +62,10 @@ const FieldError = ({children}) => (
   <div
     style={{
       color: color.red,
-      fontStyle: 'italic',
+      fontStyle: 'italic'
     }}
   >
     {children}
   </div>
 );
 FieldError.propTypes = {children: PropTypes.string};
-

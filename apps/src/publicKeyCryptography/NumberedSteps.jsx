@@ -37,9 +37,11 @@ export default function NumberedSteps({start = 1, children}) {
     <table>
       <tbody>
         {React.Children.map(children, (child, index) =>
-          React.cloneElement(child, {index: index + (start - 1)}))}
+          React.cloneElement(child, {index: index + (start - 1)})
+        )}
       </tbody>
-    </table>);
+    </table>
+  );
 }
 NumberedSteps.propTypes = {
   start: PropTypes.number,
@@ -52,16 +54,19 @@ NumberedSteps.propTypes = {
  * be faded out.
  */
 export function Step(props) {
-  const isStepEnabled = props.hasOwnProperty('requires') ? props.requires : true;
+  const isStepEnabled = props.hasOwnProperty('requires')
+    ? props.requires
+    : true;
   const trStyle = {
     transition: 'opacity 0.5s',
     opacity: isStepEnabled ? 1 : 0.2
   };
   return (
     <tr style={trStyle}>
-      <td style={style.td}>{(props.index + 1) + ')'}</td>
+      <td style={style.td}>{props.index + 1 + ')'}</td>
       <td style={style.td}>{props.children}</td>
-    </tr>);
+    </tr>
+  );
 }
 Step.propTypes = {
   index: PropTypes.number,
@@ -76,32 +81,20 @@ Step.defaultProps = {
  * A styled list item for use within a step.
  */
 export function SubStep({text}) {
-  return (
-    <li style={style.subStep}>
-      {text}
-    </li>
-  );
+  return <li style={style.subStep}>{text}</li>;
 }
 SubStep.propTypes = {
   text: PropTypes.string.isRequired
 };
 
 export function Heading({text}) {
-  return (
-    <div style={style.heading}>
-      {text}
-    </div>
-  );
+  return <div style={style.heading}>{text}</div>;
 }
 Heading.propTypes = {
   text: PropTypes.string.isRequired
 };
 
 export function Subheading({text}) {
-  return (
-    <div style={style.subheading}>
-      {text}
-    </div>
-  );
+  return <div style={style.subheading}>{text}</div>;
 }
 Subheading.propTypes = {...Heading.propTypes};

@@ -1,5 +1,8 @@
 import React from 'react';
-import {LocalClassActionBlock, AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
+import {
+  LocalClassActionBlock,
+  AdministratorResourcesActionBlock
+} from './TwoColumnActionBlock';
 
 export default storybook => {
   return storybook
@@ -9,20 +12,12 @@ export default storybook => {
       {
         name: 'Local Class Action Block',
         description: 'Example LocalClassActionBlock',
-        story: () => (
-          <LocalClassActionBlock
-            showHeading={true}
-          />
-        )
+        story: () => <LocalClassActionBlock showHeading={true} />
       },
       {
         name: 'Administrator Resources Action Block',
         description: 'Example AdministratorResourcesActionBlock',
-        story: () => (
-          <AdministratorResourcesActionBlock
-            showHeading={true}
-          />
-        )
+        story: () => <AdministratorResourcesActionBlock showHeading={true} />
       }
     ]);
 };

@@ -24,18 +24,18 @@ class PeerReviewLinkSection extends React.Component {
   render() {
     return (
       <ul className="fa-ul">
-        {
-          this.props.reviews.map((submission, i) => {
-            return (
-              <li key={i}>
-                <FontAwesome icon={`${this.getIconForStatus(submission[1])} fa-li`}/>
-                <a key={i} href={`/peer_reviews/${submission[0]}`}>
-                  Submission
-                </a>
-              </li>
-            );
-          })
-        }
+        {this.props.reviews.map((submission, i) => {
+          return (
+            <li key={i}>
+              <FontAwesome
+                icon={`${this.getIconForStatus(submission[1])} fa-li`}
+              />
+              <a key={i} href={`/peer_reviews/${submission[0]}`}>
+                Submission
+              </a>
+            </li>
+          );
+        })}
       </ul>
     );
   }

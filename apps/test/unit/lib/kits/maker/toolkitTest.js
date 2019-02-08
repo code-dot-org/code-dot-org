@@ -1,6 +1,11 @@
 /** @file Tests for toolkit.js - Maker's main export */
 import {expect} from '../../../../util/configuredChai';
-import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
 import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
 import {reducer, isEnabled, isAvailable} from '@cdo/apps/lib/kits/maker/redux';
 import * as dropletConfig from '@cdo/apps/lib/kits/maker/dropletConfig';
@@ -55,8 +60,10 @@ describe('maker/toolkit.js', () => {
 
     it('throws if maker is not available', () => {
       expect(isAvailable(getStore().getState())).to.be.false;
-      expect(() => maker.enable()).to.throw(MakerError,
-          'Maker cannot be enabled: Its reducer was not registered.');
+      expect(() => maker.enable()).to.throw(
+        MakerError,
+        'Maker cannot be enabled: Its reducer was not registered.'
+      );
     });
 
     it('enables maker if it was not enabled', () => {

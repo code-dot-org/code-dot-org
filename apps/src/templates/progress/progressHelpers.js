@@ -1,7 +1,7 @@
-import { fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
+import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -26,7 +26,11 @@ export function lessonIsVisible(lesson, state, viewAs) {
   const hiddenStageState = state.hiddenStage;
   const sectionId = state.teacherSections.selectedSectionId;
 
-  const isHidden = isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
+  const isHidden = isStageHiddenForSection(
+    hiddenStageState,
+    sectionId,
+    lesson.id
+  );
   return !isHidden || viewAs === ViewType.Teacher;
 }
 
@@ -60,8 +64,10 @@ export function stageLocked(levels) {
   // Given this, we should be able to look at the last level in our collection
   // to determine whether the LG (and thus the stage) should be considered locked.
   const level = levels[levels.length - 1];
-  return level.status === LevelStatus.locked ||
-    (level.kind === 'assessment' && level.status === 'submitted');
+  return (
+    level.status === LevelStatus.locked ||
+    (level.kind === 'assessment' && level.status === 'submitted')
+  );
 }
 
 /**
@@ -101,9 +107,9 @@ export function summarizeProgressInStage(levelsWithStatus) {
     completed: 0,
     imperfect: 0,
     incomplete: 0,
-    attempted: 0,
+    attempted: 0
   };
-  for (let i = 0; i <levelsWithStatus.length; i++) {
+  for (let i = 0; i < levelsWithStatus.length; i++) {
     const status = levelsWithStatus[i].status;
     switch (status) {
       case LevelStatus.perfect:
@@ -125,7 +131,6 @@ export function summarizeProgressInStage(levelsWithStatus) {
       default:
         statusCounts.incomplete = statusCounts.incomplete + 1;
     }
-
   }
   return statusCounts;
 }
@@ -134,7 +139,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This filters to the parts our views care about.
  */
-export const processedLevel = (level) => {
+export const processedLevel = level => {
   return {
     url: level.url,
     name: level.name,
@@ -143,6 +148,6 @@ export const processedLevel = (level) => {
     icon: level.icon,
     isUnplugged: level.kind === LevelKind.unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
-    isConceptLevel: level.is_concept_level,
+    isConceptLevel: level.is_concept_level
   };
 };

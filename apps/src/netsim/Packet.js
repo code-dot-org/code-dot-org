@@ -13,16 +13,19 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {string} binary
  * @constructor
  */
-var Packet = module.exports = function (formatSpec, binary) {
+var Packet = (module.exports = function(formatSpec, binary) {
   var level = NetSimGlobals.getLevelConfig();
 
   /** @type {Packet.Encoder} */
-  this.encoder = new Packet.Encoder(level.addressFormat,
-      level.packetCountBitWidth, formatSpec);
+  this.encoder = new Packet.Encoder(
+    level.addressFormat,
+    level.packetCountBitWidth,
+    formatSpec
+  );
 
   /** @type {string} of binary content */
   this.binary = binary;
-};
+});
 
 /**
  * Possible packet header fields.  Values to this enum become keys
@@ -43,9 +46,11 @@ Packet.HeaderType = {
  * @param {Packet.HeaderType} headerType
  * @returns {boolean}
  */
-Packet.isAddressField = function (headerType) {
-  return headerType === Packet.HeaderType.TO_ADDRESS ||
-      headerType === Packet.HeaderType.FROM_ADDRESS;
+Packet.isAddressField = function(headerType) {
+  return (
+    headerType === Packet.HeaderType.TO_ADDRESS ||
+    headerType === Packet.HeaderType.FROM_ADDRESS
+  );
 };
 
 /**
@@ -53,16 +58,18 @@ Packet.isAddressField = function (headerType) {
  * @param {Packet.HeaderType} headerType
  * @returns {boolean}
  */
-Packet.isPacketField = function (headerType) {
-  return headerType === Packet.HeaderType.PACKET_INDEX ||
-      headerType === Packet.HeaderType.PACKET_COUNT;
+Packet.isPacketField = function(headerType) {
+  return (
+    headerType === Packet.HeaderType.PACKET_INDEX ||
+    headerType === Packet.HeaderType.PACKET_COUNT
+  );
 };
 
 /**
  * @param {Packet.HeaderType} headerType
  * @returns {string} of binary content
  */
-Packet.prototype.getHeaderAsBinary = function (headerType) {
+Packet.prototype.getHeaderAsBinary = function(headerType) {
   return this.encoder.getHeader(headerType, this.binary);
 };
 
@@ -70,7 +77,7 @@ Packet.prototype.getHeaderAsBinary = function (headerType) {
  * @param {Packet.HeaderType} headerType
  * @returns {number}
  */
-Packet.prototype.getHeaderAsInt = function (headerType) {
+Packet.prototype.getHeaderAsInt = function(headerType) {
   return this.encoder.getHeaderAsInt(headerType, this.binary);
 };
 
@@ -78,14 +85,14 @@ Packet.prototype.getHeaderAsInt = function (headerType) {
  * @param {Packet.HeaderType} headerType
  * @returns {string}
  */
-Packet.prototype.getHeaderAsAddressString = function (headerType) {
+Packet.prototype.getHeaderAsAddressString = function(headerType) {
   return this.encoder.getHeaderAsAddressString(headerType, this.binary);
 };
 
 /**
  * @returns {string} binary content
  */
-Packet.prototype.getBodyAsBinary = function () {
+Packet.prototype.getBodyAsBinary = function() {
   return this.encoder.getBody(this.binary);
 };
 
@@ -93,7 +100,7 @@ Packet.prototype.getBodyAsBinary = function () {
  * @param {number} bitsPerChar
  * @returns {string} ascii content
  */
-Packet.prototype.getBodyAsAscii = function (bitsPerChar) {
+Packet.prototype.getBodyAsAscii = function(bitsPerChar) {
   return this.encoder.getBodyAsAscii(this.binary, bitsPerChar);
 };
 
@@ -109,7 +116,7 @@ Packet.prototype.getBodyAsAscii = function (bitsPerChar) {
  *        bits is the length of the field.
  * @constructor
  */
-Packet.Encoder = function (addressFormat, packetCountBitWidth, headerSpec) {
+Packet.Encoder = function(addressFormat, packetCountBitWidth, headerSpec) {
   /** @type {string} */
   this.addressFormat_ = addressFormat;
 
@@ -128,8 +135,8 @@ Packet.Encoder = function (addressFormat, packetCountBitWidth, headerSpec) {
  * @param {AddressHeaderFormat} addressFormat
  * @private
  */
-Packet.Encoder.prototype.calculateBitWidth = function (addressFormat) {
-  return addressFormat.split(/\D+/).reduce(function (prev, cur) {
+Packet.Encoder.prototype.calculateBitWidth = function(addressFormat) {
+  return addressFormat.split(/\D+/).reduce(function(prev, cur) {
     return prev + (parseInt(cur, 10) || 0);
   }, 0);
 };
@@ -138,7 +145,7 @@ Packet.Encoder.prototype.calculateBitWidth = function (addressFormat) {
  * Verify that the configured format specification describes a valid format that
  * can be used by the Packet.Encoder object.
  */
-Packet.Encoder.prototype.validateSpec = function () {
+Packet.Encoder.prototype.validateSpec = function() {
   var keyCache = {};
 
   for (var i = 0; i < this.headerSpec_.length; i++) {
@@ -146,22 +153,28 @@ Packet.Encoder.prototype.validateSpec = function () {
     var isPacketField = Packet.isPacketField(this.headerSpec_[i]);
 
     if (isAddressField && this.addressBitWidth_ === 0) {
-      throw new Error("Invalid packet format: Includes an address field but " +
-        " address format is invalid.");
+      throw new Error(
+        'Invalid packet format: Includes an address field but ' +
+          ' address format is invalid.'
+      );
     }
 
     if (isPacketField && this.packetCountBitWidth_ === 0) {
-      throw new Error("Invalid packet format: Includes a packet count field " +
-          " but packet field bit width is zero");
+      throw new Error(
+        'Invalid packet format: Includes a packet count field ' +
+          ' but packet field bit width is zero'
+      );
     }
 
     if (!isAddressField && !isPacketField) {
-      throw new Error("Invalid packet format: Unrecognized packet header field " +
-          this.headerSpec_[i]);
+      throw new Error(
+        'Invalid packet format: Unrecognized packet header field ' +
+          this.headerSpec_[i]
+      );
     }
 
     if (keyCache.hasOwnProperty(this.headerSpec_[i])) {
-      throw new Error("Invalid packet format: Field keys must be unique.");
+      throw new Error('Invalid packet format: Field keys must be unique.');
     } else {
       keyCache[this.headerSpec_[i]] = 'used';
     }
@@ -176,8 +189,9 @@ Packet.Encoder.prototype.validateSpec = function () {
  * @returns {string} binary string value for header field
  * @throws when requested key is not in the configured packet spec
  */
-Packet.Encoder.prototype.getHeader = function (key, binary) {
-  var ruleIndex = 0, binaryIndex = 0;
+Packet.Encoder.prototype.getHeader = function(key, binary) {
+  var ruleIndex = 0,
+    binaryIndex = 0;
 
   // Strip whitespace so we don't worry about being passed formatted binary
   binary = DataConverters.minifyBinary(binary);
@@ -211,7 +225,7 @@ Packet.Encoder.prototype.getHeader = function (key, binary) {
  * @param {string} binary - entire packet as a binary string
  * @returns {number} - requested field, interpreted as an int.
  */
-Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
+Packet.Encoder.prototype.getHeaderAsInt = function(key, binary) {
   return DataConverters.binaryToInt(this.getHeader(key, binary));
 };
 
@@ -222,9 +236,11 @@ Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
  * @param {string} binary for whole packet
  * @returns {string}
  */
-Packet.Encoder.prototype.getHeaderAsAddressString = function (key, binary) {
+Packet.Encoder.prototype.getHeaderAsAddressString = function(key, binary) {
   return DataConverters.binaryToAddressString(
-      this.getHeader(key, binary), this.addressFormat_);
+    this.getHeader(key, binary),
+    this.addressFormat_
+  );
 };
 
 /**
@@ -233,18 +249,20 @@ Packet.Encoder.prototype.getHeaderAsAddressString = function (key, binary) {
  * @param {string} binary - entire packet as a binary string
  * @returns {string} packet body binary string
  */
-Packet.Encoder.prototype.getBody = function (binary) {
-  return DataConverters.minifyBinary(binary)
-      .slice(this.getHeaderLength());
+Packet.Encoder.prototype.getBody = function(binary) {
+  return DataConverters.minifyBinary(binary).slice(this.getHeaderLength());
 };
 
 /**
  * @returns {number} How many bits the header takes up
  */
-Packet.Encoder.prototype.getHeaderLength = function () {
-  return this.headerSpec_.reduce(function (prev, cur) {
-    return prev + this.getFieldBitWidth(cur);
-  }.bind(this), 0);
+Packet.Encoder.prototype.getHeaderLength = function() {
+  return this.headerSpec_.reduce(
+    function(prev, cur) {
+      return prev + this.getFieldBitWidth(cur);
+    }.bind(this),
+    0
+  );
 };
 
 /**
@@ -254,7 +272,7 @@ Packet.Encoder.prototype.getHeaderLength = function () {
  * @param {number} bitsPerChar - bits to represent as a single character,
  *        recommended to use 8 for normal ASCII.
  */
-Packet.Encoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
+Packet.Encoder.prototype.getBodyAsAscii = function(binary, bitsPerChar) {
   return DataConverters.binaryToAscii(this.getBody(binary), bitsPerChar);
 };
 
@@ -262,7 +280,7 @@ Packet.Encoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
  * @param {Packet.HeaderType} headerType
  * @returns {number} how many bits that field should take in the packet header
  */
-Packet.Encoder.prototype.getFieldBitWidth = function (headerType) {
+Packet.Encoder.prototype.getFieldBitWidth = function(headerType) {
   if (Packet.isAddressField(headerType)) {
     return this.addressBitWidth_;
   }
@@ -272,7 +290,7 @@ Packet.Encoder.prototype.getFieldBitWidth = function (headerType) {
   }
 
   // Should never get here.
-  throw new Error("Unable to select a bit-width for field " + headerType);
+  throw new Error('Unable to select a bit-width for field ' + headerType);
 };
 
 /**
@@ -283,16 +301,20 @@ Packet.Encoder.prototype.getFieldBitWidth = function (headerType) {
  * output.
  * @param {Object} headers - with number values
  */
-Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
+Packet.Encoder.prototype.makeBinaryHeaders = function(headers) {
   var binaryHeaders = {};
-  this.headerSpec_.forEach(function (headerField) {
+  this.headerSpec_.forEach(function(headerField) {
     if (headers.hasOwnProperty(headerField)) {
       // Convert differently for address and packet fields?
       if (Packet.isAddressField(headerField)) {
-        binaryHeaders[headerField] = this.addressStringToBinary(headers[headerField]);
+        binaryHeaders[headerField] = this.addressStringToBinary(
+          headers[headerField]
+        );
       } else {
         binaryHeaders[headerField] = DataConverters.intToBinary(
-            headers[headerField], this.getFieldBitWidth(headerField));
+          headers[headerField],
+          this.getFieldBitWidth(headerField)
+        );
       }
     }
   }, this);
@@ -305,7 +327,7 @@ Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
  * @param {string} address
  * @returns {string} binary representation
  */
-Packet.Encoder.prototype.addressStringToBinary = function (address) {
+Packet.Encoder.prototype.addressStringToBinary = function(address) {
   return DataConverters.addressStringToBinary(address, this.addressFormat_);
 };
 
@@ -323,17 +345,18 @@ Packet.Encoder.prototype.addressStringToBinary = function (address) {
  * @returns {string} binary string of provided data, conforming to configured
  *          packet format.
  */
-Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
+Packet.Encoder.prototype.concatenateBinary = function(binaryHeaders, body) {
   var parts = [];
 
-  this.headerSpec_.forEach(function (fieldSpec) {
+  this.headerSpec_.forEach(function(fieldSpec) {
     var fieldWidth = this.getFieldBitWidth(fieldSpec);
 
     // Get header value from provided headers, if it exists.
     // If not, we'll start with an empty string and pad it to the correct
     // length, below.
-    var fieldBits = binaryHeaders.hasOwnProperty(fieldSpec) ?
-        binaryHeaders[fieldSpec] : '';
+    var fieldBits = binaryHeaders.hasOwnProperty(fieldSpec)
+      ? binaryHeaders[fieldSpec]
+      : '';
 
     // Right-truncate to the desired size
     fieldBits = fieldBits.slice(0, fieldWidth);

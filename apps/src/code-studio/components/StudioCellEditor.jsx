@@ -23,11 +23,36 @@ import CellEditor from './CellEditor';
 // but that will likely require a bit of a refactor in the way we handle skins,
 // and is unjustifiable for now, since the Playlab-skinned levels are currently
 // the only ones we edit with this interface.
-const avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
-    "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
-    "ghost", "monster", "robot", "unicorn", "zombie", "knight",
-    "ninja", "pirate", "caveboy", "cavegirl", "princess", "spacebot",
-    "soccergirl", "soccerboy", "tennisgirl", "tennisboy"];
+const avatarList = [
+  'dog',
+  'cat',
+  'penguin',
+  'dinosaur',
+  'octopus',
+  'witch',
+  'bat',
+  'bird',
+  'dragon',
+  'squirrel',
+  'wizard',
+  'alien',
+  'ghost',
+  'monster',
+  'robot',
+  'unicorn',
+  'zombie',
+  'knight',
+  'ninja',
+  'pirate',
+  'caveboy',
+  'cavegirl',
+  'princess',
+  'spacebot',
+  'soccergirl',
+  'soccerboy',
+  'tennisgirl',
+  'tennisboy'
+];
 
 // Use a subset of studio SquareTypes for the tiletypes, since many of them are
 // not used or are used only by non-levelbuilder-editable implementations.
@@ -35,18 +60,17 @@ const avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
 const usedSquareTypes = {
   OPEN: SquareType.OPEN,
   GOAL: SquareType.SPRITEFINISH,
-  START: SquareType.SPRITESTART,
+  START: SquareType.SPRITESTART
 };
 
 export default class StudioCellEditor extends CellEditor {
-
   /**
    * @override
    */
   getSelectFieldNames() {
-    return super.getSelectFieldNames().concat([
-      'speed', 'size', 'direction', 'emotion', 'sprite'
-    ]);
+    return super
+      .getSelectFieldNames()
+      .concat(['speed', 'size', 'direction', 'emotion', 'sprite']);
   }
 
   /**
@@ -57,49 +81,89 @@ export default class StudioCellEditor extends CellEditor {
       <div>
         {super.renderTileTypes(values, usedSquareTypes)}
 
-        {(values.tileType === SquareType.SPRITESTART) &&
+        {values.tileType === SquareType.SPRITESTART && (
           <div>
             <label htmlFor="sprite">Sprite:</label>
-            <select name="sprite" value={values.sprite} onChange={this.handleChange}>
+            <select
+              name="sprite"
+              value={values.sprite}
+              onChange={this.handleChange}
+            >
               <option value="undefined">default</option>
               {avatarList.map((sprite, i) => {
-                return <option key={sprite} value={i}>{sprite}</option>;
+                return (
+                  <option key={sprite} value={i}>
+                    {sprite}
+                  </option>
+                );
               })}
             </select>
 
             <label htmlFor="speed">Speed: </label>
-            <select name="speed" value={values.speed} onChange={this.handleChange}>
+            <select
+              name="speed"
+              value={values.speed}
+              onChange={this.handleChange}
+            >
               <option value="undefined">default</option>
               {Object.keys(SpriteSpeed).map(type => {
-                return <option key={type} value={SpriteSpeed[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+                return (
+                  <option key={type} value={SpriteSpeed[type]}>
+                    {type.replace(/_/g, ' ').toLowerCase()}
+                  </option>
+                );
               })}
             </select>
 
             <label htmlFor="size">Size: </label>
-            <select name="size" value={values.size} onChange={this.handleChange}>
+            <select
+              name="size"
+              value={values.size}
+              onChange={this.handleChange}
+            >
               <option value="undefined">default</option>
               {Object.keys(SpriteSize).map(type => {
-                return <option key={type} value={SpriteSize[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+                return (
+                  <option key={type} value={SpriteSize[type]}>
+                    {type.replace(/_/g, ' ').toLowerCase()}
+                  </option>
+                );
               })}
             </select>
 
             <label htmlFor="direction">Direction: </label>
-            <select name="direction" value={values.direction} onChange={this.handleChange}>
+            <select
+              name="direction"
+              value={values.direction}
+              onChange={this.handleChange}
+            >
               <option value="undefined">default</option>
               {Object.keys(Direction).map(type => {
-                return <option key={type} value={Direction[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+                return (
+                  <option key={type} value={Direction[type]}>
+                    {type.replace(/_/g, ' ').toLowerCase()}
+                  </option>
+                );
               })}
             </select>
 
             <label htmlFor="emotion">Emotion: </label>
-            <select name="emotion" value={values.emotion} onChange={this.handleChange}>
+            <select
+              name="emotion"
+              value={values.emotion}
+              onChange={this.handleChange}
+            >
               <option value="undefined">default</option>
               {Object.keys(Emotions).map(type => {
-                return <option key={type} value={Emotions[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+                return (
+                  <option key={type} value={Emotions[type]}>
+                    {type.replace(/_/g, ' ').toLowerCase()}
+                  </option>
+                );
               })}
             </select>
           </div>
-        }
+        )}
       </div>
     );
   }

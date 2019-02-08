@@ -29,4 +29,4 @@ Feature: Using the assessments tab in the teacher dashboard
     # Assessments tab
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
-    Then I wait until element "h3:contains(this survey is anonymous)" is visible
+    Then I wait until element "div:contains(this survey is anonymous)" is visible

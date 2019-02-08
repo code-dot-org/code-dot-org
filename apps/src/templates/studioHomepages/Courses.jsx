@@ -1,15 +1,15 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import { CourseBlocksAll } from './CourseBlocks';
+import {CourseBlocksAll} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
@@ -17,7 +17,7 @@ const styles = {
     width: '100%',
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto',
+    marginRight: 'auto'
   }
 };
 
@@ -30,12 +30,14 @@ class Courses extends Component {
     studentsCount: PropTypes.string.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
+    modernElementaryCoursesAvailable: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
-    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
+    $('#flashes')
+      .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
+      .show();
   }
 
   render() {
@@ -45,13 +47,18 @@ class Courses extends Component {
       isSignedOut,
       userId,
       showInitialTips,
-      modernElementaryCoursesAvailable,
+      modernElementaryCoursesAvailable
     } = this.props;
-    const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
-    const subHeadingText = i18n.coursesHeadingSubText(
-      {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
-    );
-    const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
+    const headingText = isTeacher
+      ? i18n.coursesHeadingTeacher()
+      : i18n.coursesHeadingStudent();
+    const subHeadingText = i18n.coursesHeadingSubText({
+      linesCount: this.props.linesCount,
+      studentsCount: this.props.studentsCount
+    });
+    const headingDescription = isSignedOut
+      ? i18n.coursesHeadingDescription()
+      : null;
     const showSpecialTeacherAnnouncement = true;
 
     return (
@@ -64,22 +71,20 @@ class Courses extends Component {
         >
           {isSignedOut && (
             <Button
-              href= "/users/sign_up"
+              href="/users/sign_up"
               color={Button.ButtonColor.gray}
               text={i18n.createAccount()}
             />
           )}
         </HeaderBanner>
 
-        <ProtectedStatefulDiv
-          ref="flashes"
-        />
+        <ProtectedStatefulDiv ref="flashes" />
 
         {/* English, teacher.  (Also can be shown when signed out.) */}
-        {(isEnglish && isTeacher) && (
+        {isEnglish && isTeacher && (
           <div>
             {showSpecialTeacherAnnouncement && (
-              <SpecialAnnouncementActionBlock/>
+              <SpecialAnnouncementActionBlock />
             )}
             <CoursesTeacherEnglish
               isSignedOut={isSignedOut}
@@ -90,12 +95,10 @@ class Courses extends Component {
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
-        {(isEnglish && !isTeacher) && (
-          <CoursesStudentEnglish/>
-        )}
+        {isEnglish && !isTeacher && <CoursesStudentEnglish />}
 
         {/* Non-English */}
-        {(!isEnglish) && (
+        {!isEnglish && (
           <CourseBlocksAll
             isEnglish={false}
             showModernElementaryCourses={modernElementaryCoursesAvailable}

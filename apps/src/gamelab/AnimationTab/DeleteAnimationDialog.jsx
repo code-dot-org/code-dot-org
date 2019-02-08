@@ -18,11 +18,16 @@ export default class DeleteAnimationDialog extends React.Component {
         title="Delete animation"
       >
         <Body>
-          <div>Are you sure you want to delete this animation? You cannot undo this action.</div>
+          <div>
+            Are you sure you want to delete this animation? You cannot undo this
+            action.
+          </div>
         </Body>
         <Buttons>
           <Cancel onClick={this.props.onCancel}>Cancel</Cancel>
-          <Confirm onClick={this.props.onDelete} type="danger">Delete</Confirm>
+          <Confirm onClick={this.props.onDelete} type="danger">
+            Delete
+          </Confirm>
         </Buttons>
       </Dialog>
     );

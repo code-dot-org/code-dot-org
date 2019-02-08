@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {validScriptPropType} from '@cdo/apps/redux/scriptSelectionRedux';
 import _ from 'lodash';
 
@@ -13,19 +13,18 @@ export const dropdownStyles = {
     height: 34,
     paddingLeft: 5,
     paddingRight: 5
-  },
+  }
 };
 
 /**
  * Group our assignments into categories for our dropdown
  */
-const groupedAssignments = assignments => (
+const groupedAssignments = assignments =>
   _(assignments)
     .values()
     .orderBy(['category_priority', 'category', 'position', 'name'])
     .groupBy('category')
-    .value()
-  );
+    .value();
 
 export default class ScriptSelector extends Component {
   static propTypes = {
@@ -35,11 +34,11 @@ export default class ScriptSelector extends Component {
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   render() {
-    const { validScripts, scriptId, onChange } = this.props;
+    const {validScripts, scriptId, onChange} = this.props;
 
     const grouped = groupedAssignments(validScripts);
 
@@ -53,15 +52,14 @@ export default class ScriptSelector extends Component {
         >
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
-              {grouped[groupName].map((assignment) => (
-                (assignment !== undefined) &&
-                  <option
-                    key={assignment.id}
-                    value={assignment.id}
-                  >
-                    {assignment.name}
-                  </option>
-              ))}
+              {grouped[groupName].map(
+                assignment =>
+                  assignment !== undefined && (
+                    <option key={assignment.id} value={assignment.id}>
+                      {assignment.name}
+                    </option>
+                  )
+              )}
             </optgroup>
           ))}
         </select>

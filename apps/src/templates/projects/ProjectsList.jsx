@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Table, sort} from 'reactabular';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -16,7 +16,7 @@ export const COLUMNS = {
   PROJECT_NAME: 1,
   STUDENT_NAME: 2,
   APP_TYPE: 3,
-  LAST_EDITED: 4,
+  LAST_EDITED: 4
 };
 
 /** @enum {number} */
@@ -24,7 +24,7 @@ export const COLUMNS_WITHOUT_THUMBNAILS = {
   PROJECT_NAME: 0,
   STUDENT_NAME: 1,
   APP_TYPE: 2,
-  LAST_EDITED: 3,
+  LAST_EDITED: 3
 };
 
 const styles = {
@@ -38,11 +38,11 @@ const styles = {
     height: THUMBNAIL_SIZE,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 };
 
-const typeFormatter = (type) => {
+const typeFormatter = type => {
   return PROJECT_TYPE_MAP[type];
 };
 
@@ -51,19 +51,21 @@ const typeFormatter = (type) => {
  * @param {string} dateString
  * @returns {string}
  */
-const dateFormatter = (dateString) => {
+const dateFormatter = dateString => {
   const date = new Date(dateString);
   return date.toLocaleDateString();
 };
 
-const thumbnailFormatter = (thumbnailUrl) => {
-  return thumbnailUrl ?
+const thumbnailFormatter = thumbnailUrl => {
+  return thumbnailUrl ? (
     <ImageWithStatus
       src={thumbnailUrl}
       width={THUMBNAIL_SIZE}
       wrapperStyle={styles.thumbnailWrapper}
-    /> :
-    '';
+    />
+  ) : (
+    ''
+  );
 };
 
 class ProjectsList extends React.Component {
@@ -72,13 +74,14 @@ class ProjectsList extends React.Component {
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string.isRequired,
-    showProjectThumbnails: PropTypes.bool.isRequired,
+    showProjectThumbnails: PropTypes.bool.isRequired
   };
 
   constructor(props) {
     super(props);
-    const sortingColumn = this.props.showProjectThumbnails ?
-      COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
+    const sortingColumn = this.props.showProjectThumbnails
+      ? COLUMNS.LAST_EDITED
+      : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
     this.state = {
       sortingColumns: {
         [sortingColumn]: {
@@ -94,7 +97,7 @@ class ProjectsList extends React.Component {
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -123,19 +126,25 @@ class ProjectsList extends React.Component {
     const type = encodeURIComponent(rowData.type);
     const channel = encodeURIComponent(rowData.channel);
 
-    const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
-    return <a href={url} style={tableLayoutStyles.link} target="_blank">{name}</a>;
+    const url = `${
+      this.props.studioUrlPrefix
+    }/projects/${type}/${channel}/view`;
+    return (
+      <a href={url} style={tableLayoutStyles.link} target="_blank">
+        {name}
+      </a>
+    );
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     const thumbnailColumn = {
       property: 'thumbnailUrl',
       header: {
-        props: {style:tableLayoutStyles.headerCell},
+        props: {style: tableLayoutStyles.headerCell}
       },
       cell: {
         format: thumbnailFormatter,
-        props: {style: tableLayoutStyles.cell},
+        props: {style: tableLayoutStyles.cell}
       }
     };
     const standardColumns = [
@@ -144,11 +153,11 @@ class ProjectsList extends React.Component {
         header: {
           label: commonMsg.projectName(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: this.nameFormatter,
-          props: {style: tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
@@ -156,7 +165,7 @@ class ProjectsList extends React.Component {
         header: {
           label: commonMsg.studentName(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           props: {style: tableLayoutStyles.cell}
@@ -167,11 +176,11 @@ class ProjectsList extends React.Component {
         header: {
           label: commonMsg.projectType(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: typeFormatter,
-          props: {style: tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
@@ -179,30 +188,34 @@ class ProjectsList extends React.Component {
         header: {
           label: commonMsg.lastEdited(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: dateFormatter,
-          props: {style: tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell}
         }
-      },
+      }
     ];
 
-    return this.props.showProjectThumbnails ?
-      [thumbnailColumn].concat(standardColumns) : standardColumns;
+    return this.props.showProjectThumbnails
+      ? [thumbnailColumn].concat(standardColumns)
+      : standardColumns;
   };
 
   render() {
-
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.props.projectsData);
 
     return (

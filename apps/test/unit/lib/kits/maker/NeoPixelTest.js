@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
 import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
 
-describe('NeoPixel', function () {
+describe('NeoPixel', function() {
   beforeEach(() => {
     // We stub five.Led.RGB's superclass to avoid calling any johnny-five
     // logic that requires a board.
@@ -138,7 +138,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 0x30,
         green: 0x60,
-        blue: 0x90,
+        blue: 0x90
       });
     });
 
@@ -147,7 +147,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 0x00,
         green: 0xff,
-        blue: 0x00,
+        blue: 0x00
       });
     });
 
@@ -156,7 +156,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 0xff,
         green: 0xa5,
-        blue: 0x00,
+        blue: 0x00
       });
     });
 
@@ -165,7 +165,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 0xd2,
         green: 0x69,
-        blue: 0x1e,
+        blue: 0x1e
       });
     });
 
@@ -175,7 +175,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 0x66,
         green: 0x33,
-        blue: 0x99,
+        blue: 0x99
       });
     });
 
@@ -184,7 +184,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
-        blue: 90,
+        blue: 90
       });
     });
 
@@ -193,7 +193,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 15,
         green: 30,
-        blue: 45,
+        blue: 45
       });
     });
 
@@ -202,7 +202,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 15,
         green: 30,
-        blue: 45,
+        blue: 45
       });
     });
 
@@ -211,7 +211,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
-        blue: 90,
+        blue: 90
       });
     });
 
@@ -220,7 +220,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
-        blue: 90,
+        blue: 90
       });
     });
 
@@ -229,7 +229,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
-        blue: 90,
+        blue: 90
       });
     });
 
@@ -238,7 +238,7 @@ describe('NeoPixel', function () {
       expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
-        blue: 90,
+        blue: 90
       });
     });
   });

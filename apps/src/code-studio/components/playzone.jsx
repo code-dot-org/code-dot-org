@@ -3,7 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "../../util/color";
+import color from '../../util/color';
 import msg from '@cdo/locale';
 import CreateSomething from './stageExtras/CreateSomething';
 
@@ -38,9 +38,7 @@ export default class PlayZone extends React.Component {
         <h1 style={styles.primaryHeader}>
           {msg.playzonePrimaryHeader({stageName: this.props.stageName})}
         </h1>
-        <h4 style={styles.secondaryHeader}>
-          {msg.playzoneSecondaryHeader()}
-        </h4>
+        <h4 style={styles.secondaryHeader}>{msg.playzoneSecondaryHeader()}</h4>
         <CreateSomething />
         <div className="farSide">
           <button

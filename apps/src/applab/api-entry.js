@@ -11,7 +11,11 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import Sounds from '../Sounds';
 import {singleton as studioApp} from '../StudioApp';
 import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
-import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import {
+  getAppOptions,
+  setAppOptions,
+  setupApp
+} from '@cdo/apps/code-studio/initApp/loadApp';
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 import {getExportedGlobals} from './export';
@@ -19,11 +23,13 @@ import * as shareWarnings from '../shareWarnings';
 import {navigateToHref} from '../utils';
 window.CDOSounds = Sounds.getSingleton();
 
-const noop = function () {};
+const noop = function() {};
 
 // TODO: remove the below monkey patches.
 window.Applab.JSInterpreter = {
-  getNearestUserCodeLine: function () {return 0;},
+  getNearestUserCodeLine: function() {
+    return 0;
+  },
   deinitialize: noop
 };
 studioApp().highlight = noop;
@@ -54,16 +60,15 @@ for (let key in globalApi) {
 }
 
 // Set up an error handler for student errors and warnings.
-injectErrorHandler(new JavaScriptModeErrorHandler(
-  () => Applab.JSInterpreter,
-  Applab
-));
+injectErrorHandler(
+  new JavaScriptModeErrorHandler(() => Applab.JSInterpreter, Applab)
+);
 
 function __start() {
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = 'code.js';
-  document.getElementsByTagName("head")[0].appendChild(script);
+  document.getElementsByTagName('head')[0].appendChild(script);
 }
 
 if (!config.nativeExport) {
@@ -71,9 +76,9 @@ if (!config.nativeExport) {
     if (config.exportUsesDataAPIs) {
       shareWarnings.checkSharedAppWarnings({
         channelId: config.channel,
-        hasDataAPIs: () => ( true ),
+        hasDataAPIs: () => true,
         onWarningsComplete: __start,
-        onTooYoung: () => ( navigateToHref('https://studio.code.org/too_young') ),
+        onTooYoung: () => navigateToHref('https://studio.code.org/too_young')
       });
     } else {
       __start();

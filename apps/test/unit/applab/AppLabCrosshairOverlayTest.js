@@ -8,13 +8,16 @@ var gridUtils = require('@cdo/apps/applab/gridUtils');
 
 describe('AppLabCrosshairOverlay', () => {
   const TEST_APP_WIDTH = Math.random(),
-      TEST_APP_HEIGHT = Math.random(),
-      TEST_MOUSE_X = Math.random(),
-      TEST_MOUSE_Y = Math.random();
+    TEST_APP_HEIGHT = Math.random(),
+    TEST_MOUSE_X = Math.random(),
+    TEST_MOUSE_Y = Math.random();
   var stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    stubDraggedElementDropPoint = sinon.stub(gridUtils, 'draggedElementDropPoint');
+    stubDraggedElementDropPoint = sinon.stub(
+      gridUtils,
+      'draggedElementDropPoint'
+    );
   });
 
   afterEach(() => {
@@ -24,12 +27,12 @@ describe('AppLabCrosshairOverlay', () => {
   it('renders to CrosshairOverlay with unmodified properties when not dragging', () => {
     stubDraggedElementDropPoint.returns(null);
     var element = shallow(
-        <AppLabCrosshairOverlay
-          width={TEST_APP_WIDTH}
-          height={TEST_APP_HEIGHT}
-          mouseX={TEST_MOUSE_X}
-          mouseY={TEST_MOUSE_Y}
-        />
+      <AppLabCrosshairOverlay
+        width={TEST_APP_WIDTH}
+        height={TEST_APP_HEIGHT}
+        mouseX={TEST_MOUSE_X}
+        mouseY={TEST_MOUSE_Y}
+      />
     );
 
     var overlay = element.find('CrosshairOverlay');
@@ -44,14 +47,14 @@ describe('AppLabCrosshairOverlay', () => {
   it('renders to CrosshairOverlay with overridden mouse coordinates when dragging', () => {
     const dropPointX = 42;
     const dropPointY = 43;
-    stubDraggedElementDropPoint.returns({ left: dropPointX, top: dropPointY });
+    stubDraggedElementDropPoint.returns({left: dropPointX, top: dropPointY});
     var element = shallow(
-        <AppLabCrosshairOverlay
-          width={TEST_APP_WIDTH}
-          height={TEST_APP_HEIGHT}
-          mouseX={TEST_MOUSE_X}
-          mouseY={TEST_MOUSE_Y}
-        />
+      <AppLabCrosshairOverlay
+        width={TEST_APP_WIDTH}
+        height={TEST_APP_HEIGHT}
+        mouseX={TEST_MOUSE_X}
+        mouseY={TEST_MOUSE_Y}
+      />
     );
 
     var overlay = element.find('CrosshairOverlay');

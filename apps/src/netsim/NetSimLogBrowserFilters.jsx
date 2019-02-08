@@ -40,27 +40,30 @@ export default class NetSimLogBrowserFilters extends React.Component {
   render() {
     return (
       <div style={style.logBrowserFilters}>
-        {this.props.teacherView &&
+        {this.props.teacherView && (
           <SentByDropdown
             i18n={this.props.i18n}
             currentSentByFilter={this.props.currentSentByFilter}
             setSentByFilter={this.props.setSentByFilter}
             senderNames={this.props.senderNames}
-          />}
-        {this.props.canSetRouterLogMode &&
+          />
+        )}
+        {this.props.canSetRouterLogMode && (
           <RouterLogModeDropdown
             i18n={this.props.i18n}
             isAllRouterLogMode={this.props.isAllRouterLogMode}
             setRouterLogMode={this.props.setRouterLogMode}
-          />}
-        {this.props.localAddress &&
+          />
+        )}
+        {this.props.localAddress && (
           <TrafficFilterDropdown
             i18n={this.props.i18n}
             localAddress={this.props.localAddress}
             currentTrafficFilter={this.props.currentTrafficFilter}
             setTrafficFilter={this.props.setTrafficFilter}
-          />}
-        <div style={style.clear}/>
+          />
+        )}
+        <div style={style.clear} />
       </div>
     );
   }
@@ -73,7 +76,7 @@ class RouterLogModeDropdown extends React.Component {
     setRouterLogMode: PropTypes.func.isRequired
   };
 
-  onChange = (event) => this.props.setRouterLogMode(event.target.value);
+  onChange = event => this.props.setRouterLogMode(event.target.value);
 
   render() {
     return (
@@ -103,7 +106,7 @@ class TrafficFilterDropdown extends React.Component {
     setTrafficFilter: PropTypes.func.isRequired
   };
 
-  onChange = (event) => this.props.setTrafficFilter(event.target.value);
+  onChange = event => this.props.setTrafficFilter(event.target.value);
 
   render() {
     return (
@@ -139,7 +142,7 @@ export class SentByDropdown extends React.Component {
     senderNames: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
-  onChange = (event) => this.props.setSentByFilter(event.target.value);
+  onChange = event => this.props.setSentByFilter(event.target.value);
 
   render() {
     return (

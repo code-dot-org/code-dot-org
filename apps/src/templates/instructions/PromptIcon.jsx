@@ -19,12 +19,6 @@ export default class PromptIcon extends React.Component {
   };
 
   render() {
-    return (
-      <img
-        src={this.props.src}
-        id="prompt-icon"
-        style={styles.main}
-      />
-    );
+    return <img src={this.props.src} id="prompt-icon" style={styles.main} />;
   }
 }
