@@ -8,7 +8,7 @@ import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
-import PrintLoginCards from '@cdo/apps/templates/teacherDashboard/PrintLoginCards';
+import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
@@ -28,8 +28,8 @@ export default class TeacherDashboard extends Component {
       sectionName
     } = this.props;
 
-    // Include header components unless we are on the /print_login_cards page.
-    const includeHeader = location.pathname !== '/print_login_cards';
+    // Include header components unless we are on the /login_info page.
+    const includeHeader = location.pathname !== '/login_info';
 
     return (
       <div>
@@ -58,9 +58,9 @@ export default class TeacherDashboard extends Component {
             component={props => <SectionAssessments />}
           />
           <Route
-            path="/print_login_cards"
+            path="/login_info"
             component={props => (
-              <PrintLoginCards
+              <SectionLoginInfo
                 studioUrlPrefix={studioUrlPrefix}
                 pegasusUrlPrefix={pegasusUrlPrefix}
               />

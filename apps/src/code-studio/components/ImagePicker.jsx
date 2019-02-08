@@ -94,6 +94,8 @@ export default class ImagePicker extends React.Component {
       );
     }
 
+    const disableAudio =
+      this.props.disableAudioRecording || this.props.assetChosen;
     const body =
       !this.props.assetChosen || this.state.mode === 'files' ? (
         <AssetManager
@@ -104,7 +106,7 @@ export default class ImagePicker extends React.Component {
           useFilesApi={this.props.useFilesApi}
           projectId={this.props.projectId}
           soundPlayer={this.props.soundPlayer}
-          disableAudioRecording={this.props.disableAudioRecording}
+          disableAudioRecording={disableAudio}
           imagePicker={true}
           elementId={this.props.elementId}
         />
