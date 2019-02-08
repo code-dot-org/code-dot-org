@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import Button from './Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import BaseDialog from './BaseDialog';
-import DialogFooter from "./teacherDashboard/DialogFooter";
+import DialogFooter from './teacherDashboard/DialogFooter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
@@ -25,20 +26,21 @@ export default class GDPRDialog extends Component {
   };
 
   state = {
-    isDialogOpen: this.props.isDialogOpen,
+    isDialogOpen: this.props.isDialogOpen
   };
 
   handleYesClick = () => {
     this.setState({isDialogOpen: false});
-    $.post(
-      `/dashboardapi/v1/users/accept_data_transfer_agreement`, {user_id: this.props.currentUserId}
-    );
+    $.post(`/dashboardapi/v1/users/accept_data_transfer_agreement`, {
+      user_id: this.props.currentUserId
+    });
   };
 
   render() {
     const {studioUrlPrefix} = this.props;
-    const logOutUrl = studioUrlPrefix ?
-      `${studioUrlPrefix}/users/sign_out` : "/users/sign_out";
+    const logOutUrl = studioUrlPrefix
+      ? `${studioUrlPrefix}/users/sign_out`
+      : '/users/sign_out';
 
     return (
       <BaseDialog
@@ -48,9 +50,7 @@ export default class GDPRDialog extends Component {
         uncloseable
       >
         <h2 className="ui-test-gdpr-dialog">{i18n.gdprDialogHeader()}</h2>
-        <div>
-          {i18n.gdprDialogDetails()}
-        </div>
+        <div>{i18n.gdprDialogDetails()}</div>
         <div style={styles.instructions}>
           <a
             href={pegasus('/privacy')}

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
   SquareType,
   WallTypeMask,
@@ -7,7 +8,7 @@ import {
   WallCoordColMask,
   WallCoordColShift
 } from '@cdo/apps/studio/constants';
-import { utils as mazeUtils } from '@code-dot-org/maze';
+import {utils as mazeUtils} from '@code-dot-org/maze';
 
 const CELL_WIDTH = 48;
 const CELL_HEIGHT = 38;
@@ -15,19 +16,50 @@ const CELL_HEIGHT = 38;
 const studioTiles = {
   [SquareType.OPEN]: 'none',
   [SquareType.SPRITEFINISH]: 'goal',
-  [SquareType.SPRITESTART]: 'sprite',
+  [SquareType.SPRITESTART]: 'sprite'
 };
 
 // This list is duplicated in StudioCellEditor. See comment there for
 // some explanation of why that's not the greatest design.
-const studioAvatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
-    "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
-    "ghost", "monster", "robot", "unicorn", "zombie", "knight", "ninja",
-    "pirate", "caveboy", "cavegirl", "princess", "spacebot", "soccergirl",
-    "soccerboy", "tennisgirl", "tennisboy"];
+const studioAvatarList = [
+  'dog',
+  'cat',
+  'penguin',
+  'dinosaur',
+  'octopus',
+  'witch',
+  'bat',
+  'bird',
+  'dragon',
+  'squirrel',
+  'wizard',
+  'alien',
+  'ghost',
+  'monster',
+  'robot',
+  'unicorn',
+  'zombie',
+  'knight',
+  'ninja',
+  'pirate',
+  'caveboy',
+  'cavegirl',
+  'princess',
+  'spacebot',
+  'soccergirl',
+  'soccerboy',
+  'tennisgirl',
+  'tennisboy'
+];
 
 const karelTiles = ['border', 'path', 'start', 'end', 'obstacle'];
-const beeConditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
+const beeConditions = [
+  '',
+  'flower-or-hive',
+  'flower-or-nothing',
+  'hive-or-nothing',
+  'flower-hive-or-nothing'
+];
 const beeFeatures = ['hive', 'flower'];
 
 class Cell extends React.Component {
@@ -41,7 +73,7 @@ class Cell extends React.Component {
     onMouseOver: PropTypes.func.isRequired,
     onMouseUp: PropTypes.func.isRequired,
     skin: PropTypes.string.isRequired,
-    highlighted: PropTypes.bool,
+    highlighted: PropTypes.bool
   };
 
   render() {
@@ -64,25 +96,43 @@ class Cell extends React.Component {
     if (this.props.skin === 'playlab') {
       classNames.push('playlab', studioTiles[cell.getTileType()]);
 
-      if (cell.getTileType() === SquareType.SPRITESTART && cell.sprite_ !== undefined) {
-        tdStyle.backgroundImage = "url('/blockly/media/skins/studio/" + studioAvatarList[cell.sprite_] + "_spritesheet_200px.png')";
+      if (
+        cell.getTileType() === SquareType.SPRITESTART &&
+        cell.sprite_ !== undefined
+      ) {
+        tdStyle.backgroundImage =
+          "url('/blockly/media/skins/studio/" +
+          studioAvatarList[cell.sprite_] +
+          "_spritesheet_200px.png')";
       }
     } else if (this.props.skin === 'starwarsgrid') {
       if (cell.tileType_ === 1) {
-        tdStyle.backgroundImage = "url('/blockly/media/skins/hoc2015x/goal.png')";
+        tdStyle.backgroundImage =
+          "url('/blockly/media/skins/hoc2015x/goal.png')";
       } else if (cell.tileType_ === 0x10) {
-        tdStyle.backgroundImage = "url('/blockly/media/skins/hoc2015x/instructions_bb8.png')";
+        tdStyle.backgroundImage =
+          "url('/blockly/media/skins/hoc2015x/instructions_bb8.png')";
         tdStyle.backgroundSize = 'cover';
       } else {
         text = WallTypeMask & cell.tileType_ ? '2x' : '';
         const x = (WallCoordColMask & cell.tileType_) >> WallCoordColShift;
         const y = (WallCoordRowMask & cell.tileType_) >> WallCoordRowShift;
-        tdStyle.backgroundImage =  "url('/blockly/media/skins/hoc2015x/tiles_background1.png')";
-        tdStyle.backgroundSize = "800% 800%";
-        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${y * CELL_HEIGHT}px`;
+        tdStyle.backgroundImage =
+          "url('/blockly/media/skins/hoc2015x/tiles_background1.png')";
+        tdStyle.backgroundSize = '800% 800%';
+        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${y *
+          CELL_HEIGHT}px`;
       }
     } else if (this.props.skin === 'bounce') {
-      const images = ['tiles_wall', 'goal', 'ball', 'paddle', 'paddle', 'ball', 'obstacle'];
+      const images = [
+        'tiles_wall',
+        'goal',
+        'ball',
+        'paddle',
+        'paddle',
+        'ball',
+        'obstacle'
+      ];
       if (cell.tileType_) {
         const image = images[Math.log2(cell.tileType_)];
         tdStyle.backgroundImage = `url('/blockly/media/skins/bounce/${image}.png')`;
@@ -110,7 +160,7 @@ class Cell extends React.Component {
       if (cell.originalValue_ !== undefined && cell.originalValue_ !== null) {
         text = cell.originalValue_.toString();
         if (cell.range_ && cell.range_ > cell.originalValue_) {
-          text += " - " + cell.range_.toString();
+          text += ' - ' + cell.range_.toString();
         }
       }
     }
@@ -119,9 +169,21 @@ class Cell extends React.Component {
       <td
         className={classNames.join(' ')}
         onClick={this.props.onClick.bind(null, this.props.row, this.props.col)}
-        onMouseDown={this.props.onMouseDown.bind(null, this.props.row, this.props.col)}
-        onMouseOver={this.props.onMouseOver.bind(null, this.props.row, this.props.col)}
-        onMouseUp={this.props.onMouseUp.bind(null, this.props.row, this.props.col)}
+        onMouseDown={this.props.onMouseDown.bind(
+          null,
+          this.props.row,
+          this.props.col
+        )}
+        onMouseOver={this.props.onMouseOver.bind(
+          null,
+          this.props.row,
+          this.props.col
+        )}
+        onMouseUp={this.props.onMouseUp.bind(
+          null,
+          this.props.row,
+          this.props.col
+        )}
         style={tdStyle}
       >
         {text}
@@ -137,7 +199,7 @@ export default class Grid extends React.Component {
     selectedCol: PropTypes.number,
     skin: PropTypes.string.isRequired,
     onSelectionChange: PropTypes.func.isRequired,
-    setCopiedCells: PropTypes.func.isRequired,
+    setCopiedCells: PropTypes.func.isRequired
   };
 
   state = {};
@@ -149,7 +211,7 @@ export default class Grid extends React.Component {
   beginDrag = (row, col) => {
     this.setState({
       dragging: true,
-      dragStart: {row, col},
+      dragStart: {row, col}
     });
   };
 
@@ -161,7 +223,7 @@ export default class Grid extends React.Component {
   moveDrag = (row, col) => {
     if (this.state.dragging) {
       this.setState({
-        dragCurrent: {row, col},
+        dragCurrent: {row, col}
       });
     }
   };
@@ -178,7 +240,7 @@ export default class Grid extends React.Component {
       dragCurrent: null
     });
 
-    if (!dragStart || dragStart.row === row && dragStart.col === col) {
+    if (!dragStart || (dragStart.row === row && dragStart.col === col)) {
       return;
     }
 
@@ -187,8 +249,8 @@ export default class Grid extends React.Component {
     const bottom = Math.max(dragStart.row, row);
     const right = Math.max(dragStart.col, col);
 
-    const cells = this.props.cells.slice(top, bottom + 1).map((row) => {
-      return row.slice(left, right + 1).map((cell) => {
+    const cells = this.props.cells.slice(top, bottom + 1).map(row => {
+      return row.slice(left, right + 1).map(cell => {
         return cell.serialize();
       });
     });
@@ -207,10 +269,12 @@ export default class Grid extends React.Component {
    */
   isHighlighting(row, col) {
     if (this.state.dragging && this.state.dragCurrent) {
-      return row >= Math.min(this.state.dragStart.row, this.state.dragCurrent.row) &&
-             row <= Math.max(this.state.dragStart.row, this.state.dragCurrent.row) &&
-             col >= Math.min(this.state.dragStart.col, this.state.dragCurrent.col) &&
-             col <= Math.max(this.state.dragStart.col, this.state.dragCurrent.col);
+      return (
+        row >= Math.min(this.state.dragStart.row, this.state.dragCurrent.row) &&
+        row <= Math.max(this.state.dragStart.row, this.state.dragCurrent.row) &&
+        col >= Math.min(this.state.dragStart.col, this.state.dragCurrent.col) &&
+        col <= Math.max(this.state.dragStart.col, this.state.dragCurrent.col)
+      );
     }
     return false;
   }
@@ -218,7 +282,8 @@ export default class Grid extends React.Component {
   render() {
     const tableRows = this.props.cells.map((row, x) => {
       const tableDatas = row.map((cell, y) => {
-        const selected = this.props.selectedRow === x && this.props.selectedCol === y;
+        const selected =
+          this.props.selectedRow === x && this.props.selectedCol === y;
 
         return (
           <Cell
@@ -237,18 +302,12 @@ export default class Grid extends React.Component {
         );
       });
 
-      return (
-        <tr key={'row-' + x}>
-          {tableDatas}
-        </tr>
-      );
+      return <tr key={'row-' + x}>{tableDatas}</tr>;
     });
 
     return (
       <table>
-        <tbody>
-          {tableRows}
-        </tbody>
+        <tbody>{tableRows}</tbody>
       </table>
     );
   }

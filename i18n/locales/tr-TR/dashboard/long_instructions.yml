@@ -6051,7 +6051,6 @@ tr:
         ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\r
 
       SG U3L07 Free Response Reflection: "Bir sorunu çözerken, sık sık kodunuzda art arda kullanmak istediğiniz unsurlarla karşılaşırsınız. Bazen yeni bir fonksiyon yazmak uygun olur; diğer zamanlarda ise bir döngü yazmak uygun olur.\\r\n\\r\nHangisinin daha iyi olduğu konusunda zor ve hızlı bir kural yok, fakat siz ne düşünüyorsunuz? Bir döngü kullanmaya karşı bir işlev yazmak için ne gibi koşullar olur?\\r\n\\r\n"
-      Standalone_Artist_1: "Sanatçıya hoş geldiniz! İlk olarak, sağa dön ve ilerle bloklarını kullanarak basit bir kare yapmayı dene. Her kenarı 100 piksel olmalı."
       Standalone_Artist_2: "120 ve 60 derecelik açılar ile 150 piksellik uzun kenarları kullanarak bu elması çiz."
       Standalone_Artist_3: "Bu altıgeni 100 piksellik kenarlar ile 60 derecelik dönüşler kullanarak çizebilir misin?"
       Standalone_Artist_4: "Şimdi yeni bir döngü bloğun var. Komutlardan bazılarını yineleyecek. Bu komutları 6 kez döndürürsen ne olur?"

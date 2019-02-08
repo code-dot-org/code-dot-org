@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import NewProjectButtons from './NewProjectButtons';
 import i18n from '@cdo/locale';
 import Button from '../Button';
@@ -7,7 +8,7 @@ import color from '../../util/color';
 const styles = {
   button: {
     float: 'right',
-    marginRight: 1,
+    marginRight: 1
   },
   headingStartNew: {
     paddingRight: 10,
@@ -28,7 +29,7 @@ export default class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool,
+    canViewAdvancedTools: PropTypes.bool
   };
 
   static defaultProps = {
@@ -36,7 +37,7 @@ export default class StartNewProject extends React.Component {
   };
 
   state = {
-    showFullList: false,
+    showFullList: false
   };
 
   toggleShowFullList = () => {
@@ -44,8 +45,8 @@ export default class StartNewProject extends React.Component {
   };
 
   render() {
-    const { canViewAdvancedTools, canViewFullList } = this.props;
-    const { showFullList } = this.state;
+    const {canViewAdvancedTools, canViewFullList} = this.props;
+    const {showFullList} = this.state;
 
     const GAMES_AND_EVENTS = [
       'spritelab',
@@ -72,30 +73,29 @@ export default class StartNewProject extends React.Component {
       'dance'
     ];
 
-    const defaultProjectTypes = canViewAdvancedTools ?
-      DEFAULT_PROJECT_TYPES_ADVANCED : DEFAULT_PROJECT_TYPES_BASIC;
+    const defaultProjectTypes = canViewAdvancedTools
+      ? DEFAULT_PROJECT_TYPES_ADVANCED
+      : DEFAULT_PROJECT_TYPES_BASIC;
 
     return (
       <div>
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
-        <NewProjectButtons
-          projectTypes={defaultProjectTypes}
-        />
+        <NewProjectButtons projectTypes={defaultProjectTypes} />
 
-        {canViewFullList &&
+        {canViewFullList && (
           <Button
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
             color={Button.ButtonColor.gray}
-            icon={showFullList ? "caret-up" : "caret-down"}
+            icon={showFullList ? 'caret-up' : 'caret-down'}
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
           />
-        }
+        )}
 
-        <div style={{clear: 'both'}}/>
+        <div style={{clear: 'both'}} />
 
-        {showFullList &&
+        {showFullList && (
           <div>
             <NewProjectButtons
               description={i18n.projectGroupPlaylab()}
@@ -111,14 +111,19 @@ export default class StartNewProject extends React.Component {
             />
             <NewProjectButtons
               description={i18n.projectGroupMinecraft()}
-              projectTypes={['minecraft_aquatic', 'minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
+              projectTypes={[
+                'minecraft_aquatic',
+                'minecraft_hero',
+                'minecraft_designer',
+                'minecraft_adventurer'
+              ]}
             />
-            {canViewAdvancedTools &&
+            {canViewAdvancedTools && (
               <NewProjectButtons
                 description={i18n.projectGroupAdvancedTools()}
                 projectTypes={['applab', 'gamelab', 'weblab']}
               />
-            }
+            )}
             <NewProjectButtons
               description={i18n.projectGroupPreReader()}
               projectTypes={['playlab_k1', 'artist_k1']}
@@ -128,8 +133,8 @@ export default class StartNewProject extends React.Component {
               projectTypes={['calc', 'eval']}
             />
           </div>
-        }
-        <div style={styles.spacer}/>
+        )}
+        <div style={styles.spacer} />
       </div>
     );
   }

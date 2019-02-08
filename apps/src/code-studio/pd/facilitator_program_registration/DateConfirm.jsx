@@ -1,20 +1,25 @@
-import React, {PropTypes} from 'react';
-import {
-  ControlLabel,
-  FormGroup,
-} from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {ControlLabel, FormGroup} from 'react-bootstrap';
 
 import FormComponent from '../form_components/FormComponent';
 
 class DeclineTrainingDate extends FormComponent {
   renderNext() {
     let followup;
-    if (this.props.data.declineTrainingDate === 'I want to participate in the program, but I\'m no longer able to attend these dates.') {
-      const name = (this.props.course === 'CSD') ? "csdAlternateTrainingDate" : "cspAlternateTrainingDate";
+    if (
+      this.props.data.declineTrainingDate ===
+      "I want to participate in the program, but I'm no longer able to attend these dates."
+    ) {
+      const name =
+        this.props.course === 'CSD'
+          ? 'csdAlternateTrainingDate'
+          : 'cspAlternateTrainingDate';
 
       followup = this.buildButtonsFromOptions({
         name: name,
-        label: "I am instead available to attend the following Facilitator-in-Training workshop (TeacherCon Part 2):",
+        label:
+          'I am instead available to attend the following Facilitator-in-Training workshop (TeacherCon Part 2):',
         type: 'check'
       });
     }
@@ -47,12 +52,9 @@ class DeclineTrainingDate extends FormComponent {
 class TrainingDateConfirm extends FormComponent {
   render() {
     let followup;
-    if (this.props.data.confirmTrainingDate === "No") {
+    if (this.props.data.confirmTrainingDate === 'No') {
       followup = (
-        <DeclineTrainingDate
-          {...this.props}
-          onChange={this.handleChange}
-        />
+        <DeclineTrainingDate {...this.props} onChange={this.handleChange} />
       );
     }
     const label = `
@@ -65,9 +67,9 @@ class TrainingDateConfirm extends FormComponent {
     return (
       <FormGroup>
         {this.buildButtonsFromOptions({
-          name: "confirmTrainingDate",
+          name: 'confirmTrainingDate',
           label: label,
-          type: "radio"
+          type: 'radio'
         })}
         {followup}
       </FormGroup>
@@ -78,7 +80,10 @@ class TrainingDateConfirm extends FormComponent {
 class TeacherconDateConfirm extends FormComponent {
   render() {
     let followup;
-    if (this.props.data.confirmTeacherconDate === 'No - but I need to attend a different date.') {
+    if (
+      this.props.data.confirmTeacherconDate ===
+      'No - but I need to attend a different date.'
+    ) {
       const label = `
         I want to participate in the program, but I’m no longer able to attend
         these dates. I am instead available to attend the following:
@@ -92,10 +97,15 @@ class TeacherconDateConfirm extends FormComponent {
           })}
         </div>
       );
-    } else if (this.props.data.confirmTeacherconDate === 'No - I\'m no longer interested') {
+    } else if (
+      this.props.data.confirmTeacherconDate === "No - I'm no longer interested"
+    ) {
       followup = (
         <FormGroup>
-          <ControlLabel>I am no longer interested in the Code.org Facilitator Development Program.</ControlLabel>
+          <ControlLabel>
+            I am no longer interested in the Code.org Facilitator Development
+            Program.
+          </ControlLabel>
         </FormGroup>
       );
     }
@@ -111,9 +121,9 @@ class TeacherconDateConfirm extends FormComponent {
     return (
       <FormGroup>
         {this.buildButtonsFromOptions({
-          name: "confirmTeacherconDate",
+          name: 'confirmTeacherconDate',
           label: label,
-          type: "radio"
+          type: 'radio'
         })}
         {followup}
       </FormGroup>
@@ -125,18 +135,12 @@ export default class DateConfirm extends FormComponent {
   render() {
     return (
       <FormGroup>
-        {this.props.attendanceDates.teachercon &&
-          <TeacherconDateConfirm
-            {...this.props}
-            onChange={this.handleChange}
-          />
-        }
-        {this.props.attendanceDates.training &&
-          <TrainingDateConfirm
-            {...this.props}
-            onChange={this.handleChange}
-          />
-        }
+        {this.props.attendanceDates.teachercon && (
+          <TeacherconDateConfirm {...this.props} onChange={this.handleChange} />
+        )}
+        {this.props.attendanceDates.training && (
+          <TrainingDateConfirm {...this.props} onChange={this.handleChange} />
+        )}
       </FormGroup>
     );
   }
@@ -146,26 +150,26 @@ DateConfirm.propTypes = {
   ...FormComponent.propTypes,
   attendanceDates: PropTypes.object.isRequired,
   course: PropTypes.string,
-  teacherconLocation: PropTypes.string.isRequired,
+  teacherconLocation: PropTypes.string.isRequired
 };
 
 TeacherconDateConfirm.propTypes = {
   ...FormComponent.propTypes,
   attendanceDates: PropTypes.object.isRequired,
-  teacherconLocation: PropTypes.string.isRequired,
+  teacherconLocation: PropTypes.string.isRequired
 };
 
 TrainingDateConfirm.propTypes = {
   ...FormComponent.propTypes,
   attendanceDates: PropTypes.object.isRequired,
-  course: PropTypes.string,
+  course: PropTypes.string
 };
 
 DateConfirm.associatedFields = [
-  "confirmTeacherconDate",
-  "alternateTeacherconDate",
-  "confirmTrainingDate",
-  "declineTrainingDate",
-  "cspAlternateTrainingDate",
-  "csdAlternateTrainingDate",
+  'confirmTeacherconDate',
+  'alternateTeacherconDate',
+  'confirmTrainingDate',
+  'declineTrainingDate',
+  'cspAlternateTrainingDate',
+  'csdAlternateTrainingDate'
 ];

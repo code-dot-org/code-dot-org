@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 
 // We want level builders to be able to specify which of these strings is used,
@@ -12,7 +12,7 @@ const ResourceType = {
   codeIntroduced: 'codeIntroduced',
   standardMappings: 'standardMappings',
   allHandouts: 'allHandouts',
-  videos: 'videos',
+  videos: 'videos'
 };
 export default ResourceType;
 
@@ -25,10 +25,10 @@ export const stringForType = {
   [ResourceType.codeIntroduced]: i18n.codeIntroduced(),
   [ResourceType.standardMappings]: i18n.standardMappings(),
   [ResourceType.allHandouts]: i18n.allHandouts(),
-  [ResourceType.videos]: i18n.videos(),
+  [ResourceType.videos]: i18n.videos()
 };
 
 export const resourceShape = PropTypes.shape({
   type: PropTypes.oneOf(Object.values(ResourceType)).isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 });

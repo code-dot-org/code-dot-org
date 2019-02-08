@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -75,7 +76,7 @@ class TextInputProperties extends React.Component {
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'left'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BooleanPropertyRow
@@ -87,7 +88,8 @@ class TextInputProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -101,8 +103,14 @@ class TextInputEvents extends React.Component {
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' entered text: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -114,8 +122,14 @@ class TextInputEvents extends React.Component {
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "input", function(event) {\n' +
-      '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "input", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' current text: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -128,10 +142,12 @@ class TextInputEvents extends React.Component {
     const element = this.props.element;
 
     const changeName = 'Change';
-    const changeDesc = 'Triggered when the text input loses focus if the text has changed.';
+    const changeDesc =
+      'Triggered when the text input loses focus if the text has changed.';
 
     const inputName = 'Input';
-    const inputDesc = 'Triggered immediately every time the text input contents change.';
+    const inputDesc =
+      'Triggered immediately every time the text input contents change.';
 
     return (
       <div id="eventRowContainer">
@@ -141,7 +157,7 @@ class TextInputEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -161,7 +177,7 @@ export default {
   PropertyTab: TextInputProperties,
   EventTab: TextInputEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('input');
     element.style.margin = '0px';
     element.style.width = '200px';
@@ -172,8 +188,8 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
-    $(element).on('mousedown', function (e) {
+  onDeserialize: function(element) {
+    $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text input unless running
         e.preventDefault();
@@ -181,14 +197,14 @@ export default {
     });
 
     // swallow keydown unless we're running
-    $(element).on('keydown', function (e) {
+    $(element).on('keydown', function(e) {
       if (!Applab.isRunning()) {
         e.preventDefault();
       }
     });
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'value':
         element.value = value;
@@ -202,7 +218,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'value':
         return element.value;

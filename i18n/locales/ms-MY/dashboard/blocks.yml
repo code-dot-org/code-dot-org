@@ -265,7 +265,7 @@ ms:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': saiz

@@ -1,14 +1,14 @@
 import React from 'react';
 import EligibilityChecklist from './EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
-import {Unit6Intention} from "../util/discountLogic";
+import {Unit6Intention} from '../util/discountLogic';
 
 const defaultProps = {
   statusPD: Status.SUCCEEDED,
   statusStudentCount: Status.SUCCEEDED,
   hasConfirmedSchool: false,
   adminSetStatus: false,
-  currentlyDistributingDiscountCodes: true,
+  currentlyDistributingDiscountCodes: true
 };
 
 export default storybook => {
@@ -20,9 +20,7 @@ export default storybook => {
         description: 'New format for 2019',
         story: () => (
           <div style={{margin: '2em'}}>
-            <EligibilityChecklist
-              {...defaultProps}
-            />
+            <EligibilityChecklist {...defaultProps} />
           </div>
         )
       },
@@ -104,6 +102,6 @@ export default storybook => {
             />
           </div>
         )
-      },
+      }
     ]);
 };

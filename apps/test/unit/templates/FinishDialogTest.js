@@ -6,14 +6,10 @@ import {UnconnectedFinishDialog as FinishDialog} from '@cdo/apps/templates/Finis
 
 describe('FinishDialog', () => {
   it('renders', () => {
-    const result = shallow(
-      <FinishDialog
-        isOpen
-        isPerfect
-        showFunometer
-      />
-    );
-    expect(result.find('div.uitest-bubble').props().style.backgroundColor).to.equal(color.white);
+    const result = shallow(<FinishDialog isOpen isPerfect showFunometer />);
+    expect(
+      result.find('div.uitest-bubble').props().style.backgroundColor
+    ).to.equal(color.white);
     expect(result.find('PuzzleRatingButtons')).to.have.length(1);
   });
 
@@ -27,7 +23,9 @@ describe('FinishDialog', () => {
         blockLimit={10}
       />
     );
-    expect(result.find('div.uitest-bubble').props().style.backgroundColor).to.equal(color.white);
+    expect(
+      result.find('div.uitest-bubble').props().style.backgroundColor
+    ).to.equal(color.white);
     expect(result.find('PuzzleRatingButtons')).to.have.length(1);
   });
 });

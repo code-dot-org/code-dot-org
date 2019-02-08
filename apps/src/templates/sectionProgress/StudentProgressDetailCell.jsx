@@ -1,9 +1,10 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 
 const styles = {
   bubbles: {
-    whiteSpace: 'nowrap',
+    whiteSpace: 'nowrap'
   },
   cell: {
     padding: '1px 4px'
@@ -15,11 +16,10 @@ export default class StudentProgressDetailCell extends Component {
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
+    levelsWithStatus: PropTypes.arrayOf(PropTypes.object)
   };
 
   render() {
-
     return (
       <div style={styles.cell} className="uitest-detail-cell">
         <div style={styles.bubbles}>

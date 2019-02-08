@@ -17,13 +17,33 @@ describe('PersonalProjectsTable', () => {
         />
       </Provider>
     );
-    const firstProjectName = wrapper.find('PersonalProjectsNameCell').at(0).find('a');
-    const secondProjectName = wrapper.find('PersonalProjectsNameCell').at(1).find('a');
-    const thirdProjectName = wrapper.find('PersonalProjectsNameCell').at(2).find('a');
-    const fourthProjectName = wrapper.find('PersonalProjectsNameCell').at(3).find('a');
-    expect(firstProjectName.text()).to.equal(stubFakePersonalProjectData[0].name);
-    expect(secondProjectName.text()).to.equal(stubFakePersonalProjectData[1].name);
-    expect(thirdProjectName.text()).to.equal(stubFakePersonalProjectData[2].name);
-    expect(fourthProjectName.text()).to.equal(stubFakePersonalProjectData[3].name);
+    const firstProjectName = wrapper
+      .find('PersonalProjectsNameCell')
+      .at(0)
+      .find('a');
+    const secondProjectName = wrapper
+      .find('PersonalProjectsNameCell')
+      .at(1)
+      .find('a');
+    const thirdProjectName = wrapper
+      .find('PersonalProjectsNameCell')
+      .at(2)
+      .find('a');
+    const fourthProjectName = wrapper
+      .find('PersonalProjectsNameCell')
+      .at(3)
+      .find('a');
+    expect(firstProjectName.text()).to.equal(
+      stubFakePersonalProjectData[0].name
+    );
+    expect(secondProjectName.text()).to.equal(
+      stubFakePersonalProjectData[1].name
+    );
+    expect(thirdProjectName.text()).to.equal(
+      stubFakePersonalProjectData[2].name
+    );
+    expect(fourthProjectName.text()).to.equal(
+      stubFakePersonalProjectData[3].name
+    );
   });
 });

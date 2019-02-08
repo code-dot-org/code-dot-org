@@ -8,60 +8,52 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 describe('ManageStudentsSharingCell', () => {
   it('renders a checked Checkbox if editing and can share', () => {
     const wrapper = shallow(
-        <ManageStudentsSharingCell
-          id={123}
-          isEditing={true}
-          checked={true}
-          editedValue={true}
-        />
+      <ManageStudentsSharingCell
+        id={123}
+        isEditing={true}
+        checked={true}
+        editedValue={true}
+      />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Checkbox checked={true}/>
-    );
+    expect(wrapper).to.containMatchingElement(<Checkbox checked={true} />);
   });
 
   it('renders an unchecked Checkbox if editing and can not share', () => {
     const wrapper = shallow(
-        <ManageStudentsSharingCell
-          id={123}
-          isEditing={true}
-          checked={false}
-          editedValue={false}
-        />
+      <ManageStudentsSharingCell
+        id={123}
+        isEditing={true}
+        checked={false}
+        editedValue={false}
+      />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Checkbox checked={false}/>
-    );
+    expect(wrapper).to.containMatchingElement(<Checkbox checked={false} />);
   });
 
   it('renders nothing if not editing and can not share', () => {
     const wrapper = shallow(
-        <ManageStudentsSharingCell
-          id={123}
-          isEditing={false}
-          checked={false}
-          editedValue={true}
-        />
+      <ManageStudentsSharingCell
+        id={123}
+        isEditing={false}
+        checked={false}
+        editedValue={true}
+      />
     );
-    expect(wrapper.containsMatchingElement(
-      <Checkbox/>
-    )).to.equal(false);
-    expect(wrapper.containsMatchingElement(
-      <FontAwesome icon="check"/>
-    )).to.equal(false);
+    expect(wrapper.containsMatchingElement(<Checkbox />)).to.equal(false);
+    expect(
+      wrapper.containsMatchingElement(<FontAwesome icon="check" />)
+    ).to.equal(false);
   });
 
   it('renders a FontAwesome checkmark if not editing and can share', () => {
     const wrapper = shallow(
-        <ManageStudentsSharingCell
-          id={123}
-          isEditing={false}
-          checked={true}
-          editedValue={true}
-        />
+      <ManageStudentsSharingCell
+        id={123}
+        isEditing={false}
+        checked={true}
+        editedValue={true}
+      />
     );
-    expect(wrapper).to.containMatchingElement(
-      <FontAwesome icon="check"/>
-    );
+    expect(wrapper).to.containMatchingElement(<FontAwesome icon="check" />);
   });
 });

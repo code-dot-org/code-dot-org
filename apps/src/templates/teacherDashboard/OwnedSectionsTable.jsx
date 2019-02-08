@@ -1,17 +1,18 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import color from "@cdo/apps/util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import {Table, sort} from 'reactabular';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
+import {sortableSectionShape, OAuthSectionTypes} from './shapes';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {pegasus} from "../../lib/util/urlHelpers";
-import SectionActionDropdown from "./SectionActionDropdown";
+import {pegasus} from '../../lib/util/urlHelpers';
+import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
-import { stringifyQueryParams } from '../../utils';
+import {stringifyQueryParams} from '../../utils';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -21,7 +22,7 @@ export const COLUMNS = {
   COURSE: 3,
   STUDENTS: 4,
   LOGIN_INFO: 5,
-  EDIT_DELETE: 6,
+  EDIT_DELETE: 6
 };
 
 const styles = {
@@ -36,36 +37,42 @@ const styles = {
   },
   //Assigned to a column with the hidden column to the left
   leftHiddenCol: {
-    borderLeft: 0,
+    borderLeft: 0
   },
   unsortableHeader: tableLayoutStyles.unsortableHeader,
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
     paddingBottom: 20,
-    width: 40,
+    width: 40
   },
   sectionCol: {
-    paddingLeft: 20,
+    paddingLeft: 20
   },
   sectionCodeNone: {
     color: color.light_gray,
-    fontSize: 16,
-  },
+    fontSize: 16
+  }
 };
 
 // Cell formatters for sortable OwnedSectionsTable.
-export const sectionLinkFormatter = function (name, {rowData}) {
+export const sectionLinkFormatter = function(name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
-  return <a style={tableLayoutStyles.link} href={pegasusUrl}>{rowData.name}</a>;
+  return (
+    <a style={tableLayoutStyles.link} href={pegasusUrl}>
+      {rowData.name}
+    </a>
+  );
 };
 
-export const courseLinkFormatter = function (course, {rowData}) {
-  const { assignmentNames, assignmentPaths } = rowData;
+export const courseLinkFormatter = function(course, {rowData}) {
+  const {assignmentNames, assignmentPaths} = rowData;
   return (
     <div>
       <a
-        href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({section_id: rowData.id})}`}
+        href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({
+          section_id: rowData.id
+        })}`}
         style={tableLayoutStyles.link}
       >
         {rowData.assignmentNames[0]}
@@ -74,7 +81,9 @@ export const courseLinkFormatter = function (course, {rowData}) {
         <div style={styles.currentUnit}>
           <div>{i18n.currentUnit()}</div>
           <a
-            href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({section_id: rowData.id})}`}
+            href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({
+              section_id: rowData.id
+            })}`}
             style={tableLayoutStyles.link}
           >
             {assignmentNames[1]}
@@ -92,13 +101,15 @@ export const courseLinkFormatter = function (course, {rowData}) {
   );
 };
 
-export const gradeFormatter = function (grade, {rowData}) {
+export const gradeFormatter = function(grade, {rowData}) {
   return <div>{rowData.grade}</div>;
 };
 
-export const loginInfoFormatter = function (loginType, {rowData}) {
+export const loginInfoFormatter = function(loginType, {rowData}) {
   let sectionCode = '';
-  let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
+  let pegasusUrl = pegasus(
+    '/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards'
+  );
   // For managed logins, just show the provider name rather than the login code.
   if (rowData.loginType === OAuthSectionTypes.clever) {
     sectionCode = i18n.loginTypeClever();
@@ -107,23 +118,34 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   } else {
     sectionCode = rowData.code;
   }
-  return <a style={tableLayoutStyles.link} href={pegasusUrl}>{sectionCode}</a>;
+  return (
+    <a style={tableLayoutStyles.link} href={pegasusUrl}>
+      {sectionCode}
+    </a>
+  );
 };
 
-export const studentsFormatter = function (studentCount, {rowData}) {
-  const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + "/manage");
-  const studentHtml = rowData.studentCount <= 0 ?
-    <Button
-      text={i18n.addStudents()}
-      href={pegasusUrl}
-      color={Button.ButtonColor.gray}
-    /> :
-    <a style={tableLayoutStyles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
+export const studentsFormatter = function(studentCount, {rowData}) {
+  const pegasusUrl = pegasus(
+    '/teacher-dashboard#/sections/' + rowData.id + '/manage'
+  );
+  const studentHtml =
+    rowData.studentCount <= 0 ? (
+      <Button
+        text={i18n.addStudents()}
+        href={pegasusUrl}
+        color={Button.ButtonColor.gray}
+      />
+    ) : (
+      <a style={tableLayoutStyles.link} href={pegasusUrl}>
+        {rowData.studentCount}
+      </a>
+    );
   return studentHtml;
 };
 
 //Displays nothing for hidden column
-const hiddenFormatter = function (id) {
+const hiddenFormatter = function(id) {
   return null;
 };
 
@@ -145,7 +167,7 @@ class OwnedSectionsTable extends Component {
     onEdit: PropTypes.func.isRequired,
 
     //Provided by redux
-    sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
+    sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired
   };
 
   state = {
@@ -158,11 +180,16 @@ class OwnedSectionsTable extends Component {
   };
 
   actionCellFormatter = (temp, {rowData}) => {
-    return <SectionActionDropdown sectionData={rowData} handleEdit={this.props.onEdit}/>;
+    return (
+      <SectionActionDropdown
+        sectionData={rowData}
+        handleEdit={this.props.onEdit}
+      />
+    );
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -181,26 +208,27 @@ class OwnedSectionsTable extends Component {
     return this.state.sortingColumns || {};
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     const colStyle = {...tableLayoutStyles.cell, ...styles.sectionCol};
     return [
       {
         //displays nothing, but used as initial sort
         property: 'id',
-        header:{
+        header: {
           props: {style: styles.hiddenCol}
         },
         cell: {
           format: hiddenFormatter,
           props: {style: styles.hiddenCol}
-        }},
+        }
+      },
 
       {
         property: 'name',
         header: {
           label: i18n.section(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: sectionLinkFormatter,
@@ -212,7 +240,7 @@ class OwnedSectionsTable extends Component {
         header: {
           label: i18n.grade(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: gradeFormatter,
@@ -223,7 +251,9 @@ class OwnedSectionsTable extends Component {
         property: 'course',
         header: {
           label: i18n.course(),
-          props: {style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}},
+          props: {
+            style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}
+          }
         },
         cell: {
           format: courseLinkFormatter,
@@ -235,7 +265,7 @@ class OwnedSectionsTable extends Component {
         header: {
           label: i18n.students(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: studentsFormatter,
@@ -246,7 +276,9 @@ class OwnedSectionsTable extends Component {
         property: 'loginType',
         header: {
           label: i18n.loginInfo(),
-          props:{style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}}
+          props: {
+            style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}
+          }
         },
         cell: {
           format: loginInfoFormatter,
@@ -256,7 +288,7 @@ class OwnedSectionsTable extends Component {
       {
         property: 'actions',
         header: {
-          props:{style: tableLayoutStyles.headerCell},
+          props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
           format: this.actionCellFormatter,
@@ -267,21 +299,22 @@ class OwnedSectionsTable extends Component {
   };
 
   render() {
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.props.sectionRows);
 
     return (
-      <Table.Provider
-        columns={columns}
-        style={tableLayoutStyles.table}
-      >
+      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />
       </Table.Provider>

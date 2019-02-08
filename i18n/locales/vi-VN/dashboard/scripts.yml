@@ -4840,3 +4840,7 @@ vi:
               name: 'Gỡ lội: Những chú bọ không đốm'
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
+        dani-test-script:
+          stages:
+            new stage:
+              name: giai đoạn mới

@@ -1,6 +1,6 @@
 import React from 'react';
-import {FormGroup} from "react-bootstrap";
-import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import {FormGroup} from 'react-bootstrap';
+import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import {
   PageLabels,
   SectionHeaders,
@@ -13,7 +13,7 @@ export default class Section4LeadingStudents extends LabeledFormComponent {
 
   static associatedFields = [
     ...Object.keys(PageLabels.section4LeadingStudents),
-    "currentlyInvolvedInCsEducation_other"
+    'currentlyInvolvedInCsEducation_other'
   ];
 
   render() {
@@ -21,28 +21,32 @@ export default class Section4LeadingStudents extends LabeledFormComponent {
     return (
       <FormGroup>
         <h3>Section 4: {SectionHeaders.section4LeadingStudents}</h3>
-        {this.checkBoxesWithAdditionalTextFieldsFor("currentlyInvolvedInCsEducation", {
-          [TextFields.otherPleaseDescribe] : "other"
-        })}
-        {this.checkBoxesFor("gradesTaught")}
-        {this.checkBoxesFor("experienceTeachingThisCourse", {
+        {this.checkBoxesWithAdditionalTextFieldsFor(
+          'currentlyInvolvedInCsEducation',
+          {
+            [TextFields.otherPleaseDescribe]: 'other'
+          }
+        )}
+        {this.checkBoxesFor('gradesTaught')}
+        {this.checkBoxesFor('experienceTeachingThisCourse', {
           label: `Do you have experience teaching the full ${program} curriculum to students? Mark all that apply.`
         })}
-        {this.radioButtonsWithAdditionalTextFieldsFor("planOnTeaching", {
-          [TextFields.otherWithText] : "other"
-        }, {
-          label: `Do you plan on teaching ${program} in the 2019-20 school year?`,
-        })}
+        {this.radioButtonsWithAdditionalTextFieldsFor(
+          'planOnTeaching',
+          {
+            [TextFields.otherWithText]: 'other'
+          },
+          {
+            label: `Do you plan on teaching ${program} in the 2019-20 school year?`
+          }
+        )}
         {program !== CSF &&
-          this.radioButtonsFor("csdCspCompletedPd", {
+          this.radioButtonsFor('csdCspCompletedPd', {
             label: `Have you participated as a teacher in Code.org's full Professional Learning Program for ${program}?`
-          })
-        }
-        {program === CSF &&
-          this.radioButtonsFor('csfPreviousWorkshop')
-        }
-        {this.checkBoxesWithAdditionalTextFieldsFor("facilitatorAvailability", {
-          [TextFields.otherWithText] : "other"
+          })}
+        {program === CSF && this.radioButtonsFor('csfPreviousWorkshop')}
+        {this.checkBoxesWithAdditionalTextFieldsFor('facilitatorAvailability', {
+          [TextFields.otherWithText]: 'other'
         })}
       </FormGroup>
     );

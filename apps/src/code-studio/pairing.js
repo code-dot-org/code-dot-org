@@ -25,10 +25,12 @@ export default {
       lazyInitDialog();
     }
 
-    $('#pairing_link').show().click(function () {
-      lazyInitDialog();
-      hideUserOptions();
-      return false;
-    });
+    $('#pairing_link')
+      .show()
+      .click(function() {
+        lazyInitDialog();
+        hideUserOptions();
+        return false;
+      });
   }
 };

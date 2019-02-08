@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ChatBubbleTip from './ChatBubbleTip';
-import { shouldDisplayChatTips } from './utils';
+import {shouldDisplayChatTips} from './utils';
 import InlineAudio from './InlineAudio';
 
 const styles = {
@@ -20,7 +21,7 @@ const styles = {
     paddingRight: 10,
     position: 'relative',
     borderStyle: 'dashed',
-    borderWidth: 1,
+    borderWidth: 1
   },
 
   minecraft: {
@@ -41,19 +42,27 @@ const styles = {
 };
 
 var audioStyle = {
-  wrapper:{
-    position: 'relative',
+  wrapper: {
+    position: 'relative'
   },
   button: {
-    height: '32px',
+    height: '32px'
   },
   buttonImg: {
     lineHeight: '32px',
-    fontSize: 20,
+    fontSize: 20
   }
 };
 
-const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMessage, textToSpeechEnabled }) => {
+const ChatBubble = ({
+  children,
+  isMinecraft,
+  skinId,
+  borderColor,
+  ttsUrl,
+  ttsMessage,
+  textToSpeechEnabled
+}) => {
   borderColor = borderColor || 'white';
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
 
@@ -64,17 +73,17 @@ const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMes
           styles.main,
           isMinecraft && styles.minecraft,
           showAudioControls && styles.withAudioControls,
-          { borderColor }
+          {borderColor}
         ]}
       >
         {children}
         {shouldDisplayChatTips(skinId) && <ChatBubbleTip color={borderColor} />}
       </div>
-      {showAudioControls &&
+      {showAudioControls && (
         <div style={styles.audioControls}>
-          <InlineAudio src={ttsUrl} message={ttsMessage} style={audioStyle}/>
+          <InlineAudio src={ttsUrl} message={ttsMessage} style={audioStyle} />
         </div>
-      }
+      )}
     </div>
   );
 };
@@ -86,13 +95,14 @@ ChatBubble.propTypes = {
   skinId: PropTypes.string,
   ttsUrl: PropTypes.string,
   ttsMessage: PropTypes.string,
-  textToSpeechEnabled: PropTypes.bool,
+  textToSpeechEnabled: PropTypes.bool
 };
 
 export default connect(state => {
   return {
     skinId: state.pageConstants.skinId,
     isMinecraft: !!state.pageConstants.isMinecraft,
-    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
+    textToSpeechEnabled:
+      state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
   };
 })(Radium(ChatBubble));

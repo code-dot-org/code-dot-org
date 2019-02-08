@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import StatsTable from './StatsTable';
 import {getStudentsCompletedLevelCount} from './statsRedux';
@@ -7,7 +8,7 @@ class StatsTableWithData extends Component {
   static propTypes = {
     // Props provided by redux.
     section: PropTypes.object,
-    studentsCompletedLevelCount: PropTypes.object,
+    studentsCompletedLevelCount: PropTypes.object
   };
 
   render() {
@@ -26,5 +27,8 @@ export const UnconnectedStatsTableWithData = StatsTableWithData;
 
 export default connect(state => ({
   section: state.sectionData.section,
-  studentsCompletedLevelCount: getStudentsCompletedLevelCount(state, state.sectionData.section.id),
+  studentsCompletedLevelCount: getStudentsCompletedLevelCount(
+    state,
+    state.sectionData.section.id
+  )
 }))(StatsTableWithData);

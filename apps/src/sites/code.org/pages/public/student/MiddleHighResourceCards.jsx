@@ -9,18 +9,18 @@ const CARDS = [
   {
     title: i18n.projectTypeApplab(),
     description: i18n.projectDescriptionApplab(),
-    link: '/applab',
+    link: '/applab'
   },
   {
     title: i18n.projectTypeGamelab(),
     description: i18n.projectDescriptionGamelab(),
-    link: '/gamelab',
+    link: '/gamelab'
   },
   {
     title: i18n.projectTypeWeblab(),
     description: i18n.projectDescriptionWeblab(),
-    link: '/weblab',
-  },
+    link: '/weblab'
+  }
 ];
 
 export default class MiddleHighResourceCards extends Component {

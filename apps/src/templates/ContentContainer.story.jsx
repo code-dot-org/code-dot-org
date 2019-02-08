@@ -3,9 +3,10 @@ import ContentContainer from './ContentContainer';
 import CourseCard from './studioHomepages/CourseCard';
 
 const exampleCard = {
-  title: "CSP Unit 2 - Digital Information",
-  description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-  link: "https://curriculum.code.org/csp/unit2/",
+  title: 'CSP Unit 2 - Digital Information',
+  description:
+    'Explore how more complex digital information is represented and manipulated through computation and visualization',
+  link: 'https://curriculum.code.org/csp/unit2/'
 };
 
 // ContentContainer is a generic component that will render whatever child components are passed to it.  CourseCards are used here as an example because it was first built to render them for the Teacher Homepage.
@@ -19,9 +20,7 @@ export default storybook => {
         name: 'no link',
         description: 'Example ContentContainer without a link',
         story: () => (
-          <ContentContainer
-            heading="Recent Courses"
-          >
+          <ContentContainer heading="Recent Courses">
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
@@ -87,6 +86,6 @@ export default storybook => {
             />
           </ContentContainer>
         )
-      },
+      }
     ]);
 };

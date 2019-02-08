@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 
@@ -18,7 +19,9 @@ export default class NetSimView extends React.Component {
   render() {
     return (
       <StudioAppWrapper>
-        <ProtectedStatefulDiv contentFunction={this.props.generateCodeAppHtml} />
+        <ProtectedStatefulDiv
+          contentFunction={this.props.generateCodeAppHtml}
+        />
       </StudioAppWrapper>
     );
   }

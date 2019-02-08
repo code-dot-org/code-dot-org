@@ -1279,6 +1279,7 @@
   "subtitle": "a visual programming environment",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Dialog from '../../templates/Dialog';
 import * as dataStyles from './dataStyles';
@@ -11,7 +12,7 @@ class ConfirmDeleteButton extends React.Component {
     buttonText: PropTypes.string.isRequired,
     confirmText: PropTypes.string,
     containerStyle: PropTypes.any,
-    onConfirmDelete: PropTypes.func.isRequired,
+    onConfirmDelete: PropTypes.func.isRequired
   };
 
   state = {
@@ -27,7 +28,7 @@ class ConfirmDeleteButton extends React.Component {
 
   render() {
     let {confirmText, ...otherProps} = this.props;
-    confirmText = confirmText || "Delete";
+    confirmText = confirmText || 'Delete';
     return (
       <div style={[{display: 'inline-block'}, this.props.containerStyle]}>
         <Dialog

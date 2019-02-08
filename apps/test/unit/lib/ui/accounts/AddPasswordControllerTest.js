@@ -48,31 +48,48 @@ describe('AddPasswordController', () => {
 
       it('sets password confirmation field', async () => {
         await controller.submitAddPassword('otherpassword', 'otherpassword');
-        const passwordValue = form.find('#add-password_user_password_confirmation').val();
+        const passwordValue = form
+          .find('#add-password_user_password_confirmation')
+          .val();
         expect(passwordValue).to.equal('otherpassword');
       });
 
       it('resolves to undefined', async () => {
-        const response = await controller.submitAddPassword('password', 'password');
+        const response = await controller.submitAddPassword(
+          'password',
+          'password'
+        );
         assert.isUndefined(response);
       });
     });
 
     describe('on failure', () => {
       it('rejects with server error if provided', async () => {
-        stub(form, 'submit').callsFake(() => form.trigger('ajax:error', [{
-          responseJSON: {
-            password: ['test-password-error']
-          }
-        }]));
-        await expect(controller.submitAddPassword('password', 'password')).to.eventually.be.rejectedWith('test-password-error');
+        stub(form, 'submit').callsFake(() =>
+          form.trigger('ajax:error', [
+            {
+              responseJSON: {
+                password: ['test-password-error']
+              }
+            }
+          ])
+        );
+        await expect(
+          controller.submitAddPassword('password', 'password')
+        ).to.eventually.be.rejectedWith('test-password-error');
       });
 
       it('rejects with custom error if server error is not provided', async () => {
-        stub(form, 'submit').callsFake(() => form.trigger('ajax:error', [{
-          status: 400
-        }]));
-        await expect(controller.submitAddPassword('password', 'password')).to.eventually.be.rejectedWith('Unexpected failure: 400');
+        stub(form, 'submit').callsFake(() =>
+          form.trigger('ajax:error', [
+            {
+              status: 400
+            }
+          ])
+        );
+        await expect(
+          controller.submitAddPassword('password', 'password')
+        ).to.eventually.be.rejectedWith('Unexpected failure: 400');
       });
     });
   });

@@ -892,7 +892,7 @@ ko:
         text: 오른쪽으로 회전
       Vector_positionCenter:
         text: 중간
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': 크기

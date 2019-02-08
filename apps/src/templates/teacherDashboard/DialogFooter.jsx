@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 
 const style = {
   aboveFooter: {
-    height: '90px',
+    height: '90px'
   },
   footer: {
     position: 'absolute',
@@ -12,12 +13,12 @@ const style = {
     right: '0',
     bottom: '0',
     background: 'white',
-    zIndex: '50',
+    zIndex: '50'
   },
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   }
 };
 
@@ -28,18 +29,16 @@ const style = {
  */
 export default class DialogFooter extends Component {
   static propTypes = {
-    children: PropTypes.any,
+    children: PropTypes.any
   };
 
   render() {
     return (
       <div>
-        <div style={style.aboveFooter}></div>
+        <div style={style.aboveFooter} />
         <div style={style.footer}>
-          <hr/>
-          <div style={style.buttonRow}>
-            {this.props.children}
-          </div>
+          <hr />
+          <div style={style.buttonRow}>{this.props.children}</div>
         </div>
       </div>
     );

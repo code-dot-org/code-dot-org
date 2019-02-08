@@ -1279,6 +1279,7 @@
   "subtitle": "Perangkat pemrograman visual",
   "success": "Sukses!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Beralih bagian:",
   "syncClever": "Sinkronkan siswa dari Clever",
   "syncGoogleClassroom": "Sinkronkan siswa dari google classroom",
   "syntaxErrorMsg": "Terdapat kesalahan pengetikan pada program Anda. Tolong hapus baris {lineNumber} dan ulangi kembali.",

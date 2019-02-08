@@ -10,7 +10,7 @@ describe('clientApi module', () => {
     sinon.stub(project, 'getCurrentId').returns('some-project');
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function (xhr) {
+    xhr.onCreate = function(xhr) {
       requests.push(xhr);
     };
   });
@@ -29,8 +29,7 @@ describe('clientApi module', () => {
     });
   });
 
-  describe('the ajax function', (done) => {
-
+  describe('the ajax function', done => {
     it('will call the error handler with the xhr object when response status is >= 400', done => {
       clientApi.assets.ajax(
         'GET',
@@ -46,10 +45,8 @@ describe('clientApi module', () => {
     });
 
     it('will fail silently if no error handler is passed in', () => {
-      clientApi.assets.ajax(
-        'GET',
-        'does-not-exist',
-        () => assert.fail('success called', 'error called')
+      clientApi.assets.ajax('GET', 'does-not-exist', () =>
+        assert.fail('success called', 'error called')
       );
       requests[0].respond(404, {}, 'Not Found');
     });
@@ -78,25 +75,23 @@ describe('clientApi module', () => {
 
   describe('assets api', () => {
     it('should have a copyAssets method', () => {
-      clientApi.assets.copyAssets(
-        'some-source-project',
-        ['some-file.png']
-      );
+      clientApi.assets.copyAssets('some-source-project', ['some-file.png']);
 
       expect(requests).to.have.length(1);
       expect(requests[0].method).to.equal('POST');
-      expect(requests[0].url).to.equal('/v3/copy-assets/some-project?src_channel=some-source-project&src_files=%5B%22some-file.png%22%5D');
+      expect(requests[0].url).to.equal(
+        '/v3/copy-assets/some-project?src_channel=some-source-project&src_files=%5B%22some-file.png%22%5D'
+      );
     });
 
     it('puts an audio asset to the correct url', () => {
-      clientApi.assets.putAsset(
-        'some-source-project',
-        ['some-audio.mp3']
-      );
+      clientApi.assets.putAsset('some-source-project', ['some-audio.mp3']);
 
       expect(requests).to.have.length(1);
       expect(requests[0].method).to.equal('PUT');
-      expect(requests[0].url).to.equal('/v3/assets/some-project/some-source-project');
+      expect(requests[0].url).to.equal(
+        '/v3/assets/some-project/some-source-project'
+      );
     });
   });
 });

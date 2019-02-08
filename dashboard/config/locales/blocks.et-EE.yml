@@ -885,7 +885,7 @@ et:
         text: pööra paremale
       Vector_positionCenter:
         text: keskel
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': suurus

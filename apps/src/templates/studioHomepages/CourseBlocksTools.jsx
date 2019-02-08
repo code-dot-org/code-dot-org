@@ -1,14 +1,15 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class CourseBlocksTools extends Component {
   static propTypes = {
-    isEnglish: PropTypes.bool.isRequired,
+    isEnglish: PropTypes.bool.isRequired
   };
 
   cards = [
@@ -41,11 +42,11 @@ class CourseBlocksTools extends Component {
       heading: i18n.courseBlocksToolsVideo(),
       description: i18n.courseBlocksToolsVideoDescription(),
       path: 'videos'
-    },
+    }
   ];
 
   render() {
-    const { isEnglish } = this.props;
+    const {isEnglish} = this.props;
 
     const headingText = isEnglish
       ? i18n.courseBlocksToolsTitleTeacher()
@@ -57,17 +58,15 @@ class CourseBlocksTools extends Component {
         description={i18n.standaloneToolsDescription()}
       >
         <ResourceCardResponsiveContainer>
-          {this.cards.map(
-            (card, cardIndex) => (
-              <ResourceCard
-                key={cardIndex}
-                title={card.heading}
-                description={card.description}
-                buttonText={i18n.learnMore()}
-                link={pegasus(`/${card.path}`)}
-              />
-            )
-          )}
+          {this.cards.map((card, cardIndex) => (
+            <ResourceCard
+              key={cardIndex}
+              title={card.heading}
+              description={card.description}
+              buttonText={i18n.learnMore()}
+              link={pegasus(`/${card.path}`)}
+            />
+          ))}
         </ResourceCardResponsiveContainer>
       </ContentContainer>
     );
