@@ -27,7 +27,7 @@ class ManageStudentsLoginInfo extends Component {
     const {studioUrlPrefix, sectionId} = this.props;
 
     if (studioUrlPrefix === window.location.origin) {
-      return `/teacher_dashboard/sections/${sectionId}/print_login_cards`;
+      return `/teacher_dashboard/sections/${sectionId}/login_info`;
     } else {
       return `/teacher-dashboard#/sections/${sectionId}/print_signin_cards`;
     }
