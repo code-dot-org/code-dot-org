@@ -106,8 +106,7 @@ function behaviorsEqual(behavior1, behavior2) {
 
 //Events
 
-// Aaron: I did some work here to clean things up.
-
+// New
 function keyPressed(condition, key, event) {
   if(condition === "when") {
     inputEvents.push({type: keyWentDown, event: event, param: key});
@@ -120,32 +119,31 @@ function whenMouseClicked(event) {
   inputEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
 }
 
+// Updated
 function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   inputEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
   inputEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
+// Updated
 function clickedOn(condition, sprite, event) {
+  var pushEvents = function(type) {
+    if(!Array.isArray(sprite)) {
+      inputEvents.push({type: type, event: event, param: sprite});
+    } else {
+      sprite.forEach(function(s) {
+        inputEvents.push({type: type, event: event, param: s});
+      });
+    }
+  };
   if(condition === "when") {
-    if(!Array.isArray(sprite)) {
-      inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
-    } else {
-      sprite.forEach(function(s) {
-      	inputEvents.push({type: whenSpriteClicked, event: event, param: s});
-      });
-    }
+  	pushEvents(whenSpriteClicked);
   } else {
-    if(!Array.isArray(sprite)) {
-      inputEvents.push({type: mousePressedOver, event: event, param: sprite});
-    } else {
-      sprite.forEach(function(s) {
-      	inputEvents.push({type: mousePressedOver, event: event, param: s});
-      });
-    }
+    pushEvents(mousePressedOver);
   }
 }
 
-// New input event types (see above)
+// New
 function whenSpriteClicked(sprite) {
   return mouseWentDown("leftButton") && mouseIsOver(sprite);
 }
@@ -185,15 +183,51 @@ function makeNewSpriteLocation(animation, loc) {
   return makeNewSprite(animation, loc.x, loc.y);
 }
 
+// Updated
 function setAnimation(sprite, animation) {
-  sprite.setAnimation(animation);
-  sprite.scale /= sprite.baseScale;
-  sprite.baseScale = 100 / Math.max(
-    100,
-    sprite.animation.getHeight(),
-    sprite.animation.getWidth()
-  );
-  sprite.scale *= sprite.baseScale;
+  var setOneAnimation = function(sprite) {
+    sprite.setAnimation(animation);
+    sprite.scale /= sprite.baseScale;
+    sprite.baseScale = 100 / Math.max(100,
+                                      sprite.animation.getHeight(),
+                                      sprite.animation.getWidth());
+    sprite.scale *= sprite.baseScale;
+    addToCostumeGroup(sprite);
+  };
+  if(!Array.isArray(sprite)) {
+    if(sprite.getAnimationLabel()) {
+      removeFromCostumeGroup(sprite, sprite.getAnimationLabel());
+    }
+  	setOneAnimation(sprite);
+  } else {
+    console.log(sprite.length);
+    if(sprite.length > 0) {
+      if(sprite[0].getAnimationLabel()) {
+        delete costumeGroups[sprite[0].getAnimationLabel()];
+      }
+      sprite.forEach(function(s) { setOneAnimation(s); });
+    }
+  }
+}
+
+// New
+function addToCostumeGroup(sprite) {
+  var costume = sprite.getAnimationLabel();
+  if(costumeGroups.hasOwnProperty(costume)) {
+     costumeGroups[costume].push(sprite);
+  } else {
+    costumeGroups[costume] = [sprite];
+  }
+}
+
+// New
+function removeFromCostumeGroup(sprite, oldCostume) {
+  var array = costumeGroups[oldCostume];
+  var index = array.indexOf(sprite);
+  array.splice(index, 1);
+  if(costumeGroups[oldCostume].length < 1) {
+    delete costumeGroups[oldCostume];
+  }
 }
 
 function makeNewSprite(animation, x, y) {
@@ -306,7 +340,7 @@ function unitVectorTowards(from, to) {
   return p5.Vector.fromAngle(angle);
 }
 
-// Run functions
+// New 
 function runSpriteBehaviors() {
   sprites.forEach(function (sprite) {
     sprite.behaviors.forEach(function (behavior) {
@@ -315,12 +349,14 @@ function runSpriteBehaviors() {
   });
 }
 
+// New
 function runCallbacks() {
   callbacks.forEach(function (callback) {
     callback();
   });
 }
 
+// New
 function runInputEvents() {
   var eventType;
   var event;
@@ -335,6 +371,7 @@ function runInputEvents() {
   }
 }
 
+// New
 function runCollisionEvents() {
   var createCollisionHandler = function (collisionEvent) {
     return function (sprite1, sprite2) {
@@ -360,6 +397,7 @@ function runCollisionEvents() {
   }
 }
 
+// New
 function runLoops() {
   for (var i = 0; i < loops.length; i++) {
     var loop = loops[i];
@@ -371,6 +409,7 @@ function runLoops() {
   }
 }
 
+// New
 function updateHUDText() {
   if (show_score) {
     fill("black");
@@ -393,6 +432,7 @@ function updateHUDText() {
   }
 }
 
+// Updated
 function draw() {
   background(World.background_color || "white");
   runCallbacks();

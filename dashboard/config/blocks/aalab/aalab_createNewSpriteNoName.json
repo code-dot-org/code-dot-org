@@ -1,10 +1,9 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "allSpritesWithCostume",
+    "func": "createNewSpriteNoName",
     "inline": false,
-    "blockText": "aalab all {COSTUME}",
-    "returnType": "Sprite",
+    "blockText": "aalab make new {COSTUME} sprite at {LOCATION}",
     "color": [
       355,
       ".7",
@@ -14,6 +13,10 @@
       {
         "name": "COSTUME",
         "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
       }
     ]
   }
