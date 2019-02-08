@@ -1,11 +1,18 @@
 /** A single list item representing an animation. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import color from "../../util/color";
+import color from '../../util/color';
 import * as shapes from '../shapes';
-import {setAnimationName, cloneAnimation, deleteAnimation,setAnimationFrameDelay, setAnimationLooping,
-  isNameUnique} from '../animationListModule';
+import {
+  setAnimationName,
+  cloneAnimation,
+  deleteAnimation,
+  setAnimationFrameDelay,
+  setAnimationLooping,
+  isNameUnique
+} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -116,7 +123,10 @@ class AnimationListItem extends React.Component {
     }
     this.setState({frameDelay: this.getAnimationProps(nextProps).frameDelay});
     if (this.props.isSelected && !nextProps.isSelected) {
-      this.setState({name: this.getAnimationProps(this.props).name, isNameValid: true});
+      this.setState({
+        name: this.getAnimationProps(this.props).name,
+        isNameValid: true
+      });
     }
   }
 
@@ -124,13 +134,16 @@ class AnimationListItem extends React.Component {
     this.setState({frameDelay: this.getAnimationProps(this.props).frameDelay});
     this.debouncedFrameDelay = _.debounce(() => {
       const latestFrameDelay = this.state.frameDelay;
-      this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
+      this.props.setAnimationFrameDelay(
+        this.props.animationKey,
+        latestFrameDelay
+      );
     }, 200);
   }
 
   onSelect = () => this.props.selectAnimation(this.props.animationKey);
 
-  cloneAnimation = (evt) => {
+  cloneAnimation = evt => {
     this.props.cloneAnimation(this.props.animationKey);
     evt.stopPropagation();
   };
@@ -139,11 +152,11 @@ class AnimationListItem extends React.Component {
     this.props.deleteAnimation(this.props.animationKey);
   };
 
-  setAnimationLooping = (looping) => {
+  setAnimationLooping = looping => {
     this.props.setAnimationLooping(this.props.animationKey, looping);
   };
 
-  onNameChange = (event) => {
+  onNameChange = event => {
     const {animationKey, animationList, setAnimationName} = this.props;
     const newName = event.target.value;
     const isNameValid = isNameUnique(newName, animationList.propsByKey);
@@ -205,18 +218,24 @@ class AnimationListItem extends React.Component {
     }
   }
 
-  setAnimationFrameDelay = (sliderValue) => {
+  setAnimationFrameDelay = sliderValue => {
     let frameDelay = this.convertLockedValueToFrameDelay(sliderValue);
     this.setState({frameDelay: frameDelay});
     this.debouncedFrameDelay();
   };
 
   render() {
-    const animationProps = Object.assign({}, this.getAnimationProps(this.props), {frameDelay: this.state.frameDelay});
+    const animationProps = Object.assign(
+      {},
+      this.getAnimationProps(this.props),
+      {frameDelay: this.state.frameDelay}
+    );
     const name = this.state.name;
     let animationName;
     if (this.props.isSelected) {
-      let invalidNameStyle = this.state.isNameValid ? {} : {backgroundColor: color.lightest_red};
+      let invalidNameStyle = this.state.isNameValid
+        ? {}
+        : {backgroundColor: color.lightest_red};
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
@@ -232,16 +251,16 @@ class AnimationListItem extends React.Component {
     }
 
     const tileStyle = [
-        styles.tile,
-        this.props.isSelected && styles.selectedTile,
-        this.props.style
+      styles.tile,
+      this.props.isSelected && styles.selectedTile,
+      this.props.style
     ];
 
     const arrowStyle = [this.props.isSelected && styles.rightArrow];
 
     return (
       <div style={tileStyle} onClick={this.onSelect}>
-        <div style={arrowStyle}></div>
+        <div style={arrowStyle} />
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={animationProps}
@@ -249,42 +268,49 @@ class AnimationListItem extends React.Component {
           singleFrameAnimation={this.props.allAnimationsSingleFrame}
         />
         {animationName}
-        {this.props.isSelected &&
+        {this.props.isSelected && (
           <ListItemButtons
             onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
             onLoopingChanged={this.setAnimationLooping}
             looping={animationProps.looping}
-            frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
+            frameDelay={this.convertFrameDelayToLockedValues(
+              this.state.frameDelay
+            )}
             singleFrameAnimation={this.props.allAnimationsSingleFrame}
-          />}
+          />
+        )}
       </div>
     );
   }
 }
-export default connect(state => ({
-  columnWidth: state.animationTab.columnSizes[0],
-  allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame || false
-}), dispatch => {
-  return {
-    cloneAnimation(animationKey) {
-      dispatch(cloneAnimation(animationKey));
-    },
-    deleteAnimation(animationKey) {
-      dispatch(deleteAnimation(animationKey));
-    },
-    selectAnimation(animationKey) {
-      dispatch(selectAnimation(animationKey));
-    },
-    setAnimationName(animationKey, newName) {
-      dispatch(setAnimationName(animationKey, newName));
-    },
-    setAnimationLooping(animationKey, looping) {
-      dispatch(setAnimationLooping(animationKey, looping));
-    },
-    setAnimationFrameDelay(animationKey, frameDelay) {
-      dispatch(setAnimationFrameDelay(animationKey, frameDelay));
-    }
-  };
-})(Radium(AnimationListItem));
+export default connect(
+  state => ({
+    columnWidth: state.animationTab.columnSizes[0],
+    allAnimationsSingleFrame:
+      state.pageConstants.allAnimationsSingleFrame || false
+  }),
+  dispatch => {
+    return {
+      cloneAnimation(animationKey) {
+        dispatch(cloneAnimation(animationKey));
+      },
+      deleteAnimation(animationKey) {
+        dispatch(deleteAnimation(animationKey));
+      },
+      selectAnimation(animationKey) {
+        dispatch(selectAnimation(animationKey));
+      },
+      setAnimationName(animationKey, newName) {
+        dispatch(setAnimationName(animationKey, newName));
+      },
+      setAnimationLooping(animationKey, looping) {
+        dispatch(setAnimationLooping(animationKey, looping));
+      },
+      setAnimationFrameDelay(animationKey, frameDelay) {
+        dispatch(setAnimationFrameDelay(animationKey, frameDelay));
+      }
+    };
+  }
+)(Radium(AnimationListItem));

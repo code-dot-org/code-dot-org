@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import color from "../../util/color";
+import color from '../../util/color';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const STANDARD_PADDING = 20;
@@ -18,30 +19,32 @@ const styles = {
     paddingBottom: STANDARD_PADDING / 4,
     cursor: 'pointer',
     ':hover': {
-      backgroundColor: color.lightest_gray,
+      backgroundColor: color.lightest_gray
     }
   },
   actionText: {
     fontSize: 13,
-    color: color.dark_charcoal,
-  },
+    color: color.dark_charcoal
+  }
 };
 
 class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    assignmentName: PropTypes.string,
+    assignmentName: PropTypes.string
   };
 
   state = {
-    names: [],
+    names: []
   };
 
   onClickPrintCerts = () => {
-    $.ajax(`/dashboardapi/sections/${this.props.sectionId}/students`).done(result => {
-      const names = result.map(student => student.name);
-      this.setState({names}, this.submitForm);
-    });
+    $.ajax(`/dashboardapi/sections/${this.props.sectionId}/students`).done(
+      result => {
+        const names = result.map(student => student.name);
+        this.setState({names}, this.submitForm);
+      }
+    );
   };
 
   submitForm = () => {
@@ -52,13 +55,17 @@ class PrintCertificates extends Component {
     return (
       <form
         style={styles.main}
-        ref={element => this.certForm = element}
+        ref={element => (this.certForm = element)}
         action={pegasus('/certificates')}
         method="POST"
       >
-        <input type="hidden" name="script" defaultValue={this.props.assignmentName}/>
+        <input
+          type="hidden"
+          name="script"
+          defaultValue={this.props.assignmentName}
+        />
         {this.state.names.map((name, index) => (
-          <input key={index} type="hidden" name="names[]" value={name}/>
+          <input key={index} type="hidden" name="names[]" value={name} />
         ))}
         <div style={styles.outerStyle}>
           <div

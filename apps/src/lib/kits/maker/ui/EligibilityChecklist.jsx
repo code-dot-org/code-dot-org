@@ -1,13 +1,14 @@
-import React, {PropTypes} from 'react';
-import i18n from "@cdo/locale";
-import color from "@cdo/apps/util/color";
-import DiscountCodeSchoolChoice from "./DiscountCodeSchoolChoice";
-import Button from "@cdo/apps/templates/Button";
+import PropTypes from 'prop-types';
+import React from 'react';
+import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
+import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
+import Button from '@cdo/apps/templates/Button';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
 import {isUnit6IntentionEligible} from '../util/discountLogic';
-import Unit6ValidationStep from "./Unit6ValidationStep";
-import EligibilityConfirmDialog from "./EligibilityConfirmDialog";
+import Unit6ValidationStep from './Unit6ValidationStep';
+import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 import DiscountCodeInstructions from './DiscountCodeInstructions';
 
 const styles = {
@@ -28,7 +29,7 @@ export default class EligibilityChecklist extends React.Component {
     initialDiscountCode: PropTypes.string,
     initialExpiration: PropTypes.string,
     adminSetStatus: PropTypes.bool.isRequired,
-    currentlyDistributingDiscountCodes: PropTypes.bool,
+    currentlyDistributingDiscountCodes: PropTypes.bool
   };
 
   state = {
@@ -39,7 +40,7 @@ export default class EligibilityChecklist extends React.Component {
     submitting: false,
     confirming: false,
     discountCode: null,
-    expiration: null,
+    expiration: null
   };
 
   constructor(props) {
@@ -51,7 +52,9 @@ export default class EligibilityChecklist extends React.Component {
       this.state = {
         ...this.state,
         yearChoice: props.unit6Intention,
-        statusYear: isUnit6IntentionEligible(props.unit6Intention) ? Status.SUCCEEDED : Status.FAILED,
+        statusYear: isUnit6IntentionEligible(props.unit6Intention)
+          ? Status.SUCCEEDED
+          : Status.FAILED
       };
     }
 
@@ -73,7 +76,7 @@ export default class EligibilityChecklist extends React.Component {
     this.state = {
       ...this.state,
       discountCode: props.initialDiscountCode,
-      expiration: props.initialExpiration,
+      expiration: props.initialExpiration
     };
   }
 
@@ -86,7 +89,7 @@ export default class EligibilityChecklist extends React.Component {
 
   handleUnit6Submitted = eligible => {
     this.setState({
-      statusYear: eligible ? Status.SUCCEEDED : Status.FAILED,
+      statusYear: eligible ? Status.SUCCEEDED : Status.FAILED
     });
   };
 
@@ -113,7 +116,8 @@ export default class EligibilityChecklist extends React.Component {
         <div style={styles.main}>
           <h2>Discount codes are no longer available</h2>
           <p>
-            Sorry, we are no longer distributing Adafruit discount codes at this time.
+            Sorry, we are no longer distributing Adafruit discount codes at this
+            time.
           </p>
         </div>
       );
@@ -122,49 +126,57 @@ export default class EligibilityChecklist extends React.Component {
     return (
       <div>
         <h1>{discountPageHeader}</h1>
-        <UnsafeRenderedMarkdown markdown={discountPageDescriptionMd}/>
+        <UnsafeRenderedMarkdown markdown={discountPageDescriptionMd} />
         <h2>{schoolRequirementHeading}</h2>
-        <UnsafeRenderedMarkdown markdown={schoolRequirementDescriptionMd}/>
+        <UnsafeRenderedMarkdown markdown={schoolRequirementDescriptionMd} />
         <DiscountCodeSchoolChoice
           initialSchoolId={this.props.schoolId}
           initialSchoolName={this.props.schoolName}
           schoolConfirmed={this.props.hasConfirmedSchool}
           onSchoolConfirmed={this.handleSchoolConfirmed}
         />
-        {this.state.schoolEligible === false && !this.props.adminSetStatus &&
-          <UnsafeRenderedMarkdown markdown={schoolIsNotEligibleMd(this.state.schoolId)}/>
-        }
-        {this.state.schoolEligible === true && !this.props.adminSetStatus &&
+        {this.state.schoolEligible === false && !this.props.adminSetStatus && (
+          <UnsafeRenderedMarkdown
+            markdown={schoolIsNotEligibleMd(this.state.schoolId)}
+          />
+        )}
+        {this.state.schoolEligible === true && !this.props.adminSetStatus && (
           <div>
-            <UnsafeRenderedMarkdown markdown={schoolIsEligibleMd}/>
+            <UnsafeRenderedMarkdown markdown={schoolIsEligibleMd} />
             <h2>{i18n.eligibilityRequirements()}</h2>
             <p>{i18n.eligibilityExplanation()}</p>
             <ValidationStep
               stepName={i18n.eligibilityReqPD()}
               stepStatus={this.props.statusPD}
             >
-              <UnsafeRenderedMarkdown markdown={eligibilityReqPDFail}/>
+              <UnsafeRenderedMarkdown markdown={eligibilityReqPDFail} />
             </ValidationStep>
             <ValidationStep
               stepName={i18n.eligibilityReqStudentCount()}
               stepStatus={this.props.statusStudentCount}
             >
-              <UnsafeRenderedMarkdown markdown={eligibilityReqStudentCountFail}/>
+              <UnsafeRenderedMarkdown
+                markdown={eligibilityReqStudentCountFail}
+              />
             </ValidationStep>
             <Unit6ValidationStep
-              showRadioButtons={this.props.statusStudentCount === Status.SUCCEEDED &&
-              this.props.statusPD === Status.SUCCEEDED && !this.props.adminSetStatus}
+              showRadioButtons={
+                this.props.statusStudentCount === Status.SUCCEEDED &&
+                this.props.statusPD === Status.SUCCEEDED &&
+                !this.props.adminSetStatus
+              }
               stepStatus={this.state.statusYear}
               initialChoice={this.props.unit6Intention}
               onSubmit={this.handleUnit6Submitted}
             />
           </div>
-        }
-        {this.state.statusYear === Status.SUCCEEDED &&
+        )}
+        {this.state.statusYear === Status.SUCCEEDED && (
           <div>
             <div>
               <strong>
-                You meet all the requirements for a fully subsidized classroom kit. Click the “Get Code” button to get your code.
+                You meet all the requirements for a fully subsidized classroom
+                kit. Click the “Get Code” button to get your code.
               </strong>
             </div>
             <Button
@@ -173,13 +185,13 @@ export default class EligibilityChecklist extends React.Component {
               onClick={this.confirmEligibility}
             />
           </div>
-        }
-        {this.state.confirming &&
+        )}
+        {this.state.confirming && (
           <EligibilityConfirmDialog
             onCancel={this.handleCancelDialog}
             onSuccess={this.handleSuccessDialog}
           />
-        }
+        )}
       </div>
     );
   }
@@ -206,7 +218,7 @@ Adafruit has made available a 10% off educator discount that this kit is eligibl
 Just use the code \`ADAEDU\` at checkout.
 `;
 
-const schoolIsNotEligibleMd = (ncesId) => `
+const schoolIsNotEligibleMd = ncesId => `
 Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
 your school has fewer than 40% of students that are eligible for free/reduced-price lunches
 ([source](https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=${ncesId})).

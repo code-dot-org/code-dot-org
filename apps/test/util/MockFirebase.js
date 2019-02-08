@@ -1,4 +1,4 @@
-import { MockFirebase } from 'firebase-mock';
+import {MockFirebase} from 'firebase-mock';
 
 MockFirebase.prototype.originalOnce = MockFirebase.prototype.once;
 
@@ -11,7 +11,12 @@ MockFirebase.prototype.originalOnce = MockFirebase.prototype.once;
  * @param context
  * @returns {Promise|undefined}
  */
-MockFirebase.prototype.once = function (eventType, onSuccess, onFailure, context) {
+MockFirebase.prototype.once = function(
+  eventType,
+  onSuccess,
+  onFailure,
+  context
+) {
   if (onSuccess || onFailure) {
     return this.originalOnce(eventType, onSuccess, onFailure, context);
   }
@@ -29,7 +34,7 @@ MockFirebase.prototype.originalSet = MockFirebase.prototype.set;
  * @param {function} onComplete
  * @returns {Promise|undefined}
  */
-MockFirebase.prototype.set = function (value, onComplete) {
+MockFirebase.prototype.set = function(value, onComplete) {
   if (onComplete) {
     return this.originalSet(value, onComplete);
   }
@@ -52,7 +57,7 @@ MockFirebase.prototype.originalUpdate = MockFirebase.prototype.update;
  * @param {function} onComplete
  * @returns {Promise|undefined}
  */
-MockFirebase.prototype.update = function (value, onComplete) {
+MockFirebase.prototype.update = function(value, onComplete) {
   if (onComplete) {
     return this.originalUpdate(value, onComplete);
   }
@@ -68,17 +73,25 @@ MockFirebase.prototype.update = function (value, onComplete) {
 
 MockFirebase.prototype.originalTransaction = MockFirebase.prototype.transaction;
 
-MockFirebase.prototype.transaction = function (updateFunction, onComplete, applyLocally) {
+MockFirebase.prototype.transaction = function(
+  updateFunction,
+  onComplete,
+  applyLocally
+) {
   if (onComplete) {
     return this.originalTransaction(updateFunction, onComplete, applyLocally);
   }
   return new Promise((resolve, reject) => {
-    return this.originalTransaction(updateFunction, (error, committed, snapshot) => {
-      if (error) {
-        return reject(error);
-      }
-      return resolve({committed, snapshot});
-    }, applyLocally);
+    return this.originalTransaction(
+      updateFunction,
+      (error, committed, snapshot) => {
+        if (error) {
+          return reject(error);
+        }
+        return resolve({committed, snapshot});
+      },
+      applyLocally
+    );
   });
 };
 

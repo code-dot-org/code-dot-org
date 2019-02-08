@@ -10,7 +10,10 @@
  * @param {Console} window console API
  * @param {LogLevel} verbosity
  */
-var NetSimLogger = module.exports = function (outputConsole, verbosity /*=VERBOSE*/) {
+var NetSimLogger = (module.exports = function(
+  outputConsole,
+  verbosity /*=VERBOSE*/
+) {
   /**
    * @type {Console}
    * @private
@@ -22,32 +25,31 @@ var NetSimLogger = module.exports = function (outputConsole, verbosity /*=VERBOS
    * @type {Function}
    * @private
    */
-  this.log_ = function () {};
+  this.log_ = function() {};
 
   /**
    * If configured for info logging, gets mapped to console.info,
    * falls back to console.log, or no-op.
    * @type {Function}
    */
-  this.info = function () {};
+  this.info = function() {};
 
   /**
    * If configured for warning logging, gets mapped to console.warn,
    * falls back to console.log, or no-op.
    * @type {Function}
    */
-  this.warn = function () {};
+  this.warn = function() {};
 
   /**
    * If configured for error logging, gets mapped to console.error,
    * falls back to console.log, or no-op.
    * @type {Function}
    */
-  this.error = function () {};
+  this.error = function() {};
 
-  this.setVerbosity((undefined === verbosity) ?
-      LogLevel.VERBOSE : verbosity);
-};
+  this.setVerbosity(undefined === verbosity ? LogLevel.VERBOSE : verbosity);
+});
 
 /**
  * Log verbosity levels enum.
@@ -73,7 +75,7 @@ var singletonInstance;
  * Static getter/lazy-creator for the global singleton instance.
  * @returns {NetSimLogger}
  */
-NetSimLogger.getSingleton = function () {
+NetSimLogger.getSingleton = function() {
   if (singletonInstance === undefined) {
     singletonInstance = new NetSimLogger(console, LogLevel.WARN);
   }
@@ -84,36 +86,52 @@ NetSimLogger.getSingleton = function () {
  * Binds internal function calls according to given verbosity level.
  * @param verbosity
  */
-NetSimLogger.prototype.setVerbosity = function (verbosity) {
+NetSimLogger.prototype.setVerbosity = function(verbosity) {
   // Note: We don't call this.outputConsole_.log.bind here, because in IE9 the
   // console's logging methods do not inherit from Function.
 
-  this.log_ = (this.outputConsole_ && this.outputConsole_.log) ?
-      Function.prototype.bind.call(this.outputConsole_.log, this.outputConsole_) :
-      function () {};
+  this.log_ =
+    this.outputConsole_ && this.outputConsole_.log
+      ? Function.prototype.bind.call(
+          this.outputConsole_.log,
+          this.outputConsole_
+        )
+      : function() {};
 
   if (verbosity >= LogLevel.INFO) {
-    this.info = (this.outputConsole_ && this.outputConsole_.info) ?
-        Function.prototype.bind.call(this.outputConsole_.info, this.outputConsole_) :
-        this.log_;
+    this.info =
+      this.outputConsole_ && this.outputConsole_.info
+        ? Function.prototype.bind.call(
+            this.outputConsole_.info,
+            this.outputConsole_
+          )
+        : this.log_;
   } else {
-    this.info = function () {};
+    this.info = function() {};
   }
 
   if (verbosity >= LogLevel.WARN) {
-    this.warn = (this.outputConsole_ && this.outputConsole_.warn) ?
-        Function.prototype.bind.call(this.outputConsole_.warn, this.outputConsole_) :
-        this.log_;
+    this.warn =
+      this.outputConsole_ && this.outputConsole_.warn
+        ? Function.prototype.bind.call(
+            this.outputConsole_.warn,
+            this.outputConsole_
+          )
+        : this.log_;
   } else {
-    this.warn = function () {};
+    this.warn = function() {};
   }
 
   if (verbosity >= LogLevel.ERROR) {
-    this.error = (this.outputConsole_ && this.outputConsole_.error) ?
-        Function.prototype.bind.call(this.outputConsole_.error, this.outputConsole_) :
-        this.log_;
+    this.error =
+      this.outputConsole_ && this.outputConsole_.error
+        ? Function.prototype.bind.call(
+            this.outputConsole_.error,
+            this.outputConsole_
+          )
+        : this.log_;
   } else {
-    this.error = function () {};
+    this.error = function() {};
   }
 };
 
@@ -122,7 +140,7 @@ NetSimLogger.prototype.setVerbosity = function (verbosity) {
  * @param {*} message
  * @param {LogLevel} logLevel
  */
-NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
+NetSimLogger.prototype.log = function(message, logLevel /*=INFO*/) {
   if (undefined === logLevel) {
     logLevel = LogLevel.INFO;
   }

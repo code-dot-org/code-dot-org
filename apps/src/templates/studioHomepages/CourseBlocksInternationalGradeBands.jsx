@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 class CourseBlocksInternationalGradeBands extends Component {
   cards = [
@@ -34,9 +34,7 @@ class CourseBlocksInternationalGradeBands extends Component {
         heading={i18n.courseBlocksInternationalGradeBandsContainerHeading()}
         description={i18n.courseBlocksInternationalGradeBandsContainerDescription()}
       >
-        <CourseBlocksGradeBands
-          cards={this.cards}
-        />
+        <CourseBlocksGradeBands cards={this.cards} />
       </ContentContainer>
     );
   }

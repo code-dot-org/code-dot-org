@@ -6,7 +6,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
-  COMPLETED,
+  COMPLETED
 } from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
@@ -24,7 +24,7 @@ const defaultProps = {
   isRtl: false,
   resources: [],
   scriptHasLockableStages: false,
-  scriptAllowsHiddenStages: false,
+  scriptAllowsHiddenStages: false
 };
 
 describe('ScriptOverviewTopRow', () => {
@@ -53,7 +53,7 @@ describe('ScriptOverviewTopRow', () => {
         </div>
         <div>
           <span>
-            <ProgressDetailToggle/>
+            <ProgressDetailToggle />
           </span>
         </div>
       </div>
@@ -96,10 +96,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders "Assign to section" for teacher', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-      />
+      <ScriptOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -111,7 +108,7 @@ describe('ScriptOverviewTopRow', () => {
         />
         <div>
           <span>
-            <ProgressDetailToggle/>
+            <ProgressDetailToggle />
           </span>
         </div>
       </div>
@@ -158,7 +155,7 @@ describe('ScriptOverviewTopRow', () => {
         </div>
         <div>
           <span>
-            <ProgressDetailToggle/>
+            <ProgressDetailToggle />
           </span>
         </div>
       </div>
@@ -167,12 +164,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders RTL without errors', () => {
     expect(() => {
-      shallow(
-        <ScriptOverviewTopRow
-          {...defaultProps}
-          isRtl={true}
-        />
-      );
+      shallow(<ScriptOverviewTopRow {...defaultProps} isRtl={true} />);
     }).not.to.throw();
   });
 });

@@ -1,12 +1,15 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import cookies from 'js-cookie';
 import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
-import { getStore } from './redux';
-import { setUserSignedIn, setUserType } from '@cdo/apps/code-studio/progressRedux';
-import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
+import {getStore} from './redux';
+import {
+  setUserSignedIn,
+  setUserType
+} from '@cdo/apps/code-studio/progressRedux';
+import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 /**
  * Attempt to replicate logic used that user_header.haml uses to populate the
@@ -21,7 +24,9 @@ export function getUserSignedInFromCookieAndDom() {
     // We did not have a cookie, meaning we're probably not signed in. Because
     // we want to replicate the logic in user_header.haml, also check to see if
     // the server had populated our DOM with a user id.
-    const displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+    const displayNameSpan = document.querySelector(
+      '.header_button.header_user.user_menu .display_name'
+    );
     return !!(displayNameSpan && displayNameSpan.dataset.id);
   }
 }
@@ -41,7 +46,7 @@ export default function initSigninState(userType) {
     const div = document.createElement('div');
     ReactDOM.render(
       <Provider store={store}>
-        <SignInOrAgeDialog/>
+        <SignInOrAgeDialog />
       </Provider>,
       div
     );

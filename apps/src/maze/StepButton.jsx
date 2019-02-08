@@ -1,14 +1,15 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 var msg = require('./locale');
 
-var StepButton = function (props) {
+var StepButton = function(props) {
   var classes = 'launch float-right';
   if (!props.showStepButton) {
     classes += ' hide';
   }
   return (
     <button id="stepButton" className={classes}>
-      <img src="/blockly/media/1x1.gif"/>
+      <img src="/blockly/media/1x1.gif" />
       {msg.step()}
     </button>
   );

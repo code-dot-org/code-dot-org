@@ -1,23 +1,27 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
-  COMPLETED,
+  COMPLETED
 } from './ScriptOverviewTopRow';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
-import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
-import ScriptOverviewHeader, { scriptVersionShape } from './ScriptOverviewHeader';
-import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { onDismissRedirectDialog, dismissedRedirectDialog } from '@cdo/apps/util/dismissVersionRedirect';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
+import {hasLockableStages} from '@cdo/apps/code-studio/progressRedux';
+import ScriptOverviewHeader, {scriptVersionShape} from './ScriptOverviewHeader';
+import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {
+  onDismissRedirectDialog,
+  dismissedRedirectDialog
+} from '@cdo/apps/util/dismissVersionRedirect';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -43,20 +47,23 @@ class ScriptOverview extends React.Component {
     professionalLearningCourse: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-    })).isRequired,
+    sectionsInfo: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired
+      })
+    ).isRequired,
     currentCourseId: PropTypes.number,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   constructor(props) {
     super(props);
-    const showRedirectDialog = props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
+    const showRedirectDialog =
+      props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
     this.state = {showRedirectDialog};
   }
 
@@ -65,7 +72,7 @@ class ScriptOverview extends React.Component {
     // Use course name if available, and script name if not.
     onDismissRedirectDialog(courseName || scriptName);
     this.setState({
-      showRedirectDialog: false,
+      showRedirectDialog: false
     });
   };
 
@@ -93,10 +100,11 @@ class ScriptOverview extends React.Component {
       versions,
       hiddenStageState,
       selectedSectionId,
-      courseName,
+      courseName
     } = this.props;
 
-    const displayRedirectDialog = redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
+    const displayRedirectDialog =
+      redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
     let scriptProgress = NOT_STARTED;
     if (scriptCompleted) {
@@ -105,14 +113,16 @@ class ScriptOverview extends React.Component {
       scriptProgress = IN_PROGRESS;
     }
 
-    const isHiddenUnit = !!selectedSectionId && !!scriptId &&
+    const isHiddenUnit =
+      !!selectedSectionId &&
+      !!scriptId &&
       isScriptHiddenForSection(hiddenStageState, selectedSectionId, scriptId);
 
     return (
       <div>
         {onOverviewPage && (
           <div>
-            {displayRedirectDialog &&
+            {displayRedirectDialog && (
               <RedirectDialog
                 isOpen={this.state.showRedirectDialog}
                 details={i18n.assignedToNewerVersion()}
@@ -120,7 +130,7 @@ class ScriptOverview extends React.Component {
                 redirectUrl={redirectScriptUrl}
                 redirectButtonText={i18n.goToAssignedVersion()}
               />
-            }
+            )}
             <ScriptOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
@@ -129,10 +139,11 @@ class ScriptOverview extends React.Component {
               versions={versions}
               courseName={courseName}
             />
-            {!professionalLearningCourse && viewAs === ViewType.Teacher &&
-                (scriptHasLockableStages || scriptAllowsHiddenStages) &&
-              <LabeledSectionSelector/>
-            }
+            {!professionalLearningCourse &&
+              viewAs === ViewType.Teacher &&
+              (scriptHasLockableStages || scriptAllowsHiddenStages) && (
+                <LabeledSectionSelector />
+              )}
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
               professionalLearningCourse={professionalLearningCourse}
@@ -148,10 +159,10 @@ class ScriptOverview extends React.Component {
           </div>
         )}
 
-        <ProgressTable/>
-        {onOverviewPage &&
-          <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend}/>
-        }
+        <ProgressTable />
+        {onOverviewPage && (
+          <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
+        )}
       </div>
     );
   }
@@ -169,8 +180,9 @@ export default connect(state => ({
   isRtl: state.isRtl,
   sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,
-  scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
+  scriptHasLockableStages:
+    state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
   scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
   hiddenStageState: state.hiddenStage,
-  selectedSectionId: state.teacherSections.selectedSectionId,
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(UnconnectedScriptOverview);

@@ -1,19 +1,20 @@
 /** @file Component wrapping embedded Piskel editor */
 // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
 /* global PISKEL_DEVELOPMENT_MODE */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as shapes from '../shapes';
-import { editAnimation, removePendingFramesAction } from '../animationListModule';
-import { show, Goal } from '../AnimationPicker/animationPickerModule';
+import {editAnimation, removePendingFramesAction} from '../animationListModule';
+import {show, Goal} from '../AnimationPicker/animationPickerModule';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
  * In special environment builds, append ?debug flag to get Piskel to load its own debug mode.
  */
-const PISKEL_PATH = '/blockly/js/piskel/index.html' +
-    (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
+const PISKEL_PATH =
+  '/blockly/js/piskel/index.html' + (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
 
 /**
  * The PiskelEditor component is a wrapper for the iframe that contains the
@@ -70,8 +71,10 @@ class PiskelEditor extends React.Component {
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.loadSelectedAnimation_(newProps);
     }
-    if (newProps.pendingFrames &&
-        newProps.selectedAnimation === newProps.pendingFrames.key) {
+    if (
+      newProps.pendingFrames &&
+      newProps.selectedAnimation === newProps.pendingFrames.key
+    ) {
       this.sendPendingFramesToPiskel(newProps.pendingFrames);
     }
   }
@@ -100,7 +103,8 @@ class PiskelEditor extends React.Component {
           if (this.props.selectedAnimation !== key) {
             this.loadSelectedAnimation_(this.props);
           }
-        });
+        }
+      );
     }
   }
 
@@ -133,31 +137,37 @@ class PiskelEditor extends React.Component {
     // Special case: When selecting a new, blank animation (one that is 'loaded'
     // but has no loaded content) tell Piskel to create a new animation with
     // its dimensions.
-    if (animationProps.loadedFromSource && animationProps.sourceUrl === null &&
-        animationProps.blob === null && animationProps.dataURI === null) {
+    if (
+      animationProps.loadedFromSource &&
+      animationProps.sourceUrl === null &&
+      animationProps.blob === null &&
+      animationProps.dataURI === null
+    ) {
       this.piskel.createNewPiskel(
-          animationProps.frameSize.x,
-          animationProps.frameSize.y,
-          animationProps.frameDelay,
-          () => {
-            this.loadedAnimation_ = key;
-            this.isLoadingAnimation_ = false;
-          });
+        animationProps.frameSize.x,
+        animationProps.frameSize.y,
+        animationProps.frameDelay,
+        () => {
+          this.loadedAnimation_ = key;
+          this.isLoadingAnimation_ = false;
+        }
+      );
     } else {
       this.piskel.loadSpritesheet(
-          animationProps.dataURI,
-          animationProps.frameSize.x,
-          animationProps.frameSize.y,
-          animationProps.frameDelay,
-          () => {
-            this.loadedAnimation_ = key;
-            this.isLoadingAnimation_ = false;
+        animationProps.dataURI,
+        animationProps.frameSize.x,
+        animationProps.frameSize.y,
+        animationProps.frameDelay,
+        () => {
+          this.loadedAnimation_ = key;
+          this.isLoadingAnimation_ = false;
 
-            // If the selected animation changed out from under us, load again.
-            if (this.props.selectedAnimation !== key) {
-              this.loadSelectedAnimation_(this.props);
-            }
-          });
+          // If the selected animation changed out from under us, load again.
+          if (this.props.selectedAnimation !== key) {
+            this.loadSelectedAnimation_(this.props);
+          }
+        }
+      );
     }
   }
 
@@ -177,7 +187,7 @@ class PiskelEditor extends React.Component {
     this.loadSelectedAnimation_(this.props);
   };
 
-  onAnimationSaved = (message) => {
+  onAnimationSaved = message => {
     if (this.isLoadingAnimation_) {
       return;
     }
@@ -194,25 +204,28 @@ class PiskelEditor extends React.Component {
   render() {
     return (
       <iframe
-        ref={iframe => this.iframe = iframe}
+        ref={iframe => (this.iframe = iframe)}
         style={this.props.style}
         src={PISKEL_PATH}
       />
     );
   }
 }
-export default connect(state => ({
-  selectedAnimation: state.animationTab.selectedAnimation,
-  animationList: state.animationList,
-  channelId: state.pageConstants.channelId,
-  allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
-  pendingFrames: state.animationList.pendingFrames
-}), dispatch => ({
-  editAnimation: (key, props) => dispatch(editAnimation(key, props)),
-  onNewFrameClick() {
-    dispatch(show(Goal.NEW_FRAME));
-  },
-  removePendingFrames() {
-    dispatch(removePendingFramesAction());
-  }
-}))(PiskelEditor);
+export default connect(
+  state => ({
+    selectedAnimation: state.animationTab.selectedAnimation,
+    animationList: state.animationList,
+    channelId: state.pageConstants.channelId,
+    allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
+    pendingFrames: state.animationList.pendingFrames
+  }),
+  dispatch => ({
+    editAnimation: (key, props) => dispatch(editAnimation(key, props)),
+    onNewFrameClick() {
+      dispatch(show(Goal.NEW_FRAME));
+    },
+    removePendingFrames() {
+      dispatch(removePendingFramesAction());
+    }
+  })
+)(PiskelEditor);

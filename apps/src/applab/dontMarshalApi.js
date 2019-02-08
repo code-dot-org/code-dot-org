@@ -1,39 +1,48 @@
-import {
-  OPTIONAL,
-  outputWarning,
-} from '../lib/util/javascriptMode';
+import {OPTIONAL, outputWarning} from '../lib/util/javascriptMode';
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
 //
 // dropletConfig for each of these APIs should be marked with dontMarshal:true
 
-
 function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
   var properType;
   if (typeof varValue !== 'undefined') {
     if (expectedType === 'number') {
-      properType = (typeof varValue.data === 'number' ||
-                    (typeof varValue.data === 'string' && !isNaN(varValue.data)));
+      properType =
+        typeof varValue.data === 'number' ||
+        (typeof varValue.data === 'string' && !isNaN(varValue.data));
     } else if (expectedType === 'array') {
-      properType = window.Applab.JSInterpreter.interpreter.isa(varValue.proto, window.Applab.JSInterpreter.interpreter.ARRAY);
+      properType = window.Applab.JSInterpreter.interpreter.isa(
+        varValue.proto,
+        window.Applab.JSInterpreter.interpreter.ARRAY
+      );
     } else {
-      properType = (typeof varValue.data === expectedType);
+      properType = typeof varValue.data === expectedType;
     }
   }
-  properType = properType ||
-              (opt === OPTIONAL &&
-               (varValue === window.Applab.JSInterpreter.interpreter.UNDEFINED ||
-                typeof varValue === 'undefined'));
+  properType =
+    properType ||
+    (opt === OPTIONAL &&
+      (varValue === window.Applab.JSInterpreter.interpreter.UNDEFINED ||
+        typeof varValue === 'undefined'));
   if (!properType) {
-    outputWarning(funcName + "() " + varName + " parameter value (" +
-                    varValue + ") is not a " + expectedType + ".");
+    outputWarning(
+      funcName +
+        '() ' +
+        varName +
+        ' parameter value (' +
+        varValue +
+        ') is not a ' +
+        expectedType +
+        '.'
+    );
   }
 }
 
 // Array functions
 
-var getInt = function (obj, def) {
+var getInt = function(obj, def) {
   // Return an integer, or the default.
   var n = obj ? Math.floor(obj.toNumber()) : def;
   if (isNaN(n)) {
@@ -77,9 +86,13 @@ export function removeItem(array, index) {
     array.length -= 1;
   } else {
     // index is out of bounds (too large):
-    outputWarning("removeItem() index parameter value (" + index +
-                    ") is larger than the number of items in the list (" +
-                    array.length + ").");
+    outputWarning(
+      'removeItem() index parameter value (' +
+        index +
+        ') is larger than the number of items in the list (' +
+        array.length +
+        ').'
+    );
   }
 }
 
@@ -158,6 +171,8 @@ export function setRGB(imageData, x, y, r, g, b, a) {
     imageData.properties.data.properties[pixelOffset + 1] = g;
     imageData.properties.data.properties[pixelOffset + 2] = b;
     imageData.properties.data.properties[pixelOffset + 3] =
-      (typeof a === 'undefined') ? window.Applab.JSInterpreter.createPrimitive(255) : a;
+      typeof a === 'undefined'
+        ? window.Applab.JSInterpreter.createPrimitive(255)
+        : a;
   }
 }

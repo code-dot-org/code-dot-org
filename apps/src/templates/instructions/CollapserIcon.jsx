@@ -1,6 +1,7 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from "../../util/color";
+import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 
 const styles = {
@@ -22,7 +23,7 @@ const styles = {
       cursor: 'pointer',
       color: color.default_text
     }
-  },
+  }
 };
 
 /**
@@ -36,7 +37,9 @@ class CollapserIcon extends Component {
   };
 
   render() {
-    const iconClass = this.props.collapsed ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up';
+    const iconClass = this.props.collapsed
+      ? 'fa-chevron-circle-down'
+      : 'fa-chevron-circle-up';
 
     const combinedStyle = {
       ...styles.showHideButton,
@@ -47,12 +50,10 @@ class CollapserIcon extends Component {
         id="ui-test-collapser"
         style={combinedStyle}
         onClick={this.props.onClick}
-        className={iconClass + " fa"}
+        className={iconClass + ' fa'}
       />
     );
   }
 }
-
-
 
 export default Radium(CollapserIcon);

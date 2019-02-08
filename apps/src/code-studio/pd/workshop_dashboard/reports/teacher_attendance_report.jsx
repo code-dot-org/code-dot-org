@@ -1,15 +1,17 @@
 /**
  * Teacher Attendance Report
  */
-import React, {PropTypes} from "react";
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {connect} from 'react-redux';
-import ReportTable from "./report_table";
+import ReportTable from './report_table';
 import {PermissionPropType} from '../permission';
 import {Button} from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import Spinner from '../../components/spinner';
 
-const QUERY_URL = "/api/v1/pd/teacher_attendance_report";
+const QUERY_URL = '/api/v1/pd/teacher_attendance_report';
 
 const styles = {
   link: {cursor: 'pointer'}
@@ -73,8 +75,7 @@ export class TeacherAttendanceReport extends React.Component {
       method: 'GET',
       url: url,
       dataType: 'json'
-    })
-    .done(data => {
+    }).done(data => {
       this.setState({
         loading: false,
         rows: data
@@ -82,105 +83,137 @@ export class TeacherAttendanceReport extends React.Component {
     });
   }
 
-  formatWorkshopId = (workshop_id) => {
+  formatWorkshopId = workshop_id => {
     const href = this.context.router.createHref(`/workshops/${workshop_id}`);
-    return <a href={href} target="_blank" style={styles.link}>{workshop_id}</a>;
+    return (
+      <a href={href} target="_blank" style={styles.link}>
+        {workshop_id}
+      </a>
+    );
   };
 
-  formatYesNo = (value) => {
-    return value ? "YES" : "NO";
+  formatYesNo = value => {
+    return value ? 'YES' : 'NO';
   };
 
-  formatCurrency = (amount) => {
+  formatCurrency = amount => {
     return amount ? `$${Number(amount).toFixed(2)}` : null;
   };
 
   getColumns() {
-    let columns = [{
-      property: 'teacher_first_name',
-      header: {label: 'Teacher First Name'}
-    }, {
-      property: 'teacher_last_name',
-      header: {label: 'Teacher Last Name'}
-    }, {
-      property: 'teacher_id',
-      header: {label: 'Teacher Id'}
-    }, {
-      property: 'teacher_email',
-      header: {label: 'Teacher Email'}
-    }, {
-      property: 'plp_name',
-      header: {label: 'PLP Name'}
-    }, {
-      property: 'state',
-      header: {label: 'State'}
-    }, {
-      property: 'district_name',
-      header: {label: 'District Name'},
-    }, {
-      property: 'district_id',
-      header: {label: 'District Id'},
-    }, {
-      property: 'school',
-      header: {label: 'School'},
-    }, {
-      property: 'course',
-      header: {label: 'Course'},
-    }, {
-      property: 'subject',
-      header: {label: 'Subject'},
-    }, {
-      property: 'workshop_id',
-      header: {label: 'Workshop Id'},
-      cell: {format: this.formatWorkshopId}
-    }, {
-      property: 'workshop_dates',
-      header: {label: 'Workshop Dates'},
-    }, {
-      property: 'workshop_name',
-      header: {label: 'Workshop Name'},
-    }, {
-      property: 'on_map',
-      header: {label: 'Shown on Map'},
-    }, {
-      property: 'funded',
-      header: {label: 'Funded'},
-    }, {
-      property: 'organizer_name',
-      header: {label: 'Organizer Name'},
-    }, {
-      property: 'organizer_email',
-      header: {label: 'Organizer Email'},
-    }, {
-      property: 'year',
-      header: {label: 'Year'},
-    }, {
-      property: 'hours',
-      header: {label: 'Hours'},
-    }, {
-      property: 'days',
-      header: {label: 'Days'}
-    }];
+    let columns = [
+      {
+        property: 'teacher_first_name',
+        header: {label: 'Teacher First Name'}
+      },
+      {
+        property: 'teacher_last_name',
+        header: {label: 'Teacher Last Name'}
+      },
+      {
+        property: 'teacher_id',
+        header: {label: 'Teacher Id'}
+      },
+      {
+        property: 'teacher_email',
+        header: {label: 'Teacher Email'}
+      },
+      {
+        property: 'plp_name',
+        header: {label: 'PLP Name'}
+      },
+      {
+        property: 'state',
+        header: {label: 'State'}
+      },
+      {
+        property: 'district_name',
+        header: {label: 'District Name'}
+      },
+      {
+        property: 'district_id',
+        header: {label: 'District Id'}
+      },
+      {
+        property: 'school',
+        header: {label: 'School'}
+      },
+      {
+        property: 'course',
+        header: {label: 'Course'}
+      },
+      {
+        property: 'subject',
+        header: {label: 'Subject'}
+      },
+      {
+        property: 'workshop_id',
+        header: {label: 'Workshop Id'},
+        cell: {format: this.formatWorkshopId}
+      },
+      {
+        property: 'workshop_dates',
+        header: {label: 'Workshop Dates'}
+      },
+      {
+        property: 'workshop_name',
+        header: {label: 'Workshop Name'}
+      },
+      {
+        property: 'on_map',
+        header: {label: 'Shown on Map'}
+      },
+      {
+        property: 'funded',
+        header: {label: 'Funded'}
+      },
+      {
+        property: 'organizer_name',
+        header: {label: 'Organizer Name'}
+      },
+      {
+        property: 'organizer_email',
+        header: {label: 'Organizer Email'}
+      },
+      {
+        property: 'year',
+        header: {label: 'Year'}
+      },
+      {
+        property: 'hours',
+        header: {label: 'Hours'}
+      },
+      {
+        property: 'days',
+        header: {label: 'Days'}
+      }
+    ];
 
     if (this.props.permission.hasWorkshopAdmin) {
-      columns.push({
-        property: `pay_period`,
-        header: {label: `Pay Period`}
-      }, {
-        property: `payment_type`,
-        header: {label: `Payment Type`}
-      }, {
-        property: `payment_rate`,
-        header: {label: `Payment Rate`}
-      }, {
-        property: `qualified`,
-        header: {label: `Qualified`},
-        cell: {format: this.formatYesNo}
-      }, {
-        property: `payment_amount`,
-        header: {label: `Payment Amount`},
-        cell: {format: this.formatCurrency}
-      });
+      columns.push(
+        {
+          property: `pay_period`,
+          header: {label: `Pay Period`}
+        },
+        {
+          property: `payment_type`,
+          header: {label: `Payment Type`}
+        },
+        {
+          property: `payment_rate`,
+          header: {label: `Payment Rate`}
+        },
+        {
+          property: `qualified`,
+          header: {label: `Qualified`},
+          cell: {format: this.formatYesNo}
+        },
+        {
+          property: `payment_amount`,
+          header: {label: `Payment Amount`},
+          cell: {format: this.formatCurrency}
+        }
+      );
     }
 
     return columns;
@@ -193,7 +226,7 @@ export class TeacherAttendanceReport extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
 
     return (
@@ -204,10 +237,7 @@ export class TeacherAttendanceReport extends React.Component {
         >
           Download CSV
         </Button>
-        <ReportTable
-          columns={this.getColumns()}
-          rows={this.state.rows}
-        />
+        <ReportTable columns={this.getColumns()} rows={this.state.rows} />
       </div>
     );
   }

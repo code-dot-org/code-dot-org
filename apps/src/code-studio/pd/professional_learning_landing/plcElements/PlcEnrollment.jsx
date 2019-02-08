@@ -1,17 +1,18 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from '../../../../util/color';
 import EnrollmentUnitAssignment from './EnrollmentUnitAssignment';
 
 const styles = {
   courseSection: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap'
   },
   courseSectionHeader: {
     color: color.dark_charcoal,
     fontFamily: '"Gotham 4r"',
     fontSize: '18px'
-  },
+  }
 };
 
 export default class PlcEnrollment extends React.Component {
@@ -20,20 +21,13 @@ export default class PlcEnrollment extends React.Component {
   };
 
   renderEnrollmentUnitAssignments() {
-    const courseUnits = this.props.plcData['courseUnits'].map((courseUnit, i) => {
-      return (
-        <EnrollmentUnitAssignment
-          key={i}
-          courseUnitData={courseUnit}
-        />
-      );
-    });
-
-    return (
-      <div style={styles.courseSection}>
-        {courseUnits}
-      </div>
+    const courseUnits = this.props.plcData['courseUnits'].map(
+      (courseUnit, i) => {
+        return <EnrollmentUnitAssignment key={i} courseUnitData={courseUnit} />;
+      }
     );
+
+    return <div style={styles.courseSection}>{courseUnits}</div>;
   }
 
   render() {
@@ -45,7 +39,7 @@ export default class PlcEnrollment extends React.Component {
           </div>
         </a>
         {this.renderEnrollmentUnitAssignments()}
-        <hr/>
+        <hr />
       </div>
     );
   }

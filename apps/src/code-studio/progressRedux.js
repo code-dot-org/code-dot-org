@@ -2,12 +2,12 @@
  * Reducer and actions for progress
  */
 import _ from 'lodash';
-import { makeEnum } from '../utils';
-import { mergeActivityResult, activityCssClass } from './activityUtils';
-import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
-import { TestResults } from '@cdo/apps/constants';
-import { ViewType, SET_VIEW_TYPE } from './viewAsRedux';
-import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
+import {makeEnum} from '../utils';
+import {mergeActivityResult, activityCssClass} from './activityUtils';
+import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {TestResults} from '@cdo/apps/constants';
+import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
+import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -21,7 +21,8 @@ const SET_USER_TYPE = 'progress/SET_USER_TYPE';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
-const SET_STUDENT_DEFAULTS_SUMMARY_VIEW = 'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
+const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
+  'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
@@ -58,7 +59,7 @@ const initialState = {
   studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false,
-  stageExtrasEnabled: false,
+  stageExtrasEnabled: false
 };
 
 /**
@@ -68,8 +69,8 @@ export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
     let stages = action.stages;
     // Re-initializing with full set of stages shouldn't blow away currentStageId
-    const currentStageId = state.currentStageId ||
-      (stages.length === 1 ? stages[0].id : undefined);
+    const currentStageId =
+      state.currentStageId || (stages.length === 1 ? stages[0].id : undefined);
     // extract fields we care about from action
     return {
       ...state,
@@ -96,13 +97,15 @@ export default function reducer(state = initialState, action) {
       ...action.levelProgress
     });
     combinedLevels.forEach(key => {
-      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key],
-        action.levelProgress[key]);
+      newLevelProgress[key] = mergeActivityResult(
+        state.levelProgress[key],
+        action.levelProgress[key]
+      );
     });
 
     return {
       ...state,
-      levelProgress: newLevelProgress,
+      levelProgress: newLevelProgress
     };
   }
 
@@ -144,7 +147,9 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_USER_SIGNED_IN) {
     return {
       ...state,
-      signInState: action.isSignedIn ? SignInState.SignedIn : SignInState.SignedOut
+      signInState: action.isSignedIn
+        ? SignInState.SignedIn
+        : SignInState.SignedOut
     };
   }
 
@@ -184,10 +189,11 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_VIEW_TYPE) {
-    const { viewType } = action;
+    const {viewType} = action;
     return {
       ...state,
-      isSummaryView: viewType === ViewType.Student && state.studentDefaultsSummaryView
+      isSummaryView:
+        viewType === ViewType.Student && state.studentDefaultsSummaryView
     };
   }
 
@@ -208,7 +214,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_SCRIPT_COMPLETED) {
     return {
       ...state,
-      scriptCompleted: true,
+      scriptCompleted: true
     };
   }
 
@@ -244,7 +250,7 @@ function bestResultLevelId(levelIds, progressData) {
   }
   var bestId = attemptedIds[0];
   var bestResult = progressData[bestId];
-  attemptedIds.forEach(function (id) {
+  attemptedIds.forEach(function(id) {
     var result = progressData[id];
     if (result > bestResult) {
       bestId = id;
@@ -295,9 +301,20 @@ export function processedStages(stages, isPlc) {
 }
 
 // Action creators
-export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,
-    scriptTitle, scriptDescription, betaTitle, courseId, isFullProgress}) => ({
+export const initProgress = ({
+  currentLevelId,
+  professionalLearningCourse,
+  saveAnswersBeforeNavigation,
+  stages,
+  peerReviewStage,
+  scriptId,
+  scriptName,
+  scriptTitle,
+  scriptDescription,
+  betaTitle,
+  courseId,
+  isFullProgress
+}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
@@ -310,7 +327,7 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   scriptDescription,
   betaTitle,
   courseId,
-  isFullProgress,
+  isFullProgress
 });
 
 export const mergeProgress = levelProgress => ({
@@ -329,27 +346,48 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaStageIds) => ({
   focusAreaStageIds
 });
 
-export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
+export const showTeacherInfo = () => ({type: SHOW_TEACHER_INFO});
 
-export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
-export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
-export const setUserType = userType => ({ type: SET_USER_TYPE, userType});
-export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
-export const setIsAge13Required = isAge13Required => ({ type: SET_IS_AGE_13_REQUIRED, isAge13Required });
-export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });
-export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => (
-  { type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW, studentDefaultsSummaryView });
-export const setCurrentStageId = stageId => ({ type: SET_CURRENT_STAGE_ID, stageId });
-export const setScriptCompleted = () => ({type: SET_SCRIPT_COMPLETED });
-export const setStageExtrasEnabled = stageExtrasEnabled => (
-  { type: SET_STAGE_EXTRAS_ENABLED, stageExtrasEnabled });
+export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
+export const setUserSignedIn = isSignedIn => ({
+  type: SET_USER_SIGNED_IN,
+  isSignedIn
+});
+export const setUserType = userType => ({type: SET_USER_TYPE, userType});
+export const setIsHocScript = isHocScript => ({
+  type: SET_IS_HOC_SCRIPT,
+  isHocScript
+});
+export const setIsAge13Required = isAge13Required => ({
+  type: SET_IS_AGE_13_REQUIRED,
+  isAge13Required
+});
+export const setIsSummaryView = isSummaryView => ({
+  type: SET_IS_SUMMARY_VIEW,
+  isSummaryView
+});
+export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => ({
+  type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW,
+  studentDefaultsSummaryView
+});
+export const setCurrentStageId = stageId => ({
+  type: SET_CURRENT_STAGE_ID,
+  stageId
+});
+export const setScriptCompleted = () => ({type: SET_SCRIPT_COMPLETED});
+export const setStageExtrasEnabled = stageExtrasEnabled => ({
+  type: SET_STAGE_EXTRAS_ENABLED,
+  stageExtrasEnabled
+});
 
 // Selectors
 
 // Do we have one or more lockable stages
-export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
+export const hasLockableStages = state =>
+  state.stages.some(stage => stage.lockable);
 
-export const hasGroups = state => Object.keys(categorizedLessons(state)).length > 1;
+export const hasGroups = state =>
+  Object.keys(categorizedLessons(state)).length > 1;
 
 /**
  * Extract the relevant portions of a particular lesson/stage from the store.
@@ -362,16 +400,18 @@ const lessonFromStageAtIndex = (state, stageIndex) => ({
   ...lessonFromStage(state.stages[stageIndex]),
   isFocusArea: state.focusAreaStageIds.includes(state.stages[stageIndex].id)
 });
-const lessonFromStage = stage => _.pick(stage, [
-  'name',
-  'id',
-  'lockable',
-  'stageNumber',
-  'lesson_plan_html_url',
-  'description_student',
-  'description_teacher',
-]);
-export const lessons = state => state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
+const lessonFromStage = stage =>
+  _.pick(stage, [
+    'name',
+    'id',
+    'lockable',
+    'stageNumber',
+    'lesson_plan_html_url',
+    'description_student',
+    'description_teacher'
+  ]);
+export const lessons = state =>
+  state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
 /**
  * Extract lesson from our peerReviewStage if we have one. We want this to end up
@@ -389,16 +429,17 @@ const peerReviewLesson = state => ({
  * Extract levels from our peerReviewStage, making sure the levels have the same
  * set of fields as our non-peer review levels.
  */
-const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index) => ({
-  // These aren't true levels (i.e. we won't have an entry in levelProgress),
-  // so always use a specific id that won't collide with real levels
-  id: PEER_REVIEW_ID,
-  status: (level.locked ? LevelStatus.locked : level.status),
-  url: level.url,
-  name: level.name,
-  icon: (level.locked ? level.icon : undefined),
-  levelNumber: index + 1
-}));
+const peerReviewLevels = state =>
+  state.peerReviewStage.levels.map((level, index) => ({
+    // These aren't true levels (i.e. we won't have an entry in levelProgress),
+    // so always use a specific id that won't collide with real levels
+    id: PEER_REVIEW_ID,
+    status: level.locked ? LevelStatus.locked : level.status,
+    url: level.url,
+    name: level.name,
+    icon: level.locked ? level.icon : undefined,
+    levelNumber: index + 1
+  }));
 
 /**
  * Determine whether the passed in level is our current level (i.e. in the dots
@@ -406,9 +447,12 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
  * @returns {boolean}
  */
 const isCurrentLevel = (currentLevelId, level) => {
-  return !!currentLevelId &&
-    ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
-    level.uid === currentLevelId);
+  return (
+    !!currentLevelId &&
+    ((level.ids &&
+      level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
+      level.uid === currentLevelId)
+  );
 };
 
 /**
@@ -417,10 +461,15 @@ const isCurrentLevel = (currentLevelId, level) => {
  * about and (b) determines current status based on the current state of
  * state.levelProgress
  */
-const levelWithStatus = ({levelProgress, levelPairing = {}, currentLevelId}, level) => {
+const levelWithStatus = (
+  {levelProgress, levelPairing = {}, currentLevelId},
+  level
+) => {
   if (level.kind !== LevelKind.unplugged) {
-    if (!level.title || typeof(level.title) !== 'number') {
-      throw new Error('Expect all non-unplugged levels to have a numerical title');
+    if (!level.title || typeof level.title !== 'number') {
+      throw new Error(
+        'Expect all non-unplugged levels to have a numerical title'
+      );
     }
   }
   return {
@@ -428,38 +477,41 @@ const levelWithStatus = ({levelProgress, levelPairing = {}, currentLevelId}, lev
     status: statusForLevel(level, levelProgress),
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
     paired: levelPairing[level.activeId],
-    readonlyAnswers: level.readonly_answers,
+    readonlyAnswers: level.readonly_answers
   };
 };
 
 /**
  * Get level data for all lessons/stages
  */
-export const levelsByLesson = ({stages, levelProgress, levelPairing, currentLevelId}) => (
-  stages.map(stage => (
-    stage.levels.map(level => levelWithStatus({levelProgress, levelPairing, currentLevelId}, level))
-  ))
-);
+export const levelsByLesson = ({
+  stages,
+  levelProgress,
+  levelPairing,
+  currentLevelId
+}) =>
+  stages.map(stage =>
+    stage.levels.map(level =>
+      levelWithStatus({levelProgress, levelPairing, currentLevelId}, level)
+    )
+  );
 
 /**
  * Get data for a particular lesson/stage
  */
-export const levelsForLessonId = (state, lessonId) => (
-  state.stages.find(stage => stage.id === lessonId).levels.map(
-    level => levelWithStatus(state, level)
-  )
-);
+export const levelsForLessonId = (state, lessonId) =>
+  state.stages
+    .find(stage => stage.id === lessonId)
+    .levels.map(level => levelWithStatus(state, level));
 
-export const stageExtrasUrl = (state, stageId) => (
+export const stageExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
     ? state.stages.find(stage => stage.id === stageId).stage_extras_level_url
-    : ''
-);
+    : '';
 
-export const isPerfect = (state, levelId) => (
+export const isPerfect = (state, levelId) =>
   !!state.levelProgress &&
-    state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT
-);
+  state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT;
 
 export const getPercentPerfect = levels => {
   const puzzleLevels = levels.filter(level => !level.isConceptLevel);
@@ -467,8 +519,11 @@ export const getPercentPerfect = levels => {
     return 0;
   }
 
-  const perfected = puzzleLevels.reduce((accumulator, level) =>
-    accumulator + (level.status === LevelStatus.perfect), 0);
+  const perfected = puzzleLevels.reduce(
+    (accumulator, level) =>
+      accumulator + (level.status === LevelStatus.perfect),
+    0
+  );
   return perfected / puzzleLevels.length;
 };
 
@@ -498,13 +553,14 @@ export function statusForLevel(level, levelProgress) {
   // id here
   const id = level.uid || bestResultLevelId(level.ids, levelProgress);
   let status = activityCssClass(levelProgress[id]);
-  if (level.uid &&
-      level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)) {
+  if (
+    level.uid &&
+    level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)
+  ) {
     status = LevelStatus.locked;
   }
   return status;
 }
-
 
 /**
  * Groups lessons (aka stages) according to category.
@@ -585,9 +641,11 @@ export const progressionsFromLevels = levels => {
 };
 
 // export private function(s) to expose to unit testing
-export const __testonly__ = IN_UNIT_TEST ? {
-  bestResultLevelId,
-  peerReviewLesson,
-  peerReviewLevels,
-  PEER_REVIEW_ID
-} : {};
+export const __testonly__ = IN_UNIT_TEST
+  ? {
+      bestResultLevelId,
+      peerReviewLesson,
+      peerReviewLevels,
+      PEER_REVIEW_ID
+    }
+  : {};

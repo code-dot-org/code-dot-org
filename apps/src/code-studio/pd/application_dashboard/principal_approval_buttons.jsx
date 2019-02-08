@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Spinner from '../components/spinner.jsx';
 import $ from 'jquery';
 import {Button} from 'react-bootstrap';
@@ -8,7 +9,7 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
     marginLeft: 5,
-    marginRight: 5,
+    marginRight: 5
   }
 };
 
@@ -48,12 +49,11 @@ export default class PrincipalApprovalButtons extends React.Component {
   handleSendEmailClick = () => {
     const sendEmailRequest = $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/application/teacher/${this.props.applicationId}/send_principal_approval`
+      url: `/api/v1/pd/application/teacher/${
+        this.props.applicationId
+      }/send_principal_approval`
     }).done(data => {
-      this.props.onChange(
-        this.props.applicationId,
-        data.principal_approval
-      );
+      this.props.onChange(this.props.applicationId, data.principal_approval);
       this.setState({
         sendEmailRequest: null,
         showSendEmailButton: false
@@ -66,12 +66,11 @@ export default class PrincipalApprovalButtons extends React.Component {
   handleNotRequiredClick = () => {
     const notRequiredRequest = $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/application/teacher/${this.props.applicationId}/principal_approval_not_required`
+      url: `/api/v1/pd/application/teacher/${
+        this.props.applicationId
+      }/principal_approval_not_required`
     }).done(data => {
-      this.props.onChange(
-        this.props.applicationId,
-        data.principal_approval
-      );
+      this.props.onChange(this.props.applicationId, data.principal_approval);
 
       this.setState({
         notRequiredRequest: null,
@@ -93,7 +92,6 @@ export default class PrincipalApprovalButtons extends React.Component {
         target="_blank"
         onClick={this.handleSendEmailClick}
         style={styles.button}
-
         // This button is disabled if the other action is pending (which will be rendered as a spinner)
         disabled={!!this.state.notRequiredRequest}
       >
@@ -113,7 +111,6 @@ export default class PrincipalApprovalButtons extends React.Component {
         target="_blank"
         onClick={this.handleNotRequiredClick}
         style={styles.button}
-
         // This button is disabled if the other action is pending (which will be rendered as a spinner)
         disabled={!!this.state.sendEmailRequest}
       >

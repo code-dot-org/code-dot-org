@@ -1,7 +1,8 @@
 /** @file SVG Visualization Overlay */
 
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import debounce from 'lodash/debounce';
 
 /**
@@ -18,14 +19,14 @@ export class VisualizationOverlay extends React.Component {
     areOverlaysVisible: PropTypes.bool.isRequired,
     areRunStateOverlaysVisible: PropTypes.bool.isRequired,
     onMouseMove: PropTypes.func,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   state = {
     /** @type {number} */
     mouseX: -1,
     /** @type {number} */
-    mouseY: -1,
+    mouseY: -1
   };
 
   componentDidMount() {
@@ -43,7 +44,10 @@ export class VisualizationOverlay extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.width !== nextProps.width || this.props.height !== nextProps.height) {
+    if (
+      this.props.width !== nextProps.width ||
+      this.props.height !== nextProps.height
+    ) {
       this.recalculateTransform();
     }
   }
@@ -62,12 +66,13 @@ export class VisualizationOverlay extends React.Component {
       return;
     }
 
-    this.screenSpaceToAppSpaceTransform = svg.createSVGMatrix()
-        .scale(this.props.width / clientRect.width)
-        .translate(-clientRect.left, -clientRect.top);
+    this.screenSpaceToAppSpaceTransform = svg
+      .createSVGMatrix()
+      .scale(this.props.width / clientRect.width)
+      .translate(-clientRect.left, -clientRect.top);
   };
 
-  onMouseMove = (event) => {
+  onMouseMove = event => {
     if (!this.screenSpaceToAppSpaceTransform) {
       return;
     }
@@ -75,7 +80,8 @@ export class VisualizationOverlay extends React.Component {
     this.mousePos_.x = event.clientX;
     this.mousePos_.y = event.clientY;
     this.mousePos_ = this.mousePos_.matrixTransform(
-        this.screenSpaceToAppSpaceTransform);
+      this.screenSpaceToAppSpaceTransform
+    );
     this.setState({
       mouseX: this.mousePos_.x,
       mouseY: this.mousePos_.y
@@ -87,7 +93,11 @@ export class VisualizationOverlay extends React.Component {
 
   renderOverlays() {
     return React.Children.map(this.props.children, (child, index) => {
-      if ((child.props.showWhileRunning && this.props.areRunStateOverlaysVisible) || this.props.areOverlaysVisible) {
+      if (
+        (child.props.showWhileRunning &&
+          this.props.areRunStateOverlaysVisible) ||
+        this.props.areOverlaysVisible
+      ) {
         return React.cloneElement(child, {
           key: index,
           width: this.props.width,
@@ -108,7 +118,7 @@ export class VisualizationOverlay extends React.Component {
         baseProfile="full"
         width={this.props.width}
         height={this.props.height}
-        viewBox={"0 0 " + this.props.width + " " + this.props.height}
+        viewBox={'0 0 ' + this.props.width + ' ' + this.props.height}
         pointerEvents="none"
       >
         {this.renderOverlays()}
@@ -116,17 +126,21 @@ export class VisualizationOverlay extends React.Component {
     );
   }
 }
-export default connect((state) => ({
+export default connect(state => ({
   areOverlaysVisible: shouldOverlaysBeVisible(state),
   areRunStateOverlaysVisible: shouldRunStateOverlaysBeVisible(state)
 }))(VisualizationOverlay);
 
 export function shouldRunStateOverlaysBeVisible(state) {
-  return !state.pageConstants.hideCoordinateOverlay &&
-    !state.pageConstants.isShareView;
+  return (
+    !state.pageConstants.hideCoordinateOverlay &&
+    !state.pageConstants.isShareView
+  );
 }
 
 export function shouldOverlaysBeVisible(state) {
-  return !state.pageConstants.hideCoordinateOverlay &&
-    !(state.runState.isRunning || state.pageConstants.isShareView);
+  return (
+    !state.pageConstants.hideCoordinateOverlay &&
+    !(state.runState.isRunning || state.pageConstants.isShareView)
+  );
 }

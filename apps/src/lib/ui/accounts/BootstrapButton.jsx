@@ -5,16 +5,17 @@
  * This component will be removed upon redesigning the "Edit Account" UI.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const styles = {
   button: {
     margin: 0
-  },
+  }
 };
 
 const BUTTON_TYPE = {
-  DANGER: 'danger',
+  DANGER: 'danger'
 };
 
 export default class BootstrapButton extends React.Component {
@@ -23,7 +24,7 @@ export default class BootstrapButton extends React.Component {
     onClick: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     text: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(Object.values(BUTTON_TYPE)),
+    type: PropTypes.oneOf(Object.values(BUTTON_TYPE))
   };
 
   buttonClasses = () => {

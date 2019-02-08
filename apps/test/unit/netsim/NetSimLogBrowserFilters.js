@@ -4,27 +4,33 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import NetSimLogBrowserFilters, {SentByDropdown} from '@cdo/apps/netsim/NetSimLogBrowserFilters';
+import NetSimLogBrowserFilters, {
+  SentByDropdown
+} from '@cdo/apps/netsim/NetSimLogBrowserFilters';
 import i18n from '@cdo/netsim/locale';
 
-describe('NetSimLogBrowserFilters', function () {
-  describe('Student View', function () {
-    it('does not show sent-by dropdown', function () {
-      expect(shallowWithDefaults({
-        teacherView: false
-      })).not.to.have.descendants(SentByDropdown);
+describe('NetSimLogBrowserFilters', function() {
+  describe('Student View', function() {
+    it('does not show sent-by dropdown', function() {
+      expect(
+        shallowWithDefaults({
+          teacherView: false
+        })
+      ).not.to.have.descendants(SentByDropdown);
     });
   });
 
-  describe('Teacher View', function () {
-    it('shows sent-by dropdown', function () {
+  describe('Teacher View', function() {
+    it('shows sent-by dropdown', function() {
       const setSentByFilter = spy();
       const senderNames = [];
-      expect(shallowWithDefaults({
-        teacherView: true,
-        setSentByFilter,
-        senderNames
-      })).to.contain(
+      expect(
+        shallowWithDefaults({
+          teacherView: true,
+          setSentByFilter,
+          senderNames
+        })
+      ).to.contain(
         <SentByDropdown
           i18n={i18n}
           currentSentByFilter="none"
@@ -47,16 +53,14 @@ describe('NetSimLogBrowserFilters', function () {
         logRows={[]}
         senderNames={[]}
         {...props}
-      />);
+      />
+    );
   }
 });
 
-describe('SentByDropdown', function () {
-  it('is populated by sent-by names from log rows', function () {
-    const result = mountWithLogRows([
-      {'sent-by': 'Alice'},
-      {'sent-by': 'Bob'}
-    ]);
+describe('SentByDropdown', function() {
+  it('is populated by sent-by names from log rows', function() {
+    const result = mountWithLogRows([{'sent-by': 'Alice'}, {'sent-by': 'Bob'}]);
     expect(result).to.contain(
       <option value="by Alice">
         {i18n.logBrowserHeader_sentByName({name: 'Alice'})}
@@ -69,7 +73,7 @@ describe('SentByDropdown', function () {
     );
   });
 
-  it('only shows each name once', function () {
+  it('only shows each name once', function() {
     const result = mountWithLogRows([
       {'sent-by': 'Alice'},
       {'sent-by': 'Alice'},
@@ -81,24 +85,17 @@ describe('SentByDropdown', function () {
     expect(result.find('option[value="by Bob"]')).to.have.length(1);
   });
 
-  it('includes the "anyone" option', function () {
-    const result = mountWithLogRows([
-      {'sent-by': 'Alice'},
-      {'sent-by': 'Bob'}
-    ]);
+  it('includes the "anyone" option', function() {
+    const result = mountWithLogRows([{'sent-by': 'Alice'}, {'sent-by': 'Bob'}]);
     expect(result).to.contain(
-      <option value="none">
-        {i18n.logBrowserHeader_sentByAnyone()}
-      </option>
+      <option value="none">{i18n.logBrowserHeader_sentByAnyone()}</option>
     );
   });
 
-  it('provides only the "anyone" option if there are no log rows', function () {
+  it('provides only the "anyone" option if there are no log rows', function() {
     const result = mountWithLogRows([]);
     expect(result).to.contain(
-      <option value="none">
-        {i18n.logBrowserHeader_sentByAnyone()}
-      </option>
+      <option value="none">{i18n.logBrowserHeader_sentByAnyone()}</option>
     );
     expect(result.find('option')).to.have.length(1);
   });

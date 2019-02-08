@@ -6,7 +6,8 @@ import _ from 'lodash';
 const SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
 const SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';
 const SET_STEP_SPEED = 'runState/SET_STEP_SPEED';
-const SET_AWAITING_CONTAINED_RESPONSE = 'runState/SET_AWAITING_CONTAINED_RESPONSE';
+const SET_AWAITING_CONTAINED_RESPONSE =
+  'runState/SET_AWAITING_CONTAINED_RESPONSE';
 const SET_IS_DEBUGGING_SPRITES = 'runState/SET_IS_DEBUGGING_SPRITES';
 
 const initialState = {
@@ -28,8 +29,10 @@ export default function reducer(state, action) {
   if (action.type === SET_IS_RUNNING) {
     return _.assign({}, state, {
       isRunning: action.isRunning,
-      isDebuggerPaused: action.isRunning === false ? false : state.isDebuggerPaused,
-      isDebuggingSprites: action.isRunning === false ? false : state.isDebuggingSprites
+      isDebuggerPaused:
+        action.isRunning === false ? false : state.isDebuggerPaused,
+      isDebuggingSprites:
+        action.isRunning === false ? false : state.isDebuggingSprites
     });
   }
 
@@ -37,7 +40,7 @@ export default function reducer(state, action) {
     return _.assign({}, state, {
       isRunning: action.isDebuggerPaused ? true : state.isRunning,
       isDebuggerPaused: action.isDebuggerPaused,
-      nextStep: action.nextStep,
+      nextStep: action.nextStep
     });
   }
 
@@ -82,7 +85,7 @@ export const setIsRunning = isRunning => ({
 export const setIsDebuggerPaused = (isDebuggerPaused, nextStep) => ({
   type: SET_IS_DEBUGGER_PAUSED,
   isDebuggerPaused: isDebuggerPaused,
-  nextStep,
+  nextStep
 });
 
 /**

@@ -2,7 +2,8 @@
  * Contains a heading and a collection of filter choices.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import FilterChoice from './filterChoice';
 
@@ -24,7 +25,10 @@ export default class FilterGroup extends React.Component {
             groupName={this.props.name}
             name={item.name}
             text={item.text}
-            selected={this.props.selection && this.props.selection.indexOf(item.name) !== -1}
+            selected={
+              this.props.selection &&
+              this.props.selection.indexOf(item.name) !== -1
+            }
             onUserInput={this.props.onUserInput}
             singleEntry={this.props.singleEntry}
             key={item.name}

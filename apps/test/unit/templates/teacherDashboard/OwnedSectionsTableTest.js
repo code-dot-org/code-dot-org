@@ -1,6 +1,6 @@
-import { assert, expect } from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/configuredChai';
 import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import {Table} from 'reactabular';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
@@ -27,10 +27,7 @@ const sectionRowData = [
     pairingAllowed: true,
     providerManaged: false,
     hidden: false,
-    assignmentNames: [
-      'CS Discoveries',
-      'Unit 1: Problem Solving'
-    ],
+    assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: [
       '//localhost-studio.code.org:3000/courses/csd',
       '//localhost-studio.code.org:3000/s/csd1'
@@ -44,7 +41,7 @@ const sectionRowData = [
     grade: '4',
     loginType: 'google_classroom',
     providerManaged: true,
-    hidden: false,
+    hidden: false
   },
   {
     id: 3,
@@ -55,7 +52,7 @@ const sectionRowData = [
     scriptId: 168,
     grade: '3',
     providerManaged: false,
-    hidden: false,
+    hidden: false
   },
   {
     id: 4,
@@ -66,8 +63,8 @@ const sectionRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: [],
-  },
+    assignmentPaths: []
+  }
 ];
 
 describe('OwnedSectionsTable', () => {
@@ -92,9 +89,10 @@ describe('OwnedSectionsTable', () => {
         sectionIds={[1]}
         sectionRows={sectionRowData.slice(0, 1)}
         onEdit={() => {}}
-      />);
+      />
+    );
     const style = wrapper.prop('style');
-    expect(style).to.include({'width': 970});
+    expect(style).to.include({width: 970});
   });
 
   describe('OwnedSectionsTable Formatters', () => {
@@ -144,37 +142,64 @@ describe('OwnedSectionsTable', () => {
       const rowData = sectionRowData[0];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
-      assert.equal(link, pegasus('/teacher-dashboard#/sections/1/print_signin_cards'));
+      assert.equal(
+        link,
+        pegasus('/teacher-dashboard#/sections/1/print_signin_cards')
+      );
     });
 
     it('loginInfoFormatter has a link to the sign in cards for third party login', () => {
       const rowData = sectionRowData[1];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
-      assert.equal(link, pegasus('/teacher-dashboard#/sections/2/print_signin_cards'));
+      assert.equal(
+        link,
+        pegasus('/teacher-dashboard#/sections/2/print_signin_cards')
+      );
     });
 
     it('gradeFormatter has grade text', () => {
       const rowData = sectionRowData[0];
       const gradeCol = shallow(gradeFormatter(null, {rowData}));
-      const text = gradeCol.find('div').at(0).text();
+      const text = gradeCol
+        .find('div')
+        .at(0)
+        .text();
       assert.equal('5', text);
     });
 
     it('courseLinkFormatter provides links to course information and section information', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseLink = courseLinkCol.find('a').at(0).props().href;
-      const sectionLink = courseLinkCol.find('a').at(1).props().href;
-      assert.equal(courseLink, '//localhost-studio.code.org:3000/courses/csd?section_id=1');
-      assert.equal(sectionLink, '//localhost-studio.code.org:3000/s/csd1?section_id=1');
+      const courseLink = courseLinkCol
+        .find('a')
+        .at(0)
+        .props().href;
+      const sectionLink = courseLinkCol
+        .find('a')
+        .at(1)
+        .props().href;
+      assert.equal(
+        courseLink,
+        '//localhost-studio.code.org:3000/courses/csd?section_id=1'
+      );
+      assert.equal(
+        sectionLink,
+        '//localhost-studio.code.org:3000/s/csd1?section_id=1'
+      );
     });
 
     it('courseLinkFormatter contains course text and section text', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseText = courseLinkCol.find('a').at(0).text();
-      const sectionText = courseLinkCol.find('a').at(1).text();
+      const courseText = courseLinkCol
+        .find('a')
+        .at(0)
+        .text();
+      const sectionText = courseLinkCol
+        .find('a')
+        .at(1)
+        .text();
       assert.equal(courseText, 'CS Discoveries');
       assert.equal(sectionText, 'Unit 1: Problem Solving');
     });

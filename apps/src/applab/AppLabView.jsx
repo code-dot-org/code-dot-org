@@ -1,16 +1,17 @@
 /** @file Top-level view for App Lab */
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import ImportProjectDialog from './ImportProjectDialog';
 import ImportScreensDialog from './ImportScreensDialog';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
-import { ApplabInterfaceMode } from './constants';
+import {ApplabInterfaceMode} from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
-import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
+import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
 
 /**
  * Top-level React wrapper for App Lab.
@@ -38,7 +39,8 @@ class AppLabView extends React.Component {
   }
 
   render() {
-    const codeWorkspaceVisible = (ApplabInterfaceMode.CODE === this.props.interfaceMode);
+    const codeWorkspaceVisible =
+      ApplabInterfaceMode.CODE === this.props.interfaceMode;
     return (
       <StudioAppWrapper>
         <ImportProjectDialog />
@@ -48,11 +50,18 @@ class AppLabView extends React.Component {
           screenIds={this.props.screenIds}
           onScreenCreate={this.props.onScreenCreate}
         />
-        <VisualizationResizeBar/>
+        <VisualizationResizeBar />
         <InstructionsWithWorkspace>
-          <CodeWorkspace withSettingsCog style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
-          {this.props.hasDesignMode && <ProtectedDesignWorkspace/>}
-          {this.props.hasDataMode && <DataWorkspace handleVersionHistory={this.props.handleVersionHistory}/>}
+          <CodeWorkspace
+            withSettingsCog
+            style={{display: codeWorkspaceVisible ? 'block' : 'none'}}
+          />
+          {this.props.hasDesignMode && <ProtectedDesignWorkspace />}
+          {this.props.hasDataMode && (
+            <DataWorkspace
+              handleVersionHistory={this.props.handleVersionHistory}
+            />
+          )}
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );

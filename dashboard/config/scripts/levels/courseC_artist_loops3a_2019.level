@@ -35,7 +35,7 @@
     "y": "70",
     "long_instructions": "So much fun!  \r\n\r\nNow, add a bat sticker right after the bird to make an image like the one below.\r\n___\r\n\r\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA_2019",
-    "tts_markdown_instructions_override": "So much fun!  \r\n\r\nNow, add a bat sticker right after the bird to make an image like the one below.",
+    "tts_long_instructions_override": "So much fun!  \r\n\r\nNow, add a bat sticker right after the bird to make an image like the one below.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to add just one block inside of your loop, after the bird sticker.\",\"hint_id\":\"courseC_artist_loops3a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9a95ef3118b30251c9146a394344a187/courseC_artist_loops3a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the drop down menu on the `draw sticker` block to find the bat sticker.\",\"hint_id\":\"courseC_artist_loops3a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/41ce9c71ece948bdc7db9e41f74c8536/courseC_artist_loops3a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 11703,

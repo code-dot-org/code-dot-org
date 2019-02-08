@@ -6,18 +6,14 @@ import {UnconnectedManageStudentsActionsHeaderCell as ManageStudentsActionsHeade
 
 describe('ManageStudentsActionsCell', () => {
   it('renders the edit all option', () => {
-    const wrapper = shallow(
-        <ManageStudentsActionsHeaderCell/>
-    );
+    const wrapper = shallow(<ManageStudentsActionsHeaderCell />);
     const editAllString = i18n.editAll();
     expect(wrapper).to.contain(editAllString);
   });
 
   it('renders the control project sharing option if the share column is hidden', () => {
     const wrapper = shallow(
-        <ManageStudentsActionsHeaderCell
-          isShareColumnVisible={false}
-        />
+      <ManageStudentsActionsHeaderCell isShareColumnVisible={false} />
     );
     const controlProjectSharing = i18n.controlProjectSharing();
     expect(wrapper).to.contain(controlProjectSharing);
@@ -25,9 +21,7 @@ describe('ManageStudentsActionsCell', () => {
 
   it('renders the hide project sharing option if the share column is visible', () => {
     const wrapper = shallow(
-        <ManageStudentsActionsHeaderCell
-          isShareColumnVisible={true}
-        />
+      <ManageStudentsActionsHeaderCell isShareColumnVisible={true} />
     );
     const hideProjectSharing = i18n.hideProjectSharingColumn();
     expect(wrapper).to.contain(hideProjectSharing);

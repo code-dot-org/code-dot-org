@@ -17,19 +17,18 @@ export function loadStarWarsEvents(skin) {
   skin.itemFrames = 10;
 
   skin.instructions2ImageSubstitutions = {
-    "pufferpig": skin.assetUrl('instructions_pufferpig.png'),
-    "mynock": skin.assetUrl('instructions_mynock.png'),
-    "rebelpilot": skin.assetUrl('instructions_rebelpilot.png'),
-    "stormtrooper": skin.assetUrl('instructions_stormtrooper.png'),
-    "mousedroid": skin.assetUrl('instructions_mousedroid.png'),
-    "tauntaun": skin.assetUrl('instructions_tauntaun.png'),
-    "probot": skin.assetUrl('instructions_probot.png')
+    pufferpig: skin.assetUrl('instructions_pufferpig.png'),
+    mynock: skin.assetUrl('instructions_mynock.png'),
+    rebelpilot: skin.assetUrl('instructions_rebelpilot.png'),
+    stormtrooper: skin.assetUrl('instructions_stormtrooper.png'),
+    mousedroid: skin.assetUrl('instructions_mousedroid.png'),
+    tauntaun: skin.assetUrl('instructions_tauntaun.png'),
+    probot: skin.assetUrl('instructions_probot.png')
   };
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
-  skin.ProjectileClassNames = [
-  ];
+  skin.ProjectileClassNames = [];
 
   skin.ItemClassNames = [
     'pufferpig',
@@ -55,7 +54,7 @@ export function loadStarWarsEvents(skin) {
     whenGetMynock: 'mynock',
     whenGetProbot: 'probot',
     whenGetMouseDroid: 'mousedroid',
-    whenGetRebelPilot: 'rebelpilot',
+    whenGetRebelPilot: 'rebelpilot'
   };
 
   skin.AutohandlerGetAllItems = {
@@ -65,20 +64,83 @@ export function loadStarWarsEvents(skin) {
     whenGetAllMynocks: 'mynock',
     whenGetAllProbots: 'probot',
     whenGetAllMouseDroids: 'mousedroid',
-    whenGetAllRebelPilots: 'rebelpilot',
+    whenGetAllRebelPilots: 'rebelpilot'
   };
 
   skin.specialItemProperties = {
-    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -15}, activity: 'roam',  speed: SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -15}, activity: 'chase', speed: SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
-    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y:  20}, activity: 'roam',  speed: SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -20}, activity: 'roam',  speed: SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -10}, activity: 'chase', speed: SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    pufferpig: {
+      frames: 12,
+      width: 100,
+      height: 100,
+      scale: 1,
+      renderOffset: {x: 0, y: -15},
+      activity: 'roam',
+      speed: SpriteSpeed.VERY_SLOW,
+      spritesCounterclockwise: true
+    },
+    stormtrooper: {
+      frames: 12,
+      width: 100,
+      height: 100,
+      scale: 1.1,
+      renderOffset: {x: 0, y: -15},
+      activity: 'chase',
+      speed: SpriteSpeed.VERY_SLOW,
+      spritesCounterclockwise: true
+    },
+    tauntaun: {
+      frames: 15,
+      width: 100,
+      height: 100,
+      scale: 1.6,
+      renderOffset: {x: 0, y: 20},
+      activity: 'roam',
+      speed: SpriteSpeed.SLOW,
+      spritesCounterclockwise: true
+    },
+    mynock: {
+      frames: 8,
+      width: 100,
+      height: 100,
+      scale: 0.9,
+      renderOffset: {x: 0, y: -20},
+      activity: 'roam',
+      speed: SpriteSpeed.SLOW,
+      spritesCounterclockwise: true
+    },
+    probot: {
+      frames: 12,
+      width: 100,
+      height: 100,
+      scale: 1.2,
+      renderOffset: {x: 0, y: -10},
+      activity: 'chase',
+      speed: SpriteSpeed.LITTLE_SLOW,
+      spritesCounterclockwise: true
+    },
+    mousedroid: {
+      frames: 1,
+      width: 100,
+      height: 100,
+      scale: 0.5,
+      renderOffset: {x: 0, y: -20},
+      activity: 'flee',
+      speed: SpriteSpeed.LITTLE_SLOW,
+      spritesCounterclockwise: true
+    },
+    rebelpilot: {
+      frames: 13,
+      width: 100,
+      height: 100,
+      scale: 1,
+      renderOffset: {x: 0, y: -20},
+      activity: 'flee',
+      speed: SpriteSpeed.SLOW,
+      spritesCounterclockwise: true
+    }
   };
 
-  skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
+  skin.customObstacleZones = {endor: {}, hoth: {}, starship: {}};
 
   function generateGridObstacleZones() {
     var zones = [];
@@ -96,88 +158,94 @@ export function loadStarWarsEvents(skin) {
     return zones;
   }
 
-  skin.customObstacleZones.endor.grid =
-  skin.customObstacleZones.hoth.grid =
-  skin.customObstacleZones.starship.grid =
-    generateGridObstacleZones();
+  skin.customObstacleZones.endor.grid = skin.customObstacleZones.hoth.grid = skin.customObstacleZones.starship.grid = generateGridObstacleZones();
 
   skin.customObstacleZones.endor.blobs = [
-    { minX: 346, maxX: 413, minY: 261, maxY: 344 },
-    { minX: 318, maxX: 404, minY: 342, maxY: 397 },
-    { minX: 308, maxX: 348, minY: 72, maxY: 110 },
-    { minX: 264, maxX: 348, minY: 112, maxY: 197 },
-    { minX: 96, maxX: 149, minY: 289, maxY: 349 },
-    { minX: 96, maxX: 199, minY: 238, maxY: 288 },
-    { minX: 83, maxX: 125, minY: 125, maxY: 147 },
-    { minX: 58, maxX: 99, minY: 72, maxY: 91 },
-    { minX: 57, maxX: 149, minY: 92, maxY: 123 }];
+    {minX: 346, maxX: 413, minY: 261, maxY: 344},
+    {minX: 318, maxX: 404, minY: 342, maxY: 397},
+    {minX: 308, maxX: 348, minY: 72, maxY: 110},
+    {minX: 264, maxX: 348, minY: 112, maxY: 197},
+    {minX: 96, maxX: 149, minY: 289, maxY: 349},
+    {minX: 96, maxX: 199, minY: 238, maxY: 288},
+    {minX: 83, maxX: 125, minY: 125, maxY: 147},
+    {minX: 58, maxX: 99, minY: 72, maxY: 91},
+    {minX: 57, maxX: 149, minY: 92, maxY: 123}
+  ];
 
   skin.customObstacleZones.endor.horizontal = [
-    { minX: 51, maxX: 299, minY: 269, maxY: 293 },
-    { minX: 150, maxX: 348, minY: 168, maxY: 189 },
-    { minX: 53, maxX: 97, minY: 159, maxY: 199 },
-    { minX: 50, maxX: 198, minY: 71, maxY: 94 },
-    { minX: 255, maxX: 345, minY: 71, maxY: 94 }];
+    {minX: 51, maxX: 299, minY: 269, maxY: 293},
+    {minX: 150, maxX: 348, minY: 168, maxY: 189},
+    {minX: 53, maxX: 97, minY: 159, maxY: 199},
+    {minX: 50, maxX: 198, minY: 71, maxY: 94},
+    {minX: 255, maxX: 345, minY: 71, maxY: 94}
+  ];
 
   skin.customObstacleZones.endor.circle = [
-    { minX: 251, maxX: 317, minY: 332, maxY: 348 },
-    { minX: 83, maxX: 198, minY: 332, maxY: 348 },
-    { minX: 250, maxX: 317, minY: 77, maxY: 93 },
-    { minX: 313, maxX: 337, minY: 77, maxY: 348 },
-    { minX: 163, maxX: 236, minY: 202, maxY: 244 },
-    { minX: 83, maxX: 200, minY: 77, maxY: 93 },
-    { minX: 62, maxX: 85, minY: 77, maxY: 348 }];
+    {minX: 251, maxX: 317, minY: 332, maxY: 348},
+    {minX: 83, maxX: 198, minY: 332, maxY: 348},
+    {minX: 250, maxX: 317, minY: 77, maxY: 93},
+    {minX: 313, maxX: 337, minY: 77, maxY: 348},
+    {minX: 163, maxX: 236, minY: 202, maxY: 244},
+    {minX: 83, maxX: 200, minY: 77, maxY: 93},
+    {minX: 62, maxX: 85, minY: 77, maxY: 348}
+  ];
 
   skin.customObstacleZones.hoth.blobs = [
-    { minX: 100, maxX: 142, minY: 283, maxY: 342 },
-    { minX: 100, maxX: 187, minY: 226, maxY: 281 },
-    { minX: 356, maxX: 394, minY: 264, maxY: 311 },
-    { minX: 311, maxX: 393, minY: 313, maxY: 388 },
-    { minX: 310, maxX: 344, minY: 61, maxY: 106 },
-    { minX: 258, maxX: 344, minY: 108, maxY: 192 },
-    { minX: 117, maxX: 146, minY: 120, maxY: 132 },
-    { minX: 57, maxX: 117, minY: 70, maxY: 132 }];
+    {minX: 100, maxX: 142, minY: 283, maxY: 342},
+    {minX: 100, maxX: 187, minY: 226, maxY: 281},
+    {minX: 356, maxX: 394, minY: 264, maxY: 311},
+    {minX: 311, maxX: 393, minY: 313, maxY: 388},
+    {minX: 310, maxX: 344, minY: 61, maxY: 106},
+    {minX: 258, maxX: 344, minY: 108, maxY: 192},
+    {minX: 117, maxX: 146, minY: 120, maxY: 132},
+    {minX: 57, maxX: 117, minY: 70, maxY: 132}
+  ];
 
   skin.customObstacleZones.hoth.horizontal = [
-    { minX: 54, maxX: 299, minY: 268, maxY: 294 },
-    { minX: 150, maxX: 350, minY: 171, maxY: 198 },
-    { minX: 53, maxX: 99, minY: 171, maxY: 198 },
-    { minX: 252, maxX: 350, minY: 66, maxY: 92 },
-    { minX: 54, maxX: 195, minY: 66, maxY: 92 }];
+    {minX: 54, maxX: 299, minY: 268, maxY: 294},
+    {minX: 150, maxX: 350, minY: 171, maxY: 198},
+    {minX: 53, maxX: 99, minY: 171, maxY: 198},
+    {minX: 252, maxX: 350, minY: 66, maxY: 92},
+    {minX: 54, maxX: 195, minY: 66, maxY: 92}
+  ];
 
   skin.customObstacleZones.hoth.circle = [
-    { minX: 250, maxX: 298, minY: 312, maxY: 342 },
-    { minX: 300, maxX: 346, minY: 65, maxY: 342 },
-    { minX: 252, maxX: 302, minY: 65, maxY: 100 },
-    { minX: 99, maxX: 192, minY: 311, maxY: 342 },
-    { minX: 101, maxX: 196, minY: 65, maxY: 91 },
-    { minX: 50, maxX: 100, minY: 65, maxY: 342 },
-    { minX: 163, maxX: 242, minY: 188, maxY: 238 }];
+    {minX: 250, maxX: 298, minY: 312, maxY: 342},
+    {minX: 300, maxX: 346, minY: 65, maxY: 342},
+    {minX: 252, maxX: 302, minY: 65, maxY: 100},
+    {minX: 99, maxX: 192, minY: 311, maxY: 342},
+    {minX: 101, maxX: 196, minY: 65, maxY: 91},
+    {minX: 50, maxX: 100, minY: 65, maxY: 342},
+    {minX: 163, maxX: 242, minY: 188, maxY: 238}
+  ];
 
   skin.customObstacleZones.starship.blobs = [
-    { minX: 301, maxX: 344, minY: 58, maxY: 120 },
-    { minX: 353, maxX: 405, minY: 260, maxY: 308 },
-    { minX: 306, maxX: 405, minY: 310, maxY: 393 },
-    { minX: 101, maxX: 144, minY: 300, maxY: 350 },
-    { minX: 101, maxX: 197, minY: 208, maxY: 299 },
-    { minX: 261, maxX: 344, minY: 120, maxY: 192 },
-    { minX: 55, maxX: 133, minY: 77, maxY: 141 }];
+    {minX: 301, maxX: 344, minY: 58, maxY: 120},
+    {minX: 353, maxX: 405, minY: 260, maxY: 308},
+    {minX: 306, maxX: 405, minY: 310, maxY: 393},
+    {minX: 101, maxX: 144, minY: 300, maxY: 350},
+    {minX: 101, maxX: 197, minY: 208, maxY: 299},
+    {minX: 261, maxX: 344, minY: 120, maxY: 192},
+    {minX: 55, maxX: 133, minY: 77, maxY: 141}
+  ];
 
   skin.customObstacleZones.starship.horizontal = [
-    { minX: 52, maxX: 298, minY: 267, maxY: 300 },
-    { minX: 151, maxX: 351, minY: 167, maxY: 198 },
-    { minX: 49, maxX: 99, minY: 165, maxY: 201 },
-    { minX: 51, maxX: 199, minY: 66, maxY: 102 },
-    { minX: 251, maxX: 351, minY: 68, maxY: 104 }];
+    {minX: 52, maxX: 298, minY: 267, maxY: 300},
+    {minX: 151, maxX: 351, minY: 167, maxY: 198},
+    {minX: 49, maxX: 99, minY: 165, maxY: 201},
+    {minX: 51, maxX: 199, minY: 66, maxY: 102},
+    {minX: 251, maxX: 351, minY: 68, maxY: 104}
+  ];
 
   skin.customObstacleZones.starship.circle = [
-    { minX: 251, maxX: 316, minY: 315, maxY: 351 },
-    { minX: 153, maxX: 242, minY: 165, maxY: 251 },
-    { minX: 252, maxX: 314, minY: 66, maxY: 100 },
-    { minX: 310, maxX: 339, minY: 66, maxY: 351 },
-    { minX: 80, maxX: 200, minY: 316, maxY: 351 },
-    { minX: 82, maxX: 200, minY: 66, maxY: 100 },
-    { minX: 63, maxX: 86, minY: 66, maxY: 351 }];
+    {minX: 251, maxX: 316, minY: 315, maxY: 351},
+    {minX: 153, maxX: 242, minY: 165, maxY: 251},
+    {minX: 252, maxX: 314, minY: 66, maxY: 100},
+    {minX: 310, maxX: 339, minY: 66, maxY: 351},
+    {minX: 80, maxX: 200, minY: 316, maxY: 351},
+    {minX: 82, maxX: 200, minY: 66, maxY: 100},
+    {minX: 63, maxX: 86, minY: 66, maxY: 351}
+  ];
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
@@ -214,22 +282,22 @@ export function loadStarWarsEvents(skin) {
   skin.goalRenderOffsetY = -45;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
-  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteWidth = 70;
   skin.projectileSpriteHeight = 70;
 
   // Dimensions of a rectangle in collidable center in which item collisions occur.
-  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectWidth = 50;
   skin.itemCollisionRectHeight = 50;
 
   // Dimensions of a rectangle in sprite center in which item collisions occur.
-  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectWidth = 50;
   skin.spriteCollisionRectHeight = 50;
 
   // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
   // For isometric-style rendering, this would normally be the feet.
   skin.wallCollisionRectOffsetX = 0;
   skin.wallCollisionRectOffsetY = 24;
-  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectWidth = 30;
   skin.wallCollisionRectHeight = 20;
 
   // When movement is grid aligned, sprite coordinates are the top-left corner
@@ -242,7 +310,7 @@ export function loadStarWarsEvents(skin) {
   skin.gridSpriteRenderOffsetY = -40;
 
   skin.avatarList = ['r2-d2', 'c-3po'];
-  skin.avatarList.forEach(function (name) {
+  skin.avatarList.forEach(function(name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -261,19 +329,34 @@ export function loadStarWarsEvents(skin) {
   });
 
   skin['r2-d2'].movementAudio = [
-    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end', volume: 2.2 },
-    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end', volume: 2.2 },
-    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
+    {
+      begin: 'r2-d2_move1_start',
+      loop: 'r2-d2_move1_loop',
+      end: 'r2-d2_move1_end',
+      volume: 2.2
+    },
+    {
+      begin: 'r2-d2_move2_start',
+      loop: 'r2-d2_move2_loop',
+      end: 'r2-d2_move2_end',
+      volume: 2.2
+    },
+    {
+      begin: 'r2-d2_move3_start',
+      loop: 'r2-d2_move3_loop',
+      end: 'r2-d2_move3_end',
+      volume: 2.2
+    }
   ];
   skin['c-3po'].movementAudio = [
-    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6 }
+    {loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6}
   ];
 
-  skin.preventProjectileLoop = function (className) {
+  skin.preventProjectileLoop = function(className) {
     return className === '';
   };
 
-  skin.preventItemLoop = function (className) {
+  skin.preventItemLoop = function(className) {
     return className === '';
   };
 
@@ -297,7 +380,10 @@ export function loadStarWarsEvents(skin) {
     jumboTilesSize: 60,
     jumboTilesRows: 4,
     jumboTilesCols: 4,
-    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
+    clouds: [
+      skin.assetUrl('cloud_light.png'),
+      skin.assetUrl('cloud_light2.png')
+    ]
   };
   skin.hoth = {
     background: skin.assetUrl('background_hoth.jpg'),
@@ -323,102 +409,133 @@ export function loadStarWarsEvents(skin) {
   // overlap each other a little.  Define a bounding rectangle for the source
   // tiles that get this treatment.
 
-  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+  skin.enlargeWallTiles = {minCol: 0, maxCol: 3, minRow: 3, maxRow: 5};
 
   // Since we don't have jumbo tiles for our "Hoth" background, in the case
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
-  skin.getMap = function (background, map) {
-    if (background === "hoth" && (map === "circle" || map === "horizontal")) {
-      return map + "_nonjumbo";
+  skin.getMap = function(background, map) {
+    if (background === 'hoth' && (map === 'circle' || map === 'horizontal')) {
+      return map + '_nonjumbo';
     } else {
       return map;
     }
   };
 
-  skin.blank =
-    [[0,  0,  0,  0,  0,  0,  0,  0],
-     [0,  0,  0,  0,  0,  0,  0,  0],
-     [0,  0,  0,  0,  0,  0,  0,  0],
-     [0,  0,  0,  0,  0,  0,  0,  0],
-     [0,  0,  0,  0,  0,  0,  0,  0],
-     [0,  0,  0,  0,  0,  0,  0,  0],
-     [0,  0,  0,  0,  0,  0,  0,  0],
-     [0,  0,  0,  0,  0,  0,  0,  0]];
+  skin.blank = [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ];
 
-  skin.circle_nonjumbo =
-    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00],
-     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00],
-     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00],
-     [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
-     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00],
-     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00],
-     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00],
-     [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
+  skin.circle_nonjumbo = [
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x11, 0x02, 0x03, 0x00, 0x44, 0x45, 0x00],
+    [0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00],
+    [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
+    [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00],
+    [0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00],
+    [0x00, 0x24, 0x25, 0x02, 0x00, 0x34, 0x35, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+  ];
 
-  skin.circle =
-    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
-     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00],
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
-     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
-     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
-     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00],
-     [0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
+  skin.circle = [
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x200, 0x213, 0x213, 0x00, 0x213, 0x201, 0x00],
+    [0x00, 0x212, 0x00, 0x00, 0x00, 0x00, 0x212, 0x00],
+    [0x00, 0x212, 0x00, 0x121, 0x121, 0x00, 0x212, 0x00],
+    [0x00, 0x212, 0x00, 0x121, 0x121, 0x00, 0x212, 0x00],
+    [0x00, 0x212, 0x00, 0x00, 0x00, 0x00, 0x212, 0x00],
+    [0x00, 0x202, 0x213, 0x213, 0x00, 0x213, 0x203, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+  ];
 
-  skin.horizontal_nonjumbo =
-    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0, 0x02, 0x03, 0x20, 0x00, 0x24, 0x25, 0x00],
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00],
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
+  skin.horizontal_nonjumbo = [
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x02, 0x03, 0x20, 0x00, 0x24, 0x25, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+  ];
 
-  skin.horizontal =
-    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
-     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00],
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
-     [0, 0x30,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
-     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00],
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
+  skin.horizontal = [
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x213, 0x213, 0x213, 0x00, 0x213, 0x213, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x30, 0x00, 0x213, 0x213, 0x213, 0x213, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+  ];
 
-  skin.grid =
-    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
+  skin.grid = [
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]
+  ];
 
-  skin.blobs =
-    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00],
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00],
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00],
-     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],
-     [0x00, 0x00,  0x132, 0x132, 0x00, 0x00,  0x00,  0x00],
-     [0x00, 0x00,  0x132, 0x132, 0x00, 0x00,  0x00,  0x23],
-     [0x00, 0x00,  0x31,  0x00,  0x00, 0x00,  0x121, 0x121],
-     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
+  skin.blobs = [
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x103, 0x103, 0x00, 0x00, 0x00, 0x22, 0x00],
+    [0x00, 0x103, 0x103, 0x00, 0x00, 0x110, 0x110, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x110, 0x110, 0x00],
+    [0x00, 0x00, 0x132, 0x132, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x132, 0x132, 0x00, 0x00, 0x00, 0x23],
+    [0x00, 0x00, 0x31, 0x00, 0x00, 0x00, 0x121, 0x121],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x121, 0x121]
+  ];
 
   // Sounds.
   skin.sounds = [
-    'R2-D2sound1', 'R2-D2sound2', 'R2-D2sound3', 'R2-D2sound4',
-    'R2-D2sound5', 'R2-D2sound6', 'R2-D2sound7', 'R2-D2sound8',
+    'R2-D2sound1',
+    'R2-D2sound2',
+    'R2-D2sound3',
+    'R2-D2sound4',
+    'R2-D2sound5',
+    'R2-D2sound6',
+    'R2-D2sound7',
+    'R2-D2sound8',
     'R2-D2sound9',
-    'C-3POsound1', 'C-3POsound2', 'C-3POsound3', 'C-3POsound4',
-    'PufferPigSound1', 'PufferPigSound2', 'PufferPigSound3', 'PufferPigSound4',
-    'TauntaunSound1', 'TauntaunSound2', 'TauntaunSound3', 'TauntaunSound4',
-    'MynockSound1', 'MynockSound2', 'MynockSound3',
-    'ProbotSound1', 'ProbotSound2', 'ProbotSound3',
-    'MouseDroidSound1', 'MouseDroidSound2', 'MouseDroidSound3',
-    'alert1', 'alert2', 'alert3', 'alert4',
+    'C-3POsound1',
+    'C-3POsound2',
+    'C-3POsound3',
+    'C-3POsound4',
+    'PufferPigSound1',
+    'PufferPigSound2',
+    'PufferPigSound3',
+    'PufferPigSound4',
+    'TauntaunSound1',
+    'TauntaunSound2',
+    'TauntaunSound3',
+    'TauntaunSound4',
+    'MynockSound1',
+    'MynockSound2',
+    'MynockSound3',
+    'ProbotSound1',
+    'ProbotSound2',
+    'ProbotSound3',
+    'MouseDroidSound1',
+    'MouseDroidSound2',
+    'MouseDroidSound3',
+    'alert1',
+    'alert2',
+    'alert3',
+    'alert4',
     'applause'
   ];
 
@@ -433,27 +550,27 @@ export function loadStarWarsEvents(skin) {
       minSuffix: 1,
       maxSuffix: 4
     },
-    'PufferPigSound': {
+    PufferPigSound: {
       randomValue: 'PufferPigRandom',
       minSuffix: 1,
       maxSuffix: 4
     },
-    'TauntaunSound': {
+    TauntaunSound: {
       randomValue: 'TauntaunRandom',
       minSuffix: 1,
       maxSuffix: 4
     },
-    'MynockSound': {
+    MynockSound: {
       randomValue: 'MynockRandom',
       minSuffix: 1,
       maxSuffix: 3
     },
-    'ProbotSound': {
+    ProbotSound: {
       randomValue: 'ProbotSoundRandom',
       minSuffix: 1,
       maxSuffix: 3
     },
-    'MouseDroidSound': {
+    MouseDroidSound: {
       randomValue: 'MouseDroidSoundRandom',
       minSuffix: 1,
       maxSuffix: 3
@@ -503,10 +620,10 @@ export function loadStarWarsEvents(skin) {
     [msg.playSoundAlert2(), 'alert2'],
     [msg.playSoundAlert3(), 'alert3'],
     [msg.playSoundAlert4(), 'alert4'],
-    [msg.playSoundApplause(), 'applause']];
-
-  skin.soundChoicesK1 = [
+    [msg.playSoundApplause(), 'applause']
   ];
+
+  skin.soundChoicesK1 = [];
 
   skin.soundMetadata = [
     {name: 'start', volume: 0.2},
@@ -565,14 +682,14 @@ export function loadStarWarsEvents(skin) {
     [msg.setMapHorizontal(), 'horizontal'],
     [msg.setMapGrid(), 'grid'],
     [msg.setMapBlobs(), 'blobs']
-    ];
+  ];
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     [msg.setBackgroundEndor(), '"endor"'],
     [msg.setBackgroundHoth(), '"hoth"'],
     [msg.setBackgroundStarship(), '"starship"']
-    ];
+  ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -580,14 +697,15 @@ export function loadStarWarsEvents(skin) {
     [skin.endor.background, '"endor"'],
     [skin.hoth.background, '"hoth"'],
     [skin.starship.background, '"starship"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE],
-    ];
+    [skin.randomPurpleIcon, RANDOM_VALUE]
+  ];
 
   skin.spriteChoices = [
     [msg.setDroidHidden(), HIDDEN_VALUE],
     [msg.setDroidRandom(), RANDOM_VALUE],
     [msg.setDroidR2D2(), '"r2-d2"'],
-    [msg.setDroidC3PO(), '"c-3po"']];
+    [msg.setDroidC3PO(), '"c-3po"']
+  ];
 
   skin.setSpritePrefix = msg.setDroid();
 
@@ -603,7 +721,8 @@ export function loadStarWarsEvents(skin) {
     [msg.itemMouseDroid(), '"mousedroid"'],
     [msg.itemTauntaun(), '"tauntaun"'],
     [msg.itemProbot(), '"probot"'],
-    [msg.itemRandom(), RANDOM_VALUE]];
+    [msg.itemRandom(), RANDOM_VALUE]
+  ];
 
   skin.msgOverrides = {
     ifSprite: msg.ifDroid,
@@ -614,7 +733,7 @@ export function loadStarWarsEvents(skin) {
     stopSprite: msg.stopDroid,
     stopSpriteN: msg.stopDroidN,
     whenSpriteClicked: msg.whenDroidClicked,
-    whenSpriteClickedN: msg.whenDroidClickedN,
+    whenSpriteClickedN: msg.whenDroidClickedN
   };
 }
 
@@ -633,34 +752,26 @@ export function loadStarWarsGrid(skin) {
   skin.itemFrames = 10;
 
   skin.instructions2ImageSubstitutions = {
-    "bb8": skin.assetUrl('instructions_bb8.png'),
-    "hazard": skin.assetUrl('instructions_hazard.png'),
-    "scrapmetal1": skin.assetUrl('goal1.png'),
-    "scrapmetal2": skin.assetUrl('goal2.png'),
+    bb8: skin.assetUrl('instructions_bb8.png'),
+    hazard: skin.assetUrl('instructions_hazard.png'),
+    scrapmetal1: skin.assetUrl('goal1.png'),
+    scrapmetal2: skin.assetUrl('goal2.png')
   };
 
   // An empty transparent PNG, used to override the instructions avatar for
   // scripts in which we don't have permission to show Rey's face
   skin.blankAvatar = skin.assetUrl('blank.png');
-  skin.avatarAllowedScripts = [
-    'starwars',
-    'starwarsblocks'
-  ];
+  skin.avatarAllowedScripts = ['starwars', 'starwarsblocks'];
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
-  skin.ProjectileClassNames = [
-  ];
+  skin.ProjectileClassNames = [];
 
-  skin.ItemClassNames = [
-    'hazard'
-  ];
+  skin.ItemClassNames = ['hazard'];
 
-  skin.AutohandlerTouchItems = {
-  };
+  skin.AutohandlerTouchItems = {};
 
-  skin.AutohandlerGetAllItems = {
-  };
+  skin.AutohandlerGetAllItems = {};
 
   skin.specialItemProperties = {
     hazard: {
@@ -669,11 +780,11 @@ export function loadStarWarsGrid(skin) {
       width: 100,
       height: 100,
       scale: 1.3,
-      renderOffset: { x: 0, y: -25 },
+      renderOffset: {x: 0, y: -25},
       activity: BEHAVIOR_WATCH_ACTOR,
       speed: SpriteSpeed.VERY_SLOW,
-      isHazard: true,
-    },
+      isHazard: true
+    }
   };
 
   // Spritesheet for animated goal.
@@ -710,22 +821,22 @@ export function loadStarWarsGrid(skin) {
   skin.goalRenderOffsetY = 0;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
-  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteWidth = 70;
   skin.projectileSpriteHeight = 70;
 
   // Dimensions of a rectangle in collidable center in which item collisions occur.
-  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectWidth = 50;
   skin.itemCollisionRectHeight = 50;
 
   // Dimensions of a rectangle in sprite center in which item collisions occur.
-  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectWidth = 50;
   skin.spriteCollisionRectHeight = 50;
 
   // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
   // For isometric-style rendering, this would normally be the feet.
   skin.wallCollisionRectOffsetX = 0;
   skin.wallCollisionRectOffsetY = 24;
-  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectWidth = 30;
   skin.wallCollisionRectHeight = 20;
 
   // When movement is grid aligned, sprite coordinates are the top-left corner
@@ -738,7 +849,7 @@ export function loadStarWarsGrid(skin) {
   skin.gridSpriteRenderOffsetY = -40;
 
   skin.avatarList = ['bb-8'];
-  skin.avatarList.forEach(function (name) {
+  skin.avatarList.forEach(function(name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -757,17 +868,17 @@ export function loadStarWarsGrid(skin) {
     };
   });
   skin['bb-8'].movementAudio = [
-    { begin: 'move1', volume: 0.3 },
-    { begin: 'move2', volume: 0.3 },
-    { begin: 'move3', volume: 0.3 },
-    { begin: 'move4', volume: 0.3 }
+    {begin: 'move1', volume: 0.3},
+    {begin: 'move2', volume: 0.3},
+    {begin: 'move3', volume: 0.3},
+    {begin: 'move4', volume: 0.3}
   ];
 
-  skin.preventProjectileLoop = function (className) {
+  skin.preventProjectileLoop = function(className) {
     return className === '';
   };
 
-  skin.preventItemLoop = function (className) {
+  skin.preventItemLoop = function(className) {
     return className === '';
   };
 
@@ -779,23 +890,24 @@ export function loadStarWarsGrid(skin) {
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
     tiles: skin.assetUrl('tiles_background1.png'),
-    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
+    clouds: [
+      skin.assetUrl('cloud_light.png'),
+      skin.assetUrl('cloud_light2.png')
+    ]
   };
 
   // It's possible to enlarge the rendering of some wall tiles so that they
   // overlap each other a little.  Define a bounding rectangle for the source
   // tiles that get this treatment.
 
-  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+  skin.enlargeWallTiles = {minCol: 0, maxCol: 3, minRow: 3, maxRow: 5};
 
   // Sounds.
   skin.sounds = ['move1', 'move2', 'move3', 'move4'];
 
-  skin.soundChoices = [
-    ];
+  skin.soundChoices = [];
 
-  skin.soundChoicesK1 = [
-  ];
+  skin.soundChoicesK1 = [];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
@@ -806,21 +918,19 @@ export function loadStarWarsGrid(skin) {
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
   // NOTE: first item must be RANDOM_VALUE
-  skin.mapChoices = [
-    ];
+  skin.mapChoices = [];
 
-  skin.backgroundChoices = [
-    ];
+  skin.backgroundChoices = [];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
-  skin.backgroundChoicesK1 = [
-    ];
+  skin.backgroundChoicesK1 = [];
 
   skin.spriteChoices = [
     [msg.setDroidHidden(), HIDDEN_VALUE],
     [msg.setDroidRandom(), RANDOM_VALUE],
-    [msg.setDroidBB8(), '"bb-8"']];
+    [msg.setDroidBB8(), '"bb-8"']
+  ];
 
   skin.setSpritePrefix = msg.setDroid();
 
@@ -828,8 +938,7 @@ export function loadStarWarsGrid(skin) {
 
   // NOTE: item names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
-  skin.itemChoices = [
-    ];
+  skin.itemChoices = [];
 }
 
 /**
@@ -838,19 +947,19 @@ export function loadStarWarsGrid(skin) {
  * @const {MusicTrackDefinition[]}
  */
 var HOC2015_MUSIC_METADATA = [
-  { name: 'song1', volume: 0.5 },
-  { name: 'song2', volume: 0.5 },
-  { name: 'song3', volume: 0.5 },
-  { name: 'song4', volume: 0.4 },
-  { name: 'song5', volume: 0.4 },
-  { name: 'song6', volume: 0.5 },
-  { name: 'song7', volume: 0.4 },
-  { name: 'song8', volume: 0.4 },
-  { name: 'song9', volume: 0.4 },
-  { name: 'song10', volume: 0.5 },
-  { name: 'song11', volume: 0.45 },
-  { name: 'song12', volume: 0.4 },
-  { name: 'song13', volume: 0.4 },
-  { name: 'song14', volume: 0.5 },
-  { name: 'song15', volume: 0.55 }
+  {name: 'song1', volume: 0.5},
+  {name: 'song2', volume: 0.5},
+  {name: 'song3', volume: 0.5},
+  {name: 'song4', volume: 0.4},
+  {name: 'song5', volume: 0.4},
+  {name: 'song6', volume: 0.5},
+  {name: 'song7', volume: 0.4},
+  {name: 'song8', volume: 0.4},
+  {name: 'song9', volume: 0.4},
+  {name: 'song10', volume: 0.5},
+  {name: 'song11', volume: 0.45},
+  {name: 'song12', volume: 0.4},
+  {name: 'song13', volume: 0.4},
+  {name: 'song14', volume: 0.5},
+  {name: 'song15', volume: 0.55}
 ];

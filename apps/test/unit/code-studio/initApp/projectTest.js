@@ -31,109 +31,147 @@ describe('project.js', () => {
   describe('getNewProjectName()', () => {
     it('for applab', () => {
       window.appOptions.app = 'applab';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameAppLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameAppLab()
+      );
     });
 
     it('for gamelab', () => {
       window.appOptions.app = 'gamelab';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameGameLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameGameLab()
+      );
     });
 
     it('for weblab', () => {
       window.appOptions.app = 'weblab';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameWebLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameWebLab()
+      );
     });
 
     it('for artist', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'artist';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameArtist());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameArtist()
+      );
     });
 
     it('for artist_zombie', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'artist_zombie';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameArtist());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameArtist()
+      );
     });
 
     it('for anna', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'anna';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameFrozen());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameFrozen()
+      );
     });
 
     it('for elsa', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'elsa';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameFrozen());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameFrozen()
+      );
     });
 
     it('for Big Game', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {useContractEditor: true};
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameBigGame());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameBigGame()
+      );
     });
 
     it('for Play Lab', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'studio';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNamePlayLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNamePlayLab()
+      );
     });
 
     it('for infinity', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'infinity';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameInfinity());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameInfinity()
+      );
     });
 
     it('for gumball', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'gumball';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameGumball());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameGumball()
+      );
     });
 
     it('for iceage', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'iceage';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameIceAge());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameIceAge()
+      );
     });
 
     it('for Star Wars', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'hoc2015';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameStarWars());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameStarWars()
+      );
     });
 
     it('for craft', () => {
       window.appOptions.app = 'craft';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameMinecraft());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameMinecraft()
+      );
     });
 
     it('for flappy', () => {
       window.appOptions.app = 'flappy';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameFlappy());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameFlappy()
+      );
     });
 
     it('for bounce', () => {
       window.appOptions.app = 'bounce';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameBounce());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameBounce()
+      );
     });
 
     it('for sports', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'sports';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameSports());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameSports()
+      );
     });
 
     it('for basketball', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'basketball';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameBasketball());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameBasketball()
+      );
     });
 
     it('for dance', () => {
       window.appOptions.app = 'dance';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameDance());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameDance()
+      );
     });
 
     it('default case', () => {
@@ -307,40 +345,39 @@ describe('project.js', () => {
     });
   });
 
-  describe('project.getProjectUrl', function () {
-
+  describe('project.getProjectUrl', function() {
     let stubUrl;
     let url;
 
-    beforeEach(function () {
+    beforeEach(function() {
       stubUrl = sinon.stub(project, 'getUrl').callsFake(() => url);
     });
 
-    afterEach(function () {
+    afterEach(function() {
       stubUrl.restore();
     });
 
-    it('typical url', function () {
+    it('typical url', function() {
       url = 'http://url';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes', function () {
+    it('with ending slashes', function() {
       url = 'http://url//';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with query string', function () {
+    it('with query string', function() {
       url = 'http://url?query';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
 
-    it('with hash', function () {
+    it('with hash', function() {
       url = 'http://url#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes, query, and hash', function () {
+    it('with ending slashes, query, and hash', function() {
       url = 'http://url/?query#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
@@ -353,32 +390,25 @@ describe('project.js', () => {
     const ORIGINS = [
       {
         studio: 'https://studio.code.org',
-        codeProjects: 'https://codeprojects.org',
+        codeProjects: 'https://codeprojects.org'
       },
       {
         studio: 'https://test-studio.code.org',
-        codeProjects: 'https://test.codeprojects.org',
+        codeProjects: 'https://test.codeprojects.org'
       },
       {
         studio: 'https://staging-studio.code.org',
-        codeProjects: 'https://staging.codeprojects.org',
+        codeProjects: 'https://staging.codeprojects.org'
       },
       {
         studio: 'http://localhost-studio.code.org:3000',
-        codeProjects: 'http://localhost.codeprojects.org:3000',
-      },
+        codeProjects: 'http://localhost.codeprojects.org:3000'
+      }
     ];
 
-    const NORMAL_APP_TYPES = [
-      'artist',
-      'playlab',
-      'applab',
-      'gamelab',
-    ];
+    const NORMAL_APP_TYPES = ['artist', 'playlab', 'applab', 'gamelab'];
 
-    const CODEPROJECTS_APP_TYPES = [
-      'weblab'
-    ];
+    const CODEPROJECTS_APP_TYPES = ['weblab'];
 
     beforeEach(() => {
       sinon.stub(project, 'getLocation').callsFake(() => fakeLocation);
@@ -399,13 +429,15 @@ describe('project.js', () => {
 
     ORIGINS.forEach(({studio: origin, codeProjects: codeProjectsOrigin}) => {
       describe(`on ${origin}`, () => {
-        NORMAL_APP_TYPES.forEach((appType) => {
+        NORMAL_APP_TYPES.forEach(appType => {
           const expected = `${origin}/projects/${appType}/${fakeProjectId}`;
           describe(`${appType} projects share to ${expected}`, () => {
             beforeEach(() => project.getStandaloneApp.returns(appType));
 
             it(`from project edit page`, () => {
-              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
+              setFakeLocation(
+                `${origin}/projects/${appType}/${fakeProjectId}/edit`
+              );
               expect(project.getShareUrl()).to.equal(expected);
             });
 
@@ -416,18 +448,22 @@ describe('project.js', () => {
           });
         });
 
-        CODEPROJECTS_APP_TYPES.forEach((appType) => {
+        CODEPROJECTS_APP_TYPES.forEach(appType => {
           const expected = `${codeProjectsOrigin}/${fakeProjectId}`;
           describe(`${appType} projects share to ${expected}`, () => {
             beforeEach(() => project.getStandaloneApp.returns(appType));
 
             it(`from project edit page`, () => {
-              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
+              setFakeLocation(
+                `${origin}/projects/${appType}/${fakeProjectId}/edit`
+              );
               expect(project.getShareUrl()).to.equal(expected);
             });
 
             it(`from project view page`, () => {
-              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/view`);
+              setFakeLocation(
+                `${origin}/projects/${appType}/${fakeProjectId}/view`
+              );
               expect(project.getShareUrl()).to.equal(expected);
             });
 
@@ -443,9 +479,11 @@ describe('project.js', () => {
 
   describe('toggleMakerEnabled()', () => {
     beforeEach(() => {
-      sinon.stub(project, 'saveSourceAndHtml_').callsFake((source, callback) => {
-        callback();
-      });
+      sinon
+        .stub(project, 'saveSourceAndHtml_')
+        .callsFake((source, callback) => {
+          callback();
+        });
     });
 
     afterEach(() => {
@@ -457,7 +495,8 @@ describe('project.js', () => {
       project.init(sourceHandler);
       return project.toggleMakerEnabled().then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).to.be.true;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
+          .to.be.true;
       });
     });
 
@@ -466,7 +505,8 @@ describe('project.js', () => {
       project.init(sourceHandler);
       return project.toggleMakerEnabled().then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).to.be.false;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
+          .to.be.false;
       });
     });
 
@@ -547,7 +587,9 @@ describe('project.js', () => {
       await project.serverSideRemix();
 
       expect(utils.navigateToHref).to.have.been.calledOnce;
-      expect(utils.navigateToHref.firstCall.args[0]).to.match(/projects\/dance\/.*\/remix/);
+      expect(utils.navigateToHref.firstCall.args[0]).to.match(
+        /projects\/dance\/.*\/remix/
+      );
     });
 
     it('saves first if you are the project owner', async () => {
@@ -556,8 +598,7 @@ describe('project.js', () => {
       await project.serverSideRemix();
 
       expect(project.save).to.have.been.calledOnce;
-      expect(project.save.firstCall.args)
-        .to.deep.equal([false, true]);
+      expect(project.save.firstCall.args).to.deep.equal([false, true]);
     });
 
     it('does not save if you are not the project owner', async () => {
@@ -576,7 +617,7 @@ describe('project.js', () => {
       expect(project.getCurrentName()).to.equal('My Project');
     });
 
-    it("sets a special default project name for Big Game", async () => {
+    it('sets a special default project name for Big Game', async () => {
       project.getStandaloneApp.returns('algebra_game');
       setData({name: undefined});
 
@@ -585,7 +626,7 @@ describe('project.js', () => {
       expect(project.getCurrentName()).to.equal('Big Game Template');
     });
 
-    it("does not change the name if the project already has one", async () => {
+    it('does not change the name if the project already has one', async () => {
       setData({name: 'Existing name'});
 
       await project.serverSideRemix();
@@ -675,8 +716,8 @@ describe('project.js', () => {
 function replaceAppOptions() {
   replaceOnWindow('appOptions', {
     level: {
-      isProjectLevel: true,
-    },
+      isProjectLevel: true
+    }
   });
 }
 
@@ -686,33 +727,41 @@ function restoreAppOptions() {
 
 function stubPostChannels(server) {
   server.respondWith('POST', /\/v3\/channels/, xhr => {
-    xhr.respond(200, {
-      'Content-Type': 'application/json',
-    }, JSON.stringify({
-      "createdAt": "2018-10-22T21:59:43.000-07:00",
-      "updatedAt": "2018-10-22T21:59:45.000-07:00",
-      "isOwner": true,
-      "publishedAt": null,
-      "level": "/projects/artist",
-      "migratedToS3": true,
-      "name": "Remix: allthethings-artist-project-backed",
-      "id": "kmz3weHzTpZTbRWrHRzMJA",
-      "projectType": "artist"
-    }));
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        createdAt: '2018-10-22T21:59:43.000-07:00',
+        updatedAt: '2018-10-22T21:59:45.000-07:00',
+        isOwner: true,
+        publishedAt: null,
+        level: '/projects/artist',
+        migratedToS3: true,
+        name: 'Remix: allthethings-artist-project-backed',
+        id: 'kmz3weHzTpZTbRWrHRzMJA',
+        projectType: 'artist'
+      })
+    );
   });
 }
 
 function stubPutMainJson(server) {
   server.respondWith('PUT', /\/v3\/sources\/.*\/main\.json/, xhr => {
-    xhr.respond(200, {
-      'Content-Type': 'application/json',
-    }, JSON.stringify({
-      filename: 'main.json',
-      category: 'json',
-      size: 0,
-      versionId: 12345,
-      timestamp: Date.now()
-    }));
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        filename: 'main.json',
+        category: 'json',
+        size: 0,
+        versionId: 12345,
+        timestamp: Date.now()
+      })
+    );
   });
 }
 
@@ -728,6 +777,6 @@ function createStubSourceHandler() {
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),
     getSelectedSong: sinon.stub(),
-    prepareForRemix: sinon.stub().returns(Promise.resolve()),
+    prepareForRemix: sinon.stub().returns(Promise.resolve())
   };
 }

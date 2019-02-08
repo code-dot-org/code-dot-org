@@ -47,7 +47,7 @@ var CONFIGS = {
     // This is required when move pegman animation is set
     movePegmanAnimationFrameNumber: 9,
     actionSpeedScale: {
-      nectar: 1,
+      nectar: 1
     },
     pegmanYOffset: 0,
     tileSheetWidth: 5,
@@ -67,11 +67,7 @@ var CONFIGS = {
     collectBlock: 'gem_cropped.png',
     corners: 'corners.png',
 
-    collectSounds: [
-      'get_gem_2.mp3',
-      'get_gem_4.mp3',
-      'get_gem_6.mp3'
-    ],
+    collectSounds: ['get_gem_2.mp3', 'get_gem_4.mp3', 'get_gem_6.mp3'],
 
     // Walk sound works, but the current available audio is a bit too harsh for
     // classroom usage. Temporarily disabling until we get some milder audio
@@ -154,7 +150,7 @@ var CONFIGS = {
     turnAfterVictory: true
   },
 
- scrat: {
+  scrat: {
     goalIdle: 'goal.png',
     goalAnimation: 'goal.png',
     maze_forever: 'maze_forever.png',
@@ -196,7 +192,7 @@ CONFIGS.bee_night = CONFIGS.bee;
 CONFIGS.farmer_night = CONFIGS.farmer;
 
 CONFIGS.planter = Object.assign({}, CONFIGS.harvester, {
-  soil: 'soil.png',
+  soil: 'soil.png'
 });
 
 /**
@@ -207,7 +203,7 @@ function soundAssetUrls(skin, mp3Sound) {
   return [skin.assetUrl(mp3Sound), skin.assetUrl(base + '.ogg')];
 }
 
-exports.load = function (assetUrl, id) {
+exports.load = function(assetUrl, id) {
   // The skin has properties from three locations
   // (1) skinBase - properties common across Blockly apps
   // (2) here - properties common across all maze skins

@@ -1,9 +1,9 @@
 /**
  * Table displaying workshop summaries based on a supplied workshop query result.
  */
-
 import _, {orderBy} from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
@@ -57,7 +57,10 @@ export default class WorkshopTable extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!_.isEqual(this.props.workshops, nextProps.workshops) && this.props.onWorkshopsReceived) {
+    if (
+      !_.isEqual(this.props.workshops, nextProps.workshops) &&
+      this.props.onWorkshopsReceived
+    ) {
       this.props.onWorkshopsReceived(nextProps.workshops);
     }
   }
@@ -89,68 +92,72 @@ export default class WorkshopTable extends React.Component {
   }
 
   constructColumns() {
-    const sortable = wrappedSortable(
-      this.getSortingColumns,
-      this.onSort,
-      {
-        container: {whiteSpace: 'nowrap'},
-        default: {color: color.light_gray}
-      }
-    );
+    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
+      container: {whiteSpace: 'nowrap'},
+      default: {color: color.light_gray}
+    });
 
     let columns = [];
-    columns.push({
-      property: 'date', // for sorting
-      header: {
-        label: 'Date and Time',
-        transforms: [sortable]
+    columns.push(
+      {
+        property: 'date', // for sorting
+        header: {
+          label: 'Date and Time',
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatSessions
+        }
       },
-      cell: {
-        format: this.formatSessions
-      }
-    }, {
-      property: 'location_name',
-      header: {
-        label: 'Location',
-        transforms: [sortable]
-      }
-    }, {
-      property: 'on_map',
-      header: {
-        label: 'On Map',
-        transforms: [sortable]
+      {
+        property: 'location_name',
+        header: {
+          label: 'Location',
+          transforms: [sortable]
+        }
       },
-      cell: {
-        format: this.formatBoolean
-      }
-    }, {
-      property: 'funded',
-      header: {
-        label: 'Funded',
-        transforms: [sortable]
+      {
+        property: 'on_map',
+        header: {
+          label: 'On Map',
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatBoolean
+        }
       },
-      cell: {
-        format: this.formatBoolean
+      {
+        property: 'funded',
+        header: {
+          label: 'Funded',
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatBoolean
+        }
+      },
+      {
+        property: 'course',
+        header: {
+          label: 'Course',
+          transforms: [sortable]
+        }
+      },
+      {
+        property: 'subject',
+        header: {
+          label: 'Subject',
+          transforms: [sortable]
+        }
+      },
+      {
+        property: 'enrollments',
+        header: {
+          label: 'Signups',
+          transforms: [sortable]
+        }
       }
-    }, {
-      property: 'course',
-      header: {
-        label: 'Course',
-        transforms: [sortable]
-      }
-    }, {
-      property: 'subject',
-      header: {
-        label: 'Subject',
-        transforms: [sortable]
-      }
-    }, {
-      property: 'enrollments',
-      header: {
-        label: 'Signups',
-        transforms: [sortable]
-      }
-    });
+    );
 
     if (this.props.showOrganizer) {
       columns.push({
@@ -164,21 +171,24 @@ export default class WorkshopTable extends React.Component {
       });
     }
 
-    columns.push({
-      property: 'facilitators',
-      header: {
-        label: 'Facilitators'
+    columns.push(
+      {
+        property: 'facilitators',
+        header: {
+          label: 'Facilitators'
+        },
+        cell: {
+          format: this.formatFacilitators
+        }
       },
-      cell: {
-        format: this.formatFacilitators
+      {
+        property: 'regional_partner_name',
+        header: {
+          label: 'Regional Partner',
+          transforms: [sortable]
+        }
       }
-    }, {
-      property: 'regional_partner_name',
-      header: {
-        label: 'Regional Partner',
-        transforms: [sortable]
-      }
-    });
+    );
 
     columns.push();
 
@@ -219,7 +229,7 @@ export default class WorkshopTable extends React.Component {
 
   getSortingColumns = () => this.state.sortingColumns || {};
 
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     const sortingColumns = sort.byColumn({
       sortingColumns: this.state.sortingColumns,
       // Custom sortingOrder removes 'no-sort' from the cycle
@@ -245,22 +255,22 @@ export default class WorkshopTable extends React.Component {
   };
 
   formatSessions = (_ignored, {rowData}) => {
-    return <SessionTimesList sessions={rowData.sessions}/>;
+    return <SessionTimesList sessions={rowData.sessions} />;
   };
 
-  formatBoolean = (bool) => {
-    return bool ? "Yes" : "No";
+  formatBoolean = bool => {
+    return bool ? 'Yes' : 'No';
   };
 
-  formatOrganizer = (organizer) => {
+  formatOrganizer = organizer => {
     return `${organizer.name} (${organizer.email})`;
   };
 
-  formatFacilitators = (facilitators) => {
+  formatFacilitators = facilitators => {
     return <FacilitatorsList facilitators={facilitators} />;
   };
 
-  formatSignupUrl = (workshopId) => {
+  formatSignupUrl = workshopId => {
     const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
     return (
       <a href={signupUrl} target="_blank">
@@ -269,7 +279,7 @@ export default class WorkshopTable extends React.Component {
     );
   };
 
-  formatManagement = (manageData) => {
+  formatManagement = manageData => {
     const {id, course, subject, state, date} = manageData;
 
     return (
@@ -281,24 +291,32 @@ export default class WorkshopTable extends React.Component {
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        showSurveyUrl={state === 'Ended' || (
-          ['CS Discoveries', 'CS Principles'].includes(course) && subject !== 'Code.org Facilitator Weekend'
-        )}
+        showSurveyUrl={
+          state === 'Ended' ||
+          (['CS Discoveries', 'CS Principles'].includes(course) &&
+            subject !== 'Code.org Facilitator Weekend')
+        }
       />
     );
   };
 
-  handleMoreClick = (event) => {
+  handleMoreClick = event => {
     event.preventDefault();
     this.context.router.push(this.props.moreUrl);
   };
 
   render() {
-    const rows = _.map(this.props.workshops.workshops,
-      row => _.merge(row, {
+    const rows = _.map(this.props.workshops.workshops, row =>
+      _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
         date: row.sessions[0].start,
-        manage: {id: row.id, course: row.course, subject: row.subject, state: row.state, date: row.sessions[0].start}
+        manage: {
+          id: row.id,
+          course: row.course,
+          subject: row.subject,
+          state: row.state,
+          date: row.sessions[0].start
+        }
       })
     );
 
@@ -316,25 +334,30 @@ export default class WorkshopTable extends React.Component {
           className="table table-striped table-condensed"
           columns={this.columns}
         >
-          {this.props.generateCaption && <caption>{this.props.generateCaption()}</caption>}
+          {this.props.generateCaption && (
+            <caption>{this.props.generateCaption()}</caption>
+          )}
           <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id"/>
-          {
-            this.props.moreUrl && this.props.workshops.total_count > this.props.workshops.workshops.length &&
-            <tfoot>
-            <tr>
-              <td>
-                <Button
-                  bsSize="small"
-                  href={this.props.moreUrl}
-                  onClick={this.handleMoreClick}
-                >
-                  {this.props.workshops.total_count - this.props.workshops.workshops.length} More...
-                </Button>
-              </td>
-            </tr>
-            </tfoot>
-          }
+          <Table.Body rows={sortedRows} rowKey="id" />
+          {this.props.moreUrl &&
+            this.props.workshops.total_count >
+              this.props.workshops.workshops.length && (
+              <tfoot>
+                <tr>
+                  <td>
+                    <Button
+                      bsSize="small"
+                      href={this.props.moreUrl}
+                      onClick={this.handleMoreClick}
+                    >
+                      {this.props.workshops.total_count -
+                        this.props.workshops.workshops.length}{' '}
+                      More...
+                    </Button>
+                  </td>
+                </tr>
+              </tfoot>
+            )}
         </Table.Provider>
       </div>
     );
