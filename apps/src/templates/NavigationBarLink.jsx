@@ -31,7 +31,7 @@ export default class NavigationBarLink extends React.Component {
 
     return (
       <NavLink
-        to={`/${url}`}
+        to={url}
         style={styles.link}
         activeStyle={styles.activeLink}
       >

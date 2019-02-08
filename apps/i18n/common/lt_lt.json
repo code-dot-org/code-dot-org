@@ -1279,6 +1279,7 @@
   "subtitle": "Vizuali programavimo aplinka",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Pasirinkti grupę:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Tavo programoje yra rašybos klaida. Pašalink {lineNumber} eilutę ir bandyk dar kartą.",

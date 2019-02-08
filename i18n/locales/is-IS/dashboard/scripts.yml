@@ -3742,3 +3742,7 @@ is:
               name: 'Kembing: Ófundnir böggar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
+        dani-test-script:
+          stages:
+            new stage:
+              name: nýr áfangi

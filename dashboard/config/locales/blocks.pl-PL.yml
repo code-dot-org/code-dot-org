@@ -1001,7 +1001,7 @@ pl:
         text: skręć w prawo
       Vector_positionCenter:
         text: środek
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': rozmiar

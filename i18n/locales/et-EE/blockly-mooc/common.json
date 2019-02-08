@@ -1279,6 +1279,7 @@
   "subtitle": "visuaalne programmeerimiskeskkond",
   "success": "Korras!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Vaheta sektsiooni:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Sinu programmis on näpukas. Palun eemalda rida {lineNumber} ja proovi uuesti.",

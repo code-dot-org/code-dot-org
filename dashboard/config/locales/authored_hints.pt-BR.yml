@@ -5129,6 +5129,9 @@ pt-BR:
           Você consegue encontrar um caminho que alcance cada flor e favo de mel sem acertar nenhuma árvore? O melhor caminho é uma espiral.
 
           **Você pode resolver isto sem nunca virar à esquerda**
+        courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
+          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          sua condicional `se / se não` em cada quadrado.
       course2_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: O código original funcionaria muito bem -
           se houvesse apenas um pedaço de tesouro em cada pilha!
@@ -5211,6 +5214,13 @@ pt-BR:
           de 30 ** e gira para a direita em ** 60 graus **.  '
         courseE_artist_concept_challenge1_b: 'Os 2/3 do triângulo tem um ** comprimento
           de 80 ** e gira para a direita em ** 120 graus **. '
+      course3_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_a: Por que a primeira metade deste programa
+          funciona? Pense por que a abelha precisa se mover para trás. Quanto nectar
+          a abelha coleta cada vez que se move sobre uma flor?
+        courseD_bee_debugging_challenge1_b: No caminho de volta, faça a abelha seguir
+          o mesmo padrão. Quanto mel a abelha precisa fazer cada vez que passa por
+          um favo de mel?
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Se o quebra-cabeça parece desafiador,
           tente construir sua função aos poucos.\nAdicione alguns blocos e os experimente.
@@ -11479,6 +11489,8 @@ pt-BR:
         courseD_artist_functions8_b: Depois da sua primeira linha de quadrados, você
           precisa mover o artista para baixo e para trás antes de iniciar a segunda
           linha de quadrados.
+        courseD_artist_functions8_c: Você deve mover o artista de volta um número
+          diferente de pixels para as linhas pares do que para as linhas ímpares.
       courseD_artist_functions9_authored_hint:
         courseD_artist_functions9_a: Para contornar a necessidade de ter vários blocos
           'avançar', crie uma função 'desenhar triângulo' e a chame várias vezes.
@@ -12287,6 +12299,15 @@ pt-BR:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
+        courseD_bee_conditionals8_b: "Esse quebra-cabeça é complicado, porque você
+          não pode verificar quadrados em branco, néctar, *e* mel com apenas um único
+          condicional. \n\nApenas verifique se há néctar e mel no final do caminho."
+        courseD_bee_conditionals8_c: Como você pode garantir de ir até final de cada
+          caminho, independentemente de quão longo seja o caminho?
+        courseD_bee_conditionals8_d: |-
+          Mesmo que haja uma nuvem bem na sua frente, você não precisa visitá-la primeiro. Tente começar com a nuvem no canto inferior direito do quadrado.
+
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals8_2018_authored_hint:
@@ -12295,21 +12316,327 @@ pt-BR:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
+        courseD_bee_conditionals8_b: "Esse quebra-cabeça é complicado, porque você
+          não pode verificar quadrados em branco, néctar, *e* mel com apenas um único
+          condicional. \n\nApenas verifique se há néctar e mel no final do caminho."
+        courseD_bee_conditionals8_c: Como você pode garantir de ir até final de cada
+          caminho, independentemente de quão longo seja o caminho?
+        courseD_bee_conditionals8_d: |-
+          Mesmo que haja uma nuvem bem na sua frente, você não precisa visitá-la primeiro. Tente começar com a nuvem no canto inferior direito do quadrado.
+
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
+        courseD_bee_conditionals8_b: "Esse quebra-cabeça é complicado, porque você
+          não pode verificar quadrados em branco, néctar, *e* mel com apenas um único
+          condicional. \n\nApenas verifique se há néctar e mel no final do caminho."
+      courseD_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_a: Você consegue encontrar um caminho
+          que alcance todas as flores e favo de mel sem bater em nenhuma árvore? O
+          melhor caminho é uma espiral.
+        courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
+          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          sua condicional `se / se não` em cada quadrado.
+      courseD_bee_conditionals_challenge1_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_a: Você consegue encontrar um caminho
+          que alcance todas as flores e favo de mel sem bater em nenhuma árvore? O
+          melhor caminho é uma espiral.
+        courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
+          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          sua condicional `se / se não` em cada quadrado.
+      courseD_bee_conditionals_challenge1_2019_authored_hint:
+        courseD_bee_conditionals_challenge1_a: Você consegue encontrar um caminho
+          que alcance todas as flores e favo de mel sem bater em nenhuma árvore? O
+          melhor caminho é uma espiral.
+        courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
+          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          sua condicional `se / se não` em cada quadrado.
+      courseD_bee_debugging1_authored_hint:
+        courseD_bee_debugging1_a: "Use o botão \"Passo\" para ver se está tudo certo
+          no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        courseD_bee_debugging1_b: Você vê algum padrão que poderia ser mais simples
+          usando um laço `repetir`?
+      courseD_bee_debugging2_authored_hint:
+        courseD_bee_debugging2_a: "Use o botão \"Passo\" para ver se está tudo certo
+          no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        courseD_bee_debugging2_b: "Você vê um padrão? \nTente usar loops aninhados
+          para resolver esse quebra-cabeça.\n\n![](https://images.code.org/72fbb8a06937479599b12804f990a0f3-image-1501012383369.50.27.png)"
       courseD_bee_debugging3_authored_hint:
+        courseD_bee_debugging3_a: Existe algum lugar onde a abelha faz algo que não
+          faz sentido? O que acontece quando você muda esses blocos?
         courseD_bee_debugging3_b: Tente simplificar o código usando laços de repetição
           aninhados.
+      courseD_bee_debugging4_authored_hint:
+        courseD_bee_debugging4_a: "Tente usar o processo de depuração algumas vezes
+          seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
+          é resolvido, o que está errado?"
+        courseD_bee_debugging4_b: "Se você está tendo dificuldade em descobrir como
+          fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
+          os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
+      courseD_bee_debugging5_authored_hint:
+        courseD_bee_debugging5_a: "Comece olhando apenas o primeiro laço. \n\nO que
+          isso faz? \n\nO que deveria fazer? \n\nO que isso lhe diz?"
+        courseD_bee_debugging5_b: Depois de ter o primeiro laço do jeito que você
+          quer, o que resta no seu código?
+        courseD_bee_debugging5_c: "Tente envolver o laço que sobrou no restante do
+          código concluído. Agora funciona? \n\nSe não, o que ainda está errado?"
+      courseD_bee_debugging6_authored_hint:
+        courseD_bee_debugging6_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+        courseD_bee_debugging6_b: Parece que todos os passos certos estão aqui, você
+          só precisa de mais deles. Como você pode repetir as ações `pegar nectar`
+          e` fazer mel` várias vezes?
+      courseD_bee_debugging7_authored_hint:
+        courseD_bee_debugging7_a: "Tente usar o botão \"Passo\". Está tudo certo no
+          primeiro passo? \n\nE com o segundo? \n\nOnde isso está dando errado?  "
+        courseD_bee_debugging7_b: Se algo precisar acontecer várias vezes, tente adicionar
+          um laço `repetir`.
+      courseD_bee_debugging8_authored_hint:
+        courseD_bee_debugging8_a: Você vê um padrão que você pode simplificar com
+          um laço?
+        courseD_bee_debugging8_b: Tente usar um laço aninhado para tornar esse código
+          mais curto.
+      courseD_bee_debugging9_authored_hint:
+        courseD_bee_debugging9_a: Existem várias maneiras de resolver este problema...
+          mas todas envolvem turnos!
+        courseD_bee_debugging9_b: Descubra como você resolveria o quebra-cabeça e,
+          em seguida, mova-o passo a passo para tentar fazer com que o código corresponda
+          ao que está na sua cabeça.
+        courseD_bee_debugging9_c: "Imagine um desses degraus para as flores. \n\n![](https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)\n\nVocê
+          pode construir um destes com o que está no espaço de trabalho e na caixa
+          de ferramentas?\n\n"
+      courseD_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_a: Por que a primeira metade deste programa
+          funciona? Pense por que a abelha precisa se mover para trás. Quanto nectar
+          a abelha coleta cada vez que se move sobre uma flor?
+        courseD_bee_debugging_challenge1_b: No caminho de volta, faça a abelha seguir
+          o mesmo padrão. Quanto mel a abelha precisa fazer cada vez que passa por
+          um favo de mel?
+      courseD_bee_debugging_challenge1_2018_authored_hint:
+        courseD_bee_debugging_challenge1_a: Por que a primeira metade deste programa
+          funciona? Pense por que a abelha precisa se mover para trás. Quanto nectar
+          a abelha coleta cada vez que se move sobre uma flor?
+        courseD_bee_debugging_challenge1_b: No caminho de volta, faça a abelha seguir
+          o mesmo padrão. Quanto mel a abelha precisa fazer cada vez que passa por
+          um favo de mel?
+      courseD_bee_debugging_challenge1a_authored_hint:
+        courseD_bee_debugging_challenge1_a: Por que a primeira metade deste programa
+          funciona? Pense por que a abelha precisa se mover para trás. Quanto nectar
+          a abelha coleta cada vez que se move sobre uma flor?
+        courseD_bee_debugging_challenge1_b: Para resolver esse quebra-cabeça, faça
+          a abelha seguir o mesmo padrão para fazer o mel que ela faz ao coletar o
+          néctar.
+      courseD_bee_debugging_challenge2_authored_hint:
+        courseD_bee_debugging_challenge1_a: Por que a primeira metade deste programa
+          funciona? Pense por que a abelha precisa se mover para trás. Quanto nectar
+          a abelha coleta cada vez que se move sobre uma flor?
+        courseD_bee_debugging_challenge1_b: No caminho de volta, faça a abelha seguir
+          o mesmo padrão. Quanto mel a abelha precisa fazer cada vez que passa por
+          um favo de mel?
+      courseD_bee_nestedLoops1_authored_hint:
+        courseD_bee_nestedLoops1_a: Não está funcionando? Tente usar o botão `Passo`
+          para ver o que acontece linha por linha.
+        courseD_bee_nestedLoops1_b: Tente escrever o código de um lado do quadrado
+          primeiro. Você pode repetir isso para obter todo o néctar?
+        courseD_bee_nestedLoops1_c: Lembre-se de usar o bloco `pegar nectar` quando
+          estiver em um quadrado com uma flor.
+      courseD_bee_nestedLoops1_2018_authored_hint:
+        courseD_bee_nestedLoops1_a: Não está funcionando? Tente usar o botão `Passo`
+          para ver o que acontece linha por linha.
+        courseD_bee_nestedLoops1_b: Tente escrever o código de um lado do quadrado
+          primeiro. Você pode repetir isso para obter todo o néctar?
+        courseD_bee_nestedLoops1_c: Lembre-se de usar o bloco `pegar nectar` quando
+          estiver em um quadrado com uma flor.
+      courseD_bee_nestedLoops1_2019_authored_hint:
+        courseD_bee_nestedLoops1_a: Não está funcionando? Tente usar o botão `Passo`
+          para ver o que acontece linha por linha.
+        courseD_bee_nestedLoops1_b: Tente escrever o código de um lado do quadrado
+          primeiro. Você pode repetir isso para obter todo o néctar?
+        courseD_bee_nestedLoops1_c: Lembre-se de usar o bloco `pegar nectar` quando
+          estiver em um quadrado com uma flor.
+      courseD_bee_nestedLoops1a_authored_hint:
+        courseD_bee_nestedLoops1_a: Não está funcionando? Tente usar o botão `Passo`
+          para ver o que acontece linha por linha.
+        courseD_bee_nestedLoops1_c: Lembre-se de usar o bloco `pegar nectar` quando
+          estiver em um quadrado com uma flor.
+      courseD_bee_nestedLoops1a_2018_authored_hint:
+        courseD_bee_nestedLoops1_a: Não está funcionando? Tente usar o botão `Passo`
+          para ver o que acontece linha por linha.
+        courseD_bee_nestedLoops1_c: Lembre-se de usar o bloco `pegar nectar` quando
+          estiver em um quadrado com uma flor.
+      courseD_bee_nestedLoops1a_2019_authored_hint:
+        courseD_bee_nestedLoops1_a: Não está funcionando? Tente usar o botão `Passo`
+          para ver o que acontece linha por linha.
+        courseD_bee_nestedLoops1_c: Lembre-se de usar o bloco `pegar nectar` quando
+          estiver em um quadrado com uma flor.
+      courseD_bee_nestedLoops2_authored_hint:
+        courseD_bee_nestedLoops2_a: Para resolver esse quebra-cabeça, você precisará
+          aninhar um laço `repetir` dentro de outro.
+        courseD_bee_nestedLoops2_b: Não consegue descobrir onde colocar os laços?
+          Tente escrever o código no papel, passo a passo, e procure um padrão.
+        courseD_bee_nestedLoops2_c: Lembre-se que você pode colocar mais de um bloco
+          dentro de um laço.
+      courseD_bee_nestedLoops2_2018_authored_hint:
+        courseD_bee_nestedLoops2_a: Para resolver esse quebra-cabeça, você precisará
+          aninhar um laço `repetir` dentro de outro.
+        courseD_bee_nestedLoops2_b: Não consegue descobrir onde colocar os laços?
+          Tente escrever o código no papel, passo a passo, e procure um padrão.
+        courseD_bee_nestedLoops2_c: Lembre-se que você pode colocar mais de um bloco
+          dentro de um laço.
+      courseD_bee_nestedLoops2_2019_authored_hint:
+        courseD_bee_nestedLoops2_a: Para resolver esse quebra-cabeça, você precisará
+          aninhar um laço `repetir` dentro de outro.
+        courseD_bee_nestedLoops2_b: Não consegue descobrir onde colocar os laços?
+          Tente escrever o código no papel, passo a passo, e procure um padrão.
+        courseD_bee_nestedLoops2_c: Lembre-se que você pode colocar mais de um bloco
+          dentro de um laço.
+      courseD_collector_debugging1_authored_hint:
+        courseD_collector_debugging1_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        courseD_collector_debugging1_b: Você vê algum padrão que poderia ser mais
+          simples usando um laço `repetir`?
+      courseD_collector_debugging10_predict1_authored_hint:
+        courseD_collector_debugging9_a: Existem várias maneiras de resolver este problema...
+          mas todas envolvem turnos!
+        courseD_collector_debugging9_b: Descubra como você resolveria o quebra-cabeça
+          e, em seguida, mova-o passo a passo para tentar fazer com que o código corresponda
+          ao que está na sua cabeça.
+      courseD_collector_debugging10_predict1_2018_authored_hint:
+        courseD_collector_debugging9_a: Existem várias maneiras de resolver este problema...
+          mas todas envolvem turnos!
+        courseD_collector_debugging9_b: Descubra como você resolveria o quebra-cabeça
+          e, em seguida, mova-o passo a passo para tentar fazer com que o código corresponda
+          ao que está na sua cabeça.
+      courseD_collector_debugging1_2018_authored_hint:
+        courseD_collector_debugging1_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        courseD_collector_debugging1_b: Você vê algum padrão que poderia ser mais
+          simples usando um laço `repetir`?
+      courseD_collector_debugging1a_authored_hint:
+        courseD_collector_debugging1_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+      courseD_collector_debugging1a_2018_authored_hint:
+        courseD_collector_debugging1_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+      courseD_collector_debugging1a_2019_authored_hint:
+        courseD_collector_debugging1_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+      courseD_collector_debugging2_authored_hint:
+        courseD_collector_debugging2_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        courseD_collector_debugging2_b: Você vê algum padrão que poderia ser mais
+          simples usando um laço `repetir`?
+      courseD_collector_debugging2_2018_authored_hint:
+        courseD_collector_debugging2_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        courseD_collector_debugging2_b: Você vê algum padrão que poderia ser mais
+          simples usando um laço `repetir`?
+      courseD_collector_debugging2a_authored_hint:
+        courseD_collector_debugging2a_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+      courseD_collector_debugging2a_2018_authored_hint:
+        courseD_collector_debugging2a_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+      courseD_collector_debugging2a_2019_authored_hint:
+        courseD_collector_debugging2a_a: "Use o botão \"Passo\" para ver se está tudo
+          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_b: Tente simplificar o código usando laços de
           repetição aninhados.
       courseD_collector_debugging3_2018_authored_hint:
         courseD_collector_debugging3_b: Tente simplificar o código usando laços de
           repetição aninhados.
+      courseD_collector_debugging4_authored_hint:
+        courseD_collector_debugging4_a: "Tente usar o processo de depuração algumas
+          vezes seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
+          é resolvido, o que está errado?"
+        courseD_collector_debugging4_b: "Se você está tendo dificuldade em descobrir
+          como fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
+          os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
+      courseD_collector_debugging4_2018_authored_hint:
+        courseD_collector_debugging4_a: "Tente usar o processo de depuração algumas
+          vezes seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
+          é resolvido, o que está errado?"
+        courseD_collector_debugging4_b: "Se você está tendo dificuldade em descobrir
+          como fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
+          os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
+      courseD_collector_debugging4a_authored_hint:
+        courseD_collector_debugging4_a: "Tente usar o processo de depuração algumas
+          vezes seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
+          é resolvido, o que está errado?"
+        courseD_collector_debugging4_b: "Se você está tendo dificuldade em descobrir
+          como fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
+          os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
+      courseD_collector_debugging4a_2018_authored_hint:
+        courseD_collector_debugging4_a: "Tente usar o processo de depuração algumas
+          vezes seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
+          é resolvido, o que está errado?"
+        courseD_collector_debugging4_b: "Se você está tendo dificuldade em descobrir
+          como fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
+          os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
+      courseD_collector_debugging4a_2019_authored_hint:
+        courseD_collector_debugging4_a: "Tente usar o processo de depuração algumas
+          vezes seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
+          é resolvido, o que está errado?"
+        courseD_collector_debugging4_b: "Se você está tendo dificuldade em descobrir
+          como fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
+          os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
+      courseD_collector_debugging5_authored_hint:
+        courseD_collector_debugging5_a: "Comece olhando apenas o primeiro laço. \n\nO
+          que isso faz? \n\nO que deveria fazer? \n\nO que isso lhe diz?"
+        courseD_collector_debugging5_b: Depois de ter o primeiro laço do jeito que
+          você quer, o que resta no seu código?
+      courseD_collector_debugging5_2018_authored_hint:
+        courseD_collector_debugging5_a: "Comece olhando apenas o primeiro laço. \n\nO
+          que isso faz? \n\nO que deveria fazer? \n\nO que isso lhe diz?"
+        courseD_collector_debugging5_b: Depois de ter o primeiro laço do jeito que
+          você quer, o que resta no seu código?
+      courseD_collector_debugging6_authored_hint:
+        courseD_collector_debugging6_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+      courseD_collector_debugging6_2018_authored_hint:
+        courseD_collector_debugging6_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+      courseD_collector_debugging6a_authored_hint:
+        courseD_collector_debugging6_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+      courseD_collector_debugging6a_2018_authored_hint:
+        courseD_collector_debugging6_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+      courseD_collector_debugging6a_2019_authored_hint:
+        courseD_collector_debugging6_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+      courseD_collector_debugging7_authored_hint:
+        courseD_collector_debugging7_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+        courseD_collector_debugging7_b: Se algo precisar acontecer várias vezes, tente
+          adicionar um laço `repetir`.
+      courseD_collector_debugging8_authored_hint:
+        courseD_collector_debugging8_a: Você vê um padrão que você pode simplificar
+          com um laço?
+        courseD_collector_debugging8_b: Tente usar um laço aninhado para tornar esse
+          código mais curto.
+      courseD_collector_debugging8_2018_authored_hint:
+        courseD_collector_debugging8_a: Você vê um padrão que você pode simplificar
+          com um laço?
+        courseD_collector_debugging8_b: Tente usar um laço aninhado para tornar esse
+          código mais curto.
+      courseD_collector_debugging9_authored_hint:
+        courseD_collector_debugging9_a: Existem várias maneiras de resolver este problema...
+          mas todas envolvem turnos!
+        courseD_collector_debugging9_b: Descubra como você resolveria o quebra-cabeça
+          e, em seguida, mova-o passo a passo para tentar fazer com que o código corresponda
+          ao que está na sua cabeça.
+      courseD_collector_debugging9_2018_authored_hint:
+        courseD_collector_debugging9_a: Existem várias maneiras de resolver este problema...
+          mas todas envolvem turnos!
+        courseD_collector_debugging9_b: Descubra como você resolveria o quebra-cabeça
+          e, em seguida, mova-o passo a passo para tentar fazer com que o código corresponda
+          ao que está na sua cabeça.
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_d: |-
           Aqui está a solução completa para esse quebra-cabeças.
@@ -12574,9 +12901,39 @@ pt-BR:
         courseD_collector_ramp8_b: Se você quiser simplificar mais o seu código, você
           pode colocar um laço `repetir` dentro de outro! Isso é chamado de ** laço
           aninhado **.
+      courseD_debugging_1_authored_hint:
+        courseD_debugging_1_a: "Use o botão \"Passo\" para ver se está tudo certo
+          no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        courseD_debugging_1_b: Você vê algum padrão que poderia ser mais simples usando
+          um laço `repetir`?
+      courseD_debugging_2_authored_hint:
+        courseD_debugging_2_a: "Use o botão \"Passo\" para ver se está tudo certo
+          no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
       courseD_debugging_3_authored_hint:
+        courseD_debugging_3_a: Existe algum lugar onde a abelha faz algo que não faz
+          sentido? O que acontece quando você muda esses blocos?
         courseD_debugging_3_b: Tente simplificar o código usando laços de repetição
           aninhados.
+      courseD_debugging_4_authored_hint:
+        courseD_debugging_4_a: "Tente usar o processo de depuração algumas vezes seguidas.
+          \n\nO que causa o primeiro problema? \n\nQuando esse problema é resolvido,
+          o que está errado?"
+        courseD_debugging_4_b: "Se você está tendo dificuldade em descobrir como fazer
+          o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer os comandos
+          em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
+      courseD_debugging_5_authored_hint:
+        courseD_debugging_5_a: "Comece olhando apenas o primeiro laço. \n\nO que isso
+          faz? \n\nO que deveria fazer? \n\nO que isso lhe diz?"
+        courseD_debugging_5_b: Depois de ter o primeiro laço do jeito que você quer,
+          o que resta no seu código?
+        courseD_debugging_5_c: "Tente envolver o laço que sobrou no restante do código
+          concluído. Agora funciona? \n\nSe não, o que ainda está errado?"
+      courseD_debugging_6_authored_hint:
+        courseD_debugging_6_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+        courseD_debugging_6_b: Parece que todos os passos certos estão aqui, você
+          só precisa de mais deles. Como você pode repetir as ações `pegar nectar`
+          e` fazer mel` várias vezes?
       courseD_farmer_while3_authored_hint:
         courseD_farmer_while3_a: Um loop pode ajudar você a simplificar seu código.
       courseD_farmer_while3_2018_authored_hint:
@@ -14463,10 +14820,16 @@ pt-BR:
         courseF_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
+        courseF_bee_conditionals8_b: "Esse quebra-cabeça é complicado, porque você
+          não pode verificar quadrados em branco, néctar, *e* mel com apenas um único
+          condicional. \n\nApenas verifique se há néctar e mel no final do caminho."
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
+        courseF_bee_conditionals8_b: "Esse quebra-cabeça é complicado, porque você
+          não pode verificar quadrados em branco, néctar, *e* mel com apenas um único
+          condicional. \n\nApenas verifique se há néctar e mel no final do caminho."
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
@@ -16001,9 +16364,39 @@ pt-BR:
       grade3_Debugging_1_authored_hint:
         2-3_Bee_Debugging_1_a: Após encontrar e corrigir o bloco incorreto, você consegue
           ver quais padrões poderiam ser simplificados usando um ciclo 'repeat'?
+      grade3_Debugging_10_authored_hint:
+        grade3_Debugging_10_a: "Comece olhando apenas o primeiro laço. \n\nO que isso
+          faz? \n\nO que deveria fazer? \n\nO que isso lhe diz?"
+        grade3_Debugging_10_b: Depois de ter o primeiro laço do jeito que você quer,
+          o que resta no seu código?
+        grade3_Debugging_10_c: "Tente envolver o laço que sobrou no restante do código
+          concluído. Agora funciona? \n\nSe não, o que ainda está errado?"
+      grade3_Debugging_11_authored_hint:
+        grade3_Debugging_11_a: "Tente executar o código usando o botão \"Passo\".
+          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
+        grade3_Debugging_11_b: Parece que todos os passos certos estão aqui, você
+          só precisa de mais deles. Como você pode repetir as ações `pegar nectar`
+          e` fazer mel` várias vezes?
+      grade3_Debugging_2_authored_hint:
+        grade3_Debugging_2_a: "Use o botão \"Passo\" para ver se está tudo certo no
+          primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
+        grade3_Debugging_2_b: Você vê algum padrão que poderia ser mais simples usando
+          um laço `repetir`?
+      grade3_Debugging_3_authored_hint:
+        grade3_Debugging_3_a: "Use o botão \"Passo\" para ver se está tudo certo no
+          primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
       grade3_Debugging_4_authored_hint:
+        grade3_Debugging_4_a: Existe algum lugar onde a abelha faz algo que não faz
+          sentido? O que acontece quando você muda esses blocos?
         grade3_Debugging_4_b: Tente simplificar o código usando laços de repetição
           aninhados.
+      grade3_Debugging_8_authored_hint:
+        grade3_Debugging_8_a: "Tente usar o processo de depuração algumas vezes seguidas.
+          \n\nO que causa o primeiro problema? \n\nQuando esse problema é resolvido,
+          o que está errado?"
+        grade3_Debugging_8_b: "Se você está tendo dificuldade em descobrir como fazer
+          o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer os comandos
+          em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
       grade3_Debugging_TeacherIDo_authored_hint:
         2-3_Bee_Debugging_4_a: Há algum lugar onde a abelha faz algo que não está
           faz sentido? O que acontece se você mudar esse bloco que não está fazendo
@@ -16103,6 +16496,8 @@ pt-BR:
         grade4_artist_functionsChallenge0_b: Depois da sua primeira linha de quadrados,
           você precisa mover o artista para baixo e para trás antes de iniciar a segunda
           linha de quadrados.
+        grade4_artist_functionsChallenge0_c: Você deve mover o artista de volta um
+          número diferente de pixels para as linhas pares do que para as linhas ímpares.
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
         Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha

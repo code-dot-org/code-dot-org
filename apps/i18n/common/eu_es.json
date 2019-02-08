@@ -1279,6 +1279,7 @@
   "subtitle": "programazio ingurune bisuala",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Atala aldatu:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Zure programak tipografia errore bat dauka. Mesedez, ezabatu {lineNumber}. lerroa eta saiatu berriro ere.",

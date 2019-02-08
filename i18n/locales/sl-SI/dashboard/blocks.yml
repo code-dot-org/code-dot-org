@@ -368,7 +368,7 @@ sl:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': velikost
