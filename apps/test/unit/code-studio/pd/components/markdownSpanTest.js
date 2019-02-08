@@ -3,24 +3,20 @@ import {shallow} from 'enzyme';
 import {expect} from 'chai';
 import MarkdownSpan from '@cdo/apps/code-studio/pd/components/markdownSpan';
 
-describe("MarkdownSpan", () => {
-  it("Renders the supplied markdown in a span element", () => {
+describe('MarkdownSpan', () => {
+  it('Renders the supplied markdown in a span element', () => {
     const markdownSpan = shallow(
-      <MarkdownSpan>
-        normal text *bold text*
-      </MarkdownSpan>
+      <MarkdownSpan>normal text *bold text*</MarkdownSpan>
     );
 
     expect(markdownSpan).to.have.html(
-      "<span>normal text <em>bold text</em></span>"
+      '<span>normal text <em>bold text</em></span>'
     );
   });
 
-  it("Renders links with target=_blank", () => {
+  it('Renders links with target=_blank', () => {
     const markdownSpan = shallow(
-      <MarkdownSpan>
-        This is a [link](https://code.org).
-      </MarkdownSpan>
+      <MarkdownSpan>This is a [link](https://code.org).</MarkdownSpan>
     );
 
     expect(markdownSpan).to.have.html(
@@ -28,15 +24,13 @@ describe("MarkdownSpan", () => {
     );
   });
 
-  it("Applies the supplied style to the rendered span", () => {
+  it('Applies the supplied style to the rendered span', () => {
     const markdownSpan = shallow(
-      <MarkdownSpan style={{fontFamily: "Gotham 7r"}}>
-        text
-      </MarkdownSpan>
+      <MarkdownSpan style={{fontFamily: 'Gotham 7r'}}>text</MarkdownSpan>
     );
 
     expect(markdownSpan).to.containMatchingElement(
-      <span style={{fontFamily: "Gotham 7r"}}/>
+      <span style={{fontFamily: 'Gotham 7r'}} />
     );
   });
 });

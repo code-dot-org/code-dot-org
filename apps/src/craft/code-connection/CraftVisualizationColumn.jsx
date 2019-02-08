@@ -15,12 +15,11 @@ export default class CraftVisualizationColumn extends React.Component {
       <span>
         <ProtectedVisualizationDiv>
           <div id="minecraft-frame">
-            <div id="code-connection-log">
-            </div>
+            <div id="code-connection-log" />
           </div>
         </ProtectedVisualizationDiv>
-        <GameButtons/>
-        <BelowVisualization/>
+        <GameButtons />
+        <BelowVisualization />
       </span>
     );
   }

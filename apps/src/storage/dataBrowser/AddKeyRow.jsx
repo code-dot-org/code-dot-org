@@ -4,7 +4,7 @@ import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import { castValue } from './dataUtils';
+import {castValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const INITIAL_STATE = {
@@ -15,16 +15,16 @@ const INITIAL_STATE = {
 
 class AddKeyRow extends React.Component {
   static propTypes = {
-    onShowWarning: PropTypes.func.isRequired,
+    onShowWarning: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
 
-  handleKeyChange = (event) => {
+  handleKeyChange = event => {
     this.setState({key: event.target.value});
   };
 
-  handleValueChange = (event) => {
+  handleValueChange = event => {
     this.setState({value: event.target.value});
   };
 
@@ -36,17 +36,21 @@ class AddKeyRow extends React.Component {
         castValue(this.state.value),
         () => this.setState(INITIAL_STATE),
         msg => {
-          if (msg.includes('The key is invalid') || msg.includes('The key was renamed')) {
+          if (
+            msg.includes('The key is invalid') ||
+            msg.includes('The key was renamed')
+          ) {
             this.props.onShowWarning(msg);
           } else {
             console.warn(msg);
           }
           this.setState(INITIAL_STATE);
-        });
+        }
+      );
     }
   };
 
-  handleKeyUp = (event) => {
+  handleKeyUp = event => {
     if (event.key === 'Enter') {
       this.handleAdd();
     } else if (event.key === 'Escape') {

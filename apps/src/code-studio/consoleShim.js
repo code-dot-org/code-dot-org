@@ -12,20 +12,40 @@
  * methods with no-op functions.
  * @param {!Window} window
  */
-module.exports = function (window) {
+module.exports = function(window) {
   // Add console if it doesn't exist
   var console = (window.console = window.console || {});
 
   // Add methods (based on the Firebug Console API) if they don't exist
-  var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-    'timeStamp', 'trace', 'warn'];
+  var methods = [
+    'assert',
+    'clear',
+    'count',
+    'debug',
+    'dir',
+    'dirxml',
+    'error',
+    'exception',
+    'group',
+    'groupCollapsed',
+    'groupEnd',
+    'info',
+    'log',
+    'markTimeline',
+    'profile',
+    'profileEnd',
+    'table',
+    'time',
+    'timeEnd',
+    'timeStamp',
+    'trace',
+    'warn'
+  ];
   var method;
   for (var i = 0; i < methods.length; i++) {
     method = methods[i];
     if (!console[method]) {
-      console[method] = function () {};
+      console[method] = function() {};
     }
   }
 };

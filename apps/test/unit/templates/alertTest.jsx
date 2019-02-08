@@ -30,16 +30,18 @@ describe('Alert', () => {
         <span>This is an error.</span>
       </Alert>
     );
-    expect(error.find('div > div').props().style.backgroundColor)
-      .to.equal('#f2dede');
+    expect(error.find('div > div').props().style.backgroundColor).to.equal(
+      '#f2dede'
+    );
 
     const warning = shallow(
       <Alert type="warning" onClose={() => {}}>
         <span>This is a warning.</span>
       </Alert>
     );
-    expect(warning.find('div > div').props().style.backgroundColor)
-      .to.equal('#fcf8e3');
+    expect(warning.find('div > div').props().style.backgroundColor).to.equal(
+      '#fcf8e3'
+    );
   });
 
   it('calls onClose callback when close button is clicked', () => {

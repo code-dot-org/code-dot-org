@@ -8,15 +8,27 @@ import manageStudents, {
   setLoginType,
   setStudents,
   convertStudentServerData,
-  toggleSharingColumn,
+  toggleSharingColumn
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import teacherSections, {setSections, selectSection, setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setSections,
+  selectSection,
+  setRosterProvider
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
-import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
-import sectionAssessments, {asyncLoadAssessments} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import stats, {
+  asyncSetCompletedLevelCount
+} from '@cdo/apps/templates/teacherDashboard/statsRedux';
+import textResponses, {
+  asyncLoadTextResponses
+} from '@cdo/apps/templates/textResponses/textResponsesRedux';
+import sectionAssessments, {
+  asyncLoadAssessments
+} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection, {loadValidScripts} from '@cdo/apps/redux/scriptSelectionRedux';
+import scriptSelection, {
+  loadValidScripts
+} from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -25,8 +37,17 @@ const section = scriptData.section;
 const allSections = scriptData.allSections;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
-$(document).ready(function () {
-  registerReducers({teacherSections, sectionData, manageStudents, sectionProgress, scriptSelection, stats, textResponses, sectionAssessments});
+$(document).ready(function() {
+  registerReducers({
+    teacherSections,
+    sectionData,
+    manageStudents,
+    sectionProgress,
+    scriptSelection,
+    stats,
+    textResponses,
+    sectionAssessments
+  });
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setSection(section));
@@ -39,8 +60,10 @@ $(document).ready(function () {
 
   // Show share column by default for CSD and CSP courses,
   // or any script in either course.
-  const courseFamiliesToShowShareColumn = ["csd", "csp"];
-  if (courseFamiliesToShowShareColumn.includes(section.script.course_family_name)) {
+  const courseFamiliesToShowShareColumn = ['csd', 'csp'];
+  if (
+    courseFamiliesToShowShareColumn.includes(section.script.course_family_name)
+  ) {
     store.dispatch(toggleSharingColumn());
   }
 
@@ -48,8 +71,12 @@ $(document).ready(function () {
     method: 'GET',
     url: `/dashboardapi/sections/${section.id}/students`,
     dataType: 'json'
-   }).done(studentData => {
-    const convertedStudentData = convertStudentServerData(studentData, section.login_type, section.id);
+  }).done(studentData => {
+    const convertedStudentData = convertStudentServerData(
+      studentData,
+      section.login_type,
+      section.id
+    );
     store.dispatch(setStudents(convertedStudentData));
   });
 
@@ -73,7 +100,14 @@ $(document).ready(function () {
         <Router basename={baseUrl}>
           <Route
             path="/"
-            component={props => <TeacherDashboard {...props} studioUrlPrefix={scriptData.studioUrlPrefix} pegasusUrlPrefix={scriptData.pegasusUrlPrefix}/>}
+            component={props => (
+              <TeacherDashboard
+                {...props}
+                studioUrlPrefix={scriptData.studioUrlPrefix}
+                pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
+                sectionName={section.name}
+              />
+            )}
           />
         </Router>
       </Provider>,

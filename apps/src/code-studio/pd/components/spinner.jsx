@@ -12,6 +12,11 @@ export default class Spinner extends React.Component {
   };
 
   render() {
-    return <FontAwesome icon="spinner" className={`fa-pulse ${this.props.size !== 'small' ? 'fa-3x' : ''}`}/>;
+    return (
+      <FontAwesome
+        icon="spinner"
+        className={`fa-pulse ${this.props.size !== 'small' ? 'fa-3x' : ''}`}
+      />
+    );
   }
 }

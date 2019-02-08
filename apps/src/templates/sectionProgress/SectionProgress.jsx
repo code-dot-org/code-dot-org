@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -10,9 +10,9 @@ import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
 import SmallChevronLink from '../SmallChevronLink';
 import LessonSelector from './LessonSelector';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {h3Style} from "../../lib/ui/Headings";
+import {h3Style} from '../../lib/ui/Headings';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   ViewType,
@@ -20,15 +20,18 @@ import {
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType,
+  scriptDataPropType
 } from './sectionProgressRedux';
-import { tooltipIdForLessonNumber } from './multiGridConstants';
-import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
-import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
+import {tooltipIdForLessonNumber} from './multiGridConstants';
+import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
+import {
+  setScriptId,
+  validScriptPropType
+} from '@cdo/apps/redux/scriptSelectionRedux';
 
 const styles = {
   heading: {
-    marginBottom: 0,
+    marginBottom: 0
   },
   selectorContainer: {
     width: '100%',
@@ -36,25 +39,19 @@ const styles = {
   },
   scriptSelectorContainer: {
     float: 'left',
-    marginRight: 10,
+    marginRight: 10
   },
   viewToggleContainer: {
     float: 'left',
-    marginTop: 34,
+    marginTop: 34
   },
   lessonSelectorContainer: {
-    float: 'right',
-  },
-  viewCourseLink: {
-    float: 'right',
-    marginTop: 10,
+    float: 'right'
   },
   viewCourseLinkBox: {
     width: '100%',
-    height: 10,
-    lineHeight: '10px',
-    clear: 'both'
-  },
+    textAlign: 'right'
+  }
 };
 
 /**
@@ -74,7 +71,7 @@ class SectionProgress extends Component {
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
-    isLoadingProgress: PropTypes.bool.isRequired,
+    isLoadingProgress: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -91,7 +88,7 @@ class SectionProgress extends Component {
   };
 
   renderTooltips() {
-    return this.props.scriptData.stages.map((stage) => (
+    return this.props.scriptData.stages.map(stage => (
       <ReactTooltip
         id={tooltipIdForLessonNumber(stage.position)}
         key={tooltipIdForLessonNumber(stage.position)}
@@ -110,7 +107,7 @@ class SectionProgress extends Component {
   afterScroll = _.debounce(ReactTooltip.rebuild, 10);
 
   getLinkToOverview() {
-    const { scriptData, section } = this.props;
+    const {scriptData, section} = this.props;
     return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
@@ -121,7 +118,7 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress,
+      isLoadingProgress
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -130,17 +127,15 @@ class SectionProgress extends Component {
 
     return (
       <div>
-        <div style={styles.viewCourseLinkBox}>
-          <div style={styles.viewCourseLink}>
-            {linkToOverview &&
-              <SmallChevronLink
-                link={linkToOverview}
-                linkText={i18n.viewCourse()}
-                isRtl={false}
-              />
-            }
+        {linkToOverview && (
+          <div style={styles.viewCourseLinkBox}>
+            <SmallChevronLink
+              link={linkToOverview}
+              linkText={i18n.viewCourse()}
+              isRtl={false}
+            />
           </div>
-        </div>
+        )}
         <div style={styles.selectorContainer}>
           <div style={styles.scriptSelectorContainer}>
             <div style={{...h3Style, ...styles.heading}}>
@@ -156,17 +151,20 @@ class SectionProgress extends Component {
             <SectionProgressToggle />
           </div>
           <div style={styles.lessonSelectorContainer}>
-            {currentView === ViewType.DETAIL && lessons.length !== 0 &&
-              <LessonSelector
-                lessons={lessons}
-                onChange={this.onChangeLevel}
-              />
-            }
+            {currentView === ViewType.DETAIL && lessons.length !== 0 && (
+              <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
+            )}
           </div>
         </div>
         <div style={{clear: 'both'}}>
-          {!levelDataInitialized && <FontAwesome id="uitest-spinner" icon="spinner" className="fa-pulse fa-3x"/>}
-          {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
+          {!levelDataInitialized && (
+            <FontAwesome
+              id="uitest-spinner"
+              icon="spinner"
+              className="fa-pulse fa-3x"
+            />
+          )}
+          {levelDataInitialized && currentView === ViewType.SUMMARY && (
             <div id="uitest-summary-view">
               <VirtualizedSummaryView
                 section={section}
@@ -177,8 +175,8 @@ class SectionProgress extends Component {
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
               />
             </div>
-          }
-          {(levelDataInitialized && currentView === ViewType.DETAIL) &&
+          )}
+          {levelDataInitialized && currentView === ViewType.DETAIL && (
             <div id="uitest-detail-view">
               <VirtualizedDetailView
                 section={section}
@@ -189,7 +187,7 @@ class SectionProgress extends Component {
                 excludeCsfColumn={scriptData.excludeCsfColumnInLegend}
               />
             </div>
-          }
+          )}
         </div>
         {levelDataInitialized && this.renderTooltips()}
       </div>
@@ -199,22 +197,25 @@ class SectionProgress extends Component {
 
 export const UnconnectedSectionProgress = SectionProgress;
 
-export default connect(state => ({
-  scriptId: state.scriptSelection.scriptId,
-  section: state.sectionData.section,
-  validScripts: state.scriptSelection.validScripts,
-  currentView: state.sectionProgress.currentView,
-  scriptData: getCurrentScriptData(state),
-  studentLevelProgress: getCurrentProgress(state),
-  isLoadingProgress: state.sectionProgress.isLoadingProgress,
-}), dispatch => ({
-  loadScript(scriptId) {
-    dispatch(loadScript(scriptId));
-  },
-  setScriptId(scriptId) {
-    dispatch(setScriptId(scriptId));
-  },
-  setLessonOfInterest(lessonOfInterest) {
-    dispatch(setLessonOfInterest(lessonOfInterest));
-  }
-}))(SectionProgress);
+export default connect(
+  state => ({
+    scriptId: state.scriptSelection.scriptId,
+    section: state.sectionData.section,
+    validScripts: state.scriptSelection.validScripts,
+    currentView: state.sectionProgress.currentView,
+    scriptData: getCurrentScriptData(state),
+    studentLevelProgress: getCurrentProgress(state),
+    isLoadingProgress: state.sectionProgress.isLoadingProgress
+  }),
+  dispatch => ({
+    loadScript(scriptId) {
+      dispatch(loadScript(scriptId));
+    },
+    setScriptId(scriptId) {
+      dispatch(setScriptId(scriptId));
+    },
+    setLessonOfInterest(lessonOfInterest) {
+      dispatch(setLessonOfInterest(lessonOfInterest));
+    }
+  })
+)(SectionProgress);

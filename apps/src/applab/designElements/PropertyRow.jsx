@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "../../util/color";
+import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 import * as elementUtils from './elementUtils';
 import * as utils from '../../utils';
@@ -10,12 +10,14 @@ const LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 export default class PropertyRow extends React.Component {
   static propTypes = {
     desc: PropTypes.string.isRequired,
-    initialValue: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]).isRequired,
+    initialValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+      .isRequired,
     isNumber: PropTypes.bool,
-    lockState: PropTypes.oneOf([LockState.LOCKED, LockState.UNLOCKED, undefined]),
+    lockState: PropTypes.oneOf([
+      LockState.LOCKED,
+      LockState.UNLOCKED,
+      undefined
+    ]),
     isMultiLine: PropTypes.bool,
     handleChange: PropTypes.func,
     handleLockChange: PropTypes.func,
@@ -52,7 +54,7 @@ export default class PropertyRow extends React.Component {
     return elementUtils.isIdAvailable(value, options);
   }
 
-  handleChangeInternal = (event) => {
+  handleChangeInternal = event => {
     const value = event.target.value;
     const isValidValue = !this.props.isIdRow || this.isIdAvailable(value);
     this.setValue(value, isValidValue);
@@ -91,12 +93,17 @@ export default class PropertyRow extends React.Component {
   };
 
   render() {
-    const idRowStyle = Object.assign({}, rowStyle.container, rowStyle.maxWidth, {
-      backgroundColor: color.light_purple,
-      paddingBottom: 10
-    });
+    const idRowStyle = Object.assign(
+      {},
+      rowStyle.container,
+      rowStyle.maxWidth,
+      {
+        backgroundColor: color.light_purple,
+        paddingBottom: 10
+      }
+    );
     const inputStyle = Object.assign({}, rowStyle.input, {
-      backgroundColor: this.state.isValidValue ? null : "#ffcccc"
+      backgroundColor: this.state.isValidValue ? null : '#ffcccc'
     });
 
     let inputElement;
@@ -126,8 +133,9 @@ export default class PropertyRow extends React.Component {
     let lockIcon;
     // state is either locked/unlocked or undefined (no icon)
     if (this.props.lockState) {
-      const lockClass = "fa fa-" + (this.props.lockState === LockState.LOCKED ?
-        'lock' : 'unlock');
+      const lockClass =
+        'fa fa-' +
+        (this.props.lockState === LockState.LOCKED ? 'lock' : 'unlock');
       lockIcon = (
         <i
           className={lockClass}

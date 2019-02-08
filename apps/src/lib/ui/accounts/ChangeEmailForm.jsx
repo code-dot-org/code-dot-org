@@ -2,25 +2,25 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import {Field} from '../SystemDialog/SystemDialog';
-import {pegasus} from "../../util/urlHelpers";
+import {pegasus} from '../../util/urlHelpers';
 
 export default class ChangeEmailForm extends React.Component {
   static propTypes = {
     values: PropTypes.shape({
       newEmail: PropTypes.string,
       currentPassword: PropTypes.string,
-      emailOptIn: PropTypes.string,
+      emailOptIn: PropTypes.string
     }).isRequired,
     validationErrors: PropTypes.shape({
       newEmail: PropTypes.string,
       currentPassword: PropTypes.string,
-      emailOptIn: PropTypes.string,
+      emailOptIn: PropTypes.string
     }).isRequired,
     userType: PropTypes.oneOf(['teacher', 'student']).isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    onSubmit: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -36,22 +36,25 @@ export default class ChangeEmailForm extends React.Component {
     }
   }
 
-  onNewEmailChange = (event) => this.props.onChange({
-    ...this.props.values,
-    newEmail: event.target.value,
-  });
+  onNewEmailChange = event =>
+    this.props.onChange({
+      ...this.props.values,
+      newEmail: event.target.value
+    });
 
-  onCurrentPasswordChange = (event) => this.props.onChange({
-    ...this.props.values,
-    currentPassword: event.target.value,
-  });
+  onCurrentPasswordChange = event =>
+    this.props.onChange({
+      ...this.props.values,
+      currentPassword: event.target.value
+    });
 
-  onEmailOptInChange = (event) => this.props.onChange({
-    ...this.props.values,
-    emailOptIn: event.target.value,
-  });
+  onEmailOptInChange = event =>
+    this.props.onChange({
+      ...this.props.values,
+      emailOptIn: event.target.value
+    });
 
-  onKeyDown = (event) => {
+  onKeyDown = event => {
     if (event.key === 'Enter' && !this.props.disabled) {
       this.props.onSubmit();
     }
@@ -60,8 +63,7 @@ export default class ChangeEmailForm extends React.Component {
   emailOptInLabelDetails() {
     return (
       <span>
-        {i18n.changeEmailModal_emailOptIn_description()}
-        {' '}
+        {i18n.changeEmailModal_emailOptIn_description()}{' '}
         <a href={pegasus('/privacy')} tabIndex="3" target="_blank">
           {i18n.changeEmailModal_emailOptIn_privacyPolicy()}
         </a>
@@ -70,7 +72,13 @@ export default class ChangeEmailForm extends React.Component {
   }
 
   render() {
-    const {values, validationErrors, disabled, userType, isPasswordRequired} = this.props;
+    const {
+      values,
+      validationErrors,
+      disabled,
+      userType,
+      isPasswordRequired
+    } = this.props;
     return (
       <div>
         <Field
@@ -88,10 +96,10 @@ export default class ChangeEmailForm extends React.Component {
             maxLength="255"
             size="255"
             style={styles.input}
-            ref={el => this.newEmailInput = el}
+            ref={el => (this.newEmailInput = el)}
           />
         </Field>
-        {isPasswordRequired &&
+        {isPasswordRequired && (
           <Field
             label={i18n.changeEmailModal_currentPassword_label()}
             error={validationErrors.currentPassword}
@@ -106,11 +114,11 @@ export default class ChangeEmailForm extends React.Component {
               maxLength="255"
               size="255"
               style={styles.input}
-              ref={el => this.currentPasswordInput = el}
+              ref={el => (this.currentPasswordInput = el)}
             />
           </Field>
-        }
-        {userType === 'teacher' &&
+        )}
+        {userType === 'teacher' && (
           <Field
             labelDetails={this.emailOptInLabelDetails()}
             error={validationErrors.emailOptIn}
@@ -123,20 +131,16 @@ export default class ChangeEmailForm extends React.Component {
               onChange={this.onEmailOptInChange}
               style={{
                 ...styles.input,
-                width: 100,
+                width: 100
               }}
-              ref={el => this.emailOptInSelect = el}
+              ref={el => (this.emailOptInSelect = el)}
             >
-              <option value=""/>
-              <option value="yes">
-                {i18n.yes()}
-              </option>
-              <option value="no">
-                {i18n.no()}
-              </option>
+              <option value="" />
+              <option value="yes">{i18n.yes()}</option>
+              <option value="no">{i18n.no()}</option>
             </select>
           </Field>
-        }
+        )}
       </div>
     );
   }
@@ -144,6 +148,6 @@ export default class ChangeEmailForm extends React.Component {
 
 const styles = {
   input: {
-    marginBottom: 4,
-  },
+    marginBottom: 4
+  }
 };

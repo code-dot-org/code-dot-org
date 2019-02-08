@@ -19,7 +19,9 @@ export default class NetSimView extends React.Component {
   render() {
     return (
       <StudioAppWrapper>
-        <ProtectedStatefulDiv contentFunction={this.props.generateCodeAppHtml} />
+        <ProtectedStatefulDiv
+          contentFunction={this.props.generateCodeAppHtml}
+        />
       </StudioAppWrapper>
     );
   }

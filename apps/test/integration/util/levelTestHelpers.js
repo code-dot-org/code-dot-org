@@ -12,18 +12,23 @@ import tickWrapper from './tickWrapper';
  *   is complete.
  * @returns {object} a level test definition.
  */
-export function testAsyncProgramGameLab(testName, program, doneCondition, validator) {
+export function testAsyncProgramGameLab(
+  testName,
+  program,
+  doneCondition,
+  validator
+) {
   return {
     description: testName,
     editCode: true,
     xml: program,
-    runBeforeClick: function (assert) {
+    runBeforeClick: function(assert) {
       // add a completion on timeout since this is a freeplay level
       tickWrapper
         .tickAppUntil(Gamelab, doneCondition.bind(null, assert))
         .then(() => Gamelab.onPuzzleComplete());
     },
-    customValidator: function (assert) {
+    customValidator: function(assert) {
       validator(assert);
       return true;
     },

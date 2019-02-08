@@ -8,7 +8,7 @@ const BOGUS_IMAGE_URL = '/nonexistent.png';
 const THUMBNAIL_SIZE = 50;
 
 describe('ImageWithStatus', () => {
-  it("shows status loading initially", () => {
+  it('shows status loading initially', () => {
     const root = mount(
       <ImageWithStatus
         src={CAT_IMAGE_URL}
@@ -20,7 +20,7 @@ describe('ImageWithStatus', () => {
     expect(loading).to.have.length(1);
   });
 
-  it("shows status loaded after loading a valid image", done => {
+  it('shows status loaded after loading a valid image', done => {
     const root = mount(
       <ImageWithStatus
         src={CAT_IMAGE_URL}
@@ -30,11 +30,11 @@ describe('ImageWithStatus', () => {
     );
     const image = new Image();
     image.src = CAT_IMAGE_URL;
-    image.onload = function () {
+    image.onload = function() {
       // There's no guarantee we'll hit this onload after the onload in
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
-      setTimeout(function () {
+      setTimeout(function() {
         const loaded = root.find('div[data-image-status="loaded"]');
         expect(loaded).to.have.length(1);
         done();
@@ -42,7 +42,7 @@ describe('ImageWithStatus', () => {
     };
   });
 
-  it("shows status loading again if the src url is changed", done => {
+  it('shows status loading again if the src url is changed', done => {
     const root = mount(
       <ImageWithStatus
         src={CAT_IMAGE_URL}
@@ -52,11 +52,11 @@ describe('ImageWithStatus', () => {
     );
     const image = new Image();
     image.src = CAT_IMAGE_URL;
-    image.onload = function () {
+    image.onload = function() {
       // There's no guarantee we'll hit this onload after the onload in
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
-      setTimeout(function () {
+      setTimeout(function() {
         const loaded = root.find('div[data-image-status="loaded"]');
         expect(loaded).to.have.length(1);
         changeImageUrl(done);
@@ -73,8 +73,7 @@ describe('ImageWithStatus', () => {
     }
   });
 
-
-  it("shows status error after loading an invalid image", done => {
+  it('shows status error after loading an invalid image', done => {
     const root = mount(
       <ImageWithStatus
         src={BOGUS_IMAGE_URL}
@@ -84,11 +83,11 @@ describe('ImageWithStatus', () => {
     );
     const image = new Image();
     image.src = BOGUS_IMAGE_URL;
-    image.onerror = function () {
+    image.onerror = function() {
       // There's no guarantee we'll hit this onerror after the onerror in
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
-      setTimeout(function () {
+      setTimeout(function() {
         const error = root.find('div[data-image-status="error"]');
         expect(error).to.have.length(1);
         done();

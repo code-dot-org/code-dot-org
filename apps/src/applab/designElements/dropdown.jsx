@@ -8,7 +8,7 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import color from "../../util/color";
+import color from '../../util/color';
 import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
 
@@ -84,7 +84,7 @@ class DropdownProperties extends React.Component {
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'center'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BooleanPropertyRow
@@ -96,7 +96,8 @@ class DropdownProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
 
     // TODO:
     // bold/italics/underline (p2)
@@ -115,8 +116,12 @@ class DropdownEvents extends React.Component {
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Selected option: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("Selected option: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -128,7 +133,8 @@ class DropdownEvents extends React.Component {
   render() {
     const element = this.props.element;
     const changeName = 'Change';
-    const changeDesc = 'Triggered every time an option is selected from the dropdown.';
+    const changeDesc =
+      'Triggered every time an option is selected from the dropdown.';
 
     return (
       <div id="eventRowContainer">
@@ -138,7 +144,7 @@ class DropdownEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -153,7 +159,7 @@ export default {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
@@ -173,9 +179,9 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
     // In the future we may want to trigger this on focus events as well.
-    $(element).on('mousedown', function (e) {
+    $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable dropdown menu unless running
         e.preventDefault();
@@ -185,7 +191,7 @@ export default {
     });
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'value':
         element.value = value;
@@ -203,7 +209,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'value':
         return element.value;

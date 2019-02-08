@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import {assertVisible, assertHidden} from '../../util/assertions';
 import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';
-import {enforceDocumentBodyCleanup} from "../../util/testUtils";
+import {enforceDocumentBodyCleanup} from '../../util/testUtils';
 
 describe('showProjectAdmin', () => {
   enforceDocumentBodyCleanup({checkEveryTest: true}, () => {
@@ -12,7 +12,7 @@ describe('showProjectAdmin', () => {
         isPublished: sinon.spy(),
         isProjectLevel: sinon.stub(),
         shouldHideShareAndRemix: sinon.stub(),
-        getAbuseScore: sinon.stub(),
+        getAbuseScore: sinon.stub()
       };
 
       rootElement = document.createElement('div');
@@ -34,7 +34,6 @@ describe('showProjectAdmin', () => {
     afterEach(() => {
       document.body.removeChild(rootElement);
     });
-
 
     describe('abuse controls', () => {
       describe('on a project level', () => {
