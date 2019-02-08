@@ -25,6 +25,7 @@ import {
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
+  setIsSummaryView,
   setCurrentStageId,
   setScriptCompleted,
   setStageExtrasEnabled,
@@ -266,6 +267,13 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       !data.professionalLearningCourse &&
       onOverviewPage
     ) {
+      // Default to progress summary view if teacher is viewing their student's progress.
+      const teacherViewingStudent =
+        !data.isTeacher && viewAs === ViewType.Teacher;
+      if (teacherViewingStudent) {
+        store.dispatch(setIsSummaryView(true));
+      }
+
       store.dispatch(showTeacherInfo());
 
       if (viewAs !== initialViewAs) {
@@ -274,6 +282,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         // our async call
         store.dispatch(setViewType(viewAs));
       }
+
       renderTeacherPanel(store, scriptData.id);
       clientState.cacheUserIsTeacher(true);
     }
