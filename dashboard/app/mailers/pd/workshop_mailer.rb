@@ -30,12 +30,35 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   after_action :save_timestamp
 
+  def teacher_survey_reminder(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+
+    mail content_type: 'text/html',
+      from: from_survey,
+      subject: 'Please complete the survey before your workshop!',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def teacher_follow_up(enrollment, days_after: nil)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: 'Having fun with CS Fundamentals yet?',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @details_partial = get_details_partial @workshop.course, @workshop.subject
     @online_url = ONLINE_URL
+    @is_enrollment_receipt = true
 
     mail content_type: 'text/html',
       from: from_teacher,
