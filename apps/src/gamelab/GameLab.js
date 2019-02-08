@@ -649,7 +649,7 @@ GameLab.prototype.startTickTimer = function() {
  */
 GameLab.prototype.resetHandler = function(ignore) {
   if (this.shouldAutoRunSetup) {
-    this.execute(true /* forPreview */);
+    this.execute(false /* shouldLoop */);
   } else {
     this.reset();
   }
@@ -709,7 +709,12 @@ GameLab.prototype.rerunSetupCode = function() {
   ) {
     return;
   }
-  this.execute(true /* forPreview */);
+  Sounds.getSingleton().muteURLs();
+  this.gameLabP5.p5.allSprites.removeSprites();
+  this.JSInterpreter.deinitialize();
+  this.initInterpreter(false /* attachDebugger */);
+  this.onP5Setup();
+  this.gameLabP5.p5.redraw();
 };
 
 GameLab.prototype.onPuzzleComplete = function(submit, testResult) {
@@ -835,12 +840,14 @@ GameLab.prototype.runButtonClick = function() {
 
 /**
  * Execute the user's code.  Heaven help us...
+ * @param {boolean} shouldLoop - If true, runs user code in a loop. Otherwise,
+ * only executes once. Defaults to true.
  */
-GameLab.prototype.execute = function(forPreview = false) {
-  if (forPreview) {
-    Sounds.getSingleton().muteURLs();
-  } else {
+GameLab.prototype.execute = function(shouldLoop = true) {
+  if (shouldLoop) {
     Sounds.getSingleton().unmuteURLs();
+  } else {
+    Sounds.getSingleton().muteURLs();
   }
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
@@ -862,7 +869,7 @@ GameLab.prototype.execute = function(forPreview = false) {
   }
 
   this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(!forPreview);
+  this.gameLabP5.setLoop(shouldLoop);
 
   if (
     !this.JSInterpreter ||
@@ -872,12 +879,12 @@ GameLab.prototype.execute = function(forPreview = false) {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly() && !forPreview) {
+  if (this.studioApp_.isUsingBlockly() && shouldLoop) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  if (!forPreview) {
+  if (shouldLoop) {
     this.startTickTimer();
   }
 };
