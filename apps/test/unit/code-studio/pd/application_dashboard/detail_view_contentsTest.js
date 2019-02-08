@@ -359,7 +359,7 @@ describe('DetailViewContents', () => {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
-          scholarshipStatus: null
+          scholarship_status: null
         }
       });
     });
@@ -371,6 +371,7 @@ describe('DetailViewContents', () => {
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
       it(`is required in order to set application status to ${applicationStatus}`, () => {
         expect(isModalShowing()).to.be.false;
+        expect(getScholarshipStatus()).to.be.null;
         expect(getApplicationStatus()).to.equal('unreviewed');
 
         setApplicationStatusTo(applicationStatus);
@@ -383,6 +384,8 @@ describe('DetailViewContents', () => {
 
         clickEditButton();
         setScholarshipStatusTo('no');
+        expect(getScholarshipStatus()).to.equal('no');
+
         setApplicationStatusTo(applicationStatus);
         expect(isModalShowing()).to.be.false;
         expect(getApplicationStatus()).to.equal(applicationStatus);
@@ -397,9 +400,12 @@ describe('DetailViewContents', () => {
       'withdrawn'
     ]) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
-        // const detailView = mountDetailView('Teacher', {status: 'unreviewed', scholarshipStatus: null});
-        // set it to application status
-        // assert dialog not present
+        expect(isModalShowing()).to.be.false;
+        expect(getScholarshipStatus()).to.be.null;
+
+        setApplicationStatusTo(applicationStatus);
+        expect(isModalShowing()).to.be.false;
+        expect(getApplicationStatus()).to.equal(applicationStatus);
       });
     }
 
@@ -420,13 +426,20 @@ describe('DetailViewContents', () => {
         .simulate('change', {target: {value: newStatus}});
     }
 
+    function getScholarshipStatus() {
+      const scholarshipDropdown = detailView
+        .find('tr')
+        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
+        .find('Select');
+      return scholarshipDropdown.prop('value');
+    }
+
     function setScholarshipStatusTo(newValue) {
       const scholarshipDropdown = detailView
         .find('tr')
         .filterWhere(row => row.text().includes('Scholarship Teacher?'))
         .find('Select');
       scholarshipDropdown.prop('onChange')({value: newValue});
-      // scholarshipDropdown.simulate('change', {target: {value: newValue}});
     }
 
     function isModalShowing() {
