@@ -294,9 +294,9 @@ export class DetailViewContents extends React.Component {
       this.props.applicationData.pd_workshop_id ||
       this.props.applicationData.fit_workshop_id;
     if (
-      this.props.applicationData.application_type === 
-        ApplicationTypes.teacher && 
-      !this.state.scholarship_status && 
+      this.props.applicationData.application_type ===
+        ApplicationTypes.teacher &&
+      !this.state.scholarship_status &&
       ScholarshipStatusRequiredStatuses.includes(event.target.value)
     ) {
       this.setState({
