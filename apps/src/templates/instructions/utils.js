@@ -7,7 +7,7 @@ import $ from 'jquery';
  * @returns {number} The current computed height in pixels of the specified component,
  * including padding, border, and (optionally) margins.
  */
-export function getOuterHeight(component, includeMargin=false) {
+export function getOuterHeight(component, includeMargin = false) {
   return $(ReactDOM.findDOMNode(component)).outerHeight(includeMargin);
 }
 
@@ -18,18 +18,21 @@ export function getOuterHeight(component, includeMargin=false) {
  *        to scroll by
  * @param {number} animate If specified, the animation time in ms
  */
-export function scrollBy(element, deltaY, animate=400) {
+export function scrollBy(element, deltaY, animate = 400) {
   const newScrollTop = element.scrollTop + deltaY;
   scrollTo(element, newScrollTop, animate);
 }
 
-export function scrollTo(element, scrollTop, animate=400) {
+export function scrollTo(element, scrollTop, animate = 400) {
   if (animate) {
     let $elem = $(element);
     if (!$elem.is(':animated')) {
-      $elem.animate({
-        scrollTop: scrollTop
-      }, animate);
+      $elem.animate(
+        {
+          scrollTop: scrollTop
+        },
+        animate
+      );
     }
   } else {
     element.scrollTop = scrollTop;
@@ -57,8 +60,8 @@ export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
   }
 
   // and shrink it, triggering a blockspace resize when we do so
-  container.style.height = height + "px";
-  container.style.width = width + "px";
+  container.style.height = height + 'px';
+  container.style.width = width + 'px';
   blockSpace.blockSpaceEditor.svgResize();
 }
 
@@ -70,23 +73,27 @@ export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
 export function convertXmlToBlockly(xmlContainer) {
   const xmls = xmlContainer.getElementsByTagName('xml');
 
-  Array.prototype.forEach.call(xmls, function (xml) {
+  Array.prototype.forEach.call(xmls, function(xml) {
     // embedded blocks can be displayed either "inline" as part of a paragraph
     // or "block" all on their own. "block" is the default.
-    const inline = xml.parentNode.tagName === "P";
+    const inline = xml.parentNode.tagName === 'P';
 
     // create a container and insert the blockspace into it
     const blockSpaceContainer = document.createElement(inline ? 'span' : 'div');
     if (inline) {
       // SVGs don't play nicely if they're rendered into purely inline elements,
       // so if our container is a span it should be inline-block
-      blockSpaceContainer.style.display = "inline-block";
+      blockSpaceContainer.style.display = 'inline-block';
     }
     xml.parentNode.insertBefore(blockSpaceContainer, xml);
-    const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(blockSpaceContainer, xml, {
-      noScrolling: true,
-      inline: inline
-    });
+    const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+      blockSpaceContainer,
+      xml,
+      {
+        noScrolling: true,
+        inline: inline
+      }
+    );
 
     // give block embeds more padding than inline
     const withPadding = !inline;
@@ -96,19 +103,21 @@ export function convertXmlToBlockly(xmlContainer) {
     // resize after initial render, so we also want to resize the container
     // whenever a blockSpaceChange results in the content size changing.
     let metrics = blockSpace.getMetrics();
-    blockSpace.getCanvas().addEventListener('blocklyBlockSpaceChange', function () {
-      const oldHeight = metrics.contentHeight;
-      const oldWidth = metrics.contentWidth;
-      const newHeight = blockSpace.getMetrics().contentHeight;
-      const newWidth = blockSpace.getMetrics().contentWidth;
+    blockSpace
+      .getCanvas()
+      .addEventListener('blocklyBlockSpaceChange', function() {
+        const oldHeight = metrics.contentHeight;
+        const oldWidth = metrics.contentWidth;
+        const newHeight = blockSpace.getMetrics().contentHeight;
+        const newWidth = blockSpace.getMetrics().contentWidth;
 
-      // if the blockspace's content size has changed, kick off another sync and
-      // save the new metrics as the old ones
-      if (newHeight !== oldHeight || newWidth !== oldWidth) {
-        shrinkBlockSpaceContainer(blockSpace, withPadding);
-        metrics = blockSpace.getMetrics();
-      }
-    });
+        // if the blockspace's content size has changed, kick off another sync and
+        // save the new metrics as the old ones
+        if (newHeight !== oldHeight || newWidth !== oldWidth) {
+          shrinkBlockSpaceContainer(blockSpace, withPadding);
+          metrics = blockSpace.getMetrics();
+        }
+      });
 
     shrinkBlockSpaceContainer(blockSpace, withPadding);
   });

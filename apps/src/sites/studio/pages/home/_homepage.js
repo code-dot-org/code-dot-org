@@ -5,16 +5,16 @@ import queryString from 'query-string';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
   setStageExtrasScriptIds,
   setAuthProviders,
-  beginEditingNewSection,
+  beginEditingNewSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
@@ -57,10 +57,10 @@ function showHomepage() {
 
   measureVideoConnectivity();
 
-  ReactDOM.render (
+  ReactDOM.render(
     <Provider store={store}>
       <div>
-        {(isTeacher && showUiTips) && (
+        {isTeacher && showUiTips && (
           <UiTips
             userId={userId}
             tipId="homepage_header"
@@ -76,44 +76,47 @@ function showHomepage() {
               body: i18n.homepageUiTipsAfterDialogBody(),
               cancel: i18n.homepageUiTipsAfterDialogCancel(),
               confirm: i18n.homepageUiTipsAfterDialogConfirm(),
-              onConfirm: {action: "url", url: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"}
+              onConfirm: {
+                action: 'url',
+                url:
+                  'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the'
+              }
             }}
-            tips={
-              [
-                {
-                  type: "initial",
-                  position: {top: 80, left: 100},
-                  text: i18n.homepageUiTipKeyLinks(),
-                  arrowDirection: "up"
-                },
-                {
-                  type: "initial",
-                  position: {top: 80, right: 15},
-                  text: i18n.homepageUiTipOtherLinks(),
-                  arrowDirection: "up_corner"
-                },
-                {
-                  type: "triggered",
-                  position: {top: 80, right: 15},
-                  text: i18n.homepageUiTipAlreadyHome(),
-                  triggerId: "logo_home_link",
-                  arrowDirection: "up_corner"}
-              ]}
+            tips={[
+              {
+                type: 'initial',
+                position: {top: 80, left: 100},
+                text: i18n.homepageUiTipKeyLinks(),
+                arrowDirection: 'up'
+              },
+              {
+                type: 'initial',
+                position: {top: 80, right: 15},
+                text: i18n.homepageUiTipOtherLinks(),
+                arrowDirection: 'up_corner'
+              },
+              {
+                type: 'triggered',
+                position: {top: 80, right: 15},
+                text: i18n.homepageUiTipAlreadyHome(),
+                triggerId: 'logo_home_link',
+                arrowDirection: 'up_corner'
+              }
+            ]}
           />
         )}
 
-        {(!isTeacher && showUiTips) && (
+        {!isTeacher && showUiTips && (
           <UiTips
-            tips={
-              [
-                {
-                  type: "triggered",
-                  position: {top: 80, right: 15},
-                  text: i18n.homepageUiTipAlreadyHome(),
-                  triggerId: "logo_home_link",
-                  arrowDirection: "up_corner"
-                }
-              ]}
+            tips={[
+              {
+                type: 'triggered',
+                position: {top: 80, right: 15},
+                text: i18n.homepageUiTipAlreadyHome(),
+                triggerId: 'logo_home_link',
+                arrowDirection: 'up_corner'
+              }
+            ]}
           />
         )}
 
@@ -161,20 +164,22 @@ function getTeacherAnnouncement(override) {
     heading: i18n.announcementHeadingBackToSchool2018(),
     buttonText: i18n.announcementButtonBackToSchool2018(),
     description: i18n.announcementDescriptionBackToSchool2018(),
-    link: "https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ",
-    image: "",
-    type: "bullhorn",
-    id: "back_to_school_2018"
+    link:
+      'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
+    image: '',
+    type: 'bullhorn',
+    id: 'back_to_school_2018'
   };
 
   // Optional override of teacher announcement (typically via DCDO).
   // Note that teacher_announce_type is optional.
-  if (override &&
+  if (
+    override &&
     override.teacher_announce_heading &&
     override.teacher_announce_description &&
     override.teacher_announce_url &&
-    override.teacher_announce_id) {
-
+    override.teacher_announce_id
+  ) {
     // Use the override.
     announcement = {
       heading: override.teacher_announce_heading,
@@ -189,7 +194,7 @@ function getTeacherAnnouncement(override) {
   return announcement;
 }
 
-window.CleverTakeoverManager = function (options) {
+window.CleverTakeoverManager = function(options) {
   this.options = options;
   const self = this;
 
@@ -210,7 +215,11 @@ window.CleverTakeoverManager = function (options) {
   }
 
   if (self.options.cleverLinkFlag) {
-    showLinkCleverModal(onCancelModal, onConfirmLink, self.options.cleverLinkFlag);
+    showLinkCleverModal(
+      onCancelModal,
+      onConfirmLink,
+      self.options.cleverLinkFlag
+    );
   }
 
   function closeLinkCleverModal() {
@@ -218,12 +227,16 @@ window.CleverTakeoverManager = function (options) {
   }
 
   function onCancelModal() {
-    $("#user_user_type").val("student");
-    $.get("/users/clever_modal_dismissed");
+    $('#user_user_type').val('student');
+    $.get('/users/clever_modal_dismissed');
     closeLinkCleverModal();
   }
 
   function onConfirmLink() {
-    window.location.href = "/users/clever_takeover?mergeID=" + self.options.userIDToMerge + "&token=" + self.options.mergeAuthToken;
+    window.location.href =
+      '/users/clever_takeover?mergeID=' +
+      self.options.userIDToMerge +
+      '&token=' +
+      self.options.mergeAuthToken;
   }
 };

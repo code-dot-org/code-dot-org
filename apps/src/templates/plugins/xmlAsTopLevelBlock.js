@@ -9,6 +9,6 @@
  *
  * If we change how that's done, we can take away this plugin.
  */
-module.exports =  function xmlAsTopLevelBlock() {
+module.exports = function xmlAsTopLevelBlock() {
   this.Parser.prototype.options.blocks.push('xml');
 };

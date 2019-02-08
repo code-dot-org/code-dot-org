@@ -12,7 +12,7 @@ const styles = {
     overflow: 'hidden',
     height: 34,
     lineHeight: '34px',
-    border: "solid 1px #a2a2a2",
+    border: 'solid 1px #a2a2a2',
     borderRadius: 5
   },
   flexContainer: {
@@ -20,25 +20,25 @@ const styles = {
     flexWrap: 'nowrap'
   },
   item: {
-    backgroundColor: "white",
-    color: "dimgrey",
+    backgroundColor: 'white',
+    color: 'dimgrey',
     fontFamily: "'Gotham 4r', sans-serif",
     fontSize: 15,
     cursor: 'pointer',
     float: 'left',
-    textAlign: "center",
+    textAlign: 'center',
     flex: 1,
     userSelect: 'none',
     boxSizing: 'border-box',
-    borderLeft: "solid 1px white"
+    borderLeft: 'solid 1px white'
   },
   select: {
     backgroundColor: '#2799a4',
     color: 'white',
-    borderLeft: "solid 1px #2799a4"
+    borderLeft: 'solid 1px #2799a4'
   },
   borderOnLeft: {
-    borderLeft: "solid 1px #a2a2a2"
+    borderLeft: 'solid 1px #a2a2a2'
   }
 };
 
@@ -50,17 +50,15 @@ export default class FilterGroupHeaderSelection extends React.Component {
     onUserInput: PropTypes.func.isRequired
   };
 
-  handleChange = (value) => {
-    this.props.onUserInput(
-      this.props.filterGroup.name,
-      value,
-      true
-    );
+  handleChange = value => {
+    this.props.onUserInput(this.props.filterGroup.name, value, true);
   };
 
   itemStyle(index) {
     const value = this.props.selection[0];
-    const selectedIndex = this.props.filterGroup.entries.findIndex(item => (item.name === value));
+    const selectedIndex = this.props.filterGroup.entries.findIndex(
+      item => item.name === value
+    );
 
     // When we have two unselected items next to each other, we want to draw a grey
     // vertical divider between them, and that's done by rendering a border-left
@@ -89,7 +87,7 @@ export default class FilterGroupHeaderSelection extends React.Component {
             <div
               key={item.name}
               onClick={this.handleChange.bind(this, item.name)}
-              style={{...styles.item, ...(this.itemStyle(index))}}
+              style={{...styles.item, ...this.itemStyle(index)}}
             >
               {item.text}
             </div>

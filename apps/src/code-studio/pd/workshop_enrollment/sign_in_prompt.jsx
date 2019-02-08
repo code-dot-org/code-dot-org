@@ -14,7 +14,7 @@ export default class SignInPrompt extends React.Component {
     return (
       <div className="info-box-teal">
         <div className="info-box-left">
-          <img src={this.props.info_icon}/>
+          <img src={this.props.info_icon} />
         </div>
         <div className="info-box-right">
           <p>
@@ -23,7 +23,8 @@ export default class SignInPrompt extends React.Component {
             </span>
           </p>
           <p>
-            <a href={this.props.sign_in_url}>Sign in</a> first to pre-fill some information.
+            <a href={this.props.sign_in_url}>Sign in</a> first to pre-fill some
+            information.
           </p>
         </div>
       </div>

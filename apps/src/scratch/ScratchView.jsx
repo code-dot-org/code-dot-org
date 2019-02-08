@@ -5,11 +5,11 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 import ScratchVisualizationColumn from './ScratchVisualizationColumn';
 import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
-import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
+import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
 
 export default class ScratchView extends React.Component {
   static propTypes = {
-    onMount: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -20,13 +20,10 @@ export default class ScratchView extends React.Component {
     return (
       <StudioAppWrapper>
         <div>
-          <div
-            id="visualizationColumn"
-            style={{width: 480}}
-          >
+          <div id="visualizationColumn" style={{width: 480}}>
             <ScratchVisualizationColumn />
           </div>
-          <VisualizationResizeBar/>
+          <VisualizationResizeBar />
           <InstructionsWithWorkspace>
             <CodeWorkspace />
           </InstructionsWithWorkspace>

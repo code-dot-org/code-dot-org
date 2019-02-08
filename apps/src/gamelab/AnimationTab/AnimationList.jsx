@@ -1,10 +1,10 @@
 /** @file Vertical scrolling list of animation sequences */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
-import color from "../../util/color";
+import {connect} from 'react-redux';
+import color from '../../util/color';
 import * as shapes from '../shapes';
-import { show, Goal } from '../AnimationPicker/animationPickerModule';
+import {show, Goal} from '../AnimationPicker/animationPickerModule';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
@@ -35,7 +35,7 @@ class AnimationList extends React.Component {
   render() {
     return (
       <ScrollableList style={styles.root} className="animationList">
-        {this.props.animationList.orderedKeys.map(key =>
+        {this.props.animationList.orderedKeys.map(key => (
           <AnimationListItem
             key={key}
             animationKey={key}
@@ -43,7 +43,7 @@ class AnimationList extends React.Component {
             isSelected={key === this.props.selectedAnimation}
             animationList={this.props.animationList}
           />
-        )}
+        ))}
         <NewListItem
           key="new_animation"
           label="new animation"
@@ -53,11 +53,14 @@ class AnimationList extends React.Component {
     );
   }
 }
-export default connect(state => ({
-  animationList: state.animationList,
-  selectedAnimation: state.animationTab.selectedAnimation
-}), dispatch => ({
-  onNewItemClick() {
-    dispatch(show(Goal.NEW_ANIMATION));
-  }
-}))(AnimationList);
+export default connect(
+  state => ({
+    animationList: state.animationList,
+    selectedAnimation: state.animationTab.selectedAnimation
+  }),
+  dispatch => ({
+    onNewItemClick() {
+      dispatch(show(Goal.NEW_ANIMATION));
+    }
+  })
+)(AnimationList);

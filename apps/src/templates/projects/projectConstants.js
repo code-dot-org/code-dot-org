@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 export const projectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -9,9 +9,8 @@ export const projectDataPropType = PropTypes.shape({
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
-  publishedToPublic: PropTypes.bool.isRequired,
+  publishedToPublic: PropTypes.bool.isRequired
 });
-
 
 export const personalProjectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -29,17 +28,17 @@ export const featuredProjectDataPropType = PropTypes.shape({
   publishedAt: PropTypes.string,
   thumbnailUrl: PropTypes.string,
   featuredAt: PropTypes.string.isRequired,
-  unfeaturedAt: PropTypes.string,
+  unfeaturedAt: PropTypes.string
 });
 
 export const projectPropType = PropTypes.shape({
   projectData: projectDataPropType.isRequired,
-  currentGallery: PropTypes.string.isRequired,
+  currentGallery: PropTypes.string.isRequired
 });
 
 export const Galleries = {
   PUBLIC: 'PUBLIC',
-  PRIVATE: 'PRIVATE',
+  PRIVATE: 'PRIVATE'
 };
 
 export const featuredProjectTableTypes = {
@@ -110,17 +109,17 @@ export const FEATURED_PROJECT_TYPE_MAP = {
 
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.
-export const convertChannelsToProjectData = function (projects) {
+export const convertChannelsToProjectData = function(projects) {
   // Get the ones that aren't hidden, and have a type and id.
-  let projectLists = projects.filter(project => !project.hidden && project.id && project.projectType);
-  return projectLists.map(project => (
-    {
-      name: project.name,
-      channel: project.id,
-      thumbnailUrl: project.thumbnailUrl,
-      type: project.projectType,
-      isPublished: project.publishedAt !== null,
-      updatedAt: project.updatedAt
-    }
-  ));
+  let projectLists = projects.filter(
+    project => !project.hidden && project.id && project.projectType
+  );
+  return projectLists.map(project => ({
+    name: project.name,
+    channel: project.id,
+    thumbnailUrl: project.thumbnailUrl,
+    type: project.projectType,
+    isPublished: project.publishedAt !== null,
+    updatedAt: project.updatedAt
+  }));
 };

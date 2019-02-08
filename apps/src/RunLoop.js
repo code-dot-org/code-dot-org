@@ -7,8 +7,10 @@ var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 // See Also:
 // * https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
 // * https://developer.mozilla.org/en-US/docs/Web/API/Performance.now
-var windowNow = (window.performance && window.performance.now) ?
-    window.performance.now.bind(window.performance) : Date.now;
+var windowNow =
+  window.performance && window.performance.now
+    ? window.performance.now.bind(window.performance)
+    : Date.now;
 
 /**
  * How many ticks we try to fire every second.
@@ -22,7 +24,7 @@ var PREFERRED_TICKS_PER_SECOND = 10;
  * @type {number}
  * @const
  */
-var PREFERRED_MS_PER_TICK = (1000 / PREFERRED_TICKS_PER_SECOND);
+var PREFERRED_MS_PER_TICK = 1000 / PREFERRED_TICKS_PER_SECOND;
 
 /**
  * Rendered frames per second on older browsers where we can't lock to the
@@ -37,16 +39,13 @@ var FALLBACK_FPS = 30;
  * @type {number}
  * @const
  */
-var FALLBACK_MS_PER_FRAME = (1000 / FALLBACK_FPS);
-
-
+var FALLBACK_MS_PER_FRAME = 1000 / FALLBACK_FPS;
 
 /**
  * Simple run-loop manager
  * @constructor
  */
-var RunLoop = module.exports = function () {
-
+var RunLoop = (module.exports = function() {
   /**
    * Whether the run-loop will continue running.
    * @type {boolean}
@@ -90,13 +89,13 @@ var RunLoop = module.exports = function () {
 
   /** @type {ObservableEventDEPRECATED} */
   this.render = new ObservableEventDEPRECATED();
-};
+});
 
 /**
  * Simple tracking for time values
  * @constructor
  */
-RunLoop.Clock = function () {
+RunLoop.Clock = function() {
   /**
    * Time the current/most recent tick started, in ms.
    * Depending on browser this might be epoch time or time since load -
@@ -113,10 +112,10 @@ RunLoop.Clock = function () {
   this.deltaTime = 0;
 };
 
-RunLoop.prototype.buildTickMethod_ = function () {
+RunLoop.prototype.buildTickMethod_ = function() {
   var tickMethod;
   var self = this;
-  tickMethod = function () {
+  tickMethod = function() {
     if (self.enabled) {
       var curTime = windowNow();
       self.tickClock.deltaTime = curTime - self.tickClock.time;
@@ -128,11 +127,11 @@ RunLoop.prototype.buildTickMethod_ = function () {
   return tickMethod;
 };
 
-RunLoop.prototype.buildRenderMethod_ = function () {
+RunLoop.prototype.buildRenderMethod_ = function() {
   var renderMethod;
   var self = this;
   if (window.requestAnimationFrame) {
-    renderMethod = function (hiResTimeStamp) {
+    renderMethod = function(hiResTimeStamp) {
       if (self.enabled) {
         self.renderClock.deltaTime = hiResTimeStamp - self.renderClock.time;
         self.renderClock.time = hiResTimeStamp;
@@ -141,13 +140,16 @@ RunLoop.prototype.buildRenderMethod_ = function () {
       }
     };
   } else {
-    renderMethod = function () {
+    renderMethod = function() {
       if (self.enabled) {
         var curTime = windowNow();
         self.renderClock.deltaTime = curTime - self.renderClock.time;
         self.renderClock.time = curTime;
         self.render.notifyObservers(self.renderClock);
-        setTimeout(renderMethod, FALLBACK_MS_PER_FRAME - self.renderClock.deltaTime);
+        setTimeout(
+          renderMethod,
+          FALLBACK_MS_PER_FRAME - self.renderClock.deltaTime
+        );
       }
     };
   }
@@ -155,7 +157,7 @@ RunLoop.prototype.buildRenderMethod_ = function () {
 };
 
 /** Start the run loop (runs immediately) */
-RunLoop.prototype.begin = function () {
+RunLoop.prototype.begin = function() {
   this.enabled = true;
   this.tickClock.time = windowNow();
   this.renderClock.time = windowNow();
@@ -168,6 +170,6 @@ RunLoop.prototype.begin = function () {
  * If in the middle of a tick, will finish the current tick.
  * If called by an event between ticks, will prevent the next tick from firing.
  */
-RunLoop.prototype.end = function () {
+RunLoop.prototype.end = function() {
   this.enabled = false;
 };

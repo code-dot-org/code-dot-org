@@ -21,7 +21,7 @@ const sections = {
 
 const transferToOtherTeacher = {
   ...blankStudentTransfer,
-  studentIds: [1,2,3],
+  studentIds: [1, 2, 3],
   otherTeacher: true,
   otherTeacherSection: 'ABCDEF',
   copyStudents: false
@@ -29,7 +29,8 @@ const transferToOtherTeacher = {
 
 const errorTransferStatus = {
   status: TransferStatus.FAIL,
-  error: 'You cannot move these students because they are already in the new section.'
+  error:
+    'You cannot move these students because they are already in the new section.'
 };
 
 const DEFAULT_PROPS = {
@@ -44,33 +45,29 @@ const DEFAULT_PROPS = {
 };
 
 export default storybook => {
-  storybook
-    .storiesOf('MoveStudents', module)
-    .addStoryTable([
-      {
-        name: 'Move students empty dialog',
-        story: () => (
-          <MoveStudents {...DEFAULT_PROPS} />
-        )
-      },
-      {
-        name: 'Move students dialog when "other teacher" option is chosen',
-        story: () => (
-          <MoveStudents
-            {...DEFAULT_PROPS}
-            transferData={transferToOtherTeacher}
-          />
-        )
-      },
-      {
-        name: 'Move students dialog when an error has occurred',
-        story: () => (
-          <MoveStudents
-            {...DEFAULT_PROPS}
-            transferData={transferToOtherTeacher}
-            transferStatus={errorTransferStatus}
-          />
-        )
-      }
-    ]);
+  storybook.storiesOf('MoveStudents', module).addStoryTable([
+    {
+      name: 'Move students empty dialog',
+      story: () => <MoveStudents {...DEFAULT_PROPS} />
+    },
+    {
+      name: 'Move students dialog when "other teacher" option is chosen',
+      story: () => (
+        <MoveStudents
+          {...DEFAULT_PROPS}
+          transferData={transferToOtherTeacher}
+        />
+      )
+    },
+    {
+      name: 'Move students dialog when an error has occurred',
+      story: () => (
+        <MoveStudents
+          {...DEFAULT_PROPS}
+          transferData={transferToOtherTeacher}
+          transferStatus={errorTransferStatus}
+        />
+      )
+    }
+  ]);
 };

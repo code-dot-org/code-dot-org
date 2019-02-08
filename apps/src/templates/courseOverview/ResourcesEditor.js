@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
-import ResourceType, { stringForType, resourceShape } from './resourceType';
+import ResourceType, {stringForType, resourceShape} from './resourceType';
 
 const styles = {
   box: {
@@ -12,7 +12,7 @@ const styles = {
     padding: 10
   },
   error: {
-    color: 'red',
+    color: 'red'
   }
 };
 
@@ -26,7 +26,7 @@ const defaultLinks = {
   [ResourceType.codeIntroduced]: '/link/to/code/introduced',
   [ResourceType.standardMappings]: '/link/to/standard/mappings',
   [ResourceType.allHandouts]: '/link/to/all/handouts',
-  [ResourceType.videos]: '/link/to/videos',
+  [ResourceType.videos]: '/link/to/videos'
 };
 
 export default class ResourcesEditor extends Component {
@@ -34,7 +34,7 @@ export default class ResourcesEditor extends Component {
     inputStyle: PropTypes.object.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     maxResources: PropTypes.number.isRequired,
-    renderPreview: PropTypes.func.isRequired,
+    renderPreview: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -79,17 +79,20 @@ export default class ResourcesEditor extends Component {
   };
 
   render() {
-    const { resources, errorString } = this.state;
+    const {resources, errorString} = this.state;
 
     // avoid showing multiple empty resources
-    const lastNonEmpty = _.findLastIndex(resources, ({type, link}) => link && type);
+    const lastNonEmpty = _.findLastIndex(
+      resources,
+      ({type, link}) => link && type
+    );
 
     // Resources contains maxResources entries. For the empty entries, we want to
     // show just one, so we slice to the lastNonEmpty +1 to get an empty entry
     // and +1 more because slice is exclusive.
     return (
       <div>
-        {resources.slice(0, lastNonEmpty + 2).map((resource, index) =>
+        {resources.slice(0, lastNonEmpty + 2).map((resource, index) => (
           <Resource
             key={index}
             id={index + 1}
@@ -98,7 +101,7 @@ export default class ResourcesEditor extends Component {
             handleChangeType={event => this.handleChangeType(event, index)}
             handleChangeLink={event => this.handleChangeLink(event, index)}
           />
-        )}
+        ))}
 
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
@@ -110,26 +113,32 @@ export default class ResourcesEditor extends Component {
   }
 }
 
-const Resource = ({id, resource, inputStyle, handleChangeType, handleChangeLink}) => (
+const Resource = ({
+  id,
+  resource,
+  inputStyle,
+  handleChangeType,
+  handleChangeLink
+}) => (
   <div style={{marginTop: 8}}>
     Resource {id}
-    <div>
-      Type
-    </div>
+    <div>Type</div>
     <select
       name="resourceTypes[]"
       style={inputStyle}
       value={resource.type}
       onChange={handleChangeType}
     >
-      <option value={''} key={-1}>None</option>
-      {Object.keys(ResourceType).map((type, index) =>
-        <option value={type} key={index}>{stringForType[type]}</option>
-      )}
+      <option value={''} key={-1}>
+        None
+      </option>
+      {Object.keys(ResourceType).map((type, index) => (
+        <option value={type} key={index}>
+          {stringForType[type]}
+        </option>
+      ))}
     </select>
-    <div>
-      Link
-    </div>
+    <div>Link</div>
     <input
       style={inputStyle}
       name="resourceLinks[]"
@@ -142,9 +151,9 @@ Resource.propTypes = {
   id: PropTypes.number.isRequired,
   resource: PropTypes.shape({
     type: PropTypes.oneOf([...Object.values(ResourceType), '']).isRequired,
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
   }).isRequired,
   inputStyle: PropTypes.object.isRequired,
   handleChangeType: PropTypes.func.isRequired,
-  handleChangeLink: PropTypes.func.isRequired,
+  handleChangeLink: PropTypes.func.isRequired
 };

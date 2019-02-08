@@ -9,10 +9,7 @@ import i18n from '@cdo/locale';
 describe('HiddenForSectionToggle', () => {
   it('renders two buttons reflecting hidden state', () => {
     const wrapper = shallow(
-      <HiddenForSectionToggle
-        hidden={false}
-        onChange={() => {}}
-      />
+      <HiddenForSectionToggle hidden={false} onChange={() => {}} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -35,14 +32,8 @@ describe('HiddenForSectionToggle', () => {
     wrapper.setProps({hidden: true});
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Button
-          text={i18n.visible()}
-          disabled={false}
-        />
-        <Button
-          text={i18n.hidden()}
-          disabled={true}
-        />
+        <Button text={i18n.visible()} disabled={false} />
+        <Button text={i18n.hidden()} disabled={true} />
       </div>
     );
   });
@@ -50,36 +41,45 @@ describe('HiddenForSectionToggle', () => {
   it('calls onChange handler when buttons are clicked', () => {
     const callback = sinon.spy();
     const wrapper = shallow(
-      <HiddenForSectionToggle
-        hidden={false}
-        onChange={callback}
-      />
+      <HiddenForSectionToggle hidden={false} onChange={callback} />
     );
 
     // Click the first button
-    wrapper.find(Button).at(0).props().onClick();
+    wrapper
+      .find(Button)
+      .at(0)
+      .props()
+      .onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('visible');
 
     callback.reset();
 
     // Click the second button
-    wrapper.find(Button).at(1).props().onClick();
+    wrapper
+      .find(Button)
+      .at(1)
+      .props()
+      .onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('hidden');
   });
 
   it('does not call onChange when disabled', () => {
     const callback = sinon.spy();
     const wrapper = shallow(
-      <HiddenForSectionToggle
-        hidden={false}
-        onChange={callback}
-        disabled
-      />
+      <HiddenForSectionToggle hidden={false} onChange={callback} disabled />
     );
 
     // Click both buttons
-    wrapper.find(Button).at(0).props().onClick();
-    wrapper.find(Button).at(1).props().onClick();
+    wrapper
+      .find(Button)
+      .at(0)
+      .props()
+      .onClick();
+    wrapper
+      .find(Button)
+      .at(1)
+      .props()
+      .onClick();
     expect(callback).not.to.have.been.called;
   });
 });

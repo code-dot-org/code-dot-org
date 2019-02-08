@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
 export default function VerifiedResourcesNotification({width}) {

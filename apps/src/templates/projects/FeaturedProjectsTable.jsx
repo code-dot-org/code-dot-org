@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from "@cdo/locale";
-import color from "../../util/color";
+import i18n from '@cdo/locale';
+import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -12,8 +12,8 @@ import {
   featuredProjectTableTypes
 } from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -26,17 +26,17 @@ export const COLUMNS = {
   APP_TYPE: 2,
   LAST_PUBLISHED: 3,
   LAST_FEATURED: 4,
-  ACTIONS: 5,
+  ACTIONS: 5
 };
 
 export const styles = {
   cellFirst: {
     borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
+    borderColor: color.border_light_gray
   },
   headerCellFirst: {
     borderWidth: '0px 0px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: color.border_light_gray
   },
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
@@ -64,12 +64,12 @@ export const styles = {
     height: THUMBNAIL_SIZE,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   }
 };
 
 // Cell formatters.
-const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
+const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
@@ -85,16 +85,22 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 
 const nameFormatter = (projectName, {rowData}) => {
   const url = `/projects/${rowData.type}/${rowData.channel}/`;
-  return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
+  return (
+    <a style={tableLayoutStyles.link} href={url} target="_blank">
+      {projectName}
+    </a>
+  );
 };
 
-const unfeature = (channel) => {
+const unfeature = channel => {
   var url = `/featured_projects/${channel}/unfeature`;
   $.ajax({
     url: url,
-    type:'PUT',
-    dataType:'json',
-  }).done(handleSuccess).fail(handleUnfeatureFailure);
+    type: 'PUT',
+    dataType: 'json'
+  })
+    .done(handleSuccess)
+    .fail(handleUnfeatureFailure);
 };
 
 const handleSuccess = () => {
@@ -102,7 +108,7 @@ const handleSuccess = () => {
 };
 
 const handleUnfeatureFailure = () => {
-  alert("Shucks. Something went wrong - this project is still featured.");
+  alert('Shucks. Something went wrong - this project is still featured.');
 };
 
 const handleFeatureFailure = () => {
@@ -112,9 +118,7 @@ const handleFeatureFailure = () => {
 const actionsFormatterFeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
-      <PopUpMenu.Item
-        onClick={() => unfeature(rowData.channel)}
-      >
+      <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
         {i18n.stopFeaturing()}
       </PopUpMenu.Item>
     </QuickActionsCell>
@@ -128,9 +132,11 @@ const feature = (channel, publishedAt) => {
   }
   $.ajax({
     url: url,
-    type:'PUT',
-    dataType:'json',
-  }).done(handleSuccess).fail(handleFeatureFailure);
+    type: 'PUT',
+    dataType: 'json'
+  })
+    .done(handleSuccess)
+    .fail(handleFeatureFailure);
 };
 
 const actionsFormatterUnfeatured = (actions, {rowData}) => {
@@ -145,7 +151,7 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
   );
 };
 
-const dateFormatter = (time) => {
+const dateFormatter = time => {
   if (time) {
     const date = new Date(time);
     return date.toLocaleDateString();
@@ -154,16 +160,16 @@ const dateFormatter = (time) => {
   }
 };
 
-const typeFormatter = (type) => {
+const typeFormatter = type => {
   return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
-    tableVersion: PropTypes.oneOf(Object.values(featuredProjectTableTypes)).isRequired
+    tableVersion: PropTypes.oneOf(Object.values(featuredProjectTableTypes))
+      .isRequired
   };
-
 
   state = {
     [COLUMNS.PROJECT_NAME]: {
@@ -177,7 +183,7 @@ class FeaturedProjectsTable extends React.Component {
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -192,43 +198,51 @@ class FeaturedProjectsTable extends React.Component {
     });
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     const tableVersion = this.props.tableVersion;
     const dataColumns = [
       {
         property: 'thumbnailUrl',
         header: {
-          props: {style: {
-            ...tableLayoutStyles.headerCell,
-            ...styles.headerCellFirst,
-            ...styles.headerCellThumbnail,
-            ...tableLayoutStyles.unsortableHeader,
-          }},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.headerCellFirst,
+              ...styles.headerCellThumbnail,
+              ...tableLayoutStyles.unsortableHeader
+            }
+          }
         },
         cell: {
           format: thumbnailFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.cellFirst,
-            ...styles.cellThumbnail
-          }}
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.cellFirst,
+              ...styles.cellThumbnail
+            }
+          }
         }
       },
       {
         property: 'projectName',
         header: {
           label: i18n.projectName(),
-          props: {style: {
-            ...tableLayoutStyles.headerCell,
-            ...styles.headerCellName,
-          }},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.headerCellName
+            }
+          }
         },
         cell: {
           format: nameFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.cellName
-          }}
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.cellName
+            }
+          }
         }
       },
       {
@@ -236,14 +250,16 @@ class FeaturedProjectsTable extends React.Component {
         header: {
           label: i18n.projectType(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: typeFormatter,
-          props: {style: {
-            ...styles.cellType,
-            ...tableLayoutStyles.cell
-          }}
+          props: {
+            style: {
+              ...styles.cellType,
+              ...tableLayoutStyles.cell
+            }
+          }
         }
       },
       {
@@ -251,7 +267,7 @@ class FeaturedProjectsTable extends React.Component {
         header: {
           label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: dateFormatter,
@@ -263,13 +279,13 @@ class FeaturedProjectsTable extends React.Component {
         header: {
           label: i18n.featured(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: dateFormatter,
           props: {style: tableLayoutStyles.cell}
         }
-      },
+      }
     ];
     const archiveColumns = [
       {
@@ -277,7 +293,7 @@ class FeaturedProjectsTable extends React.Component {
         header: {
           label: i18n.unfeatured(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: dateFormatter,
@@ -291,9 +307,9 @@ class FeaturedProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
+              ...tableLayoutStyles.unsortableHeader
             }
-          },
+          }
         },
         cell: {
           format: actionsFormatterUnfeatured,
@@ -309,9 +325,9 @@ class FeaturedProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
+              ...tableLayoutStyles.unsortableHeader
             }
-          },
+          }
         },
         cell: {
           format: actionsFormatterFeatured,
@@ -320,7 +336,7 @@ class FeaturedProjectsTable extends React.Component {
       }
     ];
 
-    if (tableVersion === "currentFeatured") {
+    if (tableVersion === 'currentFeatured') {
       return dataColumns.concat(currentColumns);
     } else {
       return dataColumns.concat(archiveColumns);
@@ -329,21 +345,22 @@ class FeaturedProjectsTable extends React.Component {
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.props.projectList);
 
     return (
-      <Table.Provider
-        columns={columns}
-        style={tableLayoutStyles.table}
-      >
+      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="channel" />
       </Table.Provider>

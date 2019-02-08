@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -12,7 +12,7 @@ import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 
 const styles = {
@@ -38,33 +38,39 @@ export default class TeacherHomepage extends Component {
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
-    schoolYear: PropTypes.number,
+    schoolYear: PropTypes.number
   };
 
   state = {
-    showCensusBanner: this.props.showCensusBanner,
+    showCensusBanner: this.props.showCensusBanner
   };
 
-  bindCensusBanner = (banner) => {
+  bindCensusBanner = banner => {
     this.censusBanner = banner;
   };
 
   handleCensusBannerTeachesChange(event) {
-    this.setState({censusBannerTeachesSelection: (event.target.id==="teachesYes")});
+    this.setState({
+      censusBannerTeachesSelection: event.target.id === 'teachesYes'
+    });
   }
 
   handleCensusBannerInClassChange(event) {
-    this.setState({censusBannerInClassSelection: (event.target.id==="inClass")});
+    this.setState({
+      censusBannerInClassSelection: event.target.id === 'inClass'
+    });
   }
 
   handleCensusBannerSubmit() {
     if (this.censusBanner.isValid()) {
       $.ajax({
-        url: "/dashboardapi/v1/census/CensusTeacherBannerV1",
-        type: "post",
-        dataType: "json",
-        data: this.censusBanner.getData(),
-      }).done(this.handleCensusSubmitSuccess).fail(this.handleCensusSubmitError);
+        url: '/dashboardapi/v1/census/CensusTeacherBannerV1',
+        type: 'post',
+        dataType: 'json',
+        data: this.censusBanner.getData()
+      })
+        .done(this.handleCensusSubmitSuccess)
+        .fail(this.handleCensusSubmitError);
     } else {
       this.setState({showCensusInvalidError: true});
     }
@@ -77,32 +83,39 @@ export default class TeacherHomepage extends Component {
 
   handleCensusSubmitError = () => {
     this.setState({
-      showCensusUnknownError: true,
+      showCensusUnknownError: true
     });
   };
 
   dismissCensusBanner(onSuccess, onFailure) {
     $.ajax({
       url: `/api/v1/users/${this.props.teacherId}/dismiss_census_banner`,
-      type: "post",
-    }).done(onSuccess).fail(onFailure);
+      type: 'post'
+    })
+      .done(onSuccess)
+      .fail(onFailure);
   }
 
-  logDismissCensusBannerError = (xhr) => {
-    console.error(`Failed to dismiss future census banner! ${xhr.responseText}`);
+  logDismissCensusBannerError = xhr => {
+    console.error(
+      `Failed to dismiss future census banner! ${xhr.responseText}`
+    );
   };
 
-  hideCensusBanner= () =>  {
+  hideCensusBanner = () => {
     this.setState({
-      showCensusBanner: false,
+      showCensusBanner: false
     });
   };
 
   dismissAndHideCensusBanner() {
-    this.dismissCensusBanner(this.hideCensusBanner, this.handleDismissAndHideCensusBannerError);
+    this.dismissCensusBanner(
+      this.hideCensusBanner,
+      this.handleDismissAndHideCensusBannerError
+    );
   }
 
-  handleDismissAndHideCensusBannerError = (xhr) => {
+  handleDismissAndHideCensusBannerError = xhr => {
     this.logDismissCensusBannerError(xhr);
     this.hideCensusBanner();
   };
@@ -110,26 +123,38 @@ export default class TeacherHomepage extends Component {
   postponeCensusBanner() {
     $.ajax({
       url: `/api/v1/users/${this.props.teacherId}/postpone_census_banner`,
-      type: "post",
-    }).done(this.hideCensusBanner).fail(this.handlePostponeCensusBannerError);
+      type: 'post'
+    })
+      .done(this.hideCensusBanner)
+      .fail(this.handlePostponeCensusBannerError);
   }
 
-  handlePostponeCensusBannerError = (xhr) => {
+  handlePostponeCensusBannerError = xhr => {
     console.error(`Failed to postpone census banner! ${xhr.responseText}`);
     this.hideCensusBanner();
   };
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#teacher_reminders').appendTo(ReactDOM.findDOMNode(this.refs.teacherReminders)).show();
-    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
+    $('#teacher_reminders')
+      .appendTo(ReactDOM.findDOMNode(this.refs.teacherReminders))
+      .show();
+    $('#flashes')
+      .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
+      .show();
   }
 
   render() {
-    const { hocLaunch, courses, topCourse, announcement, joinedSections } = this.props;
-    const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
-    const { teacherId, teacherName, teacherEmail } = this.props;
-    const { canViewAdvancedTools, queryStringOpen, isEnglish } = this.props;
+    const {
+      hocLaunch,
+      courses,
+      topCourse,
+      announcement,
+      joinedSections
+    } = this.props;
+    const {ncesSchoolId, censusQuestion, schoolYear} = this.props;
+    const {teacherId, teacherName, teacherEmail} = this.props;
+    const {canViewAdvancedTools, queryStringOpen, isEnglish} = this.props;
 
     // Show the special announcement for now.
     const showSpecialAnnouncement = true;
@@ -139,25 +164,16 @@ export default class TeacherHomepage extends Component {
 
     return (
       <div>
-        <HeaderBanner
-          headingText={i18n.homepageHeading()}
-          short={true}
-        />
-        <ProtectedStatefulDiv
-          ref="flashes"
-        />
-        <ProtectedStatefulDiv
-          ref="teacherReminders"
-        />
+        <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
+        <ProtectedStatefulDiv ref="flashes" />
+        <ProtectedStatefulDiv ref="teacherReminders" />
         {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock
-            hocLaunch={hocLaunch}
-          />
+          <SpecialAnnouncementActionBlock hocLaunch={hocLaunch} />
         )}
         {announcement && showAnnouncement && (
           <div>
             <Notification
-              type={announcement.type || "bullhorn"}
+              type={announcement.type || 'bullhorn'}
               notice={announcement.heading}
               details={announcement.description}
               dismissible={false}
@@ -166,51 +182,50 @@ export default class TeacherHomepage extends Component {
               newWindow={true}
               analyticId={announcement.id}
             />
-            <div style={styles.clear}/>
+            <div style={styles.clear} />
           </div>
         )}
         {this.state.showCensusBanner && (
-           <div>
-             <CensusTeacherBanner
-               ref={this.bindCensusBanner}
-               schoolYear={schoolYear}
-               ncesSchoolId={ncesSchoolId}
-               question={censusQuestion}
-               teaches={this.state.censusBannerTeachesSelection}
-               inClass={this.state.censusBannerInClassSelection}
-               teacherId={teacherId}
-               teacherName={teacherName}
-               teacherEmail={teacherEmail}
-               showInvalidError={this.state.showCensusInvalidError}
-               showUnknownError={this.state.showCensusUnknownError}
-               submittedSuccessfully={this.state.censusSubmittedSuccessfully}
-               onSubmit={() => this.handleCensusBannerSubmit()}
-               onDismiss={() => this.dismissAndHideCensusBanner()}
-               onPostpone={() => this.postponeCensusBanner()}
-               onTeachesChange={(event) => this.handleCensusBannerTeachesChange(event)}
-               onInClassChange={(event) => this.handleCensusBannerInClassChange(event)}
-             />
-             <br/>
-           </div>
+          <div>
+            <CensusTeacherBanner
+              ref={this.bindCensusBanner}
+              schoolYear={schoolYear}
+              ncesSchoolId={ncesSchoolId}
+              question={censusQuestion}
+              teaches={this.state.censusBannerTeachesSelection}
+              inClass={this.state.censusBannerInClassSelection}
+              teacherId={teacherId}
+              teacherName={teacherName}
+              teacherEmail={teacherEmail}
+              showInvalidError={this.state.showCensusInvalidError}
+              showUnknownError={this.state.showCensusUnknownError}
+              submittedSuccessfully={this.state.censusSubmittedSuccessfully}
+              onSubmit={() => this.handleCensusBannerSubmit()}
+              onDismiss={() => this.dismissAndHideCensusBanner()}
+              onPostpone={() => this.postponeCensusBanner()}
+              onTeachesChange={event =>
+                this.handleCensusBannerTeachesChange(event)
+              }
+              onInClassChange={event =>
+                this.handleCensusBannerInClassChange(event)
+              }
+            />
+            <br />
+          </div>
         )}
-        <TeacherSections
-          queryStringOpen={queryStringOpen}
-        />
+        <TeacherSections queryStringOpen={queryStringOpen} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
         />
-        <TeacherResources/>
+        <TeacherResources />
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <StudentSections
-          initialSections={joinedSections}
-          isTeacher={true}
-        />
+        <StudentSections initialSections={joinedSections} isTeacher={true} />
       </div>
     );
   }

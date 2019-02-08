@@ -1,7 +1,7 @@
 import React from 'react';
 import {CohortViewTable} from './cohort_view_table';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
-import { WorkshopTypes } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default storybook => {
   storybook
@@ -38,20 +38,22 @@ export default storybook => {
             path="path"
             regionalPartnerFilter={{
               value: 2,
-              label: "WNY Stem Hub"
+              label: 'WNY Stem Hub'
             }}
             regionalPartners={[
               {
                 id: 1,
                 workshop_type: WorkshopTypes.local_summer
-              },{
+              },
+              {
                 id: 2,
                 workshop_type: WorkshopTypes.local_summer
               }
             ]}
           />
         )
-      }, {
+      },
+      {
         name: 'Cohort view for facilitator application',
         story: () => (
           <CohortViewTable
@@ -80,20 +82,21 @@ export default storybook => {
                 assigned_workshop: 'Seattle, 5/1',
                 registered_workshop: 'Seattle, 5/1',
                 assigned_fit: 'Buffalo 7/1',
-                registered_fit: 'Yes',
+                registered_fit: 'Yes'
               }
             ]}
             viewType="facilitator"
             path="path"
             regionalPartnerFilter={{
               value: 1,
-              label: "A+ College Ready"
+              label: 'A+ College Ready'
             }}
             regionalPartners={[
               {
                 id: 1,
                 workshop_type: WorkshopTypes.local_summer
-              },{
+              },
+              {
                 id: 2,
                 workshop_type: WorkshopTypes.local_summer
               }

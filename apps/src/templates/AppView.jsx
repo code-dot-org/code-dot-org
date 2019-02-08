@@ -20,7 +20,7 @@ class AppView extends React.Component {
 
     // not provided by redux
     visualizationColumn: PropTypes.element,
-    onMount: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -39,9 +39,9 @@ class AppView extends React.Component {
         <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}
         </div>
-        <VisualizationResizeBar/>
+        <VisualizationResizeBar />
         <InstructionsWithWorkspace>
-          <CodeWorkspace/>
+          <CodeWorkspace />
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );

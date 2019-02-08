@@ -2,7 +2,10 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import {UnconnectedManageLinkedAccounts as ManageLinkedAccounts, ENCRYPTED} from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
+import {
+  UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
+  ENCRYPTED
+} from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
 import * as utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
@@ -11,30 +14,34 @@ const DEFAULT_PROPS = {
   disconnect: () => {},
   userHasPassword: true,
   isGoogleClassroomStudent: false,
-  isCleverStudent: false,
+  isCleverStudent: false
 };
 
 describe('ManageLinkedAccounts', () => {
   it('renders a table with oauth provider rows', () => {
-    const wrapper = mount(
-      <ManageLinkedAccounts
-        {...DEFAULT_PROPS}
-      />
-    );
+    const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
     expect(wrapper.find('table')).to.exist;
-    expect(wrapper.find('OauthConnection').at(0)).to.include.text('Google Account');
-    expect(wrapper.find('OauthConnection').at(1)).to.include.text('Microsoft Account');
-    expect(wrapper.find('OauthConnection').at(2)).to.include.text('Clever Account');
-    expect(wrapper.find('OauthConnection').at(3)).to.include.text('Facebook Account');
+    expect(wrapper.find('OauthConnection').at(0)).to.include.text(
+      'Google Account'
+    );
+    expect(wrapper.find('OauthConnection').at(1)).to.include.text(
+      'Microsoft Account'
+    );
+    expect(wrapper.find('OauthConnection').at(2)).to.include.text(
+      'Clever Account'
+    );
+    expect(wrapper.find('OauthConnection').at(3)).to.include.text(
+      'Facebook Account'
+    );
   });
 
   it('renders an empty message for unconnected authentication options', () => {
-    const wrapper = mount(
-      <ManageLinkedAccounts
-        {...DEFAULT_PROPS}
-      />
-    );
-    const googleEmailCell = wrapper.find('OauthConnection').at(0).find('td').at(1);
+    const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
+    const googleEmailCell = wrapper
+      .find('OauthConnection')
+      .at(0)
+      .find('td')
+      .at(1);
     expect(googleEmailCell).to.have.text('Not Connected');
   });
 
@@ -52,7 +59,11 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const googleEmailCell = wrapper.find('OauthConnection').at(0).find('td').at(1);
+    const googleEmailCell = wrapper
+      .find('OauthConnection')
+      .at(0)
+      .find('td')
+      .at(1);
     expect(googleEmailCell).to.have.text(ENCRYPTED);
   });
 
@@ -71,7 +82,11 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const googleEmailCell = wrapper.find('OauthConnection').at(0).find('td').at(1);
+    const googleEmailCell = wrapper
+      .find('OauthConnection')
+      .at(0)
+      .find('td')
+      .at(1);
     expect(googleEmailCell).to.have.text('teacher@email.com');
   });
 
@@ -89,20 +104,24 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const googleEmailCell = wrapper.find('OauthConnection').at(0).find('td').at(2);
+    const googleEmailCell = wrapper
+      .find('OauthConnection')
+      .at(0)
+      .find('td')
+      .at(2);
     expect(googleEmailCell).to.include.text('Oh no!');
   });
 
   it('navigates to provider endpoint if authentication option is not connected', () => {
     sinon.stub(utils, 'navigateToHref');
-    const wrapper = mount(
-      <ManageLinkedAccounts
-        {...DEFAULT_PROPS}
-      />
+    const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
+    wrapper
+      .find('BootstrapButton')
+      .at(0)
+      .simulate('click');
+    expect(utils.navigateToHref).to.have.been.calledOnce.and.calledWith(
+      '/users/auth/google_oauth2/connect'
     );
-    wrapper.find('BootstrapButton').at(0).simulate('click');
-    expect(utils.navigateToHref).to.have.been.calledOnce
-      .and.calledWith('/users/auth/google_oauth2/connect');
     utils.navigateToHref.restore();
   });
 
@@ -119,7 +138,10 @@ describe('ManageLinkedAccounts', () => {
         disconnect={disconnect}
       />
     );
-    wrapper.find('BootstrapButton').at(0).simulate('click');
+    wrapper
+      .find('BootstrapButton')
+      .at(0)
+      .simulate('click');
     expect(disconnect).to.have.been.calledOnce;
   });
 
@@ -149,7 +171,7 @@ describe('ManageLinkedAccounts', () => {
     expect(cleverConnectButton).to.have.attr('disabled');
   });
 
-  it('disables disconnecting from the user\'s last authentication option if the user does not have a password', () => {
+  it("disables disconnecting from the user's last authentication option if the user does not have a password", () => {
     const authOptions = {1: {id: 1, credentialType: 'facebook'}};
     const wrapper = mount(
       <ManageLinkedAccounts
@@ -162,7 +184,7 @@ describe('ManageLinkedAccounts', () => {
     expect(facebookConnectButton).to.have.attr('disabled');
   });
 
-  it('does not disable disconnecting from the user\'s last authentication option if the user has a password', () => {
+  it("does not disable disconnecting from the user's last authentication option if the user has a password", () => {
     const authOptions = {1: {id: 1, credentialType: 'facebook'}};
     const wrapper = mount(
       <ManageLinkedAccounts
@@ -175,11 +197,11 @@ describe('ManageLinkedAccounts', () => {
     expect(facebookConnectButton).to.not.have.attr('disabled');
   });
 
-  it('disables disconnecting from the user\'s last oauth authentication option if user doesn\'t have a password', () => {
+  it("disables disconnecting from the user's last oauth authentication option if user doesn't have a password", () => {
     const authOptions = {
       1: {id: 1, credentialType: 'google_oauth2'},
       2: {id: 2, credentialType: 'email'},
-      3: {id: 3, credentialType: 'email'},
+      3: {id: 3, credentialType: 'email'}
     };
     const wrapper = mount(
       <ManageLinkedAccounts

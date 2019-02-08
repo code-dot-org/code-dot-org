@@ -2,7 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
-import color from "../util/color";
+import color from '../util/color';
 import elementLibrary from './designElements/library';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
@@ -22,7 +22,7 @@ export default class DesignProperties extends React.Component {
     onDuplicate: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   state = {selectedTab: TabType.PROPERTIES};
@@ -31,7 +31,7 @@ export default class DesignProperties extends React.Component {
    * Handle a click on a tab, such as 'properties' or 'events'.
    * @param newTab {TabType} Tab to switch to.
    */
-  handleTabClick = (newTab) => this.setState({selectedTab: newTab});
+  handleTabClick = newTab => this.setState({selectedTab: newTab});
 
   render() {
     if (!this.props.element || !this.props.element.parentNode) {
@@ -52,13 +52,13 @@ export default class DesignProperties extends React.Component {
     const PropertyComponent = elementLibrary.getElementPropertyTab(elementType);
     const EventComponent = elementLibrary.getElementEventTab(elementType);
 
-    const isScreen = (elementType === elementLibrary.ElementType.SCREEN);
+    const isScreen = elementType === elementLibrary.ElementType.SCREEN;
     // For now, limit duplication to just non-screen elements
 
-    const onlyOneScreen = (this.props.screenIds.length === 1);
+    const onlyOneScreen = this.props.screenIds.length === 1;
 
     // First screen is not deletable
-    const isOnlyScreen = (isScreen && onlyOneScreen);
+    const isOnlyScreen = isScreen && onlyOneScreen;
 
     const tabHeight = 35;
     const borderColor = color.lighter_gray;
@@ -163,14 +163,21 @@ export default class DesignProperties extends React.Component {
     return (
       <div style={{height: '100%'}}>
         <div id="designDescription" style={styles.workspaceDescription}>
-          <p style={styles.workspaceDescriptionText} title={applabMsg.designWorkspaceDescription()}>
+          <p
+            style={styles.workspaceDescriptionText}
+            title={applabMsg.designWorkspaceDescription()}
+          >
             {applabMsg.designWorkspaceDescription()}
           </p>
         </div>
         <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
           <div
             id="propertiesTab"
-            style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeTab : styles.inactiveTab}
+            style={
+              this.state.selectedTab === TabType.PROPERTIES
+                ? styles.activeTab
+                : styles.inactiveTab
+            }
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}
           >
@@ -178,7 +185,11 @@ export default class DesignProperties extends React.Component {
           </div>
           <div
             id="eventsTab"
-            style={this.state.selectedTab === TabType.EVENTS ? styles.activeTab : styles.inactiveTab}
+            style={
+              this.state.selectedTab === TabType.EVENTS
+                ? styles.activeTab
+                : styles.inactiveTab
+            }
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.EVENTS)}
           >
@@ -195,26 +206,32 @@ export default class DesignProperties extends React.Component {
         <div id="designWorkspaceBody" style={styles.workspaceBody}>
           <div
             id="propertiesBody"
-            style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeBody : styles.inactiveBody}
+            style={
+              this.state.selectedTab === TabType.PROPERTIES
+                ? styles.activeBody
+                : styles.inactiveBody
+            }
           >
             {/* We provide a key to the outer div so that element foo and element bar are
                seen to be two completely different tables. Otherwise the defaultValues
                in inputs don't update correctly. */}
             <div key={key}>
               <div style={{float: 'right'}}>
-                {!isOnlyScreen &&
-                <DeleteElementButton
-                  shouldConfirm={isScreen}
-                  handleDelete={this.props.onDelete}
+                {!isOnlyScreen && (
+                  <DeleteElementButton
+                    shouldConfirm={isScreen}
+                    handleDelete={this.props.onDelete}
+                  />
+                )}
+                <DuplicateElementButton
+                  handleDuplicate={this.props.onDuplicate}
                 />
-                }
-                <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
-                {!onlyOneScreen && !isScreen &&
-                <CopyElementToScreenButton
-                  handleCopyElementToScreen={this.props.onCopyElementToScreen}
-                  screenIds={this.props.screenIds}
-                />
-                }
+                {!onlyOneScreen && !isScreen && (
+                  <CopyElementToScreenButton
+                    handleCopyElementToScreen={this.props.onCopyElementToScreen}
+                    screenIds={this.props.screenIds}
+                  />
+                )}
               </div>
               <PropertyComponent
                 element={this.props.element}
@@ -225,7 +242,11 @@ export default class DesignProperties extends React.Component {
           </div>
           <div
             id="eventsBody"
-            style={this.state.selectedTab === TabType.EVENTS ? styles.activeBody : styles.inactiveBody}
+            style={
+              this.state.selectedTab === TabType.EVENTS
+                ? styles.activeBody
+                : styles.inactiveBody
+            }
           >
             <EventComponent
               element={this.props.element}

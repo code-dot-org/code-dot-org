@@ -8,13 +8,13 @@ import {
   importOrUpdateRoster,
   sectionCode,
   sectionProvider,
-  sectionName,
+  sectionName
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button, {ButtonColor, ButtonSize} from '../../templates/Button';
 
 const PROVIDER_NAME = {
   [OAuthSectionTypes.clever]: i18n.loginTypeClever(),
-  [OAuthSectionTypes.google_classroom]: i18n.loginTypeGoogleClassroom(),
+  [OAuthSectionTypes.google_classroom]: i18n.loginTypeGoogleClassroom()
 };
 
 export const READY = 'ready';
@@ -34,11 +34,11 @@ class SyncOmniAuthSectionControl extends React.Component {
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
-    updateRoster: PropTypes.func.isRequired,
+    updateRoster: PropTypes.func.isRequired
   };
 
   state = {
-    buttonState: READY,
+    buttonState: READY
   };
 
   onClick = () => {
@@ -90,22 +90,21 @@ class SyncOmniAuthSectionControl extends React.Component {
   }
 }
 export const UnconnectedSyncOmniAuthSectionControl = SyncOmniAuthSectionControl;
-export default connect((state, props) => ({
-  sectionCode: sectionCode(state, props.sectionId),
-  sectionName: sectionName(state, props.sectionId),
-  sectionProvider: sectionProvider(state, props.sectionId),
-}), {
-  updateRoster: importOrUpdateRoster,
-})(SyncOmniAuthSectionControl);
+export default connect(
+  (state, props) => ({
+    sectionCode: sectionCode(state, props.sectionId),
+    sectionName: sectionName(state, props.sectionId),
+    sectionProvider: sectionProvider(state, props.sectionId)
+  }),
+  {
+    updateRoster: importOrUpdateRoster
+  }
+)(SyncOmniAuthSectionControl);
 
 /**
  * Pure view component of the omniauth sync control.
  */
-export function SyncOmniAuthSectionButton({
-  provider,
-  buttonState,
-  onClick,
-}) {
+export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
   const providerName = PROVIDER_NAME[provider];
   return (
     <Button
@@ -120,8 +119,9 @@ export function SyncOmniAuthSectionButton({
 }
 SyncOmniAuthSectionButton.propTypes = {
   provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
-  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, FAILURE]).isRequired,
-  onClick: PropTypes.func,
+  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, FAILURE])
+    .isRequired,
+  onClick: PropTypes.func
 };
 
 function buttonText(buttonState, providerName) {
@@ -139,12 +139,12 @@ function iconProps(buttonState) {
   if (buttonState === IN_PROGRESS) {
     return {
       icon: 'refresh',
-      iconClassName: 'fa-spin fa-fw',
+      iconClassName: 'fa-spin fa-fw'
     };
   } else if (buttonState === FAILURE) {
     return {
       icon: 'exclamation-circle',
-      iconClassName: 'fa-fw',
+      iconClassName: 'fa-fw'
     };
   }
   return {};

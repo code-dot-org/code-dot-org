@@ -14,17 +14,14 @@ const DEFAULT_PROPS = {
 describe('ToggleAllTutorialsButton', () => {
   it('renders while showing all tutorials', () => {
     const wrapper = shallow(
-      <ToggleAllTutorialsButton
-        {...DEFAULT_PROPS}
-        showingAllTutorials={true}
-      />
+      <ToggleAllTutorialsButton {...DEFAULT_PROPS} showingAllTutorials={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <button onClick={FAKE_HIDE_ALL}>
           {i18n.hideAllTutorialsButton()}
           &nbsp;
-          <i className="fa fa-caret-up"/>
+          <i className="fa fa-caret-up" />
         </button>
       </div>
     );
@@ -42,7 +39,7 @@ describe('ToggleAllTutorialsButton', () => {
         <button onClick={FAKE_SHOW_ALL}>
           {i18n.showAllTutorialsButton()}
           &nbsp;
-          <i className="fa fa-caret-down"/>
+          <i className="fa fa-caret-down" />
         </button>
       </div>
     );
