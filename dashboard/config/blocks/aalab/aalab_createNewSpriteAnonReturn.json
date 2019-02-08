@@ -1,0 +1,24 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "createNewSpriteAnonReturn",
+    "inline": false,
+    "blockText": "aalab make new {ANIMATION_NAME} sprite at {LOCATION}",
+    "returnType": "None",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

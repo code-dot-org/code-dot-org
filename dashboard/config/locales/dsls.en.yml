@@ -9574,6 +9574,17 @@ en:
         2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
         2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
         2<sup>4</sup> = 16 times as many values: 2<sup>4</sup> = 16 times as many values
+      U1 L01 CYU MC:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
+      U1 L02 CYU MC:
+        '1': '1'
+        '3': '3'
+        'The score is: 1': 'The score is: 1'
+        'The score is: score': 'The score is: score'
       U1L07 Assessment 1:
         A: A
         B: B
