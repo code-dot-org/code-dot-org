@@ -1,8 +1,8 @@
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursed/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursed/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}'
 version_year '2019'
 
 stage 'Algorithms: Graph Paper Programming'
