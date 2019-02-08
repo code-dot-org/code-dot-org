@@ -1279,6 +1279,7 @@
   "subtitle": "პროგრამირების ვიზუალური გარემო",
   "success": "წარმატება!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "განყოფილების გადართვა:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "თქვენს პროგრამაში ბეჭდური შეცდომაა. წაშალეთ ხაზი {lineNumber} და სცადეთ თავიდან.",

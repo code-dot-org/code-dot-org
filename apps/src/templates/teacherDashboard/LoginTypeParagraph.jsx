@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -12,11 +12,11 @@ class LoginTypeParagraph extends Component {
     sectionId: PropTypes.number.isRequired,
     onLoginTypeChanged: PropTypes.func,
     // Provided by Redux
-    section: sectionShape,
+    section: sectionShape
   };
 
   state = {
-    isDialogOpen: false,
+    isDialogOpen: false
   };
 
   openDialog = () => this.setState({isDialogOpen: true});
@@ -43,7 +43,7 @@ class LoginTypeParagraph extends Component {
 
     return (
       <div>
-        <Paragraph loginType={section.loginType}/>
+        <Paragraph loginType={section.loginType} />
         <Button
           onClick={this.openDialog}
           text={getButtonText(section.loginType, section.studentCount)}
@@ -62,19 +62,19 @@ class LoginTypeParagraph extends Component {
 
 export const UnconnectedLoginTypeParagraph = LoginTypeParagraph;
 export default connect((state, props) => ({
-  section: state.teacherSections.sections[props.sectionId],
+  section: state.teacherSections.sections[props.sectionId]
 }))(LoginTypeParagraph);
 
 const longDescriptionByLoginType = {
   [SectionLoginType.picture]: i18n.loginTypePictureLongDescription(),
   [SectionLoginType.word]: i18n.loginTypeWordLongDescription(),
-  [SectionLoginType.email]: i18n.loginTypeEmailLongDescription(),
+  [SectionLoginType.email]: i18n.loginTypeEmailLongDescription()
 };
 
 const resetDescriptionByLoginType = {
   [SectionLoginType.picture]: i18n.loginTypePictureResetDescription(),
   [SectionLoginType.word]: i18n.loginTypeWordResetDescription(),
-  [SectionLoginType.email]: i18n.loginTypeEmailResetDescription(),
+  [SectionLoginType.email]: i18n.loginTypeEmailResetDescription()
 };
 
 function isSupportedType(loginType) {
@@ -87,23 +87,19 @@ function Paragraph({loginType}) {
   }
   return (
     <div>
-      <p>
-        {longDescriptionByLoginType[loginType]}
-      </p>
-      <p>
-        {resetDescriptionByLoginType[loginType]}
-      </p>
+      <p>{longDescriptionByLoginType[loginType]}</p>
+      <p>{resetDescriptionByLoginType[loginType]}</p>
     </div>
   );
 }
 Paragraph.propTypes = {
-  loginType: PropTypes.string,
+  loginType: PropTypes.string
 };
 
 const buttonTextByLoginType = {
   [SectionLoginType.picture]: i18n.changeLoginTypeToWord_button(),
   [SectionLoginType.word]: i18n.changeLoginTypeToPicture_button(),
-  [SectionLoginType.email]: i18n.changeLoginTypeToWordOrPicture_button(),
+  [SectionLoginType.email]: i18n.changeLoginTypeToWordOrPicture_button()
 };
 
 function getButtonText(loginType, studentCount) {

@@ -3,7 +3,8 @@ import {TestResults} from '@cdo/apps/constants';
 var level = {
   // f(x) = x
   // f(3)
-  solutionBlocks: '<xml>' +
+  solutionBlocks:
+    '<xml>' +
     '  <block type="functional_compute" inline="false" deletable="false" movable="false">' +
     '  <functional_input name="ARG1">' +
     '    <block type="functional_call" inline="false">' +
@@ -35,21 +36,22 @@ var level = {
     '</block>' +
     '</xml>',
   ideal: Infinity,
-  freePlay: false,
+  freePlay: false
 };
 
 module.exports = {
-  app: "calc",
+  app: 'calc',
   skinId: 'calc',
   levelDefinition: level,
   tests: [
     {
-      description: "Correct answer",
+      description: 'Correct answer',
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '  <block type="functional_compute" inline="false" deletable="false" movable="false">' +
         '  <functional_input name="ARG1">' +
         '    <block type="functional_call" inline="false">' +
@@ -79,7 +81,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>',
+        '</xml>'
     },
     {
       description: 'Incorrect evaluation for f(3)',
@@ -87,7 +89,8 @@ module.exports = {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '  <block type="functional_compute" inline="false" deletable="false" movable="false">' +
         '  <functional_input name="ARG1">' +
         '    <block type="functional_call" inline="false">' +
@@ -122,7 +125,8 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '  <block type="functional_compute" inline="false" deletable="false" movable="false">' +
         '  <functional_input name="ARG1">' +
         '    <block type="functional_call" inline="false">' +
@@ -150,21 +154,27 @@ module.exports = {
         '  </functional_input>' +
         '</block>' +
         '</xml>',
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         // At the point where report gets called, we haven't actually updated
         // our display area. We do our validation asynchronously so that
         // we do update our display area before this gets called
-        setTimeout(function () {
+        setTimeout(function() {
           var userExpression = document.getElementById('userExpression');
           assert(userExpression.childNodes.length === 3);
           var failedInputGroup = userExpression.childNodes[2];
           assert(failedInputGroup.childNodes.length === 6);
           var equalSign = failedInputGroup.childNodes[4];
-          assert(equalSign.className.baseVal === '', 'actual: ' + equalSign.className);
-          assert(equalSign.textContent === "\u00A0\u00A0=\u00A0\u00A0", 'actual: ' + equalSign.textContent.replace(/ /g, "_"));
+          assert(
+            equalSign.className.baseVal === '',
+            'actual: ' + equalSign.className
+          );
+          assert(
+            equalSign.textContent === '\u00A0\u00A0=\u00A0\u00A0',
+            'actual: ' + equalSign.textContent.replace(/ /g, '_')
+          );
           var failureText = failedInputGroup.childNodes[5];
           assert(failureText.className.baseVal === 'errorToken');
-          assert(failureText.textContent === "3");
+          assert(failureText.textContent === '3');
         }, 0);
 
         return true;
@@ -177,7 +187,8 @@ module.exports = {
         testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD
       },
       // same as correct answer, but with a ???
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '  <block type="functional_compute" inline="false" deletable="false" movable="false">' +
         '  <functional_input name="ARG1">' +
         '    <block type="functional_call" inline="false">' +
@@ -207,7 +218,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>',
+        '</xml>'
     }
   ]
 };

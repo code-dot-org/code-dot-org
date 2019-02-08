@@ -1,6 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
 
-
 // Level has no goals
 
 var levelDef = {
@@ -8,7 +7,7 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0,16, 0, 0, 0],
+    [0, 0, 0, 0, 16, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -19,8 +18,8 @@ var levelDef = {
 };
 
 module.exports = {
-  app: "studio",
-  skinId: "studio",
+  app: 'studio',
+  skinId: 'studio',
   levelDefinition: levelDef,
   tests: [
     {
@@ -29,7 +28,7 @@ module.exports = {
       expected: {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
-      },
+      }
     }
   ]
 };

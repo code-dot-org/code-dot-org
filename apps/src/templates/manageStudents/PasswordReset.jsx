@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Button from '../Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 const styles = {
   input: {
     width: 100,
     height: 29,
     marginTop: -25,
-    marginRight: 10,
+    marginRight: 10
   }
 };
 
@@ -16,7 +16,7 @@ class PasswordReset extends Component {
   static propTypes = {
     initialIsResetting: PropTypes.bool,
     sectionId: PropTypes.number,
-    studentId: PropTypes.number,
+    studentId: PropTypes.number
   };
 
   state = {
@@ -49,21 +49,23 @@ class PasswordReset extends Component {
       url: `/dashboardapi/sections/${sectionId}/students/${studentId}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToUpdate),
-    }).done((data) => {
-      this.setState({
-        isResetting: false,
-        input: ''
+      data: JSON.stringify(dataToUpdate)
+    })
+      .done(data => {
+        this.setState({
+          isResetting: false,
+          input: ''
+        });
+      })
+      .fail((jqXhr, status) => {
+        // We may want to handle this more cleanly in the future, but for now this
+        // matches the experience we got in angular
+        alert(i18n.unexpectedError());
+        console.error(status);
       });
-    }).fail((jqXhr, status) => {
-      // We may want to handle this more cleanly in the future, but for now this
-      // matches the experience we got in angular
-      alert(i18n.unexpectedError());
-      console.error(status);
-    });
   };
 
-  updateInput = (event) => {
+  updateInput = event => {
     this.setState({
       input: event.target.value
     });
@@ -72,10 +74,14 @@ class PasswordReset extends Component {
   render() {
     return (
       <div>
-        {!this.state.isResetting &&
-          <Button onClick={this.reset} color={Button.ButtonColor.white} text={i18n.resetPassword()} />
-        }
-        {this.state.isResetting &&
+        {!this.state.isResetting && (
+          <Button
+            onClick={this.reset}
+            color={Button.ButtonColor.white}
+            text={i18n.resetPassword()}
+          />
+        )}
+        {this.state.isResetting && (
           <div>
             <input
               style={styles.input}
@@ -83,12 +89,20 @@ class PasswordReset extends Component {
               value={this.state.input}
               onChange={this.updateInput}
             />
-            <Button onClick={this.save} color={Button.ButtonColor.blue} text={i18n.save()} />
+            <Button
+              onClick={this.save}
+              color={Button.ButtonColor.blue}
+              text={i18n.save()}
+            />
             <div>
-              <Button onClick={this.cancel} color={Button.ButtonColor.white} text={i18n.cancel()} />
+              <Button
+                onClick={this.cancel}
+                color={Button.ButtonColor.white}
+                text={i18n.cancel()}
+              />
             </div>
           </div>
-        }
+        )}
       </div>
     );
   }

@@ -1,10 +1,13 @@
-import { assert } from '../../../util/configuredChai';
+import {assert} from '../../../util/configuredChai';
 import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import { fakeLevels, fakeLevel } from '@cdo/apps/templates/progress/progressTestHelpers';
+import {
+  fakeLevels,
+  fakeLevel
+} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-describe('ProgressLevelSet', function () {
+describe('ProgressLevelSet', function() {
   it('has a pill and no bubbles for a single level', () => {
     const wrapper = shallow(
       <ProgressLevelSet
@@ -37,10 +40,9 @@ describe('ProgressLevelSet', function () {
     const wrapper = shallow(
       <ProgressLevelSet
         name={undefined}
-        levels={[
-          fakeLevel({isUnplugged: true}),
-          ...fakeLevels(5)
-        ].map(level => ({...level, name: undefined }))}
+        levels={[fakeLevel({isUnplugged: true}), ...fakeLevels(5)].map(
+          level => ({...level, name: undefined})
+        )}
         disabled={false}
       />
     );
@@ -51,14 +53,12 @@ describe('ProgressLevelSet', function () {
     const wrapper = shallow(
       <ProgressLevelSet
         name={undefined}
-        levels={[
-          ...fakeLevels(5),
-          fakeLevel({isUnplugged: true}),
-        ].map(level => ({...level, name: undefined }))}
+        levels={[...fakeLevels(5), fakeLevel({isUnplugged: true})].map(
+          level => ({...level, name: undefined})
+        )}
         disabled={false}
       />
     );
     assert.equal(wrapper.find('ProgressPill').props().text, '');
   });
-
 });

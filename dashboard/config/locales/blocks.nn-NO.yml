@@ -989,7 +989,7 @@ nn:
         text: i midten
       Vector_randomLocation:
         text: tilfeldig sted
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': størrelse

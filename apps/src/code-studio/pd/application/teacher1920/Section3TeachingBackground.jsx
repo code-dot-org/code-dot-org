@@ -1,5 +1,5 @@
 import React from 'react';
-import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import {
   PageLabels,
   SectionHeaders,
@@ -11,7 +11,7 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
   static labels = PageLabels.section3TeachingBackground;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section3TeachingBackground),
+    ...Object.keys(PageLabels.section3TeachingBackground)
   ];
 
   render() {
@@ -19,37 +19,37 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
       <FormGroup>
         <h3>Section 3: {SectionHeaders.section3TeachingBackground}</h3>
         {this.checkBoxesWithAdditionalTextFieldsFor('subjectsTeaching', {
-          [TextFields.otherPleaseList]: "other"
+          [TextFields.otherPleaseList]: 'other'
         })}
         <p>
-          Requirements for licensing, certifications, and endorsements to teach computer
-          science vary widely across the country. Please answer the following questions to
-          the best of your knowledge, so that your Regional Partner can ensure that
-          teachers selected for this program will be able to teach the course in the
-          coming school year.
+          Requirements for licensing, certifications, and endorsements to teach
+          computer science vary widely across the country. Please answer the
+          following questions to the best of your knowledge, so that your
+          Regional Partner can ensure that teachers selected for this program
+          will be able to teach the course in the coming school year.
         </p>
         <p>
-          Note: Code.org does not require specific licenses to teach these courses, but to
-          participate in this program, you should be planning to teach this course during
-          the 2019-20 school year.
+          Note: Code.org does not require specific licenses to teach these
+          courses, but to participate in this program, you should be planning to
+          teach this course during the 2019-20 school year.
         </p>
         {this.radioButtonsFor('doesSchoolRequireCsLicense')}
-        {this.props.data.doesSchoolRequireCsLicense === 'Yes' && this.largeInputFor('whatLicenseRequired')}
+        {this.props.data.doesSchoolRequireCsLicense === 'Yes' &&
+          this.largeInputFor('whatLicenseRequired')}
         {this.radioButtonsFor('haveCsLicense')}
         {this.checkBoxesWithAdditionalTextFieldsFor('subjectsLicensedToTeach', {
-          [TextFields.otherPleaseList]: "other"
+          [TextFields.otherPleaseList]: 'other'
         })}
         {this.checkBoxesWithAdditionalTextFieldsFor('taughtInPast', {
-          [TextFields.otherPleaseList]: "other"
+          [TextFields.otherPleaseList]: 'other'
         })}
         {this.checkBoxesFor('previousYearlongCdoPd')}
         {this.checkBoxesWithAdditionalTextFieldsFor('csOfferedAtSchool', {
-          [TextFields.otherPleaseList]: "other"
+          [TextFields.otherPleaseList]: 'other'
         })}
       </FormGroup>
     );
   }
-
 
   /**
    * @override

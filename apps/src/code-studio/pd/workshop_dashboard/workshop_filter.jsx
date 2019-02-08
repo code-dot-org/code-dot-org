@@ -4,21 +4,18 @@
  */
 import PropTypes from 'prop-types';
 
-import React from "react";
+import React from 'react';
 import {connect} from 'react-redux';
-import $ from "jquery";
-import _ from "lodash";
-import Select from "react-select";
-import "react-select/dist/react-select.css";
+import $ from 'jquery';
+import _ from 'lodash';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 import {SelectStyleProps} from '../constants';
-import ServerSortWorkshopTable from "./components/server_sort_workshop_table";
-import DatePicker from "./components/date_picker";
-import {DATE_FORMAT} from "./workshopConstants";
-import {
-  PermissionPropType,
-  WorkshopAdmin
-} from "./permission";
-import moment from "moment";
+import ServerSortWorkshopTable from './components/server_sort_workshop_table';
+import DatePicker from './components/date_picker';
+import {DATE_FORMAT} from './workshopConstants';
+import {PermissionPropType, WorkshopAdmin} from './permission';
+import moment from 'moment';
 import {
   Grid,
   Row,
@@ -31,13 +28,15 @@ import {
   Button,
   MenuItem,
   Clearfix
-} from "react-bootstrap";
+} from 'react-bootstrap';
 import {
   Courses,
   Subjects,
   States
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import RegionalPartnerDropdown, {RegionalPartnerPropType} from "../components/regional_partner_dropdown";
+import RegionalPartnerDropdown, {
+  RegionalPartnerPropType
+} from '../components/regional_partner_dropdown';
 
 const limitOptions = [
   {value: 25, text: 'first 25'},
@@ -45,7 +44,7 @@ const limitOptions = [
   {value: null, text: 'all'}
 ];
 
-const QUERY_API_URL = "/api/v1/pd/workshops/filter";
+const QUERY_API_URL = '/api/v1/pd/workshops/filter';
 
 export class WorkshopFilter extends React.Component {
   static propTypes = {
@@ -61,7 +60,7 @@ export class WorkshopFilter extends React.Component {
         subject: PropTypes.string,
         organizer_id: PropTypes.string,
         teacher_email: PropTypes.string,
-        only_attended: PropTypes.string,
+        only_attended: PropTypes.string
       })
     }),
     showRegionalPartnerDropdown: PropTypes.bool
@@ -92,18 +91,22 @@ export class WorkshopFilter extends React.Component {
       url: '/api/v1/pd/workshop_organizers',
       dataType: 'json'
     })
-    .done(data => {
-      this.setState({
-        organizersLoading: false,
-        organizers: data
+      .done(data => {
+        this.setState({
+          organizersLoading: false,
+          organizers: data
+        });
+      })
+      .fail(data => {
+        if (data.statusText !== 'abort') {
+          console.log(
+            `Failed to load available workshop organizers: ${data.statusText}`
+          );
+          alert(
+            "We're sorry, we were unable to load available workshop organizers. Please refresh this page to try again"
+          );
+        }
       });
-    })
-    .fail((data) => {
-      if (data.statusText !== "abort") {
-        console.log(`Failed to load available workshop organizers: ${data.statusText}`);
-        alert("We're sorry, we were unable to load available workshop organizers. Please refresh this page to try again");
-      }
-    });
   }
 
   loadFacilitators() {
@@ -112,18 +115,22 @@ export class WorkshopFilter extends React.Component {
       url: '/api/v1/pd/course_facilitators',
       dataType: 'json'
     })
-    .done(data => {
-      this.setState({
-        facilitatorsLoading: false,
-        facilitators: data
+      .done(data => {
+        this.setState({
+          facilitatorsLoading: false,
+          facilitators: data
+        });
+      })
+      .fail(data => {
+        if (data.statusText !== 'abort') {
+          console.log(
+            `Failed to load available facilitators: ${data.statusText}`
+          );
+          alert(
+            "We're sorry, we were unable to load available facilitators. Please refresh this page to try again"
+          );
+        }
       });
-    })
-    .fail((data) => {
-      if (data.statusText !== "abort") {
-        console.log(`Failed to load available facilitators: ${data.statusText}`);
-        alert("We're sorry, we were unable to load available facilitators. Please refresh this page to try again");
-      }
-    });
   }
 
   componentWillUnmount() {
@@ -135,7 +142,7 @@ export class WorkshopFilter extends React.Component {
     }
   }
 
-  handleStartChange = (date) => {
+  handleStartChange = date => {
     const dateString = this.formatDate(date);
     let newFilters = {start: dateString};
     if (date && date.isAfter(this.getFiltersFromUrlParams().end)) {
@@ -144,7 +151,7 @@ export class WorkshopFilter extends React.Component {
     this.updateLocationAndSetFilters(newFilters);
   };
 
-  handleEndChange = (date) => {
+  handleEndChange = date => {
     const dateString = this.formatDate(date);
     let newFilters = {end: dateString};
     if (date && date.isBefore(this.getFiltersFromUrlParams().start)) {
@@ -153,61 +160,63 @@ export class WorkshopFilter extends React.Component {
     this.updateLocationAndSetFilters(newFilters);
   };
 
-  handleStateChange = (selected) => {
+  handleStateChange = selected => {
     const state = selected ? selected.value : null;
     this.updateLocationAndSetFilters({state});
   };
 
-  handleCourseChange = (selected) => {
+  handleCourseChange = selected => {
     const course = selected ? selected.value : null;
     this.updateLocationAndSetFilters({course, subject: null});
   };
 
-  handleSubjectChange = (selected) => {
+  handleSubjectChange = selected => {
     const subject = selected ? selected.value : null;
     this.updateLocationAndSetFilters({subject});
   };
 
-  handleFacilitatorChange = (selected) => {
+  handleFacilitatorChange = selected => {
     const facilitator_id = selected ? selected.value : null;
     this.updateLocationAndSetFilters({facilitator_id});
   };
 
-  handleOrganizerChange = (selected) => {
+  handleOrganizerChange = selected => {
     const organizer_id = selected ? selected.value : null;
     this.updateLocationAndSetFilters({organizer_id});
   };
 
-  handleTeacherEmailChange = (data) => {
+  handleTeacherEmailChange = data => {
     const teacher_email = data.target.value;
     this.updateLocationAndSetFilters({teacher_email});
   };
 
-  handleOnlyAttendedChange = (data) => {
+  handleOnlyAttendedChange = data => {
     const only_attended = data.target.checked;
     this.updateLocationAndSetFilters({only_attended});
   };
 
-  handleLimitChange = (limit) => {
+  handleLimitChange = limit => {
     this.setState({limit});
   };
 
   handleDownloadCSVClick = () => {
-    const downloadUrl=`${QUERY_API_URL}.csv?${$.param(this.getFiltersFromUrlParams())}`;
+    const downloadUrl = `${QUERY_API_URL}.csv?${$.param(
+      this.getFiltersFromUrlParams()
+    )}`;
     window.open(downloadUrl);
   };
 
-  generateCaptionFromWorkshops = (workshops) => {
+  generateCaptionFromWorkshops = workshops => {
     return (
       <div>
-        {"Show "}
+        {'Show '}
         <DropdownButton
           bsSize="xsmall"
           title={this.state.limit.text}
           id="workshop-limit-dropdown"
           noCaret
         >
-          {limitOptions.map((option, i) =>
+          {limitOptions.map((option, i) => (
             <MenuItem
               key={i}
               eventKey={option}
@@ -215,14 +224,11 @@ export class WorkshopFilter extends React.Component {
             >
               {option.text}
             </MenuItem>
-          )}
+          ))}
         </DropdownButton>
         {` of ${workshops.total_count} workshops.`}
         &nbsp;
-        <Button
-          bsSize="xsmall"
-          onClick={this.handleDownloadCSVClick}
-        >
+        <Button bsSize="xsmall" onClick={this.handleDownloadCSVClick}>
           Download all as CSV
         </Button>
       </div>
@@ -271,8 +277,10 @@ export class WorkshopFilter extends React.Component {
     });
   }
 
-  getUrl(newFilters=this.getFiltersFromUrlParams()) {
-    return `${this.props.location.pathname}?${$.param(this.getUrlParamsHash(newFilters))}`;
+  getUrl(newFilters = this.getFiltersFromUrlParams()) {
+    return `${this.props.location.pathname}?${$.param(
+      this.getUrlParamsHash(newFilters)
+    )}`;
   }
 
   // Updates the URL with the new query params so it can be shared.
@@ -368,8 +376,7 @@ export class WorkshopFilter extends React.Component {
             </FormGroup>
           </Col>
           <Clearfix visibleLgBlock />
-          {
-            filters.course && Subjects[filters.course] &&
+          {filters.course && Subjects[filters.course] && (
             <Col md={5} sm={6}>
               <FormGroup>
                 <ControlLabel>Subject</ControlLabel>
@@ -377,15 +384,17 @@ export class WorkshopFilter extends React.Component {
                   value={filters.subject}
                   onChange={this.handleSubjectChange}
                   placeholder={null}
-                  options={Subjects[filters.course].map(v => ({value: v, label: v}))}
+                  options={Subjects[filters.course].map(v => ({
+                    value: v,
+                    label: v
+                  }))}
                   {...SelectStyleProps}
                 />
               </FormGroup>
             </Col>
-          }
+          )}
           <Clearfix visibleSmBlock />
-          {
-            this.props.permission.has(WorkshopAdmin) &&
+          {this.props.permission.has(WorkshopAdmin) && (
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Facilitator</ControlLabel>
@@ -400,9 +409,8 @@ export class WorkshopFilter extends React.Component {
                 />
               </FormGroup>
             </Col>
-          }
-          {
-            this.props.permission.has(WorkshopAdmin) &&
+          )}
+          {this.props.permission.has(WorkshopAdmin) && (
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
@@ -417,9 +425,8 @@ export class WorkshopFilter extends React.Component {
                 />
               </FormGroup>
             </Col>
-          }
-          {
-            this.props.permission.has(WorkshopAdmin) &&
+          )}
+          {this.props.permission.has(WorkshopAdmin) && (
             <Col md={4}>
               <FormGroup>
                 <ControlLabel>Teacher Email</ControlLabel>
@@ -436,23 +443,22 @@ export class WorkshopFilter extends React.Component {
                     </FormControl.Static>
                     <input
                       type="checkbox"
-                      checked={filters.only_attended === "true"}
+                      checked={filters.only_attended === 'true'}
                       onChange={this.handleOnlyAttendedChange}
                     />
                   </InputGroup.Addon>
                 </InputGroup>
               </FormGroup>
             </Col>
-          }
+          )}
         </Row>
-        {
-          this.props.showRegionalPartnerDropdown &&
+        {this.props.showRegionalPartnerDropdown && (
           <Row>
             <Col md={6}>
-              <RegionalPartnerDropdown/>
+              <RegionalPartnerDropdown />
             </Col>
           </Row>
-        }
+        )}
         <Row>
           <ServerSortWorkshopTable
             queryUrl={QUERY_API_URL}
@@ -471,5 +477,6 @@ export class WorkshopFilter extends React.Component {
 export default connect(state => ({
   permission: state.workshopDashboard.permission,
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
-  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
+  showRegionalPartnerDropdown:
+    state.regionalPartners.regionalPartners.length > 1
 }))(WorkshopFilter);

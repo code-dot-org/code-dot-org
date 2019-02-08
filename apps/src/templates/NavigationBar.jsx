@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import FontAwesome from './FontAwesome';
 import NavigationBarLink from './NavigationBarLink';
 
@@ -10,7 +10,7 @@ const styles = {
     height: 50,
     width: '100%',
     backgroundColor: color.purple,
-    marginBottom: 20,
+    marginBottom: 20
   },
   linksBox: {
     overflow: 'auto',
@@ -22,7 +22,7 @@ const styles = {
   linkBox: {
     display: 'inline',
     paddingRight: 20,
-    paddingLeft: 20,
+    paddingLeft: 20
   },
   chevron: {
     fontSize: 20,
@@ -42,19 +42,19 @@ const styles = {
 
 export default class NavigationBar extends React.Component {
   static propTypes = {
-    links: PropTypes.array.isRequired,
+    links: PropTypes.array.isRequired
   };
 
   state = {
-    listPosition: "start"
+    listPosition: 'start'
   };
 
   scrollForward = () => {
     const lastLink = _.last(this.props.links);
     if (lastLink && lastLink.url) {
       const element = document.getElementById(lastLink.url);
-      element.scrollIntoView({block: "end", behavior: "smooth"});
-      this.setState({listPosition: "end"});
+      element.scrollIntoView({block: 'end', behavior: 'smooth'});
+      this.setState({listPosition: 'end'});
     }
   };
 
@@ -62,8 +62,8 @@ export default class NavigationBar extends React.Component {
     const firstLink = _.first(this.props.links);
     if (firstLink && firstLink.url) {
       const element = document.getElementById(firstLink.url);
-      element.scrollIntoView({block: "start", behavior: "smooth"});
-      this.setState({listPosition: "start"});
+      element.scrollIntoView({block: 'start', behavior: 'smooth'});
+      this.setState({listPosition: 'start'});
     }
   };
 
@@ -72,34 +72,27 @@ export default class NavigationBar extends React.Component {
 
     return (
       <div style={styles.navBar}>
-        {this.state.listPosition === "end" &&
+        {this.state.listPosition === 'end' && (
           <FontAwesome
             icon="chevron-left"
             style={styles.chevron}
             onClick={this.scrollBackward}
           />
-        }
+        )}
         <div style={styles.linksBox}>
           {links.map(link => (
-            <div
-              id={link.url}
-              key={link.url}
-              style={styles.linkBox}
-            >
-              <NavigationBarLink
-                label={link.label}
-                url={link.url}
-              />
+            <div id={link.url} key={link.url} style={styles.linkBox}>
+              <NavigationBarLink label={link.label} url={link.url} />
             </div>
           ))}
         </div>
-        {this.state.listPosition === "start" &&
+        {this.state.listPosition === 'start' && (
           <FontAwesome
             icon="chevron-right"
             style={styles.chevron}
             onClick={this.scrollForward}
           />
-        }
+        )}
       </div>
     );
   }

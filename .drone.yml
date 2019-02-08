@@ -3,9 +3,15 @@ kind: pipeline
 name: unit
 
 clone:
-  depth: 50
+  disable: true
 
 steps:
+- name: clone
+  image: docker:git
+  commands:
+  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 50 $DRONE_GIT_HTTP_URL .
+  - git reset --hard $DRONE_COMMIT
+
 - name: verify-pr
   image: wintercdo/code-dot-org:0.7
   pull: always
@@ -141,6 +147,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: 85bf71e91bbb85284b075768b4df3288bf99fce202b02e28835cfea417026b7e
+hmac: 4ef30caa9dc7941b06d4ed3e8427def6b650ee9b3ceb3b161e2ffe83e603cae4
 
 ...

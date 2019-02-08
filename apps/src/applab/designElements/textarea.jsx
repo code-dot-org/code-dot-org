@@ -86,7 +86,7 @@ class TextAreaProperties extends React.Component {
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'left'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BooleanPropertyRow
@@ -103,8 +103,8 @@ class TextAreaProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-
-      </div>);
+      </div>
+    );
 
     // TODO:
     // bold/italics/underline (p2)
@@ -117,14 +117,20 @@ class TextAreaEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
   };
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' entered text: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -136,7 +142,8 @@ class TextAreaEvents extends React.Component {
   render() {
     const element = this.props.element;
     const changeName = 'Change';
-    const changeDesc = 'Triggered when the text area loses focus if the text has changed.';
+    const changeDesc =
+      'Triggered when the text area loses focus if the text has changed.';
 
     return (
       <div id="eventRowContainer">
@@ -146,7 +153,7 @@ class TextAreaEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -161,7 +168,7 @@ export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
@@ -177,10 +184,10 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
     $(element).addClass('textArea');
 
-    $(element).on('mousedown', function (e) {
+    $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text area unless running
         e.preventDefault();
@@ -188,14 +195,14 @@ export default {
     });
 
     // swallow keydown unless we're running
-    $(element).on('keydown', function (e) {
+    $(element).on('keydown', function(e) {
       if (!Applab.isRunning()) {
         e.preventDefault();
       }
     });
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'value':
         element.innerHTML = value;
@@ -206,7 +213,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'value':
         return element.innerHTML;
@@ -214,5 +221,4 @@ export default {
         throw `unknown property name ${name}`;
     }
   }
-
 };

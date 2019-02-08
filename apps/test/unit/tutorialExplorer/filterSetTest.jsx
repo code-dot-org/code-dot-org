@@ -35,7 +35,7 @@ const DEFAULT_PROPS = {
   ],
   selection: {
     'group-1': [],
-    'group-2': ['xyzzy'],
+    'group-2': ['xyzzy']
   },
   onUserInputFilter: FAKE_ON_USER_INPUT,
   onUserInputOrgName: FAKE_ON_ORG_NAME,
@@ -44,7 +44,7 @@ const DEFAULT_PROPS = {
 
 describe('FilterSet', () => {
   it('renders the provided filter groups', () => {
-    const wrapper = shallow(<FilterSet {...DEFAULT_PROPS}/>);
+    const wrapper = shallow(<FilterSet {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <FilterGroupOrgNames
         orgName={FAKE_ORG_NAME}
@@ -78,13 +78,10 @@ describe('FilterSet', () => {
 
   it('adds a robotics button if a URL is provided', () => {
     const wrapper = shallow(
-      <FilterSet
-        {...DEFAULT_PROPS}
-        roboticsButtonUrl="https://example.com"
-      />
+      <FilterSet {...DEFAULT_PROPS} roboticsButtonUrl="https://example.com" />
     );
     expect(wrapper).to.containMatchingElement(
-      <RoboticsButton url="https://example.com"/>
+      <RoboticsButton url="https://example.com" />
     );
   });
 
@@ -125,7 +122,6 @@ describe('FilterSet', () => {
     expect(wrapper.children()).to.have.length(3);
   });
 
-
   it('hides desktop items when using mobile layout', () => {
     const wrapper = shallow(
       <FilterSet
@@ -144,5 +140,4 @@ describe('FilterSet', () => {
     );
     expect(wrapper.children()).to.have.length(2);
   });
-
 });

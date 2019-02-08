@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ProjectCard from './ProjectCard.jsx';
 import {personalProjectDataPropType} from './projectConstants';
-import color from "../../util/color";
-import i18n from "@cdo/locale";
+import color from '../../util/color';
+import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
@@ -12,7 +12,7 @@ const styles = {
     width: '100%'
   },
   card: {
-    display: "inline-block",
+    display: 'inline-block',
     paddingTop: 10,
     paddingBottom: 20,
     paddingRight: 0,
@@ -39,27 +39,29 @@ const styles = {
 class PersonalRecentProjects extends Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
-    isRtl: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const { isRtl } = this.props;
+    const {isRtl} = this.props;
     const cardPaddingStyle = isRtl ? styles.cardPaddingRtl : styles.cardPadding;
 
     return (
       <div style={styles.grid}>
         <div style={styles.description}>{i18n.projectsContinueWorking()}</div>
         <div>
-          {
-            this.props.projectList && this.props.projectList.slice(0,4).map((project, index) => (
-              <div key={index} style={[styles.card, index < 3 && cardPaddingStyle]}>
+          {this.props.projectList &&
+            this.props.projectList.slice(0, 4).map((project, index) => (
+              <div
+                key={index}
+                style={[styles.card, index < 3 && cardPaddingStyle]}
+              >
                 <ProjectCard
                   projectData={project}
                   currentGallery={'personal'}
                 />
               </div>
-            ))
-          }
+            ))}
         </div>
       </div>
     );
@@ -67,5 +69,5 @@ class PersonalRecentProjects extends Component {
 }
 
 export default connect(state => ({
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(Radium(PersonalRecentProjects));

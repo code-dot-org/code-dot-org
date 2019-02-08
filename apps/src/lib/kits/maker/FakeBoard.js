@@ -10,7 +10,6 @@ import {J5_CONSTANTS, N_COLOR_LEDS} from './PlaygroundConstants';
  * @implements MakerBoard
  */
 export default class FakeBoard extends EventEmitter {
-
   /**
    * Open a connection to the board on its configured port.
    * @returns {Promise} resolved when the board is ready to use.
@@ -47,7 +46,7 @@ export default class FakeBoard extends EventEmitter {
       Accelerometer: FakeAccelerometer,
       Animation: FakeComponent,
       Servo: FakeComponent,
-      TouchSensor: FakeComponent,
+      TouchSensor: FakeComponent
     };
 
     for (const constructorName in constructors) {
@@ -68,7 +67,7 @@ export default class FakeBoard extends EventEmitter {
       accelerometer: new FakeAccelerometer(),
       buttonL: new FakeButton(),
       buttonR: new FakeButton(),
-      ...J5_CONSTANTS,
+      ...J5_CONSTANTS
     };
 
     for (const componentName in components) {

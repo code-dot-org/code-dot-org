@@ -1279,6 +1279,7 @@
   "subtitle": "یک محیط برنامه نویسیِ دیداری",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "بخش تعویض",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "برنامه شما یک اشتباه تایپی دارد. لطفا خط {lineNumber} را حذف کنید و دوباره برنلمه را اجرا نمائید.",

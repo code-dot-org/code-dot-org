@@ -2,7 +2,8 @@ import {TestResults} from '@cdo/apps/constants';
 
 // f(x) = x / 2
 // compute: f(16)
-var solutionBlocks = '' +
+var solutionBlocks =
+  '' +
   '<block type="functional_compute" inline="false" deletable="false" movable="false">' +
   '  <functional_input name="ARG1">' +
   '    <block type="functional_call" inline="false">' +
@@ -43,7 +44,8 @@ var solutionBlocks = '' +
   '</block>';
 
 // f(4) = 2 / 2
-var validExample1 = '' +
+var validExample1 =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -74,7 +76,8 @@ var validExample1 = '' +
   '</block>';
 
 // f(2) = 2 / 2
-var validExample2 = '' +
+var validExample2 =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -105,7 +108,8 @@ var validExample2 = '' +
   '</block>';
 
 // f(2) = 2 / 1
-var invalidExample1 = '' +
+var invalidExample1 =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -136,7 +140,8 @@ var invalidExample1 = '' +
   '</block>';
 
 // f(2) = ___
-var invalidExampleMissingResult = '' +
+var invalidExampleMissingResult =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -154,7 +159,8 @@ var invalidExampleMissingResult = '' +
 
 // f(3) = 1.5
 // Tests the case where we expected is a rational (3/2) and actual is a float (1.5)
-var validExampleRationalFloat = '' +
+var validExampleRationalFloat =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -187,52 +193,56 @@ module.exports = {
   },
   tests: [
     {
-      description: "example is missing result block",
+      description: 'example is missing result block',
       expected: {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function (assert) {
-        assert.equal(Calc.__testonly__.appState.message, 'You need at least' +
+      customValidator: function(assert) {
+        assert.equal(
+          Calc.__testonly__.appState.message,
+          'You need at least' +
             ' two examples in function f. Make sure each example has a call and ' +
-            'a result.');
+            'a result.'
+        );
         return true;
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         solutionBlocks +
         invalidExampleMissingResult +
         validExample2 +
         '</xml>'
     },
     {
-      description: "example result doesnt match definition",
+      description: 'example result doesnt match definition',
       expected: {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function (assert) {
-        assert.equal(Calc.__testonly__.appState.message, 'The function f has' +
-          ' one or more examples that need adjusting. Make sure they match your' +
-          ' definition and answer the question.');
+      customValidator: function(assert) {
+        assert.equal(
+          Calc.__testonly__.appState.message,
+          'The function f has' +
+            ' one or more examples that need adjusting. Make sure they match your' +
+            ' definition and answer the question.'
+        );
         return true;
       },
-      xml: '<xml>' +
-        solutionBlocks +
-        invalidExample1 +
-        validExample2 +
-        '</xml>'
+      xml: '<xml>' + solutionBlocks + invalidExample1 + validExample2 + '</xml>'
     },
     {
-      description: "example result does match definition",
+      description: 'example result does match definition',
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         assert.equal(Calc.__testonly__.appState.message, null);
         return true;
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         solutionBlocks +
         validExample1 +
         validExample2 +
@@ -245,11 +255,12 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         assert.equal(Calc.__testonly__.appState.message, null);
         return true;
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         solutionBlocks +
         validExample1 +
         validExample2 +
@@ -270,20 +281,21 @@ module.exports = {
     },
 
     {
-      description: "no examples when examples required",
+      description: 'no examples when examples required',
       expected: {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function (assert) {
-        assert.equal(Calc.__testonly__.appState.message, 'You need at least' +
+      customValidator: function(assert) {
+        assert.equal(
+          Calc.__testonly__.appState.message,
+          'You need at least' +
             ' two examples in function f. Make sure each example has a call' +
-            ' and a result.');
+            ' and a result.'
+        );
         return true;
       },
-      xml: '<xml>' +
-        solutionBlocks +
-        '</xml>'
-    },
+      xml: '<xml>' + solutionBlocks + '</xml>'
+    }
   ]
 };

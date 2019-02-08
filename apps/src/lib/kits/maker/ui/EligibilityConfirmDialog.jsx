@@ -1,19 +1,19 @@
 /** @file Confirm Dialog for Maker Discount Codes */
 import PropTypes from 'prop-types';
 
-import React, { Component } from 'react';
-import i18n from "@cdo/locale";
-import BaseDialog from "@cdo/apps/templates/BaseDialog";
-import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
-import Button from "@cdo/apps/templates/Button";
+import React, {Component} from 'react';
+import i18n from '@cdo/locale';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import Button from '@cdo/apps/templates/Button';
 import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
 
 const styles = {
   subtitle: {
-    fontSize: 16,
+    fontSize: 16
   },
   form: {
-    margin: '10px 0',
+    margin: '10px 0'
   },
   signature: {
     margin: '5px 0'
@@ -22,37 +22,37 @@ const styles = {
     height: 40,
     width: '100%',
     boxSizing: 'border-box',
-    padding: 10,
+    padding: 10
   },
   checkboxes: {
     paddingLeft: 5,
     marginBottom: 20
   },
   checkboxLabel: {
-    marginLeft: 25,
+    marginLeft: 25
   },
   checkbox: {
     marginLeft: -25,
-    width: 25,
+    width: 25
   },
   error: {
     color: 'red',
-    marginTop: 20,
+    marginTop: 20
   },
   bold: {
     fontFamily: '"Gotham 7r", sans-serif',
-    display: 'inline',
+    display: 'inline'
   }
 };
 
 export default class EligibilityConfirmDialog extends Component {
   static propTypes = {
     onCancel: PropTypes.func.isRequired,
-    onSuccess: PropTypes.func.isRequired,
+    onSuccess: PropTypes.func.isRequired
   };
 
   state = {
-    signature: "",
+    signature: '',
     validInput: false,
     submitting: false,
     error: ''
@@ -60,53 +60,52 @@ export default class EligibilityConfirmDialog extends Component {
 
   verifyResponse = () => {
     this.setState({
-      validInput: this.check1.checked
-        && this.check2.checked
-        && this.check3.checked
-        && /\S/.test(this.state.signature)
+      validInput:
+        this.check1.checked &&
+        this.check2.checked &&
+        this.check3.checked &&
+        /\S/.test(this.state.signature)
     });
   };
 
   handleSubmit = () => {
     this.setState({submitting: true});
     $.ajax({
-     url: "/maker/complete",
-     type: "post",
-     dataType: "json",
-     data: {
-       signature: this.state.signature
-     }
-   }).done(data => {
-     this.props.onSuccess(data.code, data.expiration);
-   }).fail((jqXHR, textStatus) => {
-     this.setState({
-       error: "We're sorry, but something went wrong. Try refreshing the page " +
-        "and submitting again.  If this does not work, please contact support@code.org."
+      url: '/maker/complete',
+      type: 'post',
+      dataType: 'json',
+      data: {
+        signature: this.state.signature
+      }
+    })
+      .done(data => {
+        this.props.onSuccess(data.code, data.expiration);
+      })
+      .fail((jqXHR, textStatus) => {
+        this.setState({
+          error:
+            "We're sorry, but something went wrong. Try refreshing the page " +
+            'and submitting again.  If this does not work, please contact support@code.org.'
+        });
       });
-   });
   };
 
-  setSignature = (event) => {
+  setSignature = event => {
     this.setState({signature: event.target.value}, this.verifyResponse);
   };
 
   render() {
     return (
-      <BaseDialog
-        useUpdatedStyles
-        uncloseable
-        isOpen
-        style={{padding:20}}
-      >
+      <BaseDialog useUpdatedStyles uncloseable isOpen style={{padding: 20}}>
         <h2>{i18n.getCode()}</h2>
-        <div style={styles.subtitle} >{i18n.verifyStatementsforCode()}</div>
+        <div style={styles.subtitle}>{i18n.verifyStatementsforCode()}</div>
         <form style={styles.form}>
           <div style={styles.checkboxes}>
             <label style={styles.checkboxLabel}>
               <input
                 style={styles.checkbox}
                 type="checkbox"
-                ref={input => this.check1 = input}
+                ref={input => (this.check1 = input)}
                 disabled={this.state.submitting}
                 onChange={this.verifyResponse}
               />
@@ -116,7 +115,7 @@ export default class EligibilityConfirmDialog extends Component {
               <input
                 style={styles.checkbox}
                 type="checkbox"
-                ref={input => this.check2 = input}
+                ref={input => (this.check2 = input)}
                 disabled={this.state.submitting}
                 onChange={this.verifyResponse}
               />
@@ -126,7 +125,7 @@ export default class EligibilityConfirmDialog extends Component {
               <input
                 style={styles.checkbox}
                 type="checkbox"
-                ref={input => this.check3 = input}
+                ref={input => (this.check3 = input)}
                 disabled={this.state.submitting}
                 onChange={this.verifyResponse}
               />
@@ -136,7 +135,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <UnsafeRenderedMarkdown markdown={verifySignatureMd}/>
+              <UnsafeRenderedMarkdown markdown={verifySignatureMd} />
             </div>
             <input
               value={this.state.signature}
@@ -147,11 +146,9 @@ export default class EligibilityConfirmDialog extends Component {
           </label>
         </form>
         <div>
-          <UnsafeRenderedMarkdown markdown={contactSupportMd}/>
+          <UnsafeRenderedMarkdown markdown={contactSupportMd} />
         </div>
-        {this.state.error &&
-          <div style={styles.error}>{this.state.error}</div>
-        }
+        {this.state.error && <div style={styles.error}>{this.state.error}</div>}
         <DialogFooter>
           <Button
             text={i18n.dialogCancel()}

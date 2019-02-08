@@ -16,7 +16,7 @@ import {TestResults} from '@cdo/apps/constants';
  * @returns {object} a level test definition, matching the format given
  *   at the top of levelTests.js
  */
-export function testApplabConsoleOutput({testName, source, expect, ticks=2}) {
+export function testApplabConsoleOutput({testName, source, expect, ticks = 2}) {
   return {
     description: testName,
     editCode: true,
@@ -24,7 +24,7 @@ export function testApplabConsoleOutput({testName, source, expect, ticks=2}) {
     runBeforeClick: () => {
       tickWrapper.runOnAppTick(Applab, ticks, Applab.onPuzzleComplete);
     },
-    customValidator: (assert) => {
+    customValidator: assert => {
       const debugOutput = document.getElementById('debug-output');
       assert.equal(debugOutput.textContent, expect);
       return true;

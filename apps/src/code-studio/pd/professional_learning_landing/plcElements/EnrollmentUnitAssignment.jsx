@@ -31,26 +31,17 @@ export default class EnrollmentUnitAssignment extends React.Component {
 
   renderModuleAssignments() {
     if (this.props.courseUnitData.status === 'start_blocked') {
-      return (
-        <div style={styles.comingSoonMessage}>
-          Coming soon!
-        </div>
-      );
+      return <div style={styles.comingSoonMessage}>Coming soon!</div>;
     } else {
-      const moduleAssignments = this.props.courseUnitData.moduleAssignments.map((moduleAssignment, i) => {
-        return (
-          <ModuleAssignment
-            moduleAssignmentData={moduleAssignment}
-            key={i}
-          />
-        );
-      });
-
-      return (
-        <div>
-          {moduleAssignments}
-        </div>
+      const moduleAssignments = this.props.courseUnitData.moduleAssignments.map(
+        (moduleAssignment, i) => {
+          return (
+            <ModuleAssignment moduleAssignmentData={moduleAssignment} key={i} />
+          );
+        }
       );
+
+      return <div>{moduleAssignments}</div>;
     }
   }
 

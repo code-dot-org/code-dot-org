@@ -1279,6 +1279,7 @@
   "subtitle": "um ambiente de programação visual",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Trocar de turma:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "O teu programa tem um pequeno erro de escrita. Por favor, remove a linha {lineNumber} e volta a tentar.",

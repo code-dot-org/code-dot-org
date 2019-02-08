@@ -30,7 +30,7 @@ class WebLabView extends React.Component {
     onAddFileCSS: PropTypes.func.isRequired,
     onAddFileImage: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -38,8 +38,9 @@ class WebLabView extends React.Component {
   }
 
   render() {
-    let headersHeight = styleConstants["workspace-headers-height"];
-    let iframeHeightOffset = headersHeight + (this.props.isProjectLevel ? 0 : 70);
+    let headersHeight = styleConstants['workspace-headers-height'];
+    let iframeHeightOffset =
+      headersHeight + (this.props.isProjectLevel ? 0 : 70);
     let iframeStyles = {
       position: 'absolute',
       width: '100%',
@@ -51,65 +52,75 @@ class WebLabView extends React.Component {
         <InstructionsWithWorkspace>
           <div>
             <PaneHeader hasFocus={true} id="headers">
-              {!this.props.isFullScreenPreviewOn && !this.props.isReadOnlyWorkspace &&
-                <div>
-                  <PaneButton
-                    iconClass="fa fa-plus-circle"
-                    leftJustified={true}
-                    headerHasFocus={true}
-                    isRtl={false}
-                    onClick={this.props.onAddFileHTML}
-                    label={weblabMsg.addHTMLButton()}
-                  />
-                  <PaneButton
-                    iconClass="fa fa-plus-circle"
-                    leftJustified={true}
-                    headerHasFocus={true}
-                    isRtl={false}
-                    onClick={this.props.onAddFileCSS}
-                    label={weblabMsg.addCSSButton()}
-                  />
-                  <PaneButton
-                    id="ui-test-add-image"
-                    iconClass="fa fa-plus-circle"
-                    leftJustified={true}
-                    headerHasFocus={true}
-                    isRtl={false}
-                    onClick={this.props.onAddFileImage}
-                    label={weblabMsg.addImageButton()}
-                  />
-                </div>
-              }
-              <div>
-                <PaneButton
-                  iconClass={this.props.isFullScreenPreviewOn ? "fa fa-compress" : "fa fa-arrows-alt"}
-                  leftJustified={false}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.isFullScreenPreviewOn ? this.props.onEndFullScreenPreview : this.props.onStartFullScreenPreview}
-                  label=""
-                />
-                {!this.props.isFullScreenPreviewOn && !this.props.isReadOnlyWorkspace &&
+              {!this.props.isFullScreenPreviewOn &&
+                !this.props.isReadOnlyWorkspace && (
                   <div>
                     <PaneButton
-                      id="versions-header"
-                      iconClass="fa fa-clock-o"
+                      iconClass="fa fa-plus-circle"
                       leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
-                      label={msg.showVersionsHeader()}
+                      onClick={this.props.onAddFileHTML}
+                      label={weblabMsg.addHTMLButton()}
                     />
                     <PaneButton
-                      iconClass="fa fa-repeat"
-                      leftJustified={false}
+                      iconClass="fa fa-plus-circle"
+                      leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
-                      onClick={this.props.onRefreshPreview}
-                      label={weblabMsg.refreshPreview()}
+                      onClick={this.props.onAddFileCSS}
+                      label={weblabMsg.addCSSButton()}
+                    />
+                    <PaneButton
+                      id="ui-test-add-image"
+                      iconClass="fa fa-plus-circle"
+                      leftJustified={true}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      onClick={this.props.onAddFileImage}
+                      label={weblabMsg.addImageButton()}
                     />
                   </div>
-                }
+                )}
+              <div>
+                <PaneButton
+                  iconClass={
+                    this.props.isFullScreenPreviewOn
+                      ? 'fa fa-compress'
+                      : 'fa fa-arrows-alt'
+                  }
+                  leftJustified={false}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  onClick={
+                    this.props.isFullScreenPreviewOn
+                      ? this.props.onEndFullScreenPreview
+                      : this.props.onStartFullScreenPreview
+                  }
+                  label=""
+                />
                 {!this.props.isFullScreenPreviewOn &&
+                  !this.props.isReadOnlyWorkspace && (
+                    <div>
+                      <PaneButton
+                        id="versions-header"
+                        iconClass="fa fa-clock-o"
+                        leftJustified={true}
+                        headerHasFocus={true}
+                        isRtl={false}
+                        label={msg.showVersionsHeader()}
+                      />
+                      <PaneButton
+                        iconClass="fa fa-repeat"
+                        leftJustified={false}
+                        headerHasFocus={true}
+                        isRtl={false}
+                        onClick={this.props.onRefreshPreview}
+                        label={weblabMsg.refreshPreview()}
+                      />
+                    </div>
+                  )}
+                {!this.props.isFullScreenPreviewOn && (
                   <PaneButton
                     iconClass="fa fa-mouse-pointer"
                     leftJustified={false}
@@ -120,16 +131,16 @@ class WebLabView extends React.Component {
                     onClick={this.props.onToggleInspector}
                     label={weblabMsg.toggleInspectorOn()}
                   />
-                }
+                )}
                 <PaneSection id="workspace-header">
-                  {this.props.showProjectTemplateWorkspaceIcon &&
-                    <ProjectTemplateWorkspaceIcon/>
-                  }
-                  {this.props.isReadOnlyWorkspace &&
+                  {this.props.showProjectTemplateWorkspaceIcon && (
+                    <ProjectTemplateWorkspaceIcon />
+                  )}
+                  {this.props.isReadOnlyWorkspace && (
                     <span id="workspace-header-span">
                       {msg.readonlyWorkspaceHeader()}
                     </span>
-                  }
+                  )}
                 </PaneSection>
               </div>
             </PaneHeader>
@@ -140,9 +151,7 @@ class WebLabView extends React.Component {
               scrolling="no"
               style={iframeStyles}
             />
-            {!this.props.isProjectLevel &&
-              <CompletionButton />
-            }
+            {!this.props.isProjectLevel && <CompletionButton />}
           </div>
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
@@ -155,5 +164,6 @@ export default connect(state => ({
   isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isInspectorOn: state.inspectorOn,
   isFullScreenPreviewOn: state.fullScreenPreviewOn,
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants.showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon: !!state.pageConstants
+    .showProjectTemplateWorkspaceIcon
 }))(WebLabView);

@@ -20,12 +20,14 @@ export default class DetailViewRedirect extends React.Component {
     router: PropTypes.object.isRequired
   };
 
-  handleApplicationLoaded = (applicationData) => {
+  handleApplicationLoaded = applicationData => {
     const {course, application_type} = applicationData;
     const applicationId = this.props.params.applicationId;
 
     // Redirect to the specific course_type route, e.g. csf_facilitators
-    this.context.router.replace(`/${course}_${application_type.toLowerCase()}s/${applicationId}`);
+    this.context.router.replace(
+      `/${course}_${application_type.toLowerCase()}s/${applicationId}`
+    );
   };
 
   render() {

@@ -1279,6 +1279,7 @@
   "subtitle": "et visuelt programmeringsopplegg",
   "success": "Suksess!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Bytt avsnitt:",
   "syncClever": "Synkroniser elver fra \"Clever\"",
   "syncGoogleClassroom": "Synkroniser elever fra \"Google Classroom\"",
   "syntaxErrorMsg": "Programmet ditt inneholder en skrivefeil. Fjern linje nummer {lineNumber} og prøv på nytt.",
