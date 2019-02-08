@@ -17,52 +17,56 @@ describe('DetailViewContents', () => {
 
   let context;
 
+  const DEFAULT_APPLICATION_DATA = {
+    regionalPartner: 'partner',
+    notes: 'notes',
+    status: 'accepted',
+    school_name: 'School Name',
+    district_name: 'District Name',
+    email: 'email',
+    application_year: '2019-2020',
+    application_type: 'Teacher',
+    course_name: 'CS Discoveries',
+    course: 'csd',
+    registered_fit_weekend: false,
+    registered_teachercon: false,
+    form_data: {
+      firstName: 'First Name',
+      lastName: 'Last Name',
+      title: 'Title',
+      phone: 'Phone',
+      preferredFirstName: 'Preferred First Name',
+      accountEmail: 'accountEmail',
+      alternateEmail: 'alternateEmail',
+      program: 'program',
+      abilityToMeetRequirements: '10',
+      committed: 'Yes',
+      taughtInPast: 'No'
+    },
+    response_scores: {
+      meets_minimum_criteria_scores: {
+        committed: 'Yes'
+      },
+      bonus_points_scores: {
+        committed: 5,
+        question_1: 5,
+        question_2: 5,
+        question_3: 5,
+        question_4: 5,
+        question_5: 5
+      },
+      meets_scholarship_criteria_scores: {
+        principal_approval: 'Yes'
+      }
+    },
+    school_stats: {}
+  };
+
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
-      regionalPartner: 'partner',
-      notes: 'notes',
-      status: 'accepted',
-      school_name: 'School Name',
-      district_name: 'District Name',
-      email: 'email',
-      application_year: '2019-2020',
-      application_type: applicationType,
-      course_name: 'CS Discoveries',
-      course: 'csd',
-      registered_fit_weekend: false,
-      registered_teachercon: false,
-      form_data: {
-        firstName: 'First Name',
-        lastName: 'Last Name',
-        title: 'Title',
-        phone: 'Phone',
-        preferredFirstName: 'Preferred First Name',
-        accountEmail: 'accountEmail',
-        alternateEmail: 'alternateEmail',
-        program: 'program',
-        abilityToMeetRequirements: '10',
-        committed: 'Yes',
-        taughtInPast: 'No'
-      },
-      response_scores: {
-        meets_minimum_criteria_scores: {
-          committed: 'Yes'
-        },
-        bonus_points_scores: {
-          committed: 5,
-          question_1: 5,
-          question_2: 5,
-          question_3: 5,
-          question_4: 5,
-          question_5: 5
-        },
-        meets_scholarship_criteria_scores: {
-          principal_approval: 'Yes'
-        }
-      },
-      school_stats: {}
+      ...DEFAULT_APPLICATION_DATA,
+      application_type: applicationType
     };
-
     const defaultProps = {
       canLock: true,
       applicationId: '1',
@@ -348,56 +352,40 @@ describe('DetailViewContents', () => {
   });
 
   describe('Teacher application scholarship status', () => {
+    let detailView;
+
+    beforeEach(() => {
+      detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarshipStatus: null
+        }
+      });
+    });
+
     afterEach(() => {
       detailView.unmount();
     });
 
-    let detailView;
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
       it(`is required in order to set application status to ${applicationStatus}`, () => {
-        // Initially scholarship status is not set
-        detailView = mountDetailView('Teacher', {
-          status: 'unreviewed',
-          scholarshipStatus: null
-        });
-        const modal = detailView
-          .find('ConfirmationDialog')
-          .filterWhere(
-            dialog =>
-              dialog.prop('headerText') === 'Cannot save applicant status'
-          )
-          .first();
-        expect(!!modal.prop('show')).to.be.false;
+        expect(isModalShowing()).to.be.false;
+        expect(getApplicationStatus()).to.equal('unreviewed');
 
-        // Set application status, modal appears
-        detailView
-          .find('#DetailViewHeader select')
-          .simulate('change', {target: {value: applicationStatus}});
-        expect(modal.prop('show')).to.be.true;
+        setApplicationStatusTo(applicationStatus);
+        expect(isModalShowing()).to.be.true;
+        expect(getApplicationStatus()).to.equal('unreviewed');
 
-        const okButton = new ReactWrapper(
-          document.querySelector('button.btn-primary'),
-          true
-        );
-        okButton.simulate('click');
-        expect(!!modal.prop('show')).to.be.false;
+        dismissModal();
+        expect(isModalShowing()).to.be.false;
+        expect(getApplicationStatus()).to.equal('unreviewed');
 
-        // Click 'Edit', set scholarship status
-        detailView
-          .find('#DetailViewHeader Button')
-          .last()
-          .simulate('click');
-        const scholarshipDropdown = detailView
-          .find('tr')
-          .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-          .find('Select');
-        scholarshipDropdown.simulate('change', {target: {value: 'no'}});
-
-        // Set application status, modal does not appear
-        detailView
-          .find('#DetailViewHeader select')
-          .simulate('change', {target: {value: applicationStatus}});
-        // expect(!!modal.prop('show')).to.be.false;
+        clickEditButton();
+        setScholarshipStatusTo('no');
+        setApplicationStatusTo(applicationStatus);
+        expect(isModalShowing()).to.be.false;
+        expect(getApplicationStatus()).to.equal(applicationStatus);
       });
     }
 
@@ -413,6 +401,50 @@ describe('DetailViewContents', () => {
         // set it to application status
         // assert dialog not present
       });
+    }
+
+    function clickEditButton() {
+      detailView
+        .find('#DetailViewHeader Button')
+        .last()
+        .simulate('click');
+    }
+
+    function getApplicationStatus() {
+      return detailView.find('#DetailViewHeader select').prop('value');
+    }
+
+    function setApplicationStatusTo(newStatus) {
+      detailView
+        .find('#DetailViewHeader select')
+        .simulate('change', {target: {value: newStatus}});
+    }
+
+    function setScholarshipStatusTo(newValue) {
+      const scholarshipDropdown = detailView
+        .find('tr')
+        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
+        .find('Select');
+      scholarshipDropdown.prop('onChange')({value: newValue});
+      // scholarshipDropdown.simulate('change', {target: {value: newValue}});
+    }
+
+    function isModalShowing() {
+      const modal = detailView
+        .find('ConfirmationDialog')
+        .filterWhere(
+          dialog => dialog.prop('headerText') === 'Cannot save applicant status'
+        )
+        .first();
+      return !!modal.prop('show');
+    }
+
+    function dismissModal() {
+      const okButton = new ReactWrapper(
+        document.querySelector('button.btn-primary'),
+        true
+      );
+      okButton.simulate('click');
     }
   });
 });
