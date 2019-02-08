@@ -35,6 +35,7 @@ class ManageStudentAgeCell extends Component {
         }
         {this.props.isEditing &&
           <select
+            style={{width: 50}}
             name="age"
             value={editedValue}
             onChange={this.onChangeAge}
