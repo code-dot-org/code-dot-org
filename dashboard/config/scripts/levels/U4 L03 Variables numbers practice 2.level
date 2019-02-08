@@ -1,0 +1,54 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2019-02-07T21:55:31.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Do This\r\n\r\n* Change the code to assign new numbers to the variables `luckyNumber` and `unluckyNumber`\r\n* Add two `console.log` commands to display the numbers you picked.",
+    "submittable": "false",
+    "start_blocks": "var luckyNumber;\r\nvar unluckyNumber\r\n\r\n// Change the numbers assigned to luckyNumber and unLuckyNumber\r\nluckyNumber = 0;\r\nunluckyNumber = 1;\r\n\r\nconsole.log(\"I think a lucky number is\");\r\n\r\n// Add a console.log command here\r\n\r\nconsole.log(\"and an unlucky number is\");\r\n\r\n// Add a console.log command below\r\n",
+    "never_autoplay_video": "false",
+    "slider_speed": "0.1",
+    "hide_share_and_remix": "true",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "true",
+    "watchers_prepopulated": "[\"luckyNumber\",\"unluckyNumber\"]",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false",
+    "parent_level_id": 15810,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-07 17:50:22 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:51:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:52:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"slider_speed\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:57:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 21:55:46 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 22:16:43 +0000\",\"changed\":[\"code_functions\",\"slider_speed\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 22:17:42 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 22:43:31 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 22:45:35 +0000\",\"changed\":[\"code_functions\",\"slider_speed\",\"preload_asset_list\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 22:47:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 22:49:59 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

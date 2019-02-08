@@ -1,21 +1,17 @@
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursec/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursec/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursec/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 version_year '2019'
 
 stage 'Screen Out the Mean'
 level 'courseC_Unplugged_ScreenOutTheMean_2019'
 
-stage 'Building a Foundation'
-level 'BuildingAFoundation_2019'
-
-stage 'Real-life Algorithms: Paper Planes'
-level 'PaperPlanes_2019'
+stage 'Programming: My Robotic Friends'
+level 'courseB_unplugged_MRF_2019'
 
 stage 'Programming in Maze'
 level 'courseC_video_maze_2019'
@@ -80,8 +76,8 @@ bonus 'courseC_artist_prog_challenge2a_2019'
 stage 'Binary Bracelets'
 level 'BinaryBracelets_2019'
 
-stage 'Loops: Getting Loopy'
-level 'GettingLoopy_2019'
+stage 'Loops: My Loopy Robotic Friends'
+level 'courseB_unplugged_loopyMRF_2019'
 
 stage 'Loops with Rey and BB-8'
 level 'bb8_skinOverview_C-F_video_2019'
@@ -150,6 +146,7 @@ level 'Overworld Free Play 20x20_2019'
 
 stage 'Events: The Big Event'
 level 'BigEvent_2019'
+level 'BigEvent_2019'
 
 stage 'Build a Flappy Game'
 level 'courseC_video_flappyIntro_2019'
@@ -164,14 +161,6 @@ level 'courseC_flappy_events8_2019'
 level 'courseC_flappy_events9_2019'
 level 'courseC_flappy_events10_2019'
 
-stage 'End of Course Project: Create a Play Lab Game'
-level 'courseC19_playLab_EOC1'
-level 'courseC19_playLab_EOC2'
-level 'courseC19_playLab_EOC3'
-level 'courseC19_playLab_EOC4'
-level 'courseC19_playLab_EOC5'
-level 'courseC19_playLab_EOC6'
-
 stage 'Events in Play Lab'
 level 'courseC_PlayLab_events1_2019'
 level 'courseC_PlayLab_events2_2019'
@@ -185,3 +174,11 @@ level 'courseC_PlayLab_events9_2019'
 level 'courseC_PlayLab_eventsA_2019'
 level 'courseC_PlayLab_eventsFP_2019'
 bonus 'courseC_PlayLab_events_challenge1_2019'
+
+stage 'End of Course Project: Create a Play Lab Game'
+level 'courseC19_playLab_EOC1'
+level 'courseC19_playLab_EOC2'
+level 'courseC19_playLab_EOC3'
+level 'courseC19_playLab_EOC4'
+level 'courseC19_playLab_EOC5'
+level 'courseC19_playLab_EOC6'
