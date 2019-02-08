@@ -1,9 +1,9 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "createNewSpriteNoName",
+    "func": "createNewSpriteAnon",
     "inline": false,
-    "blockText": "aalab make new {COSTUME} sprite at {LOCATION}",
+    "blockText": "aalab make new {ANIMATION_NAME} sprite at {LOCATION}",
     "color": [
       355,
       ".7",
@@ -11,7 +11,7 @@
     ],
     "args": [
       {
-        "name": "COSTUME",
+        "name": "ANIMATION_NAME",
         "customInput": "costumePicker"
       },
       {
