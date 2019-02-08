@@ -21,20 +21,14 @@ describe('ChangeEmailForm', () => {
   describe('the emailOptIn field', () => {
     it('is rendered for teachers', () => {
       const wrapper = mount(
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          userType="teacher"
-        />
+        <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
       );
       expect(wrapper.find(OPT_IN_SELECTOR)).to.exist;
     });
 
     it('is not rendered for students', () => {
       const wrapper = mount(
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          userType="student"
-        />
+        <ChangeEmailForm {...DEFAULT_PROPS} userType="student" />
       );
       expect(wrapper.find(OPT_IN_SELECTOR)).not.to.exist;
     });
@@ -93,10 +87,10 @@ describe('ChangeEmailForm', () => {
   describe('calls onChange', () => {
     let onChange, wrapper;
 
-    const initialValues= {
+    const initialValues = {
       newEmail: 'initialEmail@example.com',
       currentPassword: 'initialPassword',
-      emailOptIn: 'yes',
+      emailOptIn: 'yes'
     };
 
     beforeEach(() => {
@@ -114,7 +108,9 @@ describe('ChangeEmailForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const changedEmail = 'newEmail@example.com';
-      wrapper.find(EMAIL_SELECTOR).simulate('change', {target:{value: changedEmail}});
+      wrapper
+        .find(EMAIL_SELECTOR)
+        .simulate('change', {target: {value: changedEmail}});
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
@@ -127,7 +123,9 @@ describe('ChangeEmailForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const changedPassword = 'differentPassword';
-      wrapper.find(PASSWORD_SELECTOR).simulate('change', {target:{value: changedPassword}});
+      wrapper
+        .find(PASSWORD_SELECTOR)
+        .simulate('change', {target: {value: changedPassword}});
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
@@ -141,7 +139,9 @@ describe('ChangeEmailForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const changedOptIn = 'no';
-      wrapper.find(OPT_IN_SELECTOR).simulate('change', {target:{value: changedOptIn}});
+      wrapper
+        .find(OPT_IN_SELECTOR)
+        .simulate('change', {target: {value: changedOptIn}});
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
@@ -157,10 +157,7 @@ describe('ChangeEmailForm', () => {
     beforeEach(() => {
       onSubmit = sinon.spy();
       wrapper = mount(
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          onSubmit={onSubmit}
-        />
+        <ChangeEmailForm {...DEFAULT_PROPS} onSubmit={onSubmit} />
       );
     });
 
@@ -219,12 +216,7 @@ describe('ChangeEmailForm', () => {
     let wrapper;
 
     beforeEach(() => {
-      wrapper = mount(
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          disabled
-        />
-      );
+      wrapper = mount(<ChangeEmailForm {...DEFAULT_PROPS} disabled />);
     });
 
     it('the email field is disabled', () => {
@@ -246,14 +238,17 @@ describe('ChangeEmailForm', () => {
 
     beforeEach(() => {
       wrapper = mount(
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          userType="teacher"
-        />
+        <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
       );
       emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
-      passwordSpy = sinon.stub(wrapper.find(PASSWORD_SELECTOR).getDOMNode(), 'focus');
-      optInSpy = sinon.stub(wrapper.find(OPT_IN_SELECTOR).getDOMNode(), 'focus');
+      passwordSpy = sinon.stub(
+        wrapper.find(PASSWORD_SELECTOR).getDOMNode(),
+        'focus'
+      );
+      optInSpy = sinon.stub(
+        wrapper.find(OPT_IN_SELECTOR).getDOMNode(),
+        'focus'
+      );
     });
 
     afterEach(() => {

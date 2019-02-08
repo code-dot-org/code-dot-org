@@ -2,8 +2,8 @@ import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 
 module.exports = {
-  app: "gamelab",
-  skinId: "gamelab",
+  app: 'gamelab',
+  skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,
   tests: [
     // These exercise the timeout API blocks
@@ -81,6 +81,6 @@ module.exports = {
         assert.include(debugOutput, 'timedLoop 2');
         assert.notInclude(debugOutput, 'do not expect this');
       }
-    ),
+    )
   ]
 };

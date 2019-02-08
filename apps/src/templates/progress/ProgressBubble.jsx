@@ -4,10 +4,10 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import i18n from '@cdo/locale';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
-import { getIconForLevel } from './progressHelpers';
-import { levelType } from './progressTypes';
+import {getIconForLevel} from './progressHelpers';
+import {levelType} from './progressTypes';
 import {
   DOT_SIZE,
   DIAMOND_DOT_SIZE,
@@ -39,14 +39,15 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+    transition:
+      'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
     marginTop: 3,
     marginBottom: 3,
     // ReactTooltip sets a zIndex of 999. However, because in some cases for us
     // the ReactTooltip is inside of a rotated div, it ends up in a different
     // stacking context, and the zIndex doesn't work. Instead we set it here on
     // the top component
-    zIndex: 999,
+    zIndex: 999
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
@@ -54,13 +55,13 @@ const styles = {
     borderRadius: 4,
     transform: 'rotate(45deg)',
     marginTop: 6,
-    marginBottom: 6,
+    marginBottom: 6
   },
   small: {
     width: SMALL_DOT_SIZE,
     height: SMALL_DOT_SIZE,
     borderRadius: SMALL_DOT_SIZE,
-    fontSize: 0,
+    fontSize: 0
   },
   smallDiamond: {
     width: SMALL_DIAMOND_SIZE,
@@ -69,16 +70,16 @@ const styles = {
     fontSize: 0,
     transform: 'rotate(45deg)',
     marginLeft: 1,
-    marginRight: 1,
+    marginRight: 1
   },
   contents: {
     whiteSpace: 'nowrap',
-    lineHeight: '16px',
+    lineHeight: '16px'
   },
   diamondContents: {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
-  },
+  }
 };
 
 class ProgressBubble extends React.Component {
@@ -89,26 +90,34 @@ class ProgressBubble extends React.Component {
     //TODO: (ErinB) probably change to use just number during post launch clean-up.
     selectedSectionId: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number,
+      PropTypes.number
     ]),
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number,
+      PropTypes.number
     ]),
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
     stageTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
-    hideToolTips: PropTypes.bool,
+    hideToolTips: PropTypes.bool
   };
 
   static defaultProps = {
-    currentLocation: window.location,
+    currentLocation: window.location
   };
 
   render() {
-    const { level, smallBubble, selectedSectionId, selectedStudentId, currentLocation, stageTrophyEnabled, pairingIconEnabled } = this.props;
+    const {
+      level,
+      smallBubble,
+      selectedSectionId,
+      selectedStudentId,
+      currentLocation,
+      stageTrophyEnabled,
+      pairingIconEnabled
+    } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -122,8 +131,9 @@ class ProgressBubble extends React.Component {
       ...styles.main,
       ...(!disabled && hoverStyle),
       ...(smallBubble && styles.small),
-      ...(level.isConceptLevel && (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled),
+      ...(level.isConceptLevel &&
+        (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
+      ...levelProgressStyle(level, disabled)
     };
 
     let href = '';
@@ -143,8 +153,8 @@ class ProgressBubble extends React.Component {
     }
 
     const tooltipId = _.uniqueId();
-    let tooltipText = levelName ||
-      (level.isUnplugged && i18n.unpluggedActivity()) || '';
+    let tooltipText =
+      levelName || (level.isUnplugged && i18n.unpluggedActivity()) || '';
     if (number) {
       tooltipText = `${number}. ${tooltipText}`;
     }
@@ -182,14 +192,8 @@ class ProgressBubble extends React.Component {
           justifyContent: 'center'
         }}
       >
-        <div
-          data-tip data-for={tooltipId}
-          aria-describedby={tooltipId}
-        >
-          <div
-            style={style}
-            className="uitest-bubble"
-          >
+        <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+          <div style={style} className="uitest-bubble">
             <div
               style={{
                 fontSize: level.paired ? 14 : 16,
@@ -197,8 +201,10 @@ class ProgressBubble extends React.Component {
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
             >
-              {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-              {pairingIconEnabled && level.paired && <FontAwesome icon="users"/>}
+              {levelIcon === 'lock' && <FontAwesome icon="lock" />}
+              {pairingIconEnabled && level.paired && (
+                <FontAwesome icon="users" />
+              )}
               {!hideNumber && (
                 <span>
                   {/*Text will not show up for smallBubble, but it's presence
@@ -217,7 +223,11 @@ class ProgressBubble extends React.Component {
     // If we have an href, wrap in an achor tag
     if (href) {
       bubble = (
-        <a href={href} style={{textDecoration: 'none'}} className="uitest-ProgressBubble">
+        <a
+          href={href}
+          style={{textDecoration: 'none'}}
+          className="uitest-ProgressBubble"
+        >
           {bubble}
         </a>
       );

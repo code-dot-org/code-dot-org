@@ -1,6 +1,6 @@
 import msg from '@cdo/locale';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
@@ -39,7 +39,7 @@ class CompletionButton extends Component {
     let divClass = 'share-cell-none';
 
     if (this.props.isProjectLevel) {
-      return <div/>;
+      return <div />;
     }
 
     if (this.props.isSubmittable || this.props.isSubmitted) {
@@ -64,7 +64,7 @@ class CompletionButton extends Component {
             className="share"
             style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
           >
-            <img src="/blockly/media/1x1.gif"/>
+            <img src="/blockly/media/1x1.gif" />
             {contents}
           </button>
         </div>
@@ -79,7 +79,7 @@ export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isSubmittable: state.pageConstants.isSubmittable,
   isSubmitted: state.pageConstants.isSubmitted,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(CompletionButton);
 
 export {styles};

@@ -11,7 +11,7 @@ export default class NewWorkshop extends React.Component {
     router: PropTypes.object.isRequired
   };
 
-  handleSaved = (workshop) => {
+  handleSaved = workshop => {
     this.context.router.push(`/workshops/${workshop.id}`);
   };
 

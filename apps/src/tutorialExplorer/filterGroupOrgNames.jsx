@@ -4,7 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FilterGroupContainer from './filterGroupContainer';
-import { TutorialsOrgName } from './util';
+import {TutorialsOrgName} from './util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
@@ -23,10 +23,8 @@ export default class FilterGroupOrgNames extends React.Component {
     onUserInput: PropTypes.func.isRequired
   };
 
-  handleChangeOrgName = (event) => {
-    this.props.onUserInput(
-      event.target.value
-    );
+  handleChangeOrgName = event => {
+    this.props.onUserInput(event.target.value);
   };
 
   truncateOrgName(orgName) {
@@ -48,17 +46,11 @@ export default class FilterGroupOrgNames extends React.Component {
           style={styles.select}
           className="noFocusButton"
         >
-          <option
-            key={TutorialsOrgName.all}
-            value={TutorialsOrgName.all}
-          >
+          <option key={TutorialsOrgName.all} value={TutorialsOrgName.all}>
             {i18n.filterOrgNamesAll()}
           </option>
           {this.props.uniqueOrgNames.map(item => (
-            <option
-              key={item}
-              value={item}
-            >
+            <option key={item} value={item}>
               {this.truncateOrgName(item)}
             </option>
           ))}

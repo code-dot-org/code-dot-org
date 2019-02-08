@@ -29,6 +29,6 @@ export default storybook => {
             tableVersion={featuredProjectTableTypes.archived}
           />
         )
-      },
+      }
     ]);
 };

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import SchoolInfoInputs from './SchoolInfoInputs';
 
 export default storybook => {
   class SchoolInfoInputsWrapper extends Component {
     static propTypes = {
       showErrors: PropTypes.bool,
-      showRequiredIndicator: PropTypes.bool,
+      showRequiredIndicator: PropTypes.bool
     };
 
     state = {
@@ -16,7 +16,7 @@ export default storybook => {
       schoolName: '',
       schoolCity: '',
       schoolState: '',
-      schoolZip: '',
+      schoolZip: ''
     };
 
     onCountryChange(_, event) {
@@ -37,7 +37,7 @@ export default storybook => {
     onSchoolNotFoundChange(field, event) {
       let newValue = event ? event.target.value : '';
       this.setState({
-          [field]: newValue
+        [field]: newValue
       });
     }
 
@@ -65,25 +65,21 @@ export default storybook => {
     }
   }
 
-  return storybook
-    .storiesOf('SchoolInfoInputs', module)
-    .addStoryTable([
-      {
-        name: 'Inputs for school info (not required)',
-        description: `Gets school info data.`,
-        story: () => (
-          <SchoolInfoInputsWrapper/>
-        )
-      },
-      {
-        name: 'Inputs for school info (required)',
-        description: `Gets school info data.`,
-        story: () => (
-          <SchoolInfoInputsWrapper
-            showErrors={true}
-            showRequiredIndicator={true}
-          />
-        )
-      },
-    ]);
+  return storybook.storiesOf('SchoolInfoInputs', module).addStoryTable([
+    {
+      name: 'Inputs for school info (not required)',
+      description: `Gets school info data.`,
+      story: () => <SchoolInfoInputsWrapper />
+    },
+    {
+      name: 'Inputs for school info (required)',
+      description: `Gets school info data.`,
+      story: () => (
+        <SchoolInfoInputsWrapper
+          showErrors={true}
+          showRequiredIndicator={true}
+        />
+      )
+    }
+  ]);
 };

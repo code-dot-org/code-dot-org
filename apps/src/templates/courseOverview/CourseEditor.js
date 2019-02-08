@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import { resourceShape } from './resourceType';
-import { Provider } from 'react-redux';
-import { getStore } from '@cdo/apps/code-studio/redux';
+import {resourceShape} from './resourceType';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/code-studio/redux';
 
 const styles = {
   input: {
@@ -31,7 +31,7 @@ export default class CourseEditor extends Component {
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    hasVerifiedResources: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired
   };
 
   render() {
@@ -43,7 +43,7 @@ export default class CourseEditor extends Component {
       descriptionTeacher,
       scriptsInCourse,
       scriptNames,
-      teacherResources,
+      teacherResources
     } = this.props;
     return (
       <div>
@@ -93,16 +93,17 @@ export default class CourseEditor extends Component {
             style={styles.checkbox}
           />
           <p>
-            Check if this course has resources (such as lockable lessons and answer
-            keys) for verified teachers, and we want to notify non-verified teachers
-            that this is the case.
+            Check if this course has resources (such as lockable lessons and
+            answer keys) for verified teachers, and we want to notify
+            non-verified teachers that this is the case.
           </p>
         </label>
         <label>
           <h4>Scripts</h4>
           <div>
-            The dropdown(s) below represent the orded set of scripts in this course.
-            To remove a script, just set the dropdown to the default (first) value.
+            The dropdown(s) below represent the orded set of scripts in this
+            course. To remove a script, just set the dropdown to the default
+            (first) value.
           </div>
           <CourseScriptsEditor
             inputStyle={styles.input}
@@ -113,8 +114,8 @@ export default class CourseEditor extends Component {
         <div>
           <h4>Teacher Resources</h4>
           <div>
-            Select up to three Teacher Resources buttons you'd like to have show up on
-            the top of the course overview page
+            Select up to three Teacher Resources buttons you'd like to have show
+            up on the top of the course overview page
           </div>
           <ResourcesEditor
             inputStyle={styles.input}

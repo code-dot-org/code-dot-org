@@ -1,11 +1,18 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import QuickActionsCell from "../tables/QuickActionsCell";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
-import color from "../../util/color";
+import React, {Component} from 'react';
+import QuickActionsCell from '../tables/QuickActionsCell';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudents, RowType} from './manageStudentsRedux';
+import {
+  startEditingStudent,
+  cancelEditingStudent,
+  removeStudent,
+  saveStudent,
+  addStudents,
+  RowType
+} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
@@ -13,10 +20,10 @@ import i18n from '@cdo/locale';
 
 const styles = {
   xIcon: {
-    paddingRight: 5,
+    paddingRight: 5
   },
   saveButton: {
-    marginRight: 5,
+    marginRight: 5
   }
 };
 
@@ -37,28 +44,30 @@ class ManageStudentActionsCell extends Component {
     cancelEditingStudent: PropTypes.func,
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
-    addStudent: PropTypes.func,
+    addStudent: PropTypes.func
   };
 
   state = {
     deleting: false,
-    requestInProgress: false,
+    requestInProgress: false
   };
 
   onConfirmDelete = () => {
     const {removeStudent, id, sectionId} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
-        url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
-        method: 'POST',
-    }).done(() => {
+      url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
+      method: 'POST'
+    })
+      .done(() => {
         removeStudent(id);
-    }).fail((jqXhr, status) => {
+      })
+      .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
         // matches the experience we got in angular
         alert(i18n.unexpectedError());
         console.error(status);
-    });
+      });
   };
 
   onRequestDelete = () => {
@@ -95,31 +104,26 @@ class ManageStudentActionsCell extends Component {
 
   render() {
     const {rowType, isEditing, loginType} = this.props;
-    const canDelete = [SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email].includes(loginType);
+    const canDelete = [
+      SectionLoginType.word,
+      SectionLoginType.picture,
+      SectionLoginType.email
+    ].includes(loginType);
     return (
       <div>
-        {!isEditing &&
+        {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item
-              onClick={this.onEdit}
-            >
-              {i18n.edit()}
-            </PopUpMenu.Item>
-            {canDelete &&
-              <MenuBreak/>
-            }
-            {canDelete &&
-              <PopUpMenu.Item
-                onClick={this.onRequestDelete}
-                color={color.red}
-              >
-                <FontAwesome icon="times-circle" style={styles.xIcon}/>
+            <PopUpMenu.Item onClick={this.onEdit}>{i18n.edit()}</PopUpMenu.Item>
+            {canDelete && <MenuBreak />}
+            {canDelete && (
+              <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
+                <FontAwesome icon="times-circle" style={styles.xIcon} />
                 {i18n.removeStudent()}
               </PopUpMenu.Item>
-            }
+            )}
           </QuickActionsCell>
-        }
-        {(isEditing && (rowType !== RowType.ADD)) &&
+        )}
+        {isEditing && rowType !== RowType.ADD && (
           <div>
             <Button
               onClick={this.onSave}
@@ -134,8 +138,8 @@ class ManageStudentActionsCell extends Component {
               text={i18n.cancel()}
             />
           </div>
-        }
-        {(rowType === RowType.ADD) &&
+        )}
+        {rowType === RowType.ADD && (
           <div>
             <Button
               onClick={this.onAdd}
@@ -144,7 +148,7 @@ class ManageStudentActionsCell extends Component {
               disabled={this.props.isSaving || this.props.disableSaving}
             />
           </div>
-        }
+        )}
         <ConfirmRemoveStudentDialog
           isOpen={this.state.deleting}
           disabled={this.state.requestInProgress}
@@ -161,20 +165,23 @@ class ManageStudentActionsCell extends Component {
 
 export const UnconnectedManageStudentActionsCell = ManageStudentActionsCell;
 
-export default connect(state => ({}), dispatch => ({
-  startEditingStudent(id) {
-    dispatch(startEditingStudent(id));
-  },
-  cancelEditingStudent(id) {
-    dispatch(cancelEditingStudent(id));
-  },
-  removeStudent(id) {
-    dispatch(removeStudent(id));
-  },
-  saveStudent(id) {
-    dispatch(saveStudent(id));
-  },
-  addStudent(id) {
-    dispatch(addStudents([id]));
-  },
-}))(ManageStudentActionsCell);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    startEditingStudent(id) {
+      dispatch(startEditingStudent(id));
+    },
+    cancelEditingStudent(id) {
+      dispatch(cancelEditingStudent(id));
+    },
+    removeStudent(id) {
+      dispatch(removeStudent(id));
+    },
+    saveStudent(id) {
+      dispatch(saveStudent(id));
+    },
+    addStudent(id) {
+      dispatch(addStudents([id]));
+    }
+  })
+)(ManageStudentActionsCell);

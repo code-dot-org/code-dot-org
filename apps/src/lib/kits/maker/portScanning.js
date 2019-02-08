@@ -30,18 +30,22 @@ export const CIRCUIT_PLAYGROUND_EXPRESS_PID = 0x8018;
  */
 export function findPortWithViableDevice() {
   return Promise.resolve()
-      .then(ensureAppInstalled)
-      .then(listSerialDevices)
-      .then(list => {
-        const bestOption = getPreferredPort(list);
-        if (bestOption) {
-          return bestOption.comName;
-        } else {
-          return Promise.reject(new ConnectionFailedError(
-              'Did not find a usable device on a serial port. ' +
-              '\n\nFound devices: ' + JSON.stringify(list)));
-        }
-      });
+    .then(ensureAppInstalled)
+    .then(listSerialDevices)
+    .then(list => {
+      const bestOption = getPreferredPort(list);
+      if (bestOption) {
+        return bestOption.comName;
+      } else {
+        return Promise.reject(
+          new ConnectionFailedError(
+            'Did not find a usable device on a serial port. ' +
+              '\n\nFound devices: ' +
+              JSON.stringify(list)
+          )
+        );
+      }
+    });
 }
 
 /**
@@ -55,7 +59,7 @@ export function ensureAppInstalled() {
 
   ChromeSerialPort.extensionId = CHROME_APP_ID;
   return new Promise((resolve, reject) => {
-    ChromeSerialPort.isInstalled((error) => error ? reject(error) : resolve());
+    ChromeSerialPort.isInstalled(error => (error ? reject(error) : resolve()));
   });
 }
 
@@ -64,9 +68,13 @@ export function ensureAppInstalled() {
  * @returns {Promise.<Array.<SerialPortInfo>>}
  */
 function listSerialDevices() {
-  const SerialPortType = isNodeSerialAvailable() ? SerialPort : ChromeSerialPort;
+  const SerialPortType = isNodeSerialAvailable()
+    ? SerialPort
+    : ChromeSerialPort;
   return new Promise((resolve, reject) => {
-    SerialPortType.list((error, list) => error ? reject(error) : resolve(list));
+    SerialPortType.list((error, list) =>
+      error ? reject(error) : resolve(list)
+    );
   });
 }
 
@@ -86,23 +94,29 @@ export function isNodeSerialAvailable() {
  */
 export function getPreferredPort(portList) {
   // 1. Best case: Correct vid and pid
-  const adafruitCircuitPlayground = portList.find(port =>
-    parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-    parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID);
+  const adafruitCircuitPlayground = portList.find(
+    port =>
+      parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+      parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID
+  );
   if (adafruitCircuitPlayground) {
     return adafruitCircuitPlayground;
   }
 
   // 2. Next-best case: Circuit Playground Express
-  const adafruitExpress = portList.find(port =>
-    parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-    parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID);
+  const adafruitExpress = portList.find(
+    port =>
+      parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+      parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
+  );
   if (adafruitExpress) {
     return adafruitExpress;
   }
 
   // 3. Next best case: Some other Adafruit product that might also work
-  const otherAdafruit = portList.find(port => parseInt(port.vendorId, 16) === ADAFRUIT_VID);
+  const otherAdafruit = portList.find(
+    port => parseInt(port.vendorId, 16) === ADAFRUIT_VID
+  );
   if (otherAdafruit) {
     return otherAdafruit;
   }
@@ -112,8 +126,10 @@ export function getPreferredPort(portList) {
   const comNameRegex = /usb|acm|^com/i;
   return portList.find(port => {
     const {comName, vendorId, productId} = port;
-    return comNameRegex.test(comName)
-      && parseInt(vendorId, 16) > 0
-      && parseInt(productId, 16) > 0;
+    return (
+      comNameRegex.test(comName) &&
+      parseInt(vendorId, 16) > 0 &&
+      parseInt(productId, 16) > 0
+    );
   });
 }

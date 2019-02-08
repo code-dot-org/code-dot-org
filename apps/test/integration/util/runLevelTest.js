@@ -2,14 +2,14 @@ import $ from 'jquery';
 import _ from 'lodash';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
-import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import {getConfigRef, getDatabase} from '@cdo/apps/storage/firebaseUtils';
 import Firebase from 'firebase';
 import MockFirebase from '../../util/MockFirebase';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
-module.exports = function (testCollection, testData, dataItem, done) {
+module.exports = function(testCollection, testData, dataItem, done) {
   const finished = _.once(() => done(/*ensure no args*/));
 
   // LegacyDialog is stubbed in the beforeEach step in levelTests.js
@@ -25,8 +25,11 @@ module.exports = function (testCollection, testData, dataItem, done) {
   // skin shouldn't matter for most cases
   var skinId = testCollection.skinId || 'farmer';
 
-  var level = testCollectionUtils.getLevelFromCollection(testCollection,
-    testData, dataItem);
+  var level = testCollectionUtils.getLevelFromCollection(
+    testCollection,
+    testData,
+    dataItem
+  );
 
   // Override speed
   if (!level.scale) {
@@ -53,13 +56,23 @@ module.exports = function (testCollection, testData, dataItem, done) {
   level.hideViewDataButton = testData.hideViewDataButton;
 
   // Validate successful solution.
-  var validateResult = function (report) {
+  var validateResult = function(report) {
     try {
       assert(testData.expected, 'Have expectations');
-      assert(Object.keys(testData.expected).length > 0, 'No expected keys specified');
-      Object.keys(testData.expected).forEach(function (key) {
+      assert(
+        Object.keys(testData.expected).length > 0,
+        'No expected keys specified'
+      );
+      Object.keys(testData.expected).forEach(function(key) {
         if (report[key] !== testData.expected[key]) {
-          var failureMsg = 'Failure for key: ' + key + '. Expected: ' + testData.expected[key] + '. Got: ' + report[key] + '\n';
+          var failureMsg =
+            'Failure for key: ' +
+            key +
+            '. Expected: ' +
+            testData.expected[key] +
+            '. Got: ' +
+            report[key] +
+            '\n';
           assert(false, failureMsg);
         }
       });
@@ -99,7 +112,7 @@ const appLoaders = {
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
   studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
   turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
-  weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
+  weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab')
 };
 function runLevel(app, skinId, level, onAttempt, finished, testData) {
   var loadApp = appLoaders[app];
@@ -115,7 +128,8 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
   }
   setAppSpecificGlobals(app);
 
-  const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
+  const unexpectedExecutionErrorMsg =
+    'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
   const options = {
@@ -131,9 +145,12 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     onFeedback: finished,
-    onExecutionError: testData.onExecutionError ? testData.onExecutionError :
-      () => { throw unexpectedExecutionErrorMsg; },
-    onInitialize: function () {
+    onExecutionError: testData.onExecutionError
+      ? testData.onExecutionError
+      : () => {
+          throw unexpectedExecutionErrorMsg;
+        },
+    onInitialize: function() {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
@@ -143,8 +160,10 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
 
       if (app === 'applab') {
         // Karma must be configured to use MockFirebase in our webpack config.
-        assert(Firebase === MockFirebase,
-          'Expected to be using apps/test/util/MockFirebase in level tests.');
+        assert(
+          Firebase === MockFirebase,
+          'Expected to be using apps/test/util/MockFirebase in level tests.'
+        );
 
         getDatabase().autoFlush();
         getConfigRef().autoFlush();
@@ -156,14 +175,14 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
           maxRecordSize: 100,
           maxPropertySize: 100,
           maxTableRows: 20,
-          maxTableCount: 10,
+          maxTableCount: 10
         });
         timeout = 500;
 
         getDatabase().set(null);
       }
 
-      setTimeout(function () {
+      setTimeout(function() {
         assert(window.droplet, 'droplet is in global');
 
         // Click the run button!
@@ -171,8 +190,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
           testData.runBeforeClick(assert);
         }
 
-        $("#runButton").click();
-
+        $('#runButton').click();
       }, timeout);
       // waitLong();
     },
@@ -185,7 +203,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     installCustomBlocks({
       blockly: Blockly,
       blockDefinitions: level.sharedBlocks,
-      customInputTypes: options.blocksModule.customInputTypes,
+      customInputTypes: options.blocksModule.customInputTypes
     });
   }
 }

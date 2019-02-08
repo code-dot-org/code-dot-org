@@ -18,5 +18,5 @@ export default function FontAwesome({icon, className, ...props}) {
 
 FontAwesome.propTypes = {
   icon: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };

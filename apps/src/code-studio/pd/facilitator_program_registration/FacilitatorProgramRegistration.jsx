@@ -17,7 +17,7 @@ export default class FacilitatorProgramRegistration extends FormController {
       TravelInformation,
       PhotoRelease,
       LiabilityWaiver,
-      Demographics,
+      Demographics
     ];
   }
 
@@ -55,9 +55,11 @@ export default class FacilitatorProgramRegistration extends FormController {
    * @override
    */
   shouldShowSubmit() {
-    return super.shouldShowSubmit() ||
-        this.state.data.confirmTrainingDate === "No" ||
-        this.state.data.confirmTeacherconDate === 'No - I\'m no longer interested';
+    return (
+      super.shouldShowSubmit() ||
+      this.state.data.confirmTrainingDate === 'No' ||
+      this.state.data.confirmTeacherconDate === "No - I'm no longer interested"
+    );
   }
 }
 
@@ -66,5 +68,5 @@ FacilitatorProgramRegistration.propTypes = {
   attendanceDates: PropTypes.object.isRequired,
   course: PropTypes.string.isRequired,
   teachercon: PropTypes.number.isRequired,
-  teacherconLocation: PropTypes.string.isRequired,
+  teacherconLocation: PropTypes.string.isRequired
 };

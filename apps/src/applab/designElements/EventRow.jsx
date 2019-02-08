@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "../../util/color";
+import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 
 export default class EventRow extends React.Component {
@@ -26,14 +26,12 @@ export default class EventRow extends React.Component {
 
     return (
       <div style={style.container}>
-        <div style={style.name}>
-          {this.props.name}
-        </div>
-        <div style={style.desc}>
-          {this.props.desc}
-        </div>
+        <div style={style.name}>{this.props.name}</div>
+        <div style={style.desc}>{this.props.desc}</div>
         <div>
-          <a onClick={this.props.handleInsert} className="hover-pointer">Insert and show code</a>
+          <a onClick={this.props.handleInsert} className="hover-pointer">
+            Insert and show code
+          </a>
         </div>
       </div>
     );

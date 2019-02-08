@@ -1,5 +1,5 @@
 import React from 'react';
-import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import {
   PageLabels,
   SectionHeaders,
@@ -22,11 +22,15 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
         </h3>
         {this.radioButtonsFor('genderIdentity')}
         {this.checkBoxesFor('race')}
-        {this.checkBoxesWithAdditionalTextFieldsFor('howHeard', {
-          [TextFields.otherWithText]: "other"
-        }, {
-          required: false
-        })}
+        {this.checkBoxesWithAdditionalTextFieldsFor(
+          'howHeard',
+          {
+            [TextFields.otherWithText]: 'other'
+          },
+          {
+            required: false
+          }
+        )}
       </FormGroup>
     );
   }
