@@ -49,6 +49,8 @@ export default function Sounds() {
 
   this.audioContext = null;
 
+  this.isMuted = false;
+
   /**
    * Detect whether audio system is "unlocked" - it usually works immediately
    * on dekstop, but mobile usually restricts audio until triggered by user.
@@ -293,6 +295,9 @@ Sounds.prototype.unload = function(soundId) {
 };
 
 Sounds.prototype.playURL = function(url, playbackOptions) {
+  if (this.isMuted) {
+    return;
+  }
   // Play a sound given a URL, register it using the URL as id and infer
   // the file type from the extension at the end of the URL
   // (NOTE: not ideal because preload happens inside first play)
@@ -343,6 +348,17 @@ Sounds.prototype.stopPlayingURL = function(url) {
   if (sound) {
     sound.stop();
   }
+};
+
+/**
+ * While muted, playURL() has no effect.
+ */
+Sounds.prototype.muteURLs = function() {
+  this.isMuted = true;
+};
+
+Sounds.prototype.unmuteURLs = function() {
+  this.isMuted = false;
 };
 
 /**

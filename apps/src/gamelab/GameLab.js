@@ -649,7 +649,7 @@ GameLab.prototype.startTickTimer = function() {
  */
 GameLab.prototype.resetHandler = function(ignore) {
   if (this.shouldAutoRunSetup) {
-    this.execute(false /* keepTicking */);
+    this.execute(true /* forPreview */);
   } else {
     this.reset();
   }
@@ -709,11 +709,7 @@ GameLab.prototype.rerunSetupCode = function() {
   ) {
     return;
   }
-  this.gameLabP5.p5.allSprites.removeSprites();
-  this.JSInterpreter.deinitialize();
-  this.initInterpreter(false /* attachDebugger */);
-  this.onP5Setup();
-  this.gameLabP5.p5.redraw();
+  this.execute(true /* forPreview */);
 };
 
 GameLab.prototype.onPuzzleComplete = function(submit, testResult) {
@@ -840,7 +836,12 @@ GameLab.prototype.runButtonClick = function() {
 /**
  * Execute the user's code.  Heaven help us...
  */
-GameLab.prototype.execute = function(keepTicking = true) {
+GameLab.prototype.execute = function(forPreview = false) {
+  if (forPreview) {
+    Sounds.getSingleton().muteURLs();
+  } else {
+    Sounds.getSingleton().unmuteURLs();
+  }
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -861,7 +862,7 @@ GameLab.prototype.execute = function(keepTicking = true) {
   }
 
   this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(keepTicking);
+  this.gameLabP5.setLoop(!forPreview);
 
   if (
     !this.JSInterpreter ||
@@ -871,12 +872,12 @@ GameLab.prototype.execute = function(keepTicking = true) {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly() && keepTicking) {
+  if (this.studioApp_.isUsingBlockly() && !forPreview) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  if (keepTicking) {
+  if (!forPreview) {
     this.startTickTimer();
   }
 };
