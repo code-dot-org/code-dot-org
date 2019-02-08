@@ -1297,8 +1297,11 @@ class Script < ActiveRecord::Base
   def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless courses.empty?
+    with_hidden = user&.hidden_script_access?
     Script.
       where(family_name: family_name).
+      all.
+      select {|script| with_hidden || !script.hidden}.
       map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse
