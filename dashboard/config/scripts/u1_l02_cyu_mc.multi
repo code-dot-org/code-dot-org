@@ -10,11 +10,11 @@ markdown <<MARKDOWN
 
 What will the value of `score` be at the end of the program?
 
-```
-score <- 3
-score <- score + 1
-score <- "The score is: " + score;
-```
+`score <- 3`
+<br>
+`score <- score + 1`
+<br>
+`score <- "The score is: " + score;`
 
 
 MARKDOWN

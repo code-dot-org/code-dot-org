@@ -34,7 +34,7 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
-var costumeGroups = {};
+var animationGroups = {};
 
 function initialize(setupHandler) {
   setupHandler();
@@ -127,19 +127,10 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
 
 // Updated
 function clickedOn(condition, sprite, event) {
-  var pushEvents = function(type) {
-    if(!Array.isArray(sprite)) {
-      inputEvents.push({type: type, event: event, param: sprite});
-    } else {
-      sprite.forEach(function(s) {
-        inputEvents.push({type: type, event: event, param: s});
-      });
-    }
-  };
   if(condition === "when") {
-  	pushEvents(whenSpriteClicked);
+  	inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
   } else {
-    pushEvents(mousePressedOver);
+  	inputEvents.push({type: mousePressedOver, event: event, param: sprite});
   }
 }
 
@@ -192,18 +183,19 @@ function setAnimation(sprite, animation) {
                                       sprite.animation.getHeight(),
                                       sprite.animation.getWidth());
     sprite.scale *= sprite.baseScale;
-    addToCostumeGroup(sprite);
+    addToAnimationGroup(sprite);
   };
   if(!Array.isArray(sprite)) {
+    // If the sprite already has an animation, remove that sprite from the animation group.
     if(sprite.getAnimationLabel()) {
-      removeFromCostumeGroup(sprite, sprite.getAnimationLabel());
+      removeFromAnimationGroup(sprite, sprite.getAnimationLabel());
     }
   	setOneAnimation(sprite);
   } else {
-    console.log(sprite.length);
     if(sprite.length > 0) {
+      // If first sprite already has an animation, delete that animation group (everyone is leaving).
       if(sprite[0].getAnimationLabel()) {
-        delete costumeGroups[sprite[0].getAnimationLabel()];
+        delete animationGroups[sprite[0].getAnimationLabel()];
       }
       sprite.forEach(function(s) { setOneAnimation(s); });
     }
@@ -211,22 +203,22 @@ function setAnimation(sprite, animation) {
 }
 
 // New
-function addToCostumeGroup(sprite) {
-  var costume = sprite.getAnimationLabel();
-  if(costumeGroups.hasOwnProperty(costume)) {
-     costumeGroups[costume].push(sprite);
+function addToAnimationGroup(sprite) {
+  var animation = sprite.getAnimationLabel();
+  if(animationGroups.hasOwnProperty(animation)) {
+     animationGroups[animation].push(sprite);
   } else {
-    costumeGroups[costume] = [sprite];
+    animationGroups[animation] = [sprite];
   }
 }
 
 // New
-function removeFromCostumeGroup(sprite, oldCostume) {
-  var array = costumeGroups[oldCostume];
+function removeFromAnimationGroup(sprite, oldAnimation) {
+  var array = animationGroups[oldAnimation];
   var index = array.indexOf(sprite);
   array.splice(index, 1);
-  if(costumeGroups[oldCostume].length < 1) {
-    delete costumeGroups[oldCostume];
+  if(animationGroups[oldAnimation].length < 1) {
+    delete animationGroups[oldAnimation];
   }
 }
 
@@ -340,7 +332,7 @@ function unitVectorTowards(from, to) {
   return p5.Vector.fromAngle(angle);
 }
 
-// New 
+// New
 function runSpriteBehaviors() {
   sprites.forEach(function (sprite) {
     sprite.behaviors.forEach(function (behavior) {
@@ -364,9 +356,19 @@ function runInputEvents() {
   for (var i = 0; i < inputEvents.length; i++) {
     eventType = inputEvents[i].type;
     event = inputEvents[i].event;
-    param = inputEvents[i].param;
-    if (param && eventType(param)) {
-      event();
+    param = typeof inputEvents[i].param === "function" ?
+      inputEvents[i].param() :
+      inputEvents[i].param;
+    if(!Array.isArray(param)) {
+      if(eventType(param)) {
+        event();
+      }
+    } else {
+      for(var j = 0; j < param.length; j++) {
+        if(eventType(param[j])) {
+          event();
+        }
+      }
     }
   }
 }

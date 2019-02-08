@@ -9715,6 +9715,8 @@ en:
               name: Variables Explore
             Variables Practice:
               name: Variables Practice
+            Variables Make:
+              name: Variables Make
           title: CSP Playground
           description_audience: ''
           description_short: ''
