@@ -1526,16 +1526,6 @@ ActiveRecord::Schema.define(version: 20190208003913) do
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", unique: true, using: :btree
   end
 
-  create_table "user_school_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id"
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.integer  "school_info_id"
-    t.datetime "last_confirmation_date"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                        null: false
     t.integer  "script_id",                      null: false
