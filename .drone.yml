@@ -142,10 +142,10 @@ steps:
   - name: mysql
     path: /var/lib/mysql
   environment:
-    #CLOUDFRONT_KEY_PAIR_ID:
-    #  from_secret: CLOUDFRONT_KEY_PAIR_ID
-    #CLOUDFRONT_PRIVATE_KEY:
-    #  from_secret: CLOUDFRONT_PRIVATE_KEY
+    CLOUDFRONT_KEY_PAIR_ID:
+      from_secret: CLOUDFRONT_KEY_PAIR_ID
+    CLOUDFRONT_PRIVATE_KEY:
+      from_secret: CLOUDFRONT_PRIVATE_KEY
     PROPERTIES_ENCRYPTION_KEY:
       from_secret: PROPERTIES_ENCRYPTION_KEY
     AWS_ACCESS_KEY_ID:
