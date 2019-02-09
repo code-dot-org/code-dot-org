@@ -13,4 +13,6 @@
 #
 
 class UserSchoolInfo < ApplicationRecord
+  validates_presence_of :user
+  validates_presence_of :school_info
 end
