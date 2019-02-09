@@ -41,7 +41,7 @@ echo "
 netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
 bundler_use_sudo: false
-#properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 #applitools_eyes_api_key: $APPLITOOLS_KEY
 #cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 #cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
