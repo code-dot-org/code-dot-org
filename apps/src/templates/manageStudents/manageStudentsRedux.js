@@ -734,6 +734,20 @@ export const convertStudentDataToArray = studentData => {
   return Object.values(studentData).reverse();
 };
 
+// Convert student server data and set students in our redux store.
+export const setStudentsFromServerData = (
+  studentData,
+  loginType,
+  sectionId
+) => dispatch => {
+  const convertedStudentData = convertStudentServerData(
+    studentData,
+    loginType,
+    sectionId
+  );
+  dispatch(setStudents(convertedStudentData));
+};
+
 // Make a get request to get students in a section, then set them in our redux store.
 export const asyncSetStudents = (sectionId, loginType) => dispatch => {
   $.ajax({
@@ -741,12 +755,7 @@ export const asyncSetStudents = (sectionId, loginType) => dispatch => {
     url: `/dashboardapi/sections/${sectionId}/students`,
     dataType: 'json'
   }).done(studentData => {
-    const convertedStudentData = convertStudentServerData(
-      studentData,
-      loginType,
-      sectionId
-    );
-    dispatch(setStudents(convertedStudentData));
+    setStudentsFromServerData(studentData, loginType, sectionId);
   });
 };
 
