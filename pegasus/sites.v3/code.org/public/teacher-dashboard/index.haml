@@ -51,7 +51,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - i18n[:error_string_other_section] = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
 
 - data = {}
-- data[:studiourlprefix] = CDO.studio_url
+- data[:studiourlprefix] = CDO.studio_url('', CDO.default_scheme)
 - data[:i18n] = i18n
 - data[:valid_login_types] = DashboardSection::valid_login_types
 - data[:valid_grades] = DashboardSection::valid_grades

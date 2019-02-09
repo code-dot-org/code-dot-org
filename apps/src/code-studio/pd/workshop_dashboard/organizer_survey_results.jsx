@@ -17,7 +17,9 @@ export default class OrganizerSurveyResults extends React.Component {
         <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended&organizer_view=1&exclude_summer=1">
           <SurveyResultsHeader
             organizerView={true}
-            preselectedWorkshopId={this.props.params && this.props.params['workshopId']}
+            preselectedWorkshopId={
+              this.props.params && this.props.params['workshopId']
+            }
           />
         </WorkshopTableLoader>
       </div>

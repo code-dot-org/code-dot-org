@@ -1,7 +1,12 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
-import {isCodeOrgBrowser, isChrome, gtChrome33, isChromeOS} from './browserChecks';
+import {
+  isCodeOrgBrowser,
+  isChrome,
+  gtChrome33,
+  isChromeOS
+} from './browserChecks';
 
 export default class SetupChecker {
   port = null;
@@ -39,8 +44,7 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    return findPortWithViableDevice()
-        .then(port => this.port = port);
+    return findPortWithViableDevice().then(port => (this.port = port));
   }
 
   /**

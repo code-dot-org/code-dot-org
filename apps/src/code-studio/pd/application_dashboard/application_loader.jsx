@@ -47,21 +47,23 @@ export default class ApplicationLoader extends React.Component {
     this.loadRequest = $.ajax({
       method: 'GET',
       url
-    }).done(applicationData => {
-      this.setState({
-        applicationData,
-        loading: false
-      });
+    })
+      .done(applicationData => {
+        this.setState({
+          applicationData,
+          loading: false
+        });
 
-      if (this.props.onApplicationLoaded) {
-        this.props.onApplicationLoaded(applicationData);
-      }
-    }).fail(() => {
-      this.setState({
-        applicationData: null,
-        loading: false
+        if (this.props.onApplicationLoaded) {
+          this.props.onApplicationLoaded(applicationData);
+        }
+      })
+      .fail(() => {
+        this.setState({
+          applicationData: null,
+          loading: false
+        });
       });
-    });
   };
 
   handleUpdate = applicationData => {

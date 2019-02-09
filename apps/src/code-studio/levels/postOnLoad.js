@@ -5,9 +5,12 @@
  * page load rather than on clicking continue
  */
 
-import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import { sendReport, getLastServerResponse } from '@cdo/apps/code-studio/reporting';
-import { TestResults } from '@cdo/apps/constants';
+import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {
+  sendReport,
+  getLastServerResponse
+} from '@cdo/apps/code-studio/reporting';
+import {TestResults} from '@cdo/apps/constants';
 
 /**
  * Make our milestone post with some simple configuration. Note, this assumes

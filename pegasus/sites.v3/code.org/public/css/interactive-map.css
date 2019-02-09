@@ -3,11 +3,22 @@
   min-height: 425px;
   float: left;
   margin-right: -100px;
+  margin-top: 100px;
+}
+
+#right {
+  float: right;
+  overflow: hidden;
 }
 
 #infobox {
   text-align: center;
   float: right;
+  background-color: rgb(231,232,234);
+  color: dimgrey;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .info {
@@ -24,7 +35,7 @@
 
 #infobox button {
   margin-top: 18px;
-  margin-bottom: 18px;
+  width: 100%;
 }
 
 #infobox b {
@@ -37,21 +48,6 @@
   background-color: #e2e4e3;
   color: #595959;
   margin-bottom: 10px;
-}
-
-.state-buttons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.state-button {
-  margin: 10px;
-}
-
-.state-button button {
-  height: 60px;
-  white-space: initial;
 }
 
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
@@ -70,26 +66,48 @@
   width: 270px;
 }
 
-.fact i {
+.policy-title {
+  padding: 10px 0px;
+}
+
+.icon-fact .fa-times-circle {
+  color: lightgray;
+  font-size: 48px;
+}
+
+.fa-circle {
+  color: dimgray;
+  font-size: 44px;
+  padding-top: 2px;
+}
+
+.icon-fact .fa-check-circle {
+  color: dimgray;
   display: inline-block;
   font-size: 48px;
   vertical-align: middle;
+  height: 48px;
+  width: 48px;
+}
+
+.fa-stack {
+  height: 48px;
+  width: 48px;
 }
 
 .fact .fact-text {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-  padding-left: 10px;
   width: 80%;
 }
 
 .fact.subfact {
-  color: #ddd;
+  color: dimgrey;
 }
 
 .fact > a {
-  color: white;
+  color: dimgrey;
 }
 
 #state-title {
@@ -105,9 +123,15 @@
 
 #sources {
   clear: both;
+  float: right;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  color: dimgrey;
   opacity: 0.8;
-  color: #BCC2C6;
+  padding-top: 10px;
+}
+
+#sources a {
+  color: #7665a0;
 }

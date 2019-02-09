@@ -7,22 +7,16 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Show Check Mark',
-        description: 'A green check mark is displayed when the answer is correct.',
+        description:
+          'A green check mark is displayed when the answer is correct.',
         story: () => (
-          <MultipleChoiceAnswerCell
-            percentValue={40}
-            isCorrectAnswer={true}
-          />
+          <MultipleChoiceAnswerCell percentValue={40} isCorrectAnswer={true} />
         )
       },
       {
-        name:'Hide Check Mark',
+        name: 'Hide Check Mark',
         description: 'Check mark is hidden when the answer is wrong.',
-        story: () => (
-          <MultipleChoiceAnswerCell
-            percentValue={60}
-          />
-        )
-      },
+        story: () => <MultipleChoiceAnswerCell percentValue={60} />
+      }
     ]);
 };

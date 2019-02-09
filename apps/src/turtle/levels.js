@@ -10,7 +10,7 @@ var utils = require('../utils');
 var LEVELBUILDER_LEVEL = 7;
 
 //TODO: Fix hacky level-number-dependent toolbox.
-var toolbox = function (page, level) {
+var toolbox = function(page, level) {
   return require('./toolbox.xml.ejs')({
     page: page,
     level: level
@@ -18,7 +18,7 @@ var toolbox = function (page, level) {
 };
 
 //TODO: Fix hacky level-number-dependent startBlocks.
-var startBlocks = function (page, level) {
+var startBlocks = function(page, level) {
   return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
@@ -58,30 +58,36 @@ var blocks = {
   SIMPLE_MOVE_DOWN_LENGTH: blockUtils.blockOfType('simple_move_down_length'),
   SIMPLE_MOVE_LEFT_LENGTH: blockUtils.blockOfType('simple_move_left_length'),
   SIMPLE_MOVE_RIGHT_LENGTH: blockUtils.blockOfType('simple_move_right_length'),
-  simpleMoveBlocks: function () {
-    return this.SIMPLE_MOVE_UP +
+  simpleMoveBlocks: function() {
+    return (
+      this.SIMPLE_MOVE_UP +
       this.SIMPLE_MOVE_DOWN +
       this.SIMPLE_MOVE_LEFT +
-      this.SIMPLE_MOVE_RIGHT;
+      this.SIMPLE_MOVE_RIGHT
+    );
   },
-  simpleJumpBlocks: function () {
-    return this.SIMPLE_JUMP_UP +
+  simpleJumpBlocks: function() {
+    return (
+      this.SIMPLE_JUMP_UP +
       this.SIMPLE_JUMP_DOWN +
       this.SIMPLE_JUMP_LEFT +
-      this.SIMPLE_JUMP_RIGHT;
+      this.SIMPLE_JUMP_RIGHT
+    );
   },
-  simpleMoveLengthBlocks: function () {
-    return this.SIMPLE_MOVE_UP_LENGTH +
+  simpleMoveLengthBlocks: function() {
+    return (
+      this.SIMPLE_MOVE_UP_LENGTH +
       this.SIMPLE_MOVE_DOWN_LENGTH +
       this.SIMPLE_MOVE_LEFT_LENGTH +
-      this.SIMPLE_MOVE_RIGHT_LENGTH;
+      this.SIMPLE_MOVE_RIGHT_LENGTH
+    );
   }
 };
 
 /**
  * Information about level-specific requirements.
  */
-var levels = module.exports = {
+var levels = (module.exports = {
   // Level 1: El.
   '1_1': {
     instructionsImportant: true,
@@ -98,10 +104,7 @@ var levels = module.exports = {
     ideal: 8,
     toolbox: toolbox(1, 2),
     startBlocks: startBlocks(1, 2),
-    requiredBlocks: [
-      [MOVE_FORWARD_INLINE],
-      [turnRightRestricted(90)]
-    ],
+    requiredBlocks: [[MOVE_FORWARD_INLINE], [turnRightRestricted(90)]],
     freePlay: false
   },
   // Level 3: Square (with repeat).
@@ -126,14 +129,16 @@ var levels = module.exports = {
     requiredBlocks: [
       [MOVE_FORWARD_OR_BACKWARD_INLINE],
       [repeat(3)],
-      [{
-        // allow turn right or left, but show turn right block if they've done neither
-        test: function (block) {
-          return block.type === 'draw_turn_by_constant_restricted';
-        },
-        type: 'draw_turn_by_constant',
-        titles: {VALUE: '???'}
-      }]
+      [
+        {
+          // allow turn right or left, but show turn right block if they've done neither
+          test: function(block) {
+            return block.type === 'draw_turn_by_constant_restricted';
+          },
+          type: 'draw_turn_by_constant',
+          titles: {VALUE: '???'}
+        }
+      ]
     ],
     freePlay: false
   },
@@ -216,23 +221,27 @@ var levels = module.exports = {
     startBlocks: startBlocks(2, 1),
     requiredBlocks: [
       [repeat(4)],
-      [{
-        // allow turn right or left, but show turn right block if they've done neither
-        test: function (block) {
-          return block.type === 'draw_turn';
-        },
-        type: 'draw_turn',
-        titles: {'DIR': 'turnRight'},
-        values: {'VALUE': makeMathNumber(90)}
-      }],
-      [{
-        // allow move forward or backward, but show forward block if they've done neither
-        test: function (block) {
-          return block.type === 'draw_move';
-        },
-        type: 'draw_move',
-        values: {'VALUE': makeMathNumber(100)}
-      }]
+      [
+        {
+          // allow turn right or left, but show turn right block if they've done neither
+          test: function(block) {
+            return block.type === 'draw_turn';
+          },
+          type: 'draw_turn',
+          titles: {DIR: 'turnRight'},
+          values: {VALUE: makeMathNumber(90)}
+        }
+      ],
+      [
+        {
+          // allow move forward or backward, but show forward block if they've done neither
+          test: function(block) {
+            return block.type === 'draw_move';
+          },
+          type: 'draw_move',
+          values: {VALUE: makeMathNumber(100)}
+        }
+      ]
     ],
     freePlay: false
   },
@@ -242,9 +251,7 @@ var levels = module.exports = {
     ideal: 3,
     toolbox: toolbox(2, 2),
     startBlocks: startBlocks(2, 2),
-    requiredBlocks: [
-      [drawASquare('??')]
-    ],
+    requiredBlocks: [[drawASquare('??')]],
     freePlay: false
   },
   // Level 3: Three squares.
@@ -253,11 +260,7 @@ var levels = module.exports = {
     ideal: 6,
     toolbox: toolbox(2, 3),
     startBlocks: startBlocks(2, 3),
-    requiredBlocks: [
-      [repeat(3)],
-      [drawASquare(100)],
-      [drawTurn()]
-    ],
+    requiredBlocks: [[repeat(3)], [drawASquare(100)], [drawTurn()]],
     freePlay: false
   },
   // Level 4: 36 squares.
@@ -275,9 +278,7 @@ var levels = module.exports = {
     ideal: 11,
     toolbox: toolbox(2, 5),
     startBlocks: startBlocks(2, 5),
-    requiredBlocks: [
-      [drawASquare('??')]
-    ],
+    requiredBlocks: [[drawASquare('??')]],
     freePlay: false
   },
   // Level 6: For-loop squares.
@@ -312,10 +313,7 @@ var levels = module.exports = {
     ideal: 5,
     toolbox: toolbox(2, 8),
     startBlocks: startBlocks(2, 7.5),
-    requiredBlocks: [
-      [drawASnowman(250)],
-      [drawASnowman(100)]
-    ],
+    requiredBlocks: [[drawASnowman(250)], [drawASnowman(100)]],
     freePlay: false,
     sliderSpeed: 0.9,
     startDirection: 0
@@ -331,11 +329,13 @@ var levels = module.exports = {
       [drawASnowman(150)],
       [turnRight(90)],
       [turnLeft(90)],
-      [{
-        test: 'jump',
-        type: 'jump',
-        values: {'VALUE': makeMathNumber(100)}
-      }],
+      [
+        {
+          test: 'jump',
+          type: 'jump',
+          values: {VALUE: makeMathNumber(100)}
+        }
+      ],
       [simpleBlock('jump')],
       [repeat(3)]
     ],
@@ -356,11 +356,13 @@ var levels = module.exports = {
       [simpleBlock('variables_get_counter')],
       [turnRight(90)],
       [turnLeft(90)],
-      [{
-        test: 'jump',
-        type: 'jump',
-        values: {'VALUE': makeMathNumber(60)}
-      }]
+      [
+        {
+          test: 'jump',
+          type: 'jump',
+          values: {VALUE: makeMathNumber(60)}
+        }
+      ]
     ],
     freePlay: false,
     sliderSpeed: 0.9,
@@ -381,9 +383,7 @@ var levels = module.exports = {
     ideal: 14,
     toolbox: toolbox(3, 1),
     startBlocks: startBlocks(3, 1),
-    requiredBlocks: [
-      [levelBase.call(msg.drawASquare())]
-    ],
+    requiredBlocks: [[levelBase.call(msg.drawASquare())]],
     freePlay: false
   },
   // Level 2: Create "draw a triangle".
@@ -612,15 +612,17 @@ var levels = module.exports = {
     requiredBlocks: [
       [MOVE_FORWARD_OR_BACKWARD_INLINE],
       [repeat(3)],
-      [{
-        // allow turn right or left, but show turn right block if they've done neither
-        test: function (block) {
-          return block.type === 'draw_turn_by_constant';
-        },
-        type: 'draw_turn_by_constant',
-        titles: {VALUE: '???'}
-      }]
-    ],
+      [
+        {
+          // allow turn right or left, but show turn right block if they've done neither
+          test: function(block) {
+            return block.type === 'draw_turn_by_constant';
+          },
+          type: 'draw_turn_by_constant',
+          titles: {VALUE: '???'}
+        }
+      ]
+    ]
   },
   // Level 2: Two triangles.
   '4_2': {
@@ -628,9 +630,7 @@ var levels = module.exports = {
     ideal: 8,
     toolbox: toolbox(4, 2),
     startBlocks: startBlocks(4, 2),
-    requiredBlocks: [
-      [turnRightByConstant('???')]
-    ],
+    requiredBlocks: [[turnRightByConstant('???')]],
     sliderSpeed: 0.5
   },
   // Level 3: Four triangles using repeat.
@@ -639,10 +639,7 @@ var levels = module.exports = {
     ideal: 6,
     toolbox: toolbox(4, 3),
     startBlocks: startBlocks(4, 3),
-    requiredBlocks: [
-      [repeat(4)],
-      [turnRightByConstant('???')]
-    ],
+    requiredBlocks: [[repeat(4)], [turnRightByConstant('???')]],
     sliderSpeed: 0.7
   },
   // Level 4: Ten triangles with missing repeat number.
@@ -651,9 +648,7 @@ var levels = module.exports = {
     ideal: 6,
     toolbox: toolbox(4, 4),
     startBlocks: startBlocks(4, 4),
-    requiredBlocks: [
-      [repeat('???')]
-    ],
+    requiredBlocks: [[repeat('???')]],
     sliderSpeed: 0.7,
     impressive: true
   },
@@ -663,9 +658,7 @@ var levels = module.exports = {
     ideal: 6,
     toolbox: toolbox(4, 5),
     startBlocks: startBlocks(4, 5),
-    requiredBlocks: [
-      [turnRightByConstant('???')]
-    ],
+    requiredBlocks: [[turnRightByConstant('???')]],
     sliderSpeed: 0.9,
     impressive: true
   },
@@ -678,11 +671,13 @@ var levels = module.exports = {
     requiredBlocks: [
       [moveForwardInline(20)],
       [repeat(4)],
-      [{
-        test: 'turnRight',
-        type: 'draw_turn_by_constant',
-        titles: {VALUE: '???'}
-      }]
+      [
+        {
+          test: 'turnRight',
+          type: 'draw_turn_by_constant',
+          titles: {VALUE: '???'}
+        }
+      ]
     ],
     permittedErrors: 10,
     startDirection: 0
@@ -694,10 +689,7 @@ var levels = module.exports = {
     ideal: 6,
     toolbox: toolbox(4, 7),
     startBlocks: startBlocks(4, 7),
-    requiredBlocks: [
-      [moveForwardInline(20)],
-      [repeat(10)]
-    ],
+    requiredBlocks: [[moveForwardInline(20)], [repeat(10)]],
     startDirection: 0,
     sliderSpeed: 0.7
   },
@@ -709,10 +701,7 @@ var levels = module.exports = {
     ideal: 8,
     toolbox: toolbox(4, 8),
     startBlocks: startBlocks(4, 8),
-    requiredBlocks: [
-      [repeat(4)],
-      [turnRightByConstant('???')]
-    ],
+    requiredBlocks: [[repeat(4)], [turnRightByConstant('???')]],
     startDirection: 0,
     sliderSpeed: 0.9
   },
@@ -724,9 +713,7 @@ var levels = module.exports = {
     ideal: 8,
     toolbox: toolbox(4, 9),
     startBlocks: startBlocks(4, 9),
-    requiredBlocks: [
-      [turnRightByConstant('???')]
-    ],
+    requiredBlocks: [[turnRightByConstant('???')]],
     startDirection: 330,
     sliderSpeed: 0.9
   },
@@ -738,9 +725,7 @@ var levels = module.exports = {
     ideal: 8,
     toolbox: toolbox(4, 10),
     startBlocks: startBlocks(4, 10),
-    requiredBlocks: [
-      [repeat('???')]
-    ],
+    requiredBlocks: [[repeat('???')]],
     startDirection: 0,
     sliderSpeed: 0.9,
     impressive: true
@@ -753,10 +738,10 @@ var levels = module.exports = {
     initialY: 300,
     toolbox: toolbox(4, 11),
     startBlocks: startBlocks(4, 11),
-    requiredBlocks : [],
+    requiredBlocks: [],
     startDirection: 0,
     sliderSpeed: 0.9
-   },
+  },
 
   // Formerly Page 5.
   // Level 1: playground.
@@ -817,7 +802,7 @@ var levels = module.exports = {
     sliderSpeed: 1.0
   },
   // The level for building new levels.
-  'builder': {
+  builder: {
     answer: [],
     freePlay: true,
     initialY: 300,
@@ -827,7 +812,7 @@ var levels = module.exports = {
     sliderSpeed: 1.0
   },
   // The default level newly created levels use.
-  'custom': {
+  custom: {
     answer: [],
     freePlay: false,
     initialY: 300,
@@ -836,69 +821,69 @@ var levels = module.exports = {
     startDirection: 0,
     sliderSpeed: 1.0
   },
-  'k1_demo': {
+  k1_demo: {
     answer: [],
     freePlay: false,
     initialY: 300,
     isK1: true,
     toolbox: blockUtils.createToolbox(
-        blocks.simpleMoveBlocks() +
+      blocks.simpleMoveBlocks() +
         blocks.simpleJumpBlocks() +
         blocks.simpleMoveLengthBlocks() +
         blockUtils.blockOfType('controls_repeat_simplified') +
         blockUtils.blockOfType('draw_colour_simple')
-      ),
+    ),
     startBlocks: '',
     startDirection: 0,
     sliderSpeed: 1.0
   }
-};
+});
 
 levels.ec_1_1 = utils.extend(levels['1_1'], {
-  'editCode': true,
-  'codeFunctions': {
-    'moveForward': null,
-    'turnRight': null,
+  editCode: true,
+  codeFunctions: {
+    moveForward: null,
+    turnRight: null
   },
-  'startBlocks': "moveForward(100);\n",
+  startBlocks: 'moveForward(100);\n'
 });
 levels.ec_1_2 = utils.extend(levels['1_2'], {
-  'editCode': true,
-  'codeFunctions': {
-    'moveForward': null,
-    'turnRight': null,
-    'penColour': null,
+  editCode: true,
+  codeFunctions: {
+    moveForward: null,
+    turnRight: null,
+    penColour: null
   },
-  'startBlocks': "penColour('#ff0000');\nmoveForward(100);\n",
+  startBlocks: "penColour('#ff0000');\nmoveForward(100);\n"
 });
 levels.ec_1_3 = utils.extend(levels['1_3'], {
-  'editCode': true,
-  'codeFunctions': {
-    'moveForward': null,
-    'turnRight': null,
-    'penColour': null,
-    'forLoop_i_0_4': { 'category': 'Artist' },
+  editCode: true,
+  codeFunctions: {
+    moveForward: null,
+    turnRight: null,
+    penColour: null,
+    forLoop_i_0_4: {category: 'Artist'}
   },
-  'startBlocks': "for (var i = 0; i < 4; i++) {\n  __\n}\n",
+  startBlocks: 'for (var i = 0; i < 4; i++) {\n  __\n}\n'
 });
 levels.ec_1_4 = utils.extend(levels['1_4'], {
-  'editCode': true,
-  'codeFunctions': {
-    'moveForward': null,
-    'turnRight': null,
-    'penColour': null,
-    'forLoop_i_0_4': { 'category': 'Artist' },
+  editCode: true,
+  codeFunctions: {
+    moveForward: null,
+    turnRight: null,
+    penColour: null,
+    forLoop_i_0_4: {category: 'Artist'}
   },
-  'startBlocks': "for (var i = 0; i < 3; i++) {\n  penColour('#ff0000');\n}\n",
+  startBlocks: "for (var i = 0; i < 3; i++) {\n  penColour('#ff0000');\n}\n"
 });
 levels.ec_1_10 = utils.extend(levels['1_10'], {
-  'editCode': true,
-  'codeFunctions': {
-    'moveForward': null,
-    'turnRight': null,
-    'penColour': null,
-    'penWidth': null,
-    'forLoop_i_0_4': { 'category': 'Artist' },
+  editCode: true,
+  codeFunctions: {
+    moveForward: null,
+    turnRight: null,
+    penColour: null,
+    penWidth: null,
+    forLoop_i_0_4: {category: 'Artist'}
   },
-  'startBlocks': "moveForward(100);\n",
+  startBlocks: 'moveForward(100);\n'
 });

@@ -10,25 +10,25 @@ import React from 'react';
 export default class DropletPaletteSelector extends React.Component {
   static propTypes = {
     editor: PropTypes.instanceOf(CodeMirror).isRequired,
-    palette: PropTypes.object.isRequired,
+    palette: PropTypes.object.isRequired
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      currentPalette: props.editor.getValue(),
+      currentPalette: props.editor.getValue()
     };
   }
 
   componentDidMount() {
     this.props.editor.on('change', () => {
       this.setState({
-        currentPalette: this.props.editor.getValue(),
+        currentPalette: this.props.editor.getValue()
       });
     });
   }
 
-  selectBlock = (event) => {
+  selectBlock = event => {
     const blockName = event.target.value;
     if (!blockName) {
       return;
@@ -56,20 +56,27 @@ export default class DropletPaletteSelector extends React.Component {
     let error = null;
     try {
       let currentBlocks = this.getCurrentPaletteBlocks();
-      blocks = Object.keys(this.props.palette).filter(b => currentBlocks[b] === undefined);
+      blocks = Object.keys(this.props.palette).filter(
+        b => currentBlocks[b] === undefined
+      );
     } catch (e) {
       error = true;
     }
-    const label = (
-      error ? "Fix JSON syntax to see available blocks" :
-      blocks.length === 0 ? "All blocks have been added" :
-      "Add block"
-    );
+    const label = error
+      ? 'Fix JSON syntax to see available blocks'
+      : blocks.length === 0
+      ? 'All blocks have been added'
+      : 'Add block';
     return (
-      <select disabled={error || blocks.length === 0} onChange={this.selectBlock}>
+      <select
+        disabled={error || blocks.length === 0}
+        onChange={this.selectBlock}
+      >
         <option>{label}</option>
         {blocks.map(blockName => (
-           <option key={blockName} value={blockName}>{blockName}</option>
+          <option key={blockName} value={blockName}>
+            {blockName}
+          </option>
         ))}
       </select>
     );

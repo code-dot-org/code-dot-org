@@ -29,8 +29,10 @@ export default class SessionListFormPart extends React.Component {
     const newSession = {
       // Placeholder Ids are needed to generate unique keys in the React list.
       // Prefix with _ so they don't conflict with actual Ids on sessions that have been saved.
-      placeholderId: '_' + (this.nextPlaceholderId++),
-      date: moment(lastSession.date, DATE_FORMAT).add(1,'days').format(DATE_FORMAT),
+      placeholderId: '_' + this.nextPlaceholderId++,
+      date: moment(lastSession.date, DATE_FORMAT)
+        .add(1, 'days')
+        .format(DATE_FORMAT),
       startTime: lastSession.startTime,
       endTime: lastSession.endTime
     };
@@ -39,7 +41,7 @@ export default class SessionListFormPart extends React.Component {
     this.props.onChange(sessions);
   };
 
-  handleRemove = (i) => {
+  handleRemove = i => {
     const sessions = this.props.sessions;
     const removedSession = sessions.splice(i, 1)[0];
     this.props.onChange(sessions, removedSession);
@@ -47,8 +49,12 @@ export default class SessionListFormPart extends React.Component {
 
   render() {
     const sessionForms = this.props.sessions.map((session, i, sessions) => {
-      const handleAdd = i === sessions.length-1 && sessions.length < MAX_SESSIONS ? this.handleAdd : null;
-      const handleRemove = sessions.length > 1 ? this.handleRemove.bind(null, i) : null;
+      const handleAdd =
+        i === sessions.length - 1 && sessions.length < MAX_SESSIONS
+          ? this.handleAdd
+          : null;
+      const handleRemove =
+        sessions.length > 1 ? this.handleRemove.bind(null, i) : null;
       return (
         <SessionFormPart
           readOnly={this.props.readOnly}

@@ -1,6 +1,9 @@
 import $ from 'jquery';
-import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import { postMilestoneForPageLoad, onContinue } from '@cdo/apps/code-studio/levels/postOnLoad';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {
+  postMilestoneForPageLoad,
+  onContinue
+} from '@cdo/apps/code-studio/levels/postOnLoad';
 
 $(document).ready(() => {
   registerGetResult();
@@ -9,7 +12,7 @@ $(document).ready(() => {
   postMilestoneForPageLoad();
 
   // handle click on continue (results in navigating to next puzzle)
-  $(".submitButton").click(onContinue);
+  $('.submitButton').click(onContinue);
 });
 
 /**
@@ -42,4 +45,4 @@ function resizeIFrame(iframe) {
   iframe.height = height;
 }
 
-window.curriculumReference = { onload };
+window.curriculumReference = {onload};

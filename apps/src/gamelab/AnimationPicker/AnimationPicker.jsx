@@ -1,12 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {createUuid} from '../../utils';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
 import gamelabMsg from '@cdo/gamelab/locale';
 import styles from './styles';
-import { hide, pickNewAnimation, pickLibraryAnimation, beginUpload,
-    handleUploadComplete, handleUploadError } from './animationPickerModule';
+import {
+  hide,
+  pickNewAnimation,
+  pickLibraryAnimation,
+  beginUpload,
+  handleUploadComplete,
+  handleUploadError
+} from './animationPickerModule';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '../../code-studio/components/HiddenUploader';
 
@@ -52,18 +58,24 @@ class AnimationPicker extends React.Component {
 
   renderVisibleBody() {
     if (this.props.uploadError) {
-      return <h1>{gamelabMsg.animationPicker_error({ message: this.props.uploadError })}</h1>;
+      return (
+        <h1>
+          {gamelabMsg.animationPicker_error({message: this.props.uploadError})}
+        </h1>
+      );
     } else if (this.props.uploadInProgress) {
-      return <h1 style={styles.title}>{gamelabMsg.animationPicker_uploading()}</h1>;
+      return (
+        <h1 style={styles.title}>{gamelabMsg.animationPicker_uploading()}</h1>
+      );
     }
     return (
-        <AnimationPickerBody
-          is13Plus={this.props.is13Plus}
-          onDrawYourOwnClick={this.props.onPickNewAnimation}
-          onPickLibraryAnimation={this.props.onPickLibraryAnimation}
-          onUploadClick={this.onUploadClick}
-          playAnimations={this.props.playAnimations}
-        />
+      <AnimationPickerBody
+        is13Plus={this.props.is13Plus}
+        onDrawYourOwnClick={this.props.onPickNewAnimation}
+        onPickLibraryAnimation={this.props.onPickLibraryAnimation}
+        onUploadClick={this.onUploadClick}
+        playAnimations={this.props.playAnimations}
+      />
     );
   }
 
@@ -81,7 +93,13 @@ class AnimationPicker extends React.Component {
       >
         <HiddenUploader
           ref="uploader"
-          toUrl={'/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png'}
+          toUrl={
+            '/v3/animations/' +
+            this.props.channelId +
+            '/' +
+            createUuid() +
+            '.png'
+          }
           allowedExtensions={this.props.allowedExtensions}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
@@ -93,36 +111,46 @@ class AnimationPicker extends React.Component {
   }
 }
 
-export default connect(state => ({
-  visible: state.animationPicker.visible,
-  uploadInProgress: state.animationPicker.uploadInProgress,
-  uploadError: state.animationPicker.uploadError,
-  is13Plus: state.pageConstants.is13Plus,
-  playAnimations: !state.pageConstants.allAnimationsSingleFrame
-}), dispatch => ({
-  onClose() {
-    dispatch(hide());
-  },
-  onPickNewAnimation() {
-    dispatch(pickNewAnimation());
-  },
-  onPickLibraryAnimation(animation) {
-    dispatch(pickLibraryAnimation(animation));
-  },
-  onUploadStart(data) {
-    if (data.files[0].size >= MAX_UPLOAD_SIZE) {
-      dispatch(handleUploadError(gamelabMsg.animationPicker_unsupportedSize()));
-    } else if (data.files[0].type === 'image/png' || data.files[0].type === 'image/jpeg') {
-      dispatch(beginUpload(data.files[0].name));
-      data.submit();
-    } else {
-      dispatch(handleUploadError(gamelabMsg.animationPicker_unsupportedType()));
+export default connect(
+  state => ({
+    visible: state.animationPicker.visible,
+    uploadInProgress: state.animationPicker.uploadInProgress,
+    uploadError: state.animationPicker.uploadError,
+    is13Plus: state.pageConstants.is13Plus,
+    playAnimations: !state.pageConstants.allAnimationsSingleFrame
+  }),
+  dispatch => ({
+    onClose() {
+      dispatch(hide());
+    },
+    onPickNewAnimation() {
+      dispatch(pickNewAnimation());
+    },
+    onPickLibraryAnimation(animation) {
+      dispatch(pickLibraryAnimation(animation));
+    },
+    onUploadStart(data) {
+      if (data.files[0].size >= MAX_UPLOAD_SIZE) {
+        dispatch(
+          handleUploadError(gamelabMsg.animationPicker_unsupportedSize())
+        );
+      } else if (
+        data.files[0].type === 'image/png' ||
+        data.files[0].type === 'image/jpeg'
+      ) {
+        dispatch(beginUpload(data.files[0].name));
+        data.submit();
+      } else {
+        dispatch(
+          handleUploadError(gamelabMsg.animationPicker_unsupportedType())
+        );
+      }
+    },
+    onUploadDone(result) {
+      dispatch(handleUploadComplete(result));
+    },
+    onUploadError(status) {
+      dispatch(handleUploadError(status));
     }
-  },
-  onUploadDone(result) {
-    dispatch(handleUploadComplete(result));
-  },
-  onUploadError(status) {
-    dispatch(handleUploadError(status));
-  }
-}))(AnimationPicker);
+  })
+)(AnimationPicker);

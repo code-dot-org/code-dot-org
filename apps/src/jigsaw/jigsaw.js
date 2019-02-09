@@ -37,14 +37,31 @@ function useLargeNotches() {
   Blockly.BlockSvg.NOTCH_PATH_WIDTH = notchWidthA * 2 + notchWidthB;
   Blockly.BlockSvg.NOTCH_WIDTH = 50;
 
-  var notchPathLeft = 'l ' +
-    notchWidthA + ',' + notchHeight + ' ' +
-    notchWidthB + ',0 ' +
-    notchWidthA + ',-' + notchHeight;
-  var notchPathRight = 'l ' +
-    '-' + notchWidthA + ',' + notchHeight + ' ' +
-    '-' + notchWidthB + ',0 ' +
-    '-' + notchWidthA + ',-' + notchHeight;
+  var notchPathLeft =
+    'l ' +
+    notchWidthA +
+    ',' +
+    notchHeight +
+    ' ' +
+    notchWidthB +
+    ',0 ' +
+    notchWidthA +
+    ',-' +
+    notchHeight;
+  var notchPathRight =
+    'l ' +
+    '-' +
+    notchWidthA +
+    ',' +
+    notchHeight +
+    ' ' +
+    '-' +
+    notchWidthB +
+    ',0 ' +
+    '-' +
+    notchWidthA +
+    ',-' +
+    notchHeight;
   // Blockly.BlockSvg.NOTCH_PATH_LEFT = 'l 6,4 3,0 6,-4';
   // Blockly.BlockSvg.NOTCH_PATH_RIGHT = 'l -6,4 -3,0 -6,-4';
 
@@ -52,10 +69,17 @@ function useLargeNotches() {
   var notchHighlightWidthA = notchWidthA + 0.5; //6.5;
   var notchHighlightWidthB = notchWidthB - 1; //2;
 
-  var notchPathLeftHighlight = 'l ' +
-    notchHighlightWidthA + ',' + notchHighlightHeight + ' ' +
-    notchHighlightWidthB + ',0 ' +
-    notchHighlightWidthA + ',-' + notchHighlightHeight;
+  var notchPathLeftHighlight =
+    'l ' +
+    notchHighlightWidthA +
+    ',' +
+    notchHighlightHeight +
+    ' ' +
+    notchHighlightWidthB +
+    ',0 ' +
+    notchHighlightWidthA +
+    ',-' +
+    notchHighlightHeight;
   // Blockly.BlockSvg.NOTCH_PATH_LEFT_HIGHLIGHT = 'l 6.5,4 2,0 6.5,-4';
 
   Blockly.Connection.NOTCH_PATHS_OVERRIDE = {
@@ -63,17 +87,15 @@ function useLargeNotches() {
     leftHighlight: notchPathLeftHighlight,
     right: notchPathRight
   };
-
 }
-
 
 // Default Scalings
 Jigsaw.scale = {
-  'snapRadius': 1,
-  'stepSpeed': 33
+  snapRadius: 1,
+  stepSpeed: 33
 };
 
-var loadLevel = function () {
+var loadLevel = function() {
   // Load maps.
   // Override scalars.
   for (var key in level.scale) {
@@ -86,30 +108,34 @@ var loadLevel = function () {
   Jigsaw.block1Clicked = false;
 };
 
-var drawMap = function () {
+var drawMap = function() {
   // Hide the left column and the resize bar.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.display = 'none';
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();
-    Blockly.createSvgElement('rect', {
-      fill: "url(#pat_" + level.id + "A)",
-      "fill-opacity": "0.2",
-      width: level.image.width,
-      height: level.image.height,
-      transform: "translate(" + level.ghost.x + ", " +
-        level.ghost.y + ")"
-    }, blockCanvas, {
-      beforeExisting: true
-    });
+    Blockly.createSvgElement(
+      'rect',
+      {
+        fill: 'url(#pat_' + level.id + 'A)',
+        'fill-opacity': '0.2',
+        width: level.image.width,
+        height: level.image.height,
+        transform: 'translate(' + level.ghost.x + ', ' + level.ghost.y + ')'
+      },
+      blockCanvas,
+      {
+        beforeExisting: true
+      }
+    );
   }
 };
 
 /**
  * Initialize Blockly and the Jigsaw app.  Called on page load.
  */
-Jigsaw.init = function (config) {
+Jigsaw.init = function(config) {
   // Jigsaw.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -120,13 +146,13 @@ Jigsaw.init = function (config) {
   }
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
-  config.loadAudio = function () {
+  config.loadAudio = function() {
     studioApp().loadAudio(skin.winSound, 'win');
     studioApp().loadAudio(skin.startSound, 'start');
     studioApp().loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function () {
+  config.afterInject = function() {
     /**
      * The richness of block colours, regardless of the hue.
      * MOOC blocks should be brighter (target audience is younger).
@@ -146,18 +172,20 @@ Jigsaw.init = function (config) {
   config.enableShowBlockCount = false;
   config.showUnusedBlocks = false;
 
-  var onMount = function () {
+  var onMount = function() {
     studioApp().init(config);
 
     document.getElementById('runButton').style.display = 'none';
-    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function (evt) {
-      checkForSuccess();
-    });
+    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(
+      function(evt) {
+        checkForSuccess();
+      }
+    );
 
     // Only used by level1, in which the success criteria is clicking on the block
     var block1 = document.querySelectorAll("[block-id='1']")[0];
     if (block1) {
-      dom.addMouseDownTouchEvent(block1, function () {
+      dom.addMouseDownTouchEvent(block1, function() {
         Jigsaw.block1Clicked = true;
       });
     }
@@ -170,7 +198,7 @@ Jigsaw.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        visualizationColumn={<JigsawVisualizationColumn/>}
+        visualizationColumn={<JigsawVisualizationColumn />}
         onMount={onMount}
       />
     </Provider>,
@@ -192,13 +220,13 @@ function checkForSuccess() {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+var displayFeedback = function() {
   if (!Jigsaw.waitingForReport) {
     studioApp().displayFeedback({
       feedbackType: Jigsaw.testResults,
       response: Jigsaw.response,
       level: level,
-      hideTryAgain: true,
+      hideTryAgain: true
     });
   }
 };
@@ -207,7 +235,7 @@ var displayFeedback = function () {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Jigsaw.onReportComplete = function (response) {
+Jigsaw.onReportComplete = function(response) {
   Jigsaw.response = response;
   Jigsaw.waitingForReport = false;
   studioApp().onReportComplete(response);
@@ -217,15 +245,14 @@ Jigsaw.onReportComplete = function (response) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Jigsaw.execute = function () {
+Jigsaw.execute = function() {
   // execute is a no-op for jigsaw
 };
 
-Jigsaw.onPuzzleComplete = function () {
-
+Jigsaw.onPuzzleComplete = function() {
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Jigsaw.result === ResultType.SUCCESS);
+  var levelComplete = Jigsaw.result === ResultType.SUCCESS;
 
   Jigsaw.testResults = studioApp().getTestResults(levelComplete, {
     allowTopBlocks: true
@@ -244,11 +271,11 @@ Jigsaw.onPuzzleComplete = function () {
 
   // Report result to server.
   studioApp().report({
-     app: 'Jigsaw',
-     level: level.id,
-     result: Jigsaw.result === ResultType.SUCCESS,
-     testResult: Jigsaw.testResults,
-     program: encodeURIComponent(textBlocks),
-     onComplete: Jigsaw.onReportComplete
+    app: 'Jigsaw',
+    level: level.id,
+    result: Jigsaw.result === ResultType.SUCCESS,
+    testResult: Jigsaw.testResults,
+    program: encodeURIComponent(textBlocks),
+    onComplete: Jigsaw.onReportComplete
   });
 };

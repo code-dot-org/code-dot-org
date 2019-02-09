@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 
 class AddTableListRow extends React.Component {
   static propTypes = {
-    onTableAdd: PropTypes.func.isRequired,
+    onTableAdd: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
@@ -22,11 +22,11 @@ class AddTableListRow extends React.Component {
     }
   };
 
-  handleInputChange = (event) => {
+  handleInputChange = event => {
     this.setState({newTableName: event.target.value});
   };
 
-  handleKeyUp = (event) => {
+  handleKeyUp = event => {
     if (event.key === 'Enter') {
       this.handleAdd();
     } else if (event.key === 'Escape') {
@@ -47,10 +47,7 @@ class AddTableListRow extends React.Component {
           />
         </td>
         <td style={dataStyles.cell}>
-          <button
-            style={dataStyles.blueButton}
-            onClick={this.handleAdd}
-          >
+          <button style={dataStyles.blueButton} onClick={this.handleAdd}>
             Add
           </button>
         </td>

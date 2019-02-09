@@ -1,12 +1,12 @@
 import $ from 'jquery';
-import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ContractMatchErrorDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {ContractMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
-$(window).load(function () {
+$(window).load(function() {
   $.widget('custom.coloriconselectmenu', $.ui.selectmenu, {
     /**
      * Override the jQuery selectmenu to add a color square icon driven by the
@@ -16,13 +16,13 @@ $(window).load(function () {
      * @returns {jQuery}
      * @private
      */
-    _renderItem: function (ul, item) {
-      const li = $("<li>", {text: item.label});
-      const color = item.element.attr("data-color");
+    _renderItem: function(ul, item) {
+      const li = $('<li>', {text: item.label});
+      const color = item.element.attr('data-color');
       makeColorSquareIcon(color).appendTo(li);
       return li.appendTo(ul);
     },
-    styleCurrentValue: function () {
+    styleCurrentValue: function() {
       addSquareIconToButton(this.element);
     }
   });
@@ -41,7 +41,9 @@ $(window).load(function () {
    */
   function addSquareIconToButton(selectElement) {
     const $element = $(selectElement);
-    const selectMenuButton = $(`#${$element.attr('id')}-button .ui-selectmenu-text`);
+    const selectMenuButton = $(
+      `#${$element.attr('id')}-button .ui-selectmenu-text`
+    );
     const selectedColor = $element.find('option:selected').attr('data-color');
     makeColorSquareIcon(selectedColor).prependTo(selectMenuButton);
   }
@@ -96,7 +98,7 @@ $(window).load(function () {
     nextUniqueID_ = 0;
 
     grabUniqueID() {
-      return (this.nextUniqueID_++);
+      return this.nextUniqueID_++;
     }
 
     /**
@@ -115,13 +117,13 @@ $(window).load(function () {
       domainTypes: []
     };
 
-    onNameChangeEvent = (event) => {
+    onNameChangeEvent = event => {
       this.setState({
         name: event.target.value
       });
     };
 
-    onRangeChange = (newType) => {
+    onRangeChange = newType => {
       this.setState({
         rangeType: newType
       });
@@ -129,31 +131,31 @@ $(window).load(function () {
 
     onDomainChange = (domainKey, newType) => {
       this.setState({
-        domainTypes:
-          this.state.domainTypes.map((object) => {
-            if (object.key === domainKey) {
-              object.type = newType;
-            }
-            return object;
-          })
+        domainTypes: this.state.domainTypes.map(object => {
+          if (object.key === domainKey) {
+            object.type = newType;
+          }
+          return object;
+        })
       });
     };
 
     onDomainAdd = () => {
       const nextDomainID = this.grabUniqueID();
       this.setState({
-        domainTypes:
-          this.state.domainTypes.concat({
-            key: 'domain' + nextDomainID,
-            type: blockValueType.NUMBER,
-            order: nextDomainID
-          })
+        domainTypes: this.state.domainTypes.concat({
+          key: 'domain' + nextDomainID,
+          type: blockValueType.NUMBER,
+          order: nextDomainID
+        })
       });
     };
 
-    onDomainRemove = (domainKey) => {
+    onDomainRemove = domainKey => {
       this.setState({
-        domainTypes: this.state.domainTypes.filter(object => object.key !== domainKey)
+        domainTypes: this.state.domainTypes.filter(
+          object => object.key !== domainKey
+        )
       });
     };
 
@@ -162,17 +164,36 @@ $(window).load(function () {
         <div>
           <div id="sectionTitle">Name</div>
           <div>
-            <input id="functionNameText" onChange={this.onNameChangeEvent} placeholder="Name" type="text" value={this.state.name}/>
+            <input
+              id="functionNameText"
+              onChange={this.onNameChangeEvent}
+              placeholder="Name"
+              type="text"
+              value={this.state.name}
+            />
           </div>
-          <div id="sectionTitle">Domain <span className="section-type-hint">(the domain is the type of input)</span></div>
+          <div id="sectionTitle">
+            Domain{' '}
+            <span className="section-type-hint">
+              (the domain is the type of input)
+            </span>
+          </div>
           <DomainsList
             domainTypes={this.state.domainTypes}
             onDomainChange={this.onDomainChange}
             onDomainAdd={this.onDomainAdd}
             onDomainRemove={this.onDomainRemove}
           />
-          <div id="sectionTitle" className="clear">Range <span className="section-type-hint">(the range is the type of output)</span></div>
-          <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
+          <div id="sectionTitle" className="clear">
+            Range{' '}
+            <span className="section-type-hint">
+              (the range is the type of output)
+            </span>
+          </div>
+          <TypeChooser
+            type={this.state.rangeType}
+            onTypeChange={this.onRangeChange}
+          />
         </div>
       );
     }
@@ -183,22 +204,28 @@ $(window).load(function () {
       domainTypes: PropTypes.array.isRequired,
       onDomainAdd: PropTypes.func.isRequired,
       onDomainChange: PropTypes.func.isRequired,
-      onDomainRemove: PropTypes.func.isRequired,
+      onDomainRemove: PropTypes.func.isRequired
     };
 
     render() {
-      const sortedDomains = this.props.domainTypes.sort((a,b) => (a.order > b.order));
+      const sortedDomains = this.props.domainTypes.sort(
+        (a, b) => a.order > b.order
+      );
       const typeChoiceNodes = sortedDomains.map(object => (
         <div className="clear" key={object.key}>
           <TypeChooser
             order={object.order}
             type={object.type}
             key={object.key}
-            onTypeChange={(...args) => this.props.onDomainChange(object.key, ...args)}
+            onTypeChange={(...args) =>
+              this.props.onDomainChange(object.key, ...args)
+            }
           />
           <button
             className="btn domain-x-button"
-            onClick={(...args) => this.props.onDomainRemove(object.key, ...args)}
+            onClick={(...args) =>
+              this.props.onDomainRemove(object.key, ...args)
+            }
           >
             Remove
           </button>
@@ -207,7 +234,12 @@ $(window).load(function () {
       return (
         <div className="domainsList">
           {typeChoiceNodes}
-          <button className="btn domain-add-button" onClick={this.props.onDomainAdd}>Add Domain</button>
+          <button
+            className="btn domain-add-button"
+            onClick={this.props.onDomainAdd}
+          >
+            Add Domain
+          </button>
         </div>
       );
     }
@@ -216,16 +248,16 @@ $(window).load(function () {
   class TypeChooser extends React.Component {
     static propTypes = {
       onTypeChange: PropTypes.func.isRequired,
-      type: PropTypes.string,
+      type: PropTypes.string
     };
 
-    selectmenuChange = (selectChange) => {
+    selectmenuChange = selectChange => {
       this.props.onTypeChange(selectChange.target.value);
     };
 
     componentDidMount() {
       $(ReactDOM.findDOMNode(this)).coloriconselectmenu({
-        select: function () {
+        select: function() {
           addSquareIconToButton(this);
         },
         change: this.selectmenuChange
@@ -243,16 +275,39 @@ $(window).load(function () {
       };
       return (
         <select defaultValue={this.props.type} style={divStyle}>
-          <option data-color={typesToColors[blockValueType.NUMBER]} value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
-          <option data-color={typesToColors[blockValueType.STRING]} value={blockValueType.STRING}>{blockValueType.STRING}</option>
-          <option data-color={typesToColors[blockValueType.IMAGE]} value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
-          <option data-color={typesToColors[blockValueType.BOOLEAN]} value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
+          <option
+            data-color={typesToColors[blockValueType.NUMBER]}
+            value={blockValueType.NUMBER}
+          >
+            {blockValueType.NUMBER}
+          </option>
+          <option
+            data-color={typesToColors[blockValueType.STRING]}
+            value={blockValueType.STRING}
+          >
+            {blockValueType.STRING}
+          </option>
+          <option
+            data-color={typesToColors[blockValueType.IMAGE]}
+            value={blockValueType.IMAGE}
+          >
+            {blockValueType.IMAGE}
+          </option>
+          <option
+            data-color={typesToColors[blockValueType.BOOLEAN]}
+            value={blockValueType.BOOLEAN}
+          >
+            {blockValueType.BOOLEAN}
+          </option>
         </select>
       );
     }
   }
 
-  const contractForm = ReactDOM.render(<ContractForm />, document.getElementById('contractForm'));
+  const contractForm = ReactDOM.render(
+    <ContractForm />,
+    document.getElementById('contractForm')
+  );
 
   /**
    * Creates a getResult function compatible with _dialog.html.haml's getResult call
@@ -262,7 +317,7 @@ $(window).load(function () {
    * @returns {Function} getResult function
    */
   function generateGetResultFunction(contractForm, levelData) {
-    return function () {
+    return function() {
       /** @type {ContractForm} */
       const functionName = contractForm.getName().trim();
       const rangeType = contractForm.getRangeType();
@@ -272,16 +327,22 @@ $(window).load(function () {
 
       const formattedDomains = domains.map(domain => domain.type).join('|');
 
-      const formattedResponse = functionName + '|' + rangeType + '|' + formattedDomains;
+      const formattedResponse =
+        functionName + '|' + rangeType + '|' + formattedDomains;
 
-      const checkUserAnswer = checkAnswer.bind(null, functionName, rangeType, formattedDomains);
+      const checkUserAnswer = checkAnswer.bind(
+        null,
+        functionName,
+        rangeType,
+        formattedDomains
+      );
       const answerErrors = answers.map(checkUserAnswer);
 
       // If any succeeded, we succeed. Otherwise, grab the first error.
       const result = answerErrors.some(answerResult => answerResult === '');
       let errorDialog;
       if (!result) {
-        errorDialog = <ContractMatchErrorDialog text={answerErrors[0]}/>;
+        errorDialog = <ContractMatchErrorDialog text={answerErrors[0]} />;
       }
 
       return {

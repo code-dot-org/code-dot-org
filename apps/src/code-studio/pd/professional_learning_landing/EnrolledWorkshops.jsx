@@ -4,7 +4,10 @@ import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap';
 import moment from 'moment';
-import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
+import {
+  DATE_FORMAT,
+  TIME_FORMAT
+} from '../workshop_dashboard/workshopConstants';
 
 class EnrolledWorkshops extends React.Component {
   render() {
@@ -13,7 +16,7 @@ class EnrolledWorkshops extends React.Component {
         queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
       >
-        <EnrolledWorkshopsTable/>
+        <EnrolledWorkshopsTable />
       </WorkshopTableLoader>
     );
   }
@@ -35,57 +38,62 @@ class EnrolledWorkshopsTable extends React.Component {
     enrollmentCodeToCancel: undefined
   };
 
-  cancelEnrollment = (event) => {
-    window.location = `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`;
+  cancelEnrollment = event => {
+    window.location = `/pd/workshop_enrollment/${
+      this.state.enrollmentCodeToCancel
+    }/cancel`;
   };
 
-  dismissCancelModal = (event) => {
+  dismissCancelModal = event => {
     this.setState({
       showCancelModal: false,
       enrollmentCodeToCancel: undefined
     });
   };
 
-  showCancelModal = (enrollmentCode) => {
+  showCancelModal = enrollmentCode => {
     this.setState({
       showCancelModal: true,
       enrollmentCodeToCancel: enrollmentCode
     });
   };
 
-  openCertificate = (workshop) => {
+  openCertificate = workshop => {
     if (workshop.course === 'CS Fundamentals') {
       window.open(`/pd/generate_csf_certificate/${workshop.enrollment_code}`);
     } else {
-      window.open(`/pd/generate_workshop_certificate/${workshop.enrollment_code}`);
+      window.open(
+        `/pd/generate_workshop_certificate/${workshop.enrollment_code}`
+      );
     }
   };
 
   renderWorkshopActionButtons(workshop) {
     return (
       <div>
-        {
-          workshop.state === 'Not Started' && (
-            <Button
-              onClick={() => this.showCancelModal(workshop.enrollment_code)}
-              style={styles.button}
-            >
-              Cancel enrollment
-            </Button>
-          )
-        }
-        {
-          workshop.state === 'Ended' && (
-            <Button
-              onClick={() => this.openCertificate(workshop)}
-              style={styles.button}
-            >
-              Print certificate
-            </Button>
-          )
-        }
+        {workshop.state === 'Not Started' && (
+          <Button
+            onClick={() => this.showCancelModal(workshop.enrollment_code)}
+            style={styles.button}
+          >
+            Cancel enrollment
+          </Button>
+        )}
+        {workshop.state === 'Ended' && (
+          <Button
+            onClick={() => this.openCertificate(workshop)}
+            style={styles.button}
+          >
+            Print certificate
+          </Button>
+        )}
         <Button
-          onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}
+          onClick={() =>
+            window.open(
+              `/pd/workshop_enrollment/${workshop.enrollment_code}`,
+              '_blank'
+            )
+          }
           style={styles.button}
         >
           Workshop details
@@ -107,12 +115,10 @@ class EnrolledWorkshopsTable extends React.Component {
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
-            <th style={{width: '20%'}}/>
+            <th style={{width: '20%'}} />
           </tr>
         </thead>
-        <tbody>
-          {rows}
-        </tbody>
+        <tbody>{rows}</tbody>
       </Table>
     );
   }
@@ -122,33 +128,25 @@ class EnrolledWorkshopsTable extends React.Component {
       <tr key={workshop.id}>
         <td>
           {workshop.course}
-          <br/>
+          <br />
           {workshop.subject}
         </td>
         <td>
-          {
-            workshop.sessions.map((session, i) => {
-              return (
-                <p key={i}>
-                  {moment.utc(session.start).format(DATE_FORMAT)}
-                </p>
-              );
-            })
-          }
+          {workshop.sessions.map((session, i) => {
+            return (
+              <p key={i}>{moment.utc(session.start).format(DATE_FORMAT)}</p>
+            );
+          })}
         </td>
         <td>
-          {
-            workshop.sessions.map((session, i) => {
-              return (
-                <p key={i}>
-                  {
-                    `${moment.utc(session.start).format(TIME_FORMAT)} -
-                     ${moment.utc(session.end).format(TIME_FORMAT)}`
-                  }
-                </p>
-              );
-            })
-          }
+          {workshop.sessions.map((session, i) => {
+            return (
+              <p key={i}>
+                {`${moment.utc(session.start).format(TIME_FORMAT)} -
+                     ${moment.utc(session.end).format(TIME_FORMAT)}`}
+              </p>
+            );
+          })}
         </td>
         <td>
           <div>
@@ -156,9 +154,7 @@ class EnrolledWorkshopsTable extends React.Component {
             <p>{workshop.location_address}</p>
           </div>
         </td>
-        <td>
-          {this.renderWorkshopActionButtons(workshop)}
-        </td>
+        <td>{this.renderWorkshopActionButtons(workshop)}</td>
       </tr>
     );
   }
@@ -166,7 +162,11 @@ class EnrolledWorkshopsTable extends React.Component {
   render() {
     return (
       <div>
-        <Modal show={this.state.showCancelModal} onHide={this.dismissCancelModal} style={{width: 560}}>
+        <Modal
+          show={this.state.showCancelModal}
+          onHide={this.dismissCancelModal}
+          style={{width: 560}}
+        >
           <Modal.Body>
             Are you sure you want to cancel your enrollment in this course?
           </Modal.Body>
@@ -179,9 +179,7 @@ class EnrolledWorkshopsTable extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <h2>
-          My Workshops
-        </h2>
+        <h2>My Workshops</h2>
         {this.renderWorkshopsTable()}
       </div>
     );
