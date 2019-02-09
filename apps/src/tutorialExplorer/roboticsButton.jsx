@@ -3,41 +3,41 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getResponsiveValue } from './responsive';
+import {getResponsiveValue} from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   button: {
-    float: "left",
-    width: "100%",
+    float: 'left',
+    width: '100%',
     paddingLeft: 10,
     paddingRight: 40
   },
   container: {
-    position: "relative"
+    position: 'relative'
   },
   roboticsButtonImage: {
     marginTop: 10,
     marginBottom: 20,
-    width: "100%"
+    width: '100%'
   },
   roboticsButtonText: {
     fontFamily: "'Gotham 4r', sans-serif",
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
-    margin: "25px 15px 15px 15px",
-    color: "white",
-    textAlign: "center",
+    margin: '25px 15px 15px 15px',
+    color: 'white',
+    textAlign: 'center',
     fontSize: 16
   },
   roboticsText: {
-    float: "left",
+    float: 'left',
     margin: 5,
     padding: 5,
     borderRadius: 5,
     marginBottom: 20,
-    backgroundColor: "#eee"
+    backgroundColor: '#eee'
   }
 };
 
@@ -49,20 +49,23 @@ export default class RoboticsButton extends React.Component {
   render() {
     const roboticsTextStyle = {
       ...styles.roboticsText,
-      display: getResponsiveValue({xs: "block", md: "none"})
+      display: getResponsiveValue({xs: 'block', md: 'none'})
     };
 
     return (
       <div>
-        <div style={{display: getResponsiveValue({md: "block", xs: "none"})}}>
+        <div style={{display: getResponsiveValue({md: 'block', xs: 'none'})}}>
           <div style={styles.button}>
             <a href={this.props.url}>
               <div style={styles.container}>
-                <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
+                <img
+                  src="/images/learn/robotics-link.png"
+                  style={styles.roboticsButtonImage}
+                />
                 <div style={styles.roboticsButtonText}>
                   {i18n.roboticsButtonText()}
                   &nbsp;
-                  <i className="fa fa-arrow-right" aria-hidden={true}/>
+                  <i className="fa fa-arrow-right" aria-hidden={true} />
                 </div>
               </div>
             </a>
@@ -70,9 +73,7 @@ export default class RoboticsButton extends React.Component {
         </div>
 
         <div style={roboticsTextStyle}>
-          <a href={this.props.url}>
-            {i18n.roboticsText()}
-          </a>
+          <a href={this.props.url}>{i18n.roboticsText()}</a>
         </div>
       </div>
     );

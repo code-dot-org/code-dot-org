@@ -4,14 +4,14 @@ import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {
   UnconnectedVisualizationResizeBar as VisualizationResizeBar,
-  RESIZE_VISUALIZATION_EVENT,
+  RESIZE_VISUALIZATION_EVENT
 } from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
-describe('VisualizationResizeBar', function () {
+describe('VisualizationResizeBar', function() {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = mount(<VisualizationResizeBar/>);
+    wrapper = mount(<VisualizationResizeBar />);
   });
 
   afterEach(() => {
@@ -39,7 +39,9 @@ describe('VisualizationResizeBar', function () {
     expect(spy).to.have.callCount(0);
 
     // Mouse down doesn't fire resize event, but does attach needed handlers
-    wrapper.find('div').getNode()
+    wrapper
+      .find('div')
+      .getNode()
       .dispatchEvent(mouseEvent('mousedown', 0, 0));
     expect(spy).to.have.callCount(0);
 
@@ -62,7 +64,22 @@ describe('VisualizationResizeBar', function () {
 
 function mouseEvent(eventName, x, y) {
   const event = document.createEvent('MouseEvents');
-  event.initMouseEvent(eventName, true, true, window,
-    0, x, y, x, y, false, false, false, false, 0, null);
+  event.initMouseEvent(
+    eventName,
+    true,
+    true,
+    window,
+    0,
+    x,
+    y,
+    x,
+    y,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null
+  );
   return event;
 }

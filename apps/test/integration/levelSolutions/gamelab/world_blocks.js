@@ -5,15 +5,15 @@ import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 /* global Gamelab */
 
 module.exports = {
-  app: "gamelab",
-  skinId: "gamelab",
+  app: 'gamelab',
+  skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,
   tests: [
     // These exercise the blocks in World category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
     {
-      description: "World blocks",
+      description: 'World blocks',
       editCode: true,
       xml:
         'var a = World.allSprites;\n' +
@@ -25,19 +25,21 @@ module.exports = {
         'var g = World.frameCount;\n' +
         'var h = World.seconds;\n' +
         'console.log("done")',
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent !== "";
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+        tickWrapper
+          .tickAppUntil(Gamelab, function() {
+            var debugOutput = document.getElementById('debug-output');
+            return debugOutput.textContent !== '';
+          })
+          .then(function() {
+            Gamelab.onPuzzleComplete();
+          });
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "done");
+        assert.equal(debugOutput.textContent, 'done');
         return true;
       },
       expected: {
@@ -58,19 +60,21 @@ module.exports = {
         'var g = Game.frameCount;\n' +
         'var h = Game.seconds;\n' +
         'console.log("done")',
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent !== "";
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+        tickWrapper
+          .tickAppUntil(Gamelab, function() {
+            var debugOutput = document.getElementById('debug-output');
+            return debugOutput.textContent !== '';
+          })
+          .then(function() {
+            Gamelab.onPuzzleComplete();
+          });
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "done");
+        assert.equal(debugOutput.textContent, 'done');
         return true;
       },
       expected: {
@@ -81,29 +85,31 @@ module.exports = {
     // Check that createEdgeSprites makes the edges group and the
     // edge sprites available in the global namespace
     {
-      description: "Edge sprites",
+      description: 'Edge sprites',
       editCode: true,
       xml:
-      'createEdgeSprites();\n' +
-      'if (!edges) console.log("Fail: edges was falsy");\n' +
-      'if (!leftEdge) console.log("Fail: edges was falsy");\n' +
-      'if (!rightEdge) console.log("Fail: edges was falsy");\n' +
-      'if (!topEdge) console.log("Fail: edges was falsy");\n' +
-      'if (!bottomEdge) console.log("Fail: edges was falsy");\n' +
-      'console.log("done")',
-      runBeforeClick: function (assert) {
+        'createEdgeSprites();\n' +
+        'if (!edges) console.log("Fail: edges was falsy");\n' +
+        'if (!leftEdge) console.log("Fail: edges was falsy");\n' +
+        'if (!rightEdge) console.log("Fail: edges was falsy");\n' +
+        'if (!topEdge) console.log("Fail: edges was falsy");\n' +
+        'if (!bottomEdge) console.log("Fail: edges was falsy");\n' +
+        'console.log("done")',
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent !== "";
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+        tickWrapper
+          .tickAppUntil(Gamelab, function() {
+            var debugOutput = document.getElementById('debug-output');
+            return debugOutput.textContent !== '';
+          })
+          .then(function() {
+            Gamelab.onPuzzleComplete();
+          });
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "done");
+        assert.equal(debugOutput.textContent, 'done');
         return true;
       },
       expected: {
@@ -133,10 +139,10 @@ module.exports = {
         assert.equal($('#studio-dpad-button').is(':visible'), false);
         assert.equal($('#studio-dpad-rim').is(':visible'), false);
         assert.equal($('#studio-dpad-cone').is(':visible'), false);
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "showMobileControls() with mobileOnly false shows d-pad and space button while running",
+      'showMobileControls() with mobileOnly false shows d-pad and space button while running',
       `
         showMobileControls(true, true, true, false);
         console.log("done");
@@ -157,10 +163,10 @@ module.exports = {
         assert.equal($('#studio-dpad-button').is(':visible'), false);
         assert.equal($('#studio-dpad-rim').is(':visible'), false);
         assert.equal($('#studio-dpad-cone').is(':visible'), false);
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "showMobileControls() can hide space button while running",
+      'showMobileControls() can hide space button while running',
       `
         showMobileControls(false, true, true, false);
         console.log("done");
@@ -181,10 +187,10 @@ module.exports = {
         assert.equal($('#studio-dpad-button').is(':visible'), false);
         assert.equal($('#studio-dpad-rim').is(':visible'), false);
         assert.equal($('#studio-dpad-cone').is(':visible'), false);
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "showMobileControls() can hide d-pad while running",
+      'showMobileControls() can hide d-pad while running',
       `
         showMobileControls(true, false, true, false);
         console.log("done");
@@ -205,7 +211,7 @@ module.exports = {
         assert.equal($('#studio-dpad-button').is(':visible'), false);
         assert.equal($('#studio-dpad-rim').is(':visible'), false);
         assert.equal($('#studio-dpad-cone').is(':visible'), false);
-      },
-    ),
+      }
+    )
   ]
 };

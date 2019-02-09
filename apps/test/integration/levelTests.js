@@ -22,7 +22,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import loadSource from "./util/loadSource";
+import loadSource from './util/loadSource';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -41,11 +41,11 @@ const defaultTimeout = 20000;
 // eslint-disable-next-line
 var example = {
   // app name
-  app: "turtle",
+  app: 'turtle',
   // name of the level file within the app directory. will almost always be levels
-  levelFile: "levels",
+  levelFile: 'levels',
   // id of the level within the levels file
-  levelId: "5_5",
+  levelId: '5_5',
   // a complete level defintion, can be used instead of levelFile/levelId
   levelDefinition: {},
   // a set of tests
@@ -60,7 +60,7 @@ var example = {
       // a function that returns a level definition on demand. this allows for
       // per test level definitions (dont need a collection levelId/levelDefinition
       // if taking this approach)
-      delayLoadLevelDefinition: function () {},
+      delayLoadLevelDefinition: function() {},
 
       // xml to be used for startBlocks. set to string 'startBlocks' if you want
       // to use the xml from the level itself
@@ -69,12 +69,12 @@ var example = {
       // "/v3/assets/". Set this to "/base/test/integration/assets/" and add
       // files to apps/test/assets if you need requests for assets to succeed.
       assetPathPrefix: '',
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         // optional function called at puzzle finish (i.e. when BlocklyApps.report
         // is called.
         return true; // test fails if it returns false
       },
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // optional function called after puzzle loads, but before execution
         // starts
       }
@@ -82,33 +82,49 @@ var example = {
   ]
 };
 
-describe('Level tests', function () {
+describe('Level tests', function() {
   var originalRender;
   var clock, tickInterval;
 
   testUtils.setExternalGlobals();
 
-  before(function (done) {
+  before(function(done) {
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
     loadSource('/base/lib/ace/src-noconflict/ace.js')
-    .then(function () { return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js'); })
-    .then(function () { return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js'); })
-    .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
-    .then(function () { return loadSource('/base/lib/tooltipster/jquery.tooltipster.js'); })
-    .then(function () { return loadSource('/base/lib/phaser/phaser.js'); })
-    .then(function () {
-      assert(window.droplet, 'droplet in global namespace');
-      done();
-    });
+      .then(function() {
+        return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js');
+      })
+      .then(function() {
+        return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js');
+      })
+      .then(function() {
+        return loadSource('/base/lib/droplet/droplet-full.js');
+      })
+      .then(function() {
+        return loadSource('/base/lib/tooltipster/jquery.tooltipster.js');
+      })
+      .then(function() {
+        return loadSource('/base/lib/phaser/phaser.js');
+      })
+      .then(function() {
+        assert(window.droplet, 'droplet in global namespace');
+        done();
+      });
   });
 
-  beforeEach(function () {
+  beforeEach(function() {
     // Recreate our redux store so that we have a fresh copy
     stubRedux();
-    registerReducers({stageLock, runState, isRtl, progress, ...jsDebuggerReducers});
+    registerReducers({
+      stageLock,
+      runState,
+      isRtl,
+      progress,
+      ...jsDebuggerReducers
+    });
 
-    tickInterval = window.setInterval(function () {
+    tickInterval = window.setInterval(function() {
       if (clock) {
         clock.tick(100); // fake 100 ms for every real 1ms
       }
@@ -128,7 +144,7 @@ describe('Level tests', function () {
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
     originalRender = Blockly.BlockSvg.prototype.render;
-    Blockly.BlockSvg.prototype.render = function () {
+    Blockly.BlockSvg.prototype.render = function() {
       this.block_.rendered = true;
     };
 
@@ -136,7 +152,11 @@ describe('Level tests', function () {
       var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
       StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
-      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true, configurable: true});
+      Object.defineProperty(Studio, 'Globals', {
+        value: {},
+        writable: true,
+        configurable: true
+      });
     }
 
     if (window.Applab) {
@@ -151,7 +171,7 @@ describe('Level tests', function () {
 
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
-  afterEach(function () {
+  afterEach(function() {
     // Main blockspace doesn't always exist (i.e. edit-code)
     if (Blockly.mainBlockSpace) {
       Blockly.mainBlockSpace.clear();
@@ -161,10 +181,13 @@ describe('Level tests', function () {
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
-    if (studioApp().editor && studioApp().editor.aceEditor &&
-        studioApp().editor.aceEditor.session &&
-        studioApp().editor.aceEditor.session.$mode &&
-        studioApp().editor.aceEditor.session.$mode.cleanup) {
+    if (
+      studioApp().editor &&
+      studioApp().editor.aceEditor &&
+      studioApp().editor.aceEditor.session &&
+      studioApp().editor.aceEditor.session.$mode &&
+      studioApp().editor.aceEditor.session.$mode.cleanup
+    ) {
       studioApp().editor.aceEditor.session.$mode.cleanup();
     }
     wrappedEventListener.detach();
@@ -208,8 +231,8 @@ function runTestCollection(item) {
 
   var app = testCollection.app;
 
-  describe(path, function () {
-    testCollection.tests.forEach(function (testData, index) {
+  describe(path, function() {
+    testCollection.tests.forEach(function(testData, index) {
       var dataItem = require('./util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of
@@ -217,7 +240,7 @@ function runTestCollection(item) {
       // and our getMissingBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
-        it(testData.description, function (done) {
+        it(testData.description, function(done) {
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);

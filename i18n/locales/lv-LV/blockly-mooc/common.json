@@ -1279,6 +1279,7 @@
   "subtitle": "vizuāla programmēšanas vide",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Pārslēgt sadaļu:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Jūsu programma satur sintakses vai drukas kļūdu. Lūdzu labojiet {lineNumber} rindu un mēģiniet vēlreiz.",

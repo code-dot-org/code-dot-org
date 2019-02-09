@@ -16,10 +16,12 @@ export default class Header extends React.Component {
       PropTypes.shape({
         breadcrumbs: PropTypes.oneOfType([
           PropTypes.string,
-          PropTypes.arrayOf(PropTypes.shape({
-            name: PropTypes.string,
-            path: PropTypes.string
-          }))
+          PropTypes.arrayOf(
+            PropTypes.shape({
+              name: PropTypes.string,
+              path: PropTypes.string
+            })
+          )
         ])
       })
     ).isRequired,
@@ -28,13 +30,13 @@ export default class Header extends React.Component {
     baseName: PropTypes.string
   };
 
-  handleClick = (path) => {
+  handleClick = path => {
     this.context.router.push(path.toLowerCase());
   };
 
   renderBreadcrumbItems() {
     const breadcrumbItems = [];
-    let builtPath = "/";
+    let builtPath = '/';
     if (this.props.baseName) {
       breadcrumbItems.push({name: this.props.baseName, path: builtPath});
     }
@@ -47,11 +49,12 @@ export default class Header extends React.Component {
         // The associated path part will be an id if that is present in params (e.g. "Workshop" -> this.props.params.workshopId)
         // Otherwise it will be same as the display text.
         // The last item, the current page, will be plain text instead of a link.
-        const breadcrumbs = this.props.routes[1].breadcrumbs.split(",");
+        const breadcrumbs = this.props.routes[1].breadcrumbs.split(',');
         for (let i = 0; i < breadcrumbs.length; i++) {
           const breadcrumb = breadcrumbs[i];
-          const paramName = breadcrumb[0].toLowerCase() + breadcrumb.substr(1) + "Id";
-          builtPath += (this.props.params[paramName] || breadcrumb) + "/";
+          const paramName =
+            breadcrumb[0].toLowerCase() + breadcrumb.substr(1) + 'Id';
+          builtPath += (this.props.params[paramName] || breadcrumb) + '/';
           breadcrumbItems.push({name: breadcrumb, path: builtPath});
         }
       }
@@ -80,9 +83,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Breadcrumb>
-          {this.renderBreadcrumbItems()}
-        </Breadcrumb>
+        <Breadcrumb>{this.renderBreadcrumbItems()}</Breadcrumb>
         {this.props.children}
       </div>
     );

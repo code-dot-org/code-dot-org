@@ -889,7 +889,7 @@ zh-TW:
         text: 轉向-右方
       Vector_positionCenter:
         text: 中心
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': 尺寸

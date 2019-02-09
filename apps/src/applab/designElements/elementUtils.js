@@ -12,9 +12,9 @@ export function rgb2hex(rgb) {
     return rgb;
   }
   function hex(x) {
-    return ("0" + parseInt(x).toString(16)).slice(-2);
+    return ('0' + parseInt(x).toString(16)).slice(-2);
   }
-  return "#" + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
+  return '#' + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
 }
 
 /**
@@ -54,7 +54,13 @@ export function setId(element, value, prefix) {
  */
 function checkId(element, prefix) {
   if (element.id.substr(0, prefix.length) !== prefix) {
-    throw new Error('element.id "' + element.id + '" does not start with prefix "' + prefix + '".');
+    throw new Error(
+      'element.id "' +
+        element.id +
+        '" does not start with prefix "' +
+        prefix +
+        '".'
+    );
   }
 }
 
@@ -146,7 +152,10 @@ export function isIdAvailable(newId, options) {
 
   // Don't allow elements with the "design_" prefix, unless
   // options.allowDesignPrefix is specified.
-  if (!options.allowDesignPrefix && newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0) {
+  if (
+    !options.allowDesignPrefix &&
+    newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0
+  ) {
     return false;
   }
 

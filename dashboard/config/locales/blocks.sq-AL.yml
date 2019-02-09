@@ -296,7 +296,7 @@ sq:
         text: kthehu majtas
       RyanLab_turnRight:
         text: kthehu djathtas
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': madhësia

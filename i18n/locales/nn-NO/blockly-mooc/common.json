@@ -1279,6 +1279,7 @@
   "subtitle": "eit visuelt programmeringsmiljø",
   "success": "Suksess!",
   "summaryAssessmentsOverview": "Oversikt over fleirvalspørsmål",
+  "switchSection": "Bytt seksjon:",
   "syncClever": "Synkronisér elevar frå Clever",
   "syncGoogleClassroom": "Synkronisér elevar frå Google Classroom",
   "syntaxErrorMsg": "Programmet ditt inneheld ein skrivefeil. Fjern linje nummer {lineNumber} og prøv på nytt.",

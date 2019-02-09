@@ -7,12 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import {
-  Router,
-  Route,
-  IndexRedirect,
-  useRouterHistory
-} from 'react-router';
+import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router';
 import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
@@ -32,28 +27,27 @@ import workshopDashboardReducers, {
 import regionalPartnerReducers, {
   setRegionalPartners,
   setRegionalPartnerFilter,
-  getInitialRegionalPartnerFilter,
+  getInitialRegionalPartnerFilter
 } from '../components/regional_partners_reducers';
 import {WorkshopAdmin} from './permission';
 import {
   RegionalPartnerShape,
   ALL_PARTNERS_OPTION
-} from "../components/regional_partner_dropdown";
+} from '../components/regional_partner_dropdown';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
-const store = createStore(combineReducers({
-  workshopDashboard: workshopDashboardReducers,
-  regionalPartners: regionalPartnerReducers
-}));
+const store = createStore(
+  combineReducers({
+    workshopDashboard: workshopDashboardReducers,
+    regionalPartners: regionalPartnerReducers
+  })
+);
 
-const WorkshopDashboardHeader = (props) => (
-  <Header
-    baseName="Workshop Dashboard"
-    {...props}
-  />
+const WorkshopDashboardHeader = props => (
+  <Header baseName="Workshop Dashboard" {...props} />
 );
 
 export default class WorkshopDashboard extends React.Component {
@@ -91,7 +85,7 @@ export default class WorkshopDashboard extends React.Component {
       <Provider store={store}>
         <Router history={browserHistory}>
           <Route path="/" component={WorkshopDashboardHeader}>
-            <IndexRedirect to="/workshops"/>
+            <IndexRedirect to="/workshops" />
             <Route
               path="reports"
               breadcrumbs="Reports"

@@ -870,7 +870,7 @@ vi:
         text: rẽ phải
       Vector_positionCenter:
         text: giữa
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': kích cỡ

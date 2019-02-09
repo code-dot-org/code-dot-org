@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import i18n from "@cdo/locale";
-import Button from "@cdo/apps/templates/Button";
+import React, {Component} from 'react';
+import i18n from '@cdo/locale';
+import Button from '@cdo/apps/templates/Button';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
-import {Unit6Intention} from "../util/discountLogic";
+import {Unit6Intention} from '../util/discountLogic';
 
 const styles = {
   unit6Form: {
@@ -12,7 +12,7 @@ const styles = {
   question: {
     marginBottom: 5,
     // bolder
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Gotham 7r", sans-serif'
   },
   radio: {
     margin: '0px 10px'
@@ -21,8 +21,8 @@ const styles = {
     marginTop: 5
   },
   errorText: {
-    color: 'red',
-  },
+    color: 'red'
+  }
 };
 
 export default class Unit6ValidationStep extends Component {
@@ -31,14 +31,14 @@ export default class Unit6ValidationStep extends Component {
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     initialChoice: PropTypes.string,
     onSubmit: PropTypes.func.isRequired,
-    disabled: PropTypes.bool,
+    disabled: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
     this.state = {
       choice: props.initialChoice,
-      submitting: false,
+      submitting: false
     };
   }
 
@@ -49,38 +49,41 @@ export default class Unit6ValidationStep extends Component {
   handleSubmit = () => {
     this.setState({submitting: true});
     $.ajax({
-     url: "/maker/apply",
-     type: "post",
-     dataType: "json",
-     data: {
-       unit_6_intention: this.state.choice
-     }
-   }).done(data => {
-     this.props.onSubmit(data.eligible);
-     this.setState({
-       submitting: false,
-       errorText: ''
-     });
-   }).fail((jqXHR, textStatus) => {
-     console.error(textStatus);
-     this.setState({
-       submitting: false,
-       errorText: "We're sorry, but something went wrong. Try refreshing the page " +
-        "and submitting again.  If this does not work, please contact support@code.org."
+      url: '/maker/apply',
+      type: 'post',
+      dataType: 'json',
+      data: {
+        unit_6_intention: this.state.choice
+      }
+    })
+      .done(data => {
+        this.props.onSubmit(data.eligible);
+        this.setState({
+          submitting: false,
+          errorText: ''
+        });
+      })
+      .fail((jqXHR, textStatus) => {
+        console.error(textStatus);
+        this.setState({
+          submitting: false,
+          errorText:
+            "We're sorry, but something went wrong. Try refreshing the page " +
+            'and submitting again.  If this does not work, please contact support@code.org.'
+        });
       });
-   });
   };
 
   render() {
-    const { showRadioButtons, stepStatus } = this.props;
-    const { errorText } = this.state;
+    const {showRadioButtons, stepStatus} = this.props;
+    const {errorText} = this.state;
     return (
       <ValidationStep
         stepName={i18n.eligibilityReqYear()}
         stepStatus={stepStatus}
         alwaysShowChildren={true}
       >
-        {showRadioButtons &&
+        {showRadioButtons && (
           <div>
             {i18n.eligibilityReqYearFail()}
             <form style={styles.unit6Form}>
@@ -92,8 +95,8 @@ export default class Unit6ValidationStep extends Component {
                 [Unit6Intention.YES_18_19, i18n.eligibilityYearYes1819()],
                 [Unit6Intention.YES_19_20, i18n.eligibilityYearYes1920()],
                 [Unit6Intention.YES_AFTER, i18n.eligibilityYearAfter()],
-                [Unit6Intention.UNSURE, i18n.eligibilityYearUnknown()],
-              ].map(([value, description]) =>
+                [Unit6Intention.UNSURE, i18n.eligibilityYearUnknown()]
+              ].map(([value, description]) => (
                 <label key={value}>
                   <input
                     style={styles.radio}
@@ -104,28 +107,28 @@ export default class Unit6ValidationStep extends Component {
                     onChange={this.handleChangeIntention}
                     disabled={stepStatus !== Status.UNKNOWN}
                   />
-                {description}
+                  {description}
                 </label>
-              )}
+              ))}
               {/* Remove button after choice is made */}
-              {stepStatus === Status.UNKNOWN &&
+              {stepStatus === Status.UNKNOWN && (
                 <Button
                   style={styles.submit}
                   color={Button.ButtonColor.orange}
-                  text={this.state.submitting ? i18n.submitting() : i18n.submit()}
+                  text={
+                    this.state.submitting ? i18n.submitting() : i18n.submit()
+                  }
                   onClick={this.handleSubmit}
                   disabled={this.state.submitting || this.props.disabled}
                 />
-              }
-              {errorText &&
-                <div style={styles.errorText}>{errorText}</div>
-              }
+              )}
+              {errorText && <div style={styles.errorText}>{errorText}</div>}
             </form>
           </div>
-        }
-        {stepStatus === Status.FAILED &&
+        )}
+        {stepStatus === Status.FAILED && (
           <div>{i18n.eligibilityYearDecline()}</div>
-        }
+        )}
       </ValidationStep>
     );
   }

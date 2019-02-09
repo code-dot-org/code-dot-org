@@ -2794,6 +2794,8 @@ es:
               name: Tu huella Digital
             Move It, Move It:
               name: Muévelo, Muévelo
+            Copyright and Creativity:
+              name: Es estupendo crear y jugar limpio
         coursed-2018:
           assignment_family_title: Curso D
           description_audience: 'Edades de 7 a 11 años'
@@ -2863,6 +2865,8 @@ es:
               name: Condicionales con tarjetas
             Minecraft Hour of Code:
               name: Hora de Code de Minecraft
+            Copyright and Creativity:
+              name: Compartir digital
         coursef-2018:
           assignment_family_title: Curso F
           description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
@@ -3027,6 +3031,8 @@ es:
               name: Muévelo, Muévelo
             Your Digital Footprint:
               name: Tu huella Digital
+            Copyright and Creativity:
+              name: Es estupendo crear y jugar limpio
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie y el gran proyecto
         frozen-2018:

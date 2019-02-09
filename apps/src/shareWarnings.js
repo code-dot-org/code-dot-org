@@ -68,7 +68,7 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
  *        redirected to /too_young
  * @returns {ReactElement}
  */
-exports.checkSharedAppWarnings = function (options) {
+exports.checkSharedAppWarnings = function(options) {
   const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
 
   if (hasDataAPIs && options.isTooYoung) {
@@ -79,8 +79,14 @@ exports.checkSharedAppWarnings = function (options) {
     }
   }
 
-  const promptForAge = hasDataAPIs && !options.isSignedIn && localStorage.getItem('is13Plus') !== "true";
-  const showStoreDataAlert = hasDataAPIs && options.isOwner !== true && !hasSeenDataAlert(options.channelId);
+  const promptForAge =
+    hasDataAPIs &&
+    !options.isSignedIn &&
+    localStorage.getItem('is13Plus') !== 'true';
+  const showStoreDataAlert =
+    hasDataAPIs &&
+    options.isOwner !== true &&
+    !hasSeenDataAlert(options.channelId);
 
   const handleShareWarningsTooYoung = () => {
     utils.trySetLocalStorage('is13Plus', 'false');

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ToggleGroup from '../ToggleGroup';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import {setCurrentView, ViewType} from './sectionProgressRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -20,11 +20,11 @@ const styles = {
 class SectionProgressToggle extends React.Component {
   static propTypes = {
     currentView: PropTypes.string.isRequired,
-    setCurrentView: PropTypes.func.isRequired,
+    setCurrentView: PropTypes.func.isRequired
   };
 
   state = {
-    selectedToggle: this.props.currentView,
+    selectedToggle: this.props.currentView
   };
 
   componentWillReceiveProps(nextProps) {
@@ -42,26 +42,22 @@ class SectionProgressToggle extends React.Component {
     // Timeouts forces a render of the local state before dispatching
     // the action.
     if (this.state.selectedToggle === ViewType.SUMMARY) {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'react',
-          event: 'progress-detailed'
-        }
-      );
+      firehoseClient.putRecord({
+        study: 'teacher-dashboard',
+        study_group: 'react',
+        event: 'progress-detailed'
+      });
       this.setState({selectedToggle: ViewType.DETAIL}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.DETAIL);
         }, 0);
       });
     } else {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'react',
-          event: 'progress-summary'
-        }
-      );
+      firehoseClient.putRecord({
+        study: 'teacher-dashboard',
+        study_group: 'react',
+        event: 'progress-summary'
+      });
       this.setState({selectedToggle: ViewType.SUMMARY}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.SUMMARY);
@@ -71,7 +67,7 @@ class SectionProgressToggle extends React.Component {
   };
 
   render() {
-    const { selectedToggle } = this.state;
+    const {selectedToggle} = this.state;
 
     return (
       <ToggleGroup
@@ -80,23 +76,29 @@ class SectionProgressToggle extends React.Component {
         onChange={this.onChange}
       >
         <button value={ViewType.SUMMARY} style={styles.toggleButton}>
-          <FontAwesome icon="search-minus"/>
+          <FontAwesome icon="search-minus" />
         </button>
-        <button id={"uitest-toggle-detail-view"} value={ViewType.DETAIL} style={styles.toggleButton}>
-          <FontAwesome icon="search-plus"/>
+        <button
+          id={'uitest-toggle-detail-view'}
+          value={ViewType.DETAIL}
+          style={styles.toggleButton}
+        >
+          <FontAwesome icon="search-plus" />
         </button>
       </ToggleGroup>
     );
-
   }
 }
 
 export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 
-export default connect(state => ({
-  currentView: state.sectionProgress.currentView,
-}), dispatch => ({
-  setCurrentView(viewType) {
-    dispatch(setCurrentView(viewType));
-  },
-}))(SectionProgressToggle);
+export default connect(
+  state => ({
+    currentView: state.sectionProgress.currentView
+  }),
+  dispatch => ({
+    setCurrentView(viewType) {
+      dispatch(setCurrentView(viewType));
+    }
+  })
+)(SectionProgressToggle);

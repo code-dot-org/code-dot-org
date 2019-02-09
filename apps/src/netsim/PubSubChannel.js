@@ -22,7 +22,7 @@ var PubSubChannel = exports;
  * @constructor
  * @implements PubSubChannel
  */
-PubSubChannel.NullChannel = function () { };
+PubSubChannel.NullChannel = function() {};
 
 /**
  * Subscribe to an event so the given callback is called when the event occurs.
@@ -30,19 +30,22 @@ PubSubChannel.NullChannel = function () { };
  * @param {function} callback - A function to be called whenever the event is
  *        triggered.
  */
-PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) { };
+PubSubChannel.NullChannel.prototype.subscribe = function(
+  eventName,
+  callback
+) {};
 
 /**
  * Unsubscribe a given callback from a given event
  * @param {string} eventName
  */
-PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName) { };
+PubSubChannel.NullChannel.prototype.unsubscribe = function(eventName) {};
 
 /**
  * @constructor
  * @implements PubSubChannel
  */
-PubSubChannel.PusherChannel = function (pusherApiChannel) {
+PubSubChannel.PusherChannel = function(pusherApiChannel) {
   /**
    * The actual Pusher API's channel.
    * @private {Channel}
@@ -64,10 +67,13 @@ PubSubChannel.PusherChannel = function (pusherApiChannel) {
  * @param {function()} callback
  * @throws {Error} on double-subscribe.
  */
-PubSubChannel.PusherChannel.prototype.subscribe = function (eventName, callback) {
+PubSubChannel.PusherChannel.prototype.subscribe = function(
+  eventName,
+  callback
+) {
   this.pusherChannel_.bind(eventName, callback);
   if (this.callbacks_[eventName] !== undefined) {
-    throw new Error("Already subscribed to event " + eventName);
+    throw new Error('Already subscribed to event ' + eventName);
   }
   this.callbacks_[eventName] = callback;
 };
@@ -76,7 +82,7 @@ PubSubChannel.PusherChannel.prototype.subscribe = function (eventName, callback)
  * Unsubscribe a given callback from a given event
  * @param {string} eventName
  */
-PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName) {
+PubSubChannel.PusherChannel.prototype.unsubscribe = function(eventName) {
   this.pusherChannel_.unbind(eventName, this.callbacks_[eventName]);
   delete this.callbacks_[eventName];
 };

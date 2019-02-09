@@ -12,31 +12,18 @@ describe('AgeDialog', () => {
   afterEach(() => sessionStorage.clear());
 
   it('renders null if signed in', () => {
-    const wrapper = shallow(
-      <AgeDialog
-        {...defaultProps}
-        signedIn={true}
-      />
-    );
+    const wrapper = shallow(<AgeDialog {...defaultProps} signedIn={true} />);
     assert.equal(wrapper.getNode(), null);
   });
 
   it('renders null if seen before', () => {
     sessionStorage.setItem('ad_anon_over13', true);
-    const wrapper = shallow(
-      <AgeDialog
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.getNode(), null);
   });
 
   it('renders a dialog otherwise', () => {
-    const wrapper = shallow(
-      <AgeDialog
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.name(), 'BaseDialog');
   });
 });

@@ -11,8 +11,8 @@ const fieldConfig = {
   codeFunctions: {
     hideWhen: !data.uses_droplet,
     codemirror: 'level_code_functions',
-    codemirrorMode: 'javascript',
-  },
+    codemirrorMode: 'javascript'
+  }
 };
 
 Object.keys(fieldConfig).forEach(key => {
@@ -20,10 +20,10 @@ Object.keys(fieldConfig).forEach(key => {
   if (config.hideWhen) {
     return;
   }
-  const mode = config.codemirrorMode || (data.uses_droplet ? 'javascript' : 'xml');
+  const mode =
+    config.codemirrorMode || (data.uses_droplet ? 'javascript' : 'xml');
   config.editor = initializeCodeMirror(config.codemirror, mode);
 });
-
 
 if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
   ReactDOM.render(

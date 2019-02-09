@@ -17,6 +17,8 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 
 def generate_shared_js_file(content, path)
   output = <<CONTENT
+/* eslint-disable */
+
 // This is a generated file and SHOULD NOT BE EDITED MANUALLY!!
 // Contents are generated as part of grunt build
 // Source of truth is lib/cdo/shared_constants.rb and files in lib/cdo/shared_constants/

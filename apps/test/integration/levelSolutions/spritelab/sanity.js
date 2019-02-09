@@ -4,25 +4,24 @@ import {TestResults} from '@cdo/apps/constants';
 
 const levelDef = {
   helperLibraries: ['GameLabJr'],
-  sharedBlocks: [{
-    name: "gamelab_setBackground",
-    config: {
-      color: [
-        240,
-        0.45,
-        0.65,
-      ],
-      func: "setBackground",
-      blockText: "set background color {COLOR}",
-      args: [
-        {
-          name: "COLOR",
-          type: "Colour",
-        }
-      ]
+  sharedBlocks: [
+    {
+      name: 'gamelab_setBackground',
+      config: {
+        color: [240, 0.45, 0.65],
+        func: 'setBackground',
+        blockText: 'set background color {COLOR}',
+        args: [
+          {
+            name: 'COLOR',
+            type: 'Colour'
+          }
+        ]
+      }
     }
-  }],
-  validationCode: 'if (World.background_color === "#ff0000") { levelSuccess(); } else { levelSuccess(3); }',
+  ],
+  validationCode:
+    'if (World.background_color === "#ff0000") { levelSuccess(); } else { levelSuccess(3); }'
 };
 
 export default {
@@ -39,8 +38,8 @@ export default {
         </xml>`,
       expected: {
         result: true,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
-      },
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+      }
     },
     {
       libraries: {GameLabJr, ValidationSetup},
@@ -61,8 +60,8 @@ export default {
         </xml>`,
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS,
-      },
-    },
-  ],
+        testResult: TestResults.ALL_PASS
+      }
+    }
+  ]
 };

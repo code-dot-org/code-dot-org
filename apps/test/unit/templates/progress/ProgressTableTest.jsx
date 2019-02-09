@@ -3,7 +3,7 @@ import {expect} from '../../../util/configuredChai';
 import {shallow} from 'enzyme';
 import {
   UnconnectedProgressTable as ProgressTable,
-  styles,
+  styles
 } from '@cdo/apps/templates/progress/ProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
@@ -24,18 +24,13 @@ const FAKE_LESSON_2 = {
 const DEFAULT_PROPS = {
   isPlc: false,
   isSummaryView: false,
-  categorizedLessons: [
-    FAKE_LESSON_1
-  ]
+  categorizedLessons: [FAKE_LESSON_1]
 };
 
 describe('ProgressTable', () => {
   it('renders a single lesson in full view', () => {
     const wrapper = shallow(
-      <ProgressTable
-        {...DEFAULT_PROPS}
-        isSummaryView={false}
-      />
+      <ProgressTable {...DEFAULT_PROPS} isSummaryView={false} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -57,10 +52,7 @@ describe('ProgressTable', () => {
 
   it('renders a single lesson in summary view', () => {
     const wrapper = shallow(
-      <ProgressTable
-        {...DEFAULT_PROPS}
-        isSummaryView={true}
-      />
+      <ProgressTable {...DEFAULT_PROPS} isSummaryView={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -84,10 +76,7 @@ describe('ProgressTable', () => {
     const wrapper = shallow(
       <ProgressTable
         {...DEFAULT_PROPS}
-        categorizedLessons={[
-          FAKE_LESSON_1,
-          FAKE_LESSON_2
-        ]}
+        categorizedLessons={[FAKE_LESSON_1, FAKE_LESSON_2]}
       />
     );
     expect(wrapper).to.containMatchingElement(

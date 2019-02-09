@@ -1105,14 +1105,15 @@ is:
         text: snúa til vinstri
       RyanLab_turnRight:
         text: snúa til hægri
+      SpriteLab2Beta_spriteSay:
+        text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       Vector_log:
         text: skrá boð {MESSAGE}
       Vector_vectorNorth:
         text: norður
       aalab_addToSpriteGroup:
         text: bæta veru {SPRITE} í hóp {GROUP}
-      aalab_changeGroupPropBy:
-        text: breyta {GROUP} {PROPERTY} um {VAL}
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': stærð

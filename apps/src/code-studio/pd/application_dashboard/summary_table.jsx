@@ -3,7 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
 import {StatusColors, ApplicationStatuses} from './constants';
 import _ from 'lodash';
@@ -43,7 +43,8 @@ export class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   };
 
-  showLocked = this.props.canSeeLocked && this.props.applicationType === 'facilitator';
+  showLocked =
+    this.props.canSeeLocked && this.props.applicationType === 'facilitator';
 
   tableBody() {
     return Object.keys(this.props.data).map((status, i) => {
@@ -51,7 +52,8 @@ export class SummaryTable extends React.Component {
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
-            {ApplicationStatuses[this.props.applicationType][status] || _.upperFirst(status)}
+            {ApplicationStatuses[this.props.applicationType][status] ||
+              _.upperFirst(status)}
           </td>
           {this.showLocked && <td>{statusData.locked}</td>}
           {this.showLocked && <td>{statusData.total - statusData.locked}</td>}
@@ -61,12 +63,12 @@ export class SummaryTable extends React.Component {
     });
   }
 
-  handleViewClick = (event) => {
+  handleViewClick = event => {
     event.preventDefault();
     this.context.router.push(`/${this.props.path}`);
   };
 
-  handleViewCohortClick = (event) => {
+  handleViewCohortClick = event => {
     event.preventDefault();
     this.context.router.push(`/${this.props.path}_cohort`);
   };
@@ -74,12 +76,7 @@ export class SummaryTable extends React.Component {
   render() {
     return (
       <div style={styles.tableWrapper}>
-        <Table
-          id={this.props.id}
-          striped
-          condensed
-          style={styles.table}
-        >
+        <Table id={this.props.id} striped condensed style={styles.table}>
           <caption>{this.props.caption}</caption>
           <thead>
             <tr>
@@ -89,9 +86,7 @@ export class SummaryTable extends React.Component {
               <th>Total</th>
             </tr>
           </thead>
-          <tbody>
-            {this.tableBody()}
-          </tbody>
+          <tbody>{this.tableBody()}</tbody>
         </Table>
         <Button
           href={this.context.router.createHref(`/${this.props.path}`)}
@@ -112,5 +107,5 @@ export class SummaryTable extends React.Component {
 }
 
 export default connect(state => ({
-  canSeeLocked: state.applicationDashboard.permissions.lockApplication,
+  canSeeLocked: state.applicationDashboard.permissions.lockApplication
 }))(SummaryTable);

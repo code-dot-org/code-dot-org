@@ -955,7 +955,7 @@ sk:
         text: otoč sa vpravo
       Vector_positionCenter:
         text: v strede
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': veľkosť

@@ -10,20 +10,24 @@ var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-describe("NetSimLogEntry", function () {
+describe('NetSimLogEntry', function() {
   var testShard;
 
-  beforeEach(function () {
+  beforeEach(function() {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     testShard = fakeShard();
   });
 
-  it("uses the logEntry table", function () {
+  it('uses the logEntry table', function() {
     var logEntry = new NetSimLogEntry(testShard);
-    assert.strictEqual(logEntry.getTable(), testShard.logTable, "Using wrong table");
+    assert.strictEqual(
+      logEntry.getTable(),
+      testShard.logTable,
+      'Using wrong table'
+    );
   });
 
-  it("has expected row structure and default values", function () {
+  it('has expected row structure and default values', function() {
     var logEntry = new NetSimLogEntry(testShard);
     var row = logEntry.buildRow();
 
@@ -46,12 +50,12 @@ describe("NetSimLogEntry", function () {
     assert.equal(row.sentBy, '');
   });
 
-  it("initializes from row", function () {
+  it('initializes from row', function() {
     var row = {
       id: 1,
       nodeID: 42,
       base64Binary: {
-        string: "kg==",
+        string: 'kg==',
         len: 7
       },
       status: NetSimLogEntry.LogStatus.DROPPED,
@@ -68,36 +72,53 @@ describe("NetSimLogEntry", function () {
     assert.equal(logEntry.sentBy, 'Test User');
   });
 
-  it("gracefully converts a malformed base64Payload to empty string", function () {
+  it('gracefully converts a malformed base64Payload to empty string', function() {
     var logEntry = new NetSimLogEntry(testShard, {
       base64Binary: {
-        string: "totally not a base64 string",
+        string: 'totally not a base64 string',
         len: 7
-      },
+      }
     });
     assert.equal(logEntry.binary, '');
   });
 
-  describe("static method create", function () {
-    it("adds an entry to the log table", function () {
+  describe('static method create', function() {
+    it('adds an entry to the log table', function() {
       assertTableSize(testShard, 'logTable', 0);
 
-      NetSimLogEntry.create(testShard, null, '10100101', null, '', function () {});
+      NetSimLogEntry.create(
+        testShard,
+        null,
+        '10100101',
+        null,
+        '',
+        function() {}
+      );
 
       assertTableSize(testShard, 'logTable', 1);
     });
 
-    it("Puts row values in remote table", function () {
+    it('Puts row values in remote table', function() {
       var nodeID = 1;
       var binary = '1001010100101';
       var status = NetSimLogEntry.LogStatus.SUCCESS;
       var sentBy = 'Fake User';
 
-      NetSimLogEntry.create(testShard, nodeID, binary, status, sentBy, function () {});
+      NetSimLogEntry.create(
+        testShard,
+        nodeID,
+        binary,
+        status,
+        sentBy,
+        function() {}
+      );
 
-      testShard.logTable.refresh(function (err, rows) {
+      testShard.logTable.refresh(function(err, rows) {
         var row = rows[0];
-        var rowBinary = base64ToBinary(row.base64Binary.string, row.base64Binary.len);
+        var rowBinary = base64ToBinary(
+          row.base64Binary.string,
+          row.base64Binary.len
+        );
         assert.equal(row.nodeID, nodeID);
         assert.equal(rowBinary, binary);
         assert.equal(row.status, status);
@@ -106,22 +127,25 @@ describe("NetSimLogEntry", function () {
       });
     });
 
-    it("Returns log and no error on success", function () {
-      NetSimLogEntry.create(testShard, null, '10101010', null, '', function (err, result) {
-        assert.isNull(err, "Error is null on success");
-        assert.instanceOf(result, NetSimLogEntry, "Result is a NetSimLogEntry");
+    it('Returns log and no error on success', function() {
+      NetSimLogEntry.create(testShard, null, '10101010', null, '', function(
+        err,
+        result
+      ) {
+        assert.isNull(err, 'Error is null on success');
+        assert.instanceOf(result, NetSimLogEntry, 'Result is a NetSimLogEntry');
       });
     });
   });
 
-  it("can be removed from the remote table with destroy()", function () {
+  it('can be removed from the remote table with destroy()', function() {
     var testRow;
 
     // Create a logEntry row in remote table
-    testShard.logTable.create({}, function (err, row) {
+    testShard.logTable.create({}, function(err, row) {
       testRow = row;
     });
-    assert.isDefined(testRow, "Failed to create test row");
+    assert.isDefined(testRow, 'Failed to create test row');
     assertTableSize(testShard, 'logTable', 1);
 
     // Call destroy()
@@ -132,22 +156,25 @@ describe("NetSimLogEntry", function () {
     assertTableSize(testShard, 'logTable', 0);
   });
 
-  it("can extract binary data based on standard format", function () {
+  it('can extract binary data based on standard format', function() {
     NetSimGlobals.getLevelConfig().addressFormat = '4';
     NetSimGlobals.getLevelConfig().packetCountBitWidth = 4;
-    var logEntry = new NetSimLogEntry(null, {
-      base64Binary: binaryToBase64('000100100011010001010110')
-    }, [
-      Packet.HeaderType.TO_ADDRESS,
-      Packet.HeaderType.FROM_ADDRESS,
-      Packet.HeaderType.PACKET_INDEX,
-      Packet.HeaderType.PACKET_COUNT
-    ]);
+    var logEntry = new NetSimLogEntry(
+      null,
+      {
+        base64Binary: binaryToBase64('000100100011010001010110')
+      },
+      [
+        Packet.HeaderType.TO_ADDRESS,
+        Packet.HeaderType.FROM_ADDRESS,
+        Packet.HeaderType.PACKET_INDEX,
+        Packet.HeaderType.PACKET_COUNT
+      ]
+    );
     assert.equal('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
     assert.equal('2', logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
     assert.equal('3', logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
     assert.equal('4', logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
     assert.equal('01010110', logEntry.getMessageBinary());
   });
-
 });
