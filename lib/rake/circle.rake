@@ -129,9 +129,10 @@ namespace :circle do
             " --html"
       end
     end
-    #close_sauce_connect if use_saucelabs || test_eyes?
-    puts 'End of rake task'
-    #RakeUtils.system_stream_output 'sleep 10'
+    close_sauce_connect if use_saucelabs || test_eyes?
+    puts 'After close_sauce_connect'
+    RakeUtils.system_stream_output 'sleep 10'
+    RakeUtils.system_stream_output 'ps aux'
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
@@ -209,5 +210,5 @@ def start_sauce_connect
 end
 
 def close_sauce_connect
-  RakeUtils.system_stream_output 'killall sc'
+  RakeUtils.system_stream_output 'killall -9 sc'
 end
