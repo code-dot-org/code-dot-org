@@ -168,6 +168,9 @@ steps:
     - # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
     - /entrypoint.sh docker/ui_tests.sh
+    - mispipe "bundle exec rake circle:run_ui_tests --trace" ts
+    - echo "finished"
+    - exit 0
 
 - name: update-cache
   image: plugins/s3-cache

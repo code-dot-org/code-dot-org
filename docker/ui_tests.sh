@@ -89,6 +89,6 @@ sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 mispipe "bundle exec rake circle:seed_ui_test --trace" ts
 
 # name: run ui tests
-mispipe "bundle exec rake circle:run_ui_tests --trace" ts
+#mispipe "bundle exec rake circle:run_ui_tests --trace" ts
 
-mispipe "echo 'Ending timestamp'" ts
+#mispipe "echo 'Ending timestamp'" ts
