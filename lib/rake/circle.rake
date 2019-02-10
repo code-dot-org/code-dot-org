@@ -101,8 +101,7 @@ namespace :circle do
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
-      #container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
-      container_features = ['features/angle_helper.feature']
+      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
@@ -129,10 +128,8 @@ namespace :circle do
             " --html"
       end
     end
-    close_sauce_connect if use_saucelabs || test_eyes?
-    puts 'After close_sauce_connect'
-    RakeUtils.system_stream_output 'sleep 10'
-    RakeUtils.system_stream_output 'ps aux'
+    #close_sauce_connect if use_saucelabs || test_eyes?
+    #RakeUtils.system_stream_output 'sleep 10'
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
@@ -210,5 +207,5 @@ def start_sauce_connect
 end
 
 def close_sauce_connect
-  RakeUtils.system_stream_output 'killall -9 sc'
+  RakeUtils.system_stream_output 'killall sc'
 end
