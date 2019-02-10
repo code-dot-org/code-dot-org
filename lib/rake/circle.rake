@@ -129,8 +129,8 @@ namespace :circle do
             " --html"
       end
     end
-    close_sauce_connect if use_saucelabs || test_eyes?
-    puts 'After sauce connect'
+    #close_sauce_connect if use_saucelabs || test_eyes?
+    puts 'End of rake task'
     #RakeUtils.system_stream_output 'sleep 10'
   end
 
