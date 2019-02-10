@@ -142,6 +142,14 @@ steps:
   - name: mysql
     path: /var/lib/mysql
   environment:
+    CI: true
+    CIRCLECI: true
+    RAILS_ENV: test
+    RACK_ENV: test
+    CIRCLE_BUILD_NUM: $DRONE_BUILD_NUMBER
+    CIRCLE_NODE_INDEX: 1
+    CIRCLE_TEST_REPORTS: /home/circleci/test_reports
+    CIRCLE_ARTIFACTS: /home/circleci/artifacts
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
@@ -200,6 +208,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: d5439f333347f6c16f93bdc2cb205364ba17b1f7b7553b3a167a294a8454739d
+hmac: 334ba19765a08f46bdccd352267dcec55b798746cfee765591c04cd64a3c107e
 
 ...
