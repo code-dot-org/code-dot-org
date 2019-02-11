@@ -117,7 +117,7 @@ hu:
         desc: Fedezd fel hogy a videójátékot amivel szeretsz játszani hogyan működteti az algebra! Az algebrai kifejezések és koordináta-rendszer segítenek megérteni hogyan működnek a videójátékok és elkezdheted tervezni a játékot, amit majd Te fogsz létrehozni.
       Contracts:
         title: Szerződések, Domainok és tartományok
-        desc: Szerződések segíthetnek megérteni és megvitatni a funkciók működését. Ebben a leckében megnézzük a szerződések hogyan segítenek megérteni egy új programozási nyelvet vagy funkciót.
+        desc: Szerződések segíthetnek megérteni és megvitatni a funkciók működését. Ebben a leckében megnézzük a szerződések hogyan segítenek megérteni egy új programozási nyelvet vagy függvényt.
       DesignRecipe:
         title: A dizájn receptje
         desc: Az utolsó szakaszban a diákok írnak néhány egyszerűbb függvényt - bár a kifinomultabb függvények átgondolt megközelítést igényelnek. A Tervezési Recept egy olyan strukturált megközelítés, amely magába foglalja a tesztek írását is a függvény megfelelő működésének biztosítása érdekében.

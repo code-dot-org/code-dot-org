@@ -375,9 +375,16 @@ hu:
         elfordulok, mozgok, nektárt gyűjtök és aztán visszatérek a kiindulási pontra.
         Írj egy kódot a "gyűjts 3 nektárt" függvény felhasználásával, amellyel az
         összes nektárt összegyűjtjük.
-      Course 4 Play Lab Params 4: "Itt van egy `patrol` nevű függvény.\n\r\n\r\nSzerkeszd
-        a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele
-        menjen."
+      Course 4 Play Lab Params 4: "Itt van egy járőr nevű függvény. \n\nSzerkeszd
+        a \"járőr\" függvényt úgy, hogy a macska 400 képpontot fel, majd 400 képpontot
+        lefelé menjen."
+      Course 4 Play Lab Params 5: Szerkeszd a "járőr" függvényt, és adj hozzá egy
+        "szereplő" paramétert, hogy minden képernyőn megjelenő szereplőre meg tudjuk
+        hívni. Ne felejtsd, hogy a szereplőket az 1, 2 és 3 számok jelölik.
+      Course 4 Play Lab Params 6: Add hozzá még a "sebesség" paramétert a "járőr"
+        függvényhez. Használd a "sebesség beállítása" blokkot az új "sebesség" paraméterrel,
+        és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
+        egyet is elérne.
       Course 4 Play Lab Params 8: Használd az "amikor a szereplő megérinti" blokkot,
         és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint
         más szereplőket.
@@ -521,14 +528,18 @@ hu:
         * Adj hozzá még egy tánccsapatot
         * A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
         * Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
-      Function intro Ryan: "Egy \"híd építése\" nevű **funkció** van a munkaterületen.
-        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \r\n \r\nAz
-        út kijavításához és {currentPlayerName} játékos eljuttatásához a vöröskő fáklyához
-        [redstone_torch] illeszd a kis, zöld blokkot kétszer a munkaterületre."
-      Function intro Ryan_2019: "Egy \"híd építése\" nevű **funkció** van a munkaterületen.
-        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \r\n \r\nAz
-        út kijavításához és {currentPlayerName} játékos eljuttatásához a vöröskő fáklyához
-        [redstone_torch] illeszd a kis, zöld blokkot kétszer a munkaterületre."
+      Function intro Ryan: "Egy \"híd építése\" nevű **függvény** van a munkaterületen.
+        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \n\nAz
+        út kijavításához és hogy {currentPlayerName} játékos eljusson a vöröskő fáklyához,
+        [redstone_torch] illeszd a kis, zöld <xml> <block type=\"procedures_callnoreturn\"
+        id=\"callMe\"><mutation name=\"build bridge\"/></block></xml>  blokkot kétszer
+        a munkaterületre."
+      Function intro Ryan_2019: "Egy \"híd építése\" nevű **függvény** van a munkaterületen.
+        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \n\nAz
+        út kijavításához és hogy {currentPlayerName} játékos eljusson a vöröskő fáklyához,
+        [redstone_torch] illeszd a kis, zöld <xml> <block type=\"procedures_callnoreturn\"
+        id=\"callMe\"><mutation name=\"build bridge\"/></block></xml>  blokkot kétszer
+        a munkaterületre."
       HOC 2018 Level_1: Az előtted álló utazáshoz fel kell töltened a készleteidet.
         Vegyél ki egy **csónakot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         a **ládából** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -660,7 +671,7 @@ hu:
         a nyomólapra, amely kinyitja a pihenőház ajtaját."
       MC_HOC_2017_05: "A ciklusok nem mindig hasznosak. \n\n\nEzek a kaktuszok nem
         egy szabályos minta szerint nőttek, ezért egy ciklus nem tisztítaná ki őket
-        megfelelően.  Ehelyett egy \"elpusztítás és mozgás\" nevű funkciót kaptál,
+        megfelelően.  Ehelyett egy \"elpusztítás és mozgás\" nevű függvényt kaptál,
         amely minden alkalommal elvégezi a nehéz munkát, amikor az Agent akadályba
         ütközik."
       MC_HOC_2017_05_Cole: "Ó, jaj, a híd leomlott! \r\n\r\nProgramozd az Agentet,
@@ -686,54 +697,54 @@ hu:
       MC_HOC_2017_06_Kiki: "Egy újabb folyó, de ez sokkal szélesebb!  \r\n\r\nJavítsd
         ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni rá."
       MC_HOC_2017_07_Cole: "Jég torlaszolja el az utat!  \r\n \r\nAz \"út szabaddá
-        tétele\" funkció segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
-        játékost a csilléhez [minecart_normal]. "
+        tétele\" függvény segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
+        játékost a csilléhez [minecart_normal]! "
       MC_HOC_2017_07_Cole_2019: "Jég torlaszolja el az utat!  \r\n \r\nAz \"út szabaddá
-        tétele\" funkció segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
-        játékost a csilléhez [minecart_normal]. "
-      MC_HOC_2017_07_Kiki: "Nemcsak ciklusokkal ismételhetsz meg egy kódot!  \r\n\r\nItt
-        egy \"kaktuszok elpusztítása\" funkciót adtunk, amely három kaktuszt tüntet
+        tétele\" függvény segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
+        játékost a csilléhez [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Nemcsak ciklusokkal ismételhetsz meg egy kódot! \n\nItt
+        egy \"kaktuszok elpusztítása\" függvényt adtunk, amely három kaktuszt tüntet
         el minden alkalommal, amikor használod.  Két \"kaktuszok elpusztítása\" blokkal
         tedd szabaddá a narancssárga négyzethez vezető utat. "
       MC_HOC_2017_07a_Kiki: Most szerkeszd ezt a ciklust, hogy az Agent szabaddá tegye
         az utat a narancssárga négyzet felé.
       MC_HOC_2017_08_Cole: "Most ahelyett hogy a mozgás előtt pusztítasz, el kell
-        helyezned egy blokkot.   \r\n\r\nMódosítsd a kapott funkciót, hogy a sivatagban
+        helyezned egy blokkot.   \r\n\r\nMódosítsd a kapott függvényt, hogy a sivatagban
         működjön."
       MC_HOC_2017_08_Kiki: "Most ahelyett hogy elpusztítanád a kaktuszokat, követ
         kell helyezned a lávára, majd el kell pusztítanod a homokkövet.   \r\n\r\nMódosítsd
-        a kapott funkciót, hogy ezen a szinten működjön."
-      MC_HOC_2017_08_RY: "Most **KÉT** funkció közül választhatsz! \n\n\nEzekkel a
-        funkciókkal gyorsan hidat építhetsz a láva fölé {currentPlayerName} számára."
-      MC_HOC_2017_08_Will: "Most **KÉT** funkció közül választhatsz! \n\n\nEzekkel
-        a funkciókkal gyorsan hidat építhetsz a láva fölé a játékos számára."
-      MC_HOC_2017_09_Cole: Használd a funkciókat, hogy segíts az Agentnek elpusztítani
+        a kapott függvényt, hogy ezen a szinten működjön."
+      MC_HOC_2017_08_RY: "Most **KÉT** függvény közül választhatsz! \n\n\nEzekkel
+        a függvényekkel gyorsan hidat építhetsz a láva fölé {currentPlayerName} számára."
+      MC_HOC_2017_08_Will: "Most **KÉT** függvényekkel közül választhatsz! \n\n\nEzekkel
+        a függvényekkel gyorsan hidat építhetsz a láva fölé a játékos számára."
+      MC_HOC_2017_09_Cole: Használd a függvényeket, hogy segíts az Agentnek elpusztítani
         azokat a földblokkokat, amelyek elzárják a játékos nyomólaphoz vezető útját.
       MC_HOC_2017_09_Kiki: "Az induló kód nem távolítható el.\r\n\r\nAdj hozzá parancsokat
-        a \"nyom létrehozása\" funkcióhoz, hogy a munkaterületen lévő program az Agentet
-        a nyomólaphoz irányítsa. "
-      MC_HOC_2017_09_RS_CLONE: Javítsd ki a funkciót a lyukak feltöltéséhez, majd
+        a \"nyom létrehozása\" függvényhez, hogy a munkaterületen lévő program az
+        Agentet a nyomólaphoz irányítsa. "
+      MC_HOC_2017_09_RS_CLONE: Javítsd ki a függvényt a lyukak feltöltéséhez, majd
         lépj a nyomólapra a fáklyához vezető út szabaddá tételéhez.
-      MC_HOC_2017_10_Cole: A funkciók segítségével tedd szabaddá a csilléhez vezető
-        utat, majd lépj  be az Alvilág-portálon.
-      MC_HOC_2017_10_Cole_old: Próbálj egy olyan funkciót az alapoktól felépíteni,
+      MC_HOC_2017_10_Cole: A függvények segítségével tedd szabaddá a csilléhez vezető
+        utat, majd lépj be az Alvilág-portálon.
+      MC_HOC_2017_10_Cole_old: Próbálj egy olyan függvényt az alapoktól felépíteni,
         amely megkönnyíti az Agent számára a csille befejezését és a játékos eljuttatását
         a narancssárga négyzetbe.
-      MC_HOC_2017_10_Kiki: Próbálj egy olyan funkciót az alapoktól felépíteni, amely
+      MC_HOC_2017_10_Kiki: Próbálj egy olyan függvényt az alapoktól felépíteni, amely
         megkönnyíti az Agent számára a csille befejezését és a játékos eljuttatását
         a narancssárga négyzetbe.
-      MC_HOC_2017_10_RETRY: "Észreveszed a különbséget a két funkció között a munkaterületen?
-        \r\n \r\nEzeket a funkciókat az eszköztárból származó más kódokkal együtt
-        használva szabaddá teheted az utat a csille előtt, majd felveheted **a kovakövet
-        és az acélt** [flint_and_steel]. \r\n "
-      MC_HOC_2017_10_RETRY_2019: "Észreveszed a különbséget a két funkció között a
-        munkaterületen? \r\n \r\nEzeket a funkciókat az eszköztárból származó más
-        kódokkal együtt használva szabaddá teheted az utat a csille előtt, majd felveheted
-        **a kovakövet és az acélt** [flint_and_steel]. \r\n "
-      MC_HOC_2017_10_RYAN: Próbálj olyan funkciókat az alapoktól felépíteni, amelyek
+      MC_HOC_2017_10_RETRY: "Észreveszed a különbséget a két függvény között a munkaterületen?
+        \n\nEzeket a függvényeket az eszköztárból származó más kódokkal együtt használva
+        szabaddá teheted az utat a csille előtt, majd felveheted **a kovakövet és
+        az acélt** [flint_and_steel]. \n "
+      MC_HOC_2017_10_RETRY_2019: "Észreveszed a különbséget a két függvény között
+        a munkaterületen? \n\nEzeket a függvényeket az eszköztárból származó más kódokkal
+        együtt használva szabaddá teheted az utat a csille előtt, majd felveheted
+        **a kovakövet és az acélt** [flint_and_steel]. \n "
+      MC_HOC_2017_10_RYAN: Próbálj olyan függvényeket az alapoktól felépíteni, amelyek
         megkönnyítik az Agent számára a csille befejezését és a játékos eljuttatását
         a narancssárga négyzetbe.
-      MC_HOC_2017_10_RYAN2: Próbálj olyan funkciókat az alapoktól felépíteni, amelyek
+      MC_HOC_2017_10_RYAN2: Próbálj olyan függvényeket az alapoktól felépíteni, amelyek
         megkönnyítik az Agent számára a csille befejezését és a játékos eljuttatását
         a narancssárga négyzetbe.
       MC_HOC_2017_11_Kiki: Most rajtad múlik! Próbáld ki, mit tudsz alkotni a befagyott
@@ -743,10 +754,10 @@ hu:
       MC_HOC_2017_4.5v2: "Kijutottál a mocsárból!  Most segíts a játékosnak biztonságba,
         a narancssárga négyzetre jutni. \n\n\nNyiss utat az Agenttel úgy, hogy egy
         egyszerű mintát találsz, és ciklusok segítségével eljutsz az első két nyomólapra."
-      MC_HOC_2017_Ali: 'Nézd meg az alábbi funkciókat.  Hogyan kerülheted el velük
+      MC_HOC_2017_Ali: 'Nézd meg az alábbi függvényeket.  Hogyan kerülheted el velük
         a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak biztonságban
         eljutni a **varázskönyvhöz** [book_enchanted]?  '
-      MC_HOC_2017_Ali_2019: 'Nézd meg az alábbi funkciókat.  Hogyan kerülheted el
+      MC_HOC_2017_Ali_2019: 'Nézd meg az alábbi függvényeket.  Hogyan kerülheted el
         velük a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak
         biztonságban eljutni a **varázskönyvhöz** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Szabad játék:** Most rajtad múlik! Össze tudod-e szedni
@@ -793,6 +804,8 @@ hu:
         elérd a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
+      Ryan Test Locked Blocks: Itt van egy járőr nevű függvény. Szerkeszd úgy, hogy
+        a macska 400 képpontot fel, majd 400 képpontot lefelé menjen.
       Ryan_Demo: |-
         Táncoltassuk meg ezt a jávorszarvast!
 
@@ -1029,6 +1042,14 @@ hu:
         Rajzolj szaggatott vonalat az "ugrás" és a "menj" blokkok segítségével.
       grade4_review_bee1: Most használd az "ismételd" blokkot, hogy összegyűjtsük
         az összes nektárt és elkészítsük az összes mézet.
+      grade4_scaffolded_project3: |-
+        Most hogy a játéknak van hőse, itt az ideje további szereplőket létrehozni és viselkedéseket hozzájuk rendelni.
+
+        Hozz létre a játékban két további szereplőt és gondoskodj róla, hogy mozogjanak. Szeretnél egy föl-le mozgó járőr szereplőt? Próbáld használni ezeket az új blokkokat, hogy kihasználd a játékod új lehetőségeit!
+
+        ![](https://images.code.org/4cfffd476c6129891eb8bde246a711a8-image-1472065288448.00.42 PM.png)
+
+        **FIGYELEM** üldöző és menekülő viselkedés-utasítások hamarosan!
       grade5_artist_for_loops1: 'Rajzold ki ezt a háromszöget, aminek az oldalai 50
         pixel hosszúak. Tipp: használd az "ismételd" blokkot!'
       grade5_artist_for_loops10: |-
@@ -1049,15 +1070,22 @@ hu:
         helyekre elhelyezed a `hossz` változót.\r\n\r\nLátod, hogy csak egyszer kell
         beállítanod a `hossz` változó értékét, és mindenhol a helyes értéket használja
         a kód?"
+      grade5_playlab_variables10: Szerkeszd a "járőr" függvényt, és adj hozzá egy
+        "szereplő" paramétert, hogy minden képernyőn megjelenő szereplőre meg tudjuk
+        hívni. Ne felejtsd, hogy a szereplőket az 1, 2 és 3 számok jelölik.
+      grade5_playlab_variables11: Add hozzá még a "sebesség" paramétert a "járőr"
+        függvényhez. Használd a "sebesség beállítása" blokkot az új "sebesség" paraméterrel,
+        és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
+        egyet is elérne.
       grade5_playlab_variables13: Használd az "amikor a szereplő megérinti" blokkot,
         és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint
         más szereplőket.
       grade5_playlab_variables2: Az előző feladvány versenye nem volt igazán fair.
         Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót
         szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
-      grade5_playlab_variables9: "Itt van egy `patrol` nevű függvény.\n\r\n\r\nSzerkeszd
-        a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele
-        menjen."
+      grade5_playlab_variables9: "Itt van egy járőr nevű függvény. \n\nSzerkeszd a
+        \"járőr\" függvényt úgy, hogy a macska 400 képpontot fel, majd 400 képpontot
+        lefelé menjen."
       level 'grade3_Loops_3: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
       level 'grade3_Loops_4: Most használd az "ismételd" blokkot, hogy összegyűjtsük
         az összes nektárt és elkészítsük az összes mézet.
