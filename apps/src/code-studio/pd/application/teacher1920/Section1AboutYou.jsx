@@ -89,25 +89,81 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
     return (
       <FormGroup>
-        {!nominated && (
-          <p>
-            Thanks for your interest in the Code.org Professional Learning
-            Program! This application should take 10 - 15 minutes to complete.
-            Fields marked with a <span style={{color: 'red'}}>*</span> are
-            required.
-          </p>
-        )}
         {nominated && (
           <p>
             Congratulations on your nomination for a scholarship to the Code.org
-            Professional Learning Program! This application should take 10 - 15
-            minutes to complete. Fields marked with a{' '}
-            <span style={{color: 'red'}}>*</span> are required. We will let your
-            local partner know that you’ve been nominated as they consider your
-            application for the regional scholarships or discounts they have
-            available.
+            Professional Learning Program! We will let your local partner know
+            that you’ve been nominated as they consider your application for the
+            regional scholarship or discounts they have available.
           </p>
         )}
+
+        <h3>What’s in this application and how long will it take?</h3>
+        <p>
+          This application should take 10 - 15 minutes to complete. Fields
+          marked with a <span style={{color: 'red'}}>*</span> are required. Here
+          are the sections you will be asked to fill out:
+        </p>
+        <ul>
+          <li>
+            <span style={styles.bold}>Section 1: About you</span>
+            (Your and your principal’s contact info)
+          </li>
+          <li>
+            <span style={styles.bold}>Section 2: Choose your program</span>
+            (Which program you want to join and how you plan on teaching the
+            course)
+          </li>
+          <li>
+            <span style={styles.bold}>
+              Section 3: Teaching and school background
+            </span>
+            (Your subject areas and what CS courses are offered in your school)
+          </li>
+          <li>
+            <span style={styles.bold}>
+              Section 4: Professional Learning Program commitments
+            </span>
+            (Your interest and ability to participate in the whole program)
+          </li>
+          <li>
+            <span style={styles.bold}>
+              Section 5: Additional demographic information
+            </span>
+            (Optional: your gender identity and race)
+          </li>
+          <li>
+            <span style={styles.bold}>Section 6: Submission</span>
+            (Confirm and submit)
+          </li>
+        </ul>
+
+        {!nominated && (
+          <div>
+            <h3> When will I hear back?</h3>
+            <p>
+              In most regions, applications are accepted on a rolling basis. And
+              in most cases, our local partner will get back to you within 2
+              weeks to let you know your application status.
+            </p>
+          </div>
+        )}
+
+        {nominated && (
+          <div>
+            <h3>When will I hear back about the scholarships and discounts?</h3>
+            <p>
+              In most regions, applications are accepted on a rolling basis. And
+              in most cases, our local partner will get back to you within 2
+              weeks to let you know your application status. Even if you don’t
+              get selected for the scholarship, you will still be able to attend
+              if you are an eligible teacher and your school can pay a
+              discounted price (thanks to generous donors).
+            </p>
+          </div>
+        )}
+
+        <h3>Need more information? </h3>
         <p>
           If you need more information about the program before you apply,
           please visit{' '}
@@ -132,20 +188,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
             contact your Regional Partner.
           </a>
         </p>
-
-        {nominated && (
-          <div>
-            <h4>When will I hear back about the scholarships and discounts?</h4>
-            <p>
-              In most regions, applications are accepted on a rolling basis. And
-              in most cases, our local partner will get back to you within 2
-              weeks to let you know your application status. Even if you don’t
-              get selected for the scholarship, you will still be able to attend
-              if you are an eligible teacher and your school can pay a
-              discounted price (thanks to our generous donors).
-            </p>
-          </div>
-        )}
 
         <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>
 
