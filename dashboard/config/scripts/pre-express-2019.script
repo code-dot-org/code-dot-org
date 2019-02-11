@@ -4,7 +4,8 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/pre-express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-version_year '2018'
+family_name 'pre-express'
+version_year '2019'
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted_2019'
