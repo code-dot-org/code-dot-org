@@ -983,7 +983,7 @@ nl:
             '"squid"': inktvis
             '"tropicalFish"': tropische vis
       craft_turn:
-        text: draai [DIR][0]
+        text: draai {DIR}
         options:
           DIR:
             right: rechtsom ↻
