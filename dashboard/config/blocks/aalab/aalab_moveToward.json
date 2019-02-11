@@ -1,0 +1,22 @@
+{
+  "category": "Actions",
+  "config": {
+    "inline": false,
+    "func": "moveToward",
+    "blockText": "move {SPRITE} distance {DISTANCE} toward {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "DISTANCE",
+        "type": "Number"
+      },
+      {
+        "name": "TARGET",
+        "type": "Location"
+      }
+    ]
+  }
+}
