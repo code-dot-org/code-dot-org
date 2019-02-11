@@ -9,9 +9,6 @@ import plcHeaderReducer, {
 import scriptAnnouncementReducer, {
   addAnnouncement
 } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
-import manageStudentsReducer, {
-  setStudentsFromServerData
-} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 $(document).ready(initPage);
 
@@ -19,7 +16,7 @@ function initPage() {
   const script = document.querySelector('script[data-scriptoverview]');
   const config = JSON.parse(script.dataset.scriptoverview);
 
-  const {scriptData, plcBreadcrumb, section} = config;
+  const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
 
   if (plcBreadcrumb) {
@@ -46,17 +43,6 @@ function initPage() {
           announcement.type,
           announcement.visibility
         )
-      )
-    );
-  }
-
-  if (section && section.students) {
-    registerReducers({manageStudents: manageStudentsReducer});
-    store.dispatch(
-      setStudentsFromServerData(
-        section.students,
-        section.login_type,
-        section.id
       )
     );
   }
