@@ -62,7 +62,7 @@ class ScriptTeacherPanel extends React.Component {
             <div style={styles.text}>{commonMsg.loading()}</div>
           )}
           {(scriptAllowsHiddenStages || scriptHasLockableStages) && (
-            <SectionSelector style={{margin: 10}} />
+            <SectionSelector style={{margin: 10}} reloadOnChange={true} />
           )}
           {hasSections &&
             scriptHasLockableStages &&
