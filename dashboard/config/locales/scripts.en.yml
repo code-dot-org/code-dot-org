@@ -10686,3 +10686,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        dani-mini-rubric:
+          stages:
+            new stage:
+              name: new stage
