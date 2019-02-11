@@ -16,6 +16,6 @@ export default storybook => {
             studentOverviewData={studentOverviewData}
           />
         )
-      },
+      }
     ]);
 };

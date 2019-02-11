@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <Provider store={getStore()}>
       <YourSchoolResources />
     </Provider>,
-    container,
+    container
   );
 });

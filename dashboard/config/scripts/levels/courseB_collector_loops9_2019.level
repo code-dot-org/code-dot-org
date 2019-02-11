@@ -33,7 +33,7 @@
     "min_collected": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "Help me get the treasure from this deep valley.",
+    "tts_short_instructions_override": "Help me get the treasure from this deep valley.",
     "shape_shift": "false",
     "parent_level_id": 11813,
     "name_suffix": "_2019",

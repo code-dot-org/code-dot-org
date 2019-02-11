@@ -25,7 +25,7 @@ social:
 
 <br>
 
-Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach CS, to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
+Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach computer science (CS), to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
 
 <br>
 
@@ -38,9 +38,25 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 (Note: Scholarship availability varies by region. Outside the US, the teacher prep course is online. All the classroom resources are <strong>completely free of charge</strong>.)
 
+
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1645" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<div id="post_survey" style="display: none; background-color: #eee; padding: 20px; border-radius: 10px;">
+  Thanks for nominating a teacher! We’ll let them know you nominated them and our local partner will have your nomination when reviewing applications for scholarships and discounts. 
+  
+  <p>
+  <p>
+
+  Learn more about our courses and professional learning opportunities at <a href="https://code.org/educate/">code.org/educate/</a>
+  
+  <p>
+
+  <a href="https://code.org/nominate">Nominate another teacher!</a>
+
+</div>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0" height="1645" onload="if (window.formLoaded) { $('html, body').animate({scrollTop: $('#post_survey').offset().top}, 1000); $('#post_survey').show(); $('#nomination_form').hide(); } else { window.formLoaded = true; }" id="nomination_form">Loading...</iframe>
+<br>
 
 <br>
 

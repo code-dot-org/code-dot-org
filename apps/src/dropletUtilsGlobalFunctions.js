@@ -10,7 +10,7 @@ export const globalFunctions = {
   },
 
   getTime() {
-    return (new Date()).getTime();
+    return new Date().getTime();
   },
 
   /**
@@ -24,5 +24,5 @@ export const globalFunctions = {
       val = Number(window.prompt(text));
     } while (isNaN(val));
     return val;
-  },
+  }
 };

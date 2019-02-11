@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 import FormController from '../form_components/FormController';
 import Disclaimer from './Disclaimer';
@@ -17,7 +17,7 @@ export default class WorkshopSurvey extends FormController {
       Disclaimer,
       WorkshopQuality,
       PersonalInvolvement,
-      WorkshopResults,
+      WorkshopResults
     ];
 
     if (this.props.showImplementationQuestions) {
@@ -32,7 +32,10 @@ export default class WorkshopSurvey extends FormController {
   }
 
   isLocalSummer() {
-    return this.props.course === "CS Principles" && this.props.subject === "5-day Summer";
+    return (
+      this.props.course === 'CS Principles' &&
+      this.props.subject === '5-day Summer'
+    );
   }
 
   /**
@@ -72,7 +75,7 @@ export default class WorkshopSurvey extends FormController {
   serializeFormData() {
     return {
       ...super.serializeFormData(),
-      pd_enrollment_code: this.props.pdEnrollmentCode,
+      pd_enrollment_code: this.props.pdEnrollmentCode
     };
   }
 

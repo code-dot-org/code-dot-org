@@ -1,16 +1,11 @@
 /**
  * Application Cohort View
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Spinner from '../components/spinner';
-import {
-  Row,
-  Col,
-  Button,
-  FormGroup,
-  ControlLabel
-} from 'react-bootstrap';
-import Select from "react-select";
+import {Row, Col, Button, FormGroup, ControlLabel} from 'react-bootstrap';
+import Select from 'react-select';
 import $ from 'jquery';
 import downloadCsv from '../downloadCsv';
 import AdminCohortViewTable from './admin_cohort_view_table';
@@ -84,7 +79,7 @@ export default class AdminCohortView extends React.Component {
       notes_2: 'Notes 2',
       notes_3: 'Notes 3',
       notes_4: 'Notes 4',
-      notes_5: 'Notes 5',
+      notes_5: 'Notes 5'
     };
 
     const filteredCohortWithFormData = this.state.filteredCohort.map(row => {
@@ -128,7 +123,9 @@ export default class AdminCohortView extends React.Component {
       filteredCohort = filteredCohort.filter(a => a.role === filter.role);
     }
     if (filter.date) {
-      filteredCohort = filteredCohort.filter(a => a.assigned_workshop.includes(filter.date));
+      filteredCohort = filteredCohort.filter(a =>
+        a.assigned_workshop.includes(filter.date)
+      );
     }
 
     this.setState({
@@ -137,7 +134,8 @@ export default class AdminCohortView extends React.Component {
     });
   }
 
-  getUrl = () => `/api/v1/pd/applications/${this.props.route.cohortType.toLowerCase()}_cohort`;
+  getUrl = () =>
+    `/api/v1/pd/applications/${this.props.route.cohortType.toLowerCase()}_cohort`;
 
   load() {
     this.loadRequest = $.ajax({
@@ -161,9 +159,7 @@ export default class AdminCohortView extends React.Component {
 
     return (
       <div>
-        <h2>
-          {this.props.route.cohortType} Cohort
-        </h2>
+        <h2>{this.props.route.cohortType} Cohort</h2>
         <Row>
           <Col sm={2}>
             <Button
@@ -174,11 +170,9 @@ export default class AdminCohortView extends React.Component {
             </Button>
           </Col>
           <Col sm={2} smOffset={6}>
-            {this.props.route.cohortType === 'TeacherCon' &&
+            {this.props.route.cohortType === 'TeacherCon' && (
               <FormGroup>
-                <ControlLabel>
-                  Filter by Role
-                </ControlLabel>
+                <ControlLabel>Filter by Role</ControlLabel>
                 <Select
                   value={this.state.filter.role}
                   options={roles.map(role => ({value: role, label: role}))}
@@ -186,27 +180,24 @@ export default class AdminCohortView extends React.Component {
                   onChange={this.handleRoleFilterChange}
                 />
               </FormGroup>
-            }
+            )}
           </Col>
           <Col sm={2}>
             <FormGroup>
-              <ControlLabel>
-                Filter by Date
-              </ControlLabel>
+              <ControlLabel>Filter by Date</ControlLabel>
               <Select
                 value={this.state.filter.date}
-                options={dates[this.props.route.cohortType].map(teachercon => (
-                  {value: teachercon.city, label: teachercon.display}
-                ))}
+                options={dates[this.props.route.cohortType].map(teachercon => ({
+                  value: teachercon.city,
+                  label: teachercon.display
+                }))}
                 placeholder="All Dates"
                 onChange={this.handleDateFilterChange}
               />
             </FormGroup>
           </Col>
         </Row>
-        <AdminCohortViewTable
-          data={this.state.filteredCohort}
-        />
+        <AdminCohortViewTable data={this.state.filteredCohort} />
       </div>
     );
   }

@@ -57,20 +57,20 @@ RUN wget https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz && \
     rm -r ruby-2.5.0
 
 # install bundler
-RUN gem install bundler && \
+RUN gem install bundler -v 1.17 && \
     mkdir -p /usr/local/bundle && \
     chown -R circleci /usr/local/bundle
 
 # install node
-RUN wget https://nodejs.org/dist/v8.4.0/node-v8.4.0.tar.gz && \
-    tar -xzvf node-v8.4.0.tar.gz && \
-    rm node-v8.4.0.tar.gz && \
-    cd node-v8.4.0 && \
+RUN wget https://nodejs.org/dist/v8.15.0/node-v8.15.0.tar.gz && \
+    tar -xzvf node-v8.15.0.tar.gz && \
+    rm node-v8.15.0.tar.gz && \
+    cd node-v8.15.0 && \
     ./configure && \
     make -j4 && \
     make install && \
     cd .. && \
-    rm -r node-v8.4.0
+    rm -r node-v8.15.0
 
 # more more tools
 RUN apt-get install -y unzip

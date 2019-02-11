@@ -1,5 +1,6 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import * as actions from './errorDialogStackModule';
 import {connect} from 'react-redux';
 import BaseDialog from '../templates/BaseDialog.jsx';
@@ -32,8 +33,10 @@ class ErrorDialogStack extends React.Component {
         study_group: 'animation_no_load_v4',
         event: 'delete_selected',
         project_id: getCurrentId(),
-        data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
-          'animationName': this.props.animationList.propsByKey[key].name})
+        data_json: JSON.stringify({
+          version: this.props.animationList.propsByKey[key].version,
+          animationName: this.props.animationList.propsByKey[key].name
+        })
       },
       {includeUserId: true}
     );
@@ -49,8 +52,10 @@ class ErrorDialogStack extends React.Component {
         study_group: 'animation_no_load_v4',
         event: 'reload_selected',
         project_id: getCurrentId(),
-        data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
-          'animationName': this.props.animationList.propsByKey[key].name})
+        data_json: JSON.stringify({
+          version: this.props.animationList.propsByKey[key].version,
+          animationName: this.props.animationList.propsByKey[key].name
+        })
       },
       {includeUserId: true}
     );
@@ -63,38 +68,49 @@ class ErrorDialogStack extends React.Component {
     }
 
     const error = this.props.errors[0];
-    const animationName = (this.props.animationList && this.props.animationList.propsByKey[error.error_cause]) ?
-      this.props.animationList.propsByKey[error.error_cause].name : "";
+    const animationName =
+      this.props.animationList &&
+      this.props.animationList.propsByKey[error.error_cause]
+        ? this.props.animationList.propsByKey[error.error_cause].name
+        : '';
 
     return (
       <BaseDialog
         isOpen
-        uncloseable={error.error_type==='anim_load'}
-        hideCloseButton={error.error_type==='anim_load'}
+        uncloseable={error.error_type === 'anim_load'}
+        hideCloseButton={error.error_type === 'anim_load'}
         handleClose={this.props.dismissError}
       >
         <h1>{error.message}</h1>
         {/* If this is the result of animation load failure, display additional
             information and choice to reload the page or delete the animation */}
-        {error.error_type === 'anim_load' &&
+        {error.error_type === 'anim_load' && (
           <div>
-            <p>{gamelabMsg.errorLoadingAnimation({ animationName: animationName })}</p>
-            <p>{msg.contactWithoutEmail()} <a href={pegasus('/contact')} target="_blank">https://code.org/contact</a>.</p>
+            <p>
+              {gamelabMsg.errorLoadingAnimation({animationName: animationName})}
+            </p>
+            <p>
+              {msg.contactWithoutEmail()}{' '}
+              <a href={pegasus('/contact')} target="_blank">
+                https://code.org/contact
+              </a>
+              .
+            </p>
             <DialogFooter>
-              {error.error_cause &&
+              {error.error_cause && (
                 <Button
-                  text={msg.delete() +  " \"" + animationName + "\""}
+                  text={msg.delete() + ' "' + animationName + '"'}
                   onClick={() => this.handleDeleteChoice(error.error_cause)}
                   color="red"
                 />
-              }
+              )}
               <Button
                 text={msg.reloadPage()}
                 onClick={() => this.handleReloadChoice(error.error_cause)}
               />
             </DialogFooter>
           </div>
-        }
+        )}
       </BaseDialog>
     );
   }
@@ -108,10 +124,10 @@ export default connect(
   },
   function propsFromDispatch(dispatch) {
     return {
-      dismissError: function () {
+      dismissError: function() {
         dispatch(actions.dismissError());
       },
-      deleteAnimation: function (key) {
+      deleteAnimation: function(key) {
         dispatch(animationActions.deleteAnimation(key));
       }
     };

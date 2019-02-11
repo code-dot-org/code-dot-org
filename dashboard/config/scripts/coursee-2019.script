@@ -2,9 +2,10 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursee/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursee/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+family_name 'coursee'
 version_year '2019'
 
 stage 'Sequencing in the Maze', flex_category: 'csf_e_1'
@@ -101,6 +102,14 @@ level 'Virtual Pet Freeplay_2019'
 
 stage 'Private and Personal Information', flex_category: 'csf_e_2'
 level 'courseE_unplugged_privateInformation_2019'
+
+stage 'About Me', flex_category: 'csf_e_2'
+level 'courseE_aboutme_1'
+level 'courseE_aboutme_2'
+level 'courseE_aboutme_3'
+level 'courseE_aboutme_4'
+level 'courseE_aboutme_5'
+level 'courseE_aboutme_freeplay'
 
 stage 'Nested Loops in Bee', flex_category: 'csf_e_2'
 level 'courseD_bee_nestedLoops1a_2019'

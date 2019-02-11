@@ -1,7 +1,8 @@
 /**
  * Displays a list of nicely-formatted session times for a workshop.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import SessionTime from './session_time';
 
 export default class SessionTimesList extends React.Component {
@@ -17,15 +18,11 @@ export default class SessionTimesList extends React.Component {
     const listItems = this.props.sessions.map(session => {
       return (
         <li key={session.id} style={{whiteSpace: 'nowrap'}}>
-          <SessionTime session={session}/>
+          <SessionTime session={session} />
         </li>
       );
     });
 
-    return (
-      <ul className="unstyled">
-        {listItems}
-      </ul>
-    );
+    return <ul className="unstyled">{listItems}</ul>;
   }
 }

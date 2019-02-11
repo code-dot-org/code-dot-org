@@ -1,5 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '../util/color';
 import ShareWarnings from './ShareWarnings';
 
 const styles = {
@@ -16,7 +17,7 @@ const styles = {
     borderRadius: '4px',
     outline: 'none',
     padding: '20px',
-    zIndex: 1050, // based off of behavior in dashboard's dialog.js
+    zIndex: 1050 // based off of behavior in dashboard's dialog.js
     // width handle in render
   },
   overlay: {
@@ -69,7 +70,7 @@ class ShareWarningsDialog extends Component {
 
   render() {
     if (!this.state.modalIsOpen) {
-      return <div/>;
+      return <div />;
     }
 
     const mainStyle = {
@@ -79,7 +80,7 @@ class ShareWarningsDialog extends Component {
 
     return (
       <div>
-        <div style={styles.overlay}/>
+        <div style={styles.overlay} />
         <div style={mainStyle}>
           <ShareWarnings
             promptForAge={this.props.promptForAge}

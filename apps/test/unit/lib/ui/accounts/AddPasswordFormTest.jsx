@@ -15,11 +15,7 @@ describe('AddPasswordForm', () => {
 
   beforeEach(() => {
     handleSubmit = () => {};
-    wrapper = mount(
-      <AddPasswordForm
-        handleSubmit={handleSubmit}
-      />
-    );
+    wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
     sinon.stub(utils, 'reload');
   });
 
@@ -83,17 +79,15 @@ describe('AddPasswordForm', () => {
     wrapper.setState({
       submissionState: {message: SAVING_STATE}
     });
-    expect(wrapper.find('#uitest-add-password-status')).to.have.text(SAVING_STATE);
+    expect(wrapper.find('#uitest-add-password-status')).to.have.text(
+      SAVING_STATE
+    );
   });
 
   describe('on successful submission', () => {
     beforeEach(async () => {
       handleSubmit = sinon.stub().resolves({});
-      wrapper = mount(
-        <AddPasswordForm
-          handleSubmit={handleSubmit}
-        />
-      );
+      wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
       wrapper.setState({
         password: 'mypassword',
         passwordConfirmation: 'mypassword'
@@ -114,18 +108,16 @@ describe('AddPasswordForm', () => {
     });
 
     it('renders the success state', async () => {
-      expect(wrapper.find('#uitest-add-password-status')).to.have.text(SUCCESS_STATE);
+      expect(wrapper.find('#uitest-add-password-status')).to.have.text(
+        SUCCESS_STATE
+      );
     });
   });
 
   describe('on failed submission', () => {
     beforeEach(async () => {
       handleSubmit = sinon.stub().rejects(new Error('Oh no!'));
-      wrapper = mount(
-        <AddPasswordForm
-          handleSubmit={handleSubmit}
-        />
-      );
+      wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
       wrapper.setState({
         password: 'mypassword',
         passwordConfirmation: 'mypassword'
@@ -146,7 +138,9 @@ describe('AddPasswordForm', () => {
     });
 
     it('renders the error state', () => {
-      expect(wrapper.find('#uitest-add-password-status')).to.have.text('Oh no!');
+      expect(wrapper.find('#uitest-add-password-status')).to.have.text(
+        'Oh no!'
+      );
     });
   });
 });

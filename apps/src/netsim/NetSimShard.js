@@ -24,7 +24,7 @@ var WHOLE_SHARD_EVENT = 'all_tables';
  * @param {!PubSubConfig} pubSubConfig
  * @constructor
  */
-var NetSimShard = module.exports = function (shardID, pubSubConfig) {
+var NetSimShard = (module.exports = function(shardID, pubSubConfig) {
   /** @type {string} */
   this.id = shardID;
 
@@ -33,8 +33,10 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
 
   /** @type {PubSubChannel} */
   this.pubSubChannel = this.pubSub.subscribe(this.id);
-  this.pubSubChannel.subscribe(WHOLE_SHARD_EVENT,
-      NetSimShard.prototype.onPubSubEvent_.bind(this));
+  this.pubSubChannel.subscribe(
+    WHOLE_SHARD_EVENT,
+    NetSimShard.prototype.onPubSubEvent_.bind(this)
+  );
 
   /**
    * Collection of client (user) nodes and router nodes on the shard.
@@ -113,13 +115,13 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
     useIncrementalRefresh: true
   });
   this.logTable.unsubscribe();
-};
+});
 
 /**
  * Necessary tear-down for shard.  In particular, disconnecting
  * from pubsub service.
  */
-NetSimShard.prototype.disconnect = function () {
+NetSimShard.prototype.disconnect = function() {
   this.nodeTable.unsubscribe();
   this.wireTable.unsubscribe();
   this.messageTable.unsubscribe();
@@ -135,7 +137,7 @@ NetSimShard.prototype.disconnect = function () {
  * This tick allows our tables to poll the server for changes.
  * @param {!RunLoop.Clock} clock
  */
-NetSimShard.prototype.tick = function (clock) {
+NetSimShard.prototype.tick = function(clock) {
   this.nodeTable.tick(clock);
   this.wireTable.tick(clock);
   this.messageTable.tick(clock);
@@ -147,25 +149,27 @@ NetSimShard.prototype.tick = function (clock) {
  * users out and starting over.
  * @param {NodeStyleCallback} onComplete
  */
-NetSimShard.prototype.resetEverything = function (onComplete) {
+NetSimShard.prototype.resetEverything = function(onComplete) {
   $.ajax({
     url: '/v3/netsim/' + this.id,
     type: 'delete',
     contentType: 'application/json; charset=utf-8',
-    dataType: "json"
-  }).done(function () {
-    onComplete(null, true);
-  }).fail(function (request, status, error) {
-    var err = new Error('status: ' + status + '; error: ' + error);
-    onComplete(err, false);
-  });
+    dataType: 'json'
+  })
+    .done(function() {
+      onComplete(null, true);
+    })
+    .fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      onComplete(err, false);
+    });
 };
 
 /**
  * Called when the PubSub service fires an event that applies to all tables
  * @private
  */
-NetSimShard.prototype.onPubSubEvent_ = function () {
+NetSimShard.prototype.onPubSubEvent_ = function() {
   // Right now, the only all_tables event is the shard reset.
   // Refreshing the node table informs our node that a reset has occurred.
   // TODO: Use a "disconnect from shard" callback instead here.

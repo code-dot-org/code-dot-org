@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
-import { setViewType, ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { getStore } from '@cdo/apps/code-studio/redux';
-import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {getStore} from '@cdo/apps/code-studio/redux';
+import {
+  setSections,
+  selectSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
-import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
-import { getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/initSigninState';
-import { setVerified, setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {setUserSignedIn} from '@cdo/apps/code-studio/progressRedux';
+import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
+import {
+  setVerified,
+  setVerifiedResources
+} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(showCourseOverview);
 
@@ -20,7 +26,8 @@ function showCourseOverview() {
   const isTeacher = scriptData.is_teacher;
 
   const teacherResources = (courseSummary.teacher_resources || []).map(
-    ([type, link]) => ({type, link}));
+    ([type, link]) => ({type, link})
+  );
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {
@@ -67,10 +74,13 @@ function showCourseOverview() {
         isVerifiedTeacher={!!scriptData.is_verified_teacher}
         hasVerifiedResources={!!courseSummary.has_verified_resources}
         versions={versions}
-        showVersionWarning={!!scriptData.show_version_warning && versions.length > 1}
+        showVersionWarning={
+          !!scriptData.show_version_warning && versions.length > 1
+        }
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectToCourseUrl={scriptData.redirect_to_course_url}
       />
     </Provider>,
-  document.getElementById('course_overview'));
+    document.getElementById('course_overview')
+  );
 }

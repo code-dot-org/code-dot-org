@@ -1,5 +1,5 @@
-import { assert } from 'chai';
-import { mount } from 'enzyme';
+import {assert} from 'chai';
+import {mount} from 'enzyme';
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import * as hiddenStageRedux from '@cdo/apps/code-studio/hiddenStageRedux';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('TeacherContentToggle', () => {
   let div, renderElement;
@@ -44,22 +44,33 @@ describe('TeacherContentToggle', () => {
         isHiddenStage={false}
         isLockedStage={false}
       />,
-      { attachTo: renderElement });
+      {attachTo: renderElement}
+    );
 
     const root = $(component.html());
     assert.equal(root.children().length, 3);
 
     // Each child element is a wrapper around the original DOM element, and
     // has unhidden the original DOM element
-    const [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    const [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
 
     assert.equal(contentElement.childNodes[0].getAttribute('id'), 'level-body');
     assert.equal(contentElement.childNodes[0].style.display, '');
 
-    assert.equal(lockedStageElement.childNodes[0].getAttribute('id'), 'locked-stage');
+    assert.equal(
+      lockedStageElement.childNodes[0].getAttribute('id'),
+      'locked-stage'
+    );
     assert.equal(lockedStageElement.childNodes[0].style.display, '');
 
-    assert.equal(hiddenStageElement.childNodes[0].getAttribute('id'), 'hidden-stage');
+    assert.equal(
+      hiddenStageElement.childNodes[0].getAttribute('id'),
+      'hidden-stage'
+    );
     assert.equal(hiddenStageElement.childNodes[0].style.display, '');
   });
 
@@ -73,10 +84,15 @@ describe('TeacherContentToggle', () => {
         isHiddenStage={false}
         isLockedStage={false}
       />,
-      { attachTo: renderElement });
+      {attachTo: renderElement}
+    );
 
     const root = $(component.html());
-    const [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    const [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
 
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, '');
@@ -94,10 +110,15 @@ describe('TeacherContentToggle', () => {
         isHiddenStage={false}
         isLockedStage={false}
       />,
-      { attachTo: renderElement });
+      {attachTo: renderElement}
+    );
 
     const root = $(component.html());
-    const [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    const [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
 
     // nothing visible
     assert.equal(contentElement.style.display, '');
@@ -116,7 +137,8 @@ describe('TeacherContentToggle', () => {
         isHiddenStage={false}
         isLockedStage={false}
       />,
-      { attachTo: renderElement });
+      {attachTo: renderElement}
+    );
 
     component.setProps({
       hiddenStagesInitialized: true,
@@ -124,7 +146,11 @@ describe('TeacherContentToggle', () => {
     });
 
     let root = $(component.html());
-    let [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    let [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
 
     // content is hidden, hiddenStage is visible
     assert.equal(contentElement.style.display, '');
@@ -136,7 +162,11 @@ describe('TeacherContentToggle', () => {
       isBlocklyOrDroplet: false
     });
     root = $(component.html());
-    [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
     // same thing, but we also set display:none on content
     assert.equal(contentElement.style.display, 'none');
     assert.equal(contentElement.style.visibility, 'hidden');
@@ -154,7 +184,8 @@ describe('TeacherContentToggle', () => {
         isHiddenStage={false}
         isLockedStage={false}
       />,
-      { attachTo: renderElement });
+      {attachTo: renderElement}
+    );
 
     component.setProps({
       sectionsAreLoaded: true,
@@ -162,7 +193,11 @@ describe('TeacherContentToggle', () => {
     });
 
     let root = $(component.html());
-    let [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    let [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
 
     // content is hidden, hiddenStage is visible
     assert.equal(contentElement.style.display, '');
@@ -174,7 +209,11 @@ describe('TeacherContentToggle', () => {
       isBlocklyOrDroplet: false
     });
     root = $(component.html());
-    [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
     // same thing, but we also set display:none on content
     assert.equal(contentElement.style.display, 'none');
     assert.equal(contentElement.style.visibility, 'hidden');
@@ -192,7 +231,8 @@ describe('TeacherContentToggle', () => {
         isHiddenStage={false}
         isLockedStage={false}
       />,
-      { attachTo: renderElement });
+      {attachTo: renderElement}
+    );
 
     component.setProps({
       sectionsAreLoaded: true,
@@ -202,7 +242,11 @@ describe('TeacherContentToggle', () => {
     });
 
     const root = $(component.html());
-    const [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    const [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
 
     // content is hidden, hiddenStage is visible
     assert.equal(contentElement.style.display, '');
@@ -225,7 +269,8 @@ describe('TeacherContentToggle', () => {
         isHiddenStage={false}
         isLockedStage={false}
       />,
-      { attachTo: renderElement });
+      {attachTo: renderElement}
+    );
 
     component.setProps({
       sectionsAreLoaded: true,
@@ -235,7 +280,11 @@ describe('TeacherContentToggle', () => {
     });
 
     const root = $(component.html());
-    const [contentElement, lockedStageElement, hiddenStageElement] = root.children().toArray();
+    const [
+      contentElement,
+      lockedStageElement,
+      hiddenStageElement
+    ] = root.children().toArray();
 
     // content is hidden, hiddenStage is visible
     assert.equal(contentElement.style.display, '');
@@ -263,11 +312,13 @@ describe('TeacherContentToggle', () => {
         progress: {},
         teacherSections: {},
         hiddenStage: {},
-        verifiedTeacher: {},
+        verifiedTeacher: {}
       };
 
       it('sets locked hidden to true when locked and hidden', () => {
-        sinon.stub(progressHelpers, 'lessonIsLockedForAllStudents').returns(true);
+        sinon
+          .stub(progressHelpers, 'lessonIsLockedForAllStudents')
+          .returns(true);
         sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(true);
 
         const props = mapStateToProps(state);
@@ -277,7 +328,9 @@ describe('TeacherContentToggle', () => {
       });
 
       it('sets locked hidden to false when not locked or hidden', () => {
-        sinon.stub(progressHelpers, 'lessonIsLockedForAllStudents').returns(false);
+        sinon
+          .stub(progressHelpers, 'lessonIsLockedForAllStudents')
+          .returns(false);
         sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(false);
 
         const props = mapStateToProps(state);
@@ -322,8 +375,14 @@ describe('TeacherContentToggle', () => {
 
         assert.strictEqual(props.isHiddenStage, false);
         assert.strictEqual(props.isLockedStage, false);
-        assert.strictEqual(progressHelpers.lessonIsLockedForAllStudents.called, false);
-        assert.strictEqual(hiddenStageRedux.isStageHiddenForSection.called, false);
+        assert.strictEqual(
+          progressHelpers.lessonIsLockedForAllStudents.called,
+          false
+        );
+        assert.strictEqual(
+          hiddenStageRedux.isStageHiddenForSection.called,
+          false
+        );
       });
 
       it('sets lockable to true for unverified teacher, when stage is lockable', () => {

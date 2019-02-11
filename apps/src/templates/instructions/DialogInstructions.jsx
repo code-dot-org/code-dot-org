@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
 
@@ -16,7 +17,7 @@ class DialogInstructions extends React.Component {
     longInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     imgOnly: PropTypes.bool,
-    hintsOnly: PropTypes.bool,
+    hintsOnly: PropTypes.bool
   };
 
   render() {
@@ -25,12 +26,18 @@ class DialogInstructions extends React.Component {
     return (
       <Instructions
         puzzleTitle={msg.puzzleTitle({
-            stage_total: this.props.stageTotal,
-            puzzle_number: this.props.puzzleNumber
-          })}
-        shortInstructions={showInstructions ?  this.props.shortInstructions : undefined}
-        instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
-        longInstructions={showInstructions ?  this.props.longInstructions : undefined}
+          stage_total: this.props.stageTotal,
+          puzzle_number: this.props.puzzleNumber
+        })}
+        shortInstructions={
+          showInstructions ? this.props.shortInstructions : undefined
+        }
+        instructions2={
+          showInstructions ? this.props.shortInstructions2 : undefined
+        }
+        longInstructions={
+          showInstructions ? this.props.longInstructions : undefined
+        }
         imgURL={showImg ? this.props.imgURL : undefined}
       />
     );

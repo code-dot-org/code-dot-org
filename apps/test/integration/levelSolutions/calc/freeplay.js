@@ -2,7 +2,7 @@ import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 
 module.exports = {
-  app: "calc",
+  app: 'calc',
   skinId: 'calc',
   levelDefinition: {
     solutionBlocks: '',
@@ -11,25 +11,27 @@ module.exports = {
   },
   tests: [
     {
-      description: "Simple answer",
+      description: 'Simple answer',
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
           blockUtils.calcBlockXml('functional_plus', [3, 4])
         ]) +
-      '</xml>'
+        '</xml>'
     },
     {
-      description: "Answer with a function",
+      description: 'Answer with a function',
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '<block type="functional_compute" inline="false" deletable="false" movable="false">' +
         '  <functional_input name="ARG1">' +
         '    <block type="functional_call" inline="false">' +
@@ -59,7 +61,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-      '</xml>'
+        '</xml>'
     },
     {
       description: 'empty answer',

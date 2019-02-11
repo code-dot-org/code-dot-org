@@ -26,6 +26,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "should get show with encrypted level source ID" do
+    skip "CDO.properties_encryption_key is not defined" unless CDO.properties_encryption_key
     encrypted = @level_source.encrypt_level_source_id @admin.id
     get :show, params: {level_source_id_and_user_id: encrypted}
     assert_response :success

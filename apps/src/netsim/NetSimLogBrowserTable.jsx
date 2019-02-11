@@ -1,9 +1,10 @@
 /** @file Table of log rows displayed in the log browser */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import orderBy from 'lodash/orderBy';
 import {Table, sort} from 'reactabular';
 import moment from 'moment';
-import color from "../util/color";
+import color from '../util/color';
 import wrappedSortable from '../templates/tables/wrapped_sortable';
 import Packet from './Packet';
 
@@ -50,7 +51,7 @@ export default class NetSimLogBrowserTable extends React.Component {
   getSortingColumns = () => this.state.sortingColumns || {};
 
   // The user requested sorting, adjust the sorting state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -69,19 +70,18 @@ export default class NetSimLogBrowserTable extends React.Component {
     const headerFields = this.props.headerFields;
 
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(
-      this.getSortingColumns,
-      this.onSort,
-      {
-        default: {color: 'rgba(255, 255, 255, 0.2 )'}
-      }
-    );
+    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
+      default: {color: 'rgba(255, 255, 255, 0.2 )'}
+    });
 
-    const showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+    const showToAddress =
+      headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
 
-    const showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+    const showFromAddress =
+      headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
 
-    const showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+    const showPacketInfo =
+      headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
     let columns = [];
@@ -198,11 +198,8 @@ export default class NetSimLogBrowserTable extends React.Component {
 
     return (
       <Table.Provider columns={columns} style={style.table}>
-        <Table.Header/>
-        <Table.Body
-          rows={sortedRows}
-          rowKey="uuid"
-        />
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="uuid" />
       </Table.Provider>
     );
   }

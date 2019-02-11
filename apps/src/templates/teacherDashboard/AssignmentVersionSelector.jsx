@@ -1,27 +1,32 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import {assignmentVersionShape} from './shapes';
-import PopUpMenu, {STANDARD_PADDING} from "../../lib/ui/PopUpMenu";
-import AssignmentVersionMenuItem, {columnWidths} from './AssignmentVersionMenuItem';
+import PopUpMenu, {STANDARD_PADDING} from '../../lib/ui/PopUpMenu';
+import AssignmentVersionMenuItem, {
+  columnWidths
+} from './AssignmentVersionMenuItem';
 import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import _ from 'lodash';
 
-const menuItemWidth = _(columnWidths).values().reduce(_.add);
+const menuItemWidth = _(columnWidths)
+  .values()
+  .reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
 const styles = {
   version: {
     display: 'inline-block',
-    marginTop: 4,
+    marginTop: 4
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss
     zIndex: 1051,
     maxWidth: null,
-    width: menuWidth,
+    width: menuWidth
   }
 };
 
@@ -30,13 +35,13 @@ export default class AssignmentVersionSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChangeVersion: PropTypes.func.isRequired,
     versions: PropTypes.arrayOf(assignmentVersionShape),
-    disabled: PropTypes.bool,
+    disabled: PropTypes.bool
   };
 
   state = {
     isMenuOpen: false,
     canMenuOpen: true,
-    targetPoint: {top: 0, left: 0},
+    targetPoint: {top: 0, left: 0}
   };
 
   handleMouseDown = e => {
@@ -54,7 +59,7 @@ export default class AssignmentVersionSelector extends Component {
     const rect = this.select.getBoundingClientRect();
     const targetPoint = {
       top: rect.bottom + window.pageYOffset,
-      left: rect.left + window.pageXOffset,
+      left: rect.left + window.pageXOffset
     };
     this.setState({isMenuOpen: true, canMenuOpen: false, targetPoint});
   }
@@ -88,7 +93,9 @@ export default class AssignmentVersionSelector extends Component {
 
     return (
       <span style={styles.version}>
-        <div style={styles.dropdownLabel}>{i18n.assignmentSelectorVersion()}</div>
+        <div style={styles.dropdownLabel}>
+          {i18n.assignmentSelectorVersion()}
+        </div>
         <select
           id="assignment-version-year"
           value={selectedVersionYear}
@@ -97,18 +104,15 @@ export default class AssignmentVersionSelector extends Component {
           onClick={this.handleClick}
           style={dropdownStyle}
           disabled={disabled}
-          ref={select => this.select = select}
+          ref={select => (this.select = select)}
         >
-          {
-            versions.map(version => (
-              <option
-                key={version.year}
-                value={version.year}
-              >
-                {version.isRecommended ? `${version.title} (Recommended)` : version.title}
-              </option>
-            ))
-          }
+          {versions.map(version => (
+            <option key={version.year} value={version.year}>
+              {version.isRecommended
+                ? `${version.title} (Recommended)`
+                : version.title}
+            </option>
+          ))}
         </select>
         <PopUpMenu
           isOpen={this.state.isMenuOpen}
@@ -117,21 +121,16 @@ export default class AssignmentVersionSelector extends Component {
           style={styles.popUpMenuStyle}
           beforeClose={this.beforeClose}
         >
-          <AssignmentVersionMenuHeader/>
-          {
-            versions.map(version => (
-              <AssignmentVersionMenuItem
-                version={version}
-                onClick={() => this.chooseMenuItem(version.year)}
-                key={version.year}
-              />
-            ))
-          }
+          <AssignmentVersionMenuHeader />
+          {versions.map(version => (
+            <AssignmentVersionMenuItem
+              version={version}
+              onClick={() => this.chooseMenuItem(version.year)}
+              key={version.year}
+            />
+          ))}
         </PopUpMenu>
       </span>
     );
   }
-
 }
-
-

@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from "../../util/color";
+import color from '../../util/color';
 import Button from '@cdo/apps/templates/Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
@@ -55,7 +56,7 @@ const styles = {
   },
   container: {
     width: '100%'
-  },
+  }
 };
 
 export class UnconnectedTwoColumnActionBlock extends Component {
@@ -67,46 +68,54 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     subHeading: PropTypes.string,
     subHeadingSmallFont: PropTypes.bool,
     description: PropTypes.string.isRequired,
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-      target: PropTypes.string,
-      id: PropTypes.string,
-    })),
+    buttons: PropTypes.arrayOf(
+      PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+        target: PropTypes.string,
+        id: PropTypes.string
+      })
+    )
   };
 
   render() {
-    const { isRtl, responsiveSize, imageUrl, heading, subHeading, subHeadingSmallFont, description, buttons } = this.props;
+    const {
+      isRtl,
+      responsiveSize,
+      imageUrl,
+      heading,
+      subHeading,
+      subHeadingSmallFont,
+      description,
+      buttons
+    } = this.props;
     const float = isRtl ? 'right' : 'left';
-    const width = (responsiveSize === 'lg') ? '50%' : '100%';
+    const width = responsiveSize === 'lg' ? '50%' : '100%';
 
     return (
       <div>
-        {heading && (
-          <div style={styles.heading}>
-            {heading}
-          </div>
-        )}
+        {heading && <div style={styles.heading}>{heading}</div>}
         <div style={styles.container}>
-          {responsiveSize === 'lg' &&
+          {responsiveSize === 'lg' && (
             <div style={{float, width}}>
-              <img
-                src={imageUrl}
-                style={styles.image}
-              />
+              <img src={imageUrl} style={styles.image} />
             </div>
-          }
+          )}
           <div style={{float, width}}>
             <div style={styles.textItem}>
               {subHeading && (
-                <div style={subHeadingSmallFont ? styles.subHeadingSmallFont : styles.subHeading}>
+                <div
+                  style={
+                    subHeadingSmallFont
+                      ? styles.subHeadingSmallFont
+                      : styles.subHeading
+                  }
+                >
                   {subHeading}
                 </div>
               )}
-              <div style={styles.description}>
-                {description}
-              </div>
-              {buttons.map((button, index) =>
+              <div style={styles.description}>{description}</div>
+              {buttons.map((button, index) => (
                 <span key={index}>
                   <Button
                     href={button.url}
@@ -115,15 +124,13 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     target={button.target}
                     id={button.id}
                   />
-                  &nbsp;
-                  &nbsp;
-                  &nbsp;
+                  &nbsp; &nbsp; &nbsp;
                 </span>
-              )}
+              ))}
             </div>
           </div>
         </div>
-        <div style={styles.clear}/>
+        <div style={styles.clear} />
       </div>
     );
   }
@@ -131,21 +138,23 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
 export const TwoColumnActionBlock = connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(UnconnectedTwoColumnActionBlock);
 
 export class LocalClassActionBlock extends Component {
   static propTypes = {
-    showHeading: PropTypes.bool.isRequired,
+    showHeading: PropTypes.bool.isRequired
   };
 
   render() {
-    const { showHeading } = this.props;
+    const {showHeading} = this.props;
     const heading = showHeading ? i18n.findLocalClassHeading() : '';
 
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
+        imageUrl={pegasus(
+          '/shared/images/fill-540x289/misc/beyond-local-map.png'
+        )}
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
         description={i18n.findLocalClassDescription()}
@@ -164,7 +173,9 @@ export class AdministratorResourcesActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
+        imageUrl={pegasus(
+          '/images/fill-540x289/2015AR/newcsteacherstrained.png'
+        )}
         heading={i18n.administratorResourcesHeading()}
         description={i18n.administratorResourcesDescription()}
         buttons={[
@@ -192,7 +203,9 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg')}
+        imageUrl={pegasus(
+          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
+        )}
         subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019()}
         subHeadingSmallFont={true}
         description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019()}

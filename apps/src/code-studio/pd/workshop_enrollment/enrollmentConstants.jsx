@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 const WorkshopPropType = PropTypes.shape({
   id: PropTypes.number,
@@ -14,7 +14,7 @@ const WorkshopPropType = PropTypes.shape({
   organizer: PropTypes.shape({
     name: PropTypes.string,
     email: PropTypes.string
-  }),
+  })
 });
 
 const FacilitatorPropType = PropTypes.shape({
@@ -23,7 +23,4 @@ const FacilitatorPropType = PropTypes.shape({
   bio: PropTypes.string
 });
 
-export {
-  WorkshopPropType,
-  FacilitatorPropType
-};
+export {WorkshopPropType, FacilitatorPropType};

@@ -11,7 +11,6 @@ critical_font: true
 jquery: defer
 style_min: true
 ---
-%script{src: "https://cdn.optimizely.com/js/12977480133.js"}
 =inline_css 'homepage.css'
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")

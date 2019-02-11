@@ -1,5 +1,6 @@
 /** @file The Bob character panel from the crypto widget */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
@@ -40,17 +41,17 @@ export default class Bob extends React.Component {
     this.clearPublicNumber();
   }
 
-  onPublicModulusChange = (publicModulus) => {
+  onPublicModulusChange = publicModulus => {
     this.setPublicModulus(publicModulus);
     this.props.setPublicModulus(publicModulus);
   };
 
-  setPublicKey = (publicKey) => {
+  setPublicKey = publicKey => {
     this.setState({publicKey});
     this.clearPublicNumber();
   };
 
-  setSecretNumber = (secretNumber) => {
+  setSecretNumber = secretNumber => {
     this.setState({secretNumber});
     this.clearPublicNumber();
   };
@@ -61,12 +62,16 @@ export default class Bob extends React.Component {
     if ([publicKey, secretNumber, publicModulus].every(Number.isInteger)) {
       const dividend = publicKey * secretNumber;
       const publicNumber = dividend % publicModulus;
-      runModuloClock(dividend, currentDividend => {
-        this.setState({publicNumber: currentDividend % publicModulus});
-      }, () => {
-        this.setState({publicNumber});
-        this.props.setPublicNumber(publicNumber);
-      });
+      runModuloClock(
+        dividend,
+        currentDividend => {
+          this.setState({publicNumber: currentDividend % publicModulus});
+        },
+        () => {
+          this.setState({publicNumber});
+          this.props.setPublicNumber(publicNumber);
+        }
+      );
     } else {
       this.clearPublicNumber();
     }
@@ -78,17 +83,12 @@ export default class Bob extends React.Component {
 
   render() {
     const {disabled} = this.props;
-    const {
-      publicModulus,
-      publicKey,
-      secretNumber,
-      publicNumber
-    } = this.state;
+    const {publicModulus, publicKey, secretNumber, publicNumber} = this.state;
     return (
       <CharacterPanel title="Bob">
         <NumberedSteps>
           <Step>
-            Enter <KeywordPublicModulus/>:
+            Enter <KeywordPublicModulus />:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
@@ -96,7 +96,7 @@ export default class Bob extends React.Component {
             />
           </Step>
           <Step requires={[publicModulus].every(Number.isInteger)}>
-            Enter Alice's <KeywordPublicKey/>:
+            Enter Alice's <KeywordPublicKey />:
             <IntegerTextbox
               value={publicKey}
               onChange={this.setPublicKey}
@@ -105,7 +105,7 @@ export default class Bob extends React.Component {
             />
           </Step>
           <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
-            Pick your <KeywordSecretNumber/>:
+            Pick your <KeywordSecretNumber />:
             <SecretNumberDropdown
               value={secretNumber}
               onChange={this.setSecretNumber}
@@ -113,22 +113,29 @@ export default class Bob extends React.Component {
               disabled={disabled}
             />
           </Step>
-          <Step requires={[publicModulus, publicKey, secretNumber].every(Number.isInteger)}>
-            Calculate your <KeywordPublicNumber/>:
+          <Step
+            requires={[publicModulus, publicKey, secretNumber].every(
+              Number.isInteger
+            )}
+          >
+            Calculate your <KeywordPublicNumber />:
             <div>
               (
-              <IntegerField color={COLORS.publicKey} value={publicKey}/>
+              <IntegerField color={COLORS.publicKey} value={publicKey} />
               {' x '}
-              <IntegerField color={COLORS.secretNumber} value={secretNumber}/>
+              <IntegerField color={COLORS.secretNumber} value={secretNumber} />
               {') MOD '}
-              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+              <IntegerField
+                color={COLORS.publicModulus}
+                value={publicModulus}
+              />
               <GoButton
                 onClick={this.computePublicNumber}
                 disabled={disabled}
               />
             </div>
             <div>
-              Your computed <KeywordPublicNumber/>
+              Your computed <KeywordPublicNumber />
               {' is '}
               <IntegerField
                 className="public-number"

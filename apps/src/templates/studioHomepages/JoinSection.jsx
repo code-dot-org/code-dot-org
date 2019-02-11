@@ -1,7 +1,8 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from '@cdo/apps/util/color';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
 
@@ -18,7 +19,7 @@ const styles = {
     borderWidth: 5,
     borderStyle: 'dashed',
     borderColor: color.border_gray,
-    boxSizing: "border-box"
+    boxSizing: 'border-box'
   },
   heading: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -31,10 +32,10 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     marginTop: 5,
-    color: color.charcoal,
+    color: color.charcoal
   },
   wordBox: {
-    width: styleConstants['content-width']-475,
+    width: styleConstants['content-width'] - 475,
     marginLeft: 25,
     marginTop: 25,
     marginBottom: 25,
@@ -43,7 +44,7 @@ const styles = {
     borderColor: 'red'
   },
   actionBox: {
-    float: 'right',
+    float: 'right'
   },
   inputBox: {
     float: 'left',
@@ -77,9 +78,9 @@ export default class JoinSection extends React.Component {
 
   state = {...INITIAL_STATE};
 
-  handleChange = (event) => this.setState({sectionCode: event.target.value});
+  handleChange = event => this.setState({sectionCode: event.target.value});
 
-  handleKeyUp = (event) => {
+  handleKeyUp = event => {
     if (event.key === 'Enter') {
       this.joinSection();
     } else if (event.key === 'Escape') {
@@ -94,30 +95,47 @@ export default class JoinSection extends React.Component {
 
     $.post({
       url: `/api/v1/sections/${sectionCode}/join`,
-      dataType: "json"
-    }).done(data => {
-      const sectionName = data.sections.find(s => s.code === sectionCode.toUpperCase()).name;
-      this.props.updateSections(data.sections);
-      this.props.updateSectionsResult("join", data.result, sectionName, sectionCode);
+      dataType: 'json'
     })
-    .fail(data => {
-      const result = (data.responseJSON && data.responseJSON.result) ? data.responseJSON.result : "fail";
-      this.props.updateSectionsResult("join", result, null, sectionCode.toUpperCase());
-    });
+      .done(data => {
+        const sectionName = data.sections.find(
+          s => s.code === sectionCode.toUpperCase()
+        ).name;
+        this.props.updateSections(data.sections);
+        this.props.updateSectionsResult(
+          'join',
+          data.result,
+          sectionName,
+          sectionCode
+        );
+      })
+      .fail(data => {
+        const result =
+          data.responseJSON && data.responseJSON.result
+            ? data.responseJSON.result
+            : 'fail';
+        this.props.updateSectionsResult(
+          'join',
+          result,
+          null,
+          sectionCode.toUpperCase()
+        );
+      });
   };
 
   render() {
-    const { enrolledInASection } = this.props;
+    const {enrolledInASection} = this.props;
 
     return (
-      <div style={{...styles.main, ...(enrolledInASection ? styles.main : styles.mainDashed)}}>
+      <div
+        style={{
+          ...styles.main,
+          ...(enrolledInASection ? styles.main : styles.mainDashed)
+        }}
+      >
         <div style={styles.wordBox}>
-          <div style={styles.heading}>
-            {i18n.joinASection()}
-          </div>
-          <div style={styles.details}>
-            {i18n.joinSectionDescription()}
-          </div>
+          <div style={styles.heading}>{i18n.joinASection()}</div>
+          <div style={styles.details}>{i18n.joinSectionDescription()}</div>
         </div>
         <div style={styles.actionBox}>
           <input
@@ -136,7 +154,7 @@ export default class JoinSection extends React.Component {
             style={styles.button}
           />
         </div>
-        <div style={styles.clear}/>
+        <div style={styles.clear} />
       </div>
     );
   }

@@ -16,7 +16,7 @@ class LevelLoaderTest < ActiveSupport::TestCase
 
     assert_equal 'bee', level.skin
     assert_equal 'Move me to the flower, get the nectar, then move me to the honeycomb, and make honey',
-      level.instructions
+      level.short_instructions
     assert_equal '2', level.start_direction
     assert level.is_k1
     assert_equal "1", level.nectar_goal

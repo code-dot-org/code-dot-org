@@ -1,3 +1,8 @@
+- content_for(:head) do
+  %script{src: asset_path('js/blockly.js')}
+  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+  %script{src: minifiable_asset_path('js/blocks/index.js')}
+
 %h1= 'Blocks'
 = link_to "Back to Pools", pools_path
 %br/
@@ -5,4 +10,8 @@
 %h2= 'Edit an existing block'
 %ul
   - @blocks.each do |b|
-    %li= link_to b[:name], edit_block_path(id: b[:name])
+    %li
+      %div{:style => "padding-bottom: 2em"}
+        = link_to b[:name], edit_block_path(id: b[:name])
+        %br/
+        .blockly-container{:id => b[:name], :pool => b[:pool], :config => b[:config].to_json}

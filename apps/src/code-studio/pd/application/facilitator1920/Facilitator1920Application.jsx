@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
 import Section2ChooseYourProgram from './Section2ChooseYourProgram';
@@ -13,9 +13,9 @@ export default class Facilitator1920Application extends FormController {
     accountEmail: PropTypes.string.isRequired
   };
 
-  static submitButtonText = "Complete and Send";
+  static submitButtonText = 'Complete and Send';
 
-  static sessionStorageKey = "Facilitator1920Application";
+  static sessionStorageKey = 'Facilitator1920Application';
 
   /**
    * @override

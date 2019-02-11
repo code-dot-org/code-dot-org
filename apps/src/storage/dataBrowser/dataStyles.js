@@ -2,7 +2,7 @@
  * @file Styles shared by various react components in the applab data browser.
  */
 
-import color from "../../util/color";
+import color from '../../util/color';
 
 const rowHeight = 45;
 const cellPadding = 10;
@@ -10,7 +10,7 @@ const editButtonCellWidth = 142;
 export const maxCellWidth = 350;
 
 export const row = {
-  height: rowHeight,
+  height: rowHeight
 };
 
 export const cell = {
@@ -18,18 +18,18 @@ export const cell = {
   border: '1px solid gray',
   fontSize: 14,
   maxWidth: maxCellWidth,
-  overflow: 'hidden',
+  overflow: 'hidden'
 };
 
 export const addButtonCell = {
   ...cell,
-  backgroundColor: color.lightest_teal,
+  backgroundColor: color.lightest_teal
 };
 
 export const editButtonCell = {
   ...cell,
   backgroundColor: color.lightest_teal,
-  width: editButtonCellWidth,
+  width: editButtonCellWidth
 };
 
 export const headerCell = {
@@ -37,13 +37,13 @@ export const headerCell = {
   border: '1px solid gray',
   maxWidth: maxCellWidth,
   padding: '6px 10px',
-  whiteSpace: 'nowrap',
+  whiteSpace: 'nowrap'
 };
 
 export const link = {
   color: color.purple,
   cursor: 'pointer',
-  fontFamily: "'Gotham 7r', sans-serif",
+  fontFamily: "'Gotham 7r', sans-serif"
 };
 
 export const button = {
@@ -56,25 +56,25 @@ export const button = {
   marginRight: 0,
   padding: '4px 12px',
   textAlign: 'center',
-  verticalAlign: 'middle',
+  verticalAlign: 'middle'
 };
 
 export const whiteButton = {
   ...button,
   backgroundColor: 'white',
-  color: 'black',
+  color: 'black'
 };
 
 export const redButton = {
   ...button,
   backgroundColor: color.bootstrap_button_red,
-  color: 'white',
+  color: 'white'
 };
 
 export const blueButton = {
   ...button,
   backgroundColor: color.bootstrap_button_blue,
-  color: 'white',
+  color: 'white'
 };
 
 export const editButton = {
@@ -101,15 +101,15 @@ export const viewHeader = {
   marginTop: 10,
   marginBottom: 10,
   marginLeft: 0,
-  marginRight: 0,
+  marginRight: 0
 };
 
 export const backLink = {
-  fontSize: 24,
+  fontSize: 24
 };
 
 export const debugLink = {
-  float: 'right',
+  float: 'right'
 };
 
 export const debugData = {
@@ -120,7 +120,7 @@ export const debugData = {
   fontFamily: 'monospace',
   overflow: 'scroll',
   padding: 10,
-  whiteSpace: 'pre-wrap',
+  whiteSpace: 'pre-wrap'
 };
 
 export const clearfix = {
@@ -129,5 +129,5 @@ export const clearfix = {
   width: '100%',
   height: 0,
   fontSize: 0,
-  lineHeight: 0,
+  lineHeight: 0
 };

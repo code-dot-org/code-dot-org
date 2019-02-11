@@ -140,7 +140,9 @@ def main
   petition_signatures = PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').group_by(:hashed_email).count
 
   time = DateTime.now
-  # Pull current project_count to keep that current value.
+  # Pull current project_count to keep that current value. Note that project_count will be set to nil
+  # if it doesn't already exist.  See the comment in fetch_metrics in lib/cdo/properties.rb where we
+  # handle this case when generating fallback human-readable default values.
   Properties.set :metrics, {
     created_at:               time,
     created_on:               time.to_date,

@@ -15,7 +15,7 @@ function removedHtml(before, after) {
     afterLinesMap[afterLines[i]] = true;
   }
 
-  var removedLines = beforeLines.filter(function (line) {
+  var removedLines = beforeLines.filter(function(line) {
     return !afterLinesMap[line];
   });
 
@@ -43,24 +43,24 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // for why this works. This hack is necessary in order to warn when
   // attributes containing disallowed URL schemes are removed.
   var allSchemes = [];
-  allSchemes.indexOf = function () {
+  allSchemes.indexOf = function() {
     return 0;
   };
 
   // Do not warn when these attributes are removed.
   var ignoredAttributes = [
-    'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
+    'pmbx_context', // Used by Chrome plugins such as Bitdefender Wallet.
     'kl_vkbd_parsed', // Possibly from Kaspersky Labs password manager.
     'kl_virtual_keyboard_secure_input', // Possibly from Kaspersky Labs password manager.
-    'vk_16761',       // Origin unknown.
-    'vk_19391',       // Origin unknown.
-    'vk_197cd',       // Origin unknown.
-    '_vkenabled',     // Origin unknown.
-    'abp'             // adblock plus plugin.
+    'vk_16761', // Origin unknown.
+    'vk_19391', // Origin unknown.
+    'vk_197cd', // Origin unknown.
+    '_vkenabled', // Origin unknown.
+    'abp' // adblock plus plugin.
   ];
 
   var ignoredTags = [
-    'grammarly-btn'   // Grammarly plugin.
+    'grammarly-btn' // Grammarly plugin.
   ];
 
   var processed = sanitize(unsafe, {
@@ -70,7 +70,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     // Use transformTags to ignore certain attributes, since allowedAttributes
     // can only accept a whitelist not a blacklist.
     transformTags: {
-      '*': function (tagName, attribs) {
+      '*': function(tagName, attribs) {
         for (var i = 0; i < ignoredAttributes.length; i++) {
           var ignored = ignoredAttributes[i];
           if (attribs[ignored]) {
@@ -83,8 +83,8 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
         };
       }
     },
-    exclusiveFilter: function (element) {
-      return (ignoredTags.indexOf(element.tag) !== -1);
+    exclusiveFilter: function(element) {
+      return ignoredTags.indexOf(element.tag) !== -1;
     }
   });
   if (processed !== safe) {
@@ -121,19 +121,53 @@ function isIdAvailable(elementId) {
  * @param {boolean} rejectExistingIds Optional if true, remove ids
  *     which already exist in the DOM and give a warning.
  */
-export default function sanitizeHtml(unsafe, warn, persistingHtml, rejectExistingIds) {
+export default function sanitizeHtml(
+  unsafe,
+  warn,
+  persistingHtml,
+  rejectExistingIds
+) {
   var warnings = [];
 
   // Define tags with a standard set of allowed attributes
 
   var standardAttributes = [
-    'id', 'class', 'data-*', 'height', 'spellcheck', 'style',  'title', 'width'
+    'id',
+    'class',
+    'data-*',
+    'height',
+    'spellcheck',
+    'style',
+    'title',
+    'width'
   ];
   // <i> could allow people to covertly specify font awesome icons, which seems ok
   var tagsWithStandardAttributes = [
-    'b', 'br', 'canvas', 'em', 'font', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
-    'i', 'label', 'li', 'ol', 'option', 'p', 'strong', 'table', 'td', 'th',
-    'tr', 'u', 'ul'
+    'b',
+    'br',
+    'canvas',
+    'em',
+    'font',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'hr',
+    'i',
+    'label',
+    'li',
+    'ol',
+    'option',
+    'p',
+    'strong',
+    'table',
+    'td',
+    'th',
+    'tr',
+    'u',
+    'ul'
   ];
   if (!persistingHtml) {
     // Spans are allowed when using write(), but we don't want to persist them
@@ -141,7 +175,7 @@ export default function sanitizeHtml(unsafe, warn, persistingHtml, rejectExistin
     tagsWithStandardAttributes.push('span');
   }
   var defaultAttributesMap = {};
-  tagsWithStandardAttributes.forEach(function (tag) {
+  tagsWithStandardAttributes.forEach(function(tag) {
     defaultAttributesMap[tag] = standardAttributes;
   });
 
@@ -149,29 +183,51 @@ export default function sanitizeHtml(unsafe, warn, persistingHtml, rejectExistin
 
   var customAttributesMap = {
     button: standardAttributes.concat(['data-canonical-image-url']),
-    div: standardAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
+    div: standardAttributes.concat([
+      'contenteditable',
+      'data-canonical-image-url',
+      'tabindex',
+      'xmlns'
+    ]),
     img: standardAttributes.concat(['data-canonical-image-url', 'src']),
-    input: standardAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
+    input: standardAttributes.concat([
+      'autocomplete',
+      'checked',
+      'max',
+      'min',
+      'name',
+      'placeholder',
+      'step',
+      'type',
+      'value'
+    ]),
     select: standardAttributes.concat(['multiple', 'size'])
   };
   var tagsWithCustomAttributes = Object.keys(customAttributesMap);
 
-  var allowedTags = sanitize.defaults.allowedTags.concat(tagsWithStandardAttributes)
+  var allowedTags = sanitize.defaults.allowedTags
+    .concat(tagsWithStandardAttributes)
     .concat(tagsWithCustomAttributes);
-  var allowedAttributes = Object.assign({}, sanitize.defaults.allowedAttributes,
-    defaultAttributesMap, customAttributesMap);
+  var allowedAttributes = Object.assign(
+    {},
+    sanitize.defaults.allowedAttributes,
+    defaultAttributesMap,
+    customAttributesMap
+  );
   var safe = sanitize(unsafe, {
     allowedTags: allowedTags,
     allowedAttributes: allowedAttributes,
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {
-      '*': function (tagName, attribs) {
+      '*': function(tagName, attribs) {
         if (rejectExistingIds && attribs.id && !isIdAvailable(attribs.id)) {
           warnings.push('element id is already in use: ' + attribs.id);
           delete attribs.id;
         }
         if (attribs.type === 'password' && tagName === 'input') {
-          warnings.push('for security reasons, input type can not be: ' + attribs.type);
+          warnings.push(
+            'for security reasons, input type can not be: ' + attribs.type
+          );
           delete attribs.type;
         }
         return {
