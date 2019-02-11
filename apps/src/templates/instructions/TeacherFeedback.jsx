@@ -45,13 +45,13 @@ const styles = {
     color: color.charcoal,
     border: `1px solid ${color.lightest_gray}`,
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 14,
+    fontSize: 10,
     textAlign: 'center',
-    padding: 15
+    padding: 5
   },
   rubricTD: {
     border: `1px solid ${color.lightest_gray}`,
-    padding: 15
+    padding: 5
   }
 };
 
@@ -76,11 +76,13 @@ class TeacherFeedback extends Component {
 
     this.state = {
       comment: '',
+      performance: null,
       studentId: studentId,
       latestFeedback: [],
       submitting: false,
       errorState: ErrorType.NoError,
-      token: null
+      token: null,
+      rubric: []
     };
   }
 
@@ -102,10 +104,23 @@ class TeacherFeedback extends Component {
       .fail((jqXhr, status) => {
         this.setState({errorState: ErrorType.Load});
       });
+
+    $.ajax({
+      url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done(data => {
+      this.setState({rubric: data});
+    });
   };
 
   onCommentChange = event => {
     this.setState({comment: event.target.value});
+  };
+
+  onRubricChange = event => {
+    console.log('You picked something new in rubric');
+    this.setState({performance: event.target.id});
   };
 
   onSubmitFeedback = () => {
@@ -114,7 +129,8 @@ class TeacherFeedback extends Component {
       comment: this.state.comment,
       student_id: this.state.studentId,
       level_id: this.props.serverLevelId,
-      teacher_id: this.props.teacher
+      teacher_id: this.props.teacher,
+      performance: this.state.performance
     };
 
     $.ajax({
@@ -126,6 +142,7 @@ class TeacherFeedback extends Component {
       headers: {'X-CSRF-Token': this.state.token}
     })
       .done(data => {
+        console.log(data);
         this.setState({
           latestFeedback: [data],
           submitting: false,
@@ -151,7 +168,10 @@ class TeacherFeedback extends Component {
         : null;
     const feedbackUnchanged =
       (latestFeedback && this.state.comment === latestFeedback.comment) ||
-      (!latestFeedback && this.state.comment.length === 0);
+      (!latestFeedback && this.state.comment.length === 0) ||
+      (latestFeedback &&
+        this.state.performance === latestFeedback.performance) ||
+      (!latestFeedback && this.state.performance === null);
 
     const buttonDisabled =
       feedbackUnchanged ||
@@ -192,13 +212,35 @@ class TeacherFeedback extends Component {
           </thead>
           <tbody>
             <tr>
-              <td style={styles.rubricTD}>
-                The key concept for this is awesome!
+              <td style={styles.rubricTD}>{this.state.rubric.keyConcept}</td>
+              <td
+                style={styles.rubricTD}
+                onClick={this.onRubricChange}
+                id={'exceeds'}
+              >
+                {this.state.rubric.exceeds}
               </td>
-              <td style={styles.rubricTD}>This is how you should exceed</td>
-              <td style={styles.rubricTD}>This is how you should meet</td>
-              <td style={styles.rubricTD}>This is how you should approach</td>
-              <td style={styles.rubricTD}>Show some evidence</td>
+              <td
+                style={styles.rubricTD}
+                onClick={this.onRubricChange}
+                id={'meets'}
+              >
+                {this.state.rubric.meets}
+              </td>
+              <td
+                style={styles.rubricTD}
+                onClick={this.onRubricChange}
+                id={'approaches'}
+              >
+                {this.state.rubric.approaches}
+              </td>
+              <td
+                style={styles.rubricTD}
+                onClick={this.onRubricChange}
+                id={'no evidence'}
+              >
+                {this.state.rubric.noEvidence}
+              </td>
             </tr>
           </tbody>
         </table>

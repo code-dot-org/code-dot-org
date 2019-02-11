@@ -42,6 +42,20 @@ class LevelsController < ApplicationController
   def edit
   end
 
+  # GET all the information for the mini rubric
+  def get_rubric
+    @level = Level.find_by(id: params[:level_id])
+    if @level.mini_rubric.to_bool
+      render json: {
+        keyConcept: @level.rubric_key_concept,
+        exceeds: @level.rubric_exceeds,
+        meets: @level.rubric_meets,
+        approaches: @level.rubric_approaches,
+        noEvidence: @level.rubric_no_evidence
+      }
+    end
+  end
+
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
   def edit_blocks
