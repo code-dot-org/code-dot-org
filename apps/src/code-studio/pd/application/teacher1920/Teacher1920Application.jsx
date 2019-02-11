@@ -51,7 +51,7 @@ export default class Teacher1920Application extends FormController {
     // Log the user ID to firehose.
     firehoseClient.putRecord(
       {
-        userId: this.props.userId,
+        user_id: this.props.userId,
         study: 'application-funnel',
         event: 'started-teacher1920-application'
       },
