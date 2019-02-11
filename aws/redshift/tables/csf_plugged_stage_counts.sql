@@ -20,12 +20,12 @@ insert into analysis.csf_plugged_stage_counts values
 (259,7),
 (297,7),
 (301,7),
-(307,10),
 (302,14),
+(303,27),
+(307,10),
 (309,8),
 (310,8),
-(341,9),
-(303,27);
+(341,9);
 
 GRANT ALL PRIVILEGES ON analysis.csf_plugged_stage_counts TO GROUP admin;
 GRANT SELECT ON analysis.csf_plugged_stage_counts TO GROUP reader, GROUP reader_pii;
