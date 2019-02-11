@@ -379,7 +379,7 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ölçü

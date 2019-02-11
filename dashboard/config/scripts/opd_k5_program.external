@@ -3,10 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Sequencing > Writing your first computer program
 
-At its base, this style of computer science is about **sequences**. A sequence is a special ordering that something follows. In these puzzles, we want to find the right sequence of instructions to tell the computer what to do. This list of instructions is called an **algorithm**.  Once that algorithm gets coded up into a language that can be read by a machine, it becomes a **program**.
-
-
-Watch the video below, which explains the very first program that young students will write in [Course A](http://studio.code.org/s/coursea) of our free code.org curriculum. On the next page, you'll get to write a similar program of your own!
+Watch the video below, which explains the very first program that young students will write in [Course A](http://studio.code.org/s/coursea). On the next page, you'll get to write a similar program of your own!
 
 ---
 

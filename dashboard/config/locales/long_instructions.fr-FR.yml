@@ -7368,9 +7368,6 @@ fr:
         view the code.\r\n\r\nDo\nThis:\r\n\r\nPress the Run button to `run` the code.
         Notice that the subgoals\ndon't show up in the drawing. Only the blocks will
         make the turtle do something.\r\n\r\n-->"
-      Standalone_Artist_1: "Welcome to Artist! First off, let's\ntry to make a simple
-        square using the turn right block and move forward block.\nEach side should
-        be 100 pixels long.\r\n\r\n"
       Standalone_Artist_2: "Draw this diamond with 120 and 60\ndegree angles and 150
         pixel long sides.\r\n\r\n"
       Standalone_Artist_3: "Pouvez-vous dessiner cet hexagone avec des côtés de 100\npixels

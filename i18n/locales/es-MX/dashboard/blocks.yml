@@ -422,7 +422,7 @@ es-MX:
             '"vintage"': Vintage
             '"warm"': Rojos
       Dancelab_setDanceSpeed:
-        text: cambiar velocidad de danza {SPRITE} a {SPEED}
+        text: cambiar velocidad de danza [SPRITE][0] a [velocidad][1]
         options:
           SPEED:
             '1': normal
@@ -536,7 +536,7 @@ es-MX:
             '"y"': posición vertical
             '"tint"': tinte
       Dancelab_setTint:
-        text: definir tinte {SPRITE} a {VAL}
+        text: definir tinte [SPRITE][0] a [VAL][1]
       Dancelab_setTintEach:
         text: establecer tonalidad {THIS} a {VAL}
         options:
@@ -553,7 +553,7 @@ es-MX:
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
       Dancelab_setTintInline:
-        text: definir tinte {SPRITE} a {VAL}
+        text: definir tinte [SPRITE][0] a [VAL][1]
       Dancelab_setVisible:
         text: establecer {SPRITE} visible para {VISIBILITY}
         options:
@@ -834,6 +834,8 @@ es-MX:
         text: mover {SPRITE} distancia {DISTANCE} hacia {TARGET}
       gamelab_moveUp:
         text: "{THIS} se mueve hacia arriba"
+      gamelab_playSound:
+        text: reproducirSonido {SOUND}
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:
@@ -1260,6 +1262,8 @@ es-MX:
         text: girar a la izquierda
       RyanLab_turnRight:
         text: girar a la derecha
+      SpriteLab2Beta_spriteSay:
+        text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           crear gráfico
@@ -1287,12 +1291,16 @@ es-MX:
             "'shapeColor'": color
       aalab_addBehaviorForDuration:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} durante {SECONDS} segundos
+      aalab_addBehaviorSimpleFlexible:
+        text: gráfico aalab {SPRITE} comienza {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_addToSpriteGroup:
         text: añadir gráfico {SPRITE} a grupo {GROUP}
-      aalab_changeGroupPropBy:
-        text: cambiar grupo {GROUP} {PROPERTY} por {VAL}
+      aalab_allSpritesWithCostume:
+        text: aalab {COSTUME}
+      aalab_changePropByFlexible:
+        text: cambia aalab {SPRITE} {PROPERTY} por {VAL}
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -1301,25 +1309,38 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
       aalab_clickedOn:
+        text: "{CONDITION} {SPRITE} pulsado"
         options:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      aalab_createNewSpriteAdvanced:
+        text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en {LOCATION}"
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}
           de todos los gráficos {COSTUME}
       aalab_createSpriteGroup:
         text: hacer un nuevo grupo de gráficos llamado {VAR}
+      aalab_getSpritesByName:
+        text: cualquier gráfico llamado {NAME}
       aalab_getThisSprite:
+        text: "{CHOICE} gráfico"
         options:
           CHOICE:
             '"this"': este
+      aalab_nameStringSay:
+        text: "{NAMESTRING} dice {MESSAGE}"
       aalab_prompt:
         text: preguntar {MESSAGE}
+      aalab_removeAdvanced:
+        text: eliminarAvanzado {THIS}
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} dice {MESSAGE}"
       aalab_spriteSay:
         text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
       aalab_whenTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
           CONDITION:
             '"when"': cuando

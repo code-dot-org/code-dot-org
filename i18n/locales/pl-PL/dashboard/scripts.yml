@@ -4331,6 +4331,8 @@ pl:
               name: Bezpiecznie dotrzeć na miejsce
             'Loops: Happy Loops':
               name: 'Pętle: Szczęśliwe pętle'
+            Learn to Drag and Drop:
+              name: Nauka metody "przeciągnij i upuść"
         courseb-2019:
           description_audience: 'W wieku 5-8'
           stages:
@@ -4359,3 +4361,7 @@ pl:
               name: 'Debugowanie: Nie wykryte błędy'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
+        dani-test-script:
+          stages:
+            new stage:
+              name: nowy etap

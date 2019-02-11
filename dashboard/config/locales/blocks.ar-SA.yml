@@ -907,7 +907,7 @@ ar:
         text: اتجه إلى اليمين
       Vector_positionCenter:
         text: المنتصف
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': الحجم

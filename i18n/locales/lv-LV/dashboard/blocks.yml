@@ -360,7 +360,7 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': izmērs

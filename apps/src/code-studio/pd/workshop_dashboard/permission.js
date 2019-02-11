@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 export default class Permission {
   /**
@@ -24,5 +24,5 @@ export const Partner = 'Partner';
 export const PermissionPropType = PropTypes.shape({
   has: PropTypes.func,
   hasAny: PropTypes.func,
-  hasAll: PropTypes.func,
+  hasAll: PropTypes.func
 });

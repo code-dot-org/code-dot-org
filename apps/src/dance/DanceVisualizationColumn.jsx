@@ -1,58 +1,66 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import Radium from "radium";
-import {connect} from "react-redux";
+import PropTypes from 'prop-types';
+import Radium from 'radium';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import AgeDialog, {signedOutOver13} from "../templates/AgeDialog";
+import AgeDialog, {signedOutOver13} from '../templates/AgeDialog';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
 
 const styles = {
   selectStyle: {
-    width: '100%',
+    width: '100%'
   }
 };
 
-const SongSelector = Radium(class extends React.Component {
-  static propTypes = {
-    enableSongSelection: PropTypes.bool,
-    setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string,
-    songData: PropTypes.objectOf(PropTypes.object).isRequired,
-    filterOff: PropTypes.bool.isRequired
-  };
+const SongSelector = Radium(
+  class extends React.Component {
+    static propTypes = {
+      enableSongSelection: PropTypes.bool,
+      setSong: PropTypes.func.isRequired,
+      selectedSong: PropTypes.string,
+      songData: PropTypes.objectOf(PropTypes.object).isRequired,
+      filterOff: PropTypes.bool.isRequired
+    };
 
-  changeSong = (event) => {
-    const songId = event.target.value;
-    this.props.setSong(songId);
-  };
+    changeSong = event => {
+      const songId = event.target.value;
+      this.props.setSong(songId);
+    };
 
-  render() {
-    return (
-      <div id="song-selector-wrapper">
-        <label><b>{i18n.selectSong()}</b></label>
-        <select
-          id="song_selector"
-          style={styles.selectStyle}
-          onChange={this.changeSong}
-          value={this.props.selectedSong}
-          disabled={!this.props.enableSongSelection}
-        >
-          {Object.keys(this.props.songData).map((option, i) => (
-            (this.props.filterOff || !this.props.songData[option].pg13) &&
-              <option key={i} value={option}>{this.props.songData[option].title}</option>
-
-          ))}
-        </select>
-      </div>
-    );
+    render() {
+      return (
+        <div id="song-selector-wrapper">
+          <label>
+            <b>{i18n.selectSong()}</b>
+          </label>
+          <select
+            id="song_selector"
+            style={styles.selectStyle}
+            onChange={this.changeSong}
+            value={this.props.selectedSong}
+            disabled={!this.props.enableSongSelection}
+          >
+            {Object.keys(this.props.songData).map(
+              (option, i) =>
+                (this.props.filterOff || !this.props.songData[option].pg13) && (
+                  <option key={i} value={option}>
+                    {this.props.songData[option].title}
+                  </option>
+                )
+            )}
+          </select>
+        </div>
+      );
+    }
   }
-});
+);
 
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
@@ -83,7 +91,8 @@ class DanceVisualizationColumn extends React.Component {
   setFilterStatus() {
     // userType - 'teacher', assumed age > 13. 'student', age > 13.
     //            'student_y', age < 13. 'unknown', signed out users
-    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
+    const signedInOver13 =
+      this.props.userType === 'teacher' || this.props.userType === 'student';
     const signedOutAge = signedOutOver13();
     return signedInOver13 || signedOutAge;
   }
@@ -95,7 +104,7 @@ class DanceVisualizationColumn extends React.Component {
       height: GAME_HEIGHT,
       background: '#fff',
       position: 'relative',
-      overflow: 'hidden',
+      overflow: 'hidden'
     };
 
     const p5LoadingStyle = {
@@ -108,26 +117,25 @@ class DanceVisualizationColumn extends React.Component {
 
     const p5LoadingGifStyle = {
       width: 100,
-      height: 100,
+      height: 100
     };
 
     const filenameToImgUrl = {
-      "click-to-run": require('@cdo/static/dance/click-to-run.png'),
+      'click-to-run': require('@cdo/static/dance/click-to-run.png')
     };
 
-    const imgSrc = filenameToImgUrl["click-to-run"];
+    const imgSrc = filenameToImgUrl['click-to-run'];
 
-    const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
+    const enableSongSelection =
+      !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
     return (
       <div>
-        {!this.props.isShareView &&
-          <AgeDialog
-            turnOffFilter={this.turnFilterOff}
-          />
-        }
+        {!this.props.isShareView && (
+          <AgeDialog turnOffFilter={this.turnFilterOff} />
+        )}
         <span>
-          {!this.props.isShareView &&
+          {!this.props.isShareView && (
             <SongSelector
               enableSongSelection={enableSongSelection}
               setSong={this.props.setSong}
@@ -135,18 +143,18 @@ class DanceVisualizationColumn extends React.Component {
               songData={this.props.songData}
               filterOff={this.state.filterOff}
             />
-          }
+          )}
           <ProtectedVisualizationDiv>
-            <div
-              id="divDance"
-              style={divDanceStyle}
-            >
+            <div id="divDance" style={divDanceStyle}>
               <div id="divDanceLoading" style={p5LoadingStyle}>
-                <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
+                <img
+                  src="//curriculum.code.org/images/DancePartyLoading.gif"
+                  style={p5LoadingGifStyle}
+                />
               </div>
-              {this.props.isShareView &&
-                <img src={imgSrc} id="danceClickToRun"/>
-              }
+              {this.props.isShareView && (
+                <img src={imgSrc} id="danceClickToRun" />
+              )}
             </div>
           </ProtectedVisualizationDiv>
           <GameButtons showFinishButton={this.props.showFinishButton}>

@@ -874,7 +874,7 @@ hu:
         text: fordulj jobbra
       Vector_positionCenter:
         text: közép
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': méret

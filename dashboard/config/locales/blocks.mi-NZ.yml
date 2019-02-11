@@ -329,7 +329,7 @@ mi:
         text: huri whakatemauī
       RyanLab_turnRight:
         text: huri whakatematau
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': rahinga

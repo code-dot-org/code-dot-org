@@ -1,4 +1,3 @@
-@no_ie
 Feature: Contextual Hints
 
 Scenario: Blocks render in contextual hints

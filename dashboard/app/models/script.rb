@@ -102,6 +102,7 @@ class Script < ActiveRecord::Base
         unit_description: I18n.t("data.script.name.#{name}.description")
       )
 
+      stages.reload
       stages.each do |stage|
         lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
         lm.update!(
@@ -470,10 +471,11 @@ class Script < ActiveRecord::Base
     return false if user.nil?
     return true unless user.student?
 
-    # A student can view the script version if they have progress in it or are assigned to it.
-    has_progress = user.scripts.include?(self)
+    # A student can view the script version if they have progress in it or the course it belongs to.
+    has_progress = user.scripts.include?(self) || course&.has_progress?(user)
     return true if has_progress
 
+    # A student can view the script version if they are assigned to it.
     user.assigned_script?(self)
   end
 
@@ -700,7 +702,8 @@ class Script < ActiveRecord::Base
       Script::DANCE_PARTY_NAME,
       Script::DANCE_PARTY_EXTRAS_NAME,
       Script::ARTIST_NAME,
-      Script::SPORTS_NAME
+      Script::SPORTS_NAME,
+      Script::BASKETBALL_NAME
     ].include?(name)
   end
 
@@ -1087,8 +1090,13 @@ class Script < ActiveRecord::Base
   def update_teacher_resources(types, links)
     return if types.nil? || links.nil? || types.length != links.length
     # Only take those pairs in which we have both a type and a link
-    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    save!
+    resources = types.zip(links).select {|type, link| type.present? && link.present?}
+    update!(
+      {
+        teacher_resources: resources,
+        skip_name_format_validation: true
+      }
+    )
   end
 
   def self.rake
@@ -1289,8 +1297,11 @@ class Script < ActiveRecord::Base
   def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless courses.empty?
+    with_hidden = user&.hidden_script_access?
     Script.
       where(family_name: family_name).
+      all.
+      select {|script| with_hidden || !script.hidden}.
       map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse

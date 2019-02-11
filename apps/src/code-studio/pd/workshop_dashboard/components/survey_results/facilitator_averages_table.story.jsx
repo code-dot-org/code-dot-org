@@ -87,21 +87,35 @@ export default storybook => {
             }}
             facilitatorName="Josh Allen"
             questions={{
-              overallHow: "Overall, how good was your workshop?",
-              duringYour: "During your workshop, how motivating were the activities that this program had you do?",
-              forThis54: "For this workshop, how clearly did {facilitatorName} present the information that you needed to learn?",
-              howInteresting55: "How interesting did {facilitatorName} make what you learned in the workshop?",
-              howOften56: "How often did {facilitatorName} give you feedback that helped you learn?",
-              howComfortable: "How comfortable were you asking {facilitatorName} questions about what you were learning in this workshop?",
-              howOften: "How often did {facilitatorName} teach you things that you didn't know before taking this workshop?",
-              pleaseRate120_0: "Please rate the how much you agree with the following statements. I found the activities we did in this workshop interesting and engaging.",
-              pleaseRate120_1: "Please rate the how much you agree with the following statements. I was highly active and participated a lot in the workshop activities.",
-              pleaseRate120_2: "Please rate the how much you agree with the following statements. When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others.",
-              iFeel133: "Please rate the how much you agree with the following statements. I feel more prepared to teach the material covered in this workshop than before I came.",
-              regardingThe_2: "Please rate the how much you agree with the following statements. I know where to go if I need help preparing to teach this material.",
-              pleaseRate_2: "Please rate the how much you agree with the following statements. This professional development was suitable for my level of experience with teaching CS.",
-              iWould: "Please rate the how much you agree with the following statements. I would recommend this professional development to others.",
-              pleaseRate_3: "Please rate the how much you agree with the following statements. I feel like I am a part of a community of teachers."
+              overallHow: 'Overall, how good was your workshop?',
+              duringYour:
+                'During your workshop, how motivating were the activities that this program had you do?',
+              forThis54:
+                'For this workshop, how clearly did {facilitatorName} present the information that you needed to learn?',
+              howInteresting55:
+                'How interesting did {facilitatorName} make what you learned in the workshop?',
+              howOften56:
+                'How often did {facilitatorName} give you feedback that helped you learn?',
+              howComfortable:
+                'How comfortable were you asking {facilitatorName} questions about what you were learning in this workshop?',
+              howOften:
+                "How often did {facilitatorName} teach you things that you didn't know before taking this workshop?",
+              pleaseRate120_0:
+                'Please rate the how much you agree with the following statements. I found the activities we did in this workshop interesting and engaging.',
+              pleaseRate120_1:
+                'Please rate the how much you agree with the following statements. I was highly active and participated a lot in the workshop activities.',
+              pleaseRate120_2:
+                "Please rate the how much you agree with the following statements. When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others.",
+              iFeel133:
+                'Please rate the how much you agree with the following statements. I feel more prepared to teach the material covered in this workshop than before I came.',
+              regardingThe_2:
+                'Please rate the how much you agree with the following statements. I know where to go if I need help preparing to teach this material.',
+              pleaseRate_2:
+                'Please rate the how much you agree with the following statements. This professional development was suitable for my level of experience with teaching CS.',
+              iWould:
+                'Please rate the how much you agree with the following statements. I would recommend this professional development to others.',
+              pleaseRate_3:
+                'Please rate the how much you agree with the following statements. I feel like I am a part of a community of teachers.'
             }}
             courseName="CS Discoveries"
             facilitatorResponseCounts={{

@@ -507,6 +507,9 @@ it:
       20hr_farmer_stage9_9: Fammi rimuovere tutti questi mucchi di terra. Prova ad
         usare il minor numero possibile di blocchi. Ce la fai usando il blocco "mentre"
         e senza usare il blocco "ripeti"?
+      20hr_maze_stage2_1: |-
+        Puoi aiutarmi a catturare il maialino cattivo? Metti due blocchi `vai avanti`, uno sotto l'altro, sotto il blocco `quando si clicca su "Esegui"`. Poi clicca a sinistra sul pulsante "Esegui", sotto al labirinto. <br>
+        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO" target="_blank">Video doppiato in italiano</a>
       20hr_maze_stage2_10: Ok, prova ad usare il nuovo blocco "ripeti fino a che".
         Esso mi farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso
         maialino.
@@ -1942,6 +1945,8 @@ it:
         personaggio nell'acquario.
       Fish Tank 5-validated_2019: Il nostro pesce si sente un po' solo. Aggiungi un
         altro personaggio nell'acquario.
+      Fish Tank 5-validated_2019_implicitGroupTest: Il nostro pesce si sente un po'
+        solo. Aggiungi un altro personaggio nell'acquario.
       Fish Tank 6-validated: Aggiungi un comportamento al nuovo amico del pesce.
       Fish Tank 6-validated_2019: Aggiungi un comportamento al nuovo amico del pesce.
       Fish Tank 6-validated_simple: Aggiungi un comportamento al nuovo amico del pesce.
@@ -2889,6 +2894,8 @@ it:
         questa linea cinque volte!
       beeDebugVideo1: Riesci ad usare un <i>ciclo</i> `ripeti ... volte` per raccogliere
         tutto il nettare?
+      behaviors 1: Fai una previsione!
+      behaviors 4: Fai una previsione!
       birdsDebugVideo1: Fammi fare il percorso per arrivare a quello sciocco maialino.
         Evita la dinamite (TNT) o le mie piume salteranno in aria!
       bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso

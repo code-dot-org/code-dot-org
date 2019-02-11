@@ -87,8 +87,9 @@ end
 
 def get_browser(test_run_name)
   if ENV['TEST_LOCAL'] == 'true'
+    headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
-    SeleniumBrowser.local_browser
+    SeleniumBrowser.local_browser(headless)
   else
     saucelabs_browser test_run_name
   end

@@ -5,14 +5,10 @@
  * intervals. The text box can also be edited directly.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import moment from 'moment';
-import {
-  FormControl,
-  InputGroup,
-  Dropdown,
-  MenuItem
-} from 'react-bootstrap';
+import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {TIME_FORMAT} from '../workshopConstants';
 
@@ -55,11 +51,11 @@ export default class TimeSelect extends React.Component {
     maxTime: PropTypes.object // moment
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.props.onChange(e.target.value);
   };
 
-  handleBlur = (e) => {
+  handleBlur = e => {
     let time = moment(e.target.value, TIME_FORMAT);
     if (!time.isValid()) {
       // When time is not in the expected format, attempt to parse generically.
@@ -71,7 +67,7 @@ export default class TimeSelect extends React.Component {
     }
   };
 
-  handleSelect = (time) => {
+  handleSelect = time => {
     this.props.onChange(time);
   };
 
@@ -89,7 +85,7 @@ export default class TimeSelect extends React.Component {
         />
         {!this.props.readOnly && (
           <InputGroup.Addon>
-            <FontAwesome icon="clock-o"/>
+            <FontAwesome icon="clock-o" />
           </InputGroup.Addon>
         )}
       </InputGroup>
@@ -108,9 +104,17 @@ export default class TimeSelect extends React.Component {
 
     // Show times every INTERVAL (i.e. 30 minutes) starting from the next full INTERVAL
     // on or after minTime and ending on or before maxTime.
-    const startTime = moment(Math.ceil((+minTime)/(+intervalDuration)) * (+intervalDuration));
-    const endTime = moment(Math.floor((+maxTime)/(+intervalDuration)) * (+intervalDuration));
-    for (let time = startTime; time.isSameOrBefore(endTime); time = time.add(INTERVAL)) {
+    const startTime = moment(
+      Math.ceil(+minTime / +intervalDuration) * +intervalDuration
+    );
+    const endTime = moment(
+      Math.floor(+maxTime / +intervalDuration) * +intervalDuration
+    );
+    for (
+      let time = startTime;
+      time.isSameOrBefore(endTime);
+      time = time.add(INTERVAL)
+    ) {
       times.push(time.format(TIME_FORMAT));
     }
     const menuItems = times.map((time, i) => {
@@ -127,20 +131,11 @@ export default class TimeSelect extends React.Component {
     });
 
     return (
-      <Dropdown
-        id={this.props.id}
-        style={styles.dropdown}
-      >
-        <Dropdown.Toggle
-          noCaret
-          useAnchor={true}
-          style={styles.toggle}
-        >
+      <Dropdown id={this.props.id} style={styles.dropdown}>
+        <Dropdown.Toggle noCaret useAnchor={true} style={styles.toggle}>
           {this.renderInput()}
         </Dropdown.Toggle>
-        <Dropdown.Menu style={styles.menu}>
-          {menuItems}
-        </Dropdown.Menu>
+        <Dropdown.Menu style={styles.menu}>{menuItems}</Dropdown.Menu>
       </Dropdown>
     );
   }

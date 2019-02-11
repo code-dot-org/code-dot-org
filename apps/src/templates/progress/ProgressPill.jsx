@@ -1,10 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import { levelType } from './progressTypes';
-import { levelProgressStyle, hoverStyle } from './progressStyles';
-import { stringifyQueryParams } from '../../utils';
+import {levelType} from './progressTypes';
+import {levelProgressStyle, hoverStyle} from './progressStyles';
+import {stringifyQueryParams} from '../../utils';
 
 const styles = {
   levelPill: {
@@ -25,13 +26,13 @@ const styles = {
     minWidth: 70,
     lineHeight: '18px',
     marginTop: 3,
-    marginBottom: 3,
+    marginBottom: 3
   },
   text: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
-    letterSpacing: -0.12,
+    letterSpacing: -0.12
   },
   iconMargin: {
     marginLeft: 10
@@ -51,14 +52,22 @@ class ProgressPill extends React.Component {
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   render() {
-    const { levels, icon, text, fontSize, tooltip, disabled, selectedSectionId } = this.props;
+    const {
+      levels,
+      icon,
+      text,
+      fontSize,
+      tooltip,
+      disabled,
+      selectedSectionId
+    } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    let url = (multiLevelStep || disabled) ? undefined : levels[0].url;
+    let url = multiLevelStep || disabled ? undefined : levels[0].url;
     if (url && selectedSectionId) {
       url += stringifyQueryParams({section_id: selectedSectionId});
     }
@@ -66,7 +75,7 @@ class ProgressPill extends React.Component {
     let style = {
       ...styles.levelPill,
       ...(url && hoverStyle),
-      ...(!multiLevelStep && levelProgressStyle(levels[0], false)),
+      ...(!multiLevelStep && levelProgressStyle(levels[0], false))
     };
 
     // If we're passed a tooltip, we also need to reference it from our div
@@ -79,12 +88,13 @@ class ProgressPill extends React.Component {
     }
 
     return (
-      <a href={url} style={{textDecoration: 'none'}} className="uitest-ProgressPill">
-        <div
-          {...tooltipProps}
-          style={style}
-        >
-          {icon && <FontAwesome icon={icon}/>}
+      <a
+        href={url}
+        style={{textDecoration: 'none'}}
+        className="uitest-ProgressPill"
+      >
+        <div {...tooltipProps} style={style}>
+          {icon && <FontAwesome icon={icon} />}
           {text && (
             <div
               style={{

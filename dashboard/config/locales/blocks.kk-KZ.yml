@@ -296,7 +296,7 @@ kk:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': шама

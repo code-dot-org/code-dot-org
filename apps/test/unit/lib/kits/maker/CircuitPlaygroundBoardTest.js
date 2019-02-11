@@ -5,7 +5,10 @@ import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
-import {SONG_CHARGE, EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {
+  SONG_CHARGE,
+  EXTERNAL_PINS
+} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
@@ -13,7 +16,7 @@ import experiments from '@cdo/apps/util/experiments';
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
 
-const xPins = ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7"];
+const xPins = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'];
 const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
 
 describe('CircuitPlaygroundBoard', () => {
@@ -22,29 +25,31 @@ describe('CircuitPlaygroundBoard', () => {
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
-    sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport').callsFake(() => {
-      playground = new Playground({});
-      playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
+    sinon
+      .stub(CircuitPlaygroundBoard, 'makePlaygroundTransport')
+      .callsFake(() => {
+        playground = new Playground({});
+        playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
 
-      // mock-firmata doesn't implement these (yet) - and we want to monitor how
-      // they are called.
-      playground.sysexCommand = sinon.spy();
-      playground.sysexResponse = sinon.spy();
+        // mock-firmata doesn't implement these (yet) - and we want to monitor how
+        // they are called.
+        playground.sysexCommand = sinon.spy();
+        playground.sysexResponse = sinon.spy();
 
-      // Also spy on these
-      sinon.spy(playground, 'reset');
-      sinon.spy(playground, 'pinMode');
-      sinon.spy(playground, 'digitalWrite');
-      sinon.stub(playground, 'digitalRead').callsArgWith(1, 0);
-      sinon.spy(playground, 'analogWrite');
-      sinon.stub(playground, 'analogRead').callsArgWith(1, 0);
+        // Also spy on these
+        sinon.spy(playground, 'reset');
+        sinon.spy(playground, 'pinMode');
+        sinon.spy(playground, 'digitalWrite');
+        sinon.stub(playground, 'digitalRead').callsArgWith(1, 0);
+        sinon.spy(playground, 'analogWrite');
+        sinon.stub(playground, 'analogRead').callsArgWith(1, 0);
 
-      // Pretend to be totally ready
-      playground.emit('connect');
-      playground.emit('ready');
+        // Pretend to be totally ready
+        playground.emit('connect');
+        playground.emit('ready');
 
-      return playground;
-    });
+        return playground;
+      });
 
     // Our sensors and thermometer block initialization until they receive data
     // over the wire.  That's not great for unit tests, so here we stub waiting
@@ -125,12 +130,15 @@ describe('CircuitPlaygroundBoard', () => {
 
   describe(`initializeComponents()`, () => {
     it('throws if called before connecting to firmware', () => {
-      expect(() => board.initializeComponents())
-          .to.throw(Error, 'Cannot initialize components: Not connected to board firmware.');
+      expect(() => board.initializeComponents()).to.throw(
+        Error,
+        'Cannot initialize components: Not connected to board firmware.'
+      );
     });
 
     it('initializes a set of components', () => {
-      return board.connectToFirmware()
+      return board
+        .connectToFirmware()
         .then(() => board.initializeComponents())
         .then(() => {
           expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
@@ -140,7 +148,8 @@ describe('CircuitPlaygroundBoard', () => {
 
   describe(`destroy()`, () => {
     it('sends the board reset signal', () => {
-      return board.connect()
+      return board
+        .connect()
         .then(() => board.destroy())
         .then(() => {
           expect(playground.reset).to.have.been.calledOnce;
@@ -218,54 +227,64 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('plays a song and animates lights', done => {
-      board.connect().then(() => {
-        // Mock board components that will be used to celebrate
-        const buzzer = sinon.mock(board.prewiredComponents_.buzzer);
-        const leds = board.prewiredComponents_.colorLeds.map(led => sinon.mock(led));
+      board
+        .connect()
+        .then(() => {
+          // Mock board components that will be used to celebrate
+          const buzzer = sinon.mock(board.prewiredComponents_.buzzer);
+          const leds = board.prewiredComponents_.colorLeds.map(led =>
+            sinon.mock(led)
+          );
 
-        // Right after the first call we'll expect the buzzer to start playing
-        // its song.  This method uses a promise chain for animations, so we
-        // have to yield the test 'thread' to let the promise chain run until
-        // it needs to wait for something.
-        buzzer.expects('play').once().calledWith(SONG_CHARGE, 104);
-        // Set up no expectations for leds - they don't do anything immediately.
+          // Right after the first call we'll expect the buzzer to start playing
+          // its song.  This method uses a promise chain for animations, so we
+          // have to yield the test 'thread' to let the promise chain run until
+          // it needs to wait for something.
+          buzzer
+            .expects('play')
+            .once()
+            .calledWith(SONG_CHARGE, 104);
+          // Set up no expectations for leds - they don't do anything immediately.
 
-        // Now invoke the method under test and yield to the promise chain once.
-        const promiseUnderTest = board.celebrateSuccessfulConnection();
-        yieldToPromiseChain(() => {
-          // Check expected calls after first invocation and yield.
-          buzzer.verify();
-          leds.forEach(led => led.verify());
-
-          // The initial invocation set up timers to enable each LED in sequence
-          for (let i = 0; i < leds.length; i++) {
-            leds[i].expects('color').once().calledWith('blue');
-            clock.tick(80);
-            leds[i].verify();
-          }
-          // No new buzzer commands
-          buzzer.verify();
-
-          // Yield to the promise chain again now that the initial
-          // forEachLedInSequence promise has resolved.
+          // Now invoke the method under test and yield to the promise chain once.
+          const promiseUnderTest = board.celebrateSuccessfulConnection();
           yieldToPromiseChain(() => {
+            // Check expected calls after first invocation and yield.
+            buzzer.verify();
+            leds.forEach(led => led.verify());
 
-            // The next 'from' set up timers to disable each LED in sequence
+            // The initial invocation set up timers to enable each LED in sequence
             for (let i = 0; i < leds.length; i++) {
-              leds[i].expects('off').once();
+              leds[i]
+                .expects('color')
+                .once()
+                .calledWith('blue');
               clock.tick(80);
               leds[i].verify();
             }
             // No new buzzer commands
             buzzer.verify();
 
-            // Don't end the test unless the main promise resolves.
-            // It should be resolved at this point, because enough time passed
-            // while the LEDs were animating.
-            promiseUnderTest.then(done);
+            // Yield to the promise chain again now that the initial
+            // forEachLedInSequence promise has resolved.
+            yieldToPromiseChain(() => {
+              // The next 'from' set up timers to disable each LED in sequence
+              for (let i = 0; i < leds.length; i++) {
+                leds[i].expects('off').once();
+                clock.tick(80);
+                leds[i].verify();
+              }
+              // No new buzzer commands
+              buzzer.verify();
+
+              // Don't end the test unless the main promise resolves.
+              // It should be resolved at this point, because enough time passed
+              // while the LEDs were animating.
+              promiseUnderTest.then(done);
+            });
           });
-        });
-      }).catch(done);
+        })
+        .catch(done);
     });
   });
 
@@ -284,7 +303,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[0];
         const arg2 = 1023;
         board.pinMode(pin, arg2);
-        expect(playground.pinMode).to.have.been.calledWith(classicPins[0], arg2);
+        expect(playground.pinMode).to.have.been.calledWith(
+          classicPins[0],
+          arg2
+        );
       });
     });
   });
@@ -301,11 +323,14 @@ describe('CircuitPlaygroundBoard', () => {
 
     it('forwards the call to firmata with the modified CPX value', () => {
       return board.connect().then(() => {
-          const pin = xPins[1];
-          const arg2 = 1023;
-          board.digitalWrite(pin, arg2);
-          expect(playground.digitalWrite).to.have.been.calledWith(classicPins[1], arg2);
-        });
+        const pin = xPins[1];
+        const arg2 = 1023;
+        board.digitalWrite(pin, arg2);
+        expect(playground.digitalWrite).to.have.been.calledWith(
+          classicPins[1],
+          arg2
+        );
+      });
     });
   });
 
@@ -324,7 +349,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[2];
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
-        expect(playground.digitalRead).to.have.been.calledWith(classicPins[2], arg2);
+        expect(playground.digitalRead).to.have.been.calledWith(
+          classicPins[2],
+          arg2
+        );
       });
     });
   });
@@ -344,7 +372,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[3];
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
-        expect(playground.analogWrite).to.have.been.calledWith(classicPins[3], arg2);
+        expect(playground.analogWrite).to.have.been.calledWith(
+          classicPins[3],
+          arg2
+        );
       });
     });
   });
@@ -364,7 +395,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[4];
         const arg2 = () => {};
         board.analogRead(pin, arg2);
-        expect(playground.analogRead).to.have.been.calledWith(classicPins[4], arg2);
+        expect(playground.analogRead).to.have.been.calledWith(
+          classicPins[4],
+          arg2
+        );
       });
     });
   });
@@ -381,7 +415,8 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('returns false after destroying the board', () => {
-      return board.connect()
+      return board
+        .connect()
         .then(() => board.destroy())
         .then(() => {
           expect(board.boardConnected()).to.be.false;
@@ -426,7 +461,7 @@ describe('CircuitPlaygroundBoard', () => {
 
     it('configures the controller as a pullup if passed an external pin', () => {
       return board.connect().then(() => {
-        EXTERNAL_PINS.forEach((pin) => {
+        EXTERNAL_PINS.forEach(pin => {
           const newButton = board.createButton(pin);
           expect(newButton.pullup).to.be.true;
         });
@@ -437,7 +472,7 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         _.range(21)
           .filter(pin => !EXTERNAL_PINS.includes(pin))
-          .forEach((pin) => {
+          .forEach(pin => {
             const newButton = board.createButton(pin);
             expect(newButton.pullup).to.be.false;
           });
@@ -446,7 +481,7 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`mappedPin(pin)`, () => {
-    it(`returns the Classic pin value of the provided Express pin value`, () =>{
+    it(`returns the Classic pin value of the provided Express pin value`, () => {
       for (let i = 0; i < xPins.length; i++) {
         expect(board.mappedPin(xPins[i])).to.equal(classicPins[i]);
       }

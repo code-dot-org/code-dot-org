@@ -396,7 +396,7 @@ fil:
         text: kumaliwa
       RyanLab_turnRight:
         text: kumanan
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': sukat

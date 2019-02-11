@@ -35,12 +35,14 @@
 #
 
 module Pd::Application
-  class TeacherApplicationBase < WorkshopAutoenrolledApplication
+  class TeacherApplicationBase < ApplicationBase
+    include PdWorkshopHelper
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
 
     serialized_attrs %w(
+      pd_workshop_id
       scholarship_status
     )
 
@@ -67,7 +69,7 @@ module Pd::Application
     def update_user_school_info!
       if school_id || user.school_info.try(&:school).nil?
         school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_column(:school_info_id, school_info.id)
+        user.update_school_info(school_info)
       end
     end
 
@@ -635,9 +637,8 @@ module Pd::Application
       Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
     end
 
-    # override
     def self.prefetch_associated_models(applications)
-      super(applications)
+      prefetch_workshops applications.map(&:pd_workshop_id).uniq.compact
 
       # also prefetch schools
       prefetch_schools applications.map(&:school_id).uniq.compact

@@ -5,12 +5,11 @@
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import { cells, tiles } from '@code-dot-org/maze';
+import {cells, tiles} from '@code-dot-org/maze';
 const PlanterCell = cells.PlanterCell;
 const SquareType = tiles.SquareType;
 
 export default class PlanterCellEditor extends CellEditor {
-
   /**
    * @override
    */
@@ -27,9 +26,16 @@ export default class PlanterCellEditor extends CellEditor {
         {this.renderTileTypes(values)}
 
         <label htmlFor="featureType">Feature Type:</label>
-        <select name="featureType" value={values.featureType} disabled={this.props.cell.getTile() !== SquareType.OPEN} onChange={this.handleChange}>
+        <select
+          name="featureType"
+          value={values.featureType}
+          disabled={this.props.cell.getTile() !== SquareType.OPEN}
+          onChange={this.handleChange}
+        >
           {Object.keys(PlanterCell.FeatureType).map(type => (
-            <option key={type} value={PlanterCell.FeatureType[type]}>{type.toLowerCase()}</option>
+            <option key={type} value={PlanterCell.FeatureType[type]}>
+              {type.toLowerCase()}
+            </option>
           ))}
         </select>
       </div>

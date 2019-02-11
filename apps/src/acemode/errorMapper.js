@@ -1,7 +1,8 @@
 var errorMap = [
   {
     original: /Assignment in conditional expression/,
-    replacement: "For conditionals, use the comparison operator (===) to check if two things are equal."
+    replacement:
+      'For conditionals, use the comparison operator (===) to check if two things are equal.'
   },
   {
     original: /(.*)\sis defined but never used./,
@@ -18,18 +19,21 @@ var errorMap = [
  * our mapping. Note this makes changes in place to the passed in results
  * object.
  */
-module.exports.processResults = function (results) {
-  results.data.forEach(function (item) {
+module.exports.processResults = function(results) {
+  results.data.forEach(function(item) {
     if (item.type === 'info') {
       item.type = 'warning';
     }
 
-    errorMap.forEach(function (errorMapping) {
+    errorMap.forEach(function(errorMapping) {
       if (!errorMapping.original.test(item.text)) {
         return;
       }
 
-      item.text = item.text.replace(errorMapping.original, errorMapping.replacement);
+      item.text = item.text.replace(
+        errorMapping.original,
+        errorMapping.replacement
+      );
     });
   });
 };

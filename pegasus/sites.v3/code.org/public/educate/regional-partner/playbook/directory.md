@@ -11,6 +11,7 @@ nav: regional_partner_playbook_nav
 - [Directory](#directory)
 - [Regional Partner Advisory Committee](#committee)
 - [Advisory Committee Members](#members)
+- [Shared Resources] (#resources)
 
 <a id="directory"></a>
 ## Directory
@@ -36,3 +37,9 @@ The advisory committee is also a forum to connect peers across the Regional Part
 ## Advisory Committee Members
 
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'rpadvisory') %>
+
+<a id="resources"></a>
+## Shared Resources 
+
+Access the Regional Partner Network Google Drive [here](https://drive.google.com/drive/folders/1yKAijpPre8wFRStRhIpl_1BuKcxQa9HW?usp=sharing).
+

@@ -126,6 +126,7 @@ class ScriptsController < ApplicationController
       :visible_to_teachers,
       :login_required,
       :hideable_stages,
+      :curriculum_path,
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,

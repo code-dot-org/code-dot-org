@@ -39,7 +39,6 @@ module Pd
       currently_involved_in_cs_education: [0, 3, 5],
       grades_taught: [0, 3, 5],
       experience_teaching_this_course: [0, 3, 5],
-      completed_pd: [0, 3, 5],
       why_should_all_have_access: [0, 3, 5],
       skills_areas_to_improve: [0, 3, 5],
       inquiry_based_learning: [0, 3, 5],
@@ -56,7 +55,6 @@ module Pd
         :currently_involved_in_cs_education,
         :grades_taught,
         :experience_teaching_this_course,
-        :completed_pd,
         :why_should_all_have_access,
         :skills_areas_to_improve,
         :inquiry_based_learning,
@@ -110,7 +108,6 @@ module Pd
         :currently_involved_in_cs_education,
         :grades_taught,
         :experience_teaching_this_course,
-        :completed_pd,
         :why_should_all_have_access,
         :skills_areas_to_improve,
         :inquiry_based_learning,
@@ -144,8 +141,7 @@ module Pd
         :skills_areas_to_improve
       ],
       content_knowledge_score: [
-        :experience_teaching_this_course,
-        :completed_pd
+        :experience_teaching_this_course
       ],
       program_commitment_score: [
         :why_interested

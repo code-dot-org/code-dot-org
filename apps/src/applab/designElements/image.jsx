@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
@@ -19,10 +20,12 @@ class ImageProperties extends React.Component {
     onDepthChange: PropTypes.func.isRequired
   };
 
-  handleIconColorChange = (value) => {
+  handleIconColorChange = value => {
     this.props.handleChange('icon-color', value);
-    this.props.handleChange('picture',
-      this.props.element.getAttribute('data-canonical-image-url'));
+    this.props.handleChange(
+      'picture',
+      this.props.element.getAttribute('data-canonical-image-url')
+    );
   };
 
   render() {
@@ -34,7 +37,9 @@ class ImageProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          initialValue={elementUtils.rgb2hex(
+            element.getAttribute('data-icon-color') || '#000000'
+          )}
           handleChange={this.handleIconColorChange}
         />
       );
@@ -82,7 +87,7 @@ class ImageProperties extends React.Component {
         <EnumPropertyRow
           desc={'fit image'}
           initialValue={element.style.objectFit || 'fill'}
-          options={['fill','cover','contain','none']}
+          options={['fill', 'cover', 'contain', 'none']}
           handleChange={this.props.handleChange.bind(this, 'objectFit')}
         />
         <BooleanPropertyRow
@@ -94,7 +99,8 @@ class ImageProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -108,8 +114,12 @@ class ImageEvents extends React.Component {
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked!");\n' +
       '});\n';
     return code;
   }
@@ -121,7 +131,8 @@ class ImageEvents extends React.Component {
   render() {
     const element = this.props.element;
     const clickName = 'Click';
-    const clickDesc = 'Triggered when the image is clicked with a mouse or tapped on a screen.';
+    const clickDesc =
+      'Triggered when the image is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -131,7 +142,7 @@ class ImageEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={clickName}
           desc={clickDesc}
@@ -165,7 +176,7 @@ export default {
   PropertyTab: ImageProperties,
   EventTab: ImageEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('img');
     element.style.height = '100px';
     element.style.width = '100px';
@@ -179,7 +190,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function (element, updateProperty) {
+  onDeserialize: function(element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url') || '';
     if (url) {
       updateProperty(element, 'picture', url);
@@ -197,7 +208,7 @@ export default {
       setObjectFitStyles(element, objectFitValue);
     }
   },
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'objectFit':
         element.setAttribute('data-object-fit', value);
@@ -208,7 +219,7 @@ export default {
     }
     return true;
   },
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'objectFit':
         return element.getAttribute('data-object-fit');

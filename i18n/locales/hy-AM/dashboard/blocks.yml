@@ -296,7 +296,7 @@ hy:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': չափ

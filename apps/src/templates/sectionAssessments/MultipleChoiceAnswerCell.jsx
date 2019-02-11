@@ -1,5 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import color from "@cdo/apps/util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
@@ -9,23 +10,23 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
-    height: '100%',
+    height: '100%'
   },
   overviewMain: {
-    padding: 10,
+    padding: 10
   },
   icon: {
-    color: color.level_perfect,
+    color: color.level_perfect
   },
   value: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 10,
-  },
+    marginRight: 10
+  }
 };
 
-function  calculateOpacity(answered) {
- return (answered + 10)/100;
+function calculateOpacity(answered) {
+  return (answered + 10) / 100;
 }
 
 class MultipleChoiceAnswerCell extends Component {
@@ -33,13 +34,15 @@ class MultipleChoiceAnswerCell extends Component {
     percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
     displayAnswer: PropTypes.string,
-    isSurvey: PropTypes.bool,
+    isSurvey: PropTypes.bool
   };
 
-  getBackgroundColor = (percentValue) => {
+  getBackgroundColor = percentValue => {
     const {isCorrectAnswer, isSurvey} = this.props;
     const opacity = calculateOpacity(percentValue);
-    return (isCorrectAnswer || isSurvey) ? `rgba(159, 212, 159, ${opacity})` : `rgba(255, 99, 71, ${opacity})`;
+    return isCorrectAnswer || isSurvey
+      ? `rgba(159, 212, 159, ${opacity})`
+      : `rgba(255, 99, 71, ${opacity})`;
   };
 
   render() {
@@ -49,34 +52,30 @@ class MultipleChoiceAnswerCell extends Component {
     if (displayAnswer) {
       return (
         <div style={styles.main}>
-          <div style={styles.value}>
-            {displayAnswer}
-          </div>
+          <div style={styles.value}>{displayAnswer}</div>
           <div style={styles.icon}>
-          {isCorrectAnswer &&
-            <FontAwesome icon="check-circle" style={styles.icon}/>
-          }
+            {isCorrectAnswer && (
+              <FontAwesome icon="check-circle" style={styles.icon} />
+            )}
           </div>
         </div>
       );
     }
 
     // Display a cell showing the percent answered.
-    const backgroundCSS = {backgroundColor: this.getBackgroundColor(percentValue)};
+    const backgroundCSS = {
+      backgroundColor: this.getBackgroundColor(percentValue)
+    };
     return (
       <div style={{...styles.main, ...backgroundCSS, ...styles.overviewMain}}>
         <div style={styles.value}>
-          {(percentValue >= 0) &&
-            <span>{`${percentValue}%`}</span>
-          }
-          {(percentValue < 0 ) &&
-            <span>{'-'}</span>
-          }
+          {percentValue >= 0 && <span>{`${percentValue}%`}</span>}
+          {percentValue < 0 && <span>{'-'}</span>}
         </div>
         <div style={styles.icon}>
-          {isCorrectAnswer &&
-            <FontAwesome icon="check-circle" style={styles.icon}/>
-          }
+          {isCorrectAnswer && (
+            <FontAwesome icon="check-circle" style={styles.icon} />
+          )}
         </div>
       </div>
     );

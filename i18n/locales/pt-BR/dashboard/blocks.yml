@@ -1281,8 +1281,7 @@ pt-BR:
             "'shapeColor'": cor
       aalab_addToSpriteGroup:
         text: adicionar personagem {SPRITE} ao grupo {GROUP}
-      aalab_changeGroupPropBy:
-        text: mude o grupo {GROUP} {PROPERTY} por {VAL}
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': tamanho

@@ -13,7 +13,7 @@
     "skip_sound": true,
     "short_instructions": "Please enter your email address.",
     "placeholder": "Please enter your email address",
-    "tts_markdown_instructions_override": "Please enter your email address."
+    "tts_long_instructions_override": "Please enter your email address."
   },
   "published": true,
   "notes": "",

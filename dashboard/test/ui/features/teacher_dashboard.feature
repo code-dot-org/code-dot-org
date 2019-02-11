@@ -1,4 +1,3 @@
-@no_ie
 @no_mobile
 @dashboard_db_access
 @pegasus_db_access
@@ -36,11 +35,11 @@ Feature: Using the teacher dashboard
     # Assessments and surveys tab
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
-    And I wait until element "h3:contains(no submissions for this assessment)" is visible
-    And I wait until element "h3:contains(this survey is anonymous)" is not visible
+    And I wait until element "div:contains(no submissions for this assessment)" is visible
+    And I wait until element "div:contains(this survey is anonymous)" is not visible
     And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"
-    And I wait until element "h3:contains(this survey is anonymous)" is visible
-    And I wait until element "h3:contains(no submissions for this assessment)" is not visible
+    And I wait until element "div:contains(this survey is anonymous)" is visible
+    And I wait until element "div:contains(no submissions for this assessment)" is not visible
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"

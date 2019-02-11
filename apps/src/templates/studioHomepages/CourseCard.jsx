@@ -1,8 +1,9 @@
-import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
-import color from "../../util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 const styles = {
   card: {
@@ -32,7 +33,7 @@ const styles = {
     position: 'absolute',
     display: 'inline',
     paddingLeft: 25,
-    paddingRight: 10,
+    paddingRight: 10
   },
   titleRtl: {
     paddingTop: 10,
@@ -45,7 +46,7 @@ const styles = {
     position: 'absolute',
     display: 'inline',
     paddingRight: 25,
-    paddingLeft: 10,
+    paddingLeft: 10
   },
   description: {
     paddingLeft: 25,
@@ -59,10 +60,10 @@ const styles = {
     color: color.charcoal,
     background: color.white,
     height: 130,
-    width: "100%",
-    boxSizing: "border-box",
+    width: '100%',
+    boxSizing: 'border-box',
     position: 'absolute',
-    zIndex: 2,
+    zIndex: 2
   },
   continueLink: {
     color: color.teal,
@@ -70,27 +71,27 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontWeight: 'bold',
     marginTop: -5,
-    display: 'inline',
+    display: 'inline'
   },
   chevron: {
     display: 'inline',
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginLeft: 8,
+    marginLeft: 8
   },
   chevronRtl: {
     display: 'inline',
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginRight: 8,
+    marginRight: 8
   },
   linkBox: {
     display: 'block',
     paddingBottom: 20,
     textDecoration: 'none'
-  },
+  }
 };
 
 /**
@@ -106,24 +107,23 @@ class CourseCard extends Component {
   };
 
   render() {
-    const { title, description, link, isRtl } = this.props;
-    const icon = isRtl ? "chevron-left" : "chevron-right";
+    const {title, description, link, isRtl} = this.props;
+    const icon = isRtl ? 'chevron-left' : 'chevron-right';
 
     return (
       <a href={link} style={styles.card}>
-        <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
-        <div style={isRtl? styles.titleRtl : styles.title}>
-          {title}
-        </div>
+        <img
+          src={require('@cdo/static/small_purple_icons.png')}
+          style={styles.image}
+        />
+        <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
         <div style={styles.description}>
           {description}
           <div style={styles.linkBox}>
-            <h3 style={styles.continueLink}>
-              {i18n.viewCourse()}
-            </h3>
+            <h3 style={styles.continueLink}>{i18n.viewCourse()}</h3>
             <FontAwesome
               icon={icon}
-              style={isRtl? styles.chevronRtl : styles.chevron}
+              style={isRtl ? styles.chevronRtl : styles.chevron}
             />
           </div>
         </div>
@@ -133,5 +133,5 @@ class CourseCard extends Component {
 }
 
 export default connect(state => ({
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(CourseCard);

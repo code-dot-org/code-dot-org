@@ -296,7 +296,7 @@ sr:
         text: окрени се лево
       RyanLab_turnRight:
         text: окрени се десно
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': величина

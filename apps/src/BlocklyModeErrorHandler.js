@@ -13,9 +13,13 @@ export default class BlocklyModeErrorHandler extends JavaScriptModeErrorHandler 
       if (lineNumber && interpreter) {
         const start = Math.max(lineNumber - context - 1, 0);
         const count = context * 2 + 1;
-        const message = interpreter.codeInfo.code.split(/\n/g).splice(start, count).map((line, n) => {
-          return (n === context ? '>>>  ' : '     ') + line;
-        }).join('\n');
+        const message = interpreter.codeInfo.code
+          .split(/\n/g)
+          .splice(start, count)
+          .map((line, n) => {
+            return (n === context ? '>>>  ' : '     ') + line;
+          })
+          .join('\n');
         console.log(message);
       } else {
         console.log('No context available.');

@@ -1279,6 +1279,7 @@
   "subtitle": "一個視覺化的編程環境",
   "success": "成功！",
   "summaryAssessmentsOverview": "",
+  "switchSection": "切換學習小組：",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "你的程式含一個錯誤。請刪除第 {lineNumber} 行並再試一次。",

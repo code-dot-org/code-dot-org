@@ -36,7 +36,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "tts_long_instructions_override": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
     "parent_level_id": 11828,
     "name_suffix": "_2019",
     "contained_level_names": null,

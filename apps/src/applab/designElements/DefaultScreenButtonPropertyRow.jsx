@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
-import color from "../../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../../util/color';
 import * as elementUtils from './elementUtils';
 
 export default class DefaultScreenButtonPropertyRow extends React.Component {
@@ -8,17 +9,19 @@ export default class DefaultScreenButtonPropertyRow extends React.Component {
     screenId: PropTypes.string
   };
 
-  handleMakeDefault = (event) => this.props.handleChange(true);
+  handleMakeDefault = event => this.props.handleChange(true);
 
   render() {
-    if (elementUtils.getId(elementUtils.getScreens()[0]) === this.props.screenId) {
+    if (
+      elementUtils.getId(elementUtils.getScreens()[0]) === this.props.screenId
+    ) {
       return false;
     }
 
     const buttonStyle = {
       paddingTop: '5px',
       paddingBottom: '5px',
-      fontSize: '14px',
+      fontSize: '14px'
     };
 
     const defaultButtonStyle = Object.assign({}, buttonStyle, {
@@ -28,13 +31,10 @@ export default class DefaultScreenButtonPropertyRow extends React.Component {
 
     return (
       <div style={{marginLeft: 15}}>
-        <button
-          style={defaultButtonStyle}
-          onClick={this.handleMakeDefault}
-        >
-        Make Default
-      </button>
-    </div>
+        <button style={defaultButtonStyle} onClick={this.handleMakeDefault}>
+          Make Default
+        </button>
+      </div>
     );
   }
 }

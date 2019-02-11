@@ -1,6 +1,7 @@
 /** @file The Eve character from the cryptography widget */
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../util/color';
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step, Heading} from './NumberedSteps';
 import IntegerField from './IntegerField';
@@ -53,43 +54,47 @@ export default class Eve extends React.Component {
     this.setState({publicModulus});
   }
 
-  onPublicModulusChange = (publicModulus) => {
+  onPublicModulusChange = publicModulus => {
     this.setPublicModulus(publicModulus);
     this.props.setPublicModulus(publicModulus);
   };
 
-  setPublicKey = (publicKey) => {
+  setPublicKey = publicKey => {
     this.setState({publicKey});
   };
 
-  setPrivateKey = (privateKey) => {
+  setPrivateKey = privateKey => {
     const {runModuloClock} = this.props;
     const {publicKey, publicModulus} = this.state;
     this.setState({privateKey});
     if ([publicKey, privateKey, publicModulus].every(Number.isInteger)) {
       const dividend = publicKey * privateKey;
       const privateKeyEquationResult = dividend % publicModulus;
-      runModuloClock(dividend, currentDividend => {
-        this.setState({
-          privateKeyEquationResult: currentDividend % publicModulus,
-          checkingPrivateKey: true
-        });
-      }, () => {
-        this.setState({
-          privateKeyEquationResult,
-          checkingPrivateKey: false
-        });
-      });
+      runModuloClock(
+        dividend,
+        currentDividend => {
+          this.setState({
+            privateKeyEquationResult: currentDividend % publicModulus,
+            checkingPrivateKey: true
+          });
+        },
+        () => {
+          this.setState({
+            privateKeyEquationResult,
+            checkingPrivateKey: false
+          });
+        }
+      );
     } else {
       this.setState({privateKey: null, privateKeyEquationResult: null});
     }
   };
 
-  setPublicNumber = (publicNumber) => {
+  setPublicNumber = publicNumber => {
     this.setState({publicNumber});
   };
 
-  setSecretNumber = (secretNumber) => {
+  setSecretNumber = secretNumber => {
     this.setState({secretNumber});
     const {runModuloClock} = this.props;
     const {publicKey, publicModulus} = this.state;
@@ -97,17 +102,21 @@ export default class Eve extends React.Component {
     if ([publicKey, secretNumber, publicModulus].every(Number.isInteger)) {
       const dividend = publicKey * secretNumber;
       const secretNumberEquationResult = dividend % publicModulus;
-      runModuloClock(dividend, currentDividend => {
-        this.setState({
-          secretNumberEquationResult: currentDividend % publicModulus,
-          checkingSecretNumber: true
-        });
-      }, () => {
-        this.setState({
-          secretNumberEquationResult,
-          checkingSecretNumber: false
-        });
-      });
+      runModuloClock(
+        dividend,
+        currentDividend => {
+          this.setState({
+            secretNumberEquationResult: currentDividend % publicModulus,
+            checkingSecretNumber: true
+          });
+        },
+        () => {
+          this.setState({
+            secretNumberEquationResult,
+            checkingSecretNumber: false
+          });
+        }
+      );
     } else {
       this.setState({secretNumber: null, secretNumberEquationResult: null});
     }
@@ -128,10 +137,10 @@ export default class Eve extends React.Component {
     } = this.state;
     return (
       <CharacterPanel title="Eve">
-        <Heading text="Eavesdrop!"/>
+        <Heading text="Eavesdrop!" />
         <NumberedSteps>
           <Step>
-            Enter <KeywordPublicModulus/>:
+            Enter <KeywordPublicModulus />:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
@@ -139,7 +148,7 @@ export default class Eve extends React.Component {
             />
           </Step>
           <Step requires={[publicModulus].every(Number.isInteger)}>
-            Enter Alice's <KeywordPublicKey/>:
+            Enter Alice's <KeywordPublicKey />:
             <IntegerTextbox
               value={publicKey}
               onChange={this.setPublicKey}
@@ -148,7 +157,7 @@ export default class Eve extends React.Component {
             />
           </Step>
           <Step requires={[publicModulus].every(Number.isInteger)}>
-            Enter Bob's <KeywordPublicNumber/>:
+            Enter Bob's <KeywordPublicNumber />:
             <IntegerTextbox
               value={publicNumber}
               onChange={this.setPublicNumber}
@@ -158,10 +167,10 @@ export default class Eve extends React.Component {
           </Step>
         </NumberedSteps>
 
-        <Heading text="Try to Crack it!"/>
+        <Heading text="Try to Crack it!" />
         <NumberedSteps start={4}>
           <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
-            Crack Alice's <KeywordPrivateKey/>:
+            Crack Alice's <KeywordPrivateKey />:
             <PrivateKeyDropdown
               publicModulus={publicModulus}
               value={privateKey}
@@ -173,15 +182,21 @@ export default class Eve extends React.Component {
                 <tr style={{height: LINE_HEIGHT}}>
                   <td width="1%" style={tdEquationStyleLHS}>
                     {'('}
-                    <IntegerField color={COLORS.publicKey} value={publicKey}/>
+                    <IntegerField color={COLORS.publicKey} value={publicKey} />
                     {' x '}
-                    <IntegerField color={COLORS.privateKey} value={privateKey}/>
+                    <IntegerField
+                      color={COLORS.privateKey}
+                      value={privateKey}
+                    />
                     {') MOD '}
-                    <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+                    <IntegerField
+                      color={COLORS.publicModulus}
+                      value={publicModulus}
+                    />
                   </td>
                   <td style={tdEquationStyleRHS}>
                     {' = '}
-                    <IntegerField color={color.white} value={1}/>
+                    <IntegerField color={color.white} value={1} />
                     <ValidatorField
                       value={privateKeyEquationResult}
                       expectedValue={1}
@@ -192,8 +207,12 @@ export default class Eve extends React.Component {
               </tbody>
             </table>
           </Step>
-          <Step requires={[publicModulus, publicKey, publicNumber].every(Number.isInteger)}>
-            Crack Bob's <KeywordSecretNumber/>:
+          <Step
+            requires={[publicModulus, publicKey, publicNumber].every(
+              Number.isInteger
+            )}
+          >
+            Crack Bob's <KeywordSecretNumber />:
             <SecretNumberDropdown
               value={secretNumber}
               onChange={this.setSecretNumber}
@@ -205,15 +224,24 @@ export default class Eve extends React.Component {
                 <tr style={{height: LINE_HEIGHT}}>
                   <td width="1%" style={tdEquationStyleLHS}>
                     {'('}
-                    <IntegerField color={COLORS.publicKey} value={publicKey}/>
+                    <IntegerField color={COLORS.publicKey} value={publicKey} />
                     {' x '}
-                    <IntegerField color={COLORS.secretNumber} value={secretNumber}/>
+                    <IntegerField
+                      color={COLORS.secretNumber}
+                      value={secretNumber}
+                    />
                     {') MOD '}
-                    <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+                    <IntegerField
+                      color={COLORS.publicModulus}
+                      value={publicModulus}
+                    />
                   </td>
                   <td style={tdEquationStyleRHS}>
                     {' = '}
-                    <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
+                    <IntegerField
+                      color={COLORS.publicNumber}
+                      value={publicNumber}
+                    />
                     <ValidatorField
                       className="secret-number-validator"
                       value={secretNumberEquationResult}
