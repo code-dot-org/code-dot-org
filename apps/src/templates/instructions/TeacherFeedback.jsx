@@ -35,12 +35,12 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start'
   },
-  rubricHeader:{
+  rubricHeader: {
     fontWeight: 'bold',
     color: color.charcoal,
     textAlign: 'center'
   },
-  rubricTH:{
+  rubricTH: {
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
     border: `1px solid ${color.lightest_gray}`,
@@ -49,7 +49,7 @@ const styles = {
     textAlign: 'center',
     padding: 15
   },
-  rubricTD:{
+  rubricTD: {
     border: `1px solid ${color.lightest_gray}`,
     padding: 15
   }
@@ -170,7 +170,7 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        <table >
+        <table>
           <thead>
             <tr>
               <th style={styles.rubricTH}>
@@ -192,7 +192,9 @@ class TeacherFeedback extends Component {
           </thead>
           <tbody>
             <tr>
-              <td style={styles.rubricTD}>The key concept for this is awesome!</td>
+              <td style={styles.rubricTD}>
+                The key concept for this is awesome!
+              </td>
               <td style={styles.rubricTD}>This is how you should exceed</td>
               <td style={styles.rubricTD}>This is how you should meet</td>
               <td style={styles.rubricTD}>This is how you should approach</td>
@@ -200,7 +202,6 @@ class TeacherFeedback extends Component {
             </tr>
           </tbody>
         </table>
-        )}
         <textarea
           id="ui-test-feedback-input"
           style={styles.textInput}
