@@ -1,4 +1,4 @@
-import { makeEnum } from './utils';
+import {makeEnum} from './utils';
 import experiments from './util/experiments';
 
 const PageAction = makeEnum(
@@ -17,8 +17,8 @@ const PageAction = makeEnum(
 );
 
 const MAX_FIELD_LENGTH = 4095;
-const REPORT_PAGE_SIZE = experiments.isEnabled('logPageSize') ||
-  Math.random() < 0.01;
+const REPORT_PAGE_SIZE =
+  experiments.isEnabled('logPageSize') || Math.random() < 0.01;
 
 /**
  * Wraps and adds functionality to window.newrelic, which is only included in
@@ -33,7 +33,7 @@ module.exports = {
    *   add for this action
    * @param {number} [sampleRate] - Optional sample rate. Default is 1.0
    */
-  addPageAction: function (actionName, value, sampleRate) {
+  addPageAction: function(actionName, value, sampleRate) {
     if (sampleRate === undefined) {
       sampleRate = 1.0;
     }
@@ -47,7 +47,7 @@ module.exports = {
       return;
     }
 
-    if (typeof(value) !== "object") {
+    if (typeof value !== 'object') {
       console.log('Expected value to be an object');
       return;
     }
@@ -74,7 +74,7 @@ module.exports = {
   /**
    * Sets an attribute that will be included on any subsequent generated events
    */
-  setCustomAttribute: function (key, value) {
+  setCustomAttribute: function(key, value) {
     if (!window.newrelic) {
       return;
     }
@@ -107,7 +107,10 @@ module.exports = {
       let jsDownloadSize = 0;
       const jsFileRegex = /\.js$/;
       for (const resource of resources) {
-        if (resource.transferSize === undefined || resource.encodedBodySize === undefined) {
+        if (
+          resource.transferSize === undefined ||
+          resource.encodedBodySize === undefined
+        ) {
           return;
         }
         totalDownloadSize += resource.transferSize;
@@ -118,10 +121,13 @@ module.exports = {
       if (!window.newrelic) {
         return;
       }
-      window.newrelic.setCustomAttribute('totalDownloadSize', totalDownloadSize);
+      window.newrelic.setCustomAttribute(
+        'totalDownloadSize',
+        totalDownloadSize
+      );
       window.newrelic.setCustomAttribute('jsDownloadSize', jsDownloadSize);
     } catch (e) {
       this.logError(e);
     }
-  },
+  }
 };

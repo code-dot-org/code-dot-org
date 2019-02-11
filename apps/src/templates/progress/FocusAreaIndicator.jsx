@@ -7,7 +7,7 @@ import React from 'react';
 import Radium from 'radium';
 import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 
 const styles = {
   main: {
@@ -37,7 +37,7 @@ const styles = {
     height: 34,
     lineHeight: '34px',
     position: 'relative',
-    top: -3,
+    top: -3
   },
   text: {
     display: 'inline-block'
@@ -51,7 +51,7 @@ const styles = {
     marginRight: 5,
     borderRadius: 4,
     ':hover': {
-      backgroundColor: color.default_blue,
+      backgroundColor: color.default_blue
     }
   }
 };
@@ -59,21 +59,17 @@ const styles = {
 const FocusAreaIndicator = () => (
   <div style={styles.main}>
     <div style={styles.arrowContainer}>
-      <div style={styles.leftArrow}/>
+      <div style={styles.leftArrow} />
     </div>
     <div style={styles.focusArea}>
       <div style={styles.text}>Focus Area</div>
-      <a href={window.location.pathname + "/preview-assignments"} >
+      <a href={window.location.pathname + '/preview-assignments'}>
         <div style={styles.focusAreaIcon} data-tip data-for="focus-area">
-          <FontAwesome icon="pencil"/>
+          <FontAwesome icon="pencil" />
         </div>
       </a>
     </div>
-    <ReactTooltip
-      id="focus-area"
-      role="tooltip"
-      effect="solid"
-    >
+    <ReactTooltip id="focus-area" role="tooltip" effect="solid">
       Click to change your focus area.
     </ReactTooltip>
   </div>

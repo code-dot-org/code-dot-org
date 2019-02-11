@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '../Button';
-import color from "../../util/color";
+import color from '../../util/color';
 
 const styles = {
   card: {
@@ -18,7 +18,7 @@ const styles = {
     background: color.teal
   },
   image: {
-    position: 'absolute',
+    position: 'absolute'
   },
   textbox: {
     position: 'absolute',
@@ -28,7 +28,7 @@ const styles = {
   title: {
     fontSize: 24,
     paddingBottom: 10,
-    fontFamily:'"Gotham 7r", sans-serif',
+    fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
@@ -36,16 +36,16 @@ const styles = {
   },
   description: {
     fontSize: 14,
-    lineHeight: "21px",
+    lineHeight: '21px',
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.white,
     height: 80
   },
   ltr: {
-    float: 'left',
+    float: 'left'
   },
   rtl: {
-    float: 'right',
+    float: 'right'
   },
   rtlMargin: {
     marginRight: 160
@@ -66,37 +66,32 @@ class ImageResourceCard extends Component {
   };
 
   render() {
-
-    const { title, description, buttonText, link, image, isRtl } = this.props;
+    const {title, description, buttonText, link, image, isRtl} = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
     const uncoverImage = isRtl ? styles.rtlMargin : styles.ltrMargin;
 
     const filenameToImgUrl = {
-      "teacher-community": require('@cdo/static/resource_cards/teachercommunity.png'),
-      "guest-speaker": require('@cdo/static/resource_cards/findguestspeaker.png'),
-      "professional-learning": require('@cdo/static/resource_cards/professionallearning.png'),
-      "standards-framework": require('@cdo/static/resource_cards/standardsandframework.png'),
-      "elementary": require('@cdo/static/resource_cards/elementary.png'),
-      "middleschool": require('@cdo/static/resource_cards/middleschool.png'),
-      "highschool": require('@cdo/static/resource_cards/highschool.png'),
-      "hourofcode": require('@cdo/static/resource_cards/hourofcode.png'),
-      "hourofcode2": require('@cdo/static/resource_cards/hourofcode2.png'),
+      'teacher-community': require('@cdo/static/resource_cards/teachercommunity.png'),
+      'guest-speaker': require('@cdo/static/resource_cards/findguestspeaker.png'),
+      'professional-learning': require('@cdo/static/resource_cards/professionallearning.png'),
+      'standards-framework': require('@cdo/static/resource_cards/standardsandframework.png'),
+      elementary: require('@cdo/static/resource_cards/elementary.png'),
+      middleschool: require('@cdo/static/resource_cards/middleschool.png'),
+      highschool: require('@cdo/static/resource_cards/highschool.png'),
+      hourofcode: require('@cdo/static/resource_cards/hourofcode.png'),
+      hourofcode2: require('@cdo/static/resource_cards/hourofcode2.png')
     };
     const imgSrc = filenameToImgUrl[image];
 
     return (
       <div style={{...styles.card, ...localeStyle}}>
         <div style={styles.image}>
-          <img src={imgSrc}/>
+          <img src={imgSrc} />
         </div>
         <div style={{...styles.textbox, ...localeStyle, ...uncoverImage}}>
-          <div style={styles.title}>
-            {title}
-          </div>
-          <div style={styles.description}>
-            {description}
-          </div>
-          <br/>
+          <div style={styles.title}>{title}</div>
+          <div style={styles.description}>{description}</div>
+          <br />
           <Button
             href={link}
             color={Button.ButtonColor.gray}
@@ -110,5 +105,5 @@ class ImageResourceCard extends Component {
 }
 
 export default connect(state => ({
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(ImageResourceCard);

@@ -7,21 +7,17 @@ import PairingDialog from '@cdo/apps/code-studio/components/pairing/PairingDialo
 
 describe('PairingDialog', () => {
   it('renders a dialog containing the Pairing component', () => {
-    const wrapper = shallow(
-      <PairingDialog source="Any old test string"/>
-    );
+    const wrapper = shallow(<PairingDialog source="Any old test string" />);
 
     expect(wrapper).to.containMatchingElement(
       <BaseDialog isOpen={false}>
-        <Pairing source="Any old test string"/>
+        <Pairing source="Any old test string" />
       </BaseDialog>
     );
   });
 
   it('can be opened and closed with public methods', () => {
-    const wrapper = shallow(
-      <PairingDialog source="Another test string"/>
-    );
+    const wrapper = shallow(<PairingDialog source="Another test string" />);
 
     expect(() => {
       wrapper.instance().open();
@@ -29,7 +25,7 @@ describe('PairingDialog', () => {
 
     expect(wrapper).to.containMatchingElement(
       <BaseDialog isOpen={true}>
-        <Pairing source="Another test string"/>
+        <Pairing source="Another test string" />
       </BaseDialog>
     );
 
@@ -39,7 +35,7 @@ describe('PairingDialog', () => {
 
     expect(wrapper).to.containMatchingElement(
       <BaseDialog isOpen={false}>
-        <Pairing source="Another test string"/>
+        <Pairing source="Another test string" />
       </BaseDialog>
     );
   });

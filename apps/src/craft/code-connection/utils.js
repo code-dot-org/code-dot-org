@@ -1,4 +1,4 @@
-import { parseElement, serialize } from '../../xml';
+import {parseElement, serialize} from '../../xml';
 
 export function convertBlocksXml(xmlString) {
   const xml = parseElement(xmlString);
@@ -23,7 +23,10 @@ function getChildNodeByName(node, type) {
 
 function getTitleByNameAttr(node, name) {
   for (let i = 0, child; (child = node.childNodes[i]); i++) {
-    if (child.nodeName.toLowerCase() === "title" && child.getAttribute('name') === name) {
+    if (
+      child.nodeName.toLowerCase() === 'title' &&
+      child.getAttribute('name') === name
+    ) {
       return child;
     }
   }
@@ -32,33 +35,33 @@ function getTitleByNameAttr(node, name) {
 // The order of blocks as they appear in the agent inventory within MC:EE, so we
 // can translate the placeBlock block from string identifiers to indexes.
 const blockPlaceOrder = [
-  "bricks",
-  "cobblestone",
-  "dirt",
-  "grass",
-  "gravel",
-  "ice",
-  "logAcacia",
-  "logBirch",
-  "logJungle",
-  "logOak",
-  "logSpruce",
-  "planksAcacia",
-  "planksBirch",
-  "planksJungle",
-  "planksOak",
-  "planksSpruce",
-  "rails",
-  "sand",
-  "sandstone",
-  "snow",
-  "stone",
-  "wool_blue",
-  "wool_magenta",
-  "wool_orange",
-  "wool_pink",
-  "wool_red",
-  "wool_yellow",
+  'bricks',
+  'cobblestone',
+  'dirt',
+  'grass',
+  'gravel',
+  'ice',
+  'logAcacia',
+  'logBirch',
+  'logJungle',
+  'logOak',
+  'logSpruce',
+  'planksAcacia',
+  'planksBirch',
+  'planksJungle',
+  'planksOak',
+  'planksSpruce',
+  'rails',
+  'sand',
+  'sandstone',
+  'snow',
+  'stone',
+  'wool_blue',
+  'wool_magenta',
+  'wool_orange',
+  'wool_pink',
+  'wool_red',
+  'wool_yellow'
 ];
 
 // Agent code uses numbers for relative directions; semantically they represent
@@ -76,75 +79,75 @@ const directionToString = Object.freeze({
 // versions
 const blockTypes = Object.freeze({
   // Standard blocks
-  bricks: "brick_block",
-  clayHardened: "hardened_clay",
-  oreCoal: "coal_ore",
-  oreDiamond: "diamond_ore",
-  oreEmerald: "emerald_ore",
-  oreGold: "gold_ore",
-  oreIron: "iron_ore",
-  oreLapis: "lapis_ore",
-  oreRedstone: "redstone_ore",
-  deadBush: "deadbush",
-  netherBrick: "netherbrick",
-  quartzOre: "ore_quartz",
-  topSnow: "snow_layer",
+  bricks: 'brick_block',
+  clayHardened: 'hardened_clay',
+  oreCoal: 'coal_ore',
+  oreDiamond: 'diamond_ore',
+  oreEmerald: 'emerald_ore',
+  oreGold: 'gold_ore',
+  oreIron: 'iron_ore',
+  oreLapis: 'lapis_ore',
+  oreRedstone: 'redstone_ore',
+  deadBush: 'deadbush',
+  netherBrick: 'netherbrick',
+  quartzOre: 'ore_quartz',
+  topSnow: 'snow_layer',
 
   // Blocks for which CC does not have a version
-  dirtCoarse: "dirt",
-  farmlandWet: "dirt",
-  lava: "dirt",
-  water: "dirt",
-  grassPath: "dirt",
-  snowyGrass: "dirt",
-  tnt: "dirt",
-  tree: "dirt",
-  wool: "dirt",
+  dirtCoarse: 'dirt',
+  farmlandWet: 'dirt',
+  lava: 'dirt',
+  water: 'dirt',
+  grassPath: 'dirt',
+  snowyGrass: 'dirt',
+  tnt: 'dirt',
+  tree: 'dirt',
+  wool: 'dirt',
 
   // Tree parts
-  logAcacia: "log2,0",
-  logBirch: "log,2",
-  logJungle: "log,3",
-  logOak: "log",
-  logSpruce: "log,1",
+  logAcacia: 'log2,0',
+  logBirch: 'log,2',
+  logJungle: 'log,3',
+  logOak: 'log',
+  logSpruce: 'log,1',
 
-  planksAcacia: "planks,4",
-  planksBirch: "planks,2",
-  planksJungle: "planks,3",
-  planksOak: "planks",
-  planksSpruce: "planks,1",
+  planksAcacia: 'planks,4',
+  planksBirch: 'planks,2',
+  planksJungle: 'planks,3',
+  planksOak: 'planks',
+  planksSpruce: 'planks,1'
 });
 
 const blockConversions = Object.freeze({
-  craft_moveForward: function (xml) {
+  craft_moveForward: function(xml) {
     const next = getChildNodeByName(xml, 'next');
 
-    return (`
+    return `
       <block type="craft_move">
         <title name="DIR">forward</title>
         ${next ? serialize(next) : ''}
       </block>
-    `);
+    `;
   },
 
-  craft_moveBackward: function (xml) {
+  craft_moveBackward: function(xml) {
     const next = getChildNodeByName(xml, 'next');
 
-    return (`
+    return `
       <block type="craft_move">
         <title name="DIR">back</title>
         ${next ? serialize(next) : ''}
       </block>
-    `);
+    `;
   },
 
-  craft_placeBlock: function (xml) {
+  craft_placeBlock: function(xml) {
     const next = getChildNodeByName(xml, 'next');
     const title = getChildNodeByName(xml, 'title');
     const blockType = title.textContent;
     // placement slots are one-indexed and should default to 1
-    const blockIndex = (blockPlaceOrder.indexOf(blockType) + 1) || 1;
-    return (`
+    const blockIndex = blockPlaceOrder.indexOf(blockType) + 1 || 1;
+    return `
       <block type="craft_place" inline="false">
         <title name="DIR">down</title>
         <value name="SLOTNUM">
@@ -154,17 +157,17 @@ const blockConversions = Object.freeze({
         </value>
         ${next ? serialize(next) : ''}
       </block>
-    `);
+    `;
   },
 
-  craft_placeBlockDirection: function (xml) {
+  craft_placeBlockDirection: function(xml) {
     const next = getChildNodeByName(xml, 'next');
     const blockType = getTitleByNameAttr(xml, 'TYPE').textContent;
     const direction = getTitleByNameAttr(xml, 'DIR').textContent;
     // placement slots are one-indexed and should default to 1
-    const blockIndex = (blockPlaceOrder.indexOf(blockType) + 1) || 1;
+    const blockIndex = blockPlaceOrder.indexOf(blockType) + 1 || 1;
 
-    return (`
+    return `
       <block type="craft_place" inline="false">
         <title name="DIR">${directionToString[direction]}</title>
         <value name="SLOTNUM">
@@ -174,20 +177,20 @@ const blockConversions = Object.freeze({
         </value>
         ${next ? serialize(next) : ''}
       </block>
-    `);
+    `;
   },
 
-  craft_destroyBlock: function (xml) {
+  craft_destroyBlock: function(xml) {
     const next = getChildNodeByName(xml, 'next');
-    return (`
+    return `
       <block type="craft_destroy">
         <title name="DIR">forward</title>
         ${next ? serialize(next) : ''}
       </block>
-    `);
+    `;
   },
 
-  craft_ifBlockAhead: function (xml) {
+  craft_ifBlockAhead: function(xml) {
     const statement = getChildNodeByName(xml, 'statement');
     const next = getChildNodeByName(xml, 'next');
     const title = getChildNodeByName(xml, 'title');
@@ -203,7 +206,7 @@ const blockConversions = Object.freeze({
       blockType = blockTypes[blockType];
     }
 
-    return (`
+    return `
       <block type="controls_if" inline="false">
         <value name="IF0">
           <block type="logic_compare" inline="true">
@@ -227,9 +230,8 @@ const blockConversions = Object.freeze({
         ${statement ? serialize(statement) : ''}
         ${next ? serialize(next) : ''}
       </block>
-    `);
+    `;
   }
-
 });
 
 function convertBlockXml(blockXml) {
@@ -238,10 +240,10 @@ function convertBlockXml(blockXml) {
   // Recursively process children
   for (let i = 0, xmlChild; (xmlChild = blockXml.childNodes[i]); i++) {
     if (
-      (
-        xmlChild.nodeName.toLowerCase() === "next" ||
-        xmlChild.nodeName.toLowerCase() === "statement"
-      ) && xmlChild.childNodes.length) {
+      (xmlChild.nodeName.toLowerCase() === 'next' ||
+        xmlChild.nodeName.toLowerCase() === 'statement') &&
+      xmlChild.childNodes.length
+    ) {
       convertBlockXml(xmlChild.childNodes[0]);
     }
   }
@@ -249,7 +251,8 @@ function convertBlockXml(blockXml) {
   // inline-replace block if it is one of the types that should be converted
   if (blockConversions[type]) {
     const newBlockString = blockConversions[type](blockXml);
-    const newBlock = new DOMParser().parseFromString(newBlockString, 'text/xml').firstChild;
+    const newBlock = new DOMParser().parseFromString(newBlockString, 'text/xml')
+      .firstChild;
     blockXml.parentNode.replaceChild(newBlock, blockXml);
   }
 }

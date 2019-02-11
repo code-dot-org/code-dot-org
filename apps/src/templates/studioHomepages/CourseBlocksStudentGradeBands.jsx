@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import ContentContainer from '../ContentContainer';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 class CourseBlocksStudentGradeBands extends Component {
   static propTypes = {
@@ -29,11 +29,15 @@ class CourseBlocksStudentGradeBands extends Component {
   ];
 
   render() {
-    const { showContainer, hideBottomMargin } = this.props;
+    const {showContainer, hideBottomMargin} = this.props;
     const link = showContainer ? '/home/#recent-courses' : '';
     const linkText = showContainer ? i18n.viewMyRecentCourses() : '';
-    const heading = showContainer ? i18n.courseBlocksGradeBandsContainerHeading() : '';
-    const description = showContainer ? i18n.courseBlocksGradeBandsContainerDescription() : '';
+    const heading = showContainer
+      ? i18n.courseBlocksGradeBandsContainerHeading()
+      : '';
+    const description = showContainer
+      ? i18n.courseBlocksGradeBandsContainerDescription()
+      : '';
 
     return (
       <ContentContainer
@@ -43,9 +47,7 @@ class CourseBlocksStudentGradeBands extends Component {
         description={description}
         hideBottomMargin={hideBottomMargin}
       >
-        <CourseBlocksGradeBands
-          cards={this.cards}
-        />
+        <CourseBlocksGradeBands cards={this.cards} />
       </ContentContainer>
     );
   }

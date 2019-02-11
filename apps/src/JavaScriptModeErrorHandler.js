@@ -1,5 +1,5 @@
 /** @file Decorator and delegator for error, warning and info events in toolkits
-  * that use droplet and allow students to write and execute JavaScript. */
+ * that use droplet and allow students to write and execute JavaScript. */
 import annotationList from './acemode/annotationList';
 import logToCloud from './logToCloud';
 import {makeEnum} from './utils';
@@ -50,7 +50,8 @@ export default class JavaScriptModeErrorHandler {
    */
   getAsyncOutputWarning() {
     const lineNumber = this.getNearestUserCodeLine_();
-    return errorString => this.output_(errorString, LogLevel.WARNING, lineNumber);
+    return errorString =>
+      this.output_(errorString, LogLevel.WARNING, lineNumber);
   }
 
   /**
@@ -82,9 +83,13 @@ export default class JavaScriptModeErrorHandler {
 
     // Send to New Relic if it's an error and meets our sampling rate
     if (logLevel === LogLevel.ERROR) {
-      logToCloud.addPageAction(logToCloud.PageAction.UserJavascriptError, {
-        error: message
-      }, 1 / 20);
+      logToCloud.addPageAction(
+        logToCloud.PageAction.UserJavascriptError,
+        {
+          error: message
+        },
+        1 / 20
+      );
     }
   }
 

@@ -13,11 +13,12 @@ export default storybook => {
             isDialogOpen={true}
             closeDialog={() => {}}
             questionAndAnswers={{
-              question: "Hello world. I display *markdown* questions in a dialog.",
+              question:
+                'Hello world. I display *markdown* questions in a dialog.',
               answers: [
                 {text: "I'm an answer", letter: 'A', correct: true},
-                {text: "I'm another answer", letter: 'B', correct: false},
-              ],
+                {text: "I'm another answer", letter: 'B', correct: false}
+              ]
             }}
             studentAnswers={[
               {name: 'Matt', id: 1, answer: 'B', correct: false},

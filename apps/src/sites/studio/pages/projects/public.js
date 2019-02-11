@@ -2,11 +2,13 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
-import { Provider } from 'react-redux';
-import { getStore, registerReducers } from '@cdo/apps/redux';
-import projects, { setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
-import { MAX_PROJECTS_PER_CATEGORY } from '@cdo/apps/templates/projects/projectConstants';
-import ProjectHeader from "@cdo/apps/templates/projects/ProjectHeader";
+import {Provider} from 'react-redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import projects, {
+  setProjectLists
+} from '@cdo/apps/templates/projects/projectsRedux';
+import {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/projects/projectConstants';
+import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
@@ -28,11 +30,10 @@ $(document).ready(() => {
             canViewAdvancedTools={projectsData.canViewAdvancedTools}
             projectCount={projectsData.projectCount}
           />
-          <PublicGallery
-            limitedGallery={projectsData.limitedGallery}
-          />
+          <PublicGallery limitedGallery={projectsData.limitedGallery} />
         </div>
       </Provider>,
-      publicGallery);
+      publicGallery
+    );
   });
 });

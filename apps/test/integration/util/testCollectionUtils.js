@@ -25,7 +25,9 @@ function filterFiles(files) {
   files = files.filter(file => allowSolutionRegex.test(file));
 
   if (!files.length) {
-    throw new Error(`LEVEL_TYPE '${LEVEL_TYPE}' did not match anything. Try 'craft' or 'applab|gamelab'`);
+    throw new Error(
+      `LEVEL_TYPE '${LEVEL_TYPE}' did not match anything. Try 'craft' or 'applab|gamelab'`
+    );
   }
 
   return files;
@@ -33,7 +35,7 @@ function filterFiles(files) {
 
 module.exports = {
   // Get all json files under directory path
-  getCollections: function () {
+  getCollections: function() {
     var context = require.context('../levelSolutions/', true, /.*\.js$/);
     var files = context.keys();
     var testCollections = [];
@@ -47,7 +49,7 @@ module.exports = {
   /**
    * Gets a cloned copy of a level given a testCollection/testData
    */
-  getLevelFromCollection: function (testCollection, testData, dataItem) {
+  getLevelFromCollection: function(testCollection, testData, dataItem) {
     var level;
 
     var data = dataItem();
@@ -59,10 +61,13 @@ module.exports = {
       level = _.cloneDeep(levels[testCollection.levelId]);
       level = {
         ...level,
-        ...(testData.levelDefinitionOverrides || {}),
+        ...(testData.levelDefinitionOverrides || {})
       };
     } else {
-      if (!testCollection.levelDefinition && !testData.delayLoadLevelDefinition) {
+      if (
+        !testCollection.levelDefinition &&
+        !testData.delayLoadLevelDefinition
+      ) {
         logError('testCollection requires levelFile or levelDefinition');
         return;
       }

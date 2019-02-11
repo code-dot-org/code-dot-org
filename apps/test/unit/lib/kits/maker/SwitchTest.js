@@ -3,19 +3,21 @@ import sinon from 'sinon';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import Switch, {
   READ_ONLY_PROPERTIES,
-  READ_WRITE_PROPERTIES,
+  READ_WRITE_PROPERTIES
 } from '@cdo/apps/lib/kits/maker/Switch';
 
 describe('Switch', () => {
   let fakeJohnnyFiveSwitch;
 
-  before(() => sinon
-    .stub(Switch, '_constructFiveSwitchController')
-    .callsFake((board, pin) => {
-      fakeJohnnyFiveSwitch = new FakeJohnnyFiveSwitch({board, pin});
-      return fakeJohnnyFiveSwitch;
-    }));
-  afterEach(() => fakeJohnnyFiveSwitch = null);
+  before(() =>
+    sinon
+      .stub(Switch, '_constructFiveSwitchController')
+      .callsFake((board, pin) => {
+        fakeJohnnyFiveSwitch = new FakeJohnnyFiveSwitch({board, pin});
+        return fakeJohnnyFiveSwitch;
+      })
+  );
+  afterEach(() => (fakeJohnnyFiveSwitch = null));
   after(() => Switch._constructFiveSwitchController.restore());
 
   it('is an EventEmitter', () => {
@@ -24,10 +26,12 @@ describe('Switch', () => {
   });
 
   describe('read-only pass-through properties', () => {
-    READ_ONLY_PROPERTIES.forEach((readOnlyProp) => {
+    READ_ONLY_PROPERTIES.forEach(readOnlyProp => {
       it(`reads ${readOnlyProp} from the inner controller`, () => {
         const testObj = new Switch({});
-        expect(testObj[readOnlyProp]).to.equal(fakeJohnnyFiveSwitch[readOnlyProp]);
+        expect(testObj[readOnlyProp]).to.equal(
+          fakeJohnnyFiveSwitch[readOnlyProp]
+        );
       });
 
       it(`cannot write ${readOnlyProp}`, () => {
@@ -40,10 +44,12 @@ describe('Switch', () => {
   });
 
   describe('read-write pass-through properties', () => {
-    READ_WRITE_PROPERTIES.forEach((readWriteProp) => {
+    READ_WRITE_PROPERTIES.forEach(readWriteProp => {
       it(`reads ${readWriteProp} from the inner controller`, () => {
         const testObj = new Switch({});
-        expect(testObj[readWriteProp]).to.equal(fakeJohnnyFiveSwitch[readWriteProp]);
+        expect(testObj[readWriteProp]).to.equal(
+          fakeJohnnyFiveSwitch[readWriteProp]
+        );
       });
 
       it(`can write ${readWriteProp}`, () => {
@@ -71,14 +77,18 @@ describe('Switch', () => {
       fakeJohnnyFiveSwitch.emit('open');
       expect(openSpy).to.have.been.calledOnce;
       expect(closeSpy).not.to.have.been.called;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(testObj.openValue);
+      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
+        testObj.openValue
+      );
     });
 
     it("emits 'close' and 'change' when the first event from the inner controller is 'close'", () => {
       fakeJohnnyFiveSwitch.emit('close');
       expect(openSpy).not.to.have.been.called;
       expect(closeSpy).to.have.been.calledOnce;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(testObj.closeValue);
+      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
+        testObj.closeValue
+      );
     });
 
     it("does not emit extra 'open' events", () => {
@@ -87,7 +97,9 @@ describe('Switch', () => {
       fakeJohnnyFiveSwitch.emit('open');
       expect(openSpy).to.have.been.calledOnce;
       expect(closeSpy).not.to.have.been.called;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(testObj.openValue);
+      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
+        testObj.openValue
+      );
     });
 
     it("does not emit extra 'close' events", () => {
@@ -96,7 +108,9 @@ describe('Switch', () => {
       fakeJohnnyFiveSwitch.emit('close');
       expect(openSpy).not.to.have.been.called;
       expect(closeSpy).to.have.been.calledOnce;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(testObj.closeValue);
+      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
+        testObj.closeValue
+      );
     });
 
     it("emits events when changing from 'open' to 'close' or back", () => {

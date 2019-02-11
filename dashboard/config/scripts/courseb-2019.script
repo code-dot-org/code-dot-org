@@ -1,5 +1,5 @@
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/courseb/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/courseb/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/courseb/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/courseb/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/courseb/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/courseb/standards/"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/courseb/{LESSON}'
@@ -7,6 +7,9 @@ project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 version_year '2018'
+
+stage 'Your Digital Footprint'
+level 'DigitalFootprint_2019'
 
 stage 'Move It, Move It'
 level 'MoveItMoveIt_2019'
@@ -19,12 +22,6 @@ level 'courseB_Scrat_ramp3a_2019'
 level 'courseB_Scrat_ramp3b_2019'
 level 'courseB_Scrat_ramp4a_2019'
 level 'courseB_Scrat_ramp5a_2019'
-
-stage 'Your Digital Footprint'
-level 'DigitalFootprint_2019'
-
-stage 'Programming: My Robotic Friends'
-level 'courseB_unplugged_MRF_2019'
 
 stage 'Programming in Ice Age'
 level 'elementary_video_pairProgramming_2019'
@@ -59,8 +56,8 @@ level 'courseB_starWars_prog9_2019'
 level 'courseB_starWars_prog10_2019'
 level 'courseB_starWars_prog11_2019'
 
-stage 'Loops: My Loopy Robotic Friends'
-level 'courseB_unplugged_loopyMRF_2019'
+stage 'Loops: Getting Loopy'
+level 'GettingLoopy_2019'
 
 stage 'Loops in Ice Age'
 level 'courseB_iceage_loops1_2019'
@@ -108,6 +105,9 @@ level 'courseB_artist_loops9_2019'
 level 'courseB_artist_loops10_2019'
 bonus 'courseB_artist_loops_challenge1_2019'
 bonus 'courseB_artist_loops_challenge2_2019'
+
+stage 'The Right App'
+level 'BigEvent_2019'
 
 stage 'Events: The Big Event'
 level 'BigEvent_2019'

@@ -2,42 +2,41 @@ import MD5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
-  'en_us': {
+  en_us: {
     VOICE: 'sharon22k',
     SPEED: 180,
     SHAPE: 100
   },
-  'es_es': {
+  es_es: {
     VOICE: 'ines22k',
     SPEED: 180,
-    SHAPE: 100,
+    SHAPE: 100
   },
-  'es_mx': {
+  es_mx: {
     VOICE: 'rosa22k',
     SPEED: 180,
-    SHAPE: 100,
+    SHAPE: 100
   },
-  'it_it': {
+  it_it: {
     VOICE: 'vittorio22k',
     SPEED: 180,
-    SHAPE: 100,
+    SHAPE: 100
   },
-  'pt_br': {
+  pt_br: {
     VOICE: 'marcia22k',
     SPEED: 180,
-    SHAPE: 100,
+    SHAPE: 100
   }
 };
 
-
-const TTS_URL = "https://tts.code.org";
+const TTS_URL = 'https://tts.code.org';
 
 const styles = {
   error: {
@@ -54,7 +53,7 @@ const styles = {
 
   button: {
     cursor: 'pointer',
-    'float': 'left',
+    float: 'left',
     backgroundColor: color.lightest_purple,
     border: 'none',
     outline: 'none',
@@ -63,16 +62,16 @@ const styles = {
   },
 
   volumeButton: {
-    borderRadius: "4px 0px 0px 4px",
+    borderRadius: '4px 0px 0px 4px'
   },
 
   playPauseButton: {
-    borderRadius: "0px 4px 4px 0px",
+    borderRadius: '0px 4px 4px 0px'
   },
 
   buttonImg: {
     opacity: 1,
-    'float': 'left',
+    float: 'left',
     paddingRight: 8,
     paddingLeft: 8,
     color: '#4d575f'
@@ -102,12 +101,14 @@ class InlineAudio extends React.Component {
     audio: undefined,
     playing: false,
     error: false,
-    hover: false,
+    hover: false
   };
 
   componentWillUpdate(nextProps) {
-    if (this.props.src !== nextProps.src ||
-        this.props.message !== nextProps.message) {
+    if (
+      this.props.src !== nextProps.src ||
+      this.props.message !== nextProps.message
+    ) {
       // unload current Audio object
       const audio = this.state.audio;
 
@@ -118,7 +119,7 @@ class InlineAudio extends React.Component {
 
       this.setState({
         audio: undefined,
-        playing: false,
+        playing: false
       });
     }
   }
@@ -130,13 +131,13 @@ class InlineAudio extends React.Component {
 
     const src = this.getAudioSrc();
     const audio = new Audio(src);
-    audio.addEventListener("ended", e => {
+    audio.addEventListener('ended', e => {
       this.setState({
         playing: false
       });
     });
 
-    audio.addEventListener("error", e => {
+    audio.addEventListener('error', e => {
       // e is an instance of a MediaError object
       trackEvent('InlineAudio', 'error', e.target.error.code);
       this.setState({
@@ -145,7 +146,7 @@ class InlineAudio extends React.Component {
       });
     });
 
-    this.setState({ audio });
+    this.setState({audio});
     trackEvent('InlineAudio', 'getAudioElement', src);
     return audio;
   }
@@ -175,33 +176,36 @@ class InlineAudio extends React.Component {
 
   playAudio() {
     this.getAudioElement().play();
-    this.setState({ playing: true });
-    firehoseClient.putRecord(
-      {
-        study: 'tts-play',
-        study_group: 'v1',
-        event: 'play',
-        data_string: this.props.src,
-        data_json: JSON.stringify({
-          userId: this.props.userId,
-          puzzleNumber: this.props.puzzleNumber,
-          src: this.props.src
-        }),
-      }
-    );
+    this.setState({playing: true});
+    firehoseClient.putRecord({
+      study: 'tts-play',
+      study_group: 'v1',
+      event: 'play',
+      data_string: this.props.src,
+      data_json: JSON.stringify({
+        userId: this.props.userId,
+        puzzleNumber: this.props.puzzleNumber,
+        src: this.props.src
+      })
+    });
   }
 
   pauseAudio() {
     this.getAudioElement().pause();
-    this.setState({ playing: false });
+    this.setState({playing: false});
   }
 
   toggleHover = () => {
-    this.setState({ hover: !this.state.hover });
+    this.setState({hover: !this.state.hover});
   };
 
   render() {
-    if (this.props.textToSpeechEnabled && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
+    if (
+      this.props.textToSpeechEnabled &&
+      !this.state.error &&
+      this.isLocaleSupported() &&
+      this.getAudioSrc()
+    ) {
       return (
         <div
           className="inline-audio"
@@ -210,22 +214,38 @@ class InlineAudio extends React.Component {
           onMouseOut={this.toggleHover}
         >
           <div
-            style={[styles.button, styles.volumeButton, this.props.style && this.props.style.button, this.state.hover && styles.hover]}
+            style={[
+              styles.button,
+              styles.volumeButton,
+              this.props.style && this.props.style.button,
+              this.state.hover && styles.hover
+            ]}
             id="volume"
           >
             <i
-              className={"fa fa-volume-up"}
-              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
+              className={'fa fa-volume-up'}
+              style={[
+                styles.buttonImg,
+                this.props.style && this.props.style.buttonImg
+              ]}
             />
           </div>
           <div
             className="playPause"
-            style={[styles.button, styles.playPauseButton, this.props.style && this.props.style.button, this.state.hover && styles.hover]}
+            style={[
+              styles.button,
+              styles.playPauseButton,
+              this.props.style && this.props.style.button,
+              this.state.hover && styles.hover
+            ]}
             onClick={this.toggleAudio}
           >
             <i
-              className={this.state.playing ? "fa fa-pause" : "fa fa-play"}
-              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
+              className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
+              style={[
+                styles.buttonImg,
+                this.props.style && this.props.style.buttonImg
+              ]}
             />
           </div>
         </div>
@@ -239,7 +259,8 @@ export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
-    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
+    textToSpeechEnabled:
+      state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber

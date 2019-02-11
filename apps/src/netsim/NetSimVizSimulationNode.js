@@ -17,8 +17,10 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @constructor
  * @augments NetSimVizNode
  */
-var NetSimVizSimulationNode = module.exports = function (sourceNode,
-    useBackgroundAnimation) {
+var NetSimVizSimulationNode = (module.exports = function(
+  sourceNode,
+  useBackgroundAnimation
+) {
   NetSimVizNode.call(this, useBackgroundAnimation);
 
   /**
@@ -42,14 +44,14 @@ var NetSimVizSimulationNode = module.exports = function (sourceNode,
 
   this.configureFrom(sourceNode);
   this.render();
-};
+});
 NetSimVizSimulationNode.inherits(NetSimVizNode);
 
 /**
  *
  * @param {NetSimNode} sourceNode
  */
-NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
+NetSimVizSimulationNode.prototype.configureFrom = function(sourceNode) {
   this.correspondingNodeId_ = sourceNode.entityID;
   this.correspondingNodeUuid_ = sourceNode.uuid;
 
@@ -74,7 +76,7 @@ NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
  * ID of the simulation entity that maps to this one.
  * @returns {number}
  */
-NetSimVizSimulationNode.prototype.getCorrespondingEntityId = function () {
+NetSimVizSimulationNode.prototype.getCorrespondingEntityId = function() {
   return this.correspondingNodeId_;
 };
 
@@ -82,9 +84,11 @@ NetSimVizSimulationNode.prototype.getCorrespondingEntityId = function () {
  * @param {NetSimEntity} entity
  * @returns {boolean} TRUE of this VizElement represents the given Entity.
  */
-NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
-  return this.correspondingNodeId_ === entity.entityID &&
-      this.correspondingNodeUuid_ === entity.uuid;
+NetSimVizSimulationNode.prototype.representsEntity = function(entity) {
+  return (
+    this.correspondingNodeId_ === entity.entityID &&
+    this.correspondingNodeUuid_ === entity.uuid
+  );
 };
 
 /**
@@ -92,7 +96,7 @@ NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
  * another node of matching ID being added, and begins its exit animation.
  * @override
  */
-NetSimVizSimulationNode.prototype.kill = function () {
+NetSimVizSimulationNode.prototype.kill = function() {
   NetSimVizSimulationNode.superPrototype.kill.call(this);
   this.correspondingNodeId_ = undefined;
   this.correspondingNodeUuid_ = undefined;
