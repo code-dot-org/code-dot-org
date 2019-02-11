@@ -27,12 +27,19 @@ const styles = {
 
 class ScriptTeacherPanel extends React.Component {
   static propTypes = {
+    // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasSections: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
-    unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired
+    unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    students: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired
+      })
+    ).isRequired
   };
 
   render() {
@@ -42,7 +49,8 @@ class ScriptTeacherPanel extends React.Component {
       sectionsAreLoaded,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
-      unlockedStageNames
+      unlockedStageNames,
+      students
     } = this.props;
 
     return (
@@ -86,6 +94,9 @@ class ScriptTeacherPanel extends React.Component {
                 )}
               </div>
             )}
+          {students.map(student => (
+            <div key={student.id}>{student.name}</div>
+          ))}
         </div>
       </TeacherPanel>
     );
@@ -124,6 +135,7 @@ export default connect((state, ownProps) => {
     sectionsAreLoaded,
     scriptHasLockableStages,
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
-    unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
+    unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
+    students: state.teacherSections.selectedStudents
   };
 })(ScriptTeacherPanel);

@@ -17,7 +17,8 @@ import {ViewType, setViewType} from './viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   setSections,
-  selectSection
+  selectSection,
+  setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {getHiddenStages} from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
@@ -108,10 +109,14 @@ function queryLockStatus(store, scriptId) {
 /**
  * Render our teacher panel that shows up on our course overview page.
  */
-export function renderTeacherPanel(store, scriptId) {
+export function renderTeacherPanel(store, scriptId, section) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
   queryLockStatus(store, scriptId);
+
+  if (section.students && section.students.length > 0) {
+    store.dispatch(setStudentsForCurrentSection(section.id, section.students));
+  }
 
   ReactDOM.render(
     <Provider store={store}>
