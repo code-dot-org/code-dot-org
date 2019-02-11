@@ -1,4 +1,9 @@
-- if request.gdpr?
+-#
+  Only show cookie banner when in a GDPR country, or when we are in the test
+  environment and the show_cookie_banner_on_test URL parameter is specified,
+  presumably by a UI test.
+
+- if request.gdpr? || (Rails.env.test? && request.params['show_cookie_banner_on_test'].present?)
   %link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
   %script{src: minifiable_asset_path("js/cookieBanner.js")}
 
