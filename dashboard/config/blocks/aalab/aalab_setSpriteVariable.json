@@ -1,9 +1,9 @@
 {
-  "category": "Variables",
+  "category": "Sprites",
   "config": {
-    "func": "setVariable",
+    "func": "setSpriteVariable",
     "inline": false,
-    "blockText": "aalab set {NAME} to {VALUE}",
+    "blockText": "aalab set {VARIABLE} to {SPRITE}",
     "color": [
       355,
       ".7",
@@ -11,14 +11,13 @@
     ],
     "args": [
       {
-        "name": "NAME",
-        "type": "None",
+        "name": "VARIABLE",
         "customInput": "locationVariableDropdown",
         "assignment": true
       },
       {
-        "name": "VALUE",
-        "type": "None"
+        "name": "SPRITE",
+        "type": "Sprite"
       }
     ]
   }
