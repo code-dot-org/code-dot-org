@@ -67,6 +67,41 @@ describe('GameLab', () => {
     describe('After being injected with a studioApp instance', () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
 
+      it('Rerun mutes sounds', () => {
+        instance.gameLabP5.p5 = sinon.spy();
+        instance.gameLabP5.p5.allSprites = sinon.spy();
+        instance.gameLabP5.p5.allSprites.removeSprites = sinon.spy();
+        instance.gameLabP5.p5.redraw = sinon.spy();
+        instance.JSInterpreter = sinon.spy();
+        instance.JSInterpreter.deinitialize = sinon.spy();
+        instance.initInterpreter = sinon.spy();
+        instance.onP5Setup = sinon.spy();
+
+        let spy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
+        instance.rerunSetupCode();
+        expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
+        spy.restore();
+      });
+
+      it('Execute mutes if not looping', () => {
+        instance.reset = sinon.spy();
+        instance.studioApp_.clearAndAttachRuntimeAnnotations = sinon.spy();
+        instance.gameLabP5.startExecution = sinon.spy();
+
+        let spy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
+        instance.execute(false /* shouldLoop */);
+        expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
+        spy.restore();
+      });
+
+      it('Execute unmutes if looping', () => {
+        instance.reset = sinon.spy();
+        instance.studioApp_.clearAndAttachRuntimeAnnotations = sinon.spy();
+        instance.gameLabP5.startExecution = sinon.spy();
+
+        let spy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
+        instance.execute(true /* shouldLoop */);
+        expect(Sounds.getSingleton().unmuteURLs).to.have.been.calledOnce;
         spy.restore();
       });
 
