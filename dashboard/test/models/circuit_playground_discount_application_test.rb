@@ -3,11 +3,6 @@ require 'test_helper'
 class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
-  setup_all do
-    @csd_cohort = create :cohort, name: 'CSD-TeacherConPhiladelphia'
-    @other_cohort = create :cohort
-  end
-
   test 'eligible_unit_6_intention?' do
     teacher = create :teacher
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'no')
