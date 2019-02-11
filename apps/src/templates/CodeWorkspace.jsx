@@ -142,7 +142,7 @@ class CodeWorkspace extends React.Component {
 
   onToggleShowCode = usingBlocks => {
     this.blockCounterEl.style.display =
-      usingBlocks && studioApp.enableShowBlockCount ? 'inline-block' : 'none';
+      usingBlocks && studioApp().enableShowBlockCount ? 'inline-block' : 'none';
   };
 
   render() {
