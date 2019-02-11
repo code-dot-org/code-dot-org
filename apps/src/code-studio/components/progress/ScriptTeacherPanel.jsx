@@ -9,6 +9,8 @@ import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
 import commonMsg from '@cdo/locale';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {reload} from '@cdo/apps/utils';
 
 const styles = {
   text: {
@@ -43,7 +45,8 @@ class ScriptTeacherPanel extends React.Component {
   };
 
   onSelectStudent = id => {
-    console.log(id);
+    updateQueryParam('user_id', id);
+    reload();
   };
 
   render() {
