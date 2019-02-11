@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import GameLab from '@cdo/apps/gamelab/GameLab';
+import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,
   registerReducers,
@@ -65,6 +66,9 @@ describe('GameLab', () => {
 
     describe('After being injected with a studioApp instance', () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
+
+        spy.restore();
+      });
 
       describe('The init method', () => {
         it('does not require droplet to be in the config', () => {
