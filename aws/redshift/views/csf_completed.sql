@@ -23,7 +23,7 @@ from
     join analysis.csf_stages_for_completion sfc on sfc.script_id = us.script_id and sfc.stage_number = us.stage_number
 ) us
 join analysis.csf_plugged_stage_counts sc on sc.script_id = us.script_id and us.stage_order = sc.plugged_stage_counts
-with no schema binding; 
+with no schema binding;
 
 GRANT ALL PRIVILEGES ON analysis.csf_completed TO GROUP admin;
 GRANT SELECT ON analysis.csf_completed TO GROUP reader, GROUP reader_pii;
