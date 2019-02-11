@@ -9,7 +9,7 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
-import color from "../../util/color";
+import color from '../../util/color';
 import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
 
@@ -20,10 +20,12 @@ class ButtonProperties extends React.Component {
     onDepthChange: PropTypes.func.isRequired
   };
 
-  handleIconColorChange = (value) => {
+  handleIconColorChange = value => {
     this.props.handleChange('icon-color', value);
-    this.props.handleChange('image',
-      this.props.element.getAttribute('data-canonical-image-url'));
+    this.props.handleChange(
+      'image',
+      this.props.element.getAttribute('data-canonical-image-url')
+    );
   };
 
   render() {
@@ -35,7 +37,9 @@ class ButtonProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          initialValue={elementUtils.rgb2hex(
+            element.getAttribute('data-icon-color') || '#000000'
+          )}
           handleChange={this.handleIconColorChange}
         />
       );
@@ -97,7 +101,7 @@ class ButtonProperties extends React.Component {
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'center'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <ImagePickerPropertyRow
@@ -116,7 +120,8 @@ class ButtonProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -130,8 +135,12 @@ class ButtonEvents extends React.Component {
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked!");\n' +
       '});\n';
     return code;
   }
@@ -141,7 +150,8 @@ class ButtonEvents extends React.Component {
   render() {
     const element = this.props.element;
     const clickName = 'Click';
-    const clickDesc = 'Triggered when the button is clicked with a mouse or tapped on a screen.';
+    const clickDesc =
+      'Triggered when the button is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -151,7 +161,7 @@ class ButtonEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={clickName}
           desc={clickDesc}
@@ -165,7 +175,7 @@ class ButtonEvents extends React.Component {
 export default {
   PropertyTab: ButtonProperties,
   EventTab: ButtonEvents,
-  create: function () {
+  create: function() {
     const element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
@@ -178,7 +188,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function (element, updateProperty) {
+  onDeserialize: function(element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'image', url);

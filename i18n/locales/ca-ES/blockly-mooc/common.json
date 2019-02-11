@@ -1279,6 +1279,7 @@
   "subtitle": "un entorn de programació visual",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Canvia de secció:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "El seu programa conté un error tipogràfic. Tregui la línia {lineNumber} i torneu-ho a provar.",

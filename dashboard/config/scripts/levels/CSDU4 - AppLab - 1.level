@@ -24,8 +24,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "320",
-    "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "long_instructions": "# Documentation\r\nAs we move forward you are going to see more and more (and more!) commands added to the toolbox.  What happens if you see a command and don't understand it, or you forget how it works?  Don't worry, this happens to professional programmers all the time! No one actually memorizes long lists of commands.  Most programming environments have ways to quickly look up documentation about the commands of the language you're using.  **Good news: App Lab has documentation too!**\r\n\r\n![](https://images.code.org/3fe10e1b65edb37306099098161be001-image-1441990727053.gif)\r\n\r\nWhen you **hover your mouse over a command** in the block palette a bubble pops up with a quick reminder of what a function does, and what its parameters are. If you click \"See examples\", you will be taken to more detailed documentation of the command which includes **code examples** that you can even copy and paste.\r\n",

@@ -14,7 +14,7 @@ const styles = {
   buttonWrapper: {
     display: 'inline-block',
     marginBottom: 10,
-    marginTop: 10,
+    marginTop: 10
   },
   container: {
     // subtract the height of the clearfix element
@@ -27,22 +27,25 @@ const styles = {
     paddingRight: 0,
     // make the buttons align right usually, but align left if they
     // are forced to wrap onto the next line by a very long table name.
-    textAlign: 'justify',
+    textAlign: 'justify'
   },
-  exportButton: [dataStyles.whiteButton, {
-    marginLeft: 10,
-    width: 120
-  }],
+  exportButton: [
+    dataStyles.whiteButton,
+    {
+      marginLeft: 10,
+      width: 120
+    }
+  ],
   tableName: {
-    fontSize: 18,
+    fontSize: 18
   },
   tableNameWrapper: {
     alignItems: 'flex-end',
     display: 'inline-flex',
     height: 30,
     marginRight: 10,
-    verticalAlign: 'middle',
-  },
+    verticalAlign: 'middle'
+  }
 };
 
 class TableControls extends React.Component {
@@ -50,18 +53,15 @@ class TableControls extends React.Component {
     clearTable: PropTypes.func.isRequired,
     exportCsv: PropTypes.func.isRequired,
     importCsv: PropTypes.func.isRequired,
-    tableName: PropTypes.string.isRequired,
+    tableName: PropTypes.string.isRequired
   };
 
   render() {
     return (
       <div style={styles.container}>
         <div style={styles.tableNameWrapper}>
-          <span style={styles.tableName}>
-            {this.props.tableName}
-          </span>
-        </div>
-        {" "}
+          <span style={styles.tableName}>{this.props.tableName}</span>
+        </div>{' '}
         <div style={styles.buttonWrapper}>
           <ConfirmDeleteButton
             body={applabMsg.confirmClearTable()}
@@ -81,9 +81,8 @@ class TableControls extends React.Component {
             Export to csv
           </button>
         </div>
-
         {/* help make the "text-align: justify;" trick work */}
-        <div style={dataStyles.clearfix}/>
+        <div style={dataStyles.clearfix} />
       </div>
     );
   }

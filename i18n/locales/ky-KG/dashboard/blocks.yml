@@ -401,7 +401,7 @@ ky:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': өлчөмү

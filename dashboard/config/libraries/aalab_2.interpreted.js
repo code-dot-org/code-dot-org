@@ -34,7 +34,7 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
-var costumeGroups = {};
+var animationGroups = {};
 
 function initialize(setupHandler) {
   setupHandler();
@@ -106,8 +106,7 @@ function behaviorsEqual(behavior1, behavior2) {
 
 //Events
 
-// Aaron: I did some work here to clean things up.
-
+// New
 function keyPressed(condition, key, event) {
   if(condition === "when") {
     inputEvents.push({type: keyWentDown, event: event, param: key});
@@ -120,32 +119,22 @@ function whenMouseClicked(event) {
   inputEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
 }
 
+// Updated
 function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   inputEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
   inputEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
+// Updated
 function clickedOn(condition, sprite, event) {
   if(condition === "when") {
-    if(!Array.isArray(sprite)) {
-      inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
-    } else {
-      sprite.forEach(function(s) {
-      	inputEvents.push({type: whenSpriteClicked, event: event, param: s});
-      });
-    }
+  	inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
   } else {
-    if(!Array.isArray(sprite)) {
-      inputEvents.push({type: mousePressedOver, event: event, param: sprite});
-    } else {
-      sprite.forEach(function(s) {
-      	inputEvents.push({type: mousePressedOver, event: event, param: s});
-      });
-    }
+  	inputEvents.push({type: mousePressedOver, event: event, param: sprite});
   }
 }
 
-// New input event types (see above)
+// New
 function whenSpriteClicked(sprite) {
   return mouseWentDown("leftButton") && mouseIsOver(sprite);
 }
@@ -185,15 +174,52 @@ function makeNewSpriteLocation(animation, loc) {
   return makeNewSprite(animation, loc.x, loc.y);
 }
 
+// Updated
 function setAnimation(sprite, animation) {
-  sprite.setAnimation(animation);
-  sprite.scale /= sprite.baseScale;
-  sprite.baseScale = 100 / Math.max(
-    100,
-    sprite.animation.getHeight(),
-    sprite.animation.getWidth()
-  );
-  sprite.scale *= sprite.baseScale;
+  var setOneAnimation = function(sprite) {
+    sprite.setAnimation(animation);
+    sprite.scale /= sprite.baseScale;
+    sprite.baseScale = 100 / Math.max(100,
+                                      sprite.animation.getHeight(),
+                                      sprite.animation.getWidth());
+    sprite.scale *= sprite.baseScale;
+    addToAnimationGroup(sprite);
+  };
+  if(!Array.isArray(sprite)) {
+    // If the sprite already has an animation, remove that sprite from the animation group.
+    if(sprite.getAnimationLabel()) {
+      removeFromAnimationGroup(sprite, sprite.getAnimationLabel());
+    }
+  	setOneAnimation(sprite);
+  } else {
+    if(sprite.length > 0) {
+      // If first sprite already has an animation, delete that animation group (everyone is leaving).
+      if(sprite[0].getAnimationLabel()) {
+        delete animationGroups[sprite[0].getAnimationLabel()];
+      }
+      sprite.forEach(function(s) { setOneAnimation(s); });
+    }
+  }
+}
+
+// New
+function addToAnimationGroup(sprite) {
+  var animation = sprite.getAnimationLabel();
+  if(animationGroups.hasOwnProperty(animation)) {
+     animationGroups[animation].push(sprite);
+  } else {
+    animationGroups[animation] = [sprite];
+  }
+}
+
+// New
+function removeFromAnimationGroup(sprite, oldAnimation) {
+  var array = animationGroups[oldAnimation];
+  var index = array.indexOf(sprite);
+  array.splice(index, 1);
+  if(animationGroups[oldAnimation].length < 1) {
+    delete animationGroups[oldAnimation];
+  }
 }
 
 function makeNewSprite(animation, x, y) {
@@ -306,7 +332,7 @@ function unitVectorTowards(from, to) {
   return p5.Vector.fromAngle(angle);
 }
 
-// Run functions
+// New
 function runSpriteBehaviors() {
   sprites.forEach(function (sprite) {
     sprite.behaviors.forEach(function (behavior) {
@@ -315,12 +341,14 @@ function runSpriteBehaviors() {
   });
 }
 
+// New
 function runCallbacks() {
   callbacks.forEach(function (callback) {
     callback();
   });
 }
 
+// New
 function runInputEvents() {
   var eventType;
   var event;
@@ -328,13 +356,24 @@ function runInputEvents() {
   for (var i = 0; i < inputEvents.length; i++) {
     eventType = inputEvents[i].type;
     event = inputEvents[i].event;
-    param = inputEvents[i].param;
-    if (param && eventType(param)) {
-      event();
+    param = typeof inputEvents[i].param === "function" ?
+      inputEvents[i].param() :
+      inputEvents[i].param;
+    if(!Array.isArray(param)) {
+      if(eventType(param)) {
+        event();
+      }
+    } else {
+      for(var j = 0; j < param.length; j++) {
+        if(eventType(param[j])) {
+          event();
+        }
+      }
     }
   }
 }
 
+// New
 function runCollisionEvents() {
   var createCollisionHandler = function (collisionEvent) {
     return function (sprite1, sprite2) {
@@ -360,6 +399,7 @@ function runCollisionEvents() {
   }
 }
 
+// New
 function runLoops() {
   for (var i = 0; i < loops.length; i++) {
     var loop = loops[i];
@@ -371,6 +411,7 @@ function runLoops() {
   }
 }
 
+// New
 function updateHUDText() {
   if (show_score) {
     fill("black");
@@ -393,6 +434,7 @@ function updateHUDText() {
   }
 }
 
+// Updated
 function draw() {
   background(World.background_color || "white");
   runCallbacks();

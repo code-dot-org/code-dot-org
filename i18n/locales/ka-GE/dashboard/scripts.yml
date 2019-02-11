@@ -5165,3 +5165,7 @@ ka:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+        dani-test-script:
+          stages:
+            new stage:
+              name: ახალი დონე

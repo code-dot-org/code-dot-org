@@ -1279,6 +1279,7 @@
   "subtitle": "isang visual programming na environment",
   "success": "Tagumpay!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Magpalit ng section:",
   "syncClever": "I-sync ang mga estudyante mula sa Clever",
   "syncGoogleClassroom": "I-sync ang mga estudyante mula sa Google Classroom",
   "syntaxErrorMsg": "Ang iyong programa ay naglalaman ng mga kamalian sa paglimbag. Mangtaring tanggalin ang linyang {lineNumber} at subukan ulit.",

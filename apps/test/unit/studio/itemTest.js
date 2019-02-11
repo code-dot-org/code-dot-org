@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import _ from 'lodash';
 
-import { expect } from '../../util/configuredChai';
+import {expect} from '../../util/configuredChai';
 
 import Studio from '@cdo/apps/studio/studio';
 import Item from '@cdo/apps/studio/Item';
@@ -107,10 +107,7 @@ describe('item', () => {
       });
 
       it('does nothing on WATCH_ACTOR or GRID_ALIGNED behaviors', () => {
-        [
-          BEHAVIOR_WATCH_ACTOR,
-          BEHAVIOR_GRID_ALIGNED
-        ].forEach(behavior => {
+        [BEHAVIOR_WATCH_ACTOR, BEHAVIOR_GRID_ALIGNED].forEach(behavior => {
           item.activity = behavior;
           item.update();
           expect(item.dir).to.be.undefined;
@@ -131,11 +128,7 @@ describe('item', () => {
     });
 
     it('automatically moves in the set direction for movement behaviors', () => {
-      [
-        BEHAVIOR_CHASE,
-        BEHAVIOR_FLEE,
-        BEHAVIOR_WANDER,
-      ].forEach(behavior => {
+      [BEHAVIOR_CHASE, BEHAVIOR_FLEE, BEHAVIOR_WANDER].forEach(behavior => {
         item.activity = behavior;
         item.x = 100;
         item.moveToNextPosition();
@@ -144,16 +137,13 @@ describe('item', () => {
     });
 
     it('does nothing for non-movement behaviors', () => {
-      [
-        BEHAVIOR_WATCH_ACTOR,
-        BEHAVIOR_GRID_ALIGNED,
-        BEHAVIOR_STOP
-      ].forEach(behavior => {
-        item.activity = behavior;
-        item.moveToNextPosition();
-        expect(item.x).to.equal(100);
-      });
+      [BEHAVIOR_WATCH_ACTOR, BEHAVIOR_GRID_ALIGNED, BEHAVIOR_STOP].forEach(
+        behavior => {
+          item.activity = behavior;
+          item.moveToNextPosition();
+          expect(item.x).to.equal(100);
+        }
+      );
     });
   });
 });
-

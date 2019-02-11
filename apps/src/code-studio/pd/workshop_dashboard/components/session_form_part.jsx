@@ -6,19 +6,10 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import {
-  Row,
-  Col,
-  Button,
-  FormGroup,
-  HelpBlock
-} from 'react-bootstrap';
+import {Row, Col, Button, FormGroup, HelpBlock} from 'react-bootstrap';
 import TimeSelect from './time_select';
 import DatePicker from './date_picker';
-import {
-  DATE_FORMAT,
-  TIME_FORMAT
-} from '../workshopConstants';
+import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
 const MIN_TIME = moment('7:00am', TIME_FORMAT);
 const MAX_TIME = moment('7:00pm', TIME_FORMAT);
@@ -34,18 +25,18 @@ export default class SessionFormPart extends React.Component {
     onRemove: PropTypes.func,
     shouldValidate: PropTypes.bool,
     readOnly: PropTypes.bool,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
   };
 
-  handleDateChange = (date) => {
+  handleDateChange = date => {
     // Don't allow null. If the date is cleared, default again to today.
     date = date || moment();
     this.handleChange('date', date.format(DATE_FORMAT));
   };
-  handleStartTimeChange = (time) => {
+  handleStartTimeChange = time => {
     this.handleChange('startTime', time);
   };
-  handleEndTimeChange = (time) => {
+  handleEndTimeChange = time => {
     this.handleChange('endTime', time);
   };
   handleChange = (fieldName, value) => {
@@ -67,7 +58,7 @@ export default class SessionFormPart extends React.Component {
   renderAddButton() {
     if (this.props.onAdd && !this.props.readOnly) {
       return (
-        <Button onClick={this.handleAddClick} >
+        <Button onClick={this.handleAddClick}>
           <i className="fa fa-plus" />
         </Button>
       );
@@ -78,7 +69,7 @@ export default class SessionFormPart extends React.Component {
     if (this.props.onRemove && !this.props.readOnly) {
       return (
         <Button onClick={this.handleRemoveClick}>
-          <i className="fa fa-minus"/>
+          <i className="fa fa-minus" />
         </Button>
       );
     }
@@ -109,10 +100,10 @@ export default class SessionFormPart extends React.Component {
     const date = moment(this.props.session.date, DATE_FORMAT);
     if (this.props.shouldValidate) {
       if (!this.props.session.date) {
-        style.date = "error";
-        help.date = "Required.";
+        style.date = 'error';
+        help.date = 'Required.';
       } else if (!date.isValid()) {
-        style.date = "error";
+        style.date = 'error';
         help.date = `Must be a valid date in ${DATE_FORMAT} format.`;
       }
     }
@@ -121,22 +112,26 @@ export default class SessionFormPart extends React.Component {
     const startTime = moment(this.props.session.startTime, TIME_FORMAT);
     const endTime = moment(this.props.session.endTime, TIME_FORMAT);
     if (!this.props.session.startTime) {
-      style.startTime = "error";
-      help.startTime = "Required.";
+      style.startTime = 'error';
+      help.startTime = 'Required.';
     } else if (!startTime.isValid()) {
-      style.startTime = "error";
-      help.startTime = "Invalid format.";
+      style.startTime = 'error';
+      help.startTime = 'Invalid format.';
     }
     if (!this.props.session.endTime) {
-      style.endTime = "error";
-      help.endTime = "Required.";
+      style.endTime = 'error';
+      help.endTime = 'Required.';
     } else if (!endTime.isValid()) {
-      style.endTime = "error";
-      help.endTime = "Invalid format.";
+      style.endTime = 'error';
+      help.endTime = 'Invalid format.';
     }
-    if (startTime.isValid() && endTime.isValid() && !endTime.isAfter(startTime)) {
-      style.endTime = "error";
-      help.endTime = "Must end after it starts.";
+    if (
+      startTime.isValid() &&
+      endTime.isValid() &&
+      !endTime.isAfter(startTime)
+    ) {
+      style.endTime = 'error';
+      help.endTime = 'Must end after it starts.';
     }
 
     return (

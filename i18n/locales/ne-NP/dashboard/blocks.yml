@@ -280,7 +280,7 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': size

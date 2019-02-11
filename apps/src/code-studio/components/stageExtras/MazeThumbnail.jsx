@@ -1,23 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
-import skins from "@cdo/apps/maze/skins";
+import skins from '@cdo/apps/maze/skins';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
-import { utils, MazeMap, drawMap } from '@code-dot-org/maze';
+import {utils, MazeMap, drawMap} from '@code-dot-org/maze';
 
 const getSubtypeForSkin = utils.getSubtypeForSkin;
-
 
 export default class MazeThumbnail extends React.Component {
   static propTypes = {
     level: PropTypes.shape({
       startDirection: PropTypes.number.isRequired,
-      flowerType: PropTypes.string,
+      flowerType: PropTypes.string
     }).isRequired,
     map: PropTypes.array,
     serializedMaze: PropTypes.array,
-    skin: PropTypes.string.isRequired,
+    skin: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -30,12 +29,16 @@ export default class MazeThumbnail extends React.Component {
     const Type = getSubtypeForSkin(this.props.skin);
     const subtype = new Type(Maze, {
       skin,
-      level: this.props.level,
+      level: this.props.level
     });
 
-    Maze.map = this.props.serializedMaze ?
-      MazeMap.deserialize(this.props.serializedMaze, subtype.getCellClass()) :
-      MazeMap.parseFromOldValues(this.props.map, null, subtype.getCellClass());
+    Maze.map = this.props.serializedMaze
+      ? MazeMap.deserialize(this.props.serializedMaze, subtype.getCellClass())
+      : MazeMap.parseFromOldValues(
+          this.props.map,
+          null,
+          subtype.getCellClass()
+        );
     subtype.initStartFinish();
     subtype.createDrawer(this.svg);
     subtype.initWallMap();
@@ -49,7 +52,9 @@ export default class MazeThumbnail extends React.Component {
         <svg
           width="400"
           height="400"
-          ref={c => {this.svg = c;}}
+          ref={c => {
+            this.svg = c;
+          }}
         />
       </ProtectedStatefulDiv>
     );

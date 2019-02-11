@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import color from '../util/color';
 import msg from './locale';
 
@@ -14,7 +14,7 @@ const styles = {
     pointerEvents: 'none',
     textAlign: 'right',
     verticalAlign: 'top',
-    marginTop: 5,
+    marginTop: 5
   },
   label: {
     color: color.white,
@@ -23,12 +23,12 @@ const styles = {
     textAlign: 'center',
     fontSize: 14,
     borderRadius: 2,
-    width: '100%',
+    width: '100%'
   },
   hr: {
     borderColor: color.lighter_gray,
     borderWidth: 2,
-    margin: '0 auto',
+    margin: '0 auto'
   },
   gemImage: {
     backgroundImage: `url("${assetUrl('media/skins/collector/gem.png')}")`,
@@ -43,23 +43,23 @@ const styles = {
     left: 5,
     lineHeight: '25px',
     position: 'relative',
-    top: 7,
+    top: 7
   },
   gemCount: {
     paddingRight: 5,
     fontSize: 17,
-    color: color.charcoal,
-  },
+    color: color.charcoal
+  }
 };
 
 export class CollectorGemCounter extends React.Component {
   static propTypes = {
     currentCollected: PropTypes.number.isRequired,
-    minRequired: PropTypes.number,
+    minRequired: PropTypes.number
   };
 
   static defaultProps = {
-    minRequired: 1,
+    minRequired: 1
   };
 
   render() {
@@ -68,11 +68,11 @@ export class CollectorGemCounter extends React.Component {
     return (
       <div style={styles.container}>
         <div style={styles.label}>{msg.goal()}</div>
-        <div style={styles.gemImage} >
+        <div style={styles.gemImage}>
           <i
             style={{
               ...styles.checkmark,
-              visibility: showCheckmark ? 'visible' : 'hidden',
+              visibility: showCheckmark ? 'visible' : 'hidden'
             }}
             className="fa fa-check"
             aria-hidden="true"
@@ -88,5 +88,5 @@ export class CollectorGemCounter extends React.Component {
 
 export default connect(state => ({
   currentCollected: state.maze.collectorCurrentCollected,
-  minRequired: state.maze.collectorMinRequired,
+  minRequired: state.maze.collectorMinRequired
 }))(CollectorGemCounter);

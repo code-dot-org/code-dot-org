@@ -474,7 +474,7 @@ da:
         text: drej til venstre
       RyanLab_turnRight:
         text: drej til højre
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': størrelse

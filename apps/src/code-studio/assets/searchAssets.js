@@ -10,7 +10,13 @@ import Immutable from 'immutable';
  * @param {int} maxResults - max number of results to return in an array
  * @return {Array} - Limited list of assets from the library that match the search query.
  */
-export function searchAssets(searchQuery, categoryQuery, assetLibrary, currentPage, maxResults) {
+export function searchAssets(
+  searchQuery,
+  categoryQuery,
+  assetLibrary,
+  currentPage,
+  maxResults
+) {
   // Make sure to generate the search regex in advance, only once.
   // Search is case-insensitive
   // Match any word boundary or underscore followed by the search query.
@@ -21,10 +27,10 @@ export function searchAssets(searchQuery, categoryQuery, assetLibrary, currentPa
 
   // Generate the set of all results associated with all matched aliases
   let resultSet = Object.keys(assetLibrary.aliases)
-      .filter(alias => searchRegExp.test(alias))
-      .reduce((resultSet, nextAlias) => {
-        return resultSet.union(assetLibrary.aliases[nextAlias]);
-      }, Immutable.Set());
+    .filter(alias => searchRegExp.test(alias))
+    .reduce((resultSet, nextAlias) => {
+      return resultSet.union(assetLibrary.aliases[nextAlias]);
+    }, Immutable.Set());
 
   if (categoryQuery !== '' && categoryQuery !== 'category_all') {
     let categoryResultSet = Object.keys(assetLibrary.aliases)
@@ -43,11 +49,14 @@ export function searchAssets(searchQuery, categoryQuery, assetLibrary, currentPa
   // maxResults so we don't load too many images at once, and return
   // the associated metadata for each result.
   const results = resultSet
-      .sort()
-      .map(result => assetLibrary.metadata[result])
-      .toArray();
+    .sort()
+    .map(result => assetLibrary.metadata[result])
+    .toArray();
   return {
     pageCount: Math.ceil(results.length / maxResults),
-    results: results.slice(currentPage*maxResults, (currentPage+1)*maxResults)
+    results: results.slice(
+      currentPage * maxResults,
+      (currentPage + 1) * maxResults
+    )
   };
 }

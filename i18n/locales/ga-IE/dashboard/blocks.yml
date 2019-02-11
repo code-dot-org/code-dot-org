@@ -400,7 +400,7 @@ ga:
         text: cas ar chlé
       RyanLab_turnRight:
         text: cas ar dheis
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': méid

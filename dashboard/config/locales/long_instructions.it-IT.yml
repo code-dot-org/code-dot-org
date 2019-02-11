@@ -665,6 +665,8 @@ it:
         Puoi aiutarmi a catturare il maialino cattivo? Metti due blocchi `vai avanti`, uno sotto l'altro, sotto il blocco `quando si clicca su "Esegui"`. Poi clicca a sinistra sul pulsante "Esegui", sotto al labirinto. <br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO" target="_blank">Video doppiato in italiano</a>
       CSDU2 Color Blindness: "# Filtro daltonici\r\n\r\n\r\n\r\n\n"
+      CSDU6 - timed loop question timed: Cosa pensi che succederà quando cliccherai
+        su "Esegui"?
       Color Blindness Filter: "# Filtro daltonici\r\n\r\n\r\n\r\n\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
         width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tempo di giocare:**
@@ -1489,6 +1491,8 @@ it:
         personaggio nell'acquario.
       Fish Tank 5-validated_2019: Il nostro pesce si sente un po' solo. Aggiungi un
         altro personaggio nell'acquario.
+      Fish Tank 5-validated_2019_implicitGroupTest: Il nostro pesce si sente un po'
+        solo. Aggiungi un altro personaggio nell'acquario.
       Fish Tank 6-validated: "Cosa vuoi che faccia il nuovo amico del pesce?  \n\nAggiungi
         un comportamento al nuovo amico del pesce!"
       Fish Tank 6-validated_2019: "Cosa vuoi che faccia il nuovo amico del pesce?
@@ -2023,9 +2027,6 @@ it:
 
 
         Le **battute** in musica sono l’unità di misura del tempo. In questa esercitazione una battuta corrisponde a quattro secondi.
-      Standalone_Artist_1: Benvenuto all'Artista! Prima di tutto, cerchiamo di disegnare
-        un semplice quadrato utilizzando il blocco "gira a destra" e il blocco "vai
-        avanti". Ogni lato è lungo 100 pixel.
       Standalone_Artist_2: 'Disegna questo rombo che ha i lati lunghi 150 pixel.<br><br><b>Attenzione</b>:
         un rombo ha gli angoli di 60 e 120 gradi, ma i gradi dell’istruzione “gira”
         sono misurati rispetto al percorso davanti all’Artista. Vedi anche le spiegazioni

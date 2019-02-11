@@ -1,6 +1,6 @@
 import React from 'react';
-import {FormGroup} from "react-bootstrap";
-import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import {FormGroup} from 'react-bootstrap';
+import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import {
   PageLabels,
   SectionHeaders,
@@ -8,14 +8,15 @@ import {
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {CSF, CSD, CSP} from '../ApplicationConstants';
 
-const PARTNER_WORKSHOPS_API_ENDPOINT = '/api/v1/pd/regional_partner_workshops/find?';
+const PARTNER_WORKSHOPS_API_ENDPOINT =
+  '/api/v1/pd/regional_partner_workshops/find?';
 
 export default class Section3ExperienceAndCommitments extends LabeledFormComponent {
   static labels = PageLabels.section3ExperienceAndCommitments;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section3ExperienceAndCommitments),
-    "regionalPartnerId"
+    'regionalPartnerId'
   ];
 
   state = {
@@ -55,24 +56,26 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       method: 'GET',
       url: url,
       dataType: 'json'
-    }).done((data) => {
-      this.loadFitWorkshopsRequest = null;
+    })
+      .done(data => {
+        this.loadFitWorkshopsRequest = null;
 
-      this.handleChange({
-        regionalPartnerId: data.id,
-        fitWorkshops: data.workshops,
-        regionalPartnerName: data.name
-      });
+        this.handleChange({
+          regionalPartnerId: data.id,
+          fitWorkshops: data.workshops,
+          regionalPartnerName: data.name
+        });
 
-      this.setState({
-        loadingFitWorkshops: false
+        this.setState({
+          loadingFitWorkshops: false
+        });
+      })
+      .error(() => {
+        this.setState({
+          loadingFitWorkshops: false,
+          loadError: true
+        });
       });
-    }).error(() => {
-      this.setState({
-        loadingFitWorkshops: false,
-        loadError: true
-      });
-    });
   }
 
   loadSummerWorkshops() {
@@ -90,40 +93,48 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       method: 'GET',
       url: url,
       dataType: 'json'
-    }).done((data) => {
-      this.loadSummerWorkshopsRequest = null;
+    })
+      .done(data => {
+        this.loadSummerWorkshopsRequest = null;
 
-      this.handleChange({
-        regionalPartnerId: data.id,
-        summerWorkshops: data.workshops,
-        regionalPartnerName: data.name
-      });
+        this.handleChange({
+          regionalPartnerId: data.id,
+          summerWorkshops: data.workshops,
+          regionalPartnerName: data.name
+        });
 
-      this.setState({
-        loadingSummerWorkshops: false
+        this.setState({
+          loadingSummerWorkshops: false
+        });
+      })
+      .error(() => {
+        this.setState({
+          loadingSummerWorkshops: false,
+          loadError: true
+        });
       });
-    }).error(() => {
-      this.setState({
-        loadingSummerWorkshops: false,
-        loadError: true
-      });
-    });
   }
 
   renderCsdCspWhichFitWeekend() {
-    if (this.props.data.fitWorkshops && this.props.data.fitWorkshops.length > 0) {
-      const options = this.props.data.fitWorkshops.map(workshop =>
-        `${workshop.dates} in ${workshop.location}`
+    if (
+      this.props.data.fitWorkshops &&
+      this.props.data.fitWorkshops.length > 0
+    ) {
+      const options = this.props.data.fitWorkshops.map(
+        workshop => `${workshop.dates} in ${workshop.location}`
       );
-      options.push(TextFields.notSurePleaseExplain, TextFields.unableToAttendPleaseExplain);
+      options.push(
+        TextFields.notSurePleaseExplain,
+        TextFields.unableToAttendPleaseExplain
+      );
 
       const textFieldMap = {
-        [TextFields.notSurePleaseExplain] : "not_sure",
-        [TextFields.unableToAttendPleaseExplain] : "unable_to_attend"
+        [TextFields.notSurePleaseExplain]: 'not_sure',
+        [TextFields.unableToAttendPleaseExplain]: 'unable_to_attend'
       };
 
       return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
-        "csdCspWhichFitWeekend",
+        'csdCspWhichFitWeekend',
         options,
         textFieldMap
       );
@@ -131,19 +142,25 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   }
 
   renderCsdCspWhichSummerWorkshop() {
-    if (this.props.data.summerWorkshops && this.props.data.summerWorkshops.length > 0) {
-      const options = this.props.data.summerWorkshops.map(workshop =>
-        `${workshop.dates} in ${workshop.location}`
+    if (
+      this.props.data.summerWorkshops &&
+      this.props.data.summerWorkshops.length > 0
+    ) {
+      const options = this.props.data.summerWorkshops.map(
+        workshop => `${workshop.dates} in ${workshop.location}`
       );
-      options.push(TextFields.notSurePleaseExplain, TextFields.unableToAttendPleaseExplain);
+      options.push(
+        TextFields.notSurePleaseExplain,
+        TextFields.unableToAttendPleaseExplain
+      );
 
       const textFieldMap = {
-        [TextFields.notSurePleaseExplain] : "not_sure",
-        [TextFields.unableToAttendPleaseExplain] : "unable_to_attend"
+        [TextFields.notSurePleaseExplain]: 'not_sure',
+        [TextFields.unableToAttendPleaseExplain]: 'unable_to_attend'
       };
 
       return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
-        "csdCspWhichSummerWorkshop",
+        'csdCspWhichSummerWorkshop',
         options,
         textFieldMap
       );
@@ -155,95 +172,91 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
     return (
       <FormGroup>
         <h3>Section 3: {SectionHeaders.section3ExperienceAndCommitments}</h3>
-        {this.radioButtonsFor("teachingExperience")}
-        {this.radioButtonsFor("haveLedAdults")}
+        {this.radioButtonsFor('teachingExperience')}
+        {this.radioButtonsFor('haveLedAdults')}
 
         <p>
-          The Code.org Facilitator Development Program is an intensive, year-long
-          commitment that kicks off your time as a Code.org facilitator. The high-level
-          program commitments for the first year are listed below. Please indicate
-          whether you can reasonably meet these commitments, and note that we expect
-          that you would continue facilitating beyond this first year.
+          The Code.org Facilitator Development Program is an intensive,
+          year-long commitment that kicks off your time as a Code.org
+          facilitator. The high-level program commitments for the first year are
+          listed below. Please indicate whether you can reasonably meet these
+          commitments, and note that we expect that you would continue
+          facilitating beyond this first year.
         </p>
 
-        {
-          program !== CSF &&
+        {program !== CSF && (
           <div>
-            {
-              !this.props.data.regionalPartnerId &&
+            {!this.props.data.regionalPartnerId && (
               <div>
                 <p>
-                  <strong>There is no Regional Partner in your region at this time.</strong>
+                  <strong>
+                    There is no Regional Partner in your region at this time.
+                  </strong>
                 </p>
                 <p>
-                  Please note that we prioritize applicants in regions where we currently have a Regional
-                  Partner, and there is a need for additional facilitators. Code.org will review your
-                  application and contact you if there is a need for facilitators in a nearby region. We are
-                  not able to guarantee a space for you in a different location.
+                  Please note that we prioritize applicants in regions where we
+                  currently have a Regional Partner, and there is a need for
+                  additional facilitators. Code.org will review your application
+                  and contact you if there is a need for facilitators in a
+                  nearby region. We are not able to guarantee a space for you in
+                  a different location.
                 </p>
                 {this.checkBoxesFor('csdCspNoPartnerSummerWorkshop')}
               </div>
-            }
-            {
-              this.props.data.regionalPartnerId &&
+            )}
+            {this.props.data.regionalPartnerId && (
               <div>
                 <p>
-                  <strong>Your Regional Partner is {this.props.data.regionalPartnerName}.</strong>
+                  <strong>
+                    Your Regional Partner is{' '}
+                    {this.props.data.regionalPartnerName}.
+                  </strong>
                 </p>
-                {
-                  this.props.data.summerWorkshops && this.props.data.summerWorkshops.length === 0 &&
-                  <div>
-                    {this.checkBoxesFor('csdCspPartnerButNoSummerWorkshop')}
-                  </div>
-                }
-                {
-                  this.props.data.summerWorkshops && this.props.data.summerWorkshops.length > 0 &&
-                  <div>
-                    {this.radioButtonsFor('csdCspPartnerWithSummerWorkshop')}
-                    {this.renderCsdCspWhichSummerWorkshop()}
-                  </div>
-                }
+                {this.props.data.summerWorkshops &&
+                  this.props.data.summerWorkshops.length === 0 && (
+                    <div>
+                      {this.checkBoxesFor('csdCspPartnerButNoSummerWorkshop')}
+                    </div>
+                  )}
+                {this.props.data.summerWorkshops &&
+                  this.props.data.summerWorkshops.length > 0 && (
+                    <div>
+                      {this.radioButtonsFor('csdCspPartnerWithSummerWorkshop')}
+                      {this.renderCsdCspWhichSummerWorkshop()}
+                    </div>
+                  )}
               </div>
-            }
+            )}
 
-            {this.radioButtonsFor("csdCspFitWeekendRequirement")}
+            {this.radioButtonsFor('csdCspFitWeekendRequirement')}
             {this.renderCsdCspWhichFitWeekend()}
-            {this.radioButtonsFor("csdCspWorkshopRequirement")}
+            {this.radioButtonsFor('csdCspWorkshopRequirement')}
 
-            {
-              program === CSD &&
-              <div>
-                {this.radioButtonsFor("csdTrainingRequirement")}
-              </div>
-            }
+            {program === CSD && (
+              <div>{this.radioButtonsFor('csdTrainingRequirement')}</div>
+            )}
 
-            {
-              program === CSP &&
-              <div>
-                {this.radioButtonsFor("cspTrainingRequirement")}
-              </div>
-            }
+            {program === CSP && (
+              <div>{this.radioButtonsFor('cspTrainingRequirement')}</div>
+            )}
 
-            {this.radioButtonsFor("csdCspLeadSummerWorkshopRequirement")}
-            {this.radioButtonsFor("csdCspDeeperLearningRequirement")}
+            {this.radioButtonsFor('csdCspLeadSummerWorkshopRequirement')}
+            {this.radioButtonsFor('csdCspDeeperLearningRequirement')}
           </div>
-        }
+        )}
 
-        {
-          program === CSF &&
+        {program === CSF && (
           <div>
-            {this.radioButtonsFor("csfSummitRequirement")}
-            {this.radioButtonsFor("csfWorkshopRequirement")}
-            {this.radioButtonsFor("csfCommunityRequirement")}
+            {this.radioButtonsFor('csfSummitRequirement')}
+            {this.radioButtonsFor('csfWorkshopRequirement')}
+            {this.radioButtonsFor('csfCommunityRequirement')}
           </div>
-        }
+        )}
 
-        {this.radioButtonsFor("developmentAndPreparationRequirement")}
+        {this.radioButtonsFor('developmentAndPreparationRequirement')}
 
-        {
-          program !== CSF &&
-          this.radioButtonsFor("csdCspGoodStandingRequirement")
-        }
+        {program !== CSF &&
+          this.radioButtonsFor('csdCspGoodStandingRequirement')}
       </FormGroup>
     );
   }
@@ -257,43 +270,43 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
 
     if (program === CSF) {
       requiredFields.push(
-        "csfSummitRequirement",
-        "csfWorkshopRequirement",
-        "csfCommunityRequirement"
+        'csfSummitRequirement',
+        'csfWorkshopRequirement',
+        'csfCommunityRequirement'
       );
     }
 
     if (program !== CSF) {
       if (!data.regionalPartnerId) {
-        requiredFields.push("csdCspNoPartnerSummerWorkshop");
+        requiredFields.push('csdCspNoPartnerSummerWorkshop');
       } else {
         if (data.summerWorkshops && data.summerWorkshops.length > 0) {
           requiredFields.push(
-            "csdCspPartnerWithSummerWorkshop",
-            "csdCspWhichSummerWorkshop"
+            'csdCspPartnerWithSummerWorkshop',
+            'csdCspWhichSummerWorkshop'
           );
         } else {
-          requiredFields.push("csdCspPartnerButNoSummerWorkshop");
+          requiredFields.push('csdCspPartnerButNoSummerWorkshop');
         }
       }
       if (data.fitWorkshops && data.fitWorkshops.length > 0) {
-        requiredFields.push("csdCspWhichFitWeekend");
+        requiredFields.push('csdCspWhichFitWeekend');
       }
       requiredFields.push(
-        "csdCspFitWeekendRequirement",
-        "csdCspWorkshopRequirement",
-        "csdCspLeadSummerWorkshopRequirement",
-        "csdCspDeeperLearningRequirement",
-        "csdCspGoodStandingRequirement"
+        'csdCspFitWeekendRequirement',
+        'csdCspWorkshopRequirement',
+        'csdCspLeadSummerWorkshopRequirement',
+        'csdCspDeeperLearningRequirement',
+        'csdCspGoodStandingRequirement'
       );
     }
 
     if (program === CSD) {
-      requiredFields.push("csdTrainingRequirement");
+      requiredFields.push('csdTrainingRequirement');
     }
 
     if (program === CSP) {
-      requiredFields.push("cspTrainingRequirement");
+      requiredFields.push('cspTrainingRequirement');
     }
 
     return requiredFields;

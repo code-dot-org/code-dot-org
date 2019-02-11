@@ -22,8 +22,14 @@ const FACILITATOR = 'Facilitator';
 const paneledQuestions = {
   [TEACHER]: Object.keys(TeacherValidScores),
   [FACILITATOR]: [
-    'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo',
-    ...Object.keys(FacilitatorPageLabels.section5YourApproachToLearningAndLeading)
+    'resumeLink',
+    'csRelatedJobRequirements',
+    'diversityTrainingDescription',
+    'describePriorPd',
+    'additionalInfo',
+    ...Object.keys(
+      FacilitatorPageLabels.section5YourApproachToLearningAndLeading
+    )
   ]
 };
 
@@ -47,20 +53,35 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
       principalApproval: this.props.initialPrincipalApproval
     };
 
-    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission', 'section6Submission']) : FacilitatorSectionHeaders;
-    this.pageLabels = props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels;
-    this.labelOverrides = props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides;
-    this.numberedQuestions = props.applicationType === TEACHER ? [] : NumberedQuestions;
+    this.sectionHeaders =
+      props.applicationType === TEACHER
+        ? _.omit(TeacherSectionHeaders, [
+            'section5Submission',
+            'section6Submission'
+          ])
+        : FacilitatorSectionHeaders;
+    this.pageLabels =
+      props.applicationType === TEACHER
+        ? TeacherPageLabels
+        : FacilitatorPageLabels;
+    this.labelOverrides =
+      props.applicationType === TEACHER
+        ? TeacherLabelOverrides
+        : FacilitatorLabelOverrides;
+    this.numberedQuestions =
+      props.applicationType === TEACHER ? [] : NumberedQuestions;
     this.paneledQuestions = paneledQuestions[props.applicationType];
-    this.validScores = props.applicationType === TEACHER ? TeacherValidScores : {};
+    this.validScores =
+      props.applicationType === TEACHER ? TeacherValidScores : {};
   }
 
   getQuestionText = (section, question) => {
-    let questionText = this.labelOverrides[question] || this.pageLabels[section][question];
+    let questionText =
+      this.labelOverrides[question] || this.pageLabels[section][question];
 
     let questionNumber = '';
     if (this.numberedQuestions.indexOf(question) >= 0) {
-      questionNumber = this.numberedQuestions.indexOf(question) + 1 + ". ";
+      questionNumber = this.numberedQuestions.indexOf(question) + 1 + '. ';
     }
 
     return questionNumber + questionText;
@@ -83,7 +104,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
           />
         </div>
       );
-    } else if (this.state.principalApproval === "Not required") {
+    } else if (this.state.principalApproval === 'Not required') {
       return (
         <div>
           <h4>Not required</h4>
@@ -98,9 +119,11 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
           />
         </div>
       );
-    } else { // incomplete
-      const principalApprovalUrl =
-        `${window.location.origin}/pd/application/principal_approval/${this.props.applicationGuid}`;
+    } else {
+      // incomplete
+      const principalApprovalUrl = `${
+        window.location.origin
+      }/pd/application/principal_approval/${this.props.applicationGuid}`;
 
       return (
         <div>
@@ -117,8 +140,13 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
   }
 
   renderResponsesForSection(section) {
-    if (section === 'detailViewPrincipalApproval' &&
-      !(this.state.principalApproval && this.state.principalApproval.startsWith("Complete"))) {
+    if (
+      section === 'detailViewPrincipalApproval' &&
+      !(
+        this.state.principalApproval &&
+        this.state.principalApproval.startsWith('Complete')
+      )
+    ) {
       // The principal approval section has special messaging when no principal approval has been received.
       return this.renderNoPrincipalApprovalButtons();
     } else {
@@ -129,7 +157,11 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
             questionId={question}
             answer={this.props.formResponses[question]}
             key={j}
-            layout={this.paneledQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
+            layout={
+              this.paneledQuestions.indexOf(question) >= 0
+                ? 'panel'
+                : 'lineItem'
+            }
             score={this.props.scores[question]}
             possibleScores={this.validScores[question]}
             editing={this.props.editing}
@@ -143,18 +175,14 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
   render() {
     return (
       <div>
-        {
-          Object.keys(this.sectionHeaders).map((section, i) => {
-            return (
-              <div key={i}>
-                <h3>
-                  {this.sectionHeaders[section]}
-                </h3>
-                {this.renderResponsesForSection(section)}
-              </div>
-            );
-          })
-        }
+        {Object.keys(this.sectionHeaders).map((section, i) => {
+          return (
+            <div key={i}>
+              <h3>{this.sectionHeaders[section]}</h3>
+              {this.renderResponsesForSection(section)}
+            </div>
+          );
+        })}
       </div>
     );
   }

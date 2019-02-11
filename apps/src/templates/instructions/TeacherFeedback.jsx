@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
-import moment from "moment/moment";
+import moment from 'moment/moment';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
@@ -15,7 +15,7 @@ const styles = {
   textInput: {
     margin: 10,
     display: 'block',
-    width: '90%',
+    width: '90%'
   },
   button: {
     margin: 10,
@@ -25,13 +25,13 @@ const styles = {
     color: 'red',
     margin: 10
   },
-  time:{
+  time: {
     margin: 10,
     fontStyle: 'italic',
     display: 'flex',
     alignItems: 'center'
   },
-  footer:{
+  footer: {
     display: 'flex',
     justifyContent: 'flex-start'
   },
@@ -66,7 +66,7 @@ class TeacherFeedback extends Component {
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']),
     serverLevelId: PropTypes.number,
-    teacher: PropTypes.number,
+    teacher: PropTypes.number
   };
 
   constructor(props) {
@@ -75,7 +75,7 @@ class TeacherFeedback extends Component {
     const studentId = queryString.parse(window.location.search).user_id;
 
     this.state = {
-      comment: "",
+      comment: '',
       studentId: studentId,
       latestFeedback: [],
       submitting: false,
@@ -86,21 +86,25 @@ class TeacherFeedback extends Component {
 
   componentDidMount = () => {
     $.ajax({
-      url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${this.state.studentId}&level_id=${this.props.serverLevelId}&teacher_id=${this.props.teacher}`,
+      url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${
+        this.state.studentId
+      }&level_id=${this.props.serverLevelId}&teacher_id=${this.props.teacher}`,
       method: 'GET',
-      contentType: 'application/json;charset=UTF-8',
-    }).done((data, textStatus, request) => {
-      this.setState({
-        latestFeedback: request.status === 204 ? [] : [data],
-        token: request.getResponseHeader('csrf-token'),
-        comment: request.status === 204 ? "" : data.comment
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done((data, textStatus, request) => {
+        this.setState({
+          latestFeedback: request.status === 204 ? [] : [data],
+          token: request.getResponseHeader('csrf-token'),
+          comment: request.status === 204 ? '' : data.comment
+        });
+      })
+      .fail((jqXhr, status) => {
+        this.setState({errorState: ErrorType.Load});
       });
-    }).fail((jqXhr, status) => {
-      this.setState({errorState: ErrorType.Load});
-    });
   };
 
-  onCommentChange = (event) => {
+  onCommentChange = event => {
     this.setState({comment: event.target.value});
   };
 
@@ -119,19 +123,21 @@ class TeacherFeedback extends Component {
       contentType: 'application/json;charset=UTF-8',
       dataType: 'json',
       data: JSON.stringify({teacher_feedback: payload}),
-      headers: {"X-CSRF-Token": this.state.token}
-    }).done(data => {
-      this.setState({
-        latestFeedback: [data],
-        submitting: false,
-        errorState: ErrorType.NoError
+      headers: {'X-CSRF-Token': this.state.token}
+    })
+      .done(data => {
+        this.setState({
+          latestFeedback: [data],
+          submitting: false,
+          errorState: ErrorType.NoError
+        });
+      })
+      .fail((jqXhr, status) => {
+        this.setState({
+          errorState: ErrorType.Save,
+          submitting: false
+        });
       });
-    }).fail((jqXhr, status) => {
-      this.setState({
-        errorState: ErrorType.Save,
-        submitting: false
-      });
-    });
   };
 
   render() {
@@ -139,22 +145,31 @@ class TeacherFeedback extends Component {
       return null;
     }
 
-    const latestFeedback = this.state.latestFeedback.length > 0 ? this.state.latestFeedback[0] : null;
-    const feedbackUnchanged = (latestFeedback && this.state.comment === latestFeedback.comment) ||
+    const latestFeedback =
+      this.state.latestFeedback.length > 0
+        ? this.state.latestFeedback[0]
+        : null;
+    const feedbackUnchanged =
+      (latestFeedback && this.state.comment === latestFeedback.comment) ||
       (!latestFeedback && this.state.comment.length === 0);
 
-    const buttonDisabled = feedbackUnchanged || this.state.submitting || this.state.errorState === ErrorType.Load;
+    const buttonDisabled =
+      feedbackUnchanged ||
+      this.state.submitting ||
+      this.state.errorState === ErrorType.Load;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
-    const placeholderText = latestFeedback ? latestFeedback.comment : i18n.feedbackPlaceholder();
+    const placeholderText = latestFeedback
+      ? latestFeedback.comment
+      : i18n.feedbackPlaceholder();
 
     return (
       <div>
-        {this.state.errorState === ErrorType.Load &&
+        {this.state.errorState === ErrorType.Load && (
           <span>
-            <i className="fa fa-warning" style={styles.errorIcon}/>
+            <i className="fa fa-warning" style={styles.errorIcon} />
             {i18n.feedbackLoadError()}
           </span>
-        }
+        )}
         <table >
           <thead>
             <tr>
@@ -185,6 +200,7 @@ class TeacherFeedback extends Component {
             </tr>
           </tbody>
         </table>
+        )}
         <textarea
           id="ui-test-feedback-input"
           style={styles.textInput}
@@ -201,18 +217,22 @@ class TeacherFeedback extends Component {
               color={Button.ButtonColor.blue}
               disabled={buttonDisabled}
             />
-            {this.state.errorState === ErrorType.Save &&
+            {this.state.errorState === ErrorType.Save && (
               <span>
-                <i className="fa fa-warning" style={styles.errorIcon}/>
+                <i className="fa fa-warning" style={styles.errorIcon} />
                 {i18n.feedbackSaveError()}
               </span>
-            }
+            )}
           </div>
-          {this.state.latestFeedback.length > 0 &&
+          {this.state.latestFeedback.length > 0 && (
             <div style={styles.time} id="ui-test-feedback-time">
-              {i18n.lastUpdated({time: moment.min(moment(), moment(latestFeedback.created_at)).fromNow()})}
+              {i18n.lastUpdated({
+                time: moment
+                  .min(moment(), moment(latestFeedback.created_at))
+                  .fromNow()
+              })}
             </div>
-          }
+          )}
         </div>
       </div>
     );

@@ -1279,6 +1279,7 @@
   "subtitle": "Bir görsel programlama ortamı",
   "success": "Başarılı!",
   "summaryAssessmentsOverview": "Çoktan seçmeli sorulara genel bakış",
+  "switchSection": "Bölüm değiştir:",
   "syncClever": "Clever'dan öğrencileri senkronize edin",
   "syncGoogleClassroom": "Google sınıftan öğrencileri senkronize edin",
   "syntaxErrorMsg": "Programınızda yazım hatası var. Lütfen {lineNumber} satırını çıkartınız ve tekrar deneyiniz.",

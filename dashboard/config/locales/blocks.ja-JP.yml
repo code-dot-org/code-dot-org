@@ -891,7 +891,7 @@ ja:
         text: 右に回転
       Vector_positionCenter:
         text: 中央
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': おおきさ

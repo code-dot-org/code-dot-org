@@ -159,12 +159,28 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * Select Ubuntu Server 16.04 with at least 8GiB memory and 30GiB storage size.
-     * In "Configure Security Group", under "Source", use the IP address of the machine you will be connecting from.
+     * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
+     * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
+     * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
+     * **Step 4: Storage**: Increase storage to 32GiB
+     * **Step 6: Configure Security Group**: Under "Source", use the IP address of the machine you will be connecting from. (Optional, as long as you use a key pair in the next step).
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
-  1. In the AWS EC2 dashboard, find your new instance in the list and select it. Click "Actions > Instance Settings > Attach/Replace IAM Role", then select "DeveloperEC2". Click "Apply".
-  1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY.
+  1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
+  1. Optionally, update your ssh config so that you can connect using a shorter command:
+     * move your private key to `~/.ssh/<keyname>.pem`
+     * add the following lines to ~/.ssh/config:     
+       ```
+       Host yourname-ec2
+         Hostname <public-dns-name>
+         User ubuntu
+         PreferredAuthentications publickey
+         IdentityFile ~/.ssh/<keyname>.pem
+       ```
+     * run `ssh yourname-ec2` to connect to your instance
   1. Go back up to the [overview](#overview) and run the commands there.
+  1. Once you have successfully completed `rake build`, you can connect to it as follows:
+     * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2 ~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your dashboard server is running.
+     * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
 ## Enabling JavaScript builds
 The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
@@ -187,6 +203,20 @@ This configures dashboard to rebuild apps whenever you run `rake build` and to u
 If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
 
     new_relic_license_key: <license key here>
+
+## Editor configuration
+
+We enforce linting rules for all our code, and we recommend you set up your editor to integrate with that linting.
+
+### Javascript
+
+We use [eslint](https://eslint.org/) to lint our Javascript; see [the official integrations guide](https://eslint.org/docs/user-guide/integrations) for instructions for your editor of choice.
+
+Our lint configuration uses formatting rules provided by [Prettier](https://prettier.io/). You can configure your editor to auto-format your code to meet our requirements, in addition to the error highlighting provided by eslint. See [the official integrations guide](https://prettier.io/docs/en/editors.html) for instructions for your editor of choice.
+
+### Ruby
+
+We use [RuboCop](https://docs.rubocop.org/en/latest/) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/en/latest/integration_with_other_tools/) for instructions for your editor of choice.
 
 ## More Information
 Please also see our other documentation, including our:

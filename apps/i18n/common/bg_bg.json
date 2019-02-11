@@ -1279,6 +1279,7 @@
   "subtitle": "визуална среда за програмиране",
   "success": "Успешно!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Преминаване към раздел:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Вашата програма съдържа правописна грешка. Моля, премахнете линия {lineNumber} и опитайте отново.",

@@ -64,7 +64,8 @@ class CheckboxProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
 
     // TODO:
     // enabled (p2)
@@ -81,8 +82,14 @@ class CheckboxEvents extends React.Component {
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' checked? " + getChecked("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -94,8 +101,9 @@ class CheckboxEvents extends React.Component {
   render() {
     const element = this.props.element;
     const changeName = 'Change';
-    const changeDesc = 'Triggered when the checkbox state changes both ' +
-        'from checked to unchecked and unchecked to checked.';
+    const changeDesc =
+      'Triggered when the checkbox state changes both ' +
+      'from checked to unchecked and unchecked to checked.';
 
     return (
       <div id="eventRowContainer">
@@ -105,7 +113,7 @@ class CheckboxEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -116,12 +124,11 @@ class CheckboxEvents extends React.Component {
   }
 }
 
-
 export default {
   PropertyTab: CheckboxProperties,
   EventTab: CheckboxEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('input');
     element.type = 'checkbox';
     element.style.width = '12px';
@@ -133,9 +140,9 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
     // Disable click events unless running
-    $(element).on('click', function (e) {
+    $(element).on('click', function(e) {
       if (!Applab.isRunning()) {
         element.checked = !element.checked;
       }

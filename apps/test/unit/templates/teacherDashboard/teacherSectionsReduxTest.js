@@ -1,6 +1,11 @@
 import sinon from 'sinon';
-import { assert, expect } from '../../../util/configuredChai';
-import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
+import {assert, expect} from '../../../util/configuredChai';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -34,41 +39,41 @@ import reducer, {
   isSaveInProgress,
   sectionsNameAndId,
   getSectionRows,
-  NO_SECTION,
+  NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
+import {OAuthSectionTypes} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const {
   EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
   PENDING_NEW_SECTION_ID,
-  USER_EDITABLE_SECTION_PROPS,
+  USER_EDITABLE_SECTION_PROPS
 } = __testInterface__;
 
 const sections = [
   {
     id: 11,
-    location: "/v2/sections/11",
-    name: "My Section",
-    login_type: "picture",
-    grade: "2",
-    code: "PMTKVH",
+    location: '/v2/sections/11',
+    name: 'My Section',
+    login_type: 'picture',
+    grade: '2',
+    code: 'PMTKVH',
     stage_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: null,
     course_id: 29,
     studentCount: 10,
-    hidden: false,
+    hidden: false
   },
   {
     id: 12,
-    location: "/v2/sections/12",
-    name: "My Other Section",
-    login_type: "picture",
-    grade: "11",
-    code: "DWGMFX",
+    location: '/v2/sections/12',
+    name: 'My Other Section',
+    login_type: 'picture',
+    grade: '11',
+    code: 'DWGMFX',
     stage_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
@@ -78,15 +83,15 @@ const sections = [
     },
     course_id: null,
     studentCount: 1,
-    hidden: false,
+    hidden: false
   },
   {
     id: 307,
-    location: "/v2/sections/307",
-    name: "My Third Section",
-    login_type: "email",
-    grade: "10",
-    code: "WGYXTR",
+    location: '/v2/sections/307',
+    name: 'My Third Section',
+    login_type: 'email',
+    grade: '10',
+    code: 'WGYXTR',
     stage_extras: true,
     pairing_allowed: false,
     sharing_disabled: false,
@@ -96,128 +101,129 @@ const sections = [
     },
     course_id: 29,
     studentCount: 0,
-    hidden: false,
+    hidden: false
   }
 ];
 
 const validCourses = [
   {
     id: 29,
-    name: "CS Discoveries 2017",
-    script_name: "csd-2017",
-    category: "Full Courses",
+    name: 'CS Discoveries 2017',
+    script_name: 'csd-2017',
+    category: 'Full Courses',
     position: 1,
     category_priority: 0,
     assignment_family_title: 'CS Discoveries',
     assignment_family_name: 'csd',
-    version_year: '2017',
+    version_year: '2017'
   },
   {
     id: 30,
-    name: "CS Principles 2017",
-    script_name: "csp-2017",
-    category: "Full Courses",
+    name: 'CS Principles 2017',
+    script_name: 'csp-2017',
+    category: 'Full Courses',
     position: 0,
     category_priority: 0,
     script_ids: [112, 113],
     assignment_family_title: 'CS Principles',
     assignment_family_name: 'csp',
-    version_year: '2017',
-  }];
+    version_year: '2017'
+  }
+];
 
 const validScripts = [
   {
     id: 1,
-    name: "Accelerated Course",
-    script_name: "20-hour",
-    category: "CS Fundamentals International",
+    name: 'Accelerated Course',
+    script_name: '20-hour',
+    category: 'CS Fundamentals International',
     position: 0,
-    category_priority: 3,
+    category_priority: 3
   },
   {
     id: 2,
-    name: "Hour of Code *",
-    script_name: "Hour of Code",
-    category: "Hour of Code",
+    name: 'Hour of Code *',
+    script_name: 'Hour of Code',
+    category: 'Hour of Code',
     position: 1,
-    category_priority: 2,
+    category_priority: 2
   },
   {
     id: 3,
-    name: "edit-code *",
-    script_name: "edit-code",
-    category: "other",
+    name: 'edit-code *',
+    script_name: 'edit-code',
+    category: 'other',
     position: null,
-    category_priority: 15,
+    category_priority: 15
   },
   {
     id: 4,
-    name: "events *",
-    script_name: "events",
-    category: "other",
+    name: 'events *',
+    script_name: 'events',
+    category: 'other',
     position: null,
-    category_priority: 15,
+    category_priority: 15
   },
   {
     id: 36,
-    name: "Course 3",
-    script_name: "course3",
-    category: "other",
+    name: 'Course 3',
+    script_name: 'course3',
+    category: 'other',
     position: null,
-    category_priority: 3,
+    category_priority: 3
   },
   {
     id: 112,
-    name: "Unit 1: The Internet",
-    script_name: "csp1",
+    name: 'Unit 1: The Internet',
+    script_name: 'csp1',
     category: "'16-'17 CS Principles",
     position: 0,
-    category_priority: 7,
+    category_priority: 7
   },
   {
     id: 113,
-    name: "Unit 2: Digital Information",
-    script_name: "csp2",
+    name: 'Unit 2: Digital Information',
+    script_name: 'csp2',
     category: "'16-'17 CS Principles",
     position: 1,
-    category_priority: 7,
+    category_priority: 7
   },
   {
     id: 208,
-    name: "Course A (2018)",
-    script_name: "coursea-2018",
-    category: "CS Fundamentals (2018)",
+    name: 'Course A (2018)',
+    script_name: 'coursea-2018',
+    category: 'CS Fundamentals (2018)',
     position: 0,
     category_priority: 4,
     assignment_family_title: 'Course A',
-    assignment_family_name: "coursea",
-    version_year: "2018",
+    assignment_family_name: 'coursea',
+    version_year: '2018'
   },
   {
     id: 209,
-    name: "Course A (2017)",
-    script_name: "coursea-2017",
-    category: "CS Fundamentals (2017)",
+    name: 'Course A (2017)',
+    script_name: 'coursea-2017',
+    category: 'CS Fundamentals (2017)',
     position: 0,
     category_priority: 4,
     assignment_family_title: 'Course A',
-    assignment_family_name: "coursea",
-    version_year: "2017",
-    is_stable: true,
-  },
+    assignment_family_name: 'coursea',
+    version_year: '2017',
+    is_stable: true
+  }
 ];
 
 const students = [
   {
     id: 1,
-    name: "StudentA",
-    sectionId: "id",
+    name: 'StudentA',
+    sectionId: 'id',
     sharingDisabled: false
   },
   {
     id: 2,
-    name: "StudentB",
-    sectionId: "id",
+    name: 'StudentB',
+    sectionId: 'id',
     sharingDisabled: false
   }
 ];
@@ -239,21 +245,31 @@ describe('teacherSectionsRedux', () => {
   const getState = () => store.getState();
 
   describe('setAuthProviders', () => {
-    it('sets teacher\'s auth providers', () => {
-      const action = setAuthProviders(['google_oauth2', 'clever', 'email', 'windowslive']);
+    it("sets teacher's auth providers", () => {
+      const action = setAuthProviders([
+        'google_oauth2',
+        'clever',
+        'email',
+        'windowslive'
+      ]);
       const nextState = reducer(initialState, action);
-      assert.deepEqual(nextState.providers, ['google_classroom', 'clever', 'email', 'windowslive']);
+      assert.deepEqual(nextState.providers, [
+        'google_classroom',
+        'clever',
+        'email',
+        'windowslive'
+      ]);
     });
   });
 
   describe('setRosterProvider', () => {
-    it('sets section\'s roster provider', () => {
+    it("sets section's roster provider", () => {
       const action = setRosterProvider('google_classroom');
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.rosterProvider, 'google_classroom');
     });
 
-    it('does not set section\'s roster provider if it is not an OAuth provider', () => {
+    it("does not set section's roster provider if it is not an OAuth provider", () => {
       const action = setRosterProvider('word');
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.rosterProvider, null);
@@ -273,53 +289,75 @@ describe('teacherSectionsRedux', () => {
     const nextState = reducer(initialState, action);
 
     it('combines validCourse and scripts into an object keyed by assignId', () => {
-      assert.equal(Object.keys(nextState.validAssignments).length,
-        validCourses.length + validScripts.length);
+      assert.equal(
+        Object.keys(nextState.validAssignments).length,
+        validCourses.length + validScripts.length
+      );
     });
 
     it('adds courseId/scriptId/assignId to courses', () => {
       const assignId = assignmentId(validCourses[0].id, null);
       assert.strictEqual(nextState.validAssignments[assignId].courseId, 29);
       assert.strictEqual(nextState.validAssignments[assignId].scriptId, null);
-      assert.strictEqual(nextState.validAssignments[assignId].assignId, assignId);
+      assert.strictEqual(
+        nextState.validAssignments[assignId].assignId,
+        assignId
+      );
     });
 
     it('adds courseId/scriptId/assignId to scripts', () => {
       const assignId = assignmentId(null, validScripts[0].id);
       assert.strictEqual(nextState.validAssignments[assignId].courseId, null);
       assert.strictEqual(nextState.validAssignments[assignId].scriptId, 1);
-      assert.strictEqual(nextState.validAssignments[assignId].assignId, assignId);
+      assert.strictEqual(
+        nextState.validAssignments[assignId].assignId,
+        assignId
+      );
     });
 
     it('adds path to courses', () => {
       const assignId = assignmentId(validCourses[0].id, null);
-      assert.strictEqual(nextState.validAssignments[assignId].path,
-        '/courses/csd-2017');
+      assert.strictEqual(
+        nextState.validAssignments[assignId].path,
+        '/courses/csd-2017'
+      );
     });
 
     it('adds path to scripts', () => {
       const assignId = assignmentId(null, validScripts[0].id);
-      assert.strictEqual(nextState.validAssignments[assignId].path,
-        '/s/20-hour');
+      assert.strictEqual(
+        nextState.validAssignments[assignId].path,
+        '/s/20-hour'
+      );
     });
 
     it('adds scriptAssignIds for a course', () => {
       const assignId = assignmentId(validCourses[1].id, null);
-      assert.deepEqual(nextState.validAssignments[assignId].scriptAssignIds,
-        [assignmentId(null, 112), assignmentId(null, 113)]);
+      assert.deepEqual(nextState.validAssignments[assignId].scriptAssignIds, [
+        assignmentId(null, 112),
+        assignmentId(null, 113)
+      ]);
     });
 
     it('adds assignmentFamily for a course', () => {
       const assignmentFamilies = nextState.assignmentFamilies;
       ['csd', 'csp'].forEach(courseName => {
-        assert(assignmentFamilies.find(af => af.assignment_family_name === courseName));
+        assert(
+          assignmentFamilies.find(
+            af => af.assignment_family_name === courseName
+          )
+        );
       });
     });
 
     it('infer assignment family and version for a script not in a course', () => {
       const {assignmentFamilies, validAssignments} = nextState;
       const courselessScript = validScripts[0];
-      assert(assignmentFamilies.find(af => af.assignment_family_name === courselessScript.script_name));
+      assert(
+        assignmentFamilies.find(
+          af => af.assignment_family_name === courselessScript.script_name
+        )
+      );
 
       const assignId = assignmentId(null, courselessScript.id);
       const assignment = validAssignments[assignId];
@@ -330,7 +368,9 @@ describe('teacherSectionsRedux', () => {
 
     it('sets assignment family, version and is_stable from validScripts for a script not in a course', () => {
       const {assignmentFamilies, validAssignments} = nextState;
-      assert(assignmentFamilies.find(af => af.assignment_family_name === 'coursea'));
+      assert(
+        assignmentFamilies.find(af => af.assignment_family_name === 'coursea')
+      );
 
       let assignId = assignmentId(null, validScripts[7].id);
       let assignment = validAssignments[assignId];
@@ -350,12 +390,19 @@ describe('teacherSectionsRedux', () => {
     it('does not add assignmentFamily for a script that is in a course', () => {
       const assignmentFamilies = nextState.assignmentFamilies;
       const scriptInCourse = validScripts[4];
-      assert(assignmentFamilies.find(af => af.assignment_family_name === scriptInCourse.script_name));
+      assert(
+        assignmentFamilies.find(
+          af => af.assignment_family_name === scriptInCourse.script_name
+        )
+      );
     });
   });
 
   describe('setSections', () => {
-    const startState = reducer(initialState, setValidAssignments(validCourses, validScripts));
+    const startState = reducer(
+      initialState,
+      setValidAssignments(validCourses, validScripts)
+    );
 
     it('adds an id for each section', () => {
       const action = setSections(sections);
@@ -387,7 +434,10 @@ describe('teacherSectionsRedux', () => {
     it('does set selectedSectionId if passed a single section', () => {
       const action = setSections(sections.slice(0, 1));
       const nextState = reducer(startState, action);
-      assert.strictEqual(nextState.selectedSectionId, sections[0].id.toString());
+      assert.strictEqual(
+        nextState.selectedSectionId,
+        sections[0].id.toString()
+      );
     });
 
     it('throws rather than let us destroy data', () => {
@@ -395,10 +445,12 @@ describe('teacherSectionsRedux', () => {
       const nextState = reducer(startState, action);
 
       // Second action provides same sections, but only name/id
-      const action2 = setSections(sections.map(section => ({
-        id: section.id,
-        name: section.name
-      })));
+      const action2 = setSections(
+        sections.map(section => ({
+          id: section.id,
+          name: section.name
+        }))
+      );
       assert.throws(() => {
         reducer(nextState, action2);
       });
@@ -460,7 +512,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(state.sections[sectionId], undefined);
     });
 
-    it('doesnt let you remove a non-existent section',  () => {
+    it('doesnt let you remove a non-existent section', () => {
       assert.throws(() => {
         reducer(stateWithSections, removeSection(1234));
       });
@@ -484,7 +536,7 @@ describe('teacherSectionsRedux', () => {
         code: '',
         courseId: null,
         scriptId: null,
-        hidden: false,
+        hidden: false
       });
     });
   });
@@ -496,18 +548,18 @@ describe('teacherSectionsRedux', () => {
       const state = reducer(stateWithSections, beginEditingSection(12));
       assert.deepEqual(state.sectionBeingEdited, {
         id: 12,
-        name: "My Other Section",
-        loginType: "picture",
-        grade: "11",
+        name: 'My Other Section',
+        loginType: 'picture',
+        grade: '11',
         providerManaged: false,
-        code: "DWGMFX",
+        code: 'DWGMFX',
         stageExtras: false,
         pairingAllowed: true,
         sharingDisabled: false,
         scriptId: 36,
         courseId: null,
         studentCount: 1,
-        hidden: false,
+        hidden: false
       });
     });
   });
@@ -537,26 +589,25 @@ describe('teacherSectionsRedux', () => {
     });
 
     // Check some uneditable section properties
-    [
-      'id',
-      'studentCount',
-      'code',
-      'providerManaged',
-    ].forEach(uneditableProp => {
-      it(`does not allow editing ${uneditableProp}`, () => {
-        expect(() => reducer(
-          editingNewSectionState,
-          editSectionProperties({[uneditableProp]: 'newValue'})
-        )).to.throw();
-      });
-    });
+    ['id', 'studentCount', 'code', 'providerManaged'].forEach(
+      uneditableProp => {
+        it(`does not allow editing ${uneditableProp}`, () => {
+          expect(() =>
+            reducer(
+              editingNewSectionState,
+              editSectionProperties({[uneditableProp]: 'newValue'})
+            )
+          ).to.throw();
+        });
+      }
+    );
 
     it('can edit multiple props at once', () => {
       const state = reducer(
         editingNewSectionState,
         editSectionProperties({
           name: 'newName',
-          courseId: 61,
+          courseId: 61
         })
       );
       expect(state.sectionBeingEdited.name).to.equal('newName');
@@ -564,18 +615,23 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('when editing multiple props, throws if any are uneditable', () => {
-      expect(() => reducer(
-        editingNewSectionState,
-        editSectionProperties({
-          name: 'newName',
-          courseId: 61,
-          providerManaged: false, // Uneditable!
-        })
-      )).to.throw();
+      expect(() =>
+        reducer(
+          editingNewSectionState,
+          editSectionProperties({
+            name: 'newName',
+            courseId: 61,
+            providerManaged: false // Uneditable!
+          })
+        )
+      ).to.throw();
     });
 
     it('switching to non-CSF course assignment turns off stage extras', () => {
-      let state = reducer(editingNewSectionState, setValidAssignments(validCourses, validScripts));
+      let state = reducer(
+        editingNewSectionState,
+        setValidAssignments(validCourses, validScripts)
+      );
       state = reducer(state, editSectionProperties({scriptId: 1}));
       expect(state.sectionBeingEdited.stageExtras).to.equal(false);
 
@@ -609,7 +665,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
-      hidden: false,
+      hidden: false
     };
 
     function successResponse(customProps = {}) {
@@ -617,11 +673,11 @@ describe('teacherSectionsRedux', () => {
       const existingSection = sections.find(s => s.id === editingSectionId);
       return [
         200,
-        {"Content-Type": "application/json"},
+        {'Content-Type': 'application/json'},
         JSON.stringify({
           ...(existingSection || newSectionDefaults),
           id: existingSection ? editingSectionId : 13,
-          ...customProps,
+          ...customProps
         })
       ];
     }
@@ -632,7 +688,7 @@ describe('teacherSectionsRedux', () => {
       return getState().teacherSections;
     }
 
-    beforeEach(function () {
+    beforeEach(function() {
       // Stub server responses
       server = sinon.fakeServer.create();
 
@@ -641,7 +697,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(setSections(sections));
     });
 
-    afterEach(function () {
+    afterEach(function() {
       server.restore();
     });
 
@@ -720,16 +776,22 @@ describe('teacherSectionsRedux', () => {
     it('adds a new section to the sections map on success', () => {
       const originalSections = state().sections;
       store.dispatch(beginEditingNewSection());
-      store.dispatch(editSectionProperties({
-        name: 'Aquarius PM Block 2',
-        loginType: 'picture',
-        grade: '3',
-      }));
-      server.respondWith('POST', '/dashboardapi/sections', successResponse({
-        name: 'Aquarius PM Block 2',
-        login_type: 'picture',
-        grade: '3',
-      }));
+      store.dispatch(
+        editSectionProperties({
+          name: 'Aquarius PM Block 2',
+          loginType: 'picture',
+          grade: '3'
+        })
+      );
+      server.respondWith(
+        'POST',
+        '/dashboardapi/sections',
+        successResponse({
+          name: 'Aquarius PM Block 2',
+          login_type: 'picture',
+          grade: '3'
+        })
+      );
 
       store.dispatch(finishEditingSection());
       expect(state().sections).to.equal(originalSections);
@@ -750,7 +812,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseId: null,
           scriptId: null,
-          hidden: false,
+          hidden: false
         }
       });
     });
@@ -761,8 +823,11 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(editSectionProperties({grade: 'K'}));
 
       // Set up matching server response
-      server.respondWith('PATCH', `/dashboardapi/sections/${sectionId}`,
-        successResponse({grade: 'K'}));
+      server.respondWith(
+        'PATCH',
+        `/dashboardapi/sections/${sectionId}`,
+        successResponse({grade: 'K'})
+      );
 
       store.dispatch(finishEditingSection());
       expect(state().sectionBeingEdited).to.have.property('grade', 'K');
@@ -800,18 +865,18 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
-      hidden: false,
+      hidden: false
     };
 
     function successResponse(sectionId, customProps = {}) {
       const existingSection = sections.find(s => s.id === sectionId);
       return [
         200,
-        {"Content-Type": "application/json"},
+        {'Content-Type': 'application/json'},
         JSON.stringify({
           ...(existingSection || newSectionDefaults),
           id: existingSection ? sectionId : 13,
-          ...customProps,
+          ...customProps
         })
       ];
     }
@@ -820,7 +885,7 @@ describe('teacherSectionsRedux', () => {
       return getState().teacherSections;
     }
 
-    beforeEach(function () {
+    beforeEach(function() {
       // Stub server responses
       server = sinon.fakeServer.create();
 
@@ -829,15 +894,18 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(setSections(sections));
     });
 
-    afterEach(function () {
+    afterEach(function() {
       server.restore();
     });
 
     it('sets and clears saveInProgress', () => {
       const sectionId = 12;
       server.autoRespond = true;
-      server.respondWith('PATCH', `/dashboardapi/sections/${sectionId}`,
-        successResponse(sectionId));
+      server.respondWith(
+        'PATCH',
+        `/dashboardapi/sections/${sectionId}`,
+        successResponse(sectionId)
+      );
 
       expect(isSaveInProgress(getState())).to.be.false;
 
@@ -851,8 +919,11 @@ describe('teacherSectionsRedux', () => {
     it('updates an edited section in the section map on success', () => {
       const sectionId = 12;
       server.autoRespond = true;
-      server.respondWith('PATCH', `/dashboardapi/sections/${sectionId}`,
-        successResponse(sectionId, {login_type: 'word'}));
+      server.respondWith(
+        'PATCH',
+        `/dashboardapi/sections/${sectionId}`,
+        successResponse(sectionId, {login_type: 'word'})
+      );
 
       expect(state().sections[sectionId].loginType).to.equal('picture');
 
@@ -869,7 +940,7 @@ describe('teacherSectionsRedux', () => {
     function successResponse(response = []) {
       return [
         200,
-        {"Content-Type": "application/json"},
+        {'Content-Type': 'application/json'},
         JSON.stringify(response)
       ];
     }
@@ -880,12 +951,12 @@ describe('teacherSectionsRedux', () => {
       return getState().teacherSections;
     }
 
-    beforeEach(function () {
+    beforeEach(function() {
       // Stub server responses
       server = sinon.fakeServer.create();
     });
 
-    afterEach(function () {
+    afterEach(function() {
       server.restore();
     });
 
@@ -900,8 +971,16 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse());
-      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse());
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_scripts',
+        successResponse()
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/id/students',
+        successResponse()
+      );
       server.respond();
 
       return promise.then(() => {
@@ -921,12 +1000,9 @@ describe('teacherSectionsRedux', () => {
         expect(console.error).to.have.been.calledOnce;
         expect(console.error.getCall(0).args[0])
           .to.include('url: /dashboardapi/sections')
-          .and
-          .to.include('status: 500')
-          .and
-          .to.include('statusText: Internal Server Error')
-          .and
-          .to.include('responseText: CustomErrorBody');
+          .and.to.include('status: 500')
+          .and.to.include('statusText: Internal Server Error')
+          .and.to.include('responseText: CustomErrorBody');
       });
     });
 
@@ -935,9 +1011,17 @@ describe('teacherSectionsRedux', () => {
       expect(state().sections).to.deep.equal({});
 
       expect(server.requests).to.have.length(3);
-      server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections',
+        successResponse(sections)
+      );
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse());
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_scripts',
+        successResponse()
+      );
       server.respond();
 
       return promise.then(() => {
@@ -951,8 +1035,16 @@ describe('teacherSectionsRedux', () => {
 
       expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
-      server.respondWith('GET', '/dashboardapi/courses', successResponse(validCourses));
-      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse(validScripts));
+      server.respondWith(
+        'GET',
+        '/dashboardapi/courses',
+        successResponse(validCourses)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_scripts',
+        successResponse(validScripts)
+      );
       server.respond();
 
       return promise.then(() => {
@@ -969,12 +1061,22 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse());
-      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse(students));
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_scripts',
+        successResponse()
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/id/students',
+        successResponse(students)
+      );
       server.respond();
 
       return promise.then(() => {
-        expect(Object.keys(state().selectedStudents)).to.have.length(students.length);
+        expect(Object.keys(state().selectedStudents)).to.have.length(
+          students.length
+        );
       });
     });
   });
@@ -982,17 +1084,17 @@ describe('teacherSectionsRedux', () => {
   describe('sectionFromServerSection', () => {
     const serverSection = {
       id: 11,
-      location: "/v2/sections/11",
-      name: "My Section",
-      login_type: "picture",
-      grade: "2",
-      code: "PMTKVH",
+      location: '/v2/sections/11',
+      name: 'My Section',
+      login_type: 'picture',
+      grade: '2',
+      code: 'PMTKVH',
       stage_extras: false,
       pairing_allowed: true,
       script: null,
       course_id: 29,
       studentCount: 10,
-      hidden: false,
+      hidden: false
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1004,7 +1106,10 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.code, serverSection.code);
       assert.strictEqual(section.stage_extras, serverSection.stageExtras);
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
-      assert.strictEqual(section.sharing_disabled, serverSection.sharingDisabled);
+      assert.strictEqual(
+        section.sharing_disabled,
+        serverSection.sharingDisabled
+      );
       assert.strictEqual(section.course_id, serverSection.courseId);
       assert.strictEqual(section.hidden, serverSection.hidden);
     });
@@ -1030,7 +1135,10 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('assignmentNames/assignmentPaths', () => {
-    const stateWithAssigns = reducer(initialState, setValidAssignments(validCourses, validScripts));
+    const stateWithAssigns = reducer(
+      initialState,
+      setValidAssignments(validCourses, validScripts)
+    );
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
     const stateWithUnassignedSection = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
@@ -1038,7 +1146,7 @@ describe('teacherSectionsRedux', () => {
       serverSection: {
         ...sections[1],
         course_id: null,
-        script: null,
+        script: null
       }
     });
     const stateWithInvalidScriptAssignment = reducer(stateWithSections, {
@@ -1047,7 +1155,7 @@ describe('teacherSectionsRedux', () => {
       serverSection: {
         ...sections[1],
         course_id: null,
-        script: {id: 35, name: "netsim"},
+        script: {id: 35, name: 'netsim'}
       }
     });
     const stateWithInvalidCourseAssignment = reducer(stateWithSections, {
@@ -1056,63 +1164,95 @@ describe('teacherSectionsRedux', () => {
       serverSection: {
         ...sections[1],
         course_id: 9999,
-        script: null,
+        script: null
       }
     });
 
-    const assignedSection = stateWithUnassignedSection.sections["11"];
-    const unassignedSection = stateWithUnassignedSection.sections["12"];
-    const assignedSectionWithUnit = stateWithUnassignedSection.sections["307"];
-    const invalidScriptSection = stateWithInvalidScriptAssignment.sections['12'];
-    const invalidCourseSection = stateWithInvalidCourseAssignment.sections['12'];
+    const assignedSection = stateWithUnassignedSection.sections['11'];
+    const unassignedSection = stateWithUnassignedSection.sections['12'];
+    const assignedSectionWithUnit = stateWithUnassignedSection.sections['307'];
+    const invalidScriptSection =
+      stateWithInvalidScriptAssignment.sections['12'];
+    const invalidCourseSection =
+      stateWithInvalidCourseAssignment.sections['12'];
 
     it('assignmentNames returns the name if the section is assigned a course/script', () => {
-      const names = assignmentNames(stateWithUnassignedSection.validAssignments, assignedSection);
+      const names = assignmentNames(
+        stateWithUnassignedSection.validAssignments,
+        assignedSection
+      );
       assert.deepEqual(names, ['CS Discoveries 2017']);
     });
 
     it('assignmentNames returns the names of course and script if assigned both', () => {
-      const names = assignmentNames(stateWithUnassignedSection.validAssignments, assignedSectionWithUnit);
+      const names = assignmentNames(
+        stateWithUnassignedSection.validAssignments,
+        assignedSectionWithUnit
+      );
       assert.deepEqual(names, ['CS Discoveries 2017', 'Unit 1: The Internet']);
     });
 
     it('assignmentName returns empty array if unassigned', () => {
-      const names = assignmentNames(stateWithUnassignedSection.validAssignments, unassignedSection);
+      const names = assignmentNames(
+        stateWithUnassignedSection.validAssignments,
+        unassignedSection
+      );
       assert.deepEqual(names, []);
     });
 
     it('assignmentName returns empty array if assigned script is not a valid assignment', () => {
-      const names = assignmentNames(stateWithInvalidScriptAssignment.validAssignments, invalidScriptSection);
+      const names = assignmentNames(
+        stateWithInvalidScriptAssignment.validAssignments,
+        invalidScriptSection
+      );
       assert.deepEqual(names, []);
     });
 
     it('assignmentName returns empty array if assigned course is not a valid assignment', () => {
-      const names = assignmentNames(stateWithInvalidCourseAssignment.validAssignments, invalidCourseSection);
+      const names = assignmentNames(
+        stateWithInvalidCourseAssignment.validAssignments,
+        invalidCourseSection
+      );
       assert.deepEqual(names, []);
     });
 
     it('assignmentPaths returns the path if the section is assigned a course/script', () => {
-      const paths = assignmentPaths(stateWithUnassignedSection.validAssignments, assignedSection);
+      const paths = assignmentPaths(
+        stateWithUnassignedSection.validAssignments,
+        assignedSection
+      );
       assert.deepEqual(paths, ['/courses/csd-2017']);
     });
 
     it('assignmentPaths returns the paths of course and script if assigned both', () => {
-      const paths = assignmentPaths(stateWithUnassignedSection.validAssignments, assignedSectionWithUnit);
+      const paths = assignmentPaths(
+        stateWithUnassignedSection.validAssignments,
+        assignedSectionWithUnit
+      );
       assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
-      const paths = assignmentPaths(stateWithUnassignedSection, unassignedSection);
+      const paths = assignmentPaths(
+        stateWithUnassignedSection,
+        unassignedSection
+      );
       assert.deepEqual(paths, []);
     });
 
     it('assignmentPaths returns empty array if assigned script is not a valid assignment', () => {
-      const paths = assignmentPaths(stateWithInvalidScriptAssignment, invalidScriptSection);
+      const paths = assignmentPaths(
+        stateWithInvalidScriptAssignment,
+        invalidScriptSection
+      );
       assert.deepEqual(paths, []);
     });
 
     it('assignmentPaths returns empty array if assigned course is not a valid assignment', () => {
-      const paths = assignmentPaths(stateWithInvalidCourseAssignment, invalidCourseSection);
+      const paths = assignmentPaths(
+        stateWithInvalidCourseAssignment,
+        invalidCourseSection
+      );
       assert.deepEqual(paths, []);
     });
   });
@@ -1169,11 +1309,13 @@ describe('teacherSectionsRedux', () => {
       server = sinon.fakeServer.create();
       // set up some default success responses
       server.respondWith(
-        'GET', '/dashboardapi/google_classrooms',
+        'GET',
+        '/dashboardapi/google_classrooms',
         successResponse()
       );
       server.respondWith(
-        'GET', '/dashboardapi/clever_classrooms',
+        'GET',
+        '/dashboardapi/clever_classrooms',
         successResponse()
       );
     });
@@ -1181,18 +1323,19 @@ describe('teacherSectionsRedux', () => {
 
     const successResponse = (body = {}) => [
       200,
-      {"Content-Type": "application/json"},
+      {'Content-Type': 'application/json'},
       JSON.stringify(body)
     ];
 
     const failureResponse = [500, {}, 'test-failure-body'];
 
-    const withGoogle = () => store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
-    const withClever = () => store.dispatch(setRosterProvider(OAuthSectionTypes.clever));
+    const withGoogle = () =>
+      store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () =>
+      store.dispatch(setRosterProvider(OAuthSectionTypes.clever));
 
     it('throws if no oauth provider has been set', () => {
-      return expect(store.dispatch(beginImportRosterFlow()))
-        .to.be.rejected;
+      return expect(store.dispatch(beginImportRosterFlow())).to.be.rejected;
     });
 
     it('does nothing if the roster dialog was already open', () => {
@@ -1219,7 +1362,9 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(beginImportRosterFlow());
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
-      expect(server.requests[0].url).to.equal('/dashboardapi/google_classrooms');
+      expect(server.requests[0].url).to.equal(
+        '/dashboardapi/google_classrooms'
+      );
       server.respond();
       return expect(promise).to.be.fulfilled;
     });
@@ -1229,7 +1374,9 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(beginImportRosterFlow());
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
-      expect(server.requests[0].url).to.equal('/dashboardapi/clever_classrooms');
+      expect(server.requests[0].url).to.equal(
+        '/dashboardapi/clever_classrooms'
+      );
       server.respond();
       return expect(promise).to.be.fulfilled;
     });
@@ -1237,7 +1384,8 @@ describe('teacherSectionsRedux', () => {
     it('sets the classroom list on success', () => {
       withGoogle();
       server.respondWith(
-        'GET', '/dashboardapi/google_classrooms',
+        'GET',
+        '/dashboardapi/google_classrooms',
         successResponse({courses: [1, 2, 3]})
       );
       expect(getState().teacherSections.classrooms).to.be.null;
@@ -1248,9 +1396,7 @@ describe('teacherSectionsRedux', () => {
       expect(getState().teacherSections.loadError).to.be.null;
 
       server.respond();
-      expect(getState().teacherSections.classrooms).to.deep.equal(
-        [1, 2, 3]
-      );
+      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       expect(getState().teacherSections.loadError).to.be.null;
       return expect(promise).to.be.fulfilled;
     });
@@ -1258,7 +1404,8 @@ describe('teacherSectionsRedux', () => {
     it('sets the loadError on failure', () => {
       withGoogle();
       server.respondWith(
-        'GET', '/dashboardapi/google_classrooms',
+        'GET',
+        '/dashboardapi/google_classrooms',
         failureResponse
       );
       expect(getState().teacherSections.classrooms).to.be.null;
@@ -1272,7 +1419,7 @@ describe('teacherSectionsRedux', () => {
       expect(getState().teacherSections.classrooms).to.be.null;
       expect(getState().teacherSections.loadError).to.deep.equal({
         status: 500,
-        message: 'Unknown error.',
+        message: 'Unknown error.'
       });
       return expect(promise).to.be.rejected;
     });
@@ -1287,7 +1434,10 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('clears the classroom list', () => {
-      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
+      store.dispatch({
+        type: IMPORT_ROSTER_FLOW_LIST_LOADED,
+        classrooms: [1, 2, 3]
+      });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(cancelImportRosterFlow());
       expect(getState().teacherSections.classrooms).to.be.null;
@@ -1306,29 +1456,48 @@ describe('teacherSectionsRedux', () => {
       // difficult to trigger the fake responses at the right times.
       server.respondImmediately = true;
       // set up some default success responses
-      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({}));
-      server.respondWith('GET', `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({}));
+      server.respondWith(
+        'GET',
+        `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`,
+        successResponse({})
+      );
+      server.respondWith(
+        'GET',
+        `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`,
+        successResponse({})
+      );
       server.respondWith('GET', '/dashboardapi/sections', successResponse([]));
       server.respondWith('GET', '/dashboardapi/courses', successResponse([]));
-      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse([]));
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_scripts',
+        successResponse([])
+      );
     });
     afterEach(() => server.restore());
 
     const successResponse = (body = {}) => [
       200,
-      {"Content-Type": "application/json"},
+      {'Content-Type': 'application/json'},
       JSON.stringify(body)
     ];
 
-    const withGoogle = () => store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
-    const withClever = () => store.dispatch(setRosterProvider(OAuthSectionTypes.clever));
+    const withGoogle = () =>
+      store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () =>
+      store.dispatch(setRosterProvider(OAuthSectionTypes.clever));
 
     it('immediately clears the classroom list', () => {
       withGoogle();
-      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
+      store.dispatch({
+        type: IMPORT_ROSTER_FLOW_LIST_LOADED,
+        classrooms: [1, 2, 3]
+      });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
 
-      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
       expect(getState().teacherSections.classrooms).to.be.null;
 
       return expect(promise).to.be.fulfilled;
@@ -1336,24 +1505,30 @@ describe('teacherSectionsRedux', () => {
 
     it('uses one api for Google Classroom', () => {
       withGoogle();
-      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
 
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
-      expect(server.requests[0].url)
-        .to.equal('/dashboardapi/import_google_classroom?courseId=test-course-id&courseName=test-course-name');
+      expect(server.requests[0].url).to.equal(
+        '/dashboardapi/import_google_classroom?courseId=test-course-id&courseName=test-course-name'
+      );
 
       return expect(promise).to.be.fulfilled;
     });
 
     it('uses a different api for Clever', () => {
       withClever();
-      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
 
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
-      expect(server.requests[0].url)
-        .to.equal('/dashboardapi/import_clever_classroom?courseId=test-course-id&courseName=test-course-name');
+      expect(server.requests[0].url).to.equal(
+        '/dashboardapi/import_clever_classroom?courseId=test-course-id&courseName=test-course-name'
+      );
 
       return expect(promise).to.be.fulfilled;
     });
@@ -1363,7 +1538,9 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(isRosterDialogOpen(getState())).to.be.true;
 
-      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
       expect(isRosterDialogOpen(getState())).to.be.true;
 
       return expect(promise).to.be.fulfilled.then(() => {
@@ -1373,13 +1550,19 @@ describe('teacherSectionsRedux', () => {
 
     it('reloads the section data on success', () => {
       // Set up custom server sections response
-      server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections',
+        successResponse(sections)
+      );
 
       withClever();
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(getState().teacherSections.sections).to.deep.equal({});
 
-      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
       return expect(promise).to.be.fulfilled.then(() => {
         expect(server.requests).to.have.length(4);
         expect(server.requests[1].method).to.equal('GET');
@@ -1387,28 +1570,38 @@ describe('teacherSectionsRedux', () => {
         expect(server.requests[2].method).to.equal('GET');
         expect(server.requests[2].url).to.equal('/dashboardapi/courses');
         expect(server.requests[3].method).to.equal('GET');
-        expect(server.requests[3].url).to.equal('/dashboardapi/sections/valid_scripts');
-        expect(Object.keys(getState().teacherSections.sections))
-          .to.have.length(sections.length);
+        expect(server.requests[3].url).to.equal(
+          '/dashboardapi/sections/valid_scripts'
+        );
+        expect(Object.keys(getState().teacherSections.sections)).to.have.length(
+          sections.length
+        );
       });
     });
 
     it('starts editing the new section on success', () => {
       // Set up custom section import response
-      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({
-        id: 1111,
-      }));
+      server.respondWith(
+        'GET',
+        `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`,
+        successResponse({
+          id: 1111
+        })
+      );
       // Set up custom section load response to simulate the new section
-      server.respondWith('GET', '/dashboardapi/sections', successResponse([
-        ...sections,
-        {id: 1111}
-      ]));
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections',
+        successResponse([...sections, {id: 1111}])
+      );
 
       withGoogle();
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(getState().teacherSections.sectionBeingEdited).to.be.null;
 
-      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
       return expect(promise).to.be.fulfilled.then(() => {
         expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
@@ -1451,16 +1644,18 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('the current user oauth provider if the section is provider managed', () => {
-      store.dispatch(setSections([
-        {
-          id: 11,
-          name: 'google test section',
-          login_type: 'google_classroom',
-          code: 'G-123456',
-          studentCount: 10,
-          providerManaged: true,
-        },
-      ]));
+      store.dispatch(
+        setSections([
+          {
+            id: 11,
+            name: 'google test section',
+            login_type: 'google_classroom',
+            code: 'G-123456',
+            studentCount: 10,
+            providerManaged: true
+          }
+        ])
+      );
       expect(sectionProvider(getState(), 11)).to.equal('google_classroom');
     });
   });
@@ -1476,16 +1671,18 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('true if the section is provider managed', () => {
-      store.dispatch(setSections([
-        {
-          id: 11,
-          name: 'google test section',
-          login_type: 'google_classroom',
-          code: 'G-123456',
-          studentCount: 10,
-          providerManaged: true,
-        },
-      ]));
+      store.dispatch(
+        setSections([
+          {
+            id: 11,
+            name: 'google test section',
+            login_type: 'google_classroom',
+            code: 'G-123456',
+            studentCount: 10,
+            providerManaged: true
+          }
+        ])
+      );
       expect(isSectionProviderManaged(getState(), 11)).to.be.true;
     });
   });
@@ -1493,16 +1690,20 @@ describe('teacherSectionsRedux', () => {
   describe('sectionsNameAndId', () => {
     it('returns name and id for each section', () => {
       const state = reducer(undefined, setSections(sections));
-      const expected = [{
-        id: 11,
-        name: 'My Section'
-      }, {
-        id: 12,
-        name: 'My Other Section'
-      }, {
-        id: 307,
-        name: 'My Third Section'
-      }];
+      const expected = [
+        {
+          id: 11,
+          name: 'My Section'
+        },
+        {
+          id: 12,
+          name: 'My Other Section'
+        },
+        {
+          id: 307,
+          name: 'My Third Section'
+        }
+      ];
       assert.deepEqual(sectionsNameAndId(state), expected);
     });
   });
@@ -1510,32 +1711,38 @@ describe('teacherSectionsRedux', () => {
   describe('getSectionRows', () => {
     it('returns appropriate section data', () => {
       const sectionState = reducer(initialState, setSections(sections));
-      const state = reducer(sectionState, setValidAssignments(validCourses, validScripts));
+      const state = reducer(
+        sectionState,
+        setValidAssignments(validCourses, validScripts)
+      );
 
       const data = getSectionRows({teacherSections: state}, [11, 12]);
-      const expected = [{
-        id: 11,
-        name: 'My Section',
-        loginType: 'picture',
-        studentCount: 10,
-        code: 'PMTKVH',
-        grade: '2',
-        providerManaged: false,
-        hidden: false,
-        assignmentNames: ['CS Discoveries 2017'],
-        assignmentPaths: ['/courses/csd-2017']
-      }, {
-        id: 12,
-        name: 'My Other Section',
-        loginType: 'picture',
-        studentCount: 1,
-        code: 'DWGMFX',
-        grade: '11',
-        providerManaged: false,
-        hidden: false,
-        assignmentNames: ['Course 3'],
-        assignmentPaths: ['/s/course3']
-      }];
+      const expected = [
+        {
+          id: 11,
+          name: 'My Section',
+          loginType: 'picture',
+          studentCount: 10,
+          code: 'PMTKVH',
+          grade: '2',
+          providerManaged: false,
+          hidden: false,
+          assignmentNames: ['CS Discoveries 2017'],
+          assignmentPaths: ['/courses/csd-2017']
+        },
+        {
+          id: 12,
+          name: 'My Other Section',
+          loginType: 'picture',
+          studentCount: 1,
+          code: 'DWGMFX',
+          grade: '11',
+          providerManaged: false,
+          hidden: false,
+          assignmentNames: ['Course 3'],
+          assignmentPaths: ['/s/course3']
+        }
+      ];
       assert.deepEqual(data, expected);
     });
   });

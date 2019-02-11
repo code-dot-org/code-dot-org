@@ -401,7 +401,7 @@ km:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ទំហំ

@@ -13,13 +13,20 @@ export default storybook => {
           <SingleChoiceResponses
             question="What is your favorite pizza topping?"
             answers={{
-              'Peppers': 4,
-              'Onions': 13,
-              'Mushrooms': 2,
-              'Olives': 2,
-              'Sausage': 3
+              Peppers: 4,
+              Onions: 13,
+              Mushrooms: 2,
+              Olives: 2,
+              Sausage: 3
             }}
-            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples']}
+            possibleAnswers={[
+              'Peppers',
+              'Onions',
+              'Mushrooms',
+              'Sausage',
+              'Olives',
+              'Pineapples'
+            ]}
             answerType="selectText"
           />
         )
@@ -28,18 +35,27 @@ export default storybook => {
         name: 'Single choice responses with others',
         story: () => (
           <SingleChoiceResponses
-            question={"What is your favorite pizza topping? Please provide the topping if it is not listed here"}
+            question={
+              'What is your favorite pizza topping? Please provide the topping if it is not listed here'
+            }
             answers={{
-              'Peppers': 4,
-              'Onions': 13,
-              'Mushrooms': 2,
-              'Olives': 2,
-              'Sausage': 3,
-              'Corn': 1,
+              Peppers: 4,
+              Onions: 13,
+              Mushrooms: 2,
+              Olives: 2,
+              Sausage: 3,
+              Corn: 1,
               'Anything but pineapples lol': 1,
               'Kalamata Olives specifically': 1
             }}
-            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples']}
+            possibleAnswers={[
+              'Peppers',
+              'Onions',
+              'Mushrooms',
+              'Sausage',
+              'Olives',
+              'Pineapples'
+            ]}
             otherText={'Other toppings'}
             answerType="selectText"
           />
@@ -49,7 +65,7 @@ export default storybook => {
         name: 'Single choice selectValue response',
         story: () => (
           <SingleChoiceResponses
-            question={"What do you think about pineapples on pizza?"}
+            question={'What do you think about pineapples on pizza?'}
             answers={{
               1: 10,
               2: 5,
@@ -58,7 +74,13 @@ export default storybook => {
               5: 0
             }}
             answerType="selectValue"
-            possibleAnswers={['Abhorrent', 'Not good', 'Ambivalent', 'Good', 'Delicious']}
+            possibleAnswers={[
+              'Abhorrent',
+              'Not good',
+              'Ambivalent',
+              'Good',
+              'Delicious'
+            ]}
           />
         )
       },
@@ -91,13 +113,20 @@ export default storybook => {
             perFacilitator={true}
             answers={{
               Tom: {
-                'Peppers': 4,
-                'Mushrooms': 2,
-                'Olives': 2,
-                'Sausage': 3
+                Peppers: 4,
+                Mushrooms: 2,
+                Olives: 2,
+                Sausage: 3
               }
             }}
-            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples']}
+            possibleAnswers={[
+              'Peppers',
+              'Onions',
+              'Mushrooms',
+              'Sausage',
+              'Olives',
+              'Pineapples'
+            ]}
             answerType="selectText"
           />
         )
@@ -110,22 +139,29 @@ export default storybook => {
             perFacilitator={true}
             answers={{
               Tom: {
-                'Peppers': 4,
-                'Mushrooms': 2,
-                'Olives': 2,
-                'Sausage': 3
+                Peppers: 4,
+                Mushrooms: 2,
+                Olives: 2,
+                Sausage: 3
               },
               Dick: {
-                'Peppers': 4,
-                'Onions': 13,
-                'Sausage': 3
+                Peppers: 4,
+                Onions: 13,
+                Sausage: 3
               },
               Harry: {
-                'Pineapples': 5,
-                'Onions': 5,
+                Pineapples: 5,
+                Onions: 5
               }
             }}
-            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples']}
+            possibleAnswers={[
+              'Peppers',
+              'Onions',
+              'Mushrooms',
+              'Sausage',
+              'Olives',
+              'Pineapples'
+            ]}
             answerType="selectText"
           />
         )
@@ -134,32 +170,41 @@ export default storybook => {
         name: 'Single choice responses with others',
         story: () => (
           <SingleChoiceResponses
-            question={"What is your favorite pizza topping? Please provide the topping if it is not listed here"}
+            question={
+              'What is your favorite pizza topping? Please provide the topping if it is not listed here'
+            }
             perFacilitator={true}
             answers={{
               Tom: {
-                'Peppers': 4,
-                'Onions': 13,
-                'Mushrooms': 2,
-                'Olives': 2,
-                'Sausage': 3,
-                'Corn': 1,
+                Peppers: 4,
+                Onions: 13,
+                Mushrooms: 2,
+                Olives: 2,
+                Sausage: 3,
+                Corn: 1,
                 'Anything but pineapples lol': 1,
                 'Kalamata Olives specifically': 1
               },
               Dick: {
-                'Pepperoni and literally nothing else': 1,
+                'Pepperoni and literally nothing else': 1
               },
               Harry: {
-                'Peppers': 16,
-                'Onions': 17,
-                'Mushrooms': 8,
-                'Sausage': 16,
-                'Olives': 12,
-                'Pineapples': 14,
+                Peppers: 16,
+                Onions: 17,
+                Mushrooms: 8,
+                Sausage: 16,
+                Olives: 12,
+                Pineapples: 14
               }
             }}
-            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples']}
+            possibleAnswers={[
+              'Peppers',
+              'Onions',
+              'Mushrooms',
+              'Sausage',
+              'Olives',
+              'Pineapples'
+            ]}
             otherText={'Other toppings'}
             answerType="selectText"
           />
@@ -169,13 +214,13 @@ export default storybook => {
         name: 'Single choice selectValue response',
         story: () => (
           <SingleChoiceResponses
-            question={"What do you think about pineapples on pizza?"}
+            question={'What do you think about pineapples on pizza?'}
             perFacilitator={true}
             answers={{
               Tom: {
                 1: 10,
                 2: 5,
-                3: 1,
+                3: 1
               },
               Dick: {
                 3: 1,
@@ -191,7 +236,13 @@ export default storybook => {
               }
             }}
             answerType="selectValue"
-            possibleAnswers={['Abhorrent', 'Not good', 'Ambivalent', 'Good', 'Delicious']}
+            possibleAnswers={[
+              'Abhorrent',
+              'Not good',
+              'Ambivalent',
+              'Good',
+              'Delicious'
+            ]}
           />
         )
       },
@@ -205,7 +256,7 @@ export default storybook => {
               Tom: {
                 1: 10,
                 2: 5,
-                3: 1,
+                3: 1
               },
               Dick: {
                 3: 1,

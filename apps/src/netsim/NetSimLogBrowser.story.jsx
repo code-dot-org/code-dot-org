@@ -5,11 +5,11 @@ import Packet from './Packet';
 import {createUuid} from '@cdo/apps/utils';
 import {withInfo} from '@storybook/addon-info';
 
-const range = function (i) {
+const range = function(i) {
   return new Array(i).fill().map((_, i) => i);
 };
 
-const randInt = function (i) {
+const randInt = function(i) {
   return Math.floor(i * Math.random());
 };
 
@@ -23,9 +23,12 @@ export default storybook => {
     logBrowserHeader_showTrafficToMe: () => 'show traffic to me',
     logBrowserHeader_all: () => 'All Router Logs',
     logBrowserHeader_mine: () => 'My Router Logs',
-    logBrowserHeader_trafficFromAddress: ({address}) => ` - Traffic From ${address}`,
-    logBrowserHeader_trafficToAddress: ({address}) => ` - Traffic To ${address}`,
-    logBrowserHeader_trafficToAndFromAddress: ({address}) => ` - Traffic To and From ${address}`,
+    logBrowserHeader_trafficFromAddress: ({address}) =>
+      ` - Traffic From ${address}`,
+    logBrowserHeader_trafficToAddress: ({address}) =>
+      ` - Traffic To ${address}`,
+    logBrowserHeader_trafficToAndFromAddress: ({address}) =>
+      ` - Traffic To and From ${address}`,
     logBrowserHeader_sentByAnyone: () => 'sent by anyone',
     logBrowserHeader_sentByName: ({name}) => `sent by ${name}`,
     logBrowserHeader_teacherView: () => 'Teacher View'
@@ -43,22 +46,24 @@ export default storybook => {
         consectetur adipiscing elit. Nam leo elit, tristique ac hendrerit vitae,
         porta quis diam. Cras sit amet diam dapibus, ullamcorper nibh vitae,
         luctus nisl. Curabitur fermentum accumsan commodo. Donec nec eros a
-        lorem tincidunt sodales ac sit amet odio. Duis eget ornare ante.`.split(/\s+/g);
+        lorem tincidunt sodales ac sit amet odio. Duis eget ornare ante.`.split(
+    /\s+/g
+  );
 
   const sampleData = new range(100).map(() => {
     const routerNum = 1 + randInt(10);
     const packetCount = 1 + randInt(4);
     const packetNum = 1 + randInt(packetCount);
     return {
-      'uuid': createUuid(),
-      'timestamp': Date.now() - randInt(600000),
+      uuid: createUuid(),
+      timestamp: Date.now() - randInt(600000),
       'sent-by': lipsumWords[randInt(lipsumWords.length)],
       'logged-by': `Router ${routerNum}`,
-      'status': Math.random() < 0.8 ? 'Success' : 'Dropped',
+      status: Math.random() < 0.8 ? 'Success' : 'Dropped',
       'from-address': `${routerNum}.${1 + randInt(13)}`,
       'to-address': `${routerNum}.${1 + randInt(13)}`,
       'packet-info': `${packetNum} of ${packetCount}`,
-      'message': range(randInt(20))
+      message: range(randInt(20))
         .map(() => lipsumWords[randInt(lipsumWords.length)])
         .join(' ')
     };
@@ -70,22 +75,27 @@ export default storybook => {
     .storiesOf('NetSimLogBrowser', module)
     .add(
       'No filtering allowed',
-      withInfo(`Here's what the dialog looks like with minimum settings.`)(() =>
-        <div id="netsim">
-          <NetSimLogBrowser
-            isOpen
-            i18n={i18n}
-            setRouterLogMode={() => null}
-            setTrafficFilter={() => null}
-            headerFields={simplePacket}
-            logRows={sampleData}
-            senderNames={senderNames}
-          />
-        </div>
-      ))
+      withInfo(`Here's what the dialog looks like with minimum settings.`)(
+        () => (
+          <div id="netsim">
+            <NetSimLogBrowser
+              isOpen
+              i18n={i18n}
+              setRouterLogMode={() => null}
+              setTrafficFilter={() => null}
+              headerFields={simplePacket}
+              logRows={sampleData}
+              senderNames={senderNames}
+            />
+          </div>
+        )
+      )
+    )
     .add(
       'Student filters',
-      withInfo(`Here's what the dialog looks like with filters and more columns.`)(() =>
+      withInfo(
+        `Here's what the dialog looks like with filters and more columns.`
+      )(() => (
         <div id="netsim">
           <NetSimLogBrowser
             isOpen
@@ -102,9 +112,10 @@ export default storybook => {
           />
         </div>
       ))
+    )
     .add(
       `Teacher's View`,
-      withInfo(`Here's what the teacher (or shard owner) gets to see`)(() =>
+      withInfo(`Here's what the teacher (or shard owner) gets to see`)(() => (
         <div id="netsim">
           <NetSimLogBrowser
             isOpen
@@ -119,5 +130,6 @@ export default storybook => {
             teacherView
           />
         </div>
-      ));
+      ))
+    );
 };
