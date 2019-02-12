@@ -41,7 +41,7 @@ class ScriptTeacherPanel extends React.Component {
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired
       })
-    ).isRequired
+    )
   };
 
   onSelectStudent = id => {
@@ -101,7 +101,7 @@ class ScriptTeacherPanel extends React.Component {
                 )}
               </div>
             )}
-          {students.map(student => (
+          {(students || []).map(student => (
             <div
               key={student.id}
               onClick={() => this.onSelectStudent(student.id)}

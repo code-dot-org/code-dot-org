@@ -240,6 +240,7 @@ function getCurrentView() {
 function queryUserProgress(store, scriptData) {
   const viewAs = getCurrentView();
   const userId = clientState.queryParams('user_id');
+  // TODO: clean this up
   const onAsyncSetProgressComplete = data => {
     const postMilestoneDisabled =
       store.getState().progress.postMilestoneDisabled ||
