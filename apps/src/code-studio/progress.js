@@ -150,7 +150,7 @@ progress.renderStageProgress = function(
 progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
-  queryUserProgress(store, scriptData, null);
+  queryUserProgress(store, scriptData);
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})
@@ -209,7 +209,7 @@ progress.renderMiniView = function(
 
   $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
-    queryUserProgress(store, scriptData, currentLevelId);
+    queryUserProgressForMiniView(store, scriptData);
   });
 };
 
@@ -217,9 +217,7 @@ progress.renderMiniView = function(
  * Query the server for user_progress data for this script, and update the store
  * as appropriate
  */
-function queryUserProgress(store, scriptData, currentLevelId) {
-  const onOverviewPage = !currentLevelId;
-
+function queryUserProgressForMiniView(store, scriptData) {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
@@ -240,6 +238,64 @@ function queryUserProgress(store, scriptData, currentLevelId) {
   }).done(data => {
     data = data || {};
 
+    if (data.isVerifiedTeacher) {
+      store.dispatch(setVerified());
+    }
+
+    if (data.focusAreaStageIds) {
+      store.dispatch(
+        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
+      );
+    }
+
+    if (data.lockableAuthorized) {
+      store.dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      store.dispatch(setScriptCompleted());
+    }
+
+    // Merge progress from server (loaded via AJAX)
+    if (data.levels) {
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
+      store.dispatch(mergeProgress(levelProgress));
+      if (data.peerReviewsPerformed) {
+        store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+      if (data.current_stage) {
+        store.dispatch(setCurrentStageId(data.current_stage));
+      }
+    }
+  });
+}
+
+/**
+ * Query the server for user_progress data for this script, and update the store
+ * as appropriate
+ */
+function queryUserProgress(store, scriptData) {
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
+
+  // Set our initial view type
+  const query = queryString.parse(location.search);
+  let initialViewAs = ViewType.Student;
+  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
+    // query param viewAs takes precedence over whether or not user is a teacher
+    initialViewAs = ViewType.Teacher;
+  }
+  store.dispatch(setViewType(initialViewAs));
+
+  $.ajax('/api/user_progress/' + scriptData.name, {
+    data: {
+      user_id: clientState.queryParams('user_id')
+    }
+  }).done(data => {
+    data = data || {};
+
+    // OVERVIEW ONLY
     const postMilestoneDisabled =
       store.getState().progress.postMilestoneDisabled ||
       experiments.isEnabled('postMilestoneDisabledUI');
@@ -249,12 +305,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     if (data.isVerifiedTeacher) {
       store.dispatch(setVerified());
     }
-    if (
-      onOverviewPage &&
-      signedInUser &&
-      postMilestoneDisabled &&
-      !scriptData.isHocScript
-    ) {
+    if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
 
@@ -264,8 +315,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       queryString.parse(location.search).viewAs || ViewType.Teacher;
     if (
       (data.isTeacher || viewAs === ViewType.Teacher) &&
-      !data.professionalLearningCourse &&
-      onOverviewPage
+      !data.professionalLearningCourse
     ) {
       // Default to progress summary view if teacher is viewing their student's progress.
       const teacherViewingStudent =
@@ -276,16 +326,10 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
       store.dispatch(showTeacherInfo());
 
-      if (viewAs !== initialViewAs) {
-        // We don't want to redispatch if our viewAs is the same as the initial
-        // one, since the user might have manually changed the view while making
-        // our async call
-        store.dispatch(setViewType(viewAs));
-      }
-
       renderTeacherPanel(store, scriptData.id, scriptData.section);
       clientState.cacheUserIsTeacher(true);
     }
+    // END OVERVIEW ONLY
 
     if (data.focusAreaStageIds) {
       store.dispatch(
