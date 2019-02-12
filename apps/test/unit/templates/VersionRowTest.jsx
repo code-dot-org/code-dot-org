@@ -8,37 +8,25 @@ import msg from '@cdo/locale';
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {
     versionId: 'abcdef',
-    lastModified: new Date(),
+    lastModified: new Date()
   };
 
   it('renders preview and restore buttons for a non-current version', () => {
-    const wrapper = shallow(
-      <VersionRow
-        {...MINIMUM_PROPS}
-        isLatest={false}
-      />
-    );
+    const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={false} />);
     expect(wrapper).to.containMatchingElement(
       <a target="_blank">
         <button className="version-preview">
-          <i className="fa fa-eye"/>
+          <i className="fa fa-eye" />
         </button>
       </a>
     );
     expect(wrapper).to.containMatchingElement(
-      <button className="btn-info">
-        {msg.restoreThisVersion()}
-      </button>
+      <button className="btn-info">{msg.restoreThisVersion()}</button>
     );
   });
 
   it('renders a disabled button for the current version', () => {
-    const wrapper = shallow(
-      <VersionRow
-        {...MINIMUM_PROPS}
-        isLatest={true}
-      />
-    );
+    const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={true} />);
     expect(wrapper).to.containMatchingElement(
       <button className="btn-default" disabled="disabled">
         {msg.currentVersion()}
@@ -49,11 +37,7 @@ describe('VersionRow', () => {
   it('calls onChoose when restore button is clicked', () => {
     const onChoose = sinon.spy();
     const wrapper = shallow(
-      <VersionRow
-        {...MINIMUM_PROPS}
-        isLatest={false}
-        onChoose={onChoose}
-      />
+      <VersionRow {...MINIMUM_PROPS} isLatest={false} onChoose={onChoose} />
     );
     expect(onChoose).not.to.have.been.called;
 

@@ -1341,7 +1341,7 @@ fi:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Koodaustunti
-          description: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla! Matkaa
+          description: Minecraft on palannut Hour of Code:hin uusilla toiminnoilla! Matkaa
             halki Minecraftin koodin matkassa
         course-e-2018:
           stages:
@@ -1574,7 +1574,7 @@ fi:
             Aquatic:
               name: merellinen
           title: 'Minecraft: Merellinen matka'
-          description_short: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla!
+          description_short: Minecraft on palannut Hour of Code:hin uusilla toiminnoilla!
         dance-extras:
           title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.

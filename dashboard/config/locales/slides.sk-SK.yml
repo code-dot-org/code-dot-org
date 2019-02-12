@@ -59,12 +59,12 @@ sk:
     farmer_intro:
       1:
         text: Ahoj, ja som Paola! V týchto úlohách si farmárkou, ktorej úlohou je
-          vyhladiť pole, aby mohol začať pestovať plodiny.
+          vyhladiť pole, aby mohla začať pestovať plodiny.
       2:
         text: Musíš jej pomôcť odstrániť všetky hromady hliny a vyplniť všetky jamy.
       3:
-        text: 'Nové bloky: odstrániť 1 lopatu hliny z hromady a naplniť jamu 1 lopatou
-          hliny.'
+        text: Nové bloky odstránia 1 lopatu hliny z hromady a naplnia jamu 1 lopatou
+          hliny.
       4:
         text: Kôpky a jamy sú rozdielnych veľkostí, tak budeš musieť farmárke povedať
           koľko krát lopatu použije.
@@ -140,8 +140,8 @@ sk:
         text: Ak vložíme "pohni sa vpred" blok do "opakuj dovtedy" bloku, vták sa
           bude posúvať vpred, pokým nedosiahne prasa (alebo nenarazí do steny).
       4:
-        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj dokiaľ"
-          môžeme vložiť viaceré bloky, ktoré sa budú všetky opakovať.'
+        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj dovtedy"
+          môžeme vložiť viacero blokov, ktoré sa budú všetky opakovať.'
     if:
       1:
         text: Ahoj ja som Bill! Poďme sa naučiť niečo o podmienkach "ak". Prostredníctvom
@@ -185,7 +185,7 @@ sk:
         text: Blok "pokiaľ" bude robiť čokoľvek doňho dáte POKIAĽ bude výraz na jeho
           vrchu PRAVDIVÝ.
       3:
-        text: Napríklad, ak farmár stojí na kope, bude stále pokračovať v odstraňovaní
+        text: Napríklad, ak farmárka stojí na kope, bude stále pokračovať v odstraňovaní
           lopatou POKIAĽ bude mať pod sebou kopu.
     loop_for:
       1:
@@ -411,10 +411,10 @@ sk:
         text: Som Amanda Camp a pracujem ako softvérový inžinier v Googli. Pracujem
           v tíme, ktorý pracuje na serveroch uchovávajúcich profily a kontakty. Pri
           mojej práci často rozmýšľame, ako sa dajú kontakty posielať na iné zariadenia
-          ako napríklad Váš telefón. Väčšina ľudí má veľa kontaktov, povedzme že tisíc,
-          a my nechceme poslať všetky tieto kontakty na Váš telefón naraz, lebo by
+          ako napríklad váš telefón. Väčšina ľudí má veľa kontaktov, povedzme že tisíc,
+          a my nechceme poslať všetky tieto kontakty na váš telefón naraz, lebo by
           to bolo priveľa na správu. Tak, ako internet delí veľké správy na pakety,
-          my používame koncept nazvaný stránkovanie, v ktorom môžeme poslať na Váš
+          my používame koncept nazvaný stránkovanie, v ktorom môžeme poslať na váš
           telefón len 100 kontaktov naraz, nechať telefón nech ich spracuje a čakať,
           kým si vypýta ďaľších 100 kontaktov.
       6: 
@@ -934,8 +934,8 @@ sk:
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston = vďaka, že ste išli so mnou. Chcem Vám
-          ukázať niečo, čo je za touto planinou. Myslím si, že sa Vám to bude páčiť!'
+        text: 'Stacy: Stampy, Lizzy, Preston = vďaka, že ste išli so mnou. Chcem vám
+          ukázať niečo, čo je za touto planinou. Myslím si, že sa vám to bude páčiť!'
       2:
         image: notes/mc_2017_agent_intro_2.png
         text: Moment - v trati je diera! (krik)

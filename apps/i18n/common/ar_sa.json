@@ -1279,6 +1279,7 @@
   "subtitle": "بيئة البرمجة المرئية",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "قسم التبديل:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "برنامجك يحتوي علي خطأ في الكتابة الرجاء إزالة السطر رقم {lineNumber} والمحاولة مرة أخرى.",

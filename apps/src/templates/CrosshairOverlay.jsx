@@ -1,7 +1,7 @@
 /** @file Crosshair and guides over visualization */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { isPointInBounds } from '../util/grid';
+import {isPointInBounds} from '../util/grid';
 export const CROSSHAIR_MARGIN = 6;
 
 export const styles = {
@@ -24,12 +24,18 @@ export default class CrosshairOverlay extends React.Component {
     height: PropTypes.number,
     mouseX: PropTypes.number,
     mouseY: PropTypes.number,
-    flip: PropTypes.bool,
+    flip: PropTypes.bool
   };
 
   render() {
-    if (!isPointInBounds(this.props.mouseX, this.props.mouseY,
-      this.props.width, this.props.height)) {
+    if (
+      !isPointInBounds(
+        this.props.mouseX,
+        this.props.mouseY,
+        this.props.width,
+        this.props.height
+      )
+    ) {
       return null;
     }
 

@@ -23,18 +23,12 @@ export default class TeacherPanel extends React.Component {
 
   render() {
     return (
-      <div className={classNames("teacher-panel", { hidden: !this.state.open })}>
+      <div className={classNames('teacher-panel', {hidden: !this.state.open})}>
         <div className="hide-handle">
-          <FontAwesome
-            icon="chevron-right"
-            onClick={this.hide}
-          />
+          <FontAwesome icon="chevron-right" onClick={this.hide} />
         </div>
         <div className="show-handle">
-          <FontAwesome
-            icon="chevron-left"
-            onClick={this.show}
-          />
+          <FontAwesome icon="chevron-left" onClick={this.show} />
         </div>
         {this.props.children}
       </div>

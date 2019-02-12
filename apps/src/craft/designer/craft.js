@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
-import Hammer from "hammerjs";
+import Hammer from 'hammerjs';
 
 import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from './locale';
@@ -10,7 +10,7 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {
   GameController,
   FacingDirection,
-  utils as CraftUtils,
+  utils as CraftUtils
 } from '@code-dot-org/craft';
 import dom from '../../dom';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
@@ -52,24 +52,25 @@ window.Blockly = Blockly;
 
 const eventsCharacters = {
   Steve: {
-    name: "Steve",
-    staticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Neutral.png",
-    smallStaticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Neutral.png",
-    failureAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Fail.png",
-    winAvatar: MEDIA_URL + "Events/Pop_Up_Character_Steve_Win.png",
+    name: 'Steve',
+    staticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Neutral.png',
+    smallStaticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Neutral.png',
+    failureAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Fail.png',
+    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Win.png'
   },
   Alex: {
-    name: "Alex",
-    staticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Neutral.png",
-    smallStaticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Neutral.png",
-    failureAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Fail.png",
-    winAvatar: MEDIA_URL + "Events/Pop_Up_Character_Alex_Win.png",
+    name: 'Alex',
+    staticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Neutral.png',
+    smallStaticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Neutral.png',
+    failureAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Fail.png',
+    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Win.png'
   },
   Chicken: {
-    staticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Neutral.png",
-    smallStaticAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Neutral.png",
-    failureAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Fail.png",
-    winAvatar: MEDIA_URL + "Events/Pop_Up_Character_Chicken_Win.png",
+    staticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Neutral.png',
+    smallStaticAvatar:
+      MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Neutral.png',
+    failureAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Fail.png',
+    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Win.png'
   }
 };
 
@@ -77,32 +78,32 @@ const CHICKEN_ASSETS = [
   eventsCharacters.Chicken.staticAvatar,
   eventsCharacters.Chicken.smallStaticAvatar,
   eventsCharacters.Chicken.winAvatar,
-  eventsCharacters.Chicken.failureAvatar,
+  eventsCharacters.Chicken.failureAvatar
 ];
 const CHARACTER_ASSETS = [
-  MEDIA_URL + "Events/Steve_Character_Select.png",
-  MEDIA_URL + "Events/Alex_Character_Select.png",
+  MEDIA_URL + 'Events/Steve_Character_Select.png',
+  MEDIA_URL + 'Events/Alex_Character_Select.png',
   eventsCharacters.Steve.staticAvatar,
   eventsCharacters.Steve.smallStaticAvatar,
   eventsCharacters.Alex.staticAvatar,
-  eventsCharacters.Alex.smallStaticAvatar,
+  eventsCharacters.Alex.smallStaticAvatar
 ];
 const COMMON_UI_ASSETS = [
-  MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
-  MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
-  MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
-  MEDIA_URL + "Sliced_Parts/X_Button.png",
-  MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
-  MEDIA_URL + "Sliced_Parts/MC_Button_Pressed.png",
-  MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
-  MEDIA_URL + "Sliced_Parts/Run_Button_Down_Slice.png",
-  MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png",
-  MEDIA_URL + "Sliced_Parts/MC_Up_Arrow_Icon.png",
-  MEDIA_URL + "Sliced_Parts/MC_Down_Arrow_Icon.png",
-  MEDIA_URL + "Sliced_Parts/Reset_Button_Up_Slice.png",
-  MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
-  MEDIA_URL + "Sliced_Parts/Reset_Button_Down_Slice.png",
-  MEDIA_URL + "Sliced_Parts/Callout_Tail.png",
+  MEDIA_URL + 'Sliced_Parts/MC_Loading_Spinner.gif',
+  MEDIA_URL + 'Sliced_Parts/Frame_Large_Plus_Logo.png',
+  MEDIA_URL + 'Sliced_Parts/Pop_Up_Slice.png',
+  MEDIA_URL + 'Sliced_Parts/X_Button.png',
+  MEDIA_URL + 'Sliced_Parts/Button_Grey_Slice.png',
+  MEDIA_URL + 'Sliced_Parts/MC_Button_Pressed.png',
+  MEDIA_URL + 'Sliced_Parts/Run_Button_Up_Slice.png',
+  MEDIA_URL + 'Sliced_Parts/Run_Button_Down_Slice.png',
+  MEDIA_URL + 'Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png',
+  MEDIA_URL + 'Sliced_Parts/MC_Up_Arrow_Icon.png',
+  MEDIA_URL + 'Sliced_Parts/MC_Down_Arrow_Icon.png',
+  MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
+  MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
+  MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
+  MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
 ];
 const interfaceImages = {
   DEFAULT: COMMON_UI_ASSETS,
@@ -117,17 +118,17 @@ const interfaceImages = {
   9: CHARACTER_ASSETS,
   10: CHARACTER_ASSETS,
   11: CHARACTER_ASSETS,
-  12: CHARACTER_ASSETS,
+  12: CHARACTER_ASSETS
 };
 
 const MUSIC_METADATA = [
-  {volume: 1, hasOgg: true, name: "vignette1", group: 'day'},
-  {volume: 1, hasOgg: true, name: "vignette2-quiet", group: 'night'},
-  {volume: 1, hasOgg: true, name: "vignette3", group: 'night'},
-  {volume: 1, hasOgg: true, name: "vignette4-intro", group: 'day'},
-  {volume: 1, hasOgg: true, name: "vignette5-shortpiano", group: 'day'},
-  {volume: 1, hasOgg: true, name: "vignette7-funky-chirps-short", group: 'day'},
-  {volume: 1, hasOgg: true, name: "vignette8-free-play", group: 'day'},
+  {volume: 1, hasOgg: true, name: 'vignette1', group: 'day'},
+  {volume: 1, hasOgg: true, name: 'vignette2-quiet', group: 'night'},
+  {volume: 1, hasOgg: true, name: 'vignette3', group: 'night'},
+  {volume: 1, hasOgg: true, name: 'vignette4-intro', group: 'day'},
+  {volume: 1, hasOgg: true, name: 'vignette5-shortpiano', group: 'day'},
+  {volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short', group: 'day'},
+  {volume: 1, hasOgg: true, name: 'vignette8-free-play', group: 'day'}
 ];
 
 const CHARACTER_STEVE = 'Steve';
@@ -151,7 +152,7 @@ function trySetLocalStorageItem(key, value) {
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
-Craft.init = function (config) {
+Craft.init = function(config) {
   if (config.level.puzzle_number === 1 && config.level.stage_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
@@ -167,33 +168,33 @@ Craft.init = function (config) {
   config.showInstructionsInTopPane = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
-  var getIEVersion = function () {
+  var getIEVersion = function() {
     return document.documentMode;
   };
 
   var ieVersionNumber = getIEVersion();
   if (ieVersionNumber) {
-    $('body').addClass("ieVersion" + ieVersionNumber);
+    $('body').addClass('ieVersion' + ieVersionNumber);
   }
 
   if (config.level.useScore) {
-    $('body').addClass("minecraft-scoring");
+    $('body').addClass('minecraft-scoring');
   }
 
   if (config.level.isEventLevel) {
-    $('body').addClass("minecraft-events");
+    $('body').addClass('minecraft-events');
   }
 
   var bodyElement = document.body;
-  bodyElement.className = bodyElement.className + " minecraft";
+  bodyElement.className = bodyElement.className + ' minecraft';
 
   // Always add a hook for after the video but before the level proper begins.
   // Use this to start music, and sometimes to show an extra dialog.
-  config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+  config.level.afterVideoBeforeInstructionsFn = showInstructions => {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        Craft.showPlayerSelectionPopup(function (selectedPlayer) {
+        Craft.showPlayerSelectionPopup(function(selectedPlayer) {
           trackEvent('MinecraftDesigner', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
           trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
@@ -207,8 +208,14 @@ Craft.init = function (config) {
     }
   };
 
-  if (config.level.puzzle_number && eventsLevelbuilderOverrides[config.level.puzzle_number]) {
-    Object.assign(config.level, eventsLevelbuilderOverrides[config.level.puzzle_number]);
+  if (
+    config.level.puzzle_number &&
+    eventsLevelbuilderOverrides[config.level.puzzle_number]
+  ) {
+    Object.assign(
+      config.level,
+      eventsLevelbuilderOverrides[config.level.puzzle_number]
+    );
   }
   Craft.initialConfig = config;
 
@@ -221,56 +228,65 @@ Craft.init = function (config) {
 
   var levelTracks = [];
   if (Craft.level.songs && MUSIC_METADATA) {
-    levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
+    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
 
   Craft.musicController = new MusicController(
-      Sounds.getSingleton(),
-      function (filename) {
-        return config.skin.assetUrl(`music/${filename}`);
-      },
-      levelTracks,
-      config.level.dayNightCycleTime ? 100 : (levelTracks.length > 1 ? 7500 : null)
+    Sounds.getSingleton(),
+    function(filename) {
+      return config.skin.assetUrl(`music/${filename}`);
+    },
+    levelTracks,
+    config.level.dayNightCycleTime ? 100 : levelTracks.length > 1 ? 7500 : null
   );
 
   // Play music when the instructions are shown
-  Craft.beginBackgroundMusic = function () {
-    Sounds.getSingleton().whenAudioUnlocked(function () {
+  Craft.beginBackgroundMusic = function() {
+    Sounds.getSingleton().whenAudioUnlocked(function() {
       var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
       var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
       Craft.musicController.play(songToPlayFirst);
     });
   };
 
-  const character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
+  const character = config.level.usePlayer
+    ? eventsCharacters[Craft.getCurrentCharacter()]
+    : eventsCharacters['Chicken'];
 
   config.skin.staticAvatar = character.staticAvatar;
   config.skin.smallStaticAvatar = character.smallStaticAvatar;
   config.skin.failureAvatar = character.failureAvatar;
   config.skin.winAvatar = character.winAvatar;
 
-  const onMount = function () {
+  const onMount = function() {
     studioApp().init({
       ...config,
       forceInsertTopBlock: null,
       appStrings: {
-        generatedCodeDescription: craftMsg.generatedCodeDescription(),
+        generatedCodeDescription: craftMsg.generatedCodeDescription()
       },
       enableShowCode: false,
       enableShowBlockCount: false,
-      loadAudio: function () {},
-      afterInject: function () {
+      loadAudio: function() {},
+      afterInject: function() {
         if (config.level.showMovementBanner) {
-          studioApp().displayWorkspaceAlert('warning', <div>{craftMsg.useArrowKeys()}</div>);
+          studioApp().displayWorkspaceAlert(
+            'warning',
+            <div>{craftMsg.useArrowKeys()}</div>
+          );
         }
 
-        var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
+        var slowMotionURLParam = parseFloat(
+          (location.search.split('customSlowMotion=')[1] || '').split('&')[0]
+        );
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
-          onScoreUpdate: config.level.useScore ? s => $('#score-number').text(s) : null,
+          onScoreUpdate: config.level.useScore
+            ? s => $('#score-number').text(s)
+            : null,
           assetRoot: Craft.skin.assetUrl(''),
           audioPlayer: {
             register: studioApp().registerAudio.bind(studioApp()),
@@ -283,12 +299,16 @@ Craft.init = function (config) {
            * Won't matter for levels without delayed level initialization
            * (due to e.g. character popup).
            */
-          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(config.level.puzzle_number),
-          afterAssetsLoaded: function () {
+          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(
+            config.level.puzzle_number
+          ),
+          afterAssetsLoaded: function() {
             // preload music after essential game asset downloads completely finished
             Craft.musicController.preload();
           },
-          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(config.level.puzzle_number),
+          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(
+            config.level.puzzle_number
+          )
         });
 
         if (!config.level.showPopupOnLoad) {
@@ -297,27 +317,35 @@ Craft.init = function (config) {
 
         if (studioApp().hideSource) {
           // Set visualizationColumn width in share mode so it can be centered
-          var visualizationColumn = document.getElementById('visualizationColumn');
+          var visualizationColumn = document.getElementById(
+            'visualizationColumn'
+          );
           visualizationColumn.style.width = this.nativeVizWidth + 'px';
         }
 
         for (var btn in ArrowIds) {
-          dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
-              function (btn) {
-                return () => {
-                  Craft.onArrowButtonUp(ArrowIds[btn]);
-                };
-              }(btn));
-          dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
-              function (btn) {
-                return (e) => {
-                  Craft.onArrowButtonDown(e, ArrowIds[btn]);
-                };
-              }(btn));
+          dom.addMouseUpTouchEvent(
+            document.getElementById(ArrowIds[btn]),
+            (function(btn) {
+              return () => {
+                Craft.onArrowButtonUp(ArrowIds[btn]);
+              };
+            })(btn)
+          );
+          dom.addMouseDownTouchEvent(
+            document.getElementById(ArrowIds[btn]),
+            (function(btn) {
+              return e => {
+                Craft.onArrowButtonDown(e, ArrowIds[btn]);
+              };
+            })(btn)
+          );
         }
 
         dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
-        $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
+        $('#soft-buttons')
+          .removeClass('soft-buttons-none')
+          .addClass('soft-buttons-' + 4);
         Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
@@ -325,22 +353,22 @@ Craft.init = function (config) {
           [Hammer.DIRECTION_LEFT]: 'leftButton',
           [Hammer.DIRECTION_RIGHT]: 'rightButton',
           [Hammer.DIRECTION_UP]: 'upButton',
-          [Hammer.DIRECTION_DOWN]: 'downButton',
+          [Hammer.DIRECTION_DOWN]: 'downButton'
         };
 
-        const onDrag = function (e) {
+        const onDrag = function(e) {
           if (hammerToButton[e.direction]) {
             Craft.gameController.codeOrgAPI.arrowDown(
-              directionToFacing[hammerToButton[e.direction]],
+              directionToFacing[hammerToButton[e.direction]]
             );
           }
           e.preventDefault();
         };
 
-        const onDragEnd = function (e) {
+        const onDragEnd = function(e) {
           if (hammerToButton[e.direction]) {
             Craft.gameController.codeOrgAPI.arrowUp(
-              directionToFacing[hammerToButton[e.direction]],
+              directionToFacing[hammerToButton[e.direction]]
             );
           }
           e.preventDefault();
@@ -348,38 +376,48 @@ Craft.init = function (config) {
 
         var mc = new Hammer.Manager(phaserGame);
         mc.add(new Hammer.Pan({direction: Hammer.DIRECTION_ALL}));
-        mc.add(new Hammer.Press({time: 150}) );
-        mc.add(new Hammer.Tap() );
-        mc.on("pan", onDrag);
+        mc.add(new Hammer.Press({time: 150}));
+        mc.add(new Hammer.Tap());
+        mc.on('pan', onDrag);
         mc.on('panend pancancel', onDragEnd);
-        mc.on("press", () => Craft.gameController.codeOrgAPI.clickDown(() => {}));
-        mc.on("tap", () => {
+        mc.on('press', () =>
+          Craft.gameController.codeOrgAPI.clickDown(() => {})
+        );
+        mc.on('tap', () => {
           Craft.gameController.codeOrgAPI.clickDown(() => {});
           Craft.gameController.codeOrgAPI.clickUp(() => {});
         });
-        mc.on("pressup", () => Craft.gameController.codeOrgAPI.clickUp(() => {}));
+        mc.on('pressup', () =>
+          Craft.gameController.codeOrgAPI.clickUp(() => {})
+        );
       },
       twitter: {
-        text: "Share on Twitter",
-        hashtag: "Craft"
+        text: 'Share on Twitter',
+        hashtag: 'Craft'
       }
     });
 
     var interfaceImagesToLoad = [];
-    interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+    interfaceImagesToLoad = interfaceImagesToLoad.concat(
+      interfaceImages.DEFAULT
+    );
 
-    if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-      interfaceImagesToLoad =
-          interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+    if (
+      config.level.puzzle_number &&
+      interfaceImages[config.level.puzzle_number]
+    ) {
+      interfaceImagesToLoad = interfaceImagesToLoad.concat(
+        interfaceImages[config.level.puzzle_number]
+      );
     }
 
-    interfaceImagesToLoad.forEach(function (url) {
+    interfaceImagesToLoad.forEach(function(url) {
       preloadImage(url);
     });
 
     var shareButton = $('.mc-share-button');
     if (shareButton.length) {
-      dom.addClickTouchEvent(shareButton[0], function () {
+      dom.addClickTouchEvent(shareButton[0], function() {
         Craft.reportResult(true);
       });
     }
@@ -410,19 +448,19 @@ const directionToFacing = {
   upButton: FacingDirection.North,
   downButton: FacingDirection.South,
   leftButton: FacingDirection.West,
-  rightButton: FacingDirection.East,
+  rightButton: FacingDirection.East
 };
 
-Craft.onArrowButtonDown = function (e, btn) {
+Craft.onArrowButtonDown = function(e, btn) {
   Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[btn]);
   e.preventDefault(); // Stop normal events so we see mouseup later.
 };
 
-Craft.onArrowButtonUp = function (btn) {
+Craft.onArrowButtonUp = function(btn) {
   Craft.gameController.codeOrgAPI.arrowUp(directionToFacing[btn]);
 };
 
-Craft.onDocumentMouseUp = function () {
+Craft.onDocumentMouseUp = function() {
   if (!Craft.phaserLoaded() || !Craft.levelInitialized()) {
     return;
   }
@@ -432,30 +470,33 @@ Craft.onDocumentMouseUp = function () {
   }
 };
 
-var preloadImage = function (url) {
+var preloadImage = function(url) {
   var img = new Image();
   img.src = url;
 };
 
-Craft.characterAssetPackName = function (playerName) {
+Craft.characterAssetPackName = function(playerName) {
   return 'player' + playerName + 'Events';
 };
 
-Craft.getCurrentCharacter = function () {
-  return window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER;
+Craft.getCurrentCharacter = function() {
+  return (
+    window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
+  );
 };
 
-Craft.updateUIForCharacter = function (character) {
+Craft.updateUIForCharacter = function(character) {
   let characters = eventsCharacters;
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
-  Craft.initialConfig.skin.smallStaticAvatar = characters[character].smallStaticAvatar;
+  Craft.initialConfig.skin.smallStaticAvatar =
+    characters[character].smallStaticAvatar;
   Craft.initialConfig.skin.failureAvatar = characters[character].failureAvatar;
   Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
   studioApp().setIconsFromSkin(Craft.initialConfig.skin);
   $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
 };
 
-Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
+Craft.showPlayerSelectionPopup = function(onSelectedCallback) {
   var selectedPlayer = DEFAULT_CHARACTER;
   var popupDiv = document.createElement('div');
   popupDiv.innerHTML = require('./dialogs/playerSelection.html.ejs')({
@@ -464,37 +505,50 @@ Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
   var popupDialog = studioApp().createModalDialog({
     contentDiv: popupDiv,
     defaultBtnSelector: '#choose-steve',
-    onHidden: function () {
+    onHidden: function() {
       onSelectedCallback(selectedPlayer);
     },
-    id: 'craft-popup-player-selection',
+    id: 'craft-popup-player-selection'
   });
-  dom.addClickTouchEvent($('#close-character-select')[0], function () {
-    popupDialog.hide();
-  }.bind(this));
-  dom.addClickTouchEvent($('#choose-steve')[0], function () {
-    selectedPlayer = CHARACTER_STEVE;
-    trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
-    popupDialog.hide();
-  }.bind(this));
-  dom.addClickTouchEvent($('#choose-alex')[0], function () {
-    selectedPlayer = CHARACTER_ALEX;
-    trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
-    popupDialog.hide();
-  }.bind(this));
+  dom.addClickTouchEvent(
+    $('#close-character-select')[0],
+    function() {
+      popupDialog.hide();
+    }.bind(this)
+  );
+  dom.addClickTouchEvent(
+    $('#choose-steve')[0],
+    function() {
+      selectedPlayer = CHARACTER_STEVE;
+      trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
+      popupDialog.hide();
+    }.bind(this)
+  );
+  dom.addClickTouchEvent(
+    $('#choose-alex')[0],
+    function() {
+      selectedPlayer = CHARACTER_ALEX;
+      trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
+      popupDialog.hide();
+    }.bind(this)
+  );
   popupDialog.show();
 };
 
-Craft.clearPlayerState = function () {
+Craft.clearPlayerState = function() {
   window.localStorage.removeItem('craftSelectedPlayer');
 };
 
-Craft.initializeAppLevel = function (levelConfig) {
+Craft.initializeAppLevel = function(levelConfig) {
   CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
   // Fluff plane is no longer configured by level builders, pass in an empty plane
   const fluffPlane = [];
-  for (var i = 0; i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10); i++) {
+  for (
+    var i = 0;
+    i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10);
+    i++
+  ) {
     fluffPlane.push('');
   }
 
@@ -528,26 +582,33 @@ Craft.initializeAppLevel = function (levelConfig) {
     playerStartDirection: levelConfig.playerStartDirection,
     playerName: Craft.getCurrentCharacter() + 'Events',
     assetPacks: levelAssetPacks,
-    gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
-        [levelConfig.gridWidth, levelConfig.gridHeight] :
-        null,
+    gridDimensions:
+      levelConfig.gridWidth && levelConfig.gridHeight
+        ? [levelConfig.gridWidth, levelConfig.gridHeight]
+        : null,
     // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0], // TODO(bjordan): add to utils
     // eslint-disable-next-line no-eval
     failureCheckFunction: eval('[' + levelConfig.failureCheckFunction + ']')[0], // TODO(bjordan): add to utils
     // eslint-disable-next-line no-eval
-    timeoutResult: eval('[' + (levelConfig.timeoutVerificationFunction || `function() { return false; }`) + ']')[0],
+    timeoutResult: eval(
+      '[' +
+        (levelConfig.timeoutVerificationFunction ||
+          `function() { return false; }`) +
+        ']'
+    )[0]
   });
 };
 
-Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
-  const extraAssets = levelNumber >= FIRST_CHARACTER_LEVEL ?
-    [Craft.characterAssetPackName(Craft.getCurrentCharacter())] : [];
-  return Craft.minAssetsForLevelNumber(levelNumber)
-      .concat(extraAssets);
+Craft.minAssetsForLevelWithCharacter = function(levelNumber) {
+  const extraAssets =
+    levelNumber >= FIRST_CHARACTER_LEVEL
+      ? [Craft.characterAssetPackName(Craft.getCurrentCharacter())]
+      : [];
+  return Craft.minAssetsForLevelNumber(levelNumber).concat(extraAssets);
 };
 
-Craft.minAssetsForLevelNumber = function (levelNumber) {
+Craft.minAssetsForLevelNumber = function(levelNumber) {
   switch (levelNumber) {
     case 1:
       return ['levelOneAssets'];
@@ -560,7 +621,7 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
   }
 };
 
-Craft.afterLoadAssetsForLevel = function (levelNumber) {
+Craft.afterLoadAssetsForLevel = function(levelNumber) {
   // After level loads & player starts playing, kick off further asset downloads
   switch (levelNumber) {
     case 1:
@@ -572,7 +633,7 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
   }
 };
 
-Craft.earlyLoadAssetsForLevel = function (levelNumber) {
+Craft.earlyLoadAssetsForLevel = function(levelNumber) {
   if (levelNumber <= FIRST_CHARACTER_LEVEL) {
     return Craft.minAssetsForLevelNumber(levelNumber);
   }
@@ -580,19 +641,19 @@ Craft.earlyLoadAssetsForLevel = function (levelNumber) {
   return Craft.minAssetsForLevelWithCharacter(levelNumber);
 };
 
-Craft.niceToHaveAssetsForLevel = function (levelNumber) {
+Craft.niceToHaveAssetsForLevel = function(levelNumber) {
   if (levelNumber === FIRST_CHARACTER_LEVEL) {
     return ['playerSteveEvents', 'playerAlexEvents'];
   }
   return ['designerAllAssetsMinusPlayer'];
 };
 
-Craft.hideSoftButtons = function () {
+Craft.hideSoftButtons = function() {
   $('#soft-buttons').hide();
   studioApp().resizePinnedBelowVisualizationArea();
 };
 
-Craft.showSoftButtons = function () {
+Craft.showSoftButtons = function() {
   $('#soft-buttons').show();
   studioApp().resizePinnedBelowVisualizationArea();
 };
@@ -601,7 +662,7 @@ Craft.showSoftButtons = function () {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first true if first reset
  */
-Craft.reset = function (first) {
+Craft.reset = function(first) {
   if (first) {
     return;
   }
@@ -612,22 +673,23 @@ Craft.reset = function (first) {
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
-Craft.phaserLoaded = function () {
-  return Craft.gameController &&
-      Craft.gameController.game &&
-      Craft.gameController.game.load &&
-      !Craft.gameController.game.load.isLoading;
+Craft.phaserLoaded = function() {
+  return (
+    Craft.gameController &&
+    Craft.gameController.game &&
+    Craft.gameController.game.load &&
+    !Craft.gameController.game.load.isLoading
+  );
 };
 
-Craft.levelInitialized = function () {
-  return Craft.gameController &&
-      Craft.gameController.levelModel;
+Craft.levelInitialized = function() {
+  return Craft.gameController && Craft.gameController.levelModel;
 };
 
 /**
  * Click the run button.  Start the program.
  */
-Craft.runButtonClick = function () {
+Craft.runButtonClick = function() {
   if (!Craft.phaserLoaded()) {
     return;
   }
@@ -654,8 +716,10 @@ Craft.runButtonClick = function () {
   if (Craft.level.freePlay && !studioApp().hideSource) {
     var finishBtnContainer = $('#right-button-cell');
 
-    if (finishBtnContainer.length &&
-        !finishBtnContainer.hasClass('right-button-cell-enabled')) {
+    if (
+      finishBtnContainer.length &&
+      !finishBtnContainer.hasClass('right-button-cell-enabled')
+    ) {
       finishBtnContainer.addClass('right-button-cell-enabled');
       studioApp().onResize();
 
@@ -666,7 +730,7 @@ Craft.runButtonClick = function () {
   }
 };
 
-Craft.executeUserCode = function () {
+Craft.executeUserCode = function() {
   if (Craft.initialConfig.level.edit_blocks) {
     this.reportResult(true);
     return;
@@ -694,95 +758,138 @@ Craft.executeUserCode = function () {
   const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
 
   const evalApiMethods = {
-    moveForward: function (blockID) {
-      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID));
+    moveForward: function(blockID) {
+      appCodeOrgAPI.moveForward(
+        studioApp().highlight.bind(studioApp(), blockID)
+      );
     },
-    drop: function (blockType, targetEntity, blockID) {
-      appCodeOrgAPI.drop(studioApp().highlight.bind(studioApp(), blockID), blockType, targetEntity);
+    drop: function(blockType, targetEntity, blockID) {
+      appCodeOrgAPI.drop(
+        studioApp().highlight.bind(studioApp(), blockID),
+        blockType,
+        targetEntity
+      );
     },
-    turnLeft: function (blockID) {
-      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "left");
+    turnLeft: function(blockID) {
+      appCodeOrgAPI.turn(
+        studioApp().highlight.bind(studioApp(), blockID),
+        'left'
+      );
     },
-    turnRight: function (blockID) {
-      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "right");
+    turnRight: function(blockID) {
+      appCodeOrgAPI.turn(
+        studioApp().highlight.bind(studioApp(), blockID),
+        'right'
+      );
     },
-    destroyBlock: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID));
+    destroyBlock: function(blockID) {
+      appCodeOrgAPI.destroyBlock(
+        studioApp().highlight.bind(studioApp(), blockID)
+      );
     },
-    repeat: function (blockID, callback, iterations, targetEntity) {
+    repeat: function(blockID, callback, iterations, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.repeat(studioApp().highlight.bind(studioApp(), blockID),
-          callback.bind(null, {targetIdentifier: targetEntity}), iterations, targetEntity);
+      appCodeOrgAPI.repeat(
+        studioApp().highlight.bind(studioApp(), blockID),
+        callback.bind(null, {targetIdentifier: targetEntity}),
+        iterations,
+        targetEntity
+      );
     },
-    repeatRandom: function (blockID, callback, targetEntity) {
+    repeatRandom: function(blockID, callback, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.repeatRandom(studioApp().highlight.bind(studioApp(), blockID),
-          callback, targetEntity);
+      appCodeOrgAPI.repeatRandom(
+        studioApp().highlight.bind(studioApp(), blockID),
+        callback,
+        targetEntity
+      );
     },
-    playSound: function (soundID, targetEntity, blockID) {
-      appCodeOrgAPI.playSound(studioApp().highlight.bind(studioApp(), blockID),
-          soundID, targetEntity);
+    playSound: function(soundID, targetEntity, blockID) {
+      appCodeOrgAPI.playSound(
+        studioApp().highlight.bind(studioApp(), blockID),
+        soundID,
+        targetEntity
+      );
     },
-    addScore: function (scoreAmount, blockID) {
-      appCodeOrgAPI.addScore(studioApp().highlight.bind(studioApp(), blockID),
-          parseInt(scoreAmount));
+    addScore: function(scoreAmount, blockID) {
+      appCodeOrgAPI.addScore(
+        studioApp().highlight.bind(studioApp(), blockID),
+        parseInt(scoreAmount)
+      );
     },
-    moveDirection: function (direction, targetEntity, blockID) {
+    moveDirection: function(direction, targetEntity, blockID) {
       const dirStringToDirection = {
         up: FacingDirection.North,
         down: FacingDirection.South,
         left: FacingDirection.West,
-        right: FacingDirection.East,
+        right: FacingDirection.East
       };
-      appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
-          dirStringToDirection[direction], targetEntity);
+      appCodeOrgAPI.moveDirection(
+        studioApp().highlight.bind(studioApp(), blockID),
+        dirStringToDirection[direction],
+        targetEntity
+      );
     },
-    spawnEntity: function (type, direction, blockID) {
-      appCodeOrgAPI.spawnEntity(studioApp().highlight.bind(studioApp(), blockID),
-          type, direction);
+    spawnEntity: function(type, direction, blockID) {
+      appCodeOrgAPI.spawnEntity(
+        studioApp().highlight.bind(studioApp(), blockID),
+        type,
+        direction
+      );
     },
-    wait: function (time, targetEntity, blockID) {
-      const randomMin = .1;
+    wait: function(time, targetEntity, blockID) {
+      const randomMin = 0.1;
       const randomMax = 3;
-      appCodeOrgAPI.wait(studioApp().highlight.bind(studioApp(), blockID),
-          time === 'random' ? _.random(randomMin, randomMax, true) : time,
-          targetEntity);
+      appCodeOrgAPI.wait(
+        studioApp().highlight.bind(studioApp(), blockID),
+        time === 'random' ? _.random(randomMin, randomMax, true) : time,
+        targetEntity
+      );
     },
-    spawnEntityRandom: function (type, blockID) {
-      var locationOptions = [
-        'up',
-        'middle',
-        'right',
-        'down',
-        'left',
-      ];
+    spawnEntityRandom: function(type, blockID) {
+      var locationOptions = ['up', 'middle', 'right', 'down', 'left'];
       const randomDirection = _.sample(locationOptions);
 
-      appCodeOrgAPI.spawnEntity(studioApp().highlight.bind(studioApp(), blockID),
-          type, randomDirection);
+      appCodeOrgAPI.spawnEntity(
+        studioApp().highlight.bind(studioApp(), blockID),
+        type,
+        randomDirection
+      );
     }
   };
 
-  ENTITY_ACTION_BLOCKS.concat(['turnLeft', 'turnRight', 'turnRandom']).forEach((methodName) => {
-    evalApiMethods[methodName] = function (targetEntity, blockID) {
-      appCodeOrgAPI[methodName](studioApp().highlight.bind(studioApp(), blockID), targetEntity);
-    };
-  });
+  ENTITY_ACTION_BLOCKS.concat(['turnLeft', 'turnRight', 'turnRandom']).forEach(
+    methodName => {
+      evalApiMethods[methodName] = function(targetEntity, blockID) {
+        appCodeOrgAPI[methodName](
+          studioApp().highlight.bind(studioApp(), blockID),
+          targetEntity
+        );
+      };
+    }
+  );
 
-  ENTITY_TARGET_ACTION_BLOCKS.forEach((methodName) => {
-    evalApiMethods[methodName] = function (targetEntity, moveTo, blockID) {
-      appCodeOrgAPI[methodName](studioApp().highlight.bind(studioApp(), blockID), targetEntity, moveTo);
+  ENTITY_TARGET_ACTION_BLOCKS.forEach(methodName => {
+    evalApiMethods[methodName] = function(targetEntity, moveTo, blockID) {
+      appCodeOrgAPI[methodName](
+        studioApp().highlight.bind(studioApp(), blockID),
+        targetEntity,
+        moveTo
+      );
     };
   });
 
   const userEvents = {};
   const eventGenerationMethods = {
-    onEventTriggered: function (type, eventType, callback, blockID) {
-      userEvents[`event-${type}-${eventType}`] = {code: callback, args: ['event']};
+    onEventTriggered: function(type, eventType, callback, blockID) {
+      userEvents[`event-${type}-${eventType}`] = {
+        code: callback,
+        args: ['event']
+      };
     },
-    onGlobalEventTriggered: function (eventType, callback, blockID) {
+    onGlobalEventTriggered: function(eventType, callback, blockID) {
       userEvents[`event--${eventType}`] = {code: callback, args: ['event']};
-    },
+    }
   };
 
   CustomMarshalingInterpreter.evalWith(code, eventGenerationMethods);
@@ -792,45 +899,53 @@ Craft.executeUserCode = function () {
       instance: evalApiMethods.repeat,
       methodOpts: {
         nativeCallsBackInterpreter: true,
-        run: true,
+        run: true
       }
-    },
+    }
   ];
 
   const hooks = {};
-  CustomMarshalingInterpreter.evalWithEvents(evalApiMethods, userEvents, '', customMarshalObjects).hooks.forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents(
+    evalApiMethods,
+    userEvents,
+    '',
+    customMarshalObjects
+  ).hooks.forEach(hook => {
     hooks[hook.name] = hook.func;
   });
 
-  appCodeOrgAPI.registerEventCallback(() => {},
-    function (event) {
-      const type = event.targetType || '[^-]*';
-      const eventType = event.eventType;
-      const regex = new RegExp(`^event-${type}-${eventType}$`);
+  appCodeOrgAPI.registerEventCallback(() => {}, function(event) {
+    const type = event.targetType || '[^-]*';
+    const eventType = event.eventType;
+    const regex = new RegExp(`^event-${type}-${eventType}$`);
 
-      Object.keys(hooks).forEach(name => {
-        if (regex.test(name)) {
-          hooks[name](event);
-        }
-      });
+    Object.keys(hooks).forEach(name => {
+      if (regex.test(name)) {
+        hooks[name](event);
+      }
     });
+  });
 
-  appCodeOrgAPI.startAttempt(function (success) {
-    Craft.hideSoftButtons();
-    if (Craft.level.freePlay) {
-      return;
-    }
-    this.reportResult(success);
-  }.bind(this));
+  appCodeOrgAPI.startAttempt(
+    function(success) {
+      Craft.hideSoftButtons();
+      if (Craft.level.freePlay) {
+        return;
+      }
+      this.reportResult(success);
+    }.bind(this)
+  );
 
   if (Craft.initialConfig.level.dayNightCycleTime) {
-    appCodeOrgAPI.setDayNightCycle(Craft.initialConfig.level.dayNightCycleStart,
-        Craft.initialConfig.level.dayNightCycleTime || 0,
-        Craft.initialConfig.level.isDaytime ? 'night' : 'day');
+    appCodeOrgAPI.setDayNightCycle(
+      Craft.initialConfig.level.dayNightCycleStart,
+      Craft.initialConfig.level.dayNightCycleTime || 0,
+      Craft.initialConfig.level.isDaytime ? 'night' : 'day'
+    );
   }
 };
 
-Craft.getTestResultFrom = function (success, studioTestResults) {
+Craft.getTestResultFrom = function(success, studioTestResults) {
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
   }
@@ -842,12 +957,13 @@ Craft.getTestResultFrom = function (success, studioTestResults) {
   return studioTestResults;
 };
 
-Craft.reportResult = function (success) {
+Craft.reportResult = function(success) {
   var studioTestResults = studioApp().getTestResults(success);
   var testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
-  const image = Craft.initialConfig.level.freePlay ?
-      Craft.gameController.getScreenshot() : null;
+  const image = Craft.initialConfig.level.freePlay
+    ? Craft.gameController.getScreenshot()
+    : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
@@ -858,13 +974,13 @@ Craft.reportResult = function (success) {
     testResult: testResultType,
     image: encodedImage,
     program: encodeURIComponent(
-        Blockly.Xml.domToText(
-            Blockly.Xml.blockSpaceToDom(
-                Blockly.mainBlockSpace))),
+      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+    ),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
-    onComplete: function (response) {
-      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+    onComplete: function(response) {
+      const isSignedIn =
+        getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,
@@ -881,7 +997,7 @@ Craft.reportResult = function (success) {
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
         saveToProjectGallery: true,
-        disableSaveToGallery: !isSignedIn,
+        disableSaveToGallery: !isSignedIn
       });
     }
   });
@@ -893,7 +1009,7 @@ Craft.reportResult = function (success) {
  * @param {string} testResultType TestResults type of this level completion
  * @returns {boolean} whether to continue
  */
-Craft.shouldDefaultToContinue = function (testResultType) {
+Craft.shouldDefaultToContinue = function(testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;

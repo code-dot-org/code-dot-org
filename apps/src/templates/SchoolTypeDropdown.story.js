@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import SchoolTypeDropdown from './SchoolTypeDropdown';
 
 export default storybook => {
-
   class DropdownWrapper extends Component {
     state = {
-      value: '',
+      value: ''
     };
 
     onChange(event) {
@@ -13,18 +12,19 @@ export default storybook => {
     }
 
     render() {
-      return (<SchoolTypeDropdown value={this.state.value} onChange={this.onChange.bind(this)} />);
+      return (
+        <SchoolTypeDropdown
+          value={this.state.value}
+          onChange={this.onChange.bind(this)}
+        />
+      );
     }
   }
 
-  storybook
-    .storiesOf('SchoolTypeDropdown', module)
-    .addStoryTable([
-      {
-        name:'SchoolTypeDropdown',
-        story: () => (
-          <DropdownWrapper/>
-        )
-      },
-    ]);
+  storybook.storiesOf('SchoolTypeDropdown', module).addStoryTable([
+    {
+      name: 'SchoolTypeDropdown',
+      story: () => <DropdownWrapper />
+    }
+  ]);
 };

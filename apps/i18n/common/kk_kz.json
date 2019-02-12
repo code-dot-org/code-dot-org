@@ -1279,6 +1279,7 @@
   "subtitle": "Визуальді бағдарламалу ортасы",
   "success": "",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Бөлімді ауыстыру:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Сіздің бағдарламанызда қате бар. {lineNumber} қатарын өшіріңіз және қайтадан байқап көріңіз.",

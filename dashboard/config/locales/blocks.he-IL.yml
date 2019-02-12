@@ -1001,7 +1001,7 @@ he:
         options:
           PROPERTY:
             "'shapeColor'": צבע
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': גודל

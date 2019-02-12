@@ -632,7 +632,7 @@ id:
         text: Tengah
       Vector_vectorNorth:
         text: Utara
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ukuran

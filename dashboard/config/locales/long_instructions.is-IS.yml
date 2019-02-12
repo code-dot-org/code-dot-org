@@ -5358,9 +5358,6 @@ is:
         Dragðu <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> kubbinn inn á vinnusvæðið. Festu hann undir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> kubbinn. Þá ætti dansarinn þinn að byrja að dansa eftir 4 takta.
 
         **Taktar** eru notaðir til talningar í tónlist. Í þessari æfingu er einn taktur 4 slög.
-      Standalone_Artist_1: "Hér er listamaðurinn! Byrjaðu á að búa til einfaldan ferning
-        með snúa til hægri og færa áfram kubbunum. Hver hlið á að vera 100 dílar á
-        lengd.\r\n\r\n"
       Standalone_Artist_2: "Teiknaðu þennan tígul með 120 og 60 gráðu hornum og 150
         díla löngum hliðum.\r\n\r\n"
       Standalone_Artist_3: "Getur þú teiknað þennan sexhyrning með 100 díla hliðum

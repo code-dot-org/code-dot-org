@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import TopInstructionsCSF from './TopInstructionsCSF';
 import TopInstructionsCSP from './TopInstructionsCSP';
 
@@ -14,7 +14,7 @@ class TopInstructions extends React.Component {
     noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     shortInstructions: PropTypes.string,
-    longInstructions: PropTypes.string,
+    longInstructions: PropTypes.string
   };
 
   render() {
@@ -23,17 +23,24 @@ class TopInstructions extends React.Component {
       noInstructionsWhenCollapsed,
       shortInstructions,
       longInstructions,
-      hasContainedLevels,
+      hasContainedLevels
     } = this.props;
 
     // TODO - if we dont end up being able to recombine these two classes, it might
     // be better to come up with more description names (like maybe
     //  CollapsibleTopInstructions and ShortenableTopInstructions)
-    if (hidden || (!shortInstructions && !longInstructions && !hasContainedLevels)) {
-      return <div/>;
+    if (
+      hidden ||
+      (!shortInstructions && !longInstructions && !hasContainedLevels)
+    ) {
+      return <div />;
     }
 
-    return noInstructionsWhenCollapsed ? <TopInstructionsCSP/> : <TopInstructionsCSF/>;
+    return noInstructionsWhenCollapsed ? (
+      <TopInstructionsCSP />
+    ) : (
+      <TopInstructionsCSF />
+    );
   }
 }
 
@@ -43,5 +50,5 @@ export default connect(state => ({
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
   hasContainedLevels: state.instructions.hasContainedLevels,
   shortInstructions: state.instructions.shortInstructions,
-  longInstructions: state.instructions.longInstructions,
+  longInstructions: state.instructions.longInstructions
 }))(TopInstructions);

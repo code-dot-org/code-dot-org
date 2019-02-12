@@ -856,7 +856,7 @@ sv:
         text: sväng höger
       Vector_positionCenter:
         text: mittersta delen
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': storlek

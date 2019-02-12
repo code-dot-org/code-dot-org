@@ -1279,6 +1279,7 @@
   "subtitle": "een visuele programmeeromgeving",
   "success": "Succes!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "switch groep:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Je programma heeft een tiepfout. Verwijder regel {lineNumber} en probeer het nog eens.",

@@ -1279,6 +1279,7 @@
   "subtitle": "visuaalinen ohjelmointiympäristö",
   "success": "Onnistui!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Vaihda ryhmää:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "Ohjelmassasi on kirjoitusvirhe. Poista rivi {lineNumber} ja yritä uudelleen.",

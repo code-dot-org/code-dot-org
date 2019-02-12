@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {toggleSharingColumn, editAll} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Button from '../Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
-import DialogFooter from "../teacherDashboard/DialogFooter";
+import DialogFooter from '../teacherDashboard/DialogFooter';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
@@ -25,7 +25,7 @@ class ControlProjectSharingDialog extends Component {
   };
 
   state = {
-    isDialogOpen: this.props.isDialogOpen,
+    isDialogOpen: this.props.isDialogOpen
   };
 
   handleShowSharingClick = () => {
@@ -44,7 +44,9 @@ class ControlProjectSharingDialog extends Component {
         >
           <h2>{i18n.projectSharingDialogHeader()}</h2>
           <div>
-            <UnsafeRenderedMarkdown markdown={i18n.projectSharingDialogInstructions()} />
+            <UnsafeRenderedMarkdown
+              markdown={i18n.projectSharingDialogInstructions()}
+            />
           </div>
           <DialogFooter>
             <Button
@@ -66,11 +68,14 @@ class ControlProjectSharingDialog extends Component {
 
 export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
 
-export default connect(state => ({}), dispatch => ({
-  toggleSharingColumn() {
-    dispatch(toggleSharingColumn());
-  },
-  editAll() {
-    dispatch(editAll());
-  },
-}))(ControlProjectSharingDialog);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    toggleSharingColumn() {
+      dispatch(toggleSharingColumn());
+    },
+    editAll() {
+      dispatch(editAll());
+    }
+  })
+)(ControlProjectSharingDialog);

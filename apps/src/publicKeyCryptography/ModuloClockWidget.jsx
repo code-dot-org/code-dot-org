@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from "../util/color";
+import color from '../util/color';
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
 import IntegerTextbox from './IntegerTextbox';
@@ -54,9 +54,14 @@ export default class ModuloClockWidget extends React.Component {
   onGoClick = () => {
     this.setState({animating: true});
     const maximumDuration = 8000 / this.state.speed + 2000;
-    this.moduloClock.animateTo(this.state.dividend, maximumDuration, null, () => {
-      this.setState({animating: false});
-    });
+    this.moduloClock.animateTo(
+      this.state.dividend,
+      maximumDuration,
+      null,
+      () => {
+        this.setState({animating: false});
+      }
+    );
   };
 
   onSpeedChange = speed => this.setState({speed});
@@ -66,7 +71,10 @@ export default class ModuloClockWidget extends React.Component {
     return (
       <div style={style.root}>
         <h1 style={style.h1}>The Modulo Clock</h1>
-        <p>Experiment with this "clock" and different numbers to see what happens.</p>
+        <p>
+          Experiment with this "clock" and different numbers to see what
+          happens.
+        </p>
         <div style={{textAlign: 'center'}}>
           <div style={style.balancePadding}>&nbsp;</div>
           <LabelBelow label="Enter a number">
@@ -85,18 +93,14 @@ export default class ModuloClockWidget extends React.Component {
               disabled={animating}
               onChange={this.onModulusChange}
             />
-          </LabelBelow>
-          {' '}
+          </LabelBelow>{' '}
           <GoButton
             className="go-button"
             disabled={animating}
             onClick={this.onGoClick}
           />
         </div>
-        <ModuloClock
-          ref={x => this.moduloClock = x}
-          modulus={modulus}
-        />
+        <ModuloClock ref={x => (this.moduloClock = x)} modulus={modulus} />
         <div style={{textAlign: 'center'}}>
           <LabelBelow label="Speed">
             <IntegerDropdown
@@ -108,8 +112,9 @@ export default class ModuloClockWidget extends React.Component {
             />
           </LabelBelow>
         </div>
-        <WidgetContinueButton/>
-      </div>);
+        <WidgetContinueButton />
+      </div>
+    );
   }
 }
 
@@ -118,7 +123,8 @@ function LabelBelow(props) {
     <div style={style.LabelBelow.root}>
       {props.children}
       <div style={style.LabelBelow.label}>{props.label}</div>
-    </div>);
+    </div>
+  );
 }
 LabelBelow.propTypes = {
   label: PropTypes.string.isRequired,

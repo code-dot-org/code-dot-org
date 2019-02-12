@@ -1279,6 +1279,7 @@
   "subtitle": "środowisko wizualnego programowania",
   "success": "Udało się!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Przełącz sekcję:",
   "syncClever": "Synchronizuj uczniów z Clever",
   "syncGoogleClassroom": "Synchronizuj uczniów z Google Classroom",
   "syntaxErrorMsg": "Twój program zawiera literówkę. Usuń linię {lineNumber} i spróbuj ponownie.",

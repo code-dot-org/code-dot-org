@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { ButtonList } from '../form_components/ButtonList.jsx';
+import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';
 import SingleCheckbox from '../form_components/SingleCheckbox';
@@ -20,7 +20,7 @@ export default class FormComponent extends React.Component {
     errors: PropTypes.arrayOf(PropTypes.string).isRequired,
     errorMessages: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
   };
 
   /**
@@ -101,9 +101,22 @@ export default class FormComponent extends React.Component {
    *
    * @returns {FieldGroup}
    */
-  buildSelectFieldGroupFromOptions({ name, label, placeholder, required, ...props }) {
+  buildSelectFieldGroupFromOptions({
+    name,
+    label,
+    placeholder,
+    required,
+    ...props
+  }) {
     const options = this.props.options[name];
-    return this.buildSelectFieldGroup({ name, label, placeholder, required, options, ...props });
+    return this.buildSelectFieldGroup({
+      name,
+      label,
+      placeholder,
+      required,
+      options,
+      ...props
+    });
   }
 
   /**
@@ -120,15 +133,26 @@ export default class FormComponent extends React.Component {
    *
    * @returns {FieldGroup}
    */
-  buildSelectFieldGroup({ name, label, placeholder, required, options, ...props }) {
+  buildSelectFieldGroup({
+    name,
+    label,
+    placeholder,
+    required,
+    options,
+    ...props
+  }) {
     let renderedOptions;
     if (Array.isArray(options)) {
       renderedOptions = options.map(value => (
-        <option key={value} value={value}>{value}</option>
+        <option key={value} value={value}>
+          {value}
+        </option>
       ));
     } else {
       renderedOptions = Object.keys(options).map(key => (
-        <option key={key} value={key}>{options[key]}</option>
+        <option key={key} value={key}>
+          {options[key]}
+        </option>
       ));
     }
 
@@ -145,7 +169,11 @@ export default class FormComponent extends React.Component {
         required={required}
         {...props}
       >
-        {placeholder && <option key="placeholder" value="">{placeholder}</option>}
+        {placeholder && (
+          <option key="placeholder" value="">
+            {placeholder}
+          </option>
+        )}
         {renderedOptions}
       </FieldGroup>
     );
@@ -161,7 +189,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {FieldGroup}
    */
-  buildFieldGroup({ name, label, type, required, ...props }) {
+  buildFieldGroup({name, label, type, required, ...props}) {
     return (
       <FieldGroup
         key={name}
@@ -187,7 +215,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {UsPhoneNumberInput}
    */
-  buildUsPhoneNumberInput({ name, label, required, ...props }) {
+  buildUsPhoneNumberInput({name, label, required, ...props}) {
     return (
       <UsPhoneNumberInput
         name={name}
@@ -214,13 +242,13 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtonsFromOptions({ name, label, type, required, ...props }) {
+  buildButtonsFromOptions({name, label, type, required, ...props}) {
     if (!this.props.options[name] || this.props.options[name].length === 0) {
       throw `Cannot create buttons for ${name} without options`;
     }
 
     const answers = this.props.options[name];
-    return this.buildButtons({ name, label, type, required, answers, ...props });
+    return this.buildButtons({name, label, type, required, answers, ...props});
   }
 
   /**
@@ -240,13 +268,28 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtonsWithAdditionalTextFieldsFromOptions({ name, label, type, required, textFieldMap, ...props }) {
+  buildButtonsWithAdditionalTextFieldsFromOptions({
+    name,
+    label,
+    type,
+    required,
+    textFieldMap,
+    ...props
+  }) {
     if (!this.props.options[name] || this.props.options[name].length === 0) {
       throw `Cannot create buttons for ${name} without options`;
     }
 
     const options = this.props.options[name];
-    return this.buildButtonsWithAdditionalTextFields({ name, label, type, required, options, textFieldMap, ...props });
+    return this.buildButtonsWithAdditionalTextFields({
+      name,
+      label,
+      type,
+      required,
+      options,
+      textFieldMap,
+      ...props
+    });
   }
 
   /**
@@ -267,7 +310,15 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtonsWithAdditionalTextFields({ name, label, type, required, options, textFieldMap, ...props }) {
+  buildButtonsWithAdditionalTextFields({
+    name,
+    label,
+    type,
+    required,
+    options,
+    textFieldMap,
+    ...props
+  }) {
     const answers = options.map(answer => {
       if (!(answer in textFieldMap)) {
         return answer;
@@ -277,11 +328,12 @@ export default class FormComponent extends React.Component {
       return {
         answerText: answer,
         inputValue: this.props.data[textFieldName],
-        onInputChange: newValue => this.handleChange({ [textFieldName]: newValue })
+        onInputChange: newValue =>
+          this.handleChange({[textFieldName]: newValue})
       };
     });
 
-    return this.buildButtons({ name, label, type, required, answers, ...props });
+    return this.buildButtons({name, label, type, required, answers, ...props});
   }
 
   /**
@@ -298,7 +350,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtons({ name, label, type, required, answers, ...props }) {
+  buildButtons({name, label, type, required, answers, ...props}) {
     if (required === undefined) {
       required = true;
     }
@@ -329,7 +381,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {SingleCheckbox}
    */
-  buildSingleCheckbox({ name, label, required, ...props }) {
+  buildSingleCheckbox({name, label, required, ...props}) {
     if (required === undefined) {
       required = true;
     }

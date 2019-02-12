@@ -5,14 +5,12 @@ import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
 
 const DEFAULT_PROPS = {
   numLinesWritten: 0,
-  totalNumLinesWritten: 0,
+  totalNumLinesWritten: 0
 };
 
 describe('CodeWritten', () => {
   it('renders successfully', () => {
-    const wrapper = shallow(
-      <CodeWritten {...DEFAULT_PROPS}/>
-    );
+    const wrapper = shallow(<CodeWritten {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <div>
         <p>You just wrote 0 lines of code!</p>
@@ -28,9 +26,7 @@ describe('CodeWritten', () => {
   it('renders children inside details tag', () => {
     const wrapper = shallow(
       <CodeWritten {...DEFAULT_PROPS}>
-        <code>
-          Some source code I wrote.
-        </code>
+        <code>Some source code I wrote.</code>
       </CodeWritten>
     );
     expect(wrapper).to.containMatchingElement(
@@ -40,9 +36,7 @@ describe('CodeWritten', () => {
           <summary>
             <b>Show code</b>
           </summary>
-          <code>
-            Some source code I wrote.
-          </code>
+          <code>Some source code I wrote.</code>
         </details>
       </div>
     );
@@ -50,10 +44,7 @@ describe('CodeWritten', () => {
 
   it('shows total lines of code if nonzero', () => {
     const wrapper = shallow(
-      <CodeWritten
-        {...DEFAULT_PROPS}
-        totalNumLinesWritten={1000000}
-      />
+      <CodeWritten {...DEFAULT_PROPS} totalNumLinesWritten={1000000} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -69,9 +60,7 @@ describe('CodeWritten', () => {
   });
 
   it('Can click "Show code"', () => {
-    const wrapper = shallow(
-      <CodeWritten {...DEFAULT_PROPS}/>
-    );
+    const wrapper = shallow(<CodeWritten {...DEFAULT_PROPS} />);
 
     expect(() => {
       wrapper.find('summary').simulate('click');
@@ -92,12 +81,8 @@ describe('CodeWritten', () => {
 
     expect(wrapper).to.containMatchingElement(
       <div>
-        <p style={{fontSize: 16}}>
-          You just wrote 0 lines of code!
-        </p>
-        <p style={{fontSize: 16}}>
-          All-time total: 99 lines of code.
-        </p>
+        <p style={{fontSize: 16}}>You just wrote 0 lines of code!</p>
+        <p style={{fontSize: 16}}>All-time total: 99 lines of code.</p>
         <details style={{textAlign: 'left'}}>
           <summary
             style={{
@@ -108,7 +93,7 @@ describe('CodeWritten', () => {
               padding: 5,
               fontColor: 'black',
               marginLeft: 40,
-              display: 'list-item',
+              display: 'list-item'
             }}
           >
             <b>Show code</b>

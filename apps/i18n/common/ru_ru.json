@@ -1279,6 +1279,7 @@
   "subtitle": "среда визуального программирования",
   "success": "Успешно!",
   "summaryAssessmentsOverview": "",
+  "switchSection": "Переключить раздел:",
   "syncClever": "",
   "syncGoogleClassroom": "",
   "syntaxErrorMsg": "В твоей программе есть опечатка. Удали строку {lineNumber} и попробуй снова.",

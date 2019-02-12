@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
 
 const GENDERS = {
@@ -9,7 +9,7 @@ const GENDERS = {
   m: i18n.genderMale(),
   f: i18n.genderFemale(),
   n: i18n.genderNonBinary(),
-  o: i18n.genderNotListed(),
+  o: i18n.genderNotListed()
 };
 
 class ManageStudentGenderCell extends Component {
@@ -19,43 +19,46 @@ class ManageStudentGenderCell extends Component {
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
     // Provided by redux
-    editStudent: PropTypes.func.isRequired,
+    editStudent: PropTypes.func.isRequired
   };
 
   state = {
     genderValue: this.props.gender
   };
 
-  onChangeGender = (e) => {
+  onChangeGender = e => {
     this.props.editStudent(this.props.id, {gender: e.target.value});
   };
 
   render() {
     return (
       <div>
-        {!this.props.isEditing &&
-          <div>
-            {GENDERS[this.props.gender]}
-          </div>
-        }
-        {this.props.isEditing &&
+        {!this.props.isEditing && <div>{GENDERS[this.props.gender]}</div>}
+        {this.props.isEditing && (
           <select
-            ref={element => this.root = element}
+            ref={element => (this.root = element)}
             name="age"
             value={this.props.editedValue}
             onChange={this.onChangeGender}
             style={{width: 120}}
           >
-           {Object.keys(GENDERS).map(gender => <option key={gender} value={gender}>{GENDERS[gender]}</option>)}
+            {Object.keys(GENDERS).map(gender => (
+              <option key={gender} value={gender}>
+                {GENDERS[gender]}
+              </option>
+            ))}
           </select>
-        }
+        )}
       </div>
     );
   }
 }
 
-export default connect(state => ({}), dispatch => ({
-  editStudent(id, studentInfo) {
-    dispatch(editStudent(id, studentInfo));
-  },
-}))(ManageStudentGenderCell);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    editStudent(id, studentInfo) {
+      dispatch(editStudent(id, studentInfo));
+    }
+  })
+)(ManageStudentGenderCell);

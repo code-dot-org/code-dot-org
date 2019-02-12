@@ -181,7 +181,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_getTime:
-        text: "{UNIT} kulunut"
+        text: "[UNIT][0] kulunut"
         options:
           UNIT:
             '"measures"': tahdit
@@ -961,7 +961,7 @@ fi:
         options:
           PROPERTY:
             "'shapeColor'": väri
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': koko

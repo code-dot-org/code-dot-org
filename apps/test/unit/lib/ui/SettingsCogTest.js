@@ -1,6 +1,6 @@
 import React from 'react';
 import Portal from 'react-portal';
-import {mount, ReactWrapper} from 'enzyme';
+import {mount} from 'enzyme';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
@@ -9,15 +9,16 @@ import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import * as assets from '@cdo/apps/code-studio/assets';
+import {getPortalContent} from '../../../util/reactTestUtils';
 
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
-    const wrapper = mount(<SettingsCog/>);
+    const wrapper = mount(<SettingsCog />);
     expect(wrapper.find(FontAwesome)).to.have.length(1);
   });
 
   it('opens the menu when the cog is clicked', () => {
-    const wrapper = mount(<SettingsCog/>);
+    const wrapper = mount(<SettingsCog />);
     const cog = wrapper.find(FontAwesome).first();
     const portal = wrapper.find(Portal).first();
     expect(portal).to.have.prop('isOpened', false);
@@ -27,7 +28,7 @@ describe('SettingsCog', () => {
 
   it('can close the menu', () => {
     // (It turns out testing the portal auto-close is difficult)
-    const wrapper = mount(<SettingsCog/>);
+    const wrapper = mount(<SettingsCog />);
     const cog = wrapper.find(FontAwesome).first();
     const menu = wrapper.find(Portal).first();
     cog.simulate('click');
@@ -43,7 +44,7 @@ describe('SettingsCog', () => {
     // @see https://github.com/tajo/react-portal/issues/140
     // Can probably remove this test if that bug gets fixed and our code
     // gets simplified.
-    const wrapper = mount(<SettingsCog/>);
+    const wrapper = mount(<SettingsCog />);
     const cog = wrapper.find(FontAwesome).first();
     const menu = wrapper.find(Portal).first();
     expect(wrapper).to.have.state('canOpen', true);
@@ -76,12 +77,11 @@ describe('SettingsCog', () => {
     expect(numMenuItems).to.equal(1);
   });
 
-
   describe('menu items', () => {
     let wrapper, portal, menuWrapper;
 
     beforeEach(() => {
-      wrapper = mount(<SettingsCog showMakerToggle={true}/>);
+      wrapper = mount(<SettingsCog showMakerToggle={true} />);
       const cog = wrapper.find(FontAwesome).first();
       portal = wrapper.find(Portal).first();
       expect(portal).to.have.prop('isOpened', false);
@@ -105,14 +105,22 @@ describe('SettingsCog', () => {
       });
 
       it('calls showAssetManager when clicked', () => {
-        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first().children().first();
+        const firstMenuItem = menuWrapper
+          .find(PopUpMenu.Item)
+          .first()
+          .children()
+          .first();
         expect(assets.showAssetManager).not.to.have.been.called;
         firstMenuItem.simulate('click');
         expect(assets.showAssetManager).to.have.been.calledOnce;
       });
 
       it('closes the menu when clicked', () => {
-        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first().children().first();
+        const firstMenuItem = menuWrapper
+          .find(PopUpMenu.Item)
+          .first()
+          .children()
+          .first();
         firstMenuItem.simulate('click');
         expect(portal).to.have.prop('isOpened', false);
       });
@@ -132,26 +140,20 @@ describe('SettingsCog', () => {
       it('renders with enable maker option if maker is available and disabled', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(false);
-        const wrapper = mount(
-          <ToggleMaker onClick={() => {}}/>
-        );
+        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
         expect(wrapper.text()).to.include(msg.enableMaker());
       });
 
       it('renders with disable maker option if maker is available and enabled', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(true);
-        const wrapper = mount(
-          <ToggleMaker onClick={() => {}}/>
-        );
+        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
         expect(wrapper.text()).to.include(msg.disableMaker());
       });
 
       it('hides maker toggle if maker is not available', () => {
         makerRedux.isAvailable.returns(false);
-        const wrapper = mount(
-          <ToggleMaker onClick={() => {}}/>
-        );
+        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
         expect(wrapper).to.be.blank;
       });
 
@@ -159,30 +161,16 @@ describe('SettingsCog', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(false);
         const handleToggleMaker = sinon.spy();
-        const wrapper = mount(
-          <ToggleMaker onClick={handleToggleMaker}/>
-        );
+        const wrapper = mount(<ToggleMaker onClick={handleToggleMaker} />);
         expect(wrapper.text()).to.equal(msg.enableMaker());
 
         expect(handleToggleMaker).not.to.have.been.called;
-        wrapper.children().first().simulate('click');
+        wrapper
+          .children()
+          .first()
+          .simulate('click');
         expect(handleToggleMaker).to.have.been.calledOnce;
       });
     });
   });
 });
-
-/**
- * @param {ReactWrapper} wrapper - enzyme wrapper containing a mounted Portal component
- * @returns ReactWrapper - the content of the portal
- */
-function getPortalContent(wrapper) {
-  const portal = wrapper.find(Portal);
-  if (portal.length > 0) {
-    const contentNode = portal.node.portal;
-    if (contentNode) {
-      return new ReactWrapper(contentNode, contentNode);
-    }
-  }
-  return null;
-}

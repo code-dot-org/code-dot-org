@@ -138,7 +138,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg {RANGE}
+        text: krijg [RANGE][0]
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -862,7 +862,7 @@ nl:
         text: Draai rechtsom
       Vector_positionCenter:
         text: midden
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': grootte
@@ -911,7 +911,7 @@ nl:
             "'left'": naar links
       craft_ifStandingOn:
         text: |-
-          als staande op {TYPE}
+          als staande op [TYPE][0]
           {STATEMENT}
         options:
           TYPE:
@@ -923,7 +923,7 @@ nl:
             "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
-          als staande op {TYPE}
+          als staande op [TYPE][0]
           {STATEMENT}
         options:
           TYPE:
