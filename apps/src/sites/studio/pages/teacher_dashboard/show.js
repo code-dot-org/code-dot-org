@@ -7,7 +7,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
   asyncSetStudents,
-  toggleSharingColumn
+  setShowSharingColumn
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections,
@@ -64,7 +64,7 @@ $(document).ready(function() {
   if (
     courseFamiliesToShowShareColumn.includes(section.script.course_family_name)
   ) {
-    store.dispatch(toggleSharingColumn());
+    store.dispatch(setShowSharingColumn(true));
   }
 
   $.ajax({

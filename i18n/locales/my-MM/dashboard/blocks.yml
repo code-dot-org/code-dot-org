@@ -167,6 +167,10 @@ my:
         options:
           CONDITION:
             '"when"': အချိန်
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': အချိန်
       aalab_whenTouching:
         options:
           CONDITION:
