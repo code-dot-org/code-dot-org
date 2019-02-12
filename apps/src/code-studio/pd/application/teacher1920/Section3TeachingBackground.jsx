@@ -18,7 +18,22 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
   };
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section3TeachingBackground)
+    ...Object.keys(PageLabels.section3TeachingBackground),
+    'school',
+    'schoolName',
+    'schoolDistrictName',
+    'schoolAddress',
+    'schoolCity',
+    'schoolState',
+    'schoolZipCode',
+    'schoolType',
+    'principalTitle',
+    'principalFirstName',
+    'principalLastName',
+    'principalEmail',
+    'principalConfirmEmail',
+    'principalPhoneNumber',
+    'currentRole'
   ];
 
   handleSchoolChange = selectedSchool =>

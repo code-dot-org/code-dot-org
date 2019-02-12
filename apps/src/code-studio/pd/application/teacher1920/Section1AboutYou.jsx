@@ -31,10 +31,27 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
   static associatedFields = [
     // Gender Identity and Race are things we want rendered in Section 1 in the detail view
-    // but we want to ask in section 5. So they need to be removed here
+    // but we want to ask in section 5. So they need to be removed here.
+    // Also remove a whole mess of fields (from school to principal to role) which we have
+    // moved to Section 3, and therefore don't want to validate here in Section 1.
     ..._.difference(Object.keys(PageLabels.section1AboutYou), [
       'genderIdentity',
-      'race'
+      'race',
+      'school',
+      'schoolName',
+      'schoolDistrictName',
+      'schoolAddress',
+      'schoolCity',
+      'schoolState',
+      'schoolZipCode',
+      'schoolType',
+      'principalTitle',
+      'principalFirstName',
+      'principalLastName',
+      'principalEmail',
+      'principalConfirmEmail',
+      'principalPhoneNumber',
+      'currentRole'
     ])
   ];
 
