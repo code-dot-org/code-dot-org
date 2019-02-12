@@ -226,7 +226,8 @@ class CodeWorkspace extends React.Component {
   }
 }
 
-module.exports = connect(state => ({
+export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
+export default connect(state => ({
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
