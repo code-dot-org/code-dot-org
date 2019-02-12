@@ -54,44 +54,46 @@ export default class FeedbacksList extends Component {
   render() {
     return (
       <div>
-        <table>
-          <thead>
-            <tr>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Key Concept</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Exceeds</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Meets</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Approaches</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>No Evidence</h4>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={styles.rubricTD}>{this.props.rubric.keyConcept}</td>
-              <td style={styles.rubricTD} id={'exceeds'}>
-                {this.props.rubric.exceeds}
-              </td>
-              <td style={styles.rubricTD} id={'meets'}>
-                {this.props.rubric.meets}
-              </td>
-              <td style={styles.rubricTD} id={'approaches'}>
-                {this.props.rubric.approaches}
-              </td>
-              <td style={styles.rubricTD} id={'noEvidence'}>
-                {this.props.rubric.noEvidence}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        {this.props.rubric && this.props.feedbacks[0].performance && (
+          <table>
+            <thead>
+              <tr>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Key Concept</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Exceeds</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Meets</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Approaches</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>No Evidence</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={styles.rubricTD}>{this.props.rubric.keyConcept}</td>
+                <td style={styles.rubricTD} id={'exceeds'}>
+                  {this.props.rubric.exceeds}
+                </td>
+                <td style={styles.rubricTD} id={'meets'}>
+                  {this.props.rubric.meets}
+                </td>
+                <td style={styles.rubricTD} id={'approaches'}>
+                  {this.props.rubric.approaches}
+                </td>
+                <td style={styles.rubricTD} id={'noEvidence'}>
+                  {this.props.rubric.noEvidence}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        )}
         {this.props.feedbacks.map((feedback, i) => (
           <div style={styles.content} key={i}>
             <div>
