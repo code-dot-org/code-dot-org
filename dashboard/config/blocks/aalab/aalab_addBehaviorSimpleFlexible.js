@@ -1,11 +1,11 @@
 function addBehaviorSimpleFlexible(sprite, behavior) {
   if(sprite && behavior) {
-    if(sprite.length === undefined) {
-      addBehavior(sprite, behavior, behavior.name);
+    if(!Array.isArray(sprite)) {
+      addBehavior(sprite, behavior);
     } else {
-      for(var i = 0; i < sprite.length; i++) {
-      	addBehavior(sprite[i], behavior, behavior.name);
-      }
+      sprite.forEach(function(s) {
+        addBehavior(s, behavior);
+      });
     }
   }
 }
