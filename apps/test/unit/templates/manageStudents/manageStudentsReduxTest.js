@@ -17,7 +17,7 @@ import manageStudents, {
   AddStatus,
   addMultipleRows,
   RowType,
-  toggleSharingColumn,
+  setShowSharingColumn,
   updateAllShareSetting,
   setSharingDefault,
   TransferStatus,
@@ -250,14 +250,28 @@ describe('manageStudentsRedux', () => {
     });
   });
 
-  describe('toggleSharingColumn', () => {
-    it('toggle showSharingColumn state', () => {
-      const action = toggleSharingColumn();
-      const nextState = manageStudents(initialState, action);
-      assert.deepEqual(
-        nextState.showSharingColumn,
-        !initialState.showSharingColumn
-      );
+  describe('setShowSharingColumn', () => {
+    it('set showSharingColumn state', () => {
+      let action = setShowSharingColumn(true);
+      let nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.showSharingColumn, true);
+
+      action = setShowSharingColumn(false);
+      nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.showSharingColumn, false);
+
+      const state = {
+        ...initialState,
+        showSharingColumn: true
+      };
+
+      action = setShowSharingColumn(true);
+      nextState = manageStudents(state, action);
+      assert.deepEqual(nextState.showSharingColumn, true);
+
+      action = setShowSharingColumn(false);
+      nextState = manageStudents(state, action);
+      assert.deepEqual(nextState.showSharingColumn, false);
     });
   });
 

@@ -223,7 +223,7 @@ hu:
         title: Szerződések, Domainok és tartományok
         desc: Szerződések segíthetnek megérteni és megvitatni a funkciók működését.
           Ebben a leckében megnézzük a szerződések hogyan segítenek megérteni egy
-          új programozási nyelvet vagy funkciót.
+          új programozási nyelvet vagy függvényt.
       DesignRecipe:
         title: A dizájn receptje
         desc: Az utolsó szakaszban a diákok írnak néhány egyszerűbb függvényt - bár

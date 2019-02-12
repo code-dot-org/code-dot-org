@@ -986,6 +986,7 @@ ro:
         tynker: 'Tynker'
       robotics:
         kodable: 'Kodable'
+        sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Atelierul minune'
       workshop_course:

@@ -4211,6 +4211,10 @@ it:
               name: Braccialetti Binari
             'End of Course Project: Play Lab':
               name: 'Progetto di fine corso: Laboratorio'
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
@@ -4327,6 +4331,8 @@ it:
               name: Eventi
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
+            'Loops: Getting Loopy':
+              name: 'Cicli: Diventare Ripetitivi'
         pre-express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.

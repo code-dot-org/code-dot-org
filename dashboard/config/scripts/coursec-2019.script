@@ -5,7 +5,6 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-family_name 'coursec'
 version_year '2019'
 
 stage 'Screen Out the Mean'
@@ -44,21 +43,21 @@ bonus 'courseC_maze_debugging_challenge1_2019'
 bonus 'courseC_maze_debugging_challenge2_2019'
 
 stage 'Programming in Collector'
-level 'courseC_video_collector_2019'
+level 'courseC_video_collector_2019', progression: 'Student Video'
 level 'courseC_collector_prog1_2019'
 level 'courseC_collector_prog2_2019'
 level 'courseC_collector_prog3_2019'
 level 'courseC_collector_prog4_2019'
 level 'courseC_collector_prog5_2019'
 level 'courseC_collector_prog6_2019'
-level 'courseC_collector_prog7_2019', challenge: true
+level 'courseC_collector_prog7_2019', progression: 'Challenge Puzzle', challenge: true
 level 'courseC_collector_prog8_2019'
 level 'courseC_collector_prog9_2019'
 level 'grade2_collector_A_2019'
 assessment 'grade2_collector_A_predict1_2019'
 level 'grade2_collector_10_2019'
-bonus 'courseC_collector_prog_challenge1_2019'
-bonus 'courseC_collector_prog_challenge2_2019'
+bonus 'courseC_collector_prog_challenge1_2019', progression: 'Lesson Extras'
+bonus 'courseC_collector_prog_challenge2_2019', progression: 'Lesson Extras'
 
 stage 'Programming in Artist'
 level 'courseC_video_artist_2019'
@@ -107,7 +106,7 @@ level 'courseC_harvester_loops4_2019'
 level 'courseC_harvester_loops6_2019'
 level 'courseC_harvester_loops7_2019'
 level 'courseC_harvester_loops5_2019'
-level 'courseC_harvester_loops8_2019', challenge: true
+level 'courseC_harvester_loops8_2019', progression: 'Challenge Puzzle', challenge: true
 level 'courseC_harvester_loops9_2019'
 level 'courseC_harvester_loops10_2019'
 level 'courseC_harvester_loops11_2019'

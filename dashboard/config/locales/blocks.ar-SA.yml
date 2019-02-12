@@ -920,6 +920,23 @@ ar:
           CONDITION:
             '"when"': عندما
             '"while"': التكرار طالما
+      aalab_jumpTo:
+        text: "{SPRITE} انتقل إلى {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': مدينة
       aalab_whenTouching:
         options:
           CONDITION:
