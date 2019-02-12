@@ -6,7 +6,7 @@
     %td.heading= 'Date'.pluralize(@workshop.sessions.length) + ':'
     %td
       - @workshop.sessions.each do |session|
-        = session.american_date_with_start_and_end_times
+        = session.start_date_with_start_and_end_times_us_format
         %br
   %tr
     %td.heading

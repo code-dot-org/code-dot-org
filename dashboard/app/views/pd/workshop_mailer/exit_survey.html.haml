@@ -15,7 +15,7 @@
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     = @workshop.subject
   workshop on
-  = @workshop.sessions.first.formatted_date + '.'
+  = @workshop.sessions.first.start_date_us_format + '.'
 
 %p
   %strong
@@ -61,8 +61,7 @@
 
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     %p
-      There's a personalized certificate attached to this email acknowledging your successful completion of
-      = code_org_link + "'s"
+      There's a personalized certificate attached to this email acknowledging your successful completion of Code.org's
       = @workshop.course
       workshop.
 
@@ -79,8 +78,7 @@
     %br
     Megan Hochstatter
     %br
-    K-5 Education Program Manager
-    = code_org_link
+    K-5 Education Program Manager Code.org
 
 - else
   %p

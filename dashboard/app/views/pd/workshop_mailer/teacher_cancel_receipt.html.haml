@@ -10,7 +10,7 @@
   workshop with
   = @workshop.organizer.name
   on
-  = @workshop.sessions.first.formatted_date
+  = @workshop.sessions.first.start_date_us_format
 
 - if @workshop.course == Pd::Workshop::COURSE_CSF
   We’re sorry to hear you can no longer attend.

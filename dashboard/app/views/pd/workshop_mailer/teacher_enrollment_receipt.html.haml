@@ -27,8 +27,8 @@
     If you have not used CS Fundamentals with students yet, or don’t plan to do so before this workshop, please
     = link_to 'click here to cancel your registration', @cancel_url, target: "_blank"
     to this workshop and sign up for a
-    = link_to 'CS Fundamentals Intro workshop near you', 'https://code.org/professional-development-workshops'
-    to help you get started.
+    = link_to 'CS Fundamentals Intro workshop', 'https://code.org/professional-development-workshops'
+    near you to help you get started.
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
