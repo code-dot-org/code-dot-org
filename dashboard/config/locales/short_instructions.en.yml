@@ -3536,6 +3536,7 @@ en:
       courseA_collector_preLoops5: Get 1 of these 2 gems to solve this puzzle.
       courseA_collector_preLoops6: Get both pieces of treasure to solve this puzzle.
       courseA_collector_preLoops7: Get all three piles to pass this level.
+      courseA_data widget: "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?"
       courseA_forVideoTest_artist: Use the `repeat` loop to add waves to the water.
       courseA_harvester_forVideo: Can you pick all the corn using only **one** move block?
       courseA_harvester_loops1: Help the harvester pick all the corn!
@@ -4100,6 +4101,7 @@ en:
       courseC_collector_prog_challenge2: Collect at least **10** pieces of treasure to finish this challenge!
       courseC_collector_prog_challenge2_2018: Collect at least **10** pieces of treasure to finish this challenge!
       courseC_collector_prog_challenge2_2019: Collect at least **10** pieces of treasure to finish this challenge!
+      courseC_data widget: "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?"
       courseC_flappy_embed_events: Here's an example of a game that you're about to create yourself! Play through it one or two times to get an idea of what you are about to make.
       courseC_flappy_events1: Attach the `flap normal amount` block to the `when click` event, then press "Run".    Click or tap on the play space to move Flappy to the target.
       courseC_flappy_events10: 'Create your own Flappy game! '

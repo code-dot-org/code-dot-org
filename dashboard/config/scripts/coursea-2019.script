@@ -2,9 +2,10 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursea/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursea/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
+family_name 'coursea'
 version_year '2019'
 
 stage 'Going Places Safely'
