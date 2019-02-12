@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
   include Pd::WorkshopConstants
+  include ActionMailer::TestHelper
 
   freeze_time
 
@@ -344,6 +345,49 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
 
     workshop.send_exit_surveys
+  end
+
+  test 'send_follow_up only teachers attended workshop get follow up emails' do
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+
+    teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true)
+
+    Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
+      with(Pd::Enrollment.for_user(teacher_attended).first).returns('a url')
+
+    Pd::Workshop.send_follow_up_in_days(30)
+  end
+
+  test 'send_follow_up all teachers attended workshop get follow up emails' do
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+
+    teacher_count = 3
+    teacher_count.times {create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)}
+
+    assert_emails teacher_count do
+      Pd::Workshop.send_follow_up_in_days(30)
+    end
+  end
+
+  test 'send_follow_up only workshop ended exactly 30 days ago get follow up emails' do
+    workshop_31d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 31.days
+    workshop_30d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+    workshop_29d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 29.days
+
+    create(:pd_workshop_participant, workshop: workshop_31d, enrolled: true, attended: true)
+    teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
+    create(:pd_workshop_participant, workshop: workshop_29d, enrolled: true, attended: true)
+
+    Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
+      with(Pd::Enrollment.for_user(teacher_30d).first)
+
+    Pd::Workshop.send_follow_up_in_days(30)
   end
 
   test 'soft delete' do

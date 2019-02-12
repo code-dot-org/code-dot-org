@@ -124,8 +124,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def teacher_follow_up__csf_intro
-    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
-      options: {days_after: 30}
+    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
   end
 
   def organizer_enrollment_receipt

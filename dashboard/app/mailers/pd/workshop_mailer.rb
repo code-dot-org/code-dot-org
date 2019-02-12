@@ -41,10 +41,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_follow_up(enrollment, days_after: nil)
+  def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
 
+    # The subject below is only applicable for CSF Intro
     mail content_type: 'text/html',
       from: from_teacher,
       subject: 'Having fun with CS Fundamentals yet?',
