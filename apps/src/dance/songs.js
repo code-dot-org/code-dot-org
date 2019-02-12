@@ -1,4 +1,4 @@
-import Sounds from "../Sounds";
+import Sounds from '../Sounds';
 
 /**
  * Requests the song manifest in parallel with signed cloudfront cookies. These cookies
@@ -9,9 +9,12 @@ import Sounds from "../Sounds";
  * @returns {Promise<*>} The song manifest.
  */
 export async function getSongManifest(useRestrictedSongs) {
-  const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
-  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
-    .then(response => response.json());
+  const manifestFilename = useRestrictedSongs
+    ? 'songManifest.json'
+    : 'testManifest.json';
+  const songManifestPromise = fetch(
+    `/api/v1/sound-library/hoc_song_meta/${manifestFilename}`
+  ).then(response => response.json());
   const promises = [songManifestPromise];
 
   if (useRestrictedSongs) {
@@ -22,12 +25,13 @@ export async function getSongManifest(useRestrictedSongs) {
   const result = await Promise.all(promises);
   const songManifest = result[0].songs;
 
-  const songPathPrefix = useRestrictedSongs ?
-    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
+  const songPathPrefix = useRestrictedSongs
+    ? '/restricted/'
+    : 'https://curriculum.code.org/media/uploads/';
 
   return songManifest.map(song => ({
     ...song,
-    url: `${songPathPrefix}${song.url}.mp3`,
+    url: `${songPathPrefix}${song.url}.mp3`
   }));
 }
 
@@ -50,7 +54,11 @@ export function getSelectedSong(songManifest, config) {
   // in development mode, so just select the first song in the list instead.
   const songs = songManifest.map(song => song.id);
   const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
-  if ((isProjectLevel || freePlay) && selectedSong && songs.includes(selectedSong)) {
+  if (
+    (isProjectLevel || freePlay) &&
+    selectedSong &&
+    songs.includes(selectedSong)
+  ) {
     return selectedSong;
   } else if (defaultSong && songs.includes(defaultSong)) {
     return defaultSong;
@@ -70,7 +78,7 @@ export function loadSong(songId, songData, onPreloadError) {
   const options = {
     id: url,
     mp3: url,
-    onPreloadError,
+    onPreloadError
   };
   Sounds.getSingleton().register(options);
 }
@@ -88,7 +96,7 @@ export async function loadSongMetadata(id) {
 
 export function parseSongOptions(songManifest) {
   let songs = {};
-  songManifest.forEach((song) => {
+  songManifest.forEach(song => {
     songs[song.id] = {title: song.text, url: song.url, pg13: song.pg13};
   });
   return songs;

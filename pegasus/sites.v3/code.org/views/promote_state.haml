@@ -11,7 +11,8 @@
   -unless data[:cs_jobs_i] == 0
     %strong.figure
       =format_integer_with_commas(data[:cs_jobs_i])
-    Open computing jobs
+    .info
+      Open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
   %p.fact.subfact
     (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
@@ -19,17 +20,20 @@
   -unless data[:cs_graduates] == 0
     %strong.figure
       =format_integer_with_commas(data[:cs_graduates_i])
-    Computer science graduates
+    .info
+      Computer science graduates
 
-%p.fact
+.policy-title.fact
   = precede "Policy Environment (" do
     = succeed "):" do
       %a{href: 'http://bit.ly/9policiesrubric', target: '_blank'} rubric
 
-.icon-facts
+.icon-facts.info
   .fact.icon-fact
     - if data[:pd_funding_s] == "No"
-      %i.fa.fa-times-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         No dedicated state funding for CS PD
     - elsif data[:pd_funding_s] == "Yes"
@@ -42,7 +46,9 @@
         = data[:pd_funding_exception_s]
   .fact.icon-fact
     - if data[:require_hs_s] == "No"
-      %i.fa.fa-times-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         Does not require all high schools to offer CS
     - elsif data[:require_hs_s] == "Yes"
@@ -56,7 +62,9 @@
 
   .fact.icon-fact
     - if data[:cs_standards_s] == "No"
-      %i.fa.fa-times-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         No K-12 CS curriculum standards
     - elsif data[:cs_standards_s] == "Yes"
@@ -114,16 +122,3 @@
     %a{href: data[:action_url_s], target: '_blank'}
       %button{class: 'state-petition-btn', style: 'visibility: hidden'}
         Sign petition
-
-%p#sources
-  %span
-    Sources:
-  =succeed "," do
-    %a{href: "http://www.conference-board.org/", style: "color: #BCC2C6", target: '_blank'} The Conference Board
-  =succeed "," do
-    %a{href: "http://nces.ed.gov/", style: "color: #BCC2C6", target: '_blank'} National Center for Education Statistics
-  and the
-  =succeed "." do
-    %a{href: "https://research.collegeboard.org/programs/ap/data", style: "color:#BCC2C6", target: '_blank'} College Board
-  =succeed "." do
-    %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info

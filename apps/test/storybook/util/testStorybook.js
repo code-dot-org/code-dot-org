@@ -26,7 +26,7 @@ class FakeStorybook {
       name: `Stories of ${name}`,
       stories: [],
       decorate: story => story(),
-      deprecated: false,
+      deprecated: false
     });
     return this;
   }
@@ -37,7 +37,7 @@ class FakeStorybook {
   }
 
   latestGroup() {
-    return this.groups[this.groups.length-1];
+    return this.groups[this.groups.length - 1];
   }
 
   add(name, story) {
@@ -63,7 +63,7 @@ class FakeStorybook {
 
   action() {
     // Intentional no-op
-    return function () {};
+    return function() {};
   }
 
   withExperiments(...experimentList) {

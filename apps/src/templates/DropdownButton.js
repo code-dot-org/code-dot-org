@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   main: {
-    display: 'inline-block',
+    display: 'inline-block'
   },
   icon: {
     fontSize: 24,
@@ -20,7 +20,7 @@ const styles = {
     border: `1px solid ${color.charcoal}`,
     position: 'absolute',
     // without this, this will be below some content, such as ProgressBubble.
-    zIndex: 1000,
+    zIndex: 1000
   },
   anchor: {
     padding: 10,
@@ -62,7 +62,7 @@ class DropdownButton extends Component {
   };
 
   state = {
-    dropdownOpen: false,
+    dropdownOpen: false
   };
 
   onComponentDidUnmount() {
@@ -105,15 +105,15 @@ class DropdownButton extends Component {
   };
 
   render() {
-    const { text, color } = this.props;
-    const { dropdownOpen } = this.state;
+    const {text, color} = this.props;
+    const {dropdownOpen} = this.state;
 
     return (
       <div style={styles.main}>
         <Button
           text={text}
           onClick={this.toggleDropdown}
-          icon={dropdownOpen ? "caret-up" : "caret-down"}
+          icon={dropdownOpen ? 'caret-up' : 'caret-down'}
           iconStyle={styles.icon}
           color={color}
         />

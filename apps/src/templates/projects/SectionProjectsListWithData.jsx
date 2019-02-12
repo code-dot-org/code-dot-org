@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SectionProjectsList from './SectionProjectsList';
@@ -9,7 +9,7 @@ class SectionProjectsListWithData extends Component {
     studioUrlPrefix: PropTypes.string,
 
     // Props provided by redux.
-    sectionId: PropTypes.number,
+    sectionId: PropTypes.number
   };
 
   state = {
@@ -18,7 +18,9 @@ class SectionProjectsListWithData extends Component {
   };
 
   componentDidMount() {
-    const projectsDataUrl = `/dashboardapi/v1/projects/section/${this.props.sectionId}`;
+    const projectsDataUrl = `/dashboardapi/v1/projects/section/${
+      this.props.sectionId
+    }`;
     $.ajax({
       url: projectsDataUrl,
       method: 'GET',
@@ -37,16 +39,14 @@ class SectionProjectsListWithData extends Component {
 
     return (
       <div>
-        {this.state.isLoading &&
-          <Spinner/>
-        }
-        {!this.state.isLoading &&
+        {this.state.isLoading && <Spinner />}
+        {!this.state.isLoading && (
           <SectionProjectsList
             projectsData={projectsData}
             studioUrlPrefix={studioUrlPrefix}
             showProjectThumbnails={true}
           />
-        }
+        )}
       </div>
     );
   }
@@ -55,5 +55,5 @@ class SectionProjectsListWithData extends Component {
 export const UnconnectedSectionProjectsListWithData = SectionProjectsListWithData;
 
 export default connect(state => ({
-  sectionId: state.sectionData.section.id,
+  sectionId: state.sectionData.section.id
 }))(SectionProjectsListWithData);

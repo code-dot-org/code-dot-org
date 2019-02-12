@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {tableLayoutStyles} from "../tables/tableConstants";
+import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
 
 const styles = {
   inputBox: {
-    width: 225,
-  },
+    width: 225
+  }
 };
 
 class PersonalProjectsNameCell extends Component {
@@ -17,20 +17,26 @@ class PersonalProjectsNameCell extends Component {
     projectName: PropTypes.string.isRequired,
     isEditing: PropTypes.bool,
     updatedName: PropTypes.string,
-    updateProjectName: PropTypes.func.isRequired,
+    updateProjectName: PropTypes.func.isRequired
   };
 
-   onChangeName = (e) => {
+  onChangeName = e => {
     this.props.updateProjectName(this.props.projectId, e.target.value);
   };
 
   render() {
-    const {projectId, projectType, projectName, updatedName, isEditing} = this.props;
+    const {
+      projectId,
+      projectType,
+      projectName,
+      updatedName,
+      isEditing
+    } = this.props;
     const url = `/projects/${projectType}/${projectId}/edit`;
 
     return (
       <div>
-        {!isEditing &&
+        {!isEditing && (
           <a
             style={tableLayoutStyles.link}
             href={url}
@@ -39,8 +45,8 @@ class PersonalProjectsNameCell extends Component {
           >
             {projectName}
           </a>
-        }
-        {isEditing &&
+        )}
+        {isEditing && (
           <div>
             <input
               required
@@ -50,14 +56,17 @@ class PersonalProjectsNameCell extends Component {
               className="ui-project-rename-input"
             />
           </div>
-        }
+        )}
       </div>
     );
   }
 }
 
-export default connect(state => ({}), dispatch => ({
- updateProjectName(projectId, updatedName) {
-   dispatch(updateProjectName(projectId, updatedName));
- },
-}))(PersonalProjectsNameCell);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    updateProjectName(projectId, updatedName) {
+      dispatch(updateProjectName(projectId, updatedName));
+    }
+  })
+)(PersonalProjectsNameCell);

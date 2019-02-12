@@ -14,26 +14,26 @@ const styles = {
     right: 0,
     bottom: 0,
     width: '100%',
-    height: '100%',
+    height: '100%'
   },
   rotateContainerInner: {
     backgroundPosition: '50% 50%',
     backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
+    backgroundRepeat: 'no-repeat'
   },
   rotateText: {
     position: 'relative',
     top: '50%',
     left: '-50%',
     marginLeft: '50px',
-    marginRight: '-50px',
+    marginRight: '-50px'
   },
   paragraph: {
     textAlign: 'center',
     fontSize: '26px',
     lineHeight: '26px',
     transform: 'rotate(90deg)',
-    WebkitTransform: 'rotate(90deg)',
+    WebkitTransform: 'rotate(90deg)'
   }
 };
 
@@ -65,13 +65,20 @@ export default class RotateContainer extends React.Component {
             ...styles.rotateContainerInner,
             width: window.screen.width / scale,
             height: window.screen.height,
-            backgroundImage: 'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')',
+            backgroundImage:
+              'url(' +
+              this.props.assetUrl('media/turnphone_horizontal.png') +
+              ')'
           }}
         >
           <div style={styles.rotateText}>
-            <p style={styles.paragraph}>{msg.rotateText()}<br />{msg.orientationLock()}</p>
+            <p style={styles.paragraph}>
+              {msg.rotateText()}
+              <br />
+              {msg.orientationLock()}
+            </p>
           </div>
-          </div>
+        </div>
       </div>
     );
   }

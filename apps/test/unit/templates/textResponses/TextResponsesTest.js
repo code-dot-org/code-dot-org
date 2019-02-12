@@ -9,35 +9,34 @@ const responses = {
   1: [
     {
       puzzle: 2,
-      question: "Free Response",
-      response: "Lorem ipsum dolor sit amet, postea pericula",
-      stage: "Lesson 1",
+      question: 'Free Response',
+      response: 'Lorem ipsum dolor sit amet, postea pericula',
+      stage: 'Lesson 1',
       studentId: 1,
-      studentName: "Student A",
-      url: "http://fake.url"
+      studentName: 'Student A',
+      url: 'http://fake.url'
     },
     {
       puzzle: 3,
-      question: "Free Response",
-      response: "Lorem ipsum dolor sit amet, postea pericula",
-      stage: "Lesson 2",
+      question: 'Free Response',
+      response: 'Lorem ipsum dolor sit amet, postea pericula',
+      stage: 'Lesson 2',
       studentId: 1,
-      studentName: "Student A",
-      url: "http://fake.url"
+      studentName: 'Student A',
+      url: 'http://fake.url'
     },
     {
       puzzle: 3,
-      question: "Free Response",
-      response: "Lorem ipsum dolor sit amet, postea pericula",
-      stage: "Lesson 2",
+      question: 'Free Response',
+      response: 'Lorem ipsum dolor sit amet, postea pericula',
+      stage: 'Lesson 2',
       studentId: 3,
-      studentName: "Student C",
-      url: "http://fake.url"
+      studentName: 'Student C',
+      url: 'http://fake.url'
     }
   ],
   2: []
 };
-
 
 describe('TextResponses', () => {
   it('renders the ScriptSelector dropdown', () => {

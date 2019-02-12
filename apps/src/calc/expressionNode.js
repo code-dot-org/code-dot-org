@@ -29,7 +29,7 @@ function ImaginaryNumberError(message) {
  * @returns {jsnumber}
  */
 function ensureJsnum(val) {
-  if (typeof(val) === 'number') {
+  if (typeof val === 'number') {
     return jsnums.makeFloat(val);
   }
   return val;
@@ -42,7 +42,7 @@ function ensureJsnum(val) {
  * If args are not ExpressionNode, we convert them to be so, assuming any string
  * represents a variable
  */
-var ExpressionNode = function (val, args, blockId) {
+var ExpressionNode = function(val, args, blockId) {
   this.value_ = ensureJsnum(val);
 
   this.blockId_ = blockId;
@@ -51,10 +51,10 @@ var ExpressionNode = function (val, args, blockId) {
   }
 
   if (!Array.isArray(args)) {
-    throw new Error("Expected array");
+    throw new Error('Expected array');
   }
 
-  this.children_ = args.map(function (item) {
+  this.children_ = args.map(function(item) {
     if (!(item instanceof ExpressionNode)) {
       item = new ExpressionNode(item);
     }
@@ -66,7 +66,7 @@ var ExpressionNode = function (val, args, blockId) {
   }
 
   if (this.isArithmetic() && args.length !== 2) {
-    throw new Error("Arithmetic ExpressionNode needs 2 args");
+    throw new Error('Arithmetic ExpressionNode needs 2 args');
   }
 };
 module.exports = ExpressionNode;
@@ -76,16 +76,16 @@ ExpressionNode.ImaginaryNumberError = ImaginaryNumberError;
 /**
  * What type of expression node is this?
  */
-ExpressionNode.prototype.getType_ = function () {
-  if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
+ExpressionNode.prototype.getType_ = function() {
+  if (['+', '-', '*', '/'].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
   }
 
-  if (["pow", "sqrt", "sqr"].indexOf(this.value_) !== -1) {
+  if (['pow', 'sqrt', 'sqr'].indexOf(this.value_) !== -1) {
     return ValueType.EXPONENTIAL;
   }
 
-  if (typeof(this.value_) === 'string') {
+  if (typeof this.value_ === 'string') {
     if (this.children_.length === 0) {
       return ValueType.VARIABLE;
     }
@@ -97,23 +97,23 @@ ExpressionNode.prototype.getType_ = function () {
   }
 };
 
-ExpressionNode.prototype.isArithmetic = function () {
+ExpressionNode.prototype.isArithmetic = function() {
   return this.getType_() === ValueType.ARITHMETIC;
 };
 
-ExpressionNode.prototype.isFunctionCall = function () {
+ExpressionNode.prototype.isFunctionCall = function() {
   return this.getType_() === ValueType.FUNCTION_CALL;
 };
 
-ExpressionNode.prototype.isVariable = function () {
+ExpressionNode.prototype.isVariable = function() {
   return this.getType_() === ValueType.VARIABLE;
 };
 
-ExpressionNode.prototype.isNumber = function () {
+ExpressionNode.prototype.isNumber = function() {
   return this.getType_() === ValueType.NUMBER;
 };
 
-ExpressionNode.prototype.isExponential = function () {
+ExpressionNode.prototype.isExponential = function() {
   return this.getType_() === ValueType.EXPONENTIAL;
 };
 
@@ -121,17 +121,20 @@ ExpressionNode.prototype.isExponential = function () {
  * @returns {boolean} true if the root expression node is a divide by zero. Does
  *   not account for div zeros in descendants
  */
-ExpressionNode.prototype.isDivZero = function () {
+ExpressionNode.prototype.isDivZero = function() {
   var rightChild = this.getChildValue(1);
-  return this.getValue() === '/' && jsnums.isSchemeNumber(rightChild) &&
-    jsnums.equals(rightChild, 0);
+  return (
+    this.getValue() === '/' &&
+    jsnums.isSchemeNumber(rightChild) &&
+    jsnums.equals(rightChild, 0)
+  );
 };
 
 /**
  * Create a deep clone of this node
  */
-ExpressionNode.prototype.clone = function () {
-  var children = this.children_.map(function (item) {
+ExpressionNode.prototype.clone = function() {
+  var children = this.children_.map(function(item) {
     return item.clone();
   });
   return new ExpressionNode(this.value_, children, this.blockId_);
@@ -147,7 +150,7 @@ ExpressionNode.prototype.clone = function () {
  * @returns {Error?} evalatuion.err
  * @returns {jsnumber?} evaluation.result
  */
-ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
+ExpressionNode.prototype.evaluate = function(globalMapping, localMapping) {
   var error;
   try {
     globalMapping = globalMapping || {};
@@ -158,8 +161,10 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     var val;
 
     if (type === ValueType.VARIABLE) {
-      var mappedVal = utils.valueOr(localMapping[this.value_],
-        globalMapping[this.value_]);
+      var mappedVal = utils.valueOr(
+        localMapping[this.value_],
+        globalMapping[this.value_]
+      );
       if (mappedVal === undefined) {
         throw new Error('No mapping for variable during evaluation');
       }
@@ -170,8 +175,10 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     }
 
     if (type === ValueType.FUNCTION_CALL) {
-      var functionDef = utils.valueOr(localMapping[this.value_],
-        globalMapping[this.value_]);
+      var functionDef = utils.valueOr(
+        localMapping[this.value_],
+        globalMapping[this.value_]
+      );
       if (functionDef === undefined) {
         throw new Error('No mapping for function during evaluation');
       }
@@ -185,19 +192,25 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
 
       // We're calling a new function, so it gets a new local scope.
       var newLocalMapping = {};
-      functionDef.variables.forEach(function (variable, index) {
-        var evaluation = this.children_[index].evaluate(globalMapping, localMapping);
+      functionDef.variables.forEach(function(variable, index) {
+        var evaluation = this.children_[index].evaluate(
+          globalMapping,
+          localMapping
+        );
         if (evaluation.err) {
           throw evaluation.err;
         }
         var childVal = evaluation.result;
-        newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
+        newLocalMapping[variable] = utils.valueOr(
+          localMapping[childVal],
+          childVal
+        );
       }, this);
       return functionDef.expression.evaluate(globalMapping, newLocalMapping);
     }
 
     if (type === ValueType.NUMBER) {
-      return { result: this.value_ };
+      return {result: this.value_};
     }
 
     if (type !== ValueType.ARITHMETIC && type !== ValueType.EXPONENTIAL) {
@@ -214,7 +227,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       switch (this.value_) {
         case 'sqrt':
           val = jsnums.sqrt(left);
-          if ((val instanceof jsnums.Complex) && !val.isReal()) {
+          if (val instanceof jsnums.Complex && !val.isReal()) {
             throw new ImaginaryNumberError();
           }
           break;
@@ -224,7 +237,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
         default:
           throw new Error('Unknown operator: ' + this.value_);
       }
-      return { result: ensureJsnum(val) };
+      return {result: ensureJsnum(val)};
     }
 
     var right = this.children_[1].evaluate(globalMapping, localMapping);
@@ -258,17 +271,17 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     // When calling jsnums methods, they will sometimes return a jsnumber and
     // sometimes a native JavaScript number. We want to make sure to convert
     // to a jsnumber before we return.
-    return { result: ensureJsnum(val) };
+    return {result: ensureJsnum(val)};
   } catch (err) {
     error = err;
   }
-  return { err: error };
+  return {err: error};
 };
 
 /**
  * Depth of this node's tree. A lone value is considered to have a depth of 0.
  */
-ExpressionNode.prototype.depth = function () {
+ExpressionNode.prototype.depth = function() {
   var max = 0;
   for (var i = 0; i < this.children_.length; i++) {
     max = Math.max(max, 1 + this.children_[i].depth());
@@ -281,7 +294,7 @@ ExpressionNode.prototype.depth = function () {
  * Gets the deepest descendant operation ExpressionNode in the tree (i.e. the
  * next node to collapse
  */
-ExpressionNode.prototype.getDeepestOperation = function () {
+ExpressionNode.prototype.getDeepestOperation = function() {
   if (this.children_.length === 0) {
     return null;
   }
@@ -308,7 +321,7 @@ ExpressionNode.prototype.getDeepestOperation = function () {
  * furthest left.
  * @returns {boolea} true if collapse was successful.
  */
-ExpressionNode.prototype.collapse = function () {
+ExpressionNode.prototype.collapse = function() {
   var deepest = this.getDeepestOperation();
   if (deepest === null) {
     return false;
@@ -333,19 +346,22 @@ ExpressionNode.prototype.collapse = function () {
  * are marked
  * @param {ExpressionNode} other The ExpressionNode to compare to.
  */
-ExpressionNode.prototype.getTokenListDiff = function (other) {
+ExpressionNode.prototype.getTokenListDiff = function(other) {
   var tokens;
-  var nodesMatch = other && this.hasSameValue_(other) &&
-    (this.children_.length === other.children_.length);
+  var nodesMatch =
+    other &&
+    this.hasSameValue_(other) &&
+    this.children_.length === other.children_.length;
   var type = this.getType_();
 
   if (this.children_.length === 0) {
     return [new Token(this.value_, !nodesMatch)];
   }
 
-  var tokensForChild = function (childIndex) {
-    return this.children_[childIndex].getTokenListDiff(nodesMatch &&
-      other.children_[childIndex]);
+  var tokensForChild = function(childIndex) {
+    return this.children_[childIndex].getTokenListDiff(
+      nodesMatch && other.children_[childIndex]
+    );
   }.bind(this);
 
   if (type === ValueType.ARITHMETIC) {
@@ -353,7 +369,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     tokens = [new Token('(', !nodesMatch)];
     tokens.push([
       tokensForChild(0),
-      new Token(" " + this.value_ + " ", !nodesMatch),
+      new Token(' ' + this.value_ + ' ', !nodesMatch),
       tokensForChild(1)
     ]);
     tokens.push(new Token(')', !nodesMatch));
@@ -398,7 +414,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     tokens.push(childTokens);
   }
 
-  tokens.push(new Token(")", !nodesMatch));
+  tokens.push(new Token(')', !nodesMatch));
   return _.flattenDeep(tokens);
 };
 
@@ -407,7 +423,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
  * that are in the deepest descendant expression.
  * @param {boolean} markDeepest Mark tokens in the deepest descendant
  */
-ExpressionNode.prototype.getTokenList = function (markDeepest) {
+ExpressionNode.prototype.getTokenList = function(markDeepest) {
   if (!markDeepest) {
     // diff against this so that nothing is marked
     return this.getTokenListDiff(this);
@@ -416,10 +432,12 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     return this.getTokenListDiff(null);
   }
 
-  if (this.getType_() !== ValueType.ARITHMETIC &&
-      this.getType_() !== ValueType.EXPONENTIAL) {
+  if (
+    this.getType_() !== ValueType.ARITHMETIC &&
+    this.getType_() !== ValueType.EXPONENTIAL
+  ) {
     // Don't support getTokenList for functions
-    throw new Error("Unsupported");
+    throw new Error('Unsupported');
   }
 
   var rightDeeper = false;
@@ -437,11 +455,11 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
 
   var tokens = [
     prefix,
-    this.children_[0].getTokenList(markDeepest && !rightDeeper),
+    this.children_[0].getTokenList(markDeepest && !rightDeeper)
   ];
   if (this.children_.length > 1) {
     tokens.push([
-      new Token(" " + this.value_ + " ", false),
+      new Token(' ' + this.value_ + ' ', false),
       this.children_[1].getTokenList(markDeepest && rightDeeper)
     ]);
   }
@@ -457,7 +475,7 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
  * @param {ExpressionNode} other ExpresisonNode to compare to
  * @returns {boolean} True if both nodes have the same value.
  */
-ExpressionNode.prototype.hasSameValue_ = function (other) {
+ExpressionNode.prototype.hasSameValue_ = function(other) {
   if (!other) {
     return false;
   }
@@ -472,8 +490,12 @@ ExpressionNode.prototype.hasSameValue_ = function (other) {
 /**
  * Is other exactly the same as this ExpressionNode tree.
  */
-ExpressionNode.prototype.isIdenticalTo = function (other) {
-  if (!other || !this.hasSameValue_(other) || this.children_.length !== other.children_.length) {
+ExpressionNode.prototype.isIdenticalTo = function(other) {
+  if (
+    !other ||
+    !this.hasSameValue_(other) ||
+    this.children_.length !== other.children_.length
+  ) {
     return false;
   }
 
@@ -489,13 +511,15 @@ ExpressionNode.prototype.isIdenticalTo = function (other) {
  * Returns true if both this and other are calls of the same function, with
  * the same number of arguments
  */
-ExpressionNode.prototype.hasSameSignature = function (other) {
+ExpressionNode.prototype.hasSameSignature = function(other) {
   if (!other) {
     return false;
   }
 
-  if (this.getType_() !== ValueType.FUNCTION_CALL ||
-      other.getType_() !== ValueType.FUNCTION_CALL) {
+  if (
+    this.getType_() !== ValueType.FUNCTION_CALL ||
+    other.getType_() !== ValueType.FUNCTION_CALL
+  ) {
     return false;
   }
 
@@ -513,7 +537,7 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
 /**
  * Do the two nodes differ only in argument order.
  */
-ExpressionNode.prototype.isEquivalentTo = function (other) {
+ExpressionNode.prototype.isEquivalentTo = function(other) {
   // only ignore argument order for ARITHMETIC
   if (this.getType_() !== ValueType.ARITHMETIC) {
     return this.isIdenticalTo(other);
@@ -541,7 +565,7 @@ ExpressionNode.prototype.isEquivalentTo = function (other) {
 /**
  * @returns {number} How many children this node has
  */
-ExpressionNode.prototype.numChildren = function () {
+ExpressionNode.prototype.numChildren = function() {
   return this.children_.length;
 };
 
@@ -549,15 +573,14 @@ ExpressionNode.prototype.numChildren = function () {
  * Get the value
  * @returns {string} String representation of this node's value.
  */
-ExpressionNode.prototype.getValue = function () {
+ExpressionNode.prototype.getValue = function() {
   return this.value_.toString();
 };
-
 
 /**
  * Modify this ExpressionNode's value
  */
-ExpressionNode.prototype.setValue = function (value) {
+ExpressionNode.prototype.setValue = function(value) {
   var type = this.getType_();
   if (type !== ValueType.VARIABLE && type !== ValueType.NUMBER) {
     throw new Error("Can't modify value");
@@ -572,7 +595,7 @@ ExpressionNode.prototype.setValue = function (value) {
 /**
  * Get the value of the child at index
  */
-ExpressionNode.prototype.getChildValue = function (index) {
+ExpressionNode.prototype.getChildValue = function(index) {
   if (this.children_[index] === undefined) {
     return undefined;
   }
@@ -582,7 +605,7 @@ ExpressionNode.prototype.getChildValue = function (index) {
 /**
  * Set the value of the child at index
  */
-ExpressionNode.prototype.setChildValue = function (index, value) {
+ExpressionNode.prototype.setChildValue = function(index, value) {
   return this.children_[index].setValue(value);
 };
 
@@ -591,7 +614,7 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
  * Note: This is only used by test code, but is also generally useful to debug
  * @returns {string}
  */
-ExpressionNode.prototype.debug = function () {
+ExpressionNode.prototype.debug = function() {
   if (this.children_.length === 0) {
     if (this.isNumber()) {
       return this.value_.toFixnum().toString();
@@ -599,19 +622,29 @@ ExpressionNode.prototype.debug = function () {
       return this.value_.toString();
     }
   }
-  return "(" + this.value_ + " " +
-    this.children_.map(function (c) {
-      return c.debug();
-    }).join(' ') + ")";
+  return (
+    '(' +
+    this.value_ +
+    ' ' +
+    this.children_
+      .map(function(c) {
+        return c.debug();
+      })
+      .join(' ') +
+    ')'
+  );
 };
 
 /**
  * Given a token list, if the first and last items are parens, removes them
  * from the list
  */
-ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
-  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
-      tokenList[tokenList.length - 1].isParenthesis()) {
+ExpressionNode.stripOuterParensFromTokenList = function(tokenList) {
+  if (
+    tokenList.length >= 2 &&
+    tokenList[0].isParenthesis() &&
+    tokenList[tokenList.length - 1].isParenthesis()
+  ) {
     tokenList.splice(-1);
     tokenList.splice(0, 1);
   }

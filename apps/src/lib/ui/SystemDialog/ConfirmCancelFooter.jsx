@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import Button from "../../../templates/Button";
+import Button from '../../../templates/Button';
 
 /**
  * Footer for a "System" dialog style used on account pages.
@@ -21,19 +21,28 @@ export default class ConfirmCancelFooter extends React.Component {
     disableConfirm: PropTypes.bool,
     disableCancel: PropTypes.bool,
     tabIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    children: PropTypes.any,
+    children: PropTypes.any
   };
 
   static defaultProps = {
     confirmText: i18n.dialogOK(),
     cancelText: i18n.cancel(),
     confirmColor: Button.ButtonColor.orange,
-    cancelColor: Button.ButtonColor.gray,
+    cancelColor: Button.ButtonColor.gray
   };
 
   render() {
-    const {onConfirm, onCancel, confirmText, cancelText, confirmColor,
-      cancelColor, disableConfirm, disableCancel, tabIndex, children
+    const {
+      onConfirm,
+      onCancel,
+      confirmText,
+      cancelText,
+      confirmColor,
+      cancelColor,
+      disableConfirm,
+      disableCancel,
+      tabIndex,
+      children
     } = this.props;
     return (
       <div style={style}>
@@ -45,9 +54,7 @@ export default class ConfirmCancelFooter extends React.Component {
           tabIndex={tabIndex}
           style={buttonStyle}
         />
-        <span style={messageStyle}>
-          {children}
-        </span>
+        <span style={messageStyle}>{children}</span>
         <Button
           onClick={onCancel}
           text={cancelText}
@@ -73,7 +80,7 @@ const style = {
   borderRightWidth: 0,
   borderLeftWidth: 0,
   paddingTop: 10,
-  marginTop: 10,
+  marginTop: 10
 };
 
 const messageStyle = {
@@ -83,9 +90,9 @@ const messageStyle = {
   verticalAlign: 'top',
   marginLeft: '1em',
   marginRight: '1em',
-  flexGrow: 1,
+  flexGrow: 1
 };
 
 const buttonStyle = {
-  flexShrink: 0,
+  flexShrink: 0
 };
