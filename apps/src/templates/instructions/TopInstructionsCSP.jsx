@@ -168,6 +168,13 @@ class TopInstructions extends Component {
         console.log(data);
         this.setState({feedbacks: data});
       });
+      $.ajax({
+        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      }).done(data => {
+        this.setState({rubric: data});
+      });
     }
   }
 

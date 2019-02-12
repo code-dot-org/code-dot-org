@@ -29,6 +29,10 @@ const styles = {
   rubricTD: {
     border: `1px solid ${color.lightest_gray}`,
     padding: 5
+  },
+  boxSelected: {
+    border: `5px solid ${color.lightest_gray}`,
+    backgroundColor: color.cyan
   }
 };
 
@@ -78,16 +82,44 @@ export default class FeedbacksList extends Component {
             <tbody>
               <tr>
                 <td style={styles.rubricTD}>{this.props.rubric.keyConcept}</td>
-                <td style={styles.rubricTD} id={'exceeds'}>
+                <td
+                  style={
+                    this.props.feedbacks[0].performance === 'exceeds'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
+                  id={'exceeds'}
+                >
                   {this.props.rubric.exceeds}
                 </td>
-                <td style={styles.rubricTD} id={'meets'}>
+                <td
+                  style={
+                    this.props.feedbacks[0].performance === 'meets'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
+                  id={'meets'}
+                >
                   {this.props.rubric.meets}
                 </td>
-                <td style={styles.rubricTD} id={'approaches'}>
+                <td
+                  style={
+                    this.props.feedbacks[0].performance === 'approaches'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
+                  id={'approaches'}
+                >
                   {this.props.rubric.approaches}
                 </td>
-                <td style={styles.rubricTD} id={'noEvidence'}>
+                <td
+                  style={
+                    this.props.feedbacks[0].performance === 'noEvidence'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
+                  id={'noEvidence'}
+                >
                   {this.props.rubric.noEvidence}
                 </td>
               </tr>
@@ -107,7 +139,6 @@ export default class FeedbacksList extends Component {
               })}
             </div>
             <div>{feedback.comment}</div>
-            <div>{feedback.performance}</div>
           </div>
         ))}
       </div>
