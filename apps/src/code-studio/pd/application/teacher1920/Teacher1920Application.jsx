@@ -6,7 +6,7 @@ import Section3TeachingBackground from './Section3TeachingBackground';
 import Section4ProfessionalLearningProgramRequirements from './Section4ProfessionalLearningProgramRequirements';
 import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
 import Section6Submission from './Section6Submission';
-import firehoseClient from "@cdo/apps/lib/util/firehose";
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 /* global ga */
 
 export default class Teacher1920Application extends FormController {
@@ -26,8 +26,8 @@ export default class Teacher1920Application extends FormController {
   getPageComponents() {
     return [
       Section1AboutYou,
-      Section2ChooseYourProgram,
       Section3TeachingBackground,
+      Section2ChooseYourProgram,
       Section4ProfessionalLearningProgramRequirements,
       Section5AdditionalDemographicInformation,
       Section6Submission
