@@ -11,7 +11,7 @@ export default storybook => {
         <ControlProjectSharingDialog
           isDialogOpen={true}
           closeDialog={() => console.log('click')}
-          toggleSharingColumn={() => console.log('click')}
+          showSharingColumn={() => console.log('click')}
         />
       )
     }
