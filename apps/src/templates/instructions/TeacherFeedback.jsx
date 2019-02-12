@@ -190,7 +190,7 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        {this.state.rubric &&(
+        {this.state.rubric && (
           <table>
             <thead>
               <tr>
