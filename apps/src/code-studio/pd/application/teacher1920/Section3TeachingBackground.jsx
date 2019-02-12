@@ -12,7 +12,10 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 import {styles} from './TeacherApplicationConstants';
 
 export default class Section3TeachingBackground extends LabeledFormComponent {
-  static labels = PageLabels.section3TeachingBackground;
+  static labels = {
+    ...PageLabels.section3TeachingBackground,
+    ...PageLabels.section1AboutYou
+  };
 
   static associatedFields = [
     ...Object.keys(PageLabels.section3TeachingBackground)
