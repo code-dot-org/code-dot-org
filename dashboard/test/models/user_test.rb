@@ -92,6 +92,8 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher, school_info_attributes: school_attributes
     assert teacher.school_info.state == 'CA', teacher.school_info.state
     assert teacher.school_info.zip == 94107, teacher.school_info.zip
+
+    assert_equal teacher.user_school_infos.count, 1
   end
 
   test 'identical school info should not be duplicated in the database' do
@@ -110,6 +112,10 @@ class UserTest < ActiveSupport::TestCase
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
+
+    assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(school_info_id: new_school_info.id).count, 1
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
   test 'update_school_info with custom school does nothing when the user already has a specific school' do
@@ -119,6 +125,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.update_school_info(new_school_info)
     assert_equal original_school_info, user.school_info
+    assert_equal user.user_school_infos.count, 1
   end
 
   test 'update_school_info with custom school updates user info when user does not have a specific school' do
@@ -130,6 +137,9 @@ class UserTest < ActiveSupport::TestCase
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
     assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
   test 'single user experiment is enabled' do
