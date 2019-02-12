@@ -442,7 +442,7 @@
   "projectilePompom": "",
   "projectileToaster": "",
   "projectileWaterball": "",
-  "reinfFeedbackMsg": "Lahko pritisnete gumb \"Igraj naprej\" in se vrnete k igranju zgodbe.",
+  "reinfFeedbackMsg": "Lahko pritisnete gumb \"{backButton}\" in se vrnete k igranju zgodbe.",
   "remove": "odstrani",
   "removePoints10": "odvzami 10 točk",
   "removePoints50": "odvzami 50 točk",

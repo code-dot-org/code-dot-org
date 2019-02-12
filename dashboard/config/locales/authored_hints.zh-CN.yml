@@ -5749,6 +5749,9 @@ zh-CN:
         courseA_collector_loops2_b: |-
           在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
           <xml> <block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: "使用此块来控制当演员碰撞时会发生什么。 \n\n<xml><block type=\"studio_whenSpriteCollided\">\n<title
+          name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           用一个这样的`重复`模块来帮忙！
@@ -9296,6 +9299,9 @@ zh-CN:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: 你可以使用多个`收集`命令来收集额外的宝藏。
         courseC_collector_prog_challenge1_b: 迷路了？ 请尝试此路径来通过这个关卡!
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: "使用此块来控制当演员碰撞时会发生什么。 \n\n<xml><block type=\"studio_whenSpriteCollided\">\n<title
+          name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -14907,8 +14913,8 @@ zh-CN:
         courseF_artist_for_challenge2_c: "`计数循环` 从5增加到250，每次增加2。 "
         courseF_artist_for_challenge2_a: 使用`用红色，绿色和蓝色设置颜色`的模块。红色设为常量255，绿色一直是`counter`（计数器）的值，蓝色一直是`255-counter`。
         courseF_artist_for_challenge2_b: 这个代码比你想象的要简单。 只需在计数循环中设置颜色, 向前移动, 然后转向。
-        courseF_artist_for_challenge2_d: |-
-          **解决方案:**
+        courseF_artist_for_challenge2_d: |
+          ** 解决方案: **
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -14948,12 +14954,12 @@ zh-CN:
           </value>
           <value name="GREEN">
           <block type="variables_get">
-          <title name="VAR">计数器</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           <value name="BLUE">
           <block type="math_arithmetic" inline="true">
-          <title name="OP">减去</title>
+          <title name="OP">MINUS</title>
           <value name="A">
           <block type="math_number">
           <title name="NUM">255</title>
@@ -14961,7 +14967,7 @@ zh-CN:
           </value>
           <value name="B">
           <block type="variables_get">
-          <title name="VAR">计数器</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           </block>
@@ -14970,15 +14976,15 @@ zh-CN:
           </value>
           <next>
           <block type="draw_move" inline="true">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <value name="VALUE">
           <block type="variables_get">
-          <title name="VAR">计数器</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           <next>
           <block type="draw_turn" inline="true">
-          <title name="DIR">向右转</title>
+          <title name="DIR">turnRight</title>
           <value name="VALUE">
           <block type="math_number">
           <title name="NUM">80</title>
