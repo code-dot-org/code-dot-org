@@ -48,9 +48,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     # The subject below is only applicable for CSF Intro
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Having fun with CS Fundamentals yet?',
-      to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+      subject: 'Having fun with CS Fundamentals?',
+      to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
   def teacher_enrollment_receipt(enrollment)
@@ -85,7 +84,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: 'Code.org workshop cancellation',
-      to: email_address(@enrollment.full_name, @enrollment.email)
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def organizer_cancel_receipt(enrollment)
@@ -174,10 +174,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = '#'
 
     mail content_type: 'text/html',
-         from: from_teacher,
-         subject: detail_change_notification_subject(@workshop),
-         to: email_address(@user.name, @user.email),
-         reply_to: email_address(@user.name, @user.email)
+      from: from_teacher,
+      subject: detail_change_notification_subject(@workshop),
+      to: email_address(@user.name, @user.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def organizer_detail_change_notification(workshop)
