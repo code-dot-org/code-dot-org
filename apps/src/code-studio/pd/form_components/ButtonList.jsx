@@ -47,7 +47,8 @@ class ButtonList extends React.Component {
     selectedItems: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     required: PropTypes.bool,
     validationState: PropTypes.string,
-    errorText: PropTypes.string
+    errorText: PropTypes.string,
+    columnCount: PropTypes.number
   };
 
   handleChange = event => {
@@ -143,6 +144,9 @@ class ButtonList extends React.Component {
     if (this.props.errorText) {
       validationState = 'error';
     }
+
+    const columnCount = this.props.columnCount ? this.props.columnCount : 1;
+
     return (
       <FormGroup
         id={this.props.groupName}
@@ -153,7 +157,9 @@ class ButtonList extends React.Component {
           {this.props.label}
           {this.props.required && <span style={{color: 'red'}}> *</span>}
         </ControlLabel>
-        <FormGroup>{this.renderInputComponents()}</FormGroup>
+        <FormGroup style={{columnCount: columnCount}}>
+          {this.renderInputComponents()}
+        </FormGroup>
         {this.props.errorText && <HelpBlock>{this.props.errorText}</HelpBlock>}
         <br />
       </FormGroup>
