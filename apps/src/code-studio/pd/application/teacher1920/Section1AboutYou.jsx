@@ -4,19 +4,10 @@ import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
-  SectionHeaders,
-  TextFields
+  SectionHeaders
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
-import {
-  Row,
-  Col,
-  ControlLabel,
-  FormGroup,
-  Modal,
-  Button
-} from 'react-bootstrap';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {FormGroup, Modal, Button} from 'react-bootstrap';
 import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
 import _ from 'lodash';
@@ -46,9 +37,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
       'race'
     ])
   ];
-
-  handleSchoolChange = selectedSchool =>
-    this.handleChange({school: selectedSchool && selectedSchool.value});
 
   resetCountry = () => this.handleChange({country: US});
   exitApplication = () => (window.location = PD_RESOURCES_URL);
@@ -107,34 +95,36 @@ export default class Section1AboutYou extends LabeledFormComponent {
         <ul>
           <li>
             <span style={styles.bold}>Section 1: About you</span>
-            (Your and your principal’s contact info)
+            &nbsp; (Your and your principal’s contact info)
           </li>
           <li>
             <span style={styles.bold}>Section 2: Choose your program</span>
-            (Which program you want to join and how you plan on teaching the
-            course)
+            &nbsp; (Which program you want to join and how you plan on teaching
+            the course)
           </li>
           <li>
             <span style={styles.bold}>
               Section 3: Teaching and school background
             </span>
-            (Your subject areas and what CS courses are offered in your school)
+            &nbsp; (Your subject areas and what CS courses are offered in your
+            school)
           </li>
           <li>
             <span style={styles.bold}>
               Section 4: Professional Learning Program commitments
             </span>
-            (Your interest and ability to participate in the whole program)
+            &nbsp; (Your interest and ability to participate in the whole
+            program)
           </li>
           <li>
             <span style={styles.bold}>
               Section 5: Additional demographic information
             </span>
-            (Optional: your gender identity and race)
+            &nbsp; (Optional: your gender identity and race)
           </li>
           <li>
             <span style={styles.bold}>Section 6: Submission</span>
-            (Confirm and submit)
+            &nbsp; (Confirm and submit)
           </li>
         </ul>
 
@@ -217,62 +207,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
         {this.selectFor('state', {placeholder: 'Select a state'})}
         {this.inputFor('zipCode')}
 
-        <p>
-          If you work in a school district, please select your district and
-          school below:
-        </p>
-
-        <FormGroup
-          id="school"
-          controlId="school"
-          validationState={this.getValidationState('school')}
-        >
-          <Row>
-            <Col md={6}>
-              <ControlLabel>
-                School
-                <span style={{color: 'red'}}> *</span>
-              </ControlLabel>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <SchoolAutocompleteDropdown
-                value={this.props.data.school}
-                onChange={this.handleSchoolChange}
-              />
-            </Col>
-          </Row>
-        </FormGroup>
-
-        {this.props.data.school && this.props.data.school === '-1' && (
-          <div style={styles.indented}>
-            {this.inputFor('schoolName')}
-            {this.inputFor('schoolDistrictName')}
-            {this.inputFor('schoolAddress')}
-            {this.inputFor('schoolCity')}
-            {this.selectFor('schoolState', {placeholder: 'Select a state'})}
-            {this.inputFor('schoolZipCode')}
-            {this.radioButtonsFor('schoolType')}
-          </div>
-        )}
-
-        {
-          // Disable auto complete for principal fields, so they are not filled with the teacher's details.
-          // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
-          // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
-        }
-        {this.inputFor('principalFirstName', {autoComplete: 'never'})}
-        {this.inputFor('principalLastName', {autoComplete: 'never'})}
-        {this.inputFor('principalEmail', {autoComplete: 'never'})}
-        {this.inputFor('principalConfirmEmail', {autoComplete: 'never'})}
-        {this.usPhoneNumberInputFor('principalPhoneNumber', {
-          autoComplete: 'never'
-        })}
-
-        {this.radioButtonsWithAdditionalTextFieldsFor('currentRole', {
-          [TextFields.otherPleaseList]: 'other'
-        })}
         {this.radioButtonsFor('completingOnBehalfOfSomeoneElse')}
         {this.props.data.completingOnBehalfOfSomeoneElse === 'Yes' &&
           this.largeInputFor('completingOnBehalfOfName')}
@@ -316,19 +250,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
     if (!UsPhoneNumberInput.isValid(data.phone)) {
       formatErrors.phone = 'Must be a valid phone number including area code';
-    }
-
-    if (!UsPhoneNumberInput.isValid(data.principalPhoneNumber)) {
-      formatErrors.principalPhoneNumber =
-        'Must be a valid phone number including area code';
-    }
-
-    if (!isEmail(data.principalEmail)) {
-      formatErrors.principalEmail = 'Must be a valid email address';
-    }
-
-    if (data.principalEmail !== data.principalConfirmEmail) {
-      formatErrors.principalConfirmEmail = 'Must match above email';
     }
 
     return formatErrors;
