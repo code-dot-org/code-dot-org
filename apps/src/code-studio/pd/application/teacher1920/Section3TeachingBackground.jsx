@@ -86,9 +86,15 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
           [TextFields.otherPleaseList]: 'other'
         })}
 
-        {this.checkBoxesWithAdditionalTextFieldsFor('subjectsTeaching', {
-          [TextFields.otherPleaseList]: 'other'
-        })}
+        {this.checkBoxesWithAdditionalTextFieldsFor(
+          'subjectsTeaching',
+          {
+            [TextFields.otherPleaseList]: 'other'
+          },
+          {
+            columnCount: 3
+          }
+        )}
         <p>
           Requirements for licensing, certifications, and endorsements to teach
           computer science vary widely across the country. Please answer the
@@ -105,16 +111,34 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
         {this.props.data.doesSchoolRequireCsLicense === 'Yes' &&
           this.largeInputFor('whatLicenseRequired')}
         {this.radioButtonsFor('haveCsLicense')}
-        {this.checkBoxesWithAdditionalTextFieldsFor('subjectsLicensedToTeach', {
-          [TextFields.otherPleaseList]: 'other'
-        })}
-        {this.checkBoxesWithAdditionalTextFieldsFor('taughtInPast', {
-          [TextFields.otherPleaseList]: 'other'
-        })}
+        {this.checkBoxesWithAdditionalTextFieldsFor(
+          'subjectsLicensedToTeach',
+          {
+            [TextFields.otherPleaseList]: 'other'
+          },
+          {
+            columnCount: 3
+          }
+        )}
+        {this.checkBoxesWithAdditionalTextFieldsFor(
+          'taughtInPast',
+          {
+            [TextFields.otherPleaseList]: 'other'
+          },
+          {
+            columnCount: 3
+          }
+        )}
         {this.checkBoxesFor('previousYearlongCdoPd')}
-        {this.checkBoxesWithAdditionalTextFieldsFor('csOfferedAtSchool', {
-          [TextFields.otherPleaseList]: 'other'
-        })}
+        {this.checkBoxesWithAdditionalTextFieldsFor(
+          'csOfferedAtSchool',
+          {
+            [TextFields.otherPleaseList]: 'other'
+          },
+          {
+            columnCount: 3
+          }
+        )}
       </FormGroup>
     );
   }
