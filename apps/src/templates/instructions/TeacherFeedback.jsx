@@ -52,6 +52,10 @@ const styles = {
   rubricTD: {
     border: `1px solid ${color.lightest_gray}`,
     padding: 5
+  },
+  boxSelected: {
+    border: `5px solid ${color.lightest_gray}`,
+    backgroundColor: color.cyan
   }
 };
 
@@ -98,7 +102,8 @@ class TeacherFeedback extends Component {
         this.setState({
           latestFeedback: request.status === 204 ? [] : [data],
           token: request.getResponseHeader('csrf-token'),
-          comment: request.status === 204 ? '' : data.comment
+          comment: request.status === 204 ? '' : data.comment,
+          performance: request.status === 204 ? null : data.performance
         });
       })
       .fail((jqXhr, status) => {
@@ -215,28 +220,44 @@ class TeacherFeedback extends Component {
               <tr>
                 <td style={styles.rubricTD}>{this.state.rubric.keyConcept}</td>
                 <td
-                  style={styles.rubricTD}
+                  style={
+                    this.state.performance === 'exceeds'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
                   onClick={this.onRubricChange}
                   id={'exceeds'}
                 >
                   {this.state.rubric.exceeds}
                 </td>
                 <td
-                  style={styles.rubricTD}
+                  style={
+                    this.state.performance === 'meets'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
                   onClick={this.onRubricChange}
                   id={'meets'}
                 >
                   {this.state.rubric.meets}
                 </td>
                 <td
-                  style={styles.rubricTD}
+                  style={
+                    this.state.performance === 'approaches'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
                   onClick={this.onRubricChange}
                   id={'approaches'}
                 >
                   {this.state.rubric.approaches}
                 </td>
                 <td
-                  style={styles.rubricTD}
+                  style={
+                    this.state.performance === 'noEvidence'
+                      ? styles.boxSelected
+                      : styles.rubricTD
+                  }
                   onClick={this.onRubricChange}
                   id={'noEvidence'}
                 >
