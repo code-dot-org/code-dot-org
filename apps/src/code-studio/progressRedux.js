@@ -6,7 +6,9 @@ import {makeEnum} from '../utils';
 import {mergeActivityResult, activityCssClass} from './activityUtils';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
-import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
+import {ViewType, SET_VIEW_TYPE, setViewType} from './viewAsRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {authorizeLockable} from '@cdo/apps/code-studio/stageLockRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 
 // Action types
@@ -638,6 +640,60 @@ export const progressionsFromLevels = levels => {
   });
   progressions.push(currentProgression);
   return progressions;
+};
+
+export const asyncSetProgress = (
+  scriptName,
+  userId,
+  isDetailProgressView,
+  viewAs,
+  onComplete = () => {}
+) => dispatch => {
+  if (isDetailProgressView) {
+    dispatch(setStudentDefaultsSummaryView(false));
+  }
+
+  dispatch(setViewType(viewAs));
+
+  $.ajax({
+    url: `/api/user_progress/${scriptName}`,
+    method: 'GET',
+    data: {user_id: userId}
+  }).done(data => {
+    data = data || {};
+
+    if (data.isVerifiedTeacher) {
+      dispatch(setVerified());
+    }
+
+    if (data.focusAreaStageIds) {
+      dispatch(
+        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
+      );
+    }
+
+    if (data.lockableAuthorized) {
+      dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      dispatch(setScriptCompleted());
+    }
+
+    // Merge progress from server (loaded via AJAX)
+    if (data.levels) {
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
+      dispatch(mergeProgress(levelProgress));
+      if (data.peerReviewsPerformed) {
+        dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+      if (data.current_stage) {
+        dispatch(setCurrentStageId(data.current_stage));
+      }
+    }
+
+    onComplete(data);
+  });
 };
 
 // export private function(s) to expose to unit testing

@@ -11,25 +11,20 @@ import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
-import {authorizeLockable} from './stageLockRedux';
-import {setViewType, ViewType} from './viewAsRedux';
+import {ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgress,
-  mergePeerReviewProgress,
-  updateFocusArea,
   showTeacherInfo,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
   setIsSummaryView,
-  setCurrentStageId,
-  setScriptCompleted,
   setStageExtrasEnabled,
-  getLevelResult
+  asyncSetProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {renderTeacherPanel} from './teacher';
@@ -209,65 +204,33 @@ progress.renderMiniView = function(
 
   $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
-    queryUserProgressForMiniView(store, scriptData);
+
+    const viewAs = getCurrentView();
+    const userId = clientState.queryParams('user_id');
+    store.dispatch(
+      asyncSetProgress(
+        scriptData.name,
+        userId,
+        scriptData.student_detail_progress_view,
+        viewAs
+      )
+    );
   });
 };
 
 /**
- * Query the server for user_progress data for this script, and update the store
- * as appropriate
+ * Get the current view type, either from a query parameter or client state.
  */
-function queryUserProgressForMiniView(store, scriptData) {
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
+function getCurrentView() {
+  const queryViewAs = queryString.parse(location.search).viewAs;
+  let viewAs = ViewType.Student; // Default to student.
+
+  if (clientState.getUserIsTeacher() && queryViewAs !== ViewType.Student) {
+    // Query param viewAs takes precedence over whether or not user is a teacher.
+    viewAs = ViewType.Teacher;
   }
 
-  // Set our initial view type
-  const query = queryString.parse(location.search);
-  let initialViewAs = ViewType.Student;
-  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
-    // query param viewAs takes precedence over whether or not user is a teacher
-    initialViewAs = ViewType.Teacher;
-  }
-  store.dispatch(setViewType(initialViewAs));
-
-  $.ajax('/api/user_progress/' + scriptData.name, {
-    data: {
-      user_id: clientState.queryParams('user_id')
-    }
-  }).done(data => {
-    data = data || {};
-
-    if (data.isVerifiedTeacher) {
-      store.dispatch(setVerified());
-    }
-
-    if (data.focusAreaStageIds) {
-      store.dispatch(
-        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
-      );
-    }
-
-    if (data.lockableAuthorized) {
-      store.dispatch(authorizeLockable());
-    }
-
-    if (data.completed) {
-      store.dispatch(setScriptCompleted());
-    }
-
-    // Merge progress from server (loaded via AJAX)
-    if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
-      store.dispatch(mergeProgress(levelProgress));
-      if (data.peerReviewsPerformed) {
-        store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
-      }
-      if (data.current_stage) {
-        store.dispatch(setCurrentStageId(data.current_stage));
-      }
-    }
-  });
+  return viewAs;
 }
 
 /**
@@ -275,27 +238,9 @@ function queryUserProgressForMiniView(store, scriptData) {
  * as appropriate
  */
 function queryUserProgress(store, scriptData) {
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
-  // Set our initial view type
-  const query = queryString.parse(location.search);
-  let initialViewAs = ViewType.Student;
-  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
-    // query param viewAs takes precedence over whether or not user is a teacher
-    initialViewAs = ViewType.Teacher;
-  }
-  store.dispatch(setViewType(initialViewAs));
-
-  $.ajax('/api/user_progress/' + scriptData.name, {
-    data: {
-      user_id: clientState.queryParams('user_id')
-    }
-  }).done(data => {
-    data = data || {};
-
-    // OVERVIEW ONLY
+  const viewAs = getCurrentView();
+  const userId = clientState.queryParams('user_id');
+  const onAsyncSetProgressComplete = data => {
     const postMilestoneDisabled =
       store.getState().progress.postMilestoneDisabled ||
       experiments.isEnabled('postMilestoneDisabledUI');
@@ -329,34 +274,17 @@ function queryUserProgress(store, scriptData) {
       renderTeacherPanel(store, scriptData.id, scriptData.section);
       clientState.cacheUserIsTeacher(true);
     }
-    // END OVERVIEW ONLY
+  };
 
-    if (data.focusAreaStageIds) {
-      store.dispatch(
-        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
-      );
-    }
-
-    if (data.lockableAuthorized) {
-      store.dispatch(authorizeLockable());
-    }
-
-    if (data.completed) {
-      store.dispatch(setScriptCompleted());
-    }
-
-    // Merge progress from server (loaded via AJAX)
-    if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
-      store.dispatch(mergeProgress(levelProgress));
-      if (data.peerReviewsPerformed) {
-        store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
-      }
-      if (data.current_stage) {
-        store.dispatch(setCurrentStageId(data.current_stage));
-      }
-    }
-  });
+  store.dispatch(
+    asyncSetProgress(
+      scriptData.name,
+      userId,
+      scriptData.student_detail_progress_view,
+      viewAs,
+      onAsyncSetProgressComplete
+    )
+  );
 }
 
 /**
