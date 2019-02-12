@@ -237,7 +237,7 @@ class TeacherFeedback extends Component {
               <td
                 style={styles.rubricTD}
                 onClick={this.onRubricChange}
-                id={'no evidence'}
+                id={'noEvidence'}
               >
                 {this.state.rubric.noEvidence}
               </td>
