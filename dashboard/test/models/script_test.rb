@@ -763,6 +763,30 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '2017', versions[1][:version_title]
   end
 
+  test 'summarize excludes hidden versions' do
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
+    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', hidden: true)
+
+    versions = foo17.summarize[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal 'foo-2017', versions[1][:name]
+
+    versions = foo17.summarize(true, create(:teacher))[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal 'foo-2017', versions[1][:name]
+
+    teacher = create(:teacher)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+    versions = foo17.summarize(true, teacher)[:versions]
+    assert_equal 3, versions.length
+    assert_equal 'foo-2019', versions[0][:name]
+    assert_equal 'foo-2018', versions[1][:name]
+    assert_equal 'foo-2017', versions[2][:name]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
