@@ -167,11 +167,10 @@ class TeacherFeedback extends Component {
         ? this.state.latestFeedback[0]
         : null;
     const feedbackUnchanged =
-      (latestFeedback && this.state.comment === latestFeedback.comment) ||
-      (!latestFeedback && this.state.comment.length === 0) ||
       (latestFeedback &&
-        this.state.performance === latestFeedback.performance) ||
-      (!latestFeedback && this.state.performance === null);
+        (this.state.comment === latestFeedback.comment &&
+        this.state.performance === latestFeedback.performance)) ||
+      !latestFeedback;
 
     const buttonDisabled =
       feedbackUnchanged ||
