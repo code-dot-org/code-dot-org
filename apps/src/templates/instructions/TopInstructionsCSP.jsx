@@ -138,6 +138,7 @@ class TopInstructions extends Component {
         ? TabType.COMMENTS
         : TabType.INSTRUCTIONS,
       feedbacks: [],
+      rubric: null,
       displayFeedbackTeacherFacing: teacherViewingStudentWork
     };
   }
@@ -164,6 +165,7 @@ class TopInstructions extends Component {
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
+        console.log(data);
         this.setState({feedbacks: data});
       });
     }
@@ -389,6 +391,13 @@ class TopInstructions extends Component {
                 {this.props.viewAs === ViewType.Student && (
                   <FeedbacksList
                     feedbacks={this.state.feedbacks}
+                    rubric={{
+                      keyConcept: 'hi',
+                      exceeds: 'bye',
+                      meets: 'yup',
+                      approaches: 'no',
+                      noEvidence: 'maybe'
+                    }}
                     ref="commentTab"
                   />
                 )}
