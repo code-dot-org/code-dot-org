@@ -82,7 +82,7 @@ class TeacherFeedback extends Component {
       submitting: false,
       errorState: ErrorType.NoError,
       token: null,
-      rubric: []
+      rubric: null
     };
   }
 
@@ -190,60 +190,62 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        <table>
-          <thead>
-            <tr>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Key Concept</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Exceeds</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Meets</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>Approaches</h4>
-              </th>
-              <th style={styles.rubricTH}>
-                <h4 style={styles.rubricHeader}>No Evidence</h4>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={styles.rubricTD}>{this.state.rubric.keyConcept}</td>
-              <td
-                style={styles.rubricTD}
-                onClick={this.onRubricChange}
-                id={'exceeds'}
-              >
-                {this.state.rubric.exceeds}
-              </td>
-              <td
-                style={styles.rubricTD}
-                onClick={this.onRubricChange}
-                id={'meets'}
-              >
-                {this.state.rubric.meets}
-              </td>
-              <td
-                style={styles.rubricTD}
-                onClick={this.onRubricChange}
-                id={'approaches'}
-              >
-                {this.state.rubric.approaches}
-              </td>
-              <td
-                style={styles.rubricTD}
-                onClick={this.onRubricChange}
-                id={'noEvidence'}
-              >
-                {this.state.rubric.noEvidence}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        {this.state.rubric &&(
+          <table>
+            <thead>
+              <tr>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Key Concept</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Exceeds</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Meets</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>Approaches</h4>
+                </th>
+                <th style={styles.rubricTH}>
+                  <h4 style={styles.rubricHeader}>No Evidence</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={styles.rubricTD}>{this.state.rubric.keyConcept}</td>
+                <td
+                  style={styles.rubricTD}
+                  onClick={this.onRubricChange}
+                  id={'exceeds'}
+                >
+                  {this.state.rubric.exceeds}
+                </td>
+                <td
+                  style={styles.rubricTD}
+                  onClick={this.onRubricChange}
+                  id={'meets'}
+                >
+                  {this.state.rubric.meets}
+                </td>
+                <td
+                  style={styles.rubricTD}
+                  onClick={this.onRubricChange}
+                  id={'approaches'}
+                >
+                  {this.state.rubric.approaches}
+                </td>
+                <td
+                  style={styles.rubricTD}
+                  onClick={this.onRubricChange}
+                  id={'noEvidence'}
+                >
+                  {this.state.rubric.noEvidence}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        )}
         <textarea
           id="ui-test-feedback-input"
           style={styles.textInput}
