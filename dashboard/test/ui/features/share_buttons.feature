@@ -4,20 +4,16 @@
 Feature: Share Buttons
   # Making How It Works button show up in Sprite Lab and not in Game Lab
 
-Scenario: How It Works Button appears for Sprite Lab share page
-  Given I am on "http://studio.code.org/projects/spritelab"
-  And I wait for the page to fully load
-  When I navigate to the shared version of my project
-  # up till here gets you to that share page with the mobile screen but after that it takes you to the homepage
-  # "I navigate to the share URL" takes you to that share pg with mobile screen
-  And I wait until element "#open-workspace" is visible
-  Then I see "#open-workspace"
+  Scenario: How It Works Button appears for Sprite Lab share page
+    Given I am on "http://studio.code.org/projects/spritelab"
+    And I wait for the page to fully load
+    When I navigate to the shared version of my project
+    And I wait until element "#open-workspace" is visible
+    Then I see "#open-workspace"
 
-  Scenario: How It Works Button appears for Game Lab share page
+  Scenario: How It Works Button does not appear for Game Lab share page
     Given I am on "http://studio.code.org/projects/gamelab"
     And I wait for the page to fully load
     When I navigate to the shared version of my project
-    # up till here gets you to that share page with the mobile screen but after that it takes you to the homepage
-    # "I navigate to the share URL" takes you to that share pg with mobile screen
     And I wait until element "#gameButtons" is visible
     And element "#open-workspace" does not exist
