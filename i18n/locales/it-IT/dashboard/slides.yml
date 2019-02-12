@@ -1564,3 +1564,159 @@ it:
         text: "Il software è l'insieme dei programmi, ognuno dei quali è una sequenza di istruzioni scritte col sistema binario e queste istruzioni in binario corrispondono a segnali elettrici che scorrono attraverso miliardi di minuscoli circuiti."
       17:
         text: "I computer hanno la potenzialità di fare cose fantastiche.\nMa l'unica cosa che rende i computer intelligenti o utili, sei tu.\nQuando impari a programmare, devi definire il problema da risolvere e scrivere il software che trasforma queste idee in realtà."
+    hoc_dance_warmup:
+      1:
+        text: "Ora del Codice | Ballando col codice: Riscaldamento"
+      2:
+        text: "Hi! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di software e la creatrice di iLuminate."
+      3:
+        text: "L'informatica è legata alla creatività in molti modi. Innumerevoli, davvero. Intendo che, una volta che hai imparato a scrivere del software, puoi mettere le tue idee ovunque. Io l'ho fatto con dei costumi luminosi. Puoi fare davvero tanto, una volta che hai gli strumenti per scrivere programmi e le possibilità sono davvero infinite."
+      4:
+        text: "Nella prossima ora, verrai introdotto al mondo dell'informatica programmando un ballo tutto tuo. Abbiamo messo insieme un po' di musiche di successo e una squadra di grandiosi ballerini con cui divertirti."
+      5:
+        text: "Dovrai usare dei blocchi di istruzioni per scegliere i vari ballerini, cambiare le loro mosse, farli reagire alla musica e renderli interattivi."
+      6:
+        text: "Come vedi, lo schermo è suddiviso in tre parti principali. Sulla sinistra c'è il palcoscenico. È lì che si esibiranno i ballerini."
+      7:
+        text: "Quest'area centrale è la cassetta degli attrezzi. Nuovi blocchi di istruzioni compariranno in quest'area man mano che procederai nella lezione."
+      8:
+        text: "La zona sulla destra è l'area di lavoro. Puoi trascinare i blocchi dalla cassetta degli attrezzi nell'area di lavoro per creare il tuo programma."
+      9:
+        text: "La descrizione dell'obiettivo di ogni esercizio è qui nella parte alta dello schermo. Se hai bisogno di un suggerimento, basta che clicchi sulla lampadina."
+      10:
+        text: "Per iniziare, creiamo un nuovo ballerino usando questo blocco rosso. Per prima cosa, prendilo dalla cassetta degli attrezzi e aggancialo all'interno del blocco arancione. Questo ballerino è un gatto e si chiama “my_first_dancer”. Puoi cambiargli il nome come preferisci cliccando qui."
+      11:
+        text: "Puoi anche cambiare dove comparirà il ballerino nel palcoscenico con questo menù a tendina."
+      12:
+        text: "Sopra al palcoscenico c'è un menù in cui scegliere la musica. Si può scegliere tra molte canzoni, quindi cerca quelle che preferisci. Sotto al palcoscenico c'è il pulsante \"Esegui\". Quando premerai \"Esegui\", vedrai i ballerini che hai programmato apparire nel palcoscenico e la musica che hai scelto inizierà a suonare."
+      13:
+        text: "Prova tu! E anche se ti blocchi, non c'è problema! Alzati e muoviti e prima che te ne accorga, avrai direttamente creato il tuo ballo! Allora, cosa creerai?"
+    hoc_dance_events:
+      1:
+        text: "Ora del Codice | Ballando col codice: Eventi"
+      2:
+        text: "Sono Aloe Blacc. Faccio il cantautore e l'animatore. Penso sia molto importante imparare l'informatica perché l'informatica è il futuro. E penso sia importante che le persone sappiano controllare la tecnologia che sta letteralmente controllando la loro vita."
+      3:
+        text: "Per far eseguire diverse mosse di ballo in particolari momenti della canzone, puoi usare gli \"eventi\". Un evento dice al tuo programma di stare all'erta e reagire appena riconosce una certa situazione."
+      4:
+        text: "Alcuni esempi di eventi sono: il clic del mouse, la pressione di un tasto o il tocco dello schermo. Gli eventi che useremo tra poco sono relativi\nalla variazione di certe caratteristiche musicali. Il cambiamento può indurre il ballerino a fare una certa mossa di ballo."
+      5:
+        text: "I ballerini professionisti preparano le loro coreografie contando i battiti."
+      6:
+        text: "In musica, un battuta è costituita da un certo numero di battiti. Nella maggior parte delle canzoni una battuta contiene 4 battiti."
+      7:
+        text: "Per far scatenare i tuoi ballerini, avrai bisogno di un blocco verde per gestire gli eventi. Questo blocco verde dice \"dopo 4 battute\"."
+      8:
+        text: "Con un blocco viola \"esegue ininterrottamente\" (do forever) puoi scegliere un ballo per il tuo ballerino. Ma, essendo agganciato al blocco evento \"dopo 4 battute\", il tuo ballerino attenderà quattro battute prima di iniziare il suo ballo."
+      9:
+        text: "Tieni d'occhio il contatore di battute sopra al palco."
+      10:
+        text: "Osserva e ascolta attentamente per individuare l'evento che farà attivare le mosse di ballo. E proprio al momento giusto il ballerino si scatena!"
+    hoc_dance_properties:
+      1:
+        text: "Ora del Codice | Ballando col codice: Proprietà"
+      2:
+        text: "Mi chiamo Maria. Sono una studentessa dell'Università di Washington e sono una futura ingegnera di Amazon."
+      3:
+        text: "Amo l'informatica perché unisce il problem solving e il pensiero critico. E dopo aver messo ore di lavoro in un progetto, puoi ottenere qualcosa di davvero fantastico e gratificante."
+      4:
+        text: "Finora, hai avuto la possibilità di giocare con diversi tipi di ballerini e li hai programmati per fargli interpretare diverse mosse di ballo. Ma come funzionano davvero queste mosse?"
+      5:
+        text: "Ogni mossa è costituita da una serie di immagini chiamate fotogrammi (frame). Ogni fotogramma è leggermente diverso quello precedente. Quando si esegue il programma, il computer mostra un fotogramma dopo l'altro. Sono mostrati così velocemente che sembra che il ballerino si muova. Questo è il segreto di ogni animazione."
+      6:
+        text: "Non solo puoi cambiare le mosse di ballo, puoi anche modificare le proprietà del ballerino. Le proprietà definiscono caratteristiche del ballerino come la posizione sullo schermo, la sua dimensione o i suoi colori."
+      7:
+        text: "Per cambiare le proprietà di un ballerino, devi usare un blocco \"imposta\" (set). Usiamo un blocco \"imposta\" per far sembrare\npiù piccoli i nostri ballerini. Prima di tutto trascina il blocco \"imposta\" nell'area di lavoro. Poi seleziona il ballerino che vuoi modificare e modifica il valore della dimensione che vuoi ottenere."
+      8:
+        text: "La dimensione intera è 100. Se scegli un valore inferiore, il ballerino sarà più piccolo. Più piccolo sarà il ballerino, più lontano sembrerà. Questo è un ottimo modo per creare ballerini secondari."
+      9:
+        text: "Con il blocco \"imposta\", puoi anche modificare le proporzioni del ballerino, la rotazione, la posizione e il colore. Giocando con queste proprietà puoi effettuare diversi tipi di modifiche e collegarle a diverse parti della canzone."
+      10:
+        text: "Ricorda, puoi impostare solo le proprietà di un ballerino che esiste già. Assicurati che il blocco \"imposta\" venga dopo il blocco \"crea un nuovo\" ballerino. Sentiti libero di sperimentare, sii creativo e divertiti."
+    hoc_dance_congrats:
+      1:
+        text: "Ora del Codice | Ballando col codice: Parte la festa!"
+      2:
+        text: "Congratulazioni! Hai appena imparato le basi dell'informatica. Ora puoi usare questi blocchi per creare un ballo tutto tuo da condividere con i tuoi amici."
+      3:
+        text: "Se guardi nella cassetta degli attrezzi, troverai dei blocchi che non hai ancora visto. Per esempio, puoi usare il blocco \"disponi\" (layout) per scegliere come distribuire i ballerini sullo schermo."
+      4:
+        text: "Dai un'occhiata e fai qualche prova con questi nuovi blocchi. Progetterai con attenzione il ballo abbinato alla tua canzone preferita?"
+      5:
+        text: "O una gara di ballo con i tuoi amici?"
+      6:
+        text: "O qualcosa di completamente diverso?"
+      7:
+        text: "Alla fine dell'esercizio potrai condividere la tua creazione con i tuoi amici. Mettici tutta la tua immaginazione e divertiti!"
+    mc_2018_intro:
+      1:
+        text: "Ciao! Sei appena in tempo. Benvenuto nel Viaggio Acquatico! Sto per lanciarmi nella ricerca di un misterioso tesoro sottomarino e sarei felice di avere il tuo aiuto. Chissà cosa incontreremo lungo questi misteriosi corsi d'acqua? Da qualche parte su questo molo, stiamo per incontrare la nostra prima guida."
+      2:
+        text: "Benvenuti avventurieri! Per completare il Viaggio Acquatico, dovrai risolvere alcuni esercizi usando la programmazione. Ecco come funziona. Il tuo schermo è suddiviso in tre parti principali."
+      3:
+        text: "Sulla sinistra, puoi vedere il mondo di Minecraft."
+      4:
+        text: "L'area centrale è la cassetta degli attrezzi, che contiene tutte le istruzioni di cui avrai bisogno."
+      5:
+        text: "E l'ambia zona sulla destra è l'area di lavoro. È qui che devi posizionare i blocchi di codice che costituiranno il programma che controllerà i tuoi movimenti."
+      6:
+        text: "L'obiettivo di ogni livello è descritto nella parte alta della pagina. Clicca sui segni + e - per passare da descrizione lunga a descrizione corta."
+      7:
+        text: "Prova a trascinare i blocchi dalla cassetta degli attrezzi e collegarli tra loro nell'area di lavoro, quindi premi il pulsante \"Esegui\" per far eseguire il tuo programma."
+      8:
+        text: "Potresti aver bisogno di più tentativi per trovare la soluzione corretta e alcuni esercizi hanno più di una soluzione, quindi fai degli esperimenti."
+      9:
+        text: "Se vuoi provare di nuovo, clicca il pulsante \"Ricomincia\" per tornare al punto di partenza."
+      10:
+        text: "Se vuoi eliminare un'istruzione, basta che trascini il blocco dall'area di lavoro alla cassetta degli attrezzi. Ricorda di cliccare su \"Esegui\" per vedere cosa fa il tuo programma quando viene eseguito."
+      11:
+        text: "Ok, basta perder temo, compagno d'avventura. Iniziamo a programmare per trovare qualche tesoro sottomarino."
+    MC_2018_loops:
+      1:
+        text: "Fantastico! Abbiamo catturato un merluzzo! Sapevi che se dai da mangiare un merluzzo a un delfino il delfino ti guiderà fino a un relitto dove potrebbe esserci un tesoro? Dobbiamo avvicinarci. La prossima serie di esercizi sarà sicuramente più complicata, quindi dobbiamo imparare qualche altro concetto di programmazione. Cos'è questo? Una grotta?"
+      2:
+        text: "Benvenuti, avventurieri! Io mi chiamo Calamaro. Ho notato che in alcuni degli ultimi esercizi hai usato parecchie volte la stessa serie di istruzioni. Dev'essere stato un po' noioso. Ti piacerebbe riuscire a ripetere delle azioni più e più volte come, ad esempio, lavare i piatti o lavarti i denti senza stancarti o annoiarti? Sarebbe proprio bello."
+      3:
+        text: "I computer sono davvero bravi a ripetere più e più volte la stessa cosa usando i cicli. Quando vuoi che il tuo programma ripeta molte volte una certa sequenza di istruzioni, puoi usare un ciclo!"
+      4:
+        text: "Questo tipo di ciclo ripete le istruzioni fino a quando raggiunge l'obiettivo. Dal momento in cui il programma inizia un ciclo \"ripeti fino all'obiettivo\" (REPEAT UNTIL GOAL), continuerà a leggere le istruzioni al suo interno\nfino a quando raggiunge l'obiettivo."
+      5:
+        text: "Prova tu! Posizione le istruzioni che vuoi ripetere all'interno del blocco \"ripeti fino all'obiettivo\", clicca su \"Esegui\" e stai a vedere cosa accade!"
+      6:
+        text: "Be', questo è un po' strano. Chi immaginava che i calamari sapessero programmare? Pensavo che non avessero neanche le dita. Così ora sappiamo qualcosa sui cicli. Usiamoli per recuperare un altro tesoro."
+    mc_2018_conditionals:
+      1:
+        text: "Wow! Hai già risolto tre esercizi! E abbiamo preso... un salmone. Non così esaltante come dei lingotti d'oro, ma prendiamo ciò che possiamo. E ho la sensazione che la conchiglia di nautilo potrà essere utile più tardi. Mi chiedo cosa si nasconda tra queste rovine. Forse un altro indizio! Diamo un'occhiata dentro."
+      2:
+        text: "Mi chiamo Netty e vi do il benvenuto nelle mie rovine. Noi decidiamo sempre in base a delle condizioni. Se sembra che debba piovere, allora prendiamo l'ombrello. Se abbiamo fame, allora mangiamo qualcosa."
+      3:
+        text: "Se vediamo un Creeper, allora corriamo nella direzione opposta. Anche i computer prendono questo genere di decisioni. Possono effettivamente basarsi su delle condizioni usando il codice."
+      4:
+        text: "Per programmare una reazione come questa, usa il blocco \"se c'è strada\" (IF PATH)."
+      5:
+        text: "Seleziona dal menù a discesa la direzione corretta."
+      6:
+        text: "Per esempio, se crei l'istruzione \"se c'è strada a destra\" (TO THE RIGHT) e metti al suo interno un blocco gira a destra ogni volta che Steve troverà un percorso libero sulla destra allora girerà a destra. Tutte le volte che non vi saranno aperture sulla destra, lui non girerà a destra. Queste istruzioni condizionali sono di aiuto quando si esegue un programma in situazioni non completamente prevedibili come nelle misteriose rovine sottomarine."
+      7:
+        text: "Prova ad usare il blocco \"se\" e programmati un bel giretto."
+      8:
+        text: "Wow! Le rovine di Netty erano fantastiche. Devo proprio andarmene da casa dei miei genitori. Allora, che ne pensi? Queste istruzioni condizionali possono esserci utili per completare gli esercizi finali? Proviamoci."
+    mc_2018_closing:
+      1:
+        text: "Amy Lee33: Congratulazioni! Ce l'hai fatta!"
+      2:
+        text: "Calmaro: Congratulazioni!"
+      3:
+        text: "Netty: Ce l'hai fatta! Congratulazioni!"
+      4:
+        text: "Tomohawk: Congratulazioni!"
+      5:
+        text: "È un gran giorno! Tutta la caccia al tesoro ci ha portato a costruire un condotto Minecraft. Le conchiglie di nautilo, le casse del tesoro... e io adoro il colore del prismarino. E abbiamo imparato a programmare\ncon cicli ed istruzioni condizionali."
+      6:
+        text: "Parlando di programmazione, c'è ancora un livello in questa impresa. Te la senti, avventuriero?"
+      7:
+        text: "È un esercizio creativo in cui puoi mettere a frutto i concetti di programmazione che hai imparato e costruire qualcosa di incredibile."
+      8:
+        text: "Hmmm... un nascondiglio per il tuo tesoro, un monumento subacqueo o un castello di corallo? Ahhh... quante idee. Prova ad usare i cicli per eseguire azioni ripetitive e le istruzioni condizionali per far fronte a tanti possibili scenari."
+      9:
+        text: "Hai già dimostrato di essere un intrepido programmatore e non vedo l'ora di scoprire cosa creerai. E speriamo che le tue avventure con la programmazione non finiscano qui. Buon viaggio!"

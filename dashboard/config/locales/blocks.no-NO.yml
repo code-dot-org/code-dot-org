@@ -894,6 +894,21 @@
           CONDITION:
             '"when"': når
             '"while"': så lenge
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høyre
+            '"space"': verdensrommmet
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
       aalab_whenTouching:
         options:
           CONDITION:

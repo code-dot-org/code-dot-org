@@ -1153,6 +1153,30 @@ pt-BR:
         **Como:** Você precisará de duas linhas de código. Dê a `"label1"` um `"font-size"` de `80` e `"text-color"` de `"azul"`.
 
         **Ficou preso? Clique aqui:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n</div>\n\n**Objetivo:** Tornar os botões
+        `\"vermelho\"` and `\"azul\"`. Em seguida altere o texto no grande rótulo
+        laranja.\n\n**Como:** \n* Lembre-se que você pode passar o mouse sobre os
+        elementos para ver o `\"id\"`.\n* Defina o `\"background-color\"` dos botões
+        para `\"vermelho\"` e `\"azul\"`.\n* Defina a propriedade `\"text\"` do rótulo
+        para o que você quiser, como `\"Bem vindo ao meu app!\"`.\n\n**Preso? Clique
+        aqui:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Objetivo:** A tela irá iniciar com a cor azul. Adicione o código de modo que a tela fique verde quando você clica sob o o botão "Verdear" .
+
+        **Como:** Insira o código dentro do `onEvent()` que define a `"cor-de-fundo"` to `"verde"`.
+
+        **Está preso? Clique aqui:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Objetivo:** Ajude a terminar o aplicativo da lanterna. O botão "On" já deixa a tela branca. Execute o aplicativo e tente você mesmo. Então, escreve um código de modo que o botão "Off" faça a tela ficar preta novamente.
+
+        **Como:** Adicione o código dentro do `onEvent()` vazio que define a `"cor-de-fundo"` da tela para `"Preto"` e `"cor-de-texto"`do rótulo para `"branco"`.
+
+        **Está preso? Clique aqui:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab_test02: "# Este é o título\n\n- Marcador 1 \n- Faça isso\n- Então isso\n\n![](https://images.code.org/982f9167cf54c24251922fbd0a7f60b3-image-1436470853351.png)"
       Applab AllTheThings ResourcesTab AllResources: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"
         align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no
@@ -1332,6 +1356,14 @@ pt-BR:
         # Prever
 
         O código abaixo tem 4 coisas que serão registradas na tela. O que você acha que vai imprimir na tela como resultado desse código?
+      CSD - for loop - on off: |-
+        # Laços Para com LEDs coloridos
+
+        Laços Para pode tornar mais fácil fazer algo para todos os `colorLed`s.
+
+        **Programa de Início:** Existem dois botões, um para ativar todos os `colorLeds` e um para desativá-los.
+
+        Você pode preencher as funções para cada uma dessas tarefas usando um loop for para escrever seu algoritmo.
       CSD For Loops - Check For Understanding: |
         # Entrada
 
@@ -1390,6 +1422,46 @@ pt-BR:
       CSD U5 Waze Data Video_2018: Assista este vídeo para aprender como esse problema
         é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.
+      CSD U6 LEDs color: |-
+        # Adicionando alguma cor
+
+        Você provavelmente notou que quando usou `colorLeds [0].on()` no último nível, os LEDs ficaram brancos. Se você não especificar uma cor, `on()` ligará todas as três partes do LED (vermelho, verde e azul) para produzir o branco. Você verá um novo comando na caixa de ferramentas chamado `colorLeds [0].color ()` que permite especificar uma cor, como um tipo texto como "Azul" ou um valor RGB usando o comando color `color()`.
+
+        # Faça isso
+
+        Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
+      CSD U6 LEDs color_2018: |-
+        # Adicionando alguma cor
+
+        Você provavelmente notou que quando usou `colorLeds [0].on()` no último nível, os LEDs ficaram brancos. Se você não especificar uma cor, `on()` ligará todas as três partes do LED (vermelho, verde e azul) para produzir o branco. Você verá um novo comando na caixa de ferramentas chamado `colorLeds [0].color ()` que permite especificar uma cor, como um tipo texto como "Azul" ou um valor RGB usando o comando color `color()`.
+
+        # Faça isso
+
+        Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
+      CSD U6 analog change: |-
+        # Alterando o Evento
+
+        O evento de dados é bom se você não se importa que o seu código rode constantemente, mas às vezes não é a solução mais eficiente para o seu problema. O evento "alterar" do sensor é acionado apenas se o valor do sensor tiver mudado desde a última leitura, o que pode garantir que o programa não esteja executando o código quando não for necessário.
+
+        # Faça isso
+
+        Usando o manipulador de eventos fornecido, escreva um programa que acione a campainha e atualize "valor_temporário" sempre que a leitura do sensor de temperatura mudar. Coloque o polegar sobre o sensor de temperatura para que ele mude e veja como o seu programa responde.
+      CSD U6 analog change_2018: |-
+        # Alterando o Evento
+
+        O evento de dados é bom se você não se importa que o seu código rode constantemente, mas às vezes não é a solução mais eficiente para o seu problema. O evento "alterar" do sensor é acionado apenas se o valor do sensor tiver mudado desde a última leitura, o que pode garantir que o programa não esteja executando o código quando não for necessário.
+
+        # Faça isso
+
+        Usando o manipulador de eventos fornecido, escreva um programa que acione a campainha e atualize "valor_temporário" sempre que a leitura do sensor de temperatura mudar. Coloque o polegar sobre o sensor de temperatura para que ele mude e veja como o seu programa responde.
+      CSDU6L06 - lists and colorLeds - set color: |-
+        # Adicionando alguma cor
+
+        Você provavelmente notou que quando usou `colorLeds [0].on()` no último nível, os LEDs ficaram brancos. Se você não especificar uma cor, `on()` ligará todas as três partes do LED (vermelho, verde e azul) para produzir o branco. Você verá um novo comando na caixa de ferramentas chamado `colorLeds [0].color ()` que permite especificar uma cor, como um tipo texto como "Azul" ou um valor RGB usando o comando color `color()`.
+
+        # Faça isso
+
+        Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
       Calc Circles of Eval .1: |-
         Você vai escrever um tipo de código chamado
         Bloco de cálculo, porque cada bloco de código retorna um único valor.
