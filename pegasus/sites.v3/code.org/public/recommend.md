@@ -29,8 +29,19 @@ Do you know a teacher who loves learning? [Our workshops](https://code.org/educa
 
 <br>
 
-<blockquote style="color:#00adbc">"I have learned more about teaching this week than I have in the past 18 years! I will incorporate these methods into all my classes."</blockquote>
-<blockquote style="color:#00adbc">— Robin Whitsel, 10th grade teacher</blockquote>
+[breakoutquote]
+
+“I have learned more about teaching this week than I have in the past 18 years! I will incorporate these methods into all my classes.” *— Robin Whitsel, 10th grade teacher*
+
+<br>
+
+“Honestly, Code.org was one of the best professional development experiences I have ever experienced as a teacher. Besides learning about computer science I also walked away with a new set of teaching skills.” *— Roseanna Misuraca, 6th grade teacher*
+
+[clearboth]
+
+[/clearboth]
+   
+[/breakoutquote]
 
 <br>
 
