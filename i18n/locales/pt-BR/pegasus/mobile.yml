@@ -359,6 +359,7 @@
   homepage_slot_text_link_donate: "Fazer uma doação"
   homepage_slot_text_link_shop: "Camisetas, bonés e muito mais"
   homepage_slot_text_link_administrators: "Leve a ciência da computação para sua escola"
+  homepage_gallery_header: "Mais de %{project_count} milhão(ões) de projetos da Code.org criados"
   homepage_header_donors: "A Code.org agradece a seus colaboradores"
   homepage_donors_seall: "Ver todos"
   homepage_donors_donate: "Faça uma doação"

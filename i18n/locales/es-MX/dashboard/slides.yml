@@ -1453,24 +1453,35 @@ es-MX:
       5:
         text: "Oh, bueno, bueno, ahora estoy en el mundo real. Voy a intentar encontrar las oficinas de Minecraft."
       6:
+        text: "Pero, voy a necesitar vuestra ayuda. ¡Empieza a hacer el tutorial, empieza a aprender a programar, y me pondré al día con vosotros chicos después de unos pocos niveles, está bien? ¡Deseadme suerte! Creo que es así. ¡Uau! ¡Cactus! ¡Estoy bien!"
       7:
+        text: "Para completar el reto de la Hora de Código, necesitarás escribir código para programar el agente. Trabajarás junto con el Agente para eliminar cualquier obstáculo en tu ruta, para que puedas recoger los elementos que necesitas para tu viaje. Sólo el Agente puede colocar y romper bloques, y tú sólo puedes recoger objetos. Tu pantalla se divide en tres partes principales. A la izquierda está Minecraft."
       8:
+        text: "En la zona media está la caja de herramientas con los comandos que el Agente puede entender."
       9:
+        text: "Y a la derecha, está el espacio de trabajo. Ahí es donde se apilan los comandos para construir el programa para controlar el Agente."
       10:
+        text: "El Agente puede caminar, girar y activar las placas de presión. También puede destruir y colocar bloques. Cuando se coloca el bloque como estos raíles de minecart, lo coloca debajo de sí mismo."
       11:
         text: "Si no recuerdas qué hay que hacer, las instrucciones de cada nivel aparecen arriba."
       12:
+        text: "Si quieres intentarlo de nuevo, puedes pulsar el botón de reinicio azul para reiniciar todo a donde comenzó. Y si necesitas eliminar un bloque de código, arrastrarlo desde tu área de trabajo a la barra de herramientas. Recuerda pulsar correr para que el agente se mueva. Vale, sigue adelante y prueba los primeros niveles. ¡Buena suerte!"
     mc_2017_repeat:
       1:
+        text: "Stampy: ¿Me pregunto qué Stacy está a la altura?"
       2:
         text: "Stacy: Woah, creo que estoy en el lugar correcto. ¡Esto es increíble!"
       3:
+        text: "¡Me siento como estuviera de vuelta en Minecraft! Hola. ¿Cómo estás? Hola?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
+        text: "Oh, hay una enredadera. No haces nada, ¿no? Katie: ¿Stacy? Stacy: Hola, ¿Katie? Katie: Sí, ¡bienvenido a Minecraft!"
       5:
         image: 'notes/mc_2017_repeat_5.png'
+        text: "Stacy: Esto es increíble. ¿Así que aquí trabajas cada día como desarrolladora, verdad? Katie: sí, es bastante impresionante. Soy desarrolladora en el equipo de mercado de Minecraft. Stacy: ¿Cuántos idiomas de codificación conoces? Katie: En mi carrera he trabajado probablemente con más de una docena. Stacy: ¿Una docena? Katie: Sí. Stacy: Ahora, ¿no te gustaría saber nada acerca de este pequeño golem que se hace llamar el agente? Katie: Utilizamos al agente para hacer cosas que Steve o Alex no pueden, como ir a través de la lava. Stacy: Bueno, yo quiero aprender cómo codificar y ellos quieren aprender a codificar, así que ¿cuál es una de las primeras cosas que necesitas saber cuando estás aprendiendo?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
+        text: "Katie: Bueno, tienes que aprender a usar bucles. Los bucles son cosas que los desarrolladores escriben para dar órdenes a un ordenador que se puede ejecutar una y otra vez. Stacy: Lo entiendo, así que creo que hay algunos de los que vienen en los siguientes niveles, así que sigue adelante y dale a los bucles una oportunidad."
       7:
         image: 'notes/mc_2017_repeat_7.png'
       8:

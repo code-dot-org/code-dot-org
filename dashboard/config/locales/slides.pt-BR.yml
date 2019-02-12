@@ -3663,8 +3663,13 @@ pt-BR:
       6: 
       7: 
       8: 
-      9: 
-      10: 
+      9:
+        text: Se você quiser tentar novamente, clique no botão de resetar para voltar
+          onde você começou.
+      10:
+        text: Se você precisa excluir um comando, basta arrastar o bloco da sua área
+          de trabalho de volta para a caixa de ferramentas. Lembre-se de clicar em
+          "Executar" para ver o seu código em ação.
       11: 
     mc_2018_closing:
       1: 
@@ -3672,7 +3677,8 @@ pt-BR:
         text: 'Squid: Parabéns!'
       3:
         text: 'Netty: Você conseguiu! Parabéns!'
-      4: 
+      4:
+        text: 'Tomohawk: Parabéns!'
       5: 
       6: 
       7: 

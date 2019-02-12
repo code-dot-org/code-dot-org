@@ -69,7 +69,7 @@ hu:
     submit: Írja le a véleményét
   appname: Code.org
   stage: szakasz
-  stage_number: Szint %{number}
+  stage_number: Lecke %{number}
   puzzle: Kirakós
   trophies: trófeák
   courses: tanfolyamok
@@ -222,6 +222,7 @@ hu:
     type:
       word: Titkos szó
       email: Email
+      google_classroom: Google osztályterem
       clever: Okos
   follower:
     invite_sent: Meghívó elküldve
@@ -264,6 +265,7 @@ hu:
         playlab: Készíts egy Játéklabor applikációt
         artist: Rajzolj valamit
         applab: Készíts egy App Lab applikációt
+      my_dashboard: Vezérlőpult
       project_gallery: Projektek
       sections: Csoportok
       help_support: Súgó és támogatás
@@ -313,6 +315,7 @@ hu:
       applab: App Lab
       artist: Művész
       playlab: Játéklabor
+      spritelab: Sprite labor
       minecraft: Minecraft
       flappy: Flappy
       dance: Táncos buli
@@ -841,6 +844,7 @@ hu:
     form_labels:
       email: Email
       school_name: Iskola neve
+      school_city: Iskola városa
       school_country: Iskola országa
     form_entries:
       gender:
