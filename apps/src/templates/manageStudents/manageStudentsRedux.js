@@ -132,7 +132,6 @@ const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
-const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const SET_SHOW_SHARING_COLUMN = 'manageStudents/SET_SHOW_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
@@ -220,7 +219,6 @@ export const addMultipleRows = studentData => ({
   type: ADD_MULTIPLE_ROWS,
   studentData
 });
-export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
 
 export const setShowSharingColumn = visible => ({
   type: SET_SHOW_SHARING_COLUMN,
@@ -651,12 +649,6 @@ export default function manageStudents(state = initialState, action) {
         ...state.editingData,
         ...action.studentData
       }
-    };
-  }
-  if (action.type === TOGGLE_SHARING_COLUMN) {
-    return {
-      ...state,
-      showSharingColumn: !state.showSharingColumn
     };
   }
   if (action.type === SET_SHOW_SHARING_COLUMN) {
