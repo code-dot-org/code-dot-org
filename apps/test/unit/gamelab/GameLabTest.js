@@ -93,7 +93,6 @@ describe('GameLab', () => {
           unmuteSpy.restore();
         });
 
-        spy.restore();
         it('Rerun mutes URLs', () => {
           instance.rerunSetupCode();
           expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
