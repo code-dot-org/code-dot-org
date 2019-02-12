@@ -391,17 +391,18 @@ function runCollisionEvents() {
   collisionEvents.forEach(function(event) {
     var a = event.a();
     var b = event.b();
+    var type = event.type;
     var e = event.event;
     if(a && b) {
       if(!Array.isArray(a) && !Array.isArray(b)) {
-        if(a.collide(b)) {
+        if(a[type](b)) {
           thisSprite = a;
           otherSprite = b;
           e();
         }
       } else if(!Array.isArray(a) && Array.isArray(b)) {
         b.forEach(function(s) {
-          if(a.collide(s)) {
+          if(a[type](s)) {
             thisSprite = a;
             otherSprite = s;
             e();
@@ -409,7 +410,7 @@ function runCollisionEvents() {
         });
       } else if(Array.isArray(a) && !Array.isArray(b)) {
         a.forEach(function(s) {
-          if(b.collide(s)) {
+          if(b[type](s)) {
             thisSprite = s;
             otherSprite = b;
             e();
@@ -418,7 +419,7 @@ function runCollisionEvents() {
       } else {
         a.forEach(function(s) {
           b.forEach(function(p) {
-              if(s.collide(p)) {
+              if(s[type](p)) {
                 thisSprite = s;
                 otherSprite = p;
                 e();

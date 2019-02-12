@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "changePropByFlexible",
-    "blockText": "aalab change {SPRITE} {PROPERTY} by {VAL}",
+    "func": "setProp",
+    "blockText": "aalab set {SPRITE} {PROPERTY} to {VAL}",
     "args": [
       {
         "name": "SPRITE",
@@ -34,12 +34,15 @@
           [
             "movement direction",
             "\"direction\""
+          ],
+          [
+            "tint",
+            "\"tint\""
           ]
         ]
       },
       {
-        "name": "VAL",
-        "type": "Number"
+        "name": "VAL"
       }
     ]
   }
