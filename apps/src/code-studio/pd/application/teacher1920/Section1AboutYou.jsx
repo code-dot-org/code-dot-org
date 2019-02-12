@@ -98,16 +98,16 @@ export default class Section1AboutYou extends LabeledFormComponent {
             &nbsp; (Your and your principal’s contact info)
           </li>
           <li>
-            <span style={styles.bold}>Section 2: Choose your program</span>
-            &nbsp; (Which program you want to join and how you plan on teaching
-            the course)
+            <span style={styles.bold}>
+              Section 2: Teaching and school background
+            </span>
+            &nbsp; (Principal contact info, your subject areas, and what CS
+            courses are offered in your school)
           </li>
           <li>
-            <span style={styles.bold}>
-              Section 3: Teaching and school background
-            </span>
-            &nbsp; (Your subject areas and what CS courses are offered in your
-            school)
+            <span style={styles.bold}>Section 3: Choose your program</span>
+            &nbsp; (Which program you want to join and how you plan on teaching
+            the course)
           </li>
           <li>
             <span style={styles.bold}>

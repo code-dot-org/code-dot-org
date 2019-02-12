@@ -27,7 +27,7 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
   render() {
     return (
       <FormGroup>
-        <h3>Section 3: {SectionHeaders.section3TeachingBackground}</h3>
+        <h3>Section 2: {SectionHeaders.section3TeachingBackground}</h3>
 
         <p>
           If you work in a school district, please select your district and
