@@ -98,6 +98,10 @@ zu:
         options:
           CONDITION:
             '"when"': nini
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': nini
       aalab_whenTouching:
         options:
           CONDITION:

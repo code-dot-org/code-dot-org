@@ -417,94 +417,126 @@ sk:
         **Takty** sa v hudbe používajú na počítanie času. V tomto cvičení sa takt skladá zo štyroch dôb.
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
-      courseA_maze_ramp3_2018: "*\"Toto prasiatko mi nedá spať.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseA_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
       courseA_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseA_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseC_collector_prog7: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
       courseC_collector_prog7_2018: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
       courseC_collector_prog7_2019: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
       courseC_flappy_events10: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti."
       courseC_flappy_events10_2018: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti."
       courseC_flappy_events10_2019: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti."
+      courseC_maze_programming3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných šedých blokov a presuň ho späť do panela nástrojov."
+      courseC_maze_programming3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných šedých blokov a presuň ho späť do panela nástrojov."
+      courseC_maze_programming3_2019: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných šedých blokov a presuň ho späť do panela nástrojov."
       courseC_maze_programming4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseC_maze_programming4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseC_maze_programming4_2019: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseC_maze_programming5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseC_maze_programming5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseC_maze_programming5_2019: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
+      courseC_maze_programming6: |-
+        *"Ukľudni sa a pomôž mi nájsť to zlé prasa. Inak sa nahnevám!"*
+
+        Dostaň vtáka k prasaťu a vyhni sa TNT.
+      courseC_maze_programming6_2018: |-
+        *"Ukľudni sa a pomôž mi nájsť to zlé prasa. Inak sa nahnevám!"*
+
+        Dostaň vtáka k prasaťu a vyhni sa TNT.
+      courseC_maze_programming6_2019: |-
+        *"Ukľudni sa a pomôž mi nájsť to zlé prasa. Inak sa nahnevám!"*
+
+        Dostaň vtáka k prasaťu a vyhni sa TNT.
       courseD_bounce_events1: Dostaň sa k vlajke! Pripoj blok ku bloku "keď šípka vľavo". Stlač "Spustiť" a šípkou presuň hráča k vlajke.
       courseD_maze_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2019: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_maze_ramp2_2019: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_maze_ramp3: "*\"Toto prasiatko mi nedá spať.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
-      courseD_maze_ramp3_2018: "*\"Toto prasiatko mi nedá spať.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseD_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_maze_ramp2_2019: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_maze_ramp3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseD_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseD_maze_ramp3_2019: |-
+        Pomôž vtákovi dostať sa k prasaťu. Na ploche je navyše jeden modrý blok `posuň sa dopredu`.
+
+        Blok, ktorý je navyše odhoď tak, že ho odpojíš od ostatných blokov a presunieš ho naspäť do panela nástrojov.
       courseD_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseD_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseD_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseD_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseD_maze_ramp5_2019: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
-      courseD_maze_ramp5a: Skús zistiť, ako správne zoradiť blokoy, aby si sa dostal k tomu prasiatku!
-      courseD_maze_ramp5a_2018: Skús zistiť, ako správne zoradiť blokoy, aby si sa dostal k tomu prasiatku!
+        Vyhni sa TNT.
+      courseD_maze_ramp5a: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasaťu!
+      courseD_maze_ramp5a_2018: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasaťu!
+      courseD_maze_ramp5b: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!"
+      courseD_maze_ramp5b_2018: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!"
+      courseD_maze_ramp5b_2019: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!"
+      courseD_maze_ramp5c: Pomôž vtákovi dostať sa k prasaťu.
+      courseD_maze_ramp5c_2018: Pomôž vtákovi dostať sa k prasaťu.
+      courseD_maze_ramp5c_2019: Pomôž Scratovi dostať sa k žaluďu.
+      courseD_maze_ramp5d: Dostaň vtáka k prasaťú.
+      courseD_maze_ramp5d_2018: Dostaň vtáka k prasaťú.
+      courseD_maze_ramp5d_2019: Dostaň vtáka k prasaťú.
       courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_scrat_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_scrat_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_scrat_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
+      courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_scrat_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov.
       courseE_bee_functions3_2018: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov.
       courseE_farmer_concept4: A poďme o level hlbšie! Vložili sme celý blok s kódom do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej slučky, aby nakreslil celú mriežku?
-      courseE_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseE_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
+      courseE_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseE_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseE_maze_ramp3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      courseE_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
       courseE_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseE_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseE_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseE_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseE_multi_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseF_bee_for_challenge2: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2018: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2019: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseF_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseF_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseF_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
+      coursef_maze_ramp3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      coursef_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
       frozen circle function in circle: Teraz si vytvorme 20 prekrývajúcich sa kružníc a po každej z nich sa otočíme o 18 stupňov.
       frozen circle function in circle_b: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
       frozen circle function in circle_test: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
@@ -600,6 +632,9 @@ sk:
       frozen square snowflake: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
       frozen square snowflake_b: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
       frozen square snowflake_test: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
+      grade2_CaringForNewPet_2: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      grade2_CaringForNewPet_2courseC_maze_programming3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      grade2_CaringForNewPet_3: '*"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!"*'
       grade2_MakeDogTag_8: A teraz spojme niekoľko Véčiek spolu do cyklu.
       grade2_PuppyLoops_10: |-
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
