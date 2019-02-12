@@ -124,8 +124,9 @@ class TeacherFeedback extends Component {
   };
 
   onRubricChange = event => {
-    console.log('You picked something new in rubric');
-    this.setState({performance: event.target.id});
+    event.target.id === this.state.performance
+      ? this.setState({performance: null})
+      : this.setState({performance: event.target.id});
   };
 
   onSubmitFeedback = () => {
@@ -147,7 +148,6 @@ class TeacherFeedback extends Component {
       headers: {'X-CSRF-Token': this.state.token}
     })
       .done(data => {
-        console.log(data);
         this.setState({
           latestFeedback: [data],
           submitting: false,
