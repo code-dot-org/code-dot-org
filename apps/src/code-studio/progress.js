@@ -132,6 +132,64 @@ progress.renderStageProgress = function(
 };
 
 /**
+ * Query the server for user_progress data for this script, and update the store
+ * as appropriate
+ */
+function queryUserProgress(store, scriptData) {
+  const viewAs = getCurrentView();
+  const userId = clientState.queryParams('user_id');
+  const onComplete = data => {
+    onQueryUserProgressComplete(store, scriptData, data);
+  };
+
+  store.dispatch(
+    asyncSetProgress(
+      scriptData.name,
+      userId,
+      scriptData.student_detail_progress_view,
+      viewAs,
+      onComplete
+    )
+  );
+}
+
+/**
+ * Callback method called by queryUserProgress. Runs after asyncSetProgress has completed.
+ */
+function onQueryUserProgressComplete(store, scriptData, progressData) {
+  const postMilestoneDisabled =
+    store.getState().progress.postMilestoneDisabled ||
+    experiments.isEnabled('postMilestoneDisabledUI');
+  // Depend on the fact that even if we have no levelProgress, our progress
+  // data will have other keys
+  const signedInUser = Object.keys(progressData).length > 0;
+
+  if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
+    showDisabledBubblesModal();
+  }
+
+  // Show lesson plan links and other teacher info if teacher and on unit
+  // overview page
+  const viewAs = queryString.parse(location.search).viewAs || ViewType.Teacher;
+  if (
+    (progressData.isTeacher || viewAs === ViewType.Teacher) &&
+    !progressData.professionalLearningCourse
+  ) {
+    // Default to progress summary view if teacher is viewing their student's progress.
+    const teacherViewingStudent =
+      !progressData.isTeacher && viewAs === ViewType.Teacher;
+    if (teacherViewingStudent) {
+      store.dispatch(setIsSummaryView(true));
+    }
+
+    store.dispatch(showTeacherInfo());
+
+    renderTeacherPanel(store, scriptData.id, scriptData.section);
+    clientState.cacheUserIsTeacher(true);
+  }
+}
+
+/**
  * @param {object} scriptData
  * @param {string} scriptData.id
  * @param {boolean} scriptData.plc
@@ -231,61 +289,6 @@ function getCurrentView() {
   }
 
   return viewAs;
-}
-
-/**
- * Query the server for user_progress data for this script, and update the store
- * as appropriate
- */
-function queryUserProgress(store, scriptData) {
-  const viewAs = getCurrentView();
-  const userId = clientState.queryParams('user_id');
-  // TODO: clean this up
-  const onAsyncSetProgressComplete = data => {
-    const postMilestoneDisabled =
-      store.getState().progress.postMilestoneDisabled ||
-      experiments.isEnabled('postMilestoneDisabledUI');
-    // Depend on the fact that even if we have no levelProgress, our progress
-    // data will have other keys
-    const signedInUser = Object.keys(data).length > 0;
-    if (data.isVerifiedTeacher) {
-      store.dispatch(setVerified());
-    }
-    if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
-      showDisabledBubblesModal();
-    }
-
-    // Show lesson plan links and other teacher info if teacher and on unit
-    // overview page
-    const viewAs =
-      queryString.parse(location.search).viewAs || ViewType.Teacher;
-    if (
-      (data.isTeacher || viewAs === ViewType.Teacher) &&
-      !data.professionalLearningCourse
-    ) {
-      // Default to progress summary view if teacher is viewing their student's progress.
-      const teacherViewingStudent =
-        !data.isTeacher && viewAs === ViewType.Teacher;
-      if (teacherViewingStudent) {
-        store.dispatch(setIsSummaryView(true));
-      }
-
-      store.dispatch(showTeacherInfo());
-
-      renderTeacherPanel(store, scriptData.id, scriptData.section);
-      clientState.cacheUserIsTeacher(true);
-    }
-  };
-
-  store.dispatch(
-    asyncSetProgress(
-      scriptData.name,
-      userId,
-      scriptData.student_detail_progress_view,
-      viewAs,
-      onAsyncSetProgressComplete
-    )
-  );
 }
 
 /**
