@@ -4,7 +4,7 @@
     "func": "createNewSpriteAnonReturn",
     "inline": false,
     "blockText": "aalab make new {ANIMATION_NAME} sprite at {LOCATION}",
-    "returnType": "None",
+    "returnType": "Sprite",
     "color": [
       355,
       ".7",
