@@ -16,5 +16,8 @@ What will the value of `score` be at the end of the program?
 <br>
 `score <- "The score is: " + score;`
 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
 
 MARKDOWN

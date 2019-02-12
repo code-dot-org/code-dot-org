@@ -40,9 +40,6 @@ level 'courseB_maze_seq12_2019'
 bonus 'courseB_maze_seq_challenge1_2019'
 bonus 'courseB_maze_seq_challenge2_2019'
 
-stage 'Copyright and Creativity'
-level 'courseB_unplugged_CnC_2019'
-
 stage 'Programming with Rey and BB-8'
 level 'bb8_skinOverview_K-1_video_2019'
 level 'courseB_starWars_prog1_2019'
