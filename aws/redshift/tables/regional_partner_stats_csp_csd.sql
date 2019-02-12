@@ -74,6 +74,8 @@ select tt17.*, u.studio_person_id
          tmp.students_script_most_progress,
          sa.sections,
          sa.students,
+         sa.students_started,
+         sa.students_completed,
          sa.students_female,
          sa.students_gender,
          sa.students_urm,

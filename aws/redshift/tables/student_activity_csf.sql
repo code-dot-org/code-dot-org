@@ -37,7 +37,9 @@ student_activity as
            cst.script_name,
            se.id section_id,
            us.user_id student_id,
-           u_students.gender gender
+           u_students.gender gender,
+           ccs.user_id as student_id_started,
+           ccc.user_id as student_id_completed
   FROM analysis.csf_started_teachers cst
       JOIN analysis.school_years sy 
        ON sy.school_year = cst.school_year
@@ -59,6 +61,12 @@ student_activity as
       JOIN dashboard_production_pii.users u_students
         ON u_students.id = us.user_id 
        AND u_students.user_type = 'student'
+      LEFT JOIN analysis.csf_started ccs
+        ON ccs.user_id = u_students.id 
+        AND ccs.started_at between sy.started_at and sy.ended_at
+      LEFT JOIN analysis.csf_completed ccc
+        ON ccc.user_id = u_students.id 
+        AND ccc.completed_at between sy.started_at and sy.ended_at
 ),
       
 scripts as 
@@ -66,7 +74,9 @@ scripts as
              school_year,
              script_name,
              COUNT(DISTINCT section_id) sections_of_course,
-             COUNT(DISTINCT student_id) students_in_course
+             COUNT(DISTINCT student_id) students_in_course,
+             COUNT(DISTINCT student_id_started) students_started_in_course,
+             COUNT(DISTINCT student_id_completed) students_completed_in_course
     from student_activity 
     GROUP BY 1, 2, 3), 
   
@@ -74,13 +84,17 @@ no_scripts as (
     SELECT user_id,
              school_year,
              COUNT(DISTINCT student_id) students_total,
+             COUNT(DISTINCT student_id_started) students_started_total,
+             COUNT(DISTINCT student_id_completed) students_completed_total,
              COUNT(DISTINCT CASE WHEN gender = 'f' THEN student_id ELSE NULL END) students_female,
              COUNT(DISTINCT CASE WHEN gender IN ('m','f','n') THEN student_id ELSE NULL END) students_gender
          
     from student_activity 
     GROUP BY 1, 2
     )
-select scripts.user_id, scripts.school_year, script_name, students_total, students_female, students_gender, sections_of_course, students_in_course
+select scripts.user_id, scripts.school_year, script_name, students_total, 
+        students_started_total, students_completed_total, students_female, 
+        students_gender, sections_of_course, students_in_course, students_completed_in_course
 from scripts 
 join no_scripts 
 on no_scripts.user_id = scripts.user_id 
