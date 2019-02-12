@@ -136,9 +136,12 @@ select
          case when s.user_id is not null then 1 else 0 end as started,
          case when c.user_id is not null then 1 else 0 end as completed,
          -- sections and students   
-         sa.students_total,         
+         sa.students_total,   
+         sa.students_started_total, 
+         sa.students_completed_total,      
          sa.sections_of_course,
          sa.students_in_course,
+         sa.students_completed_in_course,
          -- stage number and stage name reached by the majority of students, and number of students who reached the stage in each STARTED course
           tmp.stage_name_most_progress,
           tmp.stage_number_most_progress, 
