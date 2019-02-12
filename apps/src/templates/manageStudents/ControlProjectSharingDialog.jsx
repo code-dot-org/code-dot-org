@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {toggleSharingColumn, editAll} from './manageStudentsRedux';
+import {setShowSharingColumn, editAll} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from '@cdo/locale';
@@ -20,7 +20,7 @@ class ControlProjectSharingDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func,
-    toggleSharingColumn: PropTypes.func,
+    showSharingColumn: PropTypes.func,
     editAll: PropTypes.func
   };
 
@@ -29,7 +29,7 @@ class ControlProjectSharingDialog extends Component {
   };
 
   handleShowSharingClick = () => {
-    this.props.toggleSharingColumn();
+    this.props.showSharingColumn();
     this.props.editAll();
   };
 
@@ -71,8 +71,8 @@ export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialo
 export default connect(
   state => ({}),
   dispatch => ({
-    toggleSharingColumn() {
-      dispatch(toggleSharingColumn());
+    showSharingColumn() {
+      dispatch(setShowSharingColumn(true));
     },
     editAll() {
       dispatch(editAll());
