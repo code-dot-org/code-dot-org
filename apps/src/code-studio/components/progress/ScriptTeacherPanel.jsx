@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types';
+import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
@@ -46,6 +47,17 @@ class ScriptTeacherPanel extends React.Component {
     )
   };
 
+  calculateStudentTableMaxHeight = () => {
+    let teacherPanel = $('.teacher-panel');
+    let contentToRemove = $('#nonscrollable-content');
+
+    if (teacherPanel.length > 0 && contentToRemove.length > 0) {
+      return (
+        teacherPanel[0].clientHeight - contentToRemove[0].clientHeight - 15
+      );
+    }
+  };
+
   render() {
     const {
       viewAs,
@@ -56,11 +68,12 @@ class ScriptTeacherPanel extends React.Component {
       unlockedStageNames,
       students
     } = this.props;
+    const studentTableMaxHeight = this.calculateStudentTableMaxHeight();
 
     return (
       <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
-        <div className="content">
+        <div id="nonscrollable-content">
+          <h3>{commonMsg.teacherPanel()}</h3>
           <ViewAsToggle />
           {!sectionsAreLoaded && (
             <div style={styles.text}>{commonMsg.loading()}</div>
@@ -98,14 +111,16 @@ class ScriptTeacherPanel extends React.Component {
                 )}
               </div>
             )}
-          {viewAs === ViewType.Teacher && students.length > 0 && (
+        </div>
+        {viewAs === ViewType.Teacher && students.length > 0 && (
+          <div style={{maxHeight: studentTableMaxHeight, overflowY: 'scroll'}}>
             <StudentTable
               students={students}
               onSelectUser={this.props.onSelectUser}
               getSelectedUserId={this.props.getSelectedUserId}
             />
-          )}
-        </div>
+          </div>
+        )}
       </TeacherPanel>
     );
   }

@@ -8,6 +8,7 @@
   right: 0;
   width: 200px;
   transition: right 0.5s;
+  overflow-y: hidden;
 
   background: $lightest_cyan;
 
@@ -123,7 +124,8 @@
     }
   }
   .section-students {
-    &, tr {
+    &,
+    tr {
       border: 1px solid $lighter_cyan;
       border-collapse: collapse;
     }
