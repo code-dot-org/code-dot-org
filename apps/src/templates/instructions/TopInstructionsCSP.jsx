@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import FeedbacksList from './FeedbacksList';
 import TeacherFeedback from './TeacherFeedback';
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
@@ -391,24 +390,7 @@ class TopInstructions extends Component {
               />
             )}
             {this.state.tabSelected === TabType.COMMENTS && (
-              <div>
-                {this.props.viewAs === ViewType.Teacher && (
-                  <TeacherFeedback ref="commentTab" />
-                )}
-                {this.props.viewAs === ViewType.Student && (
-                  <FeedbacksList
-                    feedbacks={this.state.feedbacks}
-                    rubric={{
-                      keyConcept: 'hi',
-                      exceeds: 'bye',
-                      meets: 'yup',
-                      approaches: 'no',
-                      noEvidence: 'maybe'
-                    }}
-                    ref="commentTab"
-                  />
-                )}
-              </div>
+              <TeacherFeedback ref="commentTab" />
             )}
           </div>
           {!this.props.isEmbedView && (
