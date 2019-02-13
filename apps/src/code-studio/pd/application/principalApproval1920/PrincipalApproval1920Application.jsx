@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import PrincipalApproval1920Component from './PrincipalApproval1920Component';
 
@@ -33,9 +33,7 @@ export default class PrincipalApproval1920Application extends FormController {
    * @override
    */
   getPageComponents() {
-    return [
-      PrincipalApproval1920Component
-    ];
+    return [PrincipalApproval1920Component];
   }
 
   /**

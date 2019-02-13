@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ManageStudentsTable from './ManageStudentsTable';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
@@ -8,7 +9,7 @@ class ManageStudents extends React.Component {
     studioUrlPrefix: PropTypes.string,
 
     // Provided by redux
-    sectionId: PropTypes.number,
+    sectionId: PropTypes.number
   };
 
   render() {
@@ -16,8 +17,8 @@ class ManageStudents extends React.Component {
 
     return (
       <div>
-        <SyncOmniAuthSectionControl sectionId={sectionId}/>
-        <ManageStudentsTable studioUrlPrefix={studioUrlPrefix}/>
+        <SyncOmniAuthSectionControl sectionId={sectionId} />
+        <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
       </div>
     );
   }
@@ -26,5 +27,5 @@ class ManageStudents extends React.Component {
 export const UnconnectedManageStudents = ManageStudents;
 
 export default connect(state => ({
-  sectionId: state.sectionData.section.id,
+  sectionId: state.sectionData.section.id
 }))(ManageStudents);

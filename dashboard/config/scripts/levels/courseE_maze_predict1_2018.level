@@ -34,7 +34,7 @@
     "contained_level_names": [
       "courseE_multi_maze_predict1_2018"
     ],
-    "tts_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
+    "tts_short_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
     "parent_level_id": 8799,
     "name_suffix": "_2018"
   },

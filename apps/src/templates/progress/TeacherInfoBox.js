@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
-import color from "@cdo/apps/util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   outer: {
@@ -7,7 +8,7 @@ const styles = {
     verticalAlign: 'top',
     width: 200,
     height: '100%',
-    borderRadius: 2,
+    borderRadius: 2
   },
   inner: {
     backgroundColor: color.lightest_cyan,
@@ -28,9 +29,7 @@ const TeacherInfoBox = ({children}) => {
   }
   return (
     <div style={styles.outer}>
-      <div style={styles.inner}>
-        {children}
-      </div>
+      <div style={styles.inner}>{children}</div>
     </div>
   );
 };

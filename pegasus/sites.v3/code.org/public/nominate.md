@@ -27,12 +27,25 @@ social:
 
 Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach computer science (CS), to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
 
-<br>
-
-<blockquote style="color:#00adbc">"I have learned more about teaching this week than I have in the past 18 years! I will incorporate these methods into all my classes."</blockquote>
-<blockquote style="color:#00adbc">— Robin Whitsel, 10th grade teacher</blockquote>
 
 <br>
+
+[breakoutquote]
+
+“I have learned more about teaching this week than I have in the past 18 years! I will incorporate these methods into all my classes.” *— Robin Whitsel, 10th grade teacher*
+
+<br>
+
+“Honestly, Code.org was one of the best professional development experiences I have ever experienced as a teacher. Besides learning about computer science I also walked away with a new set of teaching skills.” *— Roseanna Misuraca, 6th grade teacher*
+
+[clearboth]
+
+[/clearboth]
+   
+[/breakoutquote]
+
+<br>
+
 
 The [Code.org course pathway](https://code.org/educate) ranges from kindergarten through high school, so you can nominate any teacher for a scholarship to participate in this wonderful program. Thanks to our generous [donors](https://code.org/about/donors), eligible teachers can receive full scholarships and <strong>all</strong> teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
 
@@ -41,7 +54,22 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1645" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<div id="post_survey" style="display: none; background-color: #eee; padding: 20px; border-radius: 10px;">
+  Thanks for nominating a teacher! We’ll let them know you nominated them and our local partner will have your nomination when reviewing applications for scholarships and discounts. 
+  
+  <p>
+  <p>
+
+  Learn more about our courses and professional learning opportunities at <a href="https://code.org/educate/">code.org/educate/</a>
+  
+  <p>
+
+  <a href="https://code.org/nominate">Nominate another teacher!</a>
+
+</div>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0" height="1645" onload="if (window.formLoaded) { $('html, body').animate({scrollTop: $('#post_survey').offset().top}, 1000); $('#post_survey').show(); $('#nomination_form').hide(); } else { window.formLoaded = true; }" id="nomination_form">Loading...</iframe>
+<br>
 
 <br>
 

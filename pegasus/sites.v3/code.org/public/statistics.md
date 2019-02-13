@@ -195,7 +195,7 @@ It's never too late to start teaching CS!
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
+<a href="https://twitter.com/codeorg/status/1093197136974544896" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
 
 <br>
 

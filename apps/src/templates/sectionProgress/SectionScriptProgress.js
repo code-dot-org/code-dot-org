@@ -1,11 +1,12 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
-import { levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
+import {levelsByLesson} from '@cdo/apps/code-studio/progressRedux';
 
 const styles = {
   bubbles: {
     overflowX: 'scroll',
-    whiteSpace: 'nowrap',
+    whiteSpace: 'nowrap'
   }
 };
 
@@ -16,25 +17,29 @@ export default class SectionScriptProgress extends Component {
   static propTypes = {
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      students: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })).isRequired
+      students: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.number.isRequired,
+          name: PropTypes.string.isRequired
+        })
+      ).isRequired
     }).isRequired,
     // The data we get from the server's call to script.summarize. The format
     // ends up being similar to that which we send to initProgress in progressRedux.
     // The important part is scriptData.stages, which gets used by levelsWithLesson
     scriptData: PropTypes.shape({
-      stages: PropTypes.arrayOf(PropTypes.shape({
-        levels: PropTypes.arrayOf(PropTypes.object).isRequired
-      })),
-      id: PropTypes.number.isRequired,
+      stages: PropTypes.arrayOf(
+        PropTypes.shape({
+          levels: PropTypes.arrayOf(PropTypes.object).isRequired
+        })
+      ),
+      id: PropTypes.number.isRequired
     }).isRequired,
     // For each student id, has a mapping from level id to the student's result
     // on that level
     studentLevelProgress: PropTypes.objectOf(
       PropTypes.objectOf(PropTypes.number)
-    ).isRequired,
+    ).isRequired
   };
 
   /**
@@ -47,7 +52,7 @@ export default class SectionScriptProgress extends Component {
    *   and also the student's result
    */
   levelsForStudent(studentId) {
-    const { scriptData, studentLevelProgress } = this.props;
+    const {scriptData, studentLevelProgress} = this.props;
 
     const fakeState = {
       stages: scriptData.stages,
@@ -59,23 +64,23 @@ export default class SectionScriptProgress extends Component {
   }
 
   render() {
-    const { section, scriptData } = this.props;
+    const {section, scriptData} = this.props;
 
     return (
       <div>
         {section.students.map((student, index) => (
           <div key={student.id}>
-            <a href={`/teacher-dashboard#/sections/${section.id}/student/${student.id}/script/${scriptData.id}`}>
+            <a
+              href={`/teacher-dashboard#/sections/${section.id}/student/${
+                student.id
+              }/script/${scriptData.id}`}
+            >
               {student.name}
             </a>
             <div style={styles.bubbles}>
-              {this.levelsForStudent(student.id).map((levels, i) =>
-                <ProgressBubbleSet
-                  key={i}
-                  levels={levels}
-                  disabled={false}
-                />
-              )}
+              {this.levelsForStudent(student.id).map((levels, i) => (
+                <ProgressBubbleSet key={i} levels={levels} disabled={false} />
+              ))}
             </div>
           </div>
         ))}

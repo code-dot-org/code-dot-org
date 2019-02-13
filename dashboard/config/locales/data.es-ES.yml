@@ -787,6 +787,8 @@ es:
         hoc_dance_events: Fiesta de Baile - Eventos
         hoc_dance_properties: Fiesta de Baile - Propiedades
         hoc_dance_congrats: Fiesta de Baile - ¡Que siga la fiesta!
+        c_and_c_great_to_create: Es estupendo crear y jugar limpio
+        c_and_c_digital_sharing: Compartir digital
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

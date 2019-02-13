@@ -24,34 +24,32 @@ const STUB_PROJECTS_DATA = [
     thumbnailUrl: '/media/common_images/stickers/bat.png',
     type: 'gamelab',
     updatedAt: '2017-01-01T00:00:00.001-08:00'
-  },
+  }
 ];
 
 export default storybook => {
-  return storybook
-    .storiesOf('Projects/ProjectsList', module)
-    .addStoryTable([
-      {
-        name: 'basic projects list without thumbnails column',
-        description: `This is a simple projects list with stub data.`,
-        story: () => (
-          <ProjectsList
-            projectsData={STUB_PROJECTS_DATA}
-            studioUrlPrefix={'https://studio.code.org'}
-            showProjectThumbnails={false}
-          />
-        )
-      },
-      {
-        name: 'basic projects list with thumbnails column',
-        description: `This is a simple projects list with stub data.`,
-        story: () => (
-          <ProjectsList
-            projectsData={STUB_PROJECTS_DATA}
-            studioUrlPrefix={'https://studio.code.org'}
-            showProjectThumbnails={true}
-          />
-        )
-      },
-    ]);
+  return storybook.storiesOf('Projects/ProjectsList', module).addStoryTable([
+    {
+      name: 'basic projects list without thumbnails column',
+      description: `This is a simple projects list with stub data.`,
+      story: () => (
+        <ProjectsList
+          projectsData={STUB_PROJECTS_DATA}
+          studioUrlPrefix={'https://studio.code.org'}
+          showProjectThumbnails={false}
+        />
+      )
+    },
+    {
+      name: 'basic projects list with thumbnails column',
+      description: `This is a simple projects list with stub data.`,
+      story: () => (
+        <ProjectsList
+          projectsData={STUB_PROJECTS_DATA}
+          studioUrlPrefix={'https://studio.code.org'}
+          showProjectThumbnails={true}
+        />
+      )
+    }
+  ]);
 };

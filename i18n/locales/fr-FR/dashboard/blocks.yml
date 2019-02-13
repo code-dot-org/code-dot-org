@@ -154,7 +154,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
-        text: obtenir {RANGE}
+        text: obtenir [RANGE][0]
         options:
           RANGE:
             '"low"': grave
@@ -1140,7 +1140,7 @@ fr:
         text: lieu aléatoire
       Vector_vectorNorth:
         text: nord
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': taille
@@ -1157,6 +1157,23 @@ fr:
         options:
           CHOICE:
             '"this"': ceci
+      aalab_jumpTo:
+        text: "{SPRITE} passer à {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ville
       aalab_whenTouching:
         options:
           CONDITION:

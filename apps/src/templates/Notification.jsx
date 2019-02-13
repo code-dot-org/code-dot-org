@@ -1,9 +1,10 @@
-import React, { PropTypes, Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
-import color from "@cdo/apps/util/color";
+import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from "./Button";
+import Button from './Button';
 import trackEvent from '../util/trackEvent';
 
 export const NotificationType = {
@@ -34,7 +35,7 @@ const styles = {
     letterSpacing: -0.2,
     lineHeight: 1.5,
     marginTop: 16,
-    backgroundColor: color.white,
+    backgroundColor: color.white
   },
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -42,7 +43,7 @@ const styles = {
     lineHeight: 1.5,
     paddingTop: 6,
     paddingBottom: 16,
-    color: color.charcoal,
+    color: color.charcoal
   },
   detailsLink: {
     fontFamily: '"Gotham 5r", sans-serif',
@@ -59,13 +60,13 @@ const styles = {
     marginTop: 5,
     marginRight: 0,
     marginLeft: 10,
-    cursor: 'pointer',
+    cursor: 'pointer'
   },
   iconBox: {
     width: 72,
     backgroundColor: color.lightest_gray,
     textAlign: 'center',
-    float: 'left',
+    float: 'left'
   },
   contentBox: {
     // The subtracted 100px leaves room for both the icon column on the left and
@@ -86,7 +87,7 @@ const styles = {
     marginLeft: 25,
     marginRight: 25,
     marginTop: 18,
-    marginBottom: 18,
+    marginBottom: 18
   },
   colors: {
     [NotificationType.information]: {
@@ -147,16 +148,18 @@ class Notification extends Component {
     buttonClassName: PropTypes.string,
 
     // Optionally can provide an array of buttons.
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-      text: PropTypes.string,
-      link: PropTypes.string,
-      newWindow: PropTypes.bool,
-      onClick: PropTypes.func,
-      className: PropTypes.string,
-    })),
+    buttons: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string,
+        link: PropTypes.string,
+        newWindow: PropTypes.bool,
+        onClick: PropTypes.func,
+        className: PropTypes.string
+      })
+    ),
 
     // Can be specified to override default width
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
 
   state = {open: true};
@@ -174,7 +177,7 @@ class Notification extends Component {
 
   onAnnouncementClick() {
     if (this.props.analyticId) {
-      trackEvent('teacher_announcement','click', this.props.analyticId);
+      trackEvent('teacher_announcement', 'click', this.props.analyticId);
     }
     if (this.props.onButtonClick) {
       this.props.onButtonClick();
@@ -230,14 +233,12 @@ class Notification extends Component {
         <div style={[styles.colors[type], mainStyle]}>
           {type !== NotificationType.course && (
             <div style={[styles.iconBox, styles.colors[type]]}>
-              <FontAwesome icon={icons[type]} style={styles.icon}/>
+              <FontAwesome icon={icons[type]} style={styles.icon} />
             </div>
           )}
           <div style={styles.contentBox}>
             <div style={styles.wordBox}>
-              <div style={[styles.colors[type], styles.notice]}>
-                {notice}
-              </div>
+              <div style={[styles.colors[type], styles.notice]}>{notice}</div>
               <div style={styles.details}>
                 {details}
                 {detailsLinkText && detailsLink && (
@@ -246,7 +247,7 @@ class Notification extends Component {
                     <a
                       href={detailsLink}
                       style={styles.detailsLink}
-                      target={detailsLinkNewWindow ? "_blank" : null}
+                      target={detailsLinkNewWindow ? '_blank' : null}
                     >
                       {detailsLinkText}
                     </a>
@@ -261,35 +262,33 @@ class Notification extends Component {
                   color={Button.ButtonColor.gray}
                   text={buttonText}
                   style={styles.button}
-                  target={newWindow ? "_blank" : null}
+                  target={newWindow ? '_blank' : null}
                   onClick={this.onAnnouncementClick.bind(this)}
                   className={buttonClassName}
                 />
               )}
-              {buttons && buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  href={button.link}
-                  color={Button.ButtonColor.gray}
-                  text={button.text}
-                  style={styles.button}
-                  target={button.newWindow ? "_blank" : null}
-                  onClick={this.onButtonClick.bind(button)}
-                  className={button.className}
-                />
-              ))}
+              {buttons &&
+                buttons.map((button, index) => (
+                  <Button
+                    key={index}
+                    href={button.link}
+                    color={Button.ButtonColor.gray}
+                    text={button.text}
+                    style={styles.button}
+                    target={button.newWindow ? '_blank' : null}
+                    onClick={this.onButtonClick.bind(button)}
+                    className={button.className}
+                  />
+                ))}
             </div>
           </div>
           {dismissible && (
             <div style={styles.dismiss}>
-              <FontAwesome
-                icon="times"
-                onClick={this.onDismiss}
-              />
+              <FontAwesome icon="times" onClick={this.onDismiss} />
             </div>
           )}
         </div>
-        <div style={styles.clear}/>
+        <div style={styles.clear} />
       </div>
     );
   }
@@ -301,5 +300,5 @@ export default connect(state => ({
 
 export const NotificationResponsive = connect(state => ({
   isRtl: state.isRtl,
-  responsiveSize: state.responsive.responsiveSize,
+  responsiveSize: state.responsive.responsiveSize
 }))(Radium(Notification));

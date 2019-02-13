@@ -1,6 +1,6 @@
-
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 /**
@@ -14,7 +14,7 @@ import Radium from 'radium';
 class ProtectedStatefulDiv extends React.Component {
   static propTypes = {
     contentFunction: PropTypes.func,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   shouldComponentUpdate() {
@@ -36,12 +36,12 @@ class ProtectedStatefulDiv extends React.Component {
     // anything, and actually we want to unmount/remount stuff all the time
     // when the page is hot-reloaded
     if (!IN_STORYBOOK) {
-      throw new Error("Unmounting a ProtectedStatefulDiv is not allowed.");
+      throw new Error('Unmounting a ProtectedStatefulDiv is not allowed.');
     }
   }
 
   render() {
-    return <div {..._.omit(this.props, ['contentFunction'])} ref="root"/>;
+    return <div {..._.omit(this.props, ['contentFunction'])} ref="root" />;
   }
 }
 

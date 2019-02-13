@@ -163,7 +163,7 @@ ja:
             Maze:
               name: 迷路
         frozen:
-          title: アナとエルザとコーディング
+          title: アナとエルサとコードを書く
           description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
           description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
           stages:
@@ -1595,6 +1595,8 @@ ja:
               name: プレイ ラボのイベント
             Ocean Scene with Loops:
               name: アーティストくりかえし
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
         courseb-2019:
           stages:
             Move It, Move It:

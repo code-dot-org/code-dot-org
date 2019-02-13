@@ -4585,6 +4585,14 @@ it:
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
           <xml><block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_harvester_loops1_authored_hint:
         courseA_harvester_loops1_a: |-
           Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!
@@ -7739,6 +7747,14 @@ it:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: Puoi usare più di un blocco `raccogli` ad ogni casella.
         courseC_collector_prog_challenge1_b: Ti sei perso? Prova questo percorso per risolvere l'esercizio!
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -12556,7 +12572,7 @@ it:
         courseF_artist_for_challenge2_c: 'Il cambiamento del colore si attua col blocco `imposta il colore con rosso, verde, blu`. Il valore del rosso è sempre fisso a `255` mentre quello del verde è sempre uguale a quello del contatore (`counter`) ed il blu è uguale a `255`–`counter`.'
         courseF_artist_for_challenge2_a: La figura è una spirale di colore mutevole e tratti rettilinei progressivamente più lunghi.
         courseF_artist_for_challenge2_b: La soluzione di questo esercizio è più semplice di quanto pensi. Basta impostare il colore all'interno del ciclo, andare avanti e girare.
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **Soluzione:**
 
           <xml>
@@ -12645,8 +12661,6 @@ it:
           </next>
           </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'Il cambiamento del colore si attua col blocco `imposta il colore con rosso, verde, blu`. Il valore del rosso è sempre fisso a `255` mentre quello del verde è sempre uguale a quello del contatore (`counter`) ed il blu è uguale a `255`–`counter`.'
         courseF_artist_for_challenge2_a: La figura è una spirale di colore mutevole e tratti rettilinei progressivamente più lunghi.

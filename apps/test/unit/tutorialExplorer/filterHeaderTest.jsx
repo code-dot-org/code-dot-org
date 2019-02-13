@@ -25,15 +25,10 @@ const DEFAULT_PROPS = {
 describe('FilterHeader', () => {
   it('renders simplest mobile view', () => {
     const wrapper = shallow(
-      <FilterHeader
-        {...DEFAULT_PROPS}
-        mobileLayout={true}
-      />
+      <FilterHeader {...DEFAULT_PROPS} mobileLayout={true} />
     );
     expect(wrapper).to.containMatchingElement(
-      <span>
-        {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
-      </span>
+      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
     );
     expect(wrapper).to.containMatchingElement(
       <button onClick={FAKE_SHOW_MODAL_FILTERS}>
@@ -51,9 +46,7 @@ describe('FilterHeader', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <span>
-        {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
-      </span>
+      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
     );
     expect(wrapper).to.containMatchingElement(
       <button onClick={FAKE_HIDE_MODAL_FILTERS}>
@@ -64,14 +57,9 @@ describe('FilterHeader', () => {
 
   it('adds a back button if requested', () => {
     const wrapper = shallow(
-      <FilterHeader
-        {...DEFAULT_PROPS}
-        backButton={true}
-      />
+      <FilterHeader {...DEFAULT_PROPS} backButton={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <BackButton/>
-    );
+    expect(wrapper).to.containMatchingElement(<BackButton />);
   });
 
   it('pluralizes result summary correctly', () => {
@@ -83,9 +71,7 @@ describe('FilterHeader', () => {
       />
     );
     expect(noResults).to.containMatchingElement(
-      <span>
-        {i18n.filterHeaderTutorialCountPlural({tutorial_count: 0})}
-      </span>
+      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 0})}</span>
     );
 
     const oneResult = shallow(
@@ -96,9 +82,7 @@ describe('FilterHeader', () => {
       />
     );
     expect(oneResult).to.containMatchingElement(
-      <span>
-        {i18n.filterHeaderTutorialCountSingle()}
-      </span>
+      <span>{i18n.filterHeaderTutorialCountSingle()}</span>
     );
 
     const twoResults = shallow(
@@ -109,10 +93,7 @@ describe('FilterHeader', () => {
       />
     );
     expect(twoResults).to.containMatchingElement(
-      <span>
-        {i18n.filterHeaderTutorialCountPlural({tutorial_count: 2})}
-      </span>
+      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 2})}</span>
     );
   });
-
 });

@@ -1,29 +1,31 @@
-import React, {Component, PropTypes} from 'react';
-import color from "../../util/color";
-import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '../../util/color';
+import {sortableSectionShape, OAuthSectionTypes} from './shapes.jsx';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
-import {pegasus} from "../../lib/util/urlHelpers";
-import {sectionCode,
-        sectionName,
-        removeSection,
-        toggleSectionHidden,
-        importOrUpdateRoster
-       } from './teacherSectionsRedux';
+import {pegasus} from '../../lib/util/urlHelpers';
+import {
+  sectionCode,
+  sectionName,
+  removeSection,
+  toggleSectionHidden,
+  importOrUpdateRoster
+} from './teacherSectionsRedux';
 import {connect} from 'react-redux';
-import PrintCertificates from "./PrintCertificates";
+import PrintCertificates from './PrintCertificates';
 import FontAwesome from '../FontAwesome';
 import BaseDialog from '../BaseDialog';
 import Button from '../Button';
-import DialogFooter from "./DialogFooter";
-import QuickActionsCell from "@cdo/apps/templates/tables/QuickActionsCell";
-import {getStore} from "@cdo/apps/redux";
-import {setRosterProvider} from "@cdo/apps/templates/teacherDashboard/teacherSectionsRedux";
+import DialogFooter from './DialogFooter';
+import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
+import {getStore} from '@cdo/apps/redux';
+import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   xIcon: {
-    paddingRight: 5,
+    paddingRight: 5
   },
   heading: {
     borderTopWidth: 0,
@@ -33,8 +35,8 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.default_text,
     paddingBottom: 20,
-    marginBottom: 30,
-  },
+    marginBottom: 30
+  }
 };
 
 class SectionActionDropdown extends Component {
@@ -52,37 +54,44 @@ class SectionActionDropdown extends Component {
   };
 
   state = {
-    deleting: false,
+    deleting: false
   };
 
   componentDidMount() {
-    if (this.props.sectionData.loginType === OAuthSectionTypes.google_classroom || this.props.sectionData.loginType === OAuthSectionTypes.clever) {
-      getStore().dispatch(this.props.setRosterProvider(this.props.sectionData.loginType));
+    if (
+      this.props.sectionData.loginType === OAuthSectionTypes.google_classroom ||
+      this.props.sectionData.loginType === OAuthSectionTypes.clever
+    ) {
+      getStore().dispatch(
+        this.props.setRosterProvider(this.props.sectionData.loginType)
+      );
     }
   }
 
   onConfirmDelete = () => {
-      const {removeSection } = this.props;
-      const section = this.props.sectionData;
-      $.ajax({
-          url: `/dashboardapi/sections/${section.id}`,
-          method: 'DELETE',
-      }).done(() => {
-          removeSection(section.id);
-      }).fail((jqXhr, status) => {
-          // We may want to handle this more cleanly in the future, but for now this
-          // matches the experience we got in angular
-          alert(i18n.unexpectedError());
-          console.error(status);
+    const {removeSection} = this.props;
+    const section = this.props.sectionData;
+    $.ajax({
+      url: `/dashboardapi/sections/${section.id}`,
+      method: 'DELETE'
+    })
+      .done(() => {
+        removeSection(section.id);
+      })
+      .fail((jqXhr, status) => {
+        // We may want to handle this more cleanly in the future, but for now this
+        // matches the experience we got in angular
+        alert(i18n.unexpectedError());
+        console.error(status);
       });
   };
 
   onClickEdit = () => {
-      this.props.handleEdit(this.props.sectionData.id);
+    this.props.handleEdit(this.props.sectionData.id);
   };
 
   onClickHideShow = () => {
-      this.props.toggleSectionHidden(this.props.sectionData.id);
+    this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
   onClickSync = () => {
@@ -111,19 +120,27 @@ class SectionActionDropdown extends Component {
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}/manage`)}
+            href={pegasus(
+              `/teacher-dashboard#/sections/${sectionData.id}/manage`
+            )}
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
-          {(sectionData.loginType !== OAuthSectionTypes.google_classroom &&
-            sectionData.loginType !== OAuthSectionTypes.clever) &&
-            <PopUpMenu.Item
-              href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}/print_signin_cards`)}
-            >
-              {sectionData.loginType === SectionLoginType.email ? i18n.joinInstructions() : i18n.printLoginCards()}
-            </PopUpMenu.Item>
-          }
-          <MenuBreak/>
+          {sectionData.loginType !== OAuthSectionTypes.google_classroom &&
+            sectionData.loginType !== OAuthSectionTypes.clever && (
+              <PopUpMenu.Item
+                href={pegasus(
+                  `/teacher-dashboard#/sections/${
+                    sectionData.id
+                  }/print_signin_cards`
+                )}
+              >
+                {sectionData.loginType === SectionLoginType.email
+                  ? i18n.joinInstructions()
+                  : i18n.printLoginCards()}
+              </PopUpMenu.Item>
+            )}
+          <MenuBreak />
           <PopUpMenu.Item
             onClick={this.onClickEdit}
             className="edit-section-details-link"
@@ -134,34 +151,27 @@ class SectionActionDropdown extends Component {
             sectionId={sectionData.id}
             assignmentName={sectionData.assignmentNames[0]}
           />
-          {sectionData.loginType === OAuthSectionTypes.clever &&
-            <PopUpMenu.Item
-              onClick={this.onClickSync}
-            >
+          {sectionData.loginType === OAuthSectionTypes.clever && (
+            <PopUpMenu.Item onClick={this.onClickSync}>
               {i18n.syncClever()}
             </PopUpMenu.Item>
-          }
-          {sectionData.loginType === OAuthSectionTypes.google_classroom &&
-            <PopUpMenu.Item
-              onClick={this.onClickSync}
-            >
+          )}
+          {sectionData.loginType === OAuthSectionTypes.google_classroom && (
+            <PopUpMenu.Item onClick={this.onClickSync}>
               {i18n.syncGoogleClassroom()}
             </PopUpMenu.Item>
-          }
-          <PopUpMenu.Item
-            onClick={this.onClickHideShow}
-          >
-            {this.props.sectionData.hidden ? i18n.restoreSection() : i18n.archiveSection()}
+          )}
+          <PopUpMenu.Item onClick={this.onClickHideShow}>
+            {this.props.sectionData.hidden
+              ? i18n.restoreSection()
+              : i18n.archiveSection()}
           </PopUpMenu.Item>
-          {sectionData.studentCount === 0 &&
-            <PopUpMenu.Item
-              onClick={this.onRequestDelete}
-              color={color.red}
-            >
-              <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+          {sectionData.studentCount === 0 && (
+            <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
+              <FontAwesome icon=" fa-times-circle" style={styles.xIcon} />
               {i18n.deleteSection()}
             </PopUpMenu.Item>
-          }
+          )}
         </QuickActionsCell>
         <BaseDialog
           useUpdatedStyles
@@ -171,7 +181,7 @@ class SectionActionDropdown extends Component {
         >
           <h2 style={styles.heading}>{i18n.deleteSection()}</h2>
           <div>{i18n.deleteSectionConfirm()}</div>
-          <br/>
+          <br />
           <div>{i18n.deleteSectionHideSuggestion()}</div>
           <DialogFooter>
             <Button
@@ -195,12 +205,15 @@ class SectionActionDropdown extends Component {
 
 export const UnconnectedSectionActionDropdown = SectionActionDropdown;
 
-export default connect((state, props) => ({
-  sectionCode: sectionCode(state, props.sectionData.id),
-  sectionName: sectionName(state, props.sectionData.id),
-}), {
-  removeSection,
-  toggleSectionHidden,
-  updateRoster: importOrUpdateRoster,
-  setRosterProvider,
-})(SectionActionDropdown);
+export default connect(
+  (state, props) => ({
+    sectionCode: sectionCode(state, props.sectionData.id),
+    sectionName: sectionName(state, props.sectionData.id)
+  }),
+  {
+    removeSection,
+    toggleSectionHidden,
+    updateRoster: importOrUpdateRoster,
+    setRosterProvider
+  }
+)(SectionActionDropdown);

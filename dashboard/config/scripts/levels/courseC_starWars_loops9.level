@@ -43,7 +43,7 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can put more than one block inside a `repeat` loop.\",\"hint_id\":\"course_starWars_loops9_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/780c67a30e8cddbb50cad0048f5a906a/courseC_starWars_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You do not need to turn left to solve this puzzle. All of your turns can be to the right.\\n\\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)\",\"hint_id\":\"course_starWars_loops9_c\",\"hint_type\":\"general\",\"hint_path\":\"[[4,5],[2,5],[2,2],[6,2],[6,3]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5ed7cc1c040e0726bee7baa60cc65247/courseC_starWars_loops9.mp3\"}]",
     "step_speed": "3",
     "short_instructions": "Use what you have learned to pick up all of the scrap metal!",
-    "tts_markdown_instructions_override": "Use what you have learned to pick up all of the scrap metal!",
+    "tts_long_instructions_override": "Use what you have learned to pick up all of the scrap metal!",
     "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Keep going!\"_\r\n\r\nUse what you have learned to pick up all of the scrap metal!",
     "disable_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",

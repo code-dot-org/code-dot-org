@@ -581,11 +581,11 @@ es-MX:
             Lossy Compression and File Formats:
               name: Compresión con Pérdida y Formatos de Archivos
             Number Systems:
-              name: Sistemas de numeración
+              name: Sistemas numéricos
             Personal Innovations:
               name: Invenciones que son personales
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
             Sending Binary Messages with the Internet Simulator:
               name: Envío de los mensajes que son binarios con el simulador de internet
             Sending Bits in the Real World:
@@ -1639,7 +1639,7 @@ es-MX:
             Binary Numbers:
               name: Números binarios
             Number Systems:
-              name: Sistemas de numeración
+              name: Sistemas numéricos
             Packets and Making a Reliable Internet:
               name: Paquetes y realización de una internet que sea de confianza
             Personal Innovations:
@@ -1647,7 +1647,7 @@ es-MX:
             Routers and Redundancy:
               name: Enrutadores y reiteración
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
             Sending Binary Messages with the Internet Simulator:
               name: Envío de los mensajes que son binarios con el simulador de internet
             Sending Numbers:
@@ -1872,7 +1872,7 @@ es-MX:
         cspunit1-support:
           stages:
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
         allthehiddenthings:
           stages:
             Game Lab:
@@ -4381,6 +4381,8 @@ es-MX:
               name: Secuencias con Scrat
             Move It, Move It:
               name: Muévelo, Muévelo
+            Copyright and Creativity:
+              name: Es estupendo crear y jugar limpio
         coursed-2018:
           assignment_family_title: Curso D
           description_audience: Edades de 7 a 11 años
@@ -4651,6 +4653,8 @@ es-MX:
               name: Condicionales con tarjetas
             Minecraft Hour of Code:
               name: Hora de Código de Minecraft
+            Copyright and Creativity:
+              name: Compartir digital
         coursef-2018:
           assignment_family_title: Curso F
           description: Aprende a usar diferentes tipos de ciclos, eventos, funciones
@@ -4864,11 +4868,11 @@ es-MX:
             Personal Innovations:
               name: Invenciones que son personales
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
             Sending Binary Messages with the Internet Simulator:
               name: Envío de los mensajes que son binarios con el simulador de internet
             Number Systems:
-              name: Sistemas de numeración
+              name: Sistemas numéricos
             Binary Numbers:
               name: Números binarios
             Sending Numbers:
@@ -5100,6 +5104,8 @@ es-MX:
               name: Tu huella dactilar
             Programming in Ice Age:
               name: Programación en Ice Age
+            Copyright and Creativity:
+              name: Es estupendo crear y jugar limpio
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             Loops in Ice Age:
@@ -5625,6 +5631,10 @@ es-MX:
               name: Observando hacia el futuro
             Binary Bracelets:
               name: Pulseras binarias
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Ciclos: Mis amigos roboticos'
         gamelab:
           title: Laboratorio de juegos
         coursea-2019:
@@ -5696,6 +5706,8 @@ es-MX:
                 la oportunidad de aprender como usar eventos en Play Lab y de aplicar
                 las habilidades de código que han aprendidod para crear un juego animado.
                 ¡Es tiempo de ponerse creativo y hacer una historia en Play Lab!
+            Learn to Drag and Drop:
+              name: Aprende a arrastrar y soltar
         courseb-2019:
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
@@ -5715,6 +5727,8 @@ es-MX:
               name: 'Ciclos: Mis amigos roboticos'
             Loops in Ice Age:
               name: Ciclos en Ice Age
+            'Loops: Getting Loopy':
+              name: 'Ciclos: Haciendo ciclos'
         pre-express-2019:
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.

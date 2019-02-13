@@ -7472,6 +7472,10 @@ tr:
               name: Geleceğe bakış
             Binary Bracelets:
               name: İkilik Bileklikler
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
         csp-mid-survey:
           description_audience: CSP Öğrencileri
         gamelab:
@@ -7512,6 +7516,8 @@ tr:
               description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
+            Learn to Drag and Drop:
+              name: Sürükleyip Bırakmayı Öğrenin
         courseb-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_audience: 'Yaş: 5-8'
@@ -7534,6 +7540,8 @@ tr:
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
               name: Play Lab' da Olaylar
+            'Loops: Getting Loopy':
+              name: 'Döngüler: Loopy Başlarken'
         pre-express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Ön okurlar için bilgisayar bilimlerine giriş: anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'
@@ -7566,3 +7574,7 @@ tr:
               name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+        dani-test-script:
+          stages:
+            new stage:
+              name: yeni kademe

@@ -6,36 +6,29 @@ import DiscountCodeSchoolChoice from '@cdo/apps/lib/kits/maker/ui/DiscountCodeSc
 describe('DiscountCodeSchoolChoice', () => {
   const defaultProps = {
     schoolConfirmed: false,
-    onSchoolConfirmed: () => {},
+    onSchoolConfirmed: () => {}
   };
 
   it('shows SchoolAutocompleteDropdownWithLabel if school not yet confirmed', () => {
-    const wrapper = shallow(
-      <DiscountCodeSchoolChoice
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<DiscountCodeSchoolChoice {...defaultProps} />);
     assert.equal(wrapper.find('SchoolAutocompleteDropdownWithLabel').length, 1);
   });
 
   it('sets value if given an initialSchoolId', () => {
     const wrapper = shallow(
-      <DiscountCodeSchoolChoice
-        {...defaultProps}
-        initialSchoolId="12345"
-      />
+      <DiscountCodeSchoolChoice {...defaultProps} initialSchoolId="12345" />
     );
-    assert.equal(wrapper.find('SchoolAutocompleteDropdownWithLabel').props().value, "12345");
+    assert.equal(
+      wrapper.find('SchoolAutocompleteDropdownWithLabel').props().value,
+      '12345'
+    );
     assert.equal(wrapper.find('Button').length, 1);
     assert.equal(wrapper.find('Button').props().disabled, false);
   });
 
   it('disables button if we deselect school', () => {
     const wrapper = shallow(
-      <DiscountCodeSchoolChoice
-        {...defaultProps}
-        initialSchoolId="12345"
-      />
+      <DiscountCodeSchoolChoice {...defaultProps} initialSchoolId="12345" />
     );
     // event has no value
     const event = {};

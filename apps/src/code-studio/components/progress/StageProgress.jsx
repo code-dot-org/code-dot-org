@@ -1,11 +1,16 @@
-import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
-import color from "../../../util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import color from '../../../util/color';
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
 import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
-import { levelsForLessonId, stageExtrasUrl, getPercentPerfect } from '@cdo/apps/code-studio/progressRedux';
+import {
+  levelsForLessonId,
+  stageExtrasUrl,
+  getPercentPerfect
+} from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import { levelType } from '@cdo/apps/templates/progress/progressTypes';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
   headerContainer: {
@@ -20,10 +25,10 @@ const styles = {
     borderRadius: 5,
     height: 40,
     marginLeft: 4,
-    marginRight: 4,
+    marginRight: 4
   },
   spacer: {
-    marginRight: 'auto',
+    marginRight: 'auto'
   },
   stageTrophyContainer: {
     border: 0,
@@ -31,12 +36,12 @@ const styles = {
     paddingLeft: 8,
     paddingRight: 0,
     minWidth: 350,
-    marginLeft: 48,
+    marginLeft: 48
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
     paddingTop: 4,
-    paddingBottom: 4,
+    paddingBottom: 4
   }
 };
 
@@ -49,11 +54,11 @@ class StageProgress extends Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     stageExtrasUrl: PropTypes.string,
     onStageExtras: PropTypes.bool,
-    stageTrophyEnabled: PropTypes.bool,
+    stageTrophyEnabled: PropTypes.bool
   };
 
   render() {
-    const { stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
+    const {stageExtrasUrl, onStageExtras, stageTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
@@ -66,17 +71,17 @@ class StageProgress extends Component {
         className="react_stage"
         style={{
           ...styles.headerContainer,
-          ...(stageTrophyEnabled && styles.stageTrophyContainer),
+          ...(stageTrophyEnabled && styles.stageTrophyContainer)
         }}
       >
-        {stageTrophyEnabled &&
-          <div style={styles.spacer}/>
-        }
-        {levels.map((level, index) =>
+        {stageTrophyEnabled && <div style={styles.spacer} />}
+        {levels.map((level, index) => (
           <div
             key={index}
             style={{
-              ...(level.isUnplugged && level.isCurrentLevel && styles.pillContainer)
+              ...(level.isUnplugged &&
+                level.isCurrentLevel &&
+                styles.pillContainer)
             }}
           >
             <ProgressBubble
@@ -86,18 +91,18 @@ class StageProgress extends Component {
               stageTrophyEnabled={stageTrophyEnabled}
             />
           </div>
-        )}
-        {stageExtrasUrl && !stageTrophyEnabled &&
+        ))}
+        {stageExtrasUrl && !stageTrophyEnabled && (
           <StageExtrasProgressBubble
             stageExtrasUrl={stageExtrasUrl}
             onStageExtras={onStageExtras}
           />
-        }
-        {stageTrophyEnabled &&
+        )}
+        {stageTrophyEnabled && (
           <StageTrophyProgressBubble
             percentPerfect={getPercentPerfect(levels)}
           />
-        }
+        )}
       </div>
     );
   }
@@ -108,5 +113,5 @@ export const UnconnectedStageProgress = StageProgress;
 export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
   stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
-  onStageExtras: state.progress.currentLevelId === 'stage_extras',
+  onStageExtras: state.progress.currentLevelId === 'stage_extras'
 }))(StageProgress);
