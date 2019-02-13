@@ -114,6 +114,7 @@ class TeacherFeedback extends Component {
   }
 
   componentDidMount = () => {
+    console.log();
     if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url:
@@ -152,13 +153,18 @@ class TeacherFeedback extends Component {
           this.setState({errorState: ErrorType.Load});
         });
     }
-    $.ajax({
-      url: `/levels/${this.props.serverLevelId}/get_rubric/`,
-      method: 'GET',
-      contentType: 'application/json;charset=UTF-8'
-    }).done(data => {
-      this.setState({rubric: data});
-    });
+    //While this is behind an experiment flag we will only pull the rubric
+    //if the experiment is enable. This should prevent us from showing the
+    //rubric if not in the experiment.
+    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+      $.ajax({
+        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      }).done(data => {
+        this.setState({rubric: data});
+      });
+    }
   };
 
   onCommentChange = event => {
@@ -226,8 +232,6 @@ class TeacherFeedback extends Component {
     const placeholderText = latestFeedback
       ? latestFeedback.comment
       : i18n.feedbackPlaceholder();
-
-    console.log(experiments.isEnabled(experiments.MINI_RUBRIC_2019));
 
     return (
       <div>
