@@ -36,26 +36,27 @@ const styles = {
     justifyContent: 'flex-start'
   },
   rubricHeader: {
-    fontWeight: 'bold',
-    color: color.charcoal,
-    textAlign: 'center'
-  },
-  rubricTH: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    border: `1px solid ${color.lightest_gray}`,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 10,
-    textAlign: 'center',
-    padding: 5
-  },
-  rubricTD: {
-    border: `1px solid ${color.lightest_gray}`,
-    padding: 5
+    fontWeight: 'bold'
   },
   boxSelected: {
     border: `5px solid ${color.lightest_gray}`,
     backgroundColor: color.cyan
+  },
+  performanceArea: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    flexDirection: 'row'
+  },
+  keyConceptArea: {
+    padding: 10
+  },
+  rubricArea: {
+    padding: 10
+  },
+  performanceLevelHeader: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    flexDirection: 'row'
   }
 };
 
@@ -124,9 +125,12 @@ class TeacherFeedback extends Component {
   };
 
   onRubricChange = event => {
-    event.target.id === this.state.performance
-      ? this.setState({performance: null})
-      : this.setState({performance: event.target.id});
+    if (event.target.value === this.state.performance) {
+      event.target.checked = false;
+      this.setState({performance: null});
+    } else {
+      this.setState({performance: event.target.value});
+    }
   };
 
   onSubmitFeedback = () => {
@@ -196,76 +200,73 @@ class TeacherFeedback extends Component {
           </span>
         )}
         {this.state.rubric && (
-          <table>
-            <thead>
-              <tr>
-                <th style={styles.rubricTH}>
-                  <h4 style={styles.rubricHeader}>Key Concept</h4>
-                </th>
-                <th style={styles.rubricTH}>
-                  <h4 style={styles.rubricHeader}>Exceeds</h4>
-                </th>
-                <th style={styles.rubricTH}>
-                  <h4 style={styles.rubricHeader}>Meets</h4>
-                </th>
-                <th style={styles.rubricTH}>
-                  <h4 style={styles.rubricHeader}>Approaches</h4>
-                </th>
-                <th style={styles.rubricTH}>
-                  <h4 style={styles.rubricHeader}>No Evidence</h4>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={styles.rubricTD}>{this.state.rubric.keyConcept}</td>
-                <td
-                  style={
-                    this.state.performance === 'exceeds'
-                      ? styles.boxSelected
-                      : styles.rubricTD
-                  }
-                  onClick={this.onRubricChange}
-                  id={'exceeds'}
-                >
-                  {this.state.rubric.exceeds}
-                </td>
-                <td
-                  style={
-                    this.state.performance === 'meets'
-                      ? styles.boxSelected
-                      : styles.rubricTD
-                  }
-                  onClick={this.onRubricChange}
-                  id={'meets'}
-                >
-                  {this.state.rubric.meets}
-                </td>
-                <td
-                  style={
-                    this.state.performance === 'approaches'
-                      ? styles.boxSelected
-                      : styles.rubricTD
-                  }
-                  onClick={this.onRubricChange}
-                  id={'approaches'}
-                >
-                  {this.state.rubric.approaches}
-                </td>
-                <td
-                  style={
-                    this.state.performance === 'noEvidence'
-                      ? styles.boxSelected
-                      : styles.rubricTD
-                  }
-                  onClick={this.onRubricChange}
-                  id={'noEvidence'}
-                >
-                  {this.state.rubric.noEvidence}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div style={styles.performanceArea}>
+            <div style={styles.keyConceptArea}>
+              <h1>Key Concept</h1>
+              <p>{this.state.rubric.keyConcept}</p>
+            </div>
+            <div style={styles.rubricArea}>
+              <h1>Evaluation Rubric</h1>
+              <form>
+                <div style={styles.performanceLevelHeader}>
+                  <input
+                    type={'radio'}
+                    id={'exceedsButton'}
+                    name={'rubric'}
+                    value={'exceeds'}
+                    defaultChecked={this.state.performance === 'exceeds'}
+                    onClick={this.onRubricChange}
+                  />
+                  <details>
+                    <summary style={styles.rubricHeader}>Exceeds</summary>
+                    <p>{this.state.rubric.exceeds}</p>
+                  </details>
+                </div>
+                <div style={styles.performanceLevelHeader}>
+                  <input
+                    type={'radio'}
+                    id={'meetsButton'}
+                    name={'rubric'}
+                    value={'meets'}
+                    defaultChecked={this.state.performance === 'meets'}
+                    onClick={this.onRubricChange}
+                  />
+                  <details>
+                    <summary style={styles.rubricHeader}>Meets</summary>
+                    <p>{this.state.rubric.meets}</p>
+                  </details>
+                </div>
+                <div style={styles.performanceLevelHeader}>
+                  <input
+                    type={'radio'}
+                    id={'approachesButton'}
+                    name={'rubric'}
+                    value={'approaches'}
+                    defaultChecked={this.state.performance === 'approaches'}
+                    onClick={this.onRubricChange}
+                  />
+                  <details>
+                    <summary style={styles.rubricHeader}>Approaches</summary>
+                    <p>{this.state.rubric.approaches}</p>
+                  </details>
+                </div>
+                <div style={styles.performanceLevelHeader}>
+                  <input
+                    type={'radio'}
+                    id={'noEvidenceButton'}
+                    name={'rubric'}
+                    value={'noEvidence'}
+                    defaultChecked={this.state.performance === 'noEvidence'}
+                    onClick={this.onRubricChange}
+                  />
+                  <details>
+                    <summary style={styles.rubricHeader}>No Evidence</summary>
+                    <p>{this.state.rubric.noEvidence}</p>
+                  </details>
+                </div>
+              </form>
+            </div>
+          </div>
         )}
         <textarea
           id="ui-test-feedback-input"
