@@ -6,6 +6,7 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
+import BorderProperties from './BorderProperties';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
@@ -88,22 +89,11 @@ class TextAreaProperties extends React.Component {
           options={['left','right','center','justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
-        <PropertyRow
-          desc={'border width (px)'}
-          isNumber
-          initialValue={parseInt(element.style.borderWidth, 10)}
-          handleChange={this.props.handleChange.bind(this, 'borderWidth')}
-        />
-        <ColorPickerPropertyRow
-          desc={'border color'}
-          initialValue={elementUtils.rgb2hex(element.style.borderColor)}
-          handleChange={this.props.handleChange.bind(this, 'borderColor')}
-        />
-        <PropertyRow
-          desc={'border radius (px)'}
-          isNumber
-          initialValue={parseInt(element.style.borderRadius, 10)}
-          handleChange={this.props.handleChange.bind(this, 'borderRadius')}
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(this, 'borderWidth')}
+          handleBorderColorChange={this.props.handleChange.bind(this, 'borderColor')}
+          handleBorderRadiusChange={this.props.handleChange.bind(this, 'borderRadius')}
         />
         <BooleanPropertyRow
           desc={'read only'}
