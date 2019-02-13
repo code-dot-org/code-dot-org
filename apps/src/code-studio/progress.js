@@ -283,7 +283,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         store.dispatch(setViewType(viewAs));
       }
 
-      renderTeacherPanel(store, scriptData.id, scriptData.section);
+      renderTeacherPanel(store, scriptData);
       clientState.cacheUserIsTeacher(true);
     }
 
