@@ -7,6 +7,7 @@ import moment from 'moment/moment';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
+import $ from 'jquery';
 
 const styles = {
   content: {
@@ -68,6 +69,7 @@ const ErrorType = {
 
 class TeacherFeedback extends Component {
   static propTypes = {
+    user: PropTypes.number,
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']),
     serverLevelId: PropTypes.number,
@@ -92,32 +94,60 @@ class TeacherFeedback extends Component {
   }
 
   componentDidMount = () => {
-    $.ajax({
-      url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${
-        this.state.studentId
-      }&level_id=${this.props.serverLevelId}&teacher_id=${this.props.teacher}`,
-      method: 'GET',
-      contentType: 'application/json;charset=UTF-8'
-    })
-      .done((data, textStatus, request) => {
+    if (this.props.viewAs === ViewType.Student) {
+      $.ajax({
+        url:
+          '/api/v1/teacher_feedbacks/get_feedbacks?student_id=' +
+          this.props.user +
+          '&level_id=' +
+          this.props.serverLevelId,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      }).done(data => {
         this.setState({
-          latestFeedback: request.status === 204 ? [] : [data],
-          token: request.getResponseHeader('csrf-token'),
-          comment: request.status === 204 ? '' : data.comment,
-          performance: request.status === 204 ? null : data.performance
+          latestFeedback: data,
+          comment: data[0].comment,
+          performance: data[0].performance
         });
-      })
-      .fail((jqXhr, status) => {
-        this.setState({errorState: ErrorType.Load});
       });
-
-    $.ajax({
-      url: `/levels/${this.props.serverLevelId}/get_rubric/`,
-      method: 'GET',
-      contentType: 'application/json;charset=UTF-8'
-    }).done(data => {
-      this.setState({rubric: data});
-    });
+      this.setState({
+        rubric: {
+          keyConcept: 'Apples',
+          exceeds: 'Oranges',
+          meets: 'Bananas',
+          approaches: 'Grapes',
+          noEvidence: 'Pineapple'
+        }
+      });
+    } else {
+      $.ajax({
+        url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${
+          this.state.studentId
+        }&level_id=${this.props.serverLevelId}&teacher_id=${
+          this.props.teacher
+        }`,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      })
+        .done((data, textStatus, request) => {
+          this.setState({
+            latestFeedback: request.status === 204 ? [] : [data],
+            token: request.getResponseHeader('csrf-token'),
+            comment: request.status === 204 ? '' : data.comment,
+            performance: request.status === 204 ? null : data.performance
+          });
+        })
+        .fail((jqXhr, status) => {
+          this.setState({errorState: ErrorType.Load});
+        });
+      $.ajax({
+        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      }).done(data => {
+        this.setState({rubric: data});
+      });
+    }
   };
 
   onCommentChange = event => {
@@ -167,10 +197,6 @@ class TeacherFeedback extends Component {
   };
 
   render() {
-    if (!(this.props.viewAs === ViewType.Teacher)) {
-      return null;
-    }
-
     const latestFeedback =
       this.state.latestFeedback.length > 0
         ? this.state.latestFeedback[0]
@@ -274,23 +300,26 @@ class TeacherFeedback extends Component {
           onChange={this.onCommentChange}
           placeholder={placeholderText}
           value={this.state.comment}
+          readOnly={this.props.viewAs === ViewType.Student}
         />
         <div style={styles.footer}>
-          <div style={styles.button}>
-            <Button
-              id="ui-test-submit-feedback"
-              text={buttonText}
-              onClick={this.onSubmitFeedback}
-              color={Button.ButtonColor.blue}
-              disabled={buttonDisabled}
-            />
-            {this.state.errorState === ErrorType.Save && (
-              <span>
-                <i className="fa fa-warning" style={styles.errorIcon} />
-                {i18n.feedbackSaveError()}
-              </span>
-            )}
-          </div>
+          {this.props.viewAs === ViewType.Teacher && (
+            <div style={styles.button}>
+              <Button
+                id="ui-test-submit-feedback"
+                text={buttonText}
+                onClick={this.onSubmitFeedback}
+                color={Button.ButtonColor.blue}
+                disabled={buttonDisabled}
+              />
+              {this.state.errorState === ErrorType.Save && (
+                <span>
+                  <i className="fa fa-warning" style={styles.errorIcon} />
+                  {i18n.feedbackSaveError()}
+                </span>
+              )}
+            </div>
+          )}
           {this.state.latestFeedback.length > 0 && (
             <div style={styles.time} id="ui-test-feedback-time">
               {i18n.lastUpdated({

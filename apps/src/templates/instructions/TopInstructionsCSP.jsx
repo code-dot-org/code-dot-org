@@ -137,7 +137,6 @@ class TopInstructions extends Component {
         ? TabType.COMMENTS
         : TabType.INSTRUCTIONS,
       feedbacks: [],
-      rubric: null,
       displayFeedbackTeacherFacing: teacherViewingStudentWork
     };
   }
@@ -164,15 +163,7 @@ class TopInstructions extends Component {
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
-        console.log(data);
         this.setState({feedbacks: data});
-      });
-      $.ajax({
-        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({rubric: data});
       });
     }
   }
@@ -390,7 +381,7 @@ class TopInstructions extends Component {
               />
             )}
             {this.state.tabSelected === TabType.COMMENTS && (
-              <TeacherFeedback ref="commentTab" />
+              <TeacherFeedback user={this.props.user} ref="commentTab" />
             )}
           </div>
           {!this.props.isEmbedView && (
