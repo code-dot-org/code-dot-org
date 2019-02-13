@@ -41,10 +41,11 @@ class ScriptTeacherPanel extends React.Component {
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired
       })
-    ).isRequired
+    )
   };
 
   onSelectStudent = id => {
+    // Set our new user in the URL and reload to query for that user's progress.
     updateQueryParam('user_id', id);
     reload();
   };
@@ -101,14 +102,15 @@ class ScriptTeacherPanel extends React.Component {
                 )}
               </div>
             )}
-          {students.map(student => (
-            <div
-              key={student.id}
-              onClick={() => this.onSelectStudent(student.id)}
-            >
-              {student.name}
-            </div>
-          ))}
+          {viewAs === ViewType.Teacher &&
+            (students || []).map(student => (
+              <div
+                key={student.id}
+                onClick={() => this.onSelectStudent(student.id)}
+              >
+                {student.name}
+              </div>
+            ))}
         </div>
       </TeacherPanel>
     );
