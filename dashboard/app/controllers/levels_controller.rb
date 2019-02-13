@@ -6,10 +6,10 @@ EMPTY_XML = '<xml></xml>'.freeze
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :embed_level]
+  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
-  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level]
-  check_authorization
+  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level, :get_rubric]
+  check_authorization except: [:get_rubric]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
