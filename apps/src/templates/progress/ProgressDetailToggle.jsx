@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ToggleGroup from '../ToggleGroup';
-import color from "@cdo/apps/util/color";
-import { setIsSummaryView, hasGroups } from '@cdo/apps/code-studio/progressRedux';
-import { connect } from 'react-redux';
+import color from '@cdo/apps/util/color';
+import {setIsSummaryView, hasGroups} from '@cdo/apps/code-studio/progressRedux';
+import {connect} from 'react-redux';
 
 import summaryActive from './images/toggleSummaryActive.png';
 import summaryInactive from './images/toggleSummaryInactive.png';
@@ -25,7 +26,7 @@ const imageSets = {
     summaryActive: groupSummaryActive,
     summaryInactive: groupSummaryInactive,
     detailActive: groupDetailActive,
-    detailInactive: groupDetailInactive,
+    detailInactive: groupDetailInactive
   }
 };
 
@@ -42,7 +43,7 @@ const styles = {
     paddingTop: 6,
     paddingBottom: 3,
     // If not set explicitly, css sets "button > img" to 0.6
-    opacity: 1,
+    opacity: 1
   }
 };
 /**
@@ -66,27 +67,34 @@ class ProgressDetailToggle extends React.Component {
   };
 
   render() {
-    const { whiteBorder, isSummaryView, hasGroups, isPlc } = this.props;
+    const {whiteBorder, isSummaryView, hasGroups, isPlc} = this.props;
 
     let activeColor = this.props.activeColor;
     if (!activeColor) {
       activeColor = !isPlc && hasGroups ? color.purple : color.cyan;
     }
 
-    const images = activeColor === color.purple ? imageSets.purple : imageSets.teal;
+    const images =
+      activeColor === color.purple ? imageSets.purple : imageSets.teal;
     return (
       <ToggleGroup
-        selected={isSummaryView ? "summary" : "detail"}
+        selected={isSummaryView ? 'summary' : 'detail'}
         activeColor={activeColor}
         onChange={this.onChange}
       >
-        <button value="summary" style={whiteBorder ? styles.whiteBorder : undefined}>
+        <button
+          value="summary"
+          style={whiteBorder ? styles.whiteBorder : undefined}
+        >
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
             style={styles.icon}
           />
         </button>
-        <button value="detail" style={whiteBorder ? styles.whiteBorder : undefined}>
+        <button
+          value="detail"
+          style={whiteBorder ? styles.whiteBorder : undefined}
+        >
           <img
             src={isSummaryView ? images.detailInactive : images.detailActive}
             style={styles.icon}
@@ -94,7 +102,6 @@ class ProgressDetailToggle extends React.Component {
         </button>
       </ToggleGroup>
     );
-
   }
 }
 

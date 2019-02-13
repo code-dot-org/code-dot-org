@@ -3,9 +3,15 @@ kind: pipeline
 name: unit
 
 clone:
-  depth: 50
+  disable: true
 
 steps:
+- name: clone
+  image: docker:git
+  commands:
+  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 50 $DRONE_GIT_HTTP_URL .
+  - git reset --hard $DRONE_COMMIT
+
 - name: verify-pr
   image: wintercdo/code-dot-org:0.7
   pull: always
@@ -48,7 +54,7 @@ steps:
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
-    - pwd
+    - df -h
     - sudo chown -R circleci:circleci .
     - # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -141,6 +147,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: a37b3ff8767d1c25c2bd719f6372de50b2bfdef6c26cfb06075b5fcc05785a64
+hmac: 4ef30caa9dc7941b06d4ed3e8427def6b650ee9b3ceb3b161e2ffe83e603cae4
 
 ...

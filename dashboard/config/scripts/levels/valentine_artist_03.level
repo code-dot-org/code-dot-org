@@ -34,7 +34,7 @@
     "x": "200",
     "y": "200",
     "long_instructions": "Now make a valentine to share with someone special!  It can be anything that you want.",
-    "tts_markdown_instructions_override": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\nNeed an idea? Try making a design like this one.",
+    "tts_long_instructions_override": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\nNeed an idea? Try making a design like this one.",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "contained_level_names": null

@@ -87,7 +87,7 @@ var asciiToBinary = DataConverters.asciiToBinary;
  * @param {function} initialConfig.enterKeyPressedCallback
  * @constructor
  */
-var NetSimPacketEditor = module.exports = function (initialConfig) {
+var NetSimPacketEditor = (module.exports = function(initialConfig) {
   var level = NetSimGlobals.getLevelConfig();
 
   /**
@@ -98,9 +98,11 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
     {
       typeName: EncodingType.A_AND_B,
       addressFieldAllowedCharacters: /[AB\s]/i,
-      addressFieldConversion: function (abString) {
+      addressFieldConversion: function(abString) {
         return DataConverters.binaryToAddressString(
-            DataConverters.abToBinary(abString), level.addressFormat);
+          DataConverters.abToBinary(abString),
+          level.addressFormat
+        );
       },
       shortNumberAllowedCharacters: /[AB]/i,
       shortNumberConversion: truncatedABToInt,
@@ -110,9 +112,11 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
     {
       typeName: EncodingType.BINARY,
       addressFieldAllowedCharacters: /[01\s]/i,
-      addressFieldConversion: function (binaryString) {
+      addressFieldConversion: function(binaryString) {
         return DataConverters.binaryToAddressString(
-            binaryString, level.addressFormat);
+          binaryString,
+          level.addressFormat
+        );
       },
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: truncatedBinaryToInt,
@@ -122,9 +126,11 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
     {
       typeName: EncodingType.HEXADECIMAL,
       addressFieldAllowedCharacters: /[0-9a-f\s]/i,
-      addressFieldConversion: function (hexString) {
+      addressFieldConversion: function(hexString) {
         return DataConverters.binaryToAddressString(
-            DataConverters.hexToBinary(hexString), level.addressFormat);
+          DataConverters.hexToBinary(hexString),
+          level.addressFormat
+        );
       },
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: truncatedHexToInt,
@@ -138,7 +144,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /[0-9\s]/,
-      messageConversion: function (decimalString) {
+      messageConversion: function(decimalString) {
         return decimalToBinary(decimalString, this.currentChunkSize_);
       }.bind(this)
     },
@@ -149,7 +155,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /./,
-      messageConversion: function (asciiString) {
+      messageConversion: function(asciiString) {
         return asciiToBinary(asciiString, this.currentChunkSize_);
       }.bind(this)
     }
@@ -174,20 +180,22 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.packetSpec_ = initialConfig.packetSpec;
 
   /** @type {string} */
-  this.toAddress = initialConfig.toAddress ||
-      DataConverters.binaryToAddressString('0', level.addressFormat);
+  this.toAddress =
+    initialConfig.toAddress ||
+    DataConverters.binaryToAddressString('0', level.addressFormat);
 
   /** @type {string} */
-  this.fromAddress = initialConfig.fromAddress ||
-      DataConverters.binaryToAddressString('0', level.addressFormat);
+  this.fromAddress =
+    initialConfig.fromAddress ||
+    DataConverters.binaryToAddressString('0', level.addressFormat);
 
   /** @type {number} */
-  this.packetIndex = initialConfig.packetIndex !== undefined ?
-      initialConfig.packetIndex : 1;
+  this.packetIndex =
+    initialConfig.packetIndex !== undefined ? initialConfig.packetIndex : 1;
 
   /** @type {number} */
-  this.packetCount = initialConfig.packetCount !== undefined ?
-      initialConfig.packetCount : 1;
+  this.packetCount =
+    initialConfig.packetCount !== undefined ? initialConfig.packetCount : 1;
 
   /**
    * Binary string of message body, live-interpreted to other values.
@@ -326,13 +334,13 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.ui_ = {};
 
   this.render();
-};
+});
 
 /**
  * Return root div, for hooking up to a parent element.
  * @returns {jQuery}
  */
-NetSimPacketEditor.prototype.getRoot = function () {
+NetSimPacketEditor.prototype.getRoot = function() {
   return this.rootDiv_;
 };
 
@@ -341,7 +349,7 @@ NetSimPacketEditor.prototype.getRoot = function () {
  * ready for composing a new packet.
  * Intentionally preserves toAddress and fromAddress.
  */
-NetSimPacketEditor.prototype.resetPacket = function () {
+NetSimPacketEditor.prototype.resetPacket = function() {
   this.message = '';
   this.packetIndex = 1;
   this.packetCount = 1;
@@ -356,24 +364,30 @@ NetSimPacketEditor.prototype.resetPacket = function () {
  * Returns the first visible message box, so that we can focus() on it
  * @returns {jQuery}
  */
-NetSimPacketEditor.prototype.getFirstVisibleMessageBox = function () {
-  return this.getRoot().find('textarea.message:visible').first();
+NetSimPacketEditor.prototype.getFirstVisibleMessageBox = function() {
+  return this.getRoot()
+    .find('textarea.message:visible')
+    .first();
 };
 
 /** Replace contents of our root element with our own markup. */
-NetSimPacketEditor.prototype.render = function () {
-  var newMarkup = $(markup({
-    messageGranularity: this.messageGranularity_,
-    packetSpec: this.packetSpec_,
-    enabledEncodingsHash: this.enabledEncodingsHash_
-  }));
+NetSimPacketEditor.prototype.render = function() {
+  var newMarkup = $(
+    markup({
+      messageGranularity: this.messageGranularity_,
+      packetSpec: this.packetSpec_,
+      enabledEncodingsHash: this.enabledEncodingsHash_
+    })
+  );
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
   NetSimLogPanel.adjustHeaderColumnWidths(this.rootDiv_);
-  NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_,
-      Object.keys(this.enabledEncodingsHash_));
+  NetSimEncodingControl.hideRowsByEncoding(
+    this.rootDiv_,
+    Object.keys(this.enabledEncodingsHash_)
+  );
 };
 
 /**
@@ -382,7 +396,7 @@ NetSimPacketEditor.prototype.render = function () {
  * of the binary has been drained/"sent"
  * @param {NetSimLocalClientNode} myNode
  */
-NetSimPacketEditor.prototype.beginSending = function (myNode) {
+NetSimPacketEditor.prototype.beginSending = function(myNode) {
   this.isPlayingSendAnimation_ = true;
   this.originalBinary_ = this.getPacketBinary().substr(0, this.maxPacketSize_);
   this.sendAnimationIndex_ = 0;
@@ -398,19 +412,22 @@ NetSimPacketEditor.prototype.beginSending = function (myNode) {
  * Kick off the async send-to-remote operation for the original packet binary.
  * When it's done, remove this now-empty packet.
  */
-NetSimPacketEditor.prototype.finishSending = function () {
+NetSimPacketEditor.prototype.finishSending = function() {
   this.isPlayingSendAnimation_ = false;
   this.isSendingPacketToRemote_ = true;
-  this.myNode_.sendMessage(this.originalBinary_, function () {
-    this.isSendingPacketToRemote_ = false;
-    this.doneSendingCallback_(this);
-  }.bind(this));
+  this.myNode_.sendMessage(
+    this.originalBinary_,
+    function() {
+      this.isSendingPacketToRemote_ = false;
+      this.doneSendingCallback_(this);
+    }.bind(this)
+  );
 };
 
 /**
  * @returns {boolean} TRUE if this packet is currently being sent.
  */
-NetSimPacketEditor.prototype.isSending = function () {
+NetSimPacketEditor.prototype.isSending = function() {
   return this.isPlayingSendAnimation_ || this.isSendingPacketToRemote_;
 };
 
@@ -419,7 +436,7 @@ NetSimPacketEditor.prototype.isSending = function () {
  * its sending animation.
  * @param {RunLoop.Clock} clock
  */
-NetSimPacketEditor.prototype.tick = function (clock) {
+NetSimPacketEditor.prototype.tick = function(clock) {
   // Before we start animating, or after we are done animating, do nothing.
   if (!this.isPlayingSendAnimation_ || this.isSendingPacketToRemote_) {
     return;
@@ -453,7 +470,7 @@ NetSimPacketEditor.prototype.tick = function (clock) {
  * handler clears that text and removes the class.
  * @param focusEvent
  */
-var removeWatermark = function (focusEvent) {
+var removeWatermark = function(focusEvent) {
   var target = $(focusEvent.target);
   if (target.hasClass('watermark')) {
     target.val('');
@@ -467,9 +484,11 @@ var removeWatermark = function (focusEvent) {
  * @param {Event} jqueryEvent
  * @returns {boolean} true iff the given event represents a clean enter
  */
-var isUnmodifiedEnterPress = function (jqueryEvent) {
-  return (jqueryEvent.keyCode === KeyCodes.ENTER &&
-      !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
+var isUnmodifiedEnterPress = function(jqueryEvent) {
+  return (
+    jqueryEvent.keyCode === KeyCodes.ENTER &&
+    !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey)
+  );
 };
 
 /**
@@ -478,7 +497,7 @@ var isUnmodifiedEnterPress = function (jqueryEvent) {
  * @param {RegExp} whitelistRegex
  * @return {function} appropriate to pass to .keypress()
  */
-var makeKeypressHandlerWithWhitelist = function (whitelistRegex) {
+var makeKeypressHandlerWithWhitelist = function(whitelistRegex) {
   /**
    * A keyPress handler that blocks all visible characters except those
    * matching the whitelist.  Passes through invisible characters (backspace,
@@ -489,8 +508,7 @@ var makeKeypressHandlerWithWhitelist = function (whitelistRegex) {
    *          FALSE if we handle the event and don't want to pass it on, TRUE
    *          if we are not handling the event.
    */
-  return function (keyEvent) {
-
+  return function(keyEvent) {
     // Don't block control combinations (copy, paste, etc.)
     if (keyEvent.metaKey || keyEvent.ctrlKey) {
       return true;
@@ -527,9 +545,12 @@ var makeKeypressHandlerWithWhitelist = function (whitelistRegex) {
  *        through as second argument to converter function.
  * @returns {function} that can be passed to $.keyup()
  */
-NetSimPacketEditor.prototype.makeKeyupHandler = function (fieldName,
-    converterFunction, fieldWidth) {
-  return function (jqueryEvent) {
+NetSimPacketEditor.prototype.makeKeyupHandler = function(
+  fieldName,
+  converterFunction,
+  fieldWidth
+) {
+  return function(jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
     if (typeof newValue === 'string' || !isNaN(newValue)) {
       this[fieldName] = newValue;
@@ -556,9 +577,12 @@ NetSimPacketEditor.prototype.makeKeyupHandler = function (fieldName,
  *        through as second argument to converter function.
  * @returns {function} that can be passed to $.blur()
  */
-NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
-    converterFunction, fieldWidth) {
-  return function (jqueryEvent) {
+NetSimPacketEditor.prototype.makeBlurHandler = function(
+  fieldName,
+  converterFunction,
+  fieldWidth
+) {
+  return function(jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
     if (typeof newValue === 'number' && isNaN(newValue)) {
       newValue = converterFunction('0');
@@ -595,7 +619,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
  * @param {number} maxWidth in bits
  * @returns {number}
  */
-var truncatedBinaryToInt = function (binaryString, maxWidth) {
+var truncatedBinaryToInt = function(binaryString, maxWidth) {
   return binaryToInt(binaryString.substr(-maxWidth));
 };
 
@@ -607,7 +631,7 @@ var truncatedBinaryToInt = function (binaryString, maxWidth) {
  * @param {number} maxWidth in bits
  * @returns {number}
  */
-var truncatedABToInt = function (abString, maxWidth) {
+var truncatedABToInt = function(abString, maxWidth) {
   return abToInt(abString.substr(-maxWidth));
 };
 
@@ -618,7 +642,7 @@ var truncatedABToInt = function (abString, maxWidth) {
  * @param {number} maxWidth in bits
  * @returns {number}
  */
-var truncatedHexToInt = function (hexString, maxWidth) {
+var truncatedHexToInt = function(hexString, maxWidth) {
   return truncatedBinaryToInt(hexToBinary(hexString), maxWidth);
 };
 
@@ -629,8 +653,11 @@ var truncatedHexToInt = function (hexString, maxWidth) {
  * @param {number} maxWidth in bits
  * @returns {number}
  */
-var truncatedDecimalToInt = function (decimalString, maxWidth) {
-  return truncatedBinaryToInt(intToBinary(parseInt(decimalString, 10)), maxWidth);
+var truncatedDecimalToInt = function(decimalString, maxWidth) {
+  return truncatedBinaryToInt(
+    intToBinary(parseInt(decimalString, 10)),
+    maxWidth
+  );
 };
 
 /**
@@ -639,12 +666,13 @@ var truncatedDecimalToInt = function (decimalString, maxWidth) {
  * @param {string} originalString
  * @returns {string}
  */
-var cleanAddressString = function (originalString) {
+var cleanAddressString = function(originalString) {
   var level = NetSimGlobals.getLevelConfig();
   var binaryForm = DataConverters.addressStringToBinary(
-      originalString, level.addressFormat);
-  return DataConverters.binaryToAddressString(
-      binaryForm, level.addressFormat);
+    originalString,
+    level.addressFormat
+  );
+  return DataConverters.binaryToAddressString(binaryForm, level.addressFormat);
 };
 
 /**
@@ -652,8 +680,8 @@ var cleanAddressString = function (originalString) {
  * @private
  * @returns {RowType[]}
  */
-NetSimPacketEditor.prototype.getEnabledRowTypes_ = function () {
-  return this.ROW_TYPES.filter(function (rowType) {
+NetSimPacketEditor.prototype.getEnabledRowTypes_ = function() {
+  return this.ROW_TYPES.filter(function(rowType) {
     return this.isEncodingEnabled_(rowType.typeName);
   }, this);
 };
@@ -662,13 +690,16 @@ NetSimPacketEditor.prototype.getEnabledRowTypes_ = function () {
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
-NetSimPacketEditor.prototype.bindElements_ = function () {
+NetSimPacketEditor.prototype.bindElements_ = function() {
   var level = NetSimGlobals.getLevelConfig();
-  var encoder = new Packet.Encoder(level.addressFormat,
-      level.packetCountBitWidth, this.packetSpec_);
+  var encoder = new Packet.Encoder(
+    level.addressFormat,
+    level.packetCountBitWidth,
+    this.packetSpec_
+  );
   var rootDiv = this.rootDiv_;
 
-  this.getEnabledRowTypes_().forEach(function (rowType) {
+  this.getEnabledRowTypes_().forEach(function(rowType) {
     var tr = rootDiv.find('tr.' + rowType.typeName);
     this.ui_[rowType.typeName] = {};
     var rowFields = this.ui_[rowType.typeName];
@@ -679,7 +710,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
 
-    this.packetSpec_.forEach(function (fieldSpec) {
+    this.packetSpec_.forEach(function(fieldSpec) {
       /** @type {Packet.HeaderType} */
       var fieldName = fieldSpec;
       /** @type {number} */
@@ -695,30 +726,38 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
       }
 
       rowFields[fieldName] = tr.find('input.' + fieldName);
-      rowFields[fieldName].keypress(makeKeypressHandlerWithWhitelist(
-          allowedCharacterFunction));
-      rowFields[fieldName].keyup(this.makeKeyupHandler(fieldName,
-          conversionFunction, fieldWidth));
-      rowFields[fieldName].blur(this.makeBlurHandler(fieldName,
-          conversionFunction, fieldWidth));
+      rowFields[fieldName].keypress(
+        makeKeypressHandlerWithWhitelist(allowedCharacterFunction)
+      );
+      rowFields[fieldName].keyup(
+        this.makeKeyupHandler(fieldName, conversionFunction, fieldWidth)
+      );
+      rowFields[fieldName].blur(
+        this.makeBlurHandler(fieldName, conversionFunction, fieldWidth)
+      );
     }, this);
 
     rowFields.message = tr.find('textarea.message');
     rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
-        makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
-    rowFields.message.keydown(function (jqueryEvent) {
-      if (isUnmodifiedEnterPress(jqueryEvent)) {
-        this.enterKeyPressedCallback_(jqueryEvent);
-        // We don't want to insert a newline or anything, since we have special
-        // handling for the enter key.
-        jqueryEvent.preventDefault();
-      }
-    }.bind(this));
+      makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters)
+    );
+    rowFields.message.keydown(
+      function(jqueryEvent) {
+        if (isUnmodifiedEnterPress(jqueryEvent)) {
+          this.enterKeyPressedCallback_(jqueryEvent);
+          // We don't want to insert a newline or anything, since we have special
+          // handling for the enter key.
+          jqueryEvent.preventDefault();
+        }
+      }.bind(this)
+    );
     rowFields.message.keyup(
-        this.makeKeyupHandler('message', rowType.messageConversion));
+      this.makeKeyupHandler('message', rowType.messageConversion)
+    );
     rowFields.message.blur(
-        this.makeBlurHandler('message', rowType.messageConversion));
+      this.makeBlurHandler('message', rowType.messageConversion)
+    );
   }, this);
 
   this.removePacketButton_ = rootDiv.find('.remove-packet-button');
@@ -748,7 +787,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
  * fields, each field is treated as an independent space.
  * @private
  */
-NetSimPacketEditor.prototype.updateForAnimation_ = function () {
+NetSimPacketEditor.prototype.updateForAnimation_ = function() {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
@@ -756,12 +795,15 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   // particularly high on our perf list right now.
 
   var level = NetSimGlobals.getLevelConfig();
-  var encoder = new Packet.Encoder(level.addressFormat,
-      level.packetCountBitWidth, this.packetSpec_);
+  var encoder = new Packet.Encoder(
+    level.addressFormat,
+    level.packetCountBitWidth,
+    this.packetSpec_
+  );
 
   var fieldStart = 0;
 
-  this.packetSpec_.forEach(function (fieldSpec) {
+  this.packetSpec_.forEach(function(fieldSpec) {
     /** @type {Packet.HeaderType} */
     var fieldName = fieldSpec;
     /** @type {number} */
@@ -845,8 +887,11 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.A_AND_B].message,
-      newValue: formatAB(binaryToAB(bodyBinary).substr(truncatedBits),
-          chunkSize, -truncatedBits),
+      newValue: formatAB(
+        binaryToAB(bodyBinary).substr(truncatedBits),
+        chunkSize,
+        -truncatedBits
+      ),
       watermark: netsimMsg.a_and_b()
     });
   }
@@ -854,8 +899,11 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   if (this.isEncodingEnabled_(EncodingType.BINARY)) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.BINARY].message,
-      newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize,
-          -truncatedBits),
+      newValue: formatBinary(
+        bodyBinary.substr(truncatedBits),
+        chunkSize,
+        -truncatedBits
+      ),
       watermark: netsimMsg.binary()
     });
   }
@@ -864,8 +912,11 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
     var truncatedHexDigits = Math.floor(truncatedBits / 4);
     liveFields.push({
       inputElement: this.ui_[EncodingType.HEXADECIMAL].message,
-      newValue: formatHex(binaryToHex(bodyBinary).substr(truncatedHexDigits),
-          chunkSize, -truncatedHexDigits),
+      newValue: formatHex(
+        binaryToHex(bodyBinary).substr(truncatedHexDigits),
+        chunkSize,
+        -truncatedHexDigits
+      ),
       watermark: netsimMsg.hexadecimal()
     });
   }
@@ -873,7 +924,9 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.DECIMAL].message,
-      newValue: alignDecimal(binaryToDecimal(partialBinaryAtChunkSize, chunkSize)),
+      newValue: alignDecimal(
+        binaryToDecimal(partialBinaryAtChunkSize, chunkSize)
+      ),
       watermark: netsimMsg.decimal()
     });
   }
@@ -886,7 +939,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
     });
   }
 
-  liveFields.forEach(function (field) {
+  liveFields.forEach(function(field) {
     if (field.watermark && field.newValue === '') {
       field.inputElement.val(field.watermark);
       field.inputElement.addClass('watermark');
@@ -904,38 +957,53 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
  *        user's cursor.
  * @private
  */
-NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
+NetSimPacketEditor.prototype.updateFields_ = function(skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
   var level = NetSimGlobals.getLevelConfig();
-  var encoder = new Packet.Encoder(level.addressFormat,
-      level.packetCountBitWidth, this.packetSpec_);
+  var encoder = new Packet.Encoder(
+    level.addressFormat,
+    level.packetCountBitWidth,
+    this.packetSpec_
+  );
 
-  this.packetSpec_.forEach(function (fieldSpec) {
+  this.packetSpec_.forEach(function(fieldSpec) {
     /** @type {Packet.HeaderType} */
     var fieldName = fieldSpec;
     /** @type {number} */
     var fieldWidth = encoder.getFieldBitWidth(fieldName);
 
-    var abConverter, binaryConverter, hexConverter, decimalConverter, asciiConverter;
+    var abConverter,
+      binaryConverter,
+      hexConverter,
+      decimalConverter,
+      asciiConverter;
     if (Packet.isAddressField(fieldName)) {
-      abConverter = function (addressString) {
+      abConverter = function(addressString) {
         return DataConverters.binaryToAB(
-            DataConverters.addressStringToBinary(
-                addressString, level.addressFormat));
+          DataConverters.addressStringToBinary(
+            addressString,
+            level.addressFormat
+          )
+        );
       };
-      binaryConverter = function (addressString) {
+      binaryConverter = function(addressString) {
         return DataConverters.formatBinaryForAddressHeader(
-            DataConverters.addressStringToBinary(
-                addressString,
-                level.addressFormat),
-            level.addressFormat);
+          DataConverters.addressStringToBinary(
+            addressString,
+            level.addressFormat
+          ),
+          level.addressFormat
+        );
       };
-      hexConverter = function (addressString) {
+      hexConverter = function(addressString) {
         return DataConverters.binaryToHex(
-            DataConverters.addressStringToBinary(
-                addressString, level.addressFormat));
+          DataConverters.addressStringToBinary(
+            addressString,
+            level.addressFormat
+          )
+        );
       };
       decimalConverter = cleanAddressString;
       asciiConverter = cleanAddressString;
@@ -943,7 +1011,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
       abConverter = intToAB;
       binaryConverter = intToBinary;
       hexConverter = intToHex;
-      decimalConverter = function (val) {
+      decimalConverter = function(val) {
         return val.toString(10);
       };
       asciiConverter = decimalConverter;
@@ -1025,7 +1093,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     });
   }
 
-  liveFields.forEach(function (field) {
+  liveFields.forEach(function(field) {
     if (field.inputElement[0] !== skipElement) {
       if (field.watermark && field.newValue === '') {
         field.inputElement.val(field.watermark);
@@ -1046,8 +1114,8 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
  * last packet can't be removed.  Otherwise, clears the CSS property override.
  * @private
  */
-NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
-  this.removePacketButton_.css('display', (this.packetCount === 1 ? 'none' : ''));
+NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function() {
+  this.removePacketButton_.css('display', this.packetCount === 1 ? 'none' : '');
 };
 
 /**
@@ -1056,18 +1124,22 @@ NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
  * @returns {string} - binary representation of packet
  * @private
  */
-NetSimPacketEditor.prototype.getPacketBinary = function () {
+NetSimPacketEditor.prototype.getPacketBinary = function() {
   var level = NetSimGlobals.getLevelConfig();
-  var encoder = new Packet.Encoder(level.addressFormat,
-      level.packetCountBitWidth, this.packetSpec_);
+  var encoder = new Packet.Encoder(
+    level.addressFormat,
+    level.packetCountBitWidth,
+    this.packetSpec_
+  );
   return encoder.concatenateBinary(
-      encoder.makeBinaryHeaders({
-        toAddress: this.toAddress,
-        fromAddress: this.fromAddress,
-        packetIndex: this.packetIndex,
-        packetCount: this.packetCount
-      }),
-      this.message);
+    encoder.makeBinaryHeaders({
+      toAddress: this.toAddress,
+      fromAddress: this.fromAddress,
+      packetIndex: this.packetIndex,
+      packetCount: this.packetCount
+    }),
+    this.message
+  );
 };
 
 /**
@@ -1075,15 +1147,19 @@ NetSimPacketEditor.prototype.getPacketBinary = function () {
  * the configured header specification.
  * @param {string} rawBinary
  */
-NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
+NetSimPacketEditor.prototype.setPacketBinary = function(rawBinary) {
   var packet = new Packet(this.packetSpec_, rawBinary);
 
   if (this.specContainsHeader_(Packet.HeaderType.TO_ADDRESS)) {
-    this.toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
+    this.toAddress = packet.getHeaderAsAddressString(
+      Packet.HeaderType.TO_ADDRESS
+    );
   }
 
   if (this.specContainsHeader_(Packet.HeaderType.FROM_ADDRESS)) {
-    this.fromAddress = packet.getHeaderAsAddressString(Packet.HeaderType.FROM_ADDRESS);
+    this.fromAddress = packet.getHeaderAsAddressString(
+      Packet.HeaderType.FROM_ADDRESS
+    );
   }
 
   if (this.specContainsHeader_(Packet.HeaderType.PACKET_INDEX)) {
@@ -1105,8 +1181,8 @@ NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
  * @returns {boolean}
  * @private
  */
-NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
-  return this.packetSpec_.some(function (headerSpec) {
+NetSimPacketEditor.prototype.specContainsHeader_ = function(headerKey) {
+  return this.packetSpec_.some(function(headerSpec) {
     return headerSpec === headerKey;
   });
 };
@@ -1117,32 +1193,32 @@ NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
  * @returns {string|undefined} a single bit if it exists, as "0" or "1",
  * or undefined if none does.
  */
-NetSimPacketEditor.prototype.getFirstBit = function () {
+NetSimPacketEditor.prototype.getFirstBit = function() {
   var binary = this.getPacketBinary();
   return binary.length > 0 ? binary.substr(0, 1) : undefined;
 };
 
 /** @param {number} fromAddress */
-NetSimPacketEditor.prototype.setFromAddress = function (fromAddress) {
+NetSimPacketEditor.prototype.setFromAddress = function(fromAddress) {
   this.fromAddress = fromAddress;
   this.updateFields_();
 };
 
 /** @param {number} packetIndex */
-NetSimPacketEditor.prototype.setPacketIndex = function (packetIndex) {
+NetSimPacketEditor.prototype.setPacketIndex = function(packetIndex) {
   this.packetIndex = packetIndex;
   this.updateFields_();
 };
 
 /** @param {number} packetCount */
-NetSimPacketEditor.prototype.setPacketCount = function (packetCount) {
+NetSimPacketEditor.prototype.setPacketCount = function(packetCount) {
   this.packetCount = packetCount;
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
 };
 
 /** @param {number} maxPacketSize */
-NetSimPacketEditor.prototype.setMaxPacketSize = function (maxPacketSize) {
+NetSimPacketEditor.prototype.setMaxPacketSize = function(maxPacketSize) {
   this.maxPacketSize_ = maxPacketSize;
   this.updateBitCounter();
 };
@@ -1152,8 +1228,10 @@ NetSimPacketEditor.prototype.setMaxPacketSize = function (maxPacketSize) {
  * mode.
  * @param {EncodingType[]} newEncodings
  */
-NetSimPacketEditor.prototype.setEncodings = function (newEncodings) {
-  this.enabledEncodingsHash_ = NetSimEncodingControl.encodingsAsHash(newEncodings);
+NetSimPacketEditor.prototype.setEncodings = function(newEncodings) {
+  this.enabledEncodingsHash_ = NetSimEncodingControl.encodingsAsHash(
+    newEncodings
+  );
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, newEncodings);
   this.render();
 };
@@ -1165,7 +1243,7 @@ NetSimPacketEditor.prototype.setEncodings = function (newEncodings) {
  * @returns {boolean} whether or not the given encoding is enabled
  * @private
  */
-NetSimPacketEditor.prototype.isEncodingEnabled_ = function (queryEncoding) {
+NetSimPacketEditor.prototype.isEncodingEnabled_ = function(queryEncoding) {
   return this.enabledEncodingsHash_[queryEncoding] === true;
 };
 
@@ -1174,7 +1252,7 @@ NetSimPacketEditor.prototype.isEncodingEnabled_ = function (queryEncoding) {
  * an update of all input fields.
  * @param {number} newChunkSize
  */
-NetSimPacketEditor.prototype.setChunkSize = function (newChunkSize) {
+NetSimPacketEditor.prototype.setChunkSize = function(newChunkSize) {
   this.currentChunkSize_ = newChunkSize;
   this.updateFields_();
 };
@@ -1183,7 +1261,7 @@ NetSimPacketEditor.prototype.setChunkSize = function (newChunkSize) {
  * Change local device bitrate which changes send animation speed.
  * @param {number} newBitRate in bits per second
  */
-NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
+NetSimPacketEditor.prototype.setBitRate = function(newBitRate) {
   this.bitRate_ = newBitRate;
 };
 
@@ -1191,13 +1269,15 @@ NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
  * Update the visual state of the bit counter to reflect the current
  * message binary length and maximum packet size.
  */
-NetSimPacketEditor.prototype.updateBitCounter = function () {
+NetSimPacketEditor.prototype.updateBitCounter = function() {
   var size = this.getPacketBinary().length;
   var maxSize = this.maxPacketSize_;
-  this.bitCounter_.html(netsimMsg.bitCounter({
-    x: size,
-    y: maxSize
-  }));
+  this.bitCounter_.html(
+    netsimMsg.bitCounter({
+      x: size,
+      y: maxSize
+    })
+  );
 
   this.bitCounter_.toggleClass('oversized', size > this.maxPacketSize_);
 };
@@ -1208,7 +1288,9 @@ NetSimPacketEditor.prototype.updateBitCounter = function () {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function (jQueryEvent) {
+NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function(
+  jQueryEvent
+) {
   var thisButton = $(jQueryEvent.target);
   // We also check parent elements here, because this button uses a font-awesome
   // glyph that can receive the event instead of the actual button.
@@ -1223,6 +1305,6 @@ NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function (jQueryEvent)
  * Remove the first bit of the packet binary, used when sending one bit
  * at a time.
  */
-NetSimPacketEditor.prototype.consumeFirstBit = function () {
+NetSimPacketEditor.prototype.consumeFirstBit = function() {
   this.setPacketBinary(this.getPacketBinary().substr(1));
 };

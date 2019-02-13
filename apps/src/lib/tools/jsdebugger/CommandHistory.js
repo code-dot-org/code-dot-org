@@ -1,6 +1,6 @@
 /** @file Provide browsable command history to a textbox with limited depth. */
 
-var CommandHistory = module.exports = function () {
+var CommandHistory = (module.exports = function() {
   /**
    * Ordered collection of command entries.
    * @private {string[]}
@@ -19,7 +19,7 @@ var CommandHistory = module.exports = function () {
    * @private {number}
    */
   this.maxEntries_ = 64;
-};
+});
 
 /**
  * Add the given command to the current command history.  If the command
@@ -27,7 +27,7 @@ var CommandHistory = module.exports = function () {
  * drop off so that the newest command can be added.
  * @param {string} command
  */
-CommandHistory.prototype.push = function (command) {
+CommandHistory.prototype.push = function(command) {
   if (this.commands_.length >= this.maxEntries_) {
     this.commands_.shift();
     this.currentIndex_ -= 1;
@@ -42,7 +42,7 @@ CommandHistory.prototype.push = function (command) {
  * @param {string} currentInput
  * @returns {string}
  */
-CommandHistory.prototype.goBack = function (currentInput) {
+CommandHistory.prototype.goBack = function(currentInput) {
   this.alterHistory_(this.currentIndex_, currentInput);
 
   if (this.currentIndex_ > 0) {
@@ -60,14 +60,16 @@ CommandHistory.prototype.goBack = function (currentInput) {
  * @param {string} currentInput
  * @returns {string}
  */
-CommandHistory.prototype.goForward = function (currentInput) {
+CommandHistory.prototype.goForward = function(currentInput) {
   this.alterHistory_(this.currentIndex_, currentInput);
 
   if (this.currentIndex_ < this.commands_.length) {
     this.currentIndex_ += 1;
   }
-  if (this.currentIndex_ === this.commands_.length &&
-      currentInput === this.commands_[this.currentIndex_ - 1]) {
+  if (
+    this.currentIndex_ === this.commands_.length &&
+    currentInput === this.commands_[this.currentIndex_ - 1]
+  ) {
     return '';
   }
   if (typeof this.commands_[this.currentIndex_] !== 'undefined') {
@@ -83,7 +85,7 @@ CommandHistory.prototype.goForward = function (currentInput) {
  * @param {!string} newValue
  * @private
  */
-CommandHistory.prototype.alterHistory_ = function (index, newValue) {
+CommandHistory.prototype.alterHistory_ = function(index, newValue) {
   if (this.commands_[index] !== undefined) {
     this.commands_[index] = newValue;
   }

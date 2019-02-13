@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -15,17 +16,17 @@ const styles = {
     maxWidth: '90%'
   },
   mapThumbnail: {
-    backgroundColor: color.teal,
+    backgroundColor: color.teal
   },
   commonThumbnail: {
     borderRadius: 5,
     paddingLeft: 26,
     paddingRight: 26,
     paddingTop: 16,
-    paddingBottom: 9,
+    paddingBottom: 9
   },
   commonIcon: {
-    fontSize: 22,
+    fontSize: 22
   },
   mapIcon: {
     color: color.white
@@ -43,14 +44,14 @@ class ResourceLink extends React.Component {
     highlight: PropTypes.bool,
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    reference: PropTypes.string.isRequired,
+    reference: PropTypes.string.isRequired
   };
 
   state = {
     dialogSelected: false
   };
 
-  selectResource = (e) => {
+  selectResource = e => {
     if (e.shiftKey || e.metaKey || e.altKey) {
       // Don't open modal, just open link in new tab/window
       return;
@@ -71,7 +72,10 @@ class ResourceLink extends React.Component {
     // is not consistent about overflow)
     // TODO: EPEACH - explore removing this during transition away from legacy dialog
     $('.instructions-container').load(() => {
-      $('.instructions-container').contents().find("body").css({overflow:'auto'});
+      $('.instructions-container')
+        .contents()
+        .find('body')
+        .css({overflow: 'auto'});
     });
   };
 
@@ -80,20 +84,18 @@ class ResourceLink extends React.Component {
 
     const iconStyle = {
       ...styles.commonIcon,
-      ...(highlight ? styles.mapIcon : styles.resourceIcon)};
+      ...(highlight ? styles.mapIcon : styles.resourceIcon)
+    };
     const thumbnailStyle = {
       ...styles.commonThumbnail,
-      ...(highlight && styles.mapThumbnail)};
+      ...(highlight && styles.mapThumbnail)
+    };
 
     return (
       <div>
         <div style={styles.resourceStyle} onClick={this.selectResource}>
           <span style={thumbnailStyle}>
-            <FontAwesome
-              icon={icon}
-              style={iconStyle}
-              title={text}
-            />
+            <FontAwesome icon={icon} style={iconStyle} title={text} />
           </span>
           <a href={this.props.reference} style={styles.textLink}>
             {text}

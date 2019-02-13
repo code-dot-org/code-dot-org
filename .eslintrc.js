@@ -3,29 +3,26 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  "plugins": [
-    "react",
-    "mocha",
-    "babel",
-  ],
-  "extends": [
+  plugins: ["react", "mocha", "babel"],
+  extends: [
+    "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "mocha": true,
+  env: {
+    browser: true,
+    node: true,
+    mocha: true
   },
-  "rules": {
+  rules: {
     "array-bracket-spacing": ["error", "never"],
     "babel/semi": "error", // autofixable
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
     "comma-dangle": "off",
-    "curly": "error",
+    curly: "error",
     "dot-location": ["error", "property"],
     "eol-last": "error",
-    "eqeqeq": "error",
+    eqeqeq: "error",
     "jsx-quotes": "error", // autofixable
     "keyword-spacing": "error",
     "mocha/no-exclusive-tests": "error",
@@ -40,7 +37,7 @@ module.exports = {
     "no-new-object": "error",
     "no-trailing-spaces": "error",
     "no-undef": "error",
-    "no-unused-vars": ['error', {"args": 'none'}],
+    "no-unused-vars": ["error", { args: "none" }],
     "no-with": "error",
     "object-curly-spacing": "off",
     "react/display-name": "off",
@@ -51,12 +48,8 @@ module.exports = {
     "react/no-render-return-value": "off", // TODO: turn this on
     "react/self-closing-comp": "error",
     "react/wrap-multilines": "error", // autofixable
-    "semi": "off", // enforced by babel/semi
+    semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "named": "never"
-    }],
-    "strict": "error",
+    strict: "error"
   }
 };

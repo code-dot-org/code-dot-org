@@ -1,14 +1,15 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import Immutable from 'immutable';
 import {orderBy, compact} from 'lodash';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
-import DialogFooter from "../teacherDashboard/DialogFooter";
+import DialogFooter from '../teacherDashboard/DialogFooter';
 import {
   updateStudentTransfer,
   transferStudents,
@@ -16,10 +17,10 @@ import {
   TransferStatus,
   cancelStudentTransfer
 } from './manageStudentsRedux';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
-const OTHER_TEACHER = "otherTeacher";
+const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;
 const TABLE_WIDTH = 300;
 const DIALOG_WIDTH = 800;
@@ -86,9 +87,9 @@ const DEFAULT_SORT = {
 class MoveStudents extends Component {
   static propTypes = {
     studentData: PropTypes.arrayOf(
-      React.PropTypes.shape({
+      PropTypes.shape({
         id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired
       })
     ).isRequired,
     transferData: PropTypes.shape({
@@ -105,11 +106,13 @@ class MoveStudents extends Component {
     }),
 
     // redux provided
-    sections: PropTypes.objectOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-      loginType: PropTypes.string.isRequired
-    })).isRequired,
+    sections: PropTypes.objectOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+        loginType: PropTypes.string.isRequired
+      })
+    ).isRequired,
     currentSectionId: PropTypes.number.isRequired,
     updateStudentTransfer: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired,
@@ -135,7 +138,9 @@ class MoveStudents extends Component {
   };
 
   areAllSelected = () => {
-    return Immutable.Set(this.props.transferData.studentIds).isSuperset(this.getStudentIds());
+    return Immutable.Set(this.props.transferData.studentIds).isSuperset(
+      this.getStudentIds()
+    );
   };
 
   toggleSelectAll = () => {
@@ -148,7 +153,7 @@ class MoveStudents extends Component {
     this.props.updateStudentTransfer({studentIds});
   };
 
-  toggleStudentSelected = (studentId) => {
+  toggleStudentSelected = studentId => {
     let studentIds = [...this.props.transferData.studentIds];
 
     if (studentIds.includes(studentId)) {
@@ -185,7 +190,7 @@ class MoveStudents extends Component {
     );
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     return [
       {
         property: 'selected',
@@ -196,7 +201,8 @@ class MoveStudents extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...styles.checkboxCell
-          }}
+            }
+          }
         },
         cell: {
           format: this.selectedStudentFormatter,
@@ -204,9 +210,11 @@ class MoveStudents extends Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.checkboxCell
-          }}
+            }
+          }
         }
-      }, {
+      },
+      {
         property: 'name',
         header: {
           label: i18n.name(),
@@ -214,7 +222,8 @@ class MoveStudents extends Component {
             id: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -222,7 +231,8 @@ class MoveStudents extends Component {
             className: 'uitest-name-cell',
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
       }
     ];
@@ -233,7 +243,7 @@ class MoveStudents extends Component {
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -248,12 +258,12 @@ class MoveStudents extends Component {
     });
   };
 
-  isValidDestinationSection = (section) => {
+  isValidDestinationSection = section => {
     const isSameAsSource = section.id === this.props.currentSectionId;
     const isExternallyRostered = ![
       SectionLoginType.word,
       SectionLoginType.picture,
-      SectionLoginType.email,
+      SectionLoginType.email
     ].includes(section.loginType);
 
     return !isSameAsSource && !isExternallyRostered;
@@ -264,7 +274,11 @@ class MoveStudents extends Component {
     let options = Object.keys(sections).map(sectionId => {
       const section = sections[sectionId];
       if (this.isValidDestinationSection(section)) {
-        return <option key={section.id} value={section.id}>{section.name}</option>;
+        return (
+          <option key={section.id} value={section.id}>
+            {section.name}
+          </option>
+        );
       } else {
         return null;
       }
@@ -272,13 +286,17 @@ class MoveStudents extends Component {
     options = compact(options);
 
     // Add initial empty and final 'other teacher' options
-    options.unshift(<option key="empty" value=""></option>);
-    options.push(<option key={OTHER_TEACHER} value={OTHER_TEACHER}>{i18n.otherTeacher()}</option>);
+    options.unshift(<option key="empty" value="" />);
+    options.push(
+      <option key={OTHER_TEACHER} value={OTHER_TEACHER}>
+        {i18n.otherTeacher()}
+      </option>
+    );
 
     return options;
   };
 
-  onChangeSection = (event) => {
+  onChangeSection = event => {
     const sectionValue = event.target.value;
     let newTransferData;
 
@@ -298,13 +316,13 @@ class MoveStudents extends Component {
     this.props.updateStudentTransfer({...newTransferData});
   };
 
-  onChangeTeacherSection = (event) => {
+  onChangeTeacherSection = event => {
     this.props.updateStudentTransfer({
       otherTeacherSection: event.target.value
     });
   };
 
-  onChangeMoveOrCopy = (event) => {
+  onChangeMoveOrCopy = event => {
     this.props.updateStudentTransfer({
       copyStudents: event.target.value === TransferType.COPY_STUDENTS
     });
@@ -315,24 +333,33 @@ class MoveStudents extends Component {
   };
 
   isButtonDisabled = () => {
-    const {studentIds, sectionId, otherTeacher, otherTeacherSection} = this.props.transferData;
+    const {
+      studentIds,
+      sectionId,
+      otherTeacher,
+      otherTeacherSection
+    } = this.props.transferData;
     if (otherTeacher) {
-      return (studentIds.length === 0) || !otherTeacherSection;
+      return studentIds.length === 0 || !otherTeacherSection;
     } else {
-      return (studentIds.length === 0) || !sectionId;
+      return studentIds.length === 0 || !sectionId;
     }
   };
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.props.studentData);
 
     const {transferData, transferStatus} = this.props;
@@ -351,27 +378,18 @@ class MoveStudents extends Component {
           handleClose={this.closeDialog}
         >
           <div style={styles.container}>
-            <Table.Provider
-              columns={columns}
-              style={styles.table}
-            >
+            <Table.Provider columns={columns} style={styles.table}>
               <Table.Header />
               <Table.Body rows={sortedRows} rowKey="id" />
             </Table.Provider>
             <div style={styles.rightColumn}>
-              {transferStatus.status === TransferStatus.FAIL &&
-                <div
-                  id="uitest-error"
-                  style={styles.error}
-                >
+              {transferStatus.status === TransferStatus.FAIL && (
+                <div id="uitest-error" style={styles.error}>
                   {transferStatus.error}
                 </div>
-              }
+              )}
               <div style={styles.infoText}>{i18n.selectStudentsToMove()}</div>
-              <label
-                htmlFor="sections"
-                style={styles.label}
-              >
+              <label htmlFor="sections" style={styles.label}>
                 {`${i18n.moveToSection()}:`}
               </label>
               <select
@@ -381,12 +399,9 @@ class MoveStudents extends Component {
               >
                 {this.renderOptions()}
               </select>
-              {transferData.otherTeacher &&
+              {transferData.otherTeacher && (
                 <div id="uitest-other-teacher">
-                  <label
-                    htmlFor="sectionCode"
-                    style={styles.label}
-                  >
+                  <label htmlFor="sectionCode" style={styles.label}>
                     {`${i18n.enterSectionCode()}:`}
                   </label>
                   <input
@@ -397,7 +412,9 @@ class MoveStudents extends Component {
                     onChange={this.onChangeTeacherSection}
                     placeholder={i18n.sectionCodePlaceholder()}
                   />
-                  <label style={styles.label}>{i18n.bothSectionsQuestion()}</label>
+                  <label style={styles.label}>
+                    {i18n.bothSectionsQuestion()}
+                  </label>
                   <label style={styles.input}>
                     <input
                       type="radio"
@@ -405,7 +422,9 @@ class MoveStudents extends Component {
                       checked={transferData.copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    <span style={styles.radioOption}>{i18n.copyStudentsConfirm()}</span>
+                    <span style={styles.radioOption}>
+                      {i18n.copyStudentsConfirm()}
+                    </span>
                   </label>
                   <label style={styles.input}>
                     <input
@@ -414,10 +433,12 @@ class MoveStudents extends Component {
                       checked={!transferData.copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    <span style={styles.radioOption}>{i18n.moveStudentsConfirm()}</span>
+                    <span style={styles.radioOption}>
+                      {i18n.moveStudentsConfirm()}
+                    </span>
                   </label>
                 </div>
-              }
+              )}
             </div>
           </div>
           <DialogFooter>
@@ -443,17 +464,20 @@ class MoveStudents extends Component {
 
 export const UnconnectedMoveStudents = MoveStudents;
 
-export default connect(state => ({
-  sections: state.teacherSections.sections,
-  currentSectionId: state.sectionData.section.id
-}), dispatch => ({
-  updateStudentTransfer(transferData) {
-    dispatch(updateStudentTransfer(transferData));
-  },
-  transferStudents(onComplete) {
-    dispatch(transferStudents(onComplete));
-  },
-  cancelStudentTransfer() {
-    dispatch(cancelStudentTransfer());
-  }
-}))(MoveStudents);
+export default connect(
+  state => ({
+    sections: state.teacherSections.sections,
+    currentSectionId: state.sectionData.section.id
+  }),
+  dispatch => ({
+    updateStudentTransfer(transferData) {
+      dispatch(updateStudentTransfer(transferData));
+    },
+    transferStudents(onComplete) {
+      dispatch(transferStudents(onComplete));
+    },
+    cancelStudentTransfer() {
+      dispatch(cancelStudentTransfer());
+    }
+  })
+)(MoveStudents);

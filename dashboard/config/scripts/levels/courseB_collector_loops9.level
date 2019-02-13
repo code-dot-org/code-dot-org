@@ -33,7 +33,7 @@
     "min_collected": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "Help me get the treasure from this deep valley.",
+    "tts_short_instructions_override": "Help me get the treasure from this deep valley.",
     "shape_shift": "false",
     "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null

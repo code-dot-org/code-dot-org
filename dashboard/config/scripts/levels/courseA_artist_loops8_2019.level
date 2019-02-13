@@ -39,7 +39,7 @@
     "images": "[\r\n  {\"filename\": \"https://images.code.org/6ecad8c21685d8e1a3bfeb85070edfeb-image-1477111898106.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "We need a ladder up to the boat.",
+    "tts_long_instructions_override": "We need a ladder up to the boat.",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 11627,
     "name_suffix": "_2019",

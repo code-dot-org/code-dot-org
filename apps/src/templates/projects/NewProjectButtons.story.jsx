@@ -8,14 +8,14 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Default project buttons',
-        description: 'Buttons to make a new App Lab, Game Lab, Play Lab and Artist project',
-        story: () => (
-          <NewProjectButtons/>
-        )
+        description:
+          'Buttons to make a new App Lab, Game Lab, Play Lab and Artist project',
+        story: () => <NewProjectButtons />
       },
       {
         name: 'Modified project buttons',
-        description: 'Buttons to make a new Web Lab, App Lab, Calc and Eval project',
+        description:
+          'Buttons to make a new Web Lab, App Lab, Calc and Eval project',
         story: () => (
           <NewProjectButtons
             projectTypes={['weblab', 'applab', 'calc', 'eval']}
@@ -24,10 +24,16 @@ export default storybook => {
       },
       {
         name: 'Brand project buttons',
-        description: 'Buttons to make a new Frozen, Starwars, and both Minecraft projects',
+        description:
+          'Buttons to make a new Frozen, Starwars, and both Minecraft projects',
         story: () => (
           <NewProjectButtons
-            projectTypes={['frozen', 'starwars', 'minecraft_adventurer', 'minecraft_designer']}
+            projectTypes={[
+              'frozen',
+              'starwars',
+              'minecraft_adventurer',
+              'minecraft_designer'
+            ]}
           />
         )
       },

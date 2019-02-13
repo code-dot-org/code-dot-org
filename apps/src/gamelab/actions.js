@@ -25,7 +25,7 @@ export function changeInterfaceMode(interfaceMode) {
   //Add a resize event on each call to changeInterfaceMode to ensure
   //proper rendering of droplet and code mode. Similar solution in applab.
   setTimeout(() => utils.fireResizeEvent(), 0);
-  return function (dispatch) {
+  return function(dispatch) {
     $(window).trigger('appModeChanged');
     dispatch({
       type: CHANGE_INTERFACE_MODE,
@@ -35,7 +35,7 @@ export function changeInterfaceMode(interfaceMode) {
 }
 
 export function toggleGridOverlay(showGridOverlay) {
-  return function (dispatch) {
+  return function(dispatch) {
     dispatch({
       type: TOGGLE_GRID_OVERLAY,
       showGridOverlay: showGridOverlay

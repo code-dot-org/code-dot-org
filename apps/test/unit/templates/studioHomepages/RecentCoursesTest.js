@@ -7,26 +7,17 @@ import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
-import { courses, moreCourses, topCourse } from './homepagesTestData';
+import {courses, moreCourses, topCourse} from './homepagesTestData';
 
 describe('RecentCourses', () => {
-
   it('shows SetUpCourses when there are no courses', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={[]}
-        topCourse={null}
-        isTeacher
-      />
+      <RecentCourses courses={[]} topCourse={null} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
-          <SetUpCourses
-            isTeacher
-          />
+        <ContentContainer heading="My Courses">
+          <SetUpCourses isTeacher />
         </ContentContainer>
       </div>
     );
@@ -37,27 +28,18 @@ describe('RecentCourses', () => {
 
   it('shows a TopCourse if there is one course', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={[]}
-        topCourse={topCourse}
-        isTeacher
-      />
+      <RecentCourses courses={[]} topCourse={topCourse} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
+        <ContentContainer heading="My Courses">
           <TopCourse
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
             linkToLesson={topCourse.linkToLesson}
           />
-          <SetUpCourses
-            isTeacher
-            hasCourse
-          />
+          <SetUpCourses isTeacher hasCourse />
         </ContentContainer>
       </div>
     );
@@ -67,17 +49,11 @@ describe('RecentCourses', () => {
 
   it('shows TopCourse and 2 CourseCards when there are 3 courses', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={courses}
-        topCourse={topCourse}
-        isTeacher
-      />
+      <RecentCourses courses={courses} topCourse={topCourse} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
+        <ContentContainer heading="My Courses">
           <TopCourse
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
@@ -100,10 +76,7 @@ describe('RecentCourses', () => {
               />
             </div>
           </div>
-          <SetUpCourses
-            isTeacher
-            hasCourse
-          />
+          <SetUpCourses isTeacher hasCourse />
         </ContentContainer>
       </div>
     );
@@ -111,17 +84,11 @@ describe('RecentCourses', () => {
 
   it('shows TopCourse, 4 CourseCards and a SeeMoreCourses component when there are more than 4 courses', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={moreCourses}
-        topCourse={topCourse}
-        isTeacher
-      />
+      <RecentCourses courses={moreCourses} topCourse={topCourse} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
+        <ContentContainer heading="My Courses">
           <TopCourse
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
@@ -158,13 +125,8 @@ describe('RecentCourses', () => {
               />
             </div>
           </div>
-          <SeeMoreCourses
-            courses={moreCourses.slice(4)}
-          />
-          <SetUpCourses
-            isTeacher
-            hasCourse
-          />
+          <SeeMoreCourses courses={moreCourses.slice(4)} />
+          <SetUpCourses isTeacher hasCourse />
         </ContentContainer>
       </div>
     );

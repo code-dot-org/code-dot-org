@@ -1,4 +1,4 @@
-import { UnconnectedFinishDialog as FinishDialog } from './FinishDialog';
+import {UnconnectedFinishDialog as FinishDialog} from './FinishDialog';
 import ExampleDialogButton from '../util/ExampleDialogButton';
 import React from 'react';
 import progress from '@cdo/apps/code-studio/progressRedux';
@@ -6,25 +6,25 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 const dialogWrapper = {
   padding: 40,
   width: 450,
-  backgroundColor: 'gray',
+  backgroundColor: 'gray'
 };
 
 const achievements = [
   {
     isAchieved: true,
     iconUrl: '',
-    message: 'No hints used!',
+    message: 'No hints used!'
   },
   {
     isAchieved: true,
     iconUrl: '',
-    message: 'First attempt!',
+    message: 'First attempt!'
   },
   {
     isAchieved: true,
     iconUrl: '',
-    message: 'Effecient!',
-  },
+    message: 'Effecient!'
+  }
 ];
 
 const code = `// Generated code
@@ -40,7 +40,7 @@ function isPrime(x) {
 const message = `Even top universities teach block-based coding (e.g., <a href='#'>Berkeley</a>, <a href='#'>Harvard</a>). The blocks you use can also be shown in JavaScript, the most widely used coding language:`;
 const studentCode = {
   code,
-  message,
+  message
 };
 
 const levels = [];
@@ -54,7 +54,7 @@ for (let i = 0; i < 20; i++) {
     kind: 'puzzle',
     position: i + 1,
     title: i + 1,
-    url: '#',
+    url: '#'
   });
 }
 
@@ -62,10 +62,12 @@ const mockProgress = {
   currentLevelId: '123',
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
-  stages: [{
-    id: 40,
-    levels,
-  }],
+  stages: [
+    {
+      id: 40,
+      levels
+    }
+  ],
   peerReviewStage: false,
   scriptId: 1,
   scriptName: 'test',
@@ -82,8 +84,8 @@ const mockProgress = {
     1826: 17,
     1829: 17,
     1830: 100,
-    1831: 100,
-  },
+    1831: 100
+  }
 };
 
 export default storybook =>
@@ -95,7 +97,7 @@ export default storybook =>
         name: 'Dialog with overlay',
         description: 'Perfectly finished, no share button, thumbnail, etc.',
         story: () => (
-          <ExampleDialogButton closeCallbacks={['onContinue', 'onReplay']} >
+          <ExampleDialogButton closeCallbacks={['onContinue', 'onReplay']}>
             <FinishDialog
               isPerfect={true}
               blockLimit={98}
@@ -104,7 +106,7 @@ export default storybook =>
               studentCode={studentCode}
             />
           </ExampleDialogButton>
-        ),
+        )
       },
       {
         name: 'Perfect Finish',
@@ -113,7 +115,6 @@ export default storybook =>
           <div style={dialogWrapper}>
             <FinishDialog
               hideBackdrop
-
               isPerfect
               blockLimit={98}
               blocksUsed={98}
@@ -121,7 +122,7 @@ export default storybook =>
               studentCode={studentCode}
             />
           </div>
-        ),
+        )
       },
       {
         name: 'Pass Finish',
@@ -130,14 +131,13 @@ export default storybook =>
           <div style={dialogWrapper}>
             <FinishDialog
               hideBackdrop
-
               blockLimit={98}
               blocksUsed={99}
               achievements={achievements}
               studentCode={studentCode}
             />
           </div>
-        ),
+        )
       },
       {
         name: 'Perfect Finish with funometer and share',
@@ -146,7 +146,6 @@ export default storybook =>
           <div style={dialogWrapper}>
             <FinishDialog
               hideBackdrop
-
               isPerfect
               blockLimit={98}
               blocksUsed={98}
@@ -156,7 +155,7 @@ export default storybook =>
               feedbackImage="base64..image"
             />
           </div>
-        ),
+        )
       },
       {
         name: 'Perfect Finish without achievements',
@@ -165,7 +164,6 @@ export default storybook =>
           <div style={dialogWrapper}>
             <FinishDialog
               hideBackdrop
-
               isPerfect
               blockLimit={98}
               blocksUsed={98}
@@ -173,7 +171,7 @@ export default storybook =>
               studentCode={studentCode}
             />
           </div>
-        ),
+        )
       },
       {
         name: 'Perfect Finish without block count',
@@ -182,14 +180,13 @@ export default storybook =>
           <div style={dialogWrapper}>
             <FinishDialog
               hideBackdrop
-
               isPerfect
               blocksUsed={98}
               achievements={achievements}
               studentCode={studentCode}
             />
           </div>
-        ),
+        )
       },
       {
         name: 'Perfect Finish without block count or achievements',
@@ -198,14 +195,13 @@ export default storybook =>
           <div style={dialogWrapper}>
             <FinishDialog
               hideBackdrop
-
               isPerfect
               blocksUsed={98}
               achievements={[]}
               studentCode={studentCode}
             />
           </div>
-        ),
+        )
       },
       {
         name: 'Perfect Finish of challenge level',
@@ -214,7 +210,6 @@ export default storybook =>
           <div style={dialogWrapper}>
             <FinishDialog
               hideBackdrop
-
               isChallenge
               isPerfect
               blockLimit={98}
@@ -224,6 +219,6 @@ export default storybook =>
               showFunometer
             />
           </div>
-        ),
-      },
+        )
+      }
     ]);
