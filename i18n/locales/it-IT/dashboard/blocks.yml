@@ -581,7 +581,7 @@ it:
             'true': visibile
             'false': invisibile
       Dancelab_startMapping:
-        text: "{SPRITE} modifica la {PROPERTY} seguendo i {RANGE}"
+        text: "{SPRITE} inizia a modificare la {PROPERTY} seguendo i {RANGE}"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -651,6 +651,10 @@ it:
             '2': toni acuti
       Dancelab_whenSetup:
         text: quando si clicca su "Esegui"
+      gamelab_addBehaviorSimple:
+        text: il personaggio {SPRITE} inizia {BEHAVIOR}
+      gamelab_addBehaviorUntil:
+        text: il personaggio {SPRITE} inizia {BEHAVIOR} fino a che {CONDITION}
       gamelab_changeColor:
         text: modifica {COLOR} {METHOD} di {AMOUNT}
         options:
@@ -673,11 +677,23 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione del movimento
+      gamelab_clickedOn:
+        text: quando si clicca su {SPRITE}
+      gamelab_comment:
+        text: 'commento: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "crea un nuovo personaggio\n chiamato {NAME} \n con il costume {COSTUME} \n alla posizione {LOCATION}"
       gamelab_debugSprite:
         options:
           VAL:
             'true': vero
             'false': falso
+      gamelab_destroy:
+        text: elimina {THIS}
+      gamelab_displace:
+        text: "{THIS} impedisce a {SPRITE} di muoversi"
+      gamelab_edgesDisplace:
+        text: i bordi impediscono a {SPRITE} di muoversi
       gamelab_getAnim:
         text: "{SPRITE} {COSTUME}"
         options:
@@ -693,16 +709,45 @@ it:
             '"y"': posizione y
             '"direction"': direzione del movimento
             '"tint"': tonalità
+      gamelab_hideTitleScreen:
+        text: nascondi schermata introduttiva
       gamelab_isTouching:
         text: "{THIS} sta toccando {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} salta {LOCATION}"
+      gamelab_locationAt:
+        text: 'posizione x: {X} y: {Y}'
+      gamelab_locationConstant:
+        options:
+          DIR:
+            "'north'": nord
+            "'south'": sud
+            "'east'": est
+            "'west'": ovest
       gamelab_locationDelta:
         options:
           DIR:
+            "'north'": nord
+            "'south'": sud
+            "'east'": est
+            "'west'": ovest
             "'random'": a caso
+      gamelab_locationEast:
+        text: est
+      gamelab_locationNorth:
+        text: nord
+      gamelab_locationOf:
+        text: posizione di {SPRITE}
+      gamelab_locationSouth:
+        text: sud
+      gamelab_locationWest:
+        text: ovest
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_location_variable_get:
+        text: posizione di {VAR}
+      gamelab_location_variable_set:
+        text: imposta la posizione di {VAR} a {VAL}
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -710,12 +755,41 @@ it:
             '"left"': a sinistra
       gamelab_mixColors:
         text: mescola {COLOR1} e {COLOR2}
+      gamelab_moveForward:
+        text: sposta {SPRITE} di {DISTANCE} pixel in avanti
+      gamelab_moveInDirection:
+        text: sposta {SPRITE} di {DISTANCE} pixel verso {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ovest
       gamelab_moveInDirection2:
         text: sposta {SPRITE} di {DISTANCE} pixel verso {DIRECTION}
+      gamelab_moveToward:
+        text: sposta {SPRITE} distanza {DISTANCE} verso {TARGET}
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ovest
       gamelab_randColor:
         text: colore scelto a caso
       gamelab_randomColor:
         text: colore scelto a caso
+      gamelab_randomLocation:
+        text: posizione casuale
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} interrompe tutto"
+      gamelab_removeBehaviorSimple:
+        text: il personaggio {SPRITE} interrompe {BEHAVIOR}
+      gamelab_removeTint:
+        text: togli il colore da {THIS}
+      gamelab_setAnimation:
+        text: "{THIS} usa il costume {ANIMATION}"
       gamelab_setBackground:
         text: imposta il colore dello sfondo {COLOR}
       gamelab_setPosition:
@@ -733,6 +807,7 @@ it:
             "{x: 350, y: 350}": in basso a destra
             '"random"': a caso
       gamelab_setProp:
+        text: imposta la {PROPERTY} di {SPRITE} a {VAL}
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -748,8 +823,19 @@ it:
             '"scale"': dimensione
             '"width"': larghezza
             '"height"': altezza
+      gamelab_setTint:
+        text: colora {THIS} di {COLOR}
       gamelab_setup:
         text: quando si clicca su "Esegui"
+      gamelab_showTitleScreen:
+        text: mostra schermata introduttiva {BREAK} titolo {TITLE} testo {SUBTITLE}
+      gamelab_spriteDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ovest
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -774,7 +860,10 @@ it:
             '"="': "="
             '">"': ">"
             '"<"': "\\<"
+      gamelab_thisBeginsBehaviorSimple:
+        text: il personaggio {SPRITE} inizia {BEHAVIOR}
       gamelab_turn:
+        text: "{SPRITE} gira {DIRECTION} {N} gradi"
         options:
           DIRECTION:
             '"right"': a destra
@@ -815,7 +904,13 @@ it:
             '"s"': s
             '"d"': d
       gamelab_whileTouching:
-        text: quando {SPRITE1} sta toccando {SPRITE2}
+        text: mentre {SPRITE1} sta toccando {SPRITE2}
+      gamelab_xLocationOf:
+        text: coordinata x di {SPRITE}
+      gamelab_yLocationOf:
+        text: coordinata y di {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: il personaggio {SPRITE} inizia {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -879,6 +974,10 @@ it:
         options:
           SELECT:
             '"all"': tutto
+      Mikelab_groupDisplace:
+        text: tutti i {COSTUME} impediscono a {COSTUME2} di muoversi
+      Mikelab_groupEdgesDisplace:
+        text: i bordi impediscono a {COSTUME} di muoversi
       Mikelab_groupGetProp:
         options:
           PROPERTY:
@@ -896,6 +995,7 @@ it:
           SELECT:
             '"all"': tutto
       Mikelab_groupRemoveTint:
+        text: togli il colore da {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': tutto
@@ -933,10 +1033,14 @@ it:
             MOVES.Rest: Nessuno
       Mikelab_isAnim:
         text: "{SPRITE} {COSTUME}"
+      Mikelab_locationAt:
+        text: 'posizione x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: colore scelto a caso
+      Mikelab_removeBehaviorSimple:
+        text: il personaggio {SPRITE} interrompe {BEHAVIOR}
       Mikelab_setBG:
         options:
           BG:
@@ -967,6 +1071,8 @@ it:
             "{x: 100, y: 300}": in basso a sinistra
             "{x: 300, y: 300}": in basso a destra
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
+      Mikelab_whenClickedOn:
+        text: quando si clicca su {SPRITE}
       Mikelab_whenKeyPressed:
         text: quando si preme {KEY}
         options:
@@ -997,6 +1103,10 @@ it:
             '"down"': si preme sulla freccia verso il basso
             '"left"': si preme sulla freccia verso sinistra
             '"right"': si preme sulla freccia verso destra
+      Mikelab_xLocationOf:
+        text: coordinata x di {SPRITE}
+      Mikelab_yLocationOf:
+        text: coordinata y di {SPRITE}
       RyanLab_moveForward:
         text: vai avanti
       RyanLab_turnLeft:
@@ -1007,16 +1117,20 @@ it:
         text: al centro
       Vector_push:
         text: imposta velocità {VECTOR}
+      Vector_randomLocation:
+        text: posizione casuale
       Vector_setColor:
         text: imposta colore a {COLOR}
       Vector_setSize:
         text: imposta larghezza {WIDTH} altezza {HEIGHT}
+      Vector_vectorNorth:
+        text: nord
       Vector_where:
         text: per ogni personaggio dove {PROPERTY} è {VALUE} esegui {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": colore
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -1029,12 +1143,33 @@ it:
           CONDITION:
             '"when"': quando
             '"while"': mentre
+      aalab_createNewSpriteAdvanced:
+        text: "crea un nuovo personaggio chiamato {NAME} \n con il costume {COSTUME} \n alla posizione {LOCATION}"
       aalab_createPropertyGroup:
         text: crea un nuovo gruppo di personaggi chiamato {VAR} tutto composto da {COSTUME}
+      aalab_createSpriteGroup:
+        text: crea un nuovo gruppo di personaggi chiamato {VAR}
       aalab_getThisSprite:
         options:
           CHOICE:
             '"other"': altro
+      aalab_jumpTo:
+        text: "{SPRITE} salta {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spaziale
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
       aalab_whenTouching:
         options:
           CONDITION:

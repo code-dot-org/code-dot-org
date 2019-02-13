@@ -1,11 +1,11 @@
 import dom from '../dom';
 import gameLabDPadHtmlEjs from '../templates/gameLabDPad.html.ejs';
-import { GAMELAB_DPAD_CONTAINER_ID } from './constants';
+import {GAMELAB_DPAD_CONTAINER_ID} from './constants';
 
 const DPAD_DEAD_ZONE = 3;
 // Allows diagonal to kick in after 22.5 degrees off primary axis, giving each
 // of the 8 directions an equal 45 degree cone
-const DIAG_SCALE_FACTOR = Math.cos(Math.PI * 22.5 / 180);
+const DIAG_SCALE_FACTOR = Math.cos((Math.PI * 22.5) / 180);
 
 const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
 const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
@@ -20,7 +20,7 @@ const ArrowIds = {
   UP: 'upButton',
   RIGHT: 'rightButton',
   DOWN: 'downButton',
-  SPACE: 'studio-space-button',
+  SPACE: 'studio-space-button'
 };
 
 function p5KeyCodeFromArrow(idBtn) {
@@ -54,17 +54,25 @@ export default class MobileControls {
   init(opts) {
     this.opts = opts || {};
 
-    document.getElementById(GAMELAB_DPAD_CONTAINER_ID).innerHTML = gameLabDPadHtmlEjs();
+    document.getElementById(
+      GAMELAB_DPAD_CONTAINER_ID
+    ).innerHTML = gameLabDPadHtmlEjs();
 
     // Connect up arrow button event handlers
     for (const btn in ArrowIds) {
-      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
-          this.onArrowButtonUp.bind(this, ArrowIds[btn]));
-      dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
-          this.onArrowButtonDown.bind(this, ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(
+        document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonUp.bind(this, ArrowIds[btn])
+      );
+      dom.addMouseDownTouchEvent(
+        document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonDown.bind(this, ArrowIds[btn])
+      );
     }
-    dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
-      this.onMouseDown);
+    dom.addMouseDownTouchEvent(
+      document.getElementById('studio-dpad-button'),
+      this.onMouseDown
+    );
     // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
     // all touchend events on the page, breaking click events...
     document.addEventListener('mouseup', this.onMouseUp, false);
@@ -74,16 +82,24 @@ export default class MobileControls {
   }
 
   update(config, isShareView = true) {
-    const { dpadVisible, dpadFourWay, spaceButtonVisible, mobileOnly } = config;
-    const mobileControlsOk = (dom.isMobile() && isShareView) ? true : !mobileOnly;
+    const {dpadVisible, dpadFourWay, spaceButtonVisible, mobileOnly} = config;
+    const mobileControlsOk = dom.isMobile() && isShareView ? true : !mobileOnly;
 
-    const dpadDisplayStyle = (dpadVisible && mobileControlsOk) ? 'inline' : 'none';
+    const dpadDisplayStyle =
+      dpadVisible && mobileControlsOk ? 'inline' : 'none';
     document.getElementById('studio-dpad-rim').style.display = dpadDisplayStyle;
-    document.getElementById('studio-dpad-cone').style.display = dpadDisplayStyle;
-    document.getElementById('studio-dpad-button').style.display = dpadDisplayStyle;
+    document.getElementById(
+      'studio-dpad-cone'
+    ).style.display = dpadDisplayStyle;
+    document.getElementById(
+      'studio-dpad-button'
+    ).style.display = dpadDisplayStyle;
 
-    const spaceButtonDisplayStyle = (spaceButtonVisible && mobileControlsOk) ? 'inline' : 'none';
-    document.getElementById('studio-space-button').style.display = spaceButtonDisplayStyle;
+    const spaceButtonDisplayStyle =
+      spaceButtonVisible && mobileControlsOk ? 'inline' : 'none';
+    document.getElementById(
+      'studio-space-button'
+    ).style.display = spaceButtonDisplayStyle;
 
     if (this.dpadFourWay !== dpadFourWay) {
       if (this.dPadState.trackingMouseMove) {
@@ -91,7 +107,7 @@ export default class MobileControls {
         // will reset buttons back to "up":
         this.onMouseMove({
           clientX: this.dPadState.startingX,
-          clientY: this.dPadState.startingY,
+          clientY: this.dPadState.startingY
         });
       }
 
@@ -102,7 +118,7 @@ export default class MobileControls {
         // will set up buttons correctly for the new dpad mode:
         this.onMouseMove({
           clientX: this.dPadState.previousX,
-          clientY: this.dPadState.previousY,
+          clientY: this.dPadState.previousY
         });
       }
     }
@@ -116,10 +132,10 @@ export default class MobileControls {
   }
 
   onArrowButtonDown(buttonId, e) {
-    const { notifyKeyCodeDown } = this.opts;
+    const {notifyKeyCodeDown} = this.opts;
     // Store the most recent event type per-button
     this.btnState[buttonId] = ButtonState.DOWN;
-    e.preventDefault();  // Stop normal events so we see mouseup later.
+    e.preventDefault(); // Stop normal events so we see mouseup later.
 
     const domId = domIdFromArrow(buttonId);
     if (domId) {
@@ -129,7 +145,7 @@ export default class MobileControls {
   }
 
   onArrowButtonUp(buttonId, e) {
-    const { notifyKeyCodeUp } = this.opts;
+    const {notifyKeyCodeUp} = this.opts;
     // Store the most recent event type per-button
     this.btnState[buttonId] = ButtonState.UP;
 
@@ -140,7 +156,7 @@ export default class MobileControls {
     notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
   }
 
-  onMouseMove = (e) => {
+  onMouseMove = e => {
     var clientX = e.clientX;
     var clientY = e.clientY;
     if (e.touches) {
@@ -151,19 +167,39 @@ export default class MobileControls {
     if (this.dpadFourWay) {
       this.notifyKeysFourWayDPad(clientX, clientY);
     } else {
-      this.notifyKeyEightWayDPad(window.p5.prototype.LEFT_ARROW, 'left', clientX, clientY);
-      this.notifyKeyEightWayDPad(window.p5.prototype.RIGHT_ARROW, 'right', clientX, clientY);
-      this.notifyKeyEightWayDPad(window.p5.prototype.UP_ARROW, 'up', clientX, clientY);
-      this.notifyKeyEightWayDPad(window.p5.prototype.DOWN_ARROW, 'down', clientX, clientY);
+      this.notifyKeyEightWayDPad(
+        window.p5.prototype.LEFT_ARROW,
+        'left',
+        clientX,
+        clientY
+      );
+      this.notifyKeyEightWayDPad(
+        window.p5.prototype.RIGHT_ARROW,
+        'right',
+        clientX,
+        clientY
+      );
+      this.notifyKeyEightWayDPad(
+        window.p5.prototype.UP_ARROW,
+        'up',
+        clientX,
+        clientY
+      );
+      this.notifyKeyEightWayDPad(
+        window.p5.prototype.DOWN_ARROW,
+        'down',
+        clientX,
+        clientY
+      );
     }
 
     this.dPadState.previousX = clientX;
     this.dPadState.previousY = clientY;
   };
 
-  onMouseDown = (e) => {
+  onMouseDown = e => {
     this.dPadState = {
-      trackingMouseMove: true,
+      trackingMouseMove: true
     };
     document.body.addEventListener('mousemove', this.onMouseMove);
     if (mouseMoveTouchEventName) {
@@ -183,11 +219,11 @@ export default class MobileControls {
 
     $('#studio-dpad-button').addClass('active');
 
-    e.preventDefault();  // Stop normal events so we see mouseup later.
+    e.preventDefault(); // Stop normal events so we see mouseup later.
   };
 
-  onMouseUp = (e) => {
-    const { notifyKeyCodeUp } = this.opts;
+  onMouseUp = e => {
+    const {notifyKeyCodeUp} = this.opts;
     // Reset all arrow buttons on "global mouse up" - this handles the case where
     // the mouse moved off the arrow button and was released somewhere else
 
@@ -197,7 +233,6 @@ export default class MobileControls {
 
     for (var buttonId in this.btnState) {
       if (this.btnState[buttonId] === ButtonState.DOWN) {
-
         this.btnState[buttonId] = ButtonState.UP;
         const domId = domIdFromArrow(buttonId);
         if (domId) {
@@ -211,10 +246,14 @@ export default class MobileControls {
   };
 
   reset() {
-    const { softButtonIds } = this.opts;
-    softButtonIds.forEach(buttonId => document.getElementById(buttonId).style.display = 'inline');
+    const {softButtonIds} = this.opts;
+    softButtonIds.forEach(
+      buttonId => (document.getElementById(buttonId).style.display = 'inline')
+    );
     if (softButtonIds.length) {
-      $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonIds.length);
+      $('#soft-buttons')
+        .removeClass('soft-buttons-none')
+        .addClass('soft-buttons-' + softButtonIds.length);
     }
     // For export mode only:
     $('#sketch').removeClass('no-controls');
@@ -225,8 +264,8 @@ export default class MobileControls {
   notifyKeyEightWayDPad(keyCode, cssClass, currentX, currentY) {
     const dPadButton = $('#studio-dpad-button');
     const dPadCone = $('#studio-dpad-cone');
-    const { startingX, previousX, startingY, previousY } = this.dPadState;
-    const { notifyKeyCodeDown, notifyKeyCodeUp } = this.opts;
+    const {startingX, previousX, startingY, previousY} = this.dPadState;
+    const {notifyKeyCodeDown, notifyKeyCodeUp} = this.opts;
     let curPrimary, curSecondary, prevPrimary, prevSecondary;
 
     switch (keyCode) {
@@ -256,15 +295,19 @@ export default class MobileControls {
         break;
     }
 
-    const curDiag = DIAG_SCALE_FACTOR *
-        Math.sqrt(Math.pow(curPrimary, 2) + Math.pow(curSecondary, 2));
-    const prevDiag = DIAG_SCALE_FACTOR *
-        Math.sqrt(Math.pow(prevPrimary, 2) + Math.pow(prevSecondary, 2));
+    const curDiag =
+      DIAG_SCALE_FACTOR *
+      Math.sqrt(Math.pow(curPrimary, 2) + Math.pow(curSecondary, 2));
+    const prevDiag =
+      DIAG_SCALE_FACTOR *
+      Math.sqrt(Math.pow(prevPrimary, 2) + Math.pow(prevSecondary, 2));
 
-    const curDown = curPrimary > DPAD_DEAD_ZONE &&
-        (curPrimary > curDiag || curDiag > Math.abs(curSecondary));
-    const prevDown = prevPrimary > DPAD_DEAD_ZONE &&
-        (prevPrimary > prevDiag || prevDiag > Math.abs(prevSecondary));
+    const curDown =
+      curPrimary > DPAD_DEAD_ZONE &&
+      (curPrimary > curDiag || curDiag > Math.abs(curSecondary));
+    const prevDown =
+      prevPrimary > DPAD_DEAD_ZONE &&
+      (prevPrimary > prevDiag || prevDiag > Math.abs(prevSecondary));
 
     if (curDown && !prevDown) {
       notifyKeyCodeDown(keyCode);
@@ -280,34 +323,37 @@ export default class MobileControls {
   notifyKeysFourWayDPad(currentX, currentY) {
     const dPadButton = $('#studio-dpad-button');
     const dPadCone = $('#studio-dpad-cone');
-    const { startingX, previousX, startingY, previousY } = this.dPadState;
-    const { notifyKeyCodeDown, notifyKeyCodeUp } = this.opts;
+    const {startingX, previousX, startingY, previousY} = this.dPadState;
+    const {notifyKeyCodeDown, notifyKeyCodeUp} = this.opts;
 
     const keyValues = [
       {
         cssClass: 'left',
         key: window.p5.prototype.LEFT_ARROW,
         current: -(currentX - startingX),
-        previous: -(previousX - startingX),
-      }, {
+        previous: -(previousX - startingX)
+      },
+      {
         cssClass: 'right',
         key: window.p5.prototype.RIGHT_ARROW,
         current: currentX - startingX,
-        previous: previousX - startingX,
-      }, {
+        previous: previousX - startingX
+      },
+      {
         cssClass: 'up',
         key: window.p5.prototype.UP_ARROW,
         current: -(currentY - startingY),
-        previous: -(previousY - startingY),
-      }, {
+        previous: -(previousY - startingY)
+      },
+      {
         cssClass: 'down',
         key: window.p5.prototype.DOWN_ARROW,
         current: currentY - startingY,
-        previous: previousY - startingY,
-      },
+        previous: previousY - startingY
+      }
     ];
     const prevKeyValue = keyValues.reduce((maxKeyValue, curKeyValue) => {
-      const { previous = 0 } = maxKeyValue || {};
+      const {previous = 0} = maxKeyValue || {};
       if (curKeyValue.previous > Math.max(previous, DPAD_DEAD_ZONE)) {
         return curKeyValue;
       } else {
@@ -315,15 +361,15 @@ export default class MobileControls {
       }
     }, null);
     const currentKeyValue = keyValues.reduce((maxKeyValue, curKeyValue) => {
-      const { current = 0 } = maxKeyValue || {};
+      const {current = 0} = maxKeyValue || {};
       if (curKeyValue.current > Math.max(current, DPAD_DEAD_ZONE)) {
         return curKeyValue;
       } else {
         return maxKeyValue;
       }
     }, null);
-    const { key: prevKey, cssClass: prevCssClass } = prevKeyValue || {};
-    const { key: currentKey, cssClass: currentCssClass } = currentKeyValue || {};
+    const {key: prevKey, cssClass: prevCssClass} = prevKeyValue || {};
+    const {key: currentKey, cssClass: currentCssClass} = currentKeyValue || {};
 
     if (prevKey && prevKey !== currentKey) {
       notifyKeyCodeUp(prevKey);
@@ -343,13 +389,15 @@ export default class MobileControls {
       // will reset buttons back to "up":
       this.onMouseMove({
         clientX: this.dPadState.startingX,
-        clientY: this.dPadState.startingY,
+        clientY: this.dPadState.startingY
       });
 
       document.body.removeEventListener('mousemove', this.onMouseMove);
       if (mouseMoveTouchEventName) {
-        document.body.removeEventListener(mouseMoveTouchEventName,
-            this.onMouseMove);
+        document.body.removeEventListener(
+          mouseMoveTouchEventName,
+          this.onMouseMove
+        );
       }
 
       $('#studio-dpad-button').removeClass('active');

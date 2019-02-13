@@ -1127,7 +1127,7 @@ fa:
             Functions:
               name: توابع
             'null':
-              name: خالی
+              name: تهی
         coursef-ramp:
           stages:
             Introduction:
@@ -1547,7 +1547,7 @@ fa:
         andrea-test:
           stages:
             'null':
-              name: خالی
+              name: تهی
         coursec-2019:
           stages:
             Building a Foundation:

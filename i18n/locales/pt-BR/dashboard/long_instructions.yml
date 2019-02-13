@@ -662,11 +662,29 @@ pt-BR:
         **Como:** Adicione um segundo bloco `onEvent()` abaixo do primeiro. Em seguida, defina a `"cor de fundo"` da tela e `"cor do texto"` do rótulo.
 
         **Emperrado? Mostre-me:** ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)
+      AppLab Intro 6 - playSound Template: "<img src=\"https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16 PM.png\" style=\"float:right;height:200px\">\n\n**Objetivo:** Adicionar um animal ao quadro de sons. Se você não quer achar uma imagem do seu animal, então mude a cor do ícone do microfone para uma que você goste.\n\n**Como:** Adicione um `noEvento()` e use `executarSom()` dentro disso. Ache um som de animal que você goste na biblioteca de sons. Para a imagem, você pode fazer o upload de uma imagem e mudar a propriedade `\"imagem\"` ou apenas mudar a `\"cor-icone\"`. \n\n**Travado? Click Aqui:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)"
+      AppLab Intro 6 - playSound: "<img src=\"https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16 PM.png\" style=\"float:right;height:200px\">\n\n**Objetivo:** Adicionar um animal ao quadro de sons. Se você não quer achar uma imagem do seu animal, então mude a cor do ícone do microfone para uma que você goste.\n\n**Como:** Adicione um `noEvento()` e use `executarSom()` dentro disso. Ache um som de animal que você goste na biblioteca de sons. Para a imagem, você pode fazer o upload de uma imagem e mudar a propriedade `\"imagem\"` ou apenas mudar a `\"cor-icone\"`. \n\n**Travado? Click Aqui:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)"
       AppLab Intro 6 - quizApp: |-
         **Objetivo:** Construir três perguntas neste aplicativo de Quiz. Você pode sempre fazer mais perguntas, duplicando telas. Então envie para um amigo!
 
         **Como:** Executar o aplicativo primeiro e tentar clicar em todos os botões para ver como funcionam. Depois a partir do modo de Design, você pode alterar o texto padrão para as perguntas e botões. No modo de codificação, crie um texto de resposta para quando o usuário clicar nos diferentes botões. Personalize as cores ou adicione imagens, se você quiser também!
       AppLab Intro 6 - thisOrThatAddButton Template: "**Objetivo:** Adicionar um segundo botão na tela que diz \"Certo!\"\n\n**Como:** No modo de Design, arraste um novo botão. Posicione e redimensione-o. Em seguida, defina seu '\"texto\" ', '\"cor de fundo\" ' e \"'`tamanho da fonte\"`\n\n**Mostre-me:** "
+      AppLab Intro 6 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Objetivo:** Adicionar na tela um segundo botão que diz "Certo!"
+
+        **Como:** No Modo Design, arraste um novo botão. Posicione-o e altere seu tamanho. Então, defina seu `"texto"`, `"cor de fundo"` e `"tamanho da fonte"`
+
+        **Travou? Clique aqui:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 6 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Objetivo:** Crie uma nova tela chamada `"telaDireita"`. Adicione uma curta descrição na tela.
+
+        **Como:** Em Modo Design, adicione uma nova tela. Mude o `"id"` da tela para `"telaDireita"`. Então, arraste uma descrição para a tela com uma curta mensagem para o usuário. Você pode duplicar a `"telaEsquerda"` para fazer isso.
+
+        **Travado? Clique Aqui:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 6 - thisOrThatPersonalize: |-
         <img src="https://images.code.org/762507aef26d512f820c42fb2e7fc6f1-image-1508386296370.11.19 PM.png" style="float:right;height:200px">
 
@@ -688,6 +706,15 @@ pt-BR:
 
 
         </details>
+      AppLab Intro 6 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Objetivo:** A tela muda para `"TelaDireita"` quando o usuário clica no botão "Direito!".
+
+        **Como:** No modo de código, adicione um novo `onEvent()` para o seu programa ao seu botão "Direito!". Adicione um bloco `setScreen()` dentro disso que mudar as telas para `"AquelaTela"`.
+
+        **Preso? Clique Aqui:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**Objetivo:** Fazer a tela ficar verde.\n\n**Como:** Arraste um bloco do `DefinirPropriedade()`. Use os menus suspensos para definir a tela `\"cor-de-fundo\"` para `\"verde\"`. Então pressione \"Correr\".\n\n**Preso? Clique Aqui:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       AppLab Intro 7 - Change Text 2: |-
         <div style="float:right">
         <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
@@ -698,21 +725,54 @@ pt-BR:
         **Como:** Você precisará de duas linhas de código. Dê a `"label1"` um `"font-size"` de `80` e `"text-color"` de `"azul"`.
 
         **Ficou preso? Clique aqui:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png\" style=\"height:200px\">\n</div>\n\n**Objetivo:** Tornar os botões `\"vermelho\"` and `\"azul\"`. Em seguida altere o texto no grande rótulo laranja.\n\n**Como:** \n* Lembre-se que você pode passar o mouse sobre os elementos para ver o `\"id\"`.\n* Defina o `\"background-color\"` dos botões para `\"vermelho\"` e `\"azul\"`.\n* Defina a propriedade `\"text\"` do rótulo para o que você quiser, como `\"Bem vindo ao meu app!\"`.\n\n**Preso? Clique aqui:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Objetivo:** A tela irá iniciar com a cor azul. Adicione o código de modo que a tela fique verde quando você clica sob o o botão "Verdear" .
+
+        **Como:** Insira o código dentro do `onEvent()` que define a `"cor-de-fundo"` to `"verde"`.
+
+        **Está preso? Clique aqui:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Objetivo:** Ajude a terminar o aplicativo da lanterna. O botão "On" já deixa a tela branca. Execute o aplicativo e tente você mesmo. Então, escreve um código de modo que o botão "Off" faça a tela ficar preta novamente.
+
+        **Como:** Adicione o código dentro do `onEvent()` vazio que define a `"cor-de-fundo"` da tela para `"Preto"` e `"cor-de-texto"`do rótulo para `"branco"`.
+
+        **Está preso? Clique aqui:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab_test02: "# Este é o título\n\n- Marcador 1 \n- Faça isso\n- Então isso\n\n![](https://images.code.org/982f9167cf54c24251922fbd0a7f60b3-image-1436470853351.png)"
+      Applab AllTheThings ResourcesTab AllResources: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      Applab AllTheThings ResourcesTab MapReference: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      Applab AllTheThings ResourcesTab ReferenceLinks: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       Applab allthethings onRecordEvent: Por favor, faça o login para testar os níveis do applab (Por design, os níveis do applab só funcionam se estiverem conectados. Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável para um script inteiro e seria chato de fazer para o script todasascoisas).
       Applab test: Você pode enviar este nível. Apenas para testes! Por favor, faça o login para testar os níveis do applab (Por design, os níveis do applab só funcionam se estiverem conectados. Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável para um script inteiro e seria chato de fazer para o script todasascoisas).
       Artist Autorun Test: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
+      Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo. \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem para fora."
       Bergeron Robot Maze1: "Você pode me ajudar a pegar o porco malvado? \n\nJunte alguns blocos `mover para frente` abaixo do bloco `quando executar` e clique em \"Executar\". "
       Big Game Animation 1: "Agora que você aprendeu a escrever funções lineares\nsimples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.\nClique em \"Executar\" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que\nvocê quiser e depois clique em Concluir para seguir em frente."
       Big Game Animation 2: |-
         A função `atualização-alvo` pega o valor x atual do alvo e retorna um valor atualizado.
 
         Complete a `atualização-alvo` para que seja adicionado ao valor x toda vez que for chamado. Quanto mais você adicionar ao x, mais rápido o alvo irá.
+      Big Game Animation 3: |-
+        A função "atualizar-perigo" deve funcionar como a função "atualizar-alvo", exceto pelo fato de que o inimigo deve se mover do lado direito para o lado esquerdo. 
+        Complete a função "atualizar-inimigo" para fazer o perigo voar pela tela.
       Big Game Animation 4: |-
         Nesse ponto do seu jogo, seu inimigo deve percorrer a tela da direita para a esquerda e seu alvo deve percorrer a tela da esquerda para a direita.
         Eles nunca voltam para a tela uma vez que tenham saído, mas cuidaremos disso depois. 
 
         Analise seu jogo para ver se ele está funcionando como você gostaria e então clique em "Concluir" para seguir em frente.
       Big Game Booleans 1: "Da última vez que você trabalhou em seu jogo fizemos\nnossos alvo e inimigo voarem pela tela, mas eles nunca\nvoltaram. Clique em \"Executar\" para ver como seu jogo está funcionando agora e depois clique\nem concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem\nsaído."
+      Big Game Booleans 2: |-
+        Agora que a sua função `onscreen?` está verificando `safe-left?` e `safe-right?, precisamos corrigir essas funções.
+
+        Quando os usamos para Sam o Bat, queríamos evitar que Sam saísse da tela, mas agora queremos que o Alvo e o Perigo realmente saiam da tela antes de voltar para o lado oposto.
+
+        Vá para a seção "Funções" da caixa de ferramentas e complete a função "safe-left?" Para que ela retorne *verdadeiro* se a coordenada x do sprite for maior que -50.
+
+        Se tiver corrido bem, deverá ver o Perigo ir todo o caminho para o lado esquerdo antes de voltar para o lado direito.
       Big Game Booleans 3: |-
         Agora que você tem `esquerda-segura?` funcionando, vamos consertar a `direita-segura?` - 
 
@@ -769,14 +829,110 @@ pt-BR:
         3. Esta é uma expressão legal? `10 > 25`?
       Brad Spooky House Copy: "Atividade livre: aqui estão as funções que você escreveu e mais algumas para você usar. Brinque com a largura da caneta para ver como seus desenhos ficam diferentes!\n\n"
       Brad Spooky House: "Atividade livre: aqui estão as funções que você escreveu e mais algumas para você usar. Brinque com a largura da caneta para ver como seus desenhos ficam diferentes!\n\n"
+      Brand Book Example: |+
+        # Livro Marca
+
+        Confira o exemplo de um livro de marca
+      CSD - Predict - Array Length List Printing: "# Laço Para - Usando o tamanho da lista em um Laço Para\n\nUma das formas mais comuns de usar laçso é com listas. Neste exemplo, a condição depende da lista.\n\nO que isso vai imprimir na tela?"
+      CSD - Predict List Accessing: |
+        # Prever
+
+        O código abaixo tem 4 coisas que serão registradas na tela. O que você acha que vai imprimir na tela como resultado desse código?
+      CSD - for loop - on off: "# Laços Para com LEDs coloridos\n\nLaços Para pode tornar mais fácil fazer algo para todos os `colorLed`s.\n\n**Programa de Início:** Existem dois botões, um para ativar todos os `colorLeds` e um para desativá-los.\n\nVocê pode preencher as funções para cada uma dessas tarefas usando um loop for para escrever seu algoritmo."
+      CSD For Loops - Check For Understanding: |
+        # Entrada
+
+        Na caixa abaixo, explique as 3 partes diferentes do laço para. Por que cada um é importante?
+      CSD U1 - Image Filter Demo show Binary: |-
+        # Oh Não
+        Esta árvore deveria ser verde, mas está azul. Você pode usar os blocos de filtro para mudar todos os pixels azuis para verde?
+      CSD U1 - Image Filter Demo: |-
+        # Oh Não
+        Esta árvore deveria ser verde, mas está azul. Você pode usar os blocos de filtro para mudar todos os pixels azuis para verde?
       CSD U1 - PixFilter FreePlay: |-
         # Jogo Livre
 
         Faça o que você quiser, faça algo incrível
       CSD U1 - PixFilter Full: "# Instruções Aqui"
+      CSD U2 Project Start: |-
+        # Inicie seu projeto
+
+        Agora que você tem um plano para o seu site pessoal, você pode iniciar a codificá-lo aqui.  Não se preocupe se você não pode fazer tudo o que você quer hoje.  Você terá muitas chances de melhorar seu trabalho conforme você aprende mais sobre desenvolvimento de sites.
+
+        # Faça isto
+        * Use HTML para criar a página que você desenhou.  Certifique-se de que a página inclui
+        * Pelo menos ** dois capítulos de diferentes tamanhos **
+        * Pelo menos ** um parágrafo **
+        *** Assemelha *** a sua página, comparando ao seu desenho e mostrando ao seu parceiro
+      CSD U2 Project Start_2018: |-
+        # Inicie seu projeto
+
+        Agora que você tem um plano para o seu site pessoal, você pode iniciar a codificá-lo aqui.  Não se preocupe se você não pode fazer tudo o que você quer hoje.  Você terá muitas chances de melhorar seu trabalho conforme você aprende mais sobre desenvolvimento de sites.
+
+        # Faça isto
+        * Use HTML para criar a página que você desenhou.  Certifique-se de que a página inclui
+        * Pelo menos ** dois capítulos de diferentes tamanhos **
+        * Pelo menos ** um parágrafo **
+        *** Assemelha *** a sua página, comparando ao seu desenho e mostrando ao seu parceiro
+      CSD U2 add content: |
+        # Adicione HTML
+
+        Agora, você deve adicionar o HTML nas suas páginas.
+
+        # Faça isso
+        * Para cada uma das novas páginas que você criou, adicione HTML para fazer a página que você desenhou no seu guia de projeto.
+        * Você pode também adicionar mais HTML em suas páginas que você já criou.
+      CSD U2 add content_2018: |
+        # Adicione HTML
+
+        Agora, você deve adicionar o HTML nas suas páginas.
+
+        # Faça isso
+        * Para cada uma das novas páginas que você criou, adicione HTML para fazer a página que você desenhou no seu guia de projeto.
+        * Você pode também adicionar mais HTML em suas páginas que você já criou.
       CSD U3 - images - Embed Project: Exemplo do Projeto Final
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
       CSD U5 Waze Data Video_2018: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
+      CSD U6 LEDs color: |-
+        # Adicionando alguma cor
+
+        Você provavelmente notou que quando usou `colorLeds [0].on()` no último nível, os LEDs ficaram brancos. Se você não especificar uma cor, `on()` ligará todas as três partes do LED (vermelho, verde e azul) para produzir o branco. Você verá um novo comando na caixa de ferramentas chamado `colorLeds [0].color ()` que permite especificar uma cor, como um tipo texto como "Azul" ou um valor RGB usando o comando color `color()`.
+
+        # Faça isso
+
+        Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
+      CSD U6 LEDs color_2018: |-
+        # Adicionando alguma cor
+
+        Você provavelmente notou que quando usou `colorLeds [0].on()` no último nível, os LEDs ficaram brancos. Se você não especificar uma cor, `on()` ligará todas as três partes do LED (vermelho, verde e azul) para produzir o branco. Você verá um novo comando na caixa de ferramentas chamado `colorLeds [0].color ()` que permite especificar uma cor, como um tipo texto como "Azul" ou um valor RGB usando o comando color `color()`.
+
+        # Faça isso
+
+        Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
+      CSD U6 analog change: |-
+        # Alterando o Evento
+
+        O evento de dados é bom se você não se importa que o seu código rode constantemente, mas às vezes não é a solução mais eficiente para o seu problema. O evento "alterar" do sensor é acionado apenas se o valor do sensor tiver mudado desde a última leitura, o que pode garantir que o programa não esteja executando o código quando não for necessário.
+
+        # Faça isso
+
+        Usando o manipulador de eventos fornecido, escreva um programa que acione a campainha e atualize "valor_temporário" sempre que a leitura do sensor de temperatura mudar. Coloque o polegar sobre o sensor de temperatura para que ele mude e veja como o seu programa responde.
+      CSD U6 analog change_2018: |-
+        # Alterando o Evento
+
+        O evento de dados é bom se você não se importa que o seu código rode constantemente, mas às vezes não é a solução mais eficiente para o seu problema. O evento "alterar" do sensor é acionado apenas se o valor do sensor tiver mudado desde a última leitura, o que pode garantir que o programa não esteja executando o código quando não for necessário.
+
+        # Faça isso
+
+        Usando o manipulador de eventos fornecido, escreva um programa que acione a campainha e atualize "valor_temporário" sempre que a leitura do sensor de temperatura mudar. Coloque o polegar sobre o sensor de temperatura para que ele mude e veja como o seu programa responde.
+      CSDU6L06 - lists and colorLeds - set color: |-
+        # Adicionando alguma cor
+
+        Você provavelmente notou que quando usou `colorLeds [0].on()` no último nível, os LEDs ficaram brancos. Se você não especificar uma cor, `on()` ligará todas as três partes do LED (vermelho, verde e azul) para produzir o branco. Você verá um novo comando na caixa de ferramentas chamado `colorLeds [0].color ()` que permite especificar uma cor, como um tipo texto como "Azul" ou um valor RGB usando o comando color `color()`.
+
+        # Faça isso
+
+        Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
       Calc Circles of Eval .1: "Você vai escrever um tipo de código chamado\nBloco de cálculo, porque cada bloco de código retorna um único valor.\nAltere o ??? nesse código para que o bloco retorne 5."
       Calc Circles of Eval .2: "Esse bloco de cálculo é uma função\nde multiplicação que recebe dois números e retorna o produto desses números.\nEdite esse bloco para que ele multiplique 2 * 5"
       Calc Circles of Eval .3: "Esta é uma função de Adição que\nusa dois números e retorna sua soma. Use este bloco Adição para somar 3\n+ 6."
@@ -943,6 +1099,7 @@ pt-BR:
       HOC Dance Freeplay: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
       HOC Dance Freeplay_draft: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
       HOC Dance Predraw: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo. \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem para fora."
       'Introduction to Conditionals: Boolean Expressions': |-
         ### Pontos para prestar atenção:
 
@@ -1066,10 +1223,15 @@ pt-BR:
       NEW Course 4 Artist Functions 9: "Você consegue resolver isso adicionando\napenas um bloco?"
       NEW Course 4 Artist Params 2: Crie uma função `desenhar um triângulo` desde o início, para fazer um triângulo com lados de 50 pixels.
       NEW Course 4 Artist Params 4: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
+      NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo. \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem para fora."
       NEW Course 4 Artist Vars 12: "Agora, recrie o algoritmo do último\nnível para criar um pentágono de lados 150."
       NEW Course 4 Artist Vars 4: "Vamos tentar de novo! \\r\n\\r\nVocê consegue\ndefinir a variável \"comprimento\" em 60 para fazer este design bacana com hexágonos?"
       NEW Course 4 Artist Vars 6: "Desenhe esse padrão de pentágonos com\nlados de 100 pixels definindo o valor correto para \"comprimento\" e colocando a variável\n\"comprimento\" em todos os lugares corretos. \\r\n\\r\nVocê percebeu que só precisa\ndefinir o valor de \"comprimento\" uma vez, e o código usa o valor correto em todos os lugares?"
       New Minecraft Hero Project: "**Jogo Livre:** Agora é com você! Use o código do Agent para ajudá-lo a explorar este mundo."
+      Nike Example Brand Book: |+
+        # Livro Marca
+
+        Confira o exemplo de um livro de marca
       October15 bat: "Atividade livre: aqui estão as funções que você escreveu e mais algumas para você usar. Brinque com a largura da caneta para ver como seus desenhos ficam diferentes!\n\n"
       Overworld Move to Sheep: Adicione um segundo comando "andar à frente" para chegar à ovelha.
       Overworld Move to Sheep_2018: Adicione um segundo comando "andar à frente" para chegar à ovelha.
@@ -1086,6 +1248,7 @@ pt-BR:
       Pixelation - Lesson 15 - Complete 3-bit color: "# Pixelização de Cor: Tarefa 1\n**Instruções:**\n\n* Você começa com a imagem 4x2 que Maddie estava criando, mas deixamos de fora os últimos dois quadrados. \n* Termine a imagem descobrindo quais as duas cores que estão faltando e codifique elas.\n"
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "# Pixelização de Cor: Tarefa 1\n**Instruções:**\n\n* Você começa com a imagem 4x2 que Maddie estava criando, mas deixamos de fora os últimos dois quadrados. \n* Termine a imagem descobrindo quais as duas cores que estão faltando e codifique elas.\n"
       Play Lab Rocket 3: "Excelente! Agora, você consegue atualizar essa função para\nque nosso foguete se mova mais rapidamente? Lembre-se de atualizar a instrução de finalidade,\nos exemplos e a definição da função para lançar um foguete a 40 metros por segundo."
+      Poorva copy U3L2 Using Simple Commands: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       Ryan_Demo: |-
         Faça esse alce entrar na dança!
 
@@ -1101,6 +1264,8 @@ pt-BR:
       U3 Variables misconceptions 2: Qual a saída do Programa 2?
       U3 Variables misconceptions 3: Qual a saída do Programa 3?
       U3 Variables misconceptions 4: Qual a saída do Programa 4?
+      U3L2 Using Simple Commands: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      U3L2 Using Simple Commands_2018: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       U4L02 - Objects - Template1: "# Modelo"
       U4L02 - Objects - Template1_2018: "# Modelo"
       U5 Booleans: |-
@@ -2019,6 +2184,7 @@ pt-BR:
         essa alteração?\r
         \r
         Dica: algo precisa ser removido!
+      grade5_artist_functionparameters10: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo. \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem para fora."
       grade5_artist_parameters_triangles2a: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
       grade5_artist_variables_hexagons1: "Vamos tentar de novo! \\r\n\\r\nVocê consegue\ndefinir a variável \"comprimento\" em 60 para fazer este design bacana com hexágonos?"
       grade5_artist_variables_pentagon9: "Agora, recrie o algoritmo do último\nnível para criar um pentágono de lados 150."
@@ -2059,4 +2225,6 @@ pt-BR:
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
+      subgoal U3 L4 introducing subgoal labels: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
+      subgoal U3L2 Using Simple Commands: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nDado apenas 4 comandos da tartaruga, escreva um código no Aplicativo de Laboratório para completar os desenhos em cada um dos desafios abaixo. Seu objetivo é escrever um código que resolva o problema da forma mais eficiente possível usando apenas os comandos fornecidos.\n\nO que \"eficiente\" significa? Na ciência da computação isso pode significar várias coisas diferentes dependendo do assunto que estamos conversando. Trabalhe nesses desafios, tente resolvê-los de uma forma que você ache que é a melhor forma e iremos perguntar sobre eficiência no final.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n\n# Faça isso: \nDesenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial."
       test_sarah: oi

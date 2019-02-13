@@ -12,12 +12,12 @@ const initialState = {
   manageStudents: {
     loginType: '',
     studentData: {},
-    addStatus: {},
+    addStatus: {}
   },
   sectionData: {
     section: {
-      id: 53,
-    },
+      id: 53
+    }
   }
 };
 
@@ -37,7 +37,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   }
 ];
 
@@ -85,7 +85,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 2,
@@ -100,7 +100,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 3,
@@ -114,7 +114,7 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   }
 ];
 
@@ -129,10 +129,11 @@ const pictureAccountData = [
     loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 2,
@@ -144,10 +145,11 @@ const pictureAccountData = [
     loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 3,
@@ -159,10 +161,11 @@ const pictureAccountData = [
     loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   }
 ];
 
@@ -177,9 +180,10 @@ const googleData = [
     loginType: SectionLoginType.google_classroom,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 2,
@@ -191,9 +195,10 @@ const googleData = [
     loginType: SectionLoginType.google_classroom,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   }
 ];
 
@@ -208,9 +213,10 @@ const cleverData = [
     loginType: SectionLoginType.clever,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   },
   {
     id: 2,
@@ -222,16 +228,20 @@ const cleverData = [
     loginType: SectionLoginType.clever,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT,
+    rowType: RowType.STUDENT
   }
 ];
 
 export default storybook => {
   storybook
     .storiesOf('ManageStudentsTable', module)
-    .withReduxStore({manageStudents, teacherSections, sectionData}, initialState)
+    .withReduxStore(
+      {manageStudents, teacherSections, sectionData},
+      initialState
+    )
     .addStoryTable([
       {
         name: 'Table for email accounts',
@@ -250,7 +260,8 @@ export default storybook => {
       },
       {
         name: 'Table for word accounts',
-        description: 'Ability to edit/delete all data and reset the secret word',
+        description:
+          'Ability to edit/delete all data and reset the secret word',
         story: () => (
           <UnconnectedManageStudentsTable
             studentData={wordAccountData}
@@ -265,7 +276,8 @@ export default storybook => {
       },
       {
         name: 'Table for picture accounts',
-        description: 'Ability to edit/delete all data and reset the secret picture',
+        description:
+          'Ability to edit/delete all data and reset the secret picture',
         story: () => (
           <UnconnectedManageStudentsTable
             studentData={pictureAccountData}
@@ -307,6 +319,6 @@ export default storybook => {
             sectionId={53}
           />
         )
-      },
+      }
     ]);
 };

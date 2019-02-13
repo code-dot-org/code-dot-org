@@ -1711,6 +1711,7 @@ en:
       Fish Tank 4-validated_simple: Use the `set background color` block to make the background blue.
       Fish Tank 5-validated: Our fish is getting a little lonely. Add another sprite to the fish tank.
       Fish Tank 5-validated_2019: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 5-validated_2019_implicitGroupTest: Our fish is getting a little lonely. Add another sprite to the fish tank.
       Fish Tank 5-validated_simple: The fish wants a friend.   Add a new sprite.
       Fish Tank 6-validated: Add a behavior to the fish's new friend.
       Fish Tank 6-validated_2019: Add a behavior to the fish's new friend.
@@ -3535,6 +3536,7 @@ en:
       courseA_collector_preLoops5: Get 1 of these 2 gems to solve this puzzle.
       courseA_collector_preLoops6: Get both pieces of treasure to solve this puzzle.
       courseA_collector_preLoops7: Get all three piles to pass this level.
+      courseA_data widget: "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?"
       courseA_forVideoTest_artist: Use the `repeat` loop to add waves to the water.
       courseA_harvester_forVideo: Can you pick all the corn using only **one** move block?
       courseA_harvester_loops1: Help the harvester pick all the corn!
@@ -4099,6 +4101,7 @@ en:
       courseC_collector_prog_challenge2: Collect at least **10** pieces of treasure to finish this challenge!
       courseC_collector_prog_challenge2_2018: Collect at least **10** pieces of treasure to finish this challenge!
       courseC_collector_prog_challenge2_2019: Collect at least **10** pieces of treasure to finish this challenge!
+      courseC_data widget: "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?"
       courseC_flappy_embed_events: Here's an example of a game that you're about to create yourself! Play through it one or two times to get an idea of what you are about to make.
       courseC_flappy_events1: Attach the `flap normal amount` block to the `when click` event, then press "Run".    Click or tap on the play space to move Flappy to the target.
       courseC_flappy_events10: 'Create your own Flappy game! '
@@ -4920,10 +4923,17 @@ en:
       courseD_scrat_ramp7_2018: Help Scrat get to the acorn!
       courseD_scrat_ramp8: Use what you've learned to get Scrat to the acorn!
       courseD_scrat_ramp8_2018: Use what you've learned to get Scrat to the acorn!
-      courseE_aboutme_1: This is Ritchie! He likes to talk. Everything he says will appear in the **Text Box** below him. Click "▶ Run" to make him talk now!
-      courseE_aboutme_2: 'Ritchie loves to talk, so let''s make him share some **Personal Information** when he is clicked! Just be careful that he doesn''t accidentally share any **Private Information** as well!  '
-      courseE_aboutme_3: Here is Ritchie's best friend Kenny. Make Kenny also share some **Personal Information** when he is clicked! Just as with Ritchie, be careful that Kenny does not accidentally share any **Private Information**!
-      courseE_aboutme_4: Now it's time for you to create your own sprite! Click on the animation tab!
+      courseE_aboutme_1: "This is Rikki! Well, it's really just a drawing she made of herself. \n\nYou see, Rikki is using SpriteLab to create an **interactive poster** that she can share with everyone on the web, and this is what she's made so far!\n\nRead the code below, then locate the **Text Box** below Rikki. Run the code and click Rikki to see her message appear!"
+      courseE_aboutme_2: |-
+        Rikki has so many cool things to share! In addition to her greeting, let's make her share some **Personal Information** when she is clicked.
+
+        Feel free to use your imagination to help Rikki. Just be careful that she doesn't accidentally share any **Private Information** as well!
+      courseE_aboutme_4: "Here is Rikki's best friend Thuy! Well, a cool drawing of her anyway! \n\nMake Thuy also share some **Personal Information** when she is clicked. \n\nJust as with Rikki, be careful that Thuy does not accidentally share any **Private Information**!"
+      courseE_aboutme_5: Rikki thinks you might be able to draw a better costume for her sprite. Click the **Animation** tab, draw a costume, and replace Rikki's with your own in the code below!
+      courseE_aboutme_freeplay: |-
+        **Freeplay:** The world is yours! Express yourself by creating an **interactive poster**. Use custom sprite costumes, messages, and events to tell the world about yourself!
+
+        **Remember! Only share SAFE information.** Do not share anything that someone could use to identify you (address, full name, date of birth, etc).
       courseE_artist_concept1: 'Recreate this image. '
       courseE_artist_concept1_2018: 'Recreate this image. '
       courseE_artist_concept1_2019: 'Recreate this image. '

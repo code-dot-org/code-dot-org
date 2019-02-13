@@ -1,11 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 export default class scriptsInCourseEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   constructor(props) {
@@ -22,7 +23,10 @@ export default class scriptsInCourseEditor extends Component {
   handleChange(event) {
     const root = ReactDOM.findDOMNode(this);
 
-    let selected = Array.prototype.map.call(root.children, child => child.value);
+    let selected = Array.prototype.map.call(
+      root.children,
+      child => child.value
+    );
     // If the last script has a value, add a new script without one
     if (selected[selected.length - 1] !== '') {
       selected.push('');
@@ -33,7 +37,7 @@ export default class scriptsInCourseEditor extends Component {
   }
 
   render() {
-    const { scriptNames } = this.props;
+    const {scriptNames} = this.props;
     return (
       <div>
         {this.state.scriptsInCourse.map((selectedScript, index) => (
@@ -41,7 +45,7 @@ export default class scriptsInCourseEditor extends Component {
             name="scripts[]"
             style={{
               ...this.props.inputStyle,
-              opacity: selectedScript === "" ? 0.4 : 1
+              opacity: selectedScript === '' ? 0.4 : 1
             }}
             key={index}
             value={selectedScript}
@@ -51,10 +55,7 @@ export default class scriptsInCourseEditor extends Component {
               Select a script to add to course
             </option>
             {scriptNames.map((name, index) => (
-              <option
-                key={index}
-                value={name}
-              >
+              <option key={index} value={name}>
                 {name}
               </option>
             ))}

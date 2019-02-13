@@ -1,7 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class CourseBlocksGradeBands extends Component {
@@ -14,25 +15,23 @@ class CourseBlocksGradeBands extends Component {
         description: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired
       })
-    ).isRequired,
+    ).isRequired
   };
 
   render() {
     return (
       <ResourceCardResponsiveContainer>
-        {this.props.cards.map(
-          (card, cardIndex) => (
-            <ResourceCard
-              linkId={card.linkId}
-              linkClass={card.linkClass}
-              key={cardIndex}
-              title={card.heading}
-              description={card.description}
-              buttonText={i18n.learnMore()}
-              link={pegasus(card.path)}
-            />
-          )
-        )}
+        {this.props.cards.map((card, cardIndex) => (
+          <ResourceCard
+            linkId={card.linkId}
+            linkClass={card.linkClass}
+            key={cardIndex}
+            title={card.heading}
+            description={card.description}
+            buttonText={i18n.learnMore()}
+            link={pegasus(card.path)}
+          />
+        ))}
       </ResourceCardResponsiveContainer>
     );
   }

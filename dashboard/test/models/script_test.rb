@@ -475,11 +475,23 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can_view_version? is true if student has progress in script' do
-    script = create :script, name: 'my-script'
+    script = create :script, name: 'my-script', family_name: 'script-fam'
     student = create :student
     student.scripts << script
 
     assert script.can_view_version?(student)
+  end
+
+  test 'can_view_version? is true if student has progress in course script belongs to' do
+    course = create :course, family_name: 'script-fam'
+    script1 = create :script, name: 'script1', family_name: 'script-fam'
+    create :course_script, course: course, script: script1, position: 1
+    script2 = create :script, name: 'script2', family_name: 'script-fam'
+    create :course_script, course: course, script: script2, position: 2
+    student = create :student
+    student.scripts << script1
+
+    assert script2.can_view_version?(student)
   end
 
   test 'self.latest_stable_version is nil if no script versions in family are stable in locale' do
@@ -749,6 +761,30 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'foo-2017', versions[1][:name]
     assert_equal '2017', versions[1][:version_year]
     assert_equal '2017', versions[1][:version_title]
+  end
+
+  test 'summarize excludes hidden versions' do
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
+    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', hidden: true)
+
+    versions = foo17.summarize[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal 'foo-2017', versions[1][:name]
+
+    versions = foo17.summarize(true, create(:teacher))[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal 'foo-2017', versions[1][:name]
+
+    teacher = create(:teacher)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+    versions = foo17.summarize(true, teacher)[:versions]
+    assert_equal 3, versions.length
+    assert_equal 'foo-2019', versions[0][:name]
+    assert_equal 'foo-2018', versions[1][:name]
+    assert_equal 'foo-2017', versions[2][:name]
   end
 
   test 'should generate PLC objects' do

@@ -1,5 +1,5 @@
 /** @file Redux actions and reducer for the AnimationTab */
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
@@ -25,7 +25,7 @@ function selectedAnimation(state, action) {
  * @returns {{type: string, animationKey: AnimationKey}}
  */
 export function selectAnimation(animationKey) {
-  return { type: SELECT_ANIMATION, animationKey };
+  return {type: SELECT_ANIMATION, animationKey};
 }
 
 /**
@@ -49,5 +49,5 @@ function columnSizes(state, action) {
  * @returns {{type: string, sizes: number[]}}
  */
 export function setColumnSizes(sizes) {
-  return { type: SET_COLUMN_SIZES, sizes };
+  return {type: SET_COLUMN_SIZES, sizes};
 }

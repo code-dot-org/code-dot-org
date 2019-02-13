@@ -6,7 +6,7 @@ var msg = require('@cdo/locale');
 
 var ARITHMETIC_TITLE_FONT_SIZE = 25;
 
-exports.install = function (blockly, generator, gensym) {
+exports.install = function(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
   installMinus(blockly, generator, gensym);
   installTimes(blockly, generator, gensym);
@@ -29,76 +29,97 @@ exports.install = function (blockly, generator, gensym) {
 
 function installPlus(blockly, generator, gensym) {
   blockly.Blocks.functional_plus = {
-
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '+', blockly.BlockValueType.NUMBER, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
-        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
-
-
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        '+',
+        blockly.BlockValueType.NUMBER,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+        ],
+        {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
+      );
     }
   };
 
-  generator.functional_plus = function () {
+  generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " + " + arg2 + ")";
+    return '(' + arg1 + ' + ' + arg2 + ')';
   };
 }
 
 function installMinus(blockly, generator, gensym) {
   blockly.Blocks.functional_minus = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '-', blockly.BlockValueType.NUMBER, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
-        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        '-',
+        blockly.BlockValueType.NUMBER,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+        ],
+        {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
+      );
     }
   };
 
-  generator.functional_minus = function () {
+  generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " - " + arg2 + ")";
+    return '(' + arg1 + ' - ' + arg2 + ')';
   };
 }
 
 function installTimes(blockly, generator, gensym) {
   blockly.Blocks.functional_times = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '*', blockly.BlockValueType.NUMBER, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
-        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        '*',
+        blockly.BlockValueType.NUMBER,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+        ],
+        {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
+      );
     }
   };
 
-  generator.functional_times = function () {
+  generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " * " + arg2 + ")";
+    return '(' + arg1 + ' * ' + arg2 + ')';
   };
 }
 
 function installDividedBy(blockly, generator, gensym) {
   blockly.Blocks.functional_dividedby = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '/', blockly.BlockValueType.NUMBER, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
-        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        '/',
+        blockly.BlockValueType.NUMBER,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+        ],
+        {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
+      );
     }
   };
 
-  generator.functional_dividedby = function () {
+  generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " / " + arg2 + ")";
+    return '(' + arg1 + ' / ' + arg2 + ')';
   };
 }
 
@@ -107,72 +128,92 @@ function installDividedBy(blockly, generator, gensym) {
 function installGreaterThan(blockly, generator, gensym) {
   blockly.Blocks.functional_greater_than = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '>', blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
-        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        '>',
+        blockly.BlockValueType.BOOLEAN,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+        ]
+      );
     }
   };
 
-  generator.functional_greater_than = function () {
+  generator.functional_greater_than = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return '(' + arg1 + " > " + arg2 + ')';
+    return '(' + arg1 + ' > ' + arg2 + ')';
   };
 }
 
 function installLessThan(blockly, generator, gensym) {
   blockly.Blocks.functional_less_than = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '<', blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
-        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        '<',
+        blockly.BlockValueType.BOOLEAN,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+        ]
+      );
     }
   };
 
-  generator.functional_less_than = function () {
+  generator.functional_less_than = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return '(' + arg1 + " < " + arg2 + ')';
+    return '(' + arg1 + ' < ' + arg2 + ')';
   };
 }
 
 function installNumberEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_number_equals = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '=', blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
-        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        '=',
+        blockly.BlockValueType.BOOLEAN,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+        ]
+      );
     }
   };
 
-  generator.functional_number_equals = function () {
+  generator.functional_number_equals = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return '(' + arg1 + " === " + arg2 + ')';
+    return '(' + arg1 + ' === ' + arg2 + ')';
   };
 }
 
 function installStringEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_string_equals = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.stringEquals(), blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: blockly.BlockValueType.STRING },
-        { name: 'ARG2', type: blockly.BlockValueType.STRING }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        msg.stringEquals(),
+        blockly.BlockValueType.BOOLEAN,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.STRING},
+          {name: 'ARG2', type: blockly.BlockValueType.STRING}
+        ]
+      );
     }
   };
 
-  generator.functional_string_equals = function () {
+  generator.functional_string_equals = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || '';
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || '';
-    return '(' + arg1 + " === " + arg2 + ')';
+    return '(' + arg1 + ' === ' + arg2 + ')';
   };
 }
 
@@ -181,50 +222,63 @@ function installStringEquals(blockly, generator, gensym) {
 function installLogicalAnd(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_and = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'and', blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
-        { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        'and',
+        blockly.BlockValueType.BOOLEAN,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.BOOLEAN},
+          {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN}
+        ]
+      );
     }
   };
 
-  generator.functional_logical_and = function () {
+  generator.functional_logical_and = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return '(' + arg1 + " && " + arg2 + ')';
+    return '(' + arg1 + ' && ' + arg2 + ')';
   };
 }
 
 function installLogicalOr(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_or = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'or', blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
-        { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        'or',
+        blockly.BlockValueType.BOOLEAN,
+        [
+          {name: 'ARG1', type: blockly.BlockValueType.BOOLEAN},
+          {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN}
+        ]
+      );
     }
   };
 
-  generator.functional_logical_or = function () {
+  generator.functional_logical_or = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return '(' + arg1 + " || " + arg2 + ')';
+    return '(' + arg1 + ' || ' + arg2 + ')';
   };
 }
 
 function installLogicalNot(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_not = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'not', blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        'not',
+        blockly.BlockValueType.BOOLEAN,
+        [{name: 'ARG1', type: blockly.BlockValueType.BOOLEAN}]
+      );
     }
   };
 
-  generator.functional_logical_not = function () {
+  generator.functional_logical_not = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     return '!(' + arg1 + ')';
   };
@@ -233,25 +287,29 @@ function installLogicalNot(blockly, generator, gensym) {
 function installBoolean(blockly, generator, gensym) {
   blockly.Blocks.functional_boolean = {
     // Boolean value.
-    init: function () {
+    init: function() {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
+      this.setHSV.apply(
+        this,
+        blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]
+      );
       var values = blockly.Blocks.functional_boolean.VALUES;
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
-          .setAlign(Blockly.ALIGN_CENTRE);
+        .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+        .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.BOOLEAN);
     }
   };
 
   blockly.Blocks.functional_boolean.VALUES = [
-        [msg.booleanTrue(), 'true'],
-        [msg.booleanFalse(), 'false']];
+    [msg.booleanTrue(), 'true'],
+    [msg.booleanFalse(), 'false']
+  ];
 
-  generator.functional_boolean = function () {
+  generator.functional_boolean = function() {
     return this.getTitleValue('VAL');
   };
 }
@@ -259,35 +317,46 @@ function installBoolean(blockly, generator, gensym) {
 function installMathNumber(blockly, generator, gensym) {
   blockly.Blocks.functional_math_number = {
     // Numeric value.
-    init: function () {
+    init: function() {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
+      this.setHSV.apply(
+        this,
+        blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
+      );
       this.appendDummyInput()
-          .appendTitle(new Blockly.FieldTextInput('0',
-            Blockly.FieldTextInput.numberValidator), 'NUM')
-          .setAlign(Blockly.ALIGN_CENTRE);
+        .appendTitle(
+          new Blockly.FieldTextInput(
+            '0',
+            Blockly.FieldTextInput.numberValidator
+          ),
+          'NUM'
+        )
+        .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
     }
   };
 
-  generator.functional_math_number = function () {
+  generator.functional_math_number = function() {
     return +this.getTitleValue('NUM');
   };
 
   blockly.Blocks.functional_math_number_dropdown = {
     // Numeric value.
-    init: function () {
+    init: function() {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
+      this.setHSV.apply(
+        this,
+        blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
+      );
       this.appendDummyInput()
-          .appendTitle(new Blockly.FieldDropdown(), 'NUM')
-          .setAlign(Blockly.ALIGN_CENTRE);
+        .appendTitle(new Blockly.FieldDropdown(), 'NUM')
+        .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
     }
   };
@@ -297,12 +366,15 @@ function installMathNumber(blockly, generator, gensym) {
 
 function installString(blockly, generator) {
   blockly.Blocks.functional_string = {
-    init: function () {
+    init: function() {
       this.setFunctional(true, {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]);
+      this.setHSV.apply(
+        this,
+        blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]
+      );
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('"'))
         .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
@@ -312,7 +384,7 @@ function installString(blockly, generator) {
     }
   };
 
-  generator.functional_string = function () {
+  generator.functional_string = function() {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
   };
 }
@@ -320,14 +392,17 @@ function installString(blockly, generator) {
 function installSqrt(blockly, generator) {
   blockly.Blocks.functional_sqrt = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
-        { name: 'ARG1', type: 'Number' }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        'sqrt',
+        'Number',
+        [{name: 'ARG1', type: 'Number'}]
+      );
     }
   };
 
-  generator.functional_sqrt = function () {
+  generator.functional_sqrt = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     return 'Math.sqrt(' + arg1 + ')';
   };
@@ -336,15 +411,17 @@ function installSqrt(blockly, generator) {
 function installPow(blockly, generator) {
   blockly.Blocks.functional_pow = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'pow', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        'pow',
+        'Number',
+        [{name: 'ARG1', type: 'Number'}, {name: 'ARG2', type: 'Number'}]
+      );
     }
   };
 
-  generator.functional_pow = function () {
+  generator.functional_pow = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return 'Math.pow(' + arg1 + ', ' + arg2 + ')';
@@ -354,14 +431,17 @@ function installPow(blockly, generator) {
 function installSquared(blockly, generator) {
   blockly.Blocks.functional_squared = {
     helpUrl: '',
-    init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqr', 'Number', [
-        { name: 'ARG1', type: 'Number' }
-      ]);
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
+        this,
+        'sqr',
+        'Number',
+        [{name: 'ARG1', type: 'Number'}]
+      );
     }
   };
 
-  generator.functional_squared = function () {
+  generator.functional_squared = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     return arg1 + ' * ' + arg1;
   };
@@ -373,9 +453,13 @@ function installSquared(blockly, generator) {
  */
 function installCond(blockly, generator) {
   // Note: These blocks likely don't support RTL
-  var types = [Blockly.BlockValueType.NONE, Blockly.BlockValueType.NUMBER,
-    Blockly.BlockValueType.STRING, Blockly.BlockValueType.IMAGE,
-    Blockly.BlockValueType.BOOLEAN];
+  var types = [
+    Blockly.BlockValueType.NONE,
+    Blockly.BlockValueType.NUMBER,
+    Blockly.BlockValueType.STRING,
+    Blockly.BlockValueType.IMAGE,
+    Blockly.BlockValueType.BOOLEAN
+  ];
 
   // Generates the following blocks:
   // functional_cond (deprecated)
@@ -383,7 +467,7 @@ function installCond(blockly, generator) {
   // functional_cond_string
   // functional_cond_boolean
   // functional_cond_image
-  types.forEach(function (type) {
+  types.forEach(function(type) {
     installCondForType(blockly, generator, type);
   });
 }
@@ -396,38 +480,47 @@ function installCondForType(blockly, generator, type) {
 
   blockly.Blocks[blockName] = {
     helpUrl: '',
-    init: function () {
+    init: function() {
       this.pairs_ = [];
       this.setFunctional(true, {
         headerHeight: 30
       });
 
       var options = {
-        fixedSize: { height: 35 }
+        fixedSize: {height: 35}
       };
 
       this.setHSV.apply(this, Blockly.FunctionalTypeColors[type]);
 
       var plusField = new Blockly.FieldIcon('+');
-      Blockly.bindEvent_(plusField.getRootElement(), 'mousedown',
-        this, this.addConditionalRow);
+      Blockly.bindEvent_(
+        plusField.getRootElement(),
+        'mousedown',
+        this,
+        this.addConditionalRow
+      );
 
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendDummyInput('ELSE')
-        .appendTitle(new Blockly.FieldLabel('else', options));
-      var defaultInput = this.appendFunctionalInput('DEFAULT')
-        .setInline(true);
-      defaultInput.setHSV.apply(defaultInput, Blockly.FunctionalTypeColors[type]);
+      this.appendDummyInput('ELSE').appendTitle(
+        new Blockly.FieldLabel('else', options)
+      );
+      var defaultInput = this.appendFunctionalInput('DEFAULT').setInline(true);
+      defaultInput.setHSV.apply(
+        defaultInput,
+        Blockly.FunctionalTypeColors[type]
+      );
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
         .setInline(true);
 
-      this.setFunctionalOutput(true, type === Blockly.BlockValueType.NONE ?
-        undefined : type);
+      this.setFunctionalOutput(
+        true,
+        type === Blockly.BlockValueType.NONE ? undefined : type
+      );
 
       this.addConditionalRow();
     },
@@ -435,29 +528,34 @@ function installCondForType(blockly, generator, type) {
     /**
      * Add another condition/value pair to the end.
      */
-    addConditionalRow: function () {
+    addConditionalRow: function() {
       // id is either the last value plus 1, or if we have no values yet 0
       // we can't just have pairs_.length, since there could be gaps
       var id = this.pairs_.length > 0 ? _(this.pairs_).last() * 1 + 1 : 0;
       this.pairs_.push(id);
 
       var cond = this.appendFunctionalInput('COND' + id);
-      cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
+      cond.setHSV.apply(
+        cond,
+        blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]
+      );
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
       this.moveInputBefore('COND' + id, 'ELSE');
 
-      var input = this.appendFunctionalInput('VALUE' + id)
-        .setInline(true);
+      var input = this.appendFunctionalInput('VALUE' + id).setInline(true);
       input.setHSV.apply(input, Blockly.FunctionalTypeColors[type]);
       this.moveInputBefore('VALUE' + id, 'ELSE');
 
-      var minusInput = this.appendDummyInput('MINUS' + id)
-        .setInline(true);
+      var minusInput = this.appendDummyInput('MINUS' + id).setInline(true);
 
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
-        Blockly.bindEvent_(minusField.getRootElement(), 'mousedown',
-          this, _.bind(this.removeConditionalRow, this, id));
+        Blockly.bindEvent_(
+          minusField.getRootElement(),
+          'mousedown',
+          this,
+          _.bind(this.removeConditionalRow, this, id)
+        );
         minusInput.appendTitle(minusField);
       }
 
@@ -468,7 +566,7 @@ function installCondForType(blockly, generator, type) {
      * Remove the condition/value pair with the given id. No-op if no row with
      * that id.
      */
-    removeConditionalRow: function (id) {
+    removeConditionalRow: function(id) {
       var index = this.pairs_.indexOf(id);
       if (!_(this.pairs_).includes(id) || this.pairs_.length === 1) {
         return;
@@ -495,7 +593,7 @@ function installCondForType(blockly, generator, type) {
     /**
      * Serialize pairs so that we can deserialize with the same ids
      */
-    mutationToDom: function () {
+    mutationToDom: function() {
       if (this.pairs_.length <= 1) {
         return null;
       }
@@ -507,14 +605,14 @@ function installCondForType(blockly, generator, type) {
     /**
      * Deserialize and cause our block to have same ids
      */
-    domToMutation: function (element) {
+    domToMutation: function(element) {
       var i;
       var pairs = element.getAttribute('pairs');
       if (!pairs) {
         return;
       }
 
-      pairs = pairs.split(',').map(function (item) {
+      pairs = pairs.split(',').map(function(item) {
         return parseInt(item, 10);
       });
 
@@ -544,7 +642,7 @@ function installCondForType(blockly, generator, type) {
    *   else { return default; }
    * }()
    */
-  generator[blockName] = function () {
+  generator[blockName] = function() {
     var cond, value, defaultValue;
     var code = '(function () {\n  ';
     for (var i = 0; i < this.pairs_.length; i++) {
@@ -552,14 +650,14 @@ function installCondForType(blockly, generator, type) {
         code += 'else ';
       }
       var id = this.pairs_[i];
-      cond = Blockly.JavaScript.statementToCode(this, 'COND' + id, false) ||
-          false;
-      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + id, false) ||
-          '';
+      cond =
+        Blockly.JavaScript.statementToCode(this, 'COND' + id, false) || false;
+      value =
+        Blockly.JavaScript.statementToCode(this, 'VALUE' + id, false) || '';
       code += 'if (' + cond + ') { return ' + value + '; }\n  ';
     }
-    defaultValue = Blockly.JavaScript.statementToCode(this, 'DEFAULT', false) ||
-        '';
+    defaultValue =
+      Blockly.JavaScript.statementToCode(this, 'DEFAULT', false) || '';
     code += 'else { return ' + defaultValue + '; }\n';
     code += '})()';
     return code;

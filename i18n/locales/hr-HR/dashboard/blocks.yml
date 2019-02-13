@@ -322,7 +322,7 @@ hr:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': veličina
@@ -333,6 +333,21 @@ hr:
           CONDITION:
             '"when"': kada
             '"while"': dok
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
       aalab_whenTouching:
         options:
           CONDITION:

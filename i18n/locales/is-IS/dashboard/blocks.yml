@@ -1105,14 +1105,15 @@ is:
         text: snúa til vinstri
       RyanLab_turnRight:
         text: snúa til hægri
+      SpriteLab2Beta_spriteSay:
+        text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       Vector_log:
         text: skrá boð {MESSAGE}
       Vector_vectorNorth:
         text: norður
       aalab_addToSpriteGroup:
         text: bæta veru {SPRITE} í hóp {GROUP}
-      aalab_changeGroupPropBy:
-        text: breyta {GROUP} {PROPERTY} um {VAL}
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': stærð
@@ -1135,8 +1136,25 @@ is:
         options:
           CHOICE:
             '"this"': þetta
+      aalab_jumpTo:
+        text: "{SPRITE} hoppa til {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
+          KEY:
+            '"up"': uppi
+            '"down"': niðri
+            '"left"': vinstri
+            '"right"': hægri
+            '"space"': geimur
       aalab_prompt:
         text: spyrja spurningar {MESSAGE}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
       aalab_spriteSay:
         text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       aalab_whenTouching:

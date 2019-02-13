@@ -5,10 +5,10 @@
  * component or displays "None" if no workshops are returned.
  * It optionally handles deleting workshops.
  */
-
 import $ from 'jquery';
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from '../../components/spinner';
 
@@ -54,15 +54,19 @@ export default class WorkshopTableLoader extends React.Component {
 
   load = (props = this.props) => {
     this.setState({loading: true});
-    const effectiveParams = _.omitBy(props.queryParams, value => value === null || value === undefined);
-    const url = props.queryParams ? `${props.queryUrl}?${$.param(effectiveParams)}` : props.queryUrl;
+    const effectiveParams = _.omitBy(
+      props.queryParams,
+      value => value === null || value === undefined
+    );
+    const url = props.queryParams
+      ? `${props.queryUrl}?${$.param(effectiveParams)}`
+      : props.queryUrl;
 
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,
       dataType: 'json'
-    })
-    .done(data => {
+    }).done(data => {
       this.setState({
         loading: false,
         workshops: data
@@ -79,12 +83,11 @@ export default class WorkshopTableLoader extends React.Component {
     }
   }
 
-  handleDelete = (workshopId) => {
+  handleDelete = workshopId => {
     this.deleteRequest = $.ajax({
       method: 'DELETE',
       url: '/api/v1/pd/workshops/' + workshopId
-    })
-    .done(() => {
+    }).done(() => {
       this.load();
     });
   };
@@ -107,12 +110,12 @@ export default class WorkshopTableLoader extends React.Component {
       }
     }
 
-    return (
-      React.cloneElement(this.props.children, {
-        workshops: this.state.workshops,
-        onDelete: this.props.canDelete ? this.handleDelete : null,
-        ref: ref => {this.childElement = ref;}
-      })
-    );
+    return React.cloneElement(this.props.children, {
+      workshops: this.state.workshops,
+      onDelete: this.props.canDelete ? this.handleDelete : null,
+      ref: ref => {
+        this.childElement = ref;
+      }
+    });
   }
 }

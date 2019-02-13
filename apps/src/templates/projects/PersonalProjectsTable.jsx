@@ -1,20 +1,21 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from "@cdo/locale";
-import color from "../../util/color";
+import i18n from '@cdo/locale';
+import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
-  PROJECT_TYPE_MAP,
+  PROJECT_TYPE_MAP
 } from './projectConstants';
 import {
   AlwaysPublishableProjectTypes,
-  ConditionallyPublishableProjectTypes,
+  ConditionallyPublishableProjectTypes
 } from '@cdo/apps/util/sharedConstants';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
@@ -30,17 +31,17 @@ export const COLUMNS = {
   APP_TYPE: 2,
   LAST_EDITED: 3,
   LAST_PUBLISHED: 4,
-  ACTIONS: 5,
+  ACTIONS: 5
 };
 
 export const styles = {
   cellFirst: {
     borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
+    borderColor: color.border_light_gray
   },
   headerCellFirst: {
     borderWidth: '0px 0px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: color.border_light_gray
   },
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
@@ -72,7 +73,7 @@ export const styles = {
     height: THUMBNAIL_SIZE,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   bottomMargin: {
     marginBottom: 20
@@ -80,7 +81,7 @@ export const styles = {
 };
 
 // Cell formatters.
-const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
+const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
@@ -108,19 +109,20 @@ const nameFormatter = (projectName, {rowData}) => {
   );
 };
 
-const typeFormatter = (type) => {
+const typeFormatter = type => {
   return PROJECT_TYPE_MAP[type];
 };
 
-const dateFormatter = function (time) {
+const dateFormatter = function(time) {
   const date = new Date(time);
   return date.toLocaleDateString();
 };
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
-    canShare: PropTypes.bool.isRequired,
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType)
+      .isRequired,
+    canShare: PropTypes.bool.isRequired
   };
 
   state = {
@@ -149,7 +151,6 @@ class PersonalProjectsTable extends React.Component {
   };
 
   actionsFormatter = (actions, {rowData}) => {
-
     return (
       <PersonalProjectsTableActionsCell
         projectId={rowData.channel}
@@ -165,7 +166,7 @@ class PersonalProjectsTable extends React.Component {
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -180,43 +181,51 @@ class PersonalProjectsTable extends React.Component {
     });
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     const dataColumns = [
       {
         property: 'thumbnailUrl',
         header: {
-          props: {style: {
-            ...tableLayoutStyles.headerCell,
-            ...styles.headerCellFirst,
-            ...styles.headerCellThumbnail,
-            ...tableLayoutStyles.unsortableHeader,
-          }},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.headerCellFirst,
+              ...styles.headerCellThumbnail,
+              ...tableLayoutStyles.unsortableHeader
+            }
+          }
         },
         cell: {
           format: thumbnailFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.cellFirst,
-            ...styles.cellThumbnail
-          }}
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.cellFirst,
+              ...styles.cellThumbnail
+            }
+          }
         }
       },
       {
         property: 'name',
         header: {
           label: i18n.projectName(),
-          props: {style: {
-            ...tableLayoutStyles.headerCell,
-            ...styles.headerCellName,
-          }},
-          transforms: [sortable],
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.headerCellName
+            }
+          },
+          transforms: [sortable]
         },
         cell: {
           format: nameFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.cellName
-          }}
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.cellName
+            }
+          }
         }
       },
       {
@@ -224,14 +233,16 @@ class PersonalProjectsTable extends React.Component {
         header: {
           label: i18n.projectType(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: typeFormatter,
-          props: {style: {
-            ...styles.cellType,
-            ...tableLayoutStyles.cell
-          }}
+          props: {
+            style: {
+              ...styles.cellType,
+              ...tableLayoutStyles.cell
+            }
+          }
         }
       },
       {
@@ -239,7 +250,7 @@ class PersonalProjectsTable extends React.Component {
         header: {
           label: i18n.lastEdited(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: dateFormatter,
@@ -251,14 +262,16 @@ class PersonalProjectsTable extends React.Component {
         header: {
           label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           format: this.publishedAtFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.centeredCell
-          }}
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.centeredCell
+            }
+          }
         }
       },
       {
@@ -268,16 +281,18 @@ class PersonalProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
+              ...tableLayoutStyles.unsortableHeader
             }
-          },
+          }
         },
         cell: {
           format: this.actionsFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.centeredCell
-          }}
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.centeredCell
+            }
+          }
         }
       }
     ];
@@ -286,21 +301,25 @@ class PersonalProjectsTable extends React.Component {
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.props.personalProjectsList);
 
     const noProjects = this.props.personalProjectsList.length === 0;
 
     return (
       <div style={styles.bottomMargin}>
-        {!noProjects &&
+        {!noProjects && (
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}
@@ -313,10 +332,8 @@ class PersonalProjectsTable extends React.Component {
               className="ui-personal-projects-row"
             />
           </Table.Provider>
-        }
-        {noProjects &&
-          <h3>{i18n.noPersonalProjects()}</h3>
-        }
+        )}
+        {noProjects && <h3>{i18n.noPersonalProjects()}</h3>}
       </div>
     );
   }
@@ -325,5 +342,5 @@ class PersonalProjectsTable extends React.Component {
 export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
 
 export default connect(state => ({
-  personalProjectsList: state.projects.personalProjectsList.projects,
+  personalProjectsList: state.projects.personalProjectsList.projects
 }))(PersonalProjectsTable);

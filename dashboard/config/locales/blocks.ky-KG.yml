@@ -401,7 +401,7 @@ ky:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': өлчөмү
@@ -412,6 +412,21 @@ ky:
           CONDITION:
             '"when"': качан
             '"while"': болуп турганда
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': качан
+            '"while"': болуп турганда
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': шаар
       aalab_whenTouching:
         options:
           CONDITION:

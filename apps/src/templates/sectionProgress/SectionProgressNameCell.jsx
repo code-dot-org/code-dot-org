@@ -1,12 +1,13 @@
-import React, {Component, PropTypes} from 'react';
-import {progressStyles} from "./multiGridConstants";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {progressStyles} from './multiGridConstants';
 
 export default class SectionProgressNameCell extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    scriptId: PropTypes.number.isRequired,
+    scriptId: PropTypes.number.isRequired
   };
 
   render() {

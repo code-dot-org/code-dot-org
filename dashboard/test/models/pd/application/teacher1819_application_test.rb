@@ -404,64 +404,6 @@ module Pd::Application
       end
     end
 
-    test 'find_default_workshop finds no workshop for applications without a regional partner' do
-      application = build :pd_teacher1819_application
-      assert_nil application.find_default_workshop
-    end
-
-    test 'find_default_workshop finds a teachercon workshop for applications with a G3 partner' do
-      # stub process_location to prevent making Geocoder requests in test
-      Pd::Workshop.any_instance.stubs(:process_location)
-
-      teachercon_workshops = {}
-      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
-        TEACHERCONS.each do |teachercon|
-          city = teachercon[:city]
-          teachercon_workshops[[course, city]] = create :pd_workshop,
-            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-            location_address: city, sessions_from: Date.new(2018, 7, 1)
-        end
-      end
-
-      g3_partner_name = REGIONAL_PARTNER_TC_MAPPING.keys.sample
-      g3_partner = build :regional_partner, group: 3, name: g3_partner_name
-      application = build :pd_teacher1819_application, regional_partner: g3_partner
-
-      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
-        city = get_matching_teachercon(g3_partner)[:city]
-        workshop = teachercon_workshops[[course, city]]
-
-        application.course = course === Pd::Workshop::COURSE_CSD ? 'csd' : 'csp'
-        assert_equal workshop, application.find_default_workshop
-      end
-    end
-
-    test 'find_default_workshop find an appropriate partner workshop for G1 and G2 partners' do
-      partner = create :regional_partner
-      program_manager = create :program_manager, regional_partner: partner
-
-      # where "appropriate workshop" is the earliest teachercon or local summer
-      # workshop matching the application course.
-
-      invalid_workshop = create :pd_workshop, organizer: program_manager
-      create :pd_session,
-        workshop: invalid_workshop,
-        start: Date.new(2018, 1, 10)
-
-      earliest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
-      create :pd_session,
-        workshop: earliest_valid_workshop,
-        start: Date.new(2018, 1, 15)
-
-      latest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
-      create :pd_session,
-        workshop: latest_valid_workshop,
-        start: Date.new(2018, 12, 15)
-
-      application = build :pd_teacher1819_application, course: 'csp', regional_partner: partner
-      assert_equal earliest_valid_workshop, application.find_default_workshop
-    end
-
     test 'school_info_attr for specific school' do
       school = create :school
       form_data_hash = build :pd_teacher1819_application_hash, school: school
@@ -634,24 +576,6 @@ module Pd::Application
       )
 
       assert_equal workshop_1, application_2.get_first_selected_workshop
-    end
-
-    test 'assign_default_workshop! saves the default workshop' do
-      application = create :pd_teacher1819_application
-      workshop = create :pd_workshop
-      application.expects(:find_default_workshop).returns(workshop)
-
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      workshop = create :pd_workshop
-      application = create :pd_teacher1819_application, pd_workshop_id: workshop.id
-      application.expects(:find_default_workshop).never
-
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
     end
 
     test 'can_see_locked_status?' do

@@ -72,6 +72,10 @@ ps:
         options:
           CONDITION:
             '"while"': کله چي
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"while"': کله چي
       aalab_whenTouching:
         options:
           CONDITION:

@@ -9,8 +9,4 @@
  */
 import React from 'react';
 
-export default (story) => (
-  <div id="application-container">
-    {story()}
-  </div>
-);
+export default story => <div id="application-container">{story()}</div>;

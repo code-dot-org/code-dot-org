@@ -33,7 +33,7 @@
     "contained_level_names": [
       "courseD_multi_scrat_predict1_2018"
     ],
-    "tts_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
+    "tts_short_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "step_speed": "2",

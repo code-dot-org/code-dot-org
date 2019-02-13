@@ -2,9 +2,10 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursef/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursef/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+family_name 'coursef'
 version_year '2019'
 
 stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_f_1'

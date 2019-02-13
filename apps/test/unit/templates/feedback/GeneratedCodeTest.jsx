@@ -7,10 +7,7 @@ import GeneratedCode from '@cdo/apps/templates/feedback/GeneratedCode';
 describe('GeneratedCode', () => {
   it('renders successfully', () => {
     const wrapper = shallow(
-      <GeneratedCode
-        message="Test message"
-        code="Test code"
-      />
+      <GeneratedCode message="Test message" code="Test code" />
     );
     expect(wrapper).to.containMatchingElement(
       <div className="generated-code-container">

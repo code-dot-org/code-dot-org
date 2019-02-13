@@ -399,6 +399,8 @@ hu:
         mc_2017_congratulations: Minecraft Kódolás Órája - Gratulálunk!
         CSF_loops_AB: hurkok
         csd_gamelab_booleans: Logikai kifejezések
+        CSF_SpriteLabIntro_CDEF: Íme a Sprite labor
+        CSF_Spritelab_MakeSprite_CDEF: Hogyan készíts sprite-ot a Sprite laborban
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

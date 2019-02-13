@@ -1,6 +1,7 @@
 /* global dashboard */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import * as rowStyle from './rowStyle';
 import {getStore} from '../../redux';
@@ -39,7 +40,7 @@ export default class ImagePickerPropertyRow extends React.Component {
     }
   }
 
-  handleChangeInternal = (event) => {
+  handleChangeInternal = event => {
     const filename = event.target.value;
     this.changeUnlessEditing(filename);
 
@@ -49,9 +50,12 @@ export default class ImagePickerPropertyRow extends React.Component {
     });
 
     // We may not have changed file yet (if we still actively editing)
-    setTimeout(function () {
-      this.changeUnlessEditing(this.state.value);
-    }.bind(this), USER_INPUT_DELAY);
+    setTimeout(
+      function() {
+        this.changeUnlessEditing(this.state.value);
+      }.bind(this),
+      USER_INPUT_DELAY
+    );
   };
 
   handleButtonClick = () => {
@@ -67,7 +71,7 @@ export default class ImagePickerPropertyRow extends React.Component {
     });
   };
 
-  changeImage = (filename) => {
+  changeImage = filename => {
     this.props.handleChange(filename);
     // Because we delay the call to this function via setTimeout, we must be sure not
     // to call setState after the component is unmounted, or React will warn and
@@ -89,9 +93,7 @@ export default class ImagePickerPropertyRow extends React.Component {
             style={rowStyle.input}
           />
           &nbsp;
-          <a onClick={this.handleButtonClick}>
-            Choose...
-          </a>
+          <a onClick={this.handleButtonClick}>Choose...</a>
         </div>
       </div>
     );

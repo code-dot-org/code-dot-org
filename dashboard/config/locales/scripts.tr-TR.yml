@@ -10345,6 +10345,10 @@ tr:
               name: Geleceğe bakış
             Binary Bracelets:
               name: İkilik Bileklikler
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
         csp-mid-survey:
           description_audience: CSP Öğrencileri
         gamelab:
@@ -10420,6 +10424,8 @@ tr:
                 ve yaratıcı olmanın zamanı!
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
+            Learn to Drag and Drop:
+              name: Sürükleyip Bırakmayı Öğrenin
         courseb-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10444,6 +10450,8 @@ tr:
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
               name: Play Lab' da Olaylar
+            'Loops: Getting Loopy':
+              name: 'Döngüler: Loopy Başlarken'
         pre-express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10479,3 +10487,7 @@ tr:
               name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+        dani-test-script:
+          stages:
+            new stage:
+              name: yeni kademe

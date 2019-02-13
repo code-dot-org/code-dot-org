@@ -1,10 +1,10 @@
 /* global $ */
-
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import SectionSelector from './SectionSelector.jsx';
 import StudentSelector from './StudentSelector.jsx';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 /**
  * A component for managing pair programming.
@@ -25,17 +25,19 @@ export default class Pairing extends React.Component {
       url: this.props.source,
       method: 'GET',
       dataType: 'json'
-    }).done((result) => {
-      this.setState({
-        pairings: result.pairings,
-        sections: result.sections
+    })
+      .done(result => {
+        this.setState({
+          pairings: result.pairings,
+          sections: result.sections
+        });
+      })
+      .fail(result => {
+        // TODO what to do here?
       });
-    }).fail((result) => {
-      // TODO what to do here?
-    });
   }
 
-  handleSectionChange = (event) => {
+  handleSectionChange = event => {
     this.setState({
       pairings: [],
       sections: this.state.sections,
@@ -51,7 +53,7 @@ export default class Pairing extends React.Component {
     });
   };
 
-  handleAddPartners = (studentIds) => {
+  handleAddPartners = studentIds => {
     const pairings = this.selectedSection().students.filter(
       student => studentIds.indexOf(student.id) !== -1
     );
@@ -65,12 +67,14 @@ export default class Pairing extends React.Component {
       method: 'PUT',
       dataType: 'json',
       context: this
-    }).done(this.refreshUserMenu).fail((jqXHR, textStatus, errorThrown) => {
-      // TODO what to do here?
-    });
+    })
+      .done(this.refreshUserMenu)
+      .fail((jqXHR, textStatus, errorThrown) => {
+        // TODO what to do here?
+      });
   };
 
-  handleStop = (event) => {
+  handleStop = event => {
     this.setState({
       pairings: []
     });
@@ -81,12 +85,14 @@ export default class Pairing extends React.Component {
       contentType: 'application/json; charset=utf-8',
       method: 'PUT',
       dataType: 'json'
-    }).done(() => {
-      this.refreshUserMenu();
-      this.props.handleClose(); // close dialog
-    }).fail((_, textStatus, errorThrown) => {
-      // TODO what to do here?
-    });
+    })
+      .done(() => {
+        this.refreshUserMenu();
+        this.props.handleClose(); // close dialog
+      })
+      .fail((_, textStatus, errorThrown) => {
+        // TODO what to do here?
+      });
 
     event.preventDefault();
   };
@@ -114,17 +120,19 @@ export default class Pairing extends React.Component {
 
   renderPairingSelector() {
     return (
-      <div style={{maxHeight: window.innerHeight * 0.8 - 100, overflowY: 'auto'}}>
+      <div
+        style={{maxHeight: window.innerHeight * 0.8 - 100, overflowY: 'auto'}}
+      >
         <p className="dialog_title">{i18n.pairProgramming()}</p>
         <h1>{i18n.pairProgrammingChosePartners()}</h1>
-        <br/>
+        <br />
         <form>
           <SectionSelector
             sections={this.state.sections}
             selectedSectionId={this.selectedSectionId()}
             handleChange={this.handleSectionChange}
           />
-          <div className="clear"/>
+          <div className="clear" />
           <StudentSelector
             students={this.studentsInSection()}
             handleSubmit={this.handleAddPartners}
@@ -139,16 +147,12 @@ export default class Pairing extends React.Component {
       <div>
         <h1>{i18n.pairProgramming()}</h1>
         <h2>{i18n.pairProgrammingWith()}</h2>
-        {this.state.pairings.map(student =>
-          <div
-            key={student.id}
-            data-id={student.id}
-            className="student"
-          >
+        {this.state.pairings.map(student => (
+          <div key={student.id} data-id={student.id} className="student">
             {student.name}
           </div>
-        )}
-        <div className="clear"/>
+        ))}
+        <div className="clear" />
         <button className="stop" onClick={this.handleStop}>
           {i18n.pairProgrammingStop()}
         </button>

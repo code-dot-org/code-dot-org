@@ -14,8 +14,11 @@ var EncodingType = require('./NetSimConstants').EncodingType;
  * @param {function} changeEncodingCallback
  * @constructor
  */
-var NetSimEncodingControl = module.exports = function (rootDiv, levelConfig,
-    changeEncodingCallback) {
+var NetSimEncodingControl = (module.exports = function(
+  rootDiv,
+  levelConfig,
+  changeEncodingCallback
+) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -43,18 +46,21 @@ var NetSimEncodingControl = module.exports = function (rootDiv, levelConfig,
 
   // Initial render
   this.render();
-};
+});
 
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimEncodingControl.prototype.render = function () {
-  var renderedMarkup = $(markup({
-    level: this.levelConfig_
-  }));
+NetSimEncodingControl.prototype.render = function() {
+  var renderedMarkup = $(
+    markup({
+      level: this.levelConfig_
+    })
+  );
   this.rootDiv_.html(renderedMarkup);
   this.checkboxes_ = this.rootDiv_.find(
-      'input[type="checkbox"][name="encoding_checkboxes"]');
+    'input[type="checkbox"][name="encoding_checkboxes"]'
+  );
   this.checkboxes_.change(this.onCheckboxesChange_.bind(this));
 };
 
@@ -62,9 +68,9 @@ NetSimEncodingControl.prototype.render = function () {
  * Send new selected encodings to registered callback on change.
  * @private
  */
-NetSimEncodingControl.prototype.onCheckboxesChange_ = function () {
+NetSimEncodingControl.prototype.onCheckboxesChange_ = function() {
   var selectedEncodings = [];
-  this.checkboxes_.filter(':checked').each(function (i, element) {
+  this.checkboxes_.filter(':checked').each(function(i, element) {
     selectedEncodings.push(element.value);
   });
   this.changeEncodingCallback_(selectedEncodings);
@@ -74,9 +80,9 @@ NetSimEncodingControl.prototype.onCheckboxesChange_ = function () {
  * Change selector value to the new provided value.
  * @param {EncodingType[]} newEncodings
  */
-NetSimEncodingControl.prototype.setEncodings = function (newEncodings) {
-  this.checkboxes_.each(function (i, element) {
-    $(element).attr('checked', (newEncodings.indexOf(element.value) > -1));
+NetSimEncodingControl.prototype.setEncodings = function(newEncodings) {
+  this.checkboxes_.each(function(i, element) {
+    $(element).attr('checked', newEncodings.indexOf(element.value) > -1);
   });
 };
 
@@ -86,10 +92,12 @@ NetSimEncodingControl.prototype.setEncodings = function (newEncodings) {
  * @param {EncodingType[]} encodings
  * @returns {string}
  */
-var makeEncodingRowSelector = function (encodings) {
-  return encodings.map(function (className) {
-    return 'tr.' + className;
-  }).join(', ');
+var makeEncodingRowSelector = function(encodings) {
+  return encodings
+    .map(function(className) {
+      return 'tr.' + className;
+    })
+    .join(', ');
 };
 
 /**
@@ -98,11 +106,13 @@ var makeEncodingRowSelector = function (encodings) {
  * @param {jQuery} rootElement - root of elements to show/hide
  * @param {EncodingType[]} encodings - a message encoding setting
  */
-NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
+NetSimEncodingControl.hideRowsByEncoding = function(rootElement, encodings) {
   var hiddenEncodings = [];
   for (var key in EncodingType) {
-    if (EncodingType.hasOwnProperty(key) &&
-        encodings.indexOf(EncodingType[key]) === -1) {
+    if (
+      EncodingType.hasOwnProperty(key) &&
+      encodings.indexOf(EncodingType[key]) === -1
+    ) {
       hiddenEncodings.push(EncodingType[key]);
     }
   }
@@ -117,8 +127,8 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
  * @param {EncodingType[]} encodings
  * @returns {Object.<EncodingType, boolean>}
  */
-NetSimEncodingControl.encodingsAsHash = function (encodings) {
-  return encodings.reduce(function (hash, encoding) {
+NetSimEncodingControl.encodingsAsHash = function(encodings) {
+  return encodings.reduce(function(hash, encoding) {
     hash[encoding] = true;
     return hash;
   }, {});

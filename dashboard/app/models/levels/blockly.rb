@@ -117,7 +117,7 @@ class Blockly < Level
     super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
   end
 
-  before_save :update_contained_levels
+  before_validation :update_contained_levels
 
   def update_contained_levels
     contained_level_names = properties["contained_level_names"]

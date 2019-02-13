@@ -1,12 +1,12 @@
 import {TestResults} from '@cdo/apps/constants';
 export default {
-  app: "applab",
-  skinId: "applab",
-  levelFile: "levels",
-  levelId: "ec_simple",
+  app: 'applab',
+  skinId: 'applab',
+  levelFile: 'levels',
+  levelId: 'ec_simple',
   tests: [
     {
-      description: "old-sized app is scaled to new size",
+      description: 'old-sized app is scaled to new size',
       editCode: true,
       xml: '',
       startHtml: `
@@ -23,9 +23,12 @@ export default {
             "display: block; height: 480px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">
             </div>
           </div>`,
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         //Correct transform applied
-        assert.equal($('#phoneFrameWrapper').css('transform'), 'matrix(0.9375, 0, 0, 0.9375, 0, 0)');
+        assert.equal(
+          $('#phoneFrameWrapper').css('transform'),
+          'matrix(0.9375, 0, 0, 0.9375, 0, 0)'
+        );
 
         //Screens appear at correct height
         const screens = document.getElementsByClassName('screen');
@@ -33,7 +36,8 @@ export default {
           //If screen had original height of 0, expect no scaling
           if (screens[i].getBoundingClientRect().height === 0) {
             assert.equal(screens[i].getBoundingClientRect().height, 0);
-          } else { // Height has been scaled down correctly
+          } else {
+            // Height has been scaled down correctly
             assert.equal(screens[i].getBoundingClientRect().height, 450);
           }
         }
@@ -42,7 +46,10 @@ export default {
         const bases = document.getElementsByClassName('small-footer-base');
         for (let j = 0; j < bases.length; j++) {
           assert.equal(bases[j].getBoundingClientRect().width, 318.75);
-          assert.equal(bases[j].css('transform'), 'matrix(0.9375, 0, 0, 0, 0, 0)');
+          assert.equal(
+            bases[j].css('transform'),
+            'matrix(0.9375, 0, 0, 0, 0, 0)'
+          );
         }
 
         Applab.onPuzzleComplete();
@@ -53,7 +60,7 @@ export default {
       }
     },
     {
-      description: "new-sized app does not scale",
+      description: 'new-sized app does not scale',
       editCode: true,
       xml: '',
       startHtml: `
@@ -70,9 +77,12 @@ export default {
             "display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">
             </div>
           </div>`,
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         //Transform is not applied
-        assert.notEqual($('#phoneFrameWrapper').css('transform'), 'matrix(0.9375, 0, 0, 0.9375, 0, 0)');
+        assert.notEqual(
+          $('#phoneFrameWrapper').css('transform'),
+          'matrix(0.9375, 0, 0, 0.9375, 0, 0)'
+        );
 
         //Screens appear at correct height
         const screens = document.getElementsByClassName('screen');
@@ -80,7 +90,8 @@ export default {
           //If screen had original height of 0, expect no scaling
           if (screens[i].getBoundingClientRect().height === 0) {
             assert.equal(screens[i].getBoundingClientRect().height, 0);
-          } else { // Height has been scaled or not scaled correctly
+          } else {
+            // Height has been scaled or not scaled correctly
             assert.equal(screens[i].getBoundingClientRect().height, 450);
           }
         }
@@ -89,7 +100,10 @@ export default {
         const bases = document.getElementsByClassName('small-footer-base');
         for (let j = 0; j < bases.length; j++) {
           assert.notEqual(bases[j].getBoundingClientRect().width, 318.75);
-          assert.notEqual(bases[j].css('transform'), 'matrix(0.9375, 0, 0, 0, 0, 0)');
+          assert.notEqual(
+            bases[j].css('transform'),
+            'matrix(0.9375, 0, 0, 0, 0, 0)'
+          );
         }
 
         Applab.onPuzzleComplete();
@@ -98,6 +112,6 @@ export default {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    },
+    }
   ]
 };

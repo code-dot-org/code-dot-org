@@ -2,7 +2,10 @@ import $ from 'jquery';
 import clientState from '@cdo/apps/code-studio/clientState';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
-import loadAppOptions, {setupApp, setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import loadAppOptions, {
+  setupApp,
+  setAppOptions
+} from '@cdo/apps/code-studio/initApp/loadApp';
 import {files} from '@cdo/apps/clientApi';
 import * as imageUtils from '@cdo/apps/imageUtils';
 
@@ -15,24 +18,26 @@ describe('loadApp.js', () => {
 
   before(() => {
     oldAppOptions = window.appOptions;
-    sinon.stub(clientState, 'writeSourceForLevel').callsFake(
-        (scriptName, levelId, date, program) => {
-      writtenLevelId = levelId;
-    });
-    sinon.stub(clientState, 'sourceForLevel').callsFake(
-        (scriptName, levelId, timestamp) => {
-      readLevelId = levelId;
-      return OLD_CODE;
-    });
+    sinon
+      .stub(clientState, 'writeSourceForLevel')
+      .callsFake((scriptName, levelId, date, program) => {
+        writtenLevelId = levelId;
+      });
+    sinon
+      .stub(clientState, 'sourceForLevel')
+      .callsFake((scriptName, levelId, timestamp) => {
+        readLevelId = levelId;
+        return OLD_CODE;
+      });
     sinon.stub($, 'ajax').callsFake(() => {
       return {
         done() {
           return {
             fail(callback) {
               callback();
-            },
+            }
           };
-        },
+        }
       };
     });
   });
@@ -42,9 +47,9 @@ describe('loadApp.js', () => {
     appOptions = {
       level: {},
       report: {
-        callback: 'http://bogus.url/string',
+        callback: 'http://bogus.url/string'
       },
-      serverLevelId: SERVER_LEVEL_ID,
+      serverLevelId: SERVER_LEVEL_ID
     };
     setAppOptions(appOptions);
   });
@@ -85,7 +90,7 @@ describe('loadApp.js', () => {
     expect(writtenLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
   });
 
-  it('loads attempt stored under server level id', (done) => {
+  it('loads attempt stored under server level id', done => {
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
     document.body.appendChild(appOptionsData);
@@ -99,7 +104,7 @@ describe('loadApp.js', () => {
     });
   });
 
-  it('loads attempt stored under project server level id for template backed level', (done) => {
+  it('loads attempt stored under project server level id for template backed level', done => {
     appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
@@ -114,16 +119,18 @@ describe('loadApp.js', () => {
     });
   });
 
-  it('does not load a last attempt when viewing a solution', (done) => {
+  it('does not load a last attempt when viewing a solution', done => {
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
     document.body.appendChild(appOptionsData);
-    const queryParamsStub = sinon.stub(clientState, 'queryParams').callsFake((param) => {
-      if (param === 'solution') {
-        return 'true';
-      }
-      return undefined;
-    });
+    const queryParamsStub = sinon
+      .stub(clientState, 'queryParams')
+      .callsFake(param => {
+        if (param === 'solution') {
+          return 'true';
+        }
+        return undefined;
+      });
 
     loadAppOptions().then(() => {
       expect(window.appOptions.level.lastAttempt).to.be.undefined;
@@ -135,16 +142,18 @@ describe('loadApp.js', () => {
     });
   });
 
-  it('does not load a last attempt when viewing a student solution', (done) => {
+  it('does not load a last attempt when viewing a student solution', done => {
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
     document.body.appendChild(appOptionsData);
-    const queryParamsStub = sinon.stub(clientState, 'queryParams').callsFake((param) => {
-      if (param === 'user_id') {
-        return 'true';
-      }
-      return undefined;
-    });
+    const queryParamsStub = sinon
+      .stub(clientState, 'queryParams')
+      .callsFake(param => {
+        if (param === 'user_id') {
+          return 'true';
+        }
+        return undefined;
+      });
 
     loadAppOptions().then(() => {
       expect(window.appOptions.level.lastAttempt).to.be.undefined;
@@ -157,7 +166,8 @@ describe('loadApp.js', () => {
   });
 
   describe('project level share images', () => {
-    const BLANK_PNG_PIXEL = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+    const BLANK_PNG_PIXEL =
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
     beforeEach(() => {
       sinon.spy(imageUtils, 'dataURIToFramedBlob');
@@ -171,7 +181,7 @@ describe('loadApp.js', () => {
       imageUtils.dataURIToFramedBlob.restore();
     });
 
-    it('uploads a share image for a non-droplet project (instead of writing the level)', (done) => {
+    it('uploads a share image for a non-droplet project (instead of writing the level)', done => {
       files.putFile.callsFake((name, blob) => {
         expect(writtenLevelId).to.be.undefined;
         expect(name).to.equal('_share_image.png');
@@ -201,7 +211,9 @@ describe('loadApp.js', () => {
     // an image for sharing.
     it('does nothing if the provided report has no image', () => {
       setupApp(appOptions);
-      appOptions.onAttempt({/* No image in report */});
+      appOptions.onAttempt({
+        /* No image in report */
+      });
       expect(writtenLevelId).to.be.undefined;
       expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
       expect(files.putFile).not.to.have.been.called;

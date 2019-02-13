@@ -791,7 +791,7 @@ uk:
         text: посередині
       Vector_setSize:
         text: встановити ширину {WIDTH} висоту {HEIGHT}
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': розмір
@@ -804,6 +804,23 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      aalab_jumpTo:
+        text: "{SPRITE} стрибає до {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': коли
+            '"while"': поки
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
       aalab_whenTouching:
         options:
           CONDITION:

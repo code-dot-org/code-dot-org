@@ -1,23 +1,22 @@
 import {TestResults} from '@cdo/apps/constants';
 
-
 module.exports = {
-  app: "turtle",
-  levelFile: "levels",
-  levelId: "3_5",
+  app: 'turtle',
+  levelFile: 'levels',
+  levelId: '3_5',
   tests: [
     {
-      description: "Correct solution",
+      description: 'Correct solution',
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         '<block type="when_run" movable="false">' +
         '<next><block type="procedures_callnoreturn">' +
         '  <mutation name="draw a house"></mutation>' +
         '</block></next></block>' +
-
         '<block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">' +
         '  <mutation></mutation>' +
         '  <title name="NAME">draw a square</title>' +
@@ -44,7 +43,6 @@ module.exports = {
         '    </block>' +
         '  </statement>' +
         '</block>' +
-
         '<block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">' +
         '  <mutation></mutation>' +
         '  <title name="NAME">draw a triangle</title>' +
@@ -71,7 +69,6 @@ module.exports = {
         '    </block>' +
         '  </statement>' +
         '</block>' +
-
         '<block type="procedures_defnoreturn">' +
         '<mutation/>' +
         '<title name="NAME">draw a house</title>' +
@@ -105,8 +102,8 @@ module.exports = {
         '        </next>' +
         '    </block>' +
         '</statement>' +
-    '</block>' +
-    '</xml>'
+        '</block>' +
+        '</xml>'
     }
   ]
 };

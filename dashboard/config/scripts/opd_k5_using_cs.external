@@ -5,23 +5,23 @@ markdown <<MARKDOWN
 
 Let's take a look at how Code Studio works for you and your students in a classroom setting.
 
-## Step 1: Create a "section" or class
+## Step 1: Choose a course
+Check out our [elementary school page](https://code.org/educate/curriculum/elementary-school) and find the lesson plans and full courses for our CS Fundamentals A-F lesssons. Or, if you are interested in our middle school or high school courses you, 
+, you’ll find courses for all grade levels - from pre-readers to seniors in high school, and everyone in between. All our courses are available at no cost. Chat with colleagues at your school to determine how the course curriculum can be integrated with a variety of subjects. 
+ 
+## Step 2: Set up your classroom section
+Set up a classroom section to view your student’s progress, print login cards for your students, manage their accounts, and print certificates they can bring home when they finish the course. Click this link to [watch a brief video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b) demonstrates how to set up your first computer science class on Code.org. You can also find the steps in [this support article](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).
 
-This brief video demonstrates how to set up your first computer science class in Code Studio.
+## Step 3: Assign the course to your section
+Click into the course that you are teaching – you should see a screen that looks like the one below. You can then click "Assign Course" and assign that course to one of your sections. 
 
-<iframe width="640" height="390" src="https://www.youtube.com/embed/_smelV_KISE" frameborder="0" allowfullscreen></iframe>
+## Step 4: Start teaching! 
+All it takes is one lesson to bring computer science concepts into your classroom. Once you see your students enthusiasm for CS, go further with daily lesson plans to guide your students, unplugged activities you can do without a computer, and forums to connect to other teachers.
 
-**[Can't see the video? Click here.](https://www.dropbox.com/s/0sgaypn18fyjt4y/Setting%20up%20a%20class_1.mp4?dl=0)**
 
-## Step 2: Plan your instruction
 
-This brief video demonstrates how to use Code Studio to plan and prepare a computer science lesson in your classroom.
+MARKDOWN
 
-<iframe width="640" height="390" src="https://www.youtube.com/embed/ksklPa45Mcs" frameborder="0" allowfullscreen></iframe>
+teacher_markdown <<MARKDOWN
 
-**[Can't see the video? Click here.](https://www.dropbox.com/s/u1ve9r7mjy66de0/Getting%20ready%20to%20teach%20the%20class.mp4?dl=0)**
-
-* * *
-
-Now we'll look at how you use Code Studio during and after class.
 MARKDOWN

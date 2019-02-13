@@ -48,10 +48,10 @@
     "callout_json": "[]",
     "long_instructions": "Help Jorge the Dog get moving by connecting the <xml><block type=\"studio_move\">\r\n    <title name=\"SPRITE\">1</title>\r\n    <title name=\"DIR\">8</title>\r\n  </block></xml> block to the <xml><block type=\"studio_whenArrow\">\r\n    <title name=\"VALUE\">left</title>\r\n  </block></xml> event block that is already in the workspace.\r\n\r\nGet Jorge to the flag to finish this level!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Drag this block  <xml><block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">8</title>\\n  </block></xml> out and snap it to the bottom of <xml><block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">left</title>\\n  </block></xml>\",\"hint_id\":\"courseA_playLab_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ad00312e50a2b5a53fd3248c744f1123/courseA_playLab_events3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you've finished!\",\"hint_id\":\"courseA_playLab_events3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/36320e054b892a62c1fd9e33969af7f3/courseA_playLab_events3.mp3\"}]",
-    "tts_instructions_override": "Help Jorge the Dog get moving by connecting the move block to the when event block that is already in the workspace. Finish the level by getting Jorge to the flag!",
+    "tts_short_instructions_override": "Help Jorge the Dog get moving by connecting the move block to the when event block that is already in the workspace. Finish the level by getting Jorge to the flag!",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "Help Jorge the Dog get moving by connecting the move left block to the when left arrow pressed event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag to finish this level!",
+    "tts_long_instructions_override": "Help Jorge the Dog get moving by connecting the move left block to the when left arrow pressed event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag to finish this level!",
     "disable_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null

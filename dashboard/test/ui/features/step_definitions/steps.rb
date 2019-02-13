@@ -999,7 +999,8 @@ def generate_user(name)
   return email, password
 end
 
-def create_section_and_join_as_student(name, email, password)
+def create_section_and_join_as_student(name, email, password, u13 = false)
+  age = u13 ? 10 : 16
   individual_steps %Q{
     Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
@@ -1016,13 +1017,13 @@ def create_section_and_join_as_student(name, email, password)
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I select the "16" option in dropdown "user_age"
+    And I select the "#{age}" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/home"
   }
 end
 
-def generate_teacher_student(name, teacher_authorized)
+def generate_teacher_student(name, teacher_authorized, student_u13 = false)
   email, password = generate_user(name)
 
   steps %Q{
@@ -1032,7 +1033,7 @@ def generate_teacher_student(name, teacher_authorized)
   # enroll in a plc course as a way of becoming an authorized teacher
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
-  create_section_and_join_as_student(name, email, password)
+  create_section_and_join_as_student(name, email, password, student_u13)
 end
 
 def generate_two_teachers_per_student(name, teacher_authorized)
@@ -1126,6 +1127,10 @@ end
 
 And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   generate_teacher_student(name, false)
+end
+
+And(/^I create a teacher-associated under-13 student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, false, true)
 end
 
 And(/^I create two teachers associated with a student named "([^"]*)"$/) do |name|

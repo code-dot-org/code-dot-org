@@ -36,7 +36,7 @@
     "ideal": "13",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/8fc2cb860d7b70682430e766bdffee31-image-1478640373096.png\", \"position\": [0,0]}\r\n]",
-    "tts_instructions_override": "Challenge: It's a hidden garden! Let's walk around.",
+    "tts_short_instructions_override": "Challenge: It's a hidden garden! Let's walk around.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",

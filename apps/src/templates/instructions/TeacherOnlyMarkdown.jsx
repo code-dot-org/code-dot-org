@@ -1,12 +1,13 @@
 /* eslint-disable react/no-danger */
 
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import marked from 'marked';
-import renderer from "../../util/StylelessRenderer";
-import color from "../../util/color";
+import renderer from '../../util/StylelessRenderer';
+import color from '../../util/color';
 import i18n from '@cdo/locale';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const styles = {
   container: {
@@ -39,7 +40,7 @@ const TeacherOnlyMarkdown = ({content}) => {
       <div style={styles.header}>{i18n.forTeachersOnly()}</div>
       <div
         style={styles.content}
-        dangerouslySetInnerHTML={{ __html: marked(content, { renderer }) }}
+        dangerouslySetInnerHTML={{__html: marked(content, {renderer})}}
       />
     </div>
   );
@@ -49,6 +50,6 @@ TeacherOnlyMarkdown.propTypes = {
 };
 
 export default connect(state => ({
-  content: state.viewAs === ViewType.Teacher ?
-    state.instructions.teacherMarkdown : ''
+  content:
+    state.viewAs === ViewType.Teacher ? state.instructions.teacherMarkdown : ''
 }))(TeacherOnlyMarkdown);
