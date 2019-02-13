@@ -1,0 +1,26 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "setImmovable",
+    "blockText": "aalab set {SPRITE} collidable to {VAL}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "VAL",
+        "options": [
+          [
+            "true",
+            "\"true\""
+          ],
+          [
+            "false",
+            "\"false\""
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -34,6 +34,7 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
+var customText = [];
 var animationGroups = {};
 var thisSprite;
 var otherSprite;
@@ -491,6 +492,27 @@ function updateHUDText() {
     text(title, 200, 150);
     textSize(35);
     text(subTitle, 200, 250);
+  }
+  if (customText.length > 0) {
+  	customText.forEach(function(textObj) {
+      var txt = textObj.text;
+      var loc = textObj.location ? textObj.location : {x: 200, y: 200};
+      var size = textObj.size ? textObj.size : 35;
+      var color = textObj.color ? textObj.color : "black";
+      var duration = textObj.duration;
+      var timeStarted = textObj.timeStarted;
+      if(txt) {
+        var timeElapsed = new Date().getTime() - timeStarted;
+        if(duration > 0 && timeElapsed >= duration) {
+          customText.splice(customText.indexOf(textObj), 1);
+        } else {
+          fill(color);
+     	  textAlign(CENTER);
+          textSize(size);
+          text(txt, loc.x, loc.y);
+        }
+      }
+    });
   }
 }
 
