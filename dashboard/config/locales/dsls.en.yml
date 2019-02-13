@@ -9463,6 +9463,13 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
+      Post Survey Algebra MCQ:
+        'A binary question is defined as:': 'A binary question is defined as:'
+        A message which has two possible states: A message which has two possible states
+        A piece of information that is sent in pairs: A piece of information that is sent in pairs
+        A question which can be answered in only one of two possible ways: A question which can be answered in only one of two possible ways
+        'Multiple Choice: Sending Binary Messages': 'Multiple Choice: Sending Binary Messages'
+        Two questions which share the same answer: Two questions which share the same answer
       SG U3L03 - multiselect - properties of functions:
         'Choose Two: True Statements about Functions': 'Choose Two: True Statements about Functions'
         Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
@@ -14661,6 +14668,24 @@ en:
         If you DID NOT take the CS Principles AP exam, what was the main reason why not?: If you DID NOT take the CS Principles AP exam, what was the main reason why not?
         Not applicable. I DID take the exam: Not applicable. I DID take the exam
         Wasn't offered at my school: Wasn't offered at my school
+      csp-post-survey-algebra-mcq:
+        Agree: Agree
+        Disagree: Disagree
+        Have you taken Algebra 1 (first year Algebra)?: Have you taken Algebra 1 (first year Algebra)?
+        Have you taken Algebra 1 (first year algebra)?: Have you taken Algebra 1 (first year algebra)?
+        Have you taken Algebra I?: Have you taken Algebra I?
+        I am currently taking Algebra 1.: I am currently taking Algebra 1.
+        I am currently taking Algebra I.: I am currently taking Algebra I.
+        I am very good at school.: I am very good at school.
+        I have not yet taken Algebra 1.: I have not yet taken Algebra 1.
+        I have not yet taken Algebra I: I have not yet taken Algebra I
+        I have previously taken Algebra 1.: I have previously taken Algebra 1.
+        I have previously taken Algebra I: I have previously taken Algebra I
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q1:
         Agree: Agree
         Disagree: Disagree
