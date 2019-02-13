@@ -260,7 +260,7 @@ GameLab.prototype.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.responsiveEmbedded = true;
-  config.noHowItWorks = true;
+  config.noHowItWorks = config.droplet;
 
   config.shareWarningInfo = {
     hasDataAPIs: function() {
@@ -649,7 +649,7 @@ GameLab.prototype.startTickTimer = function() {
  */
 GameLab.prototype.resetHandler = function(ignore) {
   if (this.shouldAutoRunSetup) {
-    this.execute(false /* keepTicking */);
+    this.execute(false /* shouldLoop */);
   } else {
     this.reset();
   }
@@ -709,6 +709,7 @@ GameLab.prototype.rerunSetupCode = function() {
   ) {
     return;
   }
+  Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);
@@ -839,8 +840,15 @@ GameLab.prototype.runButtonClick = function() {
 
 /**
  * Execute the user's code.  Heaven help us...
+ * @param {boolean} shouldLoop - If true, runs user code in a loop. Otherwise,
+ * only executes once. Defaults to true.
  */
-GameLab.prototype.execute = function(keepTicking = true) {
+GameLab.prototype.execute = function(shouldLoop = true) {
+  if (shouldLoop) {
+    Sounds.getSingleton().unmuteURLs();
+  } else {
+    Sounds.getSingleton().muteURLs();
+  }
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -861,7 +869,7 @@ GameLab.prototype.execute = function(keepTicking = true) {
   }
 
   this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(keepTicking);
+  this.gameLabP5.setLoop(shouldLoop);
 
   if (
     !this.JSInterpreter ||
@@ -871,12 +879,12 @@ GameLab.prototype.execute = function(keepTicking = true) {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly() && keepTicking) {
+  if (this.studioApp_.isUsingBlockly() && shouldLoop) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  if (keepTicking) {
+  if (shouldLoop) {
     this.startTickTimer();
   }
 };

@@ -163,7 +163,7 @@ Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vS
 <%=
 link = "/educate/professional-learning/program-information"
 link += "?nominated=true" if params[:nominated]
-"<a href='#{link}'><button>Get started!</button></a>"
+"<a class='linktag' id='pl-get-started-link' href='#{link}'><button>Get started!</button></a>"
 %>
 
 <!--

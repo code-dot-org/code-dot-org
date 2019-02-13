@@ -6,3 +6,10 @@
 
 %p
   != I18n.t('pd.not_teacher.more', pl_overview: CDO.code_org_url('/educate/professional-learning'))
+
+:javascript
+  $(document).ready(function() {
+    // Report a unique page view to GA.
+    ga('set', 'page', '/pd/application/teacher/not_teacher');
+    ga('send', 'pageview');
+  });
