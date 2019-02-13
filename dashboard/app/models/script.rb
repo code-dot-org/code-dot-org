@@ -1004,7 +1004,8 @@ class Script < ActiveRecord::Base
 
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
-      is_stable: false
+      is_stable: false,
+      script_announcements: nil
     }
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
