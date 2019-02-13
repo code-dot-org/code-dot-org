@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import color from '../../util/color';
 
 const styles = {
@@ -24,17 +25,17 @@ const styles = {
     paddingBottom: 6,
     fontSize: 24,
     lineHeight: '18px',
-    fontFamily:'"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     zIndex: 2,
-    color: color.charcoal,
+    color: color.charcoal
   },
   subtitle: {
     paddingBottom: 12,
     fontSize: 14,
     lineHeight: '18px',
-    fontFamily:'"Gotham 4r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.charcoal,
+    color: color.charcoal
   },
   description: {
     paddingTop: 10,
@@ -43,8 +44,8 @@ const styles = {
     lineHeight: '18px',
     fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.charcoal,
-  },
+    color: color.charcoal
+  }
 };
 
 class LoginTypeCard extends Component {
@@ -53,24 +54,19 @@ class LoginTypeCard extends Component {
     subtitle: PropTypes.string,
     description: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
-    className: PropTypes.string,
+    className: PropTypes.string
   };
 
   state = {
-    hover: false,
+    hover: false
   };
 
   toggleHover = () => {
-    this.setState({ hover: !this.state.hover });
+    this.setState({hover: !this.state.hover});
   };
 
   render() {
-    const {
-      title,
-      subtitle,
-      description,
-      onClick,
-    } = this.props;
+    const {title, subtitle, description, onClick} = this.props;
 
     if (this.state.hover) {
       styles.card.borderColor = color.dark_charcoal;
@@ -93,17 +89,9 @@ class LoginTypeCard extends Component {
         className={this.props.className}
       >
         <div>
-          <div style={styles.title}>
-            {title}
-          </div>
-          {subtitle &&
-            <div style={styles.subtitle}>
-              {subtitle}
-            </div>
-          }
-          <div style={styles.description}>
-            {description}
-          </div>
+          <div style={styles.title}>{title}</div>
+          {subtitle && <div style={styles.subtitle}>{subtitle}</div>}
+          <div style={styles.description}>{description}</div>
         </div>
       </div>
     );

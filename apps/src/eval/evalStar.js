@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalStar = function (pointCount, inner, outer, style, color) {
+var EvalStar = function(pointCount, inner, outer, style, color) {
   evalUtils.ensureNumber(pointCount);
   evalUtils.ensureNumber(inner);
   evalUtils.ensureNumber(outer);
@@ -20,7 +20,7 @@ var EvalStar = function (pointCount, inner, outer, style, color) {
 EvalStar.inherits(EvalImage);
 module.exports = EvalStar;
 
-EvalStar.prototype.draw = function (parent) {
+EvalStar.prototype.draw = function(parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
     parent.appendChild(this.element_);
@@ -30,11 +30,16 @@ EvalStar.prototype.draw = function (parent) {
   var outerRadius = this.outer_;
   var innerRadius = this.inner_;
 
-  var angleDelta = 2 * Math.PI / this.pointCount_;
+  var angleDelta = (2 * Math.PI) / this.pointCount_;
   for (var angle = 0; angle < 2 * Math.PI; angle += angleDelta) {
-    points.push(outerRadius * Math.cos(angle) + "," + outerRadius * Math.sin(angle));
-    points.push(innerRadius * Math.cos(angle + angleDelta / 2) + "," +
-      innerRadius * Math.sin(angle + angleDelta / 2));
+    points.push(
+      outerRadius * Math.cos(angle) + ',' + outerRadius * Math.sin(angle)
+    );
+    points.push(
+      innerRadius * Math.cos(angle + angleDelta / 2) +
+        ',' +
+        innerRadius * Math.sin(angle + angleDelta / 2)
+    );
   }
 
   this.element_.setAttribute('points', points.join(' '));

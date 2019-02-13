@@ -806,4 +806,12 @@ EOS
     assert_equal contained_level_1_copy, level_2_copy.contained_levels.first
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
+
+  test 'contained_level_names filters blank names before validation' do
+    level = build :level
+    level.contained_level_names = ['', 'real_name']
+    assert_equal level.contained_level_names, ['', 'real_name']
+    level.valid?
+    assert_equal level.contained_level_names, ['real_name']
+  end
 end

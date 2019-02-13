@@ -32,7 +32,7 @@ Code.org&reg; is a nonprofit dedicated to expanding access to computer science i
 
 ## The majority of our students are girls or underrepresented minorities</h2>
 
-<img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" class ="col-95">
+<img src="/images/infographics/fit-700/diversity-courses-2018-web.png" class ="col-95">
 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. 
 
@@ -68,7 +68,7 @@ See all past [news and announcements](/about/news).
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled.                                                                    |
 | Prep new CS teachers | We've prepared 87,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
 | Change school district curriculum | We've partnered with [180 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a regional partner](/educate/districts).|
-| Set up policies to support CS | <a href="https://advocacy.code.org" target="_blank">Policies changed in 44 U.S. states</a> to establish CS education standards, make CS courses count towards high school graduation, etc. ([details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                          |
+| Set up policies to support CS | <a href="https://advocacy.code.org" target="_blank">Policies changed in 48 U.S. states</a> to establish CS education standards, make CS courses count towards high school graduation, etc. ([details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                          |
 | Go global | Our courses are available in over 50 languages, used in 180+ countries.                                                                                                                                                                                                                                           |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
 
@@ -83,7 +83,7 @@ To support our goal, we do work across the education spectrum: designing our own
 
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924).
 
-- [Code.org 2017 Annual Report](/about/2017) (Past reports: [2016](/about/2016), [2015](/about/2015), [2014](/about/2014))
+- [Code.org 2018 Annual Report](/about/2018) (Past reports: [2017](/about/2017), [2016](/about/2016), [2015](/about/2015), [2014](/about/2014))
 - [Our core values and messaging guidelines](/about/values)
 - [Our curriculum and pedagogy philosophy](/educate/curriculum/values)
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)

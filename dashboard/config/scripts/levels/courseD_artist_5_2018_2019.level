@@ -36,7 +36,7 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are switching your shapes, don't forget that you will need to switch their angles, too!\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3b95e3c26411da553d9bf666b29abfba/courseD_artist_5_2018.mp3\"}]",
     "long_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Try changing the shapes or the lengths of the lines to make this your own!\"_\r\n\r\n<br/>  \r\n\r\n**Inspiration:** You can change your drawing in any way you want, but here is an idea:\r\n\r\n- Try switching the types of shape in the middle of the snowflake with the one at the end of each line!",
     "project_template_level_name": "courseD_artist_Template_2018_2019",
-    "tts_markdown_instructions_override": "Be creative - draw whatever you'd like!",
+    "tts_long_instructions_override": "Be creative - draw whatever you'd like!",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 12597,
     "top_level_procedure_autopopulate": "false",

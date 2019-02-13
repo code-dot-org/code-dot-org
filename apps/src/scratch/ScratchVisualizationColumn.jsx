@@ -6,18 +6,15 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 const styles = {
   scratchStage: {
     width: 480,
-    height: 360,
-  },
+    height: 360
+  }
 };
 
 export default function ScratchVisualizationColumn() {
   return (
     <span>
       <ProtectedVisualizationDiv isResponsive={true}>
-        <canvas
-          id="scratch-stage"
-          style={styles.scratchStage}
-        />
+        <canvas id="scratch-stage" style={styles.scratchStage} />
       </ProtectedVisualizationDiv>
       <button id="green-flag">
         <img

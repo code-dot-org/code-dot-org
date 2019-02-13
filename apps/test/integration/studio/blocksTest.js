@@ -5,10 +5,10 @@ import blocksCommon from '@cdo/apps/blocksCommon';
 import blocks from '@cdo/apps/studio/blocks';
 import skins from '@cdo/apps/studio/skins';
 
-describe('Custom studio blocks', function () {
+describe('Custom studio blocks', function() {
   let studioApp, skin;
 
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
 
@@ -17,9 +17,11 @@ describe('Custom studio blocks', function () {
     blocks.install(Blockly, {skin});
   });
 
-  describe('spriteAndGroupCollide', function () {
-    it('defaults to witch', function () {
-      studioApp.loadBlocks('<xml><block type="studio_whenSpriteAndGroupCollide"></block></xml>');
+  describe('spriteAndGroupCollide', function() {
+    it('defaults to witch', function() {
+      studioApp.loadBlocks(
+        '<xml><block type="studio_whenSpriteAndGroupCollide"></block></xml>'
+      );
       assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
 
       var block = Blockly.mainBlockSpace.getAllBlocks()[0];
@@ -29,12 +31,14 @@ describe('Custom studio blocks', function () {
       assert(lastTitle.getText().indexOf('witch') !== -1);
     });
 
-    it('updates text to match custom SPRITENAME', function () {
-      studioApp.loadBlocks('<xml>' +
-        '<block type="studio_whenSpriteAndGroupCollide">' +
+    it('updates text to match custom SPRITENAME', function() {
+      studioApp.loadBlocks(
+        '<xml>' +
+          '<block type="studio_whenSpriteAndGroupCollide">' +
           '<title name="SPRITENAME">"dinosaur"</title>' +
-        '</block>' +
-      '</xml>');
+          '</block>' +
+          '</xml>'
+      );
       assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
 
       var block = Blockly.mainBlockSpace.getAllBlocks()[0];
@@ -45,8 +49,8 @@ describe('Custom studio blocks', function () {
     });
   });
 
-  describe('conditional block code generation', function () {
-    it('generates code for the if branch', function () {
+  describe('conditional block code generation', function() {
+    it('generates code for the if branch', function() {
       const xml = parseElement(`<block type="studio_ifActorIsSprite">
           <title name="SPRITE">0</title>
           <title name="VALUE">"hidden"</title>
@@ -67,7 +71,7 @@ describe('Custom studio blocks', function () {
       assert.include(code, 'Studio.setSprite');
     });
 
-    it('generates code for the else branch', function () {
+    it('generates code for the else branch', function() {
       const xml = parseElement(`<xml>
           <block type="when_run">
             <next>

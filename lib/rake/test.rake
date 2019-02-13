@@ -5,6 +5,7 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
 
@@ -74,10 +75,15 @@ namespace :test do
     end
   end
 
+  desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
+  task :lighthouse do
+    Lighthouse.report CDO.studio_url('', CDO.default_scheme)
+  end
+
   # Run the eyes tests and ui test suites in parallel. If one of these suites
   # raises, allow the other suite to complete, then make sure this task raises.
   task :ui_all do
-    Parallel.each([:eyes_ui, :regular_ui], in_threads: 2) do |target|
+    Parallel.each([:eyes_ui, :regular_ui, :lighthouse], in_threads: 3) do |target|
       Rake::Task["test:#{target}"].invoke
     end
   end

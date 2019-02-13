@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
-import color from "../../util/color";
+import color from '../../util/color';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -13,9 +13,9 @@ export function rgb2hex(rgb) {
     return rgb;
   }
   function hex(x) {
-    return ("0" + parseInt(x).toString(16)).slice(-2);
+    return ('0' + parseInt(x).toString(16)).slice(-2);
   }
-  return "#" + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
+  return '#' + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
 }
 
 /**
@@ -55,7 +55,13 @@ export function setId(element, value, prefix) {
  */
 function checkId(element, prefix) {
   if (element.id.substr(0, prefix.length) !== prefix) {
-    throw new Error('element.id "' + element.id + '" does not start with prefix "' + prefix + '".');
+    throw new Error(
+      'element.id "' +
+        element.id +
+        '" does not start with prefix "' +
+        prefix +
+        '".'
+    );
   }
 }
 
@@ -147,7 +153,10 @@ export function isIdAvailable(newId, options) {
 
   // Don't allow elements with the "design_" prefix, unless
   // options.allowDesignPrefix is specified.
-  if (!options.allowDesignPrefix && newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0) {
+  if (
+    !options.allowDesignPrefix &&
+    newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0
+  ) {
     return false;
   }
 
@@ -193,14 +202,15 @@ export function getDefaultScreenId() {
  *     styles, even if current styles already exist. Default: false
  */
 export function setDefaultBorderStyles(element, options = {}) {
-  const { textInput, forceDefaults } = options;
+  const {textInput, forceDefaults} = options;
   element.style.borderStyle = 'solid';
   if (forceDefaults || element.style.borderWidth === '') {
     element.style.borderWidth = textInput ? '1px' : '0px';
   }
   if (forceDefaults || element.style.borderColor === '') {
-    element.style.borderColor =
-    textInput ? color.text_input_default_border_color : color.black;
+    element.style.borderColor = textInput
+      ? color.text_input_default_border_color
+      : color.black;
   }
   if (forceDefaults || element.style.borderRadius === '') {
     element.style.borderRadius = '0px';

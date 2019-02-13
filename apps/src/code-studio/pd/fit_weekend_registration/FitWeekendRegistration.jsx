@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 import FormController from '../form_components/FormController';
 
 import Joining from './Joining';
@@ -15,7 +15,7 @@ export default class FitWeekendRegistration extends FormController {
     email: PropTypes.string.isRequired,
     firstName: PropTypes.string,
     lastName: PropTypes.string,
-    phone: PropTypes.string,
+    phone: PropTypes.string
   };
 
   constructor(props) {
@@ -33,22 +33,16 @@ export default class FitWeekendRegistration extends FormController {
     };
   }
 
-  static sessionStorageKey = "FitWeekendRegistration";
+  static sessionStorageKey = 'FitWeekendRegistration';
 
   /**
    * @override
    */
   getPageComponents() {
     if (this.state.data.ableToAttend === 'No') {
-      return [
-        Joining
-      ];
+      return [Joining];
     } else {
-      return [
-        Joining,
-        TravelPlans,
-        Releases
-      ];
+      return [Joining, TravelPlans, Releases];
     }
   }
 
@@ -64,7 +58,7 @@ export default class FitWeekendRegistration extends FormController {
       email: this.props.email,
       firstName: this.props.firstName,
       lastName: this.props.lastName,
-      phone: this.props.phone,
+      phone: this.props.phone
     };
   }
 
@@ -90,7 +84,6 @@ export default class FitWeekendRegistration extends FormController {
    * @override
    */
   shouldShowSubmit() {
-    return super.shouldShowSubmit() ||
-        this.state.data.ableToAttend === "No";
+    return super.shouldShowSubmit() || this.state.data.ableToAttend === 'No';
   }
 }

@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -38,7 +39,9 @@ class LabelProperties extends React.Component {
         <PropertyRow
           desc={'width (px)'}
           isNumber
-          lockState={$(element).data('lock-width') || PropertyRow.LockState.UNLOCKED}
+          lockState={
+            $(element).data('lock-width') || PropertyRow.LockState.UNLOCKED
+          }
           handleLockChange={this.props.handleChange.bind(this, 'lock-width')}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
@@ -46,7 +49,9 @@ class LabelProperties extends React.Component {
         <PropertyRow
           desc={'height (px)'}
           isNumber
-          lockState={$(element).data('lock-height') || PropertyRow.LockState.UNLOCKED}
+          lockState={
+            $(element).data('lock-height') || PropertyRow.LockState.UNLOCKED
+          }
           handleLockChange={this.props.handleChange.bind(this, 'lock-height')}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
@@ -82,14 +87,23 @@ class LabelProperties extends React.Component {
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'left'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BorderProperties
           element={element}
-          handleBorderWidthChange={this.props.handleChange.bind(this, 'borderWidth')}
-          handleBorderColorChange={this.props.handleChange.bind(this, 'borderColor')}
-          handleBorderRadiusChange={this.props.handleChange.bind(this, 'borderRadius')}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -100,7 +114,8 @@ class LabelProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
 
     // TODO:
     // bold/italics/underline (p2)
@@ -119,8 +134,12 @@ class LabelEvents extends React.Component {
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked!");\n' +
       '});\n';
     return code;
   }
@@ -132,7 +151,8 @@ class LabelEvents extends React.Component {
   render() {
     const element = this.props.element;
     const clickName = 'Click';
-    const clickDesc = 'Triggered when the label is clicked with a mouse or tapped on a screen.';
+    const clickDesc =
+      'Triggered when the label is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -142,7 +162,7 @@ class LabelEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={clickName}
           desc={clickDesc}
@@ -164,7 +184,7 @@ export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('label');
     element.style.margin = '0px';
     element.style.padding = '2px';
@@ -176,18 +196,18 @@ export default {
     element.style.color = '#333333';
     element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    elementUtils.setDefaultBorderStyles(element, { forceDefaults: true });
+    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
 
     this.resizeToFitText(element);
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
   },
 
-  getCurrentSize: function (element) {
+  getCurrentSize: function(element) {
     return {
       width: parseInt(element.style.width, 10),
       height: parseInt(element.style.height, 10)
@@ -198,12 +218,14 @@ export default {
    * @returns {{width: number, height: number}} Size that this element should be if it were fitted exactly. If there is
    * no text, then the best size is 15 x 15 so that the user has something to drag around.
    */
-  getBestSize: function (element) {
+  getBestSize: function(element) {
     // Start by assuming best fit is current size
     const size = this.getCurrentSize(element);
 
-    const widthLocked = $(element).data('lock-width') === PropertyRow.LockState.LOCKED;
-    const heightLocked = $(element).data('lock-height') === PropertyRow.LockState.LOCKED;
+    const widthLocked =
+      $(element).data('lock-width') === PropertyRow.LockState.LOCKED;
+    const heightLocked =
+      $(element).data('lock-height') === PropertyRow.LockState.LOCKED;
 
     // Change the size to fit the text.
     if (element.textContent) {
@@ -220,13 +242,16 @@ export default {
           maxWidth = applabConstants.APP_WIDTH - left;
         }
       }
-      const clone = $(element).clone().css({
-        position: 'absolute',
-        visibility: 'hidden',
-        width: 'auto',
-        height: 'auto',
-        maxWidth: maxWidth + 'px',
-      }).appendTo($(document.body));
+      const clone = $(element)
+        .clone()
+        .css({
+          position: 'absolute',
+          visibility: 'hidden',
+          width: 'auto',
+          height: 'auto',
+          maxWidth: maxWidth + 'px'
+        })
+        .appendTo($(document.body));
 
       const padding = parseInt(element.style.padding, 10);
 
@@ -246,11 +271,14 @@ export default {
     return size;
   },
 
-  resizeToFitText: function (element) {
+  resizeToFitText: function(element) {
     const size = this.getBestSize(element);
 
     // For center or right alignment, we should adjust the left side to effectively retain that alignment.
-    if (element.style.textAlign === 'center' || element.style.textAlign === 'right') {
+    if (
+      element.style.textAlign === 'center' ||
+      element.style.textAlign === 'right'
+    ) {
       let left = parseInt(element.style.left, 10);
       const width = parseInt(element.style.width, 10);
       // Positive delta means that it is getting wider
@@ -274,20 +302,22 @@ export default {
   /**
    * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
    */
-  beforePropertyChange: function (element, name) {
+  beforePropertyChange: function(element, name) {
     if (name !== 'text' && name !== 'fontSize') {
       return null;
     }
     const currentSize = this.getCurrentSize(element);
     const bestSize = this.getBestSize(element);
-    return Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
-        Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
+    return (
+      Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
+      Math.abs(currentSize.height - bestSize.height) < STILL_FITS
+    );
   },
 
   /**
    * @returns {boolean} True if it modified the backing element
    */
-  onPropertyChange: function (element, name, value, previouslyFitExactly) {
+  onPropertyChange: function(element, name, value, previouslyFitExactly) {
     switch (name) {
       case 'text':
       case 'fontSize':

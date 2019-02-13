@@ -1,25 +1,23 @@
 /**
  * New workshop enrollment page
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';
 import EnrollForm from './enroll_form';
-import {
-  WorkshopPropType,
-  FacilitatorPropType
-} from './enrollmentConstants';
+import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 
 const SUBMISSION_STATUSES = {
-  UNSUBMITTED: "unsubmitted",
-  DUPLICATE: "duplicate",
-  OWN: "own",
-  CLOSED: "closed",
-  FULL: "full",
-  NOT_FOUND: "not found",
-  SUCCESS: "success",
-  UNKNOWN_ERROR: "error"
+  UNSUBMITTED: 'unsubmitted',
+  DUPLICATE: 'duplicate',
+  OWN: 'own',
+  CLOSED: 'closed',
+  FULL: 'full',
+  NOT_FOUND: 'not found',
+  SUCCESS: 'success',
+  UNKNOWN_ERROR: 'error'
 };
 
 export default class WorkshopEnrollment extends React.Component {
@@ -42,35 +40,39 @@ export default class WorkshopEnrollment extends React.Component {
     super(props);
 
     this.state = {
-      workshopEnrollmentStatus: this.props.workshop_enrollment_status || SUBMISSION_STATUSES.UNSUBMITTED
+      workshopEnrollmentStatus:
+        this.props.workshop_enrollment_status || SUBMISSION_STATUSES.UNSUBMITTED
     };
   }
 
-  onSubmissionComplete = (result) => {
+  onSubmissionComplete = result => {
     if (result.responseJSON) {
       this.setState({
-        workshopEnrollmentStatus: result.responseJSON.workshop_enrollment_status,
+        workshopEnrollmentStatus:
+          result.responseJSON.workshop_enrollment_status,
         cancelUrl: result.responseJSON.cancel_url,
         accountExists: result.responseJSON.account_exists,
         signUpUrl: result.responseJSON.sign_up_url,
         workshopUrl: result.responseJSON.workshop_url
       });
     } else {
-      this.setState({workshopEnrollmentStatus: SUBMISSION_STATUSES.UNKNOWN_ERROR});
+      this.setState({
+        workshopEnrollmentStatus: SUBMISSION_STATUSES.UNKNOWN_ERROR
+      });
     }
   };
 
   renderDuplicate() {
     return (
       <div>
-        <h1>
-          Thank you for registering
-        </h1>
+        <h1>Thank you for registering</h1>
         <p>
-          You are already registered, and should have received a confirmation email.
+          You are already registered, and should have received a confirmation
+          email.
         </p>
         <p>
-          If you need to cancel, click <a href={this.state.cancelUrl}>{this.state.cancelUrl}</a>
+          If you need to cancel, click{' '}
+          <a href={this.state.cancelUrl}>{this.state.cancelUrl}</a>
         </p>
       </div>
     );
@@ -80,7 +82,8 @@ export default class WorkshopEnrollment extends React.Component {
     return (
       <div>
         <p>
-          You are attempting to join your own <a href={this.state.workshopUrl}>workshop.</a>
+          You are attempting to join your own{' '}
+          <a href={this.state.workshopUrl}>workshop.</a>
         </p>
       </div>
     );
@@ -89,11 +92,12 @@ export default class WorkshopEnrollment extends React.Component {
   renderFull() {
     return (
       <div>
+        <p>Sorry, this workshop is full.</p>
         <p>
-          Sorry, this workshop is full.
-        </p>
-        <p>
-          For more information, please contact the organizer: <a href={`mailto:${this.props.workshop.organizer.email}`}>{this.props.workshop.organizer.email}</a>
+          For more information, please contact the organizer:{' '}
+          <a href={`mailto:${this.props.workshop.organizer.email}`}>
+            {this.props.workshop.organizer.email}
+          </a>
         </p>
       </div>
     );
@@ -102,11 +106,12 @@ export default class WorkshopEnrollment extends React.Component {
   renderClosed() {
     return (
       <div>
+        <p>Sorry, this workshop is closed.</p>
         <p>
-          Sorry, this workshop is closed.
-        </p>
-        <p>
-          For more information, please contact the organizer: <a href={`mailto:${this.props.workshop.organizer.email}`}>{this.props.workshop.organizer.email}</a>
+          For more information, please contact the organizer:{' '}
+          <a href={`mailto:${this.props.workshop.organizer.email}`}>
+            {this.props.workshop.organizer.email}
+          </a>
         </p>
       </div>
     );
@@ -115,9 +120,7 @@ export default class WorkshopEnrollment extends React.Component {
   renderNotFound() {
     return (
       <div>
-        <p>
-          Sorry, this workshop could not be found.
-        </p>
+        <p>Sorry, this workshop could not be found.</p>
       </div>
     );
   }
@@ -126,8 +129,9 @@ export default class WorkshopEnrollment extends React.Component {
     return (
       <div>
         <p>
-          Sorry, an error occurred and we were unable to enroll you in this workshop.
-          Please contact <a href="mailto:support@code.org">support@code.org</a>.
+          Sorry, an error occurred and we were unable to enroll you in this
+          workshop. Please contact{' '}
+          <a href="mailto:support@code.org">support@code.org</a>.
         </p>
       </div>
     );
@@ -136,38 +140,33 @@ export default class WorkshopEnrollment extends React.Component {
   renderSuccess() {
     return (
       <div>
-        <h1>
-          Thank you for registering
-        </h1>
+        <h1>Thank you for registering</h1>
         <p>
-          You will receive a confirmation email. If you have any questions or need to
-          request special accommodations, please reach out directly to the workshop
-          organizer: {this.props.workshop.organizer.name} at {this.props.workshop.organizer.email}.
+          You will receive a confirmation email. If you have any questions or
+          need to request special accommodations, please reach out directly to
+          the workshop organizer: {this.props.workshop.organizer.name} at{' '}
+          {this.props.workshop.organizer.email}.
         </p>
         <p>
           If you need to cancel, click <a href={this.state.cancelUrl}>here</a>.
         </p>
-        <br/>
-        {!this.state.accountExists &&
+        <br />
+        {!this.state.accountExists && (
           <div>
-            <h1>
-              Get a Head Start: Create Your Code.org Account
-            </h1>
+            <h1>Get a Head Start: Create Your Code.org Account</h1>
             <p>
-              If you don’t have a Code.org account yet, click below
-              to create one. You'll need a Code.org account on the day of the workshop.
-              You'll use this account to manage your students and view their progress
-              when you start teaching, so be sure to use the email you'll use when you
-              teach.
+              If you don’t have a Code.org account yet, click below to create
+              one. You'll need a Code.org account on the day of the workshop.
+              You'll use this account to manage your students and view their
+              progress when you start teaching, so be sure to use the email
+              you'll use when you teach.
             </p>
 
             <a href={this.state.signUpUrl}>
-              <button className="primary">
-                Create account now
-              </button>
+              <button className="primary">Create account now</button>
             </a>
           </div>
-        }
+        )}
       </div>
     );
   }
@@ -177,17 +176,16 @@ export default class WorkshopEnrollment extends React.Component {
       case SUBMISSION_STATUSES.UNSUBMITTED:
         return (
           <div>
-            <h1>
-              {`Register for a ${this.props.workshop.course} workshop`}
-            </h1>
+            <h1>{`Register for a ${this.props.workshop.course} workshop`}</h1>
             <p>
-              Taught by Code.org facilitators who are experienced computer science educators,
-              our workshops will prepare you to teach the Code.org curriculum.
+              Taught by Code.org facilitators who are experienced computer
+              science educators, our workshops will prepare you to teach the
+              Code.org curriculum.
             </p>
             <div className="container">
               <div className="row">
                 {/* Left Column */}
-                <div className ="span6">
+                <div className="span6">
                   <WorkshopDetails
                     workshop={this.props.workshop}
                     session_dates={this.props.session_dates}
@@ -201,23 +199,25 @@ export default class WorkshopEnrollment extends React.Component {
                   ))}
                 </div>
                 {/* Right Column */}
-                <div className ="span6">
+                <div className="span6">
                   <div className="row">
-                    <div className ="span6">
+                    <div className="span6">
                       <h2>Your Information</h2>
-                      {
-                        !this.props.enrollment.email &&
+                      {!this.props.enrollment.email && (
                         <SignInPrompt
                           info_icon={this.props.sign_in_prompt_data.info_icon}
-                          sign_in_url={this.props.sign_in_prompt_data.sign_in_url}
+                          sign_in_url={
+                            this.props.sign_in_prompt_data.sign_in_url
+                          }
                         />
-                      }
+                      )}
                       <EnrollForm
                         workshop_id={this.props.workshop.id}
                         workshop_course={this.props.workshop.course}
                         first_name={this.props.enrollment.first_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
+                        workshop_subject={this.props.workshop.subject}
                       />
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import OptionsSelectRow from './OptionsSelectRow';
@@ -7,7 +8,7 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import color from "../../util/color";
+import color from '../../util/color';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
@@ -84,14 +85,23 @@ class DropdownProperties extends React.Component {
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'center'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BorderProperties
           element={element}
-          handleBorderWidthChange={this.props.handleChange.bind(this, 'borderWidth')}
-          handleBorderColorChange={this.props.handleChange.bind(this, 'borderColor')}
-          handleBorderRadiusChange={this.props.handleChange.bind(this, 'borderRadius')}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -102,7 +112,8 @@ class DropdownProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
 
     // TODO:
     // bold/italics/underline (p2)
@@ -121,8 +132,12 @@ class DropdownEvents extends React.Component {
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Selected option: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("Selected option: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -134,7 +149,8 @@ class DropdownEvents extends React.Component {
   render() {
     const element = this.props.element;
     const changeName = 'Change';
-    const changeDesc = 'Triggered every time an option is selected from the dropdown.';
+    const changeDesc =
+      'Triggered every time an option is selected from the dropdown.';
 
     return (
       <div id="eventRowContainer">
@@ -144,7 +160,7 @@ class DropdownEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -159,7 +175,7 @@ export default {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
@@ -167,7 +183,7 @@ export default {
     element.style.margin = '0';
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
-    elementUtils.setDefaultBorderStyles(element, { forceDefaults: true });
+    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -180,12 +196,12 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
 
     // In the future we may want to trigger this on focus events as well.
-    $(element).on('mousedown', function (e) {
+    $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable dropdown menu unless running
         e.preventDefault();
@@ -195,7 +211,7 @@ export default {
     });
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'value':
         element.value = value;
@@ -213,7 +229,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'value':
         return element.value;

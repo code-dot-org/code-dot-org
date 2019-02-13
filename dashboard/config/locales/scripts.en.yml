@@ -9707,6 +9707,16 @@ en:
               name: Hannah's Test Stage
             Hannah Test Stage:
               name: Hannah Test Stage
+            U4 L02 Variables Investigate:
+              name: U4 L02 Variables Investigate
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Explore:
+              name: Variables Explore
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -10080,6 +10090,8 @@ en:
               name: End of Course Project
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
+            About Me:
+              name: About Me
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -10434,6 +10446,10 @@ en:
               name: Create a Design with Loops
             'End of Course Project: Create a Play Lab Game':
               name: 'End of Course Project: Create a Play Lab Game'
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -10576,6 +10592,10 @@ en:
               name: Events in Play Lab
               description_student: ''
               description_teacher: ''
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+            The Right App:
+              name: The Right App
         pre-express-2019:
           title: Pre-reader Express (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.

@@ -3,10 +3,13 @@ import $ from 'jquery';
 import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
-import { getResult } from './codeStudioLevels';
+import {getResult} from './codeStudioLevels';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import Sounds from '../../Sounds';
-import { ErrorDialog, SuccessDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {
+  ErrorDialog,
+  SuccessDialog
+} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
 /*
@@ -35,17 +38,21 @@ export function showDialog(component, callback, onHidden) {
   // adding click handlers via jquery is very much not ideal.
 
   // Clicking the okay button in the dialog box dismisses it, and calls the callback.
-  $(content).find("#ok-button").click(function () {
-    dialog.hide();
-    if (callback) {
-      callback();
-    }
-  });
+  $(content)
+    .find('#ok-button')
+    .click(function() {
+      dialog.hide();
+      if (callback) {
+        callback();
+      }
+    });
 
   // Clicking the cancel button in the dialog box dismisses it.
-  $(content).find("#cancel-button").click(function () {
-    dialog.hide();
-  });
+  $(content)
+    .find('#cancel-button')
+    .click(function() {
+      dialog.hide();
+    });
 
   dialog.show();
   return dialog;
@@ -62,9 +69,12 @@ function adjustScroll() {
   var elPos = el.offset().top + el.height() - 10;
 
   if (winPos < elPos) {
-    $('html, body').animate({
-      scrollTop: $(".submitButton:first").offset().top - 10
-    }, 1000);
+    $('html, body').animate(
+      {
+        scrollTop: $('.submitButton:first').offset().top - 10
+      },
+      1000
+    );
   }
 
   adjustedScroll = true;
@@ -93,7 +103,7 @@ export function processResults(onComplete, beforeHook) {
     var response = results.response;
     var result = results.result;
     var errorDialog = results.errorDialog;
-    var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
+    var testResult = results.testResult ? results.testResult : result ? 100 : 0;
     var submitted = results.submitted || false;
 
     if (!result) {
@@ -105,7 +115,7 @@ export function processResults(onComplete, beforeHook) {
         // In this case, errorDialog should be an instance of a React class.
         showDialog(errorDialog);
       } else {
-        showDialog(<ErrorDialog/>, null, adjustScroll);
+        showDialog(<ErrorDialog />, null, adjustScroll);
       }
 
       if (!appOptions.dialog.skipSound) {
@@ -127,7 +137,7 @@ export function processResults(onComplete, beforeHook) {
       pass: result,
       testResult: testResult,
       submitted: submitted,
-      onComplete: function () {
+      onComplete: function() {
         var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;
         if (onComplete) {
@@ -139,11 +149,15 @@ export function processResults(onComplete, beforeHook) {
         } else if (lastServerResponse.endOfStageExperience) {
           const body = document.createElement('div');
           const stageInfo = lastServerResponse.previousStageInfo;
-          const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+          const stageName = `${window.dashboard.i18n.t('stage')} ${
+            stageInfo.position
+          }: ${stageInfo.name}`;
           ReactDOM.render(
             <PlayZone
               stageName={stageName}
-              onContinue={() => { dialog.hide(); }}
+              onContinue={() => {
+                dialog.hide();
+              }}
             />,
             body
           );
@@ -202,7 +216,5 @@ export function getSuccessDialog(appOptions) {
     body = i18n.correctAnswer();
   }
 
-  return (
-    <SuccessDialog title={title} body={body}/>
-  );
+  return <SuccessDialog title={title} body={body} />;
 }

@@ -21,7 +21,7 @@ const options = {
   covered_crates_2a: 0x240000,
   covered_crates_2b: 0x250000,
   covered_crates_3a: 0x340000,
-  covered_crates_3b: 0x350000,
+  covered_crates_3b: 0x350000
 };
 
 const startDirections = {
@@ -29,7 +29,7 @@ const startDirections = {
   East: Direction.EAST,
   West: Direction.WEST,
   North: Direction.NORTH,
-  South: Direction.SOUTH,
+  South: Direction.SOUTH
 };
 
 export default class StarWarsGridCellEditor extends CellEditor {
@@ -41,8 +41,8 @@ export default class StarWarsGridCellEditor extends CellEditor {
     const direction = this.direction ? +this.direction.value : undefined;
 
     this.props.onUpdate({
-      tileType: zoom << WallTypeShift | this.type.value,
-      direction: direction,
+      tileType: (zoom << WallTypeShift) | this.type.value,
+      direction: direction
     });
   }
 
@@ -57,47 +57,59 @@ export default class StarWarsGridCellEditor extends CellEditor {
       <form className="span4 offset1">
         <img src={tileGuide} />
         <header>
-          <strong>Editing Cell ({this.props.row}, {this.props.col})</strong>
+          <strong>
+            Editing Cell ({this.props.row}, {this.props.col})
+          </strong>
         </header>
 
         <label htmlFor="tileType">Tile Type (required):</label>
         <select
-          ref={c => { this.type = c; }}
+          ref={c => {
+            this.type = c;
+          }}
           name="tileType"
           value={type}
           onChange={this.handleChange}
         >
           {Object.entries(options).map(([name, value]) => (
-            <option value={value} key={value}>{name}</option>
+            <option value={value} key={value}>
+              {name}
+            </option>
           ))}
         </select>
-        {type > 0xFFFF &&
+        {type > 0xffff && (
           <span>
             <label htmlFor="zoom">Double size:</label>
             <input
-              ref={c => { this.zoom = c; }}
+              ref={c => {
+                this.zoom = c;
+              }}
               name="zoom"
               type="checkbox"
               checked={zoom}
               onChange={this.handleChange}
             />
           </span>
-        }
-        {type === SquareType.SPRITESTART &&
+        )}
+        {type === SquareType.SPRITESTART && (
           <span>
             <label htmlFor="direction">Start direction:</label>
             <select
-              ref={c => { this.direction = c; }}
+              ref={c => {
+                this.direction = c;
+              }}
               name="direction"
               value={this.props.cell.direction_}
               onChange={this.handleChange}
             >
               {Object.entries(startDirections).map(([name, value]) => (
-                <option value={value} key={value}>{name}</option>
+                <option value={value} key={value}>
+                  {name}
+                </option>
               ))}
             </select>
           </span>
-        }
+        )}
       </form>
     );
   }

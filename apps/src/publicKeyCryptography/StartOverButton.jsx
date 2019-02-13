@@ -1,5 +1,6 @@
 /** @file Start Over button used in crypto widget */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
 import Dialog from '../templates/Dialog';
 
@@ -22,10 +23,7 @@ export default class StartOverButton extends React.Component {
   render() {
     return (
       <span>
-        <button
-          className="btn btn-info pull-right"
-          onClick={this.confirm}
-        >
+        <button className="btn btn-info pull-right" onClick={this.confirm}>
           {i18n.clearPuzzle()}
         </button>
         <Dialog

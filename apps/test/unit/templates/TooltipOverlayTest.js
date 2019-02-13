@@ -1,5 +1,5 @@
 import {expect} from '../../util/configuredChai';
-import {mount,shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import React from 'react';
 import TooltipOverlay, {
   textProvider,
@@ -12,31 +12,65 @@ import TooltipOverlay, {
 } from '@cdo/apps/templates/TooltipOverlay';
 
 describe('TooltipOverlay', () => {
-  const TEST_APP_WIDTH = 300, TEST_APP_HEIGHT = 200;
+  const TEST_APP_WIDTH = 300,
+    TEST_APP_HEIGHT = 200;
   const FAKE_TOOLTIP_TEXT = 'fake-text';
   const FAKE_TOOLTIP_PROVIDER = textProvider(FAKE_TOOLTIP_TEXT);
 
   it('renders null if mouse is out of bounds', () => {
-    expect(shallowRender(-1, 0, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(0);
-    expect(shallowRender(0, -1, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(0);
-    expect(shallowRender(TEST_APP_WIDTH + 1, TEST_APP_HEIGHT, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(0);
-    expect(shallowRender(TEST_APP_WIDTH, TEST_APP_HEIGHT + 1, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(0);
+    expect(
+      shallowRender(-1, 0, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')
+    ).to.have.lengthOf(0);
+    expect(
+      shallowRender(0, -1, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')
+    ).to.have.lengthOf(0);
+    expect(
+      shallowRender(TEST_APP_WIDTH + 1, TEST_APP_HEIGHT, [
+        FAKE_TOOLTIP_PROVIDER
+      ]).find('.tooltip-overlay')
+    ).to.have.lengthOf(0);
+    expect(
+      shallowRender(TEST_APP_WIDTH, TEST_APP_HEIGHT + 1, [
+        FAKE_TOOLTIP_PROVIDER
+      ]).find('.tooltip-overlay')
+    ).to.have.lengthOf(0);
   });
 
   it('renders null if no providers are given', () => {
-    expect(shallowRender(0, 0, null).find('.tooltip-overlay')).to.have.lengthOf(0);
-    expect(shallowRender(0, 0, []).find('.tooltip-overlay')).to.have.lengthOf(0);
+    expect(shallowRender(0, 0, null).find('.tooltip-overlay')).to.have.lengthOf(
+      0
+    );
+    expect(shallowRender(0, 0, []).find('.tooltip-overlay')).to.have.lengthOf(
+      0
+    );
   });
 
   it('renders tooltip if mouse is in bounds', () => {
-    expect(shallowRender(0, 0, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(1);
-    expect(shallowRender(TEST_APP_WIDTH, 0, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(1);
-    expect(shallowRender(0, TEST_APP_HEIGHT, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(1);
-    expect(shallowRender(TEST_APP_WIDTH, TEST_APP_HEIGHT, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')).to.have.lengthOf(1);
+    expect(
+      shallowRender(0, 0, [FAKE_TOOLTIP_PROVIDER]).find('.tooltip-overlay')
+    ).to.have.lengthOf(1);
+    expect(
+      shallowRender(TEST_APP_WIDTH, 0, [FAKE_TOOLTIP_PROVIDER]).find(
+        '.tooltip-overlay'
+      )
+    ).to.have.lengthOf(1);
+    expect(
+      shallowRender(0, TEST_APP_HEIGHT, [FAKE_TOOLTIP_PROVIDER]).find(
+        '.tooltip-overlay'
+      )
+    ).to.have.lengthOf(1);
+    expect(
+      shallowRender(TEST_APP_WIDTH, TEST_APP_HEIGHT, [
+        FAKE_TOOLTIP_PROVIDER
+      ]).find('.tooltip-overlay')
+    ).to.have.lengthOf(1);
   });
 
   it('renders as a group of groups, each containing text and a rectangle', () => {
-    const tooltip = shallowRender(0, 0, [textProvider('one'), textProvider('two')]);
+    const tooltip = shallowRender(0, 0, [
+      textProvider('one'),
+      textProvider('two')
+    ]);
     const EXPECTED_X = 6;
     validateRect(tooltip.find('rect').first(), EXPECTED_X, 6);
     validateRect(tooltip.find('rect').last(), EXPECTED_X, 31);
@@ -45,7 +79,10 @@ describe('TooltipOverlay', () => {
   });
 
   it('renders above and left of cursor when cursor near lower-right boundary', () => {
-    const tooltip = shallowRender(TEST_APP_WIDTH, TEST_APP_HEIGHT, [textProvider('one'), textProvider('two')]);
+    const tooltip = shallowRender(TEST_APP_WIDTH, TEST_APP_HEIGHT, [
+      textProvider('one'),
+      textProvider('two')
+    ]);
     const EXPECTED_X = 185;
     validateRect(tooltip.find('rect').first(), EXPECTED_X, 148);
     validateRect(tooltip.find('rect').last(), EXPECTED_X, 173);
@@ -54,53 +91,75 @@ describe('TooltipOverlay', () => {
   });
 
   it('generates a set of tooltip strings from providers that return a string', () => {
-    expect(withProviders([]).instance().getTooltipStrings()).to.be.empty;
+    expect(
+      withProviders([])
+        .instance()
+        .getTooltipStrings()
+    ).to.be.empty;
 
-    expect(withProviders([
-      () => '',
-      () => null,
-      () => null
-    ]).instance().getTooltipStrings().length).to.equal(1);
+    expect(
+      withProviders([() => '', () => null, () => null])
+        .instance()
+        .getTooltipStrings().length
+    ).to.equal(1);
 
-    expect(withProviders([
-      () => 'one',
-      () => 'two',
-      () => 'three'
-    ]).instance().getTooltipStrings().length).to.equal(3);
+    expect(
+      withProviders([() => 'one', () => 'two', () => 'three'])
+        .instance()
+        .getTooltipStrings().length
+    ).to.equal(3);
   });
 
   it('generates tooltip dimensions that depend on the length of the string set', () => {
-    expect(withStrings([]).instance().getTooltipDimensions()).to.deep.equal({
+    expect(
+      withStrings([])
+        .instance()
+        .getTooltipDimensions()
+    ).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: 0
     });
 
-    expect(withStrings(['one']).instance().getTooltipDimensions()).to.deep.equal({
+    expect(
+      withStrings(['one'])
+        .instance()
+        .getTooltipDimensions()
+    ).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: TEXT_RECT_HEIGHT
     });
 
-    expect(withStrings(['one', 'two']).instance().getTooltipDimensions()).to.deep.equal({
+    expect(
+      withStrings(['one', 'two'])
+        .instance()
+        .getTooltipDimensions()
+    ).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: 2 * TEXT_RECT_HEIGHT + BETWEEN_RECT_MARGIN
     });
 
-    expect(withStrings(['one', 'two', 'three']).instance().getTooltipDimensions()).to.deep.equal({
+    expect(
+      withStrings(['one', 'two', 'three'])
+        .instance()
+        .getTooltipDimensions()
+    ).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: 3 * TEXT_RECT_HEIGHT + 2 * BETWEEN_RECT_MARGIN
     });
   });
 
-  describe('coordinatesProvider', function () {
-    it('maps props mouseX and mouseY to a coordinate string', function () {
+  describe('coordinatesProvider', function() {
+    it('maps props mouseX and mouseY to a coordinate string', function() {
       const props = {
         mouseX: 50,
         mouseY: 100
       };
-      expect(coordinatesProvider()(props)).to.equal(`x: ${props.mouseX}, y: ${props.mouseY}`);
+      expect(coordinatesProvider()(props)).to.equal(
+        `x: ${props.mouseX}, y: ${props.mouseY}`
+      );
     });
 
-    it('floors the given coordinates', function () {
+    it('floors the given coordinates', function() {
       const props = {
         mouseX: 1.3,
         mouseY: 2.9
@@ -109,7 +168,7 @@ describe('TooltipOverlay', () => {
     });
   });
 
-  function shallowRender(x, y, providers=[], above=false) {
+  function shallowRender(x, y, providers = [], above = false) {
     return shallow(
       <TooltipOverlay
         width={TEST_APP_WIDTH}
@@ -153,8 +212,8 @@ describe('TooltipOverlay', () => {
   function validateText(textElement, x, y, displayText) {
     const textProps = textElement.props();
     expect(textElement).to.have.lengthOf(1);
-    expect(textProps.x).to.equal(x+55);
-    expect(textProps.y).to.equal(y+14);
+    expect(textProps.x).to.equal(x + 55);
+    expect(textProps.y).to.equal(y + 14);
     expect(textProps.style).to.equal(styles.text);
     expect(textElement.text()).to.equal(displayText);
   }

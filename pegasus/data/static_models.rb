@@ -1,4 +1,5 @@
 require pegasus_dir 'data/csv'
+require 'active_support/core_ext/module/attribute_accessors'
 
 # Inject static Sequel models for all CSV-derived Pegasus database tables.
 # Uses the :static_cache Sequel plugin to provide the static model functionality.
@@ -31,6 +32,8 @@ require pegasus_dir 'data/csv'
 # Model.where(key: 'val').order(:key).limit(5)
 #
 module StaticModels
+  mattr_accessor(:expires_in) {rack_env?(:development, :staging) ? 10.seconds : nil}
+
   def [](table)
     @csv_tables ||= Dir.glob(pegasus_dir('data/*.csv')).map do |path|
       CsvToSqlTable.new(path, db: self)
@@ -60,7 +63,15 @@ module StaticModels
       end
 
       def self.all
+        refresh!
         Queryable.new super
+      end
+
+      def self.refresh!
+        CDO.cache.fetch("static_cache/#{self}", expires_in: StaticModels.expires_in) do
+          load_cache
+          true
+        end
       end
     end
     Object.const_set(table.to_s.camelize, model)
