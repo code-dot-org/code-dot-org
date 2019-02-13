@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   content: {
@@ -62,6 +63,21 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row'
+  },
+  performanceLevelHeaderOnHover: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    border: `1px solid ${color.cyan}`,
+    borderRadius: 4
+  },
+  performanceLevelHeaderSelected: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    border: `1px solid ${color.cyan}`,
+    backgroundColor: color.light_cyan,
+    borderRadius: 4
   }
 };
 
@@ -212,6 +228,8 @@ class TeacherFeedback extends Component {
       ? latestFeedback.comment
       : i18n.feedbackPlaceholder();
 
+    console.log(experiments.isEnabled(experiments.MINI_RUBRIC_2019));
+
     return (
       <div>
         {this.state.errorState === ErrorType.Load && (
@@ -229,7 +247,13 @@ class TeacherFeedback extends Component {
             <div style={styles.rubricArea}>
               <h1>Evaluation Rubric</h1>
               <form>
-                <div style={styles.performanceLevelHeader}>
+                <div
+                  style={
+                    this.state.performance === 'exceeds'
+                      ? styles.performanceLevelHeaderSelected
+                      : styles.performanceLevelHeader
+                  }
+                >
                   <input
                     type={'radio'}
                     id={'exceedsButton'}
@@ -243,7 +267,13 @@ class TeacherFeedback extends Component {
                     <p>{this.state.rubric.exceeds}</p>
                   </details>
                 </div>
-                <div style={styles.performanceLevelHeader}>
+                <div
+                  style={
+                    this.state.performance === 'meets'
+                      ? styles.performanceLevelHeaderSelected
+                      : styles.performanceLevelHeader
+                  }
+                >
                   <input
                     type={'radio'}
                     id={'meetsButton'}
@@ -257,7 +287,13 @@ class TeacherFeedback extends Component {
                     <p>{this.state.rubric.meets}</p>
                   </details>
                 </div>
-                <div style={styles.performanceLevelHeader}>
+                <div
+                  style={
+                    this.state.performance === 'approaches'
+                      ? styles.performanceLevelHeaderSelected
+                      : styles.performanceLevelHeader
+                  }
+                >
                   <input
                     type={'radio'}
                     id={'approachesButton'}
@@ -271,7 +307,13 @@ class TeacherFeedback extends Component {
                     <p>{this.state.rubric.approaches}</p>
                   </details>
                 </div>
-                <div style={styles.performanceLevelHeader}>
+                <div
+                  style={
+                    this.state.performance === 'noEvidence'
+                      ? styles.performanceLevelHeaderSelected
+                      : styles.performanceLevelHeader
+                  }
+                >
                   <input
                     type={'radio'}
                     id={'noEvidenceButton'}
