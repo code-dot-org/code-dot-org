@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const styles = {
   table: {
@@ -60,7 +61,7 @@ class StudentTable extends React.Component {
             style={this.getRowStyle(selectedUserId, null)}
             onClick={() => onSelectUser(null)}
           >
-            <td style={styles.td}>Me</td>
+            <td style={styles.td}>{i18n.studentTableTeacherDemo()}</td>
           </tr>
           {students.map(student => (
             <tr
