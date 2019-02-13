@@ -5,7 +5,7 @@
   %p Generous scholarships or discounts are available across the country for the Code.org Professional Learning Program.
   %p
     %b Enter your school’s zip code to learn more.
-  %form{action: "/educate/professional-learning/program-information", method: "get"}
+  %form.linktag#pl-zip-form{action: "/educate/professional-learning/program-information", method: "get"}
     %span{style: "font-size:1.2em"} Zip:
     %input{type: "text", name: "zip", style: "padding:10px"}
     - if params[:nominated]
