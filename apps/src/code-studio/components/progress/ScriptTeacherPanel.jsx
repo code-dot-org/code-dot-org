@@ -53,6 +53,7 @@ class ScriptTeacherPanel extends React.Component {
 
     if (teacherPanel.length > 0 && contentToRemove.length > 0) {
       return (
+        // Calculate max height and include 15px buffer room.
         teacherPanel[0].clientHeight - contentToRemove[0].clientHeight - 15
       );
     }
