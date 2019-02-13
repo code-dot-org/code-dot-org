@@ -114,15 +114,6 @@ class TeacherFeedback extends Component {
           performance: data[0].performance
         });
       });
-      this.setState({
-        rubric: {
-          keyConcept: 'Apples',
-          exceeds: 'Oranges',
-          meets: 'Bananas',
-          approaches: 'Grapes',
-          noEvidence: 'Pineapple'
-        }
-      });
     } else {
       $.ajax({
         url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${
@@ -144,14 +135,14 @@ class TeacherFeedback extends Component {
         .fail((jqXhr, status) => {
           this.setState({errorState: ErrorType.Load});
         });
-      $.ajax({
-        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({rubric: data});
-      });
     }
+    $.ajax({
+      url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done(data => {
+      this.setState({rubric: data});
+    });
   };
 
   onCommentChange = event => {
