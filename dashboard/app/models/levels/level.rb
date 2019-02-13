@@ -387,7 +387,7 @@ class Level < ActiveRecord::Base
 
   def validate_project_template_level
     if try(:project_template_level_name) && !project_template_level
-      errors.add(:project_template_level_name, :not_found)
+      errors.add(:project_template_level_name, "not found: '#{project_template_level_name}'")
     end
   end
 
