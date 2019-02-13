@@ -9,8 +9,7 @@ import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
 import commonMsg from '@cdo/locale';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {reload} from '@cdo/apps/utils';
+import StudentTable from './StudentTable';
 
 const styles = {
   text: {
@@ -29,6 +28,9 @@ const styles = {
 
 class ScriptTeacherPanel extends React.Component {
   static propTypes = {
+    onSelectUser: PropTypes.func,
+    getSelectedUserId: PropTypes.func,
+
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasSections: PropTypes.bool.isRequired,
@@ -42,12 +44,6 @@ class ScriptTeacherPanel extends React.Component {
         name: PropTypes.string.isRequired
       })
     )
-  };
-
-  onSelectStudent = id => {
-    // Set our new user in the URL and reload to query for that user's progress.
-    updateQueryParam('user_id', id);
-    reload();
   };
 
   render() {
@@ -102,15 +98,13 @@ class ScriptTeacherPanel extends React.Component {
                 )}
               </div>
             )}
-          {viewAs === ViewType.Teacher &&
-            (students || []).map(student => (
-              <div
-                key={student.id}
-                onClick={() => this.onSelectStudent(student.id)}
-              >
-                {student.name}
-              </div>
-            ))}
+          {viewAs === ViewType.Teacher && students.length > 0 && (
+            <StudentTable
+              students={students}
+              onSelectUser={this.props.onSelectUser}
+              getSelectedUserId={this.props.getSelectedUserId}
+            />
+          )}
         </div>
       </TeacherPanel>
     );

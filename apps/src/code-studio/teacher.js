@@ -22,6 +22,8 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {getHiddenStages} from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {reload} from '@cdo/apps/utils';
 
 function resizeScrollable() {
   var newHeight =
@@ -109,18 +111,32 @@ function queryLockStatus(store, scriptId) {
 /**
  * Render our teacher panel that shows up on our course overview page.
  */
-export function renderTeacherPanel(store, scriptId, section) {
+export function renderTeacherPanel(store, scriptData) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
+  const {id: scriptId, section} = scriptData;
   queryLockStatus(store, scriptId);
 
-  if (section.students && section.students.length > 0) {
+  if (section && section.students && section.students.length > 0) {
     store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   }
 
+  const onSelectUser = id => {
+    updateQueryParam('user_id', id);
+    reload();
+  };
+
+  const getSelectedUserId = () => {
+    const userIdStr = queryString.parse(location.search).user_id;
+    return parseInt(userIdStr, 10);
+  };
+
   ReactDOM.render(
     <Provider store={store}>
-      <ScriptTeacherPanel />
+      <ScriptTeacherPanel
+        onSelectUser={onSelectUser}
+        getSelectedUserId={getSelectedUserId}
+      />
     </Provider>,
     div
   );

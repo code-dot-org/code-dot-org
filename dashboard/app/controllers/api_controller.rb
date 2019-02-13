@@ -336,7 +336,7 @@ class ApiController < ApplicationController
   def user_progress
     if current_user
       script = Script.get_from_cache(params[:script])
-      user = params[:user_id] ? User.find(params[:user_id]) : current_user
+      user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
       render json: summarize_user_progress(script, user)
     else
       render json: {}
