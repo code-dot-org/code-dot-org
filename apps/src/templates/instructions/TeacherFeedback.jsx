@@ -167,7 +167,6 @@ class TeacherFeedback extends Component {
 
   onRubricChange = event => {
     if (event.target.value === this.state.performance) {
-      event.target.checked = false;
       this.setState({performance: null});
     } else {
       this.setState({performance: event.target.value});
@@ -259,8 +258,9 @@ class TeacherFeedback extends Component {
                     id={'exceedsButton'}
                     name={'rubric'}
                     value={'exceeds'}
-                    defaultChecked={this.state.performance === 'exceeds'}
-                    onClick={this.onRubricChange}
+                    checked={this.state.performance === 'exceeds'}
+                    onChange={this.onRubricChange}
+                    disabled={this.props.viewAs === ViewType.Student}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>Exceeds</summary>
@@ -279,8 +279,9 @@ class TeacherFeedback extends Component {
                     id={'meetsButton'}
                     name={'rubric'}
                     value={'meets'}
-                    defaultChecked={this.state.performance === 'meets'}
-                    onClick={this.onRubricChange}
+                    checked={this.state.performance === 'meets'}
+                    onChange={this.onRubricChange}
+                    disabled={this.props.viewAs === ViewType.Student}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>Meets</summary>
@@ -299,8 +300,9 @@ class TeacherFeedback extends Component {
                     id={'approachesButton'}
                     name={'rubric'}
                     value={'approaches'}
-                    defaultChecked={this.state.performance === 'approaches'}
-                    onClick={this.onRubricChange}
+                    checked={this.state.performance === 'approaches'}
+                    onChange={this.onRubricChange}
+                    disabled={this.props.viewAs === ViewType.Student}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>Approaches</summary>
@@ -319,8 +321,9 @@ class TeacherFeedback extends Component {
                     id={'noEvidenceButton'}
                     name={'rubric'}
                     value={'noEvidence'}
-                    defaultChecked={this.state.performance === 'noEvidence'}
-                    onClick={this.onRubricChange}
+                    checked={this.state.performance === 'noEvidence'}
+                    onChange={this.onRubricChange}
+                    disabled={this.props.viewAs === ViewType.Student}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>No Evidence</summary>
