@@ -32,6 +32,10 @@ const styles = {
     display: 'flex',
     alignItems: 'center'
   },
+  studentTime: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
   footer: {
     display: 'flex',
     justifyContent: 'flex-start'
@@ -294,14 +298,29 @@ class TeacherFeedback extends Component {
             </div>
           </div>
         )}
-        <textarea
-          id="ui-test-feedback-input"
-          style={styles.textInput}
-          onChange={this.onCommentChange}
-          placeholder={placeholderText}
-          value={this.state.comment}
-          readOnly={this.props.viewAs === ViewType.Student}
-        />
+        <div>
+          <div style={styles.studentTime}>
+            <h1>Teacher Feedback</h1>
+            {this.props.viewAs === ViewType.Student &&
+              this.state.latestFeedback.length > 0 && (
+                <div style={styles.time} id="ui-test-feedback-time">
+                  {i18n.lastUpdated({
+                    time: moment
+                      .min(moment(), moment(latestFeedback.created_at))
+                      .fromNow()
+                  })}
+                </div>
+              )}
+          </div>
+          <textarea
+            id="ui-test-feedback-input"
+            style={styles.textInput}
+            onChange={this.onCommentChange}
+            placeholder={placeholderText}
+            value={this.state.comment}
+            readOnly={this.props.viewAs === ViewType.Student}
+          />
+        </div>
         <div style={styles.footer}>
           {this.props.viewAs === ViewType.Teacher && (
             <div style={styles.button}>
@@ -320,15 +339,16 @@ class TeacherFeedback extends Component {
               )}
             </div>
           )}
-          {this.state.latestFeedback.length > 0 && (
-            <div style={styles.time} id="ui-test-feedback-time">
-              {i18n.lastUpdated({
-                time: moment
-                  .min(moment(), moment(latestFeedback.created_at))
-                  .fromNow()
-              })}
-            </div>
-          )}
+          {this.props.viewAs === ViewType.Teacher &&
+            this.state.latestFeedback.length > 0 && (
+              <div style={styles.time} id="ui-test-feedback-time">
+                {i18n.lastUpdated({
+                  time: moment
+                    .min(moment(), moment(latestFeedback.created_at))
+                    .fromNow()
+                })}
+              </div>
+            )}
         </div>
       </div>
     );
