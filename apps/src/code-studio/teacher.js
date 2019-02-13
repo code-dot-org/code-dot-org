@@ -128,7 +128,8 @@ export function renderTeacherPanel(store, scriptData) {
 
   const getSelectedUserId = () => {
     const userIdStr = queryString.parse(location.search).user_id;
-    return parseInt(userIdStr, 10);
+    const selectedUserId = userIdStr ? parseInt(userIdStr, 10) : null;
+    return selectedUserId;
   };
 
   ReactDOM.render(
