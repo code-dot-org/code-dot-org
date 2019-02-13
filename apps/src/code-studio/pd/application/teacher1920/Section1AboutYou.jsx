@@ -112,7 +112,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
         <ul>
           <li>
             <span style={styles.bold}>Section 1: About you</span>
-            &nbsp; (Your and your principal’s contact info)
+            &nbsp; (Your contact info)
           </li>
           <li>
             <span style={styles.bold}>
