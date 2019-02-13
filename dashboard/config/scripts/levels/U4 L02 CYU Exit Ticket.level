@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Explain in your own words the process of defining and updating a variable. How does the Counter Pattern with Event work?\r\n\r\n| Name  | Code (Block) | Code (Text) |\r\n| ------------- | ------------- | ------------- |\r\n| Counter Pattern with Event  | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-02-07-at-4.30.59-PM.png)  | <div>`var myVar = 0;` <br><br> `onEvent(\"id\", \"click\", function(event) {` <br>&nbsp;&nbsp;&nbsp;&nbsp;`myVar = myVar + 1;` <br> `});`</div> |",
+    "long_instructions": "Explain in your own words the process of creating and updating a variable. How does the Counter Pattern with Event work?\r\n\r\n| Name  | Code (Block) | Code (Text) |\r\n| ------------- | ------------- | ------------- |\r\n| Counter Pattern with Event  | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-02-07-at-4.30.59-PM.png)  | <div>`var myVar = 0;` <br><br> `onEvent(\"id\", \"click\", function(event) {` <br>&nbsp;&nbsp;&nbsp;&nbsp;`myVar = myVar + 1;` <br> `});`</div> |",
     "title": "Updating Variables",
     "allow_user_uploads": "false",
     "submittable": "true",
@@ -21,7 +21,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
