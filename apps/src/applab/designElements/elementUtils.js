@@ -182,8 +182,18 @@ export function getDefaultScreenId() {
   return getId(getScreens()[0]);
 }
 
-export function setDefaultBorderStyles(element, opts) {
-  const { textInput, forceDefaults } = opts || {};
+/**
+ * Sets the default border styles on a new element.
+ * @param {DOMElement} element The element to modify.
+ * @param {Object.<string, boolean>} options Optional map of options
+ *     indicating how the styles should be applied.
+ * @param {string} options.textInput treat the element as a text
+ *     input or text area, which has a gray default border. Default: false
+ * @param {string} options.forceDefaults: always set default
+ *     styles, even if current styles already exist. Default: false
+ */
+export function setDefaultBorderStyles(element, options = {}) {
+  const { textInput, forceDefaults } = options;
   element.style.borderStyle = 'solid';
   if (forceDefaults || element.style.borderWidth === '') {
     element.style.borderWidth = textInput ? '1px' : '0px';
