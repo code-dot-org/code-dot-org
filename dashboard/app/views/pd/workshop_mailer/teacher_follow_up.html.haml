@@ -3,8 +3,6 @@
     font-family: Gotham, sans-serif;
   }
 
--# This email is only for CSF Intro (Pd::Workshop::SUBJECT_CSF_101)
-
 - if @workshop.subject == Pd::Workshop::SUBJECT_CSF_101
   %p
   Hi
@@ -41,8 +39,10 @@
   = link_to 'forums', 'https://forum.code.org/'
   to connect to other teachers.
 
-  %h3
-    = link_to 'Get started here', 'https://studio.code.org/home'
+  %p
+    %a{href:"https://studio.code.org/home",
+      style: 'width: 180px; height: 36px; border: 0; color: white; background-color: #FDC62C; font: bolder 18px Arial; display: block; text-align: center; line-height: 36px; text-decoration: none; border-radius: 5px;'}
+      Get started here
 
   %p
   Remember that you can always reach out to us for support at
