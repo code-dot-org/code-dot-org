@@ -38,6 +38,7 @@ class Level < ActiveRecord::Base
 
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+  validate :validate_project_template_level
 
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
@@ -382,6 +383,12 @@ class Level < ActiveRecord::Base
   def project_template_level
     return nil if try(:project_template_level_name).nil?
     Level.find_by_key(project_template_level_name)
+  end
+
+  def validate_project_template_level
+    if try(:project_template_level_name) && !project_template_level
+      errors.add(:project_template_level_name, :not_found)
+    end
   end
 
   def strip_name
