@@ -54,10 +54,12 @@ const styles = {
     flexDirection: 'row'
   },
   keyConceptArea: {
-    padding: 10
+    padding: 10,
+    flexGrow: 1
   },
   rubricArea: {
-    padding: 10
+    padding: 10,
+    flexGrow: 1
   },
   performanceLevelHeader: {
     display: 'flex',
@@ -78,6 +80,9 @@ const styles = {
     border: `1px solid ${color.cyan}`,
     backgroundColor: color.light_cyan,
     borderRadius: 4
+  },
+  h1: {
+    color: color.cyan
   }
 };
 
@@ -244,11 +249,11 @@ class TeacherFeedback extends Component {
         {this.state.rubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
-              <h1>Key Concept</h1>
+              <h1 style={styles.h1}>Key Concept</h1>
               <p>{this.state.rubric.keyConcept}</p>
             </div>
             <div style={styles.rubricArea}>
-              <h1>Evaluation Rubric</h1>
+              <h1 style={styles.h1}>Evaluation Rubric</h1>
               <form>
                 <div
                   style={
@@ -340,7 +345,7 @@ class TeacherFeedback extends Component {
         )}
         <div>
           <div style={styles.studentTime}>
-            <h1>Teacher Feedback</h1>
+            <h1 style={styles.h1}>Teacher Feedback</h1>
             {this.props.viewAs === ViewType.Student &&
               this.state.latestFeedback.length > 0 && (
                 <div style={styles.time} id="ui-test-feedback-time">
