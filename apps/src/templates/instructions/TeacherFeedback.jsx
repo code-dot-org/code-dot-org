@@ -59,7 +59,7 @@ const styles = {
   },
   rubricArea: {
     padding: 10,
-    flexGrow: 1
+    flexGrow: 2
   },
   performanceLevelHeader: {
     display: 'flex',
@@ -249,7 +249,7 @@ class TeacherFeedback extends Component {
         {this.state.rubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
-              <h1 style={styles.h1}>Key Concept</h1>
+              <h1 style={styles.h1}>Key Concepts</h1>
               <p>{this.state.rubric.keyConcept}</p>
             </div>
             <div style={styles.rubricArea}>
