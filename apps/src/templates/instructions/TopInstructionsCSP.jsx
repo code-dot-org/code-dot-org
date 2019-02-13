@@ -25,6 +25,7 @@ import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -145,6 +146,7 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
+    console.log(experiments.isEnabled(experiments.MINI_RUBRIC_2019));
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
