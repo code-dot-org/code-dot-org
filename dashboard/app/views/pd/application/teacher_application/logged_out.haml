@@ -13,3 +13,10 @@
 
   = link_to "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}" do
     %button= I18n.t('nav.user.signup')
+
+:javascript
+  $(document).ready(function() {
+    // Report a unique page view to GA.
+    ga('set', 'page', '/pd/application/teacher/logged_out');
+    ga('send', 'pageview');
+  });
