@@ -379,6 +379,10 @@ class Pd::Workshop < ActiveRecord::Base
         email.deliver_now
       rescue => e
         errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+        Honeybadger.notify(e,
+          error_message: 'Failed to send follow up email to teacher',
+          context: {pd_enrollment_id: enrollment.id}
+        )
       end
     end
 

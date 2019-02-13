@@ -30,28 +30,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   after_action :save_timestamp
 
-  def teacher_survey_reminder(enrollment)
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-
-    mail content_type: 'text/html',
-      from: from_survey,
-      subject: 'Please complete the survey before your workshop!',
-      to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
-  end
-
-  def teacher_follow_up(enrollment)
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-
-    # The subject below is only applicable for CSF Intro
-    mail content_type: 'text/html',
-      from: from_teacher,
-      subject: 'Having fun with CS Fundamentals?',
-      to: email_address(@enrollment.full_name, @enrollment.email)
-  end
-
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
@@ -191,6 +169,18 @@ class Pd::WorkshopMailer < ActionMailer::Base
          reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
+  def teacher_survey_reminder(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+
+    # Pre-workshop survey reminder
+    mail content_type: 'text/html',
+      from: from_survey,
+      subject: 'Please complete the survey before your workshop!',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
   # Exit survey email
   # @param enrollment [Pd::Enrollment]
   def exit_survey(enrollment)
@@ -211,6 +201,17 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: content_type,
       from: from_survey,
       subject: 'How was your Code.org workshop?',
+      to: email_address(@enrollment.full_name, @enrollment.email)
+  end
+
+  def teacher_follow_up(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+
+    # The subject below is only applicable for CSF Intro
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: 'Having fun with CS Fundamentals?',
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
