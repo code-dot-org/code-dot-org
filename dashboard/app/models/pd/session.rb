@@ -59,11 +59,10 @@ class Pd::Session < ActiveRecord::Base
   end
 
   def start_date_with_start_and_end_times_us_format
-    start_date = start.strftime('%b %d %Y').strip
     start_time = start.strftime('%l:%M%P').strip
     end_time = self.end.strftime('%l:%M%P').strip
 
-    "#{start_date}, #{start_time} - #{end_time}"
+    "#{start_date_us_format}, #{start_time} - #{end_time}"
   end
 
   def hours

@@ -364,16 +364,16 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Send follow up email to teachers that attended CSF Intro workshops which ended exactly X days ago
-  def self.send_follow_up_in_days(days)
+  def self.send_follow_up_after_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
 
     scheduled_end_in_days(-days).each do |workshop|
       next unless workshop.course == COURSE_CSF && workshop.subject == SUBJECT_CSF_101
-      attedend_teachers = workshop.attending_teachers
+      attended_teachers = workshop.attending_teachers
 
       workshop.enrollments.each do |enrollment|
-        next unless attedend_teachers.include?(enrollment.user)
+        next unless attended_teachers.include?(enrollment.user)
 
         email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
         email.deliver_now
@@ -393,7 +393,7 @@ class Pd::Workshop < ActiveRecord::Base
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
-    send_follow_up_in_days(30)
+    send_follow_up_after_days(30)
   end
 
   def self.process_ended_workshop_async(id)
