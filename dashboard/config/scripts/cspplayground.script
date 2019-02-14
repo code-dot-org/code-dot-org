@@ -20,6 +20,7 @@ level 'U4 L03 Variables operator practice 1', progression: 'Variables and Operat
 level 'U4 L03 Variables operator practice 3', progression: 'Variables and Operators'
 level 'U4 L03 Variables operator practice 2', progression: 'Variables and Operators'
 level 'U4 L03 Variables operator practice 5', progression: 'Variables and Operators'
+level 'U4 L03 Variables operator practice 6', progression: 'Variables and Operators'
 level 'U4 L03 Variable Scope: Local vs. Global', progression: 'Debugging Scope Issues'
 level 'U4 L03 Scope Issue', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
