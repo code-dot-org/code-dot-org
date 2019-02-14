@@ -37,7 +37,7 @@ describe('The Gamelab Exporter,', function() {
   var server;
   let stashedCookieKey;
 
-  testUtils.setExternalGlobals(beforeEach, afterEach);
+  testUtils.setExternalGlobals();
 
   beforeEach(function() {
     server = sinon.fakeServerWithClock.create();
@@ -72,6 +72,9 @@ describe('The Gamelab Exporter,', function() {
       assetPathPrefix: '/v3/assets/'
     });
 
+    if (!window.dashboard.assets.listStore.list.returns) {
+      sinon.stub(window.dashboard.assets.listStore, 'list');
+    }
     window.dashboard.assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
