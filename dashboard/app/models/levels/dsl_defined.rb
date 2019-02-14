@@ -135,7 +135,7 @@ class DSLDefined < Level
 
     level_params = {}
     level_params[:encrypted] = encrypted if encrypted
-    self.class.create_from_level_builder({dsl_text: new_dsl}, level_params)
+    self.class.create_from_level_builder({dsl_text: new_dsl}, level_params) if new_dsl
   end
 
   def dsl_text
