@@ -502,7 +502,7 @@ function updateHUDText() {
         fill(textObj.color);
         textAlign(CENTER);
         textSize(textObj.size);
-        text(textObj.text, textObj.location.x, textObj.location.y);
+        text(textObj.text(), textObj.location.x, textObj.location.y);
       }
     });
   }
