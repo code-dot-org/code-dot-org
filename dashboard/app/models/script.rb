@@ -102,6 +102,7 @@ class Script < ActiveRecord::Base
         unit_description: I18n.t("data.script.name.#{name}.description")
       )
 
+      stages.reload
       stages.each do |stage|
         lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
         lm.update!(
@@ -793,8 +794,8 @@ class Script < ActiveRecord::Base
   # Create or update any scripts, script levels and stages specified in the
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
-  # copying.
-  def self.setup(custom_files, new_suffix: nil)
+  # copying. Any new_properties are merged into the properties of the new script.
+  def self.setup(custom_files, new_suffix: nil, new_properties: {})
     transaction do
       scripts_to_add = []
 
@@ -802,7 +803,8 @@ class Script < ActiveRecord::Base
       # Load custom scripts from Script DSL format
       custom_files.map do |script|
         name = File.basename(script, '.script')
-        name += "-#{new_suffix}" if new_suffix
+        base_name = Script.base_name(name)
+        name = "#{base_name}-#{new_suffix}" if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         stages = script_data[:stages]
@@ -816,7 +818,7 @@ class Script < ActiveRecord::Base
           wrapup_video: script_data[:wrapup_video],
           new_name: script_data[:new_name],
           family_name: script_data[:family_name],
-          properties: Script.build_property_hash(script_data)
+          properties: Script.build_property_hash(script_data).merge(new_properties)
         }, stages]
       end
 
@@ -998,10 +1000,17 @@ class Script < ActiveRecord::Base
   # the suffix to the name of each level. Mark the new script as hidden, and
   # copy any translations and other metadata associated with the original script.
   def clone_with_suffix(new_suffix)
-    new_name = "#{name}-#{new_suffix}"
+    new_name = "#{base_name}-#{new_suffix}"
 
     script_filename = "#{Script.script_directory}/#{name}.script"
-    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix)
+    new_properties = {
+      is_stable: false,
+      script_announcements: nil
+    }
+    if /^[0-9]{4}$/ =~ (new_suffix)
+      new_properties[:version_year] = new_suffix
+    end
+    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
     new_script = scripts.first
 
     # Make sure we don't modify any files in unit tests.
@@ -1012,6 +1021,16 @@ class Script < ActiveRecord::Base
     end
 
     new_script
+  end
+
+  def base_name
+    Script.base_name(name)
+  end
+
+  def self.base_name(name)
+    # strip existing year suffix, if there is one
+    m = /^(.*)-([0-9]{4})$/.match(name)
+    m ? m[1] : name
   end
 
   # Creates a copy of all translations associated with this script, and adds
@@ -1089,8 +1108,13 @@ class Script < ActiveRecord::Base
   def update_teacher_resources(types, links)
     return if types.nil? || links.nil? || types.length != links.length
     # Only take those pairs in which we have both a type and a link
-    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    save!
+    resources = types.zip(links).select {|type, link| type.present? && link.present?}
+    update!(
+      {
+        teacher_resources: resources,
+        skip_name_format_validation: true
+      }
+    )
   end
 
   def self.rake
@@ -1291,8 +1315,11 @@ class Script < ActiveRecord::Base
   def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless courses.empty?
+    with_hidden = user&.hidden_script_access?
     Script.
       where(family_name: family_name).
+      all.
+      select {|script| with_hidden || !script.hidden}.
       map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse

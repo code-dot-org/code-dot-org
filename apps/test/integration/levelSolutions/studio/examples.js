@@ -1,6 +1,7 @@
 import {TestResults} from '@cdo/apps/constants';
 
-var solutionBlocks = '' +
+var solutionBlocks =
+  '' +
   '<block type="functional_definition" inline="false" deletable="false" movable="false" editable="false">' +
   '  <mutation>' +
   '    <arg name="x" type="Number"></arg>' +
@@ -26,7 +27,8 @@ var solutionBlocks = '' +
   '  </functional_input>' +
   '</block>';
 
-var validExample1 = '' +
+var validExample1 =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -56,7 +58,8 @@ var validExample1 = '' +
   '  </functional_input>' +
   '</block>';
 
-var validExample2 = '' +
+var validExample2 =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -86,7 +89,8 @@ var validExample2 = '' +
   '  </functional_input>' +
   '</block>';
 
-var invalidExample1 = '' +
+var invalidExample1 =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -116,7 +120,8 @@ var invalidExample1 = '' +
   '  </functional_input>' +
   '</block>';
 
-var invalidExampleMissingResult = '' +
+var invalidExampleMissingResult =
+  '' +
   '<block type="functional_example" inline="false">' +
   '  <functional_input name="ACTUAL">' +
   '    <block type="functional_call" inline="false">' +
@@ -141,7 +146,7 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 16,0, 0, 0, 0],
+      [0, 0, 0, 16, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -152,7 +157,7 @@ module.exports = {
     requiredBlocks: '',
     freePlay: false,
     goal: {
-      successCondition: function () {
+      successCondition: function() {
         return Studio.tickCount > 2;
       }
     }
@@ -162,55 +167,54 @@ module.exports = {
   // otherwise identical to calc/examples.js
   tests: [
     {
-      description: "example is missing result block",
+      description: 'example is missing result block',
       expected: {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function (assert) {
-        assert.equal(Studio.message, 'You need at least two examples in' +
-            ' function f. Make sure each example has a call and a result.');
+      customValidator: function(assert) {
+        assert.equal(
+          Studio.message,
+          'You need at least two examples in' +
+            ' function f. Make sure each example has a call and a result.'
+        );
         return true;
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         solutionBlocks +
         invalidExampleMissingResult +
         validExample2 +
         '</xml>'
     },
     {
-      description: "example result doesnt match definition",
+      description: 'example result doesnt match definition',
       expected: {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function (assert) {
-        assert.equal(Studio.message, 'The function f has' +
-          ' one or more examples that need adjusting. Make sure they match your' +
-          ' definition and answer the question.');
+      customValidator: function(assert) {
+        assert.equal(
+          Studio.message,
+          'The function f has' +
+            ' one or more examples that need adjusting. Make sure they match your' +
+            ' definition and answer the question.'
+        );
         return true;
       },
-      xml: '<xml>' +
-        solutionBlocks +
-        invalidExample1 +
-        validExample2 +
-        '</xml>'
+      xml: '<xml>' + solutionBlocks + invalidExample1 + validExample2 + '</xml>'
     },
     {
-      description: "example result does match definition",
+      description: 'example result does match definition',
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         assert.equal(Studio.message, null);
         return true;
       },
-      xml: '<xml>' +
-        solutionBlocks +
-        validExample1 +
-        validExample2 +
-        '</xml>'
+      xml: '<xml>' + solutionBlocks + validExample1 + validExample2 + '</xml>'
     },
     {
       description: "variables don't need examples",
@@ -218,11 +222,12 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         assert.equal(Studio.message, null);
         return true;
       },
-      xml: '<xml>' +
+      xml:
+        '<xml>' +
         solutionBlocks +
         validExample1 +
         validExample2 +
@@ -243,21 +248,21 @@ module.exports = {
     },
 
     {
-      description: "no examples when examples required",
+      description: 'no examples when examples required',
       expected: {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function (assert) {
-        assert.equal(Studio.message, 'You need at least two' +
-        ' examples in function f. Make sure each example has a call and a' +
-            ' result.');
+      customValidator: function(assert) {
+        assert.equal(
+          Studio.message,
+          'You need at least two' +
+            ' examples in function f. Make sure each example has a call and a' +
+            ' result.'
+        );
         return true;
       },
-      xml: '<xml>' +
-        solutionBlocks +
-        '</xml>'
+      xml: '<xml>' + solutionBlocks + '</xml>'
     }
-
   ]
 };

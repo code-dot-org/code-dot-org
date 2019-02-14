@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from "jquery";
+import $ from 'jquery';
 import Spinner from '../../../components/spinner';
 import Results from './results';
 
@@ -18,7 +18,9 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/workshops/${this.props.params['workshopId']}/local_workshop_daily_survey_report`;
+    const url = `/api/v1/pd/workshops/${
+      this.props.params['workshopId']
+    }/local_workshop_daily_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -44,15 +46,11 @@ export class ResultsLoader extends React.Component {
     if (loading) {
       return (
         <div>
-          <Spinner/>
+          <Spinner />
         </div>
       );
     } else {
-      return (
-        <Results
-          {...data}
-        />
-      );
+      return <Results {...data} />;
     }
   }
 }

@@ -7,6 +7,7 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
+import BorderProperties from './BorderProperties';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
@@ -34,36 +35,36 @@ class TextAreaProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'text'}
-          isMultiLine={true}
+          isMultiLine
           initialValue={escapedText}
           handleChange={this.props.handleChange.bind(this, 'text')}
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           foo={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -79,15 +80,30 @@ class TextAreaProperties extends React.Component {
         />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'left'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'read only'}
@@ -103,8 +119,8 @@ class TextAreaProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-
-      </div>);
+      </div>
+    );
 
     // TODO:
     // bold/italics/underline (p2)
@@ -117,14 +133,20 @@ class TextAreaEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
   };
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' entered text: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -136,7 +158,8 @@ class TextAreaEvents extends React.Component {
   render() {
     const element = this.props.element;
     const changeName = 'Change';
-    const changeDesc = 'Triggered when the text area loses focus if the text has changed.';
+    const changeDesc =
+      'Triggered when the text area loses focus if the text has changed.';
 
     return (
       <div id="eventRowContainer">
@@ -144,9 +167,9 @@ class TextAreaEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -161,7 +184,7 @@ export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
@@ -169,6 +192,10 @@ export default {
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
+    elementUtils.setDefaultBorderStyles(element, {
+      forceDefaults: true,
+      textInput: true
+    });
 
     $(element).addClass('textArea');
 
@@ -177,10 +204,13 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element, {textInput: true});
+
     $(element).addClass('textArea');
 
-    $(element).on('mousedown', function (e) {
+    $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text area unless running
         e.preventDefault();
@@ -188,14 +218,14 @@ export default {
     });
 
     // swallow keydown unless we're running
-    $(element).on('keydown', function (e) {
+    $(element).on('keydown', function(e) {
       if (!Applab.isRunning()) {
         e.preventDefault();
       }
     });
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'value':
         element.innerHTML = value;
@@ -206,7 +236,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'value':
         return element.innerHTML;
@@ -214,5 +244,4 @@ export default {
         throw `unknown property name ${name}`;
     }
   }
-
 };

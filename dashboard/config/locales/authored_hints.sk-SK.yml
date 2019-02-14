@@ -30,7 +30,7 @@ sk:
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Tento diamand je vlastne len štvorec otočený o 45 stupňov.
         2-3_Artist_9_b: |-
-          Nezabudnite otočiť umelca o 45 stupňov doľava predtým, než začnete kresliť Váš štvorec!
+          Nezabudnite otočiť umelca o 45 stupňov doľava predtým, než začnete kresliť váš štvorec!
 
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 2_authored_hint:
@@ -718,6 +718,12 @@ sk:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -956,32 +962,289 @@ sk:
           </xml>
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Sú dve možnosti, ako vyriešiť túto úlohu!
+      courseC_artist_prog5_authored_hint:
+        courseC_artist_prog5_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_artist_prog5_2018_authored_hint:
+        courseC_artist_prog5_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_artist_prog5_2019_authored_hint:
+        courseC_artist_prog5_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_artist_prog7_authored_hint:
+        courseC_artist_prog7_e: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_artist_prog7_2018_authored_hint:
+        courseC_artist_prog7_e: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_artist_prog7_2019_authored_hint:
+        courseC_artist_prog7_e: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_collector_prog2_authored_hint:
+        courseC_collector_prog2_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_collector_prog2_2018_authored_hint:
+        courseC_collector_prog2_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_collector_prog2_2019_authored_hint:
+        courseC_collector_prog2_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_collector_prog4_authored_hint:
+        courseC_collector_prog4_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_collector_prog4_2018_authored_hint:
+        courseC_collector_prog4_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseC_collector_prog4_2019_authored_hint:
+        courseC_collector_prog4_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       courseC_maze_programming6_2019_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+      courseC_maze_programming8_authored_hint:
+        courseC_maze_programming8_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseC_maze_programming8_2018_authored_hint:
+        courseC_maze_programming8_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseC_maze_programming8_2019_authored_hint:
+        courseC_maze_programming8_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp1_authored_hint:
+        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
+          či si dobre spojil všetky bloky a stlač "Spustiť".
+        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
+          či si dobre spojil všetky bloky a stlač "Spustiť".
+        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp1_2019_authored_hint:
+        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
+          či si dobre spojil všetky bloky a stlač "Spustiť".
+        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp2_authored_hint:
+        courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
+          ku bloku "pri spustení".
+      courseD_maze_ramp2_2018_authored_hint:
+        courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
+          ku bloku "pri spustení".
+      courseD_maze_ramp2_2019_authored_hint:
+        courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
+          ku bloku "pri spustení".
+      courseD_maze_ramp5_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5_2019_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5a_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5a_2018_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5a_2019_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          Scrata.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5b_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5b_2018_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_maze_ramp5b_2019_authored_hint:
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          vtáka.
+        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_b: Vták začína tvárou k stene, tak sa nezabudni
+          otočiť predtým, ako sa pohneš.
+        courseC_maze_programming6_c: 'Pamätaj si, že môžeš pracovať postupne: po každom
+          napísanom riadku kódu môžeš program spustiť, aby si lepšie uvidel, kam sa
+          musíš posunúť ďalej.'
+      courseD_maze_ramp6a_authored_hint:
+        courseC_maze_programming6a_a: Použi blok "opakuj", aby si pohol vtákom!
+      courseD_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+      courseD_scrat_ramp1_authored_hint:
+        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_scrat_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_scrat_ramp4_authored_hint:
+        courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_scrat_ramp4_2018_authored_hint:
+        courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseD_scrat_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseD_scrat_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_scrat_ramp8_authored_hint:
+        courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+        courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseD_scrat_ramp8_2018_authored_hint:
+        courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+        courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseE_maze_ramp1_authored_hint:
+        courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa,
+          či si dobre spojil všetky bloky a stlač "Spustiť".
+      courseE_maze_ramp13_authored_hint:
+        courseD_maze_ramp11_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+      courseE_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa,
+          či si dobre spojil všetky bloky a stlač "Spustiť".
+      courseE_maze_ramp4_authored_hint:
+        courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseE_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseE_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+        courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseE_maze_ramp7_2018_authored_hint:
+        courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+        courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_maze_ramp1_authored_hint:
+        courseF_maze_ramp1_a: Ak sa vták neposúva ku prasaťu, presvedč sa, či si dobre
+          spojil všetky bloky a stlač "Spustiť".
+      courseF_maze_ramp13_authored_hint:
+        courseF_maze_ramp13_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+      courseF_maze_ramp15_authored_hint:
+        courseF_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: Ak sa vták neposúva ku prasaťu, presvedč sa, či si dobre
+          spojil všetky bloky a stlač "Spustiť".
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseF_maze_ramp6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseF_maze_ramp6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_maze_ramp7_authored_hint:
+        courseF_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+        courseF_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
+          či si dobre spojil oba bloky a stlač "Spustiť".
+      coursea_maze_ramp1_2019_authored_hint:
+        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
+          či si dobre spojil oba bloky a stlač "Spustiť".
+      grade2_CaringForNewPet_0_authored_hint:
+        grade2_CaringForNewPet_0: Ak sa vták neposúva ku prasaťu, presvedč sa, či
+          si dobre spojil všetky bloky a stlač "Spustiť".
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       grade2_MakeDogTag_1_authored_hint:

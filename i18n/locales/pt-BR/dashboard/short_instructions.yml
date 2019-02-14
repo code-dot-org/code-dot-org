@@ -931,16 +931,55 @@ pt-BR:
       CSPU5_U3 - Loops - 3_2018: Mude a condição "se" para uma repetição "enquanto" para que o programa execute até que role um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 4: Use os Comandos de Análise para fazer uma lista de todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 4_2018: Use os Comandos de Análise para fazer uma lista de todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 5: Adicione código dentro do loop enquanto, que atualizará a variável num para que a condição acabe se tornando falsa. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 5_2018: Adicione código dentro do loop enquanto, que atualizará a variável num para que a condição acabe se tornando falsa. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 6: Corrija o problema para que o loop seja executado pelo menos uma vez. Altere o valor inicial de num para um valor fictício, como -1. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 6_2018: Corrija o problema para que o loop seja executado pelo menos uma vez. Altere o valor inicial de num para um valor fictício, como -1. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 7: Sem adicionar linhas de código, reordene o código para que ele imprima todos os valores de num. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 7_2018: Sem adicionar linhas de código, reordene o código para que ele imprima todos os valores de num. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 8: Depure qual número não está sendo impresso e inclua uma instrução de gravação para exibir esse valor. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 8_2018: Depure qual número não está sendo impresso e inclua uma instrução de gravação para exibir esse valor. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 9: " Modifique a condição para que ele continue rolando, desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      CSPU5_U3 - Loops - 9_2018: " Modifique a condição para que ele continue rolando, desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      CSPU5_U3 - Loops - Minus Minus: Altere o código para contar decrescentemente de 10 para 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Minus Minus_2018: Altere o código para contar decrescentemente de 10 para 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Plus Plus: Altere o código para usar count++ em vez de count = count + 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Plus Plus_2018: Altere o código para usar count++ em vez de count = count + 1. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console_2018: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - minus = operator: Atualize o código para usar o operador -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - minus = operator_2018: Atualize o código para usar o operador -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - plus and minus = operator: Atualize o código para usar o operador +=. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - plus and minus = operator_2018: Atualize o código para usar o operador +=. (Clique para ver instruções completas)
       CSPU5_U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Add 5_2018: Some 5 a todos os valores em um vetor (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Counting Times: Conte o número de vezes que o 5 aparece em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Counting Times_2018: Conte o número de vezes que o 5 aparece em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Divid by 2: Divida cada valor no vetor por 2. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Divid by 2_2018: Divida cada valor no vetor por 2. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - General Search Param: Adicione um segundo parâmetro à função de pesquisa para o valor a ser pesquisado. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - General Search Param_2018: Adicione um segundo parâmetro à função de pesquisa para o valor a ser pesquisado. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Linear Search: Visite todos os elementos da matriz e exiba "verdadeiro" se o valor for 5, e "falso" caso contrário. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Linear Search_2018: Visite todos os elementos da matriz e exiba "verdadeiro" se o valor for 5, e "falso" caso contrário. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Loop Array If: Use uma declaração Se para exibir apenas os valores na matriz que são maiores que 5. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Loop Array If_2018: Use uma declaração Se para exibir apenas os valores na matriz que são maiores que 5. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function - add list param_2018: Crie uma função que receba uma lista de parâmetros e imprima se a lista contiver um 5. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function - add list parameter: Crie uma função que receba uma lista de parâmetros e imprima se a lista contiver um 5. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function: Mova o código que pesquisa a lista por um 5 em uma função chamada "pesquisa". (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function_2018: Mova o código que pesquisa a lista por um 5 em uma função chamada "pesquisa". (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - constrainTurtle_2018: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingConstrain: Corrija o erro na restrição para que ele retorne o valor apropriado. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingConstrain_2018: Corrija o erro na restrição para que ele retorne o valor apropriado. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingMaxVal: Corrija o erro no maxVal para que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingMaxVal_2018: Corrija o erro no maxVal para que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - useMinVal: Chame minVal dentro da instrução console.log para calcular o mínimo de dois valores. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - useMinVal_2018: Chame minVal dentro da instrução console.log para calcular o mínimo de dois valores. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - writeMaxVal: Escreva a função maxVal e use-a na instrução console.log para calcular o máximo de dois valores. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - writeMaxVal_2018: Escreva a função maxVal e use-a na instrução console.log para calcular o máximo de dois valores. (Clique para ver instruções completas)
       CSPU5_U3 - User Input - Save getText To Variable: Salve a idade e o nome do usuário em variáveis (clique para ver as instruções completas)
       CSPU5_U3 - User Input - Save getText To Variable_2018: Salve a idade e o nome do usuário em variáveis (clique para ver as instruções completas)
+      CSPU5_U3 Digital Assistant Target: Experimente uma demonstração do Assistente Digital!
       CSPU5_U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique para ver as instruções completas).
       CSPU5_U3-Design Mode-Image: Recrie o "Jogo do Caçador" da última lição usando o Modo Design. (Clique para ver as instruções completas).
       CSPU5_U313 Two Buttons with Ids: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
@@ -970,6 +1009,8 @@ pt-BR:
       CSPU5_U3L16 - text labels: "Introdução de textLabels.  Primeiro, tente substituir\nseu botão por um textLabel.  O texto vai responder a eventos da mesma forma que o\nbotão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código\ninicial similar ao resultado do último nível, então você pode copiar o código do\núltimo nível aqui se você preferir. "
       CSPU5_U3L16 - textInput getText write: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
       CSPU5_U3L16 - textInput getText write_2018: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
+      CSPU5_U3L16 - toUpper: Faça o nome do usuário aparecer em maiúsculo (Clique para ver as instruções completas)
+      CSPU5_U3L16 - toUpper_2018: Faça o nome do usuário aparecer em maiúsculo (Clique para ver as instruções completas)
       CSPU5_U3L19 - fix the var name syntax error v2: "Demos a você um trecho de código\ncom um erro. Ele não reconhece a variável. Você consegue descobrir o motivo? Conserte\no erro e execute o programa. Observe também a mensagem de erro, já que ela\npode aparecer em algum momento da sua vida.\\r\n\\r\n"
       CSPU5_U3L19 - fix the var name syntax error v2_2018: "Demos a você um trecho de código\ncom um erro. Ele não reconhece a variável. Você consegue descobrir o motivo? Conserte\no erro e execute o programa. Observe também a mensagem de erro, já que ela\npode aparecer em algum momento da sua vida.\\r\n\\r\n"
       CSPU5_U3L19 - three basic ops of variables: "Faça o seguinte:\\r\nDemos a você\ntrês linhas de código mostradas na página anterior. Adicione três linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável, atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome da variável de\nx para alguma outra coisa.\\r\n"
@@ -2176,10 +2217,31 @@ pt-BR:
       U3 - Loops - 2: Tente criar um laço infinito usando !=, > e <. (Clique para ver todas as instruções)
       U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para que o programa execute até que role um 6. (Clique para ver as instruções completas)
       U3 - Loops - 4: " Use os Comandos de Análise para fazer uma lista de todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)"
+      U3 - Loops - 5: Adicione código dentro do loop enquanto, que atualizará a variável num para que a condição acabe se tornando falsa. (Clique para ver instruções completas)
+      U3 - Loops - 6: Corrija o problema para que o loop seja executado pelo menos uma vez. Altere o valor inicial de num para um valor fictício, como -1. (Clique para ver instruções completas)
+      U3 - Loops - 7: Sem adicionar linhas de código, reordene o código para que ele imprima todos os valores de num. (Clique para ver instruções completas)
+      U3 - Loops - 8: Depure qual número não está sendo impresso e inclua uma instrução de gravação para exibir esse valor. (Clique para ver instruções completas)
+      U3 - Loops - 9: " Modifique a condição para que ele continue rolando, desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      U3 - Loops - Minus Minus: Altere o código para contar decrescentemente de 10 para 1. (Clique para ver as instruções completas)
+      U3 - Loops - Plus Plus: Altere o código para usar count++ em vez de count = count + 1. (Clique para ver as instruções completas)
       U3 - Loops - Typing in Console: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
+      U3 - Loops - minus = operator: Atualize o código para usar o operador -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      U3 - Loops - plus and minus = operator: Atualize o código para usar o operador +=. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique para ver as instruções completas)
       U3 - Loops And Arrays - Counting Times: Conte o número de vezes que o 5 aparece em um vetor. (Clique para ver as instruções completas)
       U3 - Loops And Arrays - Divid by 2: Divida cada valor no vetor por 2. (Clique para ver as instruções completas)
+      U3 - Loops And Arrays - General Search Param: Adicione um segundo parâmetro à função de pesquisa para o valor a ser pesquisado. (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Linear Search: Visite todos os elementos da matriz e exiba "verdadeiro" se o valor for 5, e "falso" caso contrário. (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Loop Array If: Use uma declaração Se para exibir apenas os valores na matriz que são maiores que 5. (Clique para ver as instruções completas)
+      U3 - Loops And Arrays - Make it a Function - add list parameter: Crie uma função que receba uma lista de parâmetros e imprima se a lista contiver um 5. (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Make it a Function: Mova o código que pesquisa a lista por um 5 em uma função chamada "pesquisa". (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Return Value: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      U3 - Return Values - debuggingConstrain: Corrija o erro na restrição para que ele retorne o valor apropriado. (Clique para ver instruções completas)
+      U3 - Return Values - debuggingMaxVal: Corrija o erro no maxVal para que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      U3 - Return Values - debuggingReturns: Corrija o erro no maxVal para que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      U3 - Return Values - useMinVal: Chame minVal dentro da instrução console.log para calcular o mínimo de dois valores. (Clique para ver instruções completas)
+      U3 - Return Values - writeMaxVal: Escreva a função maxVal e use-a na instrução console.log para calcular o máximo de dois valores. (Clique para ver instruções completas)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
@@ -2208,12 +2270,15 @@ pt-BR:
       U3 - Sprites and Mod - two sprites: Faça isso
       U3 - User Input - Save getText To Variable: Salve a idade e o nome do usuário em variáveis (clique para ver as instruções completas)
       U3 - images - bee free play: Faça isso
+      U3 Digital Assistant Target - Mehal: Experimente uma demonstração do Assistente Digital!
+      U3 Digital Assistant Target: Experimente uma demonstração do Assistente Digital!
       U3 Variables consolelog: Use o bloco de escrita para exibir o valor de tamanho
       U3 Variables flower example: Mude o valor de petalSize múltiplas vezes. Como isto muda o seu desenho?
       U3 Variables gray square: Mude o valor de petalSize múltiplas vezes. Como isto muda o seu desenho?
       U3 Variables make a square: Altere o valor de tamanho várias vezes. Como muda seu desenho?
       U3 Variables randomize your square: Mude o valor de petalSize múltiplas vezes. Como isto muda o seu desenho?
       U3 Variables write: Use o bloco de escrita para exibir o valor de tamanho
+      U3 mehal's clone: Experimente uma demonstração do Assistente Digital!
       U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique para ver as instruções completas).
       U3-Design Mode-Image: Recrie o "Jogo do Caçador" da última lição usando o Modo Design. (Clique para ver as instruções completas).
       U313 Two Buttons with Ids: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
@@ -2288,6 +2353,7 @@ pt-BR:
       U3L16 - singleSetPosition: Mova o botão para o meio da tela. (Clique aqui para ver todas as instruções)
       U3L16 - text labels: "Introdução de textLabels.  Primeiro, tente substituir\nseu botão por um textLabel.  O texto vai responder a eventos da mesma forma que o\nbotão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código\ninicial similar ao resultado do último nível, então você pode copiar o código do\núltimo nível aqui se você preferir. "
       U3L16 - textInput getText write: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
+      U3L16 - toUpper: Faça o nome do usuário aparecer em maiúsculo (Clique para ver as instruções completas)
       U3L19 - Clicker Game Freeplay Area: "Use esta área de laboratório do aplicativo para melhorar\nseu jogo no estilo clicker.  Você deve começar copiando/colando o código do seu jogo antigo\naqui. Estamos mostrando um conjunto mais completo de blocos na caixa de ferramentas -\nvocê pode não ter usado algumas coisas ainda. Fique à vontade para explorar e\ntestar o que você quiser. Tudo o que você precisa deve ser mostrado.\nDivirta-se!"
       U3L19 - do concatenate string with var: "Demos a você um trecho\nde código da tela anterior. Tente alterar o valor atribuído a foo\npara ver a string ser alterada. \\r\nFaça o seguinte: \\r\n1. Tente alterar o valor atribuído\na foo para ver a string ser alterada. \\r\n2. Modificando apenas as linhas de código\nque lhe foram dadas, tente fazer a saída ser: “O valor de foo é:\n9.  Quem achar diferente que prove.” \\r\n"
       U3L19 - fix the var name syntax error v2: "Demos a você um trecho de código\ncom um erro. Ele não reconhece a variável. Você consegue descobrir o motivo? Conserte\no erro e execute o programa. Observe também a mensagem de erro, já que ela\npode aparecer em algum momento da sua vida.\\r\n\\r\n"
@@ -2432,11 +2498,13 @@ pt-BR:
       course1_playlab_events_challenge2: '"Vamos fazer uma festa! Dê aos meus amigos algo para fazer quando você clique ou toque neles."'
       course2_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma imagem como esta?
       course2_artist_nestedLoops_challenge2: Você consegue descobrir como fazer uma imagem como esta?
+      course2_artist_prog_challenge1: Desenhe quartos para cada um dos animais. Existem muitos jeitos de solucionar esse quebra cabeças, então se divirta. O caminho mais curto para a solução é usando 6 blocos, mas use quantos você quiser!
       course2_bee_conditionals_challenge1: Colete todo o néctar ou faça todo o mel.
       course2_bee_conditionals_challenge2: Colete todo o néctar ou faça todo o mel.
       course2_collector_loops_challenge2: Pegar todos os tesouros!
       course2_collector_prog_challenge1: Preste atenção! Você consegue coletar todas as *10* peças do tesouro?
       course2_collector_prog_challenge2: Há 20 peças de tesouro para serem encontradas. Colete pelo menos metade para finalizar este desafio!
+      course2_maze_loops_challenge1: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
       course2_maze_seq_challenge1: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!
       course2_playlab_stage17_1: "Você pode fazer Jorge, o cachorro (personagem 1),\ndizer \"Olá\"?"
       course2_playlab_stage17_10: |-
@@ -2451,10 +2519,17 @@ pt-BR:
       course2_playlab_stage17_4: "Você consegue escrever um programa que faça \nJorge (personagem 1) se mover até Olívia, a gata, e fazer Olívia dizer \"Olá\" quando Jorge\na alcançar?"
       course2_playlab_stage17_5: "Você pode escrever um programa para fazer Otávia\ndizer \"Olá\" quando clicarem nela?"
       course2_playlab_stage17_6: "Agora escreva um programa que faça Valfredo\nse mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!"
+      course2_playlab_stage17_7: O bloco `repita para sempre` permite rodar códigos para várias vezes sempre. Você consegue colocar blocos para mover o dinossauro Chomp (ator 2) para cima ou para baixo para sempre?
       course2_playlab_stage17_8: "Você pode fazer Valfredo (personagem 1) dizer\n\"Ai!\" e reproduzir um som de \"batida\" se ele encontrar Chomp? \\r\n\\r\nQuando\nterminar, jogue para que isso aconteça."
       course2_playlab_stage17_9: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com Otávia (personagem 3)? \\r\nJogue e mova Valfredo\ncom as setas do teclado até marcar ponto!"
+      course3_artist_concept_challenge1: Fique a vontade para usar tentativa e erro. Não esperamos que você seja perfeito na primeira vez. Quer ver mais dicas? Clique aqui!
+      course3_artist_functions_challenge2: Tente esse código para ver como funciona, então faça um programa do seu jeito!
+      course3_bee_functions_challenge1: Você está por conta própria nesse desafio. Isso pode ser mais difícil do que parece!
       course3_collector_debugging_challenge2: Você é um especialista em laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
+      course3_farmer_condLoops_challenge1: Vire à direita nas abóboras. Colete tudo para completar o nível. Cada cultura oculta tem apenas um milho ou alface.
       course3_farmer_condLoops_challenge2: Colete tudo para completar o nível.
+      course3_maze_debugging_challenge2: '* "Se eu virar muitas vezes, fico tonto! Me ajude a alcançar a noz com apenas quatro comandos ''virar''." *'
+      course3_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes, ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo' e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria. \nClique as dicas para ideias!"
       course3_playlab_stage16_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
       course3_playlab_stage16_2: "Você pode fazer o cachorro dizer alguma coisa e,\ndepois, fazer a gata dizer alguma coisa?"
       course3_playlab_stage16_3: "Você consegue escrever um programa para fazer este\ncachorro se mover até o gato?"
@@ -2468,6 +2543,7 @@ pt-BR:
       course3_playlab_stage17_5: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com o polvo, e então movê-lo com as setas do teclado até\nmarcar pontos?"
       course3_playlab_stage17_6: "Você pode adicionar blocos para mudar o plano de fundo\ne a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?"
       course3_playlab_stage17_7: "Crie sua própria história. Quando terminar,\nclique em \"Concluir\" para que seus amigos testem sua história em seus celulares."
+      course4_artist_functions_challenge2: Tente esse código para ver como funciona, então faça um programa do seu jeito!
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo totalmente diferente)
       courseA_artist_loops1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops10: Me ajude a colocar pedras para que eu não caia!
@@ -2949,6 +3025,9 @@ pt-BR:
       courseC_collector_loops_challenge2: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_loops_challenge2_2018: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_loops_challenge2_2019: Pegue pelo menos **5** peças do tesouro!
+      courseC_collector_prog1: Brinque com os blocos para ver se você pode ajudar Laurel a coletar algum tesouro.
+      courseC_collector_prog1_2018: Brinque com os blocos para ver se você pode ajudar Laurel a coletar algum tesouro.
+      courseC_collector_prog1_2019: Brinque com os blocos para ver se você pode ajudar Laurel a coletar algum tesouro.
       courseC_collector_prog2: Mova Laurel até o tesouro, então use `coletar` para pegar.
       courseC_collector_prog2_2018: Mova Laurel até o tesouro, então use `coletar` para pegar.
       courseC_collector_prog2_2019: Mova Laurel até o tesouro, então use `coletar` para pegar.
@@ -2979,9 +3058,15 @@ pt-BR:
       courseC_collector_prog_challenge2_2018: Colete pelo menos **10** peças do tesouro para finalizar este desafio!
       courseC_collector_prog_challenge2_2019: Colete pelo menos **10** peças do tesouro para finalizar este desafio!
       courseC_flappy_embed_events: Aquie está um exemplo de um jogo que você está prestes a criar! Jogue-o uma ou duas vezes para ter uma ideia do que você está prestes a fazer.
+      courseC_flappy_events1: Anexe o bloco `quantidade normal de bater de asas` ao evento `quando clicar`, depois pressione "Executar".    Clique ou toque no espaço de jogo para mover o Flappy para o alvo.
       courseC_flappy_events10: 'Crie seu próprio jogo Flappy Bird! '
       courseC_flappy_events10_2018: 'Crie seu próprio jogo Flappy Bird! '
       courseC_flappy_events10_2019: 'Crie seu próprio jogo Flappy Bird! '
+      courseC_flappy_events1_2018: Anexe o bloco `quantidade normal de bater de asas` ao evento `quando clicar`, depois pressione "Executar".    Clique ou toque no espaço de jogo para mover o Flappy para o alvo.
+      courseC_flappy_events1_2019: Anexe o bloco `quantidade normal de bater de asas` ao evento `quando clicar`, depois pressione "Executar".    Clique ou toque no espaço de jogo para mover o Flappy para o alvo.
+      courseC_flappy_events2: Tente adicionar um bloco que defina o nível da velocidade quando o botão "Executar" for pressionado. Jogue o jogo e bata as asas até o alvo para continuar.
+      courseC_flappy_events2_2018: Tente adicionar um bloco que defina o nível da velocidade quando o botão "Executar" for pressionado. Jogue o jogo e bata as asas até o alvo para continuar.
+      courseC_flappy_events2_2019: Tente adicionar um bloco que defina o nível da velocidade quando o botão "Executar" for pressionado. Jogue o jogo e bata as asas até o alvo para continuar.
       courseC_flappy_events6: Veja se você ainda pode marcar um ponto depois de fazer o passarinho bater as asas cada vez que você clica.
       courseC_flappy_events6_2018: Veja se você ainda pode marcar um ponto depois de fazer o passarinho bater as asas cada vez que você clica.
       courseC_flappy_events6_2019: Veja se você ainda pode marcar um ponto depois de fazer o passarinho bater as asas cada vez que você clica.
@@ -3034,6 +3119,10 @@ pt-BR:
       courseC_maze_loops7: Use o que você aprendeu em outros desafios!
       courseC_maze_loops8: 'Desafio: Combine ideias dos últimos desafios para completar este nível.'
       courseC_maze_loops9: Você está indo bem! Continuem assim!
+      courseC_maze_loops_challenge1: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
+      courseC_maze_loops_challenge1a: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
+      courseC_maze_loops_challenge1a_2018: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
+      courseC_maze_loops_challenge1a_2019: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
       courseC_maze_programming4: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2019: Evite a(s) TNT(s) ou penas irão voar!
@@ -3166,15 +3255,44 @@ pt-BR:
       courseD_autorun_binary7_2019: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_autorun_binary8_2019: Termine o código para criar este desenho.
       courseD_autorun_binary8_predict1_2019: Termine o código para criar este desenho.
+      courseD_bee_conditionals1: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
       courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2019: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals1_predict1: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
+      courseD_bee_conditionals1_predict1_2018: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
+      courseD_bee_conditionals1_predict1_2019: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
+      courseD_bee_conditionals2: 'Verifique embaixo de cada nuvem para ver se ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals2_2018: 'Verifique embaixo de cada nuvem para ver se ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals2_2019: 'Verifique embaixo de cada nuvem para ver se ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals2_test: 'Verifique embaixo de cada nuvem para ver se ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals3: "Ajude a abelha a recolher todo o néctar. \n\nVocê só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor."
+      courseD_bee_conditionals3_2018: "Ajude a abelha a recolher todo o néctar. \n\nVocê só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor."
+      courseD_bee_conditionals3_2019: "Ajude a abelha a recolher todo o néctar. \n\nVocê só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor."
+      courseD_bee_conditionals4: Pegue todo o néctar usando o menor número de blocos possível.
+      courseD_bee_conditionals4_2018: Pegue todo o néctar usando o menor número de blocos possível.
+      courseD_bee_conditionals4_2019: Pegue todo o néctar usando o menor número de blocos possível.
+      courseD_bee_conditionals5: Colete todo o néctar usando o menor número de blocos possível
+      courseD_bee_conditionals5_2018: Colete todo o néctar usando o menor número de blocos possível
+      courseD_bee_conditionals5_2019: Colete todo o néctar usando o menor número de blocos possível
+      courseD_bee_conditionals6: Algumas dessas nuvens podem ter favos de mel embaixo delas. Certifique-se de verificar se um favo de mel está se escondendo atrás de cada nuvem!
+      courseD_bee_conditionals6_2018: Algumas dessas nuvens podem ter favos de mel embaixo delas. Certifique-se de verificar se um favo de mel está se escondendo atrás de cada nuvem!
+      courseD_bee_conditionals6_2019: Algumas dessas nuvens podem ter favos de mel embaixo delas. Certifique-se de verificar se um favo de mel está se escondendo atrás de cada nuvem!
       courseD_bee_conditionals7: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals7_2018: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals7_2019: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals7_predict2_2019: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals8: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
+      courseD_bee_conditionals8_2018: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
+      courseD_bee_conditionals8_2019: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2019: Colete todo o néctar ou faça todo o mel.
@@ -3189,6 +3307,7 @@ pt-BR:
       courseD_bee_debugging2: Corrija o(s) erro(s) para coletar todo o néctar.
       courseD_bee_debugging3: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."
       courseD_bee_debugging4: Corrija o(s) erro(s) para fazer todo o mel.
+      courseD_bee_debugging5: 'Desafio: Todos os comandos que você precisa já estão aqui...agora use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.'
       courseD_bee_nestedLoops1: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2019: Ajude a abelha a coletar todo o nectar.
@@ -3235,6 +3354,7 @@ pt-BR:
       courseD_collector_debugging4a: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging4a_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging4a_2019: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging7: 'Desafio: Todos os comandos que você precisa já estão aqui...agora use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.'
       courseD_collector_debugging_challenge2: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_collector_debugging_challenge2_2018: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_collector_nested_loops_challenge2a: Ajude Laurel a coletar pelo menos duas pilhas de tesouro.
@@ -3246,6 +3366,7 @@ pt-BR:
       courseD_debugging_2: Corrija o(s) erro(s) para coletar todo o néctar.
       courseD_debugging_3: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."
       courseD_debugging_4: Corrija o(s) erro(s) para fazer todo o mel.
+      courseD_debugging_5: 'Desafio: Todos os comandos que você precisa já estão aqui...agora use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.'
       courseD_farmer_condLoops2: Ajude a colheitadeira coletar o milho e o alface do campo.
       courseD_farmer_condLoops2_2018: Ajude a colheitadeira coletar o milho e o alface do campo.
       courseD_farmer_condLoops2_2019: Ajude a colheitadeira coletar o milho e o alface do campo.
@@ -3348,6 +3469,9 @@ pt-BR:
       courseE_artist_functions5_2019: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       courseE_artist_functions8a_2018: Crie uma função para um único quadrado.
       courseE_artist_functions8a_2019: Crie uma função para um único quadrado.
+      courseE_artist_functions_challenge2: Tente esse código para ver como funciona, então faça um programa do seu jeito!
+      courseE_artist_functions_challenge2_2018: Tente esse código para ver como funciona, então faça um programa do seu jeito!
+      courseE_artist_functions_challenge2_2019: Tente esse código para ver como funciona, então faça um programa do seu jeito!
       courseE_artist_ramp12: Use o que você aprendeu para desenhar este triângulo dentro de um quadrado.
       courseE_bee_concept1: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseE_bee_concept1_2018: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
@@ -3364,6 +3488,8 @@ pt-BR:
       courseE_bee_functions3_2018: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_bee_functions4: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \\r\n\\r\nUse\na função para coletar todo o néctar."
       courseE_bee_functions4_2018: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \\r\n\\r\nUse\na função para coletar todo o néctar."
+      courseE_bee_functions_challenge1: Você está por conta própria nesse desafio. Isso pode ser mais difícil do que parece!
+      courseE_bee_functions_challenge1_2018: Você está por conta própria nesse desafio. Isso pode ser mais difícil do que parece!
       courseE_collector_ramp10: Ajude Laurel a coletar todo o tesouro.
       courseE_collector_ramp8: Ajude Laurel a coletar todo o tesouro.
       courseE_collector_ramp9: Ajude Laurel a coletar todo o tesouro.
@@ -3393,6 +3519,8 @@ pt-BR:
       courseE_maze_ramp5: Desvie da TNT.
       courseE_maze_ramp5_2018: Desvie da TNT.
       courseE_multi_maze_ramp5: Desvie da TNT.
+      courseE_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes, ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo' e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria. \nClique as dicas para ideias!"
+      courseE_playLab_challenge1_2018: "Algo deve acontecer quando tiver pontos suficientes, ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo' e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria. \nClique as dicas para ideias!"
       courseF_artist_for7: "Faça três pequenas alterações no\ncódigo do último nível para conseguir isso!"
       courseF_artist_for7_2018: "Faça três pequenas alterações no\ncódigo do último nível para conseguir isso!"
       courseF_artist_for7_2019: "Faça três pequenas alterações no\ncódigo do último nível para conseguir isso!"
@@ -3412,10 +3540,22 @@ pt-BR:
       courseF_artist_variables7_2019: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
+      courseF_bee_conditionals1_predict1: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
+      courseF_bee_conditionals1_predict1_2018: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
+      courseF_bee_conditionals4: Pegue todo o néctar usando o menor número de blocos possível.
+      courseF_bee_conditionals4_2018: Pegue todo o néctar usando o menor número de blocos possível.
+      courseF_bee_conditionals5: Colete todo o néctar usando o menor número de blocos possível
+      courseF_bee_conditionals5_2018: Colete todo o néctar usando o menor número de blocos possível
       courseF_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseF_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseF_bee_conditionals8: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
+      courseF_bee_conditionals8_2018: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos possíveis.
       courseF_bee_for1_2018: Colete o nectar de cada flor usando o menor número de blocos possíveis.
       courseF_bee_for1_2019: Colete o nectar de cada flor usando o menor número de blocos possíveis.
@@ -3590,6 +3730,7 @@ pt-BR:
       grade2_maze_intro10: Resolva este desafio.
       grade2_maze_intro9: Resolva este desafio.
       grade2_playlab_project_1: "Agora escreva um programa que faça Valfredo\nse mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!"
+      grade2_playlab_project_2: O bloco `repita para sempre` permite rodar códigos para várias vezes sempre. Você consegue colocar blocos para mover o dinossauro Chomp (ator 2) para cima ou para baixo para sempre?
       grade2_playlab_project_3: "Você pode fazer Valfredo (personagem 1) dizer\n\"Ai!\" e reproduzir um som de \"batida\" se ele encontrar Chomp? \\r\n\\r\nQuando\nterminar, jogue para que isso aconteça."
       grade2_playlab_project_4: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com Otávia (personagem 3)? \\r\nJogue e mova Valfredo\ncom as setas do teclado até marcar ponto!"
       grade2_playlab_project_5: |-
@@ -3692,8 +3833,13 @@ pt-BR:
         \r
         Colete o néctar
         de cada uma das flores usando o menor número possível de blocos.
+      grade3_bee_conditionals_new1a: "Ajude a abelha a recolher todo o néctar. \n\nVocê só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor."
+      grade3_bee_conditionals_new2: Colete todo o néctar usando o menor número de blocos possível
+      grade3_bee_conditionals_new2a: Pegue todo o néctar usando o menor número de blocos possível.
       grade3_bee_conditionals_new3b: Colete todo o néctar e faça todo o mel.
+      grade3_bee_conditionals_quantum1: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade3_bee_conditionals_quantum3: Algumas dessas nuvens podem ter favos de mel embaixo delas. Certifique-se de verificar se um favo de mel está se escondendo atrás de cada nuvem!
       grade3_bee_conditionals_quantum4: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       grade3_maze_Loop1: "Avaliação: Leve-me até o girassol\nusando apenas 5 blocos! "
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."

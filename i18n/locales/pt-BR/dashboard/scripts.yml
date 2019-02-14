@@ -1729,6 +1729,8 @@ pt-BR:
           stages:
             Challenge Overview:
               name: Visão geral do desafio
+            Chapter 1 Overview:
+              name: Capítulo 1 Visão geral
             Complete the Challenge:
               name: Complete o Desafio
             Getting Started:
@@ -2059,10 +2061,18 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+            Sprites and Images:
+              name: Sprites e Imagens
+            Sprites and Properties:
+              name: Sprites e Propriedades
             Variables and Animation:
               name: Variáveis e Animação
             Functions:
               name: funções
+            Defender:
+              name: Defensor
+            'Project: Build a Game':
+              name: 'Projeto: Construir um Jogo'
             Velocity:
               name: Velocidade
         2016_sciencePD_phase1:
@@ -2101,6 +2111,8 @@ pt-BR:
         ECSPD1:
           description_short: 'Em parceria com o Projeto GUTS'
           stages:
+            Background and Context:
+              name: Plano de Fundo e Contexto
             Welcome to Phase 1!:
               name: Bem-vindo a Fase 1!
         algebraFacilitator:
@@ -2166,6 +2178,8 @@ pt-BR:
               name: Laboratório de Jogos
         CSDU4-Draft:
           stages:
+            Design Mode:
+              name: Modo de Design
             Improving and Iterating:
               name: Improvizando e Interagindo
         CSDU2-Draft:
@@ -2178,6 +2192,10 @@ pt-BR:
               name: Funções do artista
         artistExemplar:
           description_audience: 8-18 anos de idade
+        teachercon:
+          stages:
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2366,6 +2384,24 @@ pt-BR:
               name: Pingue-pongue
             'Farmer: While Loops':
               name: 'Fazendeira: Laços Enquanto'
+        alltheplcthings:
+          stages:
+            Lesson 1,10:
+              name: Lição 1,10
+            Lesson 1,11:
+              name: Lição 1,11
+            Lesson 1,4:
+              name: Lição 1,4
+            Lesson 1,6:
+              name: Lição 1,6
+            Lesson 1,9:
+              name: Lição 1,9
+            Lesson 2,10:
+              name: Lição 2,10
+            Lesson 2,2:
+              name: Lição 2,2
+            Lesson 2,3:
+              name: Lição 2,3
         csd3-2017:
           description_short: Programação
           stages:
@@ -2381,6 +2417,10 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+            Sprites and Images:
+              name: Sprites e Imagens
+            Sprites and Properties:
+              name: Sprites e Propriedades
             Variables and Animation:
               name: Variáveis e Animação
             Velocity:
@@ -2393,6 +2433,8 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            'Project: Build a Game':
+              name: 'Projeto: Construir um Jogo'
             Variables:
               name: variáveis
             Sprites:
@@ -2460,12 +2502,18 @@ pt-BR:
               name: Processando
         csp-online-test:
           stages:
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
             Unit 2 Overview:
               name: Visão geral da unidade 2
             Unit 3 Overview:
               name: Visão geral da unidade 3
             Unit 5 Overview:
               name: Visão geral da unidade 5
+        csp1-support:
+          stages:
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         basketball:
           title: Escolha seu time e faça um jogo de basquete
           description_short: Escolha seu time e faça um jogo de basquete
@@ -2502,6 +2550,8 @@ pt-BR:
           stages:
             Unit 2 Overview:
               name: Visão geral da unidade 2
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         csd4-2017:
           stages:
             Improving and Iterating:
@@ -2675,10 +2725,14 @@ pt-BR:
           stages:
             Unit 3 Overview:
               name: Visão geral da unidade 3
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         csp4-support:
           stages:
             Unit 3 Overview:
               name: Visão geral da unidade 3
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
             Unit 4 Overview:
               name: Revisão da Unidade 4
         sciencepd4:
@@ -2721,6 +2775,8 @@ pt-BR:
           stages:
             Unit 5 Overview:
               name: Visão geral da unidade 5
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         csppostap-2017:
           description_short: Aprenda a coletar e usar dados em aplicativos do App Lab.
           stages:
@@ -2826,6 +2882,10 @@ pt-BR:
               name: Laço de Desenho e Randomização
             Variables and Animation:
               name: Variáveis e Animação
+            Sprites and Properties:
+              name: Sprites e Propriedades
+            Sprites and Images:
+              name: Sprites e Imagens
             Booleans and Conditionals:
               name: Booleanos e Condicionais
             Conditionals and Keyboard Input:
@@ -3939,6 +3999,10 @@ pt-BR:
               name: Olhando para o futuro
             Binary Bracelets:
               name: Pulseiras binárias
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
         gamelab:
           title: Laboratório de Jogos
         coursea-2019:
@@ -3973,6 +4037,8 @@ pt-BR:
               description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
+            Learn to Drag and Drop:
+              name: Aprenda a arrastar e soltar
         courseb-2019:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.

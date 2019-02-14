@@ -318,7 +318,7 @@ lt:
         text: pasisuk į kairę
       RyanLab_turnRight:
         text: pasisuk į dešinę
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': dydis
@@ -329,6 +329,21 @@ lt:
           CONDITION:
             '"when"': kada
             '"while"': kol
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+          KEY:
+            '"up"': aukštyn
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
       aalab_whenTouching:
         options:
           CONDITION:

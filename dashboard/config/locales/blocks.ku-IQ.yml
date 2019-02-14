@@ -109,6 +109,10 @@ ku:
           KEY:
             '"w"': ڕۆژئاوا
             '"s"': باشور
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
       craft_ifPath:
         options:
           DIR:

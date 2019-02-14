@@ -9,7 +9,7 @@ export default class ElementSelect extends React.Component {
     selected: PropTypes.instanceOf(HTMLElement)
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     const element = elementUtils.getPrefixedElementById(e.target.value);
     this.props.onChangeElement(element, null);
   };
@@ -19,8 +19,12 @@ export default class ElementSelect extends React.Component {
 
     return (
       <div style={{float: 'right', marginRight: '-10px'}}>
-        <select value={selected} onChange={this.handleChange} style={{width: '150px'}}>
-          {this.props.elementIdList.map(function (id) {
+        <select
+          value={selected}
+          onChange={this.handleChange}
+          style={{width: '150px'}}
+        >
+          {this.props.elementIdList.map(function(id) {
             return <option key={id}>{id}</option>;
           })}
         </select>

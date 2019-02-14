@@ -296,6 +296,7 @@ it:
         \r
         \r
 
+      CSDU6 - timed loop question timed: Cosa pensi che succederà quando cliccherai su "Esegui"?
       Color Blindness Filter: |+
         # Filtro daltonici\r
         \r
@@ -669,6 +670,7 @@ it:
       Fish Tank 4-validated_2019: "Serve un po' d'acqua nel nostro acquario!\n\nUsa il blocco <xml><block type=\"gamelab_setBackground\" inline=\"true\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> per impostare lo sfondo blu."
       Fish Tank 5-validated: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
       Fish Tank 5-validated_2019: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
+      Fish Tank 5-validated_2019_implicitGroupTest: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
       Fish Tank 6-validated: "Cosa vuoi che faccia il nuovo amico del pesce?  \n\nAggiungi un comportamento al nuovo amico del pesce!"
       Fish Tank 6-validated_2019: "Cosa vuoi che faccia il nuovo amico del pesce?  \n\nAggiungi un comportamento al nuovo amico del pesce!"
       Fish Tank 7-validated: "Abbiamo aggiunto molti nuovi blocchi nella cassetta degli attrezzi.\n\nSperimentali per rendere speciale il tuo acquario!"
@@ -894,7 +896,6 @@ it:
 
 
         Le **battute** in musica sono l’unità di misura del tempo. In questa esercitazione una battuta corrisponde a quattro secondi.
-      Standalone_Artist_1: "Benvenuto all'Artista! Prima di tutto, cerchiamo di disegnare un semplice quadrato utilizzando il blocco \"gira a destra\" e il blocco \"vai avanti\". Ogni lato è lungo 100 pixel."
       Standalone_Artist_2: "Disegna questo rombo che ha i lati lunghi 150 pixel.<br><br><b>Attenzione</b>: un rombo ha gli angoli di 60 e 120 gradi, ma i gradi dell’istruzione “gira” sono misurati rispetto al percorso davanti all’Artista. Vedi anche le spiegazioni del video del <a href=\"https://studio.code.org/s/course2/stage/4/puzzle/1\">primo esercizio dell'Artista nel Corso 2</a>."
       Standalone_Artist_3: "Come fai a disegnare questo esagono che ha i lati lunghi 100 pixel? <br><br><b>Attenzione</b>: un esagono ha gli angoli di 120 gradi, ma i gradi dell’istruzione “gira” sono misurati rispetto al percorso davanti all’Artista. Vedi anche le spiegazioni del video del <a href=\"https://studio.code.org/s/course2/stage/4/puzzle/1\">primo esercizio dell'Artista nel Corso 2</a>."
       Standalone_Artist_4: "Adesso c'è il nuovo blocco \"ripeti 6 volte\". Questo blocco di ripetizione, detto anche \"ciclo\", ripete 6 volte quello che si trova al suo interno. Cosa succede se si ripete 6 volte il codice in grigio che trovi già pronto?"

@@ -7707,6 +7707,10 @@ fil:
               name: Masdan ang Hinaharap
             Binary Bracelets:
               name: Binary na mga Pulseras
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
         csp-mid-survey:
           description_audience: CSP na mga Estudyante
         gamelab:
@@ -7743,6 +7747,8 @@ fil:
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
+            Learn to Drag and Drop:
+              name: Matutong Mag-Drag at Mag-Drop
         courseb-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
@@ -7757,6 +7763,8 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            'Loops: Getting Loopy':
+              name: 'Mga Loops: Pagiging Loopy'
         pre-express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
@@ -7782,3 +7790,7 @@ fil:
               name: 'Pag-dedebug: Hindi nakitang mga Bug'
             'Real-life Algorithms: Plant a Seed':
               name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+        dani-test-script:
+          stages:
+            new stage:
+              name: bagong yugto

@@ -529,6 +529,11 @@ module LevelsHelper
       end
     end
 
+    # Expo-specific options (only needed for Applab and Gamelab)
+    if (@level.is_a? Gamelab) || (@level.is_a? Applab)
+      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
+    end
+
     # User/session-dependent options
     app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
     app_options[:legacyShareStyle] = true if @legacy_share_style
@@ -769,7 +774,7 @@ module LevelsHelper
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
-    return false unless level.game == Game.applab || level.game == Game.gamelab
+    return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
     return false if level.is_a? GamelabJr
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?

@@ -321,7 +321,7 @@ gl:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -332,6 +332,21 @@ gl:
           CONDITION:
             '"when"': cando
             '"while"': mentras
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
       aalab_whenTouching:
         options:
           CONDITION:

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
-import i18n from "@cdo/locale";
-import color from "../../util/color";
+import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
+import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
 
@@ -17,7 +17,7 @@ const styles = {
     height: 200,
     width: styleConstants['content-width'],
     marginBottom: 20,
-    background: color.white,
+    background: color.white
   },
   image: {
     position: 'absolute',
@@ -33,7 +33,7 @@ const styles = {
     fontSize: 30,
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.white,
-    width: styleConstants['content-width']-35,
+    width: styleConstants['content-width'] - 35,
     zIndex: 2,
     position: 'absolute',
     display: 'inline',
@@ -52,25 +52,25 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
     background: color.white,
-    width: "65%",
-    boxSizing: "border-box",
+    width: '65%',
+    boxSizing: 'border-box',
     position: 'absolute',
-    zIndex: 2,
+    zIndex: 2
   },
   buttonBox: {
     marginTop: 120,
-    zIndex: 2,
+    zIndex: 2
   },
   lessonButton: {
     marginLeft: 20,
     marginRight: 25
   },
   ltr: {
-    float: 'left',
+    float: 'left'
   },
   rtl: {
-    float: 'right',
-  },
+    float: 'right'
+  }
 };
 
 // While this is named TopCourse, it really refers to the most recent course
@@ -86,22 +86,25 @@ class TopCourse extends Component {
   };
 
   render() {
-    const { assignableName, lessonName, linkToOverview, linkToLesson, isRtl } = this.props;
+    const {
+      assignableName,
+      lessonName,
+      linkToOverview,
+      linkToLesson,
+      isRtl
+    } = this.props;
     const localeStyle = isRtl ? styles.ltr : styles.rtl;
 
     return (
       <div style={styles.card}>
-        <img src={require('@cdo/static/small_purple_icons_fullwidth.png')} style={styles.image}/>
-        <div style={styles.name}>
-          {assignableName}
-        </div>
+        <img
+          src={require('@cdo/static/small_purple_icons_fullwidth.png')}
+          style={styles.image}
+        />
+        <div style={styles.name}>{assignableName}</div>
         <div style={styles.description}>
-          <div>
-            {i18n.topCourseLessonIntro({lessonName})}
-          </div>
-          <div style={{marginTop: 10}}>
-            {i18n.topCourseExplanation()}
-          </div>
+          <div>{i18n.topCourseLessonIntro({lessonName})}</div>
+          <div style={{marginTop: 10}}>{i18n.topCourseExplanation()}</div>
         </div>
         <div style={[styles.buttonBox, localeStyle]}>
           <Button
@@ -122,5 +125,5 @@ class TopCourse extends Component {
 }
 
 export default connect(state => ({
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(Radium(TopCourse));

@@ -1,5 +1,8 @@
 import {expect} from '../../../../../util/configuredChai';
-import {isUnit6IntentionEligible, Unit6Intention} from "@cdo/apps/lib/kits/maker/util/discountLogic";
+import {
+  isUnit6IntentionEligible,
+  Unit6Intention
+} from '@cdo/apps/lib/kits/maker/util/discountLogic';
 
 describe('discountLogic.js', () => {
   describe('isUnit6IntentionEligible', () => {

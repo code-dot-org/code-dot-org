@@ -246,6 +246,7 @@ it:
       20hr_farmer_stage9_7: 'Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato? Suggerimento: usa le opzioni nel menù a discesa (▼) del blocco "mentre".'
       20hr_farmer_stage9_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando il minor numero possibile di blocchi.
       20hr_farmer_stage9_9: 'Fammi rimuovere tutti questi mucchi di terra. Prova ad usare il minor numero possibile di blocchi. Ce la fai usando il blocco "mentre" e senza usare il blocco "ripeti"?'
+      20hr_maze_stage2_1: "Puoi aiutarmi a catturare il maialino cattivo? Metti due blocchi `vai avanti`, uno sotto l'altro, sotto il blocco `quando si clicca su \"Esegui\"`. Poi clicca a sinistra sul pulsante \"Esegui\", sotto al labirinto. <br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       20hr_maze_stage2_10: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maialino.
       20hr_maze_stage2_11: 'Ok, un''ultima volta per fare pratica: riesci a risolvere questo esercizio aggiungendo solo 4 blocchi?'
       20hr_maze_stage2_13: Ok, questo esercizio è simile, ma leggermente diverso. Riesci a farlo aggiungendo solo cinque blocchi?
@@ -831,6 +832,7 @@ it:
       Fish Tank 4-validated_simple: Usa il blocco `set background color` (*imposta colore sfondo*) per impostare lo sfondo blu.
       Fish Tank 5-validated: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
       Fish Tank 5-validated_2019: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
+      Fish Tank 5-validated_2019_implicitGroupTest: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
       Fish Tank 6-validated: Aggiungi un comportamento al nuovo amico del pesce.
       Fish Tank 6-validated_2019: Aggiungi un comportamento al nuovo amico del pesce.
       Fish Tank 6-validated_simple: Aggiungi un comportamento al nuovo amico del pesce.
@@ -1262,6 +1264,8 @@ it:
       artistLoopsK2: Ora, usa un ciclo `ripeti` per disegnare questa linea cinque volte!
       artistLoopsK2gradek_artist_loops3: Ora, usa un ciclo `ripeti` per disegnare questa linea cinque volte!
       beeDebugVideo1: Riesci ad usare un <i>ciclo</i> `ripeti ... volte` per raccogliere tutto il nettare?
+      behaviors 1: Fai una previsione!
+      behaviors 4: Fai una previsione!
       birdsDebugVideo1: Fammi fare il percorso per arrivare a quello sciocco maialino. Evita la dinamite (TNT) o le mie piume salteranno in aria!
       bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso sinistra` e premi "Esegui". Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.
       bounce_10: Ora in alto c'è una porta da calcio. Per costruire il gioco attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca la racchetta`. Vedi quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due.

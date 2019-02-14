@@ -65,7 +65,7 @@ sk:
         title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       PaperPlanes:
-        title: 'Algoritmus z reálneho života: Papierové lietadielka'
+        title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
       BinaryBracelets:
         title: Binárne náramky
@@ -134,22 +134,22 @@ sk:
         title: Cykly bez počítača
         desc: V tejto lekcii sa naučíš niečo o cykloch!
       courseB_unplugged_MRF:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: V tejto lekcii sa naučíte "programovať" vašich kamarátov!
       courseB_unplugged_loopyMRF:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Tak, ako na hodine "Moji robotickí kamaráti", aj tu budete "programovať" kamarátov, tentokrát však s cyklami!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
       courseD_unplugged_digitalCitizenship:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
       courseE_unplugged_privateInformation:
         title: 'Výchova do života: Súkromné a osobné údaje '
         desc: Dnes sa naučíte, aký je rozdiel medzi súkromnými a osobnými informáciami!
       courseF_unplugged_powerOfWords:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
       deeper learning description:
         desc: 'chýbajúci preklad: en-US.data.unplugged.desc'
@@ -172,7 +172,7 @@ sk:
         title: Stavanie základov
         desc: Študenti vytvoria stavbu len pomocou poskytnutých zásob. Stavba musí splniť zadanie (dosiahnuť určitú výšku alebo uniesť určitú záťaž) a študenti následne budú diskutovať o tom, ako ostať vytrvalý v prípade, že sa úlohy komplikujú.
       courseC_unplugged_paperPlanes:
-        title: 'Algoritmus z reálneho života: Papierové lietadielka'
+        title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
       courseC_unplugged_gettingLoopy:
         title: Neustále opakovanie
@@ -221,10 +221,10 @@ sk:
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie (niekedy ich voláme procedúry) sú malé programy, ktore môžete dookola používať vo Vašom väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť, prečo je kombinovanie kúskov kódu do funkcií tak užitočné.  '
       swipeRightPassThrough:
         title: Lekcia pracovných pohovorov
-        desc: "# Lekcia pracovných pohovorov\\r\n\\r\n## Potiahnite doprava pre IT\\r\nV tejto lekcií použijeme nástroj \"Potiahnite doprava pre IT\" vytvorený našimi partnermi z MIT. V Potiahnite doprava pre IT budete čítať vzorové študentské profily a skúsite vybrať konkrétne frázy a vyjadrenia, ktoré by týchto študentov mohli presvedčiť, aby absolvovali Kurz základov v informatike. \\r\n\\r\n### Ako to funguje\\r\nV hre \"Potiahnite doprava pre IT\" uvidíte niekoľko viet, ktoré môžete povedať každému študentovi. Vety, o ktorých si myslíte, že presvedčia daného študenta pre prihlásenie sa na kurz informatiky, potiahnete doprava a vety, ktoré podľa Vás nebudú fungovať, potiahnete doľava. Počas lekcie budeme ako skupina diskutovať, vymieňať si názory na vety, ktoré sú podľa Vás najúčinnejšie pre získanie nových študentov informatiky a takisto si budete môcť porovnať Vaše výsledky s výsledkami ostatných zúčastnených.\\r\n\\r\n\\r\nKed stlačíte \"Pokračovať\" nižšie, pošleme Vám túto hru a odošleme do nej emailovú adresu, s ktorou ste prihlásený na Code.org."
+        desc: "# Lekcia pracovných pohovorov\\r\n\\r\n## Potiahnite doprava pre IT\\r\nV tejto lekcií použijeme nástroj \"Potiahnite doprava pre IT\" vytvorený našimi partnermi z MIT. V Potiahnite doprava pre IT budete čítať vzorové študentské profily a skúsite vybrať konkrétne frázy a vyjadrenia, ktoré by týchto študentov mohli presvedčiť, aby absolvovali Kurz základov v informatike. \\r\n\\r\n### Ako to funguje\\r\nV hre \"Potiahnite doprava pre IT\" uvidíte niekoľko viet, ktoré môžete povedať každému študentovi. Vety, o ktorých si myslíte, že presvedčia daného študenta pre prihlásenie sa na kurz informatiky, potiahnete doprava a vety, ktoré podľa Vás nebudú fungovať, potiahnete doľava. Počas lekcie budeme ako skupina diskutovať, vymieňať si názory na vety, ktoré sú podľa Vás najúčinnejšie pre získanie nových študentov informatiky a takisto si budete môcť porovnať Vaše výsledky s výsledkami ostatných zúčastnených.\\r\n\\r\n\\r\nKed stlačíte \"Pokračovať\" nižšie, pošleme vám túto hru a odošleme do nej emailovú adresu, s ktorou ste prihlásený na Code.org."
       swipeRightPassThrough-test123:
         title: Lekcia pracovných pohovorov
-        desc: "# Lekcia pracovných pohovorov\\r\n\\r\n## Potiahnite doprava pre IT\\r\nV tejto lekcií použijeme nástroj \"Potiahnite doprava pre IT\" vytvorený našimi partnermi z MIT. V Potiahnite doprava pre IT budete čítať vzorové študentské profily a skúsite vybrať konkrétne frázy a vyjadrenia, ktoré by týchto študentov mohli presvedčiť, aby absolvovali Kurz základov v informatike. \\r\n\\r\n### Ako to funguje\\r\nV hre \"Potiahnite doprava pre IT\" uvidíte niekoľko viet, ktoré môžete povedať každému študentovi. Vety, o ktorých si myslíte, že presvedčia daného študenta pre prihlásenie sa na kurz informatiky, potiahnete doprava a vety, ktoré podľa Vás nebudú fungovať, potiahnete doľava. Počas lekcie budeme ako skupina diskutovať, vymieňať si názory na vety, ktoré sú podľa Vás najúčinnejšie pre získanie nových študentov informatiky a takisto si budete môcť porovnať Vaše výsledky s výsledkami ostatných zúčastnených.\\r\n\\r\n\\r\nKed stlačíte \"Pokračovať\" nižšie, pošleme Vám túto hru a odošleme do nej emailovú adresu, s ktorou ste prihlásený na Code.org."
+        desc: "# Lekcia pracovných pohovorov\\r\n\\r\n## Potiahnite doprava pre IT\\r\nV tejto lekcií použijeme nástroj \"Potiahnite doprava pre IT\" vytvorený našimi partnermi z MIT. V Potiahnite doprava pre IT budete čítať vzorové študentské profily a skúsite vybrať konkrétne frázy a vyjadrenia, ktoré by týchto študentov mohli presvedčiť, aby absolvovali Kurz základov v informatike. \\r\n\\r\n### Ako to funguje\\r\nV hre \"Potiahnite doprava pre IT\" uvidíte niekoľko viet, ktoré môžete povedať každému študentovi. Vety, o ktorých si myslíte, že presvedčia daného študenta pre prihlásenie sa na kurz informatiky, potiahnete doprava a vety, ktoré podľa Vás nebudú fungovať, potiahnete doľava. Počas lekcie budeme ako skupina diskutovať, vymieňať si názory na vety, ktoré sú podľa Vás najúčinnejšie pre získanie nových študentov informatiky a takisto si budete môcť porovnať Vaše výsledky s výsledkami ostatných zúčastnených.\\r\n\\r\n\\r\nKed stlačíte \"Pokračovať\" nižšie, pošleme vám túto hru a odošleme do nej emailovú adresu, s ktorou ste prihlásený na Code.org."
       brad-repro-bug-000:
         title: Brand Repro Chyba 000
         desc: "# Brad Repro Chyba 000\\r\n## Pokus na zopakovanie chyby, ktorú nahlásil Brooke\\r\nproces je nasledovný:\\r\n1. začal som s levelom \"unplugged\", doplnil som informácie, stlačil som Uložiť a publikovať.\\r\n2. \"zničil\" som level\\r\n3. spravil som \"označený\" level s rovnakým obsahom a rovnakým menom. označil som políčko pre jeho zašifrovanie. stlačil som uložiť a publikovať"
@@ -253,7 +253,7 @@ sk:
         title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
       Conditionals_2018:
         title: Podmienky
@@ -265,7 +265,7 @@ sk:
         title: Binárne obrázky
         desc: Hoci si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantách. Táto lekcia pokračuje v tomto koncepte ukazovaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
       PaperPlanes_2018:
-        title: 'Algoritmus z reálneho života: Papierové lietadielka'
+        title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
       GettingLoopy_2018:
         title: Neustále opakovanie
@@ -336,7 +336,7 @@ sk:
         title: Neustále opakovanie
         desc: Táto lekcia je úvodom do programovacieho konceptu cyklov (opakujúcich sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu, ktorú budú na základe inštrukcií opakovať.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
       BigEvent_2019:
         title: Veľká udalosť
@@ -345,7 +345,7 @@ sk:
         title: Binárne náramky
         desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.
       PaperPlanes_2019:
-        title: 'Algoritmus z reálneho života: Papierové lietadielka'
+        title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
       PlantASeed_2019:
         title: 'Algoritmy z reálneho života: Zasaď semienko'

@@ -5754,6 +5754,13 @@ es-MX:
         courseA_collector_loops2_b: |-
           Luego que se haya movido hacia un cuadrado con tesoro, use este bloque para tomarlo.
           <xml>  <block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa este bloque para controlar lo que sucede cuando los actores colisionan.
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           Use un bloque de repetición como este para ayudarlo.
@@ -8832,6 +8839,13 @@ es-MX:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: Puede usar más de un bloque `collect` en cada espacio.
         courseC_collector_prog_challenge1_b: Perdió su camino? ¡Prueba este camino para resolver el rompecabezas!
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa este bloque para controlar lo que sucede cuando los actores colisionan.
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "! [] (https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -13670,8 +13684,8 @@ es-MX:
         courseF_artist_for_challenge2_c: 'El "for loop" va desde 5 a 250 por 2. '
         courseF_artist_for_challenge2_a: El cambio de color se presenta con el bloque 'definir color con rojo, verde, azul'. Rojo es la constante definida como 255, verde es siempre el valor de 'contador', y azul es siempre '255-contador'.
         courseF_artist_for_challenge2_b: El código para esto es mucho más simple de lo que podrías pensar. Solo define el color dentro del 'ciclo for', avanza, y luego gira.
-        courseF_artist_for_challenge2_d: |-
-          ** Solución: **
+        courseF_artist_for_challenge2_d: |
+          **Solución:**
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -13711,21 +13725,20 @@ es-MX:
           </value>
           <value name="GREEN">
           <block type="variables_get">
-          <title name="VAR">contador</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           <value name="BLUE">
           <block type="math_arithmetic" inline="true">
-          <title name="OP"></title>
+          <title name="OP">MINUS</title>
           <value name="A">
           <block type="math_number">
-          menos el
           <title name="NUM">255</title>
           </block>
           </value>
           <value name="B">
           <block type="variables_get">
-          <title name="VAR">contador</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           </block>
@@ -13737,7 +13750,7 @@ es-MX:
           <title name="DIR">moveForward</title>
           <value name="VALUE">
           <block type="variables_get">
-          <title name="VAR">contador</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           <next>
@@ -13756,12 +13769,10 @@ es-MX:
           </statement>
           </block>
           </next>
-          <span class="notranslate"> ¡96</span>
+          </block>
           </next>
           </block>
           </xml>
-
-          ! [] (https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'El "for loop" va desde 5 a 250 por 2. '
         courseF_artist_for_challenge2_a: El cambio de color se presenta con el bloque 'definir color con rojo, verde, azul'. Rojo es la constante definida como 255, verde es siempre el valor de 'contador', y azul es siempre '255-contador'.

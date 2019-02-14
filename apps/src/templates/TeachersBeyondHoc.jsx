@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import i18n from "@cdo/locale";
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
-import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
+import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
@@ -13,30 +13,36 @@ const styles = {
   },
   mobileHeading: {
     fontSize: 24,
-    lineHeight: 1.5,
+    lineHeight: 1.5
   },
   clear: {
     clear: 'both'
   },
   spacer: {
-    height: 50,
-  },
+    height: 50
+  }
 };
 
 class TeachersBeyondHoc extends Component {
   static propTypes = {
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
   };
 
   render() {
-    const { responsiveSize } = this.props;
-    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
+    const {responsiveSize} = this.props;
+    const desktop =
+      responsiveSize === ResponsiveSize.lg ||
+      responsiveSize === ResponsiveSize.md;
 
-    const codeorgTeacherImage = desktop ? "codeorg-teacher" : "course-catalog";
+    const codeorgTeacherImage = desktop ? 'codeorg-teacher' : 'course-catalog';
 
-    const thirdPartyTeacherImage = desktop ? "third-party-teacher" : "third-party-teacher-small";
+    const thirdPartyTeacherImage = desktop
+      ? 'third-party-teacher'
+      : 'third-party-teacher-small';
 
-    const thirdPartyTeacherTitle = desktop ? i18n.congratsTeacherExternalTitle() : i18n.congratsTeacherExternalTitleShort();
+    const thirdPartyTeacherTitle = desktop
+      ? i18n.congratsTeacherExternalTitle()
+      : i18n.congratsTeacherExternalTitleShort();
 
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
 
@@ -59,33 +65,27 @@ class TeachersBeyondHoc extends Component {
 
     return (
       <div>
-        <h1 style={headingStyle}>
-          {i18n.congratsTeacherHeading()}
-        </h1>
+        <h1 style={headingStyle}>{i18n.congratsTeacherHeading()}</h1>
         <ResourceCardResponsiveContainer>
-          {cards.map(
-            (card, cardIndex) => (
-              <VerticalImageResourceCard
-                key={cardIndex}
-                title={card.title}
-                description={card.description}
-                buttonText={card.buttonText}
-                link={card.link}
-                jumbo={desktop}
-                image={card.image}
-              />
-            )
-          )}
+          {cards.map((card, cardIndex) => (
+            <VerticalImageResourceCard
+              key={cardIndex}
+              title={card.title}
+              description={card.description}
+              buttonText={card.buttonText}
+              link={card.link}
+              jumbo={desktop}
+              image={card.image}
+            />
+          ))}
         </ResourceCardResponsiveContainer>
-        <div style={styles.clear}/>
-        {!desktop && (
-          <div style={styles.spacer}/>
-        )}
+        <div style={styles.clear} />
+        {!desktop && <div style={styles.spacer} />}
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize,
+  responsiveSize: state.responsive.responsiveSize
 }))(TeachersBeyondHoc);
