@@ -749,6 +749,12 @@ EOS
     assert_equal '_3', level_3.name_suffix
   end
 
+  test 'clone with suffix recognized and removes version year suffix' do
+    old_level = create :level, name: 'level_1999'
+    new_level = old_level.clone_with_suffix('_2000')
+    assert_equal 'level_2000', new_level.name
+  end
+
   test 'clone with suffix properly escapes suffixes' do
     level_1 = create :level, name: 'your_level_1'
 
