@@ -108,7 +108,7 @@ class ScriptTeacherPanel extends React.Component {
               </div>
             )}
         </div>
-        {viewAs === ViewType.Teacher && students.length > 0 && (
+        {viewAs === ViewType.Teacher && (students || []).length > 0 && (
           <div style={{maxHeight: studentTableMaxHeight, overflowY: 'scroll'}}>
             <StudentTable
               students={students}
