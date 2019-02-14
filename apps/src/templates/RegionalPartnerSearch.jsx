@@ -316,6 +316,34 @@ class RegionalPartnerSearch extends Component {
         {partnerInfo && (
           <div>
             <hr style={styles.hr} />
+
+            <div style={styles.action}>
+              {appState === WorkshopApplicationStates.currently_open &&
+                !partnerInfo.link_to_partner_application && (
+                  <a
+                    className="professional_learning_link"
+                    id={`id-${partnerInfo.id}`}
+                    href={applicationLink}
+                  >
+                    <button style={styles.bigButton}>Start application</button>
+                  </a>
+                )}
+
+              {appState === WorkshopApplicationStates.currently_open &&
+                partnerInfo.link_to_partner_application && (
+                  <a
+                    className="professional_learning_link"
+                    id={`id-${partnerInfo.id}`}
+                    href={partnerInfo.link_to_partner_application}
+                    target="_blank"
+                  >
+                    <button style={styles.bigButton}>
+                      Apply on partner's site
+                    </button>
+                  </a>
+                )}
+            </div>
+
             <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
             {workshopCollections[0].workshops.length === 0 &&
               workshopCollections[1].workshops.length === 0 && (
@@ -359,31 +387,6 @@ class RegionalPartnerSearch extends Component {
               {appState === WorkshopApplicationStates.now_closed && (
                 <div>Applications are now closed.</div>
               )}
-
-              {appState === WorkshopApplicationStates.currently_open &&
-                !partnerInfo.link_to_partner_application && (
-                  <a
-                    className="professional_learning_link"
-                    id={`id-${partnerInfo.id}`}
-                    href={applicationLink}
-                  >
-                    <button style={styles.bigButton}>Start application</button>
-                  </a>
-                )}
-
-              {appState === WorkshopApplicationStates.currently_open &&
-                partnerInfo.link_to_partner_application && (
-                  <a
-                    className="professional_learning_link"
-                    id={`id-${partnerInfo.id}`}
-                    href={partnerInfo.link_to_partner_application}
-                    target="_blank"
-                  >
-                    <button style={styles.bigButton}>
-                      Apply on partner's site
-                    </button>
-                  </a>
-                )}
 
               {appState === WorkshopApplicationStates.opening_at && (
                 <h3>Applications will open on {appsOpenDate}.</h3>
