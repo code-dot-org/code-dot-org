@@ -20,29 +20,24 @@
 
 class Pd::ScholarshipInfo < ActiveRecord::Base
   include Pd::Application::ActiveApplicationModels
+  include Pd::Application::ApplicationConstants
+
+  # We began using scholarships in 2019-2020, so remove 2018-2019 from this list
+  SCHOLARSHIP_YEARS = APPLICATION_YEARS.drop(1).freeze
+
+  SCHOLARSHIP_STATUSES = [
+    NO = 'no'.freeze,
+    YES_CDO = 'yes_code_dot_org'.freeze,
+    YES_OTHER = 'yes_other'.freeze
+  ].freeze
+
   belongs_to :user
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
   belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: :pd_application_id
 
-  before_validation :set_application_year, on: :create
+  before_validation -> {self.application_year = APPLICATION_CURRENT_YEAR}, if: :new_record?
 
-  def set_application_year
-    self.application_year = APPLICATION_CURRENT_YEAR
-  end
-
-  validate :scholarship_status_valid
-
-  def scholarship_status_valid
-    unless scholarship_status.nil? || self.class.scholarship_statuses.include?(scholarship_status)
-      errors.add(:scholarship_status, 'is not included in the list.')
-    end
-  end
-
-  def self.scholarship_statuses
-    %w(
-      no
-      yes_code_dot_org
-      yes_other
-    )
-  end
+  validates_presence_of :user_id
+  validates_inclusion_of :application_year, in: SCHOLARSHIP_YEARS
+  validates_inclusion_of :scholarship_status, in: SCHOLARSHIP_STATUSES
 end
