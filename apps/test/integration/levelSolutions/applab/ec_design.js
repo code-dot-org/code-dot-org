@@ -800,8 +800,9 @@ module.exports = {
         assertPropertyRowExists(4, 'y position (px)', assert);
         assertPropertyRowExists(5, 'image Choose...', assert);
         assertPropertyRowExists(6, 'fit imagefillcovercontainnone', assert);
-        assertPropertyRowExists(7, 'hidden', assert);
-        assertPropertyRowExists(8, 'depth', assert);
+        // Ignore BorderProperties
+        assertPropertyRowExists(8, 'hidden', assert);
+        assertPropertyRowExists(9, 'depth', assert);
 
         // Make sure it's draggable
         var manipulator = newImage.parent();
