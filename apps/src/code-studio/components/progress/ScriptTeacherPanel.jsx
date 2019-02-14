@@ -10,7 +10,7 @@ import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
 import commonMsg from '@cdo/locale';
-import StudentTable from './StudentTable';
+import StudentTable, {studentShape} from './StudentTable';
 
 const styles = {
   text: {
@@ -39,12 +39,7 @@ class ScriptTeacherPanel extends React.Component {
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    students: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
-      })
-    )
+    students: PropTypes.arrayOf(studentShape)
   };
 
   calculateStudentTableMaxHeight = () => {
