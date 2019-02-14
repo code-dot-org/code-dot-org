@@ -26,8 +26,8 @@ export default class Teacher1920Application extends FormController {
   getPageComponents() {
     return [
       Section1AboutYou,
-      Section2ChooseYourProgram,
       Section3TeachingBackground,
+      Section2ChooseYourProgram,
       Section4ProfessionalLearningProgramRequirements,
       Section5AdditionalDemographicInformation,
       Section6Submission
@@ -51,7 +51,7 @@ export default class Teacher1920Application extends FormController {
     // Log the user ID to firehose.
     firehoseClient.putRecord(
       {
-        userId: this.props.userId,
+        user_id: this.props.userId,
         study: 'application-funnel',
         event: 'started-teacher1920-application'
       },

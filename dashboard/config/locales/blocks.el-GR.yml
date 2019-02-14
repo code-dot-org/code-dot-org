@@ -1321,12 +1321,27 @@ el:
         options:
           CHOICE:
             '"this"': αυτό
+      aalab_jumpTo:
+        text: "{SPRITE} πήγαινε στο {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
       aalab_nameStringSay:
         text: "{NAMESTRING} λέει {MESSAGE}"
       aalab_prompt:
         text: κάνε ερώτηση {MESSAGE}
-      aalab_removeAdvanced:
-        text: αφαίρεσεΠροχωρημένο {THIS}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
       aalab_speakerSaysConsole:
         text: "{SPRITE} λέει {MESSAGE}"
       aalab_spriteSay:

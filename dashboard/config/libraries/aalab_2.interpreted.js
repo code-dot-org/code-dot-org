@@ -34,7 +34,10 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
+var customText = [];
 var animationGroups = {};
+var thisSprite;
+var otherSprite;
 
 function initialize(setupHandler) {
   setupHandler();
@@ -44,7 +47,7 @@ function initialize(setupHandler) {
 function addBehavior(sprite, behavior) {
   if(sprite && behavior) {
     behavior = normalizeBehavior(behavior);
-    if(findBehavior(sprite, behavior) >= 0) {
+    if(findBehavior(sprite, behavior) === -1) {
       sprite.behaviors.push(behavior);
     }
   }
@@ -53,7 +56,8 @@ function addBehavior(sprite, behavior) {
 function removeBehavior(sprite, behavior) {
   if(sprite && behavior) {
     behavior = normalizeBehavior(behavior);
-    if(findBehavior(sprite, behavior) >= 0) {
+    var index = findBehavior(sprite, behavior);
+    if(index >= 0) {
       sprite.behaviors.splice(index, 1);
     }
   }
@@ -65,6 +69,9 @@ function Behavior(func, extraArgs) {
   }
   this.func = func;
   this.extraArgs = extraArgs;
+  this.checkTerminate = function() {return false;};
+  this.timeStarted = new Date().getTime();
+  this.duration = Number.MAX_VALUE;
 }
 
 function normalizeBehavior(behavior) {
@@ -336,7 +343,12 @@ function unitVectorTowards(from, to) {
 function runSpriteBehaviors() {
   sprites.forEach(function (sprite) {
     sprite.behaviors.forEach(function (behavior) {
-      behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+      var timeElapsed = new Date().getTime() - behavior.timeStarted;
+      if(behavior.checkTerminate() || timeElapsed >= behavior.duration) {
+        removeBehavior(sprite, behavior);
+      } else {
+        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+      }
     });
   });
 }
@@ -361,11 +373,13 @@ function runInputEvents() {
       inputEvents[i].param;
     if(!Array.isArray(param)) {
       if(eventType(param)) {
+        thisSprite = param;
         event();
       }
     } else {
       for(var j = 0; j < param.length; j++) {
         if(eventType(param[j])) {
+          thisSprite = param[j];
           event();
         }
       }
@@ -373,7 +387,52 @@ function runInputEvents() {
   }
 }
 
-// New
+// Updated
+function runCollisionEvents() {
+  collisionEvents.forEach(function(event) {
+    var a = event.a();
+    var b = event.b();
+    var type = event.type;
+    var e = event.event;
+    if(a && b) {
+      if(!Array.isArray(a) && !Array.isArray(b)) {
+        if(a[type](b)) {
+          thisSprite = a;
+          otherSprite = b;
+          e();
+        }
+      } else if(!Array.isArray(a) && Array.isArray(b)) {
+        b.forEach(function(s) {
+          if(a[type](s)) {
+            thisSprite = a;
+            otherSprite = s;
+            e();
+          }
+        });
+      } else if(Array.isArray(a) && !Array.isArray(b)) {
+        a.forEach(function(s) {
+          if(b[type](s)) {
+            thisSprite = s;
+            otherSprite = b;
+            e();
+          }
+        });
+      } else {
+        a.forEach(function(s) {
+          b.forEach(function(p) {
+              if(s[type](p)) {
+                thisSprite = s;
+                otherSprite = p;
+                e();
+              }
+          });
+        });
+      }
+    }
+  });
+}
+
+/* 
 function runCollisionEvents() {
   var createCollisionHandler = function (collisionEvent) {
     return function (sprite1, sprite2) {
@@ -398,6 +457,8 @@ function runCollisionEvents() {
     }
   }
 }
+
+*/
 
 // New
 function runLoops() {
@@ -431,6 +492,19 @@ function updateHUDText() {
     text(title, 200, 150);
     textSize(35);
     text(subTitle, 200, 250);
+  }
+  if (customText.length > 0) {
+  	customText.forEach(function(textObj) {
+      var timeElapsed = new Date().getTime() - textObj.timeStarted;
+      if(textObj.duration > 0 && timeElapsed >= textObj.duration) {
+        customText.splice(customText.indexOf(textObj), 1);
+      } else {
+        fill(textObj.color);
+        textAlign(CENTER);
+        textSize(textObj.size);
+        text(textObj.text(), textObj.location.x, textObj.location.y);
+      }
+    });
   }
 }
 

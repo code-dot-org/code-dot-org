@@ -138,7 +138,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg [RANGE][0]
+        text: krijg {RANGE}
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -875,6 +875,23 @@ nl:
           CONDITION:
             '"when"': wanneer
             '"while"': terwijl
+      aalab_jumpTo:
+        text: "{SPRITE} ga naar {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
       aalab_whenTouching:
         options:
           CONDITION:
@@ -911,7 +928,7 @@ nl:
             "'left'": naar links
       craft_ifStandingOn:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -923,7 +940,7 @@ nl:
             "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -983,7 +1000,7 @@ nl:
             '"squid"': inktvis
             '"tropicalFish"': tropische vis
       craft_turn:
-        text: draai [DIR][0]
+        text: draai {DIR}
         options:
           DIR:
             right: rechtsom ↻

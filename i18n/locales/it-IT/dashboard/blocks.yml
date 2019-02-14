@@ -679,6 +679,8 @@ it:
             '"direction"': direzione del movimento
       gamelab_clickedOn:
         text: quando si clicca su {SPRITE}
+      gamelab_comment:
+        text: 'commento: {COMMENT}'
       gamelab_createNewSprite:
         text: "crea un nuovo personaggio\n chiamato {NAME} \n con il costume {COSTUME} \n alla posizione {LOCATION}"
       gamelab_debugSprite:
@@ -902,7 +904,7 @@ it:
             '"s"': s
             '"d"': d
       gamelab_whileTouching:
-        text: quando {SPRITE1} sta toccando {SPRITE2}
+        text: mentre {SPRITE1} sta toccando {SPRITE2}
       gamelab_xLocationOf:
         text: coordinata x di {SPRITE}
       gamelab_yLocationOf:
@@ -1151,6 +1153,23 @@ it:
         options:
           CHOICE:
             '"other"': altro
+      aalab_jumpTo:
+        text: "{SPRITE} salta {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spaziale
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
       aalab_whenTouching:
         options:
           CONDITION:
