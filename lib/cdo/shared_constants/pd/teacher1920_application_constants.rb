@@ -468,9 +468,9 @@ module Pd
     }
 
     SCHOLARSHIP_DROPDOWN_OPTIONS = [
-      {value: 'no', label: "No"},
-      {value: 'yes_code_dot_org', label: "Yes, Code.org scholarship"},
-      {value: 'yes_other', label: "Yes, other scholarship"}
+      {value: Pd::ScholarshipInfo::NO, label: "No"},
+      {value: Pd::ScholarshipInfo::YES_CDO, label: "Yes, Code.org scholarship"},
+      {value: Pd::ScholarshipInfo::YES_OTHER, label: "Yes, other scholarship"}
     ]
   end
 end
