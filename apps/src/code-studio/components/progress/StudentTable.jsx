@@ -29,14 +29,14 @@ const styles = {
   }
 };
 
+export const studentShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
 class StudentTable extends React.Component {
   static propTypes = {
-    students: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
-      })
-    ).isRequired,
+    students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired
   };
