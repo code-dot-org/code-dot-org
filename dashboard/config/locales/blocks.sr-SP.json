@@ -1,0 +1,554 @@
+{
+  "sr": {
+    "data": {
+      "blocks": {
+        "Dancelab_atTimestamp": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунде"
+            }
+          }
+        },
+        "Dancelab_changeMoveEachLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changeMoveLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "Dancelab_doMoveEachLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_doMoveLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_everySeconds": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунде"
+            }
+          }
+        },
+        "Dancelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "Dancelab_getTime": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунде"
+            }
+          }
+        },
+        "Dancelab_ifTime": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунде"
+            }
+          }
+        },
+        "Dancelab_jumpTo": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "лево",
+              "{x: 300, y: 200}": "десно",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "насумичан"
+            }
+          }
+        },
+        "Dancelab_layoutSprites": {
+          "options": {
+            "FORMAT": {
+              "\"random\"": "насумичан"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "лево",
+              "{x: 300, y: 200}": "десно",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "насумичан"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSpriteGroup": {
+          "options": {
+            "N": {
+              "2": "2",
+              "3": "3",
+              "4": "4",
+              "5": "5",
+              "6": "6",
+              "7": "7",
+              "8": "8",
+              "9": "9",
+              "10": "10",
+              "11": "11",
+              "12": "12",
+              "13": "13",
+              "14": "14",
+              "15": "15",
+              "16": "16",
+              "17": "17",
+              "18": "18",
+              "19": "19",
+              "20": "20"
+            },
+            "LAYOUT": {
+              "\"random\"": "насумичан"
+            }
+          }
+        },
+        "Dancelab_randomColor": {
+          "text": "насумична боја"
+        },
+        "Dancelab_setDanceSpeed": {
+          "options": {
+            "SPEED": {
+              "1": "normal",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeedEach": {
+          "options": {
+            "SPEED": {
+              "1": "normal",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "Dancelab_setPropEach": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "Dancelab_setPropRandom": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "Dancelab_startMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "Dancelab_stopMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "Dancelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "горе",
+              "\"left\"": "лево",
+              "\"down\"": "доле",
+              "\"right\"": "десно",
+              "\"space\"": "Простор",
+              "\"x\"": "x"
+            }
+          }
+        },
+        "gamelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "gamelab_debugSprite": {
+          "options": {
+            "VAL": {
+              "true": "тачно",
+              "false": "нетачно"
+            }
+          }
+        },
+        "gamelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "gamelab_locationDelta": {
+          "options": {
+            "DIR": {
+              "'random'": "насумичан"
+            }
+          }
+        },
+        "gamelab_mirrorSprite": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "десно",
+              "\"left\"": "лево"
+            }
+          }
+        },
+        "gamelab_randColor": {
+          "text": "насумична боја"
+        },
+        "gamelab_randomColor": {
+          "text": "насумична боја"
+        },
+        "gamelab_setPosition": {
+          "options": {
+            "POSITION": {
+              "\"random\"": "насумичан"
+            }
+          }
+        },
+        "gamelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "gamelab_setSizes": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина",
+              "\"height\"": "висина"
+            }
+          }
+        },
+        "gamelab_spritesWhere": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "gamelab_spritesWhereGenerator": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "gamelab_turn": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "десно",
+              "\"left\"": "лево"
+            }
+          }
+        },
+        "gamelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "горе",
+              "\"down\"": "доле",
+              "\"left\"": "лево",
+              "\"right\"": "десно",
+              "\"space\"": "Простор"
+            }
+          }
+        },
+        "gamelab_whenPressedAndReleased": {
+          "options": {
+            "DIR": {
+              "'up'": "горе",
+              "'down'": "доле",
+              "'left'": "лево",
+              "'right'": "десно"
+            }
+          }
+        },
+        "gamelab_whileKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "горе",
+              "\"down\"": "доле",
+              "\"left\"": "лево",
+              "\"right\"": "десно",
+              "\"space\"": "Простор"
+            }
+          }
+        },
+        "Mikelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "Mikelab_createNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "лево",
+              "{x: 300, y: 200}": "десно"
+            }
+          }
+        },
+        "Mikelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "Mikelab_groupChangePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "Mikelab_groupCreateNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "лево",
+              "{x: 300, y: 200}": "десно"
+            }
+          }
+        },
+        "Mikelab_groupGetProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "Mikelab_groupSetProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "Mikelab_randomColor": {
+          "text": "насумична боја"
+        },
+        "Mikelab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "Град"
+            }
+          }
+        },
+        "Mikelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "Mikelab_showScoreboard": {
+          "options": {
+            "CORNER": {
+              "\"right\"": "десно",
+              "\"left\"": "лево"
+            }
+          }
+        },
+        "Mikelab_sprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "лево",
+              "{x: 300, y: 200}": "десно"
+            }
+          }
+        },
+        "Mikelab_whenKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "стрелица горе",
+              "\"down\"": "стрелица доле",
+              "\"left\"": "стрелица лево",
+              "\"right\"": "стрелица десно",
+              "\"w\"": "w",
+              "\"s\"": "Југ"
+            }
+          }
+        },
+        "Mikelab_whenKeyReleased": {
+          "options": {
+            "KEY": {
+              "\"up\"": "стрелица горе",
+              "\"down\"": "стрелица доле",
+              "\"left\"": "стрелица лево",
+              "\"right\"": "стрелица десно",
+              "\"w\"": "w",
+              "\"s\"": "Југ"
+            }
+          }
+        },
+        "Mikelab_whileKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "стрелица горе",
+              "\"down\"": "стрелица доле",
+              "\"left\"": "стрелица лево",
+              "\"right\"": "стрелица десно"
+            }
+          }
+        },
+        "RyanLab_moveForward": {
+          "text": "помери се напред"
+        },
+        "RyanLab_turnLeft": {
+          "text": "окрени се лево"
+        },
+        "RyanLab_turnRight": {
+          "text": "окрени се десно"
+        },
+        "aalab_changePropByFlexible": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "величина"
+            }
+          }
+        },
+        "aalab_clickedOn": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "када",
+              "\"while\"": "док је"
+            }
+          }
+        },
+        "aalab_keyPressed": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "када",
+              "\"while\"": "док је"
+            },
+            "KEY": {
+              "\"up\"": "горе",
+              "\"down\"": "доле",
+              "\"left\"": "лево",
+              "\"right\"": "десно",
+              "\"space\"": "Простор"
+            }
+          }
+        },
+        "aalab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "Град"
+            }
+          }
+        },
+        "aalab_whenTouching": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "када",
+              "\"while\"": "док је"
+            }
+          }
+        },
+        "binary_move": {
+          "options": {
+            "DIR": {
+              "\"up\"": "горе",
+              "\"down\"": "доле",
+              "\"left\"": "лево",
+              "\"right\"": "десно"
+            }
+          }
+        },
+        "binary_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "горе",
+              "\"down\"": "доле",
+              "\"left\"": "лево",
+              "\"right\"": "десно",
+              "\"space\"": "Простор"
+            }
+          }
+        },
+        "craft_ifPath": {
+          "options": {
+            "DIR": {
+              "'ahead'": "испред"
+            }
+          }
+        },
+        "craft_ifStandingOn": {
+          "options": {
+            "TYPE": {
+              "'sand'": "песак",
+              "'planksOak'": "храстова даска"
+            }
+          }
+        },
+        "craft_ifStandingOnLimit": {
+          "options": {
+            "TYPE": {
+              "'sand'": "песак"
+            }
+          }
+        },
+        "craft_moveForward": {
+          "text": "помери се напред"
+        },
+        "craft_placeTorch": {
+          "text": "постави бакљу"
+        }
+      }
+    }
+  }
+}

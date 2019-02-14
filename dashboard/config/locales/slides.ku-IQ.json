@@ -1,0 +1,36 @@
+{
+  "ku": {
+    "slides": {
+      "maze_intro": {
+        "1": {
+          "text": "Tu bi Xêr hatî ewilîn Saet ya te ya Kodê! Were, da em destpê ewilîn Programkarî ya te bikin"
+        },
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": {
+          "text": "بابڕۆین ئەو بەرازانە بگرین!"
+        }
+      },
+      "if": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": {
+          "text": "خۆشی ببینە لەگەڵ بەکارهێنانی بلۆکی \"if\" دا!"
+        }
+      }
+    }
+  }
+}

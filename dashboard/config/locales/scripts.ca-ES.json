@@ -1,0 +1,2041 @@
+{
+  "ca": {
+    "data": {
+      "script": {
+        "category": {
+          "hoc_category_name": "Hora del codi",
+          "math_category_name": "Matemàtiques"
+        },
+        "name": {
+          "course1": {
+            "title": "Curs 1",
+            "description": "El Curs 1 està dissenyat per permetre als lectors novells crear programes informàtics que els ajudaran a aprendre a col·laborar amb els altres, desenvolupar habilitats de resolució de problemes, i persistir a través de tasques difícils. Al final del curs, els alumnes creen el seu propi joc o història que poden compartir. Recomanat per infantil i cicle inicial de primària.",
+            "description_short": "El curs 1 està dissenyat per a primers lectors.",
+            "description_audience": "Edat 4 + (pre-lectors)",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Artista: bucles"
+              },
+              "Artist: Sequence": {
+                "name": "Artista: seqüència"
+              },
+              "Artist: Shapes": {
+                "name": "Artista: formes"
+              },
+              "Bee: Loops": {
+                "name": "Abella: bucles"
+              },
+              "Bee: Sequence": {
+                "name": "Abella: seqüència"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Getting Loopy": {
+                "name": "Fent bucles"
+              },
+              "Going Places Safely": {
+                "name": "Anant a llocs segurs"
+              },
+              "Happy Maps": {
+                "name": "Mapes feliços"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Trencaclosques: Aprendre a arrossegar i deixar anar"
+              },
+              "Maze: Debugging": {
+                "name": "Laberint: Depuració"
+              },
+              "Maze: Loops": {
+                "name": "Laberint: bucles"
+              },
+              "Maze: Sequence": {
+                "name": "Laberint: seqüència"
+              },
+              "Move it, Move it": {
+                "name": "Mou-te, mou-te"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Spelling Bee": {
+                "name": "Abella ortogràfica"
+              },
+              "Studio: Create a Story": {
+                "name": "Play Lab: Crea una història"
+              },
+              "The Big Event": {
+                "name": "El gran esdeveniment"
+              }
+            }
+          },
+          "course2": {
+            "title": "Curs 2",
+            "description": "El Curs 2 està dissenyat per a alumnes que saben llegir i no tenen experiència prèvia en programació. En aquest curs els alumnes crearan programes per resoldre problemes i desenvoluparan jocs interactius o històries que poden compartir. Recomanat per educació primària.",
+            "description_short": "El Curs 2 està dissenyat per alumnes que saben llegir.",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Artista: Correcció d'errors"
+              },
+              "Artist: Loops": {
+                "name": "Artista: bucles"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artista: bucles imbricats"
+              },
+              "Artist: Sequence": {
+                "name": "Artista: seqüència"
+              },
+              "Bee: Conditionals": {
+                "name": "Abella: Condicionals"
+              },
+              "Bee: Debugging": {
+                "name": "Abella: Correcció d'errors"
+              },
+              "Bee: Loops": {
+                "name": "Abella: bucles"
+              },
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Getting Loopy": {
+                "name": "Fent bucles"
+              },
+              "Graph Paper Programming": {
+                "name": "Programació de paper quadriculat"
+              },
+              "Maze: Loops": {
+                "name": "Laberint: bucles"
+              },
+              "Maze: Sequence": {
+                "name": "Laberint: seqüència"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmes de la vida quotidiana: Avions de paper"
+              },
+              "Relay programming": {
+                "name": "Programació en relleus"
+              },
+              "Studio: Create a Story": {
+                "name": "Play Lab: Crea una història"
+              },
+              "The Big Event": {
+                "name": "El gran esdeveniment"
+              },
+              "Your Digital Footprint": {
+                "name": "La vostra empremta digital"
+              }
+            }
+          },
+          "course3": {
+            "title": "Curs 3",
+            "description_short": "El Curs 3 és una continuació del Curs 2.",
+            "description_audience": "Edats 8 + (continuació del Curs 2)",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              },
+              "Artist: Functions": {
+                "name": "Artista: Funcions"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artista: bucles imbricats"
+              },
+              "Artist: Patterns": {
+                "name": "Artista: patrons"
+              },
+              "Bee: Conditionals": {
+                "name": "Abella: Condicionals"
+              },
+              "Bee: Debugging": {
+                "name": "Abella: Correcció d'errors"
+              },
+              "Bee: Functions": {
+                "name": "Abella: funcions"
+              },
+              "Bee: Nested Loops": {
+                "name": "Abella: bucles imbricats"
+              },
+              "Bounce": {
+                "name": "Rebota"
+              },
+              "Computational Thinking": {
+                "name": "Pensament computacional"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              },
+              "Dice Race": {
+                "name": "Cursa de daus"
+              },
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Farmer: While Loops": {
+                "name": "Pagesa: bucles mentre"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Maze": {
+                "name": "Laberint"
+              },
+              "Maze: Conditionals": {
+                "name": "Laberint: els condicionals"
+              },
+              "Songwriting": {
+                "name": "Composició de cançons"
+              },
+              "Studio: Create a Game": {
+                "name": "Play Lab: Creeu un joc"
+              },
+              "Studio: Create a Story": {
+                "name": "Play Lab: Crea una història"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Play Lab",
+            "description": "Crea una història o fes una partida amb Play Lab!",
+            "description_short": "Crea una història o fes una partida amb Play Lab!",
+            "stages": {
+              "Play Lab": {
+                "name": "Play Lab"
+              }
+            }
+          },
+          "artist": {
+            "title": "Artista",
+            "description": "Dibuixar imatges estupendes i dissenys amb l'artista!",
+            "description_short": "Dibuixar imatges estupendes i dissenys amb l'artista!",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "hourofcode": {
+            "description": "Prova els bàsics de la informàtica amb els personatges d'Angry Birds, Plants vs. Zombies, i Scrat de Ice Age!",
+            "description_short": "Prova els conceptes bàsics de la informàtica amb personatges divertits!",
+            "stages": {
+              "Maze": {
+                "name": "Laberint"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Codi amb Anna i Elsa",
+            "description": "Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!",
+            "description_short": "Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel.",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "course4": {
+            "title": "Curs 4",
+            "description": "Curs.",
+            "description_short": "Els alumnes del Curs 4 haurien d'haver fet prèviament els cursos 2 i 3.",
+            "description_audience": "Edat 10 + (després del curs 3)",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              },
+              "Artist Binary": {
+                "name": "Artista binari"
+              },
+              "Artist: For Loops": {
+                "name": "Artista: Per bucles"
+              },
+              "Artist: Functions": {
+                "name": "Artista: Funcions"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Artista: Funcions amb paràmetres"
+              },
+              "Artist: Variables": {
+                "name": "Artista: Variables"
+              },
+              "Bee: For Loops": {
+                "name": "Abelles: Per bucles"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Abelles: Les funcions amb paràmetres"
+              },
+              "Maze and Bee": {
+                "name": "Laberint i abella"
+              },
+              "Play Lab: For Loops": {
+                "name": "Play Lab: Per bucles"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Play Lab: Funcions amb paràmetres"
+              },
+              "Play Lab: Variables": {
+                "name": "Play Lab: Variables"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Súper-repte - funcions i paràmetres"
+              },
+              "Super Challenge - Variables": {
+                "name": "Súper-repte - Variables"
+              },
+              "Unplugged: Binary": {
+                "name": "Sense connexió: Binari"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Sense connexió: Sobres de variables"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Sense connexió: Diversió amb bucles"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Sense connexió: Madlibs"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Sense connexió: Composició musical amb paràmetres"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Sense connexió: Tangrams"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Curs 4 prerequisit",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Artista: Funcions"
+              },
+              "Artist: Loops": {
+                "name": "Artista: bucles"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artista: bucles imbricats"
+              },
+              "Artist: Sequence": {
+                "name": "Artista: seqüència"
+              },
+              "Bee: Conditionals": {
+                "name": "Abella: Condicionals"
+              },
+              "Bee: Debugging": {
+                "name": "Abella: Correcció d'errors"
+              },
+              "Bee: Nested Loops": {
+                "name": "Abella: bucles imbricats"
+              },
+              "Farmer: While Loops": {
+                "name": "Pagesa: bucles mentre"
+              },
+              "Maze: Sequence": {
+                "name": "Laberint: seqüència"
+              }
+            }
+          },
+          "usability": {
+            "title": "Proves d'ús",
+            "description": "Una selecció de nivells del Curs 4 per proves d'ús.",
+            "stages": {
+              "Binary": {
+                "name": "Binari"
+              },
+              "For Loops": {
+                "name": "Per bucles"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Funcions i funcions amb paràmetres"
+              },
+              "Intro": {
+                "name": "Introducció"
+              },
+              "Variables": {
+                "name": "Variables"
+              }
+            }
+          },
+          "algebra": {
+            "stages": {
+              "Eval: Conditionals": {
+                "name": "Condicionals"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Sense connexió: Condicionals i funcions definides a trossos"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Sense connexió: la recepta de disseny"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Disney infinit Play Lab",
+            "description": "Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.",
+            "description_short": "Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.",
+            "stages": {
+              "Infinity": {
+                "name": "Infinit"
+              }
+            }
+          },
+          "algebrademo": {
+            "stages": {
+              "Defining Variables": {
+                "name": "Definició de variables"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Simulador d'Internet"
+          },
+          "20-hour": {
+            "title": "Curs introductori de 20 hores",
+            "description": "Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.",
+            "description_audience": "Edat 10 + (després del curs 3)",
+            "stages": {
+              "Abstraction": {
+                "name": "Abstracció"
+              },
+              "Algorithms": {
+                "name": "Algorismes"
+              },
+              "Computational Thinking": {
+                "name": "Pensament computacional"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Functions": {
+                "name": "Funcions"
+              },
+              "Graph Paper Programming": {
+                "name": "Programació de paper quadriculat"
+              },
+              "Introduction to Computer Science": {
+                "name": "Introducció a la informàtica"
+              },
+              "Relay Programming": {
+                "name": "Programació en relleus"
+              },
+              "Song Writing": {
+                "name": "Escriptura de la cançó"
+              },
+              "The Artist": {
+                "name": "L'artista"
+              },
+              "The Artist 2": {
+                "name": "L'artista 2"
+              },
+              "The Artist 3": {
+                "name": "L'artista 3"
+              },
+              "The Artist 4": {
+                "name": "L'artista 4"
+              },
+              "The Artist 5": {
+                "name": "L'artista 5"
+              },
+              "The Farmer": {
+                "name": "La pagesa"
+              },
+              "The Farmer 2": {
+                "name": "La pagesa 2"
+              },
+              "The Farmer 3": {
+                "name": "La pagesa 3"
+              },
+              "The Internet": {
+                "name": "Internet"
+              },
+              "The Maze": {
+                "name": "El Laberint"
+              },
+              "Wrap-up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Edita el codi",
+            "description": "Edita el codi",
+            "description_short": "Edita el codi",
+            "stages": {
+              "Play Lab": {
+                "name": "Play Lab"
+              },
+              "The Artist": {
+                "name": "L'artista"
+              },
+              "The Maze": {
+                "name": "El Laberint"
+              }
+            }
+          },
+          "events": {
+            "title": "Esdeveniments",
+            "description": "Esdeveniments",
+            "description_short": "Esdeveniments",
+            "stages": {
+              "Bounce": {
+                "name": "Rebota"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Codi Flappy",
+            "description": "Vols 'escriure el teu propi joc en menys de 10 minuts? Prova el nostre tutorial Codi Flappy!",
+            "stages": {
+              "Flappy Code": {
+                "name": "Codi Flappy"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Puzzle",
+            "stages": {
+              "Jigsaw": {
+                "name": "Puzzle"
+              }
+            }
+          },
+          "step": {
+            "title": "pas",
+            "stages": {
+              "Step": {
+                "name": "pas"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Hora de codi 2013",
+            "description_short": "Prova els conceptes bàsics de la informàtica amb personatges divertits!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Hora de codi 2013"
+              }
+            }
+          },
+          "algebraPD": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "algPDmiami": {
+            "stages": {
+              "Booleans": {
+                "name": "Veritat o fals"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "cspunit3": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Creant Funcions"
+              },
+              "While Loops": {
+                "name": "Bucles Mentres"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "sciencePD2": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "cspunit2": {
+            "stages": {
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "stages": {
+              "Booleans": {
+                "name": "Veritat o fals"
+              },
+              "Defining Variables": {
+                "name": "Definició de variables"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              },
+              "Free Play": {
+                "name": "Joc lliure"
+              }
+            }
+          },
+          "allthethings": {
+            "title": "Totes les coses!",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              },
+              "Bee": {
+                "name": "Abella"
+              },
+              "Bounce": {
+                "name": "Rebota"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Jigsaw": {
+                "name": "Puzzle"
+              },
+              "Match": {
+                "name": "Relacionar"
+              },
+              "Maze": {
+                "name": "Laberint"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Multi"
+              },
+              "Odometer": {
+                "name": "odòmetre"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "stages": {
+              "Booleans": {
+                "name": "Veritat o fals"
+              },
+              "Defining Variables": {
+                "name": "Definició de variables"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Condicionals"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "Laboratori d'aplicacions"
+              },
+              "Internet Simulator": {
+                "name": "Simulador d'Internet"
+              }
+            }
+          },
+          "ECSPD2": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "science-PD2": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Getting Loopy": {
+                "name": "Fent bucles"
+              },
+              "Graph Paper Programming": {
+                "name": "Programació de paper quadriculat"
+              },
+              "Happy Maps": {
+                "name": "Mapes feliços"
+              },
+              "Move it, Move it": {
+                "name": "Mou-te, mou-te"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Songwriting": {
+                "name": "Composició de cançons"
+              },
+              "The Big Event": {
+                "name": "El gran esdeveniment"
+              }
+            }
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "Special Fun": {
+            "description_audience": "Edat 10 + (després del curs 3)"
+          },
+          "SpecialSeries": {
+            "description_audience": "Edat 10 + (després del curs 3)"
+          },
+          "cspunit3temp": {
+            "stages": {
+              "While Loops": {
+                "name": "Bucles Mentres"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Star Wars: Construcció d'una galàxia amb codi",
+            "description": "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.",
+            "description_short": "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Hora del codi 2015"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Star Wars: Construcció d'una galàxia amb codi",
+            "description": "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.",
+            "description_short": "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Hora del codi 2015"
+              }
+            }
+          },
+          "mc": {
+            "title": "Hora del Codi de Minecraft",
+            "description": "Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft",
+            "description_short": "Explora el món de Minecraft a través del codi",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Hora del codi 2015"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "AlgebraA": {
+            "stages": {
+              "Eval: Strings and Images": {
+                "name": "Eval: Cadenes i imatges"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Sense connexió: la recepta de disseny"
+              }
+            }
+          },
+          "AlgebraB": {
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Eval: operadors Booleans"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Condicionals"
+              },
+              "Play Lab: Booleans": {
+                "name": "Play Lab: Veritat o fals"
+              },
+              "Unplugged: Booleans": {
+                "name": "Sense connexió: Veritat o fals"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Sense connexió: Condicionals i funcions definides a trossos"
+              }
+            }
+          },
+          "algebraPD1": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "csp1-2017": {
+            "stages": {
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "csp3-2017": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Creant Funcions"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "While Loops": {
+                "name": "Bucles Mentres"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "stages": {
+              "Functions": {
+                "name": "Funcions"
+              }
+            }
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "Edats 8 + (continuació del Curs 2)"
+          },
+          "algebraFacilitator": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Blocs d'avaluació"
+              }
+            }
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Artista: Funcions"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "Edats 8 + (continuació del Curs 2)"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Abella: Condicionals"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Esdeveniments"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Trencaclosques: Aprendre a arrossegar i deixar anar"
+              },
+              "Loops": {
+                "name": "Bucles"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Songwriting": {
+                "name": "Composició de cançons"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Esdeveniments"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Trencaclosques: Aprendre a arrossegar i deixar anar"
+              },
+              "Loops": {
+                "name": "Bucles"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Artista: Per bucles"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Artista: Funcions amb paràmetres"
+              },
+              "Artist: Variables": {
+                "name": "Artista: Variables"
+              },
+              "Bee: For Loops": {
+                "name": "Abelles: Per bucles"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Abelles: Les funcions amb paràmetres"
+              },
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Play Lab: Variables": {
+                "name": "Play Lab: Variables"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Sense connexió: Sobres de variables"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Sense connexió: Diversió amb bucles"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Sense connexió: Composició musical amb paràmetres"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Artista: bucles imbricats"
+              },
+              "Bee Debugging": {
+                "name": "Abella: Correcció d'errors"
+              },
+              "Bounce": {
+                "name": "Rebota"
+              },
+              "Farmer: While Loops": {
+                "name": "Pagesa: bucles mentre"
+              }
+            }
+          },
+          "csd3-2017": {
+            "stages": {
+              "Functions": {
+                "name": "Funcions"
+              },
+              "Variables": {
+                "name": "Variables"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmes de la vida quotidiana: Avions de paper"
+              },
+              "The Big Event": {
+                "name": "El gran esdeveniment"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Binari"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Events": {
+                "name": "Esdeveniments"
+              },
+              "For Loops": {
+                "name": "Per bucles"
+              },
+              "Functions": {
+                "name": "Funcions"
+              },
+              "Functions with Parameters": {
+                "name": "Funcions amb Paràmetres"
+              },
+              "Loops": {
+                "name": "Bucles"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              },
+              "Variables": {
+                "name": "Variables"
+              },
+              "While Loops": {
+                "name": "Bucles Mentres"
+              }
+            }
+          },
+          "basketball": {
+            "stages": {
+              "Bounce": {
+                "name": "Rebota"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Binari",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              },
+              "Binary Images": {
+                "name": "Imatges binàries"
+              },
+              "Play Lab": {
+                "name": "Play Lab"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Llistes"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Codi Flappy"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Going Places Safely": {
+                "name": "Anant a llocs segurs"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Your Digital Footprint": {
+                "name": "La vostra empremta digital"
+              }
+            }
+          },
+          "coursec-draft": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmes de la vida quotidiana: Avions de paper"
+              },
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              },
+              "Your Digital Footprint": {
+                "name": "La vostra empremta digital"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Unplugged: Binary": {
+                "name": "Sense connexió: Binari"
+              },
+              "Artist Binary": {
+                "name": "Artista binari"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Songwriting with Parameters": {
+                "name": "Composició amb paràmetres"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Prova els conceptes bàsics de la informàtica amb personatges divertits!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Hora de codi 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Prova els conceptes bàsics de la informàtica amb personatges divertits!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Hora de codi 2013"
+              }
+            }
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Binari"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Recapitulació"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Llistes"
+              },
+              "For Loops": {
+                "name": "Per bucles"
+              },
+              "Functions with Parameters": {
+                "name": "Funcions amb Paràmetres"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Introducció"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introducció"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Algoritmes de la vida real: cursa de daus"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Llistes"
+              },
+              "For Loops": {
+                "name": "Per bucles"
+              },
+              "Functions with Parameters": {
+                "name": "Funcions amb Paràmetres"
+              },
+              "Functions with Parameters_": {
+                "name": "Funcions amb Paràmetres"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Functions": {
+                "name": "Funcions"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Functions": {
+                "name": "Funcions"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Llistes"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Functions": {
+                "name": "Funcions"
+              },
+              "null": {
+                "name": "nul"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introducció"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "Bounce": {
+                "name": "Rebota"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              }
+            }
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              }
+            }
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmes de la vida quotidiana: Avions de paper"
+              }
+            }
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              }
+            }
+          },
+          "coursee-2017": {
+            "stages": {
+              "Songwriting with Parameters": {
+                "name": "Composició amb paràmetres"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              }
+            }
+          },
+          "coursef-2017": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Songwriting with Parameters": {
+                "name": "Composició amb paràmetres"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              }
+            }
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Spelling Bee": {
+                "name": "Abella ortogràfica"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Gràcies"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Creant Funcions"
+              }
+            }
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Unplugged: Binary": {
+                "name": "Sense connexió: Binari"
+              },
+              "Artist Binary": {
+                "name": "Artista binari"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Songwriting with Parameters": {
+                "name": "Composició amb paràmetres"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Creant Funcions"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Hora del Codi de Minecraft"
+              }
+            },
+            "description": "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Songwriting with Parameters": {
+                "name": "Composició amb paràmetres"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Llistes"
+              },
+              "For Loops": {
+                "name": "Per bucles"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Functions": {
+                "name": "Funcions"
+              }
+            }
+          },
+          "csd3-2018": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Functions": {
+                "name": "Funcions"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Llistes"
+              }
+            }
+          },
+          "coursea-2018": {
+            "stages": {
+              "Programming: Happy Maps": {
+                "name": "Mapes feliços"
+              },
+              "Going Places Safely": {
+                "name": "Anant a llocs segurs"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Programació de paper quadriculat"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              },
+              "Events: The Big Event": {
+                "name": "El gran esdeveniment"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Fent bucles"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Functions: Songwriting": {
+                "name": "Composició de cançons"
+              },
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              },
+              "Unplugged: Binary": {
+                "name": "Imatges binàries"
+              },
+              "Artist Binary": {
+                "name": "Artista binari"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              },
+              "Relay Programming": {
+                "name": "Programació en relleus"
+              }
+            }
+          },
+          "courseb-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Your Digital Footprint": {
+                "name": "La vostra empremta digital"
+              },
+              "Move It, Move It": {
+                "name": "Mou-lo, Mou-lo"
+              }
+            }
+          },
+          "coursed-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Programació de paper quadriculat"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Unplugged: Binary": {
+                "name": "Imatges binàries"
+              },
+              "Artist Binary": {
+                "name": "Artista binari"
+              },
+              "Graph Paper Programming": {
+                "name": "Programació de paper quadriculat"
+              },
+              "Relay Programming": {
+                "name": "Programació en relleus"
+              }
+            }
+          },
+          "coursec-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Fent bucles"
+              },
+              "Events: The Big Event": {
+                "name": "El gran esdeveniment"
+              },
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              }
+            }
+          },
+          "csd6-2018": {
+            "stages": {
+              "Functions with Parameters": {
+                "name": "Funcions amb Paràmetres"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Els meus amics robòtics"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Functions: Songwriting": {
+                "name": "Composició de cançons"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Hora del Codi de Minecraft"
+              }
+            }
+          },
+          "coursef-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Els meus amics robòtics"
+              },
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Introduction": {
+                "name": "Introducció"
+              },
+              "Songwriting with Parameters": {
+                "name": "Composició amb paràmetres"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "csp3-2018": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Creant Funcions"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "While Loops": {
+                "name": "Bucles Mentres"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Spelling Bee": {
+                "name": "Abella ortogràfica"
+              },
+              "Move It, Move It": {
+                "name": "Mou-lo, Mou-lo"
+              },
+              "Your Digital Footprint": {
+                "name": "La vostra empremta digital"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "dance": {
+            "stages": {
+              "Dance Party": {
+                "name": "Festa amb ball"
+              }
+            },
+            "title": "Festa amb ball",
+            "description_short": "Amb música de Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, i 25 més!",
+            "description": "Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!"
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "aquatic": {
+            "stages": {
+              "Aquatic": {
+                "name": "Aquàtiques"
+              }
+            },
+            "title": "Minecraft: Viatge aquàtic",
+            "description_short": "Minecraft torna amb una activitat del tot nova de l'Hora del Codi!"
+          },
+          "dance--draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Festa amb ball"
+              }
+            }
+          },
+          "dance-draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Festa amb ball"
+              }
+            }
+          },
+          "dance-extras": {
+            "title": "Seguir ballant",
+            "description": "Anar més enllà de la primera hora amb idees desenvolupades del projecte."
+          },
+          "coursef-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "The Artist": {
+                "name": "L'artista"
+              }
+            }
+          },
+          "dance-low": {
+            "stages": {
+              "Dance Party": {
+                "name": "Festa amb ball"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Programació en relleus"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Digital Citizenship": {
+                "name": "Ciutadania digital"
+              },
+              "Unplugged: Binary": {
+                "name": "Sense connexió: Binari"
+              },
+              "Artist Binary": {
+                "name": "Artista binari"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Nested Loops": {
+                "name": "Bucles imbricats"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Conditionals": {
+                "name": "Condicionals"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Programació en relleus"
+              },
+              "Conditionals with Cards": {
+                "name": "Condicionals amb targetes"
+              },
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              },
+              "Unplugged: Binary": {
+                "name": "Sense connexió: Binari"
+              },
+              "Artist Binary": {
+                "name": "Artista binari"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Col·laboració oberta"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "nul"
+              }
+            }
+          },
+          "dance-extras-gallery": {
+            "title": "Seguir ballant",
+            "description": "Anar més enllà de la primera hora amb idees desenvolupades del projecte."
+          },
+          "coursec-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Posant les bases"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmes de la vida quotidiana: Avions de paper"
+              },
+              "Binary Bracelets": {
+                "name": "Polseres binàries"
+              }
+            }
+          },
+          "coursea-2019": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              },
+              "Going Places Safely": {
+                "name": "Anant a llocs segurs"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Mou-lo, Mou-lo"
+              },
+              "Your Digital Footprint": {
+                "name": "La vostra empremta digital"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Mou-lo, Mou-lo"
+              },
+              "Your Digital Footprint": {
+                "name": "La vostra empremta digital"
+              },
+              "Spelling Bee": {
+                "name": "Abella ortogràfica"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algoritmes reals: Planta una llavor"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

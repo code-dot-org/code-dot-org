@@ -1,0 +1,438 @@
+{
+  "ur": {
+    "data": {
+      "script": {
+        "category": {
+          "hoc_category_name": "آور-آف-کوڈ",
+          "math_category_name": "ریاضی"
+        },
+        "name": {
+          "course2": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "frozen": {
+            "title": "اینا اور ایلسا کے ساتھ کوڈ",
+            "description": "آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔",
+            "description_short": "آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔"
+          },
+          "usability": {
+            "stages": {
+              "Variables": {
+                "name": "متغیرات"
+              }
+            }
+          },
+          "algebra": {
+            "stages": {
+              "Eval: Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "infinity": {
+            "stages": {
+              "Infinity": {
+                "name": "Infinity"
+              }
+            }
+          },
+          "K5PD": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "20-hour": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              },
+              "Introduction to Computer Science": {
+                "name": "کمپیوٹر سائنس کا تعارف"
+              },
+              "The Artist": {
+                "name": "مصور"
+              },
+              "The Farmer": {
+                "name": "کسان"
+              },
+              "The Maze": {
+                "name": "بھول بھلیا"
+              }
+            }
+          },
+          "edit-code": {
+            "stages": {
+              "The Artist": {
+                "name": "مصور"
+              },
+              "The Maze": {
+                "name": "بھول بھلیا"
+              }
+            }
+          },
+          "events": {
+            "title": "موقعے",
+            "description": "موقعے",
+            "description_short": "موقعے"
+          },
+          "algebraPD": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "allthethings": {
+            "stages": {
+              "Web Lab": {
+                "name": "ویب لیب"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "algebraPD2": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "mc": {
+            "title": "Minecraft کوڈ کی گھڑی"
+          },
+          "algebraPD1": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "algebraFacilitator": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "موقعے"
+              },
+              "Loops": {
+                "name": "لوپس"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "موقعے"
+              },
+              "Loops": {
+                "name": "لوپس"
+              }
+            }
+          },
+          "csd3-2017": {
+            "stages": {
+              "Variables": {
+                "name": "متغیرات"
+              },
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              },
+              "Events": {
+                "name": "موقعے"
+              },
+              "Loops": {
+                "name": "لوپس"
+              },
+              "Variables": {
+                "name": "متغیرات"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ٹیچر کا ڈیش بورڈ"
+              }
+            }
+          },
+          "fesbinary": {
+            "stages": {
+              "Binary Images": {
+                "name": "ثنائی تصاویر"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Lists": {
+                "name": "فہرستیں"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "فہرستیں"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "فہرستیں"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "متغیرات"
+              },
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "فہرستیں"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "متغیرات"
+              },
+              "Conditionals": {
+                "name": "شرائط"
+              },
+              "null": {
+                "name": "نَل"
+              }
+            }
+          },
+          "coursee-2017": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              }
+            }
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Minecraft کوڈ کی گھڑی"
+              }
+            }
+          },
+          "course-e-2018": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "فہرستیں"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "متغیرات"
+              },
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "csd3-2018": {
+            "stages": {
+              "Variables": {
+                "name": "متغیرات"
+              },
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "فہرستیں"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              },
+              "Unplugged: Binary": {
+                "name": "ثنائی تصاویر"
+              }
+            }
+          },
+          "coursed-2018": {
+            "stages": {
+              "Unplugged: Binary": {
+                "name": "ثنائی تصاویر"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Minecraft کوڈ کی گھڑی"
+              }
+            }
+          },
+          "coursef-2018": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              }
+            }
+          },
+          "coursef-2019": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              },
+              "The Artist": {
+                "name": "مصور"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Conditionals": {
+                "name": "شرائط"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Envelope Variables": {
+                "name": "لفافہ متغیرات"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "نَل"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1338 @@
+{
+  "ar": {
+    "data": {
+      "blocks": {
+        "Dancelab_atTimestamp": {
+          "text": "بعد {TIMESTAMP} {UNIT}",
+          "options": {
+            "UNIT": {
+              "\"measures\"": "الإجراءات",
+              "\"seconds\"": "ثوان"
+            }
+          }
+        },
+        "Dancelab_changeColorBy": {
+          "text": "غيّر {COLOR} {METHOD} بمقدار {AMOUNT}",
+          "options": {
+            "METHOD": {
+              "\"hue\"": "درجة اللون",
+              "\"saturation\"": "التشبّع اللوني",
+              "\"brightness\"": "السطوع"
+            }
+          }
+        },
+        "Dancelab_changeMoveEachLR": {
+          "text": "{GROUP} تجري {MOVE} {DIR} للأبد",
+          "options": {
+            "GROUP": {
+              "sprites": "الكل",
+              "\"ALIEN\"": "كل الكائنات الفضائية",
+              "\"BEAR\"": "كل الدببة",
+              "\"CAT\"": "كل القطط",
+              "\"DOG\"": "كل الكلاب",
+              "\"DUCK\"": "كل البط",
+              "\"FROG\"": "كل الضفادع",
+              "\"MOOSE\"": "كل الغزلان",
+              "\"PINEAPPLE\"": "كل الأناناس",
+              "\"ROBOT\"": "كل الروبوتات",
+              "\"SHARK\"": "كل أسماك القرش",
+              "\"UNICORN\"": "كل وحيدات القرن"
+            },
+            "MOVE": {
+              "\"next\"": "(التالي)",
+              "\"prev\"": "(السابق)",
+              "\"rand\"": "(عشوائي)",
+              "MOVES.Roll": "الدحرجة",
+              "MOVES.ClapHigh": "التصفيق بصوت عالٍ",
+              "MOVES.Dab": "التربيت",
+              "MOVES.DoubleJam": "الحفلة الموسيقية المزدوجة",
+              "MOVES.Drop": "السقوط",
+              "MOVES.Floss": "أرجحة اليدين",
+              "MOVES.Fresh": "جديد",
+              "MOVES.Clown": "المهرج",
+              "MOVES.Kick": "الركل",
+              "MOVES.ThisOrThat": "هذا أو ذاك",
+              "MOVES.Thriller": "تايلر",
+              "MOVES.Rest": "لا شيء"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changeMoveLR": {
+          "text": "{SPRITE} تجري {MOVE} {DIR} للأبد",
+          "options": {
+            "MOVE": {
+              "\"next\"": "(التالي)",
+              "\"prev\"": "(السابق)",
+              "\"rand\"": "(عشوائي)",
+              "MOVES.Roll": "الدحرجة",
+              "MOVES.ClapHigh": "التصفيق بصوت عالٍ",
+              "MOVES.Dab": "التربيت",
+              "MOVES.DoubleJam": "الحفلة الموسيقية المزدوجة",
+              "MOVES.Drop": "السقوط",
+              "MOVES.Floss": "أرجحة اليدين",
+              "MOVES.Fresh": "جديد",
+              "MOVES.Clown": "المهرج",
+              "MOVES.Kick": "الركل",
+              "MOVES.ThisOrThat": "هذا أو ذاك",
+              "MOVES.Thriller": "تايلر",
+              "MOVES.Rest": "لا شيء"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changePropBy": {
+          "text": "غيّر {SPRITE} {PROPERTY} بمقدار {VAL}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "وضع أفقي",
+              "\"y\"": "الموضع الرأسي"
+            }
+          }
+        },
+        "Dancelab_doMoveEachLR": {
+          "text": "{GROUP} تجري {MOVE} {DIR} مرة واحدة",
+          "options": {
+            "GROUP": {
+              "sprites": "الكل",
+              "\"ALIEN\"": "كل الكائنات الفضائية",
+              "\"BEAR\"": "كل الدببة",
+              "\"CAT\"": "كل القطط",
+              "\"DOG\"": "كل الكلاب",
+              "\"DUCK\"": "كل البط",
+              "\"FROG\"": "كل الضفادع",
+              "\"MOOSE\"": "كل الغزلان",
+              "\"PINEAPPLE\"": "كل الأناناس",
+              "\"ROBOT\"": "كل الروبوتات",
+              "\"SHARK\"": "كل أسماك القرش",
+              "\"UNICORN\"": "كل وحيدات القرن"
+            },
+            "MOVE": {
+              "\"rand\"": "(عشوائي)",
+              "MOVES.Roll": "الدحرجة",
+              "MOVES.ClapHigh": "التصفيق بصوت عالٍ",
+              "MOVES.Dab": "التربيت",
+              "MOVES.DoubleJam": "الحفلة الموسيقية المزدوجة",
+              "MOVES.Drop": "السقوط",
+              "MOVES.Floss": "أرجحة اليدين",
+              "MOVES.Fresh": "جديد",
+              "MOVES.Clown": "المهرج",
+              "MOVES.Kick": "الركل",
+              "MOVES.ThisOrThat": "هذا أو ذاك",
+              "MOVES.Thriller": "تايلر",
+              "MOVES.Rest": "لا شيء"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_doMoveLR": {
+          "text": "{SPRITE} تجري {MOVE} {DIR} مرة واحدة",
+          "options": {
+            "MOVE": {
+              "\"rand\"": "(عشوائي)",
+              "MOVES.Roll": "الدحرجة",
+              "MOVES.ClapHigh": "التصفيق بصوت عالٍ",
+              "MOVES.Dab": "التربيت",
+              "MOVES.DoubleJam": "الحفلة الموسيقية المزدوجة",
+              "MOVES.Drop": "السقوط",
+              "MOVES.Floss": "أرجحة اليدين",
+              "MOVES.Fresh": "جديد",
+              "MOVES.Clown": "المهرج",
+              "MOVES.Kick": "الركل",
+              "MOVES.ThisOrThat": "هذا أو ذاك",
+              "MOVES.Thriller": "تايلر",
+              "MOVES.Rest": "لا شيء"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_eval": {
+          "text": "تقييم{CODE}"
+        },
+        "Dancelab_everySeconds": {
+          "text": "كل {N} {UNIT} ",
+          "options": {
+            "UNIT": {
+              "\"measures\"": "الإجراءات",
+              "\"seconds\"": "ثوان"
+            }
+          }
+        },
+        "Dancelab_everySecondsRange": {
+          "text": "كل {N} {UNIT} من {START} إلى {STOP} ",
+          "options": {
+            "UNIT": {
+              "measures": "الإجراءات",
+              "seconds": "ثوان"
+            }
+          }
+        },
+        "Dancelab_everyVerseChorus": {
+          "text": "كل {UNIT} ",
+          "options": {
+            "UNIT": {
+              "\"verse\"": "بيت شعر",
+              "\"chorus\"": "لازِمَة"
+            }
+          }
+        },
+        "Dancelab_getEnergy": {
+          "text": "احصل على {RANGE}",
+          "options": {
+            "RANGE": {
+              "\"low\"": "جهير",
+              "\"mid\"": "أوسط",
+              "\"high\"": "طنين ثلاثي"
+            }
+          }
+        },
+        "Dancelab_getProp": {
+          "text": "{SPRITE} {PROPERTY}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "وضع أفقي",
+              "\"y\"": "الموضع الرأسي",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "Dancelab_getTime": {
+          "text": "{UNIT} المنقضي",
+          "options": {
+            "UNIT": {
+              "\"measures\"": "الإجراءات",
+              "\"seconds\"": "ثوان"
+            }
+          }
+        },
+        "Dancelab_ifDanceIs": {
+          "text": "في حالة أداء {SPRITE} لـ {DANCE}\n{DO1} {DO2}",
+          "options": {
+            "DANCE": {
+              "MOVES.ClapHigh": "التصفيق بصوت عالٍ",
+              "MOVES.Clown": "المهرج",
+              "MOVES.Dab": "التربيت",
+              "MOVES.DoubleJam": "الحفلة الموسيقية المزدوجة",
+              "MOVES.Drop": "السقوط",
+              "MOVES.Floss": "أرجحة اليدين",
+              "MOVES.Fresh": "جديد",
+              "MOVES.Roll": "الدحرجة",
+              "MOVES.Kick": "الركل",
+              "MOVES.ThisOrThat": "هذا أو ذاك",
+              "MOVES.Thriller": "تايلر",
+              "MOVES.Rest": "لا شيء"
+            }
+          }
+        },
+        "Dancelab_ifTime": {
+          "options": {
+            "UNIT": {
+              "\"measures\"": "الإجراءات",
+              "\"seconds\"": "ثوان"
+            }
+          }
+        },
+        "Dancelab_jumpTo": {
+          "text": "{SPRITE} انتقل إلى {LOCATION}",
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "أعلى",
+              "{x: 200, y: 300}": "أسفل",
+              "{x: 100, y: 200}": "اليسار",
+              "{x: 300, y: 200}": "اليمين",
+              "{x: 200, y: 200}": "المنتصف",
+              "{x: 100, y: 100}": "أعلى اليسار",
+              "{x: 300, y: 100}": "أعلى اليمين",
+              "{x: 100, y: 300}": "أسفل اليسار",
+              "{x: 300, y: 300}": "أسفل اليمين",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "عشوائي"
+            }
+          }
+        },
+        "Dancelab_layoutSprites": {
+          "text": "تخطيط {GROUP} كـ {FORMAT}",
+          "options": {
+            "GROUP": {
+              "sprites": "الكل",
+              "\"ALIEN\"": "كل الكائنات الفضائية",
+              "\"BEAR\"": "كل الدببة",
+              "\"CAT\"": "كل القطط",
+              "\"DOG\"": "كل الكلاب",
+              "\"DUCK\"": "كل البط",
+              "\"FROG\"": "كل الضفادع",
+              "\"MOOSE\"": "كل الغزلان",
+              "\"PINEAPPLE\"": "كل الأناناس",
+              "\"ROBOT\"": "كل الروبوتات",
+              "\"SHARK\"": "كل أسماك القرش",
+              "\"UNICORN\"": "كل وحيدات القرن"
+            },
+            "FORMAT": {
+              "\"border\"": "الحدود",
+              "\"inner\"": "مربع داخلي",
+              "\"circle\"": "دائرة",
+              "\"grid\"": "شبكة",
+              "\"row\"": "صف",
+              "\"column\"": "عمود",
+              "\"x\"": "متقاطع",
+              "\"plus\"": "زائد",
+              "\"random\"": "عشوائي"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSprite": {
+          "text": "أجرِ {COSTUME} جديد\nيُسمى {NAME} في {LOCATION}",
+          "options": {
+            "COSTUME": {
+              "\"ALIEN\"": "كائن فضائي",
+              "\"BEAR\"": "دب",
+              "\"CAT\"": "قطة",
+              "\"DOG\"": "كلب",
+              "\"DUCK\"": "بطة",
+              "\"FROG\"": "ضفدع",
+              "\"MOOSE\"": "غزال موظ",
+              "\"PINEAPPLE\"": "أناناس",
+              "\"ROBOT\"": "روبوت",
+              "\"SHARK\"": "سمكة قرش",
+              "\"UNICORN\"": "وحيد القرن"
+            },
+            "LOCATION": {
+              "{x: 200, y: 100}": "أعلى",
+              "{x: 200, y: 300}": "أسفل",
+              "{x: 100, y: 200}": "اليسار",
+              "{x: 300, y: 200}": "اليمين",
+              "{x: 200, y: 200}": "المنتصف",
+              "{x: 100, y: 100}": "أعلى اليسار",
+              "{x: 300, y: 100}": "أعلى اليمين",
+              "{x: 100, y: 300}": "أسفل اليسار",
+              "{x: 300, y: 300}": "أسفل اليمين",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "عشوائي"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSpriteGroup": {
+          "text": "أجرِ {N} {COSTUME} جديدًا\nفي {LAYOUT}",
+          "options": {
+            "N": {
+              "2": "2",
+              "3": "3",
+              "4": "4",
+              "5": "5",
+              "6": "6",
+              "7": "7",
+              "8": "8",
+              "9": "9",
+              "10": "10",
+              "11": "11",
+              "12": "12",
+              "13": "13",
+              "14": "14",
+              "15": "15",
+              "16": "16",
+              "17": "17",
+              "18": "18",
+              "19": "19",
+              "20": "20"
+            },
+            "COSTUME": {
+              "\"ALIEN\"": "كائنات فضائية",
+              "\"BEAR\"": "دببة",
+              "\"CAT\"": "قطط",
+              "\"DOG\"": "كلاب",
+              "\"DUCK\"": "بط",
+              "\"FROG\"": "ضفادع",
+              "\"MOOSE\"": "غزال موظ",
+              "\"PINEAPPLE\"": "أناناس",
+              "\"ROBOT\"": "روبوتات",
+              "\"SHARK\"": "أسماك القرش",
+              "\"UNICORN\"": "وحيدات القرن"
+            },
+            "LAYOUT": {
+              "\"border\"": "الحدود",
+              "\"inner\"": "مربع داخلي",
+              "\"circle\"": "دائرة",
+              "\"grid\"": "شبكة",
+              "\"row\"": "صف",
+              "\"column\"": "عمود",
+              "\"x\"": "متقاطع",
+              "\"plus\"": "زائد",
+              "\"random\"": "عشوائي"
+            }
+          }
+        },
+        "Dancelab_mixColors": {
+          "text": "امزج {COLOR1} و{COLOR2}"
+        },
+        "Dancelab_nMeasures": {
+          "text": "إجراءات {N}"
+        },
+        "Dancelab_onPointerDown": {
+          "text": "عندما يكون المؤشر لأسفل"
+        },
+        "Dancelab_onPointerDrag": {
+          "text": "عند سحب المؤشر"
+        },
+        "Dancelab_onPointerUp": {
+          "text": "عندما يكون المؤشر لأعلى"
+        },
+        "Dancelab_randomColor": {
+          "text": "لون عشوائي"
+        },
+        "Dancelab_setBackground": {
+          "text": "عيّن لون الخلفية {COLOR}"
+        },
+        "Dancelab_setBackgroundEffect": {
+          "text": "ضبط تأثيرات الخلفية\n{EFFECT} {PALETTE}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "لا شيء",
+              "\"circles\"": "دوائر",
+              "\"color_cycle\"": "ألوان",
+              "\"diamonds\"": "الماس",
+              "\"disco_ball\"": "كرة ديسكو",
+              "\"swirl\"": "هيبنو",
+              "\"kaleidoscope\"": "منظار النماذج المتغيرة «مشكال",
+              "\"lasers\"": "أرضية رقص بالليزر",
+              "\"splatter\"": "رشاش الطلاء",
+              "\"rainbow\"": "ألوان",
+              "\"snowflakes\"": "ثلج",
+              "\"text\"": "أسماء الأغاني",
+              "\"galaxy\"": "الفضاء",
+              "\"sparkles\"": "بريق",
+              "\"spiral\"": "حلزوني",
+              "\"disco\"": "مربعات",
+              "\"stars\"": "نجوم"
+            },
+            "PALETTE": {
+              "\"rave\"": "أسود وأبيض",
+              "\"cool\"": "الأزرق بدرجاته",
+              "\"default\"": "ضوء",
+              "\"neon\"": "نيون",
+              "\"tropical\"": "استوائي",
+              "\"vintage\"": "عتيق",
+              "\"warm\"": "الأحمر بدرجاته"
+            }
+          }
+        },
+        "Dancelab_setBackgroundEffectWithPalette": {
+          "text": "عيّن تأثيرات الخلفية {EFFECT} {PALETTE}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "لا شيء",
+              "\"rand\"": "(عشوائي)",
+              "\"circles\"": "دوائر",
+              "\"color_cycle\"": "ألوان",
+              "\"diamonds\"": "الماس",
+              "\"disco_ball\"": "كرة ديسكو",
+              "\"swirl\"": "هيبنو",
+              "\"kaleidoscope\"": "منظار النماذج المتغيرة «مشكال",
+              "\"lasers\"": "أرضية رقص بالليزر",
+              "\"splatter\"": "رشاش الطلاء",
+              "\"rainbow\"": "ألوان",
+              "\"snowflakes\"": "ثلج",
+              "\"text\"": "أسماء الأغاني",
+              "\"galaxy\"": "الفضاء",
+              "\"sparkles\"": "بريق",
+              "\"spiral\"": "حلزوني",
+              "\"disco\"": "مربعات",
+              "\"stars\"": "نجوم"
+            },
+            "PALETTE": {
+              "\"rave\"": "أسود وأبيض",
+              "\"cool\"": "الأزرق بدرجاته",
+              "\"default\"": "ضوء",
+              "\"neon\"": "نيون",
+              "\"tropical\"": "استوائي",
+              "\"vintage\"": "عتيق",
+              "\"warm\"": "الأحمر بدرجاته"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeed": {
+          "text": "غيّر سرعة الرقص {SPRITE} إلى {SPEED}",
+          "options": {
+            "SPEED": {
+              "1": "عادي",
+              "2": "سريع",
+              "4": "سريع جدًا",
+              "0.5": "بطيء",
+              "0.25": "بطيء جدًا"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeedEach": {
+          "options": {
+            "GROUP": {
+              "sprites": "الكل",
+              "\"ALIEN\"": "كل الكائنات الفضائية",
+              "\"BEAR\"": "كل الدببة",
+              "\"CAT\"": "كل القطط",
+              "\"DOG\"": "كل الكلاب",
+              "\"DUCK\"": "كل البط",
+              "\"FROG\"": "كل الضفادع",
+              "\"MOOSE\"": "كل الغزلان",
+              "\"PINEAPPLE\"": "كل الأناناس",
+              "\"ROBOT\"": "كل الروبوتات",
+              "\"SHARK\"": "كل أسماك القرش",
+              "\"UNICORN\"": "كل وحيدات القرن"
+            },
+            "SPEED": {
+              "1": "عادي",
+              "2": "سريع",
+              "4": "سريع جدًا",
+              "0.5": "بطيء",
+              "0.25": "بطيء جدًا"
+            }
+          }
+        },
+        "Dancelab_setForegroundEffect": {
+          "text": "عيّن التأثيرات الأمامية {EFFECT}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "لا شيء",
+              "\"bubbles\"": "فقاعات",
+              "\"confetti\"": "قصاصات من الورق",
+              "\"hearts_red\"": "قلوب",
+              "\"music_notes\"": "نوتات موسيقية",
+              "\"pineapples\"": "أناناس",
+              "\"smiling_poop\"": "مؤخرة السفينة",
+              "\"rain\"": "مطر",
+              "\"floating_rainbows\"": "أقواس قزح",
+              "\"smile_face\"": "وجه مبتسم",
+              "\"raining_tacos\"": "شطائر التاكو"
+            }
+          }
+        },
+        "Dancelab_setForegroundEffectExtended": {
+          "text": "عيّن التأثيرات الأمامية {EFFECT}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "لا شيء",
+              "\"rand\"": "(عشوائي)",
+              "\"bubbles\"": "فقاعات",
+              "\"confetti\"": "قصاصات من الورق",
+              "\"hearts_red\"": "قلوب",
+              "\"music_notes\"": "نوتات موسيقية",
+              "\"pineapples\"": "أناناس",
+              "\"smiling_poop\"": "مؤخرة السفينة",
+              "\"rain\"": "مطر",
+              "\"floating_rainbows\"": "أقواس قزح",
+              "\"smile_face\"": "وجه مبتسم",
+              "\"raining_tacos\"": "شطائر التاكو"
+            }
+          }
+        },
+        "Dancelab_setProp": {
+          "text": "قم بتعيين {SPRITE} {PROPERTY} إلى {VAL} ",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "وضع أفقي",
+              "\"y\"": "الموضع الرأسي",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "Dancelab_setPropEach": {
+          "text": "عيّن {GROUP} {PROPERTY} على {VAL}",
+          "options": {
+            "GROUP": {
+              "sprites": "الكل",
+              "\"ALIEN\"": "كل الكائنات الفضائية",
+              "\"BEAR\"": "كل الدببة",
+              "\"CAT\"": "كل القطط",
+              "\"DOG\"": "كل الكلاب",
+              "\"DUCK\"": "كل البط",
+              "\"FROG\"": "كل الضفادع",
+              "\"MOOSE\"": "كل الغزلان",
+              "\"PINEAPPLE\"": "كل الأناناس",
+              "\"ROBOT\"": "كل الروبوتات",
+              "\"SHARK\"": "كل أسماك القرش",
+              "\"UNICORN\"": "كل وحيدات القرن"
+            },
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "وضع أفقي",
+              "\"y\"": "الموضع الرأسي",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "Dancelab_setPropRandom": {
+          "text": "رتّب {SPRITE} {PROPERTY} عشوائيًا",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "وضع أفقي",
+              "\"y\"": "الموضع الرأسي",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "Dancelab_setTint": {
+          "text": "عيّن اللون الخفيف {SPRITE} على {VAL}"
+        },
+        "Dancelab_setTintEach": {
+          "options": {
+            "THIS": {
+              "sprites": "الكل",
+              "\"ALIEN\"": "كل الكائنات الفضائية",
+              "\"BEAR\"": "كل الدببة",
+              "\"CAT\"": "كل القطط",
+              "\"DOG\"": "كل الكلاب",
+              "\"DUCK\"": "كل البط",
+              "\"FROG\"": "كل الضفادع",
+              "\"MOOSE\"": "كل الغزلان",
+              "\"PINEAPPLE\"": "كل الأناناس",
+              "\"ROBOT\"": "كل الروبوتات",
+              "\"SHARK\"": "كل أسماك القرش"
+            }
+          }
+        },
+        "Dancelab_setTintInline": {
+          "text": "عيّن اللون الخفيف {SPRITE} على {VAL}"
+        },
+        "Dancelab_setVisible": {
+          "text": "اضبط {SPRITE} على مرئي لـ {VISIBILITY}",
+          "options": {
+            "VISIBILITY": {
+              "true": "مرئى",
+              "false": "غير مرئي"
+            }
+          }
+        },
+        "Dancelab_setVisibleEach": {
+          "text": "عيّن الظهور {THIS} على {VISIBILITY}",
+          "options": {
+            "THIS": {
+              "sprites": "الكل",
+              "\"ALIEN\"": "كل الكائنات الفضائية",
+              "\"BEAR\"": "كل الدببة",
+              "\"CAT\"": "كل القطط",
+              "\"DOG\"": "كل الكلاب",
+              "\"DUCK\"": "كل البط",
+              "\"FROG\"": "كل الضفادع",
+              "\"MOOSE\"": "كل الغزلان",
+              "\"PINEAPPLE\"": "كل الأناناس",
+              "\"ROBOT\"": "كل الروبوتات",
+              "\"SHARK\"": "كل أسماك القرش",
+              "\"UNICORN\"": "كل وحيدات القرن"
+            },
+            "VISIBILITY": {
+              "true": "مرئى",
+              "false": "غير مرئي"
+            }
+          }
+        },
+        "Dancelab_startMapping": {
+          "text": "{SPRITE} يبدأ {PROPERTY} بعد {RANGE}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "وضع أفقي",
+              "\"y\"": "الموضع الرأسي",
+              "\"tint\"": "لون خفيف"
+            },
+            "RANGE": {
+              "\"bass\"": "جهير",
+              "\"mid\"": "أوسط",
+              "\"treble\"": "طنين ثلاثي"
+            }
+          }
+        },
+        "Dancelab_stopMapping": {
+          "text": "{SPRITE} يتوقف {PROPERTY} بعد {RANGE}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "وضع أفقي",
+              "\"y\"": "بشكل عمودي",
+              "\"direction\"": "اتجاه الحركة",
+              "\"tint\"": "لون خفيف"
+            },
+            "RANGE": {
+              "\"bass\"": "جهير",
+              "\"mid\"": "أوسط",
+              "\"treble\"": "طنين ثلاثي"
+            }
+          }
+        },
+        "Dancelab_whenKey": {
+          "text": "عند الضغط على {KEY}",
+          "options": {
+            "KEY": {
+              "\"up\"": "الأعلى",
+              "\"left\"": "اليسار",
+              "\"down\"": "الأسفل",
+              "\"right\"": "اليمين",
+              "\"space\"": "الفضاء",
+              "\"x\"": "x"
+            }
+          }
+        },
+        "Dancelab_whenPeak": {
+          "text": "عند ذروة {RANGE}",
+          "options": {
+            "RANGE": {
+              "0": "جهير",
+              "1": "أوسط",
+              "2": "طنين ثلاثي"
+            }
+          }
+        },
+        "Dancelab_whenSetup": {
+          "text": "الإعداد"
+        },
+        "gamelab_changeColor": {
+          "text": "غيّر {COLOR} {METHOD} بمقدار {AMOUNT}",
+          "options": {
+            "METHOD": {
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "gamelab_changeColorBy": {
+          "text": "غيّر {COLOR} {METHOD} بمقدار {AMOUNT}",
+          "options": {
+            "METHOD": {
+              "\"hue\"": "درجة اللون",
+              "\"saturation\"": "التشبّع اللوني",
+              "\"brightness\"": "السطوع"
+            }
+          }
+        },
+        "gamelab_changePropBy": {
+          "text": "غيّر {SPRITE} {PROPERTY} بمقدار {VAL}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "gamelab_debugSprite": {
+          "options": {
+            "VAL": {
+              "true": "صحيح",
+              "false": "خطأ"
+            }
+          }
+        },
+        "gamelab_eval": {
+          "text": "تقييم{CODE}"
+        },
+        "gamelab_getProp": {
+          "text": "{SPRITE} {PROPERTY}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "gamelab_jumpTo": {
+          "text": "{SPRITE} انتقل إلى {LOCATION}"
+        },
+        "gamelab_locationDelta": {
+          "options": {
+            "DIR": {
+              "'random'": "عشوائي"
+            }
+          }
+        },
+        "gamelab_mirrorSprite": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "اليمين",
+              "\"left\"": "اليسار"
+            }
+          }
+        },
+        "gamelab_mixColors": {
+          "text": "امزج {COLOR1} و{COLOR2}"
+        },
+        "gamelab_randColor": {
+          "text": "لون عشوائي"
+        },
+        "gamelab_randomColor": {
+          "text": "لون عشوائي"
+        },
+        "gamelab_setBackground": {
+          "text": "عيّن لون الخلفية {COLOR}"
+        },
+        "gamelab_setPosition": {
+          "text": "انقل {THIS} إلى الموضع {POSITION}",
+          "options": {
+            "POSITION": {
+              "{x: 50, y: 50}": "أعلى اليسار",
+              "{x: 200, y: 50}": "أعلى المنتصف",
+              "{x: 350, y: 50}": "أعلى اليمين",
+              "{x: 50, y: 200}": "منتصف اليسار",
+              "{x: 200, y: 200}": "المنتصف",
+              "{x: 350, y: 200}": "منتصف اليمين",
+              "{x: 50, y: 350}": "أسفل اليسار",
+              "{x: 200, y: 350}": "منتصف اليسار",
+              "{x: 350, y: 350}": "أسفل اليمين",
+              "\"random\"": "عشوائي"
+            }
+          }
+        },
+        "gamelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "gamelab_setSizes": {
+          "text": "عيّن {SPRITE} {PROPERTY} على {N}%",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"width\"": "العرض",
+              "\"height\"": "الارتفاع"
+            }
+          }
+        },
+        "gamelab_setup": {
+          "text": "الإعداد"
+        },
+        "gamelab_spritesWhere": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "gamelab_spritesWhereGenerator": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة",
+              "\"tint\"": "لون خفيف"
+            }
+          }
+        },
+        "gamelab_turn": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "اليمين",
+              "\"left\"": "اليسار"
+            }
+          }
+        },
+        "gamelab_whenKey": {
+          "text": "عند الضغط على {KEY}",
+          "options": {
+            "KEY": {
+              "\"up\"": "الأعلى",
+              "\"down\"": "الأسفل",
+              "\"left\"": "اليسار",
+              "\"right\"": "اليمين",
+              "\"space\"": "الفضاء"
+            }
+          }
+        },
+        "gamelab_whenPressedAndReleased": {
+          "options": {
+            "DIR": {
+              "'up'": "الأعلى",
+              "'down'": "الأسفل",
+              "'left'": "اليسار",
+              "'right'": "اليمين"
+            }
+          }
+        },
+        "gamelab_whileKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "الأعلى",
+              "\"down\"": "الأسفل",
+              "\"left\"": "اليسار",
+              "\"right\"": "اليمين",
+              "\"space\"": "الفضاء"
+            }
+          }
+        },
+        "Mikelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "Mikelab_createNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "أعلى",
+              "{x: 200, y: 300}": "أسفل",
+              "{x: 100, y: 200}": "اليسار",
+              "{x: 300, y: 200}": "اليمين",
+              "{x: 200, y: 200}": "المنتصف",
+              "{x: 100, y: 100}": "أعلى اليسار",
+              "{x: 300, y: 100}": "أعلى اليمين",
+              "{x: 100, y: 300}": "أسفل اليسار",
+              "{x: 300, y: 300}": "أسفل اليمين"
+            }
+          }
+        },
+        "Mikelab_eval": {
+          "text": "تقييم{CODE}"
+        },
+        "Mikelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "Mikelab_groupChangeAnim": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            }
+          }
+        },
+        "Mikelab_groupChangePropBy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            },
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "Mikelab_groupCreateNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "أعلى",
+              "{x: 200, y: 300}": "أسفل",
+              "{x: 100, y: 200}": "اليسار",
+              "{x: 300, y: 200}": "اليمين",
+              "{x: 200, y: 200}": "المنتصف",
+              "{x: 100, y: 100}": "أعلى اليسار",
+              "{x: 300, y: 100}": "أعلى اليمين",
+              "{x: 100, y: 300}": "أسفل اليسار",
+              "{x: 300, y: 300}": "أسفل اليمين"
+            }
+          }
+        },
+        "Mikelab_groupDestroy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            }
+          }
+        },
+        "Mikelab_groupGetProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "Mikelab_groupRemoveAllBehaviors": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            }
+          }
+        },
+        "Mikelab_groupRemoveBehaviorSimple": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            }
+          }
+        },
+        "Mikelab_groupRemoveTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            }
+          }
+        },
+        "Mikelab_groupSetProp": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            },
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "Mikelab_groupSetTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "الكل"
+            }
+          }
+        },
+        "Mikelab_ifDanceIs": {
+          "text": "في حالة أداء {SPRITE} لـ {DANCE}\n{DO1} {DO2}",
+          "options": {
+            "DANCE": {
+              "MOVES.ClapHigh": "التصفيق بصوت عالٍ",
+              "MOVES.Clown": "المهرج",
+              "MOVES.Dab": "التربيت",
+              "MOVES.DoubleJam": "الحفلة الموسيقية المزدوجة",
+              "MOVES.Drop": "السقوط",
+              "MOVES.Floss": "أرجحة اليدين",
+              "MOVES.Fresh": "جديد",
+              "MOVES.Roll": "الدحرجة",
+              "MOVES.Kick": "الركل",
+              "MOVES.ThisOrThat": "هذا أو ذاك",
+              "MOVES.Thriller": "تايلر",
+              "MOVES.Rest": "لا شيء"
+            }
+          }
+        },
+        "Mikelab_randomColor": {
+          "text": "لون عشوائي"
+        },
+        "Mikelab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "مدينة"
+            }
+          }
+        },
+        "Mikelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "Mikelab_showScoreboard": {
+          "options": {
+            "CORNER": {
+              "\"right\"": "اليمين",
+              "\"left\"": "اليسار"
+            }
+          }
+        },
+        "Mikelab_sprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "أعلى",
+              "{x: 200, y: 300}": "أسفل",
+              "{x: 100, y: 200}": "اليسار",
+              "{x: 300, y: 200}": "اليمين",
+              "{x: 200, y: 200}": "المنتصف",
+              "{x: 100, y: 100}": "أعلى اليسار",
+              "{x: 300, y: 100}": "أعلى اليمين",
+              "{x: 100, y: 300}": "أسفل اليسار",
+              "{x: 300, y: 300}": "أسفل اليمين"
+            }
+          }
+        },
+        "Mikelab_whenKeyPressed": {
+          "text": "عند الضغط على {KEY}",
+          "options": {
+            "KEY": {
+              "\"up\"": "سهم لأعلى",
+              "\"down\"": "السهم أسفل",
+              "\"left\"": "سهم لليسار",
+              "\"right\"": "سهم لليمين",
+              "\"w\"": "W",
+              "\"a\"": "A",
+              "\"s\"": "S",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whenKeyReleased": {
+          "options": {
+            "KEY": {
+              "\"up\"": "سهم لأعلى",
+              "\"down\"": "السهم أسفل",
+              "\"left\"": "سهم لليسار",
+              "\"right\"": "سهم لليمين",
+              "\"w\"": "W",
+              "\"a\"": "A",
+              "\"s\"": "S",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whileKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "سهم لأعلى",
+              "\"down\"": "السهم أسفل",
+              "\"left\"": "سهم لليسار",
+              "\"right\"": "سهم لليمين"
+            }
+          }
+        },
+        "RyanLab_moveForward": {
+          "text": "تحريك إلى الأمام"
+        },
+        "RyanLab_turnLeft": {
+          "text": "اتجه إلى اليسار"
+        },
+        "RyanLab_turnRight": {
+          "text": "اتجه إلى اليمين"
+        },
+        "Vector_positionCenter": {
+          "text": "المنتصف"
+        },
+        "aalab_changePropByFlexible": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "الحجم",
+              "\"rotation\"": "الدوران",
+              "\"x\"": "الموضع س",
+              "\"y\"": "الموضع ص",
+              "\"direction\"": "اتجاه الحركة"
+            }
+          }
+        },
+        "aalab_clickedOn": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "عندما",
+              "\"while\"": "التكرار طالما"
+            }
+          }
+        },
+        "aalab_jumpTo": {
+          "text": "{SPRITE} انتقل إلى {LOCATION}"
+        },
+        "aalab_keyPressed": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "عندما",
+              "\"while\"": "التكرار طالما"
+            },
+            "KEY": {
+              "\"up\"": "الأعلى",
+              "\"down\"": "الأسفل",
+              "\"left\"": "اليسار",
+              "\"right\"": "اليمين",
+              "\"space\"": "الفضاء"
+            }
+          }
+        },
+        "aalab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "مدينة"
+            }
+          }
+        },
+        "aalab_whenTouching": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "عندما",
+              "\"while\"": "التكرار طالما"
+            }
+          }
+        },
+        "binary_move": {
+          "options": {
+            "DIR": {
+              "\"up\"": "الأعلى",
+              "\"down\"": "الأسفل",
+              "\"left\"": "اليسار",
+              "\"right\"": "اليمين"
+            }
+          }
+        },
+        "binary_whenKey": {
+          "text": "عند الضغط على {KEY}",
+          "options": {
+            "KEY": {
+              "\"up\"": "الأعلى",
+              "\"down\"": "الأسفل",
+              "\"left\"": "اليسار",
+              "\"right\"": "اليمين",
+              "\"space\"": "الفضاء"
+            }
+          }
+        },
+        "craft_ifPath": {
+          "text": "إذا كان المسار {DIR}\n{STATEMENT}",
+          "options": {
+            "DIR": {
+              "'ahead'": "في الأمام",
+              "'right'": "إلى اليمين",
+              "'left'": "إلى اليسار"
+            }
+          }
+        },
+        "craft_ifStandingOn": {
+          "text": "إذا كنت تقف فوق {TYPE}\n{STATEMENT}",
+          "options": {
+            "TYPE": {
+              "'blueCoralBlock'": "المرجان الأزرق",
+              "'redCoralBlock'": "المرجان الأحمر",
+              "'sand'": "رمل",
+              "'wool_blue'": "المياه العميقة",
+              "'planksOak'": "ألواح خشب البلوط",
+              "'seaLantern'": "فانوس البحر"
+            }
+          }
+        },
+        "craft_ifStandingOnLimit": {
+          "text": "إذا كنت تقف فوق {TYPE}\n{STATEMENT}",
+          "options": {
+            "TYPE": {
+              "'sand'": "رمل",
+              "'darkPrismarine'": "كتلة prismarine الداكنة",
+              "'seaLantern'": "فانوس البحر"
+            }
+          }
+        },
+        "craft_moveForward": {
+          "text": "تحريك إلى الأمام"
+        },
+        "craft_placeBlock": {
+          "text": "ضع {blockType}",
+          "options": {
+            "blockType": {
+              "\"strippedOak\"": "البلوط المُعرّى",
+              "\"strippedDarkOak\"": "البلوط الداكن المُعرّى",
+              "\"stoneBricks\"": "أحجار الطوب",
+              "\"mossyStoneBricks\"": "أحجار الطوب المطحلبة",
+              "\"crackedStoneBricks\"": "أحجار الطوب المتصدعة",
+              "\"decorativeStoneBricks\"": "أحجار الطوب التزيينية",
+              "\"blueCoralBlock\"": "كتلة المرجان الأزرق",
+              "\"pinkCoralBlock\"": "كتلة المرجان الوردي",
+              "\"magentaCoralBlock\"": "كتلة المرجان الأرجواني",
+              "\"redCoralBlock\"": "كتلة المرجان الأحمر",
+              "\"yellowCoralBlock\"": "كتلة المرجان الأصفر",
+              "\"blueDeadCoralBlock\"": "كتلة المرجان الأزرق الميت",
+              "\"pinkDeadCoralBlock\"": "كتلة المرجان الوردي الميت",
+              "\"magentaDeadCoralBlock\"": "كتلة المرجان الأرجواني الميت",
+              "\"readDeadCoralBlock\"": "كتلة المرجان الأحمر الميت",
+              "\"yellowDeadCoralBlock\"": "كتلة المرجان الأصفر الميت",
+              "\"prismarine\"": "كتلة prismarine",
+              "\"darkPrismarine\"": "كتلة prismarine الداكنة",
+              "\"seaLantern\"": "فانوس البحر",
+              "\"packedIce\"": "الجليد المكدّس",
+              "\"blueIce\"": "الجليد الأزرق",
+              "\"blackConcrete\"": "الخرسان الأسود",
+              "\"seaGrass\"": "عشب البحر",
+              "\"kelp\"": "قشّ البحر",
+              "\"polishedGranite\"": "الجرانيت المصقول"
+            }
+          }
+        },
+        "craft_placePrismarine": {
+          "text": "ضع كتلة prismarine"
+        },
+        "craft_placeTorch": {
+          "text": "ضع المصباح"
+        },
+        "craft_repeatUntilConduit": {
+          "text": "كرر حتى اكتمال القناة\n{STATEMENT}"
+        },
+        "craft_repeatUntilGoal": {
+          "text": "كرّر حتى تحقق الهدف\n{STATEMENT}"
+        },
+        "craft_spawnEntity": {
+          "text": "بيض السمك {ENTITY}",
+          "options": {
+            "ENTITY": {
+              "\"cod\"": "سمك القد",
+              "\"dolphin\"": "الدولفين",
+              "\"salmon\"": "السلمون",
+              "\"seaTurtle\"": "سلحفاة البحر",
+              "\"squid\"": "الحبار",
+              "\"tropicalFish\"": "الأسماك الاستوائية"
+            }
+          }
+        },
+        "craft_turn": {
+          "text": "دوّر {DIR}",
+          "options": {
+            "DIR": {
+              "right": "إلى اليمين ↻",
+              "left": "إلى اليسار ↺"
+            }
+          }
+        }
+      }
+    }
+  }
+}

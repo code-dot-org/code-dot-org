@@ -1,0 +1,1032 @@
+{
+  "ro": {
+    "data": {
+      "blocks": {
+        "Dancelab_atTimestamp": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "secunde"
+            }
+          }
+        },
+        "Dancelab_changeColorBy": {
+          "options": {
+            "METHOD": {
+              "\"hue\"": "nuanță",
+              "\"saturation\"": "saturație",
+              "\"brightness\"": "luminozitate"
+            }
+          }
+        },
+        "Dancelab_changeMoveEachLR": {
+          "options": {
+            "GROUP": {
+              "sprites": "toate"
+            },
+            "MOVE": {
+              "\"rand\"": "Aleatoriu"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changeMoveLR": {
+          "options": {
+            "MOVE": {
+              "\"rand\"": "Aleatoriu"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime",
+              "\"rotation\"": "rotație"
+            }
+          }
+        },
+        "Dancelab_doMoveEachLR": {
+          "options": {
+            "GROUP": {
+              "sprites": "toate"
+            },
+            "MOVE": {
+              "\"rand\"": "Aleatoriu"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_doMoveLR": {
+          "options": {
+            "MOVE": {
+              "\"rand\"": "Aleatoriu"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_everySeconds": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "secunde"
+            }
+          }
+        },
+        "Dancelab_getEnergy": {
+          "options": {
+            "RANGE": {
+              "\"low\"": "mic",
+              "\"mid\"": "mediu",
+              "\"high\"": "mare"
+            }
+          }
+        },
+        "Dancelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime",
+              "\"rotation\"": "rotație",
+              "\"tint\"": "tentă"
+            }
+          }
+        },
+        "Dancelab_getTime": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "secunde"
+            }
+          }
+        },
+        "Dancelab_ifTime": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "secunde"
+            },
+            "OP": {
+              "\">\"": ">",
+              "\"=\"": "="
+            }
+          }
+        },
+        "Dancelab_jumpTo": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "stânga",
+              "{x: 300, y: 200}": "dreapta",
+              "{x: 200, y: 200}": "centru",
+              "{x: 100, y: 100}": "stânga sus",
+              "{x: 300, y: 100}": "dreapta sus",
+              "{x: 100, y: 300}": "stânga jos",
+              "{x: 300, y: 300}": "dreapta jos",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "aleator"
+            }
+          }
+        },
+        "Dancelab_layoutSprites": {
+          "options": {
+            "GROUP": {
+              "sprites": "toate"
+            },
+            "FORMAT": {
+              "\"grid\"": "rețea",
+              "\"row\"": "rând",
+              "\"column\"": "coloană",
+              "\"random\"": "aleator"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "stânga",
+              "{x: 300, y: 200}": "dreapta",
+              "{x: 200, y: 200}": "centru",
+              "{x: 100, y: 100}": "stânga sus",
+              "{x: 300, y: 100}": "dreapta sus",
+              "{x: 100, y: 300}": "stânga jos",
+              "{x: 300, y: 300}": "dreapta jos",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "aleator"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSpriteGroup": {
+          "options": {
+            "N": {
+              "2": "2",
+              "3": "3",
+              "4": "4",
+              "5": "5",
+              "6": "6",
+              "7": "7",
+              "8": "8",
+              "9": "9",
+              "10": "10",
+              "11": "11",
+              "12": "12",
+              "13": "13",
+              "14": "14",
+              "15": "15",
+              "16": "16",
+              "17": "17",
+              "18": "18",
+              "19": "19",
+              "20": "20"
+            },
+            "LAYOUT": {
+              "\"grid\"": "rețea",
+              "\"row\"": "rând",
+              "\"column\"": "coloană",
+              "\"random\"": "aleator"
+            }
+          }
+        },
+        "Dancelab_onPointerDown": {
+          "text": "pe indicatorul în jos"
+        },
+        "Dancelab_onPointerDrag": {
+          "text": "pe indicatorul glisare"
+        },
+        "Dancelab_onPointerUp": {
+          "text": "pe indicatorul în sus"
+        },
+        "Dancelab_randomColor": {
+          "text": "culoare aleatorie"
+        },
+        "Dancelab_setBackgroundEffect": {
+          "options": {
+            "EFFECT": {
+              "\"color_cycle\"": "Curcubeu",
+              "\"diamonds\"": "Diamante",
+              "\"rainbow\"": "Curcubeu",
+              "\"disco\"": "Discotecă"
+            }
+          }
+        },
+        "Dancelab_setBackgroundEffectWithPalette": {
+          "options": {
+            "EFFECT": {
+              "\"rand\"": "Aleatoriu",
+              "\"color_cycle\"": "Curcubeu",
+              "\"diamonds\"": "Diamante",
+              "\"rainbow\"": "Curcubeu",
+              "\"disco\"": "Discotecă"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeed": {
+          "options": {
+            "SPEED": {
+              "1": "normal",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeedEach": {
+          "options": {
+            "GROUP": {
+              "sprites": "toate"
+            },
+            "SPEED": {
+              "1": "normal",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setForegroundEffect": {
+          "options": {
+            "EFFECT": {
+            }
+          }
+        },
+        "Dancelab_setForegroundEffectExtended": {
+          "options": {
+            "EFFECT": {
+              "\"rand\"": "Aleatoriu"
+            }
+          }
+        },
+        "Dancelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime",
+              "\"rotation\"": "rotație",
+              "\"tint\"": "tentă"
+            }
+          }
+        },
+        "Dancelab_setPropEach": {
+          "options": {
+            "GROUP": {
+              "sprites": "toate"
+            },
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime",
+              "\"rotation\"": "rotație",
+              "\"tint\"": "tentă"
+            }
+          }
+        },
+        "Dancelab_setPropRandom": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime",
+              "\"rotation\"": "rotație",
+              "\"tint\"": "tentă"
+            }
+          }
+        },
+        "Dancelab_setTintEach": {
+          "options": {
+            "THIS": {
+              "sprites": "toate"
+            }
+          }
+        },
+        "Dancelab_setVisibleEach": {
+          "options": {
+            "THIS": {
+              "sprites": "toate"
+            }
+          }
+        },
+        "Dancelab_startMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime",
+              "\"rotation\"": "rotație",
+              "\"tint\"": "tentă"
+            },
+            "RANGE": {
+              "\"bass\"": "mic",
+              "\"mid\"": "mediu",
+              "\"treble\"": "mare"
+            }
+          }
+        },
+        "Dancelab_stopMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime",
+              "\"rotation\"": "rotație",
+              "\"direction\"": "direcţie de mişcare",
+              "\"tint\"": "tentă"
+            },
+            "RANGE": {
+              "\"bass\"": "mic",
+              "\"mid\"": "mediu",
+              "\"treble\"": "mare"
+            }
+          }
+        },
+        "Dancelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "sus",
+              "\"left\"": "stânga",
+              "\"down\"": "jos",
+              "\"right\"": "dreapta",
+              "\"space\"": "spaţiu",
+              "\"a\"": "a",
+              "\"d\"": "d",
+              "\"s\"": "s",
+              "\"w\"": "w",
+              "\"x\"": "x"
+            }
+          }
+        },
+        "Dancelab_whenPeak": {
+          "options": {
+            "RANGE": {
+              "0": "mic",
+              "1": "mediu",
+              "2": "mare"
+            }
+          }
+        },
+        "Dancelab_whenSetup": {
+          "text": "configurare"
+        },
+        "gamelab_changeColor": {
+          "options": {
+            "METHOD": {
+              "\"tint\"": "tentă",
+              "\"tone\"": "ton",
+              "\"shade\"": "umbră"
+            }
+          }
+        },
+        "gamelab_changeColorBy": {
+          "options": {
+            "METHOD": {
+              "\"hue\"": "nuanță",
+              "\"saturation\"": "saturație",
+              "\"brightness\"": "luminozitate"
+            }
+          }
+        },
+        "gamelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "gamelab_debugSprite": {
+          "options": {
+            "VAL": {
+              "true": "adevărat",
+              "false": "fals"
+            }
+          }
+        },
+        "gamelab_enableDebug": {
+          "text": "activează depanare"
+        },
+        "gamelab_firstTouched": {
+          "text": "primul spiriduș atins"
+        },
+        "gamelab_getAnim": {
+          "options": {
+            "COSTUME": {
+              "\"costume\"": "costum"
+            }
+          }
+        },
+        "gamelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare",
+              "\"tint\"": "tentă"
+            }
+          }
+        },
+        "gamelab_hideTitleScreen": {
+          "text": "ascend ecranul cu titlu"
+        },
+        "gamelab_joystickDirection": {
+          "text": "direcția joystick-ului"
+        },
+        "gamelab_locationConstant": {
+          "options": {
+            "DIR": {
+              "'north'": "nord",
+              "'south'": "sud",
+              "'east'": "est",
+              "'west'": "vest"
+            }
+          }
+        },
+        "gamelab_locationDelta": {
+          "options": {
+            "DIR": {
+              "'north'": "nord",
+              "'south'": "sud",
+              "'east'": "est",
+              "'west'": "vest",
+              "'random'": "aleator"
+            }
+          }
+        },
+        "gamelab_locationEast": {
+          "text": "est"
+        },
+        "gamelab_locationMouse": {
+          "text": "locația mouse-ului"
+        },
+        "gamelab_locationNorth": {
+          "text": "nord"
+        },
+        "gamelab_locationSouth": {
+          "text": "sud"
+        },
+        "gamelab_locationWest": {
+          "text": "vest"
+        },
+        "gamelab_makeNewGroup": {
+          "text": "creează un grup nou"
+        },
+        "gamelab_mirrorSprite": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "dreapta",
+              "\"left\"": "stânga"
+            }
+          }
+        },
+        "gamelab_mouseDown": {
+          "text": "mouse-ul este jos"
+        },
+        "gamelab_mouseLocation": {
+          "text": "locația mouse-ului"
+        },
+        "gamelab_moveInDirection": {
+          "options": {
+            "DIRECTION": {
+              "\"North\"": "Nord",
+              "\"East\"": "Est",
+              "\"South\"": "Sud",
+              "\"West\"": "Vest"
+            }
+          }
+        },
+        "gamelab_pointInDirection": {
+          "options": {
+            "DIRECTION": {
+              "\"North\"": "Nord",
+              "\"East\"": "Est",
+              "\"South\"": "Sud",
+              "\"West\"": "Vest"
+            }
+          }
+        },
+        "gamelab_randColor": {
+          "text": "culoare aleatorie"
+        },
+        "gamelab_randomColor": {
+          "text": "culoare aleatorie"
+        },
+        "gamelab_randomLocation": {
+          "text": "locație aleatorie"
+        },
+        "gamelab_secondTouched": {
+          "text": "al doilea spiriduș atins"
+        },
+        "gamelab_setPosition": {
+          "options": {
+            "POSITION": {
+              "{x: 50, y: 50}": "stânga sus",
+              "{x: 200, y: 50}": "centru sus",
+              "{x: 350, y: 50}": "dreapta sus",
+              "{x: 50, y: 200}": "centru stânga",
+              "{x: 200, y: 200}": "centru",
+              "{x: 350, y: 200}": "centru dreapta",
+              "{x: 50, y: 350}": "stânga jos",
+              "{x: 200, y: 350}": "centru jos",
+              "{x: 350, y: 350}": "dreapta jos",
+              "\"random\"": "aleator"
+            }
+          }
+        },
+        "gamelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare",
+              "\"tint\"": "tentă"
+            }
+          }
+        },
+        "gamelab_setSizes": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"width\"": "lăţime",
+              "\"height\"": "înălțime"
+            }
+          }
+        },
+        "gamelab_setup": {
+          "text": "configurare"
+        },
+        "gamelab_spriteDirection": {
+          "options": {
+            "DIRECTION": {
+              "\"North\"": "Nord",
+              "\"East\"": "Est",
+              "\"South\"": "Sud",
+              "\"West\"": "Vest"
+            }
+          }
+        },
+        "gamelab_spritesWhere": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"costume\"": "costum",
+              "\"direction\"": "direcţie de mişcare",
+              "\"rotation\"": "rotire sau direcţie",
+              "\"tint\"": "tentă"
+            }
+          }
+        },
+        "gamelab_spritesWhereGenerator": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"costume\"": "costum",
+              "\"direction\"": "direcţie de mişcare",
+              "\"rotation\"": "rotire sau direcţie",
+              "\"tint\"": "tentă"
+            },
+            "OP": {
+              "\"=\"": "=",
+              "\">\"": ">"
+            }
+          }
+        },
+        "gamelab_turn": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "dreapta",
+              "\"left\"": "stânga"
+            }
+          }
+        },
+        "gamelab_whenDownArrow": {
+          "text": "când săgeata jos este apăsată"
+        },
+        "gamelab_whenJoystick": {
+          "text": "când joystick-ul"
+        },
+        "gamelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "sus",
+              "\"down\"": "jos",
+              "\"left\"": "stânga",
+              "\"right\"": "dreapta",
+              "\"space\"": "spaţiu",
+              "\"a\"": "a",
+              "\"w\"": "w",
+              "\"s\"": "s",
+              "\"d\"": "d"
+            }
+          }
+        },
+        "gamelab_whenLeftArrow": {
+          "text": "când săgeata stânga este apăsată"
+        },
+        "gamelab_whenMouseClicked": {
+          "text": "când se face clic cu mouse-ul"
+        },
+        "gamelab_whenPressedAndReleased": {
+          "options": {
+            "DIR": {
+              "'up'": "sus",
+              "'down'": "jos",
+              "'left'": "stânga",
+              "'right'": "dreapta"
+            }
+          }
+        },
+        "gamelab_whenRightArrow": {
+          "text": "când săgeata dreapta este apăsată"
+        },
+        "gamelab_whenUpArrow": {
+          "text": "când săgeata sus este apăsată"
+        },
+        "gamelab_whileDownArrow": {
+          "text": "în timp ce săgeata jos este apăsată"
+        },
+        "gamelab_whileJoystick": {
+          "text": "în timp ce joystick-ul"
+        },
+        "gamelab_whileKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "sus",
+              "\"down\"": "jos",
+              "\"left\"": "stânga",
+              "\"right\"": "dreapta",
+              "\"space\"": "spaţiu",
+              "\"a\"": "a",
+              "\"w\"": "w",
+              "\"s\"": "s",
+              "\"d\"": "d"
+            }
+          }
+        },
+        "gamelab_whileLeftArrow": {
+          "text": "în timp ce săgeata stânga este apăsată"
+        },
+        "gamelab_whileRightArrow": {
+          "text": "în timp ce săgeata dreapta este apăsată"
+        },
+        "gamelab_whileUpArrow": {
+          "text": "în timp ce săgeata sus este apăsată"
+        },
+        "Mikelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "Mikelab_createNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "stânga",
+              "{x: 300, y: 200}": "dreapta",
+              "{x: 200, y: 200}": "centru",
+              "{x: 100, y: 100}": "stânga sus",
+              "{x: 300, y: 100}": "dreapta sus",
+              "{x: 100, y: 300}": "stânga jos",
+              "{x: 300, y: 300}": "dreapta jos",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "Aleatoriu"
+            }
+          }
+        },
+        "Mikelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "Mikelab_groupChangeAnim": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            }
+          }
+        },
+        "Mikelab_groupChangePropBy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            },
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "Mikelab_groupCreateNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "stânga",
+              "{x: 300, y: 200}": "dreapta",
+              "{x: 200, y: 200}": "centru",
+              "{x: 100, y: 100}": "stânga sus",
+              "{x: 300, y: 100}": "dreapta sus",
+              "{x: 100, y: 300}": "stânga jos",
+              "{x: 300, y: 300}": "dreapta jos",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "Aleatoriu"
+            }
+          }
+        },
+        "Mikelab_groupDestroy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            }
+          }
+        },
+        "Mikelab_groupGetProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "Mikelab_groupRemoveAllBehaviors": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            }
+          }
+        },
+        "Mikelab_groupRemoveBehaviorSimple": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            }
+          }
+        },
+        "Mikelab_groupRemoveTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            }
+          }
+        },
+        "Mikelab_groupSetProp": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            },
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "Mikelab_groupSetTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "toate"
+            }
+          }
+        },
+        "Mikelab_randomColor": {
+          "text": "culoare aleatorie"
+        },
+        "Mikelab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "oraș"
+            }
+          }
+        },
+        "Mikelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "Mikelab_showScoreboard": {
+          "options": {
+            "CORNER": {
+              "\"right\"": "dreapta",
+              "\"left\"": "stânga"
+            }
+          }
+        },
+        "Mikelab_sprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "stânga",
+              "{x: 300, y: 200}": "dreapta",
+              "{x: 200, y: 200}": "centru",
+              "{x: 100, y: 100}": "stânga sus",
+              "{x: 300, y: 100}": "dreapta sus",
+              "{x: 100, y: 300}": "stânga jos",
+              "{x: 300, y: 300}": "dreapta jos",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "Aleatoriu"
+            }
+          }
+        },
+        "Mikelab_whenKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "săgeată în sus",
+              "\"down\"": "săgeată în jos",
+              "\"left\"": "săgeată la stânga",
+              "\"right\"": "săgeată dreapta",
+              "\"w\"": "V",
+              "\"a\"": "A",
+              "\"s\"": "S",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whenKeyReleased": {
+          "options": {
+            "KEY": {
+              "\"up\"": "săgeată în sus",
+              "\"down\"": "săgeată în jos",
+              "\"left\"": "săgeată la stânga",
+              "\"right\"": "săgeată dreapta",
+              "\"w\"": "V",
+              "\"a\"": "A",
+              "\"s\"": "S",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whenMouseClicked": {
+          "text": "când se face clic cu mouse-ul"
+        },
+        "Mikelab_whileKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "săgeată în sus",
+              "\"down\"": "săgeată în jos",
+              "\"left\"": "săgeată la stânga",
+              "\"right\"": "săgeată dreapta"
+            }
+          }
+        },
+        "RyanLab_moveForward": {
+          "text": "mută înainte"
+        },
+        "RyanLab_turnLeft": {
+          "text": "ia-o la stânga"
+        },
+        "RyanLab_turnRight": {
+          "text": "ia-o la dreapta"
+        },
+        "Vector_positionCenter": {
+          "text": "centru"
+        },
+        "Vector_randomLocation": {
+          "text": "locație aleatorie"
+        },
+        "Vector_vectorNorth": {
+          "text": "nord"
+        },
+        "aalab_changePropByFlexible": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "dimensiune",
+              "\"rotation\"": "rotație",
+              "\"x\"": "poziţie x",
+              "\"y\"": "poziţie y",
+              "\"direction\"": "direcţie de mişcare"
+            }
+          }
+        },
+        "aalab_clickedOn": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "când",
+              "\"while\"": "în timp ce"
+            }
+          }
+        },
+        "aalab_keyPressed": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "când",
+              "\"while\"": "în timp ce"
+            },
+            "KEY": {
+              "\"up\"": "sus",
+              "\"down\"": "jos",
+              "\"left\"": "stânga",
+              "\"right\"": "dreapta",
+              "\"space\"": "spaţiu"
+            }
+          }
+        },
+        "aalab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "oraș"
+            }
+          }
+        },
+        "aalab_whenTouching": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "când",
+              "\"while\"": "în timp ce"
+            }
+          }
+        },
+        "binary_move": {
+          "options": {
+            "DIR": {
+              "\"up\"": "sus",
+              "\"down\"": "jos",
+              "\"left\"": "stânga",
+              "\"right\"": "dreapta"
+            }
+          }
+        },
+        "binary_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "sus",
+              "\"down\"": "jos",
+              "\"left\"": "stânga",
+              "\"right\"": "dreapta",
+              "\"space\"": "spaţiu",
+              "\"a\"": "a",
+              "\"w\"": "w",
+              "\"s\"": "s",
+              "\"d\"": "d"
+            }
+          }
+        },
+        "craft_ifPath": {
+          "options": {
+            "DIR": {
+              "'ahead'": "inainte"
+            }
+          }
+        },
+        "craft_ifStandingOn": {
+          "options": {
+            "TYPE": {
+              "'sand'": "nisip",
+              "'planksOak'": "cherestea de stejar"
+            }
+          }
+        },
+        "craft_ifStandingOnLimit": {
+          "options": {
+            "TYPE": {
+              "'sand'": "nisip"
+            }
+          }
+        },
+        "craft_moveForward": {
+          "text": "mută înainte"
+        },
+        "craft_placeTorch": {
+          "text": "plaseaza torta"
+        }
+      }
+    }
+  }
+}

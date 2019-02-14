@@ -1,0 +1,4169 @@
+{
+  "ru": {
+    "data": {
+      "script": {
+        "category": {
+          "csf_category_name": "Основы информатики",
+          "csf2_draft_category_name": "В разработке: Курсы A - F",
+          "csp_category_name": "«15 - 16» Основы информатики",
+          "cspexams_category_name": "Практический тест по основам информатики",
+          "csp17_category_name": "«16 - 17» Основы информатики",
+          "hoc_category_name": "Час Кода",
+          "math_category_name": "Математика"
+        },
+        "name": {
+          "course1": {
+            "title": "Курс 1",
+            "description": "Начните с курса 1, который создан для начинающих читать. Ученики будут разрабатывать компьютерные программы, помогающие научиться взаимодействовать друг с другом, развивать навыки решения задач и преодолевать трудности. К концу этого курса ученики создадут свои первые собственные игры или истории, которыми они смогут поделиться. Рекомендуется для дошкольников и первоклассников.",
+            "description_short": "Введение в информатику для начинающих читателей.",
+            "description_audience": "Возраст 4-6 лет",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Художник: Циклы"
+              },
+              "Artist: Sequence": {
+                "name": "Художник: Последовательность"
+              },
+              "Artist: Shapes": {
+                "name": "Художник: Фигуры"
+              },
+              "Bee: Loops": {
+                "name": "Пчела: Циклы"
+              },
+              "Bee: Sequence": {
+                "name": "Пчела: Последовательность"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Getting Loopy": {
+                "name": "Зацикливание"
+              },
+              "Going Places Safely": {
+                "name": "Безопасное путешествие"
+              },
+              "Happy Maps": {
+                "name": "Весёлые карты"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Головоломки: Научитесь перетаскивать"
+              },
+              "Maze: Debugging": {
+                "name": "Лабиринт: Отладка"
+              },
+              "Maze: Loops": {
+                "name": "Лабиринт: Циклы"
+              },
+              "Maze: Sequence": {
+                "name": "Лабиринт: Последовательность"
+              },
+              "Move it, Move it": {
+                "name": "Двигай, двигай"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Spelling Bee": {
+                "name": "Пчела"
+              },
+              "Studio: Create a Story": {
+                "name": "Лаборатория игр: Создай историю"
+              },
+              "The Big Event": {
+                "name": "Большое Событие"
+              }
+            }
+          },
+          "course2": {
+            "title": "Курс 2",
+            "description": "Начните с курса 2, если ваши ученики умеют читать,но не имеют опыта программирования. В рамках этого курса ученики будут создавать программы для решения задач и разрабатывать интерактивные игры или истории, которыми они смогут поделиться с другими. Рекомендуется для 2-5 классов.",
+            "description_short": "Введение в информатику для тех, кто умеет читать.",
+            "description_audience": "Возраст 6+ (необходимо уметь читать)",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Художник: Отладка"
+              },
+              "Artist: Loops": {
+                "name": "Художник: Циклы"
+              },
+              "Artist: Nested Loops": {
+                "name": "Художник: Вложенные циклы"
+              },
+              "Artist: Sequence": {
+                "name": "Художник: Последовательность"
+              },
+              "Bee: Conditionals": {
+                "name": "Пчела: Условные команды"
+              },
+              "Bee: Debugging": {
+                "name": "Пчела: Отладка"
+              },
+              "Bee: Loops": {
+                "name": "Пчела: Циклы"
+              },
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Flappy": {
+                "name": "Порхающий код"
+              },
+              "Getting Loopy": {
+                "name": "Зацикливание"
+              },
+              "Graph Paper Programming": {
+                "name": "Программирование на бумаге в клеточку"
+              },
+              "Maze: Loops": {
+                "name": "Лабиринт: Циклы"
+              },
+              "Maze: Sequence": {
+                "name": "Лабиринт: Последовательность"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реальные алгоритмы: Бумажные самолетики"
+              },
+              "Relay programming": {
+                "name": "Эстафетное программирование"
+              },
+              "Studio: Create a Story": {
+                "name": "Лаборатория игр: Создай историю"
+              },
+              "The Big Event": {
+                "name": "Большое Событие"
+              },
+              "Your Digital Footprint": {
+                "name": "Твой цифровой след"
+              }
+            }
+          },
+          "course3": {
+            "title": "Курс 3",
+            "description": "Курс 3 разработан для учеников, прошедших Курс 2. Ученики будут решать более сложные задачи и глубже изучать темы предыдущего курса. В конце занятий, ученики могут создать интерактивные истории и игры, и поделиться ими с другими. Рекомендовано для 4-5 классов.",
+            "description_short": "Курс 3 является продолжением курса 2.",
+            "description_audience": "Возраст 8-18 лет",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              },
+              "Artist: Functions": {
+                "name": "Художник: Функции"
+              },
+              "Artist: Nested Loops": {
+                "name": "Художник: Вложенные циклы"
+              },
+              "Artist: Patterns": {
+                "name": "Художник: шаблоны"
+              },
+              "Bee: Conditionals": {
+                "name": "Пчела: Условные команды"
+              },
+              "Bee: Debugging": {
+                "name": "Пчела: Отладка"
+              },
+              "Bee: Functions": {
+                "name": "Пчела: Функции"
+              },
+              "Bee: Nested Loops": {
+                "name": "Пчела: Вложенные циклы"
+              },
+              "Bounce": {
+                "name": "Прыжок"
+              },
+              "Computational Thinking": {
+                "name": "Вычислительное мышление"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              },
+              "Dice Race": {
+                "name": "Гонки кубиков"
+              },
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Farmer: While Loops": {
+                "name": "Фермер: Циклы с проверкой условия"
+              },
+              "Functional Suncatchers": {
+                "name": "Функциональные витражи"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Maze": {
+                "name": "Лабиринт"
+              },
+              "Maze: Conditionals": {
+                "name": "Лабиринт: Условные команды"
+              },
+              "Songwriting": {
+                "name": "Написание песен"
+              },
+              "Studio: Create a Game": {
+                "name": "Лаборатория игр: создай игру"
+              },
+              "Studio: Create a Story": {
+                "name": "Лаборатория игр: Создай историю"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Лаборатория игр",
+            "description": "Создай историю или игру с лабораторией игр!",
+            "description_short": "Создай историю или игру с лабораторией игр!",
+            "stages": {
+              "Play Lab": {
+                "name": "Лаборатория игр"
+              }
+            }
+          },
+          "artist": {
+            "title": "Художник",
+            "description": "Рисуйте картины и узоры вместе с художником!",
+            "description_short": "Рисуйте картины и узоры вместе с художником!",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Классический лабиринт",
+            "description": "Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies и белкой Скратом из Ледникового периода!",
+            "description_short": "Постигай азы программирования с забавными персонажами!",
+            "stages": {
+              "Maze": {
+                "name": "Лабиринт"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Программируй с Анной и Эльзой",
+            "description": "Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда. Вы будете кататься на коньках и рисовать на льду снежинки и узоры, создавать зимнюю страну чудес и делиться этим с друзьями.",
+            "description_short": "Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда.",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "course4": {
+            "title": "Курс 4",
+            "description": "Курс 4 разработан для учеников, которые уже освоили курсы 2 и 3. Ученики глубже изучат темы  программирования, с которыми познакомились в ходе предыдущих курсов, разрабатывая гибкие способы решения более сложных задач. К концу курса ученики будут создавать интерактивные истории и игры, которыми они смогут поделиться с другими. Рекомендуется для 4-8 классов.",
+            "description_short": "Для изучения курса 4, ученики должны предварительно пройти курсы 2 и 3.",
+            "description_audience": "Возраст 10-18 лет",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              },
+              "Artist Binary": {
+                "name": "Художник: двоичная система"
+              },
+              "Artist: For Loops": {
+                "name": "Художник: Циклы с параметром"
+              },
+              "Artist: Functions": {
+                "name": "Художник: Функции"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Художник: Функции с параметрами"
+              },
+              "Artist: Variables": {
+                "name": "Художник: Переменные"
+              },
+              "Bee: For Loops": {
+                "name": "Пчела: Циклы с параметром"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Пчела: Функции с параметрами"
+              },
+              "Extreme Challenge - Comprehensive": {
+                "name": "Невозможное задание — комплекс"
+              },
+              "Maze and Bee": {
+                "name": "Лабиринт и пчела"
+              },
+              "Play Lab: For Loops": {
+                "name": "Лаборатория игр: Циклы с параметром"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Лаборатория игр: Функции с параметрами"
+              },
+              "Play Lab: Variables": {
+                "name": "Лаборатория игр: Переменные"
+              },
+              "Super Challenge - For Loops": {
+                "name": "Супер задание — циклы со счетчиком"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Супер задание — функции и параметры"
+              },
+              "Super Challenge - Variables": {
+                "name": "Супериспытание — переменные"
+              },
+              "Unplugged: Binary": {
+                "name": "Урок без компьютера: Двоичный"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Урок без компьютера: Конвертные переменные"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Урок без компьютера: Игры с циклами"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Урок без компьютера: игра «Пропуски»"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Урок без компьютера: Написание песен с параметрами"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Урок без компьютера: Танграмы"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Знания, необходимые для курса 4",
+            "description": "Краткое введение для учеников, которые не проходили курсы 2 и 3.",
+            "description_short": "Краткое введение для учеников, которые не проходили курсы 2 и 3.",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Художник: Функции"
+              },
+              "Artist: Loops": {
+                "name": "Художник: Циклы"
+              },
+              "Artist: Nested Loops": {
+                "name": "Художник: Вложенные циклы"
+              },
+              "Artist: Sequence": {
+                "name": "Художник: Последовательность"
+              },
+              "Bee: Conditionals": {
+                "name": "Пчела: Условные команды"
+              },
+              "Bee: Debugging": {
+                "name": "Пчела: Отладка"
+              },
+              "Bee: Nested Loops": {
+                "name": "Пчела: Вложенные циклы"
+              },
+              "Farmer: While Loops": {
+                "name": "Фермер: Циклы с проверкой условия"
+              },
+              "Maze: Sequence": {
+                "name": "Лабиринт: Последовательность"
+              }
+            }
+          },
+          "usability": {
+            "title": "Тестирование практичности",
+            "description": "Подборка из курса 4 для тестирования практичности.",
+            "stages": {
+              "Binary": {
+                "name": "Двоичный"
+              },
+              "For Loops": {
+                "name": "Циклы с параметром"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Процедуры и процедуры с параметрами"
+              },
+              "Intro": {
+                "name": "Введение"
+              },
+              "Variables": {
+                "name": "переменные"
+              }
+            }
+          },
+          "algebra": {
+            "title": "Информатика в алгебре",
+            "description": "Изучайте функциональное программирование, используя алгебру",
+            "description_short": "Изучайте функциональное программирование, используя алгебру",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Определение переменных и их замена"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Оценка блоков и арифметические выражения"
+              },
+              "Eval: Boolean Operators": {
+                "name": "Логические операторы"
+              },
+              "Eval: Conditionals": {
+                "name": "Условные команды"
+              },
+              "Eval: Defining Functions": {
+                "name": "Составные функции"
+              },
+              "Eval: Functions": {
+                "name": "Решение проблем с использованием рецепта дизайна"
+              },
+              "Eval: Strings and Images": {
+                "name": "Строки и картинки"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Текстовые соглашения"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Большая игра - Анимация"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Большая игра - Логические переменные"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Большая игра - Обнаружение коллизий"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Большая игра - Переменные"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Урок без компьютера: Условные выражения и сложные функции"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Урок без компьютера: Создание рецепта"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Урок без компьютера: Видеоигры и координатные плоскости"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Лаборатория игр Disney Infinity",
+            "description": "Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.",
+            "description_short": "Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.",
+            "stages": {
+              "Infinity": {
+                "name": "Бесконечность"
+              }
+            }
+          },
+          "algebrademo": {
+            "title": "Демонстрация алгебры",
+            "description": "Несколько задач, демонстрирующие среду и язык программирования, используемый в Code.org Информатика в Алгебре",
+            "description_short": "Несколько задач, демонстрирующие среду и язык программирования, используемый в Code.org Информатика в Алгебре",
+            "stages": {
+              "Defining Simple Functions": {
+                "name": "Определение простых функций"
+              },
+              "Defining Variables": {
+                "name": "Определение переменных"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Making Pictures": {
+                "name": "Создание изображений"
+              },
+              "The Design Recipe": {
+                "name": "Создание рецепта"
+              }
+            }
+          },
+          "K5PD": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Next Steps": {
+                "name": "Следующие шаги"
+              },
+              "Programming Concept: Conditionals": {
+                "name": "Понятие программирования: условия"
+              },
+              "Programming Concept: Events": {
+                "name": "Понятие программирования: события"
+              },
+              "Programming Concept: Functions": {
+                "name": "Понятие программирования: функции"
+              },
+              "Programming Concept: Loops": {
+                "name": "Понятие программирования: циклы"
+              },
+              "Reflection": {
+                "name": "Рефлексия"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              },
+              "Unplugged lessons": {
+                "name": "Уроки без компьютера"
+              },
+              "Writing computer programs": {
+                "name": "Написание компьютерных программ"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Интернет-симулятор",
+            "description": "Узнайте о том, как работает Интернет",
+            "description_short": "Узнайте о том, как работает Интернет",
+            "stages": {
+              "Broadcasting messages": {
+                "name": "Широковещательные сообщения"
+              },
+              "Overview and Setup Instructions": {
+                "name": "Обзор и инструкция по установке"
+              },
+              "Packets and Reliability": {
+                "name": "Пакеты и надёжность"
+              },
+              "Routers and addresses": {
+                "name": "Маршрутизаторы и адреса"
+              }
+            }
+          },
+          "pixelation": {
+            "title": "Пикселизация",
+            "description": "Создавайте картинки при помощи битов и байтов.",
+            "description_short": "Создавайте картинки при помощи битов и байтов."
+          },
+          "20-hour": {
+            "title": "Ускоренное введение в курс информатики",
+            "description": "Этот 20-часовой курс охватывает основы информатики и программирования в курсах 2-4. Курс предназначен для учеников в возрасте 10-18 лет. Проверьте свое знание курсов 2-4 для более глубокого освоения!",
+            "description_short": "Этот 20-часовой курс охватывает основы информатики и программирования в курсах 2-4.",
+            "description_audience": "Возраст 10-18 лет",
+            "stages": {
+              "Abstraction": {
+                "name": "Абстракция"
+              },
+              "Algorithms": {
+                "name": "Алгоритмы"
+              },
+              "Computational Thinking": {
+                "name": "Вычислительное мышление"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Functions": {
+                "name": "функции"
+              },
+              "Graph Paper Programming": {
+                "name": "Программирование на бумаге в клеточку"
+              },
+              "Introduction to Computer Science": {
+                "name": "Введение в Информатику"
+              },
+              "Relay Programming": {
+                "name": "Эстафетное программирование"
+              },
+              "Song Writing": {
+                "name": "Написание песни"
+              },
+              "The Artist": {
+                "name": "Художник"
+              },
+              "The Artist 2": {
+                "name": "Художник 2"
+              },
+              "The Artist 3": {
+                "name": "Художник 3"
+              },
+              "The Artist 4": {
+                "name": "Художник 4"
+              },
+              "The Artist 5": {
+                "name": "Художник 5"
+              },
+              "The Farmer": {
+                "name": "Фермер"
+              },
+              "The Farmer 2": {
+                "name": "Фермер 2"
+              },
+              "The Farmer 3": {
+                "name": "Фермер 3"
+              },
+              "The Internet": {
+                "name": "Интернет"
+              },
+              "The Maze": {
+                "name": "Лабиринт"
+              },
+              "Wrap-up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Редактирование кода",
+            "description": "Редактирование кода",
+            "description_short": "Редактирование кода",
+            "stages": {
+              "Applab": {
+                "name": "Лаборатория приложений"
+              },
+              "Hoc2015 Blockly": {
+                "name": "Час Кода 2015 Блокли"
+              },
+              "Play Lab": {
+                "name": "Лаборатория игр"
+              },
+              "The Artist": {
+                "name": "Художник"
+              },
+              "The Maze": {
+                "name": "Лабиринт"
+              }
+            }
+          },
+          "events": {
+            "title": "События",
+            "description": "События",
+            "description_short": "События",
+            "stages": {
+              "Bounce": {
+                "name": "Прыжок"
+              },
+              "Calc": {
+                "name": "Калькулятор"
+              },
+              "Eval": {
+                "name": "Вычисление"
+              },
+              "Studio": {
+                "name": "Студия"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Порхающий код",
+            "description": "Хочешь написать свою игру меньше чем за 10 минут? Пройди наш урок «Порхающий код»!",
+            "description_short": "Напиши собственную игру Flappy меньше чем за 10 минут!",
+            "stages": {
+              "Flappy Code": {
+                "name": "Порхающий код"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Головоломки",
+            "description": "Попробуйте наш учебник по пазл",
+            "description_short": "Попробуйте наш учебник по пазл",
+            "stages": {
+              "Jigsaw": {
+                "name": "Головоломки"
+              }
+            }
+          },
+          "step": {
+            "title": "шаг",
+            "description": "Пошаговое обучение",
+            "description_short": "Пошаговое обучение",
+            "stages": {
+              "Step": {
+                "name": "шаг"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Час кода 2013",
+            "description": "Постигай азы программирования с персонажами Angry Birds и Plants vs. Zombies!",
+            "description_short": "Постигай азы программирования с забавными персонажами!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Час кода 2013"
+              }
+            }
+          },
+          "CodeStudioPuzzleChallenge": {
+            "stages": {
+              "Puzzles": {
+                "name": "Головоломки"
+              }
+            }
+          },
+          "Tutorial Video - Code Studio Puzzle Challenge": {
+            "stages": {
+              "Puzzles": {
+                "name": "Головоломки"
+              }
+            }
+          },
+          "cspunit1": {
+            "description_short": "Программирование",
+            "stages": {
+              "Binary Numbers": {
+                "name": "Двоичные числа"
+              },
+              "Bytes and File Sizes": {
+                "name": "Байты и размеры файлов"
+              },
+              "Encode a Complex Thing": {
+                "name": "Навык кодирования"
+              },
+              "Encoding B&W Images": {
+                "name": "Кодирование чёрно-белых изображений"
+              },
+              "Encoding Color Images": {
+                "name": "Кодирование цветных изображений"
+              },
+              "Encoding Numbers in the Real World": {
+                "name": "Кодирование чисел в реальном мире"
+              },
+              "Encoding and Sending Text": {
+                "name": "Кодирование и отправка текста"
+              },
+              "Lossy Compression and File Formats": {
+                "name": "Сжатие с потерями и форматы файлов"
+              },
+              "Sending Binary Messages": {
+                "name": "Отправка двоичных сообщений"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Отправка двоичных сообщений с интернет симулятором"
+              },
+              "Sending Bits in the Real World": {
+                "name": "Отправка битов в реальном мире"
+              },
+              "Sending Complex Messages": {
+                "name": "Отправка сложных сообщений"
+              },
+              "Sending Formatted Text": {
+                "name": "Отправка форматированного текста"
+              },
+              "Sending Numbers": {
+                "name": "Отправка чисел"
+              }
+            }
+          },
+          "algebraPD": {
+            "stages": {
+              "Course Overview": {
+                "name": "Обзор курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              }
+            }
+          },
+          "algPDmiami": {
+            "stages": {
+              "Booleans": {
+                "name": "Логические выражения"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Strings and Images": {
+                "name": "Строки и картинки"
+              },
+              "Your Game - Animation": {
+                "name": "Ваша игра - анимация"
+              },
+              "Your Game - Booleans": {
+                "name": "Ваша игра - логические переменные"
+              },
+              "Your Game - Collision Detection": {
+                "name": "Ваша игра - обнаружение коллизий"
+              },
+              "Your Game - Player Movement": {
+                "name": "Ваша игра - движение игрока"
+              }
+            }
+          },
+          "CSPPD": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              }
+            }
+          },
+          "CSPLessonSamples": {
+            "stages": {
+              "Lesson 14": {
+                "name": "Урок 14"
+              },
+              "Lesson 15": {
+                "name": "Урок 15"
+              }
+            }
+          },
+          "ECSPD": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              }
+            }
+          },
+          "sciencePD": {
+            "stages": {
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Введение в сложные адаптивные системы"
+              },
+              "Introduction to Computational Science": {
+                "name": "Введение в вычислительные науки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Using Computer Models in Science": {
+                "name": "Использование компьютерных моделей в науке"
+              },
+              "Using Models in the Classroom": {
+                "name": "Использование моделей в классе"
+              },
+              "What to Expect": {
+                "name": "Чего ожидать"
+              }
+            }
+          },
+          "rbo-reference": {
+            "stages": {
+              "reference": {
+                "name": "ссылка"
+              }
+            }
+          },
+          "cspunit3": {
+            "description_short": "Программирование",
+            "stages": {
+              "APIs and Function Parameters": {
+                "name": "API и параметры функции"
+              },
+              "Compound Conditional Logic": {
+                "name": "Составная условная логика"
+              },
+              "Controlling Memory with Variables": {
+                "name": "Контролирование памяти с помощью переменных"
+              },
+              "Creating Functions": {
+                "name": "Создание функций"
+              },
+              "Creating functions with Parameters": {
+                "name": "Создание функций с параметрами"
+              },
+              "Functions with Return Values": {
+                "name": "Функции с возвращаемыми значениями"
+              },
+              "Introducing Design Mode": {
+                "name": "Введение в дизайн режим"
+              },
+              "Introduction to Arrays": {
+                "name": "Введение в массивы"
+              },
+              "Introduction to Conditional Logic": {
+                "name": "Введение в условную логику"
+              },
+              "Processing Arrays": {
+                "name": "Обработка массивов"
+              },
+              "The Need For Programming Languages": {
+                "name": "Необходимость языков программирования"
+              },
+              "User Input and Strings": {
+                "name": "Пользовательский ввод и строки"
+              },
+              "Using Simple Commands": {
+                "name": "Использование простых команд"
+              },
+              "Using Variables in Apps": {
+                "name": "Использование переменных в приложениях"
+              },
+              "While Loops": {
+                "name": "Циклы «пока»"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Course Overview": {
+                "name": "Обзор курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Next Steps": {
+                "name": "Следующие шаги"
+              },
+              "Strings and Images": {
+                "name": "Строки и картинки"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              },
+              "The Big Game": {
+                "name": "Большая игра"
+              },
+              "The Design Recipe": {
+                "name": "Создание рецепта"
+              }
+            }
+          },
+          "ECSPD-NexTech": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              }
+            }
+          },
+          "ECSPD-iZone": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "stages": {
+              "Course Overview": {
+                "name": "Обзор курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "stages": {
+              "Course Overview": {
+                "name": "Обзор курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              }
+            }
+          },
+          "sciencePD-NexTech": {
+            "stages": {
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Введение в сложные адаптивные системы"
+              },
+              "Introduction to Computational Science": {
+                "name": "Введение в вычислительные науки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Using Computer Models in Science": {
+                "name": "Использование компьютерных моделей в науке"
+              },
+              "Using Models in the Classroom": {
+                "name": "Использование моделей в классе"
+              },
+              "What to Expect": {
+                "name": "Чего ожидать"
+              }
+            }
+          },
+          "sciencePD-iZone": {
+            "stages": {
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Введение в сложные адаптивные системы"
+              },
+              "Introduction to Computational Science": {
+                "name": "Введение в вычислительные науки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Using Computer Models in Science": {
+                "name": "Использование компьютерных моделей в науке"
+              },
+              "Using Models in the Classroom": {
+                "name": "Использование моделей в классе"
+              },
+              "What to Expect": {
+                "name": "Чего ожидать"
+              }
+            }
+          },
+          "sciencePD2": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "sciencePD3": {
+            "stages": {
+              "Welcome Back!": {
+                "name": "Добро пожаловать!"
+              }
+            }
+          },
+          "cspunit2": {
+            "description_short": "Программирование",
+            "stages": {
+              "DNS in the Real World": {
+                "name": "DNS в реальном мире"
+              },
+              "Encryption Algorithms": {
+                "name": "Ключи и пароли"
+              },
+              "Public Key Crypto": {
+                "name": "Криптография с открытым ключом"
+              },
+              "Routers and Redundancy": {
+                "name": "Маршрутизаторы и резервирование"
+              },
+              "Tell Me a Secret - Encrypting Text": {
+                "name": "Необходимость шифрования"
+              },
+              "The Internet": {
+                "name": "Интернет предназначен для всех"
+              },
+              "The Need for Addressing": {
+                "name": "Необходимость адресации"
+              },
+              "The Need for DNS": {
+                "name": "Необходимость DNS"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "Big Game - Animation": {
+                "name": "Большая игра - Анимация"
+              },
+              "Big Game - Booleans": {
+                "name": "Большая игра - логические переменные"
+              },
+              "Big Game - Collision Detection": {
+                "name": "Большая игра - обнаружение коллизий"
+              },
+              "Big Game - Player Movement": {
+                "name": "Большая игра - движение игрока"
+              },
+              "Big Game - Variables": {
+                "name": "Большая игра - переменные"
+              },
+              "Booleans": {
+                "name": "Логические выражения"
+              },
+              "Defining Variables": {
+                "name": "Определение переменных"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Free Play": {
+                "name": "Свободная игра"
+              },
+              "Strings and Images": {
+                "name": "Строки и картинки"
+              },
+              "The Design Recipe": {
+                "name": "Создание рецепта"
+              }
+            }
+          },
+          "allthethings": {
+            "stages": {
+              "Anonymous student survey": {
+                "name": "Анонимный опрос учащихся"
+              },
+              "Anonymous student survey 2": {
+                "name": "Анонимный опрос учащихся 2"
+              },
+              "AppLab": {
+                "name": "Лаборатория приложений"
+              },
+              "Artist": {
+                "name": "Художник"
+              },
+              "Bee": {
+                "name": "Пчела"
+              },
+              "Bounce": {
+                "name": "Прыжок"
+              },
+              "Farmer": {
+                "name": "Фермер"
+              },
+              "Flappy": {
+                "name": "Порхающий код"
+              },
+              "Jigsaw": {
+                "name": "Головоломки"
+              },
+              "Match": {
+                "name": "Соответствие"
+              },
+              "Maze": {
+                "name": "Лабиринт"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Мульти"
+              },
+              "Pixelation": {
+                "name": "Пикселизация"
+              },
+              "Public Key Cryptography": {
+                "name": "Криптография с открытым ключом"
+              },
+              "Star wars": {
+                "name": "Звёздные войны"
+              },
+              "Studio": {
+                "name": "Студия"
+              },
+              "Web Lab": {
+                "name": "Веб-лаборатория"
+              },
+              "Curriculum Reference": {
+                "name": "Ссылки на учебный план"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "Booleans": {
+                "name": "Логические выражения"
+              },
+              "Course Overview": {
+                "name": "Обзор курса"
+              },
+              "Defining Functions": {
+                "name": "Определение процедур"
+              },
+              "Defining Variables": {
+                "name": "Определение переменных"
+              },
+              "Eval: Conditionals": {
+                "name": "Анализ: Условные команды"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Next Steps": {
+                "name": "Следующие шаги"
+              },
+              "Strings and Images": {
+                "name": "Строки и картинки"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              },
+              "Writing Contracts": {
+                "name": "Текстовые соглашения"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "Лаборатория приложений"
+              },
+              "Internet Simulator": {
+                "name": "Интернет-симулятор"
+              },
+              "Text Compression Lesson": {
+                "name": "Урок по сжатию текста"
+              },
+              "Text Compression Widget": {
+                "name": "Виджет сжатия текста"
+              },
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              }
+            }
+          },
+          "K5-OnlinePD": {
+            "stages": {
+              "Computer Science Fundamentals": {
+                "name": "Основы информатики"
+              },
+              "Getting Started": {
+                "name": "Приступить к работе"
+              },
+              "Mastering the Basics: Conditionals": {
+                "name": "Освоение основ: условные операторы"
+              },
+              "Mastering the Basics: Events": {
+                "name": "Освоение основ: события"
+              },
+              "Mastering the Basics: Functions": {
+                "name": "Освоение основ: функции"
+              },
+              "Mastering the Basics: Loops": {
+                "name": "Освоение основ: циклы"
+              },
+              "Mastering the Basics: Sequencing": {
+                "name": "Освоение основ: последовательности"
+              },
+              "Next Steps": {
+                "name": "Следующие шаги"
+              },
+              "Planning": {
+                "name": "Планирование"
+              }
+            }
+          },
+          "ECSPD2": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "algebraPD2": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              },
+              "The Design Recipe": {
+                "name": "Создание рецепта"
+              },
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "science-PD2": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "Equity-OnlinePD": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              },
+              "Next Steps": {
+                "name": "Следующие шаги"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "description": "Этап 2 онлайн: Смешанное летнее обучение",
+            "description_short": "Этап 2 онлайн: Смешанное летнее обучение",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "CSPPD2": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              },
+              "Welcome to the Course!": {
+                "name": "Добро пожаловать на курс!"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Getting Loopy": {
+                "name": "Зацикливание"
+              },
+              "Graph Paper Programming": {
+                "name": "Программирование на бумаге в клеточку"
+              },
+              "Happy Maps": {
+                "name": "Весёлые карты"
+              },
+              "Move it, Move it": {
+                "name": "Двигай, двигай"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Songwriting": {
+                "name": "Написание песен"
+              },
+              "The Big Event": {
+                "name": "Большое Событие"
+              }
+            }
+          },
+          "sciencePD3_pre1": {
+            "stages": {
+              "Welcome Back!": {
+                "name": "Добро пожаловать!"
+              }
+            }
+          },
+          "ECSPD3-Unit2": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ECSPD3-Unit3": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ECSPD3-Unit4": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ECSPD3-Unit5": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ECSPD3-Unit6": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "algebraPD3b": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              },
+              "Teaching Support - Lessons 1-3": {
+                "name": "Помощь в обучении - Уроки 1-3"
+              },
+              "Teaching Support - Lessons 13-16": {
+                "name": "Помощь в обучении - Уроки 13-16"
+              },
+              "Teaching Support - Lessons 17-20": {
+                "name": "Помощь в обучении - Уроки 17-20"
+              },
+              "Teaching Support - Lessons 4-7": {
+                "name": "Помощь в обучении - Уроки 4-7"
+              },
+              "Teaching Support - Lessons 8-12": {
+                "name": "Помощь в обучении - Уроки 8-12"
+              }
+            }
+          },
+          "CSPPD3-Unit2": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "Special Fun": {
+            "description_audience": "Возраст 10-18 лет"
+          },
+          "SpecialSeries": {
+            "description_audience": "Возраст 10-18 лет",
+            "stages": {
+              "Spring 2016": {
+                "name": "Весна 2016"
+              }
+            }
+          },
+          "iceage": {
+            "title": "Лаборатория игр Ледниковый период",
+            "description": "Создай сказку или игру с игровой лабораторией Ледниковый период!",
+            "description_short": "Создай сказку или игру с игровой лабораторией Ледниковый период!",
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              }
+            }
+          },
+          "CSPPD3-Unit3": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "cspunit3temp": {
+            "description_short": "Программирование",
+            "stages": {
+              "Functions with Return Values": {
+                "name": "Функции с возвращаемыми значениями"
+              },
+              "Introduction to Arrays": {
+                "name": "Введение в массивы"
+              },
+              "Processing Arrays": {
+                "name": "Обработка массивов"
+              },
+              "While Loops": {
+                "name": "Циклы «пока»"
+              }
+            }
+          },
+          "gumball": {
+            "title": "Лаборатория игр Гамбола",
+            "description": "Создай сказку или игру с лабораторией игр Гамбола!",
+            "description_short": "Создай сказку или игру с лабораторией игр Гамбола!",
+            "stages": {
+              "Gumball Play Lab": {
+                "name": "Лаборатория игр Гамбола"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Звёздные войны: Создайте галактику, используя код",
+            "description": "Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.",
+            "description_short": "Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Час кода 2015"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Звёздные войны: Создайте галактику, используя код",
+            "description": "Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.",
+            "description_short": "Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Час кода 2015"
+              }
+            }
+          },
+          "mc": {
+            "title": "Час кода с Minecraft",
+            "description": "Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях в мире Minecraft",
+            "description_short": "Изучайте мир Minecraft используя программный код",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Час кода 2015"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "cspunit5": {
+            "description_short": "Программирование"
+          },
+          "cspunit4": {
+            "description_short": "Программирование",
+            "stages": {
+              "Intro to Data": {
+                "name": "Введение в данные"
+              },
+              "What is Big Data?": {
+                "name": "Что такое Большие Данные?"
+              }
+            }
+          },
+          "CSPPD3-Unit4": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "cspunit6draft": {
+            "stages": {
+              "Final Project": {
+                "name": "Финальный проект"
+              },
+              "Importing and Exporting Data": {
+                "name": "Импорт и экспорт данных"
+              },
+              "Visualizing Data": {
+                "name": "Визуализация данных"
+              }
+            }
+          },
+          "CSPPD3-Unit5": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "cspunit6": {
+            "stages": {
+              "Final Project": {
+                "name": "Финальный проект"
+              },
+              "Importing and Exporting Data": {
+                "name": "Импорт и экспорт данных"
+              },
+              "Visualizing Data": {
+                "name": "Визуализация данных"
+              }
+            }
+          },
+          "AlgebraA": {
+            "description": "Изучайте функциональное программирование, используя алгебру",
+            "description_short": "Изучайте функциональное программирование, используя алгебру",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Расчет: Определение переменных"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Расчет: Блоки оценки"
+              },
+              "Eval: Strings and Images": {
+                "name": "Анализ: Строки и картинки"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Анализ: Написание контрактов"
+              },
+              "Unplugged: Contracts": {
+                "name": "Урок без компьютера: Контракты"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Урок без компьютера: Создание рецепта"
+              }
+            }
+          },
+          "AlgebraB": {
+            "title": "Информатика в алгебре",
+            "description": "Изучайте функциональное программирование, используя алгебру",
+            "description_short": "Изучайте функциональное программирование, используя алгебру",
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Анализ: Логические операторы"
+              },
+              "Eval: Conditionals": {
+                "name": "Анализ: Условные команды"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Лаборатория игр: анимация (большая игра)"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Лаборатория игр: логические выражения (большая игра)"
+              },
+              "Play Lab: Booleans": {
+                "name": "Лаборатория игр: Логические выражения"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Лаборатория игр: обнаружение конфликтов (большая игра)"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Лаборатория игр: определение переменных (большая игра)"
+              },
+              "Unplugged: Booleans": {
+                "name": "Урок без компьютера: Логические выражения"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Урок без компьютера: Обнаружение столкновений и формула расстояния"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Урок без компьютера: Условные выражения и сложные функции"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Урок без компьютера: Видеоигры и координатные плоскости"
+              }
+            }
+          },
+          "algebraPD1": {
+            "title": "Информатика в Алгебре - Часть 1",
+            "stages": {
+              "Course Overview": {
+                "name": "Обзор курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              }
+            }
+          },
+          "algebraPD3c": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "csp1-2017": {
+            "stages": {
+              "Binary Numbers": {
+                "name": "Двоичные числа"
+              },
+              "Routers and Redundancy": {
+                "name": "Маршрутизаторы и резервирование"
+              },
+              "Sending Binary Messages": {
+                "name": "Отправка двоичных сообщений"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Отправка двоичных сообщений с интернет симулятором"
+              },
+              "Sending Numbers": {
+                "name": "Отправка чисел"
+              },
+              "The Internet": {
+                "name": "Интернет"
+              },
+              "The Need for Addressing": {
+                "name": "Необходимость адресации"
+              },
+              "The Need for DNS": {
+                "name": "Необходимость DNS"
+              },
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "csp2-2017": {
+            "stages": {
+              "Bytes and File Sizes": {
+                "name": "Байты и размеры файлов"
+              },
+              "Encoding B&W Images": {
+                "name": "Кодирование чёрно-белых изображений"
+              },
+              "Encoding Color Images": {
+                "name": "Кодирование цветных изображений"
+              },
+              "Lossy Compression and File Formats": {
+                "name": "Сжатие с потерями и форматы файлов"
+              },
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "csp3-2017": {
+            "description_short": "Программирование",
+            "stages": {
+              "APIs and Function Parameters": {
+                "name": "API и параметры функции"
+              },
+              "Creating Functions": {
+                "name": "Создание функций"
+              },
+              "The Need For Programming Languages": {
+                "name": "Необходимость языков программирования"
+              },
+              "Using Simple Commands": {
+                "name": "Использование простых команд"
+              },
+              "Creating Functions with Parameters": {
+                "name": "Создание функций с параметрами"
+              },
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "csp4-2017": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Простое шифрование"
+              },
+              "What is Big Data?": {
+                "name": "Что такое Большие Данные?"
+              },
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "Compound Conditional Logic": {
+                "name": "Составная условная логика"
+              },
+              "Controlling Memory with Variables": {
+                "name": "Контролирование памяти с помощью переменных"
+              },
+              "Functions with Return Values": {
+                "name": "Функции с возвращаемыми значениями"
+              },
+              "Introducing Design Mode": {
+                "name": "Введение в дизайн режим"
+              },
+              "Introduction to Arrays": {
+                "name": "Введение в массивы"
+              },
+              "Introduction to Conditional Logic": {
+                "name": "Введение в условную логику"
+              },
+              "Processing Arrays": {
+                "name": "Обработка массивов"
+              },
+              "User Input and Strings": {
+                "name": "Пользовательский ввод и строки"
+              },
+              "Using Variables in Apps": {
+                "name": "Использование переменных в приложениях"
+              },
+              "While Loops": {
+                "name": "Циклы «пока»"
+              },
+              "If statements": {
+                "name": "Операторы Если"
+              },
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "description_short": "Программирование",
+            "stages": {
+              "Functions": {
+                "name": "функции"
+              },
+              "Velocity": {
+                "name": "Скорость"
+              }
+            }
+          },
+          "2016_sciencePD_phase1": {
+            "stages": {
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Введение в сложные адаптивные системы"
+              },
+              "Introduction to Computational Science": {
+                "name": "Введение в вычислительные науки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Using Computer Models in Science": {
+                "name": "Использование компьютерных моделей в науке"
+              },
+              "Using Models in the Classroom": {
+                "name": "Использование моделей в классе"
+              },
+              "What to Expect": {
+                "name": "Чего ожидать"
+              }
+            }
+          },
+          "TEMP CSD Unit 3": {
+            "description_short": "Программирование"
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "Возраст 8-18 лет"
+          },
+          "algebraFacilitator": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Блоки оценки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              }
+            }
+          },
+          "sciencePD1": {
+            "stages": {
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Введение в сложные адаптивные системы"
+              },
+              "Introduction to Computational Science": {
+                "name": "Введение в вычислительные науки"
+              },
+              "Introduction to PD": {
+                "name": "Введение в профессиональные разработки"
+              },
+              "Using Computer Models in Science": {
+                "name": "Использование компьютерных моделей в науке"
+              },
+              "Using Models in the Classroom": {
+                "name": "Использование моделей в классе"
+              },
+              "What to Expect": {
+                "name": "Чего ожидать"
+              }
+            }
+          },
+          "cspunit1-support": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Отправка двоичных сообщений"
+              }
+            }
+          },
+          "allthehiddenthings": {
+            "stages": {
+              "Game Lab": {
+                "name": "Игровая лаборатория"
+              }
+            }
+          },
+          "CSDU2-Draft": {
+            "stages": {
+              "Introduction to HTML": {
+                "name": "Введение в HTML"
+              },
+              "Peer Review": {
+                "name": "Рецензирование"
+              }
+            }
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Художник: Процедуры"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "Возраст 8-18 лет"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Пчела: Условные команды"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "События"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Головоломки: Научитесь перетаскивать"
+              },
+              "Loops": {
+                "name": "Циклы"
+              },
+              "Loops Intro": {
+                "name": "Введение в циклы"
+              },
+              "Programming": {
+                "name": "Программирование"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Songwriting": {
+                "name": "Написание песен"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "События"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Головоломки: Научитесь перетаскивать"
+              },
+              "Loops": {
+                "name": "Циклы"
+              },
+              "Loops Intro": {
+                "name": "Введение в циклы"
+              },
+              "Programming": {
+                "name": "Программирование"
+              },
+              "Unspotted Bugs": {
+                "name": "Незамеченные Баги"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Художник: Циклы с параметром"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Художник: Функции с параметрами"
+              },
+              "Artist: Variables": {
+                "name": "Художник: Переменные"
+              },
+              "Bee: For Loops": {
+                "name": "Пчела: Циклы с параметром"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Пчела: Функции с параметрами"
+              },
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Play Lab: Variables": {
+                "name": "Лаборатория игр: Переменные"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Урок без компьютера: Конвертные переменные"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Урок без компьютера: Игры с циклами"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Урок без компьютера: Написание песен с параметрами"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "ecs-unit2": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ecs-unit3": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ecs-unit4": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ecs-unit5": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "ecs-unit6": {
+            "stages": {
+              "Getting Started": {
+                "name": "Приступить к работе"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Художник: Вложенные циклы"
+              },
+              "Bee Debugging": {
+                "name": "Пчела: Отладка"
+              },
+              "Bounce": {
+                "name": "Прыжок"
+              },
+              "Farmer: While Loops": {
+                "name": "Фермер: Циклы с проверкой условия"
+              },
+              "Maze: Nested Loops": {
+                "name": "Лабиринт: вложенные циклы"
+              }
+            }
+          },
+          "csd3-2017": {
+            "description_short": "Программирование",
+            "stages": {
+              "Velocity": {
+                "name": "Скорость"
+              },
+              "Functions": {
+                "name": "функции"
+              },
+              "Plotting Shapes": {
+                "name": "Рисование фигур"
+              },
+              "Variables": {
+                "name": "переменные"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Порхающий код"
+              },
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реальные алгоритмы: Бумажные самолетики"
+              },
+              "The Big Event": {
+                "name": "Большое Событие"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Двоичный"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Events": {
+                "name": "События"
+              },
+              "For Loops": {
+                "name": "Циклы с параметром"
+              },
+              "Functions": {
+                "name": "функции"
+              },
+              "Functions with Parameters": {
+                "name": "Процедуры с параметрами"
+              },
+              "Loops": {
+                "name": "Циклы"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Variables": {
+                "name": "переменные"
+              },
+              "While Loops": {
+                "name": "Циклы «пока»"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Панель управления преподавателя"
+              },
+              "The Design Recipe": {
+                "name": "Создание рецепта"
+              },
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              }
+            }
+          },
+          "csp-online-test": {
+            "stages": {
+              "Lessons 2-3: Binary Messages": {
+                "name": "Уроки 2-3: бинарные сообщения"
+              },
+              "Lessons 4-6: Encoding and Sending Numbers": {
+                "name": "Уроки 4-6: кодирование и отправка чисел"
+              },
+              "Lesson 7: Encoding and Sending Text": {
+                "name": "Урок 7: кодирование и отправка текста"
+              },
+              "Lesson 9: Internet Addressing": {
+                "name": "Урок 9: адресация в интернете"
+              },
+              "Lessons 1 - 2: Bytes, File Sizes, and Text Compression": {
+                "name": "Уроки 1-2: байты, размеры файлов и сжатие текста"
+              },
+              "Lessons 3 - 4 : Encoding Images": {
+                "name": "Уроки 3-4: кодирование изображений"
+              },
+              "Lessons 1 - 3: Algorithms": {
+                "name": "Уроки 1-3: алгоритмы"
+              }
+            }
+          },
+          "csp1-support": {
+            "stages": {
+              "Lesson 7: Encoding and Sending Text": {
+                "name": "Урок 7: кодирование и отправка текста"
+              },
+              "Lesson 9: Internet Addressing": {
+                "name": "Урок 9: адресация в интернете"
+              }
+            }
+          },
+          "basketball": {
+            "title": "Выбери свою команду и создай игру в баскетбол",
+            "description_short": "Выбери свою команду и создай игру в баскетбол",
+            "description": "Выбери свою команду и создай игру в баскетбол",
+            "stages": {
+              "Bounce": {
+                "name": "Прыжок"
+              }
+            }
+          },
+          "sample-csp5": {
+            "stages": {
+              "Controlling Memory with Variables": {
+                "name": "Контролирование памяти с помощью переменных"
+              }
+            }
+          },
+          "hoc-encryption": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Простое шифрование"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Двоичный",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              },
+              "Binary Images": {
+                "name": "Двоичные образы"
+              },
+              "RGB Color": {
+                "name": "RGB цвета"
+              },
+              "Play Lab": {
+                "name": "Лаборатория игр"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Peer Review": {
+                "name": "Рецензирование"
+              },
+              "Lists": {
+                "name": "Списки"
+              }
+            }
+          },
+          "csp2-support": {
+            "stages": {
+              "Lessons 1 - 2: Bytes, File Sizes, and Text Compression": {
+                "name": "Уроки 1-2: байты, размеры файлов и сжатие текста"
+              },
+              "Lessons 3 - 4 : Encoding Images": {
+                "name": "Уроки 3-4: кодирование изображений"
+              }
+            }
+          },
+          "minecraft": {
+            "title": "Редактор для «Часа Кода» Minecraft",
+            "description_short": "Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ.",
+            "description": "Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ.",
+            "stages": {
+              "Minecraft Hour of Code Designer": {
+                "name": "Редактор для «Часа Кода» Minecraft"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Порхающий код"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Going Places Safely": {
+                "name": "Безопасное путешествие"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Your Digital Footprint": {
+                "name": "Твой цифровой след"
+              }
+            }
+          },
+          "coursec-draft": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реальные алгоритмы: Бумажные самолетики"
+              },
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              },
+              "Your Digital Footprint": {
+                "name": "Твой цифровой след"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Nested Loops in Maze": {
+                "name": "Вложенные циклы в Лабиринте"
+              },
+              "Nested Loops in Artist": {
+                "name": "Вложенные циклы в Художнике"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Conditionals & Loops in Maze": {
+                "name": "Условия и циклы в Лабиринте"
+              },
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Unplugged: Binary": {
+                "name": "Урок без компьютера: Двоичный"
+              },
+              "Artist Binary": {
+                "name": "Художник: двоичная система"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Пчеле"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Introduction": {
+                "name": "Введение"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Songwriting with Parameters": {
+                "name": "Написание песен с параметрами"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Постигай азы программирования с забавными персонажами!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Час кода 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Постигай азы программирования с забавными персонажами!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Час кода 2013"
+              }
+            }
+          },
+          "sports": {
+            "title": "Создай свою спортивную игру",
+            "description_short": "Сочетай разные виды спорта",
+            "description": "Сочетай разные виды спорта"
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "sciencepd3-2016": {
+            "stages": {
+              "Welcome Back!": {
+                "name": "Добро пожаловать!"
+              }
+            }
+          },
+          "csp3-support": {
+            "stages": {
+              "Lessons 1 - 3: Algorithms": {
+                "name": "Уроки 1-3: алгоритмы"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Двоичный"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добро пожаловать!"
+              },
+              "Wrap-Up": {
+                "name": "Итоги"
+              }
+            }
+          },
+          "csp5-support": {
+            "description_short": "Профессиональный курс изучения курса \"CSP Глава 5\" для учителей"
+          },
+          "csppostap-2017": {
+            "stages": {
+              "Importing and Exporting Data": {
+                "name": "Импорт и экспорт данных"
+              },
+              "Visualizing Data": {
+                "name": "Визуализация данных"
+              },
+              "Final Project": {
+                "name": "Финальный проект"
+              },
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Списки"
+              },
+              "For Loops": {
+                "name": "Циклы с параметром"
+              },
+              "List and For Loops": {
+                "name": "Список и цикл for"
+              },
+              "Lists and For Loops": {
+                "name": "Список и цикл for"
+              },
+              "Analog Input": {
+                "name": "Иной ввод"
+              },
+              "Polling Events": {
+                "name": "Опросы"
+              },
+              "Sensor Applications": {
+                "name": "Датчик Приложений"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Проект: Прототип Инновации"
+              },
+              "Map": {
+                "name": "Карта"
+              },
+              "Arrays and For Loops": {
+                "name": "Множества и цикл for"
+              },
+              "Functions with Parameters": {
+                "name": "Процедуры с параметрами"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Input": {
+                "name": "Ввод"
+              }
+            }
+          },
+          "csd5-draft": {
+            "stages": {
+              "Representing Images": {
+                "name": "Представление изображений"
+              },
+              "ASCII and Binary Representation": {
+                "name": "ASCII и Двоичное Представление"
+              },
+              "Making Decisions with Data": {
+                "name": "Использование данных для принятия решений"
+              },
+              "Representing Numbers": {
+                "name": "Представления чисел"
+              },
+              "8-bit Numbers": {
+                "name": "8-битные числа"
+              }
+            }
+          },
+          "applab-1hour": {
+            "description_audience": "Учащиеся средних и старших классов",
+            "stages": {
+              "Extra": {
+                "name": "Дополнительно"
+              }
+            }
+          },
+          "applab-2hour": {
+            "description_audience": "Учащиеся средних и старших классов"
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Введение"
+              }
+            }
+          },
+          "workshop-maker": {
+            "stages": {
+              "Analog Input": {
+                "name": "Иной ввод"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Алгоритмы из повседневной жизни: Гонки кубиков"
+              }
+            }
+          },
+          "csd6-2017": {
+            "description_short": "Программирование с физическими устройствами",
+            "stages": {
+              "Lists": {
+                "name": "Списки"
+              },
+              "For Loops": {
+                "name": "Циклы с параметром"
+              },
+              "Lists and For Loops": {
+                "name": "Список и цикл for"
+              },
+              "Analog Input": {
+                "name": "Иной ввод"
+              },
+              "Sensor Applications": {
+                "name": "Датчик Приложений"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Проект: Прототип Инновации"
+              },
+              "Arrays and For Loops": {
+                "name": "Множества и цикл for"
+              },
+              "Functions with Parameters": {
+                "name": "Процедуры с параметрами"
+              },
+              "Analog Input_": {
+                "name": "Иной ввод"
+              },
+              "Arrays and For Loops_": {
+                "name": "Множества и цикл for"
+              },
+              "Functions with Parameters_": {
+                "name": "Процедуры с параметрами"
+              },
+              "Project: Prototype an Innovation_": {
+                "name": "Проект: Прототип Инновации"
+              }
+            }
+          },
+          "csd3-draft": {
+            "description_short": "Анимация и игры",
+            "stages": {
+              "Variables": {
+                "name": "переменные"
+              },
+              "Plotting Shapes": {
+                "name": "Рисование фигур"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Velocity": {
+                "name": "Скорость"
+              },
+              "Functions": {
+                "name": "функции"
+              }
+            }
+          },
+          "csd5-2017": {
+            "stages": {
+              "ASCII and Binary Representation": {
+                "name": "ASCII и Двоичное Представление"
+              },
+              "Representing Images": {
+                "name": "Представление изображений"
+              },
+              "Making Decisions with Data": {
+                "name": "Использование данных для принятия решений"
+              },
+              "Representing Numbers": {
+                "name": "Представления чисел"
+              },
+              "8-bit Numbers": {
+                "name": "8-битные числа"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Velocity": {
+                "name": "Скорость"
+              },
+              "Functions": {
+                "name": "функции"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Списки"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Plotting Shapes": {
+                "name": "Рисование фигур"
+              },
+              "Variables": {
+                "name": "переменные"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Velocity": {
+                "name": "Скорость"
+              },
+              "Functions": {
+                "name": "функции"
+              },
+              "null": {
+                "name": "нуль"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              }
+            }
+          },
+          "fmscsd3preview": {
+            "stages": {
+              "Plotting Shapes": {
+                "name": "Рисование фигур"
+              }
+            }
+          },
+          "csd2-old": {
+            "stages": {
+              "Peer Review": {
+                "name": "Рецензирование"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "C9 Artist Loops": {
+                "name": "Художник: Циклы"
+              },
+              "Loops with BB-8": {
+                "name": "Циклы с BB-8"
+              },
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              },
+              "Bounce": {
+                "name": "Прыжок"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Loops: Happy Loops": {
+                "description_teacher": "Циклы - это очень полезный и мощный инструмент в программировании. Чтобы понять, насколько полезными могут быть циклы, ученикам нужно будет водить, чтобы найти более простой способ решить повседневные проблемы."
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              }
+            },
+            "title": "Курс A",
+            "assignment_family_title": "Курс A",
+            "description_audience": "Возраст: 4-7"
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              }
+            },
+            "title": "Курс B",
+            "assignment_family_title": "Курс B"
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реальные алгоритмы: Бумажные самолетики"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              }
+            },
+            "title": "Курс С",
+            "assignment_family_title": "Курс С"
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Nested Loops in Artist": {
+                "name": "Вложенные циклы в Художнике"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "Conditionals & Loops in Maze": {
+                "name": "Условия и циклы в Лабиринте"
+              }
+            },
+            "title": "Курс D",
+            "assignment_family_title": "Курс D"
+          },
+          "coursee-2017": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Songwriting with Parameters": {
+                "name": "Написание песен с параметрами"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              }
+            },
+            "title": "Курс E",
+            "assignment_family_title": "Курс E",
+            "description_audience": "Возраст: 8-12"
+          },
+          "coursef-2017": {
+            "stages": {
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              }
+            },
+            "title": "Курс F",
+            "assignment_family_title": "Курс F",
+            "description_audience": "Возраст: 9-13"
+          },
+          "csdnovice": {
+            "stages": {
+              "Tuesday": {
+                "name": "Вторник"
+              },
+              "Wednesday": {
+                "name": "Среда"
+              },
+              "Thursday": {
+                "name": "Четверг"
+              },
+              "Welcome": {
+                "name": "Добро пожаловать"
+              }
+            }
+          },
+          "cspnovice": {
+            "stages": {
+              "Welcome": {
+                "name": "Добро пожаловать"
+              },
+              "Tuesday": {
+                "name": "Вторник"
+              },
+              "Wednesday": {
+                "name": "Среда"
+              },
+              "Thursday": {
+                "name": "Четверг"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "Conditionals & Loops in Maze": {
+                "name": "Условия и циклы в Лабиринте"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Songwriting with Parameters": {
+                "name": "Написание песен с параметрами"
+              },
+              "Conditional Loops in Maze": {
+                "name": "Условия и циклы в Лабиринте"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              }
+            },
+            "description_audience": "Возраст: 9-18"
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Spelling Bee": {
+                "name": "Пчела"
+              }
+            },
+            "description_audience": "Возраст: 4-8"
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Спасибо"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Необходимость языков программирования"
+              },
+              "Using Simple Commands": {
+                "name": "Использование простых команд"
+              },
+              "Creating Functions": {
+                "name": "Создание функций"
+              },
+              "APIs and Function Parameters": {
+                "name": "API и параметры функции"
+              }
+            },
+            "description_short": "Программирование"
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Пчеле"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Nested Loops in Artist": {
+                "name": "Вложенные циклы в Художнике"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Conditionals & Loops in Maze": {
+                "name": "Условия и циклы в Лабиринте"
+              },
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Unplugged: Binary": {
+                "name": "Урок без компьютера: Двоичный"
+              },
+              "Artist Binary": {
+                "name": "Художник: двоичная система"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Пчеле"
+              },
+              "Loops in Ice Age": {
+                "name": "Циклы в ледниковом периоде"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              }
+            }
+          },
+          "new-stages-sept-2017": {
+            "stages": {
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Songwriting with Parameters": {
+                "name": "Написание песен с параметрами"
+              }
+            }
+          },
+          "csd5-old": {
+            "stages": {
+              "ASCII and Binary Representation": {
+                "name": "ASCII и Двоичное Представление"
+              },
+              "Representing Images": {
+                "name": "Представление изображений"
+              },
+              "Representing Numbers": {
+                "name": "Представления чисел"
+              },
+              "8-bit Numbers": {
+                "name": "8-битные числа"
+              },
+              "Making Decisions with Data": {
+                "name": "Использование данных для принятия решений"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Необходимость языков программирования"
+              },
+              "Using Simple Commands": {
+                "name": "Использование простых команд"
+              },
+              "Creating Functions": {
+                "name": "Создание функций"
+              },
+              "APIs and Function Parameters": {
+                "name": "API и параметры функции"
+              }
+            }
+          },
+          "pwc": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Простое шифрование"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft\\: Hero's Journey Hour of Code": {
+                "name": "Майнкрафт\\: Путешествие Героя. Час Кода"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Час Кода с Майнкрафт"
+              }
+            },
+            "title": "Майнкрафт: Путешествие Героя",
+            "description_short": "Майнкрафт снова с вами и предлагает выполнить новые задания за Час Кода!",
+            "description": "Возвращение Minecraft с новыми возможностями на «Час кода»! Путешествие по миру программирования с Minecraft."
+          },
+          "csp-explore-2017": {
+            "stages": {
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "csp-create-2017": {
+            "stages": {
+              "Post-Course Survey": {
+                "name": "Опрос после окончания курса"
+              }
+            }
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Songwriting with Parameters": {
+                "name": "Написание песен с параметрами"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Списки"
+              },
+              "For Loops": {
+                "name": "Циклы с параметром"
+              },
+              "Lists and For Loops": {
+                "name": "Список и цикл for"
+              },
+              "Analog Input": {
+                "name": "Иной ввод"
+              },
+              "Sensor Applications": {
+                "name": "Датчик Приложений"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Проект: Прототип Инновации"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Plotting Shapes": {
+                "name": "Рисование фигур"
+              },
+              "Variables": {
+                "name": "переменные"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Velocity": {
+                "name": "Скорость"
+              },
+              "Functions": {
+                "name": "функции"
+              }
+            },
+            "description_short": "Программирование"
+          },
+          "csd3-2018": {
+            "description_short": "Программирование",
+            "stages": {
+              "Plotting Shapes": {
+                "name": "Рисование фигур"
+              },
+              "Variables": {
+                "name": "переменные"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Velocity": {
+                "name": "Скорость"
+              },
+              "Functions": {
+                "name": "функции"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Списки"
+              }
+            }
+          },
+          "coursea-2018": {
+            "assignment_family_title": "Курс A",
+            "description_audience": "Возраст: 4-7",
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Незамеченные Баги"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Стиви и Большой Проект"
+              },
+              "Programming: Happy Maps": {
+                "name": "Весёлые карты"
+              },
+              "Going Places Safely": {
+                "name": "Безопасное путешествие"
+              },
+              "Loops: Happy Loops": {
+                "description_teacher": "Циклы - это очень полезный и мощный инструмент в программировании. Чтобы понять, насколько полезными могут быть циклы, ученикам нужно будет водить, чтобы найти более простой способ решить повседневные проблемы."
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Стиви и Большой Проект"
+              }
+            }
+          },
+          "express-2018": {
+            "description_audience": "Возраст: 9-18",
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Программирование на бумаге в клеточку"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Events: The Big Event": {
+                "name": "Большое Событие"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Зацикливание"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Пчеле"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Functions: Songwriting": {
+                "name": "Написание песен"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              },
+              "Unplugged: Binary": {
+                "name": "Двоичные образы"
+              },
+              "Artist Binary": {
+                "name": "Художник: двоичная система"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              },
+              "Relay Programming": {
+                "name": "Эстафетное программирование"
+              }
+            }
+          },
+          "courseb-2018": {
+            "assignment_family_title": "Курс B",
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Your Digital Footprint": {
+                "name": "Твой цифровой след"
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Move It, Move It": {
+                "name": "Вперед, вперед"
+              }
+            }
+          },
+          "coursed-2018": {
+            "assignment_family_title": "Курс D",
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Программирование на бумаге в клеточку"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Лабиринте"
+              },
+              "Nested Loops in Artist": {
+                "name": "Вложенные циклы в Художнике"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Conditionals & Loops in Maze": {
+                "name": "Условия и циклы в Лабиринте"
+              },
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Unplugged: Binary": {
+                "name": "Двоичные образы"
+              },
+              "Artist Binary": {
+                "name": "Художник: двоичная система"
+              },
+              "Loops in Ice Age": {
+                "name": "Циклы в ледниковом периоде"
+              },
+              "Graph Paper Programming": {
+                "name": "Программирование на бумаге в клеточку"
+              },
+              "Relay Programming": {
+                "name": "Эстафетное программирование"
+              },
+              "Nested Loops in Maze": {
+                "name": "Вложенные циклы в Лабиринте"
+              }
+            }
+          },
+          "coursec-2018": {
+            "assignment_family_title": "Курс С",
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Зацикливание"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Events: The Big Event": {
+                "name": "Большое Событие"
+              },
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              }
+            }
+          },
+          "csd6-2018": {
+            "description_short": "Программирование с физическими устройствами",
+            "stages": {
+              "Analog Input": {
+                "name": "Иной ввод"
+              },
+              "Arrays and For Loops": {
+                "name": "Множества и цикл for"
+              },
+              "Functions with Parameters": {
+                "name": "Процедуры с параметрами"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Проект: Прототип Инновации"
+              }
+            }
+          },
+          "coursee-2018": {
+            "assignment_family_title": "Курс E",
+            "description_audience": "Возраст: 8-12",
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Мои друзья роботы"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы в Лабиринте"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Functions: Songwriting": {
+                "name": "Написание песен"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Час кода с Minecraft"
+              }
+            }
+          },
+          "coursef-2018": {
+            "assignment_family_title": "Курс F",
+            "description_audience": "Возраст: 9-13",
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Мои друзья роботы"
+              },
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops in Bee/Zombie": {
+                "name": "Вложенные циклы в Лабиринте"
+              },
+              "Introduction": {
+                "name": "Введение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Лаборатория игр Ледниковый период"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Songwriting with Parameters": {
+                "name": "Написание песен с параметрами"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Отправка двоичных сообщений"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Отправка двоичных сообщений с интернет симулятором"
+              },
+              "Binary Numbers": {
+                "name": "Двоичные числа"
+              },
+              "Sending Numbers": {
+                "name": "Отправка чисел"
+              },
+              "The Internet": {
+                "name": "Интернет"
+              },
+              "The Need for Addressing": {
+                "name": "Необходимость адресации"
+              },
+              "Routers and Redundancy": {
+                "name": "Маршрутизаторы и резервирование"
+              },
+              "The Need for DNS": {
+                "name": "Необходимость DNS"
+              }
+            }
+          },
+          "csd5-2018": {
+            "stages": {
+              "ASCII and Binary Representation": {
+                "name": "ASCII и Двоичное Представление"
+              },
+              "Representing Images": {
+                "name": "Представление изображений"
+              },
+              "Representing Numbers": {
+                "name": "Представления чисел"
+              },
+              "Making Decisions with Data": {
+                "name": "Использование данных для принятия решений"
+              }
+            }
+          },
+          "csp2-2018": {
+            "stages": {
+              "Bytes and File Sizes": {
+                "name": "Байты и размеры файлов"
+              },
+              "Encoding B&W Images": {
+                "name": "Кодирование чёрно-белых изображений"
+              },
+              "Encoding Color Images": {
+                "name": "Кодирование цветных изображений"
+              },
+              "Lossy Compression and File Formats": {
+                "name": "Сжатие с потерями и форматы файлов"
+              }
+            }
+          },
+          "csp3-2018": {
+            "description_short": "Программирование",
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Необходимость языков программирования"
+              },
+              "Using Simple Commands": {
+                "name": "Использование простых команд"
+              },
+              "Creating Functions": {
+                "name": "Создание функций"
+              },
+              "APIs and Function Parameters": {
+                "name": "API и параметры функции"
+              },
+              "Creating Functions with Parameters": {
+                "name": "Создание функций с параметрами"
+              }
+            }
+          },
+          "csp4-2018": {
+            "stages": {
+              "What is Big Data?": {
+                "name": "Что такое Большие Данные?"
+              },
+              "Simple Encryption": {
+                "name": "Простое шифрование"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "Controlling Memory with Variables": {
+                "name": "Контролирование памяти с помощью переменных"
+              },
+              "User Input and Strings": {
+                "name": "Пользовательский ввод и строки"
+              },
+              "While Loops": {
+                "name": "Циклы «пока»"
+              },
+              "Introduction to Arrays": {
+                "name": "Введение в массивы"
+              },
+              "Processing Arrays": {
+                "name": "Обработка массивов"
+              },
+              "Functions with Return Values": {
+                "name": "Функции с возвращаемыми значениями"
+              }
+            }
+          },
+          "csppostap-2018": {
+            "stages": {
+              "Importing and Exporting Data": {
+                "name": "Импорт и экспорт данных"
+              },
+              "Visualizing Data": {
+                "name": "Визуализация данных"
+              },
+              "Final Project": {
+                "name": "Финальный проект"
+              }
+            }
+          },
+          "csd-novice-18": {
+            "stages": {
+              "Welcome": {
+                "name": "Добро пожаловать"
+              },
+              "Tuesday": {
+                "name": "Вторник"
+              },
+              "Wednesday": {
+                "name": "Среда"
+              },
+              "Thursday": {
+                "name": "Четверг"
+              }
+            }
+          },
+          "csd-apprentice-18": {
+            "stages": {
+              "Tuesday": {
+                "name": "Вторник"
+              },
+              "Wednesday": {
+                "name": "Среда"
+              },
+              "Thursday": {
+                "name": "Четверг"
+              }
+            }
+          },
+          "csp-novice-18": {
+            "stages": {
+              "Tuesday": {
+                "name": "Вторник"
+              },
+              "Wednesday": {
+                "name": "Среда"
+              },
+              "Thursday": {
+                "name": "Четверг"
+              }
+            }
+          },
+          "csp-apprentice-18": {
+            "stages": {
+              "Tuesday": {
+                "name": "Вторник"
+              },
+              "Wednesday": {
+                "name": "Среда"
+              },
+              "Thursday": {
+                "name": "Четверг"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "description_audience": "Возраст: 4-8",
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Незамеченные Баги"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Стиви и Большой Проект"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Spelling Bee": {
+                "name": "Пчела"
+              },
+              "Move It, Move It": {
+                "name": "Вперед, вперед"
+              },
+              "Your Digital Footprint": {
+                "name": "Твой цифровой след"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Стиви и Большой Проект"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "dance": {
+            "stages": {
+              "Dance Party": {
+                "name": "Танцевальная вечеринка"
+              }
+            },
+            "title": "Танцевальная вечеринка",
+            "description_short": "Участвуют Кэти Перри, Мадонна, Джей Бальвин, Сиа, Кит Урбан, Кьяра и еще 25 звезд!",
+            "description": "Создавайте свой собственный танец и делитесь им с друзьями."
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "dance--draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Танцевальная вечеринка"
+              }
+            }
+          },
+          "dance-draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Танцевальная вечеринка"
+              }
+            }
+          },
+          "dance-extras": {
+            "title": "Продолжайте танцевать",
+            "description": "Дополнительные идеи для проектов уведут вас за пределы первого часа."
+          },
+          "coursef-2019": {
+            "description_audience": "Возраст: 9-13",
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "The Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "dance-low": {
+            "stages": {
+              "Dance Party": {
+                "name": "Танцевальная вечеринка"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Эстафетное программирование"
+              },
+              "Loops in Ice Age": {
+                "name": "Циклы в ледниковом периоде"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Пчеле"
+              },
+              "Nested Loops in Artist": {
+                "name": "Вложенные циклы в Художнике"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Digital Citizenship": {
+                "name": "Цифровое гражданство"
+              },
+              "Unplugged: Binary": {
+                "name": "Урок без компьютера: Двоичный"
+              },
+              "Artist Binary": {
+                "name": "Художник: двоичная система"
+              }
+            }
+          },
+          "coursee-2019": {
+            "description_audience": "Возраст: 8-12",
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops": {
+                "name": "Вложенные циклы"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Conditionals": {
+                "name": "Условные команды"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Пчеле"
+              },
+              "Nested Loops in Artist": {
+                "name": "Вложенные циклы в Художнике"
+              }
+            }
+          },
+          "express-2019": {
+            "description_audience": "Возраст: 9-18",
+            "stages": {
+              "Relay Programming": {
+                "name": "Эстафетное программирование"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Nested Loops in Bee": {
+                "name": "Вложенные циклы в Пчеле"
+              },
+              "While Loops in Farmer": {
+                "name": "Цикл while в Фермере"
+              },
+              "Conditionals with Cards": {
+                "name": "Условные выражения с картами"
+              },
+              "Envelope Variables": {
+                "name": "Конвертные переменные"
+              },
+              "For Loop Fun": {
+                "name": "Игры с циклами"
+              },
+              "For Loops in Bee": {
+                "name": "Цикл for в Пчеле"
+              },
+              "For Loops in Artist": {
+                "name": "Цикл for в Художнике"
+              },
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              },
+              "Unplugged: Binary": {
+                "name": "Урок без компьютера: Двоичный"
+              },
+              "Artist Binary": {
+                "name": "Художник: двоичная система"
+              },
+              "Internet": {
+                "name": "интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Краудсорсинг"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "нуль"
+              }
+            }
+          },
+          "dance-extras-gallery": {
+            "title": "Продолжайте танцевать",
+            "description": "Дополнительные идеи для проектов уведут вас за пределы первого часа."
+          },
+          "coursec-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Создание основы"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реальные алгоритмы: Бумажные самолетики"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Binary Bracelets": {
+                "name": "Двоичные браслеты"
+              }
+            }
+          },
+          "gamelab": {
+            "title": "Игровая лаборатория"
+          },
+          "coursea-2019": {
+            "description_audience": "Возраст: 4-7",
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              },
+              "Going Places Safely": {
+                "name": "Безопасное путешествие"
+              },
+              "Loops: Happy Loops": {
+                "description_teacher": "Циклы - это очень полезный и мощный инструмент в программировании. Чтобы понять, насколько полезными могут быть циклы, ученикам нужно будет водить, чтобы найти более простой способ решить повседневные проблемы."
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Ocean Scene with Loops": {
+                "name": "Циклы в исполнителе Художник"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Вперед, вперед"
+              },
+              "Your Digital Footprint": {
+                "name": "Твой цифровой след"
+              },
+              "Loops in Ice Age": {
+                "name": "Циклы в ледниковом периоде"
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "description_audience": "Возраст: 4-8",
+            "stages": {
+              "Move It, Move It": {
+                "name": "Вперед, вперед"
+              },
+              "Your Digital Footprint": {
+                "name": "Твой цифровой след"
+              },
+              "Loops in Ice Age": {
+                "name": "Циклы в ледниковом периоде"
+              },
+              "Loops in Collector": {
+                "name": "Циклы в Собирателе"
+              },
+              "Loops in Artist": {
+                "name": "Циклы в исполнителе Художник"
+              },
+              "Spelling Bee": {
+                "name": "Пчела"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Алгоритмы из повседневной жизни: Посади семечко"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2514 @@
+{
+  "el": {
+    "data": {
+      "script": {
+        "category": {
+          "csf_category_name": "Βασικές αρχές της Επιστήμης των Υπολογιστών",
+          "csf_international_category_name": "Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών",
+          "csf2_draft_category_name": "Υπό ανάπτυξη: Μαθήματα A - F",
+          "csp_category_name": "Αρχές της Επιστήμης των Υπολογιστών ' 15-'16",
+          "cspexams_category_name": "Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών",
+          "csp17_category_name": "Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17",
+          "hoc_category_name": "Η Ώρα του Κώδικα",
+          "math_category_name": "Μαθηματικά"
+        },
+        "name": {
+          "course1": {
+            "title": "Μάθημα 1",
+            "description": "Το Μάθημα 1 σχεδιάστηκε για να επιτρέψει σε νεαρούς αναγνώστες να δημιουργήσουν προγράμματα για τον υπολογιστή τα οποία τους βοηθούν να μάθουν να συνεργάζονται με άλλους, να αναπτύσσουν δεξιότητες επίλυσης προβλημάτων, και να επιμείνουν σε δύσκολες εργασίες. Στο τέλος του μαθήματος, οι μαθητές δημιουργούν το απόλυτα δικό τους παιχνίδι ή σενάριο το οποίο μπορούν να μοιραστούν. Συνιστάται για παιδιά Νηπιαγωγείου.",
+            "description_short": "Το Μάθημα 1 σχεδιάστηκε για νεαρούς αναγνώστες.",
+            "description_audience": "Ηλικίες 4+ (προ αναγνώστες)",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Καλλιτέχνης: Επαναλήψεις"
+              },
+              "Artist: Sequence": {
+                "name": "Καλλιτέχνης: Ακολουθία"
+              },
+              "Artist: Shapes": {
+                "name": "Καλλιτέχνης: Σχήματα"
+              },
+              "Bee: Loops": {
+                "name": "Μέλισσα: Επαναλήψεις"
+              },
+              "Bee: Sequence": {
+                "name": "Μέλισσα: Ακολουθία"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Getting Loopy": {
+                "name": "Επαναλαμβανόμαστε"
+              },
+              "Going Places Safely": {
+                "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
+              },
+              "Happy Maps": {
+                "name": "Χαρούμενοι Χάρτες"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Παζλ: Μάθε την μεταφορά και απόθεση"
+              },
+              "Maze: Debugging": {
+                "name": "Λαβύρινθο: εντοπισμός σφαλμάτων"
+              },
+              "Maze: Loops": {
+                "name": "Λαβύρινθος: Επαναλήψεις"
+              },
+              "Maze: Sequence": {
+                "name": "Λαβύρινθος: Ακολουθία"
+              },
+              "Move it, Move it": {
+                "name": "Κούνισέ το, Κούνισέ το"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Spelling Bee": {
+                "name": "Η μέλισσα της ορθογραφίας"
+              },
+              "Studio: Create a Story": {
+                "name": "Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου"
+              },
+              "The Big Event": {
+                "name": "Το Μεγάλο Γεγονός"
+              }
+            }
+          },
+          "course2": {
+            "title": "Μάθημα 2",
+            "description": "Το Μάθημα 2 σχεδιάστηκε για μαθητές που μπορούν να διαβάσουν και χωρίς προηγούμενη εμπειρία προγραμματισμού. Στο μάθημα αυτό οι μαθητές θα δημιουργήσουν προγράμματα για επίλυση προβλημάτων και να αναπτύξουν διαδραστικά παιχνίδια ή σενάρια που μπορούν να μοιράσουν. Συνίσταται για τις πρώτες τάξεις του Δημοτικού.",
+            "description_short": "Το Μάθημα 2 σχεδιάστηκε για μαθητές που μπορούν να διαβάζουν.",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Καλλιτέχνης: Εκσφαλμάτωση"
+              },
+              "Artist: Loops": {
+                "name": "Καλλιτέχνης: Επαναλήψεις"
+              },
+              "Artist: Nested Loops": {
+                "name": "Καλλιτέχνης: Εμφωλευμένες επαναλήψεις"
+              },
+              "Artist: Sequence": {
+                "name": "Καλλιτέχνης: Ακολουθία"
+              },
+              "Bee: Conditionals": {
+                "name": "Μέλισσα: Συνθήκες"
+              },
+              "Bee: Debugging": {
+                "name": "Μέλισσα: Επαναλήψεις"
+              },
+              "Bee: Loops": {
+                "name": "Μέλισσα: Επαναλήψεις"
+              },
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Flappy": {
+                "name": "Πουλάκι"
+              },
+              "Getting Loopy": {
+                "name": "Επαναλαμβανόμαστε"
+              },
+              "Graph Paper Programming": {
+                "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+              },
+              "Maze: Loops": {
+                "name": "Λαβύρινθος: Επαναλήψεις"
+              },
+              "Maze: Sequence": {
+                "name": "Λαβύρινθος: Ακολουθία"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+              },
+              "Relay programming": {
+                "name": "Προγραμματισμός με αναμετάδοση"
+              },
+              "Studio: Create a Story": {
+                "name": "Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου"
+              },
+              "The Big Event": {
+                "name": "Το Μεγάλο Γεγονός"
+              },
+              "Your Digital Footprint": {
+                "name": "Το Ψηφιακό σου Αποτύπωμα"
+              }
+            }
+          },
+          "course3": {
+            "title": "Μάθημα 3",
+            "description_short": "Το Μάθημα 3 είναι συνέχεια του Μαθήματος 2.",
+            "description_audience": "Ηλικίες 8+ (μετά το Μάθημα 2)",
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              },
+              "Artist: Functions": {
+                "name": "Καλλιτέχνης: Συναρτήσεις"
+              },
+              "Artist: Nested Loops": {
+                "name": "Καλλιτέχνης: Εμφωλευμένες επαναλήψεις"
+              },
+              "Artist: Patterns": {
+                "name": "Καλλιτέχνης: Σχέδια"
+              },
+              "Bee: Conditionals": {
+                "name": "Μέλισσα: Συνθήκες"
+              },
+              "Bee: Debugging": {
+                "name": "Μέλισσα: Επαναλήψεις"
+              },
+              "Bee: Functions": {
+                "name": "Λειτουργίες μέλισσας"
+              },
+              "Bee: Nested Loops": {
+                "name": "Μέλισσα: Εμφωλευμένοι βρόχοι"
+              },
+              "Bounce": {
+                "name": "Αναπήδηση"
+              },
+              "Computational Thinking": {
+                "name": "Αλγοριθμική Σκέψη"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Dice Race": {
+                "name": "Αγώνας ζαριών"
+              },
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Farmer: While Loops": {
+                "name": "Αγρότης: Βρόχοι όσο"
+              },
+              "Functional Suncatchers": {
+                "name": "Λειτουργικές Ηλιοκυνηγοί"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Maze": {
+                "name": "Λαβύρινθος"
+              },
+              "Maze: Conditionals": {
+                "name": "Λαβύρινθος: Συνθήκες"
+              },
+              "Songwriting": {
+                "name": "Σύνθεση τραγουδιού"
+              },
+              "Studio: Create a Game": {
+                "name": "Εργαστήριο παιχνιδιών: Δημιουργήστε ένα παιχνίδι"
+              },
+              "Studio: Create a Story": {
+                "name": "Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Εργαστήριο Παιχνιδιού",
+            "description": "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο Παιχνιδιού!",
+            "description_short": "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο Παιχνιδιού!",
+            "stages": {
+              "Play Lab": {
+                "name": "Εργαστήριο Παιχνιδιού"
+              }
+            }
+          },
+          "artist": {
+            "title": "Καλλιτέχνης",
+            "description": "Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!",
+            "description_short": "Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!",
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Κλασικός λαβύρινθος",
+            "description": "Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με χαρακτήρες από τα Angry Birds, τα Plants vs. Zombies και τον Scrat από την Εποχή των Παγετών!",
+            "description_short": "Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!",
+            "stages": {
+              "Maze": {
+                "name": "Λαβύρινθος"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Γράψτε Κώδικα με την Άννα και την Έλσα",
+            "description": "Ας χρησιμοποιήσουμε τον κώδικα για να βρεθούμε μαζί με την Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου. Θα δημιουργήσετε νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ και θα φτιάξετε υπέροχα χειμωνιάτικα τοπία τα οποία μπορείτε να μοιραστείτε με τους φίλους σας!",
+            "description_short": "Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.",
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              }
+            }
+          },
+          "course4": {
+            "title": "Μάθημα 4",
+            "description": "Το Μάθημα 4 έχει σχεδιαστεί για τους μαθητές που έχουν πάρει τα μαθήματα 2 και 3. Οι μαθητές θα μάθουν πώς να αντιμετωπίσουν παζλ με αυξημένη πολυπλοκότητα δεδομένου ότι μαθαίνουν πώς να συνδυάσουν πολλές έννοιες κατά την επίλυση κάθε πρόκλησης. Από τη στιγμή που θα ολοκληρωθεί αυτό το μάθημα, οι μαθητές θα δημιουργήσουν προγράμματα που επιτρέπουν να δείχνουν πολλές δεξιότητες, συμπεριλαμβανομένων βρόχων \"για\" και λειτουργίες με παραμέτρους. Συνιστάται για Τάξεις Δ' Δημοτικού έως Β' Γυμνασίου.",
+            "description_short": "Οι μαθητές που λαμβάνουν μέρος στο Μάθημα 4 πρέπει να έχουν ολοκληρώσει τα Μαθήματα 2 και 3.",
+            "description_audience": "Ηλικίες 10+ (μετά το Μάθημα 3)",
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              },
+              "Artist Binary": {
+                "name": "Δυαδικοί Καλλιτέχνη"
+              },
+              "Artist: For Loops": {
+                "name": "Καλλιτέχνης: Βρόχοι Για"
+              },
+              "Artist: Functions": {
+                "name": "Καλλιτέχνης: Συναρτήσεις"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Καλλιτέχνης: Συναρτήσεις με Παραμέτρους"
+              },
+              "Artist: Variables": {
+                "name": "Καλλιτέχνης: Μεταβλητές"
+              },
+              "Bee: For Loops": {
+                "name": "Μέλισσα: Βρόχοι Για"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Μέλισσα: Συναρτήσεις με Παραμέτρους"
+              },
+              "Extreme Challenge - Comprehensive": {
+                "name": "Ακραία πρόκληση - ολοκληρωμένη"
+              },
+              "Maze and Bee": {
+                "name": "Λαβύρινθος και Μέλισσα"
+              },
+              "Play Lab: For Loops": {
+                "name": "Εργαστήριο Παιχνιδιού: Βρόχοι Για"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Εργαστήριο Παιχνιδιού: Συναρτήσεις με Παραμέτρους"
+              },
+              "Play Lab: Variables": {
+                "name": "Εργαστήριο Παιχνιδιού: Μεταβλητές"
+              },
+              "Super Challenge - For Loops": {
+                "name": "Σούπερ πρόκληση - για βρόχους"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Σούπερ πρόκληση - λειτουργίες και παραμέτρους"
+              },
+              "Super Challenge - Variables": {
+                "name": "Σούπερ πρόκληση - μεταβλητές"
+              },
+              "Unplugged: Binary": {
+                "name": "Εκτός Σύνδεσης: Δυαδικοί"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Εκτός Σύνδεσης: Malibs"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Εκτός Σύνδεσης: Tangram"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Προαπαιτούμενα Μαθήματος 4",
+            "description": "Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν έχουν ολοκληρώσει τα Μαθήματα 2 και 3.",
+            "description_short": "Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν έχουν ολοκληρώσει τα Μαθήματα 2 και 3.",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Καλλιτέχνης: Συναρτήσεις"
+              },
+              "Artist: Loops": {
+                "name": "Καλλιτέχνης: Επαναλήψεις"
+              },
+              "Artist: Nested Loops": {
+                "name": "Καλλιτέχνης: Εμφωλευμένες επαναλήψεις"
+              },
+              "Artist: Sequence": {
+                "name": "Καλλιτέχνης: Ακολουθία"
+              },
+              "Bee: Conditionals": {
+                "name": "Μέλισσα: Συνθήκες"
+              },
+              "Bee: Debugging": {
+                "name": "Μέλισσα: Επαναλήψεις"
+              },
+              "Bee: Nested Loops": {
+                "name": "Μέλισσα: Εμφωλευμένοι βρόχοι"
+              },
+              "Farmer: While Loops": {
+                "name": "Αγρότης: Βρόχοι όσο"
+              },
+              "Maze: Sequence": {
+                "name": "Λαβύρινθος: Ακολουθία"
+              }
+            }
+          },
+          "usability": {
+            "title": "Δοκιμή χρηστικότητας",
+            "description": "Μία επιλογή επιπέδων από το Μάθημα 4 για δοκιμή χρηστικότητας.",
+            "stages": {
+              "Binary": {
+                "name": "Δυαδικό"
+              },
+              "For Loops": {
+                "name": "Βρόχοι Για"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Συναρτήσεις και Συναρτήσεις με Παραμέτρους"
+              },
+              "Intro": {
+                "name": "Εισαγωγή"
+              },
+              "Variables": {
+                "name": "Μεταβλητές"
+              }
+            }
+          },
+          "algebra": {
+            "title": "Η Επιστήμη των υπολογιστών στην Άλγεβρα",
+            "description": "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας",
+            "description_short": "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Καθορισμός μεταβλητών και υποκατάσταση"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Μπλοκ αξιολόγησης και αριθμητικές εκφράσεις"
+              },
+              "Eval: Boolean Operators": {
+                "name": "Λογικοί τελεστές"
+              },
+              "Eval: Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Eval: Defining Functions": {
+                "name": "Σύνθετες συναρτήσεις"
+              },
+              "Eval: Strings and Images": {
+                "name": "Strings και εικόνες"
+              },
+              "Play Lab: Booleans": {
+                "name": "Sam η νυχτερίδα"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Το Μεγάλο Παιχνίδι - Μεταβλητές"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Εκτός Σύνδεσης: Συνταγή Σχεδιασμού"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Disney Εργαστήριο Άπειρου Παιχνιδιού",
+            "description": "Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.",
+            "description_short": "Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.",
+            "stages": {
+              "Infinity": {
+                "name": "Άπειρο"
+              }
+            }
+          },
+          "algebrademo": {
+            "stages": {
+              "Defining Variables": {
+                "name": "Ορίζοντας μεταβλητές"
+              },
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Making Pictures": {
+                "name": "Δημιουργία εικόνων"
+              },
+              "The Design Recipe": {
+                "name": "Η Συνταγή του Σχεδιασμού"
+              }
+            }
+          },
+          "K5PD": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              },
+              "Writing computer programs": {
+                "name": "Γραφή προγραμμάτων υπολογιστών"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Προσομοιωτής Διαδικτύου"
+          },
+          "20-hour": {
+            "title": "Ταχεία εισαγωγή στο μάθημα Επιστήμης Υπολογιστών",
+            "description": "Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.",
+            "description_short": "Αυτό το 20ωρο μάθημα καλύπτει τα βασικά των εννοιών της επιστήμης των υπολογιστών και του προγραμματισμού στα μαθήματα 2-4.",
+            "description_audience": "Ηλικίες 10+ (μετά το Μάθημα 3)",
+            "stages": {
+              "Abstraction": {
+                "name": "Αφαίρεση"
+              },
+              "Algorithms": {
+                "name": "Αλγόριθμοι"
+              },
+              "Computational Thinking": {
+                "name": "Αλγοριθμική Σκέψη"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              },
+              "Graph Paper Programming": {
+                "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+              },
+              "Introduction to Computer Science": {
+                "name": "Εισαγωγή στην Επιστήμη των Υπολογιστών"
+              },
+              "Relay Programming": {
+                "name": "Προγραμματισμός Ρελέ"
+              },
+              "Song Writing": {
+                "name": "Συγγραφή τραγουδιού"
+              },
+              "The Artist": {
+                "name": "Ο Καλλιτέχνης"
+              },
+              "The Artist 2": {
+                "name": "Ο Καλλιτέχνης 2"
+              },
+              "The Artist 3": {
+                "name": "Ο Καλλιτέχνης 3"
+              },
+              "The Artist 4": {
+                "name": "Ο Καλλιτέχνης 4"
+              },
+              "The Artist 5": {
+                "name": "Ο Καλλιτέχνης 5"
+              },
+              "The Farmer": {
+                "name": "Ο Αγρότης"
+              },
+              "The Farmer 2": {
+                "name": "Ο Αγρότης 2"
+              },
+              "The Farmer 3": {
+                "name": "Ο Αγρότης 3"
+              },
+              "The Internet": {
+                "name": "Το Διαδίκτυο"
+              },
+              "The Maze": {
+                "name": "Ο Λαβύρινθος"
+              },
+              "Wrap-up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Επεξεργασία κώδικα",
+            "description": "Επεξεργασία κώδικα",
+            "description_short": "Επεξεργασία κώδικα",
+            "stages": {
+              "Play Lab": {
+                "name": "Εργαστήριο Παιχνιδιού"
+              },
+              "The Artist": {
+                "name": "Ο Καλλιτέχνης"
+              },
+              "The Maze": {
+                "name": "Ο Λαβύρινθος"
+              }
+            }
+          },
+          "events": {
+            "title": "Συμβάντα",
+            "description": "Συμβάντα",
+            "description_short": "Συμβάντα",
+            "stages": {
+              "Bounce": {
+                "name": "Αναπήδηση"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Flappy κώδικα",
+            "description": "θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!",
+            "description_short": "Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10 λεπτά!",
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy κώδικα"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Παζλ",
+            "description": "Δοκιμάστε τον οδηγό παζλ",
+            "description_short": "Δοκιμάστε τον οδηγό παζλ",
+            "stages": {
+              "Jigsaw": {
+                "name": "Παζλ"
+              }
+            }
+          },
+          "step": {
+            "title": "Βήμα",
+            "description": "Οδηγός με βήματα",
+            "description_short": "Οδηγός με βήματα",
+            "stages": {
+              "Step": {
+                "name": "Βήμα"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Ώρα του Κώδικα 2013",
+            "description": "Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!",
+            "description_short": "Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Ώρα του Κώδικα 2013"
+              }
+            }
+          },
+          "cspunit1": {
+            "description_short": "Προγραμματισμός"
+          },
+          "algebraPD": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              }
+            }
+          },
+          "algPDmiami": {
+            "stages": {
+              "Booleans": {
+                "name": "Δυαδικοί"
+              },
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Sam the Bat": {
+                "name": "Sam η νυχτερίδα"
+              },
+              "Strings and Images": {
+                "name": "Strings και εικόνες"
+              }
+            }
+          },
+          "cspunit3": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "Creating Functions": {
+                "name": "Δημιουργούμε Συναρτήσεις"
+              },
+              "While Loops": {
+                "name": "Βρόχοι με «Όσο»"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Strings and Images": {
+                "name": "Strings και εικόνες"
+              },
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              },
+              "The Design Recipe": {
+                "name": "Η Συνταγή του Σχεδιασμού"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              }
+            }
+          },
+          "sciencePD2": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "cspunit2": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "The Internet": {
+                "name": "Το Διαδίκτυο"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "Big Game - Variables": {
+                "name": "Μεγάλο Kυνήγι - Mεταβλητές"
+              },
+              "Booleans": {
+                "name": "Δυαδικοί"
+              },
+              "Defining Variables": {
+                "name": "Ορίζοντας μεταβλητές"
+              },
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Free Play": {
+                "name": "Ελεύθερο παιχνίδι"
+              },
+              "Sam the Bat": {
+                "name": "Sam η νυχτερίδα"
+              },
+              "Strings and Images": {
+                "name": "Strings και εικόνες"
+              },
+              "The Design Recipe": {
+                "name": "Η Συνταγή του Σχεδιασμού"
+              }
+            }
+          },
+          "allthethings": {
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              },
+              "Bee": {
+                "name": "Μέλισσα"
+              },
+              "Bounce": {
+                "name": "Αναπήδηση"
+              },
+              "Flappy": {
+                "name": "Πουλάκι"
+              },
+              "Jigsaw": {
+                "name": "Παζλ"
+              },
+              "Match": {
+                "name": "Ταίριασμα"
+              },
+              "Maze": {
+                "name": "Λαβύρινθος"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Πολύ"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "Booleans": {
+                "name": "Δυαδικοί"
+              },
+              "Defining Functions": {
+                "name": "Ορίζοντας συναρτήσεις"
+              },
+              "Defining Variables": {
+                "name": "Ορίζοντας μεταβλητές"
+              },
+              "Eval: Conditionals": {
+                "name": "Εκτιμητής: Συνθήκες"
+              },
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Strings and Images": {
+                "name": "Strings και εικόνες"
+              },
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "Εργαστήριο εφαρμογών"
+              },
+              "Internet Simulator": {
+                "name": "Προσομοιωτής Διαδικτύου"
+              },
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              }
+            }
+          },
+          "K5-OnlinePD": {
+            "stages": {
+              "Computer Science Fundamentals": {
+                "name": "Βασικές αρχές της επιστήμης υπολογιστών"
+              }
+            }
+          },
+          "ECSPD2": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "algebraPD2": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              },
+              "The Design Recipe": {
+                "name": "Η Συνταγή του Σχεδιασμού"
+              },
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "science-PD2": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "description": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "description_short": "Φάση 2 σε σύνδεση: Θερινή Μελέτη",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Getting Loopy": {
+                "name": "Επαναλαμβανόμαστε"
+              },
+              "Graph Paper Programming": {
+                "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+              },
+              "Happy Maps": {
+                "name": "Χαρούμενοι Χάρτες"
+              },
+              "Move it, Move it": {
+                "name": "Κούνισέ το, Κούνισέ το"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Songwriting": {
+                "name": "Σύνθεση τραγουδιού"
+              },
+              "The Big Event": {
+                "name": "Το Μεγάλο Γεγονός"
+              }
+            }
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "Special Fun": {
+            "description_audience": "Ηλικίες 10+ (μετά το Μάθημα 3)"
+          },
+          "SpecialSeries": {
+            "description_audience": "Ηλικίες 10+ (μετά το Μάθημα 3)"
+          },
+          "iceage": {
+            "title": "Play Lab Εποχής των Παγετώνων",
+            "description": "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Εποχής των Παγετώνων!",
+            "description_short": "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Εποχής των Παγετώνων!",
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              }
+            }
+          },
+          "cspunit3temp": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "While Loops": {
+                "name": "Βρόχοι με «Όσο»"
+              }
+            }
+          },
+          "gumball": {
+            "title": "Play Lab Τσιχλόμπαλα",
+            "description": "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!",
+            "description_short": "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!",
+            "stages": {
+              "Gumball Play Lab": {
+                "name": "Play Lab Τσιχλόμπαλα"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα",
+            "description": "Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.",
+            "description_short": "Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Ώρα του Κώδικα 2015"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα",
+            "description": "Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.",
+            "description_short": "Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Ώρα του Κώδικα 2015"
+              }
+            }
+          },
+          "mc": {
+            "title": "Η Ώρα του Κώδικα με το Minecraft",
+            "description": "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft",
+            "description_short": "Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Ώρα του Κώδικα 2015"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "cspunit5": {
+            "description_short": "Προγραμματισμός"
+          },
+          "cspunit4": {
+            "description_short": "Προγραμματισμός"
+          },
+          "AlgebraA": {
+            "description": "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας",
+            "description_short": "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Υπολογιστήρας: Ορισμός Μεταβλητών"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Εκτιμητής: Μπλοκ Αξιολόγησης"
+              },
+              "Eval: Strings and Images": {
+                "name": "Εκτιμητής: Κείμενα και Εικόνες"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Εκτιμητής: Σύνταξη Συμβολαίων"
+              },
+              "Unplugged: Contracts": {
+                "name": "Εκτός Σύνδεσης: Συμβόλαια"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Εκτός Σύνδεσης: Συνταγή Σχεδιασμού"
+              }
+            }
+          },
+          "AlgebraB": {
+            "title": "Η Επιστήμη των υπολογιστών στην Άλγεβρα",
+            "description": "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας",
+            "description_short": "Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας",
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Εκτιμητής: Δυαδικοί Τελεστές"
+              },
+              "Eval: Conditionals": {
+                "name": "Εκτιμητής: Συνθήκες"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια (Μεγάλο Παιχνίδι)"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Εργαστήριο Παιχνιδιού: Δυαδικοί (Μεγάλο Παιχνίδι)"
+              },
+              "Play Lab: Booleans": {
+                "name": "Εργαστήριο Παιχνιδιού: Δυαδικοί"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Εργαστήριο Παιχνιδιού: Ανίχνευση Σύγκρουσης (Μεγάλο Παιχνίδι)"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Εργαστήριο Παιχνιδιού: Ορισμός Μεταβλητών (Μεγάλο Παιχνίδι)"
+              },
+              "Unplugged: Booleans": {
+                "name": "Εκτός Σύνδεσης: Δυαδικοί"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Εκτός Σύνδεσης: Ανίχνευση Σύγκρουσης και Τύπος Απόστασης"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα"
+              }
+            }
+          },
+          "algebraPD1": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              }
+            }
+          },
+          "csp1-2017": {
+            "stages": {
+              "The Internet": {
+                "name": "Το Διαδίκτυο"
+              }
+            }
+          },
+          "csp3-2017": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "Creating Functions": {
+                "name": "Δημιουργούμε Συναρτήσεις"
+              }
+            }
+          },
+          "csp4-2017": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Απλή Κρυπτογράφηση"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "While Loops": {
+                "name": "Βρόχοι με «Όσο»"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "Functions": {
+                "name": "Συναρτήσεις"
+              },
+              "Velocity": {
+                "name": "Ταχύτητα"
+              }
+            }
+          },
+          "TEMP CSD Unit 3": {
+            "description_short": "Προγραμματισμός"
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "Ηλικίες 8+ (μετά το Μάθημα 2)"
+          },
+          "algebraFacilitator": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Μπλοκ Αξιολόγησης"
+              },
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              }
+            }
+          },
+          "allthehiddenthings": {
+            "stages": {
+              "Game Lab": {
+                "name": "Game Lab"
+              }
+            }
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Λειτουργίες Καλλιτέχνη"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "Ηλικίες 8+ (μετά το Μάθημα 2)"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Μέλισσα: Συνθήκες"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Συμβάντα"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Παζλ: Μάθε την μεταφορά και απόθεση"
+              },
+              "Loops": {
+                "name": "Βρόχοι"
+              },
+              "Programming": {
+                "name": "Προγραμματισμός"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Songwriting": {
+                "name": "Σύνθεση τραγουδιού"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Συμβάντα"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Παζλ: Μάθε την μεταφορά και απόθεση"
+              },
+              "Loops": {
+                "name": "Βρόχοι"
+              },
+              "Programming": {
+                "name": "Προγραμματισμός"
+              },
+              "Unspotted Bugs": {
+                "name": "Μη εντοπισμένα bugs"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Καλλιτέχνης: Βρόχοι Για"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Καλλιτέχνης: Συναρτήσεις με Παραμέτρους"
+              },
+              "Artist: Variables": {
+                "name": "Καλλιτέχνης: Μεταβλητές"
+              },
+              "Bee: For Loops": {
+                "name": "Μέλισσα: Βρόχοι Για"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Μέλισσα: Συναρτήσεις με Παραμέτρους"
+              },
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Play Lab: Variables": {
+                "name": "Εργαστήριο Παιχνιδιού: Μεταβλητές"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Καλλιτέχνης: Εμφωλευμένες επαναλήψεις"
+              },
+              "Bee Debugging": {
+                "name": "Εκσφαλμάτωση της Μέλισσας"
+              },
+              "Bounce": {
+                "name": "Αναπήδηση"
+              },
+              "Farmer: While Loops": {
+                "name": "Αγρότης: Βρόχοι όσο"
+              }
+            }
+          },
+          "csd3-2017": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "Velocity": {
+                "name": "Ταχύτητα"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              },
+              "Variables": {
+                "name": "Μεταβλητές"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Πουλάκι"
+              },
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+              },
+              "The Big Event": {
+                "name": "Το Μεγάλο Γεγονός"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Δυαδικό"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Events": {
+                "name": "Συμβάντα"
+              },
+              "For Loops": {
+                "name": "Βρόχοι Για"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              },
+              "Functions with Parameters": {
+                "name": "Συναρτήσεις με παραμέτρους"
+              },
+              "Loops": {
+                "name": "Βρόχοι"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              },
+              "Variables": {
+                "name": "Μεταβλητές"
+              },
+              "While Loops": {
+                "name": "Βρόχοι με «Όσο»"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "πίνακας Δασκάλου"
+              },
+              "The Design Recipe": {
+                "name": "Η Συνταγή του Σχεδιασμού"
+              },
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              }
+            }
+          },
+          "basketball": {
+            "stages": {
+              "Bounce": {
+                "name": "Αναπήδηση"
+              }
+            }
+          },
+          "hoc-encryption": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Απλή Κρυπτογράφηση"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Δυαδικό",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              },
+              "Binary Images": {
+                "name": "Δυαδικές Εικόνες"
+              },
+              "Play Lab": {
+                "name": "Εργαστήριο Παιχνιδιού"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Λίστες"
+              }
+            }
+          },
+          "minecraft": {
+            "description_short": "Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.",
+            "description": "Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft."
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy κώδικα"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Going Places Safely": {
+                "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Your Digital Footprint": {
+                "name": "Το Ψηφιακό σου Αποτύπωμα"
+              }
+            }
+          },
+          "coursec-draft": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+              },
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              },
+              "Your Digital Footprint": {
+                "name": "Το Ψηφιακό σου Αποτύπωμα"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Unplugged: Binary": {
+                "name": "Εκτός Σύνδεσης: Δυαδικοί"
+              },
+              "Artist Binary": {
+                "name": "Δυαδικοί Καλλιτέχνη"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Songwriting with Parameters": {
+                "name": "Γράφουμε τραγούδια με παραμέτρους"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Ώρα του Κώδικα 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Ώρα του Κώδικα 2013"
+              }
+            }
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Δυαδικό"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Καλώς ήρθατε!"
+              },
+              "Wrap-Up": {
+                "name": "συνοψίζω"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Λίστες"
+              },
+              "For Loops": {
+                "name": "Βρόχοι Για"
+              },
+              "Functions with Parameters": {
+                "name": "Συναρτήσεις με παραμέτρους"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Εισαγωγή"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Εισαγωγή"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Αλγόριθμοι στην πραγματικότητα: Αγώνας ζαριών"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Λίστες"
+              },
+              "For Loops": {
+                "name": "Βρόχοι Για"
+              },
+              "Functions with Parameters": {
+                "name": "Συναρτήσεις με παραμέτρους"
+              },
+              "Functions with Parameters_": {
+                "name": "Συναρτήσεις με παραμέτρους"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "Μεταβλητές"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Velocity": {
+                "name": "Ταχύτητα"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Velocity": {
+                "name": "Ταχύτητα"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Λίστες"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "Μεταβλητές"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Velocity": {
+                "name": "Ταχύτητα"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              },
+              "null": {
+                "name": "τίποτε"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              },
+              "Bounce": {
+                "name": "Αναπήδηση"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              }
+            }
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              }
+            }
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+              }
+            }
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              }
+            }
+          },
+          "coursee-2017": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Songwriting with Parameters": {
+                "name": "Γράφουμε τραγούδια με παραμέτρους"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              }
+            }
+          },
+          "coursef-2017": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Songwriting with Parameters": {
+                "name": "Γράφουμε τραγούδια με παραμέτρους"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              }
+            }
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Spelling Bee": {
+                "name": "Η μέλισσα της ορθογραφίας"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Ευχαριστούμε"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Δημιουργούμε Συναρτήσεις"
+              }
+            },
+            "description_short": "Προγραμματισμός"
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Unplugged: Binary": {
+                "name": "Εκτός Σύνδεσης: Δυαδικοί"
+              },
+              "Artist Binary": {
+                "name": "Δυαδικοί Καλλιτέχνη"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Loops in Ice Age": {
+                "name": "Βρόχοι στην Εποχή των Παγετώνων"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Songwriting with Parameters": {
+                "name": "Γράφουμε τραγούδια με παραμέτρους"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Δημιουργούμε Συναρτήσεις"
+              }
+            }
+          },
+          "pwc": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Απλή Κρυπτογράφηση"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Η Ώρα του Κώδικα με το Minecraft"
+              }
+            },
+            "description": "Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα."
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Songwriting with Parameters": {
+                "name": "Γράφουμε τραγούδια με παραμέτρους"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Λίστες"
+              },
+              "For Loops": {
+                "name": "Βρόχοι Για"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "Μεταβλητές"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Velocity": {
+                "name": "Ταχύτητα"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              }
+            },
+            "description_short": "Προγραμματισμός"
+          },
+          "csd3-2018": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "Variables": {
+                "name": "Μεταβλητές"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Velocity": {
+                "name": "Ταχύτητα"
+              },
+              "Functions": {
+                "name": "Συναρτήσεις"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Λίστες"
+              }
+            }
+          },
+          "coursea-2018": {
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Μη εντοπισμένα bugs"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
+              },
+              "Programming: Happy Maps": {
+                "name": "Χαρούμενοι Χάρτες"
+              },
+              "Going Places Safely": {
+                "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              },
+              "Events: The Big Event": {
+                "name": "Το Μεγάλο Γεγονός"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Επαναλαμβανόμαστε"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Functions: Songwriting": {
+                "name": "Σύνθεση τραγουδιού"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              },
+              "Unplugged: Binary": {
+                "name": "Δυαδικές Εικόνες"
+              },
+              "Artist Binary": {
+                "name": "Δυαδικοί Καλλιτέχνη"
+              },
+              "Internet": {
+                "name": "Το Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Relay Programming": {
+                "name": "Προγραμματισμός Ρελέ"
+              }
+            }
+          },
+          "courseb-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Your Digital Footprint": {
+                "name": "Το Ψηφιακό σου Αποτύπωμα"
+              },
+              "Move It, Move It": {
+                "name": "Μετακίνησέ το, Μετακίνησέ το"
+              }
+            }
+          },
+          "coursed-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Unplugged: Binary": {
+                "name": "Δυαδικές Εικόνες"
+              },
+              "Artist Binary": {
+                "name": "Δυαδικοί Καλλιτέχνη"
+              },
+              "Loops in Ice Age": {
+                "name": "Βρόχοι στην Εποχή των Παγετώνων"
+              },
+              "Graph Paper Programming": {
+                "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+              },
+              "Relay Programming": {
+                "name": "Προγραμματισμός Ρελέ"
+              }
+            }
+          },
+          "coursec-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Επαναλαμβανόμαστε"
+              },
+              "Events: The Big Event": {
+                "name": "Το Μεγάλο Γεγονός"
+              },
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              }
+            }
+          },
+          "csd6-2018": {
+            "stages": {
+              "Functions with Parameters": {
+                "name": "Συναρτήσεις με παραμέτρους"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Οι Ρομποτικοί φίλοι μου"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Functions: Songwriting": {
+                "name": "Σύνθεση τραγουδιού"
+              },
+              "Internet": {
+                "name": "Το Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Η Ώρα του Κώδικα με το Minecraft"
+              }
+            }
+          },
+          "coursef-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Οι Ρομποτικοί φίλοι μου"
+              },
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Introduction": {
+                "name": "Εισαγωγή"
+              },
+              "Ice Age Play Lab": {
+                "name": "Play Lab Εποχής των Παγετώνων"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Songwriting with Parameters": {
+                "name": "Γράφουμε τραγούδια με παραμέτρους"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "The Internet": {
+                "name": "Το Διαδίκτυο"
+              }
+            }
+          },
+          "csp3-2018": {
+            "description_short": "Προγραμματισμός",
+            "stages": {
+              "Creating Functions": {
+                "name": "Δημιουργούμε Συναρτήσεις"
+              }
+            }
+          },
+          "csp4-2018": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Απλή Κρυπτογράφηση"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "While Loops": {
+                "name": "Βρόχοι με «Όσο»"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Μη εντοπισμένα bugs"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Spelling Bee": {
+                "name": "Η μέλισσα της ορθογραφίας"
+              },
+              "Move It, Move It": {
+                "name": "Μετακίνησέ το, Μετακίνησέ το"
+              },
+              "Your Digital Footprint": {
+                "name": "Το Ψηφιακό σου Αποτύπωμα"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              }
+            }
+          },
+          "dance": {
+            "stages": {
+              "Dance Party": {
+                "name": "Πάρτι Χορού"
+              }
+            },
+            "title": "Πάρτι Χορού",
+            "description_short": "Παίζουν οι Κέιτι Πέρι, Μαντόνα, Τζέι Μπάλβιν, Σία, Κίθ Ούρμπαν, Κιάρα, και 25 ακόμα!",
+            "description": "Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας."
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Καλλιτέχνης"
+              }
+            }
+          },
+          "aquatic": {
+            "stages": {
+              "Aquatic": {
+                "name": "Υδάτινο"
+              }
+            },
+            "title": "Minecraft: Υδάτινο Ταξίδι",
+            "description_short": "Το Minecraft επιστρέφει με μία ολοκαίνουργια δραστηριότητα για την Ώρα του Κώδικα!"
+          },
+          "dance--draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Πάρτι Χορού"
+              }
+            }
+          },
+          "dance-draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Πάρτι Χορού"
+              }
+            }
+          },
+          "dance-extras": {
+            "title": "Συνεχίστε να Χορεύετε",
+            "description": "Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ."
+          },
+          "coursef-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "The Artist": {
+                "name": "Ο Καλλιτέχνης"
+              }
+            }
+          },
+          "dance-low": {
+            "stages": {
+              "Dance Party": {
+                "name": "Πάρτι Χορού"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Προγραμματισμός Ρελέ"
+              },
+              "Loops in Ice Age": {
+                "name": "Βρόχοι στην Εποχή των Παγετώνων"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Digital Citizenship": {
+                "name": "Ψηφιακή υπηκοότητα"
+              },
+              "Unplugged: Binary": {
+                "name": "Εκτός Σύνδεσης: Δυαδικοί"
+              },
+              "Artist Binary": {
+                "name": "Δυαδικοί Καλλιτέχνη"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Nested Loops": {
+                "name": "Φωλιασμένες Επαναλήψεις"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Conditionals": {
+                "name": "Συνθήκες"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Προγραμματισμός Ρελέ"
+              },
+              "Conditionals with Cards": {
+                "name": "Υποθέσεις με Κάρτες"
+              },
+              "Envelope Variables": {
+                "name": "Μεταβλητές"
+              },
+              "For Loop Fun": {
+                "name": "Διασκέδαση με το Βρόχο Για"
+              },
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              },
+              "Unplugged: Binary": {
+                "name": "Εκτός Σύνδεσης: Δυαδικοί"
+              },
+              "Artist Binary": {
+                "name": "Δυαδικοί Καλλιτέχνη"
+              },
+              "Internet": {
+                "name": "Διαδίκτυο"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "τίποτε"
+              }
+            }
+          },
+          "dance-extras-gallery": {
+            "title": "Συνεχίστε να Χορεύετε",
+            "description": "Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ."
+          },
+          "coursec-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+              },
+              "Binary Bracelets": {
+                "name": "Δυαδικά Βραχιόλια"
+              }
+            }
+          },
+          "gamelab": {
+            "title": "Game Lab"
+          },
+          "coursea-2019": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              },
+              "Going Places Safely": {
+                "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Μετακίνησέ το, Μετακίνησέ το"
+              },
+              "Your Digital Footprint": {
+                "name": "Το Ψηφιακό σου Αποτύπωμα"
+              },
+              "Loops in Ice Age": {
+                "name": "Βρόχοι στην Εποχή των Παγετώνων"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Μετακίνησέ το, Μετακίνησέ το"
+              },
+              "Your Digital Footprint": {
+                "name": "Το Ψηφιακό σου Αποτύπωμα"
+              },
+              "Loops in Ice Age": {
+                "name": "Βρόχοι στην Εποχή των Παγετώνων"
+              },
+              "Spelling Bee": {
+                "name": "Η μέλισσα της ορθογραφίας"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "id": {
+    "data": {
+      "unplugged": {
+        "Unplug1": {
+          "title": "Perkenalan ilmu komputer",
+          "desc": "Pelajaran ini akan memperkenalkan konsep Ilmu Komputer dan menjelaskan pekerjaan seorang Ilmuwan Komputer. Pelajaran ini juga akan memberikan kesempatan kepada para siswa untuk berperan sebagai Ilmuwan Komputer. Di akhir kegiatani, setiap siswa akan mendapatkan pekerjaan rumah untuk mengingat apa yang mereka telah pelajari. Anda mungkin tergoda untuk melewatkan mengajar anak-anak muda kosa kata yang berkaitan dengan pelajaran yang mereka ikuti, tetapi menyajikan mereka dalam cara yang lucu dan menyenangkan sekarang jauh lebih produktif daripada menunggu kesempatan yang lebih lanjut."
+        },
+        "Unplug2": {
+          "title": "Berpikir secara komputasi",
+          "desc": "Hanya dengan kertas dan spidol, para siswa akan belajar 4 langkah berpikir secara komputasi. Setelah pengenalan singkat, para siswa harus dibagi menjadi beberapa kelompok di mana mereka harus memberikan arahan kepada siswa lain untuk menggambar sebuah monster (dari sebuah katalog monster yang telah dipilih). Seluruh tugas harus diuraikan, maka para tim akan menganalisa semua monster di katalog untuk pola-pola, beberapa rincian abstrak dari monster-monster tersebut, kemudian menggunakan informasi itu untuk membuat sebuah algoritma (arahan) kepada tim lain untuk membuat sebuah monster. Para tim kemudian berganti algoritma dengan kelompok lain dan menggambar monster sesuai dengan yang tertera pada algoritma. Apakah gambarnya sesuai dengan yang diinginkan tim awal?"
+        },
+        "Unplug3": {
+          "title": "Pemrograman grafis diatas kertas",
+          "desc": "Dengan memprogram satu sama lain untuk menggambar, murid-murid akan mengerti apakah pemrogaman sebenarnya itu. Kelas kan dimulai dengan mereka saling mengarahkan untuk menggambar persegi berwarna di kertas grafik dalam usaha membuat lagi gambar yang telah ada. Jika masih ada waktu, pelajaran dapat diakhiri dengan gambar-gambar yang mereka buat sendiri."
+        },
+        "Unplug4": {
+          "title": "Algoritma",
+          "desc": "Pelajaran ini mencakup algoritma.  Menggunakan bentuk tangram dan kertas grafik, latihan pertama akan menunjukkan pentingnya membuat instruksi yang sejelas mungkin.  Selanjutnya, kelas akan menjelajahi berapa banyak cara Anda dapat melipat kertas menjadi persegi panjang, mencatat bagaimana beberapa metode dapat memerlukan lipatan yang lebih banyak atau lebih sedikit daripada yang lain."
+        },
+        "Unplug5": {
+          "title": "fungsi",
+          "desc": "Dalam pelajaran ini, siswa akan membuat suncatcher string, manik-manik, dan pesona khusus. Siswa akan mengikuti serangkaian langkah-langkah yang berulang-ulang, kemudian diminta untuk mengidentifikasi set \"kemampuan\" tertentu yang merupakan duplikasi beberapa kali. Setelah keterampilan-keterampilan ditentukan, mereka akan dipanggil dari program utama dan seluruh proses yang indah ciptaan akan disimpan pada selembar kertas. akhir program ini akan diarahkan kepada seluruh kelas, apa pun jenis string, manik-manik dan pesona mereka. Untuk mengefektifkan memungkinkan hal tersebut dilakukan, siswa akan perlu \"abstrak keluar\" rincian dari bahan-bahan mereka dan menciptakan istilah yang Samar untuk kebutuhan individu.Hal ini memanfaatkan penampung yang umum merupakan pengenalan yang indah untuk variabel."
+        },
+        "Unplug6": {
+          "title": "Persyaratan",
+          "desc": "Ini adalah permainan kelas.  Setelah memperkenalkan gagasan conditional, pernyataan if-else (jika-lain dari itu) dan loop (putaran), kelas dapat berlatih bersama-sama menggunakan program yang telah ditulis, setumpuk kartu, dan keberuntungan mengundi."
+        },
+        "Unplug7": {
+          "title": "Menulis lagu",
+          "desc": "Membaca lirik adalah pengalaman yang cukup intuitif untuk sebagian besar siswa.  Kita akan mengambil suatu kegiatan yang sudah umum dan mengubahnya menjadi bahan edukasi dalam menjelaskan dan memanggil fungsi.  Setelah siswa terbiasa dengan proses mendefinisikan panggilan, kita akan menambahkan kemampuan tambahan yang datang bersama dengan melewati parameter dalam pemanggilan fungsi tersebut."
+        },
+        "Unplug8": {
+          "title": "Abstraksi",
+          "desc": "Kegiatan ini menggabungkan rutinitas sehari-hari siswa Anda dan permainan pikiran seperti Mad-Lib untuk membantu kelas Anda belajar tentang efektivitas abstraksi."
+        },
+        "Unplug9": {
+          "title": "Pemrograman relay",
+          "desc": "Pelajaran ini akan mengambil ide dari kegiatan sebelumnya (4. Kertas grafik pemrograman) dan menggunakan keterampilan mereka untuk menekankan pentingnya menyelesaikan program yang beroperasi dalam urutan dan sering memeriksa program untuk \"bug\"."
+        },
+        "Unplug10": {
+          "title": "Internet",
+          "desc": "Dalam pelajaran ini, siswa akan berpura-pura untuk mengalir di dalam Internet, sambil belajar tentang alamat web, IP (Protokol Internet) dan DNS (Sistem Penamaan Domain)."
+        },
+        "Unplug11": {
+          "title": "Penutupan",
+          "desc": "Tahap terakhir dalam seri 20 jam pertama ini akan membantu para siswa mengingat kembali semua momen favorit mereka, sambil memberikan langkah-langkah selanjutnya yang dapat mereka ambil jika tertarik untuk melanjutkan perjalanan ilmu komputer mereka."
+        },
+        "UnplugHappyMaps": {
+          "title": "Pemetaan bahagia",
+          "desc": "Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal."
+        },
+        "MoveIt": {
+          "title": "Pindahkan, pindahkan",
+          "desc": "Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal."
+        },
+        "PlantASeed": {
+          "title": "Algoritma kehidupan nyata: Tanam sebuah Bibit",
+          "desc": "Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting."
+        },
+        "BuildingAFoundation": {
+          "title": "Membangun dasar",
+          "desc": "Para siswa membangun sebuah struktur hanya dengan persediaan yang disediakan. Struktur tersebut harus memenuhi syarat (mencapai ketinggian tertentu atau menanggung berat tertentu), dan para siswa membahas gagasan menjadi gigih saat segala sesuatunya menjadi rumit."
+        },
+        "GettingLoopy": {
+          "title": "Dapat berulang-ulang",
+          "desc": "Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya."
+        },
+        "RelayProgramming": {
+          "title": "Pemrograman bergiliran",
+          "desc": "Siswa menjalankan perlombaan estafet, dimana mereka lari di halaman untuk menulis sebuah algoritma yang didasarkan pada sebuah gambar \"Pemrograman kertas grafik\". Mereka hanya dapat menulis satu instruksi pada satu waktu dan jika ada kesalahan di suatu tempat, mereka harus menghapus semua kembali ke titik itu."
+        },
+        "Conditionals": {
+          "title": "Kondisi",
+          "desc": "Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti \"Jika saya menarik kartu merah, saya mendapatkan satu poin\" dan \"Jika saya menarik kartu hitam, Anda mendapatkan satu poin.\""
+        },
+        "BigEvent": {
+          "title": "Acara besar",
+          "desc": "Para siswa diperkenalkan kepada konsep pemrograman \"peristiwa\", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan."
+        },
+        "GoingPlacesSafely": {
+          "title": "Pergi ke tempat-tempat dengan aman",
+          "desc": "Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet."
+        },
+        "GraphPaperProgramming": {
+          "title": "Pemrograman grafis diatas kertas",
+          "desc": "Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar."
+        },
+        "PaperPlanes": {
+          "title": "Algoritma kehidupan nyata: Pesawat Kertas",
+          "desc": "Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting."
+        },
+        "BinaryBracelets": {
+          "title": "Gelang biner",
+          "desc": "Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara."
+        },
+        "DigitalFootprint": {
+          "title": "Digital Footprint Kamu",
+          "desc": "Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau \"jejak\" yang memiliki konsekuensi."
+        },
+        "ComputationalThinking": {
+          "title": "Berpikir secara komputasi",
+          "desc": "Siswa menggunakan langkah-langkah berpikir komputasi (penguraian, pencocokan pola, abstrak, algoritma) untuk menemukan bagaimana memainkan permainan yang tidak dilengkapi instruksi."
+        },
+        "FunctionalSuncatchers": {
+          "title": "Fungsional pengkap matahari",
+          "desc": "Siswa membuat algoritma dengan variabel dan fungsi (potongan kode yang Anda ingin menggunakan lagi) untuk menciptakan suncatchers menggunakan string dan manik-manik."
+        },
+        "SongwritingParameters": {
+          "title": "Menulis lagu",
+          "desc": "Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi)."
+        },
+        "DiceRace": {
+          "title": "Algoritma kehidupan nyata: Dice Race",
+          "desc": "Pelajaran ini memanggil cara kita menggunakan algoritma dalam kehidupan kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan menuliskan algoritma untuk game balapan dadu."
+        },
+        "Internet": {
+          "title": "Internet",
+          "desc": "Siswa mengirim pesan yang mewakili berbagai metode transmisi internet menggunakan potongan-potongan kertas."
+        },
+        "Crowdsourcing": {
+          "title": "Sumber kerumunan",
+          "desc": "Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih efisien dibandingkan jika siswa berusaha sendiri."
+        },
+        "DigitalCitizenship": {
+          "title": "Kewarganegaraaan Digital",
+          "desc": "Siswa mengeksplorasi perbedaan antara informasi pribadi dan informasi perorangan, yang membedakan faktor aman dan tidak aman untuk berbagi secara online."
+        },
+        "TangramAlgorithms": {
+          "title": "Algoritma tangram",
+          "desc": "Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma. Jika Anda menyimpan sebuah algoritma sederhana, ada banyak cara untuk menggunakannya. Jika Anda ingin memastikan semua orang berakhir dengan hal yang sama, maka algoritma Anda membutuhkan perincian lebih mendalam."
+        },
+        "EnvelopeVariables": {
+          "title": "Sampul Variabel",
+          "desc": "Variabel memungkinkan adanya kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan apakah variabel itu dan cara menggunakan mereka dalam berbagai keadaan."
+        },
+        "MadGlibs": {
+          "title": "Mad Glibs",
+          "desc": "Abstraksi adalah salah satu keterampilan yang paling penting bagi ilmuwan komputer untuk mengerti.  Kegiatan ini akan membuat siswa Anda menganalisis cerita tentang perbedaan sehingga siswa dapat mensarikan mereka. Cerita yang telah disarikan tersebut dijadikan kisah baru yang  asik dan gila."
+        },
+        "ForLoopFun": {
+          "title": "Untuk Loop Fun",
+          "desc": "Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan struktur tambahan yang dibangun langsung di dalam."
+        },
+        "SongwritingWithParameters": {
+          "title": "Parameter penulis lagu",
+          "desc": "Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  "
+        },
+        "BinaryImages": {
+          "title": "gambar Biner",
+          "desc": "Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga."
+        },
+        "VideoGamesCoordinatePlanes": {
+          "title": "Video game dan Bidang Koordinat",
+          "desc": "Ketahuilah bahwa video permainan yang anda suka sebenarnya bagian dari aljabar!   Dalami bagaimana fungsi aljabar dan koordinat pesawat dapat membantu kita mengerti cara kerja permainan video dan kemudian mulailah merencanakan video permainan apa yang akan anda ciptakan."
+        },
+        "Contracts": {
+          "title": "Kontrak, Domain dan Jangkauan",
+          "desc": "Kontrak memberi kita cara untuk memahami dan mendiskusikan fungsi. Dalam pelajaran ini kita akan melihat bagaimana Kontrak dapat membantu kita memahami bahasa pemrograman atau fungsi baru."
+        },
+        "DesignRecipe": {
+          "title": "Resep desain",
+          "desc": "Pada tahap akhir, Para siswa menuliskan contoh dari fungsi-fungsi yang sangat sederhana - namun fungsi-fungsi permintaan tersebut lebih rumit dan melalui pendekatan yang masuk akal. Ini merupakan gambaran rumus yang disusun melalui pendekatan terstruktur untuk dapat menulis fungsi-fungsi termasuk penulisan studi kasus untuk memastikan bahwa fungsi bekerja seperti yang di harapkan."
+        },
+        "Booleans": {
+          "title": "Boolean dan logika",
+          "desc": "Booleans adalah tipe data yang ke-empat dan yang terakhir yang anda akan pelajari dalam kursus ini. Pada kegiatan ini, anda akan mempelajari tentang apa itu booleans, dan bagaimana booleans dapat membantu kita untuk menuliskan fungsi-fungsi secara logika"
+        },
+        "ConditionalsPiecewiseFunctions": {
+          "title": "Kondisional dan fungsi Piecewise",
+          "desc": "Parameter kami lolos ke fungsi menyebabkan output untuk bervariasi berdasarkan pola yang sangat kaku. Misalkan kita ingin parameter dengan beberapa nilai untuk membuat output menggunakan satu pola tetapi nilai-nilai lain untuk menggunakan pola yang berbeda. Di sinilah conditional diperlukan ..."
+        },
+        "CollisionDetection": {
+          "title": "Pendeteksian Benturan dan Teorema Pythagoras",
+          "desc": "Menentukan kapan objek pada layar sentuh merupakan aspek penting dari sebagian besar permainan. Dalam pelajaran ini kita akan melihat bagaimana Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau karakter game) yang menyentuh."
+        },
+        "courseA_unplugged_loops": {
+          "desc": "Dalam pelajaran ini, anda akan mempelajari tentang loop!"
+        },
+        "courseB_unplugged_MRF": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Dalam perjalanan ini, anda akan 'program' teman-teman anda!"
+        },
+        "courseB_unplugged_loopyMRF": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Seperti di \"Teman Robot Saya\", anda akan\"memprogram\" teman-teman anda, tapi kali ini dengan loop!"
+        },
+        "courseC_Unplugged_ScreenOutTheMean": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online."
+        },
+        "courseD_unplugged_digitalCitizenship": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital."
+        },
+        "courseE_unplugged_privateInformation": {
+          "title": "Pendidikan Akal Sehat: Privasi dan Informasi Pribadi ",
+          "desc": "Hari ini anda akan belajar perbedaan antara privasi dan informasi pribadi!"
+        },
+        "courseF_unplugged_powerOfWords": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online."
+        },
+        "deeper learning description": {
+          "desc": "terjemahan hilang: en-US.data.unplugged.desc"
+        },
+        "courseAB_unplugged_plantASeed": {
+          "title": "Algoritma kehidupan nyata: Tanam sebuah Bibit",
+          "desc": "Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting."
+        },
+        "courseA_unplugged_happyMaps": {
+          "title": "Pemetaan bahagia",
+          "desc": "Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal."
+        },
+        "courseA_unplugged_goingPlacesSafely": {
+          "title": "Pergi ke tempat-tempat dengan aman",
+          "desc": "Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet."
+        },
+        "courseABC_unplugged_bigEvent": {
+          "title": "Acara besar",
+          "desc": "Para siswa diperkenalkan kepada konsep pemrograman \"peristiwa\", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan."
+        },
+        "courseB_unplugged_digitalFootprint": {
+          "title": "Digital Footprint Kamu",
+          "desc": "Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau \"jejak\" yang memiliki konsekuensi."
+        },
+        "courseC_unplugged_buildingAFoundation": {
+          "title": "Membangun dasar",
+          "desc": "Para siswa membangun sebuah struktur hanya dengan persediaan yang disediakan. Struktur tersebut harus memenuhi syarat (mencapai ketinggian tertentu atau menanggung berat tertentu), dan para siswa membahas gagasan menjadi gigih saat segala sesuatunya menjadi rumit."
+        },
+        "courseC_unplugged_paperPlanes": {
+          "title": "Algoritma kehidupan nyata: Pesawat Kertas",
+          "desc": "Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting."
+        },
+        "courseC_unplugged_gettingLoopy": {
+          "title": "Dapat berulang-ulang",
+          "desc": "Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya."
+        },
+        "courseC_unplugged_binaryBracelets": {
+          "title": "Gelang biner",
+          "desc": "Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara."
+        },
+        "courseD_unplugged_graphPaperProgramming": {
+          "title": "Pemrograman grafis diatas kertas",
+          "desc": "Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar."
+        },
+        "courseD_unplugged_relayProgramming": {
+          "title": "Pemrograman bergiliran",
+          "desc": "Siswa menjalankan perlombaan estafet, dimana mereka lari di halaman untuk menulis sebuah algoritma yang didasarkan pada sebuah gambar \"Pemrograman kertas grafik\". Mereka hanya dapat menulis satu instruksi pada satu waktu dan jika ada kesalahan di suatu tempat, mereka harus menghapus semua kembali ke titik itu."
+        },
+        "courseD_unplugged_conditionalsCards": {
+          "title": "Bersyarat dengan kartu",
+          "desc": "Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti \"Jika saya menarik kartu merah, saya mendapatkan satu poin\" dan \"Jika saya menarik kartu hitam, Anda mendapatkan satu poin.\""
+        },
+        "courseD_unplugged_binaryImages": {
+          "title": "gambar Biner",
+          "desc": "Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga."
+        },
+        "courseE_unplugged_diceRace": {
+          "desc": "Pelajaran ini memanggil cara kita menggunakan algoritma dalam kehidupan kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan menuliskan algoritma untuk game balapan dadu."
+        },
+        "courseE_unplugged_songwritingParameters": {
+          "title": "Penulisan lagu dengan Parameter",
+          "desc": "Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi)."
+        },
+        "courseE_unplugged_internet": {
+          "title": "Internet",
+          "desc": "Siswa mengirim pesan yang mewakili berbagai metode transmisi internet menggunakan potongan-potongan kertas."
+        },
+        "courseE_unplugged_crowdsourcing": {
+          "title": "Sumber kerumunan",
+          "desc": "Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih efisien dibandingkan jika siswa berusaha sendiri."
+        },
+        "courseE_unplugged_songwriting": {
+          "title": "Menulis lagu",
+          "desc": "Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi)."
+        },
+        "courseF_unplugged_tangrams": {
+          "title": "Algoritma tangram",
+          "desc": "Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma. Jika Anda menyimpan sebuah algoritma sederhana, ada banyak cara untuk menggunakannya. Jika Anda ingin memastikan semua orang berakhir dengan hal yang sama, maka algoritma Anda membutuhkan perincian lebih mendalam."
+        },
+        "courseF_unplugged_envelopeVariables": {
+          "title": "Sampul Variabel",
+          "desc": "Variabel memungkinkan adanya kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan apakah variabel itu dan cara menggunakan mereka dalam berbagai keadaan."
+        },
+        "courseF_unplugged_forLoopFun": {
+          "title": "Untuk Loop Fun",
+          "desc": "Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan struktur tambahan yang dibangun langsung di dalam."
+        },
+        "courseF_unplugged_songwritingParameters": {
+          "title": "Parameter penulis lagu",
+          "desc": "Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  "
+        },
+        "swipeRightPassThrough": {
+          "title": "Sesi Skenario Perekrutan"
+        },
+        "swipeRightPassThrough-test123": {
+          "title": "Sesi Skenario Perekrutan"
+        },
+        "courseB_unplugged_MRF_2018": {
+          "title": "Teman-teman robot saya"
+        },
+        "PlantASeed_2018": {
+          "title": "Algoritma kehidupan nyata: Tanam sebuah Bibit",
+          "desc": "Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting."
+        },
+        "UnplugHappyMaps_2018": {
+          "title": "Pemetaan bahagia",
+          "desc": "Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal."
+        },
+        "GoingPlacesSafely_2018": {
+          "title": "Pergi ke tempat-tempat dengan aman",
+          "desc": "Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet."
+        },
+        "courseA_unplugged_loops_2018": {
+          "desc": "Dalam pelajaran ini, anda akan mempelajari tentang loop!"
+        },
+        "BigEvent_2018": {
+          "title": "Acara besar",
+          "desc": "Para siswa diperkenalkan kepada konsep pemrograman \"peristiwa\", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan."
+        },
+        "GraphPaperProgramming_2018": {
+          "title": "Pemrograman grafis diatas kertas",
+          "desc": "Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar."
+        },
+        "courseD_unplugged_digitalCitizenship_2018": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital."
+        },
+        "courseC_Unplugged_ScreenOutTheMean_2018": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online."
+        },
+        "Conditionals_2018": {
+          "title": "Kondisi",
+          "desc": "Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti \"Jika saya menarik kartu merah, saya mendapatkan satu poin\" dan \"Jika saya menarik kartu hitam, Anda mendapatkan satu poin.\""
+        },
+        "DigitalFootprint_2018": {
+          "title": "Digital Footprint Kamu",
+          "desc": "Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau \"jejak\" yang memiliki konsekuensi."
+        },
+        "BinaryImages_2018": {
+          "title": "gambar Biner",
+          "desc": "Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga."
+        },
+        "PaperPlanes_2018": {
+          "title": "Algoritma kehidupan nyata: Pesawat Kertas",
+          "desc": "Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting."
+        },
+        "GettingLoopy_2018": {
+          "title": "Dapat berulang-ulang",
+          "desc": "Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya."
+        },
+        "BinaryBracelets_2018": {
+          "title": "Gelang biner",
+          "desc": "Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara."
+        },
+        "MoveItMoveIt_2018": {
+          "title": "Gerakkan itu, Gerakkan itu"
+        },
+        "RelayProgramming_2018": {
+          "title": "Pemrograman bergiliran"
+        },
+        "courseB_unplugged_MRF_2019": {
+          "title": "Teman-teman robot saya"
+        },
+        "Conditionals_2019": {
+          "title": "Kondisi",
+          "desc": "Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti \"Jika saya menarik kartu merah, saya mendapatkan satu poin\" dan \"Jika saya menarik kartu hitam, Anda mendapatkan satu poin.\""
+        },
+        "GraphPaperProgramming_2019": {
+          "title": "Pemrograman grafis diatas kertas",
+          "desc": "Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar."
+        },
+        "RelayProgramming_2018_2019": {
+          "title": "Pemrograman bergiliran"
+        },
+        "courseD_unplugged_digitalCitizenship_2019": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital."
+        },
+        "BinaryImages_2019": {
+          "title": "gambar Biner",
+          "desc": "Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga."
+        },
+        "GettingLoopy_2019": {
+          "title": "Dapat berulang-ulang",
+          "desc": "Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya."
+        },
+        "courseC_Unplugged_ScreenOutTheMean_2019": {
+          "title": "Kegiatan tanpa komputer",
+          "desc": "Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online."
+        },
+        "BigEvent_2019": {
+          "title": "Acara besar",
+          "desc": "Para siswa diperkenalkan kepada konsep pemrograman \"peristiwa\", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan."
+        },
+        "BinaryBracelets_2019": {
+          "title": "Gelang biner",
+          "desc": "Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara."
+        },
+        "PaperPlanes_2019": {
+          "title": "Algoritma kehidupan nyata: Pesawat Kertas",
+          "desc": "Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting."
+        },
+        "PlantASeed_2019": {
+          "title": "Algoritma kehidupan nyata: Tanam sebuah Bibit",
+          "desc": "Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting."
+        },
+        "UnplugHappyMaps_2019": {
+          "title": "Pemetaan bahagia",
+          "desc": "Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal."
+        },
+        "GoingPlacesSafely_2019": {
+          "title": "Pergi ke tempat-tempat dengan aman",
+          "desc": "Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet."
+        },
+        "courseA_unplugged_loops_2019": {
+          "desc": "Dalam pelajaran ini, anda akan mempelajari tentang loop!"
+        },
+        "MoveItMoveIt_2019": {
+          "title": "Gerakkan itu, Gerakkan itu"
+        },
+        "DigitalFootprint_2019": {
+          "title": "Digital Footprint Kamu",
+          "desc": "Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau \"jejak\" yang memiliki konsekuensi."
+        }
+      }
+    }
+  }
+}

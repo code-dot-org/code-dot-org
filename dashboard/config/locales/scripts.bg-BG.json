@@ -1,0 +1,3424 @@
+{
+  "bg": {
+    "data": {
+      "script": {
+        "category": {
+          "csf_category_name": "CS основи",
+          "csp_category_name": "\"15-\" 16 CS принципи",
+          "cspexams_category_name": "CS принципи практически тест",
+          "csp17_category_name": "\"15-\" 16 CS принципи",
+          "hoc_category_name": "Hour of Code",
+          "math_category_name": "Математика"
+        },
+        "name": {
+          "course1": {
+            "description": "Курс 1 е предназначен за децата, които се учат да четат, но искат и да създават компютърни програми. Курсът ще им помогне да се научат да си сътрудничат с други ученици, ще подпомогне развитието на умения за решаване на проблеми и взимане на решения при решаване на трудни ситуации. До края на този курс, учениците ще могат да създават собствени персонализирани игри или истории, които могат да споделят. Препоръчва се за K-1/I клас/.",
+            "description_short": "Курс 1 е предназначен за учещи се да четат деца.",
+            "description_audience": "Възраст 4 + (за учещи се да четат)",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Художник - цикли"
+              },
+              "Artist: Sequence": {
+                "name": "Художник: последователност"
+              },
+              "Artist: Shapes": {
+                "name": "Художник: фигури"
+              },
+              "Bee: Loops": {
+                "name": "Пчела: цикли"
+              },
+              "Bee: Sequence": {
+                "name": "Пчела: последователност"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Getting Loopy": {
+                "name": "Да повтаряме"
+              },
+              "Going Places Safely": {
+                "name": "Достигаме безопасно до места"
+              },
+              "Happy Maps": {
+                "name": "Щастливи карти"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Мозайката: Научете за плъзгане и пускане"
+              },
+              "Maze: Debugging": {
+                "name": "Лабиринт: отстраняване на грешки"
+              },
+              "Maze: Loops": {
+                "name": "Лабиринт: цикли"
+              },
+              "Maze: Sequence": {
+                "name": "Лабиринт: последователност"
+              },
+              "Move it, Move it": {
+                "name": "Преместете го, Преместете го"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Spelling Bee": {
+                "name": "Правопис"
+              },
+              "Studio: Create a Story": {
+                "name": "Театрална лаборатория: Създаване на история"
+              },
+              "The Big Event": {
+                "name": "Голямото събитие"
+              }
+            }
+          },
+          "course2": {
+            "title": "Курс 2",
+            "description": "Курс 2 е предназначен за ученици, които могат да четат, но нямат предишен опит в програмирането. В този курс те ще създават програми, за да решават проблемни ситуации и ще разработват интерактивни игри или истории, които ще могат да споделят с приятели. Препоръчва се за 2-5 клас.",
+            "description_short": "Курс 2 е предназначен за ученици, които могат да четат.",
+            "description_audience": "Възраст 6 + (необходими са умения за четене)",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Художник: отстраняване на грешки"
+              },
+              "Artist: Loops": {
+                "name": "Художник - цикли"
+              },
+              "Artist: Nested Loops": {
+                "name": "Художник: въвеждане на цикли"
+              },
+              "Artist: Sequence": {
+                "name": "Художник: последователност"
+              },
+              "Bee: Conditionals": {
+                "name": "Пчела: условия"
+              },
+              "Bee: Debugging": {
+                "name": "Пчела: отстраняване на грешки"
+              },
+              "Bee: Loops": {
+                "name": "Пчела: цикли"
+              },
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Getting Loopy": {
+                "name": "Да повтаряме"
+              },
+              "Graph Paper Programming": {
+                "name": "Програмиране на милиметрова хартия"
+              },
+              "Maze: Loops": {
+                "name": "Лабиринт: цикли"
+              },
+              "Maze: Sequence": {
+                "name": "Лабиринт: последователност"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реални алгоритми: Хартиени самолети"
+              },
+              "Relay programming": {
+                "name": "Щафетно програмиране"
+              },
+              "Studio: Create a Story": {
+                "name": "Театрална лаборатория: Създаване на история"
+              },
+              "The Big Event": {
+                "name": "Голямото събитие"
+              },
+              "Your Digital Footprint": {
+                "name": "Вашите дигитални отпечатъци"
+              }
+            }
+          },
+          "course3": {
+            "title": "Курс 3",
+            "description": "Курс 3 е предназначен за ученици, които са приключили курс 2. Учениците ще задълбочат знанията си в програмирането, за да могат да вземат гъвкави решения при по-сложни проблеми. До края на този курс учениците ще създават интерактивни истории и игри, които да споделят. Препоръчва се за 4-ти и 5-ти клас.",
+            "description_short": "Курс 3 е продължение на курс 2.",
+            "description_audience": "Възраст 8 + (след курс 2)",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              },
+              "Artist: Functions": {
+                "name": "Художник: функции"
+              },
+              "Artist: Nested Loops": {
+                "name": "Художник: въвеждане на цикли"
+              },
+              "Artist: Patterns": {
+                "name": "Художник: модели"
+              },
+              "Bee: Conditionals": {
+                "name": "Пчела: условия"
+              },
+              "Bee: Debugging": {
+                "name": "Пчела: отстраняване на грешки"
+              },
+              "Bee: Functions": {
+                "name": "Пчела: функции"
+              },
+              "Bee: Nested Loops": {
+                "name": "Пчела:  въвеждане на цикли"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Computational Thinking": {
+                "name": "Изчислително мислене"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              },
+              "Dice Race": {
+                "name": "Състезание със зарове"
+              },
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Farmer: While Loops": {
+                "name": "Фермер - цикли \"докато\""
+              },
+              "Functional Suncatchers": {
+                "name": "Функционални ловци на слънце"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Maze": {
+                "name": "Лабиринт"
+              },
+              "Maze: Conditionals": {
+                "name": "Лабиринт: услоия"
+              },
+              "Songwriting": {
+                "name": "Писане на песен"
+              },
+              "Studio: Create a Game": {
+                "name": "Театрална лаборатория - Създаване на игра"
+              },
+              "Studio: Create a Story": {
+                "name": "Театрална лаборатория: Създаване на история"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Театрална лаборатория",
+            "description": "Създайте история или направете игра с Театрална лаборатория!",
+            "description_short": "Създайте история или направете игра с Театрална лаборатория!",
+            "stages": {
+              "Play Lab": {
+                "name": "Театрална лаборатория"
+              }
+            }
+          },
+          "artist": {
+            "title": "Художник",
+            "description": "Начертайте готини картинки и дизайни с художника!",
+            "description_short": "Начертайте готини картинки и дизайни с художника!",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Класически лабиринт",
+            "description": "Опитайте основите на програмирането с героите отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!",
+            "description_short": "Опитайте основите на програмирането с много забавни герои!",
+            "stages": {
+              "Maze": {
+                "name": "Лабиринт"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Код с Анна и Елза",
+            "description": "Нека да използваме кода, за да се присъединим към Анна и Елза, които опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, които след това можете да споделите с приятелите си!",
+            "description_short": "Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "course4": {
+            "title": "Курс 4",
+            "description": "Курс 4 е предназначен за ученици, които са покрили курсове 2 и 3. Учениците ще научат как да се справят с пъзели с повишена сложност, тъй като ще се научат как да съчетават няколко концепции при решаване на предизвикателство. След завършване на този курс, учениците ще могат да създават програми, в които да покажат няколко умения, като цикли и функции с параметри. Препоръчва се за класове 4-8.",
+            "description_short": "Учениците, изучаващи курс 4 трябва да са взели вече курсове 2 и 3.",
+            "description_audience": "Възраст 10 + (след курс 3)",
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              },
+              "Artist Binary": {
+                "name": "Художник: Бинарен код"
+              },
+              "Artist: For Loops": {
+                "name": "Художник - за циклите"
+              },
+              "Artist: Functions": {
+                "name": "Художник: функции"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Художник - Функции с Параметри"
+              },
+              "Artist: Variables": {
+                "name": "Художник: променливи"
+              },
+              "Bee: For Loops": {
+                "name": "Пчела: За повторенията"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Пчела: Функции с параметри"
+              },
+              "Extreme Challenge - Comprehensive": {
+                "name": "Екстремно предизвикателство - подробности"
+              },
+              "Maze and Bee": {
+                "name": "Лабиринт и Пчела"
+              },
+              "Play Lab: For Loops": {
+                "name": "Театрална лаборатория: За циклите"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Театрална лаборатория: Функции с параметри"
+              },
+              "Play Lab: Variables": {
+                "name": "Театрална лаборатория: променливи"
+              },
+              "Super Challenge - For Loops": {
+                "name": "Супер предизвикателство - за циклите"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Супер предизвикателство - функции и параметри"
+              },
+              "Super Challenge - Variables": {
+                "name": "Супер предизвикателство - променливи"
+              },
+              "Unplugged: Binary": {
+                "name": "Ънплъгд: двоичен код"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Ънплъгд: Плик с променливи"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Ънплъгд: Повторение за забавление"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Ънплъгд: Madlibs"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Ънплъгд: Писане на песни с параметри"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Ънплъгд: Танграмите"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Курс 4 предпоставка (необходимо условие)",
+            "description": "Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.",
+            "description_short": "Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Художник: функции"
+              },
+              "Artist: Loops": {
+                "name": "Художник - цикли"
+              },
+              "Artist: Nested Loops": {
+                "name": "Художник: въвеждане на цикли"
+              },
+              "Artist: Sequence": {
+                "name": "Художник: последователност"
+              },
+              "Bee: Conditionals": {
+                "name": "Пчела: условия"
+              },
+              "Bee: Debugging": {
+                "name": "Пчела: отстраняване на грешки"
+              },
+              "Bee: Nested Loops": {
+                "name": "Пчела:  въвеждане на цикли"
+              },
+              "Farmer: While Loops": {
+                "name": "Фермер - цикли \"докато\""
+              },
+              "Maze: Sequence": {
+                "name": "Лабиринт: последователност"
+              }
+            }
+          },
+          "usability": {
+            "title": "Тест за приложимост",
+            "description": "Селектирани нива от курс 4 нива за тестване на приложимостта.",
+            "stages": {
+              "Binary": {
+                "name": "Двоичен код"
+              },
+              "For Loops": {
+                "name": "За циклите"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Функции и функции с параметри"
+              },
+              "Intro": {
+                "name": "Въведение"
+              },
+              "Variables": {
+                "name": "Променливи"
+              }
+            }
+          },
+          "algebra": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Научете функционално програмиране чрез алгебра",
+            "description_short": "Научете функционално програмиране чрез алгебра",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Определяне на променливи и заместване"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Блокове за оценка и аритметични изрази"
+              },
+              "Eval: Boolean Operators": {
+                "name": "Booleans оператори"
+              },
+              "Eval: Conditionals": {
+                "name": "Условия"
+              },
+              "Eval: Defining Functions": {
+                "name": "Композитни функции"
+              },
+              "Eval: Functions": {
+                "name": "Решаване на проблеми с дизайна рецепта"
+              },
+              "Eval: Strings and Images": {
+                "name": "Стрингове и изображения"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Писане на Договори"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Голямата игра - анимация"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Голямата игра - Booleans"
+              },
+              "Play Lab: Booleans": {
+                "name": "Сам, прилепът"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Голямата игра - Collision Detection"
+              },
+              "Play Lab: Defining Functions": {
+                "name": "Ракетна височина"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Голямата игра - променливи"
+              },
+              "Unplugged: Booleans": {
+                "name": "Ънплъгд: Booleans и логика"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Ънплъгд: Collision Detection и Питагоровата теорема"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Ънплъгд: Условия и Piecewise функции"
+              },
+              "Unplugged: Contracts": {
+                "name": "Ънплъгд: Договори, домейн и обхват"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Ънплъгд: Напиши рецепта"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Ънплъгд: видео игрите и координатните системи"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Дисни Инфинити Игрална лаборатория",
+            "description": "Използвайте \"Игрална лаборатория\", за да създадете история или игра с участието на героите от Дисни Инфинити.",
+            "description_short": "Използвайте \"Игрална лаборатория\", за да създадете история или игра с участието на героите от Дисни Инфинити.",
+            "stages": {
+              "Infinity": {
+                "name": "Инфинити"
+              }
+            }
+          },
+          "algebrademo": {
+            "title": "Алгебра: демо",
+            "description": "Една шепа  пъзели, за демонстриране на  средата и езика за програмиране, които се използвт в Code.org CS и в алгебрата",
+            "description_short": "Една шепа  пъзели, за демонстриране на  средата и езика за програмиране, които се използвт в Code.org CS и в алгебрата",
+            "stages": {
+              "Defining Simple Functions": {
+                "name": "Дефиниране на прости функции"
+              },
+              "Defining Variables": {
+                "name": "Дефиниране на променливите"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Making Pictures": {
+                "name": "Правене на снимки"
+              },
+              "The Design Recipe": {
+                "name": "Рецепта за дизайн"
+              }
+            }
+          },
+          "K5PD": {
+            "title": "K5 Професионално развитие",
+            "description": "K5 курсове за професионално развитие",
+            "description_short": "K5 курсове за професионално развитие",
+            "stages": {
+              "Computer Science Pedagogy": {
+                "name": "Педагогика на Компютърните науки"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "K-5 Courses": {
+                "name": "Курсове за K-5"
+              },
+              "Next Steps": {
+                "name": "Следващи стъпки"
+              },
+              "Programming Concept: Conditionals": {
+                "name": "Концепции на програмирането: Условия"
+              },
+              "Programming Concept: Events": {
+                "name": "Концепции на програмирането: събития"
+              },
+              "Programming Concept: Functions": {
+                "name": "Концепции на програмирането: функции"
+              },
+              "Programming Concept: Loops": {
+                "name": "Концепции на програмирането: Цикли"
+              },
+              "Reflection": {
+                "name": "Рефлексия"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "Unplugged lessons": {
+                "name": "Уроци без компютър"
+              },
+              "Writing computer programs": {
+                "name": "Писане на компютърни програми"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Интернет симулатор",
+            "description": "Научете как работи Интернет",
+            "description_short": "Научете как работи Интернет",
+            "stages": {
+              "Broadcasting messages": {
+                "name": "Съобщения за излъчване"
+              },
+              "Internet Simulator Freeplay": {
+                "name": "Интернет симулатор ФрийПлей"
+              },
+              "Manual DNS": {
+                "name": "Ръчен DNS"
+              },
+              "Overview and Setup Instructions": {
+                "name": "Преглед и инструкции за инсталиране"
+              },
+              "Packets and Reliability": {
+                "name": "Пакети и надеждност"
+              },
+              "Peer to Peer - Sending Ascii": {
+                "name": "Peer to Peer - изпращане на Ascii"
+              },
+              "Peer to Peer - Sending Bits on a Shared Wire": {
+                "name": "Peer to Peer - изпращане на битове на споделена връзка"
+              },
+              "Routers and addresses": {
+                "name": "Маршрутизатори и адреси"
+              }
+            }
+          },
+          "pixelation": {
+            "title": "Пикселизация",
+            "description": "Създаване на изображения с битове и байтове.",
+            "description_short": "Създаване на изображения с битове и байтове.",
+            "stages": {
+              "Black & White Pixelation Freeplay": {
+                "name": "Черно & бяла пикселизация"
+              },
+              "Black & White Pixelation Tutorial": {
+                "name": "Черно & бяла пикселизация урок"
+              },
+              "Color Pixelation Examples": {
+                "name": "Цветна пикселизация примери"
+              }
+            }
+          },
+          "20-hour": {
+            "title": "20-часов въвеждащ курс",
+            "description": "Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3. Курсът е предназначен най-вече за използване  от  учениците на възраст 10 -18 години. Проверете курсове 2-4 за по-задълбочено обучение.",
+            "description_short": "Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3.",
+            "description_audience": "Възраст 10 + (след курс 3)",
+            "stages": {
+              "Abstraction": {
+                "name": "Абстракция"
+              },
+              "Algorithms": {
+                "name": "Алгоритми"
+              },
+              "Computational Thinking": {
+                "name": "Изчислително мислене"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Functions": {
+                "name": "Функции"
+              },
+              "Graph Paper Programming": {
+                "name": "Програмиране на милиметрова хартия"
+              },
+              "Introduction to Computer Science": {
+                "name": "Въведение в компютърните науки"
+              },
+              "Relay Programming": {
+                "name": "Повтори програмирането"
+              },
+              "Song Writing": {
+                "name": "Писане на песен"
+              },
+              "The Artist": {
+                "name": "Художникът"
+              },
+              "The Artist 2": {
+                "name": "Художникът 2"
+              },
+              "The Artist 3": {
+                "name": "Художникът 3"
+              },
+              "The Artist 4": {
+                "name": "Художникът 4"
+              },
+              "The Artist 5": {
+                "name": "Художникът 5"
+              },
+              "The Farmer": {
+                "name": "Фермерът"
+              },
+              "The Farmer 2": {
+                "name": "Фермерът 2"
+              },
+              "The Farmer 3": {
+                "name": "Фермерът 3"
+              },
+              "The Internet": {
+                "name": "Интернет"
+              },
+              "The Maze": {
+                "name": "Лабиринт"
+              },
+              "Wrap-up": {
+                "name": "Изводи"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Редактиране на кода",
+            "description": "Редактиране на кода",
+            "description_short": "Редактиране на кода",
+            "stages": {
+              "Applab": {
+                "name": "Лаборатория за приложения"
+              },
+              "Play Lab": {
+                "name": "Театрална лаборатория"
+              },
+              "The Artist": {
+                "name": "Художникът"
+              },
+              "The Maze": {
+                "name": "Лабиринт"
+              }
+            }
+          },
+          "events": {
+            "title": "Събития",
+            "description": "Събития",
+            "description_short": "Събития",
+            "stages": {
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Calc": {
+                "name": "Calc"
+              },
+              "Eval": {
+                "name": "Оценяване"
+              },
+              "Studio": {
+                "name": "Студио"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Flappy код",
+            "description": "Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!",
+            "description_short": "Напишете своя собствена Flappy игра по-малко от 10 минути!",
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy код"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Мозайка",
+            "description": "Опитайте нашите уроци тип \"мозайка\"",
+            "description_short": "Опитайте нашите уроци тип \"мозайка\"",
+            "stages": {
+              "Jigsaw": {
+                "name": "Мозайка"
+              }
+            }
+          },
+          "step": {
+            "title": "Стъпка",
+            "description": "Стъпка от урока",
+            "description_short": "Стъпка от урока",
+            "stages": {
+              "Step": {
+                "name": "Стъпка"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Час на кодирането 2013",
+            "description": "Опитайте основите на компютърните науки с герои от Angry Birds и Plants vs. Zombies!",
+            "description_short": "Опитайте основите на програмирането с много забавни герои!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Час на кодирането 2013"
+              }
+            }
+          },
+          "CodeStudioPuzzleChallenge": {
+            "title": "Код студио: Пъзел предизвикателство",
+            "description": "Опитайте тези забавни пъзели за кодиране. Дайте най-доброто от себе си!",
+            "description_short": "Предизвикай себе си!",
+            "stages": {
+              "Puzzles": {
+                "name": "Пъзели"
+              }
+            }
+          },
+          "Tutorial Video - Code Studio Puzzle Challenge": {
+            "title": "Урок - Студио по кодиране: пъзел предизвикателство",
+            "description": "Опитайте тези забавни пъзели за кодиране. Дайте най-доброто от себе си!",
+            "description_short": "Предизвикай себе си!",
+            "stages": {
+              "Puzzles": {
+                "name": "Пъзели"
+              }
+            }
+          },
+          "cspunit1": {
+            "title": "CSP Част 1 - Дигитална информация",
+            "description": "Тази част изследва техническите предизвикателства и въпроси, които възникват от необходимостта да се въвежда цифровата информация в компютрите, и как се предава тя между хората и изчислителните устройства.",
+            "description_short": "В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.",
+            "stages": {
+              "Binary Numbers": {
+                "name": "Бинарни числа"
+              },
+              "Encoding B&W Images": {
+                "name": "Кодиране черно-бели изображения"
+              },
+              "Encoding Color Images": {
+                "name": "Кодиране на цветни изображения"
+              },
+              "Encoding Numbers in the Real World": {
+                "name": "Кодиране на числата в реалния свят"
+              },
+              "Encoding and Sending Text": {
+                "name": "Кодиране и изпращане на текст"
+              },
+              "Number Systems": {
+                "name": "Бройни системи"
+              },
+              "Sending Binary Messages": {
+                "name": "Изпращане на бинарни съобщения"
+              },
+              "Sending Bits in the Real World": {
+                "name": "Изпращане на битове в реалния свят"
+              },
+              "Sending Formatted Text": {
+                "name": "Изпращане на форматиран текст"
+              },
+              "Sending Numbers": {
+                "name": "Изпращане на числа"
+              },
+              "Text Compression": {
+                "name": "Компресия на текста"
+              }
+            }
+          },
+          "algebraPD": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "stages": {
+              "Course Overview": {
+                "name": "Преглед на курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Защо компютърните науки са част от алгебрата"
+              }
+            }
+          },
+          "algPDmiami": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Научи алгебра чрез функционално програмиране",
+            "description_short": "Научи алгебра чрез функционално програмиране",
+            "stages": {
+              "Booleans": {
+                "name": "Booleans"
+              },
+              "Design Recipe Practice": {
+                "name": "Дизайн на рецепта - практика"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Luigi's Pizza": {
+                "name": "Пицата на Луиджи"
+              },
+              "Rocket-Height": {
+                "name": "Ракета - височина"
+              },
+              "Sam the Bat": {
+                "name": "Сам, прилепът"
+              },
+              "Strings and Images": {
+                "name": "Стрингове и изображения"
+              },
+              "Your Game - Animation": {
+                "name": "Вашата игра - анимация"
+              },
+              "Your Game - Booleans": {
+                "name": "Вашата игра - Booleans"
+              },
+              "Your Game - Collision Detection": {
+                "name": "Вашата игра - Collision Detection"
+              },
+              "Your Game - Player Movement": {
+                "name": "Вашата игра - движение на героя"
+              }
+            }
+          },
+          "text-compression": {
+            "title": "Компресия на текста",
+            "description": "Компресиране на текст чрез идентифициране на повтарящи се модели.",
+            "description_short": "Компресиране на текст чрез идентифициране на повтарящи се модели.",
+            "stages": {
+              "Text Compression": {
+                "name": "Компресия на текста"
+              }
+            }
+          },
+          "CSPPD": {
+            "title": " PD принципите на Компютърни науки",
+            "description": "Фаза 1: Онлайн въведение в ECP",
+            "description_short": "Фаза 1: Онлайн въведение в ECP",
+            "stages": {
+              "Exploring CSP Instructional Materials": {
+                "name": "Проучване на CSP учебни материали"
+              },
+              "Growth Mindset": {
+                "name": "Нагласи за разтеж"
+              },
+              "Impact of Computer Science": {
+                "name": "Въздействието на компютърните науки"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              },
+              "What is CSP?": {
+                "name": "Какво е CSP?"
+              }
+            }
+          },
+          "CSPLessonSamples": {
+            "title": "CSP пробни уроци",
+            "stages": {
+              "Lesson 14": {
+                "name": "Урок 14"
+              },
+              "Lesson 15": {
+                "name": "Урок 15"
+              }
+            }
+          },
+          "ECSPD": {
+            "title": "Проучване на компютърни науки PD",
+            "description": "Онлайн въведение в ECS",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "stages": {
+              "Growth Mindset": {
+                "name": "Нагласи за разтеж"
+              },
+              "Impact of Computer Science": {
+                "name": "Въздействието на компютърните науки"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              },
+              "What is ECS?": {
+                "name": "Какво е ECS?"
+              }
+            }
+          },
+          "sciencePD": {
+            "title": "Компютърни науки в науката PD",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "stages": {
+              "Agent Based Modeling of Complex Adaptive Systems": {
+                "name": "Моделиране на базата на сложни адаптивни системи"
+              },
+              "Computational Thinking And The Framework For K-12 Science Education": {
+                "name": "Изчислително мислене и рамката за К-12 образование по науки"
+              },
+              "Dispositions and Classroom Culture": {
+                "name": "Мерки и култура в класната стая"
+              },
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Въведение в сложни адаптивни системи"
+              },
+              "Introduction to Computational Science": {
+                "name": "Въведение в компютърната наука"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Introduction to StarLogo Nova": {
+                "name": "Въведение в StarLogo Nova"
+              },
+              "Post-Survey": {
+                "name": "След изследването"
+              },
+              "The Tutorial": {
+                "name": "Урок"
+              },
+              "Using Computer Models in Science": {
+                "name": "Използване на компютърни модели в науката"
+              },
+              "Using Models in the Classroom": {
+                "name": "Използване на модели в класната стая"
+              },
+              "What to Expect": {
+                "name": "Какво да очаквате"
+              }
+            }
+          },
+          "rbo-reference": {
+            "stages": {
+              "reference": {
+                "name": "препратка"
+              }
+            }
+          },
+          "Test Wednesday": {
+            "stages": {
+              "PDK5 Intro": {
+                "name": "PDK5 интро"
+              }
+            }
+          },
+          "cspunit3": {
+            "title": "CSP блок 3 - програмиране",
+            "description": "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.",
+            "description_short": "В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.",
+            "stages": {
+              "APIs and Function Parameters": {
+                "name": "API и параметри на функцията"
+              },
+              "Beyond Buttons Toward Apps": {
+                "name": "Отвъд бутоните на приложенията"
+              },
+              "Creating Functions": {
+                "name": "Създаване на функции"
+              },
+              "Creating functions with Parameters": {
+                "name": "Създаване на функции с параметри"
+              },
+              "Events Unplugged": {
+                "name": "Ънплъгд събития"
+              },
+              "Looping and Random Numbers": {
+                "name": "Цикли и случайни числа"
+              },
+              "The Need For Programming Languages": {
+                "name": "Нуждата от програмни езици"
+              },
+              "Using Simple Commands": {
+                "name": "Използване на прости команди"
+              },
+              "While Loops": {
+                "name": "Докато цикли"
+              }
+            }
+          },
+          "algebraPD3": {
+            "title": "Фаза 3 PD",
+            "description": "Научи алгебра чрез блок базирано функционално програмиране",
+            "description_short": "Научи алгебра чрез блок базирано функционално програмиране",
+            "stages": {
+              "Computer Science Pedagogy": {
+                "name": "Педагогика на Компютърните науки"
+              },
+              "Course Overview": {
+                "name": "Преглед на курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Next Steps": {
+                "name": "Следващи стъпки"
+              },
+              "Strings and Images": {
+                "name": "Стрингове и изображения"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "The Big Game": {
+                "name": "Голямата игра"
+              },
+              "The Design Recipe": {
+                "name": "Рецепта за дизайн"
+              }
+            }
+          },
+          "ECSPD-NexTech": {
+            "title": "Проучване на компютърни науки PD",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "logo_image": "nextech_logo.png",
+            "stages": {
+              "Growth Mindset": {
+                "name": "Нагласи за разтеж"
+              },
+              "Impact of Computer Science": {
+                "name": "Въздействието на компютърните науки"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              },
+              "What is ECS?": {
+                "name": "Какво е ECS?"
+              }
+            }
+          },
+          "ECSPD-iZone": {
+            "title": "Проучване на компютърни науки PD",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "logo_image": "izone_logo.png",
+            "stages": {
+              "Growth Mindset": {
+                "name": "Нагласи за разтеж"
+              },
+              "Impact of Computer Science": {
+                "name": "Въздействието на компютърните науки"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              },
+              "What is ECS?": {
+                "name": "Какво е ECS?"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "logo_image": "nextech_logo.png",
+            "stages": {
+              "Course Overview": {
+                "name": "Преглед на курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Защо компютърните науки са част от алгебрата"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "logo_image": "izone_logo.png",
+            "stages": {
+              "Course Overview": {
+                "name": "Преглед на курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Защо компютърните науки са част от алгебрата"
+              }
+            }
+          },
+          "sciencePD-NexTech": {
+            "title": "Компютърни науки в науката PD",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "logo_image": "nextech_logo.png",
+            "stages": {
+              "Agent Based Modeling of Complex Adaptive Systems": {
+                "name": "Моделиране на базата на сложни адаптивни системи"
+              },
+              "Computational Thinking And The Framework For K-12 Science Education": {
+                "name": "Изчислително мислене и рамката за К-12 образование по науки"
+              },
+              "Dispositions and Classroom Culture": {
+                "name": "Мерки и култура в класната стая"
+              },
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Въведение в сложни адаптивни системи"
+              },
+              "Introduction to Computational Science": {
+                "name": "Въведение в компютърната наука"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Introduction to StarLogo Nova": {
+                "name": "Въведение в StarLogo Nova"
+              },
+              "Post-Survey": {
+                "name": "След изследването"
+              },
+              "The Tutorial": {
+                "name": "Урок"
+              },
+              "Using Computer Models in Science": {
+                "name": "Използване на компютърни модели в науката"
+              },
+              "Using Models in the Classroom": {
+                "name": "Използване на модели в класната стая"
+              },
+              "What to Expect": {
+                "name": "Какво да очаквате"
+              }
+            }
+          },
+          "sciencePD-iZone": {
+            "title": "Компютърни науки в науката PD",
+            "description": "Фаза 1: Представяне онлайн",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "logo_image": "izone_logo.png",
+            "stages": {
+              "Agent Based Modeling of Complex Adaptive Systems": {
+                "name": "Моделиране на базата на сложни адаптивни системи"
+              },
+              "Computational Thinking And The Framework For K-12 Science Education": {
+                "name": "Изчислително мислене и рамката за К-12 образование по науки"
+              },
+              "Dispositions and Classroom Culture": {
+                "name": "Мерки и култура в класната стая"
+              },
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Въведение в сложни адаптивни системи"
+              },
+              "Introduction to Computational Science": {
+                "name": "Въведение в компютърната наука"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Introduction to StarLogo Nova": {
+                "name": "Въведение в StarLogo Nova"
+              },
+              "Post-Survey": {
+                "name": "След изследването"
+              },
+              "The Tutorial": {
+                "name": "Урок"
+              },
+              "Using Computer Models in Science": {
+                "name": "Използване на компютърни модели в науката"
+              },
+              "Using Models in the Classroom": {
+                "name": "Използване на модели в класната стая"
+              },
+              "What to Expect": {
+                "name": "Какво да очаквате"
+              }
+            }
+          },
+          "sciencePD2": {
+            "title": "Компютърни науки в науката PD",
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "sciencePD3": {
+            "title": "Компютърни науки в науката PD"
+          },
+          "cspunit2": {
+            "description_short": "В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.",
+            "stages": {
+              "The Internet": {
+                "name": "Интернет"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "Booleans": {
+                "name": "Booleans"
+              },
+              "Defining Variables": {
+                "name": "Дефиниране на променливите"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Free Play": {
+                "name": "Свободна игра"
+              },
+              "Luigi's Pizza": {
+                "name": "Пицата на Луиджи"
+              },
+              "Rocket-Height": {
+                "name": "Ракета - височина"
+              },
+              "Sam the Bat": {
+                "name": "Сам, прилепът"
+              },
+              "Strings and Images": {
+                "name": "Стрингове и изображения"
+              },
+              "The Design Recipe": {
+                "name": "Рецепта за дизайн"
+              }
+            }
+          },
+          "allthethings": {
+            "title": "Всички неща!",
+            "description": "Всички типове нива за тестване на потребителски интерфейс. Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата работят само ако сте в профила си).",
+            "description_short": "Всички типове нива за тестване на потребителски интерфейс",
+            "stages": {
+              "AppLab": {
+                "name": "Лаборатория за приложения"
+              },
+              "Artist": {
+                "name": "Художник"
+              },
+              "Bee": {
+                "name": "Пчела"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Free Response": {
+                "name": "Свободен отговор"
+              },
+              "Jigsaw": {
+                "name": "Мозайка"
+              },
+              "Match": {
+                "name": "свързване"
+              },
+              "Maze": {
+                "name": "Лабиринт"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Мулти"
+              },
+              "Odometer": {
+                "name": "Километраж"
+              },
+              "Online PD": {
+                "name": "Онлайн PD"
+              },
+              "Pixelation": {
+                "name": "Пикселизация"
+              },
+              "Studio": {
+                "name": "Студио"
+              },
+              "Text Compression": {
+                "name": "Компресия на текста"
+              },
+              "Web Lab": {
+                "name": "Web Lab"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "Booleans": {
+                "name": "Booleans"
+              },
+              "Course Overview": {
+                "name": "Преглед на курса"
+              },
+              "Defining Functions": {
+                "name": "Дефиниране на функции"
+              },
+              "Defining Variables": {
+                "name": "Дефиниране на променливите"
+              },
+              "Eval: Conditionals": {
+                "name": "Оценка: Условия"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Next Steps": {
+                "name": "Следващи стъпки"
+              },
+              "Rocket-Height": {
+                "name": "Ракета - височина"
+              },
+              "Strings and Images": {
+                "name": "Стрингове и изображения"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "Writing Contracts": {
+                "name": "Писане на Договори"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "Лаборатория за приложения"
+              },
+              "Internet Simulator": {
+                "name": "Интернет симулатор"
+              },
+              "Welcome!": {
+                "name": "Добре дошли!"
+              }
+            }
+          },
+          "K5-OnlinePD": {
+            "stages": {
+              "Computer Science Fundamentals": {
+                "name": "Основи на компютърните науки"
+              },
+              "Next Steps": {
+                "name": "Следващи стъпки"
+              }
+            }
+          },
+          "ECSPD2": {
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-up": {
+                "name": "Изводи"
+              }
+            }
+          },
+          "algebraPD2": {
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "The Design Recipe": {
+                "name": "Рецепта за дизайн"
+              },
+              "Welcome!": {
+                "name": "Добре дошли!"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "science-PD2": {
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "Equity-OnlinePD": {
+            "stages": {
+              "Next Steps": {
+                "name": "Следващи стъпки"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-up": {
+                "name": "Изводи"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "description": "Фаза 2 онлайн: Смесено лятно учене",
+            "description_short": "Фаза 2 онлайн: Смесено лятно учене",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-up": {
+                "name": "Изводи"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Getting Loopy": {
+                "name": "Да повтаряме"
+              },
+              "Graph Paper Programming": {
+                "name": "Програмиране на милиметрова хартия"
+              },
+              "Happy Maps": {
+                "name": "Щастливи карти"
+              },
+              "Move it, Move it": {
+                "name": "Преместете го, Преместете го"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Songwriting": {
+                "name": "Писане на песен"
+              },
+              "The Big Event": {
+                "name": "Голямото събитие"
+              }
+            }
+          },
+          "algebraPD3a": {
+            "title": "Компютърни науки в алгебрата"
+          },
+          "ECSPD3-Unit2": {
+            "stages": {
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              }
+            }
+          },
+          "ECSPD3-Unit3": {
+            "stages": {
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              }
+            }
+          },
+          "ECSPD3-Unit4": {
+            "stages": {
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              }
+            }
+          },
+          "cspunit4draft": {
+            "description_short": "Данни",
+            "stages": {
+              "Permanent Data Storage and Clicker Completion": {
+                "name": "Постоянно съхраняване на данни и кликър: завършване"
+              }
+            }
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "algebraPD3b": {
+            "title": "Компютърни науки в алгебрата"
+          },
+          "Special Fun": {
+            "description_audience": "Възраст 10 + (след курс 3)"
+          },
+          "SpecialSeries": {
+            "description_audience": "Възраст 10 + (след курс 3)"
+          },
+          "iceage": {
+            "title": "Ледена епоха: игрална лаборатория",
+            "description": "Създай история или си направи игра с Ледена епоха игрална лаборатория!",
+            "description_short": "Създай история или си направи игра с Ледена епоха игрална лаборатория!",
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              }
+            }
+          },
+          "cspunit3temp": {
+            "title": "CSP блок 3 - програмиране",
+            "description": "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.",
+            "description_short": "Програмиране",
+            "stages": {
+              "While Loops": {
+                "name": "Докато цикли"
+              }
+            }
+          },
+          "gumball": {
+            "title": "Гъмбол- игрална лаборатория",
+            "description": "Създай история или си направи игра с Гъмбол в игралната лаборатория!",
+            "description_short": "Създай история или си направи игра с Гъмбол в игралната лаборатория!",
+            "stages": {
+              "Gumball Play Lab": {
+                "name": "Гъмбол- игрална лаборатория"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Междузвездни войни: Изграждане на галактика с код",
+            "description": "Научете се да програмирате дроиди и създайте своя собствена игра \"Междузвездни войни\" в галактиката далече, далече.",
+            "description_short": "Научете се да програмирате дроиди и създайте своя собствена игра \"Междузвездни войни\" в галактиката далече, далече.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Часът на кодирането 2015"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Междузвездни войни: Изграждане на галактика с код",
+            "description": "Научете се да програмирате дроиди и създайте своя собствена игра \"Междузвездни войни\" в галактиката далече, далече.",
+            "description_short": "Научете се да програмирате дроиди и създайте своя собствена игра \"Междузвездни войни\" в галактиката далече, далече.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Часът на кодирането 2015"
+              }
+            }
+          },
+          "mc": {
+            "title": "Minecraft Hour of Code",
+            "description": "Използвайте блокове с код, за да преведете Steve или Alex през приключението в този Minecraft свят",
+            "description_short": "Изследвайте Minecraft света чрез код",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Часът на кодирането 2015"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "cspunit5": {
+            "description_short": "В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения."
+          },
+          "cspunit4": {
+            "description_short": "В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения."
+          },
+          "AlgebraA": {
+            "description": "Научете функционално програмиране чрез алгебра",
+            "description_short": "Научете функционално програмиране чрез алгебра",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Изчисление: Определяне на променливите"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Калколиране: Оценка блокове"
+              },
+              "Eval: Defining Functions": {
+                "name": "Оценка: Дефиниране на функции"
+              },
+              "Eval: Functions": {
+                "name": "Оценка: функции"
+              },
+              "Eval: Strings and Images": {
+                "name": "Оценка: Низове и изображения"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Оценка: Писане на договори"
+              },
+              "Play Lab: Defining Functions": {
+                "name": "Театрална лаборатория: Дефиниране на функции"
+              },
+              "Unplugged: Contracts": {
+                "name": "Ънплъгд: договори"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Ънплъгд: Напиши рецепта"
+              }
+            }
+          },
+          "AlgebraB": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Научете функционално програмиране чрез алгебра",
+            "description_short": "Научете функционално програмиране чрез алгебра",
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Оценка: Булеви оператори"
+              },
+              "Eval: Conditionals": {
+                "name": "Оценка: Условия"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Игрална лаборатория: Анимация (голямата игра)"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Игрална лаборатория: Boolean(голямата игра)"
+              },
+              "Play Lab: Booleans": {
+                "name": "Театрална лаборатория: Booleans"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Игрална лаборатория: Collision Detection (голямата игра)"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Игрална лаборатория: Дефиниране на променливи (голямата игра)"
+              },
+              "Unplugged: Booleans": {
+                "name": "Ънплъгд: Booleans"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Ънплъгд: Collision Detection и формула за разстояние"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Ънплъгд: Условия и Piecewise функции"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Ънплъгд: видео игрите и координатните системи"
+              }
+            }
+          },
+          "algebraPD1": {
+            "title": "Компютърни науки в алгебрата",
+            "description": "Научи алгебра чрез функционално програмиране",
+            "description_short": "Фаза 1: Представяне онлайн",
+            "stages": {
+              "Course Overview": {
+                "name": "Преглед на курса"
+              },
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Preparing for in-person PD": {
+                "name": "Подготовка за лично PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Защо компютърните науки са част от алгебрата"
+              }
+            }
+          },
+          "algebraPD3c": {
+            "title": "Компютърни науки в алгебрата"
+          },
+          "csp1-2017": {
+            "stages": {
+              "Binary Numbers": {
+                "name": "Бинарни числа"
+              },
+              "Number Systems": {
+                "name": "Бройни системи"
+              },
+              "Sending Binary Messages": {
+                "name": "Изпращане на бинарни съобщения"
+              },
+              "Sending Numbers": {
+                "name": "Изпращане на числа"
+              },
+              "The Internet": {
+                "name": "Интернет"
+              }
+            }
+          },
+          "csp2-2017": {
+            "stages": {
+              "Encoding B&W Images": {
+                "name": "Кодиране черно-бели изображения"
+              },
+              "Encoding Color Images": {
+                "name": "Кодиране на цветни изображения"
+              },
+              "Text Compression": {
+                "name": "Компресия на текста"
+              }
+            }
+          },
+          "csp3-2017": {
+            "title": "CSP блок 3 - програмиране",
+            "description": "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.",
+            "description_short": "Програмиране",
+            "stages": {
+              "APIs and Function Parameters": {
+                "name": "API и параметри на функцията"
+              },
+              "Creating Functions": {
+                "name": "Създаване на функции"
+              },
+              "Looping and Random Numbers": {
+                "name": "Цикли и случайни числа"
+              },
+              "The Need For Programming Languages": {
+                "name": "Нуждата от програмни езици"
+              },
+              "Using Simple Commands": {
+                "name": "Използване на прости команди"
+              },
+              "Creating Functions with Parameters": {
+                "name": "Създаване на функции с параметри"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "Beyond Buttons Toward Apps": {
+                "name": "Отвъд бутоните на приложенията"
+              },
+              "Events Unplugged": {
+                "name": "Ънплъгд събития"
+              },
+              "While Loops": {
+                "name": "Докато цикли"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "description_short": "Програмиране",
+            "stages": {
+              "Functions": {
+                "name": "Функции"
+              },
+              "Velocity": {
+                "name": "Скорост"
+              }
+            }
+          },
+          "2016_sciencePD_phase1": {
+            "stages": {
+              "Agent Based Modeling of Complex Adaptive Systems": {
+                "name": "Моделиране на базата на сложни адаптивни системи"
+              },
+              "Computational Thinking And The Framework For K-12 Science Education": {
+                "name": "Изчислително мислене и рамката за К-12 образование по науки"
+              },
+              "Dispositions and Classroom Culture": {
+                "name": "Мерки и култура в класната стая"
+              },
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Въведение в сложни адаптивни системи"
+              },
+              "Introduction to Computational Science": {
+                "name": "Въведение в компютърната наука"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Introduction to StarLogo Nova": {
+                "name": "Въведение в StarLogo Nova"
+              },
+              "Post-Survey": {
+                "name": "След изследването"
+              },
+              "The Tutorial": {
+                "name": "Урок"
+              },
+              "Using Computer Models in Science": {
+                "name": "Използване на компютърни модели в науката"
+              },
+              "Using Models in the Classroom": {
+                "name": "Използване на модели в класната стая"
+              },
+              "What to Expect": {
+                "name": "Какво да очаквате"
+              }
+            }
+          },
+          "TEMP CSD Unit 3": {
+            "description_short": "Програмиране"
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "Възраст 8 + (след курс 2)"
+          },
+          "ECSPD1": {
+            "description_short": "Фаза 1: Представяне онлайн"
+          },
+          "algebraFacilitator": {
+            "description": "Научи алгебра чрез функционално програмиране",
+            "description_short": "Научи алгебра чрез функционално програмиране",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Блокове за оценка"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Защо компютърните науки са част от алгебрата"
+              }
+            }
+          },
+          "sciencePD1": {
+            "description_short": "Фаза 1: Представяне онлайн",
+            "stages": {
+              "Agent Based Modeling of Complex Adaptive Systems": {
+                "name": "Моделиране на базата на сложни адаптивни системи"
+              },
+              "Computational Thinking And The Framework For K-12 Science Education": {
+                "name": "Изчислително мислене и рамката за К-12 образование по науки"
+              },
+              "Dispositions and Classroom Culture": {
+                "name": "Мерки и култура в класната стая"
+              },
+              "Introduction to Complex Adaptive Systems": {
+                "name": "Въведение в сложни адаптивни системи"
+              },
+              "Introduction to Computational Science": {
+                "name": "Въведение в компютърната наука"
+              },
+              "Introduction to PD": {
+                "name": "Въведение в PD"
+              },
+              "Introduction to StarLogo Nova": {
+                "name": "Въведение в StarLogo Nova"
+              },
+              "Post-Survey": {
+                "name": "След изследването"
+              },
+              "The Tutorial": {
+                "name": "Урок"
+              },
+              "Using Computer Models in Science": {
+                "name": "Използване на компютърни модели в науката"
+              },
+              "Using Models in the Classroom": {
+                "name": "Използване на модели в класната стая"
+              },
+              "What to Expect": {
+                "name": "Какво да очаквате"
+              }
+            }
+          },
+          "cspunit1-support": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Изпращане на бинарни съобщения"
+              }
+            }
+          },
+          "allthehiddenthings": {
+            "stages": {
+              "Game Lab": {
+                "name": "Играта лаборатория"
+              }
+            }
+          },
+          "CSDU2-Draft": {
+            "stages": {
+              "Peer Review": {
+                "name": "Вашаят отзив"
+              }
+            }
+          },
+          "CSDU5-Draft": {
+            "description_short": "Данни"
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Художник: функции"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "Възраст 8 + (след курс 2)"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Пчела: условия"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Събития"
+              },
+              "Events Unplugged": {
+                "name": "Ънплъгд събития"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Мозайката: Научете за плъзгане и пускане"
+              },
+              "Loops": {
+                "name": "Повторения"
+              },
+              "Programming": {
+                "name": "Програмиране"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Songwriting": {
+                "name": "Писане на песен"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Събития"
+              },
+              "Events Unplugged": {
+                "name": "Ънплъгд събития"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Мозайката: Научете за плъзгане и пускане"
+              },
+              "Loops": {
+                "name": "Повторения"
+              },
+              "Programming": {
+                "name": "Програмиране"
+              },
+              "Unspotted Bugs": {
+                "name": "Незабележивите бъгове"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Художник - за циклите"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Художник - Функции с Параметри"
+              },
+              "Artist: Variables": {
+                "name": "Художник: променливи"
+              },
+              "Bee: For Loops": {
+                "name": "Пчела: За повторенията"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Пчела: Функции с параметри"
+              },
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Play Lab: Variables": {
+                "name": "Театрална лаборатория: променливи"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Ънплъгд: Плик с променливи"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Ънплъгд: Повторение за забавление"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Ънплъгд: Писане на песни с параметри"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-up": {
+                "name": "Изводи"
+              }
+            }
+          },
+          "ecs-unit2": {
+            "stages": {
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              }
+            }
+          },
+          "ecs-unit3": {
+            "stages": {
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              }
+            }
+          },
+          "ecs-unit4": {
+            "stages": {
+              "Teaching Strategies": {
+                "name": "Стратегии за преподаване"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Художник: въвеждане на цикли"
+              },
+              "Bee Debugging": {
+                "name": "Пчела - отстраняване на грешки"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Farmer: While Loops": {
+                "name": "Фермер - цикли \"докато\""
+              }
+            }
+          },
+          "csd3-2017": {
+            "description_short": "Програмиране",
+            "stages": {
+              "Velocity": {
+                "name": "Скорост"
+              },
+              "Functions": {
+                "name": "Функции"
+              },
+              "Variables": {
+                "name": "Променливи"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реални алгоритми: Хартиени самолети"
+              },
+              "The Big Event": {
+                "name": "Голямото събитие"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Двоичен код"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Events": {
+                "name": "Събития"
+              },
+              "For Loops": {
+                "name": "За циклите"
+              },
+              "Functions": {
+                "name": "Функции"
+              },
+              "Functions with Parameters": {
+                "name": "Функции с параметри"
+              },
+              "Loops": {
+                "name": "Повторения"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              },
+              "Variables": {
+                "name": "Променливи"
+              },
+              "While Loops": {
+                "name": "Докато цикли"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "description": "Научи алгебра чрез функционално програмиране",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Учителско табло"
+              },
+              "The Design Recipe": {
+                "name": "Рецепта за дизайн"
+              },
+              "Welcome!": {
+                "name": "Добре дошли!"
+              }
+            }
+          },
+          "basketball": {
+            "title": "Направете баскетболна игра",
+            "description_short": "Направете баскетболна игра",
+            "description": "Направете баскетболна игра",
+            "stages": {
+              "Bounce": {
+                "name": "Bounce"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Двоичен код",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              },
+              "Binary Images": {
+                "name": "Бинарни образи(картини)"
+              },
+              "Play Lab": {
+                "name": "Театрална лаборатория"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Peer Review": {
+                "name": "Вашаят отзив"
+              },
+              "Lists": {
+                "name": "Списъци"
+              }
+            }
+          },
+          "minecraft": {
+            "title": "Minecraft Hour of Code Дизайнер",
+            "description_short": "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft.",
+            "description": "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft.",
+            "stages": {
+              "Minecraft Hour of Code Designer": {
+                "name": "Minecraft Hour of Code Дизайнер"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy код"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Going Places Safely": {
+                "name": "Достигаме безопасно до места"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Your Digital Footprint": {
+                "name": "Вашите дигитални отпечатъци"
+              }
+            }
+          },
+          "coursec-draft": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реални алгоритми: Хартиени самолети"
+              },
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              },
+              "Your Digital Footprint": {
+                "name": "Вашите дигитални отпечатъци"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Unplugged: Binary": {
+                "name": "Ънплъгд: двоичен код"
+              },
+              "Artist Binary": {
+                "name": "Художник: Бинарен код"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Songwriting with Parameters": {
+                "name": "Композиране на песен с параметри"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Опитайте основите на програмирането с много забавни герои!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Час на кодирането 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Опитайте основите на програмирането с много забавни герои!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Час на кодирането 2013"
+              }
+            }
+          },
+          "sports": {
+            "title": "Програмирай своя спортна игра",
+            "description_short": "Програмирай свой собствен спорт",
+            "description": "Програмирай свой собствен спорт",
+            "stages": {
+              "Sports": {
+                "name": "Спорт"
+              }
+            }
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Двоичен код"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Добре дошли!"
+              },
+              "Wrap-Up": {
+                "name": "Заключение"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Списъци"
+              },
+              "For Loops": {
+                "name": "За циклите"
+              },
+              "Functions with Parameters": {
+                "name": "Функции с параметри"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Въведение"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Въведение"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Алгоритми от реалния живот: игра на зарове"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Списъци"
+              },
+              "For Loops": {
+                "name": "За циклите"
+              },
+              "Functions with Parameters": {
+                "name": "Функции с параметри"
+              },
+              "Functions with Parameters_": {
+                "name": "Функции с параметри"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "Променливи"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Velocity": {
+                "name": "Скорост"
+              },
+              "Functions": {
+                "name": "Функции"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Velocity": {
+                "name": "Скорост"
+              },
+              "Functions": {
+                "name": "Функции"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Списъци"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "Променливи"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Velocity": {
+                "name": "Скорост"
+              },
+              "Functions": {
+                "name": "Функции"
+              },
+              "null": {
+                "name": "нула"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              }
+            }
+          },
+          "csd2-old": {
+            "stages": {
+              "Peer Review": {
+                "name": "Вашаят отзив"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "F5 Minecraft": {
+                "name": "F5 Minecraft"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              }
+            }
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              }
+            }
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реални алгоритми: Хартиени самолети"
+              }
+            }
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              }
+            }
+          },
+          "coursee-2017": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Songwriting with Parameters": {
+                "name": "Композиране на песен с параметри"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              }
+            }
+          },
+          "coursef-2017": {
+            "stages": {
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft",
+                "description_student": "Избегни лавата! Тук ще научиш за условията в света на Minecraft.",
+                "description_teacher": "Този урок дава на учевиците възможност да учат и практикуват с услонията. Той предлага герои и настройки от Minecraft, и учениците ще извършват задачи като минни и строителни конструкции, като използват свои програми."
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Songwriting with Parameters": {
+                "name": "Композиране на песен с параметри"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              }
+            }
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Spelling Bee": {
+                "name": "Правопис"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Благодаря"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Нуждата от програмни езици"
+              },
+              "Using Simple Commands": {
+                "name": "Използване на прости команди"
+              },
+              "Creating Functions": {
+                "name": "Създаване на функции"
+              },
+              "APIs and Function Parameters": {
+                "name": "API и параметри на функцията"
+              },
+              "Looping and Random Numbers": {
+                "name": "Цикли и случайни числа"
+              }
+            },
+            "title": "CSP блок 3 - програмиране",
+            "description_short": "Програмиране",
+            "description": "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти."
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Unplugged: Binary": {
+                "name": "Ънплъгд: двоичен код"
+              },
+              "Artist Binary": {
+                "name": "Художник: Бинарен код"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              },
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Songwriting with Parameters": {
+                "name": "Композиране на песен с параметри"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Нуждата от програмни езици"
+              },
+              "Using Simple Commands": {
+                "name": "Използване на прости команди"
+              },
+              "Creating Functions": {
+                "name": "Създаване на функции"
+              },
+              "APIs and Function Parameters": {
+                "name": "API и параметри на функцията"
+              },
+              "Looping and Random Numbers": {
+                "name": "Цикли и случайни числа"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft\\: Hero's Journey Hour of Code": {
+                "name": "Minecraft\\: Пътуването на героя в часът на кода"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            },
+            "title": "Minecraft: Пътуването на героя",
+            "description_short": "Minecraft се завръща с чисто нова дейност за часът на кода!",
+            "description": "Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код."
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              },
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Songwriting with Parameters": {
+                "name": "Композиране на песен с параметри"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Списъци"
+              },
+              "For Loops": {
+                "name": "За циклите"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "Променливи"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Velocity": {
+                "name": "Скорост"
+              },
+              "Functions": {
+                "name": "Функции"
+              }
+            },
+            "description_short": "Програмиране"
+          },
+          "csd3-2018": {
+            "description_short": "Програмиране",
+            "stages": {
+              "Variables": {
+                "name": "Променливи"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Velocity": {
+                "name": "Скорост"
+              },
+              "Functions": {
+                "name": "Функции"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Списъци"
+              }
+            }
+          },
+          "coursea-2018": {
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Незабележивите бъгове"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Стив и Големият проект"
+              },
+              "Programming: Happy Maps": {
+                "name": "Щастливи карти"
+              },
+              "Going Places Safely": {
+                "name": "Достигаме безопасно до места"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Стив и Големият проект"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Програмиране на милиметрова хартия"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              },
+              "Events: The Big Event": {
+                "name": "Голямото събитие"
+              },
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Да повтаряме"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Functions: Songwriting": {
+                "name": "Писане на песен"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              },
+              "Unplugged: Binary": {
+                "name": "Бинарни образи(картини)"
+              },
+              "Artist Binary": {
+                "name": "Художник: Бинарен код"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              },
+              "Relay Programming": {
+                "name": "Повтори програмирането"
+              }
+            }
+          },
+          "courseb-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Your Digital Footprint": {
+                "name": "Вашите дигитални отпечатъци"
+              },
+              "Move It, Move It": {
+                "name": "Преместете го, преместете го"
+              }
+            }
+          },
+          "coursed-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Програмиране на милиметрова хартия"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Unplugged: Binary": {
+                "name": "Бинарни образи(картини)"
+              },
+              "Artist Binary": {
+                "name": "Художник: Бинарен код"
+              },
+              "Graph Paper Programming": {
+                "name": "Програмиране на милиметрова хартия"
+              },
+              "Relay Programming": {
+                "name": "Повтори програмирането"
+              }
+            }
+          },
+          "coursec-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Да повтаряме"
+              },
+              "Events: The Big Event": {
+                "name": "Голямото събитие"
+              },
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              }
+            }
+          },
+          "csd6-2018": {
+            "stages": {
+              "Functions with Parameters": {
+                "name": "Функции с параметри"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Моите приятели роботи"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Functions: Songwriting": {
+                "name": "Писане на песен"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            }
+          },
+          "coursef-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Моите приятели роботи"
+              },
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Introduction": {
+                "name": "Въведение"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ледена епоха: игрална лаборатория"
+              },
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft",
+                "description_student": "Избегни лавата! Тук ще научиш за условията в света на Minecraft.",
+                "description_teacher": "Този урок дава на учевиците възможност да учат и практикуват с услонията. Той предлага герои и настройки от Minecraft, и учениците ще извършват задачи като минни и строителни конструкции, като използват свои програми."
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Songwriting with Parameters": {
+                "name": "Композиране на песен с параметри"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Изпращане на бинарни съобщения"
+              },
+              "Number Systems": {
+                "name": "Бройни системи"
+              },
+              "Binary Numbers": {
+                "name": "Бинарни числа"
+              },
+              "Sending Numbers": {
+                "name": "Изпращане на числа"
+              },
+              "The Internet": {
+                "name": "Интернет"
+              }
+            }
+          },
+          "csp2-2018": {
+            "stages": {
+              "Text Compression": {
+                "name": "Компресия на текста"
+              },
+              "Encoding B&W Images": {
+                "name": "Кодиране черно-бели изображения"
+              },
+              "Encoding Color Images": {
+                "name": "Кодиране на цветни изображения"
+              }
+            }
+          },
+          "csp3-2018": {
+            "title": "CSP блок 3 - програмиране",
+            "description": "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.",
+            "description_short": "Програмиране",
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Нуждата от програмни езици"
+              },
+              "Using Simple Commands": {
+                "name": "Използване на прости команди"
+              },
+              "Creating Functions": {
+                "name": "Създаване на функции"
+              },
+              "APIs and Function Parameters": {
+                "name": "API и параметри на функцията"
+              },
+              "Looping and Random Numbers": {
+                "name": "Цикли и случайни числа"
+              },
+              "Creating Functions with Parameters": {
+                "name": "Създаване на функции с параметри"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "While Loops": {
+                "name": "Докато цикли"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Незабележивите бъгове"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Стив и Големият проект"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Spelling Bee": {
+                "name": "Правопис"
+              },
+              "Move It, Move It": {
+                "name": "Преместете го, преместете го"
+              },
+              "Your Digital Footprint": {
+                "name": "Вашите дигитални отпечатъци"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Стив и Големият проект"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Художник"
+              }
+            }
+          },
+          "aquatic": {
+            "title": "Minecraft: Подводното пътешествие"
+          },
+          "coursef-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "The Artist": {
+                "name": "Художникът"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Повтори програмирането"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Digital Citizenship": {
+                "name": "Цифрови граждани"
+              },
+              "Unplugged: Binary": {
+                "name": "Ънплъгд: двоичен код"
+              },
+              "Artist Binary": {
+                "name": "Художник: Бинарен код"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Nested Loops": {
+                "name": "Вмъкнати цикли"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Conditionals": {
+                "name": "Условия"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              },
+              "Conditionals in Minecraft": {
+                "name": "Условия в Minecraft"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Повтори програмирането"
+              },
+              "Conditionals with Cards": {
+                "name": "Условия с карти"
+              },
+              "Envelope Variables": {
+                "name": "Плик с променливи"
+              },
+              "For Loop Fun": {
+                "name": "Повторения за забавление"
+              },
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              },
+              "Unplugged: Binary": {
+                "name": "Ънплъгд: двоичен код"
+              },
+              "Artist Binary": {
+                "name": "Художник: Бинарен код"
+              },
+              "Internet": {
+                "name": "Интернет"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing кампания"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "нула"
+              }
+            }
+          },
+          "coursec-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Изграждане на база"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Реални алгоритми: Хартиени самолети"
+              },
+              "Binary Bracelets": {
+                "name": "Двоични гривни"
+              }
+            }
+          },
+          "gamelab": {
+            "title": "Играта лаборатория"
+          },
+          "coursea-2019": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              },
+              "Going Places Safely": {
+                "name": "Достигаме безопасно до места"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Преместете го, преместете го"
+              },
+              "Your Digital Footprint": {
+                "name": "Вашите дигитални отпечатъци"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Преместете го, преместете го"
+              },
+              "Your Digital Footprint": {
+                "name": "Вашите дигитални отпечатъци"
+              },
+              "Spelling Bee": {
+                "name": "Правопис"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Реални алгоритми: Засадете семената"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

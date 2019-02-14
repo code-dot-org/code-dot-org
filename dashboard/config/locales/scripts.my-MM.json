@@ -1,0 +1,246 @@
+{
+  "my": {
+    "data": {
+      "script": {
+        "category": {
+          "math_category_name": "သင်္ချာ"
+        },
+        "name": {
+          "usability": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              }
+            }
+          },
+          "infinity": {
+            "stages": {
+              "Infinity": {
+                "name": "Infinity"
+              }
+            }
+          },
+          "K5PD": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "algebraPD": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "allthethings": {
+            "stages": {
+              "Web Lab": {
+                "name": "Web Lab"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "K5-OnlinePD": {
+            "stages": {
+              "Computer Science Fundamentals": {
+                "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
+              }
+            }
+          },
+          "algebraPD2": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "mc": {
+            "title": "Minecraft Hour of Code",
+            "description": "ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ"
+          },
+          "algebraPD1": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "algebraFacilitator": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Loops": {
+                "name": "Loops"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Loops": {
+                "name": "Loops"
+              }
+            }
+          },
+          "csd3-2017": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Loops": {
+                "name": "Loops"
+              },
+              "Variables": {
+                "name": "Variables"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "ဆရာ့ကျောက်သင်ပုန်း"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Lists": {
+                "name": "စာရင်းများ"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "စာရင်းများ"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "စာရင်းများ"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "စာရင်းများ"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              },
+              "null": {
+                "name": "null"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft\\: Hero's Journey Hour of Code": {
+                "name": "Minecraft\\: လူစွမ်းကောင်း၏ ခရီးစဉ် Hour of Code"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            },
+            "title": "Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်",
+            "description_short": "Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!",
+            "description": "Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်"
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "စာရင်းများ"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              }
+            }
+          },
+          "csd3-2018": {
+            "stages": {
+              "Variables": {
+                "name": "Variables"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "စာရင်းများ"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "null"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

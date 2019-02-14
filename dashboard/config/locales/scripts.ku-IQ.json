@@ -1,0 +1,266 @@
+{
+  "ku": {
+    "data": {
+      "script": {
+        "category": {
+          "hoc_category_name": "كاژێری كۆدنووسی",
+          "math_category_name": "بیرکاری"
+        },
+        "name": {
+          "course1": {
+            "title": "Ders 1",
+            "description_audience": "تەمەنی ٤-٦",
+            "stages": {
+              "Artist: Loops": {
+                "name": "هونەرمەند: خولانەوەکان"
+              },
+              "Artist: Sequence": {
+                "name": "هونەر: ریز"
+              },
+              "Artist: Shapes": {
+                "name": "هونەر: شێوە"
+              },
+              "Happy Maps": {
+                "name": "نەخشەی دڵخۆش"
+              }
+            }
+          },
+          "course2": {
+            "stages": {
+              "Artist: Loops": {
+                "name": "هونەرمەند: خولانەوەکان"
+              },
+              "Artist: Sequence": {
+                "name": "هونەر: ریز"
+              }
+            }
+          },
+          "Course4pre": {
+            "stages": {
+              "Artist: Loops": {
+                "name": "هونەرمەند: خولانەوەکان"
+              },
+              "Artist: Sequence": {
+                "name": "هونەر: ریز"
+              }
+            }
+          },
+          "usability": {
+            "stages": {
+              "Variables": {
+                "name": "گۆڕاوەکان"
+              }
+            }
+          },
+          "20-hour": {
+            "stages": {
+              "Introduction to Computer Science": {
+                "name": "پێسەكی زانستی كۆمپیتەر"
+              },
+              "Song Writing": {
+                "name": "گۆرانی نووسین"
+              },
+              "The Artist": {
+                "name": "هونەرەكە"
+              },
+              "The Artist 2": {
+                "name": "هونەرەكە ٢"
+              },
+              "The Artist 3": {
+                "name": "هونەرەكە ٣"
+              },
+              "The Artist 4": {
+                "name": "هونەرەكە ٤"
+              },
+              "The Artist 5": {
+                "name": "هونەرەكە ٥"
+              },
+              "The Farmer": {
+                "name": "جوتیارەكە"
+              },
+              "The Farmer 3": {
+                "name": "جووتیارەكە ٣"
+              },
+              "The Internet": {
+                "name": "ئینترنێت"
+              },
+              "The Maze": {
+                "name": "Labyrint"
+              }
+            }
+          },
+          "edit-code": {
+            "stages": {
+              "The Artist": {
+                "name": "هونەرەكە"
+              },
+              "The Maze": {
+                "name": "Labyrint"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Happy Maps": {
+                "name": "نەخشەی دڵخۆش"
+              }
+            }
+          },
+          "csp1-2017": {
+            "stages": {
+              "The Internet": {
+                "name": "ئینترنێت"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Loops": {
+                "name": "گرێکان"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Loops": {
+                "name": "گرێکان"
+              }
+            }
+          },
+          "csd3-2017": {
+            "stages": {
+              "Variables": {
+                "name": "گۆڕاوەکان"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Loops": {
+                "name": "گرێکان"
+              },
+              "Variables": {
+                "name": "گۆڕاوەکان"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Lists": {
+                "name": "لیستەکان"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "لیستەکان"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "لیستەکان"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "گۆڕاوەکان"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "لیستەکان"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "گۆڕاوەکان"
+              },
+              "null": {
+                "name": "بەتاڵ"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "لیستەکان"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "گۆڕاوەکان"
+              }
+            }
+          },
+          "csd3-2018": {
+            "stages": {
+              "Variables": {
+                "name": "گۆڕاوەکان"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "لیستەکان"
+              }
+            }
+          },
+          "coursea-2018": {
+            "stages": {
+              "Programming: Happy Maps": {
+                "name": "نەخشەی دڵخۆش"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Internet": {
+                "name": "ئینترنێت"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Internet": {
+                "name": "ئینترنێت"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "The Internet": {
+                "name": "ئینترنێت"
+              }
+            }
+          },
+          "coursef-2019": {
+            "stages": {
+              "The Artist": {
+                "name": "هونەرەكە"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "بەتاڵ"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

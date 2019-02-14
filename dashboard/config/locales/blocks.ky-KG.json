@@ -1,0 +1,714 @@
+{
+  "ky": {
+    "data": {
+      "blocks": {
+        "Dancelab_atTimestamp": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунд"
+            }
+          }
+        },
+        "Dancelab_changeMoveEachLR": {
+          "options": {
+            "GROUP": {
+              "sprites": "баары"
+            },
+            "MOVE": {
+              "MOVES.Rest": "Жок"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changeMoveLR": {
+          "options": {
+            "MOVE": {
+              "MOVES.Rest": "Жок"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "Dancelab_doMoveEachLR": {
+          "options": {
+            "GROUP": {
+              "sprites": "баары"
+            },
+            "MOVE": {
+              "MOVES.Rest": "Жок"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_doMoveLR": {
+          "options": {
+            "MOVE": {
+              "MOVES.Rest": "Жок"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_everySeconds": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунд"
+            }
+          }
+        },
+        "Dancelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "Dancelab_getTime": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунд"
+            }
+          }
+        },
+        "Dancelab_ifDanceIs": {
+          "options": {
+            "DANCE": {
+              "MOVES.Rest": "Жок"
+            }
+          }
+        },
+        "Dancelab_ifTime": {
+          "options": {
+            "UNIT": {
+              "\"seconds\"": "секунд"
+            }
+          }
+        },
+        "Dancelab_jumpTo": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "солго",
+              "{x: 300, y: 200}": "оңго",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "туш келди"
+            }
+          }
+        },
+        "Dancelab_layoutSprites": {
+          "options": {
+            "GROUP": {
+              "sprites": "баары"
+            },
+            "FORMAT": {
+              "\"random\"": "туш келди"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "солго",
+              "{x: 300, y: 200}": "оңго",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "туш келди"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSpriteGroup": {
+          "options": {
+            "N": {
+              "2": "2",
+              "3": "3",
+              "4": "4",
+              "5": "5",
+              "6": "6",
+              "7": "7",
+              "8": "8",
+              "9": "9",
+              "10": "10",
+              "11": "11",
+              "12": "12",
+              "13": "13",
+              "14": "14",
+              "15": "15",
+              "16": "16",
+              "17": "17",
+              "18": "18",
+              "19": "19",
+              "20": "20"
+            },
+            "LAYOUT": {
+              "\"random\"": "туш келди"
+            }
+          }
+        },
+        "Dancelab_randomColor": {
+          "text": "кокус түс"
+        },
+        "Dancelab_setBackgroundEffect": {
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Жок"
+            }
+          }
+        },
+        "Dancelab_setBackgroundEffectWithPalette": {
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Жок"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeed": {
+          "options": {
+            "SPEED": {
+              "1": "кадимки",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeedEach": {
+          "options": {
+            "GROUP": {
+              "sprites": "баары"
+            },
+            "SPEED": {
+              "1": "кадимки",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setForegroundEffect": {
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Жок"
+            }
+          }
+        },
+        "Dancelab_setForegroundEffectExtended": {
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Жок"
+            }
+          }
+        },
+        "Dancelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "Dancelab_setPropEach": {
+          "options": {
+            "GROUP": {
+              "sprites": "баары"
+            },
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "Dancelab_setPropRandom": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "Dancelab_setTintEach": {
+          "options": {
+            "THIS": {
+              "sprites": "баары"
+            }
+          }
+        },
+        "Dancelab_setVisibleEach": {
+          "options": {
+            "THIS": {
+              "sprites": "баары"
+            }
+          }
+        },
+        "Dancelab_startMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "Dancelab_stopMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "Dancelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "өйдө",
+              "\"left\"": "солго",
+              "\"down\"": "ылдый",
+              "\"right\"": "оңго",
+              "\"space\"": "космос",
+              "\"x\"": "x",
+              "\"y\"": "y"
+            }
+          }
+        },
+        "gamelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "gamelab_debugSprite": {
+          "options": {
+            "VAL": {
+              "true": "туура",
+              "false": "жалган"
+            }
+          }
+        },
+        "gamelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "gamelab_locationDelta": {
+          "options": {
+            "DIR": {
+              "'random'": "туш келди"
+            }
+          }
+        },
+        "gamelab_mirrorSprite": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "оңго",
+              "\"left\"": "солго"
+            }
+          }
+        },
+        "gamelab_randColor": {
+          "text": "кокус түс"
+        },
+        "gamelab_randomColor": {
+          "text": "кокус түс"
+        },
+        "gamelab_setPosition": {
+          "options": {
+            "POSITION": {
+              "\"random\"": "туш келди"
+            }
+          }
+        },
+        "gamelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "gamelab_setSizes": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"height\"": "бийиктиги"
+            }
+          }
+        },
+        "gamelab_spritesWhere": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "gamelab_spritesWhereGenerator": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "gamelab_turn": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "оңго",
+              "\"left\"": "солго"
+            }
+          }
+        },
+        "gamelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "өйдө",
+              "\"down\"": "ылдый",
+              "\"left\"": "солго",
+              "\"right\"": "оңго",
+              "\"space\"": "космос"
+            }
+          }
+        },
+        "gamelab_whenPressedAndReleased": {
+          "options": {
+            "DIR": {
+              "'up'": "өйдө",
+              "'down'": "ылдый",
+              "'left'": "солго",
+              "'right'": "оңго"
+            }
+          }
+        },
+        "gamelab_whileKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "өйдө",
+              "\"down\"": "ылдый",
+              "\"left\"": "солго",
+              "\"right\"": "оңго",
+              "\"space\"": "космос"
+            }
+          }
+        },
+        "Mikelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "Mikelab_createNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "солго",
+              "{x: 300, y: 200}": "оңго"
+            }
+          }
+        },
+        "Mikelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "Mikelab_groupChangeAnim": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            }
+          }
+        },
+        "Mikelab_groupChangePropBy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            },
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "Mikelab_groupCreateNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "солго",
+              "{x: 300, y: 200}": "оңго"
+            }
+          }
+        },
+        "Mikelab_groupDestroy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            }
+          }
+        },
+        "Mikelab_groupGetProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "Mikelab_groupRemoveAllBehaviors": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            }
+          }
+        },
+        "Mikelab_groupRemoveBehaviorSimple": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            }
+          }
+        },
+        "Mikelab_groupRemoveTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            }
+          }
+        },
+        "Mikelab_groupSetProp": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            },
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "Mikelab_groupSetTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "баары"
+            }
+          }
+        },
+        "Mikelab_ifDanceIs": {
+          "options": {
+            "DANCE": {
+              "MOVES.Rest": "Жок"
+            }
+          }
+        },
+        "Mikelab_randomColor": {
+          "text": "кокус түс"
+        },
+        "Mikelab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "шаар"
+            }
+          }
+        },
+        "Mikelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "Mikelab_showScoreboard": {
+          "options": {
+            "CORNER": {
+              "\"right\"": "оңго",
+              "\"left\"": "солго"
+            }
+          }
+        },
+        "Mikelab_sprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 100, y: 200}": "солго",
+              "{x: 300, y: 200}": "оңго"
+            }
+          }
+        },
+        "Mikelab_whenKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "жебе өйдө",
+              "\"down\"": "жебе төмөн",
+              "\"left\"": "жебе солго",
+              "\"right\"": "жебе оңго",
+              "\"w\"": "Б",
+              "\"a\"": "A",
+              "\"s\"": "Түш",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whenKeyReleased": {
+          "options": {
+            "KEY": {
+              "\"up\"": "жебе өйдө",
+              "\"down\"": "жебе төмөн",
+              "\"left\"": "жебе солго",
+              "\"right\"": "жебе оңго",
+              "\"w\"": "Б",
+              "\"a\"": "A",
+              "\"s\"": "Түш",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whileKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "жебе өйдө",
+              "\"down\"": "жебе төмөн",
+              "\"left\"": "жебе солго",
+              "\"right\"": "жебе оңго"
+            }
+          }
+        },
+        "RyanLab_moveForward": {
+          "text": "алдыга жылдыр"
+        },
+        "RyanLab_turnLeft": {
+          "text": "солго бурул"
+        },
+        "RyanLab_turnRight": {
+          "text": "оңго бурул"
+        },
+        "aalab_changePropByFlexible": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "өлчөмү",
+              "\"x\"": "x позиция",
+              "\"y\"": "у позиция"
+            }
+          }
+        },
+        "aalab_clickedOn": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "качан",
+              "\"while\"": "болуп турганда"
+            }
+          }
+        },
+        "aalab_keyPressed": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "качан",
+              "\"while\"": "болуп турганда"
+            },
+            "KEY": {
+              "\"up\"": "өйдө",
+              "\"down\"": "ылдый",
+              "\"left\"": "солго",
+              "\"right\"": "оңго",
+              "\"space\"": "космос"
+            }
+          }
+        },
+        "aalab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "шаар"
+            }
+          }
+        },
+        "aalab_whenTouching": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "качан",
+              "\"while\"": "болуп турганда"
+            }
+          }
+        },
+        "binary_move": {
+          "options": {
+            "DIR": {
+              "\"up\"": "өйдө",
+              "\"down\"": "ылдый",
+              "\"left\"": "солго",
+              "\"right\"": "оңго"
+            }
+          }
+        },
+        "binary_whenKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "өйдө",
+              "\"down\"": "ылдый",
+              "\"left\"": "солго",
+              "\"right\"": "оңго",
+              "\"space\"": "космос"
+            }
+          }
+        },
+        "craft_ifPath": {
+          "options": {
+            "DIR": {
+              "'ahead'": "алдыга"
+            }
+          }
+        },
+        "craft_ifStandingOn": {
+          "options": {
+            "TYPE": {
+              "'sand'": "кум",
+              "'planksOak'": "эмен тактайлары"
+            }
+          }
+        },
+        "craft_ifStandingOnLimit": {
+          "options": {
+            "TYPE": {
+              "'sand'": "кум"
+            }
+          }
+        },
+        "craft_moveForward": {
+          "text": "алдыга жылдыр"
+        },
+        "craft_placeTorch": {
+          "text": "чырак орнотуу"
+        }
+      }
+    }
+  }
+}

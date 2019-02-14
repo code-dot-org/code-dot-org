@@ -1,0 +1,344 @@
+{
+  "ca": {
+    "data": {
+      "unplugged": {
+        "Unplug1": {
+          "title": "Introducció a la informàtica",
+          "desc": "Aquesta unitat introdueix el concepte informàtica i explica que fan els informàtics. També dona als estudiants l’oportunitat d’assumir el rol d’un informàtic. Al final de l’activitat cada estudiant podrà emportar-se a casa una mostra del que ha après. Com a mestre tu pots estar temptat a no ensenyar el vocabulari clau associat a la lliçó als més petitons, però recorda que si intentes presentar-la ara de manera divertida i amena serà molt més productiu que no pas deixar-ho per a oportunitats futures."
+        },
+        "Unplug2": {
+          "title": "Pensament computacional",
+          "desc": "Amb res més que paper i rotulador, els alumnes aprendran els 4 passos del pensament computacional. Després d'una breu introducció, els alumnes es dividiran en grups on hauran de crear direccions pels altres alumnes per tal de dibuixar un monstre concret (d'un catàleg de monstres pre-seleccionats). La tasca completa ha de ser descomposta, llavors els grups analitzaran tots els monstres en el catàleg de patrons, abstreure els diferents detalls dels monstres, després utilitzaran la informació per crear algoritmes (direccions) perquè l'altre grup dibuixi un monstre concret. Els grups intercanviaran algoritmes entre ells per dibuixar un monstre basat en el què indiqui l'algoritme. És el dibuix final el que el grup original pretenia crear?"
+        },
+        "Unplug3": {
+          "title": "Programació de paper quadriculat",
+          "desc": "Els alumnes començaran a entendre en que consisteix la programació programant-se entre ells per pintar dibuixos. La classe començarà amb els alumnes intercanviant instruccions per pintar quadrats en un full quadriculat amb la finalitat de reproduir una imatge. Si queda temps al final de la sessió els alumnes poden acabar utilitzant els seus propis dibuixos per programar."
+        },
+        "Unplug4": {
+          "title": "Algorismes",
+          "desc": "Aquesta classe cobreix algoritmes.  Utilitzant formes de tangram i paper gràfic, el primer exercici mostrarà com  d'important és fer cada instrucció com més clara i inequívoca com sigui possible.  Després, explorarem de quantes maneres es poden doblegar un paper en un rectangle, assenyalant com alguns mètodes poden prendre més o menys plecs que altres."
+        },
+        "Unplug5": {
+          "title": "Funcions"
+        },
+        "Unplug6": {
+          "title": "Condicions",
+          "desc": "Això és un joc de classe. Després d'introduir la idea dels condicionals, les declaracions -si i els bucles, el grup-classe pot practicar tot junts utilitzant un programa pre-escrit, un joc de cartes i la sort del sorteig."
+        },
+        "Unplug7": {
+          "title": "Escriptura de la cançó"
+        },
+        "Unplug8": {
+          "title": "Abstracció"
+        },
+        "Unplug9": {
+          "title": "Programació de Relé",
+          "desc": "Aquesta unitat pren la idea d'una activitat anterior (4. Programant amb paper gràfic) i l'utilitzarà per remarcar la rellevància de completar els programes que operen en una seqüència i de verificar freqüentment programes pels \"errors\"."
+        },
+        "Unplug10": {
+          "title": "Internet"
+        },
+        "Unplug11": {
+          "title": "Recapitulació",
+          "desc": "La recapitulació final a la primera sèrie de 20 hores ajudarà la classe a reviure tots els seus moments preferits al mateix temps que els hi proporciona els passos següents que han de prendre si estan interessats a continuar l'odissea informàtica."
+        },
+        "UnplugHappyMaps": {
+          "title": "Mapes feliços",
+          "desc": "Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre."
+        },
+        "MoveIt": {
+          "title": "Mou-te, mou-te",
+          "desc": "Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre."
+        },
+        "PlantASeed": {
+          "title": "Algoritmes reals: Planta una llavor",
+          "desc": "Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important."
+        },
+        "BuildingAFoundation": {
+          "title": "Posant les bases"
+        },
+        "GettingLoopy": {
+          "title": "Fent bucles",
+          "desc": "Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho."
+        },
+        "RelayProgramming": {
+          "title": "Programació en relleus",
+          "desc": "Els estudiants executen una cursa de relleus on corren a través del pati per escriure un algoritme basat en la imatge \"Programació de paper quadriculat\". Només poden escriure una instrucció cada vegada i si hi ha un error han d'esborrar-ho tot fins el principi."
+        },
+        "Conditionals": {
+          "title": "Condicionals",
+          "desc": "Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com \"si dibuixo una tarja vermella, puc obtenir un punt\" i \"si dibuixo una tarja negra, el punt el guanyes tu.\""
+        },
+        "BigEvent": {
+          "title": "El gran esdeveniment",
+          "desc": "Els alumnes es familiaritzen amb el concepte de programació d' \"esdeveniments\", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem."
+        },
+        "GoingPlacesSafely": {
+          "title": "Anant a llocs segurs",
+          "desc": "Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet."
+        },
+        "GraphPaperProgramming": {
+          "title": "Programació de paper quadriculat",
+          "desc": "Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix."
+        },
+        "PaperPlanes": {
+          "title": "Algoritmes de la vida quotidiana: Avions de paper",
+          "desc": "Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida diària, concretament fent avions de paper. La unitat també se centra en un panorama més ampli de la informàtica i com els algoritmes juguen un rol essencial."
+        },
+        "BinaryBracelets": {
+          "title": "Polseres binàries",
+          "desc": "Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres."
+        },
+        "DigitalFootprint": {
+          "title": "La vostra empremta digital"
+        },
+        "ComputationalThinking": {
+          "title": "Pensament computacional",
+          "desc": "Els alumnes usen les passes del pensament computacional (descomposar, relació de patrons, abstracció, algoritme) per a esbrinar com jugar a un joc que no duu instruccions."
+        },
+        "SongwritingParameters": {
+          "title": "Composició de cançons",
+          "desc": "Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la)."
+        },
+        "DiceRace": {
+          "title": "Algoritmes de la vida real: cursa de daus"
+        },
+        "Internet": {
+          "title": "Internet",
+          "desc": "Els alumnes envien missatges representant diversos mètodes de transmissió d'internet utilitzant peces de paper."
+        },
+        "Crowdsourcing": {
+          "title": "Col·laboració oberta"
+        },
+        "DigitalCitizenship": {
+          "title": "Ciutadania digital",
+          "desc": "Els alumnes exploren la diferència entre la informació privada i personal, distingint el que és segur i el que no ho és de compartir en línia."
+        },
+        "TangramAlgorithms": {
+          "title": "Algoritmes de Tàngram"
+        },
+        "MadGlibs": {
+          "title": "Mad Glibs",
+          "desc": "L'abstracció és una de les habilitats més importants que un programador científic ha d'entendre. Aquesta activitat tindrà els vostres alumnes analitzant les diferències en les històries de manera que puguin abstreure-les. Aquestes històries esdevenen plantilles divertides i noves."
+        },
+        "ForLoopFun": {
+          "desc": "Sabem que els bucles ens permeten fer coses una i altra vegada, però ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior."
+        },
+        "SongwritingWithParameters": {
+          "title": "Composició de cançons Amb Paràmetres",
+          "desc": "Una de les estructures més esplèndides en el món de la programació és la funció. Les funcions (a vegades anomenades procediments) són mini programes que pots utilitzar una i altra vegada dins d'un programa més gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè combinant trossos de programació cap a funcions és un exercici tant útil.  "
+        },
+        "BinaryImages": {
+          "title": "Imatges binàries",
+          "desc": "Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també."
+        },
+        "courseB_unplugged_MRF": {
+          "title": "Activitat sense connexió"
+        },
+        "courseB_unplugged_loopyMRF": {
+          "title": "Activitat sense connexió"
+        },
+        "courseC_Unplugged_ScreenOutTheMean": {
+          "title": "Activitat sense connexió"
+        },
+        "courseD_unplugged_digitalCitizenship": {
+          "title": "Activitat sense connexió"
+        },
+        "courseF_unplugged_powerOfWords": {
+          "title": "Activitat sense connexió"
+        },
+        "courseAB_unplugged_plantASeed": {
+          "title": "Algoritmes reals: Planta una llavor",
+          "desc": "Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important."
+        },
+        "courseA_unplugged_happyMaps": {
+          "title": "Mapes feliços",
+          "desc": "Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre."
+        },
+        "courseA_unplugged_goingPlacesSafely": {
+          "title": "Anant a llocs segurs",
+          "desc": "Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet."
+        },
+        "courseABC_unplugged_bigEvent": {
+          "title": "El gran esdeveniment",
+          "desc": "Els alumnes es familiaritzen amb el concepte de programació d' \"esdeveniments\", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem."
+        },
+        "courseB_unplugged_digitalFootprint": {
+          "title": "La vostra empremta digital"
+        },
+        "courseC_unplugged_buildingAFoundation": {
+          "title": "Posant les bases"
+        },
+        "courseC_unplugged_paperPlanes": {
+          "title": "Algoritmes de la vida quotidiana: Avions de paper",
+          "desc": "Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida diària, concretament fent avions de paper. La unitat també se centra en un panorama més ampli de la informàtica i com els algoritmes juguen un rol essencial."
+        },
+        "courseC_unplugged_gettingLoopy": {
+          "title": "Fent bucles",
+          "desc": "Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho."
+        },
+        "courseC_unplugged_binaryBracelets": {
+          "title": "Polseres binàries",
+          "desc": "Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres."
+        },
+        "courseD_unplugged_graphPaperProgramming": {
+          "title": "Programació de paper quadriculat",
+          "desc": "Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix."
+        },
+        "courseD_unplugged_relayProgramming": {
+          "title": "Programació en relleus",
+          "desc": "Els estudiants executen una cursa de relleus on corren a través del pati per escriure un algoritme basat en la imatge \"Programació de paper quadriculat\". Només poden escriure una instrucció cada vegada i si hi ha un error han d'esborrar-ho tot fins el principi."
+        },
+        "courseD_unplugged_conditionalsCards": {
+          "title": "Condicionals amb targetes",
+          "desc": "Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com \"si dibuixo una tarja vermella, puc obtenir un punt\" i \"si dibuixo una tarja negra, el punt el guanyes tu.\""
+        },
+        "courseD_unplugged_binaryImages": {
+          "title": "Imatges binàries",
+          "desc": "Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també."
+        },
+        "courseE_unplugged_songwritingParameters": {
+          "title": "Composició amb paràmetres",
+          "desc": "Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la)."
+        },
+        "courseE_unplugged_internet": {
+          "title": "Internet",
+          "desc": "Els alumnes envien missatges representant diversos mètodes de transmissió d'internet utilitzant peces de paper."
+        },
+        "courseE_unplugged_crowdsourcing": {
+          "title": "Col·laboració oberta"
+        },
+        "courseE_unplugged_songwriting": {
+          "title": "Composició de cançons",
+          "desc": "Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la)."
+        },
+        "courseF_unplugged_tangrams": {
+          "title": "Algoritmes de Tàngram"
+        },
+        "courseF_unplugged_forLoopFun": {
+          "desc": "Sabem que els bucles ens permeten fer coses una i altra vegada, però ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior."
+        },
+        "courseF_unplugged_songwritingParameters": {
+          "title": "Composició de cançons Amb Paràmetres",
+          "desc": "Una de les estructures més esplèndides en el món de la programació és la funció. Les funcions (a vegades anomenades procediments) són mini programes que pots utilitzar una i altra vegada dins d'un programa més gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè combinant trossos de programació cap a funcions és un exercici tant útil.  "
+        },
+        "courseB_unplugged_MRF_2018": {
+          "title": "Els meus amics robòtics"
+        },
+        "PlantASeed_2018": {
+          "title": "Algoritmes reals: Planta una llavor",
+          "desc": "Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important."
+        },
+        "UnplugHappyMaps_2018": {
+          "title": "Mapes feliços",
+          "desc": "Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre."
+        },
+        "GoingPlacesSafely_2018": {
+          "title": "Anant a llocs segurs",
+          "desc": "Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet."
+        },
+        "BigEvent_2018": {
+          "title": "El gran esdeveniment",
+          "desc": "Els alumnes es familiaritzen amb el concepte de programació d' \"esdeveniments\", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem."
+        },
+        "GraphPaperProgramming_2018": {
+          "title": "Programació de paper quadriculat",
+          "desc": "Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix."
+        },
+        "courseD_unplugged_digitalCitizenship_2018": {
+          "title": "Activitat sense connexió"
+        },
+        "courseC_Unplugged_ScreenOutTheMean_2018": {
+          "title": "Activitat sense connexió"
+        },
+        "Conditionals_2018": {
+          "title": "Condicionals",
+          "desc": "Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com \"si dibuixo una tarja vermella, puc obtenir un punt\" i \"si dibuixo una tarja negra, el punt el guanyes tu.\""
+        },
+        "DigitalFootprint_2018": {
+          "title": "La vostra empremta digital"
+        },
+        "BinaryImages_2018": {
+          "title": "Imatges binàries",
+          "desc": "Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també."
+        },
+        "PaperPlanes_2018": {
+          "title": "Algoritmes de la vida quotidiana: Avions de paper",
+          "desc": "Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida diària, concretament fent avions de paper. La unitat també se centra en un panorama més ampli de la informàtica i com els algoritmes juguen un rol essencial."
+        },
+        "GettingLoopy_2018": {
+          "title": "Fent bucles",
+          "desc": "Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho."
+        },
+        "BinaryBracelets_2018": {
+          "title": "Polseres binàries",
+          "desc": "Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres."
+        },
+        "MoveItMoveIt_2018": {
+          "title": "Mou-lo, Mou-lo"
+        },
+        "RelayProgramming_2018": {
+          "title": "Programació en relleus"
+        },
+        "courseB_unplugged_MRF_2019": {
+          "title": "Els meus amics robòtics"
+        },
+        "Conditionals_2019": {
+          "title": "Condicionals",
+          "desc": "Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com \"si dibuixo una tarja vermella, puc obtenir un punt\" i \"si dibuixo una tarja negra, el punt el guanyes tu.\""
+        },
+        "GraphPaperProgramming_2019": {
+          "title": "Programació de paper quadriculat",
+          "desc": "Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix."
+        },
+        "RelayProgramming_2018_2019": {
+          "title": "Programació en relleus"
+        },
+        "courseD_unplugged_digitalCitizenship_2019": {
+          "title": "Activitat sense connexió"
+        },
+        "BinaryImages_2019": {
+          "title": "Imatges binàries",
+          "desc": "Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també."
+        },
+        "GettingLoopy_2019": {
+          "title": "Fent bucles",
+          "desc": "Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho."
+        },
+        "courseC_Unplugged_ScreenOutTheMean_2019": {
+          "title": "Activitat sense connexió"
+        },
+        "BigEvent_2019": {
+          "title": "El gran esdeveniment",
+          "desc": "Els alumnes es familiaritzen amb el concepte de programació d' \"esdeveniments\", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem."
+        },
+        "BinaryBracelets_2019": {
+          "title": "Polseres binàries",
+          "desc": "Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres."
+        },
+        "PaperPlanes_2019": {
+          "title": "Algoritmes de la vida quotidiana: Avions de paper",
+          "desc": "Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida diària, concretament fent avions de paper. La unitat també se centra en un panorama més ampli de la informàtica i com els algoritmes juguen un rol essencial."
+        },
+        "PlantASeed_2019": {
+          "title": "Algoritmes reals: Planta una llavor",
+          "desc": "Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important."
+        },
+        "UnplugHappyMaps_2019": {
+          "title": "Mapes feliços",
+          "desc": "Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre."
+        },
+        "GoingPlacesSafely_2019": {
+          "title": "Anant a llocs segurs",
+          "desc": "Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet."
+        },
+        "MoveItMoveIt_2019": {
+          "title": "Mou-lo, Mou-lo"
+        },
+        "DigitalFootprint_2019": {
+          "title": "La vostra empremta digital"
+        }
+      }
+    }
+  }
+}

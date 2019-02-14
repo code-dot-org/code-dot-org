@@ -1,0 +1,2758 @@
+{
+  "de": {
+    "data": {
+      "script": {
+        "category": {
+          "csf_category_name": "Einführung in Informatik und Programmieren",
+          "csf_international_category_name": "Informatik Grundlagen international",
+          "csf2_draft_category_name": "In der Entwicklung: Kurse A - F",
+          "cspexams_category_name": "Praxistest Grundlagen der Informatik",
+          "csp17_category_name": "Informatik Grundprinzipien",
+          "hoc_category_name": "Hour of Code",
+          "math_category_name": "Mathematik"
+        },
+        "name": {
+          "course1": {
+            "title": "Kurs 1",
+            "description": "Mit Kurs 1 für Leseanfänger beginnen. Die Schüler erstellen Computerprogramme und lernen dabei, mit anderen zusammen zu arbeiten, Fähigkeiten zur Problemlösung zu entwickeln und bei schwierigen Aufgaben beharrlich zu bleiben. Am Ende des Kurses erstellen Schüler ihr eigenes Spiel oder ihre eigene Geschichte, die sie mit anderen teilen können. Empfohlen für Vorschule und Grundschule.",
+            "description_short": "Mit Kurs 1 für Leseanfänger beginnen.",
+            "description_audience": "Alter: 4-6",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Künstler: Schleifen"
+              },
+              "Artist: Sequence": {
+                "name": "Künstler: Sequenz"
+              },
+              "Artist: Shapes": {
+                "name": "Künstler: Formen"
+              },
+              "Bee: Loops": {
+                "name": "Biene: Schleifen"
+              },
+              "Bee: Sequence": {
+                "name": "Biene: Sequenz"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Getting Loopy": {
+                "name": "Schöne Schleifen"
+              },
+              "Going Places Safely": {
+                "name": "Sicher unterwegs"
+              },
+              "Happy Maps": {
+                "name": "Glücklich Karten"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Jigsaw: Erlerne Drag und Drop"
+              },
+              "Maze: Debugging": {
+                "name": "Labyrinth: Debuggen"
+              },
+              "Maze: Loops": {
+                "name": "Labyrinth: Schleifen"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrinth: Sequenz"
+              },
+              "Move it, Move it": {
+                "name": "Achtung, fertig, LOS"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Spelling Bee": {
+                "name": "Buchstabierwettbewerb"
+              },
+              "Studio: Create a Story": {
+                "name": "Spielelabor: Erstelle eine Geschichte"
+              },
+              "The Big Event": {
+                "name": "Der große Event"
+              }
+            }
+          },
+          "course2": {
+            "title": "Kurs 2",
+            "description": "Mit Kurs 2 für Schüler beginnen, die bereits lesen können und noch keine Programmiererfahrung haben. In diesem Kurs erstellen Schüler Programme, um Probleme zu lösen und interaktive Spiele oder Geschichten zu entwickeln, die sie mit anderen teilen können. Empfohlen für die Klassen 2-5.",
+            "description_short": "Mit Kurs 2 für Schüler beginnen, die bereits lesen können.",
+            "description_audience": "6 Jahre+ (Lesen erforderlich)",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Künstler: Debuggen"
+              },
+              "Artist: Loops": {
+                "name": "Künstler: Schleifen"
+              },
+              "Artist: Nested Loops": {
+                "name": "Künstler: Verschachtelte Schleifen"
+              },
+              "Artist: Sequence": {
+                "name": "Künstler: Sequenz"
+              },
+              "Bee: Conditionals": {
+                "name": "Biene: Bedingungen"
+              },
+              "Bee: Debugging": {
+                "name": "Biene: Debuggen"
+              },
+              "Bee: Loops": {
+                "name": "Biene: Schleifen"
+              },
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Getting Loopy": {
+                "name": "Schöne Schleifen"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmieren auf Millimeterpapier"
+              },
+              "Maze: Loops": {
+                "name": "Labyrinth: Schleifen"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrinth: Sequenz"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Alltagsalgorithmen: Papierflieger"
+              },
+              "Relay programming": {
+                "name": "Relais-Programmierung"
+              },
+              "Studio: Create a Story": {
+                "name": "Spielelabor: Erstelle eine Geschichte"
+              },
+              "The Big Event": {
+                "name": "Der große Event"
+              },
+              "Your Digital Footprint": {
+                "name": "Dein digitaler Fußabdruck"
+              }
+            }
+          },
+          "course3": {
+            "title": "Kurs 3",
+            "description": "Kurs 3 wendet sich an Schüler, die Kurs 2 absolviert haben. Der Stoff des vorangegangenen Kurses wird mit Blick auf flexible Lösungen und komplexere Probleme vertieft. Am Ende des Kurses entwickeln die Schüler interaktive Geschichten und Spiele, an denen sie andere teilhaben lassen können. Empfohlen für Klasse 4-5.",
+            "description_short": "Kurs 3 schließt sich an Kurs 2 an.",
+            "description_audience": "Alter: 8-18",
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              },
+              "Artist: Functions": {
+                "name": "Künstler: Funktionen"
+              },
+              "Artist: Nested Loops": {
+                "name": "Künstler: Verschachtelte Schleifen"
+              },
+              "Artist: Patterns": {
+                "name": "Künstler: Muster"
+              },
+              "Bee: Conditionals": {
+                "name": "Biene: Bedingungen"
+              },
+              "Bee: Debugging": {
+                "name": "Biene: Debuggen"
+              },
+              "Bee: Functions": {
+                "name": "Biene: Funktionen"
+              },
+              "Bee: Nested Loops": {
+                "name": "Biene: Verschachtelte Schleifen"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Computational Thinking": {
+                "name": "Computerorientiertes Denken"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Dice Race": {
+                "name": "Würfelrennen"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Farmer: While Loops": {
+                "name": "Bauer: Solange-Schleifen"
+              },
+              "Functional Suncatchers": {
+                "name": "Funktionale Sonnenfänger"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Maze": {
+                "name": "Labyrinth"
+              },
+              "Maze: Conditionals": {
+                "name": "Labyrinth: Bedingungen"
+              },
+              "Songwriting": {
+                "name": "Songschreiben"
+              },
+              "Studio: Create a Game": {
+                "name": "Spielelabor: Erstelle ein Spiel"
+              },
+              "Studio: Create a Story": {
+                "name": "Spielelabor: Erstelle eine Geschichte"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Spielelabor",
+            "description": "Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!",
+            "description_short": "Erstelle eine Geschichte oder ein Spiel mit Play Lab!",
+            "stages": {
+              "Play Lab": {
+                "name": "Spielelabor"
+              }
+            }
+          },
+          "artist": {
+            "title": "Künstler",
+            "description": "Zeichne coole Bilder und Designs mit dem Künstler!",
+            "description_short": "Zeichne coole Bilder und Designs mit dem Künstler!",
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Klassisches Labyrinth",
+            "description": "Lerne die Grundlagen der Informatik kennen – mit Figuren aus Angry Birds, Plants vs. Zombies, und mit Scrat aus Ice Age!",
+            "description_short": "Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!",
+            "stages": {
+              "Maze": {
+                "name": "Labyrinth"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Programmiere mit Anna und Elsa",
+            "description": "Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten. Du erschaffst Schneeflocken und Muster, läufst Schlittschuh und erstellst ein Winterwunderland, das du dann mit deinen Freunden teilen kannst.",
+            "description_short": "Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten.",
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              }
+            }
+          },
+          "course4": {
+            "title": "Kurs 4",
+            "description": "Kurs 4 richtet sich an Schüler, die Kurs 2 und 3 absolviert haben. Schüler vertiefen die in vorherigen Kursen eingeführten Programmierkenntnisse, um flexible Lösungen für komplexere Probleme zu finden. Am Ende des Kurses erstellen Schüler interaktive Geschichten und Spiele, die sie mit anderen teilen können. Empfohlen für die Klassen 4-8.",
+            "description_short": "Schüler, die Kurs 4 machen möchten, sollten schon Kurs 2 und 3 absolviert haben.",
+            "description_audience": "Alter: 10-18",
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              },
+              "Artist Binary": {
+                "name": "Künstler Binär"
+              },
+              "Artist: For Loops": {
+                "name": "Künstler: \"Zähle mit\"-Schleifen"
+              },
+              "Artist: Functions": {
+                "name": "Künstler: Funktionen"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Künstler: Funktionen mit Parametern"
+              },
+              "Artist: Variables": {
+                "name": "Künstler: Variablen"
+              },
+              "Bee: For Loops": {
+                "name": "Biene: \"Zähle mit\"-Schleifen"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Biene: Funktionen mit Parametern"
+              },
+              "Extreme Challenge - Comprehensive": {
+                "name": "Extrem-Herausforderung – Allgemeine Kenntnisse"
+              },
+              "Maze and Bee": {
+                "name": "Labyrinth und Biene"
+              },
+              "Play Lab: For Loops": {
+                "name": "Spielelabor: \"Zähle mit\"-Schleifen"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Spielelabor: Funktionen mit Parametern"
+              },
+              "Play Lab: Variables": {
+                "name": "Spielelabor: Variablen"
+              },
+              "Super Challenge - For Loops": {
+                "name": "Super-Herausforderung – Zähle-mit-Schleifen"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Super-Herausforderung – Funktionen und Parameter"
+              },
+              "Super Challenge - Variables": {
+                "name": "Super-Herausforderung – Variablen"
+              },
+              "Unplugged: Binary": {
+                "name": "Offline: Binär"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Offline: Umschlag-Variablen"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Offline: „Zähle mit“-Schleifenspaß"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Offline: Madlibs"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Offline: Songschreiben mit Parametern"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Offline: Tangram"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Voraussetzungen für Kurs 4",
+            "description": "Eine kurze Einführung der Konzepte für Schüler, die Kurs 2 und 3 nicht absolviert haben.",
+            "description_short": "Eine kurze Einführung der Konzepte für Schüler, die Kurs 2 und 3 nicht absolviert haben.",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Künstler: Funktionen"
+              },
+              "Artist: Loops": {
+                "name": "Künstler: Schleifen"
+              },
+              "Artist: Nested Loops": {
+                "name": "Künstler: Verschachtelte Schleifen"
+              },
+              "Artist: Sequence": {
+                "name": "Künstler: Sequenz"
+              },
+              "Bee: Conditionals": {
+                "name": "Biene: Bedingungen"
+              },
+              "Bee: Debugging": {
+                "name": "Biene: Debuggen"
+              },
+              "Bee: Nested Loops": {
+                "name": "Biene: Verschachtelte Schleifen"
+              },
+              "Farmer: While Loops": {
+                "name": "Bauer: Solange-Schleifen"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrinth: Sequenz"
+              }
+            }
+          },
+          "usability": {
+            "stages": {
+              "Binary": {
+                "name": "Binärdatei"
+              },
+              "For Loops": {
+                "name": "\"Zähle mit\"-Schleifen"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Funktionen und Funktionen mit Parametern"
+              },
+              "Intro": {
+                "name": "Einführung"
+              },
+              "Variables": {
+                "name": "Variablen"
+              }
+            }
+          },
+          "algebra": {
+            "title": "Informatik in Algebra",
+            "description": "Lerne funktionales Programmieren mithilfe von Algebra",
+            "description_short": "Lerne funktionales Programmieren mithilfe von Algebra",
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Boolesche Operatoren"
+              },
+              "Eval: Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Eval: Functions": {
+                "name": "Text-Probleme mit dem Design-Builder lösen"
+              },
+              "Eval: Strings and Images": {
+                "name": "Zeichenfolgen und Bilder"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Verträge schreiben"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Das große Spiel - Animation"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Das große Spiel - Booleans"
+              },
+              "Play Lab: Booleans": {
+                "name": "Sam die Fledermaus"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Das große Spiel - Kollisionserkennung"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Das große Spiel - Variablen"
+              },
+              "Unplugged: Booleans": {
+                "name": "Offline: Boolesche Werte und Logik"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Offline: Kollisionserkennung und der Satz des Pythagoras"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Offline: Bedingungen und stückweise Funktionen"
+              },
+              "Unplugged: Contracts": {
+                "name": "Offline: Verträge, Domäne und Bereich"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Offline: Das Design-Rezept"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Offline: Videospiele und Koordinatensysteme"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Disney Infinity Spielelabor",
+            "description": "Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.",
+            "description_short": "Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.",
+            "stages": {
+              "Infinity": {
+                "name": "Unendlichkeit"
+              }
+            }
+          },
+          "algebrademo": {
+            "stages": {
+              "Defining Simple Functions": {
+                "name": "Einfache Funktionen definieren"
+              },
+              "Defining Variables": {
+                "name": "Variablen definieren"
+              },
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Making Pictures": {
+                "name": "Bilder machen"
+              },
+              "The Design Recipe": {
+                "name": "Das Design-Rezept"
+              }
+            }
+          },
+          "K5PD": {
+            "stages": {
+              "Next Steps": {
+                "name": "Nächste Schritte"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              },
+              "Unplugged lessons": {
+                "name": "Offline Lektionen"
+              },
+              "Writing computer programs": {
+                "name": "Computerprogramme schreiben"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Internet-Simulator",
+            "stages": {
+              "Overview and Setup Instructions": {
+                "name": "Übersicht und Installationsanweisungen"
+              },
+              "Routers and addresses": {
+                "name": "Router und Adressen"
+              }
+            }
+          },
+          "pixelation": {
+            "description": "Erstelle Bilder mit Bits und Bytes.",
+            "description_short": "Erstelle Bilder mit Bits und Bytes."
+          },
+          "20-hour": {
+            "title": "Kurzeinführung in die Informatik",
+            "description": "Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte aus den Kursen 2-4. Der Kurs eignet sich für Kinder und Jugendliche zwischen 10 und 18 Jahren. Unsere Kurse 2-4 vermitteln umfassendere Kenntnisse!",
+            "description_short": "Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte aus den Kursen 2-4.",
+            "description_audience": "Alter: 10-18",
+            "stages": {
+              "Abstraction": {
+                "name": "Abstraktion"
+              },
+              "Algorithms": {
+                "name": "Algorithmen"
+              },
+              "Computational Thinking": {
+                "name": "Computerorientiertes Denken"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Functions": {
+                "name": "Funktionen"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmieren auf Millimeterpapier"
+              },
+              "Introduction to Computer Science": {
+                "name": "Einführung in die Informatik"
+              },
+              "Relay Programming": {
+                "name": "Relais-Programmierung"
+              },
+              "Song Writing": {
+                "name": "Lieder schreiben"
+              },
+              "The Artist": {
+                "name": "Der Künstler"
+              },
+              "The Artist 2": {
+                "name": "Der Künstler 2"
+              },
+              "The Artist 3": {
+                "name": "Der Künstler 3"
+              },
+              "The Artist 4": {
+                "name": "Der Künstler 4"
+              },
+              "The Artist 5": {
+                "name": "Der Künstler 5"
+              },
+              "The Farmer": {
+                "name": "Der Bauer"
+              },
+              "The Farmer 2": {
+                "name": "Der Bauer 2"
+              },
+              "The Farmer 3": {
+                "name": "Der Bauer 3"
+              },
+              "The Internet": {
+                "name": "das Internet"
+              },
+              "The Maze": {
+                "name": "Das Labyrinth"
+              },
+              "Wrap-up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Code bearbeiten",
+            "description": "Code bearbeiten",
+            "description_short": "Code bearbeiten",
+            "stages": {
+              "Play Lab": {
+                "name": "Spielelabor"
+              },
+              "The Artist": {
+                "name": "Der Künstler"
+              },
+              "The Maze": {
+                "name": "Das Labyrinth"
+              }
+            }
+          },
+          "events": {
+            "title": "Ereignisse",
+            "description": "Ereignisse",
+            "description_short": "Ereignisse",
+            "stages": {
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Calc": {
+                "name": "Rechne"
+              },
+              "Eval": {
+                "name": "Ausführen"
+              },
+              "Studio": {
+                "name": "Studio"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Flappy Code",
+            "description": "Schreibe dein eigenes Spiel in weniger als 10 Minuten! Probiere unsere Flappy-Code-Anleitung!",
+            "description_short": "Schreibe dein eigenes Flappy-Spiel in weniger als 10 Minuten!",
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy Code"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Puzzle",
+            "description": "Probiere unsere Puzzle Anleitung aus",
+            "description_short": "Probiere unsere Puzzle Anleitung aus",
+            "stages": {
+              "Jigsaw": {
+                "name": "Puzzle"
+              }
+            }
+          },
+          "step": {
+            "title": "Schritt",
+            "description": "Schritt-für-Schritt-Anleitung",
+            "description_short": "Schritt-für-Schritt-Anleitung",
+            "stages": {
+              "Step": {
+                "name": "Schritt"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Hour of Code 2013",
+            "description": "Lerne die Grundlagen der Informatik kennen – mit Figuren aus Angry Birds und Pflanzen gegen Zombies.",
+            "description_short": "Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Hour of Code 2013"
+              }
+            }
+          },
+          "CodeStudioPuzzleChallenge": {
+            "stages": {
+              "Puzzles": {
+                "name": "Aufgabe"
+              }
+            }
+          },
+          "Tutorial Video - Code Studio Puzzle Challenge": {
+            "stages": {
+              "Puzzles": {
+                "name": "Aufgabe"
+              }
+            }
+          },
+          "cspunit1": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Binary Numbers": {
+                "name": "Binärzahlen"
+              },
+              "Bytes and File Sizes": {
+                "name": "Bytes und Dateigrößen"
+              },
+              "Sending Binary Messages": {
+                "name": "Binäre Nachrichten senden"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Binäre Nachrichten mit dem Internet-Simulator senden"
+              },
+              "Sending Bits in the Real World": {
+                "name": "Bits in der realen Welt senden"
+              },
+              "Sending Complex Messages": {
+                "name": "Komplexe Nachrichten senden"
+              },
+              "Sending Formatted Text": {
+                "name": "Formatierten Text senden"
+              },
+              "Sending Numbers": {
+                "name": "Zahlen senden"
+              }
+            }
+          },
+          "algebraPD": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              }
+            }
+          },
+          "algPDmiami": {
+            "stages": {
+              "Booleans": {
+                "name": "Boolesche Werte"
+              },
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Luigi's Pizza": {
+                "name": "Luigis Pizza"
+              },
+              "Sam the Bat": {
+                "name": "Sam die Fledermaus"
+              },
+              "Strings and Images": {
+                "name": "Zeichenfolgen und Bilder"
+              }
+            }
+          },
+          "CSPLessonSamples": {
+            "stages": {
+              "Lesson 14": {
+                "name": "Lektion 14"
+              },
+              "Lesson 15": {
+                "name": "Lektion 15"
+              }
+            }
+          },
+          "sciencePD": {
+            "stages": {
+              "The Tutorial": {
+                "name": "Das Tutorial"
+              },
+              "What to Expect": {
+                "name": "Was Sie erwartet"
+              }
+            }
+          },
+          "cspunit3": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Creating Functions": {
+                "name": "Funktionen erstellen"
+              },
+              "Events Unplugged": {
+                "name": "Offline-Events"
+              },
+              "Introduction to Arrays": {
+                "name": "Einführung in Arrays"
+              },
+              "Introduction to Conditional Logic": {
+                "name": "Einführung in Bedingungslogik"
+              },
+              "Loops and Simulations": {
+                "name": "Schleifen und Simulationen"
+              },
+              "While Loops": {
+                "name": "Solange-Schleifen"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Next Steps": {
+                "name": "Nächste Schritte"
+              },
+              "Strings and Images": {
+                "name": "Zeichenfolgen und Bilder"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              },
+              "The Big Game": {
+                "name": "Das große Spiel"
+              },
+              "The Design Recipe": {
+                "name": "Das Design-Rezept"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              }
+            }
+          },
+          "sciencePD-NexTech": {
+            "stages": {
+              "The Tutorial": {
+                "name": "Das Tutorial"
+              },
+              "What to Expect": {
+                "name": "Was Sie erwartet"
+              }
+            }
+          },
+          "sciencePD-iZone": {
+            "stages": {
+              "The Tutorial": {
+                "name": "Das Tutorial"
+              },
+              "What to Expect": {
+                "name": "Was Sie erwartet"
+              }
+            }
+          },
+          "sciencePD2": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "cspunit2": {
+            "description_short": "Programmierung",
+            "stages": {
+              "The Internet": {
+                "name": "Das Internet ist für alle da"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "Booleans": {
+                "name": "Boolesche Werte"
+              },
+              "Defining Variables": {
+                "name": "Variablen definieren"
+              },
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Free Play": {
+                "name": "Freies Spiel"
+              },
+              "Luigi's Pizza": {
+                "name": "Luigis Pizza"
+              },
+              "Sam the Bat": {
+                "name": "Sam die Fledermaus"
+              },
+              "Strings and Images": {
+                "name": "Zeichenfolgen und Bilder"
+              },
+              "The Design Recipe": {
+                "name": "Das Design-Rezept"
+              }
+            }
+          },
+          "allthethings": {
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              },
+              "Bee": {
+                "name": "Biene"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Jigsaw": {
+                "name": "Puzzle"
+              },
+              "Match": {
+                "name": "Zuordnen"
+              },
+              "Maze": {
+                "name": "Labyrinth"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Multi"
+              },
+              "Studio": {
+                "name": "Studio"
+              },
+              "Web Lab": {
+                "name": "Web Lab"
+              },
+              "Standalone video": {
+                "name": "Video"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "Booleans": {
+                "name": "Boolesche Werte"
+              },
+              "Defining Functions": {
+                "name": "Funktionen definieren"
+              },
+              "Defining Variables": {
+                "name": "Variablen definieren"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Bedingungen"
+              },
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Next Steps": {
+                "name": "Nächste Schritte"
+              },
+              "Strings and Images": {
+                "name": "Zeichenfolgen und Bilder"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              },
+              "Writing Contracts": {
+                "name": "Verträge schreiben"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "App-Labor"
+              },
+              "Internet Simulator": {
+                "name": "Internet-Simulator"
+              },
+              "Welcome!": {
+                "name": "Willkommen!"
+              }
+            }
+          },
+          "K5-OnlinePD": {
+            "stages": {
+              "Computer Science Fundamentals": {
+                "name": "Informatik Grundlagen"
+              },
+              "Next Steps": {
+                "name": "Nächste Schritte"
+              }
+            }
+          },
+          "ECSPD2": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "algebraPD2": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              },
+              "The Design Recipe": {
+                "name": "Das Design-Rezept"
+              },
+              "Welcome!": {
+                "name": "Willkommen!"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "science-PD2": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "Equity-OnlinePD": {
+            "stages": {
+              "Next Steps": {
+                "name": "Nächste Schritte"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "description": "Phase 2 Online: Gemischtes Sommerstudium",
+            "description_short": "Phase 2 Online: Gemischtes Sommerstudium",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Getting Loopy": {
+                "name": "Schöne Schleifen"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmieren auf Millimeterpapier"
+              },
+              "Happy Maps": {
+                "name": "Glücklich Karten"
+              },
+              "Move it, Move it": {
+                "name": "Achtung, fertig, LOS"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Songwriting": {
+                "name": "Songschreiben"
+              },
+              "The Big Event": {
+                "name": "Der große Event"
+              }
+            }
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "Special Fun": {
+            "description_audience": "Alter: 10-18"
+          },
+          "SpecialSeries": {
+            "description_audience": "Alter: 10-18"
+          },
+          "iceage": {
+            "title": "Ice Age Spielelabor",
+            "description": "Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!",
+            "description_short": "Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!",
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              }
+            }
+          },
+          "cspunit3temp": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Introduction to Arrays": {
+                "name": "Einführung in Arrays"
+              },
+              "Loops and Simulations": {
+                "name": "Schleifen und Simulationen"
+              },
+              "While Loops": {
+                "name": "Solange-Schleifen"
+              }
+            }
+          },
+          "gumball": {
+            "title": "Gumball Spielelabor",
+            "description": "Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!",
+            "description_short": "Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!",
+            "stages": {
+              "Gumball Play Lab": {
+                "name": "Gumball Spielelabor"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Star Wars: Erbaue ein Galaxie mit Code",
+            "description": "Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.",
+            "description_short": "Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Programmierstunde 2015"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Star Wars: Erbaue ein Galaxie mit Code",
+            "description": "Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.",
+            "description_short": "Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Programmierstunde 2015"
+              }
+            }
+          },
+          "mc": {
+            "title": "Minecraft Hour of Code",
+            "description": "Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer durch die Minecraft-Welt zu begleiten",
+            "description_short": "Erkunde eine Minecraft-Welt durch programmieren",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Programmierstunde 2015"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "cspunit5": {
+            "description_short": "Programmierung"
+          },
+          "cspunit4": {
+            "description_short": "Programmierung"
+          },
+          "AlgebraA": {
+            "description": "Lerne funktionales Programmieren mithilfe von Algebra",
+            "description_short": "Lerne funktionales Programmieren mithilfe von Algebra",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Calc: Variablen definieren"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Calc: Auswertungsbausteine"
+              },
+              "Eval: Strings and Images": {
+                "name": "Eval: Zeichenfolgen und Bilder"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Eval: Verträge schreiben"
+              },
+              "Unplugged: Contracts": {
+                "name": "Offline: Verträge"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Offline: Das Design-Rezept"
+              }
+            }
+          },
+          "AlgebraB": {
+            "title": "Informatik in Algebra",
+            "description": "Lerne funktionales Programmieren mithilfe von Algebra",
+            "description_short": "Lerne funktionales Programmieren mithilfe von Algebra",
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Eval: Boolesche Operatoren"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Bedingungen"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Spielelabor: Animation (Großes Spiel)"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Spielelabor: Boolesche Werte (Großes Spiel)"
+              },
+              "Play Lab: Booleans": {
+                "name": "Spielelabor: Boolesche Werte"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Spielelabor: Kollisionserkennung (Großes Spiel)"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Spielelabor: Variablen definieren (Großes Spiel)"
+              },
+              "Unplugged: Booleans": {
+                "name": "Offline: Boolesche Werte"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Offline: Kollisionserkennung und die Distanzformel"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Offline: Bedingungen und stückweise Funktionen"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Offline: Videospiele und Koordinatensysteme"
+              }
+            }
+          },
+          "algebraPD1": {
+            "title": "CS in Algebra Teil 1",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              }
+            }
+          },
+          "csp1-2017": {
+            "stages": {
+              "Binary Numbers": {
+                "name": "Binärzahlen"
+              },
+              "Sending Binary Messages": {
+                "name": "Binäre Nachrichten senden"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Binäre Nachrichten mit dem Internet-Simulator senden"
+              },
+              "Sending Numbers": {
+                "name": "Zahlen senden"
+              },
+              "The Internet": {
+                "name": "das Internet"
+              }
+            }
+          },
+          "csp2-2017": {
+            "stages": {
+              "Bytes and File Sizes": {
+                "name": "Bytes und Dateigrößen"
+              }
+            }
+          },
+          "csp3-2017": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Creating Functions": {
+                "name": "Funktionen erstellen"
+              }
+            }
+          },
+          "csp4-2017": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Einfache Verschlüsselung"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "Events Unplugged": {
+                "name": "Offline-Events"
+              },
+              "Introduction to Arrays": {
+                "name": "Einführung in Arrays"
+              },
+              "Introduction to Conditional Logic": {
+                "name": "Einführung in Bedingungslogik"
+              },
+              "Loops and Simulations": {
+                "name": "Schleifen und Simulationen"
+              },
+              "While Loops": {
+                "name": "Solange-Schleifen"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Functions": {
+                "name": "Funktionen"
+              }
+            }
+          },
+          "2016_sciencePD_phase1": {
+            "stages": {
+              "The Tutorial": {
+                "name": "Das Tutorial"
+              },
+              "What to Expect": {
+                "name": "Was Sie erwartet"
+              }
+            }
+          },
+          "TEMP CSD Unit 3": {
+            "description_short": "Programmierung"
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "Alter: 8-18"
+          },
+          "algebraFacilitator": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Auswertungsbausteine"
+              },
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              }
+            }
+          },
+          "sciencePD1": {
+            "stages": {
+              "The Tutorial": {
+                "name": "Das Tutorial"
+              },
+              "What to Expect": {
+                "name": "Was Sie erwartet"
+              }
+            }
+          },
+          "cspunit1-support": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Binäre Nachrichten senden"
+              }
+            }
+          },
+          "allthehiddenthings": {
+            "stages": {
+              "Game Lab": {
+                "name": "Spielelabor"
+              }
+            }
+          },
+          "CSDU2-Draft": {
+            "stages": {
+              "Peer Review": {
+                "name": "Peer Review"
+              }
+            }
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Künstler Funktionen"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "Alter: 8-18"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Biene: Bedingungen"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Ereignisse"
+              },
+              "Events Unplugged": {
+                "name": "Offline-Events"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Jigsaw: Erlerne Drag und Drop"
+              },
+              "Loops": {
+                "name": "Schleifen"
+              },
+              "Programming": {
+                "name": "Programmierung"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Songwriting": {
+                "name": "Songschreiben"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Ereignisse"
+              },
+              "Events Unplugged": {
+                "name": "Offline-Events"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Jigsaw: Erlerne Drag und Drop"
+              },
+              "Loops": {
+                "name": "Schleifen"
+              },
+              "Programming": {
+                "name": "Programmierung"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Künstler: \"Zähle mit\"-Schleifen"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Künstler: Funktionen mit Parametern"
+              },
+              "Artist: Variables": {
+                "name": "Künstler: Variablen"
+              },
+              "Bee: For Loops": {
+                "name": "Biene: \"Zähle mit\"-Schleifen"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Biene: Funktionen mit Parametern"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Play Lab: Variables": {
+                "name": "Spielelabor: Variablen"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Offline: Umschlag-Variablen"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Offline: „Zähle mit“-Schleifenspaß"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Offline: Songschreiben mit Parametern"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Künstler: Verschachtelte Schleifen"
+              },
+              "Bee Debugging": {
+                "name": "Biene Debuggen"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              },
+              "Farmer: While Loops": {
+                "name": "Bauer: Solange-Schleifen"
+              }
+            }
+          },
+          "csd3-2017": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Functions": {
+                "name": "Funktionen"
+              },
+              "Variables": {
+                "name": "Variablen"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Alltagsalgorithmen: Papierflieger"
+              },
+              "The Big Event": {
+                "name": "Der große Event"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Binärdatei"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Events": {
+                "name": "Ereignisse"
+              },
+              "For Loops": {
+                "name": "\"Zähle mit\"-Schleifen"
+              },
+              "Functions": {
+                "name": "Funktionen"
+              },
+              "Functions with Parameters": {
+                "name": "Funktionen mit Parametern"
+              },
+              "Loops": {
+                "name": "Schleifen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              },
+              "Variables": {
+                "name": "Variablen"
+              },
+              "While Loops": {
+                "name": "Solange-Schleifen"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Lehrer-Dashboard"
+              },
+              "The Design Recipe": {
+                "name": "Das Design-Rezept"
+              },
+              "Welcome!": {
+                "name": "Willkommen!"
+              }
+            }
+          },
+          "basketball": {
+            "title": "Wähle Dein Team und spiele eine Runde Basketball",
+            "description_short": "Wähle Dein Team und spiele eine Runde Basketball",
+            "description": "Wähle Dein Team und spiele eine Runde Basketball",
+            "stages": {
+              "Bounce": {
+                "name": "Bounce"
+              }
+            }
+          },
+          "hoc-encryption": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Einfache Verschlüsselung"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Binärdatei",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              },
+              "Binary Images": {
+                "name": "Binärbilder"
+              },
+              "Play Lab": {
+                "name": "Spielelabor"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Peer Review": {
+                "name": "Peer Review"
+              },
+              "Lists": {
+                "name": "Listen"
+              }
+            }
+          },
+          "minecraft": {
+            "title": "Mincecraft-Designer: Stunde des Codes",
+            "description_short": "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.",
+            "description": "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.",
+            "stages": {
+              "Minecraft Hour of Code Designer": {
+                "name": "Mincecraft-Designer: Stunde des Codes"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy Code"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Going Places Safely": {
+                "name": "Sicher unterwegs"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Your Digital Footprint": {
+                "name": "Dein digitaler Fußabdruck"
+              }
+            }
+          },
+          "coursec-draft": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Alltagsalgorithmen: Papierflieger"
+              },
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              },
+              "Your Digital Footprint": {
+                "name": "Dein digitaler Fußabdruck"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Unplugged: Binary": {
+                "name": "Offline: Binär"
+              },
+              "Artist Binary": {
+                "name": "Künstler Binär"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Songwriting with Parameters": {
+                "name": "Songschreiben mit Parametern"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Hour of Code 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Hour of Code 2013"
+              }
+            }
+          },
+          "sports": {
+            "title": "Programmiere Dein eigenes Sport-Spiel",
+            "description_short": "Kombiniere Elemente unterschiedlicher Sportarten",
+            "description": "Kombiniere Elemente unterschiedlicher Sportarten"
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Binärdatei"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Willkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Zusammenfassung"
+              }
+            }
+          },
+          "gamelab-demo": {
+            "stages": {
+              "Simple Sprite Movement": {
+                "name": "Einfache Sprite-Bewegung"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Foo": {
+                "name": "Kram"
+              },
+              "Lists": {
+                "name": "Listen"
+              },
+              "For Loops": {
+                "name": "\"Zähle mit\"-Schleifen"
+              },
+              "Functions with Parameters": {
+                "name": "Funktionen mit Parametern"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Input": {
+                "name": "Eingabe"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Einführung"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Algorithmen in der realen Welt: Würfelrennen"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Listen"
+              },
+              "For Loops": {
+                "name": "\"Zähle mit\"-Schleifen"
+              },
+              "Functions with Parameters": {
+                "name": "Funktionen mit Parametern"
+              },
+              "Functions with Parameters_": {
+                "name": "Funktionen mit Parametern"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "Variablen"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Functions": {
+                "name": "Funktionen"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Functions": {
+                "name": "Funktionen"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Listen"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "Variablen"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Functions": {
+                "name": "Funktionen"
+              },
+              "null": {
+                "name": "nichts"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              }
+            }
+          },
+          "csd2-old": {
+            "stages": {
+              "Peer Review": {
+                "name": "Peer Review"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              },
+              "Bounce": {
+                "name": "Bounce"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              }
+            }
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              }
+            }
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Alltagsalgorithmen: Papierflieger"
+              }
+            }
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              }
+            }
+          },
+          "coursee-2017": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Songwriting with Parameters": {
+                "name": "Songschreiben mit Parametern"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              }
+            }
+          },
+          "coursef-2017": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Songwriting with Parameters": {
+                "name": "Songschreiben mit Parametern"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              }
+            }
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Spelling Bee": {
+                "name": "Buchstabierwettbewerb"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Danke"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Funktionen erstellen"
+              }
+            },
+            "description_short": "Programmierung"
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Unplugged: Binary": {
+                "name": "Offline: Binär"
+              },
+              "Artist Binary": {
+                "name": "Künstler Binär"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Songwriting with Parameters": {
+                "name": "Songschreiben mit Parametern"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Funktionen erstellen"
+              }
+            }
+          },
+          "pwc": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Einfache Verschlüsselung"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            },
+            "description": "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Songwriting with Parameters": {
+                "name": "Songschreiben mit Parametern"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Listen"
+              },
+              "For Loops": {
+                "name": "\"Zähle mit\"-Schleifen"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "Variablen"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Functions": {
+                "name": "Funktionen"
+              }
+            },
+            "description_short": "Programmierung"
+          },
+          "csd3-2018": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Variables": {
+                "name": "Variablen"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Functions": {
+                "name": "Funktionen"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Listen"
+              }
+            }
+          },
+          "coursea-2018": {
+            "stages": {
+              "Programming: Happy Maps": {
+                "name": "Glücklich Karten"
+              },
+              "Going Places Safely": {
+                "name": "Sicher unterwegs"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Programmieren auf Millimeterpapier"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              },
+              "Events: The Big Event": {
+                "name": "Der große Event"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Schöne Schleifen"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Functions: Songwriting": {
+                "name": "Songschreiben"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              },
+              "Unplugged: Binary": {
+                "name": "Binärbilder"
+              },
+              "Artist Binary": {
+                "name": "Künstler Binär"
+              },
+              "Internet": {
+                "name": "das Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Relay Programming": {
+                "name": "Relais-Programmierung"
+              }
+            }
+          },
+          "courseb-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Your Digital Footprint": {
+                "name": "Dein digitaler Fußabdruck"
+              },
+              "Move It, Move It": {
+                "name": "Bewegung, Bewegung"
+              }
+            }
+          },
+          "coursed-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Programmieren auf Millimeterpapier"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Unplugged: Binary": {
+                "name": "Binärbilder"
+              },
+              "Artist Binary": {
+                "name": "Künstler Binär"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmieren auf Millimeterpapier"
+              },
+              "Relay Programming": {
+                "name": "Relais-Programmierung"
+              }
+            }
+          },
+          "coursec-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Schöne Schleifen"
+              },
+              "Events: The Big Event": {
+                "name": "Der große Event"
+              },
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              }
+            }
+          },
+          "csd6-2018": {
+            "stages": {
+              "Functions with Parameters": {
+                "name": "Funktionen mit Parametern"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Meine Roboterfreunde"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Functions: Songwriting": {
+                "name": "Songschreiben"
+              },
+              "Internet": {
+                "name": "das Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            }
+          },
+          "coursef-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Meine Roboterfreunde"
+              },
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Introduction": {
+                "name": "Einführung"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Spielelabor"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Songwriting with Parameters": {
+                "name": "Songschreiben mit Parametern"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Binäre Nachrichten senden"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Binäre Nachrichten mit dem Internet-Simulator senden"
+              },
+              "Binary Numbers": {
+                "name": "Binärzahlen"
+              },
+              "Sending Numbers": {
+                "name": "Zahlen senden"
+              },
+              "The Internet": {
+                "name": "das Internet"
+              }
+            }
+          },
+          "csp2-2018": {
+            "stages": {
+              "Bytes and File Sizes": {
+                "name": "Bytes und Dateigrößen"
+              }
+            }
+          },
+          "csp3-2018": {
+            "description_short": "Programmierung",
+            "stages": {
+              "Creating Functions": {
+                "name": "Funktionen erstellen"
+              }
+            }
+          },
+          "csp4-2018": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Einfache Verschlüsselung"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "While Loops": {
+                "name": "Solange-Schleifen"
+              },
+              "Loops and Simulations": {
+                "name": "Schleifen und Simulationen"
+              },
+              "Introduction to Arrays": {
+                "name": "Einführung in Arrays"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Spelling Bee": {
+                "name": "Buchstabierwettbewerb"
+              },
+              "Move It, Move It": {
+                "name": "Bewegung, Bewegung"
+              },
+              "Your Digital Footprint": {
+                "name": "Dein digitaler Fußabdruck"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              }
+            }
+          },
+          "dance": {
+            "stages": {
+              "Dance Party": {
+                "name": "Tanzparty"
+              }
+            },
+            "title": "Tanzparty",
+            "description_short": "Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 weiteren!",
+            "description": "Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!"
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Künstler"
+              }
+            }
+          },
+          "dance--draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Tanzparty"
+              }
+            }
+          },
+          "dance-draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Tanzparty"
+              }
+            }
+          },
+          "dance-extras": {
+            "title": "Tanzt weiter",
+            "description": "Überschreite die erste Stunde mit erweiterten Projektideen."
+          },
+          "coursef-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "The Artist": {
+                "name": "Der Künstler"
+              }
+            }
+          },
+          "dance-low": {
+            "stages": {
+              "Dance Party": {
+                "name": "Tanzparty"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Relais-Programmierung"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalen Staatsbürgerschaft"
+              },
+              "Unplugged: Binary": {
+                "name": "Offline: Binär"
+              },
+              "Artist Binary": {
+                "name": "Künstler Binär"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Nested Loops": {
+                "name": "Verschachtelte Schleifen"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Conditionals": {
+                "name": "Bedingungen"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Relais-Programmierung"
+              },
+              "Conditionals with Cards": {
+                "name": "Bedingungen mit Karten"
+              },
+              "Envelope Variables": {
+                "name": "Umschlag-Variablen"
+              },
+              "For Loop Fun": {
+                "name": "„Zähle mit“-Schleifenspaß"
+              },
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              },
+              "Unplugged: Binary": {
+                "name": "Offline: Binär"
+              },
+              "Artist Binary": {
+                "name": "Künstler Binär"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "nichts"
+              }
+            }
+          },
+          "dance-extras-gallery": {
+            "title": "Tanzt weiter",
+            "description": "Überschreite die erste Stunde mit erweiterten Projektideen."
+          },
+          "coursec-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Grundlagen aufbauen"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Alltagsalgorithmen: Papierflieger"
+              },
+              "Binary Bracelets": {
+                "name": "Binäre Armbänder"
+              }
+            }
+          },
+          "gamelab": {
+            "title": "Spielelabor"
+          },
+          "coursea-2019": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              },
+              "Going Places Safely": {
+                "name": "Sicher unterwegs"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Bewegung, Bewegung"
+              },
+              "Your Digital Footprint": {
+                "name": "Dein digitaler Fußabdruck"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Bewegung, Bewegung"
+              },
+              "Your Digital Footprint": {
+                "name": "Dein digitaler Fußabdruck"
+              },
+              "Spelling Bee": {
+                "name": "Buchstabierwettbewerb"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Real-Life-Algorithmen: Pflanze Samen"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

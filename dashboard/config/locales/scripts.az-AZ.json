@@ -1,0 +1,1250 @@
+{
+  "az": {
+    "data": {
+      "script": {
+        "category": {
+          "hoc_category_name": "Kod Saatı",
+          "math_category_name": "Riyaziyyat"
+        },
+        "name": {
+          "course1": {
+            "title": "Kurs 1",
+            "description": "Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr kompyuter proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri həll etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi öyrənəcəklər. Bu kursu tamamladıqda, tələbələr qeyri standtart oyun yaxud hekayə düzəldib, onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar üçün tövsiyyə olunur.",
+            "description_short": "Kurs 1 oxumağı təzə öyrənənlər üçü hazırlarnıb.",
+            "description_audience": "4+ yaş (oxumağı bacarmayanlar)",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Rəssam: Dövrlər"
+              },
+              "Artist: Sequence": {
+                "name": "Rəssam: Ardıcıllıq"
+              },
+              "Artist: Shapes": {
+                "name": "Rəssam: Fiqurlar"
+              },
+              "Bee: Loops": {
+                "name": "Arı: Dövrlər"
+              },
+              "Bee: Sequence": {
+                "name": "Arı: Ardıcıllıq"
+              },
+              "Happy Maps": {
+                "name": "Şən xəritələr"
+              },
+              "Maze: Debugging": {
+                "name": "Labirint: Sazlama"
+              },
+              "Maze: Loops": {
+                "name": "Labirint: Dövrlər"
+              },
+              "Maze: Sequence": {
+                "name": "Labirint: Ardıcıllıq"
+              },
+              "Studio: Create a Story": {
+                "name": "Oyun labı: Bir əhvalat düzəldin"
+              }
+            }
+          },
+          "course2": {
+            "title": "Kurs 2",
+            "description": "Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv oyun və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə olunur.",
+            "description_short": "Kurs 2 oxumağı bacaran şagirdlər üçün hazırlanıb.",
+            "description_audience": "6+ yaş (oxuma tələb olunur)",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Rəssam: Sazlama"
+              },
+              "Artist: Loops": {
+                "name": "Rəssam: Dövrlər"
+              },
+              "Artist: Nested Loops": {
+                "name": "Rəssam: İç-içə dövrlər"
+              },
+              "Artist: Sequence": {
+                "name": "Rəssam: Ardıcıllıq"
+              },
+              "Bee: Conditionals": {
+                "name": "Arı: Şərti ifadələr"
+              },
+              "Bee: Debugging": {
+                "name": "Arı Sazlama"
+              },
+              "Bee: Loops": {
+                "name": "Arı: Dövrlər"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Graph Paper Programming": {
+                "name": "Millimetrlik kağızda proqramlaşdırma"
+              },
+              "Maze: Loops": {
+                "name": "Labirint: Dövrlər"
+              },
+              "Maze: Sequence": {
+                "name": "Labirint: Ardıcıllıq"
+              },
+              "Relay programming": {
+                "name": "Estafet proqramlaşdırması"
+              },
+              "Studio: Create a Story": {
+                "name": "Oyun labı: Bir əhvalat düzəldin"
+              }
+            }
+          },
+          "course3": {
+            "title": "Kurs 3",
+            "description_short": "Kurs 3 Kurs 2-nin davamıdır.",
+            "description_audience": "8+ yaş (Kurs 2-dən sonra)",
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              },
+              "Artist: Functions": {
+                "name": "Rəssam: Funksiyalar"
+              },
+              "Artist: Nested Loops": {
+                "name": "Rəssam: İç-içə dövrlər"
+              },
+              "Bee: Conditionals": {
+                "name": "Arı: Şərti ifadələr"
+              },
+              "Bee: Debugging": {
+                "name": "Arı Sazlama"
+              },
+              "Bee: Functions": {
+                "name": "Arı: Funksiyalar"
+              },
+              "Bounce": {
+                "name": "Tullan"
+              },
+              "Computational Thinking": {
+                "name": "Hesablama təfəkkürü"
+              },
+              "Dice Race": {
+                "name": "Zər Yarışı"
+              },
+              "Internet": {
+                "name": "İnternet"
+              },
+              "Maze": {
+                "name": "Labirint"
+              },
+              "Studio: Create a Story": {
+                "name": "Oyun labı: Bir əhvalat düzəldin"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Oyun labı",
+            "description": "Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!",
+            "description_short": "Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!",
+            "stages": {
+              "Play Lab": {
+                "name": "Oyun labı"
+              }
+            }
+          },
+          "artist": {
+            "title": "Rəssam",
+            "description": "Rəssamla fısqırıq şəkil və dizaynlar çəkin!",
+            "description_short": "Rəssamla fısqırıq şəkil və dizaynlar çəkin!",
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Ənənəvi labirint",
+            "description_short": "İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!",
+            "stages": {
+              "Maze": {
+                "name": "Labirint"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Anna və Elza ilə proqramlaşdır",
+            "description": "Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində sürüşərək siz qar dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla bölüşə biləcəyiniz bir qış möcüzəsi quracaqsınız!",
+            "description_short": "Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək.",
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              }
+            }
+          },
+          "course4": {
+            "title": "Kurs 4",
+            "description_short": "Kurs 4 üçün şagirdlər artıq Kurs 2 və 3-ü keçmiş olmalıdırlar.",
+            "description_audience": "10+ yaş (Kurs 3-dən sonra)",
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              },
+              "Artist: Functions": {
+                "name": "Rəssam: Funksiyalar"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Rəssam: Parametrli funksiyalar"
+              },
+              "Artist: Variables": {
+                "name": "Rəssam: Dəyişənlər"
+              },
+              "Maze and Bee": {
+                "name": "Labirint və arı"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Kurs 4 üçün lazımi şərtlər",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Rəssam: Funksiyalar"
+              },
+              "Artist: Loops": {
+                "name": "Rəssam: Dövrlər"
+              },
+              "Artist: Nested Loops": {
+                "name": "Rəssam: İç-içə dövrlər"
+              },
+              "Artist: Sequence": {
+                "name": "Rəssam: Ardıcıllıq"
+              },
+              "Bee: Conditionals": {
+                "name": "Arı: Şərti ifadələr"
+              },
+              "Bee: Debugging": {
+                "name": "Arı Sazlama"
+              },
+              "Maze: Sequence": {
+                "name": "Labirint: Ardıcıllıq"
+              }
+            }
+          },
+          "usability": {
+            "stages": {
+              "Binary": {
+                "name": "İkilik"
+              },
+              "Intro": {
+                "name": "Giriş"
+              },
+              "Variables": {
+                "name": "dəyişənlər"
+              }
+            }
+          },
+          "algebra": {
+            "stages": {
+              "Eval: Conditionals": {
+                "name": "Şərti ifadələr"
+              }
+            }
+          },
+          "infinity": {
+            "stages": {
+              "Infinity": {
+                "name": "Sonsuzluq"
+              }
+            }
+          },
+          "20-hour": {
+            "title": "İnformatikaya sürətləndirilmiş giriş kursu",
+            "description": "Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.",
+            "description_short": "Bu 20 saatlıq kurs informatika və proqramlaşdırmanın 2-4-cü kurslardakı əsas anlayışlarını təqdim edir.",
+            "description_audience": "10+ yaş (Kurs 3-dən sonra)",
+            "stages": {
+              "Abstraction": {
+                "name": "Mücərrədlik"
+              },
+              "Algorithms": {
+                "name": "Alqoritmlər"
+              },
+              "Computational Thinking": {
+                "name": "Hesablama təfəkkürü"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Functions": {
+                "name": "funksiyalar"
+              },
+              "Graph Paper Programming": {
+                "name": "Millimetrlik kağızda proqramlaşdırma"
+              },
+              "Introduction to Computer Science": {
+                "name": "İnformatikaya giriş"
+              },
+              "Relay Programming": {
+                "name": "Estafet proqramlaşdırması"
+              },
+              "Song Writing": {
+                "name": "Mahnı bəstələmə"
+              },
+              "The Artist": {
+                "name": "Rəssam"
+              },
+              "The Artist 2": {
+                "name": "Rəssam 2"
+              },
+              "The Artist 3": {
+                "name": "Rəssam 3"
+              },
+              "The Artist 4": {
+                "name": "Rəssam 4"
+              },
+              "The Artist 5": {
+                "name": "Rəssam 5"
+              },
+              "The Farmer": {
+                "name": "Fermer"
+              },
+              "The Farmer 2": {
+                "name": "Fermer 2"
+              },
+              "The Farmer 3": {
+                "name": "Fermer 3"
+              },
+              "The Internet": {
+                "name": "İnternet"
+              },
+              "The Maze": {
+                "name": "Labirint"
+              },
+              "Wrap-up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Koda düzəliş et",
+            "description": "Koda düzəliş et",
+            "description_short": "Koda düzəliş et",
+            "stages": {
+              "Play Lab": {
+                "name": "Oyun labı"
+              },
+              "The Artist": {
+                "name": "Rəssam"
+              },
+              "The Maze": {
+                "name": "Labirint"
+              }
+            }
+          },
+          "events": {
+            "title": "Hadisələr",
+            "description": "Hadisələr",
+            "description_short": "Hadisələr",
+            "stages": {
+              "Bounce": {
+                "name": "Tullan"
+              },
+              "Calc": {
+                "name": "Hesablama"
+              },
+              "Eval": {
+                "name": "Qiymət"
+              },
+              "Studio": {
+                "name": "Studiya"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Qanadlı Kod",
+            "description": "10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!",
+            "stages": {
+              "Flappy Code": {
+                "name": "Qanadlı Kod"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Mozaika",
+            "stages": {
+              "Jigsaw": {
+                "name": "Mozaika"
+              }
+            }
+          },
+          "step": {
+            "title": "addım",
+            "stages": {
+              "Step": {
+                "name": "addım"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Kod Saatı 2013",
+            "description_short": "İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Kod Saatı 2013"
+              }
+            }
+          },
+          "CodeStudioPuzzleChallenge": {
+            "stages": {
+              "Puzzles": {
+                "name": "Tapmacalar"
+              }
+            }
+          },
+          "Tutorial Video - Code Studio Puzzle Challenge": {
+            "stages": {
+              "Puzzles": {
+                "name": "Tapmacalar"
+              }
+            }
+          },
+          "CSPLessonSamples": {
+            "stages": {
+              "Lesson 14": {
+                "name": "Dərs 14"
+              },
+              "Lesson 15": {
+                "name": "Dərs 15"
+              }
+            }
+          },
+          "sciencePD2": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "cspunit2": {
+            "stages": {
+              "The Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "allthethings": {
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              },
+              "Bee": {
+                "name": "Arı"
+              },
+              "Bounce": {
+                "name": "Tullan"
+              },
+              "Farmer": {
+                "name": "Fermer"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Jigsaw": {
+                "name": "Mozaika"
+              },
+              "Maze": {
+                "name": "Labirint"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Studio": {
+                "name": "Studiya"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "Proqram Labı"
+              }
+            }
+          },
+          "ECSPD2": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "science-PD2": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "CSPPD2": {
+            "stages": {
+              "Wrap Up and Next Steps": {
+                "name": "Yekun və sonrakı addımlar"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Graph Paper Programming": {
+                "name": "Millimetrlik kağızda proqramlaşdırma"
+              },
+              "Happy Maps": {
+                "name": "Şən xəritələr"
+              }
+            }
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "Special Fun": {
+            "description_audience": "10+ yaş (Kurs 3-dən sonra)"
+          },
+          "SpecialSeries": {
+            "description_audience": "10+ yaş (Kurs 3-dən sonra)"
+          },
+          "starwars": {
+            "title": "Ulduz Müharibələri: Qalaktikanı proqramlaşdırın",
+            "description": "Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.",
+            "description_short": "Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin."
+          },
+          "starwarsblocks": {
+            "title": "Ulduz Müharibələri: Qalaktikanı proqramlaşdırın",
+            "description": "Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.",
+            "description_short": "Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin."
+          },
+          "mc": {
+            "title": "Maynkraft Kod Saatı",
+            "description": "Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın",
+            "description_short": "Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin"
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "csp1-2017": {
+            "stages": {
+              "The Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "stages": {
+              "Functions": {
+                "name": "funksiyalar"
+              }
+            }
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "8+ yaş (Kurs 2-dən sonra)"
+          },
+          "ECSPD1": {
+            "stages": {
+              "Wrap Up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Rəssam Funksiyalar"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "8+ yaş (Kurs 2-dən sonra)"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Arı: Şərti ifadələr"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Hadisələr"
+              },
+              "Loops": {
+                "name": "dövrlər"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Hadisələr"
+              },
+              "Loops": {
+                "name": "dövrlər"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: Functions with Parameters": {
+                "name": "Rəssam: Parametrli funksiyalar"
+              },
+              "Artist: Variables": {
+                "name": "Rəssam: Dəyişənlər"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Wrap-up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Rəssam: İç-içə dövrlər"
+              },
+              "Bee Debugging": {
+                "name": "Arı Sazlama"
+              },
+              "Bounce": {
+                "name": "Tullan"
+              }
+            }
+          },
+          "csd3-2017": {
+            "stages": {
+              "Functions": {
+                "name": "funksiyalar"
+              },
+              "Variables": {
+                "name": "dəyişənlər"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Flappy"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "İkilik"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Events": {
+                "name": "Hadisələr"
+              },
+              "Functions": {
+                "name": "funksiyalar"
+              },
+              "Functions with Parameters": {
+                "name": "Parametrli funksiyalar"
+              },
+              "Loops": {
+                "name": "dövrlər"
+              },
+              "Variables": {
+                "name": "dəyişənlər"
+              }
+            }
+          },
+          "basketball": {
+            "stages": {
+              "Bounce": {
+                "name": "Tullan"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "İkilik",
+            "stages": {
+              "Binary Images": {
+                "name": "İkilik təsvirlər"
+              },
+              "Play Lab": {
+                "name": "Oyun labı"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Siyahılar"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Qanadlı Kod"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Internet": {
+                "name": "İnternet"
+              },
+              "Introduction": {
+                "name": "Giriş"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Kod Saatı 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Kod Saatı 2013"
+              }
+            }
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "İkilik"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Wrap-Up": {
+                "name": "Sarımaq"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Siyahılar"
+              },
+              "Map": {
+                "name": "Xəritə"
+              },
+              "Functions with Parameters": {
+                "name": "Parametrli funksiyalar"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Siyahılar"
+              },
+              "Functions with Parameters": {
+                "name": "Parametrli funksiyalar"
+              },
+              "Functions with Parameters_": {
+                "name": "Parametrli funksiyalar"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "dəyişənlər"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Functions": {
+                "name": "funksiyalar"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Functions": {
+                "name": "funksiyalar"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Siyahılar"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "dəyişənlər"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Functions": {
+                "name": "funksiyalar"
+              },
+              "null": {
+                "name": "boş"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "Bounce": {
+                "name": "Tullan"
+              }
+            }
+          },
+          "csdnovice": {
+            "stages": {
+              "Wrap Up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "cspnovice": {
+            "stages": {
+              "Wrap Up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              },
+              "Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Təşəkkürlər,"
+              }
+            }
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Maynkraft Kod Saatı"
+              }
+            }
+          },
+          "course-e-2018": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Siyahılar"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "dəyişənlər"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Functions": {
+                "name": "funksiyalar"
+              }
+            }
+          },
+          "csd3-2018": {
+            "stages": {
+              "Variables": {
+                "name": "dəyişənlər"
+              },
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Functions": {
+                "name": "funksiyalar"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Siyahılar"
+              }
+            }
+          },
+          "coursea-2018": {
+            "stages": {
+              "Programming: Happy Maps": {
+                "name": "Şən xəritələr"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Millimetrlik kağızda proqramlaşdırma"
+              },
+              "Introduction": {
+                "name": "Giriş"
+              },
+              "Unplugged: Binary": {
+                "name": "İkilik təsvirlər"
+              },
+              "Internet": {
+                "name": "İnternet"
+              },
+              "Relay Programming": {
+                "name": "Estafet proqramlaşdırması"
+              }
+            }
+          },
+          "coursed-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Millimetrlik kağızda proqramlaşdırma"
+              },
+              "Introduction": {
+                "name": "Giriş"
+              },
+              "Unplugged: Binary": {
+                "name": "İkilik təsvirlər"
+              },
+              "Graph Paper Programming": {
+                "name": "Millimetrlik kağızda proqramlaşdırma"
+              },
+              "Relay Programming": {
+                "name": "Estafet proqramlaşdırması"
+              }
+            }
+          },
+          "csd6-2018": {
+            "stages": {
+              "Functions with Parameters": {
+                "name": "Parametrli funksiyalar"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              },
+              "Internet": {
+                "name": "İnternet"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Maynkraft Kod Saatı"
+              }
+            }
+          },
+          "coursef-2018": {
+            "stages": {
+              "Introduction": {
+                "name": "Giriş"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "The Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "csd-novice-18": {
+            "stages": {
+              "Wrap Up": {
+                "name": "Yekun"
+              },
+              "Friday": {
+                "name": "Cümə"
+              },
+              "Monday": {
+                "name": "Bazar ertəsi"
+              }
+            }
+          },
+          "csd-apprentice-18": {
+            "stages": {
+              "Wrap Up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "csp-novice-18": {
+            "stages": {
+              "Wrap Up": {
+                "name": "Yekun"
+              },
+              "Monday": {
+                "name": "Bazar ertəsi"
+              }
+            }
+          },
+          "csp-apprentice-18": {
+            "stages": {
+              "Wrap Up": {
+                "name": "Yekun"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              }
+            }
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Rəssam"
+              }
+            }
+          },
+          "dance-extras": {
+            "title": "Rəqs etməyə davam edin"
+          },
+          "coursef-2019": {
+            "stages": {
+              "The Artist": {
+                "name": "Rəssam"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Estafet proqramlaşdırması"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Conditionals": {
+                "name": "Şərti ifadələr"
+              },
+              "Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Estafet proqramlaşdırması"
+              },
+              "Internet": {
+                "name": "İnternet"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "boş"
+              }
+            }
+          },
+          "dance-extras-gallery": {
+            "title": "Rəqs etməyə davam edin"
+          }
+        }
+      }
+    }
+  }
+}

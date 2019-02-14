@@ -1,0 +1,4246 @@
+{
+  "fr": {
+    "data": {
+      "script": {
+        "category": {
+          "csd_2018_category_name": "Découvertes de l'informatique (2018-2019)",
+          "csf_category_name": "Fondamentaux d'informatique",
+          "csf_2018_category_name": "Fondamental d'informatique (2018)",
+          "csf_international_category_name": "Fondamental d'informatique international",
+          "csf2_draft_category_name": "En cours d’élaboration : Cours A - F",
+          "csp_category_name": "Principes de l'informatique",
+          "csp_2018_category_name": "Principes de l'informatique (2018-2019)",
+          "cspexams_category_name": "Test d'entraînement aux principes de l'informatique",
+          "csp17_category_name": "Principes de l'informatique (2017-2018)",
+          "full_course_category_name": "Cours complets",
+          "hoc_category_name": "Heure de Code",
+          "math_category_name": "Math"
+        },
+        "name": {
+          "course1": {
+            "title": "Cours 1",
+            "description": "Commencer par le Cours 1 pour les jeunes lecteurs. Les élèves créeront des programmes informatiques qui les aideront à apprendre à collaborer avec les autres, à développer des compétences qui les aideront à résoudre des problèmes, et à persister lors de tâches difficiles. À la fin de ce cours, les élèves créent leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les niveaux maternelle et CP.",
+            "description_short": "Commencer par le Cours 1 pour les jeunes lecteurs.",
+            "description_audience": "De 4 à 6 ans",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Artiste: Boucles"
+              },
+              "Artist: Sequence": {
+                "name": "Artiste: Séquence"
+              },
+              "Artist: Shapes": {
+                "name": "Artiste: Formes"
+              },
+              "Bee: Loops": {
+                "name": "Abeille: Boucles"
+              },
+              "Bee: Sequence": {
+                "name": "Abeille: Séquence"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Getting Loopy": {
+                "name": "Tourner en rond"
+              },
+              "Going Places Safely": {
+                "name": "Se déplacer en toute sécurité"
+              },
+              "Happy Maps": {
+                "name": "Cartes Joyeuses"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Puzzle : Apprendre à faire un glisser-déposer"
+              },
+              "Maze: Debugging": {
+                "name": "Labyrinthe: Débogage"
+              },
+              "Maze: Loops": {
+                "name": "Labyrinthe: Boucles"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrinthe: Séquence"
+              },
+              "Move it, Move it": {
+                "name": "Déplace-le, déplace-le"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              },
+              "Spelling Bee": {
+                "name": "Concours d'orthographe"
+              },
+              "Studio: Create a Story": {
+                "name": "Labo de jeux: Créer une histoire"
+              },
+              "The Big Event": {
+                "name": "Le Grand Événement"
+              }
+            }
+          },
+          "course2": {
+            "title": "Cours 2",
+            "description": "Commencer avec le Cours 2 pour les élèves qui savent lire et n'ont aucune expérience antérieure en matière de programmation. Dans le cadre de ce cours, les élèves créeront des programmes pour résoudre des problèmes et développeront des jeux interactifs ou des histoires qu'ils pourront partager . Recommandé pour les niveaux CE2-CM2.",
+            "description_short": "Commencer avec le Cours 2 pour les élèves qui savent lire.",
+            "description_audience": "6 ans et + (lecture indispensable)",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Artiste: Débogage"
+              },
+              "Artist: Loops": {
+                "name": "Artiste: Boucles"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artiste: Boucles imbriquées"
+              },
+              "Artist: Sequence": {
+                "name": "Artiste: Séquence"
+              },
+              "Bee: Conditionals": {
+                "name": "Abeille: Instructions conditionnelles"
+              },
+              "Bee: Debugging": {
+                "name": "Abeille: Débogage"
+              },
+              "Bee: Loops": {
+                "name": "Abeille: Boucles"
+              },
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Getting Loopy": {
+                "name": "Tourner en rond"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmation sur papier quadrillé"
+              },
+              "Maze: Loops": {
+                "name": "Labyrinthe: Boucles"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrinthe: Séquence"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algorithmes du monde réel: Avions en papier"
+              },
+              "Relay programming": {
+                "name": "Programmation de relais"
+              },
+              "Studio: Create a Story": {
+                "name": "Labo de jeux: Créer une histoire"
+              },
+              "The Big Event": {
+                "name": "Le Grand Événement"
+              },
+              "Your Digital Footprint": {
+                "name": "Ton empreinte numérique"
+              }
+            }
+          },
+          "course3": {
+            "title": "Cours 3",
+            "description": "Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2 (8-10 ans).",
+            "description_short": "Le Cours 3 fait suite au Cours 2.",
+            "description_audience": "De 8 à 18 ans",
+            "stages": {
+              "Artist": {
+                "name": "Artiste"
+              },
+              "Artist: Functions": {
+                "name": "Artiste: Fonctions"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artiste: Boucles imbriquées"
+              },
+              "Artist: Patterns": {
+                "name": "Artiste: Modèles"
+              },
+              "Bee: Conditionals": {
+                "name": "Abeille: Instructions conditionnelles"
+              },
+              "Bee: Debugging": {
+                "name": "Abeille: Débogage"
+              },
+              "Bee: Functions": {
+                "name": "Abeille: Fonctions"
+              },
+              "Bee: Nested Loops": {
+                "name": "Abeille: Boucles «Imbriquées»"
+              },
+              "Bounce": {
+                "name": "Rebond"
+              },
+              "Computational Thinking": {
+                "name": "Algorithmique"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              },
+              "Dice Race": {
+                "name": "Course de Dés"
+              },
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Farmer: While Loops": {
+                "name": "Fermier: Boucles «Tant que»"
+              },
+              "Functional Suncatchers": {
+                "name": "Vitraux fonctionnels"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Maze": {
+                "name": "Labyrinthe"
+              },
+              "Maze: Conditionals": {
+                "name": "Labyrinthe: Instructions conditionnelles"
+              },
+              "Songwriting": {
+                "name": "Écriture de chansons"
+              },
+              "Studio: Create a Game": {
+                "name": "Labo de jeux: Créer un jeu"
+              },
+              "Studio: Create a Story": {
+                "name": "Labo de jeux: Créer une histoire"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Labo de jeux",
+            "description": "Programme une histoire ou un jeu dans le Labo de jeux !",
+            "description_short": "Programmer une histoire ou un jeu avec le Labo !",
+            "stages": {
+              "Play Lab": {
+                "name": "Labo de jeux"
+              }
+            }
+          },
+          "artist": {
+            "title": "Artiste",
+            "description": "Dessine des super images et dessins avec l'Artiste!",
+            "description_short": "Dessinez des super images et schémas avec l'Artiste!",
+            "stages": {
+              "Artist": {
+                "name": "Artiste"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Labyrinthe classique",
+            "description": "Découvre les bases des sciences informatiques grâce aux personnages de Angry Birds, de Plantes vs Zombies et Scrat de l'Âge de glace !",
+            "description_short": "Découvre les bases des sciences informatiques grâce a de nombreux personnages rigolos !",
+            "stages": {
+              "Maze": {
+                "name": "Labyrinthe"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Fais du code avec Anna et Elsa",
+            "description": "Utilisons du code pour rejoindre Anna et Elsa lorsqu’elles explorent la magie et la beauté de la glace. Tu vas créer des flocons de neige et des motifs en patinant, et créer un monde hivernal magique que tu pourras ensuite partager avec tes amis.",
+            "description_short": "Utilisons du code pour rejoindre Anna et Elsa tandis qu’elles explorent la magie et la beauté de la glace.",
+            "stages": {
+              "Artist": {
+                "name": "Artiste"
+              }
+            }
+          },
+          "course4": {
+            "title": "Cours 4",
+            "description": "Le Cours 4 s'adresse aux élèves qui ont déjà suivi les Cours 2 et 3. Les élèves approfondiront les sujets de programmation introduits aux cours précédents - des solutions souples à des problèmes plus complexes. À la fin de ce cours, les élèves créent des histoires et des jeux interactifs qu'ils peuvent partager avec n'importe qui. Recommandé pour les niveaux CM1-4e.",
+            "description_short": "Les élèves qui prennent le Cours 4 doivent déjà avoir suivi les Cours 2 et 3.",
+            "description_audience": "De 10 à 18 ans",
+            "stages": {
+              "Artist": {
+                "name": "Artiste"
+              },
+              "Artist Binary": {
+                "name": "Artiste binaire"
+              },
+              "Artist: For Loops": {
+                "name": "Artiste: Boucles « Pour »"
+              },
+              "Artist: Functions": {
+                "name": "Artiste: Fonctions"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Artiste: Fonctions avec des paramètres"
+              },
+              "Artist: Variables": {
+                "name": "Artiste: Variables"
+              },
+              "Bee: For Loops": {
+                "name": "Abeille: Boucles « Pour »"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Abeille: Fonctions avec des paramètres"
+              },
+              "Extreme Challenge - Comprehensive": {
+                "name": "Défi extrême - Toutes les leçons"
+              },
+              "Maze and Bee": {
+                "name": "Labyrinthe et abeille"
+              },
+              "Play Lab: For Loops": {
+                "name": "Labo de jeux: Boucles « Pour »"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Labo de jeux: Fonctions avec des paramètres"
+              },
+              "Play Lab: Variables": {
+                "name": "Labo de jeux: Variables"
+              },
+              "Super Challenge - For Loops": {
+                "name": "Super défi - Les boucles « Pour »"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Super défi - Les fonctions et les paramètres"
+              },
+              "Super Challenge - Variables": {
+                "name": "Super défi - Les variables"
+              },
+              "Unplugged: Binary": {
+                "name": "Débranché: Binaire"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Débranché: Variables de l'enveloppe"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Débranché: Jouons avec les boucles « Pour »"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Débranché: Mad Libs"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Débranché: Composition de chansons avec des paramètres"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Débranché: Tangrams"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Prérequis du Cours 4",
+            "description": "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les Cours 2 et 3.",
+            "description_short": "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les Cours 2 et 3.",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Artiste: Fonctions"
+              },
+              "Artist: Loops": {
+                "name": "Artiste: Boucles"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artiste: Boucles imbriquées"
+              },
+              "Artist: Sequence": {
+                "name": "Artiste: Séquence"
+              },
+              "Bee: Conditionals": {
+                "name": "Abeille: Instructions conditionnelles"
+              },
+              "Bee: Debugging": {
+                "name": "Abeille: Débogage"
+              },
+              "Bee: Nested Loops": {
+                "name": "Abeille: Boucles «Imbriquées»"
+              },
+              "Farmer: While Loops": {
+                "name": "Fermier: Boucles «Tant que»"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrinthe: Séquence"
+              }
+            }
+          },
+          "usability": {
+            "title": "Tests d'utilisabilité",
+            "description": "Une sélection des cours du niveau 4 pour les tests d'utilisabilité.",
+            "stages": {
+              "Binary": {
+                "name": "Binaire"
+              },
+              "For Loops": {
+                "name": "Boucles « Pour »"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Fonctions et les fonctions avec paramètres"
+              },
+              "Intro": {
+                "name": "Introduction"
+              },
+              "Variables": {
+                "name": "variables"
+              }
+            }
+          },
+          "algebra": {
+            "title": "Informatique en algèbre",
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Définition de Variables et Substitution"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Blocs d'évaluation et expressions arithmétiques"
+              },
+              "Eval: Boolean Operators": {
+                "name": "Opérateurs booléens"
+              },
+              "Eval: Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Eval: Defining Functions": {
+                "name": "Fonctions composées"
+              },
+              "Eval: Functions": {
+                "name": "Résoudre des problèmes de mots avec la recette de conception"
+              },
+              "Eval: Strings and Images": {
+                "name": "Chaînes et images"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Rédaction de contrats"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Le grand jeu - Animation"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Le grand jeu - valeurs booléennes"
+              },
+              "Play Lab: Booleans": {
+                "name": "Sam la chauve-souris"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Le grand jeu - détection de Collision"
+              },
+              "Play Lab: Defining Functions": {
+                "name": "Hauteur de la fusée"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Le grand jeu - Variables"
+              },
+              "Unplugged: Booleans": {
+                "name": "Activité débranchée : les booléens et la logique"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Activité débranchée : la détection de Collision et le théorème de Pythagore"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Débranché: Instructions conditionnelles et fonctions par morceaux"
+              },
+              "Unplugged: Contracts": {
+                "name": "Activité débranchée : contrats, domaine, et gamme"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Débranché: La Recette de Conception"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Débranché: Jeux vidéos et plans de coordonnées"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Labo de Jeux de Disney Infinity",
+            "description": "Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.",
+            "description_short": "Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.",
+            "stages": {
+              "Infinity": {
+                "name": "Infini"
+              }
+            }
+          },
+          "algebrademo": {
+            "title": "Démo de l'algèbre",
+            "description": "Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre",
+            "description_short": "Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre",
+            "stages": {
+              "Defining Simple Functions": {
+                "name": "Définir des fonctions simples"
+              },
+              "Defining Variables": {
+                "name": "Définir des variables"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Making Pictures": {
+                "name": "Faire des photos"
+              },
+              "The Design Recipe": {
+                "name": "La Recette de Conception"
+              }
+            }
+          },
+          "K5PD": {
+            "title": "Perfectionnement professionnel en CM2",
+            "description": "Perfectionnement professionnel pour les cours de CM2",
+            "description_short": "Perfectionnement professionnel pour les cours de CM2",
+            "stages": {
+              "Computer Science Pedagogy": {
+                "name": "Pédagogie des sciences informatiques"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "K-5 Courses": {
+                "name": "Cours de CM2"
+              },
+              "Next Steps": {
+                "name": "Prochaines étapes"
+              },
+              "Programming Concept: Conditionals": {
+                "name": "Concept de programmation : instructions conditionnelles"
+              },
+              "Programming Concept: Events": {
+                "name": "Concept de programmation : événements"
+              },
+              "Programming Concept: Functions": {
+                "name": "Concept de programmation : fonctions"
+              },
+              "Programming Concept: Loops": {
+                "name": "Concept de programmation : boucles"
+              },
+              "Reflection": {
+                "name": "Réflexion"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Unplugged lessons": {
+                "name": "Leçons débranchées"
+              },
+              "Writing computer programs": {
+                "name": "Écrire des logiciels informatiques"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Simulateur d'Internet",
+            "stages": {
+              "Automatic DNS node": {
+                "name": "Nœud DNS automatique"
+              },
+              "Broadcasting messages": {
+                "name": "Diffusion de messages"
+              },
+              "Internet Simulator Freeplay": {
+                "name": "Simulateur d'Internet en libre accès"
+              },
+              "Manual DNS": {
+                "name": "DNS manuel"
+              },
+              "Overview and Setup Instructions": {
+                "name": "Vue d’ensemble et consignes d’installation"
+              },
+              "Packets and Reliability": {
+                "name": "Paquets et Fiabilité"
+              },
+              "Peer to Peer - Sending Ascii": {
+                "name": "Peer to Peer - Envoyer Ascii"
+              },
+              "Peer to Peer - Sending Bits on a Shared Wire": {
+                "name": "Peer to Peer - Transmetre les Bits sur un Fil Commun"
+              },
+              "Peer to Peer - Sending Numbers": {
+                "name": "Peer to Peer - Envoyer des Nombres"
+              },
+              "Routers and addresses": {
+                "name": "Routeurs et Adresses"
+              }
+            }
+          },
+          "pixelation": {
+            "title": "Pixellisation",
+            "description": "Créer des images avec des bits et des octets.",
+            "description_short": "Créer des images avec des bits et des octets.",
+            "stages": {
+              "Black & White Pixelation Freeplay": {
+                "name": "Pixellisation en Noir et Blanc Freeplay"
+              },
+              "Black & White Pixelation Tutorial": {
+                "name": "Pixellisation en Noir et Blanc Tutoriel"
+              },
+              "Color Pixelation Examples": {
+                "name": "Exemples de Pixellisation en Couleur"
+              },
+              "Color Pixelation Freeplay": {
+                "name": "Pixellisation en Couleur libre"
+              },
+              "Color Pixelation Tutorial": {
+                "name": "Pixellisation en Couleur Tutoriel"
+              }
+            }
+          },
+          "20-hour": {
+            "title": "Introduction accélérée au cours d’informatique",
+            "description": "Ce cours de 20 heures couvre les concepts des fondamentaux de l'informatique et de la programmation des Cours 2 à 4. Le cours est conçu pour être utilisé avec des élèves de 10 à 18 ans. Découvre les Cours 2 à 4 pour une expérience plus complète !",
+            "description_short": "Ce cours de 20 heures couvre les concepts des fondamentaux de l'informatique et de la programmation des Cours 2 à 4.",
+            "description_audience": "De 10 à 18 ans",
+            "stages": {
+              "Abstraction": {
+                "name": "Abstraction"
+              },
+              "Algorithms": {
+                "name": "Algorithmes"
+              },
+              "Computational Thinking": {
+                "name": "Algorithmique"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Functions": {
+                "name": "fonctions"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmation sur papier quadrillé"
+              },
+              "Introduction to Computer Science": {
+                "name": "Introduction à l'informatique"
+              },
+              "Relay Programming": {
+                "name": "Programmation de relais"
+              },
+              "Song Writing": {
+                "name": "Ecriture de chanson"
+              },
+              "The Artist": {
+                "name": "L'Artiste"
+              },
+              "The Artist 2": {
+                "name": "L'Artiste 2"
+              },
+              "The Artist 3": {
+                "name": "L'Artiste 3"
+              },
+              "The Artist 4": {
+                "name": "L'Artiste 4"
+              },
+              "The Artist 5": {
+                "name": "L'Artiste 5"
+              },
+              "The Farmer": {
+                "name": "Le Fermier"
+              },
+              "The Farmer 2": {
+                "name": "Le Fermier 2"
+              },
+              "The Farmer 3": {
+                "name": "Le Fermier 3"
+              },
+              "The Internet": {
+                "name": "Internet et les réseaux connectés"
+              },
+              "The Maze": {
+                "name": "Le labyrinthe"
+              },
+              "Wrap-up": {
+                "name": "Résumé et ouverture"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Modifier le Code",
+            "description": "Modifier le Code",
+            "description_short": "Modifier le Code",
+            "stages": {
+              "Applab": {
+                "name": "AppLab"
+              },
+              "Hoc2015 Blockly": {
+                "name": "Hoc2015 Blockly"
+              },
+              "Play Lab": {
+                "name": "Labo de jeux"
+              },
+              "The Artist": {
+                "name": "L'Artiste"
+              },
+              "The Maze": {
+                "name": "Le labyrinthe"
+              }
+            }
+          },
+          "events": {
+            "title": "Événements",
+            "description": "Événements",
+            "description_short": "Événements",
+            "stages": {
+              "Bounce": {
+                "name": "Rebond"
+              },
+              "Calc": {
+                "name": "Calc"
+              },
+              "Eval": {
+                "name": "Eval"
+              },
+              "Studio": {
+                "name": "Studio"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Flappy l'oiseau",
+            "description": "Tu veux écrire ton propre jeu en moins de 10 minutes ? Essaie notre tutoriel de Code Flappy !",
+            "description_short": "Écris ton propre jeu Flappy en moins de 10 minutes !",
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy l'oiseau"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Puzzle",
+            "description": "Essaie notre tutoriel pour les pièces de puzzle",
+            "description_short": "Essaie notre tutoriel pour les pièces de puzzle",
+            "stages": {
+              "Jigsaw": {
+                "name": "Puzzle"
+              }
+            }
+          },
+          "step": {
+            "title": "Étape",
+            "description": "Tutoriel par étapes",
+            "description_short": "Tutoriel par étapes",
+            "stages": {
+              "Step": {
+                "name": "Étape"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "L'Heure de Code 2013",
+            "description": "Découvre les bases des sciences informatiques grâce aux personnages de Angry Birds et de Plants vs  Zombies !",
+            "description_short": "Découvre les bases des sciences informatiques grâce a de nombreux personnages rigolos !",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "L'Heure de Code 2013"
+              }
+            }
+          },
+          "CodeStudioPuzzleChallenge": {
+            "title": "Défi des énigmes de Code Studio",
+            "description": "Essayez ces amusantes énigmes de codage. Faites de votre mieux !",
+            "description_short": "Relevez le défi !",
+            "stages": {
+              "Puzzles": {
+                "name": "Enigmes"
+              }
+            }
+          },
+          "Tutorial Video - Code Studio Puzzle Challenge": {
+            "title": "Tutoriel - Défi d'énigmes sur Code Studio",
+            "description": "Essayez ces amusantes énigmes de codage. Faites de votre mieux !",
+            "description_short": "Relevez le défi !",
+            "stages": {
+              "Puzzles": {
+                "name": "Enigmes"
+              }
+            }
+          },
+          "cspunit1": {
+            "description_short": "Programmation",
+            "stages": {
+              "Binary Numbers": {
+                "name": "Nombres binaires"
+              },
+              "Bytes and File Sizes": {
+                "name": "Octets et Tailles de Fichiers"
+              },
+              "Encode a Complex Thing": {
+                "name": "Encoder une Experience"
+              },
+              "Encoding B&W Images": {
+                "name": "Encoder des Images en N&B"
+              },
+              "Encoding Color Images": {
+                "name": "Encoder des Images Couleur"
+              },
+              "Encoding Numbers in the Real World": {
+                "name": "Encoder des Nombres dans la Réalité"
+              },
+              "Encoding and Sending Text": {
+                "name": "Encoder et Envoyer du Texte"
+              },
+              "Lossy Compression and File Formats": {
+                "name": "Compression avec perte et Format de Fichier"
+              },
+              "Number Systems": {
+                "name": "Systèmes de numération"
+              },
+              "Personal Innovations": {
+                "name": "Innovations personnelles"
+              },
+              "Sending Binary Messages": {
+                "name": "Envoyer des Messages Binaires"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Envoyer des Messages Binaires avec le Simulateur d'Internet"
+              },
+              "Sending Bits in the Real World": {
+                "name": "Envoi de Bits dans le Monde Réel"
+              },
+              "Sending Complex Messages": {
+                "name": "Envoyer des messages complexes"
+              },
+              "Sending Formatted Text": {
+                "name": "Envoyer du texte formaté"
+              },
+              "Sending Numbers": {
+                "name": "Envoi de Nombres"
+              }
+            }
+          },
+          "algebraPD": {
+            "title": "Informatique en DP d'algèbre",
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Course Overview": {
+                "name": "Aperçu de Cours"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Pourquoi les sciences informatiques dépendent de l'algèbre"
+              }
+            }
+          },
+          "algPDmiami": {
+            "title": "Informatique en DP d'algèbre",
+            "description": "Enseigner l'algèbre par le biais de la programmation fonctionnelle",
+            "description_short": "Enseigner l'algèbre par le biais de la programmation fonctionnelle",
+            "stages": {
+              "Booleans": {
+                "name": "Booléens"
+              },
+              "Design Recipe Practice": {
+                "name": "Pratique de conception de recette"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Luigi's Pizza": {
+                "name": "Luigi Pizza"
+              },
+              "Rocket-Height": {
+                "name": "Hauteur de la fusée"
+              },
+              "Sam the Bat": {
+                "name": "Sam la chauve-souris"
+              },
+              "Strings and Images": {
+                "name": "Chaînes et images"
+              },
+              "Your Game - Animation": {
+                "name": "Votre jeu - Animation"
+              },
+              "Your Game - Booleans": {
+                "name": "Votre jeu - valeurs booléennes"
+              },
+              "Your Game - Collision Detection": {
+                "name": "Votre jeu - détection de Collision"
+              },
+              "Your Game - Player Movement": {
+                "name": "Votre jeu - mouvement des joueurs"
+              }
+            }
+          },
+          "text-compression": {
+            "description": "Contracter le texte en identifiant des structures répétées.",
+            "description_short": "Contracter le texte en identifiant des structures répétées."
+          },
+          "CSPPD": {
+            "stages": {
+              "Impact of Computer Science": {
+                "name": "Impacte des sciences informatiques"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              }
+            }
+          },
+          "CSPLessonSamples": {
+            "title": "Échantillons de leçon CSP",
+            "stages": {
+              "Lesson 14": {
+                "name": "Leçon 14"
+              },
+              "Lesson 15": {
+                "name": "Leçon 15"
+              }
+            }
+          },
+          "ECSPD": {
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Impact of Computer Science": {
+                "name": "Impacte des sciences informatiques"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              }
+            }
+          },
+          "sciencePD": {
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "The Tutorial": {
+                "name": "Le tutoriel"
+              }
+            }
+          },
+          "rbo-reference": {
+            "stages": {
+              "reference": {
+                "name": "référence"
+              }
+            }
+          },
+          "cspunit3": {
+            "description_short": "Programmation",
+            "stages": {
+              "Creating Functions": {
+                "name": "Création de fonctions"
+              },
+              "Introduction to Arrays": {
+                "name": "Introduction sur les Arrays"
+              },
+              "Introduction to Conditional Logic": {
+                "name": "Introduction à la logique conditionnelle"
+              },
+              "Introduction to Digital Assistants": {
+                "name": "Introduction sur les assistants digitals"
+              },
+              "Looping and Random Numbers": {
+                "name": "Boucles et nombres aléatoires"
+              },
+              "Loops and Simulations": {
+                "name": "Boucles et simulations"
+              },
+              "Multi-screen Apps": {
+                "name": "Applications sur plusieurs écrans"
+              },
+              "The Need For Programming Languages": {
+                "name": "Le besoin de langages de programmation"
+              },
+              "Understanding Program Flow and Logic": {
+                "name": "Comprendre le flux et la logique d'un programme"
+              },
+              "User Input and Strings": {
+                "name": "Entrée d'un utilisateur et chaines de caractères"
+              },
+              "Using Simple Commands": {
+                "name": "Utiliser des commandes simples"
+              },
+              "Using Variables in Apps": {
+                "name": "Utilisez des variables dans les applications"
+              },
+              "While Loops": {
+                "name": "Boucles « Tant que »"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Computer Science Pedagogy": {
+                "name": "Pédagogie des sciences informatiques"
+              },
+              "Course Overview": {
+                "name": "Aperçu de Cours"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Next Steps": {
+                "name": "Prochaines étapes"
+              },
+              "Strings and Images": {
+                "name": "Chaînes et images"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "The Big Game": {
+                "name": "Le grand jeu"
+              },
+              "The Design Recipe": {
+                "name": "La Recette de Conception"
+              }
+            }
+          },
+          "ECSPD-NexTech": {
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Impact of Computer Science": {
+                "name": "Impacte des sciences informatiques"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              }
+            }
+          },
+          "ECSPD-iZone": {
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Impact of Computer Science": {
+                "name": "Impacte des sciences informatiques"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "title": "Informatique en DP d'algèbre",
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Course Overview": {
+                "name": "Aperçu de Cours"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Pourquoi les sciences informatiques dépendent de l'algèbre"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "title": "Informatique en DP d'algèbre",
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Course Overview": {
+                "name": "Aperçu de Cours"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Pourquoi les sciences informatiques dépendent de l'algèbre"
+              }
+            }
+          },
+          "sciencePD-NexTech": {
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "The Tutorial": {
+                "name": "Le tutoriel"
+              }
+            }
+          },
+          "sciencePD-iZone": {
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "The Tutorial": {
+                "name": "Le tutoriel"
+              }
+            }
+          },
+          "sciencePD2": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "sciencePD3": {
+            "stages": {
+              "Welcome Back!": {
+                "name": "Bon retour parmi nous !"
+              }
+            }
+          },
+          "cspunit2": {
+            "description_short": "Programmation",
+            "stages": {
+              "Algorithms Detour - Hard Problems TSP": {
+                "name": "Problèmes difficiles - Le problème du marchant itinérant"
+              },
+              "Cracking the Code": {
+                "name": "Casser le code"
+              },
+              "DNS in the Real World": {
+                "name": "DNS dans le monde réel"
+              },
+              "Encryption Algorithms": {
+                "name": "Clés et mot de passes"
+              },
+              "HTTP and Abstraction": {
+                "name": "HTTP et l’abstraction sur Internet"
+              },
+              "Packets and Making a Reliable Internet": {
+                "name": "Paquets et créer un Internet fiable"
+              },
+              "The Internet": {
+                "name": "L'Internet est pour tout le monde"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "title": "Informatique en DP d'algèbre",
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Big Game - Animation": {
+                "name": "Grand jeu - Animation"
+              },
+              "Big Game - Booleans": {
+                "name": "Grand jeu - Booléens"
+              },
+              "Big Game - Collision Detection": {
+                "name": "Grand jeu - Détection de collision"
+              },
+              "Big Game - Player Movement": {
+                "name": "Grand jeu - Mouvement du joueur"
+              },
+              "Big Game - Variables": {
+                "name": "Grand jeu - Variables"
+              },
+              "Booleans": {
+                "name": "Booléens"
+              },
+              "Defining Variables": {
+                "name": "Définir des variables"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Free Play": {
+                "name": "Activité libre"
+              },
+              "Luigi's Pizza": {
+                "name": "Luigi Pizza"
+              },
+              "Rocket-Height": {
+                "name": "Hauteur de la fusée"
+              },
+              "Sam the Bat": {
+                "name": "Sam la chauve-souris"
+              },
+              "Strings and Images": {
+                "name": "Chaînes et images"
+              },
+              "The Design Recipe": {
+                "name": "La Recette de Conception"
+              }
+            }
+          },
+          "allthethings": {
+            "title": "Toutes les choses !",
+            "description": "Tous les types de niveau pour le test de l'interface utilisateur",
+            "description_short": "Tous les types de niveau pour le test de l'interface utilisateur",
+            "stages": {
+              "Anonymous student survey": {
+                "name": "Sondage anonyme pour les élèves"
+              },
+              "Anonymous student survey 2": {
+                "name": "Second sondage anonyme pour les élèves"
+              },
+              "AppLab": {
+                "name": "Laboratoire App"
+              },
+              "Artist": {
+                "name": "Artiste"
+              },
+              "Bee": {
+                "name": "Abeille"
+              },
+              "Bounce": {
+                "name": "Rebond"
+              },
+              "Farmer": {
+                "name": "Fermier"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Jigsaw": {
+                "name": "Puzzle"
+              },
+              "Match": {
+                "name": "Correspondance"
+              },
+              "Maze": {
+                "name": "Labyrinthe"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Multi"
+              },
+              "Odometer": {
+                "name": "Compteur kilométrique"
+              },
+              "Pixelation": {
+                "name": "Pixellisation"
+              },
+              "Star wars": {
+                "name": "Star Wars"
+              },
+              "Studio": {
+                "name": "Studio"
+              },
+              "Web Lab": {
+                "name": "Web Lab"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "title": "Informatique en DP d'algèbre",
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Booleans": {
+                "name": "Booléens"
+              },
+              "Course Overview": {
+                "name": "Aperçu de Cours"
+              },
+              "Defining Functions": {
+                "name": "Définir les fonctions"
+              },
+              "Defining Variables": {
+                "name": "Définir des variables"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Instructions conditionnelles"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Next Steps": {
+                "name": "Prochaines étapes"
+              },
+              "Rocket-Height": {
+                "name": "Hauteur de la fusée"
+              },
+              "Strings and Images": {
+                "name": "Chaînes et images"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Writing Contracts": {
+                "name": "Rédaction de contrats"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "Labo des applis"
+              },
+              "Internet Simulator": {
+                "name": "Simulateur d'Internet"
+              },
+              "Text Compression Lesson": {
+                "name": "Leçon de Compression de Texte"
+              },
+              "Welcome!": {
+                "name": "Bienvenue !"
+              }
+            }
+          },
+          "K5-OnlinePD": {
+            "stages": {
+              "Computer Science Fundamentals": {
+                "name": "Fondamentaux de l'informatique"
+              },
+              "Looking Ahead": {
+                "name": "Regarder en avant"
+              },
+              "Mastering the Basics: Conditionals": {
+                "name": "Maîtriser les bases: Les conditions"
+              },
+              "Mastering the Basics: Events": {
+                "name": "Maîtriser les bases: Les événements"
+              },
+              "Mastering the Basics: Functions": {
+                "name": "Maîtriser les bases: Les fonctions"
+              },
+              "Mastering the Basics: Loops": {
+                "name": "Maîtriser les bases: Les boucles"
+              },
+              "Mastering the Basics: Sequencing": {
+                "name": "Maîtriser les bases: Les séquences"
+              },
+              "Next Steps": {
+                "name": "Prochaines étapes"
+              },
+              "Planning": {
+                "name": "Planifier"
+              }
+            }
+          },
+          "ECSPD2": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Unit 1, Day 10 Telling a Story with Data": {
+                "name": "Partie 1, Jour 10 - Raconter une histoire avec les données"
+              },
+              "Unit 1, Day 11-14 Data Modeling and Design": {
+                "name": "Partie 1, Jours 11 à 14 - Gestion des données et conception"
+              },
+              "Unit 1, Day 15-16 Computer Programs and Following Directions": {
+                "name": "Partie 1, Jours 15 à 16 - Programmes informatiques et suivre les instructions"
+              },
+              "Unit 1, Day 17-19 What Is Intelligence?": {
+                "name": "Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?"
+              },
+              "0": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "1": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "Unit 1, Days 3-4 Buying a Computer": {
+                "name": "Partie 1, Jours 3 à 4 - Acheter un ordinateur"
+              },
+              "Unit 1, Days 5-7 Searching and Web 2": {
+                "name": "Partie 1, Jours 5 à 7 - Rechercher sur l'internet"
+              },
+              "Unit 1, Days 8-9 Impact of Computers and Communication": {
+                "name": "Partie 1, Jours 8 à 9 - Impacte de l'informatique et la communication"
+              },
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-up": {
+                "name": "Résumé et ouverture"
+              }
+            }
+          },
+          "algebraPD2": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Teaching with Puzzles": {
+                "name": "Apprendre avec des puzzles"
+              },
+              "The Design Recipe": {
+                "name": "La Recette de Conception"
+              },
+              "Welcome!": {
+                "name": "Bienvenue !"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "science-PD2": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "Equity-OnlinePD": {
+            "stages": {
+              "Introduction to Equity": {
+                "name": "Introduction à l’équité"
+              },
+              "Next Steps": {
+                "name": "Prochaines étapes"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Unit 1, Day 10 Telling a Story with Data": {
+                "name": "Partie 1, Jour 10 - Raconter une histoire avec les données"
+              },
+              "Unit 1, Day 11-14 Data Modeling and Design": {
+                "name": "Partie 1, Jours 11 à 14 - Gestion des données et conception"
+              },
+              "Unit 1, Day 15-16 Computer Programs and Following Directions": {
+                "name": "Partie 1, Jours 15 à 16 - Programmes informatiques et suivre les instructions"
+              },
+              "Unit 1, Day 17-19 What Is Intelligence?": {
+                "name": "Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?"
+              },
+              "0": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "1": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "Unit 1, Days 3-4 Buying a Computer": {
+                "name": "Partie 1, Jours 3 à 4 - Acheter un ordinateur"
+              },
+              "Unit 1, Days 5-7 Searching and Web 2": {
+                "name": "Partie 1, Jours 5 à 7 - Rechercher sur l'internet"
+              },
+              "Unit 1, Days 8-9 Impact of Computers and Communication": {
+                "name": "Partie 1, Jours 8 à 9 - Impacte de l'informatique et la communication"
+              },
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-up": {
+                "name": "Résumé et ouverture"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "description": "Phase 2 en ligne : Études estivales mixtes",
+            "description_short": "Phase 2 en ligne : Études estivales mixtes",
+            "stages": {
+              "Unit 1, Day 10 Telling a Story with Data": {
+                "name": "Partie 1, Jour 10 - Raconter une histoire avec les données"
+              },
+              "Unit 1, Day 11-14 Data Modeling and Design": {
+                "name": "Partie 1, Jours 11 à 14 - Gestion des données et conception"
+              },
+              "Unit 1, Day 15-16 Computer Programs and Following Directions": {
+                "name": "Partie 1, Jours 15 à 16 - Programmes informatiques et suivre les instructions"
+              },
+              "Unit 1, Day 17-19 What Is Intelligence?": {
+                "name": "Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?"
+              },
+              "0": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "1": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "Unit 1, Days 3-4 Buying a Computer": {
+                "name": "Partie 1, Jours 3 à 4 - Acheter un ordinateur"
+              },
+              "Unit 1, Days 5-7 Searching and Web 2": {
+                "name": "Partie 1, Jours 5 à 7 - Rechercher sur l'internet"
+              },
+              "Unit 1, Days 8-9 Impact of Computers and Communication": {
+                "name": "Partie 1, Jours 8 à 9 - Impacte de l'informatique et la communication"
+              },
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-up": {
+                "name": "Résumé et ouverture"
+              }
+            }
+          },
+          "CSPPD2": {
+            "stages": {
+              "Lesson Chunk 1- Sending Binary Messages": {
+                "name": "Leçon 1 - Envoyer un message binaire"
+              },
+              "Lesson Chunk 2- Encoding and Sending Numbers": {
+                "name": "Leçon 2 - Encoder et envoyer des nombres"
+              },
+              "Lesson Chunk 3- Encoding and Sending Text": {
+                "name": "Leçon 3 - Encoder et envoyer du texte"
+              },
+              "Lesson Chunk 4- Compressing and Storing Information": {
+                "name": "Leçon 4 - Compression et stockage d'information"
+              },
+              "Welcome to the Course!": {
+                "name": "Bienvenue dans le cour !"
+              },
+              "Wrap Up and Next Steps": {
+                "name": "Conclusion et étapes suivantes"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Getting Loopy": {
+                "name": "Tourner en rond"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmation sur papier quadrillé"
+              },
+              "Happy Maps": {
+                "name": "Cartes Joyeuses"
+              },
+              "Move it, Move it": {
+                "name": "Déplace-le, déplace-le"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              },
+              "Songwriting": {
+                "name": "Écriture de chansons"
+              },
+              "The Big Event": {
+                "name": "Le Grand Événement"
+              }
+            }
+          },
+          "algebraPD3a": {
+            "title": "Informatique en DP d'algèbre"
+          },
+          "sciencePD3_pre1": {
+            "stages": {
+              "Welcome Back!": {
+                "name": "Bon retour parmi nous !"
+              }
+            }
+          },
+          "frequency_analysis": {
+            "stages": {
+              "Frequency Analysis": {
+                "name": "Analyse de fréquence"
+              }
+            }
+          },
+          "ECSPD3-Unit2": {
+            "stages": {
+              "Intro to Unit 2": {
+                "name": "Intro à l'Unité 2"
+              },
+              "Lesson Overviews": {
+                "name": "Aperçu de la leçon"
+              }
+            }
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "algebraPD3b": {
+            "title": "Informatique en DP d'algèbre",
+            "stages": {
+              "Teaching Support - Lessons 1-3": {
+                "name": "Support d'enseignement - Leçons 1-3"
+              },
+              "Teaching Support - Lessons 13-16": {
+                "name": "Support d'enseignement - Leçons 13-16"
+              },
+              "Teaching Support - Lessons 17-20": {
+                "name": "Support d'enseignement - Leçons 17-20"
+              },
+              "Teaching Support - Lessons 4-7": {
+                "name": "Support d'enseignement - Leçons 4-7"
+              },
+              "Teaching Support - Lessons 8-12": {
+                "name": "Support d'enseignement - Leçons 8-12"
+              }
+            }
+          },
+          "Special Fun": {
+            "description_audience": "De 10 à 18 ans",
+            "stages": {
+              "Halloween 2015": {
+                "name": "Halloween 2015"
+              }
+            }
+          },
+          "SpecialSeries": {
+            "description_audience": "De 10 à 18 ans",
+            "stages": {
+              "Spring 2016": {
+                "name": "Printemps 2016"
+              },
+              "Halloween 2015": {
+                "name": "Halloween 2015"
+              }
+            }
+          },
+          "iceage": {
+            "title": "Labo de jeux Âge de Glace",
+            "description": "Crée une histoire ou fais un jeu avec le Labo de jeux Âge de Glace !",
+            "description_short": "Crée une histoire ou fais un jeu avec le Labo de jeux Âge de Glace !",
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              }
+            }
+          },
+          "cspunit3temp": {
+            "description_short": "Programmation",
+            "stages": {
+              "Introduction to Arrays": {
+                "name": "Introduction sur les Arrays"
+              },
+              "Loops and Simulations": {
+                "name": "Boucles et simulations"
+              },
+              "While Loops": {
+                "name": "Boucles « Tant que »"
+              }
+            }
+          },
+          "gumball": {
+            "title": "Labo de jeux Gumball",
+            "description": "Crée une histoire ou fais un jeu avec le Labo de jeux Gumball !",
+            "description_short": "Crée une histoire ou fais un jeu avec le Labo de jeux Gumball !",
+            "stages": {
+              "Gumball Play Lab": {
+                "name": "Labo de jeux Gumball"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Star Wars : Construire une Galaxie avec du code",
+            "description": "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.",
+            "description_short": "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Heure de Code 2015"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Star Wars : Construire une Galaxie avec du code",
+            "description": "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.",
+            "description_short": "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Heure de Code 2015"
+              }
+            }
+          },
+          "mc": {
+            "title": "Heure de Code Minecraft",
+            "description": "Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde Minecraft.",
+            "description_short": "Explore un monde Minecraft avec du code",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Heure de Code 2015"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "cspunit5": {
+            "description_short": "Programmation"
+          },
+          "cspunit4": {
+            "description_short": "Programmation"
+          },
+          "AlgebraA": {
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Calc: Définir des variables"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Calc: Blocs d'évaluation"
+              },
+              "Eval: Defining Functions": {
+                "name": "Eval : Définition de fonctions"
+              },
+              "Eval: Functions": {
+                "name": "Eval : fonctions"
+              },
+              "Eval: Strings and Images": {
+                "name": "Eval: Chaînes et images"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Eval: Rédaction de contrats"
+              },
+              "Play Lab: Defining Functions": {
+                "name": "Labo : Définition de fonctions"
+              },
+              "Unplugged: Contracts": {
+                "name": "Débranché: Contrats"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Débranché: La Recette de Conception"
+              }
+            }
+          },
+          "AlgebraB": {
+            "title": "Informatique en algèbre",
+            "description": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Eval: Opérateurs booléens"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Instructions conditionnelles"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Labo de jeux: Animation (Grand Jeu)"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Labo de jeux: Booléens (Grand Jeu)"
+              },
+              "Play Lab: Booleans": {
+                "name": "Labo de jeux: Booléens"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Labo de jeux: Détection de Collision (Grand Jeu)"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Labo de jeux: Définir les variables (Grand Jeu)"
+              },
+              "Unplugged: Booleans": {
+                "name": "Débranché: Booléens"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Débranché: La détection de collision et la formule «Distance»"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Débranché: Instructions conditionnelles et fonctions par morceaux"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Débranché: Jeux vidéos et plans de coordonnées"
+              }
+            }
+          },
+          "algebraPD1": {
+            "title": "Informatique en DP d'algèbre",
+            "description": "Enseigner l'algèbre par le biais de la programmation fonctionnelle",
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Course Overview": {
+                "name": "Aperçu de Cours"
+              },
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Pourquoi les sciences informatiques dépendent de l'algèbre"
+              }
+            }
+          },
+          "algebraPD3c": {
+            "title": "Informatique en DP d'algèbre"
+          },
+          "csp1-2017": {
+            "stages": {
+              "Binary Numbers": {
+                "name": "Nombres binaires"
+              },
+              "Number Systems": {
+                "name": "Systèmes de numération"
+              },
+              "Packets and Making a Reliable Internet": {
+                "name": "Paquets et créer un Internet fiable"
+              },
+              "Personal Innovations": {
+                "name": "Innovations personnelles"
+              },
+              "Sending Binary Messages": {
+                "name": "Envoyer des Messages Binaires"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Envoyer des Messages Binaires avec le Simulateur d'Internet"
+              },
+              "Sending Numbers": {
+                "name": "Envoi de Nombres"
+              },
+              "The Internet": {
+                "name": "Internet et les réseaux connectés"
+              },
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              }
+            }
+          },
+          "csp2-2017": {
+            "stages": {
+              "Bytes and File Sizes": {
+                "name": "Octets et Tailles de Fichiers"
+              },
+              "Encoding B&W Images": {
+                "name": "Encoder des Images en N&B"
+              },
+              "Encoding Color Images": {
+                "name": "Encoder des Images Couleur"
+              },
+              "Lossy Compression and File Formats": {
+                "name": "Compression avec perte et Format de Fichier"
+              },
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              }
+            }
+          },
+          "csp3-2017": {
+            "description_short": "Programmation",
+            "stages": {
+              "Creating Functions": {
+                "name": "Création de fonctions"
+              },
+              "Looping and Random Numbers": {
+                "name": "Boucles et nombres aléatoires"
+              },
+              "The Need For Programming Languages": {
+                "name": "Le besoin de langages de programmation"
+              },
+              "Using Simple Commands": {
+                "name": "Utiliser des commandes simples"
+              },
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              }
+            }
+          },
+          "csp4-2017": {
+            "stages": {
+              "Cracking the Code": {
+                "name": "Casser le code"
+              },
+              "Simple Encryption": {
+                "name": "Cryptage simple"
+              },
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              },
+              "Student Post-Course Survey": {
+                "name": "Sondage après cour pour élève"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "Introduction to Arrays": {
+                "name": "Introduction sur les Arrays"
+              },
+              "Introduction to Conditional Logic": {
+                "name": "Introduction à la logique conditionnelle"
+              },
+              "Introduction to Digital Assistants": {
+                "name": "Introduction sur les assistants digitals"
+              },
+              "Loops and Simulations": {
+                "name": "Boucles et simulations"
+              },
+              "Multi-screen Apps": {
+                "name": "Applications sur plusieurs écrans"
+              },
+              "Understanding Program Flow and Logic": {
+                "name": "Comprendre le flux et la logique d'un programme"
+              },
+              "User Input and Strings": {
+                "name": "Entrée d'un utilisateur et chaines de caractères"
+              },
+              "Using Variables in Apps": {
+                "name": "Utilisez des variables dans les applications"
+              },
+              "While Loops": {
+                "name": "Boucles « Tant que »"
+              },
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "description_short": "Programmation",
+            "stages": {
+              "Draw Loop and Randomization": {
+                "name": "La boucle draw et la randomisation"
+              },
+              "Functions": {
+                "name": "fonctions"
+              },
+              "Velocity": {
+                "name": "Vitesse"
+              }
+            }
+          },
+          "2016_sciencePD_phase1": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "The Tutorial": {
+                "name": "Le tutoriel"
+              }
+            }
+          },
+          "TEMP CSD Unit 3": {
+            "description_short": "Programmation"
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "De 8 à 18 ans"
+          },
+          "ECSPD1": {
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre"
+          },
+          "algebraFacilitator": {
+            "description": "Enseigner l'algèbre par le biais de la programmation fonctionnelle",
+            "description_short": "Enseigner l'algèbre par le biais de la programmation fonctionnelle",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Blocs d'évaluation"
+              },
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Why Computer Science belongs in Algebra": {
+                "name": "Pourquoi les sciences informatiques dépendent de l'algèbre"
+              }
+            }
+          },
+          "sciencePD1": {
+            "description_short": "Apprendre la programmation fonctionnelle par l'algèbre",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduction au développement professionnel"
+              },
+              "The Tutorial": {
+                "name": "Le tutoriel"
+              }
+            }
+          },
+          "cspunit1-support": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Envoyer des Messages Binaires"
+              }
+            }
+          },
+          "allthehiddenthings": {
+            "stages": {
+              "Game Lab": {
+                "name": "Labo des jeux"
+              }
+            }
+          },
+          "CSDU4-Draft": {
+            "stages": {
+              "Design Mode": {
+                "name": "Mode création"
+              }
+            }
+          },
+          "CSDU2-Draft": {
+            "stages": {
+              "Quality Websites": {
+                "name": "Sites Web de qualité"
+              },
+              "Text on the Web": {
+                "name": "Le texte sur le Web"
+              },
+              "Website Design": {
+                "name": "Conception de sites Web"
+              },
+              "Intellectual Property": {
+                "name": "Propriété intellectuelle"
+              },
+              "Introduction to Styling with CSS": {
+                "name": "Introduction aux styles avec CSS"
+              },
+              "Personal Website: Connecting Pages": {
+                "name": "Site Web personnel : Connecter les pages"
+              },
+              "Classes and External Style Sheets": {
+                "name": "Les classes et les feuilles de style externes"
+              },
+              "Box Model and Page Layout": {
+                "name": "Modèle de boîte et mise en page"
+              },
+              "Publishing a Website": {
+                "name": "Publier un site Web"
+              },
+              "Introduction to HTML": {
+                "name": "Introduction à l’HTML"
+              },
+              "Headers and Lists": {
+                "name": "En-têtes et listes"
+              },
+              "Designing Web Pages": {
+                "name": "Concevoir des pages Web"
+              },
+              "Describing Web pages": {
+                "name": "Décrire des pages Web"
+              },
+              "Multi-Page Websites": {
+                "name": "Sites Web multi-pages"
+              },
+              "Classes": {
+                "name": "Classes"
+              },
+              "External Style Sheets": {
+                "name": "Feuilles de style externes"
+              },
+              "Usability and Accessibility": {
+                "name": "Utilisabilité et accessibilité"
+              },
+              "Peer Review": {
+                "name": "Commentaire par un pair"
+              },
+              "Describing Web Pages": {
+                "name": "Décrire des pages Web"
+              }
+            }
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Artiste : les fonctions"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "De 8 à 18 ans"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Abeille: Instructions conditionnelles"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Événements"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Puzzle : Apprendre à faire un glisser-déposer"
+              },
+              "Loops": {
+                "name": "boucles"
+              },
+              "Loops Unplugged": {
+                "name": "Boucles débranchées"
+              },
+              "Programming": {
+                "name": "Programmation"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Songwriting": {
+                "name": "Écriture de chansons"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Événements"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Puzzle : Apprendre à faire un glisser-déposer"
+              },
+              "Loops": {
+                "name": "boucles"
+              },
+              "Loops Unplugged": {
+                "name": "Boucles débranchées"
+              },
+              "Programming": {
+                "name": "Programmation"
+              },
+              "Unspotted Bugs": {
+                "name": "Bugs passés inaperçus"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Artiste: Boucles « Pour »"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Artiste: Fonctions avec des paramètres"
+              },
+              "Artist: Variables": {
+                "name": "Artiste: Variables"
+              },
+              "Bee: For Loops": {
+                "name": "Abeille: Boucles « Pour »"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Abeille: Fonctions avec des paramètres"
+              },
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Play Lab: Variables": {
+                "name": "Labo de jeux: Variables"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Débranché: Variables de l'enveloppe"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Débranché: Jouons avec les boucles « Pour »"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Débranché: Composition de chansons avec des paramètres"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "Unit 1, Day 10 Telling a Story with Data": {
+                "name": "Partie 1, Jour 10 - Raconter une histoire avec les données"
+              },
+              "Unit 1, Day 11-14 Data Modeling and Design": {
+                "name": "Partie 1, Jours 11 à 14 - Gestion des données et conception"
+              },
+              "Unit 1, Day 15-16 Computer Programs and Following Directions": {
+                "name": "Partie 1, Jours 15 à 16 - Programmes informatiques et suivre les instructions"
+              },
+              "Unit 1, Day 17-19 What Is Intelligence?": {
+                "name": "Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?"
+              },
+              "0": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "1": "Partie 1, Jours 1 à 2 - Qu'est ce qu'un ordinateur ?",
+              "Unit 1, Days 3-4 Buying a Computer": {
+                "name": "Partie 1, Jours 3 à 4 - Acheter un ordinateur"
+              },
+              "Unit 1, Days 5-7 Searching and Web 2": {
+                "name": "Partie 1, Jours 5 à 7 - Rechercher sur l'internet"
+              },
+              "Unit 1, Days 8-9 Impact of Computers and Communication": {
+                "name": "Partie 1, Jours 8 à 9 - Impacte de l'informatique et la communication"
+              },
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-up": {
+                "name": "Résumé et ouverture"
+              }
+            }
+          },
+          "ecs-unit2": {
+            "stages": {
+              "Intro to Unit 2": {
+                "name": "Intro à l'Unité 2"
+              },
+              "Lesson Overviews": {
+                "name": "Aperçu de la leçon"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              " Bee: Conditionals": {
+                "name": " Abeille : Instructions conditionnelles"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artiste: Boucles imbriquées"
+              },
+              "Bee Debugging": {
+                "name": "Abeilles et debugging"
+              },
+              "Bounce": {
+                "name": "Rebond"
+              },
+              "Build a Game": {
+                "name": "Créer un jeu"
+              },
+              "Farmer: While Loops": {
+                "name": "Fermier: Boucles «Tant que»"
+              }
+            }
+          },
+          "csd3-2017": {
+            "description_short": "Programmation",
+            "stages": {
+              "Draw Loop and Randomization": {
+                "name": "La boucle draw et la randomisation"
+              },
+              "Velocity": {
+                "name": "Vitesse"
+              },
+              "Functions": {
+                "name": "fonctions"
+              },
+              "Variables": {
+                "name": "variables"
+              },
+              "The Draw Loop": {
+                "name": "La boucle Draw",
+                "description_student": "Cette leçon présente la boucle draw, l’un des principaux paradigmes de programmation du labo des jeux. La classe combine la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. Ensuite, tout le monde utilise ce qu'il a appris pour mettre à jour la scène du sprite de la leçon précédente.",
+                "description_teacher": "Dans cette leçon, les élèves se familiarisent avec la boucle d’étirage, l’un des principaux paradigmes de programmation du labo des jeux. Pour commencer la leçon, les élèves examinent des folioscopes afin de constater que le fait de montrer plusieurs images à la suite crée l’impression de mouvement. Les élèves regardent ensuite une vidéo expliquant comment la boucle draw du labo des jeux contribue à créer cette même impression dans leurs programmes. Les élèves combinent la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. À la fin de la leçon, les élèves utilisent ce qu'ils ont appris pour mettre à jour la scène de sprites de la leçon précédente."
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "New Home for My Pet": {
+                "name": "Nouvelle maison pour mon animal de compagnie"
+              },
+              "Online Internet Safety": {
+                "name": "Sécurité sur Internet"
+              },
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algorithmes du monde réel: Avions en papier"
+              },
+              "The Big Event": {
+                "name": "Le Grand Événement"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Binaire"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Events": {
+                "name": "Événements"
+              },
+              "For Loops": {
+                "name": "Boucles « Pour »"
+              },
+              "Functions": {
+                "name": "fonctions"
+              },
+              "Functions with Parameters": {
+                "name": "Fonctions avec Paramètres"
+              },
+              "Loops": {
+                "name": "boucles"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              },
+              "Variables": {
+                "name": "variables"
+              },
+              "While Loops": {
+                "name": "Boucles « Tant que »"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "description": "Enseigner l'algèbre par le biais de la programmation fonctionnelle",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Tableau de bord enseignant"
+              },
+              "Teaching with Puzzles": {
+                "name": "Apprendre avec des puzzles"
+              },
+              "The Design Recipe": {
+                "name": "La Recette de Conception"
+              },
+              "Welcome!": {
+                "name": "Bienvenue !"
+              }
+            }
+          },
+          "basketball": {
+            "title": "Choisir une équipe et faite un match de basket",
+            "description_short": "Faire un match de basket",
+            "description": "Choisir une équipe et faite un match de basket",
+            "stages": {
+              "Bounce": {
+                "name": "Rebond"
+              }
+            }
+          },
+          "hoc-encryption": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Cryptage simple"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Binaire",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              },
+              "Binary Images": {
+                "name": "Les images binaires"
+              },
+              "RGB Color": {
+                "name": "Couleur RVB"
+              },
+              "Play Lab": {
+                "name": "Labo de jeux"
+              }
+            }
+          },
+          "csd2-2017": {
+            "description_short": "  Apprends à construire ton propre site web avec le labo du web.",
+            "stages": {
+              "Quality Websites": {
+                "name": "Sites Web de qualité"
+              },
+              "Website Design": {
+                "name": "Conception de sites Web"
+              },
+              "Describing Web pages": {
+                "name": "Décrire des pages Web"
+              },
+              "Text on the Web": {
+                "name": "Le texte sur le Web"
+              },
+              "Introduction to Styling with CSS": {
+                "name": "Introduction aux styles avec CSS"
+              },
+              "Multi-Page Websites": {
+                "name": "Sites Web multi-pages"
+              },
+              "Classes": {
+                "name": "Classes"
+              },
+              "External Style Sheets": {
+                "name": "Feuilles de style externes"
+              },
+              "Peer Review": {
+                "name": "Commentaire par un pair"
+              },
+              "Box Model and Page Layout": {
+                "name": "Modèle de boîte et mise en page"
+              },
+              "Digital Footprint": {
+                "description_teacher": "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r\n\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r\n\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
+              },
+              "Publishing a Website": {
+                "name": "Publier un site Web"
+              },
+              "Intellectual Property": {
+                "name": "Propriété intellectuelle"
+              },
+              "Styling Text with CSS": {
+                "description_teacher": "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r\n\r\n"
+              },
+              "Lists": {
+                "name": "Listes"
+              },
+              "Intellectual Property and Images": {
+                "description_teacher": "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r\n\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
+              },
+              "Project - Multi-Page Websites": {
+                "description_teacher": "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r\n\r\n"
+              },
+              "RGB Colors and Classes": {
+                "name": "Couleurs RVB et classes",
+                "description_student": "Cette leçon couvre les classes et les couleurs personnalisées. La classe commence par apprendre à spécifier des couleurs personnalisées à l'aide de valeurs RVB (rouge, vert, bleu), puis à appliquer ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. À l'aide des classes, la classe ajoute plus de styles à la page web Quatre saisons, puis les utilise pour styliser ses sites web personnels.",
+                "description_teacher": "Dans cette leçon, les élèves apprennent d’abord comment définir des couleurs personnalisées en utilisant leurs valeurs RVB (rouge, vert, bleu). Ils appliquent ensuite ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. Les classes CSS permettent aux développeurs web de traiter des groupes d’éléments qu’il veulent styliser différemment d’autres éléments du même type. En utilisant les classes, les élèves ajoutent plus de styles à la page web Quatre saisons, puis les utilisent pour styliser leurs sites web personnels."
+              },
+              "Project - Personal Portfolio Website": {
+                "description_teacher": "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
+              }
+            }
+          },
+          "csd4-2017": {
+            "stages": {
+              "Understanding Your User": {
+                "description_teacher": "Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n"
+              },
+              "Paper Prototypes": {
+                "description_teacher": "Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r\n"
+              }
+            }
+          },
+          "minecraft": {
+            "title": "Heure de Code Minecraft - Concepteur",
+            "description_short": "Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons, des creepers, des zombies et bien d'autres encore.",
+            "description": "Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons, des creepers, des zombies et bien d'autres encore.",
+            "stages": {
+              "Minecraft Hour of Code Designer": {
+                "name": "Heure de Code Minecraft - Concepteur"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy l'oiseau"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              },
+              "Going Places Safely": {
+                "name": "Se déplacer en toute sécurité"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              },
+              "Your Digital Footprint": {
+                "name": "Ton empreinte numérique"
+              }
+            }
+          },
+          "coursec-draft": {
+            "description_short": "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.",
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algorithmes du monde réel: Avions en papier"
+              },
+              "Online Internet Safety": {
+                "name": "Sécurité sur Internet"
+              },
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              },
+              "Your Digital Footprint": {
+                "name": "Ton empreinte numérique"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              }
+            }
+          },
+          "coursed-draft": {
+            "description_short": "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.",
+            "stages": {
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Unplugged: Binary": {
+                "name": "Débranché: Binaire"
+              },
+              "Artist Binary": {
+                "name": "Artiste binaire"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              }
+            }
+          },
+          "coursee-draft": {
+            "description_short": "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.",
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              }
+            }
+          },
+          "coursef-draft": {
+            "description_short": "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.",
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Songwriting with Parameters": {
+                "name": "La composition de chansons avec des paramètres"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Découvre les bases des sciences informatiques grâce a de nombreux personnages rigolos !",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "L'Heure de Code 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Découvre les bases des sciences informatiques grâce a de nombreux personnages rigolos !",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "L'Heure de Code 2013"
+              }
+            }
+          },
+          "sports": {
+            "title": "Coder ton propre jeu de sports",
+            "description_short": "Coder votre propre sport",
+            "description": "Coder votre propre sport",
+            "stages": {
+              "Sports": {
+                "name": "Sports"
+              }
+            }
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "sciencepd3-2016": {
+            "stages": {
+              "Welcome Back!": {
+                "name": "Bon retour parmi nous !"
+              }
+            }
+          },
+          "csdgraveyard": {
+            "stages": {
+              "Introduction to Styling with CSS": {
+                "name": "Introduction aux styles avec CSS"
+              },
+              "External Style Sheets": {
+                "name": "Feuilles de style externes"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Binaire"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Bienvenue !"
+              },
+              "Wrap-Up": {
+                "name": "Conclusions"
+              }
+            }
+          },
+          "csppostap-2017": {
+            "stages": {
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "The Circuit Playground": {
+                "name": "Le Circuit Playground"
+              },
+              "Lists": {
+                "name": "Listes"
+              },
+              "Lights": {
+                "name": "Lumières"
+              },
+              "Event Types": {
+                "name": "Types d'évènement"
+              },
+              "Getters and Setters": {
+                "name": "Accesseurs en lecture et en écriture"
+              },
+              "Timed Loop": {
+                "name": "Boucle temporisée"
+              },
+              "Timed Loops": {
+                "name": "Boucles temporisées"
+              },
+              "For Loops": {
+                "name": "Boucles « Pour »"
+              },
+              "Physical Input": {
+                "name": "Entrée physique"
+              },
+              "List and For Loops": {
+                "name": "Liste et boucles Pour"
+              },
+              "Project: Board Output": {
+                "name": "Projet: Utilisation du circuit comme sortie"
+              },
+              "For Loops with UI and Board": {
+                "name": "Boucle Pour avec le circuit et une interface utilisateur"
+              },
+              "Lists and For Loops": {
+                "name": "Listes et boucles Pour"
+              },
+              "Analog Input": {
+                "name": "Entrée analogique"
+              },
+              "Polling Events": {
+                "name": "Attendre les évènements"
+              },
+              "Sensor Applications": {
+                "name": "Utilisations des capteurs"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Projet: Réaliser un prototype innovant"
+              },
+              "Board Events": {
+                "name": "Évènements en provenance du circuit"
+              },
+              "Project: Make a Game": {
+                "name": "Projet: Réaliser un jeu"
+              },
+              "Getting and Setting Properties": {
+                "name": "Lire et changer les propriétés"
+              },
+              "The Program Design Process": {
+                "name": "Le processus de création d'un programme"
+              },
+              "Getting Properties": {
+                "name": "Lire les propriétés"
+              },
+              "Designing Screens with Code": {
+                "name": "Dessiner des écrans en codant"
+              },
+              "Arrays": {
+                "name": "Tableaux"
+              },
+              "Arrays and For Loops": {
+                "name": "Tableaux et boucles Pour"
+              },
+              "Circuits and Physical Prototypes": {
+                "name": "Circuits et prototypes physiques"
+              },
+              "Accelerometer": {
+                "name": "Accéléromètre"
+              },
+              "Functions with Parameters": {
+                "name": "Fonctions avec Paramètres"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Input": {
+                "name": "Entrée"
+              }
+            }
+          },
+          "applab-1hour": {
+            "stages": {
+              "Event Types": {
+                "name": "Types d'évènement"
+              },
+              "Getters and Setters": {
+                "name": "Accesseurs en lecture et en écriture"
+              }
+            }
+          },
+          "applab-2hour": {
+            "stages": {
+              "Event Types": {
+                "name": "Types d'évènement"
+              },
+              "Getters and Setters": {
+                "name": "Accesseurs en lecture et en écriture"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduction"
+              }
+            }
+          },
+          "workshop-maker": {
+            "stages": {
+              "The Circuit Playground": {
+                "name": "Le Circuit Playground"
+              },
+              "Physical Input": {
+                "name": "Entrée physique"
+              },
+              "Analog Input": {
+                "name": "Entrée analogique"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Les algorithmes du monde réel: La course de dés"
+              }
+            }
+          },
+          "csd6-2017": {
+            "title": "Unité 6: Contrôle de systèmes physiques",
+            "description_short": "Apprend à programmer des objets.",
+            "description": "L'unité 6 explore le rôle du matériel dans l'informatique et comment différents capteurs peuvent donner des interactions plus efficaces que les traditionnels clavier, souris et écran. En utilisant App Lab et le Circuit Playground d'Adafruit, vous allez développer des programmes qui utilisent les mêmes interactions que les appareils mobiles, montrant ainsi comment un simple prototype peut devenir un produit fini. Le cours se termine par un concours créatif pour réaliser une de vos idées en utilisant le Circuit Playground.",
+            "stages": {
+              "Event Types": {
+                "name": "Types d'évènement"
+              },
+              "Getters and Setters": {
+                "name": "Accesseurs en lecture et en écriture"
+              },
+              "The Circuit Playground": {
+                "name": "Le Circuit Playground"
+              },
+              "Lists": {
+                "name": "Listes"
+              },
+              "Lights": {
+                "name": "Lumières"
+              },
+              "For Loops": {
+                "name": "Boucles « Pour »"
+              },
+              "Lists and For Loops": {
+                "name": "Listes et boucles Pour"
+              },
+              "Timed Loops": {
+                "name": "Boucles temporisées"
+              },
+              "Project: Board Output": {
+                "name": "Projet: Utilisation du circuit comme sortie"
+              },
+              "Physical Input": {
+                "name": "Entrée physique"
+              },
+              "Analog Input": {
+                "name": "Entrée analogique"
+              },
+              "Sensor Applications": {
+                "name": "Utilisations des capteurs"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Projet: Réaliser un prototype innovant"
+              },
+              "Designing Screens with Code": {
+                "name": "Dessiner des écrans en codant"
+              },
+              "Board Events": {
+                "name": "Évènements en provenance du circuit"
+              },
+              "Getting Properties": {
+                "name": "Lire les propriétés"
+              },
+              "The Program Design Process": {
+                "name": "Le processus de création d'un programme"
+              },
+              "Project: Make a Game": {
+                "name": "Projet: Réaliser un jeu"
+              },
+              "Arrays": {
+                "name": "Tableaux"
+              },
+              "Arrays and For Loops": {
+                "name": "Tableaux et boucles Pour"
+              },
+              "Accelerometer": {
+                "name": "Accéléromètre"
+              },
+              "Functions with Parameters": {
+                "name": "Fonctions avec Paramètres"
+              },
+              "Circuits and Physical Prototypes": {
+                "name": "Circuits et prototypes physiques"
+              },
+              "Innovations in Computing": {
+                "name": "Innovations en informatique"
+              },
+              "Arrays and Color LEDs": {
+                "name": "Tableaux et LEDs colorées"
+              },
+              "Innovations in Computing_": {
+                "name": "Innovations en informatique"
+              },
+              "Designing Screens with Code_": {
+                "name": "Dessiner des écrans en codant"
+              },
+              "The Circuit Playground_": {
+                "name": "Le Circuit Playground"
+              },
+              "Board Events_": {
+                "name": "Évènements en provenance du circuit"
+              },
+              "Getting Properties_": {
+                "name": "Lire les propriétés"
+              },
+              "Analog Input_": {
+                "name": "Entrée analogique"
+              },
+              "The Program Design Process_": {
+                "name": "Le processus de création d'un programme"
+              },
+              "Arrays and Color LEDs_": {
+                "name": "Tableaux et LEDs colorées"
+              },
+              "Project: Make a Game_": {
+                "name": "Projet: Réaliser un jeu"
+              },
+              "Arrays and For Loops_": {
+                "name": "Tableaux et boucles Pour"
+              },
+              "Accelerometer_": {
+                "name": "Accéléromètre"
+              },
+              "Functions with Parameters_": {
+                "name": "Fonctions avec Paramètres"
+              },
+              "Circuits and Physical Prototypes_": {
+                "name": "Circuits et prototypes physiques"
+              },
+              "Project: Prototype an Innovation_": {
+                "name": "Projet: Réaliser un prototype innovant"
+              },
+              "Project: Make a Game__": {
+                "name": "Projet: Réaliser un jeu"
+              },
+              "Arrays and Color LEDs__": {
+                "name": "Tableaux et LEDs colorées"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "variables"
+              },
+              "The Draw Loop": {
+                "name": "La boucle Draw"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Velocity": {
+                "name": "Vitesse"
+              },
+              "Functions": {
+                "name": "fonctions"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Draw Loop and Randomization": {
+                "name": "La boucle draw et la randomisation"
+              },
+              "Velocity": {
+                "name": "Vitesse"
+              },
+              "Functions": {
+                "name": "fonctions"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Text on the Web": {
+                "name": "Le texte sur le Web"
+              },
+              "Headers and Lists": {
+                "name": "En-têtes et listes"
+              },
+              "Intellectual Property": {
+                "name": "Propriété intellectuelle"
+              },
+              "RGB Colors and Classes": {
+                "name": "Couleurs RVB et classes"
+              },
+              "Lists": {
+                "name": "Listes"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "variables"
+              },
+              "The Draw Loop": {
+                "name": "La boucle Draw"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Velocity": {
+                "name": "Vitesse"
+              },
+              "Functions": {
+                "name": "fonctions"
+              },
+              "null": {
+                "name": "invalide"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              }
+            }
+          },
+          "csd2-old": {
+            "stages": {
+              "Quality Websites": {
+                "name": "Sites Web de qualité"
+              },
+              "Website Design": {
+                "name": "Conception de sites Web"
+              },
+              "Describing Web pages": {
+                "name": "Décrire des pages Web"
+              },
+              "Text on the Web": {
+                "name": "Le texte sur le Web"
+              },
+              "Multi-Page Websites": {
+                "name": "Sites Web multi-pages"
+              },
+              "Classes": {
+                "name": "Classes"
+              },
+              "Peer Review": {
+                "name": "Commentaire par un pair"
+              },
+              "Publishing a Website": {
+                "name": "Publier un site Web"
+              },
+              "Intellectual Property": {
+                "name": "Propriété intellectuelle"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              },
+              "Bounce": {
+                "name": "Rebond"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "description_teacher": "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r\n\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine",
+                "description_teacher": "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r\n"
+              }
+            },
+            "title": "Cours A",
+            "assignment_family_title": "Cours A",
+            "description_short": "Une introduction à l’informatique pour les primo-lecteurs."
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              }
+            },
+            "title": "Cours B",
+            "assignment_family_title": "Cours B",
+            "description_short": "Une introduction à l'informatique pour les primo-lecteurs. (Semblable au cours A, mais avec plus de variété pour les étudiants plus âgés.)"
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algorithmes du monde réel: Avions en papier"
+              }
+            },
+            "title": "Cours C",
+            "assignment_family_title": "Cours C",
+            "description_short": "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux."
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              }
+            },
+            "title": "Cours D",
+            "assignment_family_title": "Cours D",
+            "description_short": "Voyez rapidement les notions du cours C, puis allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles et plus encore."
+          },
+          "coursee-2017": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Songwriting with Parameters": {
+                "name": "La composition de chansons avec des paramètres"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              }
+            },
+            "title": "Cours E",
+            "assignment_family_title": "Cours E",
+            "description_short": "Voyez rapidement les notions des cours C et D, et allez plus loin avec les fonctions."
+          },
+          "coursef-2017": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              }
+            },
+            "title": "Cours F",
+            "assignment_family_title": "Cours F",
+            "description_short": "Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux."
+          },
+          "csdnovice": {
+            "stages": {
+              "Tuesday": {
+                "name": "Mardi"
+              },
+              "Wednesday": {
+                "name": "Mercredi"
+              },
+              "Thursday": {
+                "name": "Jeudi"
+              },
+              "Welcome": {
+                "name": "Bienvenue"
+              },
+              "Congrats": {
+                "name": "Félicitations"
+              }
+            }
+          },
+          "cspnovice": {
+            "stages": {
+              "Welcome": {
+                "name": "Bienvenue"
+              },
+              "Tuesday": {
+                "name": "Mardi"
+              },
+              "Wednesday": {
+                "name": "Mercredi"
+              },
+              "Thursday": {
+                "name": "Jeudi"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Songwriting with Parameters": {
+                "name": "La composition de chansons avec des paramètres"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              }
+            },
+            "title": "Cours Express",
+            "assignment_family_title": "Cours Express"
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              },
+              "Spelling Bee": {
+                "name": "Concours d'orthographe"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Merci"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Le besoin de langages de programmation"
+              },
+              "Using Simple Commands": {
+                "name": "Utiliser des commandes simples"
+              },
+              "Creating Functions": {
+                "name": "Création de fonctions"
+              },
+              "Looping and Random Numbers": {
+                "name": "Boucles et nombres aléatoires"
+              }
+            },
+            "description_short": "Programmation"
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Unplugged: Binary": {
+                "name": "Débranché: Binaire"
+              },
+              "Artist Binary": {
+                "name": "Artiste binaire"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Loops in Ice Age": {
+                "name": "Boucles dans l'Âge de Glace"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Songwriting with Parameters": {
+                "name": "La composition de chansons avec des paramètres"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Le besoin de langages de programmation"
+              },
+              "Using Simple Commands": {
+                "name": "Utiliser des commandes simples"
+              },
+              "Creating Functions": {
+                "name": "Création de fonctions"
+              },
+              "Looping and Random Numbers": {
+                "name": "Boucles et nombres aléatoires"
+              }
+            },
+            "description": "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
+          },
+          "pwc": {
+            "stages": {
+              "Personal Innovations": {
+                "name": "Innovations personnelles"
+              },
+              "Simple Encryption": {
+                "name": "Cryptage simple"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft\\: Hero's Journey Hour of Code": {
+                "name": "Minecraft\\: le voyage du héros dans l'Heure de Code"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Heure de Code Minecraft"
+              }
+            },
+            "title": "Minecraft: Le voyage du héros",
+            "description_short": "Minecraft est de retour pour une toute nouvelle activité de l'Heure de Code!",
+            "description": "Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\\_! Exploration de Minecraft avec le code."
+          },
+          "csp-explore-2017": {
+            "stages": {
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              }
+            }
+          },
+          "csp-create-2017": {
+            "stages": {
+              "Post-Course Survey": {
+                "name": "Suivi d'après cours"
+              }
+            }
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Songwriting with Parameters": {
+                "name": "La composition de chansons avec des paramètres"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Event Types": {
+                "name": "Types d'évènement"
+              },
+              "Getters and Setters": {
+                "name": "Accesseurs en lecture et en écriture"
+              },
+              "The Circuit Playground": {
+                "name": "Le Circuit Playground"
+              },
+              "Lists": {
+                "name": "Listes"
+              },
+              "Lights": {
+                "name": "Lumières"
+              },
+              "For Loops": {
+                "name": "Boucles « Pour »"
+              },
+              "Lists and For Loops": {
+                "name": "Listes et boucles Pour"
+              },
+              "Timed Loops": {
+                "name": "Boucles temporisées"
+              },
+              "Project: Board Output": {
+                "name": "Projet: Utilisation du circuit comme sortie"
+              },
+              "Physical Input": {
+                "name": "Entrée physique"
+              },
+              "Analog Input": {
+                "name": "Entrée analogique"
+              },
+              "Sensor Applications": {
+                "name": "Utilisations des capteurs"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Projet: Réaliser un prototype innovant"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "variables"
+              },
+              "The Draw Loop": {
+                "name": "La boucle Draw"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Velocity": {
+                "name": "Vitesse"
+              },
+              "Functions": {
+                "name": "fonctions"
+              }
+            },
+            "description_short": "Programmation"
+          },
+          "csd3-2018": {
+            "description_short": "Programmation",
+            "stages": {
+              "Variables": {
+                "name": "variables"
+              },
+              "The Draw Loop": {
+                "name": "La boucle Draw",
+                "description_student": "Cette leçon présente la boucle draw, l’un des principaux paradigmes de programmation du labo des jeux. La classe combine la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. Ensuite, tout le monde utilise ce qu'il a appris pour mettre à jour la scène du sprite de la leçon précédente.",
+                "description_teacher": "Dans cette leçon, les élèves se familiarisent avec la boucle d’étirage, l’un des principaux paradigmes de programmation du labo des jeux. Pour commencer la leçon, les élèves examinent des folioscopes afin de constater que le fait de montrer plusieurs images à la suite crée l’impression de mouvement. Les élèves regardent ensuite une vidéo expliquant comment la boucle draw du labo des jeux contribue à créer cette même impression dans leurs programmes. Les élèves combinent la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. À la fin de la leçon, les élèves utilisent ce qu'ils ont appris pour mettre à jour la scène de sprites de la leçon précédente."
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Velocity": {
+                "name": "Vitesse"
+              },
+              "Functions": {
+                "name": "fonctions"
+              }
+            }
+          },
+          "csd2-2018": {
+            "description_short": "  Apprends à construire ton propre site web avec le labo du web.",
+            "stages": {
+              "Digital Footprint": {
+                "description_teacher": "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r\n\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r\n\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
+              },
+              "Lists": {
+                "name": "Listes"
+              },
+              "Intellectual Property and Images": {
+                "description_teacher": "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r\n\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
+              },
+              "Project - Multi-Page Websites": {
+                "description_teacher": "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r\n\r\n"
+              },
+              "Styling Text with CSS": {
+                "description_teacher": "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r\n\r\n"
+              },
+              "RGB Colors and Classes": {
+                "name": "Couleurs RVB et classes",
+                "description_student": "Cette leçon couvre les classes et les couleurs personnalisées. La classe commence par apprendre à spécifier des couleurs personnalisées à l'aide de valeurs RVB (rouge, vert, bleu), puis à appliquer ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. À l'aide des classes, la classe ajoute plus de styles à la page web Quatre saisons, puis les utilise pour styliser ses sites web personnels.",
+                "description_teacher": "Dans cette leçon, les élèves apprennent d’abord comment définir des couleurs personnalisées en utilisant leurs valeurs RVB (rouge, vert, bleu). Ils appliquent ensuite ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. Les classes CSS permettent aux développeurs web de traiter des groupes d’éléments qu’il veulent styliser différemment d’autres éléments du même type. En utilisant les classes, les élèves ajoutent plus de styles à la page web Quatre saisons, puis les utilisent pour styliser leurs sites web personnels."
+              },
+              "Project - Personal Portfolio Website": {
+                "description_teacher": "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
+              }
+            }
+          },
+          "coursea-2018": {
+            "assignment_family_title": "Cours A",
+            "description_short": "Une introduction à l’informatique pour les primo-lecteurs.",
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Bugs passés inaperçus"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Stevie et le grand projet",
+                "description_teacher": "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r\n\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "description_teacher": "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r\n"
+              },
+              "Programming: Happy Maps": {
+                "name": "Cartes Joyeuses"
+              },
+              "Going Places Safely": {
+                "name": "Se déplacer en toute sécurité"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Stevie et le grand projet"
+              }
+            }
+          },
+          "express-2018": {
+            "assignment_family_title": "Cours Express",
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Programmation sur papier quadrillé"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              },
+              "Events: The Big Event": {
+                "name": "Le Grand Événement"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Tourner en rond"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Functions: Songwriting": {
+                "name": "Écriture de chansons"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              },
+              "Unplugged: Binary": {
+                "name": "Les images binaires"
+              },
+              "Artist Binary": {
+                "name": "Artiste binaire"
+              },
+              "Internet": {
+                "name": "Internet et les réseaux connectés"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              },
+              "Relay Programming": {
+                "name": "Programmation de relais"
+              }
+            }
+          },
+          "courseb-2018": {
+            "assignment_family_title": "Cours B",
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              },
+              "Your Digital Footprint": {
+                "name": "Ton empreinte numérique"
+              },
+              "Move It, Move It": {
+                "name": "Bouge, Bouge"
+              },
+              "Copyright and Creativity": {
+                "name": "C'est bien de créer et de jouer équitablement"
+              }
+            }
+          },
+          "coursed-2018": {
+            "assignment_family_title": "Cours D",
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Programmation sur papier quadrillé"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Unplugged: Binary": {
+                "name": "Les images binaires"
+              },
+              "Artist Binary": {
+                "name": "Artiste binaire"
+              },
+              "Loops in Ice Age": {
+                "name": "Boucles dans l'Âge de Glace"
+              },
+              "Graph Paper Programming": {
+                "name": "Programmation sur papier quadrillé"
+              },
+              "Relay Programming": {
+                "name": "Programmation de relais"
+              }
+            }
+          },
+          "coursec-2018": {
+            "assignment_family_title": "Cours C",
+            "description_short": "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.",
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Tourner en rond"
+              },
+              "Events: The Big Event": {
+                "name": "Le Grand Événement"
+              },
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              }
+            }
+          },
+          "csd6-2018": {
+            "title": "Unité 6: Contrôle de systèmes physiques",
+            "description": "L'unité 6 explore le rôle du matériel dans l'informatique et comment différents capteurs peuvent donner des interactions plus efficaces que les traditionnels clavier, souris et écran. En utilisant App Lab et le Circuit Playground d'Adafruit, vous allez développer des programmes qui utilisent les mêmes interactions que les appareils mobiles, montrant ainsi comment un simple prototype peut devenir un produit fini. Le cours se termine par un concours créatif pour réaliser une de vos idées en utilisant le Circuit Playground.",
+            "description_short": "Apprend à programmer des objets.",
+            "stages": {
+              "Innovations in Computing": {
+                "name": "Innovations en informatique"
+              },
+              "Designing Screens with Code": {
+                "name": "Dessiner des écrans en codant"
+              },
+              "The Circuit Playground": {
+                "name": "Le Circuit Playground"
+              },
+              "Board Events": {
+                "name": "Évènements en provenance du circuit"
+              },
+              "Getting Properties": {
+                "name": "Lire les propriétés"
+              },
+              "Analog Input": {
+                "name": "Entrée analogique"
+              },
+              "The Program Design Process": {
+                "name": "Le processus de création d'un programme"
+              },
+              "Project: Make a Game": {
+                "name": "Projet: Réaliser un jeu"
+              },
+              "Arrays and Color LEDs": {
+                "name": "Tableaux et LEDs colorées"
+              },
+              "Arrays and For Loops": {
+                "name": "Tableaux et boucles Pour"
+              },
+              "Accelerometer": {
+                "name": "Accéléromètre"
+              },
+              "Functions with Parameters": {
+                "name": "Fonctions avec Paramètres"
+              },
+              "Circuits and Physical Prototypes": {
+                "name": "Circuits et prototypes physiques"
+              },
+              "Project: Prototype an Innovation": {
+                "name": "Projet: Réaliser un prototype innovant"
+              }
+            }
+          },
+          "coursee-2018": {
+            "assignment_family_title": "Cours E",
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Mes amis les robots"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Functions: Songwriting": {
+                "name": "Écriture de chansons"
+              },
+              "Internet": {
+                "name": "Internet et les réseaux connectés"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Heure de Code Minecraft"
+              },
+              "Copyright and Creativity": {
+                "name": "Partage numérique"
+              }
+            }
+          },
+          "coursef-2018": {
+            "assignment_family_title": "Cours F",
+            "description_short": "Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.",
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Mes amis les robots"
+              },
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Introduction": {
+                "name": "Introduction"
+              },
+              "Ice Age Play Lab": {
+                "name": "Labo de jeux Âge de Glace"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Songwriting with Parameters": {
+                "name": "La composition de chansons avec des paramètres"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "Personal Innovations": {
+                "name": "Innovations personnelles"
+              },
+              "Sending Binary Messages": {
+                "name": "Envoyer des Messages Binaires"
+              },
+              "Sending Binary Messages with the Internet Simulator": {
+                "name": "Envoyer des Messages Binaires avec le Simulateur d'Internet"
+              },
+              "Number Systems": {
+                "name": "Systèmes de numération"
+              },
+              "Binary Numbers": {
+                "name": "Nombres binaires"
+              },
+              "Sending Numbers": {
+                "name": "Envoi de Nombres"
+              },
+              "The Internet": {
+                "name": "Internet et les réseaux connectés"
+              },
+              "Packets and Making a Reliable Internet": {
+                "name": "Paquets et créer un Internet fiable"
+              }
+            }
+          },
+          "csd4-2018": {
+            "stages": {
+              "Understanding Your User": {
+                "description_teacher": "Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n"
+              },
+              "Paper Prototypes": {
+                "description_teacher": "Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r\n"
+              }
+            }
+          },
+          "csp2-2018": {
+            "stages": {
+              "Bytes and File Sizes": {
+                "name": "Octets et Tailles de Fichiers"
+              },
+              "Encoding B&W Images": {
+                "name": "Encoder des Images en N&B"
+              },
+              "Encoding Color Images": {
+                "name": "Encoder des Images Couleur"
+              },
+              "Lossy Compression and File Formats": {
+                "name": "Compression avec perte et Format de Fichier"
+              }
+            }
+          },
+          "csp3-2018": {
+            "description_short": "Programmation",
+            "stages": {
+              "The Need For Programming Languages": {
+                "name": "Le besoin de langages de programmation"
+              },
+              "Using Simple Commands": {
+                "name": "Utiliser des commandes simples"
+              },
+              "Creating Functions": {
+                "name": "Création de fonctions"
+              },
+              "Looping and Random Numbers": {
+                "name": "Boucles et nombres aléatoires"
+              }
+            }
+          },
+          "csp4-2018": {
+            "stages": {
+              "Simple Encryption": {
+                "name": "Cryptage simple"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "Multi-screen Apps": {
+                "name": "Applications sur plusieurs écrans"
+              },
+              "User Input and Strings": {
+                "name": "Entrée d'un utilisateur et chaines de caractères"
+              },
+              "While Loops": {
+                "name": "Boucles « Tant que »"
+              },
+              "Loops and Simulations": {
+                "name": "Boucles et simulations"
+              },
+              "Introduction to Arrays": {
+                "name": "Introduction sur les Arrays"
+              }
+            }
+          },
+          "csd-novice-18": {
+            "stages": {
+              "Welcome": {
+                "name": "Bienvenue"
+              },
+              "Tuesday": {
+                "name": "Mardi"
+              },
+              "Wednesday": {
+                "name": "Mercredi"
+              },
+              "Thursday": {
+                "name": "Jeudi"
+              }
+            }
+          },
+          "csd-apprentice-18": {
+            "stages": {
+              "Tuesday": {
+                "name": "Mardi"
+              },
+              "Wednesday": {
+                "name": "Mercredi"
+              },
+              "Thursday": {
+                "name": "Jeudi"
+              }
+            }
+          },
+          "csp-novice-18": {
+            "stages": {
+              "Tuesday": {
+                "name": "Mardi"
+              },
+              "Wednesday": {
+                "name": "Mercredi"
+              },
+              "Thursday": {
+                "name": "Jeudi"
+              }
+            }
+          },
+          "csp-apprentice-18": {
+            "stages": {
+              "Tuesday": {
+                "name": "Mardi"
+              },
+              "Wednesday": {
+                "name": "Mercredi"
+              },
+              "Thursday": {
+                "name": "Jeudi"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "stages": {
+              "Debugging: Unspotted Bugs": {
+                "name": "Bugs passés inaperçus"
+              },
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Stevie et le grand projet"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              },
+              "Spelling Bee": {
+                "name": "Concours d'orthographe"
+              },
+              "Move It, Move It": {
+                "name": "Bouge, Bouge"
+              },
+              "Your Digital Footprint": {
+                "name": "Ton empreinte numérique"
+              },
+              "Copyright and Creativity": {
+                "name": "C'est bien de créer et de jouer équitablement"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Stevie et le grand projet"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Artiste"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Artiste"
+              }
+            }
+          },
+          "dance": {
+            "stages": {
+              "Dance Party": {
+                "name": "Fête dansante"
+              }
+            },
+            "title": "Fête dansante",
+            "description_short": "Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres !",
+            "description": "Codez votre propre soirée dansante à partager avec vos amis !"
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Artiste"
+              }
+            }
+          },
+          "aquatic": {
+            "description_short": "Utilise ta créativité et tes compétences de résolution de problèmes pour explorer et construire des mondes sous-marins avec du code !"
+          },
+          "dance--draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Fête dansante"
+              }
+            }
+          },
+          "dance-draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Fête dansante"
+              }
+            }
+          },
+          "dance-extras": {
+            "title": "Continuez à danser",
+            "description": "Allez au-delà de la première heure avec de longues idées de projets."
+          },
+          "coursef-2019": {
+            "description_short": "Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.",
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "The Artist": {
+                "name": "L'Artiste"
+              }
+            }
+          },
+          "dance-low": {
+            "stages": {
+              "Dance Party": {
+                "name": "Fête dansante"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Programmation de relais"
+              },
+              "Loops in Ice Age": {
+                "name": "Boucles dans l'Âge de Glace"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Digital Citizenship": {
+                "name": "Citoyenneté numérique"
+              },
+              "Unplugged: Binary": {
+                "name": "Débranché: Binaire"
+              },
+              "Artist Binary": {
+                "name": "Artiste binaire"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Nested Loops": {
+                "name": "Boucles imbriquées"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Conditionals": {
+                "name": "Instructions conditionnelles"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Programmation de relais"
+              },
+              "Conditionals with Cards": {
+                "name": "Instructions conditionnelles avec des cartes"
+              },
+              "Envelope Variables": {
+                "name": "Les variables de l'enveloppe"
+              },
+              "For Loop Fun": {
+                "name": "Jouons avec les boucles « Pour »"
+              },
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              },
+              "Unplugged: Binary": {
+                "name": "Débranché: Binaire"
+              },
+              "Artist Binary": {
+                "name": "Artiste binaire"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Financement participatif"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "invalide"
+              }
+            }
+          },
+          "dance-extras-gallery": {
+            "title": "Continuez à danser",
+            "description": "Allez au-delà de la première heure avec de longues idées de projets."
+          },
+          "coursec-2019": {
+            "description_short": "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.",
+            "stages": {
+              "Building a Foundation": {
+                "name": "Construire une fondation"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algorithmes du monde réel: Avions en papier"
+              },
+              "Looking Ahead": {
+                "name": "Regarder en avant"
+              },
+              "Binary Bracelets": {
+                "name": "Bracelets binaires"
+              }
+            }
+          },
+          "gamelab": {
+            "title": "Labo des jeux"
+          },
+          "coursea-2019": {
+            "description_short": "Une introduction à l’informatique pour les primo-lecteurs.",
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine",
+                "description_teacher": "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r\n"
+              },
+              "Going Places Safely": {
+                "name": "Se déplacer en toute sécurité"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Bouge, Bouge"
+              },
+              "Your Digital Footprint": {
+                "name": "Ton empreinte numérique"
+              },
+              "Loops in Ice Age": {
+                "name": "Boucles dans l'Âge de Glace"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Bouge, Bouge"
+              },
+              "Your Digital Footprint": {
+                "name": "Ton empreinte numérique"
+              },
+              "Loops in Ice Age": {
+                "name": "Boucles dans l'Âge de Glace"
+              },
+              "Spelling Bee": {
+                "name": "Concours d'orthographe"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Algorithmes du monde réel: Planter une graine"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1424 @@
+{
+  "fi": {
+    "data": {
+      "blocks": {
+        "Dancelab_atTimestamp": {
+          "text": "jälkeen {TIMESTAMP} {UNIT}",
+          "options": {
+            "UNIT": {
+              "\"measures\"": "tahdit",
+              "\"seconds\"": "sekuntia"
+            }
+          }
+        },
+        "Dancelab_changeColorBy": {
+          "text": "muuta {COLOR} {METHOD} {AMOUNT}",
+          "options": {
+            "METHOD": {
+              "\"hue\"": "vivahde",
+              "\"saturation\"": "kylläisyys",
+              "\"brightness\"": "kirkkaus"
+            }
+          }
+        },
+        "Dancelab_changeMoveEachLR": {
+          "text": "{GROUP} tee liikettä {MOVE} {DIR} ikuisesti",
+          "options": {
+            "GROUP": {
+              "sprites": "kaikki",
+              "\"ALIEN\"": "kaikki alienit",
+              "\"BEAR\"": "kaikki karhut",
+              "\"CAT\"": "kaikki kissat",
+              "\"DOG\"": "kaikki koirat",
+              "\"DUCK\"": "kaikki ankat",
+              "\"FROG\"": "kaikki sammakot",
+              "\"MOOSE\"": "kaikki hirvet",
+              "\"PINEAPPLE\"": "kaikki ananakset",
+              "\"ROBOT\"": "kaikki robotit",
+              "\"SHARK\"": "kaikki hait",
+              "\"UNICORN\"": "kaikki yksisarviset"
+            },
+            "MOVE": {
+              "\"next\"": "(Seuraava)",
+              "\"prev\"": "(Edellinen)",
+              "\"rand\"": "(Satunnainen)",
+              "MOVES.ClapHigh": "Taputa korkealle",
+              "MOVES.Dab": "Nokare",
+              "MOVES.DoubleJam": "Panoksen tuplaus",
+              "MOVES.Drop": "Pudota",
+              "MOVES.Floss": "Flossaa",
+              "MOVES.Fresh": "Fressaa",
+              "MOVES.Kick": "Tähti",
+              "MOVES.ThisOrThat": "Sitä tai tätä",
+              "MOVES.Rest": "Ei mitään"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changeMoveLR": {
+          "text": "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti",
+          "options": {
+            "MOVE": {
+              "\"next\"": "(Seuraava)",
+              "\"prev\"": "(Edellinen)",
+              "\"rand\"": "(Satunnainen)",
+              "MOVES.ClapHigh": "Taputa korkealle",
+              "MOVES.Dab": "Nokare",
+              "MOVES.DoubleJam": "Panoksen tuplaus",
+              "MOVES.Drop": "Pudota",
+              "MOVES.Floss": "Flossaa",
+              "MOVES.Fresh": "Fressaa",
+              "MOVES.Kick": "Tähti",
+              "MOVES.ThisOrThat": "Sitä tai tätä",
+              "MOVES.Rest": "Ei mitään"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changePropBy": {
+          "text": "muuta {SPRITE} {PROPERTY} {VAL}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus",
+              "\"rotation\"": "kierto",
+              "\"x\"": "vaaka-asento",
+              "\"y\"": "pystyasento"
+            }
+          }
+        },
+        "Dancelab_doMoveEachLR": {
+          "text": "{GROUP} tee liike {MOVE} {DIR} kerran",
+          "options": {
+            "GROUP": {
+              "sprites": "kaikki",
+              "\"ALIEN\"": "kaikki alienit",
+              "\"BEAR\"": "kaikki karhut",
+              "\"CAT\"": "kaikki kissat",
+              "\"DOG\"": "kaikki koirat",
+              "\"DUCK\"": "kaikki ankat",
+              "\"FROG\"": "kaikki sammakot",
+              "\"MOOSE\"": "kaikki hirvet",
+              "\"PINEAPPLE\"": "kaikki ananakset",
+              "\"ROBOT\"": "kaikki robotit",
+              "\"SHARK\"": "kaikki hait",
+              "\"UNICORN\"": "kaikki yksisarviset"
+            },
+            "MOVE": {
+              "\"rand\"": "(Satunnainen)",
+              "MOVES.XBend": "Taivuta",
+              "MOVES.XClapSide": "Taputa",
+              "MOVES.ClapHigh": "Taputa korkealle",
+              "MOVES.Dab": "Nokare",
+              "MOVES.DoubleJam": "Panoksen tuplaus",
+              "MOVES.Drop": "Pudota",
+              "MOVES.Floss": "Flossaa",
+              "MOVES.Fresh": "Fressaa",
+              "MOVES.XHeadHips": "Pää + Lanteet",
+              "MOVES.XHop": "Hyppää",
+              "MOVES.XHighKick": "Potkaise",
+              "MOVES.XKnee": "Polvi",
+              "MOVES.XKneel": "Polvistu",
+              "MOVES.XOle": "Olé",
+              "MOVES.XArmsSide": "Kurota",
+              "MOVES.XSlide": "Liu’u",
+              "MOVES.Kick": "Tähti",
+              "MOVES.XArmsUp": "Venytys",
+              "MOVES.ThisOrThat": "Sitä tai tätä",
+              "MOVES.Rest": "Ei mitään"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_doMoveLR": {
+          "text": "{SPRITE} tee liike {MOVE} {DIR} kerran",
+          "options": {
+            "MOVE": {
+              "\"rand\"": "(Satunnainen)",
+              "MOVES.XBend": "Taivuta",
+              "MOVES.XClapSide": "Taputa",
+              "MOVES.ClapHigh": "Taputa korkealle",
+              "MOVES.Dab": "Nokare",
+              "MOVES.DoubleJam": "Panoksen tuplaus",
+              "MOVES.Drop": "Pudota",
+              "MOVES.Floss": "Flossaa",
+              "MOVES.Fresh": "Fressaa",
+              "MOVES.XHeadHips": "Pää + Lanteet",
+              "MOVES.XHop": "Hyppää",
+              "MOVES.XHighKick": "Potkaise",
+              "MOVES.XKnee": "Polvi",
+              "MOVES.XKneel": "Polvistu",
+              "MOVES.XOle": "Olé",
+              "MOVES.XArmsSide": "Kurota",
+              "MOVES.XSlide": "Liu’u",
+              "MOVES.Kick": "Tähti",
+              "MOVES.XArmsUp": "Venytys",
+              "MOVES.ThisOrThat": "Sitä tai tätä",
+              "MOVES.Rest": "Ei mitään"
+            },
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_everySeconds": {
+          "text": "joka {N} {UNIT} ",
+          "options": {
+            "UNIT": {
+              "\"measures\"": "tahdit",
+              "\"seconds\"": "sekuntia"
+            }
+          }
+        },
+        "Dancelab_everySecondsRange": {
+          "text": "joka {N} {UNIT} alusta {START} loppuun {STOP} ",
+          "options": {
+            "UNIT": {
+              "measures": "Tahdit",
+              "seconds": "Sekunnit"
+            }
+          }
+        },
+        "Dancelab_everyVerseChorus": {
+          "text": "Joka {UNIT} ",
+          "options": {
+            "UNIT": {
+              "\"verse\"": "säkeistö",
+              "\"chorus\"": "kertaussäkeistö"
+            }
+          }
+        },
+        "Dancelab_getEnergy": {
+          "text": "hanki {RANGE}",
+          "options": {
+            "RANGE": {
+              "\"low\"": "basso",
+              "\"mid\"": "midi",
+              "\"high\"": "diskantti"
+            }
+          }
+        },
+        "Dancelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus",
+              "\"rotation\"": "kierto",
+              "\"x\"": "vaaka-asento",
+              "\"y\"": "pystyasento",
+              "\"tint\"": "sävy"
+            }
+          }
+        },
+        "Dancelab_getTime": {
+          "text": "[UNIT][0] kulunut",
+          "options": {
+            "UNIT": {
+              "\"measures\"": "tahdit",
+              "\"seconds\"": "sekuntia"
+            }
+          }
+        },
+        "Dancelab_ifDanceIs": {
+          "text": "jos {SPRITE} tekee {DANCE}\n{DO1} {DO2}",
+          "options": {
+            "DANCE": {
+              "MOVES.ClapHigh": "Taputa korkealle",
+              "MOVES.Dab": "Nokare",
+              "MOVES.DoubleJam": "Panoksen tuplaus",
+              "MOVES.Drop": "Pudota",
+              "MOVES.Floss": "Flossaa",
+              "MOVES.Fresh": "Fressaa",
+              "MOVES.Kick": "Tähti",
+              "MOVES.ThisOrThat": "Sitä tai tätä",
+              "MOVES.Rest": "Ei mitään"
+            }
+          }
+        },
+        "Dancelab_ifTime": {
+          "options": {
+            "UNIT": {
+              "\"measures\"": "tahdit",
+              "\"seconds\"": "sekuntia"
+            },
+            "OP": {
+              "\">\"": ">",
+              "\"<\"": "\\<",
+              "\"=\"": "="
+            }
+          }
+        },
+        "Dancelab_jumpTo": {
+          "text": "{SPRITE} siirry paikkaan {LOCATION}",
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "ylös",
+              "{x: 200, y: 300}": "alas",
+              "{x: 100, y: 200}": "vasemmalle",
+              "{x: 300, y: 200}": "oikealle",
+              "{x: 200, y: 200}": "keskellä",
+              "{x: 100, y: 100}": "vasen yläkulma",
+              "{x: 300, y: 100}": "oikea yläkulma",
+              "{x: 100, y: 300}": "alavasen",
+              "{x: 300, y: 300}": "alaoikea",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "satunnainen"
+            }
+          }
+        },
+        "Dancelab_layoutSprites": {
+          "text": "asettelu {GROUP} kuin {FORMAT}",
+          "options": {
+            "GROUP": {
+              "sprites": "kaikki",
+              "\"ALIEN\"": "kaikki alienit",
+              "\"BEAR\"": "kaikki karhut",
+              "\"CAT\"": "kaikki kissat",
+              "\"DOG\"": "kaikki koirat",
+              "\"DUCK\"": "kaikki ankat",
+              "\"FROG\"": "kaikki sammakot",
+              "\"MOOSE\"": "kaikki hirvet",
+              "\"PINEAPPLE\"": "kaikki ananakset",
+              "\"ROBOT\"": "kaikki robotit",
+              "\"SHARK\"": "kaikki hait",
+              "\"UNICORN\"": "kaikki yksisarviset"
+            },
+            "FORMAT": {
+              "\"border\"": "raja",
+              "\"inner\"": "neliön sisällä",
+              "\"circle\"": "ympyrä",
+              "\"grid\"": "ruudukko",
+              "\"row\"": "rivi",
+              "\"column\"": "sarake",
+              "\"x\"": "ristiinrastiin",
+              "\"plus\"": "risti",
+              "\"random\"": "satunnainen"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSprite": {
+          "text": "tee uusi {COSTUME}\nkutsui {NAME} paikkaan {LOCATION}",
+          "options": {
+            "COSTUME": {
+              "\"ALIEN\"": "Avaruusolento",
+              "\"BEAR\"": "Karhu",
+              "\"CAT\"": "Kissa",
+              "\"DOG\"": "Koira",
+              "\"DUCK\"": "Ankka",
+              "\"FROG\"": "Sammakko",
+              "\"MOOSE\"": "Hirvi",
+              "\"PINEAPPLE\"": "Ananas",
+              "\"ROBOT\"": "Robotti",
+              "\"SHARK\"": "Hai",
+              "\"UNICORN\"": "Yksisarvinen"
+            },
+            "LOCATION": {
+              "{x: 200, y: 100}": "ylös",
+              "{x: 200, y: 300}": "alas",
+              "{x: 100, y: 200}": "vasemmalle",
+              "{x: 300, y: 200}": "oikealle",
+              "{x: 200, y: 200}": "keskellä",
+              "{x: 100, y: 100}": "vasen yläkulma",
+              "{x: 300, y: 100}": "oikea yläkulma",
+              "{x: 100, y: 300}": "alavasen",
+              "{x: 300, y: 300}": "alaoikea",
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "satunnainen"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSpriteGroup": {
+          "text": "tee {N} uusi {COSTUME}\n{LAYOUT}",
+          "options": {
+            "N": {
+              "2": "2",
+              "3": "3",
+              "4": "4",
+              "5": "5",
+              "6": "6",
+              "7": "7",
+              "8": "8",
+              "9": "9",
+              "10": "10",
+              "11": "11",
+              "12": "12",
+              "13": "13",
+              "14": "14",
+              "15": "15",
+              "16": "16",
+              "17": "17",
+              "18": "18",
+              "19": "19",
+              "20": "20"
+            },
+            "COSTUME": {
+              "\"ALIEN\"": "Alienit",
+              "\"BEAR\"": "Karhut",
+              "\"CAT\"": "Kissat",
+              "\"DOG\"": "Koirat",
+              "\"DUCK\"": "Ankat",
+              "\"FROG\"": "Sammakot",
+              "\"MOOSE\"": "Hirvi",
+              "\"PINEAPPLE\"": "Ananakset",
+              "\"ROBOT\"": "Robotit",
+              "\"SHARK\"": "Hait",
+              "\"UNICORN\"": "Yksisarviset"
+            },
+            "LAYOUT": {
+              "\"border\"": "raja",
+              "\"inner\"": "neliön sisällä",
+              "\"circle\"": "ympyrä",
+              "\"grid\"": "ruudukko",
+              "\"row\"": "rivi",
+              "\"column\"": "sarake",
+              "\"x\"": "ristiinrastiin",
+              "\"plus\"": "risti",
+              "\"random\"": "satunnainen"
+            }
+          }
+        },
+        "Dancelab_mixColors": {
+          "text": "sekoita {COLOR1} ja {COLOR2}"
+        },
+        "Dancelab_nMeasures": {
+          "text": "{N} tahdit"
+        },
+        "Dancelab_onPointerDown": {
+          "text": "osoittimella alas"
+        },
+        "Dancelab_onPointerDrag": {
+          "text": "raahaa osoittimella"
+        },
+        "Dancelab_onPointerUp": {
+          "text": "osoittimella ylös"
+        },
+        "Dancelab_randomColor": {
+          "text": "satunnainen väri"
+        },
+        "Dancelab_setBackground": {
+          "text": "aseta taustaväri {COLOR}"
+        },
+        "Dancelab_setBackgroundEffect": {
+          "text": "aseta taustaefekti {EFFECT} {PALETTE}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Ei mitään",
+              "\"circles\"": "Ympyrät",
+              "\"color_cycle\"": "Värit",
+              "\"diamonds\"": "Timantit",
+              "\"disco_ball\"": "Diskopallo",
+              "\"fireworks\"": "Ilotulitus",
+              "\"splatter\"": "Maaliroiskeet",
+              "\"rainbow\"": "Sateenkaari",
+              "\"snowflakes\"": "Lumi",
+              "\"spiral\"": "Kierre",
+              "\"disco\"": "Neliöt"
+            }
+          }
+        },
+        "Dancelab_setBackgroundEffectWithPalette": {
+          "text": "aseta taustaefekti {EFFECT} {PALETTE}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Ei mitään",
+              "\"rand\"": "(Satunnainen)",
+              "\"circles\"": "Ympyrät",
+              "\"color_cycle\"": "Värit",
+              "\"diamonds\"": "Timantit",
+              "\"disco_ball\"": "Diskopallo",
+              "\"fireworks\"": "Ilotulitus",
+              "\"splatter\"": "Maaliroiskeet",
+              "\"rainbow\"": "Sateenkaari",
+              "\"snowflakes\"": "Lumi",
+              "\"spiral\"": "Kierre",
+              "\"disco\"": "Neliöt"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeed": {
+          "text": "muuta {SPRITE} tanssin nopeutta {SPEED}",
+          "options": {
+            "SPEED": {
+              "1": "normaali",
+              "2": "nopea",
+              "4": "erittäin nopea",
+              "0.5": "hidas",
+              "0.25": "erittäin hidas"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeedEach": {
+          "options": {
+            "GROUP": {
+              "sprites": "kaikki",
+              "\"ALIEN\"": "kaikki alienit",
+              "\"BEAR\"": "kaikki karhut",
+              "\"CAT\"": "kaikki kissat",
+              "\"DOG\"": "kaikki koirat",
+              "\"DUCK\"": "kaikki ankat",
+              "\"FROG\"": "kaikki sammakot",
+              "\"MOOSE\"": "kaikki hirvet",
+              "\"PINEAPPLE\"": "kaikki ananakset",
+              "\"ROBOT\"": "kaikki robotit",
+              "\"SHARK\"": "kaikki hait",
+              "\"UNICORN\"": "kaikki yksisarviset"
+            },
+            "SPEED": {
+              "1": "normaali",
+              "2": "nopea",
+              "4": "erittäin nopea",
+              "0.5": "hidas",
+              "0.25": "erittäin hidas"
+            }
+          }
+        },
+        "Dancelab_setForegroundEffect": {
+          "text": "aseta etuefekti {EFFECT}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Ei mitään",
+              "\"bubbles\"": "Kuplat",
+              "\"pineapples\"": "Ananakset",
+              "\"rain\"": "Sade",
+              "\"raining_tacos\"": "Tacot"
+            }
+          }
+        },
+        "Dancelab_setForegroundEffectExtended": {
+          "text": "aseta etuefekti {EFFECT}",
+          "options": {
+            "EFFECT": {
+              "\"none\"": "Ei mitään",
+              "\"rand\"": "(Satunnainen)",
+              "\"bubbles\"": "Kuplat",
+              "\"pineapples\"": "Ananakset",
+              "\"rain\"": "Sade",
+              "\"raining_tacos\"": "Tacot"
+            }
+          }
+        },
+        "Dancelab_setProp": {
+          "text": "aseta {SPRITE} {PROPERTY} arvoksi {VAL} ",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus",
+              "\"rotation\"": "kierto",
+              "\"x\"": "vaaka-asento",
+              "\"y\"": "pystyasento",
+              "\"tint\"": "sävy"
+            }
+          }
+        },
+        "Dancelab_setPropEach": {
+          "text": "aseta {GROUP} {PROPERTY} arvoksi {VAL}",
+          "options": {
+            "GROUP": {
+              "sprites": "kaikki",
+              "\"ALIEN\"": "kaikki alienit",
+              "\"BEAR\"": "kaikki karhut",
+              "\"CAT\"": "kaikki kissat",
+              "\"DOG\"": "kaikki koirat",
+              "\"DUCK\"": "kaikki ankat",
+              "\"FROG\"": "kaikki sammakot",
+              "\"MOOSE\"": "kaikki hirvet",
+              "\"PINEAPPLE\"": "kaikki ananakset",
+              "\"ROBOT\"": "kaikki robotit",
+              "\"SHARK\"": "kaikki hait",
+              "\"UNICORN\"": "kaikki yksisarviset"
+            },
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus",
+              "\"rotation\"": "kierto",
+              "\"x\"": "vaaka-asento",
+              "\"y\"": "pystyasento",
+              "\"tint\"": "sävy"
+            }
+          }
+        },
+        "Dancelab_setPropRandom": {
+          "text": "satunnaista {SPRITE} {PROPERTY}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus",
+              "\"rotation\"": "kierto",
+              "\"x\"": "vaaka-asento",
+              "\"y\"": "pystyasento",
+              "\"tint\"": "sävy"
+            }
+          }
+        },
+        "Dancelab_setTint": {
+          "text": "Aseta {SPRITE} sävy {VAL}"
+        },
+        "Dancelab_setTintEach": {
+          "options": {
+            "THIS": {
+              "sprites": "kaikki",
+              "\"ALIEN\"": "kaikki alienit",
+              "\"BEAR\"": "kaikki karhut",
+              "\"CAT\"": "kaikki kissat",
+              "\"DOG\"": "kaikki koirat",
+              "\"DUCK\"": "kaikki ankat",
+              "\"FROG\"": "kaikki sammakot",
+              "\"MOOSE\"": "kaikki hirvet",
+              "\"PINEAPPLE\"": "kaikki ananakset",
+              "\"ROBOT\"": "kaikki robotit",
+              "\"SHARK\"": "kaikki hait"
+            }
+          }
+        },
+        "Dancelab_setTintInline": {
+          "text": "Aseta {SPRITE} sävy {VAL}"
+        },
+        "Dancelab_setVisible": {
+          "text": "aseta {SPRITE} näkyvyys {VISIBILITY}",
+          "options": {
+            "VISIBILITY": {
+              "true": "näkyvissä",
+              "false": "näkymätön"
+            }
+          }
+        },
+        "Dancelab_setVisibleEach": {
+          "text": "muuta {THIS} näkyvyyttä {VISIBILITY}",
+          "options": {
+            "THIS": {
+              "sprites": "kaikki",
+              "\"ALIEN\"": "kaikki alienit",
+              "\"BEAR\"": "kaikki karhut",
+              "\"CAT\"": "kaikki kissat",
+              "\"DOG\"": "kaikki koirat",
+              "\"DUCK\"": "kaikki ankat",
+              "\"FROG\"": "kaikki sammakot",
+              "\"MOOSE\"": "kaikki hirvet",
+              "\"PINEAPPLE\"": "kaikki ananakset",
+              "\"ROBOT\"": "kaikki robotit",
+              "\"SHARK\"": "kaikki hait",
+              "\"UNICORN\"": "kaikki yksisarviset"
+            },
+            "VISIBILITY": {
+              "true": "näkyvissä",
+              "false": "näkymätön"
+            }
+          }
+        },
+        "Dancelab_startMapping": {
+          "text": "{SPRITE} alkaa {PROPERTY} jälkeen {RANGE}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus",
+              "\"rotation\"": "kierto",
+              "\"x\"": "vaaka-asento",
+              "\"y\"": "pystyasento",
+              "\"tint\"": "sävy"
+            },
+            "RANGE": {
+              "\"bass\"": "basso",
+              "\"mid\"": "midi",
+              "\"treble\"": "diskantti"
+            }
+          }
+        },
+        "Dancelab_stopMapping": {
+          "text": "{SPRITE} pysähtyy {PROPERTY} jälkeen {RANGE}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus",
+              "\"rotation\"": "kierto",
+              "\"x\"": "vaaka-asento",
+              "\"y\"": "pystyasento",
+              "\"direction\"": "liikkeen suunta",
+              "\"tint\"": "sävy"
+            },
+            "RANGE": {
+              "\"bass\"": "basso",
+              "\"mid\"": "midi",
+              "\"treble\"": "diskantti"
+            }
+          }
+        },
+        "Dancelab_whenKey": {
+          "text": "kun {KEY} painettuna",
+          "options": {
+            "KEY": {
+              "\"up\"": "ylös",
+              "\"left\"": "vasemmalle",
+              "\"down\"": "alas",
+              "\"right\"": "oikealle",
+              "\"space\"": "avaruus",
+              "\"a\"": "a",
+              "\"d\"": "d",
+              "\"h\"": "h",
+              "\"i\"": "i",
+              "\"j\"": "j",
+              "\"k\"": "k",
+              "\"l\"": "l",
+              "\"m\"": "m",
+              "\"n\"": "n",
+              "\"o\"": "o",
+              "\"p\"": "p",
+              "\"r\"": "r",
+              "\"s\"": "s",
+              "\"t\"": "t",
+              "\"u\"": "u",
+              "\"v\"": "v",
+              "\"w\"": "w",
+              "\"x\"": "x",
+              "\"z\"": "z"
+            }
+          }
+        },
+        "Dancelab_whenPeak": {
+          "text": "Kun {RANGE} piikkaa",
+          "options": {
+            "RANGE": {
+              "0": "basso",
+              "1": "midi",
+              "2": "diskantti"
+            }
+          }
+        },
+        "Dancelab_whenSetup": {
+          "text": "asetukset"
+        },
+        "gamelab_changeColor": {
+          "text": "muuta {COLOR} {METHOD} {AMOUNT}",
+          "options": {
+            "METHOD": {
+              "\"tint\"": "sävy",
+              "\"tone\"": "sävy",
+              "\"shade\"": "varjostus"
+            }
+          }
+        },
+        "gamelab_changeColorBy": {
+          "text": "muuta {COLOR} {METHOD} {AMOUNT}",
+          "options": {
+            "METHOD": {
+              "\"hue\"": "vivahde",
+              "\"saturation\"": "kylläisyys",
+              "\"brightness\"": "kirkkaus"
+            }
+          }
+        },
+        "gamelab_changePropBy": {
+          "text": "muuta {SPRITE} {PROPERTY} {VAL}",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "gamelab_clickedOn": {
+          "text": "kun {SPRITE} klikataan"
+        },
+        "gamelab_comment": {
+          "text": "kommentti: {COMMENT}"
+        },
+        "gamelab_debugSprite": {
+          "options": {
+            "VAL": {
+              "true": "tosi",
+              "false": "epätosi"
+            }
+          }
+        },
+        "gamelab_destroy": {
+          "text": "poista {THIS}"
+        },
+        "gamelab_getAnim": {
+          "options": {
+            "COSTUME": {
+              "\"costume\"": "asu"
+            }
+          }
+        },
+        "gamelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta",
+              "\"tint\"": "sävy"
+            }
+          }
+        },
+        "gamelab_jumpTo": {
+          "text": "{SPRITE} siirry paikkaan {LOCATION}"
+        },
+        "gamelab_locationConstant": {
+          "options": {
+            "DIR": {
+              "'north'": "pohjoinen",
+              "'south'": "etelä",
+              "'east'": "itä",
+              "'west'": "länsi"
+            }
+          }
+        },
+        "gamelab_locationDelta": {
+          "options": {
+            "DIR": {
+              "'north'": "pohjoinen",
+              "'south'": "etelä",
+              "'east'": "itä",
+              "'west'": "länsi",
+              "'random'": "satunnainen"
+            }
+          }
+        },
+        "gamelab_locationEast": {
+          "text": "itä"
+        },
+        "gamelab_locationNorth": {
+          "text": "pohjoinen"
+        },
+        "gamelab_locationSouth": {
+          "text": "etelä"
+        },
+        "gamelab_locationWest": {
+          "text": "länsi"
+        },
+        "gamelab_mirrorSprite": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "oikealle",
+              "\"left\"": "vasemmalle"
+            }
+          }
+        },
+        "gamelab_mixColors": {
+          "text": "sekoita {COLOR1} ja {COLOR2}"
+        },
+        "gamelab_moveInDirection": {
+          "options": {
+            "DIRECTION": {
+              "\"North\"": "Pohjoinen",
+              "\"East\"": "Itä",
+              "\"South\"": "Etelä",
+              "\"West\"": "Länsi"
+            }
+          }
+        },
+        "gamelab_pointInDirection": {
+          "options": {
+            "DIRECTION": {
+              "\"North\"": "Pohjoinen",
+              "\"East\"": "Itä",
+              "\"South\"": "Etelä",
+              "\"West\"": "Länsi"
+            }
+          }
+        },
+        "gamelab_randColor": {
+          "text": "satunnainen väri"
+        },
+        "gamelab_randomColor": {
+          "text": "satunnainen väri"
+        },
+        "gamelab_randomLocation": {
+          "text": "satunnainen paikka"
+        },
+        "gamelab_setBackground": {
+          "text": "aseta taustaväri {COLOR}"
+        },
+        "gamelab_setPosition": {
+          "text": "siirrä {THIS} tähän {POSITION} asentoon",
+          "options": {
+            "POSITION": {
+              "{x: 50, y: 50}": "vasen yläkulma",
+              "{x: 200, y: 50}": "ylhäällä keskellä",
+              "{x: 350, y: 50}": "oikea yläkulma",
+              "{x: 50, y: 200}": "keskivasen",
+              "{x: 200, y: 200}": "keskellä",
+              "{x: 350, y: 200}": "keskioikea",
+              "{x: 50, y: 350}": "alavasen",
+              "{x: 200, y: 350}": "alhaalla keskellä",
+              "{x: 350, y: 350}": "alaoikea",
+              "\"random\"": "satunnainen"
+            }
+          }
+        },
+        "gamelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta",
+              "\"tint\"": "sävy"
+            }
+          }
+        },
+        "gamelab_setSizes": {
+          "text": "aseta {SPRITE} {PROPERTY} – {N}%",
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"width\"": "leveys",
+              "\"height\"": "korkeus"
+            }
+          }
+        },
+        "gamelab_setup": {
+          "text": "asetukset"
+        },
+        "gamelab_spriteDirection": {
+          "options": {
+            "DIRECTION": {
+              "\"North\"": "Pohjoinen",
+              "\"East\"": "Itä",
+              "\"South\"": "Etelä",
+              "\"West\"": "Länsi"
+            }
+          }
+        },
+        "gamelab_spritesWhere": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"costume\"": "asu",
+              "\"direction\"": "liikkeen suunta",
+              "\"tint\"": "sävy"
+            }
+          }
+        },
+        "gamelab_spritesWhereGenerator": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"costume\"": "asu",
+              "\"direction\"": "liikkeen suunta",
+              "\"tint\"": "sävy"
+            },
+            "OP": {
+              "\"=\"": "=",
+              "\">\"": ">",
+              "\"<\"": "\\<"
+            }
+          }
+        },
+        "gamelab_turn": {
+          "options": {
+            "DIRECTION": {
+              "\"right\"": "oikealle",
+              "\"left\"": "vasemmalle"
+            }
+          }
+        },
+        "gamelab_whenKey": {
+          "text": "kun {KEY} painettuna",
+          "options": {
+            "KEY": {
+              "\"up\"": "ylös",
+              "\"down\"": "alas",
+              "\"left\"": "vasemmalle",
+              "\"right\"": "oikealle",
+              "\"space\"": "avaruus",
+              "\"a\"": "a",
+              "\"w\"": "w",
+              "\"s\"": "s",
+              "\"d\"": "d"
+            }
+          }
+        },
+        "gamelab_whenPressedAndReleased": {
+          "options": {
+            "DIR": {
+              "'up'": "ylös",
+              "'down'": "alas",
+              "'left'": "vasemmalle",
+              "'right'": "oikealle"
+            }
+          }
+        },
+        "gamelab_whileKey": {
+          "options": {
+            "KEY": {
+              "\"up\"": "ylös",
+              "\"down\"": "alas",
+              "\"left\"": "vasemmalle",
+              "\"right\"": "oikealle",
+              "\"space\"": "avaruus",
+              "\"a\"": "a",
+              "\"w\"": "w",
+              "\"s\"": "s",
+              "\"d\"": "d"
+            }
+          }
+        },
+        "Mikelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "Mikelab_createNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "ylös",
+              "{x: 200, y: 300}": "alas",
+              "{x: 100, y: 200}": "vasemmalle",
+              "{x: 300, y: 200}": "oikealle",
+              "{x: 200, y: 200}": "keskellä",
+              "{x: 100, y: 100}": "vasen yläkulma",
+              "{x: 300, y: 100}": "oikea yläkulma",
+              "{x: 100, y: 300}": "alavasen",
+              "{x: 300, y: 300}": "alaoikea"
+            }
+          }
+        },
+        "Mikelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "Mikelab_groupChangeAnim": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            }
+          }
+        },
+        "Mikelab_groupChangePropBy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            },
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "Mikelab_groupCreateNewSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "ylös",
+              "{x: 200, y: 300}": "alas",
+              "{x: 100, y: 200}": "vasemmalle",
+              "{x: 300, y: 200}": "oikealle",
+              "{x: 200, y: 200}": "keskellä",
+              "{x: 100, y: 100}": "vasen yläkulma",
+              "{x: 300, y: 100}": "oikea yläkulma",
+              "{x: 100, y: 300}": "alavasen",
+              "{x: 300, y: 300}": "alaoikea"
+            }
+          }
+        },
+        "Mikelab_groupDestroy": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            }
+          }
+        },
+        "Mikelab_groupGetProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "Mikelab_groupRemoveAllBehaviors": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            }
+          }
+        },
+        "Mikelab_groupRemoveBehaviorSimple": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            }
+          }
+        },
+        "Mikelab_groupRemoveTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            }
+          }
+        },
+        "Mikelab_groupSetProp": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            },
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "Mikelab_groupSetTint": {
+          "options": {
+            "SELECT": {
+              "\"all\"": "kaikki"
+            }
+          }
+        },
+        "Mikelab_ifDanceIs": {
+          "text": "jos {SPRITE} tekee {DANCE}\n{DO1} {DO2}",
+          "options": {
+            "DANCE": {
+              "MOVES.ClapHigh": "Taputa korkealle",
+              "MOVES.Dab": "Nokare",
+              "MOVES.DoubleJam": "Panoksen tuplaus",
+              "MOVES.Drop": "Pudota",
+              "MOVES.Floss": "Flossaa",
+              "MOVES.Fresh": "Fressaa",
+              "MOVES.Kick": "Tähti",
+              "MOVES.ThisOrThat": "Sitä tai tätä",
+              "MOVES.Rest": "Ei mitään"
+            }
+          }
+        },
+        "Mikelab_randomColor": {
+          "text": "satunnainen väri"
+        },
+        "Mikelab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "kaupunki"
+            }
+          }
+        },
+        "Mikelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "Mikelab_showScoreboard": {
+          "options": {
+            "CORNER": {
+              "\"right\"": "oikealle",
+              "\"left\"": "vasemmalle"
+            }
+          }
+        },
+        "Mikelab_sprite": {
+          "options": {
+            "LOCATION": {
+              "{x: 200, y: 100}": "ylös",
+              "{x: 200, y: 300}": "alas",
+              "{x: 100, y: 200}": "vasemmalle",
+              "{x: 300, y: 200}": "oikealle",
+              "{x: 200, y: 200}": "keskellä",
+              "{x: 100, y: 100}": "vasen yläkulma",
+              "{x: 300, y: 100}": "oikea yläkulma",
+              "{x: 100, y: 300}": "alavasen",
+              "{x: 300, y: 300}": "alaoikea"
+            }
+          }
+        },
+        "Mikelab_whenClickedOn": {
+          "text": "kun {SPRITE} klikataan"
+        },
+        "Mikelab_whenKeyPressed": {
+          "text": "kun {KEY} painettuna",
+          "options": {
+            "KEY": {
+              "\"up\"": "nuoli ylös",
+              "\"down\"": "nuoli alas",
+              "\"left\"": "nuoli vasemmalle",
+              "\"right\"": "nuoli oikealle",
+              "\"w\"": "L",
+              "\"a\"": "A",
+              "\"s\"": "E",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whenKeyReleased": {
+          "options": {
+            "KEY": {
+              "\"up\"": "nuoli ylös",
+              "\"down\"": "nuoli alas",
+              "\"left\"": "nuoli vasemmalle",
+              "\"right\"": "nuoli oikealle",
+              "\"w\"": "L",
+              "\"a\"": "A",
+              "\"s\"": "E",
+              "\"d\"": "D"
+            }
+          }
+        },
+        "Mikelab_whileKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"up\"": "nuoli ylös",
+              "\"down\"": "nuoli alas",
+              "\"left\"": "nuoli vasemmalle",
+              "\"right\"": "nuoli oikealle"
+            }
+          }
+        },
+        "RyanLab_moveForward": {
+          "text": "siirry eteenpäin"
+        },
+        "RyanLab_turnLeft": {
+          "text": "käänny vasempaan"
+        },
+        "RyanLab_turnRight": {
+          "text": "käänny oikeaan"
+        },
+        "Vector_positionCenter": {
+          "text": "keskellä"
+        },
+        "Vector_randomLocation": {
+          "text": "satunnainen paikka"
+        },
+        "Vector_vectorNorth": {
+          "text": "pohjoinen"
+        },
+        "Vector_where": {
+          "options": {
+            "PROPERTY": {
+              "'shapeColor'": "väri"
+            }
+          }
+        },
+        "aalab_changePropByFlexible": {
+          "options": {
+            "PROPERTY": {
+              "\"scale\"": "koko",
+              "\"rotation\"": "kierto",
+              "\"x\"": "x:än paikka",
+              "\"y\"": "y:n paikka",
+              "\"direction\"": "liikkeen suunta"
+            }
+          }
+        },
+        "aalab_clickedOn": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "kun",
+              "\"while\"": "niin kauan kuin"
+            }
+          }
+        },
+        "aalab_jumpTo": {
+          "text": "{SPRITE} siirry paikkaan {LOCATION}"
+        },
+        "aalab_keyPressed": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "kun",
+              "\"while\"": "niin kauan kuin"
+            },
+            "KEY": {
+              "\"up\"": "ylös",
+              "\"down\"": "alas",
+              "\"left\"": "vasemmalle",
+              "\"right\"": "oikealle",
+              "\"space\"": "avaruus"
+            }
+          }
+        },
+        "aalab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "kaupunki"
+            }
+          }
+        },
+        "aalab_whenTouching": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "kun",
+              "\"while\"": "niin kauan kuin"
+            }
+          }
+        },
+        "binary_move": {
+          "options": {
+            "DIR": {
+              "\"up\"": "ylös",
+              "\"down\"": "alas",
+              "\"left\"": "vasemmalle",
+              "\"right\"": "oikealle"
+            }
+          }
+        },
+        "binary_whenKey": {
+          "text": "kun {KEY} painettuna",
+          "options": {
+            "KEY": {
+              "\"up\"": "ylös",
+              "\"down\"": "alas",
+              "\"left\"": "vasemmalle",
+              "\"right\"": "oikealle",
+              "\"space\"": "avaruus",
+              "\"a\"": "a",
+              "\"w\"": "w",
+              "\"s\"": "s",
+              "\"d\"": "d"
+            }
+          }
+        },
+        "craft_ifPath": {
+          "text": "jos polku {DIR}\n{STATEMENT}",
+          "options": {
+            "DIR": {
+              "'ahead'": "eteen",
+              "'right'": "oikealle",
+              "'left'": "vasemmalle"
+            }
+          }
+        },
+        "craft_ifStandingOn": {
+          "text": "jos seisot {TYPE}\n{STATEMENT}",
+          "options": {
+            "TYPE": {
+              "'blueCoralBlock'": "sininen koralli",
+              "'redCoralBlock'": "punainen koralli",
+              "'sand'": "hiekka",
+              "'wool_blue'": "syvänmeren",
+              "'planksOak'": "tammilankut",
+              "'seaLantern'": "merilyhty"
+            }
+          }
+        },
+        "craft_ifStandingOnLimit": {
+          "text": "jos seisot {TYPE}\n{STATEMENT}",
+          "options": {
+            "TYPE": {
+              "'sand'": "hiekka",
+              "'darkPrismarine'": "tumma prismariini",
+              "'seaLantern'": "merilyhty"
+            }
+          }
+        },
+        "craft_moveForward": {
+          "text": "siirry eteenpäin"
+        },
+        "craft_placeBlock": {
+          "text": "sijoita {blockType}",
+          "options": {
+            "blockType": {
+              "\"strippedOak\"": "riisuttu tammi",
+              "\"strippedDarkOak\"": "riisuttu tumma tammi",
+              "\"stoneBricks\"": "kivitiilet",
+              "\"mossyStoneBricks\"": "sammaleiset kivitiilet",
+              "\"crackedStoneBricks\"": "haljenneet kivitiilet",
+              "\"decorativeStoneBricks\"": "koristeelliset kivitiilet",
+              "\"blueCoralBlock\"": "sininen koralli-blokki",
+              "\"pinkCoralBlock\"": "vaaleanpunainen koralli-blokki",
+              "\"magentaCoralBlock\"": "magenta koralli-blokki",
+              "\"redCoralBlock\"": "punainen koralli-blokki",
+              "\"yellowCoralBlock\"": "keltainen koralli-blokki",
+              "\"blueDeadCoralBlock\"": "kuolleet siniset koralli-blokit",
+              "\"pinkDeadCoralBlock\"": "kuolleet vaaleanpunaiset koralli-blokit",
+              "\"magentaDeadCoralBlock\"": "kuolleet magentat koralli-blokit",
+              "\"readDeadCoralBlock\"": "kuolleet punaiset koralli-blokit",
+              "\"yellowDeadCoralBlock\"": "kuolleet keltaiset koralli-blokit",
+              "\"prismarine\"": "prismariini",
+              "\"darkPrismarine\"": "tumma prismariini",
+              "\"seaLantern\"": "merilyhty",
+              "\"packedIce\"": "pakattu jää",
+              "\"blueIce\"": "sininen jää",
+              "\"blackConcrete\"": "musta betoni",
+              "\"seaGrass\"": "meriheinä",
+              "\"kelp\"": "rakkolevä",
+              "\"polishedGranite\"": "hiottu graniitti"
+            }
+          }
+        },
+        "craft_placePrismarine": {
+          "text": "aseta prismariini"
+        },
+        "craft_placeTorch": {
+          "text": "aseta soihtu"
+        },
+        "craft_repeatUntilConduit": {
+          "text": "toista kunnes väylä on valmis\n{STATEMENT}"
+        },
+        "craft_repeatUntilGoal": {
+          "text": "toista kunnes tavoite saavutettu\n{STATEMENT}"
+        },
+        "craft_spawnEntity": {
+          "text": "kutea {ENTITY}",
+          "options": {
+            "ENTITY": {
+              "\"cod\"": "turska",
+              "\"dolphin\"": "delfiini",
+              "\"salmon\"": "lohi",
+              "\"seaTurtle\"": "merikilpikonna",
+              "\"squid\"": "kalmari",
+              "\"tropicalFish\"": "trooppinen kala"
+            }
+          }
+        },
+        "craft_turn": {
+          "text": "käänny {DIR}",
+          "options": {
+            "DIR": {
+              "right": "oikea ↻",
+              "left": "vasen ↺"
+            }
+          }
+        }
+      }
+    }
+  }
+}

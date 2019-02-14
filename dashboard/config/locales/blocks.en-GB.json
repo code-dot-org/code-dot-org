@@ -1,0 +1,331 @@
+{
+  "en-GB": {
+    "data": {
+      "blocks": {
+        "Dancelab_changeMoveEachLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changeMoveLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_changePropBy": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "Dancelab_doMoveEachLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_doMoveLR": {
+          "options": {
+            "DIR": {
+              "1": "→",
+              "-1": "←"
+            }
+          }
+        },
+        "Dancelab_getProp": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "Dancelab_jumpTo": {
+          "options": {
+            "LOCATION": {
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "random"
+            }
+          }
+        },
+        "Dancelab_layoutSprites": {
+          "options": {
+            "FORMAT": {
+              "\"random\"": "random"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSprite": {
+          "options": {
+            "LOCATION": {
+              "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "random"
+            }
+          }
+        },
+        "Dancelab_makeNewDanceSpriteGroup": {
+          "options": {
+            "N": {
+              "2": "2",
+              "3": "3",
+              "4": "4",
+              "5": "5",
+              "6": "6",
+              "7": "7",
+              "8": "8",
+              "9": "9",
+              "10": "10",
+              "11": "11",
+              "12": "12",
+              "13": "13",
+              "14": "14",
+              "15": "15",
+              "16": "16",
+              "17": "17",
+              "18": "18",
+              "19": "19",
+              "20": "20"
+            },
+            "LAYOUT": {
+              "\"random\"": "random"
+            }
+          }
+        },
+        "Dancelab_randomColor": {
+          "text": "random colour"
+        },
+        "Dancelab_setDanceSpeed": {
+          "options": {
+            "SPEED": {
+              "1": "normal",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setDanceSpeedEach": {
+          "options": {
+            "SPEED": {
+              "1": "normal",
+              "2": "fast",
+              "4": "very fast",
+              "0.5": "slow",
+              "0.25": "very slow"
+            }
+          }
+        },
+        "Dancelab_setProp": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "Dancelab_setPropEach": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "Dancelab_setPropRandom": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "Dancelab_startMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "Dancelab_stopMapping": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "Dancelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"space\"": "space",
+              "\"x\"": "x"
+            }
+          }
+        },
+        "gamelab_debugSprite": {
+          "options": {
+            "VAL": {
+              "true": "true",
+              "false": "false"
+            }
+          }
+        },
+        "gamelab_locationDelta": {
+          "options": {
+            "DIR": {
+              "'random'": "random"
+            }
+          }
+        },
+        "gamelab_randColor": {
+          "text": "random colour"
+        },
+        "gamelab_randomColor": {
+          "text": "random colour"
+        },
+        "gamelab_setPosition": {
+          "options": {
+            "POSITION": {
+              "\"random\"": "random"
+            }
+          }
+        },
+        "gamelab_setSizes": {
+          "options": {
+            "PROPERTY": {
+              "\"height\"": "height"
+            }
+          }
+        },
+        "gamelab_whenKey": {
+          "options": {
+            "KEY": {
+              "\"space\"": "space"
+            }
+          }
+        },
+        "gamelab_whileKey": {
+          "options": {
+            "KEY": {
+              "\"space\"": "space"
+            }
+          }
+        },
+        "Mikelab_randomColor": {
+          "text": "random colour"
+        },
+        "Mikelab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "city"
+            }
+          }
+        },
+        "Mikelab_whenKeyPressed": {
+          "options": {
+            "KEY": {
+              "\"w\"": "W",
+              "\"s\"": "S"
+            }
+          }
+        },
+        "Mikelab_whenKeyReleased": {
+          "options": {
+            "KEY": {
+              "\"w\"": "W",
+              "\"s\"": "S"
+            }
+          }
+        },
+        "RyanLab_moveForward": {
+          "text": "move forward"
+        },
+        "RyanLab_turnLeft": {
+          "text": "turn left"
+        },
+        "RyanLab_turnRight": {
+          "text": "turn right"
+        },
+        "aalab_clickedOn": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "when",
+              "\"while\"": "while"
+            }
+          }
+        },
+        "aalab_keyPressed": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "when",
+              "\"while\"": "while"
+            },
+            "KEY": {
+              "\"space\"": "space"
+            }
+          }
+        },
+        "aalab_setBG": {
+          "options": {
+            "BG": {
+              "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\"": "city"
+            }
+          }
+        },
+        "aalab_whenTouching": {
+          "options": {
+            "CONDITION": {
+              "\"when\"": "when",
+              "\"while\"": "while"
+            }
+          }
+        },
+        "binary_whenKey": {
+          "options": {
+            "KEY": {
+              "\"space\"": "space"
+            }
+          }
+        },
+        "craft_ifPath": {
+          "options": {
+            "DIR": {
+              "'ahead'": "ahead"
+            }
+          }
+        },
+        "craft_ifStandingOn": {
+          "options": {
+            "TYPE": {
+              "'sand'": "sand",
+              "'planksOak'": "oak planks"
+            }
+          }
+        },
+        "craft_ifStandingOnLimit": {
+          "options": {
+            "TYPE": {
+              "'sand'": "sand"
+            }
+          }
+        },
+        "craft_moveForward": {
+          "text": "move forward"
+        },
+        "craft_placeBlock": {
+          "options": {
+            "blockType": {
+              "\"readDeadCoralBlock\"": "read dead coral block"
+            }
+          }
+        },
+        "craft_placeTorch": {
+          "text": "place torch"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2908 @@
+{
+  "sv": {
+    "data": {
+      "script": {
+        "category": {
+          "hoc_category_name": "Timmen med Kod",
+          "math_category_name": "Matte"
+        },
+        "name": {
+          "course1": {
+            "title": "Kurs 1",
+            "description": "Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.",
+            "description_short": "Börja med kurs 1 för nybörjar-läsare.",
+            "description_audience": "Från 4 år (icke-läsare)",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Konstnären: Slingor"
+              },
+              "Artist: Sequence": {
+                "name": "Konstnären: Sekvens"
+              },
+              "Artist: Shapes": {
+                "name": "Konstnären: Former"
+              },
+              "Bee: Loops": {
+                "name": "Bi: Slingor"
+              },
+              "Bee: Sequence": {
+                "name": "Bi: Sekvens"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Getting Loopy": {
+                "name": "Att bli snurrig"
+              },
+              "Going Places Safely": {
+                "name": "Trygg resa"
+              },
+              "Happy Maps": {
+                "name": "Glada kartor"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Pussel: Lär dig dra och släpp"
+              },
+              "Maze: Debugging": {
+                "name": "Labyrint: Felsökning"
+              },
+              "Maze: Loops": {
+                "name": "Labyrint: Slingor"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrint: Sekvens"
+              },
+              "Move it, Move it": {
+                "name": "Flytta den, flytta den"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Spelling Bee": {
+                "name": "Stavnings-bi"
+              },
+              "Studio: Create a Story": {
+                "name": "Spel-labb - skapa en berättelse"
+              },
+              "The Big Event": {
+                "name": "Den stora händelsen"
+              }
+            }
+          },
+          "course2": {
+            "title": "Kurs 2",
+            "description": "Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.",
+            "description_short": "Kurs 2 är utformad för elever som kan läsa.",
+            "description_audience": "Åldrar 6 + (läsförmåga krävs)",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Konstnären: Felsökning"
+              },
+              "Artist: Loops": {
+                "name": "Konstnären: Slingor"
+              },
+              "Artist: Nested Loops": {
+                "name": "Konstnären: Nästlade slingor"
+              },
+              "Artist: Sequence": {
+                "name": "Konstnären: Sekvens"
+              },
+              "Bee: Conditionals": {
+                "name": "Biet: Villkor"
+              },
+              "Bee: Debugging": {
+                "name": "Biet: Felsökning"
+              },
+              "Bee: Loops": {
+                "name": "Bi: Slingor"
+              },
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Getting Loopy": {
+                "name": "Att bli snurrig"
+              },
+              "Graph Paper Programming": {
+                "name": "Kalkyleringsprogrammering"
+              },
+              "Maze: Loops": {
+                "name": "Labyrint: Slingor"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrint: Sekvens"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmer i verkliga livet: Pappersflygplan"
+              },
+              "Relay programming": {
+                "name": "Stafettprogrammering"
+              },
+              "Studio: Create a Story": {
+                "name": "Spel-labb - skapa en berättelse"
+              },
+              "The Big Event": {
+                "name": "Den stora händelsen"
+              },
+              "Your Digital Footprint": {
+                "name": "Ditt digitala fotavtryck"
+              }
+            }
+          },
+          "course3": {
+            "title": "Kurs 3",
+            "description": "Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för att skapa flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.",
+            "description_short": "Kurs 3 är en uppföljning till kurs 2.",
+            "description_audience": "Åldrar 8 + (efter kurs 2)",
+            "stages": {
+              "Artist": {
+                "name": "Konstnären"
+              },
+              "Artist: Functions": {
+                "name": "Konstnären: Funktioner"
+              },
+              "Artist: Nested Loops": {
+                "name": "Konstnären: Nästlade slingor"
+              },
+              "Artist: Patterns": {
+                "name": "Konstnären: mönster"
+              },
+              "Bee: Conditionals": {
+                "name": "Biet: Villkor"
+              },
+              "Bee: Debugging": {
+                "name": "Biet: Felsökning"
+              },
+              "Bee: Functions": {
+                "name": "Biet: Funktioner"
+              },
+              "Bee: Nested Loops": {
+                "name": "Biet: Nästlade slingor"
+              },
+              "Bounce": {
+                "name": "Studsa"
+              },
+              "Computational Thinking": {
+                "name": "Uträkningstänkande"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Dice Race": {
+                "name": "Tärningsspelet"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Farmer: While Loops": {
+                "name": "Bonde: 'medan'-slingor"
+              },
+              "Functional Suncatchers": {
+                "name": "Funktionella Solfångare"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Maze": {
+                "name": "Labyrint"
+              },
+              "Maze: Conditionals": {
+                "name": "Labyrint: Villkorssatser"
+              },
+              "Songwriting": {
+                "name": "Låtskrivande"
+              },
+              "Studio: Create a Game": {
+                "name": "Spel-labbet: skapa ett spel"
+              },
+              "Studio: Create a Story": {
+                "name": "Spel-labb - skapa en berättelse"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Spel-labb",
+            "description": "Skapa en berättelse eller gör ett spel med Spel-labbet!",
+            "description_short": "Skapa en berättelse eller gör ett spel med Spel-labbet!",
+            "stages": {
+              "Play Lab": {
+                "name": "Spel-labb"
+              }
+            }
+          },
+          "artist": {
+            "title": "Konstnären",
+            "description": "Rita häftiga bilder och mönster med konstnären!",
+            "description_short": "Rita häftiga bilder och mönster med konstnären!",
+            "stages": {
+              "Artist": {
+                "name": "Konstnären"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Klassisk labyrint",
+            "description": "Prova grunderna i datavetenskap med figurer från Angry Birds, Plants vs. Zombies och Scrat från Ice Age!",
+            "description_short": "Prova grunderna i datavetenskap med många roliga figurer!",
+            "stages": {
+              "Maze": {
+                "name": "Labyrint"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Koda med Anna och Elsa",
+            "description": "Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!",
+            "description_short": "Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet.",
+            "stages": {
+              "Artist": {
+                "name": "Konstnären"
+              }
+            }
+          },
+          "course4": {
+            "title": "Kurs 4",
+            "description": "Kurs 4 är utformad för elever som har gjort kurserna 2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning. När kursen är klar, kommer eleverna att skapa program som låter dem visa upp flera färdigheter, inklusive för loopar och funktioner med parametrar. Rekommenderas för årskurs 4-8.",
+            "description_short": "Elever som går kurs 4 bör ha gått kurs 2 och 3 innan.",
+            "description_audience": "Åldrar 10 + (efter kurs 3)",
+            "stages": {
+              "Artist": {
+                "name": "Konstnären"
+              },
+              "Artist Binary": {
+                "name": "Artist binär"
+              },
+              "Artist: For Loops": {
+                "name": "Konstnären: 'för'-slingor"
+              },
+              "Artist: Functions": {
+                "name": "Konstnären: Funktioner"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Konstnären: Funktioner med parametrar"
+              },
+              "Artist: Variables": {
+                "name": "Konstnären: Variabler"
+              },
+              "Bee: For Loops": {
+                "name": "Bilet: \"för\"-slingor"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Biet: Funktioner med parametrar"
+              },
+              "Extreme Challenge - Comprehensive": {
+                "name": "Extreme utmaning - Omfattande"
+              },
+              "Maze and Bee": {
+                "name": "Labyrint och Bee"
+              },
+              "Play Lab: For Loops": {
+                "name": "Spel-labb: 'för'-slingor"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Spel-labb: Funktioner med parametrar"
+              },
+              "Play Lab: Variables": {
+                "name": "Spel-labb: Variabler"
+              },
+              "Super Challenge - For Loops": {
+                "name": "Super utmaning - för loopar"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Super utmaning - funktioner och parametrar"
+              },
+              "Super Challenge - Variables": {
+                "name": "Super utmaning - variabler"
+              },
+              "Unplugged: Binary": {
+                "name": "Ouppkopplad: Binärt"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Ouppkopplad: Kuvertvariabler"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Ouppkopplad: Skoj med \"för\" - slingor"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Ouppkopplad: Madlibs"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Ouppkopplad: Skriva låtar med parametrar"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Ouppkopplad: Tangram"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "Kurs 4 förutsättning",
+            "description": "En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.",
+            "description_short": "En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Konstnären: Funktioner"
+              },
+              "Artist: Loops": {
+                "name": "Konstnären: Slingor"
+              },
+              "Artist: Nested Loops": {
+                "name": "Konstnären: Nästlade slingor"
+              },
+              "Artist: Sequence": {
+                "name": "Konstnären: Sekvens"
+              },
+              "Bee: Conditionals": {
+                "name": "Biet: Villkor"
+              },
+              "Bee: Debugging": {
+                "name": "Biet: Felsökning"
+              },
+              "Bee: Nested Loops": {
+                "name": "Biet: Nästlade slingor"
+              },
+              "Farmer: While Loops": {
+                "name": "Bonde: 'medan'-slingor"
+              },
+              "Maze: Sequence": {
+                "name": "Labyrint: Sekvens"
+              }
+            }
+          },
+          "usability": {
+            "title": "Användbarhetstest",
+            "description": "Ett urval av kurs 4 nivåer för användartester.",
+            "stages": {
+              "Binary": {
+                "name": "Binära"
+              },
+              "For Loops": {
+                "name": "'För' loopar"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Funktioner och funktioner med parametrar"
+              },
+              "Intro": {
+                "name": "Introduktion"
+              },
+              "Variables": {
+                "name": "variabler"
+              }
+            }
+          },
+          "algebra": {
+            "title": "Datavetenskap i Algebra",
+            "description": "Lär dig funktionell programmering genom algebra",
+            "description_short": "Lär dig funktionell programmering genom algebra",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Definiera variabler och Substitution"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Utvärderingsblock och aritmetiska uttryck"
+              },
+              "Eval: Boolean Operators": {
+                "name": "Booleska operatorer"
+              },
+              "Eval: Conditionals": {
+                "name": "Villkor"
+              },
+              "Eval: Defining Functions": {
+                "name": "Sammansatta funktioner"
+              },
+              "Eval: Functions": {
+                "name": "Lös ordproblem med design recept"
+              },
+              "Eval: Strings and Images": {
+                "name": "Strängar och bilder"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Skriva kontrakt"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Big Game - animation"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Big Game - booleska värden"
+              },
+              "Play Lab: Booleans": {
+                "name": "Sam Bat"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Big Game - kollision-detektion"
+              },
+              "Play Lab: Defining Functions": {
+                "name": "Rakethöjd"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Big Game - variabler"
+              },
+              "Unplugged: Booleans": {
+                "name": "Unplugged: Booleska värden och logik"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Unplugged: Kollisions-detektion och Pythagoras sats"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Ouppkopplad: Villkorssatser och styckevis funktioner"
+              },
+              "Unplugged: Contracts": {
+                "name": "Unplugged: Kontrakt, domän och utbud"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Ouppkopplad: Design recept"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Ouppkopplad: videospel och koordinat-plan"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Disney Infinity Play Lab",
+            "description": "Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .",
+            "description_short": "Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .",
+            "stages": {
+              "Infinity": {
+                "name": "Oändligt"
+              }
+            }
+          },
+          "algebrademo": {
+            "title": "Algebra Demo",
+            "description": "En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra",
+            "description_short": "En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra",
+            "stages": {
+              "Defining Simple Functions": {
+                "name": "Definiera enkla funktioner"
+              },
+              "Defining Variables": {
+                "name": "Definiera variabler"
+              },
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Making Pictures": {
+                "name": "Att göra bilder"
+              },
+              "The Design Recipe": {
+                "name": "Design recept"
+              }
+            }
+          },
+          "K5PD": {
+            "title": "K5 Professionell utveckling",
+            "description": "Professionell utveckling för K5 kurser",
+            "description_short": "Professionell utveckling för K5 kurser",
+            "stages": {
+              "Computer Science Pedagogy": {
+                "name": "Datavetenskapens pedagogik"
+              },
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              },
+              "K-5 Courses": {
+                "name": "K-5 kurser"
+              },
+              "Next Steps": {
+                "name": "Nästa steg"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              },
+              "Unplugged lessons": {
+                "name": "Unplugged lektioner"
+              },
+              "Writing computer programs": {
+                "name": "Skriva datorprogram"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Internet Simulator"
+          },
+          "pixelation": {
+            "title": "Pixelering"
+          },
+          "20-hour": {
+            "title": "20 timmars Intro kurs",
+            "description": "Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.",
+            "description_short": "Denna 20-timmars kurs omfattar ren dator vetenskap och programmeringsbegrepp i kurserna 2-4.",
+            "description_audience": "Åldrar 10 + (efter kurs 3)",
+            "stages": {
+              "Abstraction": {
+                "name": "Abstraktion"
+              },
+              "Algorithms": {
+                "name": "Algoritmer"
+              },
+              "Computational Thinking": {
+                "name": "Uträkningstänkande"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Functions": {
+                "name": "funktioner"
+              },
+              "Graph Paper Programming": {
+                "name": "Kalkyleringsprogrammering"
+              },
+              "Introduction to Computer Science": {
+                "name": "Introduktion till Datavetenskap"
+              },
+              "Relay Programming": {
+                "name": "Stafettprogrammering"
+              },
+              "Song Writing": {
+                "name": "Sångskrivande"
+              },
+              "The Artist": {
+                "name": "Konstnären"
+              },
+              "The Artist 2": {
+                "name": "Konstnären 2"
+              },
+              "The Artist 3": {
+                "name": "Konstnären 3"
+              },
+              "The Artist 4": {
+                "name": "Konstnären 4"
+              },
+              "The Artist 5": {
+                "name": "Konstnären 5"
+              },
+              "The Farmer": {
+                "name": "Bonden"
+              },
+              "The Farmer 2": {
+                "name": "Bonden 2"
+              },
+              "The Farmer 3": {
+                "name": "Bonden 3"
+              },
+              "The Internet": {
+                "name": "Internet"
+              },
+              "The Maze": {
+                "name": "Labyrinten"
+              },
+              "Wrap-up": {
+                "name": "Gör klart"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Redigera kod",
+            "description": "Redigera kod",
+            "description_short": "Redigera kod",
+            "stages": {
+              "Applab": {
+                "name": "Applab"
+              },
+              "Play Lab": {
+                "name": "Spel-labb"
+              },
+              "The Artist": {
+                "name": "Konstnären"
+              },
+              "The Maze": {
+                "name": "Labyrinten"
+              }
+            }
+          },
+          "events": {
+            "title": "Händelser",
+            "description": "Händelser",
+            "description_short": "Händelser",
+            "stages": {
+              "Bounce": {
+                "name": "Studsa"
+              },
+              "Calc": {
+                "name": "Calc"
+              },
+              "Eval": {
+                "name": "Eval"
+              },
+              "Studio": {
+                "name": "Studio"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Flappy kod",
+            "description": "Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!",
+            "description_short": "Skriv ditt eget Flappy spel på mindre än 10 minuter!",
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy kod"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Pussel",
+            "description": "Prova vår Jigsaw handledning",
+            "description_short": "Prova vår Jigsaw handledning",
+            "stages": {
+              "Jigsaw": {
+                "name": "Pussel"
+              }
+            }
+          },
+          "step": {
+            "title": "Steg",
+            "description": "Steg handledning",
+            "description_short": "Steg handledning",
+            "stages": {
+              "Step": {
+                "name": "Steg"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Timme av Kod 2013",
+            "description": "Prova grunderna i datavetenskap med karaktärerna från Angry Birds och Plants vs. Zombies!",
+            "description_short": "Prova grunderna i datavetenskap med många roliga figurer!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Timme av Kod 2013"
+              }
+            }
+          },
+          "CodeStudioPuzzleChallenge": {
+            "title": "Kod Studio pussel utmaning",
+            "description": "Prova dessa roliga kodnings- pusslen. Gör ditt bästa!",
+            "description_short": "Utmana dig själv!",
+            "stages": {
+              "Puzzles": {
+                "name": "Pussel"
+              }
+            }
+          },
+          "Tutorial Video - Code Studio Puzzle Challenge": {
+            "title": "Tutorial - Kod Studio pussel utmaning",
+            "description": "Prova dessa roliga kodnings- pusslen. Gör ditt bästa!",
+            "description_short": "Utmana dig själv!",
+            "stages": {
+              "Puzzles": {
+                "name": "Pussel"
+              }
+            }
+          },
+          "cspunit1": {
+            "title": "CSP enhet 1 - Digital Information",
+            "description": "Denna enhet utforskar de tekniska utmaningar och frågor som uppkommer av behovet att representera digital information i datorer och överföra det mellan människor och data- enheter.",
+            "description_short": "Utforska hur digital information är representerad och överförd",
+            "stages": {
+              "Binary Numbers": {
+                "name": "Binära tal"
+              },
+              "Number Systems": {
+                "name": "Talsystem"
+              },
+              "Sending Binary Messages": {
+                "name": "Skicka binära meddelanden"
+              },
+              "Sending Bits in the Real World": {
+                "name": "Skicka bitar i den verkliga världen"
+              },
+              "Text Compression": {
+                "name": "Text komprimering"
+              }
+            }
+          },
+          "algebraPD": {
+            "title": "Datavetenskap i Algebra PD",
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              }
+            }
+          },
+          "algPDmiami": {
+            "title": "Datavetenskap i Algebra PD",
+            "description": "Undervisa i algebra genom funktionell programmering",
+            "description_short": "Undervisa i algebra genom funktionell programmering",
+            "stages": {
+              "Booleans": {
+                "name": "Booleska värden"
+              },
+              "Design Recipe Practice": {
+                "name": "Design-recept praxis"
+              },
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Luigi's Pizza": {
+                "name": "Luigi's Pizza"
+              },
+              "Rocket-Height": {
+                "name": "Rakethöjd"
+              },
+              "Sam the Bat": {
+                "name": "Sam Bat"
+              },
+              "Strings and Images": {
+                "name": "Strängar och bilder"
+              },
+              "Your Game - Animation": {
+                "name": "Ditt spel - Animation"
+              },
+              "Your Game - Booleans": {
+                "name": "Ditt spel - booleska värden"
+              },
+              "Your Game - Collision Detection": {
+                "name": "Ditt spel - kollisionsdetektion"
+              },
+              "Your Game - Player Movement": {
+                "name": "Ditt spel - spelarrörelse"
+              }
+            }
+          },
+          "text-compression": {
+            "title": "Text komprimering",
+            "description": "Komprimera text genom att identifiera upprepade mönster.",
+            "description_short": "Komprimera text genom att identifiera upprepade mönster.",
+            "stages": {
+              "Text Compression": {
+                "name": "Text komprimering"
+              }
+            }
+          },
+          "CSPPD": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "CSPLessonSamples": {
+            "title": "CSP lektionsexempel",
+            "stages": {
+              "Lesson 14": {
+                "name": "Lektion 14"
+              },
+              "Lesson 15": {
+                "name": "Lektion 15"
+              }
+            }
+          },
+          "ECSPD": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "sciencePD": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "cspunit3": {
+            "description_short": "Utforska hur digital information är representerad och överförd",
+            "stages": {
+              "Creating Functions": {
+                "name": "Skapa funktioner"
+              },
+              "While Loops": {
+                "name": "'Medan' loopar(slingor)"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Computer Science Pedagogy": {
+                "name": "Datavetenskapens pedagogik"
+              },
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Next Steps": {
+                "name": "Nästa steg"
+              },
+              "Strings and Images": {
+                "name": "Strängar och bilder"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              },
+              "The Design Recipe": {
+                "name": "Design recept"
+              }
+            }
+          },
+          "ECSPD-NexTech": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "ECSPD-iZone": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "title": "Datavetenskap i Algebra PD",
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "title": "Datavetenskap i Algebra PD",
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              }
+            }
+          },
+          "sciencePD-NexTech": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "sciencePD-iZone": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "sciencePD2": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "cspunit2": {
+            "description_short": "Utforska hur digital information är representerad och överförd",
+            "stages": {
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "title": "Datavetenskap i Algebra PD",
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Booleans": {
+                "name": "Booleska värden"
+              },
+              "Defining Variables": {
+                "name": "Definiera variabler"
+              },
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Free Play": {
+                "name": "Fri lek"
+              },
+              "Luigi's Pizza": {
+                "name": "Luigi's Pizza"
+              },
+              "Rocket-Height": {
+                "name": "Rakethöjd"
+              },
+              "Sam the Bat": {
+                "name": "Sam Bat"
+              },
+              "Strings and Images": {
+                "name": "Strängar och bilder"
+              },
+              "The Design Recipe": {
+                "name": "Design recept"
+              }
+            }
+          },
+          "allthethings": {
+            "title": "Allt!",
+            "description": "Alla typer av nivå för UI-tester",
+            "description_short": "Alla typer av nivå för UI-tester",
+            "stages": {
+              "AppLab": {
+                "name": "AppLab"
+              },
+              "Artist": {
+                "name": "Konstnären"
+              },
+              "Bee": {
+                "name": "Biet"
+              },
+              "Bounce": {
+                "name": "Studsa"
+              },
+              "Farmer": {
+                "name": "Bonde"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Jigsaw": {
+                "name": "Pussel"
+              },
+              "Match": {
+                "name": "Matcha"
+              },
+              "Maze": {
+                "name": "Labyrint"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Multi"
+              },
+              "Odometer": {
+                "name": "Mätarställning"
+              },
+              "Pixelation": {
+                "name": "Pixelering"
+              },
+              "Studio": {
+                "name": "Studio"
+              },
+              "Text Compression": {
+                "name": "Text komprimering"
+              },
+              "Web Lab": {
+                "name": "Web Lab"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "title": "Datavetenskap i Algebra PD",
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Booleans": {
+                "name": "Booleska värden"
+              },
+              "Defining Functions": {
+                "name": "Definiera funktioner"
+              },
+              "Defining Variables": {
+                "name": "Definiera variabler"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: villkorssatser"
+              },
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Next Steps": {
+                "name": "Nästa steg"
+              },
+              "Rocket-Height": {
+                "name": "Rakethöjd"
+              },
+              "Strings and Images": {
+                "name": "Strängar och bilder"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              },
+              "Writing Contracts": {
+                "name": "Skriva kontrakt"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "App Lab"
+              },
+              "Internet Simulator": {
+                "name": "Internet Simulator"
+              },
+              "Welcome!": {
+                "name": "Välkommen!"
+              }
+            }
+          },
+          "K5-OnlinePD": {
+            "stages": {
+              "Next Steps": {
+                "name": "Nästa steg"
+              }
+            }
+          },
+          "ECSPD2": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-up": {
+                "name": "Gör klart"
+              }
+            }
+          },
+          "algebraPD2": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              },
+              "The Design Recipe": {
+                "name": "Design recept"
+              },
+              "Welcome!": {
+                "name": "Välkommen!"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "science-PD2": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "Equity-OnlinePD": {
+            "stages": {
+              "Next Steps": {
+                "name": "Nästa steg"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-up": {
+                "name": "Gör klart"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "description": "Lär ut funktionell programmering genom algebra",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-up": {
+                "name": "Gör klart"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Getting Loopy": {
+                "name": "Att bli snurrig"
+              },
+              "Graph Paper Programming": {
+                "name": "Kalkyleringsprogrammering"
+              },
+              "Happy Maps": {
+                "name": "Glada kartor"
+              },
+              "Move it, Move it": {
+                "name": "Flytta den, flytta den"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Songwriting": {
+                "name": "Låtskrivande"
+              },
+              "The Big Event": {
+                "name": "Den stora händelsen"
+              }
+            }
+          },
+          "algebraPD3a": {
+            "title": "Datavetenskap i Algebra PD"
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "algebraPD3b": {
+            "title": "Datavetenskap i Algebra PD"
+          },
+          "Special Fun": {
+            "description_audience": "Åldrar 10 + (efter kurs 3)"
+          },
+          "SpecialSeries": {
+            "description_audience": "Åldrar 10 + (efter kurs 3)"
+          },
+          "iceage": {
+            "title": "Ice Age Play Lab",
+            "description": "Skapa en berättelse eller gör ett spel med Ice Age Play Lab!",
+            "description_short": "Skapa en berättelse eller gör ett spel med Ice Age Play Lab!",
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              }
+            }
+          },
+          "cspunit3temp": {
+            "description_short": "Utforska hur digital information är representerad och överförd",
+            "stages": {
+              "While Loops": {
+                "name": "'Medan' loopar(slingor)"
+              }
+            }
+          },
+          "gumball": {
+            "title": "Gumball Play Lab",
+            "description": "Skapa en berättelse eller gör ett spel med Gumball Play Lab!",
+            "description_short": "Skapa en berättelse eller gör ett spel med Gumball Play Lab!",
+            "stages": {
+              "Gumball Play Lab": {
+                "name": "Gumball Play Lab"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Star Wars: Bygg en galax med kod",
+            "description": "Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.",
+            "description_short": "Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Hour of Code 2015"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Star Wars: Bygg en galax med kod",
+            "description": "Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.",
+            "description_short": "Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Hour of Code 2015"
+              }
+            }
+          },
+          "mc": {
+            "title": "Minecraft Hour of Code",
+            "description": "Använd block med kod för att ta med Steve eller Alex på ett äventyr genom denna Minecraft-värld",
+            "description_short": "Utforska en Minecraft-värld genom kod",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "Hour of Code 2015"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "cspunit5": {
+            "description_short": "Utforska hur digital information är representerad och överförd"
+          },
+          "cspunit4": {
+            "description_short": "Utforska hur digital information är representerad och överförd"
+          },
+          "AlgebraA": {
+            "description": "Lär dig funktionell programmering genom algebra",
+            "description_short": "Lär dig funktionell programmering genom algebra",
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Calc: Definiera variabler"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Calc: Utvärderings- block"
+              },
+              "Eval: Defining Functions": {
+                "name": "Eval: Definiera funktioner"
+              },
+              "Eval: Functions": {
+                "name": "Eval: funktioner"
+              },
+              "Eval: Strings and Images": {
+                "name": "Eval: Strängar och bilder"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Eval: Skriva kontrakt"
+              },
+              "Play Lab: Defining Functions": {
+                "name": "Play lab: Definiera funktioner"
+              },
+              "Unplugged: Contracts": {
+                "name": "Ouppkopplad: kontrakt"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Ouppkopplad: Design recept"
+              }
+            }
+          },
+          "AlgebraB": {
+            "title": "Datavetenskap i Algebra",
+            "description": "Lär dig funktionell programmering genom algebra",
+            "description_short": "Lär dig funktionell programmering genom algebra",
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Eval: Booleska operatorer"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: villkorssatser"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Play Lab: Animation (Big Game)"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Play Lab: Boolean (Big Game)"
+              },
+              "Play Lab: Booleans": {
+                "name": "Play Lab: booleska värden"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Play Lab: Kollisions-detektion (Big Game)"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Play labb: Definiera variabler (Big Game)"
+              },
+              "Unplugged: Booleans": {
+                "name": "Ouppkopplad: booleska värden"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Ouppkopplad: Kollisions-detektion och avstånds- formeln"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Ouppkopplad: Villkorssatser och styckevis funktioner"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Ouppkopplad: videospel och koordinat-plan"
+              }
+            }
+          },
+          "algebraPD1": {
+            "title": "Datavetenskap i Algebra PD",
+            "description": "Undervisa i algebra genom funktionell programmering",
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              }
+            }
+          },
+          "algebraPD3c": {
+            "title": "Datavetenskap i Algebra PD"
+          },
+          "csp1-2017": {
+            "stages": {
+              "Binary Numbers": {
+                "name": "Binära tal"
+              },
+              "Number Systems": {
+                "name": "Talsystem"
+              },
+              "Sending Binary Messages": {
+                "name": "Skicka binära meddelanden"
+              },
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "csp2-2017": {
+            "stages": {
+              "Text Compression": {
+                "name": "Text komprimering"
+              }
+            }
+          },
+          "csp3-2017": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Skapa funktioner"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "While Loops": {
+                "name": "'Medan' loopar(slingor)"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "stages": {
+              "Functions": {
+                "name": "funktioner"
+              }
+            }
+          },
+          "2016_sciencePD_phase1": {
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "Åldrar 8 + (efter kurs 2)"
+          },
+          "ECSPD1": {
+            "description_short": "Lär ut funktionell programmering genom algebra"
+          },
+          "algebraFacilitator": {
+            "description": "Undervisa i algebra genom funktionell programmering",
+            "description_short": "Undervisa i algebra genom funktionell programmering",
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Utvärderingsblock"
+              },
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              },
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              }
+            }
+          },
+          "sciencePD1": {
+            "description_short": "Lär ut funktionell programmering genom algebra",
+            "stages": {
+              "Introduction to PD": {
+                "name": "Introduktion till PD"
+              }
+            }
+          },
+          "cspunit1-support": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Skicka binära meddelanden"
+              }
+            }
+          },
+          "CSDU2-Draft": {
+            "stages": {
+              "Peer Review": {
+                "name": "Din recension"
+              }
+            }
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Konstnären: Funktioner"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "Åldrar 8 + (efter kurs 2)"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Biet: Villkor"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Händelser"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Pussel: Lär dig dra och släpp"
+              },
+              "Loops": {
+                "name": "loopar"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Songwriting": {
+                "name": "Låtskrivande"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Händelser"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Pussel: Lär dig dra och släpp"
+              },
+              "Loops": {
+                "name": "loopar"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Konstnären: 'för'-slingor"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Konstnären: Funktioner med parametrar"
+              },
+              "Artist: Variables": {
+                "name": "Konstnären: Variabler"
+              },
+              "Bee: For Loops": {
+                "name": "Bilet: \"för\"-slingor"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Biet: Funktioner med parametrar"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Play Lab: Variables": {
+                "name": "Spel-labb: Variabler"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Ouppkopplad: Kuvertvariabler"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Ouppkopplad: Skoj med \"för\" - slingor"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Ouppkopplad: Skriva låtar med parametrar"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-up": {
+                "name": "Gör klart"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Konstnären: Nästlade slingor"
+              },
+              "Bee Debugging": {
+                "name": "Biet: Felsökning"
+              },
+              "Bounce": {
+                "name": "Studsa"
+              },
+              "Farmer: While Loops": {
+                "name": "Bonde: 'medan'-slingor"
+              }
+            }
+          },
+          "csd3-2017": {
+            "stages": {
+              "Functions": {
+                "name": "funktioner"
+              },
+              "Variables": {
+                "name": "variabler"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmer i verkliga livet: Pappersflygplan"
+              },
+              "The Big Event": {
+                "name": "Den stora händelsen"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Binära"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Events": {
+                "name": "Händelser"
+              },
+              "For Loops": {
+                "name": "'För' loopar"
+              },
+              "Functions": {
+                "name": "funktioner"
+              },
+              "Functions with Parameters": {
+                "name": "Funktioner med parametrar"
+              },
+              "Loops": {
+                "name": "loopar"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              },
+              "Variables": {
+                "name": "variabler"
+              },
+              "While Loops": {
+                "name": "'Medan' loopar(slingor)"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "description": "Undervisa i algebra genom funktionell programmering",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Lärare Dashboard"
+              },
+              "The Design Recipe": {
+                "name": "Design recept"
+              },
+              "Welcome!": {
+                "name": "Välkommen!"
+              }
+            }
+          },
+          "basketball": {
+            "title": "Göra en basketmatch",
+            "description_short": "Göra en basketmatch",
+            "description": "Göra en basketmatch",
+            "stages": {
+              "Bounce": {
+                "name": "Studsa"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Binära",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              },
+              "Binary Images": {
+                "name": "Binära bilder"
+              },
+              "Play Lab": {
+                "name": "Spel-labb"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Peer Review": {
+                "name": "Din recension"
+              },
+              "Lists": {
+                "name": "Listor"
+              }
+            }
+          },
+          "minecraft": {
+            "title": "Minecraft Hour of Code Designer",
+            "description_short": "Programmera djur och andra Minecraft varelser i din egen version av Minecraft.",
+            "description": "Programmera djur och andra Minecraft varelser i din egen version av Minecraft.",
+            "stages": {
+              "Minecraft Hour of Code Designer": {
+                "name": "Minecraft Hour of Code Designer"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy kod"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Going Places Safely": {
+                "name": "Trygg resa"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Your Digital Footprint": {
+                "name": "Ditt digitala fotavtryck"
+              }
+            }
+          },
+          "coursec-draft": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmer i verkliga livet: Pappersflygplan"
+              },
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              },
+              "Your Digital Footprint": {
+                "name": "Ditt digitala fotavtryck"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Unplugged: Binary": {
+                "name": "Ouppkopplad: Binärt"
+              },
+              "Artist Binary": {
+                "name": "Artist binär"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Songwriting with Parameters": {
+                "name": "Låtskrivande Med parametrar"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Prova grunderna i datavetenskap med många roliga figurer!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Timme av Kod 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Prova grunderna i datavetenskap med många roliga figurer!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Timme av Kod 2013"
+              }
+            }
+          },
+          "sports": {
+            "title": "Sport",
+            "description_short": "Koda din egen sport",
+            "description": "Koda din egen sport",
+            "stages": {
+              "Sports": {
+                "name": "Sport"
+              }
+            }
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Binära"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Välkommen!"
+              },
+              "Wrap-Up": {
+                "name": "Sammanfattning"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Listor"
+              },
+              "For Loops": {
+                "name": "'För' loopar"
+              },
+              "Map": {
+                "name": "Karta"
+              },
+              "Functions with Parameters": {
+                "name": "Funktioner med parametrar"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduktion"
+              }
+            }
+          },
+          "csd5-draft": {
+            "stages": {
+              "Representing Images": {
+                "name": "Representerar bilder"
+              },
+              "Problem Solving and Data": {
+                "name": "Problemlösning och data"
+              },
+              "Automating Data Decisions": {
+                "name": "Automatisera databeslut"
+              },
+              "8-bit Numbers": {
+                "name": "8-bitars tal"
+              }
+            }
+          },
+          "applab-1hour": {
+            "stages": {
+              "Extra": {
+                "name": "Extra"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduktion"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Instruktioner i verkliga livet: Tärnings- spelet"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Listor"
+              },
+              "For Loops": {
+                "name": "'För' loopar"
+              },
+              "Functions with Parameters": {
+                "name": "Funktioner med parametrar"
+              },
+              "Functions with Parameters_": {
+                "name": "Funktioner med parametrar"
+              }
+            }
+          },
+          "csd3-draft": {
+            "description_short": "Animationer och spel",
+            "stages": {
+              "Variables": {
+                "name": "variabler"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Functions": {
+                "name": "funktioner"
+              }
+            }
+          },
+          "csd5-2017": {
+            "stages": {
+              "Representing Images": {
+                "name": "Representerar bilder"
+              },
+              "Problem Solving and Data": {
+                "name": "Problemlösning och data"
+              },
+              "Automating Data Decisions": {
+                "name": "Automatisera databeslut"
+              },
+              "8-bit Numbers": {
+                "name": "8-bitars tal"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Functions": {
+                "name": "funktioner"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Images": {
+                "name": "Bilder"
+              },
+              "Lists": {
+                "name": "Listor"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "variabler"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Functions": {
+                "name": "funktioner"
+              },
+              "null": {
+                "name": "null"
+              },
+              "temp": {
+                "name": "temp"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              }
+            }
+          },
+          "csd2-old": {
+            "stages": {
+              "Peer Review": {
+                "name": "Din recension"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "B8 BB8": {
+                "name": "B8 BB8"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              },
+              "Bounce": {
+                "name": "Studsa"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              }
+            },
+            "title": "Kurs A",
+            "assignment_family_title": "Kurs A"
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              }
+            },
+            "title": "Kurs B",
+            "assignment_family_title": "Kurs B"
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmer i verkliga livet: Pappersflygplan"
+              }
+            },
+            "title": "Kurs C",
+            "assignment_family_title": "Kurs C"
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              }
+            },
+            "title": "Kurs D",
+            "assignment_family_title": "Kurs D"
+          },
+          "coursee-2017": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Songwriting with Parameters": {
+                "name": "Låtskrivande Med parametrar"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              }
+            },
+            "title": "Kurs E",
+            "assignment_family_title": "Kurs E"
+          },
+          "coursef-2017": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              }
+            },
+            "title": "Kurs F",
+            "assignment_family_title": "Kurs F"
+          },
+          "allthettsthings": {
+            "stages": {
+              "TTS": {
+                "name": "TTS"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Songwriting with Parameters": {
+                "name": "Låtskrivande Med parametrar"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              }
+            }
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Spelling Bee": {
+                "name": "Stavnings-bi"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Tack"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Skapa funktioner"
+              }
+            }
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Unplugged: Binary": {
+                "name": "Ouppkopplad: Binärt"
+              },
+              "Artist Binary": {
+                "name": "Artist binär"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Songwriting with Parameters": {
+                "name": "Låtskrivande Med parametrar"
+              }
+            }
+          },
+          "csd5-old": {
+            "stages": {
+              "Representing Images": {
+                "name": "Representerar bilder"
+              },
+              "8-bit Numbers": {
+                "name": "8-bitars tal"
+              },
+              "Problem Solving and Data": {
+                "name": "Problemlösning och data"
+              },
+              "Automating Data Decisions": {
+                "name": "Automatisera databeslut"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Skapa funktioner"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            },
+            "description": "Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden."
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Songwriting with Parameters": {
+                "name": "Låtskrivande Med parametrar"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Listor"
+              },
+              "For Loops": {
+                "name": "'För' loopar"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "variabler"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Functions": {
+                "name": "funktioner"
+              }
+            }
+          },
+          "csd3-2018": {
+            "stages": {
+              "Variables": {
+                "name": "variabler"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Functions": {
+                "name": "funktioner"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Listor"
+              }
+            }
+          },
+          "coursea-2018": {
+            "assignment_family_title": "Kurs A",
+            "stages": {
+              "Programming: Happy Maps": {
+                "name": "Glada kartor"
+              },
+              "Going Places Safely": {
+                "name": "Trygg resa"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Kalkyleringsprogrammering"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              },
+              "Events: The Big Event": {
+                "name": "Den stora händelsen"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Att bli snurrig"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Functions: Songwriting": {
+                "name": "Låtskrivande"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              },
+              "Unplugged: Binary": {
+                "name": "Binära bilder"
+              },
+              "Artist Binary": {
+                "name": "Artist binär"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Relay Programming": {
+                "name": "Stafettprogrammering"
+              }
+            }
+          },
+          "courseb-2018": {
+            "assignment_family_title": "Kurs B",
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Your Digital Footprint": {
+                "name": "Ditt digitala fotavtryck"
+              },
+              "Move It, Move It": {
+                "name": "Flytta det, flytta den"
+              }
+            }
+          },
+          "coursed-2018": {
+            "assignment_family_title": "Kurs D",
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Kalkyleringsprogrammering"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Unplugged: Binary": {
+                "name": "Binära bilder"
+              },
+              "Artist Binary": {
+                "name": "Artist binär"
+              },
+              "Graph Paper Programming": {
+                "name": "Kalkyleringsprogrammering"
+              },
+              "Relay Programming": {
+                "name": "Stafettprogrammering"
+              }
+            }
+          },
+          "coursec-2018": {
+            "assignment_family_title": "Kurs C",
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Att bli snurrig"
+              },
+              "Events: The Big Event": {
+                "name": "Den stora händelsen"
+              },
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              }
+            }
+          },
+          "csd6-2018": {
+            "stages": {
+              "Functions with Parameters": {
+                "name": "Funktioner med parametrar"
+              }
+            }
+          },
+          "coursee-2018": {
+            "assignment_family_title": "Kurs E",
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Mina Robotic- vänner"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Functions: Songwriting": {
+                "name": "Låtskrivande"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Hour of Code"
+              }
+            }
+          },
+          "coursef-2018": {
+            "assignment_family_title": "Kurs F",
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Mina Robotic- vänner"
+              },
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Introduction": {
+                "name": "Introduktion"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age Play Lab"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Songwriting with Parameters": {
+                "name": "Låtskrivande Med parametrar"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "Sending Binary Messages": {
+                "name": "Skicka binära meddelanden"
+              },
+              "Number Systems": {
+                "name": "Talsystem"
+              },
+              "Binary Numbers": {
+                "name": "Binära tal"
+              },
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "csd5-2018": {
+            "stages": {
+              "Representing Images": {
+                "name": "Representerar bilder"
+              },
+              "Problem Solving and Data": {
+                "name": "Problemlösning och data"
+              },
+              "Automating Data Decisions": {
+                "name": "Automatisera databeslut"
+              }
+            }
+          },
+          "csp2-2018": {
+            "stages": {
+              "Text Compression": {
+                "name": "Text komprimering"
+              }
+            }
+          },
+          "csp3-2018": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Skapa funktioner"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "While Loops": {
+                "name": "'Medan' loopar(slingor)"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Spelling Bee": {
+                "name": "Stavnings-bi"
+              },
+              "Move It, Move It": {
+                "name": "Flytta det, flytta den"
+              },
+              "Your Digital Footprint": {
+                "name": "Ditt digitala fotavtryck"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Konstnären"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Konstnären"
+              }
+            }
+          },
+          "dance": {
+            "stages": {
+              "Dance Party": {
+                "name": "Dansparty"
+              }
+            },
+            "title": "Dansparty",
+            "description_short": "Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara och 25 andra!",
+            "description": "Koda ditt egna dansparty som du kan dela med dina vänner."
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Konstnären"
+              }
+            }
+          },
+          "aquatic": {
+            "stages": {
+              "Aquatic": {
+                "name": "Vatten"
+              }
+            },
+            "title": "Minecraft: Resande vattenlevande",
+            "description_short": "Minecraft är tillbaka med en helt ny aktivitet för “Hour of Code”!"
+          },
+          "dance--draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Dansparty"
+              }
+            }
+          },
+          "dance-draft": {
+            "stages": {
+              "Dance Party": {
+                "name": "Dansparty"
+              }
+            }
+          },
+          "dance-extras": {
+            "title": "Fortsätt att dansa",
+            "description": "Med ytterligare projektidéer kan du fortsätta efter den första timmen."
+          },
+          "coursef-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "The Artist": {
+                "name": "Konstnären"
+              }
+            }
+          },
+          "dance-low": {
+            "stages": {
+              "Dance Party": {
+                "name": "Dansparty"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Stafettprogrammering"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Digital Citizenship": {
+                "name": "Digitalt medborgarskap"
+              },
+              "Unplugged: Binary": {
+                "name": "Ouppkopplad: Binärt"
+              },
+              "Artist Binary": {
+                "name": "Artist binär"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Nested Loops": {
+                "name": "Kapslade slingor(loopar)"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Conditionals": {
+                "name": "Villkor"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Stafettprogrammering"
+              },
+              "Conditionals with Cards": {
+                "name": "Villkorssatser med kort"
+              },
+              "Envelope Variables": {
+                "name": "Envelope variabler"
+              },
+              "For Loop Fun": {
+                "name": "'För' loop skoj"
+              },
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              },
+              "Unplugged: Binary": {
+                "name": "Ouppkopplad: Binärt"
+              },
+              "Artist Binary": {
+                "name": "Artist binär"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "null"
+              }
+            }
+          },
+          "dance-extras-gallery": {
+            "title": "Fortsätt att dansa",
+            "description": "Med ytterligare projektidéer kan du fortsätta efter den första timmen."
+          },
+          "coursec-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Bygga en grund"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Algoritmer i verkliga livet: Pappersflygplan"
+              },
+              "Binary Bracelets": {
+                "name": "Binära armband"
+              }
+            }
+          },
+          "coursea-2019": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              },
+              "Going Places Safely": {
+                "name": "Trygg resa"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Flytta det, flytta den"
+              },
+              "Your Digital Footprint": {
+                "name": "Ditt digitala fotavtryck"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Flytta det, flytta den"
+              },
+              "Your Digital Footprint": {
+                "name": "Ditt digitala fotavtryck"
+              },
+              "Spelling Bee": {
+                "name": "Stavnings-bi"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Verklighetsalgoritmer: Så ett frö"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

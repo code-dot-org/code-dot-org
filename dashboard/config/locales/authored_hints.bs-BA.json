@@ -1,0 +1,277 @@
+{
+  "bs": {
+    "data": {
+      "authored_hints": {
+        "2-3 Artist 1 new_authored_hint": {
+          "2-3_Artist_1_new_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "2-3_Artist_1_new_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "2-3 Artist 4_authored_hint": {
+          "2-3_Artist_4_a": "Da biste završili kuću, sve što trebamo učiniti je nacrtati Kvadrat!"
+        },
+        "Dance short test 2_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Morate podesiti da se efekat pozadine izmjeni negdje nakon sedmog takta pjesme.\n\n*Level se završava nakon 10 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+        },
+        "Dance short test_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Morate podesiti da se efekat pozadine izmjeni negdje nakon sedmog takta pjesme.\n\n*Level se završava nakon 10 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+        },
+        "Dance_Party_01_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Postarajte se da se plesač pojavi na ekranu.\n\n*Ovaj level se završava nakon 4 takta.*",
+          "challenges": "**Neobavezni izazovi**\n* Odaberite drugu pjesmu.\n* Promijenite ime plesača."
+        },
+        "Dance_Party_01_low_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Postarajte se da se plesač pojavi na ekranu.\n\n*Ovaj level se završava nakon 4 takta.*",
+          "challenges": "**Neobavezni izazovi**\n* Odaberite drugu pjesmu.\n* Promijenite drugog koji nalikuje na losa.\n* Promijenite ime svom plesaču."
+        },
+        "Dance_Party_02_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Plesač mora promjeniti novi pokret svako četiri takta.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "Dance_Party_03_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.\n\n*Level se završava nakon 11 taktova.*"
+        },
+        "Dance_Party_04_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Moraš promjeniti efekat pozadine negdje oko sedmog takta pjesme.\n\n*Level se završava nakon 9 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+        },
+        "Dance_Party_06_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Moraš imati barem dva plesača.\n\n*Level se završava nakon 5 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\n* dodaj trećeg plesača (ili onoliko koliko želiš!)\n* Postigni da svaki od tvojih plesača radi drugačije pokrete u drugim dijelovima pjesme."
+        },
+        "Dance_Party_08_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Dva plesača moraju imati visinu drugačiju od 100.\n\n*Level se završava nakon 5 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\n* Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)"
+        },
+        "Dance_Party_09_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Promjeni nijanse boje barem jednog plesača.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "Dance_Party_1_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Postarajte se da se plesač pojavi na ekranu.\n\n*Ovaj level se završava nakon 4 takta.*",
+          "challenges": "**Neobavezni izazovi**\n* Odaberite drugu pjesmu.\n* Promijenite drugog koji nalikuje na losa.\n* Promijenite ime svom plesaču."
+        },
+        "Dance_Party_10_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Osobine dva ili više plesača moraju da se izmjene.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "Dance_Party_11.5_test_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Samo budi kreativan.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "Dance_Party_11_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Samo budi kreativan.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "Dance_Party_11_5_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Samo budi kreativan.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "Dance_Party_11b_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Iskoristi blok `kada je lijeva strelica pritisnuta` da bi robot napravio pokret kada pristisneš na strelicu.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "Dance_Party_2_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Plesač mora da promjeni pokrete nakon 4 takta.\n\n*Level se završava nakon 8 taktova.*"
+        },
+        "Dance_Party_3_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n*Nakon 6 taktovaa, vaš plesač mora da napravi drugačiji ples od onog što je bio nakon 4 takta.\n\n*Level se završava nakon 12 taktova.*"
+        },
+        "Dance_Party_4_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Morate podesiti da se efekat pozadine izmjeni negdje nakon sedmog takta pjesme.\n\n*Level se završava nakon 10 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+        },
+        "Dance_Party_5_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Vaš plesač mora da napravi različite pokrete tokom prvih 12 taktova pjesme.\n\n*Level se završava nakon 12 taktova.*"
+        },
+        "Dance_Party_6_authored_hint": {
+          "challenges": "**Neobavezni izazovi**\n\n* dodaj trećeg plesača (ili onoliko koliko želiš!)\n* Postigni da svaki od tvojih plesača radi drugačije pokrete u drugim dijelovima pjesme."
+        },
+        "Dance_Party_8_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Sva plesača moraju da imaju drugačiju visinu od 100.\n\n*Level se završava nakon 6 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\n* Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)"
+        },
+        "Dance_Party_9_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Promjeni nijanse barem jednog plesača.\n\n*Level se završava nakon 8 taktova.*"
+        },
+        "HOC Dance 0_draft_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Postarajte se da se plesač pojavi na ekranu.\n\n*Ovaj level se završava nakon 4 takta.*",
+          "challenges": "**Neobavezni izazovi**\n* Odaberite drugu pjesmu.\n* Promijenite drugog koji nalikuje na losa.\n* Promijenite ime svom plesaču."
+        },
+        "HOC Dance 1_draft_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Plesač mora da promjeni pokrete nakon 4 takta.\n\n*Level se završava nakon 8 taktova.*"
+        },
+        "HOC Dance 2_draft_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n*Nakon 6 taktovaa, vaš plesač mora da napravi drugačiji ples od onog što je bio nakon 4 takta.\n\n*Level se završava nakon 12 taktova.*"
+        },
+        "HOC Dance 3_draft_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Morate podesiti da se efekat pozadine izmjeni negdje nakon sedmog takta pjesme.\n\n*Level se završava nakon 10 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+        },
+        "HOC Dance 4_draft_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Vaš plesač mora da napravi različite pokrete tokom prvih 12 taktova pjesme.\n\n*Level se završava nakon 12 taktova.*"
+        },
+        "HOC Dance 5_draft_authored_hint": {
+          "challenges": "**Neobavezni izazovi**\n\n* dodaj trećeg plesača (ili onoliko koliko želiš!)\n* Postigni da svaki od tvojih plesača radi drugačije pokrete u drugim dijelovima pjesme."
+        },
+        "HOC Dance 6_draft_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Sva plesača moraju da imaju drugačiju visinu od 100.\n\n*Level se završava nakon 6 taktova.*",
+          "challenges": "**Neobavezni izazovi**\n\n* Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)"
+        },
+        "HOC Dance 7_draft_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n\n* Promjeni nijanse barem jednog plesača.\n\n*Level se završava nakon 8 taktova.*"
+        },
+        "Ryan_Demo_authored_hint": {
+          "validation": "**Kako da pređem ovaj level?**\n* Plesač mora promjeniti novi pokret svako četiri takta.\n\n*Level se završava nakon 7 taktova.*"
+        },
+        "course3_playLab_challenge1_authored_hint": {
+          "courseE_playLab_challenge1_a": "Ovo su neke stvari koje bi mogao uraditi kada igrač pobijedi u igri:\n\n* Napraviti da dinosaur nestane.\n* Zaustaviti vjeverice.\n* Učiniti vjeverice i viteza sretnim.\n* Postaviti novu pozadinu.\n* Napraviti da vitez zahvali igraču na pomoći.\n* Napraviti da svi učesnici nestanu i pokazati poruku \"Pobijedio si!\".",
+          "courseE_playLab_challenge1_b": "Ovo su neke stvari koje bi mogao uraditi kada igrač izgubi u igri:\n\n* Napraviti da vitez nestane.\n* Napraviti da je vjeverica tužna.\n* Napraviti da dinosaur nešto kaže.\n* Postaviti novu pozadinu.\n* Napraviti da svi učesnici nestanu i pokazati poruku \"Igra je gotova!\"."
+        },
+        "courseA_maze_ramp2_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp2a_2018_authored_hint": {
+          "1": "Snap both `East` blocks to the bottom of the `when run` block."
+        },
+        "courseA_maze_ramp3a_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseA_maze_ramp3a_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseA_maze_ramp3b_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseA_maze_ramp3b_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseA_maze_ramp4a_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_seq5_2018_authored_hint": {
+          "1": "Try writing down the steps on paper to find a solution!",
+          "2": "You will need to use this block:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5_2019_authored_hint": {
+          "1": "Try writing down the steps on paper to find a solution!",
+          "2": "You will need to use this block:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5a_2018_authored_hint": {
+          "1": "Say the steps out loud and see if it helps you figure out the answer."
+        },
+        "courseA_maze_seq5a_2019_authored_hint": {
+          "1": "Say the steps out loud and see if it helps you figure out the answer."
+        },
+        "courseB_Scrat_ramp1_2018_authored_hint": {
+          "1": "If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click \"Run\" again.",
+          "2": "Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!"
+        },
+        "courseB_Scrat_ramp1_2019_authored_hint": {
+          "1": "If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click \"Run\" again.",
+          "2": "Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!"
+        },
+        "courseB_Scrat_ramp2_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseB_Scrat_ramp3a_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseB_Scrat_ramp3b_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseB_Scrat_ramp3b_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n"
+        },
+        "courseB_Scrat_ramp4a_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2018_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2019_authored_hint": {
+          "1": "Your code should look like this:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseC_artist_prog2_authored_hint": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "courseC_artist_prog2_2018_authored_hint": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "courseC_artist_prog2_2019_authored_hint": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "courseD_artist_5_2018_authored_hint": {
+          "1": "If you are switching your shapes, don't forget that you will need to switch their angles, too!"
+        },
+        "courseD_artist_5_2018_2019_authored_hint": {
+          "1": "If you are switching your shapes, don't forget that you will need to switch their angles, too!"
+        },
+        "courseD_scrat_ramp5_authored_hint": {
+          "courseC_maze_programming5_b": "Koliko daleko trebaš da se pomakneš da dođeš u ugao?"
+        },
+        "courseD_scrat_ramp5_2018_authored_hint": {
+          "courseC_maze_programming5_b": "Koliko daleko trebaš da se pomakneš da dođeš u ugao?"
+        },
+        "courseE_farmer_concept3_authored_hint": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Šta bi trebao uraditi kada dođeš do kraja puta?"
+        },
+        "courseE_farmer_concept3_2018_authored_hint": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Šta bi trebao uraditi kada dođeš do kraja puta?"
+        },
+        "courseE_farmer_concept3_2019_authored_hint": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Šta bi trebao uraditi kada dođeš do kraja puta?"
+        },
+        "courseE_farmer_elseif_test_authored_hint": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Šta bi trebao uraditi kada dođeš do kraja puta?"
+        },
+        "courseE_farmer_functions8b_authored_hint": {
+          "courseE_farmer_functions8b_c": "Koliko puta trebate pozvati funkciju?"
+        },
+        "courseE_farmer_functions8b_2018_authored_hint": {
+          "courseE_farmer_functions8b_c": "Koliko puta trebate pozvati funkciju?"
+        },
+        "courseE_maze_ramp5_authored_hint": {
+          "courseC_maze_programming5_b": "Koliko daleko trebaš da se pomakneš da dođeš u ugao?"
+        },
+        "courseE_maze_ramp5_2018_authored_hint": {
+          "courseC_maze_programming5_b": "Koliko daleko trebaš da se pomakneš da dođeš u ugao?"
+        },
+        "courseE_playLab_challenge1_authored_hint": {
+          "courseE_playLab_challenge1_a": "Ovo su neke stvari koje bi mogao uraditi kada igrač pobijedi u igri:\n\n* Napraviti da dinosaur nestane.\n* Zaustaviti vjeverice.\n* Učiniti vjeverice i viteza sretnim.\n* Postaviti novu pozadinu.\n* Napraviti da vitez zahvali igraču na pomoći.\n* Napraviti da svi učesnici nestanu i pokazati poruku \"Pobijedio si!\".",
+          "courseE_playLab_challenge1_b": "Ovo su neke stvari koje bi mogao uraditi kada igrač izgubi u igri:\n\n* Napraviti da vitez nestane.\n* Napraviti da je vjeverica tužna.\n* Napraviti da dinosaur nešto kaže.\n* Postaviti novu pozadinu.\n* Napraviti da svi učesnici nestanu i pokazati poruku \"Igra je gotova!\"."
+        },
+        "courseE_playLab_challenge1_2018_authored_hint": {
+          "courseE_playLab_challenge1_a": "Ovo su neke stvari koje bi mogao uraditi kada igrač pobijedi u igri:\n\n* Napraviti da dinosaur nestane.\n* Zaustaviti vjeverice.\n* Učiniti vjeverice i viteza sretnim.\n* Postaviti novu pozadinu.\n* Napraviti da vitez zahvali igraču na pomoći.\n* Napraviti da svi učesnici nestanu i pokazati poruku \"Pobijedio si!\".",
+          "courseE_playLab_challenge1_b": "Ovo su neke stvari koje bi mogao uraditi kada igrač izgubi u igri:\n\n* Napraviti da vitez nestane.\n* Napraviti da je vjeverica tužna.\n* Napraviti da dinosaur nešto kaže.\n* Postaviti novu pozadinu.\n* Napraviti da svi učesnici nestanu i pokazati poruku \"Igra je gotova!\"."
+        },
+        "grade2_MakeDogTag_1_authored_hint": {
+          "2-3_Artist_1_new_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "2-3_Artist_1_new_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "grade4_review_artist1_authored_hint": {
+          "2-3_Artist_1_new_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "2-3_Artist_1_new_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        }
+      }
+    }
+  }
+}

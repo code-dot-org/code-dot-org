@@ -1,0 +1,2311 @@
+{
+  "eu": {
+    "data": {
+      "script": {
+        "category": {
+          "hoc_category_name": "Kode Ordua",
+          "math_category_name": "Matematika"
+        },
+        "name": {
+          "course1": {
+            "title": "1. Kurtsoa",
+            "description": "Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.",
+            "description_short": "Hasi 1. kurtsoarekin irakurle goiztiarrekin.",
+            "description_audience": "4-6 urte",
+            "stages": {
+              "Artist: Loops": {
+                "name": "Artista: Begiztak"
+              },
+              "Artist: Sequence": {
+                "name": "Artista: sekuentzia"
+              },
+              "Artist: Shapes": {
+                "name": "Artista: Formak"
+              },
+              "Bee: Loops": {
+                "name": "Erlea: Begiztak"
+              },
+              "Bee: Sequence": {
+                "name": "Erlea: sekuentzia"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Getting Loopy": {
+                "name": "Iteratzen"
+              },
+              "Going Places Safely": {
+                "name": "Joan segurtasunez"
+              },
+              "Happy Maps": {
+                "name": "Mapa Zoriontsuak"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Buruhaustea: ikasi arrastatu eta askatzen"
+              },
+              "Maze: Debugging": {
+                "name": "Labirintoa: Arazketa"
+              },
+              "Maze: Loops": {
+                "name": "Labirintoa: Begiztak"
+              },
+              "Maze: Sequence": {
+                "name": "Labirintoa: Sekuentzia"
+              },
+              "Move it, Move it": {
+                "name": "Mugitu, mugitu"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Spelling Bee": {
+                "name": "Letraz-letra"
+              },
+              "Studio: Create a Story": {
+                "name": "Jolas laborategia: sortu istorioa"
+              },
+              "The Big Event": {
+                "name": "Gertaera Handia"
+              }
+            }
+          },
+          "course2": {
+            "title": "2. Kurtsoa",
+            "description": "Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.",
+            "description_short": "Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.",
+            "description_audience": "6+ urte (Nahitaezko irakurketa)",
+            "stages": {
+              "Artist: Debugging": {
+                "name": "Artista: arazketa"
+              },
+              "Artist: Loops": {
+                "name": "Artista: Begiztak"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artista: habiatutako begiztak"
+              },
+              "Artist: Sequence": {
+                "name": "Artista: sekuentzia"
+              },
+              "Bee: Conditionals": {
+                "name": "Erlea: baldintzazkoak"
+              },
+              "Bee: Debugging": {
+                "name": "Erlea: Arazketa"
+              },
+              "Bee: Loops": {
+                "name": "Erlea: Begiztak"
+              },
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Getting Loopy": {
+                "name": "Iteratzen"
+              },
+              "Graph Paper Programming": {
+                "name": "Paper grafiko programazioa"
+              },
+              "Maze: Loops": {
+                "name": "Labirintoa: Begiztak"
+              },
+              "Maze: Sequence": {
+                "name": "Labirintoa: Sekuentzia"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
+              },
+              "Relay programming": {
+                "name": "Txandaka programatzen"
+              },
+              "Studio: Create a Story": {
+                "name": "Jolas laborategia: sortu istorioa"
+              },
+              "The Big Event": {
+                "name": "Gertaera Handia"
+              },
+              "Your Digital Footprint": {
+                "name": "Zure aztarna digitala"
+              }
+            }
+          },
+          "course3": {
+            "title": "3. Kurtsoa",
+            "description": "Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.",
+            "description_short": "3. kurtsoa 2. kurtsoaren jarraipena da.",
+            "description_audience": "8-18 bitarteko adina",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              },
+              "Artist: Functions": {
+                "name": "Artista: funtzioak"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artista: habiatutako begiztak"
+              },
+              "Artist: Patterns": {
+                "name": "Artista: patroiak"
+              },
+              "Bee: Conditionals": {
+                "name": "Erlea: baldintzazkoak"
+              },
+              "Bee: Debugging": {
+                "name": "Erlea: Arazketa"
+              },
+              "Bee: Functions": {
+                "name": "Elea: funtzioak"
+              },
+              "Bee: Nested Loops": {
+                "name": "Erlea: habiatutako begiztak"
+              },
+              "Bounce": {
+                "name": "Errebotea"
+              },
+              "Computational Thinking": {
+                "name": "Pentsamendu konputazionala"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Dice Race": {
+                "name": "Dado lasterketa"
+              },
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Farmer: While Loops": {
+                "name": "Nekazaria: While begiztak"
+              },
+              "Functional Suncatchers": {
+                "name": "Funtzioak aztertzen"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Maze": {
+                "name": "Labirintoa"
+              },
+              "Maze: Conditionals": {
+                "name": "Labirintoa: Funtzioak"
+              },
+              "Songwriting": {
+                "name": "Musika idazten"
+              },
+              "Studio: Create a Game": {
+                "name": "Joku laborategia: sortu joku bat"
+              },
+              "Studio: Create a Story": {
+                "name": "Jolas laborategia: sortu istorioa"
+              }
+            }
+          },
+          "playlab": {
+            "title": "Jolas Laborategia",
+            "description": "Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!",
+            "description_short": "Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!",
+            "stages": {
+              "Play Lab": {
+                "name": "Jolas Laborategia"
+              }
+            }
+          },
+          "artist": {
+            "title": "Artista",
+            "description": "Irudi eta diseinu ederrak irudikatu itzazu artistarekin!",
+            "description_short": "Irudi eta diseinu ederrak irudikatu itzazu artistarekin!",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "hourofcode": {
+            "title": "Labirinto klasikoa",
+            "description": "Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!",
+            "description_short": "Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!",
+            "stages": {
+              "Maze": {
+                "name": "Labirintoa"
+              }
+            }
+          },
+          "frozen": {
+            "title": "Anna eta Elsarekin programatu",
+            "description": "Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!",
+            "description_short": "Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun izotz mundu magiko eta ederra esploratzeko.",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "course4": {
+            "title": "4. Kurtsoa",
+            "description_short": "4. kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak eginda izan behar dituzte.",
+            "description_audience": "10-18 bitarteko adina",
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              },
+              "Artist Binary": {
+                "name": "Artista bitarra"
+              },
+              "Artist: For Loops": {
+                "name": "Artista: For begizta"
+              },
+              "Artist: Functions": {
+                "name": "Artista: funtzioak"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Artista: funtzioak eta aldagaiak"
+              },
+              "Artist: Variables": {
+                "name": "Artista: aldagaiak"
+              },
+              "Bee: For Loops": {
+                "name": "Erlea: For Begiztak"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Erlea: Funtzioak parametroekin"
+              },
+              "Extreme Challenge - Comprehensive": {
+                "name": "Muturreko erronka - osokoa"
+              },
+              "Maze and Bee": {
+                "name": "Labirintoa eta Erlea"
+              },
+              "Play Lab: For Loops": {
+                "name": "Laborategia: For begiztak"
+              },
+              "Play Lab: Functions with Parameters": {
+                "name": "Jokoen Laborategia: Parametrodun Funtzioak"
+              },
+              "Play Lab: Variables": {
+                "name": "Jokoen Laborategia: Aldagaiak"
+              },
+              "Super Challenge - For Loops": {
+                "name": "Super erronka - For begiztak"
+              },
+              "Super Challenge - Functions and Parameters": {
+                "name": "Super erronka - funtzioak eta parametroak"
+              },
+              "Super Challenge - Variables": {
+                "name": "Super erronka - Aldagaiak"
+              },
+              "Unplugged: Binary": {
+                "name": "Desnkonektatua: binarioa"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Deskonektatua: gutun-azaleko aldagaiak"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Lineaz kanpo: For begizta dibertigarriak"
+              },
+              "Unplugged: Madlibs": {
+                "name": "Deskonektauta: Madlibs"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Deskonektatua: abestiak idatzi aldagaiekin"
+              },
+              "Unplugged: Tangrams": {
+                "name": "Lineaz kanpo: tangramak"
+              }
+            }
+          },
+          "Course4pre": {
+            "title": "4 kurtsoko aurrebaldintza",
+            "description": "Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena",
+            "description_short": "Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena",
+            "stages": {
+              "Artist: Functions": {
+                "name": "Artista: funtzioak"
+              },
+              "Artist: Loops": {
+                "name": "Artista: Begiztak"
+              },
+              "Artist: Nested Loops": {
+                "name": "Artista: habiatutako begiztak"
+              },
+              "Artist: Sequence": {
+                "name": "Artista: sekuentzia"
+              },
+              "Bee: Conditionals": {
+                "name": "Erlea: baldintzazkoak"
+              },
+              "Bee: Debugging": {
+                "name": "Erlea: Arazketa"
+              },
+              "Bee: Nested Loops": {
+                "name": "Erlea: habiatutako begiztak"
+              },
+              "Farmer: While Loops": {
+                "name": "Nekazaria: While begiztak"
+              },
+              "Maze: Sequence": {
+                "name": "Labirintoa: Sekuentzia"
+              }
+            }
+          },
+          "usability": {
+            "stages": {
+              "Binary": {
+                "name": "Bitarra"
+              },
+              "For Loops": {
+                "name": "For begiztak"
+              },
+              "Functions and Functions with Parameters": {
+                "name": "Funtzioak eta parametrodun funtzioak"
+              },
+              "Intro": {
+                "name": "Sarrera"
+              },
+              "Variables": {
+                "name": "Aldagaiak"
+              }
+            }
+          },
+          "algebra": {
+            "title": "Informatika Aljebran",
+            "stages": {
+              "Eval: Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Eval: Strings and Images": {
+                "name": "Karaktere-kateak eta irudiak"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Lineaz kanpo: Baldintzazko eta zatikako funtzioak"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Lineaz kanpo: Diseinurako errezeta"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Lineaz kanpo: Bideo jokoak eta koordenatuen planoak"
+              }
+            }
+          },
+          "infinity": {
+            "title": "Disneyren Infinity Play Lab",
+            "description": "Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko",
+            "description_short": "Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko",
+            "stages": {
+              "Infinity": {
+                "name": "Infinitu"
+              }
+            }
+          },
+          "algebrademo": {
+            "stages": {
+              "Defining Variables": {
+                "name": "Aldagaiak definitzen"
+              },
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "The Design Recipe": {
+                "name": "Diseinuaren errezeta"
+              }
+            }
+          },
+          "K5PD": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              }
+            }
+          },
+          "netsim": {
+            "title": "Internet simulagailua"
+          },
+          "20-hour": {
+            "title": "CS kurtsora sarrera azkarra",
+            "description": "20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.\nGehiago ikasteko ikusi maila bereko gure ikastaroak!",
+            "description_short": "20 orduko ikastaro honek 2-4 kurtsotako informatikako eta programazioko oinarrizko kontzeptuak biltzen ditu.",
+            "description_audience": "10-18 bitarteko adina",
+            "stages": {
+              "Abstraction": {
+                "name": "Abstrakzioa"
+              },
+              "Algorithms": {
+                "name": "Algoritmoak"
+              },
+              "Computational Thinking": {
+                "name": "Pentsamendu konputazionala"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Functions": {
+                "name": "Funtzioak"
+              },
+              "Graph Paper Programming": {
+                "name": "Paper grafiko programazioa"
+              },
+              "Introduction to Computer Science": {
+                "name": "Konputazio zientzetarako sarrera"
+              },
+              "Relay Programming": {
+                "name": "Txandaka programatzen"
+              },
+              "Song Writing": {
+                "name": "Abestiak idazten"
+              },
+              "The Artist": {
+                "name": "Artista"
+              },
+              "The Artist 2": {
+                "name": "Artista 2"
+              },
+              "The Artist 3": {
+                "name": "Artista 3"
+              },
+              "The Artist 4": {
+                "name": "Artista 4"
+              },
+              "The Artist 5": {
+                "name": "Artista 5"
+              },
+              "The Farmer": {
+                "name": "Baserritarra"
+              },
+              "The Farmer 2": {
+                "name": "Baserritarra 2"
+              },
+              "The Farmer 3": {
+                "name": "Baserritarra 3"
+              },
+              "The Internet": {
+                "name": "Internet"
+              },
+              "The Maze": {
+                "name": "labirintoa"
+              },
+              "Wrap-up": {
+                "name": "Ixtea"
+              }
+            }
+          },
+          "edit-code": {
+            "title": "Editatu kodea",
+            "description": "Editatu kodea",
+            "description_short": "Editatu kodea",
+            "stages": {
+              "Play Lab": {
+                "name": "Jolas Laborategia"
+              },
+              "The Artist": {
+                "name": "Artista"
+              },
+              "The Maze": {
+                "name": "labirintoa"
+              }
+            }
+          },
+          "events": {
+            "title": "Gertaerak",
+            "description": "Gertaerak",
+            "description_short": "Gertaerak",
+            "stages": {
+              "Bounce": {
+                "name": "Errebotea"
+              },
+              "Calc": {
+                "name": "Kalk"
+              },
+              "Eval": {
+                "name": "Ebal"
+              }
+            }
+          },
+          "flappy": {
+            "title": "Flappy Code",
+            "description": "Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!",
+            "description_short": "Idatz ezazu zure Flappy joko propioa",
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy Code"
+              }
+            }
+          },
+          "jigsaw": {
+            "title": "Buruhaustea",
+            "description": "Proba ezazu gure buruhauste tutoriala!!!",
+            "description_short": "Proba ezazu gure buruhauste tutoriala!!!",
+            "stages": {
+              "Jigsaw": {
+                "name": "Buruhaustea"
+              }
+            }
+          },
+          "step": {
+            "title": "Pauso",
+            "description": "Pausokako tutoriala",
+            "description_short": "Pausokako tutoriala",
+            "stages": {
+              "Step": {
+                "name": "Pauso"
+              }
+            }
+          },
+          "Hour of Code": {
+            "title": "Kodearen ordua 2013",
+            "description": "Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!",
+            "description_short": "Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Kodearen ordua 2013"
+              }
+            }
+          },
+          "algebraPD": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              }
+            }
+          },
+          "algPDmiami": {
+            "stages": {
+              "Booleans": {
+                "name": "Boolearrak"
+              },
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Strings and Images": {
+                "name": "Karaktere-kateak eta irudiak"
+              }
+            }
+          },
+          "cspunit3": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Funtzioak sortzen"
+              },
+              "While Loops": {
+                "name": "\"Bitartean\" begiztak"
+              }
+            }
+          },
+          "algebraPD3": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Strings and Images": {
+                "name": "Karaktere-kateak eta irudiak"
+              },
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              },
+              "The Design Recipe": {
+                "name": "Diseinuaren errezeta"
+              }
+            }
+          },
+          "algebraPD-NexTech": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              }
+            }
+          },
+          "algebraPD-iZone": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              }
+            }
+          },
+          "sciencePD2": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "cspunit2": {
+            "stages": {
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "algebraPD2a": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "Booleans": {
+                "name": "Boolearrak"
+              },
+              "Defining Variables": {
+                "name": "Aldagaiak definitzen"
+              },
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Free Play": {
+                "name": "Joku askea"
+              },
+              "Strings and Images": {
+                "name": "Karaktere-kateak eta irudiak"
+              },
+              "The Design Recipe": {
+                "name": "Diseinuaren errezeta"
+              }
+            }
+          },
+          "allthethings": {
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              },
+              "Bee": {
+                "name": "Erlea"
+              },
+              "Bounce": {
+                "name": "Errebotea"
+              },
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Jigsaw": {
+                "name": "Buruhaustea"
+              },
+              "Match": {
+                "name": "Parekatu"
+              },
+              "Maze": {
+                "name": "Labirintoa"
+              },
+              "Minecraft": {
+                "name": "Minecraft"
+              },
+              "Multi": {
+                "name": "Multi"
+              },
+              "Web Lab": {
+                "name": "Web Lab"
+              }
+            }
+          },
+          "algebraPD2b": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "Booleans": {
+                "name": "Boolearrak"
+              },
+              "Defining Functions": {
+                "name": "Funtzioak definitzen"
+              },
+              "Defining Variables": {
+                "name": "Aldagaiak definitzen"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Baldintzak"
+              },
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Strings and Images": {
+                "name": "Karaktere-kateak eta irudiak"
+              },
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              }
+            }
+          },
+          "cspfacilitator": {
+            "stages": {
+              "App Lab": {
+                "name": "App laborategia"
+              },
+              "Internet Simulator": {
+                "name": "Internet simulagailua"
+              },
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              }
+            }
+          },
+          "ECSPD2": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-up": {
+                "name": "Ixtea"
+              }
+            }
+          },
+          "algebraPD2": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              },
+              "The Design Recipe": {
+                "name": "Diseinuaren errezeta"
+              },
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              }
+            }
+          },
+          "sciencePD2b": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "science-PD2": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "sciencePD2b-iZone": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "ECSPD2-iZone": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-up": {
+                "name": "Ixtea"
+              }
+            }
+          },
+          "ECSPD2-NexTech": {
+            "description": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "description_short": "2 Fasea Online: Nahasitako Uda Ikasketa",
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-up": {
+                "name": "Ixtea"
+              }
+            }
+          },
+          "asUnplugged": {
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Getting Loopy": {
+                "name": "Iteratzen"
+              },
+              "Graph Paper Programming": {
+                "name": "Paper grafiko programazioa"
+              },
+              "Happy Maps": {
+                "name": "Mapa Zoriontsuak"
+              },
+              "Move it, Move it": {
+                "name": "Mugitu, mugitu"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Songwriting": {
+                "name": "Musika idazten"
+              },
+              "The Big Event": {
+                "name": "Gertaera Handia"
+              }
+            }
+          },
+          "cspunit4draft": {
+            "description_short": "Datu"
+          },
+          "ScienceP3OLPT2": {
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "Special Fun": {
+            "description_audience": "10-18 bitarteko adina"
+          },
+          "SpecialSeries": {
+            "description_audience": "10-18 bitarteko adina"
+          },
+          "iceage": {
+            "title": "Ice Age joku laborategia",
+            "description": "Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!",
+            "description_short": "Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!",
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              }
+            }
+          },
+          "cspunit3temp": {
+            "stages": {
+              "While Loops": {
+                "name": "\"Bitartean\" begiztak"
+              }
+            }
+          },
+          "gumball": {
+            "title": "Gumball joko laborategia",
+            "description": "Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!",
+            "description_short": "Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!",
+            "stages": {
+              "Gumball Play Lab": {
+                "name": "Gumball joko laborategia"
+              }
+            }
+          },
+          "starwars": {
+            "title": "Star Wars: Code-ren bitartez galaxia bat eraikitzen",
+            "description": "Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.",
+            "description_short": "Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "2015 Code ordua"
+              }
+            }
+          },
+          "starwarsblocks": {
+            "title": "Star Wars: Code-ren bitartez galaxia bat eraikitzen",
+            "description": "Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.",
+            "description_short": "Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "2015 Code ordua"
+              }
+            }
+          },
+          "mc": {
+            "title": "Minecraft Kode Ordua",
+            "description": "Erabili kode-blokeak Steve edo Alex abentura batera eramateko Minecraft mundu honetan",
+            "description_short": "Esploratu Minecraft mundu bat kodearen bitartez",
+            "stages": {
+              "Hour of Code 2015": {
+                "name": "2015 Code ordua"
+              }
+            }
+          },
+          "ScienceP3OLPT3": {
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "AlgebraA": {
+            "stages": {
+              "Calc: Defining Variables": {
+                "name": "Calc: Aldagaiak deinitzen"
+              },
+              "Calc: Evaluation Blocks": {
+                "name": "Calc: Ebaluazio Blokeak"
+              },
+              "Eval: Strings and Images": {
+                "name": "Eval: Kateak eta Irudiak"
+              },
+              "Eval: Writing Contracts": {
+                "name": "Eval: Kontratuak idazten"
+              },
+              "Unplugged: Contracts": {
+                "name": "Lineaz kanpo: Kontratuak"
+              },
+              "Unplugged: The Design Recipe": {
+                "name": "Lineaz kanpo: Diseinurako errezeta"
+              }
+            }
+          },
+          "AlgebraB": {
+            "stages": {
+              "Eval: Boolean Operators": {
+                "name": "Eval: Boolear eragileak"
+              },
+              "Eval: Conditionals": {
+                "name": "Eval: Baldintzak"
+              },
+              "Play Lab: Animation (Big Game)": {
+                "name": "Jolas laborategia: Animazioak"
+              },
+              "Play Lab: Boolean (Big Game)": {
+                "name": "Jokoen Laborategia: Boolearra (Joko Handia)"
+              },
+              "Play Lab: Booleans": {
+                "name": "Jokoen Laborategia: Boolearrak"
+              },
+              "Play Lab: Collision Detection (Big Game)": {
+                "name": "Jokoen Laborategia: Talka Atzematea (Joko Handia)"
+              },
+              "Play Lab: Defining Variables (Big Game)": {
+                "name": "Jolas Laborategia: Aldagaiak definitzen (Joko Handia)"
+              },
+              "Unplugged: Booleans": {
+                "name": "Lineaz kanpo: Boolearrak"
+              },
+              "Unplugged: Collision Detection and the Distance Formula": {
+                "name": "Lineaz kanpo: Talka Atzematea eta Distantzia Formula"
+              },
+              "Unplugged: Conditionals and Piecewise Functions": {
+                "name": "Lineaz kanpo: Baldintzazko eta zatikako funtzioak"
+              },
+              "Unplugged: Video Games and Coordinate Planes": {
+                "name": "Lineaz kanpo: Bideo jokoak eta koordenatuen planoak"
+              }
+            }
+          },
+          "algebraPD1": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              }
+            }
+          },
+          "csp1-2017": {
+            "stages": {
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "csp3-2017": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Funtzioak sortzen"
+              }
+            }
+          },
+          "csp5-2017": {
+            "stages": {
+              "While Loops": {
+                "name": "\"Bitartean\" begiztak"
+              }
+            }
+          },
+          "CSDU3-Draft": {
+            "stages": {
+              "Functions": {
+                "name": "Funtzioak"
+              }
+            }
+          },
+          "CSF_Secret_Sample": {
+            "description_audience": "8-18 bitarteko adina"
+          },
+          "algebraFacilitator": {
+            "stages": {
+              "Evaluation Blocks": {
+                "name": "Ebaluazio blokeak"
+              },
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              }
+            }
+          },
+          "CSDU5-Draft": {
+            "description_short": "Datu"
+          },
+          "MikeTest": {
+            "stages": {
+              "Artist Functions": {
+                "name": "Artista: Funtzioak"
+              }
+            }
+          },
+          "artistExemplar": {
+            "description_audience": "8-18 bitarteko adina"
+          },
+          "kinderTest": {
+            "stages": {
+              "Bee: Conditionals": {
+                "name": "Erlea: baldintzazkoak"
+              }
+            }
+          },
+          "gradeKinder": {
+            "stages": {
+              "Events": {
+                "name": "Gertaerak"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Buruhaustea: ikasi arrastatu eta askatzen"
+              },
+              "Loops": {
+                "name": "Itzuliak"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              }
+            }
+          },
+          "grade4": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Songwriting": {
+                "name": "Musika idazten"
+              }
+            }
+          },
+          "grade1": {
+            "stages": {
+              "Events": {
+                "name": "Gertaerak"
+              },
+              "Jigsaw: Learn to drag and drop": {
+                "name": "Buruhaustea: ikasi arrastatu eta askatzen"
+              },
+              "Loops": {
+                "name": "Itzuliak"
+              }
+            }
+          },
+          "grade5": {
+            "stages": {
+              "Artist: For Loops": {
+                "name": "Artista: For begizta"
+              },
+              "Artist: Functions with Parameters": {
+                "name": "Artista: funtzioak eta aldagaiak"
+              },
+              "Artist: Variables": {
+                "name": "Artista: aldagaiak"
+              },
+              "Bee: For Loops": {
+                "name": "Erlea: For Begiztak"
+              },
+              "Bee: Functions with Parameters": {
+                "name": "Erlea: Funtzioak parametroekin"
+              },
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Play Lab: Variables": {
+                "name": "Jokoen Laborategia: Aldagaiak"
+              },
+              "Unplugged: Envelope Variables": {
+                "name": "Deskonektatua: gutun-azaleko aldagaiak"
+              },
+              "Unplugged: For Loop Fun": {
+                "name": "Lineaz kanpo: For begizta dibertigarriak"
+              },
+              "Unplugged: Songwriting with Parameters": {
+                "name": "Deskonektatua: abestiak idatzi aldagaiekin"
+              }
+            }
+          },
+          "ecs-unit1": {
+            "stages": {
+              "0": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "1": "Unit 1, Days 1-2\nWhat Is a Computer?",
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-up": {
+                "name": "Ixtea"
+              }
+            }
+          },
+          "grade3": {
+            "stages": {
+              "Artist: Nested Loops": {
+                "name": "Artista: habiatutako begiztak"
+              },
+              "Bee Debugging": {
+                "name": "Erlea: Arazketa"
+              },
+              "Bounce": {
+                "name": "Errebotea"
+              },
+              "Farmer: While Loops": {
+                "name": "Nekazaria: While begiztak"
+              }
+            }
+          },
+          "csd3-2017": {
+            "stages": {
+              "Functions": {
+                "name": "Funtzioak"
+              },
+              "Variables": {
+                "name": "Aldagaiak"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              }
+            }
+          },
+          "grade2": {
+            "stages": {
+              "Flappy": {
+                "name": "Flappy"
+              },
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
+              },
+              "The Big Event": {
+                "name": "Gertaera Handia"
+              }
+            }
+          },
+          "k5concepts": {
+            "stages": {
+              "Binary": {
+                "name": "Bitarra"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Events": {
+                "name": "Gertaerak"
+              },
+              "For Loops": {
+                "name": "For begiztak"
+              },
+              "Functions": {
+                "name": "Funtzioak"
+              },
+              "Functions with Parameters": {
+                "name": "Parametrodun funtzioak"
+              },
+              "Loops": {
+                "name": "Itzuliak"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              },
+              "Variables": {
+                "name": "Aldagaiak"
+              },
+              "While Loops": {
+                "name": "\"Bitartean\" begiztak"
+              }
+            }
+          },
+          "algebrapdnext": {
+            "stages": {
+              "Teacher Dashboard": {
+                "name": "Irakaslearen arbela"
+              },
+              "The Design Recipe": {
+                "name": "Diseinuaren errezeta"
+              },
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              }
+            }
+          },
+          "basketball": {
+            "stages": {
+              "Bounce": {
+                "name": "Errebotea"
+              }
+            }
+          },
+          "fesbinary": {
+            "title": "Bitarra",
+            "stages": {
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              },
+              "Binary Images": {
+                "name": "Irudi bitarrak"
+              },
+              "Play Lab": {
+                "name": "Jolas Laborategia"
+              }
+            }
+          },
+          "csd2-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Zerrendak"
+              }
+            }
+          },
+          "flappy-impact-study": {
+            "stages": {
+              "Flappy Code": {
+                "name": "Flappy Code"
+              }
+            }
+          },
+          "coursea-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Going Places Safely": {
+                "name": "Joan segurtasunez"
+              }
+            }
+          },
+          "courseb-draft": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Your Digital Footprint": {
+                "name": "Zure aztarna digitala"
+              }
+            }
+          },
+          "coursec-draft": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
+              },
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              },
+              "Your Digital Footprint": {
+                "name": "Zure aztarna digitala"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              }
+            }
+          },
+          "coursed-draft": {
+            "stages": {
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Unplugged: Binary": {
+                "name": "Desnkonektatua: binarioa"
+              },
+              "Artist Binary": {
+                "name": "Artista bitarra"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              }
+            }
+          },
+          "coursee-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              }
+            }
+          },
+          "coursef-draft": {
+            "stages": {
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Songwriting with Parameters": {
+                "name": "Abestiak idazten parametroekin"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              }
+            }
+          },
+          "classic-hoc-impact-study": {
+            "description_short": "Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Kodearen ordua 2013"
+              }
+            }
+          },
+          "hoc-impact-study": {
+            "description_short": "Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!",
+            "stages": {
+              "Hour of Code 2013": {
+                "name": "Kodearen ordua 2013"
+              }
+            }
+          },
+          "2016_sciencePD-phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "2016_sciencePD_phase2b": {
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "sciencepd4": {
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "science-pd-ol-pt-5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "csf2harvey": {
+            "stages": {
+              "Binary": {
+                "name": "Bitarra"
+              }
+            }
+          },
+          "sciencepd5": {
+            "stages": {
+              "Welcome!": {
+                "name": "Ongi etorri!"
+              },
+              "Wrap-Up": {
+                "name": "Itxi"
+              }
+            }
+          },
+          "csd6-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Zerrendak"
+              },
+              "For Loops": {
+                "name": "For begiztak"
+              },
+              "Functions with Parameters": {
+                "name": "Parametrodun funtzioak"
+              }
+            }
+          },
+          "workshop-gamelab": {
+            "stages": {
+              "Introduction": {
+                "name": "Sarrera"
+              }
+            }
+          },
+          "coursed-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Sarrera"
+              }
+            }
+          },
+          "coursee-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Real Life Algorithms: Dice Race": {
+                "name": "Benetako algoritmoak: dado lasterketa"
+              }
+            }
+          },
+          "csd6-2017": {
+            "stages": {
+              "Lists": {
+                "name": "Zerrendak"
+              },
+              "For Loops": {
+                "name": "For begiztak"
+              },
+              "Functions with Parameters": {
+                "name": "Parametrodun funtzioak"
+              },
+              "Functions with Parameters_": {
+                "name": "Parametrodun funtzioak"
+              }
+            }
+          },
+          "csd3-draft": {
+            "stages": {
+              "Variables": {
+                "name": "Aldagaiak"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Functions": {
+                "name": "Funtzioak"
+              }
+            }
+          },
+          "csd3-old": {
+            "stages": {
+              "Functions": {
+                "name": "Funtzioak"
+              }
+            }
+          },
+          "csd2-draft": {
+            "stages": {
+              "Lists": {
+                "name": "Zerrendak"
+              }
+            }
+          },
+          "csd3-chapters": {
+            "stages": {
+              "Variables": {
+                "name": "Aldagaiak"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Functions": {
+                "name": "Funtzioak"
+              },
+              "null": {
+                "name": "baliogabea"
+              }
+            }
+          },
+          "coursef-ramp": {
+            "stages": {
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              }
+            }
+          },
+          "artist-and-bb8": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              },
+              "Bounce": {
+                "name": "Errebotea"
+              }
+            }
+          },
+          "coursea-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              }
+            }
+          },
+          "courseb-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              }
+            }
+          },
+          "coursec-2017": {
+            "stages": {
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
+              }
+            }
+          },
+          "coursed-2017": {
+            "stages": {
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              }
+            }
+          },
+          "coursee-2017": {
+            "stages": {
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Songwriting with Parameters": {
+                "name": "Abestiak idazten parametroekin"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              }
+            }
+          },
+          "coursef-2017": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              }
+            }
+          },
+          "express-2017": {
+            "stages": {
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Songwriting with Parameters": {
+                "name": "Abestiak idazten parametroekin"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              }
+            }
+          },
+          "pre-express-2017": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Spelling Bee": {
+                "name": "Letraz-letra"
+              }
+            }
+          },
+          "subgoal-labels-opt-in": {
+            "stages": {
+              "Thanks": {
+                "name": "Eskerrik asko"
+              }
+            }
+          },
+          "csp3-research-mxghyt": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Funtzioak sortzen"
+              }
+            }
+          },
+          "e-f-ramp": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-d": {
+            "stages": {
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Unplugged: Binary": {
+                "name": "Desnkonektatua: binarioa"
+              },
+              "Artist Binary": {
+                "name": "Artista bitarra"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              }
+            }
+          },
+          "new-express": {
+            "stages": {
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              }
+            }
+          },
+          "new-e": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "new-f": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Songwriting with Parameters": {
+                "name": "Abestiak idazten parametroekin"
+              }
+            }
+          },
+          "csp3-staging": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Funtzioak sortzen"
+              }
+            }
+          },
+          "hero": {
+            "stages": {
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Kode Ordua"
+              }
+            }
+          },
+          "course-e-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "course-f-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Songwriting with Parameters": {
+                "name": "Abestiak idazten parametroekin"
+              }
+            }
+          },
+          "csd6-old": {
+            "stages": {
+              "Lists": {
+                "name": "Zerrendak"
+              },
+              "For Loops": {
+                "name": "For begiztak"
+              }
+            }
+          },
+          "csd3-1819draft": {
+            "stages": {
+              "Variables": {
+                "name": "Aldagaiak"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Functions": {
+                "name": "Funtzioak"
+              }
+            }
+          },
+          "csd3-2018": {
+            "stages": {
+              "Variables": {
+                "name": "Aldagaiak"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Functions": {
+                "name": "Funtzioak"
+              }
+            }
+          },
+          "csd2-2018": {
+            "stages": {
+              "Lists": {
+                "name": "Zerrendak"
+              }
+            }
+          },
+          "coursea-2018": {
+            "stages": {
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Stevie eta Big Proiektua"
+              },
+              "Programming: Happy Maps": {
+                "name": "Mapa Zoriontsuak"
+              },
+              "Going Places Safely": {
+                "name": "Joan segurtasunez"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Stevie eta Big Proiektua"
+              }
+            }
+          },
+          "express-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Paper grafiko programazioa"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              },
+              "Events: The Big Event": {
+                "name": "Gertaera Handia"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Iteratzen"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Functions: Songwriting": {
+                "name": "Musika idazten"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              },
+              "Unplugged: Binary": {
+                "name": "Irudi bitarrak"
+              },
+              "Artist Binary": {
+                "name": "Artista bitarra"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Relay Programming": {
+                "name": "Txandaka programatzen"
+              }
+            }
+          },
+          "courseb-2018": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Your Digital Footprint": {
+                "name": "Zure aztarna digitala"
+              },
+              "Move It, Move It": {
+                "name": "Mugi ezazu, mugi ezazu!"
+              }
+            }
+          },
+          "coursed-2018": {
+            "stages": {
+              "Algorithms: Graph Paper Programming": {
+                "name": "Paper grafiko programazioa"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Unplugged: Binary": {
+                "name": "Irudi bitarrak"
+              },
+              "Artist Binary": {
+                "name": "Artista bitarra"
+              },
+              "Graph Paper Programming": {
+                "name": "Paper grafiko programazioa"
+              },
+              "Relay Programming": {
+                "name": "Txandaka programatzen"
+              }
+            }
+          },
+          "coursec-2018": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Loops: Getting Loopy": {
+                "name": "Iteratzen"
+              },
+              "Events: The Big Event": {
+                "name": "Gertaera Handia"
+              },
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              }
+            }
+          },
+          "csd6-2018": {
+            "stages": {
+              "Functions with Parameters": {
+                "name": "Parametrodun funtzioak"
+              }
+            }
+          },
+          "coursee-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Nire lagun robotikoak"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Functions: Songwriting": {
+                "name": "Musika idazten"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Minecraft Hour of Code": {
+                "name": "Minecraft Kode Ordua"
+              }
+            }
+          },
+          "coursef-2018": {
+            "stages": {
+              "Programming: My Robotic Friends": {
+                "name": "Nire lagun robotikoak"
+              },
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Introduction": {
+                "name": "Sarrera"
+              },
+              "Ice Age Play Lab": {
+                "name": "Ice Age joku laborategia"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Songwriting with Parameters": {
+                "name": "Abestiak idazten parametroekin"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              }
+            }
+          },
+          "csp1-2018": {
+            "stages": {
+              "The Internet": {
+                "name": "Internet"
+              }
+            }
+          },
+          "csp3-2018": {
+            "stages": {
+              "Creating Functions": {
+                "name": "Funtzioak sortzen"
+              }
+            }
+          },
+          "csp5-2018": {
+            "stages": {
+              "While Loops": {
+                "name": "\"Bitartean\" begiztak"
+              }
+            }
+          },
+          "pre-express-2018": {
+            "stages": {
+              "Persistence & Frustration: Stevie and the Marbles": {
+                "name": "Stevie eta Big Proiektua"
+              },
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Spelling Bee": {
+                "name": "Letraz-letra"
+              },
+              "Move It, Move It": {
+                "name": "Mugi ezazu, mugi ezazu!"
+              },
+              "Your Digital Footprint": {
+                "name": "Zure aztarna digitala"
+              },
+              "Persistence & Frustration: Stevie and the Big Project": {
+                "name": "Stevie eta Big Proiektua"
+              }
+            }
+          },
+          "frozen-2018": {
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "frozen-2018-test": {
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "frozen-2018-test-b": {
+            "stages": {
+              "Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "coursef-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "The Artist": {
+                "name": "Artista"
+              }
+            }
+          },
+          "coursed-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Txandaka programatzen"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Digital Citizenship": {
+                "name": "Hiritartasun digitala"
+              },
+              "Unplugged: Binary": {
+                "name": "Desnkonektatua: binarioa"
+              },
+              "Artist Binary": {
+                "name": "Artista bitarra"
+              }
+            }
+          },
+          "coursee-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Nested Loops": {
+                "name": "Kabiatutako begiztak"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Conditionals": {
+                "name": "Baldintzak"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "express-2019": {
+            "stages": {
+              "Relay Programming": {
+                "name": "Txandaka programatzen"
+              },
+              "Conditionals with Cards": {
+                "name": "Baldintzak Txartelekin"
+              },
+              "Envelope Variables": {
+                "name": "Gutun-azaleko aldagarriak"
+              },
+              "For Loop Fun": {
+                "name": "Begizta jostarirako"
+              },
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              },
+              "Unplugged: Binary": {
+                "name": "Desnkonektatua: binarioa"
+              },
+              "Artist Binary": {
+                "name": "Artista bitarra"
+              },
+              "Internet": {
+                "name": "Internet"
+              },
+              "Crowdsourcing": {
+                "name": "Crowdsourcing"
+              }
+            }
+          },
+          "andrea-test": {
+            "stages": {
+              "null": {
+                "name": "baliogabea"
+              }
+            }
+          },
+          "coursec-2019": {
+            "stages": {
+              "Building a Foundation": {
+                "name": "Oinarri bat Eraikitzen"
+              },
+              "Real-life Algorithms: Paper Planes": {
+                "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
+              },
+              "Binary Bracelets": {
+                "name": "Eskumuturreko bitarrak"
+              }
+            }
+          },
+          "coursea-2019": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              },
+              "Going Places Safely": {
+                "name": "Joan segurtasunez"
+              }
+            }
+          },
+          "courseb-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Mugi ezazu, mugi ezazu!"
+              },
+              "Your Digital Footprint": {
+                "name": "Zure aztarna digitala"
+              }
+            }
+          },
+          "pre-express-2019": {
+            "stages": {
+              "Move It, Move It": {
+                "name": "Mugi ezazu, mugi ezazu!"
+              },
+              "Your Digital Footprint": {
+                "name": "Zure aztarna digitala"
+              },
+              "Spelling Bee": {
+                "name": "Letraz-letra"
+              }
+            }
+          },
+          "removed19": {
+            "stages": {
+              "Real-life Algorithms: Plant a Seed": {
+                "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
