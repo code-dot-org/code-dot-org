@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {getStudentCount} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
@@ -9,15 +11,20 @@ import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionPro
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
+import EmptySection from './EmptySection';
 
-export default class TeacherDashboard extends Component {
+class TeacherDashboard extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
     pegasusUrlPrefix: PropTypes.string.isRequired,
+    sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
 
     // Provided by React router in parent.
-    location: PropTypes.object.isRequired
+    location: PropTypes.object.isRequired,
+
+    // Provided by redux.
+    studentCount: PropTypes.number.isRequired
   };
 
   render() {
@@ -25,7 +32,9 @@ export default class TeacherDashboard extends Component {
       location,
       studioUrlPrefix,
       pegasusUrlPrefix,
-      sectionName
+      sectionId,
+      sectionName,
+      studentCount
     } = this.props;
 
     // Include header components unless we are on the /login_info page.
@@ -35,20 +44,19 @@ export default class TeacherDashboard extends Component {
       <div>
         {includeHeader && <TeacherDashboardHeader sectionName={sectionName} />}
         <Switch>
-          <Route path="/stats" component={props => <StatsTableWithData />} />
-          <Route path="/progress" component={props => <SectionProgress />} />
           <Route
             path="/manage_students"
             component={props => (
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
-          <Route
-            path="/projects"
-            component={props => (
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            )}
-          />
+          {/* Break out of switch if we have 0 students. Display a message directing user to go to "Manage Students" instead. */}
+          {studentCount === 0 && (
+            <Route
+              component={props => <EmptySection sectionId={sectionId} />}
+            />
+          )}
+          <Route path="/progress" component={props => <SectionProgress />} />
           <Route
             path="/text_responses"
             component={props => <TextResponses />}
@@ -58,6 +66,13 @@ export default class TeacherDashboard extends Component {
             component={props => <SectionAssessments />}
           />
           <Route
+            path="/projects"
+            component={props => (
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )}
+          />
+          <Route path="/stats" component={props => <StatsTableWithData />} />
+          <Route
             path="/login_info"
             component={props => (
               <SectionLoginInfo
@@ -66,14 +81,15 @@ export default class TeacherDashboard extends Component {
               />
             )}
           />
-          {/* Render <ManageStudents/> by default */}
-          <Route
-            component={props => (
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-            )}
-          />
+          {/* Render Progress tab by default */}
+          <Route component={props => <SectionProgress />} />
         </Switch>
       </div>
     );
   }
 }
+
+export const UnconnectedTeacherDashboard = TeacherDashboard;
+export default connect(state => ({
+  studentCount: getStudentCount(state)
+}))(TeacherDashboard);
