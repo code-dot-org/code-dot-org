@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {toggleSharingColumn} from './manageStudentsRedux';
+import {setShowSharingColumn} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import QuickActionsCell, {
   QuickActionsCellType
@@ -13,7 +13,7 @@ class ManageStudentsActionsHeaderCell extends Component {
   static propTypes = {
     editAll: PropTypes.func,
     isShareColumnVisible: PropTypes.bool,
-    toggleSharingColumn: PropTypes.func
+    hideSharingColumn: PropTypes.func
   };
 
   state = {
@@ -33,7 +33,7 @@ class ManageStudentsActionsHeaderCell extends Component {
   };
 
   render() {
-    const {isShareColumnVisible, toggleSharingColumn} = this.props;
+    const {isShareColumnVisible, hideSharingColumn} = this.props;
     return (
       <div>
         <QuickActionsCell type={QuickActionsCellType.header}>
@@ -47,7 +47,7 @@ class ManageStudentsActionsHeaderCell extends Component {
             </PopUpMenu.Item>
           )}
           {isShareColumnVisible && (
-            <PopUpMenu.Item onClick={toggleSharingColumn}>
+            <PopUpMenu.Item onClick={hideSharingColumn}>
               {i18n.hideProjectSharingColumn()}
             </PopUpMenu.Item>
           )}
@@ -66,8 +66,8 @@ export const UnconnectedManageStudentsActionsHeaderCell = ManageStudentsActionsH
 export default connect(
   state => ({}),
   dispatch => ({
-    toggleSharingColumn() {
-      dispatch(toggleSharingColumn());
+    hideSharingColumn() {
+      dispatch(setShowSharingColumn(false));
     }
   })
 )(ManageStudentsActionsHeaderCell);

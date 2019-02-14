@@ -96,7 +96,6 @@ class DeleteAccountsHelper
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
     @log.puts "Cleaning PD content"
-    remove_from_cohorts user_id
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
     workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
@@ -117,20 +116,12 @@ class DeleteAccountsHelper
 
     SurveyResult.where(user_id: user_id).destroy_all
 
-    # Most efficient query to find and remove records from many-to-many join
-    # table unexpected_teachers_workshops without a corresponding model
-    ActiveRecord::Base.connection.execute(<<-SQL)
-      DELETE FROM unexpected_teachers_workshops
-      WHERE unexpected_teacher_id = '#{user_id}'
-    SQL
-
     unless application_ids.empty?
       # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::FitWeekendRegistrationBase.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
     end
-    WorkshopAttendance.where(teacher_id: user_id).update_all(teacher_id: nil, notes: nil)
 
     unless pd_enrollment_ids.empty?
       workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(pd_enrollment_id: pd_enrollment_ids).pluck(:id)
@@ -150,23 +141,6 @@ class DeleteAccountsHelper
         zip_code: '',
         phone_number: ''
       )
-    end
-  end
-
-  def remove_from_cohorts(user_id)
-    delete_limit = 10
-    where_clause = "WHERE user_id='#{user_id}'"
-    %w(cohorts_users cohorts_deleted_users).each do |table|
-      result = ActiveRecord::Base.connection.exec_query <<-SQL
-        SELECT user_id FROM #{table} #{where_clause}
-      SQL
-      found_rows = result.rows.count
-      assert_constraint found_rows <= delete_limit,
-        "Safety constraints only permit deleting up to #{delete_limit} rows " \
-        "from #{table}, but found #{found_rows} rows."
-      ActiveRecord::Base.connection.execute <<-SQL
-        DELETE FROM #{table} #{where_clause}
-      SQL
     end
   end
 
