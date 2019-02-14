@@ -956,8 +956,8 @@ class ScriptTest < ActiveSupport::TestCase
     # updated represents what will get written to scripts.en.json
     updated = Script.update_i18n(original_data, stages_i18n)
 
-    assert_equal course3_json, updated['en']['data']['script']['name']['course3']
-    assert_equal course4_json, updated['en']['data']['script']['name']['course4']
+    assert_equal course3_data, updated['en']['data']['script']['name']['course3']
+    assert_equal course4_data, updated['en']['data']['script']['name']['course4']
   end
 
   test "update_i18n with metadata" do
