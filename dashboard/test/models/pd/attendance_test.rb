@@ -14,14 +14,10 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     create :pd_attendance, session: @workshop.sessions[0], teacher: @teacher2
     create :pd_attendance, session: @workshop.sessions[1], teacher: @teacher1
 
-    @district = create :district
-    create :districts_users, district: @district, user: @teacher1
-
     @another_workshop = create :pd_workshop
     @another_workshop.sessions << create(:pd_session)
     @unrelated_teacher = create :teacher
     create :pd_attendance, session: @another_workshop.sessions[0], teacher: @unrelated_teacher
-    create :districts_users, district: @district, user: @unrelated_teacher
   end
 
   test 'for_teacher for_workshop' do

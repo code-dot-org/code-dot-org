@@ -8,6 +8,10 @@ import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/DropletPaletteSel
 const data = getScriptData('pageOptions');
 
 const fieldConfig = {
+  starterCode: {
+    codemirror: 'level_start_blocks',
+    codemirrorMode: 'javascript'
+  },
   codeFunctions: {
     hideWhen: !data.uses_droplet,
     codemirror: 'level_code_functions',

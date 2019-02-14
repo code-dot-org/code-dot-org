@@ -900,6 +900,23 @@ th:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
+      aalab_jumpTo:
+        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+            '"space"': อวกาศ
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
       aalab_whenTouching:
         options:
           CONDITION:

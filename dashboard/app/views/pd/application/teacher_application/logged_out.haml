@@ -5,7 +5,7 @@
   = I18n.t('pd.logged_out.heading')
 
 %p
-  != I18n.t('pd.logged_out.body', url: CDO.code_org_url('/educate/professional-learning'))
+  != I18n.t('pd.logged_out.body', url: CDO.code_org_url('/educate/professional-learning/middle-high'))
 
 %div
   = link_to "/users/sign_in?user_return_to=#{request.fullpath}" do
@@ -13,3 +13,10 @@
 
   = link_to "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}" do
     %button= I18n.t('nav.user.signup')
+
+:javascript
+  $(document).ready(function() {
+    // Report a unique page view to GA.
+    ga('set', 'page', '/pd/application/teacher/logged_out');
+    ga('send', 'pageview');
+  });

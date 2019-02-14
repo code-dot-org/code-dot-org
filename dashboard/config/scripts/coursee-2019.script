@@ -2,9 +2,10 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursee/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursee/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+family_name 'coursee'
 version_year '2019'
 
 stage 'Sequencing in the Maze', flex_category: 'csf_e_1'
@@ -148,18 +149,18 @@ stage 'Nested Loops in Frozen', flex_category: 'csf_e_2'
 level 'courseD_artist_1_2018_2019'
 level 'courseD_artist_2_2018_2019'
 level 'courseD_artist_3_2018_2019'
-level 'courseD_artist_4_2018_2019'
-level 'courseD_artist_5_2018_2019'
-level 'courseD_artist_6_2018_2019'
-level 'courseD_artist_project1_2019'
-level 'courseD_artist_project2_2019'
-level 'courseD_artist_project3_2019'
-level 'courseD_artist_project4_2019'
-level 'courseD_artist_project5_2019'
-level 'courseD_artist_project1a_2019'
-level 'courseD_artist_project2a_2019'
-level 'courseD_artist_project3a_2019'
-level 'courseD_artist_project4a_2019'
+level 'courseD_artist_4_2018_2019', progression: 'Inspiration'
+level 'courseD_artist_5_2018_2019', progression: 'Inspiration'
+level 'courseD_artist_6_2018_2019', progression: 'Inspiration'
+level 'courseD_artist_project1_2019', progression: 'Snowflake #1'
+level 'courseD_artist_project2_2019', progression: 'Snowflake #1'
+level 'courseD_artist_project3_2019', progression: 'Snowflake #1'
+level 'courseD_artist_project4_2019', progression: 'Snowflake #1'
+level 'courseD_artist_project5_2019', progression: 'Snowflake #1'
+level 'courseD_artist_project1a_2019', progression: 'Snowflake #2'
+level 'courseD_artist_project2a_2019', progression: 'Snowflake #2'
+level 'courseD_artist_project3a_2019', progression: 'Snowflake #2'
+level 'courseD_artist_project4a_2019', progression: 'Snowflake #2'
 
 stage 'Functions: Songwriting', flex_category: 'csf_e_2'
 level 'SongwritingParameters_2019'

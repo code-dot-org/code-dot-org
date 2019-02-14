@@ -1415,8 +1415,10 @@ en:
         text: aalab sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
       aalab_addToSpriteGroup:
         text: add sprite {SPRITE} to group {GROUP}
-      aalab_allSpritesWithCostume:
-        text: aalab {COSTUME}
+      aalab_allSpritesWithAnimation:
+        text: aalab all {ANIMATION}
+      aalab_changeAnimMike:
+        text: set {SPRITE}'s to costume to {COSTUME}
       aalab_changePropByFlexible:
         text: aalab change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -1432,8 +1434,14 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      aalab_createNewSprite:
+        text: "aalab make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
       aalab_createNewSpriteAdvanced:
         text: "make a new sprite called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
+      aalab_createNewSpriteAnon:
+        text: aalab make new {ANIMATION_NAME} sprite at {LOCATION}
+      aalab_createNewSpriteAnonReturn:
+        text: aalab make new {ANIMATION_NAME} sprite at {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           make a new sprite group called {VAR}
@@ -1448,12 +1456,51 @@ en:
           CHOICE:
             '"this"': this
             '"other"': other
+      aalab_jumpTo:
+        text: "{SPRITE} jump to {LOCATION}"
+      aalab_keyPressed:
+        text: "{CONDITION} {KEY} pressed"
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+          KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
       aalab_nameStringSay:
         text: "{NAMESTRING} says {MESSAGE}"
       aalab_prompt:
         text: ask question {MESSAGE}
-      aalab_removeAdvanced:
-        text: removeAdvanced {THIS}
+      aalab_removeOneAndAll:
+        text: aalab remove {THIS}
+      aalab_setBG:
+        text: set background to {BG}
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
+      aalab_setVariable:
+        text: aalab set {NAME} to {VALUE}
       aalab_speakerSaysConsole:
         text: "{SPRITE} says {MESSAGE}"
       aalab_spriteSay:
