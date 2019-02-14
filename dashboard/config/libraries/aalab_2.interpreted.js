@@ -495,22 +495,14 @@ function updateHUDText() {
   }
   if (customText.length > 0) {
   	customText.forEach(function(textObj) {
-      var txt = textObj.text;
-      var loc = textObj.location ? textObj.location : {x: 200, y: 200};
-      var size = textObj.size ? textObj.size : 35;
-      var color = textObj.color ? textObj.color : "black";
-      var duration = textObj.duration;
-      var timeStarted = textObj.timeStarted;
-      if(txt) {
-        var timeElapsed = new Date().getTime() - timeStarted;
-        if(duration > 0 && timeElapsed >= duration) {
-          customText.splice(customText.indexOf(textObj), 1);
-        } else {
-          fill(color);
-     	  textAlign(CENTER);
-          textSize(size);
-          text(txt, loc.x, loc.y);
-        }
+      var timeElapsed = new Date().getTime() - textObj.timeStarted;
+      if(textObj.duration > 0 && timeElapsed >= textObj.duration) {
+        customText.splice(customText.indexOf(textObj), 1);
+      } else {
+        fill(textObj.color);
+        textAlign(CENTER);
+        textSize(textObj.size);
+        text(textObj.text(), textObj.location.x, textObj.location.y);
       }
     });
   }
