@@ -133,7 +133,9 @@ class DSLDefined < Level
     # name 'level-name', or the dsl_text is entirely blank as during unit tests
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
-    self.class.create_from_level_builder({dsl_text: new_dsl}, {})
+    level_params = {}
+    level_params[:encrypted] = encrypted if encrypted
+    self.class.create_from_level_builder({dsl_text: new_dsl}, level_params)
   end
 
   def dsl_text
