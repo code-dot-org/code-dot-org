@@ -9717,6 +9717,8 @@ en:
               name: Variables Practice
             Variables Make:
               name: Variables Make
+            Student Survey:
+              name: Student Survey
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -10450,6 +10452,8 @@ en:
               name: 'Programming: My Robotic Friends'
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
+            Graphing Data:
+              name: Graphing Data
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
