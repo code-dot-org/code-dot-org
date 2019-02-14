@@ -12,7 +12,8 @@
     "args": [
       {
         "name": "TEXT",
-        "type": "String"
+        "type": "String",
+        "defer": true
       },
       {
         "name": "LOCATION",

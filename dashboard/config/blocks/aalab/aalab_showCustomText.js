@@ -1,18 +1,18 @@
 function showCustomText(text, location, size, color, duration) {
-  text = text ? text : "";
+  testText = text ? text() : "";
   location = location ? location : {x: 200, y: 200};
   size = size ? size : 25;
   color = color ? color : "black";
   var overlapIndex = -1;
   textSize(size);
-  var newTextWidth = textWidth(text);
+  var newTextWidth = textWidth(testText);
   var newTextHeight = textLeading();
   for(var i = 0; i < customText.length && overlapIndex < 0; i++) {
     textSize(customText[i].size);
-    var customTextWidth = textWidth(customText[i].text);
+    var customTextWidth = textWidth(customText[i].text());
     var customTextHeight = textLeading();
     var overlapping = checkTextOverlap(location, newTextWidth, newTextHeight, customText[i].location, customTextWidth, customTextHeight);
-    if(overlapping) {
+    if(overlapping && duration * 1000 == customText[i].duration) {
       overlapIndex = i;
     }
   }
@@ -22,7 +22,7 @@ function showCustomText(text, location, size, color, duration) {
   customText.push({text: text, location: location, size: size, color: color, duration: parseInt(duration) * 1000, timeStarted: new Date().getTime()});
 }
 
-// Classic algorithm problem!
+// Classic algorithm
 function checkTextOverlap(topLeftPointA, widthA, heightA, topLeftPointB, widthB, heightB) {
   var bottomRightPointA = {
     x: topLeftPointA.x + widthA,
