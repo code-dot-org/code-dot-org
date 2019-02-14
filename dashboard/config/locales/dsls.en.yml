@@ -785,6 +785,9 @@ en:
       CSD U3 combining rep_2018:
         description here: description here
         title: title
+      CSD U3 combining rep_2018_2019:
+        description here: description here
+        title: title
       CSD U3 complex sprite movement SFLP: {}
       CSD U3 complex sprite movement SFLP_2018: {}
       CSD U3 game intro:
@@ -839,10 +842,16 @@ en:
       CSD U5 Encryption 1_2018:
         description here: description here
         title: title
+      CSD U5 Encryption 1_2018_2019:
+        description here: description here
+        title: title
       CSD U5 Encryption 2:
         Decoding Binary Strings: Decoding Binary Strings
         description here: description here
       CSD U5 Encryption 2_2018:
+        Decoding Binary Strings: Decoding Binary Strings
+        description here: description here
+      CSD U5 Encryption 2_2018_2019:
         Decoding Binary Strings: Decoding Binary Strings
         description here: description here
       CSD U5 L13 SFLP Interpreting Data:
@@ -867,6 +876,9 @@ en:
       CSD U5 crosstab warmup_2018:
         Pizza Survey: Pizza Survey
         description here: description here
+      CSD U5 crosstab warmup_2018_2019:
+        Pizza Survey: Pizza Survey
+        description here: description here
       CSD U5 data visualization:
         description here: description here
         title: title
@@ -874,6 +886,9 @@ en:
         description here: description here
         title: title
       CSD U5 data visualization_2018:
+        description here: description here
+        title: title
+      CSD U5 data visualization_2018_2019:
         description here: description here
         title: title
       CSD U5 fixed-bits:
@@ -885,6 +900,9 @@ en:
       CSD U5 student record_2018:
         description here: description here
         title: title
+      CSD U5 student record_2018_2019:
+        description here: description here
+        title: title
       CSD U5 video2:
         description here: description here
         title: title
@@ -894,16 +912,24 @@ en:
       CSD U6 LED create intro_2018:
         Make an App Using the LED: Make an App Using the LED
         description here: description here
+      CSD U6 LED create intro_2018_2019:
+        Make an App Using the LED: Make an App Using the LED
+        description here: description here
       CSD U6 circuit smart bike blinker build: {}
       CSD U6 circuit smart bike blinker build_2018: {}
+      CSD U6 circuit smart bike blinker build_2018_2019: {}
       CSD U6 final intro:
         description here: description here
       CSD U6 final intro_2018:
         description here: description here
+      CSD U6 final intro_2018_2019:
+        description here: description here
       CSD U6 game project stop: {}
       CSD U6 game project stop_2018: {}
+      CSD U6 game project stop_2018_2019: {}
       CSD U6 tugowar stop: {}
       CSD U6 tugowar stop_2018: {}
+      CSD U6 tugowar stop_2018_2019: {}
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
@@ -981,6 +1007,7 @@ en:
       CSDU6 - timed loop stop board: {}
       CSDU6 Innovation: {}
       CSDU6 Innovation_2018: {}
+      CSDU6 Innovation_2018_2019: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSF19Placeholder: {}
@@ -4346,12 +4373,16 @@ en:
         csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
         csd-pulse-check-survey-1-levelgroup U5Ch1: {}
         csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
+        csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
         csd-pulse-check-survey-1-levelgroup U5Ch2: {}
         csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
+        csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
         csd-pulse-check-survey-1-levelgroup U6Ch1: {}
         csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
+        csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
         csd-pulse-check-survey-1-levelgroup U6Ch2: {}
         csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
+        csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
         csp-post-survey-2017-levelgroup: {}
         csp-post-survey-2017-levelgroup_2018: {}
         csp-post-survey-2018-levelgroup: {}
@@ -7444,6 +7475,13 @@ en:
         <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />
         Using Arrays: Using Arrays
         What will App Lab display when the code on the left is run?: What will App Lab display when the code on the left is run?
+      CSD U6 array multi_2018_2019:
+        <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />
+        <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px": <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"
+        <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />
+        <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />
+        Using Arrays: Using Arrays
+        What will App Lab display when the code on the left is run?: What will App Lab display when the code on the left is run?
       CSD U6 setProperty predict multi:
         '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
         '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
@@ -7452,6 +7490,13 @@ en:
         Make a Prediction: Make a Prediction
         Read the code and predict what this app will look like when run.: Read the code and predict what this app will look like when run.
       CSD U6 setProperty predict multi_2018:
+        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">'
+        Make a Prediction: Make a Prediction
+        Read the code and predict what this app will look like when run.: Read the code and predict what this app will look like when run.
+      CSD U6 setProperty predict multi_2018_2019:
         '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
         '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
         '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
@@ -13103,6 +13148,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q1 U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13113,6 +13167,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q1 U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I like computer science.: I like computer science.
@@ -13139,6 +13202,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U6Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q1 U6Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13149,6 +13221,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q1 U6Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U6Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I like computer science.: I like computer science.
@@ -13337,6 +13418,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q2 U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13347,6 +13437,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q2 U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -13373,6 +13472,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U6Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q2 U6Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13383,6 +13491,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q2 U6Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U6Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -13571,6 +13688,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q3 U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13581,6 +13707,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q3 U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I like this computer science class.: I like this computer science class.
@@ -13607,6 +13742,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U6Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q3 U6Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13617,6 +13761,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q3 U6Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U6Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I like this computer science class.: I like this computer science class.
@@ -13805,6 +13958,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q4 U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13815,6 +13977,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q4 U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
@@ -13841,6 +14012,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U6Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q4 U6Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -13851,6 +14031,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q4 U6Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U6Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
@@ -14039,6 +14228,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q5 U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -14049,6 +14247,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q5 U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -14075,6 +14282,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U6Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q5 U6Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -14085,6 +14301,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q5 U6Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U6Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
