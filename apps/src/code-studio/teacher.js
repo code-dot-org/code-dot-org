@@ -111,13 +111,12 @@ function queryLockStatus(store, scriptId) {
 /**
  * Render our teacher panel that shows up on our course overview page.
  */
-export function renderTeacherPanel(store, scriptData) {
+export function renderTeacherPanel(store, scriptId, section) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
-  const {id: scriptId, section} = scriptData;
   queryLockStatus(store, scriptId);
 
-  if (section && section.students && section.students.length > 0) {
+  if (section && section.students) {
     store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   }
 
