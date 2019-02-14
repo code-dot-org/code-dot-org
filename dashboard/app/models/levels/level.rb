@@ -561,13 +561,22 @@ class Level < ActiveRecord::Base
     false
   end
 
+  # Returns the level name, removing any name suffix first (if present).
+  def base_name
+    suffix = get_name_suffix
+    return name unless suffix
+    strip_suffix_regex = /^(.*)#{Regexp.escape(suffix)}$/
+    name[strip_suffix_regex, 1] || name
+  end
+
   private
 
-  # Returns the level name, removing the name_suffix first (if present).
-  def base_name
-    return name unless name_suffix
-    strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
-    name[strip_suffix_regex, 1] || name
+  # return the name_suffix property (if present), or a version year suffix on
+  # the name field in the form of e.g. '_2018' (if present), or nil otherwise.
+  def get_name_suffix
+    return name_suffix if name_suffix
+    m = /^(.*)(_[0-9]{4})$/.match(name)
+    m ? m[2] : nil
   end
 
   def write_to_file?
