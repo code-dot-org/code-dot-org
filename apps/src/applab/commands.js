@@ -29,6 +29,14 @@ var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
 import {ICON_PREFIX_REGEX} from './constants';
 
+const GOOGLE_SAFE_BROWSING_THREAT_TYPES = [
+  'THREAT_TYPE_UNSPECIFIED',
+  'MALWARE',
+  'SOCIAL_ENGINEERING',
+  'UNWANTED_SOFTWARE',
+  'POTENTIALLY_HARMFUL_APPLICATION'
+];
+
 var applabCommands = {};
 export default applabCommands;
 
@@ -1546,6 +1554,36 @@ applabCommands.onEvent = function(opts) {
     return true;
   }
   return false;
+};
+
+function filterUrl(url) {
+  let req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    console.log(this.responseText);
+  };
+  req.open(
+    'POST',
+    `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=${
+      getAppOptions().safeBrowsingKey
+    }`,
+    true
+  );
+  req.setRequestHeader('Content-type', 'application/json');
+  req.send(
+    JSON.stringify({
+      threatInfo: {
+        threatTypes: GOOGLE_SAFE_BROWSING_THREAT_TYPES,
+        platformTypes: ['ANY_PLATFORM'],
+        threatEntryTypes: ['URL'],
+        threatEntries: [{url: url}]
+      }
+    })
+  );
+}
+
+applabCommands.openUrl = function(opts) {
+  apiValidateType(opts, 'openUrl', 'url', opts.url, 'string');
+  filterUrl(opts.url);
 };
 
 applabCommands.onHttpRequestEvent = function(opts) {
