@@ -19,6 +19,12 @@ const styles = {
     display: 'block',
     width: '90%'
   },
+  textInputStudent: {
+    margin: 10,
+    display: 'block',
+    width: '90%',
+    backgroundColor: color.light_cyan
+  },
   button: {
     margin: 10,
     fontWeight: 'bold'
@@ -71,7 +77,7 @@ const styles = {
     justifyContent: 'flex-start',
     flexDirection: 'row',
     border: `1px solid ${color.cyan}`,
-    borderRadius: 4
+    borderRadius: 10
   },
   performanceLevelHeaderSelected: {
     display: 'flex',
@@ -79,11 +85,12 @@ const styles = {
     flexDirection: 'row',
     border: `1px solid ${color.cyan}`,
     backgroundColor: color.light_cyan,
-    borderRadius: 4
+    borderRadius: 10
   },
   h1: {
     color: color.cyan
-  }
+  },
+  checkbox: {}
 };
 
 const ErrorType = {
@@ -263,13 +270,14 @@ class TeacherFeedback extends Component {
                   }
                 >
                   <input
-                    type={'radio'}
+                    type={'checkbox'}
                     id={'exceedsButton'}
                     name={'rubric'}
                     value={'exceeds'}
                     checked={this.state.performance === 'exceeds'}
                     onChange={this.onRubricChange}
                     disabled={this.props.viewAs === ViewType.Student}
+                    style={styles.checkbox}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>Exceeds</summary>
@@ -284,13 +292,14 @@ class TeacherFeedback extends Component {
                   }
                 >
                   <input
-                    type={'radio'}
+                    type={'checkbox'}
                     id={'meetsButton'}
                     name={'rubric'}
                     value={'meets'}
                     checked={this.state.performance === 'meets'}
                     onChange={this.onRubricChange}
                     disabled={this.props.viewAs === ViewType.Student}
+                    style={styles.checkbox}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>Meets</summary>
@@ -305,13 +314,14 @@ class TeacherFeedback extends Component {
                   }
                 >
                   <input
-                    type={'radio'}
+                    type={'checkbox'}
                     id={'approachesButton'}
                     name={'rubric'}
                     value={'approaches'}
                     checked={this.state.performance === 'approaches'}
                     onChange={this.onRubricChange}
                     disabled={this.props.viewAs === ViewType.Student}
+                    style={styles.checkbox}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>Approaches</summary>
@@ -326,13 +336,14 @@ class TeacherFeedback extends Component {
                   }
                 >
                   <input
-                    type={'radio'}
+                    type={'checkbox'}
                     id={'noEvidenceButton'}
                     name={'rubric'}
                     value={'noEvidence'}
                     checked={this.state.performance === 'noEvidence'}
                     onChange={this.onRubricChange}
                     disabled={this.props.viewAs === ViewType.Student}
+                    style={styles.checkbox}
                   />
                   <details>
                     <summary style={styles.rubricHeader}>No Evidence</summary>
@@ -359,7 +370,11 @@ class TeacherFeedback extends Component {
           </div>
           <textarea
             id="ui-test-feedback-input"
-            style={styles.textInput}
+            style={
+              this.props.viewAs === ViewType.Student
+                ? styles.textInputStudent
+                : styles.textInput
+            }
             onChange={this.onCommentChange}
             placeholder={placeholderText}
             value={this.state.comment}
