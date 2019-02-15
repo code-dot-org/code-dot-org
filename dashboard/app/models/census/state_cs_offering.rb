@@ -35,6 +35,7 @@ class Census::StateCsOffering < ApplicationRecord
     KY
     LA
     MA
+    ME
     MD
     MI
     MO
@@ -63,6 +64,7 @@ class Census::StateCsOffering < ApplicationRecord
   INFERRED_NO_EXCLUSION_LIST = %w(
     CO
     ID
+    ME
     MI
     OH
   ).freeze
@@ -108,6 +110,8 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
     when 'MD'
       row_hash['STATE SCHOOL ID:']
+    when 'ME'
+      School.find_by(id: row_hash['NCES School ID: '])&.state_school_id
     when 'MO'
       row_hash['STATE_SCHOOL_ID']
     when 'MS'
@@ -323,6 +327,21 @@ class Census::StateCsOffering < ApplicationRecord
     10159
     10205
   ).freeze
+
+  ME_COURSE_CODES = [
+    'Computer Science Principles',
+    'Computer Programming',
+    'AP Computer Science A',
+    'Intro to Computer Programming',
+    'Exploring Computer Science',
+    'Computer Applications',
+    'Computer and Information Technology',
+    'C++ Programming',
+    'STEM: Computer Science Essentials',
+    'STEM: Computer Science Principles',
+    'Computer Programming,Other',
+    'Computer Technology'
+  ].freeze
 
   MI_COURSE_CODES = %w(
     10157
@@ -633,6 +652,8 @@ class Census::StateCsOffering < ApplicationRecord
       end
     when 'MD'
       MD_COURSE_CODES.select {|course| course == row_hash['SCED_CD']}
+    when 'ME'
+      ME_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
     when 'MO'
