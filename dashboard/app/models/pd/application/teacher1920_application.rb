@@ -37,6 +37,7 @@
 module Pd::Application
   class Teacher1920Application < TeacherApplicationBase
     include Pd::Teacher1920ApplicationConstants
+    include ScholarshipInfoConstants
 
     validates_uniqueness_of :user_id
 

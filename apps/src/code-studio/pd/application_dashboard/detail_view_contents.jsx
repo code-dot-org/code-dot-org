@@ -28,9 +28,9 @@ import {
   SectionHeaders as TeacherSectionHeaders,
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
-  ValidScores as TeacherValidScores,
-  ScholarshipDropdownOptions
+  ValidScores as TeacherValidScores
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import {
   InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,

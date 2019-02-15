@@ -21,14 +21,15 @@
 class Pd::ScholarshipInfo < ActiveRecord::Base
   include Pd::Application::ActiveApplicationModels
   include Pd::Application::ApplicationConstants
+  include ScholarshipInfoConstants
 
   # We began using scholarships in 2019-2020, so remove 2018-2019 from this list
   SCHOLARSHIP_YEARS = APPLICATION_YEARS.drop(1).freeze
 
   SCHOLARSHIP_STATUSES = [
-    NO = 'no'.freeze,
-    YES_CDO = 'yes_code_dot_org'.freeze,
-    YES_OTHER = 'yes_other'.freeze
+    NO,
+    YES_CDO,
+    YES_OTHER
   ].freeze
 
   belongs_to :user
