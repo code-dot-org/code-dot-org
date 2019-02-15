@@ -390,6 +390,56 @@ function runInputEvents() {
 // Updated
 function runCollisionEvents() {
   collisionEvents.forEach(function(event) {
+    var condition = event.condition;
+    var a = event.a();
+    var b = event.b();
+    var e = event.event;
+    var type;
+    if(a && b) {
+      if(!Array.isArray(a) && !Array.isArray(b)) {
+        type = a.immovable || b.immovable ? "overlap" : "collide";
+        if(a[type](b)) {
+          thisSprite = a;
+          otherSprite = b;
+          e();
+        }
+      } else if(!Array.isArray(a) && Array.isArray(b)) {
+        b.forEach(function(s) {
+          type = a.immovable || s.immovable ? "overlap" : "collide";
+          if(a[type](s)) {
+            thisSprite = a;
+            otherSprite = s;
+            e();
+          }
+        });
+      } else if(Array.isArray(a) && !Array.isArray(b)) {
+        a.forEach(function(s) {
+          type = b.immovable || s.immovable ? "overlap" : "collide";
+          if(b[type](s)) {
+            thisSprite = s;
+            otherSprite = b;
+            e();
+          }
+        });
+      } else {
+        a.forEach(function(s) {
+          b.forEach(function(p) {
+            type = s.immovable || p.immovable ? "overlap" : "collide";
+              if(s[type](p)) {
+                thisSprite = s;
+                otherSprite = p;
+                e();
+              }
+          });
+        });
+      }
+    }
+  });
+}
+
+/* 
+function runCollisionEvents() {
+  collisionEvents.forEach(function(event) {
     var a = event.a();
     var b = event.b();
     var type = event.type;
@@ -431,6 +481,8 @@ function runCollisionEvents() {
     }
   });
 }
+
+*/
 
 /* 
 function runCollisionEvents() {
@@ -493,23 +545,21 @@ function updateHUDText() {
     textSize(35);
     text(subTitle, 200, 250);
   }
-  if (customText.length > 0) {
-  	customText.forEach(function(textObj) {
-      var timeElapsed = new Date().getTime() - textObj.timeStarted;
-      if(textObj.duration > 0 && timeElapsed >= textObj.duration) {
-        console.log(textObj.text());
-        customText.splice(customText.indexOf(textObj), 1);
-      } else if(textObj.text()) {
-        //var color = textObj.color() ? textObj.color() : "black";
-        fill(textObj.color());
-        textAlign(CENTER);
-        //var size = textObj.size() ? textObj.size() : 20;
-        textSize(textObj.size());
-        //var location = textObj.location() ? textObj.location() : {x: 200, y: 200};
-        text(textObj.text(), textObj.location().x, textObj.location().y);
-      }
-    });
-  }
+}
+
+// New
+function printCustomText() {
+  customText.forEach(function(textObj) {
+    var timeElapsed = new Date().getTime() - textObj.timeStarted;
+    if(textObj.duration > 0 && timeElapsed >= textObj.duration) {
+      customText.splice(customText.indexOf(textObj), 1);
+    } else {
+      fill(textObj.color());
+      textAlign(CENTER);
+      textSize(textObj.size());
+      text(textObj.text(), textObj.location().x, textObj.location().y);
+    }
+  });
 }
 
 // Updated
@@ -523,4 +573,5 @@ function draw() {
   }
   drawSprites();
   updateHUDText();
+  printCustomText();
 }

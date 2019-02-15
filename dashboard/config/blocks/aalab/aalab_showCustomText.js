@@ -17,6 +17,7 @@ function showCustomText(text, location, size, color, duration) {
     }
   }
   if(overlapIndex >= 0) {
+    console.log(customText[overlapIndex].text());
     customText.splice(overlapIndex, 1);
   }
   customText.push({text: text, location: location, size: size, color: color, duration: parseInt(duration) * 1000, timeStarted: new Date().getTime()});
