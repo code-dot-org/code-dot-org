@@ -2,9 +2,10 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/express/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+family_name 'express'
 version_year '2019'
 
 stage 'Programming in Maze'
