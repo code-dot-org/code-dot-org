@@ -7814,6 +7814,8 @@ en:
               name: Crowdsourcing
             Relay Programming:
               name: Relay Programming
+            Graph Paper Programming:
+              name: Graph Paper Programming
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
