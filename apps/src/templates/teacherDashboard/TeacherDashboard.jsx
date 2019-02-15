@@ -57,6 +57,15 @@ class TeacherDashboard extends Component {
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
+          <Route
+            path={TeacherDashboardPath.loginInfo}
+            component={props => (
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                pegasusUrlPrefix={pegasusUrlPrefix}
+              />
+            )}
+          />
           {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
           {studentCount === 0 && (
             <Route
@@ -84,15 +93,6 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.stats}
             component={props => <StatsTableWithData />}
-          />
-          <Route
-            path={TeacherDashboardPath.loginInfo}
-            component={props => (
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                pegasusUrlPrefix={pegasusUrlPrefix}
-              />
-            )}
           />
         </Switch>
       </div>

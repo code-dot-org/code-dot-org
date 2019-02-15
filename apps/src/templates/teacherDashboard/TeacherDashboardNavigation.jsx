@@ -8,7 +8,7 @@ export const TeacherDashboardPath = {
   assessments: '/assessments',
   projects: '/projects',
   stats: '/stats',
-  manageStudents: '/manageStudents',
+  manageStudents: '/manage_students',
   loginInfo: '/login_info'
 };
 
