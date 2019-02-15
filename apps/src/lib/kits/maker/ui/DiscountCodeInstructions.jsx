@@ -67,7 +67,10 @@ export default class DiscountCodeInstructions extends Component {
       <div>
         <h1 style={styles.title}>Subsidized Circuit Playground Kits</h1>
         <h2>
-          <div>Discount code for subsidized kit: {this.props.discountCode}</div>
+          <div>
+            Discount code for subsidized kit:{' '}
+            <span style={styles.codeText}>{this.props.discountCode}</span>
+          </div>
           <div>(Expires {expirationString})</div>
         </h2>
         <div>
