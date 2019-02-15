@@ -46,7 +46,7 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div style={styles.explanation}>
-        <h2>Login information</h2>
+        <h2>{i18n.loginInformation()}</h2>
         {(loginType === SectionLoginType.word ||
           loginType === SectionLoginType.picture) && (
           <div>
@@ -105,7 +105,7 @@ class ManageStudentsLoginInfo extends Component {
             })}
           </p>
         )}
-        <h2>Login type</h2>
+        <h2>{i18n.loginType()}</h2>
         <LoginTypeParagraph
           sectionId={sectionId}
           onLoginTypeChanged={() => window.location.reload()}
