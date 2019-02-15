@@ -1,22 +1,23 @@
 function showCustomText(text, location, size, color, duration) {
-  testText = text ? text() : "";
-  location = location ? location : {x: 200, y: 200};
-  size = size ? size : 25;
-  color = color ? color : "black";
+  text = text() ? text : function() { return ""; };
+  location = location() ? location : function() { return {x: 200, y: 200}; };
+  size = size() ? size : function() { return 20; };
+  color = color() ? color : function() { return "black";};
   var overlapIndex = -1;
-  textSize(size);
-  var newTextWidth = textWidth(testText);
+  textSize(size());
+  var newTextWidth = textWidth(text());
   var newTextHeight = textLeading();
   for(var i = 0; i < customText.length && overlapIndex < 0; i++) {
-    textSize(customText[i].size);
+    textSize(customText[i].size());
     var customTextWidth = textWidth(customText[i].text());
     var customTextHeight = textLeading();
-    var overlapping = checkTextOverlap(location, newTextWidth, newTextHeight, customText[i].location, customTextWidth, customTextHeight);
+    var overlapping = checkTextOverlap(location(), newTextWidth, newTextHeight, customText[i].location(), customTextWidth, customTextHeight);
     if(overlapping && duration * 1000 == customText[i].duration) {
       overlapIndex = i;
     }
   }
   if(overlapIndex >= 0) {
+    console.log(customText[overlapIndex].text());
     customText.splice(overlapIndex, 1);
   }
   customText.push({text: text, location: location, size: size, color: color, duration: parseInt(duration) * 1000, timeStarted: new Date().getTime()});
