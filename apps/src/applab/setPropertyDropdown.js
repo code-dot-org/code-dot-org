@@ -72,6 +72,24 @@ var PROP_INFO = {
     type: 'string',
     defaultValue: '"red"'
   },
+  borderWidth: {
+    friendlyName: 'border-width',
+    internalName: 'borderWidth',
+    type: 'number',
+    defaultValue: '0'
+  },
+  borderColor: {
+    friendlyName: 'border-color',
+    internalName: 'borderColor',
+    type: 'string',
+    defaultValue: '"black"'
+  },
+  borderRadius: {
+    friendlyName: 'border-radius',
+    internalName: 'borderRadius',
+    type: 'number',
+    defaultValue: '0'
+  },
   fontSize: {
     friendlyName: 'font-size',
     internalName: 'fontSize',
@@ -238,7 +256,10 @@ PROPERTIES[ElementType.BUTTON] = {
     'textAlign',
     'image',
     'iconColor',
-    'hidden'
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.TEXT_INPUT] = {
@@ -254,7 +275,10 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.LABEL] = {
@@ -268,7 +292,10 @@ PROPERTIES[ElementType.LABEL] = {
     'backgroundColor',
     'fontSize',
     'textAlign',
-    'hidden'
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.DROPDOWN] = {
@@ -285,7 +312,10 @@ PROPERTIES[ElementType.DROPDOWN] = {
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.RADIO_BUTTON] = {
@@ -314,7 +344,10 @@ PROPERTIES[ElementType.IMAGE] = {
     'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
     'iconColor',
     'hidden',
-    'fit'
+    'fit',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CANVAS] = {
@@ -336,7 +369,10 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'textAlign',
     'readonly',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CHART] = {
@@ -507,6 +543,7 @@ function getPropertyValueDropdown(param2) {
       return getAssetDropdown('image');
     case 'text-color':
     case 'background-color':
+    case 'border-color':
     case 'icon-color':
       return [
         '"white"',
@@ -518,6 +555,9 @@ function getPropertyValueDropdown(param2) {
         'rgb(255,0,0,0.5)',
         '"#FF0000"'
       ];
+    case 'border-radius':
+    case 'border-width':
+      return ['0', '1', '2', '5', '10'];
     case 'text-align':
       return ['"left"', '"right"', '"center"', '"justify"'];
     case 'fit':
