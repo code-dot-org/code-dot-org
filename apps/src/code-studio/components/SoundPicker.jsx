@@ -93,6 +93,7 @@ export default class SoundPicker extends React.Component {
     );
 
     const displayFilesTab = this.state.mode === MODE.files;
+    const library = <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />;
     const body = displayFilesTab ? (
       <AssetManager
         assetChosen={this.props.assetChosen}
@@ -104,7 +105,7 @@ export default class SoundPicker extends React.Component {
         soundPlayer={this.props.soundPlayer}
       />
     ) : (
-      <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
+      library
     );
 
     if (this.props.libraryOnly) {
@@ -112,7 +113,7 @@ export default class SoundPicker extends React.Component {
         <div className="modal-content" style={styles.root}>
           {title}
           <hr style={styles.divider} />
-          <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
+          {library}
         </div>
       );
     } else {
