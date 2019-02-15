@@ -12,7 +12,7 @@ export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
-export CIRCLE_BUILD_NUM=$RANDOM$RANDOM
+export CIRCLE_BUILD_NUM=$DRONE_BUILD_NUMBER
 export CIRCLE_NODE_INDEX=1
 export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
 export CIRCLE_ARTIFACTS=/home/circleci/artifacts
@@ -23,8 +23,7 @@ mkdir $CIRCLE_ARTIFACTS
 # in a CI environment, then they don't exist by default.
 if $(git rev-parse --is-shallow-repository); then
     git remote set-branches --add origin staging test production
-    git remote show origin
-    mispipe "git fetch --depth 50 origin staging test production" ts
+    git fetch --depth 50 origin staging test production
     git branch -a
 fi
 
@@ -33,7 +32,7 @@ mysql -V
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
-mispipe "bundle install --verbose" ts
+bundle install --verbose
 
 # set up locals.yml
 # Need to actually write all the commented out lines also
@@ -43,7 +42,7 @@ netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
 bundler_use_sudo: false
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
-applitools_eyes_api_key: $APPLITOOLS_KEY
+#applitools_eyes_api_key: $APPLITOOLS_KEY
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 saucelabs_username: $SAUCE_USERNAME
@@ -68,10 +67,10 @@ echo "Wrote secrets from env vars into locals.yml."
 set -x
 
 # name: rake install
-RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
+RAKE_VERBOSE=true bundle exec rake install --trace
 
 # name: rake build
-RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
+RAKE_VERBOSE=true bundle exec rake build --trace
 
 # apply test settings for after unit tests
 echo "
@@ -87,7 +86,7 @@ sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 " >> locals.yml
 
 # name: seed ui tests
-bundle exec rake circle:seed_ui_test
+bundle exec rake circle:seed_ui_test --trace
 
 # name: run ui tests
 bundle exec rake circle:run_ui_tests --trace
