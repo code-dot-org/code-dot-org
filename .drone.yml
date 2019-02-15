@@ -54,6 +54,7 @@ steps:
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
+    - echo "Running on $DRONE_RUNNER_HOSTNAME"
     - df -h
     - sudo chown -R circleci:circleci .
     - # cache is restored to source directory, so we need to copy it into the right place
@@ -198,6 +199,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 1856e69563f717a947993eef34b59f0184effcc69c5c7e54fb622e00ff0acfef
+hmac: 05aae5942f8e2704154ab02e738b064da6a72e659e219a68df1f851fc741c07a
 
 ...
