@@ -466,11 +466,5 @@ module Pd
         :student_tr_count
       ]
     }
-
-    SCHOLARSHIP_DROPDOWN_OPTIONS = [
-      {value: Pd::ScholarshipInfo::NO, label: "No"},
-      {value: Pd::ScholarshipInfo::YES_CDO, label: "Yes, Code.org scholarship"},
-      {value: Pd::ScholarshipInfo::YES_OTHER, label: "Yes, other scholarship"}
-    ]
   end
 end
