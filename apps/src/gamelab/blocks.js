@@ -127,7 +127,9 @@ const customInputTypes = {
       };
       currentInputRow.appendTitle(inputConfig.label).appendTitle(
         new Blockly.FieldDropdown([['Choose', 'Choose']], () => {
-          dashboard.assets.showAssetManager(onSelect, 'audio');
+          dashboard.assets.showAssetManager(onSelect, 'audio', null, {
+            libraryOnly: true
+          });
         }),
         inputConfig.name
       );

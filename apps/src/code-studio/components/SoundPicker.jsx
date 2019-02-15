@@ -40,6 +40,7 @@ export default class SoundPicker extends React.Component {
     uploadsEnabled: PropTypes.bool.isRequired,
     showUnderageWarning: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
+    libraryOnly: PropTypes.bool.isRequired,
     //For logging upload failures
     projectId: PropTypes.string,
     soundPlayer: PropTypes.object
@@ -106,17 +107,28 @@ export default class SoundPicker extends React.Component {
       <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
     );
 
-    return (
-      <div className="modal-content" style={styles.root}>
-        {title}
-        {this.props.showUnderageWarning && (
-          <p style={styles.warning}>
-            Warning: Do not upload anything that contains personal information.
-          </p>
-        )}
-        {modeSwitch}
-        {body}
-      </div>
-    );
+    if (this.props.libraryOnly) {
+      return (
+        <div className="modal-content" style={styles.root}>
+          {title}
+          <hr style={styles.divider} />
+          <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
+        </div>
+      );
+    } else {
+      return (
+        <div className="modal-content" style={styles.root}>
+          {title}
+          {this.props.showUnderageWarning && (
+            <p style={styles.warning}>
+              Warning: Do not upload anything that contains personal
+              information.
+            </p>
+          )}
+          {modeSwitch}
+          {body}
+        </div>
+      );
+    }
   }
 }
