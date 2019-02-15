@@ -101,6 +101,7 @@ export default class SoundPicker extends React.Component {
         useFilesApi={this.props.useFilesApi}
         projectId={this.props.projectId}
         soundPlayer={this.props.soundPlayer}
+        disableAudioRecording={!this.props.uploadsEnabled}
       />
     ) : (
       <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
