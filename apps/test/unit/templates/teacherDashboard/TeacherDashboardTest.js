@@ -25,4 +25,20 @@ describe('TeacherDashboard', () => {
     );
     expect(wrapper.find('TeacherDashboardHeader')).to.not.exist;
   });
+
+  it('defaults to progress tab if no tab provided in route', () => {
+    const location = {pathname: '/'};
+    const wrapper = shallow(
+      <TeacherDashboard {...DEFAULT_PROPS} location={location} />
+    );
+    expect(wrapper.instance().props.location.pathname).to.equal('/progress');
+  });
+
+  it('defaults to progress tab if incorrect tab provided in route', () => {
+    const location = {pathname: '/some_fake_path'};
+    const wrapper = shallow(
+      <TeacherDashboard {...DEFAULT_PROPS} location={location} />
+    );
+    expect(wrapper.instance().props.location.pathname).to.equal('/progress');
+  });
 });
