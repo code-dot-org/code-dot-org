@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
+import {TeacherDashboardPath} from './TeacherDashboardNavigation';
 import {getStudentCount} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
@@ -37,43 +38,53 @@ class TeacherDashboard extends Component {
       studentCount
     } = this.props;
 
+    if (!Object.values(TeacherDashboardPath).includes(location.pathname)) {
+      location.pathname = TeacherDashboardPath.progress;
+    }
+
     // Include header components unless we are on the /login_info page.
-    const includeHeader = location.pathname !== '/login_info';
+    const includeHeader = location.pathname !== TeacherDashboardPath.loginInfo;
 
     return (
       <div>
         {includeHeader && <TeacherDashboardHeader sectionName={sectionName} />}
         <Switch>
           <Route
-            path="/manage_students"
+            path={TeacherDashboardPath.manageStudents}
             component={props => (
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
-          {/* Break out of switch if we have 0 students. Display a message directing user to go to "Manage Students" instead. */}
+          {/* Break out of Switch if we have 0 students. Display EmptySection component instead instead. */}
           {studentCount === 0 && (
             <Route
               component={props => <EmptySection sectionId={sectionId} />}
             />
           )}
-          <Route path="/progress" component={props => <SectionProgress />} />
           <Route
-            path="/text_responses"
+            path={TeacherDashboardPath.progress}
+            component={props => <SectionProgress />}
+          />
+          <Route
+            path={TeacherDashboardPath.textResponses}
             component={props => <TextResponses />}
           />
           <Route
-            path="/assessments"
+            path={TeacherDashboardPath.assessments}
             component={props => <SectionAssessments />}
           />
           <Route
-            path="/projects"
+            path={TeacherDashboardPath.projects}
             component={props => (
               <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
             )}
           />
-          <Route path="/stats" component={props => <StatsTableWithData />} />
           <Route
-            path="/login_info"
+            path={TeacherDashboardPath.stats}
+            component={props => <StatsTableWithData />}
+          />
+          <Route
+            path={TeacherDashboardPath.loginInfo}
             component={props => (
               <SectionLoginInfo
                 studioUrlPrefix={studioUrlPrefix}
@@ -81,8 +92,6 @@ class TeacherDashboard extends Component {
               />
             )}
           />
-          {/* Render Progress tab by default */}
-          <Route component={props => <SectionProgress />} />
         </Switch>
       </div>
     );
