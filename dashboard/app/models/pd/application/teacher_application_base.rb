@@ -40,7 +40,7 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
-    include ScholarshipInfoConstants
+    include Pd::ScholarshipInfoConstants
 
     serialized_attrs %w(
       pd_workshop_id
