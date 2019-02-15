@@ -274,6 +274,7 @@ level 'level7_copy'"
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+    level_group.stubs(:dsl_text).returns(level_group_input_dsl)
 
     # Copy the level group and all its sub levels.
     level_group_copy = level_group.clone_with_suffix('_copy')
