@@ -18,7 +18,8 @@ class ManageStudentsLoginInfo extends Component {
     loginType: PropTypes.string,
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string,
+    pegasusUrlPrefix: PropTypes.string
   };
 
   // TODO: (madelynkasula) Delete this method once the old pegasus-served teacher dashboard
@@ -34,7 +35,14 @@ class ManageStudentsLoginInfo extends Component {
   };
 
   render() {
-    const {loginType, sectionId, sectionCode, studioUrlPrefix} = this.props;
+    const {
+      loginType,
+      sectionId,
+      sectionCode,
+      studioUrlPrefix,
+      pegasusUrlPrefix
+    } = this.props;
+
     return (
       <div style={styles.explanation}>
         <h2>Login information</h2>
@@ -87,7 +95,7 @@ class ManageStudentsLoginInfo extends Component {
           <a
             id="uitest-privacy-link"
             target="_blank"
-            href={'/privacy/student-privacy'}
+            href={`${pegasusUrlPrefix}/privacy/student-privacy`}
           >
             {i18n.privacyDocExplanation()}
           </a>
