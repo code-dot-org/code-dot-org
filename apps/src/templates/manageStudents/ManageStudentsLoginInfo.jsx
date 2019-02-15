@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 
 const styles = {
   explanation: {
@@ -84,6 +85,25 @@ class ManageStudentsLoginInfo extends Component {
               </a>
             </p>
           </div>
+        )}
+        {loginType === SectionLoginType.google_classroom && (
+          <p>
+            {`${i18n.loginInfo_signingInDescription()} ${i18n.loginInfo_signingInGoogle()}`}
+            <br />
+            <img src={googleSignInButton} style={{maxWidth: '35%'}} />
+            <br />
+            {i18n.loginInfo_oauthSectionCodes({
+              provider: i18n.loginTypeGoogleClassroom()
+            })}
+          </p>
+        )}
+        {loginType === SectionLoginType.clever && (
+          <p>
+            {i18n.loginInfo_signingInClever()}{' '}
+            {i18n.loginInfo_oauthSectionCodes({
+              provider: i18n.loginTypeClever()
+            })}
+          </p>
         )}
         <h2>Login type</h2>
         <LoginTypeParagraph
