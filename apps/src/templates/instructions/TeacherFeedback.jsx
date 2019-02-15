@@ -11,11 +11,9 @@ import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
-  content: {
-    padding: 10
-  },
   textInput: {
-    margin: 10,
+    marginTop: 0,
+    marginBottom: 16,
     display: 'block',
     width: '90%'
   },
@@ -23,7 +21,7 @@ const styles = {
     margin: 10,
     display: 'block',
     width: '90%',
-    backgroundColor: color.light_cyan
+    backgroundColor: '#d9eff7'
   },
   button: {
     margin: 10,
@@ -34,7 +32,7 @@ const styles = {
     margin: 10
   },
   time: {
-    margin: 10,
+    //margin: 10,
     fontStyle: 'italic',
     display: 'flex',
     alignItems: 'center'
@@ -48,7 +46,9 @@ const styles = {
     justifyContent: 'flex-start'
   },
   rubricHeader: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 14,
+    marginLeft: 10
   },
   boxSelected: {
     border: `5px solid ${color.lightest_gray}`,
@@ -57,40 +57,50 @@ const styles = {
   performanceArea: {
     display: 'flex',
     justifyContent: 'flex-start',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    margin: '8px 16px 20px 16px'
   },
   keyConceptArea: {
-    padding: 10,
-    flexGrow: 1
+    flexGrow: 1,
+    marginRight: 28
+  },
+  keyConcepts: {
+    fontSize: 14
   },
   rubricArea: {
-    padding: 10,
     flexGrow: 2
   },
   performanceLevelHeader: {
     display: 'flex',
     justifyContent: 'flex-start',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    padding: '2px 10px'
   },
   performanceLevelHeaderOnHover: {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    border: `1px solid ${color.cyan}`,
-    borderRadius: 10
+    border: '1px solid #d9eff7',
+    borderRadius: 10,
+    padding: '2px 10px'
   },
   performanceLevelHeaderSelected: {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    border: `1px solid ${color.cyan}`,
-    backgroundColor: color.light_cyan,
-    borderRadius: 10
+    backgroundColor: '#d9eff7',
+    borderRadius: 10,
+    padding: '2px 10px'
   },
   h1: {
-    color: color.cyan
+    color: color.cyan,
+    marginTop: 8,
+    marginBottom: 12
   },
-  checkbox: {}
+  checkbox: {},
+  commentArea: {
+    margin: '0px 16px 16px 16px'
+  }
 };
 
 const ErrorType = {
@@ -257,7 +267,7 @@ class TeacherFeedback extends Component {
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
               <h1 style={styles.h1}>Key Concepts</h1>
-              <p>{this.state.rubric.keyConcept}</p>
+              <p style={styles.keyConcepts}>{this.state.rubric.keyConcept}</p>
             </div>
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}>Evaluation Rubric</h1>
@@ -354,10 +364,53 @@ class TeacherFeedback extends Component {
             </div>
           </div>
         )}
-        <div>
-          <div style={styles.studentTime}>
-            <h1 style={styles.h1}>Teacher Feedback</h1>
-            {this.props.viewAs === ViewType.Student &&
+        <div style={styles.commentArea}>
+          <div>
+            <div style={styles.studentTime}>
+              <h1 style={styles.h1}>Teacher Feedback</h1>
+              {this.props.viewAs === ViewType.Student &&
+                this.state.latestFeedback.length > 0 && (
+                  <div style={styles.time} id="ui-test-feedback-time">
+                    {i18n.lastUpdated({
+                      time: moment
+                        .min(moment(), moment(latestFeedback.created_at))
+                        .fromNow()
+                    })}
+                  </div>
+                )}
+            </div>
+            <textarea
+              id="ui-test-feedback-input"
+              style={
+                this.props.viewAs === ViewType.Student
+                  ? styles.textInputStudent
+                  : styles.textInput
+              }
+              onChange={this.onCommentChange}
+              placeholder={placeholderText}
+              value={this.state.comment}
+              readOnly={this.props.viewAs === ViewType.Student}
+            />
+          </div>
+          <div style={styles.footer}>
+            {this.props.viewAs === ViewType.Teacher && (
+              <div style={styles.button}>
+                <Button
+                  id="ui-test-submit-feedback"
+                  text={buttonText}
+                  onClick={this.onSubmitFeedback}
+                  color={Button.ButtonColor.blue}
+                  disabled={buttonDisabled}
+                />
+                {this.state.errorState === ErrorType.Save && (
+                  <span>
+                    <i className="fa fa-warning" style={styles.errorIcon} />
+                    {i18n.feedbackSaveError()}
+                  </span>
+                )}
+              </div>
+            )}
+            {this.props.viewAs === ViewType.Teacher &&
               this.state.latestFeedback.length > 0 && (
                 <div style={styles.time} id="ui-test-feedback-time">
                   {i18n.lastUpdated({
@@ -368,47 +421,6 @@ class TeacherFeedback extends Component {
                 </div>
               )}
           </div>
-          <textarea
-            id="ui-test-feedback-input"
-            style={
-              this.props.viewAs === ViewType.Student
-                ? styles.textInputStudent
-                : styles.textInput
-            }
-            onChange={this.onCommentChange}
-            placeholder={placeholderText}
-            value={this.state.comment}
-            readOnly={this.props.viewAs === ViewType.Student}
-          />
-        </div>
-        <div style={styles.footer}>
-          {this.props.viewAs === ViewType.Teacher && (
-            <div style={styles.button}>
-              <Button
-                id="ui-test-submit-feedback"
-                text={buttonText}
-                onClick={this.onSubmitFeedback}
-                color={Button.ButtonColor.blue}
-                disabled={buttonDisabled}
-              />
-              {this.state.errorState === ErrorType.Save && (
-                <span>
-                  <i className="fa fa-warning" style={styles.errorIcon} />
-                  {i18n.feedbackSaveError()}
-                </span>
-              )}
-            </div>
-          )}
-          {this.props.viewAs === ViewType.Teacher &&
-            this.state.latestFeedback.length > 0 && (
-              <div style={styles.time} id="ui-test-feedback-time">
-                {i18n.lastUpdated({
-                  time: moment
-                    .min(moment(), moment(latestFeedback.created_at))
-                    .fromNow()
-                })}
-              </div>
-            )}
         </div>
       </div>
     );
