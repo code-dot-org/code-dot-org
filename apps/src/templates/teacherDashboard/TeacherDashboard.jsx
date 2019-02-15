@@ -55,7 +55,7 @@ class TeacherDashboard extends Component {
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
-          {/* Break out of Switch if we have 0 students. Display EmptySection component instead instead. */}
+          {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
           {studentCount === 0 && (
             <Route
               component={props => <EmptySection sectionId={sectionId} />}
