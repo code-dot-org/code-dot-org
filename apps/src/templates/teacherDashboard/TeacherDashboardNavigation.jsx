@@ -4,8 +4,16 @@ import i18n from '@cdo/locale';
 
 const teacherDashboardLinks = [
   {
-    label: i18n.teacherTabManageStudents(),
-    url: '/manage_students'
+    label: i18n.teacherTabProgress(),
+    url: '/progress'
+  },
+  {
+    label: i18n.teacherTabStatsTextResponses(),
+    url: '/text_responses'
+  },
+  {
+    label: i18n.teacherTabAssessments(),
+    url: '/assessments'
   },
   {
     label: i18n.teacherTabProjects(),
@@ -16,16 +24,8 @@ const teacherDashboardLinks = [
     url: '/stats'
   },
   {
-    label: i18n.teacherTabStatsTextResponses(),
-    url: '/text_responses'
-  },
-  {
-    label: i18n.teacherTabProgress(),
-    url: '/progress'
-  },
-  {
-    label: i18n.teacherTabAssessments(),
-    url: '/assessments'
+    label: i18n.teacherTabManageStudents(),
+    url: '/manage_students'
   }
 ];
 
