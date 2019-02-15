@@ -138,6 +138,7 @@ class TopInstructions extends Component {
         ? TabType.COMMENTS
         : TabType.INSTRUCTIONS,
       feedbacks: [],
+      rubric: null,
       displayFeedbackTeacherFacing: teacherViewingStudentWork
     };
   }
@@ -166,6 +167,18 @@ class TopInstructions extends Component {
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
         this.setState({feedbacks: data});
+      });
+    }
+    //While this is behind an experiment flag we will only pull the rubric
+    //if the experiment is enable. This should prevent us from showing the
+    //rubric if not in the experiment.
+    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+      $.ajax({
+        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      }).done(data => {
+        this.setState({rubric: data});
       });
     }
   }
@@ -293,8 +306,9 @@ class TopInstructions extends Component {
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
     const displayFeedbackStudent =
       this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-    const displayFeedback =
-      displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
+    const displayFeedbackTeacher =
+      this.props.viewAs === ViewType.Teacher && this.state.rubric;
+    const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
       this.state.displayFeedbackTeacherFacing;
@@ -383,7 +397,15 @@ class TopInstructions extends Component {
               />
             )}
             {this.state.tabSelected === TabType.COMMENTS && (
-              <TeacherFeedback user={this.props.user} ref="commentTab" />
+              <TeacherFeedback
+                user={this.props.user}
+                disabledMode={
+                  this.props.viewAs === ViewType.Student ||
+                  !this.state.displayFeedbackTeacherFacing
+                }
+                rubric={this.state.rubric}
+                ref="commentTab"
+              />
             )}
           </div>
           {!this.props.isEmbedView && (

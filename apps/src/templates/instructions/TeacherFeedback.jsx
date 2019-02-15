@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   textInput: {
@@ -112,6 +111,14 @@ const ErrorType = {
 class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
+    disabledMode: PropTypes.bool,
+    rubric: PropTypes.shape({
+      keyConcept: PropTypes.string,
+      exceeds: PropTypes.string,
+      meets: PropTypes.string,
+      approaches: PropTypes.string,
+      noEvidence: PropTypes.string
+    }),
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']),
     serverLevelId: PropTypes.number,
@@ -130,8 +137,7 @@ class TeacherFeedback extends Component {
       latestFeedback: [],
       submitting: false,
       errorState: ErrorType.NoError,
-      token: null,
-      rubric: null
+      token: null
     };
   }
 
@@ -153,7 +159,7 @@ class TeacherFeedback extends Component {
           performance: data[0].performance
         });
       });
-    } else {
+    } else if (!this.props.disabledMode) {
       $.ajax({
         url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${
           this.state.studentId
@@ -174,18 +180,6 @@ class TeacherFeedback extends Component {
         .fail((jqXhr, status) => {
           this.setState({errorState: ErrorType.Load});
         });
-    }
-    //While this is behind an experiment flag we will only pull the rubric
-    //if the experiment is enable. This should prevent us from showing the
-    //rubric if not in the experiment.
-    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
-      $.ajax({
-        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({rubric: data});
-      });
     }
   };
 
@@ -263,11 +257,11 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        {this.state.rubric && (
+        {this.props.rubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
               <h1 style={styles.h1}>Key Concepts</h1>
-              <p style={styles.keyConcepts}>{this.state.rubric.keyConcept}</p>
+              <p style={styles.keyConcepts}>{this.props.rubric.keyConcept}</p>
             </div>
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}>Evaluation Rubric</h1>
@@ -279,19 +273,24 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  <input
-                    type={'checkbox'}
-                    id={'exceedsButton'}
-                    name={'rubric'}
-                    value={'exceeds'}
-                    checked={this.state.performance === 'exceeds'}
-                    onChange={this.onRubricChange}
-                    disabled={this.props.viewAs === ViewType.Student}
-                    style={styles.checkbox}
-                  />
+                  {!(
+                    this.props.disabledMode &&
+                    this.props.viewAs === ViewType.Teacher
+                  ) && (
+                    <input
+                      type={'checkbox'}
+                      id={'exceedsButton'}
+                      name={'rubric'}
+                      value={'exceeds'}
+                      checked={this.state.performance === 'exceeds'}
+                      onChange={this.onRubricChange}
+                      disabled={this.props.disabledMode}
+                      style={styles.checkbox}
+                    />
+                  )}
                   <details>
                     <summary style={styles.rubricHeader}>Exceeds</summary>
-                    <p>{this.state.rubric.exceeds}</p>
+                    <p>{this.props.rubric.exceeds}</p>
                   </details>
                 </div>
                 <div
@@ -301,19 +300,24 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  <input
-                    type={'checkbox'}
-                    id={'meetsButton'}
-                    name={'rubric'}
-                    value={'meets'}
-                    checked={this.state.performance === 'meets'}
-                    onChange={this.onRubricChange}
-                    disabled={this.props.viewAs === ViewType.Student}
-                    style={styles.checkbox}
-                  />
+                  {!(
+                    this.props.disabledMode &&
+                    this.props.viewAs === ViewType.Teacher
+                  ) && (
+                    <input
+                      type={'checkbox'}
+                      id={'meetsButton'}
+                      name={'rubric'}
+                      value={'meets'}
+                      checked={this.state.performance === 'meets'}
+                      onChange={this.onRubricChange}
+                      disabled={this.props.disabledMode}
+                      style={styles.checkbox}
+                    />
+                  )}
                   <details>
                     <summary style={styles.rubricHeader}>Meets</summary>
-                    <p>{this.state.rubric.meets}</p>
+                    <p>{this.props.rubric.meets}</p>
                   </details>
                 </div>
                 <div
@@ -323,19 +327,24 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  <input
-                    type={'checkbox'}
-                    id={'approachesButton'}
-                    name={'rubric'}
-                    value={'approaches'}
-                    checked={this.state.performance === 'approaches'}
-                    onChange={this.onRubricChange}
-                    disabled={this.props.viewAs === ViewType.Student}
-                    style={styles.checkbox}
-                  />
+                  {!(
+                    this.props.disabledMode &&
+                    this.props.viewAs === ViewType.Teacher
+                  ) && (
+                    <input
+                      type={'checkbox'}
+                      id={'approachesButton'}
+                      name={'rubric'}
+                      value={'approaches'}
+                      checked={this.state.performance === 'approaches'}
+                      onChange={this.onRubricChange}
+                      disabled={this.props.disabledMode}
+                      style={styles.checkbox}
+                    />
+                  )}
                   <details>
                     <summary style={styles.rubricHeader}>Approaches</summary>
-                    <p>{this.state.rubric.approaches}</p>
+                    <p>{this.props.rubric.approaches}</p>
                   </details>
                 </div>
                 <div
@@ -345,30 +354,80 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  <input
-                    type={'checkbox'}
-                    id={'noEvidenceButton'}
-                    name={'rubric'}
-                    value={'noEvidence'}
-                    checked={this.state.performance === 'noEvidence'}
-                    onChange={this.onRubricChange}
-                    disabled={this.props.viewAs === ViewType.Student}
-                    style={styles.checkbox}
-                  />
+                  {!(
+                    this.props.disabledMode &&
+                    this.props.viewAs === ViewType.Teacher
+                  ) && (
+                    <input
+                      type={'checkbox'}
+                      id={'noEvidenceButton'}
+                      name={'rubric'}
+                      value={'noEvidence'}
+                      checked={this.state.performance === 'noEvidence'}
+                      onChange={this.onRubricChange}
+                      disabled={this.props.disabledMode}
+                      style={styles.checkbox}
+                    />
+                  )}
                   <details>
                     <summary style={styles.rubricHeader}>No Evidence</summary>
-                    <p>{this.state.rubric.noEvidence}</p>
+                    <p>{this.props.rubric.noEvidence}</p>
                   </details>
                 </div>
               </form>
             </div>
           </div>
         )}
-        <div style={styles.commentArea}>
-          <div>
-            <div style={styles.studentTime}>
-              <h1 style={styles.h1}>Teacher Feedback</h1>
-              {this.props.viewAs === ViewType.Student &&
+        {!(
+          this.props.disabledMode && this.props.viewAs === ViewType.Teacher
+        ) && (
+          <div style={styles.commentArea}>
+            <div>
+              <div style={styles.studentTime}>
+                <h1 style={styles.h1}>Teacher Feedback</h1>
+                {this.props.viewAs === ViewType.Student &&
+                  this.state.latestFeedback.length > 0 && (
+                    <div style={styles.time} id="ui-test-feedback-time">
+                      {i18n.lastUpdated({
+                        time: moment
+                          .min(moment(), moment(latestFeedback.created_at))
+                          .fromNow()
+                      })}
+                    </div>
+                  )}
+              </div>
+              <textarea
+                id="ui-test-feedback-input"
+                style={
+                  this.props.disabledMode
+                    ? styles.textInputStudent
+                    : styles.textInput
+                }
+                onChange={this.onCommentChange}
+                placeholder={placeholderText}
+                value={this.state.comment}
+                readOnly={this.props.disabledMode}
+              />
+            </div>
+            <div style={styles.footer}>
+              {this.props.viewAs === ViewType.Teacher && (
+                <div style={styles.button}>
+                  <Button
+                    id="ui-test-submit-feedback"
+                    text={buttonText}
+                    onClick={this.onSubmitFeedback}
+                    color={Button.ButtonColor.blue}
+                    disabled={buttonDisabled}
+                  />
+                  {this.state.errorState === ErrorType.Save && (
+                    <span>
+                      <i className="fa fa-warning" style={styles.errorIcon} />
+                      {i18n.feedbackSaveError()}
+                    </span>
+                  )}
+                </div>
+              )}
+              {this.props.viewAs === ViewType.Teacher &&
                 this.state.latestFeedback.length > 0 && (
                   <div style={styles.time} id="ui-test-feedback-time">
                     {i18n.lastUpdated({
@@ -379,49 +438,8 @@ class TeacherFeedback extends Component {
                   </div>
                 )}
             </div>
-            <textarea
-              id="ui-test-feedback-input"
-              style={
-                this.props.viewAs === ViewType.Student
-                  ? styles.textInputStudent
-                  : styles.textInput
-              }
-              onChange={this.onCommentChange}
-              placeholder={placeholderText}
-              value={this.state.comment}
-              readOnly={this.props.viewAs === ViewType.Student}
-            />
           </div>
-          <div style={styles.footer}>
-            {this.props.viewAs === ViewType.Teacher && (
-              <div style={styles.button}>
-                <Button
-                  id="ui-test-submit-feedback"
-                  text={buttonText}
-                  onClick={this.onSubmitFeedback}
-                  color={Button.ButtonColor.blue}
-                  disabled={buttonDisabled}
-                />
-                {this.state.errorState === ErrorType.Save && (
-                  <span>
-                    <i className="fa fa-warning" style={styles.errorIcon} />
-                    {i18n.feedbackSaveError()}
-                  </span>
-                )}
-              </div>
-            )}
-            {this.props.viewAs === ViewType.Teacher &&
-              this.state.latestFeedback.length > 0 && (
-                <div style={styles.time} id="ui-test-feedback-time">
-                  {i18n.lastUpdated({
-                    time: moment
-                      .min(moment(), moment(latestFeedback.created_at))
-                      .fromNow()
-                  })}
-                </div>
-              )}
-          </div>
-        </div>
+        )}
       </div>
     );
   }
