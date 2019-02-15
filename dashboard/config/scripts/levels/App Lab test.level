@@ -53,8 +53,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "free_play": "true",
-    "app_width": "320",
-    "app_height": "480",
     "disable_examples": "false",
     "start_blocks": "var x = 10;\r\nx = x + 10;",
     "show_turtle_before_run": "true",

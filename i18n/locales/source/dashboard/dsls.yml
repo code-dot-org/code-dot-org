@@ -1965,6 +1965,7 @@ en:
       OPD-K5 CS Tips: {}
       OPD-K5 Celebrate: {}
       OPD-K5 Congrats: {}
+      OPD-K5 CongratsFinal: {}
       OPD-K5 Connect: {}
       OPD-K5 Culture: {}
       OPD-K5 Design: {}
@@ -1997,6 +1998,7 @@ en:
       OPD-K5 Stage5Review: {}
       OPD-K5 Stage5Start: {}
       OPD-K5 Stage6Go: {}
+      OPD-K5 Stage6Review: {}
       OPD-K5 Stage6Start: {}
       OPD-K5 Stage7Go: {}
       OPD-K5 Stage7Start: {}
@@ -2004,6 +2006,7 @@ en:
       OPD-K5 Stage8Start: {}
       OPD-K5 Stage9Go: {}
       OPD-K5 Stage9Start: {}
+      OPD-K5 Stage9Start2: {}
       OPD-K5 Unplugged: {}
       OPD-K5 Using CS: {}
       OPD-K5 Vocabulary: {}
@@ -9571,6 +9574,17 @@ en:
         2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
         2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
         2<sup>4</sup> = 16 times as many values: 2<sup>4</sup> = 16 times as many values
+      U1 L01 CYU MC:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
+      U1 L02 CYU MC:
+        '1': '1'
+        '3': '3'
+        'The score is: 1': 'The score is: 1'
+        'The score is: score': 'The score is: score'
       U1L07 Assessment 1:
         A: A
         B: B

@@ -628,7 +628,6 @@ class ContactRollups
     start = Time.now
     COURSE_ARRAY.each do |course|
       update_professional_learning_attendance_for_course_from_pd_attendances course
-      update_professional_learning_attendance_for_course_from_workshop_attendance course
       update_professional_learning_attendance_for_course_from_sections course
     end
     log_completion(start)
@@ -652,34 +651,6 @@ class ContactRollups
         WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
         ELSE #{DEST_TABLE_NAME}.professional_learning_attended
       END
-    WHERE #{DEST_TABLE_NAME}.email = src.email"
-  end
-
-  # Updates professional learning attendance based on workshop_attendance table
-  # @param course [String] name of course to update for
-  def self.update_professional_learning_attendance_for_course_from_workshop_attendance(course)
-    PEGASUS_REPORTING_DB_WRITER.run "
-    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT DISTINCT users.email
-        FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
-          INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
-          INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
-          INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = workshop_attendance.teacher_id
-        WHERE program_type =
-        CASE '#{course}'
-          WHEN 'CS in Science' THEN 1
-          WHEN 'CS in Algebra' THEN 2
-          WHEN 'Exploring Computer Science' THEN 3
-          WHEN 'CS Principles' THEN 4
-          WHEN 'CS Fundamentals' THEN 5
-        END
-      ) src
-    SET #{DEST_TABLE_NAME}.professional_learning_attended =
-    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
-    CASE LOCATE('#{course}', COALESCE(#{DEST_TABLE_NAME}.professional_learning_attended,''))
-      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
-      ELSE #{DEST_TABLE_NAME}.professional_learning_attended
-    END
     WHERE #{DEST_TABLE_NAME}.email = src.email"
   end
 
@@ -919,17 +890,11 @@ class ContactRollups
     start = Time.now
     log "Updating district information from users"
 
-    # note that user district information seems less good than dashboard.pd_enrollments. So
-    # far no user has had district info where dashboard.pd_enrollments did not. And user district info
-    # has district names like "open csp".
-    districts = District.all.index_by(&:id)
-
     # Use optimizer hint to set a custom query execution timeout
     users_query = <<-END_OF_STRING
       SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */
              email
            , JSON_EXTRACT(properties, '$.ops_school') AS ops_school
-           , JSON_EXTRACT(properties, '$.district_id') AS district_id
       FROM #{DASHBOARD_DB_NAME}.users_view
       WHERE deleted_at IS NULL
         AND (length(email) > 0)
@@ -944,13 +909,6 @@ class ContactRollups
       unless user[:ops_school].nil?
         PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
             update(school_name: user[:ops_school])
-      end
-
-      unless user[:district_id].nil?
-        district = districts[user[:district_id]]
-        unless district.nil?
-          PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).update(district_name: district.name)
-        end
       end
       user = grab_next(users_iterator)
     end

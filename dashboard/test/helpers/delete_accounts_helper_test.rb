@@ -720,124 +720,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.cohorts_users
-  # Table: dashboard.cohorts_deleted_users
-  #
-
-  test 'removes relationship between user and any cohorts' do
-    user = create :teacher
-    cohort = create :cohort
-    cohort.teachers << user
-    cohort.teachers << create(:teacher) # a second teacher
-
-    assert_equal 2, cohort.teachers.with_deleted.size
-    assert_equal 0, cohort.deleted_teachers.with_deleted.size
-
-    purge_user user
-    cohort.reload
-
-    assert_equal 1, cohort.teachers.with_deleted.size
-    assert_equal 0, cohort.deleted_teachers.with_deleted.size
-  end
-
-  test 'will not remove more than 10 cohorts_users rows' do
-    teacher = create :teacher
-    11.times do
-      cohort = create :cohort
-      cohort.teachers << teacher
-    end
-
-    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
-      purge_user teacher
-    end
-
-    assert_equal <<~MESSAGE, err.message
-      Safety constraints only permit deleting up to 10 rows from cohorts_users, but found 11 rows.
-      If you are a developer attempting to manually purge this account, run
-
-        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
-
-      to bypass this constraint and purge the user from our system.
-    MESSAGE
-  end
-
-  test 'removes cohorts_deleted_users rows' do
-    user = create :teacher
-    cohort = create :cohort
-    cohort.deleted_teachers << user
-    cohort.deleted_teachers << create(:teacher) # a second teacher
-
-    assert_equal 0, cohort.teachers.with_deleted.size
-    assert_equal 2, cohort.deleted_teachers.with_deleted.size
-
-    purge_user user
-    cohort.reload
-
-    assert_equal 0, cohort.teachers.with_deleted.size
-    assert_equal 1, cohort.deleted_teachers.with_deleted.size
-  end
-
-  test 'will not remove more than 10 cohorts_deleted_users rows' do
-    teacher = create :teacher
-    11.times do
-      cohort = create :cohort
-      cohort.deleted_teachers << teacher
-    end
-
-    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
-      purge_user teacher
-    end
-
-    assert_equal <<~MESSAGE, err.message
-      Safety constraints only permit deleting up to 10 rows from cohorts_deleted_users, but found 11 rows.
-      If you are a developer attempting to manually purge this account, run
-
-        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
-
-      to bypass this constraint and purge the user from our system.
-    MESSAGE
-  end
-
-  #
-  # Table: dashboard.districts
-  # Table: dashboard.districts_users
-  #
-
-  test 'removes purged user from any districts' do
-    district1 = create :district
-    district2 = create :district
-    user = create :user
-    user.districts << district1
-    user.districts << district2
-
-    assert_equal 2, user.districts.count
-    assert_includes district1.users, user
-    assert_includes district2.users, user
-
-    purge_user user
-    district1.reload
-    district2.reload
-
-    assert_empty user.districts
-    refute_includes district1.users.with_deleted, user
-    refute_includes district2.users.with_deleted, user
-  end
-
-  test 'removes purged district contact from district' do
-    district = create :district
-    user = create :user, district_as_contact: district
-
-    assert_equal district, user.district_as_contact
-    assert_equal user, district.contact
-
-    purge_user user
-    district.reload
-
-    assert_nil user.district_as_contact
-    assert_nil district.contact
-  end
-
-  #
   # Table: dashboard.email_preferences
   # Associated through the user's email
   #
@@ -1511,30 +1393,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.workshop_attendance
-  #
-
-  test "clears teacher_id from workshop_attendance" do
-    attendance = create :attendance
-    refute_nil attendance.teacher_id
-
-    purge_user attendance.teacher
-
-    attendance.reload
-    assert_nil attendance.teacher_id
-  end
-
-  test "clears notes from workshop_attendance" do
-    attendance = create :attendance, notes: 'non-nil notes'
-    refute_nil attendance.notes
-
-    purge_user attendance.teacher
-
-    attendance.reload
-    assert_nil attendance.notes
-  end
-
-  #
   # Table: dashboard.survey_results
   #
 
@@ -1555,38 +1413,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute SurveyResult.where(id: survey_result_a.id).exists?
     refute SurveyResult.where(id: survey_result_b.id).exists?
     assert SurveyResult.where(id: survey_result_c.id).exists?
-  end
-
-  #
-  # Table: dashboard.unexpected_teachers_workshops
-  #
-
-  test "removes all rows for user from unexpected_teachers_workshops" do
-    teacher_a = create :teacher
-    teacher_b = create :teacher
-    workshop_a = create :workshop
-    workshop_a.unexpected_teachers << teacher_a
-    workshop_a.unexpected_teachers << teacher_b
-    workshop_b = create :workshop
-    workshop_b.unexpected_teachers << teacher_a
-
-    workshop_a.reload
-    workshop_b.reload
-
-    assert_equal 2, workshop_a.unexpected_teachers.with_deleted.count
-    assert_equal 1, workshop_b.unexpected_teachers.with_deleted.count
-
-    purge_user teacher_a
-
-    workshop_a.reload
-    workshop_b.reload
-
-    assert_equal 1, workshop_a.unexpected_teachers.with_deleted.count
-    assert_equal 0, workshop_b.unexpected_teachers.with_deleted.count
-    assert_empty ActiveRecord::Base.connection.exec_query(<<-SQL).rows
-      SELECT workshop_id FROM unexpected_teachers_workshops
-      WHERE unexpected_teacher_id = #{teacher_a.id}
-    SQL
   end
 
   #
