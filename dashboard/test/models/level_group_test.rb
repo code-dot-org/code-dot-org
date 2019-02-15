@@ -266,7 +266,9 @@ level 'level7_copy'"
     # Create multis named level1-level7.
     levels = {}
     (1..7).each do |id|
-      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: get_multi_dsl(id)})
+      dsl_text = get_multi_dsl(id)
+      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: dsl_text})
+      levels["multi_#{id}"].stubs(:dsl_text).returns(dsl_text)
     end
 
     # Create the external level.
