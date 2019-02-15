@@ -7472,6 +7472,10 @@ tr:
               name: Geleceğe bakış
             Binary Bracelets:
               name: İkilik Bileklikler
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
         csp-mid-survey:
           description_audience: CSP Öğrencileri
         gamelab:
@@ -7536,6 +7540,8 @@ tr:
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
               name: Play Lab' da Olaylar
+            'Loops: Getting Loopy':
+              name: 'Döngüler: Loopy Başlarken'
         pre-express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Ön okurlar için bilgisayar bilimlerine giriş: anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'

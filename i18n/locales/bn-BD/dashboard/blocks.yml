@@ -305,6 +305,21 @@ bn:
           CONDITION:
             '"when"': যখন
             '"while"': যখন
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
       aalab_whenTouching:
         options:
           CONDITION:

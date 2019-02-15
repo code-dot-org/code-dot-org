@@ -27,7 +27,8 @@ module.exports = function (grunt) {
     const runTests = isDirectory ?
       'testsContext.keys().forEach(testsContext);' :
       `require('${path.resolve(process.env.mocha_entry)}');`;
-    const file = `// Auto-generated
+    const file = `/* eslint-disable */
+// Auto-generated from Gruntfile.js
 import 'babel-polyfill';
 import 'whatwg-fetch';
 import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';

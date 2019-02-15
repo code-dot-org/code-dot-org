@@ -23,7 +23,7 @@ style_min: true
 
 <div class="col-50">
 
-Code.org&reg; is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org provides the leading curriculum for K-12 computer science in the largest school districts in the United States and Code.org also organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+Code.org&reg; is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org provides the leading curriculum for K-12 computer science in the largest school districts in the United States and Code.org also organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 15% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
 
 
 </div>
@@ -36,7 +36,7 @@ Code.org&reg; is a nonprofit dedicated to expanding access to computer science i
 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. 
 
-For the second year in a row, underrepresented minorities make up 48% of students in our courses. Increasing diversity in computer science is foundational to our work, and <a href="/diversity">we encourage you to read more about our efforts</a>. 
+For the third year in a row, underrepresented minorities make up 48% of students in our courses. Increasing diversity in computer science is foundational to our work, and <a href="/diversity">we encourage you to read more about our efforts</a>. 
 
 <br />
 
@@ -83,7 +83,7 @@ To support our goal, we do work across the education spectrum: designing our own
 
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924).
 
-- [Code.org 2017 Annual Report](/about/2017) (Past reports: [2016](/about/2016), [2015](/about/2015), [2014](/about/2014))
+- [Code.org 2018 Annual Report](/about/2018) (Past reports: [2017](/about/2017), [2016](/about/2016), [2015](/about/2015), [2014](/about/2014))
 - [Our core values and messaging guidelines](/about/values)
 - [Our curriculum and pedagogy philosophy](/educate/curriculum/values)
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)

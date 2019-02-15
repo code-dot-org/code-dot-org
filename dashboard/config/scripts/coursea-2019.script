@@ -2,9 +2,10 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursea/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursea/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
+family_name 'coursea'
 version_year '2019'
 
 stage 'Going Places Safely'
@@ -55,7 +56,7 @@ level 'courseA_maze_seq5_2019'
 level 'courseA_maze_seq5a_2019'
 level 'courseA_maze_seq6_2019'
 level 'courseA_maze_seq8_2019'
-level 'courseA_maze_seq10_2019', challenge: true
+level 'courseA_maze_seq10_2019', progression: 'Challenge', challenge: true
 level 'courseA_maze_seq11_2019'
 level 'courseA_maze_seq12_2019'
 level 'courseA_maze_seq13_2019'
@@ -74,7 +75,7 @@ level 'courseA_harvester_seq6_2019'
 level 'courseA_harvester_seq7_2019'
 level 'courseA_harvester_seq8_2019'
 level 'courseA_harvester_seq9_2019'
-level 'courseA_harvester_seq10_2019', challenge: true
+level 'courseA_harvester_seq10_2019', progression: 'Challenge', challenge: true
 level 'courseA_harvester_seq12_2019'
 level 'courseA_harvester_seq11_2019'
 level 'courseA_harvester_seq13_2019'
@@ -93,7 +94,7 @@ level 'courseA_harvester_loops5a_2019'
 level 'courseA_harvester_loops5b_2019'
 level 'courseA_harvester_loops6_2019'
 level 'courseA_harvester_loops7_2019'
-level 'courseA_harvester_loops9_2019', challenge: true
+level 'courseA_harvester_loops9_2019', progression: 'Challenge', challenge: true
 level 'courseA_harvester_loops10_2019'
 level 'courseA_harvester_loops11_2019'
 
@@ -108,7 +109,7 @@ level 'courseA_collector_loops5_2019'
 level 'courseA_collector_loops6_2019'
 level 'courseA_collector_loops7_2019'
 level 'courseA_collector_loops8_2019'
-level 'courseA_collector_loops9_2019', challenge: true
+level 'courseA_collector_loops9_2019', progression: 'Challenge', challenge: true
 level 'courseA_collector_loops10_2019'
 level 'courseA_collector_loops11_2019'
 level 'courseA_collector_loops12_2019'
@@ -126,10 +127,10 @@ level 'courseA_artist_loops5_2019'
 level 'courseA_artist_loops6_2019'
 level 'courseA_artist_loops7_2019'
 level 'courseA_artist_loops8_2019'
-level 'courseA_artist_loops9_2019', challenge: true
+level 'courseA_artist_loops9_2019', progression: 'Challenge', challenge: true
 level 'courseA_artist_loops10_2019'
 level 'courseA_artist_loops11_2019'
-level 'courseA_artist_loops12_2019'
+level 'courseA_artist_loops12_2019', progression: 'Free Play'
 bonus 'courseA_artist_loops_challenge2a_2019'
 bonus 'courseA_artist_loops_challenge1_2019'
 
@@ -141,9 +142,9 @@ level 'courseA_video_events_2019'
 level 'courseA_playLab_events1_2019'
 level 'courseA_playLab_events2_2019'
 level 'courseA_playLab_events3_2019'
-level 'courseA_playLab_events4_2019'
-level 'courseA_playLab_events5_2019'
-level 'courseA_playLab_events6_2019'
-level 'courseA_playLab_events7_2019'
+level 'courseA_playLab_events4_2019', progression: 'Jorge the Dog'
+level 'courseA_playLab_events5_2019', progression: 'Jorge the Dog'
+level 'courseA_playLab_events6_2019', progression: 'Jorge the Dog'
+level 'courseA_playLab_events7_2019', progression: 'Jorge the Dog'
 bonus 'courseA_playlab_events_challenge2_2019'
 bonus 'courseA_playlab_events_challenge1_2019'
