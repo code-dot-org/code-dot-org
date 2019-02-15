@@ -26,12 +26,6 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
   # We began using scholarships in 2019-2020, so remove 2018-2019 from this list
   SCHOLARSHIP_YEARS = APPLICATION_YEARS.drop(1).freeze
 
-  SCHOLARSHIP_STATUSES = [
-    NO,
-    YES_CDO,
-    YES_OTHER
-  ].freeze
-
   belongs_to :user
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
   belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: :pd_application_id
