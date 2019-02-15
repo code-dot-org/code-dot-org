@@ -489,7 +489,7 @@ module Pd::WorkshopSurveyResultsHelper
       QUESTIONS_FOR_FACILITATOR_AVERAGES.each do |category, questions|
         facilitator_averages[facilitator][category.to_s.downcase.to_sym] = {}
         [:this_workshop, :all_my_workshops].each do |column|
-          average = (facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}.reduce(:+) || 0) / questions.size.to_f
+          average = (facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}.inject(0) {|sum, n| sum + (n || 0)} || 0) / questions.size.to_f
           facilitator_averages[facilitator][category.to_s.downcase.to_sym][column] = average.round(2)
         end
       end

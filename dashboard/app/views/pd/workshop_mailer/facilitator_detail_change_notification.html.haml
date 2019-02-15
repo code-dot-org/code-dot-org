@@ -8,15 +8,24 @@
   = @user.name + ','
 
 %p
-  This email was sent to all the teachers who are registered for your workshop.
+  The workshop organizer,
+  = @workshop.organizer.name + ','
+  made some recent changes to
+  = link_to('your workshop', @workshop.workshop_dashboard_url) + '.'
+  If you have any questions about the changes, please reach out to
+  = @workshop.organizer.name + '.'
+
+%p
+  The below email copy was also sent to all the teachers who are registered for your workshop, so there is no need to contact them yourself.
 
 %hr
 
 %p
-  Some details about your upcoming
+  This is a quick email to let you know some details about your upcoming
   = @workshop.course_name
   = @workshop.subject
   workshop have changed.
+  %br We look forward to seeing you there and hope these changes don’t impact your availability.
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'

@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import GameLab from '@cdo/apps/gamelab/GameLab';
+import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,
   registerReducers,
@@ -65,6 +66,48 @@ describe('GameLab', () => {
 
     describe('After being injected with a studioApp instance', () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
+
+      describe('Muting', () => {
+        let muteSpy;
+        let unmuteSpy;
+        beforeEach(() => {
+          muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
+          unmuteSpy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
+          instance.gameLabP5.p5 = sinon.spy();
+          instance.gameLabP5.p5.allSprites = sinon.spy();
+          instance.gameLabP5.p5.allSprites.removeSprites = sinon.spy();
+          instance.gameLabP5.p5.redraw = sinon.spy();
+          instance.gameLabP5.setLoop = sinon.spy();
+          instance.gameLabP5.startExecution = sinon.spy();
+          instance.initInterpreter = sinon.spy();
+          instance.onP5Setup = sinon.spy();
+          instance.reset = sinon.spy();
+          instance.studioApp_.clearAndAttachRuntimeAnnotations = sinon.spy();
+          instance.JSInterpreter = sinon.spy();
+          instance.JSInterpreter.deinitialize = sinon.spy();
+          instance.JSInterpreter.initialized = sinon.spy();
+        });
+
+        afterEach(() => {
+          muteSpy.restore();
+          unmuteSpy.restore();
+        });
+
+        it('Rerun mutes URLs', () => {
+          instance.rerunSetupCode();
+          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
+        });
+
+        it('Execute mutes if not looping', () => {
+          instance.execute(false /* shouldLoop */);
+          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
+        });
+
+        it('Execute unmutes if looping', () => {
+          instance.execute(true /* shouldLoop */);
+          expect(Sounds.getSingleton().unmuteURLs).to.have.been.calledOnce;
+        });
+      });
 
       describe('The init method', () => {
         it('does not require droplet to be in the config', () => {

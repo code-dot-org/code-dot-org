@@ -669,6 +669,21 @@ ka:
         options:
           CHOICE:
             '"other"': სხვა
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ქალაქი
       aalab_whenTouching:
         options:
           CONDITION:

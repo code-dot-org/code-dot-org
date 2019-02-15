@@ -8784,6 +8784,10 @@ zh-CN:
               name: 展望未来
             Binary Bracelets:
               name: 二进制的手镯
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
         csp-mid-survey:
           description_audience: 计算机科学原理学生
         gamelab:
@@ -8858,6 +8862,8 @@ zh-CN:
               name: '事件: 大事件'
             Events in Play Lab:
               name: 游戏实验室中的事件
+            'Loops: Getting Loopy':
+              name: '循环: 变得糊涂'
         pre-express-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: '学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。'

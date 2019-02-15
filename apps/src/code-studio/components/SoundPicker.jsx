@@ -77,26 +77,21 @@ export default class SoundPicker extends React.Component {
     };
 
     let modeSwitch;
-    let title = (
-      <p>{this.props.assetChosen ? 'Choose Sounds' : 'Manage Sounds'}</p>
+    let title = <p>{i18n.chooseSounds()}</p>;
+
+    modeSwitch = (
+      <div>
+        <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
+          {i18n.soundLibrary()}
+        </p>
+        <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>
+          {i18n.makeNewSounds()}
+        </p>
+        <hr style={styles.divider} />
+      </div>
     );
 
-    if (this.props.assetChosen) {
-      modeSwitch = (
-        <div>
-          <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
-            {i18n.soundLibrary()}
-          </p>
-          <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>
-            {i18n.makeNewSounds()}
-          </p>
-          <hr style={styles.divider} />
-        </div>
-      );
-    }
-
-    const displayFilesTab =
-      !this.props.assetChosen || this.state.mode === MODE.files;
+    const displayFilesTab = this.state.mode === MODE.files;
     const body = displayFilesTab ? (
       <AssetManager
         assetChosen={this.props.assetChosen}

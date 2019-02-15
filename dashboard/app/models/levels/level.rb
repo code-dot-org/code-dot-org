@@ -62,6 +62,12 @@ class Level < ActiveRecord::Base
     hint_prompt_attempts_threshold
     short_instructions
     long_instructions
+    rubric_key_concept
+    rubric_exceeds
+    rubric_meets
+    rubric_approaches
+    rubric_no_evidence
+    mini_rubric
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

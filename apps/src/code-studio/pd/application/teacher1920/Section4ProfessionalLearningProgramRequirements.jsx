@@ -201,7 +201,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   renderContents() {
     if (this.props.data.program === undefined) {
       return (
-        <div styles={styles.error}>
+        <div style={styles.error}>
           <p>
             Please fill out Section 2 and select your program before completing
             this section.

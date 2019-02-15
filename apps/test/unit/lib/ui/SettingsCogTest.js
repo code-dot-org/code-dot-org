@@ -1,6 +1,6 @@
 import React from 'react';
 import Portal from 'react-portal';
-import {mount, ReactWrapper} from 'enzyme';
+import {mount} from 'enzyme';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
@@ -9,6 +9,7 @@ import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import * as assets from '@cdo/apps/code-studio/assets';
+import {getPortalContent} from '../../../util/reactTestUtils';
 
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
@@ -173,18 +174,3 @@ describe('SettingsCog', () => {
     });
   });
 });
-
-/**
- * @param {ReactWrapper} wrapper - enzyme wrapper containing a mounted Portal component
- * @returns ReactWrapper - the content of the portal
- */
-function getPortalContent(wrapper) {
-  const portal = wrapper.find(Portal);
-  if (portal.length > 0) {
-    const contentNode = portal.node.portal;
-    if (contentNode) {
-      return new ReactWrapper(contentNode, contentNode);
-    }
-  }
-  return null;
-}
