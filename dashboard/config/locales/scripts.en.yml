@@ -11061,3 +11061,27 @@ en:
               name: 'Project: Prototype an Innovation'
               description_student: ''
               description_teacher: ''
+        csp4-pilot:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey:
+              name: Student Survey
+            Surveys:
+              name: Surveys
+            Student Surveys:
+              name: Student Surveys
+            'Teacher Surveys: HIDE':
+              name: 'Teacher Surveys: HIDE'
+            Teacher Surveys:
+              name: Teacher Surveys
+          title: 'Unit 4: Variables, Conditionals, Functions'
+          description_audience: ''
+          description_short: ''
+          description: ''
