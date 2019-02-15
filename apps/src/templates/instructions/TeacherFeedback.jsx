@@ -45,9 +45,10 @@ const styles = {
     justifyContent: 'flex-start'
   },
   rubricHeader: {
-    fontWeight: 'bold',
-    fontSize: 14,
-    marginLeft: 10
+    fontSize: 13,
+    marginLeft: 10,
+    color: color.black,
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   boxSelected: {
     border: `5px solid ${color.lightest_gray}`,
@@ -64,7 +65,8 @@ const styles = {
     marginRight: 28
   },
   keyConcepts: {
-    fontSize: 14
+    fontSize: 13,
+    color: '#5B6770'
   },
   rubricArea: {
     flexGrow: 2
@@ -73,7 +75,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    padding: '2px 10px'
+    padding: '4px 10px'
   },
   performanceLevelHeaderOnHover: {
     display: 'flex',
@@ -81,7 +83,7 @@ const styles = {
     flexDirection: 'row',
     border: '1px solid #d9eff7',
     borderRadius: 10,
-    padding: '2px 10px'
+    padding: '4px 10px'
   },
   performanceLevelHeaderSelected: {
     display: 'flex',
@@ -89,12 +91,15 @@ const styles = {
     flexDirection: 'row',
     backgroundColor: '#d9eff7',
     borderRadius: 10,
-    padding: '2px 10px'
+    padding: '4px 10px'
   },
   h1: {
-    color: color.cyan,
+    color: '#5B6770',
     marginTop: 8,
-    marginBottom: 12
+    marginBottom: 12,
+    fontSize: 24,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'normal'
   },
   checkbox: {},
   commentArea: {
