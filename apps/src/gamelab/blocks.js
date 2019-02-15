@@ -135,7 +135,7 @@ const customInputTypes = {
       );
     },
     generateCode(block, arg) {
-      return `'${block.getTitleValue('SOUND')}'`;
+      return `'${block.getTitleValue(arg.name)}'`;
     }
   },
   costumePicker: {
