@@ -763,7 +763,7 @@
   "loginInfo_joinStep2": "Sign in to their Code.org account.",
   "loginInfo_joinStep3": "Navigate to {url} and type in their section code: {code}.",
   "loginInfo_joinStep4": "Once they press the \"Go\" button, they should be added to your section.",
-  "loginInfo_noStudents": "<em>It looks like you don't have any students in this section! Add some students in the [Manage Students]({url}) tab for this section.</em>",
+  "loginInfo_noStudents": "*It looks like you don't have any students in this section! Add some students in the [Manage Students]({url}) tab for this section.*",
   "loginInfo_oauthSectionCodes": "{provider} sections do not have 6-digit section codes, so your student will not need to use a section code to login.",
   "loginInfo_resetTitle": "Resetting Student Passwords",
   "loginInfo_resetPasswordBody": "If your student created a Code.org account using their email address and password (rather than signing in through Google, Facebook, Microsoft, or Clever), you can reset their password by going to the [Manage Students]({url}) tab of your section and clicking the \"Reset password\" button in the \"Password\" column.",
