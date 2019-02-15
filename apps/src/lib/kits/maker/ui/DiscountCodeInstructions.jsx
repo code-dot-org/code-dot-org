@@ -22,6 +22,9 @@ const styles = {
   },
   expired: {
     color: color.dark_red
+  },
+  codeText: {
+    fontFamily: 'monospace'
   }
 };
 
@@ -48,7 +51,8 @@ export default class DiscountCodeInstructions extends Component {
           <h1 style={styles.title}>Subsidized Circuit Playground Kits</h1>
           <h2>
             <div>
-              Discount code for subsidized kit: {this.props.discountCode}
+              Discount code for subsidized kit:{' '}
+              <span style={styles.codeText}>{this.props.discountCode}</span>
             </div>
             <div style={styles.expired}>(Expired {expirationString})</div>
           </h2>
@@ -96,8 +100,9 @@ export default class DiscountCodeInstructions extends Component {
         </div>
         <div style={styles.step}>
           <div>
-            3) Put in your discount code ({this.props.discountCode}) and hit
-            "Apply".
+            3) Put in your discount code (
+            <span style={styles.codeText}>{this.props.discountCode}</span>) and
+            hit "Apply".
           </div>
           <a href="https://images.code.org/maker/enterDiscountCode_19.png">
             <img
