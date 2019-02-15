@@ -38,6 +38,8 @@ class TeacherDashboard extends Component {
       studentCount
     } = this.props;
 
+    // If current path doesn't match one of the paths in our TeacherDashboardPath type,
+    // set pathname to point to the Progress tab instead.
     if (!Object.values(TeacherDashboardPath).includes(location.pathname)) {
       location.pathname = TeacherDashboardPath.progress;
     }
