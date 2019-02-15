@@ -44,7 +44,7 @@ class ScriptTeacherPanel extends React.Component {
 
   calculateStudentTableMaxHeight = () => {
     let teacherPanel = $('.teacher-panel');
-    let contentToRemove = $('#nonscrollable-content');
+    let contentToRemove = $('#teacher-panel-nonscrollable');
 
     if (teacherPanel.length > 0 && contentToRemove.length > 0) {
       return (
@@ -68,7 +68,7 @@ class ScriptTeacherPanel extends React.Component {
 
     return (
       <TeacherPanel>
-        <div id="nonscrollable-content">
+        <div id="teacher-panel-nonscrollable">
           <h3>{commonMsg.teacherPanel()}</h3>
           <ViewAsToggle />
           {!sectionsAreLoaded && (
