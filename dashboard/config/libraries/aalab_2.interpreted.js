@@ -229,6 +229,7 @@ function removeFromAnimationGroup(sprite, oldAnimation) {
   }
 }
 
+// Updated
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
   sprite.baseScale = 1;
@@ -240,6 +241,7 @@ function makeNewSprite(animation, x, y) {
   sprite.patrolling = false;
   sprite.things_to_say = [];
   sprite.behaviors = [];
+  sprite.collisionObjects = []; // new
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
   };
@@ -395,13 +397,90 @@ function runCollisionEvents() {
     var b = event.b();
     var e = event.event;
     var type;
+    var collidingSprites = [];
+    var populateCollisionObjects = function() {
+      if(!Array.isArray(a) && !Array.isArray(b)) {
+      	a.collisionObjects.push({sprite: b, locked: false});
+        b.collisionObjects.push({sprite: a, locked: false});
+        collidingSprites.push(a, b);
+      } else if(!Array.isArray(a) && Array.isArray(b)) {
+        collidingSprites.push(a);
+      	b.forEach(function(s) {
+          a.collisionObjects.push({sprite: s, locked: false});
+       	  s.collisionObjects.push({sprite: a, locked: false});
+          collidingSprites.push(s);
+        });
+      } else if(Array.isArray(a) && !Array.isArray(b)) {
+        collidingSprites.push(b);
+      	a.forEach(function(s) {
+          s.collisionObjects.push({sprite: b, locked: false});
+       	  b.collisionObjects.push({sprite: s, locked: false});
+          collidingSprites.push(s);
+        });
+      } else  {
+        a.forEach(function(s) {
+          collidingSprites.push(s);
+          b.forEach(function(p) {
+            collidingSprites.push(p);
+          	s.collisionObjects.push({sprite: p, locked: false});
+       	    p.collisionObjects.push({sprite: s, locked: false});
+          });
+        });
+      }
+    };
+    populateCollisionObjects();
+    collidingSprites.forEach(function(s) {
+      s.collisionObjects.forEach(function(obj) {
+      	type = s.immovable || obj.sprite.immovable ? "overlap" : "collide";
+        if(s[type](obj.sprite)) {
+          if(!obj.locked) {
+            thisSprite = s;
+            otherSprite = obj.sprite;
+          	e();
+            if(condition === "when") {
+              obj.locked = true;
+            }
+          }
+        } else {
+          obj.locked = false;
+        }
+      });
+    });
+    collidingSprites.forEach(function(s){
+      s.collisionObjects = [];
+    });
+  });
+}
+    
+/*
+    var runOneCollision = function(a, b, type, event) {
+      if(a[type](b)) {
+      	thisSprite = a; 
+        otherSprite = b;
+        if(!event.locked) {
+          e();
+          if(condition === "when") {
+          	event.locked = true;
+          }
+        }
+      } else {
+      	event.locked
+      }
+    }
     if(a && b) {
       if(!Array.isArray(a) && !Array.isArray(b)) {
         type = a.immovable || b.immovable ? "overlap" : "collide";
         if(a[type](b)) {
           thisSprite = a;
           otherSprite = b;
-          e();
+          if(!event.locked) {
+          	e();
+            if(condition === "when") {
+              event.locked = true;
+            }
+          }
+        } else {
+          event.locked = false;
         }
       } else if(!Array.isArray(a) && Array.isArray(b)) {
         b.forEach(function(s) {
@@ -409,8 +488,15 @@ function runCollisionEvents() {
           if(a[type](s)) {
             thisSprite = a;
             otherSprite = s;
-            e();
+          if(!event.locked) {
+          	e();
+            if(condition === "when") {
+              event.locked = true;
+            }
           }
+        } else {
+          event.locked = false;
+        }
         });
       } else if(Array.isArray(a) && !Array.isArray(b)) {
         a.forEach(function(s) {
@@ -418,8 +504,15 @@ function runCollisionEvents() {
           if(b[type](s)) {
             thisSprite = s;
             otherSprite = b;
-            e();
+          if(!event.locked) {
+          	e();
+            if(condition === "when") {
+              event.locked = true;
+            }
           }
+        } else {
+          event.locked = false;
+        }
         });
       } else {
         a.forEach(function(s) {
@@ -428,14 +521,22 @@ function runCollisionEvents() {
               if(s[type](p)) {
                 thisSprite = s;
                 otherSprite = p;
-                e();
-              }
+          if(!event.locked) {
+          	e();
+            if(condition === "when") {
+              event.locked = true;
+            }
+          }
+        } else {
+          event.locked = false;
+        }
           });
         });
       }
     }
   });
 }
+*/
 
 /* 
 function runCollisionEvents() {
