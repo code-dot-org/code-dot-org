@@ -14,10 +14,4 @@ MARKDOWN
 
 teacher_markdown <<MARKDOWN
 
-**Teachers, click this button to go the End of Progression Pilot Teacher Survey**
-
-[link](https://form.jotform.com/90445520727153?uid=<user_id/>)
-
-<a href="https://form.jotform.com/90445520727153?uid=<user_id/>">foo foo foo</a>
-
 MARKDOWN
