@@ -54,12 +54,24 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, workshop_params: {notes: notes}
   end
 
-  def teacher_enrollment_reminder__csf_intro
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
+  def teacher_enrollment_reminder__csf_intro_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 10}
   end
 
-  def teacher_enrollment_reminder__csf_deepdive
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
+  def teacher_enrollment_reminder__csf_intro_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder__csd_summer_workshop_10_day
