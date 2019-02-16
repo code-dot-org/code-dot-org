@@ -861,7 +861,11 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     )
   end
 
-  test 'generate facilitator averages does not throw an exception when no related workshops' do
+  # This is testing the edge case where summary[:all_my_workshops] is nil.
+  # Previously, this caused a NoMethodError because we tried to add nil values.
+  # Facilitators can be in this situation if they have workshop organizer permissions
+  # but haven't organized workshops since June 2018.
+  test 'generate facilitator averages works as expected when no related workshops' do
     summary = {
       this_workshop: {
         'Day 1' => {
