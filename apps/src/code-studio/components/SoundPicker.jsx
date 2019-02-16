@@ -81,7 +81,7 @@ export default class SoundPicker extends React.Component {
     let title = <p>{i18n.chooseSounds()}</p>;
 
     modeSwitch = (
-      <div>
+      <div id="modeSwitch">
         <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
           {i18n.soundLibrary()}
         </p>
