@@ -91,9 +91,9 @@ export default class SoundPicker extends React.Component {
       </div>
     );
 
-    const displaySoundsTab = this.state.mode === MODE.sounds;
+    const displaySoundLibraryTab = this.state.mode === MODE.sounds;
     const body =
-      this.libraryOnly || displaySoundsTab ? (
+      this.libraryOnly || displaySoundLibraryTab ? (
         <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
       ) : (
         <AssetManager
