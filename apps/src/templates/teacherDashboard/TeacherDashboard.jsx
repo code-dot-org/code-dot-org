@@ -54,7 +54,10 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.manageStudents}
             component={props => (
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+              <ManageStudents
+                studioUrlPrefix={studioUrlPrefix}
+                pegasusUrlPrefix={pegasusUrlPrefix}
+              />
             )}
           />
           <Route
