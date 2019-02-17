@@ -5,6 +5,7 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+family_name 'coursec'
 version_year '2019'
 
 stage 'Screen Out the Mean'
@@ -146,7 +147,6 @@ level 'Overworld Free Play 20x20_2019', progression: 'Free Play'
 
 stage 'Events: The Big Event'
 level 'BigEvent_2019'
-level 'BigEvent_2019'
 
 stage 'Build a Flappy Game'
 level 'courseC_video_flappyIntro_2019'
@@ -175,7 +175,12 @@ level 'courseC_PlayLab_eventsA_2019', progression: 'Mini-project'
 level 'courseC_PlayLab_eventsFP_2019', progression: 'Free Play'
 bonus 'courseC_PlayLab_events_challenge1_2019'
 
+stage 'Graphing Data'
+level 'GraphingData_2019'
+level 'courseC_data wizard'
+
 stage 'End of Course Project: Create a Play Lab Game'
+level 'Begin planning your project_2018_2019', progression: 'Project'
 level 'courseC19_playLab_EOC1', progression: 'Project'
 level 'courseC19_playLab_EOC2', progression: 'Project'
 level 'courseC19_playLab_EOC3', progression: 'Project'

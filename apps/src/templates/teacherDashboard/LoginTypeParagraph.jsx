@@ -44,17 +44,21 @@ class LoginTypeParagraph extends Component {
     return (
       <div>
         <Paragraph loginType={section.loginType} />
-        <Button
-          onClick={this.openDialog}
-          text={getButtonText(section.loginType, section.studentCount)}
-          color={Button.ButtonColor.white}
-        />
-        <ChangeLoginTypeDialog
-          isOpen={this.state.isDialogOpen}
-          handleClose={this.closeDialog}
-          onLoginTypeChanged={this.onLoginTypeChanged}
-          sectionId={this.props.sectionId}
-        />
+        {!isOauthType(section.loginType) && (
+          <div>
+            <Button
+              onClick={this.openDialog}
+              text={getButtonText(section.loginType, section.studentCount)}
+              color={Button.ButtonColor.white}
+            />
+            <ChangeLoginTypeDialog
+              isOpen={this.state.isDialogOpen}
+              handleClose={this.closeDialog}
+              onLoginTypeChanged={this.onLoginTypeChanged}
+              sectionId={this.props.sectionId}
+            />
+          </div>
+        )}
       </div>
     );
   }
@@ -68,7 +72,13 @@ export default connect((state, props) => ({
 const longDescriptionByLoginType = {
   [SectionLoginType.picture]: i18n.loginTypePictureLongDescription(),
   [SectionLoginType.word]: i18n.loginTypeWordLongDescription(),
-  [SectionLoginType.email]: i18n.loginTypeEmailLongDescription()
+  [SectionLoginType.email]: i18n.loginTypeEmailLongDescription(),
+  [SectionLoginType.google_classroom]: i18n.loginTypeOauthLongDescription({
+    provider: i18n.loginTypeGoogleClassroom()
+  }),
+  [SectionLoginType.clever]: i18n.loginTypeOauthLongDescription({
+    provider: i18n.loginTypeClever()
+  })
 };
 
 const resetDescriptionByLoginType = {
@@ -81,10 +91,19 @@ function isSupportedType(loginType) {
   return !!longDescriptionByLoginType[loginType];
 }
 
+function isOauthType(loginType) {
+  const oauthSectionTypes = [
+    SectionLoginType.google_classroom,
+    SectionLoginType.clever
+  ];
+  return oauthSectionTypes.includes(loginType);
+}
+
 function Paragraph({loginType}) {
   if (!longDescriptionByLoginType[loginType]) {
     return null;
   }
+
   return (
     <div>
       <p>{longDescriptionByLoginType[loginType]}</p>
