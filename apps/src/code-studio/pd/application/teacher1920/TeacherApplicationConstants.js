@@ -17,6 +17,9 @@ const styles = {
   },
   checkBoxAfterButtonList: {
     marginTop: -30
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 

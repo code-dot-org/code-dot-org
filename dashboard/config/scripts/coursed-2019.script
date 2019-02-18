@@ -3,6 +3,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursed/"
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}'
+family_name 'coursed'
 version_year '2019'
 
 stage 'Algorithms: Graph Paper Programming'

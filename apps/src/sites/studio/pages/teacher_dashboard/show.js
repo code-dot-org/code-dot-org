@@ -8,7 +8,7 @@ import manageStudents, {
   setLoginType,
   setStudents,
   convertStudentServerData,
-  toggleSharingColumn
+  setShowSharingColumn
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections,
@@ -64,7 +64,7 @@ $(document).ready(function() {
   if (
     courseFamiliesToShowShareColumn.includes(section.script.course_family_name)
   ) {
-    store.dispatch(toggleSharingColumn());
+    store.dispatch(setShowSharingColumn(true));
   }
 
   $.ajax({
@@ -105,6 +105,7 @@ $(document).ready(function() {
                 {...props}
                 studioUrlPrefix={scriptData.studioUrlPrefix}
                 pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
+                sectionId={section.id}
                 sectionName={section.name}
               />
             )}
