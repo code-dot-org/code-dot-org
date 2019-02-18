@@ -48,8 +48,6 @@ export default class ProgressLessonContent extends React.Component {
       ));
     }
 
-    console.log(description);
-
     return (
       <div>
         <div style={styles.summary}>
