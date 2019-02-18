@@ -21,7 +21,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".6",
-    "long_instructions": "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\" width=\"250px\"/>\r\n\r\nFree Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own. \r\n\r\n<br/>",
+    "long_instructions": "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\" width=\"250px\"/>\r\n\r\nFree Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -39,11 +39,14 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "hint_prompt_attempts_threshold": 4,
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "mini_rubric": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-09 23:01:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 23:02:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 23:02:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-09 23:01:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 23:02:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 23:02:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2019-02-18 19:00:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1

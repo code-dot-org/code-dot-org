@@ -128,7 +128,7 @@
       "stopSound": null
     },
     "edit_code": true,
-    "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
+    "encrypted_examples": "74hvW9Up50JuGoyilFtuq9PZbY+wfYVEpg89Jg911Zp55Sh+gJ0eyx8mY8u4\nMOcT4vWiNhS0IKgYPvyZPJy0BA==\n",
     "embed": "false",
     "short_instructions": "Add three parameters to your drawFish function to accept red, green and blue values to make your fish different colors. (Click to see full instructions)",
     "long_instructions": "# Multiple Parameters\r\n\r\nLet's make our drawings even more interesting by adding some variety to the color.\r\n\r\n**Add** three more parameters called `red` , `green` , and `blue` to your function definition for `drawFish` which allow you to set the color of the fish when you call the function. Remember to separate them with commas!\r\n\r\n**Note:** this means that drawFish will now have 4 parameters total: size, red, green, and blue.\r\n\r\n**HINT:** inside drawFish just replace the numbers of the penRGB values with the parameters of your function.\r\n\r\n**Change** the function calls at the top your code to draw different colored fish.\r\n\r\n![](https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30 PM.png)",
@@ -198,11 +198,14 @@
     "expand_debugger": "false",
     "parent_level_id": 13165,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-30 14:46:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-30 14:46:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-02-18 14:38:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
