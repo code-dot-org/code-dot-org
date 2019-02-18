@@ -34,7 +34,6 @@ const styles = {
   },
   actionRow: {
     height: 47,
-    width: '100%',
     padding: PADDING,
     marginTop: 20,
     backgroundColor: color.table_header,
