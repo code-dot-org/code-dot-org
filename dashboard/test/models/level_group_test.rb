@@ -350,6 +350,10 @@ level 'level1 copy2'"
     assert_equal 'level1 copy2', level_group_copy2.pages.first.levels.first.name
     assert_equal 'external1 copy2', level_group_copy2.properties['texts'].first['level_name']
     refute_nil Level.find_by_name('external1 copy2')
+
+    # clean up
+    File.delete(level_group_copy1.filename)
+    File.delete(level_group_copy2.filename)
   end
 
   test 'get_summarized_survey_results returns a hash of results' do
