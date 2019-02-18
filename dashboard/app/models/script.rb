@@ -140,6 +140,7 @@ class Script < ActiveRecord::Base
     version_year
     is_stable
     supported_locales
+    pilot_experiment
   )
 
   def self.twenty_hour_script
@@ -1364,7 +1365,8 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
-      supported_locales: script_data[:supported_locales]
+      supported_locales: script_data[:supported_locales],
+      pilot_experiment: script_data[:pilot_experiment]
     }.compact
   end
 
