@@ -13,7 +13,7 @@ export const dropdownStyles = {
     height: 34,
     paddingLeft: 5,
     paddingRight: 5,
-    minWidth: 300
+    width: 300
   }
 };
 

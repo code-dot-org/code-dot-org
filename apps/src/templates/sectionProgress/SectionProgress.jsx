@@ -35,7 +35,8 @@ const styles = {
   },
   topRowContainer: {
     display: 'flex',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
+    marginBottom: 10
   },
   toggle: {
     margin: '0 10px 5px 10px'
