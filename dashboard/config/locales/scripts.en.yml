@@ -11161,3 +11161,37 @@ en:
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+        csp2-2019:
+          title: CSP Unit 2 - Digital Information ('18-'19)
+          description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
+          description_audience: ''
+          stages:
+            Bytes and File Sizes:
+              name: Bytes and File Sizes
+              description_student: ''
+              description_teacher: ''
+            Text Compression:
+              name: Text Compression
+              description_student: ''
+              description_teacher: ''
+            Encoding B&W Images:
+              name: Encoding B&W Images
+              description_student: ''
+              description_teacher: ''
+            Encoding Color Images:
+              name: Encoding Color Images
+              description_student: ''
+              description_teacher: ''
+            Lossy vs Lossless Compression:
+              name: Lossy vs Lossless Compression
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Format Showdown:
+              name: Rapid Research - Format Showdown
+              description_student: ''
+              description_teacher: ''
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
+              description_student: ''
+              description_teacher: ''
