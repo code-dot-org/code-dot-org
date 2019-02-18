@@ -8,6 +8,7 @@
 #  created_at   :datetime
 #  updated_at   :datetime
 #  download     :string(255)
+#  locale       :string(255)      default("en-US"), not null
 #
 
 # Links to a YouTube video
