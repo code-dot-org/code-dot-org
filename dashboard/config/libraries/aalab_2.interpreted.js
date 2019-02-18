@@ -229,6 +229,7 @@ function removeFromAnimationGroup(sprite, oldAnimation) {
   }
 }
 
+// Updated
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
   sprite.baseScale = 1;
@@ -240,6 +241,8 @@ function makeNewSprite(animation, x, y) {
   sprite.patrolling = false;
   sprite.things_to_say = [];
   sprite.behaviors = [];
+  sprite.collidable = false; //new
+  sprite.collisionObjects = []; //new
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
   };
@@ -387,7 +390,6 @@ function runInputEvents() {
   }
 }
 
-// Updated
 function runCollisionEvents() {
   collisionEvents.forEach(function(event) {
     var condition = event.condition;
@@ -395,122 +397,61 @@ function runCollisionEvents() {
     var b = event.b();
     var e = event.event;
     var type;
-    if(a && b) {
-      if(!Array.isArray(a) && !Array.isArray(b)) {
-        type = a.immovable || b.immovable ? "overlap" : "collide";
-        if(a[type](b)) {
-          thisSprite = a;
-          otherSprite = b;
-          e();
+    var collisions = [];
+    var findCollisionObject = function(sprite, collisionObject) {
+      for(var i = 0; i < sprite.collisionObjects.length; i++) {
+      	if(sprite.collisionObjects[i].sprite === collisionObject) {
+          return i;
         }
-      } else if(!Array.isArray(a) && Array.isArray(b)) {
-        b.forEach(function(s) {
-          type = a.immovable || s.immovable ? "overlap" : "collide";
-          if(a[type](s)) {
-            thisSprite = a;
-            otherSprite = s;
-            e();
-          }
-        });
-      } else if(Array.isArray(a) && !Array.isArray(b)) {
-        a.forEach(function(s) {
-          type = b.immovable || s.immovable ? "overlap" : "collide";
-          if(b[type](s)) {
-            thisSprite = s;
-            otherSprite = b;
-            e();
-          }
-        });
-      } else {
-        a.forEach(function(s) {
-          b.forEach(function(p) {
-            type = s.immovable || p.immovable ? "overlap" : "collide";
-              if(s[type](p)) {
-                thisSprite = s;
-                otherSprite = p;
-                e();
-              }
-          });
-        });
       }
-    }
-  });
-}
-
-/* 
-function runCollisionEvents() {
-  collisionEvents.forEach(function(event) {
-    var a = event.a();
-    var b = event.b();
-    var type = event.type;
-    var e = event.event;
-    if(a && b) {
-      if(!Array.isArray(a) && !Array.isArray(b)) {
-        if(a[type](b)) {
-          thisSprite = a;
-          otherSprite = b;
-          e();
-        }
-      } else if(!Array.isArray(a) && Array.isArray(b)) {
-        b.forEach(function(s) {
-          if(a[type](s)) {
-            thisSprite = a;
-            otherSprite = s;
-            e();
-          }
-        });
-      } else if(Array.isArray(a) && !Array.isArray(b)) {
-        a.forEach(function(s) {
-          if(b[type](s)) {
-            thisSprite = s;
-            otherSprite = b;
-            e();
-          }
-        });
-      } else {
-        a.forEach(function(s) {
-          b.forEach(function(p) {
-              if(s[type](p)) {
-                thisSprite = s;
-                otherSprite = p;
-                e();
-              }
-          });
-        });
+      return -1;
+    };
+    var addCollisionObjects = function(a, b) {
+      if(findCollisionObject(a, b) === -1) {
+        a.collisionObjects.push({sprite: b, locked: false});
       }
-    }
-  });
-}
-
-*/
-
-/* 
-function runCollisionEvents() {
-  var createCollisionHandler = function (collisionEvent) {
-    return function (sprite1, sprite2) {
-      if (!collisionEvent.touching || collisionEvent.keepFiring) {
-        collisionEvent.event(sprite1, sprite2);
+      if(collisions.indexOf(a) === -1) {
+        collisions.push(a);
       }
     };
-  };
-  for (var i = 0; i < collisionEvents.length; i++) {
-    var collisionEvent = collisionEvents[i];
-    var a = collisionEvent.a && collisionEvent.a();
-    var b = collisionEvent.b && collisionEvent.b();
-    if (a && b) {
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
-        collisionEvent.touching = true;
+    if(a && b) {
+      if(!Array.isArray(a) && !Array.isArray(b)) {
+        addCollisionObjects(a, b);
+      } else if(Array.isArray(a) && !Array.isArray(b)) {
+        a.forEach(function(s) {
+          addCollisionObjects(s, b);
+        });
+      } else if(!Array.isArray(a) && Array.isArray(b)) {
+        b.forEach(function(s) {
+          addCollisionObjects(s, a);
+        });
       } else {
-        if (collisionEvent.touching && collisionEvent.eventEnd) {
-          collisionEvent.eventEnd(a, b);
-        }
-        collisionEvent.touching = false;
+        a.forEach(function(s) {
+          b.forEach(function(p) {
+          	addCollisionObjects(s, p);
+          });
+        });
       }
+      collisions.forEach(function(s) {
+        s.collisionObjects.forEach(function(obj) {
+          type = s.collidable && obj.sprite.collidable ? "collide" : "overlap";
+      	  if(s[type](obj.sprite)) {
+            if(!obj.locked) {
+              thisSprite = s;
+              otherSprite = obj.sprite;
+              e();
+              if(condition === "when") {
+                obj.locked = true;
+              }
+            }
+          } else {
+          	obj.locked = false;
+          }
+        });
+      });
     }
-  }
+  });
 }
-
-*/
 
 // New
 function runLoops() {
