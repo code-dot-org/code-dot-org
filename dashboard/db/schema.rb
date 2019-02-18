@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190209031413) do
+ActiveRecord::Schema.define(version: 20190214005506) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -766,6 +766,20 @@ ActiveRecord::Schema.define(version: 20190209031413) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id", "teachercon"], name: "index_pd_reg_part_prog_reg_on_user_id_and_teachercon", using: :btree
+  end
+
+  create_table "pd_scholarship_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",            null: false
+    t.string   "application_year",   null: false
+    t.string   "scholarship_status", null: false
+    t.integer  "pd_application_id"
+    t.integer  "pd_enrollment_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["pd_application_id"], name: "index_pd_scholarship_infos_on_pd_application_id", using: :btree
+    t.index ["pd_enrollment_id"], name: "index_pd_scholarship_infos_on_pd_enrollment_id", using: :btree
+    t.index ["user_id", "application_year"], name: "index_pd_scholarship_infos_on_user_id_and_application_year", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_scholarship_infos_on_user_id", using: :btree
   end
 
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1569,6 +1583,9 @@ ActiveRecord::Schema.define(version: 20190209031413) do
   add_foreign_key "pd_application_tags_applications", "pd_applications"
   add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
+  add_foreign_key "pd_scholarship_infos", "pd_applications"
+  add_foreign_key "pd_scholarship_infos", "pd_enrollments"
+  add_foreign_key "pd_scholarship_infos", "users"
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
   add_foreign_key "pd_teachercon1819_registrations", "users"
   add_foreign_key "pd_workshops", "regional_partners"

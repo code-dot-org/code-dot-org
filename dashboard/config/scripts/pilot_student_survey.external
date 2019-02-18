@@ -3,23 +3,15 @@ title 'Pilot Student Survey'
 description 'Survey for student participating in the CSP Pilot.'
 
 markdown <<MARKDOWN
-**Survey Stuffs**
+## End of Progression Student Survey
 
-foo foo foo
 
-<a class="btn btn-large btn-primary" href="https://jotform/path/to/student/survey?uid=<user_id/>"> Take the student survey</a>
+<a class="btn btn-large btn-primary" href="https://form.jotform.com/90444971154156?uid=<user_id/>"> Take the student survey</a>
 
 
 
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-
-## Teachers Click this button to go the teacher survey
-
-<a class="btn btn-large btn-primary" href="https://jotform/path/to/teacher/survey?uid=<user_id/>"> Take the teacher  survey</a>
-
-foo foo foo
-
 
 MARKDOWN
