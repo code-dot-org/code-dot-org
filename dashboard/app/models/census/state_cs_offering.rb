@@ -52,6 +52,7 @@ class Census::StateCsOffering < ApplicationRecord
     PA
     RI
     SC
+    TN
     TX
     UT
     VA
@@ -70,6 +71,7 @@ class Census::StateCsOffering < ApplicationRecord
     ME
     MI
     OH
+    TN
     TX
   ).freeze
 
@@ -148,6 +150,8 @@ class Census::StateCsOffering < ApplicationRecord
       row_hash['School ID']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
+    when 'TN'
+      row_hash['State_school_ID']
     when 'TX'
       row_hash['State_school_ID']
     when 'UT'
@@ -526,6 +530,18 @@ class Census::StateCsOffering < ApplicationRecord
     'TEALS Introducting to Programming',
     'URI Introduction to Computing'
   ].freeze
+
+  TN_COURSE_CODES = %w(
+    3634
+    6098
+    6095
+    3635
+    6099
+    5908
+    3110
+    3109
+    6178
+  ).freeze
 
   TX_COURSE_CODES = %w(
     227901
@@ -1234,6 +1250,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]
+    when 'TN'
+      TN_COURSE_CODES.select {|course| course == row_hash['COURSE_CODE']}
     when 'TX'
       TX_COURSE_CODES.select {|course| course == row_hash['course_codes']}
     when 'UT'
