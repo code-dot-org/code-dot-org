@@ -159,7 +159,7 @@
     "submittable": "false",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "UJLZA5KUBP1ZacA+pRLOEYeYQfw8dkJWiVLi4a/7RsR/aehcjzqtjyxxjr0e\ncDQ9\n",
+    "encrypted_examples": "NhuR4LeWtaYsidw5ZP7SoiPufgKMz3I1Yfb9a9Fku8sniNyaI4/9cFxEqLDR\nKe+q//xo0v4cjqi2hqD+lLBMUA==\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "log_conditions": [
@@ -246,11 +246,14 @@
     "expand_debugger": "false",
     "parent_level_id": 13184,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-29 22:49:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-11-29 22:49:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-02-18 14:59:18 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
