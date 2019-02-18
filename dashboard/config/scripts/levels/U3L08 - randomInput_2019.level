@@ -128,7 +128,7 @@
       "stopSound": null
     },
     "edit_code": true,
-    "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
+    "encrypted_examples": "esgWuB88dNx3APs3aaFhZzrbo4dAIj3SUCdXbCV7B/Z7Tw7cOYc4EnB1da8C\nhLCjA/d1SpcB5Hbv+Uh8OX/vwQ==\n",
     "embed": "false",
     "short_instructions": "Use the randomNumber() blocks to test the functions you designed with random input. (Click to see full instructions)",
     "long_instructions": "# Random Input\r\n\r\nYou have a new block that allows you to generate a random number. You can use this instead of hard-coding in values every time you call a function.\r\n\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\r\n\r\n**Read the documentation** for the randomNumber block.\r\n\r\n# Do This\r\n**Use randomNumber to provide random input** to *all three* of your drawing functions.  Just insert the call to randomNumber where you would otherwise put numbers.  \r\n\r\nLike this:\r\n![](https://images.code.org/ad87d7d122ac585a6de9e46a49736228-image-1470146652402.png)\r\n\r\nUse randomNumber in calls to all three of your drawing functions:\r\n\r\n* drawStarfish\r\n* drawSeagrass\r\n* drawFish\r\n\r\nThis is a great way to **test** out functions and also get some **interesting looking images**. Every time you run the program you can get slightly different looking scenes like the ones below.\r\n\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)",
@@ -203,11 +203,14 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 13166,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-30 14:46:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-12-04 21:47:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-04 21:48:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-30 14:46:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-12-04 21:47:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-04 21:48:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-18 14:39:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-18 14:42:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
