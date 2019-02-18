@@ -509,6 +509,9 @@ en:
       Basic mechanics of variables_2018:
         description here: description here
         title: title
+      Basic mechanics of variables_2018_2019:
+        description here: description here
+        title: title
       Begin planning your project:
         description here: description here
         title: title
@@ -525,12 +528,18 @@ en:
       'Big Picture: If-statements_2018':
         description here: description here
         title: title
+      'Big Picture: If-statements_2018_2019':
+        description here: description here
+        title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
       Boolean Expressions and Comparison Operators:
         description here: description here
         title: title
       Boolean Expressions and Comparison Operators_2018:
+        description here: description here
+        title: title
+      Boolean Expressions and Comparison Operators_2018_2019:
         description here: description here
         title: title
       Boolean Logic and Expression Overview: {}
@@ -1018,6 +1027,7 @@ en:
       CSP Abstraction in Programming 2_2018_2019: {}
       CSP Algorithms Map: {}
       CSP Algorithms Map_2018: {}
+      CSP Algorithms Map_2018_2019: {}
       CSP ExploreL02 SFLP:
         description here: description here
         title: title
@@ -1220,6 +1230,9 @@ en:
       CSPU5_FirstTimeDesignMode_2018:
         description here: description here
         title: title
+      CSPU5_FirstTimeDesignMode_2018_2019:
+        description here: description here
+        title: title
       CSPU5_HowImagesWork:
         description here: description here
         title: title
@@ -1317,6 +1330,7 @@ en:
       Cleaning Data_2018: {}
       Click Here!: {}
       Click Here!_2018: {}
+      Click Here!_2018_2019: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection A: Good and Bad Visualizations_2018': {}
       'Collection B: Good and Bad Visualizations': {}
@@ -1327,10 +1341,16 @@ en:
       Color Sleuth - Epilogue_2018:
         description here: description here
         title: title
+      Color Sleuth - Epilogue_2018_2019:
+        description here: description here
+        title: title
       Color Sleuth - How does it end?:
         description here: description here
         title: title
       Color Sleuth - How does it end?_2018:
+        description here: description here
+        title: title
+      Color Sleuth - How does it end?_2018_2019:
         description here: description here
         title: title
       Color Sleuth - How to switch player turns:
@@ -1339,16 +1359,25 @@ en:
       Color Sleuth - How to switch player turns_2018:
         description here: description here
         title: title
+      Color Sleuth - How to switch player turns_2018_2019:
+        description here: description here
+        title: title
       Color Sleuth - Keeping score:
         description here: description here
         title: title
       Color Sleuth - Keeping score_2018:
         description here: description here
         title: title
+      Color Sleuth - Keeping score_2018_2019:
+        description here: description here
+        title: title
       Color Sleuth - Planning the App:
         description here: description here
         title: title
       Color Sleuth - Planning the App_2018:
+        description here: description here
+        title: title
+      Color Sleuth - Planning the App_2018_2019:
         description here: description here
         title: title
       Common Misconceptions about Functions: {}
@@ -1358,6 +1387,9 @@ en:
         description here: description here
         title: title
       Controlling Memory - Other ways to assign values_2018:
+        description here: description here
+        title: title
+      Controlling Memory - Other ways to assign values_2018_2019:
         description here: description here
         title: title
       Correlation vs Causation: {}
@@ -1379,6 +1411,9 @@ en:
         description here: description here
         title: title
       Debugging with Console.log_2018:
+        description here: description here
+        title: title
+      Debugging with Console.log_2018_2019:
         description here: description here
         title: title
       Deeper Learning Overview:
@@ -1794,10 +1829,16 @@ en:
       Event Driven Programming Recap_2018:
         description here: description here
         title: title
+      Event Driven Programming Recap_2018_2019:
+        description here: description here
+        title: title
       Event-Driven Programming Patterns:
         description here: description here
         title: title
       Event-Driven Programming Patterns_2018:
+        description here: description here
+        title: title
+      Event-Driven Programming Patterns_2018_2019:
         description here: description here
         title: title
       Events Overview: {}
@@ -1850,10 +1891,16 @@ en:
       How "if-else-if" Works_2018:
         description here: description here
         title: title
+      How "if-else-if" Works_2018_2019:
+        description here: description here
+        title: title
       How Compound Boolean Expressions Work:
         description here: description here
         title: title
       How Compound Boolean Expressions Work_2018:
+        description here: description here
+        title: title
+      How Compound Boolean Expressions Work_2018_2019:
         description here: description here
         title: title
       How Dropdown Menus Work:
@@ -1862,10 +1909,16 @@ en:
       How Dropdown Menus Work_2018:
         description here: description here
         title: title
+      How Dropdown Menus Work_2018_2019:
+        description here: description here
+        title: title
       How If Statements Work pt 1:
         description here: description here
         title: title
       How If Statements Work pt 1_2018:
+        description here: description here
+        title: title
+      How If Statements Work pt 1_2018_2019:
         description here: description here
         title: title
       How If-Else Statements Work:
@@ -1874,10 +1927,16 @@ en:
       How If-Else Statements Work_2018:
         description here: description here
         title: title
+      How If-Else Statements Work_2018_2019:
+        description here: description here
+        title: title
       How Images Work:
         description here: description here
         title: title
       How Images Work_2018:
+        description here: description here
+        title: title
+      How Images Work_2018_2019:
         description here: description here
         title: title
       How Search Works: {}
@@ -1896,6 +1955,9 @@ en:
       How Set Property Works_2018:
         description here: description here
         title: title
+      How Set Property Works_2018_2019:
+        description here: description here
+        title: title
       'How To: Share Code with Teammates': {}
       'How To: Share Code with Teammates_2018': {}
       'How To: Share Code with Teammates_2018_2019': {}
@@ -1906,10 +1968,16 @@ en:
       How onEvent Works_2018:
         description here: description here
         title: title
+      How onEvent Works_2018_2019:
+        description here: description here
+        title: title
       How setPosition and screen dimensions work:
         description here: description here
         title: title
       How setPosition and screen dimensions work_2018:
+        description here: description here
+        title: title
+      How setPosition and screen dimensions work_2018_2019:
         description here: description here
         title: title
       How the Boolean &&, || and ! Operators Work:
@@ -1918,16 +1986,25 @@ en:
       How the Boolean &&, || and ! Operators Work_2018:
         description here: description here
         title: title
+      How the Boolean &&, || and ! Operators Work_2018_2019:
+        description here: description here
+        title: title
       How to make a random color:
         description here: description here
         title: title
       How to make a random color_2018:
         description here: description here
         title: title
+      How to make a random color_2018_2019:
+        description here: description here
+        title: title
       How to pick a random button:
         description here: description here
         title: title
       How to pick a random button_2018:
+        description here: description here
+        title: title
+      How to pick a random button_2018_2019:
         description here: description here
         title: title
       'How to: Make Charts from your Data': {}
@@ -1947,6 +2024,9 @@ en:
         description here: description here
         title: title
       Intro to Debugging and Common Problems_2018:
+        description here: description here
+        title: title
+      Intro to Debugging and Common Problems_2018_2019:
         description here: description here
         title: title
       Introduction to Functions with Parameters: {}
@@ -1979,10 +2059,14 @@ en:
       Lossy vs. Lossless Compression: {}
       Make a Hypothesis: {}
       Make a Hypothesis_2018: {}
+      Make a Hypothesis_2018_2019: {}
       Making Multiple Screens:
         description here: description here
         title: title
       Making Multiple Screens_2018:
+        description here: description here
+        title: title
+      Making Multiple Screens_2018_2019:
         description here: description here
         title: title
       Making Pivot Tables Part 1 - The Basics: {}
@@ -1997,6 +2081,9 @@ en:
         description here: description here
         title: title
       Making a Multi Screen Chaser Game v.2_2018:
+        description here: description here
+        title: title
+      Making a Multi Screen Chaser Game v.2_2018_2019:
         description here: description here
         title: title
       Making a Scatter Plot: {}
@@ -2345,6 +2432,9 @@ en:
       Rules About Choosing Good IDs_2018:
         description here: description here
         title: title
+      Rules About Choosing Good IDs_2018_2019:
+        description here: description here
+        title: title
       SFLP - Web - Describing Webpages: {}
       SFLP - Web - Designing Code for Computers: {}
       SFLP - Web - Designing Webpages: {}
@@ -2391,6 +2481,9 @@ en:
         description here: description here
         title: title
       Simple Decisions with if-statements_2018:
+        description here: description here
+        title: title
+      Simple Decisions with if-statements_2018_2019:
         description here: description here
         title: title
       Social Sleuth: {}
@@ -2446,6 +2539,7 @@ en:
       Testing Video Bitly: {}
       The Mental Model for Variables: {}
       The Mental Model for Variables_2018: {}
+      The Mental Model for Variables_2018_2019: {}
       The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
@@ -2454,6 +2548,9 @@ en:
         description here: description here
         title: title
       Tips For Working on Your Own_2018:
+        description here: description here
+        title: title
+      Tips For Working on Your Own_2018_2019:
         description here: description here
         title: title
       U1L1 Student Lesson Introduction:
@@ -2959,6 +3056,9 @@ en:
       U5 color sleuth check correct_2018:
         description here: description here
         title: title
+      U5 color sleuth check correct_2018_2019:
+        description here: description here
+        title: title
       U5L08 - Student Intro If statements:
         description here: description here
         title: title
@@ -3219,14 +3319,20 @@ en:
       Unit 5 Teaching Philosophy and Commentary: {}
       Update your Hypothesis - Part 1: {}
       Update your Hypothesis - Part 1_2018: {}
+      Update your Hypothesis - Part 1_2018_2019: {}
       Update your Hypothesis - Part 2: {}
       Update your Hypothesis - Part 2_2018: {}
+      Update your Hypothesis - Part 2_2018_2019: {}
       'Using Output from Functions: The return Command': {}
       'Using Output from Functions: The return Command_2018': {}
+      'Using Output from Functions: The return Command_2018_2019': {}
       'Variable Scope: Local vs. Global':
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
       'Variable Scope: Local vs. Global_2018':
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
+      'Variable Scope: Local vs. Global_2018_2019':
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
       Variables Overview: {}
@@ -3247,6 +3353,9 @@ en:
         description here: description here
         title: title
       'Worked Example: If-statements and Robot_2018':
+        description here: description here
+        title: title
+      'Worked Example: If-statements and Robot_2018_2019':
         description here: description here
         title: title
       aEstory1:
@@ -3598,6 +3707,9 @@ en:
         description here: description here
         title: title
       csp_unit5_finalassessment_overview_2018:
+        description here: description here
+        title: title
+      csp_unit5_finalassessment_overview_2018_2019:
         description here: description here
         title: title
       csp_unit5_finalassessment_overview_exam_prep:
@@ -4322,6 +4434,7 @@ en:
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
         CSP Cumulative Assess A_2018: {}
+        CSP Cumulative Assess A_2018_2019: {}
         CSP Cumulative Assess A_exam_prep: {}
         CSP Longitudinal Contact Request: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
@@ -4351,15 +4464,19 @@ en:
         CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP Unit 5 Cumulative Assessment 1 MC_2018: {}
+        CSP Unit 5 Cumulative Assessment 1 MC_2018_2019: {}
         CSP Unit 5 Cumulative Assessment 1 MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 2 MC: {}
         CSP Unit 5 Cumulative Assessment 2 MC_2018: {}
+        CSP Unit 5 Cumulative Assessment 2 MC_2018_2019: {}
         CSP Unit 5 Cumulative Assessment 2 MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 3 MC: {}
         CSP Unit 5 Cumulative Assessment 3 MC_2018: {}
+        CSP Unit 5 Cumulative Assessment 3 MC_2018_2019: {}
         CSP Unit 5 Cumulative Assessment 3 MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 4 MC: {}
         CSP Unit 5 Cumulative Assessment 4 MC_2018: {}
+        CSP Unit 5 Cumulative Assessment 4 MC_2018_2019: {}
         CSP Unit 5 Cumulative Assessment 4 MC_exam_prep: {}
         CSP post-assessment survey: {}
         CSP pre-assessment survey: {}
@@ -4447,8 +4564,10 @@ en:
         csp-pulse-check-survey-5-levelgroup-U4Ch1_2018_2019: {}
         csp-pulse-check-survey-6-levelgroup-U5Ch1: {}
         csp-pulse-check-survey-6-levelgroup-U5Ch1_2018: {}
+        csp-pulse-check-survey-6-levelgroup-U5Ch1_2018_2019: {}
         csp-pulse-check-survey-7-levelgroup-U5Ch2: {}
         csp-pulse-check-survey-7-levelgroup-U5Ch2_2018: {}
+        csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019: {}
         csp3_U3_turtle_subgoal_mc_levelgroup: {}
         csp3_U3_turtle_subgoal_mc_levelgroup_2018: {}
         csp3_U3_turtle_subgoal_mc_levelgroup_2018_2019: {}
@@ -8762,6 +8881,13 @@ en:
         a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
         a:10 &nbsp; b:17 &nbsp;  c:27: a:10 &nbsp; b:17 &nbsp;  c:27
         a:3 &nbsp; b:7 &nbsp; c:10: a:3 &nbsp; b:7 &nbsp; c:10
+      CSPU5_U3L14 - MC variable reassignment_2018_2019:
+        Code does not execute due to error: Code does not execute due to error
+        a:10 &nbsp; b:10 &nbsp;  c:20: a:10 &nbsp; b:10 &nbsp;  c:20
+        a:10 &nbsp; b:10 &nbsp; c:10: a:10 &nbsp; b:10 &nbsp; c:10
+        a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
+        a:10 &nbsp; b:17 &nbsp;  c:27: a:10 &nbsp; b:17 &nbsp;  c:27
+        a:3 &nbsp; b:7 &nbsp; c:10: a:3 &nbsp; b:7 &nbsp; c:10
       CSPU5_predict_mc_turtleDriverBadIDs:
         The turtle WILL NOT move forward when the "Go Forth" button is clicked: The turtle WILL NOT move forward when the "Go Forth" button is clicked
         The turtle WILL NOT turn left when the "Turn Left" button is clicked: The turtle WILL NOT turn left when the "Turn Left" button is clicked
@@ -8834,6 +8960,13 @@ en:
         rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
         swaps the values of a and b: swaps the values of a and b
         this code doesn't do anything: this code doesn't do anything
+      Commute Assess - comp 1 - block_2018_2019:
+        This program causes an error: This program causes an error
+        a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
+        makes a and b equal to each other: makes a and b equal to each other
+        rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
+        swaps the values of a and b: swaps the values of a and b
+        this code doesn't do anything: this code doesn't do anything
       Commute Assess - comp 1 - block_exam_prep:
         This program causes an error: This program causes an error
         a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
@@ -8849,6 +8982,13 @@ en:
         'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?': 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
         This code will cause an error: This code will cause an error
       Commute Assess - comp 2 - block_2018:
+        Randomly returns on of the three numbers: Randomly returns on of the three numbers
+        'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
+        Returns the largest of the three numbers: Returns the largest of the three numbers
+        Set all three inputs to a temporary value: Set all three inputs to a temporary value
+        'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?': 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
+        This code will cause an error: This code will cause an error
+      Commute Assess - comp 2 - block_2018_2019:
         Randomly returns on of the three numbers: Randomly returns on of the three numbers
         'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
         Returns the largest of the three numbers: Returns the largest of the three numbers
@@ -8884,6 +9024,17 @@ en:
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
         ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+      Commute Assess - comp 4 - block_2018_2019:
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
       Commute Assess - comp 4 - block_exam_prep:
         ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
@@ -8909,6 +9060,13 @@ en:
         Makes sure the value of x is not equal to 10: Makes sure the value of x is not equal to 10
         This code will cause an error: This code will cause an error
         What does this code do?: What does this code do?
+      Commute Assess - comp 5 - block_2018_2019:
+        It always sets x equal to 5: It always sets x equal to 5
+        Makes sure the value of  x is less than 5: Makes sure the value of  x is less than 5
+        Makes sure the value of x is between 10 and 5: Makes sure the value of x is between 10 and 5
+        Makes sure the value of x is not equal to 10: Makes sure the value of x is not equal to 10
+        This code will cause an error: This code will cause an error
+        What does this code do?: What does this code do?
       Commute Assess - comp 5 - block_exam_prep:
         It always sets x equal to 5: It always sets x equal to 5
         Makes sure the value of  x is less than 5: Makes sure the value of  x is less than 5
@@ -8925,6 +9083,14 @@ en:
         Nothing will be displayed: Nothing will be displayed
         What will be displayed after running this code?: What will be displayed after running this code?
       Commute Assess - cond 3 - block_2018:
+        "<pre>And contains a 3</pre>": "<pre>And contains a 3</pre>"
+        "<pre>And under 21</pre>": "<pre>And under 21</pre>"
+        "<pre>Under 40</pre>": "<pre>Under 40</pre>"
+        "<pre>Under 40<br>And contains a 3</pre>": "<pre>Under 40<br>And contains a 3</pre>"
+        "<pre>Under 40<br>And under 21<br>And contains a 3</pre>": "<pre>Under 40<br>And under 21<br>And contains a 3</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after running this code?: What will be displayed after running this code?
+      Commute Assess - cond 3 - block_2018_2019:
         "<pre>And contains a 3</pre>": "<pre>And contains a 3</pre>"
         "<pre>And under 21</pre>": "<pre>And under 21</pre>"
         "<pre>Under 40</pre>": "<pre>Under 40</pre>"
@@ -8964,6 +9130,12 @@ en:
         "<pre>5</pre>": "<pre>5</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
+      Commute Assess - func 2a - block_2018_2019:
+        "<pre>10</pre>": "<pre>10</pre>"
+        "<pre>55</pre>": "<pre>55</pre>"
+        "<pre>5</pre>": "<pre>5</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
       Commute Assess - func 2a - block_exam_prep:
         "<pre>10</pre>": "<pre>10</pre>"
         "<pre>55</pre>": "<pre>55</pre>"
@@ -8983,6 +9155,12 @@ en:
         nothing is printed: nothing is printed
         this script would cause an error: this script would cause an error
       Commute Assess - func 2b - block_2018:
+        "<pre>21</pre>": "<pre>21</pre>"
+        "<pre>81</pre>": "<pre>81</pre>"
+        "<pre>9</pre>": "<pre>9</pre>"
+        nothing is printed: nothing is printed
+        this script would cause an error: this script would cause an error
+      Commute Assess - func 2b - block_2018_2019:
         "<pre>21</pre>": "<pre>21</pre>"
         "<pre>81</pre>": "<pre>81</pre>"
         "<pre>9</pre>": "<pre>9</pre>"
@@ -9008,6 +9186,13 @@ en:
         "<pre>in func1<br>in func2<br>in func1</pre>": "<pre>in func1<br>in func2<br>in func1</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
+      Commute Assess - func 3a - block_2018_2019:
+        "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>": "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>"
+        "<pre>func1<br>func2</pre>": "<pre>func1<br>func2</pre>"
+        "<pre>in func1<br>in func2</pre>": "<pre>in func1<br>in func2</pre>"
+        "<pre>in func1<br>in func2<br>in func1</pre>": "<pre>in func1<br>in func2<br>in func1</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
       Commute Assess - func 3a - block_exam_prep:
         "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>": "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>"
         "<pre>func1<br>func2</pre>": "<pre>func1<br>func2</pre>"
@@ -9025,6 +9210,15 @@ en:
         Nothing is displayed: Nothing is displayed
         What will be displayed when this code is run?: What will be displayed when this code is run?
       Commute Assess - func 3b - block_2018:
+        "<pre>func3<br>func1</pre>": "<pre>func3<br>func1</pre>"
+        "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
+        "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
+        "<pre>in func3<br>in func3<br>in func1</pre>": "<pre>in func3<br>in func3<br>in func1</pre>"
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        Nothing is displayed: Nothing is displayed
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+      Commute Assess - func 3b - block_2018_2019:
         "<pre>func3<br>func1</pre>": "<pre>func3<br>func1</pre>"
         "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
         "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
@@ -9063,6 +9257,13 @@ en:
         It will be different each time: It will be different each time
         Nothing will be printed: Nothing will be printed
         What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 1 - block_2018_2019:
+        "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
+        "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
+        "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
+        It will be different each time: It will be different each time
+        Nothing will be printed: Nothing will be printed
+        What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 1 - block_exam_prep:
         "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
         "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
@@ -9091,6 +9292,13 @@ en:
         "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
         "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
         What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 2 - block_2018_2019:
+        "<pre>All done.</pre>": "<pre>All done.</pre>"
+        "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
+        "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
+        "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
+        "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
+        What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 2 - block_exam_prep:
         "<pre>All done.</pre>": "<pre>All done.</pre>"
         "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
@@ -9107,6 +9315,14 @@ en:
         Nothing will be displayed: Nothing will be displayed
         What will be displayed after this code has run?: What will be displayed after this code has run?
       CommuteAssess - Cond 4a - block_2018:
+        "<pre>The word is just right!</pre>": "<pre>The word is just right!</pre>"
+        "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
+        "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
+        "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
+        "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after this code has run?: What will be displayed after this code has run?
+      CommuteAssess - Cond 4a - block_2018_2019:
         "<pre>The word is just right!</pre>": "<pre>The word is just right!</pre>"
         "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
         "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
@@ -9143,6 +9359,13 @@ en:
         x is equal to "no"; y is equal to "maybe"; z is equal to "yes": x is equal to "no"; y is equal to "maybe"; z is equal to "yes"
         x is equal to "yes"; y is equal to "maybe"; z is equal to "no": x is equal to "yes"; y is equal to "maybe"; z is equal to "no"
         x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no": x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no"
+      CommuteAssess - Var 3 - block_2018_2019:
+        What are x, y, and z equal to after this program is run?: What are x, y, and z equal to after this program is run?
+        x is equal to "no"; y is equal to "maybe"; z is equal to "no": x is equal to "no"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "x": x is equal to "no"; y is equal to "maybe"; z is equal to "x"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "yes": x is equal to "no"; y is equal to "maybe"; z is equal to "yes"
+        x is equal to "yes"; y is equal to "maybe"; z is equal to "no": x is equal to "yes"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no": x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no"
       CommuteAssess - Var 3 - block_exam_prep:
         What are x, y, and z equal to after this program is run?: What are x, y, and z equal to after this program is run?
         x is equal to "no"; y is equal to "maybe"; z is equal to "no": x is equal to "no"; y is equal to "maybe"; z is equal to "no"
@@ -9158,6 +9381,13 @@ en:
         x is equal to 8; y is equal to 8; z is equal to 12: x is equal to 8; y is equal to 8; z is equal to 12
         x is equal to 8; y is equal to 8; z is equal to 16: x is equal to 8; y is equal to 8; z is equal to 16
       CommuteAssess - Var 4 - block_2018:
+        What are x, y and z equal to after this script is run?: What are x, y and z equal to after this script is run?
+        x is equal to 8; y is equal to 4, 8; z is equal to 12: x is equal to 8; y is equal to 4, 8; z is equal to 12
+        x is equal to 8; y is equal to 4; z is equal to 84: x is equal to 8; y is equal to 4; z is equal to 84
+        x is equal to 8; y is equal to 8; z is equal to "x + y": x is equal to 8; y is equal to 8; z is equal to "x + y"
+        x is equal to 8; y is equal to 8; z is equal to 12: x is equal to 8; y is equal to 8; z is equal to 12
+        x is equal to 8; y is equal to 8; z is equal to 16: x is equal to 8; y is equal to 8; z is equal to 16
+      CommuteAssess - Var 4 - block_2018_2019:
         What are x, y and z equal to after this script is run?: What are x, y and z equal to after this script is run?
         x is equal to 8; y is equal to 4, 8; z is equal to 12: x is equal to 8; y is equal to 4, 8; z is equal to 12
         x is equal to 8; y is equal to 4; z is equal to 84: x is equal to 8; y is equal to 4; z is equal to 84
@@ -9200,6 +9430,13 @@ en:
         '6': '6'
         How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
         It will be different each time you run it: It will be different each time you run it
+      CommuteAssess - loops 1 - block_2018_2019:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
+        It will be different each time you run it: It will be different each time you run it
       CommuteAssess - loops 1 - block_exam_prep:
         '10': '10'
         '18': '18'
@@ -9218,6 +9455,16 @@ en:
         : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         it will be different each time you run it: it will be different each time you run it
       CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        it will be different each time you run it: it will be different each time you run it
+      CommuteAssess - loops 2 - block_2018_2019:
         '0': '0'
         '1': '1'
         '10': '10'
@@ -9246,6 +9493,14 @@ en:
         What will be displayed when this code is run?: What will be displayed when this code is run?
         it will be different each time you run it: it will be different each time you run it
       CommuteAssess - loops 5 - block_2018:
+        "<pre>3</pre>": "<pre>3</pre>"
+        "<pre>3<br>1</pre>": "<pre>3<br>1</pre>"
+        "<pre>3<br>1<br>-1</pre>": "<pre>3<br>1<br>-1</pre>"
+        "<pre>5<br>3<br>1</pre>": "<pre>5<br>3<br>1</pre>"
+        "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>": "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>"
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+        it will be different each time you run it: it will be different each time you run it
+      CommuteAssess - loops 5 - block_2018_2019:
         "<pre>3</pre>": "<pre>3</pre>"
         "<pre>3<br>1</pre>": "<pre>3<br>1</pre>"
         "<pre>3<br>1<br>-1</pre>": "<pre>3<br>1<br>-1</pre>"
@@ -9294,6 +9549,14 @@ en:
         x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
         x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
         x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
+      CumulAssess - Var 1 - block_2018_2019:
+        What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
+        x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
+        x is equal to 10, 15; y is equal to 5, 10: x is equal to 10, 15; y is equal to 5, 10
+        x is equal to 10; y is equal to 5: x is equal to 10; y is equal to 5
+        x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
+        x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
+        x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
       CumulAssess - Var 1 - block_exam_prep:
         What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
         x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
@@ -9317,6 +9580,13 @@ en:
         <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
         What will be displayed after running this code?: What will be displayed after running this code?
       CumulAssess - Var 2 - block_2018:
+        "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
+        "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
+        "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
+        "<pre>sentence</pre>": "<pre>sentence</pre>"
+        <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CumulAssess - Var 2 - block_2018_2019:
         "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
         "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
         "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
@@ -11856,6 +12126,12 @@ en:
         "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
         "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
         "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
+      U5 assess compound boolean conditions_2018_2019:
+        "(temperature != 0) && (temperature < 32)": "(temperature != 0) && (temperature < 32)"
+        "(temperature < 0) || (temperature > 32)": "(temperature < 0) || (temperature > 32)"
+        "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
+        "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
+        "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
       U5 assess compound boolean conditions_exam_prep:
         "(temperature != 0) && (temperature < 32)": "(temperature != 0) && (temperature < 32)"
         "(temperature < 0) || (temperature > 32)": "(temperature < 0) || (temperature > 32)"
@@ -11873,6 +12149,10 @@ en:
         I am planning to take the AP exam this year: I am planning to take the AP exam this year
         I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
       Unit 5 final assessment understand and continue_2018:
+        I am NOT planning to take the AP exam this year: I am NOT planning to take the AP exam this year
+        I am planning to take the AP exam this year: I am planning to take the AP exam this year
+        I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
+      Unit 5 final assessment understand and continue_2018_2019:
         I am NOT planning to take the AP exam this year: I am NOT planning to take the AP exam this year
         I am planning to take the AP exam this year: I am planning to take the AP exam this year
         I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
@@ -11935,6 +12215,13 @@ en:
         Nothing with be printed: Nothing with be printed
         What will be printed when this code is run?: What will be printed when this code is run?
       commute assess - loops 3 - block_2018:
+        "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>": "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>"
+        "<pre>apple<br>orange </pre>": "<pre>apple<br>orange </pre>"
+        "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>": "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>"
+        It will be different each time you run it: It will be different each time you run it
+        Nothing with be printed: Nothing with be printed
+        What will be printed when this code is run?: What will be printed when this code is run?
+      commute assess - loops 3 - block_2018_2019:
         "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>": "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>"
         "<pre>apple<br>orange </pre>": "<pre>apple<br>orange </pre>"
         "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>": "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>"
@@ -17959,6 +18246,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q1-U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-6-q2-U5Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17969,6 +18265,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-6-q2-U5Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q2-U5Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -17995,6 +18300,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q3-U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-6-q4-U5Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -18005,6 +18319,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-6-q4-U5Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q4-U5Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
@@ -18031,6 +18354,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q5-U5Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-7-q1-U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -18041,6 +18373,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-7-q1-U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q1-U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I like computer science.: I like computer science.
@@ -18067,6 +18408,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q2-U5Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-7-q3-U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -18077,6 +18427,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-7-q3-U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q3-U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I like this computer science class.: I like this computer science class.
@@ -18103,6 +18462,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q4-U5Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-7-q5-U5Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -18113,6 +18481,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-7-q5-U5Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q5-U5Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -18668,6 +19045,12 @@ en:
         cartTotal = cartTotal +1;: cartTotal = cartTotal +1;
         var cartTotal + 1;: var cartTotal + 1;
         var cartTotal = cartTotal + 1;: var cartTotal = cartTotal + 1;
+      cspu5_assess1_additem_2018_2019:
+        cart total = 1;: cart total = 1;
+        cartTotal + 1;: cartTotal + 1;
+        cartTotal = cartTotal +1;: cartTotal = cartTotal +1;
+        var cartTotal + 1;: var cartTotal + 1;
+        var cartTotal = cartTotal + 1;: var cartTotal = cartTotal + 1;
       cspu5_assess1_additem_exam_prep:
         cart total = 1;: cart total = 1;
         cartTotal + 1;: cartTotal + 1;
@@ -18681,6 +19064,12 @@ en:
         Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
         apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
       cspu5_assess1_algorithm_2018:
+        Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
+        apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
+      cspu5_assess1_algorithm_2018_2019:
         Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
         Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.
         Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
@@ -18704,6 +19093,12 @@ en:
         <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>: <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>
         <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>: <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>
         <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>: <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>
+      cspu5_assess1_codevalues_2018_2019:
+        <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>: <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>
+        <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>: <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>
+        <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>: <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>
+        <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>: <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>
+        <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>: <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>
       cspu5_assess1_codevalues_exam_prep:
         <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>: <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>
         <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>: <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>
@@ -18716,6 +19111,11 @@ en:
         Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
         Display the value of variables at various points during the program.: Display the value of variables at various points during the program.
       cspu5_assess1_debugging_2018:
+        Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.: Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.
+        Change the names of variables within the program and run the program again.: Change the names of variables within the program and run the program again.
+        Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
+        Display the value of variables at various points during the program.: Display the value of variables at various points during the program.
+      cspu5_assess1_debugging_2018_2019:
         Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.: Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.
         Change the names of variables within the program and run the program again.: Change the names of variables within the program and run the program again.
         Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
@@ -18735,6 +19135,11 @@ en:
         <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">: <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">
         <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
         <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
+      cspu5_assess1_drawingoutcome_2018_2019:
+        <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">: <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">
+        <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">: <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">
+        <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
+        <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
       cspu5_assess1_drawingoutcome_exam_prep:
         <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">: <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">
         <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">: <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">
@@ -18747,6 +19152,12 @@ en:
         Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
         While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
       cspu5_assess1_elementid_2018:
+        An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
+        Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
+        IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
+        Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
+        While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
+      cspu5_assess1_elementid_2018_2019:
         An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
         Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
         IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
@@ -18772,6 +19183,13 @@ en:
         Event-driven programs do not implement algorithms.: Event-driven programs do not implement algorithms.
         Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
         The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
+      cspu5_assess1_eventprograms_2018_2019:
+        ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
+        Event-driven programs do not implement algorithms.: Event-driven programs do not implement algorithms.
+        Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
+        The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
       cspu5_assess1_eventprograms_exam_prep:
         ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
@@ -18786,6 +19204,12 @@ en:
         '8': '8'
         'Error. Unknown Identifier: x': 'Error. Unknown Identifier: x'
       cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+        'Error. Unknown Identifier: x': 'Error. Unknown Identifier: x'
+      cspu5_assess1_fivemore_2018_2019:
         "-2": "-2"
         '3': '3'
         '5': '5'
@@ -18809,6 +19233,12 @@ en:
         Nothing will be displayed: Nothing will be displayed
         a is bigger: a is bigger
         b: b
+      cspu5_assess1_flowchart_2018_2019:
+        '10': '10'
+        '5': '5'
+        Nothing will be displayed: Nothing will be displayed
+        a is bigger: a is bigger
+        b: b
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
@@ -18822,6 +19252,12 @@ en:
         '8': '8'
         Error.  Cannot make a new variable x inside function increase(): Error.  Cannot make a new variable x inside function increase()
       cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+        Error.  Cannot make a new variable x inside function increase(): Error.  Cannot make a new variable x inside function increase()
+      cspu5_assess1_increase_2018_2019:
         '10': '10'
         '13': '13'
         '5': '5'
@@ -18845,6 +19281,12 @@ en:
         <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">: <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">
         <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">: <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">
         <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">: <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">
+      cspu5_assess1_snowman_2018_2019:
+        <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">: <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">
+        <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">: <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">
+        <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">: <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">
+        <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">: <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">
+        <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">: <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">
       cspu5_assess1_snowman_exam_prep:
         <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">: <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">
         <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">: <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">
@@ -18858,6 +19300,12 @@ en:
         <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
         <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
       cspu5_assess1_swap_2018:
+        <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
+        <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
+        <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
+        <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
+        <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
+      cspu5_assess1_swap_2018_2019:
         <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
         <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
         <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
@@ -18881,6 +19329,12 @@ en:
         <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
         <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
         <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
+      cspu5_assess1_turtle_2018_2019:
+        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
+        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
+        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
       cspu5_assess1_turtle_exam_prep:
         <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>
         <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>
@@ -18899,6 +19353,12 @@ en:
         'value is: 3': 'value is: 3'
         'value is: 4': 'value is: 4'
         'value is: c': 'value is: c'
+      cspu5_assess1_value_2018_2019:
+        'value is: 2': 'value is: 2'
+        'value is: 2.3333333': 'value is: 2.3333333'
+        'value is: 3': 'value is: 3'
+        'value is: 4': 'value is: 4'
+        'value is: c': 'value is: c'
       cspu5_assess1_value_exam_prep:
         'value is: 2': 'value is: 2'
         'value is: 2.3333333': 'value is: 2.3333333'
@@ -18911,6 +19371,11 @@ en:
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
         result: result
       cspu5_assess2_addstrings_2018:
+        5 + hello: 5 + hello
+        5hello: 5hello
+        'error on num + str: type mismatch': 'error on num + str: type mismatch'
+        result: result
+      cspu5_assess2_addstrings_2018_2019:
         5 + hello: 5 + hello
         5hello: 5hello
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
@@ -18938,6 +19403,12 @@ en:
         Integers between 1 and 10: Integers between 1 and 10
         True/False: True/False
         Yes/Maybe/No: Yes/Maybe/No
+      cspu5_assess2_boolean_2018_2019:
+        Any Integer: Any Integer
+        Any single character: Any single character
+        Integers between 1 and 10: Integers between 1 and 10
+        True/False: True/False
+        Yes/Maybe/No: Yes/Maybe/No
       cspu5_assess2_boolean_exam_prep:
         Any Integer: Any Integer
         Any single character: Any single character
@@ -18954,6 +19425,11 @@ en:
         '55': '55'
         'error on str1 + str2: type mismatch': 'error on str1 + str2: type mismatch'
         result: result
+      cspu5_assess2_combineString_2018_2019:
+        '10': '10'
+        '55': '55'
+        'error on str1 + str2: type mismatch': 'error on str1 + str2: type mismatch'
+        result: result
       cspu5_assess2_combineString_exam_prep:
         '10': '10'
         '55': '55'
@@ -18966,6 +19442,12 @@ en:
         Strings sometimes include spaces.: Strings sometimes include spaces.
         Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
       cspu5_assess2_false_2018:
+        A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
+        Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
+        Strings sometimes include spaces.: Strings sometimes include spaces.
+        Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
+      cspu5_assess2_false_2018_2019:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
         Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
@@ -18989,6 +19471,12 @@ en:
         Nothing will be printed: Nothing will be printed
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
+      cspu5_assess2_goodbye_2018_2019:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed: Nothing will be printed
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
       cspu5_assess2_goodbye_exam_prep:
         Did you say something? That was so short.: Did you say something? That was so short.
         I have never heard that before.: I have never heard that before.
@@ -19002,6 +19490,12 @@ en:
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
       cspu5_assess2_hello_2018:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed.: Nothing will be printed.
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
+      cspu5_assess2_hello_2018_2019:
         Did you say something? That was so short.: Did you say something? That was so short.
         I have never heard that before.: I have never heard that before.
         Nothing will be printed.: Nothing will be printed.
@@ -19025,6 +19519,12 @@ en:
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
+      cspu5_assess2_numValues_2018_2019:
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
+        The code will display the largest of the three values: The code will display the largest of the three values
+        The code will display the middle of all three values: The code will display the middle of all three values
+        The code will display the smallest of the three values: The code will display the smallest of the three values
+        The code will not display anything due to an error: The code will not display anything due to an error
       cspu5_assess2_numValues_exam_prep:
         The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
         The code will display the largest of the three values: The code will display the largest of the three values
@@ -19038,6 +19538,12 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        You are not old enough to be President.: You are not old enough to be President.
+        You are old enough to be President!: You are old enough to be President!
+        'false': 'false'
+        'true': 'true'
+      cspu5_assess2_oldEnough_2018_2019:
         '35': '35'
         You are not old enough to be President.: You are not old enough to be President.
         You are old enough to be President!: You are old enough to be President!
@@ -19061,6 +19567,12 @@ en:
         "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
+      cspu5_assess2_pseudoCode_2018_2019:
+        "<code>Time to start studying again!</code>": "<code>Time to start studying again!</code>"
+        "<code>You passed!</code>": "<code>You passed!</code>"
+        "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
+        Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_pseudoCode_exam_prep:
         "<code>Time to start studying again!</code>": "<code>Time to start studying again!</code>"
         "<code>You passed!</code>": "<code>You passed!</code>"
@@ -19074,6 +19586,12 @@ en:
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_setAlarm_2018:
+        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
+        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
+        day != "Monday": day != "Monday"
+        day == "Saturday": day == "Saturday"
+        day == "Sunday": day == "Sunday"
+      cspu5_assess2_setAlarm_2018_2019:
         (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
         (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
         day != "Monday": day != "Monday"
@@ -19097,6 +19615,12 @@ en:
         console.log("Hello! \newLineHow are you?");: console.log("Hello! \newLineHow are you?");
         console.log("Hello! \nlHow are you?");: console.log("Hello! \nlHow are you?");
         console.log("Hello! \tHow are you?");: console.log("Hello! \tHow are you?");
+      cspu5_assess2_statementOutput_2018_2019:
+        console.log("Hello! \bHow are you?");: console.log("Hello! \bHow are you?");
+        console.log("Hello! \nHow are you?");: console.log("Hello! \nHow are you?");
+        console.log("Hello! \newLineHow are you?");: console.log("Hello! \newLineHow are you?");
+        console.log("Hello! \nlHow are you?");: console.log("Hello! \nlHow are you?");
+        console.log("Hello! \tHow are you?");: console.log("Hello! \tHow are you?");
       cspu5_assess2_statementOutput_exam_prep:
         console.log("Hello! \bHow are you?");: console.log("Hello! \bHow are you?");
         console.log("Hello! \nHow are you?");: console.log("Hello! \nHow are you?");
@@ -19110,6 +19634,12 @@ en:
         '50': '50'
         '75': '75'
       cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018_2019:
         '125': '125'
         '200': '200'
         '30': '30'
@@ -19133,6 +19663,12 @@ en:
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
         There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
+      cspu5_assess2_wrongLogic_2018_2019:
+        Any time between 0 and 20: Any time between 0 and 20
+        Any time between 10 and 19: Any time between 10 and 19
+        Any time between 6 and 9: Any time between 6 and 9
+        The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
+        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
       cspu5_assess2_wrongLogic_exam_prep:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19
@@ -19149,6 +19685,11 @@ en:
         REMOVE  the value at the index of 2, then INSERT 13 in the index 2: REMOVE  the value at the index of 2, then INSERT 13 in the index 2
         Remove all items from the list and start over: Remove all items from the list and start over
         ages[2] = ages[2] + 1: ages[2] = ages[2] + 1
+      cspu5_assess3_ageList_2018_2019:
+        INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
+        REMOVE  the value at the index of 2, then INSERT 13 in the index 2: REMOVE  the value at the index of 2, then INSERT 13 in the index 2
+        Remove all items from the list and start over: Remove all items from the list and start over
+        ages[2] = ages[2] + 1: ages[2] = ages[2] + 1
       cspu5_assess3_ageList_exam_prep:
         INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
         REMOVE  the value at the index of 2, then INSERT 13 in the index 2: REMOVE  the value at the index of 2, then INSERT 13 in the index 2
@@ -19161,6 +19702,12 @@ en:
         '9': '9'
         ab: ab
       cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+        ab: ab
+      cspu5_assess3_array1_2018_2019:
         '10': '10'
         '4': '4'
         '7': '7'
@@ -19184,6 +19731,12 @@ en:
         '4': '4'
         '5': '5'
         '6': '6'
+      cspu5_assess3_array2_2018_2019:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
       cspu5_assess3_array2_exam_prep:
         '2': '2'
         '3': '3'
@@ -19197,6 +19750,12 @@ en:
         <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">: <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
         <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
       cspu5_assess3_array3_2018:
+        <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+        <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+        <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+        <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">: <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+        <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+      cspu5_assess3_array3_2018_2019:
         <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
         <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
         <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
@@ -19220,6 +19779,12 @@ en:
         '2': '2'
         '8': '8'
         Error. Index 3 does not exist.: Error. Index 3 does not exist.
+      cspu5_assess3_array4_2018_2019:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+        Error. Index 3 does not exist.: Error. Index 3 does not exist.
       cspu5_assess3_array4_exam_prep:
         '0': '0'
         '1': '1'
@@ -19233,6 +19798,12 @@ en:
         <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
         <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
       cspu5_assess3_array5_2018:
+        <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">: <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+        <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">: <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+        <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">: <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+        <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+        <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+      cspu5_assess3_array5_2018_2019:
         <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">: <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
         <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">: <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
         <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">: <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
@@ -19256,6 +19827,12 @@ en:
         'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
         'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
         'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>': 'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>'
+      cspu5_assess3_bakeSale_2018_2019:
+        'Add after line 3:     <pre>numItems = numItems - 1;</pre>': 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
+        'Add after line 4:     <pre>numItems = 0;</pre>': 'Add after line 4:     <pre>numItems = 0;</pre>'
+        'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
+        'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
+        'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>': 'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>'
       cspu5_assess3_bakeSale_exam_prep:
         'Add after line 3:     <pre>numItems = numItems - 1;</pre>': 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
         'Add after line 4:     <pre>numItems = 0;</pre>': 'Add after line 4:     <pre>numItems = 0;</pre>'
@@ -19269,6 +19846,12 @@ en:
         '3': '3'
         '4': '4'
       cspu5_assess3_counter_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      cspu5_assess3_counter_2018_2019:
         '0': '0'
         '1': '1'
         '2': '2'
@@ -19292,6 +19875,12 @@ en:
         2, 1: 2, 1
         2, 2: 2, 2
         2, 4: 2, 4
+      cspu5_assess3_impossibleOutput_2018_2019:
+        0, 0: 0, 0
+        1, 1: 1, 1
+        2, 1: 2, 1
+        2, 2: 2, 2
+        2, 4: 2, 4
       cspu5_assess3_impossibleOutput_exam_prep:
         0, 0: 0, 0
         1, 1: 1, 1
@@ -19305,6 +19894,12 @@ en:
         '6': '6'
         Error. There is no index 2.: Error. There is no index 2.
       cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+        Error. There is no index 2.: Error. There is no index 2.
+      cspu5_assess3_listAppend_2018_2019:
         '1': '1'
         '2': '2'
         '3': '3'
@@ -19328,6 +19923,12 @@ en:
         '4': '4'
         '5': '5'
         Infinite loop: Infinite loop
+      cspu5_assess3_loopValue1_2018_2019:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        Infinite loop: Infinite loop
       cspu5_assess3_loopValue1_exam_prep:
         '2': '2'
         '3': '3'
@@ -19341,6 +19942,12 @@ en:
         '6': '6'
         Infinite loop: Infinite loop
       cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
+      cspu5_assess3_loopValue2_2018_2019:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -19364,6 +19971,12 @@ en:
         '5': '5'
         '6': '6'
         Infinite loop: Infinite loop
+      cspu5_assess3_loopValue3_2018_2019:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
       cspu5_assess3_loopValue3_exam_prep:
         '0': '0'
         '4': '4'
@@ -19377,6 +19990,12 @@ en:
         d: d
         e: e
       cspu5_assess3_mysterySwap_2018:
+        a: a
+        b: b
+        c: c
+        d: d
+        e: e
+      cspu5_assess3_mysterySwap_2018_2019:
         a: a
         b: b
         c: c
@@ -19400,6 +20019,12 @@ en:
         <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>
         <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>
         <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>
+      cspu5_assess3_robot_2018_2019:
+        <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>
+        <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>
+        <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>
+        <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>
+        <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>
       cspu5_assess3_robot_exam_prep:
         <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>
         <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>
@@ -19413,6 +20038,12 @@ en:
         rolls = 100 || sixes <= 25: rolls = 100 || sixes <= 25
         rolls >= 0 && sixes < 25: rolls >= 0 && sixes < 25
       cspu5_assess3_rollDie_2018:
+        rolls < 100 && sixes < 25: rolls < 100 && sixes < 25
+        rolls < 100 || sixes < 25: rolls < 100 || sixes < 25
+        rolls < sixes || sixes > 25: rolls < sixes || sixes > 25
+        rolls = 100 || sixes <= 25: rolls = 100 || sixes <= 25
+        rolls >= 0 && sixes < 25: rolls >= 0 && sixes < 25
+      cspu5_assess3_rollDie_2018_2019:
         rolls < 100 && sixes < 25: rolls < 100 && sixes < 25
         rolls < 100 || sixes < 25: rolls < 100 || sixes < 25
         rolls < sixes || sixes > 25: rolls < sixes || sixes > 25
@@ -19434,6 +20065,11 @@ en:
         <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">: <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
         <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
         <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+      cspu5_assess3_swap_2018_2019:
+        <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">: <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+        <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">: <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+        <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+        <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
       cspu5_assess3_swap_exam_prep:
         <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">: <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
         <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">: <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
@@ -19446,6 +20082,12 @@ en:
         While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.
         While loops terminate after a fixed number of loops that is pre-determined: While loops terminate after a fixed number of loops that is pre-determined
       cspu5_assess3_whileTrue_2018:
+        While loops are known as "forever loops" and never stop until the program is halted by the user.: While loops are known as "forever loops" and never stop until the program is halted by the user.
+        While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
+        While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
+        While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.
+        While loops terminate after a fixed number of loops that is pre-determined: While loops terminate after a fixed number of loops that is pre-determined
+      cspu5_assess3_whileTrue_2018_2019:
         While loops are known as "forever loops" and never stop until the program is halted by the user.: While loops are known as "forever loops" and never stop until the program is halted by the user.
         While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
         While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
@@ -19469,6 +20111,12 @@ en:
         <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">: <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
         <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">: <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
         <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">: <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+      cspu5_assess4_arrayContains_2018_2019:
+        <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">: <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+        <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">: <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+        <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">: <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+        <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">: <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+        <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">: <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
       cspu5_assess4_arrayContains_exam_prep:
         <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">: <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
         <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">: <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
@@ -19482,6 +20130,12 @@ en:
         '4': '4'
         '9': '9'
       cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018_2019:
         '10': '10'
         '16': '16'
         '3': '3'
@@ -19503,6 +20157,11 @@ en:
         <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">: <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
         <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">: <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
         <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">: <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+      cspu5_assess4_listContains_2018_2019:
+        <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">: <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+        <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">: <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+        <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">: <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+        <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">: <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
       cspu5_assess4_listContains_exam_prep:
         <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">: <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
         <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">: <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
@@ -19515,6 +20174,12 @@ en:
         '9': '9'
         Error. Index 1 does not exist.: Error. Index 1 does not exist.
       cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+        Error. Index 1 does not exist.: Error. Index 1 does not exist.
+      cspu5_assess4_listOutput_2018_2019:
         '17': '17'
         '3': '3'
         '42': '42'
@@ -19538,6 +20203,12 @@ en:
         Mystery displays the index of the last occurrence of the value n in the list.: Mystery displays the index of the last occurrence of the value n in the list.
         Mystery displays the number at index n.: Mystery displays the number at index n.
         Mystery displays true if n is in the list.: Mystery displays true if n is in the list.
+      cspu5_assess4_mysteryMethod_2018_2019:
+        Mystery displays the index of every occurrence of the value n in the list.: Mystery displays the index of every occurrence of the value n in the list.
+        Mystery displays the index of the first occurrence of the value n in the list.: Mystery displays the index of the first occurrence of the value n in the list.
+        Mystery displays the index of the last occurrence of the value n in the list.: Mystery displays the index of the last occurrence of the value n in the list.
+        Mystery displays the number at index n.: Mystery displays the number at index n.
+        Mystery displays true if n is in the list.: Mystery displays true if n is in the list.
       cspu5_assess4_mysteryMethod_exam_prep:
         Mystery displays the index of every occurrence of the value n in the list.: Mystery displays the index of every occurrence of the value n in the list.
         Mystery displays the index of the first occurrence of the value n in the list.: Mystery displays the index of the first occurrence of the value n in the list.
@@ -19551,6 +20222,12 @@ en:
         It returns the middle of the three input values: It returns the middle of the three input values
         mystery returns the smallest of the three input values: mystery returns the smallest of the three input values
       cspu5_assess4_mysteryResult_2018:
+        It always returns c: It always returns c
+        It returns the average of the three input values: It returns the average of the three input values
+        It returns the largest of the three input values: It returns the largest of the three input values
+        It returns the middle of the three input values: It returns the middle of the three input values
+        mystery returns the smallest of the three input values: mystery returns the smallest of the three input values
+      cspu5_assess4_mysteryResult_2018_2019:
         It always returns c: It always returns c
         It returns the average of the three input values: It returns the average of the three input values
         It returns the largest of the three input values: It returns the largest of the three input values
@@ -19574,6 +20251,12 @@ en:
         The procedure returns how long it takes to find two numbers in ascending order: The procedure returns how long it takes to find two numbers in ascending order
         The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
         The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
+      cspu5_assess4_mysteryReturn_2018_2019:
+        The procedure counts how long it takes to find two numbers in descending order and returns that number: The procedure counts how long it takes to find two numbers in descending order and returns that number
+        The procedure returns false when data is in descending order: The procedure returns false when data is in descending order
+        The procedure returns how long it takes to find two numbers in ascending order: The procedure returns how long it takes to find two numbers in ascending order
+        The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
+        The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
       cspu5_assess4_mysteryReturn_exam_prep:
         The procedure counts how long it takes to find two numbers in descending order and returns that number: The procedure counts how long it takes to find two numbers in descending order and returns that number
         The procedure returns false when data is in descending order: The procedure returns false when data is in descending order
@@ -19592,6 +20275,12 @@ en:
         Nothing. Procedure works as is.: Nothing. Procedure works as is.
         RETURN ("game over"): RETURN ("game over")
         RETURN (count): RETURN (count)
+      cspu5_assess4_playGame_2018_2019:
+        DISPLAY ("game over"): DISPLAY ("game over")
+        DISPLAY (count): DISPLAY (count)
+        Nothing. Procedure works as is.: Nothing. Procedure works as is.
+        RETURN ("game over"): RETURN ("game over")
+        RETURN (count): RETURN (count)
       cspu5_assess4_playGame_exam_prep:
         DISPLAY ("game over"): DISPLAY ("game over")
         DISPLAY (count): DISPLAY (count)
@@ -19605,6 +20294,12 @@ en:
         <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
         <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
       cspu5_assess4_robot_2018:
+        <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">: <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+        <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">: <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+        <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+        <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+        <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+      cspu5_assess4_robot_2018_2019:
         <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">: <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
         <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">: <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
         <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
