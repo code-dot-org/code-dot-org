@@ -228,7 +228,7 @@ MARKDOWN
   test 'clone level group with suffix' do
     # DSL for the level_group.
     level_group_input_dsl = "
-  name 'long assessment'
+  name 'level_group_test long assessment'
   title 'Long Assessment'
   submittable 'true'
 
@@ -245,7 +245,7 @@ MARKDOWN
   level 'level7'
   "
 
-    level_group_copy_dsl = "name 'long assessment_copy'
+    level_group_copy_dsl = "name 'level_group_test long assessment_copy'
 title 'Long Assessment'
 submittable 'true'
 
@@ -298,7 +298,7 @@ level 'level7_copy'"
 
   test 'clone previously cloned level group' do
     level_group_input_dsl = "
-  name 'assessment'
+  name 'level_group_test assessment'
   title 'Assessment'
 
   page
@@ -306,14 +306,14 @@ level 'level7_copy'"
   level 'level1'
   "
 
-    level_group_copy1_dsl = "name 'assessment copy1'
+    level_group_copy1_dsl = "name 'level_group_test assessment copy1'
 title 'Assessment'
 
 page
 text 'external1 copy1'
 level 'level1 copy1'"
 
-    level_group_copy2_dsl = "name 'assessment copy2'
+    level_group_copy2_dsl = "name 'level_group_test assessment copy2'
 title 'Assessment'
 
 page
@@ -337,7 +337,7 @@ level 'level1 copy2'"
     # Copy the level group and all its sub levels.
     level_group_copy1 = level_group.clone_with_suffix(' copy1')
     assert_equal level_group_copy1_dsl, level_group_copy1.dsl_text
-    assert_equal 'assessment copy1', level_group_copy1.name
+    assert_equal 'level_group_test assessment copy1', level_group_copy1.name
     assert_equal 'level1 copy1', level_group_copy1.pages.first.levels.first.name
     assert_equal 'external1 copy1', level_group_copy1.properties['texts'].first['level_name']
     refute_nil Level.find_by_name('external1 copy1')
@@ -346,7 +346,7 @@ level 'level1 copy2'"
     # rather than being concatenated, due to name_suffix field.
     level_group_copy2 = level_group.clone_with_suffix(' copy2')
     assert_equal level_group_copy2_dsl, level_group_copy2.dsl_text
-    assert_equal 'assessment copy2', level_group_copy2.name
+    assert_equal 'level_group_test assessment copy2', level_group_copy2.name
     assert_equal 'level1 copy2', level_group_copy2.pages.first.levels.first.name
     assert_equal 'external1 copy2', level_group_copy2.properties['texts'].first['level_name']
     refute_nil Level.find_by_name('external1 copy2')
