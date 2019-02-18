@@ -11303,3 +11303,101 @@ en:
               name: Mid-Year Survey
               description_student: ''
               description_teacher: ''
+        csp5-2019:
+          title: CSP Unit 5 - Building Apps ('18-'19)
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
+          description_audience: ''
+          stages:
+            Buttons and Events:
+              name: Buttons and Events
+              description_student: ''
+              description_teacher: ''
+            Multi-screen Apps:
+              name: Multi-screen Apps
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Multi-Screen App':
+              name: 'Building an App: Multi-Screen App'
+              description_student: ''
+              description_teacher: ''
+            Controlling Memory with Variables:
+              name: Controlling Memory with Variables
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Clicker Game':
+              name: 'Building an App: Clicker Game'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 1:
+              name: Unit 5 Assessment 1
+              description_student: ''
+              description_teacher: ''
+            User Input and Strings:
+              name: User Input and Strings
+              description_student: ''
+              description_teacher: ''
+            '"If" Statements Unplugged':
+              name: '"If" Statements Unplugged'
+              description_student: ''
+              description_teacher: ''
+            Boolean Expressions and "If" Statements:
+              name: Boolean Expressions and "If" Statements
+              description_student: ''
+              description_teacher: ''
+            '"if-else-if" and Conditional Logic':
+              name: '"if-else-if" and Conditional Logic'
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Color Sleuth':
+              name: 'Building an App: Color Sleuth'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 2:
+              name: Unit 5 Assessment 2
+              description_student: ''
+              description_teacher: ''
+            While Loops:
+              name: While Loops
+              description_student: ''
+              description_teacher: ''
+            Loops and Simulations:
+              name: Loops and Simulations
+              description_student: ''
+              description_teacher: ''
+            Introduction to Arrays:
+              name: Introduction to Arrays
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Image Scroller':
+              name: 'Building an App: Image Scroller'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 3:
+              name: Unit 5 Assessment 3
+              description_student: ''
+              description_teacher: ''
+            Processing Arrays:
+              name: Processing Arrays
+              description_student: ''
+              description_teacher: ''
+            Functions with Return Values:
+              name: Functions with Return Values
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Canvas Painter':
+              name: 'Building an App: Canvas Painter'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 4:
+              name: Unit 5 Assessment 4
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+              description_student: ''
+              description_teacher: ''
+            Mid-Year Survey:
+              name: Mid-Year Survey
+              description_student: ''
+              description_teacher: ''
