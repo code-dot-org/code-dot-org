@@ -1424,6 +1424,18 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      aalab_checkCollision:
+        text: when [SPRITE1][0] [OPTION][1] [SPRITE2][2]
+        options:
+          OPTION:
+            '"collide"': collides with
+            '"overlap"': overlaps
+      aalab_checkTouching:
+        text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2]"
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       aalab_clickedOn:
         text: "[CONDITION][0] [SPRITE][1] clicked"
         options:
@@ -1453,7 +1465,7 @@ en:
             '"this"': this
             '"other"': other
       aalab_jumpTo:
-        text: "[SPRITE][0] jump to [LOCATION][1]"
+        text: aalab [SPRITE][0] jump to [LOCATION][1]
       aalab_keyPressed:
         text: "[CONDITION][0] [KEY][1] pressed"
         options:
@@ -1466,10 +1478,28 @@ en:
             '"left"': left
             '"right"': right
             '"space"': space
+      aalab_locationOf:
+        text: aalab location of [SPRITE][0]
+      aalab_location_picker:
+        text: "[LOCATION][0]"
+      aalab_moveForward:
+        text: aalab move [SPRITE][0] [DISTANCE][1] pixels forward
+      aalab_moveInDirection:
+        text: aalab move [SPRITE][0] [DISTANCE][1] pixels [DIRECTION][2]
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
+      aalab_moveToward:
+        text: aalab move [SPRITE][0] distance [DISTANCE][1] toward [TARGET][2]
       aalab_nameStringSay:
         text: "[NAMESTRING][0] says [MESSAGE][1]"
       aalab_prompt:
         text: ask question [MESSAGE][0]
+      aalab_randomLocation:
+        text: aalab random location
       aalab_removeOneAndAll:
         text: aalab remove [THIS][0]
       aalab_setBG:
@@ -1495,18 +1525,40 @@ en:
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
-      aalab_setVariable:
-        text: aalab set [NAME][0] to [VALUE][1]
+      aalab_setCollidable:
+        text: aalab set [SPRITE][0] collidable to [VAL][1]
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_setDirection:
+        text: aalab set [SPRITE][0] movement direction [DIRECTION][1]
+      aalab_setProp:
+        text: aalab set [SPRITE][0] [PROPERTY][1] to [VAL][2]
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+            '"tint"': tint
+      aalab_setSpriteVariable:
+        text: aalab set [VARIABLE][0] to [SPRITE][1]
+      aalab_showCustomText:
+        text: show text[TEXT][0]location[LOCATION][1]size[SIZE][2]color[COLOR][3]duration[DURATION][4]
+        options:
+          DURATION:
+            '"1"': 1 second
+            '"2"': 2 seconds
+            '"3"': 3 seconds
+            '"4"': 4 seconds
+            '"5"': 5 seconds
+            '"0"': forever
       aalab_speakerSaysConsole:
         text: "[SPRITE][0] says [MESSAGE][1]"
       aalab_spriteSay:
         text: sprite [SPRITE][0] say [TEXT][1] for [SECONDS][2] seconds
-      aalab_whenTouching:
-        text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2]"
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
