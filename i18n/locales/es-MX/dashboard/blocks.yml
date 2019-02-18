@@ -1297,8 +1297,6 @@ es-MX:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_addToSpriteGroup:
         text: añadir gráfico {SPRITE} a grupo {GROUP}
-      aalab_allSpritesWithCostume:
-        text: aalab {COSTUME}
       aalab_changePropByFlexible:
         text: cambia aalab {SPRITE} {PROPERTY} por {VAL}
         options:
@@ -1329,12 +1327,27 @@ es-MX:
         options:
           CHOICE:
             '"this"': este
+      aalab_jumpTo:
+        text: "{SPRITE} saltar a {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
       aalab_nameStringSay:
         text: "{NAMESTRING} dice {MESSAGE}"
       aalab_prompt:
         text: preguntar {MESSAGE}
-      aalab_removeAdvanced:
-        text: eliminarAvanzado {THIS}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
       aalab_speakerSaysConsole:
         text: "{SPRITE} dice {MESSAGE}"
       aalab_spriteSay:

@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   hour_of_code: La Hora del Código
   hello: Hola mundo
   'yes': Sí
@@ -449,7 +450,8 @@
   homepage_slot_text_link_shop: Camisetas, sombreros y más
   homepage_slot_text_link_administrators: Lleva las ciencias de la computación a tu
     escuela
-  homepage_header_codestudio: Creaciones de alumnos de Code.org
+  homepage_gallery_header: Más de %{project_count} millones de proyectos de Code.org
+    creados
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
@@ -1303,10 +1305,13 @@
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
   cspunit3_gradelevel: Grados 9-12
-  cspunit3_shortdescription_congrats: |-
-    Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r
-    \r
-    Esta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates.
+  cspunit3_shortdescription_congrats: "Esta unidad presenta los conceptos fundamentales
+    de la programación informática, que desbloquea la capacidad de crear aplicaciones
+    ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación
+    y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos
+    aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r\n\r\nEsta
+    unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información
+    sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
   20-hour_name: Curso acelerado
   algebra_name: CS en Álgebra
   AlgebraA_name: CS en Álgebra Curso A
@@ -2428,49 +2433,3 @@
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
     la dirección web y vuelve a enviarla. O, regrese a nuestra página web.
   page_not_found_button: Regresa a casa
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_gallery_header: Over %{project_count} million Code.org projects created
-  codesters_name: Codesters
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
-  express-2018_name: Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  sphero_beyond_name: SPRK
-  starwars_shortcode: star
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  user_header_spritelab: Sprite Lab
-  hero_name: 'Minecraft: Hero''s Journey'
-  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!

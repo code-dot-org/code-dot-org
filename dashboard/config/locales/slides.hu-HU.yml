@@ -497,10 +497,9 @@ hu:
           a "Futtatás" gombra, és nézd meg, hogy sikerült-e! Ügyes voltál!
     C1_bigevent_unplugged:
       1:
-        text: Ennek a leckének a Nagy Esemény nevet adtuk. Arról szól, hogy hogyan
-          irányítjuk a programjainkat és hogyan hogyan változik a programunk futása
-          futtatás közben események segítségével - például amikor lenyomunk egy billentyűt,
-          vagy amikor az egérrel kattintunk.
+        text: Ennek a leckének a Nagy Esemény nevet adtuk. Arról szól, hogyan irányíthatunk
+          egy programot és hogyan tudunk rajta változtatni menet közben olyan eseményekkel,
+          mint például egy billentyű lenyomása vagy kattintás az egérrel.
       2: 
       3: 
       4: 

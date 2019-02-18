@@ -355,7 +355,7 @@ sk:
       2-3 Maze 16 before: Viete nájsť najrýchlejšiu cestu k prasiatku?
       2-3 Maze 16: Cykly fungujú dokonca aj s viac ako jedným vsunutým blokom. Vieš
         zopakovať tento postup tak, aby sa zombie dostal k slnečnici?
-      2-3 Maze 2: Toto prasiatko mi nedá spať. Pomôž mi dostať sa k nemu!
+      2-3 Maze 2: To prasa mi pije krv! Pomôž mi dostať sa k nemu!
       2-3 Maze 3: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo
         bude lietať perie!
       2-3 Maze 4: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
@@ -377,7 +377,7 @@ sk:
         blokov!
       2-3 Maze Loops Assessment 1: 'Hodnotenie: Dostaňte ma k slnečnici použitím len
         5 blokov! '
-      2-3 Maze sq1: Toto prasiatko mi nedá spať. Pomôž mi ho nájsť!
+      2-3 Maze sq1: To prasa mi pije krv. Pomôž mi ho nájsť!
       2-3 Maze sq10: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
       2-3 Maze sq10v2: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
       2-3 Maze sq2: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT,
@@ -954,6 +954,8 @@ sk:
       K-1 Artist1 2: Nakreslite fúzy na mačke dvoma čiarami!
       K-1 Artist1 3: Nakreslite dve čiary východne a dve západne pre dokončenie domu!
       K-1 Bee Puzzle 12: Zoberte tri nektáre a potom spravte dva medy
+      K-1 Maze 11: 'Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT,
+        lebo bude lietať perie! Pomôcka: Je na Juh odo mňa.'
       K-1 Maze Loops 1: Dostaň ma k prasiatku!
       K-1 Maze Loops 4: Dostaň ma k prasiatku!
       K-1 Maze Loops 9: Dostaň ma k prasiatku!
@@ -1302,6 +1304,8 @@ sk:
         loptu až kým sa nedotkne vlajky.
       bounce_7_sports: Pripoj správne bloky ku každému z "keď..." blokov. Odrážaj
         loptu až kým sa nedotkne vlajky.
+      course1_maze_seq_challenge1: '"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.
+        Vyhni sa TNT, lebo bude lietať perie!"'
       course2_collector_loops_challenge2: Získajte všetok poklad!
       course2_collector_prog_challenge1: Pozrite sa pozorne! Viete pozbierať všetkých
         * 10 * kusov pokladu?
@@ -1338,9 +1342,17 @@ sk:
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
         a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž
         a nahraď niečim úplne iným)
+      courseA_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
+      courseA_maze_ramp5_2018: Vyhni sa TNT.
       courseA_maze_seq12: 'Dostaňte to prasa! '
       courseA_maze_seq12_2018: 'Dostaňte to prasa! '
       courseA_maze_seq12_2019: 'Dostaňte to prasa! '
+      courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasaťu. Vyhni sa
+        TNT, lebo bude lietať perie!
+      courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasaťu. Vyhni
+        sa TNT, lebo bude lietať perie!
+      courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasaťu. Vyhni
+        sa TNT, lebo bude lietať perie!
       courseC_PlayLab_events1: Sprav to tak, aby pes Jorge (postava 1) povedal "Ahoj
         všetci.".
       courseC_PlayLab_events1_2018: Sprav to tak, aby pes Jorge (postava 1) povedal
@@ -1419,6 +1431,12 @@ sk:
       courseC_flappy_events10: 'Vytvor vlastnú hru Flappy! '
       courseC_flappy_events10_2018: 'Vytvor vlastnú hru Flappy! '
       courseC_flappy_events10_2019: 'Vytvor vlastnú hru Flappy! '
+      courseC_maze_programming4: Vyhni sa TNT, lebo bude lietať perie!
+      courseC_maze_programming4_2018: Vyhni sa TNT, lebo bude lietať perie!
+      courseC_maze_programming4_2019: Vyhni sa TNT, lebo bude lietať perie!
+      courseC_maze_programming5: Vyhni sa TNT.
+      courseC_maze_programming5_2018: Vyhni sa TNT.
+      courseC_maze_programming5_2019: Vyhni sa TNT.
       courseC_maze_programming6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak
         sa môžem rozhnevať!"'
       courseC_maze_programming6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa.
@@ -1487,24 +1505,24 @@ sk:
       courseD_artist_binaryFP: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Pozri čo sa stane, keď začneme byť kreatívni s bitmi!
+        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
       courseD_artist_binaryFP8: "**Voľná hra:** Nakresli čo len chceš binárnymi číslami! "
       courseD_artist_binaryFP_2018: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Pozri čo sa stane, keď začneme byť kreatívni s bitmi!
+        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
       courseD_artist_binaryFP_2019: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Pozri čo sa stane, keď začneme byť kreatívni s bitmi!
+        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
       courseD_artist_binary_challenge0: Skús na dokončenie tejto kresby použiť vnorené
         cykly.
       courseD_artist_embed_frozen: Stlač tlačidlo "Spustiť" aby sa ti ukázal dizajn
         snehovej vločky!
       courseD_artist_embed_frozen2: Stlač tlačidlo"Spustiť", aby sa ti ukázal dizajn
         tvojej snehovej vločky.
-      courseD_artist_functions10: Tento krát použi čiary z 8 šesťuholníkov so stranami
-        dlhými 25 pixelov.
+      courseD_artist_functions10: Tento krát použi rad zložený z 8 šesťuholníkov so
+        stranami dlhými 25 pixelov.
       courseD_artist_functions2: 'Tentokrát použi na vytvorenie okuliarov funkciu
         '' nakresli štvorec ''.
 
@@ -1534,9 +1552,9 @@ sk:
         Použi svoje nové schopnosti na rýchle nakreslenie posledného radu okien na tejto budove.
 
         Okná sú štvorce široké 20 pixelov, vzdialené od seba 20 pixelov.
-      courseD_artist_nestedLoops4: Skvelé! Sprav to isté s týmito kruhmi.
-      courseD_artist_nestedLoops4_2018: Skvelé! Sprav to isté s týmito kruhmi.
-      courseD_artist_nestedLoops4_2019: Skvelé! Sprav to isté s týmito kruhmi.
+      courseD_artist_nestedLoops4: Skvelé! Sprav to isté s týmito kružnicami.
+      courseD_artist_nestedLoops4_2018: Skvelé! Sprav to isté s týmito kružnicami.
+      courseD_artist_nestedLoops4_2019: Skvelé! Sprav to isté s týmito kružnicami.
       courseD_artist_nestedLoops5: Čo sa stane ak sa medzi nakreslením kruhov otočíš
         o 90 stupňov?
       courseD_artist_nestedLoops5_2018: Čo sa stane ak sa medzi nakreslením kruhov
@@ -1573,14 +1591,64 @@ sk:
       courseD_autorun_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
       courseD_bee_debugging3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal
         všetok nektár a urobil celý med.
+      courseD_collector_debugging1: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging1_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging1a: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging1a_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging1a_2019: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging2: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging2_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging2a: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging2a_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging2a_2019: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging3: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging3_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging3a: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging3a_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging3a_2019: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging4: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging4_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging4a: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging4a_2018: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging4a_2019: Oprav chyby v kóde tak, aby Laurel pozbierala
+        všetky drahokamy.
+      courseD_collector_debugging5: Všetky príkazy ktoré potrebuješ sú už tu.. teraz
+        použi svoje schopnosti v ladení kódu na vyriešenie tejto úlohy.
+      courseD_collector_debugging5_2018: Všetky príkazy ktoré potrebuješ sú už tu..
+        teraz použi svoje schopnosti v ladení kódu na vyriešenie tejto úlohy.
+      courseD_collector_debugging5a: Všetky príkazy ktoré potrebuješ sú už tu.. teraz
+        použi svoje schopnosti v ladení kódu na vyriešenie tejto úlohy.
+      courseD_collector_debugging5a_2018: Všetky príkazy ktoré potrebuješ sú už tu..
+        teraz použi svoje schopnosti v ladení kódu na vyriešenie tejto úlohy.
+      courseD_collector_debugging5a_2019: Všetky príkazy ktoré potrebuješ sú už tu..
+        teraz použi svoje schopnosti v ladení kódu na vyriešenie tejto úlohy.
       courseD_debugging_3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
         nektár a urobil celý med.
       courseD_farmer_condLoops_challenge1: Na dokončenie úlohy pozbieraj celú úrodu.
-        Na každé skrytom políčku je len jedna kukurica alebo šalát.
+        Každá skrytá plodina má len jednu kukuricu alebo šalát.
       courseD_farmer_condLoops_challenge1_2018: Na dokončenie úlohy pozbieraj celú
-        úrodu. Na každé skrytom políčku je len jedna kukurica alebo šalát.
+        úrodu. Každá skrytá plodina má len jednu kukuricu alebo šalát.
       courseD_farmer_condLoops_challenge1_2019: Na dokončenie úlohy pozbieraj celú
-        úrodu. Na každé skrytom políčku je len jedna kukurica alebo šalát.
+        úrodu. Každá skrytá plodina má len jednu kukuricu alebo šalát.
       courseD_farmer_conditionals1: Presuň sa na kopu hliny a použi blok "odstráň"
         na jej odstránenie.
       courseD_farmer_conditionals10: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho
@@ -1657,33 +1725,48 @@ sk:
         na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2019: V tejto hre pospájaj všetky bloky dokopy, potom klikni
         na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
-        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
-        napojených na blok `pri spustení`.
-      courseD_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
-        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
-        napojených na blok `pri spustení`.
-      courseD_maze_ramp2_2019: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
-        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
-        napojených na blok `pri spustení`.
-      courseD_maze_ramp3_2019: Zahoď nadbytočný blok "choď dopredu".
+      courseD_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
+        ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
+        na blok `pri spustení`.
+      courseD_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
+        na blok `pri spustení`.
+      courseD_maze_ramp2_2019: Aby sa vták dostal až k prasaťu, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
+        na blok `pri spustení`.
+      courseD_maze_ramp3_2019: Zahoď nadbytočný blok "posuň sa dopredu".
+      courseD_maze_ramp4: Vyhni sa TNT, lebo bude lietať perie!
+      courseD_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
       courseD_maze_ramp4_2019: Pomôž Scratovi dostať sa k žaluďu.
-      courseD_maze_ramp5a: Skús zistiť, ako správne zoradiť blokoy, aby si sa dostal
-        k tomu prasiatku!
-      courseD_maze_ramp5a_2018: Skús zistiť, ako správne zoradiť blokoy, aby si sa
-        dostal k tomu prasiatku!
-      courseD_maze_ramp5b: Pomôž vtákovi dostať sa k prasiatku!
-      courseD_maze_ramp5b_2018: Pomôž vtákovi dostať sa k prasiatku!
-      courseD_maze_ramp5b_2019: Pomôž vtákovi dostať sa k prasiatku!
+      courseD_maze_ramp5: Vyhni sa TNT.
+      courseD_maze_ramp5_2018: Vyhni sa TNT.
+      courseD_maze_ramp5_2019: Vyhni sa TNT.
+      courseD_maze_ramp5a: Sústreď sa na správne poradie krokov a nájdi cestu k tomu
+        prasaťu!
+      courseD_maze_ramp5a_2018: Sústreď sa na správne poradie krokov a nájdi cestu
+        k tomu prasaťu!
+      courseD_maze_ramp5b: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!
+      courseD_maze_ramp5b_2018: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k
+        prasaťu!
+      courseD_maze_ramp5b_2019: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k
+        prasaťu!
+      courseD_maze_ramp5c: Pomôž vtákovi dostať sa k prasaťu.
+      courseD_maze_ramp5c_2018: Pomôž vtákovi dostať sa k prasaťu.
       courseD_maze_ramp5c_2019: Pozor na praskajúci ľad! Pomôž Scratovi dostať sa
         k žaluďu.
+      courseD_maze_ramp5d: Dostaň vtáka k prasaťú.
+      courseD_maze_ramp5d_2018: Dostaň vtáka k prasaťú.
+      courseD_maze_ramp5d_2019: Dostaň vtáka k prasaťú.
       courseD_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa
         môžem rozhnevať!"'
       courseD_maze_ramp6a: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa
         môžem rozhnevať!"'
-      courseD_maze_until1: Dostaň vtáčika k prasiatku.
-      courseD_maze_until1_2018: Dostaň vtáčika k prasiatku.
-      courseD_maze_until1_2019: Dostaň vtáčika k prasiatku.
+      courseD_maze_until1: Dostaň nahnevaného vtáka k prasaťu.
+      courseD_maze_until1_2018: Dostaň nahnevaného vtáka k prasaťu.
+      courseD_maze_until1_2019: Dostaň nahnevaného vtáka k prasaťu.
+      courseD_maze_until3: Dostaň vtáka k prasaťú.
+      courseD_maze_until3_2018: Dostaň vtáka k prasaťú.
+      courseD_maze_until3_2019: Dostaň vtáka k prasaťú.
       courseD_maze_until4: Vieš dostať zombíka k slnečnici použitím dostupných blokov?
       courseD_maze_until4_2018: Vieš dostať zombíka k slnečnici použitím dostupných
         blokov?
@@ -1717,34 +1800,46 @@ sk:
         Peglega hneď na začiatku hry. Ukonči hru ako prehru, ak ho nindža chytí.
       courseD_playLab_cond4_2019: Pridaj kód, aby nindža (postava 3) začal prenasledovať
         Peglega hneď na začiatku hry. Ukonči hru ako prehru, ak ho nindža chytí.
-      courseD_playLab_cond5: Pridaj cyklus 'opakuj navždy', ktorý bude opakovane kontrolovať
-        či je skóre väčšie ako 5. Keď bude, hra skončí ako výhra.
-      courseD_playLab_cond5_2018: Pridaj cyklus 'opakuj navždy', ktorý bude opakovane
+      courseD_playLab_cond5: Pridaj cyklus 'opakuj donekonečna', ktorý bude opakovane
         kontrolovať či je skóre väčšie ako 5. Keď bude, hra skončí ako výhra.
-      courseD_playLab_cond5_2019: Pridaj cyklus 'opakuj navždy', ktorý bude opakovane
+      courseD_playLab_cond5_2018: Pridaj cyklus 'opakuj donekonečna', ktorý bude opakovane
         kontrolovať či je skóre väčšie ako 5. Keď bude, hra skončí ako výhra.
+      courseD_playLab_cond5_2019: Pridaj cyklus 'opakuj donekonečna', ktorý bude opakovane
+        kontrolovať či je skóre väčšie ako 5. Keď bude, hra skončí ako výhra.
+      courseD_playLab_cond6: "1) Spomaľ nindžu (postavu 3) pred tým ako ho nastavíš
+        naháňať piráta. \n2) Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby
+        **utekal** pirátovi. V opačnom prípade nastav nindžu aby **naháňal** piráta.
+        \ "
+      courseD_playLab_cond6_2018: "1) Spomaľ nindžu (postavu 3) pred tým ako ho nastavíš
+        naháňať piráta. \n2) Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby
+        **utekal** pirátovi. V opačnom prípade nastav nindžu aby **naháňal** piráta.
+        \ "
+      courseD_playLab_cond6_2019: "1) Spomaľ nindžu (postavu 3) pred tým ako ho nastavíš
+        naháňať piráta. \n2) Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby
+        **utekal** pirátovi. V opačnom prípade nastav nindžu aby **naháňal** piráta.
+        \ "
       courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni
         na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_scrat_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni
         na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_scrat_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
-        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
-        napojených na blok `pri spustení`.
-      courseD_scrat_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
-        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
-        napojených na blok `pri spustení`.
+      courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
+        ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
+        na blok `pri spustení`.
+      courseD_scrat_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
+        na blok `pri spustení`.
       courseD_scrat_ramp5: Vyhni sa prasknutému ľadu.
       courseD_scrat_ramp5_2018: Vyhni sa prasknutému ľadu.
-      courseD_scrat_ramp8: Použi všetky doteraz získané vedomosti na dostanie Scrata
+      courseD_scrat_ramp8: Použi všetky doteraz získané vedomosti a dostaň Scrata
         k žaluďu!
-      courseD_scrat_ramp8_2018: Použi všetky doteraz získané vedomosti na dostanie
-        Scrata k žaluďu!
-      courseE_artist_functions10: Tento krát použi čiary z 8 šesťuholníkov so stranami
-        dlhými 25 pixelov.
-      courseE_artist_functions10_2018: Tento krát použi čiary z 8 šesťuholníkov so
+      courseD_scrat_ramp8_2018: Použi všetky doteraz získané vedomosti a dostaň Scrata
+        k žaluďu!
+      courseE_artist_functions10: Tento krát použi rad zložený z 8 šesťuholníkov so
         stranami dlhými 25 pixelov.
-      courseE_artist_functions10_2019: Tento krát použi čiary z 8 šesťuholníkov so
-        stranami dlhými 25 pixelov.
+      courseE_artist_functions10_2018: Tento krát použi rad zložený z 8 šesťuholníkov
+        so stranami dlhými 25 pixelov.
+      courseE_artist_functions10_2019: Tento krát použi rad zložený z 8 šesťuholníkov
+        so stranami dlhými 25 pixelov.
       courseE_artist_functions3: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
       courseE_artist_functions4: Teraz keď už vieš nakresliť hviezdu, skús nakresliť
         štyri hviezdy!
@@ -1783,16 +1878,21 @@ sk:
         do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať
         na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej
         slučky, aby nakreslil celú mriežku?
-      courseE_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
-        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
-        napojených na blok `pri spustení`.
-      courseE_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov
-        presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom
-        napojených na blok `pri spustení`.
+      courseE_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
+        ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
+        na blok `pri spustení`.
+      courseE_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov
+        presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
+        na blok `pri spustení`.
+      courseE_maze_ramp4: Vyhni sa TNT, lebo bude lietať perie!
+      courseE_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
+      courseE_maze_ramp5: Vyhni sa TNT.
+      courseE_maze_ramp5_2018: Vyhni sa TNT.
       courseE_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa
         môžem rozhnevať!"'
       courseE_maze_ramp6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak
         sa môžem rozhnevať!"'
+      courseE_multi_maze_ramp5: Vyhni sa TNT.
       courseF_artist_for_challenge1: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge1_2018: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge1_2019: Viete zistiť, ako znova nakresliť túto kresbu?
@@ -1808,6 +1908,10 @@ sk:
       courseF_bee_functions4_2018: Funkcia "move and get nectar" prikáže včele otočiť
         sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral
         všetok nektár.
+      courseF_maze_ramp4: Vyhni sa TNT, lebo bude lietať perie!
+      courseF_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
+      courseF_maze_ramp5: Vyhni sa TNT.
+      courseF_maze_ramp5_2018: Vyhni sa TNT.
       courseF_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa
         môžem rozhnevať!"'
       courseF_maze_ramp6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak
@@ -1985,8 +2089,11 @@ sk:
         vytvoril z ** 10 ** štvorcov s otočkami o ** 36 stupňov **.
       grade2_CaringForNewPet_10: Dostaň ma k prasiatku!
       grade2_CaringForNewPet_2: |-
-        "Toto prasiatko mi nedá spať."
-        Na pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra. Zbav sa ho presunutím do panela nástrojov.
+        *"To prasa mi pije krv."*
+
+        Na pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí. Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
+      grade2_CaringForNewPet_3: '"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.
+        Vyhni sa TNT, lebo bude lietať perie!"'
       grade2_CaringForNewPet_4: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak
         sa môžem rozhnevať!"'
       grade2_CaringForNewPet_5: Dostaň ma k prasiatku!
@@ -2167,8 +2274,8 @@ sk:
         sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\".
         Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce
         sú od seba vzdialené 75 pixelov."
-      grade4_artist_functions3b: Tento krát použi čiary z 8 šesťuholníkov so stranami
-        dlhými 25 pixelov.
+      grade4_artist_functions3b: Tento krát použi rad zložený z 8 šesťuholníkov so
+        stranami dlhými 25 pixelov.
       grade4_artist_functions_stars0: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
       grade4_artist_functions_stars1: Teraz keď už vieš nakresliť hviezdu, skús nakresliť
         štyri hviezdy!

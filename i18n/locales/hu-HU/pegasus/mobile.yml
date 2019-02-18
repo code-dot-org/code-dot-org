@@ -26,6 +26,7 @@
   twentyhours_heading: "Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat"
   twentyhours_text: "Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról és a programozási koncepciókról a következő tanfolyamon."
   og_title: 'Minden gyermek megérdemli lehetőséget'
+  og_title_soon: "Közeleg a Kódolás Órája"
   og_description: "Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon."
   csedweek_og_title: "A kódolás órája elérkezett"
   csedweek_og_description: "2017. december 4-10. A számítás tudomány minden diák számára fontos tudást ad."
@@ -222,6 +223,8 @@
   homepage_hero_text_stat_loc: "#loc sor kód, amit a diákok írtak"
   homepage_hero_text_stat_students: "#student_count diák hozzáférés a Kód stúdió rendszerben"
   homepage_hero_text_stat_served: 'A Kódolás órája: #served megtartva'
+  homepage_hero_hoc_is_coming: "Közeleg a Kódolás Órája"
+  homepage_hero_hoc_is_here: "Itt a Kódolás Órája"
   homepage_slot_text_hoc: "A kódolás órája"
   homepage_slot_text_frozen: "Jégvarázs Annával és Elzával"
   homepage_slot_text_teacher: "Tanári nyitólap"
@@ -339,6 +342,7 @@
   mc_gradelevel: "6-tól 106 éves korig"
   mc_platformtext: "Modern böngészők, okostelefonok, tabletek"
   mc_specs: "Több nyelven | Modern böngészők, táblagépek | 6-tól 106 éves korig"
+  minecraft_agent: "Minecraft - A hős utazása"
   minecraft_designer: "Minecraft tervező"
   minecraft_adventurer: "Minecraft kaland"
   minecraft_tutorials: "Minecraft Kódolás órája gyakorlatok"
@@ -493,7 +497,7 @@
   dashboard_navigation_home_page: "Tanári kezdőlap"
   dashboard_navigation_section_student_progress: "Diákok fiókja és haladása"
   dashboard_navigation_section_teacher_progress: "A tanfolyam haladás"
-  dashboard_navigation_section_lesson_plans: "Óravázlatok és erőforrások"
+  dashboard_navigation_section_lesson_plans: "Óravázlatok és segédanyagok"
   dashboard_navigation_section_community: "Súgó és Közösség"
   dashboard_navigation_section_pd: "Szakmai fejlődés"
   dashboard_navigation_section_speakers: "Számítógép-tudomány <br/> vendég előadók"
@@ -501,7 +505,7 @@
   dashboard_navigation_view_progress: "Előmenetel"
   dashboard_navigation_add_students: "Diákok hozzáadása"
   dashboard_navigation_manage_students: "Diákok kezelése"
-  dashboard_navigation_lesson_plans_resources: "Tananyag "
+  dashboard_navigation_lesson_plans_resources: "Tantervi követelmények"
   dashboard_navigation_section: 'Szekció: %{section_name}'
   dashboard_navigation_student: 'Diák: %{student_name}'
   dashboard_progress_not_started: "el nem kezdett"
@@ -566,8 +570,8 @@
   dashboard_curriculum_k5_title: "K-5 pedagógus források"
   dashboard_curriculum_middle_title: "Középiskolai pedagógus források"
   dashboard_curriculum_high_title: "Középiskola pedagógus források"
-  dashboard_lesson_plans: "Óravázlat"
-  dashboard_view_all_lesson_plans: "Az összes lecke áttekintése"
+  dashboard_lesson_plans: "Óravázlatok"
+  dashboard_view_all_lesson_plans: "Az 1-4 tanfolyam teljes tananyagának letöltése"
   dashboard_course1: 'Első kurzus:'
   dashboard_course2: 'Második kurzus:'
   dashboard_course3: 'Harmadik kurzus:'
@@ -901,7 +905,7 @@
   lightbot_longdescription: "Irányítsd Lightbotot hogy minden kék csempét kivilágítson! A Lightbot egy puzzle játék, amely programozási játékmenetet használ, hogy a játékosok elsajátítsák a programozás alapelveit. Tanuld meg az utasítások sorrendiségét, írj eljárásokat és használj ciklusokat a szintek megoldásához. Ideális minden korosztály számára."
   thinkersmith_longdescription: "Egy előre definiált „Robot szótár” használatával a diákok olyan feladatok végrehajtására vezethetik rá a társaikat, amiket előzőleg nem egyeztettek. A lecke megtanítja a gyerekeket a szimbólumok és műveletek közötti összefüggésekre, illetve a nélkülözhetetlen hibakeresési képességre. A „My Robotic Friends” játék csoportos feladatként használható igazán jól, és az osztálytermi használathoz tanári munkafüzetet is tartalmaz."
   condcards_longdescription: "Tanulj az algoritmusokról és feltételes utasításokról egy kártyapakli segítségével ebben az offline játékban. A diákok csapatokban játszhatják ezt a játékot, amihez csapatonként egy pakli kártyára van szükség."
-  lightbotintl_longdescription: "Tanuld meg a programozás alap logikáját, kezdve az alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben). Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj funkciókat és ciklusokat!"
+  lightbotintl_longdescription: "Tanuld meg a programozás alap logikáját, kezdve az alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben). Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj függvényeket és ciklusokat!"
   codehs_longdescription: "A programozás, amikor utasításokat adunk a számítógépnek, olyan, mint amikor utasításokat adunk egy kutyának. Tanulj programozni Karellel a kutyával &mdash; ez egy szórakoztató, hozzáférhető és vizuális bevezető a programozás világába, ami olyan alapvető koncepciókat tanít meg teljesen kezdőknek, mint az utasítások vagy a függvények. Az oktatóanyag önállóan is használható, de a tanárok számára segédeszközök is elérhetők, illetve követhetik a diákok munkáját."
   codecademy_longdescription: "A Codeacademy egy interaktív, önállóan használható bevezető kurzus, ami JavaScript segítségével vezet be a számítástechnika alapjaiba, és tízmilliók használták már a világ minden táján. Egy nagyon egyszerűen használható egy órás anyagot állítottunk össze, amihez kapcsolódó kérdéssorok, vetíthető anyagok kapcsolódnak. Egy komplett projekt, a diákokkal kiegészítve."
   codecombat_longdescription: "Győzd le az ogrékat ebben a játékban, hogy megtanulj Pythonban vagy JavaScriptben programozni!"
@@ -1062,7 +1066,7 @@
   khan_beyond_longdescription: "Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!"
   tynker_beyond_longdescription: "A Tynker segítségével könnyű és élvezetes a programozás tanulása. A gyerekek kódblokkok rendezésével készíthetnek játékokat és mobil appokat. Nincs többé szükség a pontos szintaktika ismeretére. A gyerekek az ötleteket animált történetekké alakíthatják. Lehetővé teszi a progresszív tanulást. Ahogy a gyerekek megtanulják az alapokat, Tynker egyre komolyabb koncepciók vezet be, köztük a szintaktikai rendszerű programozást is."
   scratch_beyond_longdescription: "A Scratch segítségével elkészítheted saját játékaidat, sztorijaidat, animációidat &mdash; és megoszthatod azokat a barátaiddal. Kezdd az ismerkedést azzal, hogy animálod a neved, készítesz egy üdvözlőlapot, vagy írsz egy pong játékot."
-  lightbot_beyond_longdescription: "Tanuld meg a programozás alap logikáját, kezdve az alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben). Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj funkciókat és ciklusokat!"
+  lightbot_beyond_longdescription: "Tanuld meg a programozás alap logikáját, kezdve az alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben). Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj függvényeket és ciklusokat!"
   codecademy_beyond_longdescription: "A Codeacademy egy interaktív, önállóan használható bevezető kurzus, ami JavaScript segítségével vezet be a számítástechnika alapjaiba, és tízmilliók használták már a világ minden táján. Egy nagyon egyszerűen használható egy órás anyagot állítottunk össze, amihez kapcsolódó kérdéssorok, vetíthető anyagok kapcsolódnak. Egy komplett projekt, a diákokkal kiegészítve."
   kodable_beyond_longdescription: "Kodable egy önállóan használható iPad játék, ami 5 éves vagy annál idősebb gyerekeknek segít megismerni a programozás alapjait. Tanár vagy szülő jelenléte segítség, de nem feltétlen szükséges."
   scratchjr_beyond_longdescription: "ScrathJr egy bevezető programozási nyelv, ami lehetővé teszi, hogy kicsi gyermekek elkészítsék a saját interaktív történeteiket és játékaikat. A gyerekek grafikus programozási blokkok összekapcsolásával mozgathatják, táncoltathatják, ugráltathatják és énekeltethetik a karaktereket"
@@ -1097,6 +1101,7 @@
   sphero_beyond_longdescription: "Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai és tudományos képzettségük fejlesztése közben."
   flappy_shortcode: "csapj"
   header_home: "Főmenü"
+  header_my_dashboard: "Vezérlőpult"
   header_courses: "tanfolyamok"
   header_project_gallery: "Projektek"
   header_sections: "Csoportok"
@@ -1138,8 +1143,10 @@
   user_header_create: 'Alkoss '
   user_header_playlab: "Játéklabor"
   user_header_dance: "Táncos buli"
+  user_header_spritelab: "Sprite labor"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  view_all_sections: "Minden csoport megtekintése"
   applab_tile_start_tutorial: "Kezdés"
   applab_tile_teacher_guide: "Oktatói útmutató megtekintése"
   aquatic_name: 'Minecraft: Tengeri utazás'
@@ -1164,6 +1171,7 @@
   hoc2018_mc_page_title: "Minecraft Kódolás órája gyakorlatok"
   hoc2018_mc_details: "Több nyelven | Modern böngészők, táblagépek | 2. osztálytól"
   hoc2018_mc_aquatic_description: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
+  hoc2018_mc_hero_title: "Minecraft - A hős utazása"
   hoc2018_mc_hero_description: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
   hoc2018_mc_designer_title: "Minecraft tervező"
   hoc2018_mc_designer_description: "Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban."
@@ -1189,6 +1197,8 @@
   hoc2018_mc_homepage_try_it: "Próbáld ki"
   hoc2018_mc_back_journey: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
   hoc2018_mc_teacher_guide: "Oktatói útmutató megtekintése"
+  hoc2018_mc_minecraft_education: "Minecraft oktatás"
+  hoc2018_mc_journey: "Utazás a Minecraft világában kóddal."
   hoc2018_dance_party_main_heading: "Táncos buli"
   hoc2018_dance_create_your_own_dance_title: "Hozd létre saját táncos bulidat"
   hoc2018_dance_party_box_title: "Táncos buli"

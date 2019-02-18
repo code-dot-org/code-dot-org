@@ -1226,6 +1226,8 @@ ja:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: '「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 '
         courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter` で、これらをまぜた色にしてください。
+        courseF_artist_for_challenge2_d: |
+          答えは先生に聞いてくださいね。
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: '「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 '
         courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter` で、これらをまぜた色にしてください。

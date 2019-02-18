@@ -352,9 +352,9 @@ hu:
 
           *Ez a szint 8 ütem után ér véget.*
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A kirakós megoldásához próbáld kétszer meghívni!
+        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni.
       Function intro Ryan_2019_authored_hint:
-        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A kirakós megoldásához próbáld kétszer meghívni!
+        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Látod a **Tengeri lámpásokat** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hogyan tudsz feltételt használni velük kapcsolatban, hogy átjuss a Víz alatti templomon?"
       HOC 2018 Level_9b_authored_hint:
@@ -517,11 +517,11 @@ hu:
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Próbálj több utasítást helyezni egy "ismétlés" ciklusba.
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
-        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a funkciókblokkokat az eszköztár más blokkjaival.
+        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
+        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival.
       MC_HOC_2017_07_Cole_2019_authored_hint:
-        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
-        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a funkciókblokkokat az eszköztár más blokkjaival.
+        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
+        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Nyomd meg az "Agent futtatása" gombot. 
@@ -533,11 +533,11 @@ hu:
           A kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.
         MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj ki néhányat!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a funkciókat!
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a függvényeket!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a funkciókat!
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a függvényeket!
       MC_HOC_2017_10_RETRY_2019_authored_hint:
-        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a funkciókat!
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a függvényeket!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy Steve túl tudjanak jutni a térkép szélein.
       MC_HOC_2017_4.5v2_authored_hint:

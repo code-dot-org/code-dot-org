@@ -74,7 +74,7 @@ ja:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -159,7 +159,7 @@ ja:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -447,7 +447,7 @@ ja:
         text: "{SPRITE} {PROPERTY} を {VAL} にセット "
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -471,7 +471,7 @@ ja:
             '"SHARK"': すべてのサメ
             '"UNICORN"': ユニコーンだらけ
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -482,7 +482,7 @@ ja:
         text: ランダムにする {SPRITE} {PROPERTY}
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -536,7 +536,7 @@ ja:
         text: "{SPRITE} が {PROPERTY} をはじめる、{RANGE} のあとに"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -551,7 +551,7 @@ ja:
         text: "{SPRITE} が {PROPERTY} をやめる、{RANGE} のあとに"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -598,7 +598,7 @@ ja:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -611,7 +611,7 @@ ja:
       gamelab_getProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -653,7 +653,7 @@ ja:
       gamelab_setProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -663,7 +663,7 @@ ja:
         text: "{SPRITE} {PROPERTY} を {N}%に設定"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
       gamelab_setup:
@@ -671,7 +671,7 @@ ja:
       gamelab_spritesWhere:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
@@ -679,7 +679,7 @@ ja:
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
@@ -716,7 +716,7 @@ ja:
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -736,7 +736,7 @@ ja:
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -750,7 +750,7 @@ ja:
           SELECT:
             '"all"': すべて
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -774,7 +774,7 @@ ja:
       Mikelab_groupGetProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -796,7 +796,7 @@ ja:
           SELECT:
             '"all"': すべて
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -831,7 +831,7 @@ ja:
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -894,7 +894,7 @@ ja:
       aalab_changePropByFlexible:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -904,6 +904,23 @@ ja:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
+      aalab_jumpTo:
+        text: "{SPRITE}　{LOCATION}にとぶ"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
       aalab_whenTouching:
         options:
           CONDITION:

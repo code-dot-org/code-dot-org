@@ -5323,6 +5323,14 @@ ka:
           მას შემდეგ, რაც განძის შემცველ კვადრატამდე მიაღწევთ, მის ასაღებად ეს ბლოკი გამოიყენეთ.
 
           <xml>  <block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          გამოიყენეთ ეს ბლოკი, რათა აკონტროლოთ, თუ რა მოხდება მაშინ, როდესაც მსახიობები ერთმანეთს დაეჯახებიან.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_b: "კოდის გასამეორებლად გადმოათრიეთ `გამეორების` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) ციკლი, შემდეგ კი მოათავსეთ მასში სასურველი ბლოკი. "
       courseA_harvester_loops3_2019_authored_hint:
@@ -8097,6 +8105,14 @@ ka:
         courseC_collector_prog_challenge1_a: თითოეულ სივრცეში შეგიძლიათ ერთზე მეტი`შეგროვების` ბლოკის გამოყენება.
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: თითოეულ სივრცეში შეგიძლიათ ერთზე მეტი`შეგროვების` ბლოკის გამოყენება.
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          გამოიყენეთ ეს ბლოკი, რათა აკონტროლოთ, თუ რა მოხდება მაშინ, როდესაც მსახიობები ერთმანეთს დაეჯახებიან.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -11662,7 +11678,7 @@ ka:
         courseF_artist_for_challenge2_c: '`for ციკლი` იზდება 5-დან 250-მდე 2-ის ტოლი ბიჯით. '
         courseF_artist_for_challenge2_a: ფერის შეცვლა ხდება `განსაზღვრე ფერი წითლად, მწვანედ, ლურჯად` ბლოკით. წითელი ყოველთვის ტოლია 255-ის, მწვანე `მთვლელის`, ხოლო ლურჯი ყოველთვის არის`255 - მთვლელი`.
         courseF_artist_for_challenge2_b: კოდი გაცილებით უფრო მარტივია, ვიდრე შეიძლება იფიქროთ. უბრალოდ განსაზღვრეთ ფერი `for ციკლის` შიგნით, გადაადგილდით წინ, შემდეგ კი შებრუნდით.
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **ამოხსნა:**
 
           <xml>
@@ -11751,8 +11767,6 @@ ka:
           </next>
           </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: '`for ციკლი` იზდება 5-დან 250-მდე 2-ის ტოლი ბიჯით. '
         courseF_artist_for_challenge2_a: ფერის შეცვლა ხდება `განსაზღვრე ფერი წითლად, მწვანედ, ლურჯად` ბლოკით. წითელი ყოველთვის ტოლია 255-ის, მწვანე `მთვლელის`, ხოლო ლურჯი ყოველთვის არის`255 - მთვლელი`.

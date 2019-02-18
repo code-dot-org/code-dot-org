@@ -18,7 +18,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # in a CI environment, then they don't exist by default.
 if $(git rev-parse --is-shallow-repository); then
     git remote set-branches --add origin staging test production
-    mispipe "git fetch --depth 50 origin staging test production" ts
+    git fetch --depth 50 origin staging test production
     git branch -a
 fi
 

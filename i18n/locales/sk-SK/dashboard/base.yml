@@ -270,7 +270,7 @@ sk:
     registrations:
       user:
         user_type_change_email_mismatch: "Zadaná emailová adresa nepatrí tomuto užívateľskému účtu"
-        personal_login_created_email: 'váš užívateľský účet bol úspešne vytvorený. Odteraz sa môžete prihlásiť do vášho účtu pomocou Vašej emailovej adresy a hesla'
+        personal_login_created_email: 'Váš užívateľský účet bol úspešne vytvorený. Odteraz sa môžete prihlásiť do vášho účtu pomocou vašej emailovej adresy a hesla'
         personal_login_created_username: 'Váš užívateľský účet bol úspešne vytvorený. Odteraz sa môžete prihlásiť do Vášho účtu pomocou Vášho užívateľského mena (%{username}) a hesla'
   nav:
     header:
@@ -1071,7 +1071,7 @@ sk:
       body: 'Ďakujeme vám za záujem o Profesionálny vzdelávací program Code.org! Momentálne ste prihlásený ako študent. Vytvorte si prosím konto pre učiteľa alebo prejdite do <a href="%{user_settings}">nastavení užívateľa</a> pre zmenu typu vášho konta zo študentského na učiteľské.'
       more: 'Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku, navštívte <a href="%{pl_overview}">Prehľad Vzdelávacieho programu pre profesionálov</a>.'
     no_teacher_email:
-      body: 'váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku s nastaveniami vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte tento formulár.'
+      body: 'Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku s nastaveniami vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte tento formulár.'
   courses_category: 'Všetky kurzy'
   cookie_banner:
     message: 'Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s uložením cookies na Vašom počítači alebo zariadení.'
