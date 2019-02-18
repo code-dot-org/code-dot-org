@@ -1367,6 +1367,9 @@ en:
       Cups and Beans Activity_2018:
         description here: description here
         title: title
+      Cups and Beans Activity_2018_2019:
+        description here: description here
+        title: title
       Curriculum Framework Connections in Unit 2: {}
       Dance_Party_extras_gallery_intro: {}
       Dance_Party_extras_intro: {}
@@ -1884,6 +1887,9 @@ en:
       How Secure Is Your Password?_2018:
         description here: description here
         title: title
+      How Secure Is Your Password?_2018_2019:
+        description here: description here
+        title: title
       How Set Property Works:
         description here: description here
         title: title
@@ -2003,6 +2009,7 @@ en:
         Second Marble Maze K Activity: Second Marble Maze K Activity
       Modulo Clock Instructions: {}
       Modulo Clock Instructions_2018: {}
+      Modulo Clock Instructions_2018_2019: {}
       Modulo Clock Recap: {}
       Multi-Screen Apps:
         description here: description here
@@ -2011,6 +2018,9 @@ en:
         description here: description here
         title: title
       New Challenge Introduction_2018:
+        description here: description here
+        title: title
+      New Challenge Introduction_2018_2019:
         description here: description here
         title: title
       OPD-K5 About: {}
@@ -2321,6 +2331,9 @@ en:
       Public Key Crypto Widget Instructions_2018:
         description here: description here
         title: title
+      Public Key Crypto Widget Instructions_2018_2019:
+        description here: description here
+        title: title
       Rating Websites: {}
       Recipe Page Example: {}
       Recruitment-Scenarios-Passthrough:
@@ -2413,10 +2426,16 @@ en:
       'Technique: Frequency Analysis_2018':
         How to crack a substitution cipher: How to crack a substitution cipher
         description here: description here
+      'Technique: Frequency Analysis_2018_2019':
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
       Terminology Recap:
         That was easy, what's next?: That was easy, what's next?
         description here: description here
       Terminology Recap_2018:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
+      Terminology Recap_2018_2019:
         That was easy, what's next?: That was easy, what's next?
         description here: description here
       Test External Markdown:
@@ -4328,6 +4347,7 @@ en:
         CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC_2018: {}
+        CSP Unit 4 Ch1 Cumulative Assessment MC_2018_2019: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP Unit 5 Cumulative Assessment 1 MC_2018: {}
@@ -4424,6 +4444,7 @@ en:
         csp-pulse-check-survey-4-levelgroup-U3Ch1_2018_2019: {}
         csp-pulse-check-survey-5-levelgroup-U4Ch1: {}
         csp-pulse-check-survey-5-levelgroup-U4Ch1_2018: {}
+        csp-pulse-check-survey-5-levelgroup-U4Ch1_2018_2019: {}
         csp-pulse-check-survey-6-levelgroup-U5Ch1: {}
         csp-pulse-check-survey-6-levelgroup-U5Ch1_2018: {}
         csp-pulse-check-survey-7-levelgroup-U5Ch2: {}
@@ -5354,6 +5375,22 @@ en:
         random substitution cipher: random substitution cipher
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
+      U2L14 Assessment_2018_2019:
+        Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Terminology Matching: Terminology Matching
+        Vigenere Cipher: Vigenere Cipher
+        a problem that cannot be solved in a reasonable amount of time: a problem that cannot be solved in a reasonable amount of time
+        another term for encrypted message: another term for encrypted message
+        cipher: cipher
+        decrypt: decrypt
+        encrypt: encrypt
+        encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption that shifts the alphabet differently per character: encryption that shifts the alphabet differently per character
+        random substitution cipher: random substitution cipher
+        use an algorithm to decode a message: use an algorithm to decode a message
+        use an algorithm to encode a message: use an algorithm to encode a message
       U2L17 - Vocabulary matching:
         " <br>Brute force": " <br>Brute force"
         "<br>Computationally hard": "<br>Computationally hard"
@@ -5375,6 +5412,16 @@ en:
         Public key: Public key
         The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
       U2L18 Match terms to cups and beans analogy_2018:
+        A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
+        Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
+        Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity: Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity
+        Bob adding beans to the cup: Bob adding beans to the cup
+        Decrypting a message: Decrypting a message
+        Encrypting a message: Encrypting a message
+        Private key: Private key
+        Public key: Public key
+        The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
+      U2L18 Match terms to cups and beans analogy_2018_2019:
         A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
         Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
         Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity: Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity
@@ -7150,6 +7197,11 @@ en:
         I only: I only
         II only: II only
         Neither I nor II: Neither I nor II
+      CB_Question_12_2018_2019:
+        I and II: I and II
+        I only: I only
+        II only: II only
+        Neither I nor II: Neither I nor II
       CB_Question_12_exam_prep:
         I and II: I and II
         I only: I only
@@ -8014,6 +8066,14 @@ en:
         : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
         She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
         She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
+      CSP Unit 4 MC data bias_2018_2019:
+        " ": " "
+        Data Bias: Data Bias
+        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
+        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
+        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
       CSP Unit 4 google trends MC_2018:
         " ": " "
         ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
@@ -8024,7 +8084,24 @@ en:
         ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
         : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
         What's it showing?: What's it showing?
+      CSP Unit 4 google trends MC_2018_2019:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
       CSP Unit 4 trends as predictors_2018:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit 4 trends as predictors_2018_2019:
         " ": " "
         Search Trends: Search Trends
         Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
@@ -8161,6 +8238,12 @@ en:
         Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.: Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.
         Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.: Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.
         Public key encryption makes use of mathematical problems which no algorithm can be used to solve.: Public key encryption makes use of mathematical problems which no algorithm can be used to solve.
+      CSPFinal_Question_17_2018_2019:
+        ? Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
+        : Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
+        Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.: Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.
+        Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.: Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.
+        Public key encryption makes use of mathematical problems which no algorithm can be used to solve.: Public key encryption makes use of mathematical problems which no algorithm can be used to solve.
       CSPFinal_Question_17_exam_prep:
         ? Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
         : Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
@@ -8243,6 +8326,13 @@ en:
         Structuring the metadata of the information for analysis.: Structuring the metadata of the information for analysis.
         The frequency of a particular item occurring in a data set.: The frequency of a particular item occurring in a data set.
       CSPFinal_Question_21_2018:
+        ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        Maintaining privacy of the information stored in the data set.: Maintaining privacy of the information stored in the data set.
+        Scalability of the system.: Scalability of the system.
+        Structuring the metadata of the information for analysis.: Structuring the metadata of the information for analysis.
+        The frequency of a particular item occurring in a data set.: The frequency of a particular item occurring in a data set.
+      CSPFinal_Question_21_2018_2019:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
         : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
         Maintaining privacy of the information stored in the data set.: Maintaining privacy of the information stored in the data set.
@@ -8416,6 +8506,11 @@ en:
         Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.: Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.
         Yes, public key encryption is secure because it transmits credit card information in binary.: Yes, public key encryption is secure because it transmits credit card information in binary.
       CSPFinal_Question_5_2018:
+        No, public key encryption allows the credit card information to be read by the public.: No, public key encryption allows the credit card information to be read by the public.
+        No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".: No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".
+        Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.: Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.
+        Yes, public key encryption is secure because it transmits credit card information in binary.: Yes, public key encryption is secure because it transmits credit card information in binary.
+      CSPFinal_Question_5_2018_2019:
         No, public key encryption allows the credit card information to be read by the public.: No, public key encryption allows the credit card information to be read by the public.
         No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".: No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".
         Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.: Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.
@@ -10676,6 +10771,13 @@ en:
         The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
         The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
         What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
+      U2L13 Assessment3_2018_2019:
+        A secret word only know by Caesar.: A secret word only know by Caesar.
+        'Assessment: Question 2': 'Assessment: Question 2'
+        The day of the month that the encrypted message was sent.: The day of the month that the encrypted message was sent.
+        The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
+        The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
+        What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
       U2L13 Assessment4:
         '26': '26'
         26 x 25: 26 x 25
@@ -10684,6 +10786,13 @@ en:
         'Assessment: Question 3': 'Assessment: Question 3'
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
       U2L13 Assessment4_2018:
+        '26': '26'
+        26 x 25: 26 x 25
+        26 x 25 x 24 x***x 3 x 2 x 1: 26 x 25 x 24 x***x 3 x 2 x 1
+        26^26: 26^26
+        'Assessment: Question 3': 'Assessment: Question 3'
+        The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
+      U2L13 Assessment4_2018_2019:
         '26': '26'
         26 x 25: 26 x 25
         26 x 25 x 24 x***x 3 x 2 x 1: 26 x 25 x 24 x***x 3 x 2 x 1
@@ -10737,6 +10846,13 @@ en:
         The key length is variable and potentially very long: The key length is variable and potentially very long
         Vigenere Cipher: Vigenere Cipher
         Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
+      U2L15 Assessment1_2018_2019:
+        A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
+        One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
+        The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
+        The key length is variable and potentially very long: The key length is variable and potentially very long
+        Vigenere Cipher: Vigenere Cipher
+        Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
       U2L15 Assessment3:
         'Assessment: Question 3': 'Assessment: Question 3'
         Computers are faster than humans.: Computers are faster than humans.
@@ -10783,6 +10899,14 @@ en:
         '4': '4'
         Modulo Multiple Choice: Modulo Multiple Choice
         'What is 13 MOD 17? ': 'What is 13 MOD 17? '
+      U2L19 multichoice 13 MOD 17_2018_2019:
+        '0': '0'
+        1 4/13: 1 4/13
+        '13': '13'
+        '17': '17'
+        '4': '4'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        'What is 13 MOD 17? ': 'What is 13 MOD 17? '
       'U2L19 mutlichoice ':
         '0': '0'
         '1.5': '1.5'
@@ -10800,6 +10924,14 @@ en:
         Modulo Multiple Choice: Modulo Multiple Choice
         What is 20 MOD 15?: What is 20 MOD 15?
       U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
+      U2L19 mutlichoice 20 mod 15_2018_2019:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
@@ -10877,6 +11009,13 @@ en:
         The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
         There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
         What does the visualization actually show?: What does the visualization actually show?
+      U2L8 google trends MC_2018_2019:
+        " ": " "
+        People like dogs more than cats: People like dogs more than cats
+        People search for "dogs" more frequently than "cats": People search for "dogs" more frequently than "cats"
+        The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
+        There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
+        What does the visualization actually show?: What does the visualization actually show?
       U2L9 What is digital divide MC:
         ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
         : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
@@ -10889,6 +11028,17 @@ en:
         ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
         : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
       U2L9 What is digital divide MC_2018:
+        ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
+        ? "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        : "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        ? "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        : "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        What is the digital divide?: What is the digital divide?
+        ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
+        : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
+      U2L9 What is digital divide MC_2018_2019:
         ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
         : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
         "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
@@ -11424,6 +11574,13 @@ en:
         That there is so much data it's virtually impossible to process.: That there is so much data it's virtually impossible to process.
         There is enough data that traditional data processing applications are inadequate.: There is enough data that traditional data processing applications are inadequate.
         When a computer scientist uses the term "Big Data" what do they typically mean?: When a computer scientist uses the term "Big Data" what do they typically mean?
+      U4L1 - MC big data def_2018_2019:
+        Big Data: Big Data
+        It implies that the findings from the data are potentially hugely important for society.: It implies that the findings from the data are potentially hugely important for society.
+        That a dataset is larger than 5TB which is the common "Big Data" threshold.: That a dataset is larger than 5TB which is the common "Big Data" threshold.
+        That there is so much data it's virtually impossible to process.: That there is so much data it's virtually impossible to process.
+        There is enough data that traditional data processing applications are inadequate.: There is enough data that traditional data processing applications are inadequate.
+        When a computer scientist uses the term "Big Data" what do they typically mean?: When a computer scientist uses the term "Big Data" what do they typically mean?
       U4L1 - MC moores law:
         Boolean's Conjecture: Boolean's Conjecture
         'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:': 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
@@ -11431,6 +11588,12 @@ en:
         Powers of 2 Principle: Powers of 2 Principle
         The "Big Data Effect": The "Big Data Effect"
       U4L1 - MC moores law_2018:
+        Boolean's Conjecture: Boolean's Conjecture
+        'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:': 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
+        Moore's Law: Moore's Law
+        Powers of 2 Principle: Powers of 2 Principle
+        The "Big Data Effect": The "Big Data Effect"
+      U4L1 - MC moores law_2018_2019:
         Boolean's Conjecture: Boolean's Conjecture
         'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:': 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
         Moore's Law: Moore's Law
@@ -11654,6 +11817,13 @@ en:
         ? Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
         : Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
       U4L4 - MC cost of free_2018:
+        Companies are required by law to give users options to personalize what data they collect about them: Companies are required by law to give users options to personalize what data they collect about them
+        Companies can sell the personal information of users to advertisers or other businesses: Companies can sell the personal information of users to advertisers or other businesses
+        Companies frequently offer services free of charge in exchange for access to data about their users: Companies frequently offer services free of charge in exchange for access to data about their users
+        Personal data about users may be saved by a company permanently, never to be deleted.: Personal data about users may be saved by a company permanently, never to be deleted.
+        ? Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
+        : Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
+      U4L4 - MC cost of free_2018_2019:
         Companies are required by law to give users options to personalize what data they collect about them: Companies are required by law to give users options to personalize what data they collect about them
         Companies can sell the personal information of users to advertisers or other businesses: Companies can sell the personal information of users to advertisers or other businesses
         Companies frequently offer services free of charge in exchange for access to data about their users: Companies frequently offer services free of charge in exchange for access to data about their users
@@ -17618,6 +17788,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q1-U4Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q2-U4Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17637,6 +17816,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q2-U4Ch1_2018_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q2-U4Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -17672,6 +17860,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q3-U4Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q4-U4Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17699,6 +17896,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q4-U4Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q5-U4Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17718,6 +17924,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q5-U4Ch1_2018_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q5-U4Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -18323,6 +18538,11 @@ en:
         An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
         An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).: An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).
         An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.: An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.
+      cspu4_assess1_DDoS_2018_2019:
+        A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems: A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems
+        An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
+        An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).: An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).
+        An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.: An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.
       cspu4_assess1_DDoS_exam_prep:
         A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems: A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems
         An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
@@ -18334,6 +18554,11 @@ en:
         SSL: SSL
         Symmetric: Symmetric
       cspu4_assess1_encryption_2018:
+        Asymmetric: Asymmetric
+        Public key: Public key
+        SSL: SSL
+        Symmetric: Symmetric
+      cspu4_assess1_encryption_2018_2019:
         Asymmetric: Asymmetric
         Public key: Public key
         SSL: SSL
@@ -18353,6 +18578,11 @@ en:
         A key for decrypting is never made public: A key for decrypting is never made public
         Allows secure communication without establishing a *shared* encryption key ahead of time.: Allows secure communication without establishing a *shared* encryption key ahead of time.
         Using public key guarantees that only the intended recipient can decrypt the message: Using public key guarantees that only the intended recipient can decrypt the message
+      cspu4_assess1_keyEncryption_2018_2019:
+        A Public Key database ensures 3rd party accountability of security: A Public Key database ensures 3rd party accountability of security
+        A key for decrypting is never made public: A key for decrypting is never made public
+        Allows secure communication without establishing a *shared* encryption key ahead of time.: Allows secure communication without establishing a *shared* encryption key ahead of time.
+        Using public key guarantees that only the intended recipient can decrypt the message: Using public key guarantees that only the intended recipient can decrypt the message
       cspu4_assess1_keyEncryption_exam_prep:
         A Public Key database ensures 3rd party accountability of security: A Public Key database ensures 3rd party accountability of security
         A key for decrypting is never made public: A key for decrypting is never made public
@@ -18364,6 +18594,11 @@ en:
         9 MOD 64: 9 MOD 64
         9 MOD 8: 9 MOD 8
       cspu4_assess1_mod_2018:
+        1 MOD 16: 1 MOD 16
+        52 MOD 32: 52 MOD 32
+        9 MOD 64: 9 MOD 64
+        9 MOD 8: 9 MOD 8
+      cspu4_assess1_mod_2018_2019:
         1 MOD 16: 1 MOD 16
         52 MOD 32: 52 MOD 32
         9 MOD 64: 9 MOD 64
@@ -18383,6 +18618,11 @@ en:
         Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
         Moore's Law is the observation that computing power tends to double every two years: Moore's Law is the observation that computing power tends to double every two years
         Moore's Law is the principle that one should assume that any traffic on the Internet is insecure: Moore's Law is the principle that one should assume that any traffic on the Internet is insecure
+      cspu4_assess1_moore_2018_2019:
+        Moore's Law describes a relationship of boolean logic statements involving AND and OR: Moore's Law describes a relationship of boolean logic statements involving AND and OR
+        Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
+        Moore's Law is the observation that computing power tends to double every two years: Moore's Law is the observation that computing power tends to double every two years
+        Moore's Law is the principle that one should assume that any traffic on the Internet is insecure: Moore's Law is the principle that one should assume that any traffic on the Internet is insecure
       cspu4_assess1_moore_exam_prep:
         Moore's Law describes a relationship of boolean logic statements involving AND and OR: Moore's Law describes a relationship of boolean logic statements involving AND and OR
         Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
@@ -18396,6 +18636,13 @@ en:
         : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
         You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”: You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”
       cspu4_assess1_phishing_2018:
+        ? You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        : You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability: You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability
+        ? You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        You get an unwanted email trying to sell you a low quality product or service that seems "fishy.": You get an unwanted email trying to sell you a low quality product or service that seems "fishy."
+      cspu4_assess1_phishing_2018_2019:
         ? You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
         : You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
         You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability: You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability

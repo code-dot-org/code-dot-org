@@ -11249,3 +11249,57 @@ en:
               name: Mid-Year Survey
               description_student: ''
               description_teacher: ''
+        csp4-2019:
+          title: CSP Unit 4 - Big Data and Privacy ('18-'19)
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
+          description_audience: ''
+          stages:
+            What is Big Data?:
+              name: What is Big Data?
+              description_student: ''
+              description_teacher: ''
+            Finding Trends with Visualizations:
+              name: Finding Trends with Visualizations
+              description_student: ''
+              description_teacher: ''
+            Check Your Assumptions:
+              name: Check Your Assumptions
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Data Innovations:
+              name: Rapid Research - Data Innovations
+              description_student: ''
+              description_teacher: ''
+            Identifying People with Data:
+              name: Identifying People with Data
+              description_student: ''
+              description_teacher: ''
+            The Cost of Free:
+              name: The Cost of Free
+              description_student: ''
+              description_teacher: ''
+            Simple Encryption:
+              name: Simple Encryption
+              description_student: ''
+              description_teacher: ''
+            Encryption with Keys and Passwords:
+              name: Encryption with Keys and Passwords
+              description_student: ''
+              description_teacher: ''
+            Public Key Crypto:
+              name: Public Key Crypto
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Cybercrime:
+              name: Rapid Research - Cybercrime
+              description_student: ''
+              description_teacher: ''
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+              description_student: ''
+              description_teacher: ''
+            Mid-Year Survey:
+              name: Mid-Year Survey
+              description_student: ''
+              description_teacher: ''
