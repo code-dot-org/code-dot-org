@@ -159,7 +159,7 @@
     "short_instructions": "Add 200 bubbles to the image by writing drawAllBubbles with a loop. (Click to see full instructions)",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "7uj3V2UtF4+l+kiwHdwp5diDc49I21ixmbYZ1YccA/qgAgT6GRlHiumryjw0\nl4wK\n",
+    "encrypted_examples": "qtOCzZFQL2exHX+fWJF0xVboWcKLcdnENv3zB2muaT1ztZm1H5Dg4XNfQwzn\ncCVfJcyRFZftS5ZuuHklgcmpbQ==\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "log_conditions": [
@@ -192,11 +192,14 @@
     "name_suffix": "_2019",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-19 18:20:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-09-19 18:20:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-02-18 14:53:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-18 14:55:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
