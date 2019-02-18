@@ -19,16 +19,6 @@ export CIRCLE_ARTIFACTS=/home/circleci/artifacts
 
 mkdir $CIRCLE_ARTIFACTS
 
-# circle.rake has logic which depends on these branches existing. If we're doing a shallow clone, e.g.
-# in a CI environment, then they don't exist by default.
-if $(git rev-parse --is-shallow-repository); then
-    git remote set-branches --add origin staging test production
-    git fetch --depth 50 origin staging test production
-    git branch -a
-fi
-
-mysql -V
-
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
@@ -42,7 +32,6 @@ netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
 bundler_use_sudo: false
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
-#applitools_eyes_api_key: $APPLITOOLS_KEY
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 saucelabs_username: $SAUCE_USERNAME
