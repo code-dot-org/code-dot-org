@@ -435,9 +435,8 @@ function runCollisionEvents() {
       collisions.forEach(function(s) {
         s.collisionObjects.forEach(function(obj) {
           type = s.collidable && obj.sprite.collidable ? "collide" : "overlap";
-      	  if(s.isTouching(obj.sprite)) {
+      	  if(s[type](obj.sprite)) {
             if(!obj.locked) {
-              s[type](obj.sprite);
               thisSprite = s;
               otherSprite = obj.sprite;
               e();
