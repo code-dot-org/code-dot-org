@@ -84,7 +84,7 @@ export const progressStyles = {
     color: color.teal
   },
   summaryCell: {
-    margin: '9px 7px'
+    margin: '9px 8px'
   },
   nameCell: {
     margin: 10,
