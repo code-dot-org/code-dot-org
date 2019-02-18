@@ -11195,3 +11195,57 @@ en:
               name: Unit 2 Assessment
               description_student: ''
               description_teacher: ''
+        csp3-2019:
+          title: CSP Unit 3 - Intro to Programming ('18-'19)
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description_audience: ''
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+              description_student: ''
+              description_teacher: ''
+            The Need for Algorithms:
+              name: The Need for Algorithms
+              description_student: ''
+              description_teacher: ''
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+              description_student: ''
+              description_teacher: ''
+            Using Simple Commands:
+              name: Using Simple Commands
+              description_student: ''
+              description_teacher: ''
+            Creating Functions:
+              name: Creating Functions
+              description_student: ''
+              description_teacher: ''
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+              description_student: ''
+              description_teacher: ''
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+              description_student: ''
+              description_teacher: ''
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+              description_student: ''
+              description_teacher: ''
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+              description_student: ''
+              description_teacher: ''
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            Mid-Year Survey:
+              name: Mid-Year Survey
+              description_student: ''
+              description_teacher: ''
