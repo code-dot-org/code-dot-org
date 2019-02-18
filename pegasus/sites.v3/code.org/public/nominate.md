@@ -19,7 +19,7 @@ social:
   }
 </style>
 
-# Nominate a Teacher for a Computer Science Scholarship
+# Give the Gift of Education: Nominate a Teacher for a Computer Science Scholarship
 
 <img src="/images/teacherandstudents.jpg" class="responsive" width="100%">
 
