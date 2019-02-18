@@ -12,7 +12,7 @@ const styles = {
     height: 34,
     paddingLeft: 5,
     paddingRight: 5,
-    minWidth: 300
+    width: 300
   },
   heading: {
     marginBottom: 0
