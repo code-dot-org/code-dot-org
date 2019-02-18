@@ -1816,6 +1816,7 @@ en:
       'Facespace: Soleil M': {}
       Favicon Instructions: {}
       Favicon Instructions_2018: {}
+      Favicon Instructions_2018_2019: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
@@ -4309,6 +4310,7 @@ en:
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC_2018: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC_2018_2019: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC_2018: {}
@@ -4406,6 +4408,7 @@ en:
         csp-pulse-check-survey-1-levelgroup-U1Ch2_2018_2019: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1_2018: {}
+        csp-pulse-check-survey-2-levelgroup-U2Ch1_2018_2019: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2_2018: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
@@ -7117,6 +7120,11 @@ en:
         When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
         When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
         When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
+      CB_Question_11_2018_2019:
+        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
+        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
+        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
+        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
       CB_Question_11_exam_prep:
         When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
         When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
@@ -7182,6 +7190,11 @@ en:
         Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
         Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
         There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
+      CB_Question_18_2018_2019:
+        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
+        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
+        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
+        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
       CB_Question_18_exam_prep:
         Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
         Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
@@ -7193,6 +7206,11 @@ en:
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
       CB_Question_1_2018:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
+      CB_Question_1_2018_2019:
         2 times as many values can be represented.: 2 times as many values can be represented.
         2^32 times as many values can be represented.: 2^32 times as many values can be represented.
         32 times as many values can be represented.: 32 times as many values can be represented.
@@ -7325,6 +7343,13 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossless compression_2018_2019:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossless compression_exam_prep:
         " ": " "
         Compression: Compression
@@ -7340,6 +7365,13 @@ en:
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossy compression_2018:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossy compression_2018_2019:
         " ": " "
         Compression: Compression
         Fast Fourier Transform compression: Fast Fourier Transform compression
@@ -7734,6 +7766,13 @@ en:
         100,000 times bigger: 100,000 times bigger
         Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
         How much bigger?: How much bigger?
+      CSP Unit 2 Ch 1 MC kilo v mega_2018_2019:
+        1,000 times bigger: 1,000 times bigger
+        1,000,000 times bigger: 1,000,000 times bigger
+        1,000,000,000 times bigger: 1,000,000,000 times bigger
+        100,000 times bigger: 100,000 times bigger
+        Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
+        How much bigger?: How much bigger?
       CSP Unit 2 Ch 1 MC kilo v mega_exam_prep:
         1,000 times bigger: 1,000 times bigger
         1,000,000 times bigger: 1,000,000 times bigger
@@ -7749,6 +7788,13 @@ en:
         predata: predata
         superdata: superdata
       CSP Unit 2 Ch 1 metadata_2018:
+        " ": " "
+        data: data
+        megadata: megadata
+        metadata: metadata
+        predata: predata
+        superdata: superdata
+      CSP Unit 2 Ch 1 metadata_2018_2019:
         " ": " "
         data: data
         megadata: megadata
@@ -7989,6 +8035,13 @@ en:
         F00: F00
         FF00: FF00
         FF0000: FF0000
+      CSP Unit2 Ch 1 MC hex rgb_2018_2019:
+        " ": " "
+        00F: 00F
+        12-bit Red: 12-bit Red
+        F00: F00
+        FF00: FF00
+        FF0000: FF0000
       CSP Unit2 Ch 1 MC hex rgb_exam_prep:
         " ": " "
         00F: 00F
@@ -8004,6 +8057,13 @@ en:
         kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
         megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
       CSP Unit2 Ch1 MC megabyte_2018:
+        How big is it?: How big is it?
+        Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
+        gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
+        gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
+        kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
+        megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
+      CSP Unit2 Ch1 MC megabyte_2018_2019:
         How big is it?: How big is it?
         Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
         gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
@@ -8105,6 +8165,13 @@ en:
         ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
         : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
       CSPFinal_Question_18_2018:
+        Chrome Sampling transformation: Chrome Sampling transformation
+        Lossless transformation: Lossless transformation
+        Lossy transformation: Lossy transformation
+        Multiband transformation: Multiband transformation
+        ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+        : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+      CSPFinal_Question_18_2018_2019:
         Chrome Sampling transformation: Chrome Sampling transformation
         Lossless transformation: Lossless transformation
         Lossy transformation: Lossy transformation
@@ -10389,7 +10456,22 @@ en:
         Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
         'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
         Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
+      U2L05 Lossy Lossless MC 1_2018_2019:
+        Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.: Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.
+        Lossless compression throws away unimportant details that a human being will likely be unable to detect.: Lossless compression throws away unimportant details that a human being will likely be unable to detect.
+        Lossy compression is only possible on files that are at least one gigabyte in size before compression.: Lossy compression is only possible on files that are at least one gigabyte in size before compression.
+        Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
+        'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
+        Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
       U2L05 Lossy Lossless MC 2_2018:
+        Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
+        Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
+        ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        : Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        'Multiple Choice 2: Lossy vs Lossless Compression': 'Multiple Choice 2: Lossy vs Lossless Compression'
+        Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.: Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.
+        Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
+      U2L05 Lossy Lossless MC 2_2018_2019:
         Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
         Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
         ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
@@ -10754,6 +10836,15 @@ en:
         How many bytes does it take...?: How many bytes does it take...?
         How many bytes?: How many bytes?
       U2L5 Color Pixel MC Question_2018:
+        " ": " "
+        1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
+        1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
+        3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
+        3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
+        30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
+        How many bytes does it take...?: How many bytes does it take...?
+        How many bytes?: How many bytes?
+      U2L5 Color Pixel MC Question_2018_2019:
         " ": " "
         1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
         1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
@@ -17061,6 +17152,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q1-U2Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q2-U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17080,6 +17180,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q2-U2Ch1_2018_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q2-U2Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -17115,6 +17224,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q3-U2Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q4-U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17142,6 +17260,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q4-U2Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q5-U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17161,6 +17288,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q5-U2Ch1_2018_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q5-U2Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -20063,6 +20199,9 @@ en:
         Act as the computer!: Act as the computer!
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U1L13 - Assess Text Compression reverse process_2018:
+        Act as the computer!: Act as the computer!
+        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 - Assess Text Compression reverse process_2018_2019:
         Act as the computer!: Act as the computer!
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U2L07 Assessment4:
