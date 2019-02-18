@@ -1,7 +1,7 @@
-function setImmovable(sprite, val) {
+function setCollidable(sprite, val) {
   if(sprite) {
     var setOne = function(sprite) {
-      sprite.immovable = val === "true" ? false : true;
+      sprite.collidable = val === "true" ? true : false;
     };
     if(!Array.isArray(sprite)) {
       setOne(sprite);
