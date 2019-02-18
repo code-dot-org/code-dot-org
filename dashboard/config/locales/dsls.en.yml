@@ -1318,6 +1318,7 @@ en:
         Overview of PD "course": Overview of PD "course"
       Categorizing Data: {}
       Categorizing Data_2018: {}
+      Categorizing Data_2018_2019: {}
       Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
       'Chirpr: @johnsnow': {}
@@ -1328,13 +1329,16 @@ en:
       'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
       Cleaning Data_2018: {}
+      Cleaning Data_2018_2019: {}
       Click Here!: {}
       Click Here!_2018: {}
       Click Here!_2018_2019: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection A: Good and Bad Visualizations_2018': {}
+      'Collection A: Good and Bad Visualizations_2018_2019': {}
       'Collection B: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations_2018': {}
+      'Collection B: Good and Bad Visualizations_2018_2019': {}
       Color Sleuth - Epilogue:
         description here: description here
         title: title
@@ -1451,6 +1455,7 @@ en:
       Documentation in App Lab: {}
       Downloading the Data Set: {}
       Downloading the Data Set_2018: {}
+      Downloading the Data Set_2018_2019: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
       ECS PD1 teaching strategies:
@@ -1798,6 +1803,7 @@ en:
       ECSU4 Challenge Submission: {}
       Editing Chart Appearance: {}
       Editing Chart Appearance_2018: {}
+      Editing Chart Appearance_2018_2019: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Embedded Video Test: {}
@@ -1875,6 +1881,7 @@ en:
       Getting Better User Input: {}
       Getting to Know Your Data: {}
       Getting to Know Your Data_2018: {}
+      Getting to Know Your Data_2018_2019: {}
       GoodBadVisualizations_v1:
         description here: description here
         title: title
@@ -2071,12 +2078,16 @@ en:
         title: title
       Making Pivot Tables Part 1 - The Basics: {}
       Making Pivot Tables Part 1 - The Basics_2018: {}
+      Making Pivot Tables Part 1 - The Basics_2018_2019: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization_2018: {}
+      Making Pivot Tables Part 2 - Manipulation and Visualization_2018_2019: {}
       Making a Bar Chart: {}
       Making a Bar Chart_2018: {}
+      Making a Bar Chart_2018_2019: {}
       Making a Line Chart: {}
       Making a Line Chart_2018: {}
+      Making a Line Chart_2018_2019: {}
       Making a Multi Screen Chaser Game v.2:
         description here: description here
         title: title
@@ -2088,6 +2099,7 @@ en:
         title: title
       Making a Scatter Plot: {}
       Making a Scatter Plot_2018: {}
+      Making a Scatter Plot_2018_2019: {}
       MarbleMaze:
         Marble Maze: Marble Maze
         Marble Maze Activity for K Level: Marble Maze Activity for K Level
@@ -2861,6 +2873,9 @@ en:
       U4 - Making Data Visualizations - Free Play_2018:
         description here: description here
         title: title
+      U4 - Making Data Visualizations - Free Play_2018_2019:
+        description here: description here
+        title: title
       U4 - Making Data Visualizations - Getting Started:
         description here: description here
         title: title
@@ -2880,10 +2895,15 @@ en:
         Local vs. Remote Data: Local vs. Remote Data
       U4 - Read Record - Local vs Remote Data External_2018:
         Local vs. Remote Data: Local vs. Remote Data
+      U4 - Read Record - Local vs Remote Data External_2018_2019:
+        Local vs. Remote Data: Local vs. Remote Data
       U4 - Unique Ids Explanation:
         Records Have Unique IDs: Records Have Unique IDs
         title: title
       U4 - Unique Ids Explanation_2018:
+        Records Have Unique IDs: Records Have Unique IDs
+        title: title
+      U4 - Unique Ids Explanation_2018_2019:
         Records Have Unique IDs: Records Have Unique IDs
         title: title
       U4 Cleaning Data Activity Guide Pt2:
@@ -2911,6 +2931,9 @@ en:
       U4L02 Student Lesson Introduction_2018:
         description here: description here
         title: title
+      U4L02 Student Lesson Introduction_2018_2019:
+        description here: description here
+        title: title
       U4L02v2 - Finding Trends:
         description here: description here
         title: title
@@ -2920,6 +2943,9 @@ en:
       U4L03 Student Lesson Introduction_2018:
         description here: description here
         title: title
+      U4L03 Student Lesson Introduction_2018_2019:
+        description here: description here
+        title: title
       U4L03v2 - Student Introduction:
         description here: description here
         title: title
@@ -2927,6 +2953,9 @@ en:
         description here: description here
         title: title
       U4L04 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
+      U4L04 Student Lesson Introduction_2018_2019:
         description here: description here
         title: title
       U4L04v2 - Student Introduction:
@@ -2967,6 +2996,9 @@ en:
         description here: description here
         title: title
       U4L08v2 Making Pivot Tables Part 3_2018:
+        description here: description here
+        title: title
+      U4L08v2 Making Pivot Tables Part 3_2018_2019:
         description here: description here
         title: title
       U4L08v2 Student Intro:
@@ -3068,10 +3100,16 @@ en:
       U6 - Charts - Student Introduction_2018:
         description here: description here
         title: title
+      U6 - Charts - Student Introduction_2018_2019:
+        description here: description here
+        title: title
       U6 - Final Project - Student Introduction:
         description here: description here
         title: title
       U6 - Final Project - Student Introduction_2018:
+        description here: description here
+        title: title
+      U6 - Final Project - Student Introduction_2018_2019:
         description here: description here
         title: title
       U6 - ImportExport - Student Introduction:
@@ -3080,10 +3118,16 @@ en:
       U6 - ImportExport - Student Introduction_2018:
         description here: description here
         title: title
+      U6 - ImportExport - Student Introduction_2018_2019:
+        description here: description here
+        title: title
       U6 - Sample Apps - Student Introduction:
         description here: description here
         title: title
       U6 - Sample Apps - Student Introduction_2018:
+        description here: description here
+        title: title
+      U6 - Sample Apps - Student Introduction_2018_2019:
         description here: description here
         title: title
       U6 - deleteRecord - Student Introduction:
@@ -3092,10 +3136,16 @@ en:
       U6 - deleteRecord - Student Introduction_2018:
         description here: description here
         title: title
+      U6 - deleteRecord - Student Introduction_2018_2019:
+        description here: description here
+        title: title
       U6 - updateRecord - Student Introduction:
         description here: description here
         title: title
       U6 - updateRecord - Student Introduction_2018:
+        description here: description here
+        title: title
+      U6 - updateRecord - Student Introduction_2018_2019:
         description here: description here
         title: title
       U6 AP Performance Task Tech Setup - Student Links:
@@ -3690,6 +3740,7 @@ en:
       csp-pre-survey-2017-q36-preamble_2018_2019: {}
       csp-pt-tech-setup-and-tools: {}
       csp-pt-tech-setup-and-tools_2018: {}
+      csp-pt-tech-setup-and-tools_2018_2019: {}
       csp-pulse-check-survey-preamble: {}
       csp-pulse-check-survey-preamble_2018: {}
       csp-pulse-check-survey-preamble_2018_2018: {}
@@ -4453,6 +4504,7 @@ en:
         CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC_2018: {}
+        CSP Unit 2 Ch2 Cumulative Assessment MC_2018_2019: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018: {}
@@ -4556,6 +4608,7 @@ en:
         csp-pulse-check-survey-2-levelgroup-U2Ch1_2018_2019: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2_2018: {}
+        csp-pulse-check-survey-3-levelgroup-U2Ch2_2018_2019: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1_2018: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1_2018_2019: {}
@@ -7346,6 +7399,11 @@ en:
         Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
         Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
         In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
+      CB_Question_15_2018_2019:
+        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
+        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
+        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
+        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
       CB_Question_15_exam_prep:
         Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
         Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
@@ -7491,6 +7549,11 @@ en:
         To determine the users who post messages most frequently: To determine the users who post messages most frequently
         To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
       CB_Question_7_2018:
+        To determine the time of day that the site is most active: To determine the time of day that the site is most active
+        To determine the topics that many users are posting about: To determine the topics that many users are posting about
+        To determine the users who post messages most frequently: To determine the users who post messages most frequently
+        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
+      CB_Question_7_2018_2019:
         To determine the time of day that the site is most active: To determine the time of day that the site is most active
         To determine the topics that many users are posting about: To determine the topics that many users are posting about
         To determine the users who post messages most frequently: To determine the users who post messages most frequently
@@ -8041,6 +8104,14 @@ en:
         : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
         She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
         She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
+      CSP Unit 2 Ch 2 MC data bias_2018_2019:
+        " ": " "
+        Data Bias: Data Bias
+        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
+        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
+        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
       CSP Unit 2 Ch 2 MC data bias_exam_prep:
         " ": " "
         Data Bias: Data Bias
@@ -8060,6 +8131,16 @@ en:
         : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
         What's it showing?: What's it showing?
       CSP Unit 2 Ch 2 MC google trends_2018:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
+      CSP Unit 2 Ch 2 MC google trends_2018_2019:
         " ": " "
         ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
         : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
@@ -8125,6 +8206,13 @@ en:
         Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
         Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
         Which is the Best?: Which is the Best?
+      CSP Unit 2 Ch 2 MC worst viz_2018_2019:
+        " ": " "
+        Chart A (Line Chart): Chart A (Line Chart)
+        Chart B (Vertical Bar Chart): Chart B (Vertical Bar Chart)
+        Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
+        Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
+        Which is the Best?: Which is the Best?
       CSP Unit 2 Ch 2 MC worst viz_exam_prep:
         " ": " "
         Chart A (Line Chart): Chart A (Line Chart)
@@ -8148,6 +8236,14 @@ en:
         Removing the entire row with home state "adsfas" and recomputing: Removing the entire row with home state "adsfas" and recomputing
         Round up all non-integer values for "Likelihood of staying in state": Round up all non-integer values for "Likelihood of staying in state"
         Translate all states into their two-letter state code: Translate all states into their two-letter state code
+      CSP Unit 2 Ch2 MC data cleaning_2018_2019:
+        " ": " "
+        Data Cleaning: Data Cleaning
+        ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        : 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        Removing the entire row with home state "adsfas" and recomputing: Removing the entire row with home state "adsfas" and recomputing
+        Round up all non-integer values for "Likelihood of staying in state": Round up all non-integer values for "Likelihood of staying in state"
+        Translate all states into their two-letter state code: Translate all states into their two-letter state code
       CSP Unit 2 Ch2 MC data cleaning_exam_prep:
         " ": " "
         Data Cleaning: Data Cleaning
@@ -8164,6 +8260,13 @@ en:
         Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
         Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
       CSP Unit 2 ch 2 MC trends as predictors_2018:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit 2 ch 2 MC trends as predictors_2018_2019:
         " ": " "
         Search Trends: Search Trends
         Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
@@ -8432,6 +8535,11 @@ en:
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
+      CSPFinal_Question_20_2018_2019:
+        Days when certain items sell the most.: Days when certain items sell the most.
+        The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
+        The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
+        Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_20_exam_prep:
         Days when certain items sell the most.: Days when certain items sell the most.
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
@@ -8685,6 +8793,11 @@ en:
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
       CSPFinal_Question_8_2018:
+        'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
+        'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+      CSPFinal_Question_8_2018_2019:
         'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
@@ -11083,6 +11196,13 @@ en:
         Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process: Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process
         Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions: Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions
         Which of the following is the most accurate statement about cleaning and filtering data?: Which of the following is the most accurate statement about cleaning and filtering data?
+      U2L13 Cleaning Data MC_2018_2019:
+        Cleaning and Filtering Data: Cleaning and Filtering Data
+        Filtering and cleaning data is a fully automated process that should not require human input or intervention: Filtering and cleaning data is a fully automated process that should not require human input or intervention
+        Filtering and cleaning data is a human process that does not require the use of computers: Filtering and cleaning data is a human process that does not require the use of computers
+        Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process: Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process
+        Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions: Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions
+        Which of the following is the most accurate statement about cleaning and filtering data?: Which of the following is the most accurate statement about cleaning and filtering data?
       U2L14 Assessment3:
         'Assessment: Question 4': 'Assessment: Question 4'
         True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
@@ -11096,6 +11216,13 @@ en:
         What's it good for?: What's it good for?
         Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
       U2L14 Summary Tables MC_2018:
+        Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
+        Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
+        Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
+        Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
+        What's it good for?: What's it good for?
+        Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
+      U2L14 Summary Tables MC_2018_2019:
         Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
         Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
         Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
@@ -17841,6 +17968,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q1-U2Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q2-U2Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -17851,6 +17987,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q2-U2Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q2-U2Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -17877,6 +18022,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q3-U2Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q4-U2Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -17895,6 +18049,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q4-U2Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q5-U2Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -17905,6 +18068,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q5-U2Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q5-U2Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
