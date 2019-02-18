@@ -1015,6 +1015,7 @@ en:
       CSP Abstraction in Programming: {}
       CSP Abstraction in Programming 2: {}
       CSP Abstraction in Programming 2_2018: {}
+      CSP Abstraction in Programming 2_2018_2019: {}
       CSP Algorithms Map: {}
       CSP Algorithms Map_2018: {}
       CSP ExploreL02 SFLP:
@@ -1816,6 +1817,7 @@ en:
       'Facespace: Soleil M': {}
       Favicon Instructions: {}
       Favicon Instructions_2018: {}
+      Favicon Instructions_2018_2019: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
@@ -1890,6 +1892,7 @@ en:
         title: title
       'How To: Share Code with Teammates': {}
       'How To: Share Code with Teammates_2018': {}
+      'How To: Share Code with Teammates_2018_2019': {}
       How are Images Encoded?: {}
       How onEvent Works:
         description here: description here
@@ -2568,6 +2571,9 @@ en:
         description here: description here
         title: title
       U3 whats a comment_2018:
+        description here: description here
+        title: title
+      U3 whats a comment_2018_2019:
         description here: description here
         title: title
       U3- L12 -Design Mode SFLP: {}
@@ -3480,6 +3486,7 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csp-mid-survey-2018-markdown-with-link-to-survey: {}
+      csp-mid-survey-2018-markdown-with-link-to-survey_2019: {}
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
       csp-post-survey-2017 preamble 1_2018: {}
@@ -3564,6 +3571,7 @@ en:
       csp-pushDL-unit3: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp3_subgoal_mc_levelgroup_preamble_2018: {}
+      csp3_subgoal_mc_levelgroup_preamble_2018_2019: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
       csp_subgoal_labels_consent_intro: {}
@@ -4309,12 +4317,14 @@ en:
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC_2018: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC_2018_2019: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC_2018: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018: {}
+        CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC_2018: {}
@@ -4406,10 +4416,12 @@ en:
         csp-pulse-check-survey-1-levelgroup-U1Ch2_2018_2019: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1_2018: {}
+        csp-pulse-check-survey-2-levelgroup-U2Ch1_2018_2019: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2_2018: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1_2018: {}
+        csp-pulse-check-survey-4-levelgroup-U3Ch1_2018_2019: {}
         csp-pulse-check-survey-5-levelgroup-U4Ch1: {}
         csp-pulse-check-survey-5-levelgroup-U4Ch1_2018: {}
         csp-pulse-check-survey-6-levelgroup-U5Ch1: {}
@@ -4418,6 +4430,7 @@ en:
         csp-pulse-check-survey-7-levelgroup-U5Ch2_2018: {}
         csp3_U3_turtle_subgoal_mc_levelgroup: {}
         csp3_U3_turtle_subgoal_mc_levelgroup_2018: {}
+        csp3_U3_turtle_subgoal_mc_levelgroup_2018_2019: {}
         csp_ap_questions: {}
         csp_subgoal_consent_levelgroup: {}
         subgoal_assessments_levelgroup_test: {}
@@ -7117,6 +7130,11 @@ en:
         When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
         When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
         When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
+      CB_Question_11_2018_2019:
+        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
+        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
+        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
+        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
       CB_Question_11_exam_prep:
         When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
         When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
@@ -7182,6 +7200,11 @@ en:
         Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
         Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
         There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
+      CB_Question_18_2018_2019:
+        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
+        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
+        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
+        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
       CB_Question_18_exam_prep:
         Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
         Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
@@ -7193,6 +7216,11 @@ en:
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
       CB_Question_1_2018:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
+      CB_Question_1_2018_2019:
         2 times as many values can be represented.: 2 times as many values can be represented.
         2^32 times as many values can be represented.: 2^32 times as many values can be represented.
         32 times as many values can be represented.: 32 times as many values can be represented.
@@ -7325,6 +7353,13 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossless compression_2018_2019:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossless compression_exam_prep:
         " ": " "
         Compression: Compression
@@ -7340,6 +7375,13 @@ en:
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossy compression_2018:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossy compression_2018_2019:
         " ": " "
         Compression: Compression
         Fast Fourier Transform compression: Fast Fourier Transform compression
@@ -7734,6 +7776,13 @@ en:
         100,000 times bigger: 100,000 times bigger
         Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
         How much bigger?: How much bigger?
+      CSP Unit 2 Ch 1 MC kilo v mega_2018_2019:
+        1,000 times bigger: 1,000 times bigger
+        1,000,000 times bigger: 1,000,000 times bigger
+        1,000,000,000 times bigger: 1,000,000,000 times bigger
+        100,000 times bigger: 100,000 times bigger
+        Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
+        How much bigger?: How much bigger?
       CSP Unit 2 Ch 1 MC kilo v mega_exam_prep:
         1,000 times bigger: 1,000 times bigger
         1,000,000 times bigger: 1,000,000 times bigger
@@ -7749,6 +7798,13 @@ en:
         predata: predata
         superdata: superdata
       CSP Unit 2 Ch 1 metadata_2018:
+        " ": " "
+        data: data
+        megadata: megadata
+        metadata: metadata
+        predata: predata
+        superdata: superdata
+      CSP Unit 2 Ch 1 metadata_2018_2019:
         " ": " "
         data: data
         megadata: megadata
@@ -7989,6 +8045,13 @@ en:
         F00: F00
         FF00: FF00
         FF0000: FF0000
+      CSP Unit2 Ch 1 MC hex rgb_2018_2019:
+        " ": " "
+        00F: 00F
+        12-bit Red: 12-bit Red
+        F00: F00
+        FF00: FF00
+        FF0000: FF0000
       CSP Unit2 Ch 1 MC hex rgb_exam_prep:
         " ": " "
         00F: 00F
@@ -8004,6 +8067,13 @@ en:
         kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
         megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
       CSP Unit2 Ch1 MC megabyte_2018:
+        How big is it?: How big is it?
+        Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
+        gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
+        gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
+        kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
+        megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
+      CSP Unit2 Ch1 MC megabyte_2018_2019:
         How big is it?: How big is it?
         Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
         gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
@@ -8105,6 +8175,13 @@ en:
         ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
         : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
       CSPFinal_Question_18_2018:
+        Chrome Sampling transformation: Chrome Sampling transformation
+        Lossless transformation: Lossless transformation
+        Lossy transformation: Lossy transformation
+        Multiband transformation: Multiband transformation
+        ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+        : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+      CSPFinal_Question_18_2018_2019:
         Chrome Sampling transformation: Chrome Sampling transformation
         Lossless transformation: Lossless transformation
         Lossy transformation: Lossy transformation
@@ -10389,7 +10466,22 @@ en:
         Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
         'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
         Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
+      U2L05 Lossy Lossless MC 1_2018_2019:
+        Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.: Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.
+        Lossless compression throws away unimportant details that a human being will likely be unable to detect.: Lossless compression throws away unimportant details that a human being will likely be unable to detect.
+        Lossy compression is only possible on files that are at least one gigabyte in size before compression.: Lossy compression is only possible on files that are at least one gigabyte in size before compression.
+        Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
+        'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
+        Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
       U2L05 Lossy Lossless MC 2_2018:
+        Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
+        Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
+        ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        : Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        'Multiple Choice 2: Lossy vs Lossless Compression': 'Multiple Choice 2: Lossy vs Lossless Compression'
+        Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.: Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.
+        Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
+      U2L05 Lossy Lossless MC 2_2018_2019:
         Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
         Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
         ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
@@ -10762,6 +10854,15 @@ en:
         30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
         How many bytes does it take...?: How many bytes does it take...?
         How many bytes?: How many bytes?
+      U2L5 Color Pixel MC Question_2018_2019:
+        " ": " "
+        1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
+        1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
+        3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
+        3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
+        30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
+        How many bytes does it take...?: How many bytes does it take...?
+        How many bytes?: How many bytes?
       U2L8 google trends MC:
         " ": " "
         People like dogs more than cats: People like dogs more than cats
@@ -10821,6 +10922,13 @@ en:
         Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
         Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
         Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
+      U3L03 - multiselect - properties of functions_2018_2019:
+        'Choose Two: True Statements about Functions': 'Choose Two: True Statements about Functions'
+        Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
+        Functions in programming are named groupings of programming instructions.<br>: Functions in programming are named groupings of programming instructions.<br>
+        Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
+        Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
+        Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
       U3L03 Assessment:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
@@ -10830,6 +10938,14 @@ en:
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
         Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L03 Assessment_2018:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        'Multiple Choice: False Statements about Functions': 'Multiple Choice: False Statements about Functions'
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+        Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
+      U3L03 Assessment_2018_2019:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
@@ -10853,6 +10969,14 @@ en:
         Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
         Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
         Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
+      U3L04 Assessment2_2018_2019:
+        'Multiple Choice: Functions and Top-Down Design': 'Multiple Choice: Functions and Top-Down Design'
+        Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
+        Top-Down Design leads to programs which feature multiple layers of abstraction.: Top-Down Design leads to programs which feature multiple layers of abstraction.
+        Top-Down Design relies upon identifying sub-problems of a larger problem.: Top-Down Design relies upon identifying sub-problems of a larger problem.
+        Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+        Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
+        Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
       U3L06 Assessment2:
         A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
         A named memory location.: A named memory location.
@@ -10861,6 +10985,13 @@ en:
         'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
         'Para-meter: a measure of the distance between a function''s conception and implementation.': 'Para-meter: a measure of the distance between a function''s conception and implementation.'
       U3L06 Assessment2_2018:
+        A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
+        A named memory location.: A named memory location.
+        A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
+        Another name for the purpose of a function.: Another name for the purpose of a function.
+        'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
+        'Para-meter: a measure of the distance between a function''s conception and implementation.': 'Para-meter: a measure of the distance between a function''s conception and implementation.'
+      U3L06 Assessment2_2018_2019:
         A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
         A named memory location.: A named memory location.
         A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
@@ -10881,6 +11012,13 @@ en:
         Applied Power Implementation: Applied Power Implementation
         Artificial Parameter Intelligence: Artificial Parameter Intelligence
         'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
+      U3L06-API-multichoice_2018_2019:
+        Abstract Parameter Interface: Abstract Parameter Interface
+        Abstract Programming Inheritance: Abstract Programming Inheritance
+        Application Program Interface: Application Program Interface
+        Applied Power Implementation: Applied Power Implementation
+        Artificial Parameter Intelligence: Artificial Parameter Intelligence
+        'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
       U3L07 - MC remove line of code loops:
         '1': '1'
         '14': '14'
@@ -10889,6 +11027,13 @@ en:
         '7': '7'
         Which line of code should be removed to make the program do what it's supposed to?: Which line of code should be removed to make the program do what it's supposed to?
       U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        Which line of code should be removed to make the program do what it's supposed to?: Which line of code should be removed to make the program do what it's supposed to?
+      U3L07 - MC remove line of code loops_2018_2019:
         '1': '1'
         '14': '14'
         '5': '5'
@@ -10912,6 +11057,13 @@ en:
         'Select the two true statements about functions with parameters:': 'Select the two true statements about functions with parameters:'
         Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
       U3L08 Assessment1_2018:
+        'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
+        'Select the two true statements about functions with parameters:': 'Select the two true statements about functions with parameters:'
+        Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
+      U3L08 Assessment1_2018_2019:
         'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
         Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
         Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
@@ -17061,6 +17213,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q1-U2Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q2-U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17080,6 +17241,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q2-U2Ch1_2018_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q2-U2Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -17115,6 +17285,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q3-U2Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q4-U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17142,6 +17321,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q4-U2Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q5-U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17161,6 +17349,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q5-U2Ch1_2018_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q5-U2Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -17277,6 +17474,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q1-U3Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-4-q2-U3Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17287,6 +17493,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-4-q2-U3Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q2-U3Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -17313,6 +17528,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q3-U3Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-4-q4-U3Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17331,6 +17555,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q4-U3Ch1_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-4-q5-U3Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -17341,6 +17574,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pulse-check-survey-4-q5-U3Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q5-U3Ch1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -17686,12 +17928,28 @@ en:
         ? Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
         : Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
         Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
+      csp_U3_subgoal_q4_mc_2018_2019:
+        ? Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        : Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        ? Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        : Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        ? Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        : Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        None of the above: None of the above
+        ? Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        : Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
       csp_U3_turtle_subgoal_q1_mc:
         <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
         <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
         <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
         <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
       csp_U3_turtle_subgoal_q1_mc_2018:
+        <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
+        <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
+        <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
+        <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
+      csp_U3_turtle_subgoal_q1_mc_2018_2019:
         <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
         <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
         <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
@@ -17706,6 +17964,11 @@ en:
         <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
         <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">: <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">
         <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">: <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+      csp_U3_turtle_subgoal_q2_mc_2018_2019:
+        <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">: <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">
+        <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
+        <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">: <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">
+        <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">: <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
       csp_U3_turtle_subgoal_q3_mc:
         Adding code to the body of the function: Adding code to the body of the function
         Giving the function a name: Giving the function a name
@@ -17713,6 +17976,12 @@ en:
         Identifying the parameters of the function: Identifying the parameters of the function
         Which of the following is NOT part of defining a function?: Which of the following is NOT part of defining a function?
       csp_U3_turtle_subgoal_q3_mc_2018:
+        Adding code to the body of the function: Adding code to the body of the function
+        Giving the function a name: Giving the function a name
+        Giving the parameters a value: Giving the parameters a value
+        Identifying the parameters of the function: Identifying the parameters of the function
+        Which of the following is NOT part of defining a function?: Which of the following is NOT part of defining a function?
+      csp_U3_turtle_subgoal_q3_mc_2018_2019:
         Adding code to the body of the function: Adding code to the body of the function
         Giving the function a name: Giving the function a name
         Giving the parameters a value: Giving the parameters a value
@@ -17756,6 +18025,12 @@ en:
         <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
         <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
         <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
+      cspu3_assess1_callfunction_2018_2019:
+        <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
+        <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
+        <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
+        <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
+        <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
       cspu3_assess1_callfunction_exam_prep:
         <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
         <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
@@ -17768,6 +18043,11 @@ en:
         The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
         The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
       cspu3_assess1_codeoutcome_2018:
+        It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
+        The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
+        The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
+        The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
+      cspu3_assess1_codeoutcome_2018_2019:
         It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
         The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
         The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
@@ -17785,6 +18065,13 @@ en:
         Programmers can write functions without needing to know what they do or how they should work.: Programmers can write functions without needing to know what they do or how they should work.
         Team members can rely on one another to explain their code.: Team members can rely on one another to explain their code.
       cspu3_assess1_collaboration_2018:
+        Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
+        In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
+        ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        : Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        Programmers can write functions without needing to know what they do or how they should work.: Programmers can write functions without needing to know what they do or how they should work.
+        Team members can rely on one another to explain their code.: Team members can rely on one another to explain their code.
+      cspu3_assess1_collaboration_2018_2019:
         Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
         In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
         ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
@@ -17810,6 +18097,12 @@ en:
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+      cspu3_assess1_functionsfalse_2018_2019:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
       cspu3_assess1_functionsfalse_exam_prep:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
@@ -17822,6 +18115,9 @@ en:
       cspu3_assess1_loop_or_function1_2018:
         Function(s): Function(s)
         Loop: Loop
+      cspu3_assess1_loop_or_function1_2018_2019:
+        Function(s): Function(s)
+        Loop: Loop
       cspu3_assess1_loop_or_function1_exam_prep:
         Function(s): Function(s)
         Loop: Loop
@@ -17829,6 +18125,9 @@ en:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function2_2018:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function2_2018_2019:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function2_exam_prep:
@@ -17840,6 +18139,9 @@ en:
       cspu3_assess1_loop_or_function3_2018:
         Function(s): Function(s)
         Loop: Loop
+      cspu3_assess1_loop_or_function3_2018_2019:
+        Function(s): Function(s)
+        Loop: Loop
       cspu3_assess1_loop_or_function3_exam_prep:
         Function(s): Function(s)
         Loop: Loop
@@ -17847,6 +18149,9 @@ en:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function4_2018:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function4_2018_2019:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function4_exam_prep:
@@ -17859,6 +18164,12 @@ en:
         The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
         Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
       cspu3_assess1_namingconvention_2018:
+        A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
+        A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
+        Function names should be organized alphabetically.: Function names should be organized alphabetically.
+        The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
+        Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
+      cspu3_assess1_namingconvention_2018_2019:
         A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
         A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
         Function names should be organized alphabetically.: Function names should be organized alphabetically.
@@ -17880,6 +18191,11 @@ en:
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
         The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
         There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      cspu3_assess1_naturallanguage_2018_2019:
+        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
+        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
+        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
+        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
       cspu3_assess1_naturallanguage_exam_prep:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
@@ -17892,6 +18208,12 @@ en:
         <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">: <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">
         <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
       cspu3_assess1_outputdrawing_2018:
+        <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
+        <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
+        <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
+        <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">: <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">
+        <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
+      cspu3_assess1_outputdrawing_2018_2019:
         <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
         <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
         <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
@@ -17913,6 +18235,11 @@ en:
         Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
         Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
         Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
+      cspu3_assess1_parameters_2018_2019:
+        Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
+        Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
+        Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
+        Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
       cspu3_assess1_parameters_exam_prep:
         Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
         Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
@@ -17924,6 +18251,11 @@ en:
         Line 9: Line 9
         Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
       cspu3_assess1_removeline_2018:
+        Line 3 and Line 4: Line 3 and Line 4
+        Line 8 and Line 9: Line 8 and Line 9
+        Line 9: Line 9
+        Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
+      cspu3_assess1_removeline_2018_2019:
         Line 3 and Line 4: Line 3 and Line 4
         Line 8 and Line 9: Line 8 and Line 9
         Line 9: Line 9
@@ -17945,6 +18277,12 @@ en:
         <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
         <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
         <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
+      cspu3_assess1_robotpath_2018_2019:
+        <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
+        <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
+        <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
+        <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
+        <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
       cspu3_assess1_robotpath_exam_prep:
         <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
         <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
@@ -17958,6 +18296,12 @@ en:
         Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
         Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
       cspu3_assess1_truefunctions_2018:
+        A function can change names over the course of a program.: A function can change names over the course of a program.
+        Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
+        Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
+        Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
+        Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu3_assess1_truefunctions_2018_2019:
         A function can change names over the course of a program.: A function can change names over the course of a program.
         Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
         Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
@@ -20063,6 +20407,9 @@ en:
         Act as the computer!: Act as the computer!
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U1L13 - Assess Text Compression reverse process_2018:
+        Act as the computer!: Act as the computer!
+        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 - Assess Text Compression reverse process_2018_2019:
         Act as the computer!: Act as the computer!
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U2L07 Assessment4:
