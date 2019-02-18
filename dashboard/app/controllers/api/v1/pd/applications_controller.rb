@@ -145,6 +145,10 @@ module Api::V1::Pd
         summer_workshop_changed = true
       end
 
+      if application_data[:scholarship_status] != @application.scholarship_status
+        scholarship_status_changed = true
+      end
+
       if application_data[:response_scores]
         application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
@@ -187,6 +191,8 @@ module Api::V1::Pd
       unless @application.update(application_data)
         return render status: :bad_request, json: {errors: @application.errors.full_messages}
       end
+
+      @application.update_scholarship_status(current_user, application_data[:scholarship_status]) if scholarship_status_changed
 
       @application.update_status_timestamp_change_log(current_user) if status_changed
       @application.log_fit_workshop_change(current_user) if fit_workshop_changed

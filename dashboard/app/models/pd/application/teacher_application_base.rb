@@ -44,7 +44,6 @@ module Pd::Application
 
     serialized_attrs %w(
       pd_workshop_id
-      scholarship_status
     )
 
     validate :scholarship_status_valid
@@ -64,6 +63,15 @@ module Pd::Application
         school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
         user.update_school_info(school_info)
       end
+    end
+
+    def update_scholarship_status(scholarship_status)
+      scholarship_info = Pd::ScholarshipInfo.where(user: user, application_year: application_year).first || Pd::ScholarshipInfo.new(user: user)
+      scholarship_info.update(scholarship_status: scholarship_status, pd_application_id: id)
+    end
+
+    def scholarship_status
+      Pd::ScholarshipInfo.find_by(pd_application_id: id)&.scholarship_status
     end
 
     # Implement in derived class.
