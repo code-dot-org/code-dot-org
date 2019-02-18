@@ -265,15 +265,21 @@ level 'level7_copy'"
 
     # Create multis named level1-level7.
     levels = {}
+    multi_stubs = Multi.any_instance.stubs(:dsl_text)
     (1..7).each do |id|
-      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: get_multi_dsl(id)})
+      dsl_text = get_multi_dsl(id)
+      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: dsl_text})
+      multi_stubs.returns(dsl_text)
     end
 
     # Create the external level.
-    External.create_from_level_builder({}, {dsl_text: get_external_dsl(1)})
+    external_dsl = get_external_dsl(1)
+    External.create_from_level_builder({}, {dsl_text: external_dsl})
+    External.any_instance.stubs(:dsl_text).returns(external_dsl)
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+    level_group.stubs(:dsl_text).returns(level_group_input_dsl)
 
     # Copy the level group and all its sub levels.
     level_group_copy = level_group.clone_with_suffix('_copy')
