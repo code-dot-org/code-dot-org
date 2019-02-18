@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import * as elementUtils from './elementUtils';
+import * as rowStyle from './rowStyle';
 
 export default class BorderProperties extends React.Component {
   static propTypes = {
@@ -20,7 +21,7 @@ export default class BorderProperties extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <div style={rowStyle.wrapperContainer}>
         <PropertyRow
           desc={'border width (px)'}
           isNumber

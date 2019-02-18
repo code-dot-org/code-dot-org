@@ -72,3 +72,21 @@ Translations for this page are done on Crowdin which is free to join and any vol
     <area target="_blank" alt="Inspire a girl" title="Inspire a girl" href="https://crowdin.com/translate/codeorg/56/enus-#51615" coords="353,561,424,582" shape="rect">
 </map>
 
+<img alt="Minecraft Landing Page Screenshot 5" src="/images/translate/minecraft_landing_page_5.png" usemap="#image-map-5" width="700px">
+
+<map name="image-map-5">
+    <area target="_blank" alt="Computer Science intro" title="Computer Science intro" href="https://crowdin.com/translate/codeorg/56/enus-#69448" coords="12,253,137,274" shape="rect">
+    <area target="_blank" alt="What Most Schools Don't Teach" title="What Most Schools Don't Teach" href="https://crowdin.com/translate/codeorg/56/enus-#69449" coords="352,252,516,273" shape="rect">
+    <area target="_blank" alt="President Obama on computer science" title="President Obama on computer science" href="https://crowdin.com/translate/codeorg/56/enus-#69450" coords="11,525,211,550" shape="rect">
+    <area target="_blank" alt="Hour of Code is Here - Anybody Can Learn" title="Hour of Code is Here - Anybody Can Learn" href="https://crowdin.com/translate/codeorg/56/enus-#69451" coords="352,525,571,550" shape="rect">
+</map>
+
+<img alt="Minecraft Landing Page Screenshot 6" src="/images/translate/minecraft_landing_page_6.png" usemap="#image-map-6" width="700px">
+
+<map name="image-map-6">
+    <area target="_blank" alt="Anybody Can Learn" title="Anybody Can Learn" href="https://crowdin.com/translate/codeorg/56/enus-#69452" coords="10,257,120,278" shape="rect">
+    <area target="_blank" alt="My Name is Aracely" title="My Name is Aracely" href="https://crowdin.com/translate/codeorg/56/enus-#132873" coords="353,256,457,278" shape="rect">
+    <area target="_blank" alt="3 min" title="3 min" href="https://crowdin.com/translate/codeorg/56/enus-#132874" coords="458,253,495,278" shape="rect">
+    <area target="_blank" alt="More inspirational videos featuring role models..." title="More inspirational videos featuring role models..." href="https://crowdin.com/translate/codeorg/56/enus-#69170" coords="36,301,353,317" shape="rect">
+    <area target="_blank" alt="More inspirational videos featuring professionals..." title="More inspirational videos featuring professionals..." href="https://crowdin.com/translate/codeorg/56/enus-#69171" coords="37,318,385,336" shape="rect">
+</map>

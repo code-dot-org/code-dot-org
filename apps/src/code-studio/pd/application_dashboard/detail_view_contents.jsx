@@ -9,10 +9,8 @@ import {
   MenuItem,
   FormControl,
   InputGroup,
-  Table,
-  FormGroup
+  Table
 } from 'react-bootstrap';
-import Select from 'react-select';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
@@ -22,14 +20,14 @@ import {
   UNMATCHED_PARTNER_LABEL
 } from '../components/regional_partner_dropdown';
 import ConfirmationDialog from '../components/confirmation_dialog';
+import {ScholarshipDropdown} from '../components/scholarshipDropdown';
 import {
   LabelOverrides as TeacherLabelOverrides,
   PageLabels as TeacherPageLabelsOverrides,
   SectionHeaders as TeacherSectionHeaders,
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
-  ValidScores as TeacherValidScores,
-  ScholarshipDropdownOptions
+  ValidScores as TeacherValidScores
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {
   InterviewQuestions,
@@ -583,15 +581,11 @@ export class DetailViewContents extends React.Component {
 
   renderScholarshipStatusAnswer = () => {
     return (
-      <FormGroup>
-        <Select
-          clearable={false}
-          value={this.state.scholarship_status}
-          onChange={this.handleScholarshipStatusChange}
-          options={ScholarshipDropdownOptions}
-          disabled={!this.state.editing}
-        />
-      </FormGroup>
+      <ScholarshipDropdown
+        scholarshipStatus={this.state.scholarship_status}
+        onChange={this.handleScholarshipStatusChange}
+        disabled={!this.state.editing}
+      />
     );
   };
 

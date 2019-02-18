@@ -1300,6 +1300,7 @@
   "studentName": "Student Name",
   "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
+  "studentTableTeacherDemo": "Me (Demo)",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Submit",
   "submitAssessment": "Submit your assessment",
