@@ -159,7 +159,7 @@
     "submittable": "false",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "8irC4Fn6WFTKryz+f4jlykmX3IDyRGVjdbJeaYgnY82XCgm6CLspMW3sxVLq\nVXOr\n",
+    "encrypted_examples": "xLohAnadf7MTXqLQ54xYK3bYHFAzNcE6ebuPPFIXvuaHnNRzA6RYB9h656Lk\nmraK3twk7WfZ3H7Pp2OXX2/fyg==\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "log_conditions": [
@@ -209,10 +209,16 @@
     "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* Added a loop to the `drawAllFish` function\r\n* That `drawFish(size, r, g, b)` is called inside a loop that runs at least 15 times.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
     "parent_level_id": 13183,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-18 14:57:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

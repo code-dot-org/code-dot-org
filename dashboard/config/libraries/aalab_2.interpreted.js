@@ -408,7 +408,7 @@ function runCollisionEvents() {
     };
     var addCollisionObjects = function(a, b) {
       if(findCollisionObject(a, b) === -1) {
-        a.collisionObjects.push({sprite: b, locked: false});
+        a.collisionObjects.push({sprite: b, event: event, locked: false});
       }
       if(collisions.indexOf(a) === -1) {
         collisions.push(a);
@@ -423,7 +423,7 @@ function runCollisionEvents() {
         });
       } else if(!Array.isArray(a) && Array.isArray(b)) {
         b.forEach(function(s) {
-          addCollisionObjects(s, a);
+          addCollisionObjects(a, s);
         });
       } else {
         a.forEach(function(s) {
@@ -433,7 +433,10 @@ function runCollisionEvents() {
         });
       }
       collisions.forEach(function(s) {
-        s.collisionObjects.forEach(function(obj) {
+        var relevantCollisionObjects = s.collisionObjects.filter(function(obj) {
+          return obj.event === event;
+        });
+        relevantCollisionObjects.forEach(function(obj) {
           type = s.collidable && obj.sprite.collidable ? "collide" : "overlap";
       	  if(s[type](obj.sprite)) {
             if(!obj.locked) {
