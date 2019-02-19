@@ -902,6 +902,9 @@ id:
       CSD U3 L5 Freeplay_2018: |-
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
+      CSD U3 L5 Freeplay_2019: |-
+        Ubahlah nilai ukuran petalSize beberapa kali.
+        Bagaimana cara mengubah gambar anda?
       CSD U3 Variables TEMPLATE square: |-
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
@@ -909,6 +912,9 @@ id:
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
       CSD U3 Variables change circle size_2018: |-
+        Ubahlah nilai ukuran petalSize beberapa kali.
+        Bagaimana cara mengubah gambar anda?
+      CSD U3 Variables change circle size_2019: |-
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
       CSD U3 Variables multiple assignments: |-
@@ -923,6 +929,9 @@ id:
       CSD U3 Variables naming rules v2_2018: |-
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
+      CSD U3 Variables naming rules v2_2018_2019: |-
+        Ubahlah nilai ukuran petalSize beberapa kali.
+        Bagaimana cara mengubah gambar anda?
       CSD U3 Variables naming rules: |-
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
@@ -935,15 +944,23 @@ id:
       CSD U3 Variables random with assignment_2018: |-
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
+      CSD U3 Variables random with assignment_2019: |-
+        Ubahlah nilai ukuran petalSize beberapa kali.
+        Bagaimana cara mengubah gambar anda?
       CSD U5 black white images pixelation 2: |-
         Gambarlah wajah tersenyum (klik
         di sini untuk melihat gambar)
       CSD U5 black white images pixelation 2_2018: |-
         Gambarlah wajah tersenyum (klik
         di sini untuk melihat gambar)
+      CSD U5 black white images pixelation 2_2019: |-
+        Gambarlah wajah tersenyum (klik
+        di sini untuk melihat gambar)
       CSD U5 black white images pixelation 3: Ubah alat pengendali lebar dan tinggi
         untuk menemukan gambar (klik disini untuk melihat lebih lanjut)
       CSD U5 black white images pixelation 3_2018: Ubah alat pengendali lebar dan
+        tinggi untuk menemukan gambar (klik disini untuk melihat lebih lanjut)
+      CSD U5 black white images pixelation 3_2019: Ubah alat pengendali lebar dan
         tinggi untuk menemukan gambar (klik disini untuk melihat lebih lanjut)
       CSD U5 black white images pixelation 4: |-
         Tambahkan alis pada wajah
@@ -951,12 +968,19 @@ id:
       CSD U5 black white images pixelation 4_2018: |-
         Tambahkan alis pada wajah
         tersenyum (klik di sini untuk melihat gambar)
+      CSD U5 black white images pixelation 4_2019: |-
+        Tambahkan alis pada wajah
+        tersenyum (klik di sini untuk melihat gambar)
       CSD U5 black white images pixelation 5: Gambar apa saja yang Anda suka
       CSD U5 black white images pixelation 5_2018: Gambar apa saja yang Anda suka
+      CSD U5 black white images pixelation 5_2019: Gambar apa saja yang Anda suka
       CSD U5 black white images pixelation: |-
         Selesaikan bentuk X dengan
         cara mengetik 0s dan 1s
       CSD U5 black white images pixelation_2018: |-
+        Selesaikan bentuk X dengan
+        cara mengetik 0s dan 1s
+      CSD U5 black white images pixelation_2019: |-
         Selesaikan bentuk X dengan
         cara mengetik 0s dan 1s
       CSD U6 params modify clouds: "#Awan\r\n\r\nProgram ini membuat awan bergerak
@@ -973,6 +997,13 @@ id:
         fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
         di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
         dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
+      CSD U6 params modify clouds_2019: "#Awan\r\n\r\nProgram ini membuat awan bergerak
+        ketika anda meniup pada elemen pengubah sinyal suara, tapi belum selesai.\r\n\r\n#\nLakukan
+        ini\r\n*Buat fungsi baru 'moveCloud(nama)\" yang akan menggerakkan awan.\r\n
+        \ *\n(Petunjuk: anda akan menggunakan hampir semua kode yang sama sebagai
+        fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
+        di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
+        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
       CSD U6 params modify planes: "# Multi-pesawat Controller\r \r program ini bergerak
         tiga pesawat menggunakan accelerometer papan dan layar kotak centang.  Sekarang,
         hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat baru 'movePlane(name)'
@@ -982,6 +1013,14 @@ id:
         mengetahui bagaimana untuk mengubah kode sehingga mereka bergerak lebih lambat?
         _zxsxXXsx"
       CSD U6 params modify planes_2018: "# Multi-pesawat Controller\r \r program ini
+        bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak centang.
+        \ Sekarang, hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat
+        baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat. \r *
+        memanggil fungsi 'movePlane(name)' dalam blok acara, sehingga hanya bergerak
+        ketika dengan kotak centang dicentang. \r \r _Challenge: Sekarang pesawat
+        bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk mengubah
+        kode sehingga mereka bergerak lebih lambat? _zxsxXXsx"
+      CSD U6 params modify planes_2019: "# Multi-pesawat Controller\r \r program ini
         bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak centang.
         \ Sekarang, hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat
         baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat. \r *
@@ -1012,13 +1051,19 @@ id:
         (klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select rainbow_2018: Tulis isi larik ke layar dalam urutan bilangan.
         (klik untuk melihat petunjuk lengkap)
+      CSDU6 arrays select rainbow_2019: Tulis isi larik ke layar dalam urutan bilangan.
+        (klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select random: Tulis sebuah program yang menampilkan warna yang
         dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select random_2018: Tulis sebuah program yang menampilkan warna
         yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
+      CSDU6 arrays select random_2019: Tulis sebuah program yang menampilkan warna
+        yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select variable: Tulis sebuah program yang menampilkan warna yang
         dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select variable_2018: Tulis sebuah program yang menampilkan warna
+        yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
+      CSDU6 arrays select variable_2019: Tulis sebuah program yang menampilkan warna
         yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSDU6 arrays variable: Tulis sebuah program yang menampilkan warna yang dipilih
         secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
@@ -1027,14 +1072,21 @@ id:
         warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Tulis sebuah program yang menampilkan
         warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: Tulis sebuah program yang menampilkan
+        warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSPU5_U3 - Arrays - indexPractice: Tulis isi larik ke layar dalam urutan bilangan.
         (klik untuk melihat petunjuk lengkap)
       CSPU5_U3 - Arrays - indexPractice_2018: Tulis isi larik ke layar dalam urutan
+        bilangan. (klik untuk melihat petunjuk lengkap)
+      CSPU5_U3 - Arrays - indexPractice_2019: Tulis isi larik ke layar dalam urutan
         bilangan. (klik untuk melihat petunjuk lengkap)
       CSPU5_U3 - Loops - 4: |-
         Gunakan Perintah Debug untuk membuat daftar
          semua nilai yang digulirkan sebelum angka 6. (Klik untuk melihat petunjuk lengkap)
       CSPU5_U3 - Loops - 4_2018: |-
+        Gunakan Perintah Debug untuk membuat daftar
+         semua nilai yang digulirkan sebelum angka 6. (Klik untuk melihat petunjuk lengkap)
+      CSPU5_U3 - Loops - 4_2019: |-
         Gunakan Perintah Debug untuk membuat daftar
          semua nilai yang digulirkan sebelum angka 6. (Klik untuk melihat petunjuk lengkap)
       Choose Your Own Adventure: Anda dapat melakukan apa pun yang Anda inginkan di
@@ -1609,8 +1661,10 @@ id:
         10 menjadi 0 untuk lulus tingkat."
       Crack Random Substitution: instruksi
       Crack Random Substitution_2018: instruksi
+      Crack Random Substitution_2019: instruksi
       Crack a Caesar Cipher: instruksi
       Crack a Caesar Cipher_2018: instruksi
+      Crack a Caesar Cipher_2019: instruksi
       Food Fight!: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\r\n\r\nGunakan
         pernyataan \"jika\" untuk memprogram permainan Anda untuk memanggil fungsi
         \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\r\n\r\nSebagai\ncontoh:
@@ -1963,6 +2017,11 @@ id:
         huruf 'A' ukuran 3x5. Widget diatur dengan dimensi yang salah. Tugas
         pertama Anda adalah mengatur bita kedua menjadi kode biner 8-bit untuk 5: 0000
         0101. Kemudian mulai masukkan data piksel.
+      Pixelation - Lesson 14 - Make the Letter A_2019: |-
+        Buat
+        huruf 'A' ukuran 3x5. Widget diatur dengan dimensi yang salah. Tugas
+        pertama Anda adalah mengatur bita kedua menjadi kode biner 8-bit untuk 5: 0000
+        0101. Kemudian mulai masukkan data piksel.
       Pixelation - Lesson 15 - Color Shades 4x4: "Kami \nmemulai dengan gambar 4x4
         yang dibuat Maddie dalam video. Tugas Anda adalah mengisi kisi 4x4 dengan
         warna menggunakan 12-bit per pixel. Berikut adalah persyaratannya: \nBaris
@@ -1973,10 +2032,18 @@ id:
         warna menggunakan 12-bit per pixel. Berikut adalah persyaratannya: \nBaris
         1 - isi dengan nuansa merah. Baris 2 - nuansa hijau. Baris 3 - nuansa biru.
         Baris 4 - nuansa abu-abu."
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: "Kami \nmemulai dengan gambar
+        4x4 yang dibuat Maddie dalam video. Tugas Anda adalah mengisi kisi 4x4 dengan
+        warna menggunakan 12-bit per pixel. Berikut adalah persyaratannya: \nBaris
+        1 - isi dengan nuansa merah. Baris 2 - nuansa hijau. Baris 3 - nuansa biru.
+        Baris 4 - nuansa abu-abu."
       Pixelation - Lesson 15 - Complete 3-bit color: "Kami \nmemulainya dengan gambar
         4x2 yang dibuat Maddie, tapi kami telah meninggalkan dua kotak terakhir. Selesaikan
         gambar dengan mencari\ndua warna yang hilang dan menulis kode mereka."
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "Kami \nmemulainya dengan
+        gambar 4x2 yang dibuat Maddie, tapi kami telah meninggalkan dua kotak terakhir.
+        Selesaikan gambar dengan mencari\ndua warna yang hilang dan menulis kode mereka."
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: "Kami \nmemulainya dengan
         gambar 4x2 yang dibuat Maddie, tapi kami telah meninggalkan dua kotak terakhir.
         Selesaikan gambar dengan mencari\ndua warna yang hilang dan menulis kode mereka."
       Ryan - 4-5 Bee Conditionals 2: Lebah tersebut hanya menginginkan nektarnya sekarang.
@@ -2039,6 +2106,7 @@ id:
         program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
       The Vigenere Cipher Widget: instruksi
       The Vigenere Cipher Widget_2018: instruksi
+      The Vigenere Cipher Widget_2019: instruksi
       The Vigenere Cipher: instruksi
       U2 frequency caesar: instruksi
       U2 frequency random sub: instruksi
@@ -2062,16 +2130,25 @@ id:
       U3L06 - moveForwardwithParams_2018: |-
         Gunakan satu perintah untuk menggerakkan
         kura-kura ke tepi layar. (Klik untuk melihat petunjuk lengkap)
+      U3L06 - moveForwardwithParams_2019: |-
+        Gunakan satu perintah untuk menggerakkan
+        kura-kura ke tepi layar. (Klik untuk melihat petunjuk lengkap)
       U3L06 Challenge 2 purple square: |-
         Baca dokumentasi untuk
         penColor() dan penWidth() sebelum menggunakannya untuk menggambar bujur sangkar biru.
       U3L06 Challenge 2 purple square_2018: |-
         Baca dokumentasi untuk
         penColor() dan penWidth() sebelum menggunakannya untuk menggambar bujur sangkar biru.
+      U3L06 Challenge 2 purple square_2019: |-
+        Baca dokumentasi untuk
+        penColor() dan penWidth() sebelum menggunakannya untuk menggambar bujur sangkar biru.
       U3L06 Challenge 3 fill pink: |-
         Isilah latar belakang
         layar dengan warna favorit Anda. (Klik untuk melihat petunjuk lengkap)
       U3L06 Challenge 3 fill pink_2018: |-
+        Isilah latar belakang
+        layar dengan warna favorit Anda. (Klik untuk melihat petunjuk lengkap)
+      U3L06 Challenge 3 fill pink_2019: |-
         Isilah latar belakang
         layar dengan warna favorit Anda. (Klik untuk melihat petunjuk lengkap)
       U3L06 Challenge 5 overlapping circles: |-
@@ -2082,9 +2159,14 @@ id:
         Gambar ini dibuat
         hanya dengan menggunakan dot() dan penColor() tapi, bagaimana kita bisa membuat lingkaran
         menjadi transparan? Jika Anda belum mendapat petunjuk: lihat dokumentasinya!
+      U3L06 Challenge 5 overlapping circles_2019: |-
+        Gambar ini dibuat
+        hanya dengan menggunakan dot() dan penColor() tapi, bagaimana kita bisa membuat lingkaran
+        menjadi transparan? Jika Anda belum mendapat petunjuk: lihat dokumentasinya!
       U4 vigenere cipher 2: instruksi
       U4L02 - Objects - Template1: Template
       U4L02 - Objects - Template1_2018: Template
+      U4L02 - Objects - Template1_2019: Template
       Underground Avoiding Lava: Lava bersembunyi di bawah beberapa balok ini yang
         harus kamu tutup sebelum bergerak maju. Perintah "jika" akan berguna di sini.
         Tambahkan perintah "bergerak maju" di tempat yang tepat untuk menambang balok
