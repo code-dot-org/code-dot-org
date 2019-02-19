@@ -1240,6 +1240,7 @@ class Script < ActiveRecord::Base
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
+      pilot_experiment: pilot_experiment,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
