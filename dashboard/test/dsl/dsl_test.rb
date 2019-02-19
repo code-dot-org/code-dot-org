@@ -441,6 +441,17 @@ DSL
     assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:script_announcements]
   end
 
+  test 'can set pilot_experiment' do
+    input_dsl = <<DSL
+pilot_experiment 'science-experiment'
+
+stage 'Stage1'
+level 'Level 1'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal 'science-experiment', output[:pilot_experiment]
+  end
+
   test 'Script DSL with level progressions' do
     input_dsl = <<DSL
 stage 'Stage1'
