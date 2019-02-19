@@ -20,7 +20,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# You try it\r\n\r\nLet's modify the driving age example to add an `else` clause.\r\n\r\n* **Add an `else` ** to the if-statement.\r\n* **Add a console.log** message inside the else clause that says something like \"sorry you can't drive yet\".\r\n\r\nYou can add an else-statement by clicking on the `+` attached to the if statement.  We've provided some starting code.\r\n\r\n**BONUS** - if they are not old enough to drive you could do the math and tell them how many years they have to wait.",
+    "long_instructions": "# You try it\r\n\r\nLet's modify the driving age example to add an `else` clause.\r\n\r\n* **Add an `else`** to the if-statement.\r\n* **Add a console.log** message inside the else clause that says something like \"sorry you can't drive yet\".\r\n\r\nYou can add an else-statement by clicking on the `+` attached to the if statement.  We've provided some starting code.\r\n\r\n**BONUS** - if they are not old enough to drive you could do the math and tell them how many years they have to wait.",
     "start_blocks": "console.log(\"Driver Verification\");\r\nvar age = promptNum(\"Please Enter Your Age\");\r\nif(age >= 16){\r\n  console.log(\"It looks like you're old enough to drive!\");\r\n}\r\nconsole.log(\"Thanks for verifying.\");\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -68,10 +68,14 @@
     "palette_category_at_start": "control",
     "teacher_markdown": "Note this level cannot be validated.",
     "encrypted_examples": "Mp3ww1bSikfU1abE3WWGeHLyor3WEIWBJbmdadigKMXghHKQtbRz0yqFPSWI\nza8c\n",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 02:56:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"log_conditions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

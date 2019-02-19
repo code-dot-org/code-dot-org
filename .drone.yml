@@ -5,12 +5,19 @@ name: unit
 clone:
   disable: true
 
-steps:
+steps: 
 - name: clone
   image: docker:git
   commands:
   - git clone --branch $DRONE_SOURCE_BRANCH  --depth 50 $DRONE_GIT_HTTP_URL .
   - git reset --hard $DRONE_COMMIT
+  # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
+  - git remote set-branches --add origin $DRONE_TARGET_BRANCH
+  - git fetch --depth 50 origin $DRONE_TARGET_BRANCH
+  # Merge so we're up-to-date with the target before running tests.
+  - git config user.name "Drone"
+  - git config user.email "drone-fake-user@code.org"
+  - git merge origin/$DRONE_TARGET_BRANCH
 
 - name: verify-pr
   image: wintercdo/code-dot-org:0.7
@@ -54,10 +61,12 @@ steps:
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
-    - df -h
+    - echo "Running on $DRONE_RUNNER_HOSTNAME"
     - sudo chown -R circleci:circleci .
-    - # cache is restored to source directory, so we need to copy it into the right place
+    # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+    # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
+    - export CIRCLE_SHA1=$DRONE_COMMIT
     - /entrypoint.sh docker/unit_tests.sh
 
 - name: update-cache
@@ -82,71 +91,129 @@ volumes:
   temp: {}
 
 trigger:
+  branch:
+  - staging
   event:
-    include:
-    - pull_request
+  - pull_request
 
-# ---
-# kind: pipeline
-# name: ui
+---
+kind: pipeline
+name: ui
 
-# clone:
-#   depth: 50
+clone:
+  disable: true
 
-# services:
-# - name: ui-tests-redis
-#   image: redis
-#   ports:
-#   - 6379
+services:
+- name: ui-tests-redis
+  image: redis
+  ports:
+  - 6379
 
-# steps:
-# - name: ui-tests
-#   image: wintercdo/code-dot-org:0.7
-#   volumes:
-#   - name: rbenv
-#     path: /home/circleci/.rbenv
-#   - name: mysql
-#     path: /var/lib/mysql
-#   environment:
-#     CLOUDFRONT_KEY_PAIR_ID:
-#       from_secret: CLOUDFRONT_KEY_PAIR_ID
-#     CLOUDFRONT_PRIVATE_KEY:
-#       from_secret: CLOUDFRONT_PRIVATE_KEY
-#     PROPERTIES_ENCRYPTION_KEY:
-#       from_secret: PROPERTIES_ENCRYPTION_KEY
-#     AWS_ACCESS_KEY_ID:
-#       from_secret: AWS_ACCESS_KEY_ID
-#     AWS_SECRET_ACCESS_KEY:
-#       from_secret: AWS_SECRET_ACCESS_KEY
-#     APPLITOOLS_KEY:
-#       from_secret: APPLITOOLS_KEY
-#     FIREBASE_NAME:
-#       from_secret: FIREBASE_NAME
-#     SAUCE_USERNAME:
-#       from_secret: SAUCE_USERNAME
-#     SAUCE_ACCESS_KEY:
-#       from_secret: SAUCE_ACCESS_KEY
-#   commands:
-#     - pwd
-#     - whoami
-#     - id -u
-#     - id -g
-#     - ls -alh
-#     - sudo chown -R circleci:circleci .
-#     - /entrypoint.sh docker/ui_tests.sh
+steps: 
+- name: clone
+  image: docker:git
+  commands:
+  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 50 $DRONE_GIT_HTTP_URL .
+  - git reset --hard $DRONE_COMMIT
+  # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
+  - git remote set-branches --add origin $DRONE_TARGET_BRANCH
+  - git fetch --depth 50 origin $DRONE_TARGET_BRANCH
+  # Merge so we're up-to-date with the target before running tests.
+  - git config user.name "Drone"
+  - git config user.email "drone-fake-user@code.org"
+  - git merge origin/$DRONE_TARGET_BRANCH
 
-# volumes:
-# - name: rbenv
-#   temp: {}
-# - name: mysql
-#   temp: {}
+- name: verify-pr
+  image: wintercdo/code-dot-org:0.7
+  pull: always
+  commands:
+    - |
+      if [ -z "$DRONE_PULL_REQUEST" ]; then
+        echo "Not a pull request."
+        exit 0
+      fi
+    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
+    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
+    - echo $head_repo
+    - |
+      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
+        echo "Pull request is from fork $head_repo; exiting."
+        exit 1
+      fi
 
-# trigger:
-#   event:
-#     include:
-#     - pull_request
+- name: restore-cache
+  image: plugins/s3-cache
+  settings:
+    pull: true
+    restore: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+
+- name: ui-tests
+  image: wintercdo/code-dot-org:0.7
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  - name: mysql
+    path: /var/lib/mysql
+  environment:
+    CLOUDFRONT_KEY_PAIR_ID:
+      from_secret: CLOUDFRONT_KEY_PAIR_ID
+    CLOUDFRONT_PRIVATE_KEY:
+      from_secret: CLOUDFRONT_PRIVATE_KEY
+    PROPERTIES_ENCRYPTION_KEY:
+      from_secret: PROPERTIES_ENCRYPTION_KEY
+    AWS_ACCESS_KEY_ID:
+      from_secret: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: AWS_SECRET_ACCESS_KEY
+    FIREBASE_NAME:
+      from_secret: FIREBASE_NAME
+    FIREBASE_SECRET:
+      from_secret: FIREBASE_SECRET
+    SAUCE_USERNAME:
+      from_secret: SAUCE_USERNAME
+    SAUCE_ACCESS_KEY:
+      from_secret: SAUCE_ACCESS_KEY
+  commands:
+    - echo "Running on $DRONE_RUNNER_HOSTNAME"
+    - sudo chown -R circleci:circleci .
+    # cache is restored to source directory, so we need to copy it into the right place
+    - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+    # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
+    - export CIRCLE_SHA1=$DRONE_COMMIT
+    - /entrypoint.sh docker/ui_tests.sh
+
+- name: update-cache
+  image: plugins/s3-cache
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  settings:
+    pull: true
+    rebuild: true
+    access_key:
+      from_secret: S3_CACHE_ACCESS_KEY
+    secret_key:
+      from_secret: S3_CACHE_SECRET_KEY
+    mount:
+      - /home/circleci/.rbenv
+
+volumes:
+- name: rbenv
+  temp: {}
+- name: mysql
+  temp: {}
+
+trigger:
+  branch:
+  - staging
+  event:
+  - pull_request
 ---
 kind: signature
-hmac: 10e80e9c53f2a6c8a5ed85ad2d75e75fe3f8eae062244e9670d4930a3b1741d8
+hmac: d0531a25e2e0130458f7a082ca13f468357ceaec2825462731bfc4050d86f210
 
 ...

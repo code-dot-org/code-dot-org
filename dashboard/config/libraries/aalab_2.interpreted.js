@@ -229,6 +229,7 @@ function removeFromAnimationGroup(sprite, oldAnimation) {
   }
 }
 
+// Updated
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
   sprite.baseScale = 1;
@@ -240,6 +241,8 @@ function makeNewSprite(animation, x, y) {
   sprite.patrolling = false;
   sprite.things_to_say = [];
   sprite.behaviors = [];
+  sprite.collidable = false; //new
+  sprite.collisionObjects = []; //new
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
   };
@@ -387,78 +390,71 @@ function runInputEvents() {
   }
 }
 
-// Updated
 function runCollisionEvents() {
   collisionEvents.forEach(function(event) {
+    var condition = event.condition;
     var a = event.a();
     var b = event.b();
-    var type = event.type;
     var e = event.event;
+    var type;
+    var collisions = [];
+    var findCollisionObject = function(sprite, collisionObject) {
+      for(var i = 0; i < sprite.collisionObjects.length; i++) {
+      	if(sprite.collisionObjects[i].sprite === collisionObject) {
+          return i;
+        }
+      }
+      return -1;
+    };
+    var addCollisionObjects = function(a, b) {
+      if(findCollisionObject(a, b) === -1) {
+        a.collisionObjects.push({sprite: b, event: event, locked: false});
+      }
+      if(collisions.indexOf(a) === -1) {
+        collisions.push(a);
+      }
+    };
     if(a && b) {
       if(!Array.isArray(a) && !Array.isArray(b)) {
-        if(a[type](b)) {
-          thisSprite = a;
-          otherSprite = b;
-          e();
-        }
-      } else if(!Array.isArray(a) && Array.isArray(b)) {
-        b.forEach(function(s) {
-          if(a[type](s)) {
-            thisSprite = a;
-            otherSprite = s;
-            e();
-          }
-        });
+        addCollisionObjects(a, b);
       } else if(Array.isArray(a) && !Array.isArray(b)) {
         a.forEach(function(s) {
-          if(b[type](s)) {
-            thisSprite = s;
-            otherSprite = b;
-            e();
-          }
+          addCollisionObjects(s, b);
+        });
+      } else if(!Array.isArray(a) && Array.isArray(b)) {
+        b.forEach(function(s) {
+          addCollisionObjects(a, s);
         });
       } else {
         a.forEach(function(s) {
           b.forEach(function(p) {
-              if(s[type](p)) {
-                thisSprite = s;
-                otherSprite = p;
-                e();
-              }
+          	addCollisionObjects(s, p);
           });
         });
       }
+      collisions.forEach(function(s) {
+        var relevantCollisionObjects = s.collisionObjects.filter(function(obj) {
+          return obj.event === event;
+        });
+        relevantCollisionObjects.forEach(function(obj) {
+          type = s.collidable && obj.sprite.collidable ? "collide" : "overlap";
+      	  if(s[type](obj.sprite)) {
+            if(!obj.locked) {
+              thisSprite = s;
+              otherSprite = obj.sprite;
+              e();
+              if(condition === "when") {
+                obj.locked = true;
+              }
+            }
+          } else {
+          	obj.locked = false;
+          }
+        });
+      });
     }
   });
 }
-
-/* 
-function runCollisionEvents() {
-  var createCollisionHandler = function (collisionEvent) {
-    return function (sprite1, sprite2) {
-      if (!collisionEvent.touching || collisionEvent.keepFiring) {
-        collisionEvent.event(sprite1, sprite2);
-      }
-    };
-  };
-  for (var i = 0; i < collisionEvents.length; i++) {
-    var collisionEvent = collisionEvents[i];
-    var a = collisionEvent.a && collisionEvent.a();
-    var b = collisionEvent.b && collisionEvent.b();
-    if (a && b) {
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
-        collisionEvent.touching = true;
-      } else {
-        if (collisionEvent.touching && collisionEvent.eventEnd) {
-          collisionEvent.eventEnd(a, b);
-        }
-        collisionEvent.touching = false;
-      }
-    }
-  }
-}
-
-*/
 
 // New
 function runLoops() {
@@ -493,19 +489,21 @@ function updateHUDText() {
     textSize(35);
     text(subTitle, 200, 250);
   }
-  if (customText.length > 0) {
-  	customText.forEach(function(textObj) {
-      var timeElapsed = new Date().getTime() - textObj.timeStarted;
-      if(textObj.duration > 0 && timeElapsed >= textObj.duration) {
-        customText.splice(customText.indexOf(textObj), 1);
-      } else {
-        fill(textObj.color);
-        textAlign(CENTER);
-        textSize(textObj.size);
-        text(textObj.text(), textObj.location.x, textObj.location.y);
-      }
-    });
-  }
+}
+
+// New
+function printCustomText() {
+  customText.forEach(function(textObj) {
+    var timeElapsed = new Date().getTime() - textObj.timeStarted;
+    if(textObj.duration > 0 && timeElapsed >= textObj.duration) {
+      customText.splice(customText.indexOf(textObj), 1);
+    } else {
+      fill(textObj.color());
+      textAlign(CENTER);
+      textSize(textObj.size());
+      text(textObj.text(), textObj.location().x, textObj.location().y);
+    }
+  });
 }
 
 // Updated
@@ -519,4 +517,5 @@ function draw() {
   }
   drawSprites();
   updateHUDText();
+  printCustomText();
 }
