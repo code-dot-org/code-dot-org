@@ -324,6 +324,11 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       aalab_clickedOn:
         options:
           CONDITION:
@@ -344,11 +349,21 @@ lt:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
+          VAL:
+            '"true"': Taip
+            '"false"': klaida
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': amžinai
       binary_move:
         options:
           DIR:

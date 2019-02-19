@@ -1772,8 +1772,10 @@ pt:
         pontuação cair de 10 para 0 para passar de nível.
       Crack Random Substitution: Instruções
       Crack Random Substitution_2018: Instruções
+      Crack Random Substitution_2019: Instruções
       Crack a Caesar Cipher: Instruções
       Crack a Caesar Cipher_2018: Instruções
+      Crack a Caesar Cipher_2019: Instruções
       Food Fight!: |-
         Adicionamos uma última função para
         que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
@@ -2504,6 +2506,7 @@ pt:
         até que o solo fique nivelado? Dica: dessa vez, tente usar o laço enquanto.
       The Vigenere Cipher Widget: Instruções
       The Vigenere Cipher Widget_2018: Instruções
+      The Vigenere Cipher Widget_2019: Instruções
       The Vigenere Cipher: Instruções
       Total Artist Clone Me: |-
         Atividade livre: aqui estão as funções
