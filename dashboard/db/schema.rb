@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190214005506) do
+ActiveRecord::Schema.define(version: 20190218224947) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1562,6 +1562,8 @@ ActiveRecord::Schema.define(version: 20190214005506) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "download"
+    t.string   "locale",       default: "en-US", null: false
+    t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true, using: :btree
   end
 
   add_foreign_key "ap_school_codes", "schools"

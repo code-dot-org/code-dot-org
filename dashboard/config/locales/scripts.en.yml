@@ -9723,6 +9723,16 @@ en:
               name: Variables Make
             Student Survey:
               name: Student Survey
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Teacher Surveys:
+              name: Teacher Surveys
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
           title: CSP Playground
           description_audience: ''
           description_short: ''
