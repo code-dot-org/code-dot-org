@@ -147,7 +147,6 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    console.log(experiments.isEnabled(experiments.MINI_RUBRIC_2019));
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
