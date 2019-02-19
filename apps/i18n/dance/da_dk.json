@@ -9,6 +9,5 @@
   "danceFeedbackStartNewMove": "Din danser lavede ikke et nyt dansetrin efter den fjerde foranstaltning.",
   "danceFeedbackNeedDifferentDance": "Du skal bruge en anden dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Kontroller, at du bruger 'hver 2 foranstaltninger'-blok",
-  "danceFeedbackNeedMakeANewDancer": "Brug 'lave en ny' blok til at oprette en anden danser.",
-  "measure": ""
+  "danceFeedbackNeedMakeANewDancer": "Brug 'lave en ny' blok til at oprette en anden danser."
 }

@@ -723,8 +723,10 @@ ne:
       CourseF_PlayLab_vars9: "Nice, now let's make sure this game\nisn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from\nCat (actor 2), you should lose a point. Start with 10 points so it's not\ntoo hard. Let your score drop down from 10 to 0 to pass the level."
       Crack Random Substitution: Instructions
       Crack Random Substitution_2018: Instructions
+      Crack Random Substitution_2019: Instructions
       Crack a Caesar Cipher: Instructions
       Crack a Caesar Cipher_2018: Instructions
+      Crack a Caesar Cipher_2019: Instructions
       Food Fight!: "We've added one last function for\nyou. \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move to the next puzzle. "
       Infinity_catch: "Can you make Elsa (\"actor 2\") catch up with\nAnna by using the arrow keys?"
       Infinity_finale: Create anything you like and share it!
@@ -990,6 +992,7 @@ ne:
       Testing Quantum Farmer: "Wow, look at that! \\r\n\\r\nI don't know how\nmany shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps using the `fill` block until the ground is even?  "
       The Vigenere Cipher Widget: Instructions
       The Vigenere Cipher Widget_2018: Instructions
+      The Vigenere Cipher Widget_2019: Instructions
       The Vigenere Cipher: Instructions
       Total Artist Clone Me: "Freeplay: Here are the functions\nyou've written, and some more for you to play with. Draw something awesome!\nPlay with the pen width to see how different your drawings look!"
       U2 frequency caesar: Instructions
@@ -998,6 +1001,7 @@ ne:
       U4 vigenere cipher 2: Instructions
       U4L02 - Objects - Template1: Template
       U4L02 - Objects - Template1_2018: Template
+      U4L02 - Objects - Template1_2019: Template
       Underground Avoiding Lava: "Lava is hiding beneath some of these\nblocks, which you'll need to cover up before moving forward. An \"if\" command\nwill come in handy here. Add a \"move forward\" command in the correct place\nto mine these blocks."
       Underground Avoiding Lava_2018: "Lava is hiding beneath some of these\nblocks, which you'll need to cover up before moving forward. An \"if\" command\nwill come in handy here. Add a \"move forward\" command in the correct place\nto mine these blocks."
       Underground Avoiding Lava_2019: "Lava is hiding beneath some of these\nblocks, which you'll need to cover up before moving forward. An \"if\" command\nwill come in handy here. Add a \"move forward\" command in the correct place\nto mine these blocks."
