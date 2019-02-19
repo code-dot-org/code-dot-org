@@ -254,6 +254,9 @@ class TeacherFeedback extends Component {
       ? latestFeedback.comment
       : i18n.feedbackPlaceholder();
 
+    const showFeedbackInputAreas = !(this.props.disabledMode &&
+      this.props.viewAs === ViewType.Teacher);
+
     return (
       <div>
         {this.state.errorState === ErrorType.Load && (
@@ -278,13 +281,10 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  {!(
-                    this.props.disabledMode &&
-                    this.props.viewAs === ViewType.Teacher
-                  ) && (
+                  {showFeedbackInputAreas && (
                     <input
                       type={'checkbox'}
-                      id={'exceedsButton'}
+                      id={'exceeds-input'}
                       name={'rubric'}
                       value={'exceeds'}
                       checked={this.state.performance === 'exceeds'}
@@ -305,13 +305,10 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  {!(
-                    this.props.disabledMode &&
-                    this.props.viewAs === ViewType.Teacher
-                  ) && (
+                  {showFeedbackInputAreas && (
                     <input
                       type={'checkbox'}
-                      id={'meetsButton'}
+                      id={'meets-input'}
                       name={'rubric'}
                       value={'meets'}
                       checked={this.state.performance === 'meets'}
@@ -332,13 +329,10 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  {!(
-                    this.props.disabledMode &&
-                    this.props.viewAs === ViewType.Teacher
-                  ) && (
+                  {showFeedbackInputAreas && (
                     <input
                       type={'checkbox'}
-                      id={'approachesButton'}
+                      id={'approaches-input'}
                       name={'rubric'}
                       value={'approaches'}
                       checked={this.state.performance === 'approaches'}
@@ -359,13 +353,10 @@ class TeacherFeedback extends Component {
                       : styles.performanceLevelHeader
                   }
                 >
-                  {!(
-                    this.props.disabledMode &&
-                    this.props.viewAs === ViewType.Teacher
-                  ) && (
+                  {showFeedbackInputAreas && (
                     <input
                       type={'checkbox'}
-                      id={'noEvidenceButton'}
+                      id={'noEvidence-input'}
                       name={'rubric'}
                       value={'noEvidence'}
                       checked={this.state.performance === 'noEvidence'}
@@ -383,9 +374,7 @@ class TeacherFeedback extends Component {
             </div>
           </div>
         )}
-        {!(
-          this.props.disabledMode && this.props.viewAs === ViewType.Teacher
-        ) && (
+        {showFeedbackInputAreas && (
           <div style={styles.commentArea}>
             <div>
               <div style={styles.studentTime}>
