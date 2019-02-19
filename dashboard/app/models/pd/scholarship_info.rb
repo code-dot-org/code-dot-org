@@ -28,7 +28,7 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
-  belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: :pd_application_id
+  belongs_to :application, class_name: 'Pd::Application::TeacherApplicationBase', foreign_key: :pd_application_id
 
   before_validation -> {self.application_year = APPLICATION_CURRENT_YEAR}, if: :new_record?
 
