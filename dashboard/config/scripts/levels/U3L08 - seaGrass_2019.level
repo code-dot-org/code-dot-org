@@ -128,7 +128,7 @@
       "stopSound": null
     },
     "edit_code": true,
-    "encrypted_examples": "mw7K3bcGkm3K5WHwGn7UCO5xRFoDSN/FslZx9vRR0t+0QODGkcQveddvClvJ\nzXdk\n",
+    "encrypted_examples": "FZDRfIcQ5Lo0qHGQ/1w0bGaIrfUbrcLfOt2rzZgV8LwPz27Xaj9ZwHtGV10M\nRch0Da09quNE0RZ21JJe9UcOCg==\n",
     "embed": "false",
     "short_instructions": "Add a parameter to drawSeagrass that changes the size of the piece of seagrass drawn. (Click to see full instructions)",
     "long_instructions": "# Adding Parameters to Functions: *drawSeagrass*\r\n\r\nTo keep adding variety to our image let's keep adding parameters to our functions. Currently the `drawSeagrass` function can only draw a piece of seagrass with arcs of radius 100.\r\n\r\n**Add a parameter** to the function definition for `drawSeagrass` that allows you to control its size. (You'll only need to change the radius of each arc.) Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawSeagrass` and change the size of the seagrass in your image.\r\n\r\n![](https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30 PM.png)",
@@ -189,11 +189,14 @@
     "expand_debugger": "false",
     "parent_level_id": 13163,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "So all of the starter code has `drawSeaGrass` but persnickety marine enthusiasts complain that it should be `drawSeagrass`  At some point we can change, but you'd have to change \r\n\r\n1. all intstructions\r\n2. starter code\r\n3. all log conditions.",
-  "audit_log": "[{\"changed_at\":\"2017-10-30 14:45:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-30 14:45:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-02-18 14:35:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
