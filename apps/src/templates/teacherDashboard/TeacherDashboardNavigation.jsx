@@ -108,7 +108,7 @@ export default class TeacherDashboardNavigation extends Component {
     const {listPosition, shouldScroll} = this.state;
     const containerStyles = this.state.shouldScroll
       ? {...styles.container, ...styles.scrollableContainer}
-      : styles.container;
+      : {...styles.container, ...styles.centerContainer};
 
     return (
       <div id={navId} style={containerStyles} onScroll={this.handleScroll}>
@@ -154,6 +154,9 @@ const styles = {
     overflow: 'hidden',
     position: 'relative'
   },
+  centerContainer: {
+    justifyContent: 'center'
+  },
   scrollableContainer: {
     overflowX: 'scroll'
   },
@@ -184,7 +187,8 @@ const styles = {
     color: color.white,
     marginTop: 13,
     paddingLeft: PADDING,
-    paddingRight: PADDING
+    paddingRight: PADDING,
+    cursor: 'pointer'
   },
   chevronLeft: {
     left: 0
