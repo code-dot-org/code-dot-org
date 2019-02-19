@@ -963,6 +963,11 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
       aalab_clickedOn:
         options:
           CONDITION:
@@ -985,11 +990,24 @@ sk:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': keď
-            '"while"': pokiaľ
+          VAL:
+            '"true"': pravda
+            '"false"': nepravda
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"rotation"': otočenie
+            '"x"': pozícia x
+            '"y"': pozícia y
+            '"direction"': smeru pohybu
+            '"tint"': sfarbenie
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': nekonečne
       binary_move:
         options:
           DIR:

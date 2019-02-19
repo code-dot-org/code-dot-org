@@ -142,7 +142,7 @@ class ScriptOverview extends React.Component {
             {!professionalLearningCourse &&
               viewAs === ViewType.Teacher &&
               (scriptHasLockableStages || scriptAllowsHiddenStages) && (
-                <LabeledSectionSelector />
+                <LabeledSectionSelector reloadOnSectionChange={true} />
               )}
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}

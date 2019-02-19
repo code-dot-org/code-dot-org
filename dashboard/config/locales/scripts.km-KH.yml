@@ -300,3 +300,19 @@ km:
           stages:
             'null':
               name: ទទេ
+        csd2-2019:
+          stages:
+            Lists:
+              name: បញ្ជី
+        csd3-2019:
+          stages:
+            Variables:
+              name: អ​ថេរ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+        csp1-2019:
+          stages:
+            The Internet:
+              name: អ៊ីនធឺណិត
