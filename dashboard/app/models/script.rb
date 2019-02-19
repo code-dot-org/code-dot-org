@@ -67,6 +67,12 @@ class Script < ActiveRecord::Base
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
+  before_validation :hide_pilot_scripts
+
+  def hide_pilot_scripts
+    self.hidden = true if pilot_experiment
+  end
+
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
