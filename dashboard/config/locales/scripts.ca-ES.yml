@@ -1107,6 +1107,8 @@ ca:
               name: Col·laboració oberta
             Relay Programming:
               name: Programació en relleus
+            Graph Paper Programming:
+              name: Programació de paper quadriculat
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1335,3 +1337,31 @@ ca:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Llistes
+        csd3-2019:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funcions amb Paràmetres
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internet
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Creant Funcions
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Bucles Mentres
