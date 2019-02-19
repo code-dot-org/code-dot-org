@@ -7,6 +7,100 @@ theme: responsive
 # Translating the Homepage
 Translations for this page are done on Crowdin which is free to join and any volunteer can immediately start translating.
 
+## Select your language
+
+Selecting your language from this dropdown will update all the links on this page to take you to that language on Crowdin. 
+
+<select id="lang-select">
+    <option value="">--Please choose an option--</option>
+    <option value="af">Afrikaans</option>
+    <option value="sq">Albanian</option>
+    <option value="am">Amharic</option>
+    <option value="ar">Arabic</option>
+    <option value="hy">Armenian</option>
+    <option value="az">Azerbaijani</option>
+    <option value="eu">Basque</option>
+    <option value="bn">Bengali</option>
+    <option value="bs">Bosnian</option>
+    <option value="bg">Bulgarian</option>
+    <option value="my">Burmese</option>
+    <option value="ca">Catalan</option>
+    <option value="zhcn">Chinese Simplified</option>
+    <option value="zhtw">Chinese Traditional</option>
+    <option value="co">Corsican</option>
+    <option value="hr">Croatian</option>
+    <option value="cs">Czech</option>
+    <option value="da">Danish</option>
+    <option value="faaf">Dari</option>
+    <option value="nl">Dutch</option>
+    <option value="engb">English, United Kingdom</option>
+    <option value="et">Estonian</option>
+    <option value="fo">Faroese</option>
+    <option value="fil">Filipino</option>
+    <option value="fi">Finnish</option>
+    <option value="fr">French</option>
+    <option value="gl">Galician</option>
+    <option value="ka">Georgian</option>
+    <option value="de">German</option>
+    <option value="el">Greek</option>
+    <option value="ha">Hausa</option>
+    <option value="haw">Hawaiian</option>
+    <option value="he">Hebrew</option>
+    <option value="hi">Hindi</option>
+    <option value="hu">Hungarian</option>
+    <option value="is">Icelandic</option>
+    <option value="ig">Igbo</option>
+    <option value="id">Indonesian</option>
+    <option value="ga">Irish</option>
+    <option value="it">Italian</option>
+    <option value="ja">Japanese</option>
+    <option value="kk">Kazakh</option>
+    <option value="km">Khmer</option>
+    <option value="ko">Korean</option>
+    <option value="ku">Kurdish</option>
+    <option value="ky">Kyrgyz</option>
+    <option value="lv">Latvian</option>
+    <option value="lt">Lithuanian</option>
+    <option value="mk">Macedonian</option>
+    <option value="ms">Malay</option>
+    <option value="mt">Maltese</option>
+    <option value="mi">Maori</option>
+    <option value="mr">Marathi</option>
+    <option value="mn">Mongolian</option>
+    <option value="nenp">Nepali</option>
+    <option value="se">Northern Sami</option>
+    <option value="no">Norwegian</option>
+    <option value="nnno">Norwegian Nynorsk</option>
+    <option value="ps">Pashto</option>
+    <option value="fa">Persian</option>
+    <option value="pl">Polish</option>
+    <option value="pt">Portuguese</option>
+    <option value="ptbr">Portuguese, Brazilian</option>
+    <option value="ro">Romanian</option>
+    <option value="ru">Russian</option>
+    <option value="sr">Serbian (Cyrillic)</option>
+    <option value="silk">Sinhala</option>
+    <option value="sk">Slovak</option>
+    <option value="sl">Slovenian</option>
+    <option value="es">Spanish</option>
+    <option value="esmx">Spanish, Mexico</option>
+    <option value="sw">Swahili</option>
+    <option value="sv">Swedish</option>
+    <option value="tg">Tajik</option>
+    <option value="ta">Tamil</option>
+    <option value="te">Telugu</option>
+    <option value="tt">Tetun</option>
+    <option value="th">Thai</option>
+    <option value="tr">Turkish</option>
+    <option value="uk">Ukrainian</option>
+    <option value="urpk">Urdu (Pakistan)</option>
+    <option value="uz">Uzbek</option>
+    <option value="vi">Vietnamese</option>
+    <option value="cy">Welsh</option>
+    <option value="yo">Yoruba</option>
+    <option value="zu">Zulu</option>
+</select>
+
 ## Getting set up
 
 1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg) on Crowdin.
@@ -99,51 +193,81 @@ Translations for this page are done on Crowdin which is free to join and any vol
 
 These are the same links found in the images above. They are included here in case the image links above don't work for you or if you prefer to see them in a list.
 
-- Course Catalog ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#89096))
-- Projects ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#35035))
-- About ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#84047))
-- Create ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#245424))
-- Sprite Lab ([Crowdin Link](https://crowdin.com/translate/codeorg/63/enus-esmx#136939))
-- Artist ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-esmx#245428))
-- App Lab ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-esmx#245426))
-- Game Lab ([Crowdin Link](https://crowdin.com/translate/codeorg/41/enus-esmx#72040))
-- Dance Party ([Crowdin Link](https://crowdin.com/translate/codeorg/63/enus-esmx#169874))
-- View all projects... ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-esmx#245438))
-- Sign in ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#2597))
-- Report bug ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#84219))
-- Help and support ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#84225))
-- What will you create? ([Crowdin Link](https://crowdin.com/translate/codeorg/43/enus-#270922))
-- Start learning ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#38077))
-- Watch the video ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#35463))
-- Every student in every school should have the opportunity to learn computer science ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#4938))
-- Support it ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#36060))
-- If you agree, sign your name and join our mailing list along with # others. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3779))
-- Name ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3600))
-- Email ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#2549))
-- Only used for infrequent updates ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#18144))
-- ZIP code or country ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3602))
-- Enter country if outside the United States ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3792))
-- Age ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#7490))
-- See our privacy practices for children ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#18145))
-- I am a ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3764))
-- \- Select - ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3758))
-- Student ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3759))
-- Parent ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3760))
-- Educator ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3761))
-- Software Engineer ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3762))
-- None of the Above ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3763))
-- I agree ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3757))
-- Students ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#7808))
-- Explore all of our tutorials ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#35773))
-- Educators ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#35777))
-- Teach your students ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#35778))
-- Hour of Code ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#25709))
-- Anybody can learn. Start today ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#35768))
-- Dance Party ([Crowdin Link](https://crowdin.com/translate/codeorg/63/enus-#169874))
-- Create and share your own Dance Party ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304834))
-- Over 39 million Code.org projects created ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#394100))
-- Code.org thanks its supporters ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#35788))
-- See all ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#35789))
-- Donate ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#25711))
+- Course Catalog (<a href="https://crowdin.com/translate/codeorg/40/enus-#89096" target="_blank">Crowdin Link</a>)- Course Catalog (<a href="https://crowdin.com/translate/codeorg/40/enus-#89096" target="_blank">Crowdin Link</a>)
+- Projects (<a href="https://crowdin.com/translate/codeorg/40/enus-#35035" target="_blank">Crowdin Link</a>)
+- About (<a href="https://crowdin.com/translate/codeorg/40/enus-#84047" target="_blank">Crowdin Link</a>)
+- Create (<a href="https://crowdin.com/translate/codeorg/56/enus-#245424" target="_blank">Crowdin Link</a>)
+- Sprite Lab (<a href="https://crowdin.com/translate/codeorg/63/enus-esmx#136939" target="_blank">Crowdin Link</a>)
+- Artist (<a href="https://crowdin.com/translate/codeorg/56/enus-esmx#245428" target="_blank">Crowdin Link</a>)
+- App Lab (<a href="https://crowdin.com/translate/codeorg/56/enus-esmx#245426" target="_blank">Crowdin Link</a>)
+- Game Lab (<a href="https://crowdin.com/translate/codeorg/41/enus-esmx#72040" target="_blank">Crowdin Link</a>)
+- Dance Party (<a href="https://crowdin.com/translate/codeorg/63/enus-esmx#169874" target="_blank">Crowdin Link</a>)
+- View all projects... (<a href="https://crowdin.com/translate/codeorg/56/enus-esmx#245438" target="_blank">Crowdin Link</a>)
+- Sign in (<a href="https://crowdin.com/translate/codeorg/40/enus-#2597" target="_blank">Crowdin Link</a>)
+- Report bug (<a href="https://crowdin.com/translate/codeorg/40/enus-#84219" target="_blank">Crowdin Link</a>)
+- Help and support  (<a href="https://crowdin.com/translate/codeorg/56/enus-#84225" target="_blank">Crowdin Link</a>)
+- What will you create? (<a href="https://crowdin.com/translate/codeorg/43/enus-#270922" target="_blank">Crowdin Link</a>)
+- Start learning (<a href="https://crowdin.com/translate/codeorg/56/enus-#38077" target="_blank">Crowdin Link</a>)
+- Watch the video (<a href="https://crowdin.com/translate/codeorg/56/enus-#35463" target="_blank">Crowdin Link</a>)
+- Every student in every school should have the opportunity to learn computer science (<a href="https://crowdin.com/translate/codeorg/56/enus-#4938" target="_blank">Crowdin Link</a>)
+- Support it (<a href="https://crowdin.com/translate/codeorg/56/enus-#36060" target="_blank">Crowdin Link</a>)
+- If you agree, sign your name and join our mailing list along with # others. (<a href="https://crowdin.com/translate/codeorg/56/enus-#3779" target="_blank">Crowdin Link</a>)
+- Name (<a href="https://crowdin.com/translate/codeorg/56/enus-#3600" target="_blank">Crowdin Link</a>)
+- Email (<a href="https://crowdin.com/translate/codeorg/40/enus-#2549" target="_blank">Crowdin Link</a>)
+- Only used for infrequent updates (<a href="https://crowdin.com/translate/codeorg/56/enus-#18144" target="_blank">Crowdin Link</a>)
+- ZIP code or country (<a href="https://crowdin.com/translate/codeorg/56/enus-#3602" target="_blank">Crowdin Link</a>)
+- Enter country if outside the United States (<a href="https://crowdin.com/translate/codeorg/56/enus-#3792" target="_blank">Crowdin Link</a>)
+- Age (<a href="https://crowdin.com/translate/codeorg/40/enus-#7490" target="_blank">Crowdin Link</a>)
+- See our privacy practices for children (<a href="https://crowdin.com/translate/codeorg/56/enus-#18145" target="_blank">Crowdin Link</a>)
+- I am a (<a href="https://crowdin.com/translate/codeorg/56/enus-#3764" target="_blank">Crowdin Link</a>)
+- \- Select - (<a href="https://crowdin.com/translate/codeorg/56/enus-#3758" target="_blank">Crowdin Link</a>)
+- Student (<a href="https://crowdin.com/translate/codeorg/56/enus-#3759" target="_blank">Crowdin Link</a>)
+- Parent (<a href="https://crowdin.com/translate/codeorg/56/enus-#3760" target="_blank">Crowdin Link</a>)
+- Educator (<a href="https://crowdin.com/translate/codeorg/56/enus-#3761" target="_blank">Crowdin Link</a>)
+- Software Engineer (<a href="https://crowdin.com/translate/codeorg/56/enus-#3762" target="_blank">Crowdin Link</a>)
+- None of the Above (<a href="https://crowdin.com/translate/codeorg/56/enus-#3763" target="_blank">Crowdin Link</a>)
+- I agree (<a href="https://crowdin.com/translate/codeorg/56/enus-#3757" target="_blank">Crowdin Link</a>)
+- Students (<a href="https://crowdin.com/translate/codeorg/56/enus-#7808" target="_blank">Crowdin Link</a>)
+- Explore all of our tutorials (<a href="https://crowdin.com/translate/codeorg/56/enus-#35773" target="_blank">Crowdin Link</a>)
+- Educators (<a href="https://crowdin.com/translate/codeorg/56/enus-#35777" target="_blank">Crowdin Link</a>)
+- Teach your students (<a href="https://crowdin.com/translate/codeorg/56/enus-#35778" target="_blank">Crowdin Link</a>)
+- Hour of Code (<a href="https://crowdin.com/translate/codeorg/56/enus-#25709" target="_blank">Crowdin Link</a>)
+- Anybody can learn. Start today (<a href="https://crowdin.com/translate/codeorg/56/enus-#35768" target="_blank">Crowdin Link</a>)
+- Dance Party (<a href="https://crowdin.com/translate/codeorg/63/enus-#169874" target="_blank">Crowdin Link</a>)
+- Create and share your own Dance Party (<a href="https://crowdin.com/translate/codeorg/56/enus-#304834" target="_blank">Crowdin Link</a>)
+- Over 39 million Code.org projects created (<a href="https://crowdin.com/translate/codeorg/56/enus-#394100" target="_blank">Crowdin Link</a>)
+- Code.org thanks its supporters (<a href="https://crowdin.com/translate/codeorg/56/enus-#35788" target="_blank">Crowdin Link</a>)
+- See all (<a href="https://crowdin.com/translate/codeorg/56/enus-#35789" target="_blank">Crowdin Link</a>)
+- Donate (<a href="https://crowdin.com/translate/codeorg/56/enus-#25711" target="_blank">Crowdin Link</a>)
 
+<script defer>
+    document.addEventListener('DOMContentLoaded',function() {
+        document.querySelector('select[id="lang-select"]').onchange=changeEventHandler;
+    },false);
 
+    var imageMapList = document.getElementsByTagName('area');
+    var anchorTagList = document.getElementsByTagName('a');
+    var regEx = /crowdin.*#/;
+
+    function changeEventHandler(event) {
+        var selectedLang = event.target.value;
+
+        for (var i = 0; i < imageMapList.length; i++) {
+            var urlArr = imageMapList[i].href.split('#');
+            var newUrl = removeLangSelectionFromUrl(urlArr[0]) + selectedLang + '#' + urlArr[1];
+            imageMapList[i].setAttribute('href', newUrl);
+        }
+
+        for (var i = 0; i < anchorTagList.length; i++) {
+            if (regEx.test(anchorTagList[i].href)) {
+                var urlArr = anchorTagList[i].href.split('#');
+                var newUrl = removeLangSelectionFromUrl(urlArr[0]) + selectedLang + '#' + urlArr[1];
+                anchorTagList[i].setAttribute('href', newUrl);
+            }
+        }
+    }
+
+    function removeLangSelectionFromUrl(str) {
+        return str.split('-')[0] + '-';
+    }
+</script>
