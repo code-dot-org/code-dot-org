@@ -77,14 +77,6 @@ const styles = {
     flexDirection: 'row',
     padding: '4px 10px'
   },
-  performanceLevelHeaderOnHover: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    border: '1px solid #d9eff7',
-    borderRadius: 10,
-    padding: '4px 10px'
-  },
   performanceLevelHeaderSelected: {
     display: 'flex',
     justifyContent: 'flex-start',
