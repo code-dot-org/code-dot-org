@@ -1552,6 +1552,16 @@ endvariants
     assert_equal true, script.has_pilot_access?(levelbuilder)
   end
 
+  test 'has any pilot access' do
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+
+    # for now, only levelbuilders have any pilot access.
+    assert_equal false, Script.has_any_pilot_access?
+    assert_equal false, Script.has_any_pilot_access?(teacher)
+    assert_equal true, Script.has_any_pilot_access?(levelbuilder)
+  end
+
   private
 
   def has_hidden_script?(scripts)
