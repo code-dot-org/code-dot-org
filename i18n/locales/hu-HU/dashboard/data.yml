@@ -350,6 +350,8 @@ hu:
         C4_unplugged_forloops: Számláló ciklusok
         C4_unplugged_parameters: Dalszerzés paraméterekkel
         C4_unplugged_binary: Bináris
+        CSF_collector_k1_blocks: 'A számítógép-tudomány alapjai: A gyűjtő'
+        CSF_collector_text_blocks: 'A számítógép-tudomány alapjai: A gyűjtő'
         CSF_my_robotic_friends: A robot barátaim
         frozen_intro: Bevezetés a Kódolás Órájába
         frozen_loops: Bevezetés a ciklusokba
@@ -401,6 +403,8 @@ hu:
         csd_gamelab_booleans: Logikai kifejezések
         CSF_SpriteLabIntro_CDEF: Íme a Sprite labor
         CSF_Spritelab_MakeSprite_CDEF: Hogyan készíts sprite-ot a Sprite laborban
+        hoc_dance_warmup: Táncos buli - Bemelegítés
+        hoc_dance_congrats: Táncos buli - Indul a party!
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
