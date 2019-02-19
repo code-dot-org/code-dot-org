@@ -1454,4 +1454,12 @@ class Script < ActiveRecord::Base
       sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
     end
   end
+
+  def pilot?
+    !!pilot_experiment
+  end
+
+  def has_pilot_access?(user = nil)
+    pilot? && !!user&.permission?(UserPermission::LEVELBUILDER)
+  end
 end
