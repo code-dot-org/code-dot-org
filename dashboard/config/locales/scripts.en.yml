@@ -1145,6 +1145,8 @@ en:
               name: Sprite Lab
             Dance Lab:
               name: Dance Lab
+            Mini Rubric:
+              name: Mini Rubric
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -7814,6 +7816,8 @@ en:
               name: Crowdsourcing
             Relay Programming:
               name: Relay Programming
+            Graph Paper Programming:
+              name: Graph Paper Programming
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
@@ -9719,6 +9723,16 @@ en:
               name: Variables Make
             Student Survey:
               name: Student Survey
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Teacher Surveys:
+              name: Teacher Surveys
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -11085,3 +11099,431 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csp1-2019:
+          title: CSP Unit 1 - The Internet ('18-'19)
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
+          description_audience: ''
+          stages:
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+              description_student: ''
+              description_teacher: ''
+            Personal Innovations:
+              name: Personal Innovations
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages:
+              name: Sending Binary Messages
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending Binary Messages with the Internet Simulator
+              description_student: ''
+              description_teacher: ''
+            Number Systems:
+              name: Number Systems
+              description_student: ''
+              description_teacher: ''
+            Binary Numbers:
+              name: Binary Numbers
+              description_student: ''
+              description_teacher: ''
+            Sending Numbers:
+              name: Sending Numbers
+              description_student: ''
+              description_teacher: ''
+            Sending Text:
+              name: Sending Text
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            The Internet:
+              name: The Internet
+              description_student: ''
+              description_teacher: ''
+            The Need for Addressing:
+              name: The Need for Addressing
+              description_student: ''
+              description_teacher: ''
+            Routers and Redundancy:
+              name: Routers and Redundancy
+              description_student: ''
+              description_teacher: ''
+            Packets and Making a Reliable Internet:
+              name: Packets and Making a Reliable Internet
+              description_student: ''
+              description_teacher: ''
+            The Need for DNS:
+              name: The Need for DNS
+              description_student: ''
+              description_teacher: ''
+            HTTP and Abstraction:
+              name: HTTP and Abstraction
+              description_student: ''
+              description_teacher: ''
+            Practice PT - The Internet and Society:
+              name: Practice PT - The Internet and Society
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 2 Assessment:
+              name: Unit 1 Chapter 2 Assessment
+              description_student: ''
+              description_teacher: ''
+        csp2-2019:
+          title: CSP Unit 2 - Digital Information ('18-'19)
+          description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
+          description_audience: ''
+          stages:
+            Bytes and File Sizes:
+              name: Bytes and File Sizes
+              description_student: ''
+              description_teacher: ''
+            Text Compression:
+              name: Text Compression
+              description_student: ''
+              description_teacher: ''
+            Encoding B&W Images:
+              name: Encoding B&W Images
+              description_student: ''
+              description_teacher: ''
+            Encoding Color Images:
+              name: Encoding Color Images
+              description_student: ''
+              description_teacher: ''
+            Lossy vs Lossless Compression:
+              name: Lossy vs Lossless Compression
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Format Showdown:
+              name: Rapid Research - Format Showdown
+              description_student: ''
+              description_teacher: ''
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
+              description_student: ''
+              description_teacher: ''
+        csp3-2019:
+          title: CSP Unit 3 - Intro to Programming ('18-'19)
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description_audience: ''
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+              description_student: ''
+              description_teacher: ''
+            The Need for Algorithms:
+              name: The Need for Algorithms
+              description_student: ''
+              description_teacher: ''
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+              description_student: ''
+              description_teacher: ''
+            Using Simple Commands:
+              name: Using Simple Commands
+              description_student: ''
+              description_teacher: ''
+            Creating Functions:
+              name: Creating Functions
+              description_student: ''
+              description_teacher: ''
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+              description_student: ''
+              description_teacher: ''
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+              description_student: ''
+              description_teacher: ''
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+              description_student: ''
+              description_teacher: ''
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+              description_student: ''
+              description_teacher: ''
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            Mid-Year Survey:
+              name: Mid-Year Survey
+              description_student: ''
+              description_teacher: ''
+        csp4-2019:
+          title: CSP Unit 4 - Big Data and Privacy ('18-'19)
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
+          description_audience: ''
+          stages:
+            What is Big Data?:
+              name: What is Big Data?
+              description_student: ''
+              description_teacher: ''
+            Finding Trends with Visualizations:
+              name: Finding Trends with Visualizations
+              description_student: ''
+              description_teacher: ''
+            Check Your Assumptions:
+              name: Check Your Assumptions
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Data Innovations:
+              name: Rapid Research - Data Innovations
+              description_student: ''
+              description_teacher: ''
+            Identifying People with Data:
+              name: Identifying People with Data
+              description_student: ''
+              description_teacher: ''
+            The Cost of Free:
+              name: The Cost of Free
+              description_student: ''
+              description_teacher: ''
+            Simple Encryption:
+              name: Simple Encryption
+              description_student: ''
+              description_teacher: ''
+            Encryption with Keys and Passwords:
+              name: Encryption with Keys and Passwords
+              description_student: ''
+              description_teacher: ''
+            Public Key Crypto:
+              name: Public Key Crypto
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Cybercrime:
+              name: Rapid Research - Cybercrime
+              description_student: ''
+              description_teacher: ''
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+              description_student: ''
+              description_teacher: ''
+            Mid-Year Survey:
+              name: Mid-Year Survey
+              description_student: ''
+              description_teacher: ''
+        csp5-2019:
+          title: CSP Unit 5 - Building Apps ('18-'19)
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
+          description_audience: ''
+          stages:
+            Buttons and Events:
+              name: Buttons and Events
+              description_student: ''
+              description_teacher: ''
+            Multi-screen Apps:
+              name: Multi-screen Apps
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Multi-Screen App':
+              name: 'Building an App: Multi-Screen App'
+              description_student: ''
+              description_teacher: ''
+            Controlling Memory with Variables:
+              name: Controlling Memory with Variables
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Clicker Game':
+              name: 'Building an App: Clicker Game'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 1:
+              name: Unit 5 Assessment 1
+              description_student: ''
+              description_teacher: ''
+            User Input and Strings:
+              name: User Input and Strings
+              description_student: ''
+              description_teacher: ''
+            '"If" Statements Unplugged':
+              name: '"If" Statements Unplugged'
+              description_student: ''
+              description_teacher: ''
+            Boolean Expressions and "If" Statements:
+              name: Boolean Expressions and "If" Statements
+              description_student: ''
+              description_teacher: ''
+            '"if-else-if" and Conditional Logic':
+              name: '"if-else-if" and Conditional Logic'
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Color Sleuth':
+              name: 'Building an App: Color Sleuth'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 2:
+              name: Unit 5 Assessment 2
+              description_student: ''
+              description_teacher: ''
+            While Loops:
+              name: While Loops
+              description_student: ''
+              description_teacher: ''
+            Loops and Simulations:
+              name: Loops and Simulations
+              description_student: ''
+              description_teacher: ''
+            Introduction to Arrays:
+              name: Introduction to Arrays
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Image Scroller':
+              name: 'Building an App: Image Scroller'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 3:
+              name: Unit 5 Assessment 3
+              description_student: ''
+              description_teacher: ''
+            Processing Arrays:
+              name: Processing Arrays
+              description_student: ''
+              description_teacher: ''
+            Functions with Return Values:
+              name: Functions with Return Values
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Canvas Painter':
+              name: 'Building an App: Canvas Painter'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 4:
+              name: Unit 5 Assessment 4
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+              description_student: ''
+              description_teacher: ''
+            Mid-Year Survey:
+              name: Mid-Year Survey
+              description_student: ''
+              description_teacher: ''
+        csp-explore-2019:
+          title: Explore - AP Performance Task Prep ('18-'19)
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
+          description_audience: ''
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+              description_student: ''
+              description_teacher: ''
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+              description_student: ''
+              description_teacher: ''
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+              description_student: ''
+              description_teacher: ''
+            Mid-Year Survey:
+              name: Mid-Year Survey
+              description_student: ''
+              description_teacher: ''
+        csp-create-2019:
+          title: Create - AP Performance Task Prep ('18-'19)
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
+          description_audience: ''
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+              description_student: ''
+              description_teacher: ''
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+              description_student: ''
+              description_teacher: ''
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+              description_student: ''
+              description_teacher: ''
+        csppostap-2019:
+          title: Post AP - Data Tools ('18-'19)
+          description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
+          description_short: Learn to collect and use data in App Lab apps.
+          description_audience: ''
+          stages:
+            Intro to Data:
+              name: Intro to Data
+              description_student: ''
+              description_teacher: ''
+            Good and Bad Data Visualizations:
+              name: Good and Bad Data Visualizations
+              description_student: ''
+              description_teacher: ''
+            Making Data Visualizations:
+              name: Making Data Visualizations
+              description_student: ''
+              description_teacher: ''
+            Discover a Data Story:
+              name: Discover a Data Story
+              description_student: ''
+              description_teacher: ''
+            Cleaning Data:
+              name: Cleaning Data
+              description_student: ''
+              description_teacher: ''
+            Creating Summary Tables:
+              name: Creating Summary Tables
+              description_student: ''
+              description_teacher: ''
+            Project - Tell a Data Story:
+              name: Project - Tell a Data Story
+              description_student: ''
+              description_teacher: ''
+            Chapter 1 Assessment:
+              name: Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            Creating Javascript Objects:
+              name: Creating Javascript Objects
+              description_student: ''
+              description_teacher: ''
+            Permanent Data Storage:
+              name: Permanent Data Storage
+              description_student: ''
+              description_teacher: ''
+            Reading Records:
+              name: Reading Records
+              description_student: ''
+              description_teacher: ''
+            Deleting Records:
+              name: Deleting Records
+              description_student: ''
+              description_teacher: ''
+            Updating Records:
+              name: Updating Records
+              description_student: ''
+              description_teacher: ''
+            Importing and Exporting Data:
+              name: Importing and Exporting Data
+              description_student: ''
+              description_teacher: ''
+            Visualizing Data:
+              name: Visualizing Data
+              description_student: ''
+              description_teacher: ''
+            Sample Apps:
+              name: Sample Apps
+              description_student: ''
+              description_teacher: ''
+            Final Project:
+              name: Final Project
+              description_student: ''
+              description_teacher: ''
