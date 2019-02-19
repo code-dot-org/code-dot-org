@@ -28,6 +28,7 @@ class DslTest < ActiveSupport::TestCase
     version_year: nil,
     is_stable: nil,
     supported_locales: [],
+    pilot_experiment: nil,
   }
 
   test 'test Script DSL' do
@@ -631,7 +632,6 @@ DSL
   end
 
   test 'serialize new_name, family_name, version_year and is_stable' do
-    puts 'test_serialize_new_name_and_family_name'
     script = create :script,
       {
         new_name: 'new name',
