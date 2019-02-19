@@ -17,7 +17,7 @@ class Video < ActiveRecord::Base
 
   default_scope {order(:key)}
 
-  validates_uniqueness_of :key
+  validates_uniqueness_of :key, scope: [:locale]
   validates_presence_of :download
 
   before_save :fetch_thumbnail
