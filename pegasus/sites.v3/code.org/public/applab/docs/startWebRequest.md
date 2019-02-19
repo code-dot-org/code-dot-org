@@ -39,7 +39,7 @@ ____________________________________________________
 
 ```
 var query = encodeURI('select * from weather.forecast where location="98101"');
-var url = "https://query.yahooapis.com/v1/public/yql?q=" + query+"&format=json"; 
+var url = "https://query.yahooapis.com/v1/public/yql?q=" + query+"&format=json";
 startWebRequest(url, function(status, type, content) {
   console.log(status);
   console.log(type);
@@ -58,7 +58,7 @@ ____________________________________________________
 ```
 // Read the response from the service and print the description of the wind in Seattle to the debugging console.
 var query = encodeURI('select wind from weather.forecast where location="98101"');
-var url = "https://query.yahooapis.com/v1/public/yql?q=" + query+"&format=json"; 
+var url = "https://query.yahooapis.com/v1/public/yql?q=" + query+"&format=json";
 startWebRequest(url, function(status, type, content) {
   if(status == 200) {
     var contentJson = JSON.parse(content);
@@ -87,15 +87,15 @@ textLabel("output", "");
 
 onEvent("zip", "change", function() {
   var query = encodeURI('select astronomy from weather.forecast where location="' + getText("zip") +'"');
-  var url = "https://query.yahooapis.com/v1/public/yql?q=" + query+"&format=json"; 
+  var url = "https://query.yahooapis.com/v1/public/yql?q=" + query+"&format=json";
   startWebRequest(url, function(status, type, content) {
     if(status == 200) {
       var contentJson = JSON.parse(content);
       var sunrise = contentJson.query.results.channel.astronomy.sunrise;
       var sunset = contentJson.query.results.channel.astronomy.sunset;
-      setText("output", "Zip Code:" + getText("zip") + " Sunrise:" + sunrise + " Sunset:" + sunset);      
+      setText("output", "Zip Code:" + getText("zip") + " Sunrise:" + sunrise + " Sunset:" + sunset);
     } else {
-      setText("output", "The weather service is not available!");      
+      setText("output", "The weather service is not available!");
     }
   });
 });
@@ -141,24 +141,64 @@ When startWebRequest() is finished executing, the callback function is automatic
 - startWebRequest() has a callback because it is accessing an external web service and therefore will not finish immediately.
 - The callback function can be inline, or separately defined in your app and called from startWebRequest().
 - Do not put functions inside a loop that contain asynchronous code, like startWebRequest(). The loop will not wait for the callback function to complete.
-- In order to write code that reads the content of the response returned by the service, we need to know the format of the response. This will often be documented online by the service, in the above case [Yahoo Weather](https://developer.yahoo.com/weather/). 
+- In order to write code that reads the content of the response returned by the service, we need to know the format of the response. This will often be documented online by the service, in the above case [Yahoo Weather](https://developer.yahoo.com/weather/).
 - You will also need to use the [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) function, which can be used to transform the string of JSON into an object that we can use in our code.
 
 [/tips]
 
 ### Allowed hostnames
-- For security reasons, only URLs with certain hostnames can be accessed using startWebRequest. Currently, the hostname must end in one of the following:
-  - accuweather.com
-  - api.data.gov
-  - api.randomuser.me
-  - api.zippopotam.us
-  - code.org
-  - data.cityofchicago.org
-  - googleapis.com
-  - query.yahooapis.com
-  - noaa.gov
-  - rhcloud.com
-  - wikipedia.org
+For security reasons, only URLs with certain hostnames can be accessed using startWebRequest. Currently, the hostname must end in one of the following:
+- accuweather.com
+- apex.oracle.com
+- api.coinmarketcap.com
+- api.data.gov
+- api.football-data.org
+- api.foursquare.com
+- api.nasa.gov
+- api.open-notify.org
+- api.openweathermap.org
+- api.pegelalarm.at
+- api.randomuser.me
+- api.rebrandly.com
+- api.spotify.com
+- api.themoviedb.org
+- api.thingspeak.com
+- api.zippopotam.us
+- atlas.media.mit.edu
+- bible-api.com
+- code.org
+- compete.hsctf.com
+- data.cityofchicago.org
+- data.gv.at
+- data.nasa.gov
+- dweet.io
+- enclout.com
+- githubusercontent.com
+- googleapis.com
+- hamlin.myschoolapp.com
+- herokuapp.com
+- isenseproject.org
+- lakeside-cs.org
+- qrng.anu.edu.au
+- quandl.com
+- query.yahooapis.com
+- rejseplanen.dk
+- noaa.gov
+- nuevaschool.ngrok.io
+- nuevaschool2.ngrok.io
+- nuevaschool3.ngrok.io
+- numbersapi.com
+- random.org
+- rhcloud.com
+- runescape.com
+- sheets.googleapis.com
+- spreadsheets.google.com
+- stats.minecraftservers.org
+- swapi.co
+- transitchicago.com
+- translate.yandex.net
+- vpic.nhtsa.dot.gov
+- wikipedia.org
 
 Want to use a URL that's not currently allowed? Let us know at support@code.org.
 
