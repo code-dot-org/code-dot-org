@@ -286,8 +286,11 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: 'pilot-experiment',
+      hidden: false,
     }
     assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
+    # pilot scripts are always marked hidden
+    assert_equal true, Script.find_by_name(script.name).hidden
   end
 
   test 'can create with has_lesson_plan param' do
