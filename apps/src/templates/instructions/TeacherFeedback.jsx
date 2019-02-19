@@ -254,8 +254,9 @@ class TeacherFeedback extends Component {
       ? latestFeedback.comment
       : i18n.feedbackPlaceholder();
 
-    const showFeedbackInputAreas = !(this.props.disabledMode &&
-      this.props.viewAs === ViewType.Teacher);
+    const showFeedbackInputAreas = !(
+      this.props.disabledMode && this.props.viewAs === ViewType.Teacher
+    );
 
     return (
       <div>
