@@ -5,17 +5,25 @@ fi:
         CSD_U3_variables: Vaihda numeroa tässä
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: Vaihda numeroa tässä
+      CSD U3 Variables Predict Where X_2019_callout:
+        CSD_U3_variables: Vaihda numeroa tässä
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Tässä on koodi
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Tässä on koodi
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: Tässä on koodi
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Tässä on koodi
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Tässä on koodi
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Tässä on koodi
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Tässä on koodi
@@ -25,9 +33,13 @@ fi:
         CSD_U3_rect_c2: Tässä on "Suorita"-painike.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Tässä on koodi
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Tässä on koodi
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Tässä on koodi
       Course 4 Artist 4_callout:
         repeat_full_circle: Syötä se määrä kertoja, jonka zombin pitää liikkua tehdäkseen täysi ympyrä
