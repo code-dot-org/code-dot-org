@@ -1562,6 +1562,7 @@ ActiveRecord::Schema.define(version: 20190218224947) do
     t.datetime "updated_at"
     t.string   "download"
     t.string   "locale",       default: "en-US", null: false
+    t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true, using: :btree
   end
 
   add_foreign_key "ap_school_codes", "schools"

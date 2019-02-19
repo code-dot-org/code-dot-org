@@ -10,6 +10,10 @@
 #  download     :string(255)
 #  locale       :string(255)      default("en-US"), not null
 #
+# Indexes
+#
+#  index_videos_on_key_and_locale  (key,locale) UNIQUE
+#
 
 # Links to a YouTube video
 class Video < ActiveRecord::Base
