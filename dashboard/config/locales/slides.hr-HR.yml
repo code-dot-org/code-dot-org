@@ -609,11 +609,6 @@ hr:
         text: Volim mamino računalo jer mogu ići na internet. Internet je sličan našem
           susjedstvu. Možeš posjetiti zabavna mjesta, pričati s obitelji i prijateljima
           i naučiti puno novih stvari.
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
     C1_zuck_repeat_loop:
       1:
         text: Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste
@@ -624,9 +619,6 @@ hr:
           trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem.
           No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima
           na Facebooku i poželjeti im sve najbolje za rođendan.
-      3: 
-      4: 
-      5: 
     C2_playlab_createstory:
       1:
         text: Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki
@@ -714,25 +706,14 @@ hr:
           nje postaviti naredbu 'idi gore'. Kada igrač pritisne tipku sa strelicom
           prema gore, pokreće se dio koda ispod postavljenog događaja. Istu stvar
           učinit ćemo kako bismo pokrenuli R2-D2-a prema dolje.
-      7: 
-      8: 
       9:
         text: Tako umjesto pisanja cijelog koda za kontrolu droida unaprijed, puštamo
           R2-D2-a da reagira na događaj pritiska tipke kako bismo ga pomaknuli po
           sceni. Korak po korak vaša igra postaje sve interaktivnija.
     starwars_blocks_intro:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: U sredini je alatna traka i svaki od ovih blokova je naredba koju BB-8
           razumije.
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
     starwars_blocks_events:
       1:
         text: |-
@@ -754,8 +735,6 @@ hr:
           se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje
           kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili
           dolje, ili gumbe za gore ili dolje.
-      6: 
-      7: 
     mc_intro:
       1:
         text: Ja sam Jens Bergensten, ali poznatiji sam kao Jeb. Glavni sam programer
@@ -852,7 +831,6 @@ hr:
         text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više
           nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a)
           odaberi.
-      3: 
       4:
         text: Kad završiš svoj rad, odaberi "dijeli" (share) da dohvatiš poveznicu
           (link) koju možeš podijeliti sa svojim prijateljima. Zabavi se!
@@ -863,30 +841,13 @@ hr:
         text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više
           nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a)
           odaberi.
-      3: 
       4:
         text: Sad možeš napraviti što god želiš. Zabavi se!
     gumball_intro:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati
           naš program.
-      7: 
-      8: 
-      9: 
     iceage_intro:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati
           naš program.
-      7: 
-      8: 
-      9: 

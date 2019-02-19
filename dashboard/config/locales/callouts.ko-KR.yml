@@ -18,17 +18,25 @@ ko:
         CSD_U3_variables: 여기 번호를 변경하세요.
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: 여기 번호를 변경하세요.
+      CSD U3 Variables Predict Where X_2019_callout:
+        CSD_U3_variables: 여기 번호를 변경하세요.
       CSD U3 debug_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
@@ -38,9 +46,13 @@ ko:
         CSD_U3_rect_c2: 여기 "실행" 버튼이 있습니다.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: 여기 코드가 있습니다.
       Course 4 Artist 4_callout:
         repeat_full_circle: 원을 만들기 위해서 좀비가 움직여야하는 횟수를 입력하세요.

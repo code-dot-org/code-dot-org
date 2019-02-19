@@ -1,7 +1,6 @@
 {
   "startButton": "ចាប់​ផ្ដើម",
   "filterOrgNames": "បានបង្កើត​ដោយ",
-  "filterOrgNamesAll": "",
   "filterSortBy": "តម្រៀប​​តាម​",
   "filterSortByDisplayWeight": "បាន​ណែនាំ",
   "filterSortByPopularityRank": "ពេញ​និយម​បំផុត",
@@ -51,7 +50,6 @@
   "tutorialDetailsTeacherNotes": "កំណត់ត្រារបស់គ្រូបង្រៀន",
   "tutorialDetailsShortLink": "តំណភ្ជាប់ខ្លី",
   "tutorialDetailInternationalLanguages": "ភាសា",
-  "tutorialDetailStandards": "",
   "tutorialDetailDisabled": "ការណែនាំនេះមិនមានជាបណ្តោះអាសន្ន ។",
   "headingTutorialsYourLanguage": "សកម្មភាពជាភាសារបស់អ្នក",
   "showAllTutorialsButton": "បង្ហាញសកម្មភាពសម្រាប់ភាសាផ្សេងៗ",

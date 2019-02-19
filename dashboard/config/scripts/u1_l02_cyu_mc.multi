@@ -1,7 +1,7 @@
 name 'U1 L02 CYU MC'
 wrong '1'
-right 'The score is: 1’
-wrong '3'
+right 'The score is: 4’
+wrong '4'
 wrong 'The score is: score'
 
 markdown <<MARKDOWN
@@ -10,14 +10,10 @@ markdown <<MARKDOWN
 
 What will the value of `score` be at the end of the program?
 
-`var score`
-<br>
-`score <- 3`
-<br>
-`score <- score + 1`
-<br>
-`score <- "The score is: " + score`
-
+	var score
+	score <- 3
+	score <- score + 1
+	score <- "The score is: " + score
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

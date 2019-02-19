@@ -5,13 +5,19 @@ sv:
         CSD_U3_rect_c1: Här är koden
       CSD U3 debug_2018_callout:
         CSD_U3_rect_c1: Här är koden
+      CSD U3 debug_2019_callout:
+        CSD_U3_rect_c1: Här är koden
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: Här är koden
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Här är koden
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Här är koden
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Här är koden
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Här är koden
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Här är koden
@@ -21,9 +27,13 @@ sv:
         CSD_U3_rect_c2: Här är "Kör"-knappen.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Här är koden
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Här är koden
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Här är koden
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Här är koden
       Course 4 Artist 4_callout:
         repeat_full_circle: Skriv in hur många gånger zombien behöver flytta sig för göra en hel cirkel

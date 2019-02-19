@@ -148,7 +148,7 @@ it:
         Riesci a farmi arrivare al maialino creando un ciclo che usa solo un blocco `vai avanti` all'interno di un blocco `ripeti ... volte`?
       2-3 Maze 13: Fammi arrivare al maialino! Questa volta puoi usare un solo blocco`vai avanti`.
       2-3 Maze 15: Usa due blocchi `ripeti ... volte` (detti anche <i>cicli</i>) per arrivare al maialino usando meno blocchi possibile.
-      2-3 Maze Loops 18: "Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>\nProva ad usare un blocco `ripeti ... volte` (<i>ciclo</i>) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi."
+      2-3 Maze Loops 18: "Fammi arrivare al girasole usando il minor numero possibile di blocchi!"
       2-3 Maze Loops 19: "Usa i cicli per farmi arrivare al girasole col minor numero possibile di blocchi!"
       4-5 Artist 1: "Aiutami a disegnare il quadrato. (Ogni linea è lunga 300 pixel)"
       4-5 Artist 10: Premi "Esegui" per provare il codice. Poi, ripetilo abbastanza volte per completare il disegno. I colori saranno diversi ogni volta.
@@ -3214,7 +3214,15 @@ it:
         Ora dobbiamo definire un modo per vincere.
 
         Aggiungi un ciclo `ripeti per sempre` che controlli in continuazione il punteggio: se è maggiore di 5, allora termina il gioco con una vittoria.
-      courseD_playLab_cond6: "Wow, è proprio difficile vincere a questo gioco!\n\nProviamo a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta da due parti:\n___\n\n1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.\n2) Usa un ciclo `ripeti per sempre` per controllare se il pirata è nella \"zona di sicurezza\" al di sotto dei polpi (più in basso di 225 pixel). \nSe lo è, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata."
+      courseD_playLab_cond6: |-
+        Wow, è proprio difficile vincere a questo gioco!
+
+        Proviamo a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta da due parti:
+        ___
+
+        1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
+        2) Usa un ciclo `ripeti per sempre` per controllare se il pirata è nella "zona di sicurezza" al di sotto dei polpi (più in basso di 225 pixel). 
+        Se lo è, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
       courseD_playLab_cond6_2018: "Wow, è proprio difficile vincere a questo gioco!\n\nProviamo a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta da due parti:\n___\n\n1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.\n2) Usa un ciclo `ripeti per sempre` per controllare se il pirata è nella \"zona di sicurezza\" al di sotto dei polpi (più in basso di 225 pixel). \nSe lo è, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata."
       courseD_playLab_cond6_2019: "Wow, è proprio difficile vincere a questo gioco!\n\nProviamo a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta da due parti:\n___\n\n1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.\n2) Usa un ciclo `ripeti per sempre` per controllare se il pirata è nella \"zona di sicurezza\" al di sotto dei polpi (più in basso di 225 pixel). \nSe lo è, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata."
       courseD_playLab_cond6a: "Non vogliamo che il pirata stia troppo a lungo nella \"zona di sicurezza\"!\n\nAggiungi del codice all'istruzione condizionale `se` in modo che, se il pirata (personaggio 1) è nella \"zona di sicurezza\", il programma aspetti un secondo, poi tolga un punto ogni secondo che il pirata trascorre al di sotto della linea dei polpi."

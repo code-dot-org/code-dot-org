@@ -1,8 +1,8 @@
 function showCustomText(text, location, size, color, duration) {
-  text = text() ? text : function() { return ""; };
-  location = location() ? location : function() { return {x: 200, y: 200}; };
-  size = size() ? size : function() { return 20; };
-  color = color() ? color : function() { return "black";};
+  text = text ? text : function() { return ""; };
+  location = location ? location : function() { return {x: 200, y: 200}; };
+  size = size ? size : function() { return 20; };
+  color = color ? color : function() { return "black";};
   var overlapIndex = -1;
   textSize(size());
   var newTextWidth = textWidth(text());

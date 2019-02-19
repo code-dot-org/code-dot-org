@@ -1235,6 +1235,8 @@ ar:
               name: حشد المصادر
             Relay Programming:
               name: برمجة السباق
+            Graph Paper Programming:
+              name: برمجة ورقة الرسم البياني
         courseb-2018:
           assignment_family_title: الدورة B
           stages:
@@ -1476,3 +1478,37 @@ ar:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+        csd2-2019:
+          stages:
+            Lists:
+              name: القوائم
+        csd3-2019:
+          description_short: "البرمجة"
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: الدوال والمعاملات
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: استبيانات
+        csp1-2019:
+          stages:
+            The Internet:
+              name: الانترنت
+        csp3-2019:
+          description_short: البرمجة
+          stages:
+            Creating Functions:
+              name: إضافة الدوال
+        csp5-2019:
+          stages:
+            While Loops:
+              name: حلقات بينما
