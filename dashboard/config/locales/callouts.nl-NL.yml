@@ -30,16 +30,25 @@ nl:
         grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Klik hier om het raster te tonen.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where XY_callout:
         grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Klik hier om het raster te tonen.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Wijzig het nummer hier
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Wijzig het nummer hier
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 ellipse_callout:
@@ -48,10 +57,16 @@ nl:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 my-rect_callout:
@@ -62,10 +77,15 @@ nl:
         CSD_U3_rect_c2: Hier is de "Uitvoeren" knop.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Hier is de code
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Hier is de code
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       Counting_callout:
