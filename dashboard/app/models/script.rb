@@ -1462,4 +1462,8 @@ class Script < ActiveRecord::Base
   def has_pilot_access?(user = nil)
     pilot? && !!user&.permission?(UserPermission::LEVELBUILDER)
   end
+
+  def self.has_any_pilot_access?(user = nil)
+    !!user&.permission?(UserPermission::LEVELBUILDER)
+  end
 end
