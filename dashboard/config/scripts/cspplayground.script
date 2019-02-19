@@ -42,7 +42,8 @@ stage 'Conditionals Explore'
 level 'U4 L05 Conditionals Explore Sample App 1', progression: 'Sample Apps'
 
 stage 'Conditionals Investigate'
-level 'U4 L06 Conditionals Investigate Sample App 1', progression: 'Thermostat App v4'
+level 'U4 L06 Thermostat App v4', progression: 'Thermostat App v4'
+level 'U4 L06 Thermostat App v4 Code', progression: 'Thermostat App v4'
 
 stage 'Conditionals Practice'
 level 'U4 L07 Conditionals Practice 1', progression: 'Conditionals...something'
