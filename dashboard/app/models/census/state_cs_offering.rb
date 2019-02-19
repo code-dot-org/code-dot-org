@@ -57,6 +57,7 @@ class Census::StateCsOffering < ApplicationRecord
     TX
     UT
     VA
+    VT
     WI
     WV
     WY
@@ -162,6 +163,8 @@ class Census::StateCsOffering < ApplicationRecord
       School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'VA'
       row_hash['state_school_id']
+    when 'VT'
+      row_hash['State School Id']
     when 'WI'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['SCHOOL_NCES_CODE'])&.state_school_id
@@ -1121,6 +1124,8 @@ class Census::StateCsOffering < ApplicationRecord
     '10159'
   ].freeze
 
+  VT_COURSE_CODES = [UNSPECIFIED_COURSE].freeze
+
   WI_COURSE_CODES = %w(
     6490
     6464
@@ -1286,6 +1291,8 @@ class Census::StateCsOffering < ApplicationRecord
       UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'VA'
       VA_COURSE_CODES.select {|course| course == row_hash['course']}
+    when 'VT'
+      VT_COURSE_CODES.select {|course| course == row_hash['Teaches CS']}
     when 'WI'
       WI_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'WV'
