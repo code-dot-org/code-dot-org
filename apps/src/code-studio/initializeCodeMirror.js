@@ -39,15 +39,20 @@ const INVALID_COLOR = '#d00';
  * @param {!string|!Element} target - element or id of element to replace.
  * @param {!string} mode - editor syntax mode
  * @param {function} [callback] - onChange callback for editor
- * @param {booblen} [attachments] - whether to enable attachment uploading in
+ * @param {boolean} [attachments] - whether to enable attachment uploading in
  *        this editor.
+ * @param {???} [onUpdateLinting]
+ * @param {!string!Element} [preview] - element or id of element to populate
+ *        with a preview. If none specified, will look for an element by
+ *        appending "_preview" to the id of the target element.
  */
 function initializeCodeMirror(
   target,
   mode,
   callback,
   attachments,
-  onUpdateLinting
+  onUpdateLinting,
+  preview
 ) {
   let updatePreview;
 
@@ -68,15 +73,16 @@ function initializeCodeMirror(
     // In markdown mode, look for a preview element (found by just appending
     // _preview to the target id), if it exists extend our callback to update
     // the preview element with the markdown contents
-    const previewElement = $(`#${node.id}_preview`);
-    if (previewElement.length > 0) {
+    preview = preview || `#${node.id}_preview`;
+    const previewElement = preview.nodeType ? preview : $(preview).get(0);
+    if (previewElement) {
       const originalCallback = callback;
       updatePreview = editor => {
         ReactDOM.render(
           React.createElement(UnsafeRenderedMarkdown, {
             markdown: editor.getValue()
           }),
-          previewElement[0]
+          previewElement
         );
       };
 
