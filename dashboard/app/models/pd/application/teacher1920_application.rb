@@ -226,9 +226,6 @@ module Pd::Application
         first_name
         last_name
         phone
-        address
-        city
-        state
         zip_code
         principal_first_name
         principal_last_name
