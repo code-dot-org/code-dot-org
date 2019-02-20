@@ -312,8 +312,10 @@ class LevelsController < ApplicationController
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
     end
 
-    # Removes empty reference links which are autosaved as "" by the form
-    params[:level][:reference_links].delete_if {|link| link == ""} if params[:level][:reference_links]
+    # Reference links should be stored as an array.
+    if params[:level][:reference_links].is_a? String
+      params[:level][:reference_links] = params[:level][:reference_links].split("\r\n")
+    end
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)

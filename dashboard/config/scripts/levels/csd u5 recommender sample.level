@@ -229,7 +229,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "Students can see and remix the code to this app at the following URL:\r\n\r\n[https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view](https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view)\r\n",
-    "preload_asset_list": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

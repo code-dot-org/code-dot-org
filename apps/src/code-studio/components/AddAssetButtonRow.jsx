@@ -72,7 +72,7 @@ export default class AddAssetButtonRow extends React.Component {
         {!this.props.hideAudioRecording && (
           <RecordButton
             onSelectRecord={this.props.onSelectRecord}
-            disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
+            disabled={this.props.recordDisabled}
           />
         )}
         <span id="manage-asset-status">{this.props.statusMessage}</span>

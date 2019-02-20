@@ -63,15 +63,6 @@
     span {
       @extend %extend_burger;
       transition: all 500ms ease-in-out;
-      html[dir=rtl] & {
-        margin-right: -25px;
-        &::before {
-          margin-right: 0;
-        }
-        &::after {
-          margin-right: 0;
-        }
-      }
       &::before {
         @extend %extend_burger;
         transition: all 500ms ease-in-out;

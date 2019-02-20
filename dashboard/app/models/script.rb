@@ -67,12 +67,6 @@ class Script < ActiveRecord::Base
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
-  before_validation :hide_pilot_scripts
-
-  def hide_pilot_scripts
-    self.hidden = true if pilot_experiment
-  end
-
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
@@ -146,7 +140,6 @@ class Script < ActiveRecord::Base
     version_year
     is_stable
     supported_locales
-    pilot_experiment
   )
 
   def self.twenty_hour_script
@@ -801,8 +794,8 @@ class Script < ActiveRecord::Base
   # Create or update any scripts, script levels and stages specified in the
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
-  # copying. Any new_properties are merged into the properties of the new script.
-  def self.setup(custom_files, new_suffix: nil, new_properties: {})
+  # copying.
+  def self.setup(custom_files, new_suffix: nil)
     transaction do
       scripts_to_add = []
 
@@ -810,8 +803,7 @@ class Script < ActiveRecord::Base
       # Load custom scripts from Script DSL format
       custom_files.map do |script|
         name = File.basename(script, '.script')
-        base_name = Script.base_name(name)
-        name = "#{base_name}-#{new_suffix}" if new_suffix
+        name += "-#{new_suffix}" if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         stages = script_data[:stages]
@@ -825,7 +817,7 @@ class Script < ActiveRecord::Base
           wrapup_video: script_data[:wrapup_video],
           new_name: script_data[:new_name],
           family_name: script_data[:family_name],
-          properties: Script.build_property_hash(script_data).merge(new_properties)
+          properties: Script.build_property_hash(script_data)
         }, stages]
       end
 
@@ -1007,17 +999,10 @@ class Script < ActiveRecord::Base
   # the suffix to the name of each level. Mark the new script as hidden, and
   # copy any translations and other metadata associated with the original script.
   def clone_with_suffix(new_suffix)
-    new_name = "#{base_name}-#{new_suffix}"
+    new_name = "#{name}-#{new_suffix}"
 
     script_filename = "#{Script.script_directory}/#{name}.script"
-    new_properties = {
-      is_stable: false,
-      script_announcements: nil
-    }
-    if /^[0-9]{4}$/ =~ (new_suffix)
-      new_properties[:version_year] = new_suffix
-    end
-    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
+    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix)
     new_script = scripts.first
 
     # Make sure we don't modify any files in unit tests.
@@ -1028,16 +1013,6 @@ class Script < ActiveRecord::Base
     end
 
     new_script
-  end
-
-  def base_name
-    Script.base_name(name)
-  end
-
-  def self.base_name(name)
-    # strip existing year suffix, if there is one
-    m = /^(.*)-([0-9]{4})$/.match(name)
-    m ? m[1] : name
   end
 
   # Creates a copy of all translations associated with this script, and adds
@@ -1246,7 +1221,6 @@ class Script < ActiveRecord::Base
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
-      pilot_experiment: pilot_experiment,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1372,8 +1346,7 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
-      supported_locales: script_data[:supported_locales],
-      pilot_experiment: script_data[:pilot_experiment]
+      supported_locales: script_data[:supported_locales]
     }.compact
   end
 

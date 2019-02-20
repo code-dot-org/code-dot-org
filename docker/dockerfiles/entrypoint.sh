@@ -7,8 +7,7 @@ eval $( fixuid )
 
 # Need to change ownership of volume mounts which are not bind-mounted to the uid/gid after fixuid is applied
 sudo chown -R circleci:circleci /home/circleci/.rbenv \
-    /home/circleci/.config \
-    /home/circleci/.cache
+	/home/circleci/code-dot-org/apps/node_modules
 
 eval "$(rbenv init -)"
 

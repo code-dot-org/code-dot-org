@@ -8,7 +8,6 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
-import BorderProperties from './BorderProperties';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
@@ -29,7 +28,7 @@ class LabelProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow
+          isIdRow={true}
         />
         <PropertyRow
           desc={'text'}
@@ -38,7 +37,7 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber
+          isNumber={true}
           lockState={
             $(element).data('lock-width') || PropertyRow.LockState.UNLOCKED
           }
@@ -48,7 +47,7 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber
+          isNumber={true}
           lockState={
             $(element).data('lock-height') || PropertyRow.LockState.UNLOCKED
           }
@@ -58,13 +57,13 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -80,7 +79,7 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -89,21 +88,6 @@ class LabelProperties extends React.Component {
           initialValue={element.style.textAlign || 'left'}
           options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
-        />
-        <BorderProperties
-          element={element}
-          handleBorderWidthChange={this.props.handleChange.bind(
-            this,
-            'borderWidth'
-          )}
-          handleBorderColorChange={this.props.handleChange.bind(
-            this,
-            'borderColor'
-          )}
-          handleBorderRadiusChange={this.props.handleChange.bind(
-            this,
-            'borderRadius'
-          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -160,7 +144,7 @@ class LabelEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow
+          isIdRow={true}
         />
         <EventHeaderRow />
         <EventRow
@@ -196,15 +180,9 @@ export default {
     element.style.color = '#333333';
     element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
 
     this.resizeToFitText(element);
     return element;
-  },
-
-  onDeserialize: function(element) {
-    // Set border styles for older projects that didn't set them on create:
-    elementUtils.setDefaultBorderStyles(element);
   },
 
   getCurrentSize: function(element) {

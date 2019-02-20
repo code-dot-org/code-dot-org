@@ -105,7 +105,6 @@ $(document).ready(function() {
                 {...props}
                 studioUrlPrefix={scriptData.studioUrlPrefix}
                 pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
-                sectionId={section.id}
                 sectionName={section.name}
               />
             )}

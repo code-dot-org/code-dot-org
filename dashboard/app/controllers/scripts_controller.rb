@@ -35,10 +35,9 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this script, we will
     # ask if they want to be redirected to the newer version.
-    @redirect_script_url = @script.redirect_to_script_url(current_user, locale: request.locale)
+    redirect_script_url = @script.redirect_to_script_url(@current_user, locale: request.locale)
 
-    @show_redirect_warning = params[:redirect_warning] == 'true'
-    @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
+    render 'show', locals: {show_redirect_warning: params[:redirect_warning] == 'true', redirect_script_url: redirect_script_url}
   end
 
   def index
@@ -138,7 +137,6 @@ class ScriptsController < ApplicationController
       :has_verified_resources,
       :has_lesson_plan,
       :script_announcements,
-      :pilot_experiment,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
