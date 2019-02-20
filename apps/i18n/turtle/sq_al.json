@@ -38,6 +38,7 @@
   "drawUpperWave": "vizato një valë të lartë",
   "drawLowerWave": "vizato një valë të ulët",
   "drawSticker": "vizato afishen",
+  "drawStickerWithSize": "",
   "heightParameter": "gjatësia",
   "hideTurtle": "fshih artistin",
   "jump": "hidhu",
@@ -73,9 +74,11 @@
   "penDown": "Lapsi poshtë",
   "penTooltip": "Ngri ose ul lapsin, për të filluar ose për të ndaluar vizatimin.",
   "penUp": "lapsin lart",
+  "pointTo": "",
   "pixels": "piksela",
   "reinfFeedbackMsg": "Ja ku është dhe vizatimi yt! Vazhdo puno me të ose vazhdo tek puzzle-i tjetër.",
   "setAlpha": "vendosni alfa",
+  "setCharacter": "",
   "setColour": "vendos ngjyrën",
   "setPattern": "vendos modelin",
   "setWidth": "vendos gjerësinë",
@@ -91,5 +94,6 @@
   "turnTooltip": "Kthen artistin majtas ose djathtas nga numri i përcaktuar i gradëve.",
   "turtleVisibilityTooltip": "Bën artistin të dukshëm ose të padukshëm.",
   "widthTooltip": "Ndryshon gjerësinë e lapsit.",
+  "withSize": "",
   "wrongColour": "Figura jote është në ngjyrën e gabuar. Për këtë puzzle duhet të jetë %1."
 }

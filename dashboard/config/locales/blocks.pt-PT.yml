@@ -375,11 +375,6 @@ pt:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
       aalab_clickedOn:
         options:
           CONDITION:
@@ -400,21 +395,11 @@ pt:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': verdadeiro
-            '"false"': falso
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': para sempre
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       binary_move:
         options:
           DIR:

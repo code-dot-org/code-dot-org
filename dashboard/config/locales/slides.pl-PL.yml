@@ -650,6 +650,7 @@ pl:
           błąd. Nie kładłem rąk na belce poprawnie. Więc spróbowałem inne salto w
           tył na belce z mojej nowej pozycji rąk i mam to. Bardzo się ucieszyłem,
           że zdebugowałem moje salto w tył.
+      3: 
       4:
         text: Naprawmy to dodając inny zachodni bloki uderz go by sprawdzić czy dobrze
           to zrobiłeś. Yay, masz to!
@@ -825,17 +826,27 @@ pl:
           naprzód" pięć razy, by przesunąć ptaka w kierunku świni o jeden krok za
           każdym razem, albo możesz kazać komputerowi przesunąć raz, a potem kazać
           powtórzyć to pięć razy - efekt będzie taki sam.
+      4: 
+      5: 
     C2_artist_intro:
+      1: 
       2:
         text: W tym zadaniu zostaniesz artystą, który używa ołówka, by narysować rożne
           kształty. Gdziekolwiek twój artysta pójdzie narysuje linię za sobą.
+      3: 
+      4: 
+      5: 
     C2_binary_bracelets:
+      1: 
+      2: 
       3:
         text: Cześć,  jestem Orion i programuje roboty tutaj w Play-im. Wszystkie
           komputery i mózgi robotów na swoim fundamentalnym poziomie to małe bramki
           elektroniczne. Kiedy bramka jest otwarta prąd elektryczny może przez nią
           przejść i na odwrót gdy bramka jest zamknięta prąd nie może przez nią przechodzić.
+      4: 
     C2_conditionals_with_cards:
+      1: 
       2:
         text: Chcę wyjść do parku lecz najpierw muszę zdecydować na podstawie pogody
           czy powinienem wziąć parasolkę czy też nie. Więc wyglądam zza okno. Jeśli
@@ -843,6 +854,9 @@ pl:
           to wezmę moje okulary przeciwsłoneczne. Myślę jednak, że lepszym wyborem
           będzie parasolka. To co widzę i słyszę definiuje to co wezmę ze sobą do
           parku.
+      3: 
+      4: 
+      5: 
     C2_playlab_createstory:
       1:
         text: Do tej pory tworzyliście animację lub historyjkę, która za każdym razem
@@ -852,9 +866,13 @@ pl:
         text: Tam są bloki "kiedy strzałka" i "przenieś postać". Możesz umieścić te
           bloki razem, aby poruszać postaciami za pomocą klawiszy strzałek.
     C3_artist_intro:
+      1: 
       2:
         text: W tym zadaniu zostaniesz artystą, który używa ołówka, by narysować rożne
           kształty. Gdziekolwiek twój artysta pójdzie narysuje linię za sobą.
+      3: 
+      4: 
+      5: 
     C3_playlab_create_game:
       1:
         text: Do tej pory tworzyliście animację lub historyjkę, która za każdym razem
@@ -868,6 +886,8 @@ pl:
         text: Ta lekcja dotyczy tworzenia muzyki. Tworzenie muzyki jest trochę podobne
           do tworzenia programu komputerowego. Zapisane znaki i słowa mówią piosenkarzowi
           co ma robić. Niektórych fragmentów piosenki można użyć kilka razy.
+      2: 
+      3: 
     starwars_intro:
       1:
         text: 'Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars:
@@ -930,6 +950,10 @@ pl:
       3:
         text: W prawym górnym rogu na polu roboczym możesz kliknąć przycisk "Pokaż
           kod", aby przejść z bloków do pisania kodu.
+      4: 
+      5: 
+      6: 
+      7: 
     starwars_events:
       1:
         text: Hello, nazywam się Charita Carter. Jestem starszym kreatywnym producentem
@@ -974,9 +998,18 @@ pl:
           które przenoszą go po ekranie. Krok po kroku Wasza gra staje się coraz bardziej
           interaktywna.
     starwars_blocks_intro:
+      1: 
+      2: 
+      3: 
+      4: 
       5:
         text: W środkowej części znajduje się przybornik z blokami (Toolbox), które
           rozumie BB-8.
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
     starwars_blocks_events:
       1:
         text: Hello, nazywam się Charita Carter. Jestem starszym kreatywnym producentem
@@ -1000,6 +1033,7 @@ pl:
         text: Tutaj chcemy, aby R2-D2 przeszedł do góry i dostarczył wiadomość Pilotowi
           Rebeliantów a następnie przeszedł w dół do innego pilota. Wykorzystamy zdarzenia,
           by się poruszał, gdy gracz używa strzałek lub przycisków do góry/do dołu.
+      6: 
       7:
         text: Krok po kroku Twoja gra staje się coraz bardziej interaktywna.
     mc_intro:
@@ -1140,10 +1174,26 @@ pl:
       4:
         text: Teraz możesz zbudować, co tylko zechcesz. Baw się dobrze!
     gumball_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: 'Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie
           będzie powstawał nasz program. '
+      7: 
+      8: 
+      9: 
     iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: 'Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie
           będzie powstawał nasz program. '
+      7: 
+      8: 
+      9: 

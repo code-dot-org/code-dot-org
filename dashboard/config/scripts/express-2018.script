@@ -11,7 +11,7 @@ family_name 'express'
 version_year '2018'
 is_stable true
 
-stage 'Graph Paper Programming'
+stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
 
 stage 'Programming in Maze'

@@ -103,11 +103,3 @@ en-GB:
           stages:
             'null':
               name: 'null'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Lists
-        csd3-2019:
-          stages:
-            Variables:
-              name: Variables

@@ -1309,8 +1309,6 @@ da:
               name: Crowdsourcing
             Relay Programming:
               name: Stafet-programmering
-            Graph Paper Programming:
-              name: Programmering på millimeterpapir
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1555,41 +1553,3 @@ da:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Lister
-        csd3-2019:
-          description_short: "Programmering"
-          stages:
-            Variables:
-              name: Variabler
-            Conditionals:
-              name: Betingelser
-            Functions:
-              name: Funktioner
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Funktioner med parametre
-        csp4-pilot:
-          stages:
-            Surveys:
-              name: Undersøgelser
-        csp1-2019:
-          stages:
-            The Internet:
-              name: Internettet
-        csp3-2019:
-          description_short: Programmering
-          stages:
-            Creating Functions:
-              name: Oprettelse af funktioner
-        csp4-2019:
-          stages:
-            Simple Encryption:
-              name: Enkel kryptering
-        csp5-2019:
-          stages:
-            While Loops:
-              name: Mens løkker

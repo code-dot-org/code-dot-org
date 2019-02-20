@@ -25,37 +25,25 @@ fr:
         CSDU6L10_rainbow: Ajoute tes blocs ici
       CSD U6 colorLeds intensity_2018_callout:
         CSDU6L10_rainbow: Ajoute tes blocs ici
-      CSD U6 colorLeds intensity_2019_callout:
-        CSDU6L10_rainbow: Ajoute tes blocs ici
       CSD U6 light show predict_callout:
         CSDUDL03P09: Que fait cette ligne?
       CSD U6 light show predict_2018_callout:
-        CSDUDL03P09: Que fait cette ligne?
-      CSD U6 light show predict_2019_callout:
         CSDUDL03P09: Que fait cette ligne?
       CSD U6 light show_callout:
         CSDUDL03P09: Que fait cette ligne?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: Que fait cette ligne?
-      CSD U6 light show_2019_callout:
-        CSDUDL03P09: Que fait cette ligne?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Définie startGame ici
       CSD U6 tugowar variables 1_2018_callout:
-        CSD_U6_startGame: Définie startGame ici
-      CSD U6 tugowar variables 1_2019_callout:
         CSD_U6_startGame: Définie startGame ici
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Définie movePlayer() ici
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Définie movePlayer() ici
-      CSD U6 tugowar variables 2_2019_callout:
-        CSD_U6_movePlayer: Définie movePlayer() ici
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Vérifie si un joueur a gagné
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Vérifie si un joueur a gagné
-      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Vérifie si un joueur a gagné
       Course 4 Artist 4_callout:
         repeat_full_circle: Entre le nombre de fois que le zombie doit se déplacer pour faire un cercle complet

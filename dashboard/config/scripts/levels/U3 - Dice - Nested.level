@@ -40,18 +40,17 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "iqpuwu2PmG0ilTcqGArbfPl77/+Xcx9C4HoRWocITFXtUIXT421ew7bOym3O\nzqmI\n",
+    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
-    "preload_asset_list": null,
-    "mini_rubric": "false"
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-18 17:37:02 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-14 13:41:40 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:37:02 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

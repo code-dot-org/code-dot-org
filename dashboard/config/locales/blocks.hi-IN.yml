@@ -180,11 +180,6 @@ hi:
         text: बाएँ मुड़ें
       RyanLab_turnRight:
         text: दाएँ मुड़ें
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': कब
-            '"while"': जबकि
       aalab_clickedOn:
         options:
           CONDITION:
@@ -201,15 +196,11 @@ hi:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': 'सही '
-            '"false"': 'गलत '
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': हमेशा के लिए
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       binary_whenKey:
         options:
           KEY:

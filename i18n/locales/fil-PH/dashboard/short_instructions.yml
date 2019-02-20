@@ -431,37 +431,28 @@ fil:
       C3-Farmer While Loops Assessment 1: Mayroong napakaraming mga butas at tambak. Tulungan akong punan at magtanggal sa mga ito para mapatag ang lupain.
       CSD U3 L5 Freeplay: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 L5 Freeplay_2018: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
-      CSD U3 L5 Freeplay_2019: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables TEMPLATE square: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables change circle size: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables change circle size_2018: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
-      CSD U3 Variables change circle size_2019: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables multiple assignments: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables naming rules v2-2018: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables naming rules v2: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables naming rules v2_2018: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
-      CSD U3 Variables naming rules v2_2018_2019: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables naming rules: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables random assignment: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables random with assignment: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U3 Variables random with assignment_2018: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
-      CSD U3 Variables random with assignment_2019: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       CSD U4 - Events Template: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
       CSD U5 black white images pixelation 2: Gumuhit ng isang smiley na mukha (mag-click dito para makita ang larawan)
       CSD U5 black white images pixelation 2_2018: Gumuhit ng isang smiley na mukha (mag-click dito para makita ang larawan)
-      CSD U5 black white images pixelation 2_2019: Gumuhit ng isang smiley na mukha (mag-click dito para makita ang larawan)
       CSD U5 black white images pixelation 3: Palitan ang lapad at taas ng mga slider para mahanap ang larawan (mag-click dito para makakita ng higit pa)
       CSD U5 black white images pixelation 3_2018: Palitan ang lapad at taas ng mga slider para mahanap ang larawan (mag-click dito para makakita ng higit pa)
-      CSD U5 black white images pixelation 3_2019: Palitan ang lapad at taas ng mga slider para mahanap ang larawan (mag-click dito para makakita ng higit pa)
       CSD U5 black white images pixelation 4: Magdagdag ng mga kilay sa smiley na mukha (mag-click dito para makita ang larawan)
       CSD U5 black white images pixelation 4_2018: Magdagdag ng mga kilay sa smiley na mukha (mag-click dito para makita ang larawan)
-      CSD U5 black white images pixelation 4_2019: Magdagdag ng mga kilay sa smiley na mukha (mag-click dito para makita ang larawan)
       CSD U5 black white images pixelation 5: Gumuhit ng kahit anong gusto mo
       CSD U5 black white images pixelation 5_2018: Gumuhit ng kahit anong gusto mo
-      CSD U5 black white images pixelation 5_2019: Gumuhit ng kahit anong gusto mo
       CSD U5 black white images pixelation: Kumpletohin ang X na hugis sa pamamagitan ng pag-type na mga 0 at mga 1
       CSD U5 black white images pixelation_2018: Kumpletohin ang X na hugis sa pamamagitan ng pag-type na mga 0 at mga 1
-      CSD U5 black white images pixelation_2019: Kumpletohin ang X na hugis sa pamamagitan ng pag-type na mga 0 at mga 1
       CSD U6 params modify clouds: |-
         # Mga Ulap\r
         \r
@@ -475,18 +466,6 @@ fil:
         Tawagin ang iyong bagong `moveCloud(name)` na function sa loob ng pangyayari na bloke, isang beses sa bawat pangalan ng ulap.\\\\r
         * (Hint: ito ay kapareho kung paano ang `loopCloud(name)` na function ay tinawag nang napakaraming beses.
       CSD U6 params modify clouds_2018: |-
-        # Mga Ulap\r
-        \r
-        Ang programang ito ay nagpapagalaw sa mga ulap kapag nag-ihip ka nang tunog sa sensor, ngunit hindi pa ito tapos.\r
-        \r
-        #Gawin Ito\r
-        * Maglikha ng bagong function na `moveCloud(name)` na magpapagalaw sa kahit anong ulap.\r
-         *
-        (Hint: ikaw ay gagamit na halos kaparehong code nang `moveCloud()` na function\r
-        *
-        Tawagin ang iyong bagong `moveCloud(name)` na function sa loob ng pangyayari na bloke, isang beses sa bawat pangalan ng ulap.\\\\r
-        * (Hint: ito ay kapareho kung paano ang `loopCloud(name)` na function ay tinawag nang napakaraming beses.
-      CSD U6 params modify clouds_2019: |-
         # Mga Ulap\r
         \r
         Ang programang ito ay nagpapagalaw sa mga ulap kapag nag-ihip ka nang tunog sa sensor, ngunit hindi pa ito tapos.\r
@@ -518,16 +497,6 @@ fil:
         * Tawagin ang `movePlane(name)` na function sa loob ng bloke ng pangyayari, para gagalaw lang ito kapag ang checkbox nito ay may tsek.\r
         \r
         _Hamon: Sa ngayon ang lapya ay gumagalaw nang masyadong mabilis. Maaari mo bang matukoy kung paano baguhin ang code para mapabagal ang kanilang pagkilos?_
-      CSD U6 params modify planes_2019: |-
-        # Maraming Lapya na Controller\r
-        \r
-        Ang programang ito ay gumagalaw sa tatlong lapya gamit ang accelerometer at ang on-screen na mga checkbox. Sa ngayon, tanging ang pulang lapya lang ang gumagana.\r
-        \r
-        # Gawin Ito\r
-        * Maglikha ng bagong `movePlane(name)` na function na maaaring maggalaw sa kahit anong lapya.\r
-        * Tawagin ang `movePlane(name)` na function sa loob ng bloke ng pangyayari, para gagalaw lang ito kapag ang checkbox nito ay may tsek.\r
-        \r
-        _Hamon: Sa ngayon ang lapya ay gumagalaw nang masyadong mabilis. Maaari mo bang matukoy kung paano baguhin ang code para mapabagal ang kanilang pagkilos?_
       CSDU4 - AppLab - 1: Basahin ang dokumentasyon para sa penColor() at penWidth() bago gamitin ang mga ito para makaguhit ng asul na parisukat.
       CSDU6 - Arrays - expressionsAsIndexes: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSDU6 - Arrays - indexPractice: Isulat ang mga nilalaman ng array sa screen ayon sa pagkasunod-sunod ng numero. (I-click para makita ang buong mga instrusyon)
@@ -539,34 +508,25 @@ fil:
       CSDU6 arrays select icons: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSDU6 arrays select rainbow: Isulat ang mga nilalaman ng array sa screen ayon sa pagkasunod-sunod ng numero. (I-click para makita ang buong mga instrusyon)
       CSDU6 arrays select rainbow_2018: Isulat ang mga nilalaman ng array sa screen ayon sa pagkasunod-sunod ng numero. (I-click para makita ang buong mga instrusyon)
-      CSDU6 arrays select rainbow_2019: Isulat ang mga nilalaman ng array sa screen ayon sa pagkasunod-sunod ng numero. (I-click para makita ang buong mga instrusyon)
       CSDU6 arrays select random: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSDU6 arrays select random_2018: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
-      CSDU6 arrays select random_2019: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSDU6 arrays select variable: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSDU6 arrays select variable_2018: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
-      CSDU6 arrays select variable_2019: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSDU6 arrays variable: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSP student contact info: Pakilagay ang iyong email address.
       CSPU5_U3 - Arrays - expressionsAsIndexes: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
-      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: Magsulat ng programa na nagpapakita ng isang random na napiling kulay mula sa array. (I-click para makita ang buong mga instruksyon)
       CSPU5_U3 - Arrays - indexPractice: Isulat ang mga nilalaman ng array sa screen ayon sa pagkasunod-sunod ng numero. (I-click para makita ang buong mga instrusyon)
       CSPU5_U3 - Arrays - indexPractice_2018: Isulat ang mga nilalaman ng array sa screen ayon sa pagkasunod-sunod ng numero. (I-click para makita ang buong mga instrusyon)
-      CSPU5_U3 - Arrays - indexPractice_2019: Isulat ang mga nilalaman ng array sa screen ayon sa pagkasunod-sunod ng numero. (I-click para makita ang buong mga instrusyon)
       CSPU5_U3 - Canvas - freePlay: Palawakin ang functionality ng isa sa mga epekto, o maglikha ng isang bago na gawa mo. (I-click para makita ang buong mga instruksyon)
       CSPU5_U3 - Canvas - freePlay_2018: Palawakin ang functionality ng isa sa mga epekto, o maglikha ng isang bago na gawa mo. (I-click para makita ang buong mga instruksyon)
-      CSPU5_U3 - Canvas - freePlay_2019: Palawakin ang functionality ng isa sa mga epekto, o maglikha ng isang bago na gawa mo. (I-click para makita ang buong mga instruksyon)
       CSPU5_U3 - Design Mode 1: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
       CSPU5_U3 - Design Mode 1_2018: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
-      CSPU5_U3 - Design Mode 1_2019: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
       CSPU5_U3 - Keys - Final Image Scroller: I-update ang scroller ng larawan para tumugon sa mga buttons at pagpindot sa mga key. (I-click para makita ang buong mga instruksyon)
       CSPU5_U3 - Loops - 4: Gamitin ang Debug Commands para makagawa ng listahan ng lahat ng mga halaga na nakuha bago ang 6. (I-click para makita ang buong mga instruksyon)
       CSPU5_U3 - Loops - 4_2018: Gamitin ang Debug Commands para makagawa ng listahan ng lahat ng mga halaga na nakuha bago ang 6. (I-click para makita ang buong mga instruksyon)
-      CSPU5_U3 - Loops - 4_2019: Gamitin ang Debug Commands para makagawa ng listahan ng lahat ng mga halaga na nakuha bago ang 6. (I-click para makita ang buong mga instruksyon)
       CSPU5_U3L15 full clicker app: Kumpletohin ang iyong taga-click na laro! (I-click para makita ang buong mga instruksyon)
       CSPU5_U3L15 full clicker app_2018: Kumpletohin ang iyong taga-click na laro! (I-click para makita ang buong mga instruksyon)
-      CSPU5_U3L15 full clicker app_2019: Kumpletohin ang iyong taga-click na laro! (I-click para makita ang buong mga instruksyon)
       Choose Your Own Adventure: Magagawa mo ang kahit anong gusto mo sa play lab! Narito ang isang halimbawa ng pumili ng sarili mong pakikipagsapalaran na kuwento sa play lab.
       Choose Your Own Adventure_2018: Magagawa mo ang kahit anong gusto mo sa play lab! Narito ang isang halimbawa ng pumili ng sarili mong pakikipagsapalaran na kuwento sa play lab.
       Course 2 Bee Loops 1: 'Hi, ako ay isang bubuyog. Maaari mo ba akong tulungan na magkolekta ng nektar mula sa mga bulaklak na ito? '
@@ -795,10 +755,8 @@ fil:
       CourseF_PlayLab_vars9: Mahusay, ngayon ay ating sisiguradohin na ang laro ay hindi masyadong madaling laruin. Anumang oras na ang Aso (aktor 1) ay matatamaan ng sandwich mula sa Pusa (aktor 2), dapat ay mawawalan ka ng puntos. Magsimula sa 10 na puntos para ito ay hindi masyadong mahirap. Hayaan ang iyong iskor na bababa mula 10 hanggang sa 0 para maipasa ang antas.
       Crack Random Substitution: Alituntunin
       Crack Random Substitution_2018: Alituntunin
-      Crack Random Substitution_2019: Alituntunin
       Crack a Caesar Cipher: Alituntunin
       Crack a Caesar Cipher_2018: Alituntunin
-      Crack a Caesar Cipher_2019: Alituntunin
       D_Frozen_nested3: Ating iikot ang linya ng mga hugis sa paligid!
       D_Frozen_nested4: Panahon na para ipagpatung-patung ang mga hugis na ito!
       D_Frozen_nested5: Paglaruan ang mga niyebe!
@@ -1140,18 +1098,14 @@ fil:
       Pixelation - AllTheThings 5: Ang antas ng pikselasyon ay nagpapakita sa gamit ng `Hide sliders" na opsyon. Bigyang-pansin na ang lapad at taas na mga sliders ay hindi magagamit, at ang lapad at taas na mga patlang ay hindi rin maaaring baguhin.
       Pixelation - Lesson 14 - Make the Letter A: 'Gumawa ng isang 3x5 na letrang ''A''. Ang widget ay na-setup gamit ang maling mga sukat. Ang iyong unang gawain ay para itakda ang pangalawang byte sa 8-bit na binary code para sa 5: 0000 0101. Pagkatapos ay magsimulang magpasok ng pixel na mga datos.'
       Pixelation - Lesson 14 - Make the Letter A_2018: 'Gumawa ng isang 3x5 na letrang ''A''. Ang widget ay na-setup gamit ang maling mga sukat. Ang iyong unang gawain ay para itakda ang pangalawang byte sa 8-bit na binary code para sa 5: 0000 0101. Pagkatapos ay magsimulang magpasok ng pixel na mga datos.'
-      Pixelation - Lesson 14 - Make the Letter A_2019: 'Gumawa ng isang 3x5 na letrang ''A''. Ang widget ay na-setup gamit ang maling mga sukat. Ang iyong unang gawain ay para itakda ang pangalawang byte sa 8-bit na binary code para sa 5: 0000 0101. Pagkatapos ay magsimulang magpasok ng pixel na mga datos.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Pinasimula ka namin sa isang 4x4 na larawan na nilikha ni Maddie sa video. Ang iyong unang gawain ay punan ang 4x4 na grid ng mga kulay gamit ang 12-bits kada pixel. Narito ang mga kahilingan: Hanay 1 - punan ng iba''t-ibang kulay na pula. Hanay 2 - iba''t ibang kulay na berde. Hanay 3 - iba''t ibang kulay na bughaw. Hanay 4 - iba''t ibang kulay na abo.'
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Pinasimula ka namin sa isang 4x4 na larawan na nilikha ni Maddie sa video. Ang iyong unang gawain ay punan ang 4x4 na grid ng mga kulay gamit ang 12-bits kada pixel. Narito ang mga kahilingan: Hanay 1 - punan ng iba''t-ibang kulay na pula. Hanay 2 - iba''t ibang kulay na berde. Hanay 3 - iba''t ibang kulay na bughaw. Hanay 4 - iba''t ibang kulay na abo.'
-      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Pinasimula ka namin sa isang 4x4 na larawan na nilikha ni Maddie sa video. Ang iyong unang gawain ay punan ang 4x4 na grid ng mga kulay gamit ang 12-bits kada pixel. Narito ang mga kahilingan: Hanay 1 - punan ng iba''t-ibang kulay na pula. Hanay 2 - iba''t ibang kulay na berde. Hanay 3 - iba''t ibang kulay na bughaw. Hanay 4 - iba''t ibang kulay na abo.'
       Pixelation - Lesson 15 - Complete 3-bit color: Pinagsisimula ka namin sa isang 4x2 na larawan na nalikha ni Maddie, ngunit iniwan namin ang huling dalawang mga parisukat. Tapusin ang larawan sa pamamagitan ng pagtukoy kung alin sa dalawang mga kulay ang wala at i-encode ang mga ito.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Pinagsisimula ka namin sa isang 4x2 na larawan na nalikha ni Maddie, ngunit iniwan namin ang huling dalawang mga parisukat. Tapusin ang larawan sa pamamagitan ng pagtukoy kung alin sa dalawang mga kulay ang wala at i-encode ang mga ito.
-      Pixelation - Lesson 15 - Complete 3-bit color_2019: Pinagsisimula ka namin sa isang 4x2 na larawan na nalikha ni Maddie, ngunit iniwan namin ang huling dalawang mga parisukat. Tapusin ang larawan sa pamamagitan ng pagtukoy kung alin sa dalawang mga kulay ang wala at i-encode ang mga ito.
       Pizza on a Plate: 'Ideya ng Proyekto: Maglikha ng larawan ng isang bagay na pamilay mula sa tunay na buhay. Ito ay nangangailangan ng pagtitiyaga at pagpaplano!'
       Poorva copy U3L2 Using Simple Commands: Gumuhit ng 1x1 na parisukat sa taas at sa kaliwa ng panimulang posisyon ng pagong. I-click para makita ang buong mga instruksyon.
       Project - Final Image Scroller: I-update ang scroller ng larawan para tumugon sa mga buttons at pagpindot sa mga key. (I-click para makita ang buong mga instruksyon)
       Project - Final Image Scroller_2018: I-update ang scroller ng larawan para tumugon sa mga buttons at pagpindot sa mga key. (I-click para makita ang buong mga instruksyon)
-      Project - Final Image Scroller_2019: I-update ang scroller ng larawan para tumugon sa mga buttons at pagpindot sa mga key. (I-click para makita ang buong mga instruksyon)
       Project - Finish your canvas app: Palawakin ang functionality ng isa sa mga epekto, o maglikha ng isang bago na gawa mo. (I-click para makita ang buong mga instruksyon)
       Project - Make Your Own Clicker Game: Kumpletohin ang iyong taga-click na laro! (I-click para makita ang buong mga instruksyon)
       Prompt Test: Bumuo ng anumang gusto mo. Ito ay isang halimbawa ng laro sa paghula ng numero!
@@ -1211,7 +1165,6 @@ fil:
       Testing Quantum Farmer: "Wow, tingnan mo iyan! \\r\n\\r\nHindi ko alam kung ilang pala ng lupa ang kailangan ng butas na ito.  \\r\nMaaari ka bang magsulat ng programa na panatiling gumagamit ng `fill` na bloke hanggang sa ang lupa ay patag?  "
       The Vigenere Cipher Widget: Alituntunin
       The Vigenere Cipher Widget_2018: Alituntunin
-      The Vigenere Cipher Widget_2019: Alituntunin
       The Vigenere Cipher: Alituntunin
       Total Artist Clone Me: 'Libreng Laro: Narito ang mga function na naisulat mo, at ilang higit pa para iyong mapaglaruan. Gumuhit ng isang bahay na kamangha-mangha! Paglaruan ang mga lapad ng pen para makita kung paano nagkaiba ang iyong mga drowing!'
       U2 frequency caesar: Alituntunin
@@ -1227,100 +1180,70 @@ fil:
       U3 Variables randomize your square: "Palitan ang halaga ng petalSize nang maraming beses.\nPaano nito nabago ang iyong drowing?"
       U3L03 Draw a T using turnAround: Gumuhit ng plus na sign gamit ang binigay na bersyon ng turnAround(). (I-click para makuha ang buong instruksyon)
       U3L03 Draw a T using turnAround_2018: Gumuhit ng plus na sign gamit ang binigay na bersyon ng turnAround(). (I-click para makuha ang buong instruksyon)
-      U3L03 Draw a T using turnAround_2019: Gumuhit ng plus na sign gamit ang binigay na bersyon ng turnAround(). (I-click para makuha ang buong instruksyon)
       U3L03 Three Steps: Bigyang kahulugan ang function na tinatawag na drawSide() kung saan nagguguhit ng tatlong mga hakbang at nagpapagalaw sa pagong pareha maghanda para sa sunod na bahagi (I-click para makita ang buong mga instruksyon)
       U3L03 Three Steps_2018: Bigyang kahulugan ang function na tinatawag na drawSide() kung saan nagguguhit ng tatlong mga hakbang at nagpapagalaw sa pagong pareha maghanda para sa sunod na bahagi (I-click para makita ang buong mga instruksyon)
-      U3L03 Three Steps_2019: Bigyang kahulugan ang function na tinatawag na drawSide() kung saan nagguguhit ng tatlong mga hakbang at nagpapagalaw sa pagong pareha maghanda para sa sunod na bahagi (I-click para makita ang buong mga instruksyon)
       U3L03 draw diamond: Maglikha ng function na tinatawag na drawDiamond() na gumagamit sa iyong nakaraang ginawa para makaguhit ng kumpletong dyamante. (I-click para makita ang buong mga instruksyon)
       U3L03 draw diamond_2018: Maglikha ng function na tinatawag na drawDiamond() na gumagamit sa iyong nakaraang ginawa para makaguhit ng kumpletong dyamante. (I-click para makita ang buong mga instruksyon)
-      U3L03 draw diamond_2019: Maglikha ng function na tinatawag na drawDiamond() na gumagamit sa iyong nakaraang ginawa para makaguhit ng kumpletong dyamante. (I-click para makita ang buong mga instruksyon)
       U3L06 - moveForwardwithParams: Gumamit ng isang utos para mapagalaw ang pagong sa dulo ng screen. (I-click para makita ang buong mga instruksyon)
       U3L06 - moveForwardwithParams_2018: Gumamit ng isang utos para mapagalaw ang pagong sa dulo ng screen. (I-click para makita ang buong mga instruksyon)
-      U3L06 - moveForwardwithParams_2019: Gumamit ng isang utos para mapagalaw ang pagong sa dulo ng screen. (I-click para makita ang buong mga instruksyon)
       U3L06 Challenge 1 triangle: Gumamit ng mga naka-parameter na mga bersyon ng turtle na mga utos para makalikha ng tatsulok na may haba ng gilid na 100 pixels. (I-click para makita ang buong mga instruksyon)
       U3L06 Challenge 1 triangle_2018: Gumamit ng mga naka-parameter na mga bersyon ng turtle na mga utos para makalikha ng tatsulok na may haba ng gilid na 100 pixels. (I-click para makita ang buong mga instruksyon)
-      U3L06 Challenge 1 triangle_2019: Gumamit ng mga naka-parameter na mga bersyon ng turtle na mga utos para makalikha ng tatsulok na may haba ng gilid na 100 pixels. (I-click para makita ang buong mga instruksyon)
       U3L06 Challenge 2 purple square: Basahin ang dokumentasyon para sa penColor() at penWidth() bago gamitin ang mga ito para makaguhit ng asul na parisukat.
       U3L06 Challenge 2 purple square_2018: Basahin ang dokumentasyon para sa penColor() at penWidth() bago gamitin ang mga ito para makaguhit ng asul na parisukat.
-      U3L06 Challenge 2 purple square_2019: Basahin ang dokumentasyon para sa penColor() at penWidth() bago gamitin ang mga ito para makaguhit ng asul na parisukat.
       U3L06 Challenge 3 fill pink: Punan ang background ng screen sa iyong paboritong kulay. (I-click para makita ang buong mga instruksyon)
       U3L06 Challenge 3 fill pink_2018: Punan ang background ng screen sa iyong paboritong kulay. (I-click para makita ang buong mga instruksyon)
-      U3L06 Challenge 3 fill pink_2019: Punan ang background ng screen sa iyong paboritong kulay. (I-click para makita ang buong mga instruksyon)
       U3L06 Challenge 5 overlapping circles: 'Ang larawang ito ay nalikha gamit lang ang dot() at penColor() ngunit, paano natin magawang transparent ang mga bilog na iyon? Kung hindi ka pa nakakuha ng hint: tingnan muna ang dokumentasyon!'
       U3L06 Challenge 5 overlapping circles_2018: 'Ang larawang ito ay nalikha gamit lang ang dot() at penColor() ngunit, paano natin magawang transparent ang mga bilog na iyon? Kung hindi ka pa nakakuha ng hint: tingnan muna ang dokumentasyon!'
-      U3L06 Challenge 5 overlapping circles_2019: 'Ang larawang ito ay nalikha gamit lang ang dot() at penColor() ngunit, paano natin magawang transparent ang mga bilog na iyon? Kung hindi ka pa nakakuha ng hint: tingnan muna ang dokumentasyon!'
       U3L06 Challenge 6 squiggles: "Basahin ang dokumentasyon para sa \"arcLeft\" at \"arcRight\" na mga utos at pagkatapos ay iguhit ang mga squiggles gaya ng pinakita.\n"
       U3L06 Challenge 6 squiggles_2018: "Basahin ang dokumentasyon para sa \"arcLeft\" at \"arcRight\" na mga utos at pagkatapos ay iguhit ang mga squiggles gaya ng pinakita.\n"
-      U3L06 Challenge 6 squiggles_2019: "Basahin ang dokumentasyon para sa \"arcLeft\" at \"arcRight\" na mga utos at pagkatapos ay iguhit ang mga squiggles gaya ng pinakita.\n"
       U3L06 Challenge 7 smiley face: Gamitin ang turnTo() at moveTo() para makatulong sa pagguhit ng smiley na mukha. (I-click para makita ang buong mga instruksyon)
       U3L06 Challenge 7 smiley face_2018: Gamitin ang turnTo() at moveTo() para makatulong sa pagguhit ng smiley na mukha. (I-click para makita ang buong mga instruksyon)
-      U3L06 Challenge 7 smiley face_2019: Gamitin ang turnTo() at moveTo() para makatulong sa pagguhit ng smiley na mukha. (I-click para makita ang buong mga instruksyon)
       U3L07 - Free Play Loops and Random: Libreng Laro! Gamitin ang natutunan mo mula sa mga loop at random para magawa ang iyong sariling maliit na eksena. Magsaya.
       U3L07 - Free Play Loops and Random_2018: Libreng Laro! Gamitin ang natutunan mo mula sa mga loop at random para magawa ang iyong sariling maliit na eksena. Magsaya.
-      U3L07 - Free Play Loops and Random_2019: Libreng Laro! Gamitin ang natutunan mo mula sa mga loop at random para magawa ang iyong sariling maliit na eksena. Magsaya.
       U3L07 - allSeaGrass: Magdagdag ng 50 pirasong mga damong-dagat sa larawan sa pamamagitan ng pagsulat ng drawAllSeegrass gamit ang loop. (I-click para makita ang buong mga instruksyon)
       U3L07 - allSeaGrass_2018: Magdagdag ng 50 pirasong mga damong-dagat sa larawan sa pamamagitan ng pagsulat ng drawAllSeegrass gamit ang loop. (I-click para makita ang buong mga instruksyon)
-      U3L07 - allSeaGrass_2019: Magdagdag ng 50 pirasong mga damong-dagat sa larawan sa pamamagitan ng pagsulat ng drawAllSeegrass gamit ang loop. (I-click para makita ang buong mga instruksyon)
       U3L07 - createTriangleParam: Bigyang-kahulugan ang function na tumatangagp ng parameter para tumugma sa mga pagtawag sa function at kumukumpleto sa larawan. (I-click para makita ang buong mga instruksyon)
       U3L07 - createTriangleParam_2018: Bigyang-kahulugan ang function na tumatangagp ng parameter para tumugma sa mga pagtawag sa function at kumukumpleto sa larawan. (I-click para makita ang buong mga instruksyon)
-      U3L07 - createTriangleParam_2019: Bigyang-kahulugan ang function na tumatangagp ng parameter para tumugma sa mga pagtawag sa function at kumukumpleto sa larawan. (I-click para makita ang buong mga instruksyon)
       U3L07 - introSquare: Gumamit ng loop para maiguhit ang parisukat. Pagkatapos ay magdagdag pa ng ibang loop para makaguhit ng maraming mga parisukat sa bawat isang inikot na ilang halaga. (I-click para makita ang buong mga instruksyon)
       U3L07 - introSquare_2018: Gumamit ng loop para maiguhit ang parisukat. Pagkatapos ay magdagdag pa ng ibang loop para makaguhit ng maraming mga parisukat sa bawat isang inikot na ilang halaga. (I-click para makita ang buong mga instruksyon)
-      U3L07 - introSquare_2019: Gumamit ng loop para maiguhit ang parisukat. Pagkatapos ay magdagdag pa ng ibang loop para makaguhit ng maraming mga parisukat sa bawat isang inikot na ilang halaga. (I-click para makita ang buong mga instruksyon)
       U3L07 - loopsWithRandom: Dagdagan ang bilang ng mga iterasyon para punan ang screen ng puti. (I-click para makita ang buong mga instruksyon)
       U3L07 - loopsWithRandom_2018: Dagdagan ang bilang ng mga iterasyon para punan ang screen ng puti. (I-click para makita ang buong mga instruksyon)
-      U3L07 - loopsWithRandom_2019: Dagdagan ang bilang ng mga iterasyon para punan ang screen ng puti. (I-click para makita ang buong mga instruksyon)
       U3L07 - randomSquare: Iguhit ang larawan gamit ang loop. (I-click para makita ang buong mga instruksyon)
       U3L07 - randomSquare_2018: Iguhit ang larawan gamit ang loop. (I-click para makita ang buong mga instruksyon)
-      U3L07 - randomSquare_2019: Iguhit ang larawan gamit ang loop. (I-click para makita ang buong mga instruksyon)
       U3L07 - sunBeams: Magdagdag ng 100 na mga sunbeam sa larawan sa pamamagitan ng pagsulat ng drawAllSunbeams gamit ang loop. (I-click para makita ang buong mga instruksyon)
       U3L07 - sunBeams_2018: Magdagdag ng 100 na mga sunbeam sa larawan sa pamamagitan ng pagsulat ng drawAllSunbeams gamit ang loop. (I-click para makita ang buong mga instruksyon)
-      U3L07 - sunBeams_2019: Magdagdag ng 100 na mga sunbeam sa larawan sa pamamagitan ng pagsulat ng drawAllSunbeams gamit ang loop. (I-click para makita ang buong mga instruksyon)
       U3L07 - topDownDesign: Maging komportable sa istraktura ng programang ito, pagkatapos ay pumunta sa sunod na ehersisyo. (I-click para makita ang buong mga instruksyon)
       U3L07 - topDownDesign_2018: Maging komportable sa istraktura ng programang ito, pagkatapos ay pumunta sa sunod na ehersisyo. (I-click para makita ang buong mga instruksyon)
-      U3L07 - topDownDesign_2019: Maging komportable sa istraktura ng programang ito, pagkatapos ay pumunta sa sunod na ehersisyo. (I-click para makita ang buong mga instruksyon)
       U3L08 - fish: Magdagdag ng parameter sa drawFish na nagbabago sa laki ng isda na iguguhit. (I-click para makita ang buong mga instruksyon)
       U3L08 - fish_2018: Magdagdag ng parameter sa drawFish na nagbabago sa laki ng isda na iguguhit. (I-click para makita ang buong mga instruksyon)
-      U3L08 - fish_2019: Magdagdag ng parameter sa drawFish na nagbabago sa laki ng isda na iguguhit. (I-click para makita ang buong mga instruksyon)
       U3L08 - freePlay: Patuloy na magdagdag sa iyong larawan sa pamamagitan ng paggawa ng mas maraming mga tawag sa iyong mga function na may mga parameter. (I-click para makita ang buong mga instruksyon)
       U3L08 - freePlay_2018: Patuloy na magdagdag sa iyong larawan sa pamamagitan ng paggawa ng mas maraming mga tawag sa iyong mga function na may mga parameter. (I-click para makita ang buong mga instruksyon)
-      U3L08 - freePlay_2019: Patuloy na magdagdag sa iyong larawan sa pamamagitan ng paggawa ng mas maraming mga tawag sa iyong mga function na may mga parameter. (I-click para makita ang buong mga instruksyon)
       U3L08 - introUnderTheSea with comments: Magdagdag ng ekstrang isda, bituing-dagat, at piraso ng mga damong-dagat sa larawan. Tingnan ang, ngunit huwag baguhin, ang mga function na naglikha sa mga ito. (I-click para makita ang buong mga instruksyon)
       U3L08 - introUnderTheSea: Magdagdag ng ekstrang isda, bituing-dagat, at piraso ng mga damong-dagat sa larawan. Tingnan ang, ngunit huwag baguhin, ang mga function na naglikha sa mga ito. (I-click para makita ang buong mga instruksyon)
       U3L08 - introUnderTheSea_2018: Magdagdag ng ekstrang isda, bituing-dagat, at piraso ng mga damong-dagat sa larawan. Tingnan ang, ngunit huwag baguhin, ang mga function na naglikha sa mga ito. (I-click para makita ang buong mga instruksyon)
-      U3L08 - introUnderTheSea_2019: Magdagdag ng ekstrang isda, bituing-dagat, at piraso ng mga damong-dagat sa larawan. Tingnan ang, ngunit huwag baguhin, ang mga function na naglikha sa mga ito. (I-click para makita ang buong mga instruksyon)
       U3L08 - randomInput: Gumamit ng randomNumber() na mga bloke para masubukan ang mga function na iyong dinisenyo na may random na input. (I-click para makita ang buong mga instruksyon)
       U3L08 - randomInput_2018: Gumamit ng randomNumber() na mga bloke para masubukan ang mga function na iyong dinisenyo na may random na input. (I-click para makita ang buong mga instruksyon)
-      U3L08 - randomInput_2019: Gumamit ng randomNumber() na mga bloke para masubukan ang mga function na iyong dinisenyo na may random na input. (I-click para makita ang buong mga instruksyon)
       U3L08 - squareTwoParams: Tawagin ang drawSquare() para makumpleto ang drowing ng dalawang mga parisukat. (I-click para makita ang buong mga instruksyon)
       U3L08 - squareTwoParams_2018: Tawagin ang drawSquare() para makumpleto ang drowing ng dalawang mga parisukat. (I-click para makita ang buong mga instruksyon)
-      U3L08 - squareTwoParams_2019: Tawagin ang drawSquare() para makumpleto ang drowing ng dalawang mga parisukat. (I-click para makita ang buong mga instruksyon)
       U3L08 - starFish: Magdagdag ng ekstrang isda, bituing-dagat, at piraso ng mga damong-dagat sa larawan. Tingnan ang, ngunit huwag baguhin, ang mga function na naglikha sa mga ito. (I-click para makita ang buong mga instruksyon)
       U3L08 - triangleTwoParams: Tawagin ang drawSquare() para makumpleto ang drowing ng dalawang mga parisukat. (I-click para makita ang buong mga instruksyon)
       U3L08 how to add comments: Gumamit ng randomNumber() na mga bloke para masubukan ang mga function na iyong dinisenyo na may random na input. (I-click para makita ang buong mga instruksyon)
       U3L08 how to add comments_2018: Gumamit ng randomNumber() na mga bloke para masubukan ang mga function na iyong dinisenyo na may random na input. (I-click para makita ang buong mga instruksyon)
-      U3L08 how to add comments_2019: Gumamit ng randomNumber() na mga bloke para masubukan ang mga function na iyong dinisenyo na may random na input. (I-click para makita ang buong mga instruksyon)
       U3L15 full clicker app: Kumpletohin ang iyong taga-click na laro! (I-click para makita ang buong mga instruksyon)
       U3L2 Using Simple Commands (no tooltips): Gumuhit ng 1x1 na parisukat sa taas at sa kaliwa ng panimulang posisyon ng pagong. I-click para makita ang buong mga instruksyon.
       U3L2 Using Simple Commands: Gumuhit ng 1x1 na parisukat sa taas at sa kaliwa ng panimulang posisyon ng pagong. I-click para makita ang buong mga instruksyon.
       U3L2 Using Simple Commands_2018: Gumuhit ng 1x1 na parisukat sa taas at sa kaliwa ng panimulang posisyon ng pagong. I-click para makita ang buong mga instruksyon.
-      U3L2 Using Simple Commands_2019: Gumuhit ng 1x1 na parisukat sa taas at sa kaliwa ng panimulang posisyon ng pagong. I-click para makita ang buong mga instruksyon.
       U3L2_Turtle3by3Grid: Gumuhit ng isang 3x3 na grid sa harap at sa kanan ng turtle nang mas mabisa hangga't maaari. Ang turtle ay dapat matatapos sa orihinal na lokasyon nito, at nakaharap sa orihinal na lokasyon nito. (I-click para makita ang buong mga instruksyon)
       U3L2_Turtle3by3Grid_2018: Gumuhit ng isang 3x3 na grid sa harap at sa kanan ng turtle nang mas mabisa hangga't maaari. Ang turtle ay dapat matatapos sa orihinal na lokasyon nito, at nakaharap sa orihinal na lokasyon nito. (I-click para makita ang buong mga instruksyon)
-      U3L2_Turtle3by3Grid_2019: Gumuhit ng isang 3x3 na grid sa harap at sa kanan ng turtle nang mas mabisa hangga't maaari. Ang turtle ay dapat matatapos sa orihinal na lokasyon nito, at nakaharap sa orihinal na lokasyon nito. (I-click para makita ang buong mga instruksyon)
       U3L2_TurtleSquare_right: Gumuhit ng parisukat sa harap at pakanan ng panimulang lokasyon. (I-click para makita ang buong mga instruksyon)
       U3L2_TurtleSquare_right_2018: Gumuhit ng parisukat sa harap at pakanan ng panimulang lokasyon. (I-click para makita ang buong mga instruksyon)
-      U3L2_TurtleSquare_right_2019: Gumuhit ng parisukat sa harap at pakanan ng panimulang lokasyon. (I-click para makita ang buong mga instruksyon)
       U4 Model App: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
       U4 Model App_2018: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
-      U4 Model App_2019: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
       U4 Model Design 1: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
       U4 Model Design 1_2018: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
-      U4 Model Design 1_2019: Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)
       U4 vigenere cipher 2: Alituntunin
       U4L02 - Objects - Template1: Template
       U4L02 - Objects - Template1_2018: Template
-      U4L02 - Objects - Template1_2019: Template
       Underground Avoiding Lava: Ang laba ay nagtatago sa ilalim ng iilang mga blokeng ito, kung saan kakailanganin mong takpan bago makagalaw pasulong. Ang isang "if" na utos ay magagamit mo dito. Magdagdag ng "move forward" na utos sa tamang lugar para mamina ang mga blokeng ito.
       Underground Avoiding Lava_2018: Ang laba ay nagtatago sa ilalim ng iilang mga blokeng ito, kung saan kakailanganin mong takpan bago makagalaw pasulong. Ang isang "if" na utos ay magagamit mo dito. Magdagdag ng "move forward" na utos sa tamang lugar para mamina ang mga blokeng ito.
       Underground Avoiding Lava_2019: Ang laba ay nagtatago sa ilalim ng iilang mga blokeng ito, kung saan kakailanganin mong takpan bago makagalaw pasulong. Ang isang "if" na utos ay magagamit mo dito. Magdagdag ng "move forward" na utos sa tamang lugar para mamina ang mga blokeng ito.

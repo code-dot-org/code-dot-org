@@ -1707,8 +1707,6 @@ nl:
               name: Crowdsourcing
             Relay Programming:
               name: Estafette Programmeren
-            Graph Paper Programming:
-              name: Programmeren op Ruitjespapier
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1987,71 +1985,3 @@ nl:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Lijsten
-        csd3-2019:
-          description_short: "Programmeren"
-          stages:
-            Variables:
-              name: Variabelen
-            Conditionals:
-              name: Voorwaardelijke instructies
-            Velocity:
-              name: Snelheid
-            Functions:
-              name: Functies
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Functies met Parameters
-        csp4-pilot:
-          stages:
-            Surveys:
-              name: Enquêtes
-        csp1-2019:
-          stages:
-            Sending Binary Messages:
-              name: Binaire berichten verzenden
-            Number Systems:
-              name: Systemen voor getalnotatie
-            Binary Numbers:
-              name: Binaire getallen
-            The Internet:
-              name: Het Internet
-            The Need for Addressing:
-              name: De Nood aan Adressering
-            The Need for DNS:
-              name: De Nood aan DNS
-        csp2-2019:
-          stages:
-            Encoding B&W Images:
-              name: Verzend Z/W Afbeeldingen
-            Encoding Color Images:
-              name: Verzend Kleuren Afbeeldingen
-        csp3-2019:
-          description_short: Programmeren
-          stages:
-            The Need For Programming Languages:
-              name: De Nood Aan Programmeertalen
-            Using Simple Commands:
-              name: Simpele Commando's Gebruiken
-            Creating Functions:
-              name: Maken van functies
-            Functions and Top-Down Design:
-              name: Functies en Top-Down Designs
-            APIs and Function Parameters:
-              name: API's en Functieparameters
-        csp5-2019:
-          stages:
-            User Input and Strings:
-              name: Gebruikersinvoer en Strings
-            While Loops:
-              name: Zolang-lussen
-            Loops and Simulations:
-              name: Lussen en Simulaties
-            Introduction to Arrays:
-              name: Inleiding tot Arrays
-            Processing Arrays:
-              name: Arrays Verwerken

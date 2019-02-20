@@ -1025,11 +1025,6 @@ ru:
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
             '"direction"': направление движения
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
       aalab_clickedOn:
         options:
           CONDITION:
@@ -1048,35 +1043,15 @@ ru:
             '"left"': влево
             '"right"': вправо
             '"space"': космос
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Север
-            '"East"': Восток
-            '"South"': Юг
-            '"West"': Запад
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': город
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': истина
-            '"false"': ложь
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"direction"': направление движения
-            '"tint"': оттенок
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': всегда
+          CONDITION:
+            '"when"': когда
+            '"while"': пока
       binary_drawPixelHere:
         options:
           VAL:

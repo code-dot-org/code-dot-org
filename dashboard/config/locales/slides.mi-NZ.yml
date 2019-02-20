@@ -1633,6 +1633,8 @@ mi:
           ko tā tātou he kī noa atu tāngia he tapawhā, ā, ka hoki atu te rorohiko
           ki te whakaara i taua taumahi, taua waehere. Ka ea mā tātou. Kua tāpiritia
           tērā ariā ki tō tātou reo papatonotanga.
+      3: 
+      4: 
     C4_intro:
       1:
         text: He mea tuhi te papatonotanga i te nuinga o te wā engari ka whakamahi
@@ -1665,23 +1667,48 @@ mi:
           kia pāwhiritia te pātene tautuhi anō kia hoki atu te manu ki te tīmatanga.
           Hoake tātou ki te tiki i ngā poaka!
     infinity_playlab_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
       7:
         text: Tīmata mai, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
           kēmu me ngā momo kaitapere ka pāhekoheko, ka whiwhi piro, ka maka karetaoriki,
           tīere, kōhua, kōrikoriko, me te tio... ka whakanumi hoki i a rātou anō.
           Kei a koe te tikanga!
     starwars_intro:
+      1: 
+      2: 
+      3: 
+      4: 
       5:
         text: He pouaka utauta te wāhanga o waenganui, ā, he whakahau ia paraka e
           taea ana e BB-8 te mārama hoki.
       6:
         text: Ko te mokowā kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
           te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
+      9: 
+      10: 
     starwars_events:
+      1: 
+      2: 
+      3: 
       4:
         text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
           tauira o te takahanga e whakarongo ana.
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
     starwars_blocks_intro:
+      1: 
+      2: 
+      3: 
       4:
         text: Kua wāhia tō mata ki ngā wāhanga matua e toru. Kei te taha mauī te mokowā
           mō te kēmu Star Wars, te wāhi whakahaere i tō waehere. Ko ngā tohutohu mō
@@ -1692,14 +1719,28 @@ mi:
       6:
         text: Ko te mokowā kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
           te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
       9:
         text: Ki te hiahia koe ki te muku i tētahi paraka me tango noa iho i te raupapatanga,
           me tō ki roto i te pouaka utauta.
+      10: 
     starwars_blocks_events:
+      1: 
+      2: 
+      3: 
       4:
         text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
           tauira o te takahanga e whakarongo ana.
+      5: 
+      6: 
+      7: 
     mc_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papatākaro
           Mahimaina, ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō
@@ -1710,13 +1751,23 @@ mi:
       8:
         text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
           te wāhi ka hanga tātou i tā tātou papatono.
+      9: 
+      10: 
       11:
         text: Ki te hiahia koe ki te muku i tētahi paraka me tō noa iho i te pūkei
           ki te pouaka utauta.
+      12: 
     gumball_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
           te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
       9:
         text: Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
           kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi
@@ -1755,9 +1806,16 @@ mi:
           Mā te ako ki te whakamahinga o te whakahau tōai ka penapenatia te wā i a
           koe e hanga ana i tō ake kēmu ā tōna wā.
     iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
           te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
       9:
         text: Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
           kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi
@@ -1899,5 +1957,16 @@ mi:
           honongaitua hei tiritiri ki ō hoa, hei korikori rānei māu ki tō waea. Kia
           ngahau! E hīkaka ana ahau ki te tākaro i tō putanga o Mahimaina.
     mc_2017_agent_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
       11:
         text: Kei runga ngā tohutohu mō ia taumata ki te wareware i a koe me aha koe.
+      12: 

@@ -1119,8 +1119,6 @@ lv:
               name: Pūļa ieguve
             Relay Programming:
               name: Releju programmēšana
-            Graph Paper Programming:
-              name: Rūtiņpapīra programmēšana
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1323,33 +1321,3 @@ lv:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Saraksti
-        csd3-2019:
-          stages:
-            Variables:
-              name: Mainīgie
-            Conditionals:
-              name: Sazarojumi
-            Velocity:
-              name: Ātrums
-            Functions:
-              name: Funkcijas
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Funkcijas ar parametriem
-        csp1-2019:
-          stages:
-            The Internet:
-              name: Internets
-        csp3-2019:
-          stages:
-            Creating Functions:
-              name: Funkciju veidošana
-        csp5-2019:
-          stages:
-            While Loops:
-              name: Nosacījuma cikli

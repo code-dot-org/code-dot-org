@@ -893,11 +893,6 @@ et:
             '"x"': x asukoht
             '"y"': y asukoht
             '"direction"': liikumise suund
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kui
-            '"while"': tingimusel
       aalab_clickedOn:
         options:
           CONDITION:
@@ -920,24 +915,11 @@ et:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': tõene
-            '"false"': väär
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': suurus
-            '"rotation"': pööramine
-            '"x"': x asukoht
-            '"y"': y asukoht
-            '"direction"': liikumise suund
-            '"tint"': toon
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': igavesti
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
       binary_move:
         options:
           DIR:

@@ -95,8 +95,3 @@ mt:
             '"random"': bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': veru/minnu
-            '"false"': falz

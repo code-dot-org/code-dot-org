@@ -440,25 +440,16 @@ hu:
       CSD U3 Background Discuss: Itt egy program, ami nagyon hasonló egy korábbihoz, de valójában egészen másként viselkedik. Egy kicsit állj meg, és beszéld meg a csoporttal, mielőtt lefuttatod.
       CSD U3 Background Experiment: Itt egy program, ami nagyon hasonló egy korábbihoz, de valójában egészen másként viselkedik. Egy kicsit állj meg, és beszéld meg a csoporttal, mielőtt lefuttatod.
       CSD U3 Draw Loop Discuss: Itt egy program, ami nagyon hasonló egy korábbihoz, de valójában egészen másként viselkedik. Egy kicsit állj meg, és beszéld meg a csoporttal, mielőtt lefuttatod.
-      CSD U3 Sprites intro sprites: Csináld ezt
-      CSD U3 Sprites intro sprites_2018 - Validation Test: Csináld ezt
-      CSD U3 Sprites intro sprites_2018: Csináld ezt
-      CSD U3 Sprites intro sprites_2019: Csináld ezt
       CSD U5 black white images pixelation 2: Rajzolj egy mosolygós arcot (kattints ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 2_2018: Rajzolj egy mosolygós arcot (kattints ide a kép megtekintéséhez)
-      CSD U5 black white images pixelation 2_2019: Rajzolj egy mosolygós arcot (kattints ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 3: Módosítsd a szélesség és magasság csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)
       CSD U5 black white images pixelation 3_2018: Módosítsd a szélesség és magasság csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)
-      CSD U5 black white images pixelation 3_2019: Módosítsd a szélesség és magasság csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)
       CSD U5 black white images pixelation 4: Adj szemöldököt a mosolygós archoz (kattints ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 4_2018: Adj szemöldököt a mosolygós archoz (kattints ide a kép megtekintéséhez)
-      CSD U5 black white images pixelation 4_2019: Adj szemöldököt a mosolygós archoz (kattints ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 5: Rajzold bármit, amit szeretnél
       CSD U5 black white images pixelation 5_2018: Rajzold bármit, amit szeretnél
-      CSD U5 black white images pixelation 5_2019: Rajzold bármit, amit szeretnél
       CSD U5 black white images pixelation: Egészítsd ki az X alakot nullák és egyesek begépelésével
       CSD U5 black white images pixelation_2018: Egészítsd ki az X alakot nullák és egyesek begépelésével
-      CSD U5 black white images pixelation_2019: Egészítsd ki az X alakot nullák és egyesek begépelésével
       CSDU6 - Arrays - indexPractice: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSDU6 - for loop - color buttons with for: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSDU6 - for loop - color buttons: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
@@ -466,14 +457,11 @@ hu:
       CSDU6 arrays rainbow: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSDU6 arrays select rainbow: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSDU6 arrays select rainbow_2018: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
-      CSDU6 arrays select rainbow_2019: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSP student contact info: Kérlek, add meg az e-mail címedet.
       CSPU5_U3 - Arrays - indexPractice: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSPU5_U3 - Arrays - indexPractice_2018: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
-      CSPU5_U3 - Arrays - indexPractice_2019: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSPU5_U3 - Loops - 4: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
       CSPU5_U3 - Loops - 4_2018: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
-      CSPU5_U3 - Loops - 4_2019: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
       Course 2 Bee Loops 1: 'Szia, én egy méh vagyok. Segítesz nekem összegyűjteni a nektárt ezekről a virágokról? '
       Course 2 Bee Loops 3: Most használd az ismételd blokkot, hogy összegyűjtsük a nektárt és elkészítsük az összes mézet.
       Course 2 Bee Loops 3_: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
@@ -710,10 +698,8 @@ hu:
       CourseF_PlayLab_vars9: Szép, most tegyük kissé nehezebbé a játékot. Amikor a Kutyát (szereplő 1) eltalálja egy Macskától (szereplő 2) érkező szendvics, veszítsen el egy pontot. Kezdőértéknek állíts be 10 pontot, hogy ne legyen túl nehéz a játék. A következő feladványra lépéshez érd el, hogy a pontszámod 10-ről 0-ra csökkenjen.
       Crack Random Substitution: Utasítások
       Crack Random Substitution_2018: Utasítások
-      Crack Random Substitution_2019: Utasítások
       Crack a Caesar Cipher: Utasítások
       Crack a Caesar Cipher_2018: Utasítások
-      Crack a Caesar Cipher_2019: Utasítások
       Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
       Dance_Party_01_low: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
       Dance_Party_02: Állítsd be, hogy a jávorszarvas 4 ütem után új mozdulatot kezdjen!
@@ -727,7 +713,7 @@ hu:
       Dance_Party_11.5_test: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt táncoljanak.
       Dance_Party_11: A „felfelé nyíl megnyomásakor“ blokkal a felfelé nyíl megnyomására tudsz kódot futtatni. Próbáld meg elérni, hogy a táncos egy gyors mozdulatot végezzen, amikor megnyomod a felfelé nyilat.
       Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt táncoljanak.
-      Dance_Party_11b: Állítsd be, hogy a Robot egyszer „spárga“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat, és egyszer „taps“ mozdulatot tegyen, amikor megnyomod a felfelé nyilat. Csináld a spárga-taps mozdulatokat olyan gyorsan, ahogyan csak tudod!
+      Dance_Party_11b: Állítsd be, hogy a Robot egyszer „drop“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat, és egyszer „floss“ mozdulatot tegyen, amikor megnyomod a felfelé nyilat. Csináld a drop-floss mozdulatokat olyan gyorsan, ahogyan csak tudod!
       Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd meg az ismerőseiddel.
       Farmer for Authored Hint testing: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
       Farmer for TTS testing: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
@@ -1019,7 +1005,6 @@ hu:
       NEW Course 4 Play Lab Vars 4 5: "\"Mit gondol ez a kód fog tenni? Kattints a \"Futtatás\" gombra, hogy megtudd."
       NEW Course 4 Play Labs For Loops 8 Free Play: 'Szabad játék! Csinálj bármit a rendelkezésre álló blokkokkal. '
       New Artist Project: Rajzolj valami nagyszerűt! A kódod projektként kerül elmentésre, és bármikor visszatérhetsz hozzá.
-      New Basketball Project: Készítsd el a saját kosárlabda játékod! Változtathatsz a szabályokon. Ha elkészültél, nyomj a Kész-re, hogy a barátaid is kipróbálhassák a telefonjaikon.
       New Bounce Project: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.
       New Course 4 Artist Functions Level 4: Használd a a "rajzolj négyzetet" függvényt ennek a mintának a kirajzolásához!
       New Gumball Project: Alkoss bármit, amit csak szeretnél, és oszd meg másokkal!
@@ -1080,33 +1065,15 @@ hu:
       Testing Quantum Farmer: "Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az \"amíg van\" ciklust használd."
       The Vigenere Cipher Widget: Utasítások
       The Vigenere Cipher Widget_2018: Utasítások
-      The Vigenere Cipher Widget_2019: Utasítások
       The Vigenere Cipher: Utasítások
       Total Artist Clone Me: "Szabad játék: Itt vannak az általad írt függvények, és még néhány másik, amikkel játszhatsz. Rajzolj valami nagyszerűt!\nJátssz a tollvastagsággal, és nézd meg, hogyan néznek ki a különböző rajzok!"
       U2 frequency caesar: Utasítások
       U2 frequency random sub: Utasítások
       U2 vigenere cipher: Utasítások
       U3 - Arrays - indexPractice: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
-      U3 - Simple Drawing - Fill: Csináld ezt
-      U3 - Simple Drawing - Oval: Csináld ezt
-      U3 - Simple Drawing - Rectangle Width and Height: Csináld ezt
-      U3 - Simple Drawing - Rectangle: Csináld ezt
-      U3 - Simple Drawing - Road Ellipse: Csináld ezt
-      U3 - Simple Drawing - Road Rects and Color: Csináld ezt
-      U3 - Simple Drawing - Simple Shape Drawing: Csináld ezt
-      U3 - Simple Drawing - X and Y values: Csináld ezt
-      U3 - Simple Drawing - text: Csináld ezt
-      U3 - Sprites - Intro Sprites: Csináld ezt
-      U3 - Sprites and Mod - Create  and Draw Sprite: Csináld ezt
-      U3 - Sprites and Mod - Rand Shape Color: Csináld ezt
-      U3 - Sprites and Mod - Shape Color: Csináld ezt
-      U3 - Sprites and Mod - Wrap Many Squares: Csináld ezt
-      U3 - Sprites and Mod - X and Y Prop: Csináld ezt
-      U3 - Sprites and Mod - two sprites: Csináld ezt
       U4 vigenere cipher 2: Utasítások
       U4L02 - Objects - Template1: Sablon
       U4L02 - Objects - Template1_2018: Sablon
-      U4L02 - Objects - Template1_2019: Sablon
       Underground Avoiding Lava: Láva rejlik bizonyos blokkok alatt, amelyet le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
       Underground Avoiding Lava_2018: Láva rejlik bizonyos blokkok alatt, amelyet le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
       Underground Avoiding Lava_2019: Láva rejlik bizonyos blokkok alatt, amelyet le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
@@ -1121,41 +1088,28 @@ hu:
       Underground Mining Coal_2019: A legértékesebb nyersanyagok a föld alatt vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két szenet.
       aE7: "Hogyha lemásolod a ciklust és balra fordulsz jobb helyett, mi történik? Tudod úgy ismételni, hogy ezt a hullámot rajzolja le?"
       aE8: "Most ismételjük a ciklust négyszer, hogy elkészüljön ez a képkeret. Figyelj a sarkokra - nem fordulhatsz csak úgy 90 fokot! Ha egy 3 fokos fordulatot 60-szor ismételve egy félkört kapunk, melyik blokkal kapunk a sarkokhoz egy negyed kört?"
-      allthethings_U3 - Simple Drawing - Rectangle Width and Height: Csináld ezt
       beeDebugVideo1: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
       birdsDebugVideo1: Tervezd meg az utat és juttass el a buta malachoz. Kerüljük el a dinamitot, különben repülünk!
       bounce_1: Csatolj egy blokkot a "balra nyíl esetén" blokkhoz, majd nyomd meg a "Futtatás" gombot. Mozgasd az ütőt a bal nyíllal, hogy elérd a célt.
       bounce_10: A kapu most fönt van. Kapcsold össze a  "pontszám" és a "pontot szerez az ellenfél" blokkokat a "ha a labda célba ér" és a "ha a labda nem találja el az ütőt" blokkal, hogy elkészüljön a játék. Próbáld ki, hány pontot gyűjtesz, mielőtt az ellenfél két pontot szerez.
       bounce_10_2018: A kapu most fönt van. Kapcsold össze a  "pontszám" és a "pontot szerez az ellenfél" blokkokat a "ha a labda célba ér" és a "ha a labda nem találja el az ütőt" blokkal, hogy elkészüljön a játék. Próbáld ki, hány pontot gyűjtesz, mielőtt az ellenfél két pontot szerez.
-      bounce_10_basketball: Most fenn van a cél! Húzd a "pontszám" és "pontot szerez az ellenfél" blokkokat a "ha a labda célba ér" és az "amikor a labda nem éri a kezet" blokkokhoz, hogy összeálljon a játék. Nézzük, hány pontot tudsz szeretni, mielőtt az ellenfél szerez két pontot.
-      bounce_10_sports: Most fenn van a cél! Húzd a "pontszám" és "pontot szerez az ellenfél" blokkokat a "ha a labda célba ér" és az "amikor a labda nem éri a kezet" blokkokhoz, hogy összeálljon a játék. Nézzük, hány pontot tudsz szeretni, mielőtt az ellenfél szerez két pontot!
       bounce_11: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél két pontot szerez.
       bounce_11_2018: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél két pontot szerez.
-      bounce_11_basketball: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy a kéz és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél két pontot szerez!
-      bounce_11_sports: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy a kéz és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél két pontot szerez!
       bounce_12: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.
       bounce_12_2018: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.
-      bounce_12_basketball: Készítsd el a saját kosárlabda játékod! Változtathatsz a szabályokon. Ha elkészültél, nyomj a Kész-re, hogy a barátaid is kipróbálhassák a telefonjaikon.
       bounce_1_2018: Csatolj egy blokkot a "balra nyíl esetén" blokkhoz, majd nyomd meg a "Futtatás" gombot. Mozgasd az ütőt a bal nyíllal, hogy elérd a célt.
-      bounce_1_basketball: Adj egy blokkon a "ha van balra nyíl" blokkhoz, és kattints a "futtatás"-ra. Mozgasd a kezet a bal nyíllal, hogy elérd a célt.
       bounce_2: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén" blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
       bounce_2_2018: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén" blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
-      bounce_2_basketball: Húzz egy-egy blokkot a "ha van balra nyíl" és a "ha van jobbra nyíl" blokkokhoz. Mozgasd a kezet, hogy mind a két célt elérd.
       bounce_3: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd az ütőt, hogy elérd a fenti célt.
       bounce_3_2018: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd az ütőt, hogy elérd a fenti célt.
       bounce_4: Itt az idő, hogy bevezessünk négy új blokkot. Mozgasd az ütőt mind a négy irányba, hogy megoldd ezt a feladatot.
       bounce_4_2018: Itt az idő, hogy bevezessünk négy új blokkot. Mozgasd az ütőt mind a négy irányba, hogy megoldd ezt a feladatot.
       bounce_5: El fogjuk dobni a labdát az ütő felé. Csatoljunk egy blokkot az "ha a labda eltalálja az ütőt" blokkhoz, hogy a labda biztosan elérje a célját.
       bounce_5_2018: El fogjuk dobni a labdát az ütő felé. Csatoljunk egy blokkot az "ha a labda eltalálja az ütőt" blokkhoz, hogy a labda biztosan elérje a célját.
-      bounce_5_basketball: A labda most repülni fog a kéz felé. Adj egy blokkot az "amikor a labda a kézhez ér" blokkhoz, hogy a labda végül elérje a zászlót.
       bounce_6: A cél most fönt van. Csatolj egy-egy blokkot mindkét "ha a labda..." blokkhoz, hogy megoldd a rejtvényt.
       bounce_6_2018: A cél most fönt van. Csatolj egy-egy blokkot mindkét "ha a labda..." blokkhoz, hogy megoldd a rejtvényt.
-      bounce_6_basketball: Most a zászló fönt van. Mind a két "amikor a labda..." blokkhoz kell blokkot hozzáadnod, hogy megoldd a feladványt.
-      bounce_6_sports: Most a zászló fönt van. Mind a két "amikor a labda..." blokkhoz kell blokkot hozzáadnod, hogy megoldd a feladványt.
       bounce_7: Csatolj blokkot minden "ha..." blokkhoz. Pattogtasd a labdát addig, amíg el nem éri a célját.
       bounce_7_2018: Csatolj blokkot minden "ha..." blokkhoz. Pattogtasd a labdát addig, amíg el nem éri a célját.
-      bounce_7_basketball: Minden blokkhoz húzz további blokkokat. Pattogtasd a labdát, amíg eléri a zászlót.
-      bounce_7_sports: Minden blokkhoz húzz további blokkokat. Pattogtasd a labdát, amíg eléri a zászlót.
       course2_maze_seq_challenge1: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp, vagy repülsz!
       course2_playlab_stage17_11: Hozz létre egy saját történetet! Ha elkészült, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a történetedet a telefonjaikon.
       course2_playlab_stage17_4: Tudsz készíteni egy olyan programot, amely Jorge-t (szereplő 1) Olíviához, a Macskához mozgatja, majd Olívia azt mondja, hogy "Hello", amikor Jorge odaér hozzá?

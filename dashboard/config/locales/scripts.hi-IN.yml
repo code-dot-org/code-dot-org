@@ -189,19 +189,3 @@ hi:
           stages:
             'null':
               name: शून्य
-        csd2-2019:
-          stages:
-            Lists:
-              name: सूचियाँ
-        csd3-2019:
-          stages:
-            Variables:
-              name: चर
-            Conditionals:
-              name: शर्तें
-            Functions:
-              name: कार्य
-        csp1-2019:
-          stages:
-            The Internet:
-              name: इंटरनेट
