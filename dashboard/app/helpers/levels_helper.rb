@@ -499,10 +499,6 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    if @game == Game.applab
-      app_options['safeBrowsingKey'] = CDO.google_safe_browsing_key
-    end
-
     set_tts_options(level_options, app_options)
     set_hint_prompt_options(level_options)
 
