@@ -38,22 +38,17 @@ const INVALID_COLOR = '#d00';
  * CodeMirror editor.
  * @param {!string|!Element} target - element or id of element to replace.
  * @param {!string} mode - editor syntax mode
- * @param {function} [callback] - onChange callback for editor
- * @param {boolean} [attachments] - whether to enable attachment uploading in
- *        this editor.
- * @param {???} [onUpdateLinting]
- * @param {!string!Element} [preview] - element or id of element to populate
- *        with a preview. If none specified, will look for an element by
- *        appending "_preview" to the id of the target element.
+ * @param {Object} options - misc optional arguments
+ * @param {function} [options.callback] - onChange callback for editor
+ * @param {boolean} [options.attachments] - whether to enable attachment
+ *        uploading in this editor.
+ * @param {???} [options.onUpdateLinting]
+ * @param {!string!Element} [options.preview] - element or id of element to
+ *        populate with a preview. If none specified, will look for an element
+ *        by appending "_preview" to the id of the target element.
  */
-function initializeCodeMirror(
-  target,
-  mode,
-  callback,
-  attachments,
-  onUpdateLinting,
-  preview
-) {
+function initializeCodeMirror(target, mode, options) {
+  let {callback, attachments, onUpdateLinting, preview} = options;
   let updatePreview;
 
   // Code mirror parses html using xml mode
