@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
@@ -92,5 +93,96 @@ export default class Teacher1920Application extends FormController {
 
     ga('set', 'page', url);
     ga('send', 'pageview');
+  }
+
+  /**
+   * @override
+   */
+  setPage(i) {
+    const newPage = Math.min(
+      Math.max(i, 0),
+      this.getPageComponents().length - 1
+    );
+
+    this.setState({
+      currentPage: newPage
+    });
+
+    if (this.triedToSubmit) {
+      let pageWithErrors = this.validateForm();
+
+      // If errors exist, create a summary header containing
+      // clickable links to pages that have errors.
+      if (pageWithErrors.length) {
+        this.setState({
+          globalError: true,
+          errorHeader: (
+            <span>
+              Please fill out all required fields on page
+              {pageWithErrors.length > 1 ? 's' : ''}{' '}
+              {pageWithErrors.map(index => (
+                <a
+                  key={index}
+                  onClick={() => this.setPage(index)}
+                  style={{cursor: 'pointer'}}
+                >
+                  {' '}
+                  {index + 1}
+                </a>
+              ))}
+              . Once you are done, head to the last page to confirm and submit
+              your application.
+            </span>
+          )
+        });
+      } else {
+        this.setState({errorHeader: null, globalError: false});
+      }
+    }
+
+    this.saveToSessionStorage({currentPage: newPage});
+  }
+
+  /**
+   * Find all pages that have errors.
+   * @returns {number[]} array of page indexes
+   */
+  validateForm() {
+    let pageWithErrors = [];
+
+    // Validating page in reversed order because the last page being validated will overwrite
+    // values in this form's state, and only errors found in that page will be highlighted.
+    for (let i = this.getPageComponents().length - 1; i >= 0; i--) {
+      if (!this.validatePageRequiredFields(i)) {
+        pageWithErrors.unshift(i);
+      }
+    }
+
+    return pageWithErrors;
+  }
+
+  /**
+   * @override
+   * @param {Event} event
+   */
+  handleSubmit(event) {
+    event.preventDefault();
+
+    this.triedToSubmit = true;
+    let pageWithErrors = this.validateForm();
+
+    if (pageWithErrors.length > 0) {
+      // go to page with the smallest index
+      this.setPage(pageWithErrors[0]);
+    } else {
+      super.handleSubmit(event);
+    }
+  }
+
+  /**
+   * @override
+   */
+  renderControlButtons() {
+    return [super.renderControlButtons(), this.renderErrorFeedback()];
   }
 }

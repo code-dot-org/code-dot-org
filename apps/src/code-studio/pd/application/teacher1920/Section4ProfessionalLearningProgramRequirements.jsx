@@ -203,7 +203,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       return (
         <div style={styles.error}>
           <p>
-            Please fill out Section 2 and select your program before completing
+            Please fill out Section 3 and select your program before completing
             this section.
           </p>
         </div>
