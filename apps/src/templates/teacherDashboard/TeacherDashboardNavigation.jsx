@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+var userAgentParser = require('../../code-studio/initApp/userAgentParser');
 
 export const TeacherDashboardPath = {
   progress: '/progress',
@@ -79,7 +80,10 @@ export default class TeacherDashboardNavigation extends Component {
       childWidth += navbarChildren[i].clientWidth;
     }
 
-    const shouldScroll = navbar.width() < childWidth;
+    // Scroll if navbar is smaller than its children (plus 150px of buffer).
+    // Buffer is necessary because children's text has not rendered to DOM yet,
+    // which means a child's current width may increase once its text is rendered.
+    const shouldScroll = navbar.width() < childWidth + 150;
     this.setState({shouldScroll});
   };
 
@@ -120,13 +124,16 @@ export default class TeacherDashboardNavigation extends Component {
     const containerStyles = this.state.shouldScroll
       ? {...styles.container, ...styles.scrollableContainer}
       : {...styles.container, ...styles.centerContainer};
+    const chevronStyles = userAgentParser.isSafari()
+      ? {...styles.chevron, ...styles.safariSticky}
+      : styles.chevron;
 
     return (
       <div id={navId} style={containerStyles} onScroll={this.handleScroll}>
         {listPosition !== ListPosition.start && shouldScroll && (
           <FontAwesome
             icon="chevron-left"
-            style={{...styles.chevron, ...styles.chevronLeft}}
+            style={{...chevronStyles, ...styles.chevronLeft}}
             onClick={() => this.scrollTo(ListPosition.start)}
           />
         )}
@@ -143,7 +150,7 @@ export default class TeacherDashboardNavigation extends Component {
         {listPosition !== ListPosition.end && shouldScroll && (
           <FontAwesome
             icon="chevron-right"
-            style={{...styles.chevron, ...styles.chevronRight}}
+            style={{...chevronStyles, ...styles.chevronRight}}
             onClick={() => this.scrollTo(ListPosition.end)}
           />
         )}
@@ -193,6 +200,7 @@ const styles = {
   chevron: {
     position: 'sticky',
     height: NAVBAR_HEIGHT,
+    top: 0,
     fontSize: 24,
     backgroundColor: color.purple,
     color: color.white,
@@ -200,6 +208,9 @@ const styles = {
     paddingLeft: PADDING,
     paddingRight: PADDING,
     cursor: 'pointer'
+  },
+  safariSticky: {
+    position: '-webkit-sticky'
   },
   chevronLeft: {
     left: 0
