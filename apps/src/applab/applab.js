@@ -376,7 +376,7 @@ Applab.init = function(config) {
     throw 'App Lab requires Droplet';
   }
 
-  if (!config.channel) {
+  if (!config.channel && !config.level.editBlocks) {
     throw new Error(
       'Cannot initialize App Lab without a channel id. ' +
         'You may need to sign in to your code studio account first.'
