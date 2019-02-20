@@ -226,22 +226,6 @@ km:
         each cloud name.\\r
          * (Hint: this is similar to how the `loopCloud(name)`
         function is called many times.
-      CSD U6 params modify clouds_2019: |-
-        # Clouds\\r
-        \\r
-        This program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\\r
-        \\r
-        #
-        Do This\\r
-        * Create a new function `moveCloud(name)` that will move any cloud.\\r
-          *
-        (Hint: you will use almost all the same code as the `moveCloud0` function)\\r
-        *
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\\r
-         * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times.
       CSD U6 params modify planes: |-
         # Multi-plane Controller\\r
         \\r
@@ -259,22 +243,6 @@ km:
         _Challenge: Right now the planes move way too fast.  Can
         you figure out how to change the code so they move more slowly?_
       CSD U6 params modify planes_2018: |-
-        # Multi-plane Controller\\r
-        \\r
-        This
-        program moves the three planes using the board accelerometer and the on-screen
-        check boxes.  Right now, only the red plane works.\\r
-        \\r
-        # Do This\\r
-        * Create
-        a new `movePlane(name)` function that can move any plane.\\r
-        * Call the `movePlane(name)`
-        function inside the event block, such that it only moves when its checkbox
-        is checked.\\r
-        \\r
-        _Challenge: Right now the planes move way too fast.  Can
-        you figure out how to change the code so they move more slowly?_
-      CSD U6 params modify planes_2019: |-
         # Multi-plane Controller\\r
         \\r
         This
@@ -427,10 +395,8 @@ km:
         a time!) to pass the level.
       Crack Random Substitution: សេចក្ដី​ណែនាំ
       Crack Random Substitution_2018: សេចក្ដី​ណែនាំ
-      Crack Random Substitution_2019: សេចក្ដី​ណែនាំ
       Crack a Caesar Cipher: សេចក្ដី​ណែនាំ
       Crack a Caesar Cipher_2018: សេចក្ដី​ណែនាំ
-      Crack a Caesar Cipher_2019: សេចក្ដី​ណែនាំ
       D_Frozen_nested9: |-
         Try playing around with what you've
         created. Draw whatever you like!\\r
@@ -537,7 +503,6 @@ km:
       Testing Quantum Farmer: "Wow, look at that! \\r\n\\r\nI don't know how\nmany shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps using the `fill` block until the ground is even?  "
       The Vigenere Cipher Widget: សេចក្ដី​ណែនាំ
       The Vigenere Cipher Widget_2018: សេចក្ដី​ណែនាំ
-      The Vigenere Cipher Widget_2019: សេចក្ដី​ណែនាំ
       The Vigenere Cipher: សេចក្ដី​ណែនាំ
       U2 frequency caesar: សេចក្ដី​ណែនាំ
       U2 frequency random sub: សេចក្ដី​ណែនាំ

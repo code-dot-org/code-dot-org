@@ -220,8 +220,6 @@ ta:
               name: பாடல் எழுதுதல்
             Internet:
               name: இணையம்
-            Graph Paper Programming:
-              name: வரைதாள் செய்நிரல்
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -246,17 +244,3 @@ ta:
           stages:
             'null':
               name: வெறுமை
-        csd2-2019:
-          stages:
-            Lists:
-              name: பட்டியல்கள்
-        csd3-2019:
-          stages:
-            Variables:
-              name: மாறிலிகள்
-            Functions:
-              name: செயல்பாடுகள்
-        csp1-2019:
-          stages:
-            The Internet:
-              name: இணையம்

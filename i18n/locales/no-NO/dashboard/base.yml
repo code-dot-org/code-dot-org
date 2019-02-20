@@ -29,7 +29,6 @@
         edit_header: 'Rediger kontodetaljer'
         finish_sign_up_header: 'Fullfør oppretting av kontoen'
         finish_sign_up_subheader: 'Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: ikke mulig å være i framtiden
   hello: "Hei, verden"
@@ -78,7 +77,6 @@
   prize: 'premie'
   more_info: 'Mer info'
   auth:
-    continue_with: 'Fortsett med %{provider}'
     sign_in_with: 'Logg inn med %{provider}'
     signed_in: 'Logget inn!'
     signed_out: 'Du har logget ut av <a href="%{url}">Code.org</a>.'
@@ -97,7 +95,6 @@
     not_linked: "Beklager, din Code.org konto er ikke koblet til %{provider}. Du må logge inn ved å angi ditt passord under."
     use_clever: "Beklager, din Code.org konto er ikke koblet til %{provider}. Vennligs logg inn gjennom din Clever Portal."
   signup_form:
-    email_signup: 'Registrer deg med din e-postadresse'
     student_count: '%{count} elever har allerede registrert seg.'
     teacher_count: '%{count} lærere har allerede registrert seg.'
     overview: 'Registrer deg for å følge fremdriften din eller administrere klasserommet. <a href="/">Du kan bla gjennom de ulike scenene og oppgavene</a> uten en konto, men du må registrere deg for å lagre fremgang og prosjekter.'
@@ -114,7 +111,6 @@
     age: 'Alder'
     user_type: 'Er du elev eller lærer?'
     submit: 'Meld deg på'
-    go_to_account: 'Gå til kontoen min'
     teacher: 'Er du en lærer?'
     valid_username: "Tilgjengelig!"
     invalid_username: "Brukernavnet må bestå av minimum fem tegn"
@@ -123,13 +119,11 @@
     invalid_password: "Passordet må bestå av minimum seks tegn"
     mismatch_password: "De to passordene du skrev inn samsvarer ikke"
     under_13_consent: "Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org."
-    student_consent: "Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse til å bruke tjenestene fra Code.org."
     agree_us_website: "Jeg aksepterer å bruke et nettsted som er basert i USA."
     my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
     student_terms: "Epost-adresser lagres ikke i en form som gjør at vi kan kontakte elever. Elever vil aldr motta epost fra Code.org bortsett fra oppretting av nytt passord. Se våre <a href='http://code.org/privacy'>retningslinjer for personvern</a> for mer informasjon."
     teacher_terms: "Jeg aksepterer brukerbetingelsene til Code.org. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer informasjon om personvern."
     additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
-    user_type_button: "Oppdater kontotype"
     user_type_label: "Kontotype"
     user_type_teacher: "Lærer"
     user_type_student: "elev"
@@ -140,7 +134,6 @@
     email_preference_privacy: "(Se våre retningslinjer for personvern)"
     email_preference_yes: "Ja"
     email_preference_no: "Nei"
-    email_preference_required: "Du må angi en e-post preferanse."
   school_info:
     title: 'Informasjon til skolen (valgfritt)'
     school_country: 'Landet til skolen'
@@ -210,7 +203,6 @@
     student_associated_subject: 'Logg inn informasjon for Code.org'
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
-    delete_teacher_subject: 'Code.org melding: Din konto er slettet'
   section:
     your_section:
       one: 'Din seksjon:'
@@ -218,7 +210,6 @@
     code_with_teacher: '%{section_code} med %{teacher_name}'
     confirm:
       remove: 'Er du sikker på at du vil forlate denne seksjonen?'
-    default_name: 'Inndeling uten tittel'
     remove: '(fjern seksjonen)'
     type:
       picture: 'Bilde passord'
@@ -320,7 +311,6 @@
       signin: 'Logg inn'
       signup: 'Opprett en konto'
       already_registered: 'Allerede registrert?'
-      pair_programming: 'Parprogrammering'
       team: 'Team'
       driver: 'Logget inn som'
       navigator: 'Kartleser'
@@ -365,7 +355,6 @@
       example: 'Løsnigsforslag'
       example_with_number: 'Løsningsforslag nr %{solution_number}'
       submitted_on: 'Sendt inn %{date}'
-      last_updated: 'Sist oppdatert:'
       unsubmit: 'Trekk tilbake'
       worked_with: 'Jobbet Med'
       update_lock_settings: 'Oppdater låsestatus her.'
@@ -393,11 +382,8 @@
     create_personal_login_email_note: "Merk: Epostadresser er ikke lagret i et format som tillater oss å kontakte elevene. Elevene vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre <a href='%{privacy_policy_url}', target='_blank'> retningslinjer for personvern</a> for mer informasjon."
     enter_new_login_info: 'Angi ny påloggingsinformasjon'
     confirm_secret_words: 'Bekreft at det er deg ved å angi gjeldende hemmelige ord'
-    parent_email_label: "Foreldre/foresatte e-post (valgfritt)"
-    parent_email_hint: "(dette kan brukes for passordgjenoppretting)"
     enter_parent_email: "Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)"
     update: "Oppdater konto"
-    account_successfully_updated: "Kontoen er oppdatert."
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -483,7 +469,6 @@
   gender:
     male: 'Mann'
     female: 'Kvinne'
-    non_binary: 'Ikke-binær'
     none: 'Foretrekker å ikke svare'
   user_type:
     student: 'elev'
@@ -957,12 +942,7 @@
   view_teacher_guide: 'Sjekk lærerveiledning'
   pd:
     form_labels:
-      first_name: 'Fornavn'
-      first_name_preferred: 'Foretrukket fornavn'
-      last_name: 'Etternavn'
       email: 'E-post'
-      email_alternate: 'Alternativ e-post'
-      gender: 'Kjønns-identitet'
       school_name: 'Skolens navn'
       school_city: 'Skolens poststed'
       school_country: 'Landet til skolen'
@@ -970,36 +950,16 @@
       gender:
         male: 'Mann'
         female: 'Kvinne'
-        non_binary: 'Ikke-binær'
         none: 'Foretrekker å ikke svare'
-      school_country:
-        canada: 'Kanada'
-        chile: 'Chile'
-        israel: 'Israel'
-        malaysia: 'Malaysia'
-        mexico: 'Mexico'
-        thailand: 'Thailand'
-      ages:
-        ages_under_6: '< 6 år gammel'
-        ages_7_8: '7-8 år gammel'
-        ages_9_10: '9-10 år gammel'
-        ages_11_12: '11-12 år gammel'
-        ages_13_14: '13-14 år gammel'
-        ages_15_16: '15-16 år gammel'
-        ages_17_18: '17-18 år gammel'
-        ages_19_over: '19+ år gammel'
       subjects:
         cs: 'Datavitenskap'
         math: 'Matematikk'
         science: 'Vitenskap'
         la: 'Språkfag'
-        music: 'Musikk'
       resources:
         kodable: 'Kodbart'
-        scratch: 'Scratch'
       robotics:
         kodable: 'Kodbart'
-        microbit: 'Microbit'
       workshop_course:
         csp: 'Prinsipper i informatikk'
       email_opt_in:
@@ -1010,5 +970,4 @@
     accept: 'Jeg samtykker'
   gdpr_dialog:
     message: 'Dine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA.'
-    logout: 'Logg ut'
     yes: 'Ja'

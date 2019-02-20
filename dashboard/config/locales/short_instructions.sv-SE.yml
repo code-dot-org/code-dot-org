@@ -1440,10 +1440,8 @@ sv:
         är så svårt. Låt dina poäng gå från 10 till 0 för att klara nivån.
       Crack Random Substitution: Instruktioner
       Crack Random Substitution_2018: Instruktioner
-      Crack Random Substitution_2019: Instruktioner
       Crack a Caesar Cipher: Instruktioner
       Crack a Caesar Cipher_2018: Instruktioner
-      Crack a Caesar Cipher_2019: Instruktioner
       Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det
         i ”setup”-blocket.
       Dance_Party_01_low: Dra ett ”gör ett nytt”-block till arbetsytan och koppla
@@ -2084,7 +2082,6 @@ sv:
         gång.'
       The Vigenere Cipher Widget: Instruktioner
       The Vigenere Cipher Widget_2018: Instruktioner
-      The Vigenere Cipher Widget_2019: Instruktioner
       The Vigenere Cipher: Instruktioner
       Total Artist Clone Me: 'Fritt spel: Här är de funktioner som du har skrivit,
         och några fler för dig att spela med. Rita något fantastiskt! Lek med pennbredden
@@ -2095,7 +2092,6 @@ sv:
       U4 vigenere cipher 2: Instruktioner
       U4L02 - Objects - Template1: Mall
       U4L02 - Objects - Template1_2018: Mall
-      U4L02 - Objects - Template1_2019: Mall
       Underground Avoiding Lava: Lava döljer sig under några av de här blocken, och
         du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt
         här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här

@@ -9,5 +9,6 @@
   "danceFeedbackStartNewMove": "Dansatorul dumneavoastră nu realiza o mișcare nouă după a patra măsură de timp muzical.",
   "danceFeedbackNeedDifferentDance": "Trebuie să utilizați un dans diferit.",
   "danceFeedbackNeedEveryTwoMeasures": "Asiguraţi-vă că utilizaţi blocul 'la fiecare 2 măsuri'",
-  "danceFeedbackNeedMakeANewDancer": "Folosiţi blocul 'crează unul nou' pentru a crea un al doilea dansator."
+  "danceFeedbackNeedMakeANewDancer": "Folosiţi blocul 'crează unul nou' pentru a crea un al doilea dansator.",
+  "measure": ""
 }

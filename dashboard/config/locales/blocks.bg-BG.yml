@@ -803,11 +803,6 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
       aalab_clickedOn:
         options:
           CONDITION:
@@ -824,30 +819,15 @@ bg:
             '"left"': наляво
             '"right"': надясно
             '"space"': космос
-      aalab_location_picker:
-        text: "{LOCATION}"
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': вярно
-            '"false"': грешно
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': въртене
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-            '"tint"': оттенък
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': завинаги
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
       binary_move:
         options:
           DIR:

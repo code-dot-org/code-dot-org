@@ -10,6 +10,7 @@ require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
+require 'cdo/aws/cdo_google_credentials'
 require 'cdo/git_utils'
 require 'uri'
 
@@ -386,8 +387,6 @@ class CDOImpl < OpenStruct
 end
 
 CDO ||= CDOImpl.new
-
-require 'cdo/aws/cdo_google_credentials'
 
 ####################################################################################################
 ##

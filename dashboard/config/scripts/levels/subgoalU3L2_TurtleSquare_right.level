@@ -53,7 +53,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "long_instructions": "<img src=\"https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png\" align=right> \r\n\r\n# Do This:\r\n\r\nThis time, draw a 1 x 1 square to the *front and right* of the turtle as efficiently as possible.  Notice that there is no command to turn right! You need to figure out how to draw this by only turning left and moving forward.  The program should stop with turtle in its original position, facing its original direction.\r\n\r\nWhen you're done click the Finish button to move onto the next problem.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png\" align=right> \r\n# Do This:\r\nThis time, draw a 1 x 1 square to the *front and right* of the turtle as efficiently as possible.  Notice that there is no command to turn right! You need to figure out how to draw this by only turning left and moving forward.  The program should stop with turtle in its original position, facing its original direction.\r\n\r\nWhen you're done click the Finish button to move onto the next problem.\r\n",
     "encrypted_examples": "JTGC4NuKJO3d9ljHmuPCt5EZcab/W1voSQDCiMJtxVrknThKivTvEYoOdOol\n1G5N\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
@@ -135,12 +135,11 @@
     "expand_debugger": "false",
     "teacher_markdown": "The insight here is that we can turn right by turning left 3 times.",
     "disable_procedure_autopopulate": "false",
-    "preload_asset_list": null,
-    "mini_rubric": "false"
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:45:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-08-16 16:32:16 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2019-02-15 03:18:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:45:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-08-16 16:32:16 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

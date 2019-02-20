@@ -1639,8 +1639,6 @@ sv:
               name: Crowdsourcing
             Relay Programming:
               name: Stafettprogrammering
-            Graph Paper Programming:
-              name: Kalkyleringsprogrammering
         courseb-2018:
           assignment_family_title: Kurs B
           stages:
@@ -1901,53 +1899,3 @@ sv:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Listor
-        csd3-2019:
-          stages:
-            Variables:
-              name: variabler
-            Conditionals:
-              name: Villkor
-            Functions:
-              name: funktioner
-        csd5-2019:
-          stages:
-            Representing Images:
-              name: Representerar bilder
-            Problem Solving and Data:
-              name: Problemlösning och data
-            Automating Data Decisions:
-              name: Automatisera databeslut
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Funktioner med parametrar
-        csp4-pilot:
-          stages:
-            Surveys:
-              name: Undersökningar
-        csp1-2019:
-          stages:
-            Sending Binary Messages:
-              name: Skicka binära meddelanden
-            Number Systems:
-              name: Talsystem
-            Binary Numbers:
-              name: Binära tal
-            The Internet:
-              name: Internet
-        csp2-2019:
-          stages:
-            Text Compression:
-              name: Text komprimering
-        csp3-2019:
-          stages:
-            Creating Functions:
-              name: Skapa funktioner
-        csp5-2019:
-          stages:
-            While Loops:
-              name: '''Medan'' loopar(slingor)'

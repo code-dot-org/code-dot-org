@@ -15,15 +15,10 @@ zh-TW:
         CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: 在此修改數值
-      CSD U3 Variables Predict Where X_2019_callout:
-        CSD_U3_variables: 在此修改數值
       CSD U3 debug_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: 這兒是代碼
-        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
-      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 ellipse_callout:
@@ -32,16 +27,10 @@ zh-TW:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
-      CSD U3 ellipse_2019_callout:
-        CSD_U3_rect_c1: 這兒是代碼
-        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 fill_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: 這兒是代碼
-        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
-      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 my-rect_callout:
@@ -52,15 +41,10 @@ zh-TW:
         CSD_U3_rect_c2: 這個是「運行」按鈕。
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: 這兒是代碼
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: 這兒是代碼
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: 這兒是代碼
-        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
-      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       Counting_callout:

@@ -60,15 +60,11 @@ end
 
 # Recursively run through the data received from crowdin, sanitizing it for
 # consumption by our system.
-#
-# Sanitization rules applied:
-#   - restore carraige returns (crowdin escapes them)
-#   - eliminate empty strings from hashes (empty strings are how crowdin
-#     returns untranslated strings for certain serialization formats)
+# Currently just restores carraige returns (since crowdin escapes them), but
+# could be expanded to do more.
 def sanitize!(data)
   if data.is_a? Hash
     data.values.each {|datum| sanitize!(datum)}
-    data.delete_if {|_key, value| value.nil? || value.try(:empty?)}
   elsif data.is_a? Array
     data.each {|datum| sanitize!(datum)}
   elsif data.is_a? String

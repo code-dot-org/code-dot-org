@@ -9302,9 +9302,6 @@ zh-CN:
       courseC_data widget_authored_hint:
         courseA_playLab_events7_a: "使用此块来控制当演员碰撞时会发生什么。 \n\n<xml><block type=\"studio_whenSpriteCollided\">\n<title
           name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
-      courseC_data wizard_authored_hint:
-        courseA_playLab_events7_a: "使用此块来控制当演员碰撞时会发生什么。 \n\n<xml><block type=\"studio_whenSpriteCollided\">\n<title
-          name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:

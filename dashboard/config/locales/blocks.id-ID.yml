@@ -640,11 +640,6 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
       aalab_clickedOn:
         options:
           CONDITION:
@@ -665,24 +660,11 @@ id:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kota
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': Benar
-            '"false"': Salah
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': selamanya
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
       binary_move:
         options:
           DIR:

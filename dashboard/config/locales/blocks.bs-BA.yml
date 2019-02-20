@@ -905,11 +905,6 @@ bs:
             '"scale"': veličina
             '"rotation"': rotacija
             '"direction"': smijer kretanja
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
       aalab_clickedOn:
         options:
           CONDITION:
@@ -932,22 +927,11 @@ bs:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': istinito
-            '"false"': neistinito
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': zauvijek
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
       binary_move:
         options:
           DIR:

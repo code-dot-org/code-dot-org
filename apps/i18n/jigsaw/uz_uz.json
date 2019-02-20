@@ -1,4 +1,10 @@
 {
   "continue": "Davom etish",
-  "reinfFeedbackMsg": "o'yinga qaytish uchun siz \"Takrorlash\" tugmasini bosishingiz mumkin."
+  "nextLevel": "",
+  "no": "",
+  "numBlocksNeeded": "",
+  "reinfFeedbackMsg": "o'yinga qaytish uchun siz \"Takrorlash\" tugmasini bosishingiz mumkin.",
+  "share": "",
+  "shareGame": "",
+  "yes": ""
 }

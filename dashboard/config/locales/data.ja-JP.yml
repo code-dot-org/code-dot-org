@@ -379,7 +379,7 @@ ja:
         C4_variables_playlab: 変数 - ゲームラブ
         C4_for_loops: ループ用
         C4_for_loops_bee: ループ用
-        C4_for_loops_no_bee: forループ
+        C4_for_loops_no_bee: ループ用
         C4_math_artist: 数学でプログラミングアーティスト
         C4_function_edit: 関数の編集
         C4_function_create: 関数の作成
@@ -388,7 +388,7 @@ ja:
         C4_unplugged_algorithms: タングラムのアルゴリズム
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: 封筒内の変数
-        C4_unplugged_forloops: forループ
+        C4_unplugged_forloops: ループ用
         C4_unplugged_parameters: パラメーターで歌や曲をつくる
         C4_unplugged_binary: ２しんすう
         CSF_a_b_artist_loops: アーティストくりかえし

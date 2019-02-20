@@ -1,10 +1,12 @@
+/* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {levelType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import marked from 'marked';
+import renderer from '@cdo/apps/util/StylelessRenderer';
 
 const styles = {
   summary: {
@@ -48,11 +50,18 @@ export default class ProgressLessonContent extends React.Component {
       ));
     }
 
+    // We use dangerouslySetInnerHTML, but depend on our server markdown renderer
+    // not providing for support for most markdown features (backticks being the
+    // exception). As such, we should not end up with actually dangerous markdown
+    // here.
     return (
       <div>
-        <div style={styles.summary}>
-          <UnsafeRenderedMarkdown markdown={description || ''} />
-        </div>
+        <div
+          style={styles.summary}
+          dangerouslySetInnerHTML={{
+            __html: marked(description || '', {renderer})
+          }}
+        />
         {bubbles}
       </div>
     );

@@ -392,6 +392,7 @@ mk:
           a loop around it instead!"
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      4-5 Nested Loops 2_authored_hint: []
       4-5 Nested Loops 6_authored_hint:
         4-5_Nested_Loops_6_a: |-
           Don't forget to make a turn after your inner loop.
@@ -411,6 +412,11 @@ mk:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Each item will need its own `while` loop.
+      AppLab Intro 3 - Change Screen Color_authored_hint: []
+      AppLab Intro 4 - Change Screen Color_authored_hint: []
+      AppLab Intro 5 - Change Screen Color_authored_hint: []
+      AppLab Intro 6 - Change Screen Color_authored_hint: []
+      AppLab Intro 7 - Change Screen Color_authored_hint: []
       Artist Inspiration_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we
           did anything else.
@@ -500,6 +506,7 @@ mk:
       Course 4 Artist 6_authored_hint:
         Course_4_Artist_6_a: There are 3 triangles within the 360 degree rotation...how
           many times does 3 go into 360?
+      Course 4 Artist 7_authored_hint: []
       Course 4 Artist 8a_authored_hint:
         Course_4_Artist_8a: |-
           Need help figuring out how far to turn?
@@ -906,6 +913,7 @@ mk:
       Course 4 Play Labs For Loops 2_authored_hint:
         Course_4_Play_Labs_For_Loops_2_a: What would you add to your `for` loop every
           time to skip the even numbers?
+      Course 4 Playlab For Loop Freeplay_authored_hint: []
       Course 4 Playlab For Loops 4b_authored_hint:
         Course_4_Playlab_For_Loops_4b_a: The flags are about 330 pixels away from
           the characters.
@@ -920,6 +928,7 @@ mk:
           from the center.
         Course_4_Playlab_For_Loops_5b_b: Remember, a character's next step will be
           longer than their last, since the counter keeps getting larger.
+      Course 4 Playlab For Loops 6b_authored_hint: []
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Each hexagon has 40 pixel sides.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal
@@ -3794,6 +3803,8 @@ mk:
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      InspirationalArtwork_authored_hint: []
+      InspirationalArtwork_2018_authored_hint: []
       K2.0 sequence 1_authored_hint:
         K2.0_sequence_1_a: This program is missing one block. Can you figure out which
           one?
@@ -3953,6 +3964,8 @@ mk:
         MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
           the lava.
+      MC_HOC_2017_FP10x10_authored_hint: []
+      MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Try having the Agent build some minecart tracks so
           you can explore the world!
@@ -4342,6 +4355,7 @@ mk:
           Don't forget to change `left` to `down`!
         Valentine_playlab_01_b: Use the `move actor 1 left` block by clicking it into
           place beneath the `when left arrow clicked` event.
+      aE1_authored_hint: []
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump
           20 pixels before you start your next loop.
@@ -4389,6 +4403,7 @@ mk:
           deep.
         aE4_d: If your code becomes too confusing, you can always click "Start Over"
           and try again!
+      aE5_authored_hint: []
       aE6_authored_hint:
         aE6_a: |-
           If there are 180 degrees in a semicircle and each loop the artist makes turns 3 degrees, how many times would you need to loop to draw half of a full circle?
@@ -4416,6 +4431,7 @@ mk:
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
           the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: []
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can
           change the number at the top of the block.
@@ -4444,6 +4460,7 @@ mk:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: There should be 3 blocks inside of your loop to solve this
           puzzle.
+      artistLoopsKFP_authored_hint: []
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Comments are also helpful when other people try
           to read your code.
@@ -4822,6 +4839,7 @@ mk:
           If you make it this far, you just need to `turn left` then `move forward` a few times. Don't give up!
 
           ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+      course2_maze_programming_challenge1_authored_hint: []
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*If you send me backwards, be extra
           careful that I turn the correct way!*"
@@ -5069,6 +5087,7 @@ mk:
       course3_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: The amount of each vegetable in each
           space varies. Use `while` loops for these.
+      course3_farmer_until_challenge2_authored_hint: []
       course3_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Left or right? It's up to you!
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle!
@@ -5084,6 +5103,7 @@ mk:
           There are two different paths you can follow just using `move forward`, and only four turns. If you find a way to use the `repeat` block, there may be even more!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      course3_maze_until_challenge1_authored_hint: []
       course3_playLab_challenge1_authored_hint:
         courseE_playLab_challenge1_a: |-
           Here are some things you could do when the player wins the game:
@@ -5172,6 +5192,7 @@ mk:
           a number of pixels over to the right and a number of pixels down. This is
           always counted from the top left corner, which it means it doesn't matter
           where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      course4_artist_fwp_challenge1_authored_hint: []
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Each vertical line has a length of
           `10`. Each horizontal line should have a length of `length`.
@@ -5344,6 +5365,7 @@ mk:
           **Solution:**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      course4_bee_for_challenge1_authored_hint: []
       course4_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           The main program should look something like this:
@@ -5818,6 +5840,13 @@ mk:
           When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
 
           Have a friend try your app when it is finished!
+      courseA_artist_loops10_authored_hint: []
+      courseA_artist_loops10_2018_authored_hint: []
+      courseA_artist_loops11_authored_hint: []
+      courseA_artist_loops11_2018_authored_hint: []
+      courseA_artist_loops11_predict2_authored_hint: []
+      courseA_artist_loops12_authored_hint: []
+      courseA_artist_loops12_2018_authored_hint: []
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching
           blocks to the <xml><block type="when_run"/></xml> block to see what happens.
@@ -5939,6 +5968,8 @@ mk:
           loop."
         courseA_artist_loops9_c: If you can't figure out where to put the loop, try
           writing your code step-by-step and look for patterns.
+      courseA_artist_loops_challenge1_authored_hint: []
+      courseA_artist_loops_challenge1_2018_authored_hint: []
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml>
           will let your artist move at a slant!
@@ -5969,6 +6000,8 @@ mk:
           <xml>
           <block type="maze_nectar"/>
           </xml>
+      courseA_bee_seq10_authored_hint: []
+      courseA_bee_seq11_authored_hint: []
       courseA_bee_seq12_authored_hint:
         courseA_bee_seq1_a: |-
           Use this block to get nectar once the bee finds a flower.
@@ -5976,12 +6009,27 @@ mk:
           <xml>
           <block type="maze_nectar"/>
           </xml>
+      courseA_bee_seq13_authored_hint: []
+      courseA_bee_seq14_authored_hint: []
+      courseA_bee_seq2_authored_hint: []
+      courseA_bee_seq3_authored_hint: []
+      courseA_bee_seq4_authored_hint: []
+      courseA_bee_seq5_authored_hint: []
+      courseA_bee_seq6_authored_hint: []
+      courseA_bee_seq7_authored_hint: []
+      courseA_bee_seq8_authored_hint: []
+      courseA_bee_seq9_authored_hint: []
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           After you have moved to a square with treasure, use this block to pick it up.
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: A simple solution would be to move East 2 times,
           then get the treasure.
+      courseA_collector_loops10_authored_hint: []
+      courseA_collector_loops10_2018_authored_hint: []
+      courseA_collector_loops11_authored_hint: []
+      courseA_collector_loops11_2018_authored_hint: []
+      courseA_collector_loops11_predict2_authored_hint: []
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
           After you have moved to a square with treasure, use this block to pick it up.
@@ -6012,6 +6060,7 @@ mk:
         courseA_collector_loops3_b: Remember, you can put more than 1 block inside
           a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml> loop.
+      courseA_collector_loops3_predict1_authored_hint: []
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: To change how far Laurel goes, change the number
           of times that the loop runs.
@@ -6143,6 +6192,9 @@ mk:
       courseA_collector_loops_challenge2kp_2018_authored_hint:
         courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
         courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
+      courseA_collector_preLoops1_authored_hint: []
+      courseA_collector_preLoops2_authored_hint: []
+      courseA_collector_preLoops3_authored_hint: []
       courseA_collector_preLoops4_authored_hint:
         courseA_collector_preLoops4_a: 'To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
           blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
@@ -6159,6 +6211,7 @@ mk:
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
           <xml>  <block type="collector_collect"/></xml>
+      courseA_forVideoTest_artist_authored_hint: []
       courseA_harvester_seq1_authored_hint:
         courseA_harvester_seq1_a: |-
           Use this block to get nectar once the bee finds a flower.
@@ -6173,6 +6226,13 @@ mk:
           <xml>
           <block type="maze_nectar"/>
           </xml>
+      courseA_harvester_seq2_authored_hint: []
+      courseA_harvester_seq3_authored_hint: []
+      courseA_harvester_seq4_authored_hint: []
+      courseA_harvester_seq5_authored_hint: []
+      courseA_harvester_seq6_authored_hint: []
+      courseA_harvester_seq7_authored_hint: []
+      courseA_harvester_seq8_authored_hint: []
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
           If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>
@@ -6189,6 +6249,11 @@ mk:
         courseA_maze_seq10_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
         courseA_maze_seq10_b: You will need to go 3 directions to solve this puzzle.
+      courseA_maze_seq11_authored_hint: []
+      courseA_maze_seq11_2018_authored_hint: []
+      courseA_maze_seq12_authored_hint: []
+      courseA_maze_seq12_2018_authored_hint: []
+      courseA_maze_seq12_predict2_authored_hint: []
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to
           trace your way from the bird to the pig.
@@ -6223,6 +6288,7 @@ mk:
           one?
         courseA_maze_seq2_b: Try running the code first to see where the bird ends
           up. Where do you need to go from there?
+      courseA_maze_seq2_predict1_authored_hint: []
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: 1 of the blocks is moving the bird in the wrong direction.
           Can you figure out which one and replace it with the correct block?
@@ -6463,6 +6529,7 @@ mk:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
+      courseA_playlab_challengeTemplate_authored_hint: []
       courseA_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you
           click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
@@ -6646,6 +6713,8 @@ mk:
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
+      courseA_toMakeLoopsVideo_Collector_authored_hint: []
+      courseB_artist_loops10_authored_hint: []
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.
@@ -6682,6 +6751,7 @@ mk:
           the ladder?
         courseB_artist_loops8_b: Try running the code you're given to see what it
           does.
+      courseB_artist_loops8_predict1_authored_hint: []
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_a: Remember that jump blocks can be used to move without
           drawing a line.
@@ -6921,10 +6991,12 @@ mk:
         courseB_maze_seq10_a: Try writing down the steps on a piece of paper first.
         courseB_maze_seq10_b: You will need to move in two different directions to
           reach the pig.
+      courseB_maze_seq10_predict1_authored_hint: []
       courseB_maze_seq11_authored_hint:
         courseB_maze_seq11_a: Try writing down the steps on a piece of paper first.
         courseB_maze_seq11_b: 'Solve the puzzle in two parts: one before the corner
           and one after the corner.'
+      courseB_maze_seq1_predict1_authored_hint: []
       courseB_maze_seq2_authored_hint:
         courseB_maze_seq2_a: This program is missing one block. Can you figure out
           which one?
@@ -6968,6 +7040,7 @@ mk:
           build.
         courseB_maze_seq9_c: There are two ways to solve this puzzle.
         courseB_maze_seq9_d: Stuck?  Try this path!
+      courseB_maze_seq9_challenge1_authored_hint: []
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
         courseB_maze_seqCold_b: The extra blocks need to be added before the last
@@ -6985,6 +7058,7 @@ mk:
           solve this puzzle.
         courseB_maze_seq_challenge2_b: Rearrange the blocks and take the staircase
           pattern path.
+      courseB_playlab_challenge1_Template_authored_hint: []
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
           This is the block to have Daisy say something:
@@ -7081,6 +7155,7 @@ mk:
           <title name="SPRITE">1</title>
           </block>
           </xml>
+      courseB_playlab_eventsTemplate_authored_hint: []
       courseB_playlab_eventsToolbox_authored_hint:
         courseB_playlab_events7_a: |-
           This is the event block that you will need:
@@ -7196,6 +7271,8 @@ mk:
         courseB_starWars_prog1_b: |
           You will want to move East to solve this puzzle. How far do you need to move?
           <xml><block type="studio_moveEast"/></xml>
+      courseB_starWars_prog10_authored_hint: []
+      courseB_starWars_prog11_authored_hint: []
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: Split this problem into two parts. Get one one pile
           of scrap metal, then figure out how to get to the other one.
@@ -7255,6 +7332,7 @@ mk:
           to see what happens, even if you haven't solved the puzzle yet.
         courseB_starWars_prog9_b: There are many ways to solve this puzzle.
         courseB_starWars_prog9_c: Could a `repeat` loop help out here?
+      courseC_PlayLab_embed_events9_authored_hint: []
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
@@ -7496,6 +7574,8 @@ mk:
           To move forward 50 pixels, use this block:
 
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+      courseC_artist_prog1_authored_hint: []
+      courseC_artist_prog1_2018_authored_hint: []
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: '*"If you use the <xml><block type="draw_move_by_constant"><title
           name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
@@ -7588,6 +7668,8 @@ mk:
           on its corner.
         courseC_artist_prog6_c: Since this diamond is also a square, be sure to turn
           90 degrees at the corners.
+      courseC_artist_prog6_predict1_authored_hint: []
+      courseC_artist_prog6_predict1_2018_authored_hint: []
       courseC_artist_prog7_authored_hint:
         courseC_artist_prog7_a: Every angle is either 45 or 90 degrees.
         courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the
@@ -7626,6 +7708,8 @@ mk:
         courseC_artist_prog7_e: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
+      courseC_artist_prog8_authored_hint: []
+      courseC_artist_prog8_2018_authored_hint: []
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Use 60 degree angles to make the roof.
       courseC_artist_prog_challenge1_authored_hint:
@@ -7704,6 +7788,8 @@ mk:
           moving in the right direction?  Pull one from the toolbox.
         courseC_collector_prog7_c: Having trouble seeing a route to collect all of
           the treasure?  Try this path!
+      courseC_collector_prog8_authored_hint: []
+      courseC_collector_prog9_authored_hint: []
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Try using the "Step" button to go through your
           code line by line.
@@ -7715,6 +7801,7 @@ mk:
           at each space.
         courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve
           the puzzle!
+      courseC_external_events_authored_hint: []
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
@@ -7742,11 +7829,14 @@ mk:
       courseC_flappy_events9_authored_hint:
         courseC_flappy_events9_a: Connect the `set score 0` block to the `when hit
           an obstacle` event to pass this level.
+      courseC_flappy_events_template_authored_hint: []
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block
           type="harvester_pumpkin"/></xml> to collect it.
         courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml>
           block to pick more than one pumpkin from a square.
+      courseC_harvester_loops10_authored_hint: []
+      courseC_harvester_loops11_authored_hint: []
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper
           and looking for repeating patterns.
@@ -7790,6 +7880,7 @@ mk:
         courseC_harvester_loops8_b: If you want to simplify your code more, you can
           actually put one `repeat` loop inside of another! This is called a **nested
           loop**.
+      courseC_harvester_loops9_authored_hint: []
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: This is too hard without loops!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick
@@ -7863,6 +7954,7 @@ mk:
           This spiral pattern can be coded with just 18 blocks!
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_forVid_authored_hint: []
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           - Does everything work after the first step?
@@ -7984,6 +8076,10 @@ mk:
           - What is Scrat supposed to do?
           - What does Scrat do?
           - What does that tell you?
+      courseC_maze_debugging8_predict1_authored_hint: []
+      courseC_maze_debugging8_predict1_2018_authored_hint: []
+      courseC_maze_debugging9_authored_hint: []
+      courseC_maze_debugging9_2018_authored_hint: []
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Left or right? It's up to you!
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle!
@@ -7997,6 +8093,9 @@ mk:
           There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      courseC_maze_loops10_authored_hint: []
+      courseC_maze_loops10_predict2_authored_hint: []
+      courseC_maze_loops11_authored_hint: []
       courseC_maze_loops2_authored_hint:
         courseC_maze_loops2_a: You can solve this puzzle with just three blocks, including
           `when run`.
@@ -8115,6 +8214,8 @@ mk:
         courseC_maze_programming8_b: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
+      courseC_maze_programming8_predict1_authored_hint: []
+      courseC_maze_programming9_authored_hint: []
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: There are many ways to get to the pig.
           Use your finger to find a path and then program it!
@@ -8124,8 +8225,10 @@ mk:
         courseC_maze_programming_challenge2_b: |-
           The shortest solution uses only 5 blocks, but it uses this block:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_playLab_embedded_authored_hint: []
       courseC_puppy_loops10_authored_hint:
         courseC_puppy_loops9_1: I need to move two or three time between each turn.
+      courseC_puppy_loops11_authored_hint: []
       courseC_puppy_loops8_authored_hint:
         2-3_Maze_Loops_17_a: Try thinking about this problem in small parts. Take
           your time. You don't need to solve it on the first try!
@@ -8161,6 +8264,8 @@ mk:
           `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code
           to see what happens, even if you haven't solved the puzzle yet.
+      courseC_starWars_loops10_predict2_authored_hint: []
+      courseC_starWars_loops11_authored_hint: []
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then
           put the block you want inside of it.
@@ -8251,6 +8356,8 @@ mk:
         courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary
           and running the code to see what will happen, even if you haven't solved
           the puzzle yet.
+      courseD_artist_binaryFP_authored_hint: []
+      courseD_artist_binaryFP8_authored_hint: []
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: There are only few lines wrong in the
           original program.
@@ -8259,6 +8366,9 @@ mk:
           The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
 
           There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
+      courseD_artist_embed_frozen_authored_hint: []
+      courseD_artist_embed_frozen2_authored_hint: []
+      courseD_artist_embedded_project1a_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -8315,6 +8425,7 @@ mk:
           loop with two blocks inside. Which blocks do you need?
         courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking
           for patterns that can be simplified with loops.
+      courseD_artist_nestedLoops10_authored_hint: []
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: |-
           You will need to draw a total of 6 triangles. After finishing each triangle, rotate 60 degrees and move to start the next triangle.
@@ -8407,6 +8518,7 @@ mk:
           - draw a triangle
           - jump forward 50 pixels
           - turn right by 45 degrees
+      courseD_artist_nestedLoops9_predict1_authored_hint: []
       courseD_artist_nestedLoopsFP_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
@@ -8420,6 +8532,7 @@ mk:
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
 
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
+      courseD_artist_nestedLoopsPre1_authored_hint: []
       courseD_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Start by changing the color to blue,
           then create an octagon with 50 pixel sides and 45 degree left turns.
@@ -8463,6 +8576,8 @@ mk:
           `jump forward` does not.
         courseD_artist_project2_b: After you draw and move the first time, you can
           repeat the code by adding a loop around the outside.
+      courseD_artist_project2Template_authored_hint: []
+      courseD_artist_project2Template_2018_authored_hint: []
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while
           `jump forward` does not.
@@ -8544,6 +8659,9 @@ mk:
           Lines of 2 hexagons and 4 triangles:
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
+      courseD_artist_projectTemplate_authored_hint: []
+      courseD_artist_projectTemplate_2018_authored_hint: []
+      courseD_artist_project_embedded_authored_hint: []
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels`
           block, and change the 100 to a 200.
@@ -8562,6 +8680,7 @@ mk:
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
+      courseD_bee_conditionals10_authored_hint: []
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
@@ -8676,6 +8795,7 @@ mk:
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
           puzzle.
+      courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Can you find a path that reaches every
           flower and honeycomb without hitting any trees? The best path is a spiral.
@@ -8777,6 +8897,7 @@ mk:
         courseD_bee_debugging9_c: "Envision one of these stair steps to the flowers.
           \  \n\n![](https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)\n\nCan
           you build either of these with what's in the workspace and toolbox?\n\n"
+      courseD_bee_debugging9_predict1_authored_hint: []
       courseD_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Why does the first half of this program
           work? Think about why the bee needs to move backward. How much nectar does
@@ -8868,6 +8989,8 @@ mk:
           the code on paper step-by-step and look for a pattern.
         courseD_bee_nestedLoops2_c: Remember you can put more than one block inside
           of a loop.
+      courseD_bee_nestedLoops2_predict1_authored_hint: []
+      courseD_bee_nestedLoops2_predict1_2018_authored_hint: []
       courseD_bee_nestedLoops3_authored_hint:
         grade4_bee_nestedLoops1_a: If you don't understand how to use nested loops
           here, try writing out the instructions step by step on a piece of paper.  Circle
@@ -8879,6 +9002,7 @@ mk:
           You will need a nested loop to move forward and get nectar, but only a single loop to collect honey at the end.
 
           Altogether, you should be using 3 loops.
+      courseD_bee_nestedLoops6_authored_hint: []
       courseD_bee_nestedLoops6_2018_authored_hint:
         courseD_maze_nestedLoops6_a: If you are stuck, try writing out the code out
           on paper without loops first and look for patterns.
@@ -8914,6 +9038,12 @@ mk:
           - get nectar
           - move forward
           - turn right
+      courseD_bee_nestedLoops8_authored_hint: []
+      courseD_bee_nestedLoops8_2018_authored_hint: []
+      courseD_bee_nestedLoops9_authored_hint: []
+      courseD_bee_nestedLoops9_2018_authored_hint: []
+      courseD_bee_nestedLoops9_predict2_authored_hint: []
+      courseD_bee_nestedLoops9_predict2_2018_authored_hint: []
       courseD_bee_nested_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat`
           a single command or a longer pattern. You can even `repeat` a `repeat` block!
@@ -8983,6 +9113,7 @@ mk:
       courseD_bounce_events7s_authored_hint:
         courseD_bounce_events7s_a: You can add sounds in more places if you feel like
           it!
+      courseD_bounce_events_template_authored_hint: []
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -9116,11 +9247,13 @@ mk:
           with a loop?
         courseD_collector_debugging8_b: Try using a nested loop to make this code
           shorter.
+      courseD_collector_debugging8a_authored_hint: []
       courseD_collector_debugging9_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
         courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
           then move step-by-step to try to make the code match what is in your head.
+      courseD_collector_debugging9a_authored_hint: []
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "Start by collecting just **two**
           gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
@@ -9280,6 +9413,7 @@ mk:
           collecting it. Can you repeat this sequence to get the second pile?
         courseD_collector_ramp9_b: If you want to simplify your code, you can put
           one repeat loop inside of another! This is called a **nested loop**.
+      courseD_collector_until_challenge1_authored_hint: []
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -9334,6 +9468,7 @@ mk:
         courseD_debugging_6_b: It looks like all of the right steps are here, you
           just need more of them.  How can you repeat the `get nectar` and `make honey`
           actions multiple times?
+      courseD_external_cond_authored_hint: []
       courseD_farmer_condLoops1_authored_hint:
         courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using
           a repeat loop.
@@ -9393,6 +9528,9 @@ mk:
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         courseD_farmer_condLoops7_b: Try using `when path ahead` to keep the farmer
           moving the right number of steps.
+      courseD_farmer_condLoops8_authored_hint: []
+      courseD_farmer_condLoops9_authored_hint: []
+      courseD_farmer_condLoops9_predict1_authored_hint: []
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: The "Step" button could be very helpful
           in this challenge.
@@ -9401,6 +9539,8 @@ mk:
       courseD_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: The amount of each vegetable in each
           space can change. A `while` loop can help!
+      courseD_farmer_condLoops_challenge2_clone_authored_hint: []
+      courseD_farmer_conditionals10_authored_hint: []
       courseD_farmer_conditionals4_authored_hint:
         courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
           loop to keep digging until the pile is gone.
@@ -9422,11 +9562,15 @@ mk:
           `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
           path ahead`, `while there is a hole` code six times.
+      courseD_farmer_conditionals9_authored_hint: []
+      courseD_farmer_until_challenge2_authored_hint: []
       courseD_farmer_while1_authored_hint:
         courseD_farmer_while1_a: You will need to move forward four times to get to
           the pile. Can you use a `repeat` loop for this?
         courseD_farmer_while1_b: Use the `remove 1` block when you are standing on
           the pile of dirt to remove it.
+      courseD_farmer_while10_authored_hint: []
+      courseD_farmer_while10_predict2_authored_hint: []
       courseD_farmer_while2_authored_hint:
         courseD_farmer_while2_a: You will only need to move once to get to the hole.
         courseD_farmer_while2_b: You will need the `fill 1` block six times. Can you
@@ -9440,6 +9584,7 @@ mk:
           loop to keep digging until the pile is gone.
         courseD_farmer_conditionals4_b: This looks very similar to an earlier puzzle,
           the only difference is which loop you need.
+      courseD_farmer_while4_predict1_authored_hint: []
       courseD_farmer_while5_authored_hint:
         courseD_farmer_conditionals5a_a: Try nesting a `while` loop inside of a `repeat`
           loop.
@@ -9479,6 +9624,7 @@ mk:
           `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
           path ahead`, `while there is a hole` code six times.
+      courseD_farmer_while9_authored_hint: []
       courseD_farmer_while_challenge1_authored_hint:
         courseD_farmer_while_challenge1_a: Each hole or pile is located one space
           **backward** from the end of the path.
@@ -9665,6 +9811,10 @@ mk:
         courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
+      courseD_maze_ramp5c_authored_hint: []
+      courseD_maze_ramp5c_2018_authored_hint: []
+      courseD_maze_ramp5d_authored_hint: []
+      courseD_maze_ramp5d_2018_authored_hint: []
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: There are two ways to solve this puzzle!
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to
@@ -9684,9 +9834,12 @@ mk:
         courseD_maze_until1_a: Are there any sequences you can loop to make your code
           shorter?
         courseD_maze_until1_b: Try using a nested loop to solve this puzzle.
+      courseD_maze_until10_authored_hint: []
+      courseD_maze_until10_predict2_authored_hint: []
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: An `until pig` loop will help you keep going until
           you succeed!
+      courseD_maze_until2_predict1_authored_hint: []
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_a: |-
           - What does your code do?
@@ -9744,6 +9897,10 @@ mk:
           forward?
         courseD_maze_until8_c: Remember to use the `repeat until` block to get you
           to the sunflower!
+      courseD_maze_until_challenge_authored_hint: []
+      courseD_maze_until_challenge1-delete-this-copy_authored_hint: []
+      courseD_maze_until_challenge1_authored_hint: []
+      courseD_maze_until_challenge2_authored_hint: []
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1
           up` block to the `when up arrow` event, then do the same for every other
@@ -9796,6 +9953,10 @@ mk:
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: []
+      courseD_playLab_embedded_authored_hint: []
+      courseD_scrat_predict1_authored_hint: []
+      courseD_scrat_predict1_2018_authored_hint: []
       courseD_scrat_ramp1_authored_hint:
         courseC_maze_programming1_a: If Scrat isn't getting to the acorn, make sure
           all three of the blocks have been fully snapped together, then click "Run"
@@ -9966,6 +10127,7 @@ mk:
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
+      courseE_artist_embed_functions8_authored_hint: []
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: The squares each have 100 pixel sides, that means
           that you will have to move forward 175 pixels before drawing your second
@@ -10210,6 +10372,11 @@ mk:
           a number of pixels over to the right and a number of pixels down. This is
           always counted from the top left corner, which it means it doesn't matter
           where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      courseE_artist_functions_predict1_authored_hint: []
+      courseE_artist_functions_predict1_2018_authored_hint: []
+      courseE_artist_functions_predict2_authored_hint: []
+      courseE_artist_functions_predict2_2018_authored_hint: []
+      courseE_artist_predict1_authored_hint: []
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which
           loop do you need to put that instruction inside?
@@ -10601,6 +10768,7 @@ mk:
           this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could
           you use a loop to get to it?
+      courseE_farmer_functions10_authored_hint: []
       courseE_farmer_functions10b_authored_hint:
         courseE_farmer_functions10b_a: You will have to re-create your function first.
         courseE_farmer_functions10b_b: Which way do you need to turn after the first
@@ -10613,6 +10781,8 @@ mk:
           pumpkin?
         courseE_farmer_functions10b_c: Look back at the last puzzle if you need help
           making the function.
+      courseE_farmer_functions11_predict_authored_hint: []
+      courseE_farmer_functions11_predict_2018_authored_hint: []
       courseE_farmer_functions1_2018_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently
           this time! Click on the different categories to see which blocks you have.
@@ -10626,6 +10796,8 @@ mk:
         courseE_farmer_functions1a_a: Think through the `if/else` statements step
           by step. What should you do if you are standing at a corn plant?
         courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
+      courseE_farmer_functions2a_authored_hint: []
+      courseE_farmer_functions2aALT_authored_hint: []
       courseE_farmer_functions2b_authored_hint:
         courseE_farmer_functions2b_a: You can use a `repeat until pumpkin` to get
           to the ends of the two paths.
@@ -10685,6 +10857,8 @@ mk:
         courseE_farmer_functions4b_b: Remember to turn after each path.
         courseE_farmer_functions4b_c: The green `corn and pumpkin` blocks are in the
           Functions tab of the toolbox.
+      courseE_farmer_functions5_authored_hint: []
+      courseE_farmer_functions5a_authored_hint: []
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: You will need to use a `while corn` loop, a
           `while lettuce` and a `while pumpkin` to make sure you get everything.
@@ -10700,6 +10874,8 @@ mk:
         courseE_farmer_functions5c_b: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you haven't
           solved the puzzle yet.
+      courseE_farmer_functions6_authored_hint: []
+      courseE_farmer_functions6b_authored_hint: []
       courseE_farmer_functions6c_authored_hint:
         courseE_farmer_functions6c_a: Edit your function to check for the lettuce
           as well.
@@ -10712,6 +10888,7 @@ mk:
         courseE_farmer_functions6c_b: Would an `if/else` block help to check if there
           is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
+      courseE_farmer_functions7_authored_hint: []
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can
           make one if it is helpful to you!
@@ -10758,9 +10935,11 @@ mk:
           of the paths.
         courseE_farmer_functions9b_c: You will want to move through the paths as if
           they are squares getting larger after each loop.
+      courseE_farmer_functions9b_clone_authored_hint: []
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
           a reminder of how to pick produce only **while** there is produce to pick.
+      courseE_farmer_predict2_authored_hint: []
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: If you're having a hard time seeing where the loops
           should go, try coding it all out then looking for a pattern.
@@ -10807,6 +10986,8 @@ mk:
           the puzzle yet.
         courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry
           about empty spaces, corn, or pumpkins.
+      courseE_farmer_ramp12b_authored_hint: []
+      courseE_farmer_ramp12b_2018_authored_hint: []
       courseE_farmer_ramp12c_authored_hint:
         courseE_farmer_ramp12b_b: You will still need to use an `until` loop first,
           then use a `while` loop once you get to the lettuce.
@@ -10859,6 +11040,7 @@ mk:
           there is nothing?
         courseE_farmer_ramp16_c: Use an `if/else` block to keep moving forward. Which
           way do you need to turn when the forward path is blocked?
+      courseE_maze_predict1_authored_hint: []
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
           all three of the blocks have been fully clicked together, then click "Run"
@@ -10913,6 +11095,7 @@ mk:
         courseD_maze_ramp7_c: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
+      courseE_maze_ramp_predict1_authored_hint: []
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Try using the "Step" button to run your code
           line by line. Can you figure out what you need to do next?
@@ -10952,6 +11135,7 @@ mk:
           * Make the dinosaur say something.
           * Set a new background.
           * Make all of the actors vanish and show a "Game Over" message.
+      courseE_playLab_embed_scaffold5_authored_hint: []
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used
           to add an actor to the stage.
@@ -10980,6 +11164,8 @@ mk:
           with a direction to move underneath each.
         courseE_playLab_scaffold1_c: When you are done, you should be able to move
           your hero with the arrow keys!
+      courseE_playLab_scaffold3_authored_hint: []
+      courseE_playLab_scaffold3_2018_authored_hint: []
       courseE_playLab_scaffold4_authored_hint:
         courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove
           point` to subtract one.
@@ -11144,6 +11330,8 @@ mk:
           puzzle where it needs to be. '
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
           have them happen immediately after the program starts.
+      courseF_IceAge_template_authored_hint: []
+      courseF_artist_embed_for7_authored_hint: []
       courseF_artist_for1_authored_hint:
         courseF_artist_for1_a: |-
           Can you draw something like this:
@@ -11325,6 +11513,8 @@ mk:
           </next>
           </block>
           </xml>
+      courseF_artist_for10_predict1_authored_hint: []
+      courseF_artist_for10_predict1_2018_authored_hint: []
       courseF_artist_for1_2018_authored_hint:
         courseF_artist_for1_a: |-
           Can you draw something like this:
@@ -11974,6 +12164,8 @@ mk:
           inside your `move forward` block!
         courseF_artist_fwp2_b: When calling your function, use a `for loop` for the
           best possible code!
+      courseF_artist_fwp2_predict1_authored_hint: []
+      courseF_artist_fwp2_predict1_2018_authored_hint: []
       courseF_artist_fwp3_authored_hint:
         courseF_artist_fwp3_a: This gets easier if you put it all in a `for` loop.
         courseF_artist_fwp3_b: |-
@@ -12090,6 +12282,7 @@ mk:
           **Solution:**
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
+      courseF_artist_predict1_authored_hint: []
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which
           loop do you need to put that instruction inside?
@@ -12667,6 +12860,8 @@ mk:
           for nectar or honey.
         courseF_bee_conditionals10_c: Could a `while` loop help get to the end of
           this path?
+      courseF_bee_conditionals1_predict1_authored_hint: []
+      courseF_bee_conditionals1_predict1_2018_authored_hint: []
       courseF_bee_conditionals2_authored_hint:
         courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
@@ -12737,6 +12932,8 @@ mk:
         courseF_bee_conditionals5_d: To continue down the path, the bee will need
           to `move forward`. While on the path, the bee needs to check for a flower.
           What should the bee do if there is a flower?
+      courseF_bee_conditionals7_predict2_authored_hint: []
+      courseF_bee_conditionals7_predict2_2018_authored_hint: []
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`)
@@ -12816,6 +13013,8 @@ mk:
           nectar is gathered to solve this puzzle. '
         courseF_bee_for3_b: Your `for` loop will need to count from 1 to 5 with an
           increment of 1.
+      courseF_bee_for3_predict1_authored_hint: []
+      courseF_bee_for3_predict1_2018_authored_hint: []
       courseF_bee_for4_authored_hint:
         courseF_bee_for4_a: Use a `for` loop that goes from 1 to 7 with an increment
           of 1 to solve this puzzle.
@@ -12906,6 +13105,8 @@ mk:
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
+      courseF_bee_for_challenge1_authored_hint: []
+      courseF_bee_for_challenge1_2018_authored_hint: []
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: 'Try using two `for` loops: One for climbing
@@ -13789,6 +13990,9 @@ mk:
         courseF_bee_fwp8_a: How could a `for` loop help in this puzzle?
         courseF_bee_fwp8_b: Since the spiral gets smaller as you go in, your `for`
           loop should count down.
+      courseF_bee_fwp9_authored_hint: []
+      courseF_bee_fwp9_predict1_authored_hint: []
+      courseF_bee_fwp9_predict1_2018_authored_hint: []
       courseF_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           The main program should look something like this:
@@ -14465,6 +14669,7 @@ mk:
           the lettuce.  Instead, drag your lettuce picking repeat loop inside of another
           loop (along with a <xml><block type="maze_moveForward"/></xml> block, and
           you'll have it!)
+      courseF_maze_predict1_authored_hint: []
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
           of the blocks have been fully snapped together, then click "Run" again.
@@ -15001,9 +15206,11 @@ mk:
           you can change the number at the top of the block.
       grade1_artist_loops2_authored_hint:
         grade1_artist_loops2_a: Remember to use a `repeat` loop for better code!
+      grade1_artist_loops3_authored_hint: []
       grade1_artist_loops4_authored_hint:
         grade1_artist_loops4_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
+      grade1_artist_loops5_authored_hint: []
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: This challenge uses FOUR loops, one right after another!
         grade1_artist_loops6_b: |-
@@ -15013,6 +15220,7 @@ mk:
         grade1_artist_loops6_c: "The loops should do this:\n- Loop 1\n  - Right\n
           \ - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n-
           Loop 4\n  - Left\n  - Down"
+      grade1_artist_loops7_authored_hint: []
       grade1_artist_loops7a_authored_hint:
         artistLoopsK9_a: This challenge uses FOUR loops, one right after another!
         artistLoopsK9_b: |-
@@ -15025,6 +15233,9 @@ mk:
       grade1_artist_loops7b_authored_hint:
         grade1_artist_loops7b_a: How many times should you repeat the pattern to make
           the ladder?
+      grade1_artist_loops8_authored_hint: []
+      grade1_artist_loops9_authored_hint: []
+      grade1_artist_loopsFP_authored_hint: []
       grade1_maze_sequence1_authored_hint:
         grade1_maze_sequence1_a: This program is missing one block. Can you figure
           out which one?
@@ -15070,6 +15281,7 @@ mk:
       grade2_CaringForNewPet_1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbox out
           into the workspace and connect it to the `when run` block.
+      grade2_CaringForNewPet_11_authored_hint: []
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
           delete a block from the middle of your code, drag all of the blocks underneath
@@ -15083,6 +15295,7 @@ mk:
           times.
         hint3: To follow the path, move forward and turn one way, then move again
           and turn the opposite way. Move forward one more time to reach the pig.
+      grade2_CaringForNewPet_3D_authored_hint: []
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: There are two ways to solve this puzzle!
       grade2_CaringForNewPet_5_authored_hint:
@@ -15105,6 +15318,7 @@ mk:
           sides.
       grade2_MakeDogTag_3_authored_hint:
         2-3_Artist_4_a: To finish the rocket, just draw the triangle on top!
+      grade2_MakeDogTag_4_authored_hint: []
       grade2_MakeDogTag_5_authored_hint:
         grade2_MakeDogTag_5a: The artist is already facing the correct way to draw
           his first line.
@@ -15125,6 +15339,7 @@ mk:
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
         2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
           inside the loop.
+      grade2_MakeDogTag_BFP_authored_hint: []
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           How many times did my shape repeat?
@@ -15159,6 +15374,8 @@ mk:
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
+      grade2_collector_A_authored_hint: []
+      grade2_maze_debuggingFP_authored_hint: []
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.
       grade2_playlab_project_6_authored_hint:
@@ -15437,6 +15654,8 @@ mk:
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern,
           try covering the blocked paths with your finger.
+      grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: []
+      grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: []
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_5a: Try nesting a `while` loop inside
           of a `repeat` loop.
@@ -15465,6 +15684,7 @@ mk:
           You will be looping this shape 6 times over 360 degrees.
 
           **360 / 6 = ?**
+      grade4_arist_nested_loop_triangles2_authored_hint: []
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
           Don't forget to make a turn after your inner loop.
@@ -15579,6 +15799,7 @@ mk:
           You will be looping this shape 6 times over 360 degrees.
 
           **360 / 6 = ?**
+      grade4_artist_nested_loop_triangles2_authored_hint: []
       grade4_artist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
           Don't forget to make a turn after your inner loop.
@@ -15744,6 +15965,8 @@ mk:
           to set it to `1` before you start.
         grade5_artist_for_loops7_b: Notice that this spiral turns right instead of
           left!
+      grade5_artist_for_loops7a_authored_hint: []
+      grade5_artist_for_loops7b_authored_hint: []
       grade5_artist_for_loops8_authored_hint:
         Course_4_Artist_For_Loops_11_a: "The turn angle will change with each shape!
           \ \n\nUse the math block to enter 360 divided by the number of sides the
@@ -16005,6 +16228,7 @@ mk:
       gradek_artist_loopsA_authored_hint:
         artistLoopsKB_a: There should be 2 blocks inside of your loop to solve this
           puzzle.
+      gradek_artist_loopsFP_authored_hint: []
       gradek_playlab_events1a_authored_hint:
         gradek_playlab_events1a_a: Attach the `move up` block to the `when click`
           event so that the cat moves up when the "up" button is pressed.
@@ -16052,6 +16276,8 @@ mk:
         courseE_farmer_functions1a_a: Think through the `if/else` statements step
           by step. What should you do if you are standing at a corn plant?
         courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
+      harvey_snowflake_artist1_authored_hint: []
+      harvey_snowflake_artist2_authored_hint: []
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       iceage_click_hello_authored_hint:
@@ -16149,6 +16375,7 @@ mk:
         iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
           you will need to connect the `set actor 2 mood to happy` block beneath the
           `when actor 2 touches projectile` event.
+      iceage_warn_embed_ice_age_authored_hint: []
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
           puzzle where it needs to be. '
@@ -16159,6 +16386,7 @@ mk:
           puzzle where it needs to be. '
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
           have them happen immediately after the program starts.
+      k1stickerfreeplay_authored_hint: []
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       level 'grade3_Loops_11_authored_hint:
@@ -16209,3 +16437,4 @@ mk:
         sample6_a: Did you know that you can use more than one repeat loop in a puzzle?
         sample6_b: Sometimes repeat loops have lots of blocks inside, and sometimes
           they might only have one!
+      sample7assessment_authored_hint: []

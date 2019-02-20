@@ -1304,8 +1304,6 @@ si:
               name: Crowdsourcing වැඩසටහන
             Relay Programming:
               name: ක්‍රමලේඛණය ප්‍රතිචාරණය
-            Graph Paper Programming:
-              name: ප්‍රස්තාර රටා වැඩසටහන්
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1512,36 +1510,3 @@ si:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-        csd2-2019:
-          stages:
-            Lists:
-              name: ලැයිස්තු
-        csd3-2019:
-          description_short: "ක්‍රමලේඛනය"
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: පරාමිතියන් සහිත ශ්‍රිත
-        csp4-pilot:
-          stages:
-            Surveys:
-              name: සමීක්ෂණ
-        csp1-2019:
-          stages:
-            The Internet:
-              name: අන්තර්ජාලය
-        csp3-2019:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
-        csp5-2019:
-          stages:
-            While Loops:
-              name: නැවත සිදුවන ලුප

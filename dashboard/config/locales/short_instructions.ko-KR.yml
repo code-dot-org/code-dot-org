@@ -668,9 +668,6 @@ ko:
       CSPU5_U3L15 full clicker app_2018: |-
         클리커 게임을 끝내세요
         (힌트를 보려면 여기를 눌러보세요)
-      CSPU5_U3L15 full clicker app_2019: |-
-        클리커 게임을 끝내세요
-        (힌트를 보려면 여기를 눌러보세요)
       Course 2 Bee Loops 1: "안녕하세요! 여러분? 저는 꿀벌입니다.\n이 꽃들로부터 꽃꿀을 모을 수 있게 도와주세요. "
       Course 2 Maze Loops 1: 5 개의 블록들만 사용해서 돼지로 이동시켜 주세요.
       Course 4 2: 꿀벌이 꽃꿀을 모으고 있습니다. 꽃들에서만 꽃꿀을 모을 수 있게 해 주세요.
@@ -1201,10 +1198,8 @@ ko:
         10 부터 0 까지 포인트를 내려서 이 레벨을 통과해보세요.
       Crack Random Substitution: 소개
       Crack Random Substitution_2018: 소개
-      Crack Random Substitution_2019: 소개
       Crack a Caesar Cipher: 소개
       Crack a Caesar Cipher_2018: 소개
-      Crack a Caesar Cipher_2019: 소개
       Dance_Party_01: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
       Dance_Party_01_low: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
       Dance_Party_02: 4번째 마디 후 사슴이 새로운 움직임을 시작하도록 하세요!
@@ -1771,7 +1766,6 @@ ko:
         \r\n\"메우기\" 블록을 사용하여 구덩이가 다 메워질 때까지 계속 흙을 채우는 프로그램을 작성해 보세요.  "
       The Vigenere Cipher Widget: 소개
       The Vigenere Cipher Widget_2018: 소개
-      The Vigenere Cipher Widget_2019: 소개
       The Vigenere Cipher: 소개
       Total Artist Clone Me: |-
         자유 플레이: 여기 여러분들이 작성한 함수들과 가지고 놀 수 있는 몇 개의 함수가 더 있습니다.
@@ -1785,7 +1779,6 @@ ko:
       U4 vigenere cipher 2: 소개
       U4L02 - Objects - Template1: 템플릿
       U4L02 - Objects - Template1_2018: 템플릿
-      U4L02 - Objects - Template1_2019: 템플릿
       Underground Avoiding Lava: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약)
         명령은 여기서 유용할 거에요. 올바른 곳에 "앞으로 이동" 명령을 더해서 이 블록을 채굴하세요.
       Underground Avoiding Lava_2018: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약)

@@ -180,20 +180,6 @@ hu:
         * Ismételd meg annyiszor, ahány oldalt szeretnél hozzáadni.\r
         \r
 
-      CSD U2 create page_2019: |+
-        # Hozd létre, és nevezd el az új oldaladat\r
-        \r
-        Mielőtt
-        elkezdesz kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,
-        amire szükséged lesz a projektben.\r
-        \r
-        # Tedd a következőt\r
-        * Hozz létre egy új HTML oldalt, majd nevezd át.
-        (Nézd meg a [6. szint 8. feladványát](/s/csd2/stage/6/puzzle/8), ha elfelejtetted, hogyan kell
-        csinálni.)\r
-        * Ismételd meg annyiszor, ahány oldalt szeretnél hozzáadni.\r
-        \r
-
       CSD U2 header footer: |-
         # Fejléc és lábléc\r
         \r
@@ -210,21 +196,6 @@ hu:
         \r
 
       CSD U2 header footer_2018: |-
-        # Fejléc és lábléc\r
-        \r
-        Minden
-        oldalon legyen fejléc és lábléc.\r
-        \r
-        # Tedd a következőket\r
-        * Minden oldal esetén 
-        bizonyosodj meg róla, hogy az tartalmazza az oldal címét és egy navigációs menüt, ami
-        a weblapod további oldalaira hivatkozik. A fejléc átismétléséhez keresd fel a
-         [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\r
-        * Minden oldal esetén
-        bizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal felhasználási feltételeit.\r
-        \r
-
-      CSD U2 header footer_2019: |-
         # Fejléc és lábléc\r
         \r
         Minden
@@ -319,9 +290,7 @@ hu:
       Dance_Party_11: "A <xml><block type=\"Dancelab_whenKey\"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.\n\nMódosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!"
       Dance_Party_11_5: "Nézd meg ezt a blokkot:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nMost már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!\n\nAz „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni."
       Dance_Party_11b: |-
-        Indulhat a táncverseny! A Macska legyint, amikor megnyomod a balra nyilat. Állítsd be, hogy a Robot „spárga“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat.
-
-        **Használd a nyilakat, hogy a robot olyan gyorsan ismételje a spárga-taps-spárga-taps mozdulatokat, ahogy csak tudod!**
+        Indulhat a táncverseny! A Macska legyint, amikor megnyomod a balra nyilat. Állítsd be, hogy a Robot „drop“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat.
       Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd meg az ismerőseiddel.
       Dance_Party_extras_battle: |-
         # Tánccsapatok
@@ -517,9 +486,6 @@ hu:
       courseD_bee_nestedLoops8: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'
       courseD_bee_nestedLoops8_2018: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'
       courseD_bee_nestedLoops8_2019: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'
-      courseD_bounce_events5s: Most egy kosárlabda fog repülni a kéz felé. Adj egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül elérje a kosarat.
-      courseD_bounce_events5s_2018: Most egy kosárlabda fog repülni a kéz felé. Adj egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül elérje a kosarat.
-      courseD_bounce_events5s_2019: Most egy kosárlabda fog repülni a kéz felé. Adj egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül elérje a kosarat.
       courseD_maze_nestedLoops4: 'Juttass el a napraforgóhoz!'
       courseD_maze_nestedLoops4_2018: 'Juttass el a napraforgóhoz!'
       courseD_maze_nestedLoops4_2019: 'Juttass el a napraforgóhoz!'

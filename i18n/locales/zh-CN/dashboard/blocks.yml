@@ -651,8 +651,6 @@ zh-CN:
         text: 将 {SPRITE} 加入组 {THIS}
       gamelab_addBehaviorSimple:
         text: 精灵 {SPRITE} 开始 {BEHAVIOR}
-      gamelab_addBehaviorUntil:
-        text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
       gamelab_beginBehavior:
         text: 开始 {BEHAVIOR}
       gamelab_bounceOff:
@@ -834,8 +832,6 @@ zh-CN:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
       gamelab_moveUp:
         text: "{THIS} 向上移动"
-      gamelab_playSound:
-        text: 播放音效{SOUND}
       gamelab_pointInDirection:
         text: 指向 {SPRITE} {DIRECTION}
         options:
@@ -915,8 +911,6 @@ zh-CN:
             '"East"': 东
             '"South"': 南
             '"West"': 西
-      gamelab_spriteSay:
-        text: 精灵 {SPRITE} 说 {TEXT}
       gamelab_spritesWhere:
         text: 精灵的 {PROPERTY} 为 {VALUE}
         options:
@@ -1278,11 +1272,6 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': 当
-            '"while"': 当
       aalab_clickedOn:
         options:
           CONDITION:
@@ -1311,37 +1300,15 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
             '"space"': 空间
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 东
-            '"South"': 南
-            '"West"': 西
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': 真
-            '"false"': 错
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': 永远
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       binary_drawPixelHere:
         options:
           VAL:

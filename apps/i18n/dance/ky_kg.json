@@ -1,2 +1,14 @@
 {
+  "danceFeedbackNeedNewDancer": "",
+  "danceFeedbackNoDancers": "",
+  "danceFeedbackNoBackground": "",
+  "danceFeedbackTooManyDancers": "",
+  "danceFeedbackUseSetSize": "",
+  "danceFeedbackUseSetTint": "",
+  "danceFeedbackUseStartMapping": "",
+  "danceFeedbackStartNewMove": "",
+  "danceFeedbackNeedDifferentDance": "",
+  "danceFeedbackNeedEveryTwoMeasures": "",
+  "danceFeedbackNeedMakeANewDancer": "",
+  "measure": ""
 }

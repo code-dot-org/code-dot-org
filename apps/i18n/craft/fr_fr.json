@@ -233,6 +233,7 @@
   "miniBlockWheat": "blé",
   "miniBlockWool": "laine",
   "nextLevelMsg": "Casse-tête {puzzleNumber} terminé. Bravo !",
+  "oldBlockHandling": "",
   "oldBlockHandlingsDestroy": "détruire",
   "oldBlockHandlingsKeep": "garder",
   "oldBlockHandlingsReplace": "remplacer",

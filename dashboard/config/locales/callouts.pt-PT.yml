@@ -6,25 +6,17 @@ pt:
         CSD_U3_variables: Altera o número aqui
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: Altera o número aqui
-      CSD U3 Variables Predict Where X_2019_callout:
-        CSD_U3_variables: Altera o número aqui
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Aqui estão o código
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: Aqui estão o código
-      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Aqui estão o código
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: Aqui estão o código
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Aqui estão o código
-      CSD U3 ellipse_2019_callout:
-        CSD_U3_rect_c1: Aqui estão o código
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Aqui estão o código
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: Aqui estão o código
-      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Aqui estão o código
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Aqui estão o código
@@ -34,13 +26,9 @@ pt:
         CSD_U3_rect_c2: Aqui está o botão "Executar".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Aqui estão o código
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: Aqui estão o código
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Aqui estão o código
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: Aqui estão o código
-      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Aqui estão o código
       Course 4 Artist 4_callout:
         repeat_full_circle: Insira o número de vezes que o zumbi deve se mover para

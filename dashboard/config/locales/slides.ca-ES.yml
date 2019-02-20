@@ -396,6 +396,7 @@ ca:
         text: La zona central és la caixa d'eines, i cada un d'aquests blocs és una
           peça de codi. L'espai blanc a la dreta s'anomena l'àrea de treball i aquí
           és on construirem el programa.
+      4: 
       5:
         text: En el primer trencaclosques, el nostre personatge és un pingüí i farem
           que digui "Hola" arrossegant el bloc dir cap a fora, unint-lo al bloc quan
@@ -415,6 +416,8 @@ ca:
       2:
         text: Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una
           tecla de fletxa o quan es toca la pantalla.
+      3: 
+      4: 
     playlab_repeat_forever:
       1:
         text: Aquest és el bloc de "repetir per sempre". Qualsevol cosa dins d'aquest
@@ -422,16 +425,19 @@ ca:
       2:
         text: Si volem que l'actor faci alguna cosa repetidament, sense que el jugador
           hagi de fer res, posarem els blocs dins del bloc "repetir per sempre".
+      3: 
     C2_playlab_createstory:
       1:
         text: Fins ara heu estat fent una animació o una història que fa exactament
           la mateixa cosa cada vegada que s'executa. Ara podeu fer un joc interactiu
           que de fet podeu jugar.
+      2: 
     C3_playlab_create_game:
       1:
         text: Fins ara heu estat fent una animació o una història que fa exactament
           la mateixa cosa cada vegada que s'executa. Ara podeu fer un joc interactiu
           que de fet podeu jugar.
+      2: 
     mc_intro:
       1:
         text: Em dic Jens Bergensten però em coneixen com Jeb. Jo sóc el desenvolupador
@@ -566,10 +572,26 @@ ca:
       4:
         text: Ara pots construir el que vulguis. Diverteix-te!
     gumball_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem
           el nostre programa.
+      7: 
+      8: 
+      9: 
     iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem
           el nostre programa.
+      7: 
+      8: 
+      9: 

@@ -705,14 +705,6 @@ export default function manageStudents(state = initialState, action) {
   return state;
 }
 
-export const getStudentCount = state => {
-  const studentData = {...state.manageStudents.studentData};
-  // Delete placeholder row for adding a student where id is set to 0.
-  delete studentData[0];
-
-  return Object.keys(studentData).length;
-};
-
 // Converts data from /dashboardapi/sections/sectionid/students to a set of key/value
 // objects for the redux store
 export const convertStudentServerData = (studentData, loginType, sectionId) => {

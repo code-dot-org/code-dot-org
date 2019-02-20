@@ -6,27 +6,27 @@ Feature: Using the assessments tab in the teacher dashboard
   Scenario: Assessments tab survey submissions
     Given I create an authorized teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
     And I sign out
 
     And I create a student named "Student2"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
     And I sign out
 
     And I create a student named "Student3"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
     And I sign out
 
     And I create a student named "Student4"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
     And I sign out
 
     And I create a student named "Student5"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
     And I sign out
 
     # Assign a script with an unlocked survey

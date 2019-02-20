@@ -1432,8 +1432,6 @@ ga:
               name: Sluafhoinsiú
             Relay Programming:
               name: Códáil sealaíochta
-            Graph Paper Programming:
-              name: Ríomhchlárú ar Ghrafpháipéar
         courseb-2018:
           assignment_family_title: Cúrsa B
           stages:
@@ -1663,43 +1661,3 @@ ga:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algartaim Fhíorshaoil: Síol a Chur'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Liostaí
-        csd3-2019:
-          description_short: "Códáil"
-          stages:
-            Variables:
-              name: Athróga
-            Conditionals:
-              name: Coinníollacha
-            Velocity:
-              name: Treoluas
-            Functions:
-              name: Feidhmeanna
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Feidhmeanna a ghlacann le Paraiméadair
-        csp4-pilot:
-          stages:
-            Surveys:
-              name: Suirbhéanna
-        csp1-2019:
-          stages:
-            The Internet:
-              name: An tIdirlíon
-        csp3-2019:
-          description_short: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript trí dhearadh ó bharr anuas agus líníocht "turtair".
-          stages:
-            Creating Functions:
-              name: Feidhmeanna a chruthú
-        csp4-2019:
-          stages:
-            Simple Encryption:
-              name: Criptiú Simplí
-        csp5-2019:
-          stages:
-            While Loops:
-              name: Lúba "Chomh fada is"

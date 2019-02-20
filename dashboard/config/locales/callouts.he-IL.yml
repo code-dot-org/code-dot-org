@@ -51,25 +51,16 @@ he:
         grid: לחצו כאן על מנת להציג את הרשת.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: לחצו כאן על מנת להציג את הרשת.
-      CSD U3 Variables Predict Where XY Embed_2019_callout:
-        grid: לחצו כאן על מנת להציג את הרשת.
       CSD U3 Variables Predict Where XY_callout:
         grid: לחצו כאן על מנת להציג את הרשת.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: לחצו כאן על מנת להציג את הרשת.
-      CSD U3 Variables Predict Where XY_2019_callout:
-        grid: לחצו כאן על מנת להציג את הרשת.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: שנו את המספר כאן
-      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: שנו את המספר כאן
       CSD U3 debug_callout:
         CSD_U3_rect_c1: הנה הקוד
         CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: הנה הקוד
-        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
-      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: הנה הקוד
         CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
       CSD U3 ellipse_callout:
@@ -78,16 +69,10 @@ he:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: הנה הקוד
         CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
-      CSD U3 ellipse_2019_callout:
-        CSD_U3_rect_c1: הנה הקוד
-        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: הנה הקוד
         CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: הנה הקוד
-        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
-      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: הנה הקוד
         CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
       CSD U3 my-rect_callout:
@@ -98,40 +83,27 @@ he:
         CSD_U3_rect_c2: כאן מופיע כפתור 'הרץ'.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: הנה הקוד
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: הנה הקוד
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: הנה הקוד
         CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: הנה הקוד
         CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
-      CSD U3 sequence_2019_callout:
-        CSD_U3_rect_c1: הנה הקוד
-        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: הוסיפו את הקוד שלכם כאן
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: הוסיפו את הקוד שלכם כאן
-      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: הוסיפו את הקוד שלכם כאן
       CSD U6 light show predict_callout:
         CSDUDL03P09: מה עושה השורה הזאת?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: מה עושה השורה הזאת?
-      CSD U6 light show predict_2019_callout:
-        CSDUDL03P09: מה עושה השורה הזאת?
       CSD U6 light show_callout:
         CSDUDL03P09: מה עושה השורה הזאת?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: מה עושה השורה הזאת?
-      CSD U6 light show_2019_callout:
-        CSDUDL03P09: מה עושה השורה הזאת?
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: בדוק אם השחקן ניצח
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: בדוק אם השחקן ניצח
-      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: בדוק אם השחקן ניצח
       Counting_callout:
         New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
