@@ -95,6 +95,7 @@ export default class DatePicker extends React.Component {
   static propTypes = {
     date: PropTypes.object,
     onChange: PropTypes.func.isRequired,
+    onBlur: ReactDatePicker.propTypes.onBlur,
     minDate: PropTypes.object,
     maxDate: PropTypes.object,
     selectsStart: PropTypes.bool,
@@ -127,6 +128,7 @@ export default class DatePicker extends React.Component {
         }
         selected={this.props.date}
         onChange={this.handleChange}
+        onBlur={this.props.onBlur}
         dateFormat={DATE_FORMAT}
         minDate={this.props.minDate}
         maxDate={this.props.maxDate}
