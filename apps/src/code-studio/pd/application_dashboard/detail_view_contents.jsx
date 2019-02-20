@@ -29,7 +29,6 @@ import {
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
-import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import {
   InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,
