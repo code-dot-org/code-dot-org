@@ -29,14 +29,6 @@ var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
 import {ICON_PREFIX_REGEX} from './constants';
 
-const GOOGLE_SAFE_BROWSING_THREAT_TYPES = [
-  'THREAT_TYPE_UNSPECIFIED',
-  'MALWARE',
-  'SOCIAL_ENGINEERING',
-  'UNWANTED_SOFTWARE',
-  'POTENTIALLY_HARMFUL_APPLICATION'
-];
-
 var applabCommands = {};
 export default applabCommands;
 
@@ -1556,29 +1548,21 @@ applabCommands.onEvent = function(opts) {
   return false;
 };
 
-function filterUrl(url) {
-  let req = new XMLHttpRequest();
-  req.onreadystatechange = function() {
-    console.log(this.responseText);
-  };
-  req.open(
-    'POST',
-    `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=${
-      getAppOptions().safeBrowsingKey
-    }`,
-    true
-  );
-  req.setRequestHeader('Content-type', 'application/json');
-  req.send(
-    JSON.stringify({
-      threatInfo: {
-        threatTypes: GOOGLE_SAFE_BROWSING_THREAT_TYPES,
-        platformTypes: ['ANY_PLATFORM'],
-        threatEntryTypes: ['URL'],
-        threatEntries: [{url: url}]
-      }
+function filterUrl(urlToCheck) {
+  $.ajax({
+    url: '/safe_browsing/',
+    method: 'POST',
+    contentType: 'application/json',
+    dataType: 'json',
+    data: JSON.stringify({url: urlToCheck})
+  })
+    .success(data => {
+      let approved = data['approved'];
+      console.log('Url determined safe to open: ' + approved);
     })
-  );
+    .fail((jqXhr, status) => {
+      console.log('Error. Please re-run program');
+    });
 }
 
 applabCommands.openUrl = function(opts) {
