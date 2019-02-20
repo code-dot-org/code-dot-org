@@ -34,16 +34,25 @@ et:
         grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where XY_callout:
         grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Muuda numbrit siin
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Muuda numbrit siin
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 ellipse_callout:
@@ -52,10 +61,16 @@ et:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 my-rect_callout:
@@ -66,23 +81,34 @@ et:
         CSD_U3_rect_c2: Siin on nupp "Käivita".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Siin on kood
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Siin on kood
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Määratle startGame siin
       CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Määratle startGame siin
+      CSD U6 tugowar variables 1_2019_callout:
         CSD_U6_startGame: Määratle startGame siin
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Määratle movePlayer() siin
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Määratle movePlayer() siin
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Määratle movePlayer() siin
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
       Course 4 Artist 4_callout:
         repeat_full_circle: Sisesta, mitu korda peab zombi liikuma, et teha üks täisring

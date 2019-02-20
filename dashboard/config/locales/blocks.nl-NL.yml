@@ -870,6 +870,11 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
       aalab_clickedOn:
         options:
           CONDITION:
@@ -892,11 +897,23 @@ nl:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': wanneer
-            '"while"': terwijl
+          VAL:
+            '"true"': waar
+            '"false"': onwaar
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': voor altijd
       binary_move:
         options:
           DIR:
@@ -928,7 +945,7 @@ nl:
             "'left'": naar links
       craft_ifStandingOn:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -940,7 +957,7 @@ nl:
             "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:

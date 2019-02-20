@@ -550,6 +550,19 @@ en:
         hoc_dance_congrats: Dance Party - Party On!
         c_and_c_great_to_create: It's Great to Create and Play Fair
         c_and_c_digital_sharing: Digital Sharing
+        'Teaching CS Fundamentals: How the Course Works': 'Teaching CS Fundamentals: How the Course Works'
+        elem_pd_2: Elementary School Computer Science - PD video 2/2
+        what_is_cs: What is computer science?
+        repeat_block: Using the Repeat Block
+        lesson_planning: Lesson Planning
+        opd_closing: 'Teaching CS Fundamentals: Closing & Next Steps'
+        why_unplugged_lessons: Getting "unplugged"
+        writing_first_program: Writing your first computer program
+        conditionals_with_cards: Unplugged Lesson in Action - Conditionals with Cards
+        songwriting_with_functions: Unplugged Lesson in Action - Songwriting with Functions
+        what_is_an_event: What is an event?
+        teaching_cs_pair_programming: 'Teaching CS Fundamentals: Pair Programming'
+        teaching_problem_solving: 'Teaching CS Fundamentals: Teaching Problem Solving'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

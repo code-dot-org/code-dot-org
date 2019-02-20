@@ -1,6 +1,6 @@
 var p5Inst = new p5(null, 'sketch');
 
-function preload() {
+window.preload = function () {
   initMobileControls(p5Inst);
 
   p5Inst._predefinedSpriteAnimations = {};
@@ -49,8 +49,8 @@ function preload() {
   }
   window.wrappedExportedCode = wrappedExportedCode;
   wrappedExportedCode('preload');
-}
+};
 
-function setup() {
+window.setup = function () {
   window.wrappedExportedCode('setup');
-}
+};

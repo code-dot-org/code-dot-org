@@ -38,8 +38,10 @@ $(document).ready(function() {
   validateAnimationJSON(
     document.getElementById('level_start_animations').value
   );
-  initializeCodeMirror('level_start_animations', 'json', codeMirror => {
-    validateAnimationJSON(codeMirror.getValue());
+  initializeCodeMirror('level_start_animations', 'json', {
+    callback: codeMirror => {
+      validateAnimationJSON(codeMirror.getValue());
+    }
   });
 
   // Leniently validate and fix up custom block JSON using jsonic
