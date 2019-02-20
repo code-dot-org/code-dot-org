@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+Pd::Application::Teacher1920Application.find_each do |application|
+  if application.properties["scholarship_status"]
+    application.update_scholarship_status(application.properties["scholarship_status"])
+  end
+end
