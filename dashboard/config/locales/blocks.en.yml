@@ -1559,6 +1559,12 @@ en:
             '"4"': 4 seconds
             '"5"': 5 seconds
             '"0"': forever
+      aalab_showSpriteLabel:
+        text: show label{TEXT} {LOCATION} sprite{SPRITE}
+        options:
+          LOCATION:
+            '"above"': above
+            '"below"': below
       aalab_speakerSaysConsole:
         text: "{SPRITE} says {MESSAGE}"
       aalab_spriteSay:
