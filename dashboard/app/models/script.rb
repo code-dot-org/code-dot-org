@@ -216,12 +216,7 @@ class Script < ActiveRecord::Base
   def self.valid_scripts(user)
     has_any_course_experiments = Course.has_any_course_experiments?(user)
     with_hidden = !has_any_course_experiments && user.hidden_script_access?
-    cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
-    scripts = Rails.cache.fetch(cache_key) do
-      Script.
-          all.
-          select {|script| with_hidden || !script.hidden}
-    end
+    scripts = with_hidden ? all_scripts : visible_scripts
 
     if has_any_course_experiments
       scripts = scripts.map do |script|
@@ -231,6 +226,22 @@ class Script < ActiveRecord::Base
     end
 
     scripts
+  end
+
+  class << self
+    private
+
+    def all_scripts
+      Rails.cache.fetch('valid_scripts/all') do
+        Script.all
+      end
+    end
+
+    def visible_scripts
+      Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.reject(&:hidden)
+      end
+    end
   end
 
   # @param [User] user
