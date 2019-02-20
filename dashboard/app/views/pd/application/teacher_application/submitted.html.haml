@@ -17,12 +17,9 @@
   %p
     Thank you for supporting computer science education at your school!
 
-- ga_link = "/pd/application/teacher/submitted"
-- ga_link += "?nominated=true" if params[:nominated]
-
 :javascript
   $(document).ready(function() {
     // Report a unique page view to GA.
-    ga('set', 'page', "#{ga_link}");
+    ga('set', 'page', '/pd/application/teacher/submitted');
     ga('send', 'pageview');
   });

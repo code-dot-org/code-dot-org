@@ -444,8 +444,9 @@ it:
         (TNT)
       2-3 Maze Loops 1: Riesci a farmi arrivare al maialino usando 5 blocchi?
       2-3 Maze Loops 17: Fammi arrivare al girasole, usando quello che hai imparato!
-      2-3 Maze Loops 18: Fammi arrivare al girasole usando il minor numero possibile
-        di blocchi!
+      2-3 Maze Loops 18: |-
+        Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
+        Prova ad usare un blocco `ripeti ... volte` (<i>ciclo</i>) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
       2-3 Maze Loops 19: Usa i cicli per farmi arrivare al girasole col minor numero
         possibile di blocchi!
       2-3 Maze Loops 20: Prova a risolvere questo esercizio usando meno blocchi possibile.
@@ -1801,10 +1802,8 @@ it:
         Iniziamo con 10 punti così non è troppo difficile. Lascia che il punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
       Crack Random Substitution: Istruzioni
       Crack Random Substitution_2018: Istruzioni
-      Crack Random Substitution_2019: Istruzioni
       Crack a Caesar Cipher: Istruzioni
       Crack a Caesar Cipher_2018: Istruzioni
-      Crack a Caesar Cipher_2019: Istruzioni
       D_Frozen_nested3: Ora fai ruotare queste fila di figure!
       D_Frozen_nested4: È ora di sovrapporre queste forme!
       D_Frozen_nested5: Gioca con i fiocchi di neve!
@@ -2789,7 +2788,6 @@ it:
         <b>Suggerimento</b>: usa le opzioni nel menù a discesa del blocco `mentre`.
       The Vigenere Cipher Widget: Istruzioni
       The Vigenere Cipher Widget_2018: Istruzioni
-      The Vigenere Cipher Widget_2019: Istruzioni
       The Vigenere Cipher: Istruzioni
       Total Artist Clone Me: "Tempo di giocare: qui ci sono tutte le funzioni che
         hai scritto e anche qualcuna in più con cui puoi giocare: `draw a pinwheel`
@@ -2802,7 +2800,6 @@ it:
       U4 vigenere cipher 2: Istruzioni
       U4L02 - Objects - Template1: Template
       U4L02 - Objects - Template1_2018: Template
-      U4L02 - Objects - Template1_2019: Template
       Underground Avoiding Lava: Sotto alcuni di questi blocchi c'è la lava, che devi
         coprire per poter andare avanti. L'istruzione `se` ti è utile in questi casi.
         Aggiungi un istruzione `vai avanti` nel posto giusto per estrarre tutte le

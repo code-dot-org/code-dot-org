@@ -343,12 +343,30 @@ az:
         text: Salam, mənim adım Lindsidir. Mən model və aktrisayam, həm də özüm tətbiqi
           proqramlar yazıram. Gəlin, buzun sehri və gözəlliyini kəşf edən Anna və
           Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək.
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
     frozen_loops:
+      1: 
       2:
         text: Proqramlaşdırmada biz buna dövr deyirik. Dövr proqramınızı təkrar-təkrar
           yenidən icra etməyin yoludur. Növbəti tapmacada tapşırığınız Annanın "təkrar
           et" bloku ilə kvadrat düzəltməsinə kömək etməkdir.
+      3: 
+      4: 
+      5: 
     playlab_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: İlk addımı atın və axırda siz öz oyununuzu düzəldə biləcəksiniz. Cürbəcür
           oyunçular qarşılıqlı ünsiyyət qura, xoşbəxt və ya qəmli ola, xallar qazana
@@ -358,3 +376,7 @@ az:
       1:
         text: Bu dərsin adı Şən xəritələrdir. Bu gün biz balaca tüklü dostumuz Flurba
           meyvəsinə yetişməkdə kömək edəsiyik.
+      2: 
+      3: 
+      4: 
+      5: 

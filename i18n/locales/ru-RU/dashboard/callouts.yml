@@ -26,25 +26,16 @@ ru:
         grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Нажмите здесь, чтобы показать сетку.
-      CSD U3 Variables Predict Where XY Embed_2019_callout:
-        grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where XY_callout:
         grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Нажмите здесь, чтобы показать сетку.
-      CSD U3 Variables Predict Where XY_2019_callout:
-        grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Поменяйте число здесь
-      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Поменяйте число здесь
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: Вот код
-        CSD_U3_rect_c2: Перетащите этот блок в область кода.
-      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 ellipse_callout:
@@ -53,16 +44,10 @@ ru:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
-      CSD U3 ellipse_2019_callout:
-        CSD_U3_rect_c1: Вот код
-        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: Вот код
-        CSD_U3_rect_c2: Перетащите этот блок в область кода.
-      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 my-rect_callout:
@@ -73,40 +58,27 @@ ru:
         CSD_U3_rect_c2: Здесь находится кнопка «Запустить».
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Вот код
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: Вот код
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
-      CSD U3 sequence_2019_callout:
-        CSD_U3_rect_c1: Вот код
-        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Добавь свой код здесь
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Добавь свой код здесь
-      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Добавь свой код здесь
       CSD U6 light show predict_callout:
         CSDUDL03P09: Что делает эта линия?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Что делает эта линия?
-      CSD U6 light show predict_2019_callout:
-        CSDUDL03P09: Что делает эта линия?
       CSD U6 light show_callout:
         CSDUDL03P09: Что делает эта линия?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: Что делает эта линия?
-      CSD U6 light show_2019_callout:
-        CSDUDL03P09: Что делает эта линия?
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Проверьте, если игрок выиграл
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Проверьте, если игрок выиграл
-      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Проверьте, если игрок выиграл
       Counting_callout:
         New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их в свою программу
@@ -353,8 +325,6 @@ ru:
       U3L08 how to add comments_callout:
         comment_highlight: Перетащить блок с комментариями в ваш код
       U3L08 how to add comments_2018_callout:
-        comment_highlight: Перетащить блок с комментариями в ваш код
-      U3L08 how to add comments_2019_callout:
         comment_highlight: Перетащить блок с комментариями в ваш код
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Этот код проверит наличие лавы, можешь добавить команду движения вперед?

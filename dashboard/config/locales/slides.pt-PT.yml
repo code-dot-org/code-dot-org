@@ -630,9 +630,12 @@ pt:
       1:
         text: Esta lição é chamada Mapas felizes. Hoje vamos ajudar o nosso amiguinho
           peludo Flurb chegar ao seu fruto.
+      2: 
+      3: 
       4:
         text: Crie o seu algoritmo colando setas no mapa que está a tentar resolver.
           O segundo é o mesmo, mas vai para baixo.
+      5: 
     C2_playlab_createstory:
       1:
         text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas
@@ -654,6 +657,7 @@ pt:
           Você pode usar esses blocos juntos para mover os personagens usando as teclas
           de direção.
     infinity_playlab_intro:
+      1: 
       2:
         text: A ciência de computação é a base para muitas coisas que os alunos universitários
           e profissionais irão fazer nos próximos vinte ou trinta anos. Eu gosto de
@@ -661,6 +665,11 @@ pt:
           de criar algo que vai facilitar a vida das pessoas. Eu acho que é a coisa
           mais próxima que temos de uma superpotência. A parte mais importante é a
           de começar. Eu sou um principiante e eu quero aprender comigo próprio.
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
     mc_intro:
       1:
         text: O meu nome é Jens Bergensten, mas conhecem-me por Jeb. Sou o diretor
@@ -799,13 +808,29 @@ pt:
       4:
         text: Agora podes construir o que quiseres. Diverte-te!
     gumball_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: 'O espaço branco à direita é chamado o espaço de trabalho, e é aí que
           vamos construir o nosso programa. '
+      7: 
+      8: 
+      9: 
     iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: 'O espaço branco à direita é chamado o espaço de trabalho, e é aí que
           vamos construir o nosso programa. '
+      7: 
+      8: 
+      9: 
     mc_2016_intro:
       1:
         text: Olá, chamo-me Jens e sou o designer criativo principal de Minecraft.
@@ -908,6 +933,17 @@ pt:
           hiperligação para partilhar com os teus amigos ou para jogar no teu telemóvel.
           Diverte-te! Estou à espera de jogar a tua versão de Minecraft.
     mc_2017_agent_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
       11:
         text: Se te esqueceres do que tens de fazer, tens as instruções para cada
           nível ao cimo.
+      12: 

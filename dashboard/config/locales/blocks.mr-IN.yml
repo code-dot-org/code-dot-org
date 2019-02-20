@@ -72,7 +72,3 @@ mr:
         text: कोणताही रंग
       Mikelab_randomColor:
         text: कोणताही रंग
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': बरोबर

@@ -1,7 +1,7 @@
 class Pd::InternationalOptInController < ApplicationController
   load_resource :international_opt_in, class: 'Pd::InternationalOptIn', id_param: :contact_id, only: [:thanks]
 
-  # GET /pd/international_workshop
+  # GET /pd/international_workshopss/new
   def new
     return render '/pd/application/teacher_application/logged_out' unless current_user
     return render '/pd/application/teacher_application/not_teacher' unless current_user.teacher?

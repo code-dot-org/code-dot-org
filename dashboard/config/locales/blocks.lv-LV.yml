@@ -364,11 +364,6 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
       aalab_clickedOn:
         options:
           CONDITION:
@@ -385,23 +380,15 @@ lv:
             '"left"': pa kreisi
             '"right"': pa labi
             '"space"': telpa
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': pilsēta
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': patiess
-            '"false"': nepatiess
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
       binary_move:
         options:
           DIR:

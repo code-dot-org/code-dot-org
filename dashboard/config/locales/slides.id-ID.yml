@@ -882,6 +882,7 @@ id:
           inginkan dalam mengulang blok. Jadi dalam contoh ini, anda mengatakan itu
           untuk bergerak maju dan belok kiri, yang akan melakukan lima kali. Bersenang-senang!
     C2_artist_intro:
+      1: 
       2:
         text: Dalam teka-teki ini, anda akan menjadi seorang seniman yang menggunakan
           pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi,
@@ -897,7 +898,9 @@ id:
           kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan
           jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin
           seniman itu berputar. Ini adalah putaran 90 derajat.
+      5: 
     C2_binary_bracelets:
+      1: 
       2:
         text: Berpasangan merupakan cara untuk menunjukkan informasi dengan hanya
           menggunakan dua pilihan. Terkadang orang-orang menganggap ini hanya 1s dan
@@ -918,6 +921,7 @@ id:
           Robot akan melakukannya dengan mata biner mereka dan menghitungnya untuk
           anda.
     C2_conditionals_with_cards:
+      1: 
       2:
         text: Saya ingin berjalan ke taman tapi pertama-tama saya harus memutuskan
           apakah saya harus membawa payung atau tidak. Jadi saya melihat ke luar jendela.
@@ -945,9 +949,12 @@ id:
           bagaimana kondisional berfungsi, anda dapat menciptakan segala macam permainan
           yang seru.
     C2_artist_debugging:
+      1: 
+      2: 
       3:
         text: Oh, ada masalah! Kumis kucing panjangnya 75 piksel, bukan 25.
     C2_digital_footprint:
+      1: 
       2:
         text: Gunakan hati anda untuk tumbuh dan tumbuh, dan untuk memberikan anda
           cahaya yang sehat, dan untuk memberi sebuah valentin, beritahu seseorang
@@ -980,7 +987,11 @@ id:
           kaki anda saat anda sedang online, berdiri melawan pengganggu yang melewati
           batas, dan ingatlah untuk berdiri tegak, bersikap baik terhadap makhluk-makhluk
           besar dan kecil.
+      6: 
     C2_graph_paper:
+      1: 
+      2: 
+      3: 
       4:
         text: Saya menggunakan algoritma dalam pekerjaan saya. Jika saya menuliskan
           semua langkah, saya dapat menciptakan kembali bagian yang sama lagi, atau
@@ -989,6 +1000,9 @@ id:
           mangkuk. Algoritma-algoritma memberikan anda peta jalan untuk mendapatkan
           sesuatu.
     C2_paper_airplanes:
+      1: 
+      2: 
+      3: 
       4:
         text: Ketika kami ingin membuat coklat, ada banyak langkah besar menuju proses
           itu. Dan masing-masing langkah besar itu memiliki ukuran langkah yang lebih
@@ -1008,6 +1022,9 @@ id:
           aktor". Anda dapat menempatkan blok ini bersama-sama untuk menggerakan aktor
           dengan tombol panah.
     C2_relay_programming:
+      1: 
+      2: 
+      3: 
       4:
         text: Di sini, saya mencoba memegang kembali, tapi saya terus terjatuh. Saya
           melalui setiap bagian, selangkah demi selangkah, dan menyadari di mana letak
@@ -1017,6 +1034,7 @@ id:
           senang, saya dapat bersalto. Kami tahu itu! Penelusuran adalah menemukan
           dan memperbaiki masalah. Bagus, kerjaan yang bagus!
     C2_zuck_repeat_loop:
+      1: 
       2:
         text: Jadi misalnya jika saya ingin mengucapkan semua orang di Facebook ucapan
           selamat ulang tahun dengan mengirimkan email kepada mereka, mungkin perlu
@@ -1025,6 +1043,7 @@ id:
           sebuah sistem mengirim email ke semua orang di Facebook untuk mengucapkan
           selamat ulang tahun kepada mereka. Jadi itulah caranya, dan mengapa itu
           berharga, dan sesuatu yang dapat dilakukan dengan baik oleh komputer.
+      3: 
       4:
         text: Atau anda dapat memberitahukan komputer untuk "maju terus" sekali, lalu
           katakan "ulangi" sebanyak 5 kali, dan itu akan melakukan hal yang sama.
@@ -1032,6 +1051,7 @@ id:
           lalu anda memasukkannya ke dalam blok "ulangi". Dan anda dapat mengkliknya
           dan memberitahukannya berapa kali anda ingin mengulang blok tersebut untuk
           memberitahukannya berapa banyak langkah yang anda inginkan untuk terus maju.
+      5: 
     C3_artist_functions:
       1:
         text: Salah satu hal yang hebat dalam pemrograman komputer adalah saat anda
@@ -1046,6 +1066,7 @@ id:
           kembali dan memanggil fungsi itu, kode itu. Itu akan berhasil untuk kami.
           Kami telah menambahkan konsep itu ke bahasa pemrograman kami.
     C3_artist_intro:
+      1: 
       2:
         text: Dalam teka-teki ini, anda akan menjadi seorang seniman yang menggunakan
           pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi,
@@ -1061,6 +1082,7 @@ id:
           kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan
           jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin
           seniman itu berputar. Ini adalah putaran 90 derajat.
+      5: 
     C3_bee_functions:
       1:
         text: Salah satu konsep terpenting dalam ilmu komputer adalah bagaimana mendefinisikan
@@ -1109,7 +1131,11 @@ id:
           tersebut. Setelah kami menghancurkan masalah besar tersebut menjadi beberapa
           masalah yang lebih kecil, kami dapat melanjutkan ke trik berikutnya, yang
           disebut permainan pola.
+      4: 
+      5: 
     C3_crowdsourcing:
+      1: 
+      2: 
       3:
         text: Saat anda menonton sebuah film, setiap detik dari film tersebut adalah
           24 gambar individu, kami menyebutnya kerangka-kerangka. Jadi setiap gambar
@@ -1129,6 +1155,7 @@ id:
           dan mereka mengambilnya untuk menciptakan gambar terakhir dan mengolahnya
           dan membuatnya terlihat cantik dan terlihat menyenangkan.
     C3_dice_race:
+      1: 
       2:
         text: Langkah berpikir dari pemecahan masalah menghasilkan sebuah algoritma,
           yang merupakan langkah demi langkah rencana untuk memecahkan suatu masalah
@@ -1145,6 +1172,7 @@ id:
           bersama teman anda atau memperbaiki sebuah hal kecil. Untuk menyelesaikan
           semua tugas tersebut, anda harus memecahnya menjadi langkah-langkah yang
           lebih kecil dan terkadang langkah-langkahnya harus dalam urutan tertentu.
+      4: 
       5:
         text: Algoritma merupakan pemikiran di balik apa yang harus terjadi saat program
           sedang memberi instruksi yang benar ke komputer untuk mewujudkannya. Algoritma
@@ -1153,6 +1181,8 @@ id:
           dilakukan. Tapi seperti keterampilan baru, ini terlihat lebih mudah lebih
           mudah dan lebih mudah dengan latihan.
     C3_internet:
+      1: 
+      2: 
       3:
         text: Mengirim pesan-pesan di internet hampir sama seperti mengirim pesan-pesan
           melalui pos tapi dengan beberapa perbedaan. Saya di sini di Google.com.
@@ -1202,6 +1232,9 @@ id:
           dapat dengan baik melakukan hal-hal itu dengan kecepatan yang luar biasa.
           Sebuah program komputer benar-benar sedikit matematika dan beberapa pernyataan
           pengandaian di mana keputusan dibuat.
+      2: 
+      3: 
+      4: 
     C3_playlab_create_game:
       1:
         text: Sejauh ini Anda telah membuat animasi atau cerita yang melakukan hal
@@ -1217,6 +1250,9 @@ id:
           sudah mengajarkan komputer bagaimana melakukan suatu tindakan, anda dapat
           memanggil fungsi itu lagi. Anda memberinya nama dan kemudian anda dapat
           memanggilnya. Itu benar-benar seperti memperluas bahasa.
+      2: 
+      3: 
+      4: 
     starwars_intro:
       1:
         image: catatan/starwars_pengenalan_1.JPG
@@ -1397,6 +1433,7 @@ id:
         image: catatan/starwars_selamat_blok_1.JPG
       2:
         image: catatan/starwars_selamat_blok_2.JPG
+      3: 
       4:
         text: "[pembicaraan murid-murid} Kami membuat sebuah permainan di mana anda
           tidak bisa kalah dan semua yang anda bunuh memberi anda poin. Untuk program
@@ -1405,6 +1442,7 @@ id:
           ke kiri. Ini sungguh sulit! Terkadang anda hanya mendapatkan keuntungan,
           keuntungan yang tidak adil jika anda adalah seorang pengembang permainan
           tersebut. Apakah saya mengerti Ya!"
+      5: 
     mc_intro:
       1:
         text: Namaku Jens Bergensten tapi lebih dikenal sebagai Jeb. Saya adalah kepala
@@ -1545,13 +1583,29 @@ id:
       4:
         text: Sekarang kamu bisa membangun apa saja yang kamu inginkan. Selamat bersenang-senang!
     gumball_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: Ruang putih di sebelah kanan disebut area kerja dan di sinilah kita
           akan membuat program.
+      7: 
+      8: 
+      9: 
     iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: Ruang putih di sebelah kanan disebut area kerja dan di sinilah kita
           akan membuat program.
+      7: 
+      8: 
+      9: 
     mc_2016_intro:
       1:
         text: Hai, nama saya Jens dan saya adalah seorang perancang kreatif terkemuka
@@ -1566,7 +1620,16 @@ id:
           dengan teknologi sehingga pekerjaan ini adalah pekerjaan yang sempurna bagi
           saya untuk mengumpulkan teknik komputer dengan psikologi: bagaimana orang
           berpikir dan berperilaku.'
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
     mc_2016_loops:
+      1: 
+      2: 
       3:
         text: Sebelumnya, kami membawa ayam untuk bergerak melintasi layar tersebut
           namun kemudian dia berhenti. Di Minecraft, ayam-ayam itu berkeliaran selamanya.
@@ -1575,6 +1638,8 @@ id:
           membuka semua jenis pilihan-pilihan yang rapi saat anda membuat versi Minecraft
           anda sendiri.
     mc_2016_events:
+      1: 
+      2: 
       3:
         text: Namun apa yang terjadi ketika anda menggunakannya? Di Minecraft, domba
           melepaskan wolnya saat anda mengguntingnya, sapi-sapi melarikan diri saat
@@ -1582,13 +1647,33 @@ id:
           Reaksi ini terjadi berkat sesuatu yang disebut peristiwa-peristiwa. Peristiwa-peristiwa
           itu memberitahu program anda untuk mendengarkan atau menunggu kapan sesuatu
           terjadi. Dan bila itu terjadi, lakukanlah sebuah tindakan.
+      4: 
     applab_intro_designmode:
+      1: 
+      2: 
+      3: 
+      4: 
       5:
         text: Bila anda menambahkan sebuah unsur baru di layar anda, itu akan memberikan
           ID generik seperti tombol 1. Sebaiknya ubahlah ID tombol ini menjadi sesuatu
           yang lebih berarti seperti "Tombolkanan". Sehingga anda akan tahu yang mana
           saat anda menggunakan program tersebut.
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
     csd_concept_circuits_logic:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
       11:
         text: Jadi apakah anda sedang bermain game, merekam video, atau menjelajahi
           alam semesta, segala sesuatu yang mungkin anda bisa lakukan dengan teknologi
@@ -1598,17 +1683,37 @@ id:
           bahkan dapat membantu kita memecahkan kode DNA untuk mendiagnosa dan mengobati
           penyakit. Jadi apa yang akan anda lakukan dengan semua sirkuit ini?
     csd_concept_memory_cpu_input_output:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
       9:
         text: Ini semua terjadi begitu cepat rasanya sesaat, tapi untuk menampilkan
           setiap huruf komputer berjalan ribuan petunjuk, mulai dari saat jari anda
           menekan titik kunci.
+      10: 
+      11: 
+      12: 
     csd_concept_hardware_software:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
       8:
         text: Sama seperti angka, semua ini perintah sederhana dapat direpresentasikan
           dalam biner satu dan nol atau hidup dan mati sinyal-sinyal listrik. Biner
           perintah-perintah yang disimpan di memori dan CPU mengambil dan mengeksekusi
           mereka di urutan satu setelah yang lain. Urutan perintah ini, pada kenyataannya,
           sebuah program komputer yang sangat sederhana.
+      9: 
+      10: 
       11:
         text: Untuk menggambar sebuah persegi panjang pada layar, anda hanya perlu
           satu perintah. Ini tingkat tinggi perintah diubah menjadi ratusan, atau
@@ -1616,7 +1721,12 @@ id:
           CPU apa yang harus dilakukan, tetapi ketika anda sedang mendengarkan musik,
           dan penjelajah web, dan mengobrol dengan teman, komputer anda menjalankan
           beberapa buah perangkat lunak sekaligus.
+      12: 
+      13: 
+      14: 
+      15: 
       16:
         text: Perangkat lunak adalah serangkaian perintah yang dibuat sederhana kode
           biner, dan kode biner adalah hanya sinyal-sinyal listrik yang mengalir melalui
           miliaran sirkuit kecil.
+      17: 

@@ -12,9 +12,6 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
-  },
-  textarea: {
-    width: '75%'
   }
 };
 
@@ -58,12 +55,7 @@ class AddMultipleStudents extends Component {
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
           <div>{i18n.addStudentsMultipleInstructions()}</div>
-          <textarea
-            rows="15"
-            cols="70"
-            ref="studentsTextBox"
-            style={styles.textarea}
-          />
+          <textarea name="textarea" rows="15" cols="70" ref="studentsTextBox" />
           <DialogFooter>
             <Button
               text={i18n.dialogCancel()}

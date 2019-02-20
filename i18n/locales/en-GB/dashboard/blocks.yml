@@ -160,11 +160,6 @@ en-GB:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
       aalab_clickedOn:
         options:
           CONDITION:
@@ -181,11 +176,11 @@ en-GB:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
+          CONDITION:
+            '"when"': when
+            '"while"': while
       binary_whenKey:
         options:
           KEY:

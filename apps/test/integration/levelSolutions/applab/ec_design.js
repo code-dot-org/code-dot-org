@@ -148,7 +148,7 @@ module.exports = {
 
         var assetUrl = '/blockly/media/skins/studio/small_static_avatar.png';
         var encodedAssetUrl = assetUrl;
-        var imageInput = $('.imagePickerInput')[0];
+        var imageInput = $('#propertyRowContainer input').last()[0];
 
         var buttonElement = $('#design_button1')[0];
 
@@ -184,7 +184,7 @@ module.exports = {
           'https://studio.code.org/blockly/media/skins/studio/small_static_avatar.png';
         var encodedAssetUrl =
           '/media?u=https%3A%2F%2Fstudio.code.org%2Fblockly%2Fmedia%2Fskins%2Fstudio%2Fsmall_static_avatar.png';
-        var imageInput = $('.imagePickerInput')[0];
+        var imageInput = $('#propertyRowContainer input').last()[0];
 
         var buttonElement = $('#design_button1')[0];
 
@@ -223,7 +223,7 @@ module.exports = {
         var assetUrl = 'flappy (1).png';
         var encodedAssetUrl =
           '/base/test/integration/assets/applab-channel-id/flappy%20(1).png';
-        var imageInput = $('.imagePickerInput')[0];
+        var imageInput = $('#propertyRowContainer input').last()[0];
 
         var buttonElement = $('#design_button1')[0];
         var originalButtonWidth = buttonElement.style.width;
@@ -800,9 +800,8 @@ module.exports = {
         assertPropertyRowExists(4, 'y position (px)', assert);
         assertPropertyRowExists(5, 'image Choose...', assert);
         assertPropertyRowExists(6, 'fit imagefillcovercontainnone', assert);
-        // Ignore BorderProperties
-        assertPropertyRowExists(8, 'hidden', assert);
-        assertPropertyRowExists(9, 'depth', assert);
+        assertPropertyRowExists(7, 'hidden', assert);
+        assertPropertyRowExists(8, 'depth', assert);
 
         // Make sure it's draggable
         var manipulator = newImage.parent();
@@ -1183,7 +1182,7 @@ module.exports = {
 
         assertPropertyRowExists(5, 'image Choose...', assert);
 
-        var input = $('.imagePickerInput')[0];
+        var input = $('#propertyRowContainer input').eq(5)[0];
         var designImage = $('#design_image1')[0];
         assert.equal(designImage.style.width, '110px');
         assert.equal(designImage.style.height, '105px');

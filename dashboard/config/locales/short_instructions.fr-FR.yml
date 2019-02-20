@@ -914,37 +914,26 @@ fr:
         affichent true
       CSD U3 Boolean Modify_2018: Modifier le code pour que toutes les commandes console.log
         affichent true
-      CSD U3 Boolean Modify_2019: Modifier le code pour que toutes les commandes console.log
-        affichent true
       CSD U3 Keypress Boolean-2018: Modifier le code pour que toutes les commandes
         console.log affichent true
       CSD U3 Keypress Boolean: Modifier le code pour que toutes les commandes console.log
         affichent true
       CSD U3 Keypress Boolean_2018: Modifier le code pour que toutes les commandes
         console.log affichent true
-      CSD U3 Keypress Boolean_2018_2019: Modifier le code pour que toutes les commandes
-        console.log affichent true
       CSD U3 Keypress Watchers: Modifier le code pour que toutes les commandes console.log
         affichent true
       CSD U3 Keypress Watchers_2018: Modifier le code pour que toutes les commandes
-        console.log affichent true
-      CSD U3 Keypress Watchers_2019: Modifier le code pour que toutes les commandes
         console.log affichent true
       CSD U5 black white images pixelation 2: Dessine un visage de smiley (clique
         ici pour voir l'image)
       CSD U5 black white images pixelation 2_2018: Dessine un visage de smiley (clique
         ici pour voir l'image)
-      CSD U5 black white images pixelation 2_2019: Dessine un visage de smiley (clique
-        ici pour voir l'image)
       CSD U5 black white images pixelation 4: Ajoute des sourcils au visage du smiley
         (clique ici pour voir l'image)
       CSD U5 black white images pixelation 4_2018: Ajoute des sourcils au visage du
         smiley (clique ici pour voir l'image)
-      CSD U5 black white images pixelation 4_2019: Ajoute des sourcils au visage du
-        smiley (clique ici pour voir l'image)
       CSD U5 black white images pixelation 5: Dessine ce que tu veux
       CSD U5 black white images pixelation 5_2018: Dessine ce que tu veux
-      CSD U5 black white images pixelation 5_2019: Dessine ce que tu veux
       CSDU4 - Design Mode - 1: "Ajoute un bouton qui déplace la tortue quand on clique
         dessus. \n(Cliquer pour voir les instructions complètes)"
       CSP student contact info: Veuillez saisir votre adresse mail.
@@ -1691,10 +1680,8 @@ fr:
         de 10 à 0 pour changer de niveau.
       Crack Random Substitution: Consignes
       Crack Random Substitution_2018: Consignes
-      Crack Random Substitution_2019: Consignes
       Crack a Caesar Cipher: Consignes
       Crack a Caesar Cipher_2018: Consignes
-      Crack a Caesar Cipher_2019: Consignes
       Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
         de travail et connectez-le à l'intérieur du bloc « configuration ».
       Dance_Party_01_low: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
@@ -2389,10 +2376,6 @@ fr:
         3x5. Le widget est configuré avec des dimensions incorrectes. Votre première
         tâche sera de remplir le second octet avec le code binaire sur 8 bits pour
         5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
-      Pixelation - Lesson 14 - Make the Letter A_2019: 'Faire une lettre ''A'' de
-        3x5. Le widget est configuré avec des dimensions incorrectes. Votre première
-        tâche sera de remplir le second octet avec le code binaire sur 8 bits pour
-        5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
       Quantum Bee: Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais
         pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a
         pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si».
@@ -2451,7 +2434,6 @@ fr:
         :  essaie d''utiliser la boucle «Tant que» cette fois.'
       The Vigenere Cipher Widget: Consignes
       The Vigenere Cipher Widget_2018: Consignes
-      The Vigenere Cipher Widget_2019: Consignes
       The Vigenere Cipher: Consignes
       Total Artist Clone Me: 'Activité libre : Voici les fonctions que tu as écrites,
         et même un peu plus pour que tu puisses jouer avec. Dessine quelque chose
@@ -2465,7 +2447,6 @@ fr:
       U4 vigenere cipher 2: Consignes
       U4L02 - Objects - Template1: Modèle
       U4L02 - Objects - Template1_2018: Modèle
-      U4L02 - Objects - Template1_2019: Modèle
       Underground Avoiding Lava: La lave se cache sous certains de ces blocs, que
         tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici.
         Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.

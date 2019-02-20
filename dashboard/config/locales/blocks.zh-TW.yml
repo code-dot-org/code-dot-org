@@ -897,11 +897,6 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
       aalab_clickedOn:
         options:
           CONDITION:
@@ -924,24 +919,11 @@ zh-TW:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 尺寸
-            '"rotation"': 旋轉
-            '"x"': x 座標
-            '"y"': y 座標
-            '"direction"': 移動方向
-            '"tint"': 色調
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': 重複無限次
+          CONDITION:
+            '"when"': 當
+            '"while"': 當
       binary_move:
         options:
           DIR:

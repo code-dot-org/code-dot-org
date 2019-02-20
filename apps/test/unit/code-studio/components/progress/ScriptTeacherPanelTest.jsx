@@ -25,8 +25,8 @@ describe('ScriptTeacherPanel', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherPanel>
-        <div id="teacher-panel-nonscrollable">
-          <h3>{commonMsg.teacherPanel()}</h3>
+        <h3>{commonMsg.teacherPanel()}</h3>
+        <div className="content">
           <ViewAsToggle />
           <div>{commonMsg.loading()}</div>
         </div>
@@ -40,8 +40,8 @@ describe('ScriptTeacherPanel', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherPanel>
-        <div id="teacher-panel-nonscrollable">
-          <h3>{commonMsg.teacherPanel()}</h3>
+        <h3>{commonMsg.teacherPanel()}</h3>
+        <div className="content">
           <ViewAsToggle />
           <div>{commonMsg.loading()}</div>
         </div>
@@ -134,44 +134,5 @@ describe('ScriptTeacherPanel', () => {
         </div>
       </div>
     );
-  });
-
-  describe('StudentTable', () => {
-    const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
-
-    it('displays StudentTable for teacher with students', () => {
-      const wrapper = shallow(
-        <ScriptTeacherPanel
-          {...MINIMUM_PROPS}
-          viewAs={ViewType.Teacher}
-          students={students}
-          onSelectUser={() => {}}
-          getSelectedUserId={() => {}}
-        />
-      );
-      expect(wrapper.find('StudentTable')).to.exist;
-    });
-
-    it('does not display StudentTable for teacher with no students', () => {
-      const wrapper = shallow(
-        <ScriptTeacherPanel
-          {...MINIMUM_PROPS}
-          viewAs={ViewType.Teacher}
-          students={[]}
-        />
-      );
-      expect(wrapper.find('StudentTable')).to.not.exist;
-    });
-
-    it('does not display StudentTable for student', () => {
-      const wrapper = shallow(
-        <ScriptTeacherPanel
-          {...MINIMUM_PROPS}
-          viewAs={ViewType.Student}
-          students={students}
-        />
-      );
-      expect(wrapper.find('StudentTable')).to.not.exist;
-    });
   });
 });

@@ -969,11 +969,6 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kun
-            '"while"': niin kauan kuin
       aalab_clickedOn:
         options:
           CONDITION:
@@ -992,35 +987,15 @@ fi:
             '"left"': vasemmalle
             '"right"': oikealle
             '"space"': avaruus
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Pohjoinen
-            '"East"': Itä
-            '"South"': Etelä
-            '"West"': Länsi
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kaupunki
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': tosi
-            '"false"': epätosi
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"rotation"': kierto
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-            '"direction"': liikkeen suunta
-            '"tint"': sävy
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ikuisesti
+          CONDITION:
+            '"when"': kun
+            '"while"': niin kauan kuin
       binary_move:
         options:
           DIR:

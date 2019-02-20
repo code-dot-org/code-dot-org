@@ -11,8 +11,7 @@ const styles = {
     fontSize: 'medium',
     height: 34,
     paddingLeft: 5,
-    paddingRight: 5,
-    width: 300
+    paddingRight: 5
   },
   heading: {
     marginBottom: 0

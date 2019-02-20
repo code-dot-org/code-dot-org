@@ -4879,14 +4879,6 @@ tr:
           <title name="SPRITE2">0</title>
           </block></xml>
 
-      courseC_data wizard_authored_hint:
-        courseA_playLab_events7_a: |-
-          Aktörler çarpıştığında ne olacağını kontrol etmek için bu bloğu kullanın.
-          <xml><block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
-
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:

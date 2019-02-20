@@ -7,40 +7,30 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 var userAgentParser = require('../../code-studio/initApp/userAgentParser');
 
-export const TeacherDashboardPath = {
-  progress: '/progress',
-  textResponses: '/text_responses',
-  assessments: '/assessments',
-  projects: '/projects',
-  stats: '/stats',
-  manageStudents: '/manage_students',
-  loginInfo: '/login_info'
-};
-
 const teacherDashboardLinks = [
   {
-    label: i18n.teacherTabProgress(),
-    url: TeacherDashboardPath.progress
-  },
-  {
-    label: i18n.teacherTabStatsTextResponses(),
-    url: TeacherDashboardPath.textResponses
-  },
-  {
-    label: i18n.teacherTabAssessments(),
-    url: TeacherDashboardPath.assessments
+    label: i18n.teacherTabManageStudents(),
+    url: '/manage_students'
   },
   {
     label: i18n.teacherTabProjects(),
-    url: TeacherDashboardPath.projects
+    url: '/projects'
   },
   {
     label: i18n.teacherTabStats(),
-    url: TeacherDashboardPath.stats
+    url: '/stats'
   },
   {
-    label: i18n.teacherTabManageStudents(),
-    url: TeacherDashboardPath.manageStudents
+    label: i18n.teacherTabStatsTextResponses(),
+    url: '/text_responses'
+  },
+  {
+    label: i18n.teacherTabProgress(),
+    url: '/progress'
+  },
+  {
+    label: i18n.teacherTabAssessments(),
+    url: '/assessments'
   }
 ];
 

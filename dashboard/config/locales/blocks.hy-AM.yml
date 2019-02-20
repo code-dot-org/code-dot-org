@@ -300,11 +300,6 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
       aalab_clickedOn:
         options:
           CONDITION:
@@ -325,19 +320,11 @@ hy:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': ճիշտ
-            '"false"': կեղծ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ընդմիշտ
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
       binary_move:
         options:
           DIR:

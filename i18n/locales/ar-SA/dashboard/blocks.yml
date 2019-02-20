@@ -915,11 +915,6 @@ ar:
             '"x"': الموضع س
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
       aalab_clickedOn:
         options:
           CONDITION:
@@ -942,24 +937,11 @@ ar:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': مدينة
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': صحيح
-            '"false"': خطأ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': إلى الأبد
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
       binary_move:
         options:
           DIR:

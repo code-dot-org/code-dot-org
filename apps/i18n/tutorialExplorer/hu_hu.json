@@ -1,7 +1,7 @@
 {
   "startButton": "Kezdés",
   "filterOrgNames": "Létrehozta:",
-  "filterOrgNamesAll": "Összes",
+  "filterOrgNamesAll": "",
   "filterSortBy": "Rendezés",
   "filterSortByDisplayWeight": "Ajánlott",
   "filterSortByPopularityRank": "Legnépszerűbb",

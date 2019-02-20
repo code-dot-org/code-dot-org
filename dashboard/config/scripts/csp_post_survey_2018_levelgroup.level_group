@@ -81,8 +81,6 @@ level 'csp-post-survey-2018-U5-I-liked'
 level 'csp-post-survey-2018-U5-I-learned'
 level 'csp-post-survey-2018-topics-liked-FR'
 
-page
-level 'csp-post-survey-algebra-mcq'
 
 page
 text 'csp-post-survey-2017 preamble 4 future and outlook_2018'

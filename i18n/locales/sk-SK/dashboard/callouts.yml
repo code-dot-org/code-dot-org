@@ -42,25 +42,16 @@ sk:
         grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Kliknite sem pre zobrazenie mriežky.
-      CSD U3 Variables Predict Where XY Embed_2019_callout:
-        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY_callout:
         grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Kliknite sem pre zobrazenie mriežky.
-      CSD U3 Variables Predict Where XY_2019_callout:
-        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Zmeňte číslo tu
-      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Zmeňte číslo tu
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: Tu je kód
-        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
-      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 ellipse_callout:
@@ -69,16 +60,10 @@ sk:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
-      CSD U3 ellipse_2019_callout:
-        CSD_U3_rect_c1: Tu je kód
-        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: Tu je kód
-        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
-      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 my-rect_callout:
@@ -89,52 +74,35 @@ sk:
         CSD_U3_rect_c2: Tu je tlačidlo "Spustiť".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Tu je kód
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: Tu je kód
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
-      CSD U3 sequence_2019_callout:
-        CSD_U3_rect_c1: Tu je kód
-        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Pridajte váš kód sem
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Pridajte váš kód sem
-      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Pridajte váš kód sem
       CSD U6 light show predict_callout:
         CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Čo robí tento riadok?
-      CSD U6 light show predict_2019_callout:
-        CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show_callout:
         CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show_2018_callout:
-        CSDUDL03P09: Čo robí tento riadok?
-      CSD U6 light show_2019_callout:
         CSDUDL03P09: Čo robí tento riadok?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Definujte začiatokHry tu
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Definujte začiatokHry tu
-      CSD U6 tugowar variables 1_2019_callout:
-        CSD_U6_startGame: Definujte začiatokHry tu
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Definujte movePlayer() tu
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Definujte movePlayer() tu
-      CSD U6 tugowar variables 2_2019_callout:
-        CSD_U6_movePlayer: Definujte movePlayer() tu
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Skontrolujte, či hráč vyhral
-      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       Counting_callout:
         New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
@@ -411,8 +379,6 @@ sk:
       U3L08 how to add comments_callout:
         comment_highlight: Presuňte blok s komentárom odtiaľto do vášho kódu
       U3L08 how to add comments_2018_callout:
-        comment_highlight: Presuňte blok s komentárom odtiaľto do vášho kódu
-      U3L08 how to add comments_2019_callout:
         comment_highlight: Presuňte blok s komentárom odtiaľto do vášho kódu
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tento kód bude kontrolovať lávu, môžeš zadať príkaz pre pohyb dopredu?

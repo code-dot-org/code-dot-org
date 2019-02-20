@@ -833,11 +833,8 @@ he:
         אותם כדי לשטח את האדמה.
       CSD U5 black white images pixelation 5: צייר מה שבא לך
       CSD U5 black white images pixelation 5_2018: צייר מה שבא לך
-      CSD U5 black white images pixelation 5_2019: צייר מה שבא לך
       CSD U5 black white images pixelation: השלם את צורת ה-X ע"י הקלדת אפסים ואחדות
       CSD U5 black white images pixelation_2018: השלם את צורת ה-X ע"י הקלדת אפסים
-        ואחדות
-      CSD U5 black white images pixelation_2019: השלם את צורת ה-X ע"י הקלדת אפסים
         ואחדות
       CSD U6 params modify clouds: |-
         # עננים
@@ -850,16 +847,6 @@ he:
         * קרא לפונקציה החדשה שלך "הזזענן(שם)" בתוך בלוק האירוע, אחד עבור כל שם ענן.
         * (רמז: זה דומה לאיך שהפונקציה "לולאתעננים(שם)" נקראת מספר רב של פעמים).
       CSD U6 params modify clouds_2018: |-
-        # עננים
-
-        תוכנית זאת גורמת לעננים לזוז כאשר את נושף על חיישן הקול, אבל זה לא גמור.
-
-        # עשה כך
-        * צור פונקציה חדשה "הזזענן(שם)" אשר תזיז כל ענן.
-        * (רמז: תוכל להשתמש כמעט בכל הקוד הקיים בפונקציה "הזזענן0")
-        * קרא לפונקציה החדשה שלך "הזזענן(שם)" בתוך בלוק האירוע, אחד עבור כל שם ענן.
-        * (רמז: זה דומה לאיך שהפונקציה "לולאתעננים(שם)" נקראת מספר רב של פעמים).
-      CSD U6 params modify clouds_2019: |-
         # עננים
 
         תוכנית זאת גורמת לעננים לזוז כאשר את נושף על חיישן הקול, אבל זה לא גמור.
@@ -918,10 +905,8 @@ he:
         המקומות הללו חשוכים. הציבו לפחות 2 לפידים וכרו לפחות 2 חתיכות פחם.
       Crack Random Substitution: הוראות
       Crack Random Substitution_2018: הוראות
-      Crack Random Substitution_2019: הוראות
       Crack a Caesar Cipher: הוראות
       Crack a Caesar Cipher_2018: הוראות
-      Crack a Caesar Cipher_2019: הוראות
       Dance_Party_01: גררו את בלוק ה"צור חדש" אל תוך חלל העבודה, וחברו אותו בתוך בלוק
         ה"הגדרות".
       Dance_Party_01_low: גררו את בלוק ה"צור חדש" אל תוך חלל העבודה, וחברו אותו בתוך
@@ -1184,7 +1169,6 @@ he:
         עד שהבור יתמלא?  "
       The Vigenere Cipher Widget: הוראות
       The Vigenere Cipher Widget_2018: הוראות
-      The Vigenere Cipher Widget_2019: הוראות
       The Vigenere Cipher: הוראות
       U2 frequency caesar: הוראות
       U2 frequency random sub: הוראות

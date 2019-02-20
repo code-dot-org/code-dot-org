@@ -716,6 +716,7 @@
   "squirrel": "orav",
   "startSetValue": "käivita (funktsioon)",
   "startSetVars": "mängu_muutujad (pealkiri, alampealkiri, taust, eesmärk, oht, mängija)",
+  "startSetFuncs": "",
   "stopEverySpriteName": "peata iga {spriteName}",
   "stopSprite": "stopp",
   "stopSpriteN": "peata tegelane {spriteIndex}",

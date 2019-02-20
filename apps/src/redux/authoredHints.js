@@ -6,7 +6,7 @@ import {bisect} from '../utils';
 
 /**
  * @typedef {Object} AuthoredHint
- * @property {string} markdown
+ * @property {string} content
  * @property {string} hintId
  * @property {string} hintClass
  * @property {string} hintType

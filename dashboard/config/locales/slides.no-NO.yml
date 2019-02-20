@@ -2048,6 +2048,8 @@
           det, kan du ta andre kjente sanger og bryte dem opp selv. Se om dere kan
           finne det ut sammen.
     unplug9:
+      1: 
+      2: 
       3:
         text: Dette er en flott introduksjon til feilsøking, korrekturlesning av ditt
           eget og andres arbeid er en god øvelse. Du vil raskt forstå hvor viktig
@@ -2076,6 +2078,7 @@
           å gi elevene et friminutt om det er mulig, det de nettopp har vært gjennom
           er en stor prestasjon. De har lært mer om informatikk gjennom disse leksjonene
           enn de fleste voksne har fått med seg gjennom hele sitt liv.
+      2: 
       3:
         text: Fra alle oss her ved Code.org, vi håper du har hatt MASSEVIS av moro
           i løpet av dette kurset. Om du drømmer om å lage den beste nye appen, bruke
@@ -2151,6 +2154,7 @@
           der du skriver. I stedet for å skrive hele kommandonavnet kan du velge en
           av disse å arbeide raskere. I jobben min bruker jeg denne funksjonen for
           autofullføring hele tiden når jeg skriver kode.
+      5: 
       6:
         text: Når det blir en feil på en linje vil feilen bli fremhevet slik at du
           kan endre teksten for å fikse feilen.
@@ -2212,11 +2216,16 @@
           flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill
           og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp
           nye lyder og nye kommandoer for å gjøre enda mer.
+      3: 
+      4: 
       5:
         text: Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link
           som du kan dele med venner eller spille spillet ditt på telefonen. Ha det
           gøy!
     starwars_blocks_intro:
+      1: 
+      2: 
+      3: 
       4:
         text: Din skjerm er delt opp i tre deler. Til venstre er Star Wars spillet
           hvor koden vil bli kjørt. Instruksjonene for hvert nivå er beskrevet nedenfor
@@ -2268,6 +2277,7 @@
           til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi
           bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker
           piltastene opp/ned eller opp/ned-knappene.'
+      6: 
       7:
         text: Steg for steg vil gjøre ditt spill mer interaktivt.
     starwars_blocks_congrats:
@@ -2281,6 +2291,8 @@
           flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill
           og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp
           nye lyder og nye kommandoer for å gjøre enda mer.
+      3: 
+      4: 
       5:
         text: Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link
           som du kan dele med venner eller spille spillet ditt på telefonen. Ha det
@@ -2441,6 +2453,7 @@
       6:
         text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
           opp programmet.
+      7: 
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2507,6 +2520,7 @@
       6:
         text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
           opp programmet.
+      7: 
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2564,6 +2578,7 @@
       4:
         text: 2) Dette området i midten er verktøykassa. Hver av disse blokkene er
           en kommando som kyllinger, sauer og andre Minecraft-skapninger kan forstå.
+      5: 
       6:
         text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
       7:
@@ -2580,6 +2595,8 @@
           for å nullstille spillet og starte på nytt. Nå er det din tur til å lage
           din egen versjon av Minecraft. Kos deg!
     mc_2016_events:
+      1: 
+      2: 
       3:
         text: Men hva skjer når du bruker den? I Minecraft slipper sauer ull når du
           klipper dem, kuer løper hvis du tar på dem og creepere eksploderer hvis
@@ -2613,8 +2630,19 @@
           som du kan dele med vennene dine eller for å spille spillet ditt på telefonen.
           Ha det gøy! Jeg gleder meg til å spille din versjon av Minecraft.
     mc_2017_agent_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
       11:
         text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
+      12: 
     csd_concept_binary_data:
       1:
         text: Hei! Jeg heter Limor Fried og jobber som ingeniør her hos Adafruit Industries.
@@ -2773,3 +2801,14 @@
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11: 
+      12: 

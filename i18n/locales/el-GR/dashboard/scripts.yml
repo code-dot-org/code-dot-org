@@ -1370,8 +1370,6 @@ el:
               name: Crowdsourcing
             Relay Programming:
               name: Προγραμματισμός Ρελέ
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1630,39 +1628,3 @@ el:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Λίστες
-        csd3-2019:
-          description_short: "Προγραμματισμός"
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
-        csp1-2019:
-          stages:
-            The Internet:
-              name: Το Διαδίκτυο
-        csp3-2019:
-          description_short: Προγραμματισμός
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
-        csp4-2019:
-          stages:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
-        csp5-2019:
-          stages:
-            While Loops:
-              name: Βρόχοι με «Όσο»

@@ -31,16 +31,19 @@ $(document).ready(() => {
 
   let submitButton = document.querySelector('#block_submit');
   const fixupJson = initializeCodeMirrorForJson('block_config', {onChange});
-  helperEditor = initializeCodeMirror('block_helper_code', 'javascript', {
-    callback: fixupJson,
-    onUpdateLinting: (_, errors) => {
+  helperEditor = initializeCodeMirror(
+    'block_helper_code',
+    'javascript',
+    fixupJson,
+    null,
+    (_, errors) => {
       if (errors.length) {
         submitButton.setAttribute('disabled', 'disabled');
       } else {
         submitButton.removeAttribute('disabled');
       }
     }
-  });
+  );
   poolField.addEventListener('change', fixupJson);
 
   $('.alert.alert-success')

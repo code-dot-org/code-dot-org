@@ -7,7 +7,6 @@ import Section4ProfessionalLearningProgramRequirements from './Section4Professio
 import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
 import Section6Submission from './Section6Submission';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import queryString from 'query-string';
 /* global ga */
 
 export default class Teacher1920Application extends FormController {
@@ -72,16 +71,8 @@ export default class Teacher1920Application extends FormController {
    * @override
    */
   onSetPage(newPage) {
-    const nominated = queryString.parse(window.location.search).nominated;
-
     // Report a unique page view to GA.
-    let url = '/pd/application/teacher/';
-    url += newPage + 1;
-    if (nominated) {
-      url += '?nominated=true';
-    }
-
-    ga('set', 'page', url);
+    ga('set', 'page', '/pd/application/teacher/' + (newPage + 1));
     ga('send', 'pageview');
   }
 }

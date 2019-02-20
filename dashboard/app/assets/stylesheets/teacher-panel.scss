@@ -123,8 +123,7 @@
     }
   }
   .section-students {
-    &,
-    tr {
+    &, tr {
       border: 1px solid $lighter_cyan;
       border-collapse: collapse;
     }

@@ -1,3 +1,7 @@
 function checkTouching(condition, a, b, event) {
-  collisionEvents.push({condition: condition, a: a, b: b, event: event});
+  if(condition === "when") {
+  	whenTouching(a, b, event);
+  } else {
+  	whileTouching(a, b, event);
+  }
 }

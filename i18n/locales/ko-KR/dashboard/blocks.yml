@@ -900,11 +900,6 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
       aalab_clickedOn:
         options:
           CONDITION:
@@ -927,24 +922,11 @@ ko:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': 참
-            '"false"': 거짓
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 크기
-            '"rotation"': 회전
-            '"x"': x 좌표
-            '"y"': y 좌표
-            '"direction"': 움직임 방향
-            '"tint"': 색조
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': 영원히
+          CONDITION:
+            '"when"': "~할 때"
+            '"while"': '반복(~인 동안):'
       binary_move:
         options:
           DIR:
