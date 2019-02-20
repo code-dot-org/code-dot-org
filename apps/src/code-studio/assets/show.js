@@ -58,7 +58,8 @@ module.exports = function showAssetManager(
       projectId: dashboard.project.getCurrentId(),
       soundPlayer: sounds,
       disableAudioRecording: options.disableAudioRecording,
-      elementId: options.elementId
+      elementId: options.elementId,
+      libraryOnly: options.libraryOnly
     }),
     codeDiv
   );
