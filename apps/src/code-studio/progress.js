@@ -25,7 +25,6 @@ import {
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
-  setIsSummaryView,
   setCurrentStageId,
   setScriptCompleted,
   setStageExtrasEnabled,
@@ -260,16 +259,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page
-    if (
-      (data.isTeacher || data.teacherViewingStudent) &&
-      !data.professionalLearningCourse &&
-      onOverviewPage
-    ) {
-      // Default to progress summary view if teacher is viewing their student's progress.
-      if (data.teacherViewingStudent) {
-        store.dispatch(setIsSummaryView(true));
-      }
-
+    if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
       store.dispatch(showTeacherInfo());
 
       const viewAs =
@@ -280,8 +270,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         // our async call
         store.dispatch(setViewType(viewAs));
       }
-
-      renderTeacherPanel(store, scriptData.id, scriptData.section);
+      renderTeacherPanel(store, scriptData.id);
       clientState.cacheUserIsTeacher(true);
     }
 

@@ -87,7 +87,6 @@ export default class ImagePickerPropertyRow extends React.Component {
         <div style={rowStyle.description}>{this.props.desc}</div>
         <div>
           <input
-            className="imagePickerInput"
             value={this.state.value}
             onChange={this.handleChangeInternal}
             style={rowStyle.input}

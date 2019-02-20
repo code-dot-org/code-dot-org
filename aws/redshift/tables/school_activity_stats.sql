@@ -21,7 +21,7 @@ hoc_event as (
   -- by school ID, did a school host an hour of code in 2017?
     select distinct json_extract_path_text(data_text, 'nces_school_s') school_id
     from pegasus_pii.forms
-    where kind = 'HocSignup2018'
+    where kind = 'HocSignup2017'
     and json_extract_path_text(data_text, 'nces_school_s') not in ('','-1')
   ),
 csf_script_ids as
@@ -85,7 +85,7 @@ csf_script_ids as
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select script_id from csf_script_ids) THEN f.student_user_id ELSE NULL END) students_csf_l365,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd')) THEN f.student_user_id ELSE NULL END) students_csd_l365,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csp')) THEN f.student_user_id ELSE NULL END) students_csp_l365,      
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro','aquatic','dance','dance-extras') THEN f.student_user_id ELSE NULL END) students_hoc,
+         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
          -- pledge and HOC
          MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
          MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event

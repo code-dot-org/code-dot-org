@@ -5,15 +5,10 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
-
-const getManageStudentsUrl = sectionId => {
-  return `/teacher_dashboard/sections/${sectionId}/manage_students`;
-};
 
 /**
  * Rendered from the /login_info route in teacher dashboard.
@@ -27,7 +22,6 @@ class SectionLoginInfo extends React.Component {
 
     // Provided by redux.
     section: PropTypes.shape({
-      id: PropTypes.number.isRequired,
       loginType: PropTypes.string.isRequired
     }).isRequired,
     students: PropTypes.array.isRequired
@@ -53,14 +47,11 @@ class SectionLoginInfo extends React.Component {
             studioUrlPrefix={studioUrlPrefix}
             pegasusUrlPrefix={pegasusUrlPrefix}
             sectionCode={section.code}
-            sectionId={section.id}
           />
         )}
         {[SectionLoginType.google_classroom, SectionLoginType.clever].includes(
           section.loginType
-        ) && (
-          <OAuthLogins sectionId={section.id} loginType={section.loginType} />
-        )}
+        ) && <OAuthLogins loginType={section.loginType} />}
       </div>
     );
   }
@@ -76,7 +67,6 @@ export default connect(state => ({
 
 class OAuthLogins extends React.Component {
   static propTypes = {
-    sectionId: PropTypes.number.isRequired,
     loginType: PropTypes.oneOf([
       SectionLoginType.google_classroom,
       SectionLoginType.clever
@@ -84,7 +74,7 @@ class OAuthLogins extends React.Component {
   };
 
   render() {
-    const {sectionId, loginType} = this.props;
+    const {loginType} = this.props;
     let loginTypeLabel = '';
     let syncSectionImgSrc = '';
     if (loginType === SectionLoginType.google_classroom) {
@@ -110,16 +100,11 @@ class OAuthLogins extends React.Component {
         )}
         <br />
         <h1>{i18n.syncingYourStudents()}</h1>
-        <div>
-          <UnsafeRenderedMarkdown
-            markdown={i18n.syncingYourStudentsDescription({
-              loginType: loginTypeLabel,
-              url: getManageStudentsUrl(sectionId)
-            })}
-          />
+        <p>
+          {i18n.syncingYourStudentsDescription({loginType: loginTypeLabel})}
           <br />
           <img src={syncSectionImgSrc} style={{maxWidth: '50%'}} />
-        </div>
+        </p>
       </div>
     );
   }
@@ -129,17 +114,11 @@ class EmailLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
     pegasusUrlPrefix: PropTypes.string.isRequired,
-    sectionCode: PropTypes.string.isRequired,
-    sectionId: PropTypes.number.isRequired
+    sectionCode: PropTypes.string.isRequired
   };
 
   render() {
-    const {
-      studioUrlPrefix,
-      pegasusUrlPrefix,
-      sectionCode,
-      sectionId
-    } = this.props;
+    const {studioUrlPrefix, pegasusUrlPrefix, sectionCode} = this.props;
 
     return (
       <div>
@@ -167,11 +146,7 @@ class EmailLogins extends React.Component {
         <p>{i18n.loginInfo_signingInDescription()}</p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
-        <UnsafeRenderedMarkdown
-          markdown={i18n.loginInfo_resetPasswordBody({
-            url: getManageStudentsUrl(sectionId)
-          })}
-        />
+        <p>{i18n.loginInfo_resetPasswordBody()}</p>
       </div>
     );
   }
@@ -231,7 +206,6 @@ class WordOrPictureLogins extends React.Component {
 
   render() {
     const {studioUrlPrefix, pegasusUrlPrefix, section, students} = this.props;
-    const manageStudentsUrl = getManageStudentsUrl(section.id);
 
     return (
       <div>
@@ -256,17 +230,13 @@ class WordOrPictureLogins extends React.Component {
         </p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
-        <UnsafeRenderedMarkdown
-          markdown={i18n.loginInfo_resetSecretBody({
-            url: manageStudentsUrl
-          })}
-        />
+        <p>{i18n.loginInfo_resetSecretBody()}</p>
         <br />
         <h1>{i18n.printLoginCards_title()}</h1>
         {students.length < 1 && (
-          <UnsafeRenderedMarkdown
-            markdown={i18n.loginInfo_noStudents({url: manageStudentsUrl})}
-          />
+          <p>
+            <em>{i18n.loginInfo_noStudents()}</em>
+          </p>
         )}
         {students.length >= 1 && (
           <span>

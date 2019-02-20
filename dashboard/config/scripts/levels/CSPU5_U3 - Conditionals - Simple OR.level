@@ -64,14 +64,10 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "preload_asset_list": null,
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-15 02:18:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

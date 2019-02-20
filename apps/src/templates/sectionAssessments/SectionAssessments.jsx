@@ -61,7 +61,8 @@ const styles = {
   },
   scriptSelection: {
     float: 'left',
-    marginRight: 20
+    marginRight: 20,
+    marginBottom: 20
   },
   assessmentSelection: {
     float: 'left',
