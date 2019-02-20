@@ -44,10 +44,7 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
       <FormGroup>
         <h3>Section 2: {SectionHeaders.section3TeachingBackground}</h3>
 
-        <p>
-          If you work in a school district, please select your district and
-          school below:
-        </p>
+        <p>Please provide your school and principal information below:</p>
 
         <FormGroup
           id="school"
