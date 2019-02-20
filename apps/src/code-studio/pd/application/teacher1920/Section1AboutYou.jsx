@@ -202,11 +202,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
         {this.renderInternationalModal()}
 
-        {this.selectFor('title', {
-          required: false,
-          placeholder: 'Select a title'
-        })}
-
         {this.inputFor('firstName')}
         {this.inputFor('lastName')}
 
