@@ -43,7 +43,7 @@ const INVALID_COLOR = '#d00';
  * @param {boolean} [options.attachments] - whether to enable attachment
  *        uploading in this editor.
  * @param {function} [options.onUpdateLinting]
- * @param {!string!Element} [options.preview] - element or id of element to
+ * @param {(string|Element)} [options.preview] - element or id of element to
  *        populate with a preview. If none specified, will look for an element
  *        by appending "_preview" to the id of the target element.
  */
