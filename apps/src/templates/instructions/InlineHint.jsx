@@ -9,12 +9,13 @@ import {connect} from 'react-redux';
 import {convertXmlToBlockly} from './utils';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
+import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 
 class InlineHint extends React.Component {
   static propTypes = {
     block: PropTypes.object, // XML
     borderColor: PropTypes.string,
-    content: PropTypes.string.isRequired,
+    markdown: PropTypes.string.isRequired,
     video: videoDataShape,
     ttsUrl: PropTypes.string,
     ttsMessage: PropTypes.string,
@@ -39,14 +40,13 @@ class InlineHint extends React.Component {
   };
 
   render() {
-    /* eslint-disable react/no-danger */
     return (
       <ChatBubble
         borderColor={this.props.borderColor}
         ttsUrl={this.props.ttsUrl}
         ttsMessage={this.props.ttsMessage}
       >
-        <div dangerouslySetInnerHTML={{__html: this.props.content}} />
+        <UnsafeRenderedMarkdown markdown={this.props.markdown} />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
         {this.props.video && (
           <VideoThumbnail
@@ -56,7 +56,6 @@ class InlineHint extends React.Component {
         )}
       </ChatBubble>
     );
-    /* eslint-enable react/no-danger */
   }
 }
 

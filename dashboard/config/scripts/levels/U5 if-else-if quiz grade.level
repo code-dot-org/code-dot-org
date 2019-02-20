@@ -28,7 +28,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Quiz Grade\r\n\r\n**Prompt the user for their quiz score (0-100) and tell them what letter grade (A-F) they got.**\r\n\r\n**Example:** if the user enters `84` at the prompt your program should output: `Your quiz grade is a B.` Here's the score-to-grade breakdown:\r\n```\r\nLetter Grade:   A       B      C      D      F\r\n Score Range: 90-100  80-89  70-79  60-69  0-59\r\n```\r\n\r\n\r\n\r\nWe've started you out with the prompt and the `console.log` statements you need.  **Your task is to add the *if-else-if* statements to make it work.\r\n\r\n**Remember:** the order in which you check the boolean conditions *matters*.\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Quiz Grade\r\n\r\n**Prompt the user for their quiz score (0-100) and tell them what letter grade (A-F) they got.**\r\n\r\n**Example:** if the user enters `84` at the prompt your program should output: `Your quiz grade is a B.` Here's the score-to-grade breakdown:\r\n```\r\nLetter Grade:   A       B      C      D      F\r\n Score Range: 90-100  80-89  70-79  60-69  0-59\r\n```\r\n\r\n\r\n\r\nWe've started you out with the prompt and the `console.log` statements you need.  **Your task is to add the `if-else-if` statements to make it work.\r\n\r\n**Remember:** the order in which you check the boolean conditions *matters*.\r\n\r\n\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -66,10 +66,13 @@
     "encrypted_examples": "nJYNOAIPzFcuHFeRuMQqMWeYvNBtWdZrH0pqWWDnTwxbzt1fdWyx07FG+Ov9\n/ZRz\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "mini_rubric": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 03:01:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -2,30 +2,40 @@ import React, {Component} from 'react';
 import NavigationBar from '../NavigationBar';
 import i18n from '@cdo/locale';
 
+export const TeacherDashboardPath = {
+  progress: '/progress',
+  textResponses: '/text_responses',
+  assessments: '/assessments',
+  projects: '/projects',
+  stats: '/stats',
+  manageStudents: '/manage_students',
+  loginInfo: '/login_info'
+};
+
 const teacherDashboardLinks = [
   {
-    label: i18n.teacherTabManageStudents(),
-    url: '/manage_students'
-  },
-  {
-    label: i18n.teacherTabProjects(),
-    url: '/projects'
-  },
-  {
-    label: i18n.teacherTabStats(),
-    url: '/stats'
+    label: i18n.teacherTabProgress(),
+    url: TeacherDashboardPath.progress
   },
   {
     label: i18n.teacherTabStatsTextResponses(),
-    url: '/text_responses'
-  },
-  {
-    label: i18n.teacherTabProgress(),
-    url: '/progress'
+    url: TeacherDashboardPath.textResponses
   },
   {
     label: i18n.teacherTabAssessments(),
-    url: '/assessments'
+    url: TeacherDashboardPath.assessments
+  },
+  {
+    label: i18n.teacherTabProjects(),
+    url: TeacherDashboardPath.projects
+  },
+  {
+    label: i18n.teacherTabStats(),
+    url: TeacherDashboardPath.stats
+  },
+  {
+    label: i18n.teacherTabManageStudents(),
+    url: TeacherDashboardPath.manageStudents
   }
 ];
 
