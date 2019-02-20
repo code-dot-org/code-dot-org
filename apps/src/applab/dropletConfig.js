@@ -342,9 +342,7 @@ export var blocks = [
     parent: api,
     category: 'UI controls',
     paletteParams: ['url'],
-    params: [
-      '"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"'
-    ]
+    params: ['"https://code.org"']
   },
 
   {
