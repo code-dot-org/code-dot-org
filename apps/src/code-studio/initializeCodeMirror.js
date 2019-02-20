@@ -38,17 +38,17 @@ const INVALID_COLOR = '#d00';
  * CodeMirror editor.
  * @param {!string|!Element} target - element or id of element to replace.
  * @param {!string} mode - editor syntax mode
- * @param {Object} options - misc optional arguments
- * @param {function} [options.callback] - onChange callback for editor
- * @param {boolean} [options.attachments] - whether to enable attachment
- *        uploading in this editor.
- * @param {function} [options.onUpdateLinting]
- * @param {(string|Element)} [options.preview] - element or id of element to
- *        populate with a preview. If none specified, will look for an element
- *        by appending "_preview" to the id of the target element.
+ * @param {function} [callback] - onChange callback for editor
+ * @param {booblen} [attachments] - whether to enable attachment uploading in
+ *        this editor.
  */
-function initializeCodeMirror(target, mode, options = {}) {
-  let {callback, attachments, onUpdateLinting, preview} = options;
+function initializeCodeMirror(
+  target,
+  mode,
+  callback,
+  attachments,
+  onUpdateLinting
+) {
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -68,16 +68,16 @@ function initializeCodeMirror(target, mode, options = {}) {
     // In markdown mode, look for a preview element (found by just appending
     // _preview to the target id), if it exists extend our callback to update
     // the preview element with the markdown contents
-    preview = preview || `#${node.id}_preview`;
-    const previewElement = preview.nodeType ? preview : $(preview).get(0);
-    if (previewElement) {
+    const previewElement = $(`#${node.id}_preview`);
+    if (previewElement.length > 0) {
       const originalCallback = callback;
       updatePreview = editor => {
         ReactDOM.render(
           React.createElement(UnsafeRenderedMarkdown, {
-            markdown: editor.getValue()
+            markdown: editor.getValue(),
+            forceRemark: !editor.getOption('useMarked')
           }),
-          previewElement
+          previewElement[0]
         );
       };
 
@@ -106,6 +106,7 @@ function initializeCodeMirror(target, mode, options = {}) {
   });
   if (callback) {
     editor.on('change', callback);
+    editor.on('refresh', callback);
   }
   if (updatePreview) {
     updatePreview(editor);

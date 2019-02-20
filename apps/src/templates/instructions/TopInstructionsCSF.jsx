@@ -186,7 +186,7 @@ class TopInstructions extends React.Component {
     hints: PropTypes.arrayOf(
       PropTypes.shape({
         hintId: PropTypes.string.isRequired,
-        markdown: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired,
         block: PropTypes.object, // XML
         video: PropTypes.string
       })
@@ -764,7 +764,7 @@ class TopInstructions extends React.Component {
                 <InlineHint
                   key={hint.hintId}
                   borderColor={color.yellow}
-                  markdown={hint.markdown}
+                  content={hint.content}
                   ttsUrl={hint.ttsUrl}
                   ttsMessage={hint.ttsMessage}
                   block={hint.block}

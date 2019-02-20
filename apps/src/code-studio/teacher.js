@@ -17,13 +17,10 @@ import {ViewType, setViewType} from './viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   setSections,
-  selectSection,
-  setStudentsForCurrentSection
+  selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {getHiddenStages} from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {reload} from '@cdo/apps/utils';
 
 function resizeScrollable() {
   var newHeight =
@@ -111,32 +108,14 @@ function queryLockStatus(store, scriptId) {
 /**
  * Render our teacher panel that shows up on our course overview page.
  */
-export function renderTeacherPanel(store, scriptId, section) {
+export function renderTeacherPanel(store, scriptId) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
   queryLockStatus(store, scriptId);
 
-  if (section && section.students) {
-    store.dispatch(setStudentsForCurrentSection(section.id, section.students));
-  }
-
-  const onSelectUser = id => {
-    updateQueryParam('user_id', id);
-    reload();
-  };
-
-  const getSelectedUserId = () => {
-    const userIdStr = queryString.parse(location.search).user_id;
-    const selectedUserId = userIdStr ? parseInt(userIdStr, 10) : null;
-    return selectedUserId;
-  };
-
   ReactDOM.render(
     <Provider store={store}>
-      <ScriptTeacherPanel
-        onSelectUser={onSelectUser}
-        getSelectedUserId={getSelectedUserId}
-      />
+      <ScriptTeacherPanel />
     </Provider>,
     div
   );

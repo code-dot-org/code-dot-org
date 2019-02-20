@@ -29,11 +29,9 @@ const styles = {
   header: {
     marginBottom: 0
   },
-  scriptSelection: {
-    marginTop: 30
-  },
   actionRow: {
     height: 47,
+    width: '100%',
     padding: PADDING,
     marginTop: 20,
     backgroundColor: color.table_header,
@@ -150,7 +148,7 @@ class TextResponses extends Component {
 
     return (
       <div>
-        <div style={styles.scriptSelection}>
+        <div>
           <div style={{...h3Style, ...styles.header}}>
             {i18n.selectACourse()}
           </div>

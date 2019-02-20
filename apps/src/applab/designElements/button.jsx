@@ -9,7 +9,6 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
-import BorderProperties from './BorderProperties';
 import color from '../../util/color';
 import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
@@ -52,7 +51,7 @@ class ButtonProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow
+          isIdRow={true}
         />
         <PropertyRow
           desc={'text'}
@@ -61,25 +60,25 @@ class ButtonProperties extends React.Component {
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -95,7 +94,7 @@ class ButtonProperties extends React.Component {
         />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber
+          isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -112,21 +111,6 @@ class ButtonProperties extends React.Component {
           elementId={elementUtils.getId(element)}
         />
         {iconColorPicker}
-        <BorderProperties
-          element={element}
-          handleBorderWidthChange={this.props.handleChange.bind(
-            this,
-            'borderWidth'
-          )}
-          handleBorderColorChange={this.props.handleChange.bind(
-            this,
-            'borderColor'
-          )}
-          handleBorderRadiusChange={this.props.handleChange.bind(
-            this,
-            'borderRadius'
-          )}
-        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -199,7 +183,6 @@ export default {
     element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
 
@@ -210,7 +193,5 @@ export default {
     if (url) {
       updateProperty(element, 'image', url);
     }
-    // Set border styles for older projects that didn't set them on create:
-    elementUtils.setDefaultBorderStyles(element);
   }
 };
