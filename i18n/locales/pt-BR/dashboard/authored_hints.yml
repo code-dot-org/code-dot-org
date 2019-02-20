@@ -8620,6 +8620,14 @@ pt-BR:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
+      courseC_data wizard_authored_hint:
+        courseA_playLab_events7_a: |-
+          Use este bloco para controlar o que acontece quando os atores se chocam.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -12335,9 +12343,11 @@ pt-BR:
         courseE_bee_functions4_c: Você não precisa alterar a função, basta usá-la em seu programa.
       courseE_bee_functions5_authored_hint:
         courseE_bee_functions5_a: Edite a função para que ela resolva o quebra-cabeça sem precisar alterar o programa principal.
+        courseE_bee_functions5_c: O bloco `avance` pode ser alterado em um bloco `move para trás`. Use isto em vez de virar todo o caminho no final dos caminhos!
         courseE_bee_functions5_b: "Sua função deve fazer a abelha:\n- virar\n- Siga em frente\n- coletar todo o néctar\n- mover para trás\n- volte para a direção que a abelha começou"
       courseE_bee_functions5_2018_authored_hint:
         courseE_bee_functions5_a: Edite a função para que ela resolva o quebra-cabeça sem precisar alterar o programa principal.
+        courseE_bee_functions5_c: O bloco `avance` pode ser alterado em um bloco `move para trás`. Use isto em vez de virar todo o caminho no final dos caminhos!
         courseE_bee_functions5_b: "Sua função deve fazer a abelha:\n- virar\n- Siga em frente\n- coletar todo o néctar\n- mover para trás\n- volte para a direção que a abelha começou"
       courseE_bee_functions6_authored_hint:
         courseE_bee_functions6_a: "Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.  \nEm breve, você terá sua função!\n ! [a] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
@@ -12387,9 +12397,11 @@ pt-BR:
         courseE_bee_functions_challenge1_a: "Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.  \nEm breve, você terá sua função!"
         courseE_bee_functions_challenge1_b: Lembre-se de construir seu código dentro do bloco de função verde.
       courseE_bee_ramp14_authored_hint:
+        courseE_bee_ramp14_a: A abelha funciona como o fazendeiro no desafio anterior. Buzz ao longo do caminho e colete néctar enquanto há néctar (enquanto néctar > 0) e faça todo o mel.
         courseE_bee_ramp14_b: Pode haver mais de uma flor ou favo de mel em cada espaço, então garanta o uso de laço `enquanto` para pegar todos eles!
         courseE_bee_ramp14_c: Este desafio é quase idêntico ao anterior, apenas com mel e néctar em vez de legumes.
       courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: A abelha funciona como o fazendeiro no desafio anterior. Buzz ao longo do caminho e colete néctar enquanto há néctar (enquanto néctar > 0) e faça todo o mel.
         courseE_bee_ramp14_b: Pode haver mais de uma flor ou favo de mel em cada espaço, então garanta o uso de laço `enquanto` para pegar todos eles!
         courseE_bee_ramp14_c: Este desafio é quase idêntico ao anterior, apenas com mel e néctar em vez de legumes.
       courseE_bee_ramp17_authored_hint:
@@ -12656,6 +12668,9 @@ pt-BR:
         courseE_farmer_ramp13_a: Pode haver mais do que uma das duas culturas em um espaço, então certifique-se de usar laços `enquanto` para escolher tudo!
       courseE_farmer_ramp13_2018_authored_hint:
         courseE_farmer_ramp13_a: Pode haver mais do que uma das duas culturas em um espaço, então certifique-se de usar laços `enquanto` para escolher tudo!
+      courseE_farmer_ramp16_authored_hint:
+        courseE_farmer_ramp16_a: Se estamos movendo o caminho para a abóbora, o que temos de fazer repetidamente? Quando parar de repetir?
+        courseE_farmer_ramp16_c: Use um bloco `se/senão` para continuar a avançar. De que forma você precisa virar quando o caminho para a frente está bloqueado?
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas para este quebra-cabeça!
       courseE_maze_ramp13_authored_hint:

@@ -946,6 +946,8 @@ bg:
         true
       CSD U3 Boolean Modify_2018: Промени кода, така че всички команди console.log
         принтят true
+      CSD U3 Boolean Modify_2019: Промени кода, така че всички команди console.log
+        принтят true
       CSD U3 Draw Loop Discuss: Тук е програма, която наподобява това, което вие сте
         писали, но се държи доста различно. Вие трябва да спрете и да се обсъдите
         с класа следващите действия.
@@ -955,18 +957,25 @@ bg:
         true
       CSD U3 Keypress Boolean_2018: Промени кода, така че всички команди console.log
         принтят true
+      CSD U3 Keypress Boolean_2018_2019: Промени кода, така че всички команди console.log
+        принтят true
       CSD U3 Keypress Watchers: Промени кода, така че всички команди console.log принтят
         true
       CSD U3 Keypress Watchers_2018: Промени кода, така че всички команди console.log
+        принтят true
+      CSD U3 Keypress Watchers_2019: Промени кода, така че всички команди console.log
         принтят true
       CSD U3 L5 Freeplay: Промени на стойността на petalSize няколко пъти. Как това
         промени чертежа ти?
       CSD U3 L5 Freeplay_2018: Промени на стойността на petalSize няколко пъти. Как
         това промени чертежа ти?
+      CSD U3 L5 Freeplay_2019: Промени на стойността на petalSize няколко пъти. Как
+        това промени чертежа ти?
       CSD U3 Simple Drawing - Personal Animation: Направете това
       CSD U3 Sprites intro sprites: Do This
       CSD U3 Sprites intro sprites_2018 - Validation Test: Do This
       CSD U3 Sprites intro sprites_2018: Do This
+      CSD U3 Sprites intro sprites_2019: Do This
       CSD U3 Variable Arithmetic pt2: 'Прогноза: Какви две числа ще се покажат в конзолата?'
       CSD U3 Variable Arithmetic: Промяната на стойността "размер" предизвиква изчертаване
         на по-голям квадрат.
@@ -986,6 +995,8 @@ bg:
         пъти. Как това промени чертежа ти?
       CSD U3 Variables change circle size_2018: Промени на стойността на petalSize
         няколко пъти. Как това промени чертежа ти?
+      CSD U3 Variables change circle size_2019: Промени на стойността на petalSize
+        няколко пъти. Как това промени чертежа ти?
       CSD U3 Variables draw loop rgb: Вътре в цикъла на променливите x1 и y1 ще се
         присвоят случайни стойности и ще ги използваме за контрол къде програмата
         ще начертае квадрат.
@@ -1004,6 +1015,8 @@ bg:
         пъти. Как това промени чертежа ти?
       CSD U3 Variables naming rules v2_2018: Промени на стойността на petalSize няколко
         пъти. Как това промени чертежа ти?
+      CSD U3 Variables naming rules v2_2018_2019: Промени на стойността на petalSize
+        няколко пъти. Как това промени чертежа ти?
       CSD U3 Variables naming rules: Промени на стойността на petalSize няколко пъти.
         Как това промени чертежа ти?
       CSD U3 Variables random assignment: Промени на стойността на petalSize няколко
@@ -1011,6 +1024,8 @@ bg:
       CSD U3 Variables random with assignment: Промени на стойността на petalSize
         няколко пъти. Как това промени чертежа ти?
       CSD U3 Variables random with assignment_2018: Промени на стойността на petalSize
+        няколко пъти. Как това промени чертежа ти?
+      CSD U3 Variables random with assignment_2019: Промени на стойността на petalSize
         няколко пъти. Как това промени чертежа ти?
       CSD U3 Variables use value rect: 'Прогноза: Какво ще се покаже в конзолата?'
       CSD U3 Variables write: Използвайте блок за текст, за да се покаже стойността
@@ -1731,8 +1746,10 @@ bg:
         от 10 до 0.
       Crack Random Substitution: Инструкции
       Crack Random Substitution_2018: Инструкции
+      Crack Random Substitution_2019: Инструкции
       Crack a Caesar Cipher: Инструкции
       Crack a Caesar Cipher_2018: Инструкции
+      Crack a Caesar Cipher_2019: Инструкции
       Eval Booleans 1: Булевите оператори (като >, <, =) ни позволяват да сравняваме
         различни стойности, връщайки "истина" или "лъжа". Щракнете върху "Старт",
         за да видите как този израз дава резултат.
@@ -1790,6 +1807,8 @@ bg:
       'Internet Simulator: Sending Binary Messages': 'Създайте, въведете стойности
         и тествайте протокола за свързване до точка А или точка Б.  '
       'Internet Simulator: Sending Binary Messages_2018': 'Създайте, въведете стойности
+        и тествайте протокола за свързване до точка А или точка Б.  '
+      'Internet Simulator: Sending Binary Messages_2019': 'Създайте, въведете стойности
         и тествайте протокола за свързване до точка А или точка Б.  '
       K-1 Artist 1 Assessment 1: Начертай къса линия нагоре и дълга линия вдясно!
       K-1 Artist1 1: Начертайте стъпалото на човечето с една линия
@@ -2343,6 +2362,7 @@ bg:
         \ "
       The Vigenere Cipher Widget: Инструкции
       The Vigenere Cipher Widget_2018: Инструкции
+      The Vigenere Cipher Widget_2019: Инструкции
       The Vigenere Cipher: Инструкции
       Total Artist Clone Me: 'ФрийПлей: Тук са функциите, които сте написали. Начертайте
         нещо страхотно!'
@@ -2397,6 +2417,7 @@ bg:
       U4 vigenere cipher 2: Инструкции
       U4L02 - Objects - Template1: Шаблон
       U4L02 - Objects - Template1_2018: Шаблон
+      U4L02 - Objects - Template1_2019: Шаблон
       U4L15 Read Data 2: "Ученикът трябва да създаде едно изречение, в което да постави
         заедно всички парчета от записа. \r \r <<Name>> е <<Age>> години и като <<Food>>"
       Underground Avoiding Lava: Има скрита лава под някои от тези блокове, която

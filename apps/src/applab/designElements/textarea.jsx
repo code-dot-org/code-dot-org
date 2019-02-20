@@ -7,6 +7,7 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
+import BorderProperties from './BorderProperties';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
@@ -34,36 +35,36 @@ class TextAreaProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'text'}
-          isMultiLine={true}
+          isMultiLine
           initialValue={escapedText}
           handleChange={this.props.handleChange.bind(this, 'text')}
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           foo={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -79,7 +80,7 @@ class TextAreaProperties extends React.Component {
         />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -88,6 +89,21 @@ class TextAreaProperties extends React.Component {
           initialValue={element.style.textAlign || 'left'}
           options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'read only'}
@@ -151,7 +167,7 @@ class TextAreaEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <EventHeaderRow />
         <EventRow
@@ -176,6 +192,10 @@ export default {
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
+    elementUtils.setDefaultBorderStyles(element, {
+      forceDefaults: true,
+      textInput: true
+    });
 
     $(element).addClass('textArea');
 
@@ -185,6 +205,9 @@ export default {
   },
 
   onDeserialize: function(element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element, {textInput: true});
+
     $(element).addClass('textArea');
 
     $(element).on('mousedown', function(e) {
