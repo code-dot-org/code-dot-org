@@ -243,9 +243,7 @@ module Pd::Application
         plan_to_teach
         replace_existing
 
-        does_school_require_cs_license
         subjects_teaching
-        have_cs_license
         subjects_licensed_to_teach
         taught_in_past
         previous_yearlong_cdo_pd
@@ -266,10 +264,6 @@ module Pd::Application
       [].tap do |required|
         if hash[:completing_on_behalf_of_someone_else] == YES
           required.concat [:completing_on_behalf_of_name]
-        end
-
-        if hash[:does_school_require_cs_license] == YES
-          required.concat [:what_license_required]
         end
 
         if hash[:able_to_attend_multiple]
