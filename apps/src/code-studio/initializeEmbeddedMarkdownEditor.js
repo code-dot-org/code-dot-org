@@ -34,10 +34,8 @@ module.exports = function(embeddedElement, markdownTextArea, markdownProperty) {
   var dslElement = embeddedElement;
   var dslText = dslElement.val();
 
-  var mdEditor = initializeCodeMirror(
-    markdownTextArea,
-    'markdown',
-    function(editor, change) {
+  var mdEditor = initializeCodeMirror(markdownTextArea, 'markdown', {
+    callback: function(editor, change) {
       var editorText = editor.getValue();
       var dslText = dslElement.val();
       var replacedText;
@@ -57,8 +55,8 @@ module.exports = function(embeddedElement, markdownTextArea, markdownProperty) {
       }
       dslElement.val(replacedText);
     },
-    true
-  );
+    attachments: true
+  });
 
   // Match against markdown heredoc syntax and capture contents in [2].
   var match = regex.exec(dslText);
