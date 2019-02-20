@@ -65,17 +65,8 @@ class InternationalOptInComponent extends FormComponent {
   };
 
   handleDateBlur = event => {
-    this.handleDateChange(moment(event.target.value));
+    this.handleDateChange(dateStringToMoment(event.target.value));
   };
-
-  workshopDateAsMoment() {
-    const {data} = this.props;
-    const date = data && moment(data.date, DATE_FORMAT);
-    if (date && date.isValid()) {
-      return date;
-    }
-    return null;
-  }
 
   render() {
     const labels = this.props.labels;
@@ -189,7 +180,9 @@ class InternationalOptInComponent extends FormComponent {
           <Row>
             <Col md={6}>
               <DatePicker
-                date={this.workshopDateAsMoment()}
+                date={dateStringToMoment(
+                  this.props.data && this.props.data.date
+                )}
                 onChange={this.handleDateChange}
                 onBlur={this.handleDateBlur}
                 readOnly={false}
@@ -236,6 +229,14 @@ class InternationalOptInComponent extends FormComponent {
       </FormGroup>
     );
   }
+}
+
+function dateStringToMoment(dateString) {
+  const date = dateString && moment(dateString, DATE_FORMAT);
+  if (date && date.isValid()) {
+    return date;
+  }
+  return null;
 }
 
 InternationalOptInComponent.associatedFields = [
