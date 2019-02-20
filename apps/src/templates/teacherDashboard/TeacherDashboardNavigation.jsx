@@ -49,8 +49,6 @@ const ListPosition = {
   middle: 'middle',
   end: 'end'
 };
-const navId = 'teacher-dashboard-nav';
-const navSelector = `#${navId}`;
 
 export default class TeacherDashboardNavigation extends Component {
   static propTypes = {
@@ -72,7 +70,7 @@ export default class TeacherDashboardNavigation extends Component {
   }
 
   setShouldScroll = () => {
-    const navbar = $(navSelector);
+    const navbar = $(this.refs.navbar);
     const navbarChildren = navbar.children();
     let childWidth = 0;
 
@@ -91,18 +89,19 @@ export default class TeacherDashboardNavigation extends Component {
     // Scroll to start (0) by default.
     let scrollLeft = 0;
     if (listPosition === ListPosition.end) {
-      scrollLeft = $(navSelector).width();
+      scrollLeft = $(this.refs.navbar).width();
     }
 
     this.setState({listPosition});
-    $(navSelector).animate({scrollLeft}, 500);
+    $(this.refs.navbar).animate({scrollLeft}, 500);
   };
 
   handleScroll = () => {
     const {listPosition} = this.state;
-    const scrollLeft = $(navSelector).scrollLeft();
+    const navbarRef = this.refs.navbar;
+    const scrollLeft = $(navbarRef).scrollLeft();
     const maxScrollLeft =
-      $(navSelector)[0].scrollWidth - $(navSelector)[0].clientWidth;
+      $(navbarRef)[0].scrollWidth - $(navbarRef)[0].clientWidth;
     const inMiddle = scrollLeft > 0 && scrollLeft < maxScrollLeft;
 
     // Update listPosition in state if necessary
@@ -129,7 +128,7 @@ export default class TeacherDashboardNavigation extends Component {
       : styles.chevron;
 
     return (
-      <div id={navId} style={containerStyles} onScroll={this.handleScroll}>
+      <div ref="navbar" style={containerStyles} onScroll={this.handleScroll}>
         {listPosition !== ListPosition.start && shouldScroll && (
           <FontAwesome
             icon="chevron-left"
