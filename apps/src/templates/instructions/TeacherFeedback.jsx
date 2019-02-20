@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
-import {RubricField} from "./RubricField";
+import {RubricField} from './RubricField';
 
 const styles = {
   textInput: {
@@ -44,11 +44,13 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start'
   },
-  rubricHeader: {
-    fontSize: 13,
-    marginLeft: 10,
-    color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif'
+  h1: {
+    color: color.charcoal,
+    marginTop: 8,
+    marginBottom: 12,
+    fontSize: 24,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'normal'
   },
   performanceArea: {
     display: 'flex',
@@ -66,28 +68,6 @@ const styles = {
   },
   rubricArea: {
     flexGrow: 2
-  },
-  performanceLevelHeader: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    padding: '4px 10px'
-  },
-  performanceLevelHeaderSelected: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    backgroundColor: color.lightest_cyan,
-    borderRadius: 10,
-    padding: '4px 10px'
-  },
-  h1: {
-    color: color.charcoal,
-    marginTop: 8,
-    marginBottom: 12,
-    fontSize: 24,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal'
   },
   commentArea: {
     margin: '0px 16px 16px 16px'
@@ -265,7 +245,7 @@ class TeacherFeedback extends Component {
                   showFeedbackInputAreas={showFeedbackInputAreas}
                   rubricLevel={'exceeds'}
                   rubricValue={this.props.rubric.exceeds}
-                  disableMode={this.props.disabledMode}
+                  disabledMode={this.props.disabledMode}
                   onChange={this.onRubricChange()}
                   currentlyChecked={this.state.performance === 'exceeds'}
                 />
@@ -273,7 +253,7 @@ class TeacherFeedback extends Component {
                   showFeedbackInputAreas={showFeedbackInputAreas}
                   rubricLevel={'meets'}
                   rubricValue={this.props.rubric.meets}
-                  disableMode={this.props.disabledMode}
+                  disabledMode={this.props.disabledMode}
                   onChange={this.onRubricChange()}
                   currentlyChecked={this.state.performance === 'meets'}
                 />
@@ -281,7 +261,7 @@ class TeacherFeedback extends Component {
                   showFeedbackInputAreas={showFeedbackInputAreas}
                   rubricLevel={'approaches'}
                   rubricValue={this.props.rubric.approaches}
-                  disableMode={this.props.disabledMode}
+                  disabledMode={this.props.disabledMode}
                   onChange={this.onRubricChange()}
                   currentlyChecked={this.state.performance === 'approaches'}
                 />
@@ -289,7 +269,7 @@ class TeacherFeedback extends Component {
                   showFeedbackInputAreas={showFeedbackInputAreas}
                   rubricLevel={'noEvidence'}
                   rubricValue={this.props.rubric.noEvidence}
-                  disableMode={this.props.disabledMode}
+                  disabledMode={this.props.disabledMode}
                   onChange={this.onRubricChange()}
                   currentlyChecked={this.state.performance === 'noEvidence'}
                 />

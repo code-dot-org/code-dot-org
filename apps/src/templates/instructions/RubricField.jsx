@@ -25,19 +25,19 @@ const styles = {
   }
 };
 
-const rubricLevelHeaders = {
-  'exceeds': 'Exceeds',
-  'meets': 'Meets',
-  'approaches': 'Approaches',
-  'noEvidence': 'No Evidence'
-}
+//const rubricLevelHeaders = {
+//'exceeds': 'Exceeds',
+// 'meets': 'Meets',
+//'approaches': 'Approaches',
+//'noEvidence': 'No Evidence'
+//}
 
 export class RubricField extends Component {
   static propTypes = {
     showFeedbackInputAreas: PropTypes.bool,
     rubricLevel: PropTypes.string,
     rubricValue: PropTypes.string,
-    disableMode: PropTypes.bool,
+    disabledMode: PropTypes.bool,
     onChange: PropTypes.func,
     currentlyChecked: PropTypes.bool
   };
