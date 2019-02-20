@@ -31,7 +31,6 @@ const styles = {
     margin: 10
   },
   time: {
-    //margin: 10,
     fontStyle: 'italic',
     display: 'flex',
     alignItems: 'center'
@@ -139,7 +138,6 @@ class TeacherFeedback extends Component {
   }
 
   componentDidMount = () => {
-    console.log();
     if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url:
