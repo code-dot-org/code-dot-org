@@ -225,6 +225,10 @@ class Script < ActiveRecord::Base
       end
     end
 
+    if !with_hidden && has_any_pilot_access?(user)
+      scripts = scripts.concat(all_scripts.select {|s| s.has_pilot_access?(user)})
+    end
+
     scripts
   end
 
