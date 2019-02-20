@@ -761,8 +761,10 @@ gl:
       CourseF_PlayLab_vars9: "Estupendo, agora imos garantir que este xogo\nnon sexa moi fácil - sempre que o can (personaxe 1) sexa atinxido por unha bola de fogo do gato (personaxe 2), debes perder un punto. Comeza con 10 puntos para que o xogo non sexa moito difícil. Fai caer a túa puntuación de 10 para 0 para pasar de nivel."
       Crack Random Substitution: Instrucións
       Crack Random Substitution_2018: Instrucións
+      Crack Random Substitution_2019: Instrucións
       Crack a Caesar Cipher: Instrucións
       Crack a Caesar Cipher_2018: Instrucións
+      Crack a Caesar Cipher_2019: Instrucións
       Food Fight!: "Engadimos unha última función para\nti.\\r\n\\r\nUsa unha instrución \"se\" para que o teu xogo chame á función \"suba de nível\"\nsomente cando \"puntos_xogador\" sexa maior que un determinado número. \\r\n\\r\nPor exemplo: \"puntos_xogador\" > 6\\r\n\\r\nXoga o xogo e chega até o nivel\n4 para ir para o próximo desafío. "
       Infinity_catch: "Podes facer que a Elsa (\"personaxe 2\") alcance\ná Anna usando as frechas do teclado?"
       Infinity_finale: Crea o que queiras e comparte!
@@ -1030,6 +1032,7 @@ gl:
       Testing Quantum Farmer: "Uau, atopei un buraco realmente fondo! Non\nsei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle \"mentres\"."
       The Vigenere Cipher Widget: Instrucións
       The Vigenere Cipher Widget_2018: Instrucións
+      The Vigenere Cipher Widget_2019: Instrucións
       The Vigenere Cipher: Instrucións
       Total Artist Clone Me: "Actividade libre: aquí están para usar as funcións\nque escribiches e máis algunhas. Debuxa algo incríbel!\nXoga co longo do lapis para ver como fican diferentes os teus debuxos!"
       U2 frequency caesar: Instrucións
@@ -1038,6 +1041,7 @@ gl:
       U4 vigenere cipher 2: Instrucións
       U4L02 - Objects - Template1: Modelo
       U4L02 - Objects - Template1_2018: Modelo
+      U4L02 - Objects - Template1_2019: Modelo
       Underground Avoiding Lava: Hai lava escondida baixo algúns destes bloques, que precisarás cubrir antes de avanzar. Aquí será útil un comando "se". Agrega un comando "andar cara adiante" no sitio correcto para extraer estes bloques.
       Underground Avoiding Lava_2018: Hai lava escondida baixo algúns destes bloques, que precisarás cubrir antes de avanzar. Aquí será útil un comando "se". Agrega un comando "andar cara adiante" no sitio correcto para extraer estes bloques.
       Underground Avoiding Lava_2019: Hai lava escondida baixo algúns destes bloques, que precisarás cubrir antes de avanzar. Aquí será útil un comando "se". Agrega un comando "andar cara adiante" no sitio correcto para extraer estes bloques.

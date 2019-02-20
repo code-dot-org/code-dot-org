@@ -911,6 +911,8 @@ ky:
               name: Интернет
             Relay Programming:
               name: Релени програмдоо
+            Graph Paper Programming:
+              name: Графикалык кагазды програмдоо
         courseb-2018:
           stages:
             Loops in Artist:
@@ -1243,3 +1245,19 @@ ky:
               name: Сүрөтчүдөгү циклдар
             Spelling Bee:
               name: Spelling Bee
+        csd2-2019:
+          stages:
+            Lists:
+              name: Тизмелер
+        csd3-2019:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Интернет

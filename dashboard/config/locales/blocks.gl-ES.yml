@@ -327,6 +327,11 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
       aalab_clickedOn:
         options:
           CONDITION:
@@ -347,11 +352,17 @@ gl:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
+          VAL:
+            '"true"': verdadeiro
+            '"false"': falso
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
       binary_move:
         options:
           DIR:

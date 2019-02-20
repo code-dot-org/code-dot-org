@@ -895,6 +895,11 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       aalab_clickedOn:
         options:
           CONDITION:
@@ -917,11 +922,24 @@ th:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
+          VAL:
+            '"true"': จริง
+            '"false"': เท็จ
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"rotation"': การหมุน
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+            '"direction"': ทิศทางการเคลื่อนไหว
+            '"tint"': ระดับอ่อนสี
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ตลอดกาล
       binary_move:
         options:
           DIR:
