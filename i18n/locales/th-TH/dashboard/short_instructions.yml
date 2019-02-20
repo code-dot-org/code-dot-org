@@ -398,8 +398,10 @@ th:
       CourseF_PlayLab_vars5: "Let's build a game! First we'll need\na score. Use the \"set points to\" block to set the score to 10."
       Crack Random Substitution: คำแนะนำ
       Crack Random Substitution_2018: คำแนะนำ
+      Crack Random Substitution_2019: คำแนะนำ
       Crack a Caesar Cipher: คำแนะนำ
       Crack a Caesar Cipher_2018: คำแนะนำ
+      Crack a Caesar Cipher_2019: คำแนะนำ
       D_Frozen_nested3: ลองหมุนเส้นที่เขียนเป็นรูปร่างไปรอบ ๆ
       D_Frozen_nested5: เล่นกับเกล็ดหิมะ
       D_Frozen_nested6: วาดรูปแบบขั้นบันไดที่ใช้การหันระหว่าง 75 และ 105 องศา
@@ -652,6 +654,7 @@ th:
       Testing Quantum Farmer: "ว้าว, ดูที่นี่ซิ!\n\nฉันไม่รู้ว่าต้องกลบหลุมนี่ใช้พลั่วตักดินใส่กี่ครั้ง  \nคุณสามารถเขียนโปรแกรมที่ใช้บล็อก ' กลบหลุม..' หลายๆ ครั้งจนกว่าหน้าดินจะราบเรียบได้ไหม  "
       The Vigenere Cipher Widget: คำแนะนำ
       The Vigenere Cipher Widget_2018: คำแนะนำ
+      The Vigenere Cipher Widget_2019: คำแนะนำ
       The Vigenere Cipher: คำแนะนำ
       U2 frequency caesar: คำแนะนำ
       U2 frequency random sub: คำแนะนำ

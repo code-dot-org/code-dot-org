@@ -284,6 +284,11 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       aalab_clickedOn:
         options:
           CONDITION:
@@ -304,11 +309,19 @@ ne:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': forever
       binary_move:
         options:
           DIR:

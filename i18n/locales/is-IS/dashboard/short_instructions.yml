@@ -531,30 +531,40 @@ is:
       CSD Hackathon Week 2: "(Smelltu til sjá nánari leiðbeiningar)"
       CSD U3 L5 Freeplay: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 L5 Freeplay_2018: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
+      CSD U3 L5 Freeplay_2019: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Mouse Input Bee 2: Gerðu þetta
       CSD U3 Mouse Input Bee 2_2018: Gerðu þetta
+      CSD U3 Mouse Input Bee 2_2019: Gerðu þetta
       CSD U3 Variables TEMPLATE square: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables change circle size: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables change circle size_2018: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
+      CSD U3 Variables change circle size_2019: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables multiple assignments: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables naming rules v2-2018: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables naming rules v2: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables naming rules v2_2018: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
+      CSD U3 Variables naming rules v2_2018_2019: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables naming rules: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables random assignment: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables random with assignment: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 Variables random with assignment_2018: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
+      CSD U3 Variables random with assignment_2019: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U4 - Events Template: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSD U5 black white images pixelation 2: Teiknaðu broskall (smelltu hér til að sjá mynd)
       CSD U5 black white images pixelation 2_2018: Teiknaðu broskall (smelltu hér til að sjá mynd)
+      CSD U5 black white images pixelation 2_2019: Teiknaðu broskall (smelltu hér til að sjá mynd)
       CSD U5 black white images pixelation 3: Færðu sleðana fyrir breidd og hæð til að finna myndina (smelltu hér til að sjá meira)
       CSD U5 black white images pixelation 3_2018: Færðu sleðana fyrir breidd og hæð til að finna myndina (smelltu hér til að sjá meira)
+      CSD U5 black white images pixelation 3_2019: Færðu sleðana fyrir breidd og hæð til að finna myndina (smelltu hér til að sjá meira)
       CSD U5 black white images pixelation 4: Bættu augabrúnum á broskallinn (smelltu hér til að sjá myndina)
       CSD U5 black white images pixelation 4_2018: Bættu augabrúnum á broskallinn (smelltu hér til að sjá myndina)
+      CSD U5 black white images pixelation 4_2019: Bættu augabrúnum á broskallinn (smelltu hér til að sjá myndina)
       CSD U5 black white images pixelation 5: Teiknaðu hvað sem þú vilt
       CSD U5 black white images pixelation 5_2018: Teiknaðu hvað sem þú vilt
+      CSD U5 black white images pixelation 5_2019: Teiknaðu hvað sem þú vilt
       CSD U5 black white images pixelation: Ljúktu við X-ið með því að nota 0 og 1
       CSD U5 black white images pixelation_2018: Ljúktu við X-ið með því að nota 0 og 1
+      CSD U5 black white images pixelation_2019: Ljúktu við X-ið með því að nota 0 og 1
       CSD U6 params modify clouds: |-
         # Ský
 
@@ -575,6 +585,16 @@ is:
          * (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
         * Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
          * (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
+      CSD U6 params modify clouds_2019: |-
+        # Ský
+
+        Þetta forrit lætur skýin hreyfast þegar þú blæst á hljóðnemann, en það er óklárað.
+
+        # Gerðu þetta
+        * Búðu til nýtt fall `moveCloud(heiti)` sem getur fært hvaða ský sem er.
+         * (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
+        * Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
+         * (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
       CSDU4 - AppLab - 1: Lestu gegnum skjölunina fyrir penColor() og penWidth() áður en þú notar þau til að teikna bláa ferninginn.
       CSDU4 - Design Mode - 1: Bættu við hnappi sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSDU4 - Design Mode - 4: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
@@ -585,22 +605,29 @@ is:
       CSDU6 arrays rainbow: Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
       CSDU6 arrays select rainbow: Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
       CSDU6 arrays select rainbow_2018: Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
+      CSDU6 arrays select rainbow_2019: Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
       CSP student contact info: Vinsamlegast sláðu inn netfangið þitt.
       CSPU5_U3 - Arrays - indexPractice: Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
       CSPU5_U3 - Arrays - indexPractice_2018: Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
+      CSPU5_U3 - Arrays - indexPractice_2019: Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
       CSPU5_U3 - Canvas - freePlay: Auktu við virkni einhverra hrifanna eða búðu til alveg splunkunýtt. (Smelltu til að sjá nánari leiðbeiningar.)
       CSPU5_U3 - Canvas - freePlay_2018: Auktu við virkni einhverra hrifanna eða búðu til alveg splunkunýtt. (Smelltu til að sjá nánari leiðbeiningar.)
+      CSPU5_U3 - Canvas - freePlay_2019: Auktu við virkni einhverra hrifanna eða búðu til alveg splunkunýtt. (Smelltu til að sjá nánari leiðbeiningar.)
       CSPU5_U3 - Design Mode 1: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSPU5_U3 - Design Mode 1_2018: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      CSPU5_U3 - Design Mode 1_2019: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSPU5_U3 - Keys - Final Image Scroller: Uppfærðu myndflettinguna þannig að hún bregðist við hnöppum og lyklum. (Smelltu til að sjá nánari leiðbeiningar.)
       CSPU5_U3 - Loops - 4: Notaðu villuleitarskipanirnar til að búa til lista yfir öll gildin sem komu upp á undan 6. (Smelltu til að sjá nánari leiðbeiningar)
       CSPU5_U3 - Loops - 4_2018: Notaðu villuleitarskipanirnar til að búa til lista yfir öll gildin sem komu upp á undan 6. (Smelltu til að sjá nánari leiðbeiningar)
+      CSPU5_U3 - Loops - 4_2019: Notaðu villuleitarskipanirnar til að búa til lista yfir öll gildin sem komu upp á undan 6. (Smelltu til að sjá nánari leiðbeiningar)
       CSPU5_U3L13 - Debug Id Problem: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSPU5_U3L13 - Turtle move with button: Bættu við hnappi sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSPU5_U3L15 full clicker app: "Ljúktu við leikinn!\n(Smelltu til að sjá allar leiðbeiningar)"
       CSPU5_U3L15 full clicker app_2018: "Ljúktu við leikinn!\n(Smelltu til að sjá allar leiðbeiningar)"
+      CSPU5_U3L15 full clicker app_2019: "Ljúktu við leikinn!\n(Smelltu til að sjá allar leiðbeiningar)"
       CSPU5_addDescriptiveIDsToTurtleDriver: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSPU5_addDescriptiveIDsToTurtleDriver_2018: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      CSPU5_addDescriptiveIDsToTurtleDriver_2019: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       Calc Circles of Eval .1: Hér notum við svonefnda matskubba, sem heita það því að hver kubbur er metinn þar til hann gefur stakt gildi. Breyttu ??? í þessum kóða svo að kubburinn gefi 5 við mat.
       Calc Circles of Eval .2: Þessi matskubbur er margföldunarfall sem tekur tvær tölur og skilar margfeldi þeirra. Breyttu kubbnum svo að hann margfaldi 2 * 5
       Calc Circles of Eval .3: Hér er fall fyrir samlagningu sem tekur tvær tölur og skilar summu þeirra. Notaðu samlagningarkubbinn til að reikna 3 + 6.
@@ -1002,8 +1029,10 @@ is:
       CourseF_PlayLab_vars9: Fínt en nú skulum við tryggja að leikurinn sé ekki of auðveldur. Í hvert sinn sem hundurinn (leikmaður 1) verður fyrir samloku frá kettinum (leikmanni 2) ættir þú að tapa stigi. Byrjaðu með 10 stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára borðið.
       Crack Random Substitution: Leiðbeiningar
       Crack Random Substitution_2018: Leiðbeiningar
+      Crack Random Substitution_2019: Leiðbeiningar
       Crack a Caesar Cipher: Leiðbeiningar
       Crack a Caesar Cipher_2018: Leiðbeiningar
+      Crack a Caesar Cipher_2019: Leiðbeiningar
       D_Frozen_nested3: Nú skulum við snúa þessari röð af formum!
       D_Frozen_nested4: Kominn tími til að hafa formin lagskipt!
       D_Frozen_nested5: Leiktu þér með snjókornin!
@@ -1503,6 +1532,7 @@ is:
       Ninjacat Demo B (copy 1): "Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna til vinstri og hægri og stökkva - reyndu að ná einhyrningnum en forðast drekann!\n"
       Ninjacat Demo B: Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna upp og niður - reyndu að ná einhyrningnum en forðast drekann! Þegar þú heldur að þú hafir skilið þetta skaltu smella á "Ljúka"
       Ninjacat Demo No Animate: Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna upp og niður - reyndu að ná einhyrningnum en forðast drekann! Þegar þú heldur að þú hafir skilið þetta skaltu smella á "Ljúka"
+      October15 JoL 1: Forritaðu listamanninn svo hann teikni andlit á graskerið!
       Overworld Avoid Monsters: "Það er ekki góð hugmynd að rekast á laumupúka. \nFarðu varlega framhjá þeim til að komast í öryggi heimilisins."
       Overworld Avoid Monsters_2018: "Það er ekki góð hugmynd að rekast á laumupúka. \nFarðu varlega framhjá þeim til að komast í öryggi heimilisins."
       Overworld Avoid Monsters_2019: "Það er ekki góð hugmynd að rekast á laumupúka. \nFarðu varlega framhjá þeim til að komast í öryggi heimilisins."
@@ -1548,10 +1578,13 @@ is:
       Pixelation - AllTheThings 5: Þessi áfangi með dílamynstrum sýnir notkun valkostsins "Hide sliders" (fela sleða). Taktu eftir að sleðarnir fyrir breidd og hæð eru þá ekki tiltækir og reitirnir fyrir breidd og hæð eru læstir.
       Pixelation - Lesson 14 - Make the Letter A: 'Búðu til stafinn ''A'' í 3x5. Græjan er nú með rangar víddir. Fyrsta verk þitt er að stilla annað bætið á 8-bita tvíundarrununa fyrir töluna 5: 0000 0101. Byrjaðu svo að setja inn díla.'
       Pixelation - Lesson 14 - Make the Letter A_2018: 'Búðu til stafinn ''A'' í 3x5. Græjan er nú með rangar víddir. Fyrsta verk þitt er að stilla annað bætið á 8-bita tvíundarrununa fyrir töluna 5: 0000 0101. Byrjaðu svo að setja inn díla.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Búðu til stafinn ''A'' í 3x5. Græjan er nú með rangar víddir. Fyrsta verk þitt er að stilla annað bætið á 8-bita tvíundarrununa fyrir töluna 5: 0000 0101. Byrjaðu svo að setja inn díla.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Þú byrjar með 4x4 myndina sem Maddie bjó til í myndbandinu. Verkefni þitt er að fylla 4x4 grindina með litum með 12 bitum fyrir hvern díl. Hér eru kröfurnar: Röð 1 - fylla með rauðum litbrigðum. Röð 2 - græn litbrigði. Röð 3 - grá litbrigði.'
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Þú byrjar með 4x4 myndina sem Maddie bjó til í myndbandinu. Verkefni þitt er að fylla 4x4 grindina með litum með 12 bitum fyrir hvern díl. Hér eru kröfurnar: Röð 1 - fylla með rauðum litbrigðum. Röð 2 - græn litbrigði. Röð 3 - grá litbrigði.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Þú byrjar með 4x4 myndina sem Maddie bjó til í myndbandinu. Verkefni þitt er að fylla 4x4 grindina með litum með 12 bitum fyrir hvern díl. Hér eru kröfurnar: Röð 1 - fylla með rauðum litbrigðum. Röð 2 - græn litbrigði. Röð 3 - grá litbrigði.'
       Pixelation - Lesson 15 - Complete 3-bit color: Þú byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum skilið eftir síðustu tvo reitina. Ljúktu við myndina með því að finna út hvaða tvo liti vantar og kóða þá.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Þú byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum skilið eftir síðustu tvo reitina. Ljúktu við myndina með því að finna út hvaða tvo liti vantar og kóða þá.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: Þú byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum skilið eftir síðustu tvo reitina. Ljúktu við myndina með því að finna út hvaða tvo liti vantar og kóða þá.
       Pizza on a Plate: 'Hugmynd að verkefni: Búðu til mynd af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!'
       Play Lab Rocket 2: Hér höfum við byrjað á hönnunaruppskriftinni fyrir hæð-flaugar og notað til þess samninginn og dæmin sem þú skrifaðir. Ljúktu við skilgreiningu fallsins "rocket-height" (hæð-flaugar) og keyrðu hreyfimyndina.
       Play Lab Rocket 2B: Eldflaug er skotið upp á hraðanum 15 metrar á sekúndu. Notaðu hönnunaruppskriftina til að skrifa fallið "rocket-height" (hæð-flaugar), sem tekur inn fjölda sekúndna sem hafa liðið frá að flaugin lagði af stað og skilar hæð flaugarinnar á þeirri stundu.
@@ -1562,6 +1595,7 @@ is:
       Poorva copy U3L2 Using Simple Commands: Teiknaðu 1x1 ferning ofan við og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
       Project - Final Image Scroller: Uppfærðu myndflettinguna þannig að hún bregðist við hnöppum og lyklum. (Smelltu til að sjá nánari leiðbeiningar.)
       Project - Final Image Scroller_2018: Uppfærðu myndflettinguna þannig að hún bregðist við hnöppum og lyklum. (Smelltu til að sjá nánari leiðbeiningar.)
+      Project - Final Image Scroller_2019: Uppfærðu myndflettinguna þannig að hún bregðist við hnöppum og lyklum. (Smelltu til að sjá nánari leiðbeiningar.)
       Project - Finish your canvas app: Auktu við virkni einhverra hrifanna eða búðu til alveg splunkunýtt. (Smelltu til að sjá nánari leiðbeiningar.)
       Project - Make Your Own Clicker Game: "Ljúktu við leikinn!\n(Smelltu til að sjá allar leiðbeiningar)"
       Prompt Test: Búðu til hvað sem þú vilt. Þetta er dæmi um giska-á-tölu leik!
@@ -1641,6 +1675,7 @@ is:
       Testing Quantum Farmer: "Vá, ég fann mjög djúpa holu! \\r\n\\r\nÉg veit ekki hve mörg skóflufylli af mold þarf. \\r\nGetur þú skrifað forrit sem notar `fylla` kubbinn þar til hún er sléttfull?  "
       The Vigenere Cipher Widget: Leiðbeiningar
       The Vigenere Cipher Widget_2018: Leiðbeiningar
+      The Vigenere Cipher Widget_2019: Leiðbeiningar
       The Vigenere Cipher: Leiðbeiningar
       Total Artist Clone Me: 'Frjáls æfing: Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Teiknaðu eitthvað ofurflott! Leiktu með breidd pennans til að sjá hvernig það breytir teikningunni!'
       U2 frequency caesar: Leiðbeiningar
@@ -1667,67 +1702,94 @@ is:
       U3L03 Creating Procedures 1: 'Skrifaðu fallið turnAround() og notaðu það til að láta skjaldbökuna hreyfast eins og sýnt er. Sjá: U3L03-turnAndDown.gif'
       U3L03 Define and use turnAround: Skrifaðu fallið turnAround. Kallaðu á fallið og færðu svo skjaldbökuna áfram. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 Define and use turnAround_2018: Skrifaðu fallið turnAround. Kallaðu á fallið og færðu svo skjaldbökuna áfram. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L03 Define and use turnAround_2019: Skrifaðu fallið turnAround. Kallaðu á fallið og færðu svo skjaldbökuna áfram. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 Draw a T using turnAround: Teiknaðu plús merki með gefna fallinu turnAround(). (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 Draw a T using turnAround_2018: Teiknaðu plús merki með gefna fallinu turnAround(). (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L03 Draw a T using turnAround_2019: Teiknaðu plús merki með gefna fallinu turnAround(). (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 Three Steps: Skilgreindu fallið drawSide() (teiknaHlið), sem teiknar þrjú þrep og færir pennann í stöðu fyrir næstu hlið (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 Three Steps_2018: Skilgreindu fallið drawSide() (teiknaHlið), sem teiknar þrjú þrep og færir pennann í stöðu fyrir næstu hlið (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L03 Three Steps_2019: Skilgreindu fallið drawSide() (teiknaHlið), sem teiknar þrjú þrep og færir pennann í stöðu fyrir næstu hlið (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 choose your own drawing: 'Nú getur þú valið! Veldu eina af teikningunum þremur sem sýndar eru og reyndu svo að búa hana til. Taktu skynsamlegar ákvarðanir um hvernig er best að skipta verkefninu í endurnýtanleg föll. Þú ferð svo yfir vinnu þína með félaga samkvæmt aðferðum sem lýst er undir "stefjuyfirferð með félaga". GIF: U3L3-ProceduresChooseOne.png'
       U3L03 draw diamond: Búðu til fallið drawDiamond() (teiknaDemant) sem notar fyrri vinnu þína til að teikna heilan demant. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 draw diamond_2018: Búðu til fallið drawDiamond() (teiknaDemant) sem notar fyrri vinnu þína til að teikna heilan demant. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L03 draw diamond_2019: Búðu til fallið drawDiamond() (teiknaDemant) sem notar fyrri vinnu þína til að teikna heilan demant. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L04 choose your own drawing: Nú getur þú valið! Veldu eina af teikningunum þremur, sem sýndar eru, og reyndu svo að búa hana til. Taktu skynsamlegar ákvarðanir um hvernig er best að skipta verkefninu í endurnýtanleg föll. Þú ferð svo yfir vinnu þína með félaga samkvæmt aðferðum sem lýst er undir "stefjuyfirferð með félaga".
       U3L04 diamond solution: Kynntu þér þessa lausn á drawDiamond verkefninu. Taktu eftir að forritið byrjar efst á að kalla á drawDiamond(). Forritið kallar síðan á röð af föllum. Þú getur rakið hvað er að gerast í kóðanum til að sjá hvernig föllin eru endurnýtt. Það er einnig auðvelt að lesa forritið því að heiti fallanna gefa til kynna hvað þau gera.
       U3L05_3x3GridEfficiencyChallenge: Við skulum skoða aftur verkefnið með 3x3 grindinni sem þú gerðir áður. Í þetta sinn er áskorunin að forrita lausnina á eins hagkvæman hátt og mögulegt er. Nú þegar þú kannt að skrifa föll, ætti að vera auðveldara að skipta verkefninu í smærri hluta og það ætti að vera auðveldara að lesa og villugreina kóðann þinn. Skýringarnar lýsa nánar hvers er krafist.
       U3L05_draw3x3GridEfficiently: 'Teiknaðu 3x3 grind fyrir ofan og hægra megin við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Athugaðu: Þetta verkefni reynir mikið á. Þú gætir þurft að gera þó nokkrar tilraunir og endurbætur. Þú vilt kannske líka íhuga að nota blýant og blað til að teikna hugmyndirnar.'
       U3L06 - moveForwardwithParams: Notaðu eina skipun til að færa pennann út á brún skjásins. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 - moveForwardwithParams_2018: Notaðu eina skipun til að færa pennann út á brún skjásins. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 - moveForwardwithParams_2019: Notaðu eina skipun til að færa pennann út á brún skjásins. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 1 triangle: Notaðu þær útgáfur pennaskipana sem hafa færibreytur til að búa til þríhyrning með 100 díla hliðar. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 1 triangle_2018: Notaðu þær útgáfur pennaskipana sem hafa færibreytur til að búa til þríhyrning með 100 díla hliðar. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 Challenge 1 triangle_2019: Notaðu þær útgáfur pennaskipana sem hafa færibreytur til að búa til þríhyrning með 100 díla hliðar. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 2 purple square: Lestu gegnum skjölunina fyrir penColor() og penWidth() áður en þú notar þau til að teikna bláa ferninginn.
       U3L06 Challenge 2 purple square_2018: Lestu gegnum skjölunina fyrir penColor() og penWidth() áður en þú notar þau til að teikna bláa ferninginn.
+      U3L06 Challenge 2 purple square_2019: Lestu gegnum skjölunina fyrir penColor() og penWidth() áður en þú notar þau til að teikna bláa ferninginn.
       U3L06 Challenge 3 fill pink: Fylltu bakgrunn skjásins með uppáhalds lit. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 3 fill pink_2018: Fylltu bakgrunn skjásins með uppáhalds lit. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 Challenge 3 fill pink_2019: Fylltu bakgrunn skjásins með uppáhalds lit. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 4 bullseye: Búðu til miðju marksins með hexkóðum lita og fallinu dot(). (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 4 bullseye_2018: Búðu til miðju marksins með hexkóðum lita og fallinu dot(). (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 Challenge 4 bullseye_2019: Búðu til miðju marksins með hexkóðum lita og fallinu dot(). (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 5 overlapping circles: 'Þessi mynd er búin til eingöngu með því að nota dot() og penColor(), en hvernig fáum við hringana svona gegnsæja? Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!'
       U3L06 Challenge 5 overlapping circles_2018: 'Þessi mynd er búin til eingöngu með því að nota dot() og penColor(), en hvernig fáum við hringana svona gegnsæja? Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!'
+      U3L06 Challenge 5 overlapping circles_2019: 'Þessi mynd er búin til eingöngu með því að nota dot() og penColor(), en hvernig fáum við hringana svona gegnsæja? Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!'
       U3L06 Challenge 6 squiggles: "Lestu skjölunina fyrir skipanirnar \"arcLeft\" (vinstriBogi) og \"arcRight\" (hægriBogi) og teiknaðu svo línurnar sem sjást.\n"
       U3L06 Challenge 6 squiggles_2018: "Lestu skjölunina fyrir skipanirnar \"arcLeft\" (vinstriBogi) og \"arcRight\" (hægriBogi) og teiknaðu svo línurnar sem sjást.\n"
+      U3L06 Challenge 6 squiggles_2019: "Lestu skjölunina fyrir skipanirnar \"arcLeft\" (vinstriBogi) og \"arcRight\" (hægriBogi) og teiknaðu svo línurnar sem sjást.\n"
       U3L06 Challenge 7 smiley face: Notaðu turnTo() og moveTo() til að hjálpa að teikna broskall. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 7 smiley face_2018: Notaðu turnTo() og moveTo() til að hjálpa að teikna broskall. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 Challenge 7 smiley face_2019: Notaðu turnTo() og moveTo() til að hjálpa að teikna broskall. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 8 make your own: Búðu til teikningu eftir eigin höfði. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 8 make your own_2018: Búðu til teikningu eftir eigin höfði. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 Challenge 8 make your own_2019: Búðu til teikningu eftir eigin höfði. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - Free Play Loops and Random: Frjáls æfing! Notaðu það sem þú hefur lært um lykkjur og handahóf til að búa til eigin sviðsmynd. Góða skemmtun.
       U3L07 - Free Play Loops and Random_2018: Frjáls æfing! Notaðu það sem þú hefur lært um lykkjur og handahóf til að búa til eigin sviðsmynd. Góða skemmtun.
+      U3L07 - Free Play Loops and Random_2019: Frjáls æfing! Notaðu það sem þú hefur lært um lykkjur og handahóf til að búa til eigin sviðsmynd. Góða skemmtun.
       U3L07 - Starry Night Starter Code: 'Hér ætlar þú að nota lykkjur og handahófstölur til að búa til mynd af stjörnuhimni líkum þeim sem sýndur er. Við höfum látið þig fá kóða til að teikna landið og himininn (bara tveir risastórir punktar) og þú átt að bæta við kóða til að skapa stjörnurnar, grasið og tunglið. Allt efni myndarinnar eru gerð með því að láta skjaldbökuna teikna punkta, línur og liti á sniðugan hátt. Þú getur komið þér af stað með því að fylgja leiðbeiningunum sem lagðar eru til á meðfylgjandi vinnublaði. '
       U3L07 - allSeaGrass: Bættu við 50 af marhálmi við myndina með því að nota drawAllSeagrass með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - allSeaGrass_2018: Bættu við 50 af marhálmi við myndina með því að nota drawAllSeagrass með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L07 - allSeaGrass_2019: Bættu við 50 af marhálmi við myndina með því að nota drawAllSeagrass með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - createTriangleParam: Búðu til fall sem tekur viðeigandi færibreytu og ljúktu við myndina. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - createTriangleParam_2018: Búðu til fall sem tekur viðeigandi færibreytu og ljúktu við myndina. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L07 - createTriangleParam_2019: Búðu til fall sem tekur viðeigandi færibreytu og ljúktu við myndina. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - introSquare: "Notaðu lykkju til að teikna ferning. Bættu svo við annarri lykkju til að teikna marga ferninga sem hverjum er snúið einhverjar gráður.\n (Smelltu til að sjá ítarlegar leiðbeiningar)"
       U3L07 - introSquare_2018: "Notaðu lykkju til að teikna ferning. Bættu svo við annarri lykkju til að teikna marga ferninga sem hverjum er snúið einhverjar gráður.\n (Smelltu til að sjá ítarlegar leiðbeiningar)"
+      U3L07 - introSquare_2019: "Notaðu lykkju til að teikna ferning. Bættu svo við annarri lykkju til að teikna marga ferninga sem hverjum er snúið einhverjar gráður.\n (Smelltu til að sjá ítarlegar leiðbeiningar)"
       U3L07 - loopsWithRandom: Notaðu fleiri endurtekningar til að fylla skjáinn með hvítu. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - loopsWithRandom_2018: Notaðu fleiri endurtekningar til að fylla skjáinn með hvítu. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L07 - loopsWithRandom_2019: Notaðu fleiri endurtekningar til að fylla skjáinn með hvítu. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - randomSquare: Notaðu lykkju til að teikna myndina. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - randomSquare_2018: Notaðu lykkju til að teikna myndina. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L07 - randomSquare_2019: Notaðu lykkju til að teikna myndina. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - sunBeams: Bættu 100 sólargeislum við myndina með því að nota drawAllSunbeams með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - sunBeams_2018: Bættu 100 sólargeislum við myndina með því að nota drawAllSunbeams með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L07 - sunBeams_2019: Bættu 100 sólargeislum við myndina með því að nota drawAllSunbeams með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - topDownDesign: Skoðaðu uppbyggingu þessa forrits þar þú skilur hana og farðu svo í næstu æfingu. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - topDownDesign_2018: Skoðaðu uppbyggingu þessa forrits þar þú skilur hana og farðu svo í næstu æfingu. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L07 - topDownDesign_2019: Skoðaðu uppbyggingu þessa forrits þar þú skilur hana og farðu svo í næstu æfingu. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - fish: Bættu færibreytu við drawFish sem stjórnar stærð fisksins. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - fish_2018: Bættu færibreytu við drawFish sem stjórnar stærð fisksins. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L08 - fish_2019: Bættu færibreytu við drawFish sem stjórnar stærð fisksins. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - freePlay: Haltu áfram að bæta við myndina með því að kalla oftar á nýju föllin þín með færibreytunum. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - freePlay_2018: Haltu áfram að bæta við myndina með því að kalla oftar á nýju föllin þín með færibreytunum. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L08 - freePlay_2019: Haltu áfram að bæta við myndina með því að kalla oftar á nýju föllin þín með færibreytunum. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - introUnderTheSea with comments: Bættu fiski, krossfiski og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - introUnderTheSea: Bættu fiski, krossfiski og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - introUnderTheSea_2018: Bættu fiski, krossfiski og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L08 - introUnderTheSea_2019: Bættu fiski, krossfiski og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - randomInput: Notaðu randomNumber() kubbana til að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - randomInput_2018: Notaðu randomNumber() kubbana til að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L08 - randomInput_2019: Notaðu randomNumber() kubbana til að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - squareTwoParams: Kallaðu á drawSquare() til að ljúka við ferningana tvo. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - squareTwoParams_2018: Kallaðu á drawSquare() til að ljúka við ferningana tvo. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L08 - squareTwoParams_2019: Kallaðu á drawSquare() til að ljúka við ferningana tvo. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - starFish: Bættu fiski, krossfiski og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 - triangleTwoParams: Kallaðu á drawSquare() til að ljúka við ferningana tvo. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 how to add comments: Notaðu randomNumber() kubbana til að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L08 how to add comments_2018: Notaðu randomNumber() kubbana til að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L08 how to add comments_2019: Notaðu randomNumber() kubbana til að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L13 - Button with ID: Dragðu hnapp út á skjáinn og settu í hann textann "Sæktu fram!". Keyrðu forritið til að vera viss um að hnappurinn sjáist.
       U3L13 - Debug Id Problem: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L13 - Debug Id plus logic problem: |-
@@ -1739,17 +1801,26 @@ is:
       U3L2 Using Simple Commands (no tooltips): Teiknaðu 1x1 ferning ofan við og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
       U3L2 Using Simple Commands: Teiknaðu 1x1 ferning ofan við og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
       U3L2 Using Simple Commands_2018: Teiknaðu 1x1 ferning ofan við og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
+      U3L2 Using Simple Commands_2019: Teiknaðu 1x1 ferning ofan við og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
       U3L2_Turtle3by3Grid: Teiknaðu 3x3 grind fyrir ofan og hægra megin við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Skjaldbakan á að enda á upphaflega staðnum og snúa í upphaflega átt. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L2_Turtle3by3Grid_2018: Teiknaðu 3x3 grind fyrir ofan og hægra megin við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Skjaldbakan á að enda á upphaflega staðnum og snúa í upphaflega átt. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L2_Turtle3by3Grid_2019: Teiknaðu 3x3 grind fyrir ofan og hægra megin við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Skjaldbakan á að enda á upphaflega staðnum og snúa í upphaflega átt. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L2_TurtleSquare_right: Teiknaðu ferning framan við og hægra megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L2_TurtleSquare_right_2018: Teiknaðu ferning framan við og hægra megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L2_TurtleSquare_right_2019: Teiknaðu ferning framan við og hægra megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U4 - Edit Data Table by Hand: Skoðaðu gagnatöfluna og smelltu á "breyta" við hverja röð. Skrifaðu nafn söngvarans við hvert lag. (Smelltu til að sjá nánari leiðbeiningar)
+      U4 - Edit Data Table by Hand_2018: Skoðaðu gagnatöfluna og smelltu á "breyta" við hverja röð. Skrifaðu nafn söngvarans við hvert lag. (Smelltu til að sjá nánari leiðbeiningar)
+      U4 - Edit Data Table by Hand_2019: Skoðaðu gagnatöfluna og smelltu á "breyta" við hverja röð. Skrifaðu nafn söngvarans við hvert lag. (Smelltu til að sjá nánari leiðbeiningar)
       U4 Model App: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U4 Model App_2018: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U4 Model App_2019: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U4 Model Design 1: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U4 Model Design 1_2018: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U4 Model Design 1_2019: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U4 vigenere cipher 2: Leiðbeiningar
       U4L02 - Objects - Template1: Sniðmát
       U4L02 - Objects - Template1_2018: Sniðmát
+      U4L02 - Objects - Template1_2019: Sniðmát
       Underground Avoiding Lava: Það leynist hraun undir sumum blokkunum og þú verður að þekja það áður þú ferð áfram. "Ef" skipun er gagnleg hér. Bættu "færa áfram" skipun við á réttum stað til að ná að grafa út þessar blokkir.
       Underground Avoiding Lava_2018: Það leynist hraun undir sumum blokkunum og þú verður að þekja það áður þú ferð áfram. "Ef" skipun er gagnleg hér. Bættu "færa áfram" skipun við á réttum stað til að ná að grafa út þessar blokkir.
       Underground Avoiding Lava_2019: Það leynist hraun undir sumum blokkunum og þú verður að þekja það áður þú ferð áfram. "Ef" skipun er gagnleg hér. Bættu "færa áfram" skipun við á réttum stað til að ná að grafa út þessar blokkir.
@@ -1782,6 +1853,15 @@ is:
       artistLoopsK1: Þetta er ný tegund af þraut sem nefnist "Listamaðurinn". Prófaðu þetta borð og teiknaðu eitthvað skemmtilegt.
       artistLoopsK2: Notaðu nú `endurtaka` lykkju til að teikna þessa línu fimm sinnum!
       artistLoopsK2gradek_artist_loops3: Notaðu nú `endurtaka` lykkju til að teikna þessa línu fimm sinnum!
+      artistLoopsK3: Teiknaðu strik sem er 8 reitir á lengd. Þetta verður landið í kóngsríkinu okkar!
+      artistLoopsK4: Nú vantar okkur kastala með vindubrú.  Lagaðu kóðann svo að brúin leggist rétt í stað þess að detta niður.
+      artistLoopsK5: Nú þurfum við að laga efri hluta kastalans. Getur þú endurtekið kóðann í lykkju þrisvar sinnum?
+      artistLoopsK6: 'Einhver er lokaður inni í turninum! Lagaðu stigann til að bjarga málinu. '
+      artistLoopsK7: 'Þessi turn er flottur en hvað er niðri? Búðu til aðra tröppu til að komast að því! '
+      artistLoopsK8: Þarna er garður! Lagaðu tröppurnar svo ég komist þangað.
+      artistLoopsKA: Þessir steinar eru á röngum stað. Færðu þá svo ég detti ekki ofan í!
+      artistLoopsKB: 'Sjáðu, þarna er leikhús. Hjálpaðu mér að stilla upp stólum svo við sjáum sviðið. '
+      artistLoopsKFP: Notaðu það sem þú hefur lært til að teikna mynd af því sem þú heldur að listamaðurinn hafi séð á sviðinu.
       asteroids: Þessi korgi hefur verið góður strákur! Dragðu þessa gulrót til hans sem sérstök verðlaun.
       beeDebugVideo1: Notaðu `endurtaka` lykkju til að safna öllum blómasafanum.
       behavior bash mary: Klónaðu þetta borð og búðu til þína eigin kubba!
@@ -2434,12 +2514,39 @@ is:
       courseC_artist_loopsTemplateA: 'Komdu listamanninum inn í miðju leiksvæðisins og teiknaðu svo fugl með því að nota límmiða. '
       courseC_artist_loopsTemplateA_2018: 'Komdu listamanninum inn í miðju leiksvæðisins og teiknaðu svo fugl með því að nota límmiða. '
       courseC_artist_loopsTemplateA_2019: 'Komdu listamanninum inn í miðju leiksvæðisins og teiknaðu svo fugl með því að nota límmiða. '
+      courseC_artist_prog1: Leiktu þér með kubbana í verkfærakassanum til að sjá hvað þeir gera!
+      courseC_artist_prog1_2018: Leiktu þér með kubbana í verkfærakassanum til að sjá hvað þeir gera!
+      courseC_artist_prog1_2019: Leiktu þér með kubbana í verkfærakassanum til að sjá hvað þeir gera!
+      courseC_artist_prog2: Dragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni. (Hver strik er 100 dílar á lengd)
+      courseC_artist_prog2_2018: Dragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni. (Hver strik er 100 dílar á lengd)
+      courseC_artist_prog2_2019: Dragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni. (Hver strik er 100 dílar á lengd)
+      courseC_artist_prog3: Hver hlið á innri ferningnum er 100 dílar og öll hornin eru 90 gráður.
+      courseC_artist_prog3_2018: Hver hlið á innri ferningnum er 100 dílar og öll hornin eru 90 gráður.
+      courseC_artist_prog3_2019: Hver hlið á innri ferningnum er 100 dílar og öll hornin eru 90 gráður.
+      courseC_artist_prog4: Kláraðu eldflaug Stjörnu svo að hún geti elt gæludýrið sitt.
+      courseC_artist_prog4_2018: Kláraðu eldflaug Stjörnu svo að hún geti elt gæludýrið sitt.
+      courseC_artist_prog4_2019: Kláraðu eldflaug Stjörnu svo að hún geti elt gæludýrið sitt.
       courseC_artist_prog5: |-
         Þetta hús er án þaks! Teiknaðu þríhyrninginn. Vísbending: Hliðarnar þrjár eru jafnlangar.
       courseC_artist_prog5_2018: |-
         Þetta hús er án þaks! Teiknaðu þríhyrninginn. Vísbending: Hliðarnar þrjár eru jafnlangar.
       courseC_artist_prog5_2019: |-
         Þetta hús er án þaks! Teiknaðu þríhyrninginn. Vísbending: Hliðarnar þrjár eru jafnlangar.
+      courseC_artist_prog6: Teiknaðu þennan demant með 200 díla hliðar.
+      courseC_artist_prog6_2018: Teiknaðu þennan demant með 200 díla hliðar.
+      courseC_artist_prog6_2019: Teiknaðu þennan demant með 200 díla hliðar.
+      courseC_artist_prog7: "**Áskorun:** Geturðu teiknað þetta form?"
+      courseC_artist_prog7_2018: "**Áskorun:** Geturðu teiknað þetta form?"
+      courseC_artist_prog7_2019: "**Áskorun:** Geturðu teiknað þetta form?"
+      courseC_artist_prog8: |-
+        Enn eitt form. Þetta er þríhyrningur fyrir Pí.
+        (Hver hlið er 150 dílar)
+      courseC_artist_prog8_2018: |-
+        Enn eitt form. Þetta er þríhyrningur fyrir Pí.
+        (Hver hlið er 150 dílar)
+      courseC_artist_prog8_2019: |-
+        Enn eitt form. Þetta er þríhyrningur fyrir Pí.
+        (Hver hlið er 150 dílar)
       courseC_artist_prog_challenge1-doghouse: Byggjum hundahús fyrir Jorge!
       courseC_artist_prog_challenge1: 'Teiknaðu bás fyrir hvert dýr. '
       courseC_artist_prog_challenge1_2018: 'Teiknaðu bás fyrir hvert dýr. '
@@ -2582,8 +2689,18 @@ is:
         - Hvað gerist ef þú notar tvö mismunandi horn í tröppumynstrinu?\r
         - Hvað gerist ef þú styttir eða lengir tígulmynstrið?\r
         - Hvernig kemur það út að teikna eitt snjókorn yfir annað?
+      courseD_artist_1_2018: "Teiknaðu sexhyrning með **50** díla langar hliðar.\n"
+      courseD_artist_1_2018_2019: "Teiknaðu sexhyrning með **50** díla langar hliðar.\n"
+      courseD_artist_2_2018: 'Snúðu nú til hægri um **60** gráður og teiknaðu svo **150** díla langt beint strik. Hoppaðu svo inn á miðju leiksvæðisins.  '
+      courseD_artist_2_2018_2019: 'Snúðu nú til hægri um **60** gráður og teiknaðu svo **150** díla langt beint strik. Hoppaðu svo inn á miðju leiksvæðisins.  '
+      courseD_artist_3_2018: 'Faldaðu allan kóðann inn í annarri `endurtaka` lykkju og keyrðu hann alls **6** sinnum. '
+      courseD_artist_3_2018_2019: 'Faldaðu allan kóðann inn í annarri `endurtaka` lykkju og keyrðu hann alls **6** sinnum. '
+      courseD_artist_4_2018: Bættu pínulitlu formi á endann á strikinu!
+      courseD_artist_4_2018_2019: Bættu pínulitlu formi á endann á strikinu!
       courseD_artist_5_2018: Leiktu þér með snjókornin!
       courseD_artist_5_2018_2019: Leiktu þér með snjókornin!
+      courseD_artist_6_2018: 'Prófaðu að breyta 150 díla strikinu í 6 stutt strik sem eru **25** dílar með smá-snúning á enda hvers striks.  '
+      courseD_artist_6_2018_2019: 'Prófaðu að breyta 150 díla strikinu í 6 stutt strik sem eru **25** dílar með smá-snúning á enda hvers striks.  '
       courseD_artist_7_2018: Snúðu nú við um 180 gráður og teiknaðu stjörnumynstrið aftur!
       courseD_artist_8_2018: Snúðu forminu 5 eða 6 sinnum í hring.
       courseD_artist_9_2018: |-
@@ -2594,9 +2711,18 @@ is:
       courseD_artist_binary1: Notaðu kubbana fyrir neðan til að láta listamanninn teikna tvíundirnar "01010101" í fyrstu röðina.
       courseD_artist_binary1_2018: Notaðu kubbana fyrir neðan til að láta listamanninn teikna tvíundirnar "01010101" í fyrstu röðina.
       courseD_artist_binary1_2019: Notaðu kubbana fyrir neðan til að láta listamanninn teikna tvíundirnar "01010101" í fyrstu röðina.
+      courseD_artist_binary2: Keyrðu þennan kóða til að sjá hvernig listamaðurinn nota tvenndir til að teikna þetta mynstur.
+      courseD_artist_binary2_2018: Keyrðu þennan kóða til að sjá hvernig listamaðurinn nota tvenndir til að teikna þetta mynstur.
+      courseD_artist_binary2_2019: Keyrðu þennan kóða til að sjá hvernig listamaðurinn nota tvenndir til að teikna þetta mynstur.
+      courseD_artist_binary3: Hver af þessum tvíundarstrengjum endurtekinn 8 sinnum mundi teikna þessa mynd?
+      courseD_artist_binary3_2018: Hver af þessum tvíundarstrengjum endurtekinn 8 sinnum mundi teikna þessa mynd?
+      courseD_artist_binary3_2019: Hver af þessum tvíundarstrengjum endurtekinn 8 sinnum mundi teikna þessa mynd?
       courseD_artist_binary4: Getur þú teiknað þetta mynstur með því að endurtaka 3 tvíundartölur (0 og 1)?
       courseD_artist_binary4_2018: Getur þú teiknað þetta mynstur með því að endurtaka 3 tvíundartölur (0 og 1)?
       courseD_artist_binary4_2019: Getur þú teiknað þetta mynstur með því að endurtaka 3 tvíundartölur (0 og 1)?
+      courseD_artist_binary5: "Hver tvíundarstrengur táknar eina röð í þessari mynd. \n\nGetur þú breytt röð strengjanna svo að þeir teikni broskall í staðinn fyrir fýlukall?"
+      courseD_artist_binary5_2018: "Hver tvíundarstrengur táknar eina röð í þessari mynd. \n\nGetur þú breytt röð strengjanna svo að þeir teikni broskall í staðinn fyrir fýlukall?"
+      courseD_artist_binary5_2019: "Hver tvíundarstrengur táknar eina röð í þessari mynd. \n\nGetur þú breytt röð strengjanna svo að þeir teikni broskall í staðinn fyrir fýlukall?"
       courseD_artist_binary6: Hvaða 6 stafa tvíundarstrengur, endurtekinn 11 sinnum, mun teikna þessa mynd?
       courseD_artist_binary6_2018: Hvaða 6 stafa tvíundarstrengur, endurtekinn 11 sinnum, mun teikna þessa mynd?
       courseD_artist_binary6_2019: Hvaða 6 stafa tvíundarstrengur, endurtekinn 11 sinnum, mun teikna þessa mynd?
@@ -2609,6 +2735,19 @@ is:
       courseD_artist_binary8_predict1: Ljúktu við kóðann sem býr til þessa mynd.
       courseD_artist_binary8_predict1_2018: Ljúktu við kóðann sem býr til þessa mynd.
       courseD_artist_binary8_predict1_2019: Ljúktu við kóðann sem býr til þessa mynd.
+      courseD_artist_binaryFP: |-
+        Þessi myndflötur hefur hærri upplausn - 16 díla sinnum 16 díla!
+
+        Sérðu hvað gerist þegar við förum að skapa með bitunum!
+      courseD_artist_binaryFP8: "**Frjáls æfing:** Teiknaðu hvað sem þú vilt með tvíundum! "
+      courseD_artist_binaryFP_2018: |-
+        Þessi myndflötur hefur hærri upplausn - 16 díla sinnum 16 díla!
+
+        Sérðu hvað gerist þegar við förum að skapa með bitunum!
+      courseD_artist_binaryFP_2019: |-
+        Þessi myndflötur hefur hærri upplausn - 16 díla sinnum 16 díla!
+
+        Sérðu hvað gerist þegar við förum að skapa með bitunum!
       courseD_artist_binary_challenge0: Prófaðu að nota faldaðar lykkjur til að ljúka þessari teikningu.
       courseD_artist_binary_challenge1: Þú mátt aðeins nota hvert tvíundargildi (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að ljúka teikningunni.
       courseD_artist_binary_challenge1_2018: Þú mátt aðeins nota hvert tvíundargildi (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að ljúka teikningunni.
@@ -2619,6 +2758,24 @@ is:
       courseD_artist_binary_challenge3: Hefurðu nægilegt úthald til að koma þessu merki í fyrra horf?
       courseD_artist_embed_frozen: Ýttu á Keyra til að sjá teikningu af snjókorni!
       courseD_artist_embed_frozen2: Ýttu á Keyra til að sjá teikningu af snjókorni.
+      courseD_artist_functions10: Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.
+      courseD_artist_functions2: "Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun.\n"
+      courseD_artist_functions3: Þú getur teiknað þetta með því að bæta við endurtekningarkubbi.
+      courseD_artist_functions4: Nú kanntu að teikna stjörnu, svo hvernig væri að teikna fjórar!
+      courseD_artist_functions5: Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      courseD_artist_functions6: Búðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo.
+      courseD_artist_functions7: Reyndu að leysa þessa þraut með því að búa til `teikna glugga` fall og kalla á það fimm sinnum. Gættu þín á dyrunum!
+      courseD_artist_functions8: 'Áskorun: Búðu til eins mörg föll og þú heldur að þú þurfir til að gera þessa mynd með 50 díla ferningum.'
+      courseD_artist_functions9: Búðu til þessa mynd eingöngu með kubbunum sem þú færð.
+      courseD_artist_nestedLoops1: "Teiknaðu þríhyrning til að byrja með. \n(Hver hlið er 100 dílar á lengd og þú þarft að snúa um 120 gráður fyrir hvert ytra horn.)"
+      courseD_artist_nestedLoops10: Notaðu sömu ferninga og áður en í þetta skipti bara 7 og hafðu þá í röð.
+      courseD_artist_nestedLoops10_2018: Notaðu sömu ferninga og áður en í þetta skipti bara 7 og hafðu þá í röð.
+      courseD_artist_nestedLoops10_2019: Notaðu sömu ferninga og áður en í þetta skipti bara 7 og hafðu þá í röð.
+      courseD_artist_nestedLoops1_2018: "Teiknaðu þríhyrning til að byrja með. \n(Hver hlið er 100 dílar á lengd og þú þarft að snúa um 120 gráður fyrir hvert ytra horn.)"
+      courseD_artist_nestedLoops1_2019: "Teiknaðu þríhyrning til að byrja með. \n(Hver hlið er 100 dílar á lengd og þú þarft að snúa um 120 gráður fyrir hvert ytra horn.)"
+      courseD_artist_nestedLoops1a: 'Endurtaktu þríhyrninginn í lykkju 6 sinnum. '
+      courseD_artist_nestedLoops1a_2018: 'Endurtaktu þríhyrninginn í lykkju 6 sinnum. '
+      courseD_artist_nestedLoops1a_2019: 'Endurtaktu þríhyrninginn í lykkju 6 sinnum. '
       courseD_artist_nestedLoops9: "**Áskorun:** Getur þú fundið út hvernig svona mynd er búin til?"
       courseD_artist_nestedLoops9_2018: "**Áskorun:** Getur þú fundið út hvernig svona mynd er búin til?"
       courseD_artist_nestedLoops9_2019: "**Áskorun:** Getur þú fundið út hvernig svona mynd er búin til?"
@@ -2673,7 +2830,10 @@ is:
       courseD_artist_project_embedded: Þetta er það sem þú ert að fara að búa til!
       courseD_artist_ramp11: Búðu nú til ferning með listamanninum!
       courseD_artist_ramp12: Notaðu það sem þú hefur lært til að teikna þennan þríhyrning innan í ferningi.
+      courseD_autorun_binary2_2019: Keyrðu þennan kóða til að sjá hvernig listamaðurinn nota tvenndir til að teikna þetta mynstur.
+      courseD_autorun_binary3_2019: Hver af þessum tvíundarstrengjum endurtekinn 8 sinnum mundi teikna þessa mynd?
       courseD_autorun_binary4_2019: Getur þú teiknað þetta mynstur með því að endurtaka 3 tvíundartölur (0 og 1)?
+      courseD_autorun_binary5_2019: "Hver tvíundarstrengur táknar eina röð í þessari mynd. \n\nGetur þú breytt röð strengjanna svo að þeir teikni broskall í staðinn fyrir fýlukall?"
       courseD_autorun_binary6_2019: Hvaða 6 stafa tvíundarstrengur, endurtekinn 11 sinnum, mun teikna þessa mynd?
       courseD_autorun_binary7_2019: Hver er stysti tvíundarstrengur sem endurtekinn mundi teikna þessa mynd?
       courseD_autorun_binary8_2019: Ljúktu við kóðann sem býr til þessa mynd.
@@ -2921,10 +3081,26 @@ is:
       courseE_artist_concept_challenge2_2019: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
       courseE_artist_embed_functions8: Skoðaðu þetta borð vandlega. Hvers konar föll heldur þú að forrit þurfi til að búa til svona mynd? Þú átt bráðum að búa þetta til og getur þá komið aftur hingað ef þú þarft hjálp.
       courseE_artist_functions1: "Hjálpaðu uppvakningnum að teikna gleraugu með því að nota ferninga með 100 díla hliðar. \\r\nBrúin milli glerja er 75 dílar á lengd."
+      courseE_artist_functions10: Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.
+      courseE_artist_functions10_2018: Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.
+      courseE_artist_functions10_2019: Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.
       courseE_artist_functions1_2018: "Hjálpaðu uppvakningnum að teikna gleraugu með því að nota ferninga með 100 díla hliðar. \\r\nBrúin milli glerja er 75 dílar á lengd."
       courseE_artist_functions2: 'Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun. '
       courseE_artist_functions2_2018: 'Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun. '
       courseE_artist_functions2_2019: 'Í þetta skipti áttu að nota fallið `teikna ferning` til að búa til gleraugun. '
+      courseE_artist_functions3: Þú getur teiknað þetta með því að bæta við endurtekningarkubbi.
+      courseE_artist_functions4: Nú kanntu að teikna stjörnu, svo hvernig væri að teikna fjórar!
+      courseE_artist_functions4_2018: Nú kanntu að teikna stjörnu, svo hvernig væri að teikna fjórar!
+      courseE_artist_functions5: Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      courseE_artist_functions5_2018: Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      courseE_artist_functions5_2019: Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      courseE_artist_functions6: Búðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo.
+      courseE_artist_functions6_2018: Búðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo.
+      courseE_artist_functions7: Reyndu að leysa þessa þraut með því að búa til `teikna glugga` fall og kalla á það fimm sinnum. Gættu þín á dyrunum!
+      courseE_artist_functions7_2018: Reyndu að leysa þessa þraut með því að búa til `teikna glugga` fall og kalla á það fimm sinnum. Gættu þín á dyrunum!
+      courseE_artist_functions7_2019: Reyndu að leysa þessa þraut með því að búa til `teikna glugga` fall og kalla á það fimm sinnum. Gættu þín á dyrunum!
+      courseE_artist_functions8: 'Áskorun: Búðu til eins mörg föll og þú heldur að þú þurfir til að gera þessa mynd með 50 díla ferningum.'
+      courseE_artist_functions9: Búðu til þessa mynd eingöngu með kubbunum sem þú færð.
       courseE_artist_functions_challenge: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1_2018: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
@@ -3087,9 +3263,16 @@ is:
       courseF_artist_ramp8_2018: Búðu nú til ferning með listamanninum!
       courseF_artist_ramp9: Notaðu það sem þú hefur lært til að teikna þennan þrihyrning.
       courseF_artist_ramp9_2018: Notaðu það sem þú hefur lært til að teikna þennan þrihyrning.
+      courseF_artist_variables4: Notaðu nú breytuna `lengd` til að láta listamanninn hoppa áfram og niður um `lengd` díla á milli þríhyrninga.
+      courseF_artist_variables4_2018: Notaðu nú breytuna `lengd` til að láta listamanninn hoppa áfram og niður um `lengd` díla á milli þríhyrninga.
+      courseF_artist_variables4_2019: Notaðu nú breytuna `lengd` til að láta listamanninn hoppa áfram og niður um `lengd` díla á milli þríhyrninga.
+      courseF_artist_variables6a: Teiknaðu þessa mynd þar sem ferningarnir eru með 80 díla hliðar og listamaðurinn hoppar 80 díla til hliðar og niður eftir hvern.
+      courseF_artist_variables6a_2018: Teiknaðu þessa mynd þar sem ferningarnir eru með 80 díla hliðar og listamaðurinn hoppar 80 díla til hliðar og niður eftir hvern.
+      courseF_artist_variables6a_2019: Teiknaðu þessa mynd þar sem ferningarnir eru með 80 díla hliðar og listamaðurinn hoppar 80 díla til hliðar og niður eftir hvern.
       courseF_artist_variables9: Sjáðu hvað gerist þegar þú endurtekur kóðann úr síðustu þraut 30 sinnum í stað 3 sinnum! Breyttu litum og mynstrum línanna eins og þér sýnist.
       courseF_artist_variables9_2018: Sjáðu hvað gerist þegar þú endurtekur kóðann úr síðustu þraut 30 sinnum í stað 3 sinnum! Breyttu litum og mynstrum línanna eins og þér sýnist.
       courseF_artist_variables9_2019: Sjáðu hvað gerist þegar þú endurtekur kóðann úr síðustu þraut 30 sinnum í stað 3 sinnum! Breyttu litum og mynstrum línanna eins og þér sýnist.
+      courseF_artist_variables_6a: Teiknaðu þessa mynd þar sem ferningarnir eru með 80 díla hliðar og listamaðurinn hoppar 80 díla til hliðar og niður eftir hvern.
       courseF_artist_variables_challenge1: Getur þú búið til `lengd` breytu og notað hana til að búa til þetta mynstur?
       courseF_artist_variables_challenge1_2018: Getur þú búið til `lengd` breytu og notað hana til að búa til þetta mynstur?
       courseF_artist_variables_challenge1_2019: Getur þú búið til `lengd` breytu og notað hana til að búa til þetta mynstur?
@@ -3235,10 +3418,13 @@ is:
       grade1_adventurer_loops1: Fjórir haugar af gulli! Safnaðu þeim öllum.
       grade1_adventurer_loops2: Hvernig getur Laurel safnað öllum fimm gullhrúgunum með aðeins einum `A->` kubbi?
       grade1_adventurer_loopsPre: Þetta er Laurel ævintýrahetja! Getur þú hreyft hana og náð gulli?
+      grade1_artist_loops1: Listamaðurinn er að reyna að teikna línu sex sinnum en tekst það ekki. Getur þú hjálpað?
       grade1_artist_loops2: Hjálpaðu listamanninum að teikna línu 7 sinnum til að búa til garðvegg.
       grade1_artist_loops3: 'Nú þurfum við að undirbúa jarðveginn fyrir sáningu. Finndu gallana í kóðanum og hjálpaðu listamanninum að undirbúa jarðveginn. '
+      grade1_artist_loops4: Það þarf að laga þessar tröppur! Endurtaktu þetta mynstur fimm sinnum svo að listamaðurinn nái efst í runnana.
       grade1_artist_loops5: Fyrir aftan runnana er falleg vafningsjurt þakin blómum. Getur þú klifið vafninginn og séð hvert hann liggur?
       grade1_artist_loops6: "**Áskorun:** Þetta er falinn garður! Göngum í kringum hann."
+      grade1_artist_loops7b: Nú er verkinu lokið. Getur þú lagað stigann svo listamaðurinn komist niður?
       grade1_artist_loops8: Við skulum fara stuttu leiðina heim, yfir pollinn. Geturðu hjálpað listamanninum að halda sig á steinunum?
       grade1_artist_loopsFP: Notaðu það sem þú hefur lært til að teikna mynd af því sem listamaðurinn gæti hafa séð þegar hann kom heim.
       grade1_maze_sequence1: Breyttu kóðanum svo ég komist til svínka!
@@ -3255,14 +3441,22 @@ is:
       grade2_CaringForNewPet_2courseC_maze_programming3: Það er einn aukakubbur sem veldur því að fuglinn mun hrapa. Hentu honum með því að draga hann aftur í verkfærakassann.
       grade2_CaringForNewPet_4: '"Slakaðu á og hjálpaðu mér finna illa svínið. Annars gæti ég reiðst!"'
       grade2_CaringForNewPet_5: Komdu mér til svínsins!
+      grade2_MakeDogTag_1: Dragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni. (Hver strik er 100 dílar á lengd)
       grade2_MakeDogTag_10: Teiknaðu nú eitthvað skemmtilegt!
       grade2_MakeDogTag_3: |-
         Hjálpaðu mér að ljúka húsinu fyrir þennan kött.
       grade2_MakeDogTag_4: |-
         Þetta hús er án þaks! Teiknaðu þríhyrninginn. Vísbending: Hliðarnar þrjár eru jafnlangar.
       grade2_MakeDogTag_6: 'Frjáls æfing! Teiknaðu eigin hugmynd.'
+      grade2_MakeDogTag_7: |-
+        Enn eitt form. Þetta er þríhyrningur fyrir Pí.
+        (Hver hlið er 150 dílar)
       grade2_MakeDogTag_8: Nú skulum við tengja nokkur V saman í lykkju.
       grade2_MakeDogTag_9: Endurbyggðu kóðann úr síðustu þraut, en bættu nú við snúningi um 30 gráður til vinstri innan lykkjunnar. Endurtaktu þetta 24 sinnum í stað 8 sinnum.
+      grade2_MakeDogTag_BFP: |-
+        "Hæ, ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er."
+
+        Leiktu þér með kubbana í verkfærakassanum til að sjá hvað þeir gera!
       grade2_PuppyLoops_1: Getur þú komið mér til svínsins með 5 kubbum?
       grade2_PuppyLoops_10: |-
         Kennarinn segir að ég eigi að ljúka því sem ég byrja á!\r
@@ -3404,8 +3598,15 @@ is:
       grade4_arist_nested_loop_triangles6: Getur þú teiknað þessa 36 þríhyrninga með faldaðri lykkju?
       grade4_artist_functions1: "Hjálpaðu uppvakningnum að teikna gleraugu með því að nota ferninga með 100 díla hliðar. \\r\nBrúin milli glerja er 75 dílar á lengd."
       grade4_artist_functions2: "Með föllum getur þú búið til nýja kubba! \\r\n\\r\nVið höfum fært kubbana sem þarf til að teikna ferning inn í fall, sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \\r\n\\r\nÞað eru 75 dílar á milli ferninganna."
+      grade4_artist_functions2a: Búðu til þessa mynd eingöngu með kubbunum sem þú færð.
+      grade4_artist_functions3a: Búðu til þessa mynd eingöngu með kubbunum sem þú færð.
+      grade4_artist_functions3b: Í þetta sinn áttu að nota raðir af 8 sexhyrningum með 25 díla hliðar.
       grade4_artist_functions_challenge: Notaðu föllin sem hér eru til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig röðunum með jafna tölu er hliðrað til hægri?
       grade4_artist_functions_challenge2: Notaðu föllin sem hér eru til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig röðunum með jafna tölu er hliðrað til hægri?
+      grade4_artist_functions_stars0: Þú getur teiknað þetta með því að bæta við endurtekningarkubbi.
+      grade4_artist_functions_stars1: Nú kanntu að teikna stjörnu, svo hvernig væri að teikna fjórar!
+      grade4_artist_functions_stars2: Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      grade4_artist_functions_windows0: Búðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo.
       grade4_artist_nestedLoops_challenge: |-
         Smelltu hér til að sjá vísbendingarnar aftur!\r
         \r
@@ -3416,6 +3617,7 @@ is:
       grade4_artist_nested_loop_polygons1: "Endurtaktu þetta 10 sinnum í lykkju. \\r\n\\r\nHvað þarf að snúa mikið í hverri umferð?"
       grade4_artist_nested_loop_squares1: Getur þú teiknað þessar 10 gangstéttarhellur með faldaðri lykkju? Hver ferningur er 30 dílar.
       grade4_artist_nested_loop_triangles1: 'Ljúktu við kóðann til að teikna þessa þríhyrninga. Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu snúningi.'
+      grade4_artist_nested_loop_triangles4: Hæ! Ég er Listamaðurinn. Gerum saman ýmsar teikningar. Getur þú hjálpað mér að gera neðri tennurnar í krókódílnum?
       grade4_artist_nested_loop_triangles5: |-
         Búðu til sól með því að falda byrjunarkóðann í annarri lykkju. \r
         \r
@@ -3490,6 +3692,7 @@ is:
         Getur þú nýtt þér allt sem þú hefur lært til að búa til þessa mynd?\r
         \r
         Þarftu vísbendingu? Smelltu hér.
+      grade5_artist_for_loops1a: Prófaðu að nota `frá lykkju` til að teikna þetta þríhyrningsmynstur. Tölurnar eru aðrar en í síðustu þraut. Ekki láta það trufla þig. Ef þú snýrð um réttan gráðufjölda, mun listamaðurinn teikna rétt!
       grade5_artist_for_loops5: |-
         Með einni lítilli breytingu á kóðanum úr síðustu þraut getur þú búið til þessa mynd. Geturðu fundið út hver sú breyting er?\r
         \r
@@ -3570,6 +3773,7 @@ is:
       grade5_playlab_variables_freeplay: "Frjáls æfing: Hér eru allar breyturnar sem við höfum notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota þær.\\r\n\\r\nTaktu eftir að nú eru svo margir kubbar í verkfærakassanum að við höfum þurft að raða þeim í viðeigandi flokka. Taktu þér tíma til að skoða hvað þú hefur. Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum.\\r\n\\r\nVísbending: Flettu niður til að sjá allar skipanirnar á vinnusvæðinu."
       gradeK_sequence_4: Spreyttu þig á þessari alveg frá byrjun.
       gradek_artist_loops1: Hjálpaðu listamanninum að teikna þessa línu með tveimur færslum áfram.
+      gradek_artist_loops2: Listamaðurinn er að reyna að teikna línu fimm sinnum en tekst það ekki. Getur þú hjálpað?
       gradek_artist_loops3: Notaðu nú `endurtaka` lykkju til að teikna þessa línu fimm sinnum!
       gradek_artist_loops4: Teiknaðu línu sem er sjö skref á lengd. Þetta verður sjóndeildarhringurinn.
       gradek_artist_loops5: Búum nú til hæð aftan til.
@@ -3667,6 +3871,7 @@ is:
       ramp_artist_loops9: Leystu þessa þraut með því að teikna ferning.
       ramp_artist_loops9_2018: Leystu þessa þraut með því að teikna ferning.
       ramp_artist_loops9_2019: Leystu þessa þraut með því að teikna ferning.
+      sample9: 'Notaðu lykkjur til að hjálpa listamanninum að tengja alla punktana. '
       scrat 16 (copy 1): Akarn! Akarn! Akarn! Notaðu "ef" kubb til að koma mér þangað með sem fæstum kubbum.
       scrat 16: Akarn! Akarn! Akarn! Notaðu "ef" kubb til að koma mér þangað með sem fæstum kubbum.
       scrat 17: Jæja, æfum þetta einu sinni enn - þetta er ekki svo ólíkt, en gættu þín á veggnum!
@@ -3679,4 +3884,5 @@ is:
       subgoal U3 L4 introducing subgoal labels: Kynning á stefnu og hreyfingum skjaldböku
       subgoal U3L2 Using Simple Commands: Teiknaðu 1x1 ferning ofan við og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
       subgoalU3L2_TurtleSquare_right: Teiknaðu ferning framan við og hægra megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      testArtistForTestK: Listamaðurinn er að reyna að teikna línu fimm sinnum en tekst það ekki. Getur þú hjálpað?
       valentine_artist_03: Nú áttu að gera eitthvað á eigin spýtur!
