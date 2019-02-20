@@ -8,6 +8,11 @@
 #  created_at   :datetime
 #  updated_at   :datetime
 #  download     :string(255)
+#  locale       :string(255)      default("en-US"), not null
+#
+# Indexes
+#
+#  index_videos_on_key_and_locale  (key,locale) UNIQUE
 #
 
 # Links to a YouTube video
@@ -16,7 +21,7 @@ class Video < ActiveRecord::Base
 
   default_scope {order(:key)}
 
-  validates_uniqueness_of :key
+  validates_uniqueness_of :key, scope: [:locale]
   validates_presence_of :download
 
   before_save :fetch_thumbnail

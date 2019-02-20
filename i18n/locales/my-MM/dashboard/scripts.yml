@@ -140,3 +140,11 @@ my:
           stages:
             'null':
               name: 'null'
+        csd2-2019:
+          stages:
+            Lists:
+              name: စာရင်းများ
+        csd3-2019:
+          stages:
+            Variables:
+              name: Variables

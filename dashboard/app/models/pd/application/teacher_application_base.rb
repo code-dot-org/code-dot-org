@@ -40,7 +40,6 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
-    include Pd::ScholarshipInfoConstants
 
     serialized_attrs %w(
       pd_workshop_id
@@ -49,7 +48,7 @@ module Pd::Application
     validate :scholarship_status_valid
 
     def scholarship_status_valid
-      unless scholarship_status.nil? || SCHOLARSHIP_STATUSES.include?(scholarship_status)
+      unless scholarship_status.nil? || Pd::ScholarshipInfoConstants::SCHOLARSHIP_STATUSES.include?(scholarship_status)
         errors.add(:scholarship_status, 'is not included in the list.')
       end
     end

@@ -443,3 +443,6 @@ en:
       courseB_unplugged_CnC_2019:
         title: It's Great to Create and Play Fair
         desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      GraphingData_2019:
+        title: Graphing Data
+        desc: " In this lesson, students will collect data from a Play Lab project or real world scenario and use it to make predictions."
