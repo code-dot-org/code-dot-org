@@ -55,18 +55,30 @@ class InternationalOptInComponent extends FormComponent {
     accountEmail: PropTypes.string.isRequired
   };
 
+  /** @param {moment.Moment} date */
   handleDateChange = date => {
-    // Don't allow null. If the date is cleared, default again to today.
-    date = date || moment();
-    super.handleChange({date: date.format(DATE_FORMAT)});
+    if (date && date.isValid()) {
+      super.handleChange({date: date.format(DATE_FORMAT)});
+    } else {
+      super.handleChange({date: null});
+    }
   };
+
+  handleDateBlur = event => {
+    this.handleDateChange(moment(event.target.value));
+  };
+
+  workshopDateAsMoment() {
+    const {data} = this.props;
+    const date = data && moment(data.date, DATE_FORMAT);
+    if (date && date.isValid()) {
+      return date;
+    }
+    return null;
+  }
 
   render() {
     const labels = this.props.labels;
-    const date =
-      this.props.data && this.props.data.date
-        ? moment(this.props.data.date, DATE_FORMAT)
-        : moment();
 
     const lastSubjectsKey = this.props.options.subjects.slice(-1)[0];
     const textFieldMapSubjects = {[lastSubjectsKey]: 'other'};
@@ -177,8 +189,9 @@ class InternationalOptInComponent extends FormComponent {
           <Row>
             <Col md={6}>
               <DatePicker
-                date={date}
+                date={this.workshopDateAsMoment()}
                 onChange={this.handleDateChange}
+                onBlur={this.handleDateBlur}
                 readOnly={false}
               />
             </Col>
@@ -239,6 +252,7 @@ InternationalOptInComponent.associatedFields = [
   'subjects',
   'resources',
   'robotics',
+  'date',
   'workshopOrganizer',
   'workshopFacilitator',
   'workshopCourse',
