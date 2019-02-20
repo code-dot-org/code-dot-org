@@ -1263,16 +1263,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
-    assert_equal 1, script.script_announcements.count
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-copy', script_copy.name
-    assert_nil script_copy.family_name
-    assert_nil script_copy.version_year
-    assert_equal false, !!script_copy.is_stable
-    assert_equal true, script_copy.hidden
-    assert_nil script_copy.script_announcements
 
     # Validate levels.
     assert_equal 5, script_copy.levels.count
@@ -1298,22 +1292,6 @@ class ScriptTest < ActiveSupport::TestCase
       'Level 4_copy,Level 5_copy',
       stage2.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
-  end
-
-  test 'clone versioned script with suffix' do
-    script_file = File.join(self.class.fixture_path, "test-fixture-versioned-1801.script")
-    scripts, _ = Script.setup([script_file])
-    script = scripts[0]
-
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
-    script_copy = script.clone_with_suffix('1802')
-
-    # make sure the old suffix is removed before the new one is added.
-    assert_equal 'test-fixture-versioned-1802', script_copy.name
-    assert_equal 'versioned', script_copy.family_name
-    assert_equal '1802', script_copy.version_year
-    assert_equal false, !!script_copy.is_stable
-    assert_equal true, script_copy.hidden
   end
 
   test 'clone script with inactive variant' do

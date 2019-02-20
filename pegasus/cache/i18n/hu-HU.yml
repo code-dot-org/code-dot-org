@@ -94,7 +94,7 @@ hu-HU:
   congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
   congrats_next_tutorials_desc: Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat,
     vagy próbáld ki <a href="%{current_path}/next">egy partnerünk gyakorlatát</a>.
-  get_a_certificate_of_achievement: Kapj a teljesítményedről oklevelet
+  get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
   view_course: Tanfolyam megtekintése
   view_unit: Egység megtekintése
   make_app: Egy alkalmazás létrehozása
@@ -138,7 +138,7 @@ hu-HU:
   thanks_for_submitting: Köszönjük előterjesztés!
   if_you_enjoyed: Ha tetszett a tanulás, akkor kérje meg barátait is, hogy próbálják
     ki! Szeretnénk, hogy az egész világ tanuljon.
-  personalize_certificate: Legyen névre szóló az okleveled
+  personalize_certificate: Legyen névre szóló a tanúsítványod
   share_achievement: Oszd meg az elért eredményed
   beyond_hour_message: Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>,
     vagy nézd meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>.
@@ -411,8 +411,6 @@ hu-HU:
   minecraft_no_internet: Nincs internet?
   minecraft_download_adventurer: Töltsd le a Minecraft kaland offline verzióját!
   minecraft_subtitle: Minecraft Kódolás Órája
-  minecraft_continue_learning: 'Számítógép-tudomány mindenkinek: A Kódolás óráján
-    túl a Microsoft Store-ban'
   sports_title: Kódold le a saját sportjátékodat
   sports_watch_video: Nézd meg a videót
   sports_all_sports_title: Kombinálj össze különböző sportágakat
@@ -497,8 +495,6 @@ hu-HU:
   volunteer_engineer_submission_field_email_desc: Email-címedet soha nem osztjuk meg
     senkivel, de értesítést küldünk tanári felkérésekről.
   volunteer_engineer_submission_field_email_placeholder: E-mail cím
-  volunteer_engineer_submission_field_email_preference_privacy: "(Tekintsd át az adatvédelmi
-    irányelveinket)"
   volunteer_engineer_submission_field_email_preference_yes: Igen
   volunteer_engineer_submission_field_email_preference_no: Nem
   volunteer_engineer_submission_final_paragraph: A környékbeli oktatókat ábrázoló
@@ -605,8 +601,6 @@ hu-HU:
   dashboard_action_confirm: Biztos törölni akarod?
   dashboard_action_done: Kész
   dashboard_action_print_certificates: Oklevelek nyomtatása
-  dashboard_filter_by_stage: 'Szűrés életkor szerint:'
-  dashboard_filter_all: Összes
   dashboard_navigation_home_page: Tanári kezdőlap
   dashboard_navigation_section_student_progress: Diákok fiókja és haladása
   dashboard_navigation_section_teacher_progress: A tanfolyam haladás
@@ -892,10 +886,6 @@ hu-HU:
   minecraft_name: Minecraft
   math_category_name: Matematika
   hoc_category_name: A kódolás órája
-  csf_category_name: A számítógép-tudomány alapjai
-  csf_2017_category_name: A számítógép-tudomány alapjai (2017)
-  csf_2018_category_name: A számítógép-tudomány alapjai (2018)
-  csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
   applab_name: App Lab
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+
@@ -1562,7 +1552,6 @@ hu-HU:
   header_home: Főmenü
   header_my_dashboard: Vezérlőpult
   header_courses: tanfolyamok
-  header_course_catalog: Tanfolyamaink
   header_project_gallery: Projektek
   header_sections: Csoportok
   header_professional_learning: Professzionális tanulás
@@ -1601,15 +1590,12 @@ hu-HU:
   user_header_logout: Kijelentkezés
   user_header_signin: Bejelentkezés
   user_header_create: 'Alkoss '
-  user_header_applab: 'App Labor '
   user_header_playlab: Játéklabor
   user_header_dance: Táncos buli
   user_header_spritelab: Sprite labor
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
-  user_header_view_all: Összes projekt áttekintése...
   view_all_sections: Minden csoport megtekintése
-  signing_in: Bejelentkezés
   applab_tile_start_tutorial: Kezdés
   applab_tile_teacher_guide: Oktatói útmutató megtekintése
   aquatic_name: 'Minecraft: Tengeri utazás'
@@ -1675,7 +1661,6 @@ hu-HU:
     Órájára! Utazz végig a Minecraft világán kódok segítségével.
   hoc2018_mc_teacher_guide: Oktatói útmutató megtekintése
   hoc2018_mc_minecraft_education: Minecraft oktatás
-  hoc2018_mc_continue_learning: Folytasd a tanulást a Minecraft-tal.
   hoc2018_mc_journey: Utazás a Minecraft világában kóddal.
   hoc2018_dance_party_main_heading: Táncos buli
   hoc2018_dance_create_your_own_dance_title: Hozd létre saját táncos bulidat
@@ -1688,8 +1673,8 @@ hu-HU:
     bulit további projektötletekkel.
   hoc2018_dance_keep_on_dancing_button: ". rész indítása"
   hoc2018_dance_teacher_resources_title: Oktatói segédanyagok
-  hoc2018_dance_teacher_resources_tile1_description: Óravázlatok, oklevelek és válogatott
-    zenék.
+  hoc2018_dance_teacher_resources_tile1_description: Óravázlatok, bizonyítványok és
+    zeneszűrés.
   hoc2018_dance_teacher_resources_tile1_button: Óravázlat
   hoc2018_dance_teacher_resources_tile2_title: Offline táncos buli
   hoc2018_dance_teacher_resources_tile2_description: Nincs szükség számítógépre!  Tanuld

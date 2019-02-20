@@ -42,7 +42,7 @@
     = render partial: 'csp_pre_course_reading'
 
 %p
-  If you have any accessibility needs or food allergies, please let the workshop organizer know so they can make appropriate accommodation plans and answer any of your questions. You can reach them at
+  If you have any accessibility needs or food allergies, please let the Workshop Organizer know so they can make appropriate accommodation plans and answer any of your questions. You can reach them at
   = mail_to(@workshop.organizer.email) + '.'
 
 %p
@@ -51,7 +51,7 @@
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     Megan Hochstatter
     %br
-    K-5 Education Program Manager, Code.org
+    K-5 Education Program Admin, Code.org
   - else
     = @workshop.organizer.name
 

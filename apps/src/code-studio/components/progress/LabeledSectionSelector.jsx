@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import color from '../../../util/color';
 import i18n from '@cdo/locale';
 import SectionSelector from './SectionSelector';
@@ -21,10 +20,6 @@ const styles = {
 };
 
 export default class LabeledSectionSelector extends React.Component {
-  static propTypes = {
-    reloadOnSectionChange: PropTypes.bool
-  };
-
   render() {
     return (
       <div>
@@ -32,10 +27,7 @@ export default class LabeledSectionSelector extends React.Component {
           <div style={styles.selectSectionLabel}>
             {i18n.selectSectionLabel()}
           </div>
-          <SectionSelector
-            style={styles.sectionSelector}
-            reloadOnChange={this.props.reloadOnSectionChange}
-          />
+          <SectionSelector style={styles.sectionSelector} />
         </div>
       </div>
     );

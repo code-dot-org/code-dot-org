@@ -95,20 +95,9 @@
     "encrypted_examples": "OQTPFlVUlYJ7w97B4vQHz6+7XNiA1lhggx3VMNy45vfVkmL9QB9bmiPtjwXM\nTJjs\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "preload_asset_list": null,
-    "instructions_important": "false",
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
-    "expand_debugger": "false",
-    "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "contained_level_names": null
   },
-  "published": true,
-  "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-15 02:01:51 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

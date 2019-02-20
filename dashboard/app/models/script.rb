@@ -794,8 +794,8 @@ class Script < ActiveRecord::Base
   # Create or update any scripts, script levels and stages specified in the
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
-  # copying. Any new_properties are merged into the properties of the new script.
-  def self.setup(custom_files, new_suffix: nil, new_properties: {})
+  # copying.
+  def self.setup(custom_files, new_suffix: nil)
     transaction do
       scripts_to_add = []
 
@@ -803,8 +803,7 @@ class Script < ActiveRecord::Base
       # Load custom scripts from Script DSL format
       custom_files.map do |script|
         name = File.basename(script, '.script')
-        base_name = Script.base_name(name)
-        name = "#{base_name}-#{new_suffix}" if new_suffix
+        name += "-#{new_suffix}" if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         stages = script_data[:stages]
@@ -818,7 +817,7 @@ class Script < ActiveRecord::Base
           wrapup_video: script_data[:wrapup_video],
           new_name: script_data[:new_name],
           family_name: script_data[:family_name],
-          properties: Script.build_property_hash(script_data).merge(new_properties)
+          properties: Script.build_property_hash(script_data)
         }, stages]
       end
 
@@ -1000,17 +999,10 @@ class Script < ActiveRecord::Base
   # the suffix to the name of each level. Mark the new script as hidden, and
   # copy any translations and other metadata associated with the original script.
   def clone_with_suffix(new_suffix)
-    new_name = "#{base_name}-#{new_suffix}"
+    new_name = "#{name}-#{new_suffix}"
 
     script_filename = "#{Script.script_directory}/#{name}.script"
-    new_properties = {
-      is_stable: false,
-      script_announcements: nil
-    }
-    if /^[0-9]{4}$/ =~ (new_suffix)
-      new_properties[:version_year] = new_suffix
-    end
-    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
+    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix)
     new_script = scripts.first
 
     # Make sure we don't modify any files in unit tests.
@@ -1021,16 +1013,6 @@ class Script < ActiveRecord::Base
     end
 
     new_script
-  end
-
-  def base_name
-    Script.base_name(name)
-  end
-
-  def self.base_name(name)
-    # strip existing year suffix, if there is one
-    m = /^(.*)-([0-9]{4})$/.match(name)
-    m ? m[1] : name
   end
 
   # Creates a copy of all translations associated with this script, and adds

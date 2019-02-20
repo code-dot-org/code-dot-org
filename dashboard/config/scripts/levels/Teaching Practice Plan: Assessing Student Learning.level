@@ -10,14 +10,9 @@
     "submittable": "true",
     "peer_reviewable": "true",
     "skip_dialog": true,
-    "skip_sound": true,
-    "instructions_important": "false",
-    "optional": "false"
+    "skip_sound": true
   },
   "published": true,
-  "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-15 00:55:19 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "notes": ""
 }]]></config>
 </FreeResponse>

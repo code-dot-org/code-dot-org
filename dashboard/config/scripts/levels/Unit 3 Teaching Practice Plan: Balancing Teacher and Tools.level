@@ -12,12 +12,10 @@
     "submittable": "true",
     "peer_reviewable": "true",
     "skip_dialog": true,
-    "skip_sound": true,
-    "optional": "false"
+    "skip_sound": true
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-15 02:57:44 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

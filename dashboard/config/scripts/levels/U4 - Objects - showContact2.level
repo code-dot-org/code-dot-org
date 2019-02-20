@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Show Full Contact Information\r\n\r\nNow we'll want to show the full contact information. You'll need to reference each property of the contact using the same notation you used in the last exercise.\r\n\r\n\r\n# Do This:\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* **Add code to your `showCurrentContact` function** so that the `phone` and `birthday` information is also displayed. Give each piece of information a descriptive header, as shown below.\r\n* **Reminder:** You can concatenate strings with the `+` operator. `\\n` will place text on a new line.\r\n\r\n![](https://images.code.org/3aec850ad2c5ce21b1288dbec6fff711-image-1449246407070.26.34 AM.png)",
+    "long_instructions": "# Show Full Contact Information\r\n\r\nNow we'll want to show the full contact information. You'll need to reference each property of the contact using the same notation you used in the last exercise.\r\n\r\n\r\n# Do This:\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* **Add code to your `showCurrentContact` function** so that the `phone` and `birthday` information is also displayed. Give each piece of information a descriptive header, as shown below.\r\n* **Reminder: ** You can concatenate strings with the `+` operator. `\\n` will place text on a new line.\r\n\r\n![](https://images.code.org/3aec850ad2c5ce21b1288dbec6fff711-image-1449246407070.26.34 AM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,20 +41,9 @@
     "debugger_disabled": "false",
     "short_instructions": "Add the phone number and birthday text to your text area. (Click to see full instructions)",
     "encrypted_examples": "oU3EpDGVKRrAgabQ3PSVSgzVKs2PCBOqe516BzMCmBb1b0Xhe7G8zxq6g306\nWL7v\n",
-    "preload_asset_list": null,
-    "instructions_important": "false",
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
-    "expand_debugger": "false",
-    "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "contained_level_names": null
   },
-  "published": true,
-  "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-14 13:59:17 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>
