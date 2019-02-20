@@ -47,7 +47,7 @@ const INVALID_COLOR = '#d00';
  *        populate with a preview. If none specified, will look for an element
  *        by appending "_preview" to the id of the target element.
  */
-function initializeCodeMirror(target, mode, options) {
+function initializeCodeMirror(target, mode, options = {}) {
   let {callback, attachments, onUpdateLinting, preview} = options;
   let updatePreview;
 
