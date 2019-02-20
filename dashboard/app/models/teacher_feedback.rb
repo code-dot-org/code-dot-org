@@ -2,14 +2,15 @@
 #
 # Table name: teacher_feedbacks
 #
-#  id         :integer          not null, primary key
-#  comment    :text(65535)
-#  student_id :integer
-#  level_id   :integer
-#  teacher_id :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  deleted_at :datetime
+#  id          :integer          not null, primary key
+#  comment     :text(65535)
+#  student_id  :integer
+#  level_id    :integer
+#  teacher_id  :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  deleted_at  :datetime
+#  performance :string(255)
 #
 # Indexes
 #

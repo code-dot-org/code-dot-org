@@ -300,6 +300,11 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
       aalab_clickedOn:
         options:
           CONDITION:
@@ -320,11 +325,19 @@ sq:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': kur
-            '"while"': ndërsa
+          VAL:
+            '"true"': e saktë
+            '"false"': e gabuar
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': përgjithmonë
       binary_move:
         options:
           DIR:

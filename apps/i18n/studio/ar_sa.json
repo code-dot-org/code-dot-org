@@ -120,7 +120,6 @@
   "dropletBlock_setSpritePosition_description": "تحريك الممثل فوراً للموقع المحدد.",
   "dropletBlock_setSpriteSpeed_description": "تعيين سرعة الممثل",
   "dropletBlock_setSprite_description": "تعيين صورة الممثل",
-  "dropletBlock_setSprite_param0": "",
   "dropletBlock_setSprite_param0_description": "الفهرس (يبدأ من 0) يشير إلى أي شخصية يجب تعديلها.",
   "dropletBlock_setSprite_param1": "الصورة",
   "dropletBlock_setSprite_param1_description": "اسم صورة الممثل.",
