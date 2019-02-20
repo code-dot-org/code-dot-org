@@ -335,7 +335,7 @@ module Pd::Application
 
     def friendly_scholarship_status
       if scholarship_status
-        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+        Pd::ScholarshipInfoConstants::SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
       end
     end
 
