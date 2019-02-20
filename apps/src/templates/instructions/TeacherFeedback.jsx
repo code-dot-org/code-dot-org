@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
+import {RubricField} from "./RubricField";
 
 const styles = {
   textInput: {
@@ -48,10 +49,6 @@ const styles = {
     marginLeft: 10,
     color: color.black,
     fontFamily: '"Gotham 5r", sans-serif'
-  },
-  boxSelected: {
-    border: `5px solid ${color.lightest_gray}`,
-    backgroundColor: color.cyan
   },
   performanceArea: {
     display: 'flex',
@@ -181,11 +178,11 @@ class TeacherFeedback extends Component {
     this.setState({comment: event.target.value});
   };
 
-  onRubricChange = event => {
-    if (event.target.value === this.state.performance) {
+  onRubricChange = value => {
+    if (value === this.state.performance) {
       this.setState({performance: null});
     } else {
-      this.setState({performance: event.target.value});
+      this.setState({performance: value});
     }
   };
 
@@ -264,98 +261,38 @@ class TeacherFeedback extends Component {
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}>Evaluation Rubric</h1>
               <form>
-                <div
-                  style={
-                    this.state.performance === 'exceeds'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'exceeds-input'}
-                      name={'rubric'}
-                      value={'exceeds'}
-                      checked={this.state.performance === 'exceeds'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>Exceeds</summary>
-                    <p>{this.props.rubric.exceeds}</p>
-                  </details>
-                </div>
-                <div
-                  style={
-                    this.state.performance === 'meets'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'meets-input'}
-                      name={'rubric'}
-                      value={'meets'}
-                      checked={this.state.performance === 'meets'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>Meets</summary>
-                    <p>{this.props.rubric.meets}</p>
-                  </details>
-                </div>
-                <div
-                  style={
-                    this.state.performance === 'approaches'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'approaches-input'}
-                      name={'rubric'}
-                      value={'approaches'}
-                      checked={this.state.performance === 'approaches'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>Approaches</summary>
-                    <p>{this.props.rubric.approaches}</p>
-                  </details>
-                </div>
-                <div
-                  style={
-                    this.state.performance === 'noEvidence'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'noEvidence-input'}
-                      name={'rubric'}
-                      value={'noEvidence'}
-                      checked={this.state.performance === 'noEvidence'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>No Evidence</summary>
-                    <p>{this.props.rubric.noEvidence}</p>
-                  </details>
-                </div>
+                <RubricField
+                  showFeedbackInputAreas={showFeedbackInputAreas}
+                  rubricLevel={'exceeds'}
+                  rubricValue={this.props.rubric.exceeds}
+                  disableMode={this.props.disabledMode}
+                  onChange={this.onRubricChange()}
+                  currentlyChecked={this.state.performance === 'exceeds'}
+                />
+                <RubricField
+                  showFeedbackInputAreas={showFeedbackInputAreas}
+                  rubricLevel={'meets'}
+                  rubricValue={this.props.rubric.meets}
+                  disableMode={this.props.disabledMode}
+                  onChange={this.onRubricChange()}
+                  currentlyChecked={this.state.performance === 'meets'}
+                />
+                <RubricField
+                  showFeedbackInputAreas={showFeedbackInputAreas}
+                  rubricLevel={'approaches'}
+                  rubricValue={this.props.rubric.approaches}
+                  disableMode={this.props.disabledMode}
+                  onChange={this.onRubricChange()}
+                  currentlyChecked={this.state.performance === 'approaches'}
+                />
+                <RubricField
+                  showFeedbackInputAreas={showFeedbackInputAreas}
+                  rubricLevel={'noEvidence'}
+                  rubricValue={this.props.rubric.noEvidence}
+                  disableMode={this.props.disabledMode}
+                  onChange={this.onRubricChange()}
+                  currentlyChecked={this.state.performance === 'noEvidence'}
+                />
               </form>
             </div>
           </div>
