@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -51,6 +52,15 @@ const navId = 'teacher-dashboard-nav';
 const navSelector = `#${navId}`;
 
 export default class TeacherDashboardNavigation extends Component {
+  static propTypes = {
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired
+      })
+    )
+  };
+
   state = {
     listPosition: ListPosition.start,
     shouldScroll: true
@@ -106,6 +116,7 @@ export default class TeacherDashboardNavigation extends Component {
 
   render() {
     const {listPosition, shouldScroll} = this.state;
+    const links = this.props.links || teacherDashboardLinks;
     const containerStyles = this.state.shouldScroll
       ? {...styles.container, ...styles.scrollableContainer}
       : {...styles.container, ...styles.centerContainer};
@@ -119,7 +130,7 @@ export default class TeacherDashboardNavigation extends Component {
             onClick={() => this.scrollTo(ListPosition.start)}
           />
         )}
-        {teacherDashboardLinks.map(link => (
+        {links.map(link => (
           <NavLink
             key={link.url}
             to={link.url}
