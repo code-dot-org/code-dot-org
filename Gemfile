@@ -18,7 +18,7 @@ gem 'rails-controller-testing'
 # Support numeric keys in Simple backend.
 # Ref: https://github.com/svenfuchs/i18n/pull/422
 gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
-gem 'taglib-ruby'
+
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
@@ -41,7 +41,7 @@ gem 'google_drive'
 gem 'jumphash'
 gem 'le', '~> 2.2'
 gem 'os'
-gem 'parallel', '1.13.0'
+gem 'parallel'
 gem 'redis', '~> 3.3.3'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
@@ -115,7 +115,7 @@ group :development, :test do
   gem 'spring-commands-testunit'
 
   # For pegasus PDF generation / merging testing.
-  gem 'parallel_tests', '2.28.0'
+  gem 'parallel_tests'
   gem 'pdf-reader', require: false
 end
 
@@ -250,7 +250,7 @@ gem 'aws-sdk-sqs', '~> 1'
 # Lint tools
 group :development, :staging do
   gem 'haml_lint', require: false
-  gem 'rubocop', '~> 0.52.0', require: false
+  gem 'rubocop', '~> 0.52', require: false
   gem 'scss_lint', require: false
 end
 
