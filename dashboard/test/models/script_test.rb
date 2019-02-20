@@ -1436,6 +1436,17 @@ endvariants
     assert_equal [script], scripts
   end
 
+  test "self.valid_scripts: omits pilot scripts" do
+    teacher = create :teacher
+
+    pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
+    assert_equal true, pilot_script.hidden
+    assert_equal true, has_pilot_script?(Script.all)
+
+    teacher_scripts = Script.valid_scripts(teacher)
+    assert_equal false, has_pilot_script?(teacher_scripts)
+  end
+
   test "get_assessment_script_levels returns an empty list if no level groups" do
     script = create(:script, name: 'test-no-levels')
     level_group_script_level = script.get_assessment_script_levels
@@ -1566,5 +1577,9 @@ endvariants
 
   def has_hidden_script?(scripts)
     scripts.any?(&:hidden)
+  end
+
+  def has_pilot_script?(scripts)
+    scripts.any?(&:pilot?)
   end
 end
