@@ -982,16 +982,32 @@ module Pd::Application
       end
     end
 
-    test 'test scholarship statuses' do
+    test 'test update scholarship status' do
       application = create :pd_teacher1920_application
       assert_nil application.scholarship_status
 
-      application.scholarship_status = 'no'
-      application.save
-      assert_equal 'no', application.scholarship_status
+      assert_creates(Pd::ScholarshipInfo) do
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
+      end
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
-      application.scholarship_status = 'invalid status'
-      refute application.save
+      refute application.update_scholarship_status 'invalid status'
+
+      refute_creates(Pd::ScholarshipInfo) do
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
+      end
+      assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
+    end
+
+    test 'scholarship status associates application with existing ScholarshipInfo' do
+      application = create :pd_teacher1920_application
+      scholarship_info = Pd::ScholarshipInfo.create(user: application.user, scholarship_status: Pd::ScholarshipInfoConstants::NO)
+      refute scholarship_info.application
+
+      application.scholarship_status
+
+      scholarship_info.reload
+      assert_equal application, scholarship_info.application
     end
 
     test 'associated models cache prefetch' do
