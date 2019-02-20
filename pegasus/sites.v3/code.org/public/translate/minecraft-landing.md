@@ -7,10 +7,105 @@ theme: responsive
 # Translating the Minecraft landing page
 Translations for this page are done on Crowdin which is free to join and any volunteer can immediately start translating.
 
+## Select your language
+
+Selecting your language from this dropdown will update all the links on this page to take you to that language on Crowdin. 
+
+<select id="lang-select">
+    <option value="">--Please choose an option--</option>
+    <option value="af">Afrikaans</option>
+    <option value="sq">Albanian</option>
+    <option value="am">Amharic</option>
+    <option value="ar">Arabic</option>
+    <option value="hy">Armenian</option>
+    <option value="az">Azerbaijani</option>
+    <option value="eu">Basque</option>
+    <option value="bn">Bengali</option>
+    <option value="bs">Bosnian</option>
+    <option value="bg">Bulgarian</option>
+    <option value="my">Burmese</option>
+    <option value="ca">Catalan</option>
+    <option value="zhcn">Chinese Simplified</option>
+    <option value="zhtw">Chinese Traditional</option>
+    <option value="co">Corsican</option>
+    <option value="hr">Croatian</option>
+    <option value="cs">Czech</option>
+    <option value="da">Danish</option>
+    <option value="faaf">Dari</option>
+    <option value="nl">Dutch</option>
+    <option value="engb">English, United Kingdom</option>
+    <option value="et">Estonian</option>
+    <option value="fo">Faroese</option>
+    <option value="fil">Filipino</option>
+    <option value="fi">Finnish</option>
+    <option value="fr">French</option>
+    <option value="gl">Galician</option>
+    <option value="ka">Georgian</option>
+    <option value="de">German</option>
+    <option value="el">Greek</option>
+    <option value="ha">Hausa</option>
+    <option value="haw">Hawaiian</option>
+    <option value="he">Hebrew</option>
+    <option value="hi">Hindi</option>
+    <option value="hu">Hungarian</option>
+    <option value="is">Icelandic</option>
+    <option value="ig">Igbo</option>
+    <option value="id">Indonesian</option>
+    <option value="ga">Irish</option>
+    <option value="it">Italian</option>
+    <option value="ja">Japanese</option>
+    <option value="kk">Kazakh</option>
+    <option value="km">Khmer</option>
+    <option value="ko">Korean</option>
+    <option value="ku">Kurdish</option>
+    <option value="ky">Kyrgyz</option>
+    <option value="lv">Latvian</option>
+    <option value="lt">Lithuanian</option>
+    <option value="mk">Macedonian</option>
+    <option value="ms">Malay</option>
+    <option value="mt">Maltese</option>
+    <option value="mi">Maori</option>
+    <option value="mr">Marathi</option>
+    <option value="mn">Mongolian</option>
+    <option value="nenp">Nepali</option>
+    <option value="se">Northern Sami</option>
+    <option value="no">Norwegian</option>
+    <option value="nnno">Norwegian Nynorsk</option>
+    <option value="ps">Pashto</option>
+    <option value="fa">Persian</option>
+    <option value="pl">Polish</option>
+    <option value="pt">Portuguese</option>
+    <option value="ptbr">Portuguese, Brazilian</option>
+    <option value="ro">Romanian</option>
+    <option value="ru">Russian</option>
+    <option value="sr">Serbian (Cyrillic)</option>
+    <option value="silk">Sinhala</option>
+    <option value="sk">Slovak</option>
+    <option value="sl">Slovenian</option>
+    <option value="es">Spanish</option>
+    <option value="esmx">Spanish, Mexico</option>
+    <option value="sw">Swahili</option>
+    <option value="sv">Swedish</option>
+    <option value="tg">Tajik</option>
+    <option value="ta">Tamil</option>
+    <option value="te">Telugu</option>
+    <option value="tt">Tetun</option>
+    <option value="th">Thai</option>
+    <option value="tr">Turkish</option>
+    <option value="uk">Ukrainian</option>
+    <option value="urpk">Urdu (Pakistan)</option>
+    <option value="uz">Uzbek</option>
+    <option value="vi">Vietnamese</option>
+    <option value="cy">Welsh</option>
+    <option value="yo">Yoruba</option>
+    <option value="zu">Zulu</option>
+</select>
+
 ## Getting set up
 
 1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg) on Crowdin.
-1. View the [Minecraft landing page on our site](/minecraft). 
+1. View the [Minecraft landing page on our site](/minecraft). Make sure you are viewing the page in the language you are translating the site into. 
+1. Identify all the strings that are either untranslated or poorly translated. Find those strings in the images below and click on them to find the string in Crowdin. If the image links don't work for you or if you prefer to see all the links in a list, [use the list at the bottom of this page](#list-of-crowdin-links).
 
 ## Translating the page
 
@@ -72,3 +167,105 @@ Translations for this page are done on Crowdin which is free to join and any vol
     <area target="_blank" alt="Inspire a girl" title="Inspire a girl" href="https://crowdin.com/translate/codeorg/56/enus-#51615" coords="353,561,424,582" shape="rect">
 </map>
 
+<img alt="Minecraft Landing Page Screenshot 5" src="/images/translate/minecraft_landing_page_5.png" usemap="#image-map-5" width="700px">
+
+<map name="image-map-5">
+    <area target="_blank" alt="Computer Science intro" title="Computer Science intro" href="https://crowdin.com/translate/codeorg/56/enus-#69448" coords="12,253,137,274" shape="rect">
+    <area target="_blank" alt="What Most Schools Don't Teach" title="What Most Schools Don't Teach" href="https://crowdin.com/translate/codeorg/56/enus-#69449" coords="352,252,516,273" shape="rect">
+    <area target="_blank" alt="President Obama on computer science" title="President Obama on computer science" href="https://crowdin.com/translate/codeorg/56/enus-#69450" coords="11,525,211,550" shape="rect">
+    <area target="_blank" alt="Hour of Code is Here - Anybody Can Learn" title="Hour of Code is Here - Anybody Can Learn" href="https://crowdin.com/translate/codeorg/56/enus-#69451" coords="352,525,571,550" shape="rect">
+</map>
+
+<img alt="Minecraft Landing Page Screenshot 6" src="/images/translate/minecraft_landing_page_6.png" usemap="#image-map-6" width="700px">
+
+<map name="image-map-6">
+    <area target="_blank" alt="Anybody Can Learn" title="Anybody Can Learn" href="https://crowdin.com/translate/codeorg/56/enus-#69452" coords="10,257,120,278" shape="rect">
+    <area target="_blank" alt="My Name is Aracely" title="My Name is Aracely" href="https://crowdin.com/translate/codeorg/56/enus-#132873" coords="353,256,457,278" shape="rect">
+    <area target="_blank" alt="3 min" title="3 min" href="https://crowdin.com/translate/codeorg/56/enus-#132874" coords="458,253,495,278" shape="rect">
+    <area target="_blank" alt="More inspirational videos featuring role models..." title="More inspirational videos featuring role models..." href="https://crowdin.com/translate/codeorg/56/enus-#69170" coords="36,301,353,317" shape="rect">
+    <area target="_blank" alt="More inspirational videos featuring professionals..." title="More inspirational videos featuring professionals..." href="https://crowdin.com/translate/codeorg/56/enus-#69171" coords="37,318,385,336" shape="rect">
+</map>
+
+## List of Crowdin Links <a name="list-of-crowdin-links"></a>
+
+These are the same links found in the images above. They are included here in case the image links above don't work for you or if you prefer to see them in a list.
+
+- Minecraft Hour of Code Tutorials ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69174))
+- Many languages | Modern browsers and tablets | Grades 2+ ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69175))
+- Minecraft Voyage Aquatic ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304438))
+- Use your creativity and problem solving skills to explore and build underwater worlds with code. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304546))
+- Start ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#5489))
+- Minecraft Adventurer ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69173))
+- Use code to take Alex or Steve on an adventure. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69178))
+- Minecraft Designer ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69172))
+- Program animals and other Minecraft creatures in your own version of Minecraft. ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#68846))
+- Minecraft Hero’s Journey ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#109324))
+- Journey through Minecraft with code. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304548))
+- Don't have Internet? ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#57869))
+- Download the offline version of Minecraft Adventurer. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69181))
+- In partnership with ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#330360))
+- We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century. ([Crowdin Link]())
+- For Educators ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304460))
+- Code with Minecraft ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304462))
+- Minecraft: Education Edition provides standards-aligned curriculum, training and coding in Minecraft. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304464))
+- Get started ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304466))
+- Download Facilitator Guide ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304468))
+- This toolkit will help you host an Hour of Code and engage your students in computer science. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304470))
+- Download ([Crowdin Link](https://crowdin.com/translate/codeorg/527/enus-#84126))
+- Attend a free student workshop ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304474))
+- Visit a Microsoft Store in your area for a free Hour of Code workshop. For participants of all skill levels, ages six and up. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304476))
+- Find a workshop ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304478))
+- Access more computer science resources ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304480))
+- Create change in your community with digital skills and computer science education resources from Microsoft. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304482))
+- Explore resources ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#304484))
+- Before you get started, watch one of these inspirational videos ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#57866))
+- Hour of Code with Steph Curry ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#110475))
+- 2 min ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69454))
+- Share on Facebook ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3631))
+- Share on Twitter ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3632))
+- Push yourself. Anybody can learn. ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69438))
+- 1 min ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69453))
+- Computer Science is Changing Everything ([Crowdin Link](https://crowdin.com/translate/codeorg/41/enus-#56548))
+- 5 min ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69455))
+- Inspire a girl ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#51615))
+- Computer Science intro ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69448))
+- What Most Schools Don't Teach ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69449))
+- President Obama on computer science ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69450))
+- Hour of Code is Here - Anybody Can Learn ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69451))
+- Anybody Can Learn ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69452))
+- My Name is Aracely ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#132873))
+- 3 min ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#132874))
+- More inspirational videos featuring role models and celebrities ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69170))
+- More inspirational videos featuring professionals in technology fields ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#69171))
+
+<script defer>
+    document.addEventListener('DOMContentLoaded',function() {
+        document.querySelector('select[id="lang-select"]').onchange=changeEventHandler;
+    },false);
+
+    var imageMapList = document.getElementsByTagName('area');
+    var anchorTagList = document.getElementsByTagName('a');
+    var regEx = /crowdin.*#/;
+
+    function changeEventHandler(event) {
+        var selectedLang = event.target.value;
+
+        for (var i = 0; i < imageMapList.length; i++) {
+            var urlArr = imageMapList[i].href.split('#');
+            var newUrl = removeLangSelectionFromUrl(urlArr[0]) + selectedLang + '#' + urlArr[1];
+            imageMapList[i].setAttribute('href', newUrl);
+        }
+
+        for (var i = 0; i < anchorTagList.length; i++) {
+            if (regEx.test(anchorTagList[i].href)) {
+                var urlArr = anchorTagList[i].href.split('#');
+                var newUrl = removeLangSelectionFromUrl(urlArr[0]) + selectedLang + '#' + urlArr[1];
+                anchorTagList[i].setAttribute('href', newUrl);
+            }
+        }
+    }
+
+    function removeLangSelectionFromUrl(str) {
+        return str.split('-')[0] + '-';
+    }
+</script>

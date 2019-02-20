@@ -13,9 +13,10 @@
 #
 # Indexes
 #
-#  index_pd_scholarship_infos_on_pd_application_id  (pd_application_id)
-#  index_pd_scholarship_infos_on_pd_enrollment_id   (pd_enrollment_id)
-#  index_pd_scholarship_infos_on_user_id            (user_id)
+#  index_pd_scholarship_infos_on_pd_application_id             (pd_application_id)
+#  index_pd_scholarship_infos_on_pd_enrollment_id              (pd_enrollment_id)
+#  index_pd_scholarship_infos_on_user_id                       (user_id)
+#  index_pd_scholarship_infos_on_user_id_and_application_year  (user_id,application_year) UNIQUE
 #
 
 class Pd::ScholarshipInfo < ActiveRecord::Base
@@ -28,7 +29,7 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
-  belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: :pd_application_id
+  belongs_to :application, class_name: 'Pd::Application::TeacherApplicationBase', foreign_key: :pd_application_id
 
   before_validation -> {self.application_year = APPLICATION_CURRENT_YEAR}, if: :new_record?
 
