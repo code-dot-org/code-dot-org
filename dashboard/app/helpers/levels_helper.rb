@@ -152,7 +152,7 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed?
+    if @level.channel_backed? && !level_view_options(@level.id)[:edit_blocks]
       view_options(channel: get_channel_for(@level, @user))
       # readonly if viewing another user's channel
       readonly_view_options if @user
@@ -188,7 +188,7 @@ module LevelsHelper
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
-    if @level.channel_backed?
+    if @level.channel_backed? && !level_view_options(@level.id)[:edit_blocks]
       view_options(is_channel_backed: true)
       view_options(server_project_level_id: @level.project_template_level.try(:id))
     end
