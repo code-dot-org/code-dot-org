@@ -93,7 +93,6 @@ module Pd
             :have_cs_license,
             :subjects_licensed_to_teach,
             :taught_in_past,
-            :cs_offered_at_school,
             :cs_opportunities_at_school,
             :previous_yearlong_cdo_pd
           )
@@ -172,7 +171,6 @@ module Pd
         subjects_licensed_to_teach: "Which subject area(s) are you currently licensed to teach?",
         taught_in_past: "Have you taught computer science courses or activities in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
-        cs_offered_at_school: "What computer science courses or activities are currently offered at your school?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         willing_to_travel: "How far would you be willing to travel to academic year workshops?",
         how_heard: PAGE_LABELS[:section_5_additional_demographic_information][:how_heard] + " (Teacher's response)",
@@ -404,7 +402,6 @@ module Pd
         :subjects_licensed_to_teach,
         :taught_in_past,
         :previous_yearlong_cdo_pd,
-        :cs_offered_at_school,
         :committed,
         :able_to_attend_multiple,
         :travel_to_another_workshop,

@@ -142,15 +142,6 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
           }
         )}
         {this.checkBoxesFor('previousYearlongCdoPd')}
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'csOfferedAtSchool',
-          {
-            [TextFields.otherPleaseList]: 'other'
-          },
-          {
-            columnCount: 3
-          }
-        )}
       </FormGroup>
     );
   }
