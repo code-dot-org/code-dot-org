@@ -15,9 +15,6 @@ Scenario: Basic teacher application submission
     And I press keys "Severus" for element "input#firstName"
     And I press keys "Snape" for element "input#lastName"
     And I press keys "5558675309" for element "input#phone"
-    And I press keys "123 Fake Street" for element "input#address"
-    And I press keys "Seattle" for element "input#city"
-    And I select the "Washington" option in dropdown "state"
     And I press keys "98101" for element "input#zipCode"
     And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
     Then I see no difference for "Section 1: About You"

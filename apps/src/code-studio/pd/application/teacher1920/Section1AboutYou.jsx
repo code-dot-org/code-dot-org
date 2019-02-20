@@ -214,9 +214,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
         {this.usPhoneNumberInputFor('phone')}
 
-        {this.inputFor('address')}
-        {this.inputFor('city')}
-        {this.selectFor('state', {placeholder: 'Select a state'})}
         {this.inputFor('zipCode')}
 
         {this.radioButtonsFor('completingOnBehalfOfSomeoneElse')}
