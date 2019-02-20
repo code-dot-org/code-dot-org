@@ -293,6 +293,23 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal true, Script.find_by_name(script.name).hidden
   end
 
+  test 'cannot view pilot script without pilot access' do
+    create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
+
+    get :show, params: {id: 'pilot-script'}
+    assert_response :not_found
+
+    sign_in @not_admin
+    get :show, params: {id: 'pilot-script'}
+    assert_response :not_found
+    sign_out @not_admin
+
+    sign_in @levelbuilder
+    get :show, params: {id: 'pilot-script'}
+    assert_response :success
+    sign_out @levelbuilder
+  end
+
   test 'can create with has_lesson_plan param' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
