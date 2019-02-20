@@ -65,7 +65,7 @@ const styles = {
   },
   keyConcepts: {
     fontSize: 13,
-    color: '#5B6770'
+    color: color.charcoal
   },
   rubricArea: {
     flexGrow: 2
@@ -80,19 +80,18 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    backgroundColor: '#d9eff7',
+    backgroundColor: color.lightest_cyan,
     borderRadius: 10,
     padding: '4px 10px'
   },
   h1: {
-    color: '#5B6770',
+    color: color.charcoal,
     marginTop: 8,
     marginBottom: 12,
     fontSize: 24,
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'normal'
   },
-  checkbox: {},
   commentArea: {
     margin: '0px 16px 16px 16px'
   }
@@ -281,7 +280,6 @@ class TeacherFeedback extends Component {
                       checked={this.state.performance === 'exceeds'}
                       onChange={this.onRubricChange}
                       disabled={this.props.disabledMode}
-                      style={styles.checkbox}
                     />
                   )}
                   <details>
@@ -305,7 +303,6 @@ class TeacherFeedback extends Component {
                       checked={this.state.performance === 'meets'}
                       onChange={this.onRubricChange}
                       disabled={this.props.disabledMode}
-                      style={styles.checkbox}
                     />
                   )}
                   <details>
@@ -329,7 +326,6 @@ class TeacherFeedback extends Component {
                       checked={this.state.performance === 'approaches'}
                       onChange={this.onRubricChange}
                       disabled={this.props.disabledMode}
-                      style={styles.checkbox}
                     />
                   )}
                   <details>
@@ -353,7 +349,6 @@ class TeacherFeedback extends Component {
                       checked={this.state.performance === 'noEvidence'}
                       onChange={this.onRubricChange}
                       disabled={this.props.disabledMode}
-                      style={styles.checkbox}
                     />
                   )}
                   <details>
