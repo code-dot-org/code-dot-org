@@ -20,7 +20,7 @@ const styles = {
     margin: 10,
     display: 'block',
     width: '90%',
-    backgroundColor: '#d9eff7'
+    backgroundColor: color.lightest_cyan
   },
   button: {
     margin: 10,
