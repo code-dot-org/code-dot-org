@@ -6,6 +6,7 @@ import codemirror from 'codemirror';
 import marked from 'marked';
 import renderer from '@cdo/apps/util/StylelessRenderer';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
@@ -36,3 +37,4 @@ window.CodeMirror = codemirror;
 // TODO: Remove when global `marked` is no longer required.
 window.marked = marked;
 window.renderer = renderer;
+window.convertXmlToBlockly = convertXmlToBlockly;
