@@ -237,6 +237,366 @@
       "version": "m7y5G6xBz.sbqMPb.uwysQvXxpHk2t69",
       "sourceUrl": "/api/v1/sound-library/category_animals/tiger.mp3"
     },
+    "category_app/App_Button_1": {
+      "name": "App_Button_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:07 UTC",
+      "mp3LastModified": "2019-02-13 23:40:08 UTC",
+      "version": "HUaJKi2AoUMmHzHNkkkdgSIueTnxMfUi",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_1.mp3"
+    },
+    "category_app/App_Button_2": {
+      "name": "App_Button_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:08 UTC",
+      "mp3LastModified": "2019-02-13 23:40:09 UTC",
+      "version": "ZL0TNpvIz_0JdVS9C__Y87gPlfr4.MJp",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_2.mp3"
+    },
+    "category_app/App_Button_3": {
+      "name": "App_Button_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:09 UTC",
+      "mp3LastModified": "2019-02-13 23:40:09 UTC",
+      "version": "qrzAksg3cUN6I8C3WxC3GVinRMJOBp1n",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_3.mp3"
+    },
+    "category_app/App_Button_4": {
+      "name": "App_Button_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:10 UTC",
+      "mp3LastModified": "2019-02-13 23:40:10 UTC",
+      "version": "v9fxt8VL58eJ1vj0qSbj7dB.H_H3HtM6",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_4.mp3"
+    },
+    "category_app/App_Button_5": {
+      "name": "App_Button_5",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:11 UTC",
+      "mp3LastModified": "2019-02-13 23:40:10 UTC",
+      "version": "YAp3GvxvtVRK0hkPuimSY1qgI5Og2asg",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_5.mp3"
+    },
+    "category_app/App_Button_6": {
+      "name": "App_Button_6",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:12 UTC",
+      "mp3LastModified": "2019-02-13 23:40:11 UTC",
+      "version": "ICzmpNmx5EtRpQHSDLIF9H2gXbVEhJPq",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_6.mp3"
+    },
+    "category_app/App_Button_Click_1": {
+      "name": "App_Button_Click_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:13 UTC",
+      "mp3LastModified": "2019-02-13 23:40:11 UTC",
+      "version": "yWh4RE1Wo1wWXNDpoY14biyXKtjbpegT",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_Click_1.mp3"
+    },
+    "category_app/App_Button_Click_2": {
+      "name": "App_Button_Click_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:14 UTC",
+      "mp3LastModified": "2019-02-13 23:40:11 UTC",
+      "version": "bBTvDJs._7.Rq1Rz8Cl7Q1DHHL.A8uo.",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_Click_2.mp3"
+    },
+    "category_app/App_Button_Slide_Cool_1": {
+      "name": "App_Button_Slide_Cool_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:16 UTC",
+      "mp3LastModified": "2019-02-13 23:40:13 UTC",
+      "version": "nFBECUWs88DDdWmDHFfeF3zcUUZ1eppD",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_Slide_Cool_1.mp3"
+    },
+    "category_app/App_Button_Slide_Cool_2": {
+      "name": "App_Button_Slide_Cool_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:17 UTC",
+      "mp3LastModified": "2019-02-13 23:40:13 UTC",
+      "version": "khBviTXqPwql0M74lEMIZLKUC1T03exd",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Button_Slide_Cool_2.mp3"
+    },
+    "category_app/App_Ice_Button_Click_1": {
+      "name": "App_Ice_Button_Click_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:17 UTC",
+      "mp3LastModified": "2019-02-13 23:40:13 UTC",
+      "version": "Y7whRilT04sB5SATN5esC1xfN0RfO7WZ",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Ice_Button_Click_1.mp3"
+    },
+    "category_app/App_Ice_Button_Click_2": {
+      "name": "App_Ice_Button_Click_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:18 UTC",
+      "mp3LastModified": "2019-02-13 23:40:14 UTC",
+      "version": "3Ng2.hnpitnoQUVRTDFFsV1ojMJCKQDQ",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Ice_Button_Click_2.mp3"
+    },
+    "category_app/App_Ice_Button_Click_3": {
+      "name": "App_Ice_Button_Click_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:19 UTC",
+      "mp3LastModified": "2019-02-13 23:40:15 UTC",
+      "version": "FnxP4IzqpD8IUpAkITQYXXTIwy_DGg7f",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Ice_Button_Click_3.mp3"
+    },
+    "category_app/App_Interface_Button": {
+      "name": "App_Interface_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:22 UTC",
+      "mp3LastModified": "2019-02-13 23:40:16 UTC",
+      "version": "ebu0ariQrsiJzcOArMOkX3ORvEWaUXuc",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Interface_Button.mp3"
+    },
+    "category_app/App_Interface_Button_2": {
+      "name": "App_Interface_Button_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:20 UTC",
+      "mp3LastModified": "2019-02-13 23:40:15 UTC",
+      "version": "OeZ6toZWFzEwalqamoXqARW9hLmCOIRt",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Interface_Button_2.mp3"
+    },
+    "category_app/App_Interface_Button_3": {
+      "name": "App_Interface_Button_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:21 UTC",
+      "mp3LastModified": "2019-02-13 23:40:16 UTC",
+      "version": "KIH67CGfyldGP21H2M5KPPcaCXHW7O_Q",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Interface_Button_3.mp3"
+    },
+    "category_app/App_Interface_Button_4": {
+      "name": "App_Interface_Button_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:21 UTC",
+      "mp3LastModified": "2019-02-13 23:40:16 UTC",
+      "version": "wkrmLhMQISYESMSOE3G0Vwm71nPM6LUa",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Interface_Button_4.mp3"
+    },
+    "category_app/App_Interface_Click": {
+      "name": "App_Interface_Click",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:26 UTC",
+      "mp3LastModified": "2019-02-13 23:40:18 UTC",
+      "version": "lVuG5O4rVS7SY6m9sztpY3S9E6J9Eajq",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Interface_Click.mp3"
+    },
+    "category_app/App_Interface_Click_2": {
+      "name": "App_Interface_Click_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:23 UTC",
+      "mp3LastModified": "2019-02-13 23:40:17 UTC",
+      "version": "Ehqffv2mB0XRm5yUd7tceRrGoq..eRQT",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Interface_Click_2.mp3"
+    },
+    "category_app/App_Interface_Click_3": {
+      "name": "App_Interface_Click_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:24 UTC",
+      "mp3LastModified": "2019-02-13 23:40:17 UTC",
+      "version": "jrrtnJGD6Zy_wIlOhuoXYL0iEH8Dn9cs",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Interface_Click_3.mp3"
+    },
+    "category_app/App_Menu_Button": {
+      "name": "App_Menu_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:33 UTC",
+      "mp3LastModified": "2019-02-13 23:40:21 UTC",
+      "version": "c0TeQShZN7xsJsO.lxItqeHhg1gimWot",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button.mp3"
+    },
+    "category_app/App_Menu_Button_10": {
+      "name": "App_Menu_Button_10",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:32 UTC",
+      "mp3LastModified": "2019-02-13 23:40:21 UTC",
+      "version": "p38simUdHS29IRIIXOUPlu5L7FZCCKCc",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button_10.mp3"
+    },
+    "category_app/App_Menu_Button_2": {
+      "name": "App_Menu_Button_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:27 UTC",
+      "mp3LastModified": "2019-02-13 23:40:18 UTC",
+      "version": "nlbHnmE5FdWgJIk.E9OySCxL4gWKjfwU",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button_2.mp3"
+    },
+    "category_app/App_Menu_Button_3": {
+      "name": "App_Menu_Button_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:28 UTC",
+      "mp3LastModified": "2019-02-13 23:40:19 UTC",
+      "version": "k4ng4kHVBFRftgwVDcOqK4ER7kqc1SiE",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button_3.mp3"
+    },
+    "category_app/App_Menu_Button_4": {
+      "name": "App_Menu_Button_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:28 UTC",
+      "mp3LastModified": "2019-02-13 23:40:19 UTC",
+      "version": "70aEcEbF775i0ezQD.Rm.XcIHD3mPITL",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button_4.mp3"
+    },
+    "category_app/App_Menu_Button_5": {
+      "name": "App_Menu_Button_5",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:29 UTC",
+      "mp3LastModified": "2019-02-13 23:40:20 UTC",
+      "version": "Jhvsj1tUMrge83VKFMf2J07K6hdPBCN1",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button_5.mp3"
+    },
+    "category_app/App_Menu_Button_6": {
+      "name": "App_Menu_Button_6",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:30 UTC",
+      "mp3LastModified": "2019-02-13 23:40:20 UTC",
+      "version": "b5Fl_piZGoXp7gU3f95UYaTtUGIfb09T",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button_6.mp3"
+    },
+    "category_app/App_Menu_Button_6v2": {
+      "name": "App_Menu_Button_6v2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:31 UTC",
+      "mp3LastModified": "2019-02-13 23:40:20 UTC",
+      "version": "FQEI5esErSUjUyIEniucqx5e25RX1Xxh",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Menu_Button_6v2.mp3"
+    },
+    "category_app/App_Slide": {
+      "name": "App_Slide",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:34 UTC",
+      "mp3LastModified": "2019-02-13 23:40:22 UTC",
+      "version": "xgd2A0vByK9W_tfRMOvgSJgsCeawbmYy",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Slide.mp3"
+    },
+    "category_app/App_Slide_6": {
+      "name": "App_Slide_6",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:34 UTC",
+      "mp3LastModified": "2019-02-13 23:40:22 UTC",
+      "version": "nXMvsxPP5N8PP3ufmh6vwiA9H7J_bKf.",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Slide_6.mp3"
+    },
+    "category_app/App_Tab_Sound": {
+      "name": "App_Tab_Sound",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:35 UTC",
+      "mp3LastModified": "2019-02-13 23:40:24 UTC",
+      "version": "pre.9kowy5eoUWJjtZG.hZBcxdoeyny8",
+      "sourceUrl": "/api/v1/sound-library/category_app/App_Tab_Sound.mp3"
+    },
+    "category_app/Arcade_Game_Button_Tap": {
+      "name": "Arcade_Game_Button_Tap",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:36 UTC",
+      "mp3LastModified": "2019-02-13 23:40:24 UTC",
+      "version": "orblT.1cYaTAVGvSMeb72dxN1A.mDHhZ",
+      "sourceUrl": "/api/v1/sound-library/category_app/Arcade_Game_Button_Tap.mp3"
+    },
+    "category_app/Bamboo_Button": {
+      "name": "Bamboo_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:37 UTC",
+      "mp3LastModified": "2019-02-13 23:40:25 UTC",
+      "version": "BYKiBILrcEcw3wYJU6UMuUsNyXI_Go5q",
+      "sourceUrl": "/api/v1/sound-library/category_app/Bamboo_Button.mp3"
+    },
+    "category_app/Bass_Power_Off": {
+      "name": "Bass_Power_Off",
+      "time": 3,
+      "jsonLastModified": "2019-02-19 22:30:38 UTC",
+      "mp3LastModified": "2019-02-13 23:40:26 UTC",
+      "version": "Av71UNppE1T.TIkF9MzFciCdcL1alxnO",
+      "sourceUrl": "/api/v1/sound-library/category_app/Bass_Power_Off.mp3"
+    },
+    "category_app/Modern_UI_Sound": {
+      "name": "Modern_UI_Sound",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:39 UTC",
+      "mp3LastModified": "2019-02-13 23:40:26 UTC",
+      "version": "UfOvPbAy_2nmm.FsIcMCkumJn9LJ..C7",
+      "sourceUrl": "/api/v1/sound-library/category_app/Modern_UI_Sound.mp3"
+    },
+    "category_app/Pause_Button": {
+      "name": "Pause_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:40 UTC",
+      "mp3LastModified": "2019-02-13 23:40:27 UTC",
+      "version": "artiXTCgg5NqtUHuUqARSubpfqtNJXzU",
+      "sourceUrl": "/api/v1/sound-library/category_app/Pause_Button.mp3"
+    },
+    "category_app/Perfect_App_Button_1": {
+      "name": "Perfect_App_Button_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:41 UTC",
+      "mp3LastModified": "2019-02-13 23:40:27 UTC",
+      "version": "aTC4TAlSRgvZa0N7WDx_87EIIET.mHho",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_App_Button_1.mp3"
+    },
+    "category_app/Perfect_App_Button_2": {
+      "name": "Perfect_App_Button_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:42 UTC",
+      "mp3LastModified": "2019-02-13 23:40:28 UTC",
+      "version": "osUn7r5T._OFAsY5tocLmrDsMoxpYYQK",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_App_Button_2.mp3"
+    },
+    "category_app/Perfect_App_Button_3": {
+      "name": "Perfect_App_Button_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:43 UTC",
+      "mp3LastModified": "2019-02-13 23:40:28 UTC",
+      "version": "qX7AC1bZ2rjBGcf2TH3L51JpBif4m8rk",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_App_Button_3.mp3"
+    },
+    "category_app/Perfect_App_Button_4": {
+      "name": "Perfect_App_Button_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:44 UTC",
+      "mp3LastModified": "2019-02-13 23:40:29 UTC",
+      "version": "hTsCkSseVdxYgJSRiJ8Wmj20xm3lJbeZ",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_App_Button_4.mp3"
+    },
+    "category_app/Perfect_App_Button_5": {
+      "name": "Perfect_App_Button_5",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:45 UTC",
+      "mp3LastModified": "2019-02-13 23:40:29 UTC",
+      "version": "QZDsOy2avzz2D41BVwxNrXpbdyfhuYHI",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_App_Button_5.mp3"
+    },
+    "category_app/Perfect_Clean_App_Button_Click": {
+      "name": "Perfect_Clean_App_Button_Click",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:47 UTC",
+      "mp3LastModified": "2019-02-13 23:40:30 UTC",
+      "version": "jewVJzjakLi9E_yNpGy0Mu4UrvnINj.I",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_Clean_App_Button_Click.mp3"
+    },
+    "category_app/Perfect_Clean_App_Button_Click_2": {
+      "name": "Perfect_Clean_App_Button_Click_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:46 UTC",
+      "mp3LastModified": "2019-02-13 23:40:30 UTC",
+      "version": "RXC6EGbQjz9yMLJ7yk5cpdfa8011k6Rs",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_Clean_App_Button_Click_2.mp3"
+    },
+    "category_app/Perfect_Organic_Button": {
+      "name": "Perfect_Organic_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:48 UTC",
+      "mp3LastModified": "2019-02-13 23:40:31 UTC",
+      "version": "UvATaWnRU6hdxjwrhOBXGzjAXiP2wzt0",
+      "sourceUrl": "/api/v1/sound-library/category_app/Perfect_Organic_Button.mp3"
+    },
+    "category_app/Snap": {
+      "name": "Snap",
+      "time": 0,
+      "jsonLastModified": "2019-02-19 22:30:50 UTC",
+      "mp3LastModified": "2019-02-13 23:40:31 UTC",
+      "version": "4lPbhzMtbqYXh9nfTe6244rSw2YjuoNG",
+      "sourceUrl": "/api/v1/sound-library/category_app/Snap.mp3"
+    },
     "category_background/airport": {
       "name": "airport",
       "time": 41,
@@ -1888,7 +2248,7 @@
     "category_objects/plastic_switch": {
       "name": "plastic_switch",
       "time": 0,
-      "jsonLastModified": "2017-04-17 20:41:37 UTC",
+      "jsonLastModified": "2018-08-06 17:39:25 UTC",
       "mp3LastModified": "2017-04-17 20:41:38 UTC",
       "version": "WjyPQQttXYQxGvdDPHaZvUeRIH6K6uld",
       "sourceUrl": "/api/v1/sound-library/category_objects/plastic_switch.mp3"
@@ -1927,6 +2287,41 @@
     }
   },
   "aliases": {
+    "80s": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button"
+    ],
     "a": [
       "category_female_voiceover/its_a_tie_female"
     ],
@@ -1937,6 +2332,53 @@
     "achievement": [
       "category_male_voiceover/objective_achieved_male"
     ],
+    "advanced": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
     "airport": [
       "category_background/airport"
     ],
@@ -1946,11 +2388,120 @@
     "animals": [
       "category_background/seagulls"
     ],
+    "app": [
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button"
+    ],
+    "app_button_1": [
+      "category_app/App_Button_1"
+    ],
+    "app_button_2": [
+      "category_app/App_Button_2"
+    ],
+    "app_button_3": [
+      "category_app/App_Button_3"
+    ],
+    "app_button_4": [
+      "category_app/App_Button_4"
+    ],
+    "app_button_5": [
+      "category_app/App_Button_5"
+    ],
+    "app_button_6": [
+      "category_app/App_Button_6"
+    ],
+    "app_button_click_1": [
+      "category_app/App_Button_Click_1"
+    ],
+    "app_button_click_2": [
+      "category_app/App_Button_Click_2"
+    ],
+    "app_button_slide_cool_1": [
+      "category_app/App_Button_Slide_Cool_1"
+    ],
+    "app_button_slide_cool_2": [
+      "category_app/App_Button_Slide_Cool_2"
+    ],
+    "app_ice_button_click_1": [
+      "category_app/App_Ice_Button_Click_1"
+    ],
+    "app_ice_button_click_2": [
+      "category_app/App_Ice_Button_Click_2"
+    ],
+    "app_ice_button_click_3": [
+      "category_app/App_Ice_Button_Click_3"
+    ],
+    "app_interface_button": [
+      "category_app/App_Interface_Button"
+    ],
+    "app_interface_button_2": [
+      "category_app/App_Interface_Button_2"
+    ],
+    "app_interface_button_3": [
+      "category_app/App_Interface_Button_3"
+    ],
+    "app_interface_button_4": [
+      "category_app/App_Interface_Button_4"
+    ],
+    "app_interface_click": [
+      "category_app/App_Interface_Click"
+    ],
+    "app_interface_click_2": [
+      "category_app/App_Interface_Click_2"
+    ],
+    "app_interface_click_3": [
+      "category_app/App_Interface_Click_3"
+    ],
+    "app_menu_button": [
+      "category_app/App_Menu_Button"
+    ],
+    "app_menu_button_10": [
+      "category_app/App_Menu_Button_10"
+    ],
+    "app_menu_button_2": [
+      "category_app/App_Menu_Button_2"
+    ],
+    "app_menu_button_3": [
+      "category_app/App_Menu_Button_3"
+    ],
+    "app_menu_button_4": [
+      "category_app/App_Menu_Button_4"
+    ],
+    "app_menu_button_5": [
+      "category_app/App_Menu_Button_5"
+    ],
+    "app_menu_button_6": [
+      "category_app/App_Menu_Button_6"
+    ],
+    "app_menu_button_6v2": [
+      "category_app/App_Menu_Button_6v2"
+    ],
+    "app_slide": [
+      "category_app/App_Slide"
+    ],
+    "app_slide_6": [
+      "category_app/App_Slide_6"
+    ],
+    "app_tab_sound": [
+      "category_app/App_Tab_Sound"
+    ],
+    "arcade_game_button_tap": [
+      "category_app/Arcade_Game_Button_Tap"
+    ],
     "artic": [
       "category_animals/penguin"
     ],
     "ball": [
       "category_objects/kickball"
+    ],
+    "bamboo_button": [
+      "category_app/Bamboo_Button"
     ],
     "bark": [
       "category_animals/dog",
@@ -1958,6 +2509,9 @@
     ],
     "baseball": [
       "category_background/pregame_fans"
+    ],
+    "bass_power_off": [
+      "category_app/Bass_Power_Off"
     ],
     "bath": [
       "category_objects/bubbles"
@@ -2045,6 +2599,53 @@
       "category_background/town",
       "category_background/typewriter"
     ],
+    "button": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
     "car": [
       "category_background/city_night",
       "category_background/f1_race"
@@ -2103,6 +2704,53 @@
       "category_animals/sheep",
       "category_animals/snake",
       "category_animals/tiger"
+    ],
+    "category_app": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
     ],
     "category_background": [
       "category_background/airport",
@@ -2342,6 +2990,51 @@
       "category_background/city_night"
     ],
     "click": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap",
       "category_objects/click",
       "category_objects/metal_click"
     ],
@@ -2576,6 +3269,53 @@
       "category_background/bowling_alley",
       "category_background/intermission_whispering"
     ],
+    "epic": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
     "error_1": [
       "category_digital/error_1"
     ],
@@ -2721,6 +3461,51 @@
       "category_board_games/card_dealing_multiple"
     ],
     "game": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap",
       "category_background/pregame_fans",
       "category_male_voiceover/game_over_male"
     ],
@@ -2805,6 +3590,53 @@
       "category_female_voiceover/new_highscore_female",
       "category_male_voiceover/new_highscore_male"
     ],
+    "hit": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
     "hold": [
       "category_male_voiceover/hold_male"
     ],
@@ -2869,6 +3701,53 @@
       "category_instrumental/sax_upscale_2",
       "category_instrumental/trumpet",
       "category_objects/kazoo"
+    ],
+    "interface": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
     ],
     "intermission_whispering": [
       "category_background/intermission_whispering"
@@ -2977,6 +3856,17 @@
       "category_objects/sharp_switch",
       "category_objects/switch"
     ],
+    "lock": [
+      "category_app/Bass_Power_Off",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button"
+    ],
     "lose": [
       "category_female_voiceover/you_lose_female",
       "category_male_voiceover/you_lose_male"
@@ -3052,7 +3942,104 @@
     "marimba_upscale_2": [
       "category_instrumental/marimba_upscale_2"
     ],
+    "media": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
+    "menu": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
     "metal": [
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Snap",
       "category_objects/metal_click",
       "category_objects/metal_pot_1",
       "category_objects/metal_pot_2",
@@ -3068,6 +4055,9 @@
       "category_objects/metal_pot_2"
     ],
     "metallic": [
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Snap",
       "category_objects/metal_click",
       "category_objects/metal_pot_1",
       "category_objects/metal_pot_2",
@@ -3093,6 +4083,9 @@
     ],
     "mission_failed_male": [
       "category_male_voiceover/mission_failed_male"
+    ],
+    "modern_ui_sound": [
+      "category_app/Modern_UI_Sound"
     ],
     "monkey": [
       "category_animals/monkey"
@@ -3184,6 +4177,41 @@
     "off": [
       "category_objects/switch"
     ],
+    "old": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button"
+    ],
     "on": [
       "category_objects/switch"
     ],
@@ -3200,6 +4228,16 @@
       "category_objects/creak_1",
       "category_objects/creak_2"
     ],
+    "organic": [
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button"
+    ],
     "outback": [
       "category_background/outback"
     ],
@@ -3211,6 +4249,9 @@
     "owl": [
       "category_animals/owl"
     ],
+    "pause_button": [
+      "category_app/Pause_Button"
+    ],
     "penguin": [
       "category_animals/penguin"
     ],
@@ -3218,6 +4259,30 @@
       "category_objects/footstep_1",
       "category_objects/footstep_2",
       "category_objects/footstep_3"
+    ],
+    "perfect_app_button_1": [
+      "category_app/Perfect_App_Button_1"
+    ],
+    "perfect_app_button_2": [
+      "category_app/Perfect_App_Button_2"
+    ],
+    "perfect_app_button_3": [
+      "category_app/Perfect_App_Button_3"
+    ],
+    "perfect_app_button_4": [
+      "category_app/Perfect_App_Button_4"
+    ],
+    "perfect_app_button_5": [
+      "category_app/Perfect_App_Button_5"
+    ],
+    "perfect_clean_app_button_click": [
+      "category_app/Perfect_Clean_App_Button_Click"
+    ],
+    "perfect_clean_app_button_click_2": [
+      "category_app/Perfect_Clean_App_Button_Click_2"
+    ],
+    "perfect_organic_button": [
+      "category_app/Perfect_Organic_Button"
     ],
     "person": [
       "category_objects/footstep_1",
@@ -3350,6 +4415,41 @@
     "repitition": [
       "category_background/repitition"
     ],
+    "retro": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button"
+    ],
     "rhinoceros": [
       "category_animals/rhinoceros"
     ],
@@ -3426,6 +4526,41 @@
       "category_instrumental/sax_upscale_1",
       "category_instrumental/sax_upscale_2"
     ],
+    "school": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button"
+    ],
     "sea": [
       "category_background/seagulls"
     ],
@@ -3485,6 +4620,9 @@
       "category_animals/snake"
     ],
     "snap": [
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Snap",
       "category_board_games/break",
       "category_objects/snap"
     ],
@@ -3529,6 +4667,53 @@
       "category_background/gametime",
       "category_digital/startup"
     ],
+    "stock": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
     "stride": [
       "category_background/stride"
     ],
@@ -3541,6 +4726,18 @@
       "category_digital/coin_3"
     ],
     "switch": [
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap",
       "category_objects/metallic_switch",
       "category_objects/plastic_switch",
       "category_objects/sharp_switch",
@@ -3548,6 +4745,34 @@
     ],
     "synthesize": [
       "category_background/synthesize"
+    ],
+    "tabs": [
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
+    "taps": [
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
     ],
     "tear": [
       "category_objects/cloth_rip"
@@ -3629,6 +4854,64 @@
     "typewriter": [
       "category_background/typewriter"
     ],
+    "ui": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
+    ],
+    "unlock": [
+      "category_app/Bass_Power_Off",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button"
+    ],
     "up": [
       "category_female_voiceover/hurry_up_female",
       "category_female_voiceover/level_up_female",
@@ -3646,6 +4929,53 @@
       "category_instrumental/marimba_upscale_2",
       "category_instrumental/sax_upscale_1",
       "category_instrumental/sax_upscale_2"
+    ],
+    "user": [
+      "category_app/App_Button_1",
+      "category_app/App_Button_2",
+      "category_app/App_Button_3",
+      "category_app/App_Button_4",
+      "category_app/App_Button_5",
+      "category_app/App_Button_6",
+      "category_app/App_Button_Click_1",
+      "category_app/App_Button_Click_2",
+      "category_app/App_Button_Slide_Cool_1",
+      "category_app/App_Button_Slide_Cool_2",
+      "category_app/App_Ice_Button_Click_1",
+      "category_app/App_Ice_Button_Click_2",
+      "category_app/App_Ice_Button_Click_3",
+      "category_app/App_Interface_Button",
+      "category_app/App_Interface_Button_2",
+      "category_app/App_Interface_Button_3",
+      "category_app/App_Interface_Button_4",
+      "category_app/App_Interface_Click",
+      "category_app/App_Interface_Click_2",
+      "category_app/App_Interface_Click_3",
+      "category_app/App_Menu_Button",
+      "category_app/App_Menu_Button_10",
+      "category_app/App_Menu_Button_2",
+      "category_app/App_Menu_Button_3",
+      "category_app/App_Menu_Button_4",
+      "category_app/App_Menu_Button_5",
+      "category_app/App_Menu_Button_6",
+      "category_app/App_Menu_Button_6v2",
+      "category_app/App_Slide",
+      "category_app/App_Slide_6",
+      "category_app/App_Tab_Sound",
+      "category_app/Arcade_Game_Button_Tap",
+      "category_app/Bamboo_Button",
+      "category_app/Bass_Power_Off",
+      "category_app/Modern_UI_Sound",
+      "category_app/Pause_Button",
+      "category_app/Perfect_App_Button_1",
+      "category_app/Perfect_App_Button_2",
+      "category_app/Perfect_App_Button_3",
+      "category_app/Perfect_App_Button_4",
+      "category_app/Perfect_App_Button_5",
+      "category_app/Perfect_Clean_App_Button_Click",
+      "category_app/Perfect_Clean_App_Button_Click_2",
+      "category_app/Perfect_Organic_Button",
+      "category_app/Snap"
     ],
     "victory": [
       "category_digital/win"
