@@ -7,6 +7,12 @@ theme: responsive
 # Translating the Hour of Code activities page
 Translations for this page are done on Crowdin which is free to join and any volunteer can immediately start translating.
 
+## Getting set up
+
+1. If you haven't already, [click here to join our Code.org project](https://crowdin.com/project/codeorg) on Crowdin and [click here to join our Hour of Code project](https://crowdin.com/project/hour-of-code) on Crowdin.
+1. View the [Hour of Code activities page on our site](/learn). Make sure you are viewing the page in the language you are translating the site into. 
+1. Identify all the strings that are either untranslated or poorly translated. Find those strings in the images below and click on them to find the string in Crowdin. If the image links don't work for you or if you prefer to see all the links in a list, [use the list at the bottom of this page](#list-of-crowdin-links).
+
 ## Select your language
 
 Selecting your language from this dropdown will update all the links on this page to take you to that language on Crowdin. 
@@ -100,12 +106,6 @@ Selecting your language from this dropdown will update all the links on this pag
     <option value="yo">Yoruba</option>
     <option value="zu">Zulu</option>
 </select>
-
-## Getting set up
-
-1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg) on Crowdin and [click here to join our Hour of Code project](https://crowdin.com/project/hour-of-code) on Crowdin.
-1. View the [Hour of Code activities page on our site](/learn). Make sure you are viewing the page in the language you are translating the site into. 
-1. Identify all the strings that are either untranslated or poorly translated. Find those strings in the images below and click on them to find the string in Crowdin. If the image links don't work for you or if you prefer to see all the links in a list, [use the list at the bottom of this page](#list-of-crowdin-links).
 
 ## Translating the page
 
@@ -216,61 +216,61 @@ You can find the header [on this page on our site](/learn/robotics).
 
 These are the same links found in the images above. They are included here in case the image links above don't work for you or if you prefer to see them in a list.
 
-- Hour of Code Activities ([Crowdin Link](https://crowdin.com/translate/hour-of-code/595/en-#105068))
-- Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code. ([Crowdin Link](https://crowdin.com/translate/hour-of-code/595/en-#105069))
-- Want to keep learning? Go beyond an hour ([Crowdin Link](https://crowdin.com/translate/hour-of-code/595/en-#105070))
-- Teachers: Host an hour or read the How-To Guide ([Crowdin Link](https://crowdin.com/translate/hour-of-code/595/en-#105071))
-- Activities in your language ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69389))
-- Grades 2+ ([Crowdin Link](https://crowdin.com/translate/hour-of-code/all/en-#q=_detail_grades))
-- Blocks ([Crowdin Link](https://crowdin.com/translate/hour-of-code/all/en-#q=_programming_languages))
-- Show activities for many languages ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69390))
-- All grades ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#96012))
-- Pre-reader ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69337))
-- Grades 2-5 ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69338))
-- Grades 6-8 ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69339))
-- Grades 9+ ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69340))
-- Beginner ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#3609))
-- Comfortable ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69346))
-- Sort by ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#95803))
-- Recommended ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#95804))
-- Most popular ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#95805))
-- Created by ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#92060))
-- All ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#56492))
-- Classroom technology ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69347))
-- Computers ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69348))
-- Android ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69349))
-- iPad/iPhone ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69350))
-- Poor or no internet ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69351))
-- No computers or devices ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69352))
-- Topics ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69353))
-- Science ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69354))
-- Math ([Crowdin Link](https://crowdin.com/translate/codeorg/43/enus-#2798))
-- Social Studies ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69356))
-- Language Arts ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69357))
-- Art, Media, Music ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69358))
-- Computer Science only ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69359))
-- Activity type ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69360))
-- Self-led tutorial ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69361))
-- Lesson plan ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69362))
-- Length ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69363))
-- One hour ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69364))
-- One hour with follow-on ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69365))
-- A few hours ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69366))
-- Language ([Crowdin Link](https://crowdin.com/translate/codeorg/40/enus-#2554))
-- Blocks ([Crowdin Link](https://crowdin.com/translate/codeorg/43/enus-#2835))
-- Typing ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69369))
-- Other ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#4480))
-- Robotics and Circuits ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69381))
-- Click here to see our criteria and submission guidelines for Hour of Code tutorials. ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69393))
-- Click here for more information on supporting students with disabilities. ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69394))
-- Start ([Crowdin Link](https://crowdin.com/translate/codeorg/56/enus-#5489))
-- More resources ([Crowdin Link]())
-- Teacher notes ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69384))
-- Short link ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69385))
-- Student experience ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69344))
-- Languages ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69386))
-- Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware. ([Crowdin Link](https://crowdin.com/translate/hour-of-code/595/en-#105073))
-- Back to all activities ([Crowdin Link](https://crowdin.com/translate/codeorg/546/enus-#69372))
+- Hour of Code Activities (<a href="https://crowdin.com/translate/hour-of-code/595/en-#105068" target="_blank">Crowdin Link</a>)
+- Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code. (<a href="https://crowdin.com/translate/hour-of-code/595/en-#105069" target="_blank">Crowdin Link</a>)
+- Want to keep learning? Go beyond an hour (<a href="https://crowdin.com/translate/hour-of-code/595/en-#105070" target="_blank">Crowdin Link</a>)
+- Teachers: Host an hour or read the How-To Guide (<a href="https://crowdin.com/translate/hour-of-code/595/en-#105071" target="_blank">Crowdin Link</a>)
+- Activities in your language (<a href="https://crowdin.com/translate/codeorg/546/enus-#69389" target="_blank">Crowdin Link</a>)
+- Grades 2+ (<a href="https://crowdin.com/translate/hour-of-code/all/en-#q=_detail_grades" target="_blank">Crowdin Link</a>)
+- Blocks (<a href="https://crowdin.com/translate/hour-of-code/all/en-#q=_programming_languages" target="_blank">Crowdin Link</a>)
+- Show activities for many languages (<a href="https://crowdin.com/translate/codeorg/546/enus-#69390" target="_blank">Crowdin Link</a>)
+- All grades (<a href="https://crowdin.com/translate/codeorg/546/enus-#96012" target="_blank">Crowdin Link</a>)
+- Pre-reader (<a href="https://crowdin.com/translate/codeorg/546/enus-#69337" target="_blank">Crowdin Link</a>)
+- Grades 2-5 (<a href="https://crowdin.com/translate/codeorg/546/enus-#69338" target="_blank">Crowdin Link</a>)
+- Grades 6-8 (<a href="https://crowdin.com/translate/codeorg/546/enus-#69339" target="_blank">Crowdin Link</a>)
+- Grades 9+ (<a href="https://crowdin.com/translate/codeorg/546/enus-#69340" target="_blank">Crowdin Link</a>)
+- Beginner (<a href="https://crowdin.com/translate/codeorg/56/enus-#3609" target="_blank">Crowdin Link</a>)
+- Comfortable (<a href="https://crowdin.com/translate/codeorg/546/enus-#69346" target="_blank">Crowdin Link</a>)
+- Sort by (<a href="https://crowdin.com/translate/codeorg/546/enus-#95803" target="_blank">Crowdin Link</a>)
+- Recommended (<a href="https://crowdin.com/translate/codeorg/546/enus-#95804" target="_blank">Crowdin Link</a>)
+- Most popular (<a href="https://crowdin.com/translate/codeorg/546/enus-#95805" target="_blank">Crowdin Link</a>)
+- Created by (<a href="https://crowdin.com/translate/codeorg/546/enus-#92060" target="_blank">Crowdin Link</a>)
+- All (<a href="https://crowdin.com/translate/codeorg/56/enus-#56492" target="_blank">Crowdin Link</a>)
+- Classroom technology (<a href="https://crowdin.com/translate/codeorg/546/enus-#69347" target="_blank">Crowdin Link</a>)
+- Computers (<a href="https://crowdin.com/translate/codeorg/546/enus-#69348" target="_blank">Crowdin Link</a>)
+- Android (<a href="https://crowdin.com/translate/codeorg/546/enus-#69349" target="_blank">Crowdin Link</a>)
+- iPad/iPhone (<a href="https://crowdin.com/translate/codeorg/546/enus-#69350" target="_blank">Crowdin Link</a>)
+- Poor or no internet (<a href="https://crowdin.com/translate/codeorg/546/enus-#69351" target="_blank">Crowdin Link</a>)
+- No computers or devices (<a href="https://crowdin.com/translate/codeorg/546/enus-#69352" target="_blank">Crowdin Link</a>)
+- Topics (<a href="https://crowdin.com/translate/codeorg/546/enus-#69353" target="_blank">Crowdin Link</a>)
+- Science (<a href="https://crowdin.com/translate/codeorg/546/enus-#69354" target="_blank">Crowdin Link</a>)
+- Math (<a href="https://crowdin.com/translate/codeorg/43/enus-#2798" target="_blank">Crowdin Link</a>)
+- Social Studies (<a href="https://crowdin.com/translate/codeorg/546/enus-#69356" target="_blank">Crowdin Link</a>)
+- Language Arts (<a href="https://crowdin.com/translate/codeorg/546/enus-#69357" target="_blank">Crowdin Link</a>)
+- Art, Media, Music (<a href="https://crowdin.com/translate/codeorg/546/enus-#69358" target="_blank">Crowdin Link</a>)
+- Computer Science only (<a href="https://crowdin.com/translate/codeorg/546/enus-#69359" target="_blank">Crowdin Link</a>)
+- Activity type (<a href="https://crowdin.com/translate/codeorg/546/enus-#69360" target="_blank">Crowdin Link</a>)
+- Self-led tutorial (<a href="https://crowdin.com/translate/codeorg/546/enus-#69361" target="_blank">Crowdin Link</a>)
+- Lesson plan (<a href="https://crowdin.com/translate/codeorg/546/enus-#69362" target="_blank">Crowdin Link</a>)
+- Length (<a href="https://crowdin.com/translate/codeorg/546/enus-#69363" target="_blank">Crowdin Link</a>)
+- One hour (<a href="https://crowdin.com/translate/codeorg/546/enus-#69364" target="_blank">Crowdin Link</a>)
+- One hour with follow-on (<a href="https://crowdin.com/translate/codeorg/546/enus-#69365" target="_blank">Crowdin Link</a>)
+- A few hours (<a href="https://crowdin.com/translate/codeorg/546/enus-#69366" target="_blank">Crowdin Link</a>)
+- Language (<a href="https://crowdin.com/translate/codeorg/40/enus-#2554" target="_blank">Crowdin Link</a>)
+- Blocks (<a href="https://crowdin.com/translate/codeorg/43/enus-#2835" target="_blank">Crowdin Link</a>)
+- Typing (<a href="https://crowdin.com/translate/codeorg/546/enus-#69369" target="_blank">Crowdin Link</a>)
+- Other (<a href="https://crowdin.com/translate/codeorg/56/enus-#4480" target="_blank">Crowdin Link</a>)
+- Robotics and Circuits (<a href="https://crowdin.com/translate/codeorg/546/enus-#69381" target="_blank">Crowdin Link</a>)
+- Click here to see our criteria and submission guidelines for Hour of Code tutorials. (<a href="https://crowdin.com/translate/codeorg/546/enus-#69393" target="_blank">Crowdin Link</a>)
+- Click here for more information on supporting students with disabilities. (<a href="https://crowdin.com/translate/codeorg/546/enus-#69394" target="_blank">Crowdin Link</a>)
+- Start (<a href="https://crowdin.com/translate/codeorg/56/enus-#5489" target="_blank">Crowdin Link</a>)
+- More resources (<a href="" target="_blank">Crowdin Link</a>)
+- Teacher notes (<a href="https://crowdin.com/translate/codeorg/546/enus-#69384" target="_blank">Crowdin Link</a>)
+- Short link (<a href="https://crowdin.com/translate/codeorg/546/enus-#69385" target="_blank">Crowdin Link</a>)
+- Student experience (<a href="https://crowdin.com/translate/codeorg/546/enus-#69344" target="_blank">Crowdin Link</a>)
+- Languages (<a href="https://crowdin.com/translate/codeorg/546/enus-#69386" target="_blank">Crowdin Link</a>)
+- Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware. (<a href="https://crowdin.com/translate/hour-of-code/595/en-#105073" target="_blank">Crowdin Link</a>)
+- Back to all activities (<a href="https://crowdin.com/translate/codeorg/546/enus-#69372" target="_blank">Crowdin Link</a>)
 
 <script defer>
     document.addEventListener('DOMContentLoaded',function() {
@@ -300,6 +300,6 @@ These are the same links found in the images above. They are included here in ca
     }
 
     function removeLangSelectionFromUrl(str) {
-        return str.split('-')[0] + '-';
+        return str.split(/\-(?=[^\-]*$)/)[0] + '-';
     }
 </script>
