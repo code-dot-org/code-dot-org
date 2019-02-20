@@ -33,18 +33,24 @@ const styles = {
   heading: {
     marginBottom: 0
   },
-  topRowContainer: {
-    display: 'flex',
-    alignItems: 'flex-end',
-    marginBottom: 10
+  selectorContainer: {
+    width: '100%',
+    display: 'inline-block'
   },
-  toggle: {
-    margin: '0 10px 5px 10px'
+  scriptSelectorContainer: {
+    float: 'left',
+    marginRight: 10
   },
-  chevronLink: {
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'flex-end'
+  viewToggleContainer: {
+    float: 'left',
+    marginTop: 34
+  },
+  lessonSelectorContainer: {
+    float: 'right'
+  },
+  viewCourseLinkBox: {
+    width: '100%',
+    textAlign: 'right'
   }
 };
 
@@ -121,8 +127,17 @@ class SectionProgress extends Component {
 
     return (
       <div>
-        <div style={styles.topRowContainer}>
-          <div>
+        {linkToOverview && (
+          <div style={styles.viewCourseLinkBox}>
+            <SmallChevronLink
+              link={linkToOverview}
+              linkText={i18n.viewCourse()}
+              isRtl={false}
+            />
+          </div>
+        )}
+        <div style={styles.selectorContainer}>
+          <div style={styles.scriptSelectorContainer}>
             <div style={{...h3Style, ...styles.heading}}>
               {i18n.selectACourse()}
             </div>
@@ -132,21 +147,14 @@ class SectionProgress extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          <span style={styles.toggle}>
+          <div style={styles.viewToggleContainer}>
             <SectionProgressToggle />
-          </span>
-          {currentView === ViewType.DETAIL && lessons.length !== 0 && (
-            <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
-          )}
-          {linkToOverview && (
-            <span style={styles.chevronLink}>
-              <SmallChevronLink
-                link={linkToOverview}
-                linkText={i18n.viewCourse()}
-                isRtl={false}
-              />
-            </span>
-          )}
+          </div>
+          <div style={styles.lessonSelectorContainer}>
+            {currentView === ViewType.DETAIL && lessons.length !== 0 && (
+              <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
+            )}
+          </div>
         </div>
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (

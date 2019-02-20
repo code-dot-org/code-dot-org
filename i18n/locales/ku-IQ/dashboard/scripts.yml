@@ -155,15 +155,3 @@ ku:
           stages:
             'null':
               name: 'بەتاڵ'
-        csd2-2019:
-          stages:
-            Lists:
-              name: لیستەکان
-        csd3-2019:
-          stages:
-            Variables:
-              name: گۆڕاوەکان
-        csp1-2019:
-          stages:
-            The Internet:
-              name: ئینترنێت

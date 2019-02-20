@@ -19,25 +19,16 @@ it:
         grid: Clicca qui per mostrare la griglia.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Clicca qui per mostrare la griglia.
-      CSD U3 Variables Predict Where XY Embed_2019_callout:
-        grid: Clicca qui per mostrare la griglia.
       CSD U3 Variables Predict Where XY_callout:
         grid: Clicca qui per mostrare la griglia.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Clicca qui per mostrare la griglia.
-      CSD U3 Variables Predict Where XY_2019_callout:
-        grid: Clicca qui per mostrare la griglia.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Inserire qui il numero
-      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Inserire qui il numero
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
-      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 ellipse_callout:
@@ -46,16 +37,10 @@ it:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
-      CSD U3 ellipse_2019_callout:
-        CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
-      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 my-rect_callout:
@@ -66,15 +51,10 @@ it:
         CSD_U3_rect_c2: Qui c'è il pulsante "Esegui".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Ecco il codice
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: Ecco il codice
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
-      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       Counting_callout:

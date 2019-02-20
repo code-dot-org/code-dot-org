@@ -13,14 +13,8 @@ export const progressStyles = {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     color: color.charcoal,
+    paddingTop: 10,
     paddingLeft: 8
-  },
-  lessonLabelContainer: {
-    borderBottom: '2px solid',
-    borderColor: color.border_gray,
-    height: 44,
-    display: 'flex',
-    alignItems: 'center'
   },
   // For 'hover' to be applied, you should wrap the component using this style in Radium.
   lessonNumberHeading: {
@@ -67,24 +61,24 @@ export const progressStyles = {
     backgroundColor: color.table_header
   },
   icon: {
+    paddingLeft: 10,
+    paddingRight: 10,
     paddingTop: 12,
     width: PROGRESS_BUBBLE_WIDTH,
-    textAlign: 'center',
-    color: color.charcoal,
     fontSize: 20
   },
   unpluggedIcon: {
     width: PILL_BUBBLE_WIDTH,
-    textAlign: 'center',
-    color: color.charcoal,
     fontSize: 20,
+    paddingRight: 10,
+    paddingLeft: 10,
     paddingTop: 12
   },
   link: {
     color: color.teal
   },
   summaryCell: {
-    margin: '9px 8px'
+    margin: '9px 7px'
   },
   nameCell: {
     margin: 10,

@@ -6,7 +6,8 @@
     "args": [
       {
         "name": "SOUND",
-        "customInput": "soundPicker"
+        "type": "String",
+        "field": true
       }
     ]
   }

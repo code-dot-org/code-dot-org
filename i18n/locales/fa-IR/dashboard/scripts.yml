@@ -1341,8 +1341,6 @@ fa:
               name: کمک گیری جمعی
             Relay Programming:
               name: برنامه نویسی دست به دست
-            Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ رسم شطرنجی
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1550,33 +1548,3 @@ fa:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-        csd2-2019:
-          stages:
-            Lists:
-              name: فهرست‌ها
-        csd3-2019:
-          description_short: "برنامه نویسی"
-          stages:
-            Variables:
-              name: متغیرها
-            Conditionals:
-              name: شرطی ها
-            Functions:
-              name: توابع
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: معادله با پارامترها
-        csp1-2019:
-          stages:
-            The Internet:
-              name: اینترنت
-        csp3-2019:
-          description_short: برنامه نویسی
-          stages:
-            Creating Functions:
-              name: ساختن تابع ها
-        csp5-2019:
-          stages:
-            While Loops:
-              name: حلقه ها ی While

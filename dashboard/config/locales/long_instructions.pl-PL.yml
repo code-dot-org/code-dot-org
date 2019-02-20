@@ -351,10 +351,6 @@ pl:
         tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
         komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
         przykład. \r\n"
-      CSD U3 Entertainment Sample 3_2019: "# Animowany Komiks\r \n\r \nŁączenie obrazów,
-        tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
-        komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
-        przykład. \r\n"
       CSD U3 Random background: "#Tło\r\n\r\nCzasami będziesz chciał wypełnić kolorem
         cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa ono wszystko
         na ekranie kolorem, który wybierzesz.\r\n\r\n#\nWykonaj to\r\n\r\n*Uruchom
@@ -369,20 +365,10 @@ pl:
         żółtego na pomarańczowy.\r\n\r\n*Zadanie: Fioletowy kwadrat jest w całości
         zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy
         i niebieski kwadrat?*"
-      CSD U3 Random background_2019: "#Tło\r\n\r\nCzasami będziesz chciał wypełnić
-        kolorem cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa
-        ono wszystko na ekranie kolorem, który wybierzesz.\r\n\r\n#\nWykonaj to\r\n\r\n*Uruchom
-        kod aby zobaczyć, czy funkcja `background` działa.\r\n* Zmień tło z koloru
-        żółtego na pomarańczowy.\r\n\r\n*Zadanie: Fioletowy kwadrat jest w całości
-        zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy
-        i niebieski kwadrat?*"
       CSD U5 Amazon Data Video: Obejrzyj ten film, aby nauczyć się jak z tym problemem
         radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane są dane oraz
         skąd pochodzą.
       CSD U5 Amazon Data Video_2018: Obejrzyj ten film, aby nauczyć się jak z tym
-        problemem radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane
-        są dane oraz skąd pochodzą.
-      CSD U5 Amazon Data Video_2019: Obejrzyj ten film, aby nauczyć się jak z tym
         problemem radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane
         są dane oraz skąd pochodzą.
       CSD U6 getProperty var: "# Pobieranie właściwości oraz zmiennych\r\n\r\nW poprzednim

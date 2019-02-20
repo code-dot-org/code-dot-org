@@ -723,10 +723,8 @@ ro:
       CourseF_PlayLab_vars9: Frumos, acum hai să ne asigurăm că acest joc nu este prea uşor - de fiecare dată când câinele (actor 1) este lovit de un sandvich, tu ar trebui să pierzi un punct. Începe cu 10 puncte astfel încât să nu fie prea greu. Lasă scorul să scadă de la 10 la 0 pentru a schimba nivelul.
       Crack Random Substitution: Instrucţiuni
       Crack Random Substitution_2018: Instrucţiuni
-      Crack Random Substitution_2019: Instrucţiuni
       Crack a Caesar Cipher: Instrucţiuni
       Crack a Caesar Cipher_2018: Instrucţiuni
-      Crack a Caesar Cipher_2019: Instrucţiuni
       Food Fight!: "Am adăugat o ultimă funcţie pentru a o utiliza.\\r\n\\r\nFoloseste comanda \"if\" pentru a-ti programa jocul catre functie \"level_up\" dor cand \"player_score\" devine mai mare decat un numar.\n\\r\nDe exemplu: \"player_score\" > 6\\r\n\\r\nJoacă şi treci de nivelul 3 prin accesarea puzzle-lui următor. "
       Infinity_catch: Poţi s-o faci pe Elsa ("actorul 2") să o ajungă pe Anna folosind tastele săgeată?
       Infinity_finale: Creează orice vrei tu şi distribuie-l/-o!
@@ -1002,7 +1000,6 @@ ro:
       Testing Quantum Farmer: "Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla \"în timp ce\" de data asta."
       The Vigenere Cipher Widget: Instrucţiuni
       The Vigenere Cipher Widget_2018: Instrucţiuni
-      The Vigenere Cipher Widget_2019: Instrucţiuni
       The Vigenere Cipher: Instrucţiuni
       Total Artist Clone Me: "Joc la alegere: Aici sunt funcțiile pe care le-ai scris tu și încă ceva în plus cu care să te joci. Desenează ceva minunat!\nJoacă-te cu lățimea peniței pentru a vedea cât de diferit arată desenele tale!"
       U2 frequency caesar: Instrucţiuni
@@ -1011,7 +1008,6 @@ ro:
       U4 vigenere cipher 2: Instrucţiuni
       U4L02 - Objects - Template1: Șablon
       U4L02 - Objects - Template1_2018: Șablon
-      U4L02 - Objects - Template1_2019: Șablon
       Underground Avoiding Lava: Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste blocuri.
       Underground Avoiding Lava_2018: Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste blocuri.
       Underground Avoiding Lava_2019: Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste blocuri.

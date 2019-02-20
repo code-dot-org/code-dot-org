@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import processMarkdown from 'marked';
+import renderer, {makeRenderer} from './util/StylelessRenderer';
 import FeedbackBlocks from './feedbackBlocks';
 
 import {trySetLocalStorage} from './utils';
@@ -271,7 +273,9 @@ authoredHintUtils.createContextualHintsFromBlocks = function(blocks) {
     );
     var blockType = xmlBlock.firstChild.getAttribute('type');
     return {
-      markdown: msg.recommendedBlockContextualHintTitle(),
+      content: processMarkdown(msg.recommendedBlockContextualHintTitle(), {
+        renderer
+      }),
       ttsMessage: msg.recommendedBlockContextualHintTitle(),
       block: xmlBlock,
       hintId: 'recommended_block_' + blockType,
@@ -306,7 +310,12 @@ authoredHintUtils.generateAuthoredHints = function(levelBuilderAuthoredHints) {
   }
   return hints.map(function(hint) {
     return {
-      markdown: hint.hint_markdown,
+      content: processMarkdown(hint.hint_markdown, {
+        renderer: makeRenderer({
+          stripStyles: false,
+          expandableImages: true
+        })
+      }),
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,

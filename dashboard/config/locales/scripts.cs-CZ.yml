@@ -1400,8 +1400,6 @@ cs:
               name: Crowdsourcing
             Relay Programming:
               name: Relay programování
-            Graph Paper Programming:
-              name: Programování Na Milimetrovém Papíru
         courseb-2018:
           assignment_family_title: Kurz B
           stages:
@@ -1653,44 +1651,3 @@ cs:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Seznamy
-        csd3-2019:
-          title: CSD Jednotka 3 - Animace and hry ('18-'19)
-          description_short: Programování
-          stages:
-            Variables:
-              name: Proměnné
-            Conditionals:
-              name: Podmínky
-            Functions:
-              name: Funkce
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Funkce s Parametry
-        csp4-pilot:
-          stages:
-            Surveys:
-              name: Průzkumy
-        csp1-2019:
-          stages:
-            Binary Numbers:
-              name: Binární čísla
-            The Internet:
-              name: Internet
-        csp3-2019:
-          description_short: Programování
-          stages:
-            Creating Functions:
-              name: Vytvářející funkce
-        csp4-2019:
-          stages:
-            Simple Encryption:
-              name: Jednoduché šifrování
-        csp5-2019:
-          stages:
-            While Loops:
-              name: While (zatímco) cykly

@@ -899,11 +899,6 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
       aalab_clickedOn:
         options:
           CONDITION:
@@ -926,24 +921,11 @@ ja:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"rotation"': 回転
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-            '"tint"': 色合い
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ずっとくりかえす
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
       binary_move:
         options:
           DIR:

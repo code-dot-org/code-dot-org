@@ -1297,8 +1297,6 @@ es-MX:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_addToSpriteGroup:
         text: añadir gráfico {SPRITE} a grupo {GROUP}
-      aalab_allSpritesWithAnimation:
-        text: aalab todos {ANIMATION}
       aalab_changePropByFlexible:
         text: cambia aalab {SPRITE} {PROPERTY} por {VAL}
         options:
@@ -1308,25 +1306,14 @@ es-MX:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': cuando
-            '"while"': mientras
       aalab_clickedOn:
         text: "{CONDITION} {SPRITE} pulsado"
         options:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
-      aalab_createNewSprite:
-        text: "aalab haz un gráfico nuevo \n llamado {NAME} \n con traje {COSTUME} \n en {LOCATION}"
       aalab_createNewSpriteAdvanced:
         text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en {LOCATION}"
-      aalab_createNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
-      aalab_createNewSpriteAnonReturn:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}
@@ -1343,7 +1330,6 @@ es-MX:
       aalab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
       aalab_keyPressed:
-        text: "{CONDITION} {KEY} pulsada"
         options:
           CONDITION:
             '"when"': cuando
@@ -1354,47 +1340,24 @@ es-MX:
             '"left"': izquierda
             '"right"': derecha
             '"space"': espacio
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Este
-            '"South"': Sur
-            '"West"': Oeste
       aalab_nameStringSay:
         text: "{NAMESTRING} dice {MESSAGE}"
       aalab_prompt:
         text: preguntar {MESSAGE}
-      aalab_removeOneAndAll:
-        text: aalab eliminar {THIS}
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': verdadero
-            '"false"': falso
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"rotation"': rotación
-            '"x"': posición x
-            '"y"': posición y
-            '"direction"': dirección de movimiento
-            '"tint"': tinte
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': siempre
       aalab_speakerSaysConsole:
         text: "{SPRITE} dice {MESSAGE}"
       aalab_spriteSay:
         text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
+      aalab_whenTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:
@@ -1510,7 +1473,7 @@ es-MX:
             '"kelp"': alga parda
             '"polishedGranite"': granito pulido
       craft_placePrismarine:
-        text: colocar prismarina
+        text: vendos prismarinë
       craft_placeTorch:
         text: colocar antorcha
       craft_repeatUntilConduit:
@@ -1525,12 +1488,12 @@ es-MX:
         text: generar {ENTITY}
         options:
           ENTITY:
-            '"cod"': bacalao
-            '"dolphin"': delfín
-            '"salmon"': salmón
-            '"seaTurtle"': tortuga de mar
-            '"squid"': calamar
-            '"tropicalFish"': pescado tropical
+            '"cod"': merluc
+            '"dolphin"': delfin
+            '"salmon"': salmon
+            '"seaTurtle"': breshkë deti
+            '"squid"': kallamar
+            '"tropicalFish"': peshk tropikal
       craft_turn:
         text: girar a la {DIR}
         options:

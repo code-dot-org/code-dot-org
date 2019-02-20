@@ -713,44 +713,6 @@ EOS
     assert_equal '<xml>foo</xml>', new_level.start_blocks
   end
 
-  test 'can clone multi level and preserve encrypted flag' do
-    dsl_text = <<EOS
-name 'old multi level'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
-
-    old_level = create :multi, name: 'old multi level'
-    old_level.stubs(:dsl_text).returns(dsl_text)
-
-    new_level = old_level.clone_with_name('new multi level')
-    assert_equal 'new multi level', new_level.name
-    assert_equal 1, new_level.properties['questions'].length
-    assert_equal 3, new_level.properties['answers'].length
-    assert_equal 'Blue', new_level.properties['answers'].last['text']
-    assert_equal false, new_level.encrypted
-
-    old_level.encrypted = true
-    new_level = old_level.clone_with_name('encrypted level')
-    assert_equal 'encrypted level', new_level.name
-    assert_equal 1, new_level.properties['questions'].length
-    assert_equal 3, new_level.properties['answers'].length
-    assert_equal 'Blue', new_level.properties['answers'].last['text']
-    assert_equal(true, new_level.encrypted,
-      'clone_with_name preserves encrypted flag'
-    )
-
-    new_level = old_level.clone_with_suffix(' copy')
-    assert_equal 'old multi level copy', new_level.name
-    assert_equal 3, new_level.properties['answers'].length
-    assert_equal(true, new_level.encrypted,
-      'clone_with_suffix preserves encrypted flag'
-    )
-  end
-
   test 'can clone with suffix' do
     old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
     new_level = old_level.clone_with_suffix(' copy')

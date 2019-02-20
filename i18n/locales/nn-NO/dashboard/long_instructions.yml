@@ -329,30 +329,6 @@ nn:
 
         * Fiks den øydelagde koden slik at nettsida viser riktig
         * Samanlikn problema du fiksa med den du sit saman med
-      CSD U2 HTML Debug Paragraphs_2019: |-
-        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
-        <details>
-        <summary><strong>Kva er eit avsnittselement?</strong></summary>
-        Avsnitt blir markerte med opning ( `<p>` ) og lukking ( `</p>` )-taggar. Avsnitt i HTML kan vere på kva som helst tekstlengde frå eitt ord til ei rekke med setningar. Avsnitt grupperer saman sett av setningar og lagar mellomrom mellom denne gruppa med tekst og den andre gruppa av tekst.
-        </details>
-        <details>
-        <summary><strong>Kvifor ser det ut til at HTML fungerer sjølv om koden er øydelagt?</strong></summary>
-        HTML blir lest av nettlesaren for å generere nettsider. Sidan folk ofte gjer små feil når dei skriv nettsider, er nettlesarane programmerte til å gitte på kva du prøver å gjere. Av og til er nokre nettlesarar programmerte til å tippe fleire løysingar! Den einaste måten du kan sikre at koden din ser ut slik som tenkte, er å sørge for at du alltid bruker riktige .
-        </details>
-        <details>
-        <summary><strong>Kvifor blir koden av og til rosa?</strong></summary>
-        Nett-lab er programmert til å automatisk fange nokre feil i HTML. Når den merkar ein feil, gjer den koden rosa. Feilen kan vere i rosa, eller den kan vere eit stykke før den rosa koden. Du må gå gjennom koden nøye for å finne feilen din.
-        </details>
-        </div>
-
-        # Feilsøking: Fiks dei feile taggane
-
-        Denne enkle nettsida har nokre problem som gjer at innhaldet ikkje blir vist riktig. Identifisér og fiks problema. Denne øvinga blir også kalla "feilretting" i koden din.
-
-        # Gjer dette
-
-        * Fiks den øydelagde koden slik at nettsida viser riktig
-        * Samanlikn problema du fiksa med den du sit saman med
       CSD U2 Info Page Final Touches: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
@@ -384,36 +360,6 @@ nn:
         Bruk enten eigne bilete eller dei du har funne gjennom eit søk på Commons, legg til nokre bilete til nettsida du allereie har laga. Vêr kreativ! Bruk sjekklista til høgre for å halde styr på trinna du treng å følge når du legg til bilete.
 
       CSD U2 Info Page Final Touches_2018: |
-        <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
-
-        <h2>
-        Sjekkliste
-        </h2>
-
-        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Sørg for at bilete ditt har riktig lisens</span>
-        <input
-        type="checkbox" style="float: left"><span style="display: block; margin-left:
-        20px; margin-bottom: 10px">Last opp bilde i Nett-lab</span>
-        <input type="checkbox"
-        style="float: left"><span style="display: block; margin-left: 20px; margin-bottom:
-        10px">Lag ein bilete-tagg med ein skildrande alt-attributt</span>
-        <input
-        type="checkbox" style="float: left"><span style="display: block; margin-left:
-        20px; margin-bottom: 10px">Dersom biletet ikkje er ditt, legg til attributt nedanfor<br/>
-
-        </div>
-
-
-        # Legg til bilete på nettsida di
-
-        Du har allereie laga nokre sider med bra innhald på nettsida di. No kan du legge til bilete!
-
-        # Gjer dette
-
-        Bruk enten eigne bilete eller dei du har funne gjennom eit søk på Commons, legg til nokre bilete til nettsida du allereie har laga. Vêr kreativ! Bruk sjekklista til høgre for å halde styr på trinna du treng å følge når du legg til bilete.
-
-      CSD U2 Info Page Final Touches_2019: |
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -523,7 +469,6 @@ nn:
 
         **Bruk tastane til å få roboten til å gjere dropp-klapp-dropp-klapp så fort som du kan!**
       Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
-      Dance_Party_3: "*Nå svinger det!* \n\nLegg til enda en <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> blokk i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter 6 taker."
       Dance_Party_extras_battle: |-
         # Dansegrupper
 

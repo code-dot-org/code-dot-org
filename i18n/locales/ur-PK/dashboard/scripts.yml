@@ -255,13 +255,3 @@ ur:
           stages:
             'null':
               name: 'نَل'
-        csd2-2019:
-          stages:
-            Lists:
-              name: فہرستیں
-        csd3-2019:
-          stages:
-            Variables:
-              name: متغیرات
-            Conditionals:
-              name: شرائط

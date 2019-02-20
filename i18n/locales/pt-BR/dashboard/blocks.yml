@@ -1289,11 +1289,6 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
       aalab_clickedOn:
         options:
           CONDITION:
@@ -1322,37 +1317,15 @@ pt-BR:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Leste
-            '"South"': Sul
-            '"West"': Oeste
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': verdadeiro
-            '"false"': falso
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"rotation"': rotação
-            '"x"': posição x
-            '"y"': posição y
-            '"direction"': direção do movimento
-            '"tint"': tonalidade
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': eterno
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       binary_drawPixelHere:
         options:
           VAL:

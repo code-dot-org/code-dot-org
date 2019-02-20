@@ -265,20 +265,19 @@ export default class EnrollForm extends React.Component {
   validateRequiredFields() {
     let errors = this.getErrors();
     const missingRequiredFields = this.getMissingRequiredFields();
-    const schoolInfoErrors = SchoolAutocompleteDropdownWithCustomFields.validate(
-      this.state.school_info
-    );
 
-    if (
-      missingRequiredFields.length ||
-      Object.keys(errors).length ||
-      Object.keys(schoolInfoErrors).length
-    ) {
+    if (missingRequiredFields.length || Object.keys(errors).length) {
       let requiredFieldsErrors = {};
       missingRequiredFields.forEach(f => {
         requiredFieldsErrors[f] = '';
       });
-      errors = {...errors, ...requiredFieldsErrors, ...schoolInfoErrors};
+      errors = {...errors, ...requiredFieldsErrors};
+      errors = {
+        ...errors,
+        ...SchoolAutocompleteDropdownWithCustomFields.validate(
+          this.state.school_info
+        )
+      };
       this.setState({errors: errors});
       return false;
     }

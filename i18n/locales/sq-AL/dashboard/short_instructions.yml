@@ -850,10 +850,8 @@ sq:
       CourseF_PlayLab_vars9: Bukur, tani le të sigurohemi që kjo lojë të mos jetë shumë e thjeshtë - kur Qeni (aktori 1) goditet nga një top zjarri, duhet të humbësh një pikë. Filo me 10 pikë që të mos jetë shumë e vështirë. Zbriti pikët nga 10 në 0 për të kaluar nivelin.
       Crack Random Substitution: Udhëzimet
       Crack Random Substitution_2018: Udhëzimet
-      Crack Random Substitution_2019: Udhëzimet
       Crack a Caesar Cipher: Udhëzimet
       Crack a Caesar Cipher_2018: Udhëzimet
-      Crack a Caesar Cipher_2019: Udhëzimet
       Farmer for Authored Hint testing: "Wow, unë gjeta një gropë vërtet të thellë! Unë nuk\ne di sa lopata me dhe nevojiten. A mund të shkruash një program që mbush\natë derisa toka të jetë e sheshtë? Ndihmë: Përpiqu të përdorësh ciklin while këtë herë."
       Farmer for TTS testing: "Wow, unë gjeta një gropë vërtet të thellë! Unë nuk\ne di sa lopata me dhe nevojiten. A mund të shkruash një program që mbush\natë derisa toka të jetë e sheshtë? Ndihmë: Përpiqu të përdorësh ciklin while këtë herë."
       Food Fight!: "Kemi shtuar dhe një funksion të fundit që të përdorësh. \\r\n\\r\nProgramo lojën tënde që të thërrasi funksionin \"level_up\" në qoftë se\n\"player_points\" > 10. \\r\n\\r\nLuaj lojën dhe kalo nivelin e 4-tërt për të kaluar në formuesen tjetër. "
@@ -1114,13 +1112,10 @@ sq:
       PS copy 2-3 Bee Conditionals 5: "Lulet lejla mund të kenë ose 1 ose 0\nnektar, por ti nuk di se cila nga ato! Kujdes mos mbledhësh\nnektar nga një lule lejla nëse nuk ka. Kontrollo nëse nektari është i barabartë me 1 \nduke përdorur bllokun if."
       Pixelation - Lesson 14 - Make the Letter A: 'Bëni një shkronjë ''A'' 3x5. Përmasat e veglës së konfiguruar janë të gabuara. Detyra juaj e parë është të vendosni bajtin e dytë në kodin binar 8-bit për 5: 0000 0101. Pastaj filloni të futni të dhënat piksel.'
       Pixelation - Lesson 14 - Make the Letter A_2018: 'Bëni një shkronjë ''A'' 3x5. Përmasat e veglës së konfiguruar janë të gabuara. Detyra juaj e parë është të vendosni bajtin e dytë në kodin binar 8-bit për 5: 0000 0101. Pastaj filloni të futni të dhënat piksel.'
-      Pixelation - Lesson 14 - Make the Letter A_2019: 'Bëni një shkronjë ''A'' 3x5. Përmasat e veglës së konfiguruar janë të gabuara. Detyra juaj e parë është të vendosni bajtin e dytë në kodin binar 8-bit për 5: 0000 0101. Pastaj filloni të futni të dhënat piksel.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Fillojmë me imazhin 4x4 të krijuar nga Maddie në video. Detyra jote është të mbushësh me ngjyra një rrjetë 4x4, duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca të së kaltrës. Rreshti 4 - nuanca gri.'
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Fillojmë me imazhin 4x4 të krijuar nga Maddie në video. Detyra jote është të mbushësh me ngjyra një rrjetë 4x4, duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca të së kaltrës. Rreshti 4 - nuanca gri.'
-      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Fillojmë me imazhin 4x4 të krijuar nga Maddie në video. Detyra jote është të mbushësh me ngjyra një rrjetë 4x4, duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca të së kaltrës. Rreshti 4 - nuanca gri.'
       Pixelation - Lesson 15 - Complete 3-bit color: Fillojmë me imazhin 4x2 që Maddie po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo imazhin duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Fillojmë me imazhin 4x2 që Maddie po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo imazhin duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
-      Pixelation - Lesson 15 - Complete 3-bit color_2019: Fillojmë me imazhin 4x2 që Maddie po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo imazhin duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
       Poorva copy U3L2 Using Simple Commands: Vizato një rrjetë 1x1 lart, në të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       Quantum Bee: Lulet lejla mund të kenë ose 1 ose 0 nektar, por ti nuk di se cila nga ato! Kujdes të mos mbledhësh nektar nga një lule lejla nëse nuk ka. Kontrollo nëse nektari është i barabartë me 1 duke përdorur bllokun Nëse.
       Ryan - 4-5 Bee Conditionals 2: Bleta kërkon vetëm nektarin tani. Jo të gjitha objektet janë lule, prandaj kontrolloni poshtë ÇDO REJE për të parë nëse ajo fsheh një lule. Nëse ajo është, atëherë ju mund të mblidhni nektarin.
@@ -1143,7 +1138,6 @@ sq:
       Testing Quantum Farmer: "Wow, gjeta nje grope shume te thelle! Nuk e di sa lopata balte nevojiten. Mund te shkruash nje program qe e mbush derisa toka te jete e sheshte? Shenim: Provo te perdoresh nje litar tek kesaj here."
       The Vigenere Cipher Widget: Udhëzimet
       The Vigenere Cipher Widget_2018: Udhëzimet
-      The Vigenere Cipher Widget_2019: Udhëzimet
       The Vigenere Cipher: Udhëzimet
       Total Artist Clone Me: 'Lojë e lirë: Këtu janë funksionet që ke shkruar dhe disa më shumë për ty që të luash. Vizato diçka të paparë! Luaj me gjërësinë e lapsit dhe shiko se sa ndryshe do të duket pamja e vizatimit tuaj.'
       U2 frequency caesar: Udhëzimet
@@ -1153,11 +1147,9 @@ sq:
       U3L2 Using Simple Commands (no tooltips): Vizato një rrjetë 1x1 lart, në të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       U3L2 Using Simple Commands: Vizato një rrjetë 1x1 lart, në të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       U3L2 Using Simple Commands_2018: Vizato një rrjetë 1x1 lart, në të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
-      U3L2 Using Simple Commands_2019: Vizato një rrjetë 1x1 lart, në të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       U4 vigenere cipher 2: Udhëzimet
       U4L02 - Objects - Template1: Shabllon
       U4L02 - Objects - Template1_2018: Shabllon
-      U4L02 - Objects - Template1_2019: Shabllon
       Underground Avoiding Lava: "Llava është fshehur nën disa nga këto\nblloqe, të cilat ju do të duhet t`i mbuloni para se të lëvizin përpara. Një komand \"nëse\" \ndo të jetë e nevojshme këtu. Shto një komandë \"lëviz përpara\" në vendin e duhur\npër të minuar këto blloqe"
       Underground Avoiding Lava_2018: "Llava është fshehur nën disa nga këto\nblloqe, të cilat ju do të duhet t`i mbuloni para se të lëvizin përpara. Një komand \"nëse\" \ndo të jetë e nevojshme këtu. Shto një komandë \"lëviz përpara\" në vendin e duhur\npër të minuar këto blloqe"
       Underground Avoiding Lava_2019: "Llava është fshehur nën disa nga këto\nblloqe, të cilat ju do të duhet t`i mbuloni para se të lëvizin përpara. Një komand \"nëse\" \ndo të jetë e nevojshme këtu. Shto një komandë \"lëviz përpara\" në vendin e duhur\npër të minuar këto blloqe"

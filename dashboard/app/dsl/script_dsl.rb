@@ -30,7 +30,6 @@ class ScriptDSL < BaseDSL
     @version_year = nil
     @is_stable = nil
     @supported_locales = []
-    @pilot_experiment = nil
   end
 
   integer :id
@@ -54,7 +53,6 @@ class ScriptDSL < BaseDSL
   string :family_name
   string :version_year
   string :curriculum_path
-  string :pilot_experiment
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -66,10 +64,6 @@ class ScriptDSL < BaseDSL
 
   def supported_locales(locales)
     @supported_locales = locales
-  end
-
-  def pilot_experiment(experiment)
-    @pilot_experiment = experiment
   end
 
   def stage(name, properties = {})
@@ -114,8 +108,7 @@ class ScriptDSL < BaseDSL
       family_name: @family_name,
       version_year: @version_year,
       is_stable: @is_stable,
-      supported_locales: @supported_locales,
-      pilot_experiment: @pilot_experiment
+      supported_locales: @supported_locales
     }
   end
 
@@ -274,7 +267,6 @@ class ScriptDSL < BaseDSL
     s << "version_year '#{script.version_year}'" if script.version_year
     s << 'is_stable true' if script.is_stable
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
-    s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
 
     s << '' unless s.empty?
     s << serialize_stages(script)

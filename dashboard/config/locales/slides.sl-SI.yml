@@ -52,16 +52,33 @@ sl:
       4:
         text: Ta blok pravi "obrni se za 90 stopinj desno". To bo tvojega risarja
           obrnilo za enako vrednost kot "obrni" blok v labirintih.
+      5: 
     hoc_wrapup:
+      1: 
+      2: 
       3:
         text: |-
           Če ti je prva Ura kode bili všeč, obišči code.org in nadaljuj učenje o računalništvu!
           Ko boš končal 20 urni tečaj, boš znal osnove programiranja in se boš lahko začel učiti pisati mobilne aplikacije, navodila za robote, igre ali karkoli si želiš.
+      4: 
     frozen_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
       10:
         text: Spomni se, da lahko spreminjaš število pikslov in stopinj s klikom na
           puščice zraven njih.
     frozen_loops:
+      1: 
+      2: 
+      3: 
+      4: 
       5:
         text: Spomni se, da lahko spreminjaš številko znotraj bloka "ponovi" na karkoli
           in to, kar je znotraj bloka, se bo tolikokrat ponovilo.
@@ -72,12 +89,15 @@ sl:
       2:
         text: Če želimo, da lik dela nekaj ponavljajoče, brez da mora igralec storiti
           karkoli, bomo te bloke postavili znotraj "ponavljaj neskončno" bloka.
+      3: 
     C1_bee_level_intro:
       1:
         text: Niso čebelice super? V naslednji zbirki ugank je tvoja naloga pomagati
           čebelici, da pride do rože in pridobi med iz cveta, nato pa odleti naprej
           do satovja in naredi med. Uporabiti moraš bloka "dobi nektar" in "naredi
           med".
+      2: 
+      3: 
     C1_bee_loops:
       1:
         text: Zanka je ponavljanje dejavnosti. Ko grem pregledat panj, pogledam vsak
@@ -133,12 +153,18 @@ sl:
           v blok "ponovi" in pritisni "zaženi", da vidiš, če je pravilno. Čestitam,
           obvladaš!
     C1_going_places_safely:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: 'Internet je zelo zabavno mesto. A prav tako kot pri prečkanju ceste,
           moraš biti tudi na internetu previden, ko si na spletu. Zapomniti si moraš
           tri pravila. Pravilo številka 1: Vedno najprej vprašaj starše za dovoljenje.
           Pravilo številka 2: Govori le z ljudmi, ki jih poznaš. Pravilo številka
           3: Drži se mest, ki so primerna zate.'
+      7: 
     C1_pair_programming:
       1:
         text: Danes se bomo učili o programiranju v paru. V programiranju v paru programerja
@@ -391,6 +417,11 @@ sl:
           nekaj izvajaj. Na primer, dokler je tukaj kup, odstrani eno lopato zemlje.
           Nadaljuj in poskusi s svojo kmetico.
     C3_internet:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
       6:
         text: Najbolj vznemirljiva stvar o programski opremi je, da lahko vpliva na
           cel svet. Prvič sem se naučil programirati pri devetnajstih letih. Mislim,
@@ -447,6 +478,9 @@ sl:
         text: Ena od super stvari pri računalniškem programiranju je, da ko računalnik
           naučiš, kako izvesti neko dejanje, lahko to funkcijo znova pokličeš. Daš
           ji ime in po tem imenu funkcijo pokličeš. To je res kot razširitev jezika.
+      2: 
+      3: 
+      4: 
     C4_unplugged_parameters:
       1:
         text: Ta lekcija se imenuje pisanje pesmi s parametri. Tukaj bomo pisali pesmi.
@@ -489,19 +523,24 @@ sl:
           ko bomo želeli vedeti, kolikokrat je uporabnik tvitnil, bomo pogledali vrednost
           spremenljivke.
     gumball_repeat:
+      1: 
       2:
         text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
           igro ponavljalo ves čas. Če želimo, da lik dela nekaj ponavljajoče, brez
           da mora igralec storiti karkoli, bomo te bloke postavili znotraj "ponavljaj
           neskončno" bloka.
+      3: 
     iceage_repeat:
+      1: 
       2:
         text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
           igro ponavljalo ves čas. Če želimo, da lik dela nekaj ponavljajoče, brez
           da mora igralec storiti karkoli, bomo te bloke postavili znotraj "ponavljaj
           neskončno" bloka.
+      3: 
     mc_2016_spawn:
       1:
         text: V igrah "kreirati"(angleško spawn) pomeni enako kot ustvariti ali dodati.
           V tem nivoju bomo zombije kreirali, ko sonce zaide. To bomo naredili tako,
           da bomo uporabili `ko je noč` blok.
+      2: 

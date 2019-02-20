@@ -1279,8 +1279,6 @@ eu:
               name: Crowdsourcing
             Relay Programming:
               name: Txandaka programatzen
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1491,31 +1489,3 @@ eu:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        csd2-2019:
-          stages:
-            Lists:
-              name: Zerrendak
-        csd3-2019:
-          stages:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Functions:
-              name: Funtzioak
-        csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Parametrodun funtzioak
-        csp1-2019:
-          stages:
-            The Internet:
-              name: Internet
-        csp3-2019:
-          stages:
-            Creating Functions:
-              name: Funtzioak sortzen
-        csp5-2019:
-          stages:
-            While Loops:
-              name: '"Bitartean" begiztak'

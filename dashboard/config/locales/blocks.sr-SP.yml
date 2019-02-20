@@ -300,11 +300,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
       aalab_clickedOn:
         options:
           CONDITION:
@@ -325,19 +320,11 @@ sr:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Град
-      aalab_setCollidable:
+      aalab_whenTouching:
         options:
-          VAL:
-            '"true"': тачно
-            '"false"': нетачно
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': величина
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': заувек
+          CONDITION:
+            '"when"': када
+            '"while"': док је
       binary_move:
         options:
           DIR:

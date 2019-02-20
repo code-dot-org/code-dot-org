@@ -9,5 +9,6 @@
   "danceFeedbackStartNewMove": "Tanssijasi ei aloittanut uutta liikettä neljännen tahdin jälkeen.",
   "danceFeedbackNeedDifferentDance": "Sinun täytyy käyttää eri tanssia.",
   "danceFeedbackNeedEveryTwoMeasures": "Varmista, että käytät `joka toisella tahdilla`-blokkia.",
-  "danceFeedbackNeedMakeANewDancer": "Käytä `tee uusi`-blokkia luodaksesi toisen tanssijan."
+  "danceFeedbackNeedMakeANewDancer": "Käytä `tee uusi`-blokkia luodaksesi toisen tanssijan.",
+  "measure": ""
 }

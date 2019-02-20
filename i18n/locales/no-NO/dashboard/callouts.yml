@@ -41,25 +41,16 @@
         grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Klikk her for å vise rutenett.
-      CSD U3 Variables Predict Where XY Embed_2019_callout:
-        grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where XY_callout:
         grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Klikk her for å vise rutenett.
-      CSD U3 Variables Predict Where XY_2019_callout:
-        grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Endre antall her
-      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Endre antall her
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: Her er koden
-        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
-      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 ellipse_callout:
@@ -68,16 +59,10 @@
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
-      CSD U3 ellipse_2019_callout:
-        CSD_U3_rect_c1: Her er koden
-        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: Her er koden
-        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
-      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 my-rect_callout:
@@ -88,52 +73,35 @@
         CSD_U3_rect_c2: Her er "Kjør"-knappen.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Her er koden
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: Her er koden
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
-      CSD U3 sequence_2019_callout:
-        CSD_U3_rect_c1: Her er koden
-        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Legg til koden din her
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Legg til koden din her
-      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Legg til koden din her
       CSD U6 light show predict_callout:
         CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Hva gjør denne linjen?
-      CSD U6 light show predict_2019_callout:
-        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show_callout:
         CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show_2018_callout:
-        CSDUDL03P09: Hva gjør denne linjen?
-      CSD U6 light show_2019_callout:
         CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Definer startGame her
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Definer startGame her
-      CSD U6 tugowar variables 1_2019_callout:
-        CSD_U6_startGame: Definer startGame her
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Definer movePlayer() her
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Definer movePlayer() her
-      CSD U6 tugowar variables 2_2019_callout:
-        CSD_U6_movePlayer: Definer movePlayer() her
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Sjekk hvis spilleren har vunnet
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Sjekk hvis spilleren har vunnet
-      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Sjekk hvis spilleren har vunnet
       Counting_callout:
         New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
@@ -211,10 +179,6 @@
         arrows_move_actor: Bruk pilene til å flytte figuren
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: Alle dine blokker er nå sortert i kategorier! Klikk på en etikett for å se brikkene inni.
-      Dance_Party_11.5_test_callout:
-        dance_party_11.5_groups: Se her for "alle ender" blokker
-      Dance_Party_11_5_callout:
-        dance_party_11_5_groups: Se her for "alle ender" blokker
       Eval Design Recipe .1_callout:
         edit_function: Klikk her for å redigere funksjonen.
       Frozen Project Test Toolbox_callout:
@@ -395,8 +359,6 @@
       U3L08 how to add comments_callout:
         comment_highlight: Dra en kommentar-blokk herfra og inn i koden din
       U3L08 how to add comments_2018_callout:
-        comment_highlight: Dra en kommentar-blokk herfra og inn i koden din
-      U3L08 how to add comments_2019_callout:
         comment_highlight: Dra en kommentar-blokk herfra og inn i koden din
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Denne koden vil se etter lava. Kan du legge inn en kommando for å flytte fremover?

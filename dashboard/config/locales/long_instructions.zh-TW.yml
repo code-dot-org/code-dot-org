@@ -233,19 +233,11 @@ zh-TW:
         \   \r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\r\n\r\n#
         做做這個\r\n\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\r\n\r\n*\n**解讀程式**
         然後預測輸出會是怎樣。\r\n*\n**運行程式** 來檢查是否和你的預測一致。\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\r\n\r\n"
-      CSD U3 - Simple Counter Predict_2019: "# \n計數器模型（Counter Pattern）\r\n\r\n這個模型（Pattern）在程式設計中相當的重要。\r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\r\n
-        \   \r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\r\n\r\n#
-        做做這個\r\n\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\r\n\r\n*\n**解讀程式**
-        然後預測輸出會是怎樣。\r\n*\n**運行程式** 來檢查是否和你的預測一致。\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\r\n\r\n"
       CSD U3 Counters explaining counters contained 2: "# \n計數器模型（Counter Pattern）\r\n\r\n這個模型（Pattern）在程式設計中相當的重要。\r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\r\n
         \   \r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\r\n\r\n#
         做做這個\r\n\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\r\n\r\n*\n**解讀程式**
         然後預測輸出會是怎樣。\r\n*\n**運行程式** 來檢查是否和你的預測一致。\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\r\n\r\n"
       CSD U3 Counters explaining counters contained 2_2018: "# \n計數器模型（Counter Pattern）\r\n\r\n這個模型（Pattern）在程式設計中相當的重要。\r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\r\n
-        \   \r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\r\n\r\n#
-        做做這個\r\n\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\r\n\r\n*\n**解讀程式**
-        然後預測輸出會是怎樣。\r\n*\n**運行程式** 來檢查是否和你的預測一致。\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\r\n\r\n"
-      CSD U3 Counters explaining counters contained 2_2019: "# \n計數器模型（Counter Pattern）\r\n\r\n這個模型（Pattern）在程式設計中相當的重要。\r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\r\n
         \   \r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\r\n\r\n#
         做做這個\r\n\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\r\n\r\n*\n**解讀程式**
         然後預測輸出會是怎樣。\r\n*\n**運行程式** 來檢查是否和你的預測一致。\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\r\n\r\n"
@@ -255,16 +247,12 @@ zh-TW:
         然後預測輸出會是怎樣。\r\n*\n**運行程式** 來檢查是否和你的預測一致。\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\r\n\r\n"
       CSD U5 black white images pixelation 2: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png)"
       CSD U5 black white images pixelation 2_2018: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png)"
-      CSD U5 black white images pixelation 2_2019: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png)"
       CSD U5 black white images pixelation 3: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2018: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉"
-      CSD U5 black white images pixelation 3_2019: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 4: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 4_2018: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉"
-      CSD U5 black white images pixelation 4_2019: "# 做做看\r\n\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation: "# 做做看\r\n\r\n輸入 0 或是 1 來完成這個 X 形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
       CSD U5 black white images pixelation_2018: "# 做做看\r\n\r\n輸入 0 或是 1 來完成這個 X 形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
-      CSD U5 black white images pixelation_2019: "# 做做看\r\n\r\n輸入 0 或是 1 來完成這個 X 形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
       CSD U5 collection UPS: "<img src=\"https://images.code.org/db7d21a8d28df27dee3449939038c7a9-image-1488501564775.jpg\"\nstyle=\"float:right;height:250px\">\r\n＃＃＃計畫一條路線\r\n\r\nRoutz是一家導航公司。它有全世界位置的地圖且知道當下有關交通情況的資訊。當你輸入一個你想到達的目的地，它會給你它能找到最棒的路線。\r\n\r\nRoutz想要增進它的資料庫來提供更棒的導航。你的工作是幫助公司哪個資料他可以搜集來改善那些導航。\r\n\r\n**哪些資料是Routz應該搜集來改善它的建議以及從哪裡它能得到這些資料？**\r\n\r\n"
       CSD U5 collection videos: "<img src=\"HTTPs://images.code.org/dbefd53cc9aaa2ee1c54f25afc88d860-image-1488492606296.jpg\"style=\"float:right;height:300px\">\r\n\r\n#
         # # 製作一個建議\r \n\r\nMeScreen 是一個使用者可以觀看上傳來自全世界的影片的一個網站。它有數以百萬計的影片和使用者以及每天新進的使用者。\r\n\r\nMeScreen
@@ -279,12 +267,9 @@ zh-TW:
         001 001 001 010 010 010 010 010 010`"
       CSD U6 colorLeds light pattern: "#\n燈光模型\r\n\r\n用眨眼、切換、顏色來創作你自己的燈光模型。"
       CSD U6 colorLeds light pattern_2018: "#\n燈光模型\r\n\r\n用眨眼、切換、顏色來創作你自己的燈光模型。"
-      CSD U6 colorLeds light pattern_2019: "#\n燈光模型\r\n\r\n用眨眼、切換、顏色來創作你自己的燈光模型。"
       CSD U6 light pattern challenge: "# 燈光模型\r\n\r\n找個伙伴，把你們的燈光模型放在一起。\r\n\r\n設置這個
         app，讓使用者可以使用他們想要看到的燈光模型。你應該將你的每一種燈光樣式放到函式裡，讓程式變得比較簡易。"
       CSD U6 light pattern challenge_2018: "# 燈光模型\r\n\r\n找個伙伴，把你們的燈光模型放在一起。\r\n\r\n設置這個
-        app，讓使用者可以使用他們想要看到的燈光模型。你應該將你的每一種燈光樣式放到函式裡，讓程式變得比較簡易。"
-      CSD U6 light pattern challenge_2019: "# 燈光模型\r\n\r\n找個伙伴，把你們的燈光模型放在一起。\r\n\r\n設置這個
         app，讓使用者可以使用他們想要看到的燈光模型。你應該將你的每一種燈光樣式放到函式裡，讓程式變得比較簡易。"
       'CSD: Slider Example': "# RGB 滑桿\r\n\r\n接下來的二個關卡，你將會學習到使用滑桿來取得使用者的輸入值，你將創建這個滑桿來控制按鈕的顏色。在後面的教學內容中你就可以拿來控制燈光！"
       CSDU2 Color Blindness: "# 色盲過濾器\r\n\r\n\r\n\r\n\n"
@@ -1007,7 +992,6 @@ zh-TW:
         1。"
       Predict Loop I: "#預測\r\n\r\n什麼輸出會作為這個迴圈的結果呢？"
       Predict Loop I_2018: "#預測\r\n\r\n什麼輸出會作為這個迴圈的結果呢？"
-      Predict Loop I_2019: "#預測\r\n\r\n什麼輸出會作為這個迴圈的結果呢？"
       Repeat Predict Contained: "＃預測\r\n\r\n這下面的迴圈將會運作幾次呢？"
       Room Escape Workshop - free play: "# 你做到了！\r\n\r\n你成功逃出房間了！現在我們來自訂它。\r\n\r\n你可以：\r\n\r\n*\n添加更多的房間\r\n*
         在房間裡添加更多能和使用者互動的物品。\r\n*\n為房間加上更多的裝飾"
@@ -1039,7 +1023,6 @@ zh-TW:
 '
       U2L14 Free Response Getting Started: "破解程式和解密訊息有什麼不同？\r\n"
       U2L14 Free Response Getting Started_2018: "破解程式和解密訊息有什麼不同？\r\n"
-      U2L14 Free Response Getting Started_2019: "破解程式和解密訊息有什麼不同？\r\n"
       Unit 2 RGB Mapping: "# RGB 色彩\r\n\r\n所有的色彩，不論他們有沒有名字，都可以用不同級別的紅、綠、藍三色光描述出來，這就是所謂的
         RGB 值（Red、Green、Blue）。你可以使用左側的小工具試試不同的 RGB 值，並看看這些色彩的變化。\r\n\r\n* **點擊「運行」可以開始左側的小工具，**\n使用滑杆來調整紅色、綠色、藍色色光的級數，\r\n*\n下方的每個色彩有他們自己
         RGB 值，在下面方塊中輸入你得到的數值。\r\n\r\nA) red: 216, green: 191, blue: 216 - rgb(216,191,216)\r\n\r\nB)\nred:

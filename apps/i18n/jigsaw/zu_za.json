@@ -1,4 +1,10 @@
 {
   "continue": "Qhubeka",
-  "no": "Cha"
+  "nextLevel": "",
+  "no": "Cha",
+  "numBlocksNeeded": "",
+  "reinfFeedbackMsg": "",
+  "share": "",
+  "shareGame": "",
+  "yes": ""
 }
