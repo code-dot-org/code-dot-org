@@ -31,7 +31,6 @@ Scenario: Basic teacher application submission
   And I press the first "input[name='subjectsLicensedToTeach']" element
   And I press the first "input[name='taughtInPast']" element
   And I press the first "input[name='previousYearlongCdoPd']" element
-  And I press the first "input[name='csOfferedAtSchool']" element
 
   And I press keys "nonexistent" for element "#school input"
 

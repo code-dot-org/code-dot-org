@@ -249,7 +249,6 @@ module Pd::Application
         subjects_licensed_to_teach
         taught_in_past
         previous_yearlong_cdo_pd
-        cs_offered_at_school
 
         pay_fee
         willing_to_travel
