@@ -53,9 +53,12 @@
     = render partial: 'levels/editors/tts', locals: {f: f}
 
 :javascript
-  var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', function (editor, change) {
-    localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
-  }, true);
+  var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
+    callback: function (editor, change) {
+      localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
+    },
+    attachments: true
+  });
 
   var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || html_escape(params[:type])}');
   if (locallyStoredMarkdown) {

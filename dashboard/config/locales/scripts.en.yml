@@ -11531,3 +11531,11 @@ en:
               name: Final Project
               description_student: ''
               description_teacher: ''
+        csp1-pilot:
+          stages:
+            new stage:
+              name: new stage
+          title: CSP Unit 1 Pilot
+          description_audience: ''
+          description_short: ''
+          description: ''
