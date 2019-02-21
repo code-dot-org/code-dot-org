@@ -1012,6 +1012,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 1, user.authentication_options.count
     microsoft_auth_option = user.authentication_options.first
     refute_nil microsoft_auth_option
+    assert_equal 'microsoft_v2_auth', microsoft_auth_option.credential_type
     assert_equal uid, microsoft_auth_option.authentication_id
     assert_equal signed_in_user_id, user.id
   end
