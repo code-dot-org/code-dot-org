@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 import Select from 'react-select';
-import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 
 export class ScholarshipDropdown extends React.Component {
   static propTypes = {
