@@ -308,11 +308,10 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update App Lab starter code and starter HTML" do
     post :update_properties, params: {
       level_id: create(:applab).id,
-      changes: {
-        start_html: '<h1>foo</h1>',
-        start_blocks: 'console.log("hello world");',
-      }.to_json
-    }
+    }, body: {
+      start_html: '<h1>foo</h1>',
+      start_blocks: 'console.log("hello world");',
+    }.to_json
 
     assert_response :success
     level = assigns(:level)

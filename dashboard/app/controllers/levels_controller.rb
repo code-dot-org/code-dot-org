@@ -107,7 +107,7 @@ class LevelsController < ApplicationController
     @level = Level.find(params[:level_id])
     authorize! :update, @level
 
-    changes = JSON.parse(params[:changes])
+    changes = JSON.parse(request.body.read)
     changes.each do |key, value|
       @level.send("#{key}=".to_sym, value)
     end
