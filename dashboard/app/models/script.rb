@@ -1072,7 +1072,7 @@ class Script < ActiveRecord::Base
   # any other name), and the corresponding script row in the db will be renamed.
   def self.fetch_script(options)
     options.symbolize_keys!
-    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.find_by!(key: options[:wrapup_video])
+    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.current_locale.find_by!(key: options[:wrapup_video])
     id = options.delete(:id)
     name = options[:name]
     new_name = options[:new_name]

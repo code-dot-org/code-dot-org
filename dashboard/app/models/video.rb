@@ -20,6 +20,8 @@ class Video < ActiveRecord::Base
   include Seeded
 
   default_scope {order(:key)}
+  scope :english_locale, -> {where(locale: 'en-US')}
+  scope :current_locale, -> {where(locale: I18n.locale.to_s).or(Video.english_locale).unscope(:order).order("(case when locale = 'en-US' then 0 else 1 end) desc").limit(1)}
 
   validates_uniqueness_of :key, scope: [:locale]
   validates_presence_of :download
