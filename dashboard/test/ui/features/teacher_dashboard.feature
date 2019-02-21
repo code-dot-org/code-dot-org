@@ -89,7 +89,9 @@ Feature: Using the teacher dashboard
     # Progress tab
     When I sign in as "Teacher_Sally"
     And I am on "http://studio.code.org/home"
-    And I click selector "a:contains('Untitled Section')" once I see it
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     And I press the first ".uitest-summary-cell" element
     And I see ".uitest-detail-cell"
