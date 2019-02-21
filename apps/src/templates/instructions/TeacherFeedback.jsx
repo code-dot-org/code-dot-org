@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
-import {RubricField} from './RubricField';
+import RubricField from './RubricField';
 
 const styles = {
   textInput: {
