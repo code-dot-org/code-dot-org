@@ -23,21 +23,4 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
       Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
     end
   end
-
-  test 'application year must be in SCHOLARSHIP_YEARS' do
-    scholarship_info = Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
-    assert(scholarship_info.errors.empty?)
-
-    scholarship_info.update(application_year: 'not a valid year')
-    assert(scholarship_info.errors.full_messages.include?("Application year is not included in the list"))
-  end
-
-  test 'scholarship status must be in SCHOLARSHIP_STATUSES' do
-    scholarship_info = Pd::ScholarshipInfo.create(user: @user, scholarship_status: 'not a valid status')
-    assert(scholarship_info.errors.full_messages.include?("Scholarship status is not included in the list"))
-
-    scholarship_info.scholarship_status = SCHOLARSHIP_STATUSES.first
-    scholarship_info.save
-    assert(scholarship_info.errors.empty?)
-  end
 end
