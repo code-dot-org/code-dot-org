@@ -43,6 +43,7 @@ class Census::StateCsOffering < ApplicationRecord
     MT
     NC
     ND
+    NJ
     NV
     NY
     OH
@@ -129,6 +130,8 @@ class Census::StateCsOffering < ApplicationRecord
       School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'ND'
       row_hash['state_school_id']
+    when 'NJ'
+      School.find_by(id: row_hash['NCES_SCHOOL_ID'])&.state_school_id
     when 'NV'
       row_hash['State School ID']
     when 'NY'
@@ -435,6 +438,17 @@ class Census::StateCsOffering < ApplicationRecord
     27127
     27125
     23582
+  ).freeze
+
+  NJ_COURSE_CODES = %w(
+    10152
+    10155
+    10157
+    10153
+    10154
+    10156
+    10019
+    10159
   ).freeze
 
   NV_COURSE_CODES = [UNSPECIFIED_COURSE].freeze
@@ -1200,6 +1214,8 @@ class Census::StateCsOffering < ApplicationRecord
       NC_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'ND'
       ND_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'NJ'
+      NJ_COURSE_CODES.select {|course| course == row_hash['COURSEID']}
     when 'NV'
       NV_COURSE_CODES.select {|course| course == row_hash['Teaches CS - From Cindi/NV']}
     when 'NY'
