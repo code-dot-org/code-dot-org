@@ -108,15 +108,6 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
           }
         )}
         {this.checkBoxesWithAdditionalTextFieldsFor(
-          'subjectsLicensedToTeach',
-          {
-            [TextFields.otherPleaseList]: 'other'
-          },
-          {
-            columnCount: 3
-          }
-        )}
-        {this.checkBoxesWithAdditionalTextFieldsFor(
           'taughtInPast',
           {
             [TextFields.otherPleaseList]: 'other'

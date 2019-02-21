@@ -922,7 +922,6 @@ module Api::V1::Pd
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "If yes, please describe the course it will be replacing and why:",
         "What subjects are you teaching this year (2018-19)?",
-        "Which subject area(s) are you currently licensed to teach?",
         "Have you taught computer science courses or activities in the past?",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
