@@ -24,7 +24,6 @@ Scenario: Basic teacher application submission
   # Section 3
   Then I wait until element "h3" contains text "Section 2: Teaching Background"
   And I press "input[name='subjectsTeaching']:first" using jQuery
-  And I press the first "input[name='subjectsLicensedToTeach']" element
   And I press the first "input[name='taughtInPast']" element
   And I press the first "input[name='previousYearlongCdoPd']" element
 
