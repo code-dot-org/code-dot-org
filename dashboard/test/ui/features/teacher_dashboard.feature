@@ -3,7 +3,7 @@
 @pegasus_db_access
 Feature: Using the teacher dashboard
 
-  Scenario: Loading student progress
+  Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
@@ -14,32 +14,42 @@ Feature: Using the teacher dashboard
     # Progress tab
     When I sign in as "Teacher_Sally"
     And I am on "http://studio.code.org/home"
-    And I click selector "a:contains('Untitled Section')" once I see it
+    And I save the section id from row 0 of the section table
+    And I wait until element "a:contains('Untitled Section')" is visible
+    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
 
     # Stats tab
-    And I click selector "#learn-tabs a:contains('Stats')" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
     And I wait until element "#uitest-stats-table" is visible
+    And element "#uitest-stats-table tr:eq(1)" contains text "Sally"
 
     # Manage students tab
-    When I click selector "#learn-tabs a:contains('Manage Students')" once I see it
-    And I wait until element "#uitest-manage-tab" is visible
+    When I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    And I wait until element "#uitest-manage-students-table" is visible
+    And element "#uitest-manage-students-table tr:eq(1)" contains text "Sally"
     And I wait until element "#uitest-privacy-link" is visible
     And element "#uitest-privacy-link" contains text "privacy document"
 
     # Text responses tab
-    When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
+    When I click selector "#uitest-teacher-dashboard-nav a:contains(Text Responses)" once I see it
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
-    # Assessments and surveys tab
-    When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
+    # Assessments/Surveys tab: anonymous survey
+    When I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
     And I wait until element "div:contains(this survey is anonymous)" is not visible
     And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"
     And I wait until element "div:contains(this survey is anonymous)" is visible
     And I wait until element "div:contains(no submissions for this assessment)" is not visible
+
+    # Assessments/Surveys tab: assessment
+    And I select the "Lesson 33: Single page assessment" option in dropdown "assessment-selector"
+    And I wait until element "#uitest-submission-status-table" is visible
+    And element "#uitest-submission-status-table tr:eq(1)" contains text "Sally"
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
@@ -60,7 +70,7 @@ Feature: Using the teacher dashboard
 
     When I sign in as "Teacher_Sally"
     And I click selector "a:contains('Untitled Section')" once I see it
-    And I click selector "#learn-tabs a:contains('Projects')" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I click selector "a:contains('thumb wars')" once I see it
     And I go to the newly opened tab
@@ -180,7 +190,7 @@ Feature: Using the teacher dashboard
     When I sign in as "Teacher_Sally"
     Then I am on "http://studio.code.org/home"
     And I click selector "a:contains('Untitled Section')" once I see it
-    And I click selector "#learn-tabs a:contains('Projects')" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
     And I wait until the image within element "tr:eq(2)" has loaded
