@@ -999,17 +999,6 @@ module Pd::Application
       assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
     end
 
-    test 'scholarship status associates application with existing ScholarshipInfo' do
-      application = create :pd_teacher1920_application
-      scholarship_info = Pd::ScholarshipInfo.create(user: application.user, scholarship_status: Pd::ScholarshipInfoConstants::NO)
-      refute scholarship_info.application
-
-      application.scholarship_status
-
-      scholarship_info.reload
-      assert_equal application, scholarship_info.application
-    end
-
     test 'associated models cache prefetch' do
       workshop = create :pd_workshop
       application = create :pd_teacher1920_application, pd_workshop_id: workshop.id
