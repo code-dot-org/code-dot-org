@@ -245,7 +245,6 @@ module Pd::Application
         replace_existing
 
         subjects_teaching
-        subjects_licensed_to_teach
         taught_in_past
         previous_yearlong_cdo_pd
 

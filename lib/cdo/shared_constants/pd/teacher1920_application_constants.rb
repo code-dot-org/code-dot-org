@@ -88,7 +88,6 @@ module Pd
       section_3_teaching_background:
         {subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}.merge(
           BASE_PAGE_LABELS[:section_2_your_school].slice(
-            :subjects_licensed_to_teach,
             :taught_in_past,
             :cs_opportunities_at_school,
             :previous_yearlong_cdo_pd
@@ -165,7 +164,6 @@ module Pd
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         subjects_teaching: "What subjects are you teaching this year (2018-19)?",
-        subjects_licensed_to_teach: "Which subject area(s) are you currently licensed to teach?",
         taught_in_past: "Have you taught computer science courses or activities in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
@@ -390,7 +388,6 @@ module Pd
         :replace_existing,
         :replace_which_course,
         :subjects_teaching,
-        :subjects_licensed_to_teach,
         :taught_in_past,
         :previous_yearlong_cdo_pd,
         :committed,
