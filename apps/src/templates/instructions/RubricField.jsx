@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import Radium from 'radium';
 
 const styles = {
+  detailsArea: {
+    width: '100%'
+  },
   rubricHeader: {
     fontSize: 13,
     marginLeft: 10,
@@ -13,7 +17,11 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    padding: '4px 10px'
+    padding: '4px 10px',
+    ':hover': {
+      border: 'solid 1px' + color.light_cyan,
+      borderRadius: 10
+    }
   },
   performanceLevelHeaderSelected: {
     display: 'flex',
@@ -21,7 +29,11 @@ const styles = {
     flexDirection: 'row',
     backgroundColor: color.lightest_cyan,
     borderRadius: 10,
-    padding: '4px 10px'
+    padding: '4px 10px',
+    ':hover': {
+      border: 'solid 1px' + color.light_cyan,
+      borderRadius: 10
+    }
   }
 };
 
@@ -32,7 +44,7 @@ const rubricLevelHeaders = {
   noEvidence: 'No Evidence'
 };
 
-export class RubricField extends Component {
+class RubricField extends Component {
   static propTypes = {
     showFeedbackInputAreas: PropTypes.bool,
     rubricLevel: PropTypes.string,
@@ -66,7 +78,7 @@ export class RubricField extends Component {
             disabled={this.props.disabledMode}
           />
         )}
-        <details>
+        <details style={styles.detailsArea}>
           <summary style={styles.rubricHeader}>
             {rubricLevelHeaders[this.props.rubricLevel]}
           </summary>
@@ -76,3 +88,5 @@ export class RubricField extends Component {
     );
   }
 }
+
+export default Radium(RubricField);
