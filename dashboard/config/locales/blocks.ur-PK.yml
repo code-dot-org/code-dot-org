@@ -165,6 +165,11 @@ ur:
         text: بائیں طرف مڑیں
       RyanLab_turnRight:
         text: دائیں طرف مڑیں
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
       aalab_clickedOn:
         options:
           CONDITION:
@@ -181,11 +186,15 @@ ur:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': کب
-            '"while"': جب تک
+          VAL:
+            '"true"': 'True'
+            '"false"': غلط
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ہمیشہ کے لئے
       binary_whenKey:
         options:
           KEY:

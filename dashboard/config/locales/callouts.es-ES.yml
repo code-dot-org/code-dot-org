@@ -55,16 +55,25 @@ es:
         grid: Clica aquí para mostrar la cuadrícula.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Clica aquí para mostrar la cuadrícula.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Clica aquí para mostrar la cuadrícula.
       CSD U3 Variables Predict Where XY_callout:
         grid: Clica aquí para mostrar la cuadrícula.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Clica aquí para mostrar la cuadrícula.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Clica aquí para mostrar la cuadrícula.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Cambie el número aquí
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Cambie el número aquí
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Aquí está el código
+        CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
       CSD U3 ellipse_callout:
@@ -73,10 +82,16 @@ es:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Aquí está el código
+        CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Aquí está el código
+        CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
       CSD U3 my-rect_callout:
@@ -87,35 +102,52 @@ es:
         CSD_U3_rect_c2: Aquí está el botón "Ejecutar".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Aquí está el código
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Aquí está el código
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Aquí está el código
+        CSD_U3_rect_c2: Arrastre este bloque dentro del área de código.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Agrega tu código aquí
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Agrega tu código aquí
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Agrega tu código aquí
       CSD U6 light show predict_callout:
         CSDUDL03P09: "¿Qué le hace a esta línea?"
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: "¿Qué le hace a esta línea?"
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: "¿Qué le hace a esta línea?"
       CSD U6 light show_callout:
         CSDUDL03P09: "¿Qué le hace a esta línea?"
       CSD U6 light show_2018_callout:
+        CSDUDL03P09: "¿Qué le hace a esta línea?"
+      CSD U6 light show_2019_callout:
         CSDUDL03P09: "¿Qué le hace a esta línea?"
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define inicioJuego aquí
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Define inicioJuego aquí
+      CSD U6 tugowar variables 1_2019_callout:
+        CSD_U6_startGame: Define inicioJuego aquí
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Define moverJugador () aquí
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Define moverJugador () aquí
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Define moverJugador () aquí
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Verifica si el jugador ha ganado
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Verifica si el jugador ha ganado
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Verifica si el jugador ha ganado
       Counting_callout:
         New Play Lab Project_callout1: "¡Haga clic en las categorías para ver los
@@ -501,6 +533,8 @@ es:
       U3L08 how to add comments_callout:
         comment_highlight: Arrastra un bloque de comentarios de aquí a tu código
       U3L08 how to add comments_2018_callout:
+        comment_highlight: Arrastra un bloque de comentarios de aquí a tu código
+      U3L08 how to add comments_2019_callout:
         comment_highlight: Arrastra un bloque de comentarios de aquí a tu código
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir

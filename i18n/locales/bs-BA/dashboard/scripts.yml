@@ -1745,6 +1745,8 @@ bs:
               name: Crowdsourcing
             Relay Programming:
               name: Prijenos programiranja
+            Graph Paper Programming:
+              name: Papirno Programiranje Grafikona
         courseb-2018:
           assignment_family_title: Kurs B
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2029,3 +2031,61 @@ bs:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Liste
+        csd3-2019:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        csd5-2019:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+        csd6-2019:
+          stages:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
+        csp1-2019:
+          stages:
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
+            Number Systems:
+              name: Brojčani Sistemi
+            Binary Numbers:
+              name: Binarni Brojevi
+            Sending Numbers:
+              name: Slanje brojeva
+            The Internet:
+              name: Internet
+        csp3-2019:
+          stages:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Dok petlje
+        csppostap-2019:
+          stages:
+            Cleaning Data:
+              name: Čišćenje podataka
+            Creating Javascript Objects:
+              name: Kreiranje JavaScript objekata
+            Deleting Records:
+              name: Brisanje zapisa
+            Sample Apps:
+              name: Primjeri aplikacija
+            Final Project:
+              name: Završni projekat

@@ -42,16 +42,25 @@ fil:
         grid: Mag-click dito para maipakita ang grid.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Mag-click dito para maipakita ang grid.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Mag-click dito para maipakita ang grid.
       CSD U3 Variables Predict Where XY_callout:
         grid: Mag-click dito para maipakita ang grid.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Mag-click dito para maipakita ang grid.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Mag-click dito para maipakita ang grid.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Baguhin ang numero dito
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Baguhin ang numero dito
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Narito ang code
+        CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U3 ellipse_callout:
@@ -60,10 +69,16 @@ fil:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Narito ang code
+        CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Narito ang code
+        CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U3 my-rect_callout:
@@ -74,35 +89,52 @@ fil:
         CSD_U3_rect_c2: Narito ang "Run" na button.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Narito ang code
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Narito ang code
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Narito ang code
+        CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Idagdag ang iyong code dito
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Idagdag ang iyong code dito
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Idagdag ang iyong code dito
       CSD U6 light show predict_callout:
         CSDUDL03P09: Ano ang ginagawa ng linyang ito?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Ano ang ginagawa ng linyang ito?
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: Ano ang ginagawa ng linyang ito?
       CSD U6 light show_callout:
         CSDUDL03P09: Ano ang ginagawa ng linyang ito?
       CSD U6 light show_2018_callout:
+        CSDUDL03P09: Ano ang ginagawa ng linyang ito?
+      CSD U6 light show_2019_callout:
         CSDUDL03P09: Ano ang ginagawa ng linyang ito?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Bigyang kahulagan ang startGame dito
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Bigyang kahulagan ang startGame dito
+      CSD U6 tugowar variables 1_2019_callout:
+        CSD_U6_startGame: Bigyang kahulagan ang startGame dito
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Bigyang kahulugan ang movePlayer() dito
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Bigyang kahulugan ang movePlayer() dito
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Bigyang kahulugan ang movePlayer() dito
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Suriin kung nanalo ang manlalaro
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Suriin kung nanalo ang manlalaro
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Suriin kung nanalo ang manlalaro
       Counting_callout:
         New Play Lab Project_callout1: I-click ang mga kategorya para makita ang mga bloke sa loob ng iyong toolbox! Kaladkarin ang mga bloke sa iyong workspace, at idagdag ang mga ito sa iyong programa

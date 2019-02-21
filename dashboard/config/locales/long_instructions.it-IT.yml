@@ -324,9 +324,8 @@ it:
         avanti`.
       2-3 Maze 15: Usa due blocchi `ripeti ... volte` (detti anche <i>cicli</i>) per
         arrivare al maialino usando meno blocchi possibile.
-      2-3 Maze Loops 18: |-
-        Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
-        Prova ad usare un blocco `ripeti ... volte` (<i>ciclo</i>) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
+      2-3 Maze Loops 18: Fammi arrivare al girasole usando il minor numero possibile
+        di blocchi!
       2-3 Maze Loops 19: Usa i cicli per farmi arrivare al girasole col minor numero
         possibile di blocchi!
       4-5 Artist 1: Aiutami a disegnare il quadrato. (Ogni linea è lunga 300 pixel)

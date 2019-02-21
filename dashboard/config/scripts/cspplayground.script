@@ -10,6 +10,7 @@ level 'U4 L02 Thermostat App v1 Code', progression: 'Thermostat App v1'
 level 'U4 L02 Thermostat App v2', progression: 'Thermostat App v2'
 level 'U4 L02 Thermostat App v3', progression: 'Thermostat App v3'
 level 'U4 L02 Thermostat App v3 pt2', progression: 'Thermostat App v3'
+level 'U4 L02 Thermostat App v3 pt3', progression: 'Thermostat App v3'
 level 'U4 L02 CYU Exit Ticket', progression: 'Check Your Understanding'
 
 stage 'Variables Practice'
@@ -19,6 +20,7 @@ level 'U4 L03 Variables operator practice 1', progression: 'Variables and Operat
 level 'U4 L03 Variables operator practice 3', progression: 'Variables and Operators'
 level 'U4 L03 Variables operator practice 2', progression: 'Variables and Operators'
 level 'U4 L03 Variables operator practice 5', progression: 'Variables and Operators'
+level 'U4 L03 Variables operator practice 6', progression: 'Variables and Operators'
 level 'U4 L03 Variable Scope: Local vs. Global', progression: 'Debugging Scope Issues'
 level 'U4 L03 Scope Issue', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
@@ -29,3 +31,22 @@ level 'U4 L04 Variables Make Project 1', progression: 'Make the Photo Liker App'
 level 'U4 L04 Variables Make Project 2', progression: 'Make the Photo Liker App'
 level 'U4 L04 Variables Make Project 3', progression: 'Make the Photo Liker App'
 level 'U4 L04 Variables Make Project 4', progression: 'Make the Photo Liker App'
+
+stage 'Student Survey', lockable: true
+assessment 'Pilot Student Survey', progression: 'Student Survey'
+
+stage 'Teacher Surveys', lockable: true
+assessment 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys'
+
+stage 'Conditionals Explore'
+level 'U4 L05 Conditionals Explore Sample App 1', progression: 'Sample Apps'
+
+stage 'Conditionals Investigate'
+level 'U4 L06 Thermostat App v4', progression: 'Thermostat App v4'
+level 'U4 L06 Thermostat App v4 Code', progression: 'Thermostat App v4'
+
+stage 'Conditionals Practice'
+level 'U4 L07 Conditionals Practice 1', progression: 'Conditionals...something'
+
+stage 'Conditional Make'
+level 'U4 L08 Conditionals Make 1', progression: 'Make the Decision Maker App'
