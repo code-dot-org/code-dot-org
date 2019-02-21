@@ -742,9 +742,9 @@ module Api::V1::Pd
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
-          pd_workshop_id: workshop.id,
-          scholarship_status: 'no'
+          pd_workshop_id: workshop.id
         )
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.status = 'accepted_not_notified'
