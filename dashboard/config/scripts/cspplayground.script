@@ -40,7 +40,7 @@ assessment 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys'
 
 stage 'Conditionals Explore'
 named_level 'U4 L06 Introduction to Conditionals: Boolean Expressions'
-level 'U4 L05 Truth Table matching', progression: 'Check Your Understanding'
+level 'U4 L05 CYU Exit Ticket', progression: 'Check Your Understanding'
 
 stage 'Conditionals Investigate'
 named_level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements'
@@ -54,7 +54,9 @@ level 'U4L06 Introduction to Conditionals: Compound Boolean Expressions', progre
 level 'U4 L06 Thermostat App v6 Code', progression: 'Logical Operators: AND OR'
 
 stage 'Conditionals Practice'
-level 'U4 L07 Conditionals Practice 1', progression: 'Conditionals...something'
+level 'U4 L07 Conditionals Practice 1', progression: 'Boolean expressions'
+level 'U4 L07 Conditionals Practice 2', progression: 'Boolean expressions'
+level 'U4 L07 Conditionals Practice 3', progression: 'Boolean expressions'
 
 stage 'Conditional Make'
 level 'U4 L08 Conditionals Make 1', progression: 'Make the Decision Maker App'
