@@ -69,7 +69,7 @@ class Video < ActiveRecord::Base
       row['YoutubeCode'] = youtube_code
       row['Download'] = download
     else
-      data << [key, nil, nil, youtube_code, download]
+      data << [key, nil, nil, youtube_code, download, 'en-US']
     end
 
     File.write(csv_path, data.to_csv)
