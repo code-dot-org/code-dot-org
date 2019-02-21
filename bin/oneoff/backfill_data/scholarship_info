@@ -2,8 +2,20 @@
 
 require_relative '../../../dashboard/config/environment'
 
+total_updated = 0
+errors = []
+puts "Creating scholarship info for teacher applications..."
 Pd::Application::Teacher1920Application.find_each do |application|
+  print '.'
   if application.properties["scholarship_status"]
-    application.update_scholarship_status(application.properties["scholarship_status"])
+    if application.update_scholarship_status(application.properties["scholarship_status"])
+      total_updated += 1
+    else
+      errors << "\nError: application #{application.id} with scholarship status '#{application.properties['scholarship_status']}'"
+    end
   end
 end
+
+errors.each {|e| puts e}
+
+puts "\nSuccessfully updated scholarship info for #{total_updated} applications"
