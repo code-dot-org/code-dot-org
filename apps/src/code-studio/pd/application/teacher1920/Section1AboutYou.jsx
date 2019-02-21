@@ -7,7 +7,16 @@ import {
   SectionHeaders
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
-import {FormGroup, Modal, Button} from 'react-bootstrap';
+import {
+  FormGroup,
+  Modal,
+  Button,
+  ControlLabel,
+  FormControl,
+  HelpBlock,
+  Row,
+  Col
+} from 'react-bootstrap';
 import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
 import _ from 'lodash';
@@ -86,6 +95,19 @@ export default class Section1AboutYou extends LabeledFormComponent {
           <Button onClick={this.exitApplication}>Exit Application</Button>
         </Modal.Footer>
       </Modal>
+    );
+  }
+
+  nameInput(id) {
+    return (
+      <NameInput
+        id={id}
+        label={this.labelFor(id)}
+        validationState={this.getValidationState(id)}
+        errorMessage={this.props.errorMessages[id]}
+        value={this.props.data[id] || ''}
+        handleChange={this.handleChange}
+      />
     );
   }
 
@@ -202,8 +224,10 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
         {this.renderInternationalModal()}
 
-        {this.inputFor('firstName')}
-        {this.inputFor('lastName')}
+        <Row>
+          <Col md={3}>{this.nameInput('firstName')}</Col>
+          <Col md={3}>{this.nameInput('lastName')}</Col>
+        </Row>
 
         {this.inputFor('accountEmail', {
           value: this.props.accountEmail,
@@ -264,3 +288,37 @@ export default class Section1AboutYou extends LabeledFormComponent {
     return formatErrors;
   }
 }
+
+const NameInput = ({
+  id,
+  validationState,
+  label,
+  value,
+  handleChange,
+  errorMessage
+}) => (
+  <FormGroup controlId={id} validationState={validationState}>
+    <ControlLabel>
+      {label}
+      {REQUIRED}
+    </ControlLabel>
+    <FormControl
+      type="text"
+      componentClass="input"
+      bsClass="form-control"
+      value={value}
+      onChange={e => handleChange({[id]: e.target.value})}
+    />
+    <HelpBlock>{errorMessage}</HelpBlock>
+  </FormGroup>
+);
+NameInput.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.node,
+  value: PropTypes.any,
+  validationState: PropTypes.any,
+  errorMessage: PropTypes.node,
+  handleChange: PropTypes.func
+};
+
+const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
