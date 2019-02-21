@@ -987,6 +987,35 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal signed_in_user_id, user.id
   end
 
+  test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:user, :with_migrated_windowslive_authentication_option, email: email)
+    auth = OmniAuth::AuthHash.new(
+      provider: 'microsoft_v2_auth',
+      uid: uid,
+      info: {},
+      extra: {
+        raw_info: {
+          userPrincipalName: email,
+          displayName: 'My Name'
+        }
+      },
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :microsoft_v2_auth
+
+    user.reload
+    assert_equal 'migrated', user.provider
+    assert_equal 1, user.authentication_options.count
+    microsoft_auth_option = user.authentication_options.first
+    refute_nil microsoft_auth_option
+    assert_equal uid, microsoft_auth_option.authentication_id
+    assert_equal signed_in_user_id, user.id
+  end
+
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
