@@ -116,13 +116,12 @@ class TeacherFeedback extends Component {
   }
 
   componentDidMount = () => {
+    const {user, serverLevelId, teacher} = this.props;
+    const {studentId} = this.state;
+
     if (this.props.viewAs === ViewType.Student) {
       $.ajax({
-        url:
-          '/api/v1/teacher_feedbacks/get_feedbacks?student_id=' +
-          this.props.user +
-          '&level_id=' +
-          this.props.serverLevelId,
+        url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
@@ -134,11 +133,7 @@ class TeacherFeedback extends Component {
       });
     } else if (!this.props.disabledMode) {
       $.ajax({
-        url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${
-          this.state.studentId
-        }&level_id=${this.props.serverLevelId}&teacher_id=${
-          this.props.teacher
-        }`,
+        url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${teacher}`,
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       })
