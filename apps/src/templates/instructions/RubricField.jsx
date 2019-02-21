@@ -25,12 +25,12 @@ const styles = {
   }
 };
 
-//const rubricLevelHeaders = {
-//'exceeds': 'Exceeds',
-// 'meets': 'Meets',
-//'approaches': 'Approaches',
-//'noEvidence': 'No Evidence'
-//}
+const rubricLevelHeaders = {
+  exceeds: 'Exceeds',
+  meets: 'Meets',
+  approaches: 'Approaches',
+  noEvidence: 'No Evidence'
+};
 
 export class RubricField extends Component {
   static propTypes = {
@@ -67,7 +67,9 @@ export class RubricField extends Component {
           />
         )}
         <details>
-          <summary style={styles.rubricHeader}>Exceeds</summary>
+          <summary style={styles.rubricHeader}>
+            {rubricLevelHeaders[this.props.rubricLevel]}
+          </summary>
           <p>{this.props.rubricValue}</p>
         </details>
       </div>
