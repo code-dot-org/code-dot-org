@@ -295,13 +295,15 @@ export const getCurrentQuestion = state => {
       ? assessmentQuestions[state.sectionAssessments.questionIndex]
       : null;
     if (question) {
+      const answers =
+        question.type === QuestionType.MULTI &&
+        (question.answers || []).map((answer, index) => {
+          return {...answer, letter: ANSWER_LETTERS[index]};
+        });
+
       return {
         question: question.question_text,
-        answers:
-          question.type === QuestionType.MULTI &&
-          question.answers.map((answer, index) => {
-            return {...answer, letter: ANSWER_LETTERS[index]};
-          })
+        ...answers
       };
     } else {
       return emptyQuestion;
