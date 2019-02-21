@@ -138,6 +138,7 @@ class ScriptsController < ApplicationController
       :has_verified_resources,
       :has_lesson_plan,
       :script_announcements,
+      :pilot_experiment,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
