@@ -88,6 +88,7 @@ module UserMultiAuthHelper
         end
     end
     self.provider = 'migrated'
+    clear_single_auth_fields
     save
   end
 
