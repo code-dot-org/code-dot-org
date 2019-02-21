@@ -327,13 +327,13 @@ function remixProject() {
   }
 }
 
-function saveStartCode() {
+function saveStartCode(getChanges) {
   $('.project_updated_at').text('Saving...');
 
   $.ajax({
     type: 'POST',
     url: '../update_properties',
-    data: JSON.stringify({start_html: 'TODO', start_blocks: 'TODO'}),
+    data: JSON.stringify(getChanges()),
     dataType: 'json',
     error: header.showProjectSaveError,
     success: () => {
@@ -367,7 +367,7 @@ header.showMinimalProjectHeader = function() {
 };
 
 // Levelbuilder-only UI for saving changes to a level.
-header.showLevelBuilderSaveButton = function() {
+header.showLevelBuilderSaveButton = function(getChanges) {
   var projectName = $('<div class="project_name_wrapper header_text">')
     .append(
       $('<div class="project_name header_text">').text(
@@ -381,7 +381,7 @@ header.showLevelBuilderSaveButton = function() {
   $('.project_info')
     .append(projectName)
     .append($('<div class="project_remix header_button">').text('Save'));
-  $('.project_remix').click(saveStartCode);
+  $('.project_remix').click(saveStartCode.bind(null, getChanges));
 };
 
 // Project header for script levels that are backed by a project. Shows a

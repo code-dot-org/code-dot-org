@@ -109,7 +109,7 @@ class LevelsController < ApplicationController
 
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
-      @level.send("#{key}=".to_sym, value)
+      @level.properties[key] = value
     end
 
     @level.log_changes(current_user)

@@ -377,7 +377,10 @@ Applab.init = function(config) {
   }
 
   if (config.level.editBlocks) {
-    header.showLevelBuilderSaveButton();
+    header.showLevelBuilderSaveButton(() => ({
+      start_blocks: Applab.getCode(),
+      start_html: Applab.getHtml()
+    }));
   } else if (!config.channel) {
     throw new Error(
       'Cannot initialize App Lab without a channel id. ' +
