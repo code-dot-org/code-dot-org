@@ -92,7 +92,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   def get_show_script_level_page(script_level)
-    get :show, params: {
+    get :show, params: script_level_params(script_level)
+  end
+
+  def script_level_params(script_level)
+    {
       script_id: script_level.script,
       stage_position: script_level.stage.absolute_position,
       id: script_level.position
