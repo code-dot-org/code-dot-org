@@ -7,7 +7,7 @@ class ScriptsController < ApplicationController
   before_action :set_script_file, only: [:edit, :update]
 
   def show
-    return head :not_found if @script.pilot? && !@script.has_pilot_access?(current_user)
+    raise ActiveRecord::RecordNotFound if @script.pilot? && !@script.has_pilot_access?(current_user)
 
     if @script.redirect_to?
       redirect_path = script_path(Script.get_from_cache(@script.redirect_to))
