@@ -67,6 +67,12 @@ class Script < ActiveRecord::Base
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
+  before_validation :hide_pilot_scripts
+
+  def hide_pilot_scripts
+    self.hidden = true if pilot_experiment
+  end
+
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
@@ -140,6 +146,7 @@ class Script < ActiveRecord::Base
     version_year
     is_stable
     supported_locales
+    pilot_experiment
   )
 
   def self.twenty_hour_script
@@ -1239,6 +1246,7 @@ class Script < ActiveRecord::Base
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
+      pilot_experiment: pilot_experiment,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1364,7 +1372,8 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
-      supported_locales: script_data[:supported_locales]
+      supported_locales: script_data[:supported_locales],
+      pilot_experiment: script_data[:pilot_experiment]
     }.compact
   end
 
