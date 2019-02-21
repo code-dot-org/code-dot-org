@@ -447,6 +447,24 @@ FactoryGirl.define do
       end
     end
 
+    trait :with_migrated_windowslive_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::WINDOWS_LIVE,
+          authentication_id: user.hashed_email
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
+        )
+      end
+    end
+
     trait :multi_auth_migrated do
       after(:create) do |user|
         user.update_attributes(
