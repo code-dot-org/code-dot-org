@@ -95,7 +95,7 @@ module LevelsHelper
       )
     end
 
-    channel_token.channel if channel_token
+    channel_token&.channel
   end
 
   def select_and_track_autoplay_video
