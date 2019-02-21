@@ -395,6 +395,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
             oauth_refresh_token: auth_hash.credentials&.refresh_token
           }.to_json
         )
+
+        # If the user is now logging in through microsoft_v2_auth and has an existing
+        # windowslive AuthenticationOption, we want to delete windowslive since that is
+        # deprecated in favor of microsoft_v2_auth.
+        windowslive_auth_option = lookup_user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::WINDOWS_LIVE}
+        if windowslive_auth_option.present? && provider == AuthenticationOption::MICROSOFT
+          windowslive_auth_option.destroy!
+        end
       else
         lookup_user.update!(
           email: lookup_email,
