@@ -14,8 +14,8 @@ Feature: Using the teacher dashboard
     # Progress tab
     When I sign in as "Teacher_Sally"
     And I am on "http://studio.code.org/home"
-    And I save the section id from row 0 of the section table
     And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
 
@@ -69,9 +69,11 @@ Feature: Using the teacher dashboard
     And I sign out
 
     When I sign in as "Teacher_Sally"
-    And I click selector "a:contains('Untitled Section')" once I see it
-    And I click selector "#uitest-teacher-dashboard-nav a:contains('Projects')" once I see it
-    And I wait until element "#projects-list" is visible
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I wait until element "#uitest-projects-table" is visible
     And I click selector "a:contains('thumb wars')" once I see it
     And I go to the newly opened tab
     And I wait until element ".project_name.header_text:contains('thumb wars')" is visible
