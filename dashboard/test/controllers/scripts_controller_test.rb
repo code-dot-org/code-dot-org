@@ -7,6 +7,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @not_admin = create(:user)
     @levelbuilder = create(:levelbuilder)
+    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -293,21 +294,23 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal true, Script.find_by_name(script.name).hidden
   end
 
-  test 'cannot view pilot script without pilot access' do
-    create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
-
+  test 'signed out user cannot view pilot script' do
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'pilot-script'}
+      get :show, params: {id: @pilot_script.name}
     end
+  end
 
+  test 'teacher without pilot access cannot view pilot script' do
     sign_in @not_admin
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'pilot-script'}
+      get :show, params: {id: @pilot_script.name}
     end
     sign_out @not_admin
+  end
 
+  test 'levelbuilder can view pilot script' do
     sign_in @levelbuilder
-    get :show, params: {id: 'pilot-script'}
+    get :show, params: {id: @pilot_script.name}
     assert_response :success
     sign_out @levelbuilder
   end
