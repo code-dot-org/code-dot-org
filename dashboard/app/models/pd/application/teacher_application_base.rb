@@ -69,7 +69,6 @@ module Pd::Application
       scholarship_info.update(scholarship_status: scholarship_status)
     end
 
-    # also adds the pd_application_id to the ScholarshipInfo object
     def scholarship_status
       Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)&.scholarship_status
     end
