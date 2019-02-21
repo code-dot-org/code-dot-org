@@ -152,7 +152,7 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed? && !level_view_options(@level.id)[:edit_blocks]
+    if @level.channel_backed? && params[:action] != 'edit_blocks'
       view_options(
         channel: get_channel_for(@level, @user),
         server_project_level_id: @level.project_template_level.try(:id),
