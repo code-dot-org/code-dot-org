@@ -229,6 +229,9 @@ class TeacherFeedback extends Component {
     const dontShowStudentRubric =
       !this.state.performance && this.props.viewAs === ViewType.Student;
 
+    const dontShowStudentComment =
+      !this.state.comment && this.props.viewAs === ViewType.Student;
+
     return (
       <div>
         {this.state.errorState === ErrorType.Load && (
@@ -282,7 +285,7 @@ class TeacherFeedback extends Component {
             </div>
           </div>
         )}
-        {showFeedbackInputAreas && (
+        {showFeedbackInputAreas && !dontShowStudentComment && (
           <div style={styles.commentArea}>
             <div>
               <div style={styles.studentTime}>
