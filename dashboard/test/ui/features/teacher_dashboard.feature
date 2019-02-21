@@ -193,9 +193,11 @@ Feature: Using the teacher dashboard
 
     When I sign in as "Teacher_Sally"
     Then I am on "http://studio.code.org/home"
-    And I click selector "a:contains('Untitled Section')" once I see it
-    And I click selector "#uitest-teacher-dashboard-nav a:contains('Projects')" once I see it
-    And I wait until element "#projects-list" is visible
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I wait until element "#uitest-projects-table" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
     And I wait until the image within element "tr:eq(2)" has loaded
     And I wait until the image within element "tr:eq(3)" has loaded
