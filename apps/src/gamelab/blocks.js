@@ -1,3 +1,5 @@
+/* global dashboard */
+
 import {SVG_NS} from '../constants';
 import {getStore} from '../redux';
 import {getLocation} from './locationPickerModule';
@@ -116,6 +118,24 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+    }
+  },
+  soundPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      var onSelect = function(soundValue) {
+        block.setTitleValue(soundValue, inputConfig.name);
+      };
+      currentInputRow.appendTitle(inputConfig.label).appendTitle(
+        new Blockly.FieldDropdown([['Choose', 'Choose']], () => {
+          dashboard.assets.showAssetManager(onSelect, 'audio', null, {
+            libraryOnly: true
+          });
+        }),
+        inputConfig.name
+      );
+    },
+    generateCode(block, arg) {
+      return `'${block.getTitleValue(arg.name)}'`;
     }
   },
   costumePicker: {

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
+import color from '../../util/color';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -188,4 +189,30 @@ export function getScreens() {
 
 export function getDefaultScreenId() {
   return getId(getScreens()[0]);
+}
+
+/**
+ * Sets the default border styles on a new element.
+ * @param {DOMElement} element The element to modify.
+ * @param {Object.<string, boolean>} options Optional map of options
+ *     indicating how the styles should be applied.
+ * @param {string} options.textInput treat the element as a text
+ *     input or text area, which has a gray default border. Default: false
+ * @param {string} options.forceDefaults: always set default
+ *     styles, even if current styles already exist. Default: false
+ */
+export function setDefaultBorderStyles(element, options = {}) {
+  const {textInput, forceDefaults} = options;
+  element.style.borderStyle = 'solid';
+  if (forceDefaults || element.style.borderWidth === '') {
+    element.style.borderWidth = textInput ? '1px' : '0px';
+  }
+  if (forceDefaults || element.style.borderColor === '') {
+    element.style.borderColor = textInput
+      ? color.text_input_default_border_color
+      : color.black;
+  }
+  if (forceDefaults || element.style.borderRadius === '') {
+    element.style.borderRadius = '0px';
+  }
 }
