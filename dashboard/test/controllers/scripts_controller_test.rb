@@ -294,23 +294,16 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal true, Script.find_by_name(script.name).hidden
   end
 
-  test 'signed out user cannot view pilot script' do
-    get :show, params: {id: @pilot_script.name}
-    assert_response :redirect
-    assert_redirected_to '/users/sign_in'
-  end
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+    params: -> {{id: @pilot_script.name}},
+    name: 'signed out user cannot view pilot script'
 
-  test 'teacher without pilot access cannot view pilot script' do
-    sign_in @not_admin
-    get :show, params: {id: @pilot_script.name}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+    params: -> {{id: @pilot_script.name}},
+    name: 'teacher without pilot access cannot view pilot script'
 
-  test 'levelbuilder can view pilot script' do
-    sign_in @levelbuilder
-    get :show, params: {id: @pilot_script.name}
-    assert_response :success
-  end
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+    params: -> {{id: @pilot_script.name}}, name: 'levelbuilder can view pilot script'
 
   test 'can create with has_lesson_plan param' do
     sign_in @levelbuilder
