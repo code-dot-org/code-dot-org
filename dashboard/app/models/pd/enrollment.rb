@@ -253,6 +253,12 @@ class Pd::Enrollment < ActiveRecord::Base
     school_info.try :effective_school_district_name
   end
 
+  def scholarship_status
+    if workshop.local_summer?
+      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.summer_workshop_school_year)&.scholarship_status
+    end
+  end
+
   # Removes the name and email information stored within this Pd::Enrollment.
   def clear_data
     write_attribute :name, nil

@@ -133,7 +133,10 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           )}
           {this.props.workshopSubject === LOCAL_SUMMER && (
             <td>
-              <ScholarshipDropdown value={'no'} disabled={false} />
+              <ScholarshipDropdown
+                scholarshipStatus={enrollment.scholarship_status}
+                disabled={false}
+              />
             </td>
           )}
         </tr>
