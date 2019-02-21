@@ -210,7 +210,8 @@ module Pd::Application
             'Yes, my school or I will be able to pay the full program fee.',
             TEXT_FIELDS[:no_pay_fee_1920],
             'Not applicable: there is no program fee for teachers in my region.',
-            'Not applicable: there is no Regional Partner in my region.'
+            'Not applicable: there is no Regional Partner in my region.',
+            "I don't know."
           ],
           willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
           interested_in_online_program: [YES, NO]
@@ -226,9 +227,6 @@ module Pd::Application
         first_name
         last_name
         phone
-        address
-        city
-        state
         zip_code
         principal_first_name
         principal_last_name
@@ -246,13 +244,10 @@ module Pd::Application
         plan_to_teach
         replace_existing
 
-        does_school_require_cs_license
         subjects_teaching
-        have_cs_license
         subjects_licensed_to_teach
         taught_in_past
         previous_yearlong_cdo_pd
-        cs_offered_at_school
 
         pay_fee
         willing_to_travel
@@ -270,10 +265,6 @@ module Pd::Application
       [].tap do |required|
         if hash[:completing_on_behalf_of_someone_else] == YES
           required.concat [:completing_on_behalf_of_name]
-        end
-
-        if hash[:does_school_require_cs_license] == YES
-          required.concat [:what_license_required]
         end
 
         if hash[:able_to_attend_multiple]
