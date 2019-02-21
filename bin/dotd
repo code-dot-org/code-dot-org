@@ -41,7 +41,9 @@ def check_for_cdo_keys
       https://api.slack.com/custom-integrations/legacy-tokens
       https://app.honeybadger.io/users/edit#authentication
 
-    Get the devinternal_db_writer configuration from another developer.
+    Get the devinternal_db_writer key from the cdo-secrets section at:
+
+      https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
 
     Please add them to your locals.yml and rerun the script.
 
