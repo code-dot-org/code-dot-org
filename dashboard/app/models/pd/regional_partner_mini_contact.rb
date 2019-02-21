@@ -60,28 +60,8 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
     ]
   end
 
-  def self.options
-    super.merge(
-      {
-        role: ['Teacher', 'School Administrator', 'District Administrator'],
-        gradeLevels: ['High School (9-12)', 'Middle School (6-8)', 'Elementary School (K-5)'],
-        opt_in: ['Yes', 'No']
-      }
-    )
-  end
-
-  def add_general_errors(return_data)
-    if errors.messages[:form_data].include? 'schoolDistrictData'
-      return_data[:general_error] = 'Please fill out the fields about your school above'
-    end
-  end
-
   def email
     sanitize_form_data_hash[:email]
-  end
-
-  def opt_in?
-    sanitize_form_data_hash[:opt_in].downcase == "yes"
   end
 
   private

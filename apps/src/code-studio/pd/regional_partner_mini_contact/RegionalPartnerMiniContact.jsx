@@ -47,6 +47,8 @@ export default class RegionalPartnerMiniContact extends React.Component {
       notes: this.state.notes
     };
 
+    this.setState({submitting: true});
+
     this.submitRequest = $.ajax({
       method: 'POST',
       url: this.props.apiEndpoint,
@@ -93,7 +95,6 @@ export default class RegionalPartnerMiniContact extends React.Component {
             If you're interested in Professional Learning, just fill out this
             form and a local Regional Partner will be in touch!
           </p>
-
           <FieldGroup
             id="name"
             label="Name"
@@ -101,11 +102,9 @@ export default class RegionalPartnerMiniContact extends React.Component {
             onChange={this.handleChange}
             defaultValue={this.state.name}
           />
-
           {this.state.errors.includes('email') && (
             <div style={styles.error}>Please enter an email.</div>
           )}
-
           <FieldGroup
             id="email"
             label="Email"
@@ -114,11 +113,9 @@ export default class RegionalPartnerMiniContact extends React.Component {
             onChange={this.handleChange}
             defaultValue={this.state.email}
           />
-
           {this.state.errors.includes('zip') && (
             <div style={styles.error}>Please enter a ZIP code.</div>
           )}
-
           <FieldGroup
             id="zip"
             label="Zip"
@@ -127,7 +124,6 @@ export default class RegionalPartnerMiniContact extends React.Component {
             onChange={this.handleChange}
             defaultValue={this.state.zip}
           />
-
           <FieldGroup
             id="notes"
             label="Questions or notes for your local Regional Partner"
@@ -136,12 +132,12 @@ export default class RegionalPartnerMiniContact extends React.Component {
             onChange={this.handleChange}
             defaultValue={this.state.notes}
           />
-
           {!this.state.submitting && (
             <Button id="submit" onClick={this.submit}>
               Send
             </Button>
           )}
+          {this.state.submitting && <span className="fa fa-spin fa-spinner" />}{' '}
         </FormGroup>
       );
     }
