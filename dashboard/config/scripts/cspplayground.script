@@ -39,8 +39,8 @@ stage 'Teacher Surveys', lockable: true
 assessment 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys'
 
 stage 'Conditionals Explore'
-level 'U4 L05 Conditionals Explore Sample App 1', progression: 'Sample Apps'
 named_level 'U4 L06 Introduction to Conditionals: Boolean Expressions'
+level 'U4 L05 Truth Table matching', progression: 'Check Your Understanding'
 
 stage 'Conditionals Investigate'
 named_level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements'
