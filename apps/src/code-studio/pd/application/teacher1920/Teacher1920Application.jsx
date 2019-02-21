@@ -25,9 +25,7 @@ export default class Teacher1920Application extends FormController {
     window.addEventListener('beforeunload', event => {
       if (!this.state.submitting) {
         event.preventDefault();
-        const customWarning = `Are you sure? Your application may not be saved.`;
-        event.returnValue = customWarning;
-        return customWarning;
+        event.returnValue = 'Are you sure? Your application may not be saved.';
       }
     });
   }
