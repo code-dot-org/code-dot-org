@@ -4,6 +4,7 @@ import {Table} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
+import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = 'Deep Dive';
@@ -130,6 +131,11 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
               {enrollment.attendances} / {this.props.numSessions}
             </td>
           )}
+          {this.props.workshopSubject === LOCAL_SUMMER && (
+            <td>
+              <ScholarshipDropdown value={'no'} disabled={false} />
+            </td>
+          )}
         </tr>
       );
     });
@@ -193,6 +199,9 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             )}
             {this.props.workshopSubject === LOCAL_SUMMER && (
               <th style={styles.th}>Total Attendance</th>
+            )}
+            {this.props.workshopSubject === LOCAL_SUMMER && (
+              <th style={styles.th}>Scholarship Teacher?</th>
             )}
           </tr>
         </thead>
