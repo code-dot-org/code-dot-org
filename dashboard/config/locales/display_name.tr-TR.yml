@@ -77,61 +77,88 @@ tr:
       AppLab Intro 7 - thisOrThatSetScreen: Bu ya da Şu
       CSD Polling Events Map: Yoklama olayları
       CSD Polling Events Map_2018: Yoklama olayları
+      CSD Polling Events Map_2019: Yoklama olayları
       CSD Timed Loop Map: Zamanlanmış döngü
       CSD U2 Pair Programming Video: Eşli Programlama
       CSD U2 Pair Programming Video_2018: Eşli Programlama
+      CSD U2 Pair Programming Video_2019: Eşli Programlama
       CSD U2 images map: HTML'de Görseller
       CSD U2 images map_2018: HTML'de Görseller
+      CSD U2 images map_2019: HTML'de Görseller
       CSD U3 Animation Tab Map: Animasyon sekmesi
       CSD U3 Animation Tab Map_2018: Animasyon sekmesi
+      CSD U3 Animation Tab Map_2019: Animasyon sekmesi
       CSD U3 Draw Loop Map: Döngü çiz
       CSD U3 L11 Freeplay: Ücretsiz Oyna
       CSD U3 L11 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L11 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L12 Freeplay: Ücretsiz Oyna
       CSD U3 L12 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L12 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L13 Freeplay: Ücretsiz Oyna
       CSD U3 L13 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L13 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L15 Freeplay: Ücretsiz Oyna
       CSD U3 L15 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L15 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L16 Freeplay: Ücretsiz Oyna
       CSD U3 L16 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L16 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L17 Freeplay: Ücretsiz Oyna
       CSD U3 L17 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L17 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L18 Freeplay: Ücretsiz Oyna
       CSD U3 L18 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L18 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L19 Freeplay: Ücretsiz Oyna
       CSD U3 L19 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L19 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L3 Freeplay: Ücretsiz Oyna
       CSD U3 L3 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L3 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L4 Freeplay: Ücretsiz Oyna
       CSD U3 L4 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L4 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L5 Freeplay: Ücretsiz Oyna
       CSD U3 L5 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L5 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L6 Freeplay: Ücretsiz Oyna
       CSD U3 L6 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L6 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L7 Freeplay: Ücretsiz Oyna
       CSD U3 L7 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L7 Freeplay_2019: Ücretsiz Oyna
       CSD U3 L9 Freeplay: Ücretsiz Oyna
       CSD U3 L9 Freeplay_2018: Ücretsiz Oyna
+      CSD U3 L9 Freeplay_2019: Ücretsiz Oyna
       CSD U3 The Draw Loop Map: Döngü çiz
       CSD U3 The Draw Loop Map_2018: Döngü çiz
+      CSD U3 The Draw Loop Map_2019: Döngü çiz
       CSD U3 Variables Map: Değişkenler
       CSD U3 Variables Map_2018: Değişkenler
+      CSD U3 Variables Map_2019: Değişkenler
       CSD U3 collisions build isTouching: Çarpışmanın algılanması
       CSD U3 collisions build isTouching_2018: Çarpışmanın algılanması
+      CSD U3 collisions build isTouching_2019: Çarpışmanın algılanması
       CSD U3 functions map: Fonksiyonlar
       CSD U6 Event Types: Olay Türleri
       CSD U6 Event Types_2018: Olay Türleri
+      CSD U6 Event Types_2019: Olay Türleri
       CSD U6 arrays intro: Dizilere Giriş
       CSD U6 arrays intro_2018: Dizilere Giriş
+      CSD U6 arrays intro_2019: Dizilere Giriş
       CSD U6 arrays video: Dizilere Giriş
       CSD U6 for loop map: For Döngüleri
       CSD U6 for loop map_2018: For Döngüleri
+      CSD U6 for loop map_2019: For Döngüleri
       CSD U6 functions paramters video: Fonksiyon parametreleri
       CSD U6 functions paramters video_2018: Fonksiyon parametreleri
+      CSD U6 functions paramters video_2019: Fonksiyon parametreleri
       CSD U6 setProperty Map: Kod ile Ekranlar Tasarlama
       CSD U6 setProperty Map_2018: Kod ile Ekranlar Tasarlama
+      CSD U6 setProperty Map_2019: Kod ile Ekranlar Tasarlama
       'CSD: For Loop_2018': For Döngüleri
+      'CSD: For Loop_2019': For Döngüleri
       Dance_Party_extras_battle: Dans Ekipleri
       Dance_Party_extras_every_beat: Çeyrek Notalar
       Dance_Party_extras_layout: Giriş Düzeni
@@ -141,6 +168,7 @@ tr:
       MC_HOC_2017_FP10x10: Ücretsiz Oyna
       MC_HOC_2017_FP10x10_RE: Ücretsiz Oyna
       Making Music_2018: Müzik yapma
+      Making Music_2019: Müzik yapma
       SG U3L07 More Subgoals: Belgeler
       courseA_video_Stevie: Stevie ve büyük proje
       courseA_video_Stevie_2018: Stevie ve büyük proje

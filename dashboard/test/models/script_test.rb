@@ -1515,6 +1515,25 @@ endvariants
     )
   end
 
+  test 'pilot scripts are always hidden during seed' do
+    l = create :level
+    dsl = <<-SCRIPT
+      hidden false
+      pilot_experiment 'pilot-experiment'
+
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+
+    File.stubs(:read).returns(dsl)
+    scripts, _ = Script.setup(['pilot-script.script'])
+    script = scripts.first
+
+    assert_equal 'pilot-script', script.name
+    assert_equal 'pilot-experiment', script.pilot_experiment
+    assert_equal true, script.hidden
+  end
+
   private
 
   def has_hidden_script?(scripts)

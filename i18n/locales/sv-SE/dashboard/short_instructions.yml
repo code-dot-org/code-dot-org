@@ -684,8 +684,10 @@ sv:
       CourseF_PlayLab_vars9: Nice, låt oss nu bli säkra på att detta spel inte är alltför lätt att spela. Varje gång Hund (actor 1) blir träffad av gula hjärtan från Katt (actor 2), bör du förlora en poäng. Börja med 10 poäng så det inte är så svårt. Låt dina poäng gå från 10 till 0 för att klara nivån.
       Crack Random Substitution: Instruktioner
       Crack Random Substitution_2018: Instruktioner
+      Crack Random Substitution_2019: Instruktioner
       Crack a Caesar Cipher: Instruktioner
       Crack a Caesar Cipher_2018: Instruktioner
+      Crack a Caesar Cipher_2019: Instruktioner
       Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
       Dance_Party_01_low: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
       Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
@@ -1044,6 +1046,7 @@ sv:
       Testing Quantum Farmer: "Wow, jag hittade ett riktigt djupt hål! Jag vet inte hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller det tills marken är jämn?  Tips: Försök att använda en 'medan'-slinga denna gång."
       The Vigenere Cipher Widget: Instruktioner
       The Vigenere Cipher Widget_2018: Instruktioner
+      The Vigenere Cipher Widget_2019: Instruktioner
       The Vigenere Cipher: Instruktioner
       Total Artist Clone Me: 'Fritt spel: Här är de funktioner som du har skrivit, och några fler för dig att spela med. Rita något fantastiskt! Lek med pennbredden och se hur olika dina ritningar ser ut!'
       U2 frequency caesar: Instruktioner
@@ -1052,6 +1055,7 @@ sv:
       U4 vigenere cipher 2: Instruktioner
       U4L02 - Objects - Template1: Mall
       U4L02 - Objects - Template1_2018: Mall
+      U4L02 - Objects - Template1_2019: Mall
       Underground Avoiding Lava: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
       Underground Avoiding Lava_2018: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
       Underground Avoiding Lava_2019: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.

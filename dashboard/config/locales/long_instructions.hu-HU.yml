@@ -310,6 +310,12 @@ hu:
         oldalt, majd nevezd át.\n(Nézd meg a [6. szint 8. feladványát](/s/csd2/stage/6/puzzle/8),
         ha elfelejtetted, hogyan kell\ncsinálni.)\r\n* Ismételd meg annyiszor, ahány
         oldalt szeretnél hozzáadni.\r\n\r\n\n"
+      CSD U2 create page_2019: "# Hozd létre, és nevezd el az új oldaladat\r\n\r\nMielőtt\nelkezdesz
+        kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,\namire szükséged
+        lesz a projektben.\r\n\r\n# Tedd a következőt\r\n* Hozz létre egy új HTML
+        oldalt, majd nevezd át.\n(Nézd meg a [6. szint 8. feladványát](/s/csd2/stage/6/puzzle/8),
+        ha elfelejtetted, hogyan kell\ncsinálni.)\r\n* Ismételd meg annyiszor, ahány
+        oldalt szeretnél hozzáadni.\r\n\r\n\n"
       CSD U2 header footer: "# Fejléc és lábléc\r\n\r\nMinden\noldalon legyen fejléc
         és lábléc.\r\n\r\n# Tedd a következőket\r\n* Minden oldal esetén \nbizonyosodj
         meg róla, hogy az tartalmazza az oldal címét és egy navigációs menüt, ami\na
@@ -318,6 +324,13 @@ hu:
         esetén\nbizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal
         felhasználási feltételeit.\r\n\r"
       CSD U2 header footer_2018: "# Fejléc és lábléc\r\n\r\nMinden\noldalon legyen
+        fejléc és lábléc.\r\n\r\n# Tedd a következőket\r\n* Minden oldal esetén \nbizonyosodj
+        meg róla, hogy az tartalmazza az oldal címét és egy navigációs menüt, ami\na
+        weblapod további oldalaira hivatkozik. A fejléc átismétléséhez keresd fel
+        a\n [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\r\n* Minden oldal
+        esetén\nbizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal
+        felhasználási feltételeit.\r\n\r"
+      CSD U2 header footer_2019: "# Fejléc és lábléc\r\n\r\nMinden\noldalon legyen
         fejléc és lábléc.\r\n\r\n# Tedd a következőket\r\n* Minden oldal esetén \nbizonyosodj
         meg róla, hogy az tartalmazza az oldal címét és egy navigációs menüt, ami\na
         weblapod további oldalaira hivatkozik. A fejléc átismétléséhez keresd fel
@@ -481,9 +494,10 @@ hu:
         Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
 
         Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
-      Dance_Party_11b: Indulhat a táncverseny! A Macska legyint, amikor megnyomod
-        a balra nyilat. Állítsd be, hogy a Robot „drop“ mozdulatot tegyen, amikor
-        megnyomod a jobbra nyilat.
+      Dance_Party_11b: |-
+        Indulhat a táncverseny! A Macska legyint, amikor megnyomod a balra nyilat. Állítsd be, hogy a Robot „spárga“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat.
+
+        **Használd a nyilakat, hogy a robot olyan gyorsan ismételje a spárga-taps-spárga-taps mozdulatokat, ahogy csak tudod!**
       Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
         meg az ismerőseiddel.
       Dance_Party_extras_battle: |-
@@ -827,6 +841,15 @@ hu:
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2019: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_bounce_events5s: Most egy kosárlabda fog repülni a kéz felé. Adj egy
+        blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül elérje
+        a kosarat.
+      courseD_bounce_events5s_2018: Most egy kosárlabda fog repülni a kéz felé. Adj
+        egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül
+        elérje a kosarat.
+      courseD_bounce_events5s_2019: Most egy kosárlabda fog repülni a kéz felé. Adj
+        egy blokkot az "amikor a labda a kézhez ér" eseményhez, hogy a labda végül
+        elérje a kosarat.
       courseD_maze_nestedLoops4: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2018: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2019: Juttass el a napraforgóhoz!
