@@ -66,16 +66,12 @@ module Pd::Application
 
     def update_scholarship_status(scholarship_status)
       scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year) || Pd::ScholarshipInfo.new(user: user)
-      scholarship_info.update(scholarship_status: scholarship_status, pd_application_id: id)
+      scholarship_info.update(scholarship_status: scholarship_status)
     end
 
     # also adds the pd_application_id to the ScholarshipInfo object
     def scholarship_status
-      scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)
-      if scholarship_info && !scholarship_info.pd_application_id
-        scholarship_info.update(pd_application_id: id)
-      end
-      scholarship_info&.scholarship_status
+      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)&.scholarship_status
     end
 
     # Implement in derived class.
