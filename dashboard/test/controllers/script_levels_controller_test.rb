@@ -43,6 +43,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @script = @custom_script
     @script_level = @custom_s1_l1
+
+    @pilot_script_level = create :script_level
+    @pilot_script_level.script.pilot_experiment = 'pilot-experiment'
+    @pilot_script_level.script.save!
   end
 
   setup do
@@ -1721,26 +1725,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:is_challenge_level]
   end
 
-  test "pilot script levels only visible with pilot access" do
-    teacher = create(:teacher)
-    levelbuilder = create(:levelbuilder)
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'signed out user cannot view pilot script level'
 
-    @script_level.script.pilot_experiment = 'my-experiment'
-    @script_level.script.save!
+  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'teacher without pilot access cannot view pilot script level'
 
-    assert_raises ActiveRecord::RecordNotFound do
-      get_show_script_level_page(@script_level)
-    end
-
-    sign_in teacher
-    assert_raises ActiveRecord::RecordNotFound do
-      get_show_script_level_page(@script_level)
-    end
-    sign_out teacher
-
-    sign_in levelbuilder
-    get_show_script_level_page(@script_level)
-    assert_response :success
-    sign_out levelbuilder
-  end
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'levelbuilder can view pilot script level'
 end

@@ -77,8 +77,6 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id], version_year: DEFAULT_VERSION_YEAR)
 
-    raise ActiveRecord::RecordNotFound if @script.pilot? && !@script.has_pilot_access?(@current_user)
-
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.

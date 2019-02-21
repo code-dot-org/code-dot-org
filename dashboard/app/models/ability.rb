@@ -177,7 +177,12 @@ class Ability
       end
     end
     can :read, ScriptLevel do |script_level|
-      user.persisted? || !script_level.script.login_required?
+      script = script_level.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        user.persisted? || !script.login_required?
+      end
     end
 
     # Handle standalone projects as a special case.
