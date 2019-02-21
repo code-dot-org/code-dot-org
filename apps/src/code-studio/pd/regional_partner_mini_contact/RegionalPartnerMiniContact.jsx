@@ -84,9 +84,7 @@ export default class RegionalPartnerMiniContact extends React.Component {
   render() {
     if (this.state.submitted) {
       return (
-        <div>
-          Your interest has been submitted. Thank you. We'll be in touch.
-        </div>
+        <div>Your message has been sent. Thank you. We'll be in touch.</div>
       );
     } else {
       return (
