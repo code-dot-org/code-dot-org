@@ -296,12 +296,14 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'cannot view pilot script without pilot access' do
     create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
 
-    get :show, params: {id: 'pilot-script'}
-    assert_response :not_found
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: 'pilot-script'}
+    end
 
     sign_in @not_admin
-    get :show, params: {id: 'pilot-script'}
-    assert_response :not_found
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: 'pilot-script'}
+    end
     sign_out @not_admin
 
     sign_in @levelbuilder
