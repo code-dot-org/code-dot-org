@@ -1716,4 +1716,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
     assert_nil assigns(:view_options)[:is_challenge_level]
   end
+
+  test "pilot script levels only visible with pilot access" do
+    teacher = create(:teacher)
+    levelbuilder = create(:levelbuilder)
+
+    @script_level.script.pilot_experiment = 'my-experiment'
+    @script_level.script.save!
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get_show_script_level_page(@script_level)
+    end
+
+    sign_in teacher
+    assert_raises ActiveRecord::RecordNotFound do
+      get_show_script_level_page(@script_level)
+    end
+    sign_out teacher
+
+    sign_in levelbuilder
+    get_show_script_level_page(@script_level)
+    assert_response :success
+    sign_out levelbuilder
+  end
 end
