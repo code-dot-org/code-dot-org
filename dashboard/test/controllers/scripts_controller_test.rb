@@ -295,24 +295,21 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'signed out user cannot view pilot script' do
-    assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: @pilot_script.name}
-    end
+    get :show, params: {id: @pilot_script.name}
+    assert_response :redirect
+    assert_redirected_to '/users/sign_in'
   end
 
   test 'teacher without pilot access cannot view pilot script' do
     sign_in @not_admin
-    assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: @pilot_script.name}
-    end
-    sign_out @not_admin
+    get :show, params: {id: @pilot_script.name}
+    assert_response :forbidden
   end
 
   test 'levelbuilder can view pilot script' do
     sign_in @levelbuilder
     get :show, params: {id: @pilot_script.name}
     assert_response :success
-    sign_out @levelbuilder
   end
 
   test 'can create with has_lesson_plan param' do
