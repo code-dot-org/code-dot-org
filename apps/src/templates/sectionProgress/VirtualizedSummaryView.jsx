@@ -73,7 +73,9 @@ class VirtualizedSummaryView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {rowIndex === 0 && columnIndex === 0 && (
-          <div style={progressStyles.lessonHeading}>{i18n.lesson()}</div>
+          <div style={progressStyles.lessonLabelContainer}>
+            <div style={progressStyles.lessonHeading}>{i18n.lesson()}</div>
+          </div>
         )}
         {rowIndex === 0 && columnIndex >= 1 && (
           <SectionProgressLessonNumberCell
