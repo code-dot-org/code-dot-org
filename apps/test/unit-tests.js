@@ -6,7 +6,7 @@ import {
   throwOnConsoleWarningsEverywhere,
   clearTimeoutsBetweenTests
 } from './util/testUtils';
-var Adapter = require('enzyme-adapter-react-15.4');
+var Adapter = require('enzyme-adapter-react-15');
 var enzyme = require('enzyme');
 enzyme.configure({adapter: new Adapter()});
 

@@ -5,6 +5,9 @@ import {mount, shallow} from 'enzyme';
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');
+var Adapter = require('enzyme-adapter-react-15');
+var enzyme = require('enzyme');
+enzyme.configure({adapter: new Adapter()});
 
 describe('AppLabTooltipOverlay', () => {
   const TEST_APP_WIDTH = 100 * Math.random(),
@@ -120,7 +123,7 @@ describe('AppLabTooltipOverlay', () => {
         var appLabTooltipOverlay = mount(
           <AppLabTooltipOverlay {...TEST_PROPS} />
         );
-        appLabTooltipOverlay.instance().onMouseMove({target: fakeElement});
+        appLabTooltipOverlay.simulate('mousemove', {target: fakeElement});
         result = appLabTooltipOverlay.find('TooltipOverlay');
       });
 
