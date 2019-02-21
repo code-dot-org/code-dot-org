@@ -167,18 +167,18 @@
     "debugger_disabled": "false",
     "execute_palette_apis_only": "false",
     "lock_zero_param_functions": "false",
-    "preload_asset_list": null,
     "instructions_important": "false",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-19 22:59:24 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-19 22:59:24 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-21 18:05:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
