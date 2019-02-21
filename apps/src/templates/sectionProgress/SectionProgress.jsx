@@ -33,24 +33,18 @@ const styles = {
   heading: {
     marginBottom: 0
   },
-  selectorContainer: {
-    width: '100%',
-    display: 'inline-block'
+  topRowContainer: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    marginBottom: 10
   },
-  scriptSelectorContainer: {
-    float: 'left',
-    marginRight: 10
+  toggle: {
+    margin: '0 10px 5px 10px'
   },
-  viewToggleContainer: {
-    float: 'left',
-    marginTop: 34
-  },
-  lessonSelectorContainer: {
-    float: 'right'
-  },
-  viewCourseLinkBox: {
-    width: '100%',
-    textAlign: 'right'
+  chevronLink: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'flex-end'
   }
 };
 
@@ -127,17 +121,8 @@ class SectionProgress extends Component {
 
     return (
       <div>
-        {linkToOverview && (
-          <div style={styles.viewCourseLinkBox}>
-            <SmallChevronLink
-              link={linkToOverview}
-              linkText={i18n.viewCourse()}
-              isRtl={false}
-            />
-          </div>
-        )}
-        <div style={styles.selectorContainer}>
-          <div style={styles.scriptSelectorContainer}>
+        <div style={styles.topRowContainer}>
+          <div>
             <div style={{...h3Style, ...styles.heading}}>
               {i18n.selectACourse()}
             </div>
@@ -147,14 +132,21 @@ class SectionProgress extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          <div style={styles.viewToggleContainer}>
+          <span style={styles.toggle}>
             <SectionProgressToggle />
-          </div>
-          <div style={styles.lessonSelectorContainer}>
-            {currentView === ViewType.DETAIL && lessons.length !== 0 && (
-              <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
-            )}
-          </div>
+          </span>
+          {currentView === ViewType.DETAIL && lessons.length !== 0 && (
+            <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
+          )}
+          {linkToOverview && (
+            <span style={styles.chevronLink}>
+              <SmallChevronLink
+                link={linkToOverview}
+                linkText={i18n.viewCourse()}
+                isRtl={false}
+              />
+            </span>
+          )}
         </div>
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
