@@ -54,7 +54,8 @@ class AuthenticationOption < ApplicationRecord
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
     GOOGLE,
-    WINDOWS_LIVE
+    WINDOWS_LIVE,
+    MICROSOFT
   ]
 
   def oauth?
