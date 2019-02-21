@@ -1570,8 +1570,10 @@ ro:
         prea greu. Lasă scorul să scadă de la 10 la 0 pentru a schimba nivelul.
       Crack Random Substitution: Instrucţiuni
       Crack Random Substitution_2018: Instrucţiuni
+      Crack Random Substitution_2019: Instrucţiuni
       Crack a Caesar Cipher: Instrucţiuni
       Crack a Caesar Cipher_2018: Instrucţiuni
+      Crack a Caesar Cipher_2019: Instrucţiuni
       Food Fight!: "Am adăugat o ultimă funcţie pentru a o utiliza.\r\n\r\nFoloseste
         comanda \"if\" pentru a-ti programa jocul catre functie \"level_up\" dor cand
         \"player_score\" devine mai mare decat un numar.\n\r\nDe exemplu: \"player_score\"
@@ -2132,6 +2134,7 @@ ro:
         "în timp ce" de data asta.'
       The Vigenere Cipher Widget: Instrucţiuni
       The Vigenere Cipher Widget_2018: Instrucţiuni
+      The Vigenere Cipher Widget_2019: Instrucţiuni
       The Vigenere Cipher: Instrucţiuni
       Total Artist Clone Me: |-
         Joc la alegere: Aici sunt funcțiile pe care le-ai scris tu și încă ceva în plus cu care să te joci. Desenează ceva minunat!
@@ -2142,6 +2145,7 @@ ro:
       U4 vigenere cipher 2: Instrucţiuni
       U4L02 - Objects - Template1: Șablon
       U4L02 - Objects - Template1_2018: Șablon
+      U4L02 - Objects - Template1_2019: Șablon
       Underground Avoiding Lava: Sub aceste blocuri se gaseste lava, pe care trebuie
         sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici.
         Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste blocuri.

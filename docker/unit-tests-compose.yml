@@ -1,7 +1,6 @@
 # Docker Compose file for running unit tests.
 #
 # To run, set the following env variables (values obtainable from Circle):
-# PROPERTIES_ENCRYPTION_KEY
 # CLOUDFRONT_KEY_PAIR_ID
 # CLOUDFRONT_PRIVATE_KEY
 # AWS_ACCESS_KEY_ID
@@ -24,16 +23,16 @@ services:
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated
-      - nodemodules:/home/circleci/code-dot-org/apps/node_modules
       - rbenv:/home/circleci/.rbenv
       - mysqldata:/var/lib/mysql
       - yarncache:/home/circleci/.cache
+      - gcloud_config:/home/circleci/.config/gcloud
     env_file:
       - env.list
     command: /bin/sh -c "docker/unit_tests.sh"
 
 volumes:
-  nodemodules:
   mysqldata:
   rbenv:
   yarncache:
+  gcloud_config:

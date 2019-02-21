@@ -307,6 +307,8 @@ uz:
               name: Internet
             Relay Programming:
               name: Estafetali dasturlash
+            Graph Paper Programming:
+              name: Katakchali varaqda dasturlash
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -353,3 +355,19 @@ uz:
           stages:
             Spelling Bee:
               name: Bilimdon Ari
+        csd2-2019:
+          stages:
+            Lists:
+              name: Ro‘yxatlar
+        csd3-2019:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internet

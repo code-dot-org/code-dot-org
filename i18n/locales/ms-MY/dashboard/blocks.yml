@@ -269,6 +269,11 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': apabila
+            '"while"': semasa
       aalab_clickedOn:
         options:
           CONDITION:
@@ -289,11 +294,15 @@ ms:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': bandar
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': apabila
-            '"while"': semasa
+          VAL:
+            '"true"': benar
+            '"false"': palsu
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
       binary_move:
         options:
           DIR:

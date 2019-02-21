@@ -573,6 +573,11 @@ es-MX:
         con el\nbarra espaciadora, y moverlo hacia la izquierda y hacia la derecha
         con las teclas de flecha. Tu puntuación\nsera al recolectar estrellas, y si
         puntúas lo suficiente, el fondo cambiará."
+      CSD U3 Entertainment Sample 1_2019: "# Alienígena Saltador\r\n\r\nPresiona\n\"Ejecutar\"
+        para jugar el juego de la izquierda. Puedes hacer que el alienígena salte
+        con el\nbarra espaciadora, y moverlo hacia la izquierda y hacia la derecha
+        con las teclas de flecha. Tu puntuación\nsera al recolectar estrellas, y si
+        puntúas lo suficiente, el fondo cambiará."
       CSD U3 Entertainment Sample 2: "# Conejito Hambriento\r\n\r\nEl\nConejito tiene
         hambre, y está buscando hongos y zanahorias para la cena.\r\n\r\nPara\nganar,
         tendrás que encontrar un envace para la cena, luego recoger al menos diez
@@ -589,16 +594,30 @@ es-MX:
         todo!\r\n\r\nUza\nla barra espaciadora para saltar. Puedes aplastar mariquitas
         y caracoles saltando sobre ellos.\r\n\r\nHaz clic\nen \"Ejecutar\" para iniciar
         el programa."
+      CSD U3 Entertainment Sample 2_2019: "# Conejito Hambriento\r\n\r\nEl\nConejito
+        tiene hambre, y está buscando hongos y zanahorias para la cena.\r\n\r\nPara\nganar,
+        tendrás que encontrar un envace para la cena, luego recoger al menos diez
+        zanahorias\ny cinco hongos.\r\n\r\nAsegúrate de evitar los insectos. Mariquitas
+        y caracoles\ncomerán tu comida, y las abejas te picarán, ¡haciéndote soltar
+        todo!\r\n\r\nUza\nla barra espaciadora para saltar. Puedes aplastar mariquitas
+        y caracoles saltando sobre ellos.\r\n\r\nHaz clic\nen \"Ejecutar\" para iniciar
+        el programa."
       CSD U3 Entertainment Sample 3: "# Caricaturas animadas\r\n\r\nCombinando\nimágenes,
         texto y alguna animación sutil pueden hacer cómics realmente interesantes\no
         historias gráficas. Haga clic en \"Ejecutar\" para ver un ejemplo.\r\n"
       CSD U3 Entertainment Sample 3_2018: "# Caricaturas animadas\r\n\r\nCombinando\nimágenes,
         texto y alguna animación sutil pueden hacer cómics realmente interesantes\no
         historias gráficas. Haga clic en \"Ejecutar\" para ver un ejemplo.\r\n"
+      CSD U3 Entertainment Sample 3_2019: "# Caricaturas animadas\r\n\r\nCombinando\nimágenes,
+        texto y alguna animación sutil pueden hacer cómics realmente interesantes\no
+        historias gráficas. Haga clic en \"Ejecutar\" para ver un ejemplo.\r\n"
       CSD U3 Entertainment Sample 4: "# Timbre de sello\r\n\r\nHacer clic\nEn \"Ejecutar\"
         para iniciar el programa, luego use la almohadilla de sello para dibujar con\ncolores
         simples y sellos de animales.\r\n"
       CSD U3 Entertainment Sample 4_2018: "# Timbre de sello\r\n\r\nHacer clic\nEn
+        \"Ejecutar\" para iniciar el programa, luego use la almohadilla de sello para
+        dibujar con\ncolores simples y sellos de animales.\r\n"
+      CSD U3 Entertainment Sample 4_2019: "# Timbre de sello\r\n\r\nHacer clic\nEn
         \"Ejecutar\" para iniciar el programa, luego use la almohadilla de sello para
         dibujar con\ncolores simples y sellos de animales.\r\n"
       CSD U3 Input Fish: "# Pez con flechas\r\n\r\nEl pez\nestá de regreso. ¿Puedes
@@ -613,6 +632,12 @@ es-MX:
         para verificar cuando\nla tecla de flecha izquierda está presionada hacia
         abajo.\r\n* Mueva los comandos para mover el\npez dentro de la declaración
         if."
+      CSD U3 Input Fish_2019: "# Pez con flechas\r\n\r\nEl pez\nestá de regreso. ¿Puedes
+        hacer que el pez se mueva hacia la izquierda solo cuando la tecla de la flecha
+        esta\npresionada?\r\n\r\n# Hacer esto\r\n\r\n* Agregue una declaración if
+        para verificar cuando\nla tecla de flecha izquierda está presionada hacia
+        abajo.\r\n* Mueva los comandos para mover el\npez dentro de la declaración
+        if."
       CSD U3 Input Gears: "# Engranajes con Condicionales\r\n\r\nVamos a\nhacer girar
         los engranajes solo cuando la tecla de espacio se mantiene presionada.\r\n\r\n#
         Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n* Use `Flecha bajando`
@@ -620,6 +645,12 @@ es-MX:
         tecla de espacio.\r\n* Mueve el código que\nhace que los engranajes giren
         dentro del `if`."
       CSD U3 Input Gears_2018: "# Engranajes con Condicionales\r\n\r\nVamos a\nhacer
+        girar los engranajes solo cuando la tecla de espacio se mantiene presionada.\r\n\r\n#
+        Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n* Use `Flecha bajando`
+        como entrada para la\ndeclaración if para verificar cuando se presiona la
+        tecla de espacio.\r\n* Mueve el código que\nhace que los engranajes giren
+        dentro del `if`."
+      CSD U3 Input Gears_2019: "# Engranajes con Condicionales\r\n\r\nVamos a\nhacer
         girar los engranajes solo cuando la tecla de espacio se mantiene presionada.\r\n\r\n#
         Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n* Use `Flecha bajando`
         como entrada para la\ndeclaración if para verificar cuando se presiona la
@@ -649,6 +680,14 @@ es-MX:
         una asignación al azar a su movimiento.\r\n* Agregue un segundo sprite y control\neso
         con un conjunto diferente de teclas (\"w\", \"a\", \"s\" y \"d\" son comunes\nopciones).\r\n*
         Agregue algunas formas a su fondo para que la escena sea más interesante.\n"
+      CSD U3 Keyboard Input Challenge_2018_2019: "# Desafío\r\n_Comprobar\ncon tu
+        maestra antes de intentar este desafío._\r\n\r\nAquí está el programa de errores\nhas
+        estado trabajando durante los últimos niveles. Elija uno o más de los siguientes\ndesafíos,
+        o agrega nuevas características tuyas!\r\n\r\n* Use la tecla \"espacio\"\npara
+        controlar otra propiedad de su sprite de error, como la rotación o la escala.\r\n*\nAgregue
+        una asignación al azar a su movimiento.\r\n* Agregue un segundo sprite y control\neso
+        con un conjunto diferente de teclas (\"w\", \"a\", \"s\" y \"d\" son comunes\nopciones).\r\n*
+        Agregue algunas formas a su fondo para que la escena sea más interesante.\n"
       CSD U3 Movement Your Own 2: "# Agregar movimiento a tu animación\r\n\r\nCon\nsu
         escena estática configurada, ahora puede agregar algún movimiento. Cuando
         está satisfecho\ncon su programa, haga clic en el botón \"Enviar\" para activarlo.
@@ -665,6 +704,14 @@ es-MX:
         de los sprites cambiarán.\r\n* Actualiza\nesas propiedades usando el patrón
         de contador.\r\n\r\n_ Sugerencia: si tu patrón de contador\nno funciona como
         esperaba, agregue vigilantes para ayudar a depurar su programa._"
+      CSD U3 Movement Your Own 2_2019: "# Agregar movimiento a tu animación\r\n\r\nCon\nsu
+        escena estática configurada, ahora puede agregar algún movimiento. Cuando
+        está satisfecho\ncon su programa, haga clic en el botón \"Enviar\" para activarlo.
+        Usted siempre puede\nno enviarlo y continuar trabajando si desea agregar funciones.\r\n\r\n#
+        Hacer esto\r\n\r\nEn\nel lazo de drenaje\r\n\r\n* Identificar qué propiedades
+        de los sprites cambiarán.\r\n* Actualiza\nesas propiedades usando el patrón
+        de contador.\r\n\r\n_ Sugerencia: si tu patrón de contador\nno funciona como
+        esperaba, agregue vigilantes para ayudar a depurar su programa._"
       CSD U3 Random background: "# Fondo\r\n\r\nA veces\nquerrás llenar toda la pantalla
         con un color. Para eso, puedes usar\n`fondo`. Cubre todo en la pantalla con
         el color que elija.\r\n\r\n#\nHacer esto\r\n\r\n* Ejecute el código para ver
@@ -672,6 +719,13 @@ es-MX:
         Desafío: hay un cuadrado morado que esta\ncubierto por el fondo. ¿Puedes cambiar
         el orden del código para que\npuedas ver los cuadros morados y azules? *"
       CSD U3 Random background_2018: "# Fondo\r\n\r\nA veces\nquerrás llenar toda
+        la pantalla con un color. Para eso, puedes usar\n`fondo`. Cubre todo en la
+        pantalla con el color que elija.\r\n\r\n#\nHacer esto\r\n\r\n* Ejecute el
+        código para ver `el trabajo de fondo.\r\n* Cambiar el fondo\nde amarillo a
+        naranja.\r\n\r\n* Desafío: hay un cuadrado morado que esta\ncubierto por el
+        fondo. ¿Puedes cambiar el orden del código para que\npuedas ver los cuadros
+        morados y azules? *"
+      CSD U3 Random background_2019: "# Fondo\r\n\r\nA veces\nquerrás llenar toda
         la pantalla con un color. Para eso, puedes usar\n`fondo`. Cubre todo en la
         pantalla con el color que elija.\r\n\r\n#\nHacer esto\r\n\r\n* Ejecute el
         código para ver `el trabajo de fondo.\r\n* Cambiar el fondo\nde amarillo a
@@ -699,6 +753,13 @@ es-MX:
         Hacer esto\r\n\r\n* Ejecute el programa varias veces para ver\ncómo este funciona.\r\n*
         Cambie los números dentro de `Numero Aleatorio` y ejecute el código\nde nuevo
         algunas veces para ver qué cambia."
+      CSD U3 Random random ellipse_2018_2019: "# Números aleatorios\r\n\r\n`randomNumber
+        ()`\nelige un número aleatorio entre un valor mínimo y máximo. Puedes usar
+        este\ncódigo en lugar de escribir en el número específico. Si haces tus dibujos\ncon
+        números aleatorios se verá un poco diferente cada vez que corra\nsu programa.\r\n\r\n#
+        Hacer esto\r\n\r\n* Ejecute el programa varias veces para ver\ncómo este funciona.\r\n*
+        Cambie los números dentro de `Numero Aleatorio` y ejecute el código\nde nuevo
+        algunas veces para ver qué cambia."
       CSD U3 Scene Example: "# escenas de Sprite\\\r\n\r\nAl combinar formas, sprites
         y un nuevo bloque llamado `texto ', puedes crear escenas simples, historias
         o cómics. Si bien este ejemplo es bastante simple, puedes combinar tantos
@@ -714,6 +775,9 @@ es-MX:
       CSD U3 Sprites scene challenge_2018: "# Desafío: Extiende tu\nescena\r\n\r\n_Comprueba
         con tu maestro antes de comenzar este desafío._\r\n\r\nAhora\nque hayas terminado
         tu escena, considera agregarla o crear otra."
+      CSD U3 Sprites scene challenge_2019: "# Desafío: Extiende tu\nescena\r\n\r\n_Comprueba
+        con tu maestro antes de comenzar este desafío._\r\n\r\nAhora\nque hayas terminado
+        tu escena, considera agregarla o crear otra."
       CSD U3 Sprites scene drawing: "# Crea tu escena - Dibujando\r\n\r\nTu \nvas
         a comenzar a crear una escena por ti mismo. Si aún no lo has hecho, toma\nun
         minuto para esbozar una imagen de su escena (considere usar papel cuadriculado).\nUna
@@ -722,6 +786,13 @@ es-MX:
         color.\r\n*\nAgregue los comandos de forma necesarios para dibujar los elementos
         que no son de sprite de su escena."
       CSD U3 Sprites scene drawing_2018: "# Crea tu escena - Dibujando\r\n\r\nTu \nvas
+        a comenzar a crear una escena por ti mismo. Si aún no lo has hecho, toma\nun
+        minuto para esbozar una imagen de su escena (considere usar papel cuadriculado).\nUna
+        vez que tengas una idea y un plan para tu escena, comienza a dibujar el fondo.\r\n\r\n#\nHacer
+        esto\r\n\r\n* Use un comando `background()` para llenar la pantalla con un
+        color.\r\n*\nAgregue los comandos de forma necesarios para dibujar los elementos
+        que no son de sprite de su escena."
+      CSD U3 Sprites scene drawing_2019: "# Crea tu escena - Dibujando\r\n\r\nTu \nvas
         a comenzar a crear una escena por ti mismo. Si aún no lo has hecho, toma\nun
         minuto para esbozar una imagen de su escena (considere usar papel cuadriculado).\nUna
         vez que tengas una idea y un plan para tu escena, comienza a dibujar el fondo.\r\n\r\n#\nHacer
@@ -748,6 +819,16 @@ es-MX:
         que los sprites estén sobre tu fondo,\npero para algunos diseños es posible
         que desee llamar `drawSprites ()` antes para que\ntus sprites están encima
         de algunas formas pero debajo de otras._"
+      CSD U3 Sprites scene sprites_2019: "# Crea tu escena - Sprites\r\n\r\nCon\nel
+        fondo en su lugar, es hora de agregar sus sprites.\r\n# Hacer esto\r\n\r\n*\nAgrega
+        o crea todas tus imágenes de sprite en la pestaña Animación.\r\n* Crea\nuna
+        variable para cada sprite en la parte superior de tu programa y usa `setAnimation
+        ()`\npara asignar las imágenes que ha creado en la pestaña Animación.\r\n*
+        Llamar a `drawSprites ()`\nuna vez al final de su programa.\r\n\r\n_Iniciar:
+        es probable que desee llamar a `drawSprites ()`\nal final de tu programa para
+        que los sprites estén sobre tu fondo,\npero para algunos diseños es posible
+        que desee llamar `drawSprites ()` antes para que\ntus sprites están encima
+        de algunas formas pero debajo de otras._"
       CSD U3 Sprites scene text: "# Crea tu escena - Texto\r\n\r\nLa\npieza final
         de tu escena es agregar texto.\r\n\r\n# Hacer esto\r\n\r\n* Agrega un\n`text
         ()` comando para cada línea de texto por separado.\r\n* Si es necesario, use
@@ -757,6 +838,14 @@ es-MX:
         Sin embargo, si quieres el texto\nen capas con otros elementos, puede considerar
         cambiar el orden._"
       CSD U3 Sprites scene text_2018: "# Crea tu escena - Texto\r\n\r\nLa\npieza final
+        de tu escena es agregar texto.\r\n\r\n# Hacer esto\r\n\r\n* Agrega un\n`text
+        ()` comando para cada línea de texto por separado.\r\n* Si es necesario, use
+        `fill ()`\ny `textSize ()` para cambiar la apariencia de su texto.\r\n\r\n_
+        Sugerencia: la mayoría\nde las escenas tienen el texto encima de todo, lo
+        que requeriría su `text ()`\ncomandos para ser las últimas líneas en su programa.
+        Sin embargo, si quieres el texto\nen capas con otros elementos, puede considerar
+        cambiar el orden._"
+      CSD U3 Sprites scene text_2019: "# Crea tu escena - Texto\r\n\r\nLa\npieza final
         de tu escena es agregar texto.\r\n\r\n# Hacer esto\r\n\r\n* Agrega un\n`text
         ()` comando para cada línea de texto por separado.\r\n* Si es necesario, use
         `fill ()`\ny `textSize ()` para cambiar la apariencia de su texto.\r\n\r\n_
@@ -776,6 +865,12 @@ es-MX:
         diferente de la pantalla.\r\n\r\n_ Sugerencia: el tamaño del texto predeterminado
         es bastante pequeño, pero\npuedes usar el bloque `textSize` para cambiar eso.
         También puede usar `fill` para\ncambia el color de tu texto._"
+      CSD U3 Sprites text_2019: "# Agregar texto\r\n\r\nPuedes poner\ntexto en cualquier
+        lugar que desee en la pantalla usando `text`. Cambiar el texto \nvisualizado
+        en el código provisto, luego agregue un segundo `texto` para escribir en un\nparte
+        diferente de la pantalla.\r\n\r\n_ Sugerencia: el tamaño del texto predeterminado
+        es bastante pequeño, pero\npuedes usar el bloque `textSize` para cambiar eso.
+        También puede usar `fill` para\ncambia el color de tu texto._"
       CSD U3 Variables Draw Challenge: "# Desafío: dibujar una\nImagen\r\n\r\n_Comprueba
         con tu profesor antes de abordar este nivel de desafío._\r\n\r\nUtilizando\nvariables,
         dibuja una imagen donde muchos de los elementos se basan en una variable común\npara
@@ -784,6 +879,13 @@ es-MX:
         Una vez que hayas\ncompletado tu dibujo, intenta cambiar los valores de las
         variables para estar\nseguro de que toda la imagen cambia junto.\r\n"
       CSD U3 Variables Draw Challenge_2018: "# Desafío: dibujar una\nImagen\r\n\r\n_Comprueba
+        con tu profesor antes de abordar este nivel de desafío._\r\n\r\nUtilizando\nvariables,
+        dibuja una imagen donde muchos de los elementos se basan en una variable común\npara
+        el tamaño o la ubicación. Por ejemplo, dibuja un rostro con variables que
+        controlan\nel tamaño y o la ubicación de ambos ojos, oídos y fosas nasales.
+        Una vez que hayas\ncompletado tu dibujo, intenta cambiar los valores de las
+        variables para estar\nseguro de que toda la imagen cambia junto.\r\n"
+      CSD U3 Variables Draw Challenge_2019: "# Desafío: dibujar una\nImagen\r\n\r\n_Comprueba
         con tu profesor antes de abordar este nivel de desafío._\r\n\r\nUtilizando\nvariables,
         dibuja una imagen donde muchos de los elementos se basan en una variable común\npara
         el tamaño o la ubicación. Por ejemplo, dibuja un rostro con variables que
@@ -806,6 +908,14 @@ es-MX:
         la cola de perro más larga (en pulgadas) (5 bits)\r\n2. La mayor cantidad
         de cucharas sobre la cara de alguien (5 bits)\r\n/r\n# Hacer esto\r\n* Decodifica
         los dos números de una cadena binaria."
+      CSD U5 binary 5-new_2019: "# Decodificación de múltiples números\r\r\n\r\nAquí
+        hay un widget que puede calcular números de hasta ocho bits. (Si tiene un
+        número más corto, puede dejar los bits adicionales de la izquierda desactivados).
+        Puede usarlo para encontrar los valores de los dos récords mundiales a continuación.\r\n\r\n!
+        [] (https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png)\r\n\r\n1.
+        la cola de perro más larga (en pulgadas) (5 bits)\r\n2. La mayor cantidad
+        de cucharas sobre la cara de alguien (5 bits)\r\n/r\n# Hacer esto\r\n* Decodifica
+        los dos números de una cadena binaria."
       CSD U6 emotion machine 2: "# Cambio de color\r\n\r\nSi miras hacia atrás en
         el ejemplo de esta aplicación, debes notar que los emojis no solo cambian
         cuando haces clic en un botón, sino que también cambia su color.\r\n\r\n#\nHacer
@@ -813,6 +923,12 @@ es-MX:
         de \"color de icono\" de \"cara\". Elije un color cálido para feliz y un color
         frío para triste."
       CSD U6 emotion machine 2_2018: "# Cambio de color\r\n\r\nSi miras hacia atrás
+        en el ejemplo de esta aplicación, debes notar que los emojis no solo cambian
+        cuando haces clic en un botón, sino que también cambia su color.\r\n\r\n#\nHacer
+        esto\r\n\r\nEn cada uno de los controladores de eventos, establece la propiedad
+        de \"color de icono\" de \"cara\". Elije un color cálido para feliz y un color
+        frío para triste."
+      CSD U6 emotion machine 2_2019: "# Cambio de color\r\n\r\nSi miras hacia atrás
         en el ejemplo de esta aplicación, debes notar que los emojis no solo cambian
         cuando haces clic en un botón, sino que también cambia su color.\r\n\r\n#\nHacer
         esto\r\n\r\nEn cada uno de los controladores de eventos, establece la propiedad
@@ -839,10 +955,24 @@ es-MX:
         alternar un LED que no existe.\r\n\r\n_ ¿Su código funcionaría sin cambios
         para una placa con más o menos LED? Si no, ¿podrías modificarlo para que así
         sea? _"
+      CSD U6 for loop click exit_2019: "# Saber cuándo detenerse\r\n\r\nProbablemente
+        has notado en el último nivel que recibió un error si hizo clic en el botón
+        muchas veces. Cada vez que está escribiendo código que se repite (incluso
+        cuando se repite de forma manual, como este), es importante considerar cómo
+        sabrá que es hora de detener la repetición.\r\n\r\n# Hacer esto\r\n\r\nEste
+        programa es similar al anterior, excepto que hemos reemplazado el nombre de
+        la variable con uno más descriptivo, y agregamos un condicional dentro del
+        controlador de eventos. Tendrá que completar el condicional para que no intentemos
+        alternar un LED que no existe.\r\n\r\n_ ¿Su código funcionaría sin cambios
+        para una placa con más o menos LED? Si no, ¿podrías modificarlo para que así
+        sea? _"
       CSD U6 for loop click predict question: "# Hacer una predicción\r\n\r\nLea el
         código de este programa y prediga qué sucederá cada vez que se haga clic en
         el botón?"
       CSD U6 for loop click predict question_2018: "# Hacer una predicción\r\n\r\nLea
+        el código de este programa y prediga qué sucederá cada vez que se haga clic
+        en el botón?"
+      CSD U6 for loop click predict question_2019: "# Hacer una predicción\r\n\r\nLea
         el código de este programa y prediga qué sucederá cada vez que se haga clic
         en el botón?"
       Course 4 Artist 13: "¿Aún jugando? ¡Aquí hay un lienzo en blanco en donde usted
@@ -1449,6 +1579,15 @@ es-MX:
         * Terminar
         la imagen al descubrir qué dos colores faltan y codificarlos.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: |
+        #
+        Color de Pixelacion: Tarea 1
+        **Direcciones:**
+
+        * Comenzamos con la imagen de 4x2
+        Maddie estaba creando, pero hemos omitido las dos últimas cuadriculas.
+        * Terminar
+        la imagen al descubrir qué dos colores faltan y codificarlos.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: |
         #
         Color de Pixelacion: Tarea 1
         **Direcciones:**

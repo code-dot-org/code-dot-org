@@ -181,8 +181,10 @@ lv:
       Course E MC Conditionals1: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
       Crack Random Substitution: Instrukcijas
       Crack Random Substitution_2018: Instrukcijas
+      Crack Random Substitution_2019: Instrukcijas
       Crack a Caesar Cipher: Instrukcijas
       Crack a Caesar Cipher_2018: Instrukcijas
+      Crack a Caesar Cipher_2019: Instrukcijas
       K-1 Artist1 1: Uzzīmējiet cilvēka pēdu ar vienu līniju
       K-1 Artist1 10: Zīmē un lec, lai iegūtu svītrotu līniju lūdz dārgumam X
       K-1 Artist1 3: Uzzīmē divas līnijas uz austrumiem un divas uz ziemeļiem, lai pabeigtu māju!
@@ -262,6 +264,7 @@ lv:
       PS copy 2-3 Bee Conditionals 5: "Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).\nPirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot \"Ja nektārs\" bloku."
       The Vigenere Cipher Widget: Instrukcijas
       The Vigenere Cipher Widget_2018: Instrukcijas
+      The Vigenere Cipher Widget_2019: Instrukcijas
       The Vigenere Cipher: Instrukcijas
       U2 frequency caesar: Instrukcijas
       U2 frequency random sub: Instrukcijas

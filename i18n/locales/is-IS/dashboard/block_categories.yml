@@ -26,12 +26,15 @@ is:
       everythingelse: alltannað
       numbers: tölur
       Numbers: Tölur
+      Input: Inntak
       Default: Sjálfgefið
       World: Heimur
+      Sprites: Kvikar
       Behaviors: Hegðun
       Advanced: Ítarlegt
       Start: Byrja
       Locations: Staðir
+      Music: Tónlist
       Dancing: Dans
       Dancers: Dansarar
       Groups: Hópar
@@ -48,6 +51,7 @@ is:
       test2: próf2
       Use These Blocks: Notaðu þessa kubba
       Do Not Use: Ekki nota
+      Foo: Fú
       Name: Nafn
       NEW BLOCKS: NÝIR KUBBAR
       'Functions ': 'Föll '
