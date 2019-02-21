@@ -56,9 +56,6 @@
     "long_instructions": "Let's get this moose dancing!\r\n\r\nDrag out the <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new&#95;dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> block. Your dancer should start a new move after the fourth measure.\r\n\r\n\r\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
     "short_instructions": "Make the moose start a new move after 4 measures!",
     "video_key": "hoc_dance_events",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false"
   },
   "published": true,

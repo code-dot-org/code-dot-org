@@ -9971,6 +9971,8 @@ en:
               description_teacher: ''
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Dance Party:
+              name: Dance Party
         coursee-2019:
           title: Course E (2019)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
