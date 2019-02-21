@@ -105,7 +105,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS SCHOLARSHIP_DROPDOWN_OPTIONS),
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
       source_module: Pd::Teacher1920ApplicationConstants,
       transform_keys: true
     ),
@@ -128,6 +128,15 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_constants(
+      'SCHOLARSHIP_DROPDOWN_OPTIONS',
+      source_module: Pd::ScholarshipInfoConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/scholarshipInfoConstants.js"
   )
 end
 
