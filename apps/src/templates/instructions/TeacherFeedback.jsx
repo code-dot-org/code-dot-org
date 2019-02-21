@@ -102,6 +102,8 @@ class TeacherFeedback extends Component {
     //Pull the student id from the url
     const studentId = queryString.parse(window.location.search).user_id;
 
+    this.onRubricChange = this.onRubricChange.bind(this);
+
     this.state = {
       comment: '',
       performance: null,
@@ -224,6 +226,9 @@ class TeacherFeedback extends Component {
       this.props.disabledMode && this.props.viewAs === ViewType.Teacher
     );
 
+    const dontShowStudentRubric =
+      !this.state.performance && this.props.viewAs === ViewType.Student;
+
     return (
       <div>
         {this.state.errorState === ErrorType.Load && (
@@ -232,7 +237,7 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        {this.props.rubric && (
+        {this.props.rubric && !dontShowStudentRubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
               <h1 style={styles.h1}>Key Concepts</h1>
@@ -246,7 +251,7 @@ class TeacherFeedback extends Component {
                   rubricLevel={'exceeds'}
                   rubricValue={this.props.rubric.exceeds}
                   disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange()}
+                  onChange={this.onRubricChange}
                   currentlyChecked={this.state.performance === 'exceeds'}
                 />
                 <RubricField
@@ -254,7 +259,7 @@ class TeacherFeedback extends Component {
                   rubricLevel={'meets'}
                   rubricValue={this.props.rubric.meets}
                   disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange()}
+                  onChange={this.onRubricChange}
                   currentlyChecked={this.state.performance === 'meets'}
                 />
                 <RubricField
@@ -262,7 +267,7 @@ class TeacherFeedback extends Component {
                   rubricLevel={'approaches'}
                   rubricValue={this.props.rubric.approaches}
                   disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange()}
+                  onChange={this.onRubricChange}
                   currentlyChecked={this.state.performance === 'approaches'}
                 />
                 <RubricField
@@ -270,7 +275,7 @@ class TeacherFeedback extends Component {
                   rubricLevel={'noEvidence'}
                   rubricValue={this.props.rubric.noEvidence}
                   disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange()}
+                  onChange={this.onRubricChange}
                   currentlyChecked={this.state.performance === 'noEvidence'}
                 />
               </form>
