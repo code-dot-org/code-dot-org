@@ -26,6 +26,7 @@ class Census::StateCsOffering < ApplicationRecord
     CA
     CO
     CT
+    DC
     FL
     GA
     IA
@@ -95,6 +96,8 @@ class Census::StateCsOffering < ApplicationRecord
       district_id = row_hash['District Code'][0..2]
       school_id = row_hash['School Code'][3..4]
       School.construct_state_school_id('CT', district_id, school_id)
+    when 'DC'
+      row_hash['State School Id']
     when 'FL'
       row_hash['State School ID']
     when 'GA'
@@ -262,6 +265,13 @@ class Census::StateCsOffering < ApplicationRecord
     'Java Programming',
     'Visual Basic (VB) Programming',
     'C++ Programming'
+  ].freeze
+
+  DC_COURSE_CODES = [
+    UNSPECIFIED_COURSE,
+    '10011',
+    '10157',
+    '10152'
   ].freeze
 
   FL_COURSE_CODES = %w(
@@ -1209,6 +1219,8 @@ class Census::StateCsOffering < ApplicationRecord
       enrollment = row_hash['CourseEnrollments']
       # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
       CT_COURSE_CODES.select {|course| course == row_hash['Course'] && enrollment != '*' && enrollment.to_i > 0}
+    when 'DC'
+      DC_COURSE_CODES.select {|course| course == row_hash['Teaches CS?']}
     when 'FL'
       FL_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'GA'
