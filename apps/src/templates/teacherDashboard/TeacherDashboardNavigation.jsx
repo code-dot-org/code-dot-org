@@ -128,7 +128,12 @@ export default class TeacherDashboardNavigation extends Component {
       : styles.chevron;
 
     return (
-      <div ref="navbar" style={containerStyles} onScroll={this.handleScroll}>
+      <div
+        ref="navbar"
+        id="uitest-teacher-dashboard-nav"
+        style={containerStyles}
+        onScroll={this.handleScroll}
+      >
         {listPosition !== ListPosition.start && shouldScroll && (
           <FontAwesome
             icon="chevron-left"
