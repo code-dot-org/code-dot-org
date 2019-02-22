@@ -262,12 +262,12 @@ module Pd::Application
     def dynamic_required_fields(hash)
       [].tap do |required|
         if hash[:completing_on_behalf_of_someone_else] == YES
-          required.concat [:completing_on_behalf_of_name]
+          required << :completing_on_behalf_of_name
         end
 
         if hash[:able_to_attend_multiple]
           if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).any?
-            required.concat [:travel_to_another_workshop]
+            required << :travel_to_another_workshop
           end
         end
 
@@ -276,25 +276,19 @@ module Pd::Application
         end
 
         if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
-          required.concat [:scholarship_reasons]
+          required << :scholarship_reasons
         end
 
         if hash[:program] == PROGRAMS[:csd]
-          required.concat [
-            :csd_which_grades,
-          ]
+          required.concat << :csd_which_grades
         elsif hash[:program] == PROGRAMS[:csp]
-          required.concat [
-            :csp_which_grades,
-            :csp_how_offer,
-          ]
+          required << :csp_which_grades
+          required << :csp_how_offer
         end
 
         if hash[:regional_partner_workshop_ids].presence
-          required.concat [
-            :able_to_attend_multiple,
-            :committed
-          ]
+          required << :able_to_attend_multiple
+          required << :committed
         end
       end
     end
