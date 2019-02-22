@@ -15,7 +15,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
   # GET /api/v1/users/<user_id>/contact_details
   def get_contact_details
     render json: {
-      user_name: current_user.name,
+      user_name: current_user&.name,
       email: current_user&.email,
       zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
     }
