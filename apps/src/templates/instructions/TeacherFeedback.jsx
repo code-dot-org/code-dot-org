@@ -9,6 +9,7 @@ import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import RubricField from './RubricField';
+import {CommentArea} from './CommentArea';
 
 const styles = {
   textInput: {
@@ -103,6 +104,7 @@ class TeacherFeedback extends Component {
     const studentId = queryString.parse(window.location.search).user_id;
 
     this.onRubricChange = this.onRubricChange.bind(this);
+    this.onCommentChange = this.onCommentChange.bind(this);
 
     this.state = {
       comment: '',
@@ -151,8 +153,8 @@ class TeacherFeedback extends Component {
     }
   };
 
-  onCommentChange = event => {
-    this.setState({comment: event.target.value});
+  onCommentChange = value => {
+    this.setState({comment: value});
   };
 
   onRubricChange = value => {
@@ -282,33 +284,17 @@ class TeacherFeedback extends Component {
         )}
         {showFeedbackInputAreas && !dontShowStudentComment && (
           <div style={styles.commentArea}>
-            <div>
-              <div style={styles.studentTime}>
-                <h1 style={styles.h1}>Teacher Feedback</h1>
-                {this.props.viewAs === ViewType.Student &&
-                  this.state.latestFeedback.length > 0 && (
-                    <div style={styles.time} id="ui-test-feedback-time">
-                      {i18n.lastUpdated({
-                        time: moment
-                          .min(moment(), moment(latestFeedback.created_at))
-                          .fromNow()
-                      })}
-                    </div>
-                  )}
-              </div>
-              <textarea
-                id="ui-test-feedback-input"
-                style={
-                  this.props.disabledMode
-                    ? styles.textInputStudent
-                    : styles.textInput
-                }
-                onChange={this.onCommentChange}
-                placeholder={placeholderText}
-                value={this.state.comment}
-                readOnly={this.props.disabledMode}
-              />
-            </div>
+            <CommentArea
+              disabledMode={this.props.disabledMode}
+              comment={this.state.comment}
+              placeholderText={placeholderText}
+              studentHasFeedback={
+                this.props.viewAs === ViewType.Student &&
+                this.state.latestFeedback.length > 0
+              }
+              feedbackTimeStamp={latestFeedback.created_at}
+              onCommentChange={this.onCommentChange}
+            />
             <div style={styles.footer}>
               {this.props.viewAs === ViewType.Teacher && (
                 <div style={styles.button}>
