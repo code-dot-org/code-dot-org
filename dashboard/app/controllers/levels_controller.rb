@@ -100,7 +100,7 @@ class LevelsController < ApplicationController
     @level.properties[type] = blocks_xml
     @level.log_changes(current_user)
     @level.save!
-    render json: {redirect: edit_level_url(@level)}
+    render json: {redirect: level_url(@level)}
   end
 
   def update_properties
@@ -115,7 +115,7 @@ class LevelsController < ApplicationController
     @level.log_changes(current_user)
     @level.save!
 
-    render json: {redirect: edit_level_url(@level)}
+    render json: {redirect: level_url(@level)}
   end
 
   # PATCH/PUT /levels/1
