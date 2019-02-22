@@ -157,7 +157,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
-  after_create :migrate_to_multi_auth
+  before_create :migrate_to_multi_auth
 
   # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
@@ -207,9 +207,8 @@ class User < ActiveRecord::Base
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
+  validates_associated :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
-
-  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -223,6 +222,8 @@ class User < ActiveRecord::Base
       end
     end
   end
+
+  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
