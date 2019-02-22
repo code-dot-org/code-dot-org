@@ -3,7 +3,7 @@
   "config": {
     "func": "allSpritesWithAnimation",
     "inline": false,
-    "blockText": "aalab all {ANIMATION}",
+    "blockText": "{ANIMATION}",
     "returnType": "Sprite",
     "color": [
       355,
