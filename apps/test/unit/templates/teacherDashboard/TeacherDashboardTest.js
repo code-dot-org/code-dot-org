@@ -9,7 +9,7 @@ const DEFAULT_PROPS = {
   sectionId: 1,
   sectionName: 'My Section',
   location: {},
-  studentCount: 0
+  studentCount: 5
 };
 
 describe('TeacherDashboard', () => {
@@ -40,5 +40,33 @@ describe('TeacherDashboard', () => {
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
     expect(wrapper.instance().props.location.pathname).to.equal('/progress');
+  });
+
+  it('defaults to manage students tab if no tab provided in route and section has 0 students', () => {
+    const location = {pathname: '/'};
+    const wrapper = shallow(
+      <TeacherDashboard
+        {...DEFAULT_PROPS}
+        location={location}
+        studentCount={0}
+      />
+    );
+    expect(wrapper.instance().props.location.pathname).to.equal(
+      '/manage_students'
+    );
+  });
+
+  it('defaults to manage students tab if incorrect tab provided in route and section has 0 students', () => {
+    const location = {pathname: '/some_fake_path'};
+    const wrapper = shallow(
+      <TeacherDashboard
+        {...DEFAULT_PROPS}
+        location={location}
+        studentCount={0}
+      />
+    );
+    expect(wrapper.instance().props.location.pathname).to.equal(
+      '/manage_students'
+    );
   });
 });
