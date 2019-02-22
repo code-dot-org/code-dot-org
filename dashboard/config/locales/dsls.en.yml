@@ -1039,6 +1039,9 @@ en:
         title: title
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Optional Data Questions:
+        A selection of data questions in the style of the AP exam: A selection of data questions in the style of the AP exam
+        Optional Data Questions: Optional Data Questions
       CSP Pre-survey: {}
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
@@ -4263,6 +4266,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -8653,6 +8659,12 @@ en:
         : Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
         Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.: Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.
         Two devices must communicate using the same bit-rate to successfully send and receive digital data.: Two devices must communicate using the same bit-rate to successfully send and receive digital data.
+      CSPFinal_Question_2_2018_2019 edit:
+        Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.: Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.
+        ? Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        : Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.: Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.
+        Two devices must communicate using the same bit-rate to successfully send and receive digital data.: Two devices must communicate using the same bit-rate to successfully send and receive digital data.
       CSPFinal_Question_2_exam_prep:
         High bandwidth, high latency: High bandwidth, high latency
         High bandwidth, low latency: High bandwidth, low latency
@@ -10450,6 +10462,18 @@ en:
         No, that is not even close.: No, that is not even close.
         What is 1 + 1?: What is 1 + 1?
         Yes, you are a genius!: Yes, you are a genius!
+      U1 CSP 2019 Assessment Bandwidth Choose 2:
+        'Bandwidth: a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.': 'Bandwidth: a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.'
+        'Bandwidth: the time elapsed between the transmission and the receipt of a request.': 'Bandwidth: the time elapsed between the transmission and the receipt of a request.'
+        Choose 2: Choose 2
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        'Latency:  a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.': 'Latency:  a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.'
+        'Latency: the time elapsed between the transmission and the receipt of a request.': 'Latency: the time elapsed between the transmission and the receipt of a request.'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
       U1 Ch1 Assessment question 4 to 8 bit:
         2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
         2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
