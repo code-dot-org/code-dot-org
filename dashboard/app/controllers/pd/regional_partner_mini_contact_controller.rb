@@ -8,7 +8,7 @@ class Pd::RegionalPartnerMiniContactController < ApplicationController
     options = Pd::RegionalPartnerMiniContact.options.camelize_keys
     options.merge!(
       {
-        user_name: current_user.name,
+        user_name: current_user&.name,
         email: current_user&.email,
         zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
         notes: "I'm interested in Professional Learning!"

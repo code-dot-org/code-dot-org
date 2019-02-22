@@ -35,10 +35,6 @@ export default class RegionalPartnerMiniContact extends React.Component {
     };
   }
 
-  validateRequiredFields = () => {
-    return true;
-  };
-
   submit = () => {
     const params = {
       name: this.state.name,
