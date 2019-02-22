@@ -67,7 +67,9 @@ class RubricField extends Component {
         {this.props.showFeedbackInputAreas && (
           <input
             type={'checkbox'}
-            id={'rubric-input-${this.props.rubricLevel}'}
+            //Concatenate because injecting the string seems to result in all of
+            //the input elements having the name id
+            id={'rubric-input-' + this.props.rubricLevel}
             name="rubric"
             value={this.props.rubricLevel}
             checked={this.props.currentlyChecked}
