@@ -24,6 +24,25 @@ class LevelsControllerTest < ActionController::TestCase
     }
   end
 
+  test "should get rubric" do
+    level = create(:level,
+      mini_rubric: 'true',
+      rubric_key_concept: 'This is the key concept',
+      rubric_exceeds: 'This is great',
+      rubric_meets: 'This is good',
+      rubric_approaches: 'This is okay',
+      rubric_no_evidence: 'This is bad'
+    )
+    get :get_rubric, params: {level_id: level.id}
+    assert_equal JSON.parse(@response.body), {
+      "keyConcept" => "This is the key concept",
+      "exceeds" => "This is great",
+      "meets" => "This is good",
+      "approaches" => "This is okay",
+      "noEvidence" => "This is bad"
+    }
+  end
+
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
