@@ -76,8 +76,10 @@ export default class RegionalPartnerMiniContact extends React.Component {
           submitting: false
         });
       }
-    } else {
+    } else if (results.responseJSON) {
       this.setState({submitted: true, submitting: false});
+    } else {
+      this.setState({submitted: false, submitting: false});
     }
   };
 

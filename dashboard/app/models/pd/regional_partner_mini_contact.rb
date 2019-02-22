@@ -77,10 +77,6 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
     zipcode = hash[:zip]
     state = nil
 
-    puts hash.to_json
-    puts zipcode
-
-    puts RegionalPartner.find_by_region(zipcode, state).to_json
     self.regional_partner = RegionalPartner.find_by_region(zipcode, state)
   end
 end

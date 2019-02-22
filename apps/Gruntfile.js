@@ -660,6 +660,9 @@ describe('entry tests', () => {
 
     regionalPartnerSearch: './src/regionalPartnerSearch/regionalPartnerSearch',
 
+    regionalPartnerMiniContact:
+      './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+
     cookieBanner: './src/cookieBanner/cookieBanner.js'
   };
 
@@ -864,7 +867,12 @@ describe('entry tests', () => {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
-      .concat('common', 'tutorialExplorer', 'regionalPartnerSearch')
+      .concat(
+        'common',
+        'tutorialExplorer',
+        'regionalPartnerSearch',
+        'regionalPartnerMiniContact'
+      )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =

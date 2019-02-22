@@ -22,9 +22,4 @@ class Pd::RegionalPartnerMiniContactController < ApplicationController
       }.to_json
     }
   end
-
-  # Get /pd/regional_partner_mini_contacts/:contact_id/thanks
-  def thanks
-    @regional_partner = @regional_partner_mini_contact.try(:regional_partner)
-  end
 end
