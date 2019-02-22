@@ -54,6 +54,8 @@ class AuthenticationOption < ApplicationRecord
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
     GOOGLE,
+    # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
+    WINDOWS_LIVE,
     MICROSOFT
   ]
 
