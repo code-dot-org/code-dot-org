@@ -53,7 +53,7 @@ class Section < ActiveRecord::Base
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
-  has_many :students, -> {order('name')}, through: :followers, source: :student_user
+  has_many :students, -> {distinct.order('name')}, through: :followers, source: :student_user
   accepts_nested_attributes_for :students
 
   validates :name, presence: true, unless: -> {deleted?}
