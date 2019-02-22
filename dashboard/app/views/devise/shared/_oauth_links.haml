@@ -6,12 +6,6 @@
     %br/
     %br/
 
-  / TODO: (madelynkasula) delete this code and unlocks/new view
-  - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
-    = link_to t('auth.need_unlock'), new_unlock_path(resource_name)
-    %br/
-    %br/
-
   - if controller_name == 'sessions'
     = t('add_teacher_form.code.instructions_short')
     = form_tag(student_user_new_path, method: :get, class: 'section-sign-in') do
