@@ -279,16 +279,16 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
           {this.props.data.regionalPartnerId && (
             <div>
               <label>
-                There may be a fee associated with the program in your region.
-                There also may be scholarships available to help cover the cost
-                of the program. You can check{' '}
+                There may be scholarships available in your region to cover the
+                cost of the program.{' '}
                 <a
                   href="https://code.org/educate/professional-learning/program-information"
                   target="_blank"
                 >
-                  this page to see if there are
-                </a>{' '}
-                fees and/or scholarships available in your region.
+                  Click here to check the fees and discounts for your program
+                </a>
+                . Let us know if your school would be able to pay the fee or if
+                you need to be considered for a scholarship.
               </label>
               {this.radioButtonsFor('payFee')}
               {this.props.data.payFee === TextFields.noPayFee1920 &&
