@@ -1999,35 +1999,9 @@ a.download-video {
       border: 1px solid $facebook_blue;
     }
 
-    &.with-windowslive {
+    &.with-microsoft_v2_auth {
       background-color: $microsoft_blue;
       border: 1px solid $microsoft_blue;
-    }
-  }
-}
-
-// OLD STYLES FOR devise/shared/_old_links
-.devise_link_section {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  .or_break {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    margin-left: -20px;
-    .vertical_bar {
-      width: 2px;
-      height: 100%;
-      background-color: $light_gray;
-    }
-    p {
-      font-size: 20px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      color: $teal;
-      font-weight: bolder;
     }
   }
 }
