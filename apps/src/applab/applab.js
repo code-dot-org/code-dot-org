@@ -70,7 +70,7 @@ import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
-
+import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
 
@@ -376,7 +376,12 @@ Applab.init = function(config) {
     throw 'App Lab requires Droplet';
   }
 
-  if (!config.channel) {
+  if (config.level.editBlocks) {
+    header.showLevelBuilderSaveButton(() => ({
+      start_blocks: Applab.getCode(),
+      start_html: Applab.getHtml()
+    }));
+  } else if (!config.channel) {
     throw new Error(
       'Cannot initialize App Lab without a channel id. ' +
         'You may need to sign in to your code studio account first.'

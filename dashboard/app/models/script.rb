@@ -214,23 +214,38 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    user_experiments_enabled = Course.has_any_course_experiments?(user)
-    with_hidden = !user_experiments_enabled && user.hidden_script_access?
-    cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
-    scripts = Rails.cache.fetch(cache_key) do
-      Script.
-          all.
-          select {|script| with_hidden || !script.hidden}
-    end
+    has_any_course_experiments = Course.has_any_course_experiments?(user)
+    with_hidden = !has_any_course_experiments && user.hidden_script_access?
+    scripts = with_hidden ? all_scripts : visible_scripts
 
-    if user_experiments_enabled
+    if has_any_course_experiments
       scripts = scripts.map do |script|
         alternate_script = script.alternate_script(user)
         alternate_script.presence || script
       end
     end
 
+    if !with_hidden && has_any_pilot_access?(user)
+      scripts = scripts.concat(all_scripts.select {|s| s.has_pilot_access?(user)})
+    end
+
     scripts
+  end
+
+  class << self
+    private
+
+    def all_scripts
+      Rails.cache.fetch('valid_scripts/all') do
+        Script.all
+      end
+    end
+
+    def visible_scripts
+      Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.reject(&:hidden)
+      end
+    end
   end
 
   # @param [User] user
@@ -1453,5 +1468,17 @@ class Script < ActiveRecord::Base
     script_levels.select do |sl|
       sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
     end
+  end
+
+  def pilot?
+    !!pilot_experiment
+  end
+
+  def has_pilot_access?(user = nil)
+    pilot? && !!user&.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  def self.has_any_pilot_access?(user = nil)
+    !!user&.permission?(UserPermission::LEVELBUILDER)
   end
 end
