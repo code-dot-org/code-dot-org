@@ -270,6 +270,10 @@ GEM
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.0.1)
+    aws-google (0.1.1)
+      aws-sdk-core (~> 3)
+      google-api-client (~> 0.23)
+      launchy (~> 2)
     aws-partitions (1.104.0)
     aws-sdk-acm (1.9.0)
       aws-sdk-core (~> 3)
@@ -890,6 +894,7 @@ DEPENDENCIES
   addressable
   annotate
   auto_strip_attributes (~> 2.1)
+  aws-google
   aws-sdk-acm (~> 1)
   aws-sdk-cloudformation (~> 1)
   aws-sdk-cloudfront (~> 1)
@@ -955,7 +960,6 @@ DEPENDENCIES
   jumphash
   jwt
   kaminari
-  launchy
   le (~> 2.2)
   lograge!
   loofah (~> 2.2.1)

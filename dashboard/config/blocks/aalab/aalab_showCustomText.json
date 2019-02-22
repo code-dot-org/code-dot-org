@@ -12,19 +12,23 @@
     "args": [
       {
         "name": "TEXT",
-        "type": "String"
+        "type": "String",
+        "defer": true
       },
       {
         "name": "LOCATION",
-        "type": "Location"
+        "type": "Location",
+        "defer": true
       },
       {
         "name": "SIZE",
-        "type": "Number"
+        "type": "Number",
+        "defer": true
       },
       {
         "name": "COLOR",
-        "type": "Colour"
+        "type": "Colour",
+        "defer": true
       },
       {
         "name": "DURATION",

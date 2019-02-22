@@ -220,6 +220,7 @@ class ProjectsList extends React.Component {
 
     return (
       <Table.Provider
+        id="uitest-projects-table"
         className="pure-table pure-table-striped"
         columns={columns}
         style={tableLayoutStyles.table}
