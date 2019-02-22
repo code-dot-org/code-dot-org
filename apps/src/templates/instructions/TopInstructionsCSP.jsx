@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import FeedbacksList from './FeedbacksList';
 import TeacherFeedback from './TeacherFeedback';
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
@@ -26,6 +25,7 @@ import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -138,6 +138,7 @@ class TopInstructions extends Component {
         ? TabType.COMMENTS
         : TabType.INSTRUCTIONS,
       feedbacks: [],
+      rubric: null,
       displayFeedbackTeacherFacing: teacherViewingStudentWork
     };
   }
@@ -165,6 +166,18 @@ class TopInstructions extends Component {
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
         this.setState({feedbacks: data});
+      });
+    }
+    //While this is behind an experiment flag we will only pull the rubric
+    //if the experiment is enable. This should prevent us from showing the
+    //rubric if not in the experiment.
+    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+      $.ajax({
+        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      }).done(data => {
+        this.setState({rubric: data});
       });
     }
   }
@@ -292,8 +305,9 @@ class TopInstructions extends Component {
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
     const displayFeedbackStudent =
       this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-    const displayFeedback =
-      displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
+    const displayFeedbackTeacher =
+      this.props.viewAs === ViewType.Teacher && this.state.rubric;
+    const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
       this.state.displayFeedbackTeacherFacing;
@@ -382,17 +396,15 @@ class TopInstructions extends Component {
               />
             )}
             {this.state.tabSelected === TabType.COMMENTS && (
-              <div>
-                {this.props.viewAs === ViewType.Teacher && (
-                  <TeacherFeedback ref="commentTab" />
-                )}
-                {this.props.viewAs === ViewType.Student && (
-                  <FeedbacksList
-                    feedbacks={this.state.feedbacks}
-                    ref="commentTab"
-                  />
-                )}
-              </div>
+              <TeacherFeedback
+                user={this.props.user}
+                disabledMode={
+                  this.props.viewAs === ViewType.Student ||
+                  !this.state.displayFeedbackTeacherFacing
+                }
+                rubric={this.state.rubric}
+                ref="commentTab"
+              />
             )}
           </div>
           {!this.props.isEmbedView && (
