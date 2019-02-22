@@ -35,6 +35,7 @@ var show_score = false;
 var title = '';
 var subTitle = '';
 var customText = [];
+var customTextHidden = false;
 var animationGroups = {};
 var thisSprite;
 var otherSprite;
@@ -517,5 +518,7 @@ function draw() {
   }
   drawSprites();
   updateHUDText();
-  printCustomText();
+  if(!customTextHidden) {
+    printCustomText();
+  }
 }
