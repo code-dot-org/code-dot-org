@@ -216,6 +216,8 @@ class TeacherFeedback extends Component {
     const dontShowStudentRubric =
       !this.state.performance && this.props.viewAs === ViewType.Student;
 
+    const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
+
     return (
       <div>
         {this.state.errorState === ErrorType.Load && (
@@ -233,38 +235,17 @@ class TeacherFeedback extends Component {
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}>Evaluation Rubric</h1>
               <form>
-                <RubricField
-                  showFeedbackInputAreas={showFeedbackInputAreas}
-                  rubricLevel={'exceeds'}
-                  rubricValue={this.props.rubric.exceeds}
-                  disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange}
-                  currentlyChecked={this.state.performance === 'exceeds'}
-                />
-                <RubricField
-                  showFeedbackInputAreas={showFeedbackInputAreas}
-                  rubricLevel={'meets'}
-                  rubricValue={this.props.rubric.meets}
-                  disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange}
-                  currentlyChecked={this.state.performance === 'meets'}
-                />
-                <RubricField
-                  showFeedbackInputAreas={showFeedbackInputAreas}
-                  rubricLevel={'approaches'}
-                  rubricValue={this.props.rubric.approaches}
-                  disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange}
-                  currentlyChecked={this.state.performance === 'approaches'}
-                />
-                <RubricField
-                  showFeedbackInputAreas={showFeedbackInputAreas}
-                  rubricLevel={'noEvidence'}
-                  rubricValue={this.props.rubric.noEvidence}
-                  disabledMode={this.props.disabledMode}
-                  onChange={this.onRubricChange}
-                  currentlyChecked={this.state.performance === 'noEvidence'}
-                />
+                {rubricLevels.map(level => (
+                  <RubricField
+                    key={level}
+                    showFeedbackInputAreas={showFeedbackInputAreas}
+                    rubricLevel={level}
+                    rubricValue={this.props.rubric[level]}
+                    disabledMode={this.props.disabledMode}
+                    onChange={this.onRubricChange}
+                    currentlyChecked={this.state.performance === level}
+                  />
+                ))}
               </form>
             </div>
           </div>

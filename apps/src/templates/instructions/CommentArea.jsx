@@ -30,8 +30,7 @@ export class CommentArea extends Component {
     disabledMode: PropTypes.bool,
     comment: PropTypes.string,
     placeholderText: PropTypes.string,
-    studentHasFeedback: PropTypes.bool,
-    onCommentChange: PropTypes.func
+    onCommentChange: PropTypes.func.isRequired
   };
 
   commentChanged = event => {
@@ -39,14 +38,15 @@ export class CommentArea extends Component {
   };
 
   render() {
+    const textInputStyle = this.props.disabledMode
+      ? styles.textInputStudent
+      : styles.textInput;
     return (
       <div>
         <h1 style={styles.h1}>Teacher Feedback</h1>
         <textarea
           id="ui-test-feedback-input"
-          style={
-            this.props.disabledMode ? styles.textInputStudent : styles.textInput
-          }
+          style={textInputStyle}
           onChange={this.commentChanged}
           placeholder={this.props.placeholderText}
           value={this.props.comment}
