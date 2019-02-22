@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import moment from 'moment/moment';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
@@ -16,15 +14,6 @@ const styles = {
     display: 'block',
     width: '90%',
     backgroundColor: color.lightest_cyan
-  },
-  time: {
-    fontStyle: 'italic',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  studentTime: {
-    display: 'flex',
-    justifyContent: 'space-between'
   },
   h1: {
     color: color.charcoal,
@@ -42,7 +31,6 @@ export class CommentArea extends Component {
     comment: PropTypes.string,
     placeholderText: PropTypes.string,
     studentHasFeedback: PropTypes.bool,
-    feedbackTimeStamp: PropTypes.string,
     onCommentChange: PropTypes.func
   };
 
@@ -53,18 +41,7 @@ export class CommentArea extends Component {
   render() {
     return (
       <div>
-        <div style={styles.studentTime}>
-          <h1 style={styles.h1}>Teacher Feedback</h1>
-          {this.props.studentHasFeedback && (
-            <div style={styles.time} id="ui-test-feedback-time">
-              {i18n.lastUpdated({
-                time: moment
-                  .min(moment(), moment(this.props.feedbackTimeStamp))
-                  .fromNow()
-              })}
-            </div>
-          )}
-        </div>
+        <h1 style={styles.h1}>Teacher Feedback</h1>
         <textarea
           id="ui-test-feedback-input"
           style={
