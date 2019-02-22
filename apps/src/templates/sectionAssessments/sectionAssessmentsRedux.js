@@ -303,7 +303,7 @@ export const getCurrentQuestion = state => {
 
       return {
         question: question.question_text,
-        ...answers
+        answers: answers
       };
     } else {
       return emptyQuestion;
