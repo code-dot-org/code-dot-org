@@ -44,9 +44,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @script = @custom_script
     @script_level = @custom_s1_l1
 
-    @pilot_script_level = create :script_level
-    @pilot_script_level.script.pilot_experiment = 'pilot-experiment'
-    @pilot_script_level.script.save!
+    pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
+    @pilot_script_level = create :script_level, script: pilot_script
   end
 
   setup do

@@ -1441,14 +1441,14 @@ endvariants
     levelbuilder = create :levelbuilder
 
     pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
-    assert_equal true, pilot_script.hidden
-    assert_equal true, has_pilot_script?(Script.all)
+    assert pilot_script.hidden
+    assert Script.all.any?(&:pilot?)
 
     teacher_scripts = Script.valid_scripts(teacher)
-    assert_equal false, has_pilot_script?(teacher_scripts)
+    refute teacher_scripts.any?(&:pilot?)
 
     levelbuilder_scripts = Script.valid_scripts(levelbuilder)
-    assert_equal true, has_pilot_script?(levelbuilder_scripts)
+    assert levelbuilder_scripts.any?(&:pilot?)
   end
 
   test "get_assessment_script_levels returns an empty list if no level groups" do
@@ -1546,7 +1546,7 @@ endvariants
 
     assert_equal 'pilot-script', script.name
     assert_equal 'pilot-experiment', script.pilot_experiment
-    assert_equal true, script.hidden
+    assert script.hidden
   end
 
   test 'has pilot access' do
@@ -1554,17 +1554,17 @@ endvariants
     levelbuilder = create :levelbuilder
 
     script = create :script
-    assert_equal false, script.pilot?
-    assert_equal false, script.has_pilot_access?
-    assert_equal false, script.has_pilot_access?(teacher)
-    assert_equal false, script.has_pilot_access?(levelbuilder)
+    refute script.pilot?
+    refute script.has_pilot_access?
+    refute script.has_pilot_access?(teacher)
+    refute script.has_pilot_access?(levelbuilder)
 
     # for now, only levelbuilders have pilot script access.
     script.pilot_experiment = 'my-experiment'
-    assert_equal true, script.pilot?
-    assert_equal false, script.has_pilot_access?
-    assert_equal false, script.has_pilot_access?(teacher)
-    assert_equal true, script.has_pilot_access?(levelbuilder)
+    assert script.pilot?
+    refute script.has_pilot_access?
+    refute script.has_pilot_access?(teacher)
+    assert script.has_pilot_access?(levelbuilder)
   end
 
   test 'has any pilot access' do
@@ -1572,18 +1572,14 @@ endvariants
     levelbuilder = create :levelbuilder
 
     # for now, only levelbuilders have any pilot access.
-    assert_equal false, Script.has_any_pilot_access?
-    assert_equal false, Script.has_any_pilot_access?(teacher)
-    assert_equal true, Script.has_any_pilot_access?(levelbuilder)
+    refute Script.has_any_pilot_access?
+    refute Script.has_any_pilot_access?(teacher)
+    assert Script.has_any_pilot_access?(levelbuilder)
   end
 
   private
 
   def has_hidden_script?(scripts)
     scripts.any?(&:hidden)
-  end
-
-  def has_pilot_script?(scripts)
-    scripts.any?(&:pilot?)
   end
 end
