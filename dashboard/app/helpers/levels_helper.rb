@@ -95,7 +95,7 @@ module LevelsHelper
       )
     end
 
-    channel_token.try :channel
+    channel_token&.channel
   end
 
   def select_and_track_autoplay_video
@@ -153,7 +153,10 @@ module LevelsHelper
     return @app_options unless @app_options.nil?
 
     if @level.channel_backed?
-      view_options(channel: get_channel_for(@level, @user))
+      view_options(
+        channel: get_channel_for(@level, @user),
+        server_project_level_id: @level.project_template_level.try(:id),
+      )
       # readonly if viewing another user's channel
       readonly_view_options if @user
     end
@@ -187,11 +190,6 @@ module LevelsHelper
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
-
-    if @level.channel_backed?
-      view_options(is_channel_backed: true)
-      view_options(server_project_level_id: @level.project_template_level.try(:id))
-    end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
