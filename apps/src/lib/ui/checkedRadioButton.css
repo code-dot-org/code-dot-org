@@ -1,0 +1,31 @@
+input[type=radio].with-font {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input[type=radio].with-font ~ label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f1db";  /* fa-circle-thin */
+    letter-spacing: 10px;
+    font-size: 1.5em;
+    color: color.black;
+    width: 1.4em;   /* reduce bounce */
+}
+input[type=radio].with-font:checked ~ label:before  {
+    content: "\f058";  /* fa-check-circle */
+    font-size: 1.5em;
+    color: #0094ca;
+    letter-spacing: 5px;
+}
+input[type=radio].with-font:focus ~ label:before,
+input[type=radio].with-font:focus ~ label
+{
+    color: color.cyan; /* highlight both box and label */
+}

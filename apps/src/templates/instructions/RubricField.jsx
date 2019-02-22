@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
+import {CheckRadioButton} from '../../lib/ui/CheckedRadioButton';
 
 const styles = {
   detailsArea: {
@@ -54,8 +55,14 @@ class RubricField extends Component {
     currentlyChecked: PropTypes.bool
   };
 
-  handleRubricChange = event => {
-    this.props.onChange(event.target.value);
+  constructor(props) {
+    super(props);
+
+    this.handleRubricChange = this.handleRubricChange.bind(this);
+  }
+
+  handleRubricChange = value => {
+    this.props.onChange(value);
   };
 
   render() {
@@ -65,14 +72,12 @@ class RubricField extends Component {
     return (
       <div style={performanceHeaderStyle}>
         {this.props.showFeedbackInputAreas && (
-          <input
-            type={'checkbox'}
+          <CheckRadioButton
             id={'rubric-input-${this.props.rubricLevel}'}
-            name="rubric"
             value={this.props.rubricLevel}
             checked={this.props.currentlyChecked}
-            onChange={this.handleRubricChange}
-            disabled={this.props.disabledMode}
+            onRadioButtonChange={this.handleRubricChange}
+            disabledMode={this.props.disabledMode}
           />
         )}
         <details style={styles.detailsArea}>
