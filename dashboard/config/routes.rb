@@ -225,6 +225,7 @@ Dashboard::Application.routes.draw do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
+    post 'update_properties'
     post 'clone', to: 'levels#clone'
   end
 
