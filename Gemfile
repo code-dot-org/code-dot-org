@@ -62,6 +62,7 @@ group :development do
   gem 'annotate'
   gem 'pry'
   gem 'ruby-progressbar', require: false
+  gem 'taglib-ruby'
   gem 'web-console'
 end
 
