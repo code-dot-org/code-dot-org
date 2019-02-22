@@ -16,7 +16,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
   path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
-  path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
+  path.resolve(__dirname, 'node_modules', 'json-parse-better-errors')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -24,18 +24,53 @@ const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     alias: {
-      '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
-      '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
-      '@cdo/applab/locale': path.resolve(__dirname, 'src', 'applab', 'locale-do-not-import.js'),
-      '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
-      '@cdo/weblab/locale': path.resolve(__dirname, 'src', 'weblab', 'locale-do-not-import.js'),
-      '@cdo/tutorialExplorer/locale': path.resolve(__dirname, 'src', 'tutorialExplorer', 'locale-do-not-import.js'),
-      '@cdo/regionalPartnerSearch/locale': path.resolve(__dirname, 'src', 'regionalPartnerSearch', 'locale-do-not-import.js'),
+      '@cdo/locale': path.resolve(
+        __dirname,
+        'src',
+        'util',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/netsim/locale': path.resolve(
+        __dirname,
+        'src',
+        'netsim',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/applab/locale': path.resolve(
+        __dirname,
+        'src',
+        'applab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/gamelab/locale': path.resolve(
+        __dirname,
+        'src',
+        'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/weblab/locale': path.resolve(
+        __dirname,
+        'src',
+        'weblab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/tutorialExplorer/locale': path.resolve(
+        __dirname,
+        'src',
+        'tutorialExplorer',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/regionalPartnerSearch/locale': path.resolve(
+        __dirname,
+        'src',
+        'regionalPartnerSearch',
+        'locale-do-not-import.js'
+      ),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
-      repl: path.resolve(__dirname, 'src/noop'),
+      repl: path.resolve(__dirname, 'src/noop')
     }
   },
   module: {
@@ -44,45 +79,44 @@ var baseConfig = {
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
-      {test: /\.scss$/, loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`},
+      {
+        test: /\.scss$/,
+        loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`
+      },
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
       {test: /\.exported_js$/, loader: 'raw-loader'},
       {
-        test:/\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         include: [
           path.resolve(__dirname, 'static'),
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
-          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
+          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images')
         ],
         // note that in the name template given below, a dash prefixing
         // the hash is explicitly avoided. If rails tries to serve
         // this file when asset digests are turned off, it will return a
         // 404 because it thinks the hash is a digest and it won't
         // be able to find the file without the hash. :( :(
-        loader: "url-loader?limit=1024&name=[name]wp[hash].[ext]",
+        loader: 'url-loader?limit=1024&name=[name]wp[hash].[ext]'
       },
       {
         test: /\.jsx?$/,
         enforce: 'pre',
         include: [
           path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'test'),
+          path.resolve(__dirname, 'test')
         ].concat(toTranspileWithinNodeModules),
-        exclude: [
-          path.resolve(__dirname, 'src', 'lodash.js'),
-        ],
-        loader: "babel-loader",
+        exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
+        loader: 'babel-loader',
         query: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
-          compact: false,
+          compact: false
         }
-      },
+      }
     ],
-    noParse: [
-      /html2canvas/,
-    ],
-  },
+    noParse: [/html2canvas/]
+  }
 };
 
 if (envConstants.HOT) {
@@ -95,19 +129,22 @@ if (envConstants.HOT) {
 
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
-  baseConfig.module.rules.splice(-1, 1,
+  baseConfig.module.rules.splice(
+    -1,
+    1,
     {
       test: /\.jsx?$/,
       enforce: 'pre',
-      include: [
-        path.resolve(__dirname, 'test'),
-      ].concat(toTranspileWithinNodeModules),
-      loader: "babel-loader",
+      include: [path.resolve(__dirname, 'test')].concat(
+        toTranspileWithinNodeModules
+      ),
+      loader: 'babel-loader',
       query: {
         cacheDirectory: true,
-        compact: false,
+        compact: false
       }
-    }, {
+    },
+    {
       test: /\.jsx?$/,
       enforce: 'pre',
       loader: 'babel-istanbul-loader',
@@ -118,29 +155,27 @@ if (envConstants.COVERAGE) {
         // we need to turn off coverage for this file
         // because we have tests that actually make assertions
         // about the contents of the compiled version of this file :(
-        path.resolve(__dirname, 'src', 'flappy', 'levels.js'),
+        path.resolve(__dirname, 'src', 'flappy', 'levels.js')
       ],
       query: {
         cacheDirectory: true,
-        compact: false,
+        compact: false
       }
     }
   );
 }
 
-var devtool = process.env.DEV ?
-    'cheap-inline-source-map' :
-    'inline-source-map';
+var devtool = process.env.DEV ? 'cheap-inline-source-map' : 'inline-source-map';
 
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
-    }),
+    })
   }),
   externals: {
-    "blockly": "this Blockly",
+    blockly: 'this Blockly'
   },
   plugins: [
     new webpack.ProvidePlugin({React: 'react'}),
@@ -148,10 +183,12 @@ var storybookConfig = _.extend({}, baseConfig, {
       IN_UNIT_TEST: JSON.stringify(false),
       IN_STORYBOOK: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
-      'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
+      'process.env.NODE_ENV': JSON.stringify(
+        envConstants.NODE_ENV || 'development'
+      ),
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
     }),
-    new webpack.IgnorePlugin(/^serialport$/),
+    new webpack.IgnorePlugin(/^serialport$/)
   ]
 });
 
@@ -160,27 +197,70 @@ var karmaConfig = _.extend({}, baseConfig, {
   devtool: devtool,
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
-      '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
-      '@cdo/netsim/locale': path.resolve(__dirname, 'test', 'util', 'netsim', 'locale-do-not-import.js'),
-      '@cdo/applab/locale': path.resolve(__dirname, 'test', 'util', 'applab', 'locale-do-not-import.js'),
-      '@cdo/gamelab/locale': path.resolve(__dirname, 'test', 'util', 'gamelab', 'locale-do-not-import.js'),
-      '@cdo/weblab/locale': path.resolve(__dirname, 'test', 'util', 'weblab', 'locale-do-not-import.js'),
-      '@cdo/tutorialExplorer/locale': path.resolve(__dirname, 'test', 'util', 'tutorialExplorer', 'locale-do-not-import.js'),
-      'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
+      '@cdo/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/netsim/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'netsim',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/applab/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'applab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/gamelab/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/weblab/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'weblab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/tutorialExplorer/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'tutorialExplorer',
+        'locale-do-not-import.js'
+      ),
+      firebase: path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
       // Use mock-firmata to unit test playground-io maker components
-      'firmata': 'mock-firmata/mock-firmata',
-      'chrome-serialport': path.resolve(__dirname, 'test', 'unit', 'lib', 'kits', 'maker', 'StubChromeSerialPort.js'),
-    }),
+      firmata: 'mock-firmata/mock-firmata',
+      'chrome-serialport': path.resolve(
+        __dirname,
+        'test',
+        'unit',
+        'lib',
+        'kits',
+        'maker',
+        'StubChromeSerialPort.js'
+      )
+    })
   }),
   externals: {
-    "blockly": "this Blockly",
+    blockly: 'this Blockly',
 
     // The below are necessary for enzyme to work.
     // See https://github.com/airbnb/enzyme/blob/master/docs/guides/webpack.md
-    "cheerio": "window",
-    "react/addons": true,
-    "react/lib/ExecutionEnvironment": true,
-    "react/lib/ReactContext": true,
+    cheerio: 'window',
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true,
 
     // The below are necessary for serialport import to not choke during webpack-ing.
     fs: '{}',
@@ -193,10 +273,12 @@ var karmaConfig = _.extend({}, baseConfig, {
       IN_UNIT_TEST: JSON.stringify(true),
       IN_STORYBOOK: JSON.stringify(false),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
-      'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
+      'process.env.NODE_ENV': JSON.stringify(
+        envConstants.NODE_ENV || 'development'
+      ),
       LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
-      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
-    }),
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
+    })
   ]
 });
 
@@ -227,20 +309,22 @@ function create(options) {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: "[name]." + (minify ? "min." : "") + "js",
+      filename: '[name].' + (minify ? 'min.' : '') + 'js'
     },
-    devtool: !process.env.CI && options.minify ?  'source-map' : devtool,
+    devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
     externals: externals,
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),
-        'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
+        'process.env.NODE_ENV': JSON.stringify(
+          envConstants.NODE_ENV || 'development'
+        ),
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
       }),
       new webpack.IgnorePlugin(/^serialport$/),
-      new webpack.optimize.OccurrenceOrderPlugin(true),
+      new webpack.optimize.OccurrenceOrderPlugin(true)
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
@@ -248,19 +332,17 @@ function create(options) {
   });
 
   if (minify) {
-    config.plugins = config.plugins.concat(
-      [
-        new webpack.optimize.UglifyJsPlugin({
-          compressor: {
-            warnings: false
-          },
-          // Don't generate source maps for our minified code, as these are expensive
-          // and we haven't been using them.
-          sourceMap: false
-        }),
-        new UnminifiedWebpackPlugin(),
-      ]
-    );
+    config.plugins = config.plugins.concat([
+      new webpack.optimize.UglifyJsPlugin({
+        compressor: {
+          warnings: false
+        },
+        // Don't generate source maps for our minified code, as these are expensive
+        // and we haven't been using them.
+        sourceMap: false
+      }),
+      new UnminifiedWebpackPlugin()
+    ]);
   }
 
   if (watch) {
@@ -279,7 +361,6 @@ function create(options) {
 
   return config;
 }
-
 
 module.exports = {
   config: baseConfig,
