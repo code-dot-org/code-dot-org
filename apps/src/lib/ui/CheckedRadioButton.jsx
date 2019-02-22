@@ -12,7 +12,6 @@ export class CheckRadioButton extends Component {
   };
 
   handleChange = event => {
-    console.log('CheckedRadioButton:' + event.target.value);
     this.props.onRadioButtonChange(event.target.value);
   };
 
