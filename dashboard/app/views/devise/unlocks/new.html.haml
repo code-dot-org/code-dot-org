@@ -1,4 +1,3 @@
-/ TODO: (madelynkasula) delete this view and code in devise/shared/_old_links
 %h2 Resend unlock instructions
 = form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f|
   = devise_error_messages!
@@ -7,4 +6,4 @@
     %br/
     = f.email_field :email, :autofocus => true
   %div= f.submit "Resend unlock instructions"
-= render "devise/shared/old_links"
+= render "devise/shared/new_links"
