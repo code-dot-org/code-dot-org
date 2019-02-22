@@ -104,7 +104,6 @@ class TeacherFeedback extends Component {
     const studentId = queryString.parse(window.location.search).user_id;
 
     this.onRubricChange = this.onRubricChange.bind(this);
-    this.onCommentChange = this.onCommentChange.bind(this);
 
     this.state = {
       comment: '',
@@ -158,6 +157,7 @@ class TeacherFeedback extends Component {
   };
 
   onRubricChange = value => {
+    //If you click on the currently selected performance level clear the performance level
     if (value === this.state.performance) {
       this.setState({performance: null});
     } else {
@@ -292,7 +292,6 @@ class TeacherFeedback extends Component {
                 this.props.viewAs === ViewType.Student &&
                 this.state.latestFeedback.length > 0
               }
-              feedbackTimeStamp={latestFeedback.created_at}
               onCommentChange={this.onCommentChange}
             />
             <div style={styles.footer}>
@@ -313,16 +312,15 @@ class TeacherFeedback extends Component {
                   )}
                 </div>
               )}
-              {this.props.viewAs === ViewType.Teacher &&
-                this.state.latestFeedback.length > 0 && (
-                  <div style={styles.time} id="ui-test-feedback-time">
-                    {i18n.lastUpdated({
-                      time: moment
-                        .min(moment(), moment(latestFeedback.created_at))
-                        .fromNow()
-                    })}
-                  </div>
-                )}
+              {this.state.latestFeedback.length > 0 && (
+                <div style={styles.time} id="ui-test-feedback-time">
+                  {i18n.lastUpdated({
+                    time: moment
+                      .min(moment(), moment(latestFeedback.created_at))
+                      .fromNow()
+                  })}
+                </div>
+              )}
             </div>
           </div>
         )}
