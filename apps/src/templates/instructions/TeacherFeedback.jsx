@@ -12,18 +12,6 @@ import RubricField from './RubricField';
 import {CommentArea} from './CommentArea';
 
 const styles = {
-  textInput: {
-    marginTop: 0,
-    marginBottom: 16,
-    display: 'block',
-    width: '90%'
-  },
-  textInputStudent: {
-    margin: 10,
-    display: 'block',
-    width: '90%',
-    backgroundColor: color.lightest_cyan
-  },
   button: {
     margin: 10,
     fontWeight: 'bold'
@@ -70,7 +58,7 @@ const styles = {
   rubricArea: {
     flexGrow: 2
   },
-  commentArea: {
+  commentAndFooter: {
     margin: '0px 16px 16px 16px'
   }
 };
@@ -215,19 +203,18 @@ class TeacherFeedback extends Component {
       this.state.submitting ||
       this.state.errorState === ErrorType.Load;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
-    const placeholderText = latestFeedback
-      ? latestFeedback.comment
-      : i18n.feedbackPlaceholder();
 
     const showFeedbackInputAreas = !(
       this.props.disabledMode && this.props.viewAs === ViewType.Teacher
     );
+    const placeholderText = latestFeedback
+      ? latestFeedback.comment
+      : i18n.feedbackPlaceholder();
+    const dontShowStudentComment =
+      !this.state.comment && this.props.viewAs === ViewType.Student;
 
     const dontShowStudentRubric =
       !this.state.performance && this.props.viewAs === ViewType.Student;
-
-    const dontShowStudentComment =
-      !this.state.comment && this.props.viewAs === ViewType.Student;
 
     return (
       <div>
@@ -283,7 +270,7 @@ class TeacherFeedback extends Component {
           </div>
         )}
         {showFeedbackInputAreas && !dontShowStudentComment && (
-          <div style={styles.commentArea}>
+          <div style={styles.commentAndFooter}>
             <CommentArea
               disabledMode={this.props.disabledMode}
               comment={this.state.comment}
