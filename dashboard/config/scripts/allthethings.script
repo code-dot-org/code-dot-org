@@ -244,3 +244,6 @@ level 'allthethings_fish_tank'
 stage 'Dance Lab'
 level 'allthethings HOC Dance 1'
 level 'allthethings HOC Dance 10 Measures'
+
+stage 'Mini Rubric'
+assessment 'allthethings-mini-rubric'
