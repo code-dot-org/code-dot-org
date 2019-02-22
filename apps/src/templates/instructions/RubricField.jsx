@@ -19,7 +19,7 @@ const styles = {
     flexDirection: 'row',
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px' + color.light_cyan,
+      border: 'solid 1px ${color.light_cyan}',
       borderRadius: 10
     }
   },
@@ -31,7 +31,7 @@ const styles = {
     borderRadius: 10,
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px' + color.light_cyan,
+      border: 'solid 1px ${color.light_cyan}',
       borderRadius: 10
     }
   }
@@ -47,10 +47,10 @@ const rubricLevelHeaders = {
 class RubricField extends Component {
   static propTypes = {
     showFeedbackInputAreas: PropTypes.bool,
-    rubricLevel: PropTypes.string,
-    rubricValue: PropTypes.string,
+    rubricLevel: PropTypes.oneOf(Object.keys(rubricLevelHeaders)).isRequired,
+    rubricValue: PropTypes.string.isRequired,
     disabledMode: PropTypes.bool,
-    onChange: PropTypes.func,
+    onChange: PropTypes.func.isRequired,
     currentlyChecked: PropTypes.bool
   };
 
@@ -59,19 +59,16 @@ class RubricField extends Component {
   };
 
   render() {
+    const performanceHeaderStyle = this.props.currentlyChecked
+      ? styles.performanceLevelHeaderSelected
+      : styles.performanceLevelHeader;
     return (
-      <div
-        style={
-          this.props.currentlyChecked
-            ? styles.performanceLevelHeaderSelected
-            : styles.performanceLevelHeader
-        }
-      >
+      <div style={performanceHeaderStyle}>
         {this.props.showFeedbackInputAreas && (
           <input
             type={'checkbox'}
-            id={this.props.rubricLevel + '-input'}
-            name={'rubric'}
+            id={'rubric-input-${this.props.rubricLevel}'}
+            name="rubric"
             value={this.props.rubricLevel}
             checked={this.props.currentlyChecked}
             onChange={this.handleRubricChange}
