@@ -169,15 +169,19 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if user.persisted?
-      can :read, Script
-      can :read, ScriptLevel
-    else
-      can :read, Script do |script|
-        !script.login_required?
+    can :read, Script do |script|
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        user.persisted? || !script.login_required?
       end
-      can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required?
+    end
+    can :read, ScriptLevel do |script_level|
+      script = script_level.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        user.persisted? || !script.login_required?
       end
     end
 
