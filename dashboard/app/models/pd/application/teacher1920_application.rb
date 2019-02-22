@@ -248,7 +248,6 @@ module Pd::Application
         taught_in_past
         previous_yearlong_cdo_pd
 
-        pay_fee
         willing_to_travel
         interested_in_online_program
 
@@ -270,6 +269,10 @@ module Pd::Application
           if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).any?
             required.concat [:travel_to_another_workshop]
           end
+        end
+
+        if hash[:regional_partner_id].present?
+          required << :pay_fee
         end
 
         if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
