@@ -349,12 +349,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       }
   end
 
-  test 'clear_single_auth_fields throws on unmigrated user' do
-    user = create :student
-    assert_raises {user.clear_single_auth_fields}
-  end
-
-  test 'clear_single_auth_fields clears single-auth fields' do
+  test 'migration clears single-auth fields' do
     user = create :teacher, :unmigrated_google_sso
 
     assert_user user,
@@ -584,11 +579,9 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     refute user.migrated?
     migration_result = user.migrate_to_multi_auth
-    clear_result = user.clear_single_auth_fields
     demigration_result = user.demigrate_from_multi_auth
     user.reload
     assert migration_result
-    assert clear_result
     assert demigration_result
     refute user.migrated?
 

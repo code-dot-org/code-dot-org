@@ -88,12 +88,6 @@ module UserMultiAuthHelper
         end
     end
     self.provider = 'migrated'
-    clear_single_auth_fields
-    save
-  end
-
-  def clear_single_auth_fields
-    raise "Single auth fields may not be cleared on an unmigrated user" unless migrated?
     self.uid = nil
     self.oauth_token = nil
     self.oauth_token_expiration = nil
