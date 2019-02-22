@@ -4487,6 +4487,7 @@ en:
         CSP Cumulative Assess A_2018: {}
         CSP Cumulative Assess A_2018_2019: {}
         CSP Cumulative Assess A_exam_prep: {}
+        CSP Data Questions MC_2018_2019: {}
         CSP Longitudinal Contact Request: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
@@ -5714,6 +5715,14 @@ en:
         What are the values of the variables a, b and c after all of the code has executed?: What are the values of the variables a, b and c after all of the code has executed?
         description here: description here
         title: title
+      U4 L05 Truth Table matching:
+        Truth Table Matching: Truth Table Matching
+        'false': 'false'
+        false && false: false && false
+        false && true: false && true
+        'true': 'true'
+        true && false: true && false
+        true && true: true && true
       U4L06 Create Record Id Matching Q:
         '1': '1'
         '2': '2'
