@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types';
+import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
@@ -9,6 +10,7 @@ import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
 import commonMsg from '@cdo/locale';
+import StudentTable, {studentShape} from './StudentTable';
 
 const styles = {
   text: {
@@ -27,12 +29,29 @@ const styles = {
 
 class ScriptTeacherPanel extends React.Component {
   static propTypes = {
+    onSelectUser: PropTypes.func,
+    getSelectedUserId: PropTypes.func,
+
+    // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasSections: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
-    unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired
+    unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    students: PropTypes.arrayOf(studentShape)
+  };
+
+  calculateStudentTableMaxHeight = () => {
+    let teacherPanel = $('.teacher-panel');
+    let contentToRemove = $('#teacher-panel-nonscrollable');
+
+    if (teacherPanel.length > 0 && contentToRemove.length > 0) {
+      return (
+        // Calculate max height and include 15px buffer room.
+        teacherPanel[0].clientHeight - contentToRemove[0].clientHeight - 15
+      );
+    }
   };
 
   render() {
@@ -42,19 +61,21 @@ class ScriptTeacherPanel extends React.Component {
       sectionsAreLoaded,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
-      unlockedStageNames
+      unlockedStageNames,
+      students
     } = this.props;
+    const studentTableMaxHeight = this.calculateStudentTableMaxHeight();
 
     return (
       <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
-        <div className="content">
+        <div id="teacher-panel-nonscrollable">
+          <h3>{commonMsg.teacherPanel()}</h3>
           <ViewAsToggle />
           {!sectionsAreLoaded && (
             <div style={styles.text}>{commonMsg.loading()}</div>
           )}
           {(scriptAllowsHiddenStages || scriptHasLockableStages) && (
-            <SectionSelector style={{margin: 10}} />
+            <SectionSelector style={{margin: 10}} reloadOnChange={true} />
           )}
           {hasSections &&
             scriptHasLockableStages &&
@@ -87,6 +108,15 @@ class ScriptTeacherPanel extends React.Component {
               </div>
             )}
         </div>
+        {viewAs === ViewType.Teacher && (students || []).length > 0 && (
+          <div style={{maxHeight: studentTableMaxHeight, overflowY: 'auto'}}>
+            <StudentTable
+              students={students}
+              onSelectUser={this.props.onSelectUser}
+              getSelectedUserId={this.props.getSelectedUserId}
+            />
+          </div>
+        )}
       </TeacherPanel>
     );
   }
@@ -124,6 +154,7 @@ export default connect((state, ownProps) => {
     sectionsAreLoaded,
     scriptHasLockableStages,
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
-    unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
+    unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
+    students: state.teacherSections.selectedStudents
   };
 })(ScriptTeacherPanel);

@@ -374,6 +374,11 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
       aalab_clickedOn:
         options:
           CONDITION:
@@ -394,11 +399,21 @@ sl:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
+          VAL:
+            '"true"': velja
+            '"false"': ne velja
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': neskončno
       binary_move:
         options:
           DIR:
