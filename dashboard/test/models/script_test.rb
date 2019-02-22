@@ -1442,7 +1442,7 @@ endvariants
 
     pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
     assert pilot_script.hidden
-    assert Script.all.any?(&:pilot?)
+    assert Script.any?(&:pilot?)
 
     teacher_scripts = Script.valid_scripts(teacher)
     refute teacher_scripts.any?(&:pilot?)
