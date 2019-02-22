@@ -73,7 +73,9 @@ class RubricField extends Component {
       <div style={performanceHeaderStyle}>
         {this.props.showFeedbackInputAreas && (
           <CheckRadioButton
-            id={'rubric-input-${this.props.rubricLevel}'}
+            //Concatenate because injecting the string seems to result in all of
+            //the input elements having the name id
+            id={'rubric-input-' + this.props.rubricLevel}
             value={this.props.rubricLevel}
             checked={this.props.currentlyChecked}
             onRadioButtonChange={this.handleRubricChange}
