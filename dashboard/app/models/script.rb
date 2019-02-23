@@ -1475,7 +1475,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_pilot_access?(user = nil)
-    pilot? && !!user&.permission?(UserPermission::LEVELBUILDER)
+    return false unless pilot? && user
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+
+    if user.teacher?
+      return SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+    end
+
+    false
   end
 
   def self.has_any_pilot_access?(user = nil)
