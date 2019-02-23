@@ -1550,20 +1550,26 @@ endvariants
   end
 
   test 'has pilot access' do
+    student = create :student
     teacher = create :teacher
+    pilot_teacher = create :teacher
+    create :single_user_experiment, min_user_id: pilot_teacher.id, name: 'my-experiment'
     levelbuilder = create :levelbuilder
 
     script = create :script
     refute script.pilot?
     refute script.has_pilot_access?
+    refute script.has_pilot_access?(student)
     refute script.has_pilot_access?(teacher)
+    refute script.has_pilot_access?(pilot_teacher)
     refute script.has_pilot_access?(levelbuilder)
 
-    # for now, only levelbuilders have pilot script access.
     script.pilot_experiment = 'my-experiment'
     assert script.pilot?
     refute script.has_pilot_access?
+    refute script.has_pilot_access?(student)
     refute script.has_pilot_access?(teacher)
+    assert script.has_pilot_access?(pilot_teacher)
     assert script.has_pilot_access?(levelbuilder)
   end
 
