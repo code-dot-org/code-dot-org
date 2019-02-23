@@ -188,7 +188,8 @@ const styles = {
     margin: 8,
     float: 'left',
     fontFamily: '"Gotham 4r", sans-serif',
-    color: 'dimgray'
+    color: 'dimgray',
+    pageBreakInside: 'avoid'
   },
   text: {
     fontSize: 14
