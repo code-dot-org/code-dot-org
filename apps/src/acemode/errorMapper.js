@@ -14,7 +14,10 @@ var errorMap = [
   },
   {
     original: /Expected an identifier and instead saw (.*)\s\(a reserved word\)./,
-    replacement: '$1 is a reserved word. Use a different variable name.'
+    applab_replacement:
+      '$1 is a reserved word in App Lab. Use a different variable name.',
+    gamelab_replacement:
+      '$1 is a reserved word in Game Lab. Use a different variable name.'
   }
 ];
 
@@ -23,7 +26,7 @@ var errorMap = [
  * our mapping. Note this makes changes in place to the passed in results
  * object.
  */
-module.exports.processResults = function(results) {
+module.exports.processResults = function(results, appType) {
   results.data.forEach(function(item) {
     if (item.type === 'info') {
       item.type = 'warning';
@@ -34,10 +37,17 @@ module.exports.processResults = function(results) {
         return;
       }
 
-      item.text = item.text.replace(
-        errorMapping.original,
-        errorMapping.replacement
-      );
+      let replacement;
+      if (errorMapping.replacement) {
+        replacement = errorMapping.replacement;
+      } else {
+        replacement =
+          appType === 'Applab'
+            ? errorMapping.applab_replacement
+            : errorMapping.gamelab_replacement;
+      }
+
+      item.text = item.text.replace(errorMapping.original, replacement);
     });
   });
 };

@@ -2,7 +2,12 @@
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 
-exports.defineForAce = function(dropletConfig, unusedConfig, dropletEditor) {
+exports.defineForAce = function(
+  dropletConfig,
+  unusedConfig,
+  dropletEditor,
+  appType
+) {
   // define ourselves for ace, so that it knows where to get us
   ace.define(
     'ace/mode/javascript_codeorg',
@@ -106,7 +111,9 @@ exports.defineForAce = function(dropletConfig, unusedConfig, dropletEditor) {
 
           worker.send('changeOptions', [newOptions]);
 
-          worker.on('jslint', annotationList.setJSLintAnnotations);
+          worker.on('jslint', function(results) {
+            annotationList.setJSLintAnnotations(results, appType);
+          });
 
           worker.on('terminate', function() {
             session.clearAnnotations();
