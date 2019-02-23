@@ -11,6 +11,10 @@ var errorMap = [
   {
     original: /(.*)\sis not defined./,
     replacement: "$1 hasn't been declared yet."
+  },
+  {
+    original: /Expected an identifier and instead saw (.*)\s\(a reserved word\)./,
+    replacement: '$1 is a reserved word. Use a different variable name.'
   }
 ];
 
