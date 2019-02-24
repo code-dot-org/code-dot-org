@@ -1550,12 +1550,14 @@ endvariants
   end
 
   test 'has pilot access' do
+    script = create :script
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
+
     student = create :student
     teacher = create :teacher
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     levelbuilder = create :levelbuilder
 
-    script = create :script
     refute script.pilot?
     refute script.has_pilot_access?
     refute script.has_pilot_access?(student)
@@ -1563,13 +1565,12 @@ endvariants
     refute script.has_pilot_access?(pilot_teacher)
     refute script.has_pilot_access?(levelbuilder)
 
-    script.pilot_experiment = 'my-experiment'
-    assert script.pilot?
-    refute script.has_pilot_access?
-    refute script.has_pilot_access?(student)
-    refute script.has_pilot_access?(teacher)
-    assert script.has_pilot_access?(pilot_teacher)
-    assert script.has_pilot_access?(levelbuilder)
+    assert pilot_script.pilot?
+    refute pilot_script.has_pilot_access?
+    refute pilot_script.has_pilot_access?(student)
+    refute pilot_script.has_pilot_access?(teacher)
+    assert pilot_script.has_pilot_access?(pilot_teacher)
+    assert pilot_script.has_pilot_access?(levelbuilder)
   end
 
   test 'has any pilot access' do
