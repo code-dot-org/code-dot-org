@@ -1482,7 +1482,10 @@ class Script < ActiveRecord::Base
       return SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
     end
 
-    false
+    user.sections_as_student.any? do |section|
+      section.script == self &&
+        SingleUserExperiment.enabled?(user: section.user, experiment_name: pilot_experiment)
+    end
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot

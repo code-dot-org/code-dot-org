@@ -1555,7 +1555,17 @@ endvariants
 
     student = create :student
     teacher = create :teacher
+
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+
+    # student in a pilot teacher's section which is not assigned to any script
+    section = create :section, user: pilot_teacher
+    unassigned_student = create(:follower, section: section).student_user
+
+    # student in a pilot teacher's section which is assigned to a pilot script
+    pilot_section = create :section, user: pilot_teacher, script: pilot_script
+    pilot_student = create(:follower, section: pilot_section).student_user
+
     levelbuilder = create :levelbuilder
 
     refute script.pilot?
@@ -1563,6 +1573,8 @@ endvariants
     refute script.has_pilot_access?(student)
     refute script.has_pilot_access?(teacher)
     refute script.has_pilot_access?(pilot_teacher)
+    refute script.has_pilot_access?(unassigned_student)
+    refute script.has_pilot_access?(pilot_student)
     refute script.has_pilot_access?(levelbuilder)
 
     assert pilot_script.pilot?
@@ -1570,6 +1582,8 @@ endvariants
     refute pilot_script.has_pilot_access?(student)
     refute pilot_script.has_pilot_access?(teacher)
     assert pilot_script.has_pilot_access?(pilot_teacher)
+    refute pilot_script.has_pilot_access?(unassigned_student)
+    assert pilot_script.has_pilot_access?(pilot_student)
     assert pilot_script.has_pilot_access?(levelbuilder)
   end
 
