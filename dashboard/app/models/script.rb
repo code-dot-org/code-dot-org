@@ -1485,17 +1485,15 @@ class Script < ActiveRecord::Base
     false
   end
 
+  # returns true if the user is a levelbuilder, or a teacher with any pilot
+  # script experiments enabled.
   def self.has_any_pilot_access?(user = nil)
-    return false unless user
+    return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
 
-    if user.teacher?
-      return pilot_experiments.any? do |experiment_name|
-        SingleUserExperiment.enabled?(user: user, experiment_name: experiment_name)
-      end
+    pilot_experiments.any? do |experiment_name|
+      SingleUserExperiment.enabled?(user: user, experiment_name: experiment_name)
     end
-
-    false
   end
 
   def self.pilot_experiments
