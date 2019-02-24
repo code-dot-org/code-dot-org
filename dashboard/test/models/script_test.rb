@@ -1441,19 +1441,14 @@ endvariants
     teacher = create :teacher
     levelbuilder = create :levelbuilder
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
     assert pilot_script.hidden
     assert Script.any?(&:pilot?)
 
     refute Script.valid_scripts(student).any?(&:pilot?)
-
-    teacher_scripts = Script.valid_scripts(teacher)
-    refute teacher_scripts.any?(&:pilot?)
-
+    refute Script.valid_scripts(teacher).any?(&:pilot?)
     assert Script.valid_scripts(pilot_teacher).any?(&:pilot?)
-
-    levelbuilder_scripts = Script.valid_scripts(levelbuilder)
-    assert levelbuilder_scripts.any?(&:pilot?)
+    assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
   end
 
   test "get_assessment_script_levels returns an empty list if no level groups" do
