@@ -46,6 +46,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
     @pilot_script_level = create :script_level, script: pilot_script
+    @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
   end
 
   setup do
@@ -1728,9 +1729,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     params: -> {script_level_params(@pilot_script_level)},
     name: 'signed out user cannot view pilot script level'
 
+  test_user_gets_response_for :show, response: :forbidden, user: :student,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'student cannot view pilot script level'
+
   test_user_gets_response_for :show, response: :forbidden, user: :teacher,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'teacher without pilot access cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'pilot teacher can view pilot script level'
 
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
     params: -> {script_level_params(@pilot_script_level)},
