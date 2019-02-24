@@ -7,6 +7,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @not_admin = create(:user)
     @levelbuilder = create(:levelbuilder)
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_script = create :script, pilot_experiment: 'my-experiment'
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -298,9 +299,15 @@ class ScriptsControllerTest < ActionController::TestCase
     params: -> {{id: @pilot_script.name}},
     name: 'signed out user cannot view pilot script'
 
+  test_user_gets_response_for :show, response: :forbidden, user: :student,
+    params: -> {{id: @pilot_script.name}}, name: 'student cannot view pilot script'
+
   test_user_gets_response_for :show, response: :forbidden, user: :teacher,
     params: -> {{id: @pilot_script.name}},
     name: 'teacher without pilot access cannot view pilot script'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+    params: -> {{id: @pilot_script.name}}, name: 'pilot teacher can view pilot script'
 
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
     params: -> {{id: @pilot_script.name}}, name: 'levelbuilder can view pilot script'
