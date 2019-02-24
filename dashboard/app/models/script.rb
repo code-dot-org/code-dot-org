@@ -1486,6 +1486,19 @@ class Script < ActiveRecord::Base
   end
 
   def self.has_any_pilot_access?(user = nil)
-    !!user&.permission?(UserPermission::LEVELBUILDER)
+    return false unless user
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+
+    if user.teacher?
+      return pilot_experiments.any? do |experiment_name|
+        SingleUserExperiment.enabled?(user: user, experiment_name: experiment_name)
+      end
+    end
+
+    false
+  end
+
+  def self.pilot_experiments
+    @@pilot_experiments ||= all_scripts.map(&:pilot_experiment).compact
   end
 end
