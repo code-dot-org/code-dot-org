@@ -1552,8 +1552,7 @@ endvariants
   test 'has pilot access' do
     student = create :student
     teacher = create :teacher
-    pilot_teacher = create :teacher
-    create :single_user_experiment, min_user_id: pilot_teacher.id, name: 'my-experiment'
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     levelbuilder = create :levelbuilder
 
     script = create :script
@@ -1576,8 +1575,7 @@ endvariants
   test 'has any pilot access' do
     student = create :student
     teacher = create :teacher
-    pilot_teacher = create :teacher
-    create :single_user_experiment, min_user_id: pilot_teacher.id, name: 'my-experiment'
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     create :script, pilot_experiment: 'my-experiment'
     levelbuilder = create :levelbuilder
 
