@@ -23,6 +23,7 @@ export const teacherDashboardUrl = (sectionId, path = '') => {
     experiments.TEACHER_DASHBOARD_REACT
   );
 
+  // Check urlMap for a corresponding dashboard URL that differs from pegasus URL.
   if (isDashboard && path !== '') {
     path = urlMap[path] || path;
   }
