@@ -813,7 +813,6 @@ GEM
       i18n
       json (>= 1.4.3)
     sysexits (1.2.0)
-    taglib-ruby (0.7.1)
     temple (0.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -1041,7 +1040,6 @@ DEPENDENCIES
   sqlite3
   sshkit
   stringex (~> 2.5.2)
-  taglib-ruby
   therubyracer (~> 0.12.2)
   thin
   timecop
