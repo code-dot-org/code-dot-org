@@ -68,6 +68,12 @@ var baseConfig = {
         'regionalPartnerSearch',
         'locale-do-not-import.js'
       ),
+      '@cdo/regionalPartnerMiniContact/locale': path.resolve(
+        __dirname,
+        'src',
+        'regionalPartnerMiniContact',
+        'locale-do-not-import.js'
+      ),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop')
