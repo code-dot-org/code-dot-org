@@ -278,7 +278,7 @@ module Pd::Application
         end
 
         if hash[:program] == PROGRAMS[:csd]
-          required.concat << :csd_which_grades
+          required << :csd_which_grades
         elsif hash[:program] == PROGRAMS[:csp]
           required << :csp_which_grades
           required << :csp_how_offer
