@@ -6,12 +6,12 @@ https://weblog.west-wind.com/posts/2015/Feb/26/Using-FontAwesome-Fonts-for-HTML-
 input[type=radio].with-font {
     border: 0;
     clip: rect(0 0 0 0);
+    width: 1px;
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px;
 }
 input[type=radio].with-font ~ label:before {
     font-family: FontAwesome;
