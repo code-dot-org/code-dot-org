@@ -53,10 +53,7 @@
     "start_blocks": "var fruitServings = 3;\r\nvar vegServings = 5;\r\n\r\n// Using console.log, write a Boolean expression that will check if fruitServings are greater than 4 \r\n// and vegServings are greater than or equal to five. \r\nconsole.log(\"I am eating a healthy amount of fruit and vegetables.\");\r\nconsole.log();\r\n\r\n// Using console.log, write interpret the statement in Line 10 to a Boolean expression\r\nconsole.log(\"Am I eating at least three servings of fruit or 6 servings of vegetables?\");\r\nconsole.log();",
     "slider_speed": "0.1",
     "parent_level_id": 17647,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

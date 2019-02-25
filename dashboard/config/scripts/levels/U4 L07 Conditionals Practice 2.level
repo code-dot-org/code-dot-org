@@ -53,10 +53,7 @@
     "start_blocks": "// predict what will appear on the console.\r\n\r\nvar score = 10;\r\nvar lives = 3;\r\n\r\nconsole.log(\"Is score plus lives less than thirteen?\");\r\nconsole.log(score + lives < 13);\r\nconsole.log(\"\"); // this puts a blank line in the console\r\n\r\nconsole.log(\"Is score times lives equal to lives times score?\");\r\nconsole.log(score * lives == lives * score);\r\nconsole.log(\"\");\r\n\r\n//use console.log to write this Boolean expression\r\nconsole.log(\"Is lives minus score less than or equal to zero?\");\r\n\r\nconsole.log(\"\");\r\n\r\n// Use console.log to write this Boolean expression\r\nconsole.log(\"Is lives divided by two not equal to one?\");\r\n",
     "slider_speed": "0.1",
     "parent_level_id": 17615,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
