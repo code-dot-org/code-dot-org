@@ -8,10 +8,15 @@ bs:
         CSD_U3_variables: Promjeni broj ovdje
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: Promjeni broj ovdje
+      CSD U3 Variables Predict Where X_2019_callout:
+        CSD_U3_variables: Promjeni broj ovdje
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Ovdje je kod
         CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Ovdje je kod
+        CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Ovdje je kod
         CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
       CSD U3 ellipse_callout:
@@ -20,10 +25,16 @@ bs:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Ovdje je kod
         CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Ovdje je kod
+        CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Ovdje je kod
         CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Ovdje je kod
+        CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Ovdje je kod
         CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
       CSD U3 my-rect_callout:
@@ -34,10 +45,15 @@ bs:
         CSD_U3_rect_c2: Ovdje je "Run" dugme.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Ovdje je kod
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Ovdje je kod
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Ovdje je kod
         CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Ovdje je kod
+        CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Ovdje je kod
         CSD_U3_rect_c2: Povucite ovaj blok u područje koda.
       Counting_callout:

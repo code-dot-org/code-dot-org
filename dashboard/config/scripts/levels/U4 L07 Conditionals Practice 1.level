@@ -1,0 +1,67 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2019-02-18T16:50:21.000Z",
+  "level_num": "custom",
+  "user_id": 832,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "andOperator": null,
+      "orOperator": null,
+      "notOperator": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "declareAssign_x_prompt": null,
+      "declareAssign_x_promptNum": null,
+      "console.log": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "long_instructions": "# Do This\r\n\r\n* Read the code and predict what will appear in the console\r\n* Run the code and watch the console\r\n* Use `console.log` to check the Boolean value of the expression `10 <= 10`\r\n* Use `console.log` to check the Boolean value of the expression \"ten minus three is greater than three times three\"\r\n\t* Hint: You need to first convert this to a numerical expression",
+    "start_blocks": "// predict what will appear on the console.\r\nconsole.log(3 < 5);\r\nconsole.log(3 == 5);\r\nconsole.log(3 > 3);\r\n\r\n// Use console.log to check the Boolean value of the expression: 10 <= 10\r\n\r\n// Use console.log to check the Boolean value of the expression \"ten minus three is greater than three times three\"",
+    "slider_speed": "0.1",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-18 16:50:48 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 21:20:19 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"hide_design_mode\",\"hide_view_data_button\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 21:23:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 21:24:25 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"slider_speed\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-25 16:59:41 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

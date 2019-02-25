@@ -21,6 +21,10 @@ export var container = {
   marginBottom: 8
 };
 
+export var wrapperContainer = {
+  marginTop: -8
+};
+
 export var maxWidth = {
   maxWidth: 245
 };

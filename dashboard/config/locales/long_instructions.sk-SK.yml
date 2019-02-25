@@ -107,6 +107,10 @@ sk:
       2-3 Bee Conditionals 15: Pozbieraj nektár zo všetkých štyroch kvetov.
       2-3 Bee Conditionals 3: Pomôž mi zozbierať všetok nektár z kvetov a urobiť med.
         Použiť slučku.
+      2-3 Bee Debugging 10: |-
+        Z tejto úlohy sa mi točí hlava!
+
+        Oprav chyby a pozbieraj všetok nektár a vyrob všetok med.
       2-3 Bee Debugging 3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
         nektár a urobil celý med.
       2-3 Bee Debugging 6: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
@@ -739,6 +743,12 @@ sk:
       courseC_collector_prog7_2019: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto
         bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži
         bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
+      courseC_collector_prog9: '*"Pozbierajme všetok poklad!"*'
+      courseC_collector_prog9_2018: '*"Pozbierajme všetok poklad!"*'
+      courseC_collector_prog9_2019: '*"Pozbierajme všetok poklad!"*'
+      courseC_collector_progA: Pomôž Laurel pozbierať všetky diamanty.
+      courseC_collector_progB: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj
+        toľko diamantov, koľko len vieš!"
       courseC_flappy_events10: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš
         zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď
         škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
@@ -751,6 +761,37 @@ sk:
         zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď
         škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
         aj tvoji kamaráti."
+      courseC_harvester_loops1: |-
+        Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.
+
+        Použi opakovanie na pozbieranie všetkých tekvíc.
+      courseC_harvester_loops10: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops10_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops10_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops11: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops11_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops11_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops1_2018: |-
+        Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.
+
+        Použi opakovanie na pozbieranie všetkých tekvíc.
+      courseC_harvester_loops1_2019: |-
+        Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.
+
+        Použi opakovanie na pozbieranie všetkých tekvíc.
+      courseC_harvester_loops5: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops5_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops5_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops6: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops6_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops6_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops7: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops7_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops7_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops9: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops_forVid: Pozbieraj všetky kukurice a tekvice.
       courseC_maze_programming3: |-
         *"To prasa mi pije krv."*
 
@@ -796,8 +837,177 @@ sk:
         *"Ukľudni sa a pomôž mi nájsť to zlé prasa. Inak sa nahnevám!"*
 
         Dostaň vtáka k prasaťu a vyhni sa TNT.
+      courseD_bee_debugging5: |-
+        **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
       courseD_bounce_events1: Dostaň sa k vlajke! Pripoj blok ku bloku "keď šípka
         vľavo". Stlač "Spustiť" a šípkou presuň hráča k vlajke.
+      courseD_collector_debugging1: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging10_predict1: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging10_predict1_2018: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging1_2018: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging1a: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging1a_2018: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging1a_2019: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2_2018: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2a: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2a_2018: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2a_2019: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3_2018: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3a: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3a_2018: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3a_2019: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4_2018: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4a: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4a_2018: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4a_2019: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging5: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5_2018: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5a: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5a_2018: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5a_2019: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging6: "**Výzva:** Všetky bloky ktoré potrebuješ sú už
+        tu...teraz použi svoje schopnosti v hľadaní chýb a pozbieraj všetky drahokamy."
+      courseD_collector_debugging6_2018: "**Výzva:** Všetky bloky ktoré potrebuješ
+        sú už tu...teraz použi svoje schopnosti v hľadaní chýb a pozbieraj všetky
+        drahokamy."
+      courseD_collector_debugging6a: 'Výzva: Použí kód, ktorý už máš na pracovnej
+        ploche na to, aby si pozbieral aspoň 6 drahokamov!'
+      courseD_collector_debugging6a_2018: 'Výzva: Použí kód, ktorý už máš na pracovnej
+        ploche na to, aby si pozbieral aspoň 6 drahokamov!'
+      courseD_collector_debugging6a_2019: 'Výzva: Použí kód, ktorý už máš na pracovnej
+        ploche na to, aby si pozbieral aspoň 6 drahokamov!'
+      courseD_collector_debugging7: "**Výzva**: Všetky príkazy ktoré potrebuješ sú
+        už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu."
+      courseD_collector_debugging8: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8_2018: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8a: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8a_2018: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8a_2019: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9_2018: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9a: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9a_2018: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9a_2019: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_debugging_5: |-
+        **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
       courseD_maze_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na
         tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni
@@ -1175,6 +1385,9 @@ sk:
         toľko pokladov, koľko sa len vieš!"
       grade2_collector_10_2019: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj
         toľko pokladov, koľko sa len vieš!"
+      grade2_collector_A: Pomôž Laurel pozbierať všetky diamanty.
+      grade2_collector_A_2018: Pomôž Laurel pozbierať všetky diamanty.
+      grade2_collector_A_2019: Pomôž Laurel pozbierať všetky diamanty.
       grade2_puppy_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa
         s najmenším možným počtom blokov!
       grade3_ConditionalsElse_2: "Viac oblakov!\n\nSkontrolujte pod každým oblakom,
@@ -1208,6 +1421,10 @@ sk:
       grade3_Conditionals_2: Pomôž mi zozbierať všetok nektár z kvetov a urobiť med.
         Použiť slučku.
       grade3_Conditionals_8: Zbieraj nektár, kde kvety majú nektár.
+      grade3_Debugging_10: |-
+        **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
       grade3_Debugging_6: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
         nektár.
       grade3_Debugging_9: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok

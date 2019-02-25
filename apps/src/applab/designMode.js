@@ -257,6 +257,15 @@ designMode.updateProperty = function(element, name, value) {
     case 'backgroundColor':
       element.style.backgroundColor = value;
       break;
+    case 'borderWidth':
+      element.style.borderWidth = appendPx(value);
+      break;
+    case 'borderColor':
+      element.style.borderColor = value;
+      break;
+    case 'borderRadius':
+      element.style.borderRadius = appendPx(value);
+      break;
     case 'fontSize':
       element.style.fontSize = appendPx(value);
       break;
@@ -487,6 +496,12 @@ designMode.readProperty = function(element, name) {
       return element.style.color;
     case 'backgroundColor':
       return element.style.backgroundColor;
+    case 'borderWidth':
+      return parseFloat(element.style.borderWidth);
+    case 'borderColor':
+      return element.style.borderColor;
+    case 'borderRadius':
+      return parseFloat(element.style.borderRadius);
     case 'fontSize':
       return parseFloat(element.style.fontSize);
     case 'textAlign':

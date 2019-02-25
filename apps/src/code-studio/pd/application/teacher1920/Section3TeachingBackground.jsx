@@ -44,10 +44,7 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
       <FormGroup>
         <h3>Section 2: {SectionHeaders.section3TeachingBackground}</h3>
 
-        <p>
-          If you work in a school district, please select your district and
-          school below:
-        </p>
+        <p>Please provide your school and principal information below:</p>
 
         <FormGroup
           id="school"
@@ -75,9 +72,9 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
         {this.props.data.school && this.props.data.school === '-1' && (
           <div style={styles.indented}>
             {this.inputFor('schoolName')}
-            {this.inputFor('schoolDistrictName')}
-            {this.inputFor('schoolAddress')}
-            {this.inputFor('schoolCity')}
+            {this.inputFor('schoolDistrictName', {required: false})}
+            {this.inputFor('schoolAddress', {required: false})}
+            {this.inputFor('schoolCity', {required: false})}
             {this.selectFor('schoolState', {placeholder: 'Select a state'})}
             {this.inputFor('schoolZipCode')}
             {this.radioButtonsFor('schoolType')}
@@ -110,31 +107,6 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
             columnCount: 3
           }
         )}
-        <p>
-          Requirements for licensing, certifications, and endorsements to teach
-          computer science vary widely across the country. Please answer the
-          following questions to the best of your knowledge, so that your
-          Regional Partner can ensure that teachers selected for this program
-          will be able to teach the course in the coming school year.
-        </p>
-        <p>
-          Note: Code.org does not require specific licenses to teach these
-          courses, but to participate in this program, you should be planning to
-          teach this course during the 2019-20 school year.
-        </p>
-        {this.radioButtonsFor('doesSchoolRequireCsLicense')}
-        {this.props.data.doesSchoolRequireCsLicense === 'Yes' &&
-          this.largeInputFor('whatLicenseRequired')}
-        {this.radioButtonsFor('haveCsLicense')}
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'subjectsLicensedToTeach',
-          {
-            [TextFields.otherPleaseList]: 'other'
-          },
-          {
-            columnCount: 3
-          }
-        )}
         {this.checkBoxesWithAdditionalTextFieldsFor(
           'taughtInPast',
           {
@@ -145,15 +117,6 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
           }
         )}
         {this.checkBoxesFor('previousYearlongCdoPd')}
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'csOfferedAtSchool',
-          {
-            [TextFields.otherPleaseList]: 'other'
-          },
-          {
-            columnCount: 3
-          }
-        )}
       </FormGroup>
     );
   }
@@ -164,23 +127,14 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.doesSchoolRequireCsLicense === 'Yes') {
-      requiredFields.push('whatLicenseRequired');
+    if (data.school === '-1') {
+      requiredFields.push('schoolName');
+      requiredFields.push('schoolState');
+      requiredFields.push('schoolZipCode');
+      requiredFields.push('schoolType');
     }
+
     return requiredFields;
-  }
-
-  /**
-   * @override
-   */
-  static processPageData(data) {
-    const changes = {};
-
-    if (data.doesSchoolRequireCsLicense !== 'Yes') {
-      changes.whatLicenseRequired = undefined;
-    }
-
-    return changes;
   }
 
   /**

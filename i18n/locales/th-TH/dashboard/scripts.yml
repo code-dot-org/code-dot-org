@@ -1280,6 +1280,8 @@ th:
               name: อินเทอร์เน็ต
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
+            Graph Paper Programming:
+              name: การเขียนกระดาษกราฟ
         courseb-2018:
           assignment_family_title: คอร์ส B
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
@@ -1696,3 +1698,29 @@ th:
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
+        csd2-2019:
+          stages:
+            Lists:
+              name: รายการ
+            Clean Code and Debugging:
+              name: โค้ดที่หมดจดและการดีบั๊ก
+        csd3-2019:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: ฟังก์ชันกับพารามิเตอร์
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: แบบสำรวจ
+        csp1-2019:
+          stages:
+            The Internet:
+              name: อินเทอร์เน็ต

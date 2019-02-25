@@ -43,23 +43,14 @@ module Pd::Application
 
     serialized_attrs %w(
       pd_workshop_id
-      scholarship_status
     )
 
     validate :scholarship_status_valid
 
     def scholarship_status_valid
-      unless scholarship_status.nil? || self.class.scholarship_statuses.include?(scholarship_status)
+      unless scholarship_status.nil? || Pd::ScholarshipInfoConstants::SCHOLARSHIP_STATUSES.include?(scholarship_status)
         errors.add(:scholarship_status, 'is not included in the list.')
       end
-    end
-
-    def self.scholarship_statuses
-      %w(
-        no
-        yes_code_dot_org
-        yes_other
-      )
     end
 
     # Updates the associated user's school info with the info from this teacher application
@@ -71,6 +62,15 @@ module Pd::Application
         school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
         user.update_school_info(school_info)
       end
+    end
+
+    def update_scholarship_status(scholarship_status)
+      scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year) || Pd::ScholarshipInfo.new(user: user)
+      scholarship_info.update(scholarship_status: scholarship_status)
+    end
+
+    def scholarship_status
+      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)&.scholarship_status
     end
 
     # Implement in derived class.
