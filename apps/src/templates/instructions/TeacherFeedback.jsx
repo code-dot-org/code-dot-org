@@ -21,13 +21,12 @@ const styles = {
     margin: 10
   },
   time: {
+    height: 24,
+    paddingTop: 6,
     fontStyle: 'italic',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  studentTime: {
-    display: 'flex',
-    justifyContent: 'space-between'
+    fontSize: 12,
+    color: color.cyan,
+    backgroundColor: color.lightest_cyan
   },
   footer: {
     display: 'flex',
@@ -45,7 +44,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '8px 16px 20px 16px'
+    margin: '0px 16px 20px 16px'
   },
   keyConceptArea: {
     flexGrow: 1,
@@ -226,6 +225,15 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
+        {this.state.latestFeedback.length > 0 && (
+          <div style={styles.time} id="ui-test-feedback-time">
+            {i18n.lastUpdated({
+              time: moment
+                .min(moment(), moment(latestFeedback.created_at))
+                .fromNow()
+            })}
+          </div>
+        )}
         {this.props.rubric && !dontShowStudentRubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
@@ -278,15 +286,6 @@ class TeacherFeedback extends Component {
                       {i18n.feedbackSaveError()}
                     </span>
                   )}
-                </div>
-              )}
-              {this.state.latestFeedback.length > 0 && (
-                <div style={styles.time} id="ui-test-feedback-time">
-                  {i18n.lastUpdated({
-                    time: moment
-                      .min(moment(), moment(latestFeedback.created_at))
-                      .fromNow()
-                  })}
                 </div>
               )}
             </div>
