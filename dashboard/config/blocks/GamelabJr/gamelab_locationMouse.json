@@ -1,5 +1,5 @@
 {
-  "category": "World",
+  "category": "Location",
   "config": {
     "func": "locationMouse",
     "blockText": "mouse location",
