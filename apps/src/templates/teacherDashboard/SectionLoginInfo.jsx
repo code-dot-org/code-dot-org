@@ -188,7 +188,8 @@ const styles = {
     margin: 8,
     float: 'left',
     fontFamily: '"Gotham 4r", sans-serif',
-    color: 'dimgray'
+    color: 'dimgray',
+    pageBreakInside: 'avoid'
   },
   text: {
     fontSize: 14
@@ -226,7 +227,6 @@ class WordOrPictureLogins extends React.Component {
     printWindow.document.write('<body onafterprint="self.close()">');
     printWindow.document.write(printArea);
     printWindow.document.write('</body></html>');
-    printWindow.print();
   };
 
   render() {
