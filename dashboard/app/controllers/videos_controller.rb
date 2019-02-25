@@ -51,8 +51,7 @@ class VideosController < ApplicationController
     end
 
     if @video.save
-      Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
-      Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
+      merge_and_write
 
       redirect_to videos_path, notice: I18n.t('crud.created', model: Video.model_name.human)
     else
@@ -66,8 +65,7 @@ class VideosController < ApplicationController
     filename = upload_to_s3
 
     if @video.update(video_params.merge(download: "https://videos.code.org/#{filename}"))
-      Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
-      Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
+      merge_and_write
 
       redirect_to videos_path, notice: I18n.t('crud.updated', model: Video.model_name.human)
     else
@@ -122,5 +120,12 @@ class VideosController < ApplicationController
   # This is to fix a ForbiddenAttributesError CanCan issue.
   prepend_before_action do
     params[:video] &&= video_params
+  end
+
+  def merge_and_write
+    if @video.locale == 'en-US'
+      Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
+    end
+    Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download, @video.locale)
   end
 end
