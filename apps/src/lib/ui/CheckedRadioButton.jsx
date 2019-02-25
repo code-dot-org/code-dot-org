@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './checkedRadioButton.css';
 
-export class CheckRadioButton extends Component {
+export class CheckedRadioButton extends Component {
   static propTypes = {
     id: PropTypes.string,
     disabledMode: PropTypes.bool,
@@ -19,7 +19,7 @@ export class CheckRadioButton extends Component {
     return (
       <div>
         <input
-          type={'radio'}
+          type="radio"
           className="with-font"
           id={this.props.id}
           value={this.props.value}
