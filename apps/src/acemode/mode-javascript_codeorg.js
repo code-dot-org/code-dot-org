@@ -2,6 +2,12 @@
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 
+/**
+ * @param {dropletConfig} Required
+ * @param {unusedConfig} array of function names to be ignored by the linter. Optional.
+ * @param {dropletEditor} Required
+ * @param {appType} string, either 'Applab' or 'Gamelab'. Optional.
+ */
 exports.defineForAce = function(
   dropletConfig,
   unusedConfig,
