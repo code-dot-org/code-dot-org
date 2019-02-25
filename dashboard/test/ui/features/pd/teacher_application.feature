@@ -15,9 +15,6 @@ Scenario: Basic teacher application submission
     And I press keys "Severus" for element "input#firstName"
     And I press keys "Snape" for element "input#lastName"
     And I press keys "5558675309" for element "input#phone"
-    And I press keys "123 Fake Street" for element "input#address"
-    And I press keys "Seattle" for element "input#city"
-    And I select the "Washington" option in dropdown "state"
     And I press keys "98101" for element "input#zipCode"
     And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
     Then I see no difference for "Section 1: About You"
@@ -27,14 +24,8 @@ Scenario: Basic teacher application submission
   # Section 3
   Then I wait until element "h3" contains text "Section 2: Teaching Background"
   And I press "input[name='subjectsTeaching']:first" using jQuery
-  And I press the first "input[name='doesSchoolRequireCsLicense']" element
-  Then I wait until element "textarea#whatLicenseRequired" is visible
-    And I press keys "license" for element "textarea#whatLicenseRequired"
-  And I press the first "input[name='haveCsLicense']" element
-  And I press the first "input[name='subjectsLicensedToTeach']" element
   And I press the first "input[name='taughtInPast']" element
   And I press the first "input[name='previousYearlongCdoPd']" element
-  And I press the first "input[name='csOfferedAtSchool']" element
 
   And I press keys "nonexistent" for element "#school input"
 

@@ -1436,6 +1436,21 @@ endvariants
     assert_equal [script], scripts
   end
 
+  test "self.valid_scripts: omits pilot scripts" do
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+
+    pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
+    assert pilot_script.hidden
+    assert Script.any?(&:pilot?)
+
+    teacher_scripts = Script.valid_scripts(teacher)
+    refute teacher_scripts.any?(&:pilot?)
+
+    levelbuilder_scripts = Script.valid_scripts(levelbuilder)
+    assert levelbuilder_scripts.any?(&:pilot?)
+  end
+
   test "get_assessment_script_levels returns an empty list if no level groups" do
     script = create(:script, name: 'test-no-levels')
     level_group_script_level = script.get_assessment_script_levels
@@ -1513,6 +1528,53 @@ endvariants
       },
       @script_in_course.section_hidden_unit_info(teacher)
     )
+  end
+
+  test 'pilot scripts are always hidden during seed' do
+    l = create :level
+    dsl = <<-SCRIPT
+      hidden false
+      pilot_experiment 'pilot-experiment'
+
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+
+    File.stubs(:read).returns(dsl)
+    scripts, _ = Script.setup(['pilot-script.script'])
+    script = scripts.first
+
+    assert_equal 'pilot-script', script.name
+    assert_equal 'pilot-experiment', script.pilot_experiment
+    assert script.hidden
+  end
+
+  test 'has pilot access' do
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+
+    script = create :script
+    refute script.pilot?
+    refute script.has_pilot_access?
+    refute script.has_pilot_access?(teacher)
+    refute script.has_pilot_access?(levelbuilder)
+
+    # for now, only levelbuilders have pilot script access.
+    script.pilot_experiment = 'my-experiment'
+    assert script.pilot?
+    refute script.has_pilot_access?
+    refute script.has_pilot_access?(teacher)
+    assert script.has_pilot_access?(levelbuilder)
+  end
+
+  test 'has any pilot access' do
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+
+    # for now, only levelbuilders have any pilot access.
+    refute Script.has_any_pilot_access?
+    refute Script.has_any_pilot_access?(teacher)
+    assert Script.has_any_pilot_access?(levelbuilder)
   end
 
   private

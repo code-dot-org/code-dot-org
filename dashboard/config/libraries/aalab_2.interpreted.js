@@ -35,6 +35,7 @@ var show_score = false;
 var title = '';
 var subTitle = '';
 var customText = [];
+var customTextHidden = false;
 var animationGroups = {};
 var thisSprite;
 var otherSprite;
@@ -390,6 +391,7 @@ function runInputEvents() {
   }
 }
 
+// Updated
 function runCollisionEvents() {
   collisionEvents.forEach(function(event) {
     var condition = event.condition;
@@ -397,7 +399,7 @@ function runCollisionEvents() {
     var b = event.b();
     var e = event.event;
     var type;
-    var collisions = [];
+    var collisionSubjects = [];
     var findCollisionObject = function(sprite, collisionObject) {
       for(var i = 0; i < sprite.collisionObjects.length; i++) {
       	if(sprite.collisionObjects[i].sprite === collisionObject) {
@@ -410,8 +412,8 @@ function runCollisionEvents() {
       if(findCollisionObject(a, b) === -1) {
         a.collisionObjects.push({sprite: b, event: event, locked: false});
       }
-      if(collisions.indexOf(a) === -1) {
-        collisions.push(a);
+      if(collisionSubjects.indexOf(a) === -1) {
+        collisionSubjects.push(a);
       }
     };
     if(a && b) {
@@ -432,7 +434,7 @@ function runCollisionEvents() {
           });
         });
       }
-      collisions.forEach(function(s) {
+      collisionSubjects.forEach(function(s) {
         var relevantCollisionObjects = s.collisionObjects.filter(function(obj) {
           return obj.event === event;
         });
@@ -517,5 +519,7 @@ function draw() {
   }
   drawSprites();
   updateHUDText();
-  printCustomText();
+  if(!customTextHidden) {
+    printCustomText();
+  }
 }

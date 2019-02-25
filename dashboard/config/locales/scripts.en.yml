@@ -9971,6 +9971,8 @@ en:
               description_teacher: ''
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Dance Party:
+              name: Dance Party
         coursee-2019:
           title: Course E (2019)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -11315,6 +11317,8 @@ en:
               name: Mid-Year Survey
               description_student: ''
               description_teacher: ''
+            'Optional: Data Questions':
+              name: 'Optional: Data Questions'
         csp5-2019:
           title: CSP Unit 5 - Building Apps ('18-'19)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -11527,3 +11531,11 @@ en:
               name: Final Project
               description_student: ''
               description_teacher: ''
+        csp1-pilot:
+          stages:
+            new stage:
+              name: new stage
+          title: CSP Unit 1 Pilot
+          description_audience: ''
+          description_short: ''
+          description: ''

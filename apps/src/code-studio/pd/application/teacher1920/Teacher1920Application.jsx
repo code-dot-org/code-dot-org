@@ -21,6 +21,15 @@ export default class Teacher1920Application extends FormController {
 
   static sessionStorageKey = 'Teacher1920Application';
 
+  componentDidMount() {
+    window.addEventListener('beforeunload', event => {
+      if (!this.state.submitting) {
+        event.preventDefault();
+        event.returnValue = 'Are you sure? Your application may not be saved.';
+      }
+    });
+  }
+
   /**
    * @override
    */

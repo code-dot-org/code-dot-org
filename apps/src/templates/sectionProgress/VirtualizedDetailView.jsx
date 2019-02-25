@@ -46,12 +46,6 @@ const styles = {
     borderColor: color.border_gray,
     height: 42
   },
-  lessonLabelContainer: {
-    borderBottom: '2px solid',
-    borderColor: color.border_gray,
-    height: 44,
-    paddingTop: 8
-  },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
     marginTop: 18,
@@ -66,6 +60,7 @@ const styles = {
     display: 'inline-block',
     padding: 3,
     marginTop: 15,
+    marginRight: 2,
     transform: 'rotate(-45deg)',
     WebkitTransform: 'rotate(-45deg)'
   },
@@ -134,7 +129,7 @@ class VirtualizedDetailView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {rowIndex === 0 && columnIndex === 0 && (
-          <div style={styles.lessonLabelContainer}>
+          <div style={progressStyles.lessonLabelContainer}>
             <span style={progressStyles.lessonHeading}>{i18n.lesson()}</span>
           </div>
         )}
@@ -168,7 +163,9 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {rowIndex === 1 && columnIndex === 0 && (
-          <div style={progressStyles.lessonHeading}>{i18n.levelType()}</div>
+          <div style={progressStyles.lessonLabelContainer}>
+            <div style={progressStyles.lessonHeading}>{i18n.levelType()}</div>
+          </div>
         )}
         {rowIndex === 1 && columnIndex >= 1 && (
           <span style={styles.bubbleSet}>

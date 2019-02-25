@@ -1633,6 +1633,13 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
 end
 
+Then /^I navigate to teacher dashboard for the section I saved$/ do
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}"
+  }
+end
+
 Then /^I hide unit "([^"]+)"$/ do |unit_name|
   selector = ".uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash"
   @browser.execute_script("$(#{selector.inspect}).click();")
@@ -1649,7 +1656,7 @@ end
 
 # @return [Number] the section id for the corresponding row in the sections table
 def get_section_id_from_table(row_index)
-  # e.g. https://code.org/teacher-dashboard#/sections/54
+  # e.g. https://studio-code.org/teacher_dashboard/sections/54
   href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
   )
