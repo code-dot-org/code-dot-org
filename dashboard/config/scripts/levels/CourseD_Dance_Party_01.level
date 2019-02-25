@@ -56,9 +56,6 @@
     "long_instructions": "*Let's have a dance party!*\r\n\r\nDrag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.\r\n\r\n* *You can also click the lightbulb to the left if you want more information or extra challenges.*",
     "short_instructions": "Drag the `make a new` block into the workspace, and connect it inside the `setup` block.",
     "video_key": "hoc_dance_warmup",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false"
   },
   "published": true,
