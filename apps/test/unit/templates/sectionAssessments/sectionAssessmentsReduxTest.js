@@ -1182,10 +1182,11 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const question = getCurrentQuestion(stateWithSurvey);
-        assert.deepEqual(question.question, 'What is a variable?');
-        assert.deepEqual(question.answers, [
-          {text: 'a', correct: false, letter: 'A'}
-        ]);
+        assert.deepEqual('What is a variable?', question.question);
+        assert.deepEqual(
+          [{text: 'a', correct: false, letter: 'A'}],
+          question.answers
+        );
       });
 
       it('returns the question text for an assessment', () => {
@@ -1222,6 +1223,35 @@ describe('sectionAssessmentsRedux', () => {
         assert.deepEqual(question.answers, [
           {text: 'a', correct: true, letter: 'A'}
         ]);
+      });
+
+      it('returns an empty answers array if answers is undefined', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 0,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  name: 'name',
+                  questions: [
+                    {
+                      question_text: 'What is a variable?',
+                      type: 'Multi',
+                      answers: undefined
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        };
+
+        const question = getCurrentQuestion(stateWithAssessment);
+        assert.deepEqual(question.question, 'What is a variable?');
+        assert.deepEqual(question.answers, []);
       });
     });
 

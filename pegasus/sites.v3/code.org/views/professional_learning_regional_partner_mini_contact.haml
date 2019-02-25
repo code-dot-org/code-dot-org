@@ -1,0 +1,5 @@
+%div#regional-partner-mini-contact-container{style: "background-color: #d9eff7; padding: 20px; border-radius: 10px;"}
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/regionalPartnerMiniContact.js')}

@@ -7,6 +7,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @not_admin = create(:user)
     @levelbuilder = create(:levelbuilder)
+    @pilot_script = create :script, pilot_experiment: 'my-experiment'
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -290,8 +291,19 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
     # pilot scripts are always marked hidden
-    assert_equal true, Script.find_by_name(script.name).hidden
+    assert Script.find_by_name(script.name).hidden
   end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+    params: -> {{id: @pilot_script.name}},
+    name: 'signed out user cannot view pilot script'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+    params: -> {{id: @pilot_script.name}},
+    name: 'teacher without pilot access cannot view pilot script'
+
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+    params: -> {{id: @pilot_script.name}}, name: 'levelbuilder can view pilot script'
 
   test 'can create with has_lesson_plan param' do
     sign_in @levelbuilder
