@@ -1665,7 +1665,7 @@ en:
       Course 4 Maze 6: Can you solve this puzzle using the fewest number of blocks possible?
       Course 4 Play Lab For Loops 2: This time, let's try counting the odd numbers from 1 to 100.
       Course 4 Play Lab Params 1: Here's a function called `jump` that causes your main character to jump up 100 pixels. Run the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.
-      Course 4 Play Lab Params 10: "We've added one last function for you. \n\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\n\nFor example: \"player_score\" > 6\n\nPlay the game, and make it to level 3 to move to the next puzzle. "
+      Course 4 Play Lab Params 10: "We've added one last function for you. \n\nUse an \"if\" statement to program your game to call the \"level\\_up\" function only when \"player\\_score\" becomes greater than a certain number.\n\nFor example: \"player_score\" > 6\n\nPlay the game, and make it to level 3 to move to the next puzzle. "
       Course 4 Play Lab Params 2: "Now we've got flags that are too high for our current jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple jump heights.  \n\nWe need to add a parameter to our jump function called \"height\".  The up arrow should cause the dog to jump 200 pixels and the down arrow should make it jump only 100 pixels. "
       Course 4 Play Lab Params 3: 'We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. Edit the "jump" function so that it uses the "actor" parameter to make the correct character jump. '
       Course 4 Play Lab Params 4: "Here's a function called `patrol`. \n\nEdit `patrol` to move Cat up 400 pixels and then down 400 pixels."
@@ -1758,6 +1758,19 @@ en:
       Course1MazeAssessment2: |-
         This is a test!
         Move one way, then another to get me to the pig.
+      CourseD_Dance_Party_01: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
+      CourseD_Dance_Party_02: Make the moose start a new move after 4 measures!
+      CourseD_Dance_Party_03: Now make the dancer start a new move after 6 measures!
+      CourseD_Dance_Party_04: Add a background effect to your program.
+      CourseD_Dance_Party_05: Use another new block to make the dancer change moves every 2 measures.
+      CourseD_Dance_Party_06: Create a backup dancer called `backup_dancer1` to dance with the cat.
+      CourseD_Dance_Party_08: Can you make both backup dancers the same size?
+      CourseD_Dance_Party_09: Use the `set tint` block to change the color of a dancer.
+      CourseD_Dance_Party_10: Make the other dancer respond to the music using the `begins following` block, too.
+      CourseD_Dance_Party_11: The `when up pressed` block lets you run code when the up arrow is pressed. Try to make the dancer do a quick move when you press up.
+      CourseD_Dance_Party_11_5: Use the "all ducks" blocks to make the ducks dance together.
+      CourseD_Dance_Party_11b: Make the Robot "drop" once when you press the right arrow key, and "clap" once when you press the up arrow key. Do the drop-clap as fast as you can!
+      CourseD_Dance_Party_12: Get your groove on! Create a dance of your own to share with your friends.
       CourseF_PlayLab_vars1: 'To play this game, you don''t have to write any code, just hit "Run"! '
       CourseF_PlayLab_vars10: "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \n\nNotice that there are now so many blocks in our toolbox that they need to be organized!  Here, we've put each piece into an appropriate category.  Take some time to explore everything that is available. When you're done browsing, make a game or story using repeats, variables, and events.  \n\nHint: scroll down to see all the commands in the workspace."
       CourseF_PlayLab_vars2: The race in that last puzzle wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!
@@ -4350,6 +4363,7 @@ en:
         Add blocks to the `when run` event to change the background scene and the speed of Waddles the Penguin.
 
         Play the game and move Waddles with the arrows until you score.
+      courseC_PlayLab_eventsA_embed_2019: Let's play a game. Score 5 points by moving the Penguin to the Octopus!
       courseC_PlayLab_eventsFP: Create your own story. When you're done, click "Finish" to share with friends. See story ideas in the hints.
       courseC_PlayLab_eventsFP_2018: Create your own story. When you're done, click "Finish" to share with friends. See story ideas in the hints.
       courseC_PlayLab_eventsFP_2019: Create your own story. When you're done, click "Finish" to share with friends. See story ideas in the hints.
