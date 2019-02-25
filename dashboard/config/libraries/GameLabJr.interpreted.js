@@ -54,6 +54,12 @@ function addBehavior(sprite, behavior) {
   sprite.behaviors.push(behavior);
 }
 
+function addBehaviorSimple(sprite, behavior) {
+  if (sprite && behavior) {
+    addBehavior(sprite, behavior, behavior.name);
+  }
+}
+
 function removeBehavior(sprite, behavior) {
   if (!sprite || !behavior) {
     return;
@@ -65,6 +71,12 @@ function removeBehavior(sprite, behavior) {
     return;
   }
   sprite.behaviors.splice(index, 1);
+}
+
+function removeBehaviorSimple(sprite, behavior) {
+  if (sprite && behavior) {
+    removeBehavior(sprite, behavior, behavior.name);
+  }
 }
 
 function Behavior(func, extraArgs) {
@@ -293,6 +305,103 @@ function makeNewGroup() {
   return group;
 }
 
+// Sprite actions
+function setProp(sprite, property, val) {
+  if (!sprite || val === undefined) {
+    return;
+  }
+  if (property == "scale") {
+    sprite.setScale(val / 100);
+  }
+  else if (property=="costume") {
+   	sprite.setAnimation(val);
+  } else if (property=="tint" && typeof(val)=="number") {
+    sprite.tint = "hsb(" + (Math.round(val) % 360) + ", 100%, 100%)";
+  } else if (property=="y" && typeof(val)=="number") {
+    sprite.y = 400-val;
+  } else {
+  sprite[property]=val;
+  }
+}
+
+function getProp(sprite, property) {
+  if (!sprite) {
+    return undefined;
+  }
+  if (property=="scale") {
+    return sprite.getScale() * 100;
+  } else if (property=="costume") {
+   	return sprite.getAnimationLabel();
+  } else if (property=="direction") {
+   	return getDirection(sprite);
+  } else if (property=="y") {
+   	return 400-sprite.y;
+  } else {
+  	return sprite[property];
+  }
+}
+
+function changePropBy(sprite,  property, val) {
+  if (!sprite || val === undefined) {
+    return;
+  }
+  if (property == "scale") {
+    sprite.setScale(sprite.getScale() + val / 100);
+    if (sprite.scale < 0) {
+      sprite.scale = 0;
+    }
+  }
+  else if (property=="direction") {
+   	sprite.direction = getDirection(sprite) + val;
+  } else if (property=="y"){
+    sprite.y-=val;
+  }else {
+  sprite[property] += val;
+  }
+}
+
+function getDirection(sprite) {
+  if (!sprite.hasOwnProperty("direction")) {
+ 	sprite.direction = 0;
+  }
+  return sprite.direction % 360;
+}
+
+function moveForward(sprite, distance) {
+  var direction = getDirection(sprite);
+  sprite.x += distance * Math.cos(direction * Math.PI / 180);
+  sprite.y += distance * Math.sin(direction * Math.PI / 180);
+}
+
+function jumpTo(sprite,location) {
+  sprite.x = location.x;
+  sprite.y = location.y;
+}
+
+function mirrorSprite(sprite,direction) {
+  if (direction == "right") {
+	sprite.mirrorX(1); 
+  } else {
+	sprite.mirrorX(-1);
+  }
+}
+
+function turn(sprite,n,direction) {
+  if (!sprite || n === undefined) {
+    return;
+  }
+  if (direction=="right") {
+    sprite.rotation+=n;
+  }
+  else {
+    sprite.rotation-=n;
+  }
+}
+
+function debugSprite(sprite, val) {
+  sprite.debug = val;
+}
+
 // Helper functions
 
 function randomLoc() {
@@ -326,6 +435,24 @@ function hideTitleScreen() {
 
 function shouldUpdate() {
   return World.frameCount > 1;
+}
+
+function moveInDirection(sprite,distance,direction) {
+    if (direction== "North") {
+      sprite.y-=distance;
+    }
+ 	else if (direction== "East") {
+      sprite.x+=distance;
+ 	}
+    else if (direction=="South") {
+      sprite.y+=distance;
+    }
+	else if (direction=="West") {
+      sprite.x-=distance;
+    }
+    else {
+      console.error("moveInDirection: invalid direction provided");
+    }
 }
 
 function unitVectorTowards(from, to) {
