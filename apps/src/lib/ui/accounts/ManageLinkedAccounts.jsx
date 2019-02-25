@@ -12,7 +12,7 @@ import {disconnect} from './manageLinkedAccountsRedux';
 
 const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
-  MICROSOFT: 'microsoft_v2_auth',
+  MICROSOFT: 'windowslive',
   CLEVER: 'clever',
   FACEBOOK: 'facebook'
 };
