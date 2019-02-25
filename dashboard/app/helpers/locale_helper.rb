@@ -36,8 +36,7 @@ module LocaleHelper
 
   def options_for_locale_code_select
     options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
+    I18n.available_locales.each do |locale|
       options << [locale, locale]
     end
     options
