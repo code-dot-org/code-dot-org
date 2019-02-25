@@ -16,12 +16,16 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
     super(props);
 
     this.state = {
-      pendingDelete: null
+      pendingDelete: null,
+      enrollments: this.props.enrollments
     };
 
     this.handleClickDelete = this.handleClickDelete.bind(this);
     this.handleDeleteCanceled = this.handleDeleteCanceled.bind(this);
     this.handleDeleteConfirmed = this.handleDeleteConfirmed.bind(this);
+    this.handleScholarshipStatusChange = this.handleScholarshipStatusChange.bind(
+      this
+    );
   }
 
   handleClickDelete(event) {
@@ -49,6 +53,23 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.props.onDelete(pendingDeleteId);
   }
 
+  handleScholarshipStatusChange(enrollment, selection) {
+    $.ajax({
+      method: 'POST',
+      url: `/api/v1/pd/enrollment/${
+        enrollment.id
+      }/scholarship_info?scholarship_status=${selection.value}`,
+      dataType: 'json'
+    }).done(data => {
+      let enrollments = this.state.enrollments;
+      const index = enrollments.findIndex(e => {
+        return e.id === data.id;
+      });
+      enrollments[index] = data;
+      this.setState({enrollments: enrollments});
+    });
+  }
+
   formatCsfCourseExperience(csf_course_experience) {
     if (!csf_course_experience) {
       return NA;
@@ -60,7 +81,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   render() {
-    const enrollmentRows = this.props.enrollments.map((enrollment, i) => {
+    const enrollmentRows = this.state.enrollments.map((enrollment, i) => {
       let deleteCell;
       if (enrollment.attended) {
         // Don't give the option to delete an enrollment once the teacher has been marked attended.
@@ -135,6 +156,10 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             <td>
               <ScholarshipDropdown
                 scholarshipStatus={enrollment.scholarship_status}
+                onChange={this.handleScholarshipStatusChange.bind(
+                  this,
+                  enrollment
+                )}
                 disabled={false}
               />
             </td>
