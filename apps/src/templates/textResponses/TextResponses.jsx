@@ -12,7 +12,8 @@ import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
 import {
   setScriptId,
-  validScriptPropType
+  validScriptPropType,
+  getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const CSV_HEADERS = [
@@ -67,12 +68,13 @@ const styles = {
 
 class TextResponses extends Component {
   static propTypes = {
-    // provided by redux
+    // Provided by redux.
     sectionId: PropTypes.number.isRequired,
     responses: PropTypes.object.isRequired,
     isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
+    scriptName: PropTypes.string.isRequired,
     setScriptId: PropTypes.func.isRequired,
     asyncLoadTextResponses: PropTypes.func.isRequired
   };
@@ -145,7 +147,13 @@ class TextResponses extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, sectionId, isLoadingResponses} = this.props;
+    const {
+      validScripts,
+      scriptId,
+      scriptName,
+      sectionId,
+      isLoadingResponses
+    } = this.props;
     const filteredResponses = this.getFilteredResponses();
 
     return (
@@ -183,6 +191,8 @@ class TextResponses extends Component {
             responses={filteredResponses}
             sectionId={sectionId}
             isLoading={isLoadingResponses}
+            scriptId={scriptId}
+            scriptName={scriptName}
           />
         </div>
       </div>
@@ -198,7 +208,8 @@ export default connect(
     responses: state.textResponses.responseDataByScript,
     isLoadingResponses: state.textResponses.isLoadingResponses,
     validScripts: state.scriptSelection.validScripts,
-    scriptId: state.scriptSelection.scriptId
+    scriptId: state.scriptSelection.scriptId,
+    scriptName: getSelectedScriptName(state)
   }),
   dispatch => ({
     setScriptId(scriptId) {
