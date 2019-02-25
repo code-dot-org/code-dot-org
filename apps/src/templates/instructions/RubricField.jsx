@@ -20,7 +20,8 @@ const styles = {
     flexDirection: 'row',
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
+      //hover doesn't work when you inject string instead of concat
+      border: 'solid 1px' + color.light_cyan,
       borderRadius: 10
     }
   },
@@ -32,7 +33,8 @@ const styles = {
     borderRadius: 10,
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
+      //hover doesn't work when you inject string instead of concat
+      border: 'solid 1px' + color.light_cyan,
       borderRadius: 10
     }
   }
@@ -74,7 +76,7 @@ class RubricField extends Component {
         {this.props.showFeedbackInputAreas && (
           <CheckRadioButton
             //Concatenate because injecting the string seems to result in all of
-            //the input elements having the name id
+            //the input elements having the same id
             id={'rubric-input-' + this.props.rubricLevel}
             value={this.props.rubricLevel}
             checked={this.props.currentlyChecked}
