@@ -1,7 +1,8 @@
 import {assert} from '../../util/configuredChai';
 import scriptSelection, {
   setValidScripts,
-  setScriptId
+  setScriptId,
+  getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -67,6 +68,34 @@ const fakeValidCourses = [
 
 describe('scriptSelectionRedux', () => {
   const initialState = scriptSelection(undefined, {});
+
+  describe('getSelectedScriptName', () => {
+    it('returns the script name of the selected script', () => {
+      const state = {
+        scriptSelection: {
+          scriptId: 2,
+          validScripts: [
+            {id: 1, script_name: 'Wrong script!'},
+            {id: 2, script_name: 'Right script!'}
+          ]
+        }
+      };
+      assert.equal(getSelectedScriptName(state), 'Right script!');
+    });
+
+    it('returns null if no script is selected', () => {
+      const state = {
+        scriptSelection: {
+          scriptId: null,
+          validScripts: [
+            {id: 1, script_name: 'Wrong script!'},
+            {id: 2, script_name: 'Right script!'}
+          ]
+        }
+      };
+      assert.equal(getSelectedScriptName(state), null);
+    });
+  });
 
   describe('setScriptId', () => {
     it('sets the script id', () => {
