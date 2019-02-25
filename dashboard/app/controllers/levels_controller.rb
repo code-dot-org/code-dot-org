@@ -330,7 +330,7 @@ class LevelsController < ApplicationController
     # Reference links should be stored as an array.
     if params[:level][:reference_links].is_a? String
       params[:level][:reference_links] = params[:level][:reference_links].split("\r\n")
-      params[:level][:reference_links].delete_if {|link| link == ""}
+      params[:level][:reference_links].delete_if(&:blank?)
     end
 
     permitted_params.concat(Level.permitted_params)
