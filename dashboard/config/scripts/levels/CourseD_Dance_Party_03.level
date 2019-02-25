@@ -50,9 +50,6 @@
     "default_song": "migente_jbalvin",
     "long_instructions": "*Now we're grooving!* \r\n\r\nAdd an <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> block to your workspace. Make the dancer start a new move after 6 measures.",
     "short_instructions": "Now make the dancer start a new move after 6 measures!",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false"
   },
   "published": true,
