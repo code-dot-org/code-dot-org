@@ -304,7 +304,9 @@ class TopInstructions extends Component {
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
     const displayFeedbackStudent =
-      this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
+      this.props.viewAs === ViewType.Student &&
+      this.state.feedbacks.length > 0 &&
+      (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
     const displayFeedbackTeacher =
       this.props.viewAs === ViewType.Teacher && this.state.rubric;
     const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;

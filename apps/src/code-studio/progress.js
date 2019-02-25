@@ -358,10 +358,15 @@ function initializeStoreWithProgress(
     store.dispatch(disablePostMilestone());
   }
 
-  // Merge in progress saved on the client.
-  store.dispatch(
-    mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
-  );
+  // Determine if we are viewing student progress.
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+
+  // Merge in progress saved on the client, unless we are viewing student's work.
+  if (!isViewingStudentAnswer) {
+    store.dispatch(
+      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
+    );
+  }
 
   if (scriptData.hideable_stages) {
     // Note: This call is async
@@ -372,7 +377,6 @@ function initializeStoreWithProgress(
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
   if (!isViewingStudentAnswer) {
     let lastProgress;
     store.subscribe(() => {

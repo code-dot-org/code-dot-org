@@ -117,6 +117,21 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
+  def update_properties
+    @level = Level.find(params[:level_id])
+    authorize! :update, @level
+
+    changes = JSON.parse(request.body.read)
+    changes.each do |key, value|
+      @level.properties[key] = value
+    end
+
+    @level.log_changes(current_user)
+    @level.save!
+
+    render json: {redirect: level_url(@level)}
+  end
+
   # PATCH/PUT /levels/1
   # PATCH/PUT /levels/1.json
   def update

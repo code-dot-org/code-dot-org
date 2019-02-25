@@ -324,6 +324,20 @@ class LevelsControllerTest < ActionController::TestCase
     assert_nil level.properties['solution_image_url']
   end
 
+  test "should update App Lab starter code and starter HTML" do
+    post :update_properties, params: {
+      level_id: create(:applab).id,
+    }, body: {
+      start_html: '<h1>foo</h1>',
+      start_blocks: 'console.log("hello world");',
+    }.to_json
+
+    assert_response :success
+    level = assigns(:level)
+    assert_equal '<h1>foo</h1>', level.properties['start_html']
+    assert_equal 'console.log("hello world");', level.properties['start_blocks']
+  end
+
   test "should update solution image when updating solution blocks" do
     LevelSourceImage.stubs(:find_by).returns(nil)
     LevelSourceImage.any_instance.expects(:save_to_s3).returns(true)
