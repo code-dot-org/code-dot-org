@@ -11,7 +11,7 @@ class VideosControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     Video.stubs(:merge_and_write_i18n)
-    Video.stubs(:merge_and_write_attributes)
+    @merge_and_write_attributes_stub = Video.stubs(:merge_and_write_attributes).returns({})
     Video.stubs(:s3_metadata).returns({})
     Video.any_instance.stubs(:fetch_thumbnail)
     VideosController.any_instance.stubs(:upload_to_s3).returns('_fake_s3_url_')
@@ -29,6 +29,8 @@ class VideosControllerTest < ActionController::TestCase
   end
 
   test "should create video" do
+    @merge_and_write_attributes_stub.
+      with('test_key', '_fake_code_', 'https://videos.code.org/_fake_s3_url_', 'en-US').once
     assert_creates(Video) do
       post :create, params: {
         title: 'Test create title',

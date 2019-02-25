@@ -88,7 +88,8 @@ const SILENCED = [
   'learn/index',
   'cookieBanner',
   'dance',
-  'regionalPartnerSearch'
+  'regionalPartnerSearch',
+  'regionalPartnerMiniContact'
 ];
 const SITES_CONFIG = {
   studio: {
