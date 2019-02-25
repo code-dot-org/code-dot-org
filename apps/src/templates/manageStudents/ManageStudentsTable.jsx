@@ -588,7 +588,11 @@ class ManageStudentsTable extends Component {
             />
           )}
         </div>
-        <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+        <Table.Provider
+          columns={columns}
+          style={tableLayoutStyles.table}
+          id="uitest-manage-students-table"
+        >
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>

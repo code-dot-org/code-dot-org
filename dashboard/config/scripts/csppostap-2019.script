@@ -50,13 +50,6 @@ assessment 'U2L14 Summary Tables MC_2018_2019', progression: 'Check Your Underst
 stage 'Project - Tell a Data Story', flex_category: 'csp_postap_1'
 named_level 'CSP U2L15 SFLP_2019'
 
-stage 'Chapter 1 Assessment', lockable: true, flex_category: 'csp_postap_1'
-variants
-  level 'csp_affirmation_control_2_2019', progression: 'Pre-test reflection'
-  level 'csp_affirmation_intervention_2_2019', progression: 'Pre-test reflection'
-endvariants
-assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC_2018_2019'
-
 stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
 level 'U4L02 Student Lesson Introduction_2018_2019'
 level 'U4 - Objects - eventParameter_2019'
