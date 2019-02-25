@@ -53,6 +53,22 @@ export const loadValidScripts = (section, validScripts) => {
   };
 };
 
+// Selectors
+export const getSelectedScriptName = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  const scripts = state.scriptSelection.validScripts;
+  let scriptName = null;
+  for (let i = 0; i < scripts.length; i++) {
+    const script = scripts[i];
+    if (script.id === scriptId) {
+      scriptName = script.script_name;
+      break;
+    }
+  }
+
+  return scriptName;
+};
+
 /**
  * Shape for a validScript
  */
