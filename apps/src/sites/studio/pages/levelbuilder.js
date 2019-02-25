@@ -37,4 +37,6 @@ window.CodeMirror = codemirror;
 // TODO: Remove when global `marked` is no longer required.
 window.marked = marked;
 window.renderer = renderer;
+
+// TODO: Extract .js from _authored_hints.haml and _instructions.haml, then remove this
 window.convertXmlToBlockly = convertXmlToBlockly;
