@@ -12,6 +12,15 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user = current_user
   end
 
+  # GET /api/v1/users/<user_id>/contact_details
+  def get_contact_details
+    render json: {
+      user_name: current_user&.name,
+      email: current_user&.email,
+      zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
+    }
+  end
+
   # GET /api/v1/users/<user_id>/using_text_mode
   def get_using_text_mode
     render json: {using_text_mode: !!@user.using_text_mode}
