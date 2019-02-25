@@ -5,6 +5,7 @@ import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
 import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
+import Spinner from '../../components/spinner';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = 'Deep Dive';
@@ -17,6 +18,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
 
     this.state = {
       pendingDelete: null,
+      pendingScholarshipUpdates: [],
       enrollments: this.props.enrollments
     };
 
@@ -54,6 +56,9 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   handleScholarshipStatusChange(enrollment, selection) {
+    let pendingScholarshipUpdates = this.state.pendingScholarshipUpdates;
+    pendingScholarshipUpdates.push(enrollment.id);
+    this.setState({pendingScholarshipUpdates});
     $.ajax({
       method: 'POST',
       url: `/api/v1/pd/enrollment/${
@@ -65,8 +70,13 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
       const index = enrollments.findIndex(e => {
         return e.id === data.id;
       });
-      enrollments[index] = data;
-      this.setState({enrollments: enrollments});
+      enrollments.splice(index, 1, data);
+
+      let pendingScholarshipUpdates = this.state.pendingScholarshipUpdates;
+      pendingScholarshipUpdates = pendingScholarshipUpdates.filter(e => {
+        e !== enrollment.id;
+      });
+      this.setState({enrollments, pendingScholarshipUpdates});
     });
   }
 
@@ -152,18 +162,25 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
               {enrollment.attendances} / {this.props.numSessions}
             </td>
           )}
-          {this.props.workshopSubject === LOCAL_SUMMER && (
-            <td>
-              <ScholarshipDropdown
-                scholarshipStatus={enrollment.scholarship_status}
-                onChange={this.handleScholarshipStatusChange.bind(
-                  this,
-                  enrollment
-                )}
-                disabled={false}
-              />
-            </td>
-          )}
+          {this.props.workshopSubject === LOCAL_SUMMER &&
+            this.state.pendingScholarshipUpdates.includes(enrollment.id) && (
+              <td>
+                <Spinner size="small" />
+              </td>
+            )}
+          {this.props.workshopSubject === LOCAL_SUMMER &&
+            !this.state.pendingScholarshipUpdates.includes(enrollment.id) && (
+              <td>
+                <ScholarshipDropdown
+                  scholarshipStatus={enrollment.scholarship_status}
+                  onChange={this.handleScholarshipStatusChange.bind(
+                    this,
+                    enrollment
+                  )}
+                  disabled={false}
+                />
+              </td>
+            )}
         </tr>
       );
     });
