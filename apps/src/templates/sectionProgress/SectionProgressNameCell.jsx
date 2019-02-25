@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {progressStyles} from './multiGridConstants';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDasboard/urlHelpers';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 class SectionProgressNameCell extends Component {
   static propTypes = {

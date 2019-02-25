@@ -5,7 +5,7 @@ import {tableLayoutStyles} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDasboard/urlHelpers';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   inputBox: {
