@@ -1007,8 +1007,21 @@ export function setParamAtIndex(index, value, block) {
  * the param at the given index without extra quotes, commas or spaces.
  */
 function formatParamString(index, params) {
-  params = params.split(',');
-  return params[index]
+  // Use encodeURIComponent to encode everything except commas outside
+  // of quoted strings (which we will remove with the split() call below)
+  const splitQuotedStrings = params.split(/("[^"]*"|'[^']*')/);
+  const escaped = splitQuotedStrings.reduce((acc, cur) => {
+    const encodedString = encodeURIComponent(cur);
+    if (cur.startsWith('"') || cur.startsWith("'")) {
+      return acc + encodedString;
+    }
+    return acc + encodedString.replace(/%2C/g, ',');
+  }, '');
+  // Split apart on only the real (not encoded) commas:
+  params = escaped.split(',');
+  // Decode the string for the requested parameter and remove all single
+  // quotes, double quotes, and whitespace:
+  return decodeURIComponent(params[index])
     .split('"')
     .join('')
     .split("'")
@@ -1019,16 +1032,15 @@ function formatParamString(index, params) {
 function getParamFromCodeAtIndex(index, methodName, code) {
   const prefix = `${methodName}(`;
   code = code.slice(code.lastIndexOf(prefix));
-  // quote, followed by param, followed by end quote, comma, and optional whitespace
-  const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
-  // param, comma, and optional whitespace
-  const backslashNoQuoteRegex = `^${methodName}\\(([^"']*),\\s*$`;
-  let matchQuote = new RegExp(backslashEscapedRegex).exec(code);
-  let matchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
-  if (matchQuote) {
-    return formatParamString(index, matchQuote[2]);
-  } else if (matchNoQuote) {
-    return formatParamString(index, matchNoQuote[1]);
+
+  // Everything after left paren except right paren, with optional whitespace afterwards
+  // Handles simplistic cases of single quotes, double quotes, and matches parens within
+  // each parameter
+
+  const paramsRegex = `^${methodName}\\(((?:(?:\\([^\\)]*\\))|(?:"[^"]*")|(?:\'[^\']*\')|[^)]*)*)\\)?\\s*$`;
+  const matchParams = new RegExp(paramsRegex).exec(code);
+  if (matchParams) {
+    return formatParamString(index, matchParams[1]);
   }
   return null;
 }
