@@ -4058,13 +4058,15 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_by_credential locates migrated SSO user' do
     user = create :student, :unmigrated_clever_sso
+    original_uid = user.uid
+
     user.migrate_to_multi_auth
 
     User.expects(:find_by).never
     assert_equal user,
       User.find_by_credential(
         type: AuthenticationOption::CLEVER,
-        id: user.uid
+        id: original_uid
       )
   end
 

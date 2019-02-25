@@ -94,7 +94,7 @@ var PROP_INFO = {
     friendlyName: 'font-size',
     internalName: 'fontSize',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '14'
   },
   textAlign: {
     friendlyName: 'text-align',
@@ -564,6 +564,8 @@ function getPropertyValueDropdown(param2) {
       return ['"fill"', '"cover"', '"contain"', '"none"'];
     case 'hidden':
     case 'checked':
+    case 'font-size':
+      return ['8', '10', '12', '14', '18', '24', '36', '72'];
     case 'readonly':
       return ['true', 'false'];
     case 'text':

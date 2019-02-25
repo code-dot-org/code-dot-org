@@ -1413,8 +1413,6 @@ en:
         text: add sprite [SPRITE][0] to group [GROUP][1]
       aalab_allSpritesWithAnimation:
         text: aalab all [ANIMATION][0]
-      aalab_changeAnimMike:
-        text: set [SPRITE][0]'s to costume to [COSTUME][1]
       aalab_changePropByFlexible:
         text: aalab change [SPRITE][0] [PROPERTY][1] by [VAL][2]
         options:
@@ -1424,12 +1422,6 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
-      aalab_checkCollision:
-        text: when [SPRITE1][0] [OPTION][1] [SPRITE2][2]
-        options:
-          OPTION:
-            '"collide"': collides with
-            '"overlap"': overlaps
       aalab_checkTouching:
         text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2]"
         options:
@@ -1555,10 +1547,22 @@ en:
             '"4"': 4 seconds
             '"5"': 5 seconds
             '"0"': forever
+      aalab_showSpriteLabel:
+        text: show label[TEXT][0] [LOCATION][1] sprite[SPRITE][2]
+        options:
+          LOCATION:
+            '"above"': above
+            '"below"': below
       aalab_speakerSaysConsole:
         text: "[SPRITE][0] says [MESSAGE][1]"
       aalab_spriteSay:
         text: sprite [SPRITE][0] say [TEXT][1] for [SECONDS][2] seconds
+      aalab_toggleHideCustomText:
+        text: "[OPTION][0] custom text"
+        options:
+          OPTION:
+            '"show"': show
+            '"hide"': hide
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
