@@ -853,6 +853,150 @@
       "version": "Ieyy.LMm1YCCw7pLGmJGNKWwCxL5Cp7_",
       "sourceUrl": "/api/v1/sound-library/category_background/wavering_wind.mp3"
     },
+    "category_bell/Bells_Win": {
+      "name": "Bells_Win",
+      "time": 6,
+      "jsonLastModified": "2019-02-23 00:05:20 UTC",
+      "mp3LastModified": "2019-02-13 23:43:40 UTC",
+      "version": "CzItgIiNV8QRnftUs80p49Iq.93pqFAd",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Bells_Win.mp3"
+    },
+    "category_bell/Bells_Win_High": {
+      "name": "Bells_Win_High",
+      "time": 6,
+      "jsonLastModified": "2019-02-23 00:05:19 UTC",
+      "mp3LastModified": "2019-02-13 23:43:37 UTC",
+      "version": "udnIOCdOKBWwCGvwK5TTtFYRMNoTR9nh",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Bells_Win_High.mp3"
+    },
+    "category_bell/Bells_Win_Low": {
+      "name": "Bells_Win_Low",
+      "time": 6,
+      "jsonLastModified": "2019-02-23 00:05:19 UTC",
+      "mp3LastModified": "2019-02-13 23:43:39 UTC",
+      "version": "THiissqf1GPHeWCPoarNAWBvhcAh5JdN",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Bells_Win_Low.mp3"
+    },
+    "category_bell/Choose_Background": {
+      "name": "Choose_Background",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:20 UTC",
+      "mp3LastModified": "2019-02-13 23:43:41 UTC",
+      "version": "YgNz_wVOhojtST7Bd5tc63jh7f_YE7Pt",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Choose_Background.mp3"
+    },
+    "category_bell/Hollow_Bell_Notification": {
+      "name": "Hollow_Bell_Notification",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:21 UTC",
+      "mp3LastModified": "2019-02-13 23:43:41 UTC",
+      "version": "m2f1lA4KGN5NzK0t.niILZXZMsOUa6s1",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Hollow_Bell_Notification.mp3"
+    },
+    "category_bell/Long_Bell_Notification": {
+      "name": "Long_Bell_Notification",
+      "time": 2,
+      "jsonLastModified": "2019-02-23 00:05:21 UTC",
+      "mp3LastModified": "2019-02-13 23:43:42 UTC",
+      "version": "eYXmiHe0VVqXFEap6UHXJ2b.0Zs053Pb",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Long_Bell_Notification.mp3"
+    },
+    "category_bell/Notification_4": {
+      "name": "Notification_4",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:22 UTC",
+      "mp3LastModified": "2019-02-13 23:43:42 UTC",
+      "version": "h4GcNEJ_EEBkH7dQQ5uHQ3Ge7cOEQx2w",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Notification_4.mp3"
+    },
+    "category_bell/Quiet_BellOctave_Notification": {
+      "name": "Quiet_BellOctave_Notification",
+      "time": 0,
+      "jsonLastModified": "2019-02-23 00:05:23 UTC",
+      "mp3LastModified": "2019-02-13 23:43:43 UTC",
+      "version": "TStPrdoH7Yn2SWDjIyYH1grpGpdgCvOC",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Quiet_BellOctave_Notification.mp3"
+    },
+    "category_bell/Quiet_Bell_Notification": {
+      "name": "Quiet_Bell_Notification",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:22 UTC",
+      "mp3LastModified": "2019-02-13 23:43:43 UTC",
+      "version": "wemsCEZdQEkGbOya5C_ZQhc70p8AVy27",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Quiet_Bell_Notification.mp3"
+    },
+    "category_bell/Quriky_Trill_Bling_Positive": {
+      "name": "Quriky_Trill_Bling_Positive",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:23 UTC",
+      "mp3LastModified": "2019-02-13 23:43:44 UTC",
+      "version": "oo.gpTWZ7_Qrro4ZgN_h2oKnDtGU3jVS",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Quriky_Trill_Bling_Positive.mp3"
+    },
+    "category_bell/Short_Bell_Alert": {
+      "name": "Short_Bell_Alert",
+      "time": 0,
+      "jsonLastModified": "2019-02-23 00:05:24 UTC",
+      "mp3LastModified": "2019-02-13 23:43:45 UTC",
+      "version": "xF2BTs_TvWutYFVVcxQt6AMho_JOMHrA",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Short_Bell_Alert.mp3"
+    },
+    "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open": {
+      "name": "Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:24 UTC",
+      "mp3LastModified": "2019-02-13 23:43:45 UTC",
+      "version": "muGMtERASdlJAN7t2FPoBDzZX.HwaAqN",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open.mp3"
+    },
+    "category_bell/Vibrant_Game_Correct_Answer_1": {
+      "name": "Vibrant_Game_Correct_Answer_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:29 UTC",
+      "mp3LastModified": "2019-02-13 23:43:49 UTC",
+      "version": "ibV7v1eRwtdwsxmB1Om7wvarOxkQj1ZL",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Vibrant_Game_Correct_Answer_1.mp3"
+    },
+    "category_bell/Vibrant_Game__Bell_Ding": {
+      "name": "Vibrant_Game__Bell_Ding",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:25 UTC",
+      "mp3LastModified": "2019-02-13 23:43:46 UTC",
+      "version": "IaPRS05._FWB1AbeU4BfxYA00nYxd8Ps",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Vibrant_Game__Bell_Ding.mp3"
+    },
+    "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1": {
+      "name": "Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-23 00:05:26 UTC",
+      "mp3LastModified": "2019-02-13 23:43:47 UTC",
+      "version": "VwAQRoXZiqRubArX7dsZ_7cukeDa0mVo",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1.mp3"
+    },
+    "category_bell/Vibrant_Game__Slot_Machine_Ding_1": {
+      "name": "Vibrant_Game__Slot_Machine_Ding_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-23 00:05:27 UTC",
+      "mp3LastModified": "2019-02-13 23:43:47 UTC",
+      "version": "WLShP9oAXhzZ5J3dY.vorhWZWkFlzSZ4",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Vibrant_Game__Slot_Machine_Ding_1.mp3"
+    },
+    "category_bell/Vibrant_Game__Slot_Machine_Ding_2": {
+      "name": "Vibrant_Game__Slot_Machine_Ding_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-23 00:05:28 UTC",
+      "mp3LastModified": "2019-02-13 23:43:48 UTC",
+      "version": ".E0DJ2WRabQYByM5KIriyLBaF2x9FlYL",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Vibrant_Game__Slot_Machine_Ding_2.mp3"
+    },
+    "category_bell/Vibrant_Game__Star_Burst_3": {
+      "name": "Vibrant_Game__Star_Burst_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-23 00:05:28 UTC",
+      "mp3LastModified": "2019-02-13 23:43:48 UTC",
+      "version": "Ya7B2AamhRhLMawGi6jcIK7ivIP69pzh",
+      "sourceUrl": "/api/v1/sound-library/category_bell/Vibrant_Game__Star_Burst_3.mp3"
+    },
     "category_board_games/break": {
       "name": "break",
       "time": 0,
@@ -2287,6 +2431,11 @@
     }
   },
   "aliases": {
+    "8": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
+    ],
     "80s": [
       "category_app/App_Button_1",
       "category_app/App_Button_2",
@@ -2331,6 +2480,11 @@
     ],
     "achievement": [
       "category_male_voiceover/objective_achieved_male"
+    ],
+    "achievment": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "advanced": [
       "category_app/App_Button_1",
@@ -2377,10 +2531,25 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
     ],
     "airport": [
       "category_background/airport"
+    ],
+    "alert": [
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
     ],
     "animal": [
       "category_background/toucan"
@@ -2491,6 +2660,16 @@
     "app_tab_sound": [
       "category_app/App_Tab_Sound"
     ],
+    "apps": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
     "arcade_game_button_tap": [
       "category_app/Arcade_Game_Button_Tap"
     ],
@@ -2537,6 +2716,23 @@
     "bee_buzz": [
       "category_animals/bee_buzz"
     ],
+    "beep": [
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
+    ],
+    "bells_win": [
+      "category_bell/Bells_Win"
+    ],
+    "bells_win_high": [
+      "category_bell/Bells_Win_High"
+    ],
+    "bells_win_low": [
+      "category_bell/Bells_Win_Low"
+    ],
     "bird": [
       "category_animals/chick",
       "category_animals/chicken",
@@ -2546,6 +2742,21 @@
       "category_animals/rooster",
       "category_background/seagulls",
       "category_background/toucan"
+    ],
+    "bit": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
+    ],
+    "bleeps": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "boing_1": [
       "category_digital/boing_1"
@@ -2644,7 +2855,18 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background"
+    ],
+    "buttons": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "car": [
       "category_background/city_night",
@@ -2785,6 +3007,26 @@
       "category_background/typewriter",
       "category_background/waterfall",
       "category_background/wavering_wind"
+    ],
+    "category_bell": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Short_Bell_Alert",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "category_board_games": [
       "category_board_games/break",
@@ -2986,8 +3228,19 @@
     "chime": [
       "category_instrumental/chime"
     ],
+    "choose": [
+      "category_bell/Choose_Background"
+    ],
+    "choose_background": [
+      "category_bell/Choose_Background"
+    ],
     "city_night": [
       "category_background/city_night"
+    ],
+    "classic": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "click": [
       "category_app/App_Button_1",
@@ -3035,8 +3288,25 @@
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
       "category_app/Snap",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert",
       "category_objects/click",
       "category_objects/metal_click"
+    ],
+    "clicks": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "clink": [
       "category_objects/clink"
@@ -3054,6 +3324,16 @@
     "clothes": [
       "category_objects/cloth"
     ],
+    "coin": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
     "coin_1": [
       "category_digital/coin_1"
     ],
@@ -3062,6 +3342,16 @@
     ],
     "coin_3": [
       "category_digital/coin_3"
+    ],
+    "complete": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "completed": [
       "category_female_voiceover/mission_completed_female",
@@ -3081,6 +3371,9 @@
     "congratulations_male": [
       "category_male_voiceover/congratulations_male"
     ],
+    "connect": [
+      "category_bell/Choose_Background"
+    ],
     "cooking": [
       "category_objects/metal_pot_1",
       "category_objects/metal_pot_2"
@@ -3095,8 +3388,28 @@
     "correct_male": [
       "category_male_voiceover/correct_male"
     ],
+    "count": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
     "cow": [
       "category_animals/cow"
+    ],
+    "crafting": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "creak": [
       "category_objects/creak_1",
@@ -3114,8 +3427,23 @@
     "crows": [
       "category_animals/crows"
     ],
+    "cues": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
     "danger": [
       "category_background/fire_burning"
+    ],
+    "death": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "default": [
       "default"
@@ -3180,6 +3508,14 @@
     ],
     "digital_upscale": [
       "category_instrumental/digital_upscale"
+    ],
+    "ding": [
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
     ],
     "dinosaur": [
       "category_animals/dinosaur"
@@ -3314,7 +3650,17 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
     ],
     "error_1": [
       "category_digital/error_1"
@@ -3507,6 +3853,18 @@
       "category_app/Perfect_Organic_Button",
       "category_app/Snap",
       "category_background/pregame_fans",
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low",
+      "category_bell/Choose_Background",
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3",
       "category_male_voiceover/game_over_male"
     ],
     "game_over_female": [
@@ -3635,13 +3993,17 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background"
     ],
     "hold": [
       "category_male_voiceover/hold_male"
     ],
     "hold_male": [
       "category_male_voiceover/hold_male"
+    ],
+    "hollow_bell_notification": [
+      "category_bell/Hollow_Bell_Notification"
     ],
     "hop": [
       "category_digital/hop"
@@ -3747,7 +4109,22 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Short_Bell_Alert",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "intermission_whispering": [
       "category_background/intermission_whispering"
@@ -3767,6 +4144,14 @@
       "category_background/jazzy_beats"
     ],
     "jump": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3",
       "category_digital/boing_1",
       "category_digital/boing_2",
       "category_digital/bounce_1",
@@ -3865,11 +4250,20 @@
       "category_app/Perfect_App_Button_5",
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
-      "category_app/Perfect_Organic_Button"
+      "category_app/Perfect_Organic_Button",
+      "category_bell/Choose_Background"
+    ],
+    "long_bell_notification": [
+      "category_bell/Long_Bell_Notification"
     ],
     "lose": [
       "category_female_voiceover/you_lose_female",
       "category_male_voiceover/you_lose_male"
+    ],
+    "loses": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "loud": [
       "category_objects/sharp_switch"
@@ -3987,7 +4381,22 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
+    ],
+    "melodic": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "menu": [
       "category_app/App_Button_1",
@@ -4034,7 +4443,24 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
+    ],
+    "menus": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "metal": [
       "category_app/Modern_UI_Sound",
@@ -4107,6 +4533,14 @@
       "category_background/stride",
       "category_background/synthesize",
       "category_background/wavering_wind",
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3",
       "category_instrumental/digital_music",
       "category_instrumental/digital_music_2",
       "category_instrumental/harpe_music_1",
@@ -4139,6 +4573,25 @@
     ],
     "nine_male": [
       "category_male_voiceover/nine_male"
+    ],
+    "notification": [
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Short_Bell_Alert",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
+    "notification_4": [
+      "category_bell/Notification_4"
     ],
     "number": [
       "category_female_voiceover/eight_female",
@@ -4228,6 +4681,11 @@
       "category_objects/creak_1",
       "category_objects/creak_2"
     ],
+    "organ": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
+    ],
     "organic": [
       "category_app/Perfect_App_Button_1",
       "category_app/Perfect_App_Button_2",
@@ -4242,6 +4700,9 @@
       "category_background/outback"
     ],
     "over": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low",
       "category_female_voiceover/time_over_female",
       "category_male_voiceover/game_over_male",
       "category_male_voiceover/time_over_male"
@@ -4295,6 +4756,16 @@
       "category_animals/kitten",
       "category_animals/puppy"
     ],
+    "pickups": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
     "pig": [
       "category_animals/pig"
     ],
@@ -4332,9 +4803,27 @@
     "pop": [
       "category_objects/bubbles"
     ],
+    "positive": [
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
+    ],
     "pot": [
       "category_objects/metal_pot_1",
       "category_objects/metal_pot_2"
+    ],
+    "potions": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "power": [
       "category_female_voiceover/power_up_female",
@@ -4358,6 +4847,16 @@
     "powerdown": [
       "category_digital/powerdown"
     ],
+    "powerup": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
     "pregame_fans": [
       "category_background/pregame_fans"
     ],
@@ -4375,6 +4874,15 @@
     ],
     "quick_pulse": [
       "category_digital/quick_pulse"
+    ],
+    "quiet_bell_notification": [
+      "category_bell/Quiet_Bell_Notification"
+    ],
+    "quiet_belloctave_notification": [
+      "category_bell/Quiet_BellOctave_Notification"
+    ],
+    "quriky_trill_bling_positive": [
+      "category_bell/Quriky_Trill_Bling_Positive"
     ],
     "rain_thunderstorm": [
       "category_background/rain_thunderstorm"
@@ -4448,7 +4956,10 @@
       "category_app/App_Slide_6",
       "category_app/App_Tab_Sound",
       "category_app/Arcade_Game_Button_Tap",
-      "category_app/Bamboo_Button"
+      "category_app/Bamboo_Button",
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "rhinoceros": [
       "category_animals/rhinoceros"
@@ -4561,6 +5072,14 @@
       "category_app/Arcade_Game_Button_Tap",
       "category_app/Bamboo_Button"
     ],
+    "screen": [
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
+    ],
     "sea": [
       "category_background/seagulls"
     ],
@@ -4597,6 +5116,9 @@
     "sheep": [
       "category_animals/sheep"
     ],
+    "short_bell_alert": [
+      "category_bell/Short_Bell_Alert"
+    ],
     "shout_congratulations_female": [
       "category_female_voiceover/shout_congratulations_female"
     ],
@@ -4612,6 +5134,16 @@
     ],
     "six_male": [
       "category_male_voiceover/six_male"
+    ],
+    "slides": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "small_restaurant": [
       "category_background/small_restaurant"
@@ -4646,6 +5178,16 @@
       "category_background/stride",
       "category_background/synthesize",
       "category_background/wavering_wind"
+    ],
+    "sounds": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
     ],
     "sport": [
       "category_objects/kickball"
@@ -4712,7 +5254,17 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
     ],
     "stride": [
       "category_background/stride"
@@ -4721,6 +5273,9 @@
       "category_instrumental/digital_drum_stutter"
     ],
     "success": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low",
       "category_digital/coin_1",
       "category_digital/coin_2",
       "category_digital/coin_3"
@@ -4738,10 +5293,16 @@
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
       "category_app/Snap",
+      "category_bell/Choose_Background",
       "category_objects/metallic_switch",
       "category_objects/plastic_switch",
       "category_objects/sharp_switch",
       "category_objects/switch"
+    ],
+    "synth": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "synthesize": [
       "category_background/synthesize"
@@ -4758,7 +5319,8 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background"
     ],
     "taps": [
       "category_app/Bass_Power_Off",
@@ -4772,7 +5334,8 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background"
     ],
     "tear": [
       "category_objects/cloth_rip"
@@ -4826,8 +5389,26 @@
     "timed": [
       "category_female_voiceover/time_over_female"
     ],
+    "tonal": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
     "toucan": [
       "category_background/toucan"
+    ],
+    "touch": [
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
     ],
     "town": [
       "category_background/town"
@@ -4899,7 +5480,14 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background",
+      "category_bell/Hollow_Bell_Notification",
+      "category_bell/Long_Bell_Notification",
+      "category_bell/Notification_4",
+      "category_bell/Quiet_BellOctave_Notification",
+      "category_bell/Quiet_Bell_Notification",
+      "category_bell/Short_Bell_Alert"
     ],
     "unlock": [
       "category_app/Bass_Power_Off",
@@ -4910,7 +5498,8 @@
       "category_app/Perfect_App_Button_5",
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
-      "category_app/Perfect_Organic_Button"
+      "category_app/Perfect_Organic_Button",
+      "category_bell/Choose_Background"
     ],
     "up": [
       "category_female_voiceover/hurry_up_female",
@@ -4975,7 +5564,47 @@
       "category_app/Perfect_Clean_App_Button_Click",
       "category_app/Perfect_Clean_App_Button_Click_2",
       "category_app/Perfect_Organic_Button",
-      "category_app/Snap"
+      "category_app/Snap",
+      "category_bell/Choose_Background",
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
+    "vibrant": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
+    "vibrant_cash_register_open_positive_game_open": [
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open"
+    ],
+    "vibrant_game__bell_ding": [
+      "category_bell/Vibrant_Game__Bell_Ding"
+    ],
+    "vibrant_game__bell_twinkle_positive_touch_1": [
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1"
+    ],
+    "vibrant_game__slot_machine_ding_1": [
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1"
+    ],
+    "vibrant_game__slot_machine_ding_2": [
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2"
+    ],
+    "vibrant_game__star_burst_3": [
+      "category_bell/Vibrant_Game__Star_Burst_3"
+    ],
+    "vibrant_game_correct_answer_1": [
+      "category_bell/Vibrant_Game_Correct_Answer_1"
     ],
     "victory": [
       "category_digital/win"
@@ -4999,6 +5628,14 @@
       "category_digital/whistle_up"
     ],
     "win": [
+      "category_bell/Quriky_Trill_Bling_Positive",
+      "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
+      "category_bell/Vibrant_Game_Correct_Answer_1",
+      "category_bell/Vibrant_Game__Bell_Ding",
+      "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_1",
+      "category_bell/Vibrant_Game__Slot_Machine_Ding_2",
+      "category_bell/Vibrant_Game__Star_Burst_3",
       "category_digital/coin_1",
       "category_digital/coin_2",
       "category_digital/coin_3",
@@ -5013,6 +5650,11 @@
     ],
     "winner": [
       "category_female_voiceover/you_win_female"
+    ],
+    "wins": [
+      "category_bell/Bells_Win",
+      "category_bell/Bells_Win_High",
+      "category_bell/Bells_Win_Low"
     ],
     "woof": [
       "category_animals/dog",
