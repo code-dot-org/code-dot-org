@@ -38,9 +38,15 @@ class TeacherDashboard extends Component {
       studentCount
     } = this.props;
 
-    // If current path doesn't match one of the paths in our TeacherDashboardPath type,
-    // set pathname to point to the Progress tab instead.
-    if (!Object.values(TeacherDashboardPath).includes(location.pathname)) {
+    // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
+    const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
+      location.pathname
+    );
+    if (emptyOrInvalidPath && studentCount === 0) {
+      // Default to the Manage Students tab if section has 0 students.
+      location.pathname = TeacherDashboardPath.manageStudents;
+    } else if (emptyOrInvalidPath) {
+      // Default to the Progress tab if section otherwise.
       location.pathname = TeacherDashboardPath.progress;
     }
 

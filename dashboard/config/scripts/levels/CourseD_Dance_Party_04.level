@@ -51,9 +51,6 @@
     "default_song": "bornthisway_ladygaga",
     "long_instructions": "*This dance needs some flash!*\r\n\r\nLook for a new block in your toolbox that adds a background effect behind your dancer. Watch the effects change in time with the music!",
     "short_instructions": "Add a background effect to your program.",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false"
   },
   "published": true,

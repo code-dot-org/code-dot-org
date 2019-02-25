@@ -92,7 +92,7 @@ named_level 'Video - Cybersecurity and Crime_2019', progression: 'Cybersecurity 
 stage 'Unit 4 Assessment', lockable: true, flex_category: 'cspAssessment'
 assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC_2018_2019'
 
-stage 'Optional: Data Questions', lockable: true
+stage 'Optional: Data Questions', lockable: true, flex_category: 'optional'
 assessment 'CSP Data Questions MC_2018_2019'
 
 stage 'Mid-Year Survey', flex_category: 'cspSurvey'
