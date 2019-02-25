@@ -1,3 +1,8 @@
+/*
+Basis for this CSS from:
+https://weblog.west-wind.com/posts/2015/Feb/26/Using-FontAwesome-Fonts-for-HTML-Radio-Buttons-and-Checkboxes
+*/
+
 input[type=radio].with-font {
     border: 0;
     clip: rect(0 0 0 0);
@@ -22,11 +27,6 @@ input[type=radio].with-font:checked ~ label:before  {
     font-size: 1.5em;
     color: #0094ca;
     letter-spacing: 5px;
-}
-input[type=radio].with-font:focus ~ label:before,
-input[type=radio].with-font:focus ~ label
-{
-    color: color.cyan; /* highlight both box and label */
 }
 
 label {
