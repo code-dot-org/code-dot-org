@@ -62,4 +62,46 @@ describe('errorMapper correctly maps different errors', function() {
 
     assert.equal(jslintResults.data[0].text, "'x' hasn't been declared yet.");
   });
+
+  it('reserved words (App lab)', function() {
+    var jslintResults = {
+      data: [
+        {
+          column: 0,
+          raw:
+            "Expected an identifier and instead saw '{a}' (a reserved word).",
+          row: 0,
+          text: "Expected an identifier and instead saw 'x' (a reserved word).",
+          type: 'error'
+        }
+      ]
+    };
+
+    errorMapper.processResults(jslintResults, 'Applab');
+    assert.equal(
+      jslintResults.data[0].text,
+      "'x' is a reserved word in App Lab. Use a different variable name."
+    );
+  });
+
+  it('reserved words (Game lab)', function() {
+    var jslintResults = {
+      data: [
+        {
+          column: 0,
+          raw:
+            "Expected an identifier and instead saw '{a}' (a reserved word).",
+          row: 0,
+          text: "Expected an identifier and instead saw 'x' (a reserved word).",
+          type: 'error'
+        }
+      ]
+    };
+
+    errorMapper.processResults(jslintResults, 'Gamelab');
+    assert.equal(
+      jslintResults.data[0].text,
+      "'x' is a reserved word in Game Lab. Use a different variable name."
+    );
+  });
 });
