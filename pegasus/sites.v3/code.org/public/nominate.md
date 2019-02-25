@@ -84,4 +84,4 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 <br>
 
-<p style="text-align:center"><i>Note: Any information you provide about the teacher you nominate will not be used for any purpose other than to notify the teacher about this opportunity, and to inform the local Code.org Regional Partner that this teacher was recommended for a scholarship. <strong>Neither the teacher nor you will be added to any newsletter lists, and the teacher’s email address will not be shared</strong>.</i>
+<p style="text-align:center"><i>Note: Any information you provide about the teacher you nominate will not be used for any purpose other than to notify the teacher about this opportunity, and to inform the local Code.org Regional Partner that this teacher was recommended for a scholarship. <strong>Neither the teacher nor you will be added to any newsletter lists, and the teacher’s email address will not be shared</strong>. The nominated teacher’s email information will be deleted at the end of this campaign, unless the teacher has chosen to sign up for a Code.org account or other Code.org services.</i>
