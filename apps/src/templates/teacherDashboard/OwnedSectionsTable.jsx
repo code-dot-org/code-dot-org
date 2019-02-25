@@ -9,11 +9,10 @@ import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from './shapes';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {pegasus} from '../../lib/util/urlHelpers';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '../../utils';
-import experiments from '@cdo/apps/util/experiments';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -58,15 +57,8 @@ const styles = {
 
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
-  let sectionUrl = '';
-  if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_REACT)) {
-    sectionUrl = `/teacher_dashboard/sections/${rowData.id}`;
-  } else {
-    sectionUrl = pegasus(`/teacher-dashboard#/sections/${rowData.id}`);
-  }
-
   return (
-    <a style={tableLayoutStyles.link} href={sectionUrl}>
+    <a style={tableLayoutStyles.link} href={teacherDashboardUrl(rowData.id)}>
       {rowData.name}
     </a>
   );
@@ -114,14 +106,6 @@ export const gradeFormatter = function(grade, {rowData}) {
 
 export const loginInfoFormatter = function(loginType, {rowData}) {
   let sectionCode = '';
-  let loginInfoUrl = '';
-  if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_REACT)) {
-    loginInfoUrl = `/teacher_dashboard/sections/${rowData.id}/login_info`;
-  } else {
-    loginInfoUrl = pegasus(
-      `/teacher-dashboard#/sections/${rowData.id}/print_signin_cards`
-    );
-  }
 
   // For managed logins, just show the provider name rather than the login code.
   if (rowData.loginType === OAuthSectionTypes.clever) {
@@ -132,24 +116,17 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
     sectionCode = rowData.code;
   }
   return (
-    <a style={tableLayoutStyles.link} href={loginInfoUrl}>
+    <a
+      style={tableLayoutStyles.link}
+      href={teacherDashboardUrl(rowData.id, '/print_signin_cards')}
+    >
       {sectionCode}
     </a>
   );
 };
 
 export const studentsFormatter = function(studentCount, {rowData}) {
-  let manageStudentsUrl = '';
-  if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_REACT)) {
-    manageStudentsUrl = `/teacher_dashboard/sections/${
-      rowData.id
-    }/manage_students`;
-  } else {
-    manageStudentsUrl = pegasus(
-      `/teacher-dashboard#/sections/${rowData.id}/manage`
-    );
-  }
-
+  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
