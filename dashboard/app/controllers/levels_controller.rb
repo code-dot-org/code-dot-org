@@ -45,7 +45,7 @@ class LevelsController < ApplicationController
   # GET all the information for the mini rubric
   def get_rubric
     @level = Level.find_by(id: params[:level_id])
-    if @level.mini_rubric && @level.mini_rubric.to_bool
+    if @level.mini_rubric&.to_bool
       render json: {
         keyConcept: @level.rubric_key_concept,
         exceeds: @level.rubric_exceeds,
