@@ -140,7 +140,7 @@ module Pd
           'By checking this box, you indicate that you understand there may be a program fee
            for the summer workshop you attend.'
         ),
-        pay_fee: 'Will you or your school be able to pay the fee?',
+        pay_fee: 'Will your school be able to pay the fee?',
         consider_for_funding:
           'Would you like to be considered for funding support? Note that funding support is not guaranteed.',
         committed: 'Are you committed to participating in the entire Professional Learning Program?',
