@@ -67,6 +67,12 @@ class Script < ActiveRecord::Base
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
+  before_validation :hide_pilot_scripts
+
+  def hide_pilot_scripts
+    self.hidden = true if pilot_experiment
+  end
+
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
@@ -140,6 +146,7 @@ class Script < ActiveRecord::Base
     version_year
     is_stable
     supported_locales
+    pilot_experiment
   )
 
   def self.twenty_hour_script
@@ -207,23 +214,38 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    user_experiments_enabled = Course.has_any_course_experiments?(user)
-    with_hidden = !user_experiments_enabled && user.hidden_script_access?
-    cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
-    scripts = Rails.cache.fetch(cache_key) do
-      Script.
-          all.
-          select {|script| with_hidden || !script.hidden}
-    end
+    has_any_course_experiments = Course.has_any_course_experiments?(user)
+    with_hidden = !has_any_course_experiments && user.hidden_script_access?
+    scripts = with_hidden ? all_scripts : visible_scripts
 
-    if user_experiments_enabled
+    if has_any_course_experiments
       scripts = scripts.map do |script|
         alternate_script = script.alternate_script(user)
         alternate_script.presence || script
       end
     end
 
+    if !with_hidden && has_any_pilot_access?(user)
+      scripts = scripts.concat(all_scripts.select {|s| s.has_pilot_access?(user)})
+    end
+
     scripts
+  end
+
+  class << self
+    private
+
+    def all_scripts
+      Rails.cache.fetch('valid_scripts/all') do
+        Script.all
+      end
+    end
+
+    def visible_scripts
+      Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.reject(&:hidden)
+      end
+    end
   end
 
   # @param [User] user
@@ -1239,6 +1261,7 @@ class Script < ActiveRecord::Base
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
+      pilot_experiment: pilot_experiment,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1364,7 +1387,8 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
-      supported_locales: script_data[:supported_locales]
+      supported_locales: script_data[:supported_locales],
+      pilot_experiment: script_data[:pilot_experiment]
     }.compact
   end
 
@@ -1444,5 +1468,17 @@ class Script < ActiveRecord::Base
     script_levels.select do |sl|
       sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
     end
+  end
+
+  def pilot?
+    !!pilot_experiment
+  end
+
+  def has_pilot_access?(user = nil)
+    pilot? && !!user&.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  def self.has_any_pilot_access?(user = nil)
+    !!user&.permission?(UserPermission::LEVELBUILDER)
   end
 end

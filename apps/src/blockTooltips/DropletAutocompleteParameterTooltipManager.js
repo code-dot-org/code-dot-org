@@ -457,7 +457,36 @@ DropletAutocompleteParameterTooltipManager.insertMatch = function(self, data) {
     return false;
   }
 
+  const insertMatch = (data, overrideCompletions) => {
+    const origCompletions = this.editor.completer.completions;
+    if (overrideCompletions) {
+      // Temporary overwrite the completions (since the insertMatch functions
+      // expect them to be on the editor's completer)
+      this.editor.completer.completions = overrideCompletions;
+    }
+    if (this.editor.completer.lastGatheredWithOverride) {
+      // Parameter autocomplete:
+      DropletAutocompleteParameterTooltipManager.customInsertMatch(
+        data,
+        this.editor
+      );
+    } else {
+      // Other, unrelated autocomplete:
+      DropletAutocompleteParameterTooltipManager.originalInsertMatch.call(
+        this,
+        data
+      );
+    }
+    // Put the editor's completer's completions back the way we found them:
+    if (overrideCompletions) {
+      this.editor.completer.completions = origCompletions;
+    }
+  };
+
   if (data.click) {
+    // Store completions since they will have be removed when we call detach()
+    const completions = this.editor.completer.completions;
+
     // Execute detach() method here to ensure that the popup goes
     // away before we call the click() method
     this.detach();
@@ -468,36 +497,23 @@ DropletAutocompleteParameterTooltipManager.insertMatch = function(self, data) {
     // Note: stop dropdowns and tooltips until the callback is complete...
     self.blockDropdownsAndTooltips = true;
 
-    var lang = ace.require('./lib/lang');
+    const lang = ace.require('./lib/lang');
 
     // Use delayedCall so the popup and tooltip disappear in the case where the
     // Enter key was pressed before we choose this autocomplete item
-    var clickFunc = lang.delayedCall(
-      function() {
-        // We create a callback function which the click function will call, passing a
-        // string which will be inserted.
-        data.click(
-          function(data) {
-            this.editor.execCommand('insertstring', data);
-            self.blockDropdownsAndTooltips = false;
-          }.bind(this)
-        );
-      }.bind(this)
-    );
+
+    const clickFunc = lang.delayedCall(() => {
+      // We create a callback function which the click function will call, passing a
+      // string which will be inserted.
+      data.click(data => {
+        insertMatch(data, completions);
+        self.blockDropdownsAndTooltips = false;
+      });
+    });
 
     clickFunc.schedule();
-  } else if (this.editor.completer.lastGatheredWithOverride) {
-    // Parameter autocomplete:
-    DropletAutocompleteParameterTooltipManager.customInsertMatch(
-      data,
-      this.editor
-    );
   } else {
-    // Other, unrelated autocomplete:
-    DropletAutocompleteParameterTooltipManager.originalInsertMatch.call(
-      this,
-      data
-    );
+    insertMatch(data);
   }
 };
 

@@ -72,14 +72,18 @@
         form_container: "#all_authored_hints_editor",
         wrapper: ".json_editor",
         onNewSpace: function (space) {
-          levelbuilder.initializeCodeMirror(space.find(".hint_markdown").get(0), 'markdown', function(editor, change) {
-            space.find('.markdown_preview')
-              .html(limitedMarked(editor.getValue()))
-              .children('details').details();
-
-            space.find(".hint_markdown").val(editor.getValue());
-            space.find(".hint_markdown").trigger('change');
-          }, true);
+          levelbuilder.initializeCodeMirror(
+            space.find('.hint_markdown').get(0),
+            'markdown',
+            {
+              callback: function(editor, change) {
+                space.find('.hint_markdown').val(editor.getValue());
+                space.find('.hint_markdown').trigger('change');
+              },
+              attachments: true,
+              preview: space.find('.markdown_preview').get(0)
+            }
+          );
         },
         model: {
           hint_class: "",
