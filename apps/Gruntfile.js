@@ -617,6 +617,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new':
       './src/sites/studio/pages/pd/regional_partner_contact/new.js',
+    'pd/regional_partner_mini_contact/new':
+      './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
     'pd/international_opt_in/new':
       './src/sites/studio/pages/pd/international_opt_in/new.js'
@@ -657,6 +659,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerSearch: './src/regionalPartnerSearch/regionalPartnerSearch',
+
+    regionalPartnerMiniContact:
+      './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js'
   };
@@ -862,7 +867,12 @@ describe('entry tests', () => {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
-      .concat('common', 'tutorialExplorer', 'regionalPartnerSearch')
+      .concat(
+        'common',
+        'tutorialExplorer',
+        'regionalPartnerSearch',
+        'regionalPartnerMiniContact'
+      )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =

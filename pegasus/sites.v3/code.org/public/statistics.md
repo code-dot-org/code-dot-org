@@ -24,7 +24,7 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <br>
 
-And, many of these test-takers were female or minority students. 
+And, many of these test-takers were female or minority students.
 
 </div>
 
@@ -44,7 +44,7 @@ Two-thirds of computing jobs are outside the tech sector, which is why we need t
 
 <br>
 
-Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science. 
+Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science.
 
 </div>
 
@@ -199,8 +199,18 @@ It's never too late to start teaching CS!
 
 <br>
 
-Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students! 
+Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students!
 </div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1100072807709343744" target="_blank"><img src="/images/statistics/fit-250/family-income.png"></a>
+
+<br>
+
+We have scholarships for <a href="https://code.org/educate/professional-learning">teacher professional learning</a> available to help us reach high needs schools so we can change this picture.
+</div>
+
 
 <div style="clear: both;"></div>
 
