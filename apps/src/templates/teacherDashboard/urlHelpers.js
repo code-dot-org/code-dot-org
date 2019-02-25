@@ -24,7 +24,7 @@ export const teacherDashboardUrl = (sectionId, path = '') => {
   );
 
   if (isDashboard && path !== '') {
-    path = urlMap[path];
+    path = urlMap[path] || path;
   }
 
   if (isDashboard) {
