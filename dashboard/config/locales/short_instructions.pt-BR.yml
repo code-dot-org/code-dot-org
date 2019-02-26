@@ -3859,6 +3859,33 @@ pt-BR:
         outro para me levar até o porco"
       Course1MazeAssessment2: "Isso é um teste!\r\nMova-me por um caminho e então\npor
         outro para me levar até o porco."
+      CourseD_Dance_Party_01: Arraste o bloco 'criar novo' para a área de trabalho,
+        conectando-o dentro do bloco de 'configuração'.
+      CourseD_Dance_Party_02: Faça o alce iniciar um novo movimento após quatro compassos!
+      CourseD_Dance_Party_03: Agora, faça o(a) dançarino(a) iniciar um novo movimento
+        após seis compassos!
+      CourseD_Dance_Party_04: Adicione um efeito de plano de fundo ao seu programa.
+      CourseD_Dance_Party_05: Use outro bloco novo para fazer o(a) dançarino(a) mudar
+        seus movimentos a cada dois compassos.
+      CourseD_Dance_Party_06: Crie um(a) dançarino(a) de apoio intitulado 'backup_dancer1'
+        para dançar com o gato.
+      CourseD_Dance_Party_08: É possível deixar os dois dançarinos de apoio do mesmo
+        tamanho?
+      CourseD_Dance_Party_09: Use o bloco de 'definir tonalidade” para alterar a cor
+        de um(a) dançarino(a).
+      CourseD_Dance_Party_10: Faça o outro dançarino também responder à música usando
+        o bloco 'começar a seguir '.
+      CourseD_Dance_Party_11: O bloco 'com a seta para cima pressionada' permite executar
+        o código quando a seta para cima for pressionada. Tente fazer o(a) dançarino(a)
+        se movimentar rapidamente pressionando a seta para cima.
+      CourseD_Dance_Party_11_5: Use os blocos "todos os patos" para fazer os patos
+        dançarem juntos.
+      CourseD_Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla
+        de seta para a direita e fazer a dança do fio dental uma vez pressionando
+        a seta para cima. Faça o movimento dança drop-dança do fio dental o mais rápido
+        que puder!
+      CourseD_Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar
+        com seus amigos.
       CourseF_PlayLab_vars1: 'Para jogar este jogo, você não precisa escrever nenhum
         código, apenas clicar "Executar"! '
       CourseF_PlayLab_vars10: "Hora da atividade livre! Temos aqui todas as\nvariáveis
@@ -6627,6 +6654,8 @@ pt-BR:
         ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
         e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria.
         \nClique as dicas para ideias!"
+      course3_playlab_challenge2: Você pode descobrir como este aplicativo "Vidente"
+        funciona? Clique em `MAIS` para ver seus desafios.
       course3_playlab_stage16_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
       course3_playlab_stage16_2: |-
         Você pode fazer o cachorro dizer alguma coisa e,
@@ -6668,16 +6697,52 @@ pt-BR:
       course3_playlab_stage17_7: |-
         Crie sua própria história. Quando terminar,
         clique em "Concluir" para que seus amigos testem sua história em seus celulares.
+      course4_artist_binary_challenge2: Você é persistente o suficiente para restaurar
+        este logotipo de volta ao normal?
       course4_artist_functions_challenge2: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para
         ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e
         substitua-o por algo totalmente diferente)
+      course4_artist_variables_challenge1: Você agora aprendeu tudo o que você precisa
+        saber para fazer um padrão assim! Este desafio foi feito para ser difícil.
+        Você pode pensar sobre ele até descobrir a solução?
+      course4_artist_variables_challenge2: Você agora aprendeu tudo o que você precisa
+        saber para fazer um padrão assim! Este desafio foi feito para ser difícil.
+        Você pode pensar sobre ele até descobrir a solução?
+      course4_bee_for_challenge1: Use essa repetição para coletar todo o néctar. Há
+        algumas ações que você vai querer repetir 'contáveis' de vezes.
+      course4_bee_fwp_challenge2: Use uma `repetição para` em uma função para coletar
+        todos os legumes na linha. Faça a `repetição para` poder contar com valores
+        máximos diferentes usando o parâmetro `comprimento`. Faça seu programa o mais
+        curto possível usando um segundo `repetição para` do lado de fora da função.
+      course4_collector_nested_loops_challenge2: Ajude o coletor a alcançar pelo menos
+        dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas.
+        É possível coletar todos os 4.
+      course4_harvester_nested_loops_challenge1: '"Preciso de ajuda na fazenda! Ajude-me
+        a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      course4_playlab_variables_challenge1: Use estes blocos para fazer com que os
+        atores compartilhem uma piada de toc toc. Altere a configuração e a última
+        frase de impacto para contar sua própria piada!
+      course4_playlab_variables_challenge3: Você pode descobrir como este aplicativo
+        "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       courseA_artist_loops1: Este é um novo tipo de quebra-cabeça chamado "Artista".
         Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops10: Me ajude a colocar pedras para que eu não caia!
       courseA_artist_loops10_2018: Me ajude a colocar pedras para que eu não caia!
       courseA_artist_loops10_2019: Me ajude a colocar pedras para que eu não caia!
+      courseA_artist_loops11: Ajude-me a construir passos para ver o navio navegar
+        por ai.
+      courseA_artist_loops11_2018: Ajude-me a construir passos para ver o navio navegar
+        por ai.
+      courseA_artist_loops11_2019: Ajude-me a construir passos para ver o navio navegar
+        por ai.
+      courseA_artist_loops12: O artista viu algo engraçado a distância. Desenhe o
+        que você acha que ele viu.
+      courseA_artist_loops12_2018: O artista viu algo engraçado a distância. Desenhe
+        o que você acha que ele viu.
+      courseA_artist_loops12_2019: O artista viu algo engraçado a distância. Desenhe
+        o que você acha que ele viu.
       courseA_artist_loops1_2018: Este é um novo tipo de quebra-cabeça chamado "Artista".
         Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops1_2019: Este é um novo tipo de quebra-cabeça chamado "Artista".
@@ -6697,6 +6762,18 @@ pt-BR:
         cinco vezes!
       courseA_artist_loops4_2019: Agora, use o laço `repetir` para desenhar esta linha
         cinco vezes!
+      courseA_artist_loops5: Desenhe uma linha com sete passos de comprimento. Isso
+        se tornará nosso horizonte.
+      courseA_artist_loops5_2018: Desenhe uma linha com sete passos de comprimento.
+        Isso se tornará nosso horizonte.
+      courseA_artist_loops5_2019: Desenhe uma linha com sete passos de comprimento.
+        Isso se tornará nosso horizonte.
+      courseA_artist_loops6: Vamos colocar uma boa colina atrás.
+      courseA_artist_loops6_2018: Vamos colocar uma boa colina atrás.
+      courseA_artist_loops6_2019: Vamos colocar uma boa colina atrás.
+      courseA_artist_loops8: Precisamos de uma escada até o barco.
+      courseA_artist_loops8_2018: Precisamos de uma escada até o barco.
+      courseA_artist_loops8_2019: Precisamos de uma escada até o barco.
       courseA_artist_loops9: 'Desafio: Conserte as escadas.'
       courseA_artist_loops9_2018: 'Desafio: Conserte as escadas.'
       courseA_artist_loops9_2019: 'Desafio: Conserte as escadas.'
@@ -6803,6 +6880,8 @@ pt-BR:
       courseA_collector_preLoops6: Pegue ambas as peças do tesouro para resolver este
         enigma.
       courseA_collector_preLoops7: Pegue todas as três pilhas para passar esse nível.
+      courseA_data widget: "Pressione Executar. \nO feiticeiro fará os animais aparecerem.
+        \n\nConte-os. \nO que você notou?"
       courseA_harvester_forVideo: Você consegue pegar todo o milho usando apenas **
         um ** bloco de movimento?
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!
@@ -6887,6 +6966,8 @@ pt-BR:
         em seguida clique em "Executar".
       courseA_maze_ramp2a_2018: Encaixe todos os blocos juntos para finalizar seu
         código, em seguida clique em "Executar".
+      courseA_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia.
+        Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseA_maze_ramp3a_2018: Adicione um bloco `Norte` ao final dos outros blocos
         para terminar este código, depois clique em "▶ Executar".
       courseA_maze_ramp3a_2019: Adicione um bloco `Norte` ao final dos outros blocos
@@ -6929,6 +7010,7 @@ pt-BR:
       courseA_maze_seq4_2018: REMOVA um bloco para levar o pássaro até o porco!
       courseA_maze_seq4a: Leve o pássaro até o porco usando o menor número de blocos
         possíveis.
+      courseA_maze_seq5: Experimente este você mesmo desde o início.
       courseA_maze_seq5_2018: Dê uma chance a este.
       courseA_maze_seq5_2019: Dê uma chance a este.
       courseA_maze_seq5a_2018: O que você pode adicionar ao final deste código para
@@ -6964,6 +7046,12 @@ pt-BR:
         porco. Evite a TNT, ou penas vão voar!
       courseA_maze_seq_challenge2_2019: Trace o caminho para levar o pássaro até o
         porco. Evite a TNT, ou penas vão voar!
+      courseA_playLab_events1: Este é um nível de Laboratório. Mova os blocos para
+        o área de trabalho e veja o que acontece!
+      courseA_playLab_events1_2018: Este é um nível de Laboratório. Mova os blocos
+        para o área de trabalho e veja o que acontece!
+      courseA_playLab_events1_2019: Este é um nível de Laboratório. Mova os blocos
+        para o área de trabalho e veja o que acontece!
       courseA_playLab_events3: Conecte o bloco `mover para a esquerda` ao bloco de
         evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events3_2018: Conecte o bloco `mover para a esquerda` ao bloco
@@ -7488,6 +7576,10 @@ pt-BR:
         para finalizar este desafio!
       courseC_collector_prog_challenge2_2019: Colete pelo menos **10** peças do tesouro
         para finalizar este desafio!
+      courseC_data widget: "Pressione Executar. \nO feiticeiro fará os animais aparecerem.
+        \n\nConte-os. \nO que você notou?"
+      courseC_data wizard: "Pressione Executar. \nO feiticeiro fará os animais aparecerem.
+        \n\nConte-os. \nO que você notou?"
       courseC_flappy_embed_events: Aquie está um exemplo de um jogo que você está
         prestes a criar! Jogue-o uma ou duas vezes para ter uma ideia do que você
         está prestes a fazer.
@@ -7633,6 +7725,12 @@ pt-BR:
         para achar sua noz! '
       courseC_maze_loops_challenge1a_2019: 'Agora Scrat quer tentar usar as repetições
         para achar sua noz! '
+      courseC_maze_programming3: Há um bloco extra que vai fazer com que o pássaro
+        caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming3_2018: Há um bloco extra que vai fazer com que o pássaro
+        caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming3_2019: Há um bloco extra que vai fazer com que o pássaro
+        caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseC_maze_programming4: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2019: Evite a(s) TNT(s) ou penas irão voar!
@@ -7823,6 +7921,14 @@ pt-BR:
         Veja o que acontece quando começamos ser criativos com os bits!
       courseD_artist_binary_challenge0: Tente usar laços aninhados para completar
         este desenho.
+      courseD_artist_binary_challenge2: Você é persistente o suficiente para restaurar
+        este logotipo de volta ao normal?
+      courseD_artist_binary_challenge2_2018: Você é persistente o suficiente para
+        restaurar este logotipo de volta ao normal?
+      courseD_artist_binary_challenge2_2019: Você é persistente o suficiente para
+        restaurar este logotipo de volta ao normal?
+      courseD_artist_binary_challenge3: Você é persistente o suficiente para restaurar
+        este logotipo de volta ao normal?
       courseD_artist_embed_frozen: Pressione Executar para ver o desenho de um floco
         de neve!
       courseD_artist_embed_frozen2: Pressione Executar para ver o desenho de um floco
@@ -8143,6 +8249,15 @@ pt-BR:
         Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_collector_debugging_challenge2_2018: Você é um especialista de laços
         aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
+      courseD_collector_nested_loops_challenge2: Ajude o coletor a alcançar pelo menos
+        dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas.
+        É possível coletar todos os 4.
+      courseD_collector_nested_loops_challenge2_2018: Ajude o coletor a alcançar pelo
+        menos dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas.
+        É possível coletar todos os 4.
+      courseD_collector_nested_loops_challenge2_2019: Ajude o coletor a alcançar pelo
+        menos dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas.
+        É possível coletar todos os 4.
       courseD_collector_nested_loops_challenge2a: Ajude Laurel a coletar pelo menos
         duas pilhas de tesouro.
       courseD_collector_ramp10: Ajude Laurel a coletar todo o tesouro.
@@ -8298,6 +8413,14 @@ pt-BR:
         de blocos possível. '
       courseD_farmer_while9_2019: 'Achate todas essas pilhas usando o menor número
         de blocos possível. '
+      courseD_harvester_nested_loops_challenge1-broken: '"Preciso de ajuda na fazenda!
+        Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      courseD_harvester_nested_loops_challenge1: '"Preciso de ajuda na fazenda! Ajude-me
+        a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      courseD_harvester_nested_loops_challenge1_2018: '"Preciso de ajuda na fazenda!
+        Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      courseD_harvester_nested_loops_challenge1_2019: '"Preciso de ajuda na fazenda!
+        Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
@@ -8355,6 +8478,10 @@ pt-BR:
         levar até o girassol com o menor número de laços possível."
       courseD_maze_nestedLoops6_2019: "Vamos subir o nível! \r\nUse\nlaços para me
         levar até o girassol com o menor número de laços possível."
+      courseD_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia.
+        Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseD_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia.
+        Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseD_maze_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp4_2019: Evite a(s) TNT(s) ou penas irão voar!
@@ -8499,6 +8626,10 @@ pt-BR:
       courseE_farmer_ramp11b: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2018: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2019: Enquanto houver uma pilha, remova a areia.
+      courseE_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia.
+        Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseE_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia.
+        Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseE_maze_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp5: Desvie da TNT.
@@ -8516,6 +8647,10 @@ pt-BR:
         ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
         e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria.
         \nClique as dicas para ideias!"
+      courseE_playlab_challenge2: Você pode descobrir como este aplicativo "Vidente"
+        funciona? Clique em `MAIS` para ver seus desafios.
+      courseE_playlab_variables_challenge2: Você pode descobrir como este aplicativo
+        "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       courseF_artist_for7: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
@@ -8550,6 +8685,9 @@ pt-BR:
       courseF_artist_variables7: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2018: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2019: 'Desenhar um triângulo com lados de 150 pixels. '
+      courseF_artist_variables_challenge1a: Você agora aprendeu tudo o que você precisa
+        saber para fazer um padrão assim! Este desafio foi feito para ser difícil.
+        Você pode pensar sobre ele até descobrir a solução?
       courseF_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals1_predict1: Verifique se há uma flor embaixo da nuvem.
@@ -8652,6 +8790,8 @@ pt-BR:
         o valor das variáveis em apenas dois lugares! \r\n"
       courseF_playlab_variables8c: Use as variáveis para tornar o jogo mais pessoal.
       courseF_playlab_variables8c_2018: Use as variáveis para tornar o jogo mais pessoal.
+      courseF_playlab_variables_challenge3: Você pode descobrir como este aplicativo
+        "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       course_playlab_variables1: Esta é uma Perna de Pirata. Ele é muito difícil de
         entender nos dias de hoje!
       course_playlab_variables2: "Agora, decodifique a fala da Perna de Pirata mudando
@@ -8660,6 +8800,10 @@ pt-BR:
         o valor das variáveis em apenas dois lugares! \r\n"
       coursea_maze_ramp1_2018: Para este enigma, junte os blocos e clique em "▶ Executar"!
       coursea_maze_ramp1_2019: Para este enigma, junte os blocos e clique em "▶ Executar"!
+      coursef_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia.
+        Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      coursef_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia.
+        Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       flappy_1: Conecte um bloco no bloco "quando clicar" e, em seguida, clique em
         "Executar". Clique ou toque na tela para mover o passarinho em direção ao
         alvo.
@@ -8859,6 +9003,9 @@ pt-BR:
         "Aquele porco está bagunçando minhas penas."
 
         Há um bloco extra que fará o pássaro cair. Jogue-o fora arrastando o de volta para a caixa de ferramentas.
+      grade2_CaringForNewPet_2courseC_maze_programming3: Há um bloco extra que vai
+        fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para
+        a caixa de ferramentas.
       grade2_CaringForNewPet_4: '"Mantenha a calma e me ajude a encontrar o porco
         malvado. Senão eu posso ficar zangado!"'
       grade2_CaringForNewPet_5: Leve-me até o porco!
@@ -9589,10 +9736,19 @@ pt-BR:
         disponível.\nQuando terminar de explorar, crie um jogo ou uma história usando
         repetições, variáveis\ne eventos.  \r\n\r\nDica: deslize a tela para baixo
         para ver todos os comandos na área de trabalho."
+      gradeK_sequence_4: Experimente este você mesmo desde o início.
       gradek_artist_loops1: Ajude o artista a desenhar esta linha duas vezes mais
         rápido.
       gradek_artist_loops3: Agora, use o laço `repetir` para desenhar esta linha cinco
         vezes!
+      gradek_artist_loops4: Desenhe uma linha com sete passos de comprimento. Isso
+        se tornará nosso horizonte.
+      gradek_artist_loops5: Vamos colocar uma boa colina atrás.
+      gradek_artist_loops7: Precisamos de uma escada até o barco.
+      gradek_artist_loopsA: Ajude-me a construir passos para ver o navio navegar por
+        ai.
+      gradek_artist_loopsFP: O artista viu algo engraçado a distância. Desenhe o que
+        você acha que ele viu.
       gradek_artist_loopsPre: Este é um novo tipo de quebra-cabeça chamado "Artista".
         Brinque com o nível e desenhe algo divertido.
       gradek_playlab_events1: Faça seu robô dizer "Olá!" quando o botão é clicado.
@@ -9610,9 +9766,13 @@ pt-BR:
         clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
       gradek_playlab_events5a: Sobre o Projeto Meu Robô! Escreva código para que ao
         clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
+      gradek_playlab_eventsPre: Este é um nível de Laboratório. Mova os blocos para
+        o área de trabalho e veja o que acontece!
       group test: Faça um jogo
       iceAgeLoopsforVideo: Você consegue chegar à bolota com apenas um bloco `avançar`?
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
+      k1stickerfreeplay: O artista viu algo engraçado a distância. Desenhe o que você
+        acha que ele viu.
       level 'grade3_Loops_10: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar
         todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
       level 'grade3_Loops_11: "O formato deste caminho é diferente dos\ndemais. \r\n\r\nVocê
