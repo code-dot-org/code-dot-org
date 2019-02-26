@@ -21,6 +21,31 @@ export default class Teacher1920Application extends FormController {
 
   static sessionStorageKey = 'Teacher1920Application';
 
+  /**
+   * @override
+   */
+  componentWillMount() {
+    super.componentWillMount();
+
+    // Extract school info saved in sessionStorage, if any
+    let reloadedSchoolId = undefined;
+    if (
+      this.constructor.sessionStorageKey &&
+      sessionStorage[this.constructor.sessionStorageKey]
+    ) {
+      const reloadedState = JSON.parse(
+        sessionStorage[this.constructor.sessionStorageKey]
+      );
+      reloadedSchoolId = reloadedState.data.school;
+    }
+
+    // Populate data from server only if it doesn't override data in sessionStorage
+    if (reloadedSchoolId === undefined && this.props.options.school_id) {
+      const autofill = {school: this.props.options.school_id};
+      this.setState({data: {...this.state.data, ...autofill}});
+    }
+  }
+
   componentDidMount() {
     window.addEventListener('beforeunload', event => {
       if (!this.state.submitting) {
