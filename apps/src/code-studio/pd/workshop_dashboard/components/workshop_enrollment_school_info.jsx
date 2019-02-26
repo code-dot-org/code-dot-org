@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import {Table} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
 import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
+import {WorkshopAdmin, ProgramManager} from '../permission';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = 'Deep Dive';
 const NA = 'N/A';
 const LOCAL_SUMMER = '5-day Summer';
 
-export default class WorkshopEnrollmentSchoolInfo extends React.Component {
+class WorkshopEnrollmentSchoolInfo extends React.Component {
   constructor(props) {
     super(props);
 
@@ -177,7 +179,10 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
                     this,
                     enrollment
                   )}
-                  disabled={false}
+                  disabled={
+                    !this.props.permissionList.has(ProgramManager) &&
+                    !this.props.permissionList.has(WorkshopAdmin)
+                  }
                 />
               </td>
             )}
@@ -257,6 +262,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
 }
 
 WorkshopEnrollmentSchoolInfo.propTypes = {
+  permissionList: PropTypes.object.isRequired,
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
   accountRequiredForAttendance: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
@@ -264,3 +270,7 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   workshopSubject: PropTypes.string.isRequired,
   numSessions: PropTypes.number.isRequired
 };
+
+export default connect(state => ({
+  permissionList: state.workshopDashboard.permission.permissions
+}))(WorkshopEnrollmentSchoolInfo);
