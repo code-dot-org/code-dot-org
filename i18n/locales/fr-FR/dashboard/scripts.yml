@@ -2703,6 +2703,8 @@ fr:
               name: 'Débranché: Binaire'
             Artist Binary:
               name: Artiste binaire
+            Dance Party:
+              name: Fête dansante
         coursee-2019:
           stages:
             Building a Foundation:
