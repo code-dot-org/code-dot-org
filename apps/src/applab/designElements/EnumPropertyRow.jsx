@@ -32,6 +32,7 @@ export default class EnumPropertyRow extends React.Component {
         <div style={rowStyle.description}>{this.props.desc}</div>
         <select
           className="form-control"
+          style={rowStyle.enumInput}
           value={this.state.selectedValue}
           onChange={this.handleChange}
         >
