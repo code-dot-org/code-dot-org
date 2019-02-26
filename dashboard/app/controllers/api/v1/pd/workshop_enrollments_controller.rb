@@ -2,7 +2,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include Api::CsvDownload
   include ::Pd::WorkshopConstants
   load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel']
-  load_and_authorize_resource :enrollment, class: 'Pd::Enrollment', only: 'update_scholarship_info'
+
+  before_action :authorize_update_scholarship_info!, only: 'update_scholarship_info'
+  def authorize_update_scholarship_info!
+    @enrollment = Pd::Enrollment.find(params[:enrollment_id])
+    authorize! :update_scholarship_info, @enrollment
+  end
 
   RESPONSE_MESSAGES = {
     SUCCESS: "success".freeze,

@@ -317,6 +317,18 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
   end
 
+  test 'program managers can update scholarship info' do
+    workshop = create :pd_workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in @program_manager
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 200
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, JSON.parse(@response.body)["scholarship_status"]
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
+  end
+
   private
 
   def enrollment_test_params(teacher = nil)
