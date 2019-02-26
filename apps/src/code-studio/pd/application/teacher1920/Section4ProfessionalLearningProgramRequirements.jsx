@@ -282,7 +282,12 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
               There also may be scholarships available to help cover the cost of
               the program. You can check{' '}
               <a
-                href="https://code.org/educate/professional-learning/program-information"
+                href={
+                  'https://code.org/educate/professional-learning/program-information' +
+                  (!!this.props.data.zipCode
+                    ? '?zip=' + this.props.data.zipCode
+                    : '')
+                }
                 target="_blank"
               >
                 this page to see if there are
