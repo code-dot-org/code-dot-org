@@ -129,7 +129,7 @@ Scenario: Basic teacher application submission
 
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
-  Then I press the first "input[name='payFee']" element
+  Then I press the first "input[name='payFee']" element if I see it
   Then I press the first "input[name='howHeard']" element
   Then I press the first "#confirmPrincipal" element
 
