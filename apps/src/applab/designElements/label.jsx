@@ -4,6 +4,7 @@ import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
@@ -12,6 +13,7 @@ import BorderProperties from './BorderProperties';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
+import designMode from '../designMode';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -77,6 +79,12 @@ class LabelProperties extends React.Component {
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
+        />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontSize
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
           desc={'font size (px)'}
@@ -189,7 +197,8 @@ export default {
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
-    element.style.fontSize = '14px';
+    element.style.fontFamily = applabConstants.fontFamilyStyles[0];
+    element.style.fontSize = applabConstants.defaultFontSizeStyle;
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
@@ -205,6 +214,8 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
   },
 
   getCurrentSize: function(element) {

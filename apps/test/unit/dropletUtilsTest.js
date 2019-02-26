@@ -386,6 +386,19 @@ describe('dropletUtils', () => {
       assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
     });
 
+    it('works with single quotes on the 1st param and a parenthetical expression for the 2nd param', () => {
+      const code = "myProperty('element1', (a + b),";
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), '(a + b)');
+    });
+
+    it('works with single quotes for 2 params and embedded commas', () => {
+      const code = "myProperty('element1', 'value,with,commas',";
+      assert.equal(
+        getParamFromCodeAtIndex(1, 'myProperty', code),
+        'value,with,commas'
+      );
+    });
+
     it('works with double quotes', () => {
       const code = 'myProperty("element1", ';
       assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1');
@@ -396,9 +409,32 @@ describe('dropletUtils', () => {
       assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
     });
 
-    it('should return null with mixed quotes', () => {
+    it('works with double quotes on the 1st param and a parenthetical expression for the 2nd param', () => {
+      const code = 'myProperty("element1", (a + b),';
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), '(a + b)');
+    });
+
+    it('works with double quotes for 2 params and embedded commas', () => {
+      const code = 'myProperty("element1", "value,with,commas",';
+      assert.equal(
+        getParamFromCodeAtIndex(1, 'myProperty', code),
+        'value,with,commas'
+      );
+    });
+
+    it('works with single quotes on the 1st param and double quotes on the 2nd param', () => {
+      const code = 'myProperty(\'element1\', "element2",';
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
+    });
+
+    it('works with double quotes on the 1st param and single quotes on the 2nd param', () => {
+      const code = 'myProperty("element1", \'element2\',';
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
+    });
+
+    it('should return single parameter with mixed quotes and embedded comma', () => {
       const code = 'myProperty("element1\', ';
-      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), null);
+      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1,');
     });
 
     it('works with no trailing space', () => {
@@ -415,6 +451,16 @@ describe('dropletUtils', () => {
     it('works with non-quoted strings (variable names)', () => {
       const code = 'myProperty(object1, ';
       assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'object1');
+    });
+
+    it('works with non-quoted strings (variable names) and double quotes on the 2nd param', () => {
+      const code = 'myProperty(object1, "element2",';
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
+    });
+
+    it('works with non-quoted strings (variable names) and single quotes on the 2nd param', () => {
+      const code = "myProperty(object1, 'element2',";
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
     });
   });
 
