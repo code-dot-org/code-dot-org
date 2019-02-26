@@ -276,8 +276,6 @@ class RegistrationsController < Devise::RegistrationsController
       params[:user].delete(:current_password)
       current_user.update_without_password(set_email_params)
     end
-
-    true
   end
 
   def respond_to_account_update(successfully_updated, flash_message_kind = :updated)
