@@ -58,10 +58,7 @@
     "parent_level_id": 17653,
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-star\" data-object-fit=\"contain\" id=\"star\" style=\"height: 280px; width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 45px; margin: 0px;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; width: 126px; height: 19px; position: absolute; left: 15px; top: 410px;\" id=\"numberLabel\">Number of clicks: </label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; width: 85px; height: 20px; position: absolute; left: 150px; top: 410px;\" id=\"numClicks\">0</label></div></div>",
     "palette_category_at_start": "control",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
