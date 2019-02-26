@@ -30,6 +30,7 @@ ka:
       Input: შემომავალი ინფორმაცია
       Default: ნაგულისხმევი
       World: სამყარო
+      Groups: ჯგუფები
       Sprites: სპრაიტები
       Behaviors: ქცევა
       Advanced: დამატებით
@@ -37,7 +38,6 @@ ka:
       Locations: მდებარეობები
       Music: მუსიკა
       Dancing: ცეკვა
-      Groups: ჯგუფები
       Sprite: სპრაიტი
       Brush: ფუნჯი
       Make Sprite: სპრაიტის შექმნა
