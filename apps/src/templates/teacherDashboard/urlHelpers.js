@@ -44,6 +44,10 @@ export const scriptUrlForStudent = (
   if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_REACT)) {
     return `/s/${scriptName}?section_id=${sectionId}&user_id=${studentId}&viewAs=Teacher`;
   } else {
-    return `/teacher-dashboard#/sections/${sectionId}/student/${studentId}/script/${scriptId}`;
+    let url = `/teacher-dashboard#/sections/${sectionId}/student/${studentId}`;
+    if (scriptId) {
+      url += `/script/${scriptId}`;
+    }
+    return url;
   }
 };
