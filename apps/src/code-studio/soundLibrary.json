@@ -2333,6 +2333,374 @@
       "version": "xqjB8Pttc3sjSspwDe8o5t58PUfqqHXs",
       "sourceUrl": "/api/v1/sound-library/category_female_voiceover/you_win_female.mp3"
     },
+    "category_hits/8bit_Splat": {
+      "name": "8bit_Splat",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:41 UTC",
+      "mp3LastModified": "2019-02-13 23:51:55 UTC",
+      "version": "J3cW9xMh7gg2alBKMrA0Og5HWU7jhfu3",
+      "sourceUrl": "/api/v1/sound-library/category_hits/8bit_Splat.mp3"
+    },
+    "category_hits/Puzzle_Game_Button_01": {
+      "name": "Puzzle_Game_Button_01",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:42 UTC",
+      "mp3LastModified": "2019-02-13 23:51:56 UTC",
+      "version": "HlFv_zFafW20W5mI6X4lilKUT5y9elji",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Button_01.mp3"
+    },
+    "category_hits/Puzzle_Game_Button_02": {
+      "name": "Puzzle_Game_Button_02",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:44 UTC",
+      "mp3LastModified": "2019-02-13 23:51:56 UTC",
+      "version": "a1kwI5bMFXNGa5hQ6yZ6XmkrpYcQRoip",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Button_02.mp3"
+    },
+    "category_hits/Puzzle_Game_Button_03": {
+      "name": "Puzzle_Game_Button_03",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:45 UTC",
+      "mp3LastModified": "2019-02-13 23:51:57 UTC",
+      "version": "dlDGiuNfbCBPEZxb_OpQw5VQdWjLDhL8",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Button_03.mp3"
+    },
+    "category_hits/Puzzle_Game_Button_04": {
+      "name": "Puzzle_Game_Button_04",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:46 UTC",
+      "mp3LastModified": "2019-02-13 23:51:58 UTC",
+      "version": "aJoICvRWV_BRZHIOPtk0Ny5wJfgjhKBZ",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Button_04.mp3"
+    },
+    "category_hits/Puzzle_Game_Magic_Item_Unlock_4": {
+      "name": "Puzzle_Game_Magic_Item_Unlock_4",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:05:46 UTC",
+      "mp3LastModified": "2019-02-13 23:51:59 UTC",
+      "version": "dGna3qdz3IyDZytzm0xxGKj.Ft.GUdkw",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Magic_Item_Unlock_4.mp3"
+    },
+    "category_hits/Puzzle_Game_Magic_Item_Unlock_5": {
+      "name": "Puzzle_Game_Magic_Item_Unlock_5",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:05:47 UTC",
+      "mp3LastModified": "2019-02-13 23:51:59 UTC",
+      "version": "NlUSfzFPnW_Dw1PiIUegv78e.lM84xqn",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Magic_Item_Unlock_5.mp3"
+    },
+    "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1": {
+      "name": "Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:49 UTC",
+      "mp3LastModified": "2019-02-13 23:52:00 UTC",
+      "version": "u6JgVitRdY_JW9pKUKLInaIua2r57Rdr",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1.mp3"
+    },
+    "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2": {
+      "name": "Puzzle_Game_Organic_Metal_Tile_Hit_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:49 UTC",
+      "mp3LastModified": "2019-02-13 23:52:00 UTC",
+      "version": "h04L4Am7myU1Ixqhv7QSCl2LEUFZF0XO",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2.mp3"
+    },
+    "category_hits/Retro_Game_Hit_Block_3": {
+      "name": "Retro_Game_Hit_Block_3",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:05:51 UTC",
+      "mp3LastModified": "2019-02-13 23:52:01 UTC",
+      "version": "Ap.Ji_44CAWxrF9IhSBMKPenJaNy3cTB",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Hit_Block_3.mp3"
+    },
+    "category_hits/Retro_Game_Hit_Block_4": {
+      "name": "Retro_Game_Hit_Block_4",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:05:51 UTC",
+      "mp3LastModified": "2019-02-13 23:52:01 UTC",
+      "version": "bGoSE0NfU79ujHyW52kSj462sro_OhqB",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Hit_Block_4.mp3"
+    },
+    "category_hits/Retro_Game_Simple_Impact_1": {
+      "name": "Retro_Game_Simple_Impact_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:52 UTC",
+      "mp3LastModified": "2019-02-13 23:52:02 UTC",
+      "version": "AYPar0KERJ1XqQyn9VuvAxRTmFYCN8bC",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Simple_Impact_1.mp3"
+    },
+    "category_hits/Retro_Game_Simple_Impact_2": {
+      "name": "Retro_Game_Simple_Impact_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:53 UTC",
+      "mp3LastModified": "2019-02-13 23:52:03 UTC",
+      "version": "oUS40iZJUe5b0DIvnn3Ce8pZFNGCGipS",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Simple_Impact_2.mp3"
+    },
+    "category_hits/Retro_Game_Simple_Impact_3": {
+      "name": "Retro_Game_Simple_Impact_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:55 UTC",
+      "mp3LastModified": "2019-02-13 23:52:03 UTC",
+      "version": "e4sYe.IG4ZLDw5i2I_9GQSHY_7QkE08_",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Simple_Impact_3.mp3"
+    },
+    "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1": {
+      "name": "Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:56 UTC",
+      "mp3LastModified": "2019-02-13 23:52:07 UTC",
+      "version": "YYm354_9gNCbNEbmSAkr_83aDzHZ14RM",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1.mp3"
+    },
+    "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2": {
+      "name": "Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:57 UTC",
+      "mp3LastModified": "2019-02-13 23:52:10 UTC",
+      "version": "jTL5MbqJ17D4rcMq3boAXCn3J.JQ678j",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2.mp3"
+    },
+    "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3": {
+      "name": "Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:58 UTC",
+      "mp3LastModified": "2019-02-13 23:52:11 UTC",
+      "version": "YLwvNIUc4xOFLa5YTIUVgqX2H0jQeNbS",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3.mp3"
+    },
+    "category_hits/Retro_Game_Weapon_-_LIght_Punch_2": {
+      "name": "Retro_Game_Weapon_-_LIght_Punch_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:05:59 UTC",
+      "mp3LastModified": "2019-02-13 23:52:11 UTC",
+      "version": "D1CSlcIbiksqlaX_JaFcDYQvJvHboww7",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Weapon_-_LIght_Punch_2.mp3"
+    },
+    "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1": {
+      "name": "Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:00 UTC",
+      "mp3LastModified": "2019-02-13 23:52:12 UTC",
+      "version": "UAKLgMNu._aAVia.SqXbARrrSjwYirrD",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1.mp3"
+    },
+    "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2": {
+      "name": "Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:01 UTC",
+      "mp3LastModified": "2019-02-13 23:52:13 UTC",
+      "version": "nJLEBcF8zeVFLenbEY.pAElydenhP4KX",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2.mp3"
+    },
+    "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3": {
+      "name": "Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:02 UTC",
+      "mp3LastModified": "2019-02-13 23:52:13 UTC",
+      "version": "akfx.6ZM5h2EOfUfFldSZuA_pS4Fwnsj",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3.mp3"
+    },
+    "category_hits/Vibrant_Crate_Break_1": {
+      "name": "Vibrant_Crate_Break_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:03 UTC",
+      "mp3LastModified": "2019-02-13 23:52:13 UTC",
+      "version": "3uE5IbzAaZNLLHWlXks9MrZXe0eo6P7w",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Crate_Break_1.mp3"
+    },
+    "category_hits/Vibrant_Crate_Break_2": {
+      "name": "Vibrant_Crate_Break_2",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:06:04 UTC",
+      "mp3LastModified": "2019-02-13 23:52:14 UTC",
+      "version": "9FmGUEsEnjGeg_hPBceDtQ6kYALsZZta",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Crate_Break_2.mp3"
+    },
+    "category_hits/Vibrant_Crate_Break_3": {
+      "name": "Vibrant_Crate_Break_3",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:06:05 UTC",
+      "mp3LastModified": "2019-02-13 23:52:14 UTC",
+      "version": "hGVs8icZb.3_zbddQ0rcWOK.M0dnBCbc",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Crate_Break_3.mp3"
+    },
+    "category_hits/Vibrant_Crate_Break_4": {
+      "name": "Vibrant_Crate_Break_4",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:06:06 UTC",
+      "mp3LastModified": "2019-02-13 23:52:16 UTC",
+      "version": "WbMjRu8TcB95WbzjGnEaMsYDNnsnaKSQ",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Crate_Break_4.mp3"
+    },
+    "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2": {
+      "name": "Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:12 UTC",
+      "mp3LastModified": "2019-02-13 23:52:22 UTC",
+      "version": "O81Fi_ZEbyJE.7ZfdpbkspqwllJk4jlt",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2.mp3"
+    },
+    "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4": {
+      "name": "Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:12 UTC",
+      "mp3LastModified": "2019-02-13 23:52:23 UTC",
+      "version": "3kbYvtBrRvbDgjEAeeCiRraEgtJnK9z3",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4.mp3"
+    },
+    "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5": {
+      "name": "Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:13 UTC",
+      "mp3LastModified": "2019-02-13 23:52:23 UTC",
+      "version": "kaCP4swtfhNgKVdvwXHZ.ROO53AcuzYw",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5.mp3"
+    },
+    "category_hits/Vibrant_Game_Bounce_and_Ding_Notification": {
+      "name": "Vibrant_Game_Bounce_and_Ding_Notification",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:06:14 UTC",
+      "mp3LastModified": "2019-02-13 23:52:24 UTC",
+      "version": ".N5abUH8QU5QSF.JztHjX_7aEqOaJ62z",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Bounce_and_Ding_Notification.mp3"
+    },
+    "category_hits/Vibrant_Game_Dirty_Desolve_1": {
+      "name": "Vibrant_Game_Dirty_Desolve_1",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:06:15 UTC",
+      "mp3LastModified": "2019-02-13 23:52:24 UTC",
+      "version": "AIyx3RdLf5da4V.jl5w6ikD51xd9arCU",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Dirty_Desolve_1.mp3"
+    },
+    "category_hits/Vibrant_Game_Dirty_Desolve_2": {
+      "name": "Vibrant_Game_Dirty_Desolve_2",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:06:15 UTC",
+      "mp3LastModified": "2019-02-13 23:52:25 UTC",
+      "version": "qg6yZICy.yp1WeqmCUrUFDc96lpUKq3t",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Dirty_Desolve_2.mp3"
+    },
+    "category_hits/Vibrant_Game_Frozen_Break_Hit_1": {
+      "name": "Vibrant_Game_Frozen_Break_Hit_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:16 UTC",
+      "mp3LastModified": "2019-02-13 23:52:25 UTC",
+      "version": "o1ydCOqK48yBLM8b2krCiD5uBb4wFbWE",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Frozen_Break_Hit_1.mp3"
+    },
+    "category_hits/Vibrant_Game_Game_Box_Hit_1": {
+      "name": "Vibrant_Game_Game_Box_Hit_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:17 UTC",
+      "mp3LastModified": "2019-02-13 23:52:26 UTC",
+      "version": "RQPHHAkyFpgcuGlnxKOVGIIprmbu3v_1",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Game_Box_Hit_1.mp3"
+    },
+    "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up": {
+      "name": "Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:17 UTC",
+      "mp3LastModified": "2019-02-13 23:52:28 UTC",
+      "version": "hsj4LqmD0u_r.jvE7rh5WNmk.9NFn0eH",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up.mp3"
+    },
+    "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2": {
+      "name": "Vibrant_Game_Quirky_Game_Power_Up_2",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:18 UTC",
+      "mp3LastModified": "2019-02-13 23:52:29 UTC",
+      "version": "I0CF5euwBPSJnryExWAi4VVfEeSWKVkz",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Quirky_Game_Power_Up_2.mp3"
+    },
+    "category_hits/Vibrant_Game_Shimmering_Hit_1": {
+      "name": "Vibrant_Game_Shimmering_Hit_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:20 UTC",
+      "mp3LastModified": "2019-02-13 23:52:30 UTC",
+      "version": "JDSK9gIFIw19Ku7tsrGUDuo2_vX0WEBY",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game_Shimmering_Hit_1.mp3"
+    },
+    "category_hits/Vibrant_Game__Big_Game_Horn_Hit": {
+      "name": "Vibrant_Game__Big_Game_Horn_Hit",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:07 UTC",
+      "mp3LastModified": "2019-02-13 23:52:17 UTC",
+      "version": "cygQz2uD9b.Tn_uumSLepHPRex.qWzui",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Big_Game_Horn_Hit.mp3"
+    },
+    "category_hits/Vibrant_Game__Big_Hit_1": {
+      "name": "Vibrant_Game__Big_Hit_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:07 UTC",
+      "mp3LastModified": "2019-02-13 23:52:17 UTC",
+      "version": "M.ULtkAuR8z5kWz6feNUVkkoiDO0jos2",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Big_Hit_1.mp3"
+    },
+    "category_hits/Vibrant_Game__Deep_Hit": {
+      "name": "Vibrant_Game__Deep_Hit",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:08 UTC",
+      "mp3LastModified": "2019-02-13 23:52:18 UTC",
+      "version": "ImgqY.J2nhZijKRhy55NomoldWzUvza0",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Deep_Hit.mp3"
+    },
+    "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1": {
+      "name": "Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:08 UTC",
+      "mp3LastModified": "2019-02-13 23:52:19 UTC",
+      "version": "MRu9dOQglKTsti7iITCdRlZhG3ZARw58",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1.mp3"
+    },
+    "category_hits/Vibrant_Game__Electro_Hit_Collect": {
+      "name": "Vibrant_Game__Electro_Hit_Collect",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:09 UTC",
+      "mp3LastModified": "2019-02-13 23:52:19 UTC",
+      "version": "8jEVJ7WOjG5v_5h7DGIRwMpiKa3OW5qo",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Electro_Hit_Collect.mp3"
+    },
+    "category_hits/Vibrant_Game__Game_Touch_5": {
+      "name": "Vibrant_Game__Game_Touch_5",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:10 UTC",
+      "mp3LastModified": "2019-02-13 23:52:20 UTC",
+      "version": "mzaH953n1p1xLDGABelog87iqwZjSI8Z",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Game_Touch_5.mp3"
+    },
+    "category_hits/Vibrant_Game__Hit_1": {
+      "name": "Vibrant_Game__Hit_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:10 UTC",
+      "mp3LastModified": "2019-02-13 23:52:21 UTC",
+      "version": "uouDIKh.qRCM81jeeUwJ9ED9RnNVCuQb",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Hit_1.mp3"
+    },
+    "category_hits/Vibrant_Game__Smash_Hit_Open_1": {
+      "name": "Vibrant_Game__Smash_Hit_Open_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:11 UTC",
+      "mp3LastModified": "2019-02-13 23:52:22 UTC",
+      "version": "KB5cDTIk9nVE43I6iderRsDe016hFc_u",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Game__Smash_Hit_Open_1.mp3"
+    },
+    "category_hits/Vibrant_Next_Page_Button": {
+      "name": "Vibrant_Next_Page_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:06:20 UTC",
+      "mp3LastModified": "2019-02-13 23:52:30 UTC",
+      "version": "WFP3M1ALd1qLh1hMl8QkCOlcR3LpsOnc",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Next_Page_Button.mp3"
+    },
+    "category_hits/Vibrant_Slot_Change_Lock_1": {
+      "name": "Vibrant_Slot_Change_Lock_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:06:21 UTC",
+      "mp3LastModified": "2019-02-13 23:52:31 UTC",
+      "version": "dJ6Zufc72Sdav4WvfZkhVup8CCrLg_kk",
+      "sourceUrl": "/api/v1/sound-library/category_hits/Vibrant_Slot_Change_Lock_1.mp3"
+    },
     "category_human/Character_Calvin_Ah_Ha_1": {
       "name": "Character_Calvin_Ah_Ha_1",
       "time": 2,
@@ -4020,6 +4388,9 @@
     "8bit_explosion": [
       "category_explosion/8bit_explosion"
     ],
+    "8bit_splat": [
+      "category_hits/8bit_Splat"
+    ],
     "a": [
       "category_female_voiceover/its_a_tie_female"
     ],
@@ -4042,6 +4413,10 @@
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
       "category_explosion/Melodic_Loss_6"
+    ],
+    "action": [
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4"
     ],
     "activation": [
       "category_collect/Collect_Item_Bling_1",
@@ -4122,7 +4497,9 @@
       "category_bell/Notification_4",
       "category_bell/Quiet_BellOctave_Notification",
       "category_bell/Quiet_Bell_Notification",
-      "category_bell/Short_Bell_Alert"
+      "category_bell/Short_Bell_Alert",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4"
     ],
     "alien": [
       "category_collect/Collect_Item_Bling_1",
@@ -4146,7 +4523,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
       "category_explosion/Puzzle_Game_Break_Magic_05",
-      "category_explosion/Retro_Game_Take_Damage_Chirp_3"
+      "category_explosion/Retro_Game_Take_Damage_Chirp_3",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "angry": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -4154,7 +4539,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "animal": [
       "category_background/toucan"
@@ -4178,7 +4571,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "app_button_1": [
       "category_app/App_Button_1"
@@ -4281,7 +4675,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "applications": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -4289,7 +4684,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "apps": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -4338,7 +4741,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "arcade_game_button_tap": [
       "category_app/Arcade_Game_Button_Tap"
@@ -4349,7 +4777,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "artic": [
       "category_animals/penguin"
@@ -4360,7 +4796,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "authentic": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -4368,7 +4812,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "background": [
       "category_explosion/8bit_explosion",
@@ -4378,7 +4830,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "ball": [
       "category_objects/kickball"
@@ -4394,7 +4847,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "bark": [
       "category_animals/dog",
@@ -4417,7 +4871,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "beach": [
       "category_nature/South_Carolina_Beach_1",
@@ -4458,7 +4913,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "bells_win": [
       "category_bell/Bells_Win"
@@ -4475,7 +4938,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "bird": [
       "category_animals/chick",
@@ -4494,6 +4965,14 @@
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
       "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
       "category_nature/Forest_Woodland_Ambience_2",
@@ -4517,7 +4996,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "bleeps": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -4566,7 +5046,36 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
+    ],
+    "block": [
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4"
     ],
     "boing_1": [
       "category_digital/boing_1"
@@ -4582,7 +5091,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "bombs": [
       "category_explosion/8bit_explosion",
@@ -4592,7 +5102,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "bonus": [
       "category_collect/Collect_Item_Bling_1",
@@ -4651,7 +5162,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "bubble": [
       "category_collect/Collect_Item_Bling_1",
@@ -4794,7 +5306,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "by": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -4802,7 +5339,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "calvin": [
       "category_human/Character_Calvin_Ah_Ha_1",
@@ -4828,7 +5373,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "car": [
       "category_background/city_night",
@@ -5175,6 +5728,54 @@
       "category_female_voiceover/wrong_female",
       "category_female_voiceover/you_lose_female",
       "category_female_voiceover/you_win_female"
+    ],
+    "category_hits": [
+      "category_hits/8bit_Splat",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "category_human": [
       "category_human/Character_Calvin_Ah_Ha_1",
@@ -5776,7 +6377,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "city_night": [
       "category_background/city_night"
@@ -5807,7 +6409,19 @@
       "category_explosion/Retro_Game_Classic_Explosion_9",
       "category_explosion/Retro_Game_Enemy_Fireball_2",
       "category_explosion/Retro_Game_Enemy_Shot_5",
-      "category_explosion/Retro_Game_Take_Damage_Chirp_3"
+      "category_explosion/Retro_Game_Take_Damage_Chirp_3",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "click": [
       "category_app/App_Button_1",
@@ -5920,7 +6534,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "clicky_crunch": [
       "category_collect/Clicky_Crunch"
@@ -5999,7 +6638,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "coin_1": [
       "category_digital/coin_1"
@@ -6077,7 +6741,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "completed": [
       "category_female_voiceover/mission_completed_female",
@@ -6167,7 +6856,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "cow": [
       "category_animals/cow"
@@ -6223,7 +6937,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "crank": [
       "category_collect/Collect_Item_Bling_1",
@@ -6262,7 +7001,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "cues": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -6311,7 +7058,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "cyber": [
       "category_collect/Collect_Item_Bling_1",
@@ -6335,7 +7107,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "dangerous": [
       "category_explosion/8bit_explosion",
@@ -6345,7 +7118,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "death": [
       "category_bell/Bells_Win",
@@ -6363,7 +7137,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "default": [
       "default"
@@ -6378,7 +7153,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "design": [
       "category_explosion/8bit_explosion",
@@ -6388,7 +7171,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "destruction_5": [
       "category_explosion/Destruction_5"
@@ -6574,7 +7358,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "dog": [
       "category_animals/dog"
@@ -6676,7 +7461,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "effects": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -6684,7 +7470,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "eight": [
       "category_female_voiceover/eight_female",
@@ -6709,7 +7503,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "elephant": [
       "category_animals/elephant"
@@ -6818,6 +7613,18 @@
       "category_explosion/Retro_Game_Enemy_Fireball_2",
       "category_explosion/Retro_Game_Enemy_Shot_5",
       "category_explosion/Retro_Game_Take_Damage_Chirp_3",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
       "category_nature/FIre_Loop",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
@@ -6947,7 +7754,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "experience": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -6955,7 +7763,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "explode": [
       "category_explosion/8bit_explosion",
@@ -6965,7 +7781,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "explosion": [
       "category_explosion/8bit_explosion",
@@ -6983,7 +7800,18 @@
       "category_explosion/Retro_Game_Classic_Explosion_4",
       "category_explosion/Retro_Game_Classic_Explosion_5",
       "category_explosion/Retro_Game_Classic_Explosion_6",
-      "category_explosion/Retro_Game_Classic_Explosion_9"
+      "category_explosion/Retro_Game_Classic_Explosion_9",
+      "category_hits/8bit_Splat",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "explosions": [
       "category_explosion/8bit_explosion",
@@ -6993,7 +7821,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "explosive": [
       "category_explosion/8bit_explosion",
@@ -7003,7 +7832,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "extra": [
       "category_collect/Retro_Game_Classic_Power_Up_4",
@@ -7034,6 +7864,10 @@
     ],
     "failure": [
       "category_digital/failure"
+    ],
+    "fall": [
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4"
     ],
     "fantasy": [
       "category_background/fantasy"
@@ -7106,6 +7940,7 @@
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
       "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat",
       "category_nature/FIre_Loop",
       "category_nature/Steady_Campfire_Loop"
     ],
@@ -7123,7 +7958,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "five": [
       "category_female_voiceover/five_female",
@@ -7168,7 +8004,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "forest": [
       "category_nature/Forest_2",
@@ -7358,6 +8202,52 @@
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
       "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/8bit_Splat",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1",
       "category_human/Character_Calvin_Ah_Ha_1",
       "category_human/Character_Calvin_Ahh_1",
       "category_human/Character_Calvin_Ahh_2",
@@ -7480,7 +8370,16 @@
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
       "category_explosion/Puzzle_Game_Break_Magic_05",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "gametime": [
       "category_background/gametime"
@@ -7493,7 +8392,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "gas": [
       "category_collect/Collect_Item_Bling_1",
@@ -7524,7 +8424,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "gym": [
       "category_background/boxing_gym"
@@ -7693,7 +8594,18 @@
       "category_explosion/Retro_Game_Classic_Explosion_4",
       "category_explosion/Retro_Game_Classic_Explosion_5",
       "category_explosion/Retro_Game_Classic_Explosion_6",
-      "category_explosion/Retro_Game_Classic_Explosion_9"
+      "category_explosion/Retro_Game_Classic_Explosion_9",
+      "category_hits/8bit_Splat",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "insect": [
       "category_animals/bee_buzz"
@@ -7707,7 +8619,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "instrument": [
       "category_digital/whistle_down",
@@ -7853,7 +8773,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "intermission_whispering": [
       "category_background/intermission_whispering"
@@ -7955,7 +8900,34 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "jump_1": [
       "category_digital/jump_1"
@@ -8050,7 +9022,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "large_fan": [
       "category_background/large_fan"
@@ -8131,7 +9104,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "lock": [
       "category_app/Bass_Power_Off",
@@ -8201,7 +9182,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "magical": [
       "category_explosion/8bit_explosion",
@@ -8211,7 +9200,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "magnet": [
       "category_collect/Collect_Item_Bling_1",
@@ -8297,7 +9287,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "media": [
       "category_app/App_Button_1",
@@ -8380,6 +9371,18 @@
       "category_explosion/Retro_Game_Enemy_Fireball_2",
       "category_explosion/Retro_Game_Enemy_Shot_5",
       "category_explosion/Retro_Game_Take_Damage_Chirp_3",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
       "category_nature/FIre_Loop",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
@@ -8518,7 +9521,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "metal": [
       "category_app/Modern_UI_Sound",
@@ -8595,7 +9623,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "mouse": [
       "category_digital/squeak"
@@ -8658,6 +9694,31 @@
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
       "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1",
       "category_instrumental/digital_music",
       "category_instrumental/digital_music_2",
       "category_instrumental/harpe_music_1",
@@ -8781,7 +9842,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "notification_4": [
       "category_bell/Notification_4"
@@ -9156,13 +10242,40 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "pig": [
       "category_animals/pig"
     ],
     "ping": [
-      "category_digital/ping"
+      "category_digital/ping",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4"
     ],
     "plastic": [
       "category_objects/plastic_switch"
@@ -9213,7 +10326,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "positive": [
       "category_bell/Hollow_Bell_Notification",
@@ -9280,7 +10401,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "power": [
       "category_collect/Collect_Item_Bling_1",
@@ -9363,7 +10509,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "pregame_fans": [
       "category_background/pregame_fans"
@@ -9382,7 +10553,17 @@
       "category_explosion/Retro_Game_Classic_Explosion_4",
       "category_explosion/Retro_Game_Classic_Explosion_5",
       "category_explosion/Retro_Game_Classic_Explosion_6",
-      "category_explosion/Retro_Game_Classic_Explosion_9"
+      "category_explosion/Retro_Game_Classic_Explosion_9",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "puppy": [
       "category_animals/puppy"
@@ -9397,7 +10578,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "puzzle_game_break_magic_01": [
       "category_explosion/Puzzle_Game_Break_Magic_01"
@@ -9414,8 +10603,32 @@
     "puzzle_game_break_magic_05": [
       "category_explosion/Puzzle_Game_Break_Magic_05"
     ],
+    "puzzle_game_button_01": [
+      "category_hits/Puzzle_Game_Button_01"
+    ],
+    "puzzle_game_button_02": [
+      "category_hits/Puzzle_Game_Button_02"
+    ],
+    "puzzle_game_button_03": [
+      "category_hits/Puzzle_Game_Button_03"
+    ],
+    "puzzle_game_button_04": [
+      "category_hits/Puzzle_Game_Button_04"
+    ],
     "puzzle_game_item_select_04": [
       "category_collect/Puzzle_Game_Item_Select_04"
+    ],
+    "puzzle_game_magic_item_unlock_4": [
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4"
+    ],
+    "puzzle_game_magic_item_unlock_5": [
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5"
+    ],
+    "puzzle_game_organic_metal_tile_hit_1": [
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1"
+    ],
+    "puzzle_game_organic_metal_tile_hit_2": [
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "quick": [
       "category_digital/three_tone_pulse"
@@ -9556,7 +10769,19 @@
       "category_explosion/Retro_Game_Classic_Explosion_9",
       "category_explosion/Retro_Game_Enemy_Fireball_2",
       "category_explosion/Retro_Game_Enemy_Shot_5",
-      "category_explosion/Retro_Game_Take_Damage_Chirp_3"
+      "category_explosion/Retro_Game_Take_Damage_Chirp_3",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "retro_game_classic_explosion_1": [
       "category_explosion/Retro_Game_Classic_Explosion_1"
@@ -9612,14 +10837,50 @@
     "retro_game_health_pickup_2": [
       "category_collect/Retro_Game_Health_Pickup_2"
     ],
+    "retro_game_hit_block_3": [
+      "category_hits/Retro_Game_Hit_Block_3"
+    ],
+    "retro_game_hit_block_4": [
+      "category_hits/Retro_Game_Hit_Block_4"
+    ],
     "retro_game_powerup_1": [
       "category_collect/Retro_Game_PowerUp_1"
     ],
     "retro_game_powerup_6": [
       "category_collect/Retro_Game_PowerUp_6"
     ],
+    "retro_game_simple_impact_1": [
+      "category_hits/Retro_Game_Simple_Impact_1"
+    ],
+    "retro_game_simple_impact_2": [
+      "category_hits/Retro_Game_Simple_Impact_2"
+    ],
+    "retro_game_simple_impact_3": [
+      "category_hits/Retro_Game_Simple_Impact_3"
+    ],
     "retro_game_take_damage_chirp_3": [
       "category_explosion/Retro_Game_Take_Damage_Chirp_3"
+    ],
+    "retro_game_weapon_-_gauntlet_punch_1": [
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1"
+    ],
+    "retro_game_weapon_-_gauntlet_punch_2": [
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2"
+    ],
+    "retro_game_weapon_-_gauntlet_punch_3": [
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3"
+    ],
+    "retro_game_weapon_-_light_punch_2": [
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2"
+    ],
+    "retro_game_weapon_-_sword_on_shield_1": [
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1"
+    ],
+    "retro_game_weapon_-_sword_on_shield_2": [
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2"
+    ],
+    "retro_game_weapon_-_sword_on_shield_3": [
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "rhinoceros": [
       "category_animals/rhinoceros"
@@ -9632,7 +10893,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "ring1": [
       "category_digital/ring_1"
@@ -9916,7 +11178,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "shooting": [
       "category_explosion/8bit_explosion",
@@ -9926,7 +11189,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "short_bell_alert": [
       "category_bell/Short_Bell_Alert"
@@ -10013,7 +11277,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "small_restaurant": [
       "category_background/small_restaurant"
@@ -10076,7 +11365,16 @@
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
       "category_explosion/Puzzle_Game_Break_Magic_05",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "sounds": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -10133,7 +11431,35 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/8bit_Splat",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "south_carolina_beach_1": [
       "category_nature/South_Carolina_Beach_1"
@@ -10255,7 +11581,17 @@
       "category_explosion/Retro_Game_Classic_Explosion_4",
       "category_explosion/Retro_Game_Classic_Explosion_5",
       "category_explosion/Retro_Game_Classic_Explosion_6",
-      "category_explosion/Retro_Game_Classic_Explosion_9"
+      "category_explosion/Retro_Game_Classic_Explosion_9",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "sport": [
       "category_objects/kickball"
@@ -10371,6 +11707,18 @@
       "category_explosion/Retro_Game_Enemy_Fireball_2",
       "category_explosion/Retro_Game_Enemy_Shot_5",
       "category_explosion/Retro_Game_Take_Damage_Chirp_3",
+      "category_hits/Retro_Game_Hit_Block_3",
+      "category_hits/Retro_Game_Hit_Block_4",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
       "category_nature/FIre_Loop",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
@@ -10409,7 +11757,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "stutter": [
       "category_instrumental/digital_drum_stutter"
@@ -10615,7 +11964,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "textile": [
       "category_objects/cloth"
@@ -10626,7 +11983,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "three": [
       "category_female_voiceover/three_female",
@@ -10650,6 +12015,7 @@
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
       "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat",
       "category_nature/Game_Rain_Loop_2",
       "category_nature/Spring_RT_Loop_1",
       "category_nature/Spring_RT_Loop_2",
@@ -10703,7 +12069,15 @@
       "category_explosion/Puzzle_Game_Break_Magic_02",
       "category_explosion/Puzzle_Game_Break_Magic_03",
       "category_explosion/Puzzle_Game_Break_Magic_04",
-      "category_explosion/Puzzle_Game_Break_Magic_05"
+      "category_explosion/Puzzle_Game_Break_Magic_05",
+      "category_hits/Puzzle_Game_Button_01",
+      "category_hits/Puzzle_Game_Button_02",
+      "category_hits/Puzzle_Game_Button_03",
+      "category_hits/Puzzle_Game_Button_04",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_4",
+      "category_hits/Puzzle_Game_Magic_Item_Unlock_5",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1",
+      "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
     "token": [
       "category_collect/Collect_Item_Bling_1",
@@ -10760,7 +12134,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "toucan": [
       "category_background/toucan"
@@ -11013,7 +12412,32 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "vibrant": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -11062,10 +12486,47 @@
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1",
       "category_explosion/Vibrant_Game__Ball_Touch_1",
       "category_explosion/Vibrant_Game__Material_Collect_3",
-      "category_explosion/Vibrant_Smack_Game_Object_2"
+      "category_explosion/Vibrant_Smack_Game_Object_2",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "vibrant_cash_register_open_positive_game_open": [
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open"
+    ],
+    "vibrant_crate_break_1": [
+      "category_hits/Vibrant_Crate_Break_1"
+    ],
+    "vibrant_crate_break_2": [
+      "category_hits/Vibrant_Crate_Break_2"
+    ],
+    "vibrant_crate_break_3": [
+      "category_hits/Vibrant_Crate_Break_3"
+    ],
+    "vibrant_crate_break_4": [
+      "category_hits/Vibrant_Crate_Break_4"
     ],
     "vibrant_deep_wet_explosion": [
       "category_explosion/Vibrant_Deep_Wet_Explosion"
@@ -11079,6 +12540,12 @@
     "vibrant_game__bell_twinkle_positive_touch_1": [
       "category_bell/Vibrant_Game__Bell_Twinkle_Positive_Touch_1"
     ],
+    "vibrant_game__big_game_horn_hit": [
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit"
+    ],
+    "vibrant_game__big_hit_1": [
+      "category_hits/Vibrant_Game__Big_Hit_1"
+    ],
     "vibrant_game__bubbly_pick_up": [
       "category_collect/Vibrant_Game__Bubbly_Pick_Up"
     ],
@@ -11088,8 +12555,23 @@
     "vibrant_game__cute_pick_up_1": [
       "category_collect/Vibrant_Game__Cute_Pick_Up_1"
     ],
+    "vibrant_game__deep_hit": [
+      "category_hits/Vibrant_Game__Deep_Hit"
+    ],
+    "vibrant_game__ding_ding_bong_hit_1": [
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1"
+    ],
+    "vibrant_game__electro_hit_collect": [
+      "category_hits/Vibrant_Game__Electro_Hit_Collect"
+    ],
     "vibrant_game__frog_item_": [
       "category_collect/Vibrant_Game__Frog_Item_"
+    ],
+    "vibrant_game__game_touch_5": [
+      "category_hits/Vibrant_Game__Game_Touch_5"
+    ],
+    "vibrant_game__hit_1": [
+      "category_hits/Vibrant_Game__Hit_1"
     ],
     "vibrant_game__key_item_1": [
       "category_collect/Vibrant_Game__Key_Item_1"
@@ -11115,6 +12597,9 @@
     "vibrant_game__slot_machine_ding_2": [
       "category_bell/Vibrant_Game__Slot_Machine_Ding_2"
     ],
+    "vibrant_game__smash_hit_open_1": [
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1"
+    ],
     "vibrant_game__star_burst_3": [
       "category_bell/Vibrant_Game__Star_Burst_3"
     ],
@@ -11139,6 +12624,15 @@
     "vibrant_game_arcade_game_negative_hit_10_soft_hifi": [
       "category_explosion/Vibrant_Game_Arcade_Game_Negative_Hit_10_Soft_hifi"
     ],
+    "vibrant_game_arcade_game_negative_hit_2": [
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2"
+    ],
+    "vibrant_game_arcade_game_negative_hit_4": [
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4"
+    ],
+    "vibrant_game_arcade_game_negative_hit_5": [
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5"
+    ],
     "vibrant_game_arcade_game_negative_hit_6_pop_bubble": [
       "category_explosion/Vibrant_Game_Arcade_Game_Negative_Hit_6_Pop_Bubble"
     ],
@@ -11159,6 +12653,9 @@
     ],
     "vibrant_game_bass_hit_enemy_death_2": [
       "category_explosion/Vibrant_Game_Bass_Hit_Enemy_Death_2"
+    ],
+    "vibrant_game_bounce_and_ding_notification": [
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification"
     ],
     "vibrant_game_bright_distroy_item_1": [
       "category_explosion/Vibrant_Game_Bright_Distroy_Item_1"
@@ -11187,14 +12684,41 @@
     "vibrant_game_correct_answer_1": [
       "category_bell/Vibrant_Game_Correct_Answer_1"
     ],
+    "vibrant_game_dirty_desolve_1": [
+      "category_hits/Vibrant_Game_Dirty_Desolve_1"
+    ],
+    "vibrant_game_dirty_desolve_2": [
+      "category_hits/Vibrant_Game_Dirty_Desolve_2"
+    ],
+    "vibrant_game_frozen_break_hit_1": [
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1"
+    ],
+    "vibrant_game_game_box_hit_1": [
+      "category_hits/Vibrant_Game_Game_Box_Hit_1"
+    ],
     "vibrant_game_gas_bass_game_item": [
       "category_explosion/Vibrant_Game_Gas_Bass_Game_Item"
+    ],
+    "vibrant_game_hit_poof_dissolve_2_up": [
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up"
     ],
     "vibrant_game_positive_quirky_item_pick_up": [
       "category_collect/Vibrant_Game_Positive_Quirky_Item_Pick_Up"
     ],
+    "vibrant_game_quirky_game_power_up_2": [
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2"
+    ],
+    "vibrant_game_shimmering_hit_1": [
+      "category_hits/Vibrant_Game_Shimmering_Hit_1"
+    ],
     "vibrant_game_wet_bong_alert_1": [
       "category_explosion/Vibrant_Game_Wet_Bong_Alert_1"
+    ],
+    "vibrant_next_page_button": [
+      "category_hits/Vibrant_Next_Page_Button"
+    ],
+    "vibrant_slot_change_lock_1": [
+      "category_hits/Vibrant_Slot_Change_Lock_1"
     ],
     "vibrant_smack_game_object_2": [
       "category_explosion/Vibrant_Smack_Game_Object_2"
@@ -11222,7 +12746,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "voices": [
       "category_human/Character_Calvin_Ah_Ha_1",
@@ -11322,7 +12847,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "warfare": [
       "category_explosion/8bit_explosion",
@@ -11332,7 +12858,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "warning": [
       "category_explosion/8bit_explosion",
@@ -11342,7 +12869,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "water": [
       "category_background/ocean_waves",
@@ -11378,7 +12906,17 @@
       "category_explosion/Retro_Game_Classic_Explosion_4",
       "category_explosion/Retro_Game_Classic_Explosion_5",
       "category_explosion/Retro_Game_Classic_Explosion_6",
-      "category_explosion/Retro_Game_Classic_Explosion_9"
+      "category_explosion/Retro_Game_Classic_Explosion_9",
+      "category_hits/Retro_Game_Simple_Impact_1",
+      "category_hits/Retro_Game_Simple_Impact_2",
+      "category_hits/Retro_Game_Simple_Impact_3",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_1",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Gauntlet_Punch_3",
+      "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
     ],
     "weapons": [
       "category_explosion/8bit_explosion",
@@ -11388,7 +12926,8 @@
       "category_explosion/Fun_Bonus_Explode_9",
       "category_explosion/Playful_Game_Explosion_5",
       "category_explosion/Playful_Game_Explosive_Hit",
-      "category_explosion/Radioactive_Zombie_Explode_2"
+      "category_explosion/Radioactive_Zombie_Explode_2",
+      "category_hits/8bit_Splat"
     ],
     "weather": [
       "category_nature/Game_Rain_Loop_2",
@@ -11482,6 +13021,31 @@
       "category_explosion/Vibrant_Game__Material_Collect_3",
       "category_explosion/Vibrant_Smack_Game_Object_2",
       "category_female_voiceover/you_win_female",
+      "category_hits/Vibrant_Crate_Break_1",
+      "category_hits/Vibrant_Crate_Break_2",
+      "category_hits/Vibrant_Crate_Break_3",
+      "category_hits/Vibrant_Crate_Break_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_2",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_4",
+      "category_hits/Vibrant_Game_Arcade_Game_Negative_Hit_5",
+      "category_hits/Vibrant_Game_Bounce_and_Ding_Notification",
+      "category_hits/Vibrant_Game_Dirty_Desolve_1",
+      "category_hits/Vibrant_Game_Dirty_Desolve_2",
+      "category_hits/Vibrant_Game_Frozen_Break_Hit_1",
+      "category_hits/Vibrant_Game_Game_Box_Hit_1",
+      "category_hits/Vibrant_Game_Hit_Poof_Dissolve_2_Up",
+      "category_hits/Vibrant_Game_Quirky_Game_Power_Up_2",
+      "category_hits/Vibrant_Game_Shimmering_Hit_1",
+      "category_hits/Vibrant_Game__Big_Game_Horn_Hit",
+      "category_hits/Vibrant_Game__Big_Hit_1",
+      "category_hits/Vibrant_Game__Deep_Hit",
+      "category_hits/Vibrant_Game__Ding_Ding_Bong_Hit_1",
+      "category_hits/Vibrant_Game__Electro_Hit_Collect",
+      "category_hits/Vibrant_Game__Game_Touch_5",
+      "category_hits/Vibrant_Game__Hit_1",
+      "category_hits/Vibrant_Game__Smash_Hit_Open_1",
+      "category_hits/Vibrant_Next_Page_Button",
+      "category_hits/Vibrant_Slot_Change_Lock_1",
       "category_male_voiceover/you_win_male"
     ],
     "wind": [
