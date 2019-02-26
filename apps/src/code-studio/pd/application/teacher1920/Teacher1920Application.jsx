@@ -15,7 +15,8 @@ export default class Teacher1920Application extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     accountEmail: PropTypes.string.isRequired,
-    userId: PropTypes.number.isRequired
+    userId: PropTypes.number.isRequired,
+    schoolId: PropTypes.string
   };
 
   static submitButtonText = 'Complete and Send';
