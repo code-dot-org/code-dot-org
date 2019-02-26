@@ -1488,6 +1488,7 @@ class Script < ActiveRecord::Base
 
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
+    return false unless pilot_experiment
     SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
   end
 
@@ -1496,13 +1497,6 @@ class Script < ActiveRecord::Base
   def self.has_any_pilot_access?(user = nil)
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
-
-    pilot_experiments.any? do |experiment_name|
-      SingleUserExperiment.enabled?(user: user, experiment_name: experiment_name)
-    end
-  end
-
-  def self.pilot_experiments
-    @@pilot_experiments ||= all_scripts.map(&:pilot_experiment).compact
+    all_scripts.any? {|script| script.has_pilot_experiment?(user)}
   end
 end
