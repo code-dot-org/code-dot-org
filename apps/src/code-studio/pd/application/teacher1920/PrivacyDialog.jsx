@@ -50,7 +50,7 @@ export default class PrivacyDialog extends React.Component {
           <p style={STYLE.bodyText}>
             Teachers may be required to get principal approval for their
             application to the Professional Learning Program. As part of this
-            process principals may opt-in to let the College Board share
+            process principals may opt in to let the College Board share
             de-identified and aggregated Computer Science AP scores with
             Code.org to help us improve the program and curriculum. AP test
             scores will not be shared with Regional Partners.
