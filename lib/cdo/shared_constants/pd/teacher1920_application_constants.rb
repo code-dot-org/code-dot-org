@@ -12,8 +12,7 @@ module Pd
       section_2_choose_your_program: 'Choose Your Program',
       section_3_teaching_background: 'Teaching Background',
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      section_5_additional_demographic_information: 'Additional Demographic Information',
-      section_6_submission: 'Submission',
+      section_5_additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -106,12 +105,10 @@ module Pd
       section_5_additional_demographic_information:
         BASE_PAGE_LABELS[:section_5_submission].slice(:gender_identity, :race).merge(
           {
-            how_heard: 'How did you hear about this program?'
+            how_heard: 'How did you hear about this program?',
+            agree: 'By submitting this application, I agree to share this application, my contact information, and overall class information with my local Code.org Regional Partner.'
           }
         ),
-      section_6_submission: {
-        agree: 'By submitting this application, I agree to share this application, my contact information, and overall class information with my local Code.org Regional Partner.'
-      },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
         school_type: 'School Type',
