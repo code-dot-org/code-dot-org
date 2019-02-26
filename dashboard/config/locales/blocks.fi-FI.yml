@@ -181,7 +181,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_getTime:
-        text: "[UNIT][0] kulunut"
+        text: "[UNIT] [0] kulunut"
         options:
           UNIT:
             '"measures"': tahdit
@@ -1021,6 +1021,11 @@ fi:
         options:
           DURATION:
             '"0"': ikuisesti
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': näytä
+            '"hide"': piilota
       binary_move:
         options:
           DIR:
