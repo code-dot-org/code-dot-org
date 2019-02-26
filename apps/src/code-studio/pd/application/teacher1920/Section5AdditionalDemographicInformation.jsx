@@ -6,6 +6,7 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
+import PrivacyDialog from './PrivacyDialog';
 
 export default class Section5AdditionalDemographicInformation extends LabeledFormComponent {
   static labels = PageLabels.section5AdditionalDemographicInformation;
@@ -13,6 +14,21 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
   static associatedFields = [
     ...Object.keys(PageLabels.section5AdditionalDemographicInformation)
   ];
+
+  state = {
+    isPrivacyDialogOpen: false
+  };
+
+  openPrivacyDialog = event => {
+    // preventDefault so clicking this link inside the label doesn't
+    // also check the checkbox.
+    event.preventDefault();
+    this.setState({isPrivacyDialogOpen: true});
+  };
+
+  handleClosePrivacyDialog = () => {
+    this.setState({isPrivacyDialogOpen: false});
+  };
 
   render() {
     return (
@@ -31,6 +47,20 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
             required: false
           }
         )}
+
+        <label className="control-label">Submit your application</label>
+        {this.singleCheckboxFor('agree', {
+          label: (
+            <span>
+              {this.labelFor('agree')}{' '}
+              <a onClick={this.openPrivacyDialog}>Learn more.</a>
+            </span>
+          )
+        })}
+        <PrivacyDialog
+          show={this.state.isPrivacyDialogOpen}
+          onHide={this.handleClosePrivacyDialog}
+        />
       </FormGroup>
     );
   }

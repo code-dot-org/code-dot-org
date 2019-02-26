@@ -286,6 +286,10 @@ When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ 
   end
 end
 
+When /^I press the first "([^"]*)" element if I see it?$/ do |selector|
+  @browser.find_element(:css, selector)&.click
+end
+
 When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
   wait_short_until do
     @element = @browser.find_element(:css, selector)
