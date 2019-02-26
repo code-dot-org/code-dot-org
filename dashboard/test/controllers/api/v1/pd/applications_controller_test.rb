@@ -929,7 +929,7 @@ module Api::V1::Pd
         "If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?",
         "How far would you be willing to travel to academic year workshops?",
         "Are you interested in this online program for school year workshops?",
-        "Will you or your school be able to pay the fee?",
+        "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",
