@@ -5,6 +5,46 @@
     "See tools/scripts/rebuildSoundLibraryManifest.rb for more information."
   ],
   "metadata": {
+    "category_animals/Cartoon_Animal_Chirp_1": {
+      "name": "Cartoon_Animal_Chirp_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 23:11:03 UTC",
+      "mp3LastModified": "2019-02-13 23:33:00 UTC",
+      "version": "9mNaybTtq0xBKOHJubtI7jUo6B5rV4Il",
+      "sourceUrl": "/api/v1/sound-library/category_animals/Cartoon_Animal_Chirp_1.mp3"
+    },
+    "category_animals/Cartoon_Creature_Accent_1": {
+      "name": "Cartoon_Creature_Accent_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:11:03 UTC",
+      "mp3LastModified": "2019-02-13 23:33:01 UTC",
+      "version": "TbKRXcYrCMJJIQbBeHkJ6NPCn4D0b0Bf",
+      "sourceUrl": "/api/v1/sound-library/category_animals/Cartoon_Creature_Accent_1.mp3"
+    },
+    "category_animals/Cartoon_Creature_Accent_2": {
+      "name": "Cartoon_Creature_Accent_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:11:04 UTC",
+      "mp3LastModified": "2019-02-13 23:33:02 UTC",
+      "version": "9LnnLGGCTxZc55kOx9oG4Bm6b_hEsemV",
+      "sourceUrl": "/api/v1/sound-library/category_animals/Cartoon_Creature_Accent_2.mp3"
+    },
+    "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1": {
+      "name": "Cartoon_Cute_Animal_Voice_Chatter_1",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 23:11:05 UTC",
+      "mp3LastModified": "2019-02-13 23:33:05 UTC",
+      "version": "2VWsxsTj0F1NUdhVyT8iZVcoNdgfcjj0",
+      "sourceUrl": "/api/v1/sound-library/category_animals/Cartoon_Cute_Animal_Voice_Chatter_1.mp3"
+    },
+    "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic": {
+      "name": "Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 23:11:06 UTC",
+      "mp3LastModified": "2019-02-13 23:33:06 UTC",
+      "version": "NCtVKMwFCn9lURTBd1k_8mzzNOtHNXoc",
+      "sourceUrl": "/api/v1/sound-library/category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic.mp3"
+    },
     "category_animals/bear": {
       "name": "bear",
       "time": 3,
@@ -9238,6 +9278,11 @@
       "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "apps": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -10721,6 +10766,11 @@
       "category_hits/8bit_Splat"
     ],
     "bleeps": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -11283,6 +11333,11 @@
       "category_retro/Start_Game"
     ],
     "buttons": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -11929,11 +11984,26 @@
       "category_jump/Ninja_Jump_2",
       "category_tap/Percussion_Echo_Notification2"
     ],
+    "cartoon_animal_chirp_1": [
+      "category_animals/Cartoon_Animal_Chirp_1"
+    ],
     "cartoon_blast_off": [
       "category_movement/Cartoon_Blast_Off"
     ],
     "cartoon_blast_off_3": [
       "category_movement/Cartoon_Blast_Off_3"
+    ],
+    "cartoon_creature_accent_1": [
+      "category_animals/Cartoon_Creature_Accent_1"
+    ],
+    "cartoon_creature_accent_2": [
+      "category_animals/Cartoon_Creature_Accent_2"
+    ],
+    "cartoon_cute_animal_voice_chatter_1": [
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1"
+    ],
+    "cartoon_cute_animal_voice_chatter_3_supersonic": [
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic"
     ],
     "cartoon_multi_ding_pluck_1": [
       "category_music/Cartoon_Multi_Ding_Pluck_1"
@@ -11954,6 +12024,11 @@
       "category_animals/cat"
     ],
     "category_animals": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_animals/bear",
       "category_animals/bee_buzz",
       "category_animals/cat",
@@ -13742,6 +13817,11 @@
       "category_retro/Start_Game"
     ],
     "clicks": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -13994,6 +14074,11 @@
       "category_objects/cloth"
     ],
     "coin": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -14303,6 +14388,11 @@
       "category_transition/Collecting_Transition_1"
     ],
     "complete": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -14610,6 +14700,11 @@
       "category_male_voiceover/correct_male"
     ],
     "count": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -14853,6 +14948,11 @@
       "category_music/Crackle_Loss_1"
     ],
     "crafting": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -15301,6 +15401,11 @@
       "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "cues": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -17559,6 +17664,11 @@
       "category_music/Funny_Chirp_Bubble_Postive_Notification"
     ],
     "game": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_app/App_Button_1",
       "category_app/App_Button_2",
       "category_app/App_Button_3",
@@ -19111,6 +19221,11 @@
       "category_objects/kazoo"
     ],
     "interface": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_app/App_Button_1",
       "category_app/App_Button_2",
       "category_app/App_Button_3",
@@ -19537,6 +19652,11 @@
       "category_jump/Ninja_Jump_2"
     ],
     "jump": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -21029,6 +21149,11 @@
       "category_retro/Start_Game"
     ],
     "menus": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -21571,6 +21696,11 @@
       "category_slide/whoosh_4"
     ],
     "music": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_background/eerie_beginnings",
       "category_background/fantasy",
       "category_background/gametime",
@@ -21930,6 +22060,11 @@
       "category_jump/Ninja_Jump_2"
     ],
     "notification": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Hollow_Bell_Notification",
       "category_bell/Long_Bell_Notification",
       "category_bell/Notification_4",
@@ -22585,6 +22720,11 @@
       "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "pickups": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -23113,6 +23253,11 @@
       "category_objects/metal_pot_2"
     ],
     "potions": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -23400,6 +23545,11 @@
       "category_digital/powerdown"
     ],
     "powerup": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -25601,6 +25751,11 @@
       "category_nature/Steady_Campfire_Loop"
     ],
     "slides": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -26085,6 +26240,11 @@
       "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "sounds": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -27782,6 +27942,11 @@
       "category_jump/Ninja_Jump_2"
     ],
     "tonal": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -28339,6 +28504,11 @@
       "category_instrumental/sax_upscale_2"
     ],
     "user": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_app/App_Button_1",
       "category_app/App_Button_2",
       "category_app/App_Button_3",
@@ -28656,6 +28826,11 @@
       "category_transition/Vibrant_Power_Unlock"
     ],
     "vibrant": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
@@ -29653,6 +29828,11 @@
       "category_nature/Summer_Night_Loop"
     ],
     "win": [
+      "category_animals/Cartoon_Animal_Chirp_1",
+      "category_animals/Cartoon_Creature_Accent_1",
+      "category_animals/Cartoon_Creature_Accent_2",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_1",
+      "category_animals/Cartoon_Cute_Animal_Voice_Chatter_3_Supersonic",
       "category_bell/Quriky_Trill_Bling_Positive",
       "category_bell/Vibrant_Cash_Register_Open_Positive_Game_Open",
       "category_bell/Vibrant_Game_Correct_Answer_1",
