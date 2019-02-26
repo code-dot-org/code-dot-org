@@ -101,7 +101,13 @@ export function renderStatsTable(section) {
 }
 
 export function renderSectionTable(section, studioUrlPrefix) {
-  registerReducers({teacherSections, manageStudents, isRtl, sectionData});
+  registerReducers({
+    teacherSections,
+    manageStudents,
+    isRtl,
+    sectionData,
+    scriptSelection
+  });
   const store = getStore();
 
   store.dispatch(setLoginType(section.login_type));
