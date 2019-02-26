@@ -3,13 +3,13 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedVirtualizedSummaryView} from '@cdo/apps/templates/sectionProgress/VirtualizedSummaryView';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import {Provider} from 'react-redux';
 
 const studentData = [
