@@ -23,7 +23,7 @@
 #  index_levels_on_name     (name)
 #
 
-class FreeResponse < Level
+class FreeResponse < Blockly
   serialized_attrs %w(
     title
     height
