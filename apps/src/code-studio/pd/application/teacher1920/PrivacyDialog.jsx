@@ -1,5 +1,5 @@
 /**
- * Modal confirmation (OK/Cancel) dialog with custom text and events.
+ * @file Modal containing privacy text for the 19-20 teacher application
  */
 import PropTypes from 'prop-types';
 import React from 'react';
