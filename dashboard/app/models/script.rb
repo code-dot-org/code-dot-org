@@ -1477,12 +1477,9 @@ class Script < ActiveRecord::Base
   def has_pilot_access?(user = nil)
     return false unless pilot? && user
     return true if user.permission?(UserPermission::LEVELBUILDER)
+    return true if has_pilot_experiment?(user)
 
-    if user.teacher?
-      return has_pilot_experiment?(user)
-    end
-
-    # A student has pilot script access if
+    # A user without the experiment has pilot script access if
     # (1) they have been assigned to or have progress in the pilot script, and
     # (2) one of their teachers has the pilot experiment enabled.
     has_progress = !!UserScript.find_by(user: user, script: self)
