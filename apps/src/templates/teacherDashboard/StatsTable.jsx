@@ -27,8 +27,8 @@ class StatsTable extends Component {
     studentsCompletedLevelCount: PropTypes.object,
 
     // Provided by redux.
-    scriptId: PropTypes.number.isRequired,
-    scriptName: PropTypes.string.isRequired
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   state = {};

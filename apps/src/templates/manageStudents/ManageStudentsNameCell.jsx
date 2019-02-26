@@ -28,8 +28,8 @@ class ManageStudentNameCell extends Component {
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
-    scriptId: PropTypes.number.isRequired,
-    scriptName: PropTypes.string.isRequired
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   onChangeName = e => {
