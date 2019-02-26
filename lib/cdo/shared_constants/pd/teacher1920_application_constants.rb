@@ -109,7 +109,9 @@ module Pd
             how_heard: 'How did you hear about this program?'
           }
         ),
-      section_6_submission: BASE_PAGE_LABELS[:section_5_submission].slice(:agree),
+      section_6_submission: {
+        agree: 'By submitting this application, I agree to share this application, my contact information, and overall class information with my local Code.org Regional Partner.'
+      },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
         school_type: 'School Type',
