@@ -329,6 +329,17 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
   end
 
+  test 'facilitators cannot update scholarship info' do
+    workshop = create :pd_workshop, :local_summer_workshop_upcoming, facilitators: [@facilitator]
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in @facilitator
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 403
+    assert_nil enrollment.scholarship_status
+  end
+
   private
 
   def enrollment_test_params(teacher = nil)
