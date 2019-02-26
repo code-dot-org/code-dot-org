@@ -38,16 +38,12 @@ en-GB:
   nav:
     user:
       create: Create
-      dance: Fiesta Bailabel
   teacher:
     panel:
       answer_viewer: Teacher Panel
   home:
     trynow: Try now
     announcement_try_now_button: Try now
-  upsell:
-    dance:
-      title: Fiesta Bailabel
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?

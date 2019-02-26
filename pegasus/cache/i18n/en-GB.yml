@@ -105,7 +105,6 @@ en-GB:
   studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_dance_title: Fiesta Bailabel
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_body: Make and share your own Flappy game
@@ -209,9 +208,5 @@ en-GB:
     drag it. How about a colour, or an image? Tapping will bring up visual editors
     that let you choose exactly what you want.
   flappy_shortcode: flap
-  user_header_dance: Fiesta Bailabel
-  hoc_overview_dance_title: Fiesta Bailabel
   hoc2018_creativity_create: Create
   hoc2018_mc_homepage_try_it: Try it
-  hoc2018_dance_party_main_heading: Fiesta Bailabel
-  hoc2018_dance_party_box_title: Fiesta Bailabel
