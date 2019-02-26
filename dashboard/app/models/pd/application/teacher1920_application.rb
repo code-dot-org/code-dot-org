@@ -505,7 +505,7 @@ module Pd::Application
         meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
       end
 
-      bonus_points_scores[:taught_in_past] = responses[:taught_in_past] == [options[:taught_in_past].last] ? 2 : 0
+      bonus_points_scores[:taught_in_past] = (responses[:taught_in_past] & options[:taught_in_past].values_at(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15)).any? ? 0 : 2
 
       # Section 4
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
