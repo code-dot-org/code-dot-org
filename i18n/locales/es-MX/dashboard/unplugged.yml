@@ -2,7 +2,7 @@ es-MX:
   data:
     unplugged:
       Unplug1:
-        title: Introducción al Arte de las Ciencias de la Computación
+        title: Introducción a Ciencias de la Computación
         desc: Esta clase introducirá el concepto de “Ciencias de la computación” y explicará qué hace un “informático”. Los estudiantes tendrán la oportunidad de asumir el rol de un informático. Al finalizar la actividad, cada estudiante recibirá un recordatorio sobre qué aprendió durante la clase. Tal vez crea que no es conveniente enseñar a los niños más pequeños el complejo vocabulario asociado a estas clases, pero si se presenta de manera lúdica y divertida, ahora es mucho más productivo que esperar otras oportunidades.
         pdfs:
           - unplug1-es-ES
@@ -391,3 +391,6 @@ es-MX:
       courseB_unplugged_CnC_2019:
         title: Es estupendo crear y jugar limpio
         desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender el proceso creativo de compartir e de inspiración. Esto conlleva la promoción de la expresión creativas y la necesidad de ser justo con el trabajo creativo.
+      GraphingData_2019:
+        title: Datos de gráfico
+        desc: " En esta lección, los estudiantes recopilarán datos de un proyecto de Laboratorio de Juegos o escenario real del mundo y lo utilizarán para hacer predicciones."
