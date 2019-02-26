@@ -3,6 +3,27 @@
 @pegasus_db_access
 Feature: Using the teacher dashboard
 
+  Scenario: Visiting student name URLs in old and new teacher dashboard
+    Given I create an authorized teacher-associated student named "Sally"
+    And I give user "Teacher_Sally" hidden script access
+    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I sign out
+
+    When I sign in as "Teacher_Sally"
+    When I click selector "a:contains(Untitled Section)" once I see it
+    And check that the URL contains "/teacher-dashboard#/sections/"
+    When I click selector "a:contains(Sally)" once I see it
+    And check that the URL contains "/teacher-dashboard#/sections/"
+    And check that the URL contains "/student/"
+
+    Then I am on "http://studio.code.org/home?enableExperiments=teacher-dashboard-react"
+    When I click selector "a:contains(Untitled Section)" once I see it
+    And check that the URL contains "/teacher_dashboard/sections/"
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    When I click selector "a:contains(Sally)" once I see it
+    And check that the URL contains "/s/allthethings"
+    And check that the URL contains "viewAs=Teacher"
+
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
