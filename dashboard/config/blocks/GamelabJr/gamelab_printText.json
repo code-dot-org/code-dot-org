@@ -1,0 +1,12 @@
+{
+  "category": "Text",
+  "config": {
+    "func": "printText",
+    "blockText": "print {TEXT}",
+    "args": [
+      {
+        "name": "TEXT"
+      }
+    ]
+  }
+}
