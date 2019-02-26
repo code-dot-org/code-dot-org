@@ -52,10 +52,7 @@
     "long_instructions": "# Do This\r\n\r\n* Read the code and predict what will appear in the console\r\n* Run the code and watch the console\r\n* Use `console.log` to check the Boolean value of the expression `10 <= 10`\r\n* Use `console.log` to check the Boolean value of the expression \"ten minus three is greater than three times three\"\r\n\t* Hint: You need to first convert this to a numerical expression",
     "start_blocks": "// predict what will appear on the console.\r\nconsole.log(3 < 5);\r\nconsole.log(3 == 5);\r\nconsole.log(3 > 3);\r\n\r\n// Use console.log to check the Boolean value of the expression: 10 <= 10\r\n\r\n// Use console.log to check the Boolean value of the expression \"ten minus three is greater than three times three\"",
     "slider_speed": "0.1",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

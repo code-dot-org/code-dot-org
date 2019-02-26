@@ -51,6 +51,7 @@ level 'U4L06 Introduction to Conditionals: if-else-if Statements', progression: 
 level 'U4 L06 Thermostat App v5', progression: 'If-Else Statements'
 level 'U4 L06 Thermostat App v5 Code', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: Compound Boolean Expressions', progression: 'Logical Operators: AND OR'
+level 'U4 L06 Thermostat App v6', progression: 'Logical Operators: AND OR'
 level 'U4 L06 Thermostat App v6 Code', progression: 'Logical Operators: AND OR'
 
 stage 'Conditionals Practice'
