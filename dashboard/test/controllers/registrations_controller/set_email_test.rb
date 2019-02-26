@@ -152,6 +152,30 @@ module RegistrationsControllerTests
       refute can_edit_hashed_email_with_password teacher_with_password, 'oldpassword'
     end
 
+    test "updating migrated teacher email with positive email opt-in" do
+      new_email = 'new_email@example.com'
+      teacher = create :teacher, password: 'password'
+      teacher.migrate_to_multi_auth
+      teacher.reload
+
+      sign_in teacher
+      patch '/users/email', as: :json, params: {
+        user: {
+          email: new_email,
+          current_password: 'password',
+          email_preference_opt_in: 'yes',
+        }
+      }
+      assert_response :success
+
+      preference = EmailPreference.find_by_email(new_email)
+      refute_nil preference
+      assert_equal true, preference.opt_in
+      assert_equal request.ip, preference.ip_address
+      assert_equal EmailPreference::ACCOUNT_EMAIL_CHANGE, preference.source
+      assert_equal "0", preference.form_kind
+    end
+
     test "updating teacher email with positive email opt-in" do
       new_email = 'new_email@example.com'
       teacher = create :teacher, password: 'password'

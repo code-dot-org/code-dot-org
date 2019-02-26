@@ -2148,9 +2148,7 @@ en:
       OPD-K5 Pair: {}
       OPD-K5 Participation: {}
       OPD-K5 PostSurvey: {}
-      OPD-K5 PreSurvey:
-        PreSurvey: PreSurvey
-        description here: description here
+      OPD-K5 PreSurvey: {}
       OPD-K5 Problem Solving: {}
       OPD-K5 Program: {}
       OPD-K5 Puzzles: {}

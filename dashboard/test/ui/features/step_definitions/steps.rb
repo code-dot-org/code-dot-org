@@ -286,6 +286,10 @@ When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ 
   end
 end
 
+When /^I press the first "([^"]*)" element if I see it?$/ do |selector|
+  @browser.find_element(:css, selector)&.click
+end
+
 When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
   wait_short_until do
     @element = @browser.find_element(:css, selector)
@@ -1631,6 +1635,11 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
 
   # make sure the query params do not come after the # symbol
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
+end
+
+Then /^the href of selector "([^"]*)" contains "([^"]*)"$/ do |selector, matcher|
+  href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+  expect(href).to include(matcher)
 end
 
 Then /^I navigate to teacher dashboard for the section I saved$/ do
