@@ -9,6 +9,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
+import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import {Provider} from 'react-redux';
 
 const studentData = [
@@ -22,7 +23,7 @@ describe('VirtualizedSummaryView', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress});
+    registerReducers({sectionProgress, scriptSelection});
     defaultProps = {
       getLevels: () => {
         return [{id: 789, status: 'perfect'}];

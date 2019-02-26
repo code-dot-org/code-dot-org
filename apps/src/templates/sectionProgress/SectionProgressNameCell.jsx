@@ -13,7 +13,7 @@ class SectionProgressNameCell extends Component {
     scriptId: PropTypes.number.isRequired,
 
     // Provided by redux.
-    scriptName: PropTypes.string.isRequired
+    scriptName: PropTypes.string
   };
 
   render() {
