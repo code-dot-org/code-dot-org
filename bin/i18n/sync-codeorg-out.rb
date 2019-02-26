@@ -200,8 +200,8 @@ end
 
 def check_for_mismatching_links_or_images
   categories_to_check = %w(
-    instructions
-    markdown_instructions
+    short_instructions
+    long_instructions
     failure_message_overrides
     authored_hints
     callouts
