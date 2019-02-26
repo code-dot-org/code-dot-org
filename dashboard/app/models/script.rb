@@ -1482,9 +1482,13 @@ class Script < ActiveRecord::Base
       return SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
     end
 
-    user.sections_as_student.any? do |section|
-      section.script == self &&
-        SingleUserExperiment.enabled?(user: section.user, experiment_name: pilot_experiment)
+    # A student has pilot script access if
+    # (1) they have been assigned to or have progress in the pilot script, and
+    # (2) one of their teachers has the pilot experiment enabled.
+    has_progress = !!UserScript.find_by(user: user, script: self)
+    return false unless has_progress
+    user.teachers.any? do |teacher|
+      SingleUserExperiment.enabled?(user: teacher, experiment_name: pilot_experiment)
     end
   end
 
