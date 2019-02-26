@@ -24,6 +24,20 @@ Feature: Using the teacher homepage sections feature
     Then the section table should have 1 row
     And the section table row at index 0 has secondary assignment path "/s/csp3-a"
 
+  Scenario: Loading teacher dashboard with teacher-dashboard-react experiment enabled
+    When I see the section set up box
+    And I create a new section
+    Then the section table should have 1 row
+
+    And I wait until element "a:contains(Untitled Section)" is visible
+    And the href of selector "a:contains(Untitled Section)" contains "/teacher-dashboard#/sections/"
+
+    # Enable teacher-dashboard-react experiment
+    Then I am on "http://studio.code.org/home?enableExperiments=teacher-dashboard-react"
+    And I wait until element "a:contains(Untitled Section)" is visible
+    And I wait for 10 seconds
+    And the href of selector "a:contains(Untitled Section)" contains "/teacher_dashboard/sections/"
+
   Scenario: Navigate to course and unit pages
     When I see the section set up box
     And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
