@@ -7565,6 +7565,670 @@
       "version": "t35mvGHcNXKHOLCjfvVSZP..PyUx9NFX",
       "sourceUrl": "/api/v1/sound-library/category_slide/whoosh_4.mp3"
     },
+    "category_tap/Chirp_UI_2": {
+      "name": "Chirp_UI_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:50:56 UTC",
+      "mp3LastModified": "2019-02-14 00:30:37 UTC",
+      "version": "KhJ9Bh6st3Fa0Drl308O8ZQaKteAhAR7",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Chirp_UI_2.mp3"
+    },
+    "category_tap/Game_Bubble_Pop_Click": {
+      "name": "Game_Bubble_Pop_Click",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:50:57 UTC",
+      "mp3LastModified": "2019-02-14 00:30:37 UTC",
+      "version": "l95Mu3MVzXYkwXCkQ99LAEIXHKYjdxgm",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Game_Bubble_Pop_Click.mp3"
+    },
+    "category_tap/Level_Select_1": {
+      "name": "Level_Select_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:50:58 UTC",
+      "mp3LastModified": "2019-02-14 00:30:38 UTC",
+      "version": "TYqngQTqkqN2uwAChP98W7Mjb5Ix14aI",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Level_Select_1.mp3"
+    },
+    "category_tap/Negative_Select_1": {
+      "name": "Negative_Select_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:50:59 UTC",
+      "mp3LastModified": "2019-02-14 00:30:38 UTC",
+      "version": "F16HZmyKEBWNQ6cUAdhIo4GGLdwxQZsq",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Negative_Select_1.mp3"
+    },
+    "category_tap/Negative_Select_2": {
+      "name": "Negative_Select_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:00 UTC",
+      "mp3LastModified": "2019-02-14 00:30:39 UTC",
+      "version": "Xy0Zp6MOXevKnDhHvWNW1ezxRn_Yde05",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Negative_Select_2.mp3"
+    },
+    "category_tap/Percussion_Echo_Notification2": {
+      "name": "Percussion_Echo_Notification2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:15 UTC",
+      "mp3LastModified": "2019-02-14 00:30:40 UTC",
+      "version": "s9xDTs7O3V_w57.VuGryghLhv1uDr49h",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Percussion_Echo_Notification2.mp3"
+    },
+    "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1": {
+      "name": "Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:25 UTC",
+      "mp3LastModified": "2019-02-14 00:30:40 UTC",
+      "version": "wfhnNVcXSUhhSnKp5.Mmdm16j8Jhmmza",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1.mp3"
+    },
+    "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1": {
+      "name": "Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:26 UTC",
+      "mp3LastModified": "2019-02-14 00:30:41 UTC",
+      "version": "xPjpeO580ftPToG8crC43xbdu46Si_kN",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1.mp3"
+    },
+    "category_tap/Puzzle_Game_Organic_Metallic_Button_1": {
+      "name": "Puzzle_Game_Organic_Metallic_Button_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:27 UTC",
+      "mp3LastModified": "2019-02-14 00:30:41 UTC",
+      "version": "d.mTmzvkN3mwgyvufwuBhdzwsQYKfJVO",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Organic_Metallic_Button_1.mp3"
+    },
+    "category_tap/Puzzle_Game_Organic_Metallic_Button_2": {
+      "name": "Puzzle_Game_Organic_Metallic_Button_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:27 UTC",
+      "mp3LastModified": "2019-02-14 00:30:41 UTC",
+      "version": "73g5TdNpei4NRz4iFdYhbakBVLsRGOyZ",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Organic_Metallic_Button_2.mp3"
+    },
+    "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1": {
+      "name": "Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:28 UTC",
+      "mp3LastModified": "2019-02-14 00:30:42 UTC",
+      "version": "vrtQvIV7jdwCYQU7loopmLgVFzf7_CNi",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1.mp3"
+    },
+    "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2": {
+      "name": "Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:28 UTC",
+      "mp3LastModified": "2019-02-14 00:30:42 UTC",
+      "version": "G7iMKdFX6WiHrzVNZ72Uc.PRO55XH12d",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2.mp3"
+    },
+    "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click": {
+      "name": "Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:29 UTC",
+      "mp3LastModified": "2019-02-14 00:30:43 UTC",
+      "version": "99sm4RJlZJeG27FGVF7My60lXWLa9K6Y",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click.mp3"
+    },
+    "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click": {
+      "name": "Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:30 UTC",
+      "mp3LastModified": "2019-02-14 00:30:43 UTC",
+      "version": "FV8EizGW_Bip7MyXj3Zjd5K9SbJxxl76",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click.mp3"
+    },
+    "category_tap/Robotic_Selection_1": {
+      "name": "Robotic_Selection_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:30 UTC",
+      "mp3LastModified": "2019-02-14 00:30:44 UTC",
+      "version": "oIEBKnKq5QatMknjBivrll4MfLvF6W8J",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Robotic_Selection_1.mp3"
+    },
+    "category_tap/Robotic_Selection_2": {
+      "name": "Robotic_Selection_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:31 UTC",
+      "mp3LastModified": "2019-02-14 00:30:44 UTC",
+      "version": "KiUxNa1oNj4XWlLqhlVh8EmZw5r8TH_S",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Robotic_Selection_2.mp3"
+    },
+    "category_tap/Slight_Negative_Select_1": {
+      "name": "Slight_Negative_Select_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:32 UTC",
+      "mp3LastModified": "2019-02-14 00:30:45 UTC",
+      "version": "4PEvNe_HJKhbfNFaoLMJpiVqjcfejJQX",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Slight_Negative_Select_1.mp3"
+    },
+    "category_tap/Vibrant_Click_1": {
+      "name": "Vibrant_Click_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:32 UTC",
+      "mp3LastModified": "2019-02-14 00:30:45 UTC",
+      "version": "Znt.XKNFGV.cTjCI9pyMf86eb7cWBolM",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Click_1.mp3"
+    },
+    "category_tap/Vibrant_Crank_Tap_1": {
+      "name": "Vibrant_Crank_Tap_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:33 UTC",
+      "mp3LastModified": "2019-02-14 00:30:46 UTC",
+      "version": "q6oQhLNbtrbzqY3TrvbuTh3TvF3Yv6G9",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Crank_Tap_1.mp3"
+    },
+    "category_tap/Vibrant_Crank_Tap_2": {
+      "name": "Vibrant_Crank_Tap_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:33 UTC",
+      "mp3LastModified": "2019-02-14 00:30:47 UTC",
+      "version": "BIq9Ke5TrAMOfX0cnnp.mSQIcirD8LjL",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Crank_Tap_2.mp3"
+    },
+    "category_tap/Vibrant_Crank_Tap_3": {
+      "name": "Vibrant_Crank_Tap_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:34 UTC",
+      "mp3LastModified": "2019-02-14 00:30:47 UTC",
+      "version": "srn4UiPB0THEJGyJ2LZ5jHCENrFcAF3M",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Crank_Tap_3.mp3"
+    },
+    "category_tap/Vibrant_Crank_Tap_4": {
+      "name": "Vibrant_Crank_Tap_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:35 UTC",
+      "mp3LastModified": "2019-02-14 00:30:48 UTC",
+      "version": "WSObkYSdpplVVdLYLYqLcntxvgR_IkeD",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Crank_Tap_4.mp3"
+    },
+    "category_tap/Vibrant_Cute_Button": {
+      "name": "Vibrant_Cute_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:35 UTC",
+      "mp3LastModified": "2019-02-14 00:30:48 UTC",
+      "version": "RB1PLJdcWDmFeDqw09CgWuFN2bjLN9wU",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Cute_Button.mp3"
+    },
+    "category_tap/Vibrant_Game_Affirm_UI_Button_1": {
+      "name": "Vibrant_Game_Affirm_UI_Button_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:39 UTC",
+      "mp3LastModified": "2019-02-14 00:30:50 UTC",
+      "version": "o7HU8hjbGfMYuJJYYCCeoXX5IYdsew53",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Game_Affirm_UI_Button_1.mp3"
+    },
+    "category_tap/Vibrant_Game_Start_with_Tone_Hum": {
+      "name": "Vibrant_Game_Start_with_Tone_Hum",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:40 UTC",
+      "mp3LastModified": "2019-02-14 00:30:51 UTC",
+      "version": "uR9T4a_0CTyt6eERDkBegDWTs0.9ceZ7",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Game_Start_with_Tone_Hum.mp3"
+    },
+    "category_tap/Vibrant_Game__Key_Touch_1": {
+      "name": "Vibrant_Game__Key_Touch_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:36 UTC",
+      "mp3LastModified": "2019-02-14 00:30:49 UTC",
+      "version": "TnOZBY2P0kujFOuJEjKtjYz8EDvyxVEZ",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Game__Key_Touch_1.mp3"
+    },
+    "category_tap/Vibrant_Game__Liquid_Touch_2": {
+      "name": "Vibrant_Game__Liquid_Touch_2",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:37 UTC",
+      "mp3LastModified": "2019-02-14 00:30:49 UTC",
+      "version": "yHymHmJc6QMkYd7eDa4Vtrd2aP0DHvU0",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Game__Liquid_Touch_2.mp3"
+    },
+    "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1": {
+      "name": "Vibrant_Game__Water_Drop_Game_Touch_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:38 UTC",
+      "mp3LastModified": "2019-02-14 00:30:50 UTC",
+      "version": "7aqKMmtVFzOHhKXw1.TGhT0L5_cunzqT",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Game__Water_Drop_Game_Touch_1.mp3"
+    },
+    "category_tap/Vibrant_Happy_Tap_1": {
+      "name": "Vibrant_Happy_Tap_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:56 UTC",
+      "mp3LastModified": "2019-02-14 00:30:51 UTC",
+      "version": "orFTbuRyUZl68Sv2VMyt8kaII6CpOFvP",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Happy_Tap_1.mp3"
+    },
+    "category_tap/Vibrant_Happy_Tap_2": {
+      "name": "Vibrant_Happy_Tap_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:57 UTC",
+      "mp3LastModified": "2019-02-14 00:30:52 UTC",
+      "version": "QfsCxtXbQFuYaTIR3LNrqg3zs0lt0SXv",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Happy_Tap_2.mp3"
+    },
+    "category_tap/Vibrant_Happy_Tap_3": {
+      "name": "Vibrant_Happy_Tap_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:59 UTC",
+      "mp3LastModified": "2019-02-14 00:30:53 UTC",
+      "version": "ro6rbNNMOOS8juWmgLCyemvADs6_S87S",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Happy_Tap_3.mp3"
+    },
+    "category_tap/Vibrant_Metal_Synth_3_Ding": {
+      "name": "Vibrant_Metal_Synth_3_Ding",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:31 UTC",
+      "mp3LastModified": "2019-02-14 00:30:53 UTC",
+      "version": "iuPkeGU4RYGuQJuVx42hGYq7AUhfqT.s",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Metal_Synth_3_Ding.mp3"
+    },
+    "category_tap/Vibrant_Positive_Tap_1": {
+      "name": "Vibrant_Positive_Tap_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:52:38 UTC",
+      "mp3LastModified": "2019-02-14 00:30:54 UTC",
+      "version": "RaCpuKh1dp2GOoZghqavAAY_exmqgI7A",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Positive_Tap_1.mp3"
+    },
+    "category_tap/Vibrant_Positive_Tap_2": {
+      "name": "Vibrant_Positive_Tap_2",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:52:39 UTC",
+      "mp3LastModified": "2019-02-14 00:30:55 UTC",
+      "version": "OiynhAnAdQ0_340Ed0BciV.coyJ.zFDW",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Positive_Tap_2.mp3"
+    },
+    "category_tap/Vibrant_Positive_Tap_3": {
+      "name": "Vibrant_Positive_Tap_3",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:52:39 UTC",
+      "mp3LastModified": "2019-02-14 00:30:55 UTC",
+      "version": "9VmjSH95cNxXi3niXRqc6GNyrAW5kxZ1",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Positive_Tap_3.mp3"
+    },
+    "category_tap/Vibrant_Positive_Tap_4": {
+      "name": "Vibrant_Positive_Tap_4",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:52:40 UTC",
+      "mp3LastModified": "2019-02-14 00:30:56 UTC",
+      "version": "mYkiBlx5inDkKNP0zlfXMv7RG.d5BtAP",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Positive_Tap_4.mp3"
+    },
+    "category_tap/Vibrant_Positive_Tap_5": {
+      "name": "Vibrant_Positive_Tap_5",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:52:43 UTC",
+      "mp3LastModified": "2019-02-14 00:30:57 UTC",
+      "version": "JwQ1UJE30cbRyZAfRfA5.nXNSqI6T4P3",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Positive_Tap_5.mp3"
+    },
+    "category_tap/Vibrant_Power_Orb_Touch_1": {
+      "name": "Vibrant_Power_Orb_Touch_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:52:45 UTC",
+      "mp3LastModified": "2019-02-14 00:30:57 UTC",
+      "version": "IJV5g6zTsYfbM.Za_hAj4pZP2w.pI_Gc",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Power_Orb_Touch_1.mp3"
+    },
+    "category_tap/Vibrant_Slick_Click": {
+      "name": "Vibrant_Slick_Click",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:46 UTC",
+      "mp3LastModified": "2019-02-14 00:30:58 UTC",
+      "version": "Jm8BF1Psi2Yn.qSrxXVhD1o01ivVzqRS",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Slick_Click.mp3"
+    },
+    "category_tap/Vibrant_Tech_Button": {
+      "name": "Vibrant_Tech_Button",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:47 UTC",
+      "mp3LastModified": "2019-02-14 00:30:58 UTC",
+      "version": "obHLMVUa36OVcpCCbn6wJRsmA9ppKk8p",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Tech_Button.mp3"
+    },
+    "category_tap/Vibrant_Tone_Button_2": {
+      "name": "Vibrant_Tone_Button_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:47 UTC",
+      "mp3LastModified": "2019-02-14 00:30:59 UTC",
+      "version": "42P86_ltR.O6RsEgGkUI.JqJqTfBB5p3",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Tone_Button_2.mp3"
+    },
+    "category_tap/Vibrant_Tone_Button_3": {
+      "name": "Vibrant_Tone_Button_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:50 UTC",
+      "mp3LastModified": "2019-02-14 00:31:00 UTC",
+      "version": "kL41xvyrhhPcWMUPEew4KI9BkbYE2wKd",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Tone_Button_3.mp3"
+    },
+    "category_tap/Vibrant_Tone_Button_4": {
+      "name": "Vibrant_Tone_Button_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:53 UTC",
+      "mp3LastModified": "2019-02-14 00:31:00 UTC",
+      "version": "JWLHH9lcNmkN_LZUWu0UyZg2Sblo771R",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Tone_Button_4.mp3"
+    },
+    "category_tap/Vibrant_Tone_Button_6": {
+      "name": "Vibrant_Tone_Button_6",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:54 UTC",
+      "mp3LastModified": "2019-02-14 00:31:01 UTC",
+      "version": "ukeYr968KRHf.6JXoJSHiYt8HQRHvOqW",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Tone_Button_6.mp3"
+    },
+    "category_tap/Vibrant_Tone_Button_8": {
+      "name": "Vibrant_Tone_Button_8",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:54 UTC",
+      "mp3LastModified": "2019-02-14 00:31:02 UTC",
+      "version": "fZFbWXXZM.RTXjosfN3GCV1HqcF3IcI8",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_Tone_Button_8.mp3"
+    },
+    "category_tap/Vibrant_UI_Mouse_Click_1": {
+      "name": "Vibrant_UI_Mouse_Click_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:55 UTC",
+      "mp3LastModified": "2019-02-14 00:31:02 UTC",
+      "version": "0Vut053odBbRDPB0kHDOo1ZYlmXo0gfF",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_UI_Mouse_Click_1.mp3"
+    },
+    "category_tap/Vibrant_UI_Mouse_Click_2": {
+      "name": "Vibrant_UI_Mouse_Click_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:56 UTC",
+      "mp3LastModified": "2019-02-14 00:31:03 UTC",
+      "version": "fysVmS19HkBcZjjAnh_vQe5zqX4kkJsV",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_UI_Mouse_Click_2.mp3"
+    },
+    "category_tap/Vibrant_UI_Tap_1": {
+      "name": "Vibrant_UI_Tap_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:52:59 UTC",
+      "mp3LastModified": "2019-02-14 00:31:03 UTC",
+      "version": "vBAJU_.etOtFcEDM_pVXq5SrXlUpuIt7",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_UI_Tap_1.mp3"
+    },
+    "category_tap/Vibrant_UI_Tap_2": {
+      "name": "Vibrant_UI_Tap_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:53:02 UTC",
+      "mp3LastModified": "2019-02-14 00:31:05 UTC",
+      "version": "1K09Pj5OHzHXJJra8dUy0Z2WA8vQOgu4",
+      "sourceUrl": "/api/v1/sound-library/category_tap/Vibrant_UI_Tap_2.mp3"
+    },
+    "category_transition/Collecting_Transition_1": {
+      "name": "Collecting_Transition_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:50:40 UTC",
+      "mp3LastModified": "2019-02-14 00:31:39 UTC",
+      "version": "B7H.NGZPIIyawLuenjuX1gFxiDJOqwwW",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Collecting_Transition_1.mp3"
+    },
+    "category_transition/Entering_Portal_1": {
+      "name": "Entering_Portal_1",
+      "time": 6,
+      "jsonLastModified": "2019-02-26 22:50:41 UTC",
+      "mp3LastModified": "2019-02-14 00:31:41 UTC",
+      "version": "wUXM45frxmYdUP.CgHxLD.Nrnmap9nit",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Entering_Portal_1.mp3"
+    },
+    "category_transition/Fall_In_and_Fly_Out_1": {
+      "name": "Fall_In_and_Fly_Out_1",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 22:50:41 UTC",
+      "mp3LastModified": "2019-02-14 00:31:42 UTC",
+      "version": "C3PGTnYSVDLgfewrQn99Q0_aVrQkYdPY",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Fall_In_and_Fly_Out_1.mp3"
+    },
+    "category_transition/Fall_In_and_Fly_Out_2": {
+      "name": "Fall_In_and_Fly_Out_2",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:50:43 UTC",
+      "mp3LastModified": "2019-02-14 00:31:43 UTC",
+      "version": "E_3r4v2NkZqzqBka8UuRTJ96Lr_HjFIn",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Fall_In_and_Fly_Out_2.mp3"
+    },
+    "category_transition/Mysterious_Reveal_1": {
+      "name": "Mysterious_Reveal_1",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 22:50:44 UTC",
+      "mp3LastModified": "2019-02-14 00:31:45 UTC",
+      "version": "zanZS4bddolOREM5PMg9FA2fnpTFzugQ",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Mysterious_Reveal_1.mp3"
+    },
+    "category_transition/Negative_Game_Over_Whoosh": {
+      "name": "Negative_Game_Over_Whoosh",
+      "time": 6,
+      "jsonLastModified": "2019-02-26 22:50:44 UTC",
+      "mp3LastModified": "2019-02-14 00:31:46 UTC",
+      "version": "Y7J3NFcgM1hYWla_I8ubyLLQCvB4CVur",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Negative_Game_Over_Whoosh.mp3"
+    },
+    "category_transition/Portal_Reached_long_decay_": {
+      "name": "Portal_Reached_long_decay_",
+      "time": 6,
+      "jsonLastModified": "2019-02-26 22:50:45 UTC",
+      "mp3LastModified": "2019-02-14 00:31:47 UTC",
+      "version": "JKRq14.IwiqKiePh6SFtLBxnPp2rHFgN",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Portal_Reached_long_decay_.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_01": {
+      "name": "Puzzle_Game_Big_Upgrade_01",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:50:46 UTC",
+      "mp3LastModified": "2019-02-14 00:31:48 UTC",
+      "version": "4npTxyBZEXpuM5egJASy9rg80I2LXmha",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_01.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_02": {
+      "name": "Puzzle_Game_Big_Upgrade_02",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 22:50:52 UTC",
+      "mp3LastModified": "2019-02-14 00:31:50 UTC",
+      "version": "snB7fJsIDSY23SMiczetN2bYxkPNY.1p",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_02.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_02 2": {
+      "name": "Puzzle_Game_Big_Upgrade_02 2",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 22:50:47 UTC",
+      "mp3LastModified": "2019-02-14 00:31:49 UTC",
+      "version": "Gbf1qZYD.4p7iJAs6B_dktS4H4zeaScs",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_02 2.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_03": {
+      "name": "Puzzle_Game_Big_Upgrade_03",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 22:50:56 UTC",
+      "mp3LastModified": "2019-02-14 00:31:52 UTC",
+      "version": "DmKpkkJojtrJXfIxX6UHHB8ZnabwgN1F",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_03.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_03 2": {
+      "name": "Puzzle_Game_Big_Upgrade_03 2",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 22:50:54 UTC",
+      "mp3LastModified": "2019-02-14 00:31:51 UTC",
+      "version": "du3W_qFHCPYyDB1wVXCirn5VcvSQfi6s",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_03 2.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_04": {
+      "name": "Puzzle_Game_Big_Upgrade_04",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 22:50:58 UTC",
+      "mp3LastModified": "2019-02-14 00:31:54 UTC",
+      "version": "_SwuDjkzNY7uAiAHVlpTj8GKTyIpJPhd",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_04.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_04 2": {
+      "name": "Puzzle_Game_Big_Upgrade_04 2",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 22:50:57 UTC",
+      "mp3LastModified": "2019-02-14 00:31:53 UTC",
+      "version": "C529AISRd7wU_rvoNNnkGyMqvQM7dVzT",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_04 2.mp3"
+    },
+    "category_transition/Puzzle_Game_Big_Upgrade_05": {
+      "name": "Puzzle_Game_Big_Upgrade_05",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:50:59 UTC",
+      "mp3LastModified": "2019-02-14 00:31:56 UTC",
+      "version": "_N1Azn1a0YRntHRjcReWKr.Ju5jFAkyQ",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Big_Upgrade_05.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_01": {
+      "name": "Puzzle_Game_Upgrade_01",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:00 UTC",
+      "mp3LastModified": "2019-02-14 00:31:57 UTC",
+      "version": "30WkixpNI3CNcBw6tAhNge51buM6eDm0",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_01.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_02": {
+      "name": "Puzzle_Game_Upgrade_02",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:51:15 UTC",
+      "mp3LastModified": "2019-02-14 00:31:58 UTC",
+      "version": "7nryuokFBrUoaQU23NtNV8Fgq52MAs5E",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_02.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_03": {
+      "name": "Puzzle_Game_Upgrade_03",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:51:37 UTC",
+      "mp3LastModified": "2019-02-14 00:32:00 UTC",
+      "version": "j.m730l5Voe6bKUGb9g0ffQpZ3cnQ_tI",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_03.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_04": {
+      "name": "Puzzle_Game_Upgrade_04",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:51:38 UTC",
+      "mp3LastModified": "2019-02-14 00:32:01 UTC",
+      "version": "mqAOA5_qa1LD0vZDiPfswuB1XQkVOZo7",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_04.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_Big_01": {
+      "name": "Puzzle_Game_Upgrade_Big_01",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:40 UTC",
+      "mp3LastModified": "2019-02-14 00:32:02 UTC",
+      "version": "tahVdUmKivUc24CDDdvDFUcMb2csVvBR",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_Big_01.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_Big_02": {
+      "name": "Puzzle_Game_Upgrade_Big_02",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:54 UTC",
+      "mp3LastModified": "2019-02-14 00:32:03 UTC",
+      "version": "v9T301vJ66eYLsBIcO75enbYPnoefNvp",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_Big_02.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_Big_03": {
+      "name": "Puzzle_Game_Upgrade_Big_03",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:51:56 UTC",
+      "mp3LastModified": "2019-02-14 00:32:05 UTC",
+      "version": "QXLIPTQwTfXUjhZY5jfjBdjtVBJiliGP",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_Big_03.mp3"
+    },
+    "category_transition/Puzzle_Game_Upgrade_Big_04": {
+      "name": "Puzzle_Game_Upgrade_Big_04",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:57 UTC",
+      "mp3LastModified": "2019-02-14 00:32:07 UTC",
+      "version": "0L8Un7ppa_ojK8D8QNpMu9o9GcCtgd0_",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Puzzle_Game_Upgrade_Big_04.mp3"
+    },
+    "category_transition/Retro_Game_Activate_5": {
+      "name": "Retro_Game_Activate_5",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:51:59 UTC",
+      "mp3LastModified": "2019-02-14 00:32:08 UTC",
+      "version": "26gBHsEYqBA0ULny51X0mv.JxBRji4wd",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Retro_Game_Activate_5.mp3"
+    },
+    "category_transition/Retro_Game_Enemy_Teleport_3": {
+      "name": "Retro_Game_Enemy_Teleport_3",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:52:01 UTC",
+      "mp3LastModified": "2019-02-14 00:32:09 UTC",
+      "version": "hXeF2oTws4cRtIa0NBEk1cUi7K4BJDqe",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Retro_Game_Enemy_Teleport_3.mp3"
+    },
+    "category_transition/Retro_Game_Enemy_Teleport_4": {
+      "name": "Retro_Game_Enemy_Teleport_4",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:52:04 UTC",
+      "mp3LastModified": "2019-02-14 00:32:10 UTC",
+      "version": "UZNYucp_5ZOGtjomORW8D_93ecO7dUTp",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Retro_Game_Enemy_Teleport_4.mp3"
+    },
+    "category_transition/Retro_Game_Enemy_Teleport_5": {
+      "name": "Retro_Game_Enemy_Teleport_5",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:52:08 UTC",
+      "mp3LastModified": "2019-02-14 00:32:11 UTC",
+      "version": "RqO9OA4Y4eMHaW2ds9SRl2rdfMUXQzUa",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Retro_Game_Enemy_Teleport_5.mp3"
+    },
+    "category_transition/Retro_Game_Small_Power_Down_8": {
+      "name": "Retro_Game_Small_Power_Down_8",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:52:09 UTC",
+      "mp3LastModified": "2019-02-14 00:32:13 UTC",
+      "version": "fZyc.zSpXaCSAbilUqoM1tjd5ae_jIky",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Retro_Game_Small_Power_Down_8.mp3"
+    },
+    "category_transition/Reverse_Sucking_Stop_1_Low": {
+      "name": "Reverse_Sucking_Stop_1_Low",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 22:53:24 UTC",
+      "mp3LastModified": "2019-02-14 00:32:15 UTC",
+      "version": "gdc3S38fRpHj4skV8ndNPXiheckL7gsy",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Reverse_Sucking_Stop_1_Low.mp3"
+    },
+    "category_transition/Strange_Protal_Transition": {
+      "name": "Strange_Protal_Transition",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:53:37 UTC",
+      "mp3LastModified": "2019-02-14 00:32:16 UTC",
+      "version": "WAL1SBynIKNsk4QBUxRZCU6.AiUqylhJ",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Strange_Protal_Transition.mp3"
+    },
+    "category_transition/Teleport_In": {
+      "name": "Teleport_In",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 22:53:38 UTC",
+      "mp3LastModified": "2019-02-14 00:32:17 UTC",
+      "version": "nQ1Z3ex_PAgKBwll9JxowBueYWbO_s_k",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Teleport_In.mp3"
+    },
+    "category_transition/Tie_Game_Whoosh_1": {
+      "name": "Tie_Game_Whoosh_1",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 22:53:45 UTC",
+      "mp3LastModified": "2019-02-14 00:32:19 UTC",
+      "version": "_sIWyzPqv9wzV8Jd2RXKAtdzrQkwfgxP",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Tie_Game_Whoosh_1.mp3"
+    },
+    "category_transition/Vibrant_Liquid_Unlock_with_Fizz": {
+      "name": "Vibrant_Liquid_Unlock_with_Fizz",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:53:48 UTC",
+      "mp3LastModified": "2019-02-14 00:32:20 UTC",
+      "version": "6rnBoUo84T.bhH6ZBi9VR2Y4Cza6vj_1",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Vibrant_Liquid_Unlock_with_Fizz.mp3"
+    },
+    "category_transition/Vibrant_Power_Unlock": {
+      "name": "Vibrant_Power_Unlock",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 22:53:49 UTC",
+      "mp3LastModified": "2019-02-14 00:32:22 UTC",
+      "version": "QjZeLcYiR1ZXca88bo39DHzbBUoBLA74",
+      "sourceUrl": "/api/v1/sound-library/category_transition/Vibrant_Power_Unlock.mp3"
+    },
     "default": {
       "name": "default",
       "time": 0,
@@ -7701,7 +8365,8 @@
       "category_pop/Retro_Game_Hit_Block_1",
       "category_retro/Retro_Game_Medium_Fall_1",
       "category_retro/Retro_Game_Medium_Fall_2",
-      "category_retro/Retro_Game_Medium_Fall_3"
+      "category_retro/Retro_Game_Medium_Fall_3",
+      "category_transition/Retro_Game_Activate_5"
     ],
     "activation": [
       "category_collect/Collect_Item_Bling_1",
@@ -7782,7 +8447,8 @@
       "category_pop/Tech_Bubble_Pop_Notification",
       "category_projectile/Game_Ball_Bounce",
       "category_projectile/Game_Notification_Particle_Ping",
-      "category_retro/Start_Game"
+      "category_retro/Start_Game",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "air": [
       "category_slide/Airy_Whoosh",
@@ -7863,7 +8529,9 @@
       "category_projectile/Game_Notification_Particle_Ping",
       "category_retro/Retro_Game_Medium_Fall_1",
       "category_retro/Retro_Game_Medium_Fall_2",
-      "category_retro/Retro_Game_Medium_Fall_3"
+      "category_retro/Retro_Game_Medium_Fall_3",
+      "category_tap/Percussion_Echo_Notification2",
+      "category_transition/Retro_Game_Activate_5"
     ],
     "alien": [
       "category_collect/Collect_Item_Bling_1",
@@ -8043,7 +8711,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "angry": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -8197,7 +8889,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "animal": [
       "category_background/toucan"
@@ -8495,7 +9211,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "apps": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -8675,7 +9415,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "arcade_game_button_tap": [
       "category_app/Arcade_Game_Button_Tap"
@@ -8844,7 +9637,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "arrow_whoosh": [
       "category_slide/Arrow_Whoosh"
@@ -9004,7 +9821,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "authentic": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -9158,7 +9999,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "background": [
       "category_explosion/8bit_explosion",
@@ -9256,7 +10121,8 @@
       "category_pop/Ice_cube_Bubble_Notification_2",
       "category_pop/Tech_Bubble_Pop_Notification",
       "category_projectile/Game_Ball_Bounce",
-      "category_projectile/Game_Notification_Particle_Ping"
+      "category_projectile/Game_Notification_Particle_Ping",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "bejeweled": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -9410,7 +10276,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "bells_win": [
       "category_bell/Bells_Win"
@@ -9573,7 +10463,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "bird": [
       "category_animals/chick",
@@ -9744,7 +10658,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "birthday_kazoo_negative_game_cue_1": [
       "category_music/Birthday_Kazoo_Negative_Game_Cue_1"
@@ -9960,7 +10898,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "block": [
       "category_hits/Retro_Game_Hit_Block_3",
@@ -9981,7 +10972,8 @@
       "category_pop/Retro_Game_Hit_Block_1",
       "category_retro/Retro_Game_Medium_Fall_1",
       "category_retro/Retro_Game_Medium_Fall_2",
-      "category_retro/Retro_Game_Medium_Fall_3"
+      "category_retro/Retro_Game_Medium_Fall_3",
+      "category_transition/Retro_Game_Activate_5"
     ],
     "boing_1": [
       "category_digital/boing_1"
@@ -10148,7 +11140,8 @@
       "category_jump/Arcade_Game_Jump_18",
       "category_jump/Jump_7",
       "category_jump/Ninja_Jump_2",
-      "category_objects/bubbles"
+      "category_objects/bubbles",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "bubble_pop_cluster_1": [
       "category_pop/Bubble_Pop_Cluster_1"
@@ -10467,7 +11460,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "by": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -10621,7 +11667,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "calvin": [
       "category_human/Character_Calvin_Ah_Ha_1",
@@ -10793,7 +11863,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "car": [
       "category_background/city_night",
@@ -10832,7 +11926,8 @@
       "category_jump/Arcade_Game_Jump_15",
       "category_jump/Arcade_Game_Jump_18",
       "category_jump/Jump_7",
-      "category_jump/Ninja_Jump_2"
+      "category_jump/Ninja_Jump_2",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "cartoon_blast_off": [
       "category_movement/Cartoon_Blast_Off"
@@ -11856,6 +12951,93 @@
       "category_slide/whoosh_3",
       "category_slide/whoosh_4"
     ],
+    "category_tap": [
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Percussion_Echo_Notification2",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2"
+    ],
+    "category_transition": [
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5",
+      "category_transition/Retro_Game_Small_Power_Down_8",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
+    ],
     "character": [
       "category_human/Character_Calvin_Ah_Ha_1",
       "category_human/Character_Calvin_Ahh_1",
@@ -12241,6 +13423,9 @@
     "chirp_ding_bing_bong_1": [
       "category_pop/Chirp_Ding_Bing_Bong_1"
     ],
+    "chirp_ui_2": [
+      "category_tap/Chirp_UI_2"
+    ],
     "choose": [
       "category_bell/Choose_Background"
     ],
@@ -12418,7 +13603,12 @@
       "category_retro/Retro_Game_Window_Close",
       "category_retro/Retro_Game_Window_Open",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "classic jump 1": [
       "category_jump/Classic Jump 1"
@@ -12729,7 +13919,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "clicky_crunch": [
       "category_collect/Clicky_Crunch"
@@ -12972,7 +14215,60 @@
       "category_retro/Retro_Game_Bit_Coin_5",
       "category_retro/Retro_Game_Twinkly_Pickup_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "coin_1": [
       "category_digital/coin_1"
@@ -13002,6 +14298,9 @@
     ],
     "collect_item_bling_4": [
       "category_collect/Collect_Item_Bling_4"
+    ],
+    "collecting_transition_1": [
+      "category_transition/Collecting_Transition_1"
     ],
     "complete": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -13193,11 +14492,67 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "completed": [
       "category_female_voiceover/mission_completed_female",
       "category_male_voiceover/mission_completed_male"
+    ],
+    "computer": [
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "concrete": [
       "category_movement/Footstep_on_Gravel_3",
@@ -13432,7 +14787,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "cow": [
       "category_animals/cow"
@@ -13622,7 +15030,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "crank": [
       "category_collect/Collect_Item_Bling_1",
@@ -13813,7 +15274,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "cues": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -13974,7 +15459,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "cute_water_bubble": [
       "category_pop/Cute_water_bubble"
@@ -14006,7 +15544,10 @@
       "category_retro/Retro_Game_Enemy_Spawn_10",
       "category_retro/Retro_Game_Enemy_Spawn_6",
       "category_retro/Retro_Game_Enemy_Spawn_7",
-      "category_retro/Retro_Game_Player_Death_1"
+      "category_retro/Retro_Game_Player_Death_1",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5"
     ],
     "danger": [
       "category_background/fire_burning",
@@ -14222,7 +15763,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "design": [
       "category_explosion/8bit_explosion",
@@ -14375,7 +15940,8 @@
       "category_jump/Arcade_Game_Jump_15",
       "category_jump/Arcade_Game_Jump_18",
       "category_jump/Jump_7",
-      "category_jump/Ninja_Jump_2"
+      "category_jump/Ninja_Jump_2",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "digital_downscale_1": [
       "category_instrumental/digital_downscale_1"
@@ -14487,7 +16053,8 @@
       "category_projectile/Retro_Game_Small_Power_Down_5",
       "category_projectile/Retro_Game_Small_Power_Down_7",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "downscale": [
       "category_instrumental/digital_downscale_1",
@@ -14758,7 +16325,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "eight": [
       "category_female_voiceover/eight_female",
@@ -14797,7 +16388,10 @@
       "category_jump/Retro_Game_Enemy_Jump_5",
       "category_retro/Retro_Game_Enemy_Spawn_10",
       "category_retro/Retro_Game_Enemy_Spawn_6",
-      "category_retro/Retro_Game_Enemy_Spawn_7"
+      "category_retro/Retro_Game_Enemy_Spawn_7",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5"
     ],
     "energy_bar_recharge_2": [
       "category_collect/Energy_Bar_Recharge_2"
@@ -14807,6 +16401,9 @@
     ],
     "energy_bar_recharge_6": [
       "category_collect/Energy_Bar_Recharge_6"
+    ],
+    "entering_portal_1": [
+      "category_transition/Entering_Portal_1"
     ],
     "entertainment": [
       "category_background/bowling_alley",
@@ -15084,7 +16681,13 @@
       "category_slide/Retro_Game_Short_PowerUp",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_tap/Percussion_Echo_Notification2",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "epicstockmedia": [
       "category_human/Character_Calvin_Ah_Ha_1",
@@ -15348,7 +16951,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "explode": [
       "category_explosion/8bit_explosion",
@@ -15440,7 +17067,8 @@
       "category_projectile/Retro_Game_Small_Power_Down_5",
       "category_projectile/Retro_Game_Small_Power_Down_7",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "f1_race": [
       "category_background/f1_race"
@@ -15484,7 +17112,14 @@
       "category_pop/Retro_Game_Hit_Block_1",
       "category_retro/Retro_Game_Medium_Fall_1",
       "category_retro/Retro_Game_Medium_Fall_2",
-      "category_retro/Retro_Game_Medium_Fall_3"
+      "category_retro/Retro_Game_Medium_Fall_3",
+      "category_transition/Retro_Game_Activate_5"
+    ],
+    "fall_in_and_fly_out_1": [
+      "category_transition/Fall_In_and_Fly_Out_1"
+    ],
+    "fall_in_and_fly_out_2": [
+      "category_transition/Fall_In_and_Fly_Out_2"
     ],
     "fantasy": [
       "category_background/fantasy"
@@ -15508,7 +17143,8 @@
       "category_movement/Footstep_on_Rock_or_Ice_with_Debris_9",
       "category_movement/Unique_Snow_or_Ice_Footstep_3",
       "category_movement/Walk_2_Loop",
-      "category_movement/Walk_Loop"
+      "category_movement/Walk_Loop",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "faultering_desicion_loop1": [
       "category_loops/Faultering_Desicion_Loop1"
@@ -15839,7 +17475,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "forest": [
       "category_nature/Forest_2",
@@ -16551,10 +18211,95 @@
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
       "category_slide/Retro_Game_Short_PowerUp",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5",
+      "category_transition/Retro_Game_Small_Power_Down_8",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "game_ball_bounce": [
       "category_projectile/Game_Ball_Bounce"
+    ],
+    "game_bubble_pop_click": [
+      "category_tap/Game_Bubble_Pop_Click"
     ],
     "game_notification_81": [
       "category_notifications/Game_Notification_81"
@@ -16754,7 +18499,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "gametime": [
       "category_background/gametime"
@@ -16888,7 +18657,8 @@
       "category_retro/Retro_Game_Classic_Player_Death_9",
       "category_retro/Retro_Game_Player_Death_1",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "health_pack_1": [
       "category_collect/Health_Pack_1"
@@ -17277,7 +19047,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "instrument": [
       "category_digital/whistle_down",
@@ -17604,7 +19398,60 @@
       "category_retro/Retro_Game_Window_Open",
       "category_retro/Start_Game",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "intermission_whispering": [
       "category_background/intermission_whispering"
@@ -17892,7 +19739,61 @@
       "category_retro/Retro_Game_Medium_Fall_2",
       "category_retro/Retro_Game_Medium_Fall_3",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "jump_1": [
       "category_digital/jump_1"
@@ -17940,7 +19841,10 @@
       "category_jump/Retro_Game_Enemy_Jump_5",
       "category_retro/Retro_Game_Enemy_Spawn_10",
       "category_retro/Retro_Game_Enemy_Spawn_6",
-      "category_retro/Retro_Game_Enemy_Spawn_7"
+      "category_retro/Retro_Game_Enemy_Spawn_7",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5"
     ],
     "kimberly": [
       "category_human/Character_Kimberly_Alright_1",
@@ -18008,7 +19912,10 @@
       "category_jump/Retro_Game_Enemy_Jump_5",
       "category_retro/Retro_Game_Enemy_Spawn_10",
       "category_retro/Retro_Game_Enemy_Spawn_6",
-      "category_retro/Retro_Game_Enemy_Spawn_7"
+      "category_retro/Retro_Game_Enemy_Spawn_7",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5"
     ],
     "laser_fade_1": [
       "category_digital/laser_fade_1"
@@ -18046,6 +19953,9 @@
     "level_male": [
       "category_male_voiceover/level_male"
     ],
+    "level_select_1": [
+      "category_tap/Level_Select_1"
+    ],
     "level_up_brightly_1": [
       "category_music/Level_Up_Brightly_1"
     ],
@@ -18074,7 +19984,8 @@
       "category_retro/Retro_Game_Classic_Player_Death_9",
       "category_retro/Retro_Game_Player_Death_1",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "light": [
       "category_nature/FIre_Loop",
@@ -18276,7 +20187,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "lock": [
       "category_app/Bass_Power_Off",
@@ -18561,7 +20496,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "magic_cartoon_game_key_pick_up_1": [
       "category_movement/Magic_Cartoon_Game_Key_Pick_Up_1"
@@ -18678,6 +20637,9 @@
       "category_explosion/Playful_Game_Explosive_Hit",
       "category_explosion/Radioactive_Zombie_Explode_2",
       "category_hits/8bit_Splat"
+    ],
+    "mechanical": [
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "media": [
       "category_app/App_Button_1",
@@ -18939,7 +20901,13 @@
       "category_slide/Retro_Game_Short_PowerUp",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_tap/Percussion_Echo_Notification2",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "melodic": [
       "category_bell/Bells_Win",
@@ -19238,7 +21206,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "metal": [
       "category_app/Modern_UI_Sound",
@@ -19507,7 +21528,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "mouse": [
       "category_digital/squeak"
@@ -19703,10 +21748,66 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "musical_correct_1": [
       "category_music/Musical_Correct_1"
+    ],
+    "mysterious_reveal_1": [
+      "category_transition/Mysterious_Reveal_1"
     ],
     "nature": [
       "category_nature/FIre_Loop",
@@ -19787,11 +21888,20 @@
     "negative_game_fail_1": [
       "category_music/Negative_Game_Fail_1"
     ],
+    "negative_game_over_whoosh": [
+      "category_transition/Negative_Game_Over_Whoosh"
+    ],
     "negative_point_counter": [
       "category_points/Negative_Point_Counter"
     ],
     "negative_point_counter_2": [
       "category_points/Negative_Point_Counter_2"
+    ],
+    "negative_select_1": [
+      "category_tap/Negative_Select_1"
+    ],
+    "negative_select_2": [
+      "category_tap/Negative_Select_2"
     ],
     "new": [
       "category_female_voiceover/new_highscore_female",
@@ -20025,7 +22135,61 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Percussion_Echo_Notification2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "notification_4": [
       "category_bell/Notification_4"
@@ -20226,6 +22390,12 @@
       "category_objects/footstep_2",
       "category_objects/footstep_3"
     ],
+    "percussion": [
+      "category_tap/Percussion_Echo_Notification2"
+    ],
+    "percussion_echo_notification2": [
+      "category_tap/Percussion_Echo_Notification2"
+    ],
     "perfect_app_button_1": [
       "category_app/Perfect_App_Button_1"
     ],
@@ -20411,7 +22581,8 @@
       "category_projectile/Retro_Game_Small_Power_Down_5",
       "category_projectile/Retro_Game_Small_Power_Down_7",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "pickups": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -20591,7 +22762,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "pig": [
       "category_animals/pig"
@@ -20616,7 +22840,9 @@
       "category_pop/Retro_Game_Hit_Block_1",
       "category_retro/Retro_Game_Medium_Fall_1",
       "category_retro/Retro_Game_Medium_Fall_2",
-      "category_retro/Retro_Game_Medium_Fall_3"
+      "category_retro/Retro_Game_Medium_Fall_3",
+      "category_tap/Percussion_Echo_Notification2",
+      "category_transition/Retro_Game_Activate_5"
     ],
     "plastic": [
       "category_objects/plastic_switch"
@@ -20668,7 +22894,8 @@
       "category_jump/Arcade_Game_Jump_18",
       "category_jump/Jump_7",
       "category_jump/Ninja_Jump_2",
-      "category_objects/bubbles"
+      "category_objects/bubbles",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "popular": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -20822,7 +23049,34 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
+    ],
+    "portal_reached_long_decay_": [
+      "category_transition/Portal_Reached_long_decay_"
     ],
     "positive": [
       "category_bell/Hollow_Bell_Notification",
@@ -21036,7 +23290,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "power": [
       "category_collect/Collect_Item_Bling_1",
@@ -21071,7 +23378,8 @@
       "category_retro/Retro_Game_Classic_Player_Death_9",
       "category_retro/Retro_Game_Player_Death_1",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "power_down_1": [
       "category_digital/power_down_1"
@@ -21269,7 +23577,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "pregame_fans": [
       "category_background/pregame_fans"
@@ -21476,7 +23837,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "puzzle_game_achievement_musical_mysterious_01": [
       "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01"
@@ -21496,8 +23881,38 @@
     "puzzle_game_achievement_musical_mysterious_long_04": [
       "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04"
     ],
+    "puzzle_game_affirmation_dry_metal_ui_button_1": [
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1"
+    ],
+    "puzzle_game_affirmation_negative_ui_button_1": [
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1"
+    ],
     "puzzle_game_affirmation_positive_ui_button_1": [
       "category_pop/Puzzle_Game_Affirmation_Positive_UI_Button_1"
+    ],
+    "puzzle_game_big_upgrade_01": [
+      "category_transition/Puzzle_Game_Big_Upgrade_01"
+    ],
+    "puzzle_game_big_upgrade_02": [
+      "category_transition/Puzzle_Game_Big_Upgrade_02"
+    ],
+    "puzzle_game_big_upgrade_02 2": [
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2"
+    ],
+    "puzzle_game_big_upgrade_03": [
+      "category_transition/Puzzle_Game_Big_Upgrade_03"
+    ],
+    "puzzle_game_big_upgrade_03 2": [
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2"
+    ],
+    "puzzle_game_big_upgrade_04": [
+      "category_transition/Puzzle_Game_Big_Upgrade_04"
+    ],
+    "puzzle_game_big_upgrade_04 2": [
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2"
+    ],
+    "puzzle_game_big_upgrade_05": [
+      "category_transition/Puzzle_Game_Big_Upgrade_05"
     ],
     "puzzle_game_bonus_bubble_large_01": [
       "category_pop/Puzzle_Game_Bonus_Bubble_Large_01"
@@ -21706,6 +24121,24 @@
     "puzzle_game_organic_metal_tile_hit_2": [
       "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_2"
     ],
+    "puzzle_game_organic_metallic_button_1": [
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1"
+    ],
+    "puzzle_game_organic_metallic_button_2": [
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2"
+    ],
+    "puzzle_game_organic_wood_block_tone_tap_1": [
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1"
+    ],
+    "puzzle_game_organic_wood_block_tone_tap_2": [
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2"
+    ],
+    "puzzle_game_organic_wood_block_tone_tap_3_app_click": [
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click"
+    ],
+    "puzzle_game_organic_wood_block_tone_tap_4_app_click": [
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click"
+    ],
     "puzzle_game_poof_01": [
       "category_poof/Puzzle_Game_Poof_01"
     ],
@@ -21904,6 +24337,30 @@
     "puzzle_game_ui_powerup_03": [
       "category_movement/Puzzle_Game_UI_PowerUp_03"
     ],
+    "puzzle_game_upgrade_01": [
+      "category_transition/Puzzle_Game_Upgrade_01"
+    ],
+    "puzzle_game_upgrade_02": [
+      "category_transition/Puzzle_Game_Upgrade_02"
+    ],
+    "puzzle_game_upgrade_03": [
+      "category_transition/Puzzle_Game_Upgrade_03"
+    ],
+    "puzzle_game_upgrade_04": [
+      "category_transition/Puzzle_Game_Upgrade_04"
+    ],
+    "puzzle_game_upgrade_big_01": [
+      "category_transition/Puzzle_Game_Upgrade_Big_01"
+    ],
+    "puzzle_game_upgrade_big_02": [
+      "category_transition/Puzzle_Game_Upgrade_Big_02"
+    ],
+    "puzzle_game_upgrade_big_03": [
+      "category_transition/Puzzle_Game_Upgrade_Big_03"
+    ],
+    "puzzle_game_upgrade_big_04": [
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
+    ],
     "puzzle_game_whoosh_01": [
       "category_movement/Puzzle_Game_Whoosh_01"
     ],
@@ -21935,7 +24392,8 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_06"
     ],
     "quick": [
-      "category_digital/three_tone_pulse"
+      "category_digital/three_tone_pulse",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "quick_pulse": [
       "category_digital/quick_pulse"
@@ -22216,7 +24674,15 @@
       "category_retro/Retro_Game_Window_Close",
       "category_retro/Retro_Game_Window_Open",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5",
+      "category_transition/Retro_Game_Small_Power_Down_8"
+    ],
+    "retro_game_activate_5": [
+      "category_transition/Retro_Game_Activate_5"
     ],
     "retro_game_bit_coin_1": [
       "category_retro/Retro_Game_Bit_Coin_1"
@@ -22383,6 +24849,15 @@
     "retro_game_enemy_spawn_7": [
       "category_retro/Retro_Game_Enemy_Spawn_7"
     ],
+    "retro_game_enemy_teleport_3": [
+      "category_transition/Retro_Game_Enemy_Teleport_3"
+    ],
+    "retro_game_enemy_teleport_4": [
+      "category_transition/Retro_Game_Enemy_Teleport_4"
+    ],
+    "retro_game_enemy_teleport_5": [
+      "category_transition/Retro_Game_Enemy_Teleport_5"
+    ],
     "retro_game_error_4": [
       "category_retro/Retro_Game_Error_4"
     ],
@@ -22539,6 +25014,9 @@
     "retro_game_small_power_down_7": [
       "category_projectile/Retro_Game_Small_Power_Down_7"
     ],
+    "retro_game_small_power_down_8": [
+      "category_transition/Retro_Game_Small_Power_Down_8"
+    ],
     "retro_game_take_damage_chirp_3": [
       "category_explosion/Retro_Game_Take_Damage_Chirp_3"
     ],
@@ -22653,6 +25131,9 @@
     "retro_game_window_open": [
       "category_retro/Retro_Game_Window_Open"
     ],
+    "reverse_sucking_stop_1_low": [
+      "category_transition/Reverse_Sucking_Stop_1_Low"
+    ],
     "rhinoceros": [
       "category_animals/rhinoceros"
     ],
@@ -22691,6 +25172,12 @@
       "category_animals/bear",
       "category_animals/dinosaur",
       "category_animals/tiger"
+    ],
+    "robotic_selection_1": [
+      "category_tap/Robotic_Selection_1"
+    ],
+    "robotic_selection_2": [
+      "category_tap/Robotic_Selection_2"
     ],
     "roller_coaster": [
       "category_background/roller_coaster"
@@ -23074,7 +25561,10 @@
       "category_jump/Retro_Game_Enemy_Jump_5",
       "category_retro/Retro_Game_Enemy_Spawn_10",
       "category_retro/Retro_Game_Enemy_Spawn_6",
-      "category_retro/Retro_Game_Enemy_Spawn_7"
+      "category_retro/Retro_Game_Enemy_Spawn_7",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5"
     ],
     "shout_congratulations_female": [
       "category_female_voiceover/shout_congratulations_female"
@@ -23288,7 +25778,63 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
+    ],
+    "slight_negative_select_1": [
+      "category_tap/Slight_Negative_Select_1"
     ],
     "small_restaurant": [
       "category_background/small_restaurant"
@@ -23512,7 +26058,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "sounds": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -23726,7 +26296,61 @@
       "category_retro/Retro_Game_Medium_Fall_2",
       "category_retro/Retro_Game_Medium_Fall_3",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "south_carolina_beach_1": [
       "category_nature/South_Carolina_Beach_1"
@@ -24209,7 +26833,16 @@
       "category_slide/Retro_Game_Short_PowerUp",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_tap/Percussion_Echo_Notification2",
+      "category_transition/Retro_Game_Activate_5",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5",
+      "category_transition/Retro_Game_Small_Power_Down_8"
+    ],
+    "strange_protal_transition": [
+      "category_transition/Strange_Protal_Transition"
     ],
     "stream": [
       "category_nature/SC_Beach_RIppling_Loop_2_Short",
@@ -24462,6 +27095,9 @@
     "tech_bubble_pop_notification": [
       "category_pop/Tech_Bubble_Pop_Notification"
     ],
+    "teleport_in": [
+      "category_transition/Teleport_In"
+    ],
     "ten": [
       "category_female_voiceover/ten_female",
       "category_male_voiceover/ten_male"
@@ -24624,7 +27260,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "textile": [
       "category_objects/cloth"
@@ -24781,7 +27441,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "three": [
       "category_female_voiceover/three_female",
@@ -24836,6 +27520,9 @@
     "tie": [
       "category_female_voiceover/its_a_tie_female",
       "category_male_voiceover/tie_male"
+    ],
+    "tie_game_whoosh_1": [
+      "category_transition/Tie_Game_Whoosh_1"
     ],
     "tie_male": [
       "category_male_voiceover/tie_male"
@@ -25017,7 +27704,31 @@
       "category_slide/Puzzle_Game_Tech_Small_02",
       "category_slide/Puzzle_Game_Tech_Small_03",
       "category_slide/Puzzle_Game_Tech_Small_04",
-      "category_slide/Puzzle_Game_Tech_Small_05"
+      "category_slide/Puzzle_Game_Tech_Small_05",
+      "category_tap/Puzzle_Game_Affirmation_Dry_Metal_UI_Button_1",
+      "category_tap/Puzzle_Game_Affirmation_Negative_UI_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_1",
+      "category_tap/Puzzle_Game_Organic_Metallic_Button_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_1",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_2",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_3_App_Click",
+      "category_tap/Puzzle_Game_Organic_Wood_Block_Tone_Tap_4_App_Click",
+      "category_transition/Puzzle_Game_Big_Upgrade_01",
+      "category_transition/Puzzle_Game_Big_Upgrade_02",
+      "category_transition/Puzzle_Game_Big_Upgrade_02 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_03",
+      "category_transition/Puzzle_Game_Big_Upgrade_03 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_04",
+      "category_transition/Puzzle_Game_Big_Upgrade_04 2",
+      "category_transition/Puzzle_Game_Big_Upgrade_05",
+      "category_transition/Puzzle_Game_Upgrade_01",
+      "category_transition/Puzzle_Game_Upgrade_02",
+      "category_transition/Puzzle_Game_Upgrade_03",
+      "category_transition/Puzzle_Game_Upgrade_04",
+      "category_transition/Puzzle_Game_Upgrade_Big_01",
+      "category_transition/Puzzle_Game_Upgrade_Big_02",
+      "category_transition/Puzzle_Game_Upgrade_Big_03",
+      "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
     "toggle": [
       "category_retro/Retro_Game_Click",
@@ -25256,7 +27967,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "tone": [
       "category_loops/Faultering_Desicion_Loop1",
@@ -25439,7 +28203,8 @@
       "category_retro/Retro_Game_Unlock_3",
       "category_retro/Retro_Game_Window_Close",
       "category_retro/Retro_Game_Window_Open",
-      "category_retro/Start_Game"
+      "category_retro/Start_Game",
+      "category_tap/Percussion_Echo_Notification2"
     ],
     "unique_snow_or_ice_footstep_3": [
       "category_movement/Unique_Snow_or_Ice_Footstep_3"
@@ -25560,7 +28325,8 @@
       "category_retro/Retro_Game_Player_Death_1",
       "category_retro/Retro_Game_Twinkly_Pickup_2",
       "category_slide/Retro_Game_Pulseing_Item_Loop_4",
-      "category_slide/Retro_Game_Short_PowerUp"
+      "category_slide/Retro_Game_Short_PowerUp",
+      "category_transition/Retro_Game_Small_Power_Down_8"
     ],
     "upscale": [
       "category_instrumental/digital_drum_upscale",
@@ -25834,7 +28600,60 @@
       "category_retro/Retro_Game_Window_Open",
       "category_retro/Start_Game",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "vibrant": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -25994,7 +28813,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "vibrant game coming back vibe loop 1": [
       "category_loops/Vibrant Game Coming Back Vibe Loop 1"
@@ -26008,6 +28880,21 @@
     "vibrant_chat_message_pop_1": [
       "category_pop/Vibrant_Chat_Message_Pop_1"
     ],
+    "vibrant_click_1": [
+      "category_tap/Vibrant_Click_1"
+    ],
+    "vibrant_crank_tap_1": [
+      "category_tap/Vibrant_Crank_Tap_1"
+    ],
+    "vibrant_crank_tap_2": [
+      "category_tap/Vibrant_Crank_Tap_2"
+    ],
+    "vibrant_crank_tap_3": [
+      "category_tap/Vibrant_Crank_Tap_3"
+    ],
+    "vibrant_crank_tap_4": [
+      "category_tap/Vibrant_Crank_Tap_4"
+    ],
     "vibrant_crate_break_1": [
       "category_hits/Vibrant_Crate_Break_1"
     ],
@@ -26019,6 +28906,9 @@
     ],
     "vibrant_crate_break_4": [
       "category_hits/Vibrant_Crate_Break_4"
+    ],
+    "vibrant_cute_button": [
+      "category_tap/Vibrant_Cute_Button"
     ],
     "vibrant_deep_wet_explosion": [
       "category_explosion/Vibrant_Deep_Wet_Explosion"
@@ -26107,6 +28997,12 @@
     "vibrant_game__key_item_1": [
       "category_collect/Vibrant_Game__Key_Item_1"
     ],
+    "vibrant_game__key_touch_1": [
+      "category_tap/Vibrant_Game__Key_Touch_1"
+    ],
+    "vibrant_game__liquid_touch_2": [
+      "category_tap/Vibrant_Game__Liquid_Touch_2"
+    ],
     "vibrant_game__material_collect": [
       "category_projectile/Vibrant_Game__Material_Collect"
     ],
@@ -26157,6 +29053,12 @@
     ],
     "vibrant_game__tone_bling_4": [
       "category_collect/Vibrant_Game__Tone_Bling_4"
+    ],
+    "vibrant_game__water_drop_game_touch_1": [
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1"
+    ],
+    "vibrant_game_affirm_ui_button_1": [
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1"
     ],
     "vibrant_game_arcade_game_electric_bubble_collect": [
       "category_collect/Vibrant_Game_Arcade_Game_Electric_Bubble_Collect"
@@ -26308,6 +29210,9 @@
     "vibrant_game_somethings_out_there_loop_1": [
       "category_loops/Vibrant_Game_Somethings_Out_There_Loop_1"
     ],
+    "vibrant_game_start_with_tone_hum": [
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum"
+    ],
     "vibrant_game_the_beggining_of_it_all_loop_1": [
       "category_loops/Vibrant_Game_The_Beggining_Of_It_All_Loop_1"
     ],
@@ -26332,8 +29237,47 @@
     "vibrant_game_whispy_wonder_loop_1": [
       "category_loops/Vibrant_Game_Whispy_Wonder_Loop_1"
     ],
+    "vibrant_happy_tap_1": [
+      "category_tap/Vibrant_Happy_Tap_1"
+    ],
+    "vibrant_happy_tap_2": [
+      "category_tap/Vibrant_Happy_Tap_2"
+    ],
+    "vibrant_happy_tap_3": [
+      "category_tap/Vibrant_Happy_Tap_3"
+    ],
+    "vibrant_liquid_unlock_with_fizz": [
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz"
+    ],
+    "vibrant_metal_synth_3_ding": [
+      "category_tap/Vibrant_Metal_Synth_3_Ding"
+    ],
     "vibrant_next_page_button": [
       "category_hits/Vibrant_Next_Page_Button"
+    ],
+    "vibrant_positive_tap_1": [
+      "category_tap/Vibrant_Positive_Tap_1"
+    ],
+    "vibrant_positive_tap_2": [
+      "category_tap/Vibrant_Positive_Tap_2"
+    ],
+    "vibrant_positive_tap_3": [
+      "category_tap/Vibrant_Positive_Tap_3"
+    ],
+    "vibrant_positive_tap_4": [
+      "category_tap/Vibrant_Positive_Tap_4"
+    ],
+    "vibrant_positive_tap_5": [
+      "category_tap/Vibrant_Positive_Tap_5"
+    ],
+    "vibrant_power_orb_touch_1": [
+      "category_tap/Vibrant_Power_Orb_Touch_1"
+    ],
+    "vibrant_power_unlock": [
+      "category_transition/Vibrant_Power_Unlock"
+    ],
+    "vibrant_slick_click": [
+      "category_tap/Vibrant_Slick_Click"
     ],
     "vibrant_slide_squeal": [
       "category_slide/Vibrant_Slide_Squeal"
@@ -26344,11 +29288,41 @@
     "vibrant_smack_game_object_2": [
       "category_explosion/Vibrant_Smack_Game_Object_2"
     ],
+    "vibrant_tech_button": [
+      "category_tap/Vibrant_Tech_Button"
+    ],
+    "vibrant_tone_button_2": [
+      "category_tap/Vibrant_Tone_Button_2"
+    ],
+    "vibrant_tone_button_3": [
+      "category_tap/Vibrant_Tone_Button_3"
+    ],
+    "vibrant_tone_button_4": [
+      "category_tap/Vibrant_Tone_Button_4"
+    ],
+    "vibrant_tone_button_6": [
+      "category_tap/Vibrant_Tone_Button_6"
+    ],
+    "vibrant_tone_button_8": [
+      "category_tap/Vibrant_Tone_Button_8"
+    ],
     "vibrant_tone_zip": [
       "category_notifications/Vibrant_Tone_Zip"
     ],
+    "vibrant_ui_mouse_click_1": [
+      "category_tap/Vibrant_UI_Mouse_Click_1"
+    ],
+    "vibrant_ui_mouse_click_2": [
+      "category_tap/Vibrant_UI_Mouse_Click_2"
+    ],
     "vibrant_ui_slide_zip_1": [
       "category_slide/Vibrant_UI_Slide_Zip_1"
+    ],
+    "vibrant_ui_tap_1": [
+      "category_tap/Vibrant_UI_Tap_1"
+    ],
+    "vibrant_ui_tap_2": [
+      "category_tap/Vibrant_UI_Tap_2"
     ],
     "vibrant_unlock_or_open": [
       "category_notifications/Vibrant_Unlock_or_Open"
@@ -26876,7 +29850,60 @@
       "category_projectile/Vibrant_Game__Material_Collect",
       "category_projectile/Vibrant_Game__Pick_Up_2",
       "category_slide/Vibrant_Slide_Squeal",
-      "category_slide/Vibrant_UI_Slide_Zip_1"
+      "category_slide/Vibrant_UI_Slide_Zip_1",
+      "category_tap/Chirp_UI_2",
+      "category_tap/Game_Bubble_Pop_Click",
+      "category_tap/Level_Select_1",
+      "category_tap/Negative_Select_1",
+      "category_tap/Negative_Select_2",
+      "category_tap/Robotic_Selection_1",
+      "category_tap/Robotic_Selection_2",
+      "category_tap/Slight_Negative_Select_1",
+      "category_tap/Vibrant_Click_1",
+      "category_tap/Vibrant_Crank_Tap_1",
+      "category_tap/Vibrant_Crank_Tap_2",
+      "category_tap/Vibrant_Crank_Tap_3",
+      "category_tap/Vibrant_Crank_Tap_4",
+      "category_tap/Vibrant_Cute_Button",
+      "category_tap/Vibrant_Game_Affirm_UI_Button_1",
+      "category_tap/Vibrant_Game_Start_with_Tone_Hum",
+      "category_tap/Vibrant_Game__Key_Touch_1",
+      "category_tap/Vibrant_Game__Liquid_Touch_2",
+      "category_tap/Vibrant_Game__Water_Drop_Game_Touch_1",
+      "category_tap/Vibrant_Happy_Tap_1",
+      "category_tap/Vibrant_Happy_Tap_2",
+      "category_tap/Vibrant_Happy_Tap_3",
+      "category_tap/Vibrant_Metal_Synth_3_Ding",
+      "category_tap/Vibrant_Positive_Tap_1",
+      "category_tap/Vibrant_Positive_Tap_2",
+      "category_tap/Vibrant_Positive_Tap_3",
+      "category_tap/Vibrant_Positive_Tap_4",
+      "category_tap/Vibrant_Positive_Tap_5",
+      "category_tap/Vibrant_Power_Orb_Touch_1",
+      "category_tap/Vibrant_Slick_Click",
+      "category_tap/Vibrant_Tech_Button",
+      "category_tap/Vibrant_Tone_Button_2",
+      "category_tap/Vibrant_Tone_Button_3",
+      "category_tap/Vibrant_Tone_Button_4",
+      "category_tap/Vibrant_Tone_Button_6",
+      "category_tap/Vibrant_Tone_Button_8",
+      "category_tap/Vibrant_UI_Mouse_Click_1",
+      "category_tap/Vibrant_UI_Mouse_Click_2",
+      "category_tap/Vibrant_UI_Tap_1",
+      "category_tap/Vibrant_UI_Tap_2",
+      "category_transition/Collecting_Transition_1",
+      "category_transition/Entering_Portal_1",
+      "category_transition/Fall_In_and_Fly_Out_1",
+      "category_transition/Fall_In_and_Fly_Out_2",
+      "category_transition/Mysterious_Reveal_1",
+      "category_transition/Negative_Game_Over_Whoosh",
+      "category_transition/Portal_Reached_long_decay_",
+      "category_transition/Reverse_Sucking_Stop_1_Low",
+      "category_transition/Strange_Protal_Transition",
+      "category_transition/Teleport_In",
+      "category_transition/Tie_Game_Whoosh_1",
+      "category_transition/Vibrant_Liquid_Unlock_with_Fizz",
+      "category_transition/Vibrant_Power_Unlock"
     ],
     "wind": [
       "category_background/large_fan"
@@ -26984,7 +30011,10 @@
       "category_jump/Retro_Game_Enemy_Jump_5",
       "category_retro/Retro_Game_Enemy_Spawn_10",
       "category_retro/Retro_Game_Enemy_Spawn_6",
-      "category_retro/Retro_Game_Enemy_Spawn_7"
+      "category_retro/Retro_Game_Enemy_Spawn_7",
+      "category_transition/Retro_Game_Enemy_Teleport_3",
+      "category_transition/Retro_Game_Enemy_Teleport_4",
+      "category_transition/Retro_Game_Enemy_Teleport_5"
     ],
     "you": [
       "category_female_voiceover/you_lose_female",
