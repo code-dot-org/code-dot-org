@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
+import {CheckedRadioButton} from '../../lib/ui/CheckedRadioButton';
 
 const styles = {
   detailsArea: {
@@ -19,7 +20,7 @@ const styles = {
     flexDirection: 'row',
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
+      border: `solid 1px ${color.light_cyan}`,
       borderRadius: 10
     }
   },
@@ -31,7 +32,7 @@ const styles = {
     borderRadius: 10,
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
+      border: `solid 1px ${color.light_cyan}`,
       borderRadius: 10
     }
   }
@@ -54,10 +55,6 @@ class RubricField extends Component {
     currentlyChecked: PropTypes.bool
   };
 
-  handleRubricChange = event => {
-    this.props.onChange(event.target.value);
-  };
-
   render() {
     const performanceHeaderStyle = this.props.currentlyChecked
       ? styles.performanceLevelHeaderSelected
@@ -65,16 +62,12 @@ class RubricField extends Component {
     return (
       <div style={performanceHeaderStyle}>
         {this.props.showFeedbackInputAreas && (
-          <input
-            type={'checkbox'}
-            //Concatenate because injecting the string seems to result in all of
-            //the input elements having the name id
-            id={'rubric-input-' + this.props.rubricLevel}
-            name="rubric"
+          <CheckedRadioButton
+            id={`rubric-input-${this.props.rubricLevel}`}
             value={this.props.rubricLevel}
             checked={this.props.currentlyChecked}
-            onChange={this.handleRubricChange}
-            disabled={this.props.disabledMode}
+            onRadioButtonChange={this.props.onChange}
+            disabledMode={this.props.disabledMode}
           />
         )}
         <details style={styles.detailsArea}>
