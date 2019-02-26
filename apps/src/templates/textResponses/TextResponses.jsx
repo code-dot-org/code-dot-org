@@ -74,7 +74,7 @@ class TextResponses extends Component {
     isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
-    scriptName: PropTypes.string.isRequired,
+    scriptName: PropTypes.string,
     setScriptId: PropTypes.func.isRequired,
     asyncLoadTextResponses: PropTypes.func.isRequired
   };

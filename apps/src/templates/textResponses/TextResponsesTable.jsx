@@ -24,8 +24,8 @@ class TextResponsesTable extends Component {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
-    scriptId: PropTypes.number.isRequired,
-    scriptName: PropTypes.string.isRequired
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   state = {};
