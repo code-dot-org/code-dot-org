@@ -56,8 +56,14 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     if (this.props.data.school === '-1') {
       locationParams.zip_code = this.props.data.schoolZipCode;
       locationParams.state = this.props.data.schoolState;
-    } else {
+    } else if (this.props.data.school) {
       locationParams.school = this.props.data.school;
+    } else {
+      this.setState({
+        loadingPartner: false,
+        loadError: true
+      });
+      return;
     }
 
     const url = `/api/v1/pd/regional_partner_workshops/find?${$.param(
@@ -203,7 +209,16 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       return (
         <div style={styles.error}>
           <p>
-            Please fill out Section 2 and select your program before completing
+            Please fill out Section 3 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else if (!this.props.data.school) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 2 and select your school before completing
             this section.
           </p>
         </div>
