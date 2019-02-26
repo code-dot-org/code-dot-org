@@ -2183,6 +2183,8 @@ nn:
               name: 'Trådlaust: Binær'
             Artist Binary:
               name: 'Kunstnar: binær'
+            Dance Party:
+              name: Dansefest
         coursee-2019:
           stages:
             Building a Foundation:
