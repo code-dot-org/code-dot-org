@@ -63,10 +63,7 @@
     "parent_level_id": 17661,
     "long_instructions": "# Do This\r\n\r\n**Step 3 - Input / Storage:** Create your variables and assign them values using the app's inputs.\r\n\r\n* Use your flowchart to decide what information your app will need to keep track of.\r\n* Create a variable for each piece of information.\r\n* Assign values to the variables, including those that are assigned values from user input.\r\n* Add comments explaining the code you've written.",
     "project_template_level_name": "U4L08 Museum Ticket Generator Template",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

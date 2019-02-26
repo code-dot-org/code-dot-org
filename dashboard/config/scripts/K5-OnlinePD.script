@@ -1,4 +1,5 @@
 professional_learning_course 'K5 Support'
+login_required true
 
 stage 'Getting Started'
 level 'OPD-K5 Intro'
