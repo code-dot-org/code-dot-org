@@ -52,10 +52,7 @@
     "long_instructions": "# Do This\r\n\r\n* Read the code and predict what will appear in the console\r\n* Run the code and watch how each question is answered.\r\n* Add code to answer the last two questions. You'll need to create a **boolean expression** for each one.",
     "start_blocks": "// Predict whether the following questions evaluate to true or false\r\nconsole.log(\"Q1: Is three less than five?\");\r\nconsole.log(3 < 5);\r\nconsole.log(\"Q2: Is three equal to five?\");\r\nconsole.log(3 == 5);\r\nconsole.log(\"Q3: Is three greater than three?\");\r\nconsole.log(3 > 3);\r\nconsole.log(\"Q4: Is two times two greater than or equal to five?\");\r\nconsole.log((2 * 2) >= 5);\r\n\r\n// Add code below to answer these questions\r\nconsole.log(\"Q5: Is ten less than or equal to ten?\");\r\n\r\nconsole.log(\"Q6: Is ten minus three greater than three times three?\");",
     "slider_speed": "0.1",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
