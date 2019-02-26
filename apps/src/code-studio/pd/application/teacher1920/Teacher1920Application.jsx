@@ -6,7 +6,6 @@ import Section2ChooseYourProgram from './Section2ChooseYourProgram';
 import Section3TeachingBackground from './Section3TeachingBackground';
 import Section4ProfessionalLearningProgramRequirements from './Section4ProfessionalLearningProgramRequirements';
 import Section5AdditionalDemographicInformation from './Section5AdditionalDemographicInformation';
-import Section6Submission from './Section6Submission';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import queryString from 'query-string';
 /* global ga */
@@ -15,12 +14,39 @@ export default class Teacher1920Application extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     accountEmail: PropTypes.string.isRequired,
-    userId: PropTypes.number.isRequired
+    userId: PropTypes.number.isRequired,
+    schoolId: PropTypes.string
   };
 
   static submitButtonText = 'Complete and Send';
 
   static sessionStorageKey = 'Teacher1920Application';
+
+  /**
+   * @override
+   */
+  componentWillMount() {
+    super.componentWillMount();
+
+    // Extract school info saved in sessionStorage, if any
+    let reloadedSchoolId = undefined;
+    if (
+      this.constructor.sessionStorageKey &&
+      sessionStorage[this.constructor.sessionStorageKey]
+    ) {
+      const reloadedState = JSON.parse(
+        sessionStorage[this.constructor.sessionStorageKey]
+      );
+      reloadedSchoolId = reloadedState.data.school;
+    }
+
+    // Populate data from server only if it doesn't override data in sessionStorage
+    // (even if value in sessionStorage is null)
+    if (reloadedSchoolId === undefined && this.props.schoolId) {
+      const schoolAutoFill = {school: this.props.schoolId};
+      this.setState({data: {...this.state.data, ...schoolAutoFill}});
+    }
+  }
 
   componentDidMount() {
     window.addEventListener('beforeunload', event => {
@@ -40,8 +66,7 @@ export default class Teacher1920Application extends FormController {
       Section3TeachingBackground,
       Section2ChooseYourProgram,
       Section4ProfessionalLearningProgramRequirements,
-      Section5AdditionalDemographicInformation,
-      Section6Submission
+      Section5AdditionalDemographicInformation
     ];
   }
 
