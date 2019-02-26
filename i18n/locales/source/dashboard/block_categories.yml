@@ -30,6 +30,8 @@ en:
       Input: Input
       Default: Default
       World: World
+      Dancers: Dancers
+      Groups: Groups
       Sprites: Sprites
       Behaviors: Behaviors
       Advanced: Advanced
@@ -37,8 +39,6 @@ en:
       Locations: Locations
       Music: Music
       Dancing: Dancing
-      Dancers: Dancers
-      Groups: Groups
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite
