@@ -9309,6 +9309,310 @@
       "version": "t35mvGHcNXKHOLCjfvVSZP..PyUx9NFX",
       "sourceUrl": "/api/v1/sound-library/category_slide/whoosh_4.mp3"
     },
+    "category_swing/Air_Whoosh_Swing": {
+      "name": "Air_Whoosh_Swing",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:50:43 UTC",
+      "mp3LastModified": "2019-02-13 23:07:37 UTC",
+      "version": "oVak3A2WA.W9lB_pTSH0ONGWH9qcqrFJ",
+      "sourceUrl": "/api/v1/sound-library/category_swing/Air_Whoosh_Swing.mp3"
+    },
+    "category_swing/Knife_Swing_2": {
+      "name": "Knife_Swing_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:50:44 UTC",
+      "mp3LastModified": "2019-02-13 23:07:37 UTC",
+      "version": "7ECkuDHG17K26j371ZDDLel5zZ7e2IHt",
+      "sourceUrl": "/api/v1/sound-library/category_swing/Knife_Swing_2.mp3"
+    },
+    "category_swing/Swing_1": {
+      "name": "Swing_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:50:44 UTC",
+      "mp3LastModified": "2019-02-13 23:07:38 UTC",
+      "version": "DMVsJmwpdl3vGoayaS6LINokw2fSPK8i",
+      "sourceUrl": "/api/v1/sound-library/category_swing/Swing_1.mp3"
+    },
+    "category_swing/Swing_2": {
+      "name": "Swing_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:50:45 UTC",
+      "mp3LastModified": "2019-02-13 23:07:38 UTC",
+      "version": "2Mx0yocPvO.im0gjHfgSN6uSQWHPf.ED",
+      "sourceUrl": "/api/v1/sound-library/category_swing/Swing_2.mp3"
+    },
+    "category_swing/Swing_3_Fast": {
+      "name": "Swing_3_Fast",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:50:45 UTC",
+      "mp3LastModified": "2019-02-13 23:07:40 UTC",
+      "version": "oMDYzI0IyIGaSjrGsD_DCBoptoLwAtPH",
+      "sourceUrl": "/api/v1/sound-library/category_swing/Swing_3_Fast.mp3"
+    },
+    "category_swing/Swing_4": {
+      "name": "Swing_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:50:46 UTC",
+      "mp3LastModified": "2019-02-13 23:07:41 UTC",
+      "version": "s0JLL27hDrFGfK_OpIk9N4NBO.rU6.wn",
+      "sourceUrl": "/api/v1/sound-library/category_swing/Swing_4.mp3"
+    },
+    "category_swish/Arrow_Fly_Pass_By_1": {
+      "name": "Arrow_Fly_Pass_By_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:19 UTC",
+      "mp3LastModified": "2019-02-13 23:11:51 UTC",
+      "version": "ETjYr6w6BvmJBpHCARhv1oHJyxT4KH1n",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Arrow_Fly_Pass_By_1.mp3"
+    },
+    "category_swish/Arrow_Fly_Pass_By_2": {
+      "name": "Arrow_Fly_Pass_By_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:19 UTC",
+      "mp3LastModified": "2019-02-13 23:11:52 UTC",
+      "version": "rEPDjWZcekowSjXY9SxQM3Wa2ynvsGJv",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Arrow_Fly_Pass_By_2.mp3"
+    },
+    "category_swish/Arrow_Fly_Pass_By_3": {
+      "name": "Arrow_Fly_Pass_By_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:20 UTC",
+      "mp3LastModified": "2019-02-13 23:11:53 UTC",
+      "version": "ECLIVsX_O5RfQ3qvcuPp7We1tGB2zYge",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Arrow_Fly_Pass_By_3.mp3"
+    },
+    "category_swish/Bamboo_Sword_Swish": {
+      "name": "Bamboo_Sword_Swish",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:21 UTC",
+      "mp3LastModified": "2019-02-13 23:11:53 UTC",
+      "version": "ame1RSkVTjEzA1ntDO1zha3IYUYxW4Yl",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Bamboo_Sword_Swish.mp3"
+    },
+    "category_swish/Deep_Fast_Swish": {
+      "name": "Deep_Fast_Swish",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:21 UTC",
+      "mp3LastModified": "2019-02-13 23:11:54 UTC",
+      "version": "dehs_cUfQcPUfV2MIAxz7pfb6FmgWcSd",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Deep_Fast_Swish.mp3"
+    },
+    "category_swish/Deep_Fist_Punch_1": {
+      "name": "Deep_Fist_Punch_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:22 UTC",
+      "mp3LastModified": "2019-02-13 23:11:54 UTC",
+      "version": "t7tjKW60KWj1Aokdrup4G1MsCcZ5FlO8",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Deep_Fist_Punch_1.mp3"
+    },
+    "category_swish/Deep_Swish_1": {
+      "name": "Deep_Swish_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:22 UTC",
+      "mp3LastModified": "2019-02-13 23:11:56 UTC",
+      "version": "kfoBKK60Dq3Hxf806Q44owY_su9.O.Sj",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Deep_Swish_1.mp3"
+    },
+    "category_swish/Deep_Swish_2": {
+      "name": "Deep_Swish_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:23 UTC",
+      "mp3LastModified": "2019-02-13 23:11:56 UTC",
+      "version": "cb3UyVf_nYvU.jbDRVOjpRA8hTLwzHAe",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Deep_Swish_2.mp3"
+    },
+    "category_swish/Double_Sword_Swish": {
+      "name": "Double_Sword_Swish",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:24 UTC",
+      "mp3LastModified": "2019-02-13 23:11:57 UTC",
+      "version": "YJPPK6li9Sxjz.Le5yZu4pL.C9hoAxzb",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Double_Sword_Swish.mp3"
+    },
+    "category_swish/Dry_Sword_Swing": {
+      "name": "Dry_Sword_Swing",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:24 UTC",
+      "mp3LastModified": "2019-02-13 23:11:57 UTC",
+      "version": "17LdXya.IInvt8W5VtQ9xoz6Z8Bu.oaA",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Dry_Sword_Swing.mp3"
+    },
+    "category_swish/Fast_Swish": {
+      "name": "Fast_Swish",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:25 UTC",
+      "mp3LastModified": "2019-02-13 23:11:58 UTC",
+      "version": "SDi0mimRWtkDG43AHjsfNJ2XkITiUSek",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Fast_Swish.mp3"
+    },
+    "category_swish/Heavy_Axe_Swing": {
+      "name": "Heavy_Axe_Swing",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:25 UTC",
+      "mp3LastModified": "2019-02-13 23:11:58 UTC",
+      "version": "7IuwZR0v73tvIKAPz2K4Gu5ZJmeYGszZ",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Heavy_Axe_Swing.mp3"
+    },
+    "category_swish/Karate_Throw_Whoosh": {
+      "name": "Karate_Throw_Whoosh",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:26 UTC",
+      "mp3LastModified": "2019-02-13 23:11:59 UTC",
+      "version": "pIVY8P6umrud4dHcz7oZhATjTzHCQITN",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Karate_Throw_Whoosh.mp3"
+    },
+    "category_swish/Karate_Whoosh_10": {
+      "name": "Karate_Whoosh_10",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:32 UTC",
+      "mp3LastModified": "2019-02-13 23:12:00 UTC",
+      "version": "DkhTl.eqCB3JDCY_e3phobSyW4p6vYyD",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Karate_Whoosh_10.mp3"
+    },
+    "category_swish/Karate_Whoosh_11": {
+      "name": "Karate_Whoosh_11",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:35 UTC",
+      "mp3LastModified": "2019-02-13 23:12:00 UTC",
+      "version": "G9ldJ458emTaJWa6vPQndHsAAQTPP0Ro",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Karate_Whoosh_11.mp3"
+    },
+    "category_swish/Karate_Whoosh_12": {
+      "name": "Karate_Whoosh_12",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:36 UTC",
+      "mp3LastModified": "2019-02-13 23:12:00 UTC",
+      "version": "BPyJ1IxJBQAK6FKw8a5FXZ6mGABtNXGG",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Karate_Whoosh_12.mp3"
+    },
+    "category_swish/Karate_Whoosh_14": {
+      "name": "Karate_Whoosh_14",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:36 UTC",
+      "mp3LastModified": "2019-02-13 23:12:01 UTC",
+      "version": "tuYubHCGiemfwhdPBRjtfNCM1sFkyqDD",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Karate_Whoosh_14.mp3"
+    },
+    "category_swish/Karate_Whoosh_8": {
+      "name": "Karate_Whoosh_8",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:31 UTC",
+      "mp3LastModified": "2019-02-13 23:11:59 UTC",
+      "version": "I9teMWwDqlDu.kz6uKjTLy1PUF7WhvyR",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Karate_Whoosh_8.mp3"
+    },
+    "category_swish/Light_Swish_New": {
+      "name": "Light_Swish_New",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:37 UTC",
+      "mp3LastModified": "2019-02-13 23:12:01 UTC",
+      "version": "ZBaMSrw1KF.th9HkKj4CRYvLIE9mj1kJ",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Light_Swish_New.mp3"
+    },
+    "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1": {
+      "name": "Mechanical_Page_Transition_Movement_Swoosh_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:38 UTC",
+      "mp3LastModified": "2019-02-13 23:12:02 UTC",
+      "version": "3P5sLOXy3mNXjLPMb7V88QgpBeT7ZWvj",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Mechanical_Page_Transition_Movement_Swoosh_1.mp3"
+    },
+    "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2": {
+      "name": "Mechanical_Page_Transition_Movement_Swoosh_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:38 UTC",
+      "mp3LastModified": "2019-02-13 23:12:03 UTC",
+      "version": "V7_JiyUxuNvatkXUBeP25vdHxS429iQu",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Mechanical_Page_Transition_Movement_Swoosh_2.mp3"
+    },
+    "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3": {
+      "name": "Mechanical_Page_Transition_Movement_Swoosh_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:39 UTC",
+      "mp3LastModified": "2019-02-13 23:12:04 UTC",
+      "version": "UEuRVyeYgqzYkX8OiwXdtMhwjimH1RhP",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Mechanical_Page_Transition_Movement_Swoosh_3.mp3"
+    },
+    "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4": {
+      "name": "Mechanical_Page_Transition_Movement_Swoosh_4",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:39 UTC",
+      "mp3LastModified": "2019-02-13 23:12:05 UTC",
+      "version": "ixdEPZ.OfA28WZmzKvhfxKwEdbVqpqDv",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Mechanical_Page_Transition_Movement_Swoosh_4.mp3"
+    },
+    "category_swish/Motion_Whoosh_8v2": {
+      "name": "Motion_Whoosh_8v2",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 23:44:40 UTC",
+      "mp3LastModified": "2019-02-13 23:12:06 UTC",
+      "version": "x_T_u2qpQI0d3PSzoPXK0vjcYScHfhNM",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Motion_Whoosh_8v2.mp3"
+    },
+    "category_swish/Quick_Swing": {
+      "name": "Quick_Swing",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:41 UTC",
+      "mp3LastModified": "2019-02-13 23:12:06 UTC",
+      "version": "B0bmJM1ONEHWnMX1DTmX_0wrM9ZuuTwv",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Quick_Swing.mp3"
+    },
+    "category_swish/Rope_Twirl_New": {
+      "name": "Rope_Twirl_New",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:41 UTC",
+      "mp3LastModified": "2019-02-13 23:12:07 UTC",
+      "version": "61FfGMCsLFcEvLJovccK7JXNubjePf6w",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Rope_Twirl_New.mp3"
+    },
+    "category_swish/Sc-fi_Door_Transition": {
+      "name": "Sc-fi_Door_Transition",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:42 UTC",
+      "mp3LastModified": "2019-02-13 23:12:08 UTC",
+      "version": "E5rMaug7ECBD8HJoxqsdqN6nOxG6jbTA",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Sc-fi_Door_Transition.mp3"
+    },
+    "category_swish/Swish_Fast": {
+      "name": "Swish_Fast",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:42 UTC",
+      "mp3LastModified": "2019-02-13 23:12:08 UTC",
+      "version": "u5lHo1hlj8N9arcIpiuwrAUsv3A0wttb",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Swish_Fast.mp3"
+    },
+    "category_swish/Thin_Whoosh": {
+      "name": "Thin_Whoosh",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:43 UTC",
+      "mp3LastModified": "2019-02-13 23:12:09 UTC",
+      "version": "1CWvlR07fSgl9Y.EJmpiJXmEiUnb6Ow1",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Thin_Whoosh.mp3"
+    },
+    "category_swish/Weapon_Swing": {
+      "name": "Weapon_Swing",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:44 UTC",
+      "mp3LastModified": "2019-02-13 23:12:10 UTC",
+      "version": "cHIFiI1KnQXdEW9qZ9KqJUTBWcv6pLBZ",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Weapon_Swing.mp3"
+    },
+    "category_swish/Weapon_Swing_2": {
+      "name": "Weapon_Swing_2",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:44 UTC",
+      "mp3LastModified": "2019-02-13 23:12:09 UTC",
+      "version": "l0JI.S4GuP4_1kGBodQynKUj52qE9i46",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Weapon_Swing_2.mp3"
+    },
+    "category_swish/Whoosh_Swish": {
+      "name": "Whoosh_Swish",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 23:44:45 UTC",
+      "mp3LastModified": "2019-02-13 23:12:11 UTC",
+      "version": "FOD6.zc1rfuW7D4r8hWpXhZFnsdajrcq",
+      "sourceUrl": "/api/v1/sound-library/category_swish/Whoosh_Swish.mp3"
+    },
     "category_tap/Chirp_UI_2": {
       "name": "Chirp_UI_2",
       "time": 0,
@@ -10234,13 +10538,54 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
     ],
     "air_explode_bonus_5": [
       "category_explosion/Air_Explode_Bonus_5"
     ],
     "air_explode_bonus_6": [
       "category_explosion/Air_Explode_Bonus_6"
+    ],
+    "air_whoosh_swing": [
+      "category_swing/Air_Whoosh_Swing"
     ],
     "airport": [
       "category_background/airport"
@@ -10256,7 +10601,45 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
     ],
     "airy_bell_notification": [
       "category_alerts/Airy_Bell_Notification"
@@ -12069,6 +12452,15 @@
       "category_transition/Puzzle_Game_Upgrade_Big_03",
       "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
+    "arrow_fly_pass_by_1": [
+      "category_swish/Arrow_Fly_Pass_By_1"
+    ],
+    "arrow_fly_pass_by_2": [
+      "category_swish/Arrow_Fly_Pass_By_2"
+    ],
+    "arrow_fly_pass_by_3": [
+      "category_swish/Arrow_Fly_Pass_By_3"
+    ],
     "arrow_whoosh": [
       "category_slide/Arrow_Whoosh"
     ],
@@ -12736,6 +13128,9 @@
     ],
     "bamboo_pop_v2_notification4": [
       "category_pop/Bamboo_Pop_v2_Notification4"
+    ],
+    "bamboo_sword_swish": [
+      "category_swish/Bamboo_Sword_Swish"
     ],
     "bang": [
       "category_explosion/8bit_explosion",
@@ -16730,6 +17125,48 @@
       "category_slide/whoosh_3",
       "category_slide/whoosh_4"
     ],
+    "category_swing": [
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4"
+    ],
+    "category_swish": [
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
+    ],
     "category_tap": [
       "category_tap/Chirp_UI_2",
       "category_tap/Game_Bubble_Pop_Click",
@@ -19875,6 +20312,18 @@
     "deep_bubble_notification": [
       "category_pop/Deep_Bubble_Notification"
     ],
+    "deep_fast_swish": [
+      "category_swish/Deep_Fast_Swish"
+    ],
+    "deep_fist_punch_1": [
+      "category_swish/Deep_Fist_Punch_1"
+    ],
+    "deep_swish_1": [
+      "category_swish/Deep_Swish_1"
+    ],
+    "deep_swish_2": [
+      "category_swish/Deep_Swish_2"
+    ],
     "default": [
       "default"
     ],
@@ -20455,6 +20904,9 @@
     "door_squeak": [
       "category_objects/door_squeak"
     ],
+    "double_sword_swish": [
+      "category_swish/Double_Sword_Swish"
+    ],
     "down": [
       "category_achievements/Retro_Game_Classic_Power_Up_2",
       "category_achievements/Retro_Game_Classic_Power_Up_3",
@@ -20567,6 +21019,9 @@
       "category_notifications/Lighthearted Notification 3",
       "category_notifications/Lighthearted Notification 4",
       "category_notifications/Lighthearted Notification 5"
+    ],
+    "dry_sword_swing": [
+      "category_swish/Dry_Sword_Swing"
     ],
     "duck": [
       "category_animals/duck"
@@ -21274,6 +21729,44 @@
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
       "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish",
       "category_tap/Percussion_Echo_Notification2",
       "category_transition/Retro_Game_Activate_5",
       "category_transition/Retro_Game_Enemy_Teleport_3",
@@ -21889,6 +22382,9 @@
       "category_movement/Walk_2_Loop",
       "category_movement/Walk_Loop",
       "category_tap/Percussion_Echo_Notification2"
+    ],
+    "fast_swish": [
+      "category_swish/Fast_Swish"
     ],
     "faultering_desicion_loop1": [
       "category_loops/Faultering_Desicion_Loop1"
@@ -23925,7 +24421,48 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
+    ],
+    "heavy_axe_swing": [
+      "category_swish/Heavy_Axe_Swing"
     ],
     "highscore": [
       "category_female_voiceover/new_highscore_female",
@@ -25328,6 +25865,24 @@
       "category_background/rainforest_ambient_sound",
       "category_background/toucan"
     ],
+    "karate_throw_whoosh": [
+      "category_swish/Karate_Throw_Whoosh"
+    ],
+    "karate_whoosh_10": [
+      "category_swish/Karate_Whoosh_10"
+    ],
+    "karate_whoosh_11": [
+      "category_swish/Karate_Whoosh_11"
+    ],
+    "karate_whoosh_12": [
+      "category_swish/Karate_Whoosh_12"
+    ],
+    "karate_whoosh_14": [
+      "category_swish/Karate_Whoosh_14"
+    ],
+    "karate_whoosh_8": [
+      "category_swish/Karate_Whoosh_8"
+    ],
     "kazoo": [
       "category_objects/kazoo"
     ],
@@ -25386,6 +25941,9 @@
     ],
     "kitten": [
       "category_animals/kitten"
+    ],
+    "knife_swing_2": [
+      "category_swing/Knife_Swing_2"
     ],
     "lake": [
       "category_nature/South_Carolina_Beach_1",
@@ -25516,10 +26074,51 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
     ],
     "light_rain_loop": [
       "category_nature/Light_Rain_Loop"
+    ],
+    "light_swish_new": [
+      "category_swish/Light_Swish_New"
     ],
     "lighthearted bonus objective 1": [
       "category_achievements/Lighthearted Bonus Objective 1"
@@ -26467,6 +27066,18 @@
       "category_achievements/Bubbly_Game_Achievement_Sound",
       "category_tap/Percussion_Echo_Notification2"
     ],
+    "mechanical_page_transition_movement_swoosh_1": [
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1"
+    ],
+    "mechanical_page_transition_movement_swoosh_2": [
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2"
+    ],
+    "mechanical_page_transition_movement_swoosh_3": [
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3"
+    ],
+    "mechanical_page_transition_movement_swoosh_4": [
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4"
+    ],
     "media": [
       "category_achievements/Bubbly_Game_Achievement_Sound",
       "category_achievements/Melodic_Win_1",
@@ -26750,6 +27361,44 @@
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
       "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish",
       "category_tap/Percussion_Echo_Notification2",
       "category_transition/Retro_Game_Activate_5",
       "category_transition/Retro_Game_Enemy_Teleport_3",
@@ -27306,7 +27955,45 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
     ],
     "monkey": [
       "category_animals/monkey"
@@ -27635,6 +28322,9 @@
       "category_transition/Puzzle_Game_Upgrade_Big_03",
       "category_transition/Puzzle_Game_Upgrade_Big_04"
     ],
+    "motion_whoosh_8v2": [
+      "category_swish/Motion_Whoosh_8v2"
+    ],
     "mouse": [
       "category_digital/squeak"
     ],
@@ -27649,7 +28339,45 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
     ],
     "music": [
       "category_achievements/Vibrant_Game_Cartoon_Positive_Achievement_1",
@@ -31524,6 +32252,9 @@
     "quick_pulse": [
       "category_digital/quick_pulse"
     ],
+    "quick_swing": [
+      "category_swish/Quick_Swing"
+    ],
     "quiet_bell_notification": [
       "category_bell/Quiet_Bell_Notification"
     ],
@@ -32355,6 +33086,9 @@
     "rooster": [
       "category_animals/rooster"
     ],
+    "rope_twirl_new": [
+      "category_swish/Rope_Twirl_New"
+    ],
     "round": [
       "category_female_voiceover/final_round_female",
       "category_female_voiceover/round_female",
@@ -32536,6 +33270,9 @@
       "category_instrumental/sax_repeating_2",
       "category_instrumental/sax_upscale_1",
       "category_instrumental/sax_upscale_2"
+    ],
+    "sc-fi_door_transition": [
+      "category_swish/Sc-fi_Door_Transition"
     ],
     "sc_beach_rippling_loop_2_short": [
       "category_nature/SC_Beach_RIppling_Loop_2_Short"
@@ -34282,6 +35019,44 @@
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
       "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish",
       "category_tap/Percussion_Echo_Notification2",
       "category_transition/Retro_Game_Activate_5",
       "category_transition/Retro_Game_Enemy_Teleport_3",
@@ -34351,6 +35126,21 @@
     "summer_night_loop": [
       "category_nature/Summer_Night_Loop"
     ],
+    "swing_1": [
+      "category_swing/Swing_1"
+    ],
+    "swing_2": [
+      "category_swing/Swing_2"
+    ],
+    "swing_3_fast": [
+      "category_swing/Swing_3_Fast"
+    ],
+    "swing_4": [
+      "category_swing/Swing_4"
+    ],
+    "swish_fast": [
+      "category_swish/Swish_Fast"
+    ],
     "switch": [
       "category_app/Bass_Power_Off",
       "category_app/Modern_UI_Sound",
@@ -34396,7 +35186,45 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
     ],
     "synth": [
       "category_achievements/Melodic_Win_1",
@@ -35224,6 +36052,9 @@
       "category_transition/Puzzle_Game_Upgrade_Big_02",
       "category_transition/Puzzle_Game_Upgrade_Big_03",
       "category_transition/Puzzle_Game_Upgrade_Big_04"
+    ],
+    "thin_whoosh": [
+      "category_swish/Thin_Whoosh"
     ],
     "three": [
       "category_female_voiceover/three_female",
@@ -37754,6 +38585,12 @@
       "category_projectile/Retro_Game_Weapon_-_Magic_Arrow",
       "category_projectile/Retro_Game_Weapon_-_Plasma_Pistol"
     ],
+    "weapon_swing": [
+      "category_swish/Weapon_Swing"
+    ],
+    "weapon_swing_2": [
+      "category_swish/Weapon_Swing_2"
+    ],
     "weapons": [
       "category_explosion/8bit_explosion",
       "category_explosion/Air_Explode_Bonus_5",
@@ -37802,7 +38639,45 @@
       "category_slide/Arrow_Whoosh",
       "category_slide/whoosh_2",
       "category_slide/whoosh_3",
-      "category_slide/whoosh_4"
+      "category_slide/whoosh_4",
+      "category_swing/Air_Whoosh_Swing",
+      "category_swing/Knife_Swing_2",
+      "category_swing/Swing_1",
+      "category_swing/Swing_2",
+      "category_swing/Swing_3_Fast",
+      "category_swing/Swing_4",
+      "category_swish/Arrow_Fly_Pass_By_1",
+      "category_swish/Arrow_Fly_Pass_By_2",
+      "category_swish/Arrow_Fly_Pass_By_3",
+      "category_swish/Bamboo_Sword_Swish",
+      "category_swish/Deep_Fast_Swish",
+      "category_swish/Deep_Fist_Punch_1",
+      "category_swish/Deep_Swish_1",
+      "category_swish/Deep_Swish_2",
+      "category_swish/Double_Sword_Swish",
+      "category_swish/Dry_Sword_Swing",
+      "category_swish/Fast_Swish",
+      "category_swish/Heavy_Axe_Swing",
+      "category_swish/Karate_Throw_Whoosh",
+      "category_swish/Karate_Whoosh_10",
+      "category_swish/Karate_Whoosh_11",
+      "category_swish/Karate_Whoosh_12",
+      "category_swish/Karate_Whoosh_14",
+      "category_swish/Karate_Whoosh_8",
+      "category_swish/Light_Swish_New",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_1",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_2",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_3",
+      "category_swish/Mechanical_Page_Transition_Movement_Swoosh_4",
+      "category_swish/Motion_Whoosh_8v2",
+      "category_swish/Quick_Swing",
+      "category_swish/Rope_Twirl_New",
+      "category_swish/Sc-fi_Door_Transition",
+      "category_swish/Swish_Fast",
+      "category_swish/Thin_Whoosh",
+      "category_swish/Weapon_Swing",
+      "category_swish/Weapon_Swing_2",
+      "category_swish/Whoosh_Swish"
     ],
     "whoosh_2": [
       "category_slide/whoosh_2"
@@ -37812,6 +38687,9 @@
     ],
     "whoosh_4": [
       "category_slide/whoosh_4"
+    ],
+    "whoosh_swish": [
+      "category_swish/Whoosh_Swish"
     ],
     "wildlife": [
       "category_nature/Forest_2",
