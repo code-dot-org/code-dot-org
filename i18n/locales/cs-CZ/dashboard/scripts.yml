@@ -1540,6 +1540,8 @@ cs:
               name: 'Nezapojené: binární'
             Artist Binary:
               name: Umělecké binární
+            Dance Party:
+              name: Taneční večírek
         coursee-2019:
           stages:
             Building a Foundation:

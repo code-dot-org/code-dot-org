@@ -987,6 +987,11 @@ cs:
         options:
           DURATION:
             '"0"': navždy
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': zobrazit
+            '"hide"': skrýt
       binary_move:
         options:
           DIR:
