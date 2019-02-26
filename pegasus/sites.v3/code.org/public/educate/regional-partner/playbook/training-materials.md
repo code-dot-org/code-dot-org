@@ -186,7 +186,7 @@ ________________
 ## Regional Partner Summit (March 2018)
 
 
-- [Regional Partner Summit Resources](http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit)
+- [Regional Partner Summit Resources](http://bit.ly/marchsummit)
 - [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
 
 [**Back to the top**](#top)

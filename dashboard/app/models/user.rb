@@ -844,9 +844,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def update_primary_contact_info(user: {email: nil, hashed_email: nil})
-    new_email = user[:email]
-    new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
+  def update_primary_contact_info(new_email: nil, new_hashed_email: nil)
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : new_hashed_email
 
     return false if new_email.nil? && new_hashed_email.nil?
     return false if teacher? && new_email.nil?
@@ -882,8 +881,8 @@ class User < ActiveRecord::Base
     success
   end
 
-  def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
-    success = update_primary_contact_info(user: user)
+  def update_primary_contact_info!(new_email: nil, new_hashed_email: nil)
+    success = update_primary_contact_info(new_email: new_email, new_hashed_email: new_hashed_email)
     raise "User's primary contact info was not updated successfully" unless success
     success
   end
@@ -906,7 +905,7 @@ class User < ActiveRecord::Base
     hashed_email = params.delete(:hashed_email)
     should_update_contact_info = email.present? || hashed_email.present?
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
+      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
       update!(params)
     end
   rescue
@@ -936,7 +935,7 @@ class User < ActiveRecord::Base
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email})
+      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
       update!(email_preference)
     end
   rescue
