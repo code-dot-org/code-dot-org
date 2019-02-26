@@ -4797,6 +4797,342 @@
       "version": "MkMZA1r5eOMuUR9dgQ4cWw3crPJnm.JX",
       "sourceUrl": "/api/v1/sound-library/category_movement/Warping_Item_1.mp3"
     },
+    "category_music/8Bit_Game_Over_1": {
+      "name": "8Bit_Game_Over_1",
+      "time": 7,
+      "jsonLastModified": "2019-02-26 20:23:14 UTC",
+      "mp3LastModified": "2019-02-14 00:12:22 UTC",
+      "version": "Hi9O0TEJWDeXgFUugyz7O7QdmhTdKSA0",
+      "sourceUrl": "/api/v1/sound-library/category_music/8Bit_Game_Over_1.mp3"
+    },
+    "category_music/8Bit_Game_Over_2": {
+      "name": "8Bit_Game_Over_2",
+      "time": 6,
+      "jsonLastModified": "2019-02-26 20:23:15 UTC",
+      "mp3LastModified": "2019-02-14 00:12:23 UTC",
+      "version": "ahI1A2UuT5dL8hP7_cxipGefHzQsTpo5",
+      "sourceUrl": "/api/v1/sound-library/category_music/8Bit_Game_Over_2.mp3"
+    },
+    "category_music/8Bit_Small_Win": {
+      "name": "8Bit_Small_Win",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 20:23:15 UTC",
+      "mp3LastModified": "2019-02-14 00:12:24 UTC",
+      "version": "kYQvSBIbgYVtTwwUpmt1GbmC3Ta_VhMB",
+      "sourceUrl": "/api/v1/sound-library/category_music/8Bit_Small_Win.mp3"
+    },
+    "category_music/Birthday_Kazoo_Negative_Game_Cue_1": {
+      "name": "Birthday_Kazoo_Negative_Game_Cue_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:23:16 UTC",
+      "mp3LastModified": "2019-02-14 00:12:25 UTC",
+      "version": "M8orClPJaHY3dWjIq04zA.IpcHw_haIt",
+      "sourceUrl": "/api/v1/sound-library/category_music/Birthday_Kazoo_Negative_Game_Cue_1.mp3"
+    },
+    "category_music/Birthday_Kazoo_Positive_Game_Cue_1": {
+      "name": "Birthday_Kazoo_Positive_Game_Cue_1",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:23:19 UTC",
+      "mp3LastModified": "2019-02-14 00:12:26 UTC",
+      "version": "GcikGZdG1QU11Cghd6hLWZCeghoRz1.X",
+      "sourceUrl": "/api/v1/sound-library/category_music/Birthday_Kazoo_Positive_Game_Cue_1.mp3"
+    },
+    "category_music/Birthday_Kazoo_Positive_Game_Cue_2": {
+      "name": "Birthday_Kazoo_Positive_Game_Cue_2",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:23:20 UTC",
+      "mp3LastModified": "2019-02-14 00:12:27 UTC",
+      "version": "Y253luc7ONxfxvf9obpTXR3RQMu1VOVN",
+      "sourceUrl": "/api/v1/sound-library/category_music/Birthday_Kazoo_Positive_Game_Cue_2.mp3"
+    },
+    "category_music/Birthday_Kazoo_Positive_Game_Cue_3": {
+      "name": "Birthday_Kazoo_Positive_Game_Cue_3",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:23:21 UTC",
+      "mp3LastModified": "2019-02-14 00:12:27 UTC",
+      "version": "cH4RbAx0udvwUrjixC8JTNCXhJRTOIPt",
+      "sourceUrl": "/api/v1/sound-library/category_music/Birthday_Kazoo_Positive_Game_Cue_3.mp3"
+    },
+    "category_music/Cartoon_Multi_Ding_Pluck_1": {
+      "name": "Cartoon_Multi_Ding_Pluck_1",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:23:22 UTC",
+      "mp3LastModified": "2019-02-14 00:12:28 UTC",
+      "version": "GZW7VDLoySUUFtimiTKtXECLGoqBuonZ",
+      "sourceUrl": "/api/v1/sound-library/category_music/Cartoon_Multi_Ding_Pluck_1.mp3"
+    },
+    "category_music/Cartoon_Multi_Ding_Pluck_3": {
+      "name": "Cartoon_Multi_Ding_Pluck_3",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:23:22 UTC",
+      "mp3LastModified": "2019-02-14 00:12:28 UTC",
+      "version": "qMIEAwj1USRUqNX.fjcqwtOA7pe_qFwb",
+      "sourceUrl": "/api/v1/sound-library/category_music/Cartoon_Multi_Ding_Pluck_3.mp3"
+    },
+    "category_music/Cartoon_Multi_Ding_Pluck_5": {
+      "name": "Cartoon_Multi_Ding_Pluck_5",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:23:23 UTC",
+      "mp3LastModified": "2019-02-14 00:12:29 UTC",
+      "version": "y.uPGBHTNvj.G6ffaAIsA1fPLBVA9Fag",
+      "sourceUrl": "/api/v1/sound-library/category_music/Cartoon_Multi_Ding_Pluck_5.mp3"
+    },
+    "category_music/Clear_Evidence_Loop1": {
+      "name": "Clear_Evidence_Loop1",
+      "time": 48,
+      "jsonLastModified": "2019-02-26 20:23:23 UTC",
+      "mp3LastModified": "2019-02-14 00:12:30 UTC",
+      "version": "m3usFcfKiHKQz.Jl1nY_q50RZgto00tC",
+      "sourceUrl": "/api/v1/sound-library/category_music/Clear_Evidence_Loop1.mp3"
+    },
+    "category_music/Correct_Answer_Cartoon": {
+      "name": "Correct_Answer_Cartoon",
+      "time": 0,
+      "jsonLastModified": "2019-02-26 20:23:24 UTC",
+      "mp3LastModified": "2019-02-14 00:12:31 UTC",
+      "version": "iv02G7meyMr_eNaJH2j01g3IZRWYWA9V",
+      "sourceUrl": "/api/v1/sound-library/category_music/Correct_Answer_Cartoon.mp3"
+    },
+    "category_music/Crackle_Loss_1": {
+      "name": "Crackle_Loss_1",
+      "time": 5,
+      "jsonLastModified": "2019-02-26 20:23:25 UTC",
+      "mp3LastModified": "2019-02-14 00:12:32 UTC",
+      "version": "F7WyQwLUOVTCH_u94aAOR0NNsT8hVk.3",
+      "sourceUrl": "/api/v1/sound-library/category_music/Crackle_Loss_1.mp3"
+    },
+    "category_music/Fun_Game_Win_Musical_1": {
+      "name": "Fun_Game_Win_Musical_1",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:23:25 UTC",
+      "mp3LastModified": "2019-02-14 00:12:32 UTC",
+      "version": "MOYeRsY1oQTSCsiq6wET6eIVFPRctmGf",
+      "sourceUrl": "/api/v1/sound-library/category_music/Fun_Game_Win_Musical_1.mp3"
+    },
+    "category_music/Fun_Game_Win_Musical_4": {
+      "name": "Fun_Game_Win_Musical_4",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 20:23:26 UTC",
+      "mp3LastModified": "2019-02-14 00:12:33 UTC",
+      "version": "LY7B5R9ipKLqopZeitLiYFpv5qqZ40TS",
+      "sourceUrl": "/api/v1/sound-library/category_music/Fun_Game_Win_Musical_4.mp3"
+    },
+    "category_music/Fun_Game_Win_Musical_5": {
+      "name": "Fun_Game_Win_Musical_5",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:23:27 UTC",
+      "mp3LastModified": "2019-02-14 00:12:33 UTC",
+      "version": "1wVV5vfG93opKGNMMHwLVL0xjaOojDdd",
+      "sourceUrl": "/api/v1/sound-library/category_music/Fun_Game_Win_Musical_5.mp3"
+    },
+    "category_music/Funny_Chirp_Bubble_Postive_Notification": {
+      "name": "Funny_Chirp_Bubble_Postive_Notification",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:23:27 UTC",
+      "mp3LastModified": "2019-02-14 00:12:34 UTC",
+      "version": "dnQNDOEYP.bvIM2F.3m5_zFN76tA59Jy",
+      "sourceUrl": "/api/v1/sound-library/category_music/Funny_Chirp_Bubble_Postive_Notification.mp3"
+    },
+    "category_music/GameOver": {
+      "name": "GameOver",
+      "time": 8,
+      "jsonLastModified": "2019-02-26 20:24:01 UTC",
+      "mp3LastModified": "2019-02-14 00:12:35 UTC",
+      "version": "9aspUzOssnr5xj2kElZZI59jAlP.8cmE",
+      "sourceUrl": "/api/v1/sound-library/category_music/GameOver.mp3"
+    },
+    "category_music/Game_Over_2": {
+      "name": "Game_Over_2",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 20:23:28 UTC",
+      "mp3LastModified": "2019-02-14 00:12:35 UTC",
+      "version": "P9pM9YGc117jPTgOK_SbVdRrqlSpW_fG",
+      "sourceUrl": "/api/v1/sound-library/category_music/Game_Over_2.mp3"
+    },
+    "category_music/Island Bonus Objective 3": {
+      "name": "Island Bonus Objective 3",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 20:24:02 UTC",
+      "mp3LastModified": "2019-02-14 00:12:36 UTC",
+      "version": "8hNBre4.mRw02Qw0JiuhzugWe4NY2dPn",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island Bonus Objective 3.mp3"
+    },
+    "category_music/Island High Level Quick Complete": {
+      "name": "Island High Level Quick Complete",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 20:24:03 UTC",
+      "mp3LastModified": "2019-02-14 00:12:37 UTC",
+      "version": "1foOf1NrEwRCbnkln648nThDTblbM_3U",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island High Level Quick Complete.mp3"
+    },
+    "category_music/Island Level Complete 1": {
+      "name": "Island Level Complete 1",
+      "time": 5,
+      "jsonLastModified": "2019-02-26 20:24:04 UTC",
+      "mp3LastModified": "2019-02-14 00:12:38 UTC",
+      "version": "WBh8nvq2_bXavcgF7JqAhzWd.vapDYL.",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island Level Complete 1.mp3"
+    },
+    "category_music/Island Level Complete 2": {
+      "name": "Island Level Complete 2",
+      "time": 6,
+      "jsonLastModified": "2019-02-26 20:24:08 UTC",
+      "mp3LastModified": "2019-02-14 00:12:38 UTC",
+      "version": "zU8d0zKwBiAqs6BsM5Bv22EsHGT0HfWC",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island Level Complete 2.mp3"
+    },
+    "category_music/Island Level Complete 3": {
+      "name": "Island Level Complete 3",
+      "time": 10,
+      "jsonLastModified": "2019-02-26 20:24:08 UTC",
+      "mp3LastModified": "2019-02-14 00:12:39 UTC",
+      "version": "3hkxuImgYOfztA34933JBdw4Wg2bNb7V",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island Level Complete 3.mp3"
+    },
+    "category_music/Island Level Complete 4": {
+      "name": "Island Level Complete 4",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 20:24:10 UTC",
+      "mp3LastModified": "2019-02-14 00:12:40 UTC",
+      "version": "NW_9uUFeM5jr7dOEdAPWQPRESRk6CJ0m",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island Level Complete 4.mp3"
+    },
+    "category_music/Island Point Tally 1": {
+      "name": "Island Point Tally 1",
+      "time": 5,
+      "jsonLastModified": "2019-02-26 20:24:15 UTC",
+      "mp3LastModified": "2019-02-14 00:12:41 UTC",
+      "version": "og4En3oxMhCrsVREPGI5cwBpcloG2yGt",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island Point Tally 1.mp3"
+    },
+    "category_music/Island Point Tally 2": {
+      "name": "Island Point Tally 2",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 20:24:18 UTC",
+      "mp3LastModified": "2019-02-14 00:12:41 UTC",
+      "version": "8TXl2R5zIRKQ5hs84CeDrT1L0fp_.gEG",
+      "sourceUrl": "/api/v1/sound-library/category_music/Island Point Tally 2.mp3"
+    },
+    "category_music/Level_Up_Brightly_1": {
+      "name": "Level_Up_Brightly_1",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:24:20 UTC",
+      "mp3LastModified": "2019-02-14 00:12:42 UTC",
+      "version": "Bjj2BV.rxlbmzvki9n4DrpsAnxUZQGoZ",
+      "sourceUrl": "/api/v1/sound-library/category_music/Level_Up_Brightly_1.mp3"
+    },
+    "category_music/Mocking_Tonal_Fail_1": {
+      "name": "Mocking_Tonal_Fail_1",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:24:20 UTC",
+      "mp3LastModified": "2019-02-14 00:12:43 UTC",
+      "version": "m64kMjVhNavle0cEXCXclEtLkHfTB2cJ",
+      "sourceUrl": "/api/v1/sound-library/category_music/Mocking_Tonal_Fail_1.mp3"
+    },
+    "category_music/Musical_Correct_1": {
+      "name": "Musical_Correct_1",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 20:24:21 UTC",
+      "mp3LastModified": "2019-02-14 00:12:43 UTC",
+      "version": "GXx7OTfvp9qGCwZFneLqSEuoIzbExOiL",
+      "sourceUrl": "/api/v1/sound-library/category_music/Musical_Correct_1.mp3"
+    },
+    "category_music/Negative_Game_Fail_1": {
+      "name": "Negative_Game_Fail_1",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:24:22 UTC",
+      "mp3LastModified": "2019-02-14 00:12:44 UTC",
+      "version": "BE7LOgohYG9HqBtpUQl7Cre0a1Qn4GJy",
+      "sourceUrl": "/api/v1/sound-library/category_music/Negative_Game_Fail_1.mp3"
+    },
+    "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01": {
+      "name": "Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:24:23 UTC",
+      "mp3LastModified": "2019-02-14 00:12:45 UTC",
+      "version": "qTL16KpF275qif2w0QfO7y3HDDXTO5V6",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Achievement_Musical_Mysterious_01.mp3"
+    },
+    "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02": {
+      "name": "Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:24:57 UTC",
+      "mp3LastModified": "2019-02-14 00:12:46 UTC",
+      "version": "iEdxTQ9OzCnGPHRM_Vkq_G9AqA0Q65zU",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Achievement_Musical_Mysterious_02.mp3"
+    },
+    "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03": {
+      "name": "Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "time": 1,
+      "jsonLastModified": "2019-02-26 20:24:58 UTC",
+      "mp3LastModified": "2019-02-14 00:12:47 UTC",
+      "version": "LRwp0gJRwRPITbf3cZvrjWMZ1ibry_uW",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Achievement_Musical_Mysterious_03.mp3"
+    },
+    "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02": {
+      "name": "Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "time": 5,
+      "jsonLastModified": "2019-02-26 20:24:59 UTC",
+      "mp3LastModified": "2019-02-14 00:12:47 UTC",
+      "version": "rpUjTxATlesflsSVOBt6YTJ6nuit5CHK",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02.mp3"
+    },
+    "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03": {
+      "name": "Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "time": 3,
+      "jsonLastModified": "2019-02-26 20:25:01 UTC",
+      "mp3LastModified": "2019-02-14 00:12:48 UTC",
+      "version": "eoMGCXEQEzekkvn.4BcL2oE5eQWGUYmc",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03.mp3"
+    },
+    "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04": {
+      "name": "Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "time": 4,
+      "jsonLastModified": "2019-02-26 20:25:02 UTC",
+      "mp3LastModified": "2019-02-14 00:12:49 UTC",
+      "version": "8OlVpL4HNBCGLis0N38clxtINM8lrUGg",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04.mp3"
+    },
+    "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03": {
+      "name": "Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:25:04 UTC",
+      "mp3LastModified": "2019-02-14 00:12:51 UTC",
+      "version": "FccOA9Pi0KwtqibFf5o9C4Xqv7zH0eNy",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03.mp3"
+    },
+    "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04": {
+      "name": "Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:25:05 UTC",
+      "mp3LastModified": "2019-02-14 00:12:51 UTC",
+      "version": "q0Z6g.V.5tC5_axC8RrOSJz7ydxt0XoF",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04.mp3"
+    },
+    "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05": {
+      "name": "Puzzle_Game_Meter_Fill_Musical_Strings_05",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:25:06 UTC",
+      "mp3LastModified": "2019-02-14 00:12:52 UTC",
+      "version": "1l0AUfIdJWybUKXezllANpUtTiR3UO08",
+      "sourceUrl": "/api/v1/sound-library/category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05.mp3"
+    },
+    "category_music/Retro_Game_Magic_Spell_4": {
+      "name": "Retro_Game_Magic_Spell_4",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:25:06 UTC",
+      "mp3LastModified": "2019-02-14 00:12:53 UTC",
+      "version": "M7Lu4YPir3KE0YDndj4QQYLvGceKrGMP",
+      "sourceUrl": "/api/v1/sound-library/category_music/Retro_Game_Magic_Spell_4.mp3"
+    },
+    "category_music/Vibrant_Fanfare_Harp_Sweep_Positive": {
+      "name": "Vibrant_Fanfare_Harp_Sweep_Positive",
+      "time": 2,
+      "jsonLastModified": "2019-02-26 20:25:07 UTC",
+      "mp3LastModified": "2019-02-14 00:12:54 UTC",
+      "version": "JsHItD33t8Pzv.27Ac8Ra_Wi3XHnO2nu",
+      "sourceUrl": "/api/v1/sound-library/category_music/Vibrant_Fanfare_Harp_Sweep_Positive.mp3"
+    },
     "category_nature/FIre_Loop": {
       "name": "FIre_Loop",
       "time": 12,
@@ -5180,7 +5516,13 @@
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "80s": [
       "category_app/App_Button_1",
@@ -5220,6 +5562,15 @@
     "8bit_explosion": [
       "category_explosion/8bit_explosion"
     ],
+    "8bit_game_over_1": [
+      "category_music/8Bit_Game_Over_1"
+    ],
+    "8bit_game_over_2": [
+      "category_music/8Bit_Game_Over_2"
+    ],
+    "8bit_small_win": [
+      "category_music/8Bit_Small_Win"
+    ],
     "8bit_splat": [
       "category_hits/8bit_Splat"
     ],
@@ -5250,7 +5601,13 @@
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "action": [
       "category_hits/Retro_Game_Hit_Block_3",
@@ -5436,7 +5793,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "angry": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -5477,7 +5843,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "animal": [
       "category_background/toucan"
@@ -5647,7 +6022,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "apps": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -5756,7 +6140,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "arcade_game_button_tap": [
       "category_app/Arcade_Game_Button_Tap"
@@ -5812,7 +6221,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "artic": [
       "category_animals/penguin"
@@ -5856,7 +6274,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "authentic": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -5897,7 +6324,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "background": [
       "category_explosion/8bit_explosion",
@@ -6023,7 +6459,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "bells_win": [
       "category_bell/Bells_Win"
@@ -6073,7 +6518,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "bird": [
       "category_animals/chick",
@@ -6125,6 +6579,15 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
       "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
       "category_nature/Forest_Woodland_Ambience_2",
@@ -6133,12 +6596,30 @@
       "category_nature/Summer_Forest_Loop",
       "category_nature/Summer_Night_Loop"
     ],
+    "birthday_kazoo_negative_game_cue_1": [
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1"
+    ],
+    "birthday_kazoo_positive_game_cue_1": [
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1"
+    ],
+    "birthday_kazoo_positive_game_cue_2": [
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2"
+    ],
+    "birthday_kazoo_positive_game_cue_3": [
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3"
+    ],
     "bit": [
       "category_bell/Bells_Win",
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "blast": [
       "category_explosion/8bit_explosion",
@@ -6258,7 +6739,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "block": [
       "category_hits/Retro_Game_Hit_Block_3",
@@ -6602,7 +7108,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "by": [
       "category_collect/Puzzle_Game_Item_Select_04",
@@ -6643,7 +7174,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "calvin": [
       "category_human/Character_Calvin_Ah_Ha_1",
@@ -6702,7 +7242,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "car": [
       "category_background/city_night",
@@ -6748,6 +7297,15 @@
     ],
     "cartoon_blast_off_3": [
       "category_movement/Cartoon_Blast_Off_3"
+    ],
+    "cartoon_multi_ding_pluck_1": [
+      "category_music/Cartoon_Multi_Ding_Pluck_1"
+    ],
+    "cartoon_multi_ding_pluck_3": [
+      "category_music/Cartoon_Multi_Ding_Pluck_3"
+    ],
+    "cartoon_multi_ding_pluck_5": [
+      "category_music/Cartoon_Multi_Ding_Pluck_5"
     ],
     "cartoon_power_up_1": [
       "category_movement/Cartoon_Power_Up_1"
@@ -7390,6 +7948,50 @@
       "category_movement/Walk_Loop",
       "category_movement/Warping_Item_1"
     ],
+    "category_music": [
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Crackle_Loss_1",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/GameOver",
+      "category_music/Game_Over_2",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05",
+      "category_music/Retro_Game_Magic_Spell_4",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
+    ],
     "category_nature": [
       "category_nature/FIre_Loop",
       "category_nature/Forest_2",
@@ -7902,7 +8504,14 @@
       "category_loops/Show_Me_a_Hero_Middle_Loop",
       "category_movement/Retro_Game_Classic_Fall_1",
       "category_movement/Retro_Game_Howling_Power_Down",
-      "category_movement/Retro_Game_Long_Power_Up_1"
+      "category_movement/Retro_Game_Long_Power_Up_1",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2",
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "classic jump 1": [
       "category_jump/Classic Jump 1"
@@ -7915,6 +8524,9 @@
     ],
     "classic jump 4": [
       "category_jump/Classic Jump 4"
+    ],
+    "clear_evidence_loop1": [
+      "category_music/Clear_Evidence_Loop1"
     ],
     "click": [
       "category_app/App_Button_1",
@@ -8093,7 +8705,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "clicky_crunch": [
       "category_collect/Clicky_Crunch"
@@ -8248,7 +8885,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "coin_1": [
       "category_digital/coin_1"
@@ -8398,7 +9060,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "completed": [
       "category_female_voiceover/mission_completed_female",
@@ -8449,6 +9136,9 @@
       "category_jump/Jump_7",
       "category_jump/Ninja_Jump_2",
       "category_male_voiceover/correct_male"
+    ],
+    "correct_answer_cartoon": [
+      "category_music/Correct_Answer_Cartoon"
     ],
     "correct_female": [
       "category_female_voiceover/correct_female"
@@ -8563,7 +9253,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "cow": [
       "category_animals/cow"
@@ -8571,6 +9286,9 @@
     "crackle": [
       "category_nature/FIre_Loop",
       "category_nature/Steady_Campfire_Loop"
+    ],
+    "crackle_loss_1": [
+      "category_music/Crackle_Loss_1"
     ],
     "crafting": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -8679,7 +9397,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "crank": [
       "category_collect/Collect_Item_Bling_1",
@@ -8757,7 +9500,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "cues": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -8860,7 +9612,24 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "cyber": [
       "category_collect/Collect_Item_Bling_1",
@@ -8913,7 +9682,13 @@
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
       "category_explosion/Melodic_Loss_6",
-      "category_explosion/Retro_Game_Take_Damage_Chirp_3"
+      "category_explosion/Retro_Game_Take_Damage_Chirp_3",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "deep": [
       "category_explosion/8bit_explosion",
@@ -8972,7 +9747,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "design": [
       "category_explosion/8bit_explosion",
@@ -9290,7 +10074,15 @@
       "category_jump/Classic Jump 3",
       "category_jump/Classic Jump 4",
       "category_movement/Dice Shake 1",
-      "category_movement/Dice Shake 2"
+      "category_movement/Dice Shake 2",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2"
     ],
     "duck": [
       "category_animals/duck"
@@ -9360,7 +10152,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "eight": [
       "category_female_voiceover/eight_female",
@@ -9547,6 +10348,14 @@
       "category_movement/Retro_Game_Classic_Fall_1",
       "category_movement/Retro_Game_Howling_Power_Down",
       "category_movement/Retro_Game_Long_Power_Up_1",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2",
+      "category_music/Retro_Game_Magic_Spell_4",
       "category_nature/FIre_Loop",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
@@ -9718,7 +10527,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "explode": [
       "category_explosion/8bit_explosion",
@@ -9758,7 +10576,8 @@
       "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
-      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "explosions": [
       "category_explosion/8bit_explosion",
@@ -10068,7 +10887,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "forest": [
       "category_nature/Forest_2",
@@ -10114,6 +10942,18 @@
     ],
     "fun_bonus_explode_9": [
       "category_explosion/Fun_Bonus_Explode_9"
+    ],
+    "fun_game_win_musical_1": [
+      "category_music/Fun_Game_Win_Musical_1"
+    ],
+    "fun_game_win_musical_4": [
+      "category_music/Fun_Game_Win_Musical_4"
+    ],
+    "fun_game_win_musical_5": [
+      "category_music/Fun_Game_Win_Musical_5"
+    ],
+    "funny_chirp_bubble_postive_notification": [
+      "category_music/Funny_Chirp_Bubble_Postive_Notification"
     ],
     "game": [
       "category_app/App_Button_1",
@@ -10489,7 +11329,52 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Crackle_Loss_1",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/GameOver",
+      "category_music/Game_Over_2",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05",
+      "category_music/Retro_Game_Magic_Spell_4",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
+    ],
+    "game_over_2": [
+      "category_music/Game_Over_2"
     ],
     "game_over_female": [
       "category_female_voiceover/game_over_female"
@@ -10501,7 +11386,8 @@
       "category_nature/Game_Rain_Loop_2"
     ],
     "gameover": [
-      "category_female_voiceover/game_over_female"
+      "category_female_voiceover/game_over_female",
+      "category_music/GameOver"
     ],
     "games": [
       "category_collect/Collect_Item_Bling_1",
@@ -10563,7 +11449,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "gametime": [
       "category_background/gametime"
@@ -10801,7 +11696,8 @@
       "category_loops/Misguided_Rabbit_Chase_Minimal_Loop",
       "category_loops/Pulsating_Discovery_Loop1",
       "category_loops/Red_Flag_Loop1",
-      "category_loops/Stabilizing_Breath_Loop1"
+      "category_loops/Stabilizing_Breath_Loop1",
+      "category_music/Clear_Evidence_Loop1"
     ],
     "hydro": [
       "category_collect/Collect_Item_Bling_1",
@@ -10844,7 +11740,8 @@
       "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
-      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "insect": [
       "category_animals/bee_buzz"
@@ -10891,7 +11788,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "instrument": [
       "category_digital/whistle_down",
@@ -11103,10 +12009,59 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "intermission_whispering": [
       "category_background/intermission_whispering"
+    ],
+    "island bonus objective 3": [
+      "category_music/Island Bonus Objective 3"
+    ],
+    "island high level quick complete": [
+      "category_music/Island High Level Quick Complete"
+    ],
+    "island level complete 1": [
+      "category_music/Island Level Complete 1"
+    ],
+    "island level complete 2": [
+      "category_music/Island Level Complete 2"
+    ],
+    "island level complete 3": [
+      "category_music/Island Level Complete 3"
+    ],
+    "island level complete 4": [
+      "category_music/Island Level Complete 4"
+    ],
+    "island point tally 1": [
+      "category_music/Island Point Tally 1"
+    ],
+    "island point tally 2": [
+      "category_music/Island Point Tally 2"
     ],
     "item": [
       "category_collect/Collect_Item_Bling_1",
@@ -11289,7 +12244,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "jump_1": [
       "category_digital/jump_1"
@@ -11437,6 +12417,9 @@
     "level_male": [
       "category_male_voiceover/level_male"
     ],
+    "level_up_brightly_1": [
+      "category_music/Level_Up_Brightly_1"
+    ],
     "level_up_female": [
       "category_female_voiceover/level_up_female"
     ],
@@ -11514,7 +12497,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "lock": [
       "category_app/Bass_Power_Off",
@@ -11584,7 +12576,13 @@
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "loud": [
       "category_objects/sharp_switch"
@@ -11628,7 +12626,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "magic_cartoon_game_key_pick_up_1": [
       "category_movement/Magic_Cartoon_Game_Key_Pick_Up_1"
@@ -11870,6 +12877,14 @@
       "category_movement/Retro_Game_Classic_Fall_1",
       "category_movement/Retro_Game_Howling_Power_Down",
       "category_movement/Retro_Game_Long_Power_Up_1",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2",
+      "category_music/Retro_Game_Magic_Spell_4",
       "category_nature/FIre_Loop",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
@@ -11897,7 +12912,13 @@
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "melodic_loss_1": [
       "category_explosion/Melodic_Loss_1"
@@ -12068,7 +13089,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "metal": [
       "category_app/Modern_UI_Sound",
@@ -12143,7 +13189,18 @@
       "category_jump/Jump_7",
       "category_jump/Ninja_Jump_2",
       "category_movement/Dice Shake 1",
-      "category_movement/Dice Shake 2"
+      "category_movement/Dice Shake 2",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2"
+    ],
+    "mocking_tonal_fail_1": [
+      "category_music/Mocking_Tonal_Fail_1"
     ],
     "modern_ui_sound": [
       "category_app/Modern_UI_Sound"
@@ -12193,7 +13250,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "mouse": [
       "category_digital/squeak"
@@ -12318,7 +13384,27 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
+    ],
+    "musical_correct_1": [
+      "category_music/Musical_Correct_1"
     ],
     "nature": [
       "category_nature/FIre_Loop",
@@ -12356,6 +13442,9 @@
       "category_jump/Arcade_Game_Jump_18",
       "category_jump/Jump_7",
       "category_jump/Ninja_Jump_2"
+    ],
+    "negative_game_fail_1": [
+      "category_music/Negative_Game_Fail_1"
     ],
     "new": [
       "category_female_voiceover/new_highscore_female",
@@ -12508,7 +13597,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "notification_4": [
       "category_bell/Notification_4"
@@ -12611,7 +13725,13 @@
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "organic": [
       "category_app/Perfect_App_Button_1",
@@ -12673,7 +13793,14 @@
       "category_loops/Red_Flag_Loop1",
       "category_loops/Stabilizing_Breath_Loop1",
       "category_male_voiceover/game_over_male",
-      "category_male_voiceover/time_over_male"
+      "category_male_voiceover/time_over_male",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "owl": [
       "category_animals/owl"
@@ -12966,7 +14093,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "pig": [
       "category_animals/pig"
@@ -13074,7 +14226,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "positive": [
       "category_bell/Hollow_Bell_Notification",
@@ -13207,7 +14368,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "power": [
       "category_collect/Collect_Item_Bling_1",
@@ -13358,7 +14544,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "pregame_fans": [
       "category_background/pregame_fans"
@@ -13390,7 +14601,8 @@
       "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
-      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "puppy": [
       "category_animals/puppy"
@@ -13438,7 +14650,34 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
+    ],
+    "puzzle_game_achievement_musical_mysterious_01": [
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01"
+    ],
+    "puzzle_game_achievement_musical_mysterious_02": [
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02"
+    ],
+    "puzzle_game_achievement_musical_mysterious_03": [
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03"
+    ],
+    "puzzle_game_achievement_musical_mysterious_long_02": [
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02"
+    ],
+    "puzzle_game_achievement_musical_mysterious_long_03": [
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03"
+    ],
+    "puzzle_game_achievement_musical_mysterious_long_04": [
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04"
     ],
     "puzzle_game_break_magic_01": [
       "category_explosion/Puzzle_Game_Break_Magic_01"
@@ -13493,6 +14732,15 @@
     ],
     "puzzle_game_magic_item_unlock_5": [
       "category_hits/Puzzle_Game_Magic_Item_Unlock_5"
+    ],
+    "puzzle_game_meter_fill_musical_strings_03": [
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03"
+    ],
+    "puzzle_game_meter_fill_musical_strings_04": [
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04"
+    ],
+    "puzzle_game_meter_fill_musical_strings_05": [
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "puzzle_game_organic_metal_tile_hit_1": [
       "category_hits/Puzzle_Game_Organic_Metal_Tile_Hit_1"
@@ -13746,7 +14994,14 @@
       "category_loops/Show_Me_a_Hero_Middle_Loop",
       "category_movement/Retro_Game_Classic_Fall_1",
       "category_movement/Retro_Game_Howling_Power_Down",
-      "category_movement/Retro_Game_Long_Power_Up_1"
+      "category_movement/Retro_Game_Long_Power_Up_1",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2",
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "retro_game_classic_explosion_1": [
       "category_explosion/Retro_Game_Classic_Explosion_1"
@@ -13852,6 +15107,9 @@
     ],
     "retro_game_long_power_up_1": [
       "category_movement/Retro_Game_Long_Power_Up_1"
+    ],
+    "retro_game_magic_spell_4": [
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "retro_game_multi_point_pickup_1": [
       "category_jump/Retro_Game_Multi_Point_Pickup_1"
@@ -14434,7 +15692,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "small_restaurant": [
       "category_background/small_restaurant"
@@ -14544,7 +15827,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_06",
       "category_movement/Unique_Snow_or_Ice_Footstep_3",
       "category_movement/Walk_2_Loop",
-      "category_movement/Walk_Loop"
+      "category_movement/Walk_Loop",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "sounds": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -14679,7 +15971,33 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "south_carolina_beach_1": [
       "category_nature/South_Carolina_Beach_1"
@@ -14832,7 +16150,8 @@
       "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
-      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "sport": [
       "category_objects/kickball"
@@ -15009,6 +16328,14 @@
       "category_movement/Retro_Game_Classic_Fall_1",
       "category_movement/Retro_Game_Howling_Power_Down",
       "category_movement/Retro_Game_Long_Power_Up_1",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2",
+      "category_music/Retro_Game_Magic_Spell_4",
       "category_nature/FIre_Loop",
       "category_nature/Forest_2",
       "category_nature/Forest_Woodland_Ambience",
@@ -15061,7 +16388,13 @@
       "category_digital/coin_2",
       "category_digital/coin_3",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "summer": [
       "category_nature/Summer_Night_Loop"
@@ -15112,7 +16445,13 @@
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "synthesize": [
       "category_background/synthesize"
@@ -15302,7 +16641,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "textile": [
       "category_objects/cloth"
@@ -15346,7 +16694,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "three": [
       "category_female_voiceover/three_female",
@@ -15469,7 +16826,16 @@
       "category_movement/Puzzle_Game_Whoosh_Heavy_03",
       "category_movement/Puzzle_Game_Whoosh_Heavy_04",
       "category_movement/Puzzle_Game_Whoosh_Heavy_05",
-      "category_movement/Puzzle_Game_Whoosh_Heavy_06"
+      "category_movement/Puzzle_Game_Whoosh_Heavy_06",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_01",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_02",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_03",
+      "category_music/Puzzle_Game_Achievement_Musical_Mysterious_Long_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_03",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_04",
+      "category_music/Puzzle_Game_Meter_Fill_Musical_Strings_05"
     ],
     "token": [
       "category_collect/Collect_Item_Bling_1",
@@ -15597,14 +16963,41 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Clear_Evidence_Loop1",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "tone": [
       "category_loops/Faultering_Desicion_Loop1",
       "category_loops/Misguided_Rabbit_Chase_Minimal_Loop",
       "category_loops/Pulsating_Discovery_Loop1",
       "category_loops/Red_Flag_Loop1",
-      "category_loops/Stabilizing_Breath_Loop1"
+      "category_loops/Stabilizing_Breath_Loop1",
+      "category_music/Clear_Evidence_Loop1"
     ],
     "toucan": [
       "category_background/toucan"
@@ -15950,7 +17343,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "vibrant": [
       "category_bell/Quriky_Trill_Bling_Positive",
@@ -16052,7 +17470,24 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "vibrant game coming back vibe loop 1": [
       "category_loops/Vibrant Game Coming Back Vibe Loop 1"
@@ -16074,6 +17509,9 @@
     ],
     "vibrant_deep_wet_explosion": [
       "category_explosion/Vibrant_Deep_Wet_Explosion"
+    ],
+    "vibrant_fanfare_harp_sweep_positive": [
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "vibrant_fly_icon_power_booster_1": [
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1"
@@ -16550,7 +17988,8 @@
       "category_hits/Retro_Game_Weapon_-_LIght_Punch_2",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_1",
       "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_2",
-      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3"
+      "category_hits/Retro_Game_Weapon_-_Sword_on_Shield_3",
+      "category_music/Retro_Game_Magic_Spell_4"
     ],
     "weapons": [
       "category_explosion/8bit_explosion",
@@ -16727,7 +18166,32 @@
       "category_movement/Spun_Power_Down_2",
       "category_movement/Vibrant_Fly_Icon_Power_Booster_1",
       "category_movement/Vibrant_Vanish_Speical_Collect",
-      "category_movement/Warping_Item_1"
+      "category_movement/Warping_Item_1",
+      "category_music/Birthday_Kazoo_Negative_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_1",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_2",
+      "category_music/Birthday_Kazoo_Positive_Game_Cue_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_1",
+      "category_music/Cartoon_Multi_Ding_Pluck_3",
+      "category_music/Cartoon_Multi_Ding_Pluck_5",
+      "category_music/Correct_Answer_Cartoon",
+      "category_music/Fun_Game_Win_Musical_1",
+      "category_music/Fun_Game_Win_Musical_4",
+      "category_music/Fun_Game_Win_Musical_5",
+      "category_music/Funny_Chirp_Bubble_Postive_Notification",
+      "category_music/Island Bonus Objective 3",
+      "category_music/Island High Level Quick Complete",
+      "category_music/Island Level Complete 1",
+      "category_music/Island Level Complete 2",
+      "category_music/Island Level Complete 3",
+      "category_music/Island Level Complete 4",
+      "category_music/Island Point Tally 1",
+      "category_music/Island Point Tally 2",
+      "category_music/Level_Up_Brightly_1",
+      "category_music/Mocking_Tonal_Fail_1",
+      "category_music/Musical_Correct_1",
+      "category_music/Negative_Game_Fail_1",
+      "category_music/Vibrant_Fanfare_Harp_Sweep_Positive"
     ],
     "wind": [
       "category_background/large_fan"
@@ -16740,7 +18204,13 @@
       "category_bell/Bells_Win_High",
       "category_bell/Bells_Win_Low",
       "category_explosion/Melodic_Loss_1",
-      "category_explosion/Melodic_Loss_6"
+      "category_explosion/Melodic_Loss_6",
+      "category_music/8Bit_Game_Over_1",
+      "category_music/8Bit_Game_Over_2",
+      "category_music/8Bit_Small_Win",
+      "category_music/Crackle_Loss_1",
+      "category_music/GameOver",
+      "category_music/Game_Over_2"
     ],
     "woods": [
       "category_nature/Forest_2",
