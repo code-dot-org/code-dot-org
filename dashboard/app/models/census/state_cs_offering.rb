@@ -72,6 +72,7 @@ class Census::StateCsOffering < ApplicationRecord
   # not want to treat the lack of data as a no for those.
   INFERRED_NO_EXCLUSION_LIST = %w(
     CO
+    DE
     ID
     ME
     MI
