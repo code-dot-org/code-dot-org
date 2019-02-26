@@ -63,10 +63,7 @@
     "palette_category_at_start": "variables",
     "project_template_level_name": "U4 L07 Conditionals cat flowchart template",
     "teacher_markdown": "This level is designed to help students think through the order of Boolean expressions in an if-else statement. \r\n\r\nIf students place the `age >=13 && money >= 40` Boolean expression first, a cat will be displayed for a 13 year old with $200 instead of a kitten. To account for this, students must begin with the most specific Boolean expression. If they place the `money >= 200` first it will \"catch\" the 13 year old with $200 situation, and indicate a kitten can be adopted.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
