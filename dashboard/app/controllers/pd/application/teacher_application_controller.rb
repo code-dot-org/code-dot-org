@@ -18,20 +18,14 @@ module Pd::Application
       @application = TEACHER_APPLICATION_CLASS.find_by(user: current_user)
       return render :submitted if @application
 
-      options = TEACHER_APPLICATION_CLASS.options.camelize_keys
-
-      school_id = current_user.school_info&.school&.id
-      if school_id
-        options[:school_id] = school_id
-      end
-
       @script_data = {
         props: {
-          options: options,
+          options: TEACHER_APPLICATION_CLASS.options.camelize_keys,
           requiredFields: TEACHER_APPLICATION_CLASS.camelize_required_fields,
           accountEmail: current_user.email,
           apiEndpoint: '/api/v1/pd/application/teacher',
-          userId: current_user.id
+          userId: current_user.id,
+          schoolId: current_user.school_info&.school&.id
         }.to_json
       }
     end

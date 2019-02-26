@@ -41,9 +41,10 @@ export default class Teacher1920Application extends FormController {
     }
 
     // Populate data from server only if it doesn't override data in sessionStorage
-    if (reloadedSchoolId === undefined && this.props.options.school_id) {
-      const autofill = {school: this.props.options.school_id};
-      this.setState({data: {...this.state.data, ...autofill}});
+    // (even if value in sessionStorage is null)
+    if (reloadedSchoolId === undefined && this.props.schoolId) {
+      const schoolAutoFill = {school: this.props.schoolId};
+      this.setState({data: {...this.state.data, ...schoolAutoFill}});
     }
   }
 
