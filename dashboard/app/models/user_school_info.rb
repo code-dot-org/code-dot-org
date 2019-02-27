@@ -15,4 +15,7 @@
 class UserSchoolInfo < ApplicationRecord
   validates_presence_of :user
   validates_presence_of :school_info
+
+  belongs_to :user
+  belongs_to :school_info
 end
