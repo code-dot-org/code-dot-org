@@ -138,22 +138,11 @@ class UserTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
-  test 'normalize_email for non-migrated user' do
-    teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
-    assert_equal 'caps@example.com', teacher.email
-  end
-
   test 'normalize_email for migrated user' do
     teacher = create :teacher, email: 'OLD@EXAMPLE.COM'
     teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
     assert_equal 'new@example.com', teacher.primary_contact_info.email
     assert_equal 'new@example.com', teacher.read_attribute(:email)
-  end
-
-  test 'hash_email for non-migrated user' do
-    @teacher.update!(email: 'hash_email@example.com')
-    assert_equal User.hash_email('hash_email@example.com'),
-      @teacher.hashed_email
   end
 
   test 'hash_email for migrated user' do
@@ -369,7 +358,7 @@ class UserTest < ActiveSupport::TestCase
   def cannot_update_user_with_email(email, *user_args)
     user = create(*user_args)
     if user.migrated?
-      refute user.authentication_options.first.update(email: email)
+      refute user.primary_contact_info.update(email: email)
     else
       refute user.update(email: email)
     end
@@ -450,14 +439,14 @@ class UserTest < ActiveSupport::TestCase
   test "Saving Teacher's AuthenticationOption with an email change causes email collision check" do
     user = create :teacher
     User.expects(:find_by_email_or_hashed_email)
-    user.authentication_options.first.email = 'new-email@example.org'
+    user.primary_contact_info.email = 'new-email@example.org'
     user.valid?
   end
 
   test "Saving Student's AuthenticationOption with a hashed_email change causes email collision check" do
     user = create :student
     User.expects(:find_by_hashed_email)
-    user.authentication_options.first.hashed_email = User.hash_email 'new-email@example.org'
+    user.primary_contact_info.hashed_email = User.hash_email 'new-email@example.org'
     user.valid?
   end
 
@@ -465,15 +454,8 @@ class UserTest < ActiveSupport::TestCase
     user = create :student
     User.expects(:find_by_email_or_hashed_email).never
     User.expects(:find_by_hashed_email).never
-    user.authentication_options.first.data = 'unrelated change'
+    user.primary_contact_info.data = 'unrelated change'
     user.valid?
-  end
-
-  test "saving non-migrated teacher does not remove cleartext email addresses" do
-    User.any_instance.expects(:remove_cleartext_emails).never
-    teacher = create :teacher, email: 'teacher@email.com'
-    teacher.reload
-    assert_equal 'teacher@email.com', teacher.email
   end
 
   test "saving migrated teacher does not remove cleartext email addresses" do
@@ -481,12 +463,7 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher, email: 'teacher@email.com'
     teacher.reload
     assert_equal 1, teacher.authentication_options.count
-    assert_equal 'teacher@email.com', teacher.authentication_options.first.email
-  end
-
-  test "saving non-migrated student does not call remove_cleartext_emails" do
-    User.any_instance.expects(:remove_cleartext_emails).never
-    create :student, email: 'student@email.com'
+    assert_equal 'teacher@email.com', teacher.primary_contact_info.email
   end
 
   test "saving migrated student that was previously a teacher removes cleartext email addresses" do
@@ -744,7 +721,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
-    migrated_student = create(:student, email: email)
+    migrated_student = create(:student, :multi_auth_migrated, email: email)
     migrated_student.primary_contact_info = migrated_student.primary_contact_info
     migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
     legacy_student = build(:student, email: email)
@@ -2093,19 +2070,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal ['Secret words are invalid'], word_student.errors.full_messages
   end
 
-  test 'upgrade_to_personal_login is true for successfully updated non-migrated student' do
-    student = create :student, :unmigrated_google_sso
-    params = upgrade_to_personal_login_params
-
-    assert student.upgrade_to_personal_login(params)
-    student.reload
-    assert_nil student.provider
-    assert_equal User.hash_email(params[:email]), student.hashed_email
-    assert_equal params[:username], student.username
-    assert_equal params[:parent_email], student.parent_email
-    assert student.valid_password?(params[:password])
-  end
-
   test 'upgrade_to_personal_login is false for migrated student if update_primary_contact_info fails' do
     student = create :student, :with_migrated_google_authentication_option
     student.stubs(:update_primary_contact_info!).raises(RuntimeError)
@@ -3350,10 +3314,10 @@ class UserTest < ActiveSupport::TestCase
 
     assert_creates(User) do
       user = User.from_omniauth(auth, params)
-      assert_equal 'fake oauth token', user.oauth_token
-      assert_equal 'fake refresh token', user.oauth_refresh_token
       assert_equal 'google_oauth2', user.provider
       assert_equal 'Some User', user.name
+      assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
+      assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
       assert_equal User::TYPE_STUDENT, user.user_type
     end
   end
@@ -3849,21 +3813,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'primary email for migrated user is readable from user model' do
-    user = create(:teacher, :with_email_authentication_option)
-    user.primary_contact_info = user.authentication_options.first
+    user = create(:teacher)
     user.provider = 'migrated'
     user.primary_contact_info.update(email: 'eric@code.org')
-    assert_equal user.email, user.authentication_options.first.email
     assert_equal user.email, user.primary_contact_info.email
-  end
-
-  test 'primary email for non-migrated user is not readable from user model' do
-    user = create(:teacher, :with_email_authentication_option)
-    user.primary_contact_info = user.authentication_options.first
-    user.primary_contact_info.update(email: 'eric@code.org')
-    assert_not_equal user.email, user.authentication_options.first.email
-    assert_not_equal user.email, user.primary_contact_info.email
-    assert_equal user.primary_contact_info.email, user.authentication_options.first.email
+    assert_equal user.email, user.primary_contact_info.email
   end
 
   test 'within_united_states? is false without UserGeo record' do
