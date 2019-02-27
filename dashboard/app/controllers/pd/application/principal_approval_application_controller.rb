@@ -23,7 +23,14 @@ module Pd::Application
         principal_first_name: application_hash[:principal_first_name],
         principal_last_name: application_hash[:principal_last_name],
         principal_title: application_hash[:principal_title],
-        principal_email: application_hash[:principal_email]
+        principal_email: application_hash[:principal_email],
+        school: application_hash[:school], # NCES id
+        school_type: application_hash[:school_type],
+        school_name: application_hash[:school_name],
+        school_address: application_hash[:school_address],
+        school_city: application_hash[:school_city],
+        school_state: application_hash[:school_state],
+        school_zip_code: application_hash[:school_zip_code],
       }
 
       # Return submitted if the approval exists and is not a placeholder

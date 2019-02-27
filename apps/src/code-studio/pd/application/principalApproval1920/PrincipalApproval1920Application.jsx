@@ -26,7 +26,14 @@ export default class PrincipalApproval1920Application extends FormController {
       lastName: props.teacherApplication.principal_last_name,
       title: props.teacherApplication.principal_title,
       email: props.teacherApplication.principal_email,
-      course: props.teacherApplication.course
+      course: props.teacherApplication.course,
+      school: props.teacherApplication.school,
+      schoolType: props.teacherApplication.school_type,
+      schoolName: props.teacherApplication.school_name,
+      schoolAddress: props.teacherApplication.school_address,
+      schoolCity: props.teacherApplication.school_city,
+      schoolState: props.teacherApplication.school_state,
+      schoolZipCode: props.teacherApplication.school_zip_code
     });
   }
   /**
