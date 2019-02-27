@@ -139,6 +139,11 @@ function main() {
             window.location = `${studioUrlPrefix}/home`;
           }
         });
+        $routeProvider.when('/plan', {
+          redirectTo: function() {
+            window.location = '/lesson_plans';
+          }
+        });
         $routeProvider.when('/sections', {
           templateUrl: '/teacher-dashboard/sections',
           controller: 'SectionsController'
