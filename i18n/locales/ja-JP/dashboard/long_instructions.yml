@@ -151,6 +151,54 @@ ja:
       Course 4 Play Lab Vars 2: "さっきのゲームは、ネコが早すぎだったよね！\n'dog_speed'（ドッグ スピード） は、犬の早さを決めます。'cat_speed（キャット スピード）は、ネコの早さを決めます。\n'dog_speed'の数を大きくして、ネコより多くのハタを集めましょう。先に、10 ハタを集めたほうが勝ちです！"
       Course 4 Play Labs For Loops 1: "犬が1 から 100 までの数字を話すようにします。\n「キャラ1 言う」ブロックに、 `counter` 変数ブロックを組み合わせて、実行して下さい。"
       Course 4 Playlab For Loops 5b: くりかえしの「ずつ」の数を調整して、両方のキャラが真ん中の同じ所で止まるようにして下さい。
+      CourseD_Dance_Party_01: |-
+        *ダンスパーティーしよう！*
+
+        ’新しくつくる’ブロックをワークスペースにドラッグしてひっぱってきてください。それを’セットアップ’ブロックの中につなぎ、最初のダンサーを作成しましょう。
+
+        * *もっと情報が必要だったり、追加のチャレンジに挑戦したい時は、左側の電球をクリックしてください。*
+      CourseD_Dance_Party_02: |-
+        このムースを踊らせてみましょう！
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">フロス</title><title name="DIR">-1</title></block></xml> ブロックをワークスペースにドラッグしてひっぱってきてください。これを<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> ブロックの下につなげてください。ダンサーは4小節後に新しい動きを始めるはずです。
+
+
+        ** 小節**は音楽の中で時間の長さを数えるのに使う単位です。このチュートリアルでは、1小節は4拍になります。
+      CourseD_Dance_Party_03: "*グルーブが生まれたね！*\n\n<xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"小節\"</title></block></xml> のブロックをワークスペースに追加してください。6小節後にダンサーが新しい動きを始めるようにしましょう。"
+      CourseD_Dance_Party_04: |-
+        *このダンスはもっと派手にしないと！*
+
+        ダンサーの後ろに背景エフェクトを追加する新しいブロックを、ツールボックスの中から探してみましょう。音楽に合わせてエフェクトが変わるのを見てみましょう！
+      CourseD_Dance_Party_05: |-
+        もう1つ新しいブロックを使用して、ダンサーの動きを **2小節ごとに**変えてみましょう！
+
+        *’(次へ)’、’(前へ)’、または ’(ランダム)’を選択すると、コードを実行するたびにダンサーが異なる動きをするよう命令を出します。
+      CourseD_Dance_Party_06: |-
+        *もっとダンサーを増やそう！*
+
+        ’backup_dancer1’という名前のバックダンサーを追加して、猫と一緒に踊らせてみましょう。
+      CourseD_Dance_Party_08: |-
+        どのダンサーにも、外見を制御する_プロパティ_ のセットがあります
+
+        _おおきさ_ を小さくすると、ダンサーが背後で踊っているかのように見せることができます。両方のバックダンサーを同じ大きさにできますか？
+      CourseD_Dance_Party_09: |-
+        ダンサーには、色のレイヤーを追加する”色合い”プロパティがあります。ダンサーのうちの1人の色合いを変えてみましょう。
+        *色合いは、あなたがダンサーの色として選択した色と混ざり合います。
+      CourseD_Dance_Party_10: |-
+        これで、ダンサーのプロパティを変える方法がわかりました。以下のブロックを使用して、同じプロパティが音楽に反応して自動的に変わるよう設定することもできます。
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"スケール"</title>
+        <title name="RANGE">"ベース"</title>
+        </block></xml>
+
+        このプログラムでは、音楽の”低音”（低い音）の大きさを利用してダンサーの高さをコントロールします。他のダンサーも、音楽に反応させることができますか？
+      CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> ブロックを使うと、上向きの矢印が押されたときにコードを実行することができます。\n\nダンスの動きを変更したり、ダンサーのプロパティを変更したり、短い動きを1回だけさせることもできます。クリエイティブになって、あたらしいブロックたちを見てみましょう！"
+      CourseD_Dance_Party_11_5: "このブロックをチェックしてみましょう。\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"アヒル\"</title>\n<title name=\"LAYOUT\">\"円\"</title>\n</block></xml>\n\n次は、たくさんのダンサーを一度に作成します！\n\n\"すべてのアヒル”のブロックを使用して、アヒルが全員一度にダンスするコードを書きましょう。"
+      CourseD_Dance_Party_11b: |-
+        思いっきりダンスする時間です！左矢印キーが押されると、ネコがダブの動きをします。右矢印キーを押したら、ロボットが”ドロップ”の動きをするようにしましょう。
+      CourseD_Dance_Party_12: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
       CourseF_PlayLab_vars2: "さっきのゲームは、ネコが早すぎだったよね！\n'dog_speed'（ドッグ スピード） は、犬の早さを決めます。'cat_speed（キャット スピード）は、ネコの早さを決めます。\n'dog_speed'の数を大きくして、ネコより多くのハタを集めましょう。先に、10 ハタを集めたほうが勝ちです！"
       Dance Party 7 - Validated: "最後に「私のベル」という新しいベルスプライトを追加します。"
       Dance Party 7: "最後に「私のベル」という新しいベルスプライトを追加します。"

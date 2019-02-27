@@ -154,7 +154,7 @@
         options:
           RANGE:
             '"low"': bass
-            '"mid"': midt
+            '"mid"': mellomtone
             '"high"': diskant
       Dancelab_getProp:
         text: "{SPRITE} {PROPERTY}"
@@ -312,7 +312,7 @@
         options:
           EFFECT:
             '"none"': Ingen
-            '"circles"': Tunnel
+            '"circles"': Sirkler
             '"color_cycle"': Farger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokule
@@ -323,7 +323,7 @@
             '"splatter"': Rosa splætt
             '"rainbow"': Regnbue
             '"snowflakes"': Snø
-            '"text"': Sangtittel
+            '"text"': Sangtitler
             '"galaxy"': Verdensrom
             '"sparkles"': Glitter
             '"spiral"': Spiral
@@ -332,7 +332,7 @@
           PALETTE:
             '"rave"': Svart-hvitt
             '"cool"': Blåfarger
-            '"electronic"': Elektronikk
+            '"electronic"': Elektronisk
             '"iceCream"': Iskrem
             '"default"': Lys
             '"neon"': Neon
@@ -345,7 +345,7 @@
           EFFECT:
             '"none"': Ingen
             '"rand"': "(Tilfeldig)"
-            '"circles"': Tunnel
+            '"circles"': Sirkler
             '"color_cycle"': Farger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokule
@@ -356,7 +356,7 @@
             '"splatter"': Rosa splætt
             '"rainbow"': Regnbue
             '"snowflakes"': Snø
-            '"text"': Sangtittel
+            '"text"': Sangtitler
             '"sparkles"': Glitter
             '"spiral"': Spiral
             '"disco"': Kvadrater
@@ -364,7 +364,7 @@
           PALETTE:
             '"rave"': Svart-hvitt
             '"cool"': Blåfarger
-            '"electronic"': Elektronikk
+            '"electronic"': Elektronisk
             '"iceCream"': Iskrem
             '"default"': Lys
             '"neon"': Neon
@@ -415,7 +415,7 @@
             '"pizzas"': Pizzaer
             '"smiling_poop"': Bæsj
             '"rain"': Regn
-            '"floating_rainbows"': Regnbue
+            '"floating_rainbows"': Regnbuer
             '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"color_lights"': Scenelys
@@ -434,7 +434,7 @@
             '"pizzas"': Pizzaer
             '"smiling_poop"': Bæsj
             '"rain"': Regn
-            '"floating_rainbows"': Regnbue
+            '"floating_rainbows"': Regnbuer
             '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"color_lights"': Scenelys
@@ -542,7 +542,7 @@
             '"tint"': fargetone
           RANGE:
             '"bass"': bass
-            '"mid"': midt
+            '"mid"': mellomtone
             '"treble"': diskant
       Dancelab_stopMapping:
         text: "{SPRITE} stopper {PROPERTY} etter {RANGE}"
@@ -558,7 +558,7 @@
             '"tint"': fargetone
           RANGE:
             '"bass"': bass
-            '"mid"': midt
+            '"mid"': mellomtone
             '"treble"': diskant
       Dancelab_whenKey:
         text: når {KEY} trykkes
@@ -590,7 +590,7 @@
         options:
           RANGE:
             '0': bass
-            '1': midt
+            '1': mellomtone
             '2': diskant
       Dancelab_whenSetup:
         text: oppsett
@@ -622,7 +622,7 @@
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
       gamelab_console.log:
-        text: logg-melding {MESSAGE}
+        text: loggmelding {MESSAGE}
       gamelab_createNewSprite:
         text: "lag en ny sprite \n kalt {NAME} \n med kostyme {COSTUME} \n plassert {LOCATION}"
       gamelab_debugSprite:
@@ -1008,7 +1008,7 @@
       RyanLab_turnRight:
         text: snu mot høyre
       Vector_log:
-        text: logg-melding {MESSAGE}
+        text: loggmelding {MESSAGE}
       Vector_randomLocation:
         text: tilfeldig sted
       Vector_vectorNorth:
@@ -1075,6 +1075,11 @@
         options:
           DURATION:
             '"0"': for alltid
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': vis
+            '"hide"': gjemme
       binary_goToHome:
         text: hopp til øverst til venstre
       binary_move:
@@ -1127,7 +1132,7 @@
             "'darkPrismarine'": mørk prismarine
             "'seaLantern'": sjølanterne
       craft_log:
-        text: logg-melding {MESSAGE}
+        text: loggmelding {MESSAGE}
       craft_moveForward:
         text: gå fremover
       craft_placeBlock:
@@ -1142,12 +1147,12 @@
             '"decorativeStoneBricks"': dekorativ murstein
             '"blueCoralBlock"': blå korall blokk
             '"pinkCoralBlock"': rosa korall blokk
-            '"magentaCoralBlock"': fiolett korall blokk
+            '"magentaCoralBlock"': magenta korall blokk
             '"redCoralBlock"': rød korall blokk
-            '"yellowCoralBlock"': rød korall blokk
+            '"yellowCoralBlock"': gul korall blokk
             '"blueDeadCoralBlock"': blå død korall blokk
             '"pinkDeadCoralBlock"': rosa død korall blokk
-            '"magentaDeadCoralBlock"': fiolett død korall blokk
+            '"magentaDeadCoralBlock"': magenta død korall blokk
             '"readDeadCoralBlock"': rød død korallrev blokk
             '"yellowDeadCoralBlock"': gul død korallrev blokk
             '"prismarine"': prismarine

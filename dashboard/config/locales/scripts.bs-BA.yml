@@ -2020,6 +2020,8 @@ bs:
               name: 'Izvanmrežno: Binarni'
             Artist Binary:
               name: Umjetnik Binarno
+            Dance Party:
+              name: Plesna zabava
         coursee-2019:
           stages:
             Building a Foundation:

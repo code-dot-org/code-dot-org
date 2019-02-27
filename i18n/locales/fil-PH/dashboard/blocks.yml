@@ -446,6 +446,11 @@ fil:
         options:
           DURATION:
             '"0"': magpakailanman
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': ipakita
+            '"hide"': itago
       binary_move:
         options:
           DIR:

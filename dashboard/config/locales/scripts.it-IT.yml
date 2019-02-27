@@ -23,7 +23,8 @@ it:
             collaborare con altri. Alla fine del corso gli studenti creano i loro
             giochi o le loro storie, che possono condividere. Il corso è raccomandato
             per la prima e la seconda elementare.
-          description_short: Il corso 1 è rivolto a chi sta iniziando a leggere.
+          description_short: Introduzione all'informatica per bambini che stanno iniziando
+            a leggere.
           description_audience: Da 4 anni in su (pre-scolare)
           stages:
             'Artist: Loops':
@@ -69,7 +70,8 @@ it:
             Nel corso gli studenti creano programmi per risolvere problemi e sviluppare
             giochi interattivi o storie da condividere. Il corso è raccomandato dalla
             terza elementare.
-          description_short: Il corso 2 è rivolto a studenti che sanno leggere.
+          description_short: Introduzione all'informatica per studenti che sanno già
+            leggere.
           description_audience: Dai 6 anni in su (è necessario saper leggere)
           stages:
             'Artist: Debugging':
@@ -118,7 +120,9 @@ it:
             complessi. Alla fine del corso gli studenti creano giochi interattivi
             e storie da condividere con tutti. Il corso è raccomandato a partire dalla
             quarta elementare.
-          description_short: Il Corso 3 è la continuazione del Corso 2.
+          description_short: Entra ancora più a fondo nella programmazione creando
+            giochi e storie interattive e imparando concetti nuovi come le funzioni.
+            È la continuazione del Corso 2.
           description_audience: Da 8 anni in su (dopo il Corso 2)
           stages:
             Artist:
@@ -205,8 +209,9 @@ it:
             proposti. Una volta completato questo corso, gli studenti saranno in grado
             di creare programmi abbastanza complessi, anche con l'utilizzo di cicli
             con contatore e funzioni con parametri.
-          description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già
-            svolto i Corsi 2 e 3.
+          description_short: Costruisci programmi più complessi imparando concetti
+            come variabili, cicli con contatore e funzioni con parametri. È la continuazione
+            del corso 3.
           description_audience: Da 10 anni in su (dopo il Corso 3)
           stages:
             Artist:
@@ -3950,6 +3955,8 @@ it:
               name: 'Artista: Binario'
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+            Dance Party:
+              name: Ballando col codice
         coursee-2019:
           description: Si inizia con algoritmi, cicli, istruzioni condizionali ed
             eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,

@@ -415,6 +415,11 @@ pt:
         options:
           DURATION:
             '"0"': para sempre
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mostrar
+            '"hide"': ocultar
       binary_move:
         options:
           DIR:

@@ -5811,3 +5811,7 @@ ka:
               name: აპლიკაციების ნიმუშები
             Final Project:
               name: ფინალური პროექტი
+        csp1-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე

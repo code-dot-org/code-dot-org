@@ -1308,6 +1308,7 @@ es:
             '"y"': posición y
             '"direction"': dirección del movimiento
       aalab_checkTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
           CONDITION:
             '"when"': cuando
@@ -1323,9 +1324,9 @@ es:
       aalab_createNewSpriteAdvanced:
         text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}
@@ -1353,19 +1354,28 @@ es:
             '"left"': izquierda
             '"right"': derecha
             '"space"': espacio
+      aalab_locationOf:
+        text: aalab posición de {SPRITE}
       aalab_location_picker:
         text: "{LOCATION}"
+      aalab_moveForward:
+        text: aalab mover {SPRITE} {DISTANCE} píxeles hacia adelante
       aalab_moveInDirection:
+        text: aalab mover {SPRITE} {DISTANCE} píxeles {DIRECTION}
         options:
           DIRECTION:
             '"North"': Norte
             '"East"': Este
             '"South"': Sur
             '"West"': Oeste
+      aalab_moveToward:
+        text: aalab mover {SPRITE} distancia {DISTANCE} hacia {TARGET}
       aalab_nameStringSay:
         text: "{NAMESTRING} dice {MESSAGE}"
       aalab_prompt:
         text: preguntar {MESSAGE}
+      aalab_randomLocation:
+        text: aalab posición aleatoria
       aalab_removeOneAndAll:
         text: aalab eliminar {THIS}
       aalab_setBG:
@@ -1373,11 +1383,15 @@ es:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
       aalab_setCollidable:
+        text: aalab establecer {SPRITE} colisionado con {VAL}
         options:
           VAL:
             '"true"': verdadero
             '"false"': falso
+      aalab_setDirection:
+        text: aalab establecer {SPRITE} dirección de movimiento {DIRECTION}
       aalab_setProp:
+        text: aalab establecer {SPRITE} {PROPERTY} a {VAL}
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -1386,14 +1400,27 @@ es:
             '"y"': posición y
             '"direction"': dirección del movimiento
             '"tint"': tonalidad
+      aalab_setSpriteVariable:
+        text: aalab establecer {VARIABLE} a {SPRITE}
       aalab_showCustomText:
+        text: mostrar texto{TEXT}ubicación{LOCATION}tamaño{SIZE}color{COLOR}duración{DURATION}
         options:
           DURATION:
+            '"1"': 1 segundo
+            '"2"': 2 segundos
+            '"3"': 3 segundos
+            '"4"': 4 segundos
+            '"5"': 5 segundos
             '"0"': para siempre
       aalab_speakerSaysConsole:
         text: "{SPRITE} dice {MESSAGE}"
       aalab_spriteSay:
         text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mostrar
+            '"hide"': ocultar
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:

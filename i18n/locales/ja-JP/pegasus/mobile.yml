@@ -413,6 +413,7 @@
   minecraft_adventurer: "Minecraftアドベンチャー"
   minecraft_tutorials: "MinecraftのHour of Codeチュートリアル"
   minecraft_specs: "多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上"
+  minecraft_start_tutorial: "チュートリアルを開始します"
   minecraft_agent_description: "Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ"
   minecraft_agent_button: "始める"
   minecraft_designer_description: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
@@ -1449,6 +1450,7 @@
   user_header_minecraft: "マインクラフト"
   user_header_flappy: "フラッピー"
   user_header_view_all: "すべてのプロジェクトを見る"
+  user_header_view_project_gallery: "プロジェクトギャラリーを見ます"
   user_header_view_my_projects: "マイプロジェクトを見る"
   view_all_sections: "すべてのセクションを表示"
   view_section: "セクションを見る"
@@ -1478,6 +1480,8 @@
   syncing_students_instructions: 'Code.orgセクションで使うGoogle Classroomの生徒リストを更新したい場合は、「生徒を管理する」タブの「Google Classroomから生徒を同期する」ボタンをクリックしてください:'
   google_sign_in_instruct: 'ここでは、「グーグルアカウントでサインイン」のオプションを選ぶことができます。'
   applab-intro_name: App Labの紹介
+  applab_tile_title: "アプリラボの紹介（１３歳以上）"
+  applab_tile_subtitle: "ブロック用プログラミングを使ってJavaScriptで自分のアプリを作成します。それともテキスト用プログラミングで能力を向上させます。（英語のみ）"
   applab_tile_start_tutorial: "始める"
   applab_tile_teacher_guide: "教師用ガイドを表示"
   account_sign_up_email_opt_in: "当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？"
@@ -1505,6 +1509,9 @@
   hoc2018_mc_start: "始める"
   hoc2018_mc_no_internet: "インターネットが無い？"
   hoc2018_mc_download_adventurer: "Minecraftアドベンチャーのオフライン版をダウンロード。"
+  hoc2018_mc_educators: "教育者の方向け"
+  hoc2018_mc_educators_box1_button: "開始しましょう"
+  hoc2018_mc_educators_box2_title: "ファシリテーターの方向けのガイドをダウンロードします"
   hoc2018_mc_educators_box2_button: "ダウンロード"
   hoc2018_mc_watch_videos: "始める前に、以下のビデオのうち1つを見てみましょう"
   hoc2018_mc_videos_more: "その他の、模範となる人々や有名人による <a href='%{inspiring_videos_playlist}'> 心に訴えるビデオ</a>"
@@ -1539,6 +1546,7 @@
   hoc2018_dance_party_button: "始める"
   hoc2018_dance_keep_on_dancing_box_title: "ダンスを続ける"
   hoc2018_dance_keep_on_dancing_description: "最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。"
+  hoc2018_dance_keep_on_dancing_specs: "言語 | フォーマット | １３歳以上"
   hoc2018_dance_keep_on_dancing_button: "パート 2を開始する"
   hoc2018_dance_teacher_resources_title: "教師向けのリソース"
   hoc2018_dance_teacher_resources_tile1_description: "レッスンプラン、証明書、音楽のフィルタリング。"

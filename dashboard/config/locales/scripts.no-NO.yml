@@ -1637,6 +1637,8 @@
               name: 'Frakoblet: Binær'
             Artist Binary:
               name: Kunstner Binær
+            Dance Party:
+              name: Dansefest
         coursee-2019:
           stages:
             Building a Foundation:

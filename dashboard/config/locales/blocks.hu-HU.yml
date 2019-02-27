@@ -1368,6 +1368,11 @@ hu:
         text: "{SPRITE} mondja {MESSAGE}"
       aalab_spriteSay:
         text: sprite {SPRITE} mondja {TEXT} {SECONDS} másodpercig
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mutasd
+            '"hide"': elrejt
       binary_drawPixelHere:
         text: állítsd képpontot {VAL}
         options:

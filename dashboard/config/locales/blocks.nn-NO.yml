@@ -332,7 +332,7 @@ nn:
         options:
           EFFECT:
             '"none"': Ingen
-            '"circles"': Tunnel
+            '"circles"': Sirkler
             '"color_cycle"': Farger
             '"diamonds"': Diamantar
             '"disco_ball"': Discokule
@@ -343,7 +343,7 @@ nn:
             '"splatter"': Rosa splætt
             '"rainbow"': Regnboge
             '"snowflakes"': Snø
-            '"text"': Sangtittel
+            '"text"': Sangtitler
             '"sparkles"': Glitter
             '"spiral"': Spiral
             '"disco"': Kvadrat
@@ -351,7 +351,7 @@ nn:
           PALETTE:
             '"rave"': Svart-hvitt
             '"cool"': Blåfarger
-            '"electronic"': Elektronikk
+            '"electronic"': Elektronisk
             '"iceCream"': Iskrem
             '"default"': Lys
             '"neon"': Neon
@@ -364,7 +364,7 @@ nn:
           EFFECT:
             '"none"': Ingen
             '"rand"': "(Tilfeldig)"
-            '"circles"': Tunnel
+            '"circles"': Sirkler
             '"color_cycle"': Farger
             '"diamonds"': Diamantar
             '"disco_ball"': Discokule
@@ -375,7 +375,7 @@ nn:
             '"splatter"': Rosa splætt
             '"rainbow"': Regnboge
             '"snowflakes"': Snø
-            '"text"': Sangtittel
+            '"text"': Sangtitler
             '"sparkles"': Glitter
             '"spiral"': Spiral
             '"disco"': Kvadrat
@@ -383,7 +383,7 @@ nn:
           PALETTE:
             '"rave"': Svart-hvitt
             '"cool"': Blåfarger
-            '"electronic"': Elektronikk
+            '"electronic"': Elektronisk
             '"iceCream"': Iskrem
             '"default"': Lys
             '"neon"': Neon
@@ -434,7 +434,7 @@ nn:
             '"pizzas"': Pizzaer
             '"smiling_poop"': Bæsj
             '"rain"': Regn
-            '"floating_rainbows"': Regnbue
+            '"floating_rainbows"': Regnbuer
             '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"color_lights"': Scenelys
@@ -453,7 +453,7 @@ nn:
             '"pizzas"': Pizzaer
             '"smiling_poop"': Bæsj
             '"rain"': Regn
-            '"floating_rainbows"': Regnbue
+            '"floating_rainbows"': Regnbuer
             '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"color_lights"': Scenelys
@@ -643,7 +643,7 @@ nn:
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
       gamelab_console.log:
-        text: logg-melding {MESSAGE}
+        text: loggmelding {MESSAGE}
       gamelab_createNewSprite:
         text: "lag en ny sprite \n kalt {NAME} \n med kostyme {COSTUME} \n plassert
           {LOCATION}"
@@ -1053,7 +1053,7 @@ nn:
       RyanLab_turnRight:
         text: snu mot høgre
       Vector_log:
-        text: logg-melding {MESSAGE}
+        text: loggmelding {MESSAGE}
       Vector_positionCenter:
         text: i midten
       Vector_randomLocation:
@@ -1124,6 +1124,11 @@ nn:
         options:
           DURATION:
             '"0"': for alltid
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': vis
+            '"hide"': gøyme
       binary_goToHome:
         text: hopp til øverst til venstre
       binary_move:
@@ -1176,7 +1181,7 @@ nn:
             "'darkPrismarine'": mørk prismarin
             "'seaLantern'": sjølanterne
       craft_log:
-        text: logg-melding {MESSAGE}
+        text: loggmelding {MESSAGE}
       craft_moveForward:
         text: gå framover
       craft_placeBlock:
