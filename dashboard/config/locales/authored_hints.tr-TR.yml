@@ -871,6 +871,99 @@ tr:
         mc_9_b: Duvardaki kara lekeler kömür madeni! 'Bloğu yok et' bloğu ile bu madenleri
           toplayın.
         mc_9_c: Durduğunuz alana meşale yerleştirmek için 'meşale yerleştir'i kullanın.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+          * Ekranda bir dansçının göründüğünden emin olun.
+
+          *Bu seviye 4 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görevler**
+          * Çalmak için başka şarkı seçin.
+          * Geyik gibi görünen başka bir şey seçin!
+          * Dansçınızı yeniden adlandırın.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+          * Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.
+
+          *Seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.
+
+          *Seviye 12 ölçüden sonra biter.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Şarkının yedinci ölçüsünden sonra arka plan efektini değiştirmeniz gerekiyor.
+
+          *Bu seviye 10 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görev**
+
+          Şarkının farklı yerlerinde <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * En az iki dansçınız olması gerekli.
+
+          *Bu seviye 6 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görev**
+
+          * Üçüncü bir dansçı ekleyin (daha fazla da ekleyebilirsiniz!)
+          * Tüm dansçılarınıza şarkının farklı yerlerinde farklı hareketler yaptırın.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * İki dansçının 100 dışında bir boyuta sahip olması gerekiyor.
+
+          *Bu seviye 6 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görev**
+
+          * Diğer özellikleri değiştirerek denemeler yapın (genişlik, yükseklik, yön vb.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * En az bir dansçının renk tonunu değiştirin.
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * İki veya daha fazla dansçının özellikleri değişmelidir.
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Yaratıcı olmanız yeterli!
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Yaratıcı olmanız yeterli!
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Sol oka bastığınızda Robota bir dans hareketi yaptırmak için `sol oka basıldığında` bloğunu kullanın.
+
+          *Bu seviye 8 ölçüden sonra biter.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Köpeğin hızını 'Dog_speed' değerini kedinin hızından
           'cat_speed' değerinden büyük yaptığınızdan emin olun.
@@ -1140,6 +1233,8 @@ tr:
         voyage_aquatic_10a: "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
           görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte
           nasıl kullanabilirsin?"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Sağa dönüşler için "Eğer" bloğunu kullanabilirsiniz.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek
           **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!
@@ -1605,6 +1700,10 @@ tr:
           * Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.
 
           *Seviye 8 ölçüden sonra biter.*
+      Tortoise and Hare_authored_hint:
+        behavior hint: |-
+          Davranışları düzenlemeyi deneyin!
+          * Hangi değer hareket hızını kontrol ediyor?
       Underground Avoiding Lava_authored_hint:
         mc_11_a: Lav olup olmadığını kontrol edip ona göre hareket etmen için bütün
           kod sana hazır verildi. Tek yapman gereken ilerletmek için gerekli bloğu
@@ -1675,8 +1774,40 @@ tr:
           toplayın.
         mc_9_c: Durduğunuz alana meşale yerleştirmek için 'meşale yerleştir'i kullanın.
       Valentine_artist2_01_authored_hint:
+        Valentine_artist2_01_a: Çimlerin her kenarı 30 piksel uzunluğunda. Bir basamak
+          deseni kullanmayı deneyin.
         Valentine_artist2_01_b: 'Tekrar eden bir örüntü gördünüz mü? Döngüde İki kere
           ''ilerle'' bloğu ve iki farklı ''dönüş'' bloğunu kullanabilirsiniz. '
+        Valentine_artist2_01_c: |-
+          Bu döngüyü dene
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">ilerle</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">sağaDön</title>
+          <title name="VALUE">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">ilerle</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">solaDön</title>
+          <title name="VALUE">90</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       aE2_authored_hint:
         aE2_a: Peçeteler 20 piksel uzun olduğundan, sonraki döngüye başlamadan önce
           20 piksel atlamak gerekecektir.
@@ -1779,6 +1910,18 @@ tr:
           kullan.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Bu bulmacayı çözmek için döngü içinde 3 blok olmalıdır.
+      behaviors 3_authored_hint:
+        behavior hint: |-
+          Davranışları düzenlemeyi deneyin!
+          * Hangi değer hareket hızını kontrol ediyor?
+      behaviors 5a_authored_hint:
+        behavior hint: |-
+          Davranışları düzenlemeyi deneyin!
+          * Hangi değer hareket hızını kontrol ediyor?
+      behaviors 6_authored_hint:
+        behavior hint: |-
+          Davranışları düzenlemeyi deneyin!
+          * Hangi değer hareket hızını kontrol ediyor?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           Bu tarz döngüleri duvarlar ve çatı oluşturmak için kullanabilirsiniz. Farklı blokları tekrar deneyin. !
@@ -5485,6 +5628,9 @@ tr:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
           çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
+          çalışma alanına sürüklemeye ihtiyacın olacak.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
           çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_events_challenge1_authored_hint:

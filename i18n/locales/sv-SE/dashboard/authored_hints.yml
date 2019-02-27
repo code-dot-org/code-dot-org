@@ -25,6 +25,99 @@ sv:
         4-5_Maze_5_b: Du kan använda mer än en 'Upprepa' loop i ett pussel.
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Kontrollera att en dansare visas på skärmen.
+
+          *Denna nivå slutar efter 4 åtgärder.*
+        challenges: |-
+          **Valfria utmaningar**
+          * Välj en annan sång att spela.
+          * Välj en annan som ser ut som en älg!
+          * Byt namn på din dansare.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
+
+          *Denna nivå slutar efter 12 åtgärder.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
+
+          *Denna nivå slutar efter 10 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste ha minst två dansare.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Lägg till en tredje dansare (eller så många du vill!)
+          * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Två dansare måste ha en annan storlek än 100.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Ändra färgtonen på minst en dansare.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Egenskaper för två eller flera dansare måste ändras.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.
+
+          *Denna nivå slutar efter 8 åtgärder.*
       Dance short test 2_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**

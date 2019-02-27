@@ -447,6 +447,11 @@ ky:
         options:
           DURATION:
             '"0"': дайыма
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': көрсөт
+            '"hide"': катуу
       binary_move:
         options:
           DIR:

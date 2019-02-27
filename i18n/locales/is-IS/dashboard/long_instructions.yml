@@ -46,11 +46,13 @@ is:
       2-3 Artist Functions 1: "\"Ég uppvakningur listamaður. Ég elska teikna!\"\\r\n\\r\nHjálpaðu uppvakningnum að teikna ferköntuð gleraugu.\\r\n\\r\nBrúin milli glerja er 25 dílum styttri en hliðar ferninganna, sem eru 100 dílar.\\r\n\\r"
       2-3 Artist Functions 10: "**Frjáls æfing:** Hér eru tvö föll, eitt til að teikna stórt tannhjól og annað fyrir lítið tannhjól. \\r\n\\r\nNotaðu þau til að teikna innviði vélar!"
       2-3 Artist Functions 11 a: "Við höfum breytt heiti `teikna ferning` fallsins í `teikna sexhyrning`, en það teiknar samt bara ferninga! \\r\n\\r\nGetur þú breytt `teikna sexhyrning` fallinu svo það teikni sexhyrning með 50 díla hliðar?\\r\n\\r\nTeiknaðu myndina með nýja fallinu!"
+      2-3 Artist Functions 11.5 a: "Hér er sama `teikna sexhyrning` fallið. \n\nHvað gerist ef þú endurtekur aðalforritið **6** sinnum og snýrð um **60** gráður í hverri umferð lykkjunnar?"
       2-3 Artist Functions 11.5: "Hér er sama `teikna sexhyrning` fallið. \\r\n\\r\nHvað gerist ef þú endurtekur aðalforritið 6 sinnum og snýrð um 60 gráður í hverri umferð lykkjunnar?"
       2-3 Artist Functions 11: "Við höfum breytt heiti `teikna ferning` fallsins í `teikna sexhyrning`, en það teiknar samt bara ferninga! \\r\n\\r\nGetur þú breytt `teikna sexhyrning` fallinu svo það teikni sexhyrning með 50 díla hliðar?\\r\n\\r\nTeiknaðu myndina með nýja fallinu!"
       2-3 Artist Functions 12 Mike: "Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \\r\n\\r\nGetur þú notað fallið `teikna blóm` til að fylla blómabeðið? \\r\n\\r\nÞað eru 100 dílar á milli plantna."
       2-3 Artist Functions 12 a: "Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \\r\n\\r\nGetur þú notað fallið `teikna blóm` til að fylla blómabeðið? \\r\n\\r\nÞað eru 100 dílar á milli plantna."
       2-3 Artist Functions 12: "Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \\r\n\\r\nGetur þú notað fallið `teikna blóm` til að fylla blómabeðið? \\r\n\\r\nÞað eru 100 dílar á milli plantna."
+      2-3 Artist Functions 2 a: "Með föllum getur þú búið til nýja kubba! \n\nVið höfum fært kubbana sem teikna ferning inn í fall, sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \n\nÞað eru 75 dílar á milli ferninganna."
       2-3 Artist Functions 2: "Með föllum getur þú búið til nýja kubba! \\r\n\\r\nVið höfum fært kubbana sem þarf til að teikna ferning inn í fall, sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \\r\n\\r\nÞað eru 75 dílar á milli ferninganna."
       2-3 Artist Functions 3 a: "Breyttu `teikna ferning` fallinu svo það teikni gleraugu þar sem umgjarðirnar hafa 115 díla hliðar. \n\nBilið á milli ferninganna er nú 45 dílar."
       2-3 Artist Functions 3: "Breyttu fallinu svo það búi til ferning með 115 díla hliðar og teiknaðu stærri gleraugu. \\r\n\\r\nNú eru 45 dílar á milli ferninga."
@@ -104,7 +106,12 @@ is:
         Hér er margt að gerast!\r
         \r
         Notaðu það sem þú hefur lært til að safna öllum blómasafanum og búa svo til hunang.
-      2-3 Bee Conditionals 14: "Nú skulum við nota þetta allt!\\r\n\\r\nNotaðu það sem þú hefur lært til að safna blómasafa aðeins úr blómum sem hafa hann og með sem fæstum kubbum.\\r\n\\r\nEkki gleyma að búa til hunang í lokin."
+      2-3 Bee Conditionals 14: |-
+        Nú skulum við nota þetta allt!\r
+        \r
+        Notaðu það sem þú hefur lært til að safna blómasafa aðeins úr blómum sem hafa hann og með sem fæstum kubbum.\r
+        \r
+        Ekki gleyma að búa til hunang í lokin.
       2-3 Bee Conditionals 15: "Þetta þrepamynstur ætti að vera kunnuglegt.\\r\n\\r\nGetur þú safnað blómasafa aðeins úr blómum sem hafa hann og með sem fæstum kubbum?"
       2-3 Bee Conditionals 2: "Ég er svöng býfluga! \\r\n\\r\n\\r\nHjálpaðu mér að safna öllum blómasafanum úr blómunum með sem fæstum kubbum."
       2-3 Bee Conditionals 3: "Sjáðu allan þennan blómasafa!\\r\n\\r\nHjálpaðu mér að safna öllum blómasafanum úr blómunum og búa til hunang og með sem fæstum kubbum."
@@ -274,11 +281,43 @@ is:
       Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Hugmyndir fyrir frjálsa æfingu:** Nú hefur þú lært allt sem þú þarft að kunna til að búa til svona mynstur! \\r\n\\r\nEf þér finnst þessi mynd áhugaverð getur þú reynt að gera eitthvað svipað. Eða búið til eitthvað sem er alfarið þitt eigið.\\r\n\\r\nAthugaðu:\nVið höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar utar dregur."
       Bergeron Robot Maze1: "Getur þú hjálpað mér að ná óþekka svíninu? \\r\n\\r\nSmelltu saman tveimur `færa áfram` kubbum fyrir neðan `þegar keyrt` kubbinn og ýttu svo á \"Keyra\". "
       Big Game Animation 1: Nú þegar þú hefur lært að skrifa einföld línuleg föll, skulum við nýta þau til að bæta hreyfingu í leikinn. Smelltu á "Keyra" til að sjá hvað leikurinn getur gert nú (ekki margt!), uppfærðu þær breytur sem þú vilt og smelltu svo á "Ljúka" til að halda áfram.
+      Big Game Animation 2: |-
+        Fallið `update-target` (uppfæra-mark) tekur núverandi x gildi marksins og skilar uppfærðu gildi. 
+
+        Ljúktu við fallið `update-target` svo að það bæti við x gildið í hvert skipti sem kallað er á það. Því meira sem bætt er við x, því hraðar fer markið.
+      Big Game Animation 3: |-
+        Fallið `update-danger` (uppfæra-hættu) ætti að virka alveg eins og fallið `update-target` (uppfæra-mark), nema hvað hættan á að færast frá hægri hlið yfir til vinstri. 
+
+        Ljúktu við fallið `update-danger` svo að hættan fljúgi yfir skjáinn.
+      Big Game Animation 4: |-
+        Á þessu stigi í leiknum ætti hættan (danger) að hreyfast yfir skjáinn frá hægri til vinstri og markið (target) ætti að hreyfast frá vinstri til hægri. 
+
+        Eftir að hafa yfirgefið skjáinn koma þeir aldrei til baka, en við leysum það síðar. 
+
+        Gakktu úr skugga um að leikurinn virki eins og þú vilt og smelltu svo á "Ljúka" til að halda áfram.
       Big Game Booleans 1: Síðast þegar við unnum með leikinn fengum við leikverurnar mark (target) og hætta (danger) til að fljúga yfir skjáinn, en þær koma aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta verurnar birtast aftur.
+      Big Game Booleans 3: |-
+        Nú þegar `safe-left?` er klárt skulum við ljúka við `safe-right?` 
+
+        Þetta fall á að taka x hnit leikveru og skila "true" ef hnitið er minna en 450. 
+
+        Þegar `safe-right?` er búið, ætti markið að fara út af skjánum hægra megin og birtast aftur vinstra megin.
+      Big Game Booleans 4: |-
+        Hér færðu tóm föll fyrir `safe-left?` (öruggt-vinstri?) og `safe-right?` (öruggt-hægri?). Þú þarft fyrst að ljúka við fallið `on-screen?` (á-skjá?) svo að það athugi hvort bæði `safe-left?` og `safe-right?` gefa útkomuna "true". 
+
+        **Ábending** - jafnvel eftir að þú bætir þessum föllum við, snúa leikverurnar ekki aftur á skjáinn - hvers vegna heldur þú að það sé?
       Big Game Booleans 5: Á þessu stigi ætti hættan (danger) að fara yfir skjáinn frá hægri til vinstri, markið (target) frá vinstri til hægri og bæði ættu að birtast aftur á mótstæðri hlið, aftur og aftur. Gakktu úr skugga um að leikurinn virki eins og ætlast er til og smelltu á "Ljúka" til að halda áfram.
       Big Game Collision 1: Á þessu stigi hefur þú forritað tölvuleik með hreyfanlegu marki (target) og hættu (danger), sem bæði snúa aftur á skjáinn eftir að hafa yfirgefið hann, og leikara (player) sem bregst við inntaki frá lyklaborði. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Síðan skulum við takast á við síðasta hlutann sem enn vantar - skynjun árekstra!
+      Big Game Collision 3: |-
+        Lögum þetta fall `distance` (fjarlægð) svo að skynjun árekstra virki rétt. 
+
+        Notaðu fjarlægðarformúluna svo að hún skili fjarlægðinni á milli miðjuhnita leikmanns (px, py) og miðjuhnita annarrar leikveru (cx, cy). 
+
+        Þú færð tilbúið fall `line-length` (lengd línu) til að hjálpa þér.
       Big Game Vars 1: Byrjum nú á Stórleiknum þínum! Hér sérðu fullt af staðgengilskóða sem þú munt smám saman skipta út með þínum eigin, en fyrst um sinn ætlum við bara að fást við að skilgreina breytur. Smelltu á "Keyra" til að sjá hvernig leikurinn lítur út með upphaflegum gildum.
       Big Game Vars 4: Fínt, nú getur þú uppfært breyturnar "target" (mark), "danger" (hætta) og "player" (leikmaður). Leiktu þér með allar breyturnar þar til þú finnur þá samsetningu sem þér líkar best við. Smelltu á "Ljúka" þegar þú ert búin.
+      Brad Spooky House Copy: "Frjáls æfing: Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Leiktu með breidd pennans til að sjá hvernig það breytir teikningunni!\n\n"
+      Brad Spooky House: "Frjáls æfing: Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Leiktu með breidd pennans til að sjá hvernig það breytir teikningunni!\n\n"
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"markdown="1">
         <details>
@@ -351,7 +390,48 @@ is:
       CSD U2 Debugging 1: "# Villuleit\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er villa?**\n\n</summary>\nVillur eru mistök í kóða sem verða til þess að hann virkar ekki eins og búist var við.\n</details>\n<details>\n<summary>\n\n**Hvað er villuleit?**\n\n</summary>\nVilluleit er það að finna og laga villur. Ferlið er það sama og fyrir lausn vandamála almennt svo þú getur notað þær aðferðir við að finna og laga villur. \n\n</details>\n<details>\n<summary>\n\n**Dæmi um villur**\n\n</summary>\n\nVillur geta verið hvað sem er en þær orsaka að kóðinn virkar ekki rétt. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða það gleymdist að loka tagi.\n\n\n</details>\n</div>\n\nTölvukóði er skrifaður af mannfólki og allar mannverur gera mistök. Það er hluti af því að vera góður tölvunarfræðingur að geta fundið eigin villur og lagfært þær. Í tölvunarfræði eru villur kenndar við pöddur (enska: bugs) eða lýs og sagt að kóði sé lúsugur ef það eru villur í honum. Að lagfæra villurnar er þá að aflúsa kóðann (enska: debug)! Í næstu áföngum munt þú öðlast færni í að aflúsa kóða.\n\n# Gerðu þetta\n\n<img src=\"https://images.code.org/ed7cb1f2e093b9c36b82bfbf9bbcd76b-image-1474383288840.54.26 AM.png\" style=\"float:right;border:black solid 5px;width:200px\">\n\n* Skoðaðu kóðann fyrir vefsíðuna og ræddu við félaga hvað það er sem veldur þessum tveimur villum:\n\\t* Fyrirsögnin er ekki nógu stór.\n\\t* Annað atriðið í listanum er ekki tölusett.\n* Aflúsaðu kóðann svo að útkoman í lokin passi við myndina hægra megin.\n"
       CSD U2 Debugging 1_2018: "# Villuleit\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er villa?**\n\n</summary>\nVillur eru mistök í kóða sem verða til þess að hann virkar ekki eins og búist var við.\n</details>\n<details>\n<summary>\n\n**Hvað er villuleit?**\n\n</summary>\nVilluleit er það að finna og laga villur. Ferlið er það sama og fyrir lausn vandamála almennt svo þú getur notað þær aðferðir við að finna og laga villur. \n\n</details>\n<details>\n<summary>\n\n**Dæmi um villur**\n\n</summary>\n\nVillur geta verið hvað sem er en þær orsaka að kóðinn virkar ekki rétt. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða það gleymdist að loka tagi.\n\n\n</details>\n</div>\n\nTölvukóði er skrifaður af mannfólki og allar mannverur gera mistök. Það er hluti af því að vera góður tölvunarfræðingur að geta fundið eigin villur og lagfært þær. Í tölvunarfræði eru villur kenndar við pöddur (enska: bugs) eða lýs og sagt að kóði sé lúsugur ef það eru villur í honum. Að lagfæra villurnar er þá að aflúsa kóðann (enska: debug)! Í næstu áföngum munt þú öðlast færni í að aflúsa kóða.\n\n# Gerðu þetta\n\n<img src=\"https://images.code.org/ed7cb1f2e093b9c36b82bfbf9bbcd76b-image-1474383288840.54.26 AM.png\" style=\"float:right;border:black solid 5px;width:200px\">\n\n* Skoðaðu kóðann fyrir vefsíðuna og ræddu við félaga hvað það er sem veldur þessum tveimur villum:\n\\t* Fyrirsögnin er ekki nógu stór.\n\\t* Annað atriðið í listanum er ekki tölusett.\n* Aflúsaðu kóðann svo að útkoman í lokin passi við myndina hægra megin.\n"
       CSD U2 Debugging 1_2019: "# Villuleit\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er villa?**\n\n</summary>\nVillur eru mistök í kóða sem verða til þess að hann virkar ekki eins og búist var við.\n</details>\n<details>\n<summary>\n\n**Hvað er villuleit?**\n\n</summary>\nVilluleit er það að finna og laga villur. Ferlið er það sama og fyrir lausn vandamála almennt svo þú getur notað þær aðferðir við að finna og laga villur. \n\n</details>\n<details>\n<summary>\n\n**Dæmi um villur**\n\n</summary>\n\nVillur geta verið hvað sem er en þær orsaka að kóðinn virkar ekki rétt. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða það gleymdist að loka tagi.\n\n\n</details>\n</div>\n\nTölvukóði er skrifaður af mannfólki og allar mannverur gera mistök. Það er hluti af því að vera góður tölvunarfræðingur að geta fundið eigin villur og lagfært þær. Í tölvunarfræði eru villur kenndar við pöddur (enska: bugs) eða lýs og sagt að kóði sé lúsugur ef það eru villur í honum. Að lagfæra villurnar er þá að aflúsa kóðann (enska: debug)! Í næstu áföngum munt þú öðlast færni í að aflúsa kóða.\n\n# Gerðu þetta\n\n<img src=\"https://images.code.org/ed7cb1f2e093b9c36b82bfbf9bbcd76b-image-1474383288840.54.26 AM.png\" style=\"float:right;border:black solid 5px;width:200px\">\n\n* Skoðaðu kóðann fyrir vefsíðuna og ræddu við félaga hvað það er sem veldur þessum tveimur villum:\n\\t* Fyrirsögnin er ekki nógu stór.\n\\t* Annað atriðið í listanum er ekki tölusett.\n* Aflúsaðu kóðann svo að útkoman í lokin passi við myndina hægra megin.\n"
-      CSD U2 Debugging 2: "# Villuleit\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er villa?**\n\n</summary>\nVillur eru mistök í kóða sem valda því að hann virkar ekki eins og ætlað var.\n</details>\n<details>\n<summary>\n\n**Hvað er villuleit?**\n\n</summary>\nVilluleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og við lausn vandamála almennt svo þær aðferðir nýtast hér. \n</details>\n<details>\n<summary>\n\n**Dæmi um villur?**\n\n</summary>\n\nVillur geta verið hvað sem lætur kóðann ekki virka sem skyldi. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.\n\n\n</details>\n</div>\n\nMeiri þjálfun í villuleit! Villuleitin hér er svolítið erfiðari en í síðustu síðu.\n\n# Gerðu þetta\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 AM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* Ræddu við félaga þinn hvaða villur gætu verið á þessari síðu.\n* Finndu og lagaðu allar villurnar svo að síðan verði eins og síðan hér til hægri."
+      CSD U2 Debugging 2: |-
+        # Villuleit
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        **Hvað er villa?**
+
+        </summary>
+        Villur eru mistök í kóða sem valda því að hann virkar ekki eins og ætlað var.
+        </details>
+        <details>
+        <summary>
+
+        **Hvað er villuleit?**
+
+        </summary>
+        Villuleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og við lausn vandamála almennt svo þær aðferðir nýtast hér. 
+        </details>
+        <details>
+        <summary>
+
+        **Dæmi um villur?**
+
+        </summary>
+
+        Villur geta verið hvað sem lætur kóðann ekki virka sem skyldi. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.
+
+
+        </details>
+        </div>
+
+        Meiri þjálfun í villuleit! Villuleitin hér er svolítið erfiðari en í síðustu síðu.
+
+        # Gerðu þetta
+
+        <img src="https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 AM.png" style="float:right;border:5px black solid;width:250px">
+
+        * Ræddu við félaga þinn hvaða villur gætu verið á þessari síðu.
+        * Finndu og lagaðu allar villurnar svo að síðan verði eins og síðan hér til hægri.
       CSD U2 Debugging 2_2018: "# Villuleit\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er villa?**\n\n</summary>\nVillur eru mistök í kóða sem valda því að hann virkar ekki eins og ætlað var.\n</details>\n<details>\n<summary>\n\n**Hvað er villuleit?**\n\n</summary>\nVilluleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og við lausn vandamála almennt svo þær aðferðir nýtast hér. \n</details>\n<details>\n<summary>\n\n**Dæmi um villur?**\n\n</summary>\n\nVillur geta verið hvað sem lætur kóðann ekki virka sem skyldi. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.\n\n\n</details>\n</div>\n\nMeiri þjálfun í villuleit! Villuleitin hér er svolítið erfiðari en í síðustu síðu.\n\n# Gerðu þetta\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 AM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* Ræddu við félaga þinn hvaða villur gætu verið á þessari síðu.\n* Finndu og lagaðu allar villurnar svo að síðan verði eins og síðan hér til hægri."
       CSD U2 Debugging 2_2019: "# Villuleit\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er villa?**\n\n</summary>\nVillur eru mistök í kóða sem valda því að hann virkar ekki eins og ætlað var.\n</details>\n<details>\n<summary>\n\n**Hvað er villuleit?**\n\n</summary>\nVilluleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og við lausn vandamála almennt svo þær aðferðir nýtast hér. \n</details>\n<details>\n<summary>\n\n**Dæmi um villur?**\n\n</summary>\n\nVillur geta verið hvað sem lætur kóðann ekki virka sem skyldi. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.\n\n\n</details>\n</div>\n\nMeiri þjálfun í villuleit! Villuleitin hér er svolítið erfiðari en í síðustu síðu.\n\n# Gerðu þetta\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 AM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* Ræddu við félaga þinn hvaða villur gætu verið á þessari síðu.\n* Finndu og lagaðu allar villurnar svo að síðan verði eins og síðan hér til hægri."
       CSD U2 Debugging 3: "# Villuleit\n<div style=\"float:right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er villa?**\n\n</summary>\nVillur eru mistök í kóða sem valda því að kóðinn virkar ekki sem skyldi.\n</details>\n<details>\n<summary>\n\n**Hvað er villuleit?**\n\n</summary>\nVilluleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og fyrir lausn vandamála almennt svo færni á því sviði nýtist við villuleit. \n</details>\n<details>\n<summary>\n\n**Dæmi um villur**\n\n</summary>\nVillur geta verið hvað sem lætur kóðann ekki virka eins og ætlað var. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.\n</details>\n<details>\n<summary>\n\n**Af hverju hættir forritstúlkurinn stundum að virka?**\n\n</summary>\n\nStundum eru svo margar villur í HTML kóðanum að túlkurinn getur ekki lesið hann almennilega og hættir því alveg að virka, líka í þeim hlutum kóðans sem eru réttir. Þegar búið er að lagfæra villurnar mun túlkurinn virka aftur.\n\n</details>\n</div>\n\nÞessi síða er með myndir. Myndirnar gera villuleitina svolítið flóknari. Getur þú aflúsað þessa síðu?\n\n# Gerðu þetta\n\n* Ræddu við félaga þinn hvað geti verið að valda villunum.\n* Lagaðu villurnar svo að síðan þín líti út eins og fyrirmyndin hér fyrir neðan.\n\n![](https://images.code.org/4a9ac71bcf6c04775df791516562cd47-image-1508779270522.56.24 AM.png)"
@@ -885,8 +965,94 @@ is:
       CSD U2 Header Sizes: "# Stærð fyrirsagna\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað eru fyrirsagnir?**\n\n</summary>\nFyrirsagnir skipta vefsíðu í kafla og undirkafla. Þær eru hluti af skipulagi vefsíðu og skipta henni í smærri einingar svo það sé auðveldara að lesa hana.\n</details>\n<details>\n<summary>\n\n**Hvernig eru mismunandi fyrirsagnir gerðar?**\n\n</summary>\nÞað eru 6 mismunandi gerðir fyrirsagna. Algengasta fyrirsögnin er &lt;h1&gt; Talan 1 í HTML taginu segir að þetta sé aðalfyrirsögn. Minnsta fyrirsögnin er &lt;h6&gt;.\nÞú getur líka prófað tögin &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt; og &lt;h5&gt; sem minnka eftir því sem talan stækkar.\n</details>\n<details>\n<summary>\n\n**Hvað er HTML?**\n\n</summary>\nHTML er skammstöfun á Hypertext Markup Language. HTML er notað til að koma skipulagi á innihald vefsíðu. HTML notar tög til að segja til hvar tilteknir hlutar skipulagsins byrja og enda. Þessi tög eru runur tákna sem ekki finnast í venjulegum tungumálum svo að hægt sé að aðgreina innihaldið og upplýsingar um skipulag þess. \n</details>\n<details>\n<summary>\n\n**Hvað er HTML eining?**\n\n</summary>\nHTML eining er hluti vefsíðu sem er afmarkaður með byrjunartagi og (yfirleitt) endatagi). Einingin inniheldur líka allt efni á milli taganna. Dæmi: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**Hvað er HTML tag?**\n\n</summary>\nHTML tag er sérstakt tákn sem segir vafra tölvunnar hvar HTML eining byrjar og endar og hvers konar eining þetta er.\n\n</details>\n</div>\n\nFyrirsagnir hafa mismunandi stærðir. Á þessari síðu eru sex misstórar fyrirsagnir, en þær eru í einhverju rugli. Getið þið félagi þinn lagað þá?\n\n\n\nGerðu þetta:\n* Notaðu greiningarverkfærið (inspector tool) til að finna út hvað veldur því að fyrirsagnirnar eru misstórar\n* Gættu þess að þú og félagi þinn komist að samkomulagi um hvað mismunandi tög fyrirsagna gera.\n* Breyttu tögunum svo að fyrirsagnirnar séu í röð frá stærstu til minnstu, og að það sem textinn segir passi við tögin, eins og myndin sýnir. \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15 PM.png\" style=\"width:100px\" style=\"float:left\">\n"
       CSD U2 Header Test: "# Fyrirsagnir og efnisgreinar\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**Hvað er efnisgrein í HTML?**\n\n</summary>\nEfnisgreinar eru afmarkaðar með tögunum `<p>` í upphafi og `</p>`í lokin. Í HTML geta efnisgreinar haft hvaða lengd sem er, frá einu orði upp í fjölda setninga. Með efnisgreinum eru setningum hópað saman og aðgreindar frá öðrum efnisgreinum með bilum á milli.\n\n</details>\n<details>\n<summary>\n\n**Hvernig bý ég til margar efnisgreinar?**\n\n</summary>\nEfnisgreinar eru afmarkaðar með tögunum `<p>` í upphafi og `</p>`í lokin. Ef á að hafa margar efnisgreinar, þarf hver að vera afmörkuð með `<p>` tagi í upphafi og enda efnisgreinar. Dæmi\n<pre>\n\\t&lt;p&gt;\n    \\tÞetta er efnisgrein.\n    &lt;/p&gt;\n\\t&lt;p&gt;\n    \\tÞetta er önnur efnisgrein.\n    &lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>\n\n**Hvað eru fyrirsagnir?**\n\n</summary>\nFyrirsagnir (enska: headings) eru notaðar til að skipta efni vefsíðunnar í hluta, sem auðveldar lestur hennar. Mismunandi fyrirsagnir fá sjálfkrafa mismunandi útlit.\n</details>\n<details>\n<summary>\n\n**Hvernig bý ég til mismunandi fyrirsagnir?**\n\n</summary>\nÞú notar \"h\" tög sem eru í 6 mismunandi stærðum. Hingað til hefur þú aðallega notað það stærsta &lt;h1&gt;. Talan 1 í HTML taginu segir að þetta sé aðalfyrirsögn. Minnsta fyrirsögnin er &lt;h6&gt;. Þú getur líka prófað tögin &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt; og &lt;h5&gt; sem minnka eftir því sem talan er hærri.\n\n</details>\n<details>\n<summary>\n\n**Hvað er HTML?**\n\n</summary>\nHTML er skammstöfun fyrir Hypertext Markup Language. HTML er notað til að koma skipulagi á innihald vefsíðu. HTML notar tög (enska:tags) til að segja til um hvar hlutar skipulagsins byrja og enda. Þessi tög eru tákn sem ekki eru notuð í tungumálum svo það sé hægt að greina innihaldið frá skipulagi þess. \n</details>\n<details>\n<summary>\n\n**Hvað er HTML eining?**\n\n</summary>\nHTML eining er hluti af vefsíðu. Einingin byrjar á upphafstagi og endar yfirleitt á endatagi. Í einingunni er líka allt innihald á milli taganna. Dæmi: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**Hvað er HTML tag?**\n\n</summary>\n\nHTML tag er sérstakt tákn sem segir vafra tölvunnar hvar HTML eining byrjar og endar og hvers konar eining þetta sé.\n\n</details>\n</div>\n\nHöfundur þessarar síðu setti inn mikið innihald en hugsaði ekkert um skipulag. Allur textinn er í einni bendu.\n\nGerðu þetta:\n* Skoðaðu innihaldið með félaga til að ákveða hvað væri besta skipulagið.\n* Notaðu tögin fyrir fyrirsagnir og efnisgreinar til að koma skipulagi á efni síðunnar.\n"
       CSD U2 Image Tag 1: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>**Hvernig bæti ég við myndum?**</summary>\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\n\nDæmi:\n<pre>&lt;img src=\"dog.png\" alt=\"hundur stekkur\"/&gt;</pre><br><br>\n\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\n\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>\n\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins framan við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\n</details>\n<details>\n<summary>**Af hverju hefur myndtagið ekki endatag?**</summary>\n\"Img\" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\n</details>\n<details>\n<summary>**Hvað er eigind?**</summary>\n\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag.  Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \n\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\n\n\n\n</details>\n</div>\n\n# Myndir\n\nHér er Dog vs Cat vefsíða sem er í smíðum. Það er búið að setja inn myndina af hundinum. Notaðu myndtagið til að bæta myndinni `cat.jpeg` á síðuna undir kattarfyrirsögninni."
-      CSD U2 Image Tag 1_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Hvernig bæti ég við myndum?</strong>\n</summary>\n\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\n\nDæmi:\n<pre>&lt;img src=\"dog.png\" alt=\"hundur stekkur\"/&gt;</pre><br><br>\n\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\n\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>\n\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins fram við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\n\n</details>\n<details>\n<summary>\n<strong>Af hverju hefur myndtagið ekki endatag?</strong>\n</summary>\n\"Img\" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\n</details>\n<details>\n<summary>\n<strong>Hvað er eigind?</strong>\n</summary>\n\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag.  Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \n\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\n\n\n</details>\n</div>\n\n\n# Myndir\n\nHér er Dog vs Cat vefsíða sem er í smíðum. Það er búið að setja inn myndina af hundinum. Notaðu myndtagið til að bæta myndinni `cat.jpeg` á síðuna undir kattarfyrirsögninni."
-      CSD U2 Image Tag 1_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Hvernig bæti ég við myndum?</strong>\n</summary>\n\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\n\nDæmi:\n<pre>&lt;img src=\"dog.png\" alt=\"hundur stekkur\"/&gt;</pre><br><br>\n\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\n\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>\n\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins fram við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\n\n</details>\n<details>\n<summary>\n<strong>Af hverju hefur myndtagið ekki endatag?</strong>\n</summary>\n\"Img\" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\n</details>\n<details>\n<summary>\n<strong>Hvað er eigind?</strong>\n</summary>\n\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag.  Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \n\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\n\n\n</details>\n</div>\n\n\n# Myndir\n\nHér er Dog vs Cat vefsíða sem er í smíðum. Það er búið að setja inn myndina af hundinum. Notaðu myndtagið til að bæta myndinni `cat.jpeg` á síðuna undir kattarfyrirsögninni."
+      CSD U2 Image Tag 1_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Hvernig bæti ég við myndum?</strong>
+        </summary>
+
+        Með `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>
+
+        Dæmi:
+        <pre>&lt;img src="dog.png" alt="hundur stekkur"/&gt;</pre><br><br>
+
+        Til að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið "source" sem þýðir "uppruni". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. 
+        Algengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>
+
+        Auk "src" eigindar, hafa myndeiningar líka eigindina "alt" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>
+
+        `<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins fram við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju hefur myndtagið ekki endatag?</strong>
+        </summary>
+        "Img" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er eigind?</strong>
+        </summary>
+
+        Eigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag.  Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. 
+
+        Til dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.
+
+
+        </details>
+        </div>
+
+
+        # Myndir
+
+        Hér er Dog vs Cat vefsíða sem er í smíðum. Það er búið að setja inn myndina af hundinum. Notaðu myndtagið til að bæta myndinni `cat.jpeg` á síðuna undir kattarfyrirsögninni.
+      CSD U2 Image Tag 1_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Hvernig bæti ég við myndum?</strong>
+        </summary>
+
+        Með `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>
+
+        Dæmi:
+        <pre>&lt;img src="dog.png" alt="hundur stekkur"/&gt;</pre><br><br>
+
+        Til að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið "source" sem þýðir "uppruni". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. 
+        Algengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>
+
+        Auk "src" eigindar, hafa myndeiningar líka eigindina "alt" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>
+
+        `<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins fram við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju hefur myndtagið ekki endatag?</strong>
+        </summary>
+        "Img" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er eigind?</strong>
+        </summary>
+
+        Eigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag.  Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. 
+
+        Til dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.
+
+
+        </details>
+        </div>
+
+
+        # Myndir
+
+        Hér er Dog vs Cat vefsíða sem er í smíðum. Það er búið að setja inn myndina af hundinum. Notaðu myndtagið til að bæta myndinni `cat.jpeg` á síðuna undir kattarfyrirsögninni.
       CSD U2 Image Tag 2: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>**Hvernig bæti ég við myndum?**</summary>\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\n\nDæmi:\n<pre>&lt;img src=\"dog.png\" alt=\"hundur stekkur\"/&gt;</pre><br><br>\n\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\n\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa. <br><br>\n\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins fram við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\n\n</details>\n<details>\n<summary>**Af hverju hefur myndtagið ekki endatag?**\n</summary>\n\"Img\" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\n</details>\n<details>\n<summary>**Hvað er eigind?**</summary>\n\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag. Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \n\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\n\n\n</details>\n</div>\n\n# Að hlaða upp myndum\n\nÞú getur hlaðið upp myndum sem þú hefur fundið annars staðar með  **Bæta við mynd** hnappnum. Finndu mynd af öðru gæludýri sem þér líkar og vistaðu hana í tölvunni (með hægrismelli og \"Vista sem\").\n\nEftir að þú hefur náð í mynd, smellir þú á ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png) og hleður myndinni upp frá tölvunni og inn í verkefnið þitt þar sem þú getur síðan notað hana á síðunni þinni.\n\n# Gerðu þetta\n\n* Bættu á þessa vefsíðu minnst einni mynd sem þú hefur hlaðið upp\n* Notaðu `<img>` tagið til að birta myndefnið á vefsíðunni þinni.\n* Gættu þess að bæta við `alt` eigind."
       CSD U2 Image Tag 2_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Hvernig bæti ég við myndum?</strong>\n</summary>\n\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\n\nDæmi:\n<pre>&lt;img src=\"dog.png\" alt=\"hundur stekkur\"/&gt;</pre><br><br>\n\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\n\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa. <br><br>\n\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins fram við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\n\n</details>\n<details>\n<summary>\n<strong>Af hverju hefur myndtagið ekki endatag?</strong>\n</summary>\n\"Img\" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\n</details>\n<details>\n<summary>\n<strong>Hvað er eigind?</strong>\n</summary>\n\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag. Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \n\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\n\n\n\n</details>\n</div>\n\n# Að hlaða upp myndum\n\nÞú getur hlaðið upp myndum sem þú hefur fundið annars staðar með  **Bæta við mynd** hnappnum. Finndu mynd af öðru gæludýri sem þér líkar og vistaðu hana í tölvunni (með hægrismelli og \"Vista sem\").\n\nEftir að þú hefur náð í mynd, smellir þú á ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png) og hleður myndinni upp frá tölvunni og inn í verkefnið þitt þar sem þú getur síðan notað hana á síðunni þinni.\n\n# Gerðu þetta\n\n* Bættu á þessa vefsíðu minnst einni mynd sem þú hefur hlaðið upp\n* Notaðu `<img>` tagið til að birta myndefnið á vefsíðunni þinni.\n* Gættu þess að bæta við `alt` eigind."
       CSD U2 Image Tag 2_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Hvernig bæti ég við myndum?</strong>\n</summary>\n\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\n\nDæmi:\n<pre>&lt;img src=\"dog.png\" alt=\"hundur stekkur\"/&gt;</pre><br><br>\n\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\n\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa. <br><br>\n\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins fram við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\n\n</details>\n<details>\n<summary>\n<strong>Af hverju hefur myndtagið ekki endatag?</strong>\n</summary>\n\"Img\" tagið fyrir myndir þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\n</details>\n<details>\n<summary>\n<strong>Hvað er eigind?</strong>\n</summary>\n\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag. Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \n\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt. src segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\n\n\n\n</details>\n</div>\n\n# Að hlaða upp myndum\n\nÞú getur hlaðið upp myndum sem þú hefur fundið annars staðar með  **Bæta við mynd** hnappnum. Finndu mynd af öðru gæludýri sem þér líkar og vistaðu hana í tölvunni (með hægrismelli og \"Vista sem\").\n\nEftir að þú hefur náð í mynd, smellir þú á ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png) og hleður myndinni upp frá tölvunni og inn í verkefnið þitt þar sem þú getur síðan notað hana á síðunni þinni.\n\n# Gerðu þetta\n\n* Bættu á þessa vefsíðu minnst einni mynd sem þú hefur hlaðið upp\n* Notaðu `<img>` tagið til að birta myndefnið á vefsíðunni þinni.\n* Gættu þess að bæta við `alt` eigind."
@@ -3997,7 +4163,7 @@ is:
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\r
 
-      CSD U3 Variables Challenge_2018: |
+      CSD U3 Variables Challenge_2018: |-
         # Áskorun: Að uppfæra breytur\r
         \r
         _Ráðfærðu þig við kennarann áður en þú ræðst í þessa áskorun_\r
@@ -4012,7 +4178,7 @@ is:
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\r
 
-      CSD U3 Variables Challenge_2019: |
+      CSD U3 Variables Challenge_2019: |-
         # Áskorun: Að uppfæra breytur\r
         \r
         _Ráðfærðu þig við kennarann áður en þú ræðst í þessa áskorun_\r
@@ -5322,7 +5488,13 @@ is:
       Course 4 Artist 1: "Hjálpaðu mér að teikna kassa.   \\r\n(Hver lína er 200 díla löng) \\r\n\\r\n<br/><br/>\\r\n\\r\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Leikstund:**  Hér er kóðinn fyrir athyglisvert form.  \n\nHvað gerist þegar þú endurtekur hann mörgum sinnum með snúningi í hverri endurtekningu?  \n\nTaktu eftir að snúningarnir eru samtals *420 gráður*, sem þýðir að þegar listamaðurinn er búinn að teikna þá snýr hann í aðra átt en hann gerði í byrjun.  Þessi nýja átt er nákvæmlega *60 gráðum* til *hægri* við stefnuna í byrjun.\n\n<hr/>\n\n<h4>\n<details>\n\n<summary>\n\n<b>Endurtaka 4</b>\n\n</summary>\n<br/>\n\nEf þú vilt fara heilan hring í aðeins 4 endurtekningum, þarft þú að láta listamanninn snúa samtals **360 gráður/4 = 90 gráður** í hvert sinn.  Þú getur náð því með því að bæta við auka `snúa hægri um 30 gráður` kubbi\ní ytri lykkjuna (vegna þess að **60+30 = 90**.)  \n\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Endurtaka 6</b>\n\n</summary>\n<br/>\n\nÞegar þú endurtekur formið 6 sinnum, færðu heildarsnúning um **6x60 gráður** sem er heill **360 gráðu** hringur.  \n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Endurtaka 12</b>\n\n</summary>\n\n<br/>\n\nEf þú vilt endurtaka formið 12 sinnum, þarft þú að láta listamanninn snúa samtals um **360 /12 = 30 gráður** í hverri umferð.  Það þýðir að þú munt þurfa að snúa listamanninum aðeins til baka með `snúa vinstri 30 gráður` áður en formið er endurtekið aftur.   \n\n<br/><br/>\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\nNú færðu í nógu að snúast!   Getur þú endurskapað hverja mynd með því að endurtaka upphaflega formið?  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nHér er áskorun!  \\r\n\\r\nÞessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\\r\n\\r\nEndurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. "
-      Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/>\n\nFrjáls æfing með hugmynd: Þú hefur nú lært allt sem þú þarft að kunna til að búa til svona mynstur! Ef þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug. \n\n<br/>"
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
+        width="250px"/>
+
+        Frjáls æfing með hugmynd: Þú hefur nú lært allt sem þú þarft að kunna til að búa til svona mynstur! Ef þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug. 
+
+        <br/>
       Course 4 Artist 13: Enn að spila? Hér er auður flötur þar sem þú getur hannað hvað sem þú vilt!
       Course 4 Artist 2: "Getur þú sett þennan kóða í lykkju til að teikna yfir gráa ferninginn? \\r\n(Hver hlið er 300 dílar á lengd)"
       Course 4 Artist 20: "Enn að spila? \\r\n\\r\nHér er auður flötur þar sem þú getur búið til hvað sem þú vilt!"
@@ -5384,7 +5556,14 @@ is:
       Course 4 Artist Vars 1: "Við skulum teikna jafnhliða þríhyrning? \\r\n\\r\nHver hlið verður að vera nákvæmlega 100 dílar.\\r\n\\r\n<br/>\\r\n"
       Course 4 Artist Vars 10: "Hér er algrím sem teiknar þríhyrning úr minni þríhyrningum. Getur þú breytt því svo það noti breytuna `hliðar` til að teikna hvern þríhyrning? \\r\n\\r\n<br/>\\r\nSkoðaðu kóðann og í hvert skipti sem þú sérð töluna 3 skaltu setja breytuna `hliðar` í staðinn. Mundu að nota `stilla hliðar` kubbinn."
       Course 4 Artist Vars 11: "Hér er flóknari kóði sem byggir á sömu hugmyndum og síðasta þraut - hvaða stærð ættir þú að setja í breytuna `hliðar` til að teikna þessa mynd sem er gerð úr ferningum?\\r\n\\r\n<p\nstyle=\"font-size:small; padding: 15px 15px 15px 40px; background-color:#dcf3f3;\nborder-radius:10px;\">\\r\n\\tTil gamans: Prófaðu að nota nokkrar mismunandi tölur til að sjá hvaða áhrif það hefur á mynstrið!\\r\n</p>"
-      Course 4 Artist Vars 12: "Prófum að setja `hliðar` jafnt og 5. Því fleiri hliðar sem við notum í algríminu, því stærra verður allt mynstrið! \\n\\n\\nTaktu eftir að það er ný breyta `lengd`. \nVið getum nú notað hana í hvert sinn sem við höfum `færa áfram`. \n\nSettu 75 í breytuna `lengd` til að teikna þetta form."
+      Course 4 Artist Vars 12: |-
+        Prófum að setja `hliðar` jafnt og 5. Því fleiri hliðar sem við notum í algríminu, því stærra verður allt mynstrið! \\
+        \\
+        \\
+        Taktu eftir að það er ný breyta `lengd`. 
+        Við getum nú notað hana í hvert sinn sem við höfum `færa áfram`. 
+
+        Settu 75 í breytuna `lengd` til að teikna þetta form.
       Course 4 Artist Vars 13: "Eftir því sem form hefur fleiri hliðar, þarf hver hlið að vera styttri ef allt mynstrið á að geta komist fyrir á skjánum.\\r\n\\r\nVið skulum búa til algrímið fyrir þetta flotta mynstur, en í stað þess að setja fasta tölu í  breytuna `lengd`, skulum við nota reikningskubb með breytunni `hliðar` til að tryggja að hvert form komist fyrir. \\r\n\\r\nUmmál hvers fjölhliðungs er 300 dílar."
       Course 4 Artist Vars 14: |-
         Frjáls æfing! Kíktu á þetta: Nú er algrímið þitt faldað í enn einni lykkju. Gerðu tilraunir með gildi í breytunum tveimur til að teikna óvænt mynstur.\r
@@ -5448,7 +5627,7 @@ is:
         <hr/>
 
         *Spilaðu leikinn og náðu að ljúka borði 3 til að fara í næstu þraut.*
-      Course 4 Play Lab Params 2: "Nú höfum við flögg sem eru of hátt uppi fyrir núverandi stökk! Við skulum nota bæði \"upp\" og \"niður\" örvarnar svo að við getum haft margar stökkhæðir.\\r\n\\r\nVið þurfum að bæta stikanum `hæð` við stökkfallið. \\r\n- Örvarlykillinn upp ætti að láta hundinn stökkva upp 200 díla\\r\n- Örvarlykillinn niður ætti að láta hann stökkva aðeins 100 díla.\\r\n"
+      Course 4 Play Lab Params 2: "Nú höfum við flögg sem eru of hátt uppi fyrir núverandi stökk! Við skulum nota bæði \"upp\" og \"niður\" örvarnar svo að við getum haft margar stökkhæðir. \n\nVið þurfum að bæta stikanum `hæð` við stökkfallið.  \n- Örvarlykillinn upp ætti að láta hundinn stökkva upp 200 díla \n- Örvarlykillinn niður ætti að láta hann stökkva aðeins 100 díla. \n"
       Course 4 Play Lab Params 3: |-
         Við höfum bætt við öðrum stika við stökkfallið svo við getum notað það með öðrum leikmönnum. Hver leikmaður er táknaður með tölu, talið frá 1. 
 
@@ -5550,13 +5729,63 @@ is:
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?  "
       Course 4 SCVP 1: Búðu til fall með stikum svo listamaðurinn geti stokkið aftur á bak og áfram um x díla og líka upp og niður um y díla (notaðu jákvæðar og neikvæðar tölur).
       Course 4 Variables Assessment: Getur þú búið til þessa mynd með því að nota breytu fyrir `hliðar`? Hver lína á að vera 50 díla löng.
-      CourseF_PlayLab_vars10: "Frjáls æfing: Hér eru allar breyturnar sem við höfum notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota þær.\\r\n\\r\nTaktu eftir að nú eru svo margir kubbar í verkfærakassanum að við höfum þurft að raða þeim í viðeigandi flokka. Taktu þér tíma til að skoða hvað þú hefur. Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum.\\r\n\\r\n*Vísbending: Flettu niður til að sjá allar skipanirnar á vinnusvæðinu.*"
+      CourseD_Dance_Party_01: |-
+        *Nú skulum við halda danspartý!
+
+        Dragðu `búa til nýtt`kubb inn á vinnusvæðið og settu hann inn í `uppstilling` kubbinn til þess að búa til þinn fyrsta dansara.
+
+        **Þú getur líka smellt á ljósaperuna vinstra megin ef þig vantar meiri upplýsingar eða fleiri áskoranir.*
+      CourseD_Dance_Party_02: |-
+        Nú skulum við láta elginn dansa!
+
+        Dragðu <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> kubbinn inn á vinnusvæðið. Festu hann undir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> kubbinn. Þá ætti dansarinn þinn að byrja að dansa eftir 4 takta.
+
+        **Taktar** eru notaðir til talningar í tónlist. Í þessari æfingu er einn taktur 4 slög.
+      CourseD_Dance_Party_03: "*Nú erum við að dansa!* \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
+      CourseD_Dance_Party_04: |-
+        *Þennan dans vantar smá íburð!*
+
+        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
+      CourseD_Dance_Party_05: |-
+        Notaðu annan nýjan kubb til að láta dansarann skipta um hreyfingu **eftir hverja 2 takta**!
+
+        * Ef þú velur `(Næsta)`, `(Fyrri)` eða `(Handahóf)` segir það dansaranum að skipta um hreyfingu í hvert sinn sem kóðinn er keyrður.
+      CourseD_Dance_Party_06: |-
+        *Við þurfum fleiri dansara!*
+
+        Búðu til aukadansara sem heitir `backup_dancer1` sem á að dansa við köttinn.
+      CourseD_Dance_Party_08: |-
+        Hver dansari hefur nokkra eiginleika (_properties_) sem stjórna útliti dansarans.
+
+        Þú getur látið dansara virðast vera í meiri fjarlægð með því að minnka stærð (_size_) þeirra. Getur þú látið báða aukadansarana hafa sömu stærð?
+      CourseD_Dance_Party_09: |-
+        Dansarar hafa eiginleikann "litur" (tint) sem getur litað þá. Prófaðu að breyta lit eins dansarans.
+        * Liturinn sem þú velur mun blandast eigin lit dansarans.
+      CourseD_Dance_Party_10: |-
+        Nú kunnum við að breyta eiginleikum dansara. Við getum líka látið eiginleikana breytast sjálfkrafa út frá tónlistinni með því að nota þennan kubb:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_unicorn</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Þetta forrit notar styrkleika bassans (lágu hljóðanna) til að stjórna hæð eins dansara. Getur þú látið hinn dansarann líka breytast með tónlistinni?
+      CourseD_Dance_Party_11: "Með kubbnum <xml><block type=\"Dancelab_whenKey\"></block></xml> getur þú keyrt kóða þegar ýtt er á upp örina. \n\nÞú gætir skipt um hreyfingu, breytt eiginleikum dansara eða bara gert einhverja hreyfingu. Notaðu ímyndunaraflið og fylgstu með nýjum kubbum!"
+      CourseD_Dance_Party_11_5: "Skoðaðu þennan kubb:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNú getur þú búið til heilan hóp dansara í einu!\n\nPrófaðu að nota \"allt endur\" kubbana til að skrifa kóða sem lætur allar endurnar dansa á sama tíma."
+      CourseD_Dance_Party_11b: |-
+        Nú höfum við danskeppni! Kötturinn "dabbar" þegar þú ýtir á vinstri örina. Láttu Vélmennið "droppa" einu sinni þegar þú ýtir á hægri örina og "klappa" einu sinni þegar þú ýtir á upp-örina.
+
+        **Notaðu lyklana til að láta Vélmennið droppa-klappa droppa-klappa eins hratt og þú getur!**
+      CourseD_Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum þínum.
+      CourseF_PlayLab_vars1: "Til að spila þennan leik þarftu ekki að skrifa neinn kóða, bara ýta á \"Keyra\"! \n<hr/>\nHér ert þú hundurinn sem er að reyna að safna fleiri flöggum en kötturinn.  \n_(Notaðu örina niður til að hreyfast.)_"
+      CourseF_PlayLab_vars10: "Frjáls æfing: Hér eru allar breyturnar sem við höfum notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota þær. \n\nTaktu eftir að nú eru svo margir kubbar í verkfærakassanum að við höfum þurft að raða þeim í viðeigandi flokka. Taktu þér tíma til að skoða hvað þú hefur. Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum. \n\n*Vísbending: Flettu niður til að sjá allar skipanirnar á vinnusvæðinu.*"
       CourseF_PlayLab_vars2: Keppnin í síðustu þraut var ekki sanngjörn! Breyttu breytunni `hraði_hunds` til að tryggja að þú náir að safna fleiri flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
-      CourseF_PlayLab_vars3: "Hér er ný tegund leiks!\n\\r\n\\r\nÞú þarft ekki að breyta neinu í þessum áfanga.\\r\n\\r\n**Leiðbeiningar:**\nNotaðu hægri og vinstri örvar til að færa og upp örina til að stökkva. Reyndu að safna öllum flöggunum."
+      CourseF_PlayLab_vars3: "Hér er ný tegund leiks!\n\n\nÞú þarft ekki að breyta neinu í þessum áfanga.\n\n**Leiðbeiningar:** Notaðu hægri og vinstri örvar til að færa og upp örina til að stökkva. Reyndu að safna öllum flöggunum."
       CourseF_PlayLab_vars6: "<h5><b>\nHvernig gætum við skorað stig í þessum leik? \n</b></h5> \n<br/>\n\n1. Bættu 1 við `stig`breytuna í hvert sinn sem Hundur hittir Kött með kökusneið.  <br/>    <br/>\n2. Notaðu `þegar leikmaður 2 snertir eitthvað` atburðinn til að koma af stað uppfærslu á skorinu. Þú getur aukið breytuna með `stig = stig + 1.`  <br/>   <br/>\n3. Náðu skorinu 10 til að standast áfangann.\n\n<br/><br/>\n<h4>\n**Athugaðu:** Notaðu hægri örina fyrir kökukastið!\n</h4>"
       CourseF_PlayLab_vars7: "<h5><b>\nHvernig gætum við skorað stig í þessum leik? \n</b></h5> \n<br/>\n\n1. Bættu 1 við `stig`breytuna í hvert sinn sem Hundur hittir Kött með kökusneið.  <br/>    <br/>\n2. Notaðu `þegar leikmaður 2 snertir eitthvað` atburðinn til að koma af stað uppfærslu á skorinu. Þú getur aukið breytuna með `stig = stig + 1.`  <br/>   <br/>\n3. Náðu skorinu 10 til að standast áfangann.\n\n<br/><br/>\n<h4>\n**Athugaðu:** Notaðu hægri örina fyrir kökukastið!\n</h4>"
       CourseF_PlayLab_vars8: "<h5><b>\nHvernig gætum við skorað stig í þessum leik? \n</b></h5> \n<br/>\n\n1. Bættu 1 við `stig`breytuna í hvert sinn sem Hundur hittir Kött með kökusneið.  <br/>    <br/>\n2. Notaðu `þegar leikmaður 2 snertir eitthvað` atburðinn til að koma af stað uppfærslu á skorinu. Þú getur aukið breytuna með `stig = stig + 1.`  <br/>   <br/>\n3. Náðu skorinu 10 til að standast áfangann.\n\n<br/><br/>\n<h4>\n**Athugaðu:** Notaðu hægri örina fyrir kökukastið!\n</h4>"
-      CourseF_PlayLab_vars9: "Fínt en nú skulum við tryggja að leikurinn sé ekki of auðveldur. \\r\n\\r\nÍ hvert sinn sem hundurinn (leikmaður 1) verður fyrir samloku frá kettinum (leikmanni 2) ættir þú að tapa stigi. \\r\n\\r\nByrjaðu með 10 stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára áfangann."
+      CourseF_PlayLab_vars9: "Fínt en nú skulum við tryggja að leikurinn sé ekki of auðveldur. \n\nÍ hvert sinn sem hundurinn (leikmaður 1) verður fyrir samloku frá kettinum (leikmanni 2) ættir þú að tapa stigi. \n\nByrjaðu með 10 stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára áfangann."
       D_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Gerum þetta að snjókorni.\"_\n\nLáttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \n\nÞú getur teiknað alls konar flott snjókorn!\n<hr/>\nSkoðaðu þessi dæmi með fjölhliðungum:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       D_Frozen_nested4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _Hvað gerist ef við teiknum snjókorn yfir hvert annað?\"_\n\nPrófaðu að leggja tvö mismunandi löguð snjókorn saman annað ofan á hitt og snúa því síðara aðeins? Prófaðu það og sjáðu hvað kemur út! "
       D_Frozen_nested5: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?"_  '
@@ -5860,6 +6089,9 @@ is:
       NEW Course 4 Bee For Loops 95: Skoðaðu hvern þátt í `frá` lykkjunni sem þú varst að búa til. Geturðu séð hvaða tölur þarf að tvöfalda til að leysa þrautina? Hvers vegna virkar það?
       NEW Course 4 Play Lab Params 11: "Frjáls tími! Leiktu þér með kubbana í verkfærakassanum.  \n<br/>\n\n<h5>\n<details>\n\n<summary>\n\n<b>Vantar þig hugmyndir?</b>\n\n</summary>\n\\t<br/>\n\\t<h5>\n\\t\\t<ul>\n \\t<li><strong>Klukk</strong>\n- Láttu leikmann 2 rása og notaðu örvarnar til að láta leikmann 1 elta þar til þeir rekast á. </li>\n <li><strong>Flugnaspaði</strong>\n- Láttu leikmann skjóta upp kolli hingað og þangað af handahófi. Gefðu stig fyrir að smella á kvikann áður en hann hverfur. </li>\n<li><strong>Besta ágiskun</strong> - Láttu báða leikmenn hverfa, breyttu stað af handahófi, og láttu þá birtast sem persóna valin af handahófi. Smellur á þann fyrri gefur stig, smellur á annan TAPAR stigi! </li>\n</ul>\n\\t</h5>\n\n\n</details>\n</h5>\n"
       NEW Course 4 Play Labs For Loops 8a: "**Áskorun:** Hvernig mundir þú nota `frá` lykkjuna til að byrja efst og fara niður á botn, láta hverja persónu segja númer sitt og hverfa svo af skjánum? "
+      OPD-K5 FirstProgram: Horfðu á myndbandið hér fyrir neðan sem útskýrir allra fyrsta forritið þar sem ungir nemendur skrifa [Námskeið A](https://studio.code.org/s/coursea-2018?section_id=2042045). Á næstu síðu færðu að búa til þitt eigið forrit líkt þessu!
+      OPD-K5 LessonPlanning: "Hingað til hefur þú fengið kynningu á eitthvað af kennsluáætlunum okkar fyrir verkefni án tölvu (unplugged). Það eru hinsvegar kennsluáætlanir fyrir öll verkefnin í Grunnatriðum tölvunarfræði (CS Fundamentals) - bæði í tölvu og á netinu. Þú getur fundið heildarlista yfir kennsluáætlanir allra verkefna hér fyrir neðan:\n\n<br/>[Kennsluáætlanir Námskeið A](https://curriculum.code.org/csf-18/coursea/)\n<br/>[Kennsluáætlanir Námskeið B](https://curriculum.code.org/csf-18/courseb/)\n<br/>[Kennsluáætlanir Námskeið C](https://curriculum.code.org/csf-18/coursec/)\n<br/>[Kennsluáætlanir Námskeið D](https://curriculum.code.org/csf-18/coursed/)\n<br/>[Kennsluáætlanir Námskeið E](https://curriculum.code.org/csf-18/coursee/)\n<br/>[Kennsluáætlanir Námskeið F](https://curriculum.code.org/csf-18/coursef/)\n\nÞú getur aðlagað þessar áætlanir að vild eða búið til þínar eigin! Myndbandið hér fyrir neðan útskýrir uppbyggingu verkefnanna í Grunnatriðum tölvunarfræði, en inniheldur líka ábendingar fyrir þá sem vilja þróa eigin verkefni."
+      October15 bat: "Frjáls æfing: Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Leiktu með breidd pennans til að sjá hvernig það breytir teikningunni!\n\n"
       Overworld Move to Sheep: Bættu við annarri "færa áfram" skipun til að ná til kindarinnar.
       Overworld Move to Sheep_2018: Bættu við annarri "færa áfram" skipun til að ná til kindarinnar.
       Overworld Move to Sheep_2019: Bættu við annarri "færa áfram" skipun til að ná til kindarinnar.
@@ -6029,6 +6261,7 @@ is:
 
         Dragðu út textakubbinn sem þú vilt fyrir undirmarkmið.
       Testing Quantum Farmer: "Vá, ég fann mjög djúpa holu! \\r\n\\r\nÉg veit ekki hve mörg skóflufylli af mold þarf. \\r\nGetur þú skrifað forrit sem notar `fylla` kubbinn þar til hún er sléttfull?  "
+      Total Artist Clone Me: "Frjáls æfing: Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Leiktu með breidd pennans til að sjá hvernig það breytir teikningunni!\n\n"
       U1L9 Free Response Assessment: "Veldu hvaða efni þér fannst mest gaman að læra í dag. Segðu hvað þú lærðir nýtt og hvernig það tengist því hvernig við búum til og notum talnakerfi.\n"
       U3 - Simple Drawing - Personal Drawing: |
         # Þín eigin teikning\r
@@ -6355,6 +6588,7 @@ is:
       course3_farmer_condLoops_challenge2: "*\"Þetta er grænt völundarhús!\"* \n\nSnúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
       course3_farmer_until_challenge2: Notaðu "ef/annars" kubba til að fylgja krókóttum stígnum. Notaðu "fjarlægja 1" kubbinn á hverju horni til að fjarlægja haugana.
       course3_maze_debugging_challenge1: '*"Fer ég bara í hringi?"*'
+      course3_maze_debugging_challenge2: '*"Ef ég snýst of oft, gæti mig svimað! Hjálpaðu mér að ná til svínsins með aðeins fjórum `snúa` skipunum."*'
       course3_maze_until_challenge1: Engar vísbendingar - bara áskorun. Komdu uppvakningnum til sólblómsins.
       course3_playLab_challenge1: "_Nú eru **íkornarnir** skelfingu lostnir yfir því að það er **risaeðla** mætt á svæðið! Getur hugrakki **riddarinn** komið í veg fyrir að þeir hlaupi í burtu?_\n\nReglur:\n1. *Að snerta íkornana skorar stig?\n2. *Að snerta risaeðluna dregur frá mörg stig.\n\nHér er öðruvísi leikur sem hefur verið byrjað á fyrir þig! Spilaðu hann til að sjá hvernig hann virkar. \n\n\nEitthvað ætti að gerast þegar þú færð nógu mörg stig eða þegar þú klárar stigin. Bættu kóða í föllin `vinna leik` og `tapa leik` til að leikurinn virki eins og hann á að gera. \nSmelltu á vísbendingarnar til að fá hugmyndir!"
       course3_playlab_challenge2: |-
@@ -6472,16 +6706,16 @@ is:
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
-        Hjálpaðu listamanninum að teikna þessa línu tvisvar fram á við.\r
-        \r
+        Hjálpaðu listamanninum að teikna þessa línu tvisvar fram á við.
+
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops2_2018: |-
-        Hjálpaðu listamanninum að teikna þessa línu tvisvar fram á við.\r
-        \r
+        Hjálpaðu listamanninum að teikna þessa línu tvisvar fram á við.
+
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops2_2019: |-
-        Hjálpaðu listamanninum að teikna þessa línu tvisvar fram á við.\r
-        \r
+        Hjálpaðu listamanninum að teikna þessa línu tvisvar fram á við.
+
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3: |-
         Listamaðurinn er að reyna að teikna strik fimm sinnum en tekst það ekki. Getur þú hjálpað?
@@ -6495,6 +6729,18 @@ is:
         Listamaðurinn er að reyna að teikna strik fimm sinnum en tekst það ekki. Getur þú hjálpað?
 
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops4: |-
+        Notaðu nú a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> lykkju til að teikna þetta strik fimm sinnum!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2018: |-
+        Notaðu nú a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> lykkju til að teikna þetta strik fimm sinnum!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        Notaðu nú a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> lykkju til að teikna þetta strik fimm sinnum!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5: |-
         ##Teiknaðu línu sem er sjö skref á lengd. Hún verður sjóndeildarhringurinn okkar.
 
@@ -6561,28 +6807,92 @@ is:
         ![expandable]
         (https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9: |-
-        ##**Áskorun:** Tröppurnar niður á bryggjuna eru skemmdar.  Hjálpaðu mér að laga þær.\r
-        \r
-        ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+        ##**Áskorun:** Tröppurnar niður á bryggjuna eru skemmdar.  Hjálpaðu mér að laga þær.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2018: |-
         ##**Áskorun:** Tröppurnar niður á bryggjuna eru skemmdar.  Hjálpaðu mér að laga þær.\r
         \r
         ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2019: |-
-        ##**Áskorun:** Tröppurnar niður á bryggjuna eru skemmdar.  Hjálpaðu mér að laga þær.\r
-        \r
-        ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+        ##**Áskorun:** Tröppurnar niður á bryggjuna eru skemmdar.  Hjálpaðu mér að laga þær.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1: |-
+        Þú getur notað lykkju til að teikna mörg strik í röð.
+
+        Geturðu teiknað hús? Hafðu það eins og þú vilt!  Reyndu að finna mynstur sem endurtaka sig!
+
+        Hér eru nokkrar hugmyndir:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2018: |-
+        Þú getur notað lykkju til að teikna mörg strik í röð.
+
+        Geturðu teiknað hús? Hafðu það eins og þú vilt!  Reyndu að finna mynstur sem endurtaka sig!
+
+        Hér eru nokkrar hugmyndir:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        Þú getur notað lykkju til að teikna mörg strik í röð.
+
+        Geturðu teiknað hús? Hafðu það eins og þú vilt!  Reyndu að finna mynstur sem endurtaka sig!
+
+        Hér eru nokkrar hugmyndir:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2: |-
         **Tíst tíst!** 
 
         *"Getur þú hjálpað mér að búa til tvö fuglahús?"*
+      courseA_artist_loops_challenge2a: |-
+        *"Hjálpaðu mér að koma tjaldstæðinu í lag!"*
+
+        Notaðu kubbana í verkfærakassanum til að teikna þessi þrjú tjöld.
+      courseA_artist_loops_challenge2a_2018: |-
+        *"Hjálpaðu mér að koma tjaldstæðinu í lag!"*
+
+        Notaðu kubbana í verkfærakassanum til að teikna þessi þrjú tjöld.
+      courseA_artist_loops_challenge2a_2019: |-
+        *"Hjálpaðu mér að koma tjaldstæðinu í lag!"*
+
+        Notaðu kubbana í verkfærakassanum til að teikna þessi þrjú tjöld.
+      courseA_bee_seq1: Hjálpaðu býflugunni að ná einum blómasafa!
       courseA_bee_seq10: Prófaðu þetta! Náðu öllum blómasafanum.
+      courseA_bee_seq11: Býflugan er býsna dugleg! Náðu öllum blómasafanum.
+      courseA_bee_seq12: Hjálpaðu býflugunni að ná einum blómasafa!
+      courseA_bee_seq13: |-
+        *Bzzz bzzz!*
+
+        Notaðu <xml><block type="maze_moveWest"/></xml> **þrisvar** sinnum til að færa býfluguna að blóminu! Ekki gleyma að nota <xml><block type="maze_nectar"/></xml> til að ná blómasafa!
+      courseA_bee_seq14: |-
+        *Bzz bzz!*
+
+        Notaðu <xml><block type="maze_moveNorth"/></xml> **þrisvar** sinnum til að færa býfluguna til blómsins! Svo má ekki gleyma að láta hana ná blómasafanum.
+      courseA_bee_seq2: Bættu við *einum* kubbi svo býflugan geti náð blómasafa úr blóminu.
+      courseA_bee_seq3: Sérðu hvað er að þessum kóða? Hjálpaðu býflugunni að komast til blómsins!
       courseA_bee_seq4: Prófaðu þetta!
+      courseA_bee_seq5: Þú þarft að hreyfast í tvær áttir til að komast til blómsins! Hjálpaðu býflugunni að velja réttar áttir.
       courseA_bee_seq6: Nú þarf býflugan að ná í safa úr tveimur blómum!
       courseA_bee_seq7: Bættu við tveimur kubbum til að ljúka þrautinni!
+      courseA_bee_seq8: Svona slóð höfum við séð áður... en sérðu hvað er öðruvísi núna?
+      courseA_bee_seq9: Þessi býfluga þarf blómasafa! Sérðu eitthvert mynstur?
+      courseA_collector_loops1: |-
+        **Frjáls æfing:** Þetta er ævintýramærin Laurel! Láttu hana hreyfast og safna eins miklum fjársjóði og þú getur.
+
+        Dragðu kubba út á vinnusvæðið og reyndu að sjá hvernig er hægt að ná fjársjóði. Náðu minnst einum til að klára þetta borð.
       courseA_collector_loops12: "*\"Eureka! Náðu eins miklum fjársjóði og þú getur!\"* \n(Þú þarft ekki að ná honum öllum.)"
       courseA_collector_loops12_2018: "*\"Eureka! Náðu eins miklum fjársjóði og þú getur!\"* \n(Þú þarft ekki að ná honum öllum.)"
       courseA_collector_loops12_2019: "*\"Eureka! Náðu eins miklum fjársjóði og þú getur!\"* \n(Þú þarft ekki að ná honum öllum.)"
+      courseA_collector_loops1_2018: |-
+        **Frjáls æfing:** Þetta er ævintýramærin Laurel! Láttu hana hreyfast og safna eins miklum fjársjóði og þú getur.
+
+        Dragðu kubba út á vinnusvæðið og reyndu að sjá hvernig er hægt að ná fjársjóði. Náðu minnst einum til að klára þetta borð.
+      courseA_collector_loops1_2019: |-
+        **Frjáls æfing:** Þetta er ævintýramærin Laurel! Láttu hana hreyfast og safna eins miklum fjársjóði og þú getur.
+
+        Dragðu kubba út á vinnusvæðið og reyndu að sjá hvernig er hægt að ná fjársjóði. Náðu minnst einum til að klára þetta borð.
       courseA_collector_loops2: |-
         Náðu öllum þremur hrúgunum! Færðu Laurel að hverjum fjársjóð og notaðu svo þennan kubb: 
         <xml><block type="collector_collect"/></xml>
@@ -6591,10 +6901,16 @@ is:
       courseA_collector_loops3: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn <xml><block type="maze_moveEast"/></xml> kubb?
       courseA_collector_loops3_2018: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn <xml><block type="maze_moveEast"/></xml> kubb?
       courseA_collector_loops3_2019: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn <xml><block type="maze_moveEast"/></xml> kubb?
-      courseA_collector_preLoops1: "Þetta er Lára ævintýramær!\\r\n\\r\nÝttu á \"Keyra\" til að sjá hana ganga að fjársjóðnum og grípa hann."
+      courseA_collector_loops_challenge1: '*"Getur þú hjálpað mér að koma auga á villur? Ég veit í hvaða átt ég vil fara, en ekki hvað ég þarf að taka mörg skref."*'
+      courseA_collector_loops_challenge1_2018: '*"Getur þú hjálpað mér að koma auga á villur? Ég veit í hvaða átt ég vil fara, en ekki hvað ég þarf að taka mörg skref."*'
+      courseA_collector_loops_challenge1_2019: '*"Getur þú hjálpað mér að koma auga á villur? Ég veit í hvaða átt ég vil fara, en ekki hvað ég þarf að taka mörg skref."*'
+      courseA_collector_preLoops1: "Þetta er Lára ævintýramær!\n\nÝttu á \"Keyra\" til að sjá hana ganga að fjársjóðnum og grípa hann."
+      courseA_collector_preLoops2: "Fínt!  Nú færð þú að setja inn eigin kóða!  \n\nFestu ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) kubb neðst í forritið og smelltu á \"Keyra\"!"
+      courseA_collector_preLoops3: Náðu fjársjóðnum með því að festa tvo ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) kubba neðst í forritið og smella á "Keyra"!
       courseA_collector_preLoops7: |-
         Náðu öllum þremur hrúgunum! Færðu Laurel að hverjum fjársjóð og notaðu svo þennan kubb: 
         <xml><block type="collector_collect"/></xml>
+      courseA_data widget: Ýttu á Keyra. Vitkinn mun láta dýr birtast. Teldu þau. Hverju tekurðu eftir?
       courseA_forVideoTest_artist: Lykkjur gagnast listamanninn líka!
       courseA_harvester_forVideo: Getur þú tínt allan maísinn með aðeins **einum** `færa` kubbi?
       courseA_harvester_loops1: Hjálpaðu hirðinum að tína allan maísinn!
@@ -6603,93 +6919,162 @@ is:
       courseA_harvester_loops11: 'Prófaðu eitt enn á eigin spýtur! '
       courseA_harvester_loops11_2019: 'Prófaðu eitt enn á eigin spýtur! '
       courseA_harvester_loops1_2019: Hjálpaðu hirðinum að tína allan maísinn!
+      courseA_harvester_loops2: Hirðirinn þarf að tína allan maísinn! Kemurðu auga á mynstur?
+      courseA_harvester_loops2_2019: Hirðirinn þarf að tína allan maísinn! Kemurðu auga á mynstur?
       courseA_harvester_loops3: Getur þú tínt allan maísinn með aðeins **einum** `færa` kubbi?
       courseA_harvester_loops3_2019: Getur þú tínt allan maísinn með aðeins **einum** `færa` kubbi?
+      courseA_harvester_loops4: |-
+        *"Ég þarf hjálp því það er eitthvað að!"*
+
+        Getur þú hjálpað hirðinum að finna villuna í kóðanum?
+      courseA_harvester_loops4_2019: |-
+        *"Ég þarf hjálp því það er eitthvað að!"*
+
+        Getur þú hjálpað hirðinum að finna villuna í kóðanum?
       courseA_harvester_loops5: Prófaðu þetta! Geturðu líka náð maísnum á endanum?
       courseA_harvester_loops5_2019: Prófaðu þetta! Geturðu líka náð maísnum á endanum?
+      courseA_harvester_loops5a: Sjáðu allan þennan maís! Geturðu náð honum öllum hjálparlaust?
+      courseA_harvester_loops5a_2019: Sjáðu allan þennan maís! Geturðu náð honum öllum hjálparlaust?
       courseA_harvester_loops5b: Getur þú breytt kóðanum svo að hirðirinn tíni allan maísinn?
       courseA_harvester_loops5b_2019: Getur þú breytt kóðanum svo að hirðirinn tíni allan maísinn?
+      courseA_harvester_loops6: Þú þarft **einn** <xml><block type="maze_moveWest"></block></xml> block and **one** <xml><block type="maze_moveNorth"></block></xml> kubb til að klára þessa þraut!
+      courseA_harvester_loops6_2019: Þú þarft **einn** <xml><block type="maze_moveWest"></block></xml> block and **one** <xml><block type="maze_moveNorth"></block></xml> kubb til að klára þessa þraut!
       courseA_harvester_loops7: 'Prófaðu þetta á eigin spýtur! '
       courseA_harvester_loops7_2019: 'Prófaðu þetta á eigin spýtur! '
+      courseA_harvester_loops8: |-
+        Þetta er sama þraut en þarftu að endurtaka **þrisvar** en ekki tvisvar! Notaðu þennan kubb:
+
+        <xml><block type="controls_repeat_simplified_dropdown">
+        <title name="TIMES" config="2-10">3</title>
+        </block></xml>
+      courseA_harvester_loops9: Getur þú fundið leið til að ná *öllum* þessum maís?
+      courseA_harvester_loops9_2019: Getur þú fundið leið til að ná *öllum* þessum maís?
+      courseA_harvester_seq1: Hjálpaðu hirðinum að tína maísinn!
+      courseA_harvester_seq10: Hirðirinn þarf að tína allan maísinn! Kemurðu auga á mynstur?
+      courseA_harvester_seq10_2019: Hirðirinn þarf að tína allan maísinn! Kemurðu auga á mynstur?
       courseA_harvester_seq11: Prófaðu þetta! Náðu öllum maísnum.
       courseA_harvester_seq11_2019: Prófaðu þetta! Náðu öllum maísnum.
+      courseA_harvester_seq12: "*Takk fyrir að hjálpa mér!* \n\nTíndu allan maísinn."
+      courseA_harvester_seq12_2019: "*Takk fyrir að hjálpa mér!* \n\nTíndu allan maísinn."
+      courseA_harvester_seq13: Hjálpaðu hirðinum að tína maís!
+      courseA_harvester_seq13_2019: Hjálpaðu hirðinum að tína maís!
+      courseA_harvester_seq1_2019: Hjálpaðu hirðinum að tína maísinn!
+      courseA_harvester_seq2: 'Notaðu <xml><block type="maze_moveWest"/></xml> **þrisvar** sinnum til að færa hirðinn að maísnum! '
+      courseA_harvester_seq2_2019: 'Notaðu <xml><block type="maze_moveWest"/></xml> **þrisvar** sinnum til að færa hirðinn að maísnum! '
+      courseA_harvester_seq3: Notaðu <xml><block type="maze_moveNorth"/></xml> **þrisvar** sinnum til að færa hirðinn að maísnum! Ekki gleyma að tína maísinn í lokin.
+      courseA_harvester_seq3_2019: Notaðu <xml><block type="maze_moveNorth"/></xml> **þrisvar** sinnum til að færa hirðinn að maísnum! Ekki gleyma að tína maísinn í lokin.
+      courseA_harvester_seq4: Bættu við *einum* kubbi svo að hirðirinn tíni maísinn.
+      courseA_harvester_seq4_2019: Bættu við *einum* kubbi svo að hirðirinn tíni maísinn.
+      courseA_harvester_seq5: Sérðu hvað er að þessum kóða? Hjálpaðu hirðinumi að hirða uppskeruna!
+      courseA_harvester_seq5_2019: Sérðu hvað er að þessum kóða? Hjálpaðu hirðinumi að hirða uppskeruna!
       courseA_harvester_seq6: Prófaðu þetta!
       courseA_harvester_seq6_2019: Prófaðu þetta!
+      courseA_harvester_seq7: Þú þarft að hreyfast í tvær áttir til að komast að maísnum! Hjálpaðu hirðinum að velja réttar áttir.
+      courseA_harvester_seq7_2019: Þú þarft að hreyfast í tvær áttir til að komast að maísnum! Hjálpaðu hirðinum að velja réttar áttir.
       courseA_harvester_seq8: Nú þarf hirðirinn að tína maís tvisvar!
       courseA_harvester_seq8_2019: Nú þarf hirðirinn að tína maís tvisvar!
       courseA_harvester_seq9: Bættu við tveimur kubbum til að ljúka þrautinni!
       courseA_harvester_seq9_2019: Bættu við tveimur kubbum til að ljúka þrautinni!
+      courseA_maze_ramp2_2018: Festu báða <xml><block type="maze_moveEast"/></xml> kubbana við <xml><block type="when_run"/></xml> til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseA_maze_ramp2_2019: Festu báða <xml><block type="maze_moveEast"/></xml> kubbana við <xml><block type="when_run"/></xml> til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseA_maze_ramp2a_2018: Festu báða <xml><block type="maze_moveEast"/></xml> kubbana við <xml><block type="when_run"/></xml> til að ljúka við kóðann og smelltu svo á ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseA_maze_ramp3_2018: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að draga hann aftur í verkfærakassann."
-      courseA_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseA_maze_ramp3a_2018: Náðu í <xml><block type="maze_moveNorth"/></xml> úr verkfærakassanum og bættu honum neðan við hina kubbana til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseA_maze_ramp3a_2019: Náðu í <xml><block type="maze_moveNorth"/></xml> úr verkfærakassanum og bættu honum neðan við hina kubbana til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseA_maze_ramp3b_2018: "Það er einn kubbur sem ekki á að vera síðast í þessum kóða!  \n\nDragðu hann aftur í verkfærakassann til að fjarlægja hann."
+      courseA_maze_ramp3b_2019: "Það er einn kubbur sem ekki á að vera síðast í þessum kóða!  \n\nDragðu hann aftur í verkfærakassann til að fjarlægja hann."
+      courseA_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseA_maze_ramp4a_2018: Sérðu hvaða kubb þarf að setja neðan við hina kubbana til að ljúka við þennan kóða?
       courseA_maze_ramp4a_2019: Sérðu hvaða kubb þarf að setja neðan við hina kubbana til að ljúka við þennan kóða?
       courseA_maze_ramp5_2018: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
+      courseA_maze_ramp5a_2018: Prófaðu þetta án hjálpar!
+      courseA_maze_ramp5a_2019: Prófaðu þetta án hjálpar!
       courseA_maze_seq1: '*"Leiktu þér með þessa kubba og komdu mér til vonda svínsins!"*'
       courseA_maze_seq10: |-
-        **Áskorun:** Farðu í kringum TNT sprengiefnið til að koma fuglinum til svínsins!\r
-        \r
-        ![](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+        **Áskorun:** Farðu í kringum TNT sprengiefnið til að koma fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+      courseA_maze_seq10_2018: "**Áskorun:** Gættu þín á TNT sprengjum en komdu fuglinum til svínsins!"
+      courseA_maze_seq10_2019: "**Áskorun:** Gættu þín á TNT sprengjum en komdu fuglinum til svínsins!"
       courseA_maze_seq11: |-
-        Hér er styttri þraut!  Farðu í eina átt, svo aðra til að koma fuglinum til svínsins.\r
-        \r
-        ![](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
+        Hér er styttri þraut!  Farðu í eina átt, svo aðra til að koma fuglinum til svínsins.
+
+        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq11_2018: "Hér er styttri þraut!  Farðu í eina átt, svo aðra til að koma fuglinum til svínsins.\\r\n\\r\n![](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
       courseA_maze_seq11_2019: "Hér er styttri þraut!  Farðu í eina átt, svo aðra til að koma fuglinum til svínsins.\\r\n\\r\n![](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
       courseA_maze_seq12: |-
-        Náðu þessu svíni!\r
-        \r
-        ![](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
-      courseA_maze_seq12_2018: "Náðu þessu svíni!\\r\n\\r\n![](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
-      courseA_maze_seq12_2019: "Náðu þessu svíni!\\r\n\\r\n![](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
+        Náðu þessu svíni!
+
+        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+      courseA_maze_seq12_2018: Náðu þessu svíni!
+      courseA_maze_seq12_2019: Náðu þessu svíni!
       courseA_maze_seq1_2018: '*"Leiktu þér með þessa kubba og komdu mér til vonda svínsins!"*'
       courseA_maze_seq1_2019: '*"Leiktu þér með þessa kubba og komdu mér til vonda svínsins!"*'
+      courseA_maze_seq2: |-
+        *"Villa! Lagaðu kóðann svo ég nái svíninu."*
+
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+      courseA_maze_seq2_2018: |-
+        *"Villa! Lagaðu kóðann svo ég nái svíninu."*
+
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3: |-
-        *"Lagaðu kóðann svo ég komist til svínka!"*\r
-        \r
-        ![](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+        *"Lagaðu kóðann svo ég komist til svínka!"*
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
       courseA_maze_seq3_2018: |-
-        *"Lagaðu kóðann svo ég komist til svínka!"*\r
-        \r
-        ![](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
-      courseA_maze_seq4: "*\"Það er maðkur í mysunni.\"*\n\\r\n\\r\nFJARLÆGÐU kubb til að koma fuglinum til svínsins!\\r\n\\r\n![](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
-      courseA_maze_seq4_2018: "*\"Það er maðkur í mysunni.\"*\n\\r\n\\r\nFJARLÆGÐU kubb til að koma fuglinum til svínsins!\\r\n\\r\n![](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+        *"Lagaðu kóðann svo ég komist til svínka!"*
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq4: "*\"Það er maðkur í mysunni.\"* \n\n\nFJARLÆGÐU kubb til að koma fuglinum til svínsins!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseA_maze_seq4_2018: "*\"Það er maðkur í mysunni.\"* \n\n\nFJARLÆGÐU kubb til að koma fuglinum til svínsins!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
       courseA_maze_seq5: |-
-        Spreyttu þig á þessu alveg frá byrjun.\r
-        \r
-        ![](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+        Spreyttu þig á þessu alveg frá byrjun.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Reyndu þig við þessa þraut.
       courseA_maze_seq5_2019: Reyndu þig við þessa þraut.
+      courseA_maze_seq5a_2018: |-
+        *"Ég er hér svínka!"*
+
+        Hverju getur þú bætt við endann á þessum kóða til að koma fuglinum til svínsins?
+      courseA_maze_seq5a_2019: |-
+        *"Ég er hér svínka!"*
+
+        Hverju getur þú bætt við endann á þessum kóða til að koma fuglinum til svínsins?
       courseA_maze_seq6: |-
-        Farðu í eina átt, svo aðra til að koma fuglinum til svínsins!\r
-        \r
-        ![](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+        Farðu í eina átt, svo aðra til að koma fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018: Farðu í eina átt, svo í aðra, til að koma fuglinum að svíninu!
       courseA_maze_seq6_2019: Farðu í eina átt, svo í aðra, til að koma fuglinum að svíninu!
       courseA_maze_seq7: |-
-        Finndu út hvað er að og bættu svo við kubbum til að koma fuglinum til svínsins!\r
-        \r
-        ![](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+        Finndu út hvað er að og bættu svo við kubbum til að koma fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq7_2018: |-
-        Finndu út hvað er að og bættu svo við kubbum til að koma fuglinum til svínsins!\r
-        \r
-        ![](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+        Finndu út hvað er að og bættu svo við kubbum til að koma fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq8: |-
-        Leystu þessa þraut og komdu fuglinum til svínsins!\r
-        \r
-        ![](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
+        Leystu þessa þraut og komdu fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Leystu þetta borð og komdu fuglinum til svínsins!
       courseA_maze_seq8_2019: Leystu þetta borð og komdu fuglinum til svínsins!
       courseA_maze_seq9: |-
-        **Áskorun:** Lagaðu þennan áfanga með því að bæta við kubbum svo fuglinn nái svíninu!\r
-        \r
-        ![](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+        **Áskorun:** Lagaðu þennan áfanga með því að bæta við kubbum svo fuglinn nái svíninu!
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq9_2018: |-
-        **Áskorun:** Lagaðu þennan áfanga með því að bæta við kubbum svo fuglinn nái svíninu!\r
-        \r
-        ![](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+        **Áskorun:** Lagaðu þennan áfanga með því að bæta við kubbum svo fuglinn nái svíninu!
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq_challenge1: Lagaðu þennan áfanga. Fjarlægðu óþarfa kubba og bættu inn þeim sem vantar. Láttu fuglinn ná grísnum!
       courseA_maze_seq_challenge1_2018: Lagaðu þennan áfanga. Fjarlægðu óþarfa kubba og bættu inn þeim sem vantar. Láttu fuglinn ná grísnum!
       courseA_maze_seq_challenge1_2019: Lagaðu þennan áfanga. Fjarlægðu óþarfa kubba og bættu inn þeim sem vantar. Láttu fuglinn ná grísnum!
@@ -6723,6 +7108,14 @@ is:
         atburðarkubbinn sem er nú þegar á vinnusvæðinu.
 
         Komdu Jorge til flaggsins til að ljúka þessum áfanga!
+      courseA_playLab_events4: Bættu nú við fleiri kubbum til að láta Jorge hreyfast til hægri þegar smellt er á hægri örina.
+      courseA_playLab_events4_2018: Bættu nú öðrum atvikskubbi til að láta Jorge hreyfast til hægri þegar smellt er á hægri örina.
+      courseA_playLab_events4_2019: Bættu nú öðrum atvikskubbi til að láta Jorge hreyfast til hægri þegar smellt er á hægri örina.
+      courseA_playLab_events5: Bættu við atburðum til að láta Jorge hreyfast upp og niður þegar ýtt er á `upp` og `niður` hnappana.
+      courseA_playLab_events5_2018: Bættu við atburðum til að láta Jorge hreyfast upp og niður þegar ýtt er á `upp` og `niður` hnappana.
+      courseA_playLab_events5_2019: Bættu við atburðum til að láta Jorge hreyfast upp og niður þegar ýtt er á `upp` og `niður` hnappana.
+      courseA_playLab_events7_2018: "*Frjáls æfing:* Bættu við leikinn eftir þínu höfði. Geturðu látið risaeðluna hverfa þegar Jorge rekst á hana?"
+      courseA_playLab_events7_2019: "*Frjáls æfing:* Bættu við leikinn eftir þínu höfði. Geturðu látið risaeðluna hverfa þegar Jorge rekst á hana?"
       courseA_playlab_events_challenge1: |-
         Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?
 
@@ -6742,11 +7135,11 @@ is:
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge1a: |-
-        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?\r
-        \r
-        \r
+        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?
+
+
         Í þessari þraut skaltu gæta þess að smella til að fá vísbendingar! Vísbendingarnar geta leitt þig gegnum verkefnið skref fyrir skref!\r
-        \r
+
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge2: |-
@@ -6768,15 +7161,31 @@ is:
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challengeClone: |-
-        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?\r
-        \r
-        \r
+        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?
+
+
         Í þessari þraut skaltu gæta þess að smella til að fá vísbendingar! Vísbendingarnar geta leitt þig gegnum verkefnið skref fyrir skref!\r
-        \r
+
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseB_Scrat_ramp1_2018: Komdu Scrat til akarnsins með því að festa <xml><block type="maze_moveEast"/></xml> kubb neðan á <xml><block type="when_run"/></xml> kubbinn, og ýttu svo á "▶ Keyra"!
+      courseB_Scrat_ramp1_2019: Komdu Scrat til akarnsins með því að festa <xml><block type="maze_moveEast"/></xml> kubb neðan á <xml><block type="when_run"/></xml> kubbinn, og ýttu svo á "▶ Keyra"!
+      courseB_Scrat_ramp2_2018: Festu báða <xml><block type="maze_moveEast"/></xml> kubbana við <xml><block type="when_run"/></xml> til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseB_Scrat_ramp2_2019: Festu báða <xml><block type="maze_moveEast"/></xml> kubbana við <xml><block type="when_run"/></xml> til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseB_Scrat_ramp3a_2018: Náðu í <xml><block type="maze_moveNorth"/></xml> úr verkfærakassanum og bættu honum neðan við hina kubbana til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseB_Scrat_ramp3a_2019: Náðu í <xml><block type="maze_moveNorth"/></xml> úr verkfærakassanum og bættu honum neðan við hina kubbana til að ljúka við kóðann og smelltu svo á "▶ Keyra".
+      courseB_Scrat_ramp3b_2018: |-
+        Það er einn kubbur sem ekki á að vera síðast í þessum kóða! 
+
+        Dragðu hann aftur í verkfærakassann til að fjarlægja hann.
+      courseB_Scrat_ramp3b_2019: |-
+        Það er einn kubbur sem ekki á að vera síðast í þessum kóða! 
+
+        Dragðu hann aftur í verkfærakassann til að fjarlægja hann.
       courseB_Scrat_ramp4a_2018: Sérðu hvaða kubb þarf að setja neðan við hina kubbana til að ljúka við þennan kóða?
       courseB_Scrat_ramp4a_2019: Sérðu hvaða kubb þarf að setja neðan við hina kubbana til að ljúka við þennan kóða?
+      courseB_Scrat_ramp5a_2018: Prófaðu þetta án hjálpar!
+      courseB_Scrat_ramp5a_2019: Prófaðu þetta án hjálpar!
       courseB_artist_loops10: |-
         Notaðu það sem þú hefur lært til að teikna mynd af því sem þú heldur að listamaðurinn hafi séð þegar hann kom heim.\r
 
@@ -6819,6 +7228,12 @@ is:
       courseB_artist_loops_challenge2: Komum í leik! Teiknaðu eins mörg X og þú getur! Nærðu að hafa 3 í röð?
       courseB_artist_loops_challenge2_2018: Komum í leik! Teiknaðu eins mörg X og þú getur! Nærðu að hafa 3 í röð?
       courseB_artist_loops_challenge2_2019: Komum í leik! Teiknaðu eins mörg X og þú getur! Nærðu að hafa 3 í röð?
+      courseB_collector_loops1: |-
+        **Frjáls æfing:** Þetta er ævintýramærin Laurel! Láttu hana hreyfast og safna eins miklum fjársjóði og þú getur.
+
+        Dragðu kubba út á vinnusvæðið og reyndu að sjá hvernig er hægt að ná fjársjóði. Náðu minnst einum til að klára þetta borð.
+      courseB_collector_loops1_2018: "**Frjáls æfing:** Færðu Laurel og náðu eins miklum fjársjóði og þú getur. Náðu minnst einum án mistaka til að klára þetta borð.  "
+      courseB_collector_loops1_2019: "**Frjáls æfing:** Færðu Laurel og náðu eins miklum fjársjóði og þú getur. Náðu minnst einum án mistaka til að klára þetta borð.  "
       courseB_collector_loops2: |-
         Færðu Laurel að fjársjóðnum og notaðu svo <xml><block type="collector_collect"/></xml> kubbinn til að taka hann upp.
 
@@ -6838,7 +7253,20 @@ is:
       courseB_collector_loops3_2018: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn <xml><block type="maze_moveEast"/></xml> kubb?
       courseB_collector_loops3_2019: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn <xml><block type="maze_moveEast"/></xml> kubb?
       courseB_collector_loops3_predict1: Hvernig getur Laurel safnað öllum fimm gullhrúgunum með aðeins einum `A->` kubbi?
+      courseB_collector_loops_challenge2a: |-
+        *"Náum þessum fjársjóði!"*
+
+        Hjálpaðu Laurel að ná minnst **5** fjársjóðum til að ljúka þrautinni.
+      courseB_collector_loops_challenge2a_2018: |-
+        *"Náum þessum fjársjóði!"*
+
+        Hjálpaðu Laurel að ná minnst **5** fjársjóðum til að ljúka þrautinni.
+      courseB_collector_loops_challenge2a_2019: |-
+        *"Náum þessum fjársjóði!"*
+
+        Hjálpaðu Laurel að ná minnst **5** fjársjóðum til að ljúka þrautinni.
       courseB_collector_prog3: Hvernig getur Laurel safnað öllum fimm gullhrúgunum með aðeins einum `A->` kubbi?
+      courseB_iceage_loops1: Hjálpaðu Scrat yfir hálan ísinn svo hann nái nú akarninu!
       courseB_iceage_loops10: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseB_iceage_loops10_2019: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseB_iceage_loops11: Hjálpaðu Skrat að komast til akarnsins!
@@ -6846,6 +7274,11 @@ is:
       courseB_iceage_loops11_forVideo: Hjálpaðu Skrat að komast til akarnsins!
       courseB_iceage_loops12: Náðu akarninu hvernig sem þú getur!
       courseB_iceage_loops12_2019: Náðu akarninu hvernig sem þú getur!
+      courseB_iceage_loops1_2019: Hjálpaðu Scrat yfir hálan ísinn svo hann nái nú akarninu!
+      courseB_iceage_loops2: Notaðu bæði <xml><block type="maze_moveWest"/></xml> og <xml><block type="maze_moveSouth"/></xml> kubba til að ná akarninu!
+      courseB_iceage_loops2_2019: Notaðu bæði <xml><block type="maze_moveWest"/></xml> og <xml><block type="maze_moveSouth"/></xml> kubba til að ná akarninu!
+      courseB_iceage_loops3: Geturðu komist til akarnsins með bara einum <xml><block type="maze_moveWest"/></xml> kubbi? Prófaðu að nota lykkju!
+      courseB_iceage_loops3_2019: Geturðu komist til akarnsins með bara einum <xml><block type="maze_moveWest"/></xml> kubbi? Prófaðu að nota lykkju!
       courseB_iceage_loops4: Bættu við einum kubbi til að koma Scrat til akarnsins!
       courseB_iceage_loops4_2019: Bættu við einum kubbi til að koma Scrat til akarnsins!
       courseB_iceage_loops5: Getur þú bætt við einni lykkju í viðbót til að ná akarninu?
@@ -6858,7 +7291,10 @@ is:
       courseB_iceage_loops9: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
       courseB_iceage_loops9_2019: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
       courseB_maze_seq3: '*"Lagaðu kóðann svo ég komist til svínsins."*'
+      courseB_maze_seq3_2018: '*"Lagaðu kóðann svo ég fái þetta akarn!"*'
       courseB_maze_seq9: "**Áskorun:** Farðu í kringum TNT sprengiefnið til að koma fuglinum til svínsins."
+      courseB_maze_seq9_2018: "**Áskorun:** Komdu Scrat yfir sprunginn ísinn til akarnsins."
+      courseB_maze_seq9_2019: "**Áskorun:** Komdu Scrat yfir sprunginn ísinn til akarnsins."
       courseB_maze_seq9_challenge1: "*Hvar er þetta svín nú að fela sig?*"
       courseB_maze_seqCold: "**Áskorun:** Lagaðu villur í þessum áfanga með þvi að bæta við kubbum svo fuglinn nái svíninu!"
       courseB_maze_seq_challenge1: Þú hefur aðeins fjóra kubba fyrir hverja hreyfingu. Getur þú fundið leiðina áður en kubbarnir klárast?
@@ -6867,6 +7303,35 @@ is:
       courseB_playLab_events1: "Þessi leikur heitir \"Leikjasmiðja\".\\r\n\\r\nReyndu að finna út hvað hver kubbur gerir."
       courseB_playLab_events1_2018: "Þessi leikur heitir \"Leikjasmiðja\".\\r\n\\r\nReyndu að finna út hvað hver kubbur gerir."
       courseB_playLab_events1_2019: "Þessi leikur heitir \"Leikjasmiðja\".\\r\n\\r\nReyndu að finna út hvað hver kubbur gerir."
+      courseB_playlab_events3: Notaðu atvik til að láta drekann Daisy the Dragon skipta yfir í eitthvert ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) skap þegar þú smellir á hana.
+      courseB_playlab_events3_2018: Notaðu atvik til að láta drekann Daisy the Dragon skipta yfir í eitthvert ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) skap þegar þú smellir á hana.
+      courseB_playlab_events3_2019: Notaðu atvik til að láta drekann Daisy the Dragon skipta yfir í eitthvert ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) skap þegar þú smellir á hana.
+      courseB_playlab_events4: "Rabbabarariddarar!  \n\nBættu við atviki svo riddarinn færi sig að drekanum þegar smellt er á vinstri ör."
+      courseB_playlab_events4_2018: |-
+        Rabbabarariddarar! Náðu drekanum til að ljúka þessu borði. 
+
+        Bættu við atviki svo riddarinn færi sig í átt að drekanum þegar smellt er á vinstri ör.
+      courseB_playlab_events4_2019: |-
+        Rabbabarariddarar! Náðu drekanum til að ljúka þessu borði. 
+
+        Bættu við atviki svo riddarinn færi sig í átt að drekanum þegar smellt er á vinstri ör.
+      courseB_playlab_events5_2018: "Bættu nú við atviki svo að riddarinn forði sér frá drekanum þegar þú ýtir á hægri ör.  \n\nFærðu riddarann til hægri til að ljúka þessu borði."
+      courseB_playlab_events5_2019: "Bættu nú við atviki svo að riddarinn forði sér frá drekanum þegar þú ýtir á hægri ör.  \n\nFærðu riddarann til hægri til að ljúka þessu borði."
+      courseB_playlab_events6: |-
+        Hjálpaðu riddaranum að ná öllum flöggunum!
+
+        Til þess þarftu að bæta við atvikum til að færa riddarann upp, niður, til vinstri og til hægri.
+      courseB_playlab_events6_2018: |-
+        Hjálpaðu riddaranum að ná öllum flöggunum!
+
+        Til þess þarftu að bæta við atvikum til að færa riddarann upp, niður, til vinstri og til hægri.
+      courseB_playlab_events6_2019: |-
+        Hjálpaðu riddaranum að ná öllum flöggunum!
+
+        Til þess þarftu að bæta við atvikum til að færa riddarann upp, niður, til vinstri og til hægri.
+      courseB_playlab_events7: "Gerðu leikinn áhugaverðari með því að láta riddarann hverfa ef hann rekst á drekann á leiðinni að flöggunum! \n\nSpilaðu hljóð þegar þeir rekast á til að gera þetta raunverulegra.\n\nLáttu riddarann snerta öll mörkin og rekast svo á drekann til að ljúka borðinu."
+      courseB_playlab_events7_2018: "Gerðu þennan leik skemmtilegri með því að bæta við hann!\n\n1) Láttu riddarann hverfa ef hann rekst á drekann.  \n2) Spilaðu hljóð þegar þeir rekast á til að gera það raunverulegra.\n\n---\n\nLáttu hann fara á öll mörkin og síðan rekast á drekann til að ljúka borðinu."
+      courseB_playlab_events7_2019: "Gerðu þennan leik skemmtilegri með því að bæta við hann!\n\n1) Láttu riddarann hverfa ef hann rekst á drekann.  \n2) Spilaðu hljóð þegar þeir rekast á til að gera það raunverulegra.\n\n---\n\nLáttu hann fara á öll mörkin og síðan rekast á drekann til að ljúka borðinu."
       courseB_playlab_events_challenge1: "Nú er að komið að Stóra Dýrakapphlaupinu! Láttu dýrin færast niður þegar þú ýtir á ▼.\n\n Hver skyldi hlaupa hraðast?"
       courseB_playlab_events_challenge1_2018: "Nú er að komið að Stóra Dýrakapphlaupinu! Láttu dýrin færast niður þegar þú ýtir á ▼.\n\n Hver skyldi hlaupa hraðast?"
       courseB_playlab_events_challenge1_2019: "Nú er að komið að Stóra Dýrakapphlaupinu! Láttu dýrin færast niður þegar þú ýtir á ▼.\n\n Hver skyldi hlaupa hraðast?"
@@ -6889,6 +7354,12 @@ is:
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Náðu brotamálminum, BB-8!"_
 
         Gættu þín á veggjum og kössum. Brotamálmur lítur svona út: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseB_starWars_prog10: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu öllu?"_'
+      courseB_starWars_prog10_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu öllu?"_'
+      courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu öllu?"_'
+      courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram!"_'
+      courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram!"_'
+      courseB_starWars_prog11_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram!"_'
       courseB_starWars_prog1_2018: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Náðu brotamálminum, BB-8!"_
 
@@ -6903,6 +7374,48 @@ is:
       courseB_starWars_prog3: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8!"_'
       courseB_starWars_prog3_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8!"_'
       courseB_starWars_prog3_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8!"_'
+      courseB_starWars_prog4: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Náðu þessu, BB-8!"_'
+      courseB_starWars_prog4_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Náðu þessu, BB-8!"_'
+      courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Náðu þessu, BB-8!"_'
+      courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu öllu?"_'
+      courseB_starWars_prog5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu öllu?"_'
+      courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu öllu?"_'
+      courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_'
+      courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_'
+      courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_'
+      courseB_starWars_prog7: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Farðu og náðu þessu!"_'
+      courseB_starWars_prog7_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Farðu og náðu þessu!"_'
+      courseB_starWars_prog7_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Farðu og náðu þessu!"_'
+      courseB_starWars_prog8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        **Challenge**: Gather all the scrap metal.
+      courseB_starWars_prog8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        **Challenge**: Gather all the scrap metal.
+      courseB_starWars_prog8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        **Challenge**: Gather all the scrap metal.
+      courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_'
+      courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_'
+      courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_'
+      courseC_PlayLab_events7: |-
+        Kubburinn `endurtaka endalaust` endurtekur kóðann sem er í honum aftur og aftur endalaust. Notaðu þennan kubb til að færa risaeðluna Dino (leikmann 2) upp og niður 400 díla.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2018: |-
+        Kubburinn `endurtaka endalaust` endurtekur kóðann sem er í honum aftur og aftur endalaust. Notaðu þennan kubb til að færa risaeðluna Dino (leikmann 2) upp og niður 400 díla.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2019: |-
+        Kubburinn `endurtaka endalaust` endurtekur kóðann sem er í honum aftur og aftur endalaust. Notaðu þennan kubb til að færa risaeðluna Dino (leikmann 2) upp og niður 400 díla.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events8: "Getur þú látið Waddles (leikmann 2) segja \"Æ!\" og spila hljóð ef hann rekst á Chomp?\n\nSpilaðu svo leikinn til að láta þetta gerast.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2018: "Getur þú látið Waddles (leikmann 2) segja \"Æ!\" og spila hljóð ef hann rekst á Chomp?\n\nSpilaðu svo leikinn til að láta þetta gerast.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "Getur þú látið Waddles (leikmann 2) segja \"Æ!\" og spila hljóð ef hann rekst á Chomp?\n\nSpilaðu svo leikinn til að láta þetta gerast.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_events_challenge1: |-
         Notaðu nýjan kubb til að láta Waddles fara sjálfkrafa aftur á byrjunarreit þegar hann rekst á Risaeðlu og þegar hann skorar stig. Þetta gerir leikinn erfiðari en líka skemmtilegri!\r
         \r
@@ -6937,6 +7450,16 @@ is:
 
         ![expandable]
         (https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+      courseC_artist_loops4a_2018: |-
+        Breyttu kóðanum svo að þú stökkvir áfram 75 díla á milli þess að stimpla fuglinn og leðurblökuna. Í þessari þraut þarftu að passa að hafa `hoppa til 200 lárétt 200 lóðrétt` innan í lykkjunni til að þess að þú haldist í miðjunni!
+        ___
+
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+      courseC_artist_loops4a_2019: |-
+        Breyttu kóðanum svo að þú stökkvir áfram 75 díla á milli þess að stimpla fuglinn og leðurblökuna. Í þessari þraut þarftu að passa að hafa `hoppa til 200 lárétt 200 lóðrétt` innan í lykkjunni til að þess að þú haldist í miðjunni!
+        ___
+
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops5: "Fínt! Nú þarf að reisa girðingu innan við til að halda dýrunum úti. \\r\nBúðu til girðingu eftir eigin höfði!\\r\n\\r\n"
       courseC_artist_loops5a: |-
         Hvað gerist þegar þú skiptir út öðrum eða báðum límmiðum fyrir aðra veru?\r
@@ -7050,11 +7573,59 @@ is:
       courseC_artist_prog2: "*\"Smíðum búr fyrir gæluskrímslið mitt!\"*\n\nDragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni.  \n(Hvert strik er 100 dílar á lengd)"
       courseC_artist_prog2_2018: "*\"Smíðum búr fyrir gæluskrímslið mitt!\"*\n\nDragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni.  \n(Hvert strik er 100 dílar á lengd)"
       courseC_artist_prog2_2019: "*\"Smíðum búr fyrir gæluskrímslið mitt!\"*\n\nDragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni.  \n(Hvert strik er 100 dílar á lengd)"
+      courseC_artist_prog3: |-
+        *"Á þetta geimfar vantar glugga!"*
+
+        Hver hlið á innri ferningnum er 100 dílar og öll hornin eru 90 gráður.
+      courseC_artist_prog3_2018: |-
+        *"Á þetta geimfar vantar glugga!"*
+
+        Hver hlið á innri ferningnum er 100 dílar og öll hornin eru 90 gráður.
+      courseC_artist_prog3_2019: |-
+        *"Á þetta geimfar vantar glugga!"*
+
+        Hver hlið á innri ferningnum er 100 dílar og öll hornin eru 90 gráður.
+      courseC_artist_prog4: "*\"Ó nei! Geimgæludýr Stellu flaug í burtu! Hjálpum geimfaranum!\"*\n\nLjúktu við eldflaug Stellu svo að hún geti elt gæludýrið sitt.  \n(Hver hlið þríhyrningsins er 100 dílar á lengd og er með 120 gráðu ytri horn.)"
+      courseC_artist_prog4_2018: "*\"Ó nei! Geimgæludýr Stellu flaug í burtu! Hjálpum geimfaranum!\"*\n\nLjúktu við eldflaug Stellu svo að hún geti elt gæludýrið sitt.  \n(Hver hlið þríhyrningsins er 100 dílar á lengd og er með 120 gráðu ytri horn.)"
+      courseC_artist_prog4_2019: "*\"Ó nei! Geimgæludýr Stellu flaug í burtu! Hjálpum geimfaranum!\"*\n\nLjúktu við eldflaug Stellu svo að hún geti elt gæludýrið sitt.  \n(Hver hlið þríhyrningsins er 100 dílar á lengd og er með 120 gráðu ytri horn.)"
+      courseC_artist_prog5: "*\"Kannske ættum að útbúa merki á hvert gæludýr ef það skyldi týnast!\"*\n\nLjúktu þessu merki með því að teikna rétthyrning utan um.  \n(Löngu hliðarnar eru 200 dílar og stuttu hliðarnar 100 dílar)"
+      courseC_artist_prog5_2018: "*\"Kannske ættum að útbúa merki á hvert gæludýr ef það skyldi týnast!\"*\n\nLjúktu þessu merki með því að teikna rétthyrning utan um.  \n(Löngu hliðarnar eru 200 dílar og stuttu hliðarnar 100 dílar)"
+      courseC_artist_prog5_2019: "*\"Kannske ættum að útbúa merki á hvert gæludýr ef það skyldi týnast!\"*\n\nLjúktu þessu merki með því að teikna rétthyrning utan um.  \n(Löngu hliðarnar eru 200 dílar og stuttu hliðarnar 100 dílar)"
+      courseC_artist_prog6: |-
+        *"Nú þarf Bella merki!*"
+
+        Teiknaðu þennan tígul með 200 díla hliðar.
+      courseC_artist_prog6_2018: |-
+        *"Nú þarf Bella merki!*"
+
+        Teiknaðu þennan ferning með 200 díla hliðar.
+      courseC_artist_prog6_2019: |-
+        *"Nú þarf Bella merki!*"
+
+        Teiknaðu þennan ferning með 200 díla hliðar.
+      courseC_artist_prog7: "**Áskorun:** Þetti merki er mjög merklegt!  \n\nGeturðu fundið hvernig á að teikna útlínuna? \n(Langa hliðin er 150 dílar og stuttu hliðarnar eru 75 dílar.)"
+      courseC_artist_prog7_2018: "**Áskorun:** Þetti merki er mjög merklegt!  \n\nGeturðu fundið hvernig á að teikna útlínuna? \n(Langa hliðin er 150 dílar og stuttu hliðarnar eru 75 dílar.)"
+      courseC_artist_prog7_2019: "**Áskorun:** Þetti merki er mjög merklegt!  \n\nGeturðu fundið hvernig á að teikna útlínuna? \n(Langa hliðin er 150 dílar og stuttu hliðarnar eru 75 dílar.)"
+      courseC_artist_prog8: "Enn eitt merki. Þetta er þríhyrningur fyrir Pí. \n(Hver hlið er 150 dílar)"
+      courseC_artist_prog8_2018: "Enn eitt merki. Þetta er þríhyrningur fyrir Pí. \n(Hver hlið er 150 dílar)"
+      courseC_artist_prog8_2019: "Enn eitt merki. Þetta er þríhyrningur fyrir Pí. \n(Hver hlið er 150 dílar)"
       courseC_artist_prog_challenge1-doghouse: Byggjum hundahús fyrir Jorge!
       courseC_artist_prog_challenge1: Teiknaðu klefa fyrir hvert dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina! Hver ferningur er með 100 díla hliðar.
       courseC_artist_prog_challenge1_2018: Teiknaðu klefa fyrir hvert dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina! Hver ferningur er með 100 díla hliðar.
       courseC_artist_prog_challenge1_2019: Teiknaðu klefa fyrir hvert dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina! Hver ferningur er með 100 díla hliðar.
       courseC_artist_prog_challenge2: "*Hjálpaðu mér að teikna gulu línurnar á þessum vegi!*"
+      courseC_artist_prog_challenge2a: |-
+        *"Hjálpaðu mér að mála gular línur á þennan veg!"*
+
+        Línubútarnir eru 150, 100 og 200 dílar á lengd!
+      courseC_artist_prog_challenge2a_2018: |-
+        *"Hjálpaðu mér að mála gular línur á þennan veg!"*
+
+        Línubútarnir eru 150, 100 og 200 dílar á lengd!
+      courseC_artist_prog_challenge2a_2019: |-
+        *"Hjálpaðu mér að mála gular línur á þennan veg!"*
+
+        Línubútarnir eru 150, 100 og 200 dílar á lengd!
       courseC_collector_loops_challenge2: |-
         *"Leitum að fjársjóði!"* 
 
@@ -7067,60 +7638,330 @@ is:
         *"Leitum að fjársjóði!"* 
 
         Hjálpaðu safnaranum að ná minnst **5** fjársjóðum.
+      courseC_collector_prog1: |-
+        **Frjáls æfing:** Þetta er ævintýramærin Láral! Láttu hana hreyfast og safna eins miklum fjársjóði og þú getur. Notaðu `safna` kubbinn til að taka upp fjársjóð!
+
+        Dragðu kubba út á vinnusvæðið og reyndu að finna út hvernig er hægt að ná fjársjóði. Náðu minnst einum til að klára þetta borð.
+      courseC_collector_prog1_2018: |-
+        **Frjáls æfing:** Þetta er ævintýramærin Láral! Láttu hana hreyfast og safna eins miklum fjársjóði og þú getur. Notaðu `safna` kubbinn til að taka upp fjársjóð!
+
+        Dragðu kubba út á vinnusvæðið og reyndu að finna út hvernig er hægt að ná fjársjóði. Náðu minnst einum til að klára þetta borð.
+      courseC_collector_prog1_2019: |-
+        **Frjáls æfing:** Þetta er ævintýramærin Láral! Láttu hana hreyfast og safna eins miklum fjársjóði og þú getur. Notaðu `safna` kubbinn til að taka upp fjársjóð!
+
+        Dragðu kubba út á vinnusvæðið og reyndu að finna út hvernig er hægt að ná fjársjóði. Náðu minnst einum til að klára þetta borð.
+      courseC_collector_prog2: Færðu Láru að fjársjóðnum og notaðu svo <xml><block type="collector_collect"/></xml> til að taka hann upp.
+      courseC_collector_prog2_2018: Færðu Láru að fjársjóðnum og notaðu svo <xml><block type="collector_collect"/></xml> til að taka hann upp.
+      courseC_collector_prog2_2019: Færðu Láru að fjársjóðnum og notaðu svo <xml><block type="collector_collect"/></xml> til að taka hann upp.
+      courseC_collector_prog3: "*\"Röðin skiptir máli\"* \n\nKubbarnir sem þú þarft að nota eru þegar á vinnusvæðinu en ekki tengdir.  \nRaðaðu þeim til að safna öllum fjársjóðunum og leysa þrautina."
+      courseC_collector_prog3_2018: "*\"Röðin skiptir máli\"* \n\nKubbarnir sem þú þarft að nota eru þegar á vinnusvæðinu en ekki tengdir.  \nRaðaðu þeim til að safna öllum fjársjóðunum og leysa þrautina."
+      courseC_collector_prog3_2019: "*\"Röðin skiptir máli\"* \n\nKubbarnir sem þú þarft að nota eru þegar á vinnusvæðinu en ekki tengdir.  \nRaðaðu þeim til að safna öllum fjársjóðunum og leysa þrautina."
+      courseC_collector_prog4: "*\"Röðin skiptir máli\"*\n\nKubbarnir sem þú þarft að nota eru þegar á vinnusvæðinu en ekki tengdir.  \n\nRaðaðu þeim til að safna öllu gullinu og leysa þrautina."
+      courseC_collector_prog4_2018: "*\"Röðin skiptir máli\"*\n\nKubbarnir sem þú þarft að nota eru þegar á vinnusvæðinu en ekki tengdir.  \n\nRaðaðu þeim til að safna öllu gullinu og leysa þrautina."
+      courseC_collector_prog4_2019: "*\"Röðin skiptir máli\"*\n\nKubbarnir sem þú þarft að nota eru þegar á vinnusvæðinu en ekki tengdir.  \n\nRaðaðu þeim til að safna öllu gullinu og leysa þrautina."
+      courseC_collector_prog5: |-
+        *"Hjálpaðu mér að safna öllum fjársjóðunum!"*
+
+        Þessir kubbar eru í rangri röð. Getur þú lagað þá?
+      courseC_collector_prog5_2018: |-
+        *"Hjálpaðu mér að safna öllum fjársjóðunum!"*
+
+        Þessir kubbar eru í rangri röð. Getur þú lagað þá?
+      courseC_collector_prog5_2019: |-
+        *"Hjálpaðu mér að safna öllum fjársjóðunum!"*
+
+        Þessir kubbar eru í rangri röð. Getur þú lagað þá?
+      courseC_collector_prog6: |-
+        *"Hjálpaðu mér að safna öllum fjársjóðunum!"*
+
+        Þessir kubbar eru í rangri röð. Settu þá í rétta röð til að safna öllum fjársjóðunum.
+      courseC_collector_prog6_2018: |-
+        *"Hjálpaðu mér að safna öllum fjársjóðunum!"*
+
+        Þessir kubbar eru í rangri röð. Settu þá í rétta röð til að safna öllum fjársjóðunum.
+      courseC_collector_prog6_2019: |-
+        *"Hjálpaðu mér að safna öllum fjársjóðunum!"*
+
+        Þessir kubbar eru í rangri röð. Settu þá í rétta röð til að safna öllum fjársjóðunum.
+      courseC_collector_prog7: "**Áskorun:** *\"Hvað gengur á hér?\"*\n\nJafnvel þó við setjum þessa í rétta röð eru ekki allir kubbarnir hér. \nNotaðu kubba úr verkfærakassanum til að safna öllum fjársjóðunum."
+      courseC_collector_prog7_2018: "**Áskorun:** *\"Hvað gengur á hér?\"*\n\nJafnvel þó við setjum þessa í rétta röð eru ekki allir kubbarnir hér. \nNotaðu kubba úr verkfærakassanum til að safna öllum fjársjóðunum."
+      courseC_collector_prog7_2019: "**Áskorun:** *\"Hvað gengur á hér?\"*\n\nJafnvel þó við setjum þessa í rétta röð eru ekki allir kubbarnir hér. \nNotaðu kubba úr verkfærakassanum til að safna öllum fjársjóðunum."
+      courseC_collector_prog8: '*"Þetta gengur bara vel! Hjálpaðu mér að safna öllum fjársjóðunum."*'
+      courseC_collector_prog8_2018: '*"Þetta gengur bara vel! Hjálpaðu mér að safna öllum fjársjóðunum."*'
+      courseC_collector_prog8_2019: '*"Þetta gengur bara vel! Hjálpaðu mér að safna öllum fjársjóðunum."*'
       courseC_collector_prog9: '*"Náum öllum fjársjóðnum!"*'
       courseC_collector_prog9_2018: '*"Náum öllum fjársjóðnum!"*'
       courseC_collector_prog9_2019: '*"Náum öllum fjársjóðnum!"*'
+      courseC_collector_progA: Hjálpaðu Láru að safna öllum fjársjóðunum.
+      courseC_collector_progB: "Þetta er næstum komið hjá þér! \n\nSafnaðu eins mörgum peningum og þú getur til að ljúka þessu borði!"
       courseC_collector_prog_challenge2: Í þessum helli má finna 20 fjársjóði. Safnaðu að minnsta kosti **10** til að ljúka þessari áskorun!
       courseC_collector_prog_challenge2_2018: Í þessum helli má finna 20 fjársjóði. Safnaðu að minnsta kosti **10** til að ljúka þessari áskorun!
       courseC_collector_prog_challenge2_2019: Í þessum helli má finna 20 fjársjóði. Safnaðu að minnsta kosti **10** til að ljúka þessari áskorun!
+      courseC_data widget: Ýttu á Keyra. Vitkinn mun láta dýr birtast. Teldu þau. Hverju tekurðu eftir?
+      courseC_data wizard: Ýttu á Keyra. Vitkinn mun láta dýr birtast. Teldu þau. Hverju tekurðu eftir?
+      courseC_flappy_events1: "Festu `blaka venjulega oft` kubb við `þegar smellt` atburðinn og smelltu svo á \"Keyra\".  \n\n---\n\nSmelltu eða sláðu á leiksvæðið til að koma Flappy til marksins."
+      courseC_flappy_events10: "Búðu til þinn eiginn Flappy leik! \n\nÞú getur breytt myndefninu og reglunum...jafnvel þyngdaraflinu! Smelltu í lokin á \"Ljúka\" til að deila þessu með vinum í símum þeirra."
+      courseC_flappy_events10_2018: "Búðu til þinn eiginn Flappy leik! \n\nÞú getur breytt myndefninu og reglunum...jafnvel þyngdaraflinu! Smelltu í lokin á \"Ljúka\" til að deila þessu með vinum í símum þeirra."
+      courseC_flappy_events10_2019: "Búðu til þinn eiginn Flappy leik! \n\nÞú getur breytt myndefninu og reglunum...jafnvel þyngdaraflinu! Smelltu í lokin á \"Ljúka\" til að deila þessu með vinum í símum þeirra."
+      courseC_flappy_events1_2018: "Festu `blaka venjulega oft` kubb við `þegar smellt` atburðinn og smelltu svo á \"Keyra\".  \n\n---\n\nSmelltu eða sláðu á leiksvæðið til að koma Flappy til marksins."
+      courseC_flappy_events1_2019: "Festu `blaka venjulega oft` kubb til `þegar smellt` atburðinn og smelltu svo á \"Keyra\".  \n\n---\n\nSmelltu eða sláðu á leiksvæðið til að koma Flappy til marksins."
+      courseC_flappy_events2: "Atvikið `þegar keyrt` verður þegar þú ýtir á \"Keyra\" og leikurinn fer af stað. \n\nPrófaðu að bæta við kubbi sem stillir hraðann þegar ýtt er á \"Keyra\". \n\n---\n\nSpilaðu leikinn og fljúgðu í mark til að halda áfram."
+      courseC_flappy_events2_2018: "Atvikið `þegar keyrt` verður þegar þú ýtir á \"Keyra\" og leikurinn fer af stað. \n\nPrófaðu að bæta við kubbi sem stillir hraðann þegar ýtt er á \"Keyra\". \n\n---\n\nSpilaðu leikinn og fljúgðu í mark til að halda áfram."
+      courseC_flappy_events2_2019: "Atvikið `þegar keyrt` verður þegar þú ýtir á \"Keyra\" og leikurinn fer af stað. \n\nPrófaðu að bæta við kubbi sem stillir hraðann þegar ýtt er á \"Keyra\". \n\n---\n\nSpilaðu leikinn og fljúgðu í mark til að halda áfram."
+      courseC_flappy_events3: "Nú höfum við bætt við jörð. \n\nFestu kubbinn `ljúka leik` við atvikið `þegar rekst á jörð`. \n\n--\n\nSpilaðu leikinn og láttu fuglinn hrapa til jarðar til að halda áfram."
+      courseC_flappy_events3_2018: "Nú höfum við bætt við jörð. \n\nFestu kubbinn `ljúka leik` við atvikið `þegar rekst á jörð`. \n\n--\n\nSpilaðu leikinn og láttu fuglinn hrapa til jarðar til að halda áfram."
+      courseC_flappy_events3_2019: "Nú höfum við bætt við jörð. \n\nFestu kubbinn `ljúka leik` við atvikið `þegar rekst á jörð`. \n\n--\n\nSpilaðu leikinn og láttu fuglinn hrapa til jarðar til að halda áfram."
+      courseC_flappy_events4: "Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að láta hann rekast á. \n\nTengdu kubb við kubbinn \"þegar rekst á hindrun\". Kóðinn þinn verður að ljúka leiknum þegar Flappy rekst á fyrstu pípurnar."
+      courseC_flappy_events4_2018: "Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að láta hann rekast á. \n\nTengdu kubb við kubbinn \"þegar rekst á hindrun\". Kóðinn þinn verður að ljúka leiknum þegar Flappy rekst á fyrstu pípurnar."
+      courseC_flappy_events4_2019: "Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að láta hann rekast á. \n\nTengdu kubb við kubbinn \"þegar rekst á hindrun\". Kóðinn þinn verður að ljúka leiknum þegar Flappy rekst á fyrstu pípurnar."
+      courseC_flappy_events5: "Við höfum bætt við stigatöflu til að telja stig þegar Flappy kemst fram hjá hindrunum. \n\nBætti kubbi sem skorar stig við atvikið `þegar kemst framhjá hindrun` og ýttu svo á \"Keyra\" til að láta Flappy fljúga í gegnum fyrstu pípurnar."
+      courseC_flappy_events5_2018: "Við höfum bætt við stigatöflu til að telja stig þegar Flappy kemst fram hjá hindrunum. \n\nBætti kubbi sem skorar stig við atvikið `þegar kemst framhjá hindrun` og ýttu svo á \"Keyra\" til að láta Flappy fljúga í gegnum fyrstu pípurnar."
+      courseC_flappy_events5_2019: "Við höfum bætt við stigatöflu til að telja stig þegar Flappy kemst fram hjá hindrunum. \n\nBætti kubbi sem skorar stig við atvikið `þegar kemst framhjá hindrun` og ýttu svo á \"Keyra\" til að láta Flappy fljúga í gegnum fyrstu pípurnar."
+      courseC_flappy_events6: "Smelltu á litlu örina á kubbnum `blaka` og láttu fuglinn blaka vængjunum öðruvísi. \n \nGáðu hvort þú getur samt skorað stig þó að þú hafir látið Flappy blaka meira eða minna í hvert sinn sem þú smellir."
+      courseC_flappy_events6_2018: "Smelltu á litlu örina á kubbnum `blaka` og láttu fuglinn blaka vængjunum öðruvísi. \n \nGáðu hvort þú getur samt skorað stig þó að þú hafir látið Flappy blaka meira eða minna í hvert sinn sem þú smellir."
+      courseC_flappy_events6_2019: "Smelltu á litlu örina á kubbnum `blaka` og láttu fuglinn blaka vængjunum öðruvísi. \n \nGáðu hvort þú getur samt skorað stig þó að þú hafir látið Flappy blaka meira eða minna í hvert sinn sem þú smellir."
       courseC_flappy_events7: Prófaðu svo að breyta umhverfinu með því að tengja kubb við `þegar keyrt` kubbinn.
       courseC_flappy_events7_2018: Prófaðu svo að breyta umhverfinu með því að tengja kubb við `þegar keyrt` kubbinn.
       courseC_flappy_events7_2019: Prófaðu svo að breyta umhverfinu með því að tengja kubb við `þegar keyrt` kubbinn.
+      courseC_flappy_events8: "Þú getur stillt bakgrunninn með hvaða atviki sem er, ekki bara þegar leikurinn byrjar.\n\nPrófaðu að láta bakgrunninn breytast af handahófi þegar önnur atvik eiga sér stað...til dæmis farið framhjá hindrun."
+      courseC_flappy_events8_2018: "Þú getur stillt bakgrunninn með hvaða atviki sem er, ekki bara þegar leikurinn byrjar.\n\nPrófaðu að láta bakgrunninn breytast af handahófi þegar önnur atvik eiga sér stað...til dæmis farið framhjá hindrun."
+      courseC_flappy_events8_2019: "Þú getur stillt bakgrunninn með hvaða atviki sem er, ekki bara þegar leikurinn byrjar.\n\nPrófaðu að láta bakgrunninn breytast af handahófi þegar önnur atvik eiga sér stað...til dæmis farið framhjá hindrun."
       courseC_flappy_events9: Breyttu þessu nú þannig að í stað þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
       courseC_flappy_events9_2018: Breyttu þessu nú þannig að í stað þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
       courseC_flappy_events9_2019: Breyttu þessu nú þannig að í stað þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
+      courseC_harvester_loops1: "Lykkjur geta endurtekið fleira en bara hreyfingar. \n\nNotaðu lykkjur til að safna öllum fjórum graskerunum."
+      courseC_harvester_loops10: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops10_2018: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops10_2019: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops11: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops11_2018: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops11_2019: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops1_2018: "Lykkjur geta endurtekið fleira en bara hreyfingar. \n\nNotaðu lykkjur til að safna öllum fjórum graskerunum."
+      courseC_harvester_loops1_2019: "Lykkjur geta endurtekið fleira en bara hreyfingar. \n\nNotaðu lykkjur til að safna öllum fjórum graskerunum."
+      courseC_harvester_loops2: Getur þú notað tvær lykkjur til að fara að graskerunum og safna þeim öllum?
+      courseC_harvester_loops2_2018: Getur þú notað tvær lykkjur til að fara að graskerunum og safna þeim öllum?
+      courseC_harvester_loops2_2019: Getur þú notað tvær lykkjur til að fara að graskerunum og safna þeim öllum?
+      courseC_harvester_loops3: Safnaðu öllum graskerunum.
+      courseC_harvester_loops3_2018: Safnaðu öllum graskerunum.
+      courseC_harvester_loops3_2019: Safnaðu öllum graskerunum.
+      courseC_harvester_loops4: |-
+        Hér er líka verið að rækta maís!
+
+        Hirtu allan maísinn og öll graskerin.
+      courseC_harvester_loops4_2018: |-
+        Hér er líka verið að rækta maís!
+
+        Hirtu allan maísinn og öll graskerin.
+      courseC_harvester_loops4_2019: |-
+        Hér er líka verið að rækta maís!
+
+        Hirtu allan maísinn og öll graskerin.
+      courseC_harvester_loops5: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops5_2018: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops5_2019: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops6: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops6_2018: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops6_2019: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops7: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops7_2018: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops7_2019: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops8: |-
+        **Áskorun:** Safnaðu öllum maísnum og öllum graskerunum.
+
+        Þú getur leyst þess þraut eins og þú vilt, en lausnin mun kosta annað hvort mikla vinnu eða mikla hugsun!
+      courseC_harvester_loops8_2018: |-
+        **Áskorun:** Safnaðu öllum maísnum og öllum graskerunum.
+
+        Þú getur leyst þess þraut eins og þú vilt, en lausnin mun kosta annað hvort mikla vinnu eða mikla hugsun!
+      courseC_harvester_loops8_2019: |-
+        **Áskorun:** Safnaðu öllum maísnum og öllum graskerunum.
+
+        Þú getur leyst þess þraut eins og þú vilt, en lausnin mun kosta annað hvort mikla vinnu eða mikla hugsun!
+      courseC_harvester_loops9: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops9_2018: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops9_2019: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops_challenge1: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge2: "Safnaðu öllu kálinu.\nForðastu tré og tún!"
       courseC_harvester_loops_challenge2_2018: "Safnaðu öllu kálinu.\nForðastu tré og tún!"
       courseC_harvester_loops_challenge2_2019: "Safnaðu öllu kálinu.\nForðastu tré og tún!"
+      courseC_harvester_loops_forVid: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_maze_debugging1: "Þessi kóði er ekki alveg í lagi! \n\nLagaðu kóðann svo Scrat komist nú til akarnsins."
+      courseC_maze_debugging1_2018: "Þessi kóði er ekki alveg í lagi! \n\nLagaðu kóðann svo Scrat komist nú til akarnsins."
+      courseC_maze_debugging1_2019: "Þessi kóði er ekki alveg í lagi! \n\nLagaðu kóðann svo Scrat komist nú til akarnsins."
+      courseC_maze_debugging3: "Það er eitthvað ekki í lagi. \n\nFjarlægðu kubba svo Scrat komist til akarnsins!"
+      courseC_maze_debugging3_2018: "Það er eitthvað ekki í lagi. \n\nFjarlægðu kubba svo Scrat komist til akarnsins!"
+      courseC_maze_debugging3_2019: "Það er eitthvað ekki í lagi. \n\nFjarlægðu kubba svo Scrat komist til akarnsins!"
       courseC_maze_debugging_challenge2: Ef Scrat snýst of oft, gæti hann svimað! Hjálpaðu honum að ná akarninu með aðeins fjórum `snúa` skipunum.
       courseC_maze_debugging_challenge2_2018: Ef Scrat snýst of oft, gæti hann svimað! Hjálpaðu honum að ná akarninu með aðeins fjórum `snúa` skipunum.
       courseC_maze_debugging_challenge2_2019: Ef Scrat snýst of oft, gæti hann svimað! Hjálpaðu honum að ná akarninu með aðeins fjórum `snúa` skipunum.
+      courseC_maze_loops2: |-
+        Með kubbnum `endurtaka` þegar þú keyrt sama kóða aftur og aftur.
+
+        Geturðu komið fuglinum til svínsins með því að búa til lykkju sem notar bara einn `færa áfram` kubb innan í `endurtaka`?
       courseC_maze_loops2_predict1: "Nú færðu töfrakubb til að nota! \\r\nMeð `endurtaka` kubbnum getur þú endurtekið kóða aftur og aftur í lykkju.\\r\n\\r\nGetur þú komið fuglinum til svínsins með því að búa til lykkju sem notar bara einn `færa áfram` kubb innan í `endurtaka` kubbi?"
+      courseC_maze_loops3: |-
+        *"Ég þarf að ná þessu svíni!"*
+
+        Leystu þessa þraut með lykkju!
+      courseC_maze_loops4: Í þessari þraut munu tvær `endurtaka` lykkjur hjálpa þér að koma fuglinum til svínsins með sem fæstum kubbum!
+      courseC_maze_loops5: '*"Komdu mér til svínka strax í gær!"*'
+      courseC_maze_loops6: |-
+        *"Þetta svín ýfir á mér fjaðrirnar!"*
+
+        Lykkjur virka þó þær innihaldi marga kubba! Getur þú sett þessa runu í lykkju?
+      courseC_maze_loops7: |-
+        *"Komdu mér til svínsins!"*
+
+        Notaðu það sem þú hefur lært í öðrum þrautum!
+      courseC_maze_loops8: "**Áskorun:** Sameinaðu hugmyndir úr síðustu þrautum til að ljúka þessu borði."
       courseC_maze_loops_challenge2: Leitum að fjársjóði - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum fjársjóðnum!
       courseC_maze_programming1: 'Í þessari þraut: Dragðu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseC_maze_programming1_2018: 'Í þessari þraut: Dragðu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseC_maze_programming1_2019: 'Í þessari þraut: Dragðu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
-      courseC_maze_programming4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
-      courseC_maze_programming4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
-      courseC_maze_programming4_2019: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseC_maze_programming2: Dragðu enn einn <xml><block type="maze_moveForward"/></xml> kubb úr verkfærakassanum til að ljúka við kóðann.
+      courseC_maze_programming2_2018: Dragðu enn einn <xml><block type="maze_moveForward"/></xml> kubb úr verkfærakassanum til að ljúka við kóðann.
+      courseC_maze_programming2_2019: Dragðu enn einn <xml><block type="maze_moveForward"/></xml> kubb úr verkfærakassanum til að ljúka við kóðann.
+      courseC_maze_programming3: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að losa hann frá gráu kubbunum og draga hann aftur í verkfærakassann."
+      courseC_maze_programming3_2018: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að losa hann frá gráu kubbunum og draga hann aftur í verkfærakassann."
+      courseC_maze_programming3_2019: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að losa hann frá gráu kubbunum og draga hann aftur í verkfærakassann."
+      courseC_maze_programming4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseC_maze_programming4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseC_maze_programming4_2019: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseC_maze_programming5: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseC_maze_programming5_2018: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseC_maze_programming5_2019: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
+      courseC_maze_programming6: |-
+        *"Haltu ró þinni og hjálpaðu mér að finna þetta vonda svín. Annars gæti ég reiðst!"*
+
+        Komdu fuglinum til svínsins en varaðu þig á TNT sprengjum.
+      courseC_maze_programming6_2018: |-
+        *"Haltu ró þinni og hjálpaðu mér að finna þetta vonda svín. Annars gæti ég reiðst!"*
+
+        Komdu fuglinum til svínsins en varaðu þig á TNT sprengjum.
+      courseC_maze_programming6_2019: |-
+        *"Haltu ró þinni og hjálpaðu mér að finna þetta vonda svín. Annars gæti ég reiðst!"*
+
+        Komdu fuglinum til svínsins en varaðu þig á TNT sprengjum.
+      courseC_maze_programming7: |-
+        *"Nú er ég sko reiður!"*
+
+        **Áskorun:** Það er fullt af villum í þessum kóða. Þú þarft að fjarlægja kubba og bæta öðrum við.
+      courseC_maze_programming7_2018: |-
+        *"Nú er ég sko reiður!"*
+
+        **Áskorun:** Það er fullt af villum í þessum kóða. Þú þarft að fjarlægja kubba og bæta öðrum við.
+      courseC_maze_programming7_2019: |-
+        *"Nú er ég sko reiður!"*
+
+        **Áskorun:** Það er fullt af villum í þessum kóða. Þú þarft að fjarlægja kubba og bæta öðrum við.
       courseC_maze_programming8: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_2018: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_2019: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_predict1: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_predict1_2018: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_predict1_2019: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
+      courseC_maze_programming9: '*"Hjálpaðu mér að laumast að svíninu. Þú ræður hvernig!"*'
+      courseC_maze_programming9_2018: '*"Hjálpaðu mér að laumast að svíninu. Þú ræður hvernig!"*'
+      courseC_maze_programming9_2019: '*"Hjálpaðu mér að laumast að svíninu. Þú ræður hvernig!"*'
       courseC_maze_programming_challenge1: 'Fuglinn þarf hjálp! Svínið er í feluleik og markmiðið er að finna það. '
       courseC_maze_programming_challenge1_2018: 'Fuglinn þarf hjálp! Svínið er í feluleik og markmiðið er að finna það. '
       courseC_maze_programming_challenge1_2019: 'Fuglinn þarf hjálp! Svínið er í feluleik og markmiðið er að finna það. '
       courseC_maze_programming_challenge2: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
       courseC_maze_programming_challenge2_2018: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
       courseC_maze_programming_challenge2_2019: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
+      courseC_playLab_embedded: "##Hér er leikur til að spila! \nÞú vinnur ef þú færð mörgæsina til að rekast á kolkrabbann. Notaðu örvarlyklana til að færa mörgæsina.\n\nHér á eftir muntu svo læra að búa þennan leik til!"
+      courseC_puppy_loops8: "**Áskorun:** Sameinaðu hugmyndir úr síðustu þrautum til að ljúka þessu borði."
+      courseC_puppy_loops8courseC_maze_loops8: "**Áskorun:** Sameinaðu hugmyndir úr síðustu þrautum til að ljúka þessu borði."
       courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Farðu og náðu í brotamálminn, BB-8!\"_ \n\nNotaðu fimm eins kubba til að ná brotamálminum. Brotamálmur glóir svona: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops10: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Áfram BB-8!"_
+
+        Þér gengur vel! Haltu því áfram!
+      courseC_starWars_loops10_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Áfram BB-8!"_
+
+        Þér gengur vel! Haltu því áfram!
+      courseC_starWars_loops10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Áfram BB-8!"_
+
+        Þér gengur vel! Haltu því áfram!
+      courseC_starWars_loops11: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8!"_
+
+        Þú ert alveg að ná þessu! Í þetta skipti mátt þú velja slóðina!
+      courseC_starWars_loops11_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8!"_
+
+        Þú ert alveg að ná þessu! Í þetta skipti mátt þú velja slóðina!
+      courseC_starWars_loops11_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8!"_
+
+        Þú ert alveg að ná þessu! Í þetta skipti mátt þú velja slóðina!
       courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Farðu og náðu í brotamálminn, BB-8!\"_ \n\nNotaðu fimm eins kubba til að ná brotamálminum. Brotamálmur glóir svona: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Farðu og náðu í brotamálminn, BB-8!\"_ \n\nNotaðu fimm eins kubba til að ná brotamálminum. Brotamálmur glóir svona: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops2: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_
+
+        Til að ná öllum brotamálminum ættirðu að prófa að búa til lykkju úr `endurtaka` kubbi sem inniheldur einn kubb.
+      courseC_starWars_loops2_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_
+
+        Til að ná öllum brotamálminum ættirðu að prófa að búa til lykkju úr `endurtaka` kubbi sem inniheldur einn kubb.
+      courseC_starWars_loops2_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_
+
+        Til að ná öllum brotamálminum ættirðu að prófa að búa til lykkju úr `endurtaka` kubbi sem inniheldur einn kubb.
+      courseC_starWars_loops4: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        Í þessari þraut munu tvær `endurtaka` lykkjur hjálpa þér að koma BB-8 að öllum brotamálminum með sem fæstum kubbum!
+      courseC_starWars_loops4_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        Í þessari þraut munu tvær `endurtaka` lykkjur hjálpa þér að koma BB-8 að öllum brotamálminum með sem fæstum kubbum!
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        Í þessari þraut munu tvær `endurtaka` lykkjur hjálpa þér að koma BB-8 að öllum brotamálminum með sem fæstum kubbum!
+      courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_'
+      courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_'
+      courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_'
+      courseC_starWars_loops6: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu honum öllum?"_
+
+        Lykkjur geta innihaldið fleiri en einn kubb!  Getur þú sett þessa runu í lykkju?
+      courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu honum öllum?"_
+
+        Lykkjur geta innihaldið fleiri en einn kubb!  Getur þú sett þessa runu í lykkju?
+      courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu honum öllum?"_
+
+        Lykkjur geta innihaldið fleiri en einn kubb!  Getur þú sett þessa runu í lykkju?
+      courseC_starWars_loops7: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_
+
+        Getur þú reynt að ná öllum brotamálminum með bara einni lykkju? Prófaðu að forrita þetta skref fyrir skref og finna endurtekinn kóða sem mætti setja í lykkju.
+      courseC_starWars_loops7_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_
+
+        Getur þú reynt að ná öllum brotamálminum með bara einni lykkju? Prófaðu að forrita þetta skref fyrir skref og finna endurtekinn kóða sem mætti setja í lykkju.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_
+
+        Getur þú reynt að ná öllum brotamálminum með bara einni lykkju? Prófaðu að forrita þetta skref fyrir skref og finna endurtekinn kóða sem mætti setja í lykkju.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
 
@@ -7133,6 +7974,18 @@ is:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
 
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
+      courseC_starWars_loops9: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram!"_
+
+        Notaðu það sem þú hefur lært til að hirða upp allan brotamálminn!
+      courseC_starWars_loops9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram!"_
+
+        Notaðu það sem þú hefur lært til að hirða upp allan brotamálminn!
+      courseC_starWars_loops9_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram!"_
+
+        Notaðu það sem þú hefur lært til að hirða upp allan brotamálminn!
       courseD_Frozen_nested1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hæ, ég er Elsa frá Arendelle. Hjálpaðu mér að teikna.”_\n\nTeiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.\n<hr/>\n\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum: \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png) \n\n \n \nEða abstrakt form eins og eitt af þessum:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
       courseD_Frozen_nested2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Nú skulum við teikna fleiri en eitt.”_\n\nTeiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.\n\n- Ef þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\n- Ef þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\n\n<hr/>\n\nRöðin gæti orðið bein eins og þessi:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\n\nEða að formin gætu færst til eins og eitt af þessum:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Gerum þetta að snjókorni.\"_\n\nLáttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \n\nÞú getur teiknað alls konar flott snjókorn!\n<hr/>\nSkoðaðu þessi dæmi með fjölhliðungum:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
@@ -7151,6 +8004,42 @@ is:
         Hér er dæmi þar sem Elsa snýr 6 sinnum:
 
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hæ, ég heiti Elsa frá Arendelle, hjálpaðu mér að teikna.”_\n\nTeiknaðu sexhyrning með 50 díla langar hliðar.  \n\n---\n\nTil að teikna sexhyrning þarftu að: \n- færa áfram um **50** díla\n- snúa til hægri um **60** gráður\n- endurtaka þetta alls **6** sinnum\n\n"
+      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hæ, ég heiti Elsa frá Arendelle, hjálpaðu mér að teikna.”_\n\nTeiknaðu sexhyrning með 50 díla langar hliðar.  \n\n---\n\nTil að teikna sexhyrning þarftu að: \n- færa áfram um **50** díla\n- snúa til hægri um **60** gráður\n- endurtaka þetta alls **6** sinnum\n\n"
+      courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Vel gert!”_\n\nEftir sexhyrninginn skaltu snúa til hægri um **60** gráður og teikna svo strik sem er **150** dílar á lengd.   \n\nLjúktu þessu með því að láta Elsu hoppa inn á mitt leiksvæðið með <xml><block type=\"jump_to\"><title name=\"VALUE\">middle center</title></block></xml> kubbnum.\n\n\n"
+      courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Vel gert!”_\n\nEftir sexhyrninginn skaltu snúa til hægri um **60** gráður og teikna svo strik sem er **150** dílar á lengd.   \n\nLjúktu þessu með því að láta Elsu hoppa inn á mitt leiksvæðið með <xml><block type=\"jump_to\"><title name=\"VALUE\">middle center</title></block></xml> kubbnum.\n\n\n"
+      courseD_artist_3_2018: |+
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Búum til snjókorn.”_
+
+        Til að þessi kóði myndi snjókorn skaltu falda allan kóðann inn í aðra `endurtaka` lykkju og keyra hann alls **6** sinnum.  Þú ættir aðeins að þurfa að bæta við einum kubbi.
+      courseD_artist_3_2018_2019: |+
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Búum til snjókorn.”_
+
+        Til að þessi kóði myndi snjókorn skaltu falda allan kóðann inn í aðra `endurtaka` lykkju og keyra hann alls **6** sinnum.  Þú ættir aðeins að þurfa að bæta við einum kubbi.
+      courseD_artist_4_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"´Gerum snjókornin sérstök!"_
+
+        **Pæling:** Hvar þarft þú að bæta við kóða ef þú vilt teikna pínulítinn ferning við endann á hverju löngu striki?
+
+        ---
+        Þú getur prófað hvað sem þú vilt í þessari þraut en hér er hugmynd:
+
+        Prófaðu að búa til pínulítinn ferning á enda hvers striks
+        - Hver hlið ætti að vera 15 dílar á lengd
+        - Þú ættir að snúa um 90 gráður
+        - Endurtaktu þetta alls 4 sinnum
+      courseD_artist_4_2018_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"´Gerum snjókornin sérstök!"_
+
+        **Pæling:** Hvar þarft þú að bæta við kóða ef þú vilt teikna pínulítinn ferning við endann á hverju löngu striki?
+
+        ---
+        Þú getur prófað hvað sem þú vilt í þessari þraut en hér er hugmynd:
+
+        Prófaðu að búa til pínulítinn ferning á enda hvers striks
+        - Hver hlið ætti að vera 15 dílar á lengd
+        - Þú ættir að snúa um 90 gráður
+        - Endurtaktu þetta alls 4 sinnum
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prófum eitthvað nýtt. Skautaðu nú í krákustíg.\"_\n\n<br/>\n\n**Hugmynd:** Prófaðu að skipta 150 díla löngu línunni í 6 stuttar línur sem hver er **24** dílar\n\n- Snúðu um **45** gráður vinstri og hægri til skiptis eftir hverja stutta línu til að mynda krákustíginn\n- Hvar þarftu að setja nýjan `endurtaka` kubb til að þetta sé hægt?\n- Hversu oft þarftu að endurtaka 2-línu mynstrið til að fá 6 línur alls?"
       courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prófum eitthvað nýtt. Skautaðu nú í krákustíg.\"_\n\n<br/>\n\n**Hugmynd:** Prófaðu að skipta 150 díla löngu línunni í 6 stuttar línur sem hver er **24** dílar\n\n- Snúðu um **45** gráður vinstri og hægri til skiptis eftir hverja stutta línu til að mynda krákustíginn\n- Hvar þarftu að setja nýjan `endurtaka` kubb til að þetta sé hægt?\n- Hversu oft þarftu að endurtaka 2-línu mynstrið til að fá 6 línur alls?"
       courseD_artist_7_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Snúum nú við og förum sömu leið til baka.\"_\n\nSnúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \n\n- Afgangurinn af þessu borði verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu teikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \n\n<hr/>\n\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
@@ -7199,6 +8088,49 @@ is:
         Þessi grind sýnir 256 bita - það þýðir að lítil breyting getur leitt til mikilla vandræða. Hefurðu nægt úthald til að koma þessu lógói aftur í rétt horf?\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_functions5: |-
+        Hvenær er erfiðara að teikna þrjár stjörnur heldur en fjórar? Þegar þú þarft líka að stökkva yfir tunglið!
+
+        Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      courseD_artist_functions6: "Þetta gengur bara vel hjá þér! \n\nBúðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo."
+      courseD_artist_functions8: "**Áskorun:** Búðu til eins mörg föll og þú heldur að þú þurfir til að gera þessa mynd með 50 díla ferningum."
+      courseD_artist_functions9: |-
+        Búðu til þessa mynd bara með kubbunum sem þú færð.
+
+        - Til að teikna tígul þarftu að snúa um 60 gráður og 120 gráður til skiptis.
+      courseD_artist_nestedLoops1a: "Endurtaktu nú þríhyrninginn 6 sinnum. \n\nSnúðu um 60 gráður eftir hvern þríhyrning. "
+      courseD_artist_nestedLoops1a_2018: "Endurtaktu nú þríhyrninginn 6 sinnum. \n\nSnúðu um 60 gráður eftir hvern þríhyrning. "
+      courseD_artist_nestedLoops1a_2019: "Endurtaktu nú þríhyrninginn 6 sinnum. \n\nSnúðu um 60 gráður eftir hvern þríhyrning. "
+      courseD_artist_nestedLoops2: |-
+        Í þetta sinn áttu að ljúka þrautinni með sem allra fæstum kubbum.
+
+        Eftir hvern þríhyrning þarf að snúa um 60 gráður áður en sá næsti er teiknaður.
+        Sjáðu hvað er miklu auðveldara með **földuðum lykkjum**?
+      courseD_artist_nestedLoops2_2018: |-
+        Í þetta sinn áttu að ljúka þrautinni með sem allra fæstum kubbum.
+
+        Eftir hvern þríhyrning þarf að snúa um 60 gráður áður en sá næsti er teiknaður.
+        Sjáðu hvað er miklu auðveldara með **földuðum lykkjum**?
+      courseD_artist_nestedLoops2_2019: |-
+        Í þetta sinn áttu að ljúka þrautinni með sem allra fæstum kubbum.
+
+        Eftir hvern þríhyrning þarf að snúa um 60 gráður áður en sá næsti er teiknaður.
+        Sjáðu hvað er miklu auðveldara með **földuðum lykkjum**?
+      courseD_artist_nestedLoops4: "Fínt! Gerðu það sama með þessa hringa. \n\n- Hver hringur er gerður með því að færa um 1 díl og snúa um 1 gráðu og gera það 360 sinnum.\n- Hver hringur byrjar 50 dílum frá þeim stað sem síðasti hringur endaði"
+      courseD_artist_nestedLoops4_2018: "Fínt! Gerðu það sama með þessa hringa. \n\n- Hver hringur er gerður með því að færa um 1 díl og snúa um 1 gráðu og gera það 360 sinnum.\n- Hver hringur byrjar 50 dílum frá þeim stað sem síðasti hringur endaði"
+      courseD_artist_nestedLoops4_2019: "Fínt! Gerðu það sama með þessa hringa. \n\n- Hver hringur er gerður með því að færa um 1 díl og snúa um 1 gráðu og gera það 360 sinnum.\n- Hver hringur byrjar 50 dílum frá þeim stað sem síðasti hringur endaði"
+      courseD_artist_nestedLoops5: |-
+        Hvað gerist ef þú snýrð líka um 90 gráður á milli hringa?
+
+        (Til að fá þessa mynd þarftu enn að hoppa um 50 díla á milli hringa)
+      courseD_artist_nestedLoops5_2018: |-
+        Hvað gerist ef þú snýrð líka um 90 gráður á milli hringa?
+
+        (Til að fá þessa mynd þarftu enn að hoppa um 50 díla á milli hringa)
+      courseD_artist_nestedLoops5_2019: |-
+        Hvað gerist ef þú snýrð líka um 90 gráður á milli hringa?
+
+        (Til að fá þessa mynd þarftu enn að hoppa um 50 díla á milli hringa)
       courseD_artist_nestedLoops9_predict1: |-
         **Áskorun:** Getur þú fundið leið til að búa til svona mynd?\r
         \r
@@ -7327,9 +8259,16 @@ is:
         *"Þetta ský er fyrir mér!"\r
         \r
         Athugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er.
+      courseD_bee_conditionals2: "Meiri ský! \n\nAthugaðu undir hvert ský til að sjá hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm undir skýinu á býflugan að safna blómasafa *einu sinni*. \n\nMundu: Skýin fela ekki öll það sama!"
+      courseD_bee_conditionals2_2018: "Meiri ský! \n\nAthugaðu undir hvert ský til að sjá hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm undir skýinu á býflugan að safna blómasafa *einu sinni*. \n\nMundu: Skýin fela ekki öll það sama!"
+      courseD_bee_conditionals2_2019: "Meiri ský! \n\nAthugaðu undir hvert ský til að sjá hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm undir skýinu á býflugan að safna blómasafa *einu sinni*. \n\nMundu: Skýin fela ekki öll það sama!"
+      courseD_bee_conditionals2_test: "Meiri ský! \n\nAthugaðu undir hvert ský til að sjá hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm undir skýinu á býflugan að safna blómasafa *einu sinni*. \n\nMundu: Skýin fela ekki öll það sama!"
       courseD_bee_conditionals7_predict2: "Stundum hylur ský blóm en stundum hylur það býkúpu!\n\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
       courseD_bee_conditionals7_predict2_2018: "Stundum hylur ský blóm en stundum hylur það býkúpu!\n\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
       courseD_bee_conditionals7_predict2_2019: "Stundum hylur ský blóm en stundum hylur það býkúpu!\n\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
+      courseD_bee_conditionals9: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað blómasafa á blómum og búið til hunang í býkúpum. Athugaðu hvern reit hvort hann hafi blóm eða býkúpu. Það er aldrei fleira en eitt blóm eða ein býkúpa undir skýi.
+      courseD_bee_conditionals9_2018: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað blómasafa á blómum og búið til hunang í býkúpum. Athugaðu hvern reit hvort hann hafi blóm eða býkúpu. Það er aldrei fleira en eitt blóm eða ein býkúpa undir skýi.
+      courseD_bee_conditionals9_2019: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað blómasafa á blómum og búið til hunang í býkúpum. Athugaðu hvern reit hvort hann hafi blóm eða býkúpu. Það er aldrei fleira en eitt blóm eða ein býkúpa undir skýi.
       courseD_bee_conditionals_challenge1: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
       courseD_bee_conditionals_challenge1_2018: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
       courseD_bee_conditionals_challenge1_2019: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
@@ -7599,12 +8538,14 @@ is:
       courseD_harvester_nested_loops_challenge1: '*"Ég þarf aðstoð á býlinu! Hjálpaðu mér að uppskera þennan maís en aðeins með kubbunum í verkfærakassanum."*'
       courseD_harvester_nested_loops_challenge1_2018: '*"Ég þarf aðstoð á býlinu! Hjálpaðu mér að uppskera þennan maís en aðeins með kubbunum í verkfærakassanum."*'
       courseD_harvester_nested_loops_challenge1_2019: '*"Ég þarf aðstoð á býlinu! Hjálpaðu mér að uppskera þennan maís en aðeins með kubbunum í verkfærakassanum."*'
+      courseD_iceage_loops1: Hjálpaðu Scrat yfir hálan ísinn svo hann nái nú akarninu!
       courseD_iceage_loops10: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseD_iceage_loops10_2019: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseD_iceage_loops11: Hjálpaðu Skrat að komast til akarnsins!
       courseD_iceage_loops11_2019: Hjálpaðu Skrat að komast til akarnsins!
       courseD_iceage_loops12: Náðu akarninu hvernig sem þú getur!
       courseD_iceage_loops12_2019: Náðu akarninu hvernig sem þú getur!
+      courseD_iceage_loops1_2019: Hjálpaðu Scrat yfir hálan ísinn svo hann nái nú akarninu!
       courseD_iceage_loops4: Bættu við einum kubbi til að koma Scrat til akarnsins!
       courseD_iceage_loops4_2019: Bættu við einum kubbi til að koma Scrat til akarnsins!
       courseD_iceage_loops6: Getur þú bætt við lykkju til að ná akarninu?
@@ -7632,20 +8573,20 @@ is:
         Hjálpaðu fuglinum að komast til svínsins. Nú er einn blár `færa áfram` kubbur í viðbót.
 
         Hentu aukakubbnum með því að draga hann frá hinum kubbunum og aftur í verkfærakassann.
-      courseD_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
-      courseD_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseD_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseD_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseD_maze_ramp4_2019: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseD_maze_ramp5: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseD_maze_ramp5_2018: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseD_maze_ramp5_2019: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseD_maze_ramp5a: Taktu eftir röð kubbanna og reyndu að finna út hvernig á að komast til svínsins!
       courseD_maze_ramp5a_2018: Taktu eftir röð kubbanna og reyndu að finna út hvernig á að komast til svínsins!
@@ -7744,6 +8685,12 @@ is:
       courseE_artist_concept_challenge2_2019: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
       courseE_artist_functions1: "*\"Ég listauppvakningur. Mig elska teikna!\"*\n\nHjálpaðu uppvakningnum að teikna gleraugu úr ferningum með 100 díla hliðar. Bilið á milli glerjanna er 75 dílar.\n\n"
       courseE_artist_functions1_2018: "*\"Ég listauppvakningur. Mig elska teikna!\"*\n\nHjálpaðu uppvakningnum að teikna gleraugu úr ferningum með 100 díla hliðar. Bilið á milli glerjanna er 75 dílar.\n\n"
+      courseE_artist_functions5: |-
+        Hvenær er erfiðara að teikna þrjár stjörnur heldur en fjórar? Þegar þú þarft líka að stökkva yfir tunglið!
+
+        Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      courseE_artist_functions6: "Þetta gengur bara vel hjá þér! \n\nBúðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo."
+      courseE_artist_functions6_2018: "Þetta gengur bara vel hjá þér! \n\nBúðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo."
       courseE_artist_functions_challenge: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1_2018: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
@@ -7881,15 +8828,15 @@ is:
       courseE_maze_ramp2_2018: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
       courseE_maze_ramp3: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       courseE_maze_ramp3_2018: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að draga hann aftur í verkfærakassann."
-      courseE_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
-      courseE_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseE_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseE_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseE_maze_ramp5: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseE_maze_ramp5_2018: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseE_maze_ramp6: |-
         *"Slakaðu á og hjálpaðu mér að finna vonda svínið. Annars gæti ég reiðst!"*
@@ -7910,8 +8857,8 @@ is:
         **Áskorun:**
         Notaðu það sem þú hefur lært til að koma fuglinum til svínsins!
       courseE_multi_maze_ramp5: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseE_playLab_challenge1: "_Nú eru **íkornarnir** skelfingu lostnir yfir því að það er **risaeðla** mætt á svæðið! Getur hugrakki **riddarinn** komið í veg fyrir að þeir hlaupi í burtu?_\n\nReglur:\n1. *Að snerta íkornana skorar stig?\n2. *Að snerta risaeðluna dregur frá mörg stig.\n\nHér er öðruvísi leikur sem hefur verið byrjað á fyrir þig! Spilaðu hann til að sjá hvernig hann virkar. \n\n\nEitthvað ætti að gerast þegar þú færð nógu mörg stig eða þegar þú klárar stigin. Bættu kóða í föllin `vinna leik` og `tapa leik` til að leikurinn virki eins og hann á að gera. \nSmelltu á vísbendingarnar til að fá hugmyndir!"
       courseE_playLab_challenge1_2018: "_Nú eru **íkornarnir** skelfingu lostnir yfir því að það er **risaeðla** mætt á svæðið! Getur hugrakki **riddarinn** komið í veg fyrir að þeir hlaupi í burtu?_\n\nReglur:\n1. *Að snerta íkornana skorar stig?\n2. *Að snerta risaeðluna dregur frá mörg stig.\n\nHér er öðruvísi leikur sem hefur verið byrjað á fyrir þig! Spilaðu hann til að sjá hvernig hann virkar. \n\n\nEitthvað ætti að gerast þegar þú færð nógu mörg stig eða þegar þú klárar stigin. Bættu kóða í föllin `vinna leik` og `tapa leik` til að leikurinn virki eins og hann á að gera. \nSmelltu á vísbendingarnar til að fá hugmyndir!"
@@ -7937,6 +8884,7 @@ is:
         Láttu hvern leikmann skipta um skap af handahófi.\r
         \r
         Kíktu á vísbendingarnar ef þú þarft hjálp með þessar áskoranir!
+      courseF_IceAge_1: "Sid (leikmaður 1) vill fá alla með í nýtt ævintýri. Getur þú hjálpað honum að segja \"Hæ!\" með því að draga fram kubbinn `leikmaður 1 segir` og festa hann við `þegar keyrt` atvikið?\n\nEkki gleyma að skrifa \"Hæ!\" í kubbinn!"
       courseF_IceAge_10: "Sid vill láta ömmu sína, Granny, vita að honum þyki vænt um hana. \n\nNotaðu `leikari varpar` skipunina til láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \nBreyttu skapi Granny í gleði þegar hjörtun lenda á henni."
       courseF_IceAge_3: Skrat er að leita að akarninu (nema hvað)! Hjálpaðu honum síðustu 200 dílana.
       courseF_IceAge_6: "Getur þú hjálpað Sid að kalla á vini sína þegar þú smellir á hann?\n\nSmelltu svo á \"Keyra\" til að spila. Smelltu á Sid til að sjá kóðann þinn virka!"
@@ -8016,7 +8964,15 @@ is:
       courseF_artist_fwp9_2018: "**Frjáls æfing:** Hér fyrir neðan eru föll sem þú hefur skrifað og fleiri sem þú getur leikið þér með. Sjáðu hvaða áhrif það hefur að breyta breidd pennans! Það eru tillögur í vísbendingunum!"
       courseF_artist_fwp_challenge1: Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig það virkar? (Eða eytt því og búið til eitthvað gjörólíkt)
       courseF_artist_fwp_challenge1_2018: Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig það virkar? (Eða eytt því og búið til eitthvað gjörólíkt)
-      courseF_artist_fwp_challenge2: "Notaðu það sem þú lærðir í síðasta áfanga til að teikna svona mynd.\n\n*Athugaðu: Kóðinn verður einfaldari ef þú notar stika.*\n\n<br/>\n<img\nsrc=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\" width=\"300px\"/>\n<br/>  "
+      courseF_artist_fwp_challenge2: |-
+        Notaðu það sem þú lærðir í síðasta áfanga til að teikna svona mynd.
+
+        *Athugaðu: Kóðinn verður einfaldari ef þú notar stika.*
+
+        <br/>
+        <img
+        src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png" width="300px"/>
+        <br/>  
       courseF_artist_fwp_challenge2_2018: "Notaðu það sem þú lærðir í síðasta áfanga til að teikna svona mynd.\n\n*Athugaðu: Kóðinn verður einfaldari ef þú notar stika.*\n\n<br/>\n<img\nsrc=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\" width=\"300px\"/>\n<br/>  "
       courseF_artist_ramp10: |-
         Veistu að þú getur sett lykkjur innan í aðrar lykkjur til að gera þær öflugri?  Það er kallað að búa til "faldaða lykkju".
@@ -8201,15 +9157,15 @@ is:
         Dragðu <xml><block type="controls_repeat"><title name="TIMES">7</title></block></xml> kubb úr verkfærakassanum og tengdu hann við <xml><block type="when_run"/></xml> atburðinn.
 
         Settu <xml><block type="maze_moveForward"/></xml> kubb innan í til að ljúka kóðanum.
-      courseF_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
-      courseF_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseF_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseF_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\n\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseF_maze_ramp5: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseF_maze_ramp5_2018: |-
-        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
-        \r
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*
+
         Gættu þín á TNT.
       courseF_maze_ramp6: |-
         *"Slakaðu á og hjálpaðu mér að finna vonda svínið. Annars gæti ég reiðst!"*\r
@@ -8287,6 +9243,8 @@ is:
       course_playlab_variables1: "Þetta er Pegleg sjóræningi. Það er mjög erfitt að skilja hann þessa dagana! \\r\n\\r\nTúlkaðu tal hans með því að breyta þessum textabútum í kóðanum:\\r\n- \"arrrg\" á að vera \"a\"\\r\n- \"ye\" á að vera \"e\"\\r\n\\r\n"
       course_playlab_variables2: "Túlkaðu nú tal Pegleg sjóræningja með því að breyta gildum breytnanna bara á tveimur stöðum!   \\r\n-\n\"arrrg\" ætti að vera \"a\" \\r\n- \"ye\" ætti að vera \"e\"\\r\n\\r\n"
       course_playlab_variables3: "Túlkaðu nú tal Pegleg sjóræningja með því að breyta gildum breytnanna bara á tveimur stöðum!   \\r\n-\n\"arrrg\" ætti að vera \"a\" \\r\n- \"ye\" ætti að vera \"e\"\\r\n\\r\n"
+      coursea_maze_ramp1_2018: Komdu fuglinum til svínsins með því að festa <xml><block type="maze_moveEast"/></xml> kubb neðan á <xml><block type="when_run"/></xml> kubbinn, og ýttu svo á "▶ Keyra"!
+      coursea_maze_ramp1_2019: Komdu fuglinum til svínsins með því að festa <xml><block type="maze_moveEast"/></xml> kubb neðan á <xml><block type="when_run"/></xml> kubbinn, og ýttu svo á "▶ Keyra"!
       coursef_maze_ramp3: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       coursef_maze_ramp3_2018: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       csd-thursday-facilitation: |
@@ -8417,6 +9375,16 @@ is:
       grade2_CaringForNewPet_2: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       grade2_CaringForNewPet_2courseC_maze_programming3: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\n\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       grade2_MakeDogTag_1: "*\"Smíðum búr fyrir gæluskrímslið mitt!\"*\n\nDragðu fram kubba sem láta listamanninn teikna yfir gráu strikin í myndinni.  \n(Hvert strik er 100 dílar á lengd)"
+      grade2_MakeDogTag_2: |-
+        *"Á þetta geimfar vantar glugga!"*
+
+        Hver hlið á innri ferningnum er 100 dílar og öll hornin eru 90 gráður.
+      grade2_MakeDogTag_4: "*\"Kannske ættum að útbúa merki á hvert gæludýr ef það skyldi týnast!\"*\n\nLjúktu þessu merki með því að teikna rétthyrning utan um.  \n(Löngu hliðarnar eru 200 dílar og stuttu hliðarnar 100 dílar)"
+      grade2_MakeDogTag_5: |-
+        *"Nú þarf Bella merki!*"
+
+        Teiknaðu þennan tígul með 200 díla hliðar.
+      grade2_MakeDogTag_7: "Enn eitt merki. Þetta er þríhyrningur fyrir Pí. \n(Hver hlið er 150 dílar)"
       grade2_MakeDogTag_8: Nú skulum við tengja nokkur V saman í lykkju.
       grade2_MakeDogTag_9: "Tími til að gera eitthvað spennandi!\n\\r\n\\r\nSmíðaðu kóðann úr síðustu þraut, en bættu við vinstri snúningi um 30 gráður innan í lykkjunni. Og endurtaktu hana 24 sinnum í stað 8."
       grade2_MakeDogTag_BFP: |-
@@ -8437,12 +9405,30 @@ is:
         Hér virðist C vera teiknað öfugt. \r
         \r
         Getur þú teiknað það rétt?
+      grade2_collector_A: Hjálpaðu Láru að safna öllum fjársjóðunum.
+      grade2_collector_A_2018: Hjálpaðu Láru að safna öllum fjársjóðunum.
+      grade2_collector_A_2019: Hjálpaðu Láru að safna öllum fjársjóðunum.
       grade2_collector_pre1: "*\"Hæ, ég heiti Lára. Í dag er ég að leita að fjársjóði í hundagarðinum!\"* \n\nLeiktu þér með kubbana til að sjá hvort þú getir hjálpað Láru að safna gulli."
+      grade2_maze_debuggingFP: '*"Hjálpaðu mér að laumast að svíninu. Þú ræður hvernig!"*'
+      grade2_playlab_project_3: "Getur þú látið Waddles (leikmann 2) segja \"Æ!\" og spila hljóð ef hann rekst á Chomp?\n\nSpilaðu svo leikinn til að láta þetta gerast.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       grade2_puppy_loops2: |-
         Nú færðu töfrakubb til að nota! Með `endurtaka` kubbnum getur þú endurtekið kóða aftur og aftur í lykkju.\r
         \r
         Getur þú komist til svínsins með því að búa til lykkju sem notar bara einn `færa áfram` kubb innan í `endurtaka` kubbi?
+      grade2_puppy_loops3: |-
+        *"Ég þarf að ná þessu svíni!"*
+
+        Leystu þessa þraut með lykkju!
       grade2_puppy_loops4: Notaðu tvær `endurtaka` lykkjur til að ná svíninu með sem fæstum kubbum!
+      grade2_puppy_loops5: '*"Komdu mér til svínka strax í gær!"*'
+      grade2_puppy_loops6: |-
+        *"Þetta svín ýfir á mér fjaðrirnar!"*
+
+        Lykkjur virka þó þær innihaldi marga kubba! Getur þú sett þessa runu í lykkju?
+      grade2_puppy_loops7: |-
+        *"Komdu mér til svínsins!"*
+
+        Notaðu það sem þú hefur lært í öðrum þrautum!
       grade3_ConditionalsElse_1: "Þetta ský skyggir á! \n\\r\n\\r\nGáðu hvort að það sé blóm bak við skýið og aðeins safna blómasafa ef þar er blóm. \\r\nFarðu varlega því það getur breyst!"
       grade3_ConditionalsElse_2: "Fleiri ský!\\r\n\\r\nÞað verður að skoða undir hvert ský til að sjá hvort þar sé falið blóm áður þú safnar blómasafa. \\r\n\\r\nMundu: Skýin fela ekki öll það sama!"
       grade3_ConditionalsElse_4: "Þetta ský felur stundum blóm og stundum býkúpu! \\r\n\\r\nNotaðu `ef-annars` kubb til að safna safa ef það er blóm.\\r\nAnnars búa til hunang (því þá er það býkúpa)."
@@ -8532,8 +9518,22 @@ is:
       grade4_arist_nested_loop_triangles6: Getur þú teiknað þessa 36 þríhyrninga með faldaðri lykkju?
       grade4_artist_functions1: "*\"Ég listauppvakningur. Mig elska teikna!\"*\n\nHjálpaðu uppvakningnum að teikna gleraugu úr ferningum með 100 díla hliðar. Bilið á milli glerjanna er 75 dílar.\n\n"
       grade4_artist_functions2: "Með föllum getur þú búið til nýja kubba! \\r\n\\r\nVið höfum fært kubbana sem þarf til að teikna ferning inn í fall, sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \\r\n\\r\nÞað eru 75 dílar á milli ferninganna."
+      grade4_artist_functions2a: |-
+        Búðu til þessa mynd bara með kubbunum sem þú færð.
+
+        - Til að teikna tígul þarftu að snúa um 60 gráður og 120 gráður til skiptis.
+      grade4_artist_functions3a: |-
+        Búðu til þessa mynd bara með kubbunum sem þú færð.
+
+        - Til að teikna tígul þarftu að snúa um 60 gráður og 120 gráður til skiptis.
+      grade4_artist_functionsChallenge0: "**Áskorun:** Búðu til eins mörg föll og þú heldur að þú þurfir til að gera þessa mynd með 50 díla ferningum."
       grade4_artist_functions_challenge: "**Ofuráskorun með föll:** Notaðu gefin föll til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig röðum með jafna tölu er hliðrað til hægri?"
       grade4_artist_functions_challenge2: "**Ofuráskorun með föll:** Notaðu gefin föll til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig röðum með jafna tölu er hliðrað til hægri?"
+      grade4_artist_functions_stars2: |-
+        Hvenær er erfiðara að teikna þrjár stjörnur heldur en fjórar? Þegar þú þarft líka að stökkva yfir tunglið!
+
+        Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
+      grade4_artist_functions_windows0: "Þetta gengur bara vel hjá þér! \n\nBúðu til þennan glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta svo."
       grade4_artist_nestedLoops_challenge: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Leikstund:**  Hér er kóðinn fyrir athyglisvert form.   \n\nHvað gerist þegar þú endurtekur hann mörgum sinnum með snúningi í hverri endurtekningu?  \n\nTaktu eftir að snúningarnir eru samtals *420 gráður*, sem þýðir að þegar listamaðurinn er búinn að teikna þá snýr hann í aðra átt en hann gerði í byrjun.  Þessi nýja átt er nákvæmlega *60 gráðum* til *hægri* við stefnuna í byrjun.\n\n<hr/>\n\n<h4>\n<details>\n\n<summary>\n\n<b>Endurtaka 4</b>\n\n</summary>\n<br/>\nEf þú vilt fara heilan hring í aðeins 4 endurtekningum, þarft þú að láta listamanninn snúa samtals **360 gráður/4 = 90 gráður** í hvert sinn.  Þú getur náð því með því að bæta við auka `snúa hægri um 30 gráður` kubbi\ní ytri lykkjuna (vegna þess að **60+30 = 90**.)  \n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Endurtaka 6</b>\n\n</summary>\n<br/>\nÞegar þú endurtekur formið 6 sinnum, færðu heildarsnúning um **6x60 gráður** sem er heill **360 gráðu** hringur.  \n<img src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Endurtaka 12</b>\n\n</summary>\n<br/>\nEf þú vilt endurtaka formið 12 sinnum, þarft þú að láta listamanninn snúa samtals um **360 /12 = 30 gráður** í hverri umferð.  Það þýðir að þú munt þurfa að snúa listamanninum aðeins til baka með `snúa vinstri 30 gráður` áður en formið er endurtekið aftur.   <br/><br/>\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\nNú færðu í nógu að snúast!   Getur þú endurskapað hverja mynd með því að endurtaka upphaflega formið?  "
       grade4_artist_nestedLoops_challenge2: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nHér er áskorun!  \\r\n\\r\nÞessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\\r\n\\r\nEndurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. "
       grade4_artist_nested_loop_circles1: "**Mat:** Notaðu faldaða lykkju til að ljúka teikningunni."
@@ -8547,6 +9547,7 @@ is:
         Til að miðjan verði hol þarft þú að stökkva áfram um lengd þríhyrningsins áður en þú snýrð.
       grade4_artist_nested_loop_triangles6: Getur þú teiknað þessa 36 þríhyrninga með faldaðri lykkju?
       grade4_artist_parameters_squares1: "Smelltu á \"breyta\" til að ganga frá skilgreiningu fallsins `teikna ferning` og bættu við stika. \\r\nFallið á að hafa stika fyrir lengd, eins og þríhyrningurinn. \\r\n\\r\n**Teiknaðu nú 3 ferninga:** 25, 50 og 75 díla á lengd. Það er 100 dílar á milli vinstri horna ferninganna."
+      grade4_artist_parameters_triangles1: Nú ætlum við að prófa öðruvísi, öflugri ritil fyrir föll. Reyndu að finna út úr því hvernig þú gætir unnið með og lagað villur í fallinu `teikna þríhyrning`.
       grade4_artist_parameters_triangles2: Sérðu eitthvað öðruvísi við þessa fallkubba? Smelltu á "Keyra" til að sjá hvað gerist.
       grade4_artist_parameters_triangles2b: "Getur þú lokið við þessa teikningu? \\r\n\\r\nHver þríhyrningur er með 25 díla lengri hliðar en sá á undan. \\r\nFyrsti þríhyrningurinn er með 25 díla hliðar."
       grade4_artist_parameters_triangles3: "Getur þú lokið við þessa teikningu? \\r\n\\r\nHver þríhyrningur er með 25 díla lengri hliðar en sá á undan. \\r\nFyrsti þríhyrningurinn er með 25 díla hliðar."
@@ -8614,7 +9615,10 @@ is:
         \r
         Hliðar allra formanna eru 100 dílar á lengd.
       grade5_artist_parameters_squares1: "Smelltu á \"breyta\" til að ganga frá skilgreiningu fallsins `teikna ferning` og bættu við stika. \\r\nFallið á að hafa stika fyrir lengd, eins og þríhyrningurinn. \\r\n\\r\n**Teiknaðu nú 3 ferninga:** 25, 50 og 75 díla á lengd. Það er 100 dílar á milli vinstri horna ferninganna."
+      grade5_artist_parameters_squares1a: Nú ætlum við að prófa öðruvísi, öflugri ritil fyrir föll. Reyndu að finna út úr því hvernig þú gætir unnið með og lagað villur í fallinu `teikna ferning`.
       grade5_artist_parameters_squares2a: "Breyttu fallinu svo að það taki stika með heitinu `lengd`.\\r\n\\r\nHver ferningur ætti að hafa 25 lengri hliðar en næsti á undan. Sá fyrsti hefur 25 díla hliðar. Skiptu '???' út fyrir réttu gildunum til að teikna myndina."
+      grade5_artist_parameters_triangles1: Nú ætlum við að prófa öðruvísi, öflugri ritil fyrir föll. Reyndu að finna út úr því hvernig þú gætir unnið með og lagað villur í fallinu `teikna ferning`.
+      grade5_artist_parameters_triangles1a: Nú ætlum við að prófa öðruvísi, öflugri ritil fyrir föll. Reyndu að finna út úr því hvernig þú gætir unnið með og lagað villur í fallinu `teikna þríhyrning`.
       grade5_artist_parameters_triangles2: "Getur þú lokið við þessa teikningu? \\r\n\\r\nHver þríhyrningur er með 25 díla lengri hliðar en sá á undan. \\r\nFyrsti þríhyrningurinn er með 25 díla hliðar."
       grade5_artist_parameters_triangles2a: Sérðu eitthvað öðruvísi við þessa fallkubba? Smelltu á "Keyra" til að sjá hvað gerist.
       grade5_artist_parameters_triangles4: "Kóðinn fyrir þennan þrihyrning er bilaður.\\r\n\\r\nGetur þú breytt fallinu til að laga það og síðan búið til þríhyrninga með lengdir 25, 50 og 75?"

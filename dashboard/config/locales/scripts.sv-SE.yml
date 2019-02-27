@@ -1883,6 +1883,8 @@ sv:
               name: 'Ouppkopplad: Binärt'
             Artist Binary:
               name: Artist binär
+            Dance Party:
+              name: Dansparty
         coursee-2019:
           stages:
             Building a Foundation:

@@ -755,6 +755,19 @@ fr:
       Course 4 Variables Assessment: Peux-tu créer cette image en utilisant une variable pour les côtés ? Chaque ligne doit mesurer 50 pixels.
       Course E MC Conditionals1: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
       Course1BeePuzzle12: Recueille trois nectars et fabrique ensuite deux miels
+      CourseD_Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace de travail et connectez-le à l'intérieur du bloc « configuration ».
+      CourseD_Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après 4 mesures !
+      CourseD_Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau mouvement après 6 mesures !
+      CourseD_Dance_Party_04: Ajoutez un effet de fond à votre programme.
+      CourseD_Dance_Party_05: Utilisez un autre nouveau bloc pour que le danseur change de mouvement toutes les 2 mesures.
+      CourseD_Dance_Party_06: Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
+      CourseD_Dance_Party_08: Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
+      CourseD_Dance_Party_09: Utilisez le bloc « définir la nuance » pour changer la couleur d'un danseur.
+      CourseD_Dance_Party_10: Demandez également à l’autre danseur de répondre à la musique à l’aide du bloc « commencer à suivre ».
+      CourseD_Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet d'exécuter un programme lorsque vous appuyez sur la flèche vers le haut. Essayez de faire faire un mouvement rapide au danseur lorsque vous appuyez vers le haut.
+      CourseD_Dance_Party_11_5: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
+      CourseD_Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque vous appuyez sur la touche fléchée droite et faire le « floss » une fois lorsque vous appuyez sur la touche fléchée haut. Réalisez le « drop-floss » aussi vite que possible !
+      CourseD_Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
       CourseF_PlayLab_vars1: 'Pour jouer à ce jeu, tu n''as besoin d''écrire aucun code, juste d''appuyer sur "Run"! '
       CourseF_PlayLab_vars10: "L’heure de l’activité libre ! Voici toutes les variables avec lesquelles nous avons joué jusqu'à présent, mais aussi quelques-unes de plus au cas où tu les voudrais.\n\nNote qu'il y a maintenant tellement de blocs dans notre boîte à outils qu’ils doivent être organisés !  Ici, nous avons mis chaque pièce dans une catégorie appropriée.  Prends le temps de découvrir tout ce qui est disponible. Lorsque tu as tout révisé, fais un jeu ou une histoire en utilisant les répétitions, les variables et les événements.\n\nIndice : fais défiler le menu pour voir toutes les commandes dans l'espace de travail."
       CourseF_PlayLab_vars2: La course dans ce dernier puzzle n'était pas très équitable ! Change la variable «Vitesse du chien» pour t'assurer que tu peux obtenir plus de drapeaux que le chat. Le premier à obtenir 10 drapeaux gagne !

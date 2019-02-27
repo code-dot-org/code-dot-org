@@ -1309,12 +1309,6 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
-      aalab_checkCollision:
-        text: þegar {SPRITE1} {OPTION} {SPRITE2}
-        options:
-          OPTION:
-            '"collide"': rekst á
-            '"overlap"': skarast við
       aalab_checkTouching:
         text: "{CONDITION} {SPRITE1} snertir {SPRITE2}"
         options:
@@ -1333,9 +1327,9 @@ is:
       aalab_createNewSpriteAdvanced:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           búa til nýjan hóp sem heitir {VAR}
@@ -1421,9 +1415,47 @@ is:
             '"4"': 4 sekúndur
             '"5"': 5 sekúndur
             '"0"': að eilífu
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} segir {MESSAGE}"
       aalab_spriteSay:
         text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': sýna
+            '"hide"': fela
+      binary_drawBin:
+        text: teikna tvíund {BIN}
+      binary_drawBinScreen:
+        text: |-
+          teikna skjá
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: teikna tugatölu {DEC}
+      binary_drawPixelHere:
+        text: stilla díl {VAL}
+        options:
+          VAL:
+            '0': af
+            '1': á
+            '"toggle"': víxla
+      binary_drawString:
+        text: teikna streng {STR}
+      binary_goTo:
+        text: hoppa á {LOC}
+      binary_goToHome:
+        text: hoppa efst vinstri
+      binary_gridSize:
+        text: stilla stærð hnita {SIZE}
       binary_move:
+        text: færa {DIR}
         options:
           DIR:
             '"up"': uppi
@@ -1444,9 +1476,14 @@ is:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          ef slóð {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": framfyrir
+            "'right'": til hægri
+            "'left'": til vinstri
       craft_ifStandingOn:
         text: |-
           ef stendur á {TYPE}
