@@ -1,5 +1,5 @@
 {
-  "category": "Actions",
+  "category": "World",
   "config": {
     "func": "playSound",
     "blockText": "playSound {SOUND}",
