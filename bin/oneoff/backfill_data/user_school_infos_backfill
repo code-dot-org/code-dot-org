@@ -5,10 +5,11 @@ require_relative '../../../dashboard/config/environment'
 num_users_updated = 0
 batch_size = 10000
 
-User.where.not(school_info: nil).find_in_batches(batch_size: batch_size) do |batch|
+puts "Processing..."
+
+User.where(user_type: "teacher", school_info: !nil).find_in_batches(batch_size: batch_size) do |batch|
   ActiveRecord::Base.transaction do
     batch.each do |user|
-    puts "Processing #{num_users_updated}...."
       UserSchoolInfo.create!(
         user_id: user.id,
         school_info_id: user.school_info_id,
@@ -23,5 +24,3 @@ end
 
 # Output how many total users were updated.
 puts "\nFinished updating #{num_users_updated} users school information."
-
-
