@@ -157,13 +157,9 @@ export default class Section1AboutYou extends LabeledFormComponent {
           </li>
           <li>
             <span style={styles.bold}>
-              Section 5: Additional demographic information
+              Section 5: Additional demographic information and submission
             </span>
-            &nbsp; (Optional: your gender identity and race)
-          </li>
-          <li>
-            <span style={styles.bold}>Section 6: Submission</span>
-            &nbsp; (Confirm and submit)
+            &nbsp; (Optional: your gender identity and race; Confirm and submit)
           </li>
         </ul>
 
