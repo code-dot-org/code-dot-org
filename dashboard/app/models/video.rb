@@ -88,6 +88,7 @@ class Video < ActiveRecord::Base
 
   def fetch_thumbnail
     return unless Rails.application.config.levelbuilder_mode
+    return unless locale == I18n.default_locale.to_s
 
     path = dashboard_dir('public', 'c', 'video_thumbnails', "#{key}.jpg")
     url = "http://img.youtube.com/vi/#{youtube_code}/mqdefault.jpg"
