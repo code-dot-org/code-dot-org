@@ -15,7 +15,9 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(<Checkbox checked={true} />);
+    expect(wrapper).to.containMatchingElement(
+      <input type="checkbox" checked={true} />
+    );
   });
 
   it('renders an unchecked Checkbox if editing and can not share', () => {
@@ -27,7 +29,9 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(<Checkbox checked={false} />);
+    expect(wrapper).to.containMatchingElement(
+      <input type="checkbox" checked={false} />
+    );
   });
 
   it('renders nothing if not editing and can not share', () => {

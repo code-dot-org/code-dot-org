@@ -12,7 +12,8 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 2. if this is your first time running tests via chromedriver, run `bundle install` and then `rbenv rehash`
 3. `./runner.rb -l`
   - `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
-  - a window will pop up in the background in which you can watch the tests happen
+  - By default, the tests run in "headless" mode, meaning with no visible chrome window.
+  - **If you need to see what's happening,** add the `--headed` flag. A chrome window will pop up in the background in which you can watch the tests happen
 4. In a separate window, run `tail -f *.log` from the `log` subdirectory to watch the results of your tests
   - `-f` streams the log in your shell, so it will be updated as new lines are written
 5. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`

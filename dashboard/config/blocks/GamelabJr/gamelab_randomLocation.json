@@ -1,5 +1,5 @@
 {
-  "category": "Sprites",
+  "category": "Location",
   "config": {
     "func": "randomLocation",
     "blockText": "random location",

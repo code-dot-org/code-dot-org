@@ -56,7 +56,7 @@ function assertPropertyRowExists(index, label, assert) {
 
   var propertyRow = $('#propertyRowContainer > div').eq(index);
   var msg = 'property row ' + index + " has label '" + label + "'";
-  assert.equal(propertyRow.children(0).text(), label, msg);
+  assert.equal($(propertyRow.children(0)[0]).text(), label, msg);
 }
 
 // We don't load our style sheets in integration tests, so we instead depend
@@ -148,7 +148,7 @@ module.exports = {
 
         var assetUrl = '/blockly/media/skins/studio/small_static_avatar.png';
         var encodedAssetUrl = assetUrl;
-        var imageInput = $('#propertyRowContainer input').last()[0];
+        var imageInput = $('.imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
 
@@ -184,7 +184,7 @@ module.exports = {
           'https://studio.code.org/blockly/media/skins/studio/small_static_avatar.png';
         var encodedAssetUrl =
           '/media?u=https%3A%2F%2Fstudio.code.org%2Fblockly%2Fmedia%2Fskins%2Fstudio%2Fsmall_static_avatar.png';
-        var imageInput = $('#propertyRowContainer input').last()[0];
+        var imageInput = $('.imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
 
@@ -223,7 +223,7 @@ module.exports = {
         var assetUrl = 'flappy (1).png';
         var encodedAssetUrl =
           '/base/test/integration/assets/applab-channel-id/flappy%20(1).png';
-        var imageInput = $('#propertyRowContainer input').last()[0];
+        var imageInput = $('.imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
         var originalButtonWidth = buttonElement.style.width;
@@ -672,7 +672,8 @@ module.exports = {
         assertPropertyRowValue(5, 'y position (px)', 0, assert);
         assertPropertyRowValue(6, 'text color', '#000000', assert);
         assertPropertyRowValue(7, 'background color', '#ffffff', assert);
-        assertPropertyRowValue(8, 'font size (px)', 14, assert);
+        assertPropertyRowValue(8, 'font family', 'Arial', assert);
+        assertPropertyRowValue(9, 'font size (px)', 14, assert);
 
         var textArea = designModeViz.find('.textArea');
         var manipulator = textArea.parent();
@@ -798,10 +799,11 @@ module.exports = {
         assertPropertyRowValue(2, 'height (px)', 100, assert);
         assertPropertyRowExists(3, 'x position (px)', assert);
         assertPropertyRowExists(4, 'y position (px)', assert);
-        assertPropertyRowExists(5, 'image Choose...', assert);
-        assertPropertyRowExists(6, 'fit imagefillcovercontainnone', assert);
-        assertPropertyRowExists(7, 'hidden', assert);
-        assertPropertyRowExists(8, 'depth', assert);
+        assertPropertyRowExists(5, 'image', assert);
+        assertPropertyRowExists(6, 'fit image', assert);
+        // Ignore BorderProperties
+        assertPropertyRowExists(8, 'hidden', assert);
+        assertPropertyRowExists(9, 'depth', assert);
 
         // Make sure it's draggable
         var manipulator = newImage.parent();
@@ -1180,9 +1182,9 @@ module.exports = {
         $('#designModeButton').click();
         $('#design_image1').click();
 
-        assertPropertyRowExists(5, 'image Choose...', assert);
+        assertPropertyRowExists(5, 'image', assert);
 
-        var input = $('#propertyRowContainer input').eq(5)[0];
+        var input = $('.imagePickerInput')[0];
         var designImage = $('#design_image1')[0];
         assert.equal(designImage.style.width, '110px');
         assert.equal(designImage.style.height, '105px');

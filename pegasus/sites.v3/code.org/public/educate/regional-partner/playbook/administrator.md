@@ -57,7 +57,7 @@ ________________
 <br/>
 ## Supplies & Resources
 
-Both printed materials and swag can be ordered through [Mimeo](marketplace.mimeo.com/codeorgworkshop). If you are running a shorter workshop that only requires printed materials, or have less than three weeks left before your workshop date, we encourage you to print the materials directly using the links below.
+Both printed materials and swag can be ordered through [Mimeo](https://marketplace.mimeo.com/codeorgworkshop). If you are running a shorter workshop that only requires printed materials, or have less than three weeks left before your workshop date, we encourage you to print the materials directly using the links below.
 
 ### List of Printed Materials by Section
 

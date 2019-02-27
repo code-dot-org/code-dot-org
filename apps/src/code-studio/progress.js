@@ -25,6 +25,7 @@ import {
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
+  setIsSummaryView,
   setCurrentStageId,
   setScriptCompleted,
   setStageExtrasEnabled,
@@ -259,7 +260,16 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page
-    if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
+    if (
+      (data.isTeacher || data.teacherViewingStudent) &&
+      !data.professionalLearningCourse &&
+      onOverviewPage
+    ) {
+      // Default to progress summary view if teacher is viewing their student's progress.
+      if (data.teacherViewingStudent) {
+        store.dispatch(setIsSummaryView(true));
+      }
+
       store.dispatch(showTeacherInfo());
 
       const viewAs =
@@ -270,7 +280,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         // our async call
         store.dispatch(setViewType(viewAs));
       }
-      renderTeacherPanel(store, scriptData.id);
+
+      renderTeacherPanel(store, scriptData.id, scriptData.section);
       clientState.cacheUserIsTeacher(true);
     }
 
@@ -347,10 +358,15 @@ function initializeStoreWithProgress(
     store.dispatch(disablePostMilestone());
   }
 
-  // Merge in progress saved on the client.
-  store.dispatch(
-    mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
-  );
+  // Determine if we are viewing student progress.
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+
+  // Merge in progress saved on the client, unless we are viewing student's work.
+  if (!isViewingStudentAnswer) {
+    store.dispatch(
+      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
+    );
+  }
 
   if (scriptData.hideable_stages) {
     // Note: This call is async
@@ -361,7 +377,6 @@ function initializeStoreWithProgress(
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
   if (!isViewingStudentAnswer) {
     let lastProgress;
     store.subscribe(() => {

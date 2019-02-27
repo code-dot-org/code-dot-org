@@ -34,7 +34,11 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
+var customText = [];
+var customTextHidden = false;
 var animationGroups = {};
+var thisSprite;
+var otherSprite;
 
 function initialize(setupHandler) {
   setupHandler();
@@ -44,7 +48,7 @@ function initialize(setupHandler) {
 function addBehavior(sprite, behavior) {
   if(sprite && behavior) {
     behavior = normalizeBehavior(behavior);
-    if(findBehavior(sprite, behavior) >= 0) {
+    if(findBehavior(sprite, behavior) === -1) {
       sprite.behaviors.push(behavior);
     }
   }
@@ -53,7 +57,8 @@ function addBehavior(sprite, behavior) {
 function removeBehavior(sprite, behavior) {
   if(sprite && behavior) {
     behavior = normalizeBehavior(behavior);
-    if(findBehavior(sprite, behavior) >= 0) {
+    var index = findBehavior(sprite, behavior);
+    if(index >= 0) {
       sprite.behaviors.splice(index, 1);
     }
   }
@@ -65,6 +70,9 @@ function Behavior(func, extraArgs) {
   }
   this.func = func;
   this.extraArgs = extraArgs;
+  this.checkTerminate = function() {return false;};
+  this.timeStarted = new Date().getTime();
+  this.duration = Number.MAX_VALUE;
 }
 
 function normalizeBehavior(behavior) {
@@ -222,6 +230,7 @@ function removeFromAnimationGroup(sprite, oldAnimation) {
   }
 }
 
+// Updated
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
   sprite.baseScale = 1;
@@ -233,6 +242,8 @@ function makeNewSprite(animation, x, y) {
   sprite.patrolling = false;
   sprite.things_to_say = [];
   sprite.behaviors = [];
+  sprite.collidable = false; //new
+  sprite.collisionObjects = []; //new
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
   };
@@ -336,7 +347,12 @@ function unitVectorTowards(from, to) {
 function runSpriteBehaviors() {
   sprites.forEach(function (sprite) {
     sprite.behaviors.forEach(function (behavior) {
-      behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+      var timeElapsed = new Date().getTime() - behavior.timeStarted;
+      if(behavior.checkTerminate() || timeElapsed >= behavior.duration) {
+        removeBehavior(sprite, behavior);
+      } else {
+        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+      }
     });
   });
 }
@@ -361,11 +377,13 @@ function runInputEvents() {
       inputEvents[i].param;
     if(!Array.isArray(param)) {
       if(eventType(param)) {
+        thisSprite = param;
         event();
       }
     } else {
       for(var j = 0; j < param.length; j++) {
         if(eventType(param[j])) {
+          thisSprite = param[j];
           event();
         }
       }
@@ -373,30 +391,71 @@ function runInputEvents() {
   }
 }
 
-// New
+// Updated
 function runCollisionEvents() {
-  var createCollisionHandler = function (collisionEvent) {
-    return function (sprite1, sprite2) {
-      if (!collisionEvent.touching || collisionEvent.keepFiring) {
-        collisionEvent.event(sprite1, sprite2);
+  collisionEvents.forEach(function(event) {
+    var condition = event.condition;
+    var a = event.a();
+    var b = event.b();
+    var e = event.event;
+    var type;
+    var collisionSubjects = [];
+    var findCollisionObject = function(sprite, collisionObject) {
+      for(var i = 0; i < sprite.collisionObjects.length; i++) {
+      	if(sprite.collisionObjects[i].sprite === collisionObject) {
+          return i;
+        }
+      }
+      return -1;
+    };
+    var addCollisionObjects = function(a, b) {
+      if(findCollisionObject(a, b) === -1) {
+        a.collisionObjects.push({sprite: b, event: event, locked: false});
+      }
+      if(collisionSubjects.indexOf(a) === -1) {
+        collisionSubjects.push(a);
       }
     };
-  };
-  for (var i = 0; i < collisionEvents.length; i++) {
-    var collisionEvent = collisionEvents[i];
-    var a = collisionEvent.a && collisionEvent.a();
-    var b = collisionEvent.b && collisionEvent.b();
-    if (a && b) {
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
-        collisionEvent.touching = true;
+    if(a && b) {
+      if(!Array.isArray(a) && !Array.isArray(b)) {
+        addCollisionObjects(a, b);
+      } else if(Array.isArray(a) && !Array.isArray(b)) {
+        a.forEach(function(s) {
+          addCollisionObjects(s, b);
+        });
+      } else if(!Array.isArray(a) && Array.isArray(b)) {
+        b.forEach(function(s) {
+          addCollisionObjects(a, s);
+        });
       } else {
-        if (collisionEvent.touching && collisionEvent.eventEnd) {
-          collisionEvent.eventEnd(a, b);
-        }
-        collisionEvent.touching = false;
+        a.forEach(function(s) {
+          b.forEach(function(p) {
+          	addCollisionObjects(s, p);
+          });
+        });
       }
+      collisionSubjects.forEach(function(s) {
+        var relevantCollisionObjects = s.collisionObjects.filter(function(obj) {
+          return obj.event === event;
+        });
+        relevantCollisionObjects.forEach(function(obj) {
+          type = s.collidable && obj.sprite.collidable ? "collide" : "overlap";
+      	  if(s[type](obj.sprite)) {
+            if(!obj.locked) {
+              thisSprite = s;
+              otherSprite = obj.sprite;
+              e();
+              if(condition === "when") {
+                obj.locked = true;
+              }
+            }
+          } else {
+          	obj.locked = false;
+          }
+        });
+      });
     }
-  }
+  });
 }
 
 // New
@@ -434,6 +493,21 @@ function updateHUDText() {
   }
 }
 
+// New
+function printCustomText() {
+  customText.forEach(function(textObj) {
+    var timeElapsed = new Date().getTime() - textObj.timeStarted;
+    if(textObj.duration > 0 && timeElapsed >= textObj.duration) {
+      customText.splice(customText.indexOf(textObj), 1);
+    } else {
+      fill(textObj.color());
+      textAlign(CENTER);
+      textSize(textObj.size());
+      text(textObj.text(), textObj.location().x, textObj.location().y);
+    }
+  });
+}
+
 // Updated
 function draw() {
   background(World.background_color || "white");
@@ -445,4 +519,7 @@ function draw() {
   }
   drawSprites();
   updateHUDText();
+  if(!customTextHidden) {
+    printCustomText();
+  }
 }

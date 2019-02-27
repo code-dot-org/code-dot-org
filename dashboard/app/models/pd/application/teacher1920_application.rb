@@ -207,10 +207,9 @@ module Pd::Application
             TEXT_FIELDS[:not_sure_explain]
           ],
           pay_fee: [
-            'Yes, my school or I will be able to pay the full program fee.',
+            'Yes, my school will be able to pay the full program fee.',
             TEXT_FIELDS[:no_pay_fee_1920],
-            'Not applicable: there is no program fee for teachers in my region.',
-            'Not applicable: there is no Regional Partner in my region.'
+            "I don't know."
           ],
           willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
           interested_in_online_program: [YES, NO]
@@ -226,9 +225,6 @@ module Pd::Application
         first_name
         last_name
         phone
-        address
-        city
-        state
         zip_code
         principal_first_name
         principal_last_name
@@ -246,15 +242,10 @@ module Pd::Application
         plan_to_teach
         replace_existing
 
-        does_school_require_cs_license
         subjects_teaching
-        have_cs_license
-        subjects_licensed_to_teach
         taught_in_past
         previous_yearlong_cdo_pd
-        cs_offered_at_school
 
-        pay_fee
         willing_to_travel
         interested_in_online_program
 
@@ -269,39 +260,33 @@ module Pd::Application
     def dynamic_required_fields(hash)
       [].tap do |required|
         if hash[:completing_on_behalf_of_someone_else] == YES
-          required.concat [:completing_on_behalf_of_name]
-        end
-
-        if hash[:does_school_require_cs_license] == YES
-          required.concat [:what_license_required]
+          required << :completing_on_behalf_of_name
         end
 
         if hash[:able_to_attend_multiple]
           if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).any?
-            required.concat [:travel_to_another_workshop]
+            required << :travel_to_another_workshop
           end
         end
 
+        if hash[:regional_partner_id].present?
+          required << :pay_fee
+        end
+
         if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
-          required.concat [:scholarship_reasons]
+          required << :scholarship_reasons
         end
 
         if hash[:program] == PROGRAMS[:csd]
-          required.concat [
-            :csd_which_grades,
-          ]
+          required << :csd_which_grades
         elsif hash[:program] == PROGRAMS[:csp]
-          required.concat [
-            :csp_which_grades,
-            :csp_how_offer,
-          ]
+          required << :csp_which_grades
+          required << :csp_how_offer
         end
 
         if hash[:regional_partner_workshop_ids].presence
-          required.concat [
-            :able_to_attend_multiple,
-            :committed
-          ]
+          required << :able_to_attend_multiple
+          required << :committed
         end
       end
     end
@@ -335,7 +320,7 @@ module Pd::Application
 
     def friendly_scholarship_status
       if scholarship_status
-        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+        Pd::ScholarshipInfoConstants::SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
       end
     end
 

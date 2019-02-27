@@ -112,12 +112,14 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 Updated guidance for hosting 2019 Local Summer Workshops is now available!
 
 - **[2019 Local Summer Workshop Process Document](https://docs.google.com/document/d/1YSLD6U1gkUSAMpymoHeXX_NniC0WY7eSFxzOvu9U23I/edit?usp=sharing)**
+- [Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)
 
 
 <a id="academic"></a>
 
 ### Academic Year Workshop Specific
 
+- **[2019-2020 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1sJUI1F7r270k8LYMbLBBZwqQho7xJMc0G-YUrfiRJwM/edit?usp=sharing)**
 - **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)**
 
 <a id="printing"></a>

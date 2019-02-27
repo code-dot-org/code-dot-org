@@ -10,7 +10,11 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import color from '../../util/color';
 import EnumPropertyRow from './EnumPropertyRow';
+import BorderProperties from './BorderProperties';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import * as elementUtils from './elementUtils';
+import designMode from '../designMode';
+import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 
 class DropdownProperties extends React.Component {
   static propTypes = {
@@ -28,7 +32,7 @@ class DropdownProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <OptionsSelectRow
           desc={'options'}
@@ -37,31 +41,31 @@ class DropdownProperties extends React.Component {
         />
         <PropertyRow
           desc={'index'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.selectedIndex, 10)}
           handleChange={this.props.handleChange.bind(this, 'index')}
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -75,9 +79,15 @@ class DropdownProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontSize
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
+        />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -86,6 +96,21 @@ class DropdownProperties extends React.Component {
           initialValue={element.style.textAlign || 'center'}
           options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -142,7 +167,7 @@ class DropdownEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <EventHeaderRow />
         <EventRow
@@ -163,10 +188,12 @@ export default {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.fontSize = '14px';
+    element.style.fontFamily = fontFamilyStyles[0];
+    element.style.fontSize = defaultFontSizeStyle;
     element.style.margin = '0';
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
+    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -180,6 +207,11 @@ export default {
   },
 
   onDeserialize: function(element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element);
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
+
     // In the future we may want to trigger this on focus events as well.
     $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {

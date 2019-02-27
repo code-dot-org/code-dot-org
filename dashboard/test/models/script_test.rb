@@ -1263,10 +1263,16 @@ class ScriptTest < ActiveSupport::TestCase
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
+    assert_equal 1, script.script_announcements.count
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-copy', script_copy.name
+    assert_nil script_copy.family_name
+    assert_nil script_copy.version_year
+    assert_equal false, !!script_copy.is_stable
+    assert_equal true, script_copy.hidden
+    assert_nil script_copy.script_announcements
 
     # Validate levels.
     assert_equal 5, script_copy.levels.count
@@ -1292,6 +1298,22 @@ class ScriptTest < ActiveSupport::TestCase
       'Level 4_copy,Level 5_copy',
       stage2.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
+  end
+
+  test 'clone versioned script with suffix' do
+    script_file = File.join(self.class.fixture_path, "test-fixture-versioned-1801.script")
+    scripts, _ = Script.setup([script_file])
+    script = scripts[0]
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('1802')
+
+    # make sure the old suffix is removed before the new one is added.
+    assert_equal 'test-fixture-versioned-1802', script_copy.name
+    assert_equal 'versioned', script_copy.family_name
+    assert_equal '1802', script_copy.version_year
+    assert_equal false, !!script_copy.is_stable
+    assert_equal true, script_copy.hidden
   end
 
   test 'clone script with inactive variant' do
@@ -1414,6 +1436,21 @@ endvariants
     assert_equal [script], scripts
   end
 
+  test "self.valid_scripts: omits pilot scripts" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
+    assert pilot_script.hidden
+    assert Script.any?(&:pilot?)
+
+    refute Script.valid_scripts(student).any?(&:pilot?)
+    refute Script.valid_scripts(teacher).any?(&:pilot?)
+    assert Script.valid_scripts(pilot_teacher).any?(&:pilot?)
+    assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
+  end
+
   test "get_assessment_script_levels returns an empty list if no level groups" do
     script = create(:script, name: 'test-no-levels')
     level_group_script_level = script.get_assessment_script_levels
@@ -1491,6 +1528,91 @@ endvariants
       },
       @script_in_course.section_hidden_unit_info(teacher)
     )
+  end
+
+  test 'pilot scripts are always hidden during seed' do
+    l = create :level
+    dsl = <<-SCRIPT
+      hidden false
+      pilot_experiment 'pilot-experiment'
+
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+
+    File.stubs(:read).returns(dsl)
+    scripts, _ = Script.setup(['pilot-script.script'])
+    script = scripts.first
+
+    assert_equal 'pilot-script', script.name
+    assert_equal 'pilot-experiment', script.pilot_experiment
+    assert script.hidden
+  end
+
+  test 'has pilot access' do
+    script = create :script
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
+
+    student = create :student
+    teacher = create :teacher
+
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+
+    # student in a pilot teacher's section which is not assigned to any script
+    section = create :section, user: pilot_teacher
+    unassigned_student = create(:follower, section: section).student_user
+
+    # student in a pilot teacher's section which is assigned to a pilot script
+    pilot_section = create :section, user: pilot_teacher, script: pilot_script
+    pilot_student = create(:follower, section: pilot_section).student_user
+
+    # teacher in a pilot teacher's section
+    teacher_in_section = create :teacher
+    create(:follower, section: pilot_section, student_user: teacher_in_section)
+
+    # student in a section which was previously assigned to a pilot script
+    other_pilot_section = create :section, user: pilot_teacher, script: pilot_script
+    previous_student = create(:follower, section: other_pilot_section).student_user
+    other_pilot_section.script = nil
+    other_pilot_section.save!
+
+    levelbuilder = create :levelbuilder
+
+    refute script.pilot?
+    refute script.has_pilot_access?
+    refute script.has_pilot_access?(student)
+    refute script.has_pilot_access?(teacher)
+    refute script.has_pilot_access?(pilot_teacher)
+    refute script.has_pilot_access?(unassigned_student)
+    refute script.has_pilot_access?(pilot_student)
+    refute script.has_pilot_access?(teacher_in_section)
+    refute script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(levelbuilder)
+
+    assert pilot_script.pilot?
+    refute pilot_script.has_pilot_access?
+    refute pilot_script.has_pilot_access?(student)
+    refute pilot_script.has_pilot_access?(teacher)
+    assert pilot_script.has_pilot_access?(pilot_teacher)
+    refute pilot_script.has_pilot_access?(unassigned_student)
+    assert pilot_script.has_pilot_access?(pilot_student)
+    assert pilot_script.has_pilot_access?(teacher_in_section)
+    assert pilot_script.has_pilot_access?(previous_student)
+    assert pilot_script.has_pilot_access?(levelbuilder)
+  end
+
+  test 'has any pilot access' do
+    student = create :student
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :script, pilot_experiment: 'my-experiment'
+    levelbuilder = create :levelbuilder
+
+    refute Script.has_any_pilot_access?
+    refute Script.has_any_pilot_access?(student)
+    refute Script.has_any_pilot_access?(teacher)
+    assert Script.has_any_pilot_access?(pilot_teacher)
+    assert Script.has_any_pilot_access?(levelbuilder)
   end
 
   private
