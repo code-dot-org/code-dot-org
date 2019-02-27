@@ -1884,7 +1884,7 @@ class UserTest < ActiveSupport::TestCase
   test 'update_primary_contact_info adds new email option for teacher if no matches exist' do
     teacher = create :teacher, :with_migrated_google_authentication_option
 
-    assert_equal 1, teacher.authentication_options.count
+    assert_equal 2, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
 
     successful_save = teacher.update_primary_contact_info(new_email: 'example@email.com')
@@ -1911,7 +1911,7 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher, :with_migrated_google_authentication_option
     existing_email = teacher.primary_contact_info.email
 
-    assert_equal 1, teacher.authentication_options.count
+    assert_equal 2, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
 
     # Update primary to a different email
@@ -1943,7 +1943,7 @@ class UserTest < ActiveSupport::TestCase
   test 'update_primary_contact_info adds new email option for student if no matches exist' do
     student = create :student, :with_migrated_google_authentication_option
 
-    assert_equal 1, student.authentication_options.count
+    assert_equal 2, student.authentication_options.count
     refute_nil student.primary_contact_info
 
     hashed_new_email = User.hash_email('example@email.com')
@@ -1972,7 +1972,7 @@ class UserTest < ActiveSupport::TestCase
     student = create :student, :with_migrated_google_authentication_option, email: 'student@email.com'
     existing_hashed_email = student.primary_contact_info.hashed_email
 
-    assert_equal 1, student.authentication_options.count
+    assert_equal 2, student.authentication_options.count
     refute_nil student.primary_contact_info
 
     # Update primary to a different email
@@ -2165,7 +2165,7 @@ class UserTest < ActiveSupport::TestCase
   test 'upgrade_to_teacher is true if new authentication option is created' do
     user = create :student, :with_migrated_google_authentication_option
 
-    assert_equal 1, user.authentication_options.count
+    assert_equal 2, user.authentication_options.count
 
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
     user.reload
@@ -2184,7 +2184,7 @@ class UserTest < ActiveSupport::TestCase
     auth_option = create :authentication_option, user: user, email: 'example@email.com'
 
     assert_empty auth_option.email
-    assert_equal 2, user.authentication_options.count
+    assert_equal 3, user.authentication_options.count
 
     email_preference_params = email_preference_params(email_preference_opt_in: 'yes')
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
