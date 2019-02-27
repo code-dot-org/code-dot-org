@@ -2,6 +2,9 @@ hu:
   data:
     script:
       category:
+        csf_category_name: A számítógép-tudomány alapjai
+        csf_2018_category_name: A számítógép-tudomány alapjai (2018)
+        csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
         hoc_category_name: A kódolás órája
         math_category_name: Matematika
       name:
@@ -169,7 +172,7 @@ hu:
               name: Művész
         course4:
           title: 4. tanfolyam
-          description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, funkciók használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
+          description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, függvények használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
           description_short: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már befejezték a 2. és a 3. tanfolyamot.
           description_audience: 10-től 18 éves korig
           stages:
@@ -202,7 +205,7 @@ hu:
             Super Challenge - For Loops:
               name: Szuper kihívás - For Loops (számláló ciklus)
             Super Challenge - Functions and Parameters:
-              name: Szuper kihívás - Funkciók és Paraméterek
+              name: Szuper kihívás - Függvények és Paraméterek
             Super Challenge - Variables:
               name: 'Szuper kihívás: változók'
             'Unplugged: Binary':
@@ -422,6 +425,12 @@ hu:
           stages:
             What is CSP?:
               name: Mi a CSP?
+        CSPLessonSamples:
+          stages:
+            Lesson 14:
+              name: Lecke 14
+            Lesson 15:
+              name: Lecke 15
         cspunit3:
           description_short: Programozás
           stages:
@@ -496,6 +505,8 @@ hu:
               name: Flappy
             Jigsaw:
               name: Kirakós játék
+            Long assessment:
+              name: Hosszú értékelés
             Match:
               name: Párosítás
             Maze:
@@ -504,10 +515,20 @@ hu:
               name: Minecraft
             Multi:
               name: Feleletválasztás
+            Multi2:
+              name: Multi2
+            Netsim:
+              name: Netsim
+            Star wars:
+              name: Star Wars
             Studio:
               name: Studio
             Web Lab:
               name: Web-Lab
+            Sprite Lab:
+              name: Sprite labor
+            Dance Lab:
+              name: Tánc Labor
         algebraPD2b:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -515,7 +536,7 @@ hu:
             Booleans:
               name: Logikai adattípus
             Defining Functions:
-              name: Funkciók meghatározása
+              name: Függvények meghatározása
             Defining Variables:
               name: Változók definiálása
             'Eval: Conditionals':
@@ -534,6 +555,12 @@ hu:
               name: Internet szimulátor
             Welcome!:
               name: Üdvözlünk!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: A számítógép-tudomány alapjai
+            Getting Started:
+              name: Első lépések
         ECSPD2:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -552,6 +579,8 @@ hu:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
           stages:
+            Lesson Prep:
+              name: Felkészülés az órára
             Teacher Dashboard:
               name: Tanári nyitólap
             The Design Recipe:
@@ -574,6 +603,10 @@ hu:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+        Equity-OnlinePD:
+          stages:
+            Getting Started:
+              name: Első lépések
         sciencePD2b-iZone:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -610,6 +643,10 @@ hu:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
+        CSPPD2:
+          stages:
+            Getting Started:
+              name: Első lépések
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -630,12 +667,44 @@ hu:
               name: Dalszerzés paraméterekkel
             The Big Event:
               name: A nagy esemény
+        algebraPD3a:
+          stages:
+            Lesson Prep:
+              name: Felkészülés az órára
+        ECSPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ECSPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ECSPD3-Unit4:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ECSPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ECSPD3-Unit6:
+          stages:
+            Getting Started:
+              name: Első lépések
         ScienceP3OLPT2:
           stages:
             Welcome!:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+        algebraPD3b:
+          stages:
+            Getting Started:
+              name: Első lépések
+        CSPPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Első lépések
         Special Fun:
           description_audience: 10-től 18 éves korig
         SpecialSeries:
@@ -647,6 +716,10 @@ hu:
           stages:
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
+        CSPPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Első lépések
         cspunit3temp:
           description_short: Programozás
           stages:
@@ -690,6 +763,14 @@ hu:
           description_short: Programozás
         cspunit4:
           description_short: Programozás
+        CSPPD3-Unit4:
+          stages:
+            Getting Started:
+              name: Első lépések
+        CSPPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Első lépések
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -734,6 +815,10 @@ hu:
               name: Értékelési blokk
             Teacher Dashboard:
               name: Tanári nyitólap
+        algebraPD3c:
+          stages:
+            Getting Started:
+              name: Első lépések
         csp1-2017:
           stages:
             The Internet:
@@ -762,6 +847,8 @@ hu:
         CSDU3-Draft:
           description_short: Programozás
           stages:
+            Sprite Movement Methods:
+              name: Sprite mozgatási módszerek
             Functions:
               name: funkciók
         TEMP CSD Unit 3:
@@ -850,6 +937,26 @@ hu:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
+        ecs-unit2:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ecs-unit3:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ecs-unit4:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ecs-unit5:
+          stages:
+            Getting Started:
+              name: Első lépések
+        ecs-unit6:
+          stages:
+            Getting Started:
+              name: Első lépések
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -860,6 +967,16 @@ hu:
               name: Ugrál
             'Farmer: While Loops':
               name: 'Farmer: feltételes ciklusok'
+        alltheplcthings:
+          stages:
+            Lesson 1,10:
+              name: Lecke 1,10
+            Lesson 1,11:
+              name: Lecke 1,11
+            Lesson 1,4:
+              name: Lecke 1,4
+            Lesson 1,6:
+              name: Lecke 1,6
         csd3-2017:
           description_short: Programozás
           stages:
@@ -867,6 +984,8 @@ hu:
               name: funkciók
             Variables:
               name: változók
+            Sprites:
+              name: Sprite-ok
             Conditionals:
               name: Feltételek
         grade2:
@@ -903,6 +1022,8 @@ hu:
               name: Elől tesztelős ciklusok
         algebrapdnext:
           stages:
+            Lesson Prep:
+              name: Felkészülés az órára
             Teacher Dashboard:
               name: Tanári nyitólap
             The Design Recipe:
@@ -1092,6 +1213,8 @@ hu:
           stages:
             Introduction:
               name: Bevezető
+            Sprites:
+              name: Sprite-ok
         coursed-ramp:
           stages:
             Introduction:
@@ -1122,6 +1245,8 @@ hu:
           stages:
             Variables:
               name: változók
+            Sprites:
+              name: Sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -1164,6 +1289,8 @@ hu:
           stages:
             Variables:
               name: változók
+            Sprites:
+              name: Sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -1376,16 +1503,24 @@ hu:
           stages:
             Variables:
               name: változók
+            Sprites:
+              name: Sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
               name: funkciók
           description_short: "Programozás"
+        glj-behavior-test:
+          stages:
+            Cats and Dogs:
+              name: Macskák és kutyák
         csd3-2018:
           description_short: "Programozás"
           stages:
             Variables:
               name: változók
+            Sprites:
+              name: Sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -1434,6 +1569,8 @@ hu:
               name: Csoportos megoldás
             Relay Programming:
               name: Váltó programozás
+            Graph Paper Programming:
+              name: Grafikus programozás
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1462,6 +1599,10 @@ hu:
               name: Grafikus programozás
             Relay Programming:
               name: Váltó programozás
+        jr-test:
+          stages:
+            Using Behaviors:
+              name: Viselkedések használata
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1603,6 +1744,8 @@ hu:
               name: Szórakozás a For ciklussal
             The Artist:
               name: A művész
+            Sprite Lab Behaviors:
+              name: Sprite labor viselkedések
         dance-low:
           stages:
             Dance Party:
@@ -1704,3 +1847,43 @@ hu:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Listák
+        csd3-2019:
+          description_short: "Programozás"
+          stages:
+            Variables:
+              name: változók
+            Sprites:
+              name: Sprite-ok
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Paraméteres függvények
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Az internet
+        csp3-2019:
+          description_short: Programozás
+          stages:
+            The Need for Algorithms:
+              name: Algoritmusokra szükség van
+            Creativity in Algorithms:
+              name: Kreativitás az algoritmusokban
+            Creating Functions:
+              name: Függvények létrehozása
+            Creating functions with Parameters:
+              name: Paraméteres függvények készítése
+            Unit 3 Chapter 1 Assessment:
+              name: 3. lecke 1. fejezet végi értékelés
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok

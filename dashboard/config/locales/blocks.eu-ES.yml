@@ -229,9 +229,6 @@ eu:
             '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea
-      Dancelab_setBackgroundEffect:
-        options:
-          EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -263,9 +260,6 @@ eu:
             '4': very fast
             '0.5': slow
             '0.25': very slow
-      Dancelab_setForegroundEffect:
-        options:
-          EFFECT: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -668,16 +662,49 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': "\\-enean"
+            '"while"': bitartean
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': "\\-enean"
             '"while"': bitartean
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': "\\-enean"
             '"while"': bitartean
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': hiria
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': egia
+            '"false"': gezurra
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"rotation"': itzulikapena
+            '"x"': x posizioa
+            '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+            '"tint"': tinta
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': betiko
       binary_move:
         options:
           DIR:

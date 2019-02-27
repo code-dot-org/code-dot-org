@@ -438,17 +438,23 @@ fr:
       C3-Farmer While Loops Assessment 1: Il y a beaucoup de trous et de tas.  Aide-moi à les remplir et à les enlever pour niveler le sol.
       CSD U3 Boolean Modify: Modifier le code pour que toutes les commandes console.log affichent true
       CSD U3 Boolean Modify_2018: Modifier le code pour que toutes les commandes console.log affichent true
+      CSD U3 Boolean Modify_2019: Modifier le code pour que toutes les commandes console.log affichent true
       CSD U3 Keypress Boolean-2018: Modifier le code pour que toutes les commandes console.log affichent true
       CSD U3 Keypress Boolean: Modifier le code pour que toutes les commandes console.log affichent true
       CSD U3 Keypress Boolean_2018: Modifier le code pour que toutes les commandes console.log affichent true
+      CSD U3 Keypress Boolean_2018_2019: Modifier le code pour que toutes les commandes console.log affichent true
       CSD U3 Keypress Watchers: Modifier le code pour que toutes les commandes console.log affichent true
       CSD U3 Keypress Watchers_2018: Modifier le code pour que toutes les commandes console.log affichent true
+      CSD U3 Keypress Watchers_2019: Modifier le code pour que toutes les commandes console.log affichent true
       CSD U5 black white images pixelation 2: Dessine un visage de smiley (clique ici pour voir l'image)
       CSD U5 black white images pixelation 2_2018: Dessine un visage de smiley (clique ici pour voir l'image)
+      CSD U5 black white images pixelation 2_2019: Dessine un visage de smiley (clique ici pour voir l'image)
       CSD U5 black white images pixelation 4: Ajoute des sourcils au visage du smiley (clique ici pour voir l'image)
       CSD U5 black white images pixelation 4_2018: Ajoute des sourcils au visage du smiley (clique ici pour voir l'image)
+      CSD U5 black white images pixelation 4_2019: Ajoute des sourcils au visage du smiley (clique ici pour voir l'image)
       CSD U5 black white images pixelation 5: Dessine ce que tu veux
       CSD U5 black white images pixelation 5_2018: Dessine ce que tu veux
+      CSD U5 black white images pixelation 5_2019: Dessine ce que tu veux
       CSDU4 - Design Mode - 1: "Ajoute un bouton qui déplace la tortue quand on clique dessus. \n(Cliquer pour voir les instructions complètes)"
       CSP student contact info: Veuillez saisir votre adresse mail.
       CSPU5_U3L13 - Turtle move with button: "Ajoute un bouton qui déplace la tortue quand on clique dessus. \n(Cliquer pour voir les instructions complètes)"
@@ -770,8 +776,10 @@ fr:
       CourseF_PlayLab_vars9: Bien, maintenant faisons en sorte que ce jeu ne soit pas trop facile à jouer. A chaque fois que le chien (acteur 1) sera touché par un sandwich du chat (acteur 2), tu devras perdre un point. Commence avec 10 points, ainsi ce ne sera pas trop difficile. Laisse ton score descendre de 10 à 0 pour changer de niveau.
       Crack Random Substitution: Consignes
       Crack Random Substitution_2018: Consignes
+      Crack Random Substitution_2019: Consignes
       Crack a Caesar Cipher: Consignes
       Crack a Caesar Cipher_2018: Consignes
+      Crack a Caesar Cipher_2019: Consignes
       Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace de travail et connectez-le à l'intérieur du bloc « configuration ».
       Dance_Party_01_low: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace de travail et connectez-le à l'intérieur du bloc « configuration ».
       Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après 4 mesures !
@@ -1130,6 +1138,7 @@ fr:
       PS copy 2-3 Bee Conditionals 5: "Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si»."
       Pixelation - Lesson 14 - Make the Letter A: 'Faire une lettre ''A'' de 3x5. Le widget est configuré avec des dimensions incorrectes. Votre première tâche sera de remplir le second octet avec le code binaire sur 8 bits pour 5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
       Pixelation - Lesson 14 - Make the Letter A_2018: 'Faire une lettre ''A'' de 3x5. Le widget est configuré avec des dimensions incorrectes. Votre première tâche sera de remplir le second octet avec le code binaire sur 8 bits pour 5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Faire une lettre ''A'' de 3x5. Le widget est configuré avec des dimensions incorrectes. Votre première tâche sera de remplir le second octet avec le code binaire sur 8 bits pour 5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
       Quantum Bee: Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si».
       Ryan - 4-5 Bee Conditionals 2: L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar.
       Ryan - Bee Conditionals: L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar.
@@ -1150,6 +1159,7 @@ fr:
       Testing Quantum Farmer: "Wow, j'ai trouvé un trou vraiment profond ! Je ne sais pas combien de pelletées de terre il faudra pour le remplir.  Peux-tu écrire un programme qui le remplira jusqu’à ce que le sol soit nivelé ?  Indice :  essaie d'utiliser la boucle «Tant que» cette fois."
       The Vigenere Cipher Widget: Consignes
       The Vigenere Cipher Widget_2018: Consignes
+      The Vigenere Cipher Widget_2019: Consignes
       The Vigenere Cipher: Consignes
       Total Artist Clone Me: 'Activité libre : Voici les fonctions que tu as écrites, et même un peu plus pour que tu puisses jouer avec. Dessine quelque chose d''incroyable ! Joue avec la largeur du crayon pour voir la différences entre tes dessins !'
       U2 frequency caesar: Consignes
@@ -1159,6 +1169,7 @@ fr:
       U4 vigenere cipher 2: Consignes
       U4L02 - Objects - Template1: Modèle
       U4L02 - Objects - Template1_2018: Modèle
+      U4L02 - Objects - Template1_2019: Modèle
       Underground Avoiding Lava: La lave se cache sous certains de ces blocs, que tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici. Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
       Underground Avoiding Lava_2018: La lave se cache sous certains de ces blocs, que tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici. Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
       Underground Avoiding Lava_2019: La lave se cache sous certains de ces blocs, que tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici. Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.

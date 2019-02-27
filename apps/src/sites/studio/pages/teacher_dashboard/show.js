@@ -8,7 +8,7 @@ import manageStudents, {
   setLoginType,
   setStudents,
   convertStudentServerData,
-  toggleSharingColumn
+  setShowSharingColumn
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections,
@@ -34,7 +34,7 @@ import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashbo
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const section = scriptData.section;
-const allSections = scriptData.allSections;
+const visibleSections = scriptData.visibleSections;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -51,7 +51,7 @@ $(document).ready(function() {
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setSection(section));
-  store.dispatch(setSections(allSections));
+  store.dispatch(setSections(visibleSections));
 
   store.dispatch(selectSection(section.id));
   store.dispatch(setRosterProvider(section.login_type));
@@ -64,7 +64,7 @@ $(document).ready(function() {
   if (
     courseFamiliesToShowShareColumn.includes(section.script.course_family_name)
   ) {
-    store.dispatch(toggleSharingColumn());
+    store.dispatch(setShowSharingColumn(true));
   }
 
   $.ajax({
@@ -105,6 +105,7 @@ $(document).ready(function() {
                 {...props}
                 studioUrlPrefix={scriptData.studioUrlPrefix}
                 pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
+                sectionId={section.id}
                 sectionName={section.name}
               />
             )}

@@ -480,7 +480,11 @@ module Pd::WorkshopSurveyResultsHelper
       end
 
       # Finally, keep hold of the question text to render in the averages table
-      facilitator_averages[:questions][question_group[:primary_id]] = question_group[:all_ids] ? question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first[:text] : flattened_questions[question_group[:primary_id]][:text]
+      facilitator_averages[:questions][question_group[:primary_id]] = if question_group[:all_ids]
+                                                                        question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first[:text]
+                                                                      else
+                                                                        flattened_questions[question_group[:primary_id]][:text]
+                                                                      end
     end
 
     facilitators.each do |facilitator|
@@ -489,7 +493,8 @@ module Pd::WorkshopSurveyResultsHelper
       QUESTIONS_FOR_FACILITATOR_AVERAGES.each do |category, questions|
         facilitator_averages[facilitator][category.to_s.downcase.to_sym] = {}
         [:this_workshop, :all_my_workshops].each do |column|
-          average = (facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}.reduce(:+) || 0) / questions.size.to_f
+          response_values = facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}
+          average = (response_values.reject(&:nil?).reduce(:+) || 0) / questions.size.to_f
           facilitator_averages[facilitator][category.to_s.downcase.to_sym][column] = average.round(2)
         end
       end

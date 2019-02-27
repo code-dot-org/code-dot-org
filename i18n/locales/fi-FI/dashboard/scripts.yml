@@ -1300,7 +1300,7 @@ fi:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Koodaustunti
-          description: Minecraft on palannut Hour of Code:hin uusilla toiminnoilla! Matkaa halki Minecraftin koodin matkassa
+          description: Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1405,6 +1405,8 @@ fi:
               name: Joukkoistaminen
             Relay Programming:
               name: Releohjelmointi
+            Graph Paper Programming:
+              name: Ruutupaperiohjelmointi
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1531,7 +1533,7 @@ fi:
             Aquatic:
               name: merellinen
           title: 'Minecraft: Merellinen matka'
-          description_short: Minecraft on palannut Hour of Code:hin uusilla toiminnoilla!
+          description_short: Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla!
         dance-extras:
           title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
@@ -1634,3 +1636,37 @@ fi:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Tosielämän algoritmit: kylvä siemen'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Listat
+        csd3-2019:
+          stages:
+            Variables:
+              name: Muuttujat
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Parametrilliset funktiot
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Kysely
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internetti
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Funktioiden luominen
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Niin kauan kuin -silmukat

@@ -193,28 +193,11 @@ class User < ActiveRecord::Base
   belongs_to :studio_person
   has_many :hint_view_requests
 
-  # Teachers can be in multiple cohorts
-  has_and_belongs_to_many :cohorts
-
-  # workshops that I am attending
-  has_many :workshops, through: :cohorts
-  has_many :segments, through: :workshops
-
   # courses a facilitator is able to teach
   has_many :courses_as_facilitator,
     class_name: Pd::CourseFacilitator,
     foreign_key: :facilitator_id,
     dependent: :destroy
-
-  has_and_belongs_to_many :workshops_as_facilitator,
-    class_name: Workshop,
-    foreign_key: :facilitator_id,
-    join_table: :facilitators_workshops
-
-  # you can be associated with a district if you are the district contact
-  has_one :district_as_contact,
-    class_name: 'District',
-    foreign_key: 'contact_id'
 
   has_many :regional_partner_program_managers,
     foreign_key: :program_manager_id
@@ -222,9 +205,6 @@ class User < ActiveRecord::Base
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
-
-  has_many :districts_users, class_name: 'DistrictsUsers'
-  has_many :districts, through: :districts_users
 
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
@@ -362,19 +342,6 @@ class User < ActiveRecord::Base
 
   def delete_course_as_facilitator(course)
     courses_as_facilitator.find_by(course: course).try(:destroy)
-  end
-
-  def district_contact?
-    return false unless teacher?
-    district_as_contact.present?
-  end
-
-  def district
-    District.find(district_id) if district_id
-  end
-
-  def district_name
-    district.try(:name)
   end
 
   # Given a user_id, username, or email, attempts to find the relevant user
@@ -898,9 +865,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def update_primary_contact_info(user: {email: nil, hashed_email: nil})
-    new_email = user[:email]
-    new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
+  def update_primary_contact_info(new_email: nil, new_hashed_email: nil)
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : new_hashed_email
 
     return false if new_email.nil? && new_hashed_email.nil?
     return false if teacher? && new_email.nil?
@@ -936,8 +902,8 @@ class User < ActiveRecord::Base
     success
   end
 
-  def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
-    success = update_primary_contact_info(user: user)
+  def update_primary_contact_info!(new_email: nil, new_hashed_email: nil)
+    success = update_primary_contact_info(new_email: new_email, new_hashed_email: new_hashed_email)
     raise "User's primary contact info was not updated successfully" unless success
     success
   end
@@ -960,7 +926,7 @@ class User < ActiveRecord::Base
     hashed_email = params.delete(:hashed_email)
     should_update_contact_info = email.present? || hashed_email.present?
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
+      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
       update!(params)
     end
   rescue
@@ -990,7 +956,7 @@ class User < ActiveRecord::Base
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email})
+      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
       update!(email_preference)
     end
   rescue
@@ -1945,8 +1911,8 @@ class User < ActiveRecord::Base
       birthday: birthday,
       total_lines: total_lines,
       secret_words: secret_words,
-      secret_picture_name: secret_picture.name,
-      secret_picture_path: secret_picture.path,
+      secret_picture_name: secret_picture&.name,
+      secret_picture_path: secret_picture&.path,
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
@@ -2152,9 +2118,6 @@ class User < ActiveRecord::Base
 
     authentication_options.with_deleted.each(&:really_destroy!)
     self.primary_contact_info = nil
-
-    districts.clear
-    self.district_as_contact = nil
 
     self.studio_person_id = nil
     self.name = nil

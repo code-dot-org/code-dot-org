@@ -179,9 +179,6 @@ ro:
             '4': very fast
             '0.5': slow
             '0.25': very slow
-      Dancelab_setForegroundEffect:
-        options:
-          EFFECT: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -659,16 +656,56 @@ ro:
             '"x"': poziţie x
             '"y"': poziţie y
             '"direction"': direcţie de mişcare
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': când
+            '"while"': în timp ce
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': oraș
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': adevărat
+            '"false"': fals
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': pentru totdeauna
       binary_move:
         options:
           DIR:

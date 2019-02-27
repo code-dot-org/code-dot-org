@@ -163,14 +163,27 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': အချိန်
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': အချိန်
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': အချိန်
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': အမြဲတမ်​း
       craft_ifPath:
         options:
           DIR:

@@ -2,7 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "randomLocation",
-    "blockText": "aalab random location",
+    "blockText": "random location",
     "returnType": "Location"
   }
 }

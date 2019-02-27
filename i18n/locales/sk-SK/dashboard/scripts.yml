@@ -607,6 +607,10 @@ sk:
           stages:
             Creating Functions:
               name: Tvorba funkcií
+            Digital Assistant Project:
+              name: Projekt Digitálny asistent
+            Introduction to Digital Assistants:
+              name: Úvod do digitálnych asistentov
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
             While Loops:
@@ -939,6 +943,12 @@ sk:
           stages:
             Getting Started:
               name: Začíname
+        cspunit4draft:
+          stages:
+            Designing for Your User:
+              name: Navrhovanie pre vášho používateľa
+            Privacy in a Digital World:
+              name: Súkromie v digitálnom svete
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -1123,6 +1133,10 @@ sk:
               name: Záverečný prieskum študentov
         csp5-2017:
           stages:
+            Digital Assistant Project:
+              name: Projekt Digitálny asistent
+            Introduction to Digital Assistants:
+              name: Úvod do digitálnych asistentov
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
             While Loops:
@@ -1179,10 +1193,24 @@ sk:
           stages:
             Game Lab:
               name: Game Lab
+        CSDU4-Draft:
+          stages:
+            Analysis of Design:
+              name: Analýza dizajnu
+            Re-designing a Space:
+              name: Redizajnovanie priestoru
+            Presenting Your Design:
+              name: Prezentovanie vášho dizajnu
         CSDU2-Draft:
           stages:
+            Digital Footprint:
+              name: Digitálna stopa
             Images on the Web:
               name: Obrázky na webe
+            Website Design:
+              name: Dizajn webových stránok
+            Designing Web Pages:
+              name: Dizajnovanie webových stránok
             Classes:
               name: Triedy
             Peer Review:
@@ -1431,12 +1459,16 @@ sk:
               name: Play Lab
         csd2-2017:
           stages:
+            Website Design:
+              name: Dizajn webových stránok
             Images on the Web:
               name: Obrázky na webe
             Classes:
               name: Triedy
             Peer Review:
               name: Recenzia
+            Digital Footprint:
+              name: Digitálna stopa
             'Websites for Expression ':
               description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
             Lists:
@@ -1447,6 +1479,14 @@ sk:
           stages:
             Unit 2 Overview:
               name: Lekcia 2 - Prehľad
+        csd4-2017:
+          stages:
+            Analysis of Design:
+              name: Analýza dizajnu
+            Presenting Your Design:
+              name: Prezentovanie vášho dizajnu
+            Digital Design:
+              name: Digitálny dizajn
         minecraft:
           title: Hodina kódu Minecraft dizajnér
           description_short: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
@@ -1476,6 +1516,8 @@ sk:
               name: Programovanie v Labyrinte
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+            Keep it Private:
+              name: Drž to v tajnosti
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Your Digital Footprint:
@@ -1714,6 +1756,14 @@ sk:
           stages:
             Introduction:
               name: Úvod
+        applab-1hour:
+          stages:
+            Digital Design:
+              name: Digitálny dizajn
+        applab-2hour:
+          stages:
+            Digital Design:
+              name: Digitálny dizajn
         coursed-ramp:
           stages:
             Introduction:
@@ -1754,6 +1804,8 @@ sk:
               name: Funkcie
         csd2-draft:
           stages:
+            Digital Footprint:
+              name: Digitálna stopa
             Images:
               name: Obrázky
             Project - Multi-Page Websites:
@@ -1788,10 +1840,14 @@ sk:
               name: Podmienky a funkcie vo Včele
         csd2-old:
           stages:
+            Website Design:
+              name: Dizajn webových stránok
             Classes:
               name: Triedy
             Peer Review:
               name: Recenzia
+            Digital Footprint:
+              name: Digitálna stopa
         artist-and-bb8:
           stages:
             C9 Artist Loops:
@@ -1823,6 +1879,8 @@ sk:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            Your Digital Footprint:
+              name: 'Digitálne občianstvo: Moja digitálna stopa'
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji Robotickí Kamaráti'
             Programming in Maze:
@@ -1831,6 +1889,8 @@ sk:
               name: 'Cykly: Moji Šialení Robotickí Kamaráti'
             More Programming in Maze:
               name: Viac programovanie v Labyrinte
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
           title: Kurz B
           assignment_family_title: Kurz B
           description_audience: 'Vek 5-8'
@@ -1895,6 +1955,8 @@ sk:
               name: Podmienky s Včelou
             Conditionals & Loops in Maze:
               name: Podmienky & Cykly v Bludisku
+            Digital Citizenship:
+              name: 'Digitálne občianstvo: Praktizovanie digitálneho občianstva'
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Artist Binary:
@@ -2097,6 +2159,8 @@ sk:
               name: Prezentuj svoj projekt
             Nested Loops Project in Frozen:
               name: Vnorené cykly vo Frozen
+            'Common Sense Education: Digital Citizenship':
+              name: 'Digitálne občianstvo: Praktizovanie digitálneho občianstva'
             'Common Sense Education: Screen Out the Mean':
               name: 'Digitálne občianstvo: Vytrieď to zlé'
             Conditional Loops in Maze:
@@ -2115,6 +2179,8 @@ sk:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            'Online Safety: Your Digital Footprint':
+              name: 'Digitálne občianstvo: Moja digitálna stopa'
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji Robotickí Kamaráti'
             Programming in Maze:
@@ -2133,6 +2199,12 @@ sk:
           stages:
             Creating Functions:
               name: Tvorba funkcií
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Analýza dizajnu
+            Digital Design:
+              name: Digitálny dizajn
         applab-intro:
           stages:
             Intro to App Lab:
@@ -2341,6 +2413,12 @@ sk:
               name: Vytvorte si svoj projekt
             Present Your Project:
               name: Prezentuj svoj projekt
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analýza dizajnu
+            Digital Design:
+              name: Digitálny dizajn
         csp3-staging:
           stages:
             Creating Functions:
@@ -2500,6 +2578,8 @@ sk:
           stages:
             'Websites for Expression ':
               description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
+            Digital Footprint:
+              name: Digitálna stopa
             Lists:
               name: Zoznamy
             Project - Multi-Page Websites:
@@ -2638,6 +2718,8 @@ sk:
               name: Crowdsourcing
             Relay Programming:
               name: Štafetové programovanie
+            Graph Paper Programming:
+              name: Programovanie na štvorčekový papier
         courseb-2018:
           title: Kurz B (2018)
           assignment_family_title: Kurz B
@@ -2649,14 +2731,26 @@ sk:
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+            'Programming: My Robotic Friends':
+              name: Moji robotickí kamaráti
             Programming in Maze:
               name: Programovanie v Labyrinte
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: Moji zacyklení robotickí kamaráti
             Loops in Collector:
               name: Cykly s Laurel
+            Loops in Artist:
+              name: Kreslenie v záhrade pomocou cyklov
+            Events in Play Lab:
+              name: Kráľovská bitka s udalosťami
             Programming in Ice Age:
               name: Programovanie so Scratom
             Loops in Ice Age:
               name: Cykly so Scratom
+            Sequencing with Scrat:
+              name: Radenie so Scrat
             Move It, Move It:
               name: Posuň, Posuň
             Copyright and Creativity:
@@ -2673,7 +2767,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Debugging in Collector:
-              name: Debugging - hľadanie a odstraňovanie chýb s Laurelom
+              name: Hľadanie a odstraňovanie chýb s Laurel
             Events in Bounce:
               name: Udalosti v Bounce
             Loops in Artist:
@@ -2714,6 +2808,10 @@ sk:
               name: Štafetové programovanie
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
+            Events in Bouncey:
+              name: Udalosti v Bounce
+            Nested Loops in Bees:
+              name: Vnorené cykly s Včelou
             Nested Loops in Maze:
               name: Vnorené cykly v Bludisku
         jr-test:
@@ -2928,6 +3026,12 @@ sk:
               name: Posielanie čísiel
             The Internet:
               name: Internet
+        csd4-2018:
+          stages:
+            Analysis of Design:
+              name: Analýza dizajnu
+            Digital Design:
+              name: Digitálny dizajn
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -2989,20 +3093,32 @@ sk:
               name: Stevie a Veľký projekt
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            'Programming: My Robotic Friends':
+              name: Moji robotickí kamaráti
             Programming in Maze:
               name: Programovanie v Labyrinte
+            'Loops: My Loopy Robotic Friends':
+              name: Moji zacyklení robotickí kamaráti
             Loops in Collector:
               name: Cykly s Laurel
+            Loops in Artist:
+              name: Kreslenie v záhrade pomocou cyklov
+            Events in Play Lab:
+              name: Kráľovská bitka s udalosťami
             Spelling Bee:
               name: Včela Hláskovanie
             Move It, Move It:
               name: Posuň, Posuň
+            Sequencing with Scrat:
+              name: Radenie so Scrat
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             Programming in Ice Age:
               name: Programovanie so Scratom
             Copyright and Creativity:
               name: Je super tvoriť a hrať férovo
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
             Loops in Ice Age:
               name: Cykly so Scratom
             'Persistence & Frustration: Stevie and the Big Project':
@@ -3046,6 +3162,10 @@ sk:
           title: 'Minecraft Vodné Dobrodužstvo'
           description_short: Pomocou kreativity, schopnosti riešiť problémy a sily kódu objav a vybuduj podvodný svet!
           description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný svet.
+        sconyers:
+          stages:
+            Digital Design:
+              name: Digitálny dizajn
         dance--draft:
           stages:
             Dance Party:
@@ -3358,6 +3478,10 @@ sk:
               name: Vytvor si vlastný dizajn s cyklami
             'End of Course Project: Create a Play Lab Game':
               name: 'Záverečný projekt: vytvor si hru v Play Labe'
+            'Programming: My Robotic Friends':
+              name: 'Programovanie: Moji Robotickí Kamaráti'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -3394,6 +3518,8 @@ sk:
           stages:
             Move It, Move It:
               name: Posuň, Posuň
+            Sequencing with Scrat:
+              name: Radenie so Scrat
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             'Programming: My Robotic Friends':
@@ -3402,16 +3528,24 @@ sk:
               name: Programovanie v Dobe Ľadovej
             Copyright and Creativity:
               name: Autorské práva a Kreativita
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji Šialení Robotickí Kamaráti'
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
+            'Loops: Getting Loopy':
+              name: 'Cykly sa zacykľujú'
+            The Right App:
+              name: Správna aplikácia
         pre-express-2019:
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
           description_audience: 'Vek: 4-8'
           stages:
             Move It, Move It:
               name: Posuň, Posuň
+            Sequencing with Scrat:
+              name: Radenie so Scrat
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             'Programming: My Robotic Friends':
@@ -3420,6 +3554,8 @@ sk:
               name: Programovanie v Dobe Ľadovej
             Copyright and Creativity:
               name: Autorské práva a Kreativita
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji Šialení Robotickí Kamaráti'
             Loops in Ice Age:
@@ -3430,3 +3566,81 @@ sk:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+        csd2-2019:
+          stages:
+            'Websites for Expression ':
+              description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
+            Digital Footprint:
+              name: Digitálna stopa
+            Lists:
+              name: Zoznamy
+            Project - Multi-Page Websites:
+              name: Projekt - Viacstránkové webstránky
+        csd3-2019:
+          stages:
+            Variables:
+              name: Premenné
+            Conditionals:
+              name: Podmienky
+            Velocity:
+              name: Rýchlosť
+            Functions:
+              name: Funkcie
+        csd4-2019:
+          stages:
+            Analysis of Design:
+              name: Analýza dizajnu
+            Digital Design:
+              name: Digitálny dizajn
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funkcie s parametrami
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Anketa
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Osobné inovácie (vylepšenia)
+            Sending Binary Messages:
+              name: Posielanie binárnych správ
+            Sending Binary Messages with the Internet Simulator:
+              name: Posielanie binárnych správ s internetovým simulátorom
+            Number Systems:
+              name: Číselné systémy
+            Binary Numbers:
+              name: Binárne čísla
+            Sending Numbers:
+              name: Posielanie čísiel
+            The Internet:
+              name: Internet
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Byty a veľkosti súborov
+            Encoding B&W Images:
+              name: Kódovanie čiernobielych obrázkov
+            Encoding Color Images:
+              name: Kódovanie farebných obrázkov
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Tvorba funkcií
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Jednoduché šifrovanie
+        csp5-2019:
+          stages:
+            Multi-screen Apps:
+              name: Viacobrazovkové aplikácie
+            While Loops:
+              name: Podmieňovacie cykly "Kým"
+        csppostap-2019:
+          stages:
+            Deleting Records:
+              name: Vymazanie záznamov
+            Final Project:
+              name: Finálny projekt

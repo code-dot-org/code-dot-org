@@ -63,6 +63,7 @@ sk:
         Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?
       2-3 Bee Conditionals 15: "Pozbieraj nektár zo všetkých štyroch kvetov."
       2-3 Bee Conditionals 3: "Pomôž mi zozbierať všetok nektár z kvetov a urobiť med. Použiť slučku."
+      2-3 Bee Debugging 10: "Z tejto úlohy sa mi točí hlava!\n\nOprav chyby a pozbieraj všetok nektár a vyrob všetok med."
       2-3 Bee Debugging 3: |-
         Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       2-3 Bee Debugging 6: |-
@@ -417,94 +418,315 @@ sk:
         **Takty** sa v hudbe používajú na počítanie času. V tomto cvičení sa takt skladá zo štyroch dôb.
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
-      courseA_maze_ramp3_2018: "*\"Toto prasiatko mi nedá spať.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseA_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
       courseA_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseA_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseC_collector_prog7: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
       courseC_collector_prog7_2018: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
       courseC_collector_prog7_2019: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
+      courseC_collector_prog9: '*"Pozbierajme všetok poklad!"*'
+      courseC_collector_prog9_2018: '*"Pozbierajme všetok poklad!"*'
+      courseC_collector_prog9_2019: '*"Pozbierajme všetok poklad!"*'
+      courseC_collector_progA: Pomôž Laurel pozbierať všetky diamanty.
+      courseC_collector_progB: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj toľko diamantov, koľko len vieš!"
       courseC_flappy_events10: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti."
       courseC_flappy_events10_2018: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti."
       courseC_flappy_events10_2019: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti."
+      courseC_harvester_loops1: "Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.\n\nPouži opakovanie na pozbieranie všetkých tekvíc."
+      courseC_harvester_loops10: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops10_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops10_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops11: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops11_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops11_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops1_2018: "Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.\n\nPouži opakovanie na pozbieranie všetkých tekvíc."
+      courseC_harvester_loops1_2019: "Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.\n\nPouži opakovanie na pozbieranie všetkých tekvíc."
+      courseC_harvester_loops5: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops5_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops5_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops6: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops6_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops6_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops7: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops7_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops7_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops9: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops_forVid: Pozbieraj všetky kukurice a tekvice.
+      courseC_maze_programming3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných šedých blokov a presuň ho späť do panela nástrojov."
+      courseC_maze_programming3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných šedých blokov a presuň ho späť do panela nástrojov."
+      courseC_maze_programming3_2019: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných šedých blokov a presuň ho späť do panela nástrojov."
       courseC_maze_programming4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseC_maze_programming4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseC_maze_programming4_2019: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseC_maze_programming5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseC_maze_programming5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseC_maze_programming5_2019: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
+      courseC_maze_programming6: |-
+        *"Ukľudni sa a pomôž mi nájsť to zlé prasa. Inak sa nahnevám!"*
+
+        Dostaň vtáka k prasaťu a vyhni sa TNT.
+      courseC_maze_programming6_2018: |-
+        *"Ukľudni sa a pomôž mi nájsť to zlé prasa. Inak sa nahnevám!"*
+
+        Dostaň vtáka k prasaťu a vyhni sa TNT.
+      courseC_maze_programming6_2019: |-
+        *"Ukľudni sa a pomôž mi nájsť to zlé prasa. Inak sa nahnevám!"*
+
+        Dostaň vtáka k prasaťu a vyhni sa TNT.
+      courseD_bee_debugging5: |-
+        **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
       courseD_bounce_events1: Dostaň sa k vlajke! Pripoj blok ku bloku "keď šípka vľavo". Stlač "Spustiť" a šípkou presuň hráča k vlajke.
+      courseD_collector_debugging1: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging10_predict1: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging10_predict1_2018: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging1_2018: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging1a: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging1a_2018: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging1a_2019: |-
+        *"Oh nie! Vidím tu problém"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2_2018: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2a: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2a_2018: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging2a_2019: |-
+        *"Dokážeš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3_2018: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3a: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3a_2018: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging3a_2019: |-
+        *"Buď vytrvalý a určite na to prídeš."*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4_2018: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4a: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4a_2018: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging4a_2019: |-
+        *"Nepoddaj sa frustrácii. Zvládneš to!"*
+
+        Oprav chyby a pozbieraj všetky drahokamy.
+      courseD_collector_debugging5: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5_2018: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5a: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5a_2018: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging5a_2019: |-
+        *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_collector_debugging6: "**Výzva:** Všetky bloky ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a pozbieraj všetky drahokamy."
+      courseD_collector_debugging6_2018: "**Výzva:** Všetky bloky ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a pozbieraj všetky drahokamy."
+      courseD_collector_debugging6a: 'Výzva: Použí kód, ktorý už máš na pracovnej ploche na to, aby si pozbieral aspoň 6 drahokamov!'
+      courseD_collector_debugging6a_2018: 'Výzva: Použí kód, ktorý už máš na pracovnej ploche na to, aby si pozbieral aspoň 6 drahokamov!'
+      courseD_collector_debugging6a_2019: 'Výzva: Použí kód, ktorý už máš na pracovnej ploche na to, aby si pozbieral aspoň 6 drahokamov!'
+      courseD_collector_debugging7: "**Výzva**: Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu."
+      courseD_collector_debugging8: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8_2018: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8a: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8a_2018: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging8a_2019: |-
+        *"Toľko drahokamov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9_2018: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9a: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9a_2018: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_debugging9a_2019: |-
+        *"To je ako na ostrove pokladov!"*
+
+        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_debugging_5: |-
+        **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
       courseD_maze_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2019: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_maze_ramp2_2019: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_maze_ramp3: "*\"Toto prasiatko mi nedá spať.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
-      courseD_maze_ramp3_2018: "*\"Toto prasiatko mi nedá spať.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vtáčik nabúra.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseD_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_maze_ramp2_2019: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_maze_ramp3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseD_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nOdpoj ho od ostatných blokov a presuň ho späť do panela nástrojov."
+      courseD_maze_ramp3_2019: |-
+        Pomôž vtákovi dostať sa k prasaťu. Na ploche je navyše jeden modrý blok `posuň sa dopredu`.
+
+        Blok, ktorý je navyše odhoď tak, že ho odpojíš od ostatných blokov a presunieš ho naspäť do panela nástrojov.
       courseD_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseD_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseD_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseD_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseD_maze_ramp5_2019: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
-      courseD_maze_ramp5a: Skús zistiť, ako správne zoradiť blokoy, aby si sa dostal k tomu prasiatku!
-      courseD_maze_ramp5a_2018: Skús zistiť, ako správne zoradiť blokoy, aby si sa dostal k tomu prasiatku!
+        Vyhni sa TNT.
+      courseD_maze_ramp5a: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasaťu!
+      courseD_maze_ramp5a_2018: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasaťu!
+      courseD_maze_ramp5b: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!"
+      courseD_maze_ramp5b_2018: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!"
+      courseD_maze_ramp5b_2019: "**Výzva:** Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!"
+      courseD_maze_ramp5c: Pomôž vtákovi dostať sa k prasaťu.
+      courseD_maze_ramp5c_2018: Pomôž vtákovi dostať sa k prasaťu.
+      courseD_maze_ramp5c_2019: Pomôž Scratovi dostať sa k žaluďu.
+      courseD_maze_ramp5d: Dostaň vtáka k prasaťú.
+      courseD_maze_ramp5d_2018: Dostaň vtáka k prasaťú.
+      courseD_maze_ramp5d_2019: Dostaň vtáka k prasaťú.
       courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_scrat_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_scrat_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseD_scrat_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
+      courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseD_scrat_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov.
       courseE_bee_functions3_2018: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov.
       courseE_farmer_concept4: A poďme o level hlbšie! Vložili sme celý blok s kódom do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej slučky, aby nakreslil celú mriežku?
-      courseE_maze_ramp2: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
-      courseE_maze_ramp2_2018: Aby sa dostal vtáčik až k prasiatku, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu`, potom ho pripoj k ostatným blokom napojených na blok `pri spustení`.
+      courseE_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseE_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
+      courseE_maze_ramp3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      courseE_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
       courseE_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseE_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseE_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseE_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseE_multi_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseF_bee_for_challenge2: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2018: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2019: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_maze_ramp4: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseF_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"* \n\nVyhni sa TNT, inak bude lietať perie!"
       courseF_maze_ramp5: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
       courseF_maze_ramp5_2018: |-
-        *"Choď po voľnej ceste a priveď ma k prasaťu"*
+        *"Nasleduj cestu a priveď ma k prasaťu"*
 
-        Vyhnis sa TNT.
+        Vyhni sa TNT.
+      coursef_maze_ramp3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      coursef_maze_ramp3_2018: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
       frozen circle function in circle: Teraz si vytvorme 20 prekrývajúcich sa kružníc a po každej z nich sa otočíme o 18 stupňov.
       frozen circle function in circle_b: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
       frozen circle function in circle_test: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
@@ -600,6 +822,9 @@ sk:
       frozen square snowflake: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
       frozen square snowflake_b: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
       frozen square snowflake_test: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
+      grade2_CaringForNewPet_2: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      grade2_CaringForNewPet_2courseC_maze_programming3: "*\"To prasa mi pije krv.\"*\n\nNa pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.\nVyhoď ho tak, že ho presunieš späť do panela nástrojov."
+      grade2_CaringForNewPet_3: '*"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!"*'
       grade2_MakeDogTag_8: A teraz spojme niekoľko Véčiek spolu do cyklu.
       grade2_PuppyLoops_10: |-
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
@@ -614,6 +839,9 @@ sk:
       grade2_collector_10: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj toľko pokladov, koľko sa len vieš!"
       grade2_collector_10_2018: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj toľko pokladov, koľko sa len vieš!"
       grade2_collector_10_2019: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj toľko pokladov, koľko sa len vieš!"
+      grade2_collector_A: Pomôž Laurel pozbierať všetky diamanty.
+      grade2_collector_A_2018: Pomôž Laurel pozbierať všetky diamanty.
+      grade2_collector_A_2019: Pomôž Laurel pozbierať všetky diamanty.
       grade2_puppy_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa s najmenším možným počtom blokov!
       grade3_ConditionalsElse_2: "Viac oblakov!\n\nSkontrolujte pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
       grade3_ConditionalsElse_5: |-
@@ -634,6 +862,10 @@ sk:
       grade3_Conditionals_12: "Pozbieraj nektár zo všetkých štyroch kvetov."
       grade3_Conditionals_2: "Pomôž mi zozbierať všetok nektár z kvetov a urobiť med. Použiť slučku."
       grade3_Conditionals_8: "Zbieraj nektár, kde kvety majú nektár."
+      grade3_Debugging_10: |-
+        **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
+
+        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
       grade3_Debugging_6: |-
         Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár.
       grade3_Debugging_9: |-

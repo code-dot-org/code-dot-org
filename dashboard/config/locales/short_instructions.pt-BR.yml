@@ -1311,10 +1311,15 @@ pt-BR:
         imprimam 'true'
       CSD U3 Boolean Modify_2018: Modifique o código para que todos os comandos console.log
         imprimam 'true'
+      CSD U3 Boolean Modify_2019: Modifique o código para que todos os comandos console.log
+        imprimam 'true'
       CSD U3 Boolean Predict: O que você acha que este código irá fazer quando for
         executado? Preveja o que cada comando console.log() irá imprimir, e então
         execute o programa para verificar suas previsões.
       CSD U3 Boolean Predict_2018: O que você acha que este código irá fazer quando
+        for executado? Preveja o que cada comando console.log() irá imprimir, e então
+        execute o programa para verificar suas previsões.
+      CSD U3 Boolean Predict_2019: O que você acha que este código irá fazer quando
         for executado? Preveja o que cada comando console.log() irá imprimir, e então
         execute o programa para verificar suas previsões.
       CSD U3 Draw Loop Discuss: Aqui está um programa que é bem similar com o que
@@ -1333,16 +1338,23 @@ pt-BR:
         imprimam 'true'
       CSD U3 Keypress Boolean_2018: Modifique o código para que todos os comandos
         console.log imprimam 'true'
+      CSD U3 Keypress Boolean_2018_2019: Modifique o código para que todos os comandos
+        console.log imprimam 'true'
       CSD U3 Keypress Watchers: Modifique o código para que todos os comandos console.log
         imprimam 'true'
       CSD U3 Keypress Watchers_2018: Modifique o código para que todos os comandos
+        console.log imprimam 'true'
+      CSD U3 Keypress Watchers_2019: Modifique o código para que todos os comandos
         console.log imprimam 'true'
       CSD U3 L5 Freeplay: Mude o valor de petalSize múltiplas vezes. Como isto muda
         o seu desenho?
       CSD U3 L5 Freeplay_2018: Mude o valor de petalSize múltiplas vezes. Como isto
         muda o seu desenho?
+      CSD U3 L5 Freeplay_2019: Mude o valor de petalSize múltiplas vezes. Como isto
+        muda o seu desenho?
       CSD U3 Mouse Input Bee 2: Faça isso
       CSD U3 Mouse Input Bee 2_2018: Faça isso
+      CSD U3 Mouse Input Bee 2_2019: Faça isso
       CSD U3 Random Animation: Use randomNumber() para animar a boca de Gary.
       CSD U3 Random Choice: Use um bloco randomNumber() para gerar 0 ou 1
       CSD U3 Random Color: Você poderia usar randomNumber() para escolher cores aleatórias
@@ -1366,6 +1378,7 @@ pt-BR:
       CSD U3 Sprites intro sprites: Faça isso
       CSD U3 Sprites intro sprites_2018 - Validation Test: Faça isso
       CSD U3 Sprites intro sprites_2018: Faça isso
+      CSD U3 Sprites intro sprites_2019: Faça isso
       CSD U3 Variable Arithmetic pt2: 'Preveja: Quais dois números irão aparecer no
         console?'
       CSD U3 Variable Arithmetic: Modifique o valor "tamanho" inicial para fazer um
@@ -1393,6 +1406,8 @@ pt-BR:
         Como isto muda o seu desenho?
       CSD U3 Variables change circle size_2018: Mude o valor de petalSize múltiplas
         vezes. Como isto muda o seu desenho?
+      CSD U3 Variables change circle size_2019: Mude o valor de petalSize múltiplas
+        vezes. Como isto muda o seu desenho?
       CSD U3 Variables create and assign: Crie e atribua o tamanho em uma única linha
         de código.
       CSD U3 Variables draw loop newVars: Estenda esse projeto para criar sua própria
@@ -1417,6 +1432,8 @@ pt-BR:
         Como isto muda o seu desenho?
       CSD U3 Variables naming rules v2_2018: Mude o valor de petalSize múltiplas vezes.
         Como isto muda o seu desenho?
+      CSD U3 Variables naming rules v2_2018_2019: Mude o valor de petalSize múltiplas
+        vezes. Como isto muda o seu desenho?
       CSD U3 Variables naming rules: Mude o valor de petalSize múltiplas vezes. Como
         isto muda o seu desenho?
       CSD U3 Variables random assignment: Mude o valor de petalSize múltiplas vezes.
@@ -1429,6 +1446,8 @@ pt-BR:
       CSD U3 Variables random with assignment: Mude o valor de petalSize múltiplas
         vezes. Como isto muda o seu desenho?
       CSD U3 Variables random with assignment_2018: Mude o valor de petalSize múltiplas
+        vezes. Como isto muda o seu desenho?
+      CSD U3 Variables random with assignment_2019: Mude o valor de petalSize múltiplas
         vezes. Como isto muda o seu desenho?
       CSD U3 Variables use value rect: 'Preveja: O que vai ser mostrado no console?'
       CSD U3 Variables write: Use o bloco de escrita para exibir o valor de tamanho
@@ -1444,18 +1463,27 @@ pt-BR:
         aqui para ver a imagem)
       CSD U5 black white images pixelation 2_2018: Desenhar uma cara de sorriso (clique
         aqui para ver a imagem)
+      CSD U5 black white images pixelation 2_2019: Desenhar uma cara de sorriso (clique
+        aqui para ver a imagem)
       CSD U5 black white images pixelation 3: Altere os controles deslizantes de largura
         e altura para encontrar a imagem (clique aqui para ver mais)
       CSD U5 black white images pixelation 3_2018: Altere os controles deslizantes
+        de largura e altura para encontrar a imagem (clique aqui para ver mais)
+      CSD U5 black white images pixelation 3_2019: Altere os controles deslizantes
         de largura e altura para encontrar a imagem (clique aqui para ver mais)
       CSD U5 black white images pixelation 4: Adicione sobrancelhas ao rosto sorridente
         (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 4_2018: Adicione sobrancelhas ao rosto
         sorridente (clique aqui para ver a imagem)
+      CSD U5 black white images pixelation 4_2019: Adicione sobrancelhas ao rosto
+        sorridente (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 5: Desenho algo que você gosta
       CSD U5 black white images pixelation 5_2018: Desenho algo que você gosta
+      CSD U5 black white images pixelation 5_2019: Desenho algo que você gosta
       CSD U5 black white images pixelation: Complete a forma X digitando 0s e 1s
       CSD U5 black white images pixelation_2018: Complete a forma X digitando 0s e
+        1s
+      CSD U5 black white images pixelation_2019: Complete a forma X digitando 0s e
         1s
       CSD U6 params modify clouds: |-
         # Nuvens
@@ -1477,6 +1505,16 @@ pt-BR:
         * (Dica: você usará quase todo o mesmo código da função 'moverNuvem0')
         * Chame sua nova função 'moverNuvem(nome)' dentro do bloco do evento, uma vez para cada nome de nuvem.
         * (Dica: isso é semelhante a como a função 'repeticaoNuvem(nome)' é chamada muitas vezes.
+      CSD U6 params modify clouds_2019: |-
+        # Nuvens
+
+        Este programa faz as nuvens se mover quando você soprar no sensor de som, mas não termina por aqui.
+
+        # Faça isso
+        * Crie uma nova função 'moverNuvem(nome)' que irá mover qualquer nuvem.
+        * (Dica: você usará quase todo o mesmo código da função 'moverNuvem0')
+        * Chame sua nova função 'moverNuvem(nome)' dentro do bloco do evento, uma vez para cada nome de nuvem.
+        * (Dica: isso é semelhante a como a função 'repeticaoNuvem(nome)' é chamada muitas vezes.
       CSD U6 params modify planes: |-
         # Controlador Multiplo de Aviões
 
@@ -1488,6 +1526,16 @@ pt-BR:
 
         _Desafio: Neste momento, os aviões se movem rápido demais. Você consegue descobrir como alterar o código para que eles se movam mais lentamente?_
       CSD U6 params modify planes_2018: |-
+        # Controlador Multiplo de Aviões
+
+        Este programa move os três aviões usando a placa do acelerômetro e as caixas de seleção na tela.  Neste momento, apenas o avião vermelho funciona.
+
+        # Faça isso
+        * Crie uma nova função de 'moverAviao(nome)' que pode mover qualquer avião.
+        * Chame a função 'moverAviao(nome)' dentro do bloco do evento, tal que ele só se move quando a sua caixa de seleção está marcada.
+
+        _Desafio: Neste momento, os aviões se movem rápido demais. Você consegue descobrir como alterar o código para que eles se movam mais lentamente?_
+      CSD U6 params modify planes_2019: |-
         # Controlador Multiplo de Aviões
 
         Este programa move os três aviões usando a placa do acelerômetro e as caixas de seleção na tela.  Neste momento, apenas o avião vermelho funciona.
@@ -1602,13 +1650,19 @@ pt-BR:
         (Clique aqui para ver todas as instruções)
       CSDU6 arrays select rainbow_2018: Mostre o conteúdo da lista na tela em ordem
         numérica. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select rainbow_2019: Mostre o conteúdo da lista na tela em ordem
+        numérica. (Clique aqui para ver todas as instruções)
       CSDU6 arrays select random: Escreva um programa que escolha e mostre uma cor
         aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSDU6 arrays select random_2018: Escreva um programa que escolha e mostre uma
         cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select random_2019: Escreva um programa que escolha e mostre uma
+        cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSDU6 arrays select variable: Escreva um programa que escolha e mostre uma cor
         aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSDU6 arrays select variable_2018: Escreva um programa que escolha e mostre
+        uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select variable_2019: Escreva um programa que escolha e mostre
         uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSDU6 arrays variable: Escreva um programa que escolha e mostre uma cor aleatória
         do vetor. (Clique aqui para ver todas as instruções)
@@ -1646,10 +1700,15 @@ pt-BR:
         branca. (Clique para ver instruções detalhadas)
       CSPU5 Add a 2nd Screen_2018: Faça um app com 2 telas com uma tela preta e uma
         tela branca. (Clique para ver instruções detalhadas)
+      CSPU5 Add a 2nd Screen_2019: Faça um app com 2 telas com uma tela preta e uma
+        tela branca. (Clique para ver instruções detalhadas)
       CSPU5 Add full screen image to bg of chaser game: Recrie o jogo a partir do
         "Jogo do Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique
         para ver as instruções completas).
       CSPU5 Add full screen image to bg of chaser game_2018: Recrie o jogo a partir
+        do "Jogo do Caçador" com uma tela de boas vindas e uma tela de fim de jogo.
+        (Clique para ver as instruções completas).
+      CSPU5 Add full screen image to bg of chaser game_2019: Recrie o jogo a partir
         do "Jogo do Caçador" com uma tela de boas vindas e uma tela de fim de jogo.
         (Clique para ver as instruções completas).
       CSPU5 Add game over screen: Recrie o jogo a partir do "Jogo do Caçador" com
@@ -1658,10 +1717,16 @@ pt-BR:
       CSPU5 Add game over screen_2018: Recrie o jogo a partir do "Jogo do Caçador"
         com uma tela de boas vindas e uma tela de fim de jogo. (Clique para ver as
         instruções completas).
+      CSPU5 Add game over screen_2019: Recrie o jogo a partir do "Jogo do Caçador"
+        com uma tela de boas vindas e uma tela de fim de jogo. (Clique para ver as
+        instruções completas).
       CSPU5 Add onEvent from Design Mode: Adicione um manipulador de eventos para
         o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de
         Design (clique para ver as instruções completas).
       CSPU5 Add onEvent from Design Mode_2018: Adicione um manipulador de eventos
+        para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo
+        de Design (clique para ver as instruções completas).
+      CSPU5 Add onEvent from Design Mode_2019: Adicione um manipulador de eventos
         para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo
         de Design (clique para ver as instruções completas).
       CSPU5 Add welcome screen to chaser game: Recrie o jogo a partir do "Jogo do
@@ -1670,22 +1735,34 @@ pt-BR:
       CSPU5 Add welcome screen to chaser game_2018: Recrie o jogo a partir do "Jogo
         do Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique
         para ver as instruções completas).
+      CSPU5 Add welcome screen to chaser game_2019: Recrie o jogo a partir do "Jogo
+        do Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique
+        para ver as instruções completas).
       CSPU5 Adding Screens Template: Faça um app com 2 telas com uma tela preta e
         uma tela branca. (Clique para ver instruções detalhadas)
       CSPU5 Adding Screens Template_2018: Faça um app com 2 telas com uma tela preta
+        e uma tela branca. (Clique para ver instruções detalhadas)
+      CSPU5 Adding Screens Template_2019: Faça um app com 2 telas com uma tela preta
         e uma tela branca. (Clique para ver instruções detalhadas)
       CSPU5 Debugging Overlapping Objects and Screen Events: Recrie o "Jogo do Caçador"
         da última lição usando o Modo Design. (Clique para ver as instruções completas).
       CSPU5 Debugging Overlapping Objects and Screen Events_2018: Recrie o "Jogo do
         Caçador" da última lição usando o Modo Design. (Clique para ver as instruções
         completas).
+      CSPU5 Debugging Overlapping Objects and Screen Events_2019: Recrie o "Jogo do
+        Caçador" da última lição usando o Modo Design. (Clique para ver as instruções
+        completas).
       CSPU5 First Time Console.log: Adicione 3 mensagens de console.log e os teste.
         (Clique para ver as instruções completas.)
       CSPU5 First Time Console.log_2018: Adicione 3 mensagens de console.log e os
         teste. (Clique para ver as instruções completas.)
+      CSPU5 First Time Console.log_2019: Adicione 3 mensagens de console.log e os
+        teste. (Clique para ver as instruções completas.)
       CSPU5 Layering and Deleting in Design Mode: Conserte o formato do jogo bullseye.
         (Clique para ver as instruções completas)
       CSPU5 Layering and Deleting in Design Mode_2018: Conserte o formato do jogo
+        bullseye. (Clique para ver as instruções completas)
+      CSPU5 Layering and Deleting in Design Mode_2019: Conserte o formato do jogo
         bullseye. (Clique para ver as instruções completas)
       CSPU5 Project - Multi Screen App: Crie seu app com várias telas (clique para
         ver as instruções completas).
@@ -1696,6 +1773,9 @@ pt-BR:
         entre uma tela preta e uma tela branca com botões. (Clique para ver instruções
         detalhadas.)
       CSPU5 Use setScreen for first time_2018: Fazer uma app com 2 telas que pode
+        alternar entre uma tela preta e uma tela branca com botões. (Clique para ver
+        instruções detalhadas.)
+      CSPU5 Use setScreen for first time_2019: Fazer uma app com 2 telas que pode
         alternar entre uma tela preta e uma tela branca com botões. (Clique para ver
         instruções detalhadas.)
       CSPU5_AddImageToChaserGame: |-
@@ -1714,6 +1794,10 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_AddLabelToChaserGame_2019: |-
+        Introdução do comando setPosition!
+        Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
+        para mover o botão para uma posição aleatória quando ele for clicado.
       CSPU5_Debugging predict unexpected behavior - two onEvents to one ID: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -1722,6 +1806,13 @@ pt-BR:
         incorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais
         sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
       CSPU5_Debugging predict unexpected behavior - two onEvents to one_2018: |-
+        Sua vez de tentar! Fornecemos a você um
+        código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
+        os Ids padrões de "id". Você precisa alterar esses ids para conectar
+        o manipulador de eventos ao botão correto. (Curiosamente, o programa
+        incorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais
+        sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
+      CSPU5_Debugging predict unexpected behavior - two onEvents to one_2019: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
         os Ids padrões de "id". Você precisa alterar esses ids para conectar
@@ -1739,9 +1830,14 @@ pt-BR:
       CSPU5_U3 - Arrays - Demo App_2018: Uso o app "Minhas coisas favoritas". Como
         pode este app estar fazendo uso de um vetor? (Clique para ver as instruções
         completas)
+      CSPU5_U3 - Arrays - Demo App_2019: Uso o app "Minhas coisas favoritas". Como
+        pode este app estar fazendo uso de um vetor? (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Arrays - appendItem: Crie um vetor de números ímpares 1-11 usando
         appendItem. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - appendItem_2018: Crie um vetor de números ímpares 1-11 usando
+        appendItem. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - appendItem_2019: Crie um vetor de números ímpares 1-11 usando
         appendItem. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - assignment: Use índices para alterar os valores nesse vetor
         de 1 para 0. (Clique para ver as instruções completas)
@@ -1749,11 +1845,17 @@ pt-BR:
         em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - assignment2_2018: Calcule a soma dos três valores armazenados
         em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment2_2019: Calcule a soma dos três valores armazenados
+        em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - assignment3: Aumente o valor em 1 de cada valor no vetor
         gerada aleatoriamente. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - assignment3_2018: Aumente o valor em 1 de cada valor no
         vetor gerada aleatoriamente. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment3_2019: Aumente o valor em 1 de cada valor no
+        vetor gerada aleatoriamente. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - assignment_2018: Use índices para alterar os valores nesse
+        vetor de 1 para 0. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment_2019: Use índices para alterar os valores nesse
         vetor de 1 para 0. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir
         de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para
@@ -1761,14 +1863,22 @@ pt-BR:
       CSPU5_U3 - Arrays - createFirstArray_2018: Crie um vetor de números pares a
         partir de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui
         para ver todas as instruções)
+      CSPU5_U3 - Arrays - createFirstArray_2019: Crie um vetor de números pares a
+        partir de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui
+        para ver todas as instruções)
       CSPU5_U3 - Arrays - expressionsAsIndexes: Escreva um programa que escolha e
         mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Escreva um programa que escolha
+        e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: Escreva um programa que escolha
         e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - favThings Counting Variable: Crie uma variável global para
         o índice atual e use-a para mostrar o primeiro item no vetor. (Clique aqui
         para ver todas as instruções)
       CSPU5_U3 - Arrays - favThings Counting Variable_2018: Crie uma variável global
+        para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique
+        aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - favThings Counting Variable_2019: Crie uma variável global
         para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique
         aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - favThings Next: Escreva código que permite o usuário mover
@@ -1777,10 +1887,16 @@ pt-BR:
       CSPU5_U3 - Arrays - favThings Next_2018: Escreva código que permite o usuário
         mover para frente através de sua lista clicando no botão "Próximo". (Clique
         para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings Next_2019: Escreva código que permite o usuário
+        mover para frente através de sua lista clicando no botão "Próximo". (Clique
+        para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings Prev: Escreva um código que permita o usuário
         mover para trás através de sua lista clicando no botão "Último". (Clique para
         ver as instruções completas)
       CSPU5_U3 - Arrays - favThings Prev_2018: Escreva um código que permita o usuário
+        mover para trás através de sua lista clicando no botão "Último". (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings Prev_2019: Escreva um código que permita o usuário
         mover para trás através de sua lista clicando no botão "Último". (Clique para
         ver as instruções completas)
       CSPU5_U3 - Arrays - favThings addItem: Escreva um código que permita que um
@@ -1789,19 +1905,29 @@ pt-BR:
       CSPU5_U3 - Arrays - favThings addItem_2018: Escreva um código que permita que
         um usuário adicione suas próprias coisas favoritas para a lista. (Clique para
         ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings addItem_2019: Escreva um código que permita que
+        um usuário adicione suas próprias coisas favoritas para a lista. (Clique para
+        ver as instruções completas)
       CSPU5_U3 - Arrays - favThings bounds: Adicione declarações "se" no seus manipuladores
         de eventos para que impeça o índice global de sair dos limites. (Clique para
         ver as instruções completas)
       CSPU5_U3 - Arrays - favThings bounds_2018: Adicione declarações "se" no seus
         manipuladores de eventos para que impeça o índice global de sair dos limites.
         (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings bounds_2019: Adicione declarações "se" no seus
+        manipuladores de eventos para que impeça o índice global de sair dos limites.
+        (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo
         suas coisas favoritas. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings createArray_2018: Crie um array de palavras descrevendo
         suas coisas favoritas. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings createArray_2019: Crie um array de palavras descrevendo
+        suas coisas favoritas. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings firstOutput: Use "setar texto" para exibir o primeiro
         item na matriz. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings firstOutput_2018: Use "setar texto" para exibir
+        o primeiro item na matriz. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings firstOutput_2019: Use "setar texto" para exibir
         o primeiro item na matriz. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings giveIDs: Dê a seus elementos de interface do usuário,
         identificadores descritivos e significativos. (Clique para ver as instruções
@@ -1809,17 +1935,26 @@ pt-BR:
       CSPU5_U3 - Arrays - favThings giveIDs_2018: Dê a seus elementos de interface
         do usuário, identificadores descritivos e significativos. (Clique para ver
         as instruções completas)
+      CSPU5_U3 - Arrays - favThings giveIDs_2019: Dê a seus elementos de interface
+        do usuário, identificadores descritivos e significativos. (Clique para ver
+        as instruções completas)
       CSPU5_U3 - Arrays - favThings keepPlaying: Faça qualquer outra melhoria que
         você quiser! (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings keepPlaying_2018: Faça qualquer outra melhoria
+        que você quiser! (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings keepPlaying_2019: Faça qualquer outra melhoria
         que você quiser! (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem
         numérica. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - indexPractice_2018: Mostre o conteúdo da lista na tela em
         ordem numérica. (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - indexPractice_2019: Mostre o conteúdo da lista na tela em
+        ordem numérica. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - insertingItems: Insira itens em uma matriz para formar uma
         frase completa. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - insertingItems_2018: Insira itens em uma matriz para formar
+        uma frase completa. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - insertingItems_2019: Insira itens em uma matriz para formar
         uma frase completa. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - insertionErrors: Execute cada comando que referencia os
         índices que estão fora dos limites e observe os resultados. (Clique para ver
@@ -1827,9 +1962,14 @@ pt-BR:
       CSPU5_U3 - Arrays - insertionErrors_2018: Execute cada comando que referencia
         os índices que estão fora dos limites e observe os resultados. (Clique para
         ver as instruções completas)
+      CSPU5_U3 - Arrays - insertionErrors_2019: Execute cada comando que referencia
+        os índices que estão fora dos limites e observe os resultados. (Clique para
+        ver as instruções completas)
       CSPU5_U3 - Arrays - introIndex: Exiba o primeiro e o último elemento na matriz.
         Exiba o número 5 da matriz. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - introIndex_2018: Exiba o primeiro e o último elemento na
+        matriz. Exiba o número 5 da matriz. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - introIndex_2019: Exiba o primeiro e o último elemento na
         matriz. Exiba o número 5 da matriz. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - length: Use list.length para determinar o comprimento de
         cada vetor. (Clique para ver as instruções completas)
@@ -1837,11 +1977,17 @@ pt-BR:
         item do vetor para o console. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - lengthMinus1_2018: Use list.length - 1 para registrar o
         último item do vetor para o console. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - lengthMinus1_2019: Use list.length - 1 para registrar o
+        último item do vetor para o console. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - length_2018: Use list.length para determinar o comprimento
+        de cada vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - length_2019: Use list.length para determinar o comprimento
         de cada vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - remove: Remova itens de uma matriz para formar uma frase
         completa. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - remove_2018: Remova itens de uma matriz para formar uma
+        frase completa. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - remove_2019: Remova itens de uma matriz para formar uma
         frase completa. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - stringsInArrays: Escreva uma frase, palavra por palavra,
         adicionando sequências de caracteres em uma matriz. (Clique para ver as instruções
@@ -1849,14 +1995,22 @@ pt-BR:
       CSPU5_U3 - Arrays - stringsInArrays_2018: Escreva uma frase, palavra por palavra,
         adicionando sequências de caracteres em uma matriz. (Clique para ver as instruções
         completas)
+      CSPU5_U3 - Arrays - stringsInArrays_2019: Escreva uma frase, palavra por palavra,
+        adicionando sequências de caracteres em uma matriz. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Canvas - 200dots: Adicione um loop ao seu programa que desenha 200
         pontos na sua tela. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - 200dots_2018: Adicione um loop ao seu programa que desenha
+        200 pontos na sua tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - 200dots_2019: Adicione um loop ao seu programa que desenha
         200 pontos na sua tela. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - One Dot sprayPaint: Escreva um código que redesenha sua
         imagem usando um ponto cujas posições x e y usam margens X e Y com um pequeno
         valor aleatório adicionado. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - One Dot sprayPaint_2018: Escreva um código que redesenha
+        sua imagem usando um ponto cujas posições x e y usam margens X e Y com um
+        pequeno valor aleatório adicionado. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - One Dot sprayPaint_2019: Escreva um código que redesenha
         sua imagem usando um ponto cujas posições x e y usam margens X e Y com um
         pequeno valor aleatório adicionado. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - appendToArray: Crie uma matriz para armazenar cada parâmetro
@@ -1865,10 +2019,16 @@ pt-BR:
       CSPU5_U3 - Canvas - appendToArray_2018: Crie uma matriz para armazenar cada
         parâmetro de evento. Acrescente cada parâmetro de evento nesta matriz dentro
         de seu manipulador de eventos. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - appendToArray_2019: Crie uma matriz para armazenar cada
+        parâmetro de evento. Acrescente cada parâmetro de evento nesta matriz dentro
+        de seu manipulador de eventos. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - changeToMouseMove: Altere seu programa para que pontos sejam
         desenhados no local do mouse de acordo que o usuário move o mouse sobre a
         tela. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - changeToMouseMove_2018: Altere seu programa para que pontos
+        sejam desenhados no local do mouse de acordo que o usuário move o mouse sobre
+        a tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - changeToMouseMove_2019: Altere seu programa para que pontos
         sejam desenhados no local do mouse de acordo que o usuário move o mouse sobre
         a tela. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - clickToAdd: Altere seu programa para que os pontos sejam
@@ -1877,9 +2037,15 @@ pt-BR:
       CSPU5_U3 - Canvas - clickToAdd_2018: Altere seu programa para que os pontos
         sejam adicionados à tela quando o usuário clicar nela. (Clique para ver as
         instruções completas)
+      CSPU5_U3 - Canvas - clickToAdd_2019: Altere seu programa para que os pontos
+        sejam adicionados à tela quando o usuário clicar nela. (Clique para ver as
+        instruções completas)
       CSPU5_U3 - Canvas - delete: Crie um botão que exclui o desenho, limpando a tela
         e removendo todos os valores armazenados. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - delete_2018: Crie um botão que exclui o desenho, limpando
+        a tela e removendo todos os valores armazenados. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Canvas - delete_2019: Crie um botão que exclui o desenho, limpando
         a tela e removendo todos os valores armazenados. (Clique para ver as instruções
         completas)
       CSPU5_U3 - Canvas - draw at click point: Altere seu programa para que pontos
@@ -1888,14 +2054,22 @@ pt-BR:
       CSPU5_U3 - Canvas - draw at click point_2018: Altere seu programa para que pontos
         sejam desenhados no local do clique do mouse. (Clique para ver as instruções
         completas)
+      CSPU5_U3 - Canvas - draw at click point_2019: Altere seu programa para que pontos
+        sejam desenhados no local do clique do mouse. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou
         crie um novo de sua preferência. (Clique para ver todas as instruções)
       CSPU5_U3 - Canvas - freePlay_2018: Estenda a funcionalidade de um dos efeitos,
+        ou crie um novo de sua preferência. (Clique para ver todas as instruções)
+      CSPU5_U3 - Canvas - freePlay_2019: Estenda a funcionalidade de um dos efeitos,
         ou crie um novo de sua preferência. (Clique para ver todas as instruções)
       CSPU5_U3 - Canvas - introCanvas: Adicione uma tela ao seu aplicativo e configure
         ela para ser a tela ativa. Em seguida, adicione um grande ponto em sua sua
         tela. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - introCanvas_2018: Adicione uma tela ao seu aplicativo e
+        configure ela para ser a tela ativa. Em seguida, adicione um grande ponto
+        em sua sua tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - introCanvas_2019: Adicione uma tela ao seu aplicativo e
         configure ela para ser a tela ativa. Em seguida, adicione um grande ponto
         em sua sua tela. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - movementFunction fix Orig: Modifique o manipulador de eventos
@@ -1904,16 +2078,25 @@ pt-BR:
       CSPU5_U3 - Canvas - movementFunction fix Orig_2018: Modifique o manipulador
         de eventos do botão "Original" para que considere o movimento do mouse. (Clique
         para ver as instruções completas)
+      CSPU5_U3 - Canvas - movementFunction fix Orig_2019: Modifique o manipulador
+        de eventos do botão "Original" para que considere o movimento do mouse. (Clique
+        para ver as instruções completas)
       CSPU5_U3 - Canvas - movementFunction: Escreva uma função que usa o movimento
         do mouse como entrada e gere uma largura de linha como saída. (Clique para
         ver as instruções completas)
       CSPU5_U3 - Canvas - movementFunction_2018: Escreva uma função que usa o movimento
         do mouse como entrada e gere uma largura de linha como saída. (Clique para
         ver as instruções completas)
+      CSPU5_U3 - Canvas - movementFunction_2019: Escreva uma função que usa o movimento
+        do mouse como entrada e gere uma largura de linha como saída. (Clique para
+        ver as instruções completas)
       CSPU5_U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor,
         redesenhando os pontos da forma que eles aparecem originalmente (Clique aqui
         para ver todas as instruções)
       CSPU5_U3 - Canvas - redrawOriginal_2018: Escreva uma função que processa seu
+        vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique
+        aqui para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawOriginal_2019: Escreva uma função que processa seu
         vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique
         aqui para ver todas as instruções)
       CSPU5_U3 - Canvas - redrawRandom: Defina um botão e manipulador de eventos para
@@ -1924,7 +2107,12 @@ pt-BR:
       CSPU5_U3 - Canvas - redrawRandom2_2018: Escreva uma função que processa sua
         matriz, redesenhando cada ponto com um tamanho aleatório. (Clique para ver
         as instruções completas)
+      CSPU5_U3 - Canvas - redrawRandom2_2019: Escreva uma função que processa sua
+        matriz, redesenhando cada ponto com um tamanho aleatório. (Clique para ver
+        as instruções completas)
       CSPU5_U3 - Canvas - redrawRandom_2018: Defina um botão e manipulador de eventos
+        para a função aleatória. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - redrawRandom_2019: Defina um botão e manipulador de eventos
         para a função aleatória. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - shiftKey: Adicione uma declaração "se" para seu manipulador
         de eventos para que pontos só sejam desenhados quando a tecla shift for pressionada.
@@ -1932,14 +2120,22 @@ pt-BR:
       CSPU5_U3 - Canvas - shiftKey_2018: Adicione uma declaração "se" para seu manipulador
         de eventos para que pontos só sejam desenhados quando a tecla shift for pressionada.
         (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - shiftKey_2019: Adicione uma declaração "se" para seu manipulador
+        de eventos para que pontos só sejam desenhados quando a tecla shift for pressionada.
+        (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - sketch: Escreva código que redesenha sua imagem usando um
         efeito de esboço. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - sketch_2018: Escreva código que redesenha sua imagem usando
+        um efeito de esboço. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - sketch_2019: Escreva código que redesenha sua imagem usando
         um efeito de esboço. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - sprayPaint: Atualize o código de tinta spray para que ele
         redesenhe sua imagem usando múltiplos pontos aleatórios em vez de usar uma
         repetição aninhada. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - sprayPaint_2018: Atualize o código de tinta spray para que
+        ele redesenhe sua imagem usando múltiplos pontos aleatórios em vez de usar
+        uma repetição aninhada. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - sprayPaint_2019: Atualize o código de tinta spray para que
         ele redesenhe sua imagem usando múltiplos pontos aleatórios em vez de usar
         uma repetição aninhada. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - transparentDots: Mude as cores de seus pontos para que eles
@@ -1948,11 +2144,18 @@ pt-BR:
       CSPU5_U3 - Canvas - transparentDots_2018: Mude as cores de seus pontos para
         que eles tenham um traço totalmente transparente e preenchimento parcialmente
         transparente. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - transparentDots_2019: Mude as cores de seus pontos para
+        que eles tenham um traço totalmente transparente e preenchimento parcialmente
+        transparente. (Clique para ver as instruções completas)
       CSPU5_U3 - Canvas - usingOffsetXY: Adicione um comando de console.log dentro
         da função do manipulador de eventos. Use-o para exibir o parâmetro do evento.
         Clique na tela para ver o conteúdo do parâmetro de evento (clique para ver
         as instruções completas)
       CSPU5_U3 - Canvas - usingOffsetXY_2018: Adicione um comando de console.log dentro
+        da função do manipulador de eventos. Use-o para exibir o parâmetro do evento.
+        Clique na tela para ver o conteúdo do parâmetro de evento (clique para ver
+        as instruções completas)
+      CSPU5_U3 - Canvas - usingOffsetXY_2019: Adicione um comando de console.log dentro
         da função do manipulador de eventos. Use-o para exibir o parâmetro do evento.
         Clique na tela para ver o conteúdo do parâmetro de evento (clique para ver
         as instruções completas)
@@ -1964,10 +2167,16 @@ pt-BR:
       CSPU5_U3 - Conditionals - Combine AND OR Simple_2018: Escreva uma declaração
         "se" que usa "E" e "OU" para exibir "Durma!" se é fim de semana e o usuário
         é um adolescente. (Clique para ver as instruções completas.
+      CSPU5_U3 - Conditionals - Combine AND OR Simple_2019: Escreva uma declaração
+        "se" que usa "E" e "OU" para exibir "Durma!" se é fim de semana e o usuário
+        é um adolescente. (Clique para ver as instruções completas.
       CSPU5_U3 - Conditionals - Combine AND OR and NOT: Escreva uma instrução "se"
         que usa "E" e "OU" para exibir "Hora de ir para a escola!" se não é fim de
         semana e o usuário é menor de 18 anos. (Clique para ver as instruções completas).
       CSPU5_U3 - Conditionals - Combine AND OR and NOT_2018: Escreva uma instrução
+        "se" que usa "E" e "OU" para exibir "Hora de ir para a escola!" se não é fim
+        de semana e o usuário é menor de 18 anos. (Clique para ver as instruções completas).
+      CSPU5_U3 - Conditionals - Combine AND OR and NOT_2019: Escreva uma instrução
         "se" que usa "E" e "OU" para exibir "Hora de ir para a escola!" se não é fim
         de semana e o usuário é menor de 18 anos. (Clique para ver as instruções completas).
       CSPU5_U3 - Conditionals - Simple AND: Escreva uma instrução "se" que usa "E"
@@ -1976,10 +2185,16 @@ pt-BR:
       CSPU5_U3 - Conditionals - Simple AND_2018: Escreva uma instrução "se" que usa
         "E" para exibir "Você é um adolescente..." se o usuário insere uma idade entre
         13 e 19. (Clique para ver as instruções completas)
+      CSPU5_U3 - Conditionals - Simple AND_2019: Escreva uma instrução "se" que usa
+        "E" para exibir "Você é um adolescente..." se o usuário insere uma idade entre
+        13 e 19. (Clique para ver as instruções completas)
       CSPU5_U3 - Conditionals - Simple OR: Escrever uma instrução "se" que usa "OU"
         para exibir "É o fim de semana!" se o usuário insere um dia de fim de semana
         no prompt. (Clique para ver as instruções completas)
       CSPU5_U3 - Conditionals - Simple OR_2018: Escrever uma instrução "se" que usa
+        "OU" para exibir "É o fim de semana!" se o usuário insere um dia de fim de
+        semana no prompt. (Clique para ver as instruções completas)
+      CSPU5_U3 - Conditionals - Simple OR_2019: Escrever uma instrução "se" que usa
         "OU" para exibir "É o fim de semana!" se o usuário insere um dia de fim de
         semana no prompt. (Clique para ver as instruções completas)
       CSPU5_U3 - Design Mode - Console Log: Atualize os nomes de ID e as mensagens
@@ -2001,6 +2216,8 @@ pt-BR:
         o Modo de Design. (Clique para ver as instruções completas)
       CSPU5_U3 - Design Mode 1_2018: Adicione um grande botão vermelho na sua tela
         usando o Modo de Design. (Clique para ver as instruções completas)
+      CSPU5_U3 - Design Mode 1_2019: Adicione um grande botão vermelho na sua tela
+        usando o Modo de Design. (Clique para ver as instruções completas)
       CSPU5_U3 - Dice - Dropdown and Score: Adicione o palpite e pontuação para o
         jogo de dados (clique para ver as instruções completas)
       CSPU5_U3 - Dice - Dropdown with Strings: Adicione um menu suspenso para o nível
@@ -2015,12 +2232,18 @@ pt-BR:
       CSPU5_U3 - High Low - Debug_2018: Analise a ordem das condicionais para que
         avise o usuário quando o palpite está próximo. (Clique para ver as instruções
         completas)
+      CSPU5_U3 - High Low - Debug_2019: Analise a ordem das condicionais para que
+        avise o usuário quando o palpite está próximo. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - High Low - Dropdown: Adicione um menu de opções para o palpite em
         vez de promptNum (clique para ver as instruções completas)
       CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
       CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - High Low - Else if_2019: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
       CSPU5_U3 - High Low - Else: 'Adicione uma instrução "senão" para que o programa
@@ -2034,15 +2257,23 @@ pt-BR:
       CSPU5_U3 - Keys - Add Image URLs_2018: Adicione URLs de imagem para seu vetor.
         Substitua a área de texto com uma imagem e "setText" com "setImageURL". Em
         seguida, teste seu aplicativo! (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Add Image URLs_2019: Adicione URLs de imagem para seu vetor.
+        Substitua a área de texto com uma imagem e "setText" com "setImageURL". Em
+        seguida, teste seu aplicativo! (Clique para ver as instruções completas)
       CSPU5_U3 - Keys - Buttons and Keys: Faça com que o programa responda da mesma
         maneira tanto para clicar em imagens na tela quanto para apertar as teclas
         para cima e para baixo no teclado. (Clique para ver as instruções completas)
       CSPU5_U3 - Keys - Buttons and Keys_2018: Faça com que o programa responda da
         mesma maneira tanto para clicar em imagens na tela quanto para apertar as
         teclas para cima e para baixo no teclado. (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Buttons and Keys_2019: Faça com que o programa responda da
+        mesma maneira tanto para clicar em imagens na tela quanto para apertar as
+        teclas para cima e para baixo no teclado. (Clique para ver as instruções completas)
       CSPU5_U3 - Keys - Demo App: Brinque com a barra de rolar imagem. Pressione as
         setas para a esquerda e para a direita para avançar pelas imagens.
       CSPU5_U3 - Keys - Demo App_2018: Brinque com a barra de rolar imagem. Pressione
+        as setas para a esquerda e para a direita para avançar pelas imagens.
+      CSPU5_U3 - Keys - Demo App_2019: Brinque com a barra de rolar imagem. Pressione
         as setas para a esquerda e para a direita para avançar pelas imagens.
       CSPU5_U3 - Keys - Final Image Scroller: Atualize o scroller de imagem para responder
         a botões e a digitar de teclas. (Clique para ver as instruções completas)
@@ -2052,20 +2283,31 @@ pt-BR:
       CSPU5_U3 - Keys - Functions_2018: Escreva funções facaSetaParaCima e facaSetaParaBaixo
         e chame as funções ao invés de duplicar o código. (Clique para ver as instruções
         completas)
+      CSPU5_U3 - Keys - Functions_2019: Escreva funções facaSetaParaCima e facaSetaParaBaixo
+        e chame as funções ao invés de duplicar o código. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Keys - Key Up and Down: Experimente os eventos de soltar tecla e
         pressionar tecla para ver como eles são diferentes de apertar tecla. (Clique
         para ver as instruções completas)
       CSPU5_U3 - Keys - Key Up and Down_2018: Experimente os eventos de soltar tecla
         e pressionar tecla para ver como eles são diferentes de apertar tecla. (Clique
         para ver as instruções completas)
+      CSPU5_U3 - Keys - Key Up and Down_2019: Experimente os eventos de soltar tecla
+        e pressionar tecla para ver como eles são diferentes de apertar tecla. (Clique
+        para ver as instruções completas)
       CSPU5_U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo
         for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Keys - Multiple Keys_2018: Toque um som diferente quando a seta para
+        baixo for pressionada (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Keys - Multiple Keys_2019: Toque um som diferente quando a seta para
         baixo for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Loops -  Complex Condition: Altere a expressão booleana para o laço
         while de forma que ele irá parar quando ambos dados forem maiores que ou iguais
         a 5. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops -  Complex Condition_2018: Altere a expressão booleana para
+        o laço while de forma que ele irá parar quando ambos dados forem maiores que
+        ou iguais a 5. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops -  Complex Condition_2019: Altere a expressão booleana para
         o laço while de forma que ele irá parar quando ambos dados forem maiores que
         ou iguais a 5. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 1: Altere a condição para o laço while para checar se a variável
@@ -2074,15 +2316,22 @@ pt-BR:
         Role os dados repetidamente até a soma dos dados ser 7 ou 11.
       CSPU5_U3 - Loops - 10_2018: Escreva um programa que simule a rolagem de 2 dados.
         Role os dados repetidamente até a soma dos dados ser 7 ou 11.
+      CSPU5_U3 - Loops - 10_2019: Escreva um programa que simule a rolagem de 2 dados.
+        Role os dados repetidamente até a soma dos dados ser 7 ou 11.
       CSPU5_U3 - Loops - 11: Conserte a condição para que continue rolando o dado
         enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente. (Clique
         para ver as instruções completas)
       CSPU5_U3 - Loops - 11_2018: Conserte a condição para que continue rolando o
         dado enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente.
         (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 11_2019: Conserte a condição para que continue rolando o
+        dado enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente.
+        (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 12: Altere o código para que imprima a string "Oi" 5 vezes.
         (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 12_2018: Altere o código para que imprima a string "Oi" 5
+        vezes. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 12_2019: Altere o código para que imprima a string "Oi" 5
         vezes. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 14: Altere a condição do laço para evitar o laço infinito
         e pare a contagem quando o contador passar de 30. (Clique para ver as instruções
@@ -2090,45 +2339,248 @@ pt-BR:
       CSPU5_U3 - Loops - 14_2018: Altere a condição do laço para evitar o laço infinito
         e pare a contagem quando o contador passar de 30. (Clique para ver as instruções
         completas)
+      CSPU5_U3 - Loops - 14_2019: Altere a condição do laço para evitar o laço infinito
+        e pare a contagem quando o contador passar de 30. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Loops - 15: Conte o número de vezes que a soma dos dados é 12. (Clique
         para ver as instruções completas)
       CSPU5_U3 - Loops - 15_2018: Conte o número de vezes que a soma dos dados é 12.
         (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 15_2019: Conte o número de vezes que a soma dos dados é 12.
+        (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 1_2018: Altere a condição para o laço while para checar se
+        a variável num é menor do que 90. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 1_2019: Altere a condição para o laço while para checar se
         a variável num é menor do que 90. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 2: Tente criar um laço infinito usando !=, > e <. (Clique
         para ver todas as instruções)
       CSPU5_U3 - Loops - 2_2018: Tente criar um laço infinito usando !=, > e <. (Clique
+        para ver todas as instruções)
+      CSPU5_U3 - Loops - 2_2019: Tente criar um laço infinito usando !=, > e <. (Clique
         para ver todas as instruções)
       CSPU5_U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para
         que o programa execute até que role um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 3_2018: Mude a condição "se" para uma repetição "enquanto"
         para que o programa execute até que role um 6. (Clique para ver as instruções
         completas)
+      CSPU5_U3 - Loops - 3_2019: Mude a condição "se" para uma repetição "enquanto"
+        para que o programa execute até que role um 6. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Loops - 4: Use os Comandos de Análise para fazer uma lista de todos
         os valores que rolaram antes um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 4_2018: Use os Comandos de Análise para fazer uma lista de
         todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 4_2019: Use os Comandos de Análise para fazer uma lista de
+        todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 5: Adicione código dentro do loop enquanto, que atualizará
+        a variável num para que a condição acabe se tornando falsa. (Clique para ver
+        instruções completas)
+      CSPU5_U3 - Loops - 5_2018: Adicione código dentro do loop enquanto, que atualizará
+        a variável num para que a condição acabe se tornando falsa. (Clique para ver
+        instruções completas)
+      CSPU5_U3 - Loops - 5_2019: Adicione código dentro do loop enquanto, que atualizará
+        a variável num para que a condição acabe se tornando falsa. (Clique para ver
+        instruções completas)
+      CSPU5_U3 - Loops - 6: Corrija o problema para que o loop seja executado pelo
+        menos uma vez. Altere o valor inicial de num para um valor fictício, como
+        -1. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 6_2018: Corrija o problema para que o loop seja executado
+        pelo menos uma vez. Altere o valor inicial de num para um valor fictício,
+        como -1. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 6_2019: Corrija o problema para que o loop seja executado
+        pelo menos uma vez. Altere o valor inicial de num para um valor fictício,
+        como -1. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 7: Sem adicionar linhas de código, reordene o código para
+        que ele imprima todos os valores de num. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 7_2018: Sem adicionar linhas de código, reordene o código
+        para que ele imprima todos os valores de num. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops - 7_2019: Sem adicionar linhas de código, reordene o código
+        para que ele imprima todos os valores de num. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops - 8: Depure qual número não está sendo impresso e inclua uma
+        instrução de gravação para exibir esse valor. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops - 8_2018: Depure qual número não está sendo impresso e inclua
+        uma instrução de gravação para exibir esse valor. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops - 8_2019: Depure qual número não está sendo impresso e inclua
+        uma instrução de gravação para exibir esse valor. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops - 9: " Modifique a condição para que ele continue rolando,
+        desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      CSPU5_U3 - Loops - 9_2018: " Modifique a condição para que ele continue rolando,
+        desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      CSPU5_U3 - Loops - 9_2019: " Modifique a condição para que ele continue rolando,
+        desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      CSPU5_U3 - Loops - Minus Minus: Altere o código para contar decrescentemente
+        de 10 para 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Minus Minus_2018: Altere o código para contar decrescentemente
+        de 10 para 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Minus Minus_2019: Altere o código para contar decrescentemente
+        de 10 para 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Plus Plus: Altere o código para usar count++ em vez de count
+        = count + 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Plus Plus_2018: Altere o código para usar count++ em vez
+        de count = count + 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Plus Plus_2019: Altere o código para usar count++ em vez
+        de count = count + 1. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console: Use o console para verificar o valor final
         de num. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console_2018: Use o console para verificar o valor
         final de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Typing in Console_2019: Use o console para verificar o valor
+        final de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - minus = operator: Atualize o código para usar o operador
+        -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - minus = operator_2018: Atualize o código para usar o operador
+        -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - minus = operator_2019: Atualize o código para usar o operador
+        -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - plus and minus = operator: Atualize o código para usar o
+        operador +=. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - plus and minus = operator_2018: Atualize o código para usar
+        o operador +=. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - plus and minus = operator_2019: Atualize o código para usar
+        o operador +=. (Clique para ver instruções completas)
       CSPU5_U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique
         para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Add 5_2018: Some 5 a todos os valores em um vetor
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Add 5_2019: Some 5 a todos os valores em um vetor
         (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Counting Times: Conte o número de vezes que o
         5 aparece em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Counting Times_2018: Conte o número de vezes que
         o 5 aparece em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Counting Times_2019: Conte o número de vezes que
+        o 5 aparece em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Divid by 2: Divida cada valor no vetor por 2.
         (Clique para ver as instruções completas)
       CSPU5_U3 - Loops And Arrays - Divid by 2_2018: Divida cada valor no vetor por
         2. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Divid by 2_2019: Divida cada valor no vetor por
+        2. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Find Min: Complete a função findMinVal para localizar
+        e exibir o menor valor em um array (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Find Min_2018: Complete a função findMinVal para
+        localizar e exibir o menor valor em um array (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Find Min_2019: Complete a função findMinVal para
+        localizar e exibir o menor valor em um array (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - General Search Param: Adicione um segundo parâmetro
+        à função de pesquisa para o valor a ser pesquisado. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops And Arrays - General Search Param_2018: Adicione um segundo
+        parâmetro à função de pesquisa para o valor a ser pesquisado. (Clique para
+        ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - General Search Param_2019: Adicione um segundo
+        parâmetro à função de pesquisa para o valor a ser pesquisado. (Clique para
+        ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Intro For Loop: Adicione um laço for com um console.log
+        dentro e teste as 3 partes do laço for. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Intro For Loop_2018: Adicione um laço for com
+        um console.log dentro e teste as 3 partes do laço for. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops And Arrays - Intro For Loop_2019: Adicione um laço for com
+        um console.log dentro e teste as 3 partes do laço for. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops And Arrays - Linear Search: Visite todos os elementos da matriz
+        e exiba "verdadeiro" se o valor for 5, e "falso" caso contrário. (Clique para
+        ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Linear Search_2018: Visite todos os elementos
+        da matriz e exiba "verdadeiro" se o valor for 5, e "falso" caso contrário.
+        (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Linear Search_2019: Visite todos os elementos
+        da matriz e exiba "verdadeiro" se o valor for 5, e "falso" caso contrário.
+        (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Loop Array If: Use uma declaração Se para exibir
+        apenas os valores na matriz que são maiores que 5. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Loops And Arrays - Loop Array If_2018: Use uma declaração Se para
+        exibir apenas os valores na matriz que são maiores que 5. (Clique para ver
+        as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Loop Array If_2019: Use uma declaração Se para
+        exibir apenas os valores na matriz que são maiores que 5. (Clique para ver
+        as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function - add list param_2018: Crie
+        uma função que receba uma lista de parâmetros e imprima se a lista contiver
+        um 5. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function - add list param_2019: Crie
+        uma função que receba uma lista de parâmetros e imprima se a lista contiver
+        um 5. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function - add list parameter: Crie
+        uma função que receba uma lista de parâmetros e imprima se a lista contiver
+        um 5. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function: Mova o código que pesquisa
+        a lista por um 5 em uma função chamada "pesquisa". (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function_2018: Mova o código que pesquisa
+        a lista por um 5 em uma função chamada "pesquisa". (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops And Arrays - Make it a Function_2019: Mova o código que pesquisa
+        a lista por um 5 em uma função chamada "pesquisa". (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops And Arrays - Print Array: Use um laço for para imprimir todos
+        os valores em um array. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Print Array_2018: Use um laço for para imprimir
+        todos os valores em um array. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Print Array_2019: Use um laço for para imprimir
+        todos os valores em um array. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Printing Single True: Processe o array e exiba
+        um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não
+        tenha. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Printing Single True_2018: Processe o array e
+        exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso
+        não tenha. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Printing Single True_2019: Processe o array e
+        exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso
+        não tenha. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - constrainTurtle: Use restrições neste aplicativo
+        simples para evitar que a tartaruga saia da tela. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Return Values - constrainTurtle_2018: Use restrições neste aplicativo
+        simples para evitar que a tartaruga saia da tela. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Return Values - constrainTurtle_2019: Use restrições neste aplicativo
+        simples para evitar que a tartaruga saia da tela. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Return Values - debuggingConstrain: Corrija o erro na restrição para
+        que ele retorne o valor apropriado. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingConstrain_2018: Corrija o erro na restrição
+        para que ele retorne o valor apropriado. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingConstrain_2019: Corrija o erro na restrição
+        para que ele retorne o valor apropriado. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingMaxVal: Corrija o erro no maxVal para que
+        ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingMaxVal_2018: Corrija o erro no maxVal para
+        que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - debuggingMaxVal_2019: Corrija o erro no maxVal para
+        que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - useMinVal: Chame minVal dentro da instrução console.log
+        para calcular o mínimo de dois valores. (Clique para ver instruções completas)
+      CSPU5_U3 - Return Values - useMinVal_2018: Chame minVal dentro da instrução
+        console.log para calcular o mínimo de dois valores. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Return Values - useMinVal_2019: Chame minVal dentro da instrução
+        console.log para calcular o mínimo de dois valores. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Return Values - writeMaxVal: Escreva a função maxVal e use-a na instrução
+        console.log para calcular o máximo de dois valores. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Return Values - writeMaxVal_2018: Escreva a função maxVal e use-a
+        na instrução console.log para calcular o máximo de dois valores. (Clique para
+        ver instruções completas)
+      CSPU5_U3 - Return Values - writeMaxVal_2019: Escreva a função maxVal e use-a
+        na instrução console.log para calcular o máximo de dois valores. (Clique para
+        ver instruções completas)
       CSPU5_U3 - User Input - Save getText To Variable: Salve a idade e o nome do
         usuário em variáveis (clique para ver as instruções completas)
       CSPU5_U3 - User Input - Save getText To Variable_2018: Salve a idade e o nome
         do usuário em variáveis (clique para ver as instruções completas)
+      CSPU5_U3 - User Input - Save getText To Variable_2019: Salve a idade e o nome
+        do usuário em variáveis (clique para ver as instruções completas)
+      CSPU5_U3 Digital Assistant Target: Experimente uma demonstração do Assistente
+        Digital!
       CSPU5_U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos
         para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo
         de Design (clique para ver as instruções completas).
@@ -2158,10 +2610,15 @@ pt-BR:
         do programa. (Clique para ver as instruções completas)
       CSPU5_U3L13 - Debugging 3_2018: Analise o programa corrigindo o erro lógico
         dentro do programa. (Clique para ver as instruções completas)
+      CSPU5_U3L13 - Debugging 3_2019: Analise o programa corrigindo o erro lógico
+        dentro do programa. (Clique para ver as instruções completas)
       CSPU5_U3L13 - Debugging IDs case sensitive: Analise o programa verificando que
         suas identidades estão sendo referenciadas corretamente. (Clique para ver
         as instruções completas)
       CSPU5_U3L13 - Debugging IDs case sensitive_2018: Analise o programa verificando
+        que suas identidades estão sendo referenciadas corretamente. (Clique para
+        ver as instruções completas)
+      CSPU5_U3L13 - Debugging IDs case sensitive_2019: Analise o programa verificando
         que suas identidades estão sendo referenciadas corretamente. (Clique para
         ver as instruções completas)
       CSPU5_U3L13 - Project: Crie seu app com várias telas (clique para ver as instruções
@@ -2182,6 +2639,8 @@ pt-BR:
         uma calculadora simples. (clique aqui para ver todas as instruções)
       CSPU5_U3L14 - User Input Division calculator_2018: Escreva um programa que atue
         como uma calculadora simples. (clique aqui para ver todas as instruções)
+      CSPU5_U3L14 - User Input Division calculator_2019: Escreva um programa que atue
+        como uma calculadora simples. (clique aqui para ver todas as instruções)
       CSPU5_U3L16 - challenge say hi app: Escreva uma saudação para o usuário quando
         eles clicarem em 'entrar' no texto de entrada, usando o evento 'mudança'.
         (Clique para ver as instruções completas)
@@ -2193,11 +2652,17 @@ pt-BR:
         botão Submeter para que quando o botão é clicado, ele irá exibir o nome digitado
         da caixa de texto no console.  Use getText para obter o valor da caixa de
         texto. (Clique para ver as instruções completas)
+      CSPU5_U3L16 - intro getText_2019: Adicione um manipulador de eventos para o
+        botão Submeter para que quando o botão é clicado, ele irá exibir o nome digitado
+        da caixa de texto no console.  Use getText para obter o valor da caixa de
+        texto. (Clique para ver as instruções completas)
       CSPU5_U3L16 - newEventTypes: Experimente tipos de eventos diferentes e selecione
         qual deles você acha melhor. (Clique aqui para ver todas as instruções)
       CSPU5_U3L16 - outputWithTextArea: Mostre uma mensagem na 'textArea' (clique
         para ver as instruções completas)
       CSPU5_U3L16 - outputWithTextArea_2018: Mostre uma mensagem na 'textArea' (clique
+        para ver as instruções completas)
+      CSPU5_U3L16 - outputWithTextArea_2019: Mostre uma mensagem na 'textArea' (clique
         para ver as instruções completas)
       CSPU5_U3L16 - setPosition to fixed location: |-
         Introdução do comando setPosition!
@@ -2208,6 +2673,10 @@ pt-BR:
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
       CSPU5_U3L16 - setPosition to move button_2018: |-
+        Introdução do comando setPosition!
+        Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
+        para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_U3L16 - setPosition to move button_2019: |-
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
@@ -2228,11 +2697,26 @@ pt-BR:
         e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
+      CSPU5_U3L16 - textInput getText write_2019: |-
+        Introdução de textInput, getText
+        e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
+        é escrito na tela quando o botão for clicado. Então, use getText para escrever
+        na tela o que o usuário digitou na caixa de texto.
+      CSPU5_U3L16 - toUpper: Faça o nome do usuário aparecer em maiúsculo (Clique
+        para ver as instruções completas)
+      CSPU5_U3L16 - toUpper_2018: Faça o nome do usuário aparecer em maiúsculo (Clique
+        para ver as instruções completas)
+      CSPU5_U3L16 - toUpper_2019: Faça o nome do usuário aparecer em maiúsculo (Clique
+        para ver as instruções completas)
       CSPU5_U3L19 - fix the var name syntax error v2: "Demos a você um trecho de código\ncom
         um erro. Ele não reconhece a variável. Você consegue descobrir o motivo? Conserte\no
         erro e execute o programa. Observe também a mensagem de erro, já que ela\npode
         aparecer em algum momento da sua vida.\r\n\r\n"
       CSPU5_U3L19 - fix the var name syntax error v2_2018: "Demos a você um trecho
+        de código\ncom um erro. Ele não reconhece a variável. Você consegue descobrir
+        o motivo? Conserte\no erro e execute o programa. Observe também a mensagem
+        de erro, já que ela\npode aparecer em algum momento da sua vida.\r\n\r\n"
+      CSPU5_U3L19 - fix the var name syntax error v2_2019: "Demos a você um trecho
         de código\ncom um erro. Ele não reconhece a variável. Você consegue descobrir
         o motivo? Conserte\no erro e execute o programa. Observe também a mensagem
         de erro, já que ela\npode aparecer em algum momento da sua vida.\r\n\r\n"
@@ -2246,16 +2730,27 @@ pt-BR:
         linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável,
         atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome
         da variável de\nx para alguma outra coisa.\r\n"
+      CSPU5_U3L19 - three basic ops of variables_2019: "Faça o seguinte:\r\nDemos
+        a você\ntrês linhas de código mostradas na página anterior. Adicione três
+        linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável,
+        atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome
+        da variável de\nx para alguma outra coisa.\r\n"
       CSPU5_U3L25 - drag out key event: Crie um manipulador de eventos para responder
         aos eventos de apertar tecla e exibir event.key no console. Aperte as teclas
         do teclado para ver o que acontece. (Clique para ver as instruções completas)
       CSPU5_U3L25 - drag out key event_2018: Crie um manipulador de eventos para responder
         aos eventos de apertar tecla e exibir event.key no console. Aperte as teclas
         do teclado para ver o que acontece. (Clique para ver as instruções completas)
+      CSPU5_U3L25 - drag out key event_2019: Crie um manipulador de eventos para responder
+        aos eventos de apertar tecla e exibir event.key no console. Aperte as teclas
+        do teclado para ver o que acontece. (Clique para ver as instruções completas)
       CSPU5_U3L25 - play sound when up key: Modifique o código para que o som só seja
         tocado quando a seta para cima for pressionada (Clique aqui para ver todas
         as instruções)
       CSPU5_U3L25 - play sound when up key_2018: Modifique o código para que o som
+        só seja tocado quando a seta para cima for pressionada (Clique aqui para ver
+        todas as instruções)
+      CSPU5_U3L25 - play sound when up key_2019: Modifique o código para que o som
         só seja tocado quando a seta para cima for pressionada (Clique aqui para ver
         todas as instruções)
       CSPU5_addDescriptiveIDsToTurtleDriver: |-
@@ -2270,9 +2765,17 @@ pt-BR:
         no console qual é o problema. Não há muito código para ver, então você deve ser capaz
         de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
         que permita que o programa funcione como esperado.
+      CSPU5_addDescriptiveIDsToTurtleDriver_2019: |-
+        Esse programa tem um problema! Você pode descobrir
+        qual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro
+        no console qual é o problema. Não há muito código para ver, então você deve ser capaz
+        de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
+        que permita que o programa funcione como esperado.
       CSPU5_playWithEventTypes: Analise o programa corrigindo o erro lógico dentro
         do programa. (Clique para ver as instruções completas)
       CSPU5_playWithEventTypes_2018: Analise o programa corrigindo o erro lógico dentro
+        do programa. (Clique para ver as instruções completas)
+      CSPU5_playWithEventTypes_2019: Analise o programa corrigindo o erro lógico dentro
         do programa. (Clique para ver as instruções completas)
       CSPU5_setPosition to fixed location: |-
         Introdução do comando setPosition!
@@ -2282,9 +2785,16 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_setPosition to fixed location_2019: |-
+        Introdução do comando setPosition!
+        Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
+        para mover o botão para uma posição aleatória quando ele for clicado.
       CSPU5_turtleDriver_add2ndButton: Analise o programa verificando que suas identidades
         estão sendo referenciadas corretamente. (Clique para ver as instruções completas)
       CSPU5_turtleDriver_add2ndButton_2018: Analise o programa verificando que suas
+        identidades estão sendo referenciadas corretamente. (Clique para ver as instruções
+        completas)
+      CSPU5_turtleDriver_add2ndButton_2019: Analise o programa verificando que suas
         identidades estão sendo referenciadas corretamente. (Clique para ver as instruções
         completas)
       Calc Circles of Eval .1: |-
@@ -3398,8 +3908,10 @@ pt-BR:
         o jogo não seja muito difícil. Faça sua pontuação cair de 10 para 0 para passar de nível.
       Crack Random Substitution: Instruções
       Crack Random Substitution_2018: Instruções
+      Crack Random Substitution_2019: Instruções
       Crack a Caesar Cipher: Instruções
       Crack a Caesar Cipher_2018: Instruções
+      Crack a Caesar Cipher_2019: Instruções
       D_Frozen_nested5: Brinque com os flocos de neve!
       D_Frozen_nested6: Desenhe um modelo de degrau de escada que tenha voltas entre
         75 e 105 graus.
@@ -3717,6 +4229,10 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      Finalize Your Chaser Game v.1_2019: |-
+        Introdução do comando setPosition!
+        Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
+        para mover o botão para uma posição aleatória quando ele for clicado.
       Fish Tank 3-validated Ram: Mude o comportamento do peixe de modo que ele consiga
         nadar ao redor do tanque.
       Fish Tank 3-validated: Mude o comportamento do peixe de modo que ele consiga
@@ -3820,6 +4336,9 @@ pt-BR:
         Envie uma mensagem configurando o estado do
         fio como A ou B.
       'Internet Simulator: Sending Binary Messages_2018': |-
+        Envie uma mensagem configurando o estado do
+        fio como A ou B.
+      'Internet Simulator: Sending Binary Messages_2019': |-
         Envie uma mensagem configurando o estado do
         fio como A ou B.
       Just for Testing: Testar instruções
@@ -4664,6 +5183,10 @@ pt-BR:
         O widget está configurado com as dimensões incorretas. Sua primeira tarefa
         é definir o segundo byte do código binário de 8-bits para o número 5: 0000
         0101. Então começe a inserir os dados do pixel.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Faça uma letra ''A'' 3x5.
+        O widget está configurado com as dimensões incorretas. Sua primeira tarefa
+        é definir o segundo byte do código binário de 8-bits para o número 5: 0000
+        0101. Então começe a inserir os dados do pixel.'
       Pixelation - Lesson 14 - Make your own B and W Image: Agora, crie sua própria
         imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho
         que você quiser. Feliz pixelização!
@@ -4680,11 +5203,20 @@ pt-BR:
         usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com
         sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul.
         Linha 4 - sombras de cinza.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Vamos começar com a imagem
+        4x4 que Maddie criou no vídeo. Sua tarefa é preencher uma grade 4x4 com cores
+        usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com
+        sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul.
+        Linha 4 - sombras de cinza.'
       Pixelation - Lesson 15 - Complete 3-bit color: Vamos começar com você com a
         imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
         quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
         codifique-as.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Vamos começar com você com
+        a imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
+        quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
+        codifique-as.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: Vamos começar com você com
         a imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
         quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
         codifique-as.
@@ -4729,11 +5261,15 @@ pt-BR:
         a botões e a digitar de teclas. (Clique para ver as instruções completas)
       Project - Final Image Scroller_2018: Atualize o scroller de imagem para responder
         a botões e a digitar de teclas. (Clique para ver as instruções completas)
+      Project - Final Image Scroller_2019: Atualize o scroller de imagem para responder
+        a botões e a digitar de teclas. (Clique para ver as instruções completas)
       Project - Finish your canvas app: Estenda a funcionalidade de um dos efeitos,
         ou crie um novo de sua preferência. (Clique para ver todas as instruções)
       Project - Your Own Multi Screen App: Crie seu app com várias telas (clique para
         ver as instruções completas).
       Project - Your Own Multi Screen App_2018: Crie seu app com várias telas (clique
+        para ver as instruções completas).
+      Project - Your Own Multi Screen App_2019: Crie seu app com várias telas (clique
         para ver as instruções completas).
       Quantum Bee: |-
         As flores roxas podem ter 1 ou 0 néctar,
@@ -4953,6 +5489,7 @@ pt-BR:
         usando o bloco \"preencha\" até que o solo fique nivelado?  "
       The Vigenere Cipher Widget: Instruções
       The Vigenere Cipher Widget_2018: Instruções
+      The Vigenere Cipher Widget_2019: Instruções
       The Vigenere Cipher: Instruções
       Total Artist Clone Me: |-
         Atividade livre: aqui estão as funções
@@ -5013,6 +5550,9 @@ pt-BR:
         identificadores descritivos e significativos. (Clique para ver as instruções
         completas)
       U3 - Arrays - favThings template_2018: Dê a seus elementos de interface do usuário,
+        identificadores descritivos e significativos. (Clique para ver as instruções
+        completas)
+      U3 - Arrays - favThings template_2019: Dê a seus elementos de interface do usuário,
         identificadores descritivos e significativos. (Clique para ver as instruções
         completas)
       U3 - Arrays - globalVariableIndex: Dê a seus elementos de interface do usuário,
@@ -5177,14 +5717,72 @@ pt-BR:
         o programa execute até que role um 6. (Clique para ver as instruções completas)
       U3 - Loops - 4: " Use os Comandos de Análise para fazer uma lista de todos os
         valores que rolaram antes um 6. (Clique para ver as instruções completas)"
+      U3 - Loops - 5: Adicione código dentro do loop enquanto, que atualizará a variável
+        num para que a condição acabe se tornando falsa. (Clique para ver instruções
+        completas)
+      U3 - Loops - 6: Corrija o problema para que o loop seja executado pelo menos
+        uma vez. Altere o valor inicial de num para um valor fictício, como -1. (Clique
+        para ver instruções completas)
+      U3 - Loops - 7: Sem adicionar linhas de código, reordene o código para que ele
+        imprima todos os valores de num. (Clique para ver instruções completas)
+      U3 - Loops - 8: Depure qual número não está sendo impresso e inclua uma instrução
+        de gravação para exibir esse valor. (Clique para ver instruções completas)
+      U3 - Loops - 9: " Modifique a condição para que ele continue rolando, desde
+        que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      U3 - Loops - Minus Minus: Altere o código para contar decrescentemente de 10
+        para 1. (Clique para ver as instruções completas)
+      U3 - Loops - Plus Plus: Altere o código para usar count++ em vez de count =
+        count + 1. (Clique para ver as instruções completas)
       U3 - Loops - Typing in Console: Use o console para verificar o valor final de
         num. (Clique para ver as instruções completas)
+      U3 - Loops - minus = operator: Atualize o código para usar o operador -= para
+        contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      U3 - Loops - plus and minus = operator: Atualize o código para usar o operador
+        +=. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique
         para ver as instruções completas)
       U3 - Loops And Arrays - Counting Times: Conte o número de vezes que o 5 aparece
         em um vetor. (Clique para ver as instruções completas)
       U3 - Loops And Arrays - Divid by 2: Divida cada valor no vetor por 2. (Clique
         para ver as instruções completas)
+      U3 - Loops And Arrays - Find Min: Complete a função findMinVal para localizar
+        e exibir o menor valor em um array (Clique para ver instruções completas)
+      U3 - Loops And Arrays - General Search Param: Adicione um segundo parâmetro
+        à função de pesquisa para o valor a ser pesquisado. (Clique para ver instruções
+        completas)
+      U3 - Loops And Arrays - Intro For Loop: Adicione um laço for com um console.log
+        dentro e teste as 3 partes do laço for. (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Linear Search: Visite todos os elementos da matriz e
+        exiba "verdadeiro" se o valor for 5, e "falso" caso contrário. (Clique para
+        ver instruções completas)
+      U3 - Loops And Arrays - Loop Array If: Use uma declaração Se para exibir apenas
+        os valores na matriz que são maiores que 5. (Clique para ver as instruções
+        completas)
+      U3 - Loops And Arrays - Make it a Function - add list parameter: Crie uma função
+        que receba uma lista de parâmetros e imprima se a lista contiver um 5. (Clique
+        para ver instruções completas)
+      U3 - Loops And Arrays - Make it a Function: Mova o código que pesquisa a lista
+        por um 5 em uma função chamada "pesquisa". (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Print Array: Use um laço for para imprimir todos os
+        valores em um array. (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Printing Single True: Processe o array e exiba um único
+        "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha.
+        (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Return Value: Use restrições neste aplicativo simples
+        para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples
+        para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      U3 - Return Values - debuggingConstrain: Corrija o erro na restrição para que
+        ele retorne o valor apropriado. (Clique para ver instruções completas)
+      U3 - Return Values - debuggingMaxVal: Corrija o erro no maxVal para que ele
+        reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      U3 - Return Values - debuggingReturns: Corrija o erro no maxVal para que ele
+        reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      U3 - Return Values - useMinVal: Chame minVal dentro da instrução console.log
+        para calcular o mínimo de dois valores. (Clique para ver instruções completas)
+      U3 - Return Values - writeMaxVal: Escreva a função maxVal e use-a na instrução
+        console.log para calcular o máximo de dois valores. (Clique para ver instruções
+        completas)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
@@ -5214,6 +5812,9 @@ pt-BR:
       U3 - User Input - Save getText To Variable: Salve a idade e o nome do usuário
         em variáveis (clique para ver as instruções completas)
       U3 - images - bee free play: Faça isso
+      U3 Digital Assistant Target - Mehal: Experimente uma demonstração do Assistente
+        Digital!
+      U3 Digital Assistant Target: Experimente uma demonstração do Assistente Digital!
       U3 Variables consolelog: Use o bloco de escrita para exibir o valor de tamanho
       U3 Variables flower example: Mude o valor de petalSize múltiplas vezes. Como
         isto muda o seu desenho?
@@ -5224,6 +5825,7 @@ pt-BR:
       U3 Variables randomize your square: Mude o valor de petalSize múltiplas vezes.
         Como isto muda o seu desenho?
       U3 Variables write: Use o bloco de escrita para exibir o valor de tamanho
+      U3 mehal's clone: Experimente uma demonstração do Assistente Digital!
       U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos para
         o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de
         Design (clique para ver as instruções completas).
@@ -5251,15 +5853,24 @@ pt-BR:
       U3L03 Define and use turnAround_2018: |-
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito.
+      U3L03 Define and use turnAround_2019: |-
+        Escreva a função virar() e
+        use-a para fazer a tartaruga se mover como descrito.
       U3L03 Draw a T using turnAround: "Agora a função \"virar\" é \nfornecida no
         código. Use a função virar() para desenhar um T conforme\ndescrito."
       U3L03 Draw a T using turnAround_2018: "Agora a função \"virar\" é \nfornecida
+        no código. Use a função virar() para desenhar um T conforme\ndescrito."
+      U3L03 Draw a T using turnAround_2019: "Agora a função \"virar\" é \nfornecida
         no código. Use a função virar() para desenhar um T conforme\ndescrito."
       U3L03 Three Steps: |-
         Desenhe 3 "passos", movendo para cima e para a direita. Observe
         o padrão do movimento. Você deve definir uma função chamada desenharPasso()
         que desenha um dos passos e então chamá-la 3 vezes para obter o efeito desejado.
       U3L03 Three Steps_2018: |-
+        Desenhe 3 "passos", movendo para cima e para a direita. Observe
+        o padrão do movimento. Você deve definir uma função chamada desenharPasso()
+        que desenha um dos passos e então chamá-la 3 vezes para obter o efeito desejado.
+      U3L03 Three Steps_2019: |-
         Desenhe 3 "passos", movendo para cima e para a direita. Observe
         o padrão do movimento. Você deve definir uma função chamada desenharPasso()
         que desenha um dos passos e então chamá-la 3 vezes para obter o efeito desejado.
@@ -5275,6 +5886,11 @@ pt-BR:
         etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra
         função que desenha um lado do diamante. "
       U3L03 draw diamond_2018: "Use qualquer função que você escreveu\nantes para
+        fazer uma forma de \"diamante\" conforme mostrado na imagem.\r\n\r\nOBSERVAÇÃO:\nessa
+        é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês
+        etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra
+        função que desenha um lado do diamante. "
+      U3L03 draw diamond_2019: "Use qualquer função que você escreveu\nantes para
         fazer uma forma de \"diamante\" conforme mostrado na imagem.\r\n\r\nOBSERVAÇÃO:\nessa
         é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês
         etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra
@@ -5312,6 +5928,10 @@ pt-BR:
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
         larguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado.
+      U3L06 Challenge 2 purple square_2019: |-
+        Desta vez vamos aprender
+        um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
+        larguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado.
       U3L06 Challenge 3 fill pink: |-
         Agora, vamos tentar preencher todo o fundo
         da tela. Para deixar as coisas um pouco mais fáceis para você, podemos lhe dizer
@@ -5319,6 +5939,12 @@ pt-BR:
         nomes das cores, dê uma olhada na documentação de corCaneta()
         novamente. Dica: você precisa usar ponto().
       U3L06 Challenge 3 fill pink_2018: |-
+        Agora, vamos tentar preencher todo o fundo
+        da tela. Para deixar as coisas um pouco mais fáceis para você, podemos lhe dizer
+        que a cor que escolhemos é uma das 140 cores nomeadas. Se você não souber os
+        nomes das cores, dê uma olhada na documentação de corCaneta()
+        novamente. Dica: você precisa usar ponto().
+      U3L06 Challenge 3 fill pink_2019: |-
         Agora, vamos tentar preencher todo o fundo
         da tela. Para deixar as coisas um pouco mais fáceis para você, podemos lhe dizer
         que a cor que escolhemos é uma das 140 cores nomeadas. Se você não souber os
@@ -5340,11 +5966,23 @@ pt-BR:
         cinco listadas a seguir:  #00ABDC, #CC4400, #1188CC, #006699,
         #11CC00  Você deve acertar o palpite se aplicar o que sabe sobre
         cores RGB.
+      U3L06 Challenge 4 bullseye_2019: |-
+        Vamos tentar mais uma vez.
+        Desta vez as cores NÃO são chamadas pelo nome - você precisa usar o número hexadecimal
+        cor para defini-la. Assim, para que você não fique tentando adivinhar aleatoriamente, vamos
+        lhe dar uma dica -- cada uma das cores mostradas na imagem-alvo é uma das
+        cinco listadas a seguir:  #00ABDC, #CC4400, #1188CC, #006699,
+        #11CC00  Você deve acertar o palpite se aplicar o que sabe sobre
+        cores RGB.
       U3L06 Challenge 5 overlapping circles: |-
         Esta imagem é criada apenas
         usando ponto() e corCaneta(), mas como vamos fazer esses círculos ficarem
         transparentes? Se você ainda não recebeu a dica: leia a documentação!
       U3L06 Challenge 5 overlapping circles_2018: |-
+        Esta imagem é criada apenas
+        usando ponto() e corCaneta(), mas como vamos fazer esses círculos ficarem
+        transparentes? Se você ainda não recebeu a dica: leia a documentação!
+      U3L06 Challenge 5 overlapping circles_2019: |-
         Esta imagem é criada apenas
         usando ponto() e corCaneta(), mas como vamos fazer esses círculos ficarem
         transparentes? Se você ainda não recebeu a dica: leia a documentação!
@@ -5360,11 +5998,21 @@ pt-BR:
         então desenhe os rabiscos como mostrado. Para facilitar as coisas, temos aqui uma dica: todos
         os parâmetros são múltiplos de 10 e as cores são da seguinte lista de
         nomes de cores: azulCeleste, azulClaro, azulTurquesa, Roxo e Magenta.
+      U3L06 Challenge 6 squiggles_2019: |-
+        Em seguida, vamos adicionar algumas
+        curvas ao nosso desenho. Leia a documentação para os comandos de "arco" e
+        então desenhe os rabiscos como mostrado. Para facilitar as coisas, temos aqui uma dica: todos
+        os parâmetros são múltiplos de 10 e as cores são da seguinte lista de
+        nomes de cores: azulCeleste, azulClaro, azulTurquesa, Roxo e Magenta.
       U3L06 Challenge 7 smiley face: |-
         Para fazer essa carinha feliz você vai
         precisar olhar a documentação do comando mova() e então usá-lo com os
         outros que você aprendeu. Você pode fazer suposições razoáveis sobre as cores.
       U3L06 Challenge 7 smiley face_2018: |-
+        Para fazer essa carinha feliz você vai
+        precisar olhar a documentação do comando mova() e então usá-lo com os
+        outros que você aprendeu. Você pode fazer suposições razoáveis sobre as cores.
+      U3L06 Challenge 7 smiley face_2019: |-
         Para fazer essa carinha feliz você vai
         precisar olhar a documentação do comando mova() e então usá-lo com os
         outros que você aprendeu. Você pode fazer suposições razoáveis sobre as cores.
@@ -5380,10 +6028,19 @@ pt-BR:
         amigos para ver se eles conseguem duplicar sua imagem. Vamos mostrar para você os
         desenhos que nós mesmos fizemos. Você pode tentar duplicá-los, se quiser.
         Caso não queira, divirta-se criando o seu próprio desenho!
+      U3L06 Challenge 8 make your own_2019: |-
+        Use as ferramentas que você aprendeu
+        hoje para criar um desenho próprio. Se você tiver tempo, desafie seus
+        amigos para ver se eles conseguem duplicar sua imagem. Vamos mostrar para você os
+        desenhos que nós mesmos fizemos. Você pode tentar duplicá-los, se quiser.
+        Caso não queira, divirta-se criando o seu próprio desenho!
       U3L07 - Free Play Loops and Random: |-
         Atividade livre! Use o que você aprendeu
         sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
       U3L07 - Free Play Loops and Random_2018: |-
+        Atividade livre! Use o que você aprendeu
+        sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
+      U3L07 - Free Play Loops and Random_2019: |-
         Atividade livre! Use o que você aprendeu
         sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
       U3L07 - Starry Night Starter Code: "Você vai usar laços e números\naleatórios
@@ -5396,6 +6053,8 @@ pt-BR:
       U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
         as instruções)
       U3L07 - randomSquare_2018: Desenhe a figura usando um laço. (Clique para ver
+        todas as instruções)
+      U3L07 - randomSquare_2019: Desenhe a figura usando um laço. (Clique para ver
         todas as instruções)
       U3L13 - Button with ID: |-
         Arraste um botão para fora da tela e
@@ -5476,6 +6135,11 @@ pt-BR:
         e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
+      U3L16 - nameAgeTemplate_2019: |-
+        Introdução de textInput, getText
+        e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
+        é escrito na tela quando o botão for clicado. Então, use getText para escrever
+        na tela o que o usuário digitou na caixa de texto.
       U3L16 - newEventTypes: Experimente tipos de eventos diferentes e selecione qual
         deles você acha melhor. (Clique aqui para ver todas as instruções)
       U3L16 - outputWithTextArea: Mostre uma mensagem na 'textArea' (clique para ver
@@ -5502,6 +6166,8 @@ pt-BR:
         e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
+      U3L16 - toUpper: Faça o nome do usuário aparecer em maiúsculo (Clique para ver
+        as instruções completas)
       U3L19 - Clicker Game Freeplay Area: |-
         Use esta área de laboratório do aplicativo para melhorar
         seu jogo no estilo clicker.  Você deve começar copiando/colando o código do seu jogo antigo
@@ -5551,6 +6217,10 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      U3L2 Using Simple Commands_2019: |-
+        Desenhe um quadrado usando apenas avance
+        e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
+        inicial da tartaruga.
       U3L24 Nested Conditionals Bugs 3: Conserte os erros que ainda existem neste
         programa. Prove que o programa funciona corretamente.
       U3L25 - drag out key event: Crie um manipulador de eventos para responder aos
@@ -5570,11 +6240,21 @@ pt-BR:
         Esse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o
         e ajustando-o.  Você também deve considerar usar lápis e papel para esboçar
         suas ideias.
+      U3L2_Turtle3by3Grid_2019: |-
+        Desenhe uma grade 3x3 acima e à direita da
+        tartaruga. Tente fazer isso com o menor número de comandos possível. OBSERVAÇÃO:
+        Esse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o
+        e ajustando-o.  Você também deve considerar usar lápis e papel para esboçar
+        suas ideias.
       U3L2_TurtleSquare_right: |-
         Desenhe um quadrado usando apenas avance
         e vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA
         da posição inicial.
       U3L2_TurtleSquare_right_2018: |-
+        Desenhe um quadrado usando apenas avance
+        e vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA
+        da posição inicial.
+      U3L2_TurtleSquare_right_2019: |-
         Desenhe um quadrado usando apenas avance
         e vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA
         da posição inicial.
@@ -5586,25 +6266,38 @@ pt-BR:
         mouse e examine os objetos de evento exibidos no console. Por que um objeto
         seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções
         completas)
+      U4 - Objects - eventParameter_2019: Acione ambos os eventos do teclado e do
+        mouse e examine os objetos de evento exibidos no console. Por que um objeto
+        seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções
+        completas)
       U4 - ReadRecords - Contacts App 2: Crie uma função chamada atualizaDadosLocais.
         (Clique para ver todas as instruções)
       U4 - ReadRecords - Contacts App 2_2018: Crie uma função chamada atualizaDadosLocais.
+        (Clique para ver todas as instruções)
+      U4 - ReadRecords - Contacts App 2_2019: Crie uma função chamada atualizaDadosLocais.
         (Clique para ver todas as instruções)
       U4 - ReadRecords - Contacts App 4: Crie um botão "Deletar". (Clique para ver
         todas as instruções)
       U4 - ReadRecords - Contacts App 4_2018: Crie um botão "Deletar". (Clique para
         ver todas as instruções)
+      U4 - ReadRecords - Contacts App 4_2019: Crie um botão "Deletar". (Clique para
+        ver todas as instruções)
       U4 Model App: Adicione um grande botão vermelho na sua tela usando o Modo de
         Design. (Clique para ver as instruções completas)
       U4 Model App_2018: Adicione um grande botão vermelho na sua tela usando o Modo
+        de Design. (Clique para ver as instruções completas)
+      U4 Model App_2019: Adicione um grande botão vermelho na sua tela usando o Modo
         de Design. (Clique para ver as instruções completas)
       U4 Model Design 1: Adicione um grande botão vermelho na sua tela usando o Modo
         de Design. (Clique para ver as instruções completas)
       U4 Model Design 1_2018: Adicione um grande botão vermelho na sua tela usando
         o Modo de Design. (Clique para ver as instruções completas)
+      U4 Model Design 1_2019: Adicione um grande botão vermelho na sua tela usando
+        o Modo de Design. (Clique para ver as instruções completas)
       U4 vigenere cipher 2: Instruções
       U4L02 - Objects - Template1: Modelo
       U4L02 - Objects - Template1_2018: Modelo
+      U4L02 - Objects - Template1_2019: Modelo
       U4L02 - Objects - createObject: 'Crie um objeto pelo menos 5 valores incluindo
         pelo menos um string e um número. (Clique para ver as instruções completas) '
       U4L02 - Objects - eventParameter: Acione ambos os eventos do teclado e do mouse
@@ -5615,6 +6308,9 @@ pt-BR:
         dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
       U5 if-else-if movie example_2018: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
+      U5 if-else-if movie example_2019: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
       Underground Avoiding Lava: Há lava escondida sob alguns destes blocos, que você
@@ -5673,6 +6369,9 @@ pt-BR:
         com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
         Feliz pixelização!
       'Widget: Black and White Pixelation_2018': Agora, crie sua própria imagem! Começamos
+        com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
+        Feliz pixelização!
+      'Widget: Black and White Pixelation_2019': Agora, crie sua própria imagem! Começamos
         com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
         Feliz pixelização!
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
@@ -6733,6 +7432,12 @@ pt-BR:
       courseC_collector_loops_challenge2: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_loops_challenge2_2018: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_loops_challenge2_2019: Pegue pelo menos **5** peças do tesouro!
+      courseC_collector_prog1: Brinque com os blocos para ver se você pode ajudar
+        Laurel a coletar algum tesouro.
+      courseC_collector_prog1_2018: Brinque com os blocos para ver se você pode ajudar
+        Laurel a coletar algum tesouro.
+      courseC_collector_prog1_2019: Brinque com os blocos para ver se você pode ajudar
+        Laurel a coletar algum tesouro.
       courseC_collector_prog2: Mova Laurel até o tesouro, então use `coletar` para
         pegar.
       courseC_collector_prog2_2018: Mova Laurel até o tesouro, então use `coletar`
@@ -6786,15 +7491,48 @@ pt-BR:
       courseC_flappy_embed_events: Aquie está um exemplo de um jogo que você está
         prestes a criar! Jogue-o uma ou duas vezes para ter uma ideia do que você
         está prestes a fazer.
+      courseC_flappy_events1: Anexe o bloco `quantidade normal de bater de asas` ao
+        evento `quando clicar`, depois pressione "Executar".    Clique ou toque no
+        espaço de jogo para mover o Flappy para o alvo.
       courseC_flappy_events10: 'Crie seu próprio jogo Flappy Bird! '
       courseC_flappy_events10_2018: 'Crie seu próprio jogo Flappy Bird! '
       courseC_flappy_events10_2019: 'Crie seu próprio jogo Flappy Bird! '
+      courseC_flappy_events1_2018: Anexe o bloco `quantidade normal de bater de asas`
+        ao evento `quando clicar`, depois pressione "Executar".    Clique ou toque
+        no espaço de jogo para mover o Flappy para o alvo.
+      courseC_flappy_events1_2019: Anexe o bloco `quantidade normal de bater de asas`
+        ao evento `quando clicar`, depois pressione "Executar".    Clique ou toque
+        no espaço de jogo para mover o Flappy para o alvo.
+      courseC_flappy_events2: Tente adicionar um bloco que defina o nível da velocidade
+        quando o botão "Executar" for pressionado. Jogue o jogo e bata as asas até
+        o alvo para continuar.
+      courseC_flappy_events2_2018: Tente adicionar um bloco que defina o nível da
+        velocidade quando o botão "Executar" for pressionado. Jogue o jogo e bata
+        as asas até o alvo para continuar.
+      courseC_flappy_events2_2019: Tente adicionar um bloco que defina o nível da
+        velocidade quando o botão "Executar" for pressionado. Jogue o jogo e bata
+        as asas até o alvo para continuar.
+      courseC_flappy_events5: Adicione um bloco ao evento `quando passar um obstáculo`,
+        então pressione "Executar" para marcar um ponto ao fazer Flappy voar através
+        do primeiro conjunto de tubos.
+      courseC_flappy_events5_2018: Adicione um bloco ao evento `quando passar um obstáculo`,
+        então pressione "Executar" para marcar um ponto ao fazer Flappy voar através
+        do primeiro conjunto de tubos.
+      courseC_flappy_events5_2019: Adicione um bloco ao evento `quando passar um obstáculo`,
+        então pressione "Executar" para marcar um ponto ao fazer Flappy voar através
+        do primeiro conjunto de tubos.
       courseC_flappy_events6: Veja se você ainda pode marcar um ponto depois de fazer
         o passarinho bater as asas cada vez que você clica.
       courseC_flappy_events6_2018: Veja se você ainda pode marcar um ponto depois
         de fazer o passarinho bater as asas cada vez que você clica.
       courseC_flappy_events6_2019: Veja se você ainda pode marcar um ponto depois
         de fazer o passarinho bater as asas cada vez que você clica.
+      courseC_flappy_events8: Tente definir uma cena **aleatória** quando outros eventos
+        acontecerem...por exemplo, ao passar um obstáculo.
+      courseC_flappy_events8_2018: Tente definir uma cena **aleatória** quando outros
+        eventos acontecerem...por exemplo, ao passar um obstáculo.
+      courseC_flappy_events8_2019: Tente definir uma cena **aleatória** quando outros
+        eventos acontecerem...por exemplo, ao passar um obstáculo.
       courseC_harvester_loops1: Use laços para pegar todas as abóboras.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
@@ -6835,12 +7573,44 @@ pt-BR:
       courseC_maze_debugging3: Remova os blocos para levar Scrat até a noz!
       courseC_maze_debugging3_2018: Remova os blocos para levar Scrat até a noz!
       courseC_maze_debugging3_2019: Remova os blocos para levar Scrat até a noz!
+      courseC_maze_debugging4: Alguém tem suas instruções misturadas! Você pode ajudar?
+      courseC_maze_debugging4_2018: Alguém tem suas instruções misturadas! Você pode
+        ajudar?
+      courseC_maze_debugging4_2019: Alguém tem suas instruções misturadas! Você pode
+        ajudar?
+      courseC_maze_debugging5: Depure este nível reorganizando e alterando os blocos.
+      courseC_maze_debugging5_2018: Depure este nível reorganizando e alterando os
+        blocos.
+      courseC_maze_debugging5_2019: Depure este nível reorganizando e alterando os
+        blocos.
+      courseC_maze_debugging6: Descubra o que está errado e leve Scrat até a bolota.
+      courseC_maze_debugging6_2018: Descubra o que está errado e leve Scrat até a
+        bolota.
+      courseC_maze_debugging6_2019: Descubra o que está errado e leve Scrat até a
+        bolota.
+      courseC_maze_debugging7: "**Desafio:** Depure este nível reorganizando, adicionando
+        e excluindo blocos."
+      courseC_maze_debugging7_2018: "**Desafio:** Depure este nível reorganizando,
+        adicionando e excluindo blocos."
+      courseC_maze_debugging7_2019: "**Desafio:** Depure este nível reorganizando,
+        adicionando e excluindo blocos."
+      courseC_maze_debugging8: Depure este nível para levar Scrat até a bolota.
+      courseC_maze_debugging9: Depure este nível para levar Scrat até a bolota.
+      courseC_maze_debugging9_2018: Depure este nível para levar Scrat até a bolota.
+      courseC_maze_debugging9_2019: Use os blocos na caixa de ferramentas para montar
+        seu programa. Leve o pássaro até o porco.
       courseC_maze_debugging_challenge1: Ajude Scrat a decidir que lado ir para chegar
         até a noz.
       courseC_maze_debugging_challenge1_2018: Ajude Scrat a decidir que lado ir para
         chegar até a noz.
       courseC_maze_debugging_challenge1_2019: Ajude Scrat a decidir que lado ir para
         chegar até a noz.
+      courseC_maze_debugging_challenge2: Ajude o Scrat a alcançar a bolota com apenas
+        quatro comandos `virar`.
+      courseC_maze_debugging_challenge2_2018: Ajude o Scrat a alcançar a bolota com
+        apenas quatro comandos `virar`.
+      courseC_maze_debugging_challenge2_2019: Ajude o Scrat a alcançar a bolota com
+        apenas quatro comandos `virar`.
       courseC_maze_loops1: Você consegue levar o pássaro até o porco?
       courseC_maze_loops10: Você está indo bem! Continuem assim!
       courseC_maze_loops11: Você está quase lá! Desta vez, escolha o caminho que você
@@ -6849,6 +7619,8 @@ pt-BR:
         Você consegue levar o pássaro até o porco criando um laço que usa
         apenas um bloco "mover para frente" dentro de um bloco "repita"?
       courseC_maze_loops3: Resolva esté desafio criando um laço!
+      courseC_maze_loops6: Laços até funcionam com mais de um bloco dentro! Você pode
+        repetir essa sequência?
       courseC_maze_loops7: Use o que você aprendeu em outros desafios!
       courseC_maze_loops8: 'Desafio: Combine ideias dos últimos desafios para completar
         este nível.'
@@ -6867,6 +7639,12 @@ pt-BR:
       courseC_maze_programming5: Desvie da TNT.
       courseC_maze_programming5_2018: Desvie da TNT.
       courseC_maze_programming5_2019: Desvie da TNT.
+      courseC_maze_programming6: '"Mantenha a calma e me ajude a encontrar o porco
+        malvado. Senão eu posso ficar zangado!"'
+      courseC_maze_programming6_2018: '"Mantenha a calma e me ajude a encontrar o
+        porco malvado. Senão eu posso ficar zangado!"'
+      courseC_maze_programming6_2019: '"Mantenha a calma e me ajude a encontrar o
+        porco malvado. Senão eu posso ficar zangado!"'
       courseC_maze_programming7: "**Desafio:** Este código tem um monte de bugs. Você
         precisará remover alguns blocos e acrescentar outros."
       courseC_maze_programming7_2018: "**Desafio:** Este código tem um monte de bugs.
@@ -6891,6 +7669,10 @@ pt-BR:
         é encontrá-lo. '
       courseC_maze_programming_challenge1_2019: 'O porco está se escondendo, e o objetivo
         é encontrá-lo. '
+      courseC_playLab_embedded: |-
+        Aqui está um jogo para você jogar! Para ganhar, use as setas do teclado para fazer o pinguim correr para o polvo.
+
+        Quando estiver pronto, você aprenderá a fazer este jogo!
       courseC_puppy_loops10: Você está indo bem! Continuem assim!
       courseC_puppy_loops11: Você está quase lá! Desta vez, escolha o caminho que
         você preferir!
@@ -6899,6 +7681,9 @@ pt-BR:
       courseC_puppy_loops8courseC_maze_loops8: 'Desafio: Combine ideias dos últimos
         desafios para completar este nível.'
       courseC_puppy_loops9: Você está indo bem! Continuem assim!
+      courseC_starWars_loops1: O BB-8 vai pegar qualquer sucata de metal ao longo
+        do caminho por onde ele se move. Use 5 do mesmo bloco para fazer o BB-8 pegar
+        toda a sucata de metal na área de jogo.
       courseC_starWars_loops10: Você está indo bem! Continuem assim!
       courseC_starWars_loops10_2018: Você está indo bem! Continuem assim!
       courseC_starWars_loops10_2019: Você está indo bem! Continuem assim!
@@ -6911,18 +7696,47 @@ pt-BR:
         que você preferir!
       courseC_starWars_loops11_2019: Você está quase lá! Desta vez, escolha o caminho
         que você preferir!
+      courseC_starWars_loops1_2018: O BB-8 vai pegar qualquer sucata de metal ao longo
+        do caminho por onde ele se move. Use 5 do mesmo bloco para fazer o BB-8 pegar
+        toda a sucata de metal na área de jogo.
+      courseC_starWars_loops1_2019: O BB-8 vai pegar qualquer sucata de metal ao longo
+        do caminho por onde ele se move. Use 5 do mesmo bloco para fazer o BB-8 pegar
+        toda a sucata de metal na área de jogo.
+      courseC_starWars_loops1_predict1: O BB-8 vai pegar qualquer sucata de metal
+        ao longo do caminho por onde ele se move. Use 5 do mesmo bloco para fazer
+        o BB-8 pegar toda a sucata de metal na área de jogo.
+      courseC_starWars_loops1_predict1_2018: O BB-8 vai pegar qualquer sucata de metal
+        ao longo do caminho por onde ele se move. Use 5 do mesmo bloco para fazer
+        o BB-8 pegar toda a sucata de metal na área de jogo.
+      courseC_starWars_loops1_predict1_2019: O BB-8 vai pegar qualquer sucata de metal
+        ao longo do caminho por onde ele se move. Use 5 do mesmo bloco para fazer
+        o BB-8 pegar toda a sucata de metal na área de jogo.
       courseC_starWars_loops2: Para pegar todo os pedaços de metal, tente criar um
         laço que usa apenas um bloco dentro de um bloco `repita`.
       courseC_starWars_loops2_2018: Para pegar todo os pedaços de metal, tente criar
         um laço que usa apenas um bloco dentro de um bloco `repita`.
       courseC_starWars_loops2_2019: Para pegar todo os pedaços de metal, tente criar
         um laço que usa apenas um bloco dentro de um bloco `repita`.
+      courseC_starWars_loops4: Neste quebra-cabeça, dois laços `repetir` irão ajudá-lo
+        a levar o BB-8 a todas as sucatas de metal com o menor número de blocos!
+      courseC_starWars_loops4_2018: Neste quebra-cabeça, dois laços `repetir` irão
+        ajudá-lo a levar o BB-8 a todas as sucatas de metal com o menor número de
+        blocos!
+      courseC_starWars_loops4_2019: Neste quebra-cabeça, dois laços `repetir` irão
+        ajudá-lo a levar o BB-8 a todas as sucatas de metal com o menor número de
+        blocos!
       courseC_starWars_loops5: Faça o BB-8 pegar todos os pedaços de metal o mais
         rápido possível!
       courseC_starWars_loops5_2018: Faça o BB-8 pegar todos os pedaços de metal o
         mais rápido possível!
       courseC_starWars_loops5_2019: Faça o BB-8 pegar todos os pedaços de metal o
         mais rápido possível!
+      courseC_starWars_loops6: Laços até funcionam com mais de um bloco dentro! Você
+        pode repetir essa sequência?
+      courseC_starWars_loops6_2018: Laços até funcionam com mais de um bloco dentro!
+        Você pode repetir essa sequência?
+      courseC_starWars_loops6_2019: Laços até funcionam com mais de um bloco dentro!
+        Você pode repetir essa sequência?
       courseD_Frozen_nested5: Brinque com os flocos de neve!
       courseD_Frozen_nested6: Desenhe um modelo de degrau de escada que tenha voltas
         entre 75 e 105 graus.
@@ -7075,9 +7889,55 @@ pt-BR:
         pode repetir para desenhar esta imagem?
       courseD_autorun_binary8_2019: Termine o código para criar este desenho.
       courseD_autorun_binary8_predict1_2019: Termine o código para criar este desenho.
+      courseD_bee_conditionals1: Verifique se há uma flor embaixo da nuvem. Se houver
+        uma flor, pegue o néctar.
       courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2019: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals1_predict1: Verifique se há uma flor embaixo da nuvem.
+        Se houver uma flor, pegue o néctar.
+      courseD_bee_conditionals1_predict1_2018: Verifique se há uma flor embaixo da
+        nuvem. Se houver uma flor, pegue o néctar.
+      courseD_bee_conditionals1_predict1_2019: Verifique se há uma flor embaixo da
+        nuvem. Se houver uma flor, pegue o néctar.
+      courseD_bee_conditionals2: 'Verifique embaixo de cada nuvem para ver se ela
+        está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals2_2018: 'Verifique embaixo de cada nuvem para ver se
+        ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals2_2019: 'Verifique embaixo de cada nuvem para ver se
+        ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals2_test: 'Verifique embaixo de cada nuvem para ver se
+        ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals3: "Ajude a abelha a recolher todo o néctar. \n\nVocê
+        só pode coletar néctar de flores, mas você pode verificar qualquer espaço
+        para ver se há uma flor."
+      courseD_bee_conditionals3_2018: "Ajude a abelha a recolher todo o néctar. \n\nVocê
+        só pode coletar néctar de flores, mas você pode verificar qualquer espaço
+        para ver se há uma flor."
+      courseD_bee_conditionals3_2019: "Ajude a abelha a recolher todo o néctar. \n\nVocê
+        só pode coletar néctar de flores, mas você pode verificar qualquer espaço
+        para ver se há uma flor."
+      courseD_bee_conditionals4: Pegue todo o néctar usando o menor número de blocos
+        possível.
+      courseD_bee_conditionals4_2018: Pegue todo o néctar usando o menor número de
+        blocos possível.
+      courseD_bee_conditionals4_2019: Pegue todo o néctar usando o menor número de
+        blocos possível.
+      courseD_bee_conditionals5: Colete todo o néctar usando o menor número de blocos
+        possível
+      courseD_bee_conditionals5_2018: Colete todo o néctar usando o menor número de
+        blocos possível
+      courseD_bee_conditionals5_2019: Colete todo o néctar usando o menor número de
+        blocos possível
+      courseD_bee_conditionals6: Algumas dessas nuvens podem ter favos de mel embaixo
+        delas. Certifique-se de verificar se um favo de mel está se escondendo atrás
+        de cada nuvem!
+      courseD_bee_conditionals6_2018: Algumas dessas nuvens podem ter favos de mel
+        embaixo delas. Certifique-se de verificar se um favo de mel está se escondendo
+        atrás de cada nuvem!
+      courseD_bee_conditionals6_2019: Algumas dessas nuvens podem ter favos de mel
+        embaixo delas. Certifique-se de verificar se um favo de mel está se escondendo
+        atrás de cada nuvem!
       courseD_bee_conditionals7: Use o bloco `se/senão` para coletar o nectar das
         flores e fazer mel na colmeia.
       courseD_bee_conditionals7_2018: Use o bloco `se/senão` para coletar o nectar
@@ -7090,6 +7950,15 @@ pt-BR:
         o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals7_predict2_2019: Use o bloco `se/senão` para coletar
         o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals8: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
+      courseD_bee_conditionals8_2018: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
+      courseD_bee_conditionals8_2019: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2019: Colete todo o néctar ou faça todo o mel.
@@ -7110,6 +7979,13 @@ pt-BR:
         Corrija o(s) erro(s) para coletar todo o néctar
         e produzir todo o mel.
       courseD_bee_debugging4: Corrija o(s) erro(s) para fazer todo o mel.
+      courseD_bee_debugging5: 'Desafio: Todos os comandos que você precisa já estão
+        aqui...agora use suas habilidades de depuração para descobrir como resolver
+        esse quebra-cabeça.'
+      courseD_bee_debugging6: 'Desafio: Corrigir os erros para coletar todo o néctar
+        e fazer todo o mel.'
+      courseD_bee_debugging9: Ajude a abelha a consertar o código para pegar todo
+        o néctar.
       courseD_bee_nestedLoops1: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2019: Ajude a abelha a coletar todo o nectar.
@@ -7133,19 +8009,51 @@ pt-BR:
         mel na colmeia. \r\n\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2019: "Colete todo o néctar de cada flor\ne produza
         mel na colmeia. \r\n\r\nUse um laço aninhado. "
+      courseD_bounce_events1: Anexe um bloco no bloco "quando seta para a esquerda"
+        e pressione "Executar" para mover o jogador para a bandeira.
       courseD_bounce_events10: Agora há um alvo na parte de cima. Conecte os blocos
         "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a
         bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um
         jogo. Veja quantos pontos você consegue marcar antes que seu oponente marque
         duas vezes.
+      courseD_bounce_events10s: 'Anexe o bloco `marque ponto` ao evento `quando bola
+        no gol` e o bloco `marque ponto para o oponente` ao evento `quando a bola
+        não pegar na mão` para fazer um jogo. '
+      courseD_bounce_events10s_2018: 'Anexe o bloco `marque ponto` ao evento `quando
+        bola no gol` e o bloco `marque ponto para o oponente` ao evento `quando a
+        bola não pegar na mão` para fazer um jogo. '
+      courseD_bounce_events10s_2019: 'Anexe o bloco `marque ponto` ao evento `quando
+        bola no gol` e o bloco `marque ponto para o oponente` ao evento `quando a
+        bola não pegar na mão` para fazer um jogo. '
       courseD_bounce_events11: Agora você pode conectar blocos ao bloco "quando o
         jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais
         de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete
         e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar
         duas vezes.
+      courseD_bounce_events11s: 'Anexe o bloco `lançar bola nova` em todos os lugares
+        onde o jogo precisa de uma nova bola. '
+      courseD_bounce_events11s_2018: 'Anexe o bloco `lançar bola nova` em todos os
+        lugares onde o jogo precisa de uma nova bola. '
+      courseD_bounce_events11s_2019: 'Anexe o bloco `lançar bola nova` em todos os
+        lugares onde o jogo precisa de uma nova bola. '
       courseD_bounce_events12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar
         o visual e todas as regras. Quando terminar, clique em Concluir para que seus
         amigos possam jogar seu jogo em seus celulares.
+      courseD_bounce_events12s: Faça deste seu próprio jogo. Você pode alterar todos
+        os recursos visuais e as regras. Quando terminar, clique em "Concluir" para
+        permitir que amigos experimentem seu jogo em seus telefones.
+      courseD_bounce_events12s_2018: Faça deste seu próprio jogo. Você pode alterar
+        todos os recursos visuais e as regras. Quando terminar, clique em "Concluir"
+        para permitir que amigos experimentem seu jogo em seus telefones.
+      courseD_bounce_events12s_2019: Faça deste seu próprio jogo. Você pode alterar
+        todos os recursos visuais e as regras. Quando terminar, clique em "Concluir"
+        para permitir que amigos experimentem seu jogo em seus telefones.
+      courseD_bounce_events1s: Anexe um bloco no bloco "quando seta para a esquerda"
+        e pressione "Executar" para mover o jogador para a rede.
+      courseD_bounce_events1s_2018: Anexe um bloco no bloco "quando seta para a esquerda"
+        e pressione "Executar" para mover o jogador para a rede.
+      courseD_bounce_events1s_2019: Anexe um bloco no bloco "quando seta para a esquerda"
+        e pressione "Executar" para mover o jogador para a rede.
       courseD_bounce_events2: Conecte um bloco aos blocos "quando clicar na seta para
         a direita" e "quando clicar na seta para a esquerda". Mova a raquete para
         alcançar ambos os objetivos finais.
@@ -7162,8 +8070,23 @@ pt-BR:
         atinja o alvo.
       courseD_bounce_events6: Agora o alvo está no topo. Você precisa conectar blocos
         em ambos os blocos "quando a bola bater" para resolver este desafio.
+      courseD_bounce_events6s: Anexe código para fazer a bola saltar quando ela bate
+        na parede para que você possa resolver este quebra-cabeça.
+      courseD_bounce_events6s_2018: Anexe código para fazer a bola saltar quando ela
+        bate na parede para que você possa resolver este quebra-cabeça.
+      courseD_bounce_events6s_2019: Anexe código para fazer a bola saltar quando ela
+        bate na parede para que você possa resolver este quebra-cabeça.
       courseD_bounce_events7: Conecte os blocos a cada um dos blocos "quando". Faça
         a bola quicar até que ela atinja o alvo.
+      courseD_bounce_events7s: Anexe blocos de som para fazer a rede fazer barulho
+        quando você acertar a cesta e faça o apito soar quando a bola não atinge sua
+        mão. Quique a bola até ela alcançar o alvo final.
+      courseD_bounce_events7s_2018: Anexe blocos de som para fazer a rede fazer barulho
+        quando você acertar a cesta e faça o apito soar quando a bola não atinge sua
+        mão. Quique a bola até ela alcançar o alvo final.
+      courseD_bounce_events7s_2019: Anexe blocos de som para fazer a rede fazer barulho
+        quando você acertar a cesta e faça o apito soar quando a bola não atinge sua
+        mão. Quique a bola até ela alcançar o alvo final.
       courseD_collector_debugging1: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging1_2018: Corrija o(s) erro(s) para coletar todo o
         tesouro.
@@ -7196,6 +8119,26 @@ pt-BR:
         tesouro.
       courseD_collector_debugging4a_2019: Corrija o(s) erro(s) para coletar todo o
         tesouro.
+      courseD_collector_debugging5: Todos os comandos que você precisa já estão aqui...agora
+        use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.
+      courseD_collector_debugging5_2018: Todos os comandos que você precisa já estão
+        aqui...agora use suas habilidades de depuração para descobrir como resolver
+        esse quebra-cabeça.
+      courseD_collector_debugging5a: Todos os comandos que você precisa já estão aqui...agora
+        use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.
+      courseD_collector_debugging5a_2018: Todos os comandos que você precisa já estão
+        aqui...agora use suas habilidades de depuração para descobrir como resolver
+        esse quebra-cabeça.
+      courseD_collector_debugging5a_2019: Todos os comandos que você precisa já estão
+        aqui...agora use suas habilidades de depuração para descobrir como resolver
+        esse quebra-cabeça.
+      courseD_collector_debugging6: 'Desafio: Use suas habilidades de depuração para
+        corrigir os erros e coletar todo o tesouro.'
+      courseD_collector_debugging6_2018: 'Desafio: Use suas habilidades de depuração
+        para corrigir os erros e coletar todo o tesouro.'
+      courseD_collector_debugging7: 'Desafio: Todos os comandos que você precisa já
+        estão aqui...agora use suas habilidades de depuração para descobrir como resolver
+        esse quebra-cabeça.'
       courseD_collector_debugging_challenge2: Você é um especialista de laços aninhados?
         Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_collector_debugging_challenge2_2018: Você é um especialista de laços
@@ -7213,23 +8156,100 @@ pt-BR:
         Corrija o(s) erro(s) para coletar todo o néctar
         e produzir todo o mel.
       courseD_debugging_4: Corrija o(s) erro(s) para fazer todo o mel.
+      courseD_debugging_5: 'Desafio: Todos os comandos que você precisa já estão aqui...agora
+        use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.'
+      courseD_debugging_6: 'Desafio: Corrigir os erros para coletar todo o néctar
+        e fazer todo o mel.'
+      courseD_farmer_condLoops1: Use condicionais para garantir que você colha o milho
+        somente quando ele estiver lá.
+      courseD_farmer_condLoops1_2018: Use condicionais para garantir que você colha
+        o milho somente quando ele estiver lá.
+      courseD_farmer_condLoops1_2019: Use condicionais para garantir que você colha
+        o milho somente quando ele estiver lá.
       courseD_farmer_condLoops2: Ajude a colheitadeira coletar o milho e o alface
         do campo.
       courseD_farmer_condLoops2_2018: Ajude a colheitadeira coletar o milho e o alface
         do campo.
       courseD_farmer_condLoops2_2019: Ajude a colheitadeira coletar o milho e o alface
         do campo.
+      courseD_farmer_condLoops3: '*"Milho, alface E abóboras! Ajude-me a colher todos
+        eles."*'
+      courseD_farmer_condLoops3_2018: '*"Milho, alface E abóboras! Ajude-me a colher
+        todos eles."*'
+      courseD_farmer_condLoops3_2019: '*"Milho, alface E abóboras! Ajude-me a colher
+        todos eles."*'
+      courseD_farmer_condLoops4: Ajude o fazendeiro a colher toda a alface em cada
+        pé antes de passar para o próximo grupo.
+      courseD_farmer_condLoops4_2018: Ajude o fazendeiro a colher toda a alface em
+        cada pé antes de passar para o próximo grupo.
+      courseD_farmer_condLoops4_2019: Ajude o fazendeiro a colher toda a alface em
+        cada pé antes de passar para o próximo grupo.
+      courseD_farmer_condLoops4a: Ajude o fazendeiro a colher toda a alface em cada
+        pé antes de passar para o próximo grupo.
+      courseD_farmer_condLoops5: Recolha todo o milho e alface, depois pegue a abóbora
+        no final.
+      courseD_farmer_condLoops5_2018: Recolha todo o milho e alface, depois pegue
+        a abóbora no final.
+      courseD_farmer_condLoops5_2019: Recolha todo o milho e alface, depois pegue
+        a abóbora no final.
+      courseD_farmer_condLoops6: Você consegue descobrir como pegar a abóbora? Certifique-se
+        de recolher todo o milho ao longo do caminho!
+      courseD_farmer_condLoops6_2018: Você consegue descobrir como pegar a abóbora?
+        Certifique-se de recolher todo o milho ao longo do caminho!
+      courseD_farmer_condLoops6_2019: Você consegue descobrir como pegar a abóbora?
+        Certifique-se de recolher todo o milho ao longo do caminho!
+      courseD_farmer_condLoops7: 'Desafio: Recolha todo o milho e alface, depois pegue
+        a abóbora.'
+      courseD_farmer_condLoops7_2018: 'Desafio: Recolha todo o milho e alface, depois
+        pegue a abóbora.'
+      courseD_farmer_condLoops7_2019: 'Desafio: Recolha todo o milho e alface, depois
+        pegue a abóbora.'
+      courseD_farmer_condLoops_challenge1: Recolha tudo para completar o nível. Cada
+        cultura escondida tem apenas um milho ou alface.
+      courseD_farmer_condLoops_challenge1_2018: Recolha tudo para completar o nível.
+        Cada cultura escondida tem apenas um milho ou alface.
+      courseD_farmer_condLoops_challenge1_2019: Recolha tudo para completar o nível.
+        Cada cultura escondida tem apenas um milho ou alface.
       courseD_farmer_condLoops_challenge2: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_2018: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_2019: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_clone: Colete tudo para completar o nível.
+      courseD_farmer_conditionals1: Mova-se para a pilha de sujeira e use o bloco
+        `remover` para removê-la.
+      courseD_farmer_conditionals10: 'Achate todas essas pilhas usando o menor número
+        de blocos possível. '
       courseD_farmer_conditionals2: Mova para o buraco e preencha-o com seis pás de
         terra, usando o bloco `preencher`.
       courseD_farmer_conditionals3: Use o menor número de blocos possível para resolver
         este enigma.
+      courseD_farmer_conditionals4: Ajude o fazendeiro a remover essa pilha inteira
+        usando um laço `while`.
       courseD_farmer_conditionals5: 'Ajude-me a remover toda esta areia. '
+      courseD_farmer_conditionals6: Use o laço `while` para preencher facilmente todos
+        os buracos.
+      courseD_farmer_conditionals7: Preencha o buraco no final de cada um desses caminhos.
       courseD_farmer_conditionals8: 'Desafio: Preencha todos estes buracos usando
         o menor número de blocos possível. '
+      courseD_farmer_conditionals9: 'Achate todas essas pilhas usando o menor número
+        de blocos possível. '
+      courseD_farmer_while1: Mova-se para a pilha de sujeira e use o bloco `remover`
+        para removê-la.
+      courseD_farmer_while10: 'Achate todas essas pilhas usando o menor número de
+        blocos possível. '
+      courseD_farmer_while10_2018: 'Achate todas essas pilhas usando o menor número
+        de blocos possível. '
+      courseD_farmer_while10_2019: 'Achate todas essas pilhas usando o menor número
+        de blocos possível. '
+      courseD_farmer_while10_predict2: 'Achate todas essas pilhas usando o menor número
+        de blocos possível. '
+      courseD_farmer_while10_predict2_2018: 'Achate todas essas pilhas usando o menor
+        número de blocos possível. '
+      courseD_farmer_while10_predict2_2019: 'Achate todas essas pilhas usando o menor
+        número de blocos possível. '
+      courseD_farmer_while1_2018: Mova-se para a pilha de sujeira e use o bloco `remover`
+        para removê-la.
+      courseD_farmer_while1_2019: Mova-se para a pilha de sujeira e use o bloco `remover`
+        para removê-la.
       courseD_farmer_while2: Mova para o buraco e preencha-o com seis pás de terra,
         usando o bloco `preencher`.
       courseD_farmer_while2_2018: Mova para o buraco e preencha-o com seis pás de
@@ -7242,15 +8262,42 @@ pt-BR:
         este enigma.
       courseD_farmer_while3_2019: Use o menor número de blocos possível para resolver
         este enigma.
+      courseD_farmer_while4: Ajude o fazendeiro a remover essa pilha inteira usando
+        um laço `while`.
+      courseD_farmer_while4_2018: Ajude o fazendeiro a remover essa pilha inteira
+        usando um laço `while`.
+      courseD_farmer_while4_2019: Ajude o fazendeiro a remover essa pilha inteira
+        usando um laço `while`.
+      courseD_farmer_while4_predict1: Ajude o fazendeiro a remover essa pilha inteira
+        usando um laço `while`.
+      courseD_farmer_while4_predict1_2018: Ajude o fazendeiro a remover essa pilha
+        inteira usando um laço `while`.
+      courseD_farmer_while4_predict1_2019: Ajude o fazendeiro a remover essa pilha
+        inteira usando um laço `while`.
       courseD_farmer_while5: 'Ajude-me a remover toda esta areia. '
       courseD_farmer_while5_2018: 'Ajude-me a remover toda esta areia. '
       courseD_farmer_while5_2019: 'Ajude-me a remover toda esta areia. '
+      courseD_farmer_while6: Use o laço `while` para preencher facilmente todos os
+        buracos.
+      courseD_farmer_while6_2018: Use o laço `while` para preencher facilmente todos
+        os buracos.
+      courseD_farmer_while6_2019: Use o laço `while` para preencher facilmente todos
+        os buracos.
+      courseD_farmer_while7: Preencha o buraco no final de cada um desses caminhos.
+      courseD_farmer_while7_2018: Preencha o buraco no final de cada um desses caminhos.
+      courseD_farmer_while7_2019: Preencha o buraco no final de cada um desses caminhos.
       courseD_farmer_while8: 'Desafio: Preencha todos estes buracos usando o menor
         número de blocos possível. '
       courseD_farmer_while8_2018: 'Desafio: Preencha todos estes buracos usando o
         menor número de blocos possível. '
       courseD_farmer_while8_2019: 'Desafio: Preencha todos estes buracos usando o
         menor número de blocos possível. '
+      courseD_farmer_while9: 'Achate todas essas pilhas usando o menor número de blocos
+        possível. '
+      courseD_farmer_while9_2018: 'Achate todas essas pilhas usando o menor número
+        de blocos possível. '
+      courseD_farmer_while9_2019: 'Achate todas essas pilhas usando o menor número
+        de blocos possível. '
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
@@ -7259,6 +8306,11 @@ pt-BR:
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo e chegar na noz!
+      courseD_iceage_loops2: Use um bloco `virar à esquerda` para chegar à bolota!
+      courseD_iceage_loops2_2019: Use um bloco `virar à esquerda` para chegar à bolota!
+      courseD_iceage_loops3: Você consegue chegar à bolota com apenas um bloco `avançar`?
+      courseD_iceage_loops3_2019: Você consegue chegar à bolota com apenas um bloco
+        `avançar`?
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
@@ -7272,6 +8324,13 @@ pt-BR:
         o Scrat a chegar lá?
       courseD_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para
         ajudar o Scrat a chegar lá?
+      courseD_maze_intro4_2019: Ajude Red a alcançar o porco.
+      courseD_maze_nestedLoops3: Leve o zumbi até o girassol usando o menor número
+        de blocos possível.
+      courseD_maze_nestedLoops3_2018: Leve o zumbi até o girassol usando o menor número
+        de blocos possível.
+      courseD_maze_nestedLoops3_2019: Leve o zumbi até o girassol usando o menor número
+        de blocos possível.
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de
         blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na
         quantidade de códigos que você precisa."
@@ -7305,6 +8364,10 @@ pt-BR:
       courseD_maze_ramp5d: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2019: Leve o pássaro até o porco.
+      courseD_maze_ramp6: '"Mantenha a calma e me ajude a encontrar o porco malvado.
+        Senão eu posso ficar zangado!"'
+      courseD_maze_ramp6a: '"Mantenha a calma e me ajude a encontrar o porco malvado.
+        Senão eu posso ficar zangado!"'
       courseD_maze_ramp7: Leve o pássaro até o porco!
       courseD_maze_until1: Leve o Angry Bird até o porco.
       courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
@@ -7403,11 +8466,15 @@ pt-BR:
       courseE_farmer_concept2: Colete todas as abóboras.
       courseE_farmer_concept2_2018: Colete todas as abóboras.
       courseE_farmer_concept2_2019: Colete todas as abóboras.
+      courseE_farmer_concept3: Preencha o buraco no final de cada um desses caminhos.
+      courseE_farmer_concept3_2018: Preencha o buraco no final de cada um desses caminhos.
+      courseE_farmer_concept3_2019: Preencha o buraco no final de cada um desses caminhos.
       courseE_farmer_concept4: |-
         Agora, vamos nos aprofundar mais um nível!
         Aninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o
         artista no lugar para desenhar a próxima reta. Qual desses blocos de código você
         pode colocar no final do laço mais externo para desenhar toda a grade?
+      courseE_farmer_elseif_test: Preencha o buraco no final de cada um desses caminhos.
       courseE_farmer_functions10b: Use sua nova função duas vezes para resolver este
         desafio.
       courseE_farmer_functions10b_2018: Use sua nova função duas vezes para resolver
@@ -7436,6 +8503,10 @@ pt-BR:
       courseE_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp5: Desvie da TNT.
       courseE_maze_ramp5_2018: Desvie da TNT.
+      courseE_maze_ramp6: '"Mantenha a calma e me ajude a encontrar o porco malvado.
+        Senão eu posso ficar zangado!"'
+      courseE_maze_ramp6_2018: '"Mantenha a calma e me ajude a encontrar o porco malvado.
+        Senão eu posso ficar zangado!"'
       courseE_multi_maze_ramp5: Desvie da TNT.
       courseE_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes,
         ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
@@ -7481,12 +8552,30 @@ pt-BR:
       courseF_artist_variables7_2019: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
+      courseF_bee_conditionals1_predict1: Verifique se há uma flor embaixo da nuvem.
+        Se houver uma flor, pegue o néctar.
+      courseF_bee_conditionals1_predict1_2018: Verifique se há uma flor embaixo da
+        nuvem. Se houver uma flor, pegue o néctar.
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
+      courseF_bee_conditionals4: Pegue todo o néctar usando o menor número de blocos
+        possível.
+      courseF_bee_conditionals4_2018: Pegue todo o néctar usando o menor número de
+        blocos possível.
+      courseF_bee_conditionals5: Colete todo o néctar usando o menor número de blocos
+        possível
+      courseF_bee_conditionals5_2018: Colete todo o néctar usando o menor número de
+        blocos possível
       courseF_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar
         das flores e fazer mel na colmeia.
       courseF_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar
         o nectar das flores e fazer mel na colmeia.
+      courseF_bee_conditionals8: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
+      courseF_bee_conditionals8_2018: |-
+        Colete néctar se houver uma flor.
+        Caso contrário, faça mel (porque existe um favo de mel).
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos
         possíveis.
       courseF_bee_for1_2018: Colete o nectar de cada flor usando o menor número de
@@ -7549,6 +8638,10 @@ pt-BR:
       courseF_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseF_maze_ramp5: Desvie da TNT.
       courseF_maze_ramp5_2018: Desvie da TNT.
+      courseF_maze_ramp6: '"Mantenha a calma e me ajude a encontrar o porco malvado.
+        Senão eu posso ficar zangado!"'
+      courseF_maze_ramp6_2018: '"Mantenha a calma e me ajude a encontrar o porco malvado.
+        Senão eu posso ficar zangado!"'
       courseF_playlab_variables0: Esta é uma Perna de Pirata. Ele é muito difícil
         de entender nos dias de hoje!
       courseF_playlab_variables1: Esta é uma Perna de Pirata. Ele é muito difícil
@@ -7766,6 +8859,8 @@ pt-BR:
         "Aquele porco está bagunçando minhas penas."
 
         Há um bloco extra que fará o pássaro cair. Jogue-o fora arrastando o de volta para a caixa de ferramentas.
+      grade2_CaringForNewPet_4: '"Mantenha a calma e me ajude a encontrar o porco
+        malvado. Senão eu posso ficar zangado!"'
       grade2_CaringForNewPet_5: Leve-me até o porco!
       grade2_MakeDogTag_10: Agora desenhe o que você quiser!
       grade2_MakeDogTag_3: Ajude-me a completar a casa para o gato.
@@ -7971,16 +9066,35 @@ pt-BR:
         em cada colmeia usando o menor número possível de blocos.
       grade3_Loops_TeacherIDo: "Essas flores parecem deliciosas!\r\n\r\nColete o néctar\nde
         cada uma das flores usando o menor número possível de blocos."
+      grade3_RunningFarm_3: '*"Milho, alface E abóboras! Ajude-me a colher todos eles."*'
+      grade3_RunningFarm_4: Ajude o fazendeiro a colher toda a alface em cada pé antes
+        de passar para o próximo grupo.
+      grade3_RunningFarm_6: Você consegue descobrir como pegar a abóbora? Certifique-se
+        de recolher todo o milho ao longo do caminho!
+      grade3_bee_conditionals_new1a: "Ajude a abelha a recolher todo o néctar. \n\nVocê
+        só pode coletar néctar de flores, mas você pode verificar qualquer espaço
+        para ver se há uma flor."
+      grade3_bee_conditionals_new2: Colete todo o néctar usando o menor número de
+        blocos possível
+      grade3_bee_conditionals_new2a: Pegue todo o néctar usando o menor número de
+        blocos possível.
       grade3_bee_conditionals_new3b: Colete todo o néctar e faça todo o mel.
+      grade3_bee_conditionals_quantum1: Verifique se há uma flor embaixo da nuvem.
+        Se houver uma flor, pegue o néctar.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas
         as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.
         \ \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade3_bee_conditionals_quantum3: Algumas dessas nuvens podem ter favos de mel
+        embaixo delas. Certifique-se de verificar se um favo de mel está se escondendo
+        atrás de cada nuvem!
       grade3_bee_conditionals_quantum4: Use o bloco `se/senão` para coletar o nectar
         das flores e fazer mel na colmeia.
       grade3_maze_Loop1: "Avaliação: Leve-me até o girassol\nusando apenas 5 blocos! "
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível!
         \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade
         de códigos que você precisa."
+      grade3_maze_loops2a: Leve o zumbi até o girassol usando o menor número de blocos
+        possível.
       grade3_maze_loops3: "Vamos subir o nível! \r\nUse\nlaços para me levar até o
         girassol com o menor número de laços possível."
       grade3_maze_loops4: |-
@@ -7999,17 +9113,25 @@ pt-BR:
       grade3_maze_nestedLoops4: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
+      grade3_robotFarmer_ConditionalsIntro4: Ajude o fazendeiro a remover essa pilha
+        inteira usando um laço `while`.
       grade3_robotFarmer_ConditionalsIntro_10: Estou trabalhando até tarde, então
         está escuro, e eu não sei o tamanho desses montes de terra. Agora, eu não
         tenho todas as opções que eu costumava ter com o bloco "enquanto". Mova-me
         ao longo do campo e, se houver um monte de terra, remova-o
+      grade3_robotFarmer_ConditionalsIntro_10a: 'Achate todas essas pilhas usando
+        o menor número de blocos possível. '
       grade3_robotFarmer_ConditionalsIntro_11: 'Ainda está escuro lá fora. Mova-me
         ao longo do terreno. Se houver um monte de terra, remova-o, e se houver um
         buraco, preencha-o. Dica: use o menu de opções no bloco "se".'
+      grade3_robotFarmer_ConditionalsIntro_11a: 'Achate todas essas pilhas usando
+        o menor número de blocos possível. '
       grade3_robotFarmer_ConditionalsIntro_5: 'Ajude-me a remover toda esta areia. '
       grade3_robotFarmer_ConditionalsIntro_6: Remova todas as pilhas de terra usando
         o menor número de blocos possível. As novas opções de menu no bloco "enquanto"
         mostram se eu estou em uma pilha de terra ou em um buraco.
+      grade3_robotFarmer_ConditionalsIntro_8: Preencha o buraco no final de cada um
+        desses caminhos.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Ajude-me a encher todos esses
         buracos com 5 pás de terra. Dica: você pode usar um bloco "repita" dentro
         de um bloco "enquanto".'
@@ -8489,6 +9611,7 @@ pt-BR:
       gradek_playlab_events5a: Sobre o Projeto Meu Robô! Escreva código para que ao
         clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
       group test: Faça um jogo
+      iceAgeLoopsforVideo: Você consegue chegar à bolota com apenas um bloco `avançar`?
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
       level 'grade3_Loops_10: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar
         todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."

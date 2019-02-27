@@ -19,7 +19,7 @@ social:
   }
 </style>
 
-# Nominate a Teacher for a Computer Science Scholarship
+# Give the Gift of Education: Nominate a Teacher for a Computer Science Scholarship
 
 <img src="/images/teacherandstudents.jpg" class="responsive" width="100%">
 
@@ -29,8 +29,19 @@ Do you know a teacher who loves learning? [Our workshops](https://code.org/educa
 
 <br>
 
-<blockquote style="color:#00adbc">"I have learned more about teaching this week than I have in the past 18 years! I will incorporate these methods into all my classes."</blockquote>
-<blockquote style="color:#00adbc">— Robin Whitsel, 10th grade teacher</blockquote>
+[breakoutquote]
+
+“I have learned more about teaching this week than I have in the past 18 years! I will incorporate these methods into all my classes.” *— Robin Whitsel, 10th grade teacher*
+
+<br>
+
+“Honestly, Code.org was one of the best professional development experiences I have ever experienced as a teacher. Besides learning about computer science I also walked away with a new set of teaching skills.” *— Roseanna Misuraca, 6th grade teacher*
+
+[clearboth]
+
+[/clearboth]
+   
+[/breakoutquote]
 
 <br>
 
@@ -71,4 +82,4 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 <br>
 
-<p style="text-align:center"><i>Note: Any information you provide about the teacher you nominate will not be used for any purpose other than to notify the teacher about this opportunity, and to inform the local Code.org Regional Partner that this teacher was recommended for a scholarship. <strong>Neither the teacher nor you will be added to any newsletter lists, and the teacher’s email address will not be shared</strong>.</i>
+<p style="text-align:center"><i>Note: Any information you provide about the teacher you nominate will not be used for any purpose other than to notify the teacher about this opportunity, and to inform the local Code.org Regional Partner that this teacher was recommended for a scholarship. <strong>Neither the teacher nor you will be added to any newsletter lists, and the teacher’s email address will not be shared</strong>. The nominated teacher’s email information will be deleted at the end of this campaign, unless the teacher has chosen to sign up for a Code.org account or other Code.org services.</i>

@@ -2661,6 +2661,8 @@ it:
               name: Intelligenza Collettiva
             Relay Programming:
               name: Programmazione a Staffetta
+            Graph Paper Programming:
+              name: Programmazione su carta a quadretti
         courseb-2018:
           title: Corso B (2018)
           assignment_family_title: Corso B
@@ -3006,16 +3008,26 @@ it:
           stages:
             Creating Functions:
               name: Creazione di funzioni
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp-explore-2018:
+          stages:
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         csp4-2018:
           stages:
             Simple Encryption:
               name: Crittografia semplice
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         csp5-2018:
           stages:
             While Loops:
               name: Cicli "Mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         spritelab:
           stages:
             Alien Dance Party - Input:
@@ -3185,6 +3197,12 @@ it:
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Infine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             The Artist:
               name: L'artista
+            Events with Sprite Lab:
+              name: Eventi con il Laboratorio dei personaggi
+            Loops with the Artist:
+              name: Cicli con l'Artista
+            Sprite Lab Behaviors:
+              name: Comportamenti del Laboratorio dei personaggi
         dance-low:
           stages:
             Dance Party:
@@ -3446,6 +3464,10 @@ it:
               name: Braccialetti Binari
             'End of Course Project: Play Lab':
               name: 'Progetto di fine corso: Laboratorio'
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
@@ -3518,6 +3540,8 @@ it:
               name: 'Eventi'
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
+            'Loops: Getting Loopy':
+              name: 'Cicli: Diventare Ripetitivi'
         pre-express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
           stages:
@@ -3555,3 +3579,68 @@ it:
               name: 'Correzione Errori (Debugging)'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
+        csd2-2019:
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
+          stages:
+            Lists:
+              name: Liste
+        csd3-2019:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Functions:
+              name: Funzioni
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funzioni con parametri
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Sondaggi
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Innovazione personale
+            Number Systems:
+              name: Sistema di numerazione
+            The Internet:
+              name: Internet
+        csp2-2019:
+          stages:
+            Text Compression:
+              name: Compressione del Testo
+        csp3-2019:
+          description_short: Programmazione
+          stages:
+            Creating Functions:
+              name: Creazione di funzioni
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Crittografia semplice
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Cicli "Mentre"
+            Introduction to Arrays:
+              name: Introduzione agli array
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp-explore-2019:
+          stages:
+            Mid-Year Survey:
+              name: Sondaggio di metà anno

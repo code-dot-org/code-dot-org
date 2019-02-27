@@ -6,6 +6,7 @@ import _ from 'lodash';
 import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
 import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {fontFamilyOptions} from './constants';
 var ElementType = library.ElementType;
 
 /**
@@ -72,11 +73,35 @@ var PROP_INFO = {
     type: 'string',
     defaultValue: '"red"'
   },
+  borderWidth: {
+    friendlyName: 'border-width',
+    internalName: 'borderWidth',
+    type: 'number',
+    defaultValue: '0'
+  },
+  borderColor: {
+    friendlyName: 'border-color',
+    internalName: 'borderColor',
+    type: 'string',
+    defaultValue: '"black"'
+  },
+  borderRadius: {
+    friendlyName: 'border-radius',
+    internalName: 'borderRadius',
+    type: 'number',
+    defaultValue: '0'
+  },
+  fontFamily: {
+    friendlyName: 'font-family',
+    internalName: 'fontFamily',
+    type: 'string',
+    defaultValue: `"${fontFamilyOptions[0]}"`
+  },
   fontSize: {
     friendlyName: 'font-size',
     internalName: 'fontSize',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '14'
   },
   textAlign: {
     friendlyName: 'text-align',
@@ -234,11 +259,15 @@ PROPERTIES[ElementType.BUTTON] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'image',
     'iconColor',
-    'hidden'
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.TEXT_INPUT] = {
@@ -251,10 +280,14 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.LABEL] = {
@@ -266,9 +299,13 @@ PROPERTIES[ElementType.LABEL] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
-    'hidden'
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.DROPDOWN] = {
@@ -282,10 +319,14 @@ PROPERTIES[ElementType.DROPDOWN] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.RADIO_BUTTON] = {
@@ -314,7 +355,10 @@ PROPERTIES[ElementType.IMAGE] = {
     'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
     'iconColor',
     'hidden',
-    'fit'
+    'fit',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CANVAS] = {
@@ -332,11 +376,15 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'readonly',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CHART] = {
@@ -507,6 +555,7 @@ function getPropertyValueDropdown(param2) {
       return getAssetDropdown('image');
     case 'text-color':
     case 'background-color':
+    case 'border-color':
     case 'icon-color':
       return [
         '"white"',
@@ -518,12 +567,19 @@ function getPropertyValueDropdown(param2) {
         'rgb(255,0,0,0.5)',
         '"#FF0000"'
       ];
+    case 'border-radius':
+    case 'border-width':
+      return ['0', '1', '2', '5', '10'];
+    case 'font-family':
+      return fontFamilyOptions.map(op => `"${op}"`);
     case 'text-align':
       return ['"left"', '"right"', '"center"', '"justify"'];
     case 'fit':
       return ['"fill"', '"cover"', '"contain"', '"none"'];
     case 'hidden':
     case 'checked':
+    case 'font-size':
+      return ['8', '10', '12', '14', '18', '24', '36', '72'];
     case 'readonly':
       return ['true', 'false'];
     case 'text':

@@ -68,11 +68,15 @@ ps:
         text: نا ټاکلۍ رنګ
       Mikelab_randomColor:
         text: نا ټاکلۍ رنګ
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"while"': کله چي
       aalab_clickedOn:
         options:
           CONDITION:
             '"while"': کله چي
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"while"': کله چي

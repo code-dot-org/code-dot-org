@@ -1453,36 +1453,51 @@ es-MX:
       5:
         text: "Oh, bueno, bueno, ahora estoy en el mundo real. Voy a intentar encontrar las oficinas de Minecraft."
       6:
+        text: "Pero, voy a necesitar vuestra ayuda. ¡Empieza a hacer el tutorial, empieza a aprender a programar, y me pondré al día con vosotros chicos después de unos pocos niveles, está bien? ¡Deseadme suerte! Creo que es así. ¡Uau! ¡Cactus! ¡Estoy bien!"
       7:
+        text: "Para completar el reto de la Hora de Código, necesitarás escribir código para programar el agente. Trabajarás junto con el Agente para eliminar cualquier obstáculo en tu ruta, para que puedas recoger los elementos que necesitas para tu viaje. Sólo el Agente puede colocar y romper bloques, y tú sólo puedes recoger objetos. Tu pantalla se divide en tres partes principales. A la izquierda está Minecraft."
       8:
+        text: "En la zona media está la caja de herramientas con los comandos que el Agente puede entender."
       9:
+        text: "Y a la derecha, está el espacio de trabajo. Ahí es donde se apilan los comandos para construir el programa para controlar el Agente."
       10:
+        text: "El Agente puede caminar, girar y activar las placas de presión. También puede destruir y colocar bloques. Cuando se coloca el bloque como estos raíles de minecart, lo coloca debajo de sí mismo."
       11:
         text: "Si no recuerdas qué hay que hacer, las instrucciones de cada nivel aparecen arriba."
       12:
+        text: "Si quieres intentarlo de nuevo, puedes pulsar el botón de reinicio azul para reiniciar todo a donde comenzó. Y si necesitas eliminar un bloque de código, arrastrarlo desde tu área de trabajo a la barra de herramientas. Recuerda pulsar correr para que el agente se mueva. Vale, sigue adelante y prueba los primeros niveles. ¡Buena suerte!"
     mc_2017_repeat:
       1:
+        text: "Stampy: ¿Me pregunto qué Stacy está a la altura?"
       2:
         text: "Stacy: Woah, creo que estoy en el lugar correcto. ¡Esto es increíble!"
       3:
+        text: "¡Me siento como estuviera de vuelta en Minecraft! Hola. ¿Cómo estás? Hola?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
+        text: "Oh, hay una enredadera. No haces nada, ¿no? Katie: ¿Stacy? Stacy: Hola, ¿Katie? Katie: Sí, ¡bienvenido a Minecraft!"
       5:
         image: 'notes/mc_2017_repeat_5.png'
+        text: "Stacy: Esto es increíble. ¿Así que aquí trabajas cada día como desarrolladora, verdad? Katie: sí, es bastante impresionante. Soy desarrolladora en el equipo de mercado de Minecraft. Stacy: ¿Cuántos idiomas de codificación conoces? Katie: En mi carrera he trabajado probablemente con más de una docena. Stacy: ¿Una docena? Katie: Sí. Stacy: Ahora, ¿no te gustaría saber nada acerca de este pequeño golem que se hace llamar el agente? Katie: Utilizamos al agente para hacer cosas que Steve o Alex no pueden, como ir a través de la lava. Stacy: Bueno, yo quiero aprender cómo codificar y ellos quieren aprender a codificar, así que ¿cuál es una de las primeras cosas que necesitas saber cuando estás aprendiendo?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
+        text: "Katie: Bueno, tienes que aprender a usar bucles. Los bucles son cosas que los desarrolladores escriben para dar órdenes a un ordenador que se puede ejecutar una y otra vez. Stacy: Lo entiendo, así que creo que hay algunos de los que vienen en los siguientes niveles, así que sigue adelante y dale a los bucles una oportunidad."
       7:
         image: 'notes/mc_2017_repeat_7.png'
+        text: "En el siguiente nivel, puedes usar un bucle para mover el Agente a lo largo de la ruta. Arrastra el bloque de repetición en el área de trabajo y coloca el bloque de movimiento hacia adelante dentro del bloque de repetición. Esto indica que el ordenador hace lo mismo muchas veces en una fila sin tener que arrastrar un montón de bloques en el área de trabajo. Puedes elegir cuántas veces repetir poniendo un número en el bloque de repetición."
       8:
         image: 'notes/mc_2017_repeat_8.png'
+        text: "También puedes poner turnos y múltiples comandos en el bloque de repetición, pero por ahora intenta usar una repetición para mover al Agente adelante unos pocos pasos. Recuerda, si te pones atrapado en un rompecabezas, siempre puedes pulsar el botón de reinicio azul e inténtalo de nuevo."
       9:
         image: 'notes/mc_2017_repeat_9.png'
         text: "Si usted estan pensando en tener un trabajo genial como el de Katie, siga adelante y haga clic en el botón de mostrar código cuando usted finalice cada nivel. Eso hará que se muestre el código Javascript que alguien como Katie usa cuando ella esta realmente programando Minecraft. Katie: Si, ¡Buena suerte a todos!"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
+        text: "Preston: no trato de presumir, pero soy bastante bueno en parkour. Lizzy: Vamos a dormir ya que será de día cuando Stacy vuelva."
       2:
         image: 'notes/mc_2017_functions_2.png'
+        text: "Stacy: Ok chicos, estoy de vuelta de las oficinas de Minecraft, y creo que sé cómo resolver el problema que tengo en mi juego. Creo que puedo usar una función. Permitidme abrir esto."
       3:
         image: 'notes/mc_2017_functions_3.png'
         text: "Así que una función es conjunto específico de instrucciones para llevar a cabo una determinada tarea, como una receta. En los próximos niveles, usted tendrá acceso a funciones que puede usar para resolver los rompecabezas."
@@ -1507,27 +1522,36 @@ es-MX:
         text: "Stampy: ¡Felicidades, lo has conseguido!"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
+        text: "Stacy: ¡Enhorabuena chicos, habéis arrasado! Y ahora que habéis completado la Hora de Código, podéis empezar a codificar en Minecraft. Habéis aprendido sobre bucles, funciones y lo que hace un agente de software."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
+        text: "Ahora, es hora para el nivel de juego libre, donde tú eres el desarrollador. Usa cualquier tiempo restante para escribir tus propias funciones para explorar, minar y construir."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
+        text: "Puedes coger el código que escribas en este nivel en tu mundo de Minecraft en Minecraft: Education Edition. Simplemente haz clic en 'Finalizar' y sigue las instrucciones para obtener el enlace a usar en tu mundo para continuar codificando con el Agente. ¡Diviértete y buen trabajo!"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
         text: "Stacy: ¡Y estoy de regreso! Okey, chicos, ¡este es el agente! Les mostraré qué puede hacer. Mire ¡está haciéndolo! Yo le dije a él para construir una escalera fuera de estos bloques de terracota, ahora sólo podemos utilizar esto para salir de acá. Y chicos, no son sólo escaleras. Puedo decirle al agente que haga lo que yo quiera, y lo hará para mí."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
+        text: "Stampy: ¿Cómo lo hiciste? Stacy: Era fácil, en realidad. ¡Acabo de usar código!"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
+        text: "Mires donde mires, los ordenadores están cambiando el mundo. Ya estén en nuestros escritorios, en nuestras casas, nuestros bolsillos o en cualquier otro lugar, pero mientras la mayoría de nosotros usamos esta tecnología revolucionaria diariamente, no nos preguntamos a menudo: \"¿Cómo funcionan los ordenadores?\" En esta serie, vamos a aprender cómo funcionan realmente los ordenadores, empezando por lo que hace que un ordenador sea un ordenador. Entonces, estudiarás cómo la información está representada dentro del ordenador usando pequeñas señales eléctricas que se encienden y apagan velocidades alucinantes."
       2:
         image: 'notes/csd_concept_how_computers_work_2.png'
+        text: "Después de eso, aprenderás cómo los ordenadores utilizan circuitos para hacer todo desde las matemáticas simples para simular mundos virtuales enteros. A continuación, te acercarás y verás las diferentes partes de un ordenador que realmente ingresa, salida y almacena toda esa información. Por último, echarás un vistazo a qué código es realmente y cómo el software controla el hardware. Así que si tienes curiosidad acerca de los dispositivos que usas cada día o quieres diseñar las innovaciones del futuro, el primer paso es aprender cómo funcionan los ordenadores."
     csd_concept_computer:
       1:
         image: 'notes/csd_concept_computer_1.png'
+        text: "Mi nombre es Mayo-Li Khoe y soy diseñadora y una inventora. Así que algunas de las cosas que he diseñado han sido en Apple, y ahora diseño productos para niños para que puedan rendir más fácilmente en la escuela. Mis otros trabajos incluyen pinchar discos y bailar."
       2:
         image: 'notes/csd_concept_computer_2.png'
+        text: "¡Los ordenadores están en todas partes! Están en los bolsillos de la gente, están en los coches de la gente, la gente los tiene en sus muñecas. Pueden estar en tu mochila ahora mismo. ¿Pero qué hace un ordenador? ¿Qué hace que un ordenador sea un ordenador de todos modos? ¿E incluso cómo funciona?"
       3:
         image: 'notes/csd_concept_computer_3.png'
+        text: "¡Hola soy Nat! Yo fui uno de los diseñadores originales de la Xbox. He estado trabajando con ordenadores desde que tenía tal vez siete años y ahora trabajo en realidad virtual. Como humanos, siempre hemos construido herramientas para ayudarnos a resolver problemas. Herramientas como una silla de ruedas, un martillo o una imprenta, o un camión remolque."
       4:
         image: 'notes/csd_concept_computer_4.png'
       5:

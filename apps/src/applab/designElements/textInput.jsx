@@ -8,7 +8,11 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
+import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
+import designMode from '../designMode';
+import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -26,7 +30,7 @@ class TextInputProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'placeholder'}
@@ -35,25 +39,25 @@ class TextInputProperties extends React.Component {
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -67,9 +71,15 @@ class TextInputProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontSize
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
+        />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -78,6 +88,21 @@ class TextInputProperties extends React.Component {
           initialValue={element.style.textAlign || 'left'}
           options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -155,7 +180,7 @@ class TextInputEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <EventHeaderRow />
         <EventRow
@@ -182,13 +207,24 @@ export default {
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';
+    element.style.fontFamily = fontFamilyStyles[0];
+    element.style.fontSize = defaultFontSizeStyle;
     element.style.color = '#000000';
     element.style.backgroundColor = '';
+    elementUtils.setDefaultBorderStyles(element, {
+      forceDefaults: true,
+      textInput: true
+    });
 
     return element;
   },
 
   onDeserialize: function(element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element, {textInput: true});
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
+
     $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text input unless running

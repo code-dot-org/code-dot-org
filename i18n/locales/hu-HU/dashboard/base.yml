@@ -57,7 +57,7 @@ hu:
     submit: 'Írja le a véleményét'
   appname: "Code.org"
   stage: "szakasz"
-  stage_number: "Szint %{number}"
+  stage_number: "Lecke %{number}"
   puzzle: "Kirakós"
   trophies: "trófeák"
   courses: 'tanfolyamok'
@@ -79,7 +79,7 @@ hu:
   more_info: 'További információk'
   auth:
     continue_with: 'Bejelentkezés ezzel: %{provider}'
-    sign_in_with: 'Bejelentkezés %{provider} -el'
+    sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: 'Bejelentkezve!'
     signed_out: 'Kijelentkezett a <a href="%{url}"> Code.org</a> - ról.'
     sign_out_of: '%{provider} segítségével jelentkeztél be. <a href="%{url}">Kattints ide</a>  a kijelentkezéshez ebből a fiókból: %{provider}.'
@@ -126,13 +126,16 @@ hu:
     invalid_password: "A jelszónak legalább 6 karakter hosszúnak kell lennie"
     mismatch_password: "A megadott két jelszó nem egyezik"
     student_consent: "Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
+    student_terms: "Megjegyzés: a tanulók e-mail címeit olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az <a href='http://code.org/privacy'>adatvédelem</a> részben találsz."
     additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
+    user_type_button: "Felhasználói fiók-típus módosítása"
     user_type_label: "Fióktípus"
     user_type_teacher: "Tanár"
     user_type_student: "Diák"
     field_is_required: "szükséges"
     accept_terms: "El kell fogadnia, hogy létre hozzon egy fiókot"
     email_preference_question: "Küldhetünk neked email üzeneteket az új tanfolyamjainkról, helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)"
+    email_preference_privacy: "(Tekintsd át az adatvédelmi irányelveinket)"
     email_preference_yes: "Igen"
     email_preference_no: "Nem"
   school_info:
@@ -179,6 +182,8 @@ hu:
       instructions: "Adja meg e-mail címét alul, és elküldjük Önnek jelszó visszaállítási utasításokat."
       email: 'E-mail cím'
       submit: 'Elküldés'
+    reset_errors:
+      invalid_email: 'Úgy tűnik, nem létező e-mail címmel hoztál létre fiókot. Kérjük, írj a support@code.org-ra, hogy jelszó-helyreállítási linket kapj.'
     change_form:
       title: 'Jelszó módosítása'
       new_password: 'Új jelszó'
@@ -196,6 +201,7 @@ hu:
     type:
       word: 'Titkos szó'
       email: 'Email'
+      google_classroom: 'Google osztályterem'
       clever: 'Okos'
   follower:
     invite_sent: 'Meghívó elküldve'
@@ -229,6 +235,11 @@ hu:
     updated: '%{model} sikeresen frissítve.'
     destroyed: '%{model} sikeresen törölve.'
     access_denied: 'Nincs jogosultsága ehhez: %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "A megadott e-mail cím nem egyezik a fiókhoz tartozó e-mail címmel"
+        personal_login_created_email: 'Sikeresen létrehoztad a személyes felhasználói fiókodat. Beléphetsz a fiókodba az e-mail címed és a jelszavad megadásával'
   nav:
     header:
       finished_hoc: "Befejeztem a Kódolás Óráját"
@@ -237,6 +248,8 @@ hu:
         playlab: 'Készíts egy Játéklabor applikációt'
         artist: 'Rajzolj valamit'
         applab: 'Készíts egy App Lab applikációt'
+      my_dashboard: "Vezérlőpult"
+      course_catalog: "Tanfolyamaink"
       project_gallery: "Projektek"
       sections: "Csoportok"
       help_support: "Súgó és támogatás"
@@ -286,9 +299,11 @@ hu:
       applab: 'App Lab'
       artist: 'Művész'
       playlab: 'Játéklabor'
+      spritelab: 'Sprite labor'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
       dance: 'Táncos buli'
+      view_all: 'Összes projekt áttekintése...'
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Fejlődése'
@@ -329,6 +344,7 @@ hu:
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
     email_confirm_wrong_email: '(Helytelen e-mail cím?)'
     email_resend_confirm: 'Megerősítés újraküldése'
+    new_email_hint: '(győződj meg róla, hogy hozzáférsz az erre az e-mail címre érkező e-mailekhez)'
     new_password_hint: "(hagyd üresen, ha nem akarod megváltoztatni)"
     current_password_hint: '(szükségünk van a jelenlegi jelszavadra a módosítások végrehajtásához)'
     delete: 'Fiók törlése'
@@ -336,6 +352,12 @@ hu:
     delete_text_teacher_note: "Kérjük, vedd figyelembe: a fiók törlésével együtt nem törlődnek a tanulói fiókok."
     delete_confirm: 'Biztosan törölni akarod a fiókot?'
     deleted_user: 'törölt felhasználó'
+    create_personal_login_under_13_parent_email: 'Szülő/gondviselő e-mail címe'
+    create_personal_login_email_note: "Megjegyzés: a tanulók e-mail címeit olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az<a href='%{privacy_policy_url}', target='_blank'>adatvédelem</a> részben találsz."
+    parent_email_label: "Szülő/gondviselő e-mail (opcionális)"
+    enter_parent_email: "Add meg szülőd vagy gondviselőd e-mail címét (jelszó-visszaállítás esetére)"
+    update: "Adatok frissítése"
+    account_successfully_updated: "Az adatok frissítése sikeres volt."
   user_level:
     completed: 'Befejezve'
     tried: 'Próbáltam'
@@ -347,7 +369,7 @@ hu:
     all_courses: "1., 2. és 3. tanfolyam áttekintése"
     lesson_plans: "Óravázlatok"
     signin_message: "Már regisztráltál? %{link}"
-    student_reg_link: 'Diák Bejelentkezés'
+    student_reg_link: 'Diák regisztráció'
     teacher_reg_link: 'Tanári bejelentkezés'
     signin_directions: 'Fiók használatával nyomon követheted a haladásodat. <br/> Tanárok nyomon követhetik az egész osztályt.'
     teacher_dashboard: Nézd meg a nyomonkövetési felületet
@@ -381,7 +403,7 @@ hu:
     your_gallery: Galéria
     no_primary_course: "Próbálj ki egy tanfolyamot a Kód stúdióban"
     choose_next_course: "Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok közül"
-    print_certificate: "Igazolás kinyomtatása"
+    print_certificate: "Oklevél nyomtatása"
     announcement_title: "Közlemények"
     announcement_learn_more_button: "Tudj meg többet"
     announcement_try_now_button: "Próbálja ki most"
@@ -646,6 +668,8 @@ hu:
     exit: "Vissza a tanfolyamhoz"
     my_projects: "Projektjeim"
     project_gallery: "Projektek"
+    publish: "Közzétesz"
+    unpublish: "Közzététel visszavonása"
     share: "Megosztás"
     share_title: A projekt megosztása
     share_copy_link: "A hivatkozás másolása:"
@@ -724,7 +748,9 @@ hu:
     form_labels:
       email: 'Email'
       school_name: 'Iskola neve'
+      school_city: 'Iskola városa'
       school_country: 'Iskola országa'
+      email_opt_in: 'Küldhetünk e-maileket a nemzetközi Code-org programról, tanfolyami újdonságokról és számítógép-tudománnyal kapcsolatos hírekről?'
     form_entries:
       gender:
         male: 'Férfi'
@@ -739,9 +765,13 @@ hu:
         kodable: 'Kodable'
       robotics:
         kodable: 'Kodable'
+      workshop_course:
+        csf_af: 'A számítógép-tudomány alapjai (A-F tanfolyamok)'
       email_opt_in:
         opt_in_yes: 'Igen'
         opt_in_no: 'Nem'
+    no_teacher_email:
+      body: 'A fiókodhoz nem tartozik e-mail cím. Kérünk, <a href="%{user_registration}">tekintsd át a beállításokat</a>, és add meg az e-mail címed, mielőtt kitöltöd ezt az űrlapot.'
   cookie_banner:
     accept: 'Egyetértek'
   gdpr_dialog:

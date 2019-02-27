@@ -2032,8 +2032,10 @@ sq:
         pikët nga 10 në 0 për të kaluar nivelin.
       Crack Random Substitution: Udhëzimet
       Crack Random Substitution_2018: Udhëzimet
+      Crack Random Substitution_2019: Udhëzimet
       Crack a Caesar Cipher: Udhëzimet
       Crack a Caesar Cipher_2018: Udhëzimet
+      Crack a Caesar Cipher_2019: Udhëzimet
       Farmer for Authored Hint testing: |-
         Wow, unë gjeta një gropë vërtet të thellë! Unë nuk
         e di sa lopata me dhe nevojiten. A mund të shkruash një program që mbush
@@ -2570,6 +2572,10 @@ sq:
         Përmasat e veglës së konfiguruar janë të gabuara. Detyra juaj e parë është
         të vendosni bajtin e dytë në kodin binar 8-bit për 5: 0000 0101. Pastaj filloni
         të futni të dhënat piksel.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Bëni një shkronjë ''A'' 3x5.
+        Përmasat e veglës së konfiguruar janë të gabuara. Detyra juaj e parë është
+        të vendosni bajtin e dytë në kodin binar 8-bit për 5: 0000 0101. Pastaj filloni
+        të futni të dhënat piksel.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Fillojmë me imazhin 4x4 të krijuar
         nga Maddie në video. Detyra jote është të mbushësh me ngjyra një rrjetë 4x4,
         duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca
@@ -2580,10 +2586,18 @@ sq:
         4x4, duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca
         të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca të së kaltrës.
         Rreshti 4 - nuanca gri.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Fillojmë me imazhin 4x4 të
+        krijuar nga Maddie në video. Detyra jote është të mbushësh me ngjyra një rrjetë
+        4x4, duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca
+        të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca të së kaltrës.
+        Rreshti 4 - nuanca gri.'
       Pixelation - Lesson 15 - Complete 3-bit color: Fillojmë me imazhin 4x2 që Maddie
         po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo imazhin
         duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Fillojmë me imazhin 4x2
+        që Maddie po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo
+        imazhin duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: Fillojmë me imazhin 4x2
         që Maddie po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo
         imazhin duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
       Poorva copy U3L2 Using Simple Commands: Vizato një rrjetë 1x1 lart, në të majtë
@@ -2648,6 +2662,7 @@ sq:
         e sheshte? Shenim: Provo te perdoresh nje litar tek kesaj here.'
       The Vigenere Cipher Widget: Udhëzimet
       The Vigenere Cipher Widget_2018: Udhëzimet
+      The Vigenere Cipher Widget_2019: Udhëzimet
       The Vigenere Cipher: Udhëzimet
       Total Artist Clone Me: 'Lojë e lirë: Këtu janë funksionet që ke shkruar dhe
         disa më shumë për ty që të luash. Vizato diçka të paparë! Luaj me gjërësinë
@@ -2664,9 +2679,12 @@ sq:
         fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       U3L2 Using Simple Commands_2018: Vizato një rrjetë 1x1 lart, në të majtë të
         pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
+      U3L2 Using Simple Commands_2019: Vizato një rrjetë 1x1 lart, në të majtë të
+        pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       U4 vigenere cipher 2: Udhëzimet
       U4L02 - Objects - Template1: Shabllon
       U4L02 - Objects - Template1_2018: Shabllon
+      U4L02 - Objects - Template1_2019: Shabllon
       Underground Avoiding Lava: "Llava është fshehur nën disa nga këto\nblloqe, të
         cilat ju do të duhet t`i mbuloni para se të lëvizin përpara. Një komand \"nëse\"
         \ndo të jetë e nevojshme këtu. Shto një komandë \"lëviz përpara\" në vendin

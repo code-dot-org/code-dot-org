@@ -5338,6 +5338,14 @@ fr:
           Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           Utilise un bloc « répéter » comme celui-ci pour t’aider !
@@ -8721,6 +8729,22 @@ fr:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: Tu peux utiliser plus d’un bloc ˋcollecter` sur chaque case.
         courseC_collector_prog_challenge1_b: Tu es perdu ? Essaie de suivre ce chemin pour résoudre le puzzle !
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
+      courseC_data wizard_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -8754,6 +8778,18 @@ fr:
         courseC_flappy_events5_a: Tu devras utiliser le bloc ˋmarquer un point` pour réussir ce niveau.
       courseC_flappy_events5_2019_authored_hint:
         courseC_flappy_events5_a: Tu devras utiliser le bloc ˋmarquer un point` pour réussir ce niveau.
+      courseC_flappy_events6_authored_hint:
+        courseC_flappy_events6_a: Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`.
+      courseC_flappy_events6_2018_authored_hint:
+        courseC_flappy_events6_a: Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`.
+      courseC_flappy_events6_2019_authored_hint:
+        courseC_flappy_events6_a: Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`.
+      courseC_flappy_events7_authored_hint:
+        courseC_flappy_events7_a: 'Tu peux modifier le fond en utilisant le bloc ˋdéfinis un arrière-plan`. '
+      courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: 'Tu peux modifier le fond en utilisant le bloc ˋdéfinis un arrière-plan`. '
+      courseC_flappy_events7_2019_authored_hint:
+        courseC_flappy_events7_a: 'Tu peux modifier le fond en utilisant le bloc ˋdéfinis un arrière-plan`. '
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type="harvester_pumpkin"/></xml> pour la récolter.
         courseC_harvester_loops1_b: Tu peux utiliser une boucle avec le bloc <xml><block type="harvester_pumpkin"/></xml> pour récolter plus d’une citrouille dans une case.
@@ -9761,7 +9797,7 @@ fr:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'La boucle ˋpour` va de 5 à 250 par 2. '
         courseF_artist_for_challenge2_a: Le changement de couleur se produit en utilisant le bloc ˋdéfinis la couleur avec rouge, vert, bleu`. Le rouge est toujours à 255, le vert est toujours de la valeur de ˋcompteur` et le bleu est toujours à ˋ255 - compteur`.
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **Solution :**
 
           <xml>
@@ -9850,8 +9886,6 @@ fr:
           </next>
           </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'La boucle ˋpour` va de 5 à 250 par 2. '
         courseF_artist_for_challenge2_a: Le changement de couleur se produit en utilisant le bloc ˋdéfinis la couleur avec rouge, vert, bleu`. Le rouge est toujours à 255, le vert est toujours de la valeur de ˋcompteur` et le bleu est toujours à ˋ255 - compteur`.

@@ -300,16 +300,44 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': қала
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': дұрыс
+            '"false"': Жалған
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': мәңгі
       binary_move:
         options:
           DIR:

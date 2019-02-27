@@ -1,4 +1,5 @@
-"pt-BR":
+---
+pt-BR:
   hour_of_code: Hora do Código
   hello: Olá, mundo
   'yes': Sim
@@ -468,7 +469,8 @@
   homepage_slot_text_link_donate: Fazer uma doação
   homepage_slot_text_link_shop: Camisetas, bonés e muito mais
   homepage_slot_text_link_administrators: Leve a ciência da computação para sua escola
-  homepage_header_codestudio: Criações de alunos no Code Studio
+  homepage_gallery_header: Mais de %{project_count} milhão(ões) de projetos da Code.org
+    criados
   homepage_header_donors: A Code.org agradece a seus colaboradores
   homepage_donors_seall: Ver todos
   homepage_donors_donate: Faça uma doação
@@ -2443,58 +2445,3 @@
     Verifique o endereço de web e carregue novamente. Ou então, voltar para nossa
     página inicial.
   page_not_found_button: Voltar para casa
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_gallery_header: Over %{project_count} million Code.org projects created
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  codesters_name: Codesters
-  express-2018_name: Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  coursec_shortdescription_congrats: Learn the basics of computer science and create
-    your own art, stories, and games.
-  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  udacity_beyond_name: CS 101
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
-  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!

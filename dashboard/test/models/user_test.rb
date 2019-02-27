@@ -1908,13 +1908,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'update_primary_contact_info is false if email and hashed_email are nil' do
     user = create :user
-    successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})
+    successful_save = user.update_primary_contact_info(new_email: nil, new_hashed_email: nil)
     refute successful_save
   end
 
   test 'update_primary_contact_info is false if email is nil for teacher' do
     teacher = create :teacher
-    successful_save = teacher.update_primary_contact_info(user: {email: nil})
+    successful_save = teacher.update_primary_contact_info(new_email: nil)
     refute successful_save
   end
 
@@ -1924,7 +1924,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
 
-    successful_save = teacher.update_primary_contact_info(user: {email: 'example@email.com'})
+    successful_save = teacher.update_primary_contact_info(new_email: 'example@email.com')
     teacher.reload
     assert successful_save
     assert_equal 2, teacher.authentication_options.count
@@ -1937,7 +1937,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
 
-    successful_save = teacher.update_primary_contact_info(user: {email: 'second@email.com'})
+    successful_save = teacher.update_primary_contact_info(new_email: 'second@email.com')
     teacher.reload
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
@@ -1952,13 +1952,13 @@ class UserTest < ActiveSupport::TestCase
     refute_nil teacher.primary_contact_info
 
     # Update primary to a different email
-    teacher.update_primary_contact_info(user: {email: 'example@email.com'})
+    teacher.update_primary_contact_info(new_email: 'example@email.com')
     teacher.reload
     assert_equal 2, teacher.authentication_options.count
     assert_equal 'example@email.com', teacher.primary_contact_info.email
 
     # Change back to original oauth email
-    successful_save = teacher.update_primary_contact_info(user: {email: existing_email})
+    successful_save = teacher.update_primary_contact_info(new_email: existing_email)
     teacher.reload
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
@@ -1971,7 +1971,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
 
-    successful_save = teacher.update_primary_contact_info(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    successful_save = teacher.update_primary_contact_info(new_email: 'first@email.com', new_hashed_email: User.hash_email('second@email.com'))
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
     assert_equal User.hash_email('first@email.com'), teacher.primary_contact_info.hashed_email
@@ -1984,7 +1984,7 @@ class UserTest < ActiveSupport::TestCase
     refute_nil student.primary_contact_info
 
     hashed_new_email = User.hash_email('example@email.com')
-    successful_save = student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
+    successful_save = student.update_primary_contact_info(new_hashed_email: hashed_new_email)
     student.reload
     assert successful_save
     assert_equal 2, student.authentication_options.count
@@ -1998,7 +1998,7 @@ class UserTest < ActiveSupport::TestCase
     refute_nil student.primary_contact_info
 
     hashed_new_email = User.hash_email('second@email.com')
-    successful_save = student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
+    successful_save = student.update_primary_contact_info(new_hashed_email: hashed_new_email)
     student.reload
     assert successful_save
     assert_equal 1, student.authentication_options.count
@@ -2014,13 +2014,13 @@ class UserTest < ActiveSupport::TestCase
 
     # Update primary to a different email
     hashed_new_email = User.hash_email('example@email.com')
-    student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
+    student.update_primary_contact_info(new_hashed_email: hashed_new_email)
     student.reload
     assert_equal 2, student.authentication_options.count
     assert_equal hashed_new_email, student.primary_contact_info.hashed_email
 
     # Change back to original oauth email
-    successful_save = student.update_primary_contact_info(user: {hashed_email: existing_hashed_email})
+    successful_save = student.update_primary_contact_info(new_hashed_email: existing_hashed_email)
     student.reload
     assert successful_save
     assert_equal 1, student.authentication_options.count
@@ -2033,7 +2033,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, student.authentication_options.count
     refute_nil student.primary_contact_info
 
-    successful_save = student.update_primary_contact_info(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    successful_save = student.update_primary_contact_info(new_email: 'first@email.com', new_hashed_email: User.hash_email('second@email.com'))
     assert successful_save
     assert_equal 1, student.authentication_options.count
     assert_equal User.hash_email('first@email.com'), student.primary_contact_info.hashed_email
@@ -2044,7 +2044,7 @@ class UserTest < ActiveSupport::TestCase
     create :student, email: taken_email
     update_primary_contact_info_fails_safely_for \
       create(:student_in_picture_section, :multi_auth_migrated),
-      user: {email: taken_email}
+      new_email: taken_email
   end
 
   test 'update_primary_contact_info fails safely if the new email is already taken for email user' do
@@ -2052,7 +2052,7 @@ class UserTest < ActiveSupport::TestCase
     create :student, email: taken_email
     update_primary_contact_info_fails_safely_for \
       create(:student, :with_migrated_email_authentication_option),
-      user: {email: taken_email}
+      new_email: taken_email
   end
 
   test 'update_primary_contact_info fails safely if the new email is already taken for oauth user' do
@@ -2060,7 +2060,7 @@ class UserTest < ActiveSupport::TestCase
     create :student, email: taken_email
     update_primary_contact_info_fails_safely_for \
       create(:student, :with_migrated_google_authentication_option),
-      user: {email: taken_email}
+      new_email: taken_email
   end
 
   def update_primary_contact_info_fails_safely_for(user, *params)
@@ -4068,13 +4068,15 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_by_credential locates migrated SSO user' do
     user = create :student, :unmigrated_clever_sso
+    original_uid = user.uid
+
     user.migrate_to_multi_auth
 
     User.expects(:find_by).never
     assert_equal user,
       User.find_by_credential(
         type: AuthenticationOption::CLEVER,
-        id: user.uid
+        id: original_uid
       )
   end
 
