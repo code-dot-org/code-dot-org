@@ -209,6 +209,7 @@ class User < ActiveRecord::Base
   has_many :authentication_options, dependent: :destroy
   validates_associated :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+  validates_associated :primary_contact_info
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
