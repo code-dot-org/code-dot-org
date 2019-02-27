@@ -452,21 +452,21 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "Saving Teacher's AuthenticationOption with an email change causes email collision check" do
-    user = create :teacher, :with_migrated_email_authentication_option
+    user = create :teacher
     User.expects(:find_by_email_or_hashed_email)
     user.authentication_options.first.email = 'new-email@example.org'
     user.valid?
   end
 
   test "Saving Student's AuthenticationOption with a hashed_email change causes email collision check" do
-    user = create :student, :with_migrated_email_authentication_option
+    user = create :student
     User.expects(:find_by_hashed_email)
     user.authentication_options.first.hashed_email = User.hash_email 'new-email@example.org'
     user.valid?
   end
 
   test "Saving AuthenticationOption without changing email does not cause email collision check" do
-    user = create :student, :with_migrated_email_authentication_option
+    user = create :student
     User.expects(:find_by_email_or_hashed_email).never
     User.expects(:find_by_hashed_email).never
     user.authentication_options.first.data = 'unrelated change'
@@ -2904,15 +2904,23 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', twenty_something.age
   end
 
-  test 'users updating the email field must provide a valid email address' do
-    user = create :user
+  test 'updating email is a no-op for students' do
+    user = create :student
 
-    user.email = 'invalid@incomplete'
+    assert_empty user.email
+
+    user.update_primary_contact_info(new_email: 'student@example.com')
+    user.reload
+
+    assert_empty user.email
+  end
+
+  test 'users updating the email field must provide a valid email address' do
+    user = create :teacher
+
+    user.update_primary_contact_info(new_email: 'invalid@incomplete')
     refute user.valid?
     refute user.save
-
-    assert user.update(email: 'valid@example.net')
-    refute user.update(email: 'invalid@incomplete')
   end
 
   test 'find_or_create_teacher creates new teacher' do
