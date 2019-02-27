@@ -30,6 +30,7 @@ import scriptSelection, {
   loadValidScripts
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -38,6 +39,9 @@ const visibleSections = scriptData.visibleSections;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
+  // Check for enableExperiments in query string and apply any new experiments.
+  experiments.isEnabled(experiments.TEACHER_DASHBOARD_REACT);
+
   registerReducers({
     teacherSections,
     sectionData,
