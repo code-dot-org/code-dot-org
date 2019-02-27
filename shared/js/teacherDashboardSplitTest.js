@@ -37,6 +37,7 @@ $(document).ready(function() {
   // Go to new teacher dashboard if experiment is already on for this user.
   if (experimentState === ExperimentState.on) {
     redirectToStudioTeacherDashboard(sectionId, path, false);
+    return;
   }
 
   // Otherwise, set experiment state for this user using splitTestPercentage.
