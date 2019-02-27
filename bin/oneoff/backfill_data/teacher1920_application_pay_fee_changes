@@ -11,8 +11,8 @@ Pd::Application::Teacher1920Application.find_each do |application|
   
   if hash[:pay_fee] == 'Yes, my school or I will be able to pay the full program fee.'
     hash[:pay_fee] = 'Yes, my school will be able to pay the full program fee.'
-  elsif hash[:pay_fee] == 'Yes, my school or I will be able to pay the full program fee.'
-    hash[:pay_fee] = 'Yes, my school will be able to pay the full program fee.'
+  elsif hash[:pay_fee] == 'No, my school or I will not be able to pay the program fee. I would like to be considered for a scholarship.'
+    hash[:pay_fee] = 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.'
   elsif hash[:pay_fee] == 'Not applicable: there is no program fee for teachers in my region.'
     hash.delete :pay_fee
   elsif hash[:pay_fee] == 'Not applicable: there is no Regional Partner in my region.'
