@@ -42,7 +42,7 @@ export default class TeacherResources extends Component {
             description={i18n.standardsAndFrameworkDescription()}
             image="standards-framework"
             buttonText={i18n.reviewDocuments()}
-            link={pegasus('/resources')}
+            link={pegasus('/lesson_plans')}
           />
           <ImageResourceCard
             title={i18n.findGuestSpeaker()}
