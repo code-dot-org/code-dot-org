@@ -71,23 +71,19 @@ Scenario: Basic teacher application submission
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Professional Learning Program Requirements"
   And I press "input[name='committed']:first" using jQuery
-  And I press the first "input[name='payFee']" element
+  And I click selector "input[name='payFee']" if I see it
   And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
   Then I see no difference for "Section 4: Summer Workshop"
   And I press the first "button#next" element
 
   # Section 5
-  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information"
+  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information and submission"
   And I press "input[name='genderIdentity']:first" using jQuery
   And I press the first "input[name='race']" element
   And I press the first "input[name='howHeard']" element
-  Then I see no difference for "Section 5: Submission"
-  And I press the first "button#next" element
-
-  # Section 6
-  Then I wait until element "h3" contains text "Section 6: Submission"
   And I press the first "input#agree" element
+  Then I see no difference for "Section 5: Submission"
   And I press the first "button[type='submit']" element
 
   # Confirmation page

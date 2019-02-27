@@ -72,9 +72,9 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
         {this.props.data.school && this.props.data.school === '-1' && (
           <div style={styles.indented}>
             {this.inputFor('schoolName')}
-            {this.inputFor('schoolDistrictName')}
-            {this.inputFor('schoolAddress')}
-            {this.inputFor('schoolCity')}
+            {this.inputFor('schoolDistrictName', {required: false})}
+            {this.inputFor('schoolAddress', {required: false})}
+            {this.inputFor('schoolCity', {required: false})}
             {this.selectFor('schoolState', {placeholder: 'Select a state'})}
             {this.inputFor('schoolZipCode')}
             {this.radioButtonsFor('schoolType')}
@@ -119,6 +119,22 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
         {this.checkBoxesFor('previousYearlongCdoPd')}
       </FormGroup>
     );
+  }
+
+  /**
+   * @override
+   */
+  static getDynamicallyRequiredFields(data) {
+    const requiredFields = [];
+
+    if (data.school === '-1') {
+      requiredFields.push('schoolName');
+      requiredFields.push('schoolState');
+      requiredFields.push('schoolZipCode');
+      requiredFields.push('schoolType');
+    }
+
+    return requiredFields;
   }
 
   /**
