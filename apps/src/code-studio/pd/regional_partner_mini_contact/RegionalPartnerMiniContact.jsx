@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup, Button} from 'react-bootstrap';
+import {Modal, FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../form_components/FieldGroup';
 import color from '@cdo/apps/util/color';
 
@@ -11,19 +11,12 @@ const styles = {
   miniContactContainer: {
     backgroundColor: color.lightest_cyan,
     padding: 20,
-    borderRadius: 10
+    borderRadius: 10,
+    textAlign: 'left'
   },
   modalHeader: {
     padding: '0 15px 0 0',
-    height: 36,
     borderBottom: 'none'
-  },
-  modalBody: {
-    textAlign: 'left',
-    padding: 15,
-    overflow: 'auto',
-    maxHeight: 'calc(100vh - 100px)',
-    width: '100%'
   }
 };
 
@@ -217,50 +210,20 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
     return (
       <span>
         <span onClick={this.open}>{this.props.children}</span>
-        {this.state.showing && (
-          <div
-            className="modal"
-            id="tutorialPopup"
-            style={{display: 'block'}}
-            onClick={this.close}
-          >
-            <div
-              className="modal-dialog modal-lg"
-              onClick={e => e.stopPropagation()}
-            >
-              <div className="modal-content">
-                <div className="modal-header" style={styles.modalHeader}>
-                  <button
-                    className="close"
-                    data-dismiss="modal"
-                    style={{height: 48}}
-                    type="button"
-                    onClick={this.close}
-                  >
-                    <span
-                      aria-hidden="true"
-                      style={{fontSize: 48, marginTop: -2}}
-                    >
-                      ×
-                    </span>
-                  </button>
-                  <div style={{clear: 'both'}} />
-                </div>
-                <div style={styles.modalBody}>
-                  <div style={styles.miniContactContainer}>
-                    {this.state.options && (
-                      <RegionalPartnerMiniContact
-                        options={this.state.options}
-                        apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
-                        sourcePageId={this.props.sourcePageId}
-                      />
-                    )}
-                  </div>
-                </div>
-              </div>
+        <Modal show={this.state.showing} onHide={this.close}>
+          <Modal.Header closeButton style={styles.modalHeader} />
+          <Modal.Body>
+            <div style={styles.miniContactContainer}>
+              {this.state.options && (
+                <RegionalPartnerMiniContact
+                  options={this.state.options}
+                  apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
+                  sourcePageId={this.props.sourcePageId}
+                />
+              )}
             </div>
-          </div>
-        )}
+          </Modal.Body>
+        </Modal>
       </span>
     );
   }

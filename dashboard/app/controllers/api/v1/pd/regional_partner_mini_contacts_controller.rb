@@ -6,6 +6,7 @@ class Api::V1::Pd::RegionalPartnerMiniContactsController < Api::V1::Pd::FormsCon
   end
 
   def on_successful_create
+    # Assume email opt-in is no, since this form doesn't ask.
     EmailPreference.upsert!(
       email: @contact_form.email,
       opt_in: false,
