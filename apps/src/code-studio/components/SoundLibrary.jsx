@@ -70,7 +70,9 @@ const styles = {
   },
   categoryArea: {
     float: 'left',
-    marginBottom: 20
+    marginBottom: 20,
+    overflowY: 'scroll',
+    height: 350
   },
   allCategoriesText: {
     fontSize: 16,
