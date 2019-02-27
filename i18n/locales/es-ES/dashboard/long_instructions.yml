@@ -82,7 +82,12 @@ es:
       2-3 Bee Conditionals 11: "Colecta néctar donde las flores tienen néctar."
       2-3 Bee Conditionals 13: |-
         Recoge néctar y haz miel. Pista: ¿Qué ocurre si usas el condicional "Si nectar" en una flor roja? ¿Puedes completar esto con un bucle (loop)?
-      2-3 Bee Conditionals 14: "Vamos a juntar todo!\\r\n\\r\nUsa lo que has aprendido para ayudarme a recolectar néctar sólo de las flores que tienen néctar, utilizando el menor número de bloques posible.  \\r\n\\r\nNo olvides hacer la miel al final."
+      2-3 Bee Conditionals 14: |-
+        Vamos a juntar todo!\r
+        \r
+        Usa lo que has aprendido para ayudarme a recolectar néctar sólo de las flores que tienen néctar, utilizando el menor número de bloques posible.  \r
+        \r
+        No olvides hacer la miel al final.
       2-3 Bee Conditionals 15: "Recoge néctar de las cuatro flores."
       2-3 Bee Conditionals 2: "Soy una abeha hambrienta! \\r\n\\r\n\\r\nAyudame a recolectar todo el néctar de las flores utilizando el menor número de flores."
       2-3 Bee Conditionals 3: "Ayúdame a recoger todo el néctar de las flores y a hacer miel. Usa un bucle (loop)."
@@ -1171,6 +1176,54 @@ es:
       Course 4 Playlab For Loops 5b: Ajusta el intervalo de estos bucles 'for' para que los dos personajes terminen exactamente en el mismo lugar.
       Course 4 SCFP 1: Crea una función con parámetros que permita al artista saltar hacia adelante y atrás una cantidad x de pixeles, y además arriba y abajo una cantidad y de pixeles (utilizando números positivos y negativos).
       Course 4 SCVP 1: Crea una función con parámetros que permita al artista saltar hacia adelante y atrás una cantidad x de pixeles, y además arriba y abajo una cantidad y de pixeles (utilizando números positivos y negativos).
+      CourseD_Dance_Party_01: |-
+        *¡Hagamos una fiesta para bailar!*
+
+        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+
+        * *También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra.*
+      CourseD_Dance_Party_02: |-
+        ¡Pongamos a este alce a bailar!
+
+        Arrastra el bloque de «floss» <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo bajo el bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Tu bailarín debería iniciar un nuevo movimiento después del cuarto compás.
+
+
+        Los **compases** se utilizan para contar el tiempo en música. En este tutorial, un compás tiene cuatro tiempos.
+      CourseD_Dance_Party_03: "*¡Ahora movemos el esqueleto!*\n\nAñade un bloque de «compases» <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín inicie un movimiento nuevo después de 6 compases."
+      CourseD_Dance_Party_04: |-
+        *¡A este baile le hace falta brillo!*
+
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
+      CourseD_Dance_Party_05: |-
+        ¡Utiliza otro bloque nuevo para que el bailarín cambie de movimientos **cada 2 compases**!
+
+        * Elegir «(Siguiente)», «(Anterior)» o «(Aleatorio)» indica al bailarín que debe hacer un movimiento diferente cada vez que se ejecuta el código.
+      CourseD_Dance_Party_06: |-
+        *¡Necesitamos más bailarines!*
+
+        Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
+      CourseD_Dance_Party_08: |-
+        Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto.
+
+        Puedes hacer que parezca que un bailarín está en el fondo si reduces su _tamaño_. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
+      CourseD_Dance_Party_09: |-
+        Los bailarines tienen una propiedad de «tonalidad» que puede añadir una capa de color. Intenta cambiar la tonalidad de uno de tus bailarines.
+        * Las tonalidades mezclarán el color que elijas con los colores del bailarín.
+      CourseD_Dance_Party_10: |-
+        Ahora ya sabemos cómo cambiar las propiedades de un bailarín. También podemos hacer que las mismas propiedades respondan automáticamente a la música con este bloque:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Este programa utiliza el volumen «bajo» de la música (los sonidos bajos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín responda también a la música?
+      CourseD_Dance_Party_11: "El bloque <xml><block type=\"Dancelab_whenKey\"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.\n\nPuedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!"
+      CourseD_Dance_Party_11_5: "Echa un vistazo a este bloque:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n¡Ahora puedes crear un montón de bailarines a la vez!\n\nTrata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos."
+      CourseD_Dance_Party_11b: |-
+        ¡Es hora de un concurso de baile! El Gato hace el paso «dab» cuando pulsas la tecla de flecha izquierda. Indica al Robot que haga «drop» cuando pulsas la tecla de flecha derecha.
+      CourseD_Dance_Party_12: "¡Mueve el esqueleto! Crea un baile propio para compartirlo\ncon tus amigos."
       CourseF_PlayLab_vars2: "¡Esa carrera en ese ultimo problema no\nfue justa! Cambia la variable de \"velocidad_perro\" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!"
       Dance_Party_01: |-
         *¡Hagamos una fiesta para bailar!*

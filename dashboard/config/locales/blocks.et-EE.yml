@@ -938,6 +938,11 @@ et:
         options:
           DURATION:
             '"0"': igavesti
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': näita
+            '"hide"': peida
       binary_move:
         options:
           DIR:

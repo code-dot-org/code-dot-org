@@ -1077,6 +1077,11 @@ ru:
         options:
           DURATION:
             '"0"': всегда
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': показать
+            '"hide"': скрыть
       binary_drawPixelHere:
         options:
           VAL:

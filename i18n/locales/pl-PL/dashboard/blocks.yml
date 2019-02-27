@@ -1058,6 +1058,11 @@ pl:
         options:
           DURATION:
             '"0"': na zawsze
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': pokaż
+            '"hide"': ukryj
       binary_move:
         options:
           DIR:

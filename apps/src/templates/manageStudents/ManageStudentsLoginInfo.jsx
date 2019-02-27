@@ -79,7 +79,7 @@ class ManageStudentsLoginInfo extends Component {
               {i18n.joinSectionAsk()}
               <a
                 target="_blank"
-                href={`http:${studioUrlPrefix}/join/${sectionCode}`}
+                href={`${studioUrlPrefix}/join/${sectionCode}`}
               >
                 {`${studioUrlPrefix}/join/${sectionCode}`}
               </a>

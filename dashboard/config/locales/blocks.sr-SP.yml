@@ -338,6 +338,11 @@ sr:
         options:
           DURATION:
             '"0"': заувек
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': прикажи
+            '"hide"': сакриј
       binary_move:
         options:
           DIR:

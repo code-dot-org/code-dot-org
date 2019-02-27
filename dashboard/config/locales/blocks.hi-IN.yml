@@ -210,6 +210,10 @@ hi:
         options:
           DURATION:
             '"0"': हमेशा के लिए
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"hide"': छुपाएँ
       binary_whenKey:
         options:
           KEY:

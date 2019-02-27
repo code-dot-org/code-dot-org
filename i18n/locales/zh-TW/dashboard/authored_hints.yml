@@ -122,7 +122,19 @@ zh-TW:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: 想不到要如何減少積木的使用量？試著把用在紫花上的程式套用到紅花上。
         2-3_Bee_Conditionals_14_b: 如果紅花變成紫花，想一想，要怎麼另外使用`重複`迴圈來減少代碼的使用？
-        2-3_Bee_Conditionals_14_c: "試試把它分成兩塊來完成：\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) 收集花蜜 3 次\n - 向前移動 5 次\n - 檢查是否為花蜜，如果是就採集\n - 向左轉\n \n2) 釀造蜂蜜\n - 向前移動 1 認\n - 釀造 2 個蜂蜜"
+        2-3_Bee_Conditionals_14_c: |-
+          試試把它分成兩塊來完成：
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) 收集花蜜 3 次
+           - 向前移動 5 次
+           - 檢查是否為花蜜，如果是就採集
+           - 向左轉
+           
+          2) 釀造蜂蜜
+           - 向前移動 1 認
+           - 釀造 2 個蜂蜜
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: '請記住：每次你運行程式後，紫花的花蜜數會變成 0 或 1！'
       2-3 Bee Conditionals 3_authored_hint:
@@ -292,7 +304,9 @@ zh-TW:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: '每個重複的圖形都是**半六邊形**的組合，跟著**2/3 三角形**。 '
         Course_4_Artist_12_b: '部分圖形和上個關卡有些類似，除了半六邊形大了一點以外。 '
-        Course_4_Artist_12_c: "1) 開始的三個線段為 60 像素長，你需要轉向 60 度。\n2) 接著的二個線段為 80 像素長，你需要轉向 120 度。 "
+        Course_4_Artist_12_c: |-
+          1) 開始的三個線段為 60 像素長，你需要轉向 60 度。
+          2) 接著的二個線段為 80 像素長，你需要轉向 120 度。 
         Course_4_Artist_12_d: |-
           **解決方案：**
 
@@ -549,6 +563,99 @@ zh-TW:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
         mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+          * 確保舞者出現在螢幕上。
+
+          *此層級在 4 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+          * 選擇不同的歌曲播放。
+          * 選擇一個看起來像麋鹿的不同項目！
+          * 重新命名您的舞者。
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+          * 舞者需要在 4 小節後切換到新的動作。
+
+          *該層級在 8 個小節後結束。*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+
+          *該層級在 12 個小節後結束。*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+
+          *此層級在 10 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+
+          在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 您需要至少有兩個舞者。
+
+          *此層級在 6 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+
+          * 新增第三個舞者（或按需求盡量增加！）
+          * 讓所有舞者在歌曲的不同時間點執行不同的動作。
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 兩個舞者需要有 100 以外的尺寸。
+
+          *此層級在 6 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+
+          * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 變更至少一個舞者的色調。
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 兩個或更多的舞者屬性必須變更。
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 發揮創意即可！
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 發揮創意即可！
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 使用「按下左箭頭時」程式積木，讓機器人在您按下時進行舞蹈動作。
+
+          *此層級在 8 個小節後結束。*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       Dance short test 2_authored_hint:
@@ -1662,10 +1769,7 @@ zh-TW:
         courseA_artist_loops6_b: 你將會需要兩個不同方向的程式積木來過這一關。
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
-        courseA_artist_loops7_c: |-
-          記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml>迴圈裡。
+        courseA_artist_loops7_c: "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n</block></xml>迴圈裡。"
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
@@ -1688,7 +1792,10 @@ zh-TW:
         courseA_artist_loops9_b: "你應該把程式積木放在 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>迴圈裡。"
         courseA_artist_loops9_c: 如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。
       courseA_artist_loops9_2018_authored_hint:
-        courseA_artist_loops9_b: "你應該把程式積木放在 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>迴圈裡。"
+        courseA_artist_loops9_b: |-
+          你應該把程式積木放在 
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>迴圈裡。
         courseA_artist_loops9_c: 如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_b: "你應該把程式積木放在 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>迴圈裡。"

@@ -338,6 +338,11 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': نشان می دهد
+            '"hide"': پنهان کردن
       binary_move:
         options:
           DIR:

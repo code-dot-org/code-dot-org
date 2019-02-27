@@ -8,6 +8,10 @@
         - @video.errors.full_messages.each do |msg|
           %li= msg
   .field
+    = f.label 'Locale'
+    %br/
+    = f.select :locale, options_for_select(options_for_locale_code_select, I18n.default_locale.to_s), {include_blank: false}, {disabled: !@video.new_record?}
+  .field
     = f.label :key
     %br/
     = f.text_field :key, readonly: !@video.new_record?

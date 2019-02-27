@@ -945,6 +945,11 @@ ko:
         options:
           DURATION:
             '"0"': 영원히
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': 보이게 하기
+            '"hide"': 보이지 않게 하기
       binary_move:
         options:
           DIR:

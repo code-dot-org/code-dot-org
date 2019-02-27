@@ -3616,6 +3616,99 @@ pt-BR:
           um destes para minerar carvão.
         mc_9_c: Use "coloque a tocha" para colocar uma tocha no espaço em que você
           estiver.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          *A fase termina após oito compassos.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          *Esta fase termina após doze compassos.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa ter pelo menos dois dançarinos.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Adicione um terceiro dançarino (ou quantos você quiser!)
+          * Faça todos os seus dançarinos executarem movimentos diferentes em diversas partes da música.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Dois dançarinos precisam ter um tamanho diferente de 100.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Experimente alterar outras propriedades (largura, altura, rotação, etc.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Altere a tonalidade de pelo menos um(a) dançarino(a).
+
+          *Esta fase termina após oito compassos.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * As propriedades de dois ou mais dançarinos devem mudar.
+
+          *Esta fase termina após oito compassos.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
+
+          *Esta fase termina após oito compassos.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro`
           como sendo maior do que o de `velocidade_do_gato`.
@@ -5470,6 +5563,33 @@ pt-BR:
         courseC_maze_debugging_challenge2_c: Há dois caminhos diferentes que você
           pode seguir usando 'mover à frente' e apenas quatro voltas. Se você descobrir
           um jeito de usar o bloco 'repetir', pode haver ainda mais!
+      course3_playLab_challenge1_authored_hint:
+        courseE_playLab_challenge1_a: |-
+          Aqui estão algumas coisas que você pode fazer quando o jogador vencer o jogo:
+
+          * Faça o dinossauro desaparecer.
+          * Pare os esquilos.
+          * Faça os esquilos e cavaleiros felizes.
+          * Defina um novo fundo.
+          * Faça o cavaleiro agradecer ao jogador por ajudar.
+          * Faça todos os atores desaparecerem e mostrar uma mensagem "Você Venceu!".
+        courseE_playLab_challenge1_b: |-
+          Aqui estão algumas coisas que você pode fazer quando o jogador perde o jogo:
+
+          * Faça o cavaleiro desaparecer.
+          * Faça os esquilos tristes.
+          * Faça o dinossauro dizer alguma coisa.
+          * Defina um novo fundo.
+          * Faça com que todos os atores desapareçam e mostrem uma mensagem "Fim de Jogo".
+      course3_playlab_challenge2_authored_hint:
+        courseE_playlab_challenge2_d: |-
+          Quando você entender todo o código que está relacionado com o Ator 1, você pode tentar re-escrever o mesmo código, mas desta vez para o Ator 2.
+
+          Não se esqueça de mudar as instruções dentro do bloco `mostrar tela de título` para que eles ainda façam sentido!
+        courseE_playlab_challenge2_e: |-
+          Quando tudo estiver pronto, você poderá clicar em um dos atores e receber até oito mensagens diferentes. É possível expandi-lo ainda mais?
+
+          Peça a um amigo que experimente seu aplicativo quando terminar!
       course4_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: |-
           A melhor dica que tenho para você é pressione `⟲ Recomeçar` se começar a ficar realmente confuso.
@@ -5813,6 +5933,11 @@ pt-BR:
         courseD_harvester_nested_loops_challenge1_a: Você provavelmente já usou um
           laço para criar um padrão em zigue-zague. Se você se lembrar desse algoritmo,
           você pode fazer algumas adições aqui.
+      course4_playlab_variables_challenge3_authored_hint:
+        courseF_playlab_variables_challenge3_e: |-
+          Quando tudo estiver pronto, você poderá clicar em um dos atores e receber até oito mensagens diferentes. É possível expandi-lo ainda mais?
+
+          Peça a um amigo que experimente seu aplicativo quando terminar!
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Não consegue descobrir como  desenhar a linha? Comece
           ligando os blocos ao <xml><block type="when_run"/></xml> bloco para ver
@@ -9301,6 +9426,15 @@ pt-BR:
           Será que o bloco `repetir` <xml><block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block></xml>pode ajudar aqui?
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_b: Você deve ter quatro blocos de evento 'quando
+          seta', com uma direção para mover abaixo de cada um.
+        courseE_playLab_scaffold1_c: Quando estiver pronto, você deve ser capaz de
+          mover seu herói com as setas!
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: Para terminar este nível, você precisa ganhar
+          ou perder. Use um bloco `fim de jogo como vitória` ou `fim de jogo como
+          derrota` para terminar.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Encaixe esse bloco no bloco `Quando executar`:
@@ -9533,6 +9667,12 @@ pt-BR:
           de eventos `quando correr` para o espaço de trabalho para resolver esse
           quebra-cabeça.
       courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: Use o bloco 'definir fundo' e o bloco 'definir
+          o ator à velocidade ___' para resolver este enigma.
+        courseC_PlayLab_eventsA_b: Você precisará arrastar especificamente um bloco
+          de eventos `quando correr` para o espaço de trabalho para resolver esse
+          quebra-cabeça.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Use o bloco 'definir fundo' e o bloco 'definir
           o ator à velocidade ___' para resolver este enigma.
         courseC_PlayLab_eventsA_b: Você precisará arrastar especificamente um bloco
@@ -14644,6 +14784,12 @@ pt-BR:
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
+      courseD_scrat_ramp2_authored_hint:
+        courseC_maze_programming2_b: Certifique-se de que todos os três blocos `avançar`
+          estejam ligados ao bloco `quando rodar`.
+      courseD_scrat_ramp2_2018_authored_hint:
+        courseC_maze_programming2_b: Certifique-se de que todos os três blocos `avançar`
+          estejam ligados ao bloco `quando rodar`.
       courseD_scrat_ramp3_authored_hint:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
           \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
@@ -14684,12 +14830,16 @@ pt-BR:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
+        courseC_maze_programming5_b: Quão longe você precisa se mover para chegar
+          ao canto?
         courseC_maze_programming5_c: Você precisará virar à esquerda na esquina para
           chegar à bolota.
       courseD_scrat_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
+        courseC_maze_programming5_b: Quão longe você precisa se mover para chegar
+          ao canto?
         courseC_maze_programming5_c: Você precisará virar à esquerda na esquina para
           chegar à bolota.
       courseD_scrat_ramp6_authored_hint:
@@ -16052,9 +16202,22 @@ pt-BR:
       courseE_farmer_ramp13_2018_authored_hint:
         courseE_farmer_ramp13_a: Pode haver mais do que uma das duas culturas em um
           espaço, então certifique-se de usar laços `enquanto` para escolher tudo!
+      courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_b: O que mais há a fazer ao avançar o caminho para a
+          abóbora?
+        courseE_farmer_ramp15_c: Os sprouts escondem várias quantidades de milho ou
+          de alfabeto para colher em seu caminho para a abóbora.
+      courseE_farmer_ramp15_2018_authored_hint:
+        courseE_farmer_ramp15_b: O que mais há a fazer ao avançar o caminho para a
+          abóbora?
+        courseE_farmer_ramp15_c: Os sprouts escondem várias quantidades de milho ou
+          de alfabeto para colher em seu caminho para a abóbora.
       courseE_farmer_ramp16_authored_hint:
         courseE_farmer_ramp16_a: Se estamos movendo o caminho para a abóbora, o que
           temos de fazer repetidamente? Quando parar de repetir?
+        courseE_farmer_ramp16_b: Verificar o milho ou a alface em cada espaço ajudará
+          a simplificar seu código. O que você deve fazer se houver uma colheita?
+          E se não houver nada?
         courseE_farmer_ramp16_c: Use um bloco `se/senão` para continuar a avançar.
           De que forma você precisa virar quando o caminho para a frente está bloqueado?
       courseE_maze_ramp1_authored_hint:
@@ -16068,6 +16231,12 @@ pt-BR:
       courseE_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_b: Você não precisa de nenhum bloco extra da caixa
           de ferramentas para este quebra-cabeça!
+      courseE_maze_ramp2_authored_hint:
+        courseC_maze_programming2_b: Certifique-se de que todos os três blocos `avançar`
+          estejam ligados ao bloco `quando rodar`.
+      courseE_maze_ramp2_2018_authored_hint:
+        courseC_maze_programming2_b: Certifique-se de que todos os três blocos `avançar`
+          estejam ligados ao bloco `quando rodar`.
       courseE_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
           \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
@@ -16096,17 +16265,29 @@ pt-BR:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
+        courseC_maze_programming5_b: Quão longe você precisa se mover para chegar
+          ao canto?
+        courseC_maze_programming5_c: Você precisará virar à esquerda na esquina para
+          chegar ao porco.
       courseE_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
+        courseC_maze_programming5_b: Quão longe você precisa se mover para chegar
+          ao canto?
+        courseC_maze_programming5_c: Você precisará virar à esquerda na esquina para
+          chegar ao porco.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseC_maze_programming6_b: Lembre-se de virar antes de se mover, pois o
+          pássaro começa a se deparar com uma parede.
         courseC_maze_programming6_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseC_maze_programming6_b: Lembre-se de virar antes de se mover, pois o
+          pássaro começa a se deparar com uma parede.
         courseC_maze_programming6_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
@@ -16130,14 +16311,99 @@ pt-BR:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
+      courseE_playLab_challenge1_authored_hint:
+        courseE_playLab_challenge1_a: |-
+          Aqui estão algumas coisas que você pode fazer quando o jogador vencer o jogo:
+
+          * Faça o dinossauro desaparecer.
+          * Pare os esquilos.
+          * Faça os esquilos e cavaleiros felizes.
+          * Defina um novo fundo.
+          * Faça o cavaleiro agradecer ao jogador por ajudar.
+          * Faça todos os atores desaparecerem e mostrar uma mensagem "Você Venceu!".
+        courseE_playLab_challenge1_b: |-
+          Aqui estão algumas coisas que você pode fazer quando o jogador perde o jogo:
+
+          * Faça o cavaleiro desaparecer.
+          * Faça os esquilos tristes.
+          * Faça o dinossauro dizer alguma coisa.
+          * Defina um novo fundo.
+          * Faça com que todos os atores desapareçam e mostrem uma mensagem "Fim de Jogo".
+      courseE_playLab_challenge1_2018_authored_hint:
+        courseE_playLab_challenge1_a: |-
+          Aqui estão algumas coisas que você pode fazer quando o jogador vencer o jogo:
+
+          * Faça o dinossauro desaparecer.
+          * Pare os esquilos.
+          * Faça os esquilos e cavaleiros felizes.
+          * Defina um novo fundo.
+          * Faça o cavaleiro agradecer ao jogador por ajudar.
+          * Faça todos os atores desaparecerem e mostrar uma mensagem "Você Venceu!".
+        courseE_playLab_challenge1_b: |-
+          Aqui estão algumas coisas que você pode fazer quando o jogador perde o jogo:
+
+          * Faça o cavaleiro desaparecer.
+          * Faça os esquilos tristes.
+          * Faça o dinossauro dizer alguma coisa.
+          * Defina um novo fundo.
+          * Faça com que todos os atores desapareçam e mostrem uma mensagem "Fim de Jogo".
+      courseE_playLab_scaffold2_authored_hint:
+        courseE_playLab_scaffold1_b: Você deve ter quatro blocos de evento 'quando
+          seta', com uma direção para mover abaixo de cada um.
+        courseE_playLab_scaffold1_c: Quando estiver pronto, você deve ser capaz de
+          mover seu herói com as setas!
+      courseE_playLab_scaffold2_2018_authored_hint:
+        courseE_playLab_scaffold1_b: Você deve ter quatro blocos de evento 'quando
+          seta', com uma direção para mover abaixo de cada um.
+        courseE_playLab_scaffold1_c: Quando estiver pronto, você deve ser capaz de
+          mover seu herói com as setas!
+      courseE_playLab_scaffold5_authored_hint:
+        courseE_playLab_scaffold5_a: Para terminar este nível, você precisa ganhar
+          ou perder. Use um bloco `fim de jogo como vitória` ou `fim de jogo como
+          derrota` para terminar.
+      courseE_playLab_scaffold5_2018_authored_hint:
+        courseE_playLab_scaffold5_a: Para terminar este nível, você precisa ganhar
+          ou perder. Use um bloco `fim de jogo como vitória` ou `fim de jogo como
+          derrota` para terminar.
+      courseE_playlab_challenge2_authored_hint:
+        courseE_playlab_challenge2_d: |-
+          Quando você entender todo o código que está relacionado com o Ator 1, você pode tentar re-escrever o mesmo código, mas desta vez para o Ator 2.
+
+          Não se esqueça de mudar as instruções dentro do bloco `mostrar tela de título` para que eles ainda façam sentido!
+        courseE_playlab_challenge2_e: |-
+          Quando tudo estiver pronto, você poderá clicar em um dos atores e receber até oito mensagens diferentes. É possível expandi-lo ainda mais?
+
+          Peça a um amigo que experimente seu aplicativo quando terminar!
+      courseE_playlab_variables_challenge2_authored_hint:
+        courseF_playlab_variables_challenge3_e: |-
+          Quando tudo estiver pronto, você poderá clicar em um dos atores e receber até oito mensagens diferentes. É possível expandi-lo ainda mais?
+
+          Peça a um amigo que experimente seu aplicativo quando terminar!
       courseF_IceAge_1_authored_hint:
         iceage_hello1_a: Você precisa apenas adicionar um bloco para resolver este
           enigma. Arraste o bloco `ator 1 diz` da barra de ferramentas e conecte-o
           ao bloco de evento `quando executar` que já está na área de trabalho. Depois,
           digite "Olá!" dentro dele.
+      courseF_IceAge_10_authored_hint:
+        iceage_throw_hearts_a: Quando você quer jogar corações na vovó? Quando uma
+          flecha é pressionada? Quando você clica em Sid? Quando você clica na vovó?
+          A escolha é sua!
+      courseF_IceAge_11_authored_hint:
+        iceage_free_play_a: 'Você pode fazer Sida e Manny uma luta de Cristal de Gelo?  '
+      courseF_IceAge_4_authored_hint:
+        iceage_move_to_actor_a: Para este desafio, você pode mover Diego para baixo
+          por 200 pixels, ou mover Manny para cima em 200 pixels.
       courseF_IceAge_6_authored_hint:
         iceage_click_hello_a: Adicione um ou mais blocos `personagem 1 say` ao evento
           `quando clicado` para completar este desafio.
+      courseF_IceAge_8_authored_hint:
+        iceage_sound_and_points_a: Você precisará adicionar dois blocos abaixo do
+          evento `quando o personagem 1 tocar no personagem 2`.
+      courseF_IceAge_9_authored_hint:
+        iceage_warn_ice_age_a: 'Você só deve ter que adicionar dois blocos para obter
+          este desafio onde precisa ser. '
+        iceage_warn_ice_age_b: Adicione ambos os novos blocos abaixo do evento `quando
+          executar` para que eles ocorram imediatamente após o início do programa.
       courseF_artist_for1_authored_hint:
         courseF_artist_for1_a: |-
           Você pode desenhar algo assim:
@@ -17016,6 +17282,9 @@ pt-BR:
         courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco
           `defina a cor com vermelho, verde, azul`. Vermelho é definido constante
           em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
+        courseF_artist_for_challenge2_b: O código para isso é mais simples do que
+          você pode pensar. Apenas defina a cor dentro do laço para, avance, então
+          ative.
         courseF_artist_for_challenge2_d: |-
           **Solução:**
 
@@ -17112,6 +17381,9 @@ pt-BR:
         courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco
           `defina a cor com vermelho, verde, azul`. Vermelho é definido constante
           em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
+        courseF_artist_for_challenge2_b: O código para isso é mais simples do que
+          você pode pensar. Apenas defina a cor dentro do laço para, avance, então
+          ative.
         courseF_artist_for_challenge2_d: |
           **Solução:**
 
@@ -17206,6 +17478,9 @@ pt-BR:
         courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco
           `defina a cor com vermelho, verde, azul`. Vermelho é definido constante
           em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
+        courseF_artist_for_challenge2_b: O código para isso é mais simples do que
+          você pode pensar. Apenas defina a cor dentro do laço para, avance, então
+          ative.
         courseF_artist_for_challenge2_d: |-
           **Solução:**
 
@@ -17341,22 +17616,68 @@ pt-BR:
           ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: Como isso é semelhante a um quadrado? Como é diferente?
+        courseF_artist_ramp9_b: Você pode usar o menu suspenso nos blocos de virar
+          para ver qual ângulo você precisa!
       courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: Como isso é semelhante a um quadrado? Como é diferente?
+        courseF_artist_ramp9_b: Você pode usar o menu suspenso nos blocos de virar
+          para ver qual ângulo você precisa!
+      courseF_artist_variables10_authored_hint:
+        courseF_artist_variables10_a: Divirta-se com este nível! Veja o que as pequenas
+          alterações podem fazer no seu código.
+        courseF_artist_variables10_b: Você pode experimentar várias coisas e executar
+          seu código várias vezes.
+      courseF_artist_variables10_2018_authored_hint:
+        courseF_artist_variables10_a: Divirta-se com este nível! Veja o que as pequenas
+          alterações podem fazer no seu código.
+        courseF_artist_variables10_b: Você pode experimentar várias coisas e executar
+          seu código várias vezes.
+      courseF_artist_variables10_2019_authored_hint:
+        courseF_artist_variables10_a: Divirta-se com este nível! Veja o que as pequenas
+          alterações podem fazer no seu código.
+        courseF_artist_variables10_b: Você pode experimentar várias coisas e executar
+          seu código várias vezes.
       courseF_artist_variables2_authored_hint:
         courseF_artist_variables2_a: Lembre-se de mover-se para frente depois de desenhar
           cada triângulo.
+        courseF_artist_variables2_b: Seu novo laço conterá o laço para seu triângulo,
+          e então um comando `avance`.
       courseF_artist_variables2_2018_authored_hint:
         courseF_artist_variables2_a: Lembre-se de mover-se para frente depois de desenhar
           cada triângulo.
+        courseF_artist_variables2_b: Seu novo laço conterá o laço para seu triângulo,
+          e então um comando `avance`.
       courseF_artist_variables2_2019_authored_hint:
         courseF_artist_variables2_a: Lembre-se de mover-se para frente depois de desenhar
           cada triângulo.
+        courseF_artist_variables2_b: Seu novo laço conterá o laço para seu triângulo,
+          e então um comando `avance`.
+      courseF_artist_variables3_authored_hint:
+        courseF_artist_variables3_b: 'Um bloco de número com valor 50 deve estar apenas
+          em um lugar: após o bloco `set variável comprimento`.'
+      courseF_artist_variables3_2018_authored_hint:
+        courseF_artist_variables3_b: 'Um bloco de número com valor 50 deve estar apenas
+          em um lugar: após o bloco `set variável comprimento`.'
+      courseF_artist_variables3_2019_authored_hint:
+        courseF_artist_variables3_b: 'Um bloco de número com valor 50 deve estar apenas
+          em um lugar: após o bloco `set variável comprimento`.'
       courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_c: |-
+          Este é o padrão que seu(sua) artista irá seguir:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_c: |-
+          Este é o padrão que seu(sua) artista irá seguir:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_c: |-
+          Este é o padrão que seu(sua) artista irá seguir:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables5_authored_hint:
         courseF_artist_variables5_d: |-
@@ -17373,6 +17694,15 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
+      courseF_artist_variables6_authored_hint:
+        courseF_artist_variables6_a: Graças as variáveis, você só precisa mudar um
+          número no topo para fazer isto funcionar.
+      courseF_artist_variables6_2018_authored_hint:
+        courseF_artist_variables6_a: Graças as variáveis, você só precisa mudar um
+          número no topo para fazer isto funcionar.
+      courseF_artist_variables6_2019_authored_hint:
+        courseF_artist_variables6_a: Graças as variáveis, você só precisa mudar um
+          número no topo para fazer isto funcionar.
       courseF_artist_variables6a_authored_hint:
         courseF_artist_variables6a_d: |-
           Este é o padrão que você vai seguir!
@@ -17399,6 +17729,9 @@ pt-BR:
           seu triângulo.
       courseF_artist_variables_4_authored_hint:
         courseF_artist_variables_4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
+      courseF_artist_variables_6_authored_hint:
+        courseF_artist_variables_6_a: Graças as variáveis, você só precisa mudar um
+          número no topo para fazer isto funcionar.
       courseF_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_e: |-
           Aqui está a solução.
@@ -19195,6 +19528,11 @@ pt-BR:
           </next>
           </block>
           </xml>
+      courseF_playlab_variables_challenge3_authored_hint:
+        courseF_playlab_variables_challenge3_e: |-
+          Quando tudo estiver pronto, você poderá clicar em um dos atores e receber até oito mensagens diferentes. É possível expandi-lo ainda mais?
+
+          Peça a um amigo que experimente seu aplicativo quando terminar!
       coursea_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_a: Se o pássaro não estiver chegando ao porco, certifique-se
           de que ambos os blocos foram completamente conectados, e então clique em
@@ -19964,6 +20302,12 @@ pt-BR:
       iceage_click_hello_2018_authored_hint:
         iceage_click_hello_a: Adicione um ou mais blocos `personagem 1 say` ao evento
           `quando clicado` para completar este desafio.
+      iceage_free_play_authored_hint:
+        iceage_free_play_a: 'Você pode fazer Sida e Manny uma luta de Cristal de Gelo?  '
+      iceage_free_play_2018_authored_hint:
+        iceage_free_play_a: 'Você pode fazer Sida e Manny uma luta de Cristal de Gelo?  '
+      iceage_free_playcourseF_IceAge_11_authored_hint:
+        iceage_free_play_a: 'Você pode fazer Sida e Manny uma luta de Cristal de Gelo?  '
       iceage_hello1_authored_hint:
         iceage_hello1_a: Você precisa apenas de adicionar um bloco para resolver este
           enigma. Arraste o bloco `dizer` da barra de ferramentas e conecte-o ao bloco
@@ -19974,6 +20318,36 @@ pt-BR:
           enigma. Arraste o bloco `dizer` da barra de ferramentas e conecte-o ao bloco
           de evento `quando executar` que já está na área de trabalho. Depois, digite
           "Olá!" dentro dele.
+      iceage_move_to_actor_authored_hint:
+        iceage_move_to_actor_a: Para este desafio, você pode mover Diego para baixo
+          por 200 pixels, ou mover Manny para cima em 200 pixels.
+      iceage_move_to_actor_2018_authored_hint:
+        iceage_move_to_actor_a: Para este desafio, você pode mover Diego para baixo
+          por 200 pixels, ou mover Manny para cima em 200 pixels.
+      iceage_sound_and_points_authored_hint:
+        iceage_sound_and_points_a: Você precisará adicionar dois blocos abaixo do
+          evento `quando o personagem 1 tocar no personagem 2`.
+      iceage_sound_and_points_2018_authored_hint:
+        iceage_sound_and_points_a: Você precisará adicionar dois blocos abaixo do
+          evento `quando o personagem 1 tocar no personagem 2`.
+      iceage_throw_hearts_authored_hint:
+        iceage_throw_hearts_a: Quando você quer jogar corações na vovó? Quando uma
+          flecha é pressionada? Quando você clica em Sid? Quando você clica na vovó?
+          A escolha é sua!
+      iceage_throw_hearts_2018_authored_hint:
+        iceage_throw_hearts_a: Quando você quer jogar corações na vovó? Quando uma
+          flecha é pressionada? Quando você clica em Sid? Quando você clica na vovó?
+          A escolha é sua!
+      iceage_warn_ice_age_authored_hint:
+        iceage_warn_ice_age_a: 'Você só deve ter que adicionar dois blocos para obter
+          este desafio onde precisa ser. '
+        iceage_warn_ice_age_b: Adicione ambos os novos blocos abaixo do evento `quando
+          executar` para que eles ocorram imediatamente após o início do programa.
+      iceage_warn_ice_age_2018_authored_hint:
+        iceage_warn_ice_age_a: 'Você só deve ter que adicionar dois blocos para obter
+          este desafio onde precisa ser. '
+        iceage_warn_ice_age_b: Adicione ambos os novos blocos abaixo do evento `quando
+          executar` para que eles ocorram imediatamente após o início do programa.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Você deve acabar com cinco blocos dentro do seu loop.
       level 'grade3_Loops_11_authored_hint:

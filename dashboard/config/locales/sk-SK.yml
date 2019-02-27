@@ -1268,10 +1268,10 @@ sk:
     download_in_Vietnamese: 'Stiahnuť vo vietnamčine:'
     windows: Windows (64-bitová verzia)
     mac: Mac OS X
-  stage_extras_teacher_message: Pre niektoré z Vašich sekcií máte vypnuté Doplnky
-    k lekciám. Vaši študenti neuvidia túto stránku až kým ju nezapnete. Doplnky k
-    lekciám môžete zapnúť navštívením Vašej <a href='http://code.org/teacher-dashboard'>učiteľskej
-    domovej stránky</a>.
+  stage_extras_teacher_message: Pre niektoré z vašich tried máte vypnuté Extra úrovne.
+    Vaši študenti neuvidia túto stránku až kým ich nezapnete. Extra úrovne môžete
+    zapnúť navštívením vášho <a href='http://code.org/teacher-dashboard'>hlavného
+    panelu učiteľa</a>.
   locked_stage: Obsah tejto úrovne nie je viditeľný, pretože táto úroveň je momentálne
     zamknutá. Tvoj učiteľ odomkne túto úroveň, keď sa na nej bude pracovať, alebo
     keď bude kontrolovať tvoje odpovede.

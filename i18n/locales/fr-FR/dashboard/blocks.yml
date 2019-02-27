@@ -154,7 +154,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
-        text: obtenir [RANGE][0]
+        text: obtenir [RANGE] [0]
         options:
           RANGE:
             '"low"': grave
@@ -1206,6 +1206,11 @@ fr:
         options:
           DURATION:
             '"0"': à l'infini
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': montrer
+            '"hide"': cacher
       binary_drawPixelHere:
         options:
           VAL:

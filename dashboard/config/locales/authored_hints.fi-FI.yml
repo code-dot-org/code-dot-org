@@ -172,6 +172,99 @@ fi:
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: Taiteilijan on käännyttävä 120 astetta jokaisen
           neliön välissä, jotta se voi suorittaa loppuun tämän mallin.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+          *Varmista, että tanssija näkyy ruudulla.
+
+          *Tämä taso päättyy 4 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoisia haasteita**
+          * Valitse muu kappale soitettavaksi.
+          * Valitse jokin muu, joka näyttää hirveltä!
+          * Nimeä tanssijasi
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+
+          *Tämä taso päättyy 12 tahdin jälkeen.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+
+          *Tämä taso päättyy 10 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          Muuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> alle.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Sinulla täytyy olla vähintään kaksi tanssijaa.
+
+          *Tämä taso päättyy 6 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          * Lisää kolmas tanssija (tai niin monta kuin haluat!)
+          * Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Kahden tanssijan koon on oltava muu kuin 100.
+
+          *Tämä taso päättyy 6 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          * Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Muuta vähintään yhden tanssijan sävyä.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          *Kahden tai useamman tanssijan ominaisuudet on muutettava.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Käytä luovuuttasi!
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Käytä luovuuttasi!
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          *Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
       Dance short test 2_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
