@@ -31,7 +31,7 @@ By comparison, the [demographic breakdown](/files/APCS-2014.pdf) of students tak
 
 ## CS Fundamentals Course Completion and Concepts Learned
 
-Code.org offers a series of 20-hour long courses we refer to as ["Computer Science Fundamentals."](/educate/k5) These interactive tutorials are hosted on [Code Studio](http://studio.code.org) and complemented by [lesson plans](https://code.org/teacher-dashboard#/plan) teachers can deliver in the classroom. The courses focus on helping students develop skills with basic CS concepts including [sequencing, debugging, loops, conditionals, nested loops, event-handlers and functions](/curriculum/docs/k-5/glossary).
+Code.org offers a series of 20-hour long courses we refer to as ["Computer Science Fundamentals."](/educate/k5) These interactive tutorials are hosted on [Code Studio](http://studio.code.org) and complemented by [lesson plans](https://code.org/resources) teachers can deliver in the classroom. The courses focus on helping students develop skills with basic CS concepts including [sequencing, debugging, loops, conditionals, nested loops, event-handlers and functions](/curriculum/docs/k-5/glossary).
 
 ### Table: Number of Students Demonstrating Skill in CS Concepts*
 
