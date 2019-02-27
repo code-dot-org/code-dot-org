@@ -88,7 +88,8 @@ module UserMultiAuthHelper
     self.oauth_token = nil
     self.oauth_token_expiration = nil
     self.oauth_refresh_token = nil
-    save unless new_record?
+    save
+    reload
   end
 
   def demigrate_from_multi_auth
@@ -114,6 +115,7 @@ module UserMultiAuthHelper
     end
 
     authentication_options.delete_all
-    save unless new_record?
+    save
+    reload
   end
 end
