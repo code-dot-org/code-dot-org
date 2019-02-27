@@ -217,8 +217,6 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
-    // Set the font family for older projects that didn't set them on create:
-    elementUtils.setDefaultFontFamilyStyle(element);
 
     $(element).addClass('textArea');
 

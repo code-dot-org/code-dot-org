@@ -214,8 +214,6 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
-    // Set the font family for older projects that didn't set them on create:
-    elementUtils.setDefaultFontFamilyStyle(element);
   },
 
   getCurrentSize: function(element) {

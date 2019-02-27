@@ -209,8 +209,6 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
-    // Set the font family for older projects that didn't set them on create:
-    elementUtils.setDefaultFontFamilyStyle(element);
 
     // In the future we may want to trigger this on focus events as well.
     $(element).on('mousedown', function(e) {
