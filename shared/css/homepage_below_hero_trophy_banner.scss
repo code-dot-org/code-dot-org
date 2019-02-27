@@ -1,0 +1,99 @@
+.homepage-professional-learning-banner {
+  background-color: #0094ca;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+
+  a {
+    font-family: 'Gotham 4r', sans-serif;
+    text-decoration: none;
+  }
+
+  .nonphone {
+    padding: 5px;
+    background-color: #0094ca;
+    height: 97px;
+    margin: 0 auto;
+    float: none;
+
+    .left {
+      float: left;
+      height: 87px;
+      position: relative;
+
+      .banner {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        height: 87px;
+
+        .trophyimage {
+          left: 0px;
+          top: -41px;
+          position: absolute;
+          height: 138px;
+          width: 195px;
+        }
+
+        .text {
+          color: white;
+          font-size: 18px;
+          text-align: center;
+          line-height: 1.5;
+          animation: fadein 5s;
+          width: 100%;
+          padding-left: 210px;
+          padding-right: 30px;
+        }
+      }
+    }
+
+    .right {
+      float: left;
+      padding-top: 26px;
+      height: 87px;
+      text-align: center;
+
+      button {
+        font-size: 18px;
+        min-width: 140px;
+        margin-top: 0px;
+        color: #0094ca;
+        background-color: white;
+        border-color: white;
+        border-width: 2px;
+      }
+    }
+  }
+
+  .phone {
+    text-align: center;
+
+    .text {
+      color: white;
+      font-size: 18px;
+      padding: 15px;
+      text-align: center;
+      line-height: 1.5;
+      top: 0px;
+      left: 30px;
+      animation: fadein 5s;
+    }
+
+    button {
+      font-size: 18px;
+      min-width: 140px;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      color: #0094ca;
+      background-color: white;
+      border-color: white;
+      border-width: 2px;
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}
