@@ -167,17 +167,6 @@ FactoryGirl.define do
           )
         end
       end
-      trait :with_email_authentication_option do
-        after(:create) do |user|
-          create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: AuthenticationOption::EMAIL,
-            authentication_id: user.hashed_email
-          )
-        end
-      end
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
@@ -413,36 +402,6 @@ FactoryGirl.define do
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :with_email_authentication_option do
-      after(:create) do |user|
-        create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
-        )
-      end
-    end
-
-    trait :with_migrated_email_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
         )
         user.update!(
           primary_contact_info: ao,

@@ -144,7 +144,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'normalize_email for migrated user' do
-    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher = create :teacher, email: 'OLD@EXAMPLE.COM'
     teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
     assert_equal 'new@example.com', teacher.primary_contact_info.email
     assert_equal 'new@example.com', teacher.read_attribute(:email)
@@ -157,7 +157,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'hash_email for migrated user' do
-    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher = create :teacher, email: 'OLD@EXAMPLE.COM'
     teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
     hashed_email = User.hash_email('new@example.com')
     assert_equal hashed_email, teacher.primary_contact_info.hashed_email
@@ -272,11 +272,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def create_multi_auth_user_with_email(email)
-    create :student, :with_migrated_email_authentication_option, email: email
+    create :student, email: email
   end
 
   def create_multi_auth_user_with_second_email(email)
-    user = create :student, :with_migrated_email_authentication_option
+    user = create :student
     user.authentication_options << create(:google_authentication_option, user: user, email: email)
     user.save
     user
@@ -318,12 +318,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def cannot_create_multi_auth_users_with_email(email)
-    cannot_create_user_with_email :teacher,
-      :with_migrated_email_authentication_option,
-      email: email
-    cannot_create_user_with_email :student,
-      :with_migrated_email_authentication_option,
-      email: email
+    cannot_create_user_with_email :teacher, email: email
+    cannot_create_user_with_email :student, email: email
   end
 
   def cannot_create_user_with_email(*args)
@@ -366,8 +362,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def cannot_update_multi_auth_users_with_email(email)
-    cannot_update_user_with_email email, :teacher, :with_migrated_email_authentication_option
-    cannot_update_user_with_email email, :student, :with_migrated_email_authentication_option
+    cannot_update_user_with_email email, :teacher
+    cannot_update_user_with_email email, :student
   end
 
   def cannot_update_user_with_email(email, *user_args)
@@ -401,7 +397,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def cannot_give_user_additional_email(type, email)
-    user = create type, :with_migrated_email_authentication_option
+    user = create type
     user.authentication_options << FactoryGirl.build(:google_authentication_option, user: user, email: email)
     refute user.save
     assert_fails_email_uniqueness_validation user
@@ -482,7 +478,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "saving migrated teacher does not remove cleartext email addresses" do
     User.any_instance.expects(:remove_cleartext_emails).never
-    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'teacher@email.com'
+    teacher = create :teacher, email: 'teacher@email.com'
     teacher.reload
     assert_equal 1, teacher.authentication_options.count
     assert_equal 'teacher@email.com', teacher.authentication_options.first.email
@@ -494,7 +490,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "saving migrated student that was previously a teacher removes cleartext email addresses" do
-    user = create :teacher, :with_migrated_email_authentication_option, email: 'example@email.com'
+    user = create :teacher, email: 'example@email.com'
     user.authentication_options << create(:authentication_option, email: 'another@email.com')
     user.authentication_options.last.destroy
 
@@ -748,8 +744,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
-    migrated_student = create(:student, :with_email_authentication_option, :multi_auth_migrated, email: email)
-    migrated_student.primary_contact_info = migrated_student.authentication_options.first
+    migrated_student = create(:student, email: email)
+    migrated_student.primary_contact_info = migrated_student.primary_contact_info
     migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
     legacy_student = build(:student, email: email)
     # skip duplicate email validation
@@ -1605,12 +1601,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is true for migrated student without a password' do
-    student = create :student, :with_migrated_email_authentication_option, encrypted_password: ''
+    student = create :student, encrypted_password: ''
     assert student.can_edit_password?
   end
 
   test 'can_edit_password? is true for migrated teacher without a password' do
-    teacher = create :teacher, :with_migrated_email_authentication_option, encrypted_password: ''
+    teacher = create :teacher, encrypted_password: ''
     assert teacher.can_edit_password?
   end
 
@@ -1643,7 +1639,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_email? is true for migrated user with at least one authentication option' do
-    teacher = create :teacher, :with_migrated_email_authentication_option
+    teacher = create :teacher
     assert teacher.can_edit_email?
   end
 
@@ -1922,7 +1918,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info replaces email option for teacher if one already exists' do
-    teacher = create :teacher, :with_migrated_email_authentication_option
+    teacher = create :teacher
 
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
@@ -1956,7 +1952,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info recalculates hashed_email if both email and hashed_email are supplied for teacher' do
-    teacher = create :teacher, :with_migrated_email_authentication_option
+    teacher = create :teacher
 
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
@@ -1982,7 +1978,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info replaces email option for student if one already exists' do
-    student = create :student, :with_migrated_email_authentication_option
+    student = create :student
 
     assert_equal 1, student.authentication_options.count
     refute_nil student.primary_contact_info
@@ -2018,7 +2014,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info recalculates hashed_email if both email and hashed_email are supplied for student' do
-    student = create :student, :with_migrated_email_authentication_option
+    student = create :student
 
     assert_equal 1, student.authentication_options.count
     refute_nil student.primary_contact_info
@@ -2041,7 +2037,7 @@ class UserTest < ActiveSupport::TestCase
     taken_email = 'taken@example.org'
     create :student, email: taken_email
     update_primary_contact_info_fails_safely_for \
-      create(:student, :with_migrated_email_authentication_option),
+      create(:student),
       new_email: taken_email
   end
 
@@ -2156,7 +2152,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
-    user = create :teacher, :with_migrated_email_authentication_option
+    user = create :teacher
     assert user.downgrade_to_student
     user.reload
     assert_equal User::TYPE_STUDENT, user.user_type
@@ -2173,7 +2169,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_teacher is false if updating primary contact info fails' do
-    user = create :student, :with_migrated_email_authentication_option
+    user = create :student
     original_primary_contact_info = user.primary_contact_info
     user.stubs(:update_primary_contact_info!).raises(RuntimeError)
 
@@ -2188,7 +2184,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_teacher is false if user update fails' do
-    user = create :student, :with_migrated_email_authentication_option
+    user = create :student
     original_primary_contact_info = user.primary_contact_info
     user.stubs(:update!).raises(ActiveRecord::RecordInvalid)
 
@@ -3964,13 +3960,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_by_email_or_hashed_email locates a multi-auth user by email' do
-    user = create :teacher, :with_migrated_email_authentication_option
+    user = create :teacher
     assert_equal user, User.find_by_email_or_hashed_email(user.email)
   end
 
   test 'find_by_email_or_hashed_email locates a multi-auth user by hashed email' do
     email = 'student@example.org'
-    user = create :student, :with_migrated_email_authentication_option, email: email
+    user = create :student, email: email
     assert_equal user, User.find_by_email_or_hashed_email(email)
   end
 
@@ -3996,19 +3992,19 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_by_email locates a multi-auth teacher by email' do
-    teacher = create :teacher, :with_migrated_email_authentication_option
+    teacher = create :teacher
     assert_equal teacher, User.find_by_email(teacher.email)
   end
 
   test 'find_by_email locates a multi-auth teacher by non-primary email' do
-    teacher = create :teacher, :with_migrated_email_authentication_option
+    teacher = create :teacher
     second_option = create :authentication_option, user: teacher
     assert_equal teacher, User.find_by_email(second_option.email)
   end
 
   test 'find_by_email does not locate a multi-auth student by email' do
     email = 'student@example.org'
-    create :student, :with_migrated_email_authentication_option, email: email
+    create :student, email: email
     assert_nil User.find_by_email email
   end
 
@@ -4034,13 +4030,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_by_hashed_email locates a multi-auth user by email' do
-    user = create :teacher, :with_migrated_email_authentication_option
+    user = create :teacher
     assert_equal user, User.find_by_hashed_email(user.hashed_email)
   end
 
   test 'find_by_hashed_email locates a multi-auth user by hashed email' do
     email = 'student@example.org'
-    user = create :student, :with_migrated_email_authentication_option, email: email
+    user = create :student, email: email
     assert_equal user, User.find_by_hashed_email(User.hash_email(email))
   end
 

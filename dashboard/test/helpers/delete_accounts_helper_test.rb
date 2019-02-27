@@ -530,8 +530,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "removes all of user's authentication option rows" do
     user = create :user,
       :with_clever_authentication_option,
-      :with_google_authentication_option,
-      :with_email_authentication_option
+      :with_google_authentication_option
     ids = user.authentication_options.map(&:id)
 
     assert_equal 3, user.authentication_options.with_deleted.count,
@@ -548,7 +547,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "even removes soft-deleted authentication option rows" do
-    user = create :user, :with_email_authentication_option
+    user = create :user
     ids = user.authentication_options.map(&:id)
     user.authentication_options.first.destroy
 
