@@ -7,8 +7,8 @@ errors = []
 puts "Backfilling :pay_fee question changes..."
 Pd::Application::Teacher1920Application.find_each do |application|
   print '.'
-  pay_fee = application.form_data_hash[:pay_fee]
-  
+  pay_fee = application.form_data_hash["payFee"]
+
   if pay_fee == 'Yes, my school or I will be able to pay the full program fee.'
     new_pay_fee = 'Yes, my school will be able to pay the full program fee.'
   elsif pay_fee == 'No, my school or I will not be able to pay the program fee. I would like to be considered for a scholarship.'
@@ -20,8 +20,8 @@ Pd::Application::Teacher1920Application.find_each do |application|
   else
     next
   end
-  
-  application.update_form_data_hash(pay_fee: new_pay_fee)
+
+  application.update_form_data_hash({"payFee": new_pay_fee})
   if application.save
     total_updated += 1
   else
@@ -31,4 +31,4 @@ end
 
 errors.each {|e| puts e}
 
-puts "\nSuccessfully updated scholarship info for #{total_updated} applications, with ${errors.count} errors."
+puts "\nSuccessfully updated scholarship info for #{total_updated} applications, with #{errors.count} errors."
