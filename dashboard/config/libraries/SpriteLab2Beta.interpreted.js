@@ -595,6 +595,7 @@ function runInputEvents() {
     param = typeof inputEvents[i].param === "function" ?
       inputEvents[i].param() :
       inputEvents[i].param;
+    // Need to fix
     if(!Array.isArray(param)) {
       if(eventType(param)) {
         thisSprite = param;
@@ -740,11 +741,11 @@ function updateHUDText() {
     text("Game Over", 200, 200);
   } else if (title) {
     fill("black");
-    textAlign(CENTER);
+    textAlign(CENTER, CENTER);
     textSize(50);
-    text(title, 200, 150);
+    text(title, 0, 0, 400, 200);
     textSize(35);
-    text(subTitle, 200, 250);
+    text(subTitle, 0, 200, 400, 200);
   }
 }
 
