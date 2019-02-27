@@ -67,6 +67,7 @@ Resources:
   DefaultTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
+      Name: !Sub "TargetGroup-${AWS::StackName}"
       VpcId: !ImportValue VPC
       Port: !Ref ElbPort
       TargetType: !Ref TargetType
@@ -84,6 +85,7 @@ Resources:
   EcsElasticLoadBalancer:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
+      Name: !Sub "ELB-${AWS::StackName}"
       SecurityGroups:
         - !Ref AlbSecurityGroup
       Subnets:
