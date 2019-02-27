@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+total_updated = 0
+errors = []
+puts "Backfilling :pay_fee question changes..."
+Pd::Application::Teacher1920Application.find_each do |application|
+  print '.'
+  hash = application.form_data_hash
+  
+  if hash[:pay_fee] == 'Yes, my school or I will be able to pay the full program fee.'
+    hash[:pay_fee] = 'Yes, my school will be able to pay the full program fee.'
+  elsif hash[:pay_fee] == 'Yes, my school or I will be able to pay the full program fee.'
+    hash[:pay_fee] = 'Yes, my school will be able to pay the full program fee.'
+  elsif hash[:pay_fee] == 'Not applicable: there is no program fee for teachers in my region.'
+    hash.delete :pay_fee
+  elsif hash[:pay_fee] == 'Not applicable: there is no Regional Partner in my region.'
+    hash.delete :pay_fee
+  else
+    next
+  end
+  
+  if application.update_column :form_data, hash.to_json
+    total_updated += 1
+  else
+    errors << "\nError: Application #{application.id} with value #{hash[:pay_fee].inspect} couldn't be updated"
+  end
+end
+
+errors.each {|e| puts e}
+
+puts "\nSuccessfully updated scholarship info for #{total_updated} applications, with ${errors.count} errors."
