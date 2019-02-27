@@ -11,10 +11,7 @@ import EventRow from './EventRow';
 import color from '../../util/color';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
-import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import * as elementUtils from './elementUtils';
-import designMode from '../designMode';
-import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 
 class DropdownProperties extends React.Component {
   static propTypes = {
@@ -78,12 +75,6 @@ class DropdownProperties extends React.Component {
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
-        />
-        <FontFamilyPropertyRow
-          initialValue={designMode.fontFamilyOptionFromStyle(
-            element.style.fontSize
-          )}
-          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
           desc={'font size (px)'}
@@ -188,8 +179,7 @@ export default {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
+    element.style.fontSize = '14px';
     element.style.margin = '0';
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
@@ -209,8 +199,6 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
-    // Set the font family for older projects that didn't set them on create:
-    elementUtils.setDefaultFontFamilyStyle(element);
 
     // In the future we may want to trigger this on focus events as well.
     $(element).on('mousedown', function(e) {

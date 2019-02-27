@@ -27,11 +27,7 @@ import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-import {
-  ICON_PREFIX_REGEX,
-  defaultFontSizeStyle,
-  fontFamilyStyles
-} from './constants';
+import {ICON_PREFIX_REGEX} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -197,8 +193,6 @@ applabCommands.button = function(opts) {
   newButton.style.position = 'relative';
   newButton.style.color = color.white;
   newButton.style.backgroundColor = color.applab_button_teal;
-  newButton.style.fontSize = defaultFontSizeStyle;
-  newButton.style.fontFamily = fontFamilyStyles[0];
   elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
 
   return Boolean(
@@ -900,8 +894,6 @@ applabCommands.textInput = function(opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
-  newInput.style.fontSize = defaultFontSizeStyle;
-  newInput.style.fontFamily = fontFamilyStyles[0];
   newInput.style.height = '30px';
   newInput.style.width = '200px';
   elementUtils.setDefaultBorderStyles(newInput, {
@@ -924,8 +916,6 @@ applabCommands.textLabel = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
-  newLabel.style.fontSize = defaultFontSizeStyle;
-  newLabel.style.fontFamily = fontFamilyStyles[0];
   elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
@@ -989,8 +979,6 @@ applabCommands.dropdown = function(opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.fontSize = defaultFontSizeStyle;
-  newSelect.style.fontFamily = fontFamilyStyles[0];
   newSelect.style.color = color.white;
   newSelect.style.backgroundColor = color.applab_button_teal;
   elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});

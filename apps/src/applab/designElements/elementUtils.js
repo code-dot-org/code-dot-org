@@ -192,17 +192,6 @@ export function getDefaultScreenId() {
 }
 
 /**
- * Sets the default font family style on an element if it is
- * not already specified.
- * @param {DOMElement} element The element to modify.
- */
-export function setDefaultFontFamilyStyle(element) {
-  if (element.style.fontFamily === '') {
-    element.style.fontFamily = constants.fontFamilyStyles[0];
-  }
-}
-
-/**
  * Sets the default border styles on a new element.
  * @param {DOMElement} element The element to modify.
  * @param {Object.<string, boolean>} options Optional map of options
