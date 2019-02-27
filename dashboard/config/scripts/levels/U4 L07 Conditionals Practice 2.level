@@ -53,10 +53,7 @@
     "start_blocks": "var score = 10;\r\nvar lives = 3;\r\n\r\n// Predict how questions 1 and 2 will be answered, then run the code to\r\n// check your prediction.\r\nconsole.log(\"Q1: Is score plus lives less than thirteen?\");\r\nconsole.log((score + lives) < 13);\r\nconsole.log(\"\");\r\n\r\nconsole.log(\"Q2: Is lives times three equal to score?\");\r\nconsole.log((lives * 3) == score);\r\nconsole.log(\"\");\r\n\r\n// Add code to answer the following two questions\r\nconsole.log(\"Q3: Is score minus lives greater than five?\");\r\n\r\nconsole.log(\"\");\r\n\r\n// \r\nconsole.log(\"Q4: Is score times two greater than or equal to lives times ten?\");",
     "slider_speed": "0.1",
     "parent_level_id": 17615,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
