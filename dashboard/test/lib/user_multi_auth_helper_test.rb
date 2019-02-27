@@ -18,7 +18,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'oauth_tokens_for_provider returns nil values for migrated email teacher' do
-    user = create :teacher, :with_migrated_email_authentication_option
+    user = create :teacher
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
     google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
     google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
@@ -54,7 +54,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'does nothing if user is already migrated' do
-    user = create :teacher, :with_migrated_email_authentication_option
+    user = create :teacher
     assert user.migrated?
 
     user.expects(:save).never

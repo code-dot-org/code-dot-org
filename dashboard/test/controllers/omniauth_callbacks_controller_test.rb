@@ -875,7 +875,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 silently adds authentication_option to migrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    user = create(:student, email: email)
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -892,7 +892,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    user = create(:student, email: email)
     google_classroom_student = create(:student, :migrated_imported_from_google_classroom, uid: uid)
     google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
@@ -913,7 +913,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 silently adds authentication_option to migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:teacher, :with_migrated_email_authentication_option, email: email)
+    user = create(:teacher, email: email)
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_TEACHER, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -930,7 +930,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: microsoft_v2_auth silently adds authentication_option to migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:teacher, :with_migrated_email_authentication_option, email: email)
+    user = create(:teacher, email: email)
     auth = OmniAuth::AuthHash.new(
       provider: 'microsoft_v2_auth',
       uid: uid,
@@ -960,7 +960,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: microsoft_v2_auth silently adds authentication_option to migrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    user = create(:student, email: email)
     auth = OmniAuth::AuthHash.new(
       provider: 'microsoft_v2_auth',
       uid: uid,
@@ -1059,7 +1059,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: clever does not silently add authentication_option to migrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    user = create(:student, email: email)
     auth = generate_auth_user_hash(provider: 'clever', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -1530,7 +1530,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'silent_takeover: Fails and notifies on malformed migrated user' do
     # Set up existing account
-    account = create :teacher, :with_migrated_email_authentication_option
+    account = create :teacher
     email = account.email
     assert_equal 1, account.authentication_options.count
 
