@@ -178,6 +178,12 @@ FactoryGirl.define do
           )
         end
       end
+      transient {pilot_experiment nil}
+      after(:create) do |teacher, evaluator|
+        if evaluator.pilot_experiment
+          create :single_user_experiment, min_user_id: teacher.id, name: evaluator.pilot_experiment
+        end
+      end
     end
 
     factory :student do

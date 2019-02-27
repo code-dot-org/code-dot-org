@@ -1039,6 +1039,9 @@ en:
         title: title
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Optional Data Questions:
+        A selection of data questions in the style of the AP exam: A selection of data questions in the style of the AP exam
+        Optional Data Questions: Optional Data Questions
       CSP Pre-survey: {}
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
@@ -4487,6 +4490,7 @@ en:
         CSP Cumulative Assess A_2018: {}
         CSP Cumulative Assess A_2018_2019: {}
         CSP Cumulative Assess A_exam_prep: {}
+        CSP Data Questions MC_2018_2019: {}
         CSP Longitudinal Contact Request: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
@@ -5714,6 +5718,14 @@ en:
         What are the values of the variables a, b and c after all of the code has executed?: What are the values of the variables a, b and c after all of the code has executed?
         description here: description here
         title: title
+      U4 L05 Truth Table matching:
+        Truth Table Matching: Truth Table Matching
+        'false': 'false'
+        false && false: false && false
+        false && true: false && true
+        'true': 'true'
+        true && false: true && false
+        true && true: true && true
       U4L06 Create Record Id Matching Q:
         '1': '1'
         '2': '2'
@@ -8644,6 +8656,12 @@ en:
         : Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
         Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.: Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.
         Two devices must communicate using the same bit-rate to successfully send and receive digital data.: Two devices must communicate using the same bit-rate to successfully send and receive digital data.
+      CSPFinal_Question_2_2018_2019 edit:
+        Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.: Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.
+        ? Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        : Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.: Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.
+        Two devices must communicate using the same bit-rate to successfully send and receive digital data.: Two devices must communicate using the same bit-rate to successfully send and receive digital data.
       CSPFinal_Question_2_exam_prep:
         High bandwidth, high latency: High bandwidth, high latency
         High bandwidth, low latency: High bandwidth, low latency
@@ -10441,6 +10459,12 @@ en:
         No, that is not even close.: No, that is not even close.
         What is 1 + 1?: What is 1 + 1?
         Yes, you are a genius!: Yes, you are a genius!
+      U1 CSP 2019 Assessment Bandwidth Choose 2:
+        'Bandwidth: a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.': 'Bandwidth: a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.'
+        'Bandwidth: the time elapsed between the transmission and the receipt of a request.': 'Bandwidth: the time elapsed between the transmission and the receipt of a request.'
+        Choose 2: Choose 2
+        'Latency:  a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.': 'Latency:  a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.'
+        'Latency: the time elapsed between the transmission and the receipt of a request.': 'Latency: the time elapsed between the transmission and the receipt of a request.'
       U1 Ch1 Assessment question 4 to 8 bit:
         2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
         2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
@@ -10469,8 +10493,8 @@ en:
         wrong answer: wrong answer
       U1 L02 CYU MC:
         '1': '1'
-        '3': '3'
-        'The score is: 1': 'The score is: 1'
+        '4': '4'
+        'The score is: 4': 'The score is: 4'
         'The score is: score': 'The score is: score'
       U1L07 Assessment 1:
         A: A
@@ -19478,11 +19502,11 @@ en:
         <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
         <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
       cspu5_assess1_swap_2018_2019:
-        <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
-        <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
-        <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
-        <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
-        <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
+        "<code>from = var temp;</code><br><code>to = temp;</code><br><code>from = to;</code>": "<code>from = var temp;</code><br><code>to = temp;</code><br><code>from = to;</code>"
+        "<code>to = from;</code><br><code>from = to;</code>": "<code>to = from;</code><br><code>from = to;</code>"
+        "<code>var temp = from;</code><br><code>from = to;</code><br><code>to = from;</code>": "<code>var temp = from;</code><br><code>from = to;</code><br><code>to = from;</code>"
+        "<code>var temp = from;</code><br><code>from = to;</code><br><code>to = temp;</code>": "<code>var temp = from;</code><br><code>from = to;</code><br><code>to = temp;</code>"
+        "<code>var temp = to;</code><br><code>from = to;</code><br><code>to = temp;</code>": "<code>var temp = to;</code><br><code>from = to;</code><br><code>to = temp;</code>"
       cspu5_assess1_swap_exam_prep:
         <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
         <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>

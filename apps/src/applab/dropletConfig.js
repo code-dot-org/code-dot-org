@@ -80,7 +80,7 @@ export var blocks = [
     parent: api,
     category: 'UI controls',
     paletteParams: ['id', 'type', 'callback'],
-    params: ['"id"', '"click"', 'function(event) {\n  \n}'],
+    params: ['"id"', '"click"', 'function( ) {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: idDropdownWithSelector(),
