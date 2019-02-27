@@ -194,11 +194,10 @@ pt-BR:
           que você usa várias vezes) para criar caça-sóis usando fios e contas.
       SongwritingParameters:
         title: Composição
-        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
-          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
-          de reescrevê-la).
+        desc: Os alunos usam o conceito do refrão em uma música para aprender sobre
+          funções de definição e de chamada.
       DiceRace:
-        title: 'Algoritmos da via real: jogo de dados'
+        title: 'Algoritmos da vida real: Corrida de dados'
         desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso,
           os alunos vão identificar e escrever um algoritmo para um jogo de dados.
       Internet:
@@ -295,7 +294,7 @@ pt-BR:
       courseB_unplugged_loopyMRF:
         title: Atividade off-line
         desc: Assim como em “Os meus amigos robótidos”, você irá “programar” seus
-          amigos, mas desta vez com loops!
+          amigos, mas desta vez com laços!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atividade off-line
         desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
@@ -381,14 +380,13 @@ pt-BR:
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
       courseE_unplugged_diceRace:
-        title: 'Algoritmos da via real: jogo de dados'
+        title: 'Algoritmos da vida real: Corrida de dados'
         desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso,
           os alunos vão identificar e escrever um algoritmo para um jogo de dados.
       courseE_unplugged_songwritingParameters:
         title: Composição de música com parâmetros
-        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
-          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
-          de reescrevê-la).
+        desc: Os alunos usam o conceito do refrão em uma música para aprender sobre
+          funções de definição e de chamada.
       courseE_unplugged_internet:
         title: Internet
         desc: Os alunos enviam mensagens que representam vários métodos de transmissão
@@ -400,9 +398,8 @@ pt-BR:
           de maneira mais eficiente do que se um aluno tentasse resolver sozinho.
       courseE_unplugged_songwriting:
         title: Composição
-        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
-          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
-          de reescrevê-la).
+        desc: Os alunos usam o conceito do refrão em uma música para aprender sobre
+          funções de definição e de chamada.
       courseF_unplugged_tangrams:
         title: Algoritmos do tangram
         desc: 'Esta aula nos mostra algo importante sobre os algoritmos: se você o
@@ -427,7 +424,7 @@ pt-BR:
           ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos
           de códigos em funções é uma prática útil.  '
       swipeRightPassThrough:
-        title: Sessão de cenários de recrutamento
+        title: Sessão de Cenários de Recrutamento
         desc: "# Sessão de Cenários de Recrutamento\r\n\r\n## Deslize para Direita
           para CS\r\nPara esta sessão, nós usaremos uma ferramenta chamada \"Deslize
           para Direita para CS\", a qual foi desenvolvida pelos nossos parceiros no
@@ -446,7 +443,7 @@ pt-BR:
           vamos te mandar para o jogo, e passar adiante o endereço de email do Code.org
           com o qual você logou."
       swipeRightPassThrough-test123:
-        title: Sessão de cenários de recrutamento
+        title: Sessão de Cenários de Recrutamento
         desc: "# Sessão de Cenários de Recrutamento\r\n\r\n## Deslize para Direita
           para CS\r\nPara esta sessão, nós usaremos uma ferramenta chamada \"Deslize
           para Direita para CS\", a qual foi desenvolvida pelos nossos parceiros no
@@ -472,8 +469,8 @@ pt-BR:
           nível\r\n3. criou um nível `markdown`com o mesmo conteúdo e o mesmo nome.
           marcou a caixa para encriptá-lo. clicou em salvar e publicar"
       courseB_unplugged_MRF_2018:
-        title: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-        desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: Meus amigos Robóticos
+        desc: Aprenda a programar escrevendo programas para seus amigos!
       PlantASeed_2018:
         title: 'Algoritmos da vida real: plante uma semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando
@@ -552,7 +549,7 @@ pt-BR:
       courseE_unplugged_CnC_2018:
         title: Compartilhamento Digital
         desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em
-          Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes
+          Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes
           a entenderem os desafios e benefícios de respeitar posse e direitos autorais,
           particularmente em ambientes digitais. Estudantes deveriam ser encorajados
           a respeitar os direitos dos artistas como uma parte importante de ser um
@@ -565,7 +562,7 @@ pt-BR:
           uma instrução por vez.
       courseB_unplugged_MRF_2019:
         title: Meus amigos robóticos
-        desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        desc: Aprenda a programar escrevendo programas para seus amigos!
       BuildingAFoundation_2019:
         title: 'tradução pendente: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'tradução pendente: en-US.data.unplugged.BuildingAFoundation_2018.desc'
@@ -617,7 +614,7 @@ pt-BR:
       courseE_unplugged_CnC_2019:
         title: Compartilhamento Digital
         desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em
-          Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes
+          Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes
           a entenderem os desafios e benefícios de respeitar posse e direitos autorais,
           particularmente em ambientes digitais. Estudantes deveriam ser encorajados
           a respeitar os direitos dos artistas como uma parte importante de ser um
@@ -682,3 +679,7 @@ pt-BR:
           a entenderem o processo criativo de compartilhar e inspiração. Junto disso
           vem a promoção da expressão criativa e a necessidade de ser justo com o
           trabalho criativo.
+      GraphingData_2019:
+        title: Gerando Gráficos a partir de dados
+        desc: " Nesta aula, os alunos irão coletar dados de um projeto Laboratório
+          ou de um cenário real e usá-lo para fazer previsões."

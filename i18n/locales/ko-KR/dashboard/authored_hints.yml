@@ -118,7 +118,17 @@ ko:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: 어떻게 블럭을 맞추는지 어려우셨죠? 보라색 꽃을 다룬 것처럼 빨간 꽃도 다뤄보세요.
         2-3_Bee_Conditionals_14_b: 붉은 꽃이 보라색이라면 코드를 줄이기 위해 여분의`반복` 블럭을 사용하는 방법을 알아낼 수 있습니까?
-        2-3_Bee_Conditionals_14_c: "크게 두가지로 나눠보세요.\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n1) 꿀을 3번 모으세요.\n  - 앞으로 5번 이동하세요.\n  - 꿀이 있는지 확인하세요.\n  - 왼쪽으로 도세요.\n  \n2) 꿀 만들기 \n  - 한 번 앞으로 이동하십시오.\n  - 꿀을 두개 만드세요."
+        2-3_Bee_Conditionals_14_c: |-
+          크게 두가지로 나눠보세요.
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+          1) 꿀을 3번 모으세요.
+            - 앞으로 5번 이동하세요.
+            - 꿀이 있는지 확인하세요.
+            - 왼쪽으로 도세요.
+            
+          2) 꿀 만들기 
+            - 한 번 앞으로 이동하십시오.
+            - 꿀을 두개 만드세요.
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: '주의사항: 보라색 꽃의 꿀은 프로그램 실행 할때마다 0개나 1개로 달라 질 수 있습니다.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -285,7 +295,9 @@ ko:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: '각각의 반복되는 모양은 ** 육각형의 반**, ** 삼각형의 2/3 ** 조합입니다. '
         Course_4_Artist_12_b: '유닛의 모양은 마지막 퍼즐에서와 거의 동일합니다. 단, 반 육각형은 조금 큽니다. '
-        Course_4_Artist_12_c: "1) 처음 세 줄은 60 픽셀이고 60도 회전해야합니다.\n2) 다음 두 줄은 80 픽셀이며 120도 회전해야합니다. "
+        Course_4_Artist_12_c: |-
+          1) 처음 세 줄은 60 픽셀이고 60도 회전해야합니다.
+          2) 다음 두 줄은 80 픽셀이며 120도 회전해야합니다. 
         Course_4_Artist_12_d: |-
           **예제 답안:**
 
@@ -3420,6 +3432,99 @@ ko:
         mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
         mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
         mc_9_c: '''Place Torch'' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요.'
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+          * 댄서가 화면에 나타나도록 하세요.
+
+          *이 단계는 4번째 마디 이후에 끝납니다.
+        challenges: |-
+          ** 선택 과제**
+          * 다른 노래를 선택하여 재생하세요.
+          * 사슴처럼 보이는 다른 모습을 선택하세요!
+          * 댄서 이름을 바꾸세요.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+          * 댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
+
+          *이 단계는 8번째 마디 후에 끝납니다.
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 6번째 마디 후 댄서는 4번째 마디 후와는 다른 춤을 추고 있어야 합니다.
+
+          *이 단계는 12번째 마디 후에 끝납니다.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 노래의 7번째 마디 중간에 배경 효과를 변경해야 합니다.
+
+          *이 단계는 10번째 마디 후 끝납니다.*
+        challenges: |-
+          **선택 과제**
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 이벤트 아래 있는 새로운 블록에 연결하여 노래 중간 여러 시점에 배경 효과를 변경하세요.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 적어도 두 명 이상의 댄서가 있어야 합니다.
+
+          *이 단계는 6번째 마디 이후에 끝납니다.
+        challenges: |-
+          **선택 과제**
+
+          *세 번째 댄서(또는 원하는 만큼!)를 추가하세요
+          *모든 댄서가 노래의 여러 시점에서 서로 다른 동작을 수행하도록 하세요.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 두 명의 댄서는 크기가 100보다 커야 합니다.
+
+          *이 단계는 6번째 마디 이후에 끝납니다.
+        challenges: |-
+          **선택 과제**
+
+          * 다른 속성(너비, 높이, 회전 등)을 변경하여 실험해보세요.
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 댄서 한 명 이상의 색조를 변경하세요.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 댄서 두 명 이상의 속성을 변경해야 합니다.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 창의력을 발휘하세요!
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 창의력을 발휘하세요!
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * ‘왼쪽 화살표 누를 때’ 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: '`강아지_속도`의 번호를`고양이_속도`보다 큰 값으로 설정하십시오.'
       Dance short test 2_authored_hint:

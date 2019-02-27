@@ -6,6 +6,96 @@ bs:
         2-3_Artist_1_new_b: Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok.
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Da biste završili kuću, sve što trebamo učiniti je nacrtati Kvadrat!
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+          * Postarajte se da se plesač pojavi na ekranu.
+
+          *Ovaj level se završava nakon 4 takta.*
+        challenges: |-
+          **Neobavezni izazovi**
+          * Odaberite drugu pjesmu.
+          * Promijenite ime plesača.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+          * Plesač mora promjeniti novi pokret svako četiri takta.
+
+          *Level se završava nakon 7 taktova.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+          * Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.
+
+          *Level se završava nakon 11 taktova.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          * Moraš promjeniti efekat pozadine negdje oko sedmog takta pjesme.
+
+          *Level se završava nakon 9 taktova.*
+        challenges: |-
+          **Neobavezni izazovi**
+
+          Izmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktova"</title></block></xml> događaja.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+          * Moraš imati barem dva plesača.
+
+          *Level se završava nakon 5 taktova.*
+        challenges: |-
+          **Neobavezni izazovi**
+
+          * dodaj trećeg plesača (ili onoliko koliko želiš!)
+          * Postigni da svaki od tvojih plesača radi drugačije pokrete u drugim dijelovima pjesme.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          * Dva plesača moraju imati visinu drugačiju od 100.
+
+          *Level se završava nakon 5 taktova.*
+        challenges: |-
+          **Neobavezni izazovi**
+
+          * Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          * Promjeni nijanse boje barem jednog plesača.
+
+          *Level se završava nakon 7 taktova.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          * Osobine dva ili više plesača moraju da se izmjene.
+
+          *Level se završava nakon 7 taktova.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          * Samo budi kreativan.
+
+          *Level se završava nakon 7 taktova.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          * Samo budi kreativan.
+
+          *Level se završava nakon 7 taktova.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          * Iskoristi blok `kada je lijeva strelica pritisnuta` da bi robot napravio pokret kada pristisneš na strelicu.
+
+          *Level se završava nakon 7 taktova.*
       Dance short test 2_authored_hint:
         validation: |-
           **Kako da pređem ovaj level?**

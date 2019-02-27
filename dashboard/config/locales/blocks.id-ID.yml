@@ -683,6 +683,11 @@ id:
         options:
           DURATION:
             '"0"': selamanya
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': tampilkan
+            '"hide"': Sembunyikan
       binary_move:
         options:
           DIR:

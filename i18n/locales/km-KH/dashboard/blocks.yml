@@ -447,6 +447,11 @@ km:
         options:
           DURATION:
             '"0"': ជារៀងរហូត
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': បង្ហាញ
+            '"hide"': លាក់
       binary_move:
         options:
           DIR:

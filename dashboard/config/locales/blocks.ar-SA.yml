@@ -960,6 +960,11 @@ ar:
         options:
           DURATION:
             '"0"': إلى الأبد
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': إظهار
+            '"hide"': إخفاء
       binary_move:
         options:
           DIR:

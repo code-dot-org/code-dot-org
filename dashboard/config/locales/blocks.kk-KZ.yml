@@ -338,6 +338,11 @@ kk:
         options:
           DURATION:
             '"0"': мәңгі
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': көрсет
+            '"hide"': жасырылған бейнесі
       binary_move:
         options:
           DIR:

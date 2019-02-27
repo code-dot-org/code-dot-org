@@ -208,6 +208,19 @@ es:
         Course_4_Playlab_For_Loops_4b_2: En este puzzle, solo puedes cambiar el "incremento" de los bucles `para`.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: '¡Este bloque te permite personalizar tu color para casi cualquier cosa que quieras ver! ¡Juega con los números para ver qué ocurre!'
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: '¡Añade este bloque a tu programa!'
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: '¡Añade este bloque a tu programa!'
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: '¡Añade este bloque a tu programa!'
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Añade aquí tu nuevo bailarín
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: '¡Bloque nuevo!'
+        dance_callout_11_b: '¡Bloque nuevo!'
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Mira aquí para los bloques "todos los patos"
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Usa las flechas para mover al actor
       CourseF_PlayLab_vars10_callout:

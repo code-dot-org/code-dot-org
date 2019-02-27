@@ -19,8 +19,8 @@ es-MX:
       messages:
         blank: es requerido
         blank_plural: son requeridos
-        invalid: es invalido
-        invalid_plural: son inválidos
+        invalid: no es válido
+        invalid_plural: no son válidos
     attributes:
       user:
         name: Mostrar Nombre
@@ -75,7 +75,7 @@ es-MX:
   trophies: trofeos
   courses: cursos
   courses_page:
-    title_student: Aprender en Code Studio
+    title_student: Aprende Ciencias de la Computación
     title_teacher: Enseñar ciencias de la computación
   unplugged_activity: Actividad desconectada
   of: de
@@ -258,7 +258,7 @@ es-MX:
       Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos
       básicos de las ciencias de la computación usando una experiencia similar a un
       juego, simple y guiada. ¡Aprende a programar con Bill Gates, Mark Zuckerberg,
-      Angry Birds y Plantas vs. Zombis! :-) %{name}
+      Angry Birds y Plantas vs. Zombies! :-) %{name}
 
 '
   parent_mailer:
@@ -681,9 +681,9 @@ es-MX:
       herramienta de terceros.
   share:
     title: Aprender en Code Studio
-    description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
-      y arte con código.
-    try_hour_of_code: "¡Prueba una Hora de Código!"
+    description: Cualquier persona puede aprender Ciencias de la Computación. Crear
+      juegos, aplicaciones y arte con código.
+    try_hour_of_code: "¡Prueba una Hora del Código!"
   gender:
     male: Varón
     female: Mujer
@@ -737,7 +737,7 @@ es-MX:
     built_on_code_studio: Construye en Code Studio
     make_my_own_app: Haz tu propia aplicación
     how_it_works: Cómo funciona
-    try_hour_of_code: "¡Prueba una Hora de Código!"
+    try_hour_of_code: "¡Prueba una Hora del Código!"
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Ver estos videos y sugerencias

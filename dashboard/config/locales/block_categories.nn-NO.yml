@@ -30,6 +30,8 @@ nn:
       Input: Inngang
       Default: Standard
       World: Verd
+      Dancers: Dansarar
+      Groups: Grupper
       Sprites: Sprites
       Behaviors: Atferd
       Advanced: Avansert
@@ -37,8 +39,6 @@ nn:
       Locations: Stadar
       Music: Musikk
       Dancing: Dansing
-      Dancers: Dansarar
-      Groups: Grupper
       Sprite: Sprite
       Brush: Pensel
       Make Sprite: Lag Sprite

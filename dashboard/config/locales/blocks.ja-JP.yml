@@ -573,6 +573,7 @@ ja:
             '"right"': 右 に
             '"space"': うちゅう
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         text: "{RANGE} がいちばん大きいとき"
         options:
@@ -944,6 +945,11 @@ ja:
         options:
           DURATION:
             '"0"': ずっとくりかえす
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': 表示(ひょうじ)する
+            '"hide"': かくす
       binary_move:
         options:
           DIR:

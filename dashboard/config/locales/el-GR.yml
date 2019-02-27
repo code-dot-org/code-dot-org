@@ -292,8 +292,12 @@ el:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
         applab: Δημιουργήστε μια εφαρμογή
+      course_catalog: Κατάλογος Μαθημάτων
       project_gallery: Έργα
+      help_support: Βοήθεια και υποστήριξη
+      report_bug: Αναφορά σφάλματος
       educate_hoc: Η Ώρα του Κώδικα
+      about: Σχετικά
     user:
       classroom: Αρχική Σελίδα Εκπαιδευτή
       district_dashboard: Περιοχή Ταμπλό
@@ -308,13 +312,15 @@ el:
       driver: Οδηγός-αρχηγός
       navigator: Πλοηγός
       create: Δημιουργία
-      applab: Εργαστήριο εφαρμογών
+      applab: App Lab
       artist: Καλλιτέχνης
       gamelab: Game Lab
       playlab: Εργαστήριο Παιχνιδιού
+      spritelab: Sprite Lab
       minecraft: Minecraft
       flappy: Πουλάκι
       dance: Πάρτι Χορού
+      view_all: Όλα τα έργα...
     popup:
       progress_for_user: πρόοδος του %{name}
       progress: Η πρόοδός σου
@@ -461,8 +467,8 @@ el:
       Studio.
     help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν
       να δημιουργήσουμε αυτό το σεμινάριο.
-    help_from_html_old: Μηχανικών από το Google, Microsoft, Facebook και Twitter βοήθησε
-      στη δημιουργία αυτών των εκπαιδεευτικών υλικών.
+    help_from_html_old: Μηχανικοί Υπολογιστών από Google, Microsoft, Facebook και
+      Twitter βοήθησαν στη δημιουργία αυτών των εκπαιδευτικών υλικών.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
       />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
       />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
@@ -493,7 +499,7 @@ el:
     support_url: http://support.code.org/
     tos_short: Όροι
     tos: Όροι
-    privacy: Πολιτική Aπορρήτου
+    privacy: Πολιτική Απορρήτου
     secure: Ασφαλής έκδοση
     report_abuse: Αναφορά κατάχρησης
     built_on_code_studio: Φτιαγμένο με το Code Studio
@@ -553,10 +559,10 @@ el:
       unused: Αχρησιμοποίητα επίπεδα
   upsell:
     applab:
-      title: Εργαστήριο εφαρμογών
-      body: Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον προγραμματισμού
+      title: App Lab
+      body: Το App Lab (Εργαστήριο Εφαρμογών) είναι ένα περιβάλλον προγραμματισμού
         όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app),
-        γράψε κώδικα ή JavaScript με πακέτα για να την κάνεις να δουλέψει και μετά
+        γράψε κώδικα με μπλοκ ή JavaScript για να την κάνεις να δουλέψει και μετά
         μοιράσου την εφαρμογή σου σε δευτερόλεπτα.
       body_short: Σχεδίασε μια εφαρμογή, κωδικοποίησέ την με μπλοκς ή JavaScript ώστε
         να λειτουργεί, στη συνέχεια, μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα.
@@ -589,11 +595,19 @@ el:
         από τους χρήστες μας
     gamelab:
       title: Game Lab
+      body: Το Game Lab (Εργαστήριο Παιχνιδιών) είναι ένα προγραμματιστικό περιβάλλον
+        όπου μπορείτε να κάνετε απλά κινούμενα σχέδια και παιχνίδια με αντικείμενα
+        και χαρακτήρες που αλληλεπιδρούν μεταξύ τους.
       audience: Ηλικίες 13+
       cta: Μάθε πώς
     hoc-encryption:
       title: Απλή Κρυπτογράφηση
+      body: Οι μαθητές θα μάθουν τεχνικές για να δημιουργήσουν και να σπάσουν κρυπτογραφημένα
+        μηνύματα.
     weblab:
+      body: Το Web Lab (Εργαστήριο Ιστού) είναι ένα προγραμματιστικό περιβάλλον όπου
+        μπορείτε να κάνετε απλές ιστοσελίδες χρησιμοποιώντας HTML και CSS. Σχεδιάστε
+        τις ιστοσελίδες σας και κοινοποιήστε τον δικτυακό τόπο σας σε δευτερόλεπτα.
       audience: Ηλικίες 13+
       cta: Μάθε πώς
     frozen:
@@ -617,7 +631,15 @@ el:
       title: Minecraft
       body: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα!
         Ταξίδι στο Minecraft με κώδικα.
+    sports:
+      title: Αθλητισμός
+      body: Δημιουργήστε έναν αγώνα μπάσκετ ή συνδυάστε διάφορα αθλήματα.
+    text-compression:
+      title: Συμπίεση κειμένου
+      body: Σε αυτό το μάθημα, οι μαθητές θα χρησιμοποιήσουν μια μικροεφαρμογή (Widget)
+        για να συμπιέσουν κείμενο αντικαθιστώντας μοτίβα με σύμβολα.
     unplugged:
+      title: Μαθήματα άνευ υπολογιστή
       audience: Ηλικίες 6+
       body: Έχουμε συντάξει έναν κατάλογο ανεξάρτητων μαθημάτων για να τα χρησιμοποιήσετε
         στην τάξη σας. Τώρα μπορείτε να διδάξετε τις βασικές αρχές της επιστήμης των
@@ -628,6 +650,8 @@ el:
         τάξη σας.
     unplugged_conditionals:
       title: Συνθήκες
+      body: Μάθετε για αλγόριθμους και εντολές επιλογής σε αυτή την «χωρίς υπολογιστή»
+        δραστηριότητα χρησιμοποιώντας μια τράπουλα.
     widgets:
       cta: Μάθε πώς
   gallery:
@@ -659,6 +683,7 @@ el:
     support: Λάβετε βοήθεια
     support_url: "//support.code.org"
     help_resources: Βοήθεια και πόροι
+    help_support: Βοήθεια και υποστήριξη
   multi:
     wrong_title: Λανθασμένη απάντηση
     wrong_body: Η απάντηση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
@@ -732,7 +757,7 @@ el:
     sign_out: Εάν δεν επιθυμείτε να παρέχετε την ηλικία σας, μπορείτε να <a href="%{url}">αποσυνδεθείτε</a>.
   terms_interstitial:
     tos: Όροι
-    privacy: Πολιτική Aπορρήτου
+    privacy: Πολιτική Απορρήτου
     print: Εκτύπωσε
   school_info_interstitial:
     save: Αποθήκευση

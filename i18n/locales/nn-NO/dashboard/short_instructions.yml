@@ -823,6 +823,19 @@ nn:
       Course 4 Variables Assessment: Kan du lage dette bildet ved å bruke en variabel for sidene? Hver linje skal være 50 piksler lange.
       Course E MC Conditionals1: Du vil finne dei mest verdfulle ressursane under jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       Course1BeePuzzle12: Hent tre nektar og lag to honning
+      CourseD_Dance_Party_01: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og koble den til inni oppsettblokka.
+      CourseD_Dance_Party_02: Få elgen til å gjere eit nytt dansetrinn etter 4 taktar!
+      CourseD_Dance_Party_03: Få dansaren til å gjere eit nytt dansetrinn etter 6 taktar!
+      CourseD_Dance_Party_04: Legg til ein bakgrunnseffekt i programmet.
+      CourseD_Dance_Party_05: Bruk ei ny blokk for å få dansaren til å bytte dansetrinn kvar 2. takt.
+      CourseD_Dance_Party_06: Lag ein ny dansar som heiter ‘backup_dancer1’, som kan danse med katten.
+      CourseD_Dance_Party_08: Kan du gjere begge bakgrunnsdansarane like store?
+      CourseD_Dance_Party_09: Bruk ei fargevalblokk til å skifte farge på dansaren.
+      CourseD_Dance_Party_10: Få den andre dansaren til å reagere på musikken ved å bruke ‘startar å følge’-blokka.
+      CourseD_Dance_Party_11: Med ‘når du trykker opp’-blokka kan du køyre kode når du trykker på oppoverpila. Prøv å få dansaren til å gjere ein kjapp dans når du trykker opp.
+      CourseD_Dance_Party_11_5: Bruk ‘alle endene’-blokker til å få endene til å danse saman.
+      CourseD_Dance_Party_11b: Få roboten til å “droppe” når du trykker på høgrepila, og gjere ein “floss” når du trykker på oppoverpilen. Gjer en droppfloss så fort du kan!
+      CourseD_Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
       CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane vi har brukt så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har vi lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \n\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
       CourseF_PlayLab_vars2: Løpet i førre oppgåve var ikkje veldig rettferdig. Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn Katt. Den fyrste til å samle 10 flagg vinn! 
       CourseF_PlayLab_vars3: Her er eit nytt type spel! Bruk venstre- og høgrepilene til å bevega deg, og opp-pila til å hoppa. Sjå om du kan sanke alle flagga. 

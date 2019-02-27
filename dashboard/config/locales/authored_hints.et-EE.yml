@@ -6,6 +6,95 @@ et:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          ** Kuidas ma siit tasemelt läbi saan? **
+          * Veenduge, et tantsija kuvatakse ekraanil.
+
+          * See tase lõppeb peale 4 ühikut.*
+        challenges: |-
+          **Lisaväljakutsed**
+          * Vali teine laul.
+          * Vali teine tegelane, kes näeb välja nagu põder!
+          * Nimeta tantsija ümber.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+          * Tantsija peab liigutust vahetame peale 4 ühikut.
+
+          *Tase lõppeb peale 8 ühikut*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.
+
+          *Tase lõppeb peale 12 ühikut*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.
+
+          *See ühik lõppeb peale 10 ühikut.*
+        challenges: |-
+          **Lisaväljakutse**
+
+          Muuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"ühikud"</title></block></xml> sündmuse alla.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Pead kasutama vähemalt kahte tantsijat
+
+          *See tase lõppeb peale 6 ühikut.*
+        challenges: |-
+          **Lisaväljakutse**
+
+          * Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)
+          * Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: "**Kuidas ma siit tasemelt läbi saan?**\n\n* Kahe tantsijat suurus
+          peab olema 100st erinev. \n\n*See tase lõppeb peale 6 ühikut.*"
+        challenges: |-
+          **Lisaväljakutse**
+
+          * Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Muuda vähemalt ühe tantsija tooni.
+
+          *See ühik lõppeb peale 8 ühikut.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Kahe või rohkema tantsija omadused peavad muutuma.
+
+          *See tase lõppeb peale 8 ühikut*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Ole lihtsalt loov!
+
+          *See tase lõppeb peale 8 ühikut*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Ole lihtsalt loov!
+
+          *See tase lõppeb peale 8 ühikut*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Kasuta plokki `kui vajutatakse vasakut nooleklahvi`, et Robot sooritaks tantsuliigutuse kui seda klahvi vajutatakse.
+
+          *See tase lõppeb peale 8 ühikut*
       Dance short test 2_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**

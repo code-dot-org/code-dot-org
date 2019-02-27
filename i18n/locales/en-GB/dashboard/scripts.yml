@@ -98,6 +98,27 @@ en-GB:
           stages:
             Lists:
               name: Lists
+        dance:
+          stages:
+            Dance Party:
+              name: Fiesta Bailabel
+          title: Fiesta Bailabel
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Fiesta Bailabel
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Fiesta Bailabel
+        dance-low:
+          stages:
+            Dance Party:
+              name: Fiesta Bailabel
+        coursed-2019:
+          stages:
+            Dance Party:
+              name: Fiesta Bailabel
         andrea-test:
           stages:
             'null':

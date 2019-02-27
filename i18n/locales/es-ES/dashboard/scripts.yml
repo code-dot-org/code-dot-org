@@ -3102,6 +3102,8 @@ es:
               name: Artista binario
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+            Dance Party:
+              name: Fiesta para bailar
         coursee-2019:
           description_audience: 'Edades de 8 a 12 años'
           stages:
@@ -3174,6 +3176,8 @@ es:
               name: Observando hacia el futuro
             Binary Bracelets:
               name: Pulseras Binarias
+            Graphing Data:
+              name: Datos de gráfico
         gamelab:
           title: Laboratorio de juego
         coursea-2019:
