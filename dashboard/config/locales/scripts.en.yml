@@ -9879,6 +9879,12 @@ en:
               name: Loops with the Artist
             Sprite Lab Behaviors:
               name: Sprite Lab Behaviors
+            Editing Behaviors:
+              name: Editing Behaviors
+            Virtual Pet:
+              name: Virtual Pet
+            Data from Sprite Lab:
+              name: Data from Sprite Lab
         dance-low:
           stages:
             Dance Party:
