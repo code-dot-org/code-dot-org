@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+
+# This script relies on the existence of an empty file called 'rescored_applications' in its directory to write to.
+
+rescored_applications = []
+errors = []
+puts "Rescoring taught_in_past for teacher 1920 applications..."
+Pd::Application::Teacher1920Application.find_each do |application|
+  print '.'
+
+  responses = application.sanitize_form_data_hash
+  options = application.class.options
+  response_scores = JSON.parse(application.response_scores).transform_keys {|key| key.underscore.to_sym}
+
+  old_taught_in_past_score = response_scores[:bonus_points_scores] ? response_scores[:bonus_points_scores][:taught_in_past] : nil
+  new_taught_in_past_score = (responses[:taught_in_past] & options[:taught_in_past].values_at(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15)).any? ? 0 : 2
+
+  response_scores[:bonus_points_scores][:taught_in_past] = new_taught_in_past_score
+
+  if old_taught_in_past_score != new_taught_in_past_score
+    if application.update(response_scores: response_scores)
+      partner_name = application.regional_partner&.name
+      name = "#{application.first_name} #{application.last_name}"
+      update_string = "partner: #{partner_name}, id: #{application.id}, email: #{application.email}, name: #{name}"
+      rescored_applications << update_string
+
+      # append to the file as we go, so that in case we encounter an exception and exit early,
+      # we have a record of the applications we've updated.
+      File.open('rescored_applications', 'a') do |list|
+        list.puts update_string
+      end
+    else
+      errors << "\nError updating application #{application.id}"
+    end
+  end
+end
+
+errors.each {|e| p e}
+
+# go back and replace the list in the file with the same list sorted by regional partner
+File.open('rescored_applications', 'w') do |list|
+  rescored_applications.sort.each do |update_string|
+    list.puts update_string
+  end
+end
+
+p "Successfully rescored taught_in_past for #{rescored_applications.length} applications, see ./rescored_applications for list"
