@@ -22,6 +22,12 @@ const styles = {
     minHeight: 260,
     boxSizing: 'border-box'
   },
+  textItemCyan: {
+    backgroundColor: color.light_cyan,
+    padding: 25,
+    minHeight: 260,
+    boxSizing: 'border-box'
+  },
   subHeading: {
     paddingRight: 0,
     paddingBottom: 20,
@@ -64,6 +70,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
+    teacherStyle: PropTypes.bool,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
     subHeadingSmallFont: PropTypes.bool,
@@ -102,7 +109,11 @@ export class UnconnectedTwoColumnActionBlock extends Component {
             </div>
           )}
           <div style={{float, width}}>
-            <div style={styles.textItem}>
+            <div
+              style={
+                this.props.teacherStyle ? styles.textItemCyan : styles.textItem
+              }
+            >
               {subHeading && (
                 <div
                   style={
@@ -204,15 +215,16 @@ export class SpecialAnnouncementActionBlock extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
+          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-trophy.jpg'
         )}
-        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019()}
-        subHeadingSmallFont={true}
-        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019()}
+        teacherStyle={true}
+        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Trophy()}
+        subHeadingSmallFont={false}
+        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Trophy()}
         buttons={[
           {
             url: pegasus('/educate/professional-learning'),
-            text: i18n.joinUs()
+            text: i18n.nominateATeacher()
           }
         ]}
       />
