@@ -417,6 +417,11 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': şov
+            '"hide"': gizlə
       binary_move:
         options:
           DIR:

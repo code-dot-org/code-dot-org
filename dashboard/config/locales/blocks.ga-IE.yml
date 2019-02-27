@@ -446,6 +446,11 @@ ga:
         options:
           DURATION:
             '"0"': go deo na ndeor
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': taispeáin
+            '"hide"': folaigh
       binary_move:
         options:
           DIR:

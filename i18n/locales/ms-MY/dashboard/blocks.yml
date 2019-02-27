@@ -303,6 +303,10 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"hide"': sembunyi
       binary_move:
         options:
           DIR:

@@ -370,6 +370,11 @@ mi:
         options:
           DURATION:
             '"0"': āke, āke
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': whakaaturia
+            '"hide"': hunaia
       binary_move:
         options:
           DIR:

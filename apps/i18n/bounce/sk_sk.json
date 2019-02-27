@@ -78,7 +78,7 @@
   "reinfFeedbackMsg": "Pre návrat k svojej hre môžeš stlačiť tlačidlo \"Skúsiť znova\".",
   "removeSquare": "odstrániť štvorec",
   "repeatUntil": "opakuj dovtedy (kým)",
-  "repeatUntilBlocked": "pokiaľ je cesta vpred",
+  "repeatUntilBlocked": "pokiaľ tam je cesta vpred",
   "repeatUntilFinish": "opakuj do konca",
   "scoreText": "Skóre: {playerScore} : {opponentScore}",
   "setBackground": "nastav {background} scénu",

@@ -44,8 +44,8 @@ pt-BR:
       AppLab Intro 4 - onEvent twoButtons: Mais prática onEvent
       AppLab Intro 4 - playSound: Usando o playSound
       AppLab Intro 4 - stopSound: Usando o playSound
-      AppLab Intro 4 - thisOrThat design: Este ou aquele Design
-      AppLab Intro 4 - thisOrThat template: Este ou aquele Design
+      AppLab Intro 4 - thisOrThat design: Este Ou Aquele Design
+      AppLab Intro 4 - thisOrThat template: Este Ou Aquele Design
       AppLab Intro 4 - thisOrThat: Isso ou Aquilo
       AppLab Intro 5 - Change Screen Color: Mudar cor da tela
       AppLab Intro 5 - Change Text 2: Alterar texto
@@ -118,7 +118,7 @@ pt-BR:
       CSD Set Scale Map: Alterando a escala do Sensor
       CSD Set Scale Map_2018: Alterando a escala do Sensor
       CSD Set Scale Map_2019: Alterando a escala do Sensor
-      CSD Timed For Loop Map: Laços For com tempo
+      CSD Timed For Loop Map: Laços Para com tempo
       CSD U1L01 TFMD_2018: Visão geral da aula
       CSD U1L01 TFMD_2019: Visão geral da aula
       CSD U1L02 TFMD_2018: Visão geral da aula
@@ -678,9 +678,9 @@ pt-BR:
       CSD U6L16 TFMD: Visão geral da aula
       CSD U6L16 TFMD_2018: Visão geral da aula
       CSD U6L16 TFMD_2019: Visão geral da aula
-      CSD What Makes a Computer a Computer Video: 'Vídeo: O que faz um computador, um computador?'
-      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: O que faz um computador, um computador?'
-      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: O que faz um computador, um computador?'
+      CSD What Makes a Computer a Computer Video: 'Vídeo: O que faz de um computador, um computador?'
+      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: O que faz de um computador, um computador?'
+      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: O que faz de um computador, um computador?'
       CSD colorLed Map: 'Parque de Circuito: LEDs de cor'
       CSD colorLed Map_2018: 'Parque de Circuito: LEDs de cor'
       CSD colorLed Map_2019: 'Parque de Circuito: LEDs de cor'
@@ -744,7 +744,7 @@ pt-BR:
       CSDU6 buzzer.stop: Parando a Música
       CSDU6 buzzer.stop_2018: Parando a Música
       CSDU6 buzzer.stop_2019: Parando a Música
-      CSDU6 challenge play songs: Música Bot
+      CSDU6 challenge play songs: Bot de Música
       CSP CreateL01 SFLP: Visão geral da aula
       CSP CreateL01 SFLP_2019: Visão geral da aula
       CSP CreateL02 SFLP_2018: Visão geral da aula
@@ -903,7 +903,7 @@ pt-BR:
       Dance_Party_extras_battle: Equipes de dança
       Dance_Party_extras_every_beat: Semínimas
       Dance_Party_extras_layout: Entrar em formação
-      Dance_Party_extras_on_beat: Grave, médio e agudo
+      Dance_Party_extras_on_beat: Grave, Médio e Agudo
       Dance_Party_extras_speed: Acelerar, retardar
       Dance_Party_extras_visible: Onde eles foram?
       Geometric Sun_2018: Sol Geométrico
@@ -926,9 +926,9 @@ pt-BR:
       'Internet Simulator: Sending Numbers_2019': 'Simulador de Internet: Enviando Números'
       'Internet Simulator: Sending Text_2018': 'Simulador de Internet: Enviando Texto'
       'Internet Simulator: Sending Text_2019': 'Simulador de Internet: Enviando Texto'
-      Intro to Web Lab - Part 1: 'Vídeo: Introdução para o Laboratório Web - Parte 1'
-      Intro to Web Lab - Part 1_2018: 'Vídeo: Introdução para o Laboratório Web - Parte 1'
-      Intro to Web Lab - Part 1_2019: 'Vídeo: Introdução para o Laboratório Web - Parte 1'
+      Intro to Web Lab - Part 1: 'Vídeo: Introdução ao Web Lab - Parte 1'
+      Intro to Web Lab - Part 1_2018: 'Vídeo: Introdução ao Web Lab - Parte 1'
+      Intro to Web Lab - Part 1_2019: 'Vídeo: Introdução ao Web Lab - Parte 1'
       Intro to Web Lab - Part 2: 'Vídeo: Introdução ao Web Lab - Parte 2'
       Intro to Web Lab - Part 2_2018: 'Vídeo: Introdução ao Web Lab - Parte 2'
       Intro to Web Lab - Part 2_2019: 'Vídeo: Introdução ao Web Lab - Parte 2'
@@ -979,6 +979,9 @@ pt-BR:
       Making Music_2018: Fazendo Música
       Making Music_2019: Fazendo Música
       New Minecraft Hero Project: Gratuito
+      OPD-K5 S2L2: O que é ciência da computação?
+      OPD-K5 WhatIsCS: O que é ciência da computação?
+      OPD-K5S2L2: O que é ciência da computação?
       PS - test - pixelation: Widget de pixelização em preto e branco
       SG U3L07 More Subgoals: Documentação
       SGU3L2A Introducing Subgoals: Introduzindo Sub-objetivos
@@ -999,6 +1002,7 @@ pt-BR:
       U4 L03 Scope Issue: Aplicativo Termostato v.1
       U4 L03 Thermostat App Modify 1: Aplicativo Termostato v.1
       U4 L03 Thermostat App Modify 2: Aplicativo Termostato v.1
+      U4 L05 CYU Exit Ticket: Verifique Sua Compreensão
       'Video: Intro to CSS Part 2_2018': 'Vídeo: Introdução a CSS Parte 2'
       'Video: Intro to CSS Part 2_2019': 'Vídeo: Introdução a CSS Parte 2'
       'Video: Intro to CSS_2018': 'Vídeo: Introdução a CSS'

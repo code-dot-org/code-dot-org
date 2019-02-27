@@ -144,7 +144,7 @@ th:
             measures: ห้องดนตรี
             seconds: ขั้นคู่สอง
       Dancelab_everyVerseChorus:
-        text: 'ทุก [หน่วย][0] '
+        text: 'ทุก [หน่วย] [0] '
         options:
           UNIT:
             '"verse"': ท่อนร้อง
@@ -167,7 +167,7 @@ th:
             '"y"': อยู่ที่แกน Y
             '"tint"': ระดับอ่อนสี
       Dancelab_getTime:
-        text: "[หน่วย][0] ล่วงผ่าน"
+        text: "[หน่วย] [0] ล่วงผ่าน"
         options:
           UNIT:
             '"measures"': ห้องดนตรี
@@ -940,6 +940,11 @@ th:
         options:
           DURATION:
             '"0"': ตลอดกาล
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': แสดง
+            '"hide"': ซ่อน
       binary_move:
         options:
           DIR:
@@ -989,7 +994,7 @@ th:
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeBlock:
-        text: วาง [blockType][0]
+        text: วาง [blockType] [0]
         options:
           blockType:
             '"strippedOak"': ชิ้นไม้โอ็ค

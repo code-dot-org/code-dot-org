@@ -942,6 +942,11 @@ zh-TW:
         options:
           DURATION:
             '"0"': 重複無限次
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': 顯示
+            '"hide"': 不可見
       binary_move:
         options:
           DIR:

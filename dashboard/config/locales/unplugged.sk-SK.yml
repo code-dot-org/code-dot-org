@@ -81,7 +81,7 @@ sk:
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
           postavu cez bludisko použitím jednoduchých príkazov.
       MoveIt:
-        title: Posúvaj, Posúvaj
+        title: Pohni sa, pohni sa
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
           postavu cez bludisko použitím jednoduchých príkazov.
       PlantASeed:
@@ -96,7 +96,7 @@ sk:
           následne budú diskutovať o tom, ako ostať vytrvalý v prípade, že sa úlohy
           komplikujú.
       GettingLoopy:
-        title: Neustále opakovanie
+        title: Cykly sa zacykľujú
         desc: Táto lekcia je úvodom do programovacieho konceptu cyklov (opakujúcich
           sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
           ktorú budú na základe inštrukcií opakovať.
@@ -302,7 +302,7 @@ sk:
           na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú
           úlohu.
       courseC_unplugged_gettingLoopy:
-        title: Neustále opakovanie
+        title: Cykly sa zacykľujú
         desc: Táto lekcia je úvodom do programovacieho konceptu cyklov (opakujúcich
           sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
           ktorú budú na základe inštrukcií opakovať.
@@ -473,7 +473,7 @@ sk:
           na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú
           úlohu.
       GettingLoopy_2018:
-        title: Neustále opakovanie
+        title: Cykly sa zacykľujú
         desc: Táto lekcia je úvodom do programovacieho konceptu cyklov (opakujúcich
           sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
           ktorú budú na základe inštrukcií opakovať.
@@ -483,7 +483,7 @@ sk:
           krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené
           viac ako jedným spôosobom.
       MoveItMoveIt_2018:
-        title: Posuň, Posuň
+        title: Pohni sa, pohni sa
       courseB_unplugged_CnC_2018:
         title: Je super tvoriť a hrať férovo
         desc: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže
@@ -564,7 +564,7 @@ sk:
         title: 'chýba preklad: en-US.data.unplugged.Crowdsourcing_2018.title'
         desc: 'chýba preklad: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
-        title: Neustále opakovanie
+        title: Cykly sa zacykľujú
         desc: Táto lekcia je úvodom do programovacieho konceptu cyklov (opakujúcich
           sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
           ktorú budú na základe inštrukcií opakovať.
@@ -605,7 +605,7 @@ sk:
         title: Cykly bez počítača
         desc: V tejto lekcii sa naučíš niečo o cykloch!
       MoveItMoveIt_2019:
-        title: Posuň, Posuň
+        title: Pohni sa, pohni sa
       DigitalFootprint_2019:
         title: Tvoja digitálna stopa
         desc: Učitelia predstavia študentom myšlienku, že ak dávajú o sebe informácie
@@ -617,3 +617,7 @@ sk:
           študentom lepšie porozumieť kreatívnemu procesu zdieľania myšlienok a využitia
           inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania
           a potrebe férovosti pri kreatívnej tvorbe.
+      GraphingData_2019:
+        title: Dáta ku grafom
+        desc: " V tejto lekcii študenti zozbierajú dáta z Play Lab projektu alebo
+          reálneho života a použijú ich na vyrátanie pravdepodobnosti."

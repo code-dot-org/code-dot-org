@@ -180,6 +180,17 @@ ru:
         Course_4_Playlab_For_Loops_4b_2: Вв этой задаче, ты можешь только менять величину приращения цикла.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Этот блок позволяет Вам выбрать почти любой цвет, который Вам хочется! Попробуйте разные значения и посмотрите что из этого получится!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Добавьте этот блок в вашу программу!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Добавьте этот блок в вашу программу!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Добавьте этот блок в вашу программу!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Добавьте нового танцора здесь
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Новый блок!
+        dance_callout_11_b: Новый блок!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Используй стрелки для перемещения персонажа
       CourseF_PlayLab_vars10_callout:

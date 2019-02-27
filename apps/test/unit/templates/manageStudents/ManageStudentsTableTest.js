@@ -23,6 +23,7 @@ import teacherSections, {
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('ManageStudentsTable', () => {
@@ -103,7 +104,13 @@ describe('ManageStudentsTable', () => {
 
     beforeEach(() => {
       stubRedux();
-      registerReducers({teacherSections, manageStudents, isRtl, sectionData});
+      registerReducers({
+        teacherSections,
+        manageStudents,
+        isRtl,
+        sectionData,
+        scriptSelection
+      });
       const store = getStore();
       store.dispatch(setLoginType(fakeSection.login_type));
       store.dispatch(setSections([fakeSection]));

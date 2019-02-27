@@ -26,9 +26,13 @@
   twentyhours_heading: "Testen Sie unseren Kurs \"Einführung in die Informatik\""
   twentyhours_text: "Sie haben Ihre erste „Hour of Code“ beendet? Lernen Sie in diesem Folgekurs weitere Informatik- und Programmierkonzepte."
   og_title: 'Jedes Kind verdient eine Gelegenheit'
+  og_title_here: "Die Stunde des Codes ist gekommen!"
   og_description: "In jeder Schule sollten Schüler die Gelegenheit erhalten, Informatik zu lernen."
+  og_description_celeb: "Probiere die neuen Tutorials aus und gewinne einen Videochat mit einem Promi für dich oder deine Klasse!"
   csedweek_og_title: "Die Stunde des Codes ist hier"
   csedweek_og_description: "4.-10. Dezember 2017. Informatik ist eine grundlegende Fähigkeit, die jede Schülerin und jeder Schüler kennen muss."
+  csedweek_og_description_soon: "Die Stunde des Codes findet vom 3. bis 9. Dezember 2018 statt. Informatik beinhaltet grundlegende Fähigkeiten für jede Schülerin und jeden Schüler."
+  csedweek_og_description_here: "Die Stunde des Codes ist gekommen. Informatik beinhaltet grundlegende Fähigkeiten für jede Schülerin und jeden Schüler."
   hoc2014_heading: "Machen Sie mit bei der <a href=\"http://hourofcode.com\">Hour of Code</a><br/>8. - 14. Dezember 2014<br/>"
   hoc2014_students: "Schüler"
   hoc2014_try: "Ausprobieren"
@@ -65,6 +69,7 @@
   congratulations: "Herzlichen Glückwunsch!"
   congratulations_on_completing_hoc: "Herzlichen Glückwunsch zum Abschluss einer Hour of Code"
   congratulations_volunteer: 'Herzlichen Glückwunsch! <a href="https://code.org/volunteer">Melden Sie sich nach Ihrer Hour of Code als Freiwilliger und unterstützen Sie eine Klasse bei ihrer Hour of Code!</a>'
+  congratulations_on_completing_course: "Herzlichen Grückwunsch, du hast %{course} abgeschlossen"
   congrats_next_tutorials_title: "Probieren Sie als Nächstes diese Anleitungen"
   congrats_next_tutorials_desc: "Probieren Sie diese kürzeren, ca. 1-stündigen Anleitungen oder eine unserer <a href=\"%{current_path}/next\">Partneranleitungen</a>."
   get_a_certificate_of_achievement: "Erhalten Sie eine Leistungsurkunde"

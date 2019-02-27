@@ -4991,6 +4991,8 @@ vi:
               name: 'Chưa hoạt động: nhị phân'
             Artist Binary:
               name: Nghệ sĩ nhị phân
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
         coursee-2019:
           stages:
             Building a Foundation:
@@ -5433,3 +5435,7 @@ vi:
               name: Ứng dụng mẫu
             Final Project:
               name: Dự án cuối cùng
+        csp1-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới

@@ -338,6 +338,11 @@ sq:
         options:
           DURATION:
             '"0"': përgjithmonë
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': trego
+            '"hide"': fsheh
       binary_move:
         options:
           DIR:

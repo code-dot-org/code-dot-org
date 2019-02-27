@@ -154,7 +154,9 @@ id:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Mengalami kesulitan mencari tahu bagaiman untuk memblok ke bawah? Mencoba memperlakukan bunga merah sama seperti bunga ungu!
         2-3_Bee_Conditionals_14_b: Jika bunga merah itu ungu, bisakah Anda mencari tahu bagaimana menggunakan loop `ulangi` tambahan untuk mengurangi kode?
-        2-3_Bee_Conditionals_14_c: "Mencoba memecahkan ini menjadi dua bagian terpisah:  ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n1) Mengumpulkan nektar 3 kali  - Bergerak maju 5 kali  - Periksa untuk melihat jika nektar, menjadi: mendapatkannya  - Putar kiri  2) Membuat madu   - Bergerak maju satu kali  - Membuat dua madu"
+        2-3_Bee_Conditionals_14_c: |-
+          Mencoba memecahkan ini menjadi dua bagian terpisah:  ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+          1) Mengumpulkan nektar 3 kali  - Bergerak maju 5 kali  - Periksa untuk melihat jika nektar, menjadi: mendapatkannya  - Putar kiri  2) Membuat madu   - Bergerak maju satu kali  - Membuat dua madu
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Ingat: Bunga ungu hanya memiliki sekitar 0 atau 1 nektar dan mereka dapat mengubah setiap kali anda menjalankan program.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -313,7 +315,8 @@ id:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Setiap bentuk berulang adalah kombinasi dari ** setengah dari hexagon **, diikuti oleh ** 2/3 dari segitiga **. '
         Course_4_Artist_12_b: 'Bentuk unitnya hampir sama seperti pada teka-teki terakhir, kecuali setengah segi sedikit lebih besar. '
-        Course_4_Artist_12_c: "1) Tiga baris pertama panjangnya 60 piksel dan Anda perlu memutar 60 derajat. 2) Dua baris berikutnya panjangnya 80 piksel dan Anda perlu memutar 120 derajat "
+        Course_4_Artist_12_c: |-
+          1) Tiga baris pertama panjangnya 60 piksel dan Anda perlu memutar 60 derajat. 2) Dua baris berikutnya panjangnya 80 piksel dan Anda perlu memutar 120 derajat 
         Course_4_Artist_12_d: |-
           **Solusi**
 
@@ -1250,7 +1253,9 @@ id:
         courseA_artist_loops9_c: Jika kamu tidak tahu di mana meletakkan loop, coba tulis kode kamu pelan-pelan dan lihatlah polanya.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Tambahkan blok lain pada kode yang anda berikan untuk menarik sisa tangga.
-        courseA_artist_loops9_b: "Blok yang Anda tambahkan harus masuk ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>"
+        courseA_artist_loops9_b: |-
+          Blok yang Anda tambahkan harus masuk ke dalam loop <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>
         courseA_artist_loops9_c: Jika kamu tidak tahu di mana meletakkan loop, coba tulis kode kamu pelan-pelan dan lihatlah polanya.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Tambahkan blok lain pada kode yang anda berikan untuk menarik sisa tangga.
@@ -2378,6 +2383,8 @@ id:
       courseC_PlayLab_eventsA_2018_authored_hint:
         courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
       courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_b: Coba gunakan ` set aktor 1 ke posisi kiri tengah` saat menyentuh salah satu aktor lainnya. Ini akan mengatur ulang permainan sehingga pemain bisa terus mencoba!
