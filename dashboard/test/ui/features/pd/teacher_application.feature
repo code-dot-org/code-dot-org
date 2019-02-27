@@ -71,7 +71,7 @@ Scenario: Basic teacher application submission
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Professional Learning Program Requirements"
   And I press "input[name='committed']:first" using jQuery
-  And I press the first "input[name='payFee']" element
+  And I click selector "input[name='payFee']" if I see it
   And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
   Then I see no difference for "Section 4: Summer Workshop"
@@ -125,7 +125,7 @@ Scenario: Basic teacher application submission
 
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
-  Then I press the first "input[name='payFee']" element if I see it
+  Then I press the first "input[name='payFee']" element
   Then I press the first "input[name='howHeard']" element
   Then I press the first "#confirmPrincipal" element
 
