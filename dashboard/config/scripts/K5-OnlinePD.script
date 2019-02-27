@@ -1,7 +1,9 @@
 professional_learning_course 'K5 Support'
+login_required true
 
 stage 'Getting Started'
 level 'OPD-K5 Intro'
+level 'OPD-K5 PreSurvey'
 level 'OPD-K5 Welcome 2'
 level 'OPD-K5 About'
 level 'OPD-K5 Outline'
@@ -98,6 +100,7 @@ level 'OPD-K5 Stage9Go'
 
 stage 'Next Steps'
 level 'OPD-K5 Stage10Start'
+level 'OPD-K5 PostSurvey'
 level 'OPD-K5 Closing'
 level 'OPD-K5 Connect'
 level 'OPD-K5 Celebrate'
