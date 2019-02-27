@@ -53,10 +53,7 @@
     "start_blocks": "var fruitServings = 3;\r\nvar vegServings = 5;\r\nvar grainServings = 4;\r\n\r\n// Predict how the first three questions will be answered. Then run the code\r\n// to check your predictions.\r\nconsole.log(\"Q1: Am I eating more than 3 fruitservings AND more than 5 vegetable servings?\");\r\nconsole.log((fruitServings > 3 )&&(vegServings > 4));\r\nconsole.log(\"\");\r\n\r\nconsole.log(\"Q2: Am I eating 4 or fewer grain servings AND 4 or fewer fruit servings?\");\r\nconsole.log((grainServings <= 4) && (fruitServings <= 4));\r\nconsole.log(\"\");\r\n\r\nconsole.log(\"Q3: Am I eating exactly 5 grainServings OR any amount besides 2 fruitServings\");\r\nconsole.log((grainServings == 5) || (fruitServings != 2));\r\nconsole.log(\"\");\r\n\r\n// Add code to answer questions 4 and 5.\r\nconsole.log(\"Q4: Am I eating exactly 3 grain servings OR exactly 3 fruit servings?\");\r\n\r\nconsole.log(\"\");\r\n\r\nconsole.log(\"Q5: Am I eating 5 or fewer vegetable servings AND any amount besides 5 grain servings?\");",
     "slider_speed": "0.1",
     "parent_level_id": 17647,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
