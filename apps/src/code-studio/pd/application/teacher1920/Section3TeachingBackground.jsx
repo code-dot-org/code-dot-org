@@ -36,8 +36,20 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
     'currentRole'
   ];
 
-  handleSchoolChange = selectedSchool =>
-    this.handleChange({school: selectedSchool && selectedSchool.value});
+  handleSchoolChange = selectedSchool => {
+    console.log(
+      `selectedSchool.school.zip = ${selectedSchool && selectedSchool.value}`
+    );
+    console.log(
+      `selectedSchool = ${selectedSchool && JSON.stringify(selectedSchool)}`
+    );
+
+    this.handleChange({
+      school: selectedSchool && selectedSchool.value,
+      schoolZipCode:
+        selectedSchool && selectedSchool.school && selectedSchool.school.zip
+    });
+  };
 
   render() {
     return (
