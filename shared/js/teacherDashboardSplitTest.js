@@ -38,7 +38,35 @@ $(document).ready(function() {
 });
 
 function handleDashboard(sectionId, path) {
-  // Redirect user back to pegasus if split test is 0
+  if (splitTestPercentage === 0) {
+    redirectToPegasusTeacherDashboard(sectionId, path);
+  }
+}
+
+function redirectToPegasusTeacherDashboard(sectionId, path) {
+  // No-op if sectionId is not provided.
+  if (!sectionId) {
+    return;
+  }
+
+  var pegasusTeacherDashboardUrl =
+    pegasusUrlPrefix + "/teacher-dashboard#/sections/" + sectionId;
+  if (path) {
+    // Prepend a forward slash to our path, unless it already has one.
+    if (path.at(0) !== "/") {
+      path = "/" + path;
+    }
+
+    var mappedPath = null;
+    Object.keys(urlMap).forEach(function(key) {
+      if (urlMap[key] === path) {
+        mappedPath = key;
+      }
+    });
+    pegasusTeacherDashboardUrl += mappedPath || path;
+  }
+
+  window.location = pegasusTeacherDashboardUrl;
 }
 
 function handlePegasus(sectionId, path) {
