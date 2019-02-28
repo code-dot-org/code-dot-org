@@ -29,6 +29,8 @@ bg:
       Numbers: Числа
       Input: Поле за въвеждане
       Default: По подразбиране
+      Dancers: Танцьори
+      Groups: Групи
       Sprites: Спрайт
       Behaviors: Поведения
       Advanced: Разширено
@@ -36,8 +38,6 @@ bg:
       Locations: Места
       Music: Музика
       Dancing: Танци
-      Dancers: Танцьори
-      Groups: Групи
       Sprite: Спрайт
       Brush: Четка
       Make Sprite: Направи Спрайт

@@ -848,6 +848,11 @@ bg:
         options:
           DURATION:
             '"0"': завинаги
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': показва
+            '"hide"': скрива
       binary_move:
         options:
           DIR:

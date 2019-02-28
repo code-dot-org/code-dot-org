@@ -338,6 +338,11 @@ hy:
         options:
           DURATION:
             '"0"': ընդմիշտ
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': ցուցադրում
+            '"hide"': թաքցնել
       binary_move:
         options:
           DIR:

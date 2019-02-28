@@ -706,6 +706,11 @@ ro:
         options:
           DURATION:
             '"0"': pentru totdeauna
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': arată
+            '"hide"': ascunde
       binary_move:
         options:
           DIR:

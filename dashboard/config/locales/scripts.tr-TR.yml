@@ -9937,6 +9937,8 @@ tr:
               name: Sanaçtı İkili Taban
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
+            Dance Party:
+              name: Dans Partisi
         coursee-2019:
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
             ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
@@ -11854,3 +11856,7 @@ tr:
               name: Örnek uygulamalar
             Final Project:
               name: Final projesi
+        csp1-pilot:
+          stages:
+            new stage:
+              name: yeni kademe

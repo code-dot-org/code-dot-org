@@ -28,22 +28,22 @@ es-MX:
       Numbers: Números
       Default: Incumplimiento
       World: Mundo
+      Dancers: Bailarines
+      Groups: Grupos
       Behaviors: Comportamientos
       Advanced: Avanzado
       Start: Inicio
       Locations: Ubicaciones
       Music: Música
-      Dancing: Bailando
-      Dancers: Bailarines
-      Groups: Grupos
+      Dancing: Baile
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Hacer un Sprite
       Movement: Movimiento
       Booleans: Valores booleanos
       Functional: Funcional
-      While Events: Cuando Eventos
-      Sprite Properties: Propiedades de Sprites
+      While Events: Eventos mientra
+      Sprite Properties: Propiedades de Sprite
       Predefined: Predefinido
       test: prueba
       test2: prueba2
@@ -51,6 +51,6 @@ es-MX:
       Do Not Use: No usar
       Name: Nombre
       NEW BLOCKS: BLOQUES NUEVOS
-      'Functions ': 'Funciones'
+      'Functions ': 'Funciones '
       Game/Score: Juego/Puntaje
       Function: Función

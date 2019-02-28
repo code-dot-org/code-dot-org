@@ -334,6 +334,11 @@ sk:
           spôsobmi. Jedným z najľahších je ísť krok po kroku až kým nenarazíš na miesto,
           kde program funguje inak, ako si plánoval. Tu sa snažím spraviť premet vzad
           na stožiari, no vždy padnem.
+    C1_moveitmoveit_unplugged:
+      1:
+        text: Táto lekcia sa volá "Pohni sa, pohni sa". Spolu v nej napíšeme program,
+          vďaka ktorému sa náš kamarát presunie zo začiatočného bodu s kompasom ku
+          cieľu, na ktorom je smajlík.
     C1_going_places_safely:
       1:
         text: Moje meno je Jeremiah. Ahoj! Mám sedem rokov. Rád sa hrám na maminom

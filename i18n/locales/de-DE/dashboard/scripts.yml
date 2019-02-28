@@ -1709,6 +1709,8 @@ de:
               name: 'Offline: Binär'
             Artist Binary:
               name: Künstler Binär
+            Dance Party:
+              name: Tanzparty
         coursee-2019:
           stages:
             Building a Foundation:

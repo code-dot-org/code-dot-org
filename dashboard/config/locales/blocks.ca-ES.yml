@@ -844,6 +844,11 @@ ca:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': Mostra
+            '"hide"': amaga
       binary_move:
         options:
           DIR:

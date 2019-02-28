@@ -1537,6 +1537,8 @@ lt:
           stages:
             Artist:
               name: Menininkas
+        aquatic:
+          title: 'Minecraft: Kelionės vandeniu'
         coursef-2019:
           stages:
             Building a Foundation:

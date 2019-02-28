@@ -8315,3 +8315,7 @@ fil:
               name: Sample na mga App
             Final Project:
               name: Huling Proyekto
+        csp1-pilot:
+          stages:
+            new stage:
+              name: bagong yugto

@@ -723,6 +723,7 @@
   dashboard_coursed: '課程 D：'
   dashboard_coursee: '課程 E：'
   dashboard_coursef: '課程 F：'
+  dashboard_pre-express: '學前兒童的速學課程: '
   dashboard_express: '速學課程：'
   dashboard_unplugged: "如果你沒有電腦，你可以在你的教室<a href='%{unplugged_url}'>試試這些不插電教學活動 </a>。"
   dashboard_tools: '工具：'
@@ -744,6 +745,7 @@
   dashboard_curriculum_csp: '計算機科學原理：'
   dashboard_curriculum_ecs: '計算機科學探索：'
   dashboard_curriculum_csd: '計算機科學探索：'
+  dashboard_curriculum_apcsa: 'JAVA的AP電腦科學: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "其它"
   dashboard_login_word: "通關密語"
@@ -951,6 +953,7 @@
   csp2_name: '單元 2：數位資訊'
   csp3-a_name: '單元 3：程式設計介紹（版本 A）'
   csp3-research-mxghyt_name: '單元 3：程式設計介紹（子目標）'
+  csp-ap_name: AP效能任務
   csppostap_name: 'Post AP：App 的數據庫'
   csp-post-survey_name: 課後問卷調查
   cspassessment_name: "完整測驗 - 共 50 題"
@@ -1444,12 +1447,16 @@
   user_header_settings: "帳戶設定"
   user_header_logout: "登出"
   user_header_signin: "登入"
+  user_header_create: '建立 '
+  user_header_applab: 'App實驗室 '
+  user_header_artist: '演出者 '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
   user_header_dance: "舞蹈派對"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "像素鳥"
   user_header_view_all: "瀏覽所有專案…"
+  user_header_view_project_gallery: "查看專案庫"
   user_header_view_my_projects: "檢視我的專案"
   view_all_sections: "檢視所有的學習小組"
   view_section: "檢視學習小組"
@@ -1479,21 +1486,36 @@
   syncing_students_instructions: '如果學習小組上的學生名單與你在 Google Classroom 上所建立的不一致，你可以點擊「管理學生」頁籤上的「從 Google Classrrom 上同步學生資料」按鈕：'
   google_sign_in_instruct: '前提是他們應該要「用 Google 帳戶登入」：'
   applab-intro_name: App Lab 介紹
+  applab_tile_title: "App實驗室入門 (年齡13+)"
+  applab_tile_subtitle: "使用積木模組的JavaScript創建自己的應用。或者透過文字模式的程式設計讓您的技能提升到下一個階段。(限英文)"
   applab_tile_start_tutorial: "開始"
   applab_tile_teacher_guide: "查看教師指導"
   aquatic_name: 'Minecraft: 水上巡航'
   account_sign_up_email_opt_in: "我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？"
   account_sign_up_child_accept_terms: "我確定我的監護人已允許我使用 Code.org 提供的服務。 "
   hoc_overview_dance_title: "舞蹈派對"
+  hoc_overview_dance_subtitle: "為舞蹈派對編碼並與你的朋友分享。客串的有凱蒂・佩芮、瑪丹娜、 j. 巴爾文、希雅、齊斯・艾本、席亞拉, 等等25位!"
+  hoc_overview_title: "Code.org 的 \"一小時玩程式\"活動"
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code</a> \"一小時玩程式\"是一項全球活動，吸引了超過 180 個國家/地區的數千萬學生參與。任何人可在任何地方組織\"一小時玩程式\"活動，或者嘗試使用超過200種、 45種語言中的一小時教程。"
   hoc_overview_partner_activities_title: "合作夥伴的更多活動"
   hoc_overview_partner_activities_body: "一小時編程網站匯集了由 Code.org 及其合作夥伴設計的超過 100 多項電腦科學活動，適用于所有年齡段和經驗水平的人群。"
   hoc_overview_partner_activities_link: "查看活動"
   hoc_overview_start_tutorial: "開始"
   hoc_overview_view_teacher_guide: "查看教師指導"
+  hoc2018_creativity: "創意"
   hoc2018_creativity_create: "建立"
+  hoc2018_creativity_hoc_coming: "\"一小時玩程式\"即將開始..."
   hoc2018_creativity_what_will_you_create: "你要創建什麼？"
+  hoc2018_creativity_homepage: "超乎想像, 勇於創新。從\"一小時玩程式\"中開始屬於自己的創意品牌, 不管它是什麼。觀看我們的影片。"
+  hoc2018_creativity_hoc_about: '今年, 《一小時玩程式》都是關於創造力的。 '
+  hoc2018_creativity_social_media: '今年的 #HourOfCode #一小時玩程式 是關於創造力的。我在這裡了，你呢?'
+  hoc2018_creativity_social_media_2: '今年的 #HourOfCode #一小時玩程式 是關於創造力的。你會創造什麼？'
+  hoc2018_creativity_courses: "了解更多Code.org 課程"
+  hoc2018_creativity_courses_link: "了解更多 <a href=\"https://studio.code.org/courses\">Code.org 課程</a>"
+  hoc2018_homepage: "註冊你的班級, 並且試試看超過150個新的\"一小時玩程式\"活動內容 (12/3-9)!"
   hoc2018_mc_page_title: "一小時玩 Minecraft 教程"
   hoc2018_mc_details: "多種語言 | 最新瀏覽器或平板電腦 | 年級 2+"
+  hoc2018_mc_aquatic_announcement: "註冊您的課程, 試試看超過150多項新活動\"一小時玩程式\" (12月3-9日)。一定要看看我們全新的 2018年 minecraft 活動, 航行水上運動! 立即註冊您的課程。"
   hoc2018_mc_aquatic_description: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
   hoc2018_mc_hero_title: "Minecraft：英雄之旅"
   hoc2018_mc_hero_description: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"

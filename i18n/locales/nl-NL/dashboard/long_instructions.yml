@@ -208,6 +208,54 @@ nl:
       Course 4 Playlab For Loops 5b: Pas het interval in deze `herhaal` lussen aan zodat deze twee spelers op exact dezelfde plaats eindigen.
       Course 4 SCFP 1: Maak een functie met parameters die de kunstenaar naar voren en naar achteren laat springen met x pixels en naar boven en naar beneden met y pixels. X en y kunnen positief of negatief zijn.
       Course 4 SCVP 1: Maak een functie met parameters die de kunstenaar naar voren en naar achteren laat springen met x pixels en naar boven en naar beneden met y pixels. X en y kunnen positief of negatief zijn.
+      CourseD_Dance_Party_01: |-
+        *Laten we een dansfeestje houden!*
+
+        Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind deze in het 'setup' blok om je eerste danser te maken.
+
+        * *Je kunt ook op het lampje links in beeld klikken voor meer informatie of extra uitdagingen.*
+      CourseD_Dance_Party_02: |-
+        Laten we deze eland aan het dansen krijgen!
+
+        Sleep het blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> naar de werkruimte. Verbind hem onder het blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Je danser zou na de vierde maat een nieuwe move moeten beginnen.
+
+
+        **Maten** worden in de muziek gebruikt om de tijd te tellen. In deze tutorial is de maat vier beats lang.
+      CourseD_Dance_Party_03: "*Nu gaan we lekker!*\n\nVoeg een blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> toe aan je werkruimte. Zorg ervoor dat de danser een nieuwe move start na 6 maten."
+      CourseD_Dance_Party_04: |-
+        *Deze dans heeft wat extra‘s nodig!*
+
+        Ga op zoek naar een nieuw blok in je gereedschapskist, die je danser een achtergrondeffect geeft. Bekijk hoe de effecten met de muziek mee veranderen!
+      CourseD_Dance_Party_05: |-
+        Gebruik nog een nieuw blok om de danser **elke 2 maten** een nieuwe move te laten doen!
+
+        * Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
+      CourseD_Dance_Party_06: |-
+        * We hebben meer dansers nodig!*
+
+        Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
+      CourseD_Dance_Party_08: |-
+        Elke danser heeft zijn eigen _eigenschappen_ die bepalen hoe hij eruitziet.
+
+        Je kunt het laten lijken alsof een danser op de achtergrond staat door hun _grootte_ kleiner te maken. Kun je beide achtergronddansers dezelfde grootte geven?
+      CourseD_Dance_Party_09: |-
+        Dansers hebben een "tint" eigenschap waarmee je hun kleur bepaalt. Probeer de tint van een van je dansers eens te veranderen.
+        *Tinten mengen de kleur die je kiest met de kleuren van de danser.
+      CourseD_Dance_Party_10: |-
+        Nu weten we hoe we de eigenschappen van dansers kunnen veranderen. We kunnen deze eigenschappen ook automatisch op de muziek laten reageren met behulp van dit blok:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Dit programma gebruikt het "bas" volume (de lage tonen) om de hoogte van een danser in te stellen. Kun je de andere danser ook laten reageren op de muziek?
+      CourseD_Dance_Party_11: "Met het <xml><block type=\"Dancelab_whenKey\"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.\n\nJe kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!"
+      CourseD_Dance_Party_11_5: "Bekijk dit blok eens:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kun je een heleboel dansers tegelijk maken!\n\nProbeer met een deel van de \"alle eenden\" blokken code te schrijven waarmee alle eenden samen gaan dansen."
+      CourseD_Dance_Party_11b: |-
+        Hoog tijd voor een danswedstrijd! De kat doet een dab wanneer je op de linkerpijltoets drukt. Zorg dat de Robot "naar de grond gaat" door op de rechterpijltoets te drukken.
+      CourseD_Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       CourseF_PlayLab_vars2: Die wedstrijd was niet eerlijk! Verander de "hond_snelheid" variabele om er zeker te zijn dat je meer vlaggen kunt verzamelen dan de kat. Wie als eerst 10 vlaggen heeft wint.
       Dance_Party_01: |-
         *Laten we een dansfeestje houden!*

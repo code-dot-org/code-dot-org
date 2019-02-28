@@ -520,6 +520,11 @@ da:
         options:
           DURATION:
             '"0"': for evigt
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': vis
+            '"hide"': skjul
       binary_move:
         options:
           DIR:

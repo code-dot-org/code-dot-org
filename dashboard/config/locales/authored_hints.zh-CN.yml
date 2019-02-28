@@ -3294,6 +3294,99 @@ zh-CN:
         mc_9_a: 你正朝向正确的方向吗？用`摧毁方块`挖你前面的方块。
         mc_9_b: 墙上的黑色斑点是煤！使用`摧毁方块`来挖煤。
         mc_9_c: 用`放火把` 把火把放在你所站的地方。
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          * 确保有一个舞者出现在屏幕上。
+
+          *此关会在 4 个节拍后结束。*
+        challenges: |-
+          **可选挑战**
+          *选择播放一首不同的歌曲。
+          *选择一个像驼鹿的不同项目！
+          *重命名您的舞者。
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **我如何通过此关？**
+          *舞者需要在 4 个小节后变换到新动作。
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+
+          *此关在 12 个小节后结束。*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *需要在歌曲的第七个小节变换背景效果。
+
+          *此关在 10 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *需要至少两个舞者。
+
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+
+          *添加第三个舞者（或者更多数量！）
+          *让所有舞者在歌曲的不同时间点做不同的动作。
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *两个舞者的大小不能为 100。
+
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+
+          *通过更改其他属性（宽度、高度、旋转等）来尝试
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *更改至少一个舞者的色彩。
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *必须更改两个或更多的舞者属性。
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *只需发挥想象力！
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *只需发挥想象力！
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
+
+          * 此关在 8 个小节后结束。*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 请确保将“小狗的速度”的数值设置为大于“小猫的速度”的数值。
       D_Frozen_nested3_authored_hint:
@@ -8674,6 +8767,9 @@ zh-CN:
         courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
         courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
       courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
+        courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
         courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
       courseC_PlayLab_eventsFP_authored_hint:

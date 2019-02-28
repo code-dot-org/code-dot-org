@@ -249,6 +249,17 @@ pl:
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Ten blok umożliwia Ci wybór koloru jakiegokolwiek chcesz!  Pobaw
           się liczbami, aby zobaczyć, co się dzieje!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Dodaj ten blok do swojego programu!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Dodaj ten blok do swojego programu!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Dodaj ten blok do swojego programu!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Dodaj tutaj swojego nowego tancerza
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nowy blok!
+        dance_callout_11_b: Nowy blok!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Używaj strzałek, aby przesunąć postać
       CourseF_PlayLab_vars10_callout:

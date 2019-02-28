@@ -138,7 +138,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg [RANGE][0]
+        text: krijg [RANGE] [0]
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -914,6 +914,11 @@ nl:
         options:
           DURATION:
             '"0"': voor altijd
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': toon
+            '"hide"': verberg
       binary_move:
         options:
           DIR:
