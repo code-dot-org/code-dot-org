@@ -1,6 +1,8 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require 'benchmark'
+require 'cdo/firehose'
 
 SAFE_BROWSING_THREAT_TYPES = %w(THREAT_TYPE_UNSPECIFIED MALWARE SOCIAL_ENGINEERING UNWANTED_SOFTWARE POTENTIALLY_HARMFUL_APPLICATION)
 
@@ -28,9 +30,28 @@ module SafeBrowsing
     http = Net::HTTP.new(uri.hostname, uri.port)
     http.use_ssl = true
 
-    response = http.start {http.request(req)}
+    response = nil
+
+    response_time = Benchmark.realtime do
+      response = http.start {http.request(req)}
+    end
+
+    response_value = response.nil? ? nil : JSON.parse(response.body).empty?
+
+    # Record to Firehose the response time of request rounded to thousandths of a second
+    FirehoseClient.instance.put_record(
+      study: "safe-browsing-request",
+      study_group: "v1",
+      event: "api-response",
+      data_json: {
+        response_time: response_time.round(3),
+        request_url: url_to_check,
+        response_value: response_value
+      }.to_json
+    )
 
     # Safe Browsing API returns empty JSON object is no threat matches found
-    JSON.parse(response.body).empty?
+    # Do not determine safe if response is nil
+    response.nil? ? false : response_value
   end
 end
