@@ -45,7 +45,7 @@ class LevelsController < ApplicationController
   # GET all the information for the mini rubric
   def get_rubric
     @level = Level.find_by(id: params[:level_id])
-    if @level.mini_rubric.to_bool
+    if @level.mini_rubric&.to_bool
       render json: {
         keyConcept: @level.rubric_key_concept,
         exceeds: @level.rubric_exceeds,
@@ -330,6 +330,7 @@ class LevelsController < ApplicationController
     # Reference links should be stored as an array.
     if params[:level][:reference_links].is_a? String
       params[:level][:reference_links] = params[:level][:reference_links].split("\r\n")
+      params[:level][:reference_links].delete_if(&:blank?)
     end
 
     permitted_params.concat(Level.permitted_params)

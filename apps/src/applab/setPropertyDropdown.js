@@ -6,6 +6,7 @@ import _ from 'lodash';
 import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
 import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {fontFamilyOptions} from './constants';
 var ElementType = library.ElementType;
 
 /**
@@ -90,11 +91,17 @@ var PROP_INFO = {
     type: 'number',
     defaultValue: '0'
   },
+  fontFamily: {
+    friendlyName: 'font-family',
+    internalName: 'fontFamily',
+    type: 'string',
+    defaultValue: `"${fontFamilyOptions[0]}"`
+  },
   fontSize: {
     friendlyName: 'font-size',
     internalName: 'fontSize',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '14'
   },
   textAlign: {
     friendlyName: 'text-align',
@@ -252,6 +259,7 @@ PROPERTIES[ElementType.BUTTON] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'image',
@@ -272,6 +280,7 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'hidden',
@@ -290,6 +299,7 @@ PROPERTIES[ElementType.LABEL] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'hidden',
@@ -309,6 +319,7 @@ PROPERTIES[ElementType.DROPDOWN] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'hidden',
@@ -365,6 +376,7 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'readonly',
@@ -558,12 +570,16 @@ function getPropertyValueDropdown(param2) {
     case 'border-radius':
     case 'border-width':
       return ['0', '1', '2', '5', '10'];
+    case 'font-family':
+      return fontFamilyOptions.map(op => `"${op}"`);
     case 'text-align':
       return ['"left"', '"right"', '"center"', '"justify"'];
     case 'fit':
       return ['"fill"', '"cover"', '"contain"', '"none"'];
     case 'hidden':
     case 'checked':
+    case 'font-size':
+      return ['8', '10', '12', '14', '18', '24', '36', '72'];
     case 'readonly':
       return ['true', 'false'];
     case 'text':

@@ -479,6 +479,20 @@ module Pd::Application
       assert_equal %w(completingOnBehalfOfName travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
     end
 
+    # We changed the possible answers to this question after opening the application,
+    # including removing some possible answers.  Since we can't reasonably backfill those,
+    # we are clearing them and making this field not required on the server (it's still
+    # required on the client for new applications).
+    test 'does not require pay_fee' do
+      application_hash = build :pd_teacher1920_application_hash,
+        regional_partner_id: create(:regional_partner).id,
+        pay_fee: nil
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      assert_nil application.sanitize_form_data_hash[:pay_fee]
+      assert application.valid?
+      assert_equal %w(), application.errors.messages[:form_data]
+    end
+
     test 'test csd dynamically required fields' do
       application_hash = build :pd_teacher1920_application_hash_common,
         :csd,
@@ -975,16 +989,21 @@ module Pd::Application
       end
     end
 
-    test 'test scholarship statuses' do
+    test 'test update scholarship status' do
       application = create :pd_teacher1920_application
       assert_nil application.scholarship_status
 
-      application.scholarship_status = 'no'
-      application.save
-      assert_equal 'no', application.scholarship_status
+      assert_creates(Pd::ScholarshipInfo) do
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
+      end
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
-      application.scholarship_status = 'invalid status'
-      refute application.save
+      refute application.update_scholarship_status 'invalid status'
+
+      refute_creates(Pd::ScholarshipInfo) do
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
+      end
+      assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
     end
 
     test 'associated models cache prefetch' do

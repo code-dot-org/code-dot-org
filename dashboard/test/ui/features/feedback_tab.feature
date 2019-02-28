@@ -42,11 +42,11 @@ feedback can be submitted and displayed. Otherwise don't show feedback tab
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
   And element "#ui-test-submit-feedback" contains text "Save and share"
   And element "#ui-test-feedback-time" does not exist
-  And I press the first "#exceeds-input" element
+  And I press "#rubric-input-exceeds" using jQuery
   And I press keys "Nice!" for element "#ui-test-feedback-input"
   And I press "#ui-test-submit-feedback" using jQuery
   And element ".editor-column" contains text "Nice!"
-  And element "#exceeds-input" is checked
+  And element "#rubric-input-exceeds" is checked
   And I wait until "#ui-test-feedback-time" contains text "Last updated"
   And element "#ui-test-submit-feedback" contains text "Update"
 
@@ -54,7 +54,7 @@ feedback can be submitted and displayed. Otherwise don't show feedback tab
   And I reload the page
   And I wait for the page to fully load
   And I wait until ".editor-column" contains text "Nice!"
-  And element "#exceeds-input" is checked
+  And element "#rubric-input-exceeds" is checked
   And element ".editor-column" contains text matching "Last updated .* ago"
   And element "#ui-test-submit-feedback" contains text "Update"
 
@@ -64,5 +64,5 @@ feedback can be submitted and displayed. Otherwise don't show feedback tab
   And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"
-  And element "#exceeds-input" is checked
+  And element "#rubric-input-exceeds" is checked
   And element ".editor-column" contains text matching "Last updated .* ago"

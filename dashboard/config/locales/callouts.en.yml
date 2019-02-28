@@ -705,6 +705,20 @@ en:
       Course 4 Playlab For Loops 6b_callout: {}
       Course 4 SCV 6_callout:
         Course_4_SCV_6: This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Add this block to your program!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Add this block to your program!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Add this block to your program!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Add your new dancer here
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: New block!
+        dance_callout_11_b: New block!
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Look here for "all ducks" blocks
+      CourseD_Dance_Party_11b_callout: {}
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Use the arrows to move the actor
       CourseF_PlayLab_vars10_callout:
