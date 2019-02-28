@@ -38,6 +38,7 @@ $(document).ready(function() {
 });
 
 function handleDashboard(sectionId, path) {
+  // Redirect user to pegasus teacher dashboard if split test is off.
   if (splitTestPercentage === 0) {
     redirectToPegasusTeacherDashboard(sectionId, path);
   }
@@ -72,7 +73,7 @@ function redirectToPegasusTeacherDashboard(sectionId, path) {
 function handlePegasus(sectionId, path) {
   var experimentState = localStorage.getItem(STORAGE_KEY);
 
-  // No-op if experiment is already off for this user or the entire experiment is off.
+  // No-op if experiment is already off for this user or the split test is off.
   if (experimentState === ExperimentState.off || splitTestPercentage === 0) {
     return;
   }
