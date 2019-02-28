@@ -10,19 +10,17 @@ User.where.not(school_info: nil).where(user_type: "teacher").find_in_batches(bat
   ActiveRecord::Base.transaction do
     exceptions = []
     batch.each do |user|
-      begin
-        UserSchoolInfo.create!(
-          user_id: user.id,
-          school_info_id: user.school_info_id,
-          start_date: user.created_at,
-          end_date: nil,
-          last_confirmation_date: user.created_at
-        )
-        num_users_updated += 1
-      rescue Exception => e
-        puts "Error: teacher with user id #{user.id} with school id #{user.school_info.id}"
-        exceptions.push(e)
-      end
+      UserSchoolInfo.create!(
+        user_id: user.id,
+        school_info_id: user.school_info_id,
+        start_date: user.created_at,
+        end_date: nil,
+        last_confirmation_date: user.created_at
+      )
+      num_users_updated += 1
+    rescue Exception => e
+      puts "Error: teacher with user id #{user.id} with school id #{user.school_info.id}"
+      exceptions.push(e)
     end
     num_users_updated = 0
     raise ActiveRecord::Rollback, 'Rolledback!' if exceptions.any?
