@@ -79,7 +79,7 @@ function handlePegasus(sectionId, path) {
 
   // Go to new teacher dashboard if experiment is already on for this user.
   if (experimentState === ExperimentState.on) {
-    redirectToStudioTeacherDashboard(sectionId, path, false);
+    redirectToStudioTeacherDashboard(sectionId, path);
     return;
   }
 
@@ -87,13 +87,13 @@ function handlePegasus(sectionId, path) {
   var turnOnExperiment = Math.floor(Math.random() * 100) <= splitTestPercentage;
   if (turnOnExperiment) {
     localStorage.setItem(STORAGE_KEY, ExperimentState.on);
-    redirectToStudioTeacherDashboard(sectionId, path, true);
+    redirectToStudioTeacherDashboard(sectionId, path);
   } else {
     localStorage.setItem(STORAGE_KEY, ExperimentState.off);
   }
 }
 
-function redirectToStudioTeacherDashboard(sectionId, path, enableExperiment) {
+function redirectToStudioTeacherDashboard(sectionId, path) {
   // No-op if sectionId is not provided.
   if (!sectionId) {
     return;
@@ -107,9 +107,6 @@ function redirectToStudioTeacherDashboard(sectionId, path, enableExperiment) {
       path = "/" + path;
     }
     studioTeacherDashboardUrl += urlMap[path] || path;
-  }
-  if (enableExperiment) {
-    studioTeacherDashboardUrl += "?enableExperiments=teacher-dashboard-react";
   }
 
   window.location = studioTeacherDashboardUrl;
