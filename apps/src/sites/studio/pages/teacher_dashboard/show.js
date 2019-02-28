@@ -39,8 +39,8 @@ const visibleSections = scriptData.visibleSections;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
-  // Check for teacher-dashboard-react in query string and apply if necessary.
-  experiments.isEnabled(experiments.TEACHER_DASHBOARD_REACT);
+  // Always make sure teacher-dashboard-react experiment is enabled.
+  experiments.setEnabled(experiments.TEACHER_DASHBOARD_REACT, true);
 
   registerReducers({
     teacherSections,
