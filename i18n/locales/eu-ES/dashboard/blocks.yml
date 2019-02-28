@@ -711,6 +711,11 @@ eu:
         options:
           DURATION:
             '"0"': betiko
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': erakutsi
+            '"hide"': ezkutatu
       binary_move:
         options:
           DIR:

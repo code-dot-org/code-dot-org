@@ -1614,6 +1614,8 @@ th:
               name: พลเมืองดิจิทัล
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
+            Dance Party:
+              name: งานเต้นรำ
         coursee-2019:
           stages:
             Sequence in Maze:

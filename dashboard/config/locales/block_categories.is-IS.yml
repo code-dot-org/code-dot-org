@@ -30,6 +30,8 @@ is:
       Input: Inntak
       Default: Sjálfgefið
       World: Heimur
+      Dancers: Dansarar
+      Groups: Hópar
       Sprites: Kvikar
       Behaviors: Hegðun
       Advanced: Ítarlegt
@@ -37,8 +39,6 @@ is:
       Locations: Staðir
       Music: Tónlist
       Dancing: Dans
-      Dancers: Dansarar
-      Groups: Hópar
       Sprite: Kviki
       Brush: Pensill
       Make Sprite: Búa til kvika

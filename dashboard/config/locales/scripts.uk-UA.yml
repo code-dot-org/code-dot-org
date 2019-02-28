@@ -1735,6 +1735,8 @@ uk:
               name: 'Безмашинні вправи: двійкова система'
             Artist Binary:
               name: 'Художник: двійкова система'
+            Dance Party:
+              name: Танцювальна вечірка
         coursee-2019:
           stages:
             Building a Foundation:

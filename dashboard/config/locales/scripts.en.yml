@@ -9971,6 +9971,8 @@ en:
               description_teacher: ''
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Dance Party:
+              name: Dance Party
         coursee-2019:
           title: Course E (2019)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -10108,6 +10110,10 @@ en:
               name: Conditionals in Minecraft
             About Me:
               name: About Me
+            Aquatic Conditionals in Minecraft:
+              name: Aquatic Conditionals in Minecraft
+            Access Ability:
+              name: Access Ability
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.

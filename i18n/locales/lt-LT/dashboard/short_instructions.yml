@@ -54,14 +54,38 @@ lt:
       2-3 Artist Functions 12 a: "Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  "
       2-3 Artist Functions 12: "Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  "
       2-3 Artist Functions 13: "Tau duotos keturios sudėtinės komandos.\nPanaudok jas kaip tik nori ir gauk piešinius,\nkuriuos galėsi parodyti savo draugams. Paspausk „Paleisti“, kad pamatytum pavyzdį."
+      2-3 Artist Functions 2 a: 'Naudokite mažą žalią „piešti kvadratą“ bloką, kad galėtumėte paskambinti šią naują funkciją ir sukurti akinius. '
       2-3 Artist Functions 2: "Sudėtinės komandos (arba funkcijos) leidžia susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų yra 75 pikselių atstumas."
       2-3 Artist Functions 3: "Pataisyk komandą, kad piešiamo kvadrato kraštinės ilgis būtų 115 ir nupiešk didesnius akinius. Atstumas tarp stiklų dabar yra 45 pikseliai."
       2-3 Artist Functions 4: Panaudok kartojimo blokelį ir nupiešk tris kvadratus.
       2-3 Artist Functions 7: 'Panaudok komandą „namas“, kad nupieštum du namus su dviem skirtingais parametrais. (Sufleris: pirmojo namo dydis yra 100 pikselių).'
       2-3 Artist Functions 9: 'Štai nauja komanda „nupiešk snaigę“. Paeksperimentuok su ja ir nupiešk gražų žieminį paveikslą. Čia ne galvosūkis, o kūrybinė užduotis. Pasismagink!'
+      2-3 Artist Loops 10: Kas atsitiks su dizainas, kai mes darome mūsų galutinis žingsnis į priekį pusę tol, kol?
+      2-3 Artist Loops 11: Dabar galime įdėti * kitą * kilpą aplink mūsų visas kūrinys!  Nepamirškite pridėti kampu išorinės linijos pabaigoje.
+      2-3 Artist Loops 4: Norite pamatyti, kas atsitinka, kai mes pakartoti tą figūrą, vėl ir vėl naudojant kilpą?
+      2-3 Artist Loops 5: Dabar galime padaryti nedidelių pakeitimų prie linijos ir pamatyti, kaip skirtingi mūsų nuotrauka tampa.
+      2-3 Artist Loops 6: Pridėti vienu ėjimu ir kito posūkio viduje kilpa ir matyti, kaip keičiasi jūsų dizainas.
+      2-3 Artist Loops 7: Mes naudojame kilpas, kad visų rūšių daugiakampiai.  Galite sukurti rombas viduje Šis šešiakampis?
+      2-3 Artist Loops 8: Dėkim abu elementai vidaus linijos.
+      2-3 Artist Loops 9: |-
+        Mes ketiname kilpa tie patys elementai, tačiau dabar mes ketiname pridėti tam tikrą atstumą tarp jų.
+        naudoti tą patį kodą, kaip anksčiau, bet įtraukti žingsnį į priekį išorinės linijos pabaigoje.
+      2-3 Artist Loops New 1: Galime nupiešti šiame robotas galvos! Jūs galite padaryti aikštės pusės yra 100 taškų?
+      2-3 Artist Loops New 11: Atstatyti kodą iš paskutinio galvosūkį, bet šiuo metu, pridėti kairę 30 laipsnių viduje į kilpą. Dabar, pakartoti tai 24 kartus vietoj 8.
+      2-3 Artist Loops New 14: Pažaisti su deimanto kodas ir pamatyti, kas kitų modelių, jūs galite padaryti. Pabandykite pakeisti įjungiate kiek laipsnių ir kiek kartų jūs ciklas.
       2-3 Artist Loops New 15: Nupiešk ką nors smagaus.
+      2-3 Artist Match Hex Pic: 'Rungtynės: Padėkite užbaigti šešiakampį.'
+      2-3 Artist Match Rho Pic: 'Rungtynės: Baigti trūkstamą kodą.'
+      2-3 Artist Match Sq Pic: 'Rungtynės: Baigti trūkstamą kodą'
+      2-3 Artist Match Tri pic: 'Rungtynės: Baigti trūkstamą kodą.'
+      2-3 Artist Nested Loops 1: Uždėkite „pakartoti“ bloką aplink visą visą kodo kaminą, kad pieštumėte modelį.
+      2-3 Artist Nested Loops 3: "Kad pieštumėte šį modelį, jums reikės 12 kartų trikampis.\n\nPadalinkite laipsnių skaičių apskritime (360) pagal piešinių skaičių (12), kad išsiaiškintumėte, kiek teks pasukti po kiekvienos formos."
+      2-3 Artist Nested Loops 6: |-
+        Šis dinozauras turi 8 smaigalius, einančius savo uodegą.
+        Kiekvienas smaigalys yra 30 pikselių. Pasukite trikampį 8 kartus, bet įsitikinkite, kad po kiekvieno šokinėjate pirmyn!
       2-3 Artist Nested Loops Free Play: Nupiešk ką nors įdomaus, naudodamas kartojimą kartojime.
       2-3 Bee Conditionals 1: Labas! Aš esu bitė. Padėk man surinkti nektarą iš gėlės.
+      2-3 Bee Conditionals 10: 'Violetinės gėlės gali turėti 1 arba 0 nektarų. Būk atsargus, nerink nektaro iš violetinės gėlės, jei ji jo neturi.  '
       2-3 Bee Conditionals 11: "Rinkti nektarą, kur gėlės turi nektaro."
       2-3 Bee Conditionals 15: "Surink nektarą iš visų keturių gėlių."
       2-3 Bee Conditionals 9: Surink visą nektarą iš kiekvienos gėlės.
@@ -170,6 +194,9 @@ lt:
       Course 4 Maze 2: Saugokis TNT!
       Course E MC Conditionals1: Vertingiausius išteklius rasi po žeme, bet gali sutemti. Padėk bent 2 deglus ir iškask bent 2 anglis.
       Course1BeePuzzle12: Gauk tris nektarus ir pagamink du korius medaus
+      CourseD_Dance_Party_02: Padaryk taip, kad briedis pradėtų naują judesį po 4 taktų!
+      CourseD_Dance_Party_03: O dabar liepk šokėjui pradėti naują judesį po 6 taktų!
+      CourseD_Dance_Party_05: Panaudok kitą naują blokelį, kad šokėjas keistų savo judesius kas 2 taktus.
       Crack Random Substitution: Instrukcijos
       Crack Random Substitution_2018: Instrukcijos
       Crack Random Substitution_2019: Instrukcijos
@@ -500,6 +527,7 @@ lt:
       grade2_MakeDogTag_4: |-
         Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
       grade2_MakeDogTag_6: 'O dabar gali nupiešti ką tik nori.'
+      grade2_MakeDogTag_9: Atstatyti kodą iš paskutinio galvosūkį, bet šiuo metu, pridėti kairę 30 laipsnių viduje į kilpą. Dabar, pakartoti tai 24 kartus vietoj 8.
       grade2_PuppyLoops_1: Ar gali nuvesti mane pas kiaulę naudodamas 5 blokelius?
       grade2_PuppyLoops_10: |-
         Mano suktukas nėra pabaigtas. Kiek kartų

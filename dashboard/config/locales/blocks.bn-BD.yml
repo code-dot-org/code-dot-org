@@ -334,6 +334,11 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': প্রদর্শন করুন
+            '"hide"': লুকিয়ে রাখুন
       binary_move:
         options:
           DIR:

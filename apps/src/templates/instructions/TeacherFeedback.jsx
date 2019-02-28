@@ -8,20 +8,10 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
+import RubricField from './RubricField';
+import {CommentArea} from './CommentArea';
 
 const styles = {
-  textInput: {
-    marginTop: 0,
-    marginBottom: 16,
-    display: 'block',
-    width: '90%'
-  },
-  textInputStudent: {
-    margin: 10,
-    display: 'block',
-    width: '90%',
-    backgroundColor: color.lightest_cyan
-  },
   button: {
     margin: 10,
     fontWeight: 'bold'
@@ -31,33 +21,30 @@ const styles = {
     margin: 10
   },
   time: {
+    height: 24,
+    paddingTop: 6,
     fontStyle: 'italic',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  studentTime: {
-    display: 'flex',
-    justifyContent: 'space-between'
+    fontSize: 12,
+    color: color.cyan,
+    backgroundColor: color.lightest_cyan
   },
   footer: {
     display: 'flex',
     justifyContent: 'flex-start'
   },
-  rubricHeader: {
-    fontSize: 13,
-    marginLeft: 10,
-    color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  boxSelected: {
-    border: `5px solid ${color.lightest_gray}`,
-    backgroundColor: color.cyan
+  h1: {
+    color: color.charcoal,
+    marginTop: 8,
+    marginBottom: 12,
+    fontSize: 24,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'normal'
   },
   performanceArea: {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '8px 16px 20px 16px'
+    margin: '0px 16px 20px 16px'
   },
   keyConceptArea: {
     flexGrow: 1,
@@ -70,29 +57,7 @@ const styles = {
   rubricArea: {
     flexGrow: 2
   },
-  performanceLevelHeader: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    padding: '4px 10px'
-  },
-  performanceLevelHeaderSelected: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    backgroundColor: color.lightest_cyan,
-    borderRadius: 10,
-    padding: '4px 10px'
-  },
-  h1: {
-    color: color.charcoal,
-    marginTop: 8,
-    marginBottom: 12,
-    fontSize: 24,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal'
-  },
-  commentArea: {
+  commentAndFooter: {
     margin: '0px 16px 16px 16px'
   }
 };
@@ -124,6 +89,8 @@ class TeacherFeedback extends Component {
     super(props);
     //Pull the student id from the url
     const studentId = queryString.parse(window.location.search).user_id;
+
+    this.onRubricChange = this.onRubricChange.bind(this);
 
     this.state = {
       comment: '',
@@ -172,15 +139,16 @@ class TeacherFeedback extends Component {
     }
   };
 
-  onCommentChange = event => {
-    this.setState({comment: event.target.value});
+  onCommentChange = value => {
+    this.setState({comment: value});
   };
 
-  onRubricChange = event => {
-    if (event.target.value === this.state.performance) {
+  onRubricChange = value => {
+    //If you click on the currently selected performance level clear the performance level
+    if (value === this.state.performance) {
       this.setState({performance: null});
     } else {
-      this.setState({performance: event.target.value});
+      this.setState({performance: value});
     }
   };
 
@@ -234,13 +202,20 @@ class TeacherFeedback extends Component {
       this.state.submitting ||
       this.state.errorState === ErrorType.Load;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
-    const placeholderText = latestFeedback
-      ? latestFeedback.comment
-      : i18n.feedbackPlaceholder();
 
     const showFeedbackInputAreas = !(
       this.props.disabledMode && this.props.viewAs === ViewType.Teacher
     );
+    const placeholderText = latestFeedback
+      ? latestFeedback.comment
+      : i18n.feedbackPlaceholder();
+    const dontShowStudentComment =
+      !this.state.comment && this.props.viewAs === ViewType.Student;
+
+    const dontShowStudentRubric =
+      !this.state.performance && this.props.viewAs === ViewType.Student;
+
+    const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
     return (
       <div>
@@ -250,7 +225,16 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        {this.props.rubric && (
+        {this.state.latestFeedback.length > 0 && (
+          <div style={styles.time} id="ui-test-feedback-time">
+            {i18n.lastUpdated({
+              time: moment
+                .min(moment(), moment(latestFeedback.created_at))
+                .fromNow()
+            })}
+          </div>
+        )}
+        {this.props.rubric && !dontShowStudentRubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
               <h1 style={styles.h1}>Key Concepts</h1>
@@ -259,131 +243,33 @@ class TeacherFeedback extends Component {
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}>Evaluation Rubric</h1>
               <form>
-                <div
-                  style={
-                    this.state.performance === 'exceeds'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'exceeds-input'}
-                      name={'rubric'}
-                      value={'exceeds'}
-                      checked={this.state.performance === 'exceeds'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>Exceeds</summary>
-                    <p>{this.props.rubric.exceeds}</p>
-                  </details>
-                </div>
-                <div
-                  style={
-                    this.state.performance === 'meets'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'meets-input'}
-                      name={'rubric'}
-                      value={'meets'}
-                      checked={this.state.performance === 'meets'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>Meets</summary>
-                    <p>{this.props.rubric.meets}</p>
-                  </details>
-                </div>
-                <div
-                  style={
-                    this.state.performance === 'approaches'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'approaches-input'}
-                      name={'rubric'}
-                      value={'approaches'}
-                      checked={this.state.performance === 'approaches'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>Approaches</summary>
-                    <p>{this.props.rubric.approaches}</p>
-                  </details>
-                </div>
-                <div
-                  style={
-                    this.state.performance === 'noEvidence'
-                      ? styles.performanceLevelHeaderSelected
-                      : styles.performanceLevelHeader
-                  }
-                >
-                  {showFeedbackInputAreas && (
-                    <input
-                      type={'checkbox'}
-                      id={'noEvidence-input'}
-                      name={'rubric'}
-                      value={'noEvidence'}
-                      checked={this.state.performance === 'noEvidence'}
-                      onChange={this.onRubricChange}
-                      disabled={this.props.disabledMode}
-                    />
-                  )}
-                  <details>
-                    <summary style={styles.rubricHeader}>No Evidence</summary>
-                    <p>{this.props.rubric.noEvidence}</p>
-                  </details>
-                </div>
+                {rubricLevels.map(level => (
+                  <RubricField
+                    key={level}
+                    showFeedbackInputAreas={showFeedbackInputAreas}
+                    rubricLevel={level}
+                    rubricValue={this.props.rubric[level]}
+                    disabledMode={this.props.disabledMode}
+                    onChange={this.onRubricChange}
+                    currentlyChecked={this.state.performance === level}
+                  />
+                ))}
               </form>
             </div>
           </div>
         )}
-        {showFeedbackInputAreas && (
-          <div style={styles.commentArea}>
-            <div>
-              <div style={styles.studentTime}>
-                <h1 style={styles.h1}>Teacher Feedback</h1>
-                {this.props.viewAs === ViewType.Student &&
-                  this.state.latestFeedback.length > 0 && (
-                    <div style={styles.time} id="ui-test-feedback-time">
-                      {i18n.lastUpdated({
-                        time: moment
-                          .min(moment(), moment(latestFeedback.created_at))
-                          .fromNow()
-                      })}
-                    </div>
-                  )}
-              </div>
-              <textarea
-                id="ui-test-feedback-input"
-                style={
-                  this.props.disabledMode
-                    ? styles.textInputStudent
-                    : styles.textInput
-                }
-                onChange={this.onCommentChange}
-                placeholder={placeholderText}
-                value={this.state.comment}
-                readOnly={this.props.disabledMode}
-              />
-            </div>
+        {showFeedbackInputAreas && !dontShowStudentComment && (
+          <div style={styles.commentAndFooter}>
+            <CommentArea
+              disabledMode={this.props.disabledMode}
+              comment={this.state.comment}
+              placeholderText={placeholderText}
+              studentHasFeedback={
+                this.props.viewAs === ViewType.Student &&
+                this.state.latestFeedback.length > 0
+              }
+              onCommentChange={this.onCommentChange}
+            />
             <div style={styles.footer}>
               {this.props.viewAs === ViewType.Teacher && (
                 <div style={styles.button}>
@@ -402,16 +288,6 @@ class TeacherFeedback extends Component {
                   )}
                 </div>
               )}
-              {this.props.viewAs === ViewType.Teacher &&
-                this.state.latestFeedback.length > 0 && (
-                  <div style={styles.time} id="ui-test-feedback-time">
-                    {i18n.lastUpdated({
-                      time: moment
-                        .min(moment(), moment(latestFeedback.created_at))
-                        .fromNow()
-                    })}
-                  </div>
-                )}
             </div>
           </div>
         )}

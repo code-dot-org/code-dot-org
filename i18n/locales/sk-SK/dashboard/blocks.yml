@@ -1008,6 +1008,11 @@ sk:
         options:
           DURATION:
             '"0"': nekonečne
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': ukáž
+            '"hide"': skry
       binary_move:
         options:
           DIR:

@@ -1508,6 +1508,8 @@ ja:
               name: 'アンプラグド: バイナリ'
             Artist Binary:
               name: アーティスト：バイナリ
+            Dance Party:
+              name: ダンスパーティー
         coursee-2019:
           stages:
             Building a Foundation:

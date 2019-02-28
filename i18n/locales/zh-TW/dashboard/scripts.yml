@@ -3737,6 +3737,8 @@ zh-TW:
               name: '不插電活動 - 二進制'
             Artist Binary:
               name: 小藝術家 - 二進制（Binary）
+            Dance Party:
+              name: 舞蹈派對
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4060,3 +4062,7 @@ zh-TW:
               name: 紀錄的讀取
             Visualizing Data:
               name: 資料視覺化
+        csp1-pilot:
+          stages:
+            new stage:
+              name: 新的階段

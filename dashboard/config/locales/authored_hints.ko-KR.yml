@@ -3496,6 +3496,99 @@ ko:
         mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
         mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
         mc_9_c: "'Place Torch' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요."
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+          * 댄서가 화면에 나타나도록 하세요.
+
+          *이 단계는 4번째 마디 이후에 끝납니다.
+        challenges: |-
+          ** 선택 과제**
+          * 다른 노래를 선택하여 재생하세요.
+          * 사슴처럼 보이는 다른 모습을 선택하세요!
+          * 댄서 이름을 바꾸세요.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+          * 댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
+
+          *이 단계는 8번째 마디 후에 끝납니다.
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 6번째 마디 후 댄서는 4번째 마디 후와는 다른 춤을 추고 있어야 합니다.
+
+          *이 단계는 12번째 마디 후에 끝납니다.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 노래의 7번째 마디 중간에 배경 효과를 변경해야 합니다.
+
+          *이 단계는 10번째 마디 후 끝납니다.*
+        challenges: |-
+          **선택 과제**
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 이벤트 아래 있는 새로운 블록에 연결하여 노래 중간 여러 시점에 배경 효과를 변경하세요.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 적어도 두 명 이상의 댄서가 있어야 합니다.
+
+          *이 단계는 6번째 마디 이후에 끝납니다.
+        challenges: |-
+          **선택 과제**
+
+          *세 번째 댄서(또는 원하는 만큼!)를 추가하세요
+          *모든 댄서가 노래의 여러 시점에서 서로 다른 동작을 수행하도록 하세요.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 두 명의 댄서는 크기가 100보다 커야 합니다.
+
+          *이 단계는 6번째 마디 이후에 끝납니다.
+        challenges: |-
+          **선택 과제**
+
+          * 다른 속성(너비, 높이, 회전 등)을 변경하여 실험해보세요.
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 댄서 한 명 이상의 색조를 변경하세요.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 댄서 두 명 이상의 속성을 변경해야 합니다.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 창의력을 발휘하세요!
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 창의력을 발휘하세요!
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * ‘왼쪽 화살표 누를 때’ 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: "`강아지_속도`의 번호를`고양이_속도`보다 큰 값으로 설정하십시오."
       Dance short test 2_authored_hint:

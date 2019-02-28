@@ -364,6 +364,11 @@ lt:
         options:
           DURATION:
             '"0"': amžinai
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': parodyk
+            '"hide"': pa(si)slėpk
       binary_move:
         options:
           DIR:

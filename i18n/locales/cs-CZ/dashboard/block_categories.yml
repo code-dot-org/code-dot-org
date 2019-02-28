@@ -13,9 +13,9 @@ cs:
       Text: text
       numbers: čísla
       Numbers: Čísla
-      Start: Spustit
       Dancers: Tanečníci
       Groups: Skupiny
+      Start: Spustit
       Booleans: Logické hodnoty
       test: otestuj
       Name: Jméno

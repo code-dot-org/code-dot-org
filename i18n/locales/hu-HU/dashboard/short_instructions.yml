@@ -690,6 +690,19 @@ hu:
       Course 4 SCV 5: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 6: Kattints ide az utasítások újbóli megtekintéséhez.
       Course E MC Conditionals1: A legértékesebb nyersanyagok a föld alatt vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két szenet.
+      CourseD_Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+      CourseD_Dance_Party_02: Állítsd be, hogy a jávorszarvas 4 ütem után új mozdulatot kezdjen!
+      CourseD_Dance_Party_03: Most állítsd be, hogy a táncos 6 ütem után kezdjen új mozdulatot!
+      CourseD_Dance_Party_04: Adj háttéreffektet a programodhoz.
+      CourseD_Dance_Party_05: Egy másik új blokkal érd el, hogy a táncos 2 ütemenként változtasson a mozgásán.
+      CourseD_Dance_Party_06: Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt táncoljon a macskával.
+      CourseD_Dance_Party_08: Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
+      CourseD_Dance_Party_09: Az „árnyalat beállítása“ blokkal módosítsd a táncos színét.
+      CourseD_Dance_Party_10: A „követés megkezdése“ blokkal érd el, hogy a másik táncos is reagáljon a zenére.
+      CourseD_Dance_Party_11: A „felfelé nyíl megnyomásakor“ blokkal a felfelé nyíl megnyomására tudsz kódot futtatni. Próbáld meg elérni, hogy a táncos egy gyors mozdulatot végezzen, amikor megnyomod a felfelé nyilat.
+      CourseD_Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt táncoljanak.
+      CourseD_Dance_Party_11b: Állítsd be, hogy a Robot egyszer „spárga“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat, és egyszer „taps“ mozdulatot tegyen, amikor megnyomod a felfelé nyilat. Csináld a spárga-taps mozdulatokat olyan gyorsan, ahogyan csak tudod!
+      CourseD_Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd meg az ismerőseiddel.
       CourseF_PlayLab_vars10: "Szabad játék! Itt van minden olyan változó, amellyel a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni őket.\\r\n\\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban, hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába. Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel, készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket is. \\r\n\\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
       CourseF_PlayLab_vars2: Az előző feladvány versenye nem volt igazán fair. Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
       CourseF_PlayLab_vars3: Használd a bal és jobb nyílbillentyűket a mozgáshoz, és a felfele nyilat az ugráshoz. Vajon össze tudod gyűjteni az összes zászlót?
