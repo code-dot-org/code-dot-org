@@ -19,11 +19,12 @@
 
   %br
   %p
-    Have feedback on the application process? Please let us know!
-    %br
-    %a{href: 'https://code.org/contact', target:'_blank'}
-      %button{style: "background-color: #ffa400; color: white; height: initial; font-size: 18px; text-align: center; margin-left: 0;"}
-        Contact Us
+    Have feedback on the application process?
+    = link_to 'Please let us know!', 'https://code.org/contact'
+
+  %a{href: 'https://code.org/contact', target:'_blank'}
+    %button.primary
+      Contact Us
 
 - ga_link = "/pd/application/teacher/submitted"
 - ga_link += "?nominated=true" if params[:nominated]
