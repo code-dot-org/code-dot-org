@@ -37,13 +37,6 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
   ];
 
   handleSchoolChange = selectedSchool => {
-    console.log(
-      `selectedSchool.school.zip = ${selectedSchool && selectedSchool.value}`
-    );
-    console.log(
-      `selectedSchool = ${selectedSchool && JSON.stringify(selectedSchool)}`
-    );
-
     this.handleChange({
       school: selectedSchool && selectedSchool.value,
       schoolZipCode:
