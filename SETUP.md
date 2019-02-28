@@ -37,7 +37,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `rake install`
 1. [Enable JavaScript builds](#enabling-javascript-builds)
-    1. Note: You can skip this step if not editing javascript frequently.
+    1. Note: You can skip this step if not editing javascript frequently. However, if you skip this step, you will need AWS access (described below, Code.org engineers only), 
+    as the build process will attempt to download pre-built javascript packages from S3.
 1. `rake build`
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
