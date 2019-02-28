@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
 import {CheckedRadioButton} from '../../lib/ui/CheckedRadioButton';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 
 const styles = {
   detailsArea: {
@@ -35,6 +37,11 @@ const styles = {
       border: `solid 1px ${color.light_cyan}`,
       borderRadius: 10
     }
+  },
+  tooltip: {
+    maxWidth: 200,
+    lineHeight: '20px',
+    whiteSpace: 'normal'
   }
 };
 
@@ -55,27 +62,47 @@ class RubricField extends Component {
     currentlyChecked: PropTypes.bool
   };
 
+  constructor(props) {
+    super(props);
+    this.tooltipId = _.uniqueId();
+  }
+
   render() {
     const performanceHeaderStyle = this.props.currentlyChecked
       ? styles.performanceLevelHeaderSelected
       : styles.performanceLevelHeader;
     return (
-      <div style={performanceHeaderStyle}>
-        {this.props.showFeedbackInputAreas && (
-          <CheckedRadioButton
-            id={`rubric-input-${this.props.rubricLevel}`}
-            value={this.props.rubricLevel}
-            checked={this.props.currentlyChecked}
-            onRadioButtonChange={this.props.onChange}
-            disabledMode={this.props.disabledMode}
-          />
-        )}
-        <details style={styles.detailsArea}>
-          <summary style={styles.rubricHeader}>
-            {rubricLevelHeaders[this.props.rubricLevel]}
-          </summary>
-          <p>{this.props.rubricValue}</p>
-        </details>
+      <div>
+        <div
+          style={performanceHeaderStyle}
+          data-tip
+          data-for={this.tooltipId}
+          aria-describedby={this.tooltipId}
+        >
+          {this.props.showFeedbackInputAreas && (
+            <CheckedRadioButton
+              id={`rubric-input-${this.props.rubricLevel}`}
+              value={this.props.rubricLevel}
+              checked={this.props.currentlyChecked}
+              onRadioButtonChange={this.props.onChange}
+              disabledMode={this.props.disabledMode}
+            />
+          )}
+          <details style={styles.detailsArea}>
+            <summary style={styles.rubricHeader}>
+              {rubricLevelHeaders[this.props.rubricLevel]}
+            </summary>
+            <p>{this.props.rubricValue}</p>
+          </details>
+        </div>
+        <ReactTooltip
+          id={this.tooltipId}
+          role="tooltip"
+          wrapper="div"
+          effect="solid"
+        >
+          <div style={styles.tooltip}>{this.props.rubricValue}</div>
+        </ReactTooltip>
       </div>
     );
   }
