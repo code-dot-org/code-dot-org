@@ -3,6 +3,7 @@ var script = document.querySelector("script[data-splittest]");
 var scriptData = JSON.parse(script.dataset.splittest);
 var splitTestPercentage = scriptData.percentage;
 var studioUrlPrefix = scriptData.studioUrlPrefix;
+var pegasusUrlPrefix = scriptData.pegasusUrlPrefix;
 
 var STORAGE_KEY = "teacher-dashboard-experiment";
 var ExperimentState = {
@@ -21,18 +22,32 @@ var urlMap = {
 };
 
 $(document).ready(function() {
+  // Our current path should look something like: #/sections/:sectionId/:path
+  // where /:path is optional.
+  var currentPath = window.location.href;
+  var sectionId = (currentPath.match(/sections\/(\d+)/) || [])[1];
+  var path = (currentPath.match(/sections\/\d+\/(\S+)/) || [])[1];
+
+  if (window.location.origin === studioUrlPrefix) {
+    handleDashboard(sectionId, path);
+  }
+
+  if (window.location.origin === pegasusUrlPrefix) {
+    handlePegasus(sectionId, path);
+  }
+});
+
+function handleDashboard(sectionId, path) {
+  // Redirect user back to pegasus if split test is 0
+}
+
+function handlePegasus(sectionId, path) {
   var experimentState = localStorage.getItem(STORAGE_KEY);
 
   // No-op if experiment is already off for this user or the entire experiment is off.
   if (experimentState === ExperimentState.off || splitTestPercentage === 0) {
     return;
   }
-
-  // Our current path should look something like: #/sections/:sectionId/:path
-  // where /:path is optional.
-  var currentPath = window.location.href;
-  var sectionId = (currentPath.match(/sections\/(\d+)/) || [])[1];
-  var path = (currentPath.match(/sections\/\d+\/(\S+)/) || [])[1];
 
   // Go to new teacher dashboard if experiment is already on for this user.
   if (experimentState === ExperimentState.on) {
@@ -48,7 +63,7 @@ $(document).ready(function() {
   } else {
     localStorage.setItem(STORAGE_KEY, ExperimentState.off);
   }
-});
+}
 
 function redirectToStudioTeacherDashboard(sectionId, path, enableExperiment) {
   // No-op if sectionId is not provided.
