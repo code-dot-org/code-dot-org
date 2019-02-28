@@ -39,7 +39,7 @@ Run all docker-compose commands from this directory.
     docker-compose -f setup-compose.yml up
     ```
 
-4. Setup the rest your locals.yml file as normal.
+4. Setup the rest of your locals.yml file as normal.
 
 ## Usage
 
