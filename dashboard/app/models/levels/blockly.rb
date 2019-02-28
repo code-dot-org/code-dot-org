@@ -460,7 +460,7 @@ class Blockly < Level
     else
       hints = JSON.parse(authored_hints).map do |hint|
         if hint['hint_video'].present?
-          hint['hint_video'] = Video.find_by_key(hint['hint_video']).summarize
+          hint['hint_video'] = Video.current_locale.find_by_key(hint['hint_video']).summarize
         end
         hint
       end

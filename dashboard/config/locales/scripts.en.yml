@@ -341,9 +341,9 @@ en:
             The Design Recipe:
               name: The Design Recipe
         K5PD:
-          title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
+          title: K5 Professional Development (old)
+          description: 'For the latest online Professional Development resources for elementary school teachers here: https://studio.code.org/s/k5-onlinepd'
+          description_short: ''
           description_audience: ''
           stages:
             Computer Science Pedagogy:
@@ -370,6 +370,8 @@ en:
               name: Unplugged lessons
             Writing computer programs:
               name: Writing computer programs
+            new stage:
+              name: new stage
         netsim:
           title: Internet Simulator
           description: Learn about how the Internet works.
@@ -9879,6 +9881,12 @@ en:
               name: Loops with the Artist
             Sprite Lab Behaviors:
               name: Sprite Lab Behaviors
+            Editing Behaviors:
+              name: Editing Behaviors
+            Virtual Pet:
+              name: Virtual Pet
+            Data from Sprite Lab:
+              name: Data from Sprite Lab
         dance-low:
           stages:
             Dance Party:
@@ -10110,6 +10118,10 @@ en:
               name: Conditionals in Minecraft
             About Me:
               name: About Me
+            Aquatic Conditionals in Minecraft:
+              name: Aquatic Conditionals in Minecraft
+            Access Ability:
+              name: Access Ability
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.

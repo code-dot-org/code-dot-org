@@ -8,6 +8,7 @@ import {LockStatus, saveLockDialog} from '../../stageLockRedux';
 import color from '../../../util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   main: {
@@ -115,12 +116,11 @@ class StageLockDialog extends React.Component {
   showAnswers = () => this.setAllLockStatus(LockStatus.ReadonlyAnswers);
 
   viewSection = () => {
-    window.open(
-      `${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${
-        this.props.selectedSectionId
-      }/assessments`,
-      '_blank'
+    const assessmentsUrl = teacherDashboardUrl(
+      this.props.selectedSectionId,
+      '/assessments'
     );
+    window.open(assessmentsUrl, '_blank');
   };
 
   handleRadioChange = event => {
