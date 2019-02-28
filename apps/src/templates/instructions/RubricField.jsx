@@ -62,22 +62,19 @@ class RubricField extends Component {
     currentlyChecked: PropTypes.bool
   };
 
-  constructor(props) {
-    super(props);
-    this.tooltipId = _.uniqueId();
-  }
-
   render() {
     const performanceHeaderStyle = this.props.currentlyChecked
       ? styles.performanceLevelHeaderSelected
       : styles.performanceLevelHeader;
+
+    const tooltipId = _.uniqueId();
     return (
       <div>
         <div
           style={performanceHeaderStyle}
           data-tip
-          data-for={this.tooltipId}
-          aria-describedby={this.tooltipId}
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
         >
           {this.props.showFeedbackInputAreas && (
             <CheckedRadioButton
@@ -96,7 +93,7 @@ class RubricField extends Component {
           </details>
         </div>
         <ReactTooltip
-          id={this.tooltipId}
+          id={tooltipId}
           role="tooltip"
           wrapper="div"
           effect="solid"
