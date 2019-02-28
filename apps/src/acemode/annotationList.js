@@ -44,8 +44,8 @@ module.exports = {
     dropletEditor = editor;
   },
 
-  setJSLintAnnotations: function(jslintResults) {
-    errorMapper.processResults(jslintResults);
+  setJSLintAnnotations: function(jslintResults, appType) {
+    errorMapper.processResults(jslintResults, appType);
     // clone annotations in case anyone else has a reference to data
     lintAnnotations = jslintResults.data.slice();
     updateGutter();

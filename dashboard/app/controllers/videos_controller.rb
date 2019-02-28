@@ -44,6 +44,12 @@ class VideosController < ApplicationController
     filename = upload_to_s3
     @video = Video.new(video_params.merge(download: "https://videos.code.org/#{filename}"))
 
+    if @video.locale != I18n.default_locale.to_s
+      unless Video.exists?(key: @video.key, locale: I18n.default_locale.to_s)
+        raise 'Non-English videos must be associated with an English video of the same key'
+      end
+    end
+
     if @video.save
       merge_and_write
 
@@ -104,7 +110,7 @@ class VideosController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def video_params
-    params.require(:video).permit(:key, :youtube_code, :download)
+    params.require(:video).permit(:key, :youtube_code, :download, :locale)
   end
 
   def i18n_params
@@ -117,7 +123,7 @@ class VideosController < ApplicationController
   end
 
   def merge_and_write
-    if @video.locale == 'en-US'
+    if @video.locale == I18n.default_locale.to_s
       Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
     end
     Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download, @video.locale)

@@ -7,6 +7,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
 import {textResponsePropType} from './textResponsesRedux';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -22,20 +23,27 @@ class TextResponsesTable extends Component {
   static propTypes = {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   state = {};
 
   studentNameFormatter = (name, {rowData}) => {
-    const {sectionId} = this.props;
+    const {sectionId, scriptId, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(
+      sectionId,
+      scriptId,
+      scriptName,
+      rowData.studentId
+    );
+
     return (
       <a
         className="uitest-name-cell"
         style={tableLayoutStyles.link}
-        href={`/teacher-dashboard#/sections/${sectionId}/student/${
-          rowData.studentId
-        }`}
+        href={studentUrl}
         target="_blank"
       >
         {name}

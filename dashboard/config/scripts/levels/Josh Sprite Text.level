@@ -11,7 +11,7 @@
       "GamelabJr"
     ],
     "helper_libraries": [
-      "SpritelabText"
+      "SpriteLab2Beta"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
@@ -36,11 +36,12 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
+    "mini_rubric": "false",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-12-07 17:56:43 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 17:57:06 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 18:34:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 18:36:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 19:04:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 19:22:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 19:24:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-02-21 20:57:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-12-07 17:56:43 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 17:57:06 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 18:34:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 18:36:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 19:04:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 19:22:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-07 19:24:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-02-21 20:57:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-02-23 23:40:26 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-02-24 00:43:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -70,13 +71,21 @@
                     <block type="gamelab_comment">
                       <title name="COMMENT">Imagine that these append the sprite name instead of undefined :)</title>
                       <next>
-                        <block type="gamelab_spriteSay">
-                          <title name="SPRITE">Buzzter</title>
-                          <title name="TEXT">Whatzzzz up?</title>
+                        <block type="gamelab_say">
+                          <title name="TEXT">Whatzzz up?</title>
+                          <value name="THIS">
+                            <block type="sprite_variables_get">
+                              <title name="VAR">Buzzter</title>
+                            </block>
+                          </value>
                           <next>
-                            <block type="gamelab_spriteSay">
-                              <title name="SPRITE">Pickles</title>
+                            <block type="gamelab_say">
                               <title name="TEXT">Not much</title>
+                              <value name="THIS">
+                                <block type="sprite_variables_get">
+                                  <title name="VAR">Pickles</title>
+                                </block>
+                              </value>
                             </block>
                           </next>
                         </block>
@@ -91,9 +100,13 @@
         <block type="gamelab_whenKey">
           <title name="KEY">"up"</title>
           <next>
-            <block type="gamelab_spriteSay">
-              <title name="SPRITE">Buzzter</title>
+            <block type="gamelab_say">
               <title name="TEXT">Movin' up!</title>
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">Buzzter</title>
+                </block>
+              </value>
               <next>
                 <block type="gamelab_moveUp">
                   <value name="THIS">
@@ -109,17 +122,25 @@
         <block type="gamelab_whenKey">
           <title name="KEY">"space"</title>
           <next>
-            <block type="gamelab_spriteSay">
-              <title name="SPRITE">Pickles</title>
+            <block type="gamelab_say">
               <title name="TEXT">Where are you going?</title>
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">Pickles</title>
+                </block>
+              </value>
             </block>
           </next>
         </block>
         <block type="gamelab_whileDownArrow">
           <statement name="DO">
-            <block type="gamelab_spriteSay">
-              <title name="SPRITE">Buzzter</title>
+            <block type="gamelab_say">
               <title name="TEXT">Movin' down!</title>
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">Buzzter</title>
+                </block>
+              </value>
               <next>
                 <block type="gamelab_moveDown">
                   <value name="THIS">

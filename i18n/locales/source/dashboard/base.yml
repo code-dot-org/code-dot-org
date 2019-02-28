@@ -916,6 +916,7 @@ en:
     peer_review: 'Peer Review'
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
+    optional: 'Optional'
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
