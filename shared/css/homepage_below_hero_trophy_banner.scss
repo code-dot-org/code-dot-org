@@ -47,32 +47,32 @@
         }
         .sparkle2 {
           left: 100px;
-          top: -30px;
-          width: 40px;
-          animation-delay: 300ms;
+          top: -22px;
+          width: 30px;
+          animation-delay: 500ms;
         }
         .sparkle3 {
           left: 93px;
           top: 26px;
-          width: 30px;
-          animation-delay: 600ms;
+          width: 25px;
+          animation-delay: 1000ms;
         }
 
         @keyframes loop {
           0% {
             transform: rotate(0deg);
-            opacity: 0
+            opacity: 0;
           }
           10% {
-            opacity: 1
+            opacity: 1;
           }
           20% {
             transform: rotate(200deg);
-            opacity: 0
+            opacity: 0;
           }
           100% {
             transform: rotate(360deg);
-            opacity: 0
+            opacity: 0;
           }
         }
 
@@ -91,18 +91,25 @@
 
     .right {
       float: left;
-      padding-top: 26px;
       height: 87px;
       text-align: center;
 
-      button {
-        font-size: 18px;
-        min-width: 140px;
-        margin-top: 0px;
-        color: #0094ca;
-        background-color: white;
-        border-color: white;
-        border-width: 2px;
+      .buttoncontainer {
+        height: 87px;
+        display: table-cell;
+        vertical-align: middle;
+        width: 100vw;
+
+        button {
+          font-size: 18px;
+          min-width: 140px;
+          margin-top: 0px;
+          color: #0094ca;
+          background-color: white;
+          border-color: white;
+          border-width: 2px;
+          height: 40px;
+        }
       }
     }
   }
