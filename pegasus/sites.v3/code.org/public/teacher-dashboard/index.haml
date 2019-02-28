@@ -10,6 +10,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   split_test_data = {}
   split_test_data[:percentage] = DCDO.get('teacher_dashboard_split_test', 0)
   split_test_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
+  split_test_data[:pegasusUrlPrefix] = CDO.code_org_url('', CDO.default_scheme)
 
 %script{src: '/shared/js/teacherDashboardSplitTest.js', data: {splittest: split_test_data.to_json}}
 
