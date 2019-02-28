@@ -3,7 +3,13 @@
   - data = level.properties
   - app = 'match'
 
-  = render partial: 'levels/content', locals: {app: app, data: data}
+  - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
+  - if question_content_blank
+    - question_content_class = nil
+  - else
+    - question_content_class = "question"
+
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
 
   - if standalone && !(data['options'].try(:[], 'hide_submit'))
     .buttons
