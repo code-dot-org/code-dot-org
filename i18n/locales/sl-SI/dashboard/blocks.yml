@@ -414,6 +414,11 @@ sl:
         options:
           DURATION:
             '"0"': neskončno
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': prikaži
+            '"hide"': skrij
       binary_move:
         options:
           DIR:

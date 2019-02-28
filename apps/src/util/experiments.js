@@ -29,6 +29,7 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
 experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
 experiments.TEACHER_EXP_2018_LIST = [experiments.COMMENT_BOX_TAB];
 experiments.MINI_RUBRIC_2019 = '2019-mini-rubric';
+experiments.TEACHER_DASHBOARD_REACT = 'teacher-dashboard-react';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

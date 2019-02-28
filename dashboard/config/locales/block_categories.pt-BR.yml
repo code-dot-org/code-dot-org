@@ -30,6 +30,8 @@ pt-BR:
       Input: Entrada
       Default: Padrão
       World: Mundo
+      Dancers: Bailarinos
+      Groups: Grupos
       Sprites: Sprite
       Behaviors: Comportamentos
       Advanced: Avançado
@@ -37,8 +39,6 @@ pt-BR:
       Locations: Localizações
       Music: Música
       Dancing: Dança
-      Dancers: Bailarinos
-      Groups: Grupos
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Fazer Sprite

@@ -159,7 +159,19 @@ nn:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Har du vanskar med å finne ut korleis du kan få blokkene ned? Prøv å gjere det same med den røde blomen akkurat som den lilla blomen!
         2-3_Bee_Conditionals_14_b: Dersom den røde blomen var lilla, kan du finne ut korleis ein kan bruke en ekstra "gjenta"-løkke for å kutte ned på koden?
-        2-3_Bee_Conditionals_14_c: "Prøv å bryte dette opp i to separate delar:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Samle Nektar 3 gonger\n  - Flytt framover 5 gonger\n  - Sjå om det er nektar, dersom nektar: samle den\n  - Snut til venstre\n  \n2) Lag honning \n  - Gå fram ein gong\n  - Lag to honningar"
+        2-3_Bee_Conditionals_14_c: |-
+          Prøv å bryte dette opp i to separate delar:  
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Samle Nektar 3 gonger
+            - Flytt framover 5 gonger
+            - Sjå om det er nektar, dersom nektar: samle den
+            - Snut til venstre
+            
+          2) Lag honning 
+            - Gå fram ein gong
+            - Lag to honningar
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Hugs: Lilla blomsar har enten 0 eller 1 nektar, og dei kan endre seg kvar gong du køyrer programmet.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -327,7 +339,9 @@ nn:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Hver gjentatte form er kombinasjonen av **halvparten av ein sekskant**, etterfulgt av **2/3 av ein trekant**. '
         Course_4_Artist_12_b: 'Den unike forma er nesten den same som i siste oppgåva, bortsett frå at halv-sekskanten er litt større. '
-        Course_4_Artist_12_c: "1) Dei tre første linjene er 60 pikslar lang, og du må snu 60 gradar.  \n 2) De to neste linjene er 80 pikslar lange og du må snu 120 gradar "
+        Course_4_Artist_12_c: |-
+          1) Dei tre første linjene er 60 pikslar lang, og du må snu 60 gradar.  
+           2) De to neste linjene er 80 pikslar lange og du må snu 120 gradar 
         Course_4_Artist_12_d: |-
           **Løysing:**
 
@@ -2671,6 +2685,99 @@ nn:
         Course_4_SCV_6_c: Hver av figurens 5 sider er delt opp i biter av 'lengde' / 'sider' der zig er blågrønn (rgb = 0,175,200) og zag er lilla (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'For sikke, ta til venstre ved ''360 ''/'' sider''.  For å sakke, snu til høyre ved ''360 ''/'' sider''. '
         Course_4_SCV_6_e: 'Resten av programmet er veldig standard for å lage en full 360 graders rotasjon fra en form, bortsett fra at vi overlapper formene med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr at vi trenger dobbelt så mange av dem som vanlig ("sider" * "2" repetisjoner). '
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Sørg for at det er ein dansar på skjermen.
+
+          *Denne øvinga endar etter 4 taktar.*
+        challenges: |-
+          **Ekstrautfordringer**
+          * Vel ein annan song.
+          * Vel ein dansar som ser ut som ein elg!
+          * Gi dansaren nytt navn.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          *Denne øvingar endar etter 8 taktar.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          *Denne øvinga ender etter 12 taktar.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må ha minst to dansarar.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Legg til ein tredje dansar (eller så mange du vil!)
+          * Få alle dansarane dine til å danse ulike dansar på ulike tidspunkt i songen.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * To av dansarane må ha ei anna storleik enn 100.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Eksperimenter ved å endre andre eigenskapar (breidde, høgde, rotasjon osv.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Skift farge på minst ein dansar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må endre eigenskapane til to eller flere dansarar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Bruk ‘når venstrepila blir trykka ned’-blokka til å få roboten til å gjere ein bestemt dans når du trykkar på venstrepila.
+
+          *Denne øvinga ender etter 8 taktar.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe større enn `cat_speed`.
       Dance short test 2_authored_hint:

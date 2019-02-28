@@ -363,6 +363,11 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mostrar
+            '"hide"': ocultar
       binary_move:
         options:
           DIR:

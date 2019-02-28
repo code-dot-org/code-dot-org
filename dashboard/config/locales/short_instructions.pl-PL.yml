@@ -1709,6 +1709,29 @@ pl:
         robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co najmniej
         2 bloków.
       Course1BeePuzzle12: Zbierz trzy nektary i następnie zrób dwa miody
+      CourseD_Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego
+        i podłącz go w bloku "układ".
+      CourseD_Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
+      CourseD_Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      CourseD_Dance_Party_04: Dodaj efekt tła do swojego programu.
+      CourseD_Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy
+        co 2 takty.
+      CourseD_Dance_Party_06: Utwórz kopię tancerza o nazwie "kopia_tancerza1", aby
+        zatańczył z kotem.
+      CourseD_Dance_Party_08: Czy możesz utworzyć obie kopie tancerzy tej samej wielkości?
+      CourseD_Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      CourseD_Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę
+        za pomocą bloku "zaczyna się to".
+      CourseD_Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia
+        kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał
+        szybki ruch, gdy naciskasz ten klawisz.
+      CourseD_Dance_Party_11_5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły
+        razem.
+      CourseD_Dance_Party_11b: Spraw, aby Robot raz "tupnął" (Drop), gdy naciśniesz
+        klawisz strzałki w prawo, i raz "klasnął" (Clap), gdy naciśniesz klawisz strzałki
+        w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
+      CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go
+        przyjaciołom.
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu,
         po prostu naciśnij "Graj"! '
       CourseF_PlayLab_vars10: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których

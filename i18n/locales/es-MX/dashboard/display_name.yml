@@ -317,9 +317,9 @@ es-MX:
       CSD U3 Scene Example: Escenas de gráfico
       CSD U3 Scene Example_2018: Escenas de gráfico
       CSD U3 Scene Example_2018_2019: Escenas de gráfico
-      CSD U3 Sprite Properties Map: Propiedades de Sprites
-      CSD U3 Sprite Properties Map_2018: Propiedades de Sprites
-      CSD U3 Sprite Properties Map_2019: Propiedades de Sprites
+      CSD U3 Sprite Properties Map: Propiedades de Sprite
+      CSD U3 Sprite Properties Map_2018: Propiedades de Sprite
+      CSD U3 Sprite Properties Map_2019: Propiedades de Sprite
       CSD U3 Sprites Map: Creando gráficos
       CSD U3 Sprites Map_2018: Creando gráficos
       CSD U3 Sprites Map_2019: Creando gráficos
@@ -919,10 +919,10 @@ es-MX:
       CourseF_Project_SpriteLab_2019: Proyecto de Laboratorio de gráficos del Curso F
       Dance_Party_extras_battle: Grupos de baile
       Dance_Party_extras_every_beat: Negras
-      Dance_Party_extras_layout: Ponte en formación
+      Dance_Party_extras_layout: Poner en Formación
       Dance_Party_extras_on_beat: Bajos, medios y agudos
       Dance_Party_extras_speed: Acelera, reduce la velocidad
-      Dance_Party_extras_visible: '¿A donde fueron?'
+      Dance_Party_extras_visible: '¿A dónde fueron?'
       Final Personal Website - OLD: Sitio web Personal final
       Final Personal Website: Sitio web Personal final
       Final Personal Website_2018: Sitio web Personal final
@@ -1030,6 +1030,9 @@ es-MX:
       Making Music_2019: Haciendo música
       New Dance Lab Project: Nuevo proyecto de Fiesta de Baile
       New Minecraft Hero Project: Juego libre
+      OPD-K5 S2L2: '¿Qué son las Ciencias de la computación?'
+      OPD-K5 WhatIsCS: '¿Qué son las Ciencias de la computación?'
+      OPD-K5S2L2: '¿Qué son las Ciencias de la computación?'
       PS - test - pixelation: Widget de pixelación en negro y blanco
       Revisiting the Counter Pattern_2018: Volviendo a visitar el patrón del contador
       Revisiting the Counter Pattern_2019: Volviendo a visitar el patrón del contador
@@ -1063,11 +1066,19 @@ es-MX:
       U4 L02 Thermostat App v1 Code: Aplicación de Termostato v.1
       U4 L02 Thermostat App v1: Aplicación de Termostato v.1
       U4 L02 Thermostat App v3 pt2: Aplicación de Termostato v.1
+      U4 L02 Thermostat App v3 pt3: Aplicación de Termostato v.3
       U4 L02 Thermostat App v3: Aplicación de Termostato v.1
       U4 L03 Scope Issue: Aplicación de Termostato v.1
       U4 L03 Thermostat App Modify 1: Aplicación de Termostato v.1
       U4 L03 Thermostat App Modify 2: Aplicación de Termostato v.1
+      U4 L04 Variables Make Project 1: Hacer, pt 1
+      U4 L04 Variables Make Project 2: Hacer, pt 1
+      U4 L04 Variables Make Project 3: Hacer, pt 1
+      U4 L04 Variables Make Project 4: Hacer, pt 1
+      U4 L04 Variables Make Project Sample: Aplicación Photo Liker
+      U4 L05 CYU Exit Ticket: Compruebe su comprensión
       U4 String Concatenation Pattern: Patrones del contador
+      U4 Variable with String Concatenation Pattern: Variable con Patrón de Concatenación de Cadena
       U4-AP-Practice-Choose-The-Data-Concern: "(nuevo) Respuesta de Práctica AP - Identificar la preocupación de Datos"
       U4-AP-Practice-Choose-The-Data-Concern_2018: Respuesta práctica AP - Identificar la preocupación de datos
       U4-AP-Practice-Choose-The-Data-Concern_2019: Respuesta práctica AP - Identificar la preocupación de datos

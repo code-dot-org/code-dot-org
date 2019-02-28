@@ -1475,10 +1475,28 @@ class Script < ActiveRecord::Base
   end
 
   def has_pilot_access?(user = nil)
-    pilot? && !!user&.permission?(UserPermission::LEVELBUILDER)
+    return false unless pilot? && user
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    return true if has_pilot_experiment?(user)
+
+    # A user without the experiment has pilot script access if
+    # (1) they have been assigned to or have progress in the pilot script, and
+    # (2) one of their teachers has the pilot experiment enabled.
+    has_progress = !!UserScript.find_by(user: user, script: self)
+    has_progress && user.teachers.any? {|t| has_pilot_experiment?(t)}
   end
 
+  # Whether this particular user has the pilot experiment enabled.
+  def has_pilot_experiment?(user)
+    return false unless pilot_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+  end
+
+  # returns true if the user is a levelbuilder, or a teacher with any pilot
+  # script experiments enabled.
   def self.has_any_pilot_access?(user = nil)
-    !!user&.permission?(UserPermission::LEVELBUILDER)
+    return false unless user&.teacher?
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    all_scripts.any? {|script| script.has_pilot_experiment?(user)}
   end
 end

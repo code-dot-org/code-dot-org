@@ -40,7 +40,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Getting Loopy:
-              name: Neustále opakovanie
+              name: Cykly sa zacykľujú
             Going Places Safely:
               name: Bezpečné premiestňovanie
             Happy Maps:
@@ -54,7 +54,7 @@ sk:
             'Maze: Sequence':
               name: 'Bludisko: Postupnosť'
             Move it, Move it:
-              name: Posúvaj, Posúvaj
+              name: Pohni sa, pohni sa
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Spelling Bee:
@@ -93,7 +93,7 @@ sk:
             Flappy:
               name: Flappy
             Getting Loopy:
-              name: Neustále opakovanie
+              name: Cykly sa zacykľujú
             Graph Paper Programming:
               name: Programovanie na štvorčekový papier
             'Maze: Loops':
@@ -918,13 +918,13 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Getting Loopy:
-              name: Neustále opakovanie
+              name: Cykly sa zacykľujú
             Graph Paper Programming:
               name: Programovanie na štvorčekový papier
             Happy Maps:
               name: Veselé mapy
             Move it, Move it:
-              name: Posúvaj, Posúvaj
+              name: Pohni sa, pohni sa
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Songwriting:
@@ -1560,7 +1560,7 @@ sk:
             Programming in Maze:
               name: Programovanie v Labyrinte
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Keep it Private:
               name: Drž to v tajnosti
             'Real-life Algorithms: Plant a Seed':
@@ -1621,6 +1621,8 @@ sk:
               name: Podmienky so Včelou
             Conditionals & Loops in Maze:
               name: Podmienky & Cykly v Bludisku
+            Conditionals & Loops in Farmer:
+              name: Podmienky a cykly s Poľnohosporárkou
             Impacts of Computing:
               name: Vplyv Informatiky
             Build a Play Lab Game:
@@ -1641,6 +1643,8 @@ sk:
               name: Úvod
             Nested Loops Project in Artist:
               name: Projekt s vnorenými cyklami s Umelcom
+            Debugging in Collector:
+              name: Odstraňovanie chýb s Laurel
         coursee-draft:
           description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
             príbehy a hry.
@@ -1944,7 +1948,7 @@ sk:
             Programming in Maze:
               name: Programovanie v Labyrinte
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             More Programming in Maze:
               name: Viac programovanie v Labyrinte
             Programming with Rey and BB-8:
@@ -1990,8 +1994,8 @@ sk:
           description_audience: 'Vek: 6-10'
           description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
             príbehy a hry.
-          description: Vytvor programy s postupnosťami, cyklami a javmi. Prelož svoje
-            iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
+          description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
+            svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
             a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
         coursed-2017:
@@ -2027,6 +2031,8 @@ sk:
               name: Podmienky s Včelou
             Conditionals & Loops in Maze:
               name: Podmienky & Cykly v Bludisku
+            Conditionals & Loops in Farmer:
+              name: Podmienky a cykly s Poľnohosporárkou
             Digital Citizenship:
               name: 'Digitálne občianstvo: Praktizovanie digitálneho občianstva'
             Build a Play Lab Game:
@@ -2049,6 +2055,8 @@ sk:
                 úlohách umožní študentom uvedomiť si širšie možnosti ich využitia.
                 Tieto úlohy tiež ponúkajú vyššiu mieru kreativity s možnosťou vytvorenia
                 vlastnej kresby v poslednej úlohe.
+            Debugging in Collector:
+              name: Odstraňovanie chýb s Laurel
           title: Kurz D
           assignment_family_title: Kurz D
           description_audience: Vek 7-11
@@ -2145,7 +2153,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Nested Loops:
@@ -2248,7 +2256,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
           title: Kurz F
@@ -2273,7 +2281,7 @@ sk:
             'Algorithms: Relay Programming':
               name: 'Hľadanie chýb: Štafetové programovanie'
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops Project in Artist:
               name: Projekt s vnorenými cyklami s Umelcom
             Internet:
@@ -2326,6 +2334,8 @@ sk:
               name: Stavanie základov
             Nested Loops:
               name: Vnorené cykly
+            Conditionals & Loops in Harvester:
+              name: Podmienky a cykly s Poľnohosporárkou
             Until Loops in Maze:
               name: Cykly s podmienkou "dovtedy kým" v Bludisku
           title: Zrýchlený kurz
@@ -2345,7 +2355,7 @@ sk:
             Programming in Maze:
               name: Programovanie v Labyrinte
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Spelling Bee:
               name: Včela Hláskovanie
           description_audience: 'Vek: 4-8'
@@ -2380,7 +2390,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
               name: Vnorené cykly
             Nested Loops with Frozen:
@@ -2433,6 +2443,8 @@ sk:
               name: Projekt s vnorenými cyklami s Umelcom
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programovanie'
+            Debugging in Collector:
+              name: Odstraňovanie chýb s Laurel
             While Loops in Farmer:
               name: Cykly s podmienkou "pokiaľ" s Farmárkou
             Conditionals with Cards:
@@ -2464,8 +2476,10 @@ sk:
               name: Úvod
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programovanie'
+            Debugging in Collector:
+              name: Odstraňovanie chýb s Laurel
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops Project in Frozen:
               name: Projekt s vnorenými cyklami vo Frozen
             Events in Bounce:
@@ -2501,7 +2515,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Course E Introduction:
@@ -2543,7 +2557,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             'Algorithms: Tangrams':
@@ -2634,7 +2648,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
               name: Vnorené cykly
             Nested Loops with Frozen:
@@ -2679,7 +2693,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             'Algorithms: Tangrams':
@@ -2810,8 +2824,10 @@ sk:
               name: Úvod
             Building a Foundation:
               name: Stavanie základov
+            Debugging in Collector:
+              name: Odstraňovanie chýb s Laurel
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Artist:
               name: Pečiatkovanie v Cykloch
             Nested Loops:
@@ -2839,15 +2855,15 @@ sk:
             Present Your Project:
               name: Prezentuj svoj projekt
             Conditionals in Bee:
-              name: Podmienky "Ak - tak" / "inak" s Včeličkou
+              name: Podmienky "ak/inak" s včelou
             Until Loops in Maze:
               name: Cykly s podmienkou "dovtedy kým" v Bludisku
             Programming in Collector:
-              name: Zbieranie pokladov s Laurelom
+              name: Zbieranie pokladov s Laurel
             Programming in Artist:
               name: Kódovať Umenie
             'Loops: Getting Loopy':
-              name: Neustále opakovanie
+              name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
             Copyright and Creativity:
@@ -2921,7 +2937,7 @@ sk:
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
-              name: Moji zacyklení robotickí kamaráti
+              name: Moji zacyklení robotickí kamaráti (pre mladších)
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
@@ -2935,7 +2951,7 @@ sk:
             Sequencing with Scrat:
               name: Radenie so Scrat
             Move It, Move It:
-              name: Posuň, Posuň
+              name: Pohni sa, pohni sa
             Copyright and Creativity:
               name: Je super tvoriť a hrať férovo
         coursed-2018:
@@ -2964,7 +2980,7 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky "Ak - tak" / "inak" s Včeličkou
+              name: Podmienky "ak/inak" s včelou
             Conditionals & Loops in Maze:
               name: Podmienky & Cykly v Bludisku
             Digital Citizenship:
@@ -2982,7 +2998,7 @@ sk:
             Until Loops in Maze:
               name: Cykly s podmienkou "dovtedy kým" v Bludisku
             Conditionals in Maze:
-              name: Podmienky v Labyrinte
+              name: Podmienky v bludisku
             Conditionals & Loops in Harvester:
               name: Zber úrody s podmienkami
             Graph Paper Programming:
@@ -2994,7 +3010,7 @@ sk:
             Events in Bouncey:
               name: Udalosti v Bounce
             Nested Loops in Bees:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
             Nested Loops in Maze:
               name: Vnorené cykly v Bludisku
         jr-test:
@@ -3004,8 +3020,8 @@ sk:
         coursec-2018:
           title: Kurz C (2018)
           assignment_family_title: Kurz C
-          description: Vytvor programy s postupnosťami, cyklami a javmi. Prelož svoje
-            iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
+          description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
+            svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
             a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
           description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
@@ -3021,11 +3037,11 @@ sk:
             'Real-life Algorithms: Paper Planes':
               name: Papierové lietadielká
             Programming in Collector:
-              name: Zbieranie pokladov s Laurelom
+              name: Zbieranie pokladov s Laurel
             Programming in Artist:
               name: Kódovať Umenie
             'Loops: Getting Loopy':
-              name: Neustále opakovanie
+              name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
             Loops in Artist:
@@ -3067,6 +3083,8 @@ sk:
               name: Stavanie základov
             Programming in Artist:
               name: Kódovať Umenie
+            'Loops: My Loopy Robotic Friends':
+              name: Moji zacyklení robotickí kamaráti
             Loops in Artist:
               name: Kreslenie tvarov pomocou cyklov
             Nested Loops:
@@ -3162,6 +3180,8 @@ sk:
               name: Stavanie základov
             Programming in Artist:
               name: Umenie s Kódom
+            'Loops: My Loopy Robotic Friends':
+              name: Moji zacyklení robotickí kamaráti
             Loops in Artist:
               name: Kreslenie tvarov pomocou cyklov
             Nested Loops in Bee/Zombie:
@@ -3360,7 +3380,7 @@ sk:
             Programming in Maze:
               name: Programovanie v Labyrinte
             'Loops: My Loopy Robotic Friends':
-              name: Moji zacyklení robotickí kamaráti
+              name: Moji zacyklení robotickí kamaráti (pre mladších)
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
@@ -3370,7 +3390,7 @@ sk:
             Spelling Bee:
               name: Včela Hláskovanie
             Move It, Move It:
-              name: Posuň, Posuň
+              name: Pohni sa, pohni sa
             Sequencing with Scrat:
               name: Radenie so Scrat
             Your Digital Footprint:
@@ -3462,7 +3482,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Conditionals with Cards:
@@ -3537,6 +3557,8 @@ sk:
               name: Predstavenie online úloh
             Relay Programming:
               name: Štafetové programovanie
+            Debugging in Collector:
+              name: Odstraňovanie chýb s Laurel
             Events in Bounce:
               name: Udalosti v Bounce
             Loops in Ice Age:
@@ -3555,6 +3577,8 @@ sk:
               name: Podmienky s kartami
             Conditionals in Bee:
               name: Podmienky s Včelou
+            Conditionals & Loops in Harvester:
+              name: Podmienky a cykly s Poľnohosporárkou
             Digital Citizenship:
               name: Digitálne Občianstvo
             Build a Play Lab Game:
@@ -3565,6 +3589,8 @@ sk:
               name: Binárny Umelec
             Build a Star Wars Game:
               name: Vytvorte Star Wars hru
+            Dance Party:
+              name: Tanečná Párty
         coursee-2019:
           title: Kurz E (2019)
           description: Začnite programovať s algoritmami, cyklami, podmienkami a udalosťami
@@ -3582,7 +3608,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
               name: Vnorené cykly
             Nested Loops with Frozen:
@@ -3689,6 +3715,8 @@ sk:
               name: Podmienky s kartami
             Conditionals in Bee:
               name: Podmienky s Včelou
+            Conditionals & Loops in Harvester:
+              name: Podmienky a cykly s Poľnohosporárkou
             'Functions: Songwriting':
               name: 'Funkcie: Skladanie piesní'
             Functions in Minecraft:
@@ -3763,8 +3791,8 @@ sk:
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
         coursec-2019:
           title: Kurz C (2019)
-          description: Vytvor programy s postupnosťami, cyklami a javmi. Prelož svoje
-            iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
+          description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
+            svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
             a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
           description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
@@ -3804,7 +3832,9 @@ sk:
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji Robotickí Kamaráti'
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Graphing Data:
+              name: Dáta ku grafom
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -3852,7 +3882,7 @@ sk:
           description_audience: Vek 5-8
           stages:
             Move It, Move It:
-              name: Posuň, Posuň
+              name: Pohni sa, pohni sa
             Sequencing with Scrat:
               name: Radenie so Scrat
             Your Digital Footprint:
@@ -3866,7 +3896,7 @@ sk:
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             'Loops: Getting Loopy':
@@ -3880,7 +3910,7 @@ sk:
           description_audience: 'Vek: 4-8'
           stages:
             Move It, Move It:
-              name: Posuň, Posuň
+              name: Pohni sa, pohni sa
             Sequencing with Scrat:
               name: Radenie so Scrat
             Your Digital Footprint:
@@ -3894,7 +3924,7 @@ sk:
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cykly: Moji Šialení Robotickí Kamaráti'
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Spelling Bee:

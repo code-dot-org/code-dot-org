@@ -247,6 +247,99 @@ cs:
           jeho poloviční délku před otočkou a kreslením dalšího čtverce.
         Course_4_Artist_Inspire_b: Každý čtverec a skok se opakuje čtyřikrát ( s otočkou
           vlevo mezi ) k nakreslení celého větrníku kola.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Potřebuješ mít alespoň dva tanečníky.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
+
+          *Tato úroveň končí po 8 taktech.*
       Dance short test 2_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**

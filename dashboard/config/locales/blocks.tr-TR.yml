@@ -958,6 +958,11 @@ tr:
         options:
           DURATION:
             '"0"': sonsuza dek
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': göster
+            '"hide"': gizle
       binary_move:
         options:
           DIR:

@@ -402,6 +402,11 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': rādīt
+            '"hide"': paslēpt
       binary_move:
         options:
           DIR:

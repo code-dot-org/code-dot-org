@@ -228,7 +228,8 @@ uk:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Кожна повторювана форма являє собою комбінацію ** половини шестикутника **, а потім ** 2/3 трикутника **.'
         Course_4_Artist_12_b: 'Форма одиниці практично така ж, як і в останній головоломці, за винятком того, що пів шестигранник трохи більший.'
-        Course_4_Artist_12_c: "1) Перші три рядки мають довжину 60 пікселів, і вам потрібно повернути 60 градусів. 2) Наступні два рядки довжина 80 пікселів, і вам потрібно повернути 120 градусів"
+        Course_4_Artist_12_c: |-
+          1) Перші три рядки мають довжину 60 пікселів, і вам потрібно повернути 60 градусів. 2) Наступні два рядки довжина 80 пікселів, і вам потрібно повернути 120 градусів
       Course 4 Artist 6_authored_hint:
         Course_4_Artist_6_a: Є 3 трикутники в межах 360 градусів обертання ... скільки разів 3 йде в 360?
       Course 4 Artist 8a_authored_hint:
@@ -893,6 +894,10 @@ uk:
       courseA_maze_seq_challenge1_2019_authored_hint:
         courseA_maze_seq_challenge1_a: Існує два рішення цієї загадки.
       courseA_playLab_events2_authored_hint:
+        courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
+      courseA_playLab_events2_2018_authored_hint:
+        courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
+      courseA_playLab_events2_2019_authored_hint:
         courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.

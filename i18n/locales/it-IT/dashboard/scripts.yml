@@ -17,7 +17,7 @@ it:
         course1:
           title: Corso 1
           description: Il Corso 1 è rivolto a studenti che stanno iniziando a leggere. Gli studenti creano programmi che sviluppano la capacità di risolvere problemi e di perseverare su problemi difficili, e permettono loro di collaborare con altri. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima e la seconda elementare.
-          description_short: Il corso 1 è rivolto a chi sta iniziando a leggere.
+          description_short: Introduzione all'informatica per bambini che stanno iniziando a leggere.
           description_audience: Da 4 anni in su (pre-scolare)
           stages:
             'Artist: Loops':
@@ -59,7 +59,7 @@ it:
         course2:
           title: Corso 2
           description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla terza elementare.
-          description_short: Il corso 2 è rivolto a studenti che sanno leggere.
+          description_short: Introduzione all'informatica per studenti che sanno già leggere.
           description_audience: Dai 6 anni in su (è necessario saper leggere)
           stages:
             'Artist: Debugging':
@@ -103,7 +103,7 @@ it:
         course3:
           title: Corso 3
           description: Il Corso 3 è rivolto a studenti che hanno già svolto il Corso 2. Gli studenti approfondiscono i concetti della programmazione introdotti nei corsi precedenti e imparano a definire soluzioni flessibili per problemi complessi. Alla fine del corso gli studenti creano giochi interattivi e storie da condividere con tutti. Il corso è raccomandato a partire dalla quarta elementare.
-          description_short: Il Corso 3 è la continuazione del Corso 2.
+          description_short: Entra ancora più a fondo nella programmazione creando giochi e storie interattive e imparando concetti nuovi come le funzioni. È la continuazione del Corso 2.
           description_audience: Da 8 anni in su (dopo il Corso 2)
           stages:
             Artist:
@@ -179,7 +179,7 @@ it:
         course4:
           title: Corso 4
           description: Il corso 4 è rivolto agli studenti che hanno già seguito i corsi 2 e 3. Gli studenti imparano come affrontare problemi di maggiore complessità e a combinare diversi concetti per risolvere i diversi problemi proposti. Una volta completato questo corso, gli studenti saranno in grado di creare programmi abbastanza complessi, anche con l'utilizzo di cicli con contatore e funzioni con parametri.
-          description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già svolto i Corsi 2 e 3.
+          description_short: Costruisci programmi più complessi imparando concetti come variabili, cicli con contatore e funzioni con parametri. È la continuazione del corso 3.
           description_audience: Da 10 anni in su (dopo il Corso 3)
           stages:
             Artist:
@@ -3254,6 +3254,8 @@ it:
               name: 'Artista: Binario'
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+            Dance Party:
+              name: Ballando col codice
         coursee-2019:
           description: Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari.
           description_audience: 'Da 8 a 12 anni'

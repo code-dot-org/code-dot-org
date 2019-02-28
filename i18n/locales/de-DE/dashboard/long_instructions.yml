@@ -168,6 +168,54 @@ de:
       Course 4 Playlab For Loops 5b: Passe die Schrittweite in der For-Schleife an, so dass beide Figuren am Schluss an derselben Stelle zu stehen kommen.
       Course 4 SCFP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt, bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter (und dabei positive und negative Zahlen nutzt).
       Course 4 SCVP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt, bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter (und dabei positive und negative Zahlen nutzt).
+      CourseD_Dance_Party_01: |-
+        *Los geht‘s mit der Tanzparty!*
+
+        Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
+
+        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
+      CourseD_Dance_Party_02: |-
+        Lassen Sie den Elch tanzen!
+
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+
+
+        **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
+      CourseD_Dance_Party_03: "*Jetzt grooven wir!*\n\nFügen Sie einen Block <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takte\"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen."
+      CourseD_Dance_Party_04: |-
+        *Dieser Tanz braucht etwas Pep!*
+
+        Suchen Sie in Ihrer Toolbox nach einem neuen Block, der Ihrem Tänzer einen Hintergrundeffekt hinzufügt. Beobachten Sie, wie sich die Effekte passend zur Musik verändern.
+      CourseD_Dance_Party_05: |-
+        Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
+
+        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+      CourseD_Dance_Party_06: |-
+        *Wir brauchen noch mehr Tänzer!*
+
+        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      CourseD_Dance_Party_08: |-
+        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
+
+        Sie können es aussehen lassen, als befinde sich der Tänzer im Hintergrund, indem Sie seine _Größe_ kleiner machen. Können Sie beide Backup-Tänzer gleich groß machen?
+      CourseD_Dance_Party_09: |-
+        Tänzer haben eine "Farbton" -Eigenschaft, mit der man eine Farbschicht hinzufügen kann. Versuchen Sie, den Farbton eines Ihrer Tänzer zu verändern.
+        * Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
+      CourseD_Dance_Party_10: |-
+        Jetzt wissen wir, wie wir die Eigenschaften eines Tänzers ändern. Mit diesem Block können wir dafür sorgen, dass immer die gleichen Eigenschaften automatisch auf die Musik reagieren:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
+      CourseD_Dance_Party_11: "Mit dem Block <xml><block type=\"Dancelab_whenKey\"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.\n\nSie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!"
+      CourseD_Dance_Party_11_5: "Schauen Sie sich diesen Block an:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ENTE\"</title>\n<title name=\"LAYOUT\">\"Kreis\"</title>\n</block></xml>\n\nJetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!\n\nVerwenden Sie einige der \"alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt."
+      CourseD_Dance_Party_11b: |-
+        Es ist Zeit für einen Tanz-Wettbewerb! Die Katze dabt, wenn Sie die linke Pfeiltaste drücken. Lassen Sie den Roboter "droppen", indem Sie die rechte Pfeiltaste drücken.
+      CourseD_Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       Dance_Party_01: |-
         *Los geht‘s mit der Tanzparty!*

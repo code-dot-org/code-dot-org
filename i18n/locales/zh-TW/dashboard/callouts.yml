@@ -135,6 +135,17 @@ zh-TW:
         Course_4_Playlab_For_Loops_4b_2: 這個關卡你只能修改`計數迴圈`中的「增量」。
       Course 4 SCV 6_callout:
         Course_4_SCV_6: 這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: 將此程式積木新增至您的程式！
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: 將此程式積木新增至您的程式！
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: 將此程式積木新增至您的程式！
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: 在此新增您的新舞者
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: 新的程式積木！
+        dance_callout_11_b: 新的程式積木！
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: 使用這些方向鍵來移動角色
       CourseF_PlayLab_vars10_callout:

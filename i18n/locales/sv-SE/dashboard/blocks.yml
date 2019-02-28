@@ -907,6 +907,11 @@ sv:
         options:
           DURATION:
             '"0"': alltid
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': visa
+            '"hide"': göm
       binary_move:
         options:
           DIR:

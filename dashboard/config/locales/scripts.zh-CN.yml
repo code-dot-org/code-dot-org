@@ -8923,6 +8923,8 @@ zh-CN:
               name: 小艺术家：二进制
             Build a Star Wars Game:
               name: 建立一个星球大战游戏!
+            Dance Party:
+              name: 舞蹈派对
         coursee-2019:
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
           description_short: 回顾课程 C 和 D 中的概念，然后继续学习函数。
@@ -10061,3 +10063,7 @@ zh-CN:
               name: 示例应用程序
             Final Project:
               name: 最终项目
+        csp1-pilot:
+          stages:
+            new stage:
+              name: 新的阶段
