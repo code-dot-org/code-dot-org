@@ -7,7 +7,7 @@ batch_size = 10000
 
 puts "Processing..."
 
-User.where(user_type: "teacher", school_info: !nil).find_in_batches(batch_size: batch_size) do |batch|
+User.where.not(school_info: nil).where(user_type: "teacher").find_in_batches(batch_size: batch_size) do |batch|
   ActiveRecord::Base.transaction do
     batch.each do |user|
       UserSchoolInfo.create!(
