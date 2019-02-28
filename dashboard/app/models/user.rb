@@ -1530,6 +1530,12 @@ class User < ActiveRecord::Base
     most_recently_assigned_user_script.script
   end
 
+  def can_access_most_recently_assigned_script?
+    return false unless script = most_recently_assigned_user_script&.script
+
+    !script.pilot? || script.has_pilot_access?(self)
+  end
+
   def user_script_with_most_recent_progress
     user_scripts.
     where("last_progress_at").
