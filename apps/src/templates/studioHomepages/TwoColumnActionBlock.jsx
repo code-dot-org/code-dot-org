@@ -61,7 +61,8 @@ const styles = {
     marginBottom: 60
   },
   container: {
-    width: '100%'
+    width: '100%',
+    position: 'relative'
   }
 };
 
@@ -70,6 +71,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
+    imageExtra: PropTypes.node,
     teacherStyle: PropTypes.bool,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
@@ -90,6 +92,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       isRtl,
       responsiveSize,
       imageUrl,
+      imageExtra,
       heading,
       subHeading,
       subHeadingSmallFont,
@@ -100,12 +103,13 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     const width = responsiveSize === 'lg' ? '50%' : '100%';
 
     return (
-      <div>
+      <div style={styles.container}>
         {heading && <div style={styles.heading}>{heading}</div>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
             <div style={{float, width}}>
               <img src={imageUrl} style={styles.image} />
+              {imageExtra}
             </div>
           )}
           <div style={{float, width}}>
@@ -212,18 +216,42 @@ export class SpecialAnnouncementActionBlock extends Component {
   };
 
   render() {
+    const imageExtra = (
+      <div>
+        <img
+          className="sparkle sparkle1"
+          src={pegasus(
+            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
+          )}
+        />
+        <img
+          className="sparkle sparkle2"
+          src={pegasus(
+            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
+          )}
+        />
+        <img
+          className="sparkle sparkle3"
+          src={pegasus(
+            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
+          )}
+        />
+      </div>
+    );
+
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-trophy.jpg'
         )}
+        imageExtra={imageExtra}
         teacherStyle={true}
         subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Trophy()}
         subHeadingSmallFont={false}
         description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Trophy()}
         buttons={[
           {
-            url: pegasus('/educate/professional-learning'),
+            url: pegasus('/nominate'),
             text: i18n.nominateATeacher()
           }
         ]}
