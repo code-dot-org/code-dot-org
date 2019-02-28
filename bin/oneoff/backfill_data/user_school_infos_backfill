@@ -18,7 +18,7 @@ User.where.not(school_info: nil).where(user_type: "teacher").find_in_batches(bat
         last_confirmation_date: user.created_at
       )
       num_users_updated += 1
-    rescue Exception => e
+    rescue StandardError => e
       puts "Error: teacher with user id #{user.id} with school id #{user.school_info.id}"
       exceptions.push(e)
     end
