@@ -10,7 +10,7 @@ jQuery.fn.swap = function(b) {
   return this;
 };
 
-export function initMatch() {
+export function initMatch(enableSounds = false) {
   $('.mainblock #answers li').draggable({revert: 'invalid', stack: '.answer'});
 
   // set up the central list of empty slots.
@@ -19,7 +19,9 @@ export function initMatch() {
     hoverClass: 'hover',
     accept: '.answerlist,.answerslot',
     drop: function(event, ui) {
-      CDOSounds.play('click');
+      if (enableSounds) {
+        CDOSounds.play('click');
+      }
       // once an answer is in the central list of slots, it will just swap with whatever it's dragged onto
       if (ui.draggable.hasClass('answerslot')) {
         // swap this empty slot and the answer dragged onto it
@@ -53,7 +55,9 @@ export function initMatch() {
           accept: '.answerslot',
           activeClass: 'active',
           drop: function(event, ui) {
-            CDOSounds.play('whoosh');
+            if (enableSounds) {
+              CDOSounds.play('whoosh');
+            }
 
             // remove offset coordinates from the dragged item
             ui.draggable.css({top: '0px', left: '0px'});
