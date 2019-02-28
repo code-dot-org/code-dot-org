@@ -5,7 +5,7 @@
 
   = render partial: 'levels/content', locals: {app: app, data: data}
 
-  - unless !!(data['options'].try(:[], 'hide_submit'))
+  - if standalone && !(data['options'].try(:[], 'hide_submit'))
     .buttons
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         =t('submit')
@@ -54,6 +54,7 @@
           %li.answer.answerlist{style: "height: #{height}px", originalIndex: answer['index']}!= match_t(answer['text'])
 
     .clear
-  = render partial: 'levels/dialog', locals: {app: app}
+  - if standalone
+    = render partial: 'levels/dialog', locals: {app: app}
   = render partial: 'levels/match_answer', locals: {data: data, height: height}
   = render partial: 'levels/teacher_markdown', locals: {data: data}
