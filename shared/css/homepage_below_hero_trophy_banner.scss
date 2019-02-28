@@ -36,6 +36,46 @@
           width: 195px;
         }
 
+        .sparkle {
+          position: absolute;
+          animation: loop 5s infinite linear;
+        }
+        .sparkle1 {
+          left: 79px;
+          top: 4px;
+          width: 20px;
+        }
+        .sparkle2 {
+          left: 100px;
+          top: -30px;
+          width: 40px;
+          animation-delay: 300ms;
+        }
+        .sparkle3 {
+          left: 93px;
+          top: 26px;
+          width: 30px;
+          animation-delay: 600ms;
+        }
+
+        @keyframes loop {
+          0% {
+            transform: rotate(0deg);
+            opacity: 0
+          }
+          10% {
+            opacity: 1
+          }
+          20% {
+            transform: rotate(200deg);
+            opacity: 0
+          }
+          100% {
+            transform: rotate(360deg);
+            opacity: 0
+          }
+        }
+
         .text {
           color: white;
           font-size: 18px;
