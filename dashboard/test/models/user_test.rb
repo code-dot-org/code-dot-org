@@ -1007,16 +1007,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.blank?
     assert user.hashed_email
 
-    assert user.set_user_type(
-      User::TYPE_TEACHER,
-      'email@old.xx',
-      {
-        "email_preference_opt_in" => "yes",
-        "email_preference_request_ip" => "127.0.0.1",
-        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
-        "email_preference_form_kind" => "0"
-      }
-    )
+    assert user.set_user_type(User::TYPE_TEACHER, 'email@old.xx')
 
     assert_equal 'email@old.xx', user.email
     assert_equal '21+', user.age
@@ -1026,16 +1017,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student, :unmigrated_google_sso, email: 'email@new.xx'
     assert user.primary_contact_info.credential_type == 'google_oauth2'
 
-    assert user.set_user_type(
-      User::TYPE_TEACHER,
-      'email@new.xx',
-      {
-        "email_preference_opt_in" => "yes",
-        "email_preference_request_ip" => "127.0.0.1",
-        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
-        "email_preference_form_kind" => "0"
-      }
-    )
+    assert user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
 
     assert_equal 'email@new.xx', user.email
     assert_equal User::TYPE_TEACHER, user.user_type
@@ -1045,16 +1027,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student, :unmigrated_google_sso
     assert user.primary_contact_info.credential_type == 'google_oauth2'
 
-    assert user.set_user_type(
-      User::TYPE_TEACHER,
-      'email@new.xx',
-      {
-        "email_preference_opt_in" => "yes",
-        "email_preference_request_ip" => "127.0.0.1",
-        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
-        "email_preference_form_kind" => "0"
-      }
-    )
+    assert user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
 
     assert_equal 'email@new.xx', user.email
     assert_equal User::TYPE_TEACHER, user.user_type
@@ -1062,16 +1035,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'changing from student to teacher clears terms_of_service_version' do
     user = create :student, terms_of_service_version: 1
-    user.set_user_type(
-      User::TYPE_TEACHER,
-      'tos@example.com',
-      {
-        "email_preference_opt_in" => "yes",
-        "email_preference_request_ip" => "127.0.0.1",
-        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
-        "email_preference_form_kind" => "0"
-      }
-    )
+    user.set_user_type(User::TYPE_TEACHER, 'tos@example.com')
     user.save!
     user.reload
 
@@ -1084,16 +1048,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     assert_creates(StudioPerson) do
-      user.set_user_type(
-        User::TYPE_TEACHER,
-        'fakeemail@example.com',
-        {
-          "email_preference_opt_in" => "yes",
-          "email_preference_request_ip" => "127.0.0.1",
-          "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
-          "email_preference_form_kind" => "0"
-        }
-      )
+      user.set_user_type(User::TYPE_TEACHER, 'fakeemail@example.com')
       user.save!
     end
     user.reload
