@@ -282,7 +282,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       }
 
       renderTeacherPanel(store, scriptData.id, scriptData.section);
-      clientState.cacheUserIsTeacher(true);
     }
 
     if (data.focusAreaStageIds) {
