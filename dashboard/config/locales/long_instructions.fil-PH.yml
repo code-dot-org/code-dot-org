@@ -1126,6 +1126,39 @@ fil:
         na pahina sa web ay sinimulan na para sa iyo. Ang larawan ng aso ay idinagdag
         na sa  baba ng pahina sa web. Gumamit ng image na tag para magdagdag ng `cat.jpeg`
         na larawan sa pahina sa baba ng heading ng pusa."
+      CSD U2 Image Tag 1_2019: "<div style=\"float: right; height:\n250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\r\n<details>\r\n<summary>**Paano
+        ko idadagdag ang mga larawan?**</summary>\r\nAng `<img>` na tag nagbibigay-daan
+        sa iyo na magpakita ng mga larawan sa  iyong pahina sa web.<br><br>\r\n\r\nHalimbawa:\r\n<pre>&lt;img\nsrc=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nPara masabi sa browser kung
+        ilang file ang gagamitin, may karagdagang impormasyon, na tinatawag na **attribute**,
+        ang idinagdag sa &lt;img&gt; na tag sa loob ng mga ikawing. Ang attribute
+        na `src` ay kumakatawan para sa **s**ou**rc**e at nagsasabi sa pangalan ng
+        larawan. Ang mga pangalan ng file ng mga larawan ay naglalakip ng mga ekstensyon
+        na nagsasabi sa kompyuter kung aling tipo ng larawan ang tinatrabaho nila.
+        Ang mga karaniwang mga ekstensyon ay ang .jpg, .jpeg, .png. <br><br>\r.\n\r\nHigit
+        pa sa src na attribute, ang mga elemento na larawan ay mayroon ding `alt`
+        na attribute na naglalarawan sa imahe. Ito ay importante sa kaso na ang larawan
+        ay hindi maiload or para sa mga ato na may problema sa kanilang mga paningin.
+        <br><br>\r\n\r\nAng `<img>` na tag ay isang halimbawa ng isang **self-closing
+        na tag** dahil ito ay nagsisimula at nagtatapos sa isang tag. Para markahan
+        ito, nilalagyan natin ng `/` kung saan kadalasang inilagay sa close na tag
+        sa dulo ng tag ng larawan.\r\n\r\n</details>\r\n<details>\r\n<summary>*Bakit
+        ang image na tay ay walang pangsarang tag?**</summary>\r\nAng image na tag
+        ay hindi nangangailangan ng pangsarang tag dahil wala itong teksto na nilalaman
+        na kailangang ibalot ng mga tags. Ang nilalaman na pinapakita sa screen ay
+        tinutiko sa pamamagitan ng mga tag na attribute.\r\n</details>\r\n<details>\r\n<summary>**Ano
+        ang attribute?**</summary>\r\nAng attribute ay isang ekstrang impormasyon
+        na nilalakip sa isang tag. Ang mga attribute ay may mga pangalan at mga halaga.
+        Ang pangalan ay nagsasabi kung anong tipo ng imposmasyon ang inilagay ang
+        pagkatapos ang halaga na binibigay ng tiyak na impormasyon para sa tag na
+        iyon. \r\n\r\nBilang halimbawa, ang &lt;img&gt; na mga tags ay mayroong dalawang
+        attribute, ang src at alt.\nAng src ay tumutuko sa pangalan ng file na larawan
+        at ang alt ay nagsasabi sa browser sa isang mababasang teksto kung ano ang
+        larawan.\r\n</details>\r\n</div>\r\n\r\n# Mga Larawan\r\n\r\nAng Aso vs Pusa
+        na pahina sa web ay sinimulan na para sa iyo. Ang larawan ng aso ay idinagdag
+        na sa  baba ng pahina sa web. Gumamit ng image na tag para magdagdag ng `cat.jpeg`
+        na larawan sa pahina sa baba ng heading ng pusa."
       CSD U2 Image Tag 2: "<div style=\"float: right; height:\n250px; width: 40%;
         overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\r\n<details>\r\n<summary>**Paano
         ako magdadagdag ng mga larawan?**</summary>\r\nAng `<img>` na tag ay nagbibigay-daan
@@ -1204,6 +1237,45 @@ fil:
         ng hindi bababa sa isang imahe as web na pahinang ito\r\n* Gamitin ang `<img>`
         na tag para ipakita ang (mga) larawan sa iyong website.\r\n* Siguraduhing
         magdagdag ng `alt` na attribute."
+      CSD U2 Image Tag 2_2019: "<div style=\"float: right; height:\n250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\r\n<details>\r\n<summary>**Paano
+        ako magdadagdag ng mga larawan?**</summary>\r\nAng `<img>` na tag ay nagbibigay-daan
+        sa iyo na magpakita ng mga larawan sa iyong pahina sa web. <br><br>\r\n\r\nHalimbawa:\r\n<pre>&lt;img\nsrc=\"dog.png\"
+        alt=\"tumatalon na aso\"/&gt;</pre><br><br>\r\n\r\nPara masabi sa browser
+        kung ilang file ang gagamitin, may karagdagang impormasyon, na tinatawag na
+        **attribute**, ang idinagdag sa &lt;img&gt; na tag sa loob ng mga ikawing.
+        Ang attribute na `src` ay kumakatawan para sa **s**ou**rc**e at nagsasabi
+        sa pangalan ng larawan. Ang mga pangalan ng file ng mga larawan ay naglalakip
+        ng mga ekstensyon na nagsasabi sa kompyuter kung aling tipo ng larawan ang
+        tinatrabaho nila. Ang mga karaniwang mga ekstensyon ay ang .jpg, .jpeg, .png.
+        <br><br>\r\n\r\nHigit pa dito, mayroon tayong src na attribute, ang mga elemento
+        ng larawan ay mayroon ding `alt` na attibute na naglalarawan sa imahe. Ito
+        ay importante sa kaso na ang imahe ay hindi naglo-load o para sa mga tao na
+        may problema sa kanilang mga paningin. <br/><br/>\r\n\r\nAng `<img>` na tag
+        ay isang halimbawa ng isang **self-closing na tag** dahil ito ay nagsisimula
+        at nagwawakas sa isang tag. Para markahan ito, aying ilalagay ang `\\` ay
+        kadalasang napupunta sa pangsarang tag na nasa dulo ng tag ng larawan.\r\n\r\n</details>\r\n<details>\r\n<summary>**Bakit
+        ang image na tag ay walang pangsarang tag?**</summary>\r\nAng image na tag
+        ay hindi nangangailangan ng pangsarang tag dahil wala itong teksto na nilalaman
+        kung saan nangangailangan na ibalot ng mga tags. Ang nilalaman na pinapakita
+        sa screen ay tinutukoy sa pamamagitan ng mga tag na mga attribute.\r\n</details>\r\n<details>\r\n<summary>**Ano
+        ang attribute?**</summary>\r\nAng mga attribute ay mga karagdagang mga impormasyon
+        na nilalakip sa isang tag. Ang mga attribute ay mayroong mga pangalan at mga
+        halaga. Ang pangalan ay nagsasabi kung anong tipo ng impormasyon ang binibigay
+        at pagkatapos ang halaga ay nagbibigay ng tiyak na impormasyon para sa tag
+        na iyan. \r\n\r\nBilang halimbawa ang &lt;img&gt; na mgam tag ay mayroong
+        dalawang mga attribute, ang src at alt. Ang src ay tumutukoy sa pangalan ng
+        file at ang alt ay nagsasabi sa browser sa isang mababasang teksto kung ano
+        ang larawan.\r\n</details>\r\n</div>\r\n\r\n# Pag-upload ng mga Larawan\r\n\r\nMaaari
+        kang mag-upload ng mga larawan na nakikita mo kahit saan gamit ang **Add Image**
+        na button. Pumunta at maghanap ng larawan na may iba't ibang tipo ng alaga
+        na gusto mo at i-download ito sa iyong kompyuter (gamit ang right-click \"Save
+        As\").\r\n\r\nKapag mayroon ka nang mga larawan, i-click ang ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png)
+        at i-upload ang larawan mula sa iyong kompyuter sa iyong proyekto, kung saan
+        maaari mo na itong gamitin sa iyong pahina.\r\n\r\n# Gawin Ito\r\n\r\n* Mag-upload
+        ng hindi bababa sa isang imahe as web na pahinang ito\r\n* Gamitin ang `<img>`
+        na tag para ipakita ang (mga) larawan sa iyong website.\r\n* Siguraduhing
+        magdagdag ng `alt` na attribute."
       CSD U3 Draw Loop Plugged predict 2 embed: "# Hulaan\r\n\r\nAng mga programang
         ito ay mayroong maliit na kaibahan na magpapakbo nito nang medyo kakaiba.
         Sa uulitin, tandaan: \r\n\r\n* Lahat ng iyongcode sa labas ng draw na loop
@@ -1211,6 +1283,12 @@ fil:
         draw loop ay pintakbo nang paulit-ulit magpakailanman\r\n\r\nAno ang gagawin
         ng programang ito? Isulat ang iyong paghuhula sa baba."
       CSD U3 Draw Loop Plugged predict 2 embed_2018: "# Hulaan\r\n\r\nAng mga programang
+        ito ay mayroong maliit na kaibahan na magpapakbo nito nang medyo kakaiba.
+        Sa uulitin, tandaan: \r\n\r\n* Lahat ng iyongcode sa labas ng draw na loop
+        ay unang pinapatakbo, nang isang beses\r\n* Lahay ng iyong code sa loob ng
+        draw loop ay pintakbo nang paulit-ulit magpakailanman\r\n\r\nAno ang gagawin
+        ng programang ito? Isulat ang iyong paghuhula sa baba."
+      CSD U3 Draw Loop Plugged predict 2 embed_2019: "# Hulaan\r\n\r\nAng mga programang
         ito ay mayroong maliit na kaibahan na magpapakbo nito nang medyo kakaiba.
         Sa uulitin, tandaan: \r\n\r\n* Lahat ng iyongcode sa labas ng draw na loop
         ay unang pinapatakbo, nang isang beses\r\n* Lahay ng iyong code sa loob ng
@@ -1238,6 +1316,17 @@ fil:
         iyong programa na nag-update sa mga `sprite x`, `sprite y`, p `sprite.rotation`
         na mga katangian ng sprite para sila ay gagalaw. Kakailanganin mong i-update
         ang mga ito gamit ang `randomNumber()`.\r\n"
+      CSD U3 Draw Loop Plugged update your scene_2019: "# Palawakin ang Iyong Eksena\r\n\r\nNarito
+        ang sprite na eksena na ginagawa mo sa huling aralin. Ikay ngayon ay mag-update
+        nito nang maliit para magamit ang draw na loop at sprite na mga katangian.\r\n\r\n<img\nsrc=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29\nPM.png\"
+        style=\"float:right;height:100px\">\r\n\r\n# Gawin Ito\r\n\r\n* Magdagdag
+        ng draw na loop sa yiong programa (dapat mayroon ka lang isa).\r\n* Gamitin
+        ang lasso na tagapili (i-click, i-hold, at kaladkarin) para mapili ang lahat
+        ng iyong code at ilagay ito sa loob ng iyong draw na loop. Ang Ctrl-Z ay hahayaan
+        kang ulitin ang iyong mga kamalian na nagawa mo.\r\n* Magdagdag ng code sa
+        iyong programa na nag-update sa mga `sprite x`, `sprite y`, p `sprite.rotation`
+        na mga katangian ng sprite para sila ay gagalaw. Kakailanganin mong i-update
+        ang mga ito gamit ang `randomNumber()`.\r\n"
       CSD U3 Draw Loop Plugged wiggle sprite rotation: "<img\nsrc=\"https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif\",\nstyle=\"float:right;height:150px\">\r\n#
         Pag-update sa mga Katangian\r\n\r\nAng antas na ito ay naghahalo ng ilang
         mga kakayahan na nakita mo na. Ito ay gumuguhit ng mga ellipses sa background
@@ -1249,6 +1338,16 @@ fil:
         gaya ng una.\r\n* Magpatuloy kapag ang iyong programa ay kagaya na ng larawan
         na sa kanan."
       CSD U3 Draw Loop Plugged wiggle sprite rotation_2018: "<img\nsrc=\"https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif\",\nstyle=\"float:right;height:150px\">\r\n#
+        Pag-update sa mga Katangian\r\n\r\nAng antas na ito ay naghahalo ng ilang
+        mga kakayahan na nakita mo na. Ito ay gumuguhit ng mga ellipses sa background
+        at nag-update rin sa mga katangian ng sprite. Sa oras na ito, binabago ang
+        `sprite.rotation` na katangian ng sprite.\r\n\r\n# Gawin Ito\r\n\r\nAng animasyon
+        na ito ay nag-update na sa rotasyon na katangian ng sprite para itong maging
+        paghalo\r\n\r\n\r\n* Patakbuhin ang programa para makita kung paano ito gumagana.\r\n*
+        Magdagdag ng code sa programang ito para mapagawa ang isa pang alien na umalog
+        gaya ng una.\r\n* Magpatuloy kapag ang iyong programa ay kagaya na ng larawan
+        na sa kanan."
+      CSD U3 Draw Loop Plugged wiggle sprite rotation_2019: "<img\nsrc=\"https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif\",\nstyle=\"float:right;height:150px\">\r\n#
         Pag-update sa mga Katangian\r\n\r\nAng antas na ito ay naghahalo ng ilang
         mga kakayahan na nakita mo na. Ito ay gumuguhit ng mga ellipses sa background
         at nag-update rin sa mga katangian ng sprite. Sa oras na ito, binabago ang
@@ -1386,12 +1485,26 @@ fil:
         ang mga kinakailangan:\r\n\r\n\n* Hanay 1 - punan ng mga kulay na pula fill
         with shades of red. \r\n * Hanay 2 - kulay na berde. \r\n *\nHanay 3 - kulay
         na asul. \r\n * Hanay 4 - kulay na abo.\r\n"
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: "#\nPixelation: Gawain 3\r\n<img
+        src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right width=200
+        hspace=20>\r\n**Mga Direksyon:**\r\nAmin kang pinasimula sa isang 4x4 na larawan
+        na nilikha ni Maddie sa video.\r\n\r\nAng iyong gawain ay punan ang 4x4 na
+        grid nang mga kulay gamit ang *12-bits kada pixel*. Ang resulta ay dapat katulad
+        (ngunit hindi talaga eksakto) sa larawang ipinakita sa kanan.  \r\n\r\nNarito
+        ang mga kinakailangan:\r\n\r\n\n* Hanay 1 - punan ng mga kulay na pula fill
+        with shades of red. \r\n * Hanay 2 - kulay na berde. \r\n *\nHanay 3 - kulay
+        na asul. \r\n * Hanay 4 - kulay na abo.\r\n"
       Pixelation - Lesson 15 - Complete 3-bit color: "#\nPixelation ng Kulay: Gawain
         1\n**Mga Direksyon:**\n\n* Pinagsimula ka namin sa isang 4x2 na imahe na nagawa
         ni Maddie, ngunit kami ay nag-iwan sa huling dalawang mga parisukat. \n*Tapusin
         ang larawan sa pamamagitan ng pagtukoy kung aling mga kulay ang nawawala at
         i-encode ang mga ito.\n"
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "#\nPixelation ng Kulay:
+        Gawain 1\n**Mga Direksyon:**\n\n* Pinagsimula ka namin sa isang 4x2 na imahe
+        na nagawa ni Maddie, ngunit kami ay nag-iwan sa huling dalawang mga parisukat.
+        \n*Tapusin ang larawan sa pamamagitan ng pagtukoy kung aling mga kulay ang
+        nawawala at i-encode ang mga ito.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: "#\nPixelation ng Kulay:
         Gawain 1\n**Mga Direksyon:**\n\n* Pinagsimula ka namin sa isang 4x2 na imahe
         na nagawa ni Maddie, ngunit kami ay nag-iwan sa huling dalawang mga parisukat.
         \n*Tapusin ang larawan sa pamamagitan ng pagtukoy kung aling mga kulay ang
@@ -1497,6 +1610,9 @@ fil:
         pakaliwa, at pakanan."
       courseC19_playLab_EOC6: Natapos mo na! Ngayon ay maaari ka nang maglaro sa iyong
         laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
+      courseC_PlayLab_events6_2019: Ngayon, magsulat ng programa para mapagalaw si
+        Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa / kanan na
+        mga key para matamaan ang lahat ng mga target!
       courseC_artist_loops2a: Ngayon, gumamit ng loop para paikutin ang iyong ibon
         sa paligid nang 12 beses gamit ang 30 degree na pagliko.
       courseC_artist_loops2a_2018: Ngayon, gumamit ng loop para paikutin ang iyong

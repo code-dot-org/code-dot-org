@@ -270,6 +270,10 @@ GEM
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.0.1)
+    aws-google (0.1.1)
+      aws-sdk-core (~> 3)
+      google-api-client (~> 0.23)
+      launchy (~> 2)
     aws-partitions (1.104.0)
     aws-sdk-acm (1.9.0)
       aws-sdk-core (~> 3)
@@ -700,6 +704,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rb-readline (0.5.5)
     rdoc (4.2.2)
       json (~> 1.4)
     recaptcha (4.6.3)
@@ -890,6 +895,7 @@ DEPENDENCIES
   addressable
   annotate
   auto_strip_attributes (~> 2.1)
+  aws-google
   aws-sdk-acm (~> 1)
   aws-sdk-cloudformation (~> 1)
   aws-sdk-cloudfront (~> 1)
@@ -955,7 +961,6 @@ DEPENDENCIES
   jumphash
   jwt
   kaminari
-  launchy
   le (~> 2.2)
   lograge!
   loofah (~> 2.2.1)
@@ -1003,6 +1008,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-controller-testing
   rambling-trie
+  rb-readline
   recaptcha
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)

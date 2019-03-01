@@ -314,6 +314,99 @@ ja:
         Course_4_SCV_6_d: 'ジグザグの角度は、72度です。 '
         Course_4_SCV_6_e: '一番外がわの くりかえしで、ギザギザの五角形を10コ書きます。五角形を一つ書いたら、右に「360 ÷ 10」まがります。 '
         Course_4_SCV_6_f: 答えは、先生に聞いてくださいね。
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          * 画面にダンサーが表示されていることをたしかめてください。
+
+          *このレベルは4小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+          *他の曲を選んで再生してみましょう。
+          *ムースに似た別のものを選んでみましょう！
+          *ダンサーの名前を変更しましょう。
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          *4小節後にダンサーを新しい動きに切り替える必要があります*
+
+          *このレベルは8小節で終わります。*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
+
+          *このレベルは12小節で終わります。*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *7小節目のどこかで、背景エフェクトを変更する必要があります。
+
+          *このレベルは10小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 少なくとも 2 人のダンサーがいなければなりません。
+
+          *このレベルは6小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *3人めのダンサー（または好きなだけの人数！）を追加してください
+          *すべてのダンサーが、曲の中のそれぞれ違うポイントで、違う動きをするようにしてください。
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *2人のダンサーのおおきさは100以外にしてください。
+
+          *このレベルは6小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 少なくとも1人のダンサーの色合いを変更してください。
+
+          *このレベルは8小節で終わります。*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 2人以上のダンサーのプロパティを変更しなければなりません。
+
+          *このレベルは8小節で終わります。*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *クリエイティブにやってみて！
+
+          *このレベルは8小節で終わります。*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *クリエイティブにやってみて！
+
+          *このレベルは8小節で終わります。*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *`左矢印キーが押されたとき’のブロックを使って、左矢印キーを押したらロボットが踊るようにしましょう。
+
+          *このレベルは8小節で終わります。*
       Dance short test 2_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
@@ -1328,6 +1421,9 @@ ja:
         courseF_artist_for_challenge2_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
         courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter`
           で、これらをまぜた色にしてください。
+        courseF_artist_for_challenge2_d: '答えは先生に聞いてくださいね。
+
+'
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
         courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter`

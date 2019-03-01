@@ -155,27 +155,15 @@ sk:
       4:
         text: Pre napísanie kódu pre toto vytiahnime von náš blok "if" a vložme doňho
           bloky "zabočiť doľava".
-      5: 
-      6: 
       7:
         text: Zabávaj sa používaním "if" bloku!
     if_else:
-      1: 
-      2: 
-      3: 
       4:
         text: Teraz pošli týchto zombie tam, kde patria!
     if_else_scrat:
-      1: 
-      2: 
-      3: 
       4:
         text: Teraz pomôž veveričke Scrat získať žaluď!
     function:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: 'Vráťme naspäť "fun" do "FUNkcií!" '
     loop_while:
@@ -210,15 +198,7 @@ sk:
         text: Čo ak chceme nakresliť niekoľko trojuholníkov s rôznymi dĺžkami strán?
       3:
         text: Môžeme napísať celý kód ručne alebo môžeme použiť funkcie s parametrami.
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
     hoc_wrapup:
-      1: 
-      2: 
-      3: 
       4:
         text: 'Technológie menia všetko čo robíme, nezáleží na tom, či si mladý, alebo
           starý: programovanie je zábava, používaš svoju kreativitu a programovať
@@ -321,12 +301,9 @@ sk:
           Vieš tento blok použiť a pomôcť nakresliť Else do snehu zložité a nádherné
           vzory?
     playlab_events:
-      1: 
       2:
         text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
           tlačidla šípky, alebo na dotyk na dotykovú obrazovku.
-      3: 
-      4: 
     playlab_repeat_forever:
       1:
         text: Toto je blok "opakuj donekonečna". Čokoľvek vložíme do tohoto bloku,
@@ -334,25 +311,16 @@ sk:
       2:
         text: Ak má postava niečo opakovane vykonávať bez zásahu hráča, budeme vkladať
           tieto bloky do vnútra bloku "opakuj donekonečna".
-      3: 
     C1_bee_loops:
       1:
         text: Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a
           skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát.
           Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane.
-      2: 
     C1_bigevent_unplugged:
-      1: 
       2:
         text: V tejto lekcii budeš ovládaný papierovým diaľkovým ovládačom. Je to
           niečo ako reálna-živá video hra.
-      3: 
-      4: 
-      5: 
-      6: 
     C1_happy_maps_unplugged:
-      1: 
-      2: 
       3:
         text: Pre dostanie sa tam, kam chcete, zakrúžkujte smer, ktorým má isť.
       4:
@@ -366,47 +334,34 @@ sk:
           spôsobmi. Jedným z najľahších je ísť krok po kroku až kým nenarazíš na miesto,
           kde program funguje inak, ako si plánoval. Tu sa snažím spraviť premet vzad
           na stožiari, no vždy padnem.
-      2: 
-      3: 
-      4: 
+    C1_moveitmoveit_unplugged:
+      1:
+        text: Táto lekcia sa volá "Pohni sa, pohni sa". Spolu v nej napíšeme program,
+          vďaka ktorému sa náš kamarát presunie zo začiatočného bodu s kompasom ku
+          cieľu, na ktorom je smajlík.
     C1_going_places_safely:
       1:
         text: Moje meno je Jeremiah. Ahoj! Mám sedem rokov. Rád sa hrám na maminom
           počítači, ale najprv musím dostať povolenie. "Mami, môžem ísť na počítač?
           Iste zlatko!"
-      2: 
       3:
         text: Včera som navštívil zoologickú záhradu, je blízko môjho domu. Videl
           som tam žriebätko zebry. Odfotil som si ho, zmenil som mu farbu pruhov,
           pridal klobúk a zaradil ho do svojej kolekcie nezvyčajných zvierat. Úžasné!
           Neskôr som šiel na veľmi vzdialené miesto. Navštívil som Keňu. Je to krajina
           v Afrike. Žije tu mnoho zebier.
-      4: 
-      5: 
-      6: 
-      7: 
     C2_artist_debugging:
-      1: 
-      2: 
       3:
         text: Och, tu je ten problém! Mačacie fúzy sú dlhé 75 pixelov, nie 25.
     C2_bee_debugging:
       1:
         text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
           Keď ladíš kód, identifikuješ a odstraňuješ chyby.
-      2: 
-      3: 
     C3_bee_debugging:
       1:
         text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
           Keď ladíš kód, identifikuješ a odstraňuješ chyby.
-      2: 
-      3: 
     C3_internet:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: Som Amanda Camp a pracujem ako softvérový inžinier v Googli. Pracujem
           v tíme, ktorý pracuje na serveroch uchovávajúcich profily a kontakty. Pri
@@ -417,7 +372,6 @@ sk:
           my používame koncept nazvaný stránkovanie, v ktorom môžeme poslať na váš
           telefón len 100 kontaktov naraz, nechať telefón nech ich spracuje a čakať,
           kým si vypýta ďaľších 100 kontaktov.
-      6: 
     C3_maze_conditionals:
       1:
         text: Ľudia robia rozhodnutia každý deň. Napríklad, predtým než idete von,
@@ -426,16 +380,12 @@ sk:
           tak ich spracuvávajú neskutočne rýchlo a zodpovedne. Počítačový program
           je vlastne trošku matematiky a niekoľko podmieňovacích výrazov, pri ktorých
           sa robia rozhodnutia.
-      2: 
-      3: 
-      4: 
     C3_maze_level_4:
       1:
         text: V tomto príklade je tvojou úlohou dostať zombíka k slnečnici. Mohli
           by sme použiť 5 blokov "posun sa dopredu", alebo môžeme počítaču povedať,
           nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného
           opakovacieho bloku.
-      2: 
     infinity_playlab_events:
       1:
         text: Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.
@@ -505,10 +455,6 @@ sk:
           úlohe je našim cieľom, aby Anna neustále chodila hore a dole. Ak sa naučíš
           používať opakovacie príkazy, ušetrí ti pri tvorbe vlastnej hry kopec času.
     starwars_intro:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je
           príkaz, ktorému BB-8 rozumie.
@@ -518,12 +464,7 @@ sk:
       7:
         text: Ak potiahnem do nášho pracovného priestoru blok pohybVľavo(); a potom
           kliknem Spustiť, čo sa stane? BB=8 sa pohne doľava o jedno pole v mriežke.
-      8: 
-      9: 
-      10: 
     starwars_events:
-      1: 
-      2: 
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -531,27 +472,11 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
     starwars_blocks_intro:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je
           príkaz, ktorému BB-8 rozumie.
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
     starwars_blocks_events:
-      1: 
-      2: 
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -559,8 +484,6 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
-      5: 
-      6: 
       7:
         text: Krok po kroku, sa tvoja hra stáva viac interaktívnou.
     mc_intro:
@@ -697,43 +620,25 @@ sk:
         text: Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché.
           Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš
           hrať hru ktorú si si sám vytvoril.
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde
           budeme budovať náš program.
-      7: 
-      8: 
-      9: 
     gumball_repeat:
       1:
         text: Dokážeš si predstaviť, že by si musel niečo opakovať donekonečna? Dúfajme,
           že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne dobré.
-      2: 
-      3: 
     iceage_intro:
       1:
         text: Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché.
           Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš
           hrať hru ktorú si si sám vytvoril.
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde
           budeme budovať náš program.
-      7: 
-      8: 
-      9: 
     iceage_repeat:
       1:
         text: Dokážeš si predstaviť, že by si musel niečo opakovať donekonečna? Dúfajme,
           že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne dobré.
-      2: 
-      3: 
     mc_2016_intro:
       1:
         text: Ahoj, volám sa Jens a som hlavná kreatívna dizajnérka Minecraftu. V

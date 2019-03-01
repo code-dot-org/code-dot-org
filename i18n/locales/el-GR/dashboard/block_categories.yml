@@ -18,7 +18,7 @@ el:
       Games/Score: Παιχνίδια/Σκορ
       Comments: Σχόλια
       Category: Κατηγορία
-      Prebuilt: Προχτισμένα
+      Prebuilt: Προκατασκευασμένα
       Text: κείμενο
       Picker: Επιλέκτης
       Comment: Σχόλιο
@@ -28,22 +28,28 @@ el:
       Numbers: Αριθμοί
       Default: Προεπιλογή
       World: Κόσμος
+      Dancers: Χορευτές
+      Groups: Ομάδες
       Behaviors: Συμπεριφορές
       Advanced: Για προχωρημένους
       Start: Έναρξη
-      Dancers: Χορευτές
-      Groups: Ομάδες
-      Sprite: Sprite
+      Locations: Τοποθεσίες
+      Dancing: Χορεύοντας
+      Sprite: Χαρακτήρας
       Brush: Πινέλο
-      Make Sprite: Δημιούργησε ένα Sprite
+      Make Sprite: Δημιούργησε έναν Χαρακτήρα
       Movement: Κίνηση
       Booleans: Δυαδικοί
-      Functional: Λειτουργικός
-      Predefined: Προορισμένα
+      Functional: Λειτουργικά
+      While Events: Γεγονότα Όσο
+      Sprite Properties: Ιδιότητες Χαρακτήρα
+      Predefined: Προκαθορισμένα
       test: δοκιμή
       test2: δοκιμή2
+      Use These Blocks: Χρησιμοποίησε αυτά τα τουβλάκια
+      Do Not Use: Μην χρησιμοποιήσεις
       Name: Όνομα
-      NEW BLOCKS: ΝΕΑ ΜΠΛΟΚ
+      NEW BLOCKS: ΝΕΑ ΤΟΥΒΛΑΚΙΑ
       'Functions ': 'Συναρτήσεις '
       Game/Score: Παιχνίδι/Σκορ
       Function: Συνάρτηση

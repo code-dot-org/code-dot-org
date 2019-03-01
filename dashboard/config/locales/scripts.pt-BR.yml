@@ -3,7 +3,7 @@ pt-BR:
   data:
     script:
       category:
-        csd_2018_category_name: Descobertas da Ciência da Computação (de 18 a 19 anos)
+        csd_2018_category_name: Descobertas da Ciência da Computação (2018-2019)
         csf_category_name: Conceitos básicos da CC
         csf_2018_category_name: Fundamentos da Ciência da Computação (2018)
         csf_international_category_name: Fundamentos da Ciencia da Computação International
@@ -11,7 +11,7 @@ pt-BR:
         csp_category_name: Princípios da CC - 15-16
         csp_2018_category_name: Princípios de Ciência da Computação (18-19)
         cspexams_category_name: Teste prático dos princípios da CC
-        csp17_category_name: Princípios da CC - 16-17
+        csp17_category_name: Princípios da CC (2017-2018)
         full_course_category_name: Cursos Completos
         hoc_category_name: Hora do Código
         math_category_name: Matemática
@@ -1795,6 +1795,8 @@ pt-BR:
           stages:
             Challenge Overview:
               name: Visão geral do desafio
+            Chapter 1 Overview:
+              name: Capítulo 1 Visão geral
             Complete the Challenge:
               name: Complete o Desafio
             Getting Started:
@@ -2131,10 +2133,18 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+            Sprites and Images:
+              name: Sprites e Imagens
+            Sprites and Properties:
+              name: Sprites e Propriedades
             Variables and Animation:
               name: Variáveis e Animação
             Functions:
               name: funções
+            Defender:
+              name: Defensor
+            'Project: Build a Game':
+              name: 'Projeto: Construir um Jogo'
             Velocity:
               name: Velocidade
         2016_sciencePD_phase1:
@@ -2174,6 +2184,8 @@ pt-BR:
         ECSPD1:
           description_short: Em parceria com o Projeto GUTS
           stages:
+            Background and Context:
+              name: Plano de Fundo e Contexto
             Welcome to Phase 1!:
               name: Bem-vindo a Fase 1!
         algebraFacilitator:
@@ -2241,6 +2253,12 @@ pt-BR:
               name: Laboratório de Jogos
         CSDU4-Draft:
           stages:
+            Design Mode:
+              name: Modo de Design
+            Prototype Testing:
+              name: Protótipo de Teste
+            App Testing:
+              name: Teste de App
             Improving and Iterating:
               name: Improvizando e Interagindo
         CSDU2-Draft:
@@ -2253,6 +2271,10 @@ pt-BR:
               name: Funções do artista
         artistExemplar:
           description_audience: 8-18 anos de idade
+        teachercon:
+          stages:
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2439,6 +2461,24 @@ pt-BR:
               name: Pingue-pongue
             'Farmer: While Loops':
               name: 'Fazendeira: Laços Enquanto'
+        alltheplcthings:
+          stages:
+            Lesson 1,10:
+              name: Lição 1,10
+            Lesson 1,11:
+              name: Lição 1,11
+            Lesson 1,4:
+              name: Lição 1,4
+            Lesson 1,6:
+              name: Lição 1,6
+            Lesson 1,9:
+              name: Lição 1,9
+            Lesson 2,10:
+              name: Lição 2,10
+            Lesson 2,2:
+              name: Lição 2,2
+            Lesson 2,3:
+              name: Lição 2,3
         csd3-2017:
           description_short: Programação
           stages:
@@ -2454,6 +2494,10 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+            Sprites and Images:
+              name: Sprites e Imagens
+            Sprites and Properties:
+              name: Sprites e Propriedades
             Variables and Animation:
               name: Variáveis e Animação
             Velocity:
@@ -2466,6 +2510,8 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            'Project: Build a Game':
+              name: 'Projeto: Construir um Jogo'
             Variables:
               name: variáveis
             Sprites:
@@ -2533,12 +2579,18 @@ pt-BR:
               name: Processando
         csp-online-test:
           stages:
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
             Unit 2 Overview:
               name: Visão geral da unidade 2
             Unit 3 Overview:
               name: Visão geral da unidade 3
             Unit 5 Overview:
               name: Visão geral da unidade 5
+        csp1-support:
+          stages:
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         basketball:
           title: Escolha seu time e faça um jogo de basquete
           description_short: Escolha seu time e faça um jogo de basquete
@@ -2567,6 +2619,10 @@ pt-BR:
           stages:
             Peer Review:
               name: Revisão em grupo
+            Images in HTML:
+              name: Imagens em HTML
+            Intro to HTML:
+              name: Introdução a HTML
             Headers:
               name: Cabeçalhos
             Lists:
@@ -2575,8 +2631,12 @@ pt-BR:
           stages:
             Unit 2 Overview:
               name: Visão geral da unidade 2
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         csd4-2017:
           stages:
+            Prototype Testing:
+              name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
             Identifying User Needs:
@@ -2752,10 +2812,14 @@ pt-BR:
           stages:
             Unit 3 Overview:
               name: Visão geral da unidade 3
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         csp4-support:
           stages:
             Unit 3 Overview:
               name: Visão geral da unidade 3
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
             Unit 4 Overview:
               name: Revisão da Unidade 4
         sciencepd4:
@@ -2798,6 +2862,8 @@ pt-BR:
           stages:
             Unit 5 Overview:
               name: Visão geral da unidade 5
+            Measuring Student Learning:
+              name: Medindo a Aprendizagem dos Estudantes
         csppostap-2017:
           description_short: Aprenda a coletar e usar dados em aplicativos do App
             Lab.
@@ -2832,6 +2898,8 @@ pt-BR:
               name: Laços para
             Making Music:
               name: Fazendo Música
+            Accelerometer:
+              name: Acelerômetro
             Functions with Parameters:
               name: Funções com Parâmetros
         workshop-gamelab:
@@ -2855,7 +2923,7 @@ pt-BR:
             Conditionals:
               name: Condições
             'Real Life Algorithms: Dice Race':
-              name: 'Algoritmos da via real: jogo de dados'
+              name: 'Algoritmos da vida real: Corrida de dados'
         csd6-2017:
           stages:
             Lists:
@@ -2864,10 +2932,14 @@ pt-BR:
               name: Laços para
             Making Music:
               name: Fazendo Música
+            Accelerometer:
+              name: Acelerômetro
             Functions with Parameters:
               name: Funções com Parâmetros
             Making Music_:
               name: Fazendo Música
+            Accelerometer_:
+              name: Acelerômetro
             Functions with Parameters_:
               name: Funções com Parâmetros
         csd3-draft:
@@ -2904,6 +2976,10 @@ pt-BR:
               name: Laço de Desenho e Randomização
             Variables and Animation:
               name: Variáveis e Animação
+            Sprites and Properties:
+              name: Sprites e Propriedades
+            Sprites and Images:
+              name: Sprites e Imagens
             Booleans and Conditionals:
               name: Booleanos e Condicionais
             Conditionals and Keyboard Input:
@@ -2924,6 +3000,10 @@ pt-BR:
               name: funções
         csd2-draft:
           stages:
+            Images in HTML:
+              name: Imagens em HTML
+            Intro to HTML:
+              name: Introdução a HTML
             Images:
               name: Imagens
             Headers:
@@ -2972,6 +3052,8 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
         csd2-old:
           stages:
+            Images in HTML:
+              name: Imagens em HTML
             Peer Review:
               name: Revisão em grupo
         artist-and-bb8:
@@ -3093,7 +3175,7 @@ pt-BR:
           assignment_family_title: Curso B
           description_audience: 'Idades: 5-8'
           description_short: Uma introdução à ciência da computação para pré-leitores.
-            (Similar ao curso A, mas com mais variedade para os alunos mais velhos.)
+            (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
             No final deste curso, você irá irá seu próprio jogo ou história, que poderá
             ser compartilhada.
@@ -3111,8 +3193,8 @@ pt-BR:
               name: Laços aninhados
           title: Curso D
           assignment_family_title: Curso D
-          description_short: Rapidamente cobrem conceitos do curso C e em seguida,
-            ir mais longe com algoritmos, loops aninhados, condicionais e muito mais.
+          description_short: Abrange rapidamente conceitos do Curso C e, em seguida,
+            vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -3145,8 +3227,30 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
           title: Curso F
           assignment_family_title: Curso F
-          description_short: Aprenda todos os conceitos fundamentais da Ciência da
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
+        csdnovice:
+          stages:
+            Tuesday:
+              name: Terça-feira
+            Wednesday:
+              name: Quarta-feira
+            Thursday:
+              name: Quinta-feira
+            Welcome:
+              name: Bem-vindo
+            Congrats:
+              name: Parabéns
+        cspnovice:
+          stages:
+            Welcome:
+              name: Bem-vindo
+            Tuesday:
+              name: Terça-feira
+            Wednesday:
+              name: Quarta-feira
+            Thursday:
+              name: Quinta-feira
         express-2017:
           stages:
             Introduction:
@@ -3231,6 +3335,8 @@ pt-BR:
           stages:
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Prototype Testing:
+              name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
         e-f-ramp:
@@ -3313,6 +3419,8 @@ pt-BR:
           stages:
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Prototype Testing:
+              name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
         csp3-staging:
@@ -3446,6 +3554,8 @@ pt-BR:
               name: funções
         csd2-2018:
           stages:
+            Intro to HTML:
+              name: Introdução a HTML
             Lists:
               name: Listas
         coursea-2018:
@@ -3595,6 +3705,8 @@ pt-BR:
               name: Crowdsourcing
             Relay Programming:
               name: Programação por revezamento
+            Graph Paper Programming:
+              name: Programação em papel quadriculado
         courseb-2018:
           title: Curso B (2018)
           assignment_family_title: Curso B
@@ -3703,6 +3815,8 @@ pt-BR:
           stages:
             Making Music:
               name: Fazendo Música
+            Accelerometer:
+              name: Acelerômetro
             Functions with Parameters:
               name: Funções com Parâmetros
         coursee-2018:
@@ -3730,7 +3844,7 @@ pt-BR:
         coursef-2018:
           title: Curso F (2018)
           assignment_family_title: Curso F
-          description_short: Aprenda todos os conceitos fundamentais da Ciência da
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
           stages:
             'Programming: My Robotic Friends':
@@ -3787,6 +3901,8 @@ pt-BR:
               name: Interfaces de Usuário
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Prototype Testing:
+              name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
         csp2-2018:
@@ -3919,6 +4035,14 @@ pt-BR:
               name: Criando tabelas de resumo
         csd-novice-18:
           stages:
+            Welcome:
+              name: Bem-vindo
+            Tuesday:
+              name: Terça-feira
+            Wednesday:
+              name: Quarta-feira
+            Thursday:
+              name: Quinta-feira
             Friday:
               name: Sexta-Feira
             Monday:
@@ -3933,6 +4057,12 @@ pt-BR:
               name: Dia 4
         csd-apprentice-18:
           stages:
+            Tuesday:
+              name: Terça-feira
+            Wednesday:
+              name: Quarta-feira
+            Thursday:
+              name: Quinta-feira
             Day 1:
               name: Dia 1
             Day 2:
@@ -3943,6 +4073,12 @@ pt-BR:
               name: Dia 4
         csp-novice-18:
           stages:
+            Tuesday:
+              name: Terça-feira
+            Wednesday:
+              name: Quarta-feira
+            Thursday:
+              name: Quinta-feira
             Monday:
               name: Segunda-Feira
             Day 1:
@@ -3955,6 +4091,12 @@ pt-BR:
               name: Dia 4
         csp-apprentice-18:
           stages:
+            Tuesday:
+              name: Terça-feira
+            Wednesday:
+              name: Quarta-feira
+            Thursday:
+              name: Quinta-feira
             Day 1:
               name: Dia 1
             Day 2:
@@ -4045,7 +4187,7 @@ pt-BR:
           title: Continue dançando
           description: Vá além da primeira hora com ideias de projeto estendido.
         coursef-2019:
-          description_short: Aprenda todos os conceitos fundamentais da Ciência da
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
           stages:
             'Programming: My Robotic Friends':
@@ -4080,6 +4222,8 @@ pt-BR:
               name: 'Offline: binário'
             Artist Binary:
               name: 'Artista: binário'
+            Dance Party:
+              name: Festa dançante
         coursee-2019:
           stages:
             'Programming: My Robotic Friends':
@@ -4150,6 +4294,12 @@ pt-BR:
               name: Olhando para o futuro
             Binary Bracelets:
               name: Pulseiras binárias
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            Graphing Data:
+              name: Gerando Gráficos a partir de dados
         gamelab:
           title: Laboratório de Jogos
         coursea-2019:
@@ -4279,3 +4429,182 @@ pt-BR:
               name: 'Depuração: Bugs não encontrados'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
+        csd2-2019:
+          stages:
+            Intro to HTML:
+              name: Introdução a HTML
+            Lists:
+              name: Listas
+        csd3-2019:
+          description_short: Programação
+          stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
+            Variables:
+              name: variáveis
+            Sprites:
+              name: Sprite
+            Conditionals:
+              name: Condições
+            Velocity:
+              name: Velocidade
+            Collision Detection:
+              name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
+            Collisions:
+              name: Colisões
+            Functions:
+              name: funções
+        csd4-2019:
+          stages:
+            User Interfaces:
+              name: Interfaces de Usuário
+            Identifying User Needs:
+              name: Identificando Necessidades do Usuário
+            Prototype Testing:
+              name: Protótipo de Teste
+            Improving and Iterating:
+              name: Improvizando e Interagindo
+        csd6-2019:
+          stages:
+            Making Music:
+              name: Fazendo Música
+            Accelerometer:
+              name: Acelerômetro
+            Functions with Parameters:
+              name: Funções com Parâmetros
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Pesquisas
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Inovações Pessoais
+            Sending Binary Messages:
+              name: Enviando mensagens binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviando Mensagens Binárias com o Simulador de Internet
+            Number Systems:
+              name: Sistemas numéricos
+            Binary Numbers:
+              name: Números binários
+            Sending Numbers:
+              name: Envio de números
+            Unit 1 Chapter 1 Assessment:
+              name: Unidade 1 Capítulo 1 Avaliação
+            The Internet:
+              name: A Internet
+            The Need for Addressing:
+              name: A Necessidade de Endereçar
+            Routers and Redundancy:
+              name: Roteadores e redundância
+            Packets and Making a Reliable Internet:
+              name: Pacotes e Fazendo uma Internet Confiável
+            The Need for DNS:
+              name: A Necessidade de DNS
+            Practice PT - The Internet and Society:
+              name: Prática PT - A Internet e a Sociedade
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Bytes e Tamanhos de Arquivos
+            Text Compression:
+              name: Compressão de texto
+            Encoding B&W Images:
+              name: Codificações de imagem em preto e branco
+            Encoding Color Images:
+              name: Codificação de imagens coloridas
+        csp3-2019:
+          title: CSP Unidade 3 - Programação
+          description: Esta unidade introduz os conceitos fundamentais de programação
+            de computadores, que ajudam na habilidade de criar ricos aplicativos interativos.
+            Esse curso usa JavaScript como linguagem de programação, e o Laboratório
+            de Aplicativo App Lab é o ambiente de programação para construir aplicativos,
+            mas os conceitos aprendidos nessas lições envolvem todas as ferramentas
+            e linguagens de programação.
+          description_short: Programação
+          stages:
+            The Need For Programming Languages:
+              name: A necessidade de linguagens de programação
+            Using Simple Commands:
+              name: Usando comandos simples
+            Creating Functions:
+              name: Criando funções
+            Functions and Top-Down Design:
+              name: Funções e design de cima pra baixo
+            APIs and Function Parameters:
+              name: APIs e parâmetros de função
+            Looping and Random Numbers:
+              name: Repetição e números aleatórios
+            Practice PT - Design a Digital Scene:
+              name: Tarefa para prática - Projete uma cena digital
+            Unit 3 Chapter 1 Assessment:
+              name: Unidade 3 Capítulo 1 Avaliação
+        csp4-2019:
+          stages:
+            What is Big Data?:
+              name: O que é Big Data?
+            Finding Trends with Visualizations:
+              name: Encontrar tendências com visualizações
+            Check Your Assumptions:
+              name: Verifique suas suposições
+            Rapid Research - Data Innovations:
+              name: Pesquisa rápida - inovações de dados
+            Identifying People with Data:
+              name: Identificando pessoas com dados
+            The Cost of Free:
+              name: O custo do livre
+            Simple Encryption:
+              name: Criptografia simples
+        csp5-2019:
+          stages:
+            Multi-screen Apps:
+              name: Aplicativos Multi-Tela
+            Controlling Memory with Variables:
+              name: Controlando a memória com variáveis
+            User Input and Strings:
+              name: Entradas de Usuário e Strings
+            While Loops:
+              name: Laços enquanto
+            Loops and Simulations:
+              name: Laços e Simulações
+            Introduction to Arrays:
+              name: Introdução a Arrays
+            Processing Arrays:
+              name: Processando Listas
+            Functions with Return Values:
+              name: Funções com Valores de Retorno
+        csppostap-2019:
+          description_short: Aprenda a coletar e usar dados em aplicativos do App
+            Lab.
+          stages:
+            Good and Bad Data Visualizations:
+              name: Visualização de Dados Bons e Ruins
+            Making Data Visualizations:
+              name: Desenvolvendo Visualização de Dados
+            Discover a Data Story:
+              name: Descubra uma história de dados
+            Cleaning Data:
+              name: Limpeza de dados
+            Creating Summary Tables:
+              name: Criando tabelas de resumo
+            Creating Javascript Objects:
+              name: Criando objetos Javascript
+            Permanent Data Storage:
+              name: Armazenamento permanente de dados
+            Reading Records:
+              name: Registros de Leitura
+            Deleting Records:
+              name: Excluindo Registros
+            Updating Records:
+              name: Atualizando Registros
+            Importing and Exporting Data:
+              name: Importando e Exportando Dados
+            Visualizing Data:
+              name: Visualizando dados
+            Sample Apps:
+              name: Apps de exemplo
+            Final Project:
+              name: Projeto final

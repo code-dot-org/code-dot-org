@@ -863,6 +863,9 @@ pl:
       CSD U3 L5 Freeplay_2018: |-
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
+      CSD U3 L5 Freeplay_2019: |-
+        Zmień wartość petalSize kilka razy.
+        Jak jej wielkość wpływa na Twój rysunek?
       CSD U3 Variables TEMPLATE square: |-
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
@@ -870,6 +873,9 @@ pl:
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
       CSD U3 Variables change circle size_2018: |-
+        Zmień wartość petalSize kilka razy.
+        Jak jej wielkość wpływa na Twój rysunek?
+      CSD U3 Variables change circle size_2019: |-
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
       CSD U3 Variables multiple assignments: |-
@@ -884,6 +890,9 @@ pl:
       CSD U3 Variables naming rules v2_2018: |-
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
+      CSD U3 Variables naming rules v2_2018_2019: |-
+        Zmień wartość petalSize kilka razy.
+        Jak jej wielkość wpływa na Twój rysunek?
       CSD U3 Variables naming rules: |-
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
@@ -896,13 +905,20 @@ pl:
       CSD U3 Variables random with assignment_2018: |-
         Zmień wartość petalSize kilka razy.
         Jak jej wielkość wpływa na Twój rysunek?
+      CSD U3 Variables random with assignment_2019: |-
+        Zmień wartość petalSize kilka razy.
+        Jak jej wielkość wpływa na Twój rysunek?
       CSD U5 black white images pixelation 2: Narysuj uśmiechniętą buźkę (kliknij
         tutaj aby zobaczyć obrazek)
       CSD U5 black white images pixelation 2_2018: Narysuj uśmiechniętą buźkę (kliknij
         tutaj aby zobaczyć obrazek)
+      CSD U5 black white images pixelation 2_2019: Narysuj uśmiechniętą buźkę (kliknij
+        tutaj aby zobaczyć obrazek)
       CSD U5 black white images pixelation 3: Zmień szerokość i wysokość suwaka aby
         znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
       CSD U5 black white images pixelation 3_2018: Zmień szerokość i wysokość suwaka
+        aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
+      CSD U5 black white images pixelation 3_2019: Zmień szerokość i wysokość suwaka
         aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
       CSD U5 black white images pixelation 4: |-
         Dodaj brwi do uśmiechniętej
@@ -910,12 +926,19 @@ pl:
       CSD U5 black white images pixelation 4_2018: |-
         Dodaj brwi do uśmiechniętej
         buźki (kliknij tutaj, aby zobaczyć obraz)
+      CSD U5 black white images pixelation 4_2019: |-
+        Dodaj brwi do uśmiechniętej
+        buźki (kliknij tutaj, aby zobaczyć obraz)
       CSD U5 black white images pixelation 5: Teraz narysuj coś, co Ci się spodoba!
       CSD U5 black white images pixelation 5_2018: Teraz narysuj coś, co Ci się spodoba!
+      CSD U5 black white images pixelation 5_2019: Teraz narysuj coś, co Ci się spodoba!
       CSD U5 black white images pixelation: |-
         Uzupełnij kształt X poprzez
         dopisywanie zer i jedynek
       CSD U5 black white images pixelation_2018: |-
+        Uzupełnij kształt X poprzez
+        dopisywanie zer i jedynek
+      CSD U5 black white images pixelation_2019: |-
         Uzupełnij kształt X poprzez
         dopisywanie zer i jedynek
       CSDU4 - AppLab - 1: Przeczytaj dokumentacje dla funkcji penColor() oraz penWidth()
@@ -951,13 +974,20 @@ pl:
       CSDU6 arrays select rainbow_2018: |-
         Przepisz zawartość
         tablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)
+      CSDU6 arrays select rainbow_2019: |-
+        Przepisz zawartość
+        tablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)
       CSDU6 arrays select random: Napisz program, który wyświetli losowo wybrany kolor
         z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select random_2018: Napisz program, który wyświetli losowo wybrany
         kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
+      CSDU6 arrays select random_2019: Napisz program, który wyświetli losowo wybrany
+        kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select variable: Napisz program, który wyświetli losowo wybrany
         kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select variable_2018: Napisz program, który wyświetli losowo wybrany
+        kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
+      CSDU6 arrays select variable_2019: Napisz program, który wyświetli losowo wybrany
         kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays variable: Napisz program, który wyświetli losowo wybrany kolor
         z tablicy. (Naciśnij aby dowiedzieć się więcej)
@@ -966,15 +996,22 @@ pl:
         wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Napisz program, który wyświetli
         losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: Napisz program, który wyświetli
+        losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSPU5_U3 - Arrays - indexPractice: |-
         Przepisz zawartość
         tablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3 - Arrays - indexPractice_2018: |-
         Przepisz zawartość
         tablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)
+      CSPU5_U3 - Arrays - indexPractice_2019: |-
+        Przepisz zawartość
+        tablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3 - Canvas - freePlay: Rozszerz funkcjonalność jednego z efektu, lub
         stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się więcej)
       CSPU5_U3 - Canvas - freePlay_2018: Rozszerz funkcjonalność jednego z efektu,
+        lub stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się więcej)
+      CSPU5_U3 - Canvas - freePlay_2019: Rozszerz funkcjonalność jednego z efektu,
         lub stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się więcej)
       CSPU5_U3 - Loops - 4: |-
         Użyj Poleceń Debugowania do utworzenia listy
@@ -982,11 +1019,16 @@ pl:
       CSPU5_U3 - Loops - 4_2018: |-
         Użyj Poleceń Debugowania do utworzenia listy
         wszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)
+      CSPU5_U3 - Loops - 4_2019: |-
+        Użyj Poleceń Debugowania do utworzenia listy
+        wszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L13 - Turtle move with button: Dodaj przycisk, który przesuwa żółwia
         po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L25 - play sound when up key: Zmień kod, by dźwięk był grany tylko po
         naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L25 - play sound when up key_2018: Zmień kod, by dźwięk był grany tylko
+        po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
+      CSPU5_U3L25 - play sound when up key_2019: Zmień kod, by dźwięk był grany tylko
         po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       Course 2 Bee Loops 1: 'Witam, jestem Pszczółka. Czy mógłbyś mi pomóc zebrać
         nektar z tych kwiatów? '
@@ -1667,6 +1709,29 @@ pl:
         robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co najmniej
         2 bloków.
       Course1BeePuzzle12: Zbierz trzy nektary i następnie zrób dwa miody
+      CourseD_Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego
+        i podłącz go w bloku "układ".
+      CourseD_Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
+      CourseD_Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      CourseD_Dance_Party_04: Dodaj efekt tła do swojego programu.
+      CourseD_Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy
+        co 2 takty.
+      CourseD_Dance_Party_06: Utwórz kopię tancerza o nazwie "kopia_tancerza1", aby
+        zatańczył z kotem.
+      CourseD_Dance_Party_08: Czy możesz utworzyć obie kopie tancerzy tej samej wielkości?
+      CourseD_Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      CourseD_Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę
+        za pomocą bloku "zaczyna się to".
+      CourseD_Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia
+        kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał
+        szybki ruch, gdy naciskasz ten klawisz.
+      CourseD_Dance_Party_11_5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły
+        razem.
+      CourseD_Dance_Party_11b: Spraw, aby Robot raz "tupnął" (Drop), gdy naciśniesz
+        klawisz strzałki w prawo, i raz "klasnął" (Clap), gdy naciśniesz klawisz strzałki
+        w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
+      CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go
+        przyjaciołom.
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu,
         po prostu naciśnij "Graj"! '
       CourseF_PlayLab_vars10: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których
@@ -1713,8 +1778,10 @@ pl:
         10 do 0.
       Crack Random Substitution: Instrukcje
       Crack Random Substitution_2018: Instrukcje
+      Crack Random Substitution_2019: Instrukcje
       Crack a Caesar Cipher: Instrukcje
       Crack a Caesar Cipher_2018: Instrukcje
+      Crack a Caesar Cipher_2019: Instrukcje
       Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
         go w bloku "układ".
       Dance_Party_01_low: Przeciągnij blok "utwórz nowego" do obszaru roboczego i
@@ -2367,6 +2434,10 @@ pl:
         3x5. Widżet ma ustawione niepoprawne wymiary. Twoim pierwszym zadaniem jest
         ustawienie drugiego bajtu na 5 w kodzie binarnym: 0000 0101. Potem zacznij
         wprowadzać dane o pikselach.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Stwórz literę "A" o wielkości
+        3x5. Widżet ma ustawione niepoprawne wymiary. Twoim pierwszym zadaniem jest
+        ustawienie drugiego bajtu na 5 w kodzie binarnym: 0000 0101. Potem zacznij
+        wprowadzać dane o pikselach.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Dajemy Tobie na początek obraz o
         wielkości 4x4, który Maddie stworzyła w wideo. Twoim zadaniem jest wypełnić
         siatkę 4x4 kolorami używając 12 bitów na piksel. Oto wymagania: Wiersz 1 -
@@ -2377,10 +2448,18 @@ pl:
         siatkę 4x4 kolorami używając 12 bitów na piksel. Oto wymagania: Wiersz 1 -
         wypełnij odcieniami czerwieni. Wiersz 2 - odcieniami zieleni. Wiersz 3 - odcieniami
         niebieskiego. Wiersz 4 - odcieniami szarości.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Dajemy Tobie na początek obraz
+        o wielkości 4x4, który Maddie stworzyła w wideo. Twoim zadaniem jest wypełnić
+        siatkę 4x4 kolorami używając 12 bitów na piksel. Oto wymagania: Wiersz 1 -
+        wypełnij odcieniami czerwieni. Wiersz 2 - odcieniami zieleni. Wiersz 3 - odcieniami
+        niebieskiego. Wiersz 4 - odcieniami szarości.'
       Pixelation - Lesson 15 - Complete 3-bit color: Dajemy Tobie na początek obraz
         o wielkości 4x2, który Maddie tworzyła, ale zostawiła ostatnie dwa kwadraty.
         Dokończ rysunek przy użyciu dwóch brakujących kolorów i zakoduj je.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Dajemy Tobie na początek
+        obraz o wielkości 4x2, który Maddie tworzyła, ale zostawiła ostatnie dwa kwadraty.
+        Dokończ rysunek przy użyciu dwóch brakujących kolorów i zakoduj je.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: Dajemy Tobie na początek
         obraz o wielkości 4x2, który Maddie tworzyła, ale zostawiła ostatnie dwa kwadraty.
         Dokończ rysunek przy użyciu dwóch brakujących kolorów i zakoduj je.
       Pizza on a Plate: 'Pomysł na projekt: Stwórz obraz czegoś znajomego z prawdziwego
@@ -2463,6 +2542,7 @@ pl:
         aż wypełni ten otwór do poziomu ziemi?  "
       The Vigenere Cipher Widget: Instrukcje
       The Vigenere Cipher Widget_2018: Instrukcje
+      The Vigenere Cipher Widget_2019: Instrukcje
       The Vigenere Cipher: Instrukcje
       Total Artist Clone Me: 'Czas na zabawę: To są funkcje, które napisałeś do tej
         pory, oraz kilka dodatkowych. Narysuj coś wspaniałego! Poeksperymentuj z szerokością
@@ -2490,9 +2570,13 @@ pl:
         wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       U3L03 Draw a T using turnAround_2018: Narysuj kształt plusa korzystając z dostępnej
         wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
+      U3L03 Draw a T using turnAround_2019: Narysuj kształt plusa korzystając z dostępnej
+        wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       U3L06 Challenge 2 purple square: Przeczytaj dokumentacje dla funkcji penColor()
         oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
       U3L06 Challenge 2 purple square_2018: Przeczytaj dokumentacje dla funkcji penColor()
+        oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
+      U3L06 Challenge 2 purple square_2019: Przeczytaj dokumentacje dla funkcji penColor()
         oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
       U3L06 Challenge 5 overlapping circles: 'Ten obraz jest stworzony tylko za pomocą
         funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były przezroczyste?
@@ -2500,9 +2584,14 @@ pl:
       U3L06 Challenge 5 overlapping circles_2018: 'Ten obraz jest stworzony tylko
         za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były
         przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
+      U3L06 Challenge 5 overlapping circles_2019: 'Ten obraz jest stworzony tylko
+        za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były
+        przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
       U3L07 - randomSquare: Narysuj figurę używając pętli. (Kliknij, aby zobaczyć
         pełne instrukcje)
       U3L07 - randomSquare_2018: Narysuj figurę używając pętli. (Kliknij, aby zobaczyć
+        pełne instrukcje)
+      U3L07 - randomSquare_2019: Narysuj figurę używając pętli. (Kliknij, aby zobaczyć
         pełne instrukcje)
       U3L13 - Turtle move with button: Dodaj przycisk, który przesuwa żółwia po kliknięciu.  (Kliknij,
         aby zobaczyć pełne instrukcje)
@@ -2511,6 +2600,7 @@ pl:
       U4 vigenere cipher 2: Instrukcje
       U4L02 - Objects - Template1: Szablon
       U4L02 - Objects - Template1_2018: Szablon
+      U4L02 - Objects - Template1_2019: Szablon
       Underground Avoiding Lava: Pod niektórymi z tych bloków ukrywa się lawa, którą
         musisz przykryć, zanim przejdziesz po niej. Przyda się do tego warunek "jeżeli".
         Dodaj polecenie "idź do przodu" we właściwym miejscu, aby wydobyć coś z tych

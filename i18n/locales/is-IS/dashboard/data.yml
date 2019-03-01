@@ -29,11 +29,11 @@ is:
         Jigsaw: Púsl
         MazeStep: Völundarhús, þrep
         Wordsearch: Orðaleit
-        Webapp: Appsmiðja
+        Webapp: Appsmiðjan
         ArtistEC: Listamaðurinn
         TextMatch: Textaleikur
         StudioEC: Leikjasmiðja
-        Applab: Appsmiðja
+        Applab: Appsmiðjan
         NetSim: Internet hermir
         Custom: Listamaður
         CustomStudio: Leikjasmiðja
@@ -400,6 +400,7 @@ is:
         csp_applab_functions_parameters: Föll með stikum
         csp_applab_loops: Lykkjur
         csp_concept_rgb: Svolítið bitastætt um díla
+        csp_cs_is_changing_everything: Tölvunarfræði er að breyta öllu
         csp_pixelation_color_1: Litadílamynstursgræja - 1. hluti
         csp_pixelation_color_2: Litadílamynstursgræja - 2. hluti
         csp_pixelation_color_3: Litadílamynstursgræja - 3. hluti
@@ -495,6 +496,8 @@ is:
         csd_gamelab_if_else: Ef/Annars yrðingar
         hoc_dance_warmup: Danspartý - Upphitun
         hoc_dance_congrats: Danspartý - Meira fjör!
+        what_is_cs: Hvað er tölvunarfræði?
+        what_is_an_event: Hvað er atvik?
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

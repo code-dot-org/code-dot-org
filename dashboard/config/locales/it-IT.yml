@@ -76,8 +76,8 @@ it:
   trophies: Trofei
   courses: Corsi
   courses_page:
-    title_student: Impara su Code Studio
-    title_teacher: Insegna Informatica
+    title_student: Impara l'informatica
+    title_teacher: Insegna l'informatica
   unplugged_activity: Attività Tradizionale
   of: di
   more: DI PIÙ
@@ -387,7 +387,7 @@ it:
       signin: Accedi
       signup: Crea un account
       already_registered: Sei già iscritto?
-      pair_programming: un paio di programmi
+      pair_programming: Programmazione in coppia
       team: Squadra
       driver: Conducente
       navigator: Navigatore
@@ -710,8 +710,8 @@ it:
       consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.
     help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Amazon, Google
       e Microsoft che hanno aiutato a creare questi corsi.
-    help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno
-      contribuito a creare questi materiali.
+    help_from_html_old: Gli ingegneri di Amazon, Google e Microsoft hanno contribuito
+      a creare questi materiali.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti
       riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
       Tutti i diritti riservati.<br />Frozen&#8482; &copy; %{current_year} Disney.
@@ -868,7 +868,7 @@ it:
       title: Sviluppo Web
       body: Sviluppo Web è un ambiente di programmazione in cui si possono realizzare
         semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi
-        il tuo sito in pochi secondi.
+        il tuo sito in pochi secondi. (Versione provvisoria.)
       audience: Da 13 anni in su
       cta: Scopri come
     frozen:

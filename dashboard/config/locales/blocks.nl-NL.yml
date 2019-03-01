@@ -138,7 +138,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg [RANGE][0]
+        text: krijg [RANGE] [0]
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -870,16 +870,55 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': wanneer
             '"while"': terwijl
-      aalab_whenTouching:
+      aalab_jumpTo:
+        text: "{SPRITE} ga naar {LOCATION}"
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': wanneer
             '"while"': terwijl
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': waar
+            '"false"': onwaar
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': voor altijd
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': toon
+            '"hide"': verberg
       binary_move:
         options:
           DIR:
@@ -911,7 +950,7 @@ nl:
             "'left'": naar links
       craft_ifStandingOn:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -923,7 +962,7 @@ nl:
             "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -983,7 +1022,7 @@ nl:
             '"squid"': inktvis
             '"tropicalFish"': tropische vis
       craft_turn:
-        text: draai [DIR][0]
+        text: draai {DIR}
         options:
           DIR:
             right: rechtsom ↻

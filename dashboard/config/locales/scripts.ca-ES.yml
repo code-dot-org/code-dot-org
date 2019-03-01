@@ -60,6 +60,7 @@ ca:
             programes per resoldre problemes i desenvoluparan jocs interactius o històries
             que poden compartir. Recomanat per educació primària.
           description_short: El Curs 2 està dissenyat per alumnes que saben llegir.
+          description_audience: Edat +6 (s'ha de saber llegir)
           stages:
             'Artist: Debugging':
               name: 'Artista: Correcció d''errors'
@@ -1107,6 +1108,8 @@ ca:
               name: Col·laboració oberta
             Relay Programming:
               name: Programació en relleus
+            Graph Paper Programming:
+              name: Programació de paper quadriculat
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1265,6 +1268,8 @@ ca:
               name: 'Sense connexió: Binari'
             Artist Binary:
               name: Artista binari
+            Dance Party:
+              name: Festa amb ball
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1335,3 +1340,31 @@ ca:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Llistes
+        csd3-2019:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funcions amb Paràmetres
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internet
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Creant Funcions
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Bucles Mentres

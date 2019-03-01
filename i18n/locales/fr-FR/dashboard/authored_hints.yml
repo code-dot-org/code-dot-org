@@ -159,7 +159,20 @@ fr:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Du mal à trouver comment faire descendre les blocs ? Essaie de traiter la fleur rouge exactement comme une fleur mauve !
         2-3_Bee_Conditionals_14_b: Si la fleur rouge était mauve, pourrais-tu trouver un moyen d'utiliser une boucle ˋrépéterˋ supplémentaire pour réduire le code ?
-        2-3_Bee_Conditionals_14_c: "Essaie de couper ceci en deux blocs:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Obtenir du nectar 3 fois\n  - Avancer plus 5 fois\n  - Vérifier s'il y a du nectar, s'il y en a, l'obtenir\n  - Tourner à gauche\n  \n2) Fabriquer du miel \n  - Avancer plus 1 fois\n  - Fabriquer du miel 2 fois"
+        2-3_Bee_Conditionals_14_c: |-
+          Essaie de couper ceci en deux blocs:  
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Obtenir du nectar 3 fois
+            - Avancer plus 5 fois
+            - Vérifier s'il y a du nectar, s'il y en a, l'obtenir
+            - Tourner à gauche
+            
+          2) Fabriquer du miel 
+            - Avancer plus 1 fois
+            - Fabriquer du miel 2 fois
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'N''oublie pas : Les fleurs mauves n''ont que 0 ou 1 nectar et cela peut changer à chaque fois que tu exécutes le programme.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -329,7 +342,9 @@ fr:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Chaque forme répétée est la combinaison de la **moitié d’un hexagone** suivie de **2/3 d’un triangle**. '
         Course_4_Artist_12_b: 'La forme est presque la même que dans le casse-tête précédent, sauf que le demi-hexagone est un peu plus grand. '
-        Course_4_Artist_12_c: "1) Les trois premières lignes font 60 pixels de long et tu dois tourner de 60 degrés.  \n2) Les deux lignes suivantes font 80 pixels de long et tu dois tourner de 120 degrés "
+        Course_4_Artist_12_c: |-
+          1) Les trois premières lignes font 60 pixels de long et tu dois tourner de 60 degrés.  
+          2) Les deux lignes suivantes font 80 pixels de long et tu dois tourner de 120 degrés 
         Course_4_Artist_12_d: |-
           **Solution :**
 
@@ -3462,6 +3477,98 @@ fr:
         mc_9_a: Es-tu dans la bonne direction ? ˋdétruire le bloc` mine le bloc en face de toi.
         mc_9_b: Ces tâches noires dans le mur sont du charbon ! Utilise ˋdétruire le bloc` dessus pour miner le charbon.
         mc_9_c: Utilise ˋplacer la torche` pour placer une torche là où tu te tiens.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assure-toi qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          * Choisis une autre chanson à jouer.
+          * Renomme ton danseur.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          * Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          *Le niveau se termine après 7 mesures.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          *Le niveau se termine après 11 mesures.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Tu dois faire en sorte que l’effet de fond change à un moment avant la septième mesure de la chanson.
+
+          *Ce niveau se termine après 9 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Change l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Tu dois avoir au moins deux danseurs.
+
+          *Ce niveau se termine après 5 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          * Ajoute un troisième danseur (ou autant que tu veux !)
+          * Fait en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Deux danseurs doivent avoir une taille autre que 100.
+
+          *Ce niveau se termine après 5 mesures.*
+        challenges: |-
+          **Défi optionnel**
+
+          *Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Change la teinte d'au moins un danseur.
+
+          *Ce niveau se termine après 7 mesures.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Les propriétés de deux ou plusieurs danseurs doivent changer.
+
+          *Ce niveau se termine après 7 mesures.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Sois créatif !
+
+          *Ce niveau se termine après 7 mesures.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Sois créatif !
+
+          *Ce niveau se termine après 7 mesures.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          * Utilise le bloc ˋen appuyant sur vers la gaucheˋ pour que le robot fasse un mouvement de danse.
+
+          *Ce niveau se termine après 7 mesures.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assure-toi que le nombre pour ˋvitesse_chien` est plus grand que ˋvitesse_chat`.
       Dance short test 2_authored_hint:
@@ -5074,10 +5181,7 @@ fr:
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Tu ne trouves pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un motif.
         courseA_artist_loops7_b: Écris d’abord le code pour une vague, puis répète-le pour dessiner les deux autres.
-        courseA_artist_loops7_c: |-
-          N’oublie pas que tu peux mettre plus d’un bloc dans une boucle <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml>.
+        courseA_artist_loops7_c: "N’oublie pas que tu peux mettre plus d’un bloc dans une boucle <xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n</block></xml>."
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Tu ne trouves pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un motif.
         courseA_artist_loops7_b: Écris d’abord le code pour une vague, puis répète-le pour dessiner les deux autres.
@@ -5117,7 +5221,9 @@ fr:
         courseA_artist_loops9_c: Si tu n’arrives pas à trouver où mettre la boucle, essaie d’écrire ton code étape par étape puis de voir ce qui se répète.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Ajoute un autre bloc au code qui t’a été donné pour dessiner le reste des escaliers.
-        courseA_artist_loops9_b: "Le bloc que tu ajoutes devrait être dans la boucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>."
+        courseA_artist_loops9_b: |-
+          Le bloc que tu ajoutes devrait être dans la boucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>.
         courseA_artist_loops9_c: Si tu n’arrives pas à trouver où mettre la boucle, essaie d’écrire ton code étape par étape puis de voir ce qui se répète.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Ajoute un autre bloc au code qui t’a été donné pour dessiner le reste des escaliers.
@@ -5190,10 +5296,10 @@ fr:
 
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Essaie d’utiliser une boucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> !"
+        courseA_collector_loops3_a: Essaie d’utiliser une boucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> !
         courseA_collector_loops3_b: N’oublie pas que tu peux mettre plus d’1 bloc dans une boucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "Essaie d’utiliser une boucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> !"
+        courseA_collector_loops3_a: Essaie d’utiliser une boucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> !
         courseA_collector_loops3_b: N’oublie pas que tu peux mettre plus d’1 bloc dans une boucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops3_2019_authored_hint:
         courseA_collector_loops3_a: "Essaie d’utiliser une boucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> !"
@@ -5338,6 +5444,14 @@ fr:
           Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           Utilise un bloc « répéter » comme celui-ci pour t’aider !
@@ -5356,7 +5470,15 @@ fr:
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Ton code aura **quatre** blocs `déplacer vers l’Ouest`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\net **quatre** blocs <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
+        courseA_harvester_loops2_a: |-
+          Ton code aura **quatre** blocs `déplacer vers l’Ouest`
+
+          <xml><block type="maze_moveWest"/></xml>
+
+          et **quatre** blocs <xml>
+          `pick corn`
+            <block type="harvester_corn"/>
+          </xml>. 
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Ton code aura **quatre** blocs `déplacer vers l’Ouest`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\net **quatre** blocs <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
       courseA_harvester_loops3_authored_hint:
@@ -5756,17 +5878,11 @@ fr:
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un chemin de l’oiseau au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.
-        courseA_maze_seq13_c: |-
-          Ces blocs <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
+        courseA_maze_seq13_c: "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> t’aideront à te rapprocher du cochon."
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un chemin de l’oiseau au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.
-        courseA_maze_seq13_c: |-
-          Ces blocs <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
+        courseA_maze_seq13_c: "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> t’aideront à te rapprocher du cochon."
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un chemin de l’oiseau au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.
@@ -8083,6 +8199,9 @@ fr:
       courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Utilise le bloc ˋdéfinir un arrière-plan` et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.
         courseC_PlayLab_eventsA_b: Tu devras faire glisser un bloc ˋquand l’exécution commence` sur l’espace de travail pour résoudre ce casse-tête.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: Utilise le bloc ˋdéfinir un arrière-plan` et le bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.
+        courseC_PlayLab_eventsA_b: Tu devras faire glisser un bloc ˋquand l’exécution commence` sur l’espace de travail pour résoudre ce casse-tête.
       courseC_PlayLab_eventsFP_authored_hint:
         idea1: |-
           *Besoin d’une idée ?*
@@ -8721,6 +8840,22 @@ fr:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: Tu peux utiliser plus d’un bloc ˋcollecter` sur chaque case.
         courseC_collector_prog_challenge1_b: Tu es perdu ? Essaie de suivre ce chemin pour résoudre le puzzle !
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
+      courseC_data wizard_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -8754,6 +8889,18 @@ fr:
         courseC_flappy_events5_a: Tu devras utiliser le bloc ˋmarquer un point` pour réussir ce niveau.
       courseC_flappy_events5_2019_authored_hint:
         courseC_flappy_events5_a: Tu devras utiliser le bloc ˋmarquer un point` pour réussir ce niveau.
+      courseC_flappy_events6_authored_hint:
+        courseC_flappy_events6_a: Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`.
+      courseC_flappy_events6_2018_authored_hint:
+        courseC_flappy_events6_a: Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`.
+      courseC_flappy_events6_2019_authored_hint:
+        courseC_flappy_events6_a: Essaie de connecter le bloc ˋfaire une ____ de battements d’ailesˋ à l’événement ˋlors d’un clic`.
+      courseC_flappy_events7_authored_hint:
+        courseC_flappy_events7_a: 'Tu peux modifier le fond en utilisant le bloc ˋdéfinis un arrière-plan`. '
+      courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: 'Tu peux modifier le fond en utilisant le bloc ˋdéfinis un arrière-plan`. '
+      courseC_flappy_events7_2019_authored_hint:
+        courseC_flappy_events7_a: 'Tu peux modifier le fond en utilisant le bloc ˋdéfinis un arrière-plan`. '
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: Une fois que tu t’es déplacé vers une citrouille, utilise <xml><block type="harvester_pumpkin"/></xml> pour la récolter.
         courseC_harvester_loops1_b: Tu peux utiliser une boucle avec le bloc <xml><block type="harvester_pumpkin"/></xml> pour récolter plus d’une citrouille dans une case.
@@ -9761,7 +9908,7 @@ fr:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'La boucle ˋpour` va de 5 à 250 par 2. '
         courseF_artist_for_challenge2_a: Le changement de couleur se produit en utilisant le bloc ˋdéfinis la couleur avec rouge, vert, bleu`. Le rouge est toujours à 255, le vert est toujours de la valeur de ˋcompteur` et le bleu est toujours à ˋ255 - compteur`.
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **Solution :**
 
           <xml>
@@ -9850,8 +9997,6 @@ fr:
           </next>
           </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'La boucle ˋpour` va de 5 à 250 par 2. '
         courseF_artist_for_challenge2_a: Le changement de couleur se produit en utilisant le bloc ˋdéfinis la couleur avec rouge, vert, bleu`. Le rouge est toujours à 255, le vert est toujours de la valeur de ˋcompteur` et le bleu est toujours à ˋ255 - compteur`.

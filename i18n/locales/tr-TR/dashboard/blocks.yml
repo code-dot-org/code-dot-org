@@ -902,6 +902,11 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': Ne zaman
+            '"while"': sürece
       aalab_clickedOn:
         options:
           CONDITION:
@@ -911,11 +916,53 @@ tr:
         options:
           CHOICE:
             '"other"': diğer
-      aalab_whenTouching:
+      aalab_jumpTo:
+        text: "{SPRITE} {LOCATION}’a atla"
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': Ne zaman
             '"while"': sürece
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': doğru
+            '"false"': 'false'
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"rotation"': yön
+            '"x"': x konumu
+            '"y"': y konumu
+            '"direction"': hareket yönü
+            '"tint"': renk tonu
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': sonsuza dek
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': göster
+            '"hide"': gizle
       binary_move:
         options:
           DIR:

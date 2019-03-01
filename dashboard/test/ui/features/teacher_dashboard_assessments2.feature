@@ -6,27 +6,27 @@ Feature: Using the assessments tab in the teacher dashboard
   Scenario: Assessments tab survey submissions
     Given I create an authorized teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
     And I sign out
 
     And I create a student named "Student2"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
     And I sign out
 
     And I create a student named "Student3"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
     And I sign out
 
     And I create a student named "Student4"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
     And I sign out
 
     And I create a student named "Student5"
     And I navigate to the section url
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/6"
     And I sign out
 
     # Assign a script with an unlocked survey
@@ -44,10 +44,12 @@ Feature: Using the assessments tab in the teacher dashboard
     And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
-    When I click selector "a:contains('Untitled Section')" once I see it
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" contains text "CSP Student Post-Course Survey ('17-'18)"
 
     # Assessments tab
-    When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     Then I wait until element "h2:contains(Multiple choice questions overview)" is visible

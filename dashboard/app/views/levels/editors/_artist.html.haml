@@ -49,4 +49,4 @@
     %p Paste or drag images into this field to upload them, similar to adding images to Long Instructions.
   = f.text_area :images, placeholder: 'Images', rows: 4, value: @level.properties['images']
   :javascript
-    levelbuilder.initializeCodeMirror('level_images', 'javascript', null, true);
+    levelbuilder.initializeCodeMirror('level_images', 'javascript', {attachments: true});

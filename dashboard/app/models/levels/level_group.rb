@@ -120,8 +120,8 @@ ruby
 
     if new_properties['texts']
       new_properties['texts'].map! do |text|
-        Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
-        text['level_name'] << new_suffix
+        new_level = Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
+        text['level_name'] = new_level.name
         text
       end
     end
@@ -129,8 +129,8 @@ ruby
     if new_properties['pages']
       new_properties['pages'].map! do |page|
         page['levels'].map! do |level_name|
-          Level.find_by_name(level_name).clone_with_suffix(new_suffix)
-          level_name << new_suffix
+          new_level = Level.find_by_name(level_name).clone_with_suffix(new_suffix)
+          new_level.name
         end
         page
       end

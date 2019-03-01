@@ -9,6 +9,7 @@ nav: regional_partner_playbook_nav
 
 ## Table of Contents
 - [Virtual Trainings](#virtual)
+- [Regional Partner Summit - Feb 2019](#feb19)
 - [Regional Partner Summit - Sept 2018](#sept18)
 - [Regional Partner Summit - Mar 2018](#mar18)
 - [Regional Partner Summit - Sept 2017](#sept17)
@@ -163,6 +164,12 @@ January 2017:
 [**Back to the top**](#top)
 <br/>
 
+________________
+<a id="feb19"></a>
+<br/>
+
+## Regional Partner Summit (February 2019)
+- [Regional Partner Summit Digest](https://bit.ly/addisondigest)
 
 ________________
 <a id="sept18"></a>
@@ -170,9 +177,7 @@ ________________
 
 ## Regional Partner Summit (September 2018)
 
-- [Regional Partner Summit Resources](https://bit.ly/dallasdigest)
-- <a href="https://drive.google.com/file/d/1tESjpvPuryIMeCidrjrWNGOdYSiND0qn/view">Session Teasers</a>
-
+- [Regional Partner Summit Digest](https://bit.ly/dallasdigest)
 
 
 <a id="mar18"></a>
@@ -181,7 +186,7 @@ ________________
 ## Regional Partner Summit (March 2018)
 
 
-- [Regional Partner Summit Resources](http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit)
+- [Regional Partner Summit Resources](http://bit.ly/marchsummit)
 - [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
 
 [**Back to the top**](#top)

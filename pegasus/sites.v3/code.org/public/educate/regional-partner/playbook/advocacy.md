@@ -17,6 +17,7 @@ Regional partners who are interested in advocacy can use the following resources
 - [Making CS Fundamental](https://code.org/files/Making_CS_Fundamental.pdf): Description of 9 policy ideas to expand computer science in a state
 - [Advocacy Slide Deck](https://code.org/files/computer_science_advocacy.pptx): Generic presentation to convince someone that computer science is important to teach in grades K-12. Also see this [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) with sample slides that you can remix into your own presentation
 - [Letter to elected official](https://code.org/files/policy_maker_letter.pdf): Sample text to explain the importance of computer science to governors, members of state legislature, or school board members
+- Interested in setting up a **Coding in the Capitol** or similar event? These resources help with event considerations, marketing, tracking, and so much more. Start with this [overview document](https://docs.google.com/document/d/1h1Owwx4J0E-o08YzY_OfoyXFpDoHJPi73dCCBqNapsk/edit#heading=h.i5l0dimqr6zg), which points to all the [resources and examples](https://drive.google.com/drive/u/0/folders/1p7xXx75cRHj2G5AWJ7_FCklh1OaR6pR1) for your coding event.  
 
 ## State-by-State Data
 - [2018 State of Computer Science Education](https://code.org/files/2018_state_of_cs.pdf): Annual report on computer science education policy and implementation across the U.S.

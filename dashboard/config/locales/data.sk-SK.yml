@@ -163,9 +163,9 @@ sk:
         maze_karel_1_10: Keďže už pracujem neskoro, je tma a nedokážem povedať aké
           sú veľké hromady. Teraz nemám všetky možnosti, ktoré som mával v bloku pokiaľ.
           Posúvaj ma po poli a ak sú tam hromady, tak ich odstráň.
-        maze_karel_1_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tu je hromada,
+        maze_karel_1_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tam je hromada,
           odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho
-          menu v bloku "if".'
+          menu v bloku "ak".'
         turtle_2_1: 'Ahoj. Ja zombie umelec. Ja milovať kresliť! Pomôž mi nakresliť
           štvorec v špeciálnej farbe. Dôležitá poznámka: zostali ti rovnaké bloky
           ako predtým, len sme ich usporiadali do kategórií.'
@@ -512,9 +512,9 @@ sk:
         Unplug10: Internet
         Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Veselé mapy
-        C1_moveitmoveit_unplugged: Posuň, Posuň
+        C1_moveitmoveit_unplugged: Pohni sa, pohni sa
         C1_bigevent_unplugged: Veľká udalosť
-        C1_getting_loopy: Neustále opakovanie
+        C1_getting_loopy: Cykly sa zacykľujú
         C1_pair_programming: Programovanie v páre
         C1_maze_intro_sequencing: Úvod do bludiska
         C1_maze_debugging: 'Bludisko: Hľadanie a odstraňovanie chýb'
@@ -629,6 +629,7 @@ sk:
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly
+        csp_cs_is_changing_everything: Informatika mení svet okolo nás
         starwars_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
         starwars_typing: 'Star Wars: Budovanie Galaxie pomocou kódu - JavaScript'
         starwars_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
@@ -714,6 +715,12 @@ sk:
         hoc_dance_congrats: Tanečná párty - Párty pokračuje!
         c_and_c_great_to_create: Je super tvoriť a hrať férovo
         c_and_c_digital_sharing: Digitálne zdieľanie
+        'Teaching CS Fundamentals: How the Course Works': 'Vyučujeme Základy informatitky:
+          Ako funguje tento kurz'
+        what_is_cs: Čo je informatika?
+        teaching_cs_pair_programming: 'Učíme Základy informatiky: Programovanie v
+          páre'
+        teaching_problem_solving: 'Učíme Základy informatiky: Vyučujeme riešenie problémov'
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

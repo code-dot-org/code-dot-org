@@ -236,6 +236,58 @@ fi:
       Course 4 Artist For Loops Challenge_a: "Keksitkö, kuinka voit käyttää kaikkia
         oppimiasi asioita tämän kuvan luomiseen? \r\n\r\nJos haluat vinkin, napsauta
         tästä."
+      CourseD_Dance_Party_01: |-
+        *Pidetään tanssibileet!*
+
+        Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin sisällä luodaksesi ensimmäisen tanssijasi.
+
+        * * Voit myös klikata hehkulamppua vasemmalla, jos haluat lisätietoja tai lisää haastetta.*
+      CourseD_Dance_Party_02: |-
+        Pistetään hirvi tanssimaan!
+
+        Raahaa <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokki työtilaan. Yhdistä ne <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokin alla. Tanssijasi pitäisi aloittaa uusi liike neljännen tahdin jälkeen
+
+
+        ** Tahdeilla ** voidaan laskea aika musiikissa. Tässä opetusohjelmassa tahti on neljä lyöntiä.
+      CourseD_Dance_Party_03: |-
+        *Nyt groovaillaan!*
+
+        Lisää <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokki työtilaasi. Laita tanssija aloittamaan uusi liike 6 tahdin jälkeen
+      CourseD_Dance_Party_04: |-
+        *Tämä tanssi tarvitsee välkettä!*
+
+        Etsi työkalupakistasi uusi blokki, jolla lisäät taustaefektin tanssijasi taakse. Katso, kuinka efektit muuttuvat musiikin tahtiin!
+      CourseD_Dance_Party_05: |-
+        Käytä uutta blokkia saadaksesi tanssijasi muuttamaan liikkeitään **joka toisella tahdilla**!
+
+        * Valitsemalla `(Seuraava)`, `(Edellinen)` tai `(Satunnainen)` pyydät tanssijaasi tekemään eri liikkeen joka kerta, kun koodia käytetään.
+      CourseD_Dance_Party_06: |-
+        * Tarvitsemme enemmän tanssijoita! *
+
+        Luo taustatanssija nimellä `backup_dancer1` tanssimaan kissan kanssa.
+      CourseD_Dance_Party_08: |-
+        Jokaisella tanssijalla on joukko _ominaisuuksia_, jotka määrittävät, miltä se näyttää.
+
+        Voit saada tanssijan näyttämään siltä, kuin se olisi taustalla, tekemällä sen _koosta_ pienemmän. Voitko tehdä molemmista taustatanssijoista samankokoisia?
+      CourseD_Dance_Party_09: |-
+        Tanssijoilla on “sävy”-ominaisuus, jolla voi lisätä kerroksen väriä. Koeta vaihtaa yhden tanssijasi sävyä.
+        *Sävyt sekoittavat valitsemasi värin tanssijan värien kanssa.
+      CourseD_Dance_Party_10: |-
+        Nyt osaamme muuttaa tanssijan ominaisuuksia. Voimme myös laittaa samat ominaisuudet vastaamaan automaattisesti musiikkiin tässä blokissa:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block >< xml >
+
+        Tämä ohjelma käyttää musiikin “basson” volyymiä (matalia ääniä) kontrolloimaan yhden tanssijan pituutta. Saatko muutkin tanssijat vastaamaan musiikkiin?
+      CourseD_Dance_Party_11: |-
+        Tämä <xml><block type="Dancelab_whenKey"></block></xml> blokki antaa sinun käyttää koodia, kun ylänuolta painetaan.
+
+        Voit muuttaa tanssiliikettä, muuttaa tanssijan ominaisuuksia, tai tehdä yhden nopean liikkeen kerran. Ole luova, ja etsi uusia blokkeja!
+      CourseD_Dance_Party_11b: On tanssikisan aika! Kissa napauttaa, kun painat vasenta
+        nuolinäppäintä. Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
       Dance_Party_01: |-
         *Pidetään tanssibileet!*
 

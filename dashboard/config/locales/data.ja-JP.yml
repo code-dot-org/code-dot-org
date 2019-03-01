@@ -379,7 +379,7 @@ ja:
         C4_variables_playlab: 変数 - ゲームラブ
         C4_for_loops: ループ用
         C4_for_loops_bee: ループ用
-        C4_for_loops_no_bee: ループ用
+        C4_for_loops_no_bee: forループ
         C4_math_artist: 数学でプログラミングアーティスト
         C4_function_edit: 関数の編集
         C4_function_create: 関数の作成
@@ -388,7 +388,7 @@ ja:
         C4_unplugged_algorithms: タングラムのアルゴリズム
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: 封筒内の変数
-        C4_unplugged_forloops: ループ用
+        C4_unplugged_forloops: forループ
         C4_unplugged_parameters: パラメーターで歌や曲をつくる
         C4_unplugged_binary: ２しんすう
         CSF_a_b_artist_loops: アーティストくりかえし
@@ -419,7 +419,9 @@ ja:
         csd_concept_how_computers_work: コンピューターの仕組み入門
         csd_concept_computer: 'コンピューターの仕組み: 何がコンピューターをコンピューターにするのか？'
         csd_concept_binary_data: 'コンピューターの仕組み: バイナリーとデータ'
+        csd_concept_circuits_logic: コンピューターの仕組み：回路＆ロジック
         csd_concept_memory_cpu_input_output: 'コンピューターの仕組み: メモリ、CPU、入出力'
+        csd_concept_hardware_software: コンピューターの仕組み：ハードウェア＆ソフトウェア
         csd_concept_search: 検索のしくみ
         csd_gamelab_animation_tab: "[アニメーション] タブ"
         csd_gamelab_velocity: 速度
@@ -456,6 +458,9 @@ ja:
         mc_2016_congrats: Minecraft Hour of Code - おめでとう
         mc_2017_congratulations: Minecraft Hour of Code - おめでとう
         CSF_loops_AB: くりかえし
+        csd_gamelab_if_else: If/Else 文
+        CSF_SpriteLabIntro_CDEF: スプライトラボ
+        CSF_Spritelab_MakeSprite_CDEF: スプライトラボでスプライトを作成する方法
     callout:
       text:
         drag_blocks: "「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。"

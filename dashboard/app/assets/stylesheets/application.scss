@@ -331,12 +331,6 @@ img.video_thumbnail {
     }
   }
 
-  #sign_in_or_user {
-    html[dir=rtl] & {
-      padding-right: 20px;
-    }
-  }
-
   .user_menu, .create_menu {
     margin-top: 6px;
     height: 38px;
@@ -1617,7 +1611,12 @@ a.download-video {
   justify-content: space-between;
 }
 
-#signin {
+#change-password {
+  max-width: 600px;
+}
+
+#signin,
+#change-password {
   $field-width: 310px;
   $button-width: 324px;
 
@@ -2005,35 +2004,9 @@ a.download-video {
       border: 1px solid $facebook_blue;
     }
 
-    &.with-windowslive {
+    &.with-microsoft_v2_auth {
       background-color: $microsoft_blue;
       border: 1px solid $microsoft_blue;
-    }
-  }
-}
-
-// OLD STYLES FOR devise/shared/_old_links
-.devise_link_section {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  .or_break {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    margin-left: -20px;
-    .vertical_bar {
-      width: 2px;
-      height: 100%;
-      background-color: $light_gray;
-    }
-    p {
-      font-size: 20px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      color: $teal;
-      font-weight: bolder;
     }
   }
 }
@@ -2059,9 +2032,17 @@ a.download-video {
   transform: translateY($offset);
 }
 
+/* overrides .unplugged for match levels in level groups */
+.level-group-content .unplugged.match {
+  width: auto;
+}
+
 .match {
   .mainblock {
     margin-left: 0;
+    .level-group-content & {
+      margin-left: 50px;
+    }
   }
   .column {
     width: 260px;
@@ -2125,6 +2106,12 @@ a.download-video {
     }
     .active.emptyslot {
       background-color: $lighter_yellow;
+    }
+  }
+  .question {
+    p {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
   .answer {
@@ -2274,6 +2261,9 @@ a.download-video {
     background-color: $lightest_cyan;
     border-radius: 5px;
     margin: 10px auto;
+    .level-group-content & {
+      margin-left: 50px;
+    }
     .content {
       padding: 10px;
     }

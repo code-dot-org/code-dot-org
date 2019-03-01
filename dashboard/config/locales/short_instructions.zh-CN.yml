@@ -408,6 +408,7 @@ zh-CN:
       Applab AllTheThings ResourcesTab AllResources: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab MapReference: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab ReferenceLinks: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
+      Applab allthethings onRecordEvent: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       Applab test: 这一关可提交。仅用于测试！
       Artist - Nested Loops 1: 完成代码来画出这些三角形。第一个三角形已经帮你画好了。提示：三个三角形一共旋转了360度。
       Artist - Nested Loops 10: 通过循环已有的模块来画出旗帜上最后一行星星。这些星星都是30像素宽，而且它们之间距离50像素。
@@ -432,6 +433,11 @@ zh-CN:
         (不是太多!), 可以尝试更改任意变量，看看变化, 然后单击“完成”继续下一步。
       Big Game Animation 2 (copy 1): "`更新目标`函数采用目标的当前 x 值, 并返回更新后的值。完成 `更新目标`, 以便每次调用时都增加
         x 值。x 越大, 目标就运动得越快。"
+      Big Game Animation 2: update-target函数采用目标的当前 x 值，并返回更新后的值。完成update-target函数，使其每次调用时都会增加
+        x的值。x越大，目标运动越快。
+      Big Game Animation 3: update-danger函数和update-danger的行为类似，只是危险应当从右侧滑向左侧。完成update-danger，使危险飞过屏幕
+      Big Game Animation 4: 这时，危险应该从右向左穿过屏幕，目标应该从左到右运动，他们离开后不会再返回屏幕，我们稍后将处理它。花点时间来确保游戏像我们想的那样工作，然后点击
+        "完成" 继续。
       Big Game Booleans 1: 在上一次编程游戏的过程中, 我们看到了目标以及危险的精灵穿过了屏幕，但永远不会飞回来。单击 "运行" 查看你的程序究竟是怎样运行的,
         然后单击完成，让那些已经离开屏幕的精灵重新出现。
       Big Game Booleans 5: 这时，危险应该从右向左运行, 你的目标应该从左到右运行, 它们都应该返回到对面的位置上，并反复执行。花一分钟来确保游戏像想要的那样工作,
@@ -468,8 +474,10 @@ zh-CN:
         你可能需要停下来并与同学们讨论一下再继续。
       CSD U3 Boolean Modify: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Boolean Modify_2018: 修改代码，以便使所有的console.log命令打印“真”。
+      CSD U3 Boolean Modify_2019: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Boolean Predict: 你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
       CSD U3 Boolean Predict_2018: 你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
+      CSD U3 Boolean Predict_2019: 你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
       CSD U3 Draw Loop Discuss: |-
         这里有一个看起来与你之前写的非常类似的但实际上却完全不同的程序。
         你可能需要停下来并与同学们讨论一下再继续。
@@ -479,12 +487,16 @@ zh-CN:
       CSD U3 Keypress Boolean-2018: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Boolean: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Boolean_2018: 修改代码，以便使所有的console.log命令打印“真”。
+      CSD U3 Keypress Boolean_2018_2019: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Watchers: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Watchers_2018: 修改代码，以便使所有的console.log命令打印“真”。
+      CSD U3 Keypress Watchers_2019: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 L5 Freeplay: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 L5 Freeplay_2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
+      CSD U3 L5 Freeplay_2019: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Mouse Input Bee 2: 这样做
       CSD U3 Mouse Input Bee 2_2018: 这样做
+      CSD U3 Mouse Input Bee 2_2019: 这样做
       CSD U3 Random Animation: 使用 randomNumber() 随机数函数来激活盖瑞的嘴巴。
       CSD U3 Random Choice: 使用 randomNumber() 随机数模块生成0或1
       CSD U3 Random Color: 你可以使用 randomNumber() 随机数函数来挑选随机颜色吗？ 尝试使用随机数设置 rgb 模块中的一个或多个通道。
@@ -496,31 +508,40 @@ zh-CN:
       CSD U3 Sprites intro sprites: 做这个
       CSD U3 Sprites intro sprites_2018 - Validation Test: 做这个
       CSD U3 Sprites intro sprites_2018: 做这个
+      CSD U3 Sprites intro sprites_2019: 做这个
       CSD U3 Variable Arithmetic: 改变变量“size”（尺寸）的初始值来画一个更大的正方形。
       CSD U3 Variables Square Random: 改变变量“size”（尺寸）的初始值来画一个更大的正方形。
       CSD U3 Variables Square: 改变变量“size”（尺寸）的初始值来画一个更大的正方形。
       CSD U3 Variables TEMPLATE square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables change circle size: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables change circle size_2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
+      CSD U3 Variables change circle size_2019: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables multiple assignments: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables naming rules v2-2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables naming rules v2: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables naming rules v2_2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
+      CSD U3 Variables naming rules v2_2018_2019: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables naming rules: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables random assignment: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables random with assignment: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Variables random with assignment_2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
+      CSD U3 Variables random with assignment_2019: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U4 - Events Template: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       CSD U5 black white images pixelation 2: 绘制一个笑脸(点击此处看图)
       CSD U5 black white images pixelation 2_2018: 绘制一个笑脸(点击此处看图)
+      CSD U5 black white images pixelation 2_2019: 绘制一个笑脸(点击此处看图)
       CSD U5 black white images pixelation 3: 调整宽度和高度滑杆找到图案(点击此处查看更多)
       CSD U5 black white images pixelation 3_2018: 调整宽度和高度滑杆找到图案(点击此处查看更多)
+      CSD U5 black white images pixelation 3_2019: 调整宽度和高度滑杆找到图案(点击此处查看更多)
       CSD U5 black white images pixelation 4: 给笑脸添加眉毛(点击此处查看图像)
       CSD U5 black white images pixelation 4_2018: 给笑脸添加眉毛(点击此处查看图像)
+      CSD U5 black white images pixelation 4_2019: 给笑脸添加眉毛(点击此处查看图像)
       CSD U5 black white images pixelation 5: 绘制任何你喜欢的图案
       CSD U5 black white images pixelation 5_2018: 绘制任何你喜欢的图案
+      CSD U5 black white images pixelation 5_2019: 绘制任何你喜欢的图案
       CSD U5 black white images pixelation: 通过键入0和1来完成图形X
       CSD U5 black white images pixelation_2018: 通过键入0和1来完成图形X
+      CSD U5 black white images pixelation_2019: 通过键入0和1来完成图形X
       CSD U6 params modify clouds: "# 云\r\n\r\n当你吹声音传感器的时候, 这个程序会让云朵移动。但它还没完成。\r\n\r\n#
         这样做\r\n* 创建一个新函数`moveCloud(name)`（移动云朵 名称），它将移动任何云朵。\r\n* （提示: 代码几乎和`moveCloud0`函数相同）\r\n*
         在事件模块内调用新的`moveCloud(name)`函数, 每个云朵名称一次。\r\n* （提示: 这类似于 `loopCloud(name)`
@@ -529,10 +550,17 @@ zh-CN:
         这样做\r\n* 创建一个新函数`moveCloud(name)`（移动云朵 名称），它将移动任何云朵。\r\n* （提示: 代码几乎和`moveCloud0`函数相同）\r\n*
         在事件模块内调用新的`moveCloud(name)`函数, 每个云朵名称一次。\r\n* （提示: 这类似于 `loopCloud(name)`
         函数被多次调用的方式。）"
+      CSD U6 params modify clouds_2019: "# 云\r\n\r\n当你吹声音传感器的时候, 这个程序会让云朵移动。但它还没完成。\r\n\r\n#
+        这样做\r\n* 创建一个新函数`moveCloud(name)`（移动云朵 名称），它将移动任何云朵。\r\n* （提示: 代码几乎和`moveCloud0`函数相同）\r\n*
+        在事件模块内调用新的`moveCloud(name)`函数, 每个云朵名称一次。\r\n* （提示: 这类似于 `loopCloud(name)`
+        函数被多次调用的方式。）"
       CSD U6 params modify planes: "# 多飞机控制器\r\n\r\n此程序使用主板加速度计和屏幕上的复选框来移动三架飞机。现在只有红色的飞机起作用。\n\r\n\r\n#
         这样做\r\n* 创建一个新的`movePlane(name)`函数，它可以移动任何飞机。\r\n* 在事件模块内调用`movePlane(name)`函数,
         这样它只在选中复选框时移动。\r\n\r\n_挑战：现在飞机的移动速度太快了。 你能想出如何更改代码, 使它们移动得慢一些吗？_"
       CSD U6 params modify planes_2018: "# 多飞机控制器\r\n\r\n此程序使用主板加速度计和屏幕上的复选框来移动三架飞机。现在只有红色的飞机起作用。\n\r\n\r\n#
+        这样做\r\n* 创建一个新的`movePlane(name)`函数，它可以移动任何飞机。\r\n* 在事件模块内调用`movePlane(name)`函数,
+        这样它只在选中复选框时移动。\r\n\r\n_挑战：现在飞机的移动速度太快了。 你能想出如何更改代码, 使它们移动得慢一些吗？_"
+      CSD U6 params modify planes_2019: "# 多飞机控制器\r\n\r\n此程序使用主板加速度计和屏幕上的复选框来移动三架飞机。现在只有红色的飞机起作用。\n\r\n\r\n#
         这样做\r\n* 创建一个新的`movePlane(name)`函数，它可以移动任何飞机。\r\n* 在事件模块内调用`movePlane(name)`函数,
         这样它只在选中复选框时移动。\r\n\r\n_挑战：现在飞机的移动速度太快了。 你能想出如何更改代码, 使它们移动得慢一些吗？_"
       CSDU4 - AppLab - 1: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
@@ -547,26 +575,35 @@ zh-CN:
       CSDU6 arrays select icons: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 arrays select rainbow: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSDU6 arrays select rainbow_2018: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
+      CSDU6 arrays select rainbow_2019: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSDU6 arrays select random: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 arrays select random_2018: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
+      CSDU6 arrays select random_2019: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 arrays select variable: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 arrays select variable_2018: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
+      CSDU6 arrays select variable_2019: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 arrays variable: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSP student contact info: 请输入您的电子邮箱地址。
       CSPU5_U3 - Arrays - expressionsAsIndexes: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSPU5_U3 - Arrays - indexPractice: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSPU5_U3 - Arrays - indexPractice_2018: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
+      CSPU5_U3 - Arrays - indexPractice_2019: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSPU5_U3 - Canvas - freePlay: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
       CSPU5_U3 - Canvas - freePlay_2018: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
+      CSPU5_U3 - Canvas - freePlay_2019: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
       CSPU5_U3 - Design Mode 1: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       CSPU5_U3 - Design Mode 1_2018: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
+      CSPU5_U3 - Design Mode 1_2019: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       CSPU5_U3 - Keys - Final Image Scroller: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       CSPU5_U3 - Loops - 4: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
       CSPU5_U3 - Loops - 4_2018: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
+      CSPU5_U3 - Loops - 4_2019: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
       CSPU5_U3L13 - Turtle move with button: 添加一个按钮，在点击时移动乌龟。（点击查看完整说明）
       CSPU5_U3L15 full clicker app: 完成你的遥控器游戏 ！（点击查看完整的说明）
       CSPU5_U3L15 full clicker app_2018: 完成你的遥控器游戏 ！（点击查看完整的说明）
+      CSPU5_U3L15 full clicker app_2019: 完成你的遥控器游戏 ！（点击查看完整的说明）
       Calc Circles of Eval 3: 完成评估模块来匹配此声明。
       Calc Circles of Eval 5: 完成评估模块来匹配此声明。
       Calc Circles of Eval 7: 完成评估模块来匹配此声明。
@@ -823,6 +860,19 @@ zh-CN:
       Course 4 Variables Assessment: 你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。
       Course E MC Conditionals1: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Course1BeePuzzle12: 获得3个花蜜，然后酿两个蜂蜜。
+      CourseD_Dance_Party_01: 将`新建`模块拖到工作区，并关联到`设置`模块。
+      CourseD_Dance_Party_02: 让驼鹿在 4 个小节后做新动作！
+      CourseD_Dance_Party_03: 现在让舞者在 6 个小节后开始做新动作！
+      CourseD_Dance_Party_04: 为程序添加背景效果。
+      CourseD_Dance_Party_05: 使用其他新模块让舞者每 2 个小节变换动作。
+      CourseD_Dance_Party_06: 创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
+      CourseD_Dance_Party_08: 你能让两个伴舞的大小相同吗？
+      CourseD_Dance_Party_09: 使用`设置色彩`模块，更改一个舞者的颜色。
+      CourseD_Dance_Party_10: 使用`开始跟随`模块，让另一个舞者也对音乐做出响应。
+      CourseD_Dance_Party_11: "`当按下上方向键时`模块可以在按下上方向键时运行代码。尝试让舞者在按下上方向键时快速移动。"
+      CourseD_Dance_Party_11_5: 使用“所有鸭子”模块，让鸭子一起跳舞。
+      CourseD_Dance_Party_11b: 让机器人在按下右方向键时“掉落”，在按下上方向键时"鼓掌"。做掉落-鼓掌舞动作要尽可能快！
+      CourseD_Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       CourseF_PlayLab_vars1: '玩这个游戏不需要写任何代码, 只要点击 "运行"! '
       CourseF_PlayLab_vars10: "自由发挥时间! 下面是我们在这个阶段所玩过的所有变量, 以及一些你可能需要的额外变量。\r\n\r\n注意到我们的工具箱中现在有这么多的模块,
         它们需要整理! 在这里, 我们把每一块放到一个合适的类别中。花些时间去探索所有可用的东西。完成浏览后, 使用重复，变量和事件来制作游戏或故事。 \r\n\r\n提示:
@@ -841,8 +891,10 @@ zh-CN:
         0来通过此关卡。
       Crack Random Substitution: 说明
       Crack Random Substitution_2018: 说明
+      Crack Random Substitution_2019: 说明
       Crack a Caesar Cipher: 说明
       Crack a Caesar Cipher_2018: 说明
+      Crack a Caesar Cipher_2019: 说明
       D_Frozen_nested3: 让我们旋转那个形状的线吧!
       D_Frozen_nested4: 是时候把这些形状分层了!
       D_Frozen_nested5: 玩一玩雪花功能!
@@ -1301,16 +1353,21 @@ zh-CN:
         并且 "宽度" 和 "高度" 栏不可编辑。
       Pixelation - Lesson 14 - Make the Letter A: 制作一个3x5的字母A。部件的设定尺寸是错误的。你的第一个任务是将第二个字节设置为5的8位二进制码：00000101。然后开始输入像素数据。
       Pixelation - Lesson 14 - Make the Letter A_2018: 制作一个3x5的字母A。部件的设定尺寸是错误的。你的第一个任务是将第二个字节设置为5的8位二进制码：00000101。然后开始输入像素数据。
+      Pixelation - Lesson 14 - Make the Letter A_2019: 制作一个3x5的字母A。部件的设定尺寸是错误的。你的第一个任务是将第二个字节设置为5的8位二进制码：00000101。然后开始输入像素数据。
       Pixelation - Lesson 15 - Color Shades 4x4: 我们已经帮你创建了视频中曼蒂的4x4图像。你的任务是将12位字节的颜色填充到4x4像素网格中。要求如下：第1行
         - 红色系。第2行 - 绿色系。第3行 - 蓝色系。第4行 - 灰色系。
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 我们已经帮你创建了视频中曼蒂的4x4图像。你的任务是将12位字节的颜色填充到4x4像素网格中。要求如下：第1行
         - 红色系。第2行 - 绿色系。第3行 - 蓝色系。第4行 - 灰色系。
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 我们已经帮你创建了视频中曼蒂的4x4图像。你的任务是将12位字节的颜色填充到4x4像素网格中。要求如下：第1行
+        - 红色系。第2行 - 绿色系。第3行 - 蓝色系。第4行 - 灰色系。
       Pixelation - Lesson 15 - Complete 3-bit color: 这是曼蒂创建的4x2的图像，但缺失了最后两个方块。请找出是哪两种颜色并编码完成该图形。
       Pixelation - Lesson 15 - Complete 3-bit color_2018: 这是曼蒂创建的4x2的图像，但缺失了最后两个方块。请找出是哪两种颜色并编码完成该图形。
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: 这是曼蒂创建的4x2的图像，但缺失了最后两个方块。请找出是哪两种颜色并编码完成该图形。
       Pizza on a Plate: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Poorva copy U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Project - Final Image Scroller: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       Project - Final Image Scroller_2018: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
+      Project - Final Image Scroller_2019: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       Project - Finish your canvas app: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
       Project - Make Your Own Clicker Game: 完成你的遥控器游戏 ！（点击查看完整的说明）
       Prompt Test: 随便创造一个东西。这是一个猜数游戏的例子！
@@ -1397,6 +1454,7 @@ zh-CN:
         \ "
       The Vigenere Cipher Widget: 说明
       The Vigenere Cipher Widget_2018: 说明
+      The Vigenere Cipher Widget_2019: 说明
       The Vigenere Cipher: 说明
       Total Artist Clone Me: 自由发挥：这里除了你写的函数，还有更多的函数让你发挥。画些令人惊叹的东西吧！用不同的笔宽度来看看你能画出什么不一样的图形！
       U2 frequency caesar: 说明
@@ -1439,21 +1497,30 @@ zh-CN:
       U3 Variables randomize your square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3L03 Draw a T using turnAround: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
       U3L03 Draw a T using turnAround_2018: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
+      U3L03 Draw a T using turnAround_2019: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
       U3L03 Three Steps: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
       U3L03 Three Steps_2018: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
+      U3L03 Three Steps_2019: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
       U3L03 draw diamond: 创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)
       U3L03 draw diamond_2018: 创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)
+      U3L03 draw diamond_2019: 创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)
       U3L06 - moveForwardwithParams: 使用单个命令将乌龟移到屏幕边缘。(点击查看完整说明)
       U3L06 - moveForwardwithParams_2018: 使用单个命令将乌龟移到屏幕边缘。(点击查看完整说明)
+      U3L06 - moveForwardwithParams_2019: 使用单个命令将乌龟移到屏幕边缘。(点击查看完整说明)
       U3L06 Challenge 1 triangle: 使用乌龟命令模块的参数化版本，以100 像素为边长来创建一个三角形。(点击查看完整说明)
       U3L06 Challenge 1 triangle_2018: 使用乌龟命令模块的参数化版本，以100 像素为边长来创建一个三角形。(点击查看完整说明)
+      U3L06 Challenge 1 triangle_2019: 使用乌龟命令模块的参数化版本，以100 像素为边长来创建一个三角形。(点击查看完整说明)
       U3L06 Challenge 2 purple square: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
       U3L06 Challenge 2 purple square_2018: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
+      U3L06 Challenge 2 purple square_2019: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
       U3L06 Challenge 3 fill pink: 用你喜欢的颜色填充屏幕的背景。(点击查看完整说明)
       U3L06 Challenge 3 fill pink_2018: 用你喜欢的颜色填充屏幕的背景。(点击查看完整说明)
+      U3L06 Challenge 3 fill pink_2019: 用你喜欢的颜色填充屏幕的背景。(点击查看完整说明)
       U3L06 Challenge 5 overlapping circles: '创建这个图像时，只使用了dot() 和 penColor () 。但是,
         我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
       U3L06 Challenge 5 overlapping circles_2018: '创建这个图像时，只使用了dot() 和 penColor ()
+        。但是, 我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
+      U3L06 Challenge 5 overlapping circles_2019: '创建这个图像时，只使用了dot() 和 penColor ()
         。但是, 我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
       U3L06 Challenge 6 squiggles: '阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示画出曲线。
 
@@ -1461,55 +1528,79 @@ zh-CN:
       U3L06 Challenge 6 squiggles_2018: '阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示画出曲线。
 
 '
+      U3L06 Challenge 6 squiggles_2019: '阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示画出曲线。
+
+'
       U3L06 Challenge 7 smiley face: 使用 turnTo () 和 moveTo () 来帮助绘制笑脸。(点击查看完整说明)
       U3L06 Challenge 7 smiley face_2018: 使用 turnTo () 和 moveTo () 来帮助绘制笑脸。(点击查看完整说明)
+      U3L06 Challenge 7 smiley face_2019: 使用 turnTo () 和 moveTo () 来帮助绘制笑脸。(点击查看完整说明)
       U3L07 - Free Play Loops and Random: 自由游戏! 使用你从循环和随机中学到的东西, 来制作你自己的小场景。祝您玩得愉快。
       U3L07 - Free Play Loops and Random_2018: 自由游戏! 使用你从循环和随机中学到的东西, 来制作你自己的小场景。祝您玩得愉快。
+      U3L07 - Free Play Loops and Random_2019: 自由游戏! 使用你从循环和随机中学到的东西, 来制作你自己的小场景。祝您玩得愉快。
       U3L07 - allSeaGrass: 通过写循环drawAllSeagrass来添加50片海草到图像里。(点击查看完整说明)
       U3L07 - allSeaGrass_2018: 通过写循环drawAllSeagrass来添加50片海草到图像里。(点击查看完整说明)
+      U3L07 - allSeaGrass_2019: 通过写循环drawAllSeagrass来添加50片海草到图像里。(点击查看完整说明)
       U3L07 - createTriangleParam: 定义一个参数的函数, 来匹配使用函数并完成图像。(点击查看完整说明)
       U3L07 - createTriangleParam_2018: 定义一个参数的函数, 来匹配使用函数并完成图像。(点击查看完整说明)
+      U3L07 - createTriangleParam_2019: 定义一个参数的函数, 来匹配使用函数并完成图像。(点击查看完整说明)
       U3L07 - introSquare: 使用循环功能绘制正方形。然后添加另一个循环来绘制多个方块, 每一个方块旋转相同的角度。(点击查看完整说明)
       U3L07 - introSquare_2018: 使用循环功能绘制正方形。然后添加另一个循环来绘制多个方块, 每一个方块旋转相同的角度。(点击查看完整说明)
+      U3L07 - introSquare_2019: 使用循环功能绘制正方形。然后添加另一个循环来绘制多个方块, 每一个方块旋转相同的角度。(点击查看完整说明)
       U3L07 - loopsWithRandom: 增加循环的数字，来用白色填满屏幕。(点击查看完整说明)
       U3L07 - loopsWithRandom_2018: 增加循环的数字，来用白色填满屏幕。(点击查看完整说明)
+      U3L07 - loopsWithRandom_2019: 增加循环的数字，来用白色填满屏幕。(点击查看完整说明)
       U3L07 - randomSquare: 使用循环绘制图形。(点击查看完整说明)
       U3L07 - randomSquare_2018: 使用循环绘制图形。(点击查看完整说明)
+      U3L07 - randomSquare_2019: 使用循环绘制图形。(点击查看完整说明)
       U3L07 - sunBeams: 通过在 drawAllSunbeams 函数中添加循环，来添加100束阳光到图片里。(点击查看完整说明)
       U3L07 - sunBeams_2018: 通过在 drawAllSunbeams 函数中添加循环，来添加100束阳光到图片里。(点击查看完整说明)
+      U3L07 - sunBeams_2019: 通过在 drawAllSunbeams 函数中添加循环，来添加100束阳光到图片里。(点击查看完整说明)
       U3L07 - topDownDesign: 当你对这个程序的结构感到满意时, 继续下一个练习。(点击查看完整说明)
       U3L07 - topDownDesign_2018: 当你对这个程序的结构感到满意时, 继续下一个练习。(点击查看完整说明)
+      U3L07 - topDownDesign_2019: 当你对这个程序的结构感到满意时, 继续下一个练习。(点击查看完整说明)
       U3L08 - fish: 添加一个参数到 drawFish, 来更改所画的鱼的大小。(点击查看完整说明)
       U3L08 - fish_2018: 添加一个参数到 drawFish, 来更改所画的鱼的大小。(点击查看完整说明)
+      U3L08 - fish_2019: 添加一个参数到 drawFish, 来更改所画的鱼的大小。(点击查看完整说明)
       U3L08 - freePlay: 通过增加对新函数的参数调用来不断增加您的图像。（单击以查看完整的说明）
       U3L08 - freePlay_2018: 通过增加对新函数的参数调用来不断增加您的图像。（单击以查看完整的说明）
+      U3L08 - freePlay_2019: 通过增加对新函数的参数调用来不断增加您的图像。（单击以查看完整的说明）
       U3L08 - introUnderTheSea with comments: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       U3L08 - introUnderTheSea: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       U3L08 - introUnderTheSea_2018: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
+      U3L08 - introUnderTheSea_2019: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       U3L08 - randomInput: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
       U3L08 - randomInput_2018: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
+      U3L08 - randomInput_2019: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
       U3L08 - squareTwoParams: 调用 drawSquare () 画两个正方形。(点击查看完整说明)
       U3L08 - squareTwoParams_2018: 调用 drawSquare () 画两个正方形。(点击查看完整说明)
+      U3L08 - squareTwoParams_2019: 调用 drawSquare () 画两个正方形。(点击查看完整说明)
       U3L08 - starFish: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       U3L08 - triangleTwoParams: 调用 drawSquare () 画两个正方形。(点击查看完整说明)
       U3L08 how to add comments: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
       U3L08 how to add comments_2018: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
+      U3L08 how to add comments_2019: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
       U3L13 - Turtle move with button: 添加一个按钮，在点击时移动乌龟。（点击查看完整说明）
       U3L15 full clicker app: 完成你的遥控器游戏 ！（点击查看完整的说明）
       U3L2 Using Simple Commands (no tooltips): 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       U3L2 Using Simple Commands_2018: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
+      U3L2 Using Simple Commands_2019: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       U3L2_Turtle3by3Grid: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
       U3L2_Turtle3by3Grid_2018: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
+      U3L2_Turtle3by3Grid_2019: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
       U3L2_TurtleSquare_right: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
       U3L2_TurtleSquare_right_2018: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
+      U3L2_TurtleSquare_right_2019: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
       U4 Model App: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       U4 Model App_2018: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
+      U4 Model App_2019: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       U4 Model Design 1: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       U4 Model Design 1_2018: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
+      U4 Model Design 1_2019: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       U4 vigenere cipher 2: 说明
       U4L02 - Objects - Template1: 模板
       U4L02 - Objects - Template1_2018: 模板
+      U4L02 - Objects - Template1_2019: 模板
       Underground Avoiding Lava: 熔岩隐藏在这些模块的下面, 你需要在前进之前把它掩盖起来。"如果"指令将在这里派上用场。在正确的位置添加
         "向前移动"指令来挖掘这些模块。
       Underground Avoiding Lava_2018: 熔岩隐藏在这些模块的下面, 你需要在前进之前把它掩盖起来。"如果"指令将在这里派上用场。在正确的位置添加
@@ -1564,7 +1655,12 @@ zh-CN:
       aE7: "如果你创建一个和这个很像的循环，但是往左转，而不是往右转，会怎样呢？\r\n\r\n你能重复它来画出波浪吗？"
       aE8: "现在，让我们把所有东西重复4次来画出这个画框。小心转角 -- 你不能只转90度！\r\n\r\n如果转60次3度，就会创建出一个半圆，什么样的代码能创建出1/4圆的转角？"
       allHallows2017: 通过绘制一个正方形320像素的边, 在蜡笔框中框住 Code.org 员工!
+      allthethings data blocks test: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings design mode elements: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings level dataTables: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: 做这个
+      allthethings_template_backed1: '备份模板#1. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。 '
+      allthethings_template_backed2: 备份模板#2. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       allthethings_ttscsf contained: 摘下所有的莴苣(只在有莴苣的时候)。
       artistDebugVideo1: 使用 "重复" 循环在水中添加波浪。
       artistFunctionsVideo1: 按照说明来做出你自己的函数

@@ -9,9 +9,13 @@ cs:
         grid: K zobrazení mřížky klikněte zde.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: K zobrazení mřížky klikněte zde.
       CSD U3 Variables Predict Where XY_callout:
         grid: K zobrazení mřížky klikněte zde.
       CSD U3 Variables Predict Where XY_2018_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY_2019_callout:
         grid: K zobrazení mřížky klikněte zde.
       Course 4 Artist 4_callout:
         repeat_full_circle: Zadej počet zombie k přemístění, aby vytvořily celý kruh
@@ -69,6 +73,17 @@ cs:
         edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Použij šipek k přemístění aktéra
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Přidej do svého programu tento blok!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Přidej do svého programu tento blok!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Přidej do svého programu tento blok!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Zde přidej svého nového tanečníka
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nový blok!
+        dance_callout_11_b: Nový blok!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Použij šipek k přemístění aktéra
       Dance_Party_01_callout:

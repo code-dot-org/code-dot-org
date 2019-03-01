@@ -42,16 +42,25 @@ sk:
         grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Kliknite sem pre zobrazenie mriežky.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY_callout:
         grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Kliknite sem pre zobrazenie mriežky.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Zmeňte číslo tu
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Zmeňte číslo tu
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Tu je kód
+        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 ellipse_callout:
@@ -60,10 +69,16 @@ sk:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Tu je kód
+        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Tu je kód
+        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 my-rect_callout:
@@ -74,35 +89,52 @@ sk:
         CSD_U3_rect_c2: Tu je tlačidlo "Spustiť".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Tu je kód
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Tu je kód
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Tu je kód
+        CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Pridajte váš kód sem
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Pridajte váš kód sem
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Pridajte váš kód sem
       CSD U6 light show predict_callout:
         CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Čo robí tento riadok?
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show_callout:
         CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show_2018_callout:
+        CSDUDL03P09: Čo robí tento riadok?
+      CSD U6 light show_2019_callout:
         CSDUDL03P09: Čo robí tento riadok?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Definujte začiatokHry tu
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Definujte začiatokHry tu
+      CSD U6 tugowar variables 1_2019_callout:
+        CSD_U6_startGame: Definujte začiatokHry tu
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Definujte movePlayer() tu
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Definujte movePlayer() tu
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Definujte movePlayer() tu
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Skontrolujte, či hráč vyhral
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       Counting_callout:
         New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
@@ -176,6 +208,19 @@ sk:
         Course_4_Playlab_For_Loops_4b_2: V tomto cvičení môžete zmeniť len "násobky" "for" slučiek.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Tento blok vám umožňuje prispôsobiť farbu takmer všetkého, čo vidíte! Pohrajte sa s číslami a uvidíte, čo sa stane!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Pridaj tento blok do svojho programu!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Pridaj tento blok do svojho programu!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Pridaj tento blok do svojho programu!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Pridaj svojho nového tanečníka sem
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nový blok!
+        dance_callout_11_b: Nový blok!
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Tu hľadaj blok "všetky kačice"
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Pre pohyb postavy použi šípky
       CourseF_PlayLab_vars10_callout:
@@ -380,6 +425,8 @@ sk:
         comment_highlight: Presuňte blok s komentárom odtiaľto do vášho kódu
       U3L08 how to add comments_2018_callout:
         comment_highlight: Presuňte blok s komentárom odtiaľto do vášho kódu
+      U3L08 how to add comments_2019_callout:
+        comment_highlight: Presuňte blok s komentárom odtiaľto do vášho kódu
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tento kód bude kontrolovať lávu, môžeš zadať príkaz pre pohyb dopredu?
       Underground Avoiding Lava_2018_callout:
@@ -423,7 +470,7 @@ sk:
       behaviors 5_callout:
         behaviors_edit: Pridaj kód k tomuto správaniu.
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
       course3_artist_functions_challenge1_callout:
         courseE_artist_functions_challenge1_callout1: Pokračujte v behu programu pridaním ďaľšieho kódu na jeho spodok.
         courseE_artist_functions_challenge1_callout2: Ak sa vám nepáči tento dizajn, zmeňte ho na čo len chcete!
@@ -681,11 +728,11 @@ sk:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
         4_5_Bee_Conditionals_2_2: Potrebujete trochu pomôcť? Kliknite sem pre naše nové VIDEONÁPOVEDY!
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
       courseD_bee_conditionals_challenge2_2018_callout:
-        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
       courseD_bee_conditionals_challenge2_2019_callout:
-        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Skús zopakovať bloky, ktoré posúvajú včelu dopredu pomocou tohoto cyklu.
       courseD_bee_debugging_challenge1_callout:
@@ -699,9 +746,9 @@ sk:
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Použite tento blok pre zber jedného kusu pokladu.  '
       courseD_farmer_while7_2018_callout:
-        courseD_farmer_while7_2018_PathAhead: Musíte použiť blok "biely chodník dopredu" pre vyriešenie tejto úlohy.
+        courseD_farmer_while7_2018_PathAhead: Pre vyriešenie tejto úlohy musíš použiť blok "pokiaľ tam je cesta vpred".
       courseD_farmer_while7_2019_callout:
-        courseD_farmer_while7_2018_PathAhead: Musíte použiť blok "biely chodník dopredu" pre vyriešenie tejto úlohy.
+        courseD_farmer_while7_2018_PathAhead: Pre vyriešenie tejto úlohy musíš použiť blok "pokiaľ tam je cesta vpred".
       courseD_maze_intro4_2019_callout:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko takýchto blokov ešte môžete použiť.
       courseD_maze_ramp1_callout:
@@ -773,6 +820,8 @@ sk:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné a možno ich vyriešite až na niekoľkatý pokus.
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné a možno ich vyriešite až na niekoľkatý pokus.
+      courseE_aboutme_5_callout:
+        courseE_aboutme_4_callout_1: Klikni!
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Začnime použitím tohto bloku pre vytvorenie prvého štvorca.
       courseE_artist_functions1_2018_callout:

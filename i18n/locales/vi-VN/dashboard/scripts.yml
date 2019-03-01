@@ -4178,6 +4178,8 @@ vi:
               name: Đa nguồn
             Relay Programming:
               name: Chương trình chuyển tiếp
+            Graph Paper Programming:
+              name: lập trình đồ thị trên giấy
         courseb-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4741,6 +4743,8 @@ vi:
               name: 'Chưa hoạt động: nhị phân'
             Artist Binary:
               name: Nghệ sĩ nhị phân
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4841,6 +4845,272 @@ vi:
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
         dani-test-script:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        csd2-2019:
+          description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong Kho Dữ liệu Web."
+          stages:
+            Digital Footprint:
+              name: Dấu vết số
+            Lists:
+              name: Danh sách
+            Clean Code and Debugging:
+              name: Làm sạch mã lệnh và gỡ lỗi
+            Styling Text with CSS:
+              name: Tạo phong cách cho văn bản với CSS
+              description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
+            Styling Elements with CSS:
+              name: Tạo phong cách cho các thành phần với CSS
+              description_student: Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ.
+        csd3-2019:
+          description_short: "Lập trình"
+          stages:
+            Drawing in Game Lab:
+              name: Bản vẽ trong Kho trò chơi
+              description_student: Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó.
+              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
+            Shapes and Randomization:
+              name: Hình dạng và tạo sự ngẫu nhiên
+            Variables:
+              name: Các biến
+            Booleans Unplugged:
+              name: Booleans
+            Conditionals:
+              name: Điều kiện
+            Project - Interactive Card:
+              name: 'Dự án: Thẻ tương tác'
+            Velocity:
+              description_student: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
+              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
+            Collision Detection:
+              name: Phát hiện va chạm
+              description_student: Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất.
+              description_teacher: Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất.
+            Complex Sprite Movement:
+              name: Di chuyển nhân vật phức tạp
+              description_student: 'Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. '
+              description_teacher: Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng.
+            Collisions:
+              name: Va chạm
+              description_student: Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
+              description_teacher: Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
+            Functions:
+              name: Các hàm
+            The Game Design Process:
+              name: Quá trình thiết kế trò chơi
+            Using the Game Design Process:
+              name: Sử dụng quy trình thiết kế trò chơi
+            Project - Design a Game:
+              name: Dự án - thiết kế một trò chơi
+        csd4-2019:
+          stages:
+            Analysis of Design:
+              name: Phân tích thiết kế
+            Understanding Your User:
+              name: Tìm hiểu về người dùng của bạn
+            Designing Apps for Good:
+              name: Thiết kế ứng dụng nhằm mục đích tốt
+            Market Research:
+              name: Nghiên cứu thị trường
+            Paper Prototypes:
+              name: Nguyên mẫu giấy
+            Prototype Testing:
+              name: Thử nghiệm nguyên mẫu
+            Testing the App:
+              name: Thử Ứng dụng
+            Improving and Iterating:
+              name: Cải thiện và Lặp lại
+        csd6-2019:
+          stages:
+            Making Music:
+              name: Tạo âm nhạc
+            Functions with Parameters:
+              name: Hàm và tham số
+        csp1-2019:
+          stages:
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
+            Personal Innovations:
+              name: Đổi mới sáng tạo cá nhân
+            Sending Binary Messages:
+              name: Gửi tin nhắn nhị phân
+            Sending Binary Messages with the Internet Simulator:
+              name: Gửi tin nhắn nhị phân với mô phỏng Internet
+            Number Systems:
+              name: Hệ thống các con số
+            Binary Numbers:
+              name: Số nhị phân
+            Sending Numbers:
+              name: Gửi các con số
+            Unit 1 Chapter 1 Assessment:
+              name: Phần 1 Chương 1 Đánh giá
+            The Internet:
+              name: Internet
+            The Need for Addressing:
+              name: Sự cần thiết cho các địa chỉ
+            Routers and Redundancy:
+              name: Bộ định tuyến và dự phòng
+            Packets and Making a Reliable Internet:
+              name: Gói dữ liệu và tạo một mạng Internet đáng tin cậy
+            The Need for DNS:
+              name: Sự cần thiết cho DNS
+            HTTP and Abstraction:
+              name: HTTP và hình ảnh trừu tượng
+            Practice PT - The Internet and Society:
+              name: Thực hành PT - Internet và xã hội
+            Unit 1 Chapter 2 Assessment:
+              name: Phần 1 Chương 2 Đánh giá
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Byte và kích thước tập tin
+            Encoding B&W Images:
+              name: Mã hóa B&W hình ảnh
+            Encoding Color Images:
+              name: Mã hóa hình ảnh màu sắc
+        csp3-2019:
+          description_short: Lập trình
+          stages:
+            The Need For Programming Languages:
+              name: Sự cần thiết cho ngôn ngữ lập trình
+            The Need for Algorithms:
+              name: Sự cần thiết cho các thuật toán
+            Creativity in Algorithms:
+              name: Sự sáng tạo trong thuật toán
+            Using Simple Commands:
+              name: Sử dụng các câu lệnh đơn giản
+            Creating Functions:
+              name: Tạo ra hàm
+            Functions and Top-Down Design:
+              name: Chức năng và thiết kế từ trên xuống dưới
+            APIs and Function Parameters:
+              name: API và các thông số chức năng
+            Creating functions with Parameters:
+              name: Tạo ra Chức năng với các tham số
+            Looping and Random Numbers:
+              name: Vòng lặp và biến số ngẫu nhiên
+            Practice PT - Design a Digital Scene:
+              name: Thực hành PT - thiết kế một cảnh kỹ thuật số
+            Unit 3 Chapter 1 Assessment:
+              name: Phần 3 Chương 1 Đánh giá
+        csp4-2019:
+          stages:
+            What is Big Data?:
+              name: Dữ liệu lớn là gì?
+            Finding Trends with Visualizations:
+              name: Việc tìm kiếm các xu hướng với kiểu trực quan
+            Check Your Assumptions:
+              name: Kiểm tra các giả định của bạn
+            Rapid Research - Data Innovations:
+              name: Nghiên cứu nhanh chóng - Đổi mới dữ liệu
+            Identifying People with Data:
+              name: Xác định người bằng dữ liệu
+            The Cost of Free:
+              name: Chi phí cho miễn phí
+            Encryption with Keys and Passwords:
+              name: Mã hóa với phím và mật khẩu
+            Public Key Crypto:
+              name: Mật mã khóa chìa khoá chung
+            Rapid Research - Cybercrime:
+              name: Nghiên cứu nhanh - tội phạm mạng
+        csp5-2019:
+          stages:
+            Buttons and Events:
+              name: Các nút và các sự kiện
+            Multi-screen Apps:
+              name: Ứng dụng đa màn hình
+            'Building an App: Multi-Screen App':
+              name: 'Xây dựng một ứng dụng: ứng dụng đa màn hình'
+            Controlling Memory with Variables:
+              name: Bộ nhớ kiểm soát với các biến số
+            'Building an App: Clicker Game':
+              name: 'Xây dựng một ứng dụng: trò chơi Clicker'
+            Unit 5 Assessment 1:
+              name: Phần 5 Đánh giá 1
+            User Input and Strings:
+              name: Đầu vào và chuỗi người dùng
+            '"If" Statements Unplugged':
+              name: 'Câu lệnh "If"'
+            Boolean Expressions and "If" Statements:
+              name: Biểu thức boolean và câu lệnh "If"
+            '"if-else-if" and Conditional Logic':
+              name: 'If-else-if và logic có điều kiện'
+            'Building an App: Color Sleuth':
+              name: 'Xây dựng một ứng dụng: màu Sleuth'
+            Unit 5 Assessment 2:
+              name: Phần 5 Đánh giá 2
+            While Loops:
+              name: Vòng lặp "trong khi"
+            Loops and Simulations:
+              name: Vòng lặp và mô phỏng
+            Introduction to Arrays:
+              name: Giới thiệu Danh sách
+            'Building an App: Image Scroller':
+              name: 'Xây dựng một ứng dụng: Cuộn hình ảnh'
+            Unit 5 Assessment 3:
+              name: Phần 5 Đánh giá 3
+            Processing Arrays:
+              name: Mảng xử lý
+            Functions with Return Values:
+              name: Chức năng với các giá trị trả lại
+            'Building an App: Canvas Painter':
+              name: 'Xây dựng một ứng dụng: Hoạ sĩ Canvas'
+            Unit 5 Assessment 4:
+              name: Phần 5 Đánh giá 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
+        csp-explore-2019:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Khám phá các PT Prep - xem xét các tác vụ
+            Explore PT - Making a Plan:
+              name: Khám phá các PT - lập một kế hoạch
+            Explore PT - Complete the Task:
+              name: Khám phá các PT - hoàn thành nhiệm vụ
+        csp-create-2019:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Tạo phần chuẩn bị PT - xem xét các tác vụ
+            Create PT Prep - Making a Plan:
+              name: Tạo phần chuẩn bị PT - lập kế hoạch
+            Create PT - Complete the Task:
+              name: Tạo PT - hoàn thành nhiệm vụ
+        csppostap-2019:
+          description_short: Tìm hiểu để thu thập và sử dụng dữ liệu trong các ứng dụng ở Kho ứng dụng.
+          stages:
+            Intro to Data:
+              name: Giới thiệu về dữ liệu
+            Good and Bad Data Visualizations:
+              name: Kiểu trực quan của dữ liệu tốt và xấu
+            Making Data Visualizations:
+              name: Tạo hình ảnh dự liệu hoá
+            Discover a Data Story:
+              name: Khám phá một câu chuyện dữ liệu
+            Cleaning Data:
+              name: Làm sạch dữ liệu
+            Creating Summary Tables:
+              name: Tạo bảng tóm tắt
+            Creating Javascript Objects:
+              name: Tạo đối tượng Javascript
+            Permanent Data Storage:
+              name: Lưu trữ dữ liệu vĩnh viễn
+            Reading Records:
+              name: Đọc các bản ghi
+            Deleting Records:
+              name: Xóa các bản ghi
+            Updating Records:
+              name: Cập nhật các bản ghi
+            Importing and Exporting Data:
+              name: Nhập và xuất dữ liệu
+            Visualizing Data:
+              name: Làm dự liệu hiển thị được
+            Sample Apps:
+              name: Ứng dụng mẫu
+            Final Project:
+              name: Dự án cuối cùng
+        csp1-pilot:
           stages:
             new stage:
               name: giai đoạn mới

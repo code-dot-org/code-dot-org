@@ -1399,6 +1399,31 @@ sv:
         Varje rad ska vara 50 bildpunkter lång.
       Course E MC Conditionals1: Du hittar mer värdefulla resurser under marken, men
         det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
+      CourseD_Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla
+        det i ”setup”-blocket.
+      CourseD_Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
+      CourseD_Dance_Party_03: Gör nu så att dansaren startar en ny rörelse efter 6
+        åtgärder!
+      CourseD_Dance_Party_04: Lägg till en bakgrundseffekt i ditt program.
+      CourseD_Dance_Party_05: Använda ett annat nytt block för att få dansaren att
+        ändra rörelse efter 2 åtgärder.
+      CourseD_Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup_dancer1”
+        för att dansa med katten.
+      CourseD_Dance_Party_08: Kan du göra båda bakgrundsdansarna i samma storlek?
+      CourseD_Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares
+        färg.
+      CourseD_Dance_Party_10: Gör så att också de övriga dansarna reagerar på musiken
+        med ”börjar imitera”-blocket.
+      CourseD_Dance_Party_11: "”Knapptryck uppåt”-blocket låter dig köra koden när
+        du trycker på uppåtpilen. Försök att få dansaren att göra en snabb rörelse
+        när du trycker uppåt."
+      CourseD_Dance_Party_11_5: Använd ”bara ankor”-blocken för att göra så att ankorna
+        dansar tillsammans.
+      CourseD_Dance_Party_11b: Gör så att roboten ”faller” en gång när du trycker
+        på högerpilen och ”reser sig” när du trycker på uppåtpilen. Genomför ”fall-ihop-res-upp”
+        så fort du kan!
+      CourseD_Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att
+        dela med dina vänner.
       CourseF_PlayLab_vars10: "Fri speltid! Här är alla variabler vi har lekt med
         så här långt, samt några fler om du vill ha dem. \r \r Notera att det nu finns
         så många block i vår verktygslåda att de måste organiseras!  Här har vi satt
@@ -1440,8 +1465,10 @@ sv:
         är så svårt. Låt dina poäng gå från 10 till 0 för att klara nivån.
       Crack Random Substitution: Instruktioner
       Crack Random Substitution_2018: Instruktioner
+      Crack Random Substitution_2019: Instruktioner
       Crack a Caesar Cipher: Instruktioner
       Crack a Caesar Cipher_2018: Instruktioner
+      Crack a Caesar Cipher_2019: Instruktioner
       Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det
         i ”setup”-blocket.
       Dance_Party_01_low: Dra ett ”gör ett nytt”-block till arbetsytan och koppla
@@ -2082,6 +2109,7 @@ sv:
         gång.'
       The Vigenere Cipher Widget: Instruktioner
       The Vigenere Cipher Widget_2018: Instruktioner
+      The Vigenere Cipher Widget_2019: Instruktioner
       The Vigenere Cipher: Instruktioner
       Total Artist Clone Me: 'Fritt spel: Här är de funktioner som du har skrivit,
         och några fler för dig att spela med. Rita något fantastiskt! Lek med pennbredden
@@ -2092,6 +2120,7 @@ sv:
       U4 vigenere cipher 2: Instruktioner
       U4L02 - Objects - Template1: Mall
       U4L02 - Objects - Template1_2018: Mall
+      U4L02 - Objects - Template1_2019: Mall
       Underground Avoiding Lava: Lava döljer sig under några av de här blocken, och
         du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt
         här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här

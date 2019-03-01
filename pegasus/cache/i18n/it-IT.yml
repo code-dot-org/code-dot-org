@@ -1,4 +1,5 @@
-"it-IT":
+---
+it-IT:
   hour_of_code: Ora del codice
   hello: Ciao a tutti
   'yes': Sì
@@ -61,7 +62,7 @@
   csedweek_map_signup: Iscrivi il tuo evento
   csedweek_map_search_placeholder: Cerca eventi per l'Ora del codice
   csedweek_map_search_search: Cerca
-  csedweek_map_search_reset: Ricomincia
+  csedweek_map_search_reset: Ripristina
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Eventi de L'Ora del Codice
   csedweek_map_legend_cs_tech_jam: Eventi speciali
@@ -419,7 +420,7 @@
   homepage_action_text_teachervideo: Guarda il video
   homepage_action_text_watchvideo: Guarda il video
   homepage_action_text_girlvideo: Convinci una ragazza a partecipare
-  homepage_action_text_learn: Inizia ad apprendere
+  homepage_action_text_learn: Inizia a imparare
   homepage_action_text_signpetition: Firma la petizione
   homepage_action_text_wincelebritychat: Vinci una conversazione con una celebrità
   homepage_signpetition_dropdown: Firma la nostra petizione &#x25BE;
@@ -470,7 +471,7 @@
   homepage_slot_text_link_donate: Fai una donazione
   homepage_slot_text_link_shop: T-shirts, cappellini & altro
   homepage_slot_text_link_administrators: Porta l'informatica nella tua scuola
-  homepage_header_codestudio: Creazioni degli studenti di Code.org
+  homepage_gallery_header: Oltre %{project_count} milioni di progetti creati in Code.org
   homepage_header_donors: Code.org ringrazia i suoi sostenitori
   homepage_donors_seall: Mostra tutto
   homepage_donors_donate: Sostienici
@@ -2355,167 +2356,3 @@
   page_not_found_description: La pagina che stai cercando non esiste a questo indirizzo.
     Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage.
   page_not_found_button: Ritorna alla homepage
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_gallery_header: Over %{project_count} million Code.org projects created
-  minecraft_start_tutorial: Start tutorial
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
-    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
-    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
-    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
-    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
-    from the Minecraft team. Get a head start on thinking through what you need to
-    bring Hour of Code to young people during Computer Science Education week (December
-    4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
-    target='_blank'>Sign up today</a>.
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
-    target='_blank'>access the resources</a> they found most valuable.
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: CS Discoveries ('17-'18)
-  csd_2018_category_name: CS Discoveries ('18-'19)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
-    curriculum, training and coding in Minecraft.'
-  hoc2018_mc_educators_box3_title: Attend a free student workshop
-  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
-    Hour of Code workshop. For participants of all skill levels, ages six and up.
-  hoc2018_mc_educators_box3_button: Find a workshop
-  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
-    and computer science education resources from Microsoft.
-  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
-  hoc2018_dance_party_subheading: Help translate Dance Party
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer* is a comprehensive childhood-to-career program to inspire, educate,
-    and train low-income and other disadvantaged children and young people to pursue
-    careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
-    more</a>
-  hoc2018_dance_amazon_about_future_engineer_title: About Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
-    to career program to increase access to computer science education. Find information
-    on how to get involved in our summer camps, high school CS classes, scholarships,
-    and internships.
-  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
-  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
-    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
-    are available for students from kindergarten through 8th grade in multiple locations
-    in the US for summer 2019.
-  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
-  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
-  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
-    of $10,000 per year for underserved students who have successfully completed or
-    are currently enrolled in an AP CS course and intend to study a CS degree at a
-    4-year college or university in the United States.
-  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
-  hoc2018_dance_amazon_internships_description: Applications are now open for summer
-    2019 Amazon Future Engineer internships. Interns will partner with a manager,
-    technical mentor, and other interns to innovate and create new features and services
-    on behalf of Amazon customers. Internships are available in the US and Canada.
-  hoc2018_dance_amazon_internships_button: Find an internship
-  hoc2018_dance_amazon_k8_programs_title: K-8 programs
-  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
-  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used
-    in this tutorial are not sponsoring or endorsing Amazon as part of licensing use
-    of their music to Code.org.\n\n"

@@ -43,6 +43,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @script = @custom_script
     @script_level = @custom_s1_l1
+
+    pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
+    @pilot_script_level = create :script_level, script: pilot_script
+    @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
+    pilot_section = create :section, user: @pilot_teacher, script: pilot_script
+    @pilot_student = create(:follower, section: pilot_section).student_user
   end
 
   setup do
@@ -92,7 +98,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   def get_show_script_level_page(script_level)
-    get :show, params: {
+    get :show, params: script_level_params(script_level)
+  end
+
+  def script_level_params(script_level)
+    {
       script_id: script_level.script,
       stage_position: script_level.stage.absolute_position,
       id: script_level.position
@@ -1716,4 +1726,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
     assert_nil assigns(:view_options)[:is_challenge_level]
   end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'signed out user cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :student,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'student cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'teacher without pilot access cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'pilot teacher can view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'pilot student can view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'levelbuilder can view pilot script level'
 end

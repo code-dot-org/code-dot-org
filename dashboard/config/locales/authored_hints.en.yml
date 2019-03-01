@@ -162,7 +162,19 @@ en:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
         2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
+        2-3_Bee_Conditionals_14_c: |-
+          Try breaking this up into two separate chunks:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Gather nectar 3 times
+             - Move forward 5 times
+             - Check to see if nectar, if so: get it
+             - Turn left
+
+          2) Make honey
+             - Move forward one time
+             - Make two honey
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -339,7 +351,10 @@ en:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Each repeated shape is the combination of **half of a hexagon**, followed by **2/3 of a triangle**. '
         Course_4_Artist_12_b: 'The unit shape is almost the same as in the last puzzle, except the half-hexagon is a bit bigger. '
-        Course_4_Artist_12_c: "1) The first three lines are 60 pixels long and you need to turn 60 degrees.  \n 2) The next two lines are 80 pixels long and you need to turn 120 degrees "
+        Course_4_Artist_12_c: |-
+          1) The first three lines are 60 pixels long and you need to turn 60 degrees.
+
+          2) The next two lines are 80 pixels long and you need to turn 120 degrees
         Course_4_Artist_12_d: |-
           **Solution:**
 
@@ -3475,6 +3490,99 @@ en:
         mc_9_a: Are you facing the right way? The `destroy block` mines the block in front of you.
         mc_9_b: The black specks in the wall are coal! Use `destroy block` on these to mine the coal.
         mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * Make sure a dancer appears on the screen.
+
+          *This level ends after 4 measures.*
+        challenges: |-
+          **Optional Challenges**
+          * Choose a different song to play.
+          * Rename your dancer.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * The dancer needs to switch to a new move after 4 measures.
+
+          *The level ends after 7 measures.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.
+
+          *The level ends after 11 measures.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to make the background effect change sometime before the seventh measure of the song.
+
+          *This level ends after 9 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.
+      CourseD_Dance_Party_05_authored_hint: {}
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to have at least two dancers.
+
+          *This level ends after 5 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Add a third dancer (or as many as you want!)
+          * Make all of your dancers perform different moves at different points in the song.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Two dancers need to have a size other than 100.
+
+          *This level ends after 5 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experiment by changing other properties (width, height, rotation, etc.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Change the tint of at least one dancer.
+
+          *This level ends after 7 measures.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Properties for two or more dancers must change.
+
+          *This level ends after 7 measures.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Just be creative!
+
+          *This level ends after 7 measures.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Just be creative!
+
+          *This level ends after 7 measures.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.
+
+          *This level ends after 7 measures.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
       D_Frozen_nested3_authored_hint:
@@ -5789,10 +5897,7 @@ en:
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
         courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
-        courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml> loop.
+        courseA_artist_loops7_c: Remember you can put more than one block in a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop.
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
         courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
@@ -5832,7 +5937,9 @@ en:
         courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: "The block you add should go inside of the \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
+        courseA_artist_loops9_b: |-
+          The block you add should go inside of the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> loop.
         courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
@@ -5929,10 +6036,10 @@ en:
 
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
+        courseA_collector_loops3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop!
         courseA_collector_loops3_b: Remember, you can put more than 1 block inside a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop.
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
+        courseA_collector_loops3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop!
         courseA_collector_loops3_b: Remember, you can put more than 1 block inside a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop.
       courseA_collector_loops3_2019_authored_hint:
         courseA_collector_loops3_a: "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
@@ -6081,6 +6188,14 @@ en:
           After you have moved to a square with treasure, use this block to pick it up.
 
           <xml>  <block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Use this block to control what happens when the actors collide.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
       courseA_forVideoTest_artist_authored_hint: {}
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
@@ -6104,7 +6219,10 @@ en:
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
+        courseA_harvester_loops2_a: |-
+          Your code will have **four** `move west` <xml><block type="maze_moveWest"/></xml> blocks
+
+          and **four** `pick corn` <xml><block type="harvester_corn"/></xml> blocks.
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Your code will have **four** `move west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
@@ -6527,17 +6645,11 @@ en:
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
         courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.
-        courseA_maze_seq13_c: |-
-          These <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
+        courseA_maze_seq13_c: These <xml><block type="maze_moveNorth"/></xml><xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
         courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.
-        courseA_maze_seq13_c: |-
-          These <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
+        courseA_maze_seq13_c: These <xml><block type="maze_moveNorth"/></xml><xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
         courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.
@@ -6662,7 +6774,7 @@ en:
           </block>
           </xml>
       courseA_playLab_events2_2018_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_a: Look for a block that makes the dog say something.
         courseA_playLab_events2_b: |-
           This is the code you need to complete this puzzle:
 
@@ -6677,7 +6789,7 @@ en:
           </block>
           </xml>
       courseA_playLab_events2_2019_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_a: Look for a block that makes the dog say something.
         courseA_playLab_events2_b: |-
           This is the code you need to complete this puzzle:
 
@@ -7810,14 +7922,17 @@ en:
         courseB_iceage_loops2_c: Follow this path to get Scrat to the acorn.
       courseB_iceage_loops3_authored_hint:
         courseB_iceage_loops3_a: |-
-          Use this new block!
-           <xml><block type="controls_repeat_simplified_dropdown">
+          Use this new block! <xml><block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">5</title>
               </block></xml>
         courseB_iceage_loops3_b: |-
-          To repeat code, drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          To repeat code, drag out a `repeat` loop,
+
+          <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
-            </block></xml>loop, then put the block you want inside of it.
+            </block></xml>
+
+          then put the block you want inside of it.
       courseB_iceage_loops3_2019_authored_hint:
         courseB_iceage_loops3_a: |-
           Use this new block!
@@ -8900,6 +9015,9 @@ en:
       courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
         courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
+        courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
       courseC_PlayLab_eventsFP_authored_hint:
         idea1: |-
           *Need an idea?*
@@ -9565,6 +9683,22 @@ en:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: You can use more than one `collect` block at each space.
         courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve the puzzle!
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Use this block to control what happens when the actors collide.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseC_data wizard_authored_hint:
+        courseA_playLab_events7_a: |-
+          Use this block to control what happens when the actors collide.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
       courseC_external_events_authored_hint: {}
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -12531,14 +12665,14 @@ en:
         courseD_iceage_loops2_c: Follow this path to get Scrat to the acorn.
       courseD_iceage_loops3_authored_hint:
         courseB_iceage_loops3_a: |-
-          Use this new block!
-           <xml><block type="controls_repeat_dropdown">
+          Use this new block! <xml><block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">5</title>
             </block></xml>
         courseB_iceage_loops3_b: To repeat code, drag out a `repeat` loop, then put the block you want repeated inside.
       courseD_iceage_loops3_2019_authored_hint:
         courseB_iceage_loops3_a: |-
           Use this new block!
+
            <xml><block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">5</title>
             </block></xml>
@@ -15050,7 +15184,7 @@ en:
         courseF_artist_for_challenge2_c: 'The `for loop` goes from 5 to 250 by 2. '
         courseF_artist_for_challenge2_a: The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.
         courseF_artist_for_challenge2_b: The code for this is simpler than you might think.  Just set the color inside the for loop, move forward, then turn.
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **Solution:**
 
           <xml>
@@ -15139,8 +15273,6 @@ en:
               </next>
             </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'The `for loop` goes from 5 to 250 by 2. '
         courseF_artist_for_challenge2_a: The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.

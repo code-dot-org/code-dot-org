@@ -17,7 +17,7 @@ it:
         course1:
           title: Corso 1
           description: Il Corso 1 è rivolto a studenti che stanno iniziando a leggere. Gli studenti creano programmi che sviluppano la capacità di risolvere problemi e di perseverare su problemi difficili, e permettono loro di collaborare con altri. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima e la seconda elementare.
-          description_short: Il corso 1 è rivolto a chi sta iniziando a leggere.
+          description_short: Introduzione all'informatica per bambini che stanno iniziando a leggere.
           description_audience: Da 4 anni in su (pre-scolare)
           stages:
             'Artist: Loops':
@@ -59,7 +59,7 @@ it:
         course2:
           title: Corso 2
           description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla terza elementare.
-          description_short: Il corso 2 è rivolto a studenti che sanno leggere.
+          description_short: Introduzione all'informatica per studenti che sanno già leggere.
           description_audience: Dai 6 anni in su (è necessario saper leggere)
           stages:
             'Artist: Debugging':
@@ -103,7 +103,7 @@ it:
         course3:
           title: Corso 3
           description: Il Corso 3 è rivolto a studenti che hanno già svolto il Corso 2. Gli studenti approfondiscono i concetti della programmazione introdotti nei corsi precedenti e imparano a definire soluzioni flessibili per problemi complessi. Alla fine del corso gli studenti creano giochi interattivi e storie da condividere con tutti. Il corso è raccomandato a partire dalla quarta elementare.
-          description_short: Il Corso 3 è la continuazione del Corso 2.
+          description_short: Entra ancora più a fondo nella programmazione creando giochi e storie interattive e imparando concetti nuovi come le funzioni. È la continuazione del Corso 2.
           description_audience: Da 8 anni in su (dopo il Corso 2)
           stages:
             Artist:
@@ -179,7 +179,7 @@ it:
         course4:
           title: Corso 4
           description: Il corso 4 è rivolto agli studenti che hanno già seguito i corsi 2 e 3. Gli studenti imparano come affrontare problemi di maggiore complessità e a combinare diversi concetti per risolvere i diversi problemi proposti. Una volta completato questo corso, gli studenti saranno in grado di creare programmi abbastanza complessi, anche con l'utilizzo di cicli con contatore e funzioni con parametri.
-          description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già svolto i Corsi 2 e 3.
+          description_short: Costruisci programmi più complessi imparando concetti come variabili, cicli con contatore e funzioni con parametri. È la continuazione del corso 3.
           description_audience: Da 10 anni in su (dopo il Corso 3)
           stages:
             Artist:
@@ -2661,6 +2661,8 @@ it:
               name: Intelligenza Collettiva
             Relay Programming:
               name: Programmazione a Staffetta
+            Graph Paper Programming:
+              name: Programmazione su carta a quadretti
         courseb-2018:
           title: Corso B (2018)
           assignment_family_title: Corso B
@@ -3006,16 +3008,26 @@ it:
           stages:
             Creating Functions:
               name: Creazione di funzioni
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp-explore-2018:
+          stages:
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         csp4-2018:
           stages:
             Simple Encryption:
               name: Crittografia semplice
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         csp5-2018:
           stages:
             While Loops:
               name: Cicli "Mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         spritelab:
           stages:
             Alien Dance Party - Input:
@@ -3185,6 +3197,12 @@ it:
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Infine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             The Artist:
               name: L'artista
+            Events with Sprite Lab:
+              name: Eventi con il Laboratorio dei personaggi
+            Loops with the Artist:
+              name: Cicli con l'Artista
+            Sprite Lab Behaviors:
+              name: Comportamenti del Laboratorio dei personaggi
         dance-low:
           stages:
             Dance Party:
@@ -3236,6 +3254,8 @@ it:
               name: 'Artista: Binario'
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+            Dance Party:
+              name: Ballando col codice
         coursee-2019:
           description: Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari.
           description_audience: 'Da 8 a 12 anni'
@@ -3446,6 +3466,10 @@ it:
               name: Braccialetti Binari
             'End of Course Project: Play Lab':
               name: 'Progetto di fine corso: Laboratorio'
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
@@ -3518,6 +3542,8 @@ it:
               name: 'Eventi'
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
+            'Loops: Getting Loopy':
+              name: 'Cicli: Diventare Ripetitivi'
         pre-express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
           stages:
@@ -3555,3 +3581,68 @@ it:
               name: 'Correzione Errori (Debugging)'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
+        csd2-2019:
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
+          stages:
+            Lists:
+              name: Liste
+        csd3-2019:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Functions:
+              name: Funzioni
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funzioni con parametri
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Sondaggi
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Innovazione personale
+            Number Systems:
+              name: Sistema di numerazione
+            The Internet:
+              name: Internet
+        csp2-2019:
+          stages:
+            Text Compression:
+              name: Compressione del Testo
+        csp3-2019:
+          description_short: Programmazione
+          stages:
+            Creating Functions:
+              name: Creazione di funzioni
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Crittografia semplice
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Cicli "Mentre"
+            Introduction to Arrays:
+              name: Introduzione agli array
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp-explore-2019:
+          stages:
+            Mid-Year Survey:
+              name: Sondaggio di metà anno

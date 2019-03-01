@@ -2740,16 +2740,16 @@ pt-BR:
           e fazer os outros desaparecerem. Você decide!
     iceage_events:
       1:
-        text: 'Agora, vamos aprender um pouco sobre algo que todos os programadores
-          de jogos usam todos os dias: os eventos. Um evento diz ao seu programa que
-          ele deve ouvir quando algo acontece e, quando essa coisa acontece, ele realiza
-          uma ação.'
+        text: Agora vamos aprender sobre algo que todos os programadores de jogo usam
+          todos os dias. Eles são chamados eventos. Um evento diz ao seu programa
+          para ouvir quando algo acontece e quando isso acontece, o jogo executa uma
+          ação.
       2:
         text: 'Alguns exemplos de eventos são: detectar um clique do mouse, o toque
           de uma tecla de direção ou um toque na tela.'
       3:
         text: Aqui, vamos fazer seu personagem dizer alguma coisa quando o jogador
-          clicar nele. Vamos usar o bloco "quando clicado" e o bloco "diga" anexado
+          clicar nele. Vamos usar o bloco "quando clicado" e o bloco "diga" ligado
           a ele. Quando o jogador clicar, todos os blocos anexados a esse bloco serão
           executados.
       4:
@@ -2877,22 +2877,21 @@ pt-BR:
         image: notes/applab_intro_welcome_1.png
         text: Meu nome é Mei'lani. Eu faço estágio no code.org e também sou estudante
           de ciência da computação. Eu gosto de ciência da computação porque é muito
-          criativo. Eu posso ser a solucionadora de problemas. Eu posso fazer tudo
-          funcionar da maneira como eu quero. Mas eu também posso ser a designer.
-          Eu posso ser a artista e escolher tudo no âmbito criativo da ciência da
-          computação.
+          criativo. Eu sou a solucionadora de problemas. Eu posso fazer tudo funcionar
+          da maneira como eu quero. Mas eu também posso ser a designer. Eu posso ser
+          a artista e escolher tudo no âmbito criativo da ciência da computação.
       2:
-        text: Fazer seus próprios aplicativos é fácil com o Laboratório de Apps! Tanto
-          se você for novo em programação ou se você já tiver alguma experiência.
-          O Laboratório de Apps é uma ótima ferramenta para construir novos apps e
-          compartilhá-los com seus amigos.
+        text: Fazer seus próprios aplicativos é fácil com o Laboratório de Aplicativo!
+          Tanto se você for novo em programação ou se você já tiver alguma experiência.
+          O Laboratório de Aplicativo é uma ótima ferramenta para construir novos
+          apps e compartilhá-los com seus amigos.
       3:
-        text: Este é o Laboratório de Apps. No lado esquerdo está o seu app. No lado
-          direito está o código que irá fazê-lo rodar. Você pode construir o seu programa
-          arrastando blocos da caixa de ferramentas. Para começar você terá apenas
-          um bloco chamado 'definirPropriedade'.
+        text: Este é o Laboratório de Aplicativo. No lado esquerdo está o seu app.
+          No lado direito está o código que irá fazê-lo rodar. Você pode construir
+          o seu programa arrastando blocos da caixa de ferramentas. Para começar você
+          terá apenas um bloco chamado 'definirPropriedade'.
       4:
-        text: O bloco de definir prioridade muda a aparência dos elementos na sua
+        text: O bloco de definir propriedade muda a aparência dos elementos na sua
           tela. Como os botões, rótulos, ou mesmo a própria tela. Primeiro você precisa
           decidir qual elemento você deseja alterar. Se você passar o mouse por cima
           de um elemento no seu app você pode ver o nome ou ID aqui. Então selecione
@@ -2902,9 +2901,9 @@ pt-BR:
           seu texto, cor de fundo ou tamanho da fonte. Você pode ver a lista completa
           e escolher qual propriedade você deseja alterar na segunda lista de seleção.
       6:
-        text: A última lista é onde você irá escrever o valor que você deseja usar.
-          O bloco irá fazer sugestões para você. Mas você mesmo sempre pode digitar
-          cores ou números diferentes.
+        text: A última lista de seleção é onde você irá escrever o valor que você
+          deseja usar. O bloco irá fazer sugestões para você. Mas você mesmo sempre
+          pode digitar cores ou números diferentes.
       7:
         text: 'Assim que você terminar, o bloco se lê como uma sentença: ''Defina
           a cor de fundo do botão 1 para verde''. Clique em executar para ver as mudanças
@@ -2912,7 +2911,7 @@ pt-BR:
           mais blocos para alterar outras coisas sobre o seu app. Como o texto!'
       8:
         text: Para este tutorial vamos trabalhar no modo de blocos mas o Laboratório
-          de Apps também suporte trabalhar com texto.
+          de Aplicativo também suporta trabalhar com texto.
       9:
         text: De qualquer maneira você vai estar programando em JavaScript, a linguagem
           da web. Cada nível tem um objetivo, instruções e uma imagem do que você
@@ -2924,7 +2923,7 @@ pt-BR:
         text: Assim que você tiver completado o objetivo para este nível clique em
           Terminar para seguir em frente. Isto é tudo! Aperte o botão laranja "continue"
           para ir para o próximo nível e comece sua aventura com um Laboratório de
-          Apps!
+          Aplicativo!
     applab_intro_events:
       1:
         text: Apps são muito legais porque é como começar o seu próprio negócio. Quero
@@ -2935,8 +2934,8 @@ pt-BR:
           respondendo a eventos! Eventos são ações de usuário como clicar em um botão,
           rolar por um menu, ou passar o mouse sobre uma imagem. Apps interativos
           precisam de maneiras para responder a eventos, como tocar um som quando
-          eu clico neste botão. Para fazer isto no Laboratório de Apps você vai precisar
-          usar um novo bloco chamado 'noEvento'.
+          eu clico neste botão. Para fazer isto no Laboratório de Aplicativo você
+          vai precisar usar um novo bloco chamado 'noEvento'.
       3:
         text: Este programa define a tela para azul. Eu quero que a tela fique verde
           quando eu clicar neste botão. Primeiro eu vou precisar arrastar um bloco
@@ -2950,8 +2949,8 @@ pt-BR:
           fundo da tela. Você pode ler este bloco como uma frase: "No evento em que
           o botão é clicado execute todo este código."'
       6:
-        text: Vamos testá-lo. Blocos fora de um noEvento ainda executam imediatamente
-          para que a tela inicie azul.
+        text: Vamos testar. Blocos fora de um noEvento ainda executam imediatamente,
+          então a tela inicia azul.
       7:
         text: E quando eu clico no botão grande o código dentro do meu noEvento é
           executado e a minha tela fica verde.
@@ -2977,7 +2976,7 @@ pt-BR:
           ou animais.
       4:
         text: Assim que você tiver o som que você quiser, clique em "Escolher". Quando
-          este bloco é executado, ele irá tocar o som que você escolher.
+          este bloco é executado, ele irá tocar o som que você escolheu.
       5:
         text: Para adicionar imagens aos seus elementos você pode simplesmente usar
           o bloco definirPropriedade. Selecione a propriedade imagem na segunda lista
@@ -3018,8 +3017,8 @@ pt-BR:
         text: Se você adicionar um elemento para seu app por engano, apenas arraste-o
           para fora ou aperte delete.
       7:
-        text: Você pode adicionar telas inteiras para o seu app arrastando um elemento
-          de tela
+        text: Você pode adicionar telas completamente novas ao seu aplicativo arrastando
+          em um elemento de tela
       8:
         text: A partir da lista de seleção no topo você pode rapidamente alternar
           entre as telas que você criar.
@@ -3034,7 +3033,7 @@ pt-BR:
           você vai escrever código para que o botão alterne para a nova tela.
     applab_intro_share:
       1:
-        text: Agora que você aprendeu algumas noções básicas do Laboratório de Apps
+        text: Agora que você aprendeu algumas noções básicas do Laboratório de Aplicativo
           como adicionar botões, sons, imagens, texto e novas telas, você pode criar
           todos os tipos de aplicativos.
       2:
@@ -3056,15 +3055,15 @@ pt-BR:
           ou postar o link na galeria pública do code.org para que outras pessoas
           possam jogar e compartilhar.
       6:
-        text: Você apenas arranhou a superfície do que o Laboratório de Apps pode
-          fazer. O Laboratório de Apps Completo tem interações de usuário ainda mais
-          avançadas, novos elementos de telas e até mesmo um banco de dados interno
-          para que você possa rapidamente construir aplicativos completos. Em "code.org/applab"
-          você irá encontrar a ferramenta completa e um monte de ideias caso você
-          deseje continuar.
+        text: Você apenas arranhou a superfície do que o Laboratório de Aplicativo
+          pode fazer. O Laboratório de Aplicativo Completo tem interações de usuário
+          ainda mais avançadas, novos elementos de telas e até mesmo um banco de dados
+          interno para que você possa rapidamente construir aplicativos completos.
+          Em "code.org/applab" você irá encontrar a ferramenta completa e um monte
+          de ideias caso você deseje continuar.
       7:
         text: Obrigado por ter vindo ao longo do passeio. Agora vá construir e compartilhar
-          o seu primeiro app, e continue construindo apps com o Laboratório de Apps!
+          o seu primeiro app, e continue construindo apps com o Laboratório de Aplicativo!
     mc_2017_agent_intro:
       1:
         text: 'Stacy: Stampy, Lizzy, Preston - obrigado por ter vindo comigo. O que
@@ -3616,65 +3615,27 @@ pt-BR:
           quer resolver, e escrever o software que torna estas ideias realidade.
     hoc_dance_warmup:
       1:
-        text: 'Hora do Código | Festa da Dança: Aquecimento'
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
-      11: 
-      12: 
-      13: 
+        text: 'Hora do Código | Festa Dançante: Aquecimento'
     hoc_dance_events:
       1:
-        text: 'Hora do Código | Festa da Dança: Eventos'
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
+        text: 'Hora do Código | Festa Dançante: Eventos'
     hoc_dance_properties:
       1:
-        text: 'Hora do Código | Festa da Dança: Propriedades'
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
+        text: 'Hora do Código | Festa Dançante: Propriedades'
     mc_2018_intro:
-      1: 
-      2: 
       3:
         text: No lado esquerdo, você verá o mundo de Minecraft.
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
-      11: 
+      9:
+        text: Se você quiser tentar novamente, clique no botão de resetar para voltar
+          onde você começou.
+      10:
+        text: Se você precisa excluir um comando, basta arrastar o bloco da sua área
+          de trabalho de volta para a caixa de ferramentas. Lembre-se de clicar em
+          "Executar" para ver o seu código em ação.
     mc_2018_closing:
-      1: 
       2:
         text: 'Squid: Parabéns!'
       3:
         text: 'Netty: Você conseguiu! Parabéns!'
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
+      4:
+        text: 'Tomohawk: Parabéns!'

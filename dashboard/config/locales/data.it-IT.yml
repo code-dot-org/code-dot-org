@@ -828,6 +828,10 @@ it:
         hoc_dance_congrats: Ballando col codice - Parte la festa!
         c_and_c_great_to_create: È Fantastico Creare e Comportarsi Lealmente
         c_and_c_digital_sharing: Condivisione Digitale
+        what_is_cs: Cos'é l'informatica?
+        repeat_block: Uso del blocco Ripeti
+        writing_first_program: Scrivi il tuo primo programma per computer
+        what_is_an_event: Cos'è un evento?
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

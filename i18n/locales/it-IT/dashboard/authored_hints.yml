@@ -117,7 +117,17 @@ it:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Fai fatica a trovare la soluzione? Prova a trattare il fiore rosso come se fosse viola!
         2-3_Bee_Conditionals_14_b: Se consideri il fiore rosso come se fosse viola, allora puoi usare un ulteriore <i>ciclo</i> `ripeti ... volte`.
-        2-3_Bee_Conditionals_14_c: "Prova a suddividere il problema in due parti separate:<br>\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)<br>\n<b>1)</b> Raccogliere il nettare 3 volte<br>\n- Vai avanti di 5 passi<br>\n- Controlla se c'è del nettare, in caso affermativo: prendilo<br>\n- Gira a sinistra\n\n<b>2)</b> Produrre il miele<br>\n- Fai un passo avanti<br>\n- Produci due volte il miele"
+        2-3_Bee_Conditionals_14_c: |-
+          Prova a suddividere il problema in due parti separate:<br>
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)<br>
+          <b>1)</b> Raccogliere il nettare 3 volte<br>
+          - Vai avanti di 5 passi<br>
+          - Controlla se c'è del nettare, in caso affermativo: prendilo<br>
+          - Gira a sinistra
+
+          <b>2)</b> Produrre il miele<br>
+          - Fai un passo avanti<br>
+          - Produci due volte il miele
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Ricorda: i fiori viola possono avere una quantità di nettare pari a 0 oppure 1 e questa quantità può cambiare ogni volta che esegui il programma.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -275,7 +285,10 @@ it:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Ogni figura che viene ripetuta è formata dalla combinazione di **mezzo esagono** con **due terzi di un triangolo**. '
         Course_4_Artist_12_b: 'Ogni singola figura è quasi uguale a quella dell''ultimo esercizio, tranne per il fatto che il mezzo esagono è un po'' più grande. '
-        Course_4_Artist_12_c: "Le prime tre linee sono lunghe 60 pixel e devi ruotare di 60 gradi.<br>\n<br>\nLe ultime due linee sono lunghe 80 pixel e devi ruotare di 120 gradi. "
+        Course_4_Artist_12_c: |-
+          Le prime tre linee sono lunghe 60 pixel e devi ruotare di 60 gradi.<br>
+          <br>
+          Le ultime due linee sono lunghe 80 pixel e devi ruotare di 120 gradi. 
         Course_4_Artist_12_d: |-
           **Soluzione:**
 
@@ -2908,6 +2921,98 @@ it:
         mc_9_a: Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco davanti a te.
         mc_9_b: I granelli neri nel muro sono carbone! Usa il blocco `distruggi` su di essi per estrarre il carbone.
         mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto in cui ti trovi.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Assicurati che sullo schermo appaia un ballerino.
+
+          *L'esercizio terminerà dopo 4 battute.*
+        challenges: |-
+          **Sfide supplementari**
+          * Cambia brano musicale.
+          * Rinomina il tuo ballerino.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Il ballerino deve cambiare mossa dopo 4 battute.
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
+
+          *L'esercizio terminerà dopo 12 battute.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi fare in modo che lo sfondo cambi effetto prima della settima battuta della canzone.
+
+          *L'esercizio terminerà dopo 10 battute.*
+        challenges: |-
+          **Sfida supplementare**
+
+          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi avere almeno due ballerini.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Due ballerini devono avere una dimensione diversa da 100.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Modifica la tonalità di almeno un ballerino.
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Le proprietà di due o più ballerini devono essere cambiate.
+
+          *L'esercizio terminerà dopo 8 battute. *
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Sii semplicemente creativo!
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Sii semplicemente creativo!
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
+
+          *L'esercizio terminerà dopo 8 battute.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed` (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità del gatto</i>).
       D_Frozen_nested3_authored_hint:
@@ -4348,9 +4453,7 @@ it:
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
-        courseA_artist_loops7_c: |-
-          Ricorda: puoi mettere più di un blocco all'interno di un ciclo
-          <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>
+        courseA_artist_loops7_c: "Ricorda: puoi mettere più di un blocco all'interno di un ciclo\n<xml><block type=\"controls_repeat\"> <title name=\"TIMES\">???</title></block></xml>"
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
@@ -4389,7 +4492,10 @@ it:
         courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere la sequenza che si ripete.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Per disegnare il resto della scala, aggiungi un blocco al programma che trovi già scritto.
-        courseA_artist_loops9_b: "Il blocco che aggiungi devi inserirlo all'interno del ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block> </xml>"
+        courseA_artist_loops9_b: |-
+          Il blocco che aggiungi devi inserirlo all'interno del ciclo 
+
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block> </xml>
         courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere la sequenza che si ripete.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Per disegnare il resto della scala, aggiungi un blocco al programma che trovi già scritto.
@@ -4585,6 +4691,14 @@ it:
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
           <xml><block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_harvester_loops1_authored_hint:
         courseA_harvester_loops1_a: |-
           Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!
@@ -4594,7 +4708,10 @@ it:
           Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Il tuo codice avrà **quattro**  blocchi vai avanti verso ovest\n<xml><block type=\"maze_moveWest\"/></xml> e **quattro** blocchi \nper raccogliere le pannocchie  <xml> <block type=\"harvester_corn\"/> </xml> "
+        courseA_harvester_loops2_a: |-
+          Il tuo codice avrà **quattro**  blocchi vai avanti verso ovest
+          <xml><block type="maze_moveWest"/></xml> e **quattro** blocchi 
+          per raccogliere le pannocchie  <xml> <block type="harvester_corn"/> </xml> 
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Il tuo codice avrà **quattro**  blocchi vai avanti verso ovest\n<xml><block type=\"maze_moveWest\"/></xml> e **quattro** blocchi \nper raccogliere le pannocchie  <xml> <block type=\"harvester_corn\"/> </xml> "
       courseA_harvester_loops3_authored_hint:
@@ -4994,17 +5111,11 @@ it:
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito per tracciare il tuo percorso dall'uccellino fino al maialino.
         courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere blocchi e fai eseguire il programma per vedere cosa succede.
-        courseA_maze_seq13_c: |-
-          Questi blocchi <xml><block type="maze_moveNorth"/></xml> 
-
-          <xml><block type="maze_moveEast"/></xml> ti aiuteranno ad avvicinarti al maialino.
+        courseA_maze_seq13_c: "Questi blocchi <xml><block type=\"maze_moveNorth\"/></xml> \n\n<xml><block type=\"maze_moveEast\"/></xml> ti aiuteranno ad avvicinarti al maialino."
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito per tracciare il tuo percorso dall'uccellino fino al maialino.
         courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere blocchi e fai eseguire il programma per vedere cosa succede.
-        courseA_maze_seq13_c: |-
-          Questi blocchi <xml><block type="maze_moveNorth"/></xml> 
-
-          <xml><block type="maze_moveEast"/></xml> ti aiuteranno ad avvicinarti al maialino.
+        courseA_maze_seq13_c: "Questi blocchi <xml><block type=\"maze_moveNorth\"/></xml> \n\n<xml><block type=\"maze_moveEast\"/></xml> ti aiuteranno ad avvicinarti al maialino."
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito per tracciare il tuo percorso dall'uccellino fino al maialino.
         courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere blocchi e fai eseguire il programma per vedere cosa succede.
@@ -7148,6 +7259,9 @@ it:
       courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
+        courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
       courseC_PlayLab_eventsFP_authored_hint:
         idea1: |-
           *Serve un idea?*
@@ -7739,6 +7853,22 @@ it:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: Puoi usare più di un blocco `raccogli` ad ogni casella.
         courseC_collector_prog_challenge1_b: Ti sei perso? Prova questo percorso per risolvere l'esercizio!
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
+      courseC_data wizard_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -12556,7 +12686,7 @@ it:
         courseF_artist_for_challenge2_c: 'Il cambiamento del colore si attua col blocco `imposta il colore con rosso, verde, blu`. Il valore del rosso è sempre fisso a `255` mentre quello del verde è sempre uguale a quello del contatore (`counter`) ed il blu è uguale a `255`–`counter`.'
         courseF_artist_for_challenge2_a: La figura è una spirale di colore mutevole e tratti rettilinei progressivamente più lunghi.
         courseF_artist_for_challenge2_b: La soluzione di questo esercizio è più semplice di quanto pensi. Basta impostare il colore all'interno del ciclo, andare avanti e girare.
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **Soluzione:**
 
           <xml>
@@ -12645,8 +12775,6 @@ it:
           </next>
           </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'Il cambiamento del colore si attua col blocco `imposta il colore con rosso, verde, blu`. Il valore del rosso è sempre fisso a `255` mentre quello del verde è sempre uguale a quello del contatore (`counter`) ed il blu è uguale a `255`–`counter`.'
         courseF_artist_for_challenge2_a: La figura è una spirale di colore mutevole e tratti rettilinei progressivamente più lunghi.

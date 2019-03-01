@@ -120,7 +120,19 @@
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Har du vansker med å finne ut hvordan få blokkene ned? Prøv å behandle den røde blomsten akkurat som den lilla blomsten!
         2-3_Bee_Conditionals_14_b: Hvis den røde blomsten var lilla, kan du finne ut hvordan man kan bruke en ekstra "gjenta" loop for å kutte ned på koden?
-        2-3_Bee_Conditionals_14_c: "Prøv å bryt dette opp i to separate deler:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Samle Nektar 3 ganger\n  - Flytt fremover 5 ganger\n  - Se om det er nektar, Hvis nektar: samle den\n  - Snut til venstre\n  \n2) Lag honning \n  - Gå frem en gang\n  - Lag to honninger"
+        2-3_Bee_Conditionals_14_c: |-
+          Prøv å bryt dette opp i to separate deler:  
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Samle Nektar 3 ganger
+            - Flytt fremover 5 ganger
+            - Se om det er nektar, Hvis nektar: samle den
+            - Snut til venstre
+            
+          2) Lag honning 
+            - Gå frem en gang
+            - Lag to honninger
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Husk: Lilla blomster har enten 0 eller 1 nektar, og de kan endre seg hver gang du kjører programmet.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -289,7 +301,9 @@
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Hver gjentatte figur er kombinasjonen av ** halvparten av en sekskant **, etterfulgt av ** 2/3 av en trekant **. '
         Course_4_Artist_12_b: 'Figuren er nesten det samme som i den siste oppgaven, bortsett fra halv-sekskanten er litt større. '
-        Course_4_Artist_12_c: "1) De tre første linjene er 60 piksler lange, og du må snu 60 grader.  \n2) De to neste linjene er 80 piksler lang og du må snu 120 grader "
+        Course_4_Artist_12_c: |-
+          1) De tre første linjene er 60 piksler lange, og du må snu 60 grader.  
+          2) De to neste linjene er 80 piksler lang og du må snu 120 grader 
         Course_4_Artist_12_d: |-
           **Løsning:**
 
@@ -2633,6 +2647,35 @@
         Course_4_SCV_6_c: Hver av figurens 5 sider er delt opp i biter av 'lengde' / 'sider' der zig er blågrønn (rgb = 0,175,200) og zag er lilla (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'For sikke, ta til venstre ved ''360 ''/'' sider''.  For å sakke, snu til høyre ved ''360 ''/'' sider''. '
         Course_4_SCV_6_e: 'Resten av programmet er veldig standard for å lage en full 360 graders rotasjon fra en form, bortsett fra at vi overlapper formene med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr at vi trenger dobbelt så mange av dem som vanlig ("sider" * "2" repetisjoner). '
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+          * Pass på at en danser vises på skjermen.
+
+          * dette nivået slutter etter 4 takter.*
+        challenges: |-
+          ** Valgfrie utfordringer **
+          * Velg en annen sang å spille.
+          * Gi din danser nytt navn.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+          * Danseren må bytte til en ny posisjon etter 4 takter.
+
+          * Nivået ender etter 7 takter.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+
+          * Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.
+
+          * Nivået ender etter 11 takter.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+
+          * Du skal endre en bakgrunnseffekt et sted i den syvende takten av sangen.
+          * Dette nivået ender etter 9 takter.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe større enn `cat_speed`.
       Dance short test 2_authored_hint:
@@ -2740,6 +2783,12 @@
       Function intro Ryan_2019_authored_hint:
         Function_intro_Ryan_b: Hvis du kaller funksjonene riktig, er dette veien du vil reise...
         Function_intro_Ryan_a: Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Se de ** havlanternene**! [] (https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre.
       HOC Dance 0_draft_authored_hint:
         validation: |-
           ** Hvordan runder jeg dette nivået? **
@@ -4086,6 +4135,95 @@
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'Løkka `tell` går fra 5 til 250 med steg på 2. '
         courseF_artist_for_challenge2_a: Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.
+        courseF_artist_for_challenge2_d: |
+          **Løsning:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'Løkka `tell` går fra 5 til 250 med steg på 2. '
         courseF_artist_for_challenge2_a: Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.

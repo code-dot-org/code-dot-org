@@ -181,7 +181,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_getTime:
-        text: "[UNIT][0] kulunut"
+        text: "[UNIT] [0] kulunut"
         options:
           UNIT:
             '"measures"': tahdit
@@ -969,16 +969,63 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kun
+            '"while"': niin kauan kuin
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': kun
             '"while"': niin kauan kuin
-      aalab_whenTouching:
+      aalab_jumpTo:
+        text: "{SPRITE} siirry paikkaan {LOCATION}"
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': kun
             '"while"': niin kauan kuin
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Pohjoinen
+            '"East"': Itä
+            '"South"': Etelä
+            '"West"': Länsi
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kaupunki
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': tosi
+            '"false"': epätosi
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"rotation"': kierto
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+            '"direction"': liikkeen suunta
+            '"tint"': sävy
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ikuisesti
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': näytä
+            '"hide"': piilota
       binary_move:
         options:
           DIR:

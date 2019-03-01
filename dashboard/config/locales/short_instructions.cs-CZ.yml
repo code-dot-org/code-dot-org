@@ -812,18 +812,26 @@ cs:
         obrázku)
       CSD U5 black white images pixelation 2_2018: Namaluj usměváka (klikni sem pro
         zobrazení obrázku)
+      CSD U5 black white images pixelation 2_2019: Namaluj usměváka (klikni sem pro
+        zobrazení obrázku)
       CSD U5 black white images pixelation 3: Změň slidery pro šířku a výšku abys
         našel obrázek (klikni sem pro více informací)
       CSD U5 black white images pixelation 3_2018: Změň slidery pro šířku a výšku
+        abys našel obrázek (klikni sem pro více informací)
+      CSD U5 black white images pixelation 3_2019: Změň slidery pro šířku a výšku
         abys našel obrázek (klikni sem pro více informací)
       CSD U5 black white images pixelation 4: Doplň usměvákovi obočí (klikni sem pro
         zobrazení obrázku)
       CSD U5 black white images pixelation 4_2018: Doplň usměvákovi obočí (klikni
         sem pro zobrazení obrázku)
+      CSD U5 black white images pixelation 4_2019: Doplň usměvákovi obočí (klikni
+        sem pro zobrazení obrázku)
       CSD U5 black white images pixelation 5: Namaluj cokoliv budeš chtít
       CSD U5 black white images pixelation 5_2018: Namaluj cokoliv budeš chtít
+      CSD U5 black white images pixelation 5_2019: Namaluj cokoliv budeš chtít
       CSD U5 black white images pixelation: Dokonči tvar X vepsáním nul a jedniček
       CSD U5 black white images pixelation_2018: Dokonči tvar X vepsáním nul a jedniček
+      CSD U5 black white images pixelation_2019: Dokonči tvar X vepsáním nul a jedniček
       CSD U6 params modify clouds: |-
         # Mraky
 
@@ -835,6 +843,16 @@ cs:
         * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
         * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
       CSD U6 params modify clouds_2018: |-
+        # Mraky
+
+        Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
+
+        # Udělejte následující:
+        * Vytvořit novou funkci "moveCloud(name)", která pohne libovolným mrakem.
+        * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
+        * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
+        * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
+      CSD U6 params modify clouds_2019: |-
         # Mraky
 
         Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
@@ -864,10 +882,22 @@ cs:
         * Zavolejte funkci "movePlane(name)" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.
 
         _Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? _
+      CSD U6 params modify planes_2019: |-
+        # Ovladání letadel
+
+        Tento program pohybuje třemi letadly pomocí kontrolky zrychlení a zaškrtávacích tlačítek na obrazovce. Zatím funguje pouze červené letadlo.
+
+        # Udělejte následující:
+        * Vytvořte novou funkci "movePlane(name)", která bude pohybovat libovolným letadlem.
+        * Zavolejte funkci "movePlane(name)" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.
+
+        _Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? _
       CSP student contact info: Zadejte svou e-mailovou adresu.
       CSPU5_U3 - Loops - 4: Použijte Debug příkazy k vytvoření seznamu všech hodnot,
         které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
       CSPU5_U3 - Loops - 4_2018: Použijte Debug příkazy k vytvoření seznamu všech
+        hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
+      CSPU5_U3 - Loops - 4_2019: Použijte Debug příkazy k vytvoření seznamu všech
         hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
       Calc Circles of Eval 2: K provedení tohoto kódu použijte blok násobení.
       Calc Circles of Eval 3: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
@@ -1484,6 +1514,28 @@ cs:
       Course E MC Conditionals1: Nejcennější suroviny najdeš v podzemí, ale je tam
         tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Course1BeePuzzle12: Získej tři nektary a pak udělej dva medy
+      CourseD_Dance_Party_01: Do pracovního prostoru přetáhni blok `vytvořit nový`
+        a připoj ho dovnitř bloku `nastavení`.
+      CourseD_Dance_Party_02: Přiměj losa začít po 4 taktech nový pohyb!
+      CourseD_Dance_Party_03: Nyní přiměj tanečníka začít po 6 taktech nový pohyb!
+      CourseD_Dance_Party_04: Do svého programu přidej efekt pozadí.
+      CourseD_Dance_Party_05: Další nový blok použij k tomu, aby tanečník každé 2
+        takty měnil pohyby.
+      CourseD_Dance_Party_06: Vytvoř záložního tanečníka nazvaného `záložní_tanečník1`,
+        který bude tančit s kočkou.
+      CourseD_Dance_Party_08: Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
+      CourseD_Dance_Party_09: Pomocí bloku `nastavit odstín` změň barvu tanečníka.
+      CourseD_Dance_Party_10: Přiměj dalšího tanečníka také reagovat na hudbu pomocí
+        bloku `začíná následující`.
+      CourseD_Dance_Party_11: Blok `když nahoru stisknuta` ti umožní spustit kód stisknutím
+        na šipku nahoru. Zkus přimět tanečníka hýbat se rychleji po stisknutí šipky
+        nahoru.
+      CourseD_Dance_Party_11_5: Pomocí bloků "všechny kachny" přiměj kachny tančit
+        spolu.
+      CourseD_Dance_Party_11b: Přiměj Robota, aby "poklesl", když stiskneš šipku vpravo,
+        a "high clap", když stiskneš šipku nahoru. Střídej pokles-clap co nejrychleji!
+      CourseD_Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho
+        s kamarády.
       CourseF_PlayLab_vars1: 'Chcete-li hrát tuto hru, není nutné napsat žádný kód,
         stačí kliknout na "Spustit"! '
       CourseF_PlayLab_vars10: "Čas k volnému hraní! Zde jsou všechny proměnné, se
@@ -1526,8 +1578,10 @@ cs:
         dolů od 10 do 0 k průchodu úrovní.
       Crack Random Substitution: Pokyny
       Crack Random Substitution_2018: Pokyny
+      Crack Random Substitution_2019: Pokyny
       Crack a Caesar Cipher: Pokyny
       Crack a Caesar Cipher_2018: Pokyny
+      Crack a Caesar Cipher_2019: Pokyny
       Dance Party 1-validated: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party 1-validated_2019: 'Co si myslíte, že se stane, když kliknete na
         mimozemšťana?  '
@@ -2207,6 +2261,7 @@ cs:
         dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus.'
       The Vigenere Cipher Widget: Pokyny
       The Vigenere Cipher Widget_2018: Pokyny
+      The Vigenere Cipher Widget_2019: Pokyny
       The Vigenere Cipher: Pokyny
       Total Artist Clone Me: 'Volná hra: Zde jsou funkce, které jste napsali a ještě
         víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys
@@ -2222,21 +2277,32 @@ cs:
       U3L07 - introSquare_2018: Použijte smyčku k nakreslení čtverce. Pak přidejte
         další smyčky k nakreslení dalších čtverců, každý o kousek pootočený. (Kliknutím
         zobrazíte plné pokyny)
+      U3L07 - introSquare_2019: Použijte smyčku k nakreslení čtverce. Pak přidejte
+        další smyčky k nakreslení dalších čtverců, každý o kousek pootočený. (Kliknutím
+        zobrazíte plné pokyny)
       U3L07 - loopsWithRandom: Zvyšte počet iterací aby se celá obrazovka vyplnila
         bílou brvou. (Kliknutím zobrazíte plný pokyny)
       U3L07 - loopsWithRandom_2018: Zvyšte počet iterací aby se celá obrazovka vyplnila
+        bílou brvou. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - loopsWithRandom_2019: Zvyšte počet iterací aby se celá obrazovka vyplnila
         bílou brvou. (Kliknutím zobrazíte plný pokyny)
       U3L07 - sunBeams: Doplňte do obrázku 100 slunečních paprsků použitím přikazu
         drawAllSunbeams ve smyčce. (Kliknutím zobrazíte plný pokyny)
       U3L07 - sunBeams_2018: Doplňte do obrázku 100 slunečních paprsků použitím přikazu
         drawAllSunbeams ve smyčce. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - sunBeams_2019: Doplňte do obrázku 100 slunečních paprsků použitím přikazu
+        drawAllSunbeams ve smyčce. (Kliknutím zobrazíte plný pokyny)
       U3L07 - topDownDesign: Seznamte se se strukturou tohoto programu, pak přejděte
         k dalšímu cvičení. (Kliknutím zobrazíte plný pokyny)
       U3L07 - topDownDesign_2018: Seznamte se se strukturou tohoto programu, pak přejděte
         k dalšímu cvičení. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - topDownDesign_2019: Seznamte se se strukturou tohoto programu, pak přejděte
+        k dalšímu cvičení. (Kliknutím zobrazíte plný pokyny)
       U3L08 - fish: Doplňte parametr k funkci drawFish tak, aby se změnila velikost
         nakreslené ryby. (Kliknutím zobrazíte plný pokyny)
       U3L08 - fish_2018: Doplňte parametr k funkci drawFish tak, aby se změnila velikost
+        nakreslené ryby. (Kliknutím zobrazíte plný pokyny)
+      U3L08 - fish_2019: Doplňte parametr k funkci drawFish tak, aby se změnila velikost
         nakreslené ryby. (Kliknutím zobrazíte plný pokyny)
       U3L08 - introUnderTheSea with comments: Přidejte další rybu, hvězdici a kus
         trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí.
@@ -2247,6 +2313,9 @@ cs:
       U3L08 - introUnderTheSea_2018: Přidejte další rybu, hvězdici a kus trávy do
         obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím
         zobrazíte plný pokyny)
+      U3L08 - introUnderTheSea_2019: Přidejte další rybu, hvězdici a kus trávy do
+        obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím
+        zobrazíte plný pokyny)
       U3L08 - starFish: Přidejte další rybu, hvězdici a kus trávy do obrázku. Podívejte
         se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím zobrazíte plný
         pokyny)
@@ -2254,11 +2323,15 @@ cs:
         umístění. (Klepnutím zobrazíte podrobné pokyny)
       U3L2_TurtleSquare_right_2018: Nakreslete čtverec dopředu a vpravo od počátečního
         umístění. (Klepnutím zobrazíte podrobné pokyny)
+      U3L2_TurtleSquare_right_2019: Nakreslete čtverec dopředu a vpravo od počátečního
+        umístění. (Klepnutím zobrazíte podrobné pokyny)
       U4 - Charts - Line Chart Template: To je šablona.
       U4 - Charts - Line Chart Template_2018: To je šablona.
+      U4 - Charts - Line Chart Template_2019: To je šablona.
       U4 vigenere cipher 2: Pokyny
       U4L02 - Objects - Template1: Předloha
       U4L02 - Objects - Template1_2018: Předloha
+      U4L02 - Objects - Template1_2019: Předloha
       Underground Avoiding Lava: Pod některými z těchto bloků je ukrytá láva, kterou
         musíš před přesunem vpřed zakrýt. K tomu se hodí příkaz "pokud". Přidej jeden
         příkaz "posunout vpřed" na správné místo a vytěž bloky.

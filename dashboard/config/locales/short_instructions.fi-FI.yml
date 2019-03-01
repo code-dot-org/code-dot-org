@@ -829,10 +829,32 @@ fi:
         määrän lohkoja?
       Course E MC Conditionals1: Kaikkein arvokkaimmat resurssit löytyvät maan alta,
         mutta siellä on pimeää. Aseta vähintään 2 soihtua ja louhi vähintään 2 hiiltä.
+      CourseD_Dance_Party_01: Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin
+        sisällä.
+      CourseD_Dance_Party_02: Laita hirvi aloittamaan uusi tanssiliike neljän tahdin
+        jälkeen!
+      CourseD_Dance_Party_03: Laita tanssija aloittamaan uusi liike 6 tahdin jälkeen!
+      CourseD_Dance_Party_04: Lisää taustaefekti ohjelmaasi.
+      CourseD_Dance_Party_05: Käytä uutta blokkia saadaksesi tanssijasi muuttamaan
+        liikkeitään joka toisella tahdilla!
+      CourseD_Dance_Party_06: Luo taustatanssija nimellä `backup_dancer1` tanssimaan
+        kissan kanssa.
+      CourseD_Dance_Party_08: Voitko tehdä molemmista taustatanssijoista samankokoisia?
+      CourseD_Dance_Party_09: Käytä `aseta sävy`-blokkia muuttaaksesi tanssijan väriä.
+      CourseD_Dance_Party_10: Saa muut tanssijat reagoimaan musiikkiin käyttämällä
+        myös `alkaa seurata`-blokkia.
+      CourseD_Dance_Party_11: "`Kun ylänuoli pohjassa`-blokki antaa sinun käyttää
+        koodia, kun ylänuolta painetaan. Koeta saada tanssijasi tekemään nopea liike,
+        kun painat ylänuolta."
+      CourseD_Dance_Party_11b: Laita Robotti “droppaamaan” painamalla oikeaa nuolta
+        ja “flossaamaan” kun painat ylänuolta. Tee drop-flossaus niin nopeasti kuin
+        pystyt!
       Crack Random Substitution: Ohjeet
       Crack Random Substitution_2018: Ohjeet
+      Crack Random Substitution_2019: Ohjeet
       Crack a Caesar Cipher: Ohjeet
       Crack a Caesar Cipher_2018: Ohjeet
+      Crack a Caesar Cipher_2019: Ohjeet
       Dance_Party_01: Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin
         sisällä.
       Dance_Party_01_low: Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin
@@ -1087,6 +1109,7 @@ fi:
         kunnes maa on tasainen?  "
       The Vigenere Cipher Widget: Ohjeet
       The Vigenere Cipher Widget_2018: Ohjeet
+      The Vigenere Cipher Widget_2019: Ohjeet
       The Vigenere Cipher: Ohjeet
       U2 frequency caesar: Ohjeet
       U2 frequency random sub: Ohjeet

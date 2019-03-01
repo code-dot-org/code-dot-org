@@ -1881,8 +1881,10 @@ hy:
         not too hard. Let your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution: Հրահանգներ
       Crack Random Substitution_2018: Հրահանգներ
+      Crack Random Substitution_2019: Հրահանգներ
       Crack a Caesar Cipher: Հրահանգներ
       Crack a Caesar Cipher_2018: Հրահանգներ
+      Crack a Caesar Cipher_2019: Հրահանգներ
       Food Fight!: "We've added one last function for\nyou. \r\n\r\nUse an \"if\"
         statement to program your game to call the \"level_up\"\nfunction only when
         \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
@@ -2522,6 +2524,7 @@ hy:
         `fill` block until the ground is even?  "
       The Vigenere Cipher Widget: Հրահանգներ
       The Vigenere Cipher Widget_2018: Հրահանգներ
+      The Vigenere Cipher Widget_2019: Հրահանգներ
       The Vigenere Cipher: Հրահանգներ
       Total Artist Clone Me: |-
         Freeplay: Here are the functions
@@ -2533,6 +2536,7 @@ hy:
       U4 vigenere cipher 2: Հրահանգներ
       U4L02 - Objects - Template1: Template
       U4L02 - Objects - Template1_2018: Template
+      U4L02 - Objects - Template1_2019: Template
       Underground Avoiding Lava: |-
         Lava is hiding beneath some of these
         blocks, which you'll need to cover up before moving forward. An "if" command

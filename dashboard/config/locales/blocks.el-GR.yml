@@ -833,6 +833,8 @@ el:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
       gamelab_moveUp:
         text: "{THIS} κινήσου πάνω"
+      gamelab_playSound:
+        text: παίξεΉχο {SOUND}
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
         options:
@@ -1287,10 +1289,14 @@ el:
             "'shapeColor'": χρώμα
       aalab_addBehaviorForDuration:
         text: aalab χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR} για {SECONDS} δευτερόλεπτα
+      aalab_addBehaviorSimpleFlexible:
+        text: ο aalab χαρακτήρας {SPRITE} ξεκινάει να {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: aalab χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR} μέχρι {CONDITION}
       aalab_addToSpriteGroup:
         text: πρόσθεσε χαρακτήρα {SPRITE} στην ομάδα {GROUP}
+      aalab_allSpritesWithAnimation:
+        text: aalab όλοι {ANIMATION}
       aalab_changePropByFlexible:
         options:
           PROPERTY:
@@ -1299,6 +1305,11 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
       aalab_clickedOn:
         text: "{CONDITION} {SPRITE} πατιέται"
         options:
@@ -1321,22 +1332,63 @@ el:
         options:
           CHOICE:
             '"this"': αυτό
-      aalab_nameStringSay:
-        text: "{NAMESTRING} λέει {MESSAGE}"
-      aalab_prompt:
-        text: κάνε ερώτηση {MESSAGE}
-      aalab_removeAdvanced:
-        text: αφαίρεσεΠροχωρημένο {THIS}
-      aalab_speakerSaysConsole:
-        text: "{SPRITE} λέει {MESSAGE}"
-      aalab_spriteSay:
-        text: χαρακτήρας {SPRITE} λέει {TEXT} για {SECONDS} δευτερόλεπτα
-      aalab_whenTouching:
-        text: "{CONDITION} {SPRITE1} αγγίζει {SPRITE2}"
+      aalab_jumpTo:
+        text: "{SPRITE} πήγαινε στο {LOCATION}"
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+      aalab_location_picker:
+        text: "{LOCATION}"
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Βοράς
+            '"East"': Ανατολή
+            '"South"': Νότος
+            '"West"': Δυτικά
+      aalab_nameStringSay:
+        text: "{NAMESTRING} λέει {MESSAGE}"
+      aalab_prompt:
+        text: κάνε ερώτηση {MESSAGE}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': Αληθές
+            '"false"': ψευδές
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"rotation"': περιστροφή
+            '"x"': θέση x
+            '"y"': θέση y
+            '"direction"': κατεύθυνση κίνησης
+            '"tint"': απόχρωση
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': πάντα
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} λέει {MESSAGE}"
+      aalab_spriteSay:
+        text: χαρακτήρας {SPRITE} λέει {TEXT} για {SECONDS} δευτερόλεπτα
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': δείξε
+            '"hide"': κρύψε
       binary_drawBin:
         text: ζωγράφισε δυαδικό {BIN}
       binary_drawBinScreen:

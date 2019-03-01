@@ -581,10 +581,38 @@ ca:
       Course E MC Conditionals1: Trobaràs els recursos més valuosos sota terra, però
         pot estar fosc. Col·loca com a mínim un parell de torxes i excava com a mínim
         dos carbons.
+      CourseD_Dance_Party_01: Arrossega el bloc `fés-ne un de nou` al teu espai de
+        treball, i connecta'l dins del bloc de `configuració`.
+      CourseD_Dance_Party_02: Fés que l'ant comenci un nou moviment després de 4 mesures!
+      CourseD_Dance_Party_03: Ara fés que el dansaire comenci un nou moviment després
+        de 6 mesures!
+      CourseD_Dance_Party_04: Afegeix un nou efecte de fons al teu programa.
+      CourseD_Dance_Party_05: Fés servir un nou bloc per fer que el dansaire canviï
+        de moviments cada dues mesures.
+      CourseD_Dance_Party_06: Crea un dansaire de reserva anomenat `backup_dancer1`
+        que balli amb el gat.
+      CourseD_Dance_Party_08: Pots aconseguir que tots dos ballarins de reserva siguin
+        de la mateixa mida?
+      CourseD_Dance_Party_09: Utilitza el bloc 'conjunt de tinta' per canviar el color
+        d'un ballarí.
+      CourseD_Dance_Party_10: Fés que l'altre dansaire respongui a la música fent
+        servir el bloc de `comença a seguir` també.
+      CourseD_Dance_Party_11: El bloc `quan prems cap a dalt` et permet executar un
+        codi quan prems la fletxa cap a dalt. Intenta que el dansaire faci un moviment
+        ràpid quan prems cap a dalt.
+      CourseD_Dance_Party_11_5: Fés servir els blocs de "tots els ànecs" per fer que
+        els ànecs ballin junts.
+      CourseD_Dance_Party_11b: Fés que el robot "caigui" un cop quan prems la tecla
+        de la fletxa dreta, i que "provoqui" una vegada quan prems la fletxa cap a
+        dalt. Fés la caiguda-provocació tan ràpidament com puguis!
+      CourseD_Dance_Party_12: Anima't i segueix el ritme! Crea una dansa pròpia per
+        compartir amb els teus amics.
       Crack Random Substitution: Instruccions
       Crack Random Substitution_2018: Instruccions
+      Crack Random Substitution_2019: Instruccions
       Crack a Caesar Cipher: Instruccions
       Crack a Caesar Cipher_2018: Instruccions
+      Crack a Caesar Cipher_2019: Instruccions
       Dance_Party_01: Arrossega el bloc `fés-ne un de nou` al teu espai de treball,
         i connecta'l dins del bloc de `configuració`.
       Dance_Party_01_low: Arrossega el bloc `fés-ne un de nou` al teu espai de treball,
@@ -750,6 +778,7 @@ ca:
         un meravellós món hivernal.
       The Vigenere Cipher Widget: Instruccions
       The Vigenere Cipher Widget_2018: Instruccions
+      The Vigenere Cipher Widget_2019: Instruccions
       The Vigenere Cipher: Instruccions
       U2 frequency caesar: Instruccions
       U2 frequency random sub: Instruccions

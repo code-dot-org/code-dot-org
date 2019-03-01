@@ -3698,6 +3698,8 @@ pl:
               name: Praca w grupie (Crowdsourcing)
             Relay Programming:
               name: Sztafeta programowania
+            Graph Paper Programming:
+              name: Programowanie na papierze milimetrowym
         courseb-2018:
           assignment_family_title: Kurs B
           description_audience: 'W wieku 5-8'
@@ -4210,6 +4212,8 @@ pl:
               name: 'Bez komputera: Binarny'
             Artist Binary:
               name: 'Artysta: Binarny'
+            Dance Party:
+              name: Potańcówka
         coursee-2019:
           description_audience: 'W wieku 8-12'
           stages:
@@ -4362,6 +4366,240 @@ pl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
         dani-test-script:
+          stages:
+            new stage:
+              name: nowy etap
+        csd2-2019:
+          stages:
+            Exploring Websites:
+              name: Odkrywanie stron
+            Intro to HTML:
+              name: Wprowadzenie do HTML
+            Headings:
+              name: Nagłówki
+            Digital Footprint:
+              name: Cyfrowy ślad
+            Lists:
+              name: Listy
+            Clean Code and Debugging:
+              name: Czysty kod i debugowanie
+            Styling Text with CSS:
+              name: Stylowanie tekstu przy użyciu CSS
+            Sources and Search Engines:
+              name: Źródła i wyszukiwarki
+            RGB Colors and Classes:
+              name: Kolory RGB i klasy
+            Project - Personal Portfolio Website:
+              name: Projekt - Własna strona portfolio
+        csd3-2019:
+          description_short: "Programowanie"
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Shapes and Randomization:
+              name: Kształty oraz losowość
+            Variables:
+              name: Zmienne
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Warunkowe
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+        csd4-2019:
+          stages:
+            Analysis of Design:
+              name: Analiza projektu
+            Understanding Your User:
+              name: Zrozumienie twojego użytkownika
+            User Interfaces:
+              name: Interfejsy użytkownika
+            Identifying User Needs:
+              name: Identyfikowanie potrzeb użytkownika
+            Designing Apps for Good:
+              name: Projektowanie aplikacji na dobre
+            Market Research:
+              name: Badania rynku
+            Prototype Testing:
+              name: Testowanie prototypu
+            Linking Screens:
+              name: Łączenie ekranów
+            Testing the App:
+              name: Testowanie aplikacji
+            Improving and Iterating:
+              name: Polepszanie i iterowanie
+            Project - App Presentation:
+              name: Projekt - Prezentacja aplikacji
+        csd5-2019:
+          stages:
+            Representing Numbers:
+              name: Reprezentacja liczb
+        csd6-2019:
+          stages:
+            Getting Properties:
+              name: Właściwości getterów
+            Analog Input:
+              name: Wejście analogowe
+            The Program Design Process:
+              name: Proces projektowania programu
+            'Project: Make a Game':
+              name: 'Projekt: Stwórz grę'
+            Making Music:
+              name: Tworzenie muzyki
+            Arrays and For Loops:
+              name: Tablice i pętle for
+            Accelerometer:
+              name: Akcelerometr
+            Functions with Parameters:
+              name: Funkcje z parametrami
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Ankiety
+        csp1-2019:
+          stages:
+            Sending Binary Messages:
+              name: Wysyłanie wiadomości binarnych
+            Sending Binary Messages with the Internet Simulator:
+              name: Wysyłanie wiadomości binarnych z wykorzystaniem symulatora internetu
+            Number Systems:
+              name: Systemy liczbowe
+            Binary Numbers:
+              name: Liczby binarne
+            Sending Numbers:
+              name: Wysyłanie numerów
+            Unit 1 Chapter 1 Assessment:
+              name: Oszacowanie Jednostki 1 rozdziału 1
+            The Internet:
+              name: Internet
+            The Need for Addressing:
+              name: Potrzeba adresowania
+            Routers and Redundancy:
+              name: Routery i nadmiarowość
+            Packets and Making a Reliable Internet:
+              name: Pakiety i tworzenie niezawodnego internetu
+            The Need for DNS:
+              name: Potrzeba DNS
+            HTTP and Abstraction:
+              name: HTTP i abstrakcja
+            Unit 1 Chapter 2 Assessment:
+              name: Oszacowanie Jednostki 1 rozdziału 2
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Rozmiary plików i bajtów
+            Encoding B&W Images:
+              name: Kodowanie czarno-białych obrazów
+            Encoding Color Images:
+              name: Kodowanie kolorów obrazów
+        csp3-2019:
+          description_short: Programowanie
+          stages:
+            The Need For Programming Languages:
+              name: Potrzeba języków programowania
+            The Need for Algorithms:
+              name: Potrzeba algorytmów
+            Creativity in Algorithms:
+              name: Kreatywność w algorytmach
+            Using Simple Commands:
+              name: Używanie prostych komend
+            Creating Functions:
+              name: Tworzenie Funkcji
+            APIs and Function Parameters:
+              name: API i parametry funkcji
+            Creating functions with Parameters:
+              name: Tworzenie funkcji z parametrami
+            Looping and Random Numbers:
+              name: Zapętlanie i losowe liczby
+            Unit 3 Chapter 1 Assessment:
+              name: Oszacowanie Jednostki 3 rozdziału 1
+        csp4-2019:
+          stages:
+            What is Big Data?:
+              name: Co to jest Big Data?
+            Finding Trends with Visualizations:
+              name: Odkrywanie trendów z wizualizacjami
+            Check Your Assumptions:
+              name: Sprawdź swoje założenia
+            Simple Encryption:
+              name: Proste szyfrowanie
+        csp5-2019:
+          stages:
+            Buttons and Events:
+              name: Przyciski i wydarzenia
+            Multi-screen Apps:
+              name: Aplikacje wieloekranowe
+            Controlling Memory with Variables:
+              name: Kontrolowanie pamięci ze zmiennymi
+            User Input and Strings:
+              name: Wprowadzanie danych użytkownika oraz łańcuchy
+            Boolean Expressions and "If" Statements:
+              name: Wyrażenie boolowskie i instrukcje "if"
+            '"if-else-if" and Conditional Logic':
+              name: '"if-else-if" oraz logika warunkowa'
+            While Loops:
+              name: Pętle Dopóki (While)
+            Loops and Simulations:
+              name: Pętle i symulacje
+            Introduction to Arrays:
+              name: Wprowadzenie do tablic
+            Processing Arrays:
+              name: Przetwarzanie tablic
+            Functions with Return Values:
+              name: Funkcje zwracające wartości
+        csppostap-2019:
+          stages:
+            Intro to Data:
+              name: Wprowadzenie do danych
+            Good and Bad Data Visualizations:
+              name: Dobre i złe wizualizacje danych
+            Making Data Visualizations:
+              name: Tworzenie wizualizacji danych
+            Discover a Data Story:
+              name: Odkryj historię danych
+            Cleaning Data:
+              name: Czyszczenie danych
+            Creating Summary Tables:
+              name: Tworzenie tabeli podsumowujących
+            Creating Javascript Objects:
+              name: Tworzenie obiektów Javascript
+            Permanent Data Storage:
+              name: Pamięć trwała
+            Reading Records:
+              name: Odczytywanie rekordów
+            Deleting Records:
+              name: Usuwanie rekordów
+            Updating Records:
+              name: Aktualizacja rekordów
+            Importing and Exporting Data:
+              name: Importowanie i eksportowanie danych
+            Visualizing Data:
+              name: Wizualizacja danych
+            Sample Apps:
+              name: Przykładowe aplikacje
+            Final Project:
+              name: Projekt końcowy
+        csp1-pilot:
           stages:
             new stage:
               name: nowy etap

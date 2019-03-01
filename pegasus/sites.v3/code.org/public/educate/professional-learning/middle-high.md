@@ -78,7 +78,14 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 Teach a different grade level or have fewer hours available with your students? <a href="https://code.org/files/course-pl-options.pdf", target=_"blank">Find the right course for your classroom.</a>
 
 ## Program commitments and schedule
-The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles. Professional learning workshops will be hosted by our [Regional Partners](/educate/professional-learning/about-partners) beginning in the summer of 2019. **Applications are now available!**
+The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles. Professional learning workshops will be hosted by our [Regional Partners](/educate/professional-learning/about-partners) beginning in the summer of 2019.
+<%=
+link = "/educate/professional-learning/program-information"
+link += "?nominated=true" if params[:nominated]
+"<a class='linktag' id='pl-apps-open-link' href='#{link}'>**Applications are now open!**</a>"
+%>
+
+
 
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
 
@@ -154,16 +161,19 @@ The Code.org Professional Learning Program is open to educators who are interest
 
 ## Have questions?
 
-Along with our Regional Partners, we're here to help!
+<%= view :professional_learning_regional_partner_mini_contact, source_page_id: "middle-high", notes: "Please tell me more about the professional learning program!" %>
 
-Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a> or <a href="https://studio.code.org/pd/regional_partner_contact/new">contact your Regional Partner</a>.
+<br/>
+
+And be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a>.
+
 
 ## Ready to apply?
 
 <%=
 link = "/educate/professional-learning/program-information"
 link += "?nominated=true" if params[:nominated]
-"<a href='#{link}'><button>Get started!</button></a>"
+"<a class='linktag' id='pl-get-started-link' href='#{link}'><button>Get started!</button></a>"
 %>
 
 <!--

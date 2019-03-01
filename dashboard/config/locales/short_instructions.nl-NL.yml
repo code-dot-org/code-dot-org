@@ -847,6 +847,9 @@ nl:
       CSD U3 L5 Freeplay_2018: |-
         Verander de waarde van `petalSize` meerdere keren.
         Hoe beïnvloedt dit je tekening?
+      CSD U3 L5 Freeplay_2019: |-
+        Verander de waarde van `petalSize` meerdere keren.
+        Hoe beïnvloedt dit je tekening?
       CSD U3 Variables TEMPLATE square: |-
         Verander de waarde van `petalSize` meerdere keren.
         Hoe beïnvloedt dit je tekening?
@@ -854,6 +857,9 @@ nl:
         Verander de waarde van `petalSize` meerdere keren.
         Hoe beïnvloedt dit je tekening?
       CSD U3 Variables change circle size_2018: |-
+        Verander de waarde van `petalSize` meerdere keren.
+        Hoe beïnvloedt dit je tekening?
+      CSD U3 Variables change circle size_2019: |-
         Verander de waarde van `petalSize` meerdere keren.
         Hoe beïnvloedt dit je tekening?
       CSD U3 Variables multiple assignments: |-
@@ -868,6 +874,9 @@ nl:
       CSD U3 Variables naming rules v2_2018: |-
         Verander de waarde van `petalSize` meerdere keren.
         Hoe beïnvloedt dit je tekening?
+      CSD U3 Variables naming rules v2_2018_2019: |-
+        Verander de waarde van `petalSize` meerdere keren.
+        Hoe beïnvloedt dit je tekening?
       CSD U3 Variables naming rules: |-
         Verander de waarde van `petalSize` meerdere keren.
         Hoe beïnvloedt dit je tekening?
@@ -880,25 +889,37 @@ nl:
       CSD U3 Variables random with assignment_2018: |-
         Verander de waarde van `petalSize` meerdere keren.
         Hoe beïnvloedt dit je tekening?
+      CSD U3 Variables random with assignment_2019: |-
+        Verander de waarde van `petalSize` meerdere keren.
+        Hoe beïnvloedt dit je tekening?
       CSD U4 - Events Template: Voeg een grote rode knop toe aan je scherm met behulp
         van Design Mode. (Klik voor volledige instructies)
       CSD U5 black white images pixelation 2: Tegen een lachend gezicht (klik hier
         om de afbeelding te zien)
       CSD U5 black white images pixelation 2_2018: Tegen een lachend gezicht (klik
         hier om de afbeelding te zien)
+      CSD U5 black white images pixelation 2_2019: Tegen een lachend gezicht (klik
+        hier om de afbeelding te zien)
       CSD U5 black white images pixelation 3: Verander de breedte en hoogte slijders
         om de afbeelding te vinden (klik hier om meer te zien)
       CSD U5 black white images pixelation 3_2018: Verander de breedte en hoogte slijders
+        om de afbeelding te vinden (klik hier om meer te zien)
+      CSD U5 black white images pixelation 3_2019: Verander de breedte en hoogte slijders
         om de afbeelding te vinden (klik hier om meer te zien)
       CSD U5 black white images pixelation 4: Voeg wenkbrauwen toe aan het lachende
         gezicht (klik hier om een afbeelding te zien)
       CSD U5 black white images pixelation 4_2018: Voeg wenkbrauwen toe aan het lachende
         gezicht (klik hier om een afbeelding te zien)
+      CSD U5 black white images pixelation 4_2019: Voeg wenkbrauwen toe aan het lachende
+        gezicht (klik hier om een afbeelding te zien)
       CSD U5 black white images pixelation 5: Teken wat je maar wil
       CSD U5 black white images pixelation 5_2018: Teken wat je maar wil
+      CSD U5 black white images pixelation 5_2019: Teken wat je maar wil
       CSD U5 black white images pixelation: Vervolledig de X vorm door 0'en en 1'en
         in te voeren
       CSD U5 black white images pixelation_2018: Vervolledig de X vorm door 0'en en
+        1'en in te voeren
+      CSD U5 black white images pixelation_2019: Vervolledig de X vorm door 0'en en
         1'en in te voeren
       CSDU4 - AppLab - 1: Lees de documentatie voor penColor() en penWidth() vooraleer
         ze te gebruiken om het blauwe vierkant te tekenen.
@@ -917,23 +938,34 @@ nl:
         in numerieke volgorde. (Klik hier om de volledige instructies te zien)
       CSDU6 arrays select rainbow_2018: Schrijf de inhoud van de array naar het scherm
         in numerieke volgorde. (Klik hier om de volledige instructies te zien)
+      CSDU6 arrays select rainbow_2019: Schrijf de inhoud van de array naar het scherm
+        in numerieke volgorde. (Klik hier om de volledige instructies te zien)
       CSP student contact info: Gelieve je e-mailadres in te geven.
       CSPU5_U3 - Arrays - indexPractice: Schrijf de inhoud van de array naar het scherm
         in numerieke volgorde. (Klik hier om de volledige instructies te zien)
       CSPU5_U3 - Arrays - indexPractice_2018: Schrijf de inhoud van de array naar
         het scherm in numerieke volgorde. (Klik hier om de volledige instructies te
         zien)
+      CSPU5_U3 - Arrays - indexPractice_2019: Schrijf de inhoud van de array naar
+        het scherm in numerieke volgorde. (Klik hier om de volledige instructies te
+        zien)
       CSPU5_U3 - Design Mode 1: Voeg een grote rode knop toe aan je scherm met behulp
         van Design Mode. (Klik voor volledige instructies)
       CSPU5_U3 - Design Mode 1_2018: Voeg een grote rode knop toe aan je scherm met
+        behulp van Design Mode. (Klik voor volledige instructies)
+      CSPU5_U3 - Design Mode 1_2019: Voeg een grote rode knop toe aan je scherm met
         behulp van Design Mode. (Klik voor volledige instructies)
       CSPU5_U3 - Loops - 4: Gebruik de Foutopsporing Commando's om een lijst te zien
         van alle gerolde waarden voor een 6. (Klik hier voor volledige instructies)
       CSPU5_U3 - Loops - 4_2018: Gebruik de Foutopsporing Commando's om een lijst
         te zien van alle gerolde waarden voor een 6. (Klik hier voor volledige instructies)
+      CSPU5_U3 - Loops - 4_2019: Gebruik de Foutopsporing Commando's om een lijst
+        te zien van alle gerolde waarden voor een 6. (Klik hier voor volledige instructies)
       CSPU5_U3L15 full clicker app: Voltooi je eigen klik spel! (Klik hier voor volledige
         instructies)
       CSPU5_U3L15 full clicker app_2018: Voltooi je eigen klik spel! (Klik hier voor
+        volledige instructies)
+      CSPU5_U3L15 full clicker app_2019: Voltooi je eigen klik spel! (Klik hier voor
         volledige instructies)
       Course 2 Bee Loops 1: 'Hallo. Ik ben een bij. Kan je me helpen om de nectar
         van deze bloemen te verzamelen? '
@@ -1587,6 +1619,30 @@ nl:
         een andere kant, om me bij het varken te krijgen"
       Course1MazeAssessment2: "Dit is een test!\r Beweeg me eerst één kant op, daarna
         een andere kant, om me bij het varken te krijgen."
+      CourseD_Dance_Party_01: Sleep het blok 'nieuwe maken' naar de werkruimte, en
+        verbind deze in het 'setup' blok.
+      CourseD_Dance_Party_02: Zorg dat de eland een nieuwe move start na 4 maten!
+      CourseD_Dance_Party_03: Laat de danser nu een nieuwe move starten na 6 maten!
+      CourseD_Dance_Party_04: Voeg een achtergrondeffect toe aan je programma.
+      CourseD_Dance_Party_05: Gebruik nog een nieuw blok om de danser elke 2 maten
+        een nieuwe move te laten doen.
+      CourseD_Dance_Party_06: Maak een achtergronddanser genaamd 'backup_dancer1'
+        om met de kat te dansen.
+      CourseD_Dance_Party_08: Kun je beide achtergronddansers dezelfde grootte geven?
+      CourseD_Dance_Party_09: Gebruik het blok 'tint instellen' om de kleur van een
+        danser te veranderen.
+      CourseD_Dance_Party_10: Zorg dat de andere danser ook op de muziek reageert,
+        met behulp van het blok 'begint te volgen'.
+      CourseD_Dance_Party_11: Met het blok 'wanneer pijlomhoogtoets ingedrukt' kun
+        je code uitvoeren door op de pijlomhoogtoets te drukken. Proberen de danser
+        een een snelle move te laten doen wanneer je op de pijlomhoogtoets drukt.
+      CourseD_Dance_Party_11_5: Gebruik de "alle eenden" blokken om de eenden samen
+        te laten dansen.
+      CourseD_Dance_Party_11b: Zorg dat de Robot "naar de grond gaat" door op de rechterpijltoets
+        te drukken, en laat hem een keer de "floss" doen door op de pijlomhoogtoets
+        te drukken. Doe zo snel als je kan de drop-floss!
+      CourseD_Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met
+        je vrienden.
       CourseF_PlayLab_vars10: "Gratis speeltijd! Hier zijn alle variabelen waarmee
         wij hebben gespeeld tot nu toe in dit niveau, evenals een paar meer in het
         geval u ze wilt. \r \r Merk op dat er nu zoveel zijn blokken in onze toolbox
@@ -1629,8 +1685,10 @@ nl:
         0 om dit niveau uit te spelen.
       Crack Random Substitution: Instructies
       Crack Random Substitution_2018: Instructies
+      Crack Random Substitution_2019: Instructies
       Crack a Caesar Cipher: Instructies
       Crack a Caesar Cipher_2018: Instructies
+      Crack a Caesar Cipher_2019: Instructies
       D_Frozen_nested3: Laten we die lijn van vormen ronddraaien!
       D_Frozen_nested5: Speel met de sneeuwvlokken!
       D_Frozen_nested6: |-
@@ -2308,10 +2366,17 @@ nl:
         De widget is ingesteld met de foutieve afmetingen. Je eerste taak is om de
         tweede byte in te stellen op de 8-bit binaire code van 5: 0000 0101. Begin
         dan pixel data in te voeren.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Maak een 3x5 letter ''A''.
+        De widget is ingesteld met de foutieve afmetingen. Je eerste taak is om de
+        tweede byte in te stellen op de 8-bit binaire code van 5: 0000 0101. Begin
+        dan pixel data in te voeren.'
       Pixelation - Lesson 15 - Color Shades 4x4: |-
         We beginnen met een 4x4 afbeelding die Maddie in de video gecreëerd heeft. Jouw taak is om het 4x4 raster op te vullen, gebruik makende van 12 bits/pixel. Dit zijn de vereisten:
         Rij 1 - invullen met tinten rood, Rij 2 - tinten groen, Rij 3 - tinten blauw, Rij 4 - tinten grijs.
       Pixelation - Lesson 15 - Color Shades 4x4_2018: |-
+        We beginnen met een 4x4 afbeelding die Maddie in de video gecreëerd heeft. Jouw taak is om het 4x4 raster op te vullen, gebruik makende van 12 bits/pixel. Dit zijn de vereisten:
+        Rij 1 - invullen met tinten rood, Rij 2 - tinten groen, Rij 3 - tinten blauw, Rij 4 - tinten grijs.
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: |-
         We beginnen met een 4x4 afbeelding die Maddie in de video gecreëerd heeft. Jouw taak is om het 4x4 raster op te vullen, gebruik makende van 12 bits/pixel. Dit zijn de vereisten:
         Rij 1 - invullen met tinten rood, Rij 2 - tinten groen, Rij 3 - tinten blauw, Rij 4 - tinten grijs.
       Pixelation - Lesson 15 - Complete 3-bit color: We beginnen met de 4x2 afbeelding
@@ -2319,6 +2384,10 @@ nl:
         leeg. Vervolledig de afbeelding door uit te zoeken welke twee kleuren missen
         en codeer ze.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: We beginnen met de 4x2 afbeelding
+        die Maddie aan het creëren was, maar we lieten de laatste twee vierkanten
+        leeg. Vervolledig de afbeelding door uit te zoeken welke twee kleuren missen
+        en codeer ze.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: We beginnen met de 4x2 afbeelding
         die Maddie aan het creëren was, maar we lieten de laatste twee vierkanten
         leeg. Vervolledig de afbeelding door uit te zoeken welke twee kleuren missen
         en codeer ze.
@@ -2468,6 +2537,7 @@ nl:
         dat het gat vult tot boven vult? Hint: probeer dit keer een zolang-lus.'
       The Vigenere Cipher Widget: Instructies
       The Vigenere Cipher Widget_2018: Instructies
+      The Vigenere Cipher Widget_2019: Instructies
       The Vigenere Cipher: Instructies
       Total Artist Clone Me: 'Vrij spelen: hier zijn de functies die je hebt geschreven,
         en ook nog wat extra om mee te spelen. Teken iets geweldigs! Speel met de
@@ -2494,24 +2564,36 @@ nl:
         de rand van het scherm te sturen. (Klik hier voor volledige instructies)
       U3L06 - moveForwardwithParams_2018: Gebruik een enkel commando om de schildpad
         naar de rand van het scherm te sturen. (Klik hier voor volledige instructies)
+      U3L06 - moveForwardwithParams_2019: Gebruik een enkel commando om de schildpad
+        naar de rand van het scherm te sturen. (Klik hier voor volledige instructies)
       U3L06 Challenge 1 triangle: Gebruik geparametriseerde versies van de schildpad
         commando's om driehoeken te maken met zijden van 100 pixels. (Klik om volledige
         instructies te zien)
       U3L06 Challenge 1 triangle_2018: Gebruik geparametriseerde versies van de schildpad
         commando's om driehoeken te maken met zijden van 100 pixels. (Klik om volledige
         instructies te zien)
+      U3L06 Challenge 1 triangle_2019: Gebruik geparametriseerde versies van de schildpad
+        commando's om driehoeken te maken met zijden van 100 pixels. (Klik om volledige
+        instructies te zien)
       U3L06 Challenge 2 purple square: Lees de documentatie voor penColor() en penWidth()
         vooraleer ze te gebruiken om het blauwe vierkant te tekenen.
       U3L06 Challenge 2 purple square_2018: Lees de documentatie voor penColor() en
+        penWidth() vooraleer ze te gebruiken om het blauwe vierkant te tekenen.
+      U3L06 Challenge 2 purple square_2019: Lees de documentatie voor penColor() en
         penWidth() vooraleer ze te gebruiken om het blauwe vierkant te tekenen.
       U3L06 Challenge 3 fill pink: Vul de achtergrond van het scherm in met je favoriete
         kleur. (Klik om volledige instructies te zien)
       U3L06 Challenge 3 fill pink_2018: Vul de achtergrond van het scherm in met je
         favoriete kleur. (Klik om volledige instructies te zien)
+      U3L06 Challenge 3 fill pink_2019: Vul de achtergrond van het scherm in met je
+        favoriete kleur. (Klik om volledige instructies te zien)
       U3L06 Challenge 5 overlapping circles: |-
         Deze afbeelding is gecreëerd, gebruikmakende van enkel enkel dot() en penColor(). Maar hoe gaan we die cirkels transparant krijgen?
         Als je de hint nog niet gekregen hebt: bekijk de documentatie!
       U3L06 Challenge 5 overlapping circles_2018: |-
+        Deze afbeelding is gecreëerd, gebruikmakende van enkel enkel dot() en penColor(). Maar hoe gaan we die cirkels transparant krijgen?
+        Als je de hint nog niet gekregen hebt: bekijk de documentatie!
+      U3L06 Challenge 5 overlapping circles_2019: |-
         Deze afbeelding is gecreëerd, gebruikmakende van enkel enkel dot() en penColor(). Maar hoe gaan we die cirkels transparant krijgen?
         Als je de hint nog niet gekregen hebt: bekijk de documentatie!
       U3L06 Challenge 6 squiggles: 'Bekijk de documentatie voor de "arcLeft" en "arcRight"
@@ -2522,13 +2604,21 @@ nl:
         en "arcRight" comando''s en teken vervolgens de krul zoals getoond.
 
 '
+      U3L06 Challenge 6 squiggles_2019: 'Bekijk de documentatie voor de "arcLeft"
+        en "arcRight" comando''s en teken vervolgens de krul zoals getoond.
+
+'
       U3L06 Challenge 7 smiley face: Gebruik turnTo() en moveTo() om het lachend gezichtje
         te tekenen. (Klik hier om de volledige instructies te zien)
       U3L06 Challenge 7 smiley face_2018: Gebruik turnTo() en moveTo() om het lachend
         gezichtje te tekenen. (Klik hier om de volledige instructies te zien)
+      U3L06 Challenge 7 smiley face_2019: Gebruik turnTo() en moveTo() om het lachend
+        gezichtje te tekenen. (Klik hier om de volledige instructies te zien)
       U3L07 - Free Play Loops and Random: Vrij spelen! Gebruik wat je geleerd hebt
         van 'lussen' en 'willekeurig' en maak je eigen kleine scène. Veel plezier.
       U3L07 - Free Play Loops and Random_2018: Vrij spelen! Gebruik wat je geleerd
+        hebt van 'lussen' en 'willekeurig' en maak je eigen kleine scène. Veel plezier.
+      U3L07 - Free Play Loops and Random_2019: Vrij spelen! Gebruik wat je geleerd
         hebt van 'lussen' en 'willekeurig' en maak je eigen kleine scène. Veel plezier.
       U3L07 - Starry Night Starter Code: 'Je gaat lussen en willekeurige getallen
         gebruiken om een afbeelding te maken van een sterrenhemel, vergelijkbaar met
@@ -2542,10 +2632,16 @@ nl:
       U3L07 - allSeaGrass_2018: Voeg 50 stukken zeegras toe aan de afbeelding door
         drawAllSeagrass te schrijven in een lus. (Klik om volledige instructies te
         zien)
+      U3L07 - allSeaGrass_2019: Voeg 50 stukken zeegras toe aan de afbeelding door
+        drawAllSeagrass te schrijven in een lus. (Klik om volledige instructies te
+        zien)
       U3L07 - createTriangleParam: Maak een functie aan die een parameter accepteert
         zodat deze bij de functie-aanroepen pas en vervolledig de afbeelding. (Klik
         om alle instructies te zien)
       U3L07 - createTriangleParam_2018: Maak een functie aan die een parameter accepteert
+        zodat deze bij de functie-aanroepen pas en vervolledig de afbeelding. (Klik
+        om alle instructies te zien)
+      U3L07 - createTriangleParam_2019: Maak een functie aan die een parameter accepteert
         zodat deze bij de functie-aanroepen pas en vervolledig de afbeelding. (Klik
         om alle instructies te zien)
       U3L07 - introSquare: Gebruik een lus om een vierkant te tekenen. Voeg vervolgens
@@ -2554,29 +2650,44 @@ nl:
       U3L07 - introSquare_2018: Gebruik een lus om een vierkant te tekenen. Voeg vervolgens
         een andere lus toe om vele vierkanten te tekenen die elk ietwat gedraaid zijn.
         (Klik voor volledige instructies)
+      U3L07 - introSquare_2019: Gebruik een lus om een vierkant te tekenen. Voeg vervolgens
+        een andere lus toe om vele vierkanten te tekenen die elk ietwat gedraaid zijn.
+        (Klik voor volledige instructies)
       U3L07 - loopsWithRandom: Verhoog het aantal herhaling om het scherm te vullen
         met wit. (Klik voor volledige instructies)
       U3L07 - loopsWithRandom_2018: Verhoog het aantal herhaling om het scherm te
+        vullen met wit. (Klik voor volledige instructies)
+      U3L07 - loopsWithRandom_2019: Verhoog het aantal herhaling om het scherm te
         vullen met wit. (Klik voor volledige instructies)
       U3L07 - randomSquare: Teken de figuur gebruik makende van een lus. (Klik voor
         volledige instructies)
       U3L07 - randomSquare_2018: Teken de figuur gebruik makende van een lus. (Klik
         voor volledige instructies)
+      U3L07 - randomSquare_2019: Teken de figuur gebruik makende van een lus. (Klik
+        voor volledige instructies)
       U3L07 - sunBeams: Voeg 100 zonnestralen toe aan de afbeelding door drawAllSunbeams
         in een lus te schrijven. (Klik voor volledige instructies)
       U3L07 - sunBeams_2018: Voeg 100 zonnestralen toe aan de afbeelding door drawAllSunbeams
+        in een lus te schrijven. (Klik voor volledige instructies)
+      U3L07 - sunBeams_2019: Voeg 100 zonnestralen toe aan de afbeelding door drawAllSunbeams
         in een lus te schrijven. (Klik voor volledige instructies)
       U3L07 - topDownDesign: Word vertrouwd met de structuur van dit programma, ga
         dan door naar de volgende oefening. (Klik voor volledige instructies)
       U3L07 - topDownDesign_2018: Word vertrouwd met de structuur van dit programma,
         ga dan door naar de volgende oefening. (Klik voor volledige instructies)
+      U3L07 - topDownDesign_2019: Word vertrouwd met de structuur van dit programma,
+        ga dan door naar de volgende oefening. (Klik voor volledige instructies)
       U3L08 - fish: Voeg een parameter toe aan drawFish dat de grootte van de getekende
         vis wijzigt. (Klik voor volledige instructies)
       U3L08 - fish_2018: Voeg een parameter toe aan drawFish dat de grootte van de
         getekende vis wijzigt. (Klik voor volledige instructies)
+      U3L08 - fish_2019: Voeg een parameter toe aan drawFish dat de grootte van de
+        getekende vis wijzigt. (Klik voor volledige instructies)
       U3L08 - freePlay: Blijf dingen toevoegen aan je afbeelding door je nieuwe functies
         meermaals aan te roepen met parameters. (Klik voor volledige instructies)
       U3L08 - freePlay_2018: Blijf dingen toevoegen aan je afbeelding door je nieuwe
+        functies meermaals aan te roepen met parameters. (Klik voor volledige instructies)
+      U3L08 - freePlay_2019: Blijf dingen toevoegen aan je afbeelding door je nieuwe
         functies meermaals aan te roepen met parameters. (Klik voor volledige instructies)
       U3L08 - introUnderTheSea with comments: Voeg een extra vis, zeevis, en stuk
         zeegras toe aan de afbeelding. Bekijk de functies de ze creëert, maar verander
@@ -2587,15 +2698,23 @@ nl:
       U3L08 - introUnderTheSea_2018: Voeg een extra vis, zeevis, en stuk zeegras toe
         aan de afbeelding. Bekijk de functies de ze creëert, maar verander ze niet.
         (Klik om de volledige instructies te zien)
+      U3L08 - introUnderTheSea_2019: Voeg een extra vis, zeevis, en stuk zeegras toe
+        aan de afbeelding. Bekijk de functies de ze creëert, maar verander ze niet.
+        (Klik om de volledige instructies te zien)
       U3L08 - randomInput: Gebruik randomNumber() blokken om de functies te testen
         die je ontworpen hebt met willekeurige invoer. (Klik om volledige instructies
         te zien)
       U3L08 - randomInput_2018: Gebruik randomNumber() blokken om de functies te testen
         die je ontworpen hebt met willekeurige invoer. (Klik om volledige instructies
         te zien)
+      U3L08 - randomInput_2019: Gebruik randomNumber() blokken om de functies te testen
+        die je ontworpen hebt met willekeurige invoer. (Klik om volledige instructies
+        te zien)
       U3L08 - squareTwoParams: Roep drawSquare() aan om de tekening van twee vierkanten
         te vervolledigen. (Klik om volledige instructies te zien)
       U3L08 - squareTwoParams_2018: Roep drawSquare() aan om de tekening van twee
+        vierkanten te vervolledigen. (Klik om volledige instructies te zien)
+      U3L08 - squareTwoParams_2019: Roep drawSquare() aan om de tekening van twee
         vierkanten te vervolledigen. (Klik om volledige instructies te zien)
       U3L08 - starFish: Voeg een extra vis, zeevis, en stuk zeegras toe aan de afbeelding.
         Bekijk de functies de ze creëert, maar verander ze niet. (Klik om de volledige
@@ -2608,6 +2727,9 @@ nl:
       U3L08 how to add comments_2018: Gebruik randomNumber() blokken om de functies
         te testen die je ontworpen hebt met willekeurige invoer. (Klik om volledige
         instructies te zien)
+      U3L08 how to add comments_2019: Gebruik randomNumber() blokken om de functies
+        te testen die je ontworpen hebt met willekeurige invoer. (Klik om volledige
+        instructies te zien)
       U3L15 full clicker app: Voltooi je eigen klik spel! (Klik hier voor volledige
         instructies)
       U3L2 Using Simple Commands (no tooltips): Teken een 1x1 vierkant boven en links
@@ -2616,27 +2738,39 @@ nl:
         zijn startpositie. Klik om alle instructies te zien.
       U3L2 Using Simple Commands_2018: Teken een 1x1 vierkant boven en links van de
         schildpad zijn startpositie. Klik om alle instructies te zien.
+      U3L2 Using Simple Commands_2019: Teken een 1x1 vierkant boven en links van de
+        schildpad zijn startpositie. Klik om alle instructies te zien.
       U3L2_Turtle3by3Grid: Teken zo efficiënt mogelijk een 3x3 rooster voor en rechts
         van de schildpad. De schildpad zou op zijn beginpositie moeten eindigen, kijkende
         in dezelfde richting als in het begin. (Klik voor volledige instructies)
       U3L2_Turtle3by3Grid_2018: Teken zo efficiënt mogelijk een 3x3 rooster voor en
         rechts van de schildpad. De schildpad zou op zijn beginpositie moeten eindigen,
         kijkende in dezelfde richting als in het begin. (Klik voor volledige instructies)
+      U3L2_Turtle3by3Grid_2019: Teken zo efficiënt mogelijk een 3x3 rooster voor en
+        rechts van de schildpad. De schildpad zou op zijn beginpositie moeten eindigen,
+        kijkende in dezelfde richting als in het begin. (Klik voor volledige instructies)
       U3L2_TurtleSquare_right: Teken een vierkant boven en rechts van je startpositie.
         (Klik om volledige instructies te bekijken)
       U3L2_TurtleSquare_right_2018: Teken een vierkant boven en rechts van je startpositie.
+        (Klik om volledige instructies te bekijken)
+      U3L2_TurtleSquare_right_2019: Teken een vierkant boven en rechts van je startpositie.
         (Klik om volledige instructies te bekijken)
       U4 Model App: Voeg een grote rode knop toe aan je scherm met behulp van Design
         Mode. (Klik voor volledige instructies)
       U4 Model App_2018: Voeg een grote rode knop toe aan je scherm met behulp van
         Design Mode. (Klik voor volledige instructies)
+      U4 Model App_2019: Voeg een grote rode knop toe aan je scherm met behulp van
+        Design Mode. (Klik voor volledige instructies)
       U4 Model Design 1: Voeg een grote rode knop toe aan je scherm met behulp van
         Design Mode. (Klik voor volledige instructies)
       U4 Model Design 1_2018: Voeg een grote rode knop toe aan je scherm met behulp
         van Design Mode. (Klik voor volledige instructies)
+      U4 Model Design 1_2019: Voeg een grote rode knop toe aan je scherm met behulp
+        van Design Mode. (Klik voor volledige instructies)
       U4 vigenere cipher 2: Instructies
       U4L02 - Objects - Template1: Sjabloon
       U4L02 - Objects - Template1_2018: Sjabloon
+      U4L02 - Objects - Template1_2019: Sjabloon
       Underground Avoiding Lava: Onder sommige van deze blokken zit lava verstopt.
         Dat moet je bedekken voordat je verder kunt. Een als-opdracht komt hier goed
         van pas. Voeg op de juiste plaats een "beweeg vooruit"-opdracht toe om deze

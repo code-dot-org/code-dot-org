@@ -16,6 +16,11 @@ export var input = {
   verticalAlign: 'middle'
 };
 
+export var enumInput = {
+  marginBottom: 0,
+  border: '1px solid ' + color.light_gray
+};
+
 export var container = {
   paddingLeft: 20,
   marginBottom: 8

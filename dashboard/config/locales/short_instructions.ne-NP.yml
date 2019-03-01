@@ -1497,8 +1497,10 @@ ne:
         too hard. Let your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution: Instructions
       Crack Random Substitution_2018: Instructions
+      Crack Random Substitution_2019: Instructions
       Crack a Caesar Cipher: Instructions
       Crack a Caesar Cipher_2018: Instructions
+      Crack a Caesar Cipher_2019: Instructions
       Food Fight!: "We've added one last function for\nyou. \r\n\r\nUse an \"if\"
         statement to program your game to call the \"level_up\"\nfunction only when
         \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
@@ -2118,6 +2120,7 @@ ne:
         `fill` block until the ground is even?  "
       The Vigenere Cipher Widget: Instructions
       The Vigenere Cipher Widget_2018: Instructions
+      The Vigenere Cipher Widget_2019: Instructions
       The Vigenere Cipher: Instructions
       Total Artist Clone Me: |-
         Freeplay: Here are the functions
@@ -2129,6 +2132,7 @@ ne:
       U4 vigenere cipher 2: Instructions
       U4L02 - Objects - Template1: Template
       U4L02 - Objects - Template1_2018: Template
+      U4L02 - Objects - Template1_2019: Template
       Underground Avoiding Lava: |-
         Lava is hiding beneath some of these
         blocks, which you'll need to cover up before moving forward. An "if" command

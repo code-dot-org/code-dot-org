@@ -27,17 +27,18 @@ it:
       Numbers: Numeri
       Default: Impostazione predefinita
       World: Ambiente
+      Dancers: Ballerini
+      Groups: Gruppi
       Sprites: Personaggi
       Behaviors: Comportamenti
       Start: Inizia
       Music: Musica
       Dancing: Danza
-      Dancers: Ballerini
-      Groups: Gruppi
       Sprite: Personaggio
       Brush: Pennello
       Booleans: Valori Booleani
       test: test
+      Do Not Use: Non usare
       Name: Nome
       'Functions ': 'Funzioni '
       Function: Funzione

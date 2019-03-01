@@ -174,6 +174,16 @@ function appendPx(input) {
 }
 designMode.appendPx = appendPx;
 
+designMode.fontFamilyStyleFromOption = function(option) {
+  const fontIndex = applabConstants.fontFamilyOptions.indexOf(option);
+  return applabConstants.fontFamilyStyles[fontIndex === -1 ? 0 : fontIndex];
+};
+
+designMode.fontFamilyOptionFromStyle = function(style) {
+  const fontIndex = applabConstants.fontFamilyStyles.indexOf(style);
+  return applabConstants.fontFamilyOptions[fontIndex === -1 ? 0 : fontIndex];
+};
+
 /**
  * Handle a change from our properties table.
  * @param element {Element}
@@ -256,6 +266,18 @@ designMode.updateProperty = function(element, name, value) {
       break;
     case 'backgroundColor':
       element.style.backgroundColor = value;
+      break;
+    case 'borderWidth':
+      element.style.borderWidth = appendPx(value);
+      break;
+    case 'borderColor':
+      element.style.borderColor = value;
+      break;
+    case 'borderRadius':
+      element.style.borderRadius = appendPx(value);
+      break;
+    case 'fontFamily':
+      element.style.fontFamily = designMode.fontFamilyStyleFromOption(value);
       break;
     case 'fontSize':
       element.style.fontSize = appendPx(value);
@@ -487,6 +509,14 @@ designMode.readProperty = function(element, name) {
       return element.style.color;
     case 'backgroundColor':
       return element.style.backgroundColor;
+    case 'borderWidth':
+      return parseFloat(element.style.borderWidth);
+    case 'borderColor':
+      return element.style.borderColor;
+    case 'borderRadius':
+      return parseFloat(element.style.borderRadius);
+    case 'fontFamily':
+      return designMode.fontFamilyOptionFromStyle(element.style.fontFamily);
     case 'fontSize':
       return parseFloat(element.style.fontSize);
     case 'textAlign':

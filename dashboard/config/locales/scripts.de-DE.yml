@@ -1574,6 +1574,8 @@ de:
               name: Crowdsourcing
             Relay Programming:
               name: Relais-Programmierung
+            Graph Paper Programming:
+              name: Programmieren auf Millimeterpapier
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1755,6 +1757,8 @@ de:
               name: 'Offline: Binär'
             Artist Binary:
               name: Künstler Binär
+            Dance Party:
+              name: Tanzparty
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1830,3 +1834,57 @@ de:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Listen
+        csd3-2019:
+          description_short: Programmierung
+          stages:
+            Variables:
+              name: Variablen
+            Conditionals:
+              name: Bedingungen
+            Functions:
+              name: Funktionen
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funktionen mit Parametern
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Umfragen
+        csp1-2019:
+          stages:
+            Sending Binary Messages:
+              name: Binäre Nachrichten senden
+            Sending Binary Messages with the Internet Simulator:
+              name: Binäre Nachrichten mit dem Internet-Simulator senden
+            Binary Numbers:
+              name: Binärzahlen
+            Sending Numbers:
+              name: Zahlen senden
+            The Internet:
+              name: das Internet
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Bytes und Dateigrößen
+        csp3-2019:
+          description_short: Programmierung
+          stages:
+            Creating Functions:
+              name: Funktionen erstellen
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Einfache Verschlüsselung
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Solange-Schleifen
+            Loops and Simulations:
+              name: Schleifen und Simulationen
+            Introduction to Arrays:
+              name: Einführung in Arrays

@@ -55,16 +55,25 @@ id:
         grid: Klik di sini untuk menampilkan grid.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Klik di sini untuk menampilkan grid.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Klik di sini untuk menampilkan grid.
       CSD U3 Variables Predict Where XY_callout:
         grid: Klik di sini untuk menampilkan grid.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Klik di sini untuk menampilkan grid.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Klik di sini untuk menampilkan grid.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Ubah nomornya disini
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Ubah nomornya disini
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Inilah kodenya
+        CSD_U3_rect_c2: Tarik blok ini ke area kode.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
       CSD U3 ellipse_callout:
@@ -73,10 +82,16 @@ id:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Inilah kodenya
+        CSD_U3_rect_c2: Tarik blok ini ke area kode.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Inilah kodenya
+        CSD_U3_rect_c2: Tarik blok ini ke area kode.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
       CSD U3 my-rect_callout:
@@ -87,35 +102,52 @@ id:
         CSD_U3_rect_c2: Berikut ini adalah tombol "Run".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Inilah kodenya
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Inilah kodenya
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Inilah kodenya
+        CSD_U3_rect_c2: Tarik blok ini ke area kode.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Tambahkan kode anda disini
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Tambahkan kode anda disini
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Tambahkan kode anda disini
       CSD U6 light show predict_callout:
         CSDUDL03P09: Apa kegunaan garis ini?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Apa kegunaan garis ini?
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: Apa kegunaan garis ini?
       CSD U6 light show_callout:
         CSDUDL03P09: Apa kegunaan garis ini?
       CSD U6 light show_2018_callout:
+        CSDUDL03P09: Apa kegunaan garis ini?
+      CSD U6 light show_2019_callout:
         CSDUDL03P09: Apa kegunaan garis ini?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Menentukan memulai permainan di sini
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Menentukan memulai permainan di sini
+      CSD U6 tugowar variables 1_2019_callout:
+        CSD_U6_startGame: Menentukan memulai permainan di sini
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Tentukan Pemain yang bisa dipindahkan() disini
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Tentukan Pemain yang bisa dipindahkan() disini
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Tentukan Pemain yang bisa dipindahkan() disini
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Periksa apakah pemain telah menang
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Periksa apakah pemain telah menang
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Periksa apakah pemain telah menang
       Counting_callout:
         New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
@@ -483,6 +515,8 @@ id:
       U3L08 how to add comments_callout:
         comment_highlight: Seret blok komentar dari sini ke dalam kode anda
       U3L08 how to add comments_2018_callout:
+        comment_highlight: Seret blok komentar dari sini ke dalam kode anda
+      U3L08 how to add comments_2019_callout:
         comment_highlight: Seret blok komentar dari sini ke dalam kode anda
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Kode ini akan memeriksa lava, dapatkah kamu menambahkan

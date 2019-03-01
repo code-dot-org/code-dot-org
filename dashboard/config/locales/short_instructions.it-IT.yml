@@ -444,9 +444,8 @@ it:
         (TNT)
       2-3 Maze Loops 1: Riesci a farmi arrivare al maialino usando 5 blocchi?
       2-3 Maze Loops 17: Fammi arrivare al girasole, usando quello che hai imparato!
-      2-3 Maze Loops 18: |-
-        Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
-        Prova ad usare un blocco `ripeti ... volte` (<i>ciclo</i>) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
+      2-3 Maze Loops 18: Fammi arrivare al girasole usando il minor numero possibile
+        di blocchi!
       2-3 Maze Loops 19: Usa i cicli per farmi arrivare al girasole col minor numero
         possibile di blocchi!
       2-3 Maze Loops 20: Prova a risolvere questo esercizio usando meno blocchi possibile.
@@ -1520,13 +1519,10 @@ it:
         In questo esercizio c'è una funzione chiamata `jump` (<i>salta</i>) che consente al cane di saltare in alto di 100 pixel.<br>
         <br>
         Clicca su "Esegui" ed utilizza questa nuova funzione per raccogliere tutte le bandierine muovendo il cane con i tasti freccia.
-      Course 4 Play Lab Params 10: 'Abbiamo aggiunto al gioco ancora un''altra funzione
-        che puoi usare. Programma il tuo gioco in modo tale da chiamare la funzione
-        `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>)
-        diventa maggiore di un certo valore (per esempio: `player_score` > 6). Clicca
-        su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
-        Nota: nella funzione `level_up` viene usata la variabile `enemy_speed` che
-        significa <i>velocità del nemico</i>.'
+      Course 4 Play Lab Params 10: |-
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
+        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       Course 4 Play Lab Params 2: 'Ora le bandierine sono troppo in alto per poterle
         raggiungere con la funzione `jump` (<i>salta</i>)! Dovresti associare alle
         frecce `verso l''alto` e `verso il basso` una funzione che consenta di avere
@@ -1754,6 +1750,32 @@ it:
       Course E MC Conditionals1: Nel sottosuolo trovi le risorse più preziose, ma
         è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Course1BeePuzzle12: Prendi tre dosi di nettare e poi fai due dosi di miele
+      CourseD_Dance_Party_01: Trascina nell’area di lavoro il blocco `crea un nuovo`e
+        aggancialo al blocco `quando si clicca su "Esegui"` (`setup`).
+      CourseD_Dance_Party_02: Fai iniziare all’alce una nuova mossa dopo 4 battute!
+      CourseD_Dance_Party_03: Adesso fai in modo che il ballerino cominci una nuova
+        mossa dopo 6 battute.
+      CourseD_Dance_Party_04: Aggiungi nel programma un effetto allo sfondo.
+      CourseD_Dance_Party_05: Usa un altro nuovo blocco per far cambiare mosse al
+        ballerino ogni 2 battute.
+      CourseD_Dance_Party_06: Crea un ballerino secondario `backup_dancer1` che balli
+        assieme al gatto.
+      CourseD_Dance_Party_08: Riesci a rendere entrambi i ballerini secondari (backup_dancer1
+        e backup_dancer2) delle stesse dimensioni?
+      CourseD_Dance_Party_09: Usa il blocco `imposta la tonalità` per modificare il
+        colore di un ballerino.
+      CourseD_Dance_Party_10: Fai in modo che anche l’altro ballerino segua la musica,
+        usando il blocco `modifica ... seguendo ...`.
+      CourseD_Dance_Party_11: Il blocco `quando si preme in alto` ti consente di eseguire
+        il codice sottostante quando premi la freccia in su (↑). Prova a far eseguire
+        al ballerino una mossa quando premi la freccia in su.
+      CourseD_Dance_Party_11_5: Usa alcuni blocchi `"tutti i paperi" eseguono la mossa
+        ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
+      CourseD_Dance_Party_11b: Fai fare una “spaccata” al Robot premendo la freccia
+        a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
+        Alterna le due mosse più velocemente che puoi!
+      CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
+        da condividere con i tuoi amici.
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con
         cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<b>Attenzione</b>:
         se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove.
@@ -1802,8 +1824,10 @@ it:
         Iniziamo con 10 punti così non è troppo difficile. Lascia che il punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
       Crack Random Substitution: Istruzioni
       Crack Random Substitution_2018: Istruzioni
+      Crack Random Substitution_2019: Istruzioni
       Crack a Caesar Cipher: Istruzioni
       Crack a Caesar Cipher_2018: Istruzioni
+      Crack a Caesar Cipher_2019: Istruzioni
       D_Frozen_nested3: Ora fai ruotare queste fila di figure!
       D_Frozen_nested4: È ora di sovrapporre queste forme!
       D_Frozen_nested5: Gioca con i fiocchi di neve!
@@ -1956,13 +1980,10 @@ it:
         per rendere speciale il tuo acquario!
       Fish Tank 7-validated_simple: Usa qualche blocco nuovo dalla cassetta degli
         attrezzi per rendere speciale il tuo acquario!
-      Food Fight!: 'Abbiamo aggiunto al gioco ancora un''altra funzione che puoi usare.
-        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali
-        di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa
-        maggiore di un certo valore (per esempio: `player_score` > 6). Clicca su "Esegui"
-        per giocare e arriva al livello 3 per passare al prossimo esercizio. Nota:
-        nella funzione `level_up` viene usata la variabile `enemy_speed` che significa
-        <i>velocità del nemico</i>.'
+      Food Fight!: |-
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
+        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       Food Fight: |-
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
         Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
@@ -2788,6 +2809,7 @@ it:
         <b>Suggerimento</b>: usa le opzioni nel menù a discesa del blocco `mentre`.
       The Vigenere Cipher Widget: Istruzioni
       The Vigenere Cipher Widget_2018: Istruzioni
+      The Vigenere Cipher Widget_2019: Istruzioni
       The Vigenere Cipher: Istruzioni
       Total Artist Clone Me: "Tempo di giocare: qui ci sono tutte le funzioni che
         hai scritto e anche qualcuna in più con cui puoi giocare: `draw a pinwheel`
@@ -2800,6 +2822,7 @@ it:
       U4 vigenere cipher 2: Istruzioni
       U4L02 - Objects - Template1: Template
       U4L02 - Objects - Template1_2018: Template
+      U4L02 - Objects - Template1_2019: Template
       Underground Avoiding Lava: Sotto alcuni di questi blocchi c'è la lava, che devi
         coprire per poter andare avanti. L'istruzione `se` ti è utile in questi casi.
         Aggiungi un istruzione `vai avanti` nel posto giusto per estrarre tutte le
@@ -7288,13 +7311,10 @@ it:
         di torta e decrementata ogni volta che il gatto colpisce il cane con un sandwich.
         Una volta concluse queste modifiche clicca su "Esegui" per giocare. Quando
         il punteggio arriva a 6 si passa all''esercizio successivo. '
-      grade5_playlab_variables81: 'Abbiamo aggiunto al gioco ancora un''altra funzione
-        che puoi usare. Programma il tuo gioco in modo tale da chiamare la funzione
-        `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>)
-        diventa maggiore di un certo valore (per esempio: `player_score` > 6). Clicca
-        su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
-        Nota: nella funzione `level_up` viene usata la variabile `enemy_speed` che
-        significa <i>velocità del nemico</i>.'
+      grade5_playlab_variables81: |-
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
+        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       grade5_playlab_variables9: In questo esercizio c'è una funzione chiamata `patrol`
         (<i>pattuglia</i>) in cui devi inserire il codice che serve per far muovere
         il gatto prima in su e poi in giù di 400 pixel.

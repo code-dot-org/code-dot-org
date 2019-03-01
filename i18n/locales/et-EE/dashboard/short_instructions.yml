@@ -430,6 +430,7 @@ et:
       C3-Farmer While Loops Assessment 1: Siin on palju auke ja hunnikuid. Aita mul neid täita ja eemaldada, et saada maapind tasaseks.
       CSD U5 black white images pixelation 5: Joonista nüüd ükskõik mida soovid
       CSD U5 black white images pixelation 5_2018: Joonista nüüd ükskõik mida soovid
+      CSD U5 black white images pixelation 5_2019: Joonista nüüd ükskõik mida soovid
       CSP student contact info: Palun sisestage e-posti aadress.
       Course 2 Bee Loops 1: 'Tere, mina olen mesilane. Kas sa aitad mul koguda nektarit nendelt lilledelt? '
       Course 2 Maze Loops 1: Kas oskad mind viit plokki kasutades põrsa juurde viia?
@@ -680,6 +681,19 @@ et:
       Course 4 SCVP 1: Loo funktsioon parameetritega, mis võimaldavad kunstnikul hüpata edasi ja tagasi x piksli võrra ning üles ja alla y piksli võrra (kasutades positiivseid ja negatiivseid arve).
       Course 4 Variables Assessment: Kas oskad luua selle pildi, kasutades külgede jaoks muutujat? Iga joon peab olema 50 piksli pikkune.
       Course E MC Conditionals1: Kõige väärtuslikumad maavarad leiad maa alt, kuid seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt kaks sütt.
+      CourseD_Dance_Party_01: Lohista `tee uus` plokk töölauale ja ühenda see `seadista` ploki sisse.
+      CourseD_Dance_Party_02: Las põder alustab uue liigutusega peale 4 ühikut!
+      CourseD_Dance_Party_03: Las tantsija alustab uue liigutusega peale 6 ühikut!
+      CourseD_Dance_Party_04: Lisa oma programmile taustaeffekt.
+      CourseD_Dance_Party_05: Lisa uus plokk, et tantsija muudaks liigutusi iga 2 ühiku järel.
+      CourseD_Dance_Party_06: Loo taustatantsija, keda kutustakse `taustatantsija1`, et ta kassiga tantsiks.
+      CourseD_Dance_Party_08: Kas saad muuta mõlemad taustatantsijad sama suureks?
+      CourseD_Dance_Party_09: Kasuta `määra toon` plokki, et tantsija värvi muuta.
+      CourseD_Dance_Party_10: Pane teine tantsija muusikale vastavalt liikuma, kasutades `hakkab järgnema` plokki.
+      CourseD_Dance_Party_11: Plokk `kui vajutad ülesse` laseb koodi käivitada siis, kui vajutatakse ülemist nooleklahvi. Proovi panna tantsija kiireid liigutusi tegema kui vajutad ülemist nooleklahvi.
+      CourseD_Dance_Party_11_5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
+      CourseD_Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi. Kükita-plaksuta nii kiiresti kui võimalik!
+      CourseD_Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       CourseF_PlayLab_vars10: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
       CourseF_PlayLab_vars2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       CourseF_PlayLab_vars3: Kasuta liikumiseks vasak- ja paremnoolt ning hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.
@@ -694,8 +708,10 @@ et:
       CourseF_PlayLab_vars9: Tore! Teeme nüüd mängu natuke raskemaks. Iga kord, kui koer (tegelane 1) saab kassi (tegelane 2) võileivaga pihta, kaotad sina punkti. Alusta 10 punktiga, et mäng ei läheks liiga raskeks. Taseme läbimiseks lase oma skoor langeda kümnelt nullile.
       Crack Random Substitution: Juhised
       Crack Random Substitution_2018: Juhised
+      Crack Random Substitution_2019: Juhised
       Crack a Caesar Cipher: Juhised
       Crack a Caesar Cipher_2018: Juhised
+      Crack a Caesar Cipher_2019: Juhised
       Dance_Party_01: Lohista `tee uus` plokk töölauale ja ühenda see `seadista` ploki sisse.
       Dance_Party_01_low: Lohista `tee uus` plokk töölauale ja ühenda see `seadista` ploki sisse.
       Dance_Party_02: Las põder alustab uue liigutusega peale 4 ühikut!
@@ -1060,6 +1076,7 @@ et:
       Testing Quantum Farmer: "Uskumatu, ma leidsin tõeliselt sügava augu!\\r\\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \\r Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  "
       The Vigenere Cipher Widget: Juhised
       The Vigenere Cipher Widget_2018: Juhised
+      The Vigenere Cipher Widget_2019: Juhised
       The Vigenere Cipher: Juhised
       Total Artist Clone Me: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone laiusega, et näha, kuidas see sinu joonistusi muudab!'
       U2 Vigenere: Test
@@ -1070,6 +1087,7 @@ et:
       U4 vigenere cipher 2: Juhised
       U4L02 - Objects - Template1: Šabloon
       U4L02 - Objects - Template1_2018: Šabloon
+      U4L02 - Objects - Template1_2019: Šabloon
       Underground Avoiding Lava: Mõne ploki all on peidus laava, mis sul tuleb enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta käsk „liigu edasi“, et neid plokke koguda.
       Underground Avoiding Lava_2018: Mõne ploki all on peidus laava, mis sul tuleb enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta käsk „liigu edasi“, et neid plokke koguda.
       Underground Avoiding Lava_2019: Mõne ploki all on peidus laava, mis sul tuleb enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta käsk „liigu edasi“, et neid plokke koguda.

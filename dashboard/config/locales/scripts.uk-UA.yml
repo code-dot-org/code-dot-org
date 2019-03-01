@@ -1551,6 +1551,8 @@ uk:
               name: Краудсорсинг
             Relay Programming:
               name: Естафетне програмування
+            Graph Paper Programming:
+              name: Програмування по клітинках
         courseb-2018:
           assignment_family_title: Курс Б
           stages:
@@ -1733,6 +1735,8 @@ uk:
               name: 'Безмашинні вправи: двійкова система'
             Artist Binary:
               name: 'Художник: двійкова система'
+            Dance Party:
+              name: Танцювальна вечірка
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1812,3 +1816,47 @@ uk:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Списки
+        csd3-2019:
+          description_short: Програмування
+          stages:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Функції з параметрами
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Опитування
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Особисті інновації
+            Binary Numbers:
+              name: Двійкові Числа
+            The Internet:
+              name: Інтернет
+        csp3-2019:
+          description_short: Програмування
+          stages:
+            Creating Functions:
+              name: Створення функцій
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Просте шифрування
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Цикли "поки"
