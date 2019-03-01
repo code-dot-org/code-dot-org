@@ -142,12 +142,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
+  # Test updating the school_info of an older user without an email address.
   test 'update_school_info with specific school overwrites user school info for user without email' do
     user = create :teacher, :with_school_info
     new_school_info = create :school_info
 
     user.email = ""
     user.save(validate: false)
+    refute user.valid?
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
