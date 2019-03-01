@@ -288,7 +288,7 @@ class User < ActiveRecord::Base
   def update_school_info(new_school_info)
     if school_info.try(&:school).nil? || new_school_info.try(&:school)
       self.school_info_id = new_school_info.id
-      save!
+      save(validate: false)
     end
   end
 
