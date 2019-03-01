@@ -291,19 +291,6 @@ clientState.cacheUserIsTeacher = function(isTeacher) {
 };
 
 /**
- * Get the cached state of whether the user is a teacher.
- */
-clientState.getUserIsTeacher = function() {
-  let isTeacher = false;
-  try {
-    isTeacher = JSON.parse(sessionStorage.getItem('isTeacher'));
-  } catch (e) {
-    isTeacher = false;
-  }
-  return isTeacher;
-};
-
-/**
  * Private helper for videos and callouts - looks in local storage to see if the element has been seen
  * @param visualElementType
  * @param visualElementId
