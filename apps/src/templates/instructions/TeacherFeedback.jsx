@@ -107,6 +107,24 @@ class TeacherFeedback extends Component {
     const {user, serverLevelId, teacher} = this.props;
     const {studentId} = this.state;
 
+    window.addEventListener('beforeunload', event => {
+      const latestFeedback =
+        this.state.latestFeedback.length > 0
+          ? this.state.latestFeedback[0]
+          : null;
+      const feedbackUnchanged =
+        (latestFeedback &&
+          (this.state.comment === latestFeedback.comment &&
+            this.state.performance === latestFeedback.performance)) ||
+        (!latestFeedback &&
+          (this.state.comment.length === 0 && this.state.performance === null));
+
+      if (!feedbackUnchanged) {
+        event.preventDefault();
+        event.returnValue = 'Are you sure? Your feedback may not be saved.';
+      }
+    });
+
     if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
