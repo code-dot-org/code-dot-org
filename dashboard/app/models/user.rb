@@ -228,6 +228,9 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
 
+  has_many :user_school_infos
+  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+
   has_one :circuit_playground_discount_application
 
   has_many :pd_applications,
@@ -284,8 +287,26 @@ class User < ActiveRecord::Base
   # @param new_school_info a school_info object to compare to the user current school information.
   def update_school_info(new_school_info)
     if school_info.try(&:school).nil? || new_school_info.try(&:school)
-      update_column(:school_info_id, new_school_info.id)
+      self.school_info_id = new_school_info.id
+      save(validate: false)
     end
+  end
+
+  def update_and_add_users_school_infos
+    last_school = user_school_infos.find_by(end_date: nil)
+    current_time = Time.now.utc
+    if last_school
+      last_school.end_date = current_time
+      last_school.save!
+    end
+    UserSchoolInfo.create(
+      user: self,
+      school_info: school_info,
+      user_id: id,
+      start_date: current_time,
+      school_info_id: school_info_id,
+      last_confirmation_date: current_time
+    )
   end
 
   # Not deployed to everyone, so we don't require this for anybody, yet
