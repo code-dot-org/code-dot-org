@@ -294,6 +294,20 @@ Resources:
       InstanceProfileName: Percona-Monitoring-Management
       Path: '/'
       Roles: [!Ref PMMRole]
+  # Global managed-policy named role used by ECS.
+  # Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
+  EcsTaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ecsTaskExecutionRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: 'sts:AssumeRole'
+            Effect: Allow
+            Principal: {Service: ecs-tasks.amazonaws.com}
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
 Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
