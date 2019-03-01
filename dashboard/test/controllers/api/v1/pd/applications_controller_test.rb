@@ -742,9 +742,9 @@ module Api::V1::Pd
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
-          pd_workshop_id: workshop.id,
-          scholarship_status: 'no'
+          pd_workshop_id: workshop.id
         )
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.status = 'accepted_not_notified'
@@ -884,7 +884,6 @@ module Api::V1::Pd
         "Notes 3",
         "Notes 4",
         "Notes 5",
-        "Title",
         "First name",
         "Last name",
         "Account email",
@@ -901,10 +900,7 @@ module Api::V1::Pd
         "Regional Partner",
         "Link to Application",
         "Home or cell phone",
-        "Home address",
-        "City",
-        "State",
-        "Zip code",
+        "Home zip code",
         "Country",
         "Principal's first name",
         "Principal's last name",
@@ -926,19 +922,14 @@ module Api::V1::Pd
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "If yes, please describe the course it will be replacing and why:",
         "What subjects are you teaching this year (2018-19)?",
-        "Does your school district require any specific licenses, certifications, or endorsements to teach computer science?",
-        "What license, certification, or endorsement is required?",
-        "Do you have the required licenses, certifications, or endorsements to teach computer science in your district?",
-        "Which subject area(s) are you currently licensed to teach?",
         "Have you taught computer science courses or activities in the past?",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
-        "What computer science courses or activities are currently offered at your school?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
         "If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?",
         "How far would you be willing to travel to academic year workshops?",
         "Are you interested in this online program for school year workshops?",
-        "Will you or your school be able to pay the fee?",
+        "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",

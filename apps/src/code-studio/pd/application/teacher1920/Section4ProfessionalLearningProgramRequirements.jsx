@@ -56,8 +56,14 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     if (this.props.data.school === '-1') {
       locationParams.zip_code = this.props.data.schoolZipCode;
       locationParams.state = this.props.data.schoolState;
-    } else {
+    } else if (this.props.data.school) {
       locationParams.school = this.props.data.school;
+    } else {
+      this.setState({
+        loadingPartner: false,
+        loadError: true
+      });
+      return;
     }
 
     const url = `/api/v1/pd/regional_partner_workshops/find?${$.param(
@@ -201,9 +207,18 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   renderContents() {
     if (this.props.data.program === undefined) {
       return (
-        <div styles={styles.error}>
+        <div style={styles.error}>
           <p>
-            Please fill out Section 2 and select your program before completing
+            Please fill out Section 3 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else if (!this.props.data.school) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 2 and select your school before completing
             this section.
           </p>
         </div>
@@ -261,23 +276,30 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
             </li>
           </ol>
           {this.radioButtonsFor('interestedInOnlineProgram')}
-          <div>
-            <label>
-              There may be a fee associated with the program in your region.
-              There also may be scholarships available to help cover the cost of
-              the program. You can check{' '}
-              <a
-                href="https://code.org/educate/professional-learning/program-information"
-                target="_blank"
-              >
-                this page to see if there are
-              </a>{' '}
-              fees and/or scholarships available in your region.
-            </label>
-            {this.radioButtonsFor('payFee')}
-            {this.props.data.payFee === TextFields.noPayFee1920 &&
-              this.largeInputFor('scholarshipReasons')}
-          </div>
+          {this.props.data.regionalPartnerId && (
+            <div>
+              <label>
+                There may be scholarships available in your region to cover the
+                cost of the program.{' '}
+                <a
+                  href={
+                    'https://code.org/educate/professional-learning/program-information' +
+                    (!!this.props.data.zipCode
+                      ? '?zip=' + this.props.data.zipCode
+                      : '')
+                  }
+                  target="_blank"
+                >
+                  Click here to check the fees and discounts for your program
+                </a>
+                . Let us know if your school would be able to pay the fee or if
+                you need to be considered for a scholarship.
+              </label>
+              {this.radioButtonsFor('payFee')}
+              {this.props.data.payFee === TextFields.noPayFee1920 &&
+                this.largeInputFor('scholarshipReasons')}
+            </div>
+          )}
         </div>
       );
     }
@@ -312,6 +334,10 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       data.regionalPartnerWorkshopIds.length > 0
     ) {
       requiredFields.push('ableToAttendMultiple', 'committed');
+    }
+
+    if (data.regionalPartnerId) {
+      requiredFields.push('payFee');
     }
 
     if (data.payFee === TextFields.noPayFee1920) {

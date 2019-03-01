@@ -7,6 +7,10 @@ class ScriptsControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @not_admin = create(:user)
     @levelbuilder = create(:levelbuilder)
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_script = create :script, pilot_experiment: 'my-experiment'
+    @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
+    @pilot_student = create(:follower, section: @pilot_section).student_user
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -273,6 +277,46 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
   end
+
+  test 'updates pilot_experiment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      pilot_experiment: 'pilot-experiment',
+      hidden: false,
+    }
+    assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
+    # pilot scripts are always marked hidden
+    assert Script.find_by_name(script.name).hidden
+  end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+    params: -> {{id: @pilot_script.name}},
+    name: 'signed out user cannot view pilot script'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :student,
+    params: -> {{id: @pilot_script.name}}, name: 'student cannot view pilot script'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+    params: -> {{id: @pilot_script.name}},
+    name: 'teacher without pilot access cannot view pilot script'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+    params: -> {{id: @pilot_script.name, section_id: @pilot_section.id}},
+    name: 'pilot teacher can view pilot script'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
+    params: -> {{id: @pilot_script.name}}, name: 'pilot student can view pilot script'
+
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+    params: -> {{id: @pilot_script.name}}, name: 'levelbuilder can view pilot script'
 
   test 'can create with has_lesson_plan param' do
     sign_in @levelbuilder

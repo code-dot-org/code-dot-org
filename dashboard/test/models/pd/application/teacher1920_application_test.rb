@@ -319,12 +319,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 107, csv_header_csd.length
+      assert_equal 98, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 109, csv_header_csp.length
+      assert_equal 100, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -468,17 +468,29 @@ module Pd::Application
     test 'test non course dynamically required fields' do
       application_hash = build :pd_teacher1920_application_hash,
         completing_on_behalf_of_someone_else: YES,
-        does_school_require_cs_license: YES,
         pay_fee: TEXT_FIELDS[:no_pay_fee_1920],
         regional_partner_workshop_ids: [1, 2, 3],
-        able_to_attend_multiple: [TEXT_FIELDS[:unable_to_attend_1920]],
-        what_license_required: nil
+        able_to_attend_multiple: [TEXT_FIELDS[:unable_to_attend_1920]]
 
       application = build :pd_teacher1920_application, form_data_hash: application_hash
       assert_nil application.formatted_partner_contact_email
 
       refute application.valid?
-      assert_equal %w(completingOnBehalfOfName whatLicenseRequired travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
+      assert_equal %w(completingOnBehalfOfName travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
+    end
+
+    # We changed the possible answers to this question after opening the application,
+    # including removing some possible answers.  Since we can't reasonably backfill those,
+    # we are clearing them and making this field not required on the server (it's still
+    # required on the client for new applications).
+    test 'does not require pay_fee' do
+      application_hash = build :pd_teacher1920_application_hash,
+        regional_partner_id: create(:regional_partner).id,
+        pay_fee: nil
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      assert_nil application.sanitize_form_data_hash[:pay_fee]
+      assert application.valid?
+      assert_equal %w(), application.errors.messages[:form_data]
     end
 
     test 'test csd dynamically required fields' do
@@ -569,7 +581,6 @@ module Pd::Application
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        have_cs_license: options[:have_cs_license].first,
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
@@ -632,7 +643,6 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].last,
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        have_cs_license: options[:have_cs_license].first,
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
@@ -693,7 +703,6 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].last,
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        have_cs_license: options[:have_cs_license].first,
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
@@ -739,7 +748,6 @@ module Pd::Application
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
-        have_cs_license: options[:have_cs_license].second,
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
@@ -801,7 +809,6 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].first,
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
-        have_cs_license: options[:have_cs_license].second,
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
@@ -982,16 +989,21 @@ module Pd::Application
       end
     end
 
-    test 'test scholarship statuses' do
+    test 'test update scholarship status' do
       application = create :pd_teacher1920_application
       assert_nil application.scholarship_status
 
-      application.scholarship_status = 'no'
-      application.save
-      assert_equal 'no', application.scholarship_status
+      assert_creates(Pd::ScholarshipInfo) do
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
+      end
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
-      application.scholarship_status = 'invalid status'
-      refute application.save
+      refute application.update_scholarship_status 'invalid status'
+
+      refute_creates(Pd::ScholarshipInfo) do
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
+      end
+      assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
     end
 
     test 'associated models cache prefetch' do

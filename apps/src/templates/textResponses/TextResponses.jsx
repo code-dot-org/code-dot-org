@@ -12,7 +12,8 @@ import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
 import {
   setScriptId,
-  validScriptPropType
+  validScriptPropType,
+  getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const CSV_HEADERS = [
@@ -29,9 +30,11 @@ const styles = {
   header: {
     marginBottom: 0
   },
+  scriptSelection: {
+    marginTop: 30
+  },
   actionRow: {
     height: 47,
-    width: '100%',
     padding: PADDING,
     marginTop: 20,
     backgroundColor: color.table_header,
@@ -65,12 +68,13 @@ const styles = {
 
 class TextResponses extends Component {
   static propTypes = {
-    // provided by redux
+    // Provided by redux.
     sectionId: PropTypes.number.isRequired,
     responses: PropTypes.object.isRequired,
     isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
+    scriptName: PropTypes.string,
     setScriptId: PropTypes.func.isRequired,
     asyncLoadTextResponses: PropTypes.func.isRequired
   };
@@ -143,12 +147,18 @@ class TextResponses extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, sectionId, isLoadingResponses} = this.props;
+    const {
+      validScripts,
+      scriptId,
+      scriptName,
+      sectionId,
+      isLoadingResponses
+    } = this.props;
     const filteredResponses = this.getFilteredResponses();
 
     return (
       <div>
-        <div>
+        <div style={styles.scriptSelection}>
           <div style={{...h3Style, ...styles.header}}>
             {i18n.selectACourse()}
           </div>
@@ -181,6 +191,8 @@ class TextResponses extends Component {
             responses={filteredResponses}
             sectionId={sectionId}
             isLoading={isLoadingResponses}
+            scriptId={scriptId}
+            scriptName={scriptName}
           />
         </div>
       </div>
@@ -196,7 +208,8 @@ export default connect(
     responses: state.textResponses.responseDataByScript,
     isLoadingResponses: state.textResponses.isLoadingResponses,
     validScripts: state.scriptSelection.validScripts,
-    scriptId: state.scriptSelection.scriptId
+    scriptId: state.scriptSelection.scriptId,
+    scriptName: getSelectedScriptName(state)
   }),
   dispatch => ({
     setScriptId(scriptId) {

@@ -1,13 +1,14 @@
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {
   ApplicationStatuses,
-  ApplicationFinalStatuses
+  ApplicationFinalStatuses,
+  ScholarshipStatusRequiredStatuses
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
 import _ from 'lodash';
-import {expect} from '../../../../util/configuredChai';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
+import {expect} from '../../../../util/configuredChai';
+import {mount, ReactWrapper} from 'enzyme';
 
 describe('DetailViewContents', () => {
   // We aren't testing any of the responses of the workshop selector control, so just
@@ -16,52 +17,56 @@ describe('DetailViewContents', () => {
 
   let context;
 
+  const DEFAULT_APPLICATION_DATA = {
+    regionalPartner: 'partner',
+    notes: 'notes',
+    status: 'accepted',
+    school_name: 'School Name',
+    district_name: 'District Name',
+    email: 'email',
+    application_year: '2019-2020',
+    application_type: 'Teacher',
+    course_name: 'CS Discoveries',
+    course: 'csd',
+    registered_fit_weekend: false,
+    registered_teachercon: false,
+    form_data: {
+      firstName: 'First Name',
+      lastName: 'Last Name',
+      title: 'Title',
+      phone: 'Phone',
+      preferredFirstName: 'Preferred First Name',
+      accountEmail: 'accountEmail',
+      alternateEmail: 'alternateEmail',
+      program: 'program',
+      abilityToMeetRequirements: '10',
+      committed: 'Yes',
+      taughtInPast: 'No'
+    },
+    response_scores: {
+      meets_minimum_criteria_scores: {
+        committed: 'Yes'
+      },
+      bonus_points_scores: {
+        committed: 5,
+        question_1: 5,
+        question_2: 5,
+        question_3: 5,
+        question_4: 5,
+        question_5: 5
+      },
+      meets_scholarship_criteria_scores: {
+        principal_approval: 'Yes'
+      }
+    },
+    school_stats: {}
+  };
+
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
-      regionalPartner: 'partner',
-      notes: 'notes',
-      status: 'accepted',
-      school_name: 'School Name',
-      district_name: 'District Name',
-      email: 'email',
-      application_year: '2019-2020',
-      application_type: applicationType,
-      course_name: 'CS Discoveries',
-      course: 'csd',
-      registered_fit_weekend: false,
-      registered_teachercon: false,
-      form_data: {
-        firstName: 'First Name',
-        lastName: 'Last Name',
-        title: 'Title',
-        phone: 'Phone',
-        preferredFirstName: 'Preferred First Name',
-        accountEmail: 'accountEmail',
-        alternateEmail: 'alternateEmail',
-        program: 'program',
-        abilityToMeetRequirements: '10',
-        committed: 'Yes',
-        taughtInPast: 'No'
-      },
-      response_scores: {
-        meets_minimum_criteria_scores: {
-          committed: 'Yes'
-        },
-        bonus_points_scores: {
-          committed: 5,
-          question_1: 5,
-          question_2: 5,
-          question_3: 5,
-          question_4: 5,
-          question_5: 5
-        },
-        meets_scholarship_criteria_scores: {
-          principal_approval: 'Yes'
-        }
-      },
-      school_stats: {}
+      ...DEFAULT_APPLICATION_DATA,
+      application_type: applicationType
     };
-
     const defaultProps = {
       canLock: true,
       applicationId: '1',
@@ -313,36 +318,146 @@ describe('DetailViewContents', () => {
         expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
       });
     });
+  }
 
-    describe('Scholarship Teacher? row', () => {
-      it('on teacher applications', () => {
-        const detailView = mountDetailView('Teacher');
-        const lastRow = detailView
-          .find('tr')
-          .filterWhere(row => row.text().includes('Scholarship Teacher?'));
-        const dropdown = lastRow.find('Select');
+  describe('Scholarship Teacher? row', () => {
+    it('on teacher applications', () => {
+      const detailView = mountDetailView('Teacher');
+      const lastRow = detailView
+        .find('tr')
+        .filterWhere(row => row.text().includes('Scholarship Teacher?'));
+      const dropdown = lastRow.find('Select');
 
-        // Dropdown is disabled
-        expect(dropdown).to.have.prop('disabled', true);
+      // Dropdown is disabled
+      expect(dropdown).to.have.prop('disabled', true);
 
-        // Click "Edit"
-        detailView
-          .find('#DetailViewHeader Button')
-          .last()
-          .simulate('click');
+      // Click "Edit"
+      detailView
+        .find('#DetailViewHeader Button')
+        .last()
+        .simulate('click');
 
-        // Dropdown is enabled
-        expect(dropdown).to.have.prop('disabled', false);
+      // Dropdown is enabled
+      expect(dropdown).to.have.prop('disabled', false);
 
-        // Click "Save"
-        detailView
-          .find('#DetailViewHeader Button')
-          .last()
-          .simulate('click');
+      // Click "Save"
+      detailView
+        .find('#DetailViewHeader Button')
+        .last()
+        .simulate('click');
 
-        // Dropdown is disabled
-        expect(dropdown).to.have.prop('disabled', true);
+      // Dropdown is disabled
+      expect(dropdown).to.have.prop('disabled', true);
+    });
+  });
+
+  describe('Teacher application scholarship status', () => {
+    let detailView;
+
+    beforeEach(() => {
+      detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarship_status: null
+        }
       });
     });
-  }
+
+    afterEach(() => {
+      detailView.unmount();
+    });
+
+    for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
+      it(`is required in order to set application status to ${applicationStatus}`, () => {
+        expect(isModalShowing()).to.be.false;
+        expect(getScholarshipStatus()).to.be.null;
+        expect(getApplicationStatus()).to.equal('unreviewed');
+
+        setApplicationStatusTo(applicationStatus);
+        expect(isModalShowing()).to.be.true;
+        expect(getApplicationStatus()).to.equal('unreviewed');
+
+        dismissModal();
+        expect(isModalShowing()).to.be.false;
+        expect(getApplicationStatus()).to.equal('unreviewed');
+
+        clickEditButton();
+        setScholarshipStatusTo('no');
+        expect(getScholarshipStatus()).to.equal('no');
+
+        setApplicationStatusTo(applicationStatus);
+        expect(isModalShowing()).to.be.false;
+        expect(getApplicationStatus()).to.equal(applicationStatus);
+      });
+    }
+
+    for (const applicationStatus of [
+      'unreviewed',
+      'pending',
+      'waitlisted',
+      'declined',
+      'withdrawn'
+    ]) {
+      it(`is not required to set application status to ${applicationStatus}`, () => {
+        expect(isModalShowing()).to.be.false;
+        expect(getScholarshipStatus()).to.be.null;
+
+        setApplicationStatusTo(applicationStatus);
+        expect(isModalShowing()).to.be.false;
+        expect(getApplicationStatus()).to.equal(applicationStatus);
+      });
+    }
+
+    function clickEditButton() {
+      detailView
+        .find('#DetailViewHeader Button')
+        .last()
+        .simulate('click');
+    }
+
+    function getApplicationStatus() {
+      return detailView.find('#DetailViewHeader select').prop('value');
+    }
+
+    function setApplicationStatusTo(newStatus) {
+      detailView
+        .find('#DetailViewHeader select')
+        .simulate('change', {target: {value: newStatus}});
+    }
+
+    function getScholarshipStatus() {
+      const scholarshipDropdown = detailView
+        .find('tr')
+        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
+        .find('Select');
+      return scholarshipDropdown.prop('value');
+    }
+
+    function setScholarshipStatusTo(newValue) {
+      const scholarshipDropdown = detailView
+        .find('tr')
+        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
+        .find('Select');
+      scholarshipDropdown.prop('onChange')({value: newValue});
+    }
+
+    function isModalShowing() {
+      const modal = detailView
+        .find('ConfirmationDialog')
+        .filterWhere(
+          dialog => dialog.prop('headerText') === 'Cannot save applicant status'
+        )
+        .first();
+      return !!modal.prop('show');
+    }
+
+    function dismissModal() {
+      const okButton = new ReactWrapper(
+        document.querySelector('button.btn-primary'),
+        true
+      );
+      okButton.simulate('click');
+    }
+  });
 });

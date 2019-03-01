@@ -178,6 +178,12 @@ FactoryGirl.define do
           )
         end
       end
+      transient {pilot_experiment nil}
+      after(:create) do |teacher, evaluator|
+        if evaluator.pilot_experiment
+          create :single_user_experiment, min_user_id: teacher.id, name: evaluator.pilot_experiment
+        end
+      end
     end
 
     factory :student do
@@ -436,6 +442,24 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::EMAIL,
+          authentication_id: user.hashed_email
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
+        )
+      end
+    end
+
+    trait :with_migrated_windowslive_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::WINDOWS_LIVE,
           authentication_id: user.hashed_email
         )
         user.update!(
@@ -840,47 +864,6 @@ FactoryGirl.define do
   factory :user_script do
     user {create :student}
     script
-  end
-
-  factory :cohorts_district do
-    cohort
-    district
-    max_teachers 5
-  end
-
-  factory :cohort do
-    name 'Test Cohort'
-  end
-
-  factory :district do
-    sequence(:name) {|n| "District #{n}"}
-    location 'Panem'
-    contact {create(:district_contact)}
-  end
-
-  factory :workshop do
-    sequence(:name) {|n| "My Workshop #{n}"}
-    program_type '1'
-    location 'Somewhere, USA'
-    instructions 'Test workshop instructions.'
-    facilitators {[create(:facilitator)]}
-    cohorts {[create(:cohort)]}
-    after :create do |workshop, _|
-      create_list :segment, 1, workshop: workshop
-    end
-  end
-
-  factory :segment do
-    workshop
-    start DateTime.now.utc
-    send(:end, DateTime.now.utc + 1.day)
-  end
-
-  factory :attendance, class: WorkshopAttendance do
-    segment
-    teacher {create :teacher}
-
-    status 'present'
   end
 
   factory :peer_review do

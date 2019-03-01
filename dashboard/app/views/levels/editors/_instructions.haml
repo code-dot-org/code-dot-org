@@ -36,25 +36,8 @@
         markdown-enabled instructions can take advantage of
         = link_to 'various markdown rendering options', 'https://commonmark.org/help/'
         to provide more in-depth (and more vertically intrusive) instruction.
-      %p
-        %strong
-          note
-        that we are in the process of changing our markdown processing library
-        from
-        = link_to 'marked', 'https://marked.js.org/'
-        to
-        = link_to 'remark', 'https://remark.js.org/'
-        , and that transition may involve some changes to how markdown is
-        rendered. To ensure your instructions will continue to work after the
-        transition, this preview area is using remark while the student-visible
-        instructions will continue to be rendered with marked. To preview
-        changes as the students will currently see them, please use the
-        "preview in marked" option.
 
       %div{ style: 'border: 8px solid rgb(239, 239, 239)' }
-        %label{ style: 'background: rgb(239, 239, 239)' }
-          %input#marked_preview_toggle{ type: "checkbox" }
-          preview in marked
         #level_long_instructions_preview{ style: 'padding: 20px' }
         %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
           ~ f.text_area :long_instructions, rows: 4
@@ -70,13 +53,13 @@
     = render partial: 'levels/editors/tts', locals: {f: f}
 
 :javascript
-  var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', function (editor, change) {
-    localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
-  }, true);
+  var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
+    callback: function (editor, change) {
+      convertXmlToBlockly(document.getElementById('level_long_instructions_preview'));
 
-  document.getElementById('marked_preview_toggle').addEventListener('change', function (change) {
-    mdEditor.setOption('useMarked', change.target.checked);
-    mdEditor.refresh();
+      localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
+    },
+    attachments: true
   });
 
   var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || html_escape(params[:type])}');

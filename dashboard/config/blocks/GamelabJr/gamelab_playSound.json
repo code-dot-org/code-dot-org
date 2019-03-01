@@ -1,13 +1,12 @@
 {
-  "category": "Actions",
+  "category": "World",
   "config": {
     "func": "playSound",
     "blockText": "playSound {SOUND}",
     "args": [
       {
         "name": "SOUND",
-        "type": "String",
-        "field": true
+        "customInput": "soundPicker"
       }
     ]
   }

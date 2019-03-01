@@ -28,7 +28,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
   render() {
     return (
       <FormGroup>
-        <h3>Section 2: {SectionHeaders.section2ChooseYourProgram}</h3>
+        <h3>Section 3: {SectionHeaders.section2ChooseYourProgram}</h3>
         {this.radioButtonsFor('program')}
         {this.props.data.program === PROGRAM_CSD && (
           <div>

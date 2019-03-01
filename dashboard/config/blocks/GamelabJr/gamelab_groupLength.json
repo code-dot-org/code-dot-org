@@ -1,10 +1,10 @@
 {
-  "category": "Groups",
+  "category": "Sprites",
   "config": {
     "expression": "length",
     "orderPrecedence": 1,
     "name": "groupLength",
-    "blockText": "number of sprites in {THIS}",
+    "blockText": "number of {THIS}",
     "methodCall": true,
     "returnType": "Number"
   }

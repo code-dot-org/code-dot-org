@@ -9,9 +9,16 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
+import BorderProperties from './BorderProperties';
 import color from '../../util/color';
-import {ICON_PREFIX_REGEX} from '../constants';
+import {
+  ICON_PREFIX_REGEX,
+  defaultFontSizeStyle,
+  fontFamilyStyles
+} from '../constants';
 import * as elementUtils from './elementUtils';
+import designMode from '../designMode';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
@@ -51,7 +58,7 @@ class ButtonProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'text'}
@@ -60,25 +67,25 @@ class ButtonProperties extends React.Component {
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -92,9 +99,15 @@ class ButtonProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontFamily
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
+        />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -111,6 +124,21 @@ class ButtonProperties extends React.Component {
           elementId={elementUtils.getId(element)}
         />
         {iconColorPicker}
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -182,7 +210,9 @@ export default {
     element.style.margin = '0px';
     element.style.height = '30px';
     element.style.width = '80px';
-    element.style.fontSize = '14px';
+    element.style.fontFamily = fontFamilyStyles[0];
+    element.style.fontSize = defaultFontSizeStyle;
+    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
 
@@ -193,5 +223,9 @@ export default {
     if (url) {
       updateProperty(element, 'image', url);
     }
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element);
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
   }
 };
