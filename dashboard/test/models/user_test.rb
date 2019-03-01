@@ -1550,21 +1550,18 @@ class UserTest < ActiveSupport::TestCase
     refute student2.can_edit_password?
   end
 
-  test 'can_edit_password? is true for migrated student without a password' do
+  test 'can_edit_password? is true for student without a password' do
     student = create :student, encrypted_password: ''
     assert student.can_edit_password?
   end
 
-  test 'can_edit_password? is true for migrated teacher without a password' do
+  test 'can_edit_password? is true for teacher without a password' do
     teacher = create :teacher, encrypted_password: ''
     assert teacher.can_edit_password?
   end
 
-  test 'can_edit_password? is false for migrated user with no authentication options' do
+  test 'can_edit_password? is false for user with no authentication options' do
     student = create :student_in_picture_section
-    student.migrate_to_multi_auth
-    student.reload
-
     assert_empty student.authentication_options
     refute student.can_edit_password?
   end
@@ -1573,22 +1570,13 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
-  test 'can_edit_email? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_email?
-  end
-
-  test 'can_edit_email? is false for migrated user with no authentication options' do
+  test 'can_edit_email? is false for user with no authentication options' do
     student = create :student_in_picture_section
-    student.migrate_to_multi_auth
-    student.reload
-
     assert_empty student.authentication_options
     refute student.can_edit_email?
   end
 
-  test 'can_edit_email? is true for migrated user with at least one authentication option' do
+  test 'can_edit_email? is true for user with at least one authentication option' do
     teacher = create :teacher
     assert teacher.can_edit_email?
   end
