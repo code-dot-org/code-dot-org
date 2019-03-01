@@ -83,7 +83,7 @@ class TextAreaProperties extends React.Component {
         />
         <FontFamilyPropertyRow
           initialValue={designMode.fontFamilyOptionFromStyle(
-            element.style.fontSize
+            element.style.fontFamily
           )}
           handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
