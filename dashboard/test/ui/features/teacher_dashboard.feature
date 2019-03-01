@@ -11,16 +11,20 @@ Feature: Using the teacher dashboard
 
     When I sign in as "Teacher_Sally"
     When I click selector "a:contains(Untitled Section)" once I see it
+    And I wait until element "#learn-tabs" is visible
     And check that the URL contains "/teacher-dashboard#/sections/"
     When I click selector "a:contains(Sally)" once I see it
+    And I wait until element "#course-dropdown" is visible
     And check that the URL contains "/teacher-dashboard#/sections/"
     And check that the URL contains "/student/"
 
     Then I am on "http://studio.code.org/home?enableExperiments=teacher-dashboard-react"
     When I click selector "a:contains(Untitled Section)" once I see it
+    And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     When I click selector "a:contains(Sally)" once I see it
+    And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "/s/allthethings"
     And check that the URL contains "viewAs=Teacher"
 
