@@ -16,7 +16,11 @@ const styles = {
   },
   modalHeader: {
     padding: '0 15px 0 0',
+    height: 30,
     borderBottom: 'none'
+  },
+  modalBody: {
+    padding: '0 15px 15px 15px'
   }
 };
 
@@ -97,7 +101,8 @@ export default class RegionalPartnerMiniContact extends React.Component {
           id={`regional-partner-mini-contact-thanks-${this.props.sourcePageId}`}
           className="regional-partner-mini-contact-thanks"
         >
-          Your message has been sent. Thank you. We'll be in touch.
+          Your message has been sent. Thank you. Your Regional Partner will be
+          in touch.
         </div>
       );
     } else {
@@ -131,11 +136,11 @@ export default class RegionalPartnerMiniContact extends React.Component {
             defaultValue={this.state.email}
           />
           {this.state.errors.includes('zip') && (
-            <div style={styles.error}>Please enter a ZIP code.</div>
+            <div style={styles.error}>Please enter your school ZIP Code.</div>
           )}
           <FieldGroup
             id="zip"
-            label="Zip"
+            label="School ZIP Code"
             type="text"
             required={true}
             onChange={this.handleChange}
@@ -212,7 +217,7 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
         <span onClick={this.open}>{this.props.children}</span>
         <Modal show={this.state.showing} onHide={this.close}>
           <Modal.Header closeButton style={styles.modalHeader} />
-          <Modal.Body>
+          <Modal.Body style={styles.modalBody}>
             <div style={styles.miniContactContainer}>
               {this.state.options && (
                 <RegionalPartnerMiniContact
