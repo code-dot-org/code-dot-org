@@ -224,12 +224,12 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
 
-  // Set our initial view type
+  // Set our initial view type from our query string.
   const query = queryString.parse(location.search);
-  let initialViewAs = ViewType.Student;
-  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
-    // query param viewAs takes precedence over whether or not user is a teacher
-    initialViewAs = ViewType.Teacher;
+  let initialViewAs = query.viewAs;
+  if (scriptData.user_type === 'student') {
+    // Make sure student users are only ever viewing as "Student".
+    initialViewAs = ViewType.Student;
   }
   store.dispatch(setViewType(initialViewAs));
 
