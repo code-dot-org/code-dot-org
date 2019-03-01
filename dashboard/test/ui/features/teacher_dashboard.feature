@@ -18,15 +18,22 @@ Feature: Using the teacher dashboard
     And check that the URL contains "/teacher-dashboard#/sections/"
     And check that the URL contains "/student/"
 
+    # teacher_dashboard_split_test is set to 0, so user will always be redirected
+    # to the old teacher dashboard, even if experiment is enabled.
     Then I am on "http://studio.code.org/home?enableExperiments=teacher-dashboard-react"
     When I click selector "a:contains(Untitled Section)" once I see it
-    And I wait until element "#uitest-teacher-dashboard-nav" is visible
-    And check that the URL contains "/teacher_dashboard/sections/"
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
-    When I click selector "a:contains(Sally)" once I see it
-    And I wait until element "#teacher-panel-container" is visible
-    And check that the URL contains "/s/allthethings"
-    And check that the URL contains "viewAs=Teacher"
+    And I wait until element "#learn-tabs" is visible
+    And check that the URL contains "/teacher-dashboard#/sections/"
+
+    # TODO: (madelynkasula) Re-enable once all teachers are on new teacher dashboard.
+    # When I click selector "a:contains(Untitled Section)" once I see it
+    # And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    # And check that the URL contains "/teacher_dashboard/sections/"
+    # And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    # When I click selector "a:contains(Sally)" once I see it
+    # And I wait until element "#teacher-panel-container" is visible
+    # And check that the URL contains "/s/allthethings"
+    # And check that the URL contains "viewAs=Teacher"
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
