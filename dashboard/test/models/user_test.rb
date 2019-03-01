@@ -1531,11 +1531,6 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
-  test 'sponsored? is true for user with sponsored provider' do
-    student = create :student, provider: User::PROVIDER_SPONSORED
-    assert student.sponsored?
-  end
-
   test 'sponsored? is true for migrated user with no authentication options' do
     student = create :student_in_picture_section
     student.migrate_to_multi_auth
@@ -1835,13 +1830,6 @@ class UserTest < ActiveSupport::TestCase
     )
 
     assert_equal name, student.name
-  end
-
-  test 'update_email_for updates unmigrated user email' do
-    user = create :user
-    user.update_email_for(email: 'new@email.com')
-    user.reload
-    assert_equal User.hash_email('new@email.com'), user.hashed_email
   end
 
   test 'update_email_for does not update migrated user AuthenticationOption if provider and uid are not present' do
