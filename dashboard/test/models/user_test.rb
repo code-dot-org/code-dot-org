@@ -252,13 +252,8 @@ class UserTest < ActiveSupport::TestCase
 
   #
   # Email uniqueness validation tests
-  # These should simplify significantly once we are fully migrated to multi-auth
   #
   COLLISION_EMAIL = 'collision@example.org'
-
-  def create_single_auth_user_with_email(email)
-    create :student, email: email
-  end
 
   def create_multi_auth_user_with_email(email)
     create :student, email: email
@@ -271,26 +266,6 @@ class UserTest < ActiveSupport::TestCase
     user
   end
 
-  test "cannot create single-auth user with duplicate of single-auth user's email" do
-    create_single_auth_user_with_email COLLISION_EMAIL
-    cannot_create_single_auth_users_with_email COLLISION_EMAIL
-  end
-
-  test "cannot create single-auth user with duplicate of multi-auth user's email" do
-    create_multi_auth_user_with_email COLLISION_EMAIL
-    cannot_create_single_auth_users_with_email COLLISION_EMAIL
-  end
-
-  test "cannot create single-auth user with duplicate of multi-auth user's second email" do
-    create_multi_auth_user_with_second_email COLLISION_EMAIL
-    cannot_create_single_auth_users_with_email COLLISION_EMAIL
-  end
-
-  test "cannot create multi-auth user with duplicate of single-auth user's email" do
-    create_single_auth_user_with_email COLLISION_EMAIL
-    cannot_create_multi_auth_users_with_email COLLISION_EMAIL
-  end
-
   test "cannot create multi-auth user with duplicate of multi-auth user's email" do
     create_multi_auth_user_with_email COLLISION_EMAIL
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
@@ -301,11 +276,6 @@ class UserTest < ActiveSupport::TestCase
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
   end
 
-  def cannot_create_single_auth_users_with_email(email)
-    cannot_create_user_with_email :teacher, email: email
-    cannot_create_user_with_email :student, email: email
-  end
-
   def cannot_create_multi_auth_users_with_email(email)
     cannot_create_user_with_email :teacher, email: email
     cannot_create_user_with_email :student, email: email
@@ -313,26 +283,6 @@ class UserTest < ActiveSupport::TestCase
 
   def cannot_create_user_with_email(*args)
     assert_fails_email_uniqueness_validation FactoryGirl.build(*args)
-  end
-
-  test "cannot update single-auth user with duplicate of single-auth user's email" do
-    create_single_auth_user_with_email COLLISION_EMAIL
-    cannot_update_single_auth_users_with_email COLLISION_EMAIL
-  end
-
-  test "cannot update single-auth user with duplicate of multi-auth user's email" do
-    create_multi_auth_user_with_email COLLISION_EMAIL
-    cannot_update_single_auth_users_with_email COLLISION_EMAIL
-  end
-
-  test "cannot update single-auth user with duplicate of multi-auth user's second email" do
-    create_multi_auth_user_with_second_email COLLISION_EMAIL
-    cannot_update_single_auth_users_with_email COLLISION_EMAIL
-  end
-
-  test "cannot update multi-auth user with duplicate of single-auth user's email" do
-    create_single_auth_user_with_email COLLISION_EMAIL
-    cannot_update_multi_auth_users_with_email COLLISION_EMAIL
   end
 
   test "cannot update multi-auth user with duplicate of multi-auth user's email" do
@@ -345,11 +295,6 @@ class UserTest < ActiveSupport::TestCase
     cannot_update_multi_auth_users_with_email COLLISION_EMAIL
   end
 
-  def cannot_update_single_auth_users_with_email(email)
-    cannot_update_user_with_email email, :teacher
-    cannot_update_user_with_email email, :student
-  end
-
   def cannot_update_multi_auth_users_with_email(email)
     cannot_update_user_with_email email, :teacher
     cannot_update_user_with_email email, :student
@@ -357,17 +302,8 @@ class UserTest < ActiveSupport::TestCase
 
   def cannot_update_user_with_email(email, *user_args)
     user = create(*user_args)
-    if user.migrated?
-      refute user.primary_contact_info.update(email: email)
-    else
-      refute user.update(email: email)
-    end
+    refute user.primary_contact_info.update(email: email)
     assert_fails_email_uniqueness_validation user
-  end
-
-  test "cannot give user an additional email that is a duplicate of single-auth user's email" do
-    create_single_auth_user_with_email COLLISION_EMAIL
-    cannot_give_users_additional_email COLLISION_EMAIL
   end
 
   test "cannot give user an additional email that is a duplicate of multi-auth user's email" do
