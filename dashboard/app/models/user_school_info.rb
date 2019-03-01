@@ -13,7 +13,8 @@
 #
 
 class UserSchoolInfo < ApplicationRecord
-  validates_presence_of :user, :school_info, :start_date, :last_confirmation_date
+  validates_presence_of :user
+  validates_presence_of :school_info
 
   belongs_to :user
   belongs_to :school_info
