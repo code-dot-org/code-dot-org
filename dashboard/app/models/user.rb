@@ -207,9 +207,8 @@ class User < ActiveRecord::Base
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
-  validates_associated :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
-  validates_associated :primary_contact_info
+
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -217,6 +216,10 @@ class User < ActiveRecord::Base
   # we are fully migrated to multi-auth, we may want to remove this code and
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
+    if user.primary_contact_info && !user.primary_contact_info.valid?
+      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+    end
+
     user.authentication_options.each do |ao|
       unless ao.valid?
         ao.errors.each {|k, v| user.errors.add k, v}
