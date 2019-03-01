@@ -3257,7 +3257,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'from_omniauth: creates new non-migrated user if user with matching credentials does not exist' do
+  test 'from_omniauth: creates new user if user with matching credentials does not exist' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
       uid: '123456',
@@ -3275,15 +3275,16 @@ class UserTest < ActiveSupport::TestCase
 
     assert_creates(User) do
       user = User.from_omniauth(auth, params)
-      assert_equal 'google_oauth2', user.provider
+      assert_equal 'migrated', user.provider
       assert_equal 'Some User', user.name
+      assert_equal 'google_oauth2', user.primary_contact_info.credential_type
       assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
       assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
       assert_equal User::TYPE_STUDENT, user.user_type
     end
   end
 
-  test 'from_omniauth: updates non-migrated user oauth tokens if user with matching credentials exists' do
+  test 'from_omniauth: updates user oauth tokens if user with matching credentials exists' do
     uid = '123456'
     provider = 'google_oauth2'
     create :user, uid: uid, provider: provider
@@ -3301,9 +3302,9 @@ class UserTest < ActiveSupport::TestCase
 
     assert_does_not_create(User) do
       user = User.from_omniauth(auth, params)
-      assert_equal 'fake oauth token', user.oauth_token
-      assert_equal 'fake refresh token', user.oauth_refresh_token
-      assert_equal 'google_oauth2', user.provider
+      assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
+      assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
+      assert_equal 'google_oauth2', user.primary_contact_info.credential_type
     end
   end
 
