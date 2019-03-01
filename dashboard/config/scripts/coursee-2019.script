@@ -206,6 +206,9 @@ level 'courseE_artist_functionsProj_2019'
 bonus 'courseE_artist_functions_challenge1_2019'
 bonus 'courseE_artist_functions_challenge2_2019'
 
+stage 'Digital Sharing', flex_category: 'end_of_course_project'
+level 'courseE_unplugged_CnC_2019'
+
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseF_video_csMatters_2019', progression: 'Video'
 level 'Geometric Sun_2019', progression: 'Example Projects'
@@ -216,12 +219,3 @@ level 'Begin planning your project_2018_2019', progression: 'Begin planning your
 level 'Course E: Artist Project_2019', progression: 'Artist Project'
 level 'CourseE_Project_SpriteLab_2019', progression: 'Sprite Lab Project'
 level 'Prepare for your presentation_2018_2019', progression: 'Prepare for your presentation'
-
-stage 'Copyright and Creativity', flex_category: 'extra_course_content'
-level 'courseE_unplugged_CnC_2019'
-
-stage 'Internet', flex_category: 'extra_course_content'
-level 'Internet_2019'
-
-stage 'Crowdsourcing', flex_category: 'extra_course_content'
-level 'Crowdsourcing_2019'
