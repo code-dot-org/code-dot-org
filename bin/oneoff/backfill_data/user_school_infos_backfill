@@ -6,25 +6,22 @@ num_users_updated = 0
 batch_size = 10000
 
 puts "Processing..."
+start = Time.now
 User.where.not(school_info: nil).where(user_type: "teacher").find_in_batches(batch_size: batch_size) do |batch|
   ActiveRecord::Base.transaction do
-    exceptions = []
     batch.each do |user|
-      UserSchoolInfo.create!(
-        user_id: user.id,
-        school_info_id: user.school_info_id,
+      user.user_school_infos.where(school_info_id: user.school_info_id).first_or_create(
         start_date: user.created_at,
-        end_date: nil,
         last_confirmation_date: user.created_at
       )
       num_users_updated += 1
     rescue StandardError => e
+      p e
       puts "Error: teacher with user id #{user.id} with school id #{user.school_info.id}"
-      exceptions.push(e)
+      num_users_updated -= 1
     end
-    num_users_updated = 0
-    raise ActiveRecord::Rollback, 'Rolledback!' if exceptions.any?
   end
 end
 # Output how many total users were updated.
-puts "\nFinished updating #{num_users_updated} users school information."
+finish = Time.now
+puts "\nFinished updating #{num_users_updated} users school information in #{finish - start}s."
