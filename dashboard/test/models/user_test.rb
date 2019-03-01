@@ -1030,8 +1030,9 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.present?
     assert user.hashed_email.present?
 
-    user.user_type = User::TYPE_STUDENT
+    user.set_user_type(User::TYPE_STUDENT)
     user.save!
+    user.reload
 
     assert user.email.blank?
     assert user.hashed_email.present?
@@ -1046,8 +1047,9 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher, school_info_attributes: school_attributes
     assert user.school_info.present?
 
-    user.user_type = User::TYPE_STUDENT
+    user.set_user_type(User::TYPE_STUDENT)
     user.save!
+    user.reload
 
     refute user.school_info.present?
   end
@@ -1056,8 +1058,9 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     user.update!(full_address: 'fake address')
 
-    user.user_type = User::TYPE_STUDENT
+    user.set_user_type(User::TYPE_STUDENT)
     user.save!
+    user.reload
 
     assert user.full_address.nil?
   end
@@ -1068,8 +1071,16 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.blank?
     assert user.hashed_email
 
-    user.update_attributes(user_type: User::TYPE_TEACHER, email: 'email@old.xx')
-    user.save!
+    assert user.set_user_type(
+      User::TYPE_TEACHER,
+      'email@old.xx',
+      {
+        "email_preference_opt_in" => "yes",
+        "email_preference_request_ip" => "127.0.0.1",
+        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
+        "email_preference_form_kind" => "0"
+      }
+    )
 
     assert_equal 'email@old.xx', user.email
     assert_equal '21+', user.age
@@ -1077,37 +1088,57 @@ class UserTest < ActiveSupport::TestCase
 
   test 'changing oauth user from student to teacher with same email is allowed' do
     user = create :student, :unmigrated_google_sso, email: 'email@new.xx'
+    assert user.primary_contact_info.credential_type == 'google_oauth2'
 
-    assert user.provider == 'google_oauth2'
-
-    user.update!(
-      user_type: User::TYPE_TEACHER,
-      email: 'email@new.xx',
-      hashed_email: User.hash_email('email@new.xx')
+    assert user.set_user_type(
+      User::TYPE_TEACHER,
+      'email@new.xx',
+      {
+        "email_preference_opt_in" => "yes",
+        "email_preference_request_ip" => "127.0.0.1",
+        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
+        "email_preference_form_kind" => "0"
+      }
     )
+
     assert_equal 'email@new.xx', user.email
     assert_equal User::TYPE_TEACHER, user.user_type
   end
 
-  test 'changing oauth user from student to teacher with different email is not allowed' do
+  test 'changing oauth user from student to teacher with different email is allowed' do
     user = create :student, :unmigrated_google_sso
+    assert user.primary_contact_info.credential_type == 'google_oauth2'
 
-    assert user.provider == 'google_oauth2'
-
-    user.update_attributes(
-      user_type: User::TYPE_TEACHER,
-      email: 'email@new.xx',
-      hashed_email: User.hash_email('email@new.xx')
+    assert user.set_user_type(
+      User::TYPE_TEACHER,
+      'email@new.xx',
+      {
+        "email_preference_opt_in" => "yes",
+        "email_preference_request_ip" => "127.0.0.1",
+        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
+        "email_preference_form_kind" => "0"
+      }
     )
-    assert !user.save
-    assert_equal user.errors[:base].first, "The email address you provided doesn't match the email address for this account"
-    user.reload
-    assert_not_equal 'email@new.xx', user.email
+
+    assert_equal 'email@new.xx', user.email
+    assert_equal User::TYPE_TEACHER, user.user_type
   end
 
   test 'changing from student to teacher clears terms_of_service_version' do
     user = create :student, terms_of_service_version: 1
-    user.update!(user_type: User::TYPE_TEACHER, email: 'tos@example.com')
+    user.set_user_type(
+      User::TYPE_TEACHER,
+      'tos@example.com',
+      {
+        "email_preference_opt_in" => "yes",
+        "email_preference_request_ip" => "127.0.0.1",
+        "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
+        "email_preference_form_kind" => "0"
+      }
+    )
+    user.save!
+    user.reload
+
     assert_nil user.terms_of_service_version
   end
 
@@ -1117,8 +1148,19 @@ class UserTest < ActiveSupport::TestCase
     end
 
     assert_creates(StudioPerson) do
-      user.update!(user_type: User::TYPE_TEACHER, email: 'fakeemail@example.com')
+      user.set_user_type(
+        User::TYPE_TEACHER,
+        'fakeemail@example.com',
+        {
+          "email_preference_opt_in" => "yes",
+          "email_preference_request_ip" => "127.0.0.1",
+          "email_preference_source" => "ACCOUNT_TYPE_CHANGE",
+          "email_preference_form_kind" => "0"
+        }
+      )
+      user.save!
     end
+    user.reload
     assert user.studio_person
     assert_equal 'fakeemail@example.com', user.studio_person.emails
   end
@@ -1127,14 +1169,14 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
 
     assert_destroys(StudioPerson) do
-      user.update!(user_type: User::TYPE_STUDENT)
+      user.set_user_type(User::TYPE_STUDENT)
     end
     assert_nil user.reload.studio_person
   end
 
   test 'changing from teacher to student does not clear terms_of_service_version' do
     user = create :teacher, terms_of_service_version: 1
-    user.update!(user_type: User::TYPE_STUDENT)
+    user.set_user_type(User::TYPE_STUDENT)
     assert_equal 1, user.terms_of_service_version
   end
 
@@ -3963,17 +4005,6 @@ class UserTest < ActiveSupport::TestCase
       type: AuthenticationOption::CLEVER,
       id: 'mismatched_id_' + user.uid
     )
-  end
-
-  test 'find_by_credential locates unmigrated SSO user' do
-    user = create :student, :unmigrated_clever_sso
-    assert_equal AuthenticationOption::CLEVER, user.provider
-
-    assert_equal user,
-      User.find_by_credential(
-        type: AuthenticationOption::CLEVER,
-        id: user.uid
-      )
   end
 
   test 'find_by_credential locates migrated SSO user' do
