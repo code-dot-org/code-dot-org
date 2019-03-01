@@ -101,7 +101,8 @@ export default class RegionalPartnerMiniContact extends React.Component {
           id={`regional-partner-mini-contact-thanks-${this.props.sourcePageId}`}
           className="regional-partner-mini-contact-thanks"
         >
-          Your message has been sent. Thank you. We'll be in touch.
+          Your message has been sent. Thank you. Your Regional Partner will be
+          in touch.
         </div>
       );
     } else {
