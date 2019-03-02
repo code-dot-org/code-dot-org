@@ -26,13 +26,13 @@
 
 [col-50]
 
-Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach computer science (CS), to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews. Want to apply yourself? [Click here](https://code.org/educate/professional-learning) to become a computer science teacher!
+Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach computer science (CS), to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
 
 <br>
 
 [teach-cs]
 
-Are you interested in teaching computer science? [Apply directly!](/educate/professional-learning/middle-high)
+Are you interested in teaching computer science? [Apply directly!](/educate/professional-learning)
 
 [/teach-cs]
 
