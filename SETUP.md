@@ -266,8 +266,8 @@ If you run into an issue about therubyracer while running `bundle install` try :
 
 #### bundler gem
 
-If you run into the error message `can't find gem bundler (>= 0.a) with executable bundler (Gem::GemNotFoundException)` while running `bundle install` try (as seen in this [StackOverflow](https://stackoverflow.com/questions/47026174/find-spec-for-exe-cant-find-gem-bundler-0-a-gemgemnotfoundexception)):
-- `gem install bundler -v 1.17.0`, where the version is the `BUNDLED WITH` version in `Gemfile.lock`
+If you run into the error message `can't find gem bundler (>= 0.a) with executable bundler (Gem::GemNotFoundException)` while running `bundle install` try:
+- `gem install bundler -v 1.17.0`, where the version is the one specified in `Gemlock.file`
 - `bundle install`
 
 #### Xcode Set Up
