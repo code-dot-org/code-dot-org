@@ -42,7 +42,7 @@ ruby
   end
 
   def icon
-    'fa-check-square-o'
+    'fa fa-list-ul'
   end
 
   # Returns a flattened array of all the Levels in this LevelGroup, in order.

@@ -28,3 +28,7 @@ input[type=radio].with-font:checked ~ label:before  {
     color: #0094ca;
     letter-spacing: 5px;
 }
+
+label.hidden-label-checked-radio-button {
+    margin: 0px;
+}

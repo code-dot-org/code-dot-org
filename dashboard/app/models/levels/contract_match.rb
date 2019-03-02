@@ -39,6 +39,6 @@ ruby
   end
 
   def icon
-    'fa-check-square-o'
+    'fa fa-list-ul'
   end
 end
