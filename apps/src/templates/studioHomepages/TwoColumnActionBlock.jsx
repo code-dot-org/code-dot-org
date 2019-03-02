@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import color from '../../util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   heading: {
@@ -201,7 +201,29 @@ export class SpecialAnnouncementActionBlock extends Component {
   };
 
   render() {
-    return (
+    const hasIncompleteApplication = !!sessionStorage['Teacher1920Application'];
+
+    return hasIncompleteApplication ? (
+      <TwoColumnActionBlock
+        imageUrl={pegasus(
+          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
+        )}
+        subHeading={
+          'Finish your application to the Professional Learning Program'
+        }
+        subHeadingSmallFont={true}
+        description={
+          'We noticed you started your application to the Code.org Professional Learning Program.\
+          Finish your application while seats last!'
+        }
+        buttons={[
+          {
+            url: studio('/pd/application/teacher'),
+            text: 'Finish application'
+          }
+        ]}
+      />
+    ) : (
       <TwoColumnActionBlock
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
