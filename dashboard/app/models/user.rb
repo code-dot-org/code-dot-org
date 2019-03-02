@@ -955,9 +955,12 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
+
+    new_attributes = email_preference.nil? ? {} : email_preference
+
     transaction do
       update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
-      update!(email_preference)
+      update!(new_attributes)
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
