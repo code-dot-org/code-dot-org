@@ -22,6 +22,12 @@ const styles = {
     minHeight: 260,
     boxSizing: 'border-box'
   },
+  textItemCyan: {
+    backgroundColor: color.light_cyan,
+    padding: 25,
+    minHeight: 260,
+    boxSizing: 'border-box'
+  },
   subHeading: {
     paddingRight: 0,
     paddingBottom: 20,
@@ -55,7 +61,8 @@ const styles = {
     marginBottom: 60
   },
   container: {
-    width: '100%'
+    width: '100%',
+    position: 'relative'
   }
 };
 
@@ -64,6 +71,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
+    imageExtra: PropTypes.node,
+    teacherStyle: PropTypes.bool,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
     subHeadingSmallFont: PropTypes.bool,
@@ -83,6 +92,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       isRtl,
       responsiveSize,
       imageUrl,
+      imageExtra,
       heading,
       subHeading,
       subHeadingSmallFont,
@@ -93,16 +103,21 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     const width = responsiveSize === 'lg' ? '50%' : '100%';
 
     return (
-      <div>
+      <div style={styles.container}>
         {heading && <div style={styles.heading}>{heading}</div>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
             <div style={{float, width}}>
               <img src={imageUrl} style={styles.image} />
+              {imageExtra}
             </div>
           )}
           <div style={{float, width}}>
-            <div style={styles.textItem}>
+            <div
+              style={
+                this.props.teacherStyle ? styles.textItemCyan : styles.textItem
+              }
+            >
               {subHeading && (
                 <div
                   style={
@@ -201,6 +216,29 @@ export class SpecialAnnouncementActionBlock extends Component {
   };
 
   render() {
+    const imageExtra = (
+      <div>
+        <img
+          className="sparkle sparkle1"
+          src={pegasus(
+            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
+          )}
+        />
+        <img
+          className="sparkle sparkle2"
+          src={pegasus(
+            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
+          )}
+        />
+        <img
+          className="sparkle sparkle3"
+          src={pegasus(
+            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
+          )}
+        />
+      </div>
+    );
+
     const hasIncompleteApplication = !!sessionStorage['Teacher1920Application'];
 
     return hasIncompleteApplication ? (
@@ -226,15 +264,17 @@ export class SpecialAnnouncementActionBlock extends Component {
     ) : (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
+          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-trophy.jpg'
         )}
-        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019()}
-        subHeadingSmallFont={true}
-        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019()}
+        imageExtra={imageExtra}
+        teacherStyle={true}
+        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Trophy()}
+        subHeadingSmallFont={false}
+        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Trophy()}
         buttons={[
           {
-            url: pegasus('/educate/professional-learning'),
-            text: i18n.joinUs()
+            url: pegasus('/nominate'),
+            text: i18n.nominateATeacher()
           }
         ]}
       />
