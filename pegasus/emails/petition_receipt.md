@@ -48,7 +48,7 @@ Here's a [sample letter](https://code.org/promote/letter) to send to your school
 
 ## 5) Not in the United States? Sign up to receive updates about Code.org's International Program
 
-Code.org partners with dozens of organizations around the world to promote computer science education. [Get the latest news](http://go.pardot.com/l/153401/2018-07-20/lfw71d) about newsletters, webinars, and updates specifically for Code.org's international community. 
+Code.org partners with dozens of organizations around the world to promote computer science education. [Get the latest news](https://goo.gl/forms/MB6GVugftux6C0b42) about newsletters, webinars, and updates specifically for Code.org's international community. 
 
 In just a few years, support for computer science has impacted hundreds of thousands of classrooms and tens of millions of students. Many school districts, U.S. states, and even entire countries have joined the movement. 
 
