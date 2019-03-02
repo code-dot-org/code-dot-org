@@ -170,7 +170,12 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     if current_user.student?
       if User.hash_email(@enrollment.email) == current_user.hashed_email
         # Email matches user's hashed email. Upgrade to teacher and set email.
-        current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email)
+        if current_user.migrated?
+          current_user.set_user_type(User::TYPE_TEACHER, @enrollment.email)
+          current_user.save!
+        else
+          current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email)
+        end
       else
         # No email match. Redirect to upgrade page.
         redirect_to controller: 'pd/session_attendance', action: 'upgrade_account'
