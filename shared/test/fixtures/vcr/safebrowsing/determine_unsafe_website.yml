@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://safebrowsing.googleapis.com/v4/threatMatches:find?key=<API_KEY>
+    uri: https://safebrowsing.googleapis.com/v4/threatMatches:find?key=<SAFE_BROWSE_API_KEY>
     body:
       encoding: UTF-8
       string: '{"threatInfo":{"threatTypes":["THREAT_TYPE_UNSPECIFIED","MALWARE","SOCIAL_ENGINEERING","UNWANTED_SOFTWARE","POTENTIALLY_HARMFUL_APPLICATION"],"platformTypes":["ANY_PLATFORM"],"threatEntryTypes":["URL"],"threatEntries":[{"url":"http://testsafebrowsing.appspot.com/s/phishing.html"}]}}'
@@ -15,7 +15,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Fri, 01 Mar 2019 23:20:27 GMT
+      - Sat, 02 Mar 2019 01:01:10 GMT
       Server:
       - ESF
       Cache-Control:
@@ -47,5 +47,5 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Fri, 01 Mar 2019 23:20:27 GMT
+  recorded_at: Sat, 02 Mar 2019 01:01:10 GMT
 recorded_with: VCR 3.0.3
