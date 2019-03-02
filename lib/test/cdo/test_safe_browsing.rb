@@ -3,10 +3,13 @@ require_relative '../../cdo/safe_browsing'
 
 class SafeBrowsingTest < Minitest::Test
   include SetupTest
+
+  CDO.google_safe_browsing_key = 'mockkey'
+
   # Do additional VCR configuration so as to prevent the CDO.google_safe_browsing_key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
   VCR.configure do |c|
-    c.filter_sensitive_data('<API_KEY>') {CDO.google_safe_browsing_key}
+    c.filter_sensitive_data('<SAFE_BROWSE_API_KEY>') {CDO.google_safe_browsing_key}
   end
 
   def test_determine_safe_website
