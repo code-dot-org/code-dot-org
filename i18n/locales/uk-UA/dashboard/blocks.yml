@@ -844,6 +844,11 @@ uk:
         options:
           DURATION:
             '"0"': постійно
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': показати
+            '"hide"': приховати
       binary_move:
         options:
           DIR:

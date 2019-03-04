@@ -923,6 +923,11 @@ vi:
         options:
           DURATION:
             '"0"': mãi mãi
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': hiển thị
+            '"hide"': ẩn
       binary_move:
         options:
           DIR:

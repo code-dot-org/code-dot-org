@@ -1342,6 +1342,11 @@ zh-CN:
         options:
           DURATION:
             '"0"': 永远
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': 显示
+            '"hide"': 隐藏
       binary_drawPixelHere:
         options:
           VAL:

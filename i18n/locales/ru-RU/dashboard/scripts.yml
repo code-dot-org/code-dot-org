@@ -2590,6 +2590,8 @@ ru:
               name: 'Урок без компьютера: Двоичный'
             Artist Binary:
               name: 'Художник: двоичная система'
+            Dance Party:
+              name: Танцевальная вечеринка
         coursee-2019:
           description_audience: 'Возраст: 8-12'
           stages:

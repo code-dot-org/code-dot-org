@@ -35,7 +35,6 @@ Feature: Using the teacher homepage sections feature
     # Enable teacher-dashboard-react experiment
     Then I am on "http://studio.code.org/home?enableExperiments=teacher-dashboard-react"
     And I wait until element "a:contains(Untitled Section)" is visible
-    And I wait for 10 seconds
     And the href of selector "a:contains(Untitled Section)" contains "/teacher_dashboard/sections/"
 
   Scenario: Navigate to course and unit pages

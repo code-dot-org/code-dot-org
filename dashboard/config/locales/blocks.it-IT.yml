@@ -1366,6 +1366,11 @@ it:
         options:
           DURATION:
             '"0"': per sempre
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mostra
+            '"hide"': nascondi
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:

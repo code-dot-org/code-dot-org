@@ -93,6 +93,17 @@ sv:
           funktion
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Använd piltangenterna för att flytta figuren
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Lägg till detta block till ditt program!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Lägg till detta block till ditt program!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Lägg till detta block till ditt program!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Lägg till din nya dansare här
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nytt Block!
+        dance_callout_11_b: Nytt Block!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Använd piltangenterna för att flytta figuren
       Dance_Party_01_callout:

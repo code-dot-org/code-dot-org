@@ -714,6 +714,11 @@ ka:
         options:
           DURATION:
             '"0"': ყოველთვის
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': ჩვენება
+            '"hide"': დამალვა
       binary_move:
         options:
           DIR:

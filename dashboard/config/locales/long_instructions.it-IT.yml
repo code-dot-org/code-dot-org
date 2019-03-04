@@ -840,7 +840,10 @@ it:
         <br>
         <i>Divertiti: prova con diversi numeri di `sides` (<i>lati</i>) per vedere come si modifica la figura!</i>
       Course 4 Artist Vars 12: |-
-        Per disegnare la figura che vedi, la variabile `sides` (<i>lati</i>) va impostata a 5. Se usi valori più grandi disegni poligoni con più lati ed ottieni una figura più grande!\n\n\nNota che, oltre alla variabile `sides` (<i>lati</i>), c'è un'altra variabile chiamata `length` (<i>lunghezza</i>). Puoi utilizzare questa variabile ogni volta che devi `spostarti in avanti`.
+        Per disegnare la figura che vedi, la variabile `sides` (<i>lati</i>) va impostata a 5. Se usi valori più grandi disegni poligoni con più lati ed ottieni una figura più grande!\\
+        \\
+        \\
+        Nota che, oltre alla variabile `sides` (<i>lati</i>), c'è un'altra variabile chiamata `length` (<i>lunghezza</i>). Puoi utilizzare questa variabile ogni volta che devi `spostarti in avanti`.
 
         Per disegnare questa figura la variabile `length` (<i>lunghezza</i>) va impostata a 75.
       Course 4 Artist Vars 13: |-
@@ -1127,6 +1130,65 @@ it:
       Course 4 SCVP 1: Crea una funzione con parametri che permetta all'artista di
         saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel (con
         numeri positivi e negativi).
+      CourseD_Dance_Party_01: |-
+        *Organizziamo una festa e balliamo alla grande!*
+
+        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"`.
+
+        * *Clicca sulla lampadina qui a sinistra, se desideri dei suggerimenti o vuoi affrontare delle sfide aggiuntive.*
+      CourseD_Dance_Party_02: |-
+        Facciamo ballare un po’ questo alce!
+
+        Trascina il blocco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> nell'area di lavoro e inseriscilo sotto al blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dopo la quarta battuta, il tuo ballerino dovrebbe cominciare ad eseguire una nuova mossa.
+
+
+        Le **battute** in musica sono l’unità di misura del tempo. In questa esercitazione una battuta corrisponde a quattro secondi.
+      CourseD_Dance_Party_03: |-
+        *Adesso sì che ci stiamo scatenando!*
+
+        Aggiungi un blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> alla tua area di lavoro e fai cominciare al ballerino una nuova mossa dopo 6 battute.
+      CourseD_Dance_Party_04: |-
+        *Dobbiamo vivacizzare un po’ questo ballo!*
+
+        Cerca nella cassetta degli attrezzi un nuovo blocco che aggiunga un effetto allo sfondo dietro al tuo ballerino. Osserva come gli effetti cambiano a tempo di musica!
+      CourseD_Dance_Party_05: |-
+        Usa un altro nuovo blocco per far cambiare mosse al ballerino **ogni 2 battute**!
+
+        * Selezionando `(successiva)`, `(precedente)`, o `(casuale)` si ordina al ballerino di eseguire una mossa diversa ogni volta che il codice viene eseguito (e quindi ogni due battute).
+      CourseD_Dance_Party_06: |-
+        *Abbiamo bisogno di altri ballerini!*
+
+        Crea un ballerino secondario `backup_dancer1` che balli assieme al gatto.
+      CourseD_Dance_Party_08: |-
+        Ogni ballerino ha un certo numero di _proprietà_ che controllano il suo aspetto.
+
+        Puoi creare l’illusione che un ballerino sia posizionato sullo sfondo, riducendo la sua _dimensione_. Riesci a rendere entrambi i ballerini secondari delle stesse dimensioni ridotte?
+      CourseD_Dance_Party_09: |-
+        I ballerini sono dotati di una proprietà chiamata “tonalità” capace di aggiungere uno strato di colore. Prova a modificare la tonalità di uno dei tuoi ballerini.
+        * La tonalità che scegli si mescola con i colori originali del ballerino.
+      CourseD_Dance_Party_10: |-
+        Ora sappiamo come modificare le proprietà di un ballerino e possiamo anche fare in modo che queste proprietà cambino automaticamente seguendo la musica, usando questo blocco:
+        <xml> <block type="Dancelab_startMapping"> <title name="SPRITE">right_unicorn</title> <title name="PROPERTY">"scale"</title> <title name="RANGE">"bass"</title> </block></xml>
+
+        Questo programma usa livello dei toni bassi delle canzoni per controllare l’altezza di un ballerino. Sei in grado di far reagire alla musica anche gli altri ballerini?
+      CourseD_Dance_Party_11: |-
+        Il blocco <xml><block type="Dancelab_whenKey"></block></xml> consente di eseguire il codice sottostante quando premi il tasto freccia in su (↑).
+
+        Puoi modificare la mossa da eseguire, le proprietà di un ballerino oppure fare una mossa veloce una volta sola. Libera la tua creatività e cerca nuovi blocchi!
+      CourseD_Dance_Party_11_5: |-
+        Dai un’occhiata a questo blocco:
+
+        <xml>   <block type="Dancelab_makeNewDanceSpriteGroup">     <title name="N">6</title>     <title name="COSTUME">"DUCK"</title>     <title name="LAYOUT">"circle"</title>   </block></xml>
+
+        Ora sei in grado di creare un gruppo di ballerini in un colpo solo!
+
+        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
+      CourseD_Dance_Party_11b: |-
+        E ora una sfida all’ultima mossa! Quando premi la freccia a sinistra (←) il Gatto fa la "dab". Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
+
+        **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
+      CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
+        da condividere con i tuoi amici.
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con
         cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<br>\n<b>Attenzione</b>:
         se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove.
@@ -3184,6 +3246,9 @@ it:
         Ora dedica un po' di tempo a controllare che il gioco funzioni proprio come desideravi. Aggiungi un modo per vincere e perdere, quindi gioca fino a raggiungere una di queste due condizioni.
       courseC19_playLab_EOC6: Hai finito! Ora puoi giocare con il tuo videogioco o
         condividerlo con i tuoi amici e compagni di classe!
+      courseC_PlayLab_events6_2019: Ora scrivi un programma per poter spostare il
+        pinguino in tutte le direzioni usando i tasti freccia in alto / in basso /
+        a sinistra / a destra, in modo da fargli raggiungere tutte le bandierine!
       courseC_PlayLab_events7: |-
         Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
 

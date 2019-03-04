@@ -1405,6 +1405,8 @@ ar:
               name: 'موصول: ثنائي'
             Artist Binary:
               name: ثنائي الفنان
+            Dance Party:
+              name: حفلة رقص
         coursee-2019:
           stages:
             Building a Foundation:

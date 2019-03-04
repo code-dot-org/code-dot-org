@@ -77,6 +77,7 @@ Selecting your language from this dropdown will update all the links on this pag
     <option value="se">Northern Sami</option>
     <option value="no">Norwegian</option>
     <option value="nnno">Norwegian Nynorsk</option>
+    <option value="pap">Papiamento</option>
     <option value="ps">Pashto</option>
     <option value="fa">Persian</option>
     <option value="pl">Polish</option>
@@ -106,12 +107,6 @@ Selecting your language from this dropdown will update all the links on this pag
     <option value="yo">Yoruba</option>
     <option value="zu">Zulu</option>
 </select>
-
-## Getting set up
-
-1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg) on Crowdin and [click here to join our Hour of Code project](https://crowdin.com/project/hour-of-code) on Crowdin.
-1. View the [Hour of Code activities page on our site](/learn). Make sure you are viewing the page in the language you are translating the site into. 
-1. Identify all the strings that are either untranslated or poorly translated. Find those strings in the images below and click on them to find the string in Crowdin. If the image links don't work for you or if you prefer to see all the links in a list, [use the list at the bottom of this page](#list-of-crowdin-links).
 
 ## Translating the page
 

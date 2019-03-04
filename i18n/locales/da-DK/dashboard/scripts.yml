@@ -1480,6 +1480,8 @@ da:
               name: 'Unplugged: Binære'
             Artist Binary:
               name: Kunstner binære
+            Dance Party:
+              name: Dansefest
         coursee-2019:
           stages:
             Building a Foundation:

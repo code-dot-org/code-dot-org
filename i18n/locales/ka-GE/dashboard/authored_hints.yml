@@ -160,7 +160,16 @@ ka:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: გიჭირთ იმის გამორკვევა, როგორ უნდა ჩამოიტანოთ ბლოკები ქვემოთ? სცადეთ წითელ ყვავილს ზუსტად ისე მოეპყროთ, როგორც მეწამული ფერის ყვავილს!
         2-3_Bee_Conditionals_14_b: წითელი ყვავილი რომ მეწამული ფერის ყოფილიყო, შეძლებდით გამოგერკვიათ, როგორ უნდა გამოიყენოთ `გამეორების`ციკლი, იმისათვის, რომ კოდის მოცულობა შეამციროთ?
-        2-3_Bee_Conditionals_14_c: "სცადეთ ქვემოთ მოყვანილი ინფორმაცია 2 ნაწილად გაყოთ:\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n1) შეაგროვეთ ნექტარი 3-ჯერ\n-გადაადგილდით წინ 5-ჯერ\n-შეამოწმეთ, თუ ხედავთ კოდის შემდეგ ნაწილს-----------------------------------????\n-შეუხვიეთ მარცხნივ\n2)გააკეთეთ თაფლი\n-გადაადგილდით წინ ერთხელ\n-გააკეთეთ ორი თაფლი"
+        2-3_Bee_Conditionals_14_c: |-
+          სცადეთ ქვემოთ მოყვანილი ინფორმაცია 2 ნაწილად გაყოთ:
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+          1) შეაგროვეთ ნექტარი 3-ჯერ
+          -გადაადგილდით წინ 5-ჯერ
+          -შეამოწმეთ, თუ ხედავთ კოდის შემდეგ ნაწილს-----------------------------------????
+          -შეუხვიეთ მარცხნივ
+          2)გააკეთეთ თაფლი
+          -გადაადგილდით წინ ერთხელ
+          -გააკეთეთ ორი თაფლი
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'გახსოვდეთ: მეწამული ფერის ყვავილებს აქვთ მხოლოდ 2 ტიპის ნექტარი, 0 ან 1 და ისინი შეიძლება შეიცვალოს ყოველ ჯერზე, როდესაც კოდს გაააქტიურებთ.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -326,7 +335,9 @@ ka:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'თითოეული განმეორებითი ფორმა წარმოადგენს **ნახევარი ექვსკუთხედის** კომბინაციას, რომელსაც მოჰყვება **სამკუთხედის 2/3**. '
         Course_4_Artist_12_b: 'ფიგურული საზომი ერთეული თითქმის იგივეა, რაც ბოლო თავსატეხში, იმის გამოკლებით, რომ ბოლო თავსატეხში ნახევარი ექვსკუთხედის ზომა ოდნავ დიდია. '
-        Course_4_Artist_12_c: "1) პირველი 3 ხაზი არის 60 პიხსელი სიგრძის და უნდა მოუხვიოთ 60 გრადუსით. \n2) მომდევნო 2 ხაზი არის 80 პიქსელი ზომის და უნდა მოუხვიოთ 120 გრადუსით "
+        Course_4_Artist_12_c: |-
+          1) პირველი 3 ხაზი არის 60 პიხსელი სიგრძის და უნდა მოუხვიოთ 60 გრადუსით. 
+          2) მომდევნო 2 ხაზი არის 80 პიქსელი ზომის და უნდა მოუხვიოთ 120 გრადუსით 
         Course_4_Artist_12_d: |-
           **ამოხსნა:**
 
@@ -5134,10 +5145,7 @@ ka:
         courseA_artist_loops6_b: ამ თავსატეხის ამოსახსნელად, თქვენ დაგჭირდებათ 2 მიმართულებით 2 ბლოკის განთავსება.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_b: ჯერ დაწერეთ კოდი ერთი ტალღისთვის, შემდეგ გაიმეორეთ იგივე მოქმედება მომდევნო ორი ტალღის დასახატად.
-        courseA_artist_loops7_c: |-
-          გახსოვდეთ, რომ შეგიძლია ჩასვათ 1-ზე მეტი ბლოკი შემდეგ ციკლში: <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml>.
+        courseA_artist_loops7_c: "გახსოვდეთ, რომ შეგიძლია ჩასვათ 1-ზე მეტი ბლოკი შემდეგ ციკლში: <xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n</block></xml>."
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_b: ჯერ დაწერეთ კოდი ერთი ტალღისთვის, შემდეგ გაიმეორეთ იგივე მოქმედება მომდევნო ორი ტალღის დასახატად.
         courseA_artist_loops7_c: |-
@@ -5160,7 +5168,11 @@ ka:
         courseA_artist_loops9_b: "დამატებული ბლოკი უნდა განთავსდეს ამ \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> ციკლში."
         courseA_artist_loops9_c: თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.
       courseA_artist_loops9_2018_authored_hint:
-        courseA_artist_loops9_b: "დამატებული ბლოკი უნდა განთავსდეს ამ \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> ციკლში."
+        courseA_artist_loops9_b: |-
+          დამატებული ბლოკი უნდა განთავსდეს ამ 
+
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> ციკლში.
         courseA_artist_loops9_c: თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_b: "დამატებული ბლოკი უნდა განთავსდეს ამ \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> ციკლში."
@@ -5534,14 +5546,10 @@ ka:
           </xml>
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, რათა ნახოთ, რა მოხდება.
-        courseA_maze_seq13_c: |-
-          ეს <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml> ბლოკები დაგეხმარებათ გოჭთან მიახლოებაში.
+        courseA_maze_seq13_c: "ეს <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> ბლოკები დაგეხმარებათ გოჭთან მიახლოებაში."
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, რათა ნახოთ, რა მოხდება.
-        courseA_maze_seq13_c: |-
-          ეს <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml> ბლოკები დაგეხმარებათ გოჭთან მიახლოებაში.
+        courseA_maze_seq13_c: "ეს <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> ბლოკები დაგეხმარებათ გოჭთან მიახლოებაში."
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, რათა ნახოთ, რა მოხდება.
         courseA_maze_seq13_c: |-
@@ -7613,6 +7621,9 @@ ka:
         courseC_PlayLab_eventsA_a: თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.
         courseC_PlayLab_eventsA_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`.
       courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.
+        courseC_PlayLab_eventsA_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_a: თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.
         courseC_PlayLab_eventsA_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`.
       courseC_PlayLab_eventsFP_authored_hint:

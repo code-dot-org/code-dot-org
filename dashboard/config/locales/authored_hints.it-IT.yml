@@ -3341,6 +3341,98 @@ it:
           di essi per estrarre il carbone.
         mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto
           in cui ti trovi.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Assicurati che sullo schermo appaia un ballerino.
+
+          *L'esercizio terminerà dopo 4 battute.*
+        challenges: |-
+          **Sfide supplementari**
+          * Cambia brano musicale.
+          * Rinomina il tuo ballerino.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Il ballerino deve cambiare mossa dopo 4 battute.
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
+
+          *L'esercizio terminerà dopo 12 battute.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi fare in modo che lo sfondo cambi effetto prima della settima battuta della canzone.
+
+          *L'esercizio terminerà dopo 10 battute.*
+        challenges: |-
+          **Sfida supplementare**
+
+          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi avere almeno due ballerini.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Due ballerini devono avere una dimensione diversa da 100.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Modifica la tonalità di almeno un ballerino.
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Le proprietà di due o più ballerini devono essere cambiate.
+
+          *L'esercizio terminerà dopo 8 battute. *
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Sii semplicemente creativo!
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Sii semplicemente creativo!
+
+          *L'esercizio terminerà dopo 8 battute.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
+
+          *L'esercizio terminerà dopo 8 battute.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed`
           (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità
@@ -8841,6 +8933,11 @@ it:
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
           tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
       courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
+          uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
+        courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
+          tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
           uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare

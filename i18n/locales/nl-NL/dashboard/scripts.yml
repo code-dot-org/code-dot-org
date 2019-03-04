@@ -1912,6 +1912,8 @@ nl:
               name: 'Unplugged: binair'
             Artist Binary:
               name: Kunstenaar Binary
+            Dance Party:
+              name: Dansfeest
         coursee-2019:
           stages:
             Building a Foundation:

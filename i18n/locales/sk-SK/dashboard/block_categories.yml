@@ -29,6 +29,8 @@ sk:
       Input: Vstup
       Default: Predvolené
       World: Prostredie
+      Dancers: Tanečníci
+      Groups: Skupiny
       Sprites: Postavy
       Behaviors: Správanie
       Advanced: Pokročilé
@@ -36,8 +38,6 @@ sk:
       Locations: Miesta
       Music: Hudba
       Dancing: Tancovanie
-      Dancers: Tanečníci
-      Groups: Skupiny
       Sprite: Postavy
       Brush: Štetec
       Make Sprite: Vytvoriť postavu

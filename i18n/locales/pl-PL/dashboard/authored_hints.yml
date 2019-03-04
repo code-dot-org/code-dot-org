@@ -157,7 +157,20 @@ pl:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Przez dłuższy czas zastanawiasz się jak ułożyć kolejne bloki? Potraktuj czerwony kwiat dokładnie tak samo, jak fioletowy!
         2-3_Bee_Conditionals_14_b: Gdyby czerwony kwiat był fioletowy, czy możesz sobie wyobrazić, jak używać dodatkowych powtórzeń pętli skrócenia kodu?
-        2-3_Bee_Conditionals_14_c: "Spróbuj zrobić to w 2 oddzielnych krokach:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Pobierz nektar 3 razy\n  - Przejdź o 5 pól\n  - Sprawdź, czy jest nektar, jeśli tak, weź go\n  - Skręć w lewo\n  \n2) Zrób miód \n  - Przesuń się na nastepne pole\n  - Zrób miód 2 razy"
+        2-3_Bee_Conditionals_14_c: |-
+          Spróbuj zrobić to w 2 oddzielnych krokach:  
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Pobierz nektar 3 razy
+            - Przejdź o 5 pól
+            - Sprawdź, czy jest nektar, jeśli tak, weź go
+            - Skręć w lewo
+            
+          2) Zrób miód 
+            - Przesuń się na nastepne pole
+            - Zrób miód 2 razy
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub nie (0 lub 1) i mogą zmienić ten stan za każdym uruchomieniem programu.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -326,7 +339,9 @@ pl:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Każdy powtarzany kształt jest kombinacją **połowy sześciokąta**, i **2/3 trójkąta**. '
         Course_4_Artist_12_b: 'Ten kształt jest prawie taki sam jak w poprzednim przykładzie, za wyjątkiem połowy sześciokąta, który jest nieco większy. '
-        Course_4_Artist_12_c: "1) Pierwsze trzy linie mają długość 60 pikseli i trzeba wykonać obrót o 60 stopni. \n2) Kolejne dwie mają długość 80 pikseli i trzeba wykonać obrót o 120 stopni "
+        Course_4_Artist_12_c: |-
+          1) Pierwsze trzy linie mają długość 60 pikseli i trzeba wykonać obrót o 60 stopni. 
+          2) Kolejne dwie mają długość 80 pikseli i trzeba wykonać obrót o 120 stopni 
         Course_4_Artist_12_d: |-
           ** Rozwiązanie: ** 
 
@@ -772,6 +787,98 @@ pl:
         mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
         mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
         mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+
+          * Ten poziom kończy się po 4 taktach.
+        challenges: |-
+          **Dodatkowe wyzwania**
+          * Wybierz inny utwór do odtwarzania.
+          * Zmień imię swojego tancerza.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+
+          * Ten poziom kończy się po 11 taktach.
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+
+          * Ten poziom kończy się po 9 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz mieć co najmniej dwóch tancerzy.
+
+          * Ten poziom kończy się po 5 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+
+          * Ten poziom kończy się po 5 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Zmień odcień przynajmniej jednego tancerza.
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+
+          * Ten poziom kończy się po 7 taktach.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa` większą od `prędkość_kota`.
       Dance short test 2_authored_hint:

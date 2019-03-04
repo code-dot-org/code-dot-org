@@ -334,6 +334,11 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': පෙන්වන්න
+            '"hide"': හැංගෙන්න
       binary_move:
         options:
           DIR:

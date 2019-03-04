@@ -1,12 +1,26 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup, Button} from 'react-bootstrap';
+import {Modal, FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../form_components/FieldGroup';
 import color from '@cdo/apps/util/color';
 
 const styles = {
   error: {
     color: color.red
+  },
+  miniContactContainer: {
+    backgroundColor: color.lightest_cyan,
+    padding: 20,
+    borderRadius: 10,
+    textAlign: 'left'
+  },
+  modalHeader: {
+    padding: '0 15px 0 0',
+    height: 30,
+    borderBottom: 'none'
+  },
+  modalBody: {
+    padding: '0 15px 15px 15px'
   }
 };
 
@@ -18,7 +32,8 @@ export default class RegionalPartnerMiniContact extends React.Component {
       zip: PropTypes.string,
       notes: PropTypes.string
     }),
-    apiEndpoint: PropTypes.string
+    apiEndpoint: PropTypes.string.isRequired,
+    sourcePageId: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -82,14 +97,25 @@ export default class RegionalPartnerMiniContact extends React.Component {
   render() {
     if (this.state.submitted) {
       return (
-        <div>Your message has been sent. Thank you. We'll be in touch.</div>
+        <div
+          id={`regional-partner-mini-contact-thanks-${this.props.sourcePageId}`}
+          className="regional-partner-mini-contact-thanks"
+        >
+          Your message has been sent. Thank you. Your Regional Partner will be
+          in touch.
+        </div>
       );
     } else {
       return (
-        <FormGroup>
+        <FormGroup
+          id={`regional-partner-mini-contact-form-${this.props.sourcePageId}`}
+          className="regional-partner-mini-contact-form"
+        >
           <p>
-            If you're interested in Professional Learning, just fill out this
-            form and a local Regional Partner will be in touch!
+            Your local Code.org Regional Partner provides high quality Code.org
+            professional learning to teachers, and can help guide your school or
+            district on implementation, certification, funding, and more. They
+            are happy to answer any questions you may have about the program!
           </p>
           <FieldGroup
             id="name"
@@ -110,11 +136,11 @@ export default class RegionalPartnerMiniContact extends React.Component {
             defaultValue={this.state.email}
           />
           {this.state.errors.includes('zip') && (
-            <div style={styles.error}>Please enter a ZIP code.</div>
+            <div style={styles.error}>Please enter your school ZIP Code.</div>
           )}
           <FieldGroup
             id="zip"
-            label="Zip"
+            label="School ZIP Code"
             type="text"
             required={true}
             onChange={this.handleChange}
@@ -137,5 +163,73 @@ export default class RegionalPartnerMiniContact extends React.Component {
         </FormGroup>
       );
     }
+  }
+}
+
+export class RegionalPartnerMiniContactPopupLink extends React.Component {
+  static propTypes = {
+    zip: PropTypes.string,
+    notes: PropTypes.string,
+    sourcePageId: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showing: false,
+      options: null
+    };
+
+    $.ajax({
+      type: 'GET',
+      url: '/dashboardapi/v1/users/me/contact_details'
+    })
+      .done(results => {
+        this.setState({
+          options: {
+            user_name: results.user_name,
+            email: results.email,
+            zip: this.props.zip || results.zip,
+            notes: this.props.notes || results.notes
+          }
+        });
+      })
+      .fail(() => {
+        this.setState({
+          options: {zip: this.props.zip, notes: this.props.notes}
+        });
+      });
+  }
+
+  open = () => {
+    this.setState({showing: true});
+  };
+
+  close = () => {
+    this.setState({showing: false});
+  };
+
+  render() {
+    return (
+      <span>
+        <span onClick={this.open}>{this.props.children}</span>
+        <Modal show={this.state.showing} onHide={this.close}>
+          <Modal.Header closeButton style={styles.modalHeader} />
+          <Modal.Body style={styles.modalBody}>
+            <div style={styles.miniContactContainer}>
+              {this.state.options && (
+                <RegionalPartnerMiniContact
+                  options={this.state.options}
+                  apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
+                  sourcePageId={this.props.sourcePageId}
+                />
+              )}
+            </div>
+          </Modal.Body>
+        </Modal>
+      </span>
+    );
   }
 }

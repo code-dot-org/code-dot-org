@@ -4212,6 +4212,8 @@ pl:
               name: 'Bez komputera: Binarny'
             Artist Binary:
               name: 'Artysta: Binarny'
+            Dance Party:
+              name: Potańcówka
         coursee-2019:
           description_audience: 'W wieku 8-12'
           stages:
@@ -4597,3 +4599,7 @@ pl:
               name: Przykładowe aplikacje
             Final Project:
               name: Projekt końcowy
+        csp1-pilot:
+          stages:
+            new stage:
+              name: nowy etap

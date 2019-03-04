@@ -948,6 +948,11 @@ bs:
         options:
           DURATION:
             '"0"': zauvijek
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': prikaži
+            '"hide"': sakrij
       binary_move:
         options:
           DIR:

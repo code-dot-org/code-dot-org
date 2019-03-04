@@ -670,6 +670,19 @@ sv:
       Course 4 SCVP 1: Skapa en funktion med parametrar som gör att konstnären kan hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal bildpunkter (med positiva och negativa tal).
       Course 4 Variables Assessment: Kan du skapa denna bild med en variabel för sidor? Varje rad ska vara 50 bildpunkter lång.
       Course E MC Conditionals1: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
+      CourseD_Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
+      CourseD_Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
+      CourseD_Dance_Party_03: Gör nu så att dansaren startar en ny rörelse efter 6 åtgärder!
+      CourseD_Dance_Party_04: Lägg till en bakgrundseffekt i ditt program.
+      CourseD_Dance_Party_05: Använda ett annat nytt block för att få dansaren att ändra rörelse efter 2 åtgärder.
+      CourseD_Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup_dancer1” för att dansa med katten.
+      CourseD_Dance_Party_08: Kan du göra båda bakgrundsdansarna i samma storlek?
+      CourseD_Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares färg.
+      CourseD_Dance_Party_10: Gör så att också de övriga dansarna reagerar på musiken med ”börjar imitera”-blocket.
+      CourseD_Dance_Party_11: '”Knapptryck uppåt”-blocket låter dig köra koden när du trycker på uppåtpilen. Försök att få dansaren att göra en snabb rörelse när du trycker uppåt.'
+      CourseD_Dance_Party_11_5: Använd ”bara ankor”-blocken för att göra så att ankorna dansar tillsammans.
+      CourseD_Dance_Party_11b: Gör så att roboten ”faller” en gång när du trycker på högerpilen och ”reser sig” när du trycker på uppåtpilen. Genomför ”fall-ihop-res-upp” så fort du kan!
+      CourseD_Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
       CourseF_PlayLab_vars10: "Fri speltid! Här är alla variabler vi har lekt med så här långt, samt några fler om du vill ha dem. \\r \\r Notera att det nu finns så många block i vår verktygslåda att de måste organiseras!  Här har vi satt varje bit i en lämplig kategori.  Ta dig tid att utforska allt som finns. När du är klar, gör ett spel eller en berättelse med repetitioner, variabler och händelser.  \\r \\r Tips: scrolla ner för att se alla kommandon på arbetsytan."
       CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist! Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först att samla in 10 flaggor vinner!
       CourseF_PlayLab_vars3: Här är en ny typ av spel! Använd vänster och höger pilarna för att flytta och uppåtpilen för att hoppa. Se om du kan samla in alla flaggor.
