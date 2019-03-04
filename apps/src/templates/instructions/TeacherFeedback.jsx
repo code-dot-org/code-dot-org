@@ -108,18 +108,7 @@ class TeacherFeedback extends Component {
     const {studentId} = this.state;
 
     window.addEventListener('beforeunload', event => {
-      const latestFeedback =
-        this.state.latestFeedback.length > 0
-          ? this.state.latestFeedback[0]
-          : null;
-      const feedbackUnchanged =
-        (latestFeedback &&
-          (this.state.comment === latestFeedback.comment &&
-            this.state.performance === latestFeedback.performance)) ||
-        (!latestFeedback &&
-          (this.state.comment.length === 0 && this.state.performance === null));
-
-      if (!feedbackUnchanged) {
+      if (!this.feedbackIsUnchanged()) {
         event.preventDefault();
         event.returnValue = 'Are you sure? Your feedback may not be saved.';
       }
@@ -203,7 +192,7 @@ class TeacherFeedback extends Component {
       });
   };
 
-  render() {
+  feedbackIsUnchanged = () => {
     const latestFeedback =
       this.state.latestFeedback.length > 0
         ? this.state.latestFeedback[0]
@@ -214,6 +203,16 @@ class TeacherFeedback extends Component {
           this.state.performance === latestFeedback.performance)) ||
       (!latestFeedback &&
         (this.state.comment.length === 0 && this.state.performance === null));
+
+    return feedbackUnchanged;
+  };
+
+  render() {
+    const latestFeedback =
+      this.state.latestFeedback.length > 0
+        ? this.state.latestFeedback[0]
+        : null;
+    const feedbackUnchanged = this.feedbackIsUnchanged();
 
     const buttonDisabled =
       feedbackUnchanged ||
