@@ -9,4 +9,6 @@ Scenario: Basic Sprite Lab level
   Then I see no difference for "initial load"
   And I've initialized the workspace for the sample Sprite Lab project
   Then I see no difference for "preview"
+  Then I press "runButton"
+  Then I see no difference for "run"
   And I close my eyes
