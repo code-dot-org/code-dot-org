@@ -595,23 +595,58 @@ function runInputEvents() {
     param = typeof inputEvents[i].param === "function" ?
       inputEvents[i].param() :
       inputEvents[i].param;
-    if(!Array.isArray(param)) {
-      if(eventType(param)) {
-        thisSprite = param;
-        event();
-      }
-    } else {
-      for(var j = 0; j < param.length; j++) {
-        if(eventType(param[j])) {
-          thisSprite = param[j];
+    // Need to fix
+    if (typeof(param) === "object") {
+      if(!param.isGroup) {
+        if(eventType(param)) {
+          thisSprite = param;
           event();
         }
+      } else {
+        for(var j = 0; j < param.length; j++) {
+          if(eventType(param[j])) {
+            thisSprite = param[j];
+            event();
+          }
+        }
       }
+    } else if (param && eventType(param)) {
+      event();
     }
   }
 }
 
+function createCollisionHandler (collisionEvent) {
+  return function (sprite1, sprite2) {
+    if (!collisionEvent.touching || collisionEvent.keepFiring) {
+      thisSprite = sprite1;
+      otherSprite = sprite2;
+      collisionEvent.event(sprite1, sprite2);
+    }
+  };
+}
+
 function runCollisionEvents() {
+  for (i = 0; i<collisionEvents.length; i++) {
+    var collisionEvent = collisionEvents[i];
+    var a = collisionEvent.a && collisionEvent.a();
+    var b = collisionEvent.b && collisionEvent.b();
+    if (!a || !b) {
+      continue;
+    }
+    if (a.overlap(b, createCollisionHandler(collisionEvent))) {
+      collisionEvent.touching = true;
+    } else {
+      if (collisionEvent.touching && collisionEvent.eventEnd) {
+        collisionEvent.eventEnd(a, b);
+      }
+      collisionEvent.touching = false;
+    }
+  }
+}
+
+// Aaron's more complicated collision model
+function runCollisionEventsExperimental() {
   collisionEvents.forEach(function(event) {
     var condition = event.condition;
     var a = event.a();
@@ -740,11 +775,11 @@ function updateHUDText() {
     text("Game Over", 200, 200);
   } else if (title) {
     fill("black");
-    textAlign(CENTER);
+    textAlign(CENTER, CENTER);
     textSize(50);
-    text(title, 200, 150);
+    text(title, 0, 0, 400, 200);
     textSize(35);
-    text(subTitle, 200, 250);
+    text(subTitle, 0, 200, 400, 200);
   }
 }
 

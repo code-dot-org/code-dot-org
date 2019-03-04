@@ -284,8 +284,8 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
                 <a
                   href={
                     'https://code.org/educate/professional-learning/program-information' +
-                    (!!this.props.data.zipCode
-                      ? '?zip=' + this.props.data.zipCode
+                    (!!this.props.data.schoolZipCode
+                      ? '?zip=' + this.props.data.schoolZipCode
                       : '')
                   }
                   target="_blank"
