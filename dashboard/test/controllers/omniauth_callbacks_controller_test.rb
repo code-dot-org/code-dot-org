@@ -482,7 +482,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: updates tokens when unmigrated user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :teacher, :unmigrated_clever_sso
+    user = create :teacher, :unmigrated_clever_sso, :demigrated
 
     # When I hit the clever oauth callback
     auth = generate_auth_user_hash \
@@ -769,7 +769,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, email: email)
+    user = create(:student, :demigrated, email: email)
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -833,7 +833,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 silently takes over unmigrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:teacher, email: email)
+    user = create(:teacher, :demigrated, email: email)
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_TEACHER, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -992,7 +992,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:user, :with_migrated_windowslive_authentication_option, email: email)
+    user = create(:user, :unmigrated_windowslive_sso, email: email)
     auth = OmniAuth::AuthHash.new(
       provider: 'microsoft_v2_auth',
       uid: uid,
@@ -1022,14 +1022,16 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, :imported_from_google_classroom, uid: uid)
+    user = create(:student, :demigrated, :imported_from_google_classroom, uid: uid)
     google_classroom_section = user.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
+
     assert_does_not_destroy(User) do
       get :google_oauth2
     end
+
     user.reload
     assert_equal 'google_oauth2', user.provider
     assert_equal User.hash_email(email), user.hashed_email
@@ -1414,7 +1416,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'silent_takeover: Adds email to teacher account missing email' do
     # Set up existing account
-    malformed_account = create :teacher
+    malformed_account = create :teacher, :demigrated
     email = malformed_account.email
     uid = 'google-takeover-id'
 
@@ -1455,7 +1457,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'silent_takeover: Does not add email to student account' do
     # Set up existing account
     email = 'student+example@code.org'
-    student = create :student, email: email
+    student = create :student, :demigrated, email: email
     uid = 'google-takeover-id'
 
     Honeybadger.expects(:notify).never
@@ -1488,7 +1490,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'silent_takeover: Fails and notifies on malformed unmigrated user' do
     # Set up existing account
-    malformed_account = create :teacher
+    malformed_account = create :teacher, :demigrated
     email = malformed_account.email
 
     # Make account invalid

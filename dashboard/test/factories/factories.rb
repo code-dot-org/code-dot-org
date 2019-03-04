@@ -55,6 +55,14 @@ FactoryGirl.define do
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
 
+    # Used to test specific interactions for older (unmigrated) users. This
+    # trait and associated tests can be removed when the work to migrate all
+    # users has been completed.
+    # TODO elijah
+    trait :demigrated do
+      after(:create, &:demigrate_from_multi_auth)
+    end
+
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
