@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import color from '../../util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   heading: {
@@ -212,7 +212,8 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    hocLaunch: PropTypes.string
+    hocLaunch: PropTypes.string,
+    hasIncompleteApplication: PropTypes.bool
   };
 
   render() {
@@ -239,9 +240,7 @@ export class SpecialAnnouncementActionBlock extends Component {
       </div>
     );
 
-    const hasIncompleteApplication = !!sessionStorage['Teacher1920Application'];
-
-    return hasIncompleteApplication ? (
+    return !!this.props.hasIncompleteApplication ? (
       <TwoColumnActionBlock
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
@@ -256,7 +255,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         }
         buttons={[
           {
-            url: studio('/pd/application/teacher'),
+            url: '/pd/application/teacher',
             text: 'Finish application'
           }
         ]}
