@@ -34,38 +34,9 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
   # GET /api/v1/regional_partners/find
   def find
-    state = nil
     zip_code = params[:zip_code]
 
-    if RegexpUtils.us_zip_code?(zip_code)
-      # Try to find the matching partner using the ZIP code.
-      partner = RegionalPartner.find_by_region(zip_code, nil)
-
-      # Otherwise, get the state for the ZIP code and try to find the matching partner using that.
-      unless partner
-        begin
-          Geocoder.with_errors do
-            # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
-            # See https://github.com/alexreisner/geocoder#error-handling
-            Retryable.retryable(on: StandardError) do
-              state = Geocoder.search({zip: zip_code})&.first&.state_code
-            end
-          end
-        rescue StandardError => e
-          # Log geocoding errors to honeybadger but don't fail
-          Honeybadger.notify(e,
-            error_message: 'Error geocoding regional partner workshop zip_code',
-            context: {
-              zip_code: zip_code
-            }
-          )
-        end
-
-        if state
-          partner = RegionalPartner.find_by_region(nil, state)
-        end
-      end
-    end
+    partner, state = RegionalPartner.find_by_zip(zip_code)
 
     result = nil
 
