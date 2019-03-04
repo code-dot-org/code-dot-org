@@ -110,6 +110,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
               check to make sure XCode is downloaded and up to date manually.
 
     </details>
+1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
@@ -180,11 +181,10 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
 ## Enabling JavaScript builds
-**Note:** the installation process now enables this by default. OS X users should still follow the first step of installing the Java 8 JDK.
+**Note:** the installation process now enables this by default, which is recommended. You can manually edit these values later if you want to disable local JS builds.
 
 If you want to make JavaScript changes and have them take effect locally, you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
 
-1. (OS X) Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1. Edit locals.yml and enable the following options:
 
    ```
