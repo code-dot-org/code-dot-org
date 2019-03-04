@@ -178,6 +178,48 @@ class RegionalPartner < ActiveRecord::Base
     return find_by_region_query.order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').first
   end
 
+  # Find a Regional Partner that services a particular ZIP.
+  # This works similarly to find_by_region, above, but it does one extra thing: if a US ZIP is provided
+  # and we don't find a partner with that ZIP, we geocode that ZIP to get a state and try with that
+  # state.
+  # @param [String] zip_code
+  def self.find_by_zip(zip_code)
+    partner = nil
+    state = nil
+
+    if RegexpUtils.us_zip_code?(zip_code)
+      # Try to find the matching partner using the ZIP code.
+      partner = RegionalPartner.find_by_region(zip_code, nil)
+
+      # Otherwise, get the state for the ZIP code and try to find the matching partner using that.
+      unless partner
+        begin
+          Geocoder.with_errors do
+            # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
+            # See https://github.com/alexreisner/geocoder#error-handling
+            Retryable.retryable(on: StandardError) do
+              state = Geocoder.search({zip: zip_code})&.first&.state_code
+            end
+          end
+        rescue StandardError => e
+          # Log geocoding errors to honeybadger but don't fail
+          Honeybadger.notify(e,
+            error_message: 'Error geocoding regional partner workshop zip_code',
+            context: {
+              zip_code: zip_code
+            }
+          )
+        end
+
+        if state
+          partner = RegionalPartner.find_by_region(nil, state)
+        end
+      end
+    end
+
+    return partner, state
+  end
+
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
 
   def self.find_or_create_all_from_tsv(filename)
