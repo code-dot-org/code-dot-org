@@ -1568,6 +1568,28 @@ applabCommands.onEvent = function(opts) {
   return false;
 };
 
+function filterUrl(urlToCheck) {
+  $.ajax({
+    url: '/safe_browsing/',
+    method: 'POST',
+    contentType: 'application/json',
+    dataType: 'json',
+    data: JSON.stringify({url: urlToCheck})
+  })
+    .success(data => {
+      let approved = data['approved'];
+      console.log('Url determined safe to open: ' + approved);
+    })
+    .fail((jqXhr, status) => {
+      console.log('Error. Please re-run program');
+    });
+}
+
+applabCommands.openUrl = function(opts) {
+  apiValidateType(opts, 'openUrl', 'url', opts.url, 'string');
+  filterUrl(opts.url);
+};
+
 applabCommands.onHttpRequestEvent = function(opts) {
   if (this.readyState === 4) {
     // Call the callback function:
