@@ -36,8 +36,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     </details>
 
 1. `rake install`
-1. [Enable JavaScript builds](#enabling-javascript-builds)
-    1. Note: You can skip this step if not editing javascript frequently.
 1. `rake build`
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
@@ -112,6 +110,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
               check to make sure XCode is downloaded and up to date manually.
 
     </details>
+1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
@@ -182,9 +181,10 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
 ## Enabling JavaScript builds
-The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
+**Note:** the installation process now enables this by default, which is recommended. You can manually edit these values later if you want to disable local JS builds.
 
-1. (OS X) Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+If you want to make JavaScript changes and have them take effect locally, you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
+
 1. Edit locals.yml and enable the following options:
 
    ```
