@@ -1123,7 +1123,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
     email = 'test@xyz.foo'
-    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    user = create :user, uid: 'some-uid'
     AuthenticationOption.create!(
       {
         user: user,
@@ -1150,13 +1150,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       user.reload
       assert_redirected_to 'http://test.host/users/edit'
-      assert_equal 2, user.authentication_options.length
+      assert_equal 3, user.authentication_options.length
     end
   end
 
   test 'connect_provider: cannot connect multiple auth options with the same email to a different user' do
     email = 'test@xyz.foo'
-    user_a = create :user, :multi_auth_migrated
+    user_a = create :user
     AuthenticationOption.create!(
       {
         user: user_a,
@@ -1172,7 +1172,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       }
     )
 
-    user_b = create :user, :multi_auth_migrated
+    user_b = create :user
     auth = generate_auth_user_hash(provider: 'facebook', uid: 'some-other-uid', refresh_token: '65432', email: email)
     @request.env['omniauth.auth'] = auth
 
@@ -1369,12 +1369,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do
-    user = create :user, :multi_auth_migrated
+    user = create :user
 
     # Given there exists another user
     #   having credential X
     #   and having activity
-    other_user = create :user, :multi_auth_migrated
+    other_user = create :user
     credential = create :google_authentication_option, user: other_user
     create :user_level, user: other_user, best_result: ActivityConstants::MINIMUM_PASS_RESULT
     assert other_user.has_activity?
@@ -1400,7 +1400,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "connect_provider: Presents no-op message if the provided credentials are already linked to user's account" do
     # Given the current user already has credential X
-    user = create :user, :multi_auth_migrated
+    user = create :user
     credential = create :google_authentication_option, user: user
     assert_equal 1, user.authentication_options.count
 
