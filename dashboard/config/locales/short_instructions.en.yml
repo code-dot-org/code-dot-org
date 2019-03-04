@@ -1771,6 +1771,14 @@ en:
       CourseD_Dance_Party_11_5: Use the "all ducks" blocks to make the ducks dance together.
       CourseD_Dance_Party_11b: Make the Robot "drop" once when you press the right arrow key, and "clap" once when you press the up arrow key. Do the drop-clap as fast as you can!
       CourseD_Dance_Party_12: Get your groove on! Create a dance of your own to share with your friends.
+      CourseE_HOC 2018 Level_10: Get to the entrance of this Ocean Monument.
+      CourseE_HOC 2018 Level_11: 'Build a conduit with Prismarine inside the Ocean Monument.
+
+'
+      CourseE_HOC 2018 Level_7a: Search these underwater ruins for a chest.
+      CourseE_HOC 2018 Level_9b: 'Use the coral as waypoints to reach the treasure.
+
+'
       CourseF_PlayLab_vars1: 'To play this game, you don''t have to write any code, just hit "Run"! '
       CourseF_PlayLab_vars10: "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \n\nNotice that there are now so many blocks in our toolbox that they need to be organized!  Here, we've put each piece into an appropriate category.  Take some time to explore everything that is available. When you're done browsing, make a game or story using repeats, variables, and events.  \n\nHint: scroll down to see all the commands in the workspace."
       CourseF_PlayLab_vars2: The race in that last puzzle wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!
@@ -4319,7 +4327,7 @@ en:
       courseB_starWars_prog9_2018: Help BB-8 gather the glowing scrap metal
       courseB_starWars_prog9_2019: Help BB-8 gather the glowing scrap metal
       courseC19_playLab_EOC1: Choose a background and map, and pick an actor to be your game's hero.
-      courseC19_playLab_EOC2: Use event handlers and actions to make your hero move.
+      courseC19_playLab_EOC2: Use events and actions to make your hero move. Get to the targets.
       courseC19_playLab_EOC3: Add two or more additional actors to your game and make them move.
       courseC19_playLab_EOC4: Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.
       courseC19_playLab_EOC5: Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.
@@ -5861,6 +5869,7 @@ en:
       courseF_bee_variables_7_2019: This puzzle is a little different.  What do you need to do to solve it?
       courseF_bee_variables_8_2018: How many nectar will the bee collect from this flower?
       courseF_bee_variables_8_2019: How many nectar will the bee collect from this flower?
+      courseF_data_1: Welcome to WildSim, the wildlife simulator YOU control! Click on the bunny, wolf, and carrot and watch what happens to the numbers above their head.
       courseF_farmer_ramp11: This puzzle also uses nested loops.  Can you figure out how?
       courseF_farmer_ramp11_2018: This puzzle also uses nested loops.  Can you figure out how?
       courseF_maze_predict1: This code includes a new block. What do you think would happen if you press the "Run" block?
