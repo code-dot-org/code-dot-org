@@ -67,7 +67,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user = User.last
-    assert_equal 'clever', user.provider
+    assert_equal 'clever', user.primary_contact_info.credential_type
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
@@ -96,7 +96,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user = User.last
-    assert_equal 'clever', user.provider
+    assert_equal 'clever', user.primary_contact_info.credential_type
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
@@ -125,7 +125,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user = User.last
-    assert_equal 'clever', user.provider
+    assert_equal 'clever', user.primary_contact_info.credential_type
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
@@ -180,7 +180,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user = User.last
-    assert_equal 'clever', user.provider
+    assert_equal 'clever', user.primary_contact_info.credential_type
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_equal 10, user.age
@@ -315,7 +315,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :facebook
     end
     user = User.last
-    assert_equal auth[:credentials][:token], user.oauth_token
+    assert_equal auth[:credentials][:token], user.primary_contact_info.data_hash[:oauth_token]
     assert_equal user.id, signed_in_user_id
   end
 
@@ -604,8 +604,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       type: AuthenticationOption::CLEVER,
       id: uid
     )
-    assert_equal user.oauth_token, auth[:credentials][:token]
-    assert_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
+    assert_equal user.primary_contact_info.data_hash[:oauth_token], auth[:credentials][:token]
+    assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
   end
 
   test 'google_oauth2: signs in user if user is found by credentials' do
@@ -650,9 +650,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Then my OAuth tokens are updated
     user.reload
-    assert_equal user.oauth_token, auth[:credentials][:token]
-    assert_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
-    assert_equal user.oauth_refresh_token, auth[:credentials][:refresh_token]
+    assert_equal user.primary_contact_info.data_hash[:oauth_token], auth[:credentials][:token]
+    assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
+    assert_equal user.primary_contact_info.data_hash[:oauth_refresh_token], auth[:credentials][:refresh_token]
   end
 
   test 'google_oauth2: updates tokens when migrated user is found by credentials' do
@@ -804,8 +804,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :microsoft_v2_auth
     end
     user.reload
-    assert_equal 'microsoft_v2_auth', user.provider
-    assert_equal uid, user.uid
+    takeover_auth = user.authentication_options.last
+    assert_equal 'microsoft_v2_auth', takeover_auth.credential_type
+    assert_equal uid, takeover_auth.authentication_id
     assert_equal signed_in_user_id, user.id
   end
 
@@ -867,8 +868,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :microsoft_v2_auth
     end
     user.reload
-    assert_equal 'microsoft_v2_auth', user.provider
-    assert_equal uid, user.uid
+    takeover_auth = user.authentication_options.last
+    assert_equal 'microsoft_v2_auth', takeover_auth.credential_type
+    assert_equal uid, takeover_auth.authentication_id
     assert_equal signed_in_user_id, user.id
   end
 
@@ -1070,7 +1072,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'migrated', user.provider
     found_clever = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::CLEVER}
     refute found_clever
-    assert_equal 'clever', User.last.provider # NOTE: this will fail when we create migrated users by default
+    assert_equal 'clever', User.last.authentication_options.last.credential_type
     assert_equal User.last.id, signed_in_user_id
   end
 
