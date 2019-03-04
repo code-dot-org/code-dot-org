@@ -1187,8 +1187,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user_a.reload
     user_b.reload
-    assert_equal 1, user_a.authentication_options.length
-    assert_equal 0, user_b.authentication_options.length
+    assert_equal 2, user_a.authentication_options.length
+    assert_equal 1, user_b.authentication_options.length
   end
 
   test 'connect_provider: returns bad_request if user not migrated' do
@@ -1390,7 +1390,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # And I should fail to add credential X
     user.reload
-    assert_empty user.authentication_options
+    assert_equal 1, user.authentication_options.count
 
     # And receive a helpful error message about the credential already being in use.
     assert_redirected_to 'http://test.host/users/edit'
@@ -1402,7 +1402,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Given the current user already has credential X
     user = create :user
     credential = create :google_authentication_option, user: user
-    assert_equal 1, user.authentication_options.count
+    assert_equal 2, user.authentication_options.count
 
     # When I attempt to add credential X
     link_credential user,
@@ -1411,7 +1411,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Then I should have the same authentication options
     user.reload
-    assert_equal 1, user.authentication_options.count
+    assert_equal 2, user.authentication_options.count
 
     # And receive a friendly notice about already having the credential
     assert_redirected_to 'http://test.host/users/edit'
