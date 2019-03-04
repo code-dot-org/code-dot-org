@@ -9735,6 +9735,12 @@ en:
               name: Conditionals Practice
             Conditional Make:
               name: Conditional Make
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -9887,6 +9893,16 @@ en:
               name: Virtual Pet
             Data from Sprite Lab:
               name: Data from Sprite Lab
+            End of Course Project:
+              name: End of Course Project
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Sharing:
+              name: Digital Sharing
         dance-low:
           stages:
             Dance Party:
@@ -10122,6 +10138,8 @@ en:
               name: Aquatic Conditionals in Minecraft
             Access Ability:
               name: Access Ability
+            Digital Sharing:
+              name: Digital Sharing
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.

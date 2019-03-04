@@ -1,7 +1,7 @@
-hidden false
 login_required true
 hideable_stages true
 has_verified_resources true
+pilot_experiment 'csp-piloters'
 
 stage 'Variables Explore'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
