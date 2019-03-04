@@ -954,7 +954,7 @@ class User < ActiveRecord::Base
     update(user_type: TYPE_STUDENT)
   end
 
-  def upgrade_to_teacher(email, email_preference)
+  def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
     return false unless email.present?
 
@@ -964,7 +964,11 @@ class User < ActiveRecord::Base
     new_attributes = email_preference.nil? ? {} : email_preference
 
     transaction do
-      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
+      if migrated?
+        update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
+      else
+        new_attributes[:email] = email
+      end
       update!(new_attributes)
     end
   rescue
