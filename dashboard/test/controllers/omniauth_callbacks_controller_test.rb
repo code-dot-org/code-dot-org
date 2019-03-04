@@ -800,8 +800,10 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :microsoft_v2_auth
+    assert_creates(AuthenticationOption) do
+      assert_does_not_create(User) do
+        get :microsoft_v2_auth
+      end
     end
     user.reload
     takeover_auth = user.authentication_options.last
@@ -864,8 +866,10 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :microsoft_v2_auth
+    assert_creates(AuthenticationOption) do
+      assert_does_not_create(User) do
+        get :microsoft_v2_auth
+      end
     end
     user.reload
     takeover_auth = user.authentication_options.last
