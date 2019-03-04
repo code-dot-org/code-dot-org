@@ -1105,7 +1105,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # TODO: Make this not a thing
     email = 'alreadytaken@example.com'
     create :student, email: email
-    create :student, email: email + '.oauthemailalreadytaken', provider: AuthenticationOption::CLEVER
+    taken_email = email + '.oauthemailalreadytaken'
+    create :student, email: taken_email, provider: AuthenticationOption::CLEVER
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
@@ -1117,7 +1118,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_creates(User) do
       get :clever
     end
-    assert_redirected_to "/users/sign_in?providerNotLinked=clever&useClever=true"
+    assert_redirected_to "/users/sign_in?providerNotLinked=clever&email=#{taken_email}"
   end
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
