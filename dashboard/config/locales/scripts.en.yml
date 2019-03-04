@@ -9741,6 +9741,14 @@ en:
               name: Functions Practice
             Functions Make:
               name: Functions Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -11127,6 +11135,18 @@ en:
               name: 'Teacher Surveys: HIDE'
             Teacher Surveys:
               name: Teacher Surveys
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
           title: 'Unit 4: Variables, Conditionals, Functions'
           description_audience: ''
           description_short: ''
