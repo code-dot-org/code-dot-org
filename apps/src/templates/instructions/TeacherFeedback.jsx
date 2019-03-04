@@ -110,7 +110,7 @@ class TeacherFeedback extends Component {
     window.addEventListener('beforeunload', event => {
       if (!this.feedbackIsUnchanged()) {
         event.preventDefault();
-        event.returnValue = 'Are you sure? Your feedback may not be saved.';
+        event.returnValue = i18n.feedbackNotSavedWarning();
       }
     });
 
@@ -254,11 +254,11 @@ class TeacherFeedback extends Component {
         {this.props.rubric && !dontShowStudentRubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
-              <h1 style={styles.h1}>Key Concepts</h1>
+              <h1 style={styles.h1}> {i18n.rubricKeyConceptHeader()} </h1>
               <p style={styles.keyConcepts}>{this.props.rubric.keyConcept}</p>
             </div>
             <div style={styles.rubricArea}>
-              <h1 style={styles.h1}>Evaluation Rubric</h1>
+              <h1 style={styles.h1}> {i18n.rubricHeader()} </h1>
               <form>
                 {rubricLevels.map(level => (
                   <RubricField
