@@ -68,6 +68,7 @@ const styles = {
 
 export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
+    id: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
@@ -89,6 +90,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
   render() {
     const {
+      id,
       isRtl,
       responsiveSize,
       imageUrl,
@@ -103,7 +105,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     const width = responsiveSize === 'lg' ? '50%' : '100%';
 
     return (
-      <div style={styles.container}>
+      <div id={id} style={styles.container}>
         {heading && <div style={styles.heading}>{heading}</div>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
@@ -242,6 +244,7 @@ export class SpecialAnnouncementActionBlock extends Component {
 
     return !!this.props.hasIncompleteApplication ? (
       <TwoColumnActionBlock
+        id="continue-teacher-application-announcement"
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
         )}
@@ -255,6 +258,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         }
         buttons={[
           {
+            id: 'continue-teacher-application-button',
             url: '/pd/application/teacher',
             text: 'Finish application'
           }
@@ -262,6 +266,7 @@ export class SpecialAnnouncementActionBlock extends Component {
       />
     ) : (
       <TwoColumnActionBlock
+        id="teacher-nomination-announcement"
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-trophy.jpg'
         )}
