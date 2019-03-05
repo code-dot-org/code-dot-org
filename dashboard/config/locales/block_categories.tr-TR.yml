@@ -25,15 +25,16 @@ tr:
       Comment: Yorum
       'Variables ': Değişkenler
       everythingelse: diğerherşey
+      World: Dünya
+      Sprites: Hareketli Nesneler
+      Location: Konum
+      Behaviors: Davranışlar
       numbers: sayılar
       Numbers: Sayılar
       Input: Girdi
       Default: Varsayılan
-      World: Dünya
       Dancers: Dansçılar
       Groups: Gruplar
-      Sprites: Hareketli Nesneler
-      Behaviors: Davranışlar
       Advanced: İleri seviye
       Start: Başlayın
       Locations: Konumlar
