@@ -379,6 +379,19 @@ ko:
       CourseD_Dance_Party_11b: 이제 본격적인 댄스 시간이에요! 왼쪽 화살표 키를 누르면 고양이가 살짝 움직입니다. 오른쪽
         화살표 키를 누르면 로봇이 "드롭"합니다.
       CourseD_Dance_Party_12: 이제 리듬을 타보세요! 자신만의 댄스를 만들어 친구와 공유하세요.
+      CourseE_HOC 2018 Level_10: "이것은 바다 유적 어딘가에 숨어 있는 **오징어**![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)입니다.
+        여러분은 발견할 수 있을까요?\n\n"
+      CourseE_HOC 2018 Level_11: 검은색 콘크리트 주변에 **프리즈머린** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        벽을 만듭니다. 이것은 **도관**![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)을
+        활성화하여 챌린지를 완료합니다!
+      CourseE_HOC 2018 Level_7a: "수중 유적을 발견했습니다. 사암에서 **프리즈머린**![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        보물이 들어 있는 **상자**![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)를
+        찾으세요.\n\n"
+      CourseE_HOC 2018 Level_8: "처음에는 빙산이더니 이제는 용암인가요? 이 화산 섬을 지나 산호초에서 **열대어**![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)를
+        찾으세요.\n\n"
+      CourseE_HOC 2018 Level_9b: "산호초에 도달했습니다. 이제 **바다의 심장**![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)을
+        찾을 시간이에요! 파란색과 빨간색 산호를 사용해서 보물 **상자**![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)에
+        도달하세요.\n\n"
       CourseF_PlayLab_vars2: 이전 퍼즐은 공정하지 않았습니다! "강아지 속도" 변수의 값을 바꿔서 고양이보다 더 많은 깃발을
         모을 수 있도록 해보세요. 10 개의 깃발을 먼저 모으면 이깁니다!
       Dance_Party_01: |-
