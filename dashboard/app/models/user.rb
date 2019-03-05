@@ -216,10 +216,6 @@ class User < ActiveRecord::Base
   # we are fully migrated to multi-auth, we may want to remove this code and
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
-    if user.primary_contact_info && !user.primary_contact_info.valid?
-      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
-    end
-
     user.authentication_options.each do |ao|
       unless ao.valid?
         ao.errors.each {|k, v| user.errors.add k, v}
