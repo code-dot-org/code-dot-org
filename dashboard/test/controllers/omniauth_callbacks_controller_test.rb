@@ -1305,14 +1305,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: redirects to account edit page with an error if AuthenticationOption cannot save' do
-    AuthenticationOption.any_instance.expects(:save).returns(false)
-
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
 
     @request.env['omniauth.auth'] = auth
 
     Timecop.freeze do
+      AuthenticationOption.any_instance.expects(:save).returns(false)
       setup_should_connect_provider(user, 2.days.from_now)
       assert_does_not_create(AuthenticationOption) do
         get :google_oauth2
