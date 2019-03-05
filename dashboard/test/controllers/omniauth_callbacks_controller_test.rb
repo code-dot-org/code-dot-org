@@ -820,8 +820,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 silently takes over unmigrated Google Classroom student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, email: email)
-    google_classroom_student = create(:student, :imported_from_google_classroom, uid: uid)
+    user = create(:student, :demigrated, email: email)
+    google_classroom_student = create(:student, :migrated_imported_from_google_classroom, :demigrated, uid: uid)
     google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
@@ -1031,7 +1031,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, :demigrated, :imported_from_google_classroom, uid: uid)
+    user = create(:student, :migrated_imported_from_google_classroom, :demigrated, uid: uid)
     google_classroom_section = user.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
