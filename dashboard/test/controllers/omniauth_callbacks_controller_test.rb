@@ -1638,7 +1638,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   def assert_auth_option(user, oauth_hash)
-    assert_equal 1, user.authentication_options.count
     auth_option = user.authentication_options.last
 
     assert_authentication_option auth_option,
