@@ -1,5 +1,5 @@
 import React from 'react';
-import StatsTable from './StatsTable';
+import {UnconnectedStatsTable as StatsTable} from './StatsTable';
 
 const section = {
   id: 1,

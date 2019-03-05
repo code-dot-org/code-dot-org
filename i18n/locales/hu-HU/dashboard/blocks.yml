@@ -681,6 +681,11 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': amikor
+            '"while"': amíg
       gamelab_clickedOn:
         text: amikor {SPRITE} -ra klikkel
       gamelab_comment:
@@ -730,6 +735,11 @@ hu:
             '"y"': y-pozíció
             '"direction"': mozgás iránya
             '"tint"': árnyalat
+      gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': ez
       gamelab_groupLength:
         text: 'sprite-ok száma itt: {THIS}'
       gamelab_hasBehavior:
@@ -750,6 +760,38 @@ hu:
         text: "{SPRITE} ugrás: {LOCATION}"
       gamelab_keyDown:
         text: gomb nyomva {KEY}
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY} nyomva"
+        options:
+          CONDITION:
+            '"when"': amikor
+            '"while"': amíg
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': p
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_locationAdd:
         text: "{LOC1}{OPERATOR}{LOC2}"
         options:
@@ -859,6 +901,10 @@ hu:
         text: 'cseréld {THIS} jelmezét erre: {ANIMATION}'
       gamelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
       gamelab_setDirection:
         text: állítsd be {SPRITE} mozgás irányát {DIRECTION}
       gamelab_setPosition:
@@ -898,6 +944,12 @@ hu:
         text: beállítás
       gamelab_showTitleScreen:
         text: mutasd címoldalt {BREAK} cím {TITLE} leírás {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} kattintás"
+        options:
+          CONDITION:
+            '"when"': amikor
+            '"while"': amíg
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -908,8 +960,6 @@ hu:
             '"East"': Kelet
             '"South"': Dél
             '"West"': Nyugat
-      gamelab_spriteSay:
-        text: sprite {SPRITE} mondja {TEXT}
       gamelab_spritesWhere:
         text: sprite-ok, ahol {PROPERTY} értéke {VALUE}
         options:
@@ -1281,9 +1331,12 @@ hu:
         options:
           PROPERTY:
             "'shapeColor'": szín
+      aalab_addBehaviorUntilBoolean:
+        text: szereplő {SPRITE} elkezd {BEHAVIOR} amíg {CONDITION}
       aalab_addToSpriteGroup:
         text: "{SPRITE} add hozzá {GROUP} csoporthoz"
       aalab_changePropByFlexible:
+        text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
           PROPERTY:
             '"scale"': méret
@@ -1342,6 +1395,10 @@ hu:
         text: "{NAMESTRING} mondja {MESSAGE}"
       aalab_prompt:
         text: kérdezd {MESSAGE}
+      aalab_randomLocation:
+        text: véletlen hely
+      aalab_removeOneAndAll:
+        text: távolítsd el {THIS}
       aalab_setBG:
         options:
           BG:
@@ -1368,6 +1425,11 @@ hu:
         text: "{SPRITE} mondja {MESSAGE}"
       aalab_spriteSay:
         text: sprite {SPRITE} mondja {TEXT} {SECONDS} másodpercig
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mutasd
+            '"hide"': elrejt
       binary_drawPixelHere:
         text: állítsd képpontot {VAL}
         options:

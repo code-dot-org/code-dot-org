@@ -3983,7 +3983,7 @@ ka:
         src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\"\nstyle=\"width:150px;
-        border: 1px solid grey; margin:20px;\">\r\n"
+        border: 1px solid grey; margin:20px;\">\r"
       CSD U3 Variables Challenge_2019: "# გამოწვევა: ცვლადების განახლება\r\n\r\n_გაესაუბრეთ
         თქვენს მასწავლებეს ამ გამოწვევასთან შერკინებამდე._\r\n\r\nაქამდე ჩვენ მხოლოდ
         ერთხელ მივანიჭეთ მნიშვნელობა ცვლადს, მაგრამ იცოდით, რომ თქვენ შეგიძლიათ განაახლოთ
@@ -3993,7 +3993,7 @@ ka:
         src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\"\nstyle=\"width:150px;
-        border: 1px solid grey; margin:20px;\">\r\n"
+        border: 1px solid grey; margin:20px;\">\r"
       CSD U3 Variables Draw Challenge: "# გამოწვევა: დახატეთ სურათიr\n\r\n\r\n_გაესაუბრეთ
         თქვენს მასწავლებელს ამ გამოწვევასთან შერკინებამდე._\r\n\r\nცვლადების გამოყენებით,
         დახატეთ სურათი, რომელშიც ბევრი ელემენტი დამოკიდებულია ზომის ან განლაგების
@@ -5174,7 +5174,7 @@ ka:
       Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/>\r\n\r\nშთაგონება
         თავისუფალი თამაშისთვის: თქვენ უკვე ისწავლეთ ყველაფერი, რაც გჭირდებათ ამ ორნამენტის
         შესაქმნელად! თუ ეს სურათი შთაგაგონებთ, ეცადეთ შექმნათ რაიმე მსგავსი.\nსხვა
-        შემთხვევაში, შექმენით რამე მთლიანად თქვენი ფანტაზიით. \r\n\r\n<br/>\r\n"
+        შემთხვევაში, შექმენით რამე მთლიანად თქვენი ფანტაზიით. \r\n\r\n<br/>\r"
       Course 4 Artist 13: ისევ თამაშობთ?  ეს არის ცარიელი ტილო, რომელზეც შეგიძლიათ
         დახატოთ ის, რაც მოგესურვებათ!
       Course 4 Artist 2: "შეგიძლიათ გამოიყენოთ ციკლი, რათა დახატოთ გახუნებული კვადრატი?
@@ -7860,6 +7860,9 @@ ka:
       courseB_starWars_prog9_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"შენ შეძლებ ამას!"_
+      courseC_PlayLab_events6_2019: ახლა დაწერეთ პროგრამა ისე, რომ პინგვინმა უოდლსმა
+        იმოძრაოს ზემოთ / ქვემოთ / მარცნივ / მარჯვნივ ისრების გამოყენებით, რათა ყველა
+        მიზანს მიაღწიოს!
       courseC_PlayLab_events7: |-
         ბლოკი `გამეორება უსასრულოდ` გეხმარებათ კოდის მუდმივად გაშვებაში. გამოიყენეთ ეს ბლოკი, რათა დინოზავრი ჩომპი (პერსონაჟი 2) მუდმივად ამოძრაოთ ზემოთა და ქვემოთ 400 პიქსელით.
 

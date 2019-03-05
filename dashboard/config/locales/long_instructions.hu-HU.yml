@@ -409,6 +409,92 @@ hu:
         és mondasd ki a változó aktuális értékét minden cikluslépésben.
       Course 4 Playlab For Loops 5b: Módosítsd a `számold` (for) ciklusok lépésközét
         úgy, hogy a két karakter ugyanazon a helyen álljon meg.
+      CourseD_Dance_Party_01: |-
+        *Induljon a buli és a tánc!*
+
+        Első táncosod létrehozásához húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+
+        * *Ha további információkra van szükséged, vagy újabb feladatokra vágysz, kattints a bal oldalon lévő villanykörtére.*
+      CourseD_Dance_Party_02: |-
+        Táncoltassuk meg ezt a jávorszarvast!
+
+        Húzd ki az <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokk alá. A táncosod a negyedik ütem után elkezd táncolni.
+
+
+        A zenében **ütemekben** mérjük az időt. Ebben a bemutatóban az ütemek négy negyed hosszúak.
+      CourseD_Dance_Party_03: |-
+        *Most elkezdünk növekedni!*
+
+        Adj hozzá egy <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokkot a munkaterületedhez. Állítsd be, hogy a táncos 6 ütem után új mozdulatot kezdjen.
+      CourseD_Dance_Party_04: |-
+        *Ehhez a tánchoz kellene valami villanás!*
+
+        Az eszköztáradban keress egy új blokkot, amivel valamilyen háttéreffektet tehetsz a táncosod mögé. Figyeld meg, hogyan változnak az effektek a zenére!
+      CourseD_Dance_Party_05: |-
+        Egy másik új blokkal érd el, hogy a táncos **2 ütemenként** változtasson a mozgásán!
+
+        * A „(Következő)“, „(Előző)“ vagy „(Véletlen)“ lehetőséget kiválasztva megadhatod, hogy a táncos a kód minden futtatásakor másik mozgást végezzen.
+      CourseD_Dance_Party_06: |-
+        *Több táncos kell ide!*
+
+        Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt táncoljon a macskával.
+      CourseD_Dance_Party_08: |-
+        Minden táncosnak van egy _tulajdonságkészlete_, ami a kinézetét szabályozza.
+
+        Ha azt szeretnéd, hogy egy táncos úgy tűnjön, mintha a háttérben lenne, a _méretét_ kell kisebbre állítanod. Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
+      CourseD_Dance_Party_09: |-
+        A táncosoknak van egy „árnyalat“ tulajdonságuk, amivel egy színréteget adhatsz hozzájuk. Próbáld meg módosítani valamelyik táncosod árnyalatát.
+        * Az árnyalat a kiválasztott színt összevegyíti a táncos színeivel.
+      CourseD_Dance_Party_10: |-
+        Most már tehát tudjuk, hogyan lehet módosítani a táncosok tulajdonságait. Ezzel a blokkal azt is elérhetjük, hogy ugyanezek a tulajdonságok automatikusan reagáljanak a zenére:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ez a program a zene „basszus“ szólamának (a mély hangoknak) a hangereje alapján szabályozza az egyik táncos magasságát. Be tudod állítani, hogy a másik táncos is reagáljon a zenére?
+      CourseD_Dance_Party_11: |-
+        A <xml><block type="Dancelab_whenKey"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.
+
+        Módosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!
+      CourseD_Dance_Party_11_5: |-
+        Nézd meg ezt a blokkot:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
+
+        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
+      CourseD_Dance_Party_11b: |-
+        Indulhat a táncverseny! A Macska legyint, amikor megnyomod a balra nyilat. Állítsd be, hogy a Robot „spárga“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat.
+
+        **Használd a nyilakat, hogy a robot olyan gyorsan ismételje a spárga-taps-spárga-taps mozdulatokat, ahogy csak tudod!**
+      CourseD_Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat,
+        és oszd meg az ismerőseiddel.
+      CourseE_HOC 2018 Level_10: A Víz alatti templomban valahol egy **tintahal**
+        ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        rejtőzik – meg tudod találni?
+      CourseE_HOC 2018 Level_11: Építs falat **prizmarinból** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        a fekete beton köré. Ez aktiválni fogja a **csatornát** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png),
+        így teljesítetted a feladatot!
+      CourseE_HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben
+        egy **ládát** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        ami **prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        kincset rejt.
+      CourseE_HOC 2018 Level_8: Először jéghegyek, most meg láva? Menj végig ezen
+        a vulkáni szigeten, és keresd meg a **trópusi halat** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        a korallzátonyban.
+      CourseE_HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét**
+        ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
+        ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: Az előző feladvány versenye nem volt igazán fair. Változtasd
         meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót szerezz
         meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!

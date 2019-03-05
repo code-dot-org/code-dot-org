@@ -49,7 +49,12 @@ ga:
       2-3 Bee Conditionals 11: "Ní mé in áit an dhá neachtar nó áit an trí neachtar atá mé! Cabhraigh liom eitilt timpeall an ghoirt agus neachtar a bhailiú ó na bláthanna ina bhfuil sé. "
       2-3 Bee Conditionals 13: |-
         Tá mórán ar siúl anseo! Úsáid na rudaí atá foghlamtha agat go dtí seo chun an neachtar go léir a bhailiú, ansin mil a dhéanamh.
-      2-3 Bee Conditionals 14: "Cuirimis gach uile rud le chéile!\\r\n\\r\nÚsáid na rudaí atá foghlamtha agat go dtí seo chun cabhrú liom neachtar a bhailiú ó na bláthanna a bhfuil neachtar iontu, leis an líon is lú blocanna. \\r\n\\r\nNá déan dearmad mil a dhéanamh ag an deireadh."
+      2-3 Bee Conditionals 14: |-
+        Cuirimis gach uile rud le chéile!\r
+        \r
+        Úsáid na rudaí atá foghlamtha agat go dtí seo chun cabhrú liom neachtar a bhailiú ó na bláthanna a bhfuil neachtar iontu, leis an líon is lú blocanna. \r
+        \r
+        Ná déan dearmad mil a dhéanamh ag an deireadh.
       2-3 Bee Conditionals 15: "An cuimhin leat patrún cosúil le staighre mar seo? An féidir leat neachtar a bhailiú ó na bláthanna a bhfuil neachtar iontu, leis an líon is lú blocanna agus is féidir?"
       2-3 Bee Conditionals 3: "Féach an neachtar go léir! Cabhraigh liom an neachtar a bhailiú agus mil a dhéanamh as, leis an líon is lú blocanna.  "
       2-3 Bee Debugging 3: |-
@@ -213,6 +218,7 @@ ga:
       courseB_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat lúba a úsáid chun cabhrú le Scrat é a fháil?
       courseB_maze_seq3: '*"Deisigh an cód agus treoraigh go dtí an mhuc mé!"*'
       courseB_maze_seq9_challenge1: "*Cá bhfuil an mhuc sin ina folach anois?*"
+      courseC_PlayLab_events6_2019: Anois scríobh ríomhchlár a aistríonn Waddles an Phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na spriocanna go léir a bhaint amach!
       courseC_artist_prog_challenge2: "*Cabhraigh liom na línte buí a phéinteáil ar an mbóthar seo!*"
       courseC_collector_prog8: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir a bhailiú."*'
       courseC_collector_prog8_2018: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir a bhailiú."*'

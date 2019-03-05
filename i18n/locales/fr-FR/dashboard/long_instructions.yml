@@ -96,7 +96,15 @@ fr:
       2-3 Bee Conditionals 11: "Butine les fleurs qui ont du nectar."
       2-3 Bee Conditionals 13: |-
         Recueille le nectar et fabrique du miel. Indice : que se passe-t-il si tu utilises l’instruction conditionnelle «Si nectar» sur une fleur rouge ? Peux-tu terminer ceci avec une boucle ?
-      2-3 Bee Conditionals 14: "Let's put everything together!\\r\n\\r\nUse\nwhat you've learned to help me collect nectar only from flowers that have\nit, using as few blocks as possible.  \\r\n\\r\nDon't forget to make honey\nat the end."
+      2-3 Bee Conditionals 14: |-
+        Let's put everything together!\\r
+        \\r
+        Use
+        what you've learned to help me collect nectar only from flowers that have
+        it, using as few blocks as possible.  \\r
+        \\r
+        Don't forget to make honey
+        at the end.
       2-3 Bee Conditionals 15: "Recueille le nectar des quatre fleurs."
       2-3 Bee Conditionals 2: "I'm a hungry bee! \\r\n\\r\n\\r\nHelp\nme collect all of the nectar from the flowers using the fewest number of blocks."
       2-3 Bee Conditionals 3: "Aide-moi à recueillir tout le nectar des fleurs et à fabriquer du miel. Utilise une boucle."
@@ -1085,7 +1093,46 @@ fr:
       CSD U2 Debugging 1: "# Debugging\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What is a bug?**</summary>\\r\nBugs\nare mistakes in code which causes it not to work as planned.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis debugging?**</summary>\\r\nDebugging is the process of finding and fixing\nbugs.  Debugging is a problem solving process so use your problem solving\nsteps as you try to debug. \\r\n</details>\\r\n<details>\\r\n<summary>**What\nare some examples of bugs?**</summary>\\r\nBugs can be anything that causes\ncode not to work as planned.  Some examples are misspelling, putting code\nin the wrong place, using the wrong tag, or forgetting to close a tag.\\r\n</details>\\r\n</div>\\r\n\\r\nComputer\ncode is written by humans, and all humans make mistakes. Part of being a good\ncomputer scientist is finding your mistakes and fixing them. In computer science\nwe call mistakes **bugs**. The process of finding and fixing those bugs is\ncalled **debugging**.  Over the next couple levels you are going to work on\nyour debugging skills.\\r\n\\r\n# Do This\\r\n\\r\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\\r\n\\r\n* Look at the\nweb page code, and discuss with your partner what is causing the following\ntwo bugs:\\r\n\\t* The heading is not big enough.\\r\n\\t* The second item on\nthe list doesn't have a number.\\r\n* Fix all the bugs in the code so that\nthe final result matches the image on the right.\\r\n"
       CSD U2 Debugging 1_2018: "# Debugging\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What is a bug?**</summary>\\r\nBugs\nare mistakes in code which causes it not to work as planned.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis debugging?**</summary>\\r\nDebugging is the process of finding and fixing\nbugs.  Debugging is a problem solving process so use your problem solving\nsteps as you try to debug. \\r\n</details>\\r\n<details>\\r\n<summary>**What\nare some examples of bugs?**</summary>\\r\nBugs can be anything that causes\ncode not to work as planned.  Some examples are misspelling, putting code\nin the wrong place, using the wrong tag, or forgetting to close a tag.\\r\n</details>\\r\n</div>\\r\n\\r\nComputer\ncode is written by humans, and all humans make mistakes. Part of being a good\ncomputer scientist is finding your mistakes and fixing them. In computer science\nwe call mistakes **bugs**. The process of finding and fixing those bugs is\ncalled **debugging**.  Over the next couple levels you are going to work on\nyour debugging skills.\\r\n\\r\n# Do This\\r\n\\r\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\\r\n\\r\n* Look at the\nweb page code, and discuss with your partner what is causing the following\ntwo bugs:\\r\n\\t* The heading is not big enough.\\r\n\\t* The second item on\nthe list doesn't have a number.\\r\n* Fix all the bugs in the code so that\nthe final result matches the image on the right.\\r\n"
       CSD U2 Debugging 1_2019: "# Debugging\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What is a bug?**</summary>\\r\nBugs\nare mistakes in code which causes it not to work as planned.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis debugging?**</summary>\\r\nDebugging is the process of finding and fixing\nbugs.  Debugging is a problem solving process so use your problem solving\nsteps as you try to debug. \\r\n</details>\\r\n<details>\\r\n<summary>**What\nare some examples of bugs?**</summary>\\r\nBugs can be anything that causes\ncode not to work as planned.  Some examples are misspelling, putting code\nin the wrong place, using the wrong tag, or forgetting to close a tag.\\r\n</details>\\r\n</div>\\r\n\\r\nComputer\ncode is written by humans, and all humans make mistakes. Part of being a good\ncomputer scientist is finding your mistakes and fixing them. In computer science\nwe call mistakes **bugs**. The process of finding and fixing those bugs is\ncalled **debugging**.  Over the next couple levels you are going to work on\nyour debugging skills.\\r\n\\r\n# Do This\\r\n\\r\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\\r\n\\r\n* Look at the\nweb page code, and discuss with your partner what is causing the following\ntwo bugs:\\r\n\\t* The heading is not big enough.\\r\n\\t* The second item on\nthe list doesn't have a number.\\r\n* Fix all the bugs in the code so that\nthe final result matches the image on the right.\\r\n"
-      CSD U2 Debugging 2: "# Debugging\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What is a bug?**</summary>\\r\nBugs\nare mistakes in code which causes it not to work as planned.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis debugging?**</summary>\\r\nDebugging is the process of finding and fixing\nbugs.  Debugging is a problem solving process so use your problem solving\nsteps as you try to debug. \\r\n</details>\\r\n<details>\\r\n<summary>**What\nare some examples of bugs?**</summary>\\r\nBugs can be anything that causes\ncode not to work as planned.  Some examples are misspelling, putting code\nin the wrong place, using the wrong tag, or forgetting to close a tag.\\r\n</details>\\r\n</div>\\r\n\\r\nMore\ndebugging practice!  This page is a little more challenging to debug than\nthe last one.\\r\n\\r\n# Do This\\r\n\\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\\r\n\\r\n*\nDiscuss with your partner what you think the bugs are in this page.\\r\n* Find\nand fix all the bugs so that your page matches the one on the right."
+      CSD U2 Debugging 2: |-
+        # Debugging\\r
+        \\r
+        <div style="float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\\r
+        <details>\\r
+        <summary>**What is a bug?**</summary>\\r
+        Bugs
+        are mistakes in code which causes it not to work as planned.\\r
+        </details>\\r
+        <details>\\r
+        <summary>**What
+        is debugging?**</summary>\\r
+        Debugging is the process of finding and fixing
+        bugs.  Debugging is a problem solving process so use your problem solving
+        steps as you try to debug. \\r
+        </details>\\r
+        <details>\\r
+        <summary>**What
+        are some examples of bugs?**</summary>\\r
+        Bugs can be anything that causes
+        code not to work as planned.  Some examples are misspelling, putting code
+        in the wrong place, using the wrong tag, or forgetting to close a tag.\\r
+        </details>\\r
+        </div>\\r
+        \\r
+        More
+        debugging practice!  This page is a little more challenging to debug than
+        the last one.\\r
+        \\r
+        # Do This\\r
+        \\r
+        <img src="https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38
+        AM.png" style="float:right;border:5px black solid;width:250px">\\r
+        \\r
+        *
+        Discuss with your partner what you think the bugs are in this page.\\r
+        * Find
+        and fix all the bugs so that your page matches the one on the right.
       CSD U2 Debugging 2_2018: "# Debugging\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What is a bug?**</summary>\\r\nBugs\nare mistakes in code which causes it not to work as planned.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis debugging?**</summary>\\r\nDebugging is the process of finding and fixing\nbugs.  Debugging is a problem solving process so use your problem solving\nsteps as you try to debug. \\r\n</details>\\r\n<details>\\r\n<summary>**What\nare some examples of bugs?**</summary>\\r\nBugs can be anything that causes\ncode not to work as planned.  Some examples are misspelling, putting code\nin the wrong place, using the wrong tag, or forgetting to close a tag.\\r\n</details>\\r\n</div>\\r\n\\r\nMore\ndebugging practice!  This page is a little more challenging to debug than\nthe last one.\\r\n\\r\n# Do This\\r\n\\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\\r\n\\r\n*\nDiscuss with your partner what you think the bugs are in this page.\\r\n* Find\nand fix all the bugs so that your page matches the one on the right."
       CSD U2 Debugging 2_2019: "# Debugging\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What is a bug?**</summary>\\r\nBugs\nare mistakes in code which causes it not to work as planned.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis debugging?**</summary>\\r\nDebugging is the process of finding and fixing\nbugs.  Debugging is a problem solving process so use your problem solving\nsteps as you try to debug. \\r\n</details>\\r\n<details>\\r\n<summary>**What\nare some examples of bugs?**</summary>\\r\nBugs can be anything that causes\ncode not to work as planned.  Some examples are misspelling, putting code\nin the wrong place, using the wrong tag, or forgetting to close a tag.\\r\n</details>\\r\n</div>\\r\n\\r\nMore\ndebugging practice!  This page is a little more challenging to debug than\nthe last one.\\r\n\\r\n# Do This\\r\n\\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\\r\n\\r\n*\nDiscuss with your partner what you think the bugs are in this page.\\r\n* Find\nand fix all the bugs so that your page matches the one on the right."
       CSD U2 Debugging 3: "# Debugging\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What is a bug?**</summary>\\r\nBugs\nare mistakes in code which causes it not to work as planned.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis debugging?**</summary>\\r\nDebugging is the process of finding and fixing\nbugs.  Debugging is a problem solving process so use your problem solving\nsteps as you try to debug. \\r\n</details>\\r\n<details>\\r\n<summary>**What\nare some examples of bugs?**</summary>\\r\nBugs can be anything that causes\ncode not to work as planned.  Some examples are misspelling, putting code\nin the wrong place, using the wrong tag, or forgetting to close a tag.\\r\n</details>\\r\n<details>\\r\n<summary>**Why\ndoes the inspector sometimes stop working?**</summary>\\r\nSometimes there\nare so many bugs in the HTML that the inspector cannot read the code properly\nand it stops working completely, even on the parts of the code that are correct.  Once\nthe bugs are corrected, the inspector will work again.\\r\n</details>\\r\n</div>\\r\n\\r\nThis\npage has images in it. Images make finding bugs a little more tricky. Can\nyou debug this page?\\r\n\\r\n# Do This\\r\n\\r\n* Discuss with your partner what\nis causing the bugs in this page.\\r\n* Fix the bugs so that your page matches\nthe target page shown below.\\r\n\\r\n![](https://images.code.org/4a9ac71bcf6c04775df791516562cd47-image-1508779270522.56.24\nAM.png)"
@@ -1737,8 +1784,122 @@ fr:
       CSD U2 Heading Test_2018: "# Headings and Paragraphs\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**What is\na paragraph element?**</summary>\\r\nParagraphs are marked by opening(`<p>`)\nand closing(`</p>`) tags as well. Paragraphs in HTML can be any length of\ntext from one word to a bunch of sentences. All of your text in your web page\nshould be contained in an HTML element (headings or paragraphs). Paragraphs\ngroup together sets of sentences and put some space between that group of\ntext and the next group of text.\\r\n</details>\\r\n<details>\\r\n<summary>**How\ndo I create multiple paragraphs?**</summary>\\r\nParagraphs are marked by opening(`<p>`)\nand closing(`</p>`) tags as well. To create more than one paragraph you will\nwant multiple sets of opening and closing `<p>` tags. For example\\r\n<pre>\\r\n\\t&lt;p&gt;\\r\n    \\tThis\nis a paragraph.\\r\n    &lt;/p&gt;\\r\n\\t&lt;p&gt;\\r\n    \\tThis is another\nparagraph.\\r\n    &lt;/p&gt;\\r\n</pre>\\r\n</details>\\r\n<details>\\r\n<summary>**What\nare headings?**</summary>\\r\nHeadings are the different sized section titles\nthroughout a web page. Headings add structure to your web page by breaking\nit up so its easier for a user to read.\\r\n</details>\\r\n<details>\\r\n<summary>**How\ndo I make different sized headings?**</summary>\\r\nHeadings come in 6 different\nsizes. So far you have primarily used the biggest one &lt;h1&gt;. The number\n1 in the HTML tag designates that this is the biggest heading. The smallest\nheading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,\nand &lt;h5&gt; tags which get smaller as the number gets larger.\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis HTML?**</summary>\\r\nHTML stands for Hypertext Markup Language. HTML is\nused to add structure to the content of a web page. HTML uses tags to specify\nwhere certain structures start and end. These tags are sets of characters\nnot found in the English language so that the content and structure can be\ndifferentiated. \\r\n</details>\\r\n<details>\\r\n<summary>**What is an HTML\nelement?**</summary>\\r\nAn HTML element is a piece of a website that is marked\nby a start tag and sometimes closed with an end tag. The element also includes\nthe content inside the tags. For example: \\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**What is an\nHTML tag?**</summary>\\r\nAn HTML tag is the special set of characters that\ntells the machine where the start or end of an HTML element is and what type\nit is.\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\nThe author of this page added in\na lot of content, but did not think about structure.  All of the text is mashed\ntogether.\\r\n\\r\nDo This:\\r\n* Look through the content with your partner\nand decide what you think the best structure should be.\\r\n* Use your heading\nand paragraph tags to code the structure into the page.\\r\n"
       CSD U2 Heading Test_2019: "# Headings and Paragraphs\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**What is\na paragraph element?**</summary>\\r\nParagraphs are marked by opening(`<p>`)\nand closing(`</p>`) tags as well. Paragraphs in HTML can be any length of\ntext from one word to a bunch of sentences. All of your text in your web page\nshould be contained in an HTML element (headings or paragraphs). Paragraphs\ngroup together sets of sentences and put some space between that group of\ntext and the next group of text.\\r\n</details>\\r\n<details>\\r\n<summary>**How\ndo I create multiple paragraphs?**</summary>\\r\nParagraphs are marked by opening(`<p>`)\nand closing(`</p>`) tags as well. To create more than one paragraph you will\nwant multiple sets of opening and closing `<p>` tags. For example\\r\n<pre>\\r\n\\t&lt;p&gt;\\r\n    \\tThis\nis a paragraph.\\r\n    &lt;/p&gt;\\r\n\\t&lt;p&gt;\\r\n    \\tThis is another\nparagraph.\\r\n    &lt;/p&gt;\\r\n</pre>\\r\n</details>\\r\n<details>\\r\n<summary>**What\nare headings?**</summary>\\r\nHeadings are the different sized section titles\nthroughout a web page. Headings add structure to your web page by breaking\nit up so its easier for a user to read.\\r\n</details>\\r\n<details>\\r\n<summary>**How\ndo I make different sized headings?**</summary>\\r\nHeadings come in 6 different\nsizes. So far you have primarily used the biggest one &lt;h1&gt;. The number\n1 in the HTML tag designates that this is the biggest heading. The smallest\nheading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,\nand &lt;h5&gt; tags which get smaller as the number gets larger.\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis HTML?**</summary>\\r\nHTML stands for Hypertext Markup Language. HTML is\nused to add structure to the content of a web page. HTML uses tags to specify\nwhere certain structures start and end. These tags are sets of characters\nnot found in the English language so that the content and structure can be\ndifferentiated. \\r\n</details>\\r\n<details>\\r\n<summary>**What is an HTML\nelement?**</summary>\\r\nAn HTML element is a piece of a website that is marked\nby a start tag and sometimes closed with an end tag. The element also includes\nthe content inside the tags. For example: \\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**What is an\nHTML tag?**</summary>\\r\nAn HTML tag is the special set of characters that\ntells the machine where the start or end of an HTML element is and what type\nit is.\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\nThe author of this page added in\na lot of content, but did not think about structure.  All of the text is mashed\ntogether.\\r\n\\r\nDo This:\\r\n* Look through the content with your partner\nand decide what you think the best structure should be.\\r\n* Use your heading\nand paragraph tags to code the structure into the page.\\r\n"
       CSD U2 Image Tag 1: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**How do I add images?**</summary>\\r\nThe\n`<img>` tag allows you to show images on your web page. <br><br>\\r\n\\r\nExample:\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\nIn order to\ntell the browser which file to use, extra information, called an **attribute**,\nis added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands\nfor **s**ou**rc**e and tell the name of the image. Image files names include\nextensions which tell the computer which type of image they are working with.\nCommon extensions are .jpg, .jpeg, .png. <br><br>\\r\n\\r\nIn addition to have\nthe src attribute, image elements also have the `alt` attribute which describe\nthe image. This is important in case the image doesn’t load or for people\nwho have trouble with their eyesight. <br><br>\\r\n\\r\nAn `<img>` tag is an\nexample of a  **self-closing tag** because it starts and closes in one tag.\nTo mark this we put the `/` which usually goes in the close tag at the end\nof the image tag.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Why does an\nimage tag not have a closing tag?**</summary>\\r\nAn image tag doesn't need\na closing tag because there is no text content which must be wrapped in tags.\nThe content that shows on the screen is specified through the tags attributes.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an attribute?**</summary>\\r\nAttributes are extra information included\nin a tag.  Attributes have names and values. The name tells what type of information\nis being provided and then the value gives the specific information for that\ntag. \\r\n\\r\nFor example &lt;img&gt; tags have two attributes, src and alt.\nsrc specifies the name of the image file and alt tells the browser in readable\ntext what the image is.\\r\n</details>\\r\n</div>\\r\n\\r\n# Images\\r\n\\r\nA Dog\nvs Cat web page has been started for you. The dog image has already been added\nto the below web page. Use an image tag to add the `cat.jpeg` image to the\npage below the cat heading."
-      CSD U2 Image Tag 1_2018: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**How do I add images?**</summary>\\r\nThe\n`<img>` tag allows you to show images on your web page. <br><br>\\r\n\\r\nExample:\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\nIn order to\ntell the browser which file to use, extra information, called an **attribute**,\nis added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands\nfor **s**ou**rc**e and tell the name of the image. Image files names include\nextensions which tell the computer which type of image they are working with.\nCommon extensions are .jpg, .jpeg, .png. <br><br>\\r\n\\r\nIn addition to have\nthe src attribute, image elements also have the `alt` attribute which describe\nthe image. This is important in case the image doesn’t load or for people\nwho have trouble with their eyesight. <br><br>\\r\n\\r\nAn `<img>` tag is an\nexample of a  **self-closing tag** because it starts and closes in one tag.\nTo mark this we put the `/` which usually goes in the close tag at the end\nof the image tag.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Why does an\nimage tag not have a closing tag?**</summary>\\r\nAn image tag doesn't need\na closing tag because there is no text content which must be wrapped in tags.\nThe content that shows on the screen is specified through the tags attributes.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an attribute?**</summary>\\r\nAttributes are extra information included\nin a tag.  Attributes have names and values. The name tells what type of information\nis being provided and then the value gives the specific information for that\ntag. \\r\n\\r\nFor example &lt;img&gt; tags have two attributes, src and alt.\nsrc specifies the name of the image file and alt tells the browser in readable\ntext what the image is.\\r\n</details>\\r\n</div>\\r\n\\r\n# Images\\r\n\\r\nA Dog\nvs Cat web page has been started for you. The dog image has already been added\nto the below web page. Use an image tag to add the `cat.jpeg` image to the\npage below the cat heading."
-      CSD U2 Image Tag 1_2019: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**How do I add images?**</summary>\\r\nThe\n`<img>` tag allows you to show images on your web page. <br><br>\\r\n\\r\nExample:\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\nIn order to\ntell the browser which file to use, extra information, called an **attribute**,\nis added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands\nfor **s**ou**rc**e and tell the name of the image. Image files names include\nextensions which tell the computer which type of image they are working with.\nCommon extensions are .jpg, .jpeg, .png. <br><br>\\r\n\\r\nIn addition to have\nthe src attribute, image elements also have the `alt` attribute which describe\nthe image. This is important in case the image doesn’t load or for people\nwho have trouble with their eyesight. <br><br>\\r\n\\r\nAn `<img>` tag is an\nexample of a  **self-closing tag** because it starts and closes in one tag.\nTo mark this we put the `/` which usually goes in the close tag at the end\nof the image tag.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Why does an\nimage tag not have a closing tag?**</summary>\\r\nAn image tag doesn't need\na closing tag because there is no text content which must be wrapped in tags.\nThe content that shows on the screen is specified through the tags attributes.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an attribute?**</summary>\\r\nAttributes are extra information included\nin a tag.  Attributes have names and values. The name tells what type of information\nis being provided and then the value gives the specific information for that\ntag. \\r\n\\r\nFor example &lt;img&gt; tags have two attributes, src and alt.\nsrc specifies the name of the image file and alt tells the browser in readable\ntext what the image is.\\r\n</details>\\r\n</div>\\r\n\\r\n# Images\\r\n\\r\nA Dog\nvs Cat web page has been started for you. The dog image has already been added\nto the below web page. Use an image tag to add the `cat.jpeg` image to the\npage below the cat heading."
+      CSD U2 Image Tag 1_2018: |-
+        <div style="float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\\r
+        <details>\\r
+        <summary>**How do I add images?**</summary>\\r
+        The
+        `<img>` tag allows you to show images on your web page. <br><br>\\r
+        \\r
+        Example:\\r
+        <pre>&lt;img
+        src="dog.png" alt="dog jumping"/&gt;</pre><br><br>\\r
+        \\r
+        In order to
+        tell the browser which file to use, extra information, called an **attribute**,
+        is added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands
+        for **s**ou**rc**e and tell the name of the image. Image files names include
+        extensions which tell the computer which type of image they are working with.
+        Common extensions are .jpg, .jpeg, .png. <br><br>\\r
+        \\r
+        In addition to have
+        the src attribute, image elements also have the `alt` attribute which describe
+        the image. This is important in case the image doesn’t load or for people
+        who have trouble with their eyesight. <br><br>\\r
+        \\r
+        An `<img>` tag is an
+        example of a  **self-closing tag** because it starts and closes in one tag.
+        To mark this we put the `/` which usually goes in the close tag at the end
+        of the image tag.\\r
+        \\r
+        </details>\\r
+        <details>\\r
+        <summary>**Why does an
+        image tag not have a closing tag?**</summary>\\r
+        An image tag doesn't need
+        a closing tag because there is no text content which must be wrapped in tags.
+        The content that shows on the screen is specified through the tags attributes.\\r
+        </details>\\r
+        <details>\\r
+        <summary>**What
+        is an attribute?**</summary>\\r
+        Attributes are extra information included
+        in a tag.  Attributes have names and values. The name tells what type of information
+        is being provided and then the value gives the specific information for that
+        tag. \\r
+        \\r
+        For example &lt;img&gt; tags have two attributes, src and alt.
+        src specifies the name of the image file and alt tells the browser in readable
+        text what the image is.\\r
+        </details>\\r
+        </div>\\r
+        \\r
+        # Images\\r
+        \\r
+        A Dog
+        vs Cat web page has been started for you. The dog image has already been added
+        to the below web page. Use an image tag to add the `cat.jpeg` image to the
+        page below the cat heading.
+      CSD U2 Image Tag 1_2019: |-
+        <div style="float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\\r
+        <details>\\r
+        <summary>**How do I add images?**</summary>\\r
+        The
+        `<img>` tag allows you to show images on your web page. <br><br>\\r
+        \\r
+        Example:\\r
+        <pre>&lt;img
+        src="dog.png" alt="dog jumping"/&gt;</pre><br><br>\\r
+        \\r
+        In order to
+        tell the browser which file to use, extra information, called an **attribute**,
+        is added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands
+        for **s**ou**rc**e and tell the name of the image. Image files names include
+        extensions which tell the computer which type of image they are working with.
+        Common extensions are .jpg, .jpeg, .png. <br><br>\\r
+        \\r
+        In addition to have
+        the src attribute, image elements also have the `alt` attribute which describe
+        the image. This is important in case the image doesn’t load or for people
+        who have trouble with their eyesight. <br><br>\\r
+        \\r
+        An `<img>` tag is an
+        example of a  **self-closing tag** because it starts and closes in one tag.
+        To mark this we put the `/` which usually goes in the close tag at the end
+        of the image tag.\\r
+        \\r
+        </details>\\r
+        <details>\\r
+        <summary>**Why does an
+        image tag not have a closing tag?**</summary>\\r
+        An image tag doesn't need
+        a closing tag because there is no text content which must be wrapped in tags.
+        The content that shows on the screen is specified through the tags attributes.\\r
+        </details>\\r
+        <details>\\r
+        <summary>**What
+        is an attribute?**</summary>\\r
+        Attributes are extra information included
+        in a tag.  Attributes have names and values. The name tells what type of information
+        is being provided and then the value gives the specific information for that
+        tag. \\r
+        \\r
+        For example &lt;img&gt; tags have two attributes, src and alt.
+        src specifies the name of the image file and alt tells the browser in readable
+        text what the image is.\\r
+        </details>\\r
+        </div>\\r
+        \\r
+        # Images\\r
+        \\r
+        A Dog
+        vs Cat web page has been started for you. The dog image has already been added
+        to the below web page. Use an image tag to add the `cat.jpeg` image to the
+        page below the cat heading.
       CSD U2 Image Tag 2: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**How do I add images?**</summary>\\r\nThe\n`<img>` tag allows you to show images on your web page. <br><br>\\r\n\\r\nExample:\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\nIn order to\ntell the browser which file to use, extra information, called an **attribute**,\nis added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands\nfor **s**ou**rc**e and tell the name of the image. Image files names include\nextensions which tell the computer which type of image they are working with.\nCommon extensions are .jpg, .jpeg, .png. <br><br>\\r\n\\r\nIn addition to have\nthe src attribute, image elements also have the `alt` attribute which describe\nthe image. This is important in case the image doesn’t load or for people\nwho have trouble with their eyesight. <br><br>\\r\n\\r\nAn `<img>` tag is an\nexample of a  **self-closing tag** because it starts and closes in one tag.\nTo mark this we put the `/` which usually goes in the close tag at the end\nof the image tag.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Why does an\nimage tag not have a closing tag?**</summary>\\r\nAn image tag doesn't need\na closing tag because there is no text content which must be wrapped in tags.\nThe content that shows on the screen is specified through the tags attributes.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an attribute?**</summary>\\r\nAttributes are extra information included\nin a tag.  Attributes have names and values. The name tells what type of information\nis being provided and then the value gives the specific information for that\ntag. \\r\n\\r\nFor example &lt;img&gt; tags have two attributes, src and alt.\nsrc specifies the name of the image file and alt tells the browser in readable\ntext what the image is.\\r\n</details>\\r\n</div>\\r\n\\r\n# Uploading Images\\r\n\\r\nYou\ncan upload images that you've found elsewhere using the **Add Image** button.\nGo find an image of a different type of pet that you like and download it\nto your computer (using right-click \"Save As\").\\r\n\\r\nOnce you have your\nimages, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) and upload the image from your computer into your project, where you\ncan then use it in your page.\\r\n\\r\n# Do This\\r\n\\r\n* Upload at least one\nimage into this web page\\r\n* Use the `<img>` tag to display the image(s)\nin your website.\\r\n* Make sure to add an `alt` attribute."
       CSD U2 Image Tag 2_2018: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**How do I add images?**</summary>\\r\nThe\n`<img>` tag allows you to show images on your web page. <br><br>\\r\n\\r\nExample:\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\nIn order to\ntell the browser which file to use, extra information, called an **attribute**,\nis added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands\nfor **s**ou**rc**e and tell the name of the image. Image files names include\nextensions which tell the computer which type of image they are working with.\nCommon extensions are .jpg, .jpeg, .png. <br><br>\\r\n\\r\nIn addition to have\nthe src attribute, image elements also have the `alt` attribute which describe\nthe image. This is important in case the image doesn’t load or for people\nwho have trouble with their eyesight. <br><br>\\r\n\\r\nAn `<img>` tag is an\nexample of a  **self-closing tag** because it starts and closes in one tag.\nTo mark this we put the `/` which usually goes in the close tag at the end\nof the image tag.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Why does an\nimage tag not have a closing tag?**</summary>\\r\nAn image tag doesn't need\na closing tag because there is no text content which must be wrapped in tags.\nThe content that shows on the screen is specified through the tags attributes.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an attribute?**</summary>\\r\nAttributes are extra information included\nin a tag.  Attributes have names and values. The name tells what type of information\nis being provided and then the value gives the specific information for that\ntag. \\r\n\\r\nFor example &lt;img&gt; tags have two attributes, src and alt.\nsrc specifies the name of the image file and alt tells the browser in readable\ntext what the image is.\\r\n</details>\\r\n</div>\\r\n\\r\n# Uploading Images\\r\n\\r\nYou\ncan upload images that you've found elsewhere using the **Add Image** button.\nGo find an image of a different type of pet that you like and download it\nto your computer (using right-click \"Save As\").\\r\n\\r\nOnce you have your\nimages, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) and upload the image from your computer into your project, where you\ncan then use it in your page.\\r\n\\r\n# Do This\\r\n\\r\n* Upload at least one\nimage into this web page\\r\n* Use the `<img>` tag to display the image(s)\nin your website.\\r\n* Make sure to add an `alt` attribute."
       CSD U2 Image Tag 2_2019: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**How do I add images?**</summary>\\r\nThe\n`<img>` tag allows you to show images on your web page. <br><br>\\r\n\\r\nExample:\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\nIn order to\ntell the browser which file to use, extra information, called an **attribute**,\nis added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands\nfor **s**ou**rc**e and tell the name of the image. Image files names include\nextensions which tell the computer which type of image they are working with.\nCommon extensions are .jpg, .jpeg, .png. <br><br>\\r\n\\r\nIn addition to have\nthe src attribute, image elements also have the `alt` attribute which describe\nthe image. This is important in case the image doesn’t load or for people\nwho have trouble with their eyesight. <br><br>\\r\n\\r\nAn `<img>` tag is an\nexample of a  **self-closing tag** because it starts and closes in one tag.\nTo mark this we put the `/` which usually goes in the close tag at the end\nof the image tag.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Why does an\nimage tag not have a closing tag?**</summary>\\r\nAn image tag doesn't need\na closing tag because there is no text content which must be wrapped in tags.\nThe content that shows on the screen is specified through the tags attributes.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an attribute?**</summary>\\r\nAttributes are extra information included\nin a tag.  Attributes have names and values. The name tells what type of information\nis being provided and then the value gives the specific information for that\ntag. \\r\n\\r\nFor example &lt;img&gt; tags have two attributes, src and alt.\nsrc specifies the name of the image file and alt tells the browser in readable\ntext what the image is.\\r\n</details>\\r\n</div>\\r\n\\r\n# Uploading Images\\r\n\\r\nYou\ncan upload images that you've found elsewhere using the **Add Image** button.\nGo find an image of a different type of pet that you like and download it\nto your computer (using right-click \"Save As\").\\r\n\\r\nOnce you have your\nimages, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) and upload the image from your computer into your project, where you\ncan then use it in your page.\\r\n\\r\n# Do This\\r\n\\r\n* Upload at least one\nimage into this web page\\r\n* Use the `<img>` tag to display the image(s)\nin your website.\\r\n* Make sure to add an `alt` attribute."
@@ -5870,7 +6031,7 @@ fr:
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\\r
 
-      CSD U3 Variables Challenge_2018: |
+      CSD U3 Variables Challenge_2018: |-
         # Challenge: Updating Variables\\r
         \\r
         _Check
@@ -5890,7 +6051,7 @@ fr:
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\\r
 
-      CSD U3 Variables Challenge_2019: |
+      CSD U3 Variables Challenge_2019: |-
         # Challenge: Updating Variables\\r
         \\r
         _Check
@@ -11380,7 +11541,15 @@ fr:
       Course 4 Artist 1: "Help me draw a box.   \\r\n(Each line\nis 200 pixels long) \\r\n\\r\n<br/><br/>\\r\n\\r\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"\nwidth=\"150px;\" style=\"mix-blend-mode: multiply;\" />\\r\n\\r\n**Play time:**  Here\nis the code for an interesting shape.   \\r\n\\r\nWhat happens when you repeat\nit multiple times, turning between each iteration?   \\r\n\\r\nNotice that the\nturns in this shape add up to *420 degrees*, which means that when your artist\nis done drawing, it will be facing a different direction than when you started.  That\nnew direction is exactly *60 degrees* to the *right* of where you began.\\r\n\\r\n<hr/>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>Repeat\n4</b></summary>\\r\n<br/>\\r\nIf you want to come full circle in just 4 repetitions,\nyou need the artist to turn a total of **360 degrees/4 = 90 degrees** each\ntime.  You can do that by adding an extra `turn right by 30 degrees` block\nto the outer loop (since **60+30 = 90**.)  \\r\n<br/>\\r\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\\r\n<br/><br/>\\r\n</details>\\r\n</h4>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>Repeat\n6</b></summary>\\r\n<br/>\\r\nWhen you repeat the shape as-is 6 times, you get\na total rotation of **6x60 degrees** which is a full **360 degree** cycle.  \\r\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" />\\r\n</details>\\r\n</h4>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>Repeat\n12</b></summary>\\r\n<br/>\\r\nIf you want to repeat the image 12 times, you\nneed the artist to turn a total of **360 degrees/12 = 30 degrees** each iteration.  That\nmeans you will need to adjust the artist back a bit with `turn left by 30\ndegrees` before you repeat the shape again.   <br/><br/>\\r\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\\r\n</details>\\r\n</h4>\\r\n\\r\nNow\nit's your turn!  Can you recreate each image by repeating the starting shape?  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nNow for a challenge!  \\r\n\\r\nHere is a design that\nuses only blocks that you have already been shown.  Can you figure out how\nto recreate it?  Feel free to use trial and error. You are not expected to\nget it perfect the first time.\\r\n\\r\nThe repeated shape is almost identical\nto the one from the last puzzle, except that the length used in the first\nloop is a little smaller. "
-      Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/>\\r\n\\r\nFree Play Inspiration: You've now learned everything\nyou need to know to make a pattern like this! If this picture inspires you,\ntry to make something similar. Otherwise, create something all your own. \\r\n\\r\n<br/>"
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
+        width="250px"/>\\r
+        \\r
+        Free Play Inspiration: You've now learned everything
+        you need to know to make a pattern like this! If this picture inspires you,
+        try to make something similar. Otherwise, create something all your own. \\r
+        \\r
+        <br/>
       Course 4 Artist 13: Encore envie de jouer ?  Voici une toile vierge où tu peux concevoir tout ce que tu veux !
       Course 4 Artist 2: "Can you use a loop to draw the greyed\nout square?  \\r\n(Each side is 300px long)"
       Course 4 Artist 20: "Still playing?  \\r\n\\r\nHere is a\nblank canvas where you can create whatever you want!"
@@ -11446,7 +11615,18 @@ fr:
       Course 4 Artist Vars 1: "Let's draw an equilateral triangle.\n\\r\n\\r\nIt has to be exactly 100 pixels long on each side.\\r\n\\r\n<br/>\\r\n"
       Course 4 Artist Vars 10: "Here's an algorithm that draws\na triangle out of smaller triangles. Can you modify it so that it uses the\n`sides` variable to draw each triangle? \\r\n\\r\n</br>\\r\nLook through the\ncode, and every time you see the number 3, replace it with your `sides` variable.\nRemember to use the `set sides` block."
       Course 4 Artist Vars 11: "Here’s some more complicated\ncode using the same concepts from the last puzzle - what should you set the\n`sides` variable to in order to draw this picture made of squares?\\r\n\\r\n<p\nstyle=\"font-size:small; padding: 15px 15px 15px 40px; background-color:#dcf3f3;\nborder-radius:10px;\">\\r\n\\tJust for fun: Try using a few different numbers\nto see what happens to the pattern!\\r\n</p>"
-      Course 4 Artist Vars 12: "Let's set the `sides` variable\nto 5. The more sides we add to this algorithm, the bigger this whole pattern\ngets! \\r\n\\r\n<br/>\\r\nNotice that there is another variable called `length`.\n\\r\nWe can now use that variable wherever we have a `move forward` block.\n\\r\n\\r\nSet the `length` variable to 75 for this shape."
+      Course 4 Artist Vars 12: |-
+        Let's set the `sides` variable
+        to 5. The more sides we add to this algorithm, the bigger this whole pattern
+        gets! \\r
+        \\r
+        <br/>\\r
+        Notice that there is another variable called `length`.
+        \\r
+        We can now use that variable wherever we have a `move forward` block.
+        \\r
+        \\r
+        Set the `length` variable to 75 for this shape.
       Course 4 Artist Vars 13: "When a shape has lots of sides,\neach side needs to be shorter if you want the whole pattern to fit on the\nscreen. \\r\n\\r\nLet's recreate the algorithm for this amazing pattern, but\ninstead of manually setting the `length` variable, let's use a math block\nwith the `sides` variable inside to make sure that each shape fits correctly.  \\r\n\\r\nThe\nperimeter of each polygon is 300 pixels."
       Course 4 Artist Vars 14: |-
         **Free Play**: Check it out!
@@ -11648,6 +11828,59 @@ fr:
         <hr/>
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Variables Super Challenge:** You've now learned\neverything you need to know to make a pattern like this! This puzzle is meant\nto be difficult.  Can you stick with it until you figure out the solution?  "
       Course 4 SCVP 1: Crée une fonction avec des paramètres qui permettent à l'Artiste de sauter vers l'avant ou l'arrière de «x» pixels, et aussi vers le haut ou le bas de «y» pixels (en utilisant des chiffres positifs et négatifs).
+      CourseD_Dance_Party_01: |-
+        *Faisons une fête dansante !*
+
+        Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+
+        * *Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires.*
+      CourseD_Dance_Party_02: |-
+        Faisons danser cet orignal !
+
+        Faites glisser le bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> sur l'espace de travail. Connectez-le sous le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Votre danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+
+
+        **Les mesures** sont utilisées pour compter le temps en musique. Dans ce tutoriel, une mesure dure quatre temps.
+      CourseD_Dance_Party_03: "*Voilà qu'on danse !*\n\nAjoutez un bloc <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures."
+      CourseD_Dance_Party_04: |-
+        *Cette danse a besoin d'être un peu plus éclatante !*
+
+        Recherchez un nouveau bloc dans votre boîte à outils qui ajoute un effet de fond derrière votre danseur. Regardez les effets changer avec la musique !
+      CourseD_Dance_Party_05: |-
+        Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
+
+        *Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
+      CourseD_Dance_Party_06: |-
+        *Nous avons besoin de plus de danseurs !*
+
+        Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
+      CourseD_Dance_Party_08: |-
+        Chaque danseur possède un ensemble de _propriétés_ qui contrôlent son apparence.
+
+        Vous pouvez donner l’impression qu’un danseur est à l’arrière-plan en réduisant sa _taille_. Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
+      CourseD_Dance_Party_09: |-
+        Les danseurs ont une propriété « nuance » qui peut ajouter une couche de couleur. Essayez de modifier la nuance de l’un de vos danseurs.
+        *Les nuances vont mélanger la couleur que vous choisissez avec les couleurs du danseur.
+      CourseD_Dance_Party_10: |-
+        Nous savons maintenant comment changer les propriétés d'un danseur. Nous pouvons également faire en sorte que les mêmes propriétés correspondent automatiquement à la musique en utilisant ce bloc :
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ce programme utilise le volume « grave » de la musique (les sons graves) pour contrôler la hauteur d'un danseur. Peux-tu aussi faire en sorte que l'autre danseur réponde à la musique ?
+      CourseD_Dance_Party_11: "Le bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.\n\nVous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !"
+      CourseD_Dance_Party_11_5: "Jetez un œil à ce bloc :\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nMaintenant, vous pouvez créer un groupe de danseurs à la fois !\n\nEssayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards."
+      CourseD_Dance_Party_11b: |-
+        Il est temps de danser ! Le Chat fait le dab lorsque vous appuyez sur la touche fléchée gauche. Faites le Robot faire le « drop » lorsque vous appuyez sur la touche fléchée droite.
+      CourseD_Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
+      CourseE_HOC 2018 Level_10: "Il y a une **pieuvre** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) cachée dans ce monument sous-marin, la trouverez-vous ?\n\n"
+      CourseE_HOC 2018 Level_11: Construisez un mur en **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) autour du béton noir. Cela activera le **conduit** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) et vous aurez relevé le défi !
+      CourseE_HOC 2018 Level_7a: "Vous avez découvert les ruines sous-marines. Fouillez le grès à la recherche d'un **coffre** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) contenant un trésor de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "D'abord des icebergs, et maintenant de la lave ? Traversez cette île volcanique et dénichez le **poisson tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) dans le récif de corail.\n\n"
+      CourseE_HOC 2018 Level_9b: "Vous voici enfin au récif, partez à la recherche du **Cœur de l'océan** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Utilisez les coraux bleus et rouges pour atteindre le **coffre** au trésor ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars10: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \\r\n\\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \\r\n\\r\n*Hint: scroll down to see all the commands\nin the workspace.*"
       CourseF_PlayLab_vars2: La course dans ce dernier puzzle n'était pas très équitable ! Change la variable «Vitesse du chien» pour t'assurer que tu peux obtenir plus de drapeaux que le chat. Le premier à obtenir 10 drapeaux gagne !
       CourseF_PlayLab_vars3: "Here's a new kind of game!\n\\r\n\\r\nYou don't need to change anything on this level.\\r\n\\r\n**Directions:**\nUse the left and right arrows to move, and the up arrow to jump. See if you\ncan collect all of the flags."
@@ -16964,7 +17197,17 @@ fr:
         - The blue spiral goes from 25 to
         150 pixels\\r
         - The green spiral goes from 100 to 350 pixels
-      courseF_artist_fwp_challenge2: "Use what you learned in\nthe previous level to draw an image like this.\\r\n\\r\n*Note: The code becomes\nmore simple if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>  "
+      courseF_artist_fwp_challenge2: |-
+        Use what you learned in
+        the previous level to draw an image like this.\\r
+        \\r
+        *Note: The code becomes
+        more simple if you incorporate parameters.*\\r
+        \\r
+        <br/>\\r
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png"
+        width="300px"/>\\r
+        <br/>  
       courseF_artist_fwp_challenge2_2018: "Use what you learned in\nthe previous level to draw an image like this.\\r\n\\r\n*Note: The code becomes\nmore simple if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>  "
       courseF_artist_ramp10: |-
         Did you know you can put loops

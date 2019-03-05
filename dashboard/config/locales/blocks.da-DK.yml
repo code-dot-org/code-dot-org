@@ -264,6 +264,11 @@ da:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': mens
       gamelab_debugSprite:
         options:
           VAL:
@@ -275,6 +280,18 @@ da:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': mens
+          KEY:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+            '"space"': rummet
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -288,6 +305,10 @@ da:
         text: tilfældig farve
       gamelab_randomColor:
         text: tilfældig farve
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
       gamelab_setPosition:
         options:
           POSITION:
@@ -303,6 +324,11 @@ da:
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': mens
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -520,6 +546,11 @@ da:
         options:
           DURATION:
             '"0"': for evigt
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': vis
+            '"hide"': skjul
       binary_move:
         options:
           DIR:

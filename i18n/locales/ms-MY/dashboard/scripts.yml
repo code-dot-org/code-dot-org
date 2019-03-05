@@ -405,6 +405,8 @@ ms:
           stages:
             The Artist:
               name: Pelukis
+            Internet:
+              name: Internet
         coursed-2019:
           stages:
             Relay Programming:

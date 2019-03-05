@@ -12,9 +12,10 @@ sv:
       Conditionals: Villkor
       Events: Händelser
       Text: text
-      Start: Start
+      Location: Ort
       Dancers: Dansare
       Groups: Grupper
+      Start: Start
       Booleans: Booleska värden
       test: test
       Name: Namn

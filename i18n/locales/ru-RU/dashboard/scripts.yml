@@ -2564,6 +2564,10 @@ ru:
               name: Цикл for в Художнике
             The Artist:
               name: Художник
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг
         dance-low:
           stages:
             Dance Party:
@@ -2590,6 +2594,8 @@ ru:
               name: 'Урок без компьютера: Двоичный'
             Artist Binary:
               name: 'Художник: двоичная система'
+            Dance Party:
+              name: Танцевальная вечеринка
         coursee-2019:
           description_audience: 'Возраст: 8-12'
           stages:

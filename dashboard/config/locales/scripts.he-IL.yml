@@ -1649,6 +1649,8 @@ he:
               name: לולאות עבור עם האמן
             The Artist:
               name: האמן
+            Internet:
+              name: אינטרנט
         dance-low:
           stages:
             Dance Party:
@@ -1671,6 +1673,8 @@ he:
               name: צור משחק במעבדת הצעצועים
             Artist Binary:
               name: אמן בינארי
+            Dance Party:
+              name: מסיבת ריקודים
         coursee-2019:
           stages:
             Sequence in Maze:

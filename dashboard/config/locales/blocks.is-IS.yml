@@ -653,6 +653,8 @@ is:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: vera {SPRITE} gerir {BEHAVIOR} þar til {CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: aalab allar {ANIMATION}
       gamelab_beginBehavior:
         text: byrjar {BEHAVIOR}
       gamelab_bounceOff:
@@ -682,6 +684,12 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} snertir {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
       gamelab_clickedOn:
         text: þegar smellt á {SPRITE}
       gamelab_comment:
@@ -733,6 +741,11 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
             '"tint"': litur
+      gamelab_getThisSprite:
+        text: "{CHOICE} vera"
+        options:
+          CHOICE:
+            '"this"': þetta
       gamelab_groupLength:
         text: fjöldi vera í {THIS}
       gamelab_hasBehavior:
@@ -753,6 +766,37 @@ is:
         text: "{SPRITE} hoppa til {LOCATION}"
       gamelab_keyDown:
         text: ýtt er á hnapp {KEY}
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY} niðri"
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
+          KEY:
+            '"up"': uppi
+            '"down"': niðri
+            '"left"': vinstri
+            '"right"': hægri
+            '"space"': geimur
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -798,6 +842,8 @@ is:
         text: stilla stað {VAR} á {VAL}
       gamelab_makeNewGroup:
         text: búa til nýjan hóp
+      gamelab_makeNewSpriteAnon:
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -862,6 +908,10 @@ is:
         text: breyta búningi {THIS} í {ANIMATION}
       gamelab_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
       gamelab_setDirection:
         text: láta {SPRITE} hreyfast í stefnu {DIRECTION}
       gamelab_setFrameDelay:
@@ -903,6 +953,12 @@ is:
         text: uppstilling
       gamelab_showTitleScreen:
         text: sýna titilskjá {BREAK} titill {TITLE} texti {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} ef smellt"
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -913,8 +969,6 @@ is:
             '"East"': austur
             '"South"': suður
             '"West"': vestur
-      gamelab_spriteSay:
-        text: vera {SPRITE} segir {TEXT}
       gamelab_spritesWhere:
         text: verur með {PROPERTY} = {VALUE}
         options:
@@ -1309,12 +1363,6 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
-      aalab_checkCollision:
-        text: þegar {SPRITE1} {OPTION} {SPRITE2}
-        options:
-          OPTION:
-            '"collide"': rekst á
-            '"overlap"': skarast við
       aalab_checkTouching:
         text: "{CONDITION} {SPRITE1} snertir {SPRITE2}"
         options:
@@ -1421,9 +1469,47 @@ is:
             '"4"': 4 sekúndur
             '"5"': 5 sekúndur
             '"0"': að eilífu
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} segir {MESSAGE}"
       aalab_spriteSay:
         text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': sýna
+            '"hide"': fela
+      binary_drawBin:
+        text: teikna tvíund {BIN}
+      binary_drawBinScreen:
+        text: |-
+          teikna skjá
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: teikna tugatölu {DEC}
+      binary_drawPixelHere:
+        text: stilla díl {VAL}
+        options:
+          VAL:
+            '0': af
+            '1': á
+            '"toggle"': víxla
+      binary_drawString:
+        text: teikna streng {STR}
+      binary_goTo:
+        text: hoppa á {LOC}
+      binary_goToHome:
+        text: hoppa efst vinstri
+      binary_gridSize:
+        text: stilla stærð hnita {SIZE}
       binary_move:
+        text: færa {DIR}
         options:
           DIR:
             '"up"': uppi
@@ -1444,9 +1530,14 @@ is:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          ef slóð {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": framfyrir
+            "'right'": til hægri
+            "'left'": til vinstri
       craft_ifStandingOn:
         text: |-
           ef stendur á {TYPE}

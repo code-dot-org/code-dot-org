@@ -293,6 +293,8 @@ tr:
       BinaryImages_2019:
         title: İkili Sistemle Resimler
         desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir. Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu öğretecek.
+      courseE_unplugged_privateInformation_2019:
+        title: Özel ve Kişisel Bilgiler
       courseE_unplugged_CnC_2019:
         title: Dijital Paylaşım
       GettingLoopy_2019:

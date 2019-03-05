@@ -1,6 +1,7 @@
 tr:
   data:
     display_name:
+      App Lab Intro 8 - Video Design Mode: 'Video: Tasarım Modu'
       App Lab Intro 8 - Video Getting Started: 'Video: İşe Başlama'
       App Lab Intro 8 - Video Images and Sounds: 'Video: Görüntüler ve Sesler'
       App Lab Intro 8 - Video Make It Interactive: 'Video: Etkileşimli Hale Getir'
@@ -33,6 +34,8 @@ tr:
       AppLab Intro 4 - onEvent twoButtons: Daha fazla onEvent Alıştırması
       AppLab Intro 4 - playSound: playSound Kullanımı
       AppLab Intro 4 - stopSound: playSound Kullanımı
+      AppLab Intro 4 - thisOrThat design: Bu ya da O Tasarımı
+      AppLab Intro 4 - thisOrThat template: Bu ya da O Tasarımı
       AppLab Intro 4 - thisOrThat: Bu ya da Şu
       AppLab Intro 5 - Change Screen Color: Ekran Rengini Değiştir
       AppLab Intro 5 - Change Text 2: Yazıyı Değiştir
@@ -74,6 +77,20 @@ tr:
       AppLab Intro 7 - thisOrThatAddScreen: Bu ya da Şu
       AppLab Intro 7 - thisOrThatPersonalize: Bu ya da Şu
       AppLab Intro 7 - thisOrThatSetScreen: Bu ya da Şu
+      CDEF_video_SpritesInAction: Nesne Oluşturma
+      CDEF_video_SpritesInAction_2019: Nesne Oluşturma
+      CSD Board Buttons Map: Düğmeler ve Anahtar
+      CSD Board Buttons Map_2018: Düğmeler ve Anahtar
+      CSD Board Buttons Map_2019: Düğmeler ve Anahtar
+      CSD Board Sensors Map: Analog Sensörler
+      CSD Board Sensors Map_2018: Analog Sensörler
+      CSD Board Sensors Map_2019: Analog Sensörler
+      CSD Booleans Map: Boolean ve Karşılaştırma Operatörleri
+      CSD Booleans Map_2018: Boolean ve Karşılaştırma Operatörleri
+      CSD Booleans Map_2019: Boolean ve Karşılaştırma Operatörleri
+      CSD Buzzer Map: 'Devre Sahası: Buzzer'
+      CSD Buzzer Map_2018: 'Devre Sahası: Buzzer'
+      CSD Buzzer Map_2019: 'Devre Sahası: Buzzer'
       CSD Polling Events Map: Yoklama olayları
       CSD Polling Events Map_2018: Yoklama olayları
       CSD Polling Events Map_2019: Yoklama olayları
@@ -130,6 +147,9 @@ tr:
       CSD U3 L9 Freeplay: Ücretsiz Oyna
       CSD U3 L9 Freeplay_2018: Ücretsiz Oyna
       CSD U3 L9 Freeplay_2019: Ücretsiz Oyna
+      CSD U3 Sprite Properties Map: Nesne özellikleri
+      CSD U3 Sprite Properties Map_2018: Nesne özellikleri
+      CSD U3 Sprite Properties Map_2019: Nesne özellikleri
       CSD U3 The Draw Loop Map: Döngü çiz
       CSD U3 The Draw Loop Map_2018: Döngü çiz
       CSD U3 The Draw Loop Map_2019: Döngü çiz
@@ -158,6 +178,8 @@ tr:
       CSD U6 setProperty Map_2019: Kod ile Ekranlar Tasarlama
       'CSD: For Loop_2018': For Döngüleri
       'CSD: For Loop_2019': For Döngüleri
+      CourseEF_video_MakeSprite: Nesne Oluşturma
+      CourseEF_video_MakeSprite_2019: Nesne Oluşturma
       Dance_Party_extras_battle: Dans Ekipleri
       Dance_Party_extras_every_beat: Çeyrek Notalar
       Dance_Party_extras_layout: Giriş Düzeni

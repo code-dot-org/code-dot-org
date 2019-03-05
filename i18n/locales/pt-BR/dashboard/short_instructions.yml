@@ -1634,6 +1634,23 @@ pt-BR:
         Isso é um teste!\r
         Mova-me por um caminho e então
         por outro para me levar até o porco.
+      CourseD_Dance_Party_01: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o dentro do bloco de 'configuração'.
+      CourseD_Dance_Party_02: Faça o alce iniciar um novo movimento após quatro compassos!
+      CourseD_Dance_Party_03: Agora, faça o(a) dançarino(a) iniciar um novo movimento após seis compassos!
+      CourseD_Dance_Party_04: Adicione um efeito de plano de fundo ao seu programa.
+      CourseD_Dance_Party_05: Use outro bloco novo para fazer o(a) dançarino(a) mudar seus movimentos a cada dois compassos.
+      CourseD_Dance_Party_06: Crie um(a) dançarino(a) de apoio intitulado 'backup_dancer1' para dançar com o gato.
+      CourseD_Dance_Party_08: É possível deixar os dois dançarinos de apoio do mesmo tamanho?
+      CourseD_Dance_Party_09: Use o bloco de 'definir tonalidade” para alterar a cor de um(a) dançarino(a).
+      CourseD_Dance_Party_10: Faça o outro dançarino também responder à música usando o bloco 'começar a seguir '.
+      CourseD_Dance_Party_11: O bloco 'com a seta para cima pressionada' permite executar o código quando a seta para cima for pressionada. Tente fazer o(a) dançarino(a) se movimentar rapidamente pressionando a seta para cima.
+      CourseD_Dance_Party_11_5: Use os blocos "todos os patos" para fazer os patos dançarem juntos.
+      CourseD_Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla de seta para a direita e fazer a dança do fio dental uma vez pressionando a seta para cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
+      CourseD_Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      CourseE_HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
+      CourseE_HOC 2018 Level_11: 'Construa um canal usando Prismarinho dentro do Monumento Oceânico.'
+      CourseE_HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
+      CourseE_HOC 2018 Level_9b: 'Use os corais como pontos passagem para alcançar o tesouro.'
       CourseF_PlayLab_vars1: 'Para jogar este jogo, você não precisa escrever nenhum código, apenas clicar "Executar"! '
       CourseF_PlayLab_vars10: "Hora da atividade livre! Temos aqui todas as\nvariáveis que usamos até agora essa etapa, bem como algumas a mais caso\nvocê queira usá-las. \\r\n\\r\nObserve que agora há muitos blocos em nossa\ncaixa de ferramentas e eles precisam ser organizados! Aqui, colocamos cada peça em\numa categoria apropriada. Reserve um tempo para explorar tudo o que está disponível.\nQuando terminar de explorar, crie um jogo ou uma história usando repetições, variáveis\ne eventos.  \\r\n\\r\nDica: deslize a tela para baixo para ver todos os comandos na área de trabalho."
       CourseF_PlayLab_vars2: "A corrida do último desafio não foi\nmuito justa! Altere a variável \"velocidade_cão\" para garantir que você possa coletar mais\nbandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!"
@@ -1838,10 +1855,40 @@ pt-BR:
       InspirationalArtwork: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
       InspirationalArtwork_2018: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
       InspirationalArtwork_2019: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
+      'Internet Simulator: Packets': |-
+        Desenvolver um Protocolo para Enviar uma Mensagem com Segurança.
+
+        Restrições:
+        - Pacotes podem conter apenas 8 caracteres
+        - Pacotes podem cair com pequena probabilidade
+        - Pacotes podem não chegar em ordem
+      'Internet Simulator: Packets_2018': |-
+        Desenvolver um Protocolo para Enviar uma Mensagem com Segurança.
+
+        Restrições:
+        - Pacotes podem conter apenas 8 caracteres
+        - Pacotes podem cair com pequena probabilidade
+        - Pacotes podem não chegar em ordem
+      'Internet Simulator: Packets_2019': |-
+        Desenvolver um Protocolo para Enviar uma Mensagem com Segurança.
+
+        Restrições:
+        - Pacotes podem conter apenas 8 caracteres
+        - Pacotes podem cair com pequena probabilidade
+        - Pacotes podem não chegar em ordem
+      'Internet Simulator: Routers': Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
+      'Internet Simulator: Routers_2018': Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
+      'Internet Simulator: Routers_2019': Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
       'Internet Simulator: Sending Binary Messages 1': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages_2018': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages_2019': "Envie uma mensagem configurando o estado do\nfio como A ou B."
+      'Internet Simulator: Sending Numbers': Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Numbers_2018': Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Numbers_2019': Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Text': Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Text_2018': Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Text_2019': Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
       Just for Testing: Testar instruções
       K-1 Artist 1 Assessment 1: "Desenhe uma pequena reta para cima e uma\ngrande para a direita!"
       K-1 Artist Loops 1: Desenhe esta reta usando o movimento para o leste 4 vezes.
@@ -1975,6 +2022,7 @@ pt-BR:
       K2.0 sequence 8: Analise este nível adicionando blocos para me levar até o porco!
       K2.0 sequence 9: 'Desvie do TNT para me levar até o porco! '
       K2.0 sequence FP: Agora descubra como pegar o porco da maneira que puder!
+      K2.0 sequence pre: Brinque com esses blocos para ver se você pode me levar ao porco!
       KIKI GLJ Test Response: 'Olhe cuidadosamente para o código abaixo. O que você acha que acontecerá com o avião quando você clicar "Executar"?  '
       KTest1: Você pode me mover para o Sul mais uma vez para chegar até o porco?
       KTest2: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!
@@ -2003,7 +2051,11 @@ pt-BR:
       MC HOC 2016 New Walk: "Vamos explorar nosso mundo! Mova-se com as\nsetas, e pressione a barra de espaço ou toque no painel do jogo para usar os itens. Use a\nporta para entrar na casa."
       MC HOC 2016 SCORE LEVEL: "Alguns jogos têm placar. Brinque de pega-pega\ncom esses Golems de Ferro e use o bloco \"adicionar 1 ao placar\" para receber um ponto\nao tocá-los. Faça 5 pontos para vencer!"
       MC HOC 2016 Village Test: "Ah não! Os zumbis trancaram você do lado de dentro!\nPrograme o Golem de Ferro para acabar com eles!"
+      MC_2017_Ryan_02: Ajude o jogador a sair usando laços para colocar o Agente na placa de pressão.
+      MC_HOC_2017 Agent Test: Clique em "Executar" para mover o jogador para o quadrado laranja dentro da casa.
+      MC_HOC_2017_01: Clique em "Executar" para mover o jogador para o quadrado laranja dentro da casa.
       MC_HOC_2017_01_Cole: Você precisa coletar todas as ferramentas nesta jornada. Movimente-se usando as **teclas de seta** e chegue até o baú no caminho para vencer
+      MC_HOC_2017_01_Kiki: Clique em "Executar" para mover o jogador para o quadrado laranja dentro da casa.
       MC_HOC_2017_01_RETRY: 'Leve o Agent para a placa de pressão, em seguida pressione "Executar" e use as teclas de seta para mover o jogador para fora da casa para coletar o baú. '
       MC_HOC_2017_01_RETRY_2019: 'Leve o Agent para a placa de pressão, em seguida pressione "Executar" e use as teclas de seta para mover o jogador para fora da casa para coletar o baú. '
       MC_HOC_2017_02: Leve o Agent para a placa de pressão.
@@ -2077,6 +2129,7 @@ pt-BR:
       Middle School Hackathon Pt 2: "(Clique para ver todas as instruções)"
       Mike Pair Programming: Veja aqui as instruções
       Mike Test Bee Conditionals 1: "Esta nuvem está tapando minha visão! Veja\nse há uma flor atrás da nuvem, e só colete néctar se houver\numa flor. Cuidado, isso pode mudar!"
+      Mike Test Bee Conditionals 2: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
       MikeAssessment1: Agora faça isto certo!
       MikeStar: Desenhe isto.
       MikeStarHard: Desenhe isto.
@@ -2153,13 +2206,25 @@ pt-BR:
       NEW Course 4 Play Labs For Loops 7a: "Usando o que você aprendeu até\nagora, você consegue fazer o dinossauro dar um passo à frente toda vez que o pinguim contar?"
       NEW Course 4 Play Labs For Loops 8 Free Play: "É hora da atividade livre,\ndivirta-se com todos os blocos da sua caixa de ferramentas. "
       NEW Course 4 Play Labs For Loops 8a: "Desafio: como você\nusaria o \"laço para\" para fazer cada ator andar e dizer seu número de ator,\ne então sumir da tela? "
+      NetSim Standalone Broadcast: 'Nesta versão do Simulador de Internet, você pode se conectar a até cinco outras pessoas em uma sala. Quando você envia mensagens na sala, todos recebem-nas. Quais são alguns dos desafios deste sistema e como você pode resolvê-los?  '
+      NetSim Standalone Classroom Routers: Nesta versão do Simulador de Internet, todos se conectam a um roteador e possuem um endereço específico. Para enviar mensagens, você precisa endereçar sua mensagem para o endereço específico do destinatário e o roteador cuidará de entregá-la ao computador certo. Se houver outros roteadores criados na sua turma, peça o endereço de um de seus colegas e envie-lhes uma mensagem! Veja o Log de Roteador para ver o caminho que as mensagens percorreram pela rede.
+      NetSim Standalone Freeplay: Nesta configuração, a maioria das opções está ativada e você pode brincar com elas. Divirta-se!
       NetSim Standalone Manual DNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
+      NetSim Standalone Packets TCP: 'As mensagens na Internet podem levar muitos caminhos para chegar ao seu destino e, às vezes, ao longo do caminho, a mensagem é descartada. Nesta versão do Simulador de Internet, há 10% de chance de um pacote ser descartado, vários pacotes podem ter caminhos diferentes para o destino e o tamanho máximo padrão do pacote é definido para 6 caracteres adicionais. '
+      NetSim Standalone Routers Addresses: |-
+        Para esta atividade, conecte-se a um roteador com os outros membros do seu grupo. Nota importante: O roteador só roteará corretamente as mensagens onde os 4 primeiros bits forem o endereço Para: e os 4 segundos bits forem o endereço De:.
+
+        [TODO: O NetSim precisa suportar endereços hierárquicos. Por enquanto, o nível está configurado para 4 bits de endereços de e para]
+      NetSim Standalone SendAB: Você e seu parceiro compartilham um único fio que só pode estar no estado A ou B. Você pode definir o fio para qualquer estado a qualquer momento e pode ler o estado do fio a qualquer momento. Você consegue descobrir uma maneira de se comunicar efetivamente apenas com esse sistema?
+      NetSim Standalone Sending Numbers Ascii: 'Agora que você transmitiu as informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar informações com base em texto para frente e para trás. Com um protocolo baseado em texto, você pode facilmente representar e comunicar todos os tipos de informações. '
+      NetSim Standalone Sending Numbers: 'Você e seu parceiro agora podem enviar mensagens de forma confiável sem coordenação extra! Enquanto você está sempre enviando bits para frente e para trás, você também pode representar esses bits como números decimais. Que tipos de informação você pode representar com este sistema? '
       NetSim_AddressingMessages: "Nessa versão do simulador, você vai\nse conectar a um roteador ao invés de se conectar diretamente a outro aluno. Insira um\nendereço no campo \"para\" para enviar uma mensagem a outro aluno."
       NetSim_AutomaticDNS: "Nessa versão do simulador um serviço DNS\né fornecido para você. Envie uma mensagem no formulário GET [hostname] para o serviço\nDNS no endereço 15 para obter o endereço de um aluno."
       NetSim_ManualDNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
       NetSim_SendAB: "Conecte-se a outro aluno. Cada um pode definir\no valor do fio entre si mesmo e \"A\" ou \"B\".  Veja se você consegue enviar\numa mensagem completa!"
       NetSim_SendAscii: "Nessa versão do simulador, vocês podem enviar\nnúmeros ou caracteres ASCII uns para os outros, um bit por vez."
       NetSim_SendBits: "Conecte-se a outro aluno. Agora você pode definir\nseu fio como \"0\" ou \"1\".  Envie uma mensagem ao seu parceiro!"
+      NetSim_SendNumbers: Nesta versão do simulador, você pode ver as representações decimais do binário que está enviando.
       NetSim_SendingABTest: "Esse é o teste de Sarah para fazer um nível\nnetsim"
       NetSim_Superuser: Você carregou o NetSim no modo superusuário.
       NetSim_Variant1: "NetSim: Variante 1 permite que os alunos elaborem\nmanualmente o tempo de envio de bits para trás e para a frente."
@@ -2177,7 +2242,11 @@ pt-BR:
       Ninjacat Demo B (copy 1): "\\r\nVamos começar explorando um video game\nsimples e então descobrir como ele funciona. Você pode usar as setas do teclado\npara mover o ninja para a esquerda, para a direita e para pular - tente pegar o unicórnio e\ndesvie do dragão!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B: "Vamos começar explorando um jogo simples\ne então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o\nninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você\nachar que já descobriu como o jogo funciona, clique em \"Concluir\""
       Ninjacat Demo No Animate: "Vamos começar explorando um jogo simples\ne então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o\nninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você\nachar que já descobriu como o jogo funciona, clique em \"Concluir\""
+      October15 JoL 1: Programe o artista para desenhar um rosto para o sua lanterna de halloween!
+      October15 bat: 'Jogo Livre: Aqui estão algumas funções para jogar. Você consegue desenhar um morcego?  '
       October15 ghost 1: Dê olhos ao fantasma, usando a função "desenhar um círculo".
+      October15 pumpkin 1: Termine esta lanterna de halloween desenhando os olhos e nariz em qualquer estilo que você gostaria.
+      October15 stars 1: Use laços e o bloco "inteiro aleatório" para preencher o céu noturno com estrelas de diferentes formas e tamanhos.
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2018: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2019: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
@@ -2209,6 +2278,9 @@ pt-BR:
       Overworld Shear Sheep: Hora de tosquiar ovelhas! Use o comando "tosquiar" para obter lã das duas ovelhas.
       Overworld Shear Sheep_2018: Hora de tosquiar ovelhas! Use o comando "tosquiar" para obter lã das duas ovelhas.
       Overworld Shear Sheep_2019: Hora de tosquiar ovelhas! Use o comando "tosquiar" para obter lã das duas ovelhas.
+      PDAlg 13-16 Sam Extension Puzzle: Adicione um segundo parâmetro para "onscreen?" para a coordenada y de Sam e atualize a função de modo a mantê-lo seguro em todos os quatro lados.
+      PDAlg 17-20 Luigi Extension Puzzle: Sem modificar sua função "custo" existente, crie uma nova função "cupom" que leva um sabor de pizza e um código de cupom e e retorna o custo de uma pizza com esse sabor. Se o código do cupom estiver correto (você decide o que é), aplique um desconto de 30% na pizza.
+      PDAlg 8-12 Rocket Height Puzzle: Vamos escrever uma função "altura-do-foguete" com aceleração simples. Escreva uma função que garanta que o foguete esteja a 15 metros em 1 segundo, 45 metros em 2 segundos, 95 em 3 segundos e 165 em 4 segundos.
       PDK5 Conditionals 1: "As flores roxas podem ter 1 ou 0 néctar,\nmas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa\nque não tenha néctar algum. Verifique se o néctar é igual a 1 usando\no bloco se."
       PDK5 Conditionals 2: "Experimente esse desafio que usa condicionais e\nlaços em conjunto. Use o bloco \"se\" para decidir quando virar. Dica: você só\nprecisa de mais um bloco para completar este desafio. "
       PDK5 Events 1: "Até agora, todos os programas que escrevemos são executados\nem ordem, de cima para baixo. Nesse desafio, vamos usar \"Eventos\" para responder\na uma ação em demanda. Faça o polvo dizer \"Olá\" somente quando você\nclicar nele. "
@@ -2304,13 +2376,20 @@ pt-BR:
       The Vigenere Cipher Widget_2019: Instruções
       The Vigenere Cipher: Instruções
       Total Artist Clone Me: "Atividade livre: aqui estão as funções\nque você escreveu e mais algumas para você usar. Desenhe algo incrível!\nBrinque com a largura da caneta para ver como seus desenhos ficam diferentes!"
+      U1L11 NetSim numbers with Ascii: Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
       U1L4 NetSim SendAB: "Envie uma mensagem configurando o estado do\nfio como A ou B."
+      U1L8 NetSim numbers with decimal: Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
       U2 Vigenere: Teste
       U2 frequency caesar: Instruções
       U2 frequency random sub: Instruções
       U2 vigenere cipher: Instruções
+      U2L04 - NetSim Routers with Addresses: Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
       U2L10 NetSim Manual DNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
       U2L14 frequency random: Teste
+      U2L4 NetSim Routers Addresses: |-
+        Para esta atividade, conecte-se a um roteador com os outros membros do seu grupo. Nota importante: O roteador só roteará corretamente as mensagens onde os 4 primeiros bits forem o endereço Para: e os 4 segundos bits forem o endereço De:.
+
+        [TODO: O NetSim precisa suportar endereços hierárquicos. Por enquanto, o nível está configurado para 4 bits de endereços de e para]
       U3 - Arrays - Demo App: Uso o app "Minhas coisas favoritas". Como pode este app estar fazendo uso de um vetor? (Clique para ver as instruções completas)
       U3 - Arrays - appendItem: Crie um vetor de números ímpares 1-11 usando appendItem. (Clique para ver as instruções completas)
       U3 - Arrays - assignment: Use índices para alterar os valores nesse vetor de 1 para 0. (Clique para ver as instruções completas)
@@ -2738,6 +2817,7 @@ pt-BR:
       course3_farmer_condLoops_challenge2: Colete tudo para completar o nível.
       course3_maze_debugging_challenge2: '* "Se eu virar muitas vezes, fico tonto! Me ajude a alcançar a noz com apenas quatro comandos ''virar''." *'
       course3_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes, ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo' e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria. \nClique as dicas para ideias!"
+      course3_playlab_challenge2: Você pode descobrir como este aplicativo "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       course3_playlab_stage16_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
       course3_playlab_stage16_2: "Você pode fazer o cachorro dizer alguma coisa e,\ndepois, fazer a gata dizer alguma coisa?"
       course3_playlab_stage16_3: "Você consegue escrever um programa para fazer este\ncachorro se mover até o gato?"
@@ -2751,12 +2831,27 @@ pt-BR:
       course3_playlab_stage17_5: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com o polvo, e então movê-lo com as setas do teclado até\nmarcar pontos?"
       course3_playlab_stage17_6: "Você pode adicionar blocos para mudar o plano de fundo\ne a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?"
       course3_playlab_stage17_7: "Crie sua própria história. Quando terminar,\nclique em \"Concluir\" para que seus amigos testem sua história em seus celulares."
+      course4_artist_binary_challenge2: Você é persistente o suficiente para restaurar este logotipo de volta ao normal?
       course4_artist_functions_challenge2: Tente esse código para ver como funciona, então faça um programa do seu jeito!
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo totalmente diferente)
+      course4_artist_variables_challenge1: Você agora aprendeu tudo o que você precisa saber para fazer um padrão assim! Este desafio foi feito para ser difícil. Você pode pensar sobre ele até descobrir a solução?
+      course4_artist_variables_challenge2: Você agora aprendeu tudo o que você precisa saber para fazer um padrão assim! Este desafio foi feito para ser difícil. Você pode pensar sobre ele até descobrir a solução?
+      course4_bee_for_challenge1: Use essa repetição para coletar todo o néctar. Há algumas ações que você vai querer repetir 'contáveis' de vezes.
+      course4_bee_fwp_challenge2: Use uma `repetição para` em uma função para coletar todos os legumes na linha. Faça a `repetição para` poder contar com valores máximos diferentes usando o parâmetro `comprimento`. Faça seu programa o mais curto possível usando um segundo `repetição para` do lado de fora da função.
+      course4_collector_nested_loops_challenge2: Ajude o coletor a alcançar pelo menos dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas. É possível coletar todos os 4.
+      course4_harvester_nested_loops_challenge1: '"Preciso de ajuda na fazenda! Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      course4_playlab_variables_challenge1: Use estes blocos para fazer com que os atores compartilhem uma piada de toc toc. Altere a configuração e a última frase de impacto para contar sua própria piada!
+      course4_playlab_variables_challenge3: Você pode descobrir como este aplicativo "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       courseA_artist_loops1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops10: Me ajude a colocar pedras para que eu não caia!
       courseA_artist_loops10_2018: Me ajude a colocar pedras para que eu não caia!
       courseA_artist_loops10_2019: Me ajude a colocar pedras para que eu não caia!
+      courseA_artist_loops11: Ajude-me a construir passos para ver o navio navegar por ai.
+      courseA_artist_loops11_2018: Ajude-me a construir passos para ver o navio navegar por ai.
+      courseA_artist_loops11_2019: Ajude-me a construir passos para ver o navio navegar por ai.
+      courseA_artist_loops12: O artista viu algo engraçado a distância. Desenhe o que você acha que ele viu.
+      courseA_artist_loops12_2018: O artista viu algo engraçado a distância. Desenhe o que você acha que ele viu.
+      courseA_artist_loops12_2019: O artista viu algo engraçado a distância. Desenhe o que você acha que ele viu.
       courseA_artist_loops1_2018: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops1_2019: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops2: Ajude o artista a desenhar esta linha duas vezes mais rápido.
@@ -2768,6 +2863,15 @@ pt-BR:
       courseA_artist_loops4: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
       courseA_artist_loops4_2018: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
       courseA_artist_loops4_2019: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
+      courseA_artist_loops5: Desenhe uma linha com sete passos de comprimento. Isso se tornará nosso horizonte.
+      courseA_artist_loops5_2018: Desenhe uma linha com sete passos de comprimento. Isso se tornará nosso horizonte.
+      courseA_artist_loops5_2019: Desenhe uma linha com sete passos de comprimento. Isso se tornará nosso horizonte.
+      courseA_artist_loops6: Vamos colocar uma boa colina atrás.
+      courseA_artist_loops6_2018: Vamos colocar uma boa colina atrás.
+      courseA_artist_loops6_2019: Vamos colocar uma boa colina atrás.
+      courseA_artist_loops8: Precisamos de uma escada até o barco.
+      courseA_artist_loops8_2018: Precisamos de uma escada até o barco.
+      courseA_artist_loops8_2019: Precisamos de uma escada até o barco.
       courseA_artist_loops9: 'Desafio: Conserte as escadas.'
       courseA_artist_loops9_2018: 'Desafio: Conserte as escadas.'
       courseA_artist_loops9_2019: 'Desafio: Conserte as escadas.'
@@ -2839,6 +2943,7 @@ pt-BR:
       courseA_collector_preLoops5: Pegar 1 desses 2 gemas para resolver este enigma.
       courseA_collector_preLoops6: Pegue ambas as peças do tesouro para resolver este enigma.
       courseA_collector_preLoops7: Pegue todas as três pilhas para passar esse nível.
+      courseA_data widget: "Pressione Executar. \nO feiticeiro fará os animais aparecerem. \n\nConte-os. \nO que você notou?"
       courseA_harvester_forVideo: Você consegue pegar todo o milho usando apenas ** um ** bloco de movimento?
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!
       courseA_harvester_loops10: Ajude a colheitadeira a pegar todas as cinco espigas de milho!
@@ -2894,6 +2999,7 @@ pt-BR:
       courseA_maze_ramp2_2018: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
       courseA_maze_ramp2_2019: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
       courseA_maze_ramp2a_2018: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
+      courseA_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseA_maze_ramp3a_2018: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
       courseA_maze_ramp3a_2019: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
       courseA_maze_ramp3b_2018: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "Executar".
@@ -2926,6 +3032,7 @@ pt-BR:
       courseA_maze_seq4: REMOVA um bloco para levar o pássaro até o porco!
       courseA_maze_seq4_2018: REMOVA um bloco para levar o pássaro até o porco!
       courseA_maze_seq4a: Leve o pássaro até o porco usando o menor número de blocos possíveis.
+      courseA_maze_seq5: Experimente este você mesmo desde o início.
       courseA_maze_seq5_2018: Dê uma chance a este.
       courseA_maze_seq5_2019: Dê uma chance a este.
       courseA_maze_seq5a_2018: O que você pode adicionar ao final deste código para levar o pássaro até o porco?
@@ -2946,6 +3053,9 @@ pt-BR:
       courseA_maze_seq_challenge2: Trace o caminho para levar o pássaro até o porco. Evite a TNT, ou penas vão voar!
       courseA_maze_seq_challenge2_2018: Trace o caminho para levar o pássaro até o porco. Evite a TNT, ou penas vão voar!
       courseA_maze_seq_challenge2_2019: Trace o caminho para levar o pássaro até o porco. Evite a TNT, ou penas vão voar!
+      courseA_playLab_events1: Este é um nível de Laboratório. Mova os blocos para o área de trabalho e veja o que acontece!
+      courseA_playLab_events1_2018: Este é um nível de Laboratório. Mova os blocos para o área de trabalho e veja o que acontece!
+      courseA_playLab_events1_2019: Este é um nível de Laboratório. Mova os blocos para o área de trabalho e veja o que acontece!
       courseA_playLab_events3: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events3_2018: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events3_2019: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
@@ -3265,6 +3375,8 @@ pt-BR:
       courseC_collector_prog_challenge2: Colete pelo menos **10** peças do tesouro para finalizar este desafio!
       courseC_collector_prog_challenge2_2018: Colete pelo menos **10** peças do tesouro para finalizar este desafio!
       courseC_collector_prog_challenge2_2019: Colete pelo menos **10** peças do tesouro para finalizar este desafio!
+      courseC_data widget: "Pressione Executar. \nO feiticeiro fará os animais aparecerem. \n\nConte-os. \nO que você notou?"
+      courseC_data wizard: "Pressione Executar. \nO feiticeiro fará os animais aparecerem. \n\nConte-os. \nO que você notou?"
       courseC_flappy_embed_events: Aquie está um exemplo de um jogo que você está prestes a criar! Jogue-o uma ou duas vezes para ter uma ideia do que você está prestes a fazer.
       courseC_flappy_events1: Anexe o bloco `quantidade normal de bater de asas` ao evento `quando clicar`, depois pressione "Executar".    Clique ou toque no espaço de jogo para mover o Flappy para o alvo.
       courseC_flappy_events10: 'Crie seu próprio jogo Flappy Bird! '
@@ -3357,6 +3469,9 @@ pt-BR:
       courseC_maze_loops_challenge1a: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
       courseC_maze_loops_challenge1a_2018: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
       courseC_maze_loops_challenge1a_2019: 'Agora Scrat quer tentar usar as repetições para achar sua noz! '
+      courseC_maze_programming3: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming3_2018: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming3_2019: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseC_maze_programming4: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2019: Evite a(s) TNT(s) ou penas irão voar!
@@ -3464,10 +3579,53 @@ pt-BR:
 
         Veja o que acontece quando começamos ser criativos com os bits!
       courseD_artist_binary_challenge0: Tente usar laços aninhados para completar este desenho.
+      courseD_artist_binary_challenge2: Você é persistente o suficiente para restaurar este logotipo de volta ao normal?
+      courseD_artist_binary_challenge2_2018: Você é persistente o suficiente para restaurar este logotipo de volta ao normal?
+      courseD_artist_binary_challenge2_2019: Você é persistente o suficiente para restaurar este logotipo de volta ao normal?
+      courseD_artist_binary_challenge3: Você é persistente o suficiente para restaurar este logotipo de volta ao normal?
       courseD_artist_embed_frozen: Pressione Executar para ver o desenho de um floco de neve!
       courseD_artist_embed_frozen2: Pressione Executar para ver o desenho de um floco de neve.
       courseD_artist_functions4: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
       courseD_artist_functions5: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
+      courseD_artist_functions8: 'Desafio: Crie quantas funções você achar necessárias para fazer este desenho de 50 quadrados de pixels.'
+      courseD_artist_functions9: Crie esta imagem usando apenas os blocos fornecidos.
+      courseD_artist_nestedLoops1: "Desenhe um triângulo para iniciar este estágio. \n(Cada lado tem 100 pixels de comprimento e você precisa girar 120 graus para cada ângulo externo.)"
+      courseD_artist_nestedLoops10: Pegue os quadrados de antes, mas desta vez faça apenas 7 deles e coloque-os em uma linha.
+      courseD_artist_nestedLoops10_2018: Pegue os quadrados de antes, mas desta vez faça apenas 7 deles e coloque-os em uma linha.
+      courseD_artist_nestedLoops10_2019: Pegue os quadrados de antes, mas desta vez faça apenas 7 deles e coloque-os em uma linha.
+      courseD_artist_nestedLoops1_2018: "Desenhe um triângulo para iniciar este estágio. \n(Cada lado tem 100 pixels de comprimento e você precisa girar 120 graus para cada ângulo externo.)"
+      courseD_artist_nestedLoops1_2019: "Desenhe um triângulo para iniciar este estágio. \n(Cada lado tem 100 pixels de comprimento e você precisa girar 120 graus para cada ângulo externo.)"
+      courseD_artist_nestedLoops1a: 'Agora execute um laço do triângulo 6 vezes. '
+      courseD_artist_nestedLoops1a_2018: 'Agora execute um laço do triângulo 6 vezes. '
+      courseD_artist_nestedLoops1a_2019: 'Agora execute um laço do triângulo 6 vezes. '
+      courseD_artist_nestedLoops2: Desta vez, complete o quebra-cabeças com o menor número possível de blocos.
+      courseD_artist_nestedLoops2_2018: Desta vez, complete o quebra-cabeças com o menor número possível de blocos.
+      courseD_artist_nestedLoops2_2019: Desta vez, complete o quebra-cabeças com o menor número possível de blocos.
+      courseD_artist_nestedLoops3: |-
+        Use suas novas habilidades para desenhar rapidamente a última linha de janelas para este edifício.
+
+        As janelas são 20 quadrados de pixels, cada um com 20 pixels de intervalo.
+      courseD_artist_nestedLoops3_2018: |-
+        Use suas novas habilidades para desenhar rapidamente a última linha de janelas para este edifício.
+
+        As janelas são 20 quadrados de pixels, cada um com 20 pixels de intervalo.
+      courseD_artist_nestedLoops3_2019: |-
+        Use suas novas habilidades para desenhar rapidamente a última linha de janelas para este edifício.
+
+        As janelas são 20 quadrados de pixels, cada um com 20 pixels de intervalo.
+      courseD_artist_nestedLoops4: Ótimo! Faça o mesmo com esses círculos.
+      courseD_artist_nestedLoops4_2018: Ótimo! Faça o mesmo com esses círculos.
+      courseD_artist_nestedLoops4_2019: Ótimo! Faça o mesmo com esses círculos.
+      courseD_artist_nestedLoops5: O que acontece se você também girar 90 graus entre os círculos?
+      courseD_artist_nestedLoops5_2018: O que acontece se você também girar 90 graus entre os círculos?
+      courseD_artist_nestedLoops5_2019: O que acontece se você também girar 90 graus entre os círculos?
+      courseD_artist_nestedLoops6: Edite blocos dentro do seu código existente para criar essa imagem.
+      courseD_artist_nestedLoops7: Use o que você aprendeu para fazer este desenho.
+      courseD_artist_nestedLoops7_2018: Use o que você aprendeu para fazer este desenho.
+      courseD_artist_nestedLoops7_2019: Use o que você aprendeu para fazer este desenho.
+      courseD_artist_nestedLoops8: Usando o que você aprendeu no último par de quebra-cabeças, construa essa imagem desde o começo.
+      courseD_artist_nestedLoops8_2018: Usando o que você aprendeu no último par de quebra-cabeças, construa essa imagem desde o começo.
+      courseD_artist_nestedLoops8_2019: Usando o que você aprendeu no último par de quebra-cabeças, construa essa imagem desde o começo.
       courseD_artist_nestedLoopsPre1: Crie um triângulo para começar esta etapa.
       courseD_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma imagem como esta?
       courseD_artist_nestedLoops_challenge1_2018: Você consegue descobrir como fazer uma imagem como esta?
@@ -3638,6 +3796,9 @@ pt-BR:
       courseD_collector_debugging7: 'Desafio: Todos os comandos que você precisa já estão aqui...agora use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.'
       courseD_collector_debugging_challenge2: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_collector_debugging_challenge2_2018: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
+      courseD_collector_nested_loops_challenge2: Ajude o coletor a alcançar pelo menos dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas. É possível coletar todos os 4.
+      courseD_collector_nested_loops_challenge2_2018: Ajude o coletor a alcançar pelo menos dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas. É possível coletar todos os 4.
+      courseD_collector_nested_loops_challenge2_2019: Ajude o coletor a alcançar pelo menos dois montes de tesouros usando apenas os blocos em sua caixa de ferramentas. É possível coletar todos os 4.
       courseD_collector_nested_loops_challenge2a: Ajude Laurel a coletar pelo menos duas pilhas de tesouro.
       courseD_collector_ramp10: Ajude Laurel a coletar todo o tesouro.
       courseD_collector_ramp8: Ajude Laurel a coletar todo o tesouro.
@@ -3724,6 +3885,10 @@ pt-BR:
       courseD_farmer_while9: 'Achate todas essas pilhas usando o menor número de blocos possível. '
       courseD_farmer_while9_2018: 'Achate todas essas pilhas usando o menor número de blocos possível. '
       courseD_farmer_while9_2019: 'Achate todas essas pilhas usando o menor número de blocos possível. '
+      courseD_harvester_nested_loops_challenge1-broken: '"Preciso de ajuda na fazenda! Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      courseD_harvester_nested_loops_challenge1: '"Preciso de ajuda na fazenda! Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      courseD_harvester_nested_loops_challenge1_2018: '"Preciso de ajuda na fazenda! Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
+      courseD_harvester_nested_loops_challenge1_2019: '"Preciso de ajuda na fazenda! Ajude-me a colher este milho usando apenas os blocos em sua caixa de ferramentas."'
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
@@ -3759,6 +3924,8 @@ pt-BR:
       courseD_maze_nestedLoops6: "Vamos subir o nível! \\r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
       courseD_maze_nestedLoops6_2018: "Vamos subir o nível! \\r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
       courseD_maze_nestedLoops6_2019: "Vamos subir o nível! \\r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
+      courseD_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseD_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseD_maze_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp4_2019: Evite a(s) TNT(s) ou penas irão voar!
@@ -3811,8 +3978,10 @@ pt-BR:
       courseE_artist_functions5: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       courseE_artist_functions5_2018: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       courseE_artist_functions5_2019: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
+      courseE_artist_functions8: 'Desafio: Crie quantas funções você achar necessárias para fazer este desenho de 50 quadrados de pixels.'
       courseE_artist_functions8a_2018: Crie uma função para um único quadrado.
       courseE_artist_functions8a_2019: Crie uma função para um único quadrado.
+      courseE_artist_functions9: Crie esta imagem usando apenas os blocos fornecidos.
       courseE_artist_functions_challenge2: Tente esse código para ver como funciona, então faça um programa do seu jeito!
       courseE_artist_functions_challenge2_2018: Tente esse código para ver como funciona, então faça um programa do seu jeito!
       courseE_artist_functions_challenge2_2019: Tente esse código para ver como funciona, então faça um programa do seu jeito!
@@ -3862,6 +4031,8 @@ pt-BR:
       courseE_farmer_ramp11b: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2018: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2019: Enquanto houver uma pilha, remova a areia.
+      courseE_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseE_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseE_maze_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp5: Desvie da TNT.
@@ -3871,6 +4042,8 @@ pt-BR:
       courseE_multi_maze_ramp5: Desvie da TNT.
       courseE_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes, ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo' e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria. \nClique as dicas para ideias!"
       courseE_playLab_challenge1_2018: "Algo deve acontecer quando tiver pontos suficientes, ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo' e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria. \nClique as dicas para ideias!"
+      courseE_playlab_challenge2: Você pode descobrir como este aplicativo "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
+      courseE_playlab_variables_challenge2: Você pode descobrir como este aplicativo "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       courseF_artist_for7: "Faça três pequenas alterações no\ncódigo do último nível para conseguir isso!"
       courseF_artist_for7_2018: "Faça três pequenas alterações no\ncódigo do último nível para conseguir isso!"
       courseF_artist_for7_2019: "Faça três pequenas alterações no\ncódigo do último nível para conseguir isso!"
@@ -3888,6 +4061,7 @@ pt-BR:
       courseF_artist_variables7: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2018: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2019: 'Desenhar um triângulo com lados de 150 pixels. '
+      courseF_artist_variables_challenge1a: Você agora aprendeu tudo o que você precisa saber para fazer um padrão assim! Este desafio foi feito para ser difícil. Você pode pensar sobre ele até descobrir a solução?
       courseF_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals1_predict1: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
@@ -3949,11 +4123,14 @@ pt-BR:
       courseF_playlab_variables2a: "Agora, decodifique a fala da Perna de Pirata mudando o valor das variáveis em apenas dois lugares! \\r\n"
       courseF_playlab_variables8c: Use as variáveis para tornar o jogo mais pessoal.
       courseF_playlab_variables8c_2018: Use as variáveis para tornar o jogo mais pessoal.
+      courseF_playlab_variables_challenge3: Você pode descobrir como este aplicativo "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       course_playlab_variables1: Esta é uma Perna de Pirata. Ele é muito difícil de entender nos dias de hoje!
       course_playlab_variables2: "Agora, decodifique a fala da Perna de Pirata mudando o valor das variáveis em apenas dois lugares! \\r\n"
       course_playlab_variables3: "Agora, decodifique a fala da Perna de Pirata mudando o valor das variáveis em apenas dois lugares! \\r\n"
       coursea_maze_ramp1_2018: Para este enigma, junte os blocos e clique em "▶ Executar"!
       coursea_maze_ramp1_2019: Para este enigma, junte os blocos e clique em "▶ Executar"!
+      coursef_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      coursef_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       flappy_1: Conecte um bloco no bloco "quando clicar" e, em seguida, clique em "Executar". Clique ou toque na tela para mover o passarinho em direção ao alvo.
       flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para que seus amigos joguem seu jogo em seus celulares.
       flappy_11_2018: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para que seus amigos joguem seu jogo em seus celulares.
@@ -4042,6 +4219,7 @@ pt-BR:
         "Aquele porco está bagunçando minhas penas."
 
         Há um bloco extra que fará o pássaro cair. Jogue-o fora arrastando o de volta para a caixa de ferramentas.
+      grade2_CaringForNewPet_2courseC_maze_programming3: Há um bloco extra que vai fazer com que o pássaro caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       grade2_CaringForNewPet_4: '"Mantenha a calma e me ajude a encontrar o porco malvado. Senão eu posso ficar zangado!"'
       grade2_CaringForNewPet_5: Leve-me até o porco!
       grade2_MakeDogTag_10: Agora desenhe o que você quiser!
@@ -4192,6 +4370,7 @@ pt-BR:
       grade3_bee_conditionals_new1a: "Ajude a abelha a recolher todo o néctar. \n\nVocê só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor."
       grade3_bee_conditionals_new2: Colete todo o néctar usando o menor número de blocos possível
       grade3_bee_conditionals_new2a: Pegue todo o néctar usando o menor número de blocos possível.
+      grade3_bee_conditionals_new2b: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
       grade3_bee_conditionals_new3b: Colete todo o néctar e faça todo o mel.
       grade3_bee_conditionals_quantum1: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
@@ -4234,6 +4413,8 @@ pt-BR:
       grade4_arist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_functions1: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"  \\r\n\\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100 pixels de comprimento.  \\r\n\\r\nA\nhaste entre as lentes tem 75 pixels de comprimento."
       grade4_artist_functions2: "As funções permitem que você defina novos blocos! \\r\n\\r\nMovemos\nos blocos necessários para desenhar um quadrado para dentro de uma função chamada \"desenhe\num quadrado\". Desta vez, use a função \"desenhe um quadrado\" para criar os óculos.\n\\r\n\\r\nOs quadrados estão separados por uma distância de 75 pixels."
+      grade4_artist_functions2a: Crie esta imagem usando apenas os blocos fornecidos.
+      grade4_artist_functions3a: Crie esta imagem usando apenas os blocos fornecidos.
       grade4_artist_functions_challenge: "Use as funções sugeridas para desenhar quatro\nlinhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?"
       grade4_artist_functions_challenge2: "Use as funções sugeridas para desenhar quatro\nlinhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?"
       grade4_artist_functions_stars1: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
@@ -4266,6 +4447,8 @@ pt-BR:
       grade4_artist_parameters_triangles3: "Você consegue completar este desenho? Os\nlados de cada triângulo têm 25 pixels a mais que o anterior. O primeiro triângulo\ntem lados de 25 pixels de comprimento."
       grade4_artist_parameters_triangles4: "O código da função deste triângulo\nestá corrompido. Você consegue editar a função para corrigi-lo e criar triângulos\nde 25, 50 e 75 pixels de comprimento?"
       grade4_artist_parameters_trianglesx: "Você consegue completar este desenho? Os\nlados de cada triângulo têm 25 pixels a mais que o anterior. O primeiro triângulo\ntem lados de 25 pixels de comprimento."
+      grade4_bee_conditionals_nested_loops: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
+      grade4_bee_conditionals_new1: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
       grade4_bee_conditionals_quantum1: "Esta nuvem está tapando minha visão! Veja\nse há uma flor atrás da nuvem, e só colete néctar se houver\numa flor. Cuidado, isso pode mudar!"
       grade4_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade4_bee_conditionals_quantum4: "Às vezes esta nuvem esconde uma flor\ne outras vezes uma colmeia! Use o bloco \"se/senão\" para coletar néctar\nse for uma flor, senão para produzir mel (porque é uma colmeia)."
@@ -4443,8 +4626,14 @@ pt-BR:
       grade5_playlab_variables81: "Adicionamos uma última função para\nvocê.\\r\n\\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número.\\r\n\\r\nPor\nexemplo: \"pontos_jogador\" > 6\\r\n\\r\nJogue e chegue até o nível 3\npara ir para o próximo desafio. "
       grade5_playlab_variables9: "Aqui temos uma função chamada \"patrulhe\".\n\\r\n\\r\nEdite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
       grade5_playlab_variables_freeplay: "Hora da atividade livre! Temos aqui todas as\nvariáveis que usamos até agora essa etapa, bem como algumas a mais caso\nvocê queira usá-las. \\r\n\\r\nObserve que agora há muitos blocos em nossa\ncaixa de ferramentas e eles precisam ser organizados! Aqui, colocamos cada peça em\numa categoria apropriada. Reserve um tempo para explorar tudo o que está disponível.\nQuando terminar de explorar, crie um jogo ou uma história usando repetições, variáveis\ne eventos.  \\r\n\\r\nDica: deslize a tela para baixo para ver todos os comandos na área de trabalho."
+      gradeK_sequence_4: Experimente este você mesmo desde o início.
       gradek_artist_loops1: Ajude o artista a desenhar esta linha duas vezes mais rápido.
       gradek_artist_loops3: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
+      gradek_artist_loops4: Desenhe uma linha com sete passos de comprimento. Isso se tornará nosso horizonte.
+      gradek_artist_loops5: Vamos colocar uma boa colina atrás.
+      gradek_artist_loops7: Precisamos de uma escada até o barco.
+      gradek_artist_loopsA: Ajude-me a construir passos para ver o navio navegar por ai.
+      gradek_artist_loopsFP: O artista viu algo engraçado a distância. Desenhe o que você acha que ele viu.
       gradek_artist_loopsPre: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       gradek_playlab_events1: Faça seu robô dizer "Olá!" quando o botão é clicado.
       gradek_playlab_events2: Edite o código para que quando o segundo pássaro é clicado, seu programa toque um som!
@@ -4453,9 +4642,11 @@ pt-BR:
       gradek_playlab_events4: Adicione código para fazer alguma coisa acontecer quando o quarto pássaro é clicado. Seja criativo!
       gradek_playlab_events5: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
       gradek_playlab_events5a: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
+      gradek_playlab_eventsPre: Este é um nível de Laboratório. Mova os blocos para o área de trabalho e veja o que acontece!
       group test: Faça um jogo
       iceAgeLoopsforVideo: Você consegue chegar à bolota com apenas um bloco `avançar`?
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
+      k1stickerfreeplay: O artista viu algo engraçado a distância. Desenhe o que você acha que ele viu.
       level 'grade3_Loops_10: |-
         Que abelha trabalhadora!\r
         \r

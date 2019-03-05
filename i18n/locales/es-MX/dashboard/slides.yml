@@ -1509,7 +1509,7 @@ es-MX:
         text: "Luego, busque un bloque con ese nombre en la caja de herramientas y arrástrelo desde la caja de herramientas hasta cuando se ejecuta el bloque."
       6:
         image: 'notes/mc_2017_functions_6.png'
-        text: "Recuerde, usted puede usar la misma función cada vez que usted necesite ejecutar la misma configuración de instrucciones para hacer algo, como construir un puente. Buena suerte, ¡Yo se que usted puede hacerlo!"
+        text: "Recuerda, puedes usar la misma función cada vez que necesites ejecutar el mismo set de instrucciones para hacer algo, como construir un puente. ¡Buena suerte, se que puedes hacerlo!"
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'

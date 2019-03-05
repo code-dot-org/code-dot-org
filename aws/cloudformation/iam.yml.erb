@@ -97,7 +97,9 @@ Resources:
         PolicyDocument:
           Statement:
           - Effect: Allow
-            Action: ['s3:GetObject']
+            Action:
+            - 's3:GetObject'
+            - 's3:ListBucket'
             Resource: 'arn:aws:s3:::*'
           - Effect: Allow
             Action:
@@ -255,6 +257,57 @@ Resources:
             - !Sub 'arn:aws:s3:::cdo-logs/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/*'
       ManagedPolicyArns:
       - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+  # Percona Monitoring and Management RDS access role.
+  # See: https://www.percona.com/doc/percona-monitoring-and-management/amazon-rds.html#creating-a-policy
+  PMMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: [ec2.amazonaws.com]
+            Action: ['sts:AssumeRole']
+      Policies:
+        - PolicyName: PMMRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: Stmt1508404837000
+                Effect: Allow
+                Action:
+                  - 'rds:DescribeDBInstances'
+                  - 'cloudwatch:GetMetricStatistics'
+                  - 'cloudwatch:ListMetrics'
+                Resource: '*'
+              - Sid: Stmt1508410723001
+                Effect: Allow
+                Action:
+                  - 'logs:DescribeLogStreams'
+                  - 'logs:GetLogEvents'
+                  - 'logs:FilterLogEvents'
+                Resource:
+                  - "arn:aws:logs:*:*:log-group:RDSOSMetrics:*"
+  PMMInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: Percona-Monitoring-Management
+      Path: '/'
+      Roles: [!Ref PMMRole]
+  # Global managed-policy named role used by ECS.
+  # Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
+  EcsTaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ecsTaskExecutionRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: 'sts:AssumeRole'
+            Effect: Allow
+            Principal: {Service: ecs-tasks.amazonaws.com}
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
 Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile

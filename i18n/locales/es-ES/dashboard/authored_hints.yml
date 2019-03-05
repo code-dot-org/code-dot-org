@@ -120,7 +120,20 @@ es:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: '¿Teniendo un tiempo difícil averiguar cómo bajar los bloques?  ¡Intentar tratar la flor roja exactamente igual que una flor morada!'
         2-3_Bee_Conditionals_14_b: '¿Si la flor roja fuera púrpura, podría usted averiguar cómo utilizar un bucle extra ''repetición'' para reducir el código?'
-        2-3_Bee_Conditionals_14_c: "Intenta separar esto en dos partes :  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Tomar néctar 3 veces\n  - Mueve adelante 5 veces\n  - Verifica si hay néctar, si hay: cógelo\n  - Gira a la izquierda\n  \n2) Fabricar miel \n  - Mueve adelante una vez\n  - Fabrica dos de miel"
+        2-3_Bee_Conditionals_14_c: |-
+          Intenta separar esto en dos partes :  
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Tomar néctar 3 veces
+            - Mueve adelante 5 veces
+            - Verifica si hay néctar, si hay: cógelo
+            - Gira a la izquierda
+            
+          2) Fabricar miel 
+            - Mueve adelante una vez
+            - Fabrica dos de miel
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Recuerde: Flores de color púrpura sólo néctar ya sea 0 o 1 y puede cambiar cada vez que se ejecuta el programa.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -286,7 +299,9 @@ es:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Cada forma repetida es la combinación de ** la mitad de un hexágono **, seguida de ** 2/3 de un triángulo **. '
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último puzzle, excepto que el medio hexágono es un poco más grande. '
-        Course_4_Artist_12_c: "1) Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n 2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados "
+        Course_4_Artist_12_c: |-
+          1) Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.
+           2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados 
         Course_4_Artist_12_d: |-
           **Solución:**
 
@@ -3263,6 +3278,105 @@ es:
         mc_9_a: '¿Está frente al camino correcto? El ''bloque destruir'' explota el bloque en frente de usted.'
         mc_9_b: '¡Las machas negras en el muro son carbón! Utilice ''destruir bloque'' en estas para minar el carbón.'
         mc_9_c: Utilice 'poner antorcha' para poner una antorcha en el espacio donde está parado.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * Asegúrate de que el bailarín aparezca en la pantalla.
+
+          *Este nivel termina después de 4 compases.*
+        challenges: |-
+          **Desafíos opcionales**
+          * Elige una canción diferente para reproducir.
+          * ¡Elige uno diferente que se parezca a un alce!
+          * Renombra a tu bailarín.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * El bailarín tiene que cambiar a un movimiento nuevo después de 4 compases.
+
+          *El nivel termina después de 8 compases.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Después de 6 compases, tu bailarín tiene que hacer un baile diferente del que hacía después de 4 compases.
+
+          *El nivel termina después de 12 compases.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Tienes que hacer que el efecto de fondo cambie en algún momento del séptimo compás de la canción.
+
+          *Este nivel termina después de 10 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          Cambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Necesitarás tener al menos dos bailarines.
+
+          *Este nivel termina después de 6 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          * Añade un tercer bailarín (¡o tantos como quieras!)
+          * Haz que todos tus bailarines realicen diferentes movimientos en diferentes momentos de la canción.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Dos bailarines deben tener un tamaño diferente de 100.
+
+          *Este nivel termina después de 6 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          * Experimenta cambiando otras propiedades (anchura, altura, rotación, etc.).
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Cambia la tonalidad de por lo menos un bailarín.
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Se deben cambiar las propiedades de dos o más bailarines.
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Usa tu creatividad!
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Usa tu creatividad!
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Utiliza el bloque «cuando flecha izquierda pulsada» para indicar al Robot que haga un movimiento de baile cuando la pulses.
+
+          *Este nivel termina después de 8 compases.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Mira las **linternas del mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías usar un condicional con ellas para atravesar el monumento oceánico?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los giros de forma correcta.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: '¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho** de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!'
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a algo más grande que` velocidad_gato`.
       Dance short test 2_authored_hint:
@@ -3489,6 +3603,8 @@ es:
         Function_intro_Ryan_a: '¡Puedes invocar una función muchas veces dentro de tu programa! Intenta invocarla dos veces para resolver este rompecabezas.'
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Mira las **linternas del mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías usar un condicional con ellas para atravesar el monumento oceánico?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los giros de forma correcta.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: '¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho** de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!'
       HOC Dance 0_draft_authored_hint:
@@ -4104,10 +4220,17 @@ es:
         artistLoopsKA_a: Usa el bloque de salto para avanzar sin dibujar una línea.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este rompecabezas.
+      behaviors 1_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion necesita el pjaro moverse?"
+      behaviors 2_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion necesita el pjaro moverse?"
       behaviors 3_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando la velocidad de cada sprite?"
+      behaviors 4_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion necesita el pjaro moverse?"
       behaviors 5_authored_hint:
         target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere la mascota?
+        behavior hint: Edita el comportamiento para resolver el puzzle. El personaje debe moverse en dos direcciones diferentes para moverse en diagonal.
       behaviors 5a_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando la velocidad de cada sprite?"
       behaviors 6_authored_hint:
@@ -4214,6 +4337,8 @@ es:
           Si repites las acciones anteriores dos veces, estarás listo para retroceder por la ruta principal.
 
           ** ¡Solo haz clic para obtener otra sugerencia si deseas ver la solución completa! **
+      course3_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Comienza enfocándote en recolectar DOS gemas de cada una de las primeras dos pilas.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUsa estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">avanzar</title>\n</block>\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
       course3_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: El botón de `PASO` puede ser muy útil en este desafío.
       course3_farmer_condLoops_challenge2_authored_hint:
@@ -4333,7 +4458,11 @@ es:
         courseA_artist_loops9_c: Si no puedes averiguar en dónde poner el bucle, intenta escribiendo tu código paso por paso y mira los patrones.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Añade otro bloque al código que se te da, para poder dibujar el resto de las escaleras.
-        courseA_artist_loops9_b: "El bloque que agregas debe ir dentro del \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> bucle."
+        courseA_artist_loops9_b: |-
+          El bloque que agregas debe ir dentro del 
+
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> bucle.
         courseA_artist_loops9_c: Si no puedes averiguar en dónde poner el bucle, intenta escribiendo tu código paso por paso y mira los patrones.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Añade otro bloque al código que se te da, para poder dibujar el resto de las escaleras.
@@ -4574,7 +4703,12 @@ es:
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Tu código tendrá **cuatro** bloques `avanza hacia el oeste` como este:\n<xml><block type=\"maze_moveWest\"/></xml>\n\ny luego **cuatro** bloques `recoge maíz` como este:\n<block type=\"harvester_corn\"/></xml>"
+        courseA_harvester_loops2_a: |-
+          Tu código tendrá **cuatro** bloques `avanza hacia el oeste` como este:
+          <xml><block type="maze_moveWest"/></xml>
+
+          y luego **cuatro** bloques `recoge maíz` como este:
+          <block type="harvester_corn"/></xml>
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Tu código tendrá **cuatro** bloques `avanza hacia el oeste` como este:\n<xml><block type=\"maze_moveWest\"/></xml>\n\ny luego **cuatro** bloques `recoge maíz` como este:\n<block type=\"harvester_corn\"/></xml>"
       courseA_harvester_loops3_authored_hint:

@@ -87,6 +87,103 @@ de:
         Course_4_SCF_2_a: Jedes Oktagon hat 40 Pixel lange Seiten.
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: Versuch's mal mit einer "für"-Schleife.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
+
+          *Dieser Level endet nach 4 Takten.*
+        challenges: |-
+          **Optionale Herausforderungen**
+          * Wählen Sie einen anderen Song.
+          * Wählen Sie einen anderen, der aussieht wie ein Elch!
+          * Benennen Sie Ihren Tänzer um.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
+
+          *Dieser Level endet nach 8 Takten.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
+
+          *Dieser Level endet nach 12 Takten.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
+
+          *Dieser Level endet nach 10 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen mindestens zwei Tänzer haben.
+
+          *Dieser Level endet nach 6 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)
+          * Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Zwei Tänzer benötigen eine andere Größe als 100.
+
+          *Dieser Level endet nach 6 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Ändern Sie den Farbton mindestens eines Tänzers.
+
+          *Dieser Level endet nach 8 Takten.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.
+
+          *Dieser Level endet nach 8 Takten.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Seien Sie einfach kreativ!
+
+          *Dieser Level endet nach 8 Takten.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Seien Sie einfach kreativ!
+
+          *Dieser Level endet nach 8 Takten.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Verwenden Sie den Block "Wenn Pfeiltaste nach links gedrückt", um den Roboter einen Tanzschritt tun zu lassen, wenn Sie sie drücken.
+
+          *Dieser Level endet nach 8 Takten.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Die **Seelaternen**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kannst du mit ihnen eine Bedingung verwenden, um das Ozeanmonument zu erreichen?\n\n"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Was für ein wunderschönes Korallenriff! Die blaue Koralle ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links** ist!
       Dance short test 2_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
