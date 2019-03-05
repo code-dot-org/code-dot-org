@@ -244,7 +244,7 @@ export class SpecialAnnouncementActionBlock extends Component {
 
     return !!this.props.hasIncompleteApplication ? (
       <TwoColumnActionBlock
-        id="continue-teacher-application-announcement"
+        id="teacher-application-continue-announcement"
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
         )}
@@ -258,7 +258,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         }
         buttons={[
           {
-            id: 'continue-teacher-application-button',
+            id: 'teacher-application-continue-button',
             url: '/pd/application/teacher',
             text: 'Finish application'
           }
@@ -277,6 +277,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Trophy()}
         buttons={[
           {
+            id: 'teacher-nomination-button',
             url: pegasus('/nominate'),
             text: i18n.nominateATeacher()
           }
