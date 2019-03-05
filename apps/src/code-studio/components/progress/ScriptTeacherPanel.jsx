@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -14,6 +13,11 @@ import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
+  scrollable: {
+    overflowY: 'auto',
+    overflowX: 'hidden',
+    maxHeight: '90%'
+  },
   text: {
     margin: 10
   },
@@ -53,18 +57,6 @@ class ScriptTeacherPanel extends React.Component {
     students: PropTypes.arrayOf(studentShape)
   };
 
-  calculateStudentTableMaxHeight = () => {
-    let teacherPanel = $('.teacher-panel');
-    let contentToRemove = $('#teacher-panel-nonscrollable');
-
-    if (teacherPanel.length > 0 && contentToRemove.length > 0) {
-      return (
-        // Calculate max height and include 15px buffer room.
-        teacherPanel[0].clientHeight - contentToRemove[0].clientHeight - 15
-      );
-    }
-  };
-
   render() {
     const {
       viewAs,
@@ -76,12 +68,11 @@ class ScriptTeacherPanel extends React.Component {
       unlockedStageNames,
       students
     } = this.props;
-    const studentTableMaxHeight = this.calculateStudentTableMaxHeight();
 
     return (
       <TeacherPanel>
-        <div id="teacher-panel-nonscrollable">
-          <h3>{commonMsg.teacherPanel()}</h3>
+        <h3>{commonMsg.teacherPanel()}</h3>
+        <div style={styles.scrollable}>
           <ViewAsToggle />
           {selectedSection && (
             <h4 style={styles.sectionHeader}>
@@ -127,16 +118,14 @@ class ScriptTeacherPanel extends React.Component {
                 )}
               </div>
             )}
-        </div>
-        {viewAs === ViewType.Teacher && (students || []).length > 0 && (
-          <div style={{maxHeight: studentTableMaxHeight, overflowY: 'auto'}}>
+          {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
               students={students}
               onSelectUser={this.props.onSelectUser}
               getSelectedUserId={this.props.getSelectedUserId}
             />
-          </div>
-        )}
+          )}
+        </div>
       </TeacherPanel>
     );
   }
