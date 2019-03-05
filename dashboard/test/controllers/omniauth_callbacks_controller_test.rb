@@ -384,31 +384,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
       teacher = create :teacher
       section = create :section, user: teacher, login_type: 'clever'
-      oauth_student = create :student, provider: provider, uid: '12345'
-      student = create :student
-
-      oauth_students = [oauth_student]
-      section.set_exact_student_list(oauth_students)
-
-      # Pull sections_as_student from the database and store them in an array to compare later
-      sections_as_student = oauth_student.sections_as_student.to_ary
-
-      @request.cookies[:pm] = 'clever_takeover'
-      set_oauth_takeover_session_variables(provider, oauth_student)
-      check_and_apply_oauth_takeover(student)
-
-      assert_equal sections_as_student, student.sections_as_student
-    end
-  end
-
-  test 'login: oauth takeover transfers sections to taken over account when users are created already-migrated' do
-    # TODO: elijah remove this test in favor of the above one when the migration is complete
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
-      teacher = create :teacher
-      section = create :section, user: teacher, login_type: 'clever'
-      oauth_student = create :student, provider: provider, uid: '12345'
-      oauth_student.migrate_to_multi_auth
-
+      oauth_student = create :student, provider: provider
       student = create :student
 
       oauth_students = [oauth_student]
@@ -429,7 +405,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
       teacher = create :teacher
       section = create :section, user: teacher, login_type: 'clever'
-      oauth_student = create :student, provider: provider, uid: '12345'
+      oauth_student = create :student, provider: provider
       student = create :student
 
       oauth_students = [oauth_student]
@@ -450,7 +426,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'login: oauth takeover takes over account when account has no activity' do
     User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
-      oauth_student = create :student, provider: provider, uid: '12345'
+      oauth_student = create :student, provider: provider
       student = create :student
 
       set_oauth_takeover_session_variables(provider, oauth_student)
@@ -467,7 +443,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'login: oauth takeover does nothing if account has activity' do
     User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
-      oauth_student = create :student, provider: provider, uid: '12345'
+      oauth_student = create :student, provider: provider
       student = create :student
       level = create(:level)
       create :user_level, user: oauth_student, level: level, attempts: 1, best_result: 1
