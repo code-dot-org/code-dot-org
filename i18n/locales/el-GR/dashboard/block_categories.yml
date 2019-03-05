@@ -24,13 +24,14 @@ el:
       Comment: Σχόλιο
       'Variables ': 'Μεταβλητές '
       everythingelse: όλαταάλλα
+      World: Κόσμος
+      Location: Τοποθεσία
+      Behaviors: Συμπεριφορές
       numbers: αριθμοί
       Numbers: Αριθμοί
       Default: Προεπιλογή
-      World: Κόσμος
       Dancers: Χορευτές
       Groups: Ομάδες
-      Behaviors: Συμπεριφορές
       Advanced: Για προχωρημένους
       Start: Έναρξη
       Locations: Τοποθεσίες
