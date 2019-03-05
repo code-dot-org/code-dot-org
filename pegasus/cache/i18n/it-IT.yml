@@ -1533,45 +1533,45 @@ it-IT:
     trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
     saranno in grado di creare storie interattive e giochi che potranno condividere
     con chiunque.
-  coursea_shortdescription_congrats: Un'introduzione all'informatica per bambini che
+  coursea_shortdescription_congrats: Introduzione all'informatica per bambini che
     non leggono ancora.
-  courseb_shortdescription_congrats: Introduzione all'informatica per alunni che devono
-    imparare a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente
-    più grandi.)
-  coursec_shortdescription_congrats: Impara le basi dell'informatica e dai vita a
-    creazioni artistiche, storie animate o giochi interattivi.
-  coursed_shortdescription_congrats: Vengono spiegati brevemente i concetti del corso
-    C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
-  coursee_shortdescription_congrats: Vengono spiegati brevemente i concetti dei corsi
-    C e D e poi viene aggiunto il concetto di funzione.
-  coursef_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
-    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
-  coursea-2017_shortdescription_congrats: Un'introduzione all'informatica per bambini
+  courseb_shortdescription_congrats: Introduzione all'informatica per bambini che
+    stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso
+    C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi
+    C e D e viene aggiunto il concetto di funzione.
+  coursef_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2017_shortdescription_congrats: Introduzione all'informatica per bambini
     che non leggono ancora.
-  courseb-2017_shortdescription_congrats: Introduzione all'informatica per alunni
-    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
-    bambini leggermente più grandi.)
-  coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e dai vita
-    a creazioni artistiche, storie animate o giochi interattivi.
-  coursed-2017_shortdescription_congrats: Vengono spiegati brevemente i concetti del
-    corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
-  coursee-2017_shortdescription_congrats: Vengono spiegati brevemente i concetti dei
-    corsi C e D e poi viene aggiunto il concetto di funzione.
-  coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
-    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
-  coursea-2018_shortdescription_congrats: Un'introduzione all'informatica per bambini
+  courseb-2017_shortdescription_congrats: Introduzione all'informatica per bambini
+    che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti del
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
+    corsi C e D e viene aggiunto il concetto di funzione.
+  coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2018_shortdescription_congrats: Introduzione all'informatica per bambini
     che non leggono ancora.
-  courseb-2018_shortdescription_congrats: Introduzione all'informatica per alunni
-    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
-    bambini leggermente più grandi.)
-  coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e dai vita
-    a creazioni artistiche, storie animate o giochi interattivi.
-  coursed-2018_shortdescription_congrats: Vengono spiegati brevemente i concetti del
-    corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
-  coursee-2018_shortdescription_congrats: Vengono spiegati brevemente i concetti dei
-    corsi C e D e poi viene aggiunto il concetto di funzione.
-  coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
-    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
+  courseb-2018_shortdescription_congrats: Introduzione all'informatica per bambini
+    che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti del
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
+    corsi C e D e viene aggiunto il concetto di funzione.
+  coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
