@@ -88,10 +88,22 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': nini
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': nini
       gamelab_setSizes:
         options:
           PROPERTY:
             '"height"': ubude
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': nini
       RyanLab_moveForward:
         text: qubekela phambili
       aalab_checkTouching:

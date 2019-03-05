@@ -2,6 +2,9 @@
 en-GB:
   data:
     authored_hints:
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: What a beautiful coral reef! Blue coral is the **right**
+          way to go, and make sure red coral isn't **left**!
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: You can call a function many times inside your program!
           Try calling it twice to solve this puzzle.

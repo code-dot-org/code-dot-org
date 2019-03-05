@@ -23,13 +23,14 @@ ar:
       Comment: تعليق
       'Variables ': 'المتغيرات '
       everythingelse: كل شيء اخر
+      World: العالم
+      Location: الموقع
+      Behaviors: السلوك
       numbers: أرقام
       Numbers: أرقام
       Default: الافتراضي
-      World: العالم
       Dancers: الراقصون
       Groups: المجموعات
-      Behaviors: السلوك
       Advanced: مُتقدم
       Start: إبدأ
       Locations: مواقع

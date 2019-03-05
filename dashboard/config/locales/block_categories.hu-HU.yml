@@ -25,14 +25,15 @@ hu:
       Comment: Megjegyzés
       'Variables ': 'Változók '
       everythingelse: minden más
+      World: Világ
+      Sprites: Sprite-ok
+      Location: Helyszín
+      Behaviors: Viselkedések
       numbers: számok
       Numbers: Számok
       Default: Alapértelmezett
-      World: Világ
       Dancers: Táncosok
       Groups: Csoportok
-      Sprites: Sprite-ok
-      Behaviors: Viselkedések
       Advanced: Haladó
       Start: Kezdés
       Locations: Helyek

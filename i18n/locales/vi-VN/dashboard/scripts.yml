@@ -336,6 +336,8 @@ vi:
               name: Bài học không cần máy tính
             Writing computer programs:
               name: Viết chương trình máy tính
+            new stage:
+              name: giai đoạn mới
         netsim:
           title: bộ mô phỏng internet
           stages:
@@ -4729,6 +4731,10 @@ vi:
               name: giai đoạn mới
             The Artist:
               name: nghệ sĩ
+            Internet:
+              name: Kết nối mạng
+            Crowdsourcing:
+              name: Đa nguồn
         dance-low:
           stages:
             Dance Party:
