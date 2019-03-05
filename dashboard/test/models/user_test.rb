@@ -147,7 +147,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher, :with_school_info
     new_school_info = create :school_info
 
-    user.email = ""
+    user.update_primary_contact_info(new_email: "", new_hashed_email: "")
     user.save(validate: false)
     refute user.valid?
 
