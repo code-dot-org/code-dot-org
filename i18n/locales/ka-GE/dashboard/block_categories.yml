@@ -24,14 +24,15 @@ ka:
       Comment: კომენტარი
       'Variables ': 'ცვლადები '
       everythingelse: ყველაფერი სხვა
+      World: სამყარო
+      Sprites: სპრაიტები
+      Location: ადგილმდებარეობა
+      Behaviors: ქცევა
       numbers: რიცხვები
       Numbers: რიცხვები
       Input: შემომავალი ინფორმაცია
       Default: ნაგულისხმევი
-      World: სამყარო
       Groups: ჯგუფები
-      Sprites: სპრაიტები
-      Behaviors: ქცევა
       Advanced: დამატებით
       Start: დაწყება
       Locations: მდებარეობები

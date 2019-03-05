@@ -673,6 +673,8 @@ pt-BR:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: sprite {SPRITE} começa {BEHAVIOR} até {CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: aalab todos {ANIMATION}
       gamelab_beginBehavior:
         text: começar {BEHAVIOR}
       gamelab_bounceOff:
@@ -702,6 +704,12 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       gamelab_clickedOn:
         text: quando {SPRITE} for clicado
       gamelab_comment:
@@ -753,6 +761,11 @@ pt-BR:
             '"y"': posição y
             '"direction"': direção do movimento
             '"tint"': tonalidade
+      gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': este
       gamelab_groupLength:
         text: número de personagens em {THIS}
       gamelab_hasBehavior:
@@ -771,6 +784,44 @@ pt-BR:
         text: "{SPRITE} pular para {LOCATION}"
       gamelab_keyDown:
         text: tecla está pressionada {KEY}
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY} pressionado"
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para esquerda
+            '"right"': para direita
+            '"space"': espaço
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -880,6 +931,10 @@ pt-BR:
         text: alterar fantasia de {THIS} para {ANIMATION}
       gamelab_setBackground:
         text: definir a cor do plano de fundo {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
       gamelab_setDirection:
         text: definir {SPRITE} direção de movimento {DIRECTION}
       gamelab_setFrameDelay:
@@ -921,6 +976,12 @@ pt-BR:
         text: configuração
       gamelab_showTitleScreen:
         text: mostrar tela de título {BREAK} título {TITLE} texto {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} clicado"
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -931,8 +992,6 @@ pt-BR:
             '"East"': Leste
             '"South"': Sul
             '"West"': Oeste
-      gamelab_spriteSay:
-        text: sprite {SPRITE} diz {TEXT}
       gamelab_spritesWhere:
         text: personagens onde {PROPERTY} é {VALUE}
         options:
@@ -1117,6 +1176,8 @@ pt-BR:
           SELECT:
             '"all"': todos
             '"this"': este
+      Mikelab_groupEdgesDisplace:
+        text: bordas bloqueiam {COSTUME} de se mover
       Mikelab_groupGetProp:
         text: "{SELECT} {PROPERTY} de {COSTUME}"
         options:
@@ -1304,9 +1365,18 @@ pt-BR:
         options:
           PROPERTY:
             "'shapeColor'": cor
+      aalab_addBehaviorForDuration:
+        text: aalab sprite {SPRITE} começa a {BEHAVIOR} por {SECONDS} segundos
+      aalab_addBehaviorSimpleFlexible:
+        text: aalab sprite {SPRITE} começa a {BEHAVIOR}
+      aalab_addBehaviorUntilBoolean:
+        text: aalab sprite {SPRITE} começa a {BEHAVIOR} até {CONDITION}
       aalab_addToSpriteGroup:
         text: adicionar personagem {SPRITE} ao grupo {GROUP}
+      aalab_allSpritesWithAnimation:
+        text: aalab todos {ANIMATION}
       aalab_changePropByFlexible:
+        text: alterar {SPRITE} {PROPERTY} por {VAL}
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -1326,6 +1396,8 @@ pt-BR:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
+      aalab_createNewSprite:
+        text: "aalab faz um novo sprite \n chamado {NAME} \n com fantasia {COSTUME} \n em {LOCATION}"
       aalab_createNewSpriteAdvanced:
         text: "faça um novo sprite chamado {NAME} \n com fantasia {COSTUME} \n em {LOCATION}"
       aalab_createPropertyGroup:
@@ -1410,11 +1482,14 @@ pt-BR:
             '"4"': 4 segundos
             '"5"': 5 segundos
             '"0"': eterno
+      aalab_showSpriteLabel:
+        text: mostrar rótulo{TEXT} {LOCATION} sprite{SPRITE}
       aalab_speakerSaysConsole:
         text: "{SPRITE} diz {MESSAGE}"
       aalab_spriteSay:
         text: sprite {SPRITE} diz {TEXT} por {SECONDS} segundos
       aalab_toggleHideCustomText:
+        text: "{OPTION} texto personalizado"
         options:
           OPTION:
             '"show"': mostre

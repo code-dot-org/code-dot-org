@@ -320,8 +320,7 @@ zh-TW:
             The Design Recipe:
               name: 設計程序
         K5PD:
-          description: K5 課程的專業發展
-          description_short: K5 課程的專業發展
+          description: 'K5 課程的專業發展'
           stages:
             Computer Science Pedagogy:
               name: 計算機科學教育學
@@ -345,6 +344,8 @@ zh-TW:
               name: 不插電的教學活動
             Writing computer programs:
               name: 編寫電腦程式
+            new stage:
+              name: 新的階段
         netsim:
           title: 網路模擬器
           description: 學習有關網際網路的工作原理。
@@ -3715,6 +3716,10 @@ zh-TW:
               name: 新的階段
             The Artist:
               name: 藝術家
+            Internet:
+              name: 網際網路 Internet
+            Crowdsourcing:
+              name: 群眾外包（Crowdsourcing）
         dance-low:
           stages:
             Dance Party:

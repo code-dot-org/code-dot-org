@@ -23,7 +23,7 @@ is:
         password: 'Lykilorð'
         password_confirmation: 'Staðfesting lykilorðs'
         current_password: 'Núverandi lykilorð'
-        locale: 'Tungumál'
+        locale: 'Forritunarmál'
         age: 'Aldur'
         gender: 'Kyn'
         edit_header: 'Breyta upplýsingum reiknings'
@@ -334,8 +334,8 @@ is:
       applab: 'Appsmiðjan'
       artist: 'Listamaður'
       gamelab: 'Leikjasmiðjan'
-      playlab: 'Leikjasmiðja'
-      spritelab: 'Kvikasmiðja'
+      playlab: 'Leikjasmiðjan'
+      spritelab: 'Kvikasmiðjan'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
       dance: 'Danspartý'
@@ -594,7 +594,7 @@ is:
     dance:
       title: 'Danspartý'
     hoc:
-      title: 'Hefðbundið völundarhús'
+      title: 'Völundarhús'
       body: 'Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.'
     flappy:
       title: 'Flappy kóði'
@@ -627,7 +627,7 @@ is:
     starwars:
       title: "Star Wars"
     infinity:
-      title: "Infinity leikjasmiðja"
+      title: "Infinity Leikjasmiðja"
       body: "Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum."
     minecraft:
       title: "Minecraft"
@@ -639,12 +639,13 @@ is:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
     sports:
       title: "Íþróttir"
-      body: "Búðu til körfuboltaleik eða blandaðu saman íþróttum."
+      body: "Búa til körfuboltaleik eða blanda saman íþróttum."
     text-compression:
       title: "Þjöppun texta"
-      body: "Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til að þjappa texta með skipta út mynstrum fyrir tákn."
+      body: "Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til að þjappa texta með því að skipta út mynstrum fyrir tákn."
     unplugged:
       title: "Verkefni án tölvu"
       audience: "Aldur 6+"
@@ -1055,6 +1056,7 @@ is:
       workshop_course:
         csf_af: 'Grunnatriði TF (Námskeið A-F)'
         csf_express: 'Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)'
+        csd: 'Uppgötvanir tölvunarfræði'
         csp: 'Grunnhugtök tölvunarfræði'
       email_opt_in:
         opt_in_yes: 'Já'

@@ -333,8 +333,7 @@ pt-BR:
               name: A receita de design
         K5PD:
           title: Desenvolvimento profissional para o Ensino Fundamental
-          description: Desenvolvimento profissional para cursos do Ensino Fundamental
-          description_short: Desenvolvimento profissional para cursos do Ensino Fundamental
+          description: 'Desenvolvimento profissional para cursos do Ensino Fundamental'
           stages:
             Computer Science Pedagogy:
               name: Pedagogia em ciência da computação
@@ -1897,6 +1896,8 @@ pt-BR:
               name: A Necessidade de DNS
             Unit 1 Chapter 1 Assessment:
               name: Unidade 1 Capítulo 1 Avaliação
+            Unit 1 Chapter 2 Assessment:
+              name: Unidade 1 Capítulo 2 Avaliação
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp2-2017:
@@ -1927,6 +1928,10 @@ pt-BR:
               name: Desenvolvendo Visualização de Dados
             Text Compression:
               name: Compressão de texto
+            Unit 2 Chapter 1 Assessment:
+              name: Unidade 2 Capítulo 1 Avaliação
+            Unit 2 Chapter 2 Assessment:
+              name: Unidade 2 Capítulo 2 Avaliação
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp3-2017:
@@ -2026,6 +2031,10 @@ pt-BR:
               name: Lições Editadas ACIMA DA LINHA
             Make Your Own Multi-Screen App:
               name: Faça seu próprio aplicativo Multi-Screen
+            Unit 5 Assessment 1:
+              name: Unidade 5 Avaliação 1
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
             Unit 3 Chapter 1 Assessment 3:
               name: Unidade 3 Capítulo 1 Avaliação 3
             If statements:
@@ -2036,6 +2045,10 @@ pt-BR:
               name: Unidade 3 - Avaliação 4
             Possibly use later:
               name: Possivelmente usar mais tarde
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
             Multi-Screen Apps:
               name: Aplicativos Multiplas Telas
             Post-Course Survey:
@@ -2164,6 +2177,8 @@ pt-BR:
               name: Unidade 1 - Codificação de Números no Mundo Real
             Unit 1 - Sending Bits in the Real World:
               name: Unidade 1 - Enviando Bits no Mundo Real
+            Unit 1 - How Routers Learn:
+              name: Unidade 1 - Como Roteadores Aprendem
             Unit 4 - Hard Problems - The Traveling Salesperson Problem:
               name: Unidade 4 - Problemas Difíceis - O Problema do Vendedor Ambulante
             Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
@@ -3634,6 +3649,8 @@ pt-BR:
               name: Introdução
             'Functions: Songwriting':
               name: Composição
+            Functions in Artist:
+              name: Funções com Artista
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -3693,6 +3710,8 @@ pt-BR:
               name: A Necessidade de DNS
             Practice PT - The Internet and Society:
               name: Prática PT - A Internet e a Sociedade
+            Unit 1 Chapter 2 Assessment:
+              name: Unidade 1 Capítulo 2 Avaliação
         csd1-2018:
           stages:
             Processing:
@@ -3719,6 +3738,8 @@ pt-BR:
               name: Codificação de imagens coloridas
             Lossy Compression and File Formats:
               name: Compressão com perdas e formatos de arquivo
+            Unit 2 Chapter 1 Assessment:
+              name: Unidade 2 Capítulo 1 Avaliação
             Finding Trends with Visualizations:
               name: Encontrar tendências com visualizações
             Check Your Assumptions:
@@ -3733,6 +3754,10 @@ pt-BR:
               name: Limpeza de dados
             Creating Summary Tables:
               name: Criando tabelas de resumo
+            Unit 2 Chapter 2 Assessment:
+              name: Unidade 2 Capítulo 2 Avaliação
+            Unit 2 Assessment:
+              name: Unidade 2 Avaliação
         csp3-2018:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
@@ -3774,24 +3799,34 @@ pt-BR:
               name: Encontrar tendências com visualizações
             Check Your Assumptions:
               name: Verifique suas suposições
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
         csp5-2018:
           stages:
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
             Controlling Memory with Variables:
               name: Controlando a memória com variáveis
+            Unit 5 Assessment 1:
+              name: Unidade 5 Avaliação 1
             User Input and Strings:
               name: Entradas de Usuário e Strings
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
             While Loops:
               name: Laços enquanto
             Loops and Simulations:
               name: Laços e Simulações
             Introduction to Arrays:
               name: Introdução a Arrays
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
             Processing Arrays:
               name: Processando Listas
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
             'Practice PT: Create':
               name: 'Tarefa para prática - Crie'
         csppostap-2018:
@@ -3829,6 +3864,8 @@ pt-BR:
               name: Limpeza de dados
             Creating Summary Tables:
               name: Criando tabelas de resumo
+            Unit 2 Chapter 2 Assessment:
+              name: Unidade 2 Capítulo 2 Avaliação
         csd-novice-18:
           stages:
             Welcome:
@@ -3995,6 +4032,14 @@ pt-BR:
               name: Diversão com laços for
             The Artist:
               name: O Artista
+            Copyright and Creativity:
+              name: Copyright e Direitos Autorais
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Sharing:
+              name: Compartilhamento Digital
         dance-low:
           stages:
             Dance Party:
@@ -4035,6 +4080,8 @@ pt-BR:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Compartilhamento Digital
         express-2019:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           stages:
@@ -4252,6 +4299,8 @@ pt-BR:
               name: A Necessidade de DNS
             Practice PT - The Internet and Society:
               name: Prática PT - A Internet e a Sociedade
+            Unit 1 Chapter 2 Assessment:
+              name: Unidade 1 Capítulo 2 Avaliação
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -4262,6 +4311,8 @@ pt-BR:
               name: Codificações de imagem em preto e branco
             Encoding Color Images:
               name: Codificação de imagens coloridas
+            Unit 2 Assessment:
+              name: Unidade 2 Avaliação
         csp3-2019:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
@@ -4299,24 +4350,34 @@ pt-BR:
               name: O custo do livre
             Simple Encryption:
               name: Criptografia simples
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
         csp5-2019:
           stages:
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
             Controlling Memory with Variables:
               name: Controlando a memória com variáveis
+            Unit 5 Assessment 1:
+              name: Unidade 5 Avaliação 1
             User Input and Strings:
               name: Entradas de Usuário e Strings
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
             While Loops:
               name: Laços enquanto
             Loops and Simulations:
               name: Laços e Simulações
             Introduction to Arrays:
               name: Introdução a Arrays
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
             Processing Arrays:
               name: Processando Listas
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
         csppostap-2019:
           description_short: Aprenda a coletar e usar dados em aplicativos do App Lab.
           stages:

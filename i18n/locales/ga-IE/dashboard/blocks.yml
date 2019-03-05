@@ -186,12 +186,18 @@ ga:
             '"right"': ar dheis
             '"space"': spás
             '"x"': x
+            '"y"': 'y'
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
       gamelab_debugSprite:
         options:
           VAL:
@@ -203,6 +209,19 @@ ga:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
+            '"x"': x
+            '"y"': 'y'
       gamelab_locationDelta:
         options:
           DIR:
@@ -216,6 +235,10 @@ ga:
         text: dath randamach
       gamelab_randomColor:
         text: dath randamach
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cathair
       gamelab_setPosition:
         options:
           POSITION:
@@ -231,6 +254,11 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
       gamelab_spritesWhere:
         options:
           PROPERTY:

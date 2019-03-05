@@ -655,6 +655,8 @@ es-MX:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: gráfico {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: aalab todos {ANIMATION}
       gamelab_beginBehavior:
         text: comienza {BEHAVIOR}
       gamelab_bounceOff:
@@ -684,6 +686,12 @@ es-MX:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
       gamelab_clickedOn:
         text: cuando {SPRITE} haz clic
       gamelab_comment:
@@ -736,6 +744,11 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"tint"': tinte
+      gamelab_getThisSprite:
+        text: "{CHOICE} gráfico"
+        options:
+          CHOICE:
+            '"this"': este
       gamelab_groupLength:
         text: número de sprites en {THIS}
       gamelab_hasBehavior:
@@ -756,6 +769,38 @@ es-MX:
         text: "{SPRITE} saltar a {LOCATION}"
       gamelab_keyDown:
         text: tecla está presionada {KEY}
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY} pulsada"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -801,6 +846,8 @@ es-MX:
         text: definir posición de {VAR} para {VAL}
       gamelab_makeNewGroup:
         text: crear un nuevo grupo
+      gamelab_makeNewSpriteAnon:
+        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} encara {DIRECTION}"
         options:
@@ -865,6 +912,10 @@ es-MX:
         text: cambiar {THIS} traje a {ANIMATION}
       gamelab_setBackground:
         text: establecer color de fondo {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
       gamelab_setDirection:
         text: definir {SPRITE} dirección de movimiento {DIRECTION}
       gamelab_setFrameDelay:
@@ -906,6 +957,12 @@ es-MX:
         text: establecer
       gamelab_showTitleScreen:
         text: mostrar pantalla de título {BREAK} título {TITLE} texto {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} pulsado"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -916,8 +973,6 @@ es-MX:
             '"East"': Este
             '"South"': Sur
             '"West"': Oeste
-      gamelab_spriteSay:
-        text: gráfico {SPRITE} decir {TEXT}
       gamelab_spritesWhere:
         text: gráficos donde {PROPERTY} es {VALUE}
         options:
@@ -1295,13 +1350,13 @@ es-MX:
       aalab_addBehaviorSimpleFlexible:
         text: gráfico aalab {SPRITE} comienza {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
-        text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
+        text: gráfico {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_addToSpriteGroup:
         text: añadir gráfico {SPRITE} a grupo {GROUP}
       aalab_allSpritesWithAnimation:
         text: aalab todos {ANIMATION}
       aalab_changePropByFlexible:
-        text: cambia aalab {SPRITE} {PROPERTY} por {VAL}
+        text: cambiar {SPRITE} {PROPERTY} por {VAL}.
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -1328,9 +1383,9 @@ es-MX:
         text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en
           {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}
@@ -1379,9 +1434,9 @@ es-MX:
       aalab_prompt:
         text: preguntar {MESSAGE}
       aalab_randomLocation:
-        text: aalab posición aleatoria
+        text: posición aleatoria
       aalab_removeOneAndAll:
-        text: aalab eliminar {THIS}
+        text: eliminar {THIS}
       aalab_setBG:
         options:
           BG:
@@ -1416,11 +1471,14 @@ es-MX:
             '"4"': 4 segundos
             '"5"': 5 segundos
             '"0"': siempre
+      aalab_showSpriteLabel:
+        text: mostrar etiqueta{TEXT} {LOCATION} gráfico{SPRITE}
       aalab_speakerSaysConsole:
         text: "{SPRITE} dice {MESSAGE}"
       aalab_spriteSay:
         text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
       aalab_toggleHideCustomText:
+        text: "{OPTION} texto personalizado"
         options:
           OPTION:
             '"show"': mostrar

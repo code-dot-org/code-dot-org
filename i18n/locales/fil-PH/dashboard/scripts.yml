@@ -346,6 +346,8 @@ fil:
               name: Unplugged na mga aralin
             Writing computer programs:
               name: Pagsulat ng mga programa sa kompyuter
+            new stage:
+              name: bagong yugto
         netsim:
           title: Simulator ng Internet
           stages:
@@ -7445,6 +7447,10 @@ fil:
               name: bagong yugto
             The Artist:
               name: The Artist
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Pag-crowdsourcing
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
