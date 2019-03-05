@@ -2,33 +2,6 @@
 
 require_relative '../../../dashboard/config/environment'
 
-# num_users_updated = 0
-# batch_size = 10000
-
-# puts "Processing...."
-# start = Time.now
-# User.where.not(school_info: nil).where(user_type: "teacher").find_in_batches(batch_size: batch_size) do |batch|
-#   ActiveRecord::Base.transaction do
-#     batch.each do |user|
-#       user.user_school_infos.where(school_info_id: user.school_info_id).first_or_create(
-#         start_date: user.created_at,
-#         # last_confirmation_date: user.last_seen_school_info_interstitial.present? ? user.last_seen_school_info_interstitial : user.created_at
-#         # last_confirmation_date: user.last_seen_school_info_interstitial.any || user.created_at
-#         last_confirmation_date: user.last_seen_school_info_interstitial.any? ? user.last_seen_school_info_interstitial : user.created_at
-#       )
-#       num_users_updated += 1
-#     rescue StandardError => e
-#       p e
-#       puts "Error: teacher with user id #{user.id} with school id #{user.school_info.id}"
-#       num_users_updated -= 1 #why is this needed?
-#     end
-#   end
-# end
-# # Output how many total users were updated.
-# finish = Time.now
-# puts "\nFinished updating #{num_users_updated} users school information in #{finish - start}s."
-
-### active record import
 num_users_updated = 0
 batch_size = 10000
 
@@ -57,15 +30,9 @@ User.where.not(school_info: nil).where(user_type: "teacher").find_in_batches(bat
     end
   end.compact
 
-  #[nil, nil, nil, user, user_2]
-  # [user, user_2]
-
   batch_result = UserSchoolInfo.import user_school_infos
   p batch_result.failed_instances
   num_users_updated += user_school_infos.size - batch_result.failed_instances.size
-  # rescue StandardError => e
-  #   puts e
-  #   puts "Error: teacher with user id #{user.id} with school id #{user.school_info.id}"
 end
 # Output how many total users were updated.
 finish = Time.now
