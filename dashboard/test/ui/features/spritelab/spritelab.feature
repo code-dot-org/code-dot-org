@@ -1,3 +1,4 @@
+@no_circle
 Feature: Sprite Lab
 
 Background:
@@ -10,9 +11,11 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
+@no_circle
 Scenario: Loading the first level
   Then there's an image "spritelab/avatar"
 
+@no_circle
 Scenario: Losing the first level
   Then I press "runButton"
   And element "#resetButton" is visible
@@ -23,6 +26,7 @@ Scenario: Losing the first level
   And element "#runButton" is visible
   And element "#resetButton" is hidden
 
+@no_circle
 Scenario: Winning the first level
   Then I press dropdown number 6
   And the dropdown is visible
