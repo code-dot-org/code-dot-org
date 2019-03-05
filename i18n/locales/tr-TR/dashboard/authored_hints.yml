@@ -666,6 +666,12 @@ tr:
           * Sol oka bastığınızda Robota bir dans hareketi yaptırmak için `sol oka basıldığında` bloğunu kullanın.
 
           *Bu seviye 8 ölçüden sonra biter.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte nasıl kullanabilirsin?"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Sağa dönüşler için "Eğer" bloğunu kullanabilirsiniz.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Köpeğin hızını 'Dog_speed' değerini kedinin hızından 'cat_speed' değerinden büyük yaptığınızdan emin olun.
       D_Frozen_nested3_authored_hint:

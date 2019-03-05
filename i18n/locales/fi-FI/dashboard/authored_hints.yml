@@ -243,6 +243,10 @@ fi:
           *Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
 
           *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Katso **Merilyhdyt** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuinka käytät konditionaalia heidän kanssaan päästäksesi Ocean Monumentille?"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Miten kaunis koralliriutta! Sininen koralli on **oikea** tie. Varmista, että punainen koralli ei ole **vasemmalla**!
       Dance short test 2_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**

@@ -1490,6 +1490,10 @@ ja:
               name: カードと条件
             The Artist:
               name: アーティスト
+            Internet:
+              name: インターネット
+            Crowdsourcing:
+              name: クラウドソーシング
         dance-low:
           stages:
             Dance Party:

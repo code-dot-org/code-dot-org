@@ -1523,6 +1523,10 @@ cs:
               name: For cyklus zábavy
             The Artist:
               name: Umělec
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:

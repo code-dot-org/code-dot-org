@@ -1494,6 +1494,14 @@ is:
           * Notaðu `þegar vinstri ör` kubbinn til að láta Vélmennið gera danshreyfingu þegar þú ýtir á örina.
 
           * Borðið endar eftir 7 takta.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Sjá **Hafluktir** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hvernig getur þú notað skilyrði með þeim til að komast í gegnum neðansjávarhofið?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Þú getur notað `ef slóð` kubbinn til að hjálpa þér að snúa til hægri.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Sérðu rauðu og bláu kóralkubbana? Þeir sýna þér hvenær
+          á að snúa til hægri og vinstri í gegnum rifið.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Gættu þess að talan fyrir `dog_speed` (hraða hunds)
           sé hærri en fyrir `cat_speed` (hraða kattar).
