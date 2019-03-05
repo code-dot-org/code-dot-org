@@ -11,6 +11,7 @@ import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
 import commonMsg from '@cdo/locale';
 import StudentTable, {studentShape} from './StudentTable';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   text: {
@@ -24,6 +25,12 @@ const styles = {
     marginLeft: 10,
     fontSize: 16,
     fontFamily: '"Gotham 7r", sans-serif'
+  },
+  sectionHeader: {
+    margin: 10,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   }
 };
 
@@ -36,6 +43,10 @@ class ScriptTeacherPanel extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasSections: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
+    selectedSection: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired
+    }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -59,6 +70,7 @@ class ScriptTeacherPanel extends React.Component {
       viewAs,
       hasSections,
       sectionsAreLoaded,
+      selectedSection,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
       unlockedStageNames,
@@ -71,6 +83,14 @@ class ScriptTeacherPanel extends React.Component {
         <div id="teacher-panel-nonscrollable">
           <h3>{commonMsg.teacherPanel()}</h3>
           <ViewAsToggle />
+          {selectedSection && (
+            <h4 style={styles.sectionHeader}>
+              {`${commonMsg.section()} `}
+              <a href={teacherDashboardUrl(selectedSection.id)}>
+                {selectedSection.name}
+              </a>
+            </h4>
+          )}
           {!sectionsAreLoaded && (
             <div style={styles.text}>{commonMsg.loading()}</div>
           )}
@@ -153,6 +173,7 @@ export default connect((state, ownProps) => {
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
     scriptHasLockableStages,
+    selectedSection: state.teacherSections.sections[selectedSectionId],
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
     students: state.teacherSections.selectedStudents
