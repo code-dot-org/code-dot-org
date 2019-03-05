@@ -434,9 +434,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       oauth_student.reload
       refute_nil oauth_student.deleted_at
-      assert_equal provider, student.provider
-      assert_equal oauth_student.uid, student.uid
-      assert_equal '54321', student.oauth_token
+
+      student.reload
+      takeover_auth = student.authentication_options.last
+      assert_equal provider, takeover_auth.credential_type
+      assert_equal oauth_student.uid, takeover_auth.authentication_id
+      assert_equal '54321', takeover_auth.data_hash[:oauth_token]
       assert_nil @request.session['clever_link_flag']
     end
   end
@@ -452,12 +455,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       FirehoseClient.any_instance.expects(:put_record).at_least_once
 
-      set_oauth_takeover_session_variables(provider, oauth_student)
-      check_and_apply_oauth_takeover(student)
+      assert_does_not_create(AuthenticationOption) do
+        set_oauth_takeover_session_variables(provider, oauth_student)
+        check_and_apply_oauth_takeover(student)
+      end
 
       oauth_student.reload
       assert_nil oauth_student.deleted_at
-      assert_nil student.provider
+      assert_equal 1, student.authentication_options.count
     end
   end
 
