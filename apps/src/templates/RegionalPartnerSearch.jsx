@@ -42,10 +42,10 @@ const styles = {
     marginTop: 20
   },
   bold: {
-    fontFamily: "'Gotham 5r', sans-serif"
+    fontFamily: '"Gotham 7r", sans-serif'
   },
   linkLike: {
-    fontFamily: "'Gotham 5r', sans-serif",
+    fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'pointer',
     color: color.purple
   },
