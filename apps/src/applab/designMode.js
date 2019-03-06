@@ -7,6 +7,7 @@ import 'jquery-ui/ui/widgets/resizable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+import RGBColor from 'rgbcolor';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
@@ -585,6 +586,46 @@ designMode.onDuplicate = function(element, event) {
   designMode.editElementProperties(duplicateElement);
 
   return duplicateElement;
+};
+
+designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
+  const currentScreen = $(
+    elementUtils.getPrefixedElementById(
+      getStore().getState().screens.currentScreenId
+    )
+  );
+
+  // Unwrap the draggable wrappers around the elements in the source screen:
+  const madeUndraggable = makeUndraggable(currentScreen.children());
+
+  // Modify each element in the screen:
+  currentScreen.children().each(function() {
+    const child = $(this)[0];
+    const themeValues = elementLibrary.getThemeValues(child);
+    for (const propName in themeValues) {
+      const propTheme = themeValues[propName];
+      const prevDefault = propTheme[prevThemeValue];
+      const newDefault = propTheme[themeValue];
+      const currentPropValue = designMode.readProperty(child, propName);
+      const {type} = propTheme;
+      let propIsDefault = false;
+      if (type === 'color') {
+        propIsDefault =
+          new RGBColor(currentPropValue).toHex() ===
+          new RGBColor(prevDefault).toHex();
+      } else {
+        propIsDefault = currentPropValue === prevDefault;
+      }
+      if (propIsDefault) {
+        designMode.updateProperty(child, propName, newDefault);
+      }
+    }
+  });
+
+  // Restore the draggable wrappers on the elements in the source screen:
+  if (madeUndraggable) {
+    makeDraggable(currentScreen.children());
+  }
 };
 
 function duplicateScreen(element) {
