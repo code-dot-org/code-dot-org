@@ -11,7 +11,6 @@ export default storybook => {
         name: 'Escalated Peer Review Submissions',
         story: () => (
           <PeerReviewSubmissionData
-            filterType="escalated"
             submissions={[
               {
                 submitter: 'Jon Snow',
@@ -51,7 +50,6 @@ export default storybook => {
         name: 'Open Peer Review Submissions',
         story: () => (
           <PeerReviewSubmissionData
-            filterType="open"
             submissions={[
               {
                 submitter: 'Jon Snow',
