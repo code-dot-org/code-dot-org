@@ -6,7 +6,6 @@ import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReview
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
     <PeerReviewSubmissions
-      filterType="all"
       courseList={getScriptData('courseList')}
       courseUnitMap={getScriptData('courseUnitMap')}
     />,

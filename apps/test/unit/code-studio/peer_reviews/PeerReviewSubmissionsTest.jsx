@@ -40,7 +40,6 @@ describe('PeerReviewSubmissions', () => {
 
     peerReviewSubmissions = mount(
       <PeerReviewSubmissions
-        filterType="all"
         courseList={[['course_1', 1], ['course_2', 2]]}
         courseUnitMap={{
           1: [['course_1_unit_1', 10], ['course_1_unit_2', 11]],
