@@ -399,8 +399,6 @@ class PeerReviewTest < ActiveSupport::TestCase
         level_name: level_1.name,
         review_ids: expected_level_1_ids,
         status: 'escalated',
-        accepted_reviews: 0,
-        rejected_reviews: 0,
         escalated_review_id: PeerReview.find_by(level: level_1, status: 'escalated').id
       }
     ), PeerReview.get_submission_summary_for_user_level(ul1, @script).except(:submission_date)
@@ -414,8 +412,6 @@ class PeerReviewTest < ActiveSupport::TestCase
         level_name: level_2.name,
         review_ids: expected_level_2_ids,
         status: 'accepted',
-        accepted_reviews: 1,
-        rejected_reviews: 0,
         escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul2, @script).except(:submission_date)
@@ -429,8 +425,6 @@ class PeerReviewTest < ActiveSupport::TestCase
         level_name: level_3.name,
         review_ids: expected_level_3_ids,
         status: 'rejected',
-        accepted_reviews: 0,
-        rejected_reviews: 1,
         escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul3, @script).except(:submission_date)

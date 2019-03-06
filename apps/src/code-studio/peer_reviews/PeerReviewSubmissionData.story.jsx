@@ -21,8 +21,6 @@ export default storybook => {
                 escalation_date: '4/3/2/2017',
                 review_ids: [[1, 'escalated'], [2, 'accepted']],
                 status: 'escalated',
-                accepted_reviews: 1,
-                rejected_reviews: 0,
                 escalated_review_id: 1
               },
               {
@@ -38,8 +36,6 @@ export default storybook => {
                   [5, 'escalated']
                 ],
                 status: 'escalated',
-                accepted_reviews: 1,
-                rejected_reviews: 0,
                 escalated_review_id: 5
               }
             ]}
@@ -59,9 +55,7 @@ export default storybook => {
                 submission_date: '2/19/2017',
                 escalation_date: undefined,
                 review_ids: [[1, ''], [2, 'accepted']],
-                status: 'escalated',
-                accepted_reviews: 1,
-                rejected_reviews: 0
+                status: 'escalated'
               },
               {
                 submitter: 'Daenerys Targaryen',
@@ -71,9 +65,7 @@ export default storybook => {
                 submission_date: '2/19/2017',
                 escalation_date: undefined,
                 review_ids: [[3, 'accepted'], [4, '']],
-                status: 'escalated',
-                accepted_reviews: 1,
-                rejected_reviews: 0
+                status: 'escalated'
               }
             ]}
           />
