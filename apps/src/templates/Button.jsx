@@ -28,11 +28,12 @@ const styles = {
     display: 'inline-block',
     fontSize: 12,
     fontFamily: '"Gotham 4r", sans-serif',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderRadius: 3,
+    border: '1px solid ' + color.border_gray,
+    borderBottomLeftRadius: 3,
+    borderBottomRightRadius: 3,
+    borderTopLeftRadius: 3,
+    borderTopRightRadius: 3,
     textDecoration: 'none',
-    borderColor: color.border_gray,
     ':hover': {
       backgroundColor: color.white,
       cursor: 'pointer'
