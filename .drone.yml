@@ -212,9 +212,8 @@ trigger:
   - staging
   event:
   - pull_request
-  - push
 ---
 kind: signature
-hmac: 0c07664b16e41b8c19778c8f40db3c149ad09fb6f467b0314c6e66152377b40b
+hmac: c0210d901d512a6518150a28081b6b2496a4e588a9f6465b11e074a125d01ba7
 
 ...
