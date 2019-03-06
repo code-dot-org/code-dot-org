@@ -4,6 +4,7 @@ class DiscourseSsoController < ApplicationController
   before_action :authenticate_user! # ensures user must login
 
   VERIFIED_TEACHERS_GROUP_NAME = 'Verified-Teachers'.freeze
+  CSF_FACILITATORS_GROUP_NAME = 'CSF-Facilitators'.freeze
 
   def sso
     secret = CDO.discourse_sso_secret
@@ -18,6 +19,12 @@ class DiscourseSsoController < ApplicationController
       sso.add_groups = DiscourseSsoController::VERIFIED_TEACHERS_GROUP_NAME
     else
       sso.remove_groups = DiscourseSsoController::VERIFIED_TEACHERS_GROUP_NAME
+    end
+
+    if Pd::CourseFacilitator.where({facilitator: current_user, course: Pd::Workshop::COURSE_CSF}).exists?
+      sso.add_groups = DiscourseSsoController::CSF_FACILITATORS_GROUP_NAME
+    else
+      sso.remove_groups = DiscourseSsoController::CSF_FACILITATORS_GROUP_NAME
     end
 
     redirect_to sso.to_url(sso.return_sso_url)
