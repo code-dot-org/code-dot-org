@@ -168,7 +168,12 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
         {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock hocLaunch={hocLaunch} />
+          <SpecialAnnouncementActionBlock
+            hocLaunch={hocLaunch}
+            hasIncompleteApplication={
+              !!sessionStorage['Teacher1920Application']
+            }
+          />
         )}
         {announcement && showAnnouncement && (
           <div>
