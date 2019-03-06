@@ -4,6 +4,7 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import DialogFooter from '../templates/teacherDashboard/DialogFooter';
 import Button from '../templates/Button';
 import i18n from '@cdo/locale';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class RedirectDialog extends React.Component {
   static propTypes = {
@@ -31,7 +32,7 @@ export default class RedirectDialog extends React.Component {
           <p>
             {i18n.redirectExplanation()}
             <span>
-              <a target="_blank" href={'https://studio.code.org/report_abuse'}>
+              <a target="_blank" href={studio('/report_abuse')}>
                 {i18n.reportAbuse()}
               </a>
             </span>
