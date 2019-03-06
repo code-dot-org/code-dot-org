@@ -24,15 +24,16 @@ zh-CN:
       Comment: 注释
       'Variables ': '变量 '
       everythingelse: 其它东西
+      World: 世界
+      Sprites: 精灵
+      Location: 所在地区
+      Behaviors: 行为
       numbers: 数字
       Numbers: 数字
       Input: 输入
       Default: 默认
-      World: 世界
       Dancers: 舞者
       Groups: 小组
-      Sprites: 精灵
-      Behaviors: 行为
       Advanced: 高级
       Start: 开始
       Locations: 位置
@@ -49,6 +50,8 @@ zh-CN:
       Predefined: 预定义的
       test: 测试
       test2: 测试2
+      Use These Blocks: 使用这些块
+      Do Not Use: 不要使用
       Foo: Foo
       Name: 姓名
       NEW BLOCKS: 新模块

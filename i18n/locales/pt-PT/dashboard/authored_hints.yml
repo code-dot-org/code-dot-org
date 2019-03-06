@@ -1,6 +1,10 @@
 pt:
   data:
     authored_hints:
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Confere as **Lanternas Aquáticas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Como podes usar um condicional com estes para atravessar o Monumento do Oceano?\n\n"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Que bonito recife de coral! O coral azul é a maneira **direita** e certifica-te de que o coral vermelho não seja **esquerda**!
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Podes chamar uma função várias vezes no teu programa!  Experimenta chamá-la duas vezes para resolver este quebra-cabeças.
       Function intro Ryan_2019_authored_hint:

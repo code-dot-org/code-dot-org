@@ -1943,6 +1943,10 @@ is:
         eins hratt og þú getur!
       CourseD_Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt
         með vinum þínum.
+      CourseE_HOC 2018 Level_10: Farðu að inngangi Neðansjávarhallarinnar.
+      CourseE_HOC 2018 Level_11: 'Búðu til leiðslu úr prismarín inni í neðansjávarhöllinni.  '
+      CourseE_HOC 2018 Level_7a: Leitaðu að kistu í þessum neðansjávarrústum.
+      CourseE_HOC 2018 Level_9b: 'Notaðu kórallinn sem vegvísi til að finna fjársjóðinn.  '
       CourseF_PlayLab_vars1: 'Til að spila þennan leik þarftu ekki að skrifa neinn
         kóða, bara ýta á "Keyra"! '
       CourseF_PlayLab_vars10: "Frjáls æfing: Hér eru allar breyturnar sem við höfum
@@ -2085,12 +2089,12 @@ is:
         eins hratt og þú getur!
       Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
         þínum.
-      Dance_Party_extras_battle: Danshópar (Meira um þá undir "Nánar")
-      Dance_Party_extras_every_beat: Fjórðapartsnótur (Meira um þær undir "Nánar")
-      Dance_Party_extras_layout: Stillum okkur upp! (Meira um það undir "Nánar")
-      Dance_Party_extras_on_beat: Bassa-, mið- og háhljóð (Meira um þau undir "Nánar")
-      Dance_Party_extras_speed: Hraðar, Hægar (Meira um það undir "Nánar")
-      Dance_Party_extras_visible: Hvert fóru þau? (Meira undir "Nánar")
+      Dance_Party_extras_battle: Danshópar (Meira um þá undir "Meira")
+      Dance_Party_extras_every_beat: Fjórðapartsnótur (Meira um þær undir "Meira")
+      Dance_Party_extras_layout: Stillum okkur upp! (Meira um það undir "Meira")
+      Dance_Party_extras_on_beat: Bassa-, mið- og háhljóð (Meira um þau undir "Meira")
+      Dance_Party_extras_speed: Hraðar, Hægar (Meira um það undir "Meira")
+      Dance_Party_extras_visible: Hvert fóru þau? (Meira um það undir "Meira")
       Eval Booleans 1: Með Boole virkjum (t.d. > < = ) getum við borið saman gildi
         og fengið útkomuna "true" (satt) eða "false" (ósatt). Smelltu á "Keyra" til
         að sjá hvernig þessi formúla er metin.

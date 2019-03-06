@@ -192,6 +192,11 @@ fil:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
       gamelab_debugSprite:
         options:
           VAL:
@@ -203,6 +208,22 @@ fil:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': iba
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -216,6 +237,10 @@ fil:
         text: iba-ibang kulay
       gamelab_randomColor:
         text: iba-ibang kulay
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
       gamelab_setPosition:
         options:
           POSITION:
@@ -231,6 +256,11 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
       gamelab_spritesWhere:
         options:
           PROPERTY:

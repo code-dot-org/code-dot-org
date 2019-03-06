@@ -3429,6 +3429,10 @@ nl:
           * Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
 
           *Dit level eindigt na 8 maten.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Zie je de **zeelantaarns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hoe kun je een voorwaardelijk opdrachtblok met ze combineren om door het Oceaanmonument te komen?"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de ** rechte ** manier aan, en zorg ervoor dat je rood koraal niet ** links ** laat liggen!
       Dance short test 2_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**

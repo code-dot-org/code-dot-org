@@ -3013,6 +3013,12 @@ it:
           * Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
 
           *L'esercizio terminerà dopo 8 battute.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puoi usare il blocco `se c'è strada` per girare dalla parte giusta.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Che bella barriera corallina! I coralli blu ti suggeriscono quando girare a **destra** e quelli rossi quando girare a **sinistra**.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed` (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità del gatto</i>).
       D_Frozen_nested3_authored_hint:

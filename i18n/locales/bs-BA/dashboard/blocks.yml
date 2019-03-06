@@ -655,6 +655,11 @@ bs:
             '"scale"': veličina
             '"rotation"': rotacija
             '"direction"': smijer kretanja
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
       gamelab_debugSprite:
         options:
           VAL:
@@ -670,6 +675,36 @@ bs:
             '"tint"': nijanse
       gamelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_locationDelta:
         options:
           DIR:
@@ -687,6 +722,10 @@ bs:
         text: nasumična boja
       gamelab_setBackground:
         text: podesi boju pozadine {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
       gamelab_setPosition:
         text: pomjeri {THIS} na {POSITION} poziciju
         options:
@@ -716,6 +755,11 @@ bs:
             '"height"': visina
       gamelab_setup:
         text: postavka
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -900,6 +944,7 @@ bs:
       Vector_positionCenter:
         text: centralna
       aalab_changePropByFlexible:
+        text: izmjeni {SPRITE} {PROPERTY} za {VAL}
         options:
           PROPERTY:
             '"scale"': veličina

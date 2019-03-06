@@ -24,13 +24,14 @@ vi:
       Comment: Bình luận
       'Variables ': 'Các biến '
       everythingelse: thứ khác
+      World: Thế giới
+      Location: Địa điểm
+      Behaviors: Hành vi
       numbers: các con số
       Numbers: Các con số
       Default: Mặc định
-      World: Thế giới
       Dancers: Vũ công
       Groups: Nhóm
-      Behaviors: Hành vi
       Advanced: Nâng cao
       Start: Bắt đầu
       Sprite: Ma

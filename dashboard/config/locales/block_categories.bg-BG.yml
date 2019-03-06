@@ -25,14 +25,15 @@ bg:
       Comment: Коментар
       'Variables ': 'Променливи '
       everythingelse: всичко останало
+      Sprites: Спрайт
+      Location: Адрес
+      Behaviors: Поведения
       numbers: числа
       Numbers: Числа
       Input: Поле за въвеждане
       Default: По подразбиране
       Dancers: Танцьори
       Groups: Групи
-      Sprites: Спрайт
-      Behaviors: Поведения
       Advanced: Разширено
       Start: Старт
       Locations: Места

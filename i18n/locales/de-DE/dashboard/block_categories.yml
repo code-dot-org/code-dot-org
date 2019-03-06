@@ -24,14 +24,15 @@ de:
       Comment: Kommentar
       'Variables ': 'Variablen '
       everythingelse: allesandere
+      World: Welt
+      Location: Standort
+      Behaviors: Verhaltensweisen
       numbers: nummern
       Numbers: Nummern
       Input: Eingabe
       Default: Standard
-      World: Welt
       Dancers: Tänzer
       Groups: Gruppen
-      Behaviors: Verhaltensweisen
       Advanced: Erweitert
       Start: Start
       Sprite: Sprite
