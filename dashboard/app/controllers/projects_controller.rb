@@ -309,6 +309,9 @@ class ProjectsController < ApplicationController
     no_footer = sharing
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
+    if params[:key] == "spritelab"
+      @game.name = "Spritelab"
+    end
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
