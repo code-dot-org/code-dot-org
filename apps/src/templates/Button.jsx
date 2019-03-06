@@ -30,10 +30,7 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     borderStyle: 'solid',
     borderWidth: 1,
-    borderRadiusTopLeft: 3,
-    borderRadiusTopRight: 3,
-    borderRadiusBottomLeft: 3,
-    borderRadiusBottomRight: 3,
+    borderRadius: 3,
     textDecoration: 'none',
     borderColor: color.border_gray,
     ':hover': {
