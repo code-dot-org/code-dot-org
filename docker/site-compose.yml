@@ -22,6 +22,7 @@ services:
       - ../:/home/circleci/code-dot-org:delegated
       - $HOME/.ssh:/home/circleci/.ssh:ro
       - $HOME/.ssh:$HOME/.ssh:ro
+      - $HOME/.aws:/home/circleci/.aws
       - rbenv:/home/circleci/.rbenv
       - mysqldata:/var/lib/mysql
       - yarncache:/home/circleci/.cache
