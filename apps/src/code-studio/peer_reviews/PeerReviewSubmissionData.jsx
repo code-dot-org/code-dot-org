@@ -17,7 +17,6 @@ class PeerReviewSubmissionData extends React.Component {
           <th>Unit</th>
           <th>Activity</th>
           <th>Submitted</th>
-          <th key={0}>Accepted Reviews</th>,<th key={1}>Rejected Reviews</th>
           <th style={{width: '115px'}}>Link</th>
         </tr>
       </thead>
@@ -35,8 +34,6 @@ class PeerReviewSubmissionData extends React.Component {
               <td>{submission['unit_name']}</td>
               <td>{submission['level_name']}</td>
               <td>{submission['submission_date']}</td>
-              <td key="accepted">{submission['accepted_reviews']}</td>,
-              <td key="rejected">{submission['rejected_reviews']}</td>
               <td>
                 <PeerReviewLinkSection
                   reviews={submission['review_ids']}
