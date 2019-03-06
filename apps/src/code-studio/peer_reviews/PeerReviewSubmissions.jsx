@@ -163,10 +163,7 @@ class PeerReviewSubmissions extends React.Component {
         {this.state.loading ? (
           <Spinner />
         ) : (
-          <PeerReviewSubmissionData
-            filterType="all"
-            submissions={this.state.submissions}
-          />
+          <PeerReviewSubmissionData submissions={this.state.submissions} />
         )}
       </div>
     );
