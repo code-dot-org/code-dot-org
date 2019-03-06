@@ -44,11 +44,24 @@
     "expand_debugger": "false",
     "parent_level_id": 11403,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/javascript/functions/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/game-lab/sprites/collision-detection/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/animation-tab/editing-images/"
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "Need to add gif of what it should look like.",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:43:14 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:43:14 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:32:47 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
