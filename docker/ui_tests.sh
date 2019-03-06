@@ -14,7 +14,8 @@ export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 # If running on Drone.io, DRONE_BUILD_NUMBER will be set: https://docs.drone.io/reference/environ/drone-build-number/
 # otherwise, use a random number instead. CIRCLE_BUILD_NUM determines where UI test cucumber logs are stored in S3.
-export CIRCLE_BUILD_NUM=${DRONE_BUILD_NUMBER:-$RANDOM$RANDOM}
+export CIRCLE_BUILD_NUM=$RANDOM$RANDOM
+echo "CIRCLE_BUILD_NUM: $CIRCLE_BUILD_NUM"
 export CIRCLE_NODE_INDEX=1
 export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
 export CIRCLE_ARTIFACTS=/home/circleci/artifacts
