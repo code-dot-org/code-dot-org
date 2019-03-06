@@ -18,6 +18,14 @@ export const CAPTURE_TICK_COUNT = 300;
 
 export const defaultFontSizeStyle = '14px';
 
+export const themeOptions = ['classic', 'dark', 'coral'];
+
+export const themeDisplayNames = ['Classic', 'Dark', 'Coral'];
+
+if (themeOptions.length !== themeDisplayNames.length) {
+  throw new Error('themeOptions length must equal themeDisplayNames length');
+}
+
 export const fontFamilyOptions = [
   'Arial',
   'Georgia',

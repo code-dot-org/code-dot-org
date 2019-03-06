@@ -195,11 +195,13 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = color.white;
-  newButton.style.backgroundColor = color.applab_button_teal;
   newButton.style.fontSize = defaultFontSizeStyle;
   newButton.style.fontFamily = fontFamilyStyles[0];
-  elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
+  elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
+
+  // newButton.style.color = color.white;
+  // newButton.style.backgroundColor = color.applab_button_teal;
+  // elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
 
   return Boolean(
     newButton.appendChild(textNode) &&
