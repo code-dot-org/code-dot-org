@@ -70,7 +70,7 @@ class PeerReviewSubmissions extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=all&email=${emailFilter ||
+      url: `/api/v1/peer_review_submissions/index?email=${emailFilter ||
         ''}&plc_course_id=${plcCourseId ||
         ''}&plc_course_unit_id=${plcCourseUnitId || ''}`,
       dataType: 'json'
