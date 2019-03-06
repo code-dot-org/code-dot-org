@@ -24,13 +24,14 @@ he:
       Comment: תגובה
       'Variables ': 'משתנים '
       everythingelse: כלהשאר
+      World: עולם
+      Location: מיקום
+      Behaviors: התנהגויות
       numbers: מספרים
       Numbers: מספרים
       Default: ברירת מחדל
-      World: עולם
       Dancers: רקדנים
       Groups: קבוצות
-      Behaviors: התנהגויות
       Advanced: מתקדם
       Start: התחל
       Locations: מיקומים

@@ -2960,6 +2960,10 @@ ar:
           *استخدم المربع البرمجي "عند الضغط على السهم الأيسر" لجعل الروبوت يقم بحركة رقص عند الضغط عليه.
 
           *ينتهي هذا المستوى بعد 8 إجراءات.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "هل ترى **فوانيس البحر** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? كيف يمكنك استخدام شرطٍ معها لتتجاوز نصب المحيط؟"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: يا لها من شعاب مرجانية جميلة! المرجان الأزرق هو الطريقة * * الصحيحة * * للمضي، وتحقق من أن المرجان الأحمر ليس إلى * * اليسار * *!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: تأكد من ضبط الرقم في "سرعة الكلب" لقيمة ما تكون أكبر من "سرعة القطة".
       Dance short test 2_authored_hint:

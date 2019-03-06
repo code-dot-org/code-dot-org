@@ -2959,6 +2959,14 @@
 
           * Du skal endre en bakgrunnseffekt et sted i den syvende takten av sangen.
           * Dette nivået ender etter 9 takter.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Se de ** havlanternene**! [] (https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Se de røde og blå korall blokkene? Bruk dem for å velge
+          høyre eller venstre.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe
           større enn `cat_speed`.

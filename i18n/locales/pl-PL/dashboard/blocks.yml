@@ -699,6 +699,11 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
       gamelab_debugSprite:
         options:
           VAL:
@@ -716,8 +721,43 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
             '"tint"': odcień
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': inne
       gamelab_jumpTo:
         text: "{SPRITE} skocz do {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
+          KEY:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"space"': przestrzeń
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_locationDelta:
         options:
           DIR:
@@ -735,6 +775,10 @@ pl:
         text: losowy kolor
       gamelab_setBackground:
         text: ustaw kolor tła {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miasto
       gamelab_setPosition:
         text: przenieś {THIS} do położenia {POSITION}
         options:
@@ -767,6 +811,11 @@ pl:
             '"height"': wysokość
       gamelab_setup:
         text: układ
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -1002,6 +1051,7 @@ pl:
       Vector_positionCenter:
         text: środek
       aalab_changePropByFlexible:
+        text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
           PROPERTY:
             '"scale"': rozmiar

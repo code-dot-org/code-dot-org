@@ -144,6 +144,11 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
       gamelab_debugSprite:
         options:
           VAL:
@@ -153,6 +158,18 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+            '"x"': এক্স
       gamelab_locationDelta:
         options:
           DIR:
@@ -166,6 +183,10 @@ bn:
         text: যেকোনো রঙ
       gamelab_randomColor:
         text: যেকোনো রঙ
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
       gamelab_setPosition:
         options:
           POSITION:
@@ -179,6 +200,11 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
       gamelab_spritesWhere:
         options:
           PROPERTY:

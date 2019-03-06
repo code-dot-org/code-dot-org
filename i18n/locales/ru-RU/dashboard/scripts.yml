@@ -2564,6 +2564,10 @@ ru:
               name: Цикл for в Художнике
             The Artist:
               name: Художник
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг
         dance-low:
           stages:
             Dance Party:

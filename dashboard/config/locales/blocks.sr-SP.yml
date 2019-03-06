@@ -144,6 +144,11 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': када
+            '"while"': док је
       gamelab_debugSprite:
         options:
           VAL:
@@ -153,6 +158,18 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': када
+            '"while"': док је
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -166,6 +183,10 @@ sr:
         text: насумична боја
       gamelab_randomColor:
         text: насумична боја
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Град
       gamelab_setPosition:
         options:
           POSITION:
@@ -179,6 +200,11 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': када
+            '"while"': док је
       gamelab_spritesWhere:
         options:
           PROPERTY:

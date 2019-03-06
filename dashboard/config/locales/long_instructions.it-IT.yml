@@ -1189,6 +1189,21 @@ it:
         **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
       CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
+      CourseE_HOC 2018 Level_10: "C'è un **calamaro** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        nascosto da qualche parte in questo Monumento oceanico, riesci a trovarlo?\n\n"
+      CourseE_HOC 2018 Level_11: Costruisci un muro di **prismarino** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        intorno al calcestruzzo nero. Così si attiverà il **condotto** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        e avrai completato la sfida!
+      CourseE_HOC 2018 Level_7a: "Hai scovato le rovine sottomarine. Cerca nell'arenaria,
+        c'è una **cassa** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        che contiene un tesoro in **prismarino** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Prima gli iceberg, ora la lava? Attraversa quest'isola
+        vulcanica e trova i **pesci tropicali** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        nella barriera corallina.\n\n"
+      CourseE_HOC 2018 Level_9b: "Sei arrivato alla barriera corallina, ora cerca
+        il **Cuore del mare** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Usa i coralli rossi e blu come punti di riferimento per raggiungere il **forziere**
+        del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con
         cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<br>\n<b>Attenzione</b>:
         se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove.

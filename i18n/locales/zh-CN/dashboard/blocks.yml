@@ -16,7 +16,7 @@ zh-CN:
             '"saturation"': 饱和度
             '"brightness"': 亮度
       Dancelab_changeMoveEachLR:
-        text: '在 GROUP[0] 中，进行 循环查找   {MOVE} {DIR} '
+        text: 在 {GROUP} 中，进行 循环查找 {MOVE} {DIR}
         options:
           GROUP:
             sprites: 所有
@@ -99,6 +99,7 @@ zh-CN:
             '"UNICORN"': 所有独角兽
           MOVE:
             '"rand"': 随机
+            MOVES.XBend: 弯曲
             MOVES.Roll: 身体转动
             MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 用力鼓掌
@@ -115,6 +116,7 @@ zh-CN:
             MOVES.XKnee: 膝盖
             MOVES.XKneel: 跪
             MOVES.XOle: Ole
+            MOVES.XArmsSide: 达到
             MOVES.XSlide: 滑动
             MOVES.Kick: 踢腿
             MOVES.XArmsUp: 拉伸
@@ -128,6 +130,7 @@ zh-CN:
         options:
           MOVE:
             '"rand"': 随机
+            MOVES.XBend: 弯曲
             MOVES.Roll: 身体转动
             MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 用力鼓掌
@@ -144,6 +147,7 @@ zh-CN:
             MOVES.XKnee: 膝盖
             MOVES.XKneel: 跪
             MOVES.XOle: Ole
+            MOVES.XArmsSide: 达到
             MOVES.XSlide: 滑动
             MOVES.Kick: 踢腿
             MOVES.XArmsUp: 拉伸
@@ -682,6 +686,11 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       gamelab_clickedOn:
         text: 当 {SPRITE} 被点击时
       gamelab_comment:
@@ -735,6 +744,10 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
             '"tint"': 色调
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': 其他
       gamelab_groupLength:
         text: "{THIS} 中的精灵数量"
       gamelab_hasBehavior:
@@ -755,6 +768,37 @@ zh-CN:
         text: "{SPRITE} 跳到 {LOCATION}"
       gamelab_keyDown:
         text: 键被按下 {KEY}
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -864,6 +908,10 @@ zh-CN:
         text: 将 {THIS} 的服装改为 {ANIMATION}
       gamelab_setBackground:
         text: 设置背景颜色为 {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
       gamelab_setDirection:
         text: 设置 {SPRITE} 移动方向为 {DIRECTION}
       gamelab_setFrameDelay:
@@ -905,6 +953,11 @@ zh-CN:
         text: 设置
       gamelab_showTitleScreen:
         text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -915,8 +968,6 @@ zh-CN:
             '"East"': 东
             '"South"': 南
             '"West"': 西
-      gamelab_spriteSay:
-        text: 精灵 {SPRITE} 说 {TEXT}
       gamelab_spritesWhere:
         text: 精灵的 {PROPERTY} 为 {VALUE}
         options:
@@ -1268,9 +1319,12 @@ zh-CN:
         options:
           PROPERTY:
             "'shapeColor'": 颜色
+      aalab_addBehaviorUntilBoolean:
+        text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
       aalab_addToSpriteGroup:
         text: 向组 {GROUP} 添加精灵 {SPRITE}
       aalab_changePropByFlexible:
+        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1320,6 +1374,10 @@ zh-CN:
             '"East"': 东
             '"South"': 南
             '"West"': 西
+      aalab_randomLocation:
+        text: 随机位置
+      aalab_removeOneAndAll:
+        text: 移除 {THIS}
       aalab_setBG:
         options:
           BG:

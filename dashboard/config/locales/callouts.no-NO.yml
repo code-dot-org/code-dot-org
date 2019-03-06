@@ -245,6 +245,9 @@
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Denne blokken lar deg tilpasse fargen til nesten hva du vil!
           Lek med tallene å se hva som skjer!
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Ny blokk!
+        dance_callout_11_b: Ny blokk!
       CourseD_Dance_Party_11_5_callout:
         dance_party_11_5_groups: Se her for "alle ender" blokker
       CourseF_PlayLab_vars1_callout:
@@ -254,6 +257,9 @@
           Klikk på en etikett for å se brikkene inni.
       Dance_Party_11.5_test_callout:
         dance_party_11.5_groups: Se her for "alle ender" blokker
+      Dance_Party_11_callout:
+        dance_callout_11_a: Ny blokk!
+        dance_callout_11_b: Ny blokk!
       Dance_Party_11_5_callout:
         dance_party_11_5_groups: Se her for "alle ender" blokker
       Eval Design Recipe .1_callout:

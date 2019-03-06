@@ -68,6 +68,7 @@ const styles = {
 
 export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
+    id: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
@@ -89,6 +90,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
   render() {
     const {
+      id,
       isRtl,
       responsiveSize,
       imageUrl,
@@ -103,7 +105,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     const width = responsiveSize === 'lg' ? '50%' : '100%';
 
     return (
-      <div style={styles.container}>
+      <div id={id} style={styles.container}>
         {heading && <div style={styles.heading}>{heading}</div>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
@@ -212,7 +214,8 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    hocLaunch: PropTypes.string
+    hocLaunch: PropTypes.string,
+    hasIncompleteApplication: PropTypes.bool
   };
 
   render() {
@@ -239,8 +242,31 @@ export class SpecialAnnouncementActionBlock extends Component {
       </div>
     );
 
-    return (
+    return !!this.props.hasIncompleteApplication ? (
       <TwoColumnActionBlock
+        id="teacher-application-continue-announcement"
+        imageUrl={pegasus(
+          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
+        )}
+        subHeading={
+          'Finish your application to the Professional Learning Program'
+        }
+        subHeadingSmallFont={true}
+        description={
+          'We noticed you started your application to the Code.org Professional Learning Program.\
+          Finish your application while seats last!'
+        }
+        buttons={[
+          {
+            id: 'teacher-application-continue-button',
+            url: '/pd/application/teacher',
+            text: 'Finish application'
+          }
+        ]}
+      />
+    ) : (
+      <TwoColumnActionBlock
+        id="teacher-nomination-announcement"
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-trophy.jpg'
         )}
@@ -251,6 +277,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Trophy()}
         buttons={[
           {
+            id: 'teacher-nomination-button',
             url: pegasus('/nominate'),
             text: i18n.nominateATeacher()
           }

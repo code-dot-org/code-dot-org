@@ -264,6 +264,21 @@ ja:
         "すべてのアヒル”のブロックを使用して、アヒルが全員一度にダンスするコードを書きましょう。
       CourseD_Dance_Party_11b: 思いっきりダンスする時間です！左矢印キーが押されると、ネコがダブの動きをします。右矢印キーを押したら、ロボットが”ドロップ”の動きをするようにしましょう。
       CourseD_Dance_Party_12: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
+      CourseE_HOC 2018 Level_10: "海底神殿のどこかに**イカ** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        が隠れています。見つけられるかな？\n\n"
+      CourseE_HOC 2018 Level_11: 黒いコンクリートの周りに**海晶ブロック** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        の壁を作りましょう。すると**コンジット** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        が起動してあなたのチャレンジも終了です！
+      CourseE_HOC 2018 Level_7a: "海底神殿を見つけました。砂岩を調べて**海晶ブロック** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        のお宝が入っている**チェスト** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        を探そう。\n\n"
+      CourseE_HOC 2018 Level_8: "初めは氷山だったのに今は溶岩？この火山島を通り抜けてサンゴ礁の**熱帯魚** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        を見つけましょう。\n\n"
+      CourseE_HOC 2018 Level_9b: 'サンゴ礁に着いた。次は**海の中心** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        を探そう！青と赤のサンゴを使ってお宝の**チェスト** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
+        にたどりつこう。
+
+'
       CourseF_PlayLab_vars2: |-
         さっきのゲームは、ネコが早すぎだったよね！
         'dog_speed'（ドッグ スピード） は、犬の早さを決めます。'cat_speed（キャット スピード）は、ネコの早さを決めます。

@@ -15513,6 +15513,11 @@ zh-CN:
 
         ** 使用这些键来做出 蹲下-拍手-蹲下-拍手 的动作，看你能做多快！ **
       CourseD_Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      CourseE_HOC 2018 Level_10: "这个海底遗迹的某个地方藏着一条**鱿鱼** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) ，你能找到它吗？\n\n"
+      CourseE_HOC 2018 Level_11: 在黑色混凝土附近建造一堵**海晶石**墙![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) 。此操作可激活**导管** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) ，完成挑战！
+      CourseE_HOC 2018 Level_7a: "找到了水下废墟。在沙石红搜寻包含**海晶石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)宝藏的**箱子** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)。\n\n"
+      CourseE_HOC 2018 Level_8: "先是冰山，现在又是岩浆？穿过火山岛，在珊瑚礁上寻找**热带鱼** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) in the coral reef。\n\n"
+      CourseE_HOC 2018 Level_9b: "成功抵达珊瑚礁，赶快搜寻**海洋之心**吧\n![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ！使用蓝色和红色珊瑚找到**宝箱** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。\n\n"
       CourseF_PlayLab_vars1: "玩这个游戏, 你不需要写任何代码, 只要点击 \"运行\"!\\r\n<hr/>\\r\n在这里, 你是那只试图比猫收集更多的旗子的狗。 \\r\n_ (使用向下箭头来移动。）_"
       CourseF_PlayLab_vars10: "自由游戏时间！这是除了使用过的所有变量，还有一些别的变量。\\r\n\\r\n注意：现在工具箱里有很多模块需要组织在一起！我们将这些模块放到了合适的分类中。花一些时间来看看每种类型都有哪些模块吧。当你看完后，可以用重复、变量和事件做出一个故事或者游戏。\\r\n\\r\n*提示：往下滚动鼠标来查看工作区的所有命令。*"
       CourseF_PlayLab_vars2: 最后关卡中的比赛不是很公平! 更改`dog_speed`（狗_速度）变量以确保你可以收集比猫更多的旗子。第一个收集到10面旗子的赢！
