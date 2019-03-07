@@ -3,7 +3,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 
-describe("Workshop Enrollment School Info", () => {
+describe('Workshop Enrollment School Info', () => {
   const fakeRouter = {
     createHref() {}
   };
@@ -12,20 +12,23 @@ describe("Workshop Enrollment School Info", () => {
     router: fakeRouter
   };
 
-  it("shows Total Attendance column for local summer workshop", () => {
+  it('shows Total Attendance column for local summer workshop', () => {
     let workshopEnrollmentSchoolInfo = shallow(
       <WorkshopEnrollmentSchoolInfo
         enrollments={[]}
         accountRequiredForAttendance={true}
-        onDelete={()=>{}}
+        onDelete={() => {}}
         workshopCourse="CS Principles"
         workshopSubject="5-day Summer"
         numSessions={5}
       />,
-      { context },
+      {context}
     );
 
-   expect(workshopEnrollmentSchoolInfo.find('th').filterWhere(col => col.text().includes('Total Attendance'))).to.have.length(1);
-
+    expect(
+      workshopEnrollmentSchoolInfo
+        .find('th')
+        .filterWhere(col => col.text().includes('Total Attendance'))
+    ).to.have.length(1);
   });
 });
