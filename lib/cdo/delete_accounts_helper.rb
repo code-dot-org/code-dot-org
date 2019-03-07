@@ -338,13 +338,16 @@ class DeleteAccountsHelper
   # @param [String] raw_email an email address.
   def purge_all_accounts_with_email(raw_email)
     email = raw_email.to_s.strip.downcase
+    hashed_email = User.hash_email(email)
 
-    # Note: Not yet taking into account parent_email or users with multiple
-    # email addresses tied to their account - we'll have to do that later.
-    (
-      User.with_deleted.where(email: email) +
-      User.with_deleted.where(hashed_email: User.hash_email(email))
-    ).each {|u| purge_user u}
+    # Note: Not yet taking into account parent_email; we'll have to do that
+    # later.
+    migrated_user_ids = AuthenticationOption.with_deleted.where(hashed_email: hashed_email).map(&:user_id)
+    migrated_users = User.with_deleted.where(id: migrated_user_ids)
+
+    unmigrated_users = User.with_deleted.where(hashed_email: User.hash_email(email))
+
+    migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
     remove_from_pardot_by_email(email)
     clean_pegasus_forms_for_email(email)
