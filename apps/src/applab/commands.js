@@ -23,6 +23,8 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
+import {actions} from './redux/applab';
+import {getStore} from '../redux';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -1578,7 +1580,9 @@ function filterUrl(urlToCheck) {
   })
     .success(data => {
       let approved = data['approved'];
-      console.log('Url determined safe to open: ' + approved);
+      getStore().dispatch(
+        actions.toggleRedirectNotice(true, approved, urlToCheck)
+      );
     })
     .fail((jqXhr, status) => {
       console.log('Error. Please re-run program');
