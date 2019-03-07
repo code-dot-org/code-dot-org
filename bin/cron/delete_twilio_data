@@ -18,7 +18,7 @@ def main
   # every five minutes. We further backtrack a minute for rounding error.
   date_to_delete = Time.now - (60 + 5 + 1) * 60
 
-  messages_to_delete = @client.account.messages.list(
+  messages_to_delete = @client.messages.list(
     date_sent: date_to_delete.strftime('%F'),
     page_size: 1000
   )
