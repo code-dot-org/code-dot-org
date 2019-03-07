@@ -29,7 +29,7 @@ const styles = {
   }
 };
 
-export default class RegionalPartnerMiniContact extends React.Component {
+export class RegionalPartnerMiniContact extends React.Component {
   static propTypes = {
     options: PropTypes.shape({
       user_name: PropTypes.string,
