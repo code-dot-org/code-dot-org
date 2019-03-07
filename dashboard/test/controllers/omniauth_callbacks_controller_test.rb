@@ -401,6 +401,30 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
+  test 'login: oauth takeover transfers sections to taken over account when users are created already-migrated' do
+    # TODO: elijah remove this test in favor of the above one when the migration is complete
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      teacher = create :teacher
+      section = create :section, user: teacher, login_type: 'clever'
+      oauth_student = create :student, provider: provider, uid: '12345'
+      oauth_student.migrate_to_multi_auth
+
+      student = create :student
+
+      oauth_students = [oauth_student]
+      section.set_exact_student_list(oauth_students)
+
+      # Pull sections_as_student from the database and store them in an array to compare later
+      sections_as_student = oauth_student.sections_as_student.to_ary
+
+      @request.cookies[:pm] = 'clever_takeover'
+      set_oauth_takeover_session_variables(provider, oauth_student)
+      check_and_apply_oauth_takeover(student)
+
+      assert_equal sections_as_student, student.sections_as_student
+    end
+  end
+
   test 'login: oauth takeover does not happen if takeover is expired' do
     User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
       teacher = create :teacher
@@ -1573,10 +1597,19 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   private
 
   def set_oauth_takeover_session_variables(provider, user)
-    @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-    @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-    @request.session[ACCT_TAKEOVER_UID] = user.uid
-    @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+    if user.migrated?
+      auth_option = user.authentication_options.find_by credential_type: provider
+      uid = auth_option.authentication_id
+    else
+      uid = user.uid
+    end
+
+    begin_account_takeover(
+      provider: provider,
+      uid: uid,
+      oauth_token: '54321',
+      force_takeover: false
+    )
   end
 
   # Try to link a credential to the provided user

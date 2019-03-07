@@ -283,10 +283,6 @@ module Pd::Application
           end
         end
 
-        if hash[:regional_partner_id].present?
-          required << :pay_fee
-        end
-
         if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
           required << :scholarship_reasons
         end

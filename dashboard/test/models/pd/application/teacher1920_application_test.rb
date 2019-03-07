@@ -479,23 +479,15 @@ module Pd::Application
       assert_equal %w(completingOnBehalfOfName travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
     end
 
-    test 'requires pay_fee if regional_partner_id is present' do
+    # We changed the possible answers to this question after opening the application,
+    # including removing some possible answers.  Since we can't reasonably backfill those,
+    # we are clearing them and making this field not required on the server (it's still
+    # required on the client for new applications).
+    test 'does not require pay_fee' do
       application_hash = build :pd_teacher1920_application_hash,
         regional_partner_id: create(:regional_partner).id,
         pay_fee: nil
       application = build :pd_teacher1920_application, form_data_hash: application_hash
-      refute_nil application.sanitize_form_data_hash[:regional_partner_id]
-      assert_nil application.sanitize_form_data_hash[:pay_fee]
-      refute application.valid?
-      assert_equal %w(payFee), application.errors.messages[:form_data]
-    end
-
-    test 'does not require pay_fee if regional_partner_id is not present' do
-      application_hash = build :pd_teacher1920_application_hash,
-        regional_partner_id: nil,
-        pay_fee: nil
-      application = build :pd_teacher1920_application, form_data_hash: application_hash
-      assert_nil application.sanitize_form_data_hash[:regional_partner_id]
       assert_nil application.sanitize_form_data_hash[:pay_fee]
       assert application.valid?
       assert_equal %w(), application.errors.messages[:form_data]
