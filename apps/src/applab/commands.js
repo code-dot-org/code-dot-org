@@ -1580,13 +1580,11 @@ function filterUrl(urlToCheck) {
   })
     .success(data => {
       let approved = data['approved'];
-      getStore().dispatch(
-        actions.toggleRedirectNotice(true, approved, urlToCheck)
-      );
+      getStore().dispatch(actions.addRedirectNotice(approved, urlToCheck));
     })
     .fail((jqXhr, status) => {
       // When this query fails, default to the dialog that allows the user to choose
-      getStore().dispatch(actions.toggleRedirectNotice(true, true, urlToCheck));
+      getStore().dispatch(actions.addRedirectNotice(true, urlToCheck));
     });
 }
 

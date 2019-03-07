@@ -9,19 +9,23 @@ import {actions} from './redux/applab';
 
 class RedirectDialog extends React.Component {
   static propTypes = {
-    url: PropTypes.string,
-    isApproved: PropTypes.bool,
-    isOpen: PropTypes.bool,
-    handleClose: PropTypes.func
+    handleClose: PropTypes.func,
+    redirects: PropTypes.array
   };
 
   render() {
     let title, body, footer;
-    if (this.props.isApproved) {
+    if (this.props.redirects.length === 0) {
+      return null;
+    }
+
+    let approved = this.props.redirects[0].approved;
+    let url = this.props.redirects[0].url;
+    if (approved) {
       title = i18n.redirectTitle();
       body = (
         <div>
-          <h2>{i18n.redirectConfirm({url: this.props.url})}</h2>
+          <h2>{i18n.redirectConfirm({url: url})}</h2>
           <p>
             {i18n.redirectExplanation()}
             <span>
@@ -40,7 +44,7 @@ class RedirectDialog extends React.Component {
             color={Button.ButtonColor.gray}
           />
           <Button
-            href={this.props.url}
+            href={url}
             target={'_blank'}
             text={i18n.continue()}
             color={Button.ButtonColor.orange}
@@ -62,11 +66,7 @@ class RedirectDialog extends React.Component {
     }
 
     return (
-      <Dialog
-        title={title}
-        isOpen={this.props.isOpen}
-        handleClose={this.props.handleClose}
-      >
+      <Dialog title={title} isOpen handleClose={this.props.handleClose}>
         <Body>
           {body}
           {footer}
@@ -78,13 +78,11 @@ class RedirectDialog extends React.Component {
 
 export default connect(
   state => ({
-    isOpen: state.redirectDisplay.displaying,
-    isApproved: state.redirectDisplay.approved,
-    url: state.redirectDisplay.url
+    redirects: state.redirectDisplay
   }),
   dispatch => ({
     handleClose() {
-      dispatch(actions.toggleRedirectNotice(false));
+      dispatch(actions.dismissRedirectNotice());
     }
   })
 )(RedirectDialog);
