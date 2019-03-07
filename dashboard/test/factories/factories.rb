@@ -55,6 +55,14 @@ FactoryGirl.define do
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
 
+    # Used to test specific interactions for older (unmigrated) users. This
+    # trait and associated tests can be removed when the work to migrate all
+    # users has been completed.
+    # TODO elijah
+    trait :demigrated do
+      after(:create, &:demigrate_from_multi_auth)
+    end
+
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
@@ -167,17 +175,6 @@ FactoryGirl.define do
           )
         end
       end
-      trait :with_email_authentication_option do
-        after(:create) do |user|
-          create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: AuthenticationOption::EMAIL,
-            authentication_id: user.hashed_email
-          )
-        end
-      end
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
@@ -253,16 +250,6 @@ FactoryGirl.define do
       trait :in_email_section do
         after(:create) do |user|
           section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
-          create :follower, student_user: user, section: section
-          user.reload
-        end
-      end
-
-      trait :imported_from_google_classroom do
-        unmigrated_google_sso
-        after(:create) do |user|
-          user.update!(email: '', hashed_email: '')
-          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
           create :follower, student_user: user, section: section
           user.reload
         end
@@ -413,36 +400,6 @@ FactoryGirl.define do
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :with_email_authentication_option do
-      after(:create) do |user|
-        create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
-        )
-      end
-    end
-
-    trait :with_migrated_email_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
         )
         user.update!(
           primary_contact_info: ao,

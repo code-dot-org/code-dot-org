@@ -61,7 +61,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if user cannot edit password" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -74,7 +74,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if password is incorrect" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'notmypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -96,7 +96,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: updates user password if password is correct" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'mypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
