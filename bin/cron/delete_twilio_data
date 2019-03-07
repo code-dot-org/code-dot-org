@@ -42,7 +42,7 @@ def main
       end
 
       message.delete
-    rescue Twilio::REST::RequestError => e
+    rescue Twilio::REST::RestError => e
       # Sanitize the exception message so that we don't expose secrets.
       e.message.gsub! CDO.twilio_sid, 'CDO.twilio_sid'
       Honeybadger.notify(e)
