@@ -85,7 +85,12 @@ pl:
       2-3 Bee Conditionals 11: "Jestem ciekaw, co tutaj jest! \\r \\r pomóż mi oblecieć cały teren i zebrać nektar tylko z kwiatów, które go mają. "
       2-3 Bee Conditionals 13: |-
         Wiele się tutaj dzieje!\r \r Skorzystaj z tego, czego się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód.
-      2-3 Bee Conditionals 14: "Połączmy wszystko razem!\\r\n\\r\nWykorzystaj to, czego nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów, które go mają, używając jak najmniejszej liczby bloków. \\r\n\\r\nNie zapomnij na koniec zrobić miodu."
+      2-3 Bee Conditionals 14: |-
+        Połączmy wszystko razem!\r
+        \r
+        Wykorzystaj to, czego nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów, które go mają, używając jak najmniejszej liczby bloków. \r
+        \r
+        Nie zapomnij na koniec zrobić miodu.
       2-3 Bee Conditionals 15: "Te schody wyglądają znajomo. \\r \\r Czy potrafisz zebrać nektar tylko z tych kwiatów, które go mają, używając możliwie najmniejszej liczby bloków?"
       2-3 Bee Conditionals 2: "Jestem głodną pszczółką! \\r\\r\\r Pomóż mi zebrać cały nektar z kwiatów, używając możliwie najmniejszej liczby bloków."
       2-3 Bee Conditionals 3: "Patrz na cały nektar! \\r \\r Pomóż mi zebrać nektar i zrobić miód używając możliwie najmniejszej liczby bloków.  "
@@ -272,6 +277,60 @@ pl:
       Course 4 Playlab For Loops 5b: Dostosuj wielkość przedziału (skoku) dla tych pętli "dla"tak, aby te dwie postacie zatrzymywały się dokładnie w tym samym miejscu.
       Course 4 SCFP 1: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując liczby dodatnie i ujemne).
       Course 4 SCVP 1: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując liczby dodatnie i ujemne).
+      CourseD_Dance_Party_01: |-
+        *Urządźmy potańcówkę!*
+
+        Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
+
+        * *Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej.*
+      CourseD_Dance_Party_02: |-
+        Stwórzmy ten taniec łosi!
+
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+
+        **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
+      CourseD_Dance_Party_03: "*Teraz się bawimy!*\n\nDodaj do swojego obszaru roboczego blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>. Spraw, aby tancerz zaczął nowy ruch po 6 taktach."
+      CourseD_Dance_Party_04: |-
+        *Ten taniec wymaga trochę świateł!*
+
+        W swoim zestawie narzędzi znajdź blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
+      CourseD_Dance_Party_05: |-
+        Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy **co 2 takty**!
+
+        *Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+      CourseD_Dance_Party_06: |-
+        *Potrzebujemy więcej tancerzy!*
+
+        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
+      CourseD_Dance_Party_08: |-
+        Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
+
+        Zmniejszając _wielkość_ tancerza możesz spowodować, że będzie wyglądał, jak gdyby był tancerzem drugiego planu. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
+      CourseD_Dance_Party_09: |-
+        Tancerze mają właściwość „odcień”, która pozwala dodać warstwę koloru. Spróbuj zmienić odcień jednego ze swoich tancerzy.
+        * Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
+      CourseD_Dance_Party_10: |-
+        Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
+        <xml>
+        <block type="Dancelab_startMapping">
+        < nazwa tytuł = "SPRITE" > right_pineapple < / title >
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ten program wykorzystuje „basy” (niskie tony) w muzyce do sterowania wysokością tancerza. Czy możesz spowodować, aby drugi tancerz także reagował na muzykę?
+      CourseD_Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.\n\nMożesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!"
+      CourseD_Dance_Party_11_5: "Sprawdź ten blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nTeraz możesz utworzyć wielu tancerzy na raz!\n\nSpróbuj użyć kilku bloków „wszystkie kaczki\", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem."
+      CourseD_Dance_Party_11b: |-
+        Czas, by potańczyć! Po naciśnięciu strzałki w lewo, Kot podnosi ręce do góry (ruch "dab"). Gdy naciśniesz strzałkę w prawo, Robot robi szpagat (ruch "drop") a klaszcze (ruch "clap"), gdy naciśniesz strzałkę do góry. 
+
+        **Użyj klawiszy, by Robot na przemian klaskał i robił szpagat tak szybko, jak potrafisz!**
+      CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      CourseE_HOC 2018 Level_10: "Gdzieś w tym Monumencie oceanicznym ukrywa się **kałamarnica** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png), czy potrafisz ją znaleźć?\n\n"
+      CourseE_HOC 2018 Level_11: Zbuduj mur z **pryzmarynu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) wokół czarnego betonu. Spowoduje to uaktywnienie **kanału** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) i zakończy Twoje wyzwanie!
+      CourseE_HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec, by odnaleźć **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Najpierw góry lodowe, a teraz lawa? Przeszukaj tę wulkaniczną wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).\n\n"
+      CourseE_HOC 2018 Level_9b: "Zrobiłeś to na rafie, teraz przeszukaj **Serce morza** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy! Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
       Dance_Party_01: |-
         *Urządźmy potańcówkę!*

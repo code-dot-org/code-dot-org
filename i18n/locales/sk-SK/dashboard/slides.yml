@@ -246,9 +246,9 @@ sk:
       1:
       2:
       3:
-        text: "Pre dostanie sa tam, kam chcete, zakrúžkujte smer, ktorým má isť."
+        text: "Aby sa tam dostala, zakrúžkuj smer, ktorým má ísť."
       4:
-        text: "Vytvorte si vlastný algoritmus pospájaním šipiek vedľa mapy, ktorú sa snažíte vyriešiť. To druhé je to isté, ale pôjde sa nadol."
+        text: "Vytvor si vlastný algoritmus tak, že šípky prilepíš vedľa mapy, ktorú sa snažíš vyriešiť. Druhá úloha je rovnaká, ale smerom nadol."
       5:
         text: "Je to ako programovanie s papierom. To je všetko!"
     C1_maze_debugging:
@@ -257,6 +257,11 @@ sk:
       2:
       3:
       4:
+    C1_moveitmoveit_unplugged:
+      1:
+        text: "Táto lekcia sa volá \"Pohni sa, pohni sa\". Spolu v nej napíšeme program, vďaka ktorému sa náš kamarát presunie zo začiatočného bodu s kompasom ku cieľu, na ktorom je smajlík."
+      2:
+      3:
     C1_going_places_safely:
       1:
         text: "Moje meno je Jeremiah. Ahoj! Mám sedem rokov. Rád sa hrám na maminom počítači, ale najprv musím dostať povolenie. \"Mami, môžem ísť na počítač? Iste zlatko!\""
@@ -277,6 +282,19 @@ sk:
         text: "Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje. Keď ladíš kód, identifikuješ a odstraňuješ chyby."
       2:
       3:
+    C2_graph_paper:
+      1:
+        text: "Táto lekcia sa nazýva \"Programovanie na štvorčekový papier\" a je celá o algoritmoch. Dnes sa naučíme písať programy, v ktorých budeme kresliť čierno-biele obrázky len pomocou šípiek."
+      2:
+      3:
+      4:
+    C2_relay_programming:
+      1:
+        text: "Dnes budeme programovať v štafete. Bude to o programovaní pod tlakom a o hľadaní a opravovaní chýb, ktoré sa stávajú, keď pracujete v tíme a naozaj rýchlo. Využijeme programovanie na štvorčekový papier, aby sme nasimulovali skutočné programovanie a štafetové preteky, aby sme cítili aj časový tlak."
+      2:
+        text: "V štafetovom programovaní sa tímy budú pretekať v písaní programu na štvorčekový papier. Musíš skontrolovať kamarátovu prácu a v prípade, že v nej nádeš chybu, tak túto chybu opraviť, pridať vlastnú šípku a rýchlo bežať so štafetou za ďalším členom tvojho tímu."
+      3:
+      4:
     C3_bee_debugging:
       1:
         text: "Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje. Keď ladíš kód, identifikuješ a odstraňuješ chyby."
@@ -325,6 +343,18 @@ sk:
         text: "Vieš si predstaviť, že by si mal niečo opakovať donekonečna? Stále znova a znova... Dúfajme, že to nikdy nebudeš musieť robiť, lebo v opakovaní sú fakt dobré počítače. Tento blok sa volá \"opakuj donekonečna\". Čokoľvek vo vnútri toho bloku sa bude v hre neustále opakovať."
       2:
         text: "Ak chceme, aby postava opakovala niečo bez toho, aby sa o to staral hráč, tak tie bloky umiestnime do vnútra bloku \"opakuj donekonečna\". V nasledujúcej úlohe je našim cieľom, aby Anna neustále chodila hore a dole. Ak sa naučíš používať opakovacie príkazy, ušetrí ti pri tvorbe vlastnej hry kopec času."
+    unplug3:
+      1:
+        text: "V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na kreslenie), podľa ktorého bude možné kresbu zreprodukovať."
+      2:
+    unplug4:
+      1:
+        text: "V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na kreslenie), podľa ktorého bude možné kresbu zreprodukovať."
+      2:
+    unplug5:
+      1:
+        text: "V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na kreslenie), podľa ktorého bude možné kresbu zreprodukovať."
+      2:
     starwars_intro:
       1:
       2:
@@ -355,6 +385,7 @@ sk:
       1:
       2:
       3:
+        text: "Počas najbližšej hodiny si spolu vybudujeme našu vlastnú hru Star Wars, pričom sa naučíme niekoľko základných programovacích konceptov. Väčšinou programátori vypisujú text, my ale použijeme bloky, ktoré budeme spájať a tým vytvoríme program. Na úvod si spolu s Rey naprogramujeme BB-8 tak, aby chodil a zbieral kovový šrot."
       4:
       5:
         text: "Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je príkaz, ktorému BB-8 rozumie."
@@ -718,7 +749,7 @@ sk:
         text: "Stacy: Gratulujem, zvládol si to! A teraz, keď si ukončil Hodinu Kódu, môžeš začať programovať v Minecrafte. Naučil si sa o cykloch, funkciách a práci softvérového Agenta."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
-        text: "Teraz je čas zahrať si voľný level, kde budeš ty vývojárom. Využi svoj voľný čas na napísanie svojich vlastných funkcií a objavuj, doluj a stavaj."
+        text: "Teraz je čas na hru - vývojárom sa stávaš ty! Využi svoj voľný čas na napísanie svojich vlastných funkcií a objavuj, doluj a stavaj."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
         text: "Môžeš si zobrať kód, ktorý si napísal v tomto leveli do svojho Minecraft sveta v Minecraft: Vzdelávacia edícia. Klikni na 'Ukončiť' a nasleduj inštrukcie, aby si dostal link, ktorý použiješ vo svojom svete, aby si mohol pokračovať v programovaní so svojim Agentom. Dobrá práca a veľa zábavy!"

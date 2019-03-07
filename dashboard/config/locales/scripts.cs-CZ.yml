@@ -1562,6 +1562,10 @@ cs:
               name: For cyklus zábavy
             The Artist:
               name: Umělec
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1580,6 +1584,8 @@ cs:
               name: 'Nezapojené: binární'
             Artist Binary:
               name: Umělecké binární
+            Dance Party:
+              name: Taneční večírek
         coursee-2019:
           stages:
             Building a Foundation:

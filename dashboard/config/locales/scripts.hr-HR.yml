@@ -1366,6 +1366,10 @@ hr:
               name: For Petlja Zabava
             The Artist:
               name: Umjetnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:

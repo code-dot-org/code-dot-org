@@ -24,19 +24,20 @@ ka:
       Comment: კომენტარი
       'Variables ': 'ცვლადები '
       everythingelse: ყველაფერი სხვა
+      World: სამყარო
+      Sprites: სპრაიტები
+      Location: ადგილმდებარეობა
+      Behaviors: ქცევა
       numbers: რიცხვები
       Numbers: რიცხვები
       Input: შემომავალი ინფორმაცია
       Default: ნაგულისხმევი
-      World: სამყარო
-      Sprites: სპრაიტები
-      Behaviors: ქცევა
+      Groups: ჯგუფები
       Advanced: დამატებით
       Start: დაწყება
       Locations: მდებარეობები
       Music: მუსიკა
       Dancing: ცეკვა
-      Groups: ჯგუფები
       Sprite: სპრაიტი
       Brush: ფუნჯი
       Make Sprite: სპრაიტის შექმნა

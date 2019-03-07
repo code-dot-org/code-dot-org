@@ -1579,6 +1579,8 @@ th:
               name: ลูป For ในเรื่องผึ้ง
             The Artist:
               name: ศิลปิน
+            Internet:
+              name: อินเทอร์เน็ต
         dance-low:
           stages:
             Dance Party:
@@ -1614,6 +1616,8 @@ th:
               name: พลเมืองดิจิทัล
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
+            Dance Party:
+              name: งานเต้นรำ
         coursee-2019:
           stages:
             Sequence in Maze:

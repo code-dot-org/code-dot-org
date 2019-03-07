@@ -24,20 +24,21 @@ nn:
       Comment: Kommentar
       'Variables ': 'Variablar '
       everythingelse: resten
+      World: Verd
+      Sprites: Sprites
+      Location: Stad
+      Behaviors: Atferd
       numbers: tal
       Numbers: Tal
       Input: Inngang
       Default: Standard
-      World: Verd
-      Sprites: Sprites
-      Behaviors: Atferd
+      Dancers: Dansarar
+      Groups: Grupper
       Advanced: Avansert
       Start: Start
       Locations: Stadar
       Music: Musikk
       Dancing: Dansing
-      Dancers: Dansarar
-      Groups: Grupper
       Sprite: Sprite
       Brush: Pensel
       Make Sprite: Lag Sprite
@@ -49,6 +50,8 @@ nn:
       Predefined: Forhåndsdefinerte
       test: test
       test2: test2
+      Use These Blocks: Bruk disse blokkene
+      Do Not Use: Ikke bruk
       Foo: Foo
       Name: Namn
       NEW BLOCKS: NYE BLOKKER

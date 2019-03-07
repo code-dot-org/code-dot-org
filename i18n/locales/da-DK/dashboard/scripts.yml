@@ -1464,6 +1464,10 @@ da:
               name: For loop sjov
             The Artist:
               name: Kunstneren
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1480,6 +1484,8 @@ da:
               name: 'Unplugged: Binære'
             Artist Binary:
               name: Kunstner binære
+            Dance Party:
+              name: Dansefest
         coursee-2019:
           stages:
             Building a Foundation:

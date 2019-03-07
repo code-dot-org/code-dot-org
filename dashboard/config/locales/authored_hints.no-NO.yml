@@ -2930,6 +2930,43 @@
           360 graders rotasjon fra en form, bortsett fra at vi overlapper formene
           med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr
           at vi trenger dobbelt så mange av dem som vanlig ("sider" * "2" repetisjoner). '
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+          * Pass på at en danser vises på skjermen.
+
+          * dette nivået slutter etter 4 takter.*
+        challenges: |-
+          ** Valgfrie utfordringer **
+          * Velg en annen sang å spille.
+          * Gi din danser nytt navn.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+          * Danseren må bytte til en ny posisjon etter 4 takter.
+
+          * Nivået ender etter 7 takter.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+
+          * Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.
+
+          * Nivået ender etter 11 takter.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+
+          * Du skal endre en bakgrunnseffekt et sted i den syvende takten av sangen.
+          * Dette nivået ender etter 9 takter.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Se de ** havlanternene**! [] (https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Se de røde og blå korall blokkene? Bruk dem for å velge
+          høyre eller venstre.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe
           større enn `cat_speed`.

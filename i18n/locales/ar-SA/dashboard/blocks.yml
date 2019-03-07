@@ -613,6 +613,11 @@ ar:
             '"x"': الموضع س
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
       gamelab_debugSprite:
         options:
           VAL:
@@ -632,6 +637,18 @@ ar:
             '"tint"': لون خفيف
       gamelab_jumpTo:
         text: "{SPRITE} انتقل إلى {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -649,6 +666,10 @@ ar:
         text: لون عشوائي
       gamelab_setBackground:
         text: عيّن لون الخلفية {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': مدينة
       gamelab_setPosition:
         text: انقل {THIS} إلى الموضع {POSITION}
         options:
@@ -681,6 +702,11 @@ ar:
             '"height"': الارتفاع
       gamelab_setup:
         text: الإعداد
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -908,6 +934,7 @@ ar:
       Vector_positionCenter:
         text: المنتصف
       aalab_changePropByFlexible:
+        text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -960,6 +987,11 @@ ar:
         options:
           DURATION:
             '"0"': إلى الأبد
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': إظهار
+            '"hide"': إخفاء
       binary_move:
         options:
           DIR:

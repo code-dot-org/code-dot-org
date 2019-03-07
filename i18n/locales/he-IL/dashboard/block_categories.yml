@@ -24,18 +24,19 @@ he:
       Comment: תגובה
       'Variables ': 'משתנים '
       everythingelse: כלהשאר
+      World: עולם
+      Location: מיקום
+      Behaviors: התנהגויות
       numbers: מספרים
       Numbers: מספרים
       Default: ברירת מחדל
-      World: עולם
-      Behaviors: התנהגויות
+      Dancers: רקדנים
+      Groups: קבוצות
       Advanced: מתקדם
       Start: התחל
       Locations: מיקומים
       Music: מוסיקה
       Dancing: ריקוד
-      Dancers: רקדנים
-      Groups: קבוצות
       Sprite: ספרייט
       Brush: מברשת
       Make Sprite: צור ספרייט

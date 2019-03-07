@@ -4,4 +4,15 @@ class Api::V1::Pd::RegionalPartnerMiniContactsController < Api::V1::Pd::FormsCon
   def new_form
     @contact_form = ::Pd::RegionalPartnerMiniContact.new
   end
+
+  def on_successful_create
+    # Assume email opt-in is no, since this form doesn't ask.
+    EmailPreference.upsert!(
+      email: @contact_form.email,
+      opt_in: false,
+      ip_address: request.ip,
+      source: EmailPreference::FORM_PD_REGIONAL_PARTNER_MINI_CONTACT,
+      form_kind: "0"
+    )
+  end
 end

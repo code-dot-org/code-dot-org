@@ -354,6 +354,8 @@ tr:
               name: Bağlantısız Dersler
             Writing computer programs:
               name: Bilgisayar programları yazma
+            new stage:
+              name: yeni kademe
         netsim:
           title: İnternet Simülatörü
           stages:
@@ -7201,6 +7203,12 @@ tr:
               name: yeni kademe
             The Artist:
               name: Sanatçı
+            Internet:
+              name: İnternet
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+            Digital Sharing:
+              name: Dijital Paylaşım
         dance-low:
           stages:
             Dance Party:
@@ -7241,6 +7249,8 @@ tr:
               name: Sanaçtı İkili Taban
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
+            Dance Party:
+              name: Dans Partisi
         coursee-2019:
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
           description_audience: '8-12 yaş grubu'
@@ -7318,6 +7328,8 @@ tr:
               name: Frozen'da İç İçe Döngüler
             Conditionals in Minecraft:
               name: Minecraft' da Koşullar
+            Digital Sharing:
+              name: Dijital Paylaşım
         express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
@@ -8090,3 +8102,7 @@ tr:
               name: Örnek uygulamalar
             Final Project:
               name: Final projesi
+        csp1-pilot:
+          stages:
+            new stage:
+              name: yeni kademe

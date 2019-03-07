@@ -562,6 +562,11 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': wenn
+            '"while"': solange
       gamelab_debugSprite:
         options:
           VAL:
@@ -578,6 +583,19 @@ de:
             '"tint"': Farbton
       gamelab_jumpTo:
         text: "{SPRITE} springen Sie zu {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': wenn
+            '"while"': solange
+          KEY:
+            '"up"': hoch
+            '"down"': runter
+            '"left"': links
+            '"right"': rechts
+            '"space"': Weltall
+            '"x"': x
+            '"y"': y
       gamelab_locationDelta:
         options:
           DIR:
@@ -595,6 +613,10 @@ de:
         text: zufällige Farbe
       gamelab_setBackground:
         text: Hintergrundfarbe einstellen {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Stadt
       gamelab_setPosition:
         text: verschieben Sie {THIS} auf die Position {POSITION}
         options:
@@ -627,6 +649,11 @@ de:
             '"height"': Höhe
       gamelab_setup:
         text: Setup
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': wenn
+            '"while"': solange
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -845,6 +872,7 @@ de:
       Vector_positionCenter:
         text: Mitte
       aalab_changePropByFlexible:
+        text: Änderung {SPRITE} {PROPERTY} bis {VAL}.
         options:
           PROPERTY:
             '"scale"': Größe
@@ -897,6 +925,11 @@ de:
         options:
           DURATION:
             '"0"': für immer
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': zeige
+            '"hide"': ausblenden
       binary_move:
         options:
           DIR:

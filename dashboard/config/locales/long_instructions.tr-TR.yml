@@ -4248,7 +4248,7 @@ tr:
         çizerek programı değiştirmek için girişimde bulunun.\r\n\r\n\r\n<img src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\"\nstyle=\"width:150px;
-        border: 1px solid grey; margin:20px;\">\r\n"
+        border: 1px solid grey; margin:20px;\">\r"
       CSD U3 Variables Challenge_2019: "# Meydan Okuma: Değişkenleri Güncelleme\r\n\r\n_Bu
         meydan okuma ile  mücadele etmeden önce öğretmenin ile birlikte kontrol et._\r\n\r\nŞimdiye
         kadar bir değişkene bir defa değer atadık ama program çalışırken değişkeni
@@ -4257,7 +4257,7 @@ tr:
         çizerek programı değiştirmek için girişimde bulunun.\r\n\r\n\r\n<img src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\"\nstyle=\"width:150px;
-        border: 1px solid grey; margin:20px;\">\r\n"
+        border: 1px solid grey; margin:20px;\">\r"
       CSD U3 Variables Draw Challenge: "# Meydan Okuma: Bir Resim Çiz\r\n\r\n_Bu meydan
         okuma ile mücadele etmeden önce öğretmenin ile birlikte kontrol et._\r\n\r\nDeğişken
         kullanma, büyüklük ya da konum için bir çok ögesi genel değişkene bağlı bir
@@ -6348,7 +6348,7 @@ tr:
       Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/>\r\n\r\nSerbest
         ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu
         resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını
-        yap.\r\n"
+        yap.\r"
       Course 4 Artist 13: Oynamaya devam ediyor musun? Burada istediğin şekilde bir
         şeyler yarata bileceğin boş tuval var!
       Course 4 Artist 2: "Gri dışarı kare çizmek için bir döngü kullanabilirmisin?
@@ -6765,6 +6765,87 @@ tr:
         zıplamasını sağlayan bir fonksiyon yazın.(pozitif ve negatif sayıları kullanın).
       Course 4 Variables Assessment: Be şekli kenarlar için değişken kullanarak yapabilir
         misin? Her bir kenar 50 piksel uzunluğunda olmalıdır.
+      CourseD_Dance_Party_01: |-
+        *Dans partisi yapalım!*
+
+        İlk dansçınızı yaratmak için `yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın.
+
+        * *Eğer daha fazla bilgi almak veya ek görevler istiyorsanız sol taraftaki ampüle tıklayın.*
+      CourseD_Dance_Party_02: |-
+        Bu geyik dansını alalım!
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> bloğunu çalışma alanına sürükleyin. <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> bloğunun altına bağlayın. Dansçınız dördüncü ölçüden sonra yeni bir harekete başlayacaktır.
+
+
+        **Ölçüler** müziğin içindeki zamanı hesaplamak için kullanılır. Bu eğitimde bir ölçü dört vuruş uzunluğundadır.
+      CourseD_Dance_Party_03: |-
+        *Şimdi hareketleniyoruz!*
+
+        Çalışma alanına bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> bloğu ekleyin. Dansçının 6 ölçü sonra yeni bir harekete başlamasını sağlayın.
+      CourseD_Dance_Party_04: |-
+        *Bu dansın biraz parıltıya ihtiyacı var!*
+
+        Araç kutunuzda dansçınızın arkasına bir arka plan efekti ekleyecek yeni bir blok arayın. Efektin müzik ilerledikçe değişimini izleyin!
+      CourseD_Dance_Party_05: |-
+        Dansçının **her 2 ölçüde bir** hareket değiştirmesini sağlamak için başka bir yeni blok kullanın!
+
+        * `(İleri)`, `(Geri)`, veya `(Rastgele)` seçenekleri ile kod her çalıştığında dansçınıza farklı bir hareket yapma komutu verirsiniz.
+      CourseD_Dance_Party_06: |-
+        *Daha fazla dansçıya ihtiyacımız var!*
+
+        Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli bir arka plan dansçısı yaratın.
+      CourseD_Dance_Party_08: |-
+        Her dansçının nasıl göründüğünü belirleyen bir _özellikler_ seti vardır.
+
+        _boyut_ küçülterek bir dansçının arka planda dans eden bir dansçı gibi görünmesini sağlayabilirsiniz. İki arka plan dansçısını da aynı boyuta getirebilir misiniz?
+      CourseD_Dance_Party_09: |-
+        Dansçılar kendilerine yeni bir renk katmanı ekleyen bir "renk tonu" özelliğine sahiptir. Dansçılarınızdan birinin renk tonunu değiştirmeye çalışın.
+        * Renk tonu özelliği sayesinde seçtiğiniz renk ve dansçının rengi karışacaktır.
+      CourseD_Dance_Party_10: |-
+        Artık bir dansçının özelliklerinin nasıl değiştirildiğini biliyoruz. Ayrıca aynı özelliklerin bu bloğu kullanan müziğe otomatik olarak tepki vermelerini sağlayabiliriz.
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Bu program bir dansçının boyunun kontrolü için müziğin "bas" (düşük) seslerini kullanır. Diğer dansçıların da müziğe tepki vermesini sağlayabilir misiniz?
+      CourseD_Dance_Party_11: |-
+        <xml><block type="Dancelab_whenKey"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.
+
+        Dans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!
+      CourseD_Dance_Party_11_5: |-
+        Bu bloğa bir bakın:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Artık tek seferde birden çok dansçı yaratabilirsiniz!
+
+        Tüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için "tüm ördekler" bloklarının bazılarını kullanmayı deneyin.
+      CourseD_Dance_Party_11b: Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi
+        dab dansı yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
+      CourseD_Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla
+        paylaşın.
+      CourseE_HOC 2018 Level_10: Bir **kalamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        bu Okyanus Anıtı içinde bir yerlerde saklanıyor, onu bulabilir misin?
+      CourseE_HOC 2018 Level_11: Siyah beton etrafına **prizmarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        duvarı ör. Bu **su yolunu** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        harekete geçirecek ve görevini tamamlayacak!
+      CourseE_HOC 2018 Level_7a: Sualtı harabelerini buldun. **Prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        hazinesi içeren **sandığı** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        bulmak için kumtaşını ara.
+      CourseE_HOC 2018 Level_8: Önce buz dağları, şimdi de lav mı? Bu volkanik adayı
+        geç ve mercan resifi içinde **tropikal balığı** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        bul.
+      CourseE_HOC 2018 Level_9b: Resife geldin, şimdi de **Denizin Kalbini** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ara! Hazine **sandığına** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
+        ulaşmak için mavi ve kırmızı mercanları kullan.
       CourseF_PlayLab_vars1: "Bu oyunu oynamak için herhangi bir kod yazmak zorunda
         değilsiniz, sadece \"Çalıştır\" a tıklayın!\r\n<hr/>\r\nBurada kediden daha
         fazla bayrak toplamaya çalışan köpeksiniz.\r\n_(Use the down arrow\nto move.)_"

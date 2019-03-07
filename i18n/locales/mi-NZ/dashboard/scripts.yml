@@ -1251,6 +1251,10 @@ mi:
               name: Kia Ngahau te Mahi Koromeke
             The Artist:
               name: Te Rehetoi
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu
         coursed-2019:
           stages:
             Relay Programming:

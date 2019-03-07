@@ -103,7 +103,7 @@ class Level < ActiveRecord::Base
 
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
-    @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
+    @@specified_autoplay_video[video_key] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
   def summarize_concepts
@@ -470,7 +470,8 @@ class Level < ActiveRecord::Base
   def summary_for_lesson_plans
     summary = summarize
 
-    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference).each do |key|
+    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
+       rubric_key_concept rubric_exceeds rubric_meets rubric_approaches rubric_no_evidence mini_rubric).each do |key|
       value = properties[key] || try(key)
       summary[key] = value if value
     end

@@ -869,6 +869,8 @@ bn:
               name: কার্ড সঙ্গে শর্ত
             The Artist:
               name: শিল্পী
+            Internet:
+              name: ইন্টারনেট
         coursed-2019:
           stages:
             Relay Programming:

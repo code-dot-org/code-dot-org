@@ -660,6 +660,11 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
       gamelab_debugSprite:
         options:
           VAL:
@@ -677,6 +682,36 @@ sk:
             '"tint"': sfarbenie
       gamelab_jumpTo:
         text: "{SPRITE} skoč {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
+          KEY:
+            '"up"': hore
+            '"down"': dole
+            '"left"': vľavo
+            '"right"': vpravo
+            '"space"': vesmír
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_locationDelta:
         options:
           DIR:
@@ -694,6 +729,10 @@ sk:
         text: náhodná farba
       gamelab_setBackground:
         text: nastav farbu pozadia {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
       gamelab_setPosition:
         options:
           POSITION:
@@ -720,6 +759,11 @@ sk:
             '"height"': výška
       gamelab_setup:
         text: nastavenie
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -956,6 +1000,7 @@ sk:
       Vector_positionCenter:
         text: v strede
       aalab_changePropByFlexible:
+        text: zmeň {SPRITE} {PROPERTY} o {VAL}
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -1008,6 +1053,11 @@ sk:
         options:
           DURATION:
             '"0"': nekonečne
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': ukáž
+            '"hide"': skry
       binary_move:
         options:
           DIR:
@@ -1035,8 +1085,8 @@ sk:
         options:
           DIR:
             "'ahead'": vpredu
-            "'right'": do prava
-            "'left'": do ľava
+            "'right'": doprava
+            "'left'": doľava
       craft_ifStandingOn:
         text: |-
           ak stojíš na {TYPE}
@@ -1088,7 +1138,7 @@ sk:
             '"blackConcrete"': čierny betón
             '"seaGrass"': morská tráva
             '"kelp"': chaluha
-            '"polishedGranite"': vybrúsený granit
+            '"polishedGranite"': leštený granit
       craft_placePrismarine:
         text: umiestni prismarín
       craft_placeTorch:
@@ -1115,5 +1165,5 @@ sk:
         text: otoč sa {DIR}
         options:
           DIR:
-            right: vpravo
-            left: vľavo
+            right: vpravo ↻
+            left: vľavo ↺

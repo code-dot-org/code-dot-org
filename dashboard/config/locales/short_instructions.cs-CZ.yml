@@ -1514,6 +1514,32 @@ cs:
       Course E MC Conditionals1: Nejcennější suroviny najdeš v podzemí, ale je tam
         tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Course1BeePuzzle12: Získej tři nektary a pak udělej dva medy
+      CourseD_Dance_Party_01: Do pracovního prostoru přetáhni blok `vytvořit nový`
+        a připoj ho dovnitř bloku `nastavení`.
+      CourseD_Dance_Party_02: Přiměj losa začít po 4 taktech nový pohyb!
+      CourseD_Dance_Party_03: Nyní přiměj tanečníka začít po 6 taktech nový pohyb!
+      CourseD_Dance_Party_04: Do svého programu přidej efekt pozadí.
+      CourseD_Dance_Party_05: Další nový blok použij k tomu, aby tanečník každé 2
+        takty měnil pohyby.
+      CourseD_Dance_Party_06: Vytvoř záložního tanečníka nazvaného `záložní_tanečník1`,
+        který bude tančit s kočkou.
+      CourseD_Dance_Party_08: Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
+      CourseD_Dance_Party_09: Pomocí bloku `nastavit odstín` změň barvu tanečníka.
+      CourseD_Dance_Party_10: Přiměj dalšího tanečníka také reagovat na hudbu pomocí
+        bloku `začíná následující`.
+      CourseD_Dance_Party_11: Blok `když nahoru stisknuta` ti umožní spustit kód stisknutím
+        na šipku nahoru. Zkus přimět tanečníka hýbat se rychleji po stisknutí šipky
+        nahoru.
+      CourseD_Dance_Party_11_5: Pomocí bloků "všechny kachny" přiměj kachny tančit
+        spolu.
+      CourseD_Dance_Party_11b: Přiměj Robota, aby "poklesl", když stiskneš šipku vpravo,
+        a "high clap", když stiskneš šipku nahoru. Střídej pokles-clap co nejrychleji!
+      CourseD_Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho
+        s kamarády.
+      CourseE_HOC 2018 Level_10: Dostaň se do vchodu tohoto Mořského monumentu.
+      CourseE_HOC 2018 Level_11: Uvnitř Mořského monumentu vybuduj potrubí.
+      CourseE_HOC 2018 Level_7a: V podmořských ruinách hledej truhlu.
+      CourseE_HOC 2018 Level_9b: Použij korál jako souřadnice k dosažení pokladu.
       CourseF_PlayLab_vars1: 'Chcete-li hrát tuto hru, není nutné napsat žádný kód,
         stačí kliknout na "Spustit"! '
       CourseF_PlayLab_vars10: "Čas k volnému hraní! Zde jsou všechny proměnné, se

@@ -228,6 +228,9 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
 
+  has_many :user_school_infos
+  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+
   has_one :circuit_playground_discount_application
 
   has_many :pd_applications,
@@ -284,8 +287,26 @@ class User < ActiveRecord::Base
   # @param new_school_info a school_info object to compare to the user current school information.
   def update_school_info(new_school_info)
     if school_info.try(&:school).nil? || new_school_info.try(&:school)
-      update_column(:school_info_id, new_school_info.id)
+      self.school_info_id = new_school_info.id
+      save(validate: false)
     end
+  end
+
+  def update_and_add_users_school_infos
+    last_school = user_school_infos.find_by(end_date: nil)
+    current_time = Time.now.utc
+    if last_school
+      last_school.end_date = current_time
+      last_school.save!
+    end
+    UserSchoolInfo.create(
+      user: self,
+      school_info: school_info,
+      user_id: id,
+      start_date: current_time,
+      school_info_id: school_info_id,
+      last_confirmation_date: current_time
+    )
   end
 
   # Not deployed to everyone, so we don't require this for anybody, yet
@@ -844,9 +865,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def update_primary_contact_info(user: {email: nil, hashed_email: nil})
-    new_email = user[:email]
-    new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
+  def update_primary_contact_info(new_email: nil, new_hashed_email: nil)
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : new_hashed_email
 
     return false if new_email.nil? && new_hashed_email.nil?
     return false if teacher? && new_email.nil?
@@ -882,8 +902,8 @@ class User < ActiveRecord::Base
     success
   end
 
-  def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
-    success = update_primary_contact_info(user: user)
+  def update_primary_contact_info!(new_email: nil, new_hashed_email: nil)
+    success = update_primary_contact_info(new_email: new_email, new_hashed_email: new_hashed_email)
     raise "User's primary contact info was not updated successfully" unless success
     success
   end
@@ -906,7 +926,7 @@ class User < ActiveRecord::Base
     hashed_email = params.delete(:hashed_email)
     should_update_contact_info = email.present? || hashed_email.present?
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
+      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
       update!(params)
     end
   rescue
@@ -929,15 +949,22 @@ class User < ActiveRecord::Base
     update(user_type: TYPE_STUDENT)
   end
 
-  def upgrade_to_teacher(email, email_preference)
+  def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
     return false unless email.present?
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
+
+    new_attributes = email_preference.nil? ? {} : email_preference
+
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email})
-      update!(email_preference)
+      if migrated?
+        update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
+      else
+        new_attributes[:email] = email
+      end
+      update!(new_attributes)
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
@@ -1508,6 +1535,12 @@ class User < ActiveRecord::Base
 
   def most_recently_assigned_script
     most_recently_assigned_user_script.script
+  end
+
+  def can_access_most_recently_assigned_script?
+    return false unless script = most_recently_assigned_user_script&.script
+
+    !script.pilot? || script.has_pilot_access?(self)
   end
 
   def user_script_with_most_recent_progress

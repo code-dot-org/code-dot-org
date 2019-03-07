@@ -607,6 +607,7 @@ zh-CN:
         用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。
 
         一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。
+      Applab allthethings onRecordEvent: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       Artist Autorun Test: 现在，将函数放到循环里来画这三个正方形。
       Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\r\n\r\n自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！\r\n\r\n如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。
         \n\r\n\r\n注意：我们已经用`set alpha`（设置透明度）模块来让花瓣慢慢淡出。"
@@ -6183,11 +6184,11 @@ zh-CN:
       CSD U3 Variables Challenge_2018: "# 挑战：更新变量\r\n\r\n_开始这个挑战前，先问问你的老师。_\r\n\r\n目前为止，我们仅仅给一个变量赋了一次值，但你知道变量能在程序执行中更新吗？通读一下提供的程序，运行它几次来理解一下它是如何工作的，然后试着改变程序来画下面的某幅图。\r\n\r\n\r\n<img\nsrc=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\"\nstyle=\"width:150px;
-        border: 1px solid grey; margin:20px;\">\r\n"
+        border: 1px solid grey; margin:20px;\">\r"
       CSD U3 Variables Challenge_2019: "# 挑战：更新变量\r\n\r\n_开始这个挑战前，先问问你的老师。_\r\n\r\n目前为止，我们仅仅给一个变量赋了一次值，但你知道变量能在程序执行中更新吗？通读一下提供的程序，运行它几次来理解一下它是如何工作的，然后试着改变程序来画下面的某幅图。\r\n\r\n\r\n<img\nsrc=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\"\nstyle=\"width:150px;
         border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\"\nstyle=\"width:150px;
-        border: 1px solid grey; margin:20px;\">\r\n"
+        border: 1px solid grey; margin:20px;\">\r"
       CSD U3 Variables Draw Challenge: "# 挑战：画一个图像\r\n\r\n_开始这个挑战前，先问问你的老师。_\r\n\r\n用变量来存放一个会在多个条目上使用的尺寸或位置。例如，画一张脸时，控制眼睛、耳朵、和鼻孔的尺寸和位置的变量。画完后，可以试着改变这些变量的值来让整个图片一起变化。\r\n"
       CSD U3 Variables Draw Challenge_2018: "# 挑战：画一个图像\r\n\r\n_开始这个挑战前，先问问你的老师。_\r\n\r\n用变量来存放一个会在多个条目上使用的尺寸或位置。例如，画一张脸时，控制眼睛、耳朵、和鼻孔的尺寸和位置的变量。画完后，可以试着改变这些变量的值来让整个图片一起变化。\r\n"
       CSD U3 Variables Draw Challenge_2019: "# 挑战：画一个图像\r\n\r\n_开始这个挑战前，先问问你的老师。_\r\n\r\n用变量来存放一个会在多个条目上使用的尺寸或位置。例如，画一张脸时，控制眼睛、耳朵、和鼻孔的尺寸和位置的变量。画完后，可以试着改变这些变量的值来让整个图片一起变化。\r\n"
@@ -8566,6 +8567,88 @@ zh-CN:
         变量超级挑战: ** 你已经学会了制作像这样的图案的所有知识了！这关有点困难。你能坚持下去，直到找到解决方案吗？  "
       Course 4 SCVP 1: 创建一个函数，能够让小艺术家往前或者往后跳x像素，而且也能让他往上或者往下跳y个像素。（使用正数和负数）
       Course 4 Variables Assessment: 你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。
+      CourseD_Dance_Party_01: |-
+        *让我们开个舞会吧！*
+
+        将“新建”模块拖到工作区，并关联到“设置”模块，创建第一个舞者。
+
+        * *如果需要了解更多信息或其他挑战，可以点击左侧的灯泡。*
+      CourseD_Dance_Party_02: |-
+        让这只驼鹿舞动起来吧！
+
+        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">新舞者</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">线条</title><title name="DIR">-1</title></block></xml>模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小节"</title></block></xml>模块。舞者应在第四个小节后开始新的动作。
+
+
+        **小节**用于音乐计时。本教程中，一个小节长度为四个节拍。
+      CourseD_Dance_Party_03: |-
+        *现在跟着节奏动起来！*
+
+        在工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小节"</title></block></xml>模块。让舞者在 6 个小节后开始新的动作！
+      CourseD_Dance_Party_04: |-
+        *给舞蹈加点炫酷效果！*
+
+        在工具箱中找到一个能添加背景效果的模块。然后跟随音乐节拍，来看看新的效果吧！
+      CourseD_Dance_Party_05: |-
+        使用其他新模块让舞者**每 2 个小节**变换动作！
+
+        **选择“(下一步)”、“(上一步)”或“(随机)”，让舞者在代码每次运行时做不同的动作。
+      CourseD_Dance_Party_06: |-
+        *我们需要更多舞者！*
+
+        创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
+      CourseD_Dance_Party_08: |-
+        每个舞者都有一系列控制其外观的 _属性设置_。
+
+        可以通过缩小舞者的 _大小_ 使它看上去像是在后排。你能让两个伴舞大小一样吗？
+      CourseD_Dance_Party_09: |-
+        舞者有可以添加颜色层的"tint"（色调）属性。尝试更改其中一个舞者的色调。
+        * 色调将会将选择的颜色与舞者的颜色混合。
+      CourseD_Dance_Party_10: |-
+        现在知道了如何更改舞者的属性，还可以使用此模块让相同的属性自动对音乐做出响应：
+
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">右边的独角兽</title>
+        <title name="PROPERTY">"比例"</title>
+        <title name="RANGE">"base"（低音）</title>
+        </block></xml>
+
+        此程序使用音乐的"bass"（最低频率的声音）音量来控制舞者的高度。可以让其他舞者也对音乐有响应吗？
+      CourseD_Dance_Party_11: |-
+        <xml><block type="Dancelab_whenKey"></block></xml> 模块可以在上方向键按下时运行代码。
+
+        可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！
+      CourseD_Dance_Party_11_5: |-
+        查看此模块：
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"鸭子"</title>
+        <title name="LAYOUT">"圆圈"</title>
+        </block></xml>
+
+        现在可以一次创建多个舞者了！
+
+        尝试使用“所有鸭子”模块写入让所有鸭子一起跳舞的代码。
+      CourseD_Dance_Party_11b: |-
+        跳舞时间到了！按下左方向键时，猫会轻拍。让机器人在按下右方向键时"蹲下"，并在按下上方向键时"拍手"。
+
+        ** 使用这些键来做出 蹲下-拍手-蹲下-拍手 的动作，看你能做多快！ **
+      CourseD_Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      CourseE_HOC 2018 Level_10: "这个海底遗迹的某个地方藏着一条**鱿鱼** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        ，你能找到它吗？\n\n"
+      CourseE_HOC 2018 Level_11: 在黑色混凝土附近建造一堵**海晶石**墙![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        。此操作可激活**导管** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        ，完成挑战！
+      CourseE_HOC 2018 Level_7a: "找到了水下废墟。在沙石红搜寻包含**海晶石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)宝藏的**箱子**
+        ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)。\n\n"
+      CourseE_HOC 2018 Level_8: "先是冰山，现在又是岩浆？穿过火山岛，在珊瑚礁上寻找**热带鱼** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        in the coral reef。\n\n"
+      CourseE_HOC 2018 Level_9b: |+
+        成功抵达珊瑚礁，赶快搜寻**海洋之心**吧
+        ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ！使用蓝色和红色珊瑚找到**宝箱** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。
+
       CourseF_PlayLab_vars1: "玩这个游戏, 你不需要写任何代码, 只要点击 \"运行\"!\r\n<hr/>\r\n在这里, 你是那只试图比猫收集更多的旗子的狗。
         \r\n_ (使用向下箭头来移动。）_"
       CourseF_PlayLab_vars10: "自由游戏时间！这是除了使用过的所有变量，还有一些别的变量。\r\n\r\n注意：现在工具箱里有很多模块需要组织在一起！我们将这些模块放到了合适的分类中。花一些时间来看看每种类型都有哪些模块吧。当你看完后，可以用重复、变量和事件做出一个故事或者游戏。\r\n\r\n*提示：往下滚动鼠标来查看工作区的所有命令。*"
@@ -10734,6 +10817,50 @@ zh-CN:
         width=\"200px\"/>\n<hr/>\n<br/>\n制作装饰品!  \n<img src=\"https://images.code.org/361d2ad667853418a040ec9383505169-image-1466096394561.56.12.png\"
         width=\"200px\"/>\n<hr/>\n\n<br/>\n做一些全新的东西! \n<img src=\"https://images.code.org/6809a1bd2a364ae7e0ff42745ec1fe1b-image-1466097871045.23.44.png\"
         width=\"200px\"/>\n<hr/>\n\n</details>\n</h4>\n\n"
+      allthethings data blocks test: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings design mode elements: |-
+        #测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        相当长的说明的结尾。
+      allthethings level dataTables: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings_template_backed1: '备份模板#1. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。 '
+      allthethings_template_backed2: 备份模板#2. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       allthethings_ttscsd: "<img src=\"https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10\nPM.png\"
         style=\"float:right;height:150px\">\r\n\r\n# 这样做\r\n\r\n* 写代码在绿色椭圆后面画一个橙色的椭圆。\r\n*
         别担心确切的尺寸，只要整个绿色椭圆在橙色里就行。"
@@ -11432,6 +11559,7 @@ zh-CN:
       courseC19_playLab_EOC4: "让好几个角色动起来，是游戏的好的开始，但我们需要增加更多的东西，让它感觉起来是个真游戏。让我们添加分数！\r\n\r\n用`当演员碰到`这样的事件模块来改变分数。得到10分来通关。"
       courseC19_playLab_EOC5: 做的好！你有了一个游戏所有基本的部分了。现在花点时间来确保游戏会像你像的那样工作。加入一个胜利或失败的方法，然后玩到触发这些条件。
       courseC19_playLab_EOC6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
+      courseC_PlayLab_events6_2019: 现在，写一个程序让企鹅四处移动，使用上/下/左/右键命中所有目标！
       courseC_PlayLab_events7: "`一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
       courseC_PlayLab_events7_2018: "`一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
       courseC_PlayLab_events7_2019: "`一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"

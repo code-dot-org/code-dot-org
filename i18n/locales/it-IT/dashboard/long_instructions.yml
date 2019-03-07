@@ -90,7 +90,9 @@ it:
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
         - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
-      2-3 Bee Conditionals 14: "Metti insieme tutto ciò che hai imparato!<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine."
+      2-3 Bee Conditionals 14: |-
+        Metti insieme tutto ciò che hai imparato!<br>
+        Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
       2-3 Bee Conditionals 15: "Questo percorso a gradini ormai dovrebbe essere familiare.<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi."
       2-3 Bee Conditionals 2: "Ciao, sono un'ape!<br>\nAiutami a raccogliere tutto il nettare dai fiori, usando il minor numero possibile di blocchi.<br><br>\n<b>Suggerimento</b>: Usa il blocco `ripeti ... volte` (<i>ciclo</i>)."
       2-3 Bee Conditionals 3: "Aiutami a raccogliere tutto il nettare dai fiori e a produrre tutto il miele, usando il minor numero possibile di blocchi.<br><br>\n<b>Suggerimento</b>: usa il blocco `ripeti ... volte` (<i>ciclo</i>)."
@@ -305,7 +307,10 @@ it:
 
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tempo di giocare:**  Ecco il codice per una figura interessante.   \n\nChe cosa succede se la ripeti più volte, girando ad ogni iterazione?   \n\nNota che il codice per disegnarla fa ruotare l'artista di *420 gradi* in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente *60 gradi a destra* rispetto alla direzione iniziale.\n\n<hr/>\n\n<h4>\n<details>\n\n<summary>\n\n<b>Ripeti 4</b>\n\n</summary>\n<br/>\nSe vuoi fare un giro completo con solo 4 ripetizioni, l'artista deve ruotare di **360 gradi/4 = 90 gradi** ogni volta. Puoi farlo aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura (dato che **60+30 = 90**).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-a.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" /><br/>\n<a href=\"https://studio.code.org/c/120106816\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti 6</b>\n\n</summary>\n<br/>\nSe ripeti per 6 volte questo codice così com'è, ottieni una rotazione totale pari a **6x60**, ossia un giro completo di **360 gradi**.<br>\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" /><br/>\n<a href=\"https://studio.code.org/c/105644852\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti 12</b>\n\n</summary>\n\n<br/>\nSe vuoi invece ripetere la figura 12 volte, l'artista deve effettuare una rotazione di **360 gradi/12 = 30 gradi** ad ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti 60-30 = 30).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-b.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/>\n<a href=\"https://studio.code.org/c/120106805\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\nNow it's your turn!  Can you recreate each image by repeating the starting shape?  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/><br>\n<br>\nE ora una piccola sfida!<br>\n<br>\nPer ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br>\n<br>\n<b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href=\"https://studio.code.org/s/course4/stage/3/puzzle/11\" target=\"_blank\">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa."
-      Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/><br>\nOra hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo."
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist 13: Hai ancora voglia di giocare? Ecco una tela bianca su cui puoi disegnare qualunque cosa tu voglia!
       Course 4 Artist 2: "Riesci ad inserire questo codice in un ciclo per disegnare il quadrato in grigio? Ogni lato è lungo 300 pixel."
       Course 4 Artist 20: "Hai ancora voglia di giocare? Ecco una tela bianca su cui puoi disegnare qualunque cosa tu voglia!"
@@ -354,7 +359,13 @@ it:
       Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"\nwidth=\"250px\"/><br>\nOra hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo."
       Course 4 Artist Vars 1: "Disegniamo un triangolo equilatero. <br>\n<br>\nOgni lato deve essere lungo esattamente 100 pixel."
       Course 4 Artist Vars 11: "Quello che vedi è un codice che utilizza, in maniera più complessa, gli stessi concetti del precedente esercizio. Quale valore devi assegnare alla variabile `sides` (<i>lati</i>) per disegnare questa immagine composta da quadrati?<br>\n<br>\n<i>Divertiti: prova con diversi numeri di `sides` (<i>lati</i>) per vedere come si modifica la figura!</i>"
-      Course 4 Artist Vars 12: "Per disegnare la figura che vedi, la variabile `sides` (<i>lati</i>) va impostata a 5. Se usi valori più grandi disegni poligoni con più lati ed ottieni una figura più grande!\\n\\n\\nNota che, oltre alla variabile `sides` (<i>lati</i>), c'è un'altra variabile chiamata `length` (<i>lunghezza</i>). Puoi utilizzare questa variabile ogni volta che devi `spostarti in avanti`.\n\nPer disegnare questa figura la variabile `length` (<i>lunghezza</i>) va impostata a 75."
+      Course 4 Artist Vars 12: |-
+        Per disegnare la figura che vedi, la variabile `sides` (<i>lati</i>) va impostata a 5. Se usi valori più grandi disegni poligoni con più lati ed ottieni una figura più grande!\\
+        \\
+        \\
+        Nota che, oltre alla variabile `sides` (<i>lati</i>), c'è un'altra variabile chiamata `length` (<i>lunghezza</i>). Puoi utilizzare questa variabile ogni volta che devi `spostarti in avanti`.
+
+        Per disegnare questa figura la variabile `length` (<i>lunghezza</i>) va impostata a 75.
       Course 4 Artist Vars 13: "Quando una figura ha molti lati, ogni lato deve essere più corto se desideri che l'intero modello si adatti allo schermo.<br>\nRicrea l'algoritmo per questo bellissimo modello, ma anziché impostare manualmente la variabile `length` (<i>lunghezza</i>), usa un blocco matematico con all'interno la variabile `sides` (<i>lati</i>) per assicurarti che ogni forma si adatti correttamente. Il perimetro di ciascun poligono è 300 pixel."
       Course 4 Artist Vars 14: |-
         Tempo di giocare: Guarda! Ora l'algoritmo precedente è annidato all'interno di un altro ciclo. Fai degli esperimenti modificando i valori delle due variabili per disegnare delle figure fantastiche.<br><br>
@@ -499,6 +510,56 @@ it:
       Course 4 SCV 5: "<b>Super Sfida sulle variabili:</b> risolvi questo esercizio con il minore numero possibile di blocchi!"
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/><br>\n<b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?"
       Course 4 SCVP 1: Crea una funzione con parametri che permetta all'artista di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel (con numeri positivi e negativi).
+      CourseD_Dance_Party_01: |-
+        *Organizziamo una festa e balliamo alla grande!*
+
+        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"`.
+
+        * *Clicca sulla lampadina qui a sinistra, se desideri dei suggerimenti o vuoi affrontare delle sfide aggiuntive.*
+      CourseD_Dance_Party_02: |-
+        Facciamo ballare un po’ questo alce!
+
+        Trascina il blocco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> nell'area di lavoro e inseriscilo sotto al blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dopo la quarta battuta, il tuo ballerino dovrebbe cominciare ad eseguire una nuova mossa.
+
+
+        Le **battute** in musica sono l’unità di misura del tempo. In questa esercitazione una battuta corrisponde a quattro secondi.
+      CourseD_Dance_Party_03: "*Adesso sì che ci stiamo scatenando!*\n\nAggiungi un blocco <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> alla tua area di lavoro e fai cominciare al ballerino una nuova mossa dopo 6 battute."
+      CourseD_Dance_Party_04: |-
+        *Dobbiamo vivacizzare un po’ questo ballo!*
+
+        Cerca nella cassetta degli attrezzi un nuovo blocco che aggiunga un effetto allo sfondo dietro al tuo ballerino. Osserva come gli effetti cambiano a tempo di musica!
+      CourseD_Dance_Party_05: |-
+        Usa un altro nuovo blocco per far cambiare mosse al ballerino **ogni 2 battute**!
+
+        * Selezionando `(successiva)`, `(precedente)`, o `(casuale)` si ordina al ballerino di eseguire una mossa diversa ogni volta che il codice viene eseguito (e quindi ogni due battute).
+      CourseD_Dance_Party_06: |-
+        *Abbiamo bisogno di altri ballerini!*
+
+        Crea un ballerino secondario `backup_dancer1` che balli assieme al gatto.
+      CourseD_Dance_Party_08: |-
+        Ogni ballerino ha un certo numero di _proprietà_ che controllano il suo aspetto.
+
+        Puoi creare l’illusione che un ballerino sia posizionato sullo sfondo, riducendo la sua _dimensione_. Riesci a rendere entrambi i ballerini secondari delle stesse dimensioni ridotte?
+      CourseD_Dance_Party_09: |-
+        I ballerini sono dotati di una proprietà chiamata “tonalità” capace di aggiungere uno strato di colore. Prova a modificare la tonalità di uno dei tuoi ballerini.
+        * La tonalità che scegli si mescola con i colori originali del ballerino.
+      CourseD_Dance_Party_10: |-
+        Ora sappiamo come modificare le proprietà di un ballerino e possiamo anche fare in modo che queste proprietà cambino automaticamente seguendo la musica, usando questo blocco:
+        <xml> <block type="Dancelab_startMapping"> <title name="SPRITE">right_unicorn</title> <title name="PROPERTY">"scale"</title> <title name="RANGE">"bass"</title> </block></xml>
+
+        Questo programma usa livello dei toni bassi delle canzoni per controllare l’altezza di un ballerino. Sei in grado di far reagire alla musica anche gli altri ballerini?
+      CourseD_Dance_Party_11: "Il blocco <xml><block type=\"Dancelab_whenKey\"></block></xml> consente di eseguire il codice sottostante quando premi il tasto freccia in su (↑).\n\nPuoi modificare la mossa da eseguire, le proprietà di un ballerino oppure fare una mossa veloce una volta sola. Libera la tua creatività e cerca nuovi blocchi!"
+      CourseD_Dance_Party_11_5: "Dai un’occhiata a questo blocco:\n\n<xml>   <block type=\"Dancelab_makeNewDanceSpriteGroup\">     <title name=\"N\">6</title>     <title name=\"COSTUME\">\"DUCK\"</title>     <title name=\"LAYOUT\">\"circle\"</title>   </block></xml>\n\nOra sei in grado di creare un gruppo di ballerini in un colpo solo!\n\nProva ad usare alcuni blocchi `\"tutti i paperi\" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme."
+      CourseD_Dance_Party_11b: |-
+        E ora una sfida all’ultima mossa! Quando premi la freccia a sinistra (←) il Gatto fa la "dab". Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
+
+        **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
+      CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato da condividere con i tuoi amici.
+      CourseE_HOC 2018 Level_10: "C'è un **calamaro** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) nascosto da qualche parte in questo Monumento oceanico, riesci a trovarlo?\n\n"
+      CourseE_HOC 2018 Level_11: Costruisci un muro di **prismarino** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) intorno al calcestruzzo nero. Così si attiverà il **condotto** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) e avrai completato la sfida!
+      CourseE_HOC 2018 Level_7a: "Hai scovato le rovine sottomarine. Cerca nell'arenaria, c'è una **cassa** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) che contiene un tesoro in **prismarino** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Prima gli iceberg, ora la lava? Attraversa quest'isola vulcanica e trova i **pesci tropicali** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) nella barriera corallina.\n\n"
+      CourseE_HOC 2018 Level_9b: "Sei arrivato alla barriera corallina, ora cerca il **Cuore del mare** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Usa i coralli rossi e blu come punti di riferimento per raggiungere il **forziere** del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<br>\n<b>Attenzione</b>: se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br>\n<br>\nOra ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esaminare tutto ciò che è a tua disposizione. Scorri verso il basso per vedere tutti i comandi nell'area di lavoro.<br>\n<br>\n<i>Scorri verso il basso per vedere tutti i comandi presenti nell'area di lavoro.</i><br>\nQuando hai finito la tua esplorazione, prova a creare un gioco oppure una storia usando i cicli, le variabili e gli eventi. "
       CourseF_PlayLab_vars2: "Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata `dog_speed` (<i>velocità del cane</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine, vince!\n<br><a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       CourseF_PlayLab_vars3: "Ecco un nuovo tipo di gioco!<br><br>Non devi modificare niente in questo esercizio.<br><br>Utilizza le frecce verso sinistra e verso destra per muoverti, e la freccia verso l'alto per saltare. Riesci a raccogliere tutte le bandierine?"
@@ -1702,6 +1763,7 @@ it:
         Usa dei blocchi verdi gestori di eventi come `quando il personaggio ... tocca ...` per modificare il punteggio. Per completare l'esercizio, fai in modo che giocando il punteggio diventi uguale a 10 e vai a toccare la bandierina.
       courseC19_playLab_EOC5: "Ottimo lavoro! Hai tutto il necessario per far funzionare bene il gioco.\nOra dedica un po' di tempo a controllare che il gioco funzioni proprio come desideravi. Aggiungi un modo per vincere e perdere, quindi gioca fino a raggiungere una di queste due condizioni."
       courseC19_playLab_EOC6: Hai finito! Ora puoi giocare con il tuo videogioco o condividerlo con i tuoi amici e compagni di classe!
+      courseC_PlayLab_events6_2019: Ora scrivi un programma per poter spostare il pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra, in modo da fargli raggiungere tutte le bandierine!
       courseC_PlayLab_events7: |-
         Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
 
@@ -2307,7 +2369,14 @@ it:
         - ogni lato dovrebbe essere lungo 15 pixel
         - dovresti girare di 90 gradi
         - ripeti queste azioni per un totale di 4 volte
-      courseD_artist_5_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prova a modificare le forme o le lunghezze delle linee per personalizzare il tuo fiocco di neve! \"_\n\n<br/>\n\n**Ispirazione:** Puoi modificare il disegno come preferisci, ma ecco qui una possibile idea:\n\n- prova a invertire la forma nel mezzo del fiocco di neve con quella alla termine di ogni linea!"
+      courseD_artist_5_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Prova a modificare le forme o le lunghezze delle linee per personalizzare il tuo fiocco di neve! "_
+
+        <br/>
+
+        **Ispirazione:** Puoi modificare il disegno come preferisci, ma ecco qui una possibile idea:
+
+        - prova a invertire la forma nel mezzo del fiocco di neve con quella alla termine di ogni linea!
       courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prova a modificare le forme o le lunghezze delle linee per personalizzare il tuo fiocco di neve! \"_\n\n<br/>\n\n**Ispirazione:** Puoi modificare il disegno come preferisci, ma ecco qui una possibile idea:\n\n- prova a invertire la forma nel mezzo del fiocco di neve con quella alla termine di ogni linea!"
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag.\"_\n\n<br/>\n\n**Ispirazione:** Prova a modificare la tua  linea lunga 150 pixel in 6 linee corte di **25** pixel\n\n- Gira di **45** gradi in direzioni alternate dopo ogni linea corta per ottenere un effetto a zig-zag\n- Dove devi mettere un nuovo blocco `ripeti ... volte` per realizzare questo nuovo effetto?\n- Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in totale?"
       courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag.\"_\n\n<br/>\n\n**Ispirazione:** Prova a modificare la tua  linea lunga 150 pixel in 6 linee corte di **25** pixel\n\n- Gira di **45** gradi in direzioni alternate dopo ogni linea corta per ottenere un effetto a zig-zag\n- Dove devi mettere un nuovo blocco `ripeti ... volte` per realizzare questo nuovo effetto?\n- Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in totale?"

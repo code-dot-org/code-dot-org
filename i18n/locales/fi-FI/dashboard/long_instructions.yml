@@ -130,6 +130,57 @@ fi:
       Course 4 Artist 8a: Muistatko tämän muodon? Nyt saat rakentaa ilman valmiita aloituspalikoita!
       Course 4 Artist For Loops 13: Hmm, muodothan kasvavat kerta kerralta! Tämän ongelman voi ratkaista variaabeleilla. Kuinka laskuri-variaabelia käytetään sivujen pienentämiseen, nyt kun sivuja on enemmän? Sen sijaan, että siirtyisit eteenpäin asettamalla luvun, yritä liikkua eteenpäin (100/laskuri) kuvapisteillä.
       Course 4 Artist For Loops Challenge_a: "Keksitkö, kuinka voit käyttää kaikkia oppimiasi asioita tämän kuvan luomiseen? \\r\n\\r\nJos haluat vinkin, napsauta tästä."
+      CourseD_Dance_Party_01: |-
+        *Pidetään tanssibileet!*
+
+        Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin sisällä luodaksesi ensimmäisen tanssijasi.
+
+        * * Voit myös klikata hehkulamppua vasemmalla, jos haluat lisätietoja tai lisää haastetta.*
+      CourseD_Dance_Party_02: |-
+        Pistetään hirvi tanssimaan!
+
+        Raahaa <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokki työtilaan. Yhdistä ne <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokin alla. Tanssijasi pitäisi aloittaa uusi liike neljännen tahdin jälkeen
+
+
+        ** Tahdeilla ** voidaan laskea aika musiikissa. Tässä opetusohjelmassa tahti on neljä lyöntiä.
+      CourseD_Dance_Party_03: "*Nyt groovaillaan!*\n\nLisää <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> blokki työtilaasi. Laita tanssija aloittamaan uusi liike 6 tahdin jälkeen"
+      CourseD_Dance_Party_04: |-
+        *Tämä tanssi tarvitsee välkettä!*
+
+        Etsi työkalupakistasi uusi blokki, jolla lisäät taustaefektin tanssijasi taakse. Katso, kuinka efektit muuttuvat musiikin tahtiin!
+      CourseD_Dance_Party_05: |-
+        Käytä uutta blokkia saadaksesi tanssijasi muuttamaan liikkeitään **joka toisella tahdilla**!
+
+        * Valitsemalla `(Seuraava)`, `(Edellinen)` tai `(Satunnainen)` pyydät tanssijaasi tekemään eri liikkeen joka kerta, kun koodia käytetään.
+      CourseD_Dance_Party_06: |-
+        * Tarvitsemme enemmän tanssijoita! *
+
+        Luo taustatanssija nimellä `backup_dancer1` tanssimaan kissan kanssa.
+      CourseD_Dance_Party_08: |-
+        Jokaisella tanssijalla on joukko _ominaisuuksia_, jotka määrittävät, miltä se näyttää.
+
+        Voit saada tanssijan näyttämään siltä, kuin se olisi taustalla, tekemällä sen _koosta_ pienemmän. Voitko tehdä molemmista taustatanssijoista samankokoisia?
+      CourseD_Dance_Party_09: |-
+        Tanssijoilla on “sävy”-ominaisuus, jolla voi lisätä kerroksen väriä. Koeta vaihtaa yhden tanssijasi sävyä.
+        *Sävyt sekoittavat valitsemasi värin tanssijan värien kanssa.
+      CourseD_Dance_Party_10: |-
+        Nyt osaamme muuttaa tanssijan ominaisuuksia. Voimme myös laittaa samat ominaisuudet vastaamaan automaattisesti musiikkiin tässä blokissa:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block >< xml >
+
+        Tämä ohjelma käyttää musiikin “basson” volyymiä (matalia ääniä) kontrolloimaan yhden tanssijan pituutta. Saatko muutkin tanssijat vastaamaan musiikkiin?
+      CourseD_Dance_Party_11: "Tämä <xml><block type=\"Dancelab_whenKey\"></block></xml> blokki antaa sinun käyttää koodia, kun ylänuolta painetaan.\n\nVoit muuttaa tanssiliikettä, muuttaa tanssijan ominaisuuksia, tai tehdä yhden nopean liikkeen kerran. Ole luova, ja etsi uusia blokkeja!"
+      CourseD_Dance_Party_11b: |-
+        On tanssikisan aika! Kissa napauttaa, kun painat vasenta nuolinäppäintä. Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
+      CourseE_HOC 2018 Level_10: "Siellä on **kalmari** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) jossain piilosilla tässä Ocean Monumentissa. Löydätkö sen?"
+      CourseE_HOC 2018 Level_11: Rakenna muuri **prismariinista** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) mustan betonin ympärille. Tämä aktivoi **väylän** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) ja täydentää haasteesi!
+      CourseE_HOC 2018 Level_7a: "Löysit vedenalaiset rauniot. Tutki hiekkakiveä löytääksesi **arkun** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) joka sisältää **prismariinisen** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) aarteen."
+      CourseE_HOC 2018 Level_8: "Ensin jäävuoria, nyt laavaa? Käy läpi tämän tulivuorisaaren, ja löydä** trooppisia kaloja ** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) koralliriutoilla."
+      CourseE_HOC 2018 Level_9b: "Saavutit riutan, nyt etsi ** Valtameren sydän** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)! Käytä sinistä ja punaista korallia päästäksesi **aarrearkulle** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
       Dance_Party_01: |-
         *Pidetään tanssibileet!*
 

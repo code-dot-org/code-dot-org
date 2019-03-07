@@ -465,6 +465,7 @@ zh-CN:
       Applab AllTheThings ResourcesTab AllResources: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab MapReference: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab ReferenceLinks: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
+      Applab allthethings onRecordEvent: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       Applab test: 这一关可提交。仅用于测试！
       Artist - Nested Loops 1: '完成代码来画出这些三角形。第一个三角形已经帮你画好了。提示：三个三角形一共旋转了360度。'
       Artist - Nested Loops 10: 通过循环已有的模块来画出旗帜上最后一行星星。这些星星都是30像素宽，而且它们之间距离50像素。
@@ -974,6 +975,23 @@ zh-CN:
       Course 4 Variables Assessment: 你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。
       Course E MC Conditionals1: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Course1BeePuzzle12: 获得3个花蜜，然后酿两个蜂蜜。
+      CourseD_Dance_Party_01: 将`新建`模块拖到工作区，并关联到`设置`模块。
+      CourseD_Dance_Party_02: 让驼鹿在 4 个小节后做新动作！
+      CourseD_Dance_Party_03: 现在让舞者在 6 个小节后开始做新动作！
+      CourseD_Dance_Party_04: 为程序添加背景效果。
+      CourseD_Dance_Party_05: 使用其他新模块让舞者每 2 个小节变换动作。
+      CourseD_Dance_Party_06: 创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
+      CourseD_Dance_Party_08: 你能让两个伴舞的大小相同吗？
+      CourseD_Dance_Party_09: 使用`设置色彩`模块，更改一个舞者的颜色。
+      CourseD_Dance_Party_10: 使用`开始跟随`模块，让另一个舞者也对音乐做出响应。
+      CourseD_Dance_Party_11: '`当按下上方向键时`模块可以在按下上方向键时运行代码。尝试让舞者在按下上方向键时快速移动。'
+      CourseD_Dance_Party_11_5: 使用“所有鸭子”模块，让鸭子一起跳舞。
+      CourseD_Dance_Party_11b: 让机器人在按下右方向键时“掉落”，在按下上方向键时"鼓掌"。做掉落-鼓掌舞动作要尽可能快！
+      CourseD_Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      CourseE_HOC 2018 Level_10: 前往海底遗迹的入口。
+      CourseE_HOC 2018 Level_11: '在海底遗迹内使用海晶石制作一个导管。'
+      CourseE_HOC 2018 Level_7a: 搜索水下废墟，寻找箱子。
+      CourseE_HOC 2018 Level_9b: '把珊瑚当做航标，找到宝藏。'
       CourseF_PlayLab_vars1: '玩这个游戏不需要写任何代码, 只要点击 "运行"! '
       CourseF_PlayLab_vars10: "自由发挥时间! 下面是我们在这个阶段所玩过的所有变量, 以及一些你可能需要的额外变量。\\r\n\\r\n注意到我们的工具箱中现在有这么多的模块, 它们需要整理! 在这里, 我们把每一块放到一个合适的类别中。花些时间去探索所有可用的东西。完成浏览后, 使用重复，变量和事件来制作游戏或故事。 \\r\n\\r\n提示: 向下滚动来查看工作区中的所有指令。"
       CourseF_PlayLab_vars2: 最后关卡中的比赛不是很公平! 更改`dog_speed`（狗_速度）变量以确保你可以收集比猫更多的旗子。第一个收集到10面旗子的赢！
@@ -1741,7 +1759,12 @@ zh-CN:
       aE7: "如果你创建一个和这个很像的循环，但是往左转，而不是往右转，会怎样呢？\\r\n\\r\n你能重复它来画出波浪吗？"
       aE8: "现在，让我们把所有东西重复4次来画出这个画框。小心转角 -- 你不能只转90度！\\r\n\\r\n如果转60次3度，就会创建出一个半圆，什么样的代码能创建出1/4圆的转角？"
       allHallows2017: 通过绘制一个正方形320像素的边, 在蜡笔框中框住 Code.org 员工!
+      allthethings data blocks test: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings design mode elements: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings level dataTables: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: 做这个
+      allthethings_template_backed1: '备份模板#1. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。 '
+      allthethings_template_backed2: '备份模板#2. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。'
       allthethings_ttscsf contained: 摘下所有的莴苣(只在有莴苣的时候)。
       artistDebugVideo1: 使用 "重复" 循环在水中添加波浪。
       artistFunctionsVideo1: 按照说明来做出你自己的函数

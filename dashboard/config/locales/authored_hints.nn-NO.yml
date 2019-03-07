@@ -2946,6 +2946,107 @@ nn:
           360 graders rotasjon fra en form, bortsett fra at vi overlapper formene
           med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr
           at vi trenger dobbelt så mange av dem som vanlig ("sider" * "2" repetisjoner). '
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Sørg for at det er ein dansar på skjermen.
+
+          *Denne øvinga endar etter 4 taktar.*
+        challenges: |-
+          **Ekstrautfordringer**
+          * Vel ein annan song.
+          * Vel ein dansar som ser ut som ein elg!
+          * Gi dansaren nytt navn.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          *Denne øvingar endar etter 8 taktar.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          *Denne øvinga ender etter 12 taktar.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må ha minst to dansarar.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Legg til ein tredje dansar (eller så mange du vil!)
+          * Få alle dansarane dine til å danse ulike dansar på ulike tidspunkt i songen.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * To av dansarane må ha ei anna storleik enn 100.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Eksperimenter ved å endre andre eigenskapar (breidde, høgde, rotasjon osv.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Skift farge på minst ein dansar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må endre eigenskapane til to eller flere dansarar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Bruk ‘når venstrepila blir trykka ned’-blokka til å få roboten til å gjere ein bestemt dans når du trykkar på venstrepila.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Ser du **sjølanternene** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Korleis kan du bruke eit vilkår for å komme deg gjennom havmonumentet?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Ser du dei røde og blå korall-blokkene? Bruk dei som guide
+          for å snu til høgre og venstre gjennom revet.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe
           større enn `cat_speed`.
