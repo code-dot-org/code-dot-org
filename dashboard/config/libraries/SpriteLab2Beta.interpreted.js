@@ -264,6 +264,198 @@ function countByCostume(animationName) {
   return allSpritesWithAnimation(animationName).length;
 }
 
+/**
+ * Given a group with an abitrary number of sprites, arrange them in a particular
+ * layout. This is likely to change some or all of position/rotation/scale for
+ * the sprites in the group.
+ */
+function layoutSprites(animation, format) {
+  group = allSpritesWithAnimation(animation);
+
+  // Begin by resizing the entire group.
+  // group.forEach(sprite => this.setProp(sprite, 'scale', 30));
+
+  var count = group.length;
+  var minX = 20;
+  var maxX = 400 - minX;
+  var minY = 35;
+  var maxY = 400 - 40;
+  var radiansToDegrees = 180 / Math.PI;
+  var maxCircleRadius = 165;
+  var i, sprite, pct, radius, maxRadius, numRings;
+
+  if (format === "circle") {
+    // Adjust radius of circle and size of the sprite according to number of
+    // sprites in our group.
+    pct = constrain(count / 10, 0, 1);
+    radius = lerp(50, maxCircleRadius, pct);
+    var scale = lerp(0.8, 0.3, pct * pct);
+    var startAngle = -Math.PI / 2;
+    var deltaAngle = 2 * Math.PI / count;
+
+    group.forEach(function (sprite, i) {
+      var angle = deltaAngle * i + startAngle;
+      sprite.x = 200 + radius * Math.cos(angle);
+      sprite.y = 200 + radius * Math.sin(angle);
+      sprite.rotation = (angle - startAngle) * radiansToDegrees;
+      //sprite.scale = scale;
+    });
+  } else if (format === 'plus') {
+    pct = constrain(count / 10, 0, 1);
+    maxRadius = lerp(50, maxCircleRadius, pct);
+    numRings = Math.ceil(count / 4);
+    group.forEach(function (sprite, i) {
+      var ring = Math.floor(i / 4) + 1;
+      var angle = [
+        -Math.PI / 2, // above
+        Math.PI / 2,  // below
+        -Math.PI,     // left
+        0             // right
+      ][i % 4];
+      var ringRadius = lerp(0, maxRadius, ring / numRings);
+
+      sprite.x = 200 + ringRadius * Math.cos(angle);
+      sprite.y = 200 + ringRadius * Math.sin(angle);
+      sprite.rotation = 0;
+    });
+  } else if (format === 'x') {
+    pct = constrain(count / 10, 0, 1);
+    // We can have a bigger radius here since we're going to the corners.
+    maxRadius = lerp(0, Math.sqrt(2 * maxCircleRadius * maxCircleRadius), pct);
+    numRings = Math.ceil(count / 4);
+    group.forEach(function (sprite, i) {
+      var ring = Math.floor(i / 4) + 1;
+      var angle = [
+        -Math.PI / 4 + -Math.PI / 2,
+        -Math.PI / 4 + Math.PI / 2,
+        -Math.PI / 4 + 0,
+        -Math.PI / 4 + -Math.PI,
+      ][i % 4];
+      var ringRadius = lerp(0, maxRadius, ring / numRings);
+
+      sprite.x = 200 + ringRadius * Math.cos(angle);
+      sprite.y = 200 + ringRadius * Math.sin(angle);
+      sprite.rotation = (angle + Math.PI / 2) * radiansToDegrees;
+    });
+  } else if (format === "grid") {
+    // Create a grid where the width is the square root of the count, rounded up,
+    // and the height is the number of rows needed to fill in count cells.
+    // For our last row, we might have empty cells in our grid (but the row
+    // structure will be the same).
+    var numCols = Math.ceil(Math.sqrt(count));
+    var numRows = Math.ceil(count / numCols);
+    group.forEach(function (sprite, i) {
+      var row = Math.floor(i / numCols);
+      var col = i % numCols;
+      // || 0 so that we recover from div 0.
+      sprite.x = lerp(minX, maxX, col / (numCols - 1) || 0);
+      sprite.y = lerp(minY, maxY, row / (numRows - 1) || 0);
+      sprite.rotation = 0;
+    });
+  } else if (format === "inner") {
+    pct = constrain(count / 10, 0, 1);
+    radius = lerp(0, 100, pct);
+    var size = Math.ceil(Math.sqrt(count));
+    group.forEach(function (sprite, i) {
+      var row = Math.floor(i / size);
+      var col = i % size;
+      sprite.x = lerp(200 - radius, 200 + radius, col / (size - 1));
+      sprite.y = lerp(200 - radius, 200 + radius, row / (size - 1));
+      sprite.rotation = 0;
+    });
+  } else if (format === "row") {
+    for (i=0; i<count; i++) {
+      sprite = group[i];
+      sprite.x = (i+1) * (400 / (count + 1));
+      sprite.y = 200;
+      sprite.rotation = 0;
+    }
+  } else if (format === "column") {
+    for (i=0; i<count; i++) {
+      sprite = group[i];
+      sprite.x = 200;
+      sprite.y = (i+1) * (400 / (count + 1));
+      sprite.rotation = 0;
+    }
+  } else if (format === "border") {
+    // First fill the four corners.
+    // Then split remainder into 4 groups. Distribute group one along the top,
+    // group 2 along the right, etc.
+    if (count > 0) {
+      group[0].x = minX;
+      group[0].y = minY;
+      group[0].rotation = 0;
+    }
+    if (count > 1) {
+      group[1].x = maxX;
+      group[1].y = minY;
+      group[1].rotation = 0;
+    }
+    if (count > 2) {
+      group[2].x = maxX;
+      group[2].y = maxY;
+      group[2].rotation = 0;
+    }
+    if (count > 3) {
+      group[3].x = minX;
+      group[3].y = maxY;
+      group[3].rotation = 0;
+    }
+    if (count > 4) {
+      var topCount = Math.ceil((count - 4 - 0) / 4);
+      var rightCount = Math.ceil((count - 4 - 1) / 4);
+      var bottomCount = Math.ceil((count - 4 - 2) / 4);
+      var leftCount = Math.ceil((count - 4 - 3) / 4);
+
+      for (i = 0; i < topCount; i++) {
+        sprite = group[4 + i];
+        // We want to include the corners in our total count so that the first
+        // inner sprite is > 0 and the last inner sprite is < 1 when we lerp.
+        sprite.x = lerp(minX, maxX, (i + 1) / (topCount + 1));
+        sprite.y = minY;
+        sprite.rotation = 0;
+      }
+
+      for (i = 0; i < rightCount; i++) {
+        sprite = group[4 + topCount + i];
+        sprite.x = maxX;
+        sprite.y = lerp(minY, maxY, (i + 1) / (rightCount + 1));
+        sprite.rotation = 0;
+      }
+
+      for (i = 0; i < bottomCount; i++) {
+        sprite = group[4 + topCount + rightCount + i];
+        sprite.x = lerp(minX, maxX, (i + 1) / (bottomCount + 1));
+        sprite.y = maxY;
+        sprite.rotation = 0;
+      }
+
+      for (i = 0; i < leftCount; i++) {
+        sprite = group[4 + topCount + rightCount + bottomCount + i];
+        sprite.x = minX;
+        sprite.y = lerp(minY, maxY, (i + 1) / (leftCount + 1));
+        sprite.rotation = 0;
+      }
+    }
+  } else if (format === "random") {
+    group.forEach(function (sprite) {
+      sprite.x = randomInt(minX, maxX);
+      sprite.y = randomInt(minY, maxY);
+      sprite.rotation = 0;
+    });
+  } else {
+    throw new Error('Unexpected format: ' + format);
+  }
+
+  // We want sprites that are lower in the canvas to show up on top of those
+  // that are higher.
+  // We also add a fractional component based on x to avoid z-fighting (except
+  // in cases where we have identical x and y).
+  // group.forEach(sprite => {
+  //   this.adjustSpriteDepth_(sprite);
+  // });
+}
+
 // Run a sprite action regardless of individual or group
 function singleOrGroup(sprite, func, args) {
   if (!sprite) {
@@ -600,23 +792,57 @@ function runInputEvents() {
       inputEvents[i].param() :
       inputEvents[i].param;
     // Need to fix
-    if(!Array.isArray(param)) {
-      if(eventType(param)) {
-        thisSprite = param;
-        event();
-      }
-    } else {
-      for(var j = 0; j < param.length; j++) {
-        if(eventType(param[j])) {
-          thisSprite = param[j];
+    if (typeof(param) === "object") {
+      if(!param.isGroup) {
+        if(eventType(param)) {
+          thisSprite = param;
           event();
         }
+      } else {
+        for(var j = 0; j < param.length; j++) {
+          if(eventType(param[j])) {
+            thisSprite = param[j];
+            event();
+          }
+        }
       }
+    } else if (param && eventType(param)) {
+      event();
     }
   }
 }
 
+function createCollisionHandler (collisionEvent) {
+  return function (sprite1, sprite2) {
+    thisSprite = sprite1;
+    otherSprite = sprite2;
+    if (!collisionEvent.touching || collisionEvent.keepFiring) {
+      collisionEvent.event(sprite1, sprite2);
+    }
+  };
+}
+
 function runCollisionEvents() {
+  for (i = 0; i<collisionEvents.length; i++) {
+    var collisionEvent = collisionEvents[i];
+    var a = collisionEvent.a && collisionEvent.a();
+    var b = collisionEvent.b && collisionEvent.b();
+    if (!a || !b) {
+      continue;
+    }
+    if (a.overlap(b, createCollisionHandler(collisionEvent))) {
+      collisionEvent.touching = true;
+    } else {
+      if (collisionEvent.touching && collisionEvent.eventEnd) {
+        collisionEvent.eventEnd(a, b);
+      }
+      collisionEvent.touching = false;
+    }
+  }
+}
+
+// Aaron's more complicated collision model
+function runCollisionEventsExperimental() {
   collisionEvents.forEach(function(event) {
     var condition = event.condition;
     var a = event.a();

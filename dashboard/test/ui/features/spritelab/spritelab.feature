@@ -1,4 +1,3 @@
-@no_circle
 Feature: Sprite Lab
 
 Background:

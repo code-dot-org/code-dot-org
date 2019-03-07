@@ -25,8 +25,8 @@ describe('ScriptTeacherPanel', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherPanel>
-        <div id="teacher-panel-nonscrollable">
-          <h3>{commonMsg.teacherPanel()}</h3>
+        <h3>{commonMsg.teacherPanel()}</h3>
+        <div>
           <ViewAsToggle />
           <div>{commonMsg.loading()}</div>
         </div>
@@ -40,8 +40,8 @@ describe('ScriptTeacherPanel', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherPanel>
-        <div id="teacher-panel-nonscrollable">
-          <h3>{commonMsg.teacherPanel()}</h3>
+        <h3>{commonMsg.teacherPanel()}</h3>
+        <div>
           <ViewAsToggle />
           <div>{commonMsg.loading()}</div>
         </div>
