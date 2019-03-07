@@ -1585,7 +1585,8 @@ function filterUrl(urlToCheck) {
       );
     })
     .fail((jqXhr, status) => {
-      console.log('Error. Please re-run program');
+      // When this query fails, default to the dialog that allows the user to choose
+      getStore().dispatch(actions.toggleRedirectNotice(true, true, urlToCheck));
     });
 }
 
