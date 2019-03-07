@@ -8,6 +8,7 @@ import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles'
 import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
+import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = 'Deep Dive';
@@ -180,7 +181,9 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
               </td>
             )}
           {this.props.workshopSubject === LOCAL_SUMMER &&
-            !this.state.pendingScholarshipUpdates.includes(enrollment.id) && (
+            !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
+            (this.props.permissionList.has(ProgramManager) ||
+              this.props.permissionList.has(WorkshopAdmin)) && (
               <td>
                 <ScholarshipDropdown
                   scholarshipStatus={enrollment.scholarship_status}
@@ -188,11 +191,19 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
                     this,
                     enrollment
                   )}
-                  disabled={
-                    !this.props.permissionList.has(ProgramManager) &&
-                    !this.props.permissionList.has(WorkshopAdmin)
-                  }
                 />
+              </td>
+            )}
+          {this.props.workshopSubject === LOCAL_SUMMER &&
+            !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
+            !this.props.permissionList.has(ProgramManager) &&
+            !this.props.permissionList.has(WorkshopAdmin) && (
+              <td>
+                {
+                  ScholarshipDropdownOptions.find(o => {
+                    return o.value === enrollment.scholarship_status;
+                  }).label
+                }
               </td>
             )}
         </tr>
