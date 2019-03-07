@@ -67,13 +67,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged 'User is already purged'
   end
 
+  # It shouldn't be possible under the current system to create multiple
+  # accounts with the same email, but as of March 2019 we do have some users in
+  # our database that share emails.
   test 'purges all accounts associated with email' do
     email = 'fakeuser@example.com'
-    account1 = create :student, email: email
+    account1 = create :student
+    account2 = create :teacher
+    account3 = create :student
+
+    [account1, account2, account3].each do |account|
+      account.primary_contact_info.email = email
+      account.primary_contact_info.hashed_email = User.hash_email(email)
+      account.primary_contact_info.save!(validate: false)
+    end
+
     account1.destroy
-    account2 = create :teacher, email: email
     account2.destroy
-    account3 = create :student, email: email
 
     [account1, account2, account3].each(&:reload)
     refute_nil account1.deleted_at
