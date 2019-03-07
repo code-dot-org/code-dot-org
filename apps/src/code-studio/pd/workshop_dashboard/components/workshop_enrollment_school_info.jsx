@@ -66,21 +66,27 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
     });
     $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/enrollment/${
-        enrollment.id
-      }/scholarship_info?scholarship_status=${selection.value}`,
-      dataType: 'json'
+      url: `/api/v1/pd/enrollment/${enrollment.id}/scholarship_info`,
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({scholarship_status: selection.value})
     }).done(data => {
-      const index = this.state.enrollments.findIndex(e => {
-        return e.id === data.id;
-      });
-      this.setState({
-        enrollments: this.state.enrollments.splice(index, 1, data),
-        pendingScholarshipUpdates: this.state.pendingScholarshipUpdates.filter(
-          e => {
-            e !== enrollment.id;
+      this.setState(state => {
+        const enrollments = state.enrollments.map(enrollment => {
+          if (enrollment.id === data.id) {
+            return data;
+          } else {
+            return enrollment;
           }
-        )
+        });
+        return {enrollments};
+      });
+      this.setState(state => {
+        const pendingScholarshipUpdates = state.pendingScholarshipUpdates.filter(
+          e => {
+            return e !== data.id;
+          }
+        );
+        return {pendingScholarshipUpdates};
       });
     });
   }
