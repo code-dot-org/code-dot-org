@@ -51,22 +51,75 @@ const COLOR_ORANGE = '#FFB74D';
  * @type {DropletBlock[]}
  */
 export const dropletGlobalConfigBlocks = [
-  {func: 'getTime', parent: globalFunctions, category: 'Control', type: 'value' },
-  {func: 'randomNumber', parent: globalFunctions, category: 'Math', type: 'value', params: ['__']  },
-  {func: 'prompt', parent: window, category: 'Variables', type: 'value', params: ['__'] },
-  {func: 'promptNum', parent: globalFunctions, category: 'Variables', type: 'value', params: ['__'] }
+  {
+    func: 'getTime',
+    parent: globalFunctions,
+    category: 'Control',
+    type: 'value'
+  },
+  {
+    func: 'randomNumber',
+    parent: globalFunctions,
+    category: 'Math',
+    type: 'value',
+    params: ['__']
+  },
+  {
+    func: 'prompt',
+    parent: window,
+    category: 'Variables',
+    type: 'value',
+    params: ['__']
+  },
+  {
+    func: 'promptNum',
+    parent: globalFunctions,
+    category: 'Variables',
+    type: 'value',
+    params: ['__']
+  }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 export const dropletBuiltinConfigBlocks = [
-  {func: 'Math.round', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathRound' },
-  {func: 'Math.abs', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathAbs' },
-  {func: 'Math.max', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMax' },
-  {func: 'Math.min', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMin' },
-  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' },
-  {func: 'Math.pow', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathPow' }
+  {
+    func: 'Math.round',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathRound'
+  },
+  {
+    func: 'Math.abs',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathAbs'
+  },
+  {
+    func: 'Math.max',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathMax'
+  },
+  {
+    func: 'Math.min',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathMin'
+  },
+  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom'},
+  {
+    func: 'Math.pow',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathPow'
+  }
 ];
 
 /**
@@ -76,52 +129,90 @@ let standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {func: 'forLoop_i_0_4', block: 'for (var i = 0; i < 4; i++) {\n  __;\n}', category: 'Control' },
-  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control' },
-  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control' },
-  {func: 'ifElseBlock', block: 'if (__) {\n  __;\n} else {\n  __;\n}', category: 'Control' },
-  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value' },
+  {
+    func: 'forLoop_i_0_4',
+    block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
+    category: 'Control'
+  },
+  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control'},
+  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control'},
+  {
+    func: 'ifElseBlock',
+    block: 'if (__) {\n  __;\n} else {\n  __;\n}',
+    category: 'Control'
+  },
+  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value'},
 
   // Math
-  {func: 'addOperator', block: '__ + __', category: 'Math' },
-  {func: 'subtractOperator', block: '__ - __', category: 'Math' },
-  {func: 'multiplyOperator', block: '__ * __', category: 'Math' },
-  {func: 'divideOperator', block: '__ / __', category: 'Math' },
-  {func: 'equalityOperator', block: '__ == __', category: 'Math' },
-  {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
-  {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
-  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math' },
-  {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
-  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math' },
-  {func: 'andOperator', block: '__ && __', category: 'Math' },
-  {func: 'orOperator', block: '__ || __', category: 'Math' },
-  {func: 'notOperator', block: '!__', category: 'Math' },
+  {func: 'addOperator', block: '__ + __', category: 'Math'},
+  {func: 'subtractOperator', block: '__ - __', category: 'Math'},
+  {func: 'multiplyOperator', block: '__ * __', category: 'Math'},
+  {func: 'divideOperator', block: '__ / __', category: 'Math'},
+  {func: 'equalityOperator', block: '__ == __', category: 'Math'},
+  {func: 'inequalityOperator', block: '__ != __', category: 'Math'},
+  {func: 'greaterThanOperator', block: '__ > __', category: 'Math'},
+  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math'},
+  {func: 'lessThanOperator', block: '__ < __', category: 'Math'},
+  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math'},
+  {func: 'andOperator', block: '__ && __', category: 'Math'},
+  {func: 'orOperator', block: '__ || __', category: 'Math'},
+  {func: 'notOperator', block: '!__', category: 'Math'},
   // randomNumber_max has been deprecated
   // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
   // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
-  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math', docFunc: 'randomNumber'},
-  {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
-  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
-  {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
-  {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
-  {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
-  {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math' },
+  {
+    func: 'randomNumber_min_max',
+    block: 'randomNumber(__, __)',
+    category: 'Math',
+    docFunc: 'randomNumber'
+  },
+  {func: 'mathRound', block: 'Math.round(__)', category: 'Math'},
+  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math'},
+  {func: 'mathMax', block: 'Math.max(__)', category: 'Math'},
+  {func: 'mathMin', block: 'Math.min(__)', category: 'Math'},
+  {func: 'mathRandom', block: 'Math.random()', category: 'Math'},
+  {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math'},
 
   // Variables
-  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
-  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables' },
-  {func: 'assign_x', block: 'x = __;', category: 'Variables' },
-  {func: 'declareAssign_x_array_1_4', block: 'var x = [1, 2, 3, 4];', category: 'Variables' },
-  {func: 'declareAssign_x_prompt', block: 'var x = prompt("Enter a value");', category: 'Variables' },
-  {func: 'declareAssign_x_promptNum', block: 'var x = promptNum("Enter a value");', category: 'Variables' },
+  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables'},
+  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables'},
+  {func: 'assign_x', block: 'x = __;', category: 'Variables'},
+  {
+    func: 'declareAssign_x_array_1_4',
+    block: 'var x = [1, 2, 3, 4];',
+    category: 'Variables'
+  },
+  {
+    func: 'declareAssign_x_prompt',
+    block: 'var x = prompt("Enter a value");',
+    category: 'Variables'
+  },
+  {
+    func: 'declareAssign_x_promptNum',
+    block: 'var x = promptNum("Enter a value");',
+    category: 'Variables'
+  },
 
   // Functions
-  {func: 'functionParams_none', block: 'function myFunction() {\n  __;\n}', category: 'Functions' },
-  {func: 'functionParams_n', block: 'function myFunction(n) {\n  __;\n}', category: 'Functions' },
-  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
-  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
-  {func: 'return', block: 'return __;', category: 'Functions' },
-  {func: 'comment', block: '// Comment', expansion: '// ', category: 'Functions' }
+  {
+    func: 'functionParams_none',
+    block: 'function myFunction() {\n  __;\n}',
+    category: 'Functions'
+  },
+  {
+    func: 'functionParams_n',
+    block: 'function myFunction(n) {\n  __;\n}',
+    category: 'Functions'
+  },
+  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions'},
+  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions'},
+  {func: 'return', block: 'return __;', category: 'Functions'},
+  {
+    func: 'comment',
+    block: '// Comment',
+    expansion: '// ',
+    category: 'Functions'
+  }
 ];
 
 standardConfig.categories = {
@@ -151,10 +242,10 @@ standardConfig.categories = {
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
-  '' : {
+  '': {
     id: 'default',
     blocks: []
-  },
+  }
 };
 
 /**
@@ -172,7 +263,12 @@ standardConfig.categories = {
  * @param {boolean} options.ignoreDocFunc don't include based on block.docFunc
  * @returns {Array<DropletBlock>}
  */
-function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, options) {
+function filteredBlocksFromConfig(
+  codeFunctions,
+  dropletConfig,
+  otherConfig,
+  options
+) {
   if (!codeFunctions || !dropletConfig || !dropletConfig.blocks) {
     return [];
   }
@@ -201,12 +297,17 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
     }
   });
 
-  return blocks.filter(block => (
-    !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions
-  )).map(block => (
-    // We found this particular block, now override the defaults with extend
-    {...block, ...codeFunctions[block.func]}
-  ));
+  return blocks
+    .filter(
+      block =>
+        !options.paletteOnly ||
+        block.func in codeFunctions ||
+        block.func in docFunctions
+    )
+    .map(block =>
+      // We found this particular block, now override the defaults with extend
+      ({...block, ...codeFunctions[block.func]})
+    );
 }
 
 /**
@@ -223,7 +324,7 @@ function mergeCategoriesWithConfig(dropletConfig) {
   return _.cloneDeep({
     ...dropletCategories,
     ...standardConfig.categories,
-    ...dropletCategories,
+    ...dropletCategories
   });
 }
 
@@ -241,31 +342,43 @@ export function generateCodeAliases(dropletConfig, parentObjName) {
   // Insert aliases from aliasFunctions into code
   for (let i = 0; i < aliasFunctions.length; i++) {
     const cf = aliasFunctions[i];
-    code += "var " + cf.func + " = function() { ";
+    code += 'var ' + cf.func + ' = function() { ';
     if (cf.idArgNone) {
-      code += "return " + parentObjName + "." + cf.func + ".apply(" +
-              parentObjName + ", arguments); };\n";
+      code +=
+        'return ' +
+        parentObjName +
+        '.' +
+        cf.func +
+        '.apply(' +
+        parentObjName +
+        ', arguments); };\n';
     } else {
-      code += "var newArgs = " +
+      code +=
+        'var newArgs = ' +
         (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
-        " return " + parentObjName + "." + cf.func +
-        ".apply(" + parentObjName + ", newArgs); };\n";
+        ' return ' +
+        parentObjName +
+        '.' +
+        cf.func +
+        '.apply(' +
+        parentObjName +
+        ', newArgs); };\n';
     }
   }
   return code;
 }
 
 function buildFunctionPrototype(prefix, params) {
-  let proto = prefix + "(";
+  let proto = prefix + '(';
   if (params) {
     for (let i = 0; i < params.length; i++) {
       if (i !== 0) {
-        proto += ", ";
+        proto += ', ';
       }
       proto += params[i];
     }
   }
-  return proto + ")";
+  return proto + ')';
 }
 
 // Generate a read-write property expansion function:
@@ -289,10 +402,10 @@ function generatePropertyExpansion(propname) {
 export function generateDropletPalette(codeFunctions, dropletConfig) {
   const mergedCategories = mergeCategoriesWithConfig(dropletConfig);
   const mergedFunctions = filteredBlocksFromConfig(
-      codeFunctions,
-      dropletConfig,
-      standardConfig,
-      { paletteOnly: true, ignoreDocFunc: true }
+    codeFunctions,
+    dropletConfig,
+    standardConfig,
+    {paletteOnly: true, ignoreDocFunc: true}
   );
 
   for (let i = 0; i < mergedFunctions.length; i++) {
@@ -306,7 +419,10 @@ export function generateDropletPalette(codeFunctions, dropletConfig) {
       if (funcInfo.blockPrefix) {
         nameWithPrefix = funcInfo.blockPrefix + nameWithPrefix;
       }
-      if (funcInfo.type === 'property' || funcInfo.type === 'readonlyproperty') {
+      if (
+        funcInfo.type === 'property' ||
+        funcInfo.type === 'readonlyproperty'
+      ) {
         block = nameWithPrefix;
       } else {
         const paletteParams = funcInfo.paletteParams || funcInfo.params;
@@ -350,8 +466,13 @@ export function generateDropletPalette(codeFunctions, dropletConfig) {
   return addedPalette;
 }
 
-function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, configBlocks) {
-  const acUtil = window.ace.require("ace/autocomplete/util");
+function populateCompleterApisFromConfigBlocks(
+  opts,
+  apis,
+  methodsAndProperties,
+  configBlocks
+) {
+  const acUtil = window.ace.require('ace/autocomplete/util');
 
   for (let i = 0; i < configBlocks.length; i++) {
     const block = configBlocks[i];
@@ -364,8 +485,8 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
         score: 100,
         meta: block.category
       };
-      const methodOrProperty = (newApi.value.indexOf('*.') === 0 ||
-          newApi.value.indexOf('?.') === 0);
+      const methodOrProperty =
+        newApi.value.indexOf('*.') === 0 || newApi.value.indexOf('?.') === 0;
       if (methodOrProperty) {
         // Store the original name in a docFunc property for the
         // benefit of our DropletAutocompletePopupTooltipManager:
@@ -375,7 +496,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
       }
 
       newApi.completer = {
-        insertMatch: function (value, editor) {
+        insertMatch: function(value, editor) {
           // Remove the filterText that was already typed (ace's built-in
           // insertMatch would normally do this automatically) plus the rest of
           // the identifier after the filterText...
@@ -383,23 +504,30 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
           if (editor.completer.completions.filterText) {
             const ranges = editor.selection.getAllRanges();
             for (let i = 0, range; !!(range = ranges[i]); i++) {
-              range.start.column -= editor.completer.completions.filterText.length;
+              range.start.column -=
+                editor.completer.completions.filterText.length;
               const line = editor.session.getLine(range.end.row);
-              const lengthOfRestOfIdentifier =
-                  acUtil.retrieveFollowingIdentifier(line, range.end.column).length;
+              const lengthOfRestOfIdentifier = acUtil.retrieveFollowingIdentifier(
+                line,
+                range.end.column
+              ).length;
               range.end.column += lengthOfRestOfIdentifier;
               modifyingExistingFunctionCall = line[range.end.column] === '(';
               editor.session.remove(range);
             }
           }
           // Insert the function name plus parentheses and semicolon:
-          const isProp = block.type === 'property' || block.type === 'readonlyproperty';
+          const isProp =
+            block.type === 'property' || block.type === 'readonlyproperty';
           if (isProp) {
-            editor.execCommand("insertstring", value);
+            editor.execCommand('insertstring', value);
           } else {
-            const suffix = modifyingExistingFunctionCall ? '' :
-                opts.autocompleteFunctionsWithSemicolon ? '();' : '()';
-            editor.execCommand("insertstring", value + suffix);
+            const suffix = modifyingExistingFunctionCall
+              ? ''
+              : opts.autocompleteFunctionsWithSemicolon
+              ? '();'
+              : '()';
+            editor.execCommand('insertstring', value + suffix);
             if (this.params) {
               // Move the selection back so parameters can be entered:
               const curRange = editor.selection.getRange();
@@ -450,7 +578,7 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  * @return {boolean} true if position is at the start of a method or property
  */
 function isPositionAfterDot(session, pos) {
-  const acUtil = window.ace.require("ace/autocomplete/util");
+  const acUtil = window.ace.require('ace/autocomplete/util');
   const line = session.getLine(pos.row);
   const identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
   // If we're typing a valid identifier, inspect the preceeding
@@ -479,16 +607,45 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 
   // If autocompleteFunctionsWithSemicolon is set, we will append "();" after
   // functions, instead of the "()" we normally append
-  opts.autocompleteFunctionsWithSemicolon = dropletConfig.autocompleteFunctionsWithSemicolon;
+  opts.autocompleteFunctionsWithSemicolon =
+    dropletConfig.autocompleteFunctionsWithSemicolon;
 
   if (functionFilter) {
-    const mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
-    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, mergedBlocks);
+    const mergedBlocks = filteredBlocksFromConfig(
+      functionFilter,
+      dropletConfig,
+      null,
+      {paletteOnly: true}
+    );
+    populateCompleterApisFromConfigBlocks(
+      opts,
+      apis,
+      methodsAndProperties,
+      mergedBlocks
+    );
   } else {
-    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletGlobalConfigBlocks);
-    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletBuiltinConfigBlocks);
-    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletConfig.blocks);
-    populateCompleterFromPredefValues(apis, dropletConfig.additionalPredefValues);
+    populateCompleterApisFromConfigBlocks(
+      opts,
+      apis,
+      methodsAndProperties,
+      dropletGlobalConfigBlocks
+    );
+    populateCompleterApisFromConfigBlocks(
+      opts,
+      apis,
+      methodsAndProperties,
+      dropletBuiltinConfigBlocks
+    );
+    populateCompleterApisFromConfigBlocks(
+      opts,
+      apis,
+      methodsAndProperties,
+      dropletConfig.blocks
+    );
+    populateCompleterFromPredefValues(
+      apis,
+      dropletConfig.additionalPredefValues
+    );
   }
 
   return {
@@ -504,13 +661,18 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
       // * the prefix is empty
       // * we are in a comment
       // * the prefix is a number with less than 3 digits (matches Atom semantics)
-      if (prefix.length === 0 || token.type === 'comment' ||
-          (prefix.length < 3 && !isNaN(Number(prefix)))) {
+      if (
+        prefix.length === 0 ||
+        token.type === 'comment' ||
+        (prefix.length < 3 && !isNaN(Number(prefix)))
+      ) {
         callback(null, []);
         return;
       }
       // Following a dot, we autocomplete from methodsAndProperties:
-      const list = isPositionAfterDot(session, pos) ? methodsAndProperties : apis;
+      const list = isPositionAfterDot(session, pos)
+        ? methodsAndProperties
+        : apis;
 
       // Filter our list to contain substring word matches:
       const filteredList = filterListBasedOnWordMatches(prefix, list);
@@ -524,10 +686,13 @@ function filterListBasedOnWordMatches(prefix, list) {
   // snake_case or Global.method:
   const modifiedPrefix = prefix.replace(/_|\./g, '').toLowerCase();
   return list.filter(completion => {
-    const { value } = completion;
+    const {value} = completion;
     // https://stackoverflow.com/a/34680912
     const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
-    const words = value.replace('.', '_').replace(edges, '$1_').split('_');
+    const words = value
+      .replace('.', '_')
+      .replace(edges, '$1_')
+      .split('_');
     // Transform words into phrases that we consider to be "matches": e.g.
     // words ['get', 'Time'] become phrases ['getTime', 'Time']
     const phrases = words.map((word, index) => words.slice(index).join(''));
@@ -562,16 +727,22 @@ var originalUpdateCompletions;
 function updateCompletionsOverride(keepPopupPosition) {
   if (keepPopupPosition && this.base && this.completions) {
     const pos = this.editor.getCursorPosition();
-    const prefix = this.editor.session.getTextRange({start: this.base, end: pos});
+    const prefix = this.editor.session.getTextRange({
+      start: this.base,
+      end: pos
+    });
 
     // Repopulate all 3 properties of the FilteredList (stored in this.completions)
     // with a new list, filtered by our algorithm, but not yet filtered by ace's
     // algorithm. Ensure that filterText is blank so that the original
     // updateCompletions() won't just return immediately
 
-    this.completions.all = filterListBasedOnWordMatches(prefix, this.completions.all);
+    this.completions.all = filterListBasedOnWordMatches(
+      prefix,
+      this.completions.all
+    );
     this.completions.filtered = this.completions.all;
-    this.completions.filterText = "";
+    this.completions.filterText = '';
   }
   return originalUpdateCompletions.call(this, keepPopupPosition);
 }
@@ -585,7 +756,12 @@ function updateCompletionsOverride(keepPopupPosition) {
  */
 function getModeOptionFunctionsFromConfig(config, codeFunctions) {
   const mergedCategories = mergeCategoriesWithConfig(config);
-  const mergedFuncs = filteredBlocksFromConfig(codeFunctions, config, null, null);
+  const mergedFuncs = filteredBlocksFromConfig(
+    codeFunctions,
+    config,
+    null,
+    null
+  );
 
   const modeOptionFunctions = {};
 
@@ -638,27 +814,33 @@ export function generateDropletModeOptions(config) {
   return {
     functions: {
       ...getModeOptionFunctionsFromConfig(
-          { blocks: dropletGlobalConfigBlocks }, config.level.codeFunctions),
+        {blocks: dropletGlobalConfigBlocks},
+        config.level.codeFunctions
+      ),
       ...getModeOptionFunctionsFromConfig(
-          { blocks: dropletBuiltinConfigBlocks }, config.level.codeFunctions),
+        {blocks: dropletBuiltinConfigBlocks},
+        config.level.codeFunctions
+      ),
       ...getModeOptionFunctionsFromConfig(
-          config.dropletConfig, config.level.codeFunctions),
+        config.dropletConfig,
+        config.level.codeFunctions
+      )
     },
     categories: {
-      arithmetic: { color: COLOR_ORANGE },
-      logic: { color: COLOR_ORANGE },
-      conditionals: { color: COLOR_BLUE },
+      arithmetic: {color: COLOR_ORANGE},
+      logic: {color: COLOR_ORANGE},
+      conditionals: {color: COLOR_BLUE},
       loops: {
         color: COLOR_BLUE,
         beginner: config.level.beginnerMode || false
       },
-      functions: { color: COLOR_GREEN },
-      returns: { color: COLOR_GREEN },
-      comments: { color: COLOR_WHITE },
-      containers: { color: COLOR_PURPLE },
-      value: { color: COLOR_PURPLE },
-      command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE }
+      functions: {color: COLOR_GREEN},
+      returns: {color: COLOR_GREEN},
+      comments: {color: COLOR_WHITE},
+      containers: {color: COLOR_PURPLE},
+      value: {color: COLOR_PURPLE},
+      command: {color: COLOR_GREEN},
+      assignments: {color: COLOR_PURPLE}
       // errors: { },
     },
     lockZeroParamFunctions: config.level.lockZeroParamFunctions,
@@ -676,15 +858,19 @@ export function generateDropletModeOptions(config) {
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
-export function getAllAvailableDropletBlocks(dropletConfig, codeFunctions, paletteOnly) {
+export function getAllAvailableDropletBlocks(
+  dropletConfig,
+  codeFunctions,
+  paletteOnly
+) {
   const hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   let configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
   if (codeFunctions && hasConfiguredBlocks) {
     configuredBlocks = filteredBlocksFromConfig(
-        codeFunctions,
-        dropletConfig,
-        null,
-        { paletteOnly: paletteOnly }
+      codeFunctions,
+      dropletConfig,
+      null,
+      {paletteOnly: paletteOnly}
     );
   }
   return dropletGlobalConfigBlocks
@@ -739,7 +925,9 @@ function getParamAtIndex(index, methodName, block, editor) {
   if (!block) {
     // If we're not given a block, assume that we're in text mode
     const cursor = editor.session.selection.getCursor();
-    const contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
+    const contents = editor.session
+      .getLine(cursor.row)
+      .substring(0, cursor.column);
 
     return getParamFromCodeAtIndex(index, methodName, contents);
   }
@@ -819,23 +1007,40 @@ export function setParamAtIndex(index, value, block) {
  * the param at the given index without extra quotes, commas or spaces.
  */
 function formatParamString(index, params) {
-  params = params.split(",");
-  return params[index].split('"').join('').split("'").join('').trim();
+  // Use encodeURIComponent to encode everything except commas outside
+  // of quoted strings (which we will remove with the split() call below)
+  const splitQuotedStrings = params.split(/("[^"]*"|'[^']*')/);
+  const escaped = splitQuotedStrings.reduce((acc, cur) => {
+    const encodedString = encodeURIComponent(cur);
+    if (cur.startsWith('"') || cur.startsWith("'")) {
+      return acc + encodedString;
+    }
+    return acc + encodedString.replace(/%2C/g, ',');
+  }, '');
+  // Split apart on only the real (not encoded) commas:
+  params = escaped.split(',');
+  // Decode the string for the requested parameter and remove all single
+  // quotes, double quotes, and whitespace:
+  return decodeURIComponent(params[index])
+    .split('"')
+    .join('')
+    .split("'")
+    .join('')
+    .trim();
 }
 
 function getParamFromCodeAtIndex(index, methodName, code) {
   const prefix = `${methodName}(`;
   code = code.slice(code.lastIndexOf(prefix));
-  // quote, followed by param, followed by end quote, comma, and optional whitespace
-  const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
-  // param, comma, and optional whitespace
-  const backslashNoQuoteRegex = `^${methodName}\\(([^"']*),\\s*$`;
-  let matchQuote = new RegExp(backslashEscapedRegex).exec(code);
-  let matchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
-  if (matchQuote) {
-    return formatParamString(index, matchQuote[2]);
-  } else if (matchNoQuote) {
-    return formatParamString(index, matchNoQuote[1]);
+
+  // Everything after left paren except right paren, with optional whitespace afterwards
+  // Handles simplistic cases of single quotes, double quotes, and matches parens within
+  // each parameter
+
+  const paramsRegex = `^${methodName}\\(((?:(?:\\([^\\)]*\\))|(?:"[^"]*")|(?:\'[^\']*\')|[^)]*)*)\\)?\\s*$`;
+  const matchParams = new RegExp(paramsRegex).exec(code);
+  if (matchParams) {
+    return formatParamString(index, matchParams[1]);
   }
   return null;
 }
@@ -866,7 +1071,7 @@ export function makeDisabledConfig(originalConfig) {
       ...block,
       category: undefined,
       color: color.light_gray,
-      noAutocomplete: true,
+      noAutocomplete: true
     }))
   };
 }

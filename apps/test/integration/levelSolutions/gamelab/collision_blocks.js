@@ -2,12 +2,12 @@ import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 
 module.exports = {
-  app: "gamelab",
-  skinId: "gamelab",
+  app: 'gamelab',
+  skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,
   tests: [
     testAsyncProgramGameLab(
-      "Not-overlapping sprites do not collide",
+      'Not-overlapping sprites do not collide',
       `
         var sprite1 = createSprite(0, 0);
         var sprite2 = createSprite(300, 300);
@@ -23,7 +23,7 @@ module.exports = {
       function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'collided');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'Overlapping Sprites collide',
@@ -36,16 +36,16 @@ module.exports = {
         console.log("done");
       `,
       function isProgramDone() {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
       function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'collided');
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "Not-overlapping sprites do not bounce",
+      'Not-overlapping sprites do not bounce',
       `
         var sprite1 = createSprite(0, 0);
         var sprite2 = createSprite(300, 300);
@@ -55,13 +55,13 @@ module.exports = {
         console.log("done");
       `,
       function isProgramDone() {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
       function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'bounced');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'Overlapping Sprites bounce',
@@ -80,10 +80,10 @@ module.exports = {
       function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'bounced');
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "Not-overlapping sprites do not bounce off",
+      'Not-overlapping sprites do not bounce off',
       `
         var sprite1 = createSprite(0, 0);
         var sprite2 = createSprite(300, 300);
@@ -99,7 +99,7 @@ module.exports = {
       function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'bounced off');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'Overlapping Sprites bounce off',
@@ -118,10 +118,10 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'bounced off');
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "Not-overlapping sprites do not displace",
+      'Not-overlapping sprites do not displace',
       `
         var sprite1 = createSprite(0, 0);
         var sprite2 = createSprite(300, 300);
@@ -137,7 +137,7 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'displaced');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'Overlapping Sprites displaced',
@@ -156,10 +156,10 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'displaced');
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "Not-overlapping sprites do not overlap",
+      'Not-overlapping sprites do not overlap',
       `
         var sprite1 = createSprite(0, 0);
         var sprite2 = createSprite(300, 300);
@@ -175,7 +175,7 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'overlapped');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'Overlapping Sprites overlap',
@@ -194,10 +194,10 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'overlapped');
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "Not-overlapping sprites are not touching",
+      'Not-overlapping sprites are not touching',
       `
         var sprite1 = createSprite(0, 0);
         var sprite2 = createSprite(300, 300);
@@ -213,7 +213,7 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'touched');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'Overlapping Sprites are touching',
@@ -232,10 +232,10 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'touched');
-      },
+      }
     ),
     testAsyncProgramGameLab(
-      "A collider larger than the sprite collides with target",
+      'A collider larger than the sprite collides with target',
       `
         var sprite = createSprite(0, 0, 200, 200);
         sprite.setCollider("rectangle", 200, 200, 300, 300);
@@ -253,7 +253,7 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'collided');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'A collider smaller than the sprite does not collide when target touches the sprite, but not collider',
@@ -274,7 +274,7 @@ module.exports = {
       function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'collided');
-      },
+      }
     ),
     testAsyncProgramGameLab(
       'Overlap callback runs synchronously',
@@ -297,20 +297,16 @@ module.exports = {
       }
       `,
       function isProgramDone() {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
       function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          [
-            'in callback',
-            'after callback',
-            'done',
-          ].join('\n')
+          ['in callback', 'after callback', 'done'].join('\n')
         );
-      },
-    ),
+      }
+    )
   ]
 };

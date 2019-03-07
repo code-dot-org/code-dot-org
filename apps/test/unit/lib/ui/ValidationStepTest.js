@@ -10,10 +10,7 @@ describe('ValidationStep', () => {
     Object.values(Status).forEach(status => {
       it(status, () => {
         const wrapper = mount(
-          <ValidationStep
-            stepName={`${status} step name`}
-            stepStatus={status}
-          >
+          <ValidationStep stepName={`${status} step name`} stepStatus={status}>
             Some help content for a {status} step.
           </ValidationStep>
         );
@@ -25,10 +22,7 @@ describe('ValidationStep', () => {
   it('renders help text when step is failed', () => {
     const helpString = 'XYZZY help content';
     const wrapper = mount(
-      <ValidationStep
-        stepName="Failed step"
-        stepStatus={Status.FAILED}
-      >
+      <ValidationStep stepName="Failed step" stepStatus={Status.FAILED}>
         {helpString}
       </ValidationStep>
     );
@@ -43,12 +37,9 @@ describe('ValidationStep', () => {
       }
 
       const wrapper = mount(
-          <ValidationStep
-            stepName={`${status} step`}
-            stepStatus={status}
-          >
-            {helpString}
-          </ValidationStep>
+        <ValidationStep stepName={`${status} step`} stepStatus={status}>
+          {helpString}
+        </ValidationStep>
       );
       expect(wrapper.text()).not.to.include(helpString);
     });

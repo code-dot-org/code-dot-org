@@ -3,7 +3,7 @@ import {Button, FormControl} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Spinner from '../pd/components/spinner';
-import PeerReviewSubmissionData from "./PeerReviewSubmissionData";
+import PeerReviewSubmissionData from './PeerReviewSubmissionData';
 import $ from 'jquery';
 
 class PeerReviewSubmissions extends React.Component {
@@ -26,28 +26,44 @@ class PeerReviewSubmissions extends React.Component {
     this.getFilteredResults();
   }
 
-  handleCourseUnitFilterChange = (event) => {
+  handleCourseUnitFilterChange = event => {
     this.setState({plcCourseUnitId: event.target.value});
-    this.getFilteredResults(this.state.emailFilter, this.state.plcCourseId, event.target.value);
+    this.getFilteredResults(
+      this.state.emailFilter,
+      this.state.plcCourseId,
+      event.target.value
+    );
   };
 
-  handleCourseFilterChange = (event) => {
+  handleCourseFilterChange = event => {
     if (event.target.value === '') {
       this.setState({plcCourseId: '', plcCourseUnitId: ''});
       this.getFilteredResults(this.state.emailFilter, '', '');
     } else {
       this.setState({plcCourseId: event.target.value});
-      this.getFilteredResults(this.state.emailFilter, event.target.value, this.state.plcCourseUnitId);
+      this.getFilteredResults(
+        this.state.emailFilter,
+        event.target.value,
+        this.state.plcCourseUnitId
+      );
     }
   };
 
-  handleEmailFilterChange = (event) => {
+  handleEmailFilterChange = event => {
     this.setState({emailFilter: event.target.value});
-    this.getFilteredResults(event.target.value, this.state.plcCourseId, this.state.plcCourseUnitId);
+    this.getFilteredResults(
+      event.target.value,
+      this.state.plcCourseId,
+      this.state.plcCourseUnitId
+    );
   };
 
   handleDownloadCsvClick = () => {
-    window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_unit_id=${this.state.plcCourseUnitId}`);
+    window.open(
+      `/api/v1/peer_review_submissions/report_csv?plc_course_unit_id=${
+        this.state.plcCourseUnitId
+      }`
+    );
   };
 
   getFilteredResults = (emailFilter, plcCourseId, plcCourseUnitId) => {
@@ -55,7 +71,10 @@ class PeerReviewSubmissions extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${emailFilter || ''}&plc_course_id=${plcCourseId || ''}&plc_course_unit_id=${plcCourseUnitId || ''}`,
+      url: `/api/v1/peer_review_submissions/index?filter=${
+        this.props.filterType
+      }&email=${emailFilter || ''}&plc_course_id=${plcCourseId ||
+        ''}&plc_course_unit_id=${plcCourseUnitId || ''}`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -78,15 +97,17 @@ class PeerReviewSubmissions extends React.Component {
         />
         <FormControl
           id="PlcCourseSelect"
-          style={{marginLeft: '10px', marginBottom: '0px', verticalAlign: 'middle'}}
+          style={{
+            marginLeft: '10px',
+            marginBottom: '0px',
+            verticalAlign: 'middle'
+          }}
           componentClass="select"
           placeholder="Filter by course"
           onChange={this.handleCourseFilterChange}
           value={this.state.plcCourseId}
         >
-          <option value="">
-            All Courses
-          </option>
+          <option value="">All Courses</option>
           {this.props.courseList.map((course, i) => {
             return (
               <option key={i} value={course[1]}>
@@ -97,29 +118,37 @@ class PeerReviewSubmissions extends React.Component {
         </FormControl>
         <FormControl
           id="PlcCourseUnitSelect"
-          style={{marginLeft: '10px', marginBottom: '0px', verticalAlign: 'middle'}}
+          style={{
+            marginLeft: '10px',
+            marginBottom: '0px',
+            verticalAlign: 'middle'
+          }}
           componentClass="select"
           placeholder="Filter by course unit"
           disabled={!this.state.plcCourseId}
           onChange={this.handleCourseUnitFilterChange}
           value={this.state.plcCourseUnitId}
         >
-          <option value="">
-            All Course Units
-          </option>
-          {
-            this.state.plcCourseId && this.props.courseUnitMap[this.state.plcCourseId].map((courseUnit, i) => {
-              return (
-                <option key={i} value={courseUnit[1]}>
-                  {courseUnit[0]}
-                </option>
-              );
-            })
-          }
+          <option value="">All Course Units</option>
+          {this.state.plcCourseId &&
+            this.props.courseUnitMap[this.state.plcCourseId].map(
+              (courseUnit, i) => {
+                return (
+                  <option key={i} value={courseUnit[1]}>
+                    {courseUnit[0]}
+                  </option>
+                );
+              }
+            )}
         </FormControl>
         <Button
           id="DownloadCsvReport"
-          style={{float: 'right', marginTop: '0px', marginBottom: '10px', verticalAlign: 'middle'}}
+          style={{
+            float: 'right',
+            marginTop: '0px',
+            marginBottom: '10px',
+            verticalAlign: 'middle'
+          }}
           disabled={!this.state.plcCourseUnitId}
           onClick={this.handleDownloadCsvClick}
         >
@@ -133,16 +162,14 @@ class PeerReviewSubmissions extends React.Component {
     return (
       <div>
         {this.renderFilterOptions()}
-        {
-          this.state.loading ? (
-            <Spinner/>
-          ) : (
-            <PeerReviewSubmissionData
-              filterType={this.props.filterType}
-              submissions={this.state.submissions}
-            />
-          )
-        }
+        {this.state.loading ? (
+          <Spinner />
+        ) : (
+          <PeerReviewSubmissionData
+            filterType={this.props.filterType}
+            submissions={this.state.submissions}
+          />
+        )}
       </div>
     );
   }

@@ -1,12 +1,13 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
-import queryString from "query-string";
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
 
 const styles = {
   container: {
@@ -15,7 +16,7 @@ const styles = {
   },
   dancePartyHeading: {
     fontSize: 32,
-    fontFamily: "'Gotham 7r', sans-serif",
+    fontFamily: "'Gotham 7r', sans-serif"
   },
   middle: {
     marginTop: 20,
@@ -28,23 +29,22 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex',
-
+    display: 'flex'
   },
   middleCell: {
     display: 'inline-block',
     verticalAlign: 'top',
-    maxWidth: '50%',
+    maxWidth: '50%'
   },
   age: {
-    paddingTop: 15,
+    paddingTop: 15
   },
   dropdown: {
     verticalAlign: 'top',
     marginRight: 10,
     marginTop: 2,
     width: 160
-  },
+  }
 };
 
 /*
@@ -72,7 +72,7 @@ class AgeDialog extends Component {
     this.setSessionStorage(false);
   };
 
-  setSessionStorage = (over13) => {
+  setSessionStorage = over13 => {
     sessionStorage.setItem(AGE_DIALOG_SESSION_KEY, over13);
     this.setState({open: false});
   };
@@ -102,7 +102,7 @@ class AgeDialog extends Component {
   };
 
   render() {
-    const { signedIn } = this.props;
+    const {signedIn} = this.props;
 
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
@@ -111,11 +111,7 @@ class AgeDialog extends Component {
     }
 
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={this.state.open}
-        uncloseable
-      >
+      <BaseDialog useUpdatedStyles isOpen={this.state.open} uncloseable>
         <div style={styles.container} className="age-dialog">
           <div style={styles.dancePartyHeading}>
             {i18n.welcomeToDanceParty()}
@@ -127,7 +123,7 @@ class AgeDialog extends Component {
                 <div style={styles.age}>
                   <AgeDropdown
                     style={styles.dropdown}
-                    ref={element => this.ageDropdown = element}
+                    ref={element => (this.ageDropdown = element)}
                   />
                   <Button
                     id="uitest-submit-age"

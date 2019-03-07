@@ -1,10 +1,11 @@
-import React, {PropTypes} from 'react';
-import Button from "../../templates/Button";
+import PropTypes from 'prop-types';
+import React from 'react';
+import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import {assetButtonStyles} from "./AddAssetButtonRow";
-import {AudioErrorType} from "./AssetManager";
-import firehoseClient from "@cdo/apps/lib/util/firehose";
+import {assetButtonStyles} from './AddAssetButtonRow';
+import {AudioErrorType} from './AssetManager';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   buttonRow: {
@@ -36,7 +37,7 @@ export default class AudioRecorder extends React.Component {
     this.recorder = null;
     this.slices = [];
     this.state = {
-      audioName: "",
+      audioName: '',
       recording: false
     };
   }
@@ -45,7 +46,8 @@ export default class AudioRecorder extends React.Component {
     //Initialize the media recorder when the component loads
     //Check if the user has mediaDevices and request permission to use the microphone
     if (navigator.mediaDevices) {
-      navigator.mediaDevices.getUserMedia({audio: true})
+      navigator.mediaDevices
+        .getUserMedia({audio: true})
         .then(this.initializeMediaRecorder)
         .catch(() => this.props.afterAudioSaved(AudioErrorType.INITIALIZE));
     } else {
@@ -53,13 +55,13 @@ export default class AudioRecorder extends React.Component {
     }
   };
 
-  initializeMediaRecorder = (stream) => {
+  initializeMediaRecorder = stream => {
     // Set newly initialized mediaRecorder to instance variable
     // Media Recorder API: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
     this.recorder = new MediaRecorder(stream);
 
     // Set method to save the data when it becomes available
-    this.recorder.ondataavailable = (e) => {
+    this.recorder.ondataavailable = e => {
       this.slices.push(e.data);
     };
 
@@ -68,29 +70,33 @@ export default class AudioRecorder extends React.Component {
     };
   };
 
-  saveAudio = (blob) => {
-    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-    (xhr) => {
-      this.setState({audioName: ""});
-      let result = JSON.parse(xhr.response);
-      result.filename = decodeURI(result.filename);
-      this.props.onUploadDone(result);
-      this.props.afterAudioSaved(AudioErrorType.NONE);
-    }, error => {
-      console.error(`Audio Failed to Save: ${error}`);
-      this.props.afterAudioSaved(AudioErrorType.SAVE);
-    });
+  saveAudio = blob => {
+    assetsApi.putAsset(
+      this.state.audioName + '.mp3',
+      blob,
+      xhr => {
+        this.setState({audioName: ''});
+        let result = JSON.parse(xhr.response);
+        result.filename = decodeURI(result.filename);
+        this.props.onUploadDone(result);
+        this.props.afterAudioSaved(AudioErrorType.NONE);
+      },
+      error => {
+        console.error(`Audio Failed to Save: ${error}`);
+        this.props.afterAudioSaved(AudioErrorType.SAVE);
+      }
+    );
   };
 
-  onNameChange = (event) => {
+  onNameChange = event => {
     this.setState({audioName: event.target.value});
   };
 
   onCancel = () => {
-    this.setState({audioName: "", recording: false}, () => {
+    this.setState({audioName: '', recording: false}, () => {
       this.props.afterAudioSaved(AudioErrorType.NONE);
       // Only stop recording if it's been started
-      if (this.recorder.state !== "inactive") {
+      if (this.recorder.state !== 'inactive') {
         clearTimeout(this.recordTimeout);
         this.recorder.stop();
       }
@@ -113,7 +119,7 @@ export default class AudioRecorder extends React.Component {
         study: 'sound-dialog-2',
         study_group: studyGroup,
         event: 'record-sound',
-        data_json: this.state.audioName,
+        data_json: this.state.audioName
       },
       {includeUserId: true}
     );
@@ -136,7 +142,7 @@ export default class AudioRecorder extends React.Component {
   //Set the recorder onstop behavior to save the final audio blob
   setStopAndSaveBehavior = () => {
     this.recorder.onstop = () => {
-      const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
+      const blob = new Blob(this.slices, {type: 'audio/mpeg'});
       this.saveAudio(blob);
       this.recorder.onstop = () => {};
     };
@@ -145,20 +151,25 @@ export default class AudioRecorder extends React.Component {
   render() {
     return (
       <div style={styles.buttonRow}>
-        <input type="text" placeholder={i18n.soundName()} onChange={this.onNameChange} value={this.state.audioName}/>
-        {this.state.recording &&
+        <input
+          type="text"
+          placeholder={i18n.soundName()}
+          onChange={this.onNameChange}
+          value={this.state.audioName}
+        />
+        {this.state.recording && (
           <span style={assetButtonStyles.button}>
-            <i style={styles.recordingIcon} className="fa fa-circle"/>
+            <i style={styles.recordingIcon} className="fa fa-circle" />
             {i18n.recording()}
           </span>
-        }
+        )}
         <span>
           <Button
             onClick={this.toggleRecord}
             id="start-stop-record"
             style={assetButtonStyles.button}
             color={Button.ButtonColor.blue}
-            icon={this.state.recording ? "stop" : "circle"}
+            icon={this.state.recording ? 'stop' : 'circle'}
             text={this.state.recording ? i18n.stop() : i18n.record()}
             size="large"
             disabled={this.state.audioName.length === 0}

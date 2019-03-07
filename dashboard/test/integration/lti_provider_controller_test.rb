@@ -4,7 +4,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
   include Mocha::API
 
   TEST_PROVIDER_KEY = "dc3872a4b605f1f36242a837172ce2c0"
-  TEST_CONSUMER_KEY = "f10ee9fc082219227976f2c1603a3d77"
+  TEST_CONSUMER_KEY = "lti_prod_kids.qwikcamps.com"
 
   setup do
     CDO.stubs(:lti_credentials).returns({TEST_CONSUMER_KEY => TEST_PROVIDER_KEY})

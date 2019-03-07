@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ProjectCard from './ProjectCard';
 
 const projectProp = PropTypes.shape({
@@ -10,20 +11,20 @@ const projectProp = PropTypes.shape({
   studentAgeRange: PropTypes.string,
   studentName: PropTypes.string,
   type: PropTypes.string,
-  updatedAt: PropTypes.date,
+  updatedAt: PropTypes.date
 });
 
 const styles = {
   card: {
     display: 'inline-block',
     paddingTop: 10,
-    paddingBottom: 20,
+    paddingBottom: 20
   },
   row: {
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  },
+    flexWrap: 'wrap'
+  }
 };
 
 export default class ProjectCardRow extends React.Component {
@@ -31,7 +32,7 @@ export default class ProjectCardRow extends React.Component {
     projects: PropTypes.arrayOf(projectProp).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
-    isDetailView: PropTypes.bool,
+    isDetailView: PropTypes.bool
   };
 
   render() {

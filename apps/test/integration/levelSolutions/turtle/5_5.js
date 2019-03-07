@@ -1,19 +1,21 @@
 import {TestResults} from '@cdo/apps/constants';
 
 module.exports = {
-  app: "turtle",
-  levelFile: "levels",
-  levelId: "5_5",
+  app: 'turtle',
+  levelFile: 'levels',
+  levelId: '5_5',
   tests: [
     {
-      description: "Free play level with infinite loop",
+      description: 'Free play level with infinite loop',
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-      runBeforeClick: function () {
+      runBeforeClick: function() {
         // This is a free-play level: click Finish when drawing is done.
-        addEventListener('artistDrawingComplete', () => $('#finishButton').click());
+        addEventListener('artistDrawingComplete', () =>
+          $('#finishButton').click()
+        );
       },
       xml:
         '<xml>' +
@@ -52,17 +54,19 @@ module.exports = {
         '</xml>'
     },
     {
-      description: "Free play level with more ticks than allowed",
+      description: 'Free play level with more ticks than allowed',
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-      runBeforeClick: function () {
+      runBeforeClick: function() {
         // This is a free-play level: click Finish when drawing is done.
-        addEventListener('artistDrawingComplete', () => $('#finishButton').click());
+        addEventListener('artistDrawingComplete', () =>
+          $('#finishButton').click()
+        );
       },
       levelDefinitionOverrides: {
-        maxTickCount: 10,
+        maxTickCount: 10
       },
       xml:
         '<xml>' +

@@ -3,8 +3,9 @@
  * can be extended to allow for editing of various specialized kinds of cells.
  * @see @code-dot-org/maze/src/cell
  */
-import React, {PropTypes} from 'react';
-import { tiles } from '@code-dot-org/maze';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {tiles} from '@code-dot-org/maze';
 
 const SquareType = tiles.SquareType;
 
@@ -13,7 +14,7 @@ export default class CellEditor extends React.Component {
     cell: PropTypes.object.isRequired,
     row: PropTypes.number.isRequired,
     col: PropTypes.number.isRequired,
-    onUpdate: PropTypes.func.isRequired,
+    onUpdate: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -28,7 +29,7 @@ export default class CellEditor extends React.Component {
     // Convert the iterator to an array and reduce it to an object, combining
     // duplicate names when appropriate (ie for checkboxes)
     const values = Array.from(formData).reduce((serialized, [name, value]) => {
-      if (value === "undefined") {
+      if (value === 'undefined') {
         value = undefined;
       } else {
         value = isNaN(value) ? '' : Number(value);
@@ -95,13 +96,19 @@ export default class CellEditor extends React.Component {
    *        render. Defaults to maze.tiles.SquareType
    * @return {Element}
    */
-  renderTileTypes(values, squareTypes=SquareType) {
+  renderTileTypes(values, squareTypes = SquareType) {
     return (
       <div>
         <label htmlFor="tileType">Tile Type (required):</label>
-        <select name="tileType" value={values.tileType} onChange={this.handleChange}>
+        <select
+          name="tileType"
+          value={values.tileType}
+          onChange={this.handleChange}
+        >
           {Object.keys(squareTypes).map(key => (
-            <option key={key} value={squareTypes[key]}>{key.toLowerCase()}</option>
+            <option key={key} value={squareTypes[key]}>
+              {key.toLowerCase()}
+            </option>
           ))}
         </select>
       </div>
@@ -122,19 +129,37 @@ export default class CellEditor extends React.Component {
         {this.renderTileTypes(values)}
 
         <label htmlFor="value">Value:</label>
-        <input type="number" name="value" value={values.value} onChange={this.handleChange} />
+        <input
+          type="number"
+          name="value"
+          value={values.value}
+          onChange={this.handleChange}
+        />
 
         <label htmlFor="range">Range (defaults to value):</label>
-        <input type="number" name="range" value={values.range} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
+        <input
+          type="number"
+          name="range"
+          value={values.range}
+          disabled={values.featureType === 'undefined'}
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
 
   render() {
     return (
-      <form className="span4 offset1" ref={(form) => {this.form = form;}}>
+      <form
+        className="span4 offset1"
+        ref={form => {
+          this.form = form;
+        }}
+      >
         <header>
-          <strong>Editing Cell ({this.props.row}, {this.props.col})</strong>
+          <strong>
+            Editing Cell ({this.props.row}, {this.props.col})
+          </strong>
         </header>
 
         {this.renderFields(this.getSanitizedValues())}

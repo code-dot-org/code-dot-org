@@ -1,9 +1,5 @@
-import React, { PropTypes } from 'react';
-
-import experiments from '@cdo/apps/util/experiments';
-
-import processMarkdown from 'marked';
-import renderer from "../util/StylelessRenderer";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import Parser from '@code-dot-org/redactable-markdown';
 
@@ -12,12 +8,7 @@ import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import stripStyles from './plugins/stripStyles';
 
 const remarkParser = Parser.create();
-
-remarkParser.parser.use([
-  xmlAsTopLevelBlock,
-  expandableImages,
-]);
-
+remarkParser.parser.use([xmlAsTopLevelBlock, expandableImages]);
 remarkParser.compilerPlugins.push(stripStyles);
 
 /**
@@ -30,24 +21,14 @@ remarkParser.compilerPlugins.push(stripStyles);
  */
 export default class UnsafeRenderedMarkdown extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired,
-    forceRemark: PropTypes.bool,
+    markdown: PropTypes.string.isRequired
   };
 
   render() {
-    let processedMarkdown;
-    if (this.props.forceRemark || experiments.isEnabled('remark')) {
-      processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
-    } else {
-      processedMarkdown = processMarkdown(this.props.markdown, { renderer });
-    }
+    const processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
 
     /* eslint-disable react/no-danger */
-    return (
-      <div
-        dangerouslySetInnerHTML={{ __html: processedMarkdown }}
-      />
-    );
+    return <div dangerouslySetInnerHTML={{__html: processedMarkdown}} />;
     /* eslint-enable react/no-danger */
   }
 }

@@ -20,7 +20,7 @@ var NetSimUtils = require('./NetSimUtils');
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimStatusPanel = module.exports = function (rootDiv, callbacks) {
+var NetSimStatusPanel = (module.exports = function(rootDiv, callbacks) {
   /**
    * @type {function}
    * @private
@@ -34,7 +34,7 @@ var NetSimStatusPanel = module.exports = function (rootDiv, callbacks) {
     userToggleable: false,
     beginMinimized: true
   });
-};
+});
 NetSimStatusPanel.inherits(NetSimPanel);
 
 /**
@@ -44,7 +44,7 @@ NetSimStatusPanel.inherits(NetSimPanel);
  * @param {number} [data.myAddress] - Local node address assigned by router
  * @param {string} [data.shareLink] - URL for sharing private shard
  */
-NetSimStatusPanel.prototype.render = function (data) {
+NetSimStatusPanel.prototype.render = function(data) {
   data = data || {};
 
   // Capture title before we render the wrapper panel.
@@ -54,17 +54,20 @@ NetSimStatusPanel.prototype.render = function (data) {
   NetSimStatusPanel.superPrototype.render.call(this);
 
   // Put our own content into the panel body
-  var newMarkup = $(markup({
-    myHostname: data.myHostname,
-    myAddress: data.myAddress,
-    shareLink: data.shareLink
-  }));
+  var newMarkup = $(
+    markup({
+      myHostname: data.myHostname,
+      myAddress: data.myAddress,
+      shareLink: data.shareLink
+    })
+  );
   this.getBody().html(newMarkup);
 
   // Add a button to the panel header
   this.addButton(
-      i18n.disconnectButton({ caret: '<i class="fa fa-caret-left"></i>' }),
-      this.disconnectCallback_);
+    i18n.disconnectButton({caret: '<i class="fa fa-caret-left"></i>'}),
+    this.disconnectCallback_
+  );
 
   // Button that takes you to the next level.
   NetSimUtils.makeContinueButton(this);

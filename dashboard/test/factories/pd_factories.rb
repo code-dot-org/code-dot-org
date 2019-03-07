@@ -1125,8 +1125,7 @@ FactoryGirl.define do
     cs_total_course_hours 75
     cs_terms '1 quarter'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
-    pay_fee 'Yes, my school or I will be able to pay the full program fee.'
-    what_license_required 'CSTA'
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
     plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'
     interested_in_online_program 'Yes'
   end
@@ -1139,8 +1138,6 @@ FactoryGirl.define do
     end
     form_data {form_data_hash.to_json}
   end
-
-  factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
 
   # default to do_you_approve: other
   factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do

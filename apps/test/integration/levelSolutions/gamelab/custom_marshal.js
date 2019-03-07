@@ -4,8 +4,8 @@ import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 // These tests force us to custom marshal p5 objects properly, and are
 // written to fail if they are improperly marshaled.
 module.exports = {
-  app: "gamelab",
-  skinId: "gamelab",
+  app: 'gamelab',
+  skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,
   tests: [
     testAsyncProgramGameLab(
@@ -26,6 +26,6 @@ module.exports = {
         const debugOutput = document.getElementById('debug-output').textContent;
         assert.notInclude(debugOutput, 'function');
       }
-    ),
+    )
   ]
 };

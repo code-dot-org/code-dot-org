@@ -2,7 +2,8 @@
  * Creates a new workshop.
  * Route: /workshops/new
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import WorkshopForm from './components/workshop_form';
 
 export default class NewWorkshop extends React.Component {
@@ -10,7 +11,7 @@ export default class NewWorkshop extends React.Component {
     router: PropTypes.object.isRequired
   };
 
-  handleSaved = (workshop) => {
+  handleSaved = workshop => {
     this.context.router.push(`/workshops/${workshop.id}`);
   };
 

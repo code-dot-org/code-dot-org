@@ -3,6 +3,7 @@
 @dashboard_db_access
 @as_student
 @no_mobile
+@no_older_chrome
 Feature: App Lab Embed
 
   Background:

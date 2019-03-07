@@ -8,7 +8,7 @@ This directory contains Docker Compose files for running the code.org website lo
 Caveats:
 
 * Only practical on Linux right now - technically works on Mac, but the site runs too slowly to be usable due to poor file system performance for bind-mounted volumes in Docker for Mac.
-* Google OAuth for AWS credentials doesn't work, you'll need to provide AWS credentials a different way - EC2 users get this for free
+* Google OAuth for AWS credentials works slightly differently, since code inside the container can't open access your browser directly. Instead, when you need to authenticate, the console will output a link, which you copy and open in your browser, and then paste the auth token you get back into the console. (EC2 users can ignore this.)
 
 Install:
 
@@ -26,17 +26,17 @@ Run all docker-compose commands from this directory.
     export FIXUID=$(id -u)
     export FIXGID=$(id -g)
     ```
-2. This recreates most of the SETUP.md instructions, and will probably take a long time:
+2. Run the following command. This recreates most of the SETUP.md instructions, and will probably take a long time:
 
     ```
     docker-compose -f setup-compose.yml up
     ```
 
-3. Setup your locals.yml file as normal, minus the fields for Google OAuth.
+3. Setup the rest of your locals.yml file as normal.
 
 ## Usage
 
-Run the server:
+Run the code.org website locally:
 
 ```
 docker-compose -f site-compose.yml up
@@ -50,10 +50,16 @@ Stop the server:
 docker-compose -f site-compose.yml down
 ```
 
-Start bash in a new container (for now, this is how you do anything else):
+Start bash in a new container (for now, this is how you do anything else, e.g. run bin/ scripts or tests):
 
 ```
 docker-compose -f site-compose.yml run site bash
 ```
 
-The Docker Compose files use a bind-mount to make the entire code-dot-org source directory readable and writeable from within the container. They also use volume mounts to persist stateful data across multiple container runs, such as the mysql tables, node_modules, rbenv gems, etc. If needed, you can manage containers and volumes using the docker CLI.
+Clean up stopped containers:
+
+```
+docker-compose -f site-compose.yml down
+```
+
+The Docker Compose files use a bind-mount to make the entire code-dot-org source directory readable and writeable from within the container. They also use volume mounts to persist stateful data across multiple container runs, such as the mysql tables, rbenv gems, etc. If needed, you can manage containers and volumes using the docker CLI.

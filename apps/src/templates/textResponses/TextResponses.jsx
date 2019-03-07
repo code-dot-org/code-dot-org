@@ -1,22 +1,27 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
-import {h3Style} from "../../lib/ui/Headings";
-import color from "../../util/color";
+import {h3Style} from '../../lib/ui/Headings';
+import color from '../../util/color';
 import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
-import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
+import {
+  setScriptId,
+  validScriptPropType,
+  getSelectedScriptName
+} from '@cdo/apps/redux/scriptSelectionRedux';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
   {label: i18n.stage(), key: 'stage'},
   {label: i18n.puzzle(), key: 'puzzle'},
   {label: i18n.question(), key: 'question'},
-  {label: i18n.response(), key: 'response'},
+  {label: i18n.response(), key: 'response'}
 ];
 const DEFAULT_FILTER_KEY = i18n.all();
 const PADDING = 8;
@@ -25,9 +30,11 @@ const styles = {
   header: {
     marginBottom: 0
   },
+  scriptSelection: {
+    marginTop: 30
+  },
   actionRow: {
     height: 47,
-    width: '100%',
     padding: PADDING,
     marginTop: 20,
     backgroundColor: color.table_header,
@@ -61,12 +68,13 @@ const styles = {
 
 class TextResponses extends Component {
   static propTypes = {
-    // provided by redux
+    // Provided by redux.
     sectionId: PropTypes.number.isRequired,
     responses: PropTypes.object.isRequired,
     isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
+    scriptName: PropTypes.string,
     setScriptId: PropTypes.func.isRequired,
     asyncLoadTextResponses: PropTypes.func.isRequired
   };
@@ -105,7 +113,9 @@ class TextResponses extends Component {
           onChange={this.onChangeFilter}
         >
           <option key={DEFAULT_FILTER_KEY}>{DEFAULT_FILTER_KEY}</option>
-          {stages.map(stage => <option key={stage}>{stage}</option>)}
+          {stages.map(stage => (
+            <option key={stage}>{stage}</option>
+          ))}
         </select>
       </div>
     );
@@ -117,7 +127,8 @@ class TextResponses extends Component {
   };
 
   onChangeFilter = event => {
-    const filterByStageName = event.target.value === DEFAULT_FILTER_KEY ? null : event.target.value;
+    const filterByStageName =
+      event.target.value === DEFAULT_FILTER_KEY ? null : event.target.value;
     this.setState({filterByStageName});
   };
 
@@ -126,19 +137,28 @@ class TextResponses extends Component {
     let filteredResponses = [...this.getResponsesByScript()];
 
     if (filterByStageName) {
-      filteredResponses = filter(filteredResponses, ['stage', filterByStageName]);
+      filteredResponses = filter(filteredResponses, [
+        'stage',
+        filterByStageName
+      ]);
     }
 
     return filteredResponses;
   };
 
   render() {
-    const {validScripts, scriptId, sectionId, isLoadingResponses} = this.props;
+    const {
+      validScripts,
+      scriptId,
+      scriptName,
+      sectionId,
+      isLoadingResponses
+    } = this.props;
     const filteredResponses = this.getFilteredResponses();
 
     return (
       <div>
-        <div>
+        <div style={styles.scriptSelection}>
           <div style={{...h3Style, ...styles.header}}>
             {i18n.selectACourse()}
           </div>
@@ -148,11 +168,8 @@ class TextResponses extends Component {
             onChange={this.onChangeScript}
           />
         </div>
-        {filteredResponses.length > 0 &&
-          <div
-            id="uitest-response-actions"
-            style={styles.actionRow}
-          >
+        {filteredResponses.length > 0 && (
+          <div id="uitest-response-actions" style={styles.actionRow}>
             <div>{this.renderFilterByStageDropdown()}</div>
             <CSVLink
               style={styles.buttonContainer}
@@ -168,12 +185,14 @@ class TextResponses extends Component {
               />
             </CSVLink>
           </div>
-        }
+        )}
         <div style={styles.table}>
           <TextResponsesTable
             responses={filteredResponses}
             sectionId={sectionId}
             isLoading={isLoadingResponses}
+            scriptId={scriptId}
+            scriptName={scriptName}
           />
         </div>
       </div>
@@ -183,17 +202,21 @@ class TextResponses extends Component {
 
 export const UnconnectedTextResponses = TextResponses;
 
-export default connect(state => ({
-  sectionId: state.sectionData.section.id,
-  responses: state.textResponses.responseDataByScript,
-  isLoadingResponses: state.textResponses.isLoadingResponses,
-  validScripts: state.scriptSelection.validScripts,
-  scriptId: state.scriptSelection.scriptId,
-}), dispatch => ({
-  setScriptId(scriptId) {
-    dispatch(setScriptId(scriptId));
-  },
-  asyncLoadTextResponses(sectionId, scriptId, onComplete) {
-    dispatch(asyncLoadTextResponses(sectionId, scriptId, onComplete));
-  }
-}))(TextResponses);
+export default connect(
+  state => ({
+    sectionId: state.sectionData.section.id,
+    responses: state.textResponses.responseDataByScript,
+    isLoadingResponses: state.textResponses.isLoadingResponses,
+    validScripts: state.scriptSelection.validScripts,
+    scriptId: state.scriptSelection.scriptId,
+    scriptName: getSelectedScriptName(state)
+  }),
+  dispatch => ({
+    setScriptId(scriptId) {
+      dispatch(setScriptId(scriptId));
+    },
+    asyncLoadTextResponses(sectionId, scriptId, onComplete) {
+      dispatch(asyncLoadTextResponses(sectionId, scriptId, onComplete));
+    }
+  })
+)(TextResponses);

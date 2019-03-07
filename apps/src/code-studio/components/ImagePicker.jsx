@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import AssetManager from './AssetManager';
-import color from "../../util/color";
+import color from '../../util/color';
 import IconLibrary from './IconLibrary';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 
@@ -30,7 +31,7 @@ export default class ImagePicker extends React.Component {
 
   state = {mode: 'files'};
 
-  getAssetNameWithPrefix = (icon) => {
+  getAssetNameWithPrefix = icon => {
     this.props.assetChosen(ICON_PREFIX + icon);
   };
 
@@ -42,7 +43,7 @@ export default class ImagePicker extends React.Component {
     const isFileMode = this.state.mode === 'files';
     const styles = {
       root: {
-        margin: "0 0 0 5px"
+        margin: '0 0 0 5px'
       },
       fileModeToggle: {
         float: 'left',
@@ -66,37 +67,52 @@ export default class ImagePicker extends React.Component {
       warning: {
         color: color.red,
         fontSize: 13,
-        fontWeight: 'bold',
-      },
+        fontWeight: 'bold'
+      }
     };
 
-    let modeSwitch, title = this.props.assetChosen ?
-      <p className="dialog-title">Choose Assets</p> :
-      <p className="dialog-title">Manage Assets</p>;
+    let modeSwitch,
+      title = this.props.assetChosen ? (
+        <p className="dialog-title">Choose Assets</p>
+      ) : (
+        <p className="dialog-title">Manage Assets</p>
+      );
 
-    const imageTypeFilter = !this.props.typeFilter || this.props.typeFilter === 'image';
+    const imageTypeFilter =
+      !this.props.typeFilter || this.props.typeFilter === 'image';
     if (this.props.assetChosen && imageTypeFilter) {
-      modeSwitch = (<div>
-        <p onClick={this.setFileMode} style={styles.fileModeToggle}>My Files</p>
-        <p onClick={this.setIconMode} style={styles.iconModeToggle}>Icons</p>
-        <hr style={styles.divider}/>
-      </div>);
+      modeSwitch = (
+        <div>
+          <p onClick={this.setFileMode} style={styles.fileModeToggle}>
+            My Files
+          </p>
+          <p onClick={this.setIconMode} style={styles.iconModeToggle}>
+            Icons
+          </p>
+          <hr style={styles.divider} />
+        </div>
+      );
     }
 
-    const body = !this.props.assetChosen || this.state.mode === 'files' ?
-      <AssetManager
-        assetChosen={this.props.assetChosen}
-        assetsChanged={this.props.assetsChanged}
-        allowedExtensions={extensionFilter[this.props.typeFilter]}
-        uploadsEnabled={this.props.uploadsEnabled}
-        useFilesApi={this.props.useFilesApi}
-        projectId={this.props.projectId}
-        soundPlayer={this.props.soundPlayer}
-        disableAudioRecording={this.props.disableAudioRecording}
-        imagePicker={true}
-        elementId={this.props.elementId}
-      /> :
-      <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
+    const disableAudio =
+      this.props.disableAudioRecording || this.props.assetChosen;
+    const body =
+      !this.props.assetChosen || this.state.mode === 'files' ? (
+        <AssetManager
+          assetChosen={this.props.assetChosen}
+          assetsChanged={this.props.assetsChanged}
+          allowedExtensions={extensionFilter[this.props.typeFilter]}
+          uploadsEnabled={this.props.uploadsEnabled}
+          useFilesApi={this.props.useFilesApi}
+          projectId={this.props.projectId}
+          soundPlayer={this.props.soundPlayer}
+          disableAudioRecording={disableAudio}
+          imagePicker={true}
+          elementId={this.props.elementId}
+        />
+      ) : (
+        <IconLibrary assetChosen={this.getAssetNameWithPrefix} />
+      );
 
     return (
       <div className="modal-content" style={styles.root}>

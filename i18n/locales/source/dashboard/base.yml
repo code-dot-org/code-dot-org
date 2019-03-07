@@ -916,6 +916,7 @@ en:
     peer_review: 'Peer Review'
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
+    optional: 'Optional'
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
@@ -1026,6 +1027,8 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
+  no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'

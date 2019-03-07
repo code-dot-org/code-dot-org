@@ -17,16 +17,14 @@ services:
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated
-      - nodemodules:/home/circleci/code-dot-org/apps/node_modules
       - rbenv:/home/circleci/.rbenv
       - mysqldata:/var/lib/mysql
-    env_file:
-      - env.list
-    ports:
-      - "3000:3000"
+      - yarncache:/home/circleci/.cache
+      - gcloud_config:/home/circleci/.config/gcloud
     command: bash -c "docker/dev_setup.sh"
 
 volumes:
-  nodemodules:
   mysqldata:
   rbenv:
+  yarncache:
+  gcloud_config:

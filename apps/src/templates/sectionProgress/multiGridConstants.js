@@ -1,4 +1,4 @@
-import color from "../../util/color";
+import color from '../../util/color';
 
 export const ROW_HEIGHT = 42;
 export const LAST_ROW_MARGIN_HEIGHT = 18;
@@ -11,8 +11,16 @@ export const PILL_BUBBLE_WIDTH = 180;
 export const progressStyles = {
   lessonHeading: {
     fontFamily: '"Gotham 5r", sans-serif',
-    paddingTop: 10,
+    fontSize: 14,
+    color: color.charcoal,
     paddingLeft: 8
+  },
+  lessonLabelContainer: {
+    borderBottom: '2px solid',
+    borderColor: color.border_gray,
+    height: 44,
+    display: 'flex',
+    alignItems: 'center'
   },
   // For 'hover' to be applied, you should wrap the component using this style in Radium.
   lessonNumberHeading: {
@@ -24,7 +32,8 @@ export const progressStyles = {
     ':hover': {
       cursor: 'pointer'
     },
-    textAlign: 'center'
+    textAlign: 'center',
+    height: '100%'
   },
   lessonOfInterest: {
     backgroundColor: color.teal,
@@ -39,53 +48,53 @@ export const progressStyles = {
   multigrid: {
     border: '1px solid',
     borderColor: color.border_gray,
-    padding: 0,
+    padding: 0
   },
   bottomLeft: {
     borderRight: '2px solid',
-    borderColor: color.border_gray,
+    borderColor: color.border_gray
   },
   topLeft: {
     borderBottom: '2px solid',
     borderRight: '2px solid',
     borderColor: color.border_gray,
-    backgroundColor: color.table_header,
+    backgroundColor: color.table_header
   },
   topRight: {
     borderBottom: '2px solid',
     borderRight: '1px solid',
     borderColor: color.border_gray,
-    backgroundColor: color.table_header,
+    backgroundColor: color.table_header
   },
   icon: {
-    paddingLeft: 10,
-    paddingRight: 10,
     paddingTop: 12,
     width: PROGRESS_BUBBLE_WIDTH,
-    fontSize: 20,
+    textAlign: 'center',
+    color: color.charcoal,
+    fontSize: 20
   },
   unpluggedIcon: {
     width: PILL_BUBBLE_WIDTH,
+    textAlign: 'center',
+    color: color.charcoal,
     fontSize: 20,
-    paddingRight: 10,
-    paddingLeft: 10,
-    paddingTop: 12,
+    paddingTop: 12
   },
   link: {
-    color: color.teal,
+    color: color.teal
   },
   summaryCell: {
-    margin: '9px 7px',
+    margin: '9px 8px'
   },
   nameCell: {
     margin: 10,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontSize: 14
   },
   cell: {
-    borderRight: '1px solid',
-    borderColor: color.border_gray,
+    borderRight: `1px solid ${color.border_gray}`
   }
 };
 

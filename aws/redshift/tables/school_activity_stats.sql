@@ -21,9 +21,16 @@ hoc_event as (
   -- by school ID, did a school host an hour of code in 2017?
     select distinct json_extract_path_text(data_text, 'nces_school_s') school_id
     from pegasus_pii.forms
-    where kind = 'HocSignup2017'
+    where kind = 'HocSignup2018'
     and json_extract_path_text(data_text, 'nces_school_s') not in ('','-1')
   ),
+applied_to_csd_csp_pd as (
+  select distinct json_extract_path_text(form_data, 'school') school_id
+  from pd_applications
+  where left(application_year, 4)::int = date_part_year(getdate()::date)
+  and application_type = 'Teacher'
+  and json_extract_path_text(form_data, 'school') != '-1'
+),
 csf_script_ids as
   (select  
     sc.id as script_id,
@@ -85,10 +92,11 @@ csf_script_ids as
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select script_id from csf_script_ids) THEN f.student_user_id ELSE NULL END) students_csf_l365,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd')) THEN f.student_user_id ELSE NULL END) students_csd_l365,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csp')) THEN f.student_user_id ELSE NULL END) students_csp_l365,      
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
+         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro','aquatic','dance','dance-extras') THEN f.student_user_id ELSE NULL END) students_hoc,
          -- pledge and HOC
          MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
-         MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
+         MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event,
+         MAX(CASE WHEN app.school_id is not null then 1 end) applied_to_csp_csd_pd
   FROM analysis.school_stats ss
     LEFT JOIN dashboard_production.schools sc on sc.id = ss.school_id
     LEFT JOIN dashboard_production.school_infos si 
@@ -115,6 +123,8 @@ csf_script_ids as
       ON pledged.school_id = ss.school_id
     LEFT JOIN hoc_event
         ON hoc_event.school_id = ss.school_id
+    LEFT JOIN applied_to_csd_csp_pd app
+        ON app.school_id = ss.school_id
   GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
  ;
  

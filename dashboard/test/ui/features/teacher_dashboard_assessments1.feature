@@ -1,4 +1,3 @@
-@no_ie
 @no_mobile
 @dashboard_db_access
 @pegasus_db_access
@@ -19,15 +18,21 @@ Feature: Using the assessments tab in the teacher dashboard
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains('17-'18)" once I see it
+    And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Student Post-Course Survey ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
     And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
-    When I click selector "a:contains('Untitled Section')" once I see it
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" is visible
 
     # Assessments tab
-    When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
-    Then I wait until element "h3:contains(this survey is anonymous)" is visible
+    Then I wait until element "div:contains(this survey is anonymous)" is visible

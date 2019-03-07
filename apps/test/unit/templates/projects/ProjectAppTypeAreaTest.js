@@ -4,7 +4,12 @@ import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
 import sinon from 'sinon';
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import projectsReducer from '@cdo/apps/templates/projects/projectsRedux';
 
 function generateFakeProjects(numProjects, projectType) {
@@ -16,9 +21,9 @@ function generateFakeProjects(numProjects, projectType) {
       type: projectType,
       publishedAt: new Date(startTime + projectNum).toISOString(),
       publishedToPublic: true,
-      publishedToClass: true,
+      publishedToClass: true
     },
-    currentGallery: "public"
+    currentGallery: 'public'
   }));
 }
 
@@ -55,12 +60,17 @@ describe('ProjectAppTypeArea', () => {
         />
       );
       expect(wrapper.find('ProjectCard')).to.have.length(12);
-      expect(wrapper.find('Button').first().text()).to.equal('View more');
+      expect(
+        wrapper
+          .find('Button')
+          .first()
+          .text()
+      ).to.equal('View more');
       expect(stubAjax).not.to.have.been.called;
     });
 
     it('renders a working link to view more projects of a specific type', () => {
-      var viewMoreLink = "more App Lab projects";
+      var viewMoreLink = 'more App Lab projects';
       const wrapper = mount(
         <ProjectAppTypeArea
           labKey="applab"
@@ -118,7 +128,7 @@ describe('ProjectAppTypeArea', () => {
       // Simulate the network request completing.
       ajaxDeferred.resolve({applab: generateFakeProjects(40, 'applab')});
       wrapper.setProps({
-        projectList: generateFakeProjects(40, 'applab'),
+        projectList: generateFakeProjects(40, 'applab')
       });
 
       // Displays additional projects returned from the server.

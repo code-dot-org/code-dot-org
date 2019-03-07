@@ -1,5 +1,12 @@
-import { expect } from '../../util/configuredChai';
-import { castValue, displayableValue, editableValue, isNumber, isBoolean, toBoolean } from '@cdo/apps/storage/dataBrowser/dataUtils';
+import {expect} from '../../util/configuredChai';
+import {
+  castValue,
+  displayableValue,
+  editableValue,
+  isNumber,
+  isBoolean,
+  toBoolean
+} from '@cdo/apps/storage/dataBrowser/dataUtils';
 
 describe('isNumber', () => {
   it('detects valid numerical values', () => {
@@ -80,16 +87,18 @@ describe('castValue', () => {
   });
 
   it('parses arrays', () => {
-    expect(castValue('[1,2,3]')).to.deep.equal([1,2,3]);
+    expect(castValue('[1,2,3]')).to.deep.equal([1, 2, 3]);
   });
 
   it('parses objects', () => {
-    expect(castValue('{"a":1}')).to.deep.equal({a:1});
+    expect(castValue('{"a":1}')).to.deep.equal({a: 1});
   });
 
   it('parses nested arrays and objects', () => {
-    expect(castValue('{"a":[2,"3",{"d":"true"}],"x":{"y":false}}')).to.deep.equal({
-      a: [2, "3", {d: "true"}],
+    expect(
+      castValue('{"a":[2,"3",{"d":"true"}],"x":{"y":false}}')
+    ).to.deep.equal({
+      a: [2, '3', {d: 'true'}],
       x: {y: false}
     });
   });
@@ -99,7 +108,6 @@ describe('castValue', () => {
     expect(castValue('undefined')).to.equal('undefined');
     expect(castValue('"foo')).to.equal('"foo');
     expect(castValue('""foo""')).to.equal('""foo""');
-
   });
 });
 
@@ -117,8 +125,8 @@ describe('editableValue', () => {
     expect(editableValue('foo')).to.equal('foo');
   });
   it('stringifies objects and arrays', () => {
-    expect(editableValue({a:1})).to.equal('{"a":1}');
-    expect(editableValue([1,2])).to.equal('[1,2]');
+    expect(editableValue({a: 1})).to.equal('{"a":1}');
+    expect(editableValue([1, 2])).to.equal('[1,2]');
   });
 });
 
@@ -151,7 +159,7 @@ describe('what we show based on what the user enters', () => {
       expect(displayableValue(castValue('1'))).to.equal('1');
       expect(displayableValue(castValue('true'))).to.equal('true');
     });
-    it ('shows quotes around other string values', () => {
+    it('shows quotes around other string values', () => {
       expect(displayableValue(castValue('foo'))).to.equal('"foo"');
     });
   });
@@ -166,19 +174,23 @@ describe('what we show based on what the user enters', () => {
     });
     it('preserves properly quoted and escaped quotes', () => {
       expect(displayableValue(castValue('"\\"foo"'))).to.equal('"\\"foo"');
-      expect(displayableValue(castValue('"\\"foo\\""'))).to.equal('"\\"foo\\""');
+      expect(displayableValue(castValue('"\\"foo\\""'))).to.equal(
+        '"\\"foo\\""'
+      );
     });
   });
 
   describe('when the user enters unmatching quotes', () => {
-    it ('adds quotes around and escapes mismatched quotes', () => {
+    it('adds quotes around and escapes mismatched quotes', () => {
       // double-backslashes here will appear as single backslashes in the ui
       expect(displayableValue(castValue('"foo'))).to.equal('"\\"foo"');
       expect(displayableValue(castValue('"1'))).to.equal('"\\"1"');
     });
-    it ('adds quotes around and escapes multiple sets of quotes', () => {
+    it('adds quotes around and escapes multiple sets of quotes', () => {
       // double-backslashes here will appear as single backslashes in the ui
-      expect(displayableValue(castValue('""foo""'))).to.equal('"\\"\\"foo\\"\\""');
+      expect(displayableValue(castValue('""foo""'))).to.equal(
+        '"\\"\\"foo\\"\\""'
+      );
     });
   });
 

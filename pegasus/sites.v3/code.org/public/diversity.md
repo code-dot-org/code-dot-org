@@ -33,7 +33,7 @@ The charts below show participation in the AP Computer Science exam among female
 <br/><br/>
 
 ## Diversity of students in Code.org courses across grades K-12
-<center><img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" style="max-width: 100%"/></center>
+<center><img src="/images/infographics/fit-800/diversity-courses-2018-web.png" style="max-width: 100%"/></center>
 
 Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among underrepresented minorities: African Americans, Hispanic/Latino students, Native American/Alaskans, and Native Hawaiian/Pacific Islanders. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diversity. (Details on how we measure student diversity in our courses are [here](https://docs.google.com/document/u/2/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub))
 
@@ -42,7 +42,7 @@ Though black, Latinx, American Indian, and Native Pacific Islander students are 
 
 The chart below shows the data from hundreds of Code.org computer science classrooms. We compared the percent of underrepresented minorities at the school as a whole to the percent among students who enroll in our courses. The orange dots represent computer science classrooms that are more diverse than the school as a whole. The blue dots are those that are less diverse.
 
-<center><img src="/images/infographics/fit-800/urm-diversity-in-code-courses.png" style="max-width: 100%"/></center>
+<center><img src="/images/infographics/fit-800/courses-diversity-scatterplot-2018.png" style="max-width: 100%"/></center>
 
 Almost 40% of Code.org classrooms are more diverse than the school as a whole and most of our classrooms track close to an even balance. When teachers and administrators in diverse schools offer Code.org curriculum designed to support underrepresented minorities, the participation in high schools dramatically exceeds the nationwide numbers and the reality of the tech industry today.
 
@@ -96,7 +96,7 @@ The Hour of Code is an international campaign to recruit students to try compute
 
 A [recent study](/files/HourOfCodeImpactStudy_Jan2017.pdf) of students participating in the Hour of Code showed significant improvements in attitudes and self-efficacy towards computer science, *especially among female students.*
 
-The results speak for themselves, with 100 million “hours served”, and 48% of participants being female, the Hour of Code is the largest-scale effort to introduce computer science to girls.
+The results speak for themselves, with over 700 million “hours served”, and 50% of participants being female, the Hour of Code is the largest-scale effort to introduce computer science to girls.
 
 <center><img src="/images/hourofcodewomen.png" /></center>
 
@@ -108,12 +108,12 @@ We’ve also distributed [recruitment posters, videos, and other marketing mater
 
 ## Our own team’s gender diversity
 
-| Our own team gender diversity |  |
-|------|---|
-| Code.org full time staff |  58% female |
-| Our leadership team | 60% female |
-| Our engineering team (software engineers only) | 30% female |
-| Our technical staff (software engineers, technical product managers, computer science educators) | 43% female |
+| Our own team gender diversity |             |
+|------| ----------- |
+| Code.org full time staff |  62% female |
+| Our leadership team |  55% female |
+| Our engineering team (software engineers only) |  50% female |
+| Our technical staff (software engineers, technical product managers, computer science educators) |  51% female |
 | Our extended team of expert facilitators|  66% female |
 | The teachers attending our professional development |  86% female |
 

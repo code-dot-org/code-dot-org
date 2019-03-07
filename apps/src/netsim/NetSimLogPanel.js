@@ -86,7 +86,7 @@ var DEFAULT_MAXIMUM_LOG_PACKETS = 50;
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
-var NetSimLogPanel = module.exports = function (rootDiv, options) {
+var NetSimLogPanel = (module.exports = function(rootDiv, options) {
   /**
    * @type {Packet.HeaderType[]}
    * @private
@@ -126,7 +126,7 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
    * @type {boolean}
    * @private
    */
-  this.hasUnreadMessages_ = !!(options.hasUnreadMessages);
+  this.hasUnreadMessages_ = !!options.hasUnreadMessages;
 
   /**
    * The maximum number of packets this log panel will keep in its memory
@@ -134,8 +134,10 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
    * @type {number}
    * @private,,
    */
-  this.maximumLogPackets_ = utils.valueOr(options.maximumLogPackets,
-      DEFAULT_MAXIMUM_LOG_PACKETS);
+  this.maximumLogPackets_ = utils.valueOr(
+    options.maximumLogPackets,
+    DEFAULT_MAXIMUM_LOG_PACKETS
+  );
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -143,10 +145,10 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
     panelTitle: options.logTitle,
     beginMinimized: options.isMinimized
   });
-};
+});
 NetSimLogPanel.inherits(NetSimPanel);
 
-NetSimLogPanel.prototype.render = function () {
+NetSimLogPanel.prototype.render = function() {
   // Create boilerplate panel markup
   NetSimLogPanel.superPrototype.render.call(this);
 
@@ -167,7 +169,7 @@ NetSimLogPanel.prototype.render = function () {
  * Remove all packets from the log, resetting its state.
  * @private
  */
-NetSimLogPanel.prototype.onClearButtonPress_ = function () {
+NetSimLogPanel.prototype.onClearButtonPress_ = function() {
   this.scrollArea_.empty();
   this.packets_.length = 0;
 
@@ -179,9 +181,8 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
  * @param {string} packetBinary
  * @param {number} packetID
  */
-NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
-
-  var packetAlreadyInLog = this.packets_.some(function (packet) {
+NetSimLogPanel.prototype.log = function(packetBinary, packetID) {
+  var packetAlreadyInLog = this.packets_.some(function(packet) {
     return packet.packetID === packetID;
   });
 
@@ -191,10 +192,10 @@ NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
 
   // Remove all packets that are beyond our maximum size
   this.packets_
-      .splice(this.maximumLogPackets_ - 1, this.packets_.length)
-      .forEach(function (packet) {
-        packet.getRoot().remove();
-      });
+    .splice(this.maximumLogPackets_ - 1, this.packets_.length)
+    .forEach(function(packet) {
+      packet.getRoot().remove();
+    });
 
   var newPacket = new NetSimLogPacket(packetBinary, packetID, {
     packetSpec: this.packetSpec_,
@@ -217,8 +218,9 @@ NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
     // to maintain our place relative to the messages we're looking at
 
     // Scrolling only takes the bottom margin into account, not top
-    var packetHeight = newPacket.getRoot().outerHeight() +
-        parseInt(newPacket.getRoot().css('marginBottom'));
+    var packetHeight =
+      newPacket.getRoot().outerHeight() +
+      parseInt(newPacket.getRoot().css('marginBottom'));
 
     this.scrollArea_.scrollTop(scrollTop + packetHeight);
   }
@@ -228,16 +230,18 @@ NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
   this.updateUnreadCount();
 };
 
-NetSimLogPanel.prototype.updateUnreadCount = function () {
-  var unreadCount = this.packets_.reduce(function (prev, cur) {
+NetSimLogPanel.prototype.updateUnreadCount = function() {
+  var unreadCount = this.packets_.reduce(function(prev, cur) {
     return prev + (cur.isUnread ? 1 : 0);
   }, 0);
 
   if (unreadCount > 0) {
-    this.setPanelTitle(i18n.appendCountToTitle({
-      title: this.logTitle_,
-      count: unreadCount
-    }));
+    this.setPanelTitle(
+      i18n.appendCountToTitle({
+        title: this.logTitle_,
+        count: unreadCount
+      })
+    );
   } else {
     this.setPanelTitle(this.logTitle_);
   }
@@ -248,9 +252,9 @@ NetSimLogPanel.prototype.updateUnreadCount = function () {
  * mode.
  * @param {EncodingType[]} newEncodings
  */
-NetSimLogPanel.prototype.setEncodings = function (newEncodings) {
+NetSimLogPanel.prototype.setEncodings = function(newEncodings) {
   this.currentEncodings_ = newEncodings;
-  this.packets_.forEach(function (packet) {
+  this.packets_.forEach(function(packet) {
     packet.setEncodings(newEncodings);
   });
 };
@@ -259,9 +263,9 @@ NetSimLogPanel.prototype.setEncodings = function (newEncodings) {
  * Change how binary input in interpreted and formatted in the log.
  * @param {number} newChunkSize
  */
-NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
+NetSimLogPanel.prototype.setChunkSize = function(newChunkSize) {
   this.currentChunkSize_ = newChunkSize;
-  this.packets_.forEach(function (packet) {
+  this.packets_.forEach(function(packet) {
     packet.setChunkSize(newChunkSize);
   });
 };
@@ -279,8 +283,7 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @param {function} options.markAsReadCallback
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, packetID, options) {
-
+var NetSimLogPacket = function(packetBinary, packetID, options) {
   /**
    * @type {number}
    */
@@ -341,7 +344,7 @@ var NetSimLogPacket = function (packetBinary, packetID, options) {
 /**
  * Re-render div contents to represent the packet in a different way.
  */
-NetSimLogPacket.prototype.render = function () {
+NetSimLogPacket.prototype.render = function() {
   var encodingsHash = NetSimEncodingControl.encodingsAsHash(this.encodings_);
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
@@ -362,7 +365,7 @@ NetSimLogPacket.prototype.render = function () {
  * Return root div, for hooking up to a parent element.
  * @returns {jQuery}
  */
-NetSimLogPacket.prototype.getRoot = function () {
+NetSimLogPacket.prototype.getRoot = function() {
   return this.rootDiv_;
 };
 
@@ -371,16 +374,17 @@ NetSimLogPacket.prototype.getRoot = function () {
  * and fields to match the level's configured packet format.
  * @param {jQuery} rootElement
  */
-NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
+NetSimLogPanel.adjustHeaderColumnWidths = function(rootElement) {
   var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(
-      level.addressFormat,
-      level.packetCountBitWidth,
-      level.clientInitialPacketHeader);
-  var addressBitWidth = encoder.getFieldBitWidth(
-      Packet.HeaderType.TO_ADDRESS);
+    level.addressFormat,
+    level.packetCountBitWidth,
+    level.clientInitialPacketHeader
+  );
+  var addressBitWidth = encoder.getFieldBitWidth(Packet.HeaderType.TO_ADDRESS);
   var packetInfoBitWidth = encoder.getFieldBitWidth(
-      Packet.HeaderType.PACKET_COUNT);
+    Packet.HeaderType.PACKET_COUNT
+  );
 
   // Adjust width of address columns
   // For columns, 50px is sufficient for 4 bits
@@ -388,35 +392,37 @@ NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
   var addressColumnWidthInPx = PX_PER_BIT * addressBitWidth;
 
   // Adjust width of address columns
-  rootElement.find('td.toAddress, th.toAddress, td.fromAddress, th.fromAddress')
-      .css('width', addressColumnWidthInPx + 'px');
-
+  rootElement
+    .find('td.toAddress, th.toAddress, td.fromAddress, th.fromAddress')
+    .css('width', addressColumnWidthInPx + 'px');
 
   // Adjust width of address input fields
   // For inputs, 3em is sufficient for 4 bits
   var EMS_PER_BIT = 3 / 4;
   var addressFieldWidthInEms = EMS_PER_BIT * addressBitWidth;
-  rootElement.find('td.toAddress input, td.fromAddress input')
-      .css('width', addressFieldWidthInEms + 'em');
-
+  rootElement
+    .find('td.toAddress input, td.fromAddress input')
+    .css('width', addressFieldWidthInEms + 'em');
 
   // Adjust width of packet info column
   // Packet info column uses two fields and an extra 21px for " of "
-  var packetInfoColumnWidthInPx = (2 * PX_PER_BIT * packetInfoBitWidth) + 21;
-  rootElement.find('td.packetInfo, th.packetInfo')
-      .css('width', packetInfoColumnWidthInPx + 'px');
+  var packetInfoColumnWidthInPx = 2 * PX_PER_BIT * packetInfoBitWidth + 21;
+  rootElement
+    .find('td.packetInfo, th.packetInfo')
+    .css('width', packetInfoColumnWidthInPx + 'px');
 
   // Adjust width of packet info fields
   var packetInfoFieldWidthInEms = EMS_PER_BIT * packetInfoBitWidth;
-  rootElement.find('td.packetInfo input')
-      .css('width', packetInfoFieldWidthInEms + 'em');
+  rootElement
+    .find('td.packetInfo input')
+    .css('width', packetInfoFieldWidthInEms + 'em');
 };
 
 /**
  * Change encoding-display setting and re-render packet contents accordingly.
  * @param {EncodingType[]} newEncodings
  */
-NetSimLogPacket.prototype.setEncodings = function (newEncodings) {
+NetSimLogPacket.prototype.setEncodings = function(newEncodings) {
   this.encodings_ = newEncodings;
   this.render();
 };
@@ -426,7 +432,7 @@ NetSimLogPacket.prototype.setEncodings = function (newEncodings) {
  * accordingly.
  * @param {number} newChunkSize
  */
-NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
+NetSimLogPacket.prototype.setChunkSize = function(newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.render();
 };
@@ -435,7 +441,7 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
  * Mark the packet as read, changing its style and removing the "mark as read"
  * button.
  */
-NetSimLogPacket.prototype.markAsRead = function () {
+NetSimLogPacket.prototype.markAsRead = function() {
   if (this.isUnread) {
     this.isUnread = false;
     this.render();
@@ -443,7 +449,7 @@ NetSimLogPacket.prototype.markAsRead = function () {
   }
 };
 
-NetSimLogPacket.prototype.toggleMinimized = function () {
+NetSimLogPacket.prototype.toggleMinimized = function() {
   this.isMinimized = !this.isMinimized;
   this.render();
 };
@@ -452,23 +458,25 @@ NetSimLogPacket.prototype.toggleMinimized = function () {
  * Sets the vertical space that this log panel should consume (including margins)
  * @param {number} heightPixels
  */
-NetSimLogPanel.prototype.setHeight = function (heightPixels) {
+NetSimLogPanel.prototype.setHeight = function(heightPixels) {
   var root = this.getRoot().find('.netsim-panel');
   var panelHeader = root.find('h1');
   var panelBody = root.find('.panel-body');
 
-  var panelMargins = parseFloat(root.css('margin-top')) +
-      parseFloat(root.css('margin-bottom'));
+  var panelMargins =
+    parseFloat(root.css('margin-top')) + parseFloat(root.css('margin-bottom'));
   var headerHeight = panelHeader.outerHeight(true);
-  var panelBorders = parseFloat(panelBody.css('border-top-width')) +
-      parseFloat(panelBody.css('border-bottom-width'));
-  var scrollMargins = parseFloat(this.scrollArea_.css('margin-top')) +
-      parseFloat(this.scrollArea_.css('margin-bottom'));
+  var panelBorders =
+    parseFloat(panelBody.css('border-top-width')) +
+    parseFloat(panelBody.css('border-bottom-width'));
+  var scrollMargins =
+    parseFloat(this.scrollArea_.css('margin-top')) +
+    parseFloat(this.scrollArea_.css('margin-bottom'));
 
   // We set the panel height by fixing the size of its inner scrollable
   // area.
-  var newScrollViewportHeight = heightPixels - (panelMargins + headerHeight +
-      panelBorders + scrollMargins);
+  var newScrollViewportHeight =
+    heightPixels - (panelMargins + headerHeight + panelBorders + scrollMargins);
   this.scrollArea_.height(Math.floor(newScrollViewportHeight));
 };
 
@@ -476,8 +484,10 @@ NetSimLogPanel.prototype.setHeight = function (heightPixels) {
  * @returns {number} vertical space that panel currently consumes (including
  *          margins) in pixels.
  */
-NetSimLogPanel.prototype.getHeight = function () {
-  return this.getRoot().find('.netsim-panel').outerHeight(true);
+NetSimLogPanel.prototype.getHeight = function() {
+  return this.getRoot()
+    .find('.netsim-panel')
+    .outerHeight(true);
 };
 
 /**
@@ -486,7 +496,7 @@ NetSimLogPanel.prototype.getHeight = function () {
  * @private
  * @override
  */
-NetSimLogPanel.prototype.onMinimizerClick_ = function () {
+NetSimLogPanel.prototype.onMinimizerClick_ = function() {
   NetSimLogPanel.superPrototype.onMinimizerClick_.call(this);
   NetSimGlobals.updateLayout();
 };

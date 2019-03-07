@@ -1,11 +1,11 @@
 /** @file JavaScript run only on the gamelab level edit page. */
 import $ from 'jquery';
 import animationListModule, {
-  setInitialAnimationList,
+  setInitialAnimationList
 } from '@cdo/apps/gamelab/animationListModule';
 import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import initializeCodeMirror, {
-  initializeCodeMirrorForJson,
+  initializeCodeMirrorForJson
 } from '@cdo/apps/code-studio/initializeCodeMirror';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/shapes';
@@ -15,11 +15,12 @@ const INVALID_COLOR = '#d00';
 
 registerReducers({animationList: animationListModule});
 getStore().dispatch(setInitialAnimationList(defaultSprites));
-$(document).ready(function () {
-
+$(document).ready(function() {
   // Live-validate animations JSON using same validation code we use in Gamelab
-  const levelStartAnimationsValidationDiv = $('#level-start-animations-validation');
-  const validateAnimationJSON = function (json) {
+  const levelStartAnimationsValidationDiv = $(
+    '#level-start-animations-validation'
+  );
+  const validateAnimationJSON = function(json) {
     json = json.trim();
     try {
       if (json.length > 0) {
@@ -34,9 +35,13 @@ $(document).ready(function () {
     }
   };
   // Run validation at start, and then on every codeMirror change
-  validateAnimationJSON(document.getElementById('level_start_animations').value);
-  initializeCodeMirror('level_start_animations', 'json', codeMirror => {
-    validateAnimationJSON(codeMirror.getValue());
+  validateAnimationJSON(
+    document.getElementById('level_start_animations').value
+  );
+  initializeCodeMirror('level_start_animations', 'json', {
+    callback: codeMirror => {
+      validateAnimationJSON(codeMirror.getValue());
+    }
   });
 
   // Leniently validate and fix up custom block JSON using jsonic
@@ -67,7 +72,9 @@ $(document).ready(function () {
           customSetupCode.editor.getWrapperElement().style.display = '';
         } else {
           customSetupCode.editor = initializeCodeMirror(
-            'level_custom_setup_code', 'javascript');
+            'level_custom_setup_code',
+            'javascript'
+          );
         }
       } else {
         customSetupCode.previousElementSibling.style.display = 'none';

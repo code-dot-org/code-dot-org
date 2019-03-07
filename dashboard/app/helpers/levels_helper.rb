@@ -95,7 +95,7 @@ module LevelsHelper
       )
     end
 
-    channel_token.try :channel
+    channel_token&.channel
   end
 
   def select_and_track_autoplay_video
@@ -152,8 +152,11 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed?
-      view_options(channel: get_channel_for(@level, @user))
+    if @level.channel_backed? && params[:action] != 'edit_blocks'
+      view_options(
+        channel: get_channel_for(@level, @user),
+        server_project_level_id: @level.project_template_level.try(:id),
+      )
       # readonly if viewing another user's channel
       readonly_view_options if @user
     end
@@ -187,11 +190,6 @@ module LevelsHelper
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
-
-    if @level.channel_backed?
-      view_options(is_channel_backed: true)
-      view_options(server_project_level_id: @level.project_template_level.try(:id))
-    end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
@@ -529,6 +527,11 @@ module LevelsHelper
       end
     end
 
+    # Expo-specific options (only needed for Applab and Gamelab)
+    if (@level.is_a? Gamelab) || (@level.is_a? Applab)
+      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
+    end
+
     # User/session-dependent options
     app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
     app_options[:legacyShareStyle] = true if @legacy_share_style
@@ -769,7 +772,7 @@ module LevelsHelper
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
-    return false unless level.game == Game.applab || level.game == Game.gamelab
+    return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
     return false if level.is_a? GamelabJr
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?

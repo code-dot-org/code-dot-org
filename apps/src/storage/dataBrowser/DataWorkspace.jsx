@@ -1,14 +1,15 @@
-import { ApplabInterfaceMode } from '../../applab/constants';
+import {ApplabInterfaceMode} from '../../applab/constants';
 import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
 import DataTable from './DataTable';
 import Dialog from '../../templates/Dialog';
-import React, {PropTypes} from 'react';
-import PaneHeader, { PaneSection, PaneButton } from '../../templates/PaneHeader';
-import { connect } from 'react-redux';
-import { clearWarning } from '../redux/data';
+import PropTypes from 'prop-types';
+import React from 'react';
+import PaneHeader, {PaneSection, PaneButton} from '../../templates/PaneHeader';
+import {connect} from 'react-redux';
+import {clearWarning} from '../redux/data';
 import msg from '@cdo/locale';
-import color from "../../util/color";
+import color from '../../util/color';
 
 const styles = {
   container: {
@@ -23,7 +24,7 @@ const styles = {
     borderLeft: '1px solid gray',
     borderRight: '1px solid gray',
     borderBottom: '1px solid gray',
-    overflowY: 'auto',
+    overflowY: 'auto'
   }
 };
 
@@ -39,7 +40,7 @@ class DataWorkspace extends React.Component {
     isWarningDialogOpen: PropTypes.bool.isRequired,
 
     // from redux dispatch
-    onClearWarning: PropTypes.func.isRequired,
+    onClearWarning: PropTypes.func.isRequired
   };
 
   render() {
@@ -72,9 +73,9 @@ class DataWorkspace extends React.Component {
         </PaneHeader>
 
         <div id="data-mode-container" style={styles.container}>
-          <DataOverview/>
-          <DataProperties/>
-          <DataTable/>
+          <DataOverview />
+          <DataProperties />
+          <DataTable />
         </div>
         <Dialog
           body={this.props.warningMsg}
@@ -89,15 +90,18 @@ class DataWorkspace extends React.Component {
   }
 }
 
-export default connect(state => ({
-  isRtl: state.isRtl,
-  isRunning: !!state.runState.isRunning,
-  isVisible: ApplabInterfaceMode.DATA === state.interfaceMode,
-  warningMsg: state.data.warningMsg,
-  warningTitle: state.data.warningTitle || '',
-  isWarningDialogOpen: state.data.isWarningDialogOpen,
-}), dispatch => ({
-  onClearWarning() {
-    dispatch(clearWarning());
-  },
-}))(DataWorkspace);
+export default connect(
+  state => ({
+    isRtl: state.isRtl,
+    isRunning: !!state.runState.isRunning,
+    isVisible: ApplabInterfaceMode.DATA === state.interfaceMode,
+    warningMsg: state.data.warningMsg,
+    warningTitle: state.data.warningTitle || '',
+    isWarningDialogOpen: state.data.isWarningDialogOpen
+  }),
+  dispatch => ({
+    onClearWarning() {
+      dispatch(clearWarning());
+    }
+  })
+)(DataWorkspace);

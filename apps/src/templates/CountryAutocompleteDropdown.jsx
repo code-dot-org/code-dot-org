@@ -1,25 +1,26 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
-import i18n from "@cdo/locale";
-import { styles } from './census2017/censusFormStyles';
-import { COUNTRIES } from '../geographyConstants';
+import i18n from '@cdo/locale';
+import {styles} from './census2017/censusFormStyles';
+import {COUNTRIES} from '../geographyConstants';
 
 const singleLineLayoutStyles = {
-  display: "table-cell",
+  display: 'table-cell',
   width: 210,
-  verticalAlign: "middle",
+  verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
   fontFamily: '"Gotham 4r", sans-serif',
-  color: "#333",
-  padding: 0,
+  color: '#333',
+  padding: 0
 };
 const singleLineContainerStyles = {
-  display: "table",
-  width: "100%",
+  display: 'table',
+  width: '100%'
 };
 
 export default class CountryAutocompleteDropdown extends Component {
@@ -29,27 +30,33 @@ export default class CountryAutocompleteDropdown extends Component {
     showRequiredIndicator: PropTypes.bool,
     value: PropTypes.string,
     fieldName: PropTypes.string,
-    singleLineLayout: PropTypes.bool,
+    singleLineLayout: PropTypes.bool
   };
 
   static defaultProps = {
-    fieldName: "country_s"
+    fieldName: 'country_s'
   };
 
-  handleChange = (event) => {
-    this.props.onChange("country", event);
+  handleChange = event => {
+    this.props.onChange('country', event);
   };
 
   render() {
-    const {showRequiredIndicator, showErrorMsg, value, singleLineLayout} = this.props;
+    const {
+      showRequiredIndicator,
+      showErrorMsg,
+      value,
+      singleLineLayout
+    } = this.props;
 
-    const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
+    const questionStyle = {
+      ...styles.question,
+      ...(singleLineLayout && singleLineLayoutStyles)
+    };
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
     const showError = showErrorMsg && !value;
     const errorDiv = (
-      <div style={styles.errors}>
-        {i18n.censusRequiredSelect()}
-      </div>
+      <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
     );
 
     return (
@@ -57,9 +64,7 @@ export default class CountryAutocompleteDropdown extends Component {
         <div style={containerStyle}>
           <div style={questionStyle}>
             {singleLineLayout ? i18n.country() : i18n.schoolCountry()}
-            {showRequiredIndicator && (
-               <span style={styles.asterisk}> *</span>
-            )}
+            {showRequiredIndicator && <span style={styles.asterisk}> *</span>}
             {showError && !singleLineLayout && errorDiv}
           </div>
           <VirtualizedSelect

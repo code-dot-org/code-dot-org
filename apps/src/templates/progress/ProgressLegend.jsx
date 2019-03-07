@@ -1,9 +1,10 @@
-import React, { PropTypes, Component } from 'react';
-import color from "@cdo/apps/util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import ProgressBubble from './ProgressBubble';
 import FontAwesome from '../FontAwesome';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   table: {
@@ -12,16 +13,16 @@ const styles = {
     // Margin to get it to line up with ProgressLesson
     marginLeft: 3,
     marginRight: 3,
-    marginTop: 60,
+    marginTop: 60
   },
   tdStyle: {
     padding: 10,
-    borderStyle: 'none',
+    borderStyle: 'none'
   },
   header: {
     backgroundColor: color.white,
     color: color.charcoal,
-    whiteSpace: 'nowrap',
+    whiteSpace: 'nowrap'
   },
   secondRow: {
     backgroundColor: color.lightest_gray,
@@ -35,26 +36,26 @@ const styles = {
     backgroundColor: color.white,
     borderWidth: 2,
     borderColor: color.lightest_gray,
-    borderStyle: 'solid',
+    borderStyle: 'solid'
   },
   rightBorder: {
     borderRightStyle: 'solid',
     borderWidth: 2,
-    borderColor: color.lightest_gray,
+    borderColor: color.lightest_gray
   },
   headerCell: {
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 18
   },
   secondaryText: {
-    fontSize: 10,
+    fontSize: 10
   },
   iconAndText: {
-    whiteSpace: 'nowrap',
+    whiteSpace: 'nowrap'
   },
   icon: {
     marginRight: 5,
-    size: 20,
+    size: 20
   },
   center: {
     display: 'flex',
@@ -79,18 +80,16 @@ TD.propTypes = {
 
 export default class ProgressLegend extends Component {
   static propTypes = {
-    excludeCsfColumn: PropTypes.bool.isRequired,
+    excludeCsfColumn: PropTypes.bool.isRequired
   };
 
   render() {
-    const { excludeCsfColumn } = this.props;
+    const {excludeCsfColumn} = this.props;
     return (
       <table style={styles.table}>
         <thead>
           <tr style={styles.header}>
-            <TD style={styles.headerCell}>
-              {i18n.levelType()}
-            </TD>
+            <TD style={styles.headerCell}>{i18n.levelType()}</TD>
             <TD style={styles.headerCell} colSpan={3}>
               {i18n.levelDetails()}
             </TD>
@@ -99,18 +98,20 @@ export default class ProgressLegend extends Component {
             </TD>
           </tr>
           <tr style={styles.secondRow}>
-            <TD colSpan={4}/>
+            <TD colSpan={4} />
             <TD>{i18n.notStarted()}</TD>
             <TD>{i18n.inProgress()}</TD>
-            {!excludeCsfColumn &&
+            {!excludeCsfColumn && (
               <TD>
                 <div>{i18n.completed()}</div>
                 <div style={styles.secondaryText}>({i18n.tooManyBlocks()})</div>
               </TD>
-            }
+            )}
             <TD>
               <div>{i18n.completed()}</div>
-              {!excludeCsfColumn && <div style={styles.secondaryText}>({i18n.perfect()})</div>}
+              {!excludeCsfColumn && (
+                <div style={styles.secondaryText}>({i18n.perfect()})</div>
+              )}
             </TD>
             <TD>{i18n.submitted()}</TD>
           </tr>
@@ -120,19 +121,19 @@ export default class ProgressLegend extends Component {
             <TD style={styles.rightBorder}>{i18n.concept()}</TD>
             <TD>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="file-text" style={styles.icon}/>
+                <FontAwesome icon="file-text" style={styles.icon} />
                 {i18n.text()}
               </div>
             </TD>
             <TD>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="video-camera" style={styles.icon}/>
+                <FontAwesome icon="video-camera" style={styles.icon} />
                 {i18n.video()}
               </div>
             </TD>
             <TD style={styles.rightBorder}>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="map" style={styles.icon}/>
+                <FontAwesome icon="map" style={styles.icon} />
                 {i18n.map()}
               </div>
             </TD>
@@ -179,19 +180,19 @@ export default class ProgressLegend extends Component {
             <TD style={styles.rightBorder}>{i18n.activity()}</TD>
             <TD>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="scissors" style={styles.icon}/>
+                <FontAwesome icon="scissors" style={styles.icon} />
                 {i18n.unplugged()}
               </div>
             </TD>
             <TD>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="desktop" style={styles.icon}/>
+                <FontAwesome icon="desktop" style={styles.icon} />
                 {i18n.online()}
               </div>
             </TD>
             <TD style={styles.rightBorder}>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="check-square-o" style={styles.icon}/>
+                <FontAwesome icon="list-ul" style={styles.icon} />
                 {i18n.question()}
               </div>
             </TD>
@@ -219,7 +220,7 @@ export default class ProgressLegend extends Component {
                 />
               </div>
             </TD>
-            {!excludeCsfColumn &&
+            {!excludeCsfColumn && (
               <TD>
                 <div style={styles.center}>
                   <ProgressBubble
@@ -232,7 +233,7 @@ export default class ProgressLegend extends Component {
                   />
                 </div>
               </TD>
-            }
+            )}
             <TD>
               <div style={styles.center}>
                 <ProgressBubble
@@ -258,7 +259,6 @@ export default class ProgressLegend extends Component {
               </div>
             </TD>
           </tr>
-
         </tbody>
       </table>
     );

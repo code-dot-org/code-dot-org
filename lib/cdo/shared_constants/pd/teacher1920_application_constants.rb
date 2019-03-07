@@ -12,15 +12,13 @@ module Pd
       section_2_choose_your_program: 'Choose Your Program',
       section_3_teaching_background: 'Teaching Background',
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      section_5_additional_demographic_information: 'Additional Demographic Information',
-      section_6_submission: 'Submission',
+      section_5_additional_demographic_information: 'Additional Demographic Information and submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
     PAGE_LABELS = {
       section_1_about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
         :country,
-        :title,
         :first_name,
         :last_name,
         :account_email,
@@ -30,10 +28,7 @@ module Pd
           phone: 'Home or cell phone',
           gender_identity: 'Gender Identity',
           race: 'Race',
-          address: 'Home address',
-          city: 'City',
-          state: 'State',
-          zip_code: 'Zip code',
+          zip_code: 'Home zip code',
           school: 'School',
           school_name: 'School name',
           school_district_name: 'School district',
@@ -92,12 +87,7 @@ module Pd
       section_3_teaching_background:
         {subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}.merge(
           BASE_PAGE_LABELS[:section_2_your_school].slice(
-            :does_school_require_cs_license,
-            :what_license_required,
-            :have_cs_license,
-            :subjects_licensed_to_teach,
             :taught_in_past,
-            :cs_offered_at_school,
             :cs_opportunities_at_school,
             :previous_yearlong_cdo_pd
           )
@@ -115,10 +105,10 @@ module Pd
       section_5_additional_demographic_information:
         BASE_PAGE_LABELS[:section_5_submission].slice(:gender_identity, :race).merge(
           {
-            how_heard: 'How did you hear about this program?'
+            how_heard: 'How did you hear about this program?',
+            agree: 'By submitting this application, I agree to share this application, my contact information, and overall class information with my local Code.org Regional Partner.'
           }
         ),
-      section_6_submission: BASE_PAGE_LABELS[:section_5_submission].slice(:agree),
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
         school_type: 'School Type',
@@ -173,10 +163,8 @@ module Pd
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         subjects_teaching: "What subjects are you teaching this year (2018-19)?",
-        subjects_licensed_to_teach: "Which subject area(s) are you currently licensed to teach?",
         taught_in_past: "Have you taught computer science courses or activities in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
-        cs_offered_at_school: "What computer science courses or activities are currently offered at your school?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         willing_to_travel: "How far would you be willing to travel to academic year workshops?",
         how_heard: PAGE_LABELS[:section_5_additional_demographic_information][:how_heard] + " (Teacher's response)",
@@ -360,7 +348,6 @@ module Pd
         :notes_3,
         :notes_4,
         :notes_5,
-        :title,
         :first_name,
         :last_name,
         :account_email,
@@ -377,9 +364,6 @@ module Pd
         :regional_partner_name,
         :application_url,
         :phone,
-        :address,
-        :city,
-        :state,
         :zip_code,
         :country,
         :principal_first_name,
@@ -403,13 +387,8 @@ module Pd
         :replace_existing,
         :replace_which_course,
         :subjects_teaching,
-        :does_school_require_cs_license,
-        :what_license_required,
-        :have_cs_license,
-        :subjects_licensed_to_teach,
         :taught_in_past,
         :previous_yearlong_cdo_pd,
-        :cs_offered_at_school,
         :committed,
         :able_to_attend_multiple,
         :travel_to_another_workshop,
@@ -466,11 +445,5 @@ module Pd
         :student_tr_count
       ]
     }
-
-    SCHOLARSHIP_DROPDOWN_OPTIONS = [
-      {value: 'no', label: "No"},
-      {value: 'yes_code_dot_org', label: "Yes, Code.org scholarship"},
-      {value: 'yes_other', label: "Yes, other scholarship"}
-    ]
   end
 end

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
@@ -24,7 +25,7 @@ const styles = {
     }
   },
   notesCell: {
-    maxWidth: '200px',
+    maxWidth: '200px'
   },
   notesCellContent: {
     whiteSpace: 'nowrap',
@@ -78,25 +79,29 @@ export default class AdminCohortViewTable extends React.Component {
         cell: {
           format: this.formatDate
         }
-      }, {
+      },
+      {
         property: 'applicant_name',
         header: {
           label: 'Name',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'role',
         header: {
           label: 'Role',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'status',
         header: {
           label: 'Status',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'locked',
         header: {
           label: 'Locked',
@@ -105,37 +110,43 @@ export default class AdminCohortViewTable extends React.Component {
         cell: {
           format: this.formatBoolean
         }
-      }, {
+      },
+      {
         property: 'regional_partner_name',
         header: {
           label: 'Regional Partner',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'district_name',
         header: {
           label: 'School District',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'school_name',
         header: {
           label: 'School Name',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'email',
         header: {
           label: 'Email',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'assigned_workshop',
         header: {
           label: 'Assigned Workshop',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'registered_workshop',
         header: {
           label: 'Registered Workshop',
@@ -144,13 +155,15 @@ export default class AdminCohortViewTable extends React.Component {
         cell: {
           format: this.formatBoolean
         }
-      }, {
+      },
+      {
         property: 'assigned_fit',
         header: {
           label: 'Assigned FiT',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'registered_fit',
         header: {
           label: 'Registered FiT',
@@ -159,13 +172,15 @@ export default class AdminCohortViewTable extends React.Component {
         cell: {
           format: this.formatBoolean
         }
-      }, {
+      },
+      {
         property: 'fit_assigned_at_registration',
         header: {
           label: 'FiT Assigned at Registration',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'accepted_fit',
         header: {
           label: 'Accepted FiT',
@@ -179,13 +194,13 @@ export default class AdminCohortViewTable extends React.Component {
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},
-      {property: 'notes_5', label: 'Notes 5'},
-    ].forEach((notesField)=> {
+      {property: 'notes_5', label: 'Notes 5'}
+    ].forEach(notesField => {
       columns.push({
         property: notesField.property,
         header: {
           label: notesField.label,
-            transforms: [sortable]
+          transforms: [sortable]
         },
         cell: {
           format: this.formatNotesTooltip,
@@ -213,7 +228,7 @@ export default class AdminCohortViewTable extends React.Component {
 
   getSortingColumns = () => this.state.sortingColumns || {};
 
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     const sortingColumns = sort.byColumn({
       sortingColumns: this.state.sortingColumns,
       // Custom sortingOrder removes 'no-sort' from the cycle
@@ -229,11 +244,12 @@ export default class AdminCohortViewTable extends React.Component {
   };
 
   // Format dates as abbreviated month and day, e.g. "Mar 9"
-  formatDate = (iso8601Date) => iso8601Date ? moment(iso8601Date).format("MMM D") : "";
+  formatDate = iso8601Date =>
+    iso8601Date ? moment(iso8601Date).format('MMM D') : '';
 
-  formatBoolean = (bool) => bool ? "Yes" : "No";
+  formatBoolean = bool => (bool ? 'Yes' : 'No');
 
-  formatNotesTooltip = (notes) => {
+  formatNotesTooltip = notes => {
     let tooltipId = _.uniqueId();
     return (
       <div>
@@ -258,7 +274,7 @@ export default class AdminCohortViewTable extends React.Component {
   };
 
   formatViewButton = (id, {rowData}) => {
-    if (!rowData.type.startsWith("Pd::Application")) {
+    if (!rowData.type.startsWith('Pd::Application')) {
       return null;
     }
 
@@ -297,7 +313,7 @@ export default class AdminCohortViewTable extends React.Component {
           style={styles.table}
         >
           <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id"/>
+          <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>
       </div>
     );

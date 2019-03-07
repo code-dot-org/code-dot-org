@@ -1,5 +1,5 @@
 var commonStyles = module.exports;
-var color = require("./util/color");
+var color = require('./util/color');
 var styleConstants = require('./styleConstants');
 
 commonStyles.hidden = {
@@ -7,19 +7,19 @@ commonStyles.hidden = {
 };
 
 commonStyles.purpleHeader = {
-  height: styleConstants["workspace-headers-height"],
+  height: styleConstants['workspace-headers-height'],
   backgroundColor: color.purple,
   color: color.white,
   overflowY: 'hidden',
   WebkitUserSelect: 'none',
   MozUserSelect: 'none',
   msUserSelect: 'none',
-  userSelect: 'none',
+  userSelect: 'none'
 };
 
 commonStyles.purpleHeaderUnfocused = {
   backgroundColor: color.lighter_purple,
-  color: color.dark_charcoal,
+  color: color.dark_charcoal
 };
 
 commonStyles.teacherBlueHeader = {
@@ -28,7 +28,7 @@ commonStyles.teacherBlueHeader = {
 };
 
 commonStyles.teacherHeaderUnfocused = {
-  color: color.dark_charcoal,
+  color: color.dark_charcoal
 };
 
 commonStyles.button = {

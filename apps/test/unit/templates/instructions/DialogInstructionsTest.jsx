@@ -1,9 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {
-  UnconnectedDialogInstructions as DialogInstructions
-} from '@cdo/apps/templates/instructions/DialogInstructions';
+import {UnconnectedDialogInstructions as DialogInstructions} from '@cdo/apps/templates/instructions/DialogInstructions';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import msg from '@cdo/locale';
 
@@ -13,14 +11,14 @@ const EXPECTED_PUZZLE_TITLE = msg.puzzleTitle({
   stage_total: TEST_STAGE_TOTAL,
   puzzle_number: TEST_PUZZLE_NUMBER
 });
-const TEST_INSTRUCTIONS_1 = "First line of short instructions";
-const TEST_INSTRUCTIONS_2 = "Second line of short instructions";
-const SAMPLE_MARKDOWN=`
+const TEST_INSTRUCTIONS_1 = 'First line of short instructions';
+const TEST_INSTRUCTIONS_2 = 'Second line of short instructions';
+const SAMPLE_MARKDOWN = `
 # Some markdown
 - Point one
 - Point two
 `;
-const SAMPLE_IMAGE_URL="example.gif";
+const SAMPLE_IMAGE_URL = 'example.gif';
 
 const DEFAULT_PROPS = {
   puzzleNumber: TEST_PUZZLE_NUMBER,
@@ -32,11 +30,7 @@ const DEFAULT_PROPS = {
 
 describe('DialogInstructions', () => {
   it('renders instructions and image into Instructions component', () => {
-    const wrapper = shallow(
-      <DialogInstructions
-        {...DEFAULT_PROPS}
-      />
-    );
+    const wrapper = shallow(<DialogInstructions {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <Instructions
         puzzleTitle={EXPECTED_PUZZLE_TITLE}

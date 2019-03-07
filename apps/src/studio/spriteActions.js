@@ -7,7 +7,7 @@ import {
   SHAKE_DEFAULT_DISTANCE,
   SHAKE_DEFAULT_DURATION
 } from './constants';
-import { valueOr } from '../utils';
+import {valueOr} from '../utils';
 
 /**
  * Work/animation for a sprite to do that will require more than one tick/frame.
@@ -155,8 +155,10 @@ export class GridMoveAndCancel {
       sprite.setDirection(this.direction_);
     }
     var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
-    var percentOffset = (2 * this.percentBeforeReverse_) *
-        (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
+    var percentOffset =
+      2 *
+      this.percentBeforeReverse_ *
+      (normalizedProgress < 0.5 ? normalizedProgress : 1 - normalizedProgress);
     sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
     sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
     // Could do a forced reversal of animation here, depends on how it looks
@@ -230,7 +232,8 @@ export class FadeActor {
     }
 
     var currentTime = new Date().getTime();
-    var opacity = 1 - (currentTime - this.startFadeTime_) / this.fadeDurationMs_;
+    var opacity =
+      1 - (currentTime - this.startFadeTime_) / this.fadeDurationMs_;
     opacity = Math.max(opacity, 0);
     sprite.setOpacity(opacity);
   }
@@ -241,7 +244,10 @@ export class FadeActor {
    */
   isDone() {
     var currentTime = new Date().getTime();
-    return this.startFadeTime_ && currentTime > this.startFadeTime_ + this.fadeDurationMs_;
+    return (
+      this.startFadeTime_ &&
+      currentTime > this.startFadeTime_ + this.fadeDurationMs_
+    );
   }
 }
 
@@ -258,8 +264,7 @@ export class ShakeActor {
     this.startShakeTime_ = null;
 
     /** @private {number} How long to shake, in milliseconds */
-    this.shakeDurationMs_ = valueOr(shakeDuration,
-        SHAKE_DEFAULT_DURATION);
+    this.shakeDurationMs_ = valueOr(shakeDuration, SHAKE_DEFAULT_DURATION);
 
     /** @private {number} How many complete back-and-forth shakes occur */
     this.cycleCount_ = SHAKE_DEFAULT_CYCLES;
@@ -268,7 +273,8 @@ export class ShakeActor {
     this.amplitude_ = SHAKE_DEFAULT_DISTANCE;
 
     /** @private {number} precalculated angular frequency of sine wave equation. */
-    this.angularFrequency_ = 2 * Math.PI * (this.cycleCount_ / this.shakeDurationMs_);
+    this.angularFrequency_ =
+      2 * Math.PI * (this.cycleCount_ / this.shakeDurationMs_);
   }
 
   /**
@@ -282,7 +288,8 @@ export class ShakeActor {
     }
 
     var elapsedTime = new Date().getTime() - this.startShakeTime_;
-    var offset = this.amplitude_ * Math.sin(this.angularFrequency_ * elapsedTime);
+    var offset =
+      this.amplitude_ * Math.sin(this.angularFrequency_ * elapsedTime);
 
     sprite.displayX = sprite.x + offset;
   }
@@ -293,7 +300,9 @@ export class ShakeActor {
    */
   isDone() {
     var currentTime = new Date().getTime();
-    return this.startShakeTime_ &&
-        currentTime > this.startShakeTime_ +this.shakeDurationMs_;
+    return (
+      this.startShakeTime_ &&
+      currentTime > this.startShakeTime_ + this.shakeDurationMs_
+    );
   }
 }

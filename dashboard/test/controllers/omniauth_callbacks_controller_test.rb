@@ -401,6 +401,30 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
+  test 'login: oauth takeover transfers sections to taken over account when users are created already-migrated' do
+    # TODO: elijah remove this test in favor of the above one when the migration is complete
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      teacher = create :teacher
+      section = create :section, user: teacher, login_type: 'clever'
+      oauth_student = create :student, provider: provider, uid: '12345'
+      oauth_student.migrate_to_multi_auth
+
+      student = create :student
+
+      oauth_students = [oauth_student]
+      section.set_exact_student_list(oauth_students)
+
+      # Pull sections_as_student from the database and store them in an array to compare later
+      sections_as_student = oauth_student.sections_as_student.to_ary
+
+      @request.cookies[:pm] = 'clever_takeover'
+      set_oauth_takeover_session_variables(provider, oauth_student)
+      check_and_apply_oauth_takeover(student)
+
+      assert_equal sections_as_student, student.sections_as_student
+    end
+  end
+
   test 'login: oauth takeover does not happen if takeover is expired' do
     User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
       teacher = create :teacher
@@ -782,6 +806,33 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
+  test 'login: microsoft_v2_auth silently takes over unmigrated student with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, email: email)
+    auth = OmniAuth::AuthHash.new(
+      provider: 'microsoft_v2_auth',
+      uid: uid,
+      info: {},
+      extra: {
+        raw_info: {
+          userPrincipalName: email,
+          displayName: 'My Name'
+        }
+      },
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :microsoft_v2_auth
+    end
+    user.reload
+    assert_equal 'microsoft_v2_auth', user.provider
+    assert_equal uid, user.uid
+    assert_equal signed_in_user_id, user.id
+  end
+
   test 'login: google_oauth2 silently takes over unmigrated Google Classroom student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -816,6 +867,33 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'google_oauth2', user.provider
     assert_equal user.uid, uid
     assert_equal user.id, signed_in_user_id
+  end
+
+  test 'login: microsoft_v2_auth silently takes over unmigrated teacher with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:teacher, email: email)
+    auth = OmniAuth::AuthHash.new(
+      provider: 'microsoft_v2_auth',
+      uid: uid,
+      info: {},
+      extra: {
+        raw_info: {
+          userPrincipalName: email,
+          displayName: 'My Name'
+        }
+      },
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :microsoft_v2_auth
+    end
+    user.reload
+    assert_equal 'microsoft_v2_auth', user.provider
+    assert_equal uid, user.uid
+    assert_equal signed_in_user_id, user.id
   end
 
   test 'login: google_oauth2 silently adds authentication_option to migrated student with matching email' do
@@ -871,6 +949,96 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
     assert found_google
     assert_equal user.id, signed_in_user_id
+  end
+
+  test 'login: microsoft_v2_auth silently adds authentication_option to migrated teacher with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:teacher, :with_migrated_email_authentication_option, email: email)
+    auth = OmniAuth::AuthHash.new(
+      provider: 'microsoft_v2_auth',
+      uid: uid,
+      info: {},
+      extra: {
+        raw_info: {
+          userPrincipalName: email,
+          displayName: 'My Name'
+        }
+      },
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :microsoft_v2_auth
+    end
+    user.reload
+    assert_equal 'migrated', user.provider
+    assert_equal 2, user.authentication_options.count
+    microsoft_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::MICROSOFT}
+    refute_nil microsoft_auth_option
+    assert_equal uid, microsoft_auth_option.authentication_id
+    assert_equal signed_in_user_id, user.id
+  end
+
+  test 'login: microsoft_v2_auth silently adds authentication_option to migrated student with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    auth = OmniAuth::AuthHash.new(
+      provider: 'microsoft_v2_auth',
+      uid: uid,
+      info: {},
+      extra: {
+        raw_info: {
+          userPrincipalName: email,
+          displayName: 'My Name'
+        }
+      },
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :microsoft_v2_auth
+    end
+    user.reload
+    assert_equal 'migrated', user.provider
+    assert_equal 2, user.authentication_options.count
+    microsoft_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::MICROSOFT}
+    refute_nil microsoft_auth_option
+    assert_equal uid, microsoft_auth_option.authentication_id
+    assert_equal signed_in_user_id, user.id
+  end
+
+  test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:user, :with_migrated_windowslive_authentication_option, email: email)
+    auth = OmniAuth::AuthHash.new(
+      provider: 'microsoft_v2_auth',
+      uid: uid,
+      info: {},
+      extra: {
+        raw_info: {
+          userPrincipalName: email,
+          displayName: 'My Name'
+        }
+      },
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :microsoft_v2_auth
+
+    user.reload
+    assert_equal 'migrated', user.provider
+    assert_equal 1, user.authentication_options.count
+    microsoft_auth_option = user.authentication_options.first
+    refute_nil microsoft_auth_option
+    assert_equal 'microsoft_v2_auth', microsoft_auth_option.credential_type
+    assert_equal uid, microsoft_auth_option.authentication_id
+    assert_equal signed_in_user_id, user.id
   end
 
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
@@ -1429,10 +1597,19 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   private
 
   def set_oauth_takeover_session_variables(provider, user)
-    @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-    @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-    @request.session[ACCT_TAKEOVER_UID] = user.uid
-    @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+    if user.migrated?
+      auth_option = user.authentication_options.find_by credential_type: provider
+      uid = auth_option.authentication_id
+    else
+      uid = user.uid
+    end
+
+    begin_account_takeover(
+      provider: provider,
+      uid: uid,
+      oauth_token: '54321',
+      force_takeover: false
+    )
   end
 
   # Try to link a credential to the provided user
