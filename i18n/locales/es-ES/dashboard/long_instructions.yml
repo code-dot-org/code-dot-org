@@ -1224,6 +1224,11 @@ es:
       CourseD_Dance_Party_11b: |-
         ¡Es hora de un concurso de baile! El Gato hace el paso «dab» cuando pulsas la tecla de flecha izquierda. Indica al Robot que haga «drop» cuando pulsas la tecla de flecha derecha.
       CourseD_Dance_Party_12: "¡Mueve el esqueleto! Crea un baile propio para compartirlo\ncon tus amigos."
+      CourseE_HOC 2018 Level_10: "Hay un **calamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) en algún lugar de este monumento oceánico, ¿puedes encontrarlo?\n\n"
+      CourseE_HOC 2018 Level_11: Construye un muro de **prismarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) alrededor del hormigón negro. ¡Esto activará el **conducto** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) y completará tu desafío!
+      CourseE_HOC 2018 Level_7a: "Has encontrado las ruinas subacuáticas. Busca un **cofre** en la arenisca ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png), contiene un tesoro de **prismarina** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "¿Primero icebergs y ahora lava? Atraviesa esta isla volcánica y encuentra el **pez tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) en el arrecife de coral.\n\n"
+      CourseE_HOC 2018 Level_9b: "¡Has llegado al arrecife, ahora busca el **corazón del mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Usa el coral azul y rojo para alcanzar el **cofre** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars2: "¡Esa carrera en ese ultimo problema no\nfue justa! Cambia la variable de \"velocidad_perro\" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!"
       Dance_Party_01: |-
         *¡Hagamos una fiesta para bailar!*

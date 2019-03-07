@@ -737,6 +737,10 @@ es:
       CourseD_Dance_Party_11_5: Utiliza los bloques «todos los patos» para que los patos bailen juntos.
       CourseD_Dance_Party_11b: Haz que el Robot haga «drop» una vez cuando pulsas la tecla de flecha derecha y haga el baile «floss» una vez cuando pulsas la tecla de flecha hacia arriba. ¡Haz los movimientos drop-floss tan rápido como puedas!
       CourseD_Dance_Party_12: "¡Mueve el esqueleto! Crea un baile propio para compartirlo\ncon tus amigos."
+      CourseE_HOC 2018 Level_10: Llega a la entrada de este monumento oceánico.
+      CourseE_HOC 2018 Level_11: 'Construye un conducto con prismarina dentro del monumento oceánico.'
+      CourseE_HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
+      CourseE_HOC 2018 Level_9b: 'Utiliza el coral como punto de ruta para llegar hasta el tesoro.'
       CourseF_PlayLab_vars10: "¡Momento de un juego gratis! Aquí están todas las variables con las que hemos jugado hasta ahora en esta etapa, así como algunas más en caso de que las desees. \\r\n\\r\n¡Observa que ahora hay tantos bloques en nuestra caja de herramientas que necesitan organizarse! Aquí, hemos puesto cada pieza en una categoría apropiada. Tómate tu tiempo para explorar todo lo que está disponible. Cuando hayas terminado de navegar, crea un juego o una historia con repeticiones, variables y eventos. \\r\n\\r\nSugerencia: desplázate hacia abajo para ver todos los comandos en el espacio de trabajo."
       CourseF_PlayLab_vars2: "¡Esa carrera en ese ultimo problema no\nfue justa! Cambia la variable de \"velocidad_perro\" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!"
       CourseF_PlayLab_vars3: '¡Aquí tiene una nueva clase de juego! Use las flechas hacia la izquierda y hacia la derecha para moverse y las flechas hacia arriba y hacia para saltar.  Vea si puede recoger todas las banderas.'

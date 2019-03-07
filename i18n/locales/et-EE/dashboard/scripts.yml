@@ -1678,6 +1678,10 @@ et:
               name: For Loop Fun
             The Artist:
               name: Kunstnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
         dance-low:
           stages:
             Dance Party:

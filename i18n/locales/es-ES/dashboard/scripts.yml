@@ -333,8 +333,7 @@ es:
               name: La receta de diseño
         K5PD:
           title: K5 Desarrollo profesional
-          description: Desarrollo profesional para los cursos de K5
-          description_short: Desarrollo profesional para los cursos de K5
+          description: 'Desarrollo profesional para los cursos de K5'
           stages:
             Computer Science Pedagogy:
               name: Pedagogía de la ciencia informática
@@ -3081,6 +3080,12 @@ es:
               name: Diversión con bucles Para
             The Artist:
               name: El artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Abierta
+            Digital Sharing:
+              name: Compartir digital
         dance-low:
           stages:
             Dance Party:
@@ -3123,6 +3128,8 @@ es:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
+            Digital Sharing:
+              name: Compartir digital
         express-2019:
           stages:
             Relay Programming:

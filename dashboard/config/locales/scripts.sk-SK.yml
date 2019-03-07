@@ -38,7 +38,7 @@ sk:
             'Bee: Sequence':
               name: 'Včela: Postupnosť'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Getting Loopy:
               name: Cykly sa zacykľujú
             Going Places Safely:
@@ -147,7 +147,7 @@ sk:
             Dice Race:
               name: Preteky s kockami
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             'Farmer: While Loops':
               name: 'Farmárka: Cykly typu "Pokiaľ"'
             Functional Suncatchers:
@@ -244,15 +244,15 @@ sk:
             'Unplugged: Binary':
               name: 'Bez počítača: binárna forma'
             'Unplugged: Envelope Variables':
-              name: 'Bez počítača: premenné v obálke'
+              name: 'Bez počítača: Premenné v obálke'
             'Unplugged: For Loop Fun':
               name: 'Bez počítača: zábavné cykly s podmienkou'
             'Unplugged: Madlibs':
-              name: 'Bez počítača: slovná doplňovačka'
+              name: 'Bez počítača: Slovná doplňovačka'
             'Unplugged: Songwriting with Parameters':
-              name: 'Bez počítača: písanie pesničiek s parametrami'
+              name: 'Bez počítača: Písanie pesničiek s parametrami'
             'Unplugged: Tangrams':
-              name: 'Bez počítača: Hlavolamy'
+              name: 'Bez počítača: Tangramy'
         Course4pre:
           title: Kurz 4 - nevyhnutné predpoklady
           description: Rýchle zhrnutie konceptov pre študentov, ktorí neabsolvovali
@@ -357,8 +357,6 @@ sk:
               name: Vyučovanie informatiky
             Introduction to PD:
               name: Úvod do PD
-            K-5 Courses:
-              name: K-5 kurzy
             Next Steps:
               name: Ďalšie kroky
             'Programming Concept: Conditionals':
@@ -374,7 +372,7 @@ sk:
             Teacher Dashboard:
               name: Nástenka učiteľa
             Unplugged lessons:
-              name: Hodiny bez počítača
+              name: Lekcie bez počítača
             Writing computer programs:
               name: Písanie počítačových programov
         netsim:
@@ -513,8 +511,8 @@ sk:
               name: Krok
         Hour of Code:
           title: Hodina Kódu 2013
-          description: Vyskúšaj si základy informatiky s postavami z "Angry Birds"
-            a "Plants vs. Zombies"!
+          description: Vyskúšaj si základy informatiky s postavami z Angry Birds a
+            Plants vs. Zombies!
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Hour of Code 2013:
@@ -646,7 +644,7 @@ sk:
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
             While Loops:
-              name: Podmieňovacie cykly "Kým"
+              name: Cykly "pokiaľ"
         algebraPD3:
           stages:
             Computer Science Pedagogy:
@@ -754,9 +752,9 @@ sk:
         algebraPD2a:
           stages:
             Big Game - Animation:
-              name: Veľká hra - animácie
+              name: Veľká hra - Animácie
             Big Game - Variables:
-              name: Veľká hra - premenné
+              name: Veľká hra - Premenné
             Booleans:
               name: Booleanovské výrazy
             Defining Variables:
@@ -784,7 +782,7 @@ sk:
             Bounce:
               name: Bounce
             Farmer:
-              name: Farmár
+              name: Farmárka
             Flappy:
               name: Flappy
             Free Response:
@@ -910,13 +908,13 @@ sk:
             Getting Started:
               name: Začíname
             Welcome to the Course!:
-              name: Vitajte v Kurze!
+              name: Vitajte v kurze!
         asUnplugged:
           stages:
             Binary Bracelets:
               name: Binárne náramky
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Getting Loopy:
               name: Cykly sa zacykľujú
             Graph Paper Programming:
@@ -1025,7 +1023,7 @@ sk:
         cspunit3temp:
           stages:
             While Loops:
-              name: Podmieňovacie cykly "Kým"
+              name: Cykly "pokiaľ"
         CSP-Unit3-Support:
           stages:
             Unit 3 Overview:
@@ -1045,7 +1043,7 @@ sk:
             Wars v ďalekej galaxii.
           stages:
             Hour of Code 2015:
-              name: Hodina Kódu 2015
+              name: Hodina kódu 2015
         starwarsblocks:
           title: 'Star Wars: Budovanie galaxie pomocou Kódu'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
@@ -1054,7 +1052,7 @@ sk:
             Wars v ďalekej galaxii.
           stages:
             Hour of Code 2015:
-              name: Hodina Kódu 2015
+              name: Hodina kódu 2015
         mc:
           title: Minecraft Hodina Kódu
           description: Použi bloky kódu, aby si vzal Steva alebo Alexa na dobrodužstvo
@@ -1062,7 +1060,7 @@ sk:
           description_short: Preskúmaj svet Minecraftu prostredníctvom kódu.
           stages:
             Hour of Code 2015:
-              name: Hodina Kódu 2015
+              name: Hodina kódu 2015
         ScienceP3OLPT3:
           stages:
             Welcome!:
@@ -1177,7 +1175,7 @@ sk:
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
             While Loops:
-              name: Podmieňovacie cykly "Kým"
+              name: Cykly "pokiaľ"
             If statements:
               name: Podmienky ak
             Post-Course Survey:
@@ -1186,8 +1184,6 @@ sk:
           stages:
             Functions:
               name: Funkcie
-            Velocity:
-              name: Rýchlosť
         2016_sciencePD_phase1:
           stages:
             Introduction to PD:
@@ -1248,8 +1244,6 @@ sk:
               name: Dizajn webových stránok
             Designing Web Pages:
               name: Dizajnovanie webových stránok
-            Classes:
-              name: Triedy
             Peer Review:
               name: Recenzia
         MikeTest:
@@ -1278,12 +1272,16 @@ sk:
               name: Cykly bez počítača
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            'Programming Unplugged: Happy Maps':
+              name: 'Bez počítača: Veselé mapy'
         grade4:
           stages:
             'Bee: Functions (Course 3)':
               name: 'Včela: Funkcie (Kurz 3)'
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
+            More Programming with Scratch:
+              name: Viac programovania v Scratchi
             'New Artist: Functions':
               name: 'Nový Umelec: Funkcie'
             Songwriting:
@@ -1301,7 +1299,11 @@ sk:
             Loops Unplugged:
               name: Cykly bez počítača
             Unspotted Bugs:
-              name: Nenájdené chyby
+              name: Príbeh o hľadaní chrobákov a chýb
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+            'Events Unplugged: The Big Event':
+              name: 'Udalosti bez počítača: Veľká udalosť'
         grade5:
           stages:
             'Artist: For Loops':
@@ -1315,15 +1317,15 @@ sk:
             'Bee: Functions with Parameters':
               name: 'Včela: Funkcie s parametrami'
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             'Play Lab: Variables':
               name: 'Play Lab: Premenné'
             'Unplugged: Envelope Variables':
-              name: 'Bez počítača: premenné v obálke'
+              name: 'Bez počítača: Premenné v obálke'
             'Unplugged: For Loop Fun':
               name: 'Bez počítača: zábavné cykly s podmienkou'
             'Unplugged: Songwriting with Parameters':
-              name: 'Bez počítača: písanie pesničiek s parametrami'
+              name: 'Bez počítača: Písanie pesničiek s parametrami'
         ecs-unit1:
           stages:
             0: |-
@@ -1390,14 +1392,16 @@ sk:
               name: 'Včela: Hľadanie a odstraňovanie chýb'
             Bounce:
               name: Bounce
+            Farmer Debug Relay Programming:
+              name: Farmárka a odstraňovanie chýb so štafetovým programovaním
+            Farmer Graph Paper Programming:
+              name: Farmárka a programovanie na štvorčekový papier
             'Farmer: While Loops':
               name: 'Farmárka: Cykly typu "Pokiaľ"'
         csd3-2017:
           stages:
             Drawing in Game Lab:
               name: Kreslenie v Game Labe
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
             Variables:
@@ -1408,6 +1412,8 @@ sk:
           stages:
             Flappy:
               name: Flappy
+            Getting Loopy with Puppy:
+              name: Cykly sa zacykľujú s Puppy
             Online My New Pet Jigsaw:
               name: Online Moja nová skladačka so zvieratkami
             Binary Bracelets:
@@ -1445,7 +1451,7 @@ sk:
             Variables:
               name: Premenné
             While Loops:
-              name: Podmieňovacie cykly "Kým"
+              name: Cykly "pokiaľ"
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -1500,8 +1506,6 @@ sk:
               name: Dizajn webových stránok
             Images on the Web:
               name: Obrázky na webe
-            Classes:
-              name: Triedy
             Peer Review:
               name: Recenzia
             Digital Footprint:
@@ -1547,20 +1551,30 @@ sk:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            'Programming: Happy Maps':
+              name: 'Programovanie: Veselé mapy'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Going Places Safely:
               name: Bezpečné premiestňovanie
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
         courseb-draft:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
             Sequence & Algorithms:
               name: Postupnosť & Algoritmy
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Keep it Private:
               name: Drž to v tajnosti
             'Real-life Algorithms: Plant a Seed':
@@ -1568,29 +1582,31 @@ sk:
             Your Digital Footprint:
               name: Tvoja digitálna stopa
         coursec-draft:
-          description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           stages:
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy z reálneho života: Papierové lietadielká'
             Programming in Collector:
-              name: Programovanie so zberateľom
+              name: Programovanie so zberateľkou
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops in Maze:
               name: Cykly v bludisku
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
-              name: Vytvor si vlastnú "Flappy" hru
+              name: Vytvor si vlastnú hru Flappy
             Binary Bracelets:
               name: Binárne náramky
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Screen Out the Mean:
               name: Vytrieď to zlé
             Debugging in Maze:
@@ -1598,7 +1614,7 @@ sk:
             Loops in Harvester:
               name: Cykly so Zberateľkou
         coursed-draft:
-          description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1606,13 +1622,13 @@ sk:
             Events in Bounce:
               name: Udalosti v Bounce
             Nested Loops in Maze:
-              name: Vnorené cykly v Bludisku
+              name: Vnorené cykly v bludisku
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programovanie'
             Debugging in Bee:
-              name: Hľadanie chýb so Včelou
+              name: Odstraňovanie chýb s včelou
             While Loops in Farmer:
               name: Cykly s podmienkou "pokiaľ" s Farmárkou
             Conditionals with Cards:
@@ -1628,15 +1644,15 @@ sk:
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Conditionals in Bee:
-              name: Podmienky s Včelou
+              name: Podmienky s včelou
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             'Unplugged: Binary':
               name: 'Bez počítača: binárna forma'
             Artist Binary:
               name: Binárny Umelec
             Nested Loops in Bee:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
             Nested Loops:
               name: Vnorené cykly
             Introduction:
@@ -1646,11 +1662,11 @@ sk:
             Debugging in Collector:
               name: Odstraňovanie chýb s Laurel
         coursee-draft:
-          description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           stages:
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             Build a Star Wars Game:
               name: Vytvorte Star Wars hru
             'Functions: Songwriting':
@@ -1658,9 +1674,9 @@ sk:
             Functions in Artist:
               name: Funkcie s Umelcom
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions in Farmer:
-              name: Fukncie vo Farmárovi
+              name: Funkcie s farmárkou
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Explore Project Ideas:
@@ -1671,6 +1687,8 @@ sk:
               name: Vytvorte si svoj projekt
             Present Your Project:
               name: Prezentuj svoj projekt
+            More Programming with Scratch:
+              name: Viac programovania v Scratchi
             Private and Personal Information:
               name: Súkromné a osobné informácie
             Internet:
@@ -1682,11 +1700,11 @@ sk:
             Conditionals:
               name: Podmienky
         coursef-draft:
-          description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           stages:
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
@@ -1712,7 +1730,7 @@ sk:
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
             Conditionals and Functions in Bee:
-              name: Podmienky a funkcie vo Včele
+              name: Podmienky a funkcie s včelou
             'Algorithms: Tangrams':
               name: 'Algoritmy: Tangramy'
         classic-hoc-impact-study:
@@ -1777,9 +1795,9 @@ sk:
             Functions in Artist:
               name: Funkcie s Umelcom
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions in Farmer:
-              name: Fukncie vo Farmárovi
+              name: Funkcie s farmárkou
             Binary:
               name: Binárny
         sciencepd5:
@@ -1845,14 +1863,10 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd3-old:
           stages:
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd2-draft:
@@ -1871,8 +1885,6 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
             'Chapter 1: Images and Animation':
@@ -1888,15 +1900,13 @@ sk:
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
             Functions in Farmer:
-              name: Fukncie vo Farmárovi
+              name: Funkcie s farmárkou
             Conditionals and Functions in Bee:
-              name: Podmienky a funkcie vo Včele
+              name: Podmienky a funkcie s včelou
         csd2-old:
           stages:
             Website Design:
               name: Dizajn webových stránok
-            Classes:
-              name: Triedy
             Peer Review:
               name: Recenzia
             Digital Footprint:
@@ -1913,18 +1923,38 @@ sk:
               name: Play Lab Doba ľadová
             Bounce:
               name: Bounce
+            NewBounce:
+              name: Nový Bounce
         coursea-2017:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+              description_teacher: "V tejto lekcii zasadíme skutočné semienko a spojíme
+                tak koncept algoritmov s aktivitami skutočného života. Cieľom tejto
+                aktivity je budovať zručnosti na preklápanie situácií zo skutočného
+                sveta do online scenárov a naopak.\r\n"
+            'Programming: Happy Maps':
+              name: 'Programovanie: Veselé mapy'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
+            Going Places Safely:
+              name: 'Digitálne občianstvo: Bezpečný pohyb na internete'
             Loops in Artist:
               description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť
                 použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii
                 sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
                 Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
                 slučiek vytvoriť vlastné útvary.
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               description_teacher: V tejto online aktivite sa študenti naučia, ako
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
@@ -1939,18 +1969,24 @@ sk:
             s priateľmi.
         courseb-2017:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Your Digital Footprint:
               name: 'Digitálne občianstvo: Moja digitálna stopa'
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             More Programming in Maze:
-              name: Viac programovanie v Labyrinte
+              name: Ďalšie programovanie v bludisku
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
           title: Kurz B
@@ -1964,15 +2000,15 @@ sk:
         coursec-2017:
           stages:
             Building a Foundation:
-              name: 'Vytrvalosť: budovanie základov'
+              name: 'Vytrvalosť: Budovanie základov'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             Debugging in Maze:
               name: Odstraňovanie chýb v bludisku
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy z reálneho života: Papierové lietadielká'
             Programming in Collector:
-              name: Programovanie so zberateľom
+              name: Programovanie so zberateľkou
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: Getting Loopy':
@@ -1981,8 +2017,10 @@ sk:
               name: Cykly v bludisku
             Loops in Harvester:
               name: Cykly so Zberateľkou
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
-              name: Vytvor si vlastnú "Flappy" hru
+              name: Vytvor si vlastnú hru Flappy
             Screen Out the Mean:
               name: 'Digitálne občianstvo: Vytrieď to zlé'
             Binary Bracelets:
@@ -1992,7 +2030,7 @@ sk:
           title: Kurz C
           assignment_family_title: Kurz C
           description_audience: 'Vek: 6-10'
-          description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
             svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
@@ -2005,14 +2043,21 @@ sk:
               description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
                 - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
                 Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane
-                tlačidiel "Spustiť", "Obnoviť" a "Krok". Videá tiež ukážu ako presúvať
-                bloky, ako ich vymazať či spájať. Následne si študenti precvičia svoje
-                schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Po tom študenti
-                uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Pestovateľka.
+                tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať
+                bloky a ako ich vymazať či spájať. Následne si študenti precvičia
+                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Po tom
+                študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec a
+                Pestovateľka.
             'Algorithms: Graph Paper Programming':
               name: 'Programovanie: Programovanie na štvorčekový papier'
-              description_student: V tejto lekcie budete programovať vášho kamaráta,
-                aby nakreslil obrázky!
+              description_student: V tejto lekcii naprogramuješ kamaráta na kreslenie
+                obrázkov!
+              description_teacher: '"Naprogramovaním" jeden druhého na kreslenie obrázkov
+                študenti začnú chápať, o čom skutočne programovanie je. Hodina začne
+                aktivitou, v ktorej si študenti navzájom dajú inštrukcie na vyfarbenie
+                štvorčekov na štvorčekovom papieri za účelom reprodukovania existujúceho
+                obrázka. Ak máte dostatok času, hodina sa môže skončiť programovaním
+                na kreslenie obrázkov, ktoré študenti vytvorili sami.'
             Events in Bounce:
               name: Udalosti v Bounce
             Nested Loops:
@@ -2020,32 +2065,55 @@ sk:
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             'Algorithms: Relay Programming':
-              name: 'Hľadanie chýb: Štafetové programovanie'
+              name: 'Hľadanie a odstraňovanie chýb: Štafetové programovanie'
+              description_teacher: Táto hodina začne krátkym zopakovaním programovania
+                na štvorčekový papier. Následne sa žiaci rozdelia do tímov, v ktorých
+                budú medzi sebou súťažiť v štafetovom písaní programu, pričom každý
+                súťažiaci môže vo svojom kole napísať vždy len jeden príkaz.
             Debugging in Bee:
-              name: Hľadanie chýb so Včelou
+              name: Odstraňovanie chýb s včelou
             While Loops in Farmer:
               name: Cykly s podmienkou "pokiaľ" s Farmárkou
             Conditionals with Cards:
-              name: 'Ak/Inak: Podmienky s Kartami'
+              name: 'Ak/Inak: Podmienky s kartami'
+              description_student: Je čas na hru, v ktorej budeš zbierať body len
+                za určitých podmienok!
+              description_teacher: "Táto lekcia bez počítača žiakom ukazuje, ako sa
+                dajú využiť podmienky na úpravu programu tak, aby reagoval na vstupné
+                informácie. Častokrát pri písaní programu nemáme všetky informácie,
+                ktoré potrebujeme. Niekedy tiež chceme, aby sa program v rôznych situáciách
+                zachoval rozdielne - a to aj vtedy, keď nevieme, ktorá situácia reálne
+                nastane v momente spustenia programu. Toto je moment, keď do hry vstupujú
+                podmienky. Podmienky umožňujú počítačom robiť rozhodnutia na základe
+                informácie pravdivej v momente spustenia kódu.\n\n"
             Conditionals in Bee:
-              name: Podmienky s Včelou
+              name: Podmienky s včelou
             Conditionals & Loops in Maze:
               name: Podmienky & Cykly v Bludisku
             Conditionals & Loops in Farmer:
               name: Podmienky a cykly s Poľnohosporárkou
             Digital Citizenship:
               name: 'Digitálne občianstvo: Praktizovanie digitálneho občianstva'
+              description_student: Niektoré informácie nie je vhodné zdieľať online.
+                Táto lekcia vám pomôže rozlišovať medzi súkromnými a osobnými informáciami.
+              description_teacher: |-
+                Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education pomôže študentom kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Žiaci sa naučia rozlišovať medzi osobnými a súkromnými informáciami a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.
+
+                V rámci hodiny tiež prediskutujeme, ako sa správať zodpovedne a rešpektujúco v rámci offline aj online komunít - dôležitá vlastnosť dobrého digitálneho občana.
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
+            'Unplugged: Binary':
+              name: 'Viac ako programovanie: Binárne obrázky'
             Artist Binary:
               name: Binárny umelec
               description_student: Naviguj svojho umelca tak, aby vytvoril binárny
                 obraz len s použitím príkazu zapnúť a vypnúť pixely.
-              description_teacher: Binárna forma je vo svete počítačov dôležitá. Väčšina
-                počítačov dnes ukladá všetky informácie v binárnej sústave. Táto lekcia
-                ukazuje ako je možné preniesť niečo z bežného života do série zapnutí
-                a vypnutí. Študenti skladajú binárne útvary v Umelcovi prenesením
-                núl a jednotiek do zapnutí a vypnutí (alebo čiernych a bielych).
+              description_teacher: Binárnosť je vo svete počítačov veľmi dôležitá.
+                Väčšina dnešných počítačov totižto skladuje všetky druhy informácií
+                v binárnej forme. Táto lekcia ukazuje, ako je možné zobrať situáciu
+                zo skutočného sveta a preniesť ju do "zapnutí" a "vypnutí". Študenti
+                pomocou Umelca vytvoria binárne obrázky prekladaním núl a jednotiek
+                do "vypnutí" a "zapnutí" (alebo čiernej a bielej).
             Nested Loops Project in Artist:
               name: Vnorené cykly vo Frozen
               description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami
@@ -2062,19 +2130,23 @@ sk:
           description_audience: Vek 7-11
           description_short: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami,
             vnorenými cyklami, podmienkami a viac.
+          description: Nauč sa nové programátorské koncepty ako vnorené cykly, cykly
+            s podmienkou "pokiaľ", podmienky, či udalosti. Oboznám sa s konceptom
+            digitálneho občianstva a vytvor si vlastnú hru či príbeh, ktoré môžeš
+            zdieľať s kamarátmi.
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmy: Tangramy'
             Introduction:
               name: Predstavenie online úloh
-              description_teacher: V tomto postupe študenti začínaju úvodom do online
-                pracovného prostredia Code.org alebo (revidovaním v závislosti na
-                skúsenostiach tvojej triedy). Študenti sa naučia základné funkčnosti
-                rozhrania ako sú tlačidlá "Spustiť", "Obnoviť" a "Vykročiť". Ťahanie,
-                vymazanie a spájanie blokov Blockly predstavuje úvodné video. V tejto
-                úlohe, v kurzoch Bludisko a Umelec, si študenti precvičujú zručnosti
-                v sekvenovaní a odstraňovaní chýb.
+              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
+                - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
+                Code.org. Študenti sa naučia základné funkcionality vrátane využitia
+                tlačidiel `Spustiť `, `Obnoviť ` a `Krok `. Úvodné video im tiež ukáže,
+                ako presúvať bloky, ako ich vymazať či spájať. Následne si študenti
+                precvičia svoje schopnosti vo vytváraní postupností v prostredí Bludisko
+                a Umelec.
             The Power of Words:
               name: Sila slov
             Ice Age Play Lab:
@@ -2088,7 +2160,7 @@ sk:
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Conditionals and Functions in Bee:
-              name: Podmienky a funkcie vo Včele
+              name: Podmienky a funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Explore Project Ideas:
@@ -2117,7 +2189,7 @@ sk:
                 kurzu. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom
                 [here](https://curriculum.code.org/csf/coursee/12/)."
             Conditionals:
-              name: Podmienky vo Farmárovi
+              name: Podmienky s farmárkou
             Private and Personal Information:
               name: 'Digitálne občianstvo: Súkromné a osobné informácie'
             Build a Star Wars Game:
@@ -2132,9 +2204,9 @@ sk:
                 Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie
                 jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions in Farmer:
-              name: Fukncie vo Farmárovi
+              name: Funkcie s farmárkou
               description_student: Funkcie vám ušetria veľa práce počas pomáhania
                 farmárke s jej úrodou!
             Build a Play Lab Game:
@@ -2147,9 +2219,11 @@ sk:
                 a blízkym alebo ho zdielať. Príručku kurzu pre všetky štyri úrovne
                 procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursee/12/).
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -2171,8 +2245,8 @@ sk:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmy: Tangramy'
-              description_student: Tu sa naučíte o algorimoch využívajúcich hlavolamy
-                nazývané tangramy!
+              description_student: V tejto lekcii sa pomocou hlavolamu Tangram naučíte
+                viac o algorimoch!
             Introduction:
               name: Predstavenie online úloh
               description_student: Táto lekcia vám dá stručný úvod úžasných vecí,
@@ -2181,6 +2255,8 @@ sk:
                 cykly, a vnorené slučky, aby ich pripravili pre komplikovanejšie koncepty
                 v neskoršej časti kurzu. Táto "nadstavbová" lekcia vyrovnáva úroveň
                 medzi expertami a začiatočníkmi vo vašej triede. '
+            The Power of Words:
+              name: 'Digitálne občianstvo: Sila slov'
             Ice Age Play Lab:
               name: Doba ľadová - Udalosti
               description_teacher: V tomto kurze žiaci prejdú príbehom s postavami
@@ -2204,7 +2280,7 @@ sk:
                 premenných i slučiek, a v slučkách aj pre tvorbu zložitejších dizajnov.
                 Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
             Conditionals and Functions in Bee:
-              name: Podmienky a funkcie vo Včele
+              name: Podmienky a funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
               description_student: Priprav si svoje programovacie prsty. V tejto hre
@@ -2248,11 +2324,13 @@ sk:
                 svoje práce rovesníkom alebo ich zdielať s blízkymi. Príručku kurzu
                 pre všetkých päť úrovní procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursef/15/).
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -2274,12 +2352,14 @@ sk:
               name: Zhrnutie
         express-2017:
           stages:
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Bez počítača: Moji robotickí kamaráti'
             Introduction:
               name: Úvod
             'Algorithms: Graph Paper Programming':
               name: 'Programovanie: Programovanie na štvorčekový papier'
             'Algorithms: Relay Programming':
-              name: 'Hľadanie chýb: Štafetové programovanie'
+              name: 'Hľadanie a odstraňovanie chýb: Štafetové programovanie'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops Project in Artist:
@@ -2287,15 +2367,17 @@ sk:
             Internet:
               name: Internet
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             Screen Out the Mean:
               name: Vytrieď to zlé
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Build a Star Wars Game:
               name: Vytvorte Star Wars hru
             Events in Bounce:
               name: Udalosti v Bounce
             Build a Flappy Game:
-              name: Vytvor si vlastnú "Flappy" hru
+              name: Vytvor si vlastnú hru Flappy
             Conditionals with Cards:
               name: Podmienky s kartami
             While Loops in Farmer:
@@ -2311,7 +2393,7 @@ sk:
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Explore Project Ideas:
@@ -2328,16 +2410,18 @@ sk:
               name: 'Digitálne občianstvo: Praktizovanie digitálneho občianstva'
             'Common Sense Education: Screen Out the Mean':
               name: 'Digitálne občianstvo: Vytrieď to zlé'
+            'Conditionals: Conditionals with Cards':
+              name: 'Podmienky: Podmienky s kartami'
             Conditional Loops in Maze:
               name: Podmienky & Cykly v Bludisku
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Nested Loops:
               name: Vnorené cykly
             Conditionals & Loops in Harvester:
               name: Podmienky a cykly s Poľnohosporárkou
             Until Loops in Maze:
-              name: Cykly s podmienkou "dovtedy kým" v Bludisku
+              name: Cykly "dovtedy kým" v bludisku
           title: Zrýchlený kurz
           assignment_family_title: Zrýchlený kurz
           description_audience: 'Vek: 9-18'
@@ -2346,16 +2430,22 @@ sk:
             s priateľmi.
         pre-express-2017:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             'Online Safety: Your Digital Footprint':
               name: 'Digitálne občianstvo: Moja digitálna stopa'
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
           description_audience: 'Vek: 4-8'
@@ -2384,9 +2474,11 @@ sk:
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -2408,9 +2500,9 @@ sk:
             Functions in Artist:
               name: Funkcie s Umelcom
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions in Farmer:
-              name: Fukncie vo Farmárovi
+              name: Funkcie s farmárkou
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Explore Project Ideas:
@@ -2426,7 +2518,7 @@ sk:
             Crowdsourcing:
               name: Crowdsourcing
             Nested Loops in Bee:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2450,11 +2542,11 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky s Včelou
+              name: Podmienky s včelou
             Conditionals & Loops in Maze:
               name: Podmienky & Cykly v Bludisku
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             'Unplugged: Binary':
@@ -2462,9 +2554,9 @@ sk:
             Artist Binary:
               name: Binárny Umelec
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Nested Loops in Bee:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
           title: Nový Kurz D Scenár
@@ -2482,14 +2574,22 @@ sk:
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops Project in Frozen:
               name: Projekt s vnorenými cyklami vo Frozen
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digitálne občianstvo'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Vytrieď to zlé'
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Events in Bounce:
               name: Udalosti v Bounce
+            'Conditionals: Conditionals with Cards':
+              name: 'Podmienky: Podmienky s kartami'
             While Loops in Farmer:
               name: Cykly s podmienkou "pokiaľ" s Farmárkou
             Variables in Artist:
               name: Premenné s Umelcom
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Explore Project Ideas:
@@ -2501,7 +2601,9 @@ sk:
             Present Your Project:
               name: Prezentuj svoj projekt
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Nested Loops:
               name: Vnorené cykly
             Loops in Artist (UPDATED!):
@@ -2509,9 +2611,11 @@ sk:
         new-e:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -2529,11 +2633,11 @@ sk:
             'Functions: Songwriting':
               name: 'Funkcie: Skladanie piesní'
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions in Artist:
               name: Funkcie s Umelcom
             Functions in Farmer:
-              name: Fukncie vo Farmárovi
+              name: Funkcie s farmárkou
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Explore Project Ideas:
@@ -2551,9 +2655,11 @@ sk:
         new-f:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -2577,7 +2683,7 @@ sk:
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Explore Project Ideas:
@@ -2642,9 +2748,11 @@ sk:
             courseB_unplugged_MRF_2018:
               name: kurzB_odpojený_MRF_2018
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -2664,9 +2772,9 @@ sk:
             Functions in Artist:
               name: Funkcie s Umelcom
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions in Farmer:
-              name: Fukncie vo Farmárovi
+              name: Funkcie s farmárkou
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Explore Project Ideas:
@@ -2687,9 +2795,11 @@ sk:
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -2713,7 +2823,7 @@ sk:
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Explore Project Ideas:
@@ -2737,8 +2847,6 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd3-2018:
@@ -2747,8 +2855,6 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd2-2018:
@@ -2777,11 +2883,15 @@ sk:
           description_audience: 'Vek: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: Nenájdené chyby
+              name: Príbeh o hľadaní chrobákov a chýb
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie a Veľký projekt
+              name: Stevie a jej veľký projekt
             'Real-life Algorithms: Plant a Seed':
-              name: Zasaďte semiačko
+              name: Zasaď semienko
+              description_teacher: "V tejto lekcii zasadíme skutočné semienko a spojíme
+                tak koncept algoritmov s aktivitami skutočného života. Cieľom tejto
+                aktivity je budovať zručnosti na preklápanie situácií zo skutočného
+                sveta do online scenárov a naopak.\r\n"
             'Programming: Happy Maps':
               name: Veselé mapy
             Programming in Maze:
@@ -2789,7 +2899,7 @@ sk:
             Going Places Safely:
               name: Bezpečné premiestňovanie
             'Loops: Happy Loops':
-              name: Šťastné cykly
+              name: Veselé cykly
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
@@ -2799,17 +2909,25 @@ sk:
                 sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
                 Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
                 slučiek vytvoriť vlastné útvary.
+            'Events: The Big Event':
+              name: Veľká udalosť Jr.
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               description_teacher: V tejto online aktivite sa študenti naučia, ako
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
             Programming in Bee:
-              name: Programovanie vo Včele
+              name: Programovanie s včelou
             Programming in Harvester:
-              name: Programovanie s kombajnom
+              name: Programovanie so zberateľkou
+            Sequencing in Maze:
+              name: Postupnosť krokov s Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie a Veľký projekt
+              name: Stevie a jej veľký projekt
         express-2018:
           title: Zrýchlený kurz (2018)
           assignment_family_title: Zrýchlený kurz
@@ -2823,27 +2941,33 @@ sk:
             Introduction:
               name: Úvod
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Debugging in Collector:
               name: Odstraňovanie chýb s Laurel
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Artist:
-              name: Pečiatkovanie v Cykloch
+              name: Pečiatkovanie v cykloch
             Nested Loops:
               name: Vnorené cykly
             Nested Loops Project in Frozen:
               name: Projekt s vnorenými cyklami vo Frozen
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digitálne občianstvo'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Vytrieď to zlé'
             'Events: The Big Event':
               name: Veľká udalosť
             Events in Bounce:
               name: Udalosti v Bounce
+            'Conditionals: Conditionals with Cards':
+              name: 'Podmienky: Podmienky s kartami'
             While Loops in Farmer:
-              name: Cykly s podmienkou "pokiaľ" s Farmárkou
+              name: Cykly "pokiaľ" s Farmárkou
             Variables in Artist:
               name: Premenné s Umelcom
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Explore Project Ideas:
@@ -2857,11 +2981,15 @@ sk:
             Conditionals in Bee:
               name: Podmienky "ak/inak" s včelou
             Until Loops in Maze:
-              name: Cykly s podmienkou "dovtedy kým" v Bludisku
+              name: Cykly "dovtedy kým" v bludisku
+            Programming in Maze:
+              name: Programovanie s Angry Birds
+            Debugging in Maze:
+              name: Odstraňovanie chýb so Scratom
             Programming in Collector:
               name: Zbieranie pokladov s Laurel
             Programming in Artist:
-              name: Kódovať Umenie
+              name: Umenie s pomocou kódu
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
@@ -2871,7 +2999,7 @@ sk:
             'Concept Practice with Minecraft ':
               name: Pohľad do budúcnosti s Minecraftom
             Nested Loops in Bee:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
             Nested Loops in Frozen:
               name: Vnorené cykly s Annou a Elsou
             Conditionals with Cards:
@@ -2887,7 +3015,7 @@ sk:
             Screen Out the Mean:
               name: Vytrieď to zlé
             Build a Flappy Game:
-              name: Vytvor si vlastnú "Flappy" hru
+              name: Vytvor si vlastnú hru Flappy
             The Power of Words:
               name: Sila slov
             Envelope Variables:
@@ -2895,7 +3023,7 @@ sk:
             Variables as Constant in Artist:
               name: Premenné s Umelcom
             Variables that Change in Bee:
-              name: Meniace sa premenné so Včelou
+              name: Meniace sa premenné s včelou
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
             For Loop Fun:
@@ -2926,22 +3054,26 @@ sk:
             A, ale s rozšírenou hĺbkou konceptu.
           description_audience: Vek 5-8
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             'Programming: My Robotic Friends':
-              name: Moji robotickí kamaráti
+              name: Moji robotickí kamaráti (ml.)
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
-              name: Moji zacyklení robotickí kamaráti (pre mladších)
+              name: Moji zacyklení robotickí kamaráti (ml.)
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
               name: Kreslenie v záhrade pomocou cyklov
+            'Events: The Big Event':
+              name: Veľká udalosť Jr.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
             Programming in Ice Age:
@@ -2949,14 +3081,17 @@ sk:
             Loops in Ice Age:
               name: Cykly so Scratom
             Sequencing with Scrat:
-              name: Radenie so Scrat
+              name: Postupnosť krokov so Scratom
             Move It, Move It:
               name: Pohni sa, pohni sa
             Copyright and Creativity:
-              name: Je super tvoriť a hrať férovo
+              name: Je skvelé tvoriť a hrať férovo
         coursed-2018:
           title: Kurz D (2018)
           assignment_family_title: Kurz D
+          description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
+            "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
+            aj s významom pojmu "digitálne občianstvo".
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2964,17 +3099,17 @@ sk:
             Introduction:
               name: Úvod
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Debugging in Collector:
-              name: Hľadanie a odstraňovanie chýb s Laurel
+              name: Odstraňovanie chýb s Laurel
             Events in Bounce:
               name: Udalosti v Bounce
             Loops in Artist:
               name: Kreslenie tvarov pomocou cyklov
             Nested Loops in Bee:
-              name: Vnorené cykly v Bludisku
+              name: Vnorené cykly v bludisku
             Nested Loops in Artist:
-              name: Ozdobné tvary použitím vnorených cyklov
+              name: Ornamenty pomocou vnorených cyklov
             While Loops in Farmer:
               name: Cykly s podmienkou "pokiaľ" s Farmárkou
             Conditionals with Cards:
@@ -2996,7 +3131,7 @@ sk:
             Nested Loops in Frozen:
               name: Snehové vločky s Annou a Elsou
             Until Loops in Maze:
-              name: Cykly s podmienkou "dovtedy kým" v Bludisku
+              name: Cykly "dovtedy kým" v bludisku
             Conditionals in Maze:
               name: Podmienky v bludisku
             Conditionals & Loops in Harvester:
@@ -3012,7 +3147,7 @@ sk:
             Nested Loops in Bees:
               name: Vnorené cykly s včelou
             Nested Loops in Maze:
-              name: Vnorené cykly v Bludisku
+              name: Vnorené cykly v bludisku
         jr-test:
           stages:
             Alien Dance Party - Input:
@@ -3024,12 +3159,12 @@ sk:
             svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
             a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
-          description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           description_audience: 'Vek: 6-10'
           stages:
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Programming in Maze:
               name: Programovanie s Angry Birds
             Debugging in Maze:
@@ -3039,19 +3174,19 @@ sk:
             Programming in Collector:
               name: Zbieranie pokladov s Laurel
             Programming in Artist:
-              name: Kódovať Umenie
+              name: Umenie s pomocou kódu
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
             Loops in Artist:
-              name: Pečiatkovanie v Cykloch
+              name: Pečiatkovanie v cykloch
             Loops in Harvester:
-              name: Zber úrody s použitím cyklov
+              name: Zber úrody s cyklami
             'Events: The Big Event':
               name: Veľká udalosť
             Build a Flappy Game:
-              name: Vytvor si vlastnú "Flappy" hru
+              name: Vytvor si vlastnú hru Flappy
             Events in Play Lab:
               name: Naháňačka s udalosťami
             Screen Out the Mean:
@@ -3076,32 +3211,34 @@ sk:
           description_audience: Vek 8-12
           stages:
             'Programming: My Robotic Friends':
-              name: Moji robotickí priatelia
+              name: Moji robotickí kamaráti
             Sequence in Maze:
               name: Programovanie s komentami
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Kódovať Umenie
+              name: Umenie s pomocou kódu
             'Loops: My Loopy Robotic Friends':
               name: Moji zacyklení robotickí kamaráti
             Loops in Artist:
               name: Kreslenie tvarov pomocou cyklov
             Nested Loops:
-              name: Vnorené cykly v Bludisku
+              name: Vnorené cykly v bludisku
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Introduction:
               name: Úvod
-              description_teacher: V tomto postupe študenti začínaju úvodom do online
-                pracovného prostredia Code.org alebo (revidovaním v závislosti na
-                skúsenostiach tvojej triedy). Študenti sa naučia základné funkčnosti
-                rozhrania ako sú tlačidlá "Spustiť", "Obnoviť" a "Vykročiť". Ťahanie,
-                vymazanie a spájanie blokov Blockly predstavuje úvodné video. V tejto
-                úlohe, v kurzoch Bludisko a Umelec, si študenti precvičujú zručnosti
-                v sekvenovaní a odstraňovaní chýb.
+              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
+                - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
+                Code.org. Študenti sa naučia základné funkcionality vrátane využitia
+                tlačidiel `Spustiť `, `Obnoviť ` a `Krok `. Úvodné video im tiež ukáže,
+                ako presúvať bloky, ako ich vymazať či spájať. Následne si študenti
+                precvičia svoje schopnosti vo vytváraní postupností v prostredí Bludisko
+                a Umelec.
             Conditionals:
-              name: Podmienky s Farmárom
+              name: Podmienky s farmárkou
             Private and Personal Information:
               name: Súkromné a osobné informácie
             Build a Star Wars Game:
@@ -3116,7 +3253,7 @@ sk:
                 Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie
                 jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
             Functions in Bee:
-              name: Funkcie so Včelou
+              name: Funkcie s včelou
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Explore Project Ideas:
@@ -3173,25 +3310,27 @@ sk:
           description_audience: Vek 9-13
           stages:
             'Programming: My Robotic Friends':
-              name: Moji robotickí priatelia
+              name: Moji robotickí kamaráti
             Sequence in Maze:
               name: Programovanie s komentami
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Umenie s Kódom
+              name: Umenie s pomocou kódu
             'Loops: My Loopy Robotic Friends':
               name: Moji zacyklení robotickí kamaráti
             Loops in Artist:
               name: Kreslenie tvarov pomocou cyklov
             Nested Loops in Bee/Zombie:
-              name: Vnorené cykly v Bludisku
+              name: Vnorené cykly v bludisku
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmy: Tangramy'
-              description_student: Tu sa naučíte o algorimoch využívajúcich hlavolamy
-                nazývané tangramy!
+              description_student: V tejto lekcii sa pomocou hlavolamu Tangram naučíte
+                viac o algorimoch!
             Introduction:
               name: Úvod
               description_student: Táto lekcia vám dá stručný úvod úžasných vecí,
@@ -3231,7 +3370,7 @@ sk:
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
-              name: Funkcie Včela
+              name: Funkcie s včelou
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
               description_student: Priprav si svoje programovacie prsty. V tejto hre
@@ -3277,11 +3416,11 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals:
-              name: Podmienky s Farmárom
+              name: Podmienky s farmárkou
             Variables as Constant in Artist:
               name: Premenné s Umelcom
             Variables that Change in Bee:
-              name: Meniace sa premenné so Včelou
+              name: Meniace sa premenné s včelou
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
             Alien Dance Party with Sprite Lab:
@@ -3289,7 +3428,7 @@ sk:
             Functions in Minecraft:
               name: Funkcie v Minecrafte
             Conditionals in Farmer:
-              name: Podmienky s Farmárom
+              name: Podmienky s farmárkou
         csp1-2018:
           stages:
             Personal Innovations:
@@ -3335,7 +3474,7 @@ sk:
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
             While Loops:
-              name: Podmieňovacie cykly "Kým"
+              name: Cykly "pokiaľ"
         csppostap-2018:
           stages:
             Deleting Records:
@@ -3370,21 +3509,25 @@ sk:
           description_audience: 'Vek: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: Nenájdené chyby
+              name: Príbeh o hľadaní chrobákov a chýb
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie a Veľký projekt
+              name: Stevie a jej veľký projekt
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            'Online Safety: Your Digital Footprint':
+              name: 'Online bezpečnosť: Tvoja digitálna stopa'
             'Programming: My Robotic Friends':
-              name: Moji robotickí kamaráti
+              name: Moji robotickí kamaráti (ml.)
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
-              name: Moji zacyklení robotickí kamaráti (pre mladších)
+              name: Moji zacyklení robotickí kamaráti (ml.)
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
               name: Kreslenie v záhrade pomocou cyklov
+            'Events: The Big Event':
+              name: Veľká udalosť Jr.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
             Spelling Bee:
@@ -3392,19 +3535,19 @@ sk:
             Move It, Move It:
               name: Pohni sa, pohni sa
             Sequencing with Scrat:
-              name: Radenie so Scrat
+              name: Postupnosť krokov so Scratom
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             Programming in Ice Age:
               name: Programovanie so Scratom
             Copyright and Creativity:
-              name: Je super tvoriť a hrať férovo
+              name: Je skvelé tvoriť a hrať férovo
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
             Loops in Ice Age:
               name: Cykly so Scratom
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie a Veľký projekt
+              name: Stevie a jej veľký projekt
         spritelab-validated:
           stages:
             Alien Dance Party - Input:
@@ -3476,9 +3619,11 @@ sk:
           description_audience: Vek 9-13
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -3488,7 +3633,7 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Farmer:
-              name: Podmienky vo Farmárovi
+              name: Podmienky s farmárkou
             Functions in Minecraft:
               name: Funkcie v Minecrafte
             The Power of Words:
@@ -3538,8 +3683,18 @@ sk:
                 pre všetkých päť úrovní procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursef/15/).
             The Artist:
               name: Umelec
+            Nested Loops in the Maze:
+              name: Vnorené cykly v bludisku
             Loops with the Artist:
               name: Cykly s umelcom
+            Copyright and Creativity:
+              name: Autorské práva a Kreativita
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Sharing:
+              name: Digitálne zdieľanie
         dance-low:
           stages:
             Dance Party:
@@ -3549,6 +3704,9 @@ sk:
             (Táto verzia je pre pomalé pripojenie)
         coursed-2019:
           title: Kurz D (2019)
+          description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
+            "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
+            aj s významom pojmu "digitálne občianstvo".
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3564,7 +3722,7 @@ sk:
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Nested Loops in Bee:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             Nested Loops in Frozen:
@@ -3572,15 +3730,15 @@ sk:
             While Loops in Farmer:
               name: Cykly s podmienkou "pokiaľ" s Farmárkou
             Until Loops in Maze:
-              name: Cykly s podmienkou "dovtedy kým" v Bludisku
+              name: Cykly "dovtedy kým" v bludisku
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky s Včelou
+              name: Podmienky s včelou
             Conditionals & Loops in Harvester:
               name: Podmienky a cykly s Poľnohosporárkou
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             'Unplugged: Binary':
@@ -3602,9 +3760,11 @@ sk:
           description_audience: Vek 8-12
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: My Loopy Robotic Friends':
@@ -3673,11 +3833,13 @@ sk:
             Crowdsourcing:
               name: Crowdsourcing
             Nested Loops in Bee:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
+            Digital Sharing:
+              name: Digitálne zdieľanie
         express-2019:
           title: Zrýchlený kurz (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -3688,13 +3850,13 @@ sk:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmy: Programovanie na štvorčekový papier'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             Relay Programming:
               name: Štafetové programovanie
             Debugging in Maze:
               name: Odstraňovanie chýb v bludisku
             Programming in Collector:
-              name: Programovanie so zberateľom
+              name: Programovanie so zberateľkou
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: Getting Loopy':
@@ -3704,17 +3866,17 @@ sk:
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Nested Loops in Bee:
-              name: Vnorené cykly s Včelou
+              name: Vnorené cykly s včelou
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
             While Loops in Farmer:
               name: Cykly s podmienkou "pokiaľ" s Farmárkou
             Until Loops in Maze:
-              name: Cykly s podmienkou "dovtedy kým" v Bludisku
+              name: Cykly "dovtedy kým" v bludisku
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky s Včelou
+              name: Podmienky s včelou
             Conditionals & Loops in Harvester:
               name: Podmienky a cykly s Poľnohosporárkou
             'Functions: Songwriting':
@@ -3725,8 +3887,10 @@ sk:
               name: Funkcie s Umelcom
             Screen Out the Mean:
               name: Vytrieď to zlé
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
-              name: Vytvor si vlastnú "Flappy" hru
+              name: Vytvor si vlastnú hru Flappy
             The Power of Words:
               name: Sila slov
             Envelope Variables:
@@ -3795,20 +3959,20 @@ sk:
             svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov
             a nauč sa ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju
             vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
-          description_short: Nauč sa základy informatiky a vytvor si vlastné umenie,
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           description_audience: 'Vek: 6-10'
           stages:
             Building a Foundation:
-              name: Stavanie základov
+              name: Budovanie základov
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             Debugging in Maze:
               name: Odstraňovanie chýb v bludisku
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy z reálneho života: Papierové lietadielká'
             Programming in Collector:
-              name: Programovanie so zberateľom
+              name: Programovanie so zberateľkou
             Programming in Artist:
               name: Programovanie s Umelecom
             'Loops: Getting Loopy':
@@ -3817,8 +3981,10 @@ sk:
               name: Cykly s Rey a BB-8
             Loops in Harvester:
               name: Cykly so Zberateľkou
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
-              name: Vytvor si vlastnú "Flappy" hru
+              name: Vytvor si vlastnú hru Flappy
             Screen Out the Mean:
               name: Vytrieď to zlé
             Binary Bracelets:
@@ -3826,11 +3992,11 @@ sk:
             'End of Course Project: Play Lab':
               name: 'Záverečný projekt: Play Lab'
             Create a Design with Loops:
-              name: Vytvor si vlastný dizajn s cyklami
+              name: Vytvor si vlastné obrázky s cyklami
             'End of Course Project: Create a Play Lab Game':
               name: 'Záverečný projekt: vytvor si hru v Play Labe'
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Graphing Data:
@@ -3851,10 +4017,20 @@ sk:
           description_short: Predstavenie informatiky pre predškolákov.
           description_audience: 'Vek: 4-7'
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Vytrvalosť a frustrácia: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+              description_teacher: "V tejto lekcii zasadíme skutočné semienko a spojíme
+                tak koncept algoritmov s aktivitami skutočného života. Cieľom tejto
+                aktivity je budovať zručnosti na preklápanie situácií zo skutočného
+                sveta do online scenárov a naopak.\r\n"
+            'Programming: Happy Maps':
+              name: 'Programovanie: Veselé mapy'
             Programming in Maze:
-              name: Programovanie v Labyrinte
+              name: Programovanie v bludisku
             Going Places Safely:
               name: Bezpečné premiestňovanie
             Loops in Harvester:
@@ -3865,6 +4041,12 @@ sk:
                 sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
                 Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
                 slučiek vytvoriť vlastné útvary.
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               description_teacher: V tejto online aktivite sa študenti naučia, ako
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
@@ -3884,13 +4066,13 @@ sk:
             Move It, Move It:
               name: Pohni sa, pohni sa
             Sequencing with Scrat:
-              name: Radenie so Scrat
+              name: Postupnosť krokov so Scratom
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Ice Age:
-              name: Programovanie v Dobe Ľadovej
+              name: Programovanie v Dobe ľadovej
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Programming with Rey and BB-8:
@@ -3899,6 +4081,8 @@ sk:
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             The Right App:
@@ -3909,16 +4093,20 @@ sk:
             s priateľmi.
           description_audience: 'Vek: 4-8'
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Vytrvalosť a frustrácia: Stevie a jej veľký projekt'
             Move It, Move It:
               name: Pohni sa, pohni sa
             Sequencing with Scrat:
-              name: Radenie so Scrat
+              name: Postupnosť krokov so Scratom
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             'Programming: My Robotic Friends':
-              name: 'Programovanie: Moji Robotickí Kamaráti'
+              name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Ice Age:
-              name: Programovanie v Dobe Ľadovej
+              name: Programovanie v Dobe ľadovej
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Programming with Rey and BB-8:
@@ -3927,10 +4115,16 @@ sk:
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
         removed19:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Vytrvalosť a frustrácia: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
         csd2-2019:
@@ -3955,8 +4149,6 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd4-2019:
@@ -4010,7 +4202,7 @@ sk:
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
             While Loops:
-              name: Podmieňovacie cykly "Kým"
+              name: Cykly "pokiaľ"
         csppostap-2019:
           stages:
             Deleting Records:

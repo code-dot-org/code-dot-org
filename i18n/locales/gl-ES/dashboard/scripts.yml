@@ -1369,6 +1369,10 @@ gl:
               name: Diversión con bucles "para" (for)
             The Artist:
               name: O Artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Aberta
         coursed-2019:
           stages:
             Relay Programming:

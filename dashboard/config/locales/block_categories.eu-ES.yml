@@ -25,13 +25,14 @@ eu:
       Comment: Iruzkina
       'Variables ': 'Aldagaiak '
       everythingelse: besteguztia
+      World: Mundua
+      Location: Kokalekua
+      Behaviors: Jokabideak
       numbers: zenbakiak
       Numbers: Zenbakiak
       Default: Lehenetsia
-      World: Mundua
       Dancers: Dantzariak
       Groups: Taldeak
-      Behaviors: Jokabideak
       Advanced: Aurreratua
       Start: Hasiera
       Locations: Kokalekuak

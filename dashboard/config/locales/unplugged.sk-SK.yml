@@ -23,11 +23,12 @@ sk:
           návodu. Je kresba podobná tomu, čo si pôvodný tím vybral?
       Unplug3:
         title: Programovanie na štvorčekový papier
-        desc: '"Naprogramovaním" jeden druhého tak, aby kreslili obrázky, študenti
-          začnú chápať, o čom skutočne programovanie je. Hodina začne tým, že študenti
-          si budú navzájom hovoriť inštrukcie ako vyfarbiť štvorčeky na štvorčekovom
+        desc: '"Naprogramovaním" jeden druhého na kreslenie obrázkov študenti začnú
+          chápať, o čom skutočne programovanie je. Hodina začne aktivitou, v ktorej
+          si študenti navzájom dajú inštrukcie na vyfarbenie štvorčekov na štvorčekovom
           papieri za účelom reprodukovania existujúceho obrázka. Ak máte dostatok
-          času, hodina sa môže skončiť obrázkami, ktoré študenti vytvorili sami.'
+          času, hodina sa môže skončiť programovaním na kreslenie obrázkov, ktoré
+          študenti vytvorili sami.'
       Unplug4:
         title: Algoritmy
         desc: Táto lekcia pokrýva algoritmy. Pomocou tangramov a štvorčekového papiera
@@ -63,8 +64,8 @@ sk:
           herný štýl myslenia, aby pomohla vašej triede dozvedieť sa o účinnosti abstrakcie.
       Unplug9:
         title: Štafetové programovanie
-        desc: Táto lekcia sa inšpiruje predošlou aktivitou (4. Programovanie na štvorčekovom
-          papieri) a využije získané zručnosti na to, aby sme zdôraznili dôležitosť
+        desc: Táto lekcia sa inšpiruje predošlou aktivitou (4. Programovanie na štvorčekový
+          papier) a využije získané zručnosti na to, aby sme zdôraznili dôležitosť
           dokončovania programov, ktoré pracujú za sebou a nutnosť častej kontroly
           programov kvôli chybám.
       Unplug10:
@@ -79,18 +80,18 @@ sk:
       UnplugHappyMaps:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov.
+          postavu cez bludisko pomocou jediného príkazu.
       MoveIt:
         title: Pohni sa, pohni sa
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov.
+          postavu cez bludisko pomocou jediného príkazu.
       PlantASeed:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
         desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame
           algoritmy v každodennom živote. Takisto sa zameriava na širšie súvislosti
           informatiky a dôležitú rolu algoritmov.
       BuildingAFoundation:
-        title: Stavanie základov
+        title: Budovanie základov
         desc: Študenti vytvoria stavbu len pomocou poskytnutých zásob. Stavba musí
           splniť zadanie (dosiahnuť určitú výšku alebo uniesť určitú záťaž) a študenti
           následne budú diskutovať o tom, ako ostať vytrvalý v prípade, že sa úlohy
@@ -102,10 +103,10 @@ sk:
           ktorú budú na základe inštrukcií opakovať.
       RelayProgramming:
         title: Štafetové programovanie
-        desc: Študenti budú bežať štafetu, kde budú musieť prejsť cez dvor a napísať
-          algoritmus podľa obrázku na základe "Programovania na štvorčekovom papieri".
-          Môžu napísať len jeden príkaz počas jednej otočky a ak niekde nájdu chybu,
-          musia spätne vymazať všetko až po túto chybu.
+        desc: Študenti budú bežať štafetové preteky, v rámci ktorých budú písať algoritmus
+          na nakreslenie obrázku v štýle "Programovania na štvorčekový papier". Každý
+          súťažiaci môže v svojom kole napísať len jeden príkaz a ak niekde nájde
+          chybu, musí vymazať všetky príkazy zapísané od tejto chyby.
       Conditionals:
         title: Podmienky
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria
@@ -123,19 +124,18 @@ sk:
           ako bezpečne surfovať po internete.
       GraphPaperProgramming:
         title: Programovanie na štvorčekový papier
-        desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
-          príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
+        desc: S pomocou preddefinovaných príkazov študenti napíšu algoritmus (sadu
+          inštrukcií), podľa ktorého ich spolužiaci nakreslia obrázok.
       PaperPlanes:
         title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom
-          živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava
-          na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú
-          úlohu.
+          živote, konkrétne vytvorením papierového lietadielka. Zameriava sa tiež
+          na širšie súvislosti informatiky a podstatnú úlohu, ktorú v našom živote
+          hrajú algoritmy.
       BinaryBracelets:
         title: Binárne náramky
-        desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich
-          krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené
-          viac ako jedným spôosobom.
+        desc: Študenti vytvoria náramky s binárnym zápisom svojej iniciály. Študenti
+          sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.
       DigitalFootprint:
         title: Tvoja digitálna stopa
         desc: Učitelia predstavia študentom myšlienku, že ak dávajú o sebe informácie
@@ -169,9 +169,9 @@ sk:
           problémov v informatike, vďaka ktorému vyriešia úlohu oveľa efektívnejšie
           spolu ako trieda, než keby sa o to pokúšal každý sám.
       DigitalCitizenship:
-        title: Digitálne Občianstvo
-        desc: Študenti preskúmajú rozdiely medzi súkromnou informáciou a osobnou informáciou,
-          naučia sa rozlíšiť, čo je bezpečné a čo nebezpečné zdieľať online.
+        title: Digitálne občianstvo
+        desc: Študenti preskúmajú rozdiely medzi súkromnou a osobnou informáciou a
+          naučia sa rozlíšovať, čo je bezpečné a čo nebezpečné zdieľať online.
       TangramAlgorithms:
         title: Tangram algoritmy
         desc: V tejto lekcii si ukážeme niečo dôležité o algoritmoch. Ak budete mať
@@ -253,16 +253,16 @@ sk:
           kamarátov, tentokrát však s cyklami!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivita bez počítača
-        desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
+        desc: Dnes sa naučíte, čo robiť, ak sa niekto v online svete správa nepríjemne.
       courseD_unplugged_digitalCitizenship:
         title: Aktivita bez počítača
-        desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
+        desc: Dnes sa naučíte, čo to znamená byť občanom v digitálnom svete.
       courseE_unplugged_privateInformation:
         title: 'Výchova do života: Súkromné a osobné údaje '
         desc: Dnes sa naučíte, aký je rozdiel medzi súkromnými a osobnými informáciami!
       courseF_unplugged_powerOfWords:
         title: Aktivita bez počítača
-        desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
+        desc: Dnes sa naučíte, čo robiť, ak sa niekto v online svete správa nepríjemne.
       deeper learning description:
         desc: 'chýbajúci preklad: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
@@ -273,7 +273,7 @@ sk:
       courseA_unplugged_happyMaps:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov.
+          postavu cez bludisko pomocou jediného príkazu.
       courseA_unplugged_goingPlacesSafely:
         title: Bezpečné premiestňovanie
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
@@ -290,7 +290,7 @@ sk:
           "online", vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje
           následky.
       courseC_unplugged_buildingAFoundation:
-        title: Stavanie základov
+        title: Budovanie základov
         desc: Študenti vytvoria stavbu len pomocou poskytnutých zásob. Stavba musí
           splniť zadanie (dosiahnuť určitú výšku alebo uniesť určitú záťaž) a študenti
           následne budú diskutovať o tom, ako ostať vytrvalý v prípade, že sa úlohy
@@ -298,9 +298,9 @@ sk:
       courseC_unplugged_paperPlanes:
         title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom
-          živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava
-          na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú
-          úlohu.
+          živote, konkrétne vytvorením papierového lietadielka. Zameriava sa tiež
+          na širšie súvislosti informatiky a podstatnú úlohu, ktorú v našom živote
+          hrajú algoritmy.
       courseC_unplugged_gettingLoopy:
         title: Cykly sa zacykľujú
         desc: Táto lekcia je úvodom do programovacieho konceptu cyklov (opakujúcich
@@ -308,19 +308,18 @@ sk:
           ktorú budú na základe inštrukcií opakovať.
       courseC_unplugged_binaryBracelets:
         title: Binárne náramky
-        desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich
-          krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené
-          viac ako jedným spôosobom.
+        desc: Študenti vytvoria náramky s binárnym zápisom svojej iniciály. Študenti
+          sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.
       courseD_unplugged_graphPaperProgramming:
         title: Programovanie na štvorčekový papier
-        desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
-          príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
+        desc: S pomocou preddefinovaných príkazov študenti napíšu algoritmus (sadu
+          inštrukcií), podľa ktorého ich spolužiaci nakreslia obrázok.
       courseD_unplugged_relayProgramming:
         title: Štafetové programovanie
-        desc: Študenti budú bežať štafetu, kde budú musieť prejsť cez dvor a napísať
-          algoritmus podľa obrázku na základe "Programovania na štvorčekovom papieri".
-          Môžu napísať len jeden príkaz počas jednej otočky a ak niekde nájdu chybu,
-          musia spätne vymazať všetko až po túto chybu.
+        desc: Študenti budú bežať štafetové preteky, v rámci ktorých budú písať algoritmus
+          na nakreslenie obrázku v štýle "Programovania na štvorčekový papier". Každý
+          súťažiaci môže v svojom kole napísať len jeden príkaz a ak niekde nájde
+          chybu, musí vymazať všetky príkazy zapísané od tejto chyby.
       courseD_unplugged_conditionalsCards:
         title: Podmienky s kartami
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria
@@ -415,7 +414,7 @@ sk:
           som level\r\n3. spravil som \"označený\" level s rovnakým obsahom a rovnakým
           menom. označil som políčko pre jeho zašifrovanie. stlačil som uložiť a publikovať"
       courseB_unplugged_MRF_2018:
-        title: Moji robotickí priatelia
+        title: Moji robotickí kamaráti
         desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
       PlantASeed_2018:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
@@ -425,7 +424,7 @@ sk:
       UnplugHappyMaps_2018:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov.
+          postavu cez bludisko pomocou jediného príkazu.
       GoingPlacesSafely_2018:
         title: Bezpečné premiestňovanie
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
@@ -441,14 +440,14 @@ sk:
           je práve stlačené.
       GraphPaperProgramming_2018:
         title: Programovanie na štvorčekový papier
-        desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
-          príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
+        desc: S pomocou preddefinovaných príkazov študenti napíšu algoritmus (sadu
+          inštrukcií), podľa ktorého ich spolužiaci nakreslia obrázok.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktivita bez počítača
-        desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
+        desc: Dnes sa naučíte, čo to znamená byť občanom v digitálnom svete.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktivita bez počítača
-        desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
+        desc: Dnes sa naučíte, čo robiť, ak sa niekto v online svete správa nepríjemne.
       Conditionals_2018:
         title: Podmienky
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria
@@ -469,9 +468,9 @@ sk:
       PaperPlanes_2018:
         title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom
-          živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava
-          na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú
-          úlohu.
+          živote, konkrétne vytvorením papierového lietadielka. Zameriava sa tiež
+          na širšie súvislosti informatiky a podstatnú úlohu, ktorú v našom živote
+          hrajú algoritmy.
       GettingLoopy_2018:
         title: Cykly sa zacykľujú
         desc: Táto lekcia je úvodom do programovacieho konceptu cyklov (opakujúcich
@@ -479,13 +478,12 @@ sk:
           ktorú budú na základe inštrukcií opakovať.
       BinaryBracelets_2018:
         title: Binárne náramky
-        desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich
-          krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené
-          viac ako jedným spôosobom.
+        desc: Študenti vytvoria náramky s binárnym zápisom svojej iniciály. Študenti
+          sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.
       MoveItMoveIt_2018:
         title: Pohni sa, pohni sa
       courseB_unplugged_CnC_2018:
-        title: Je super tvoriť a hrať férovo
+        title: Je skvelé tvoriť a hrať férovo
         desc: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže
           študentom lepšie porozumieť kreatívnemu procesu zdieľania myšlienok a využitia
           inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania
@@ -499,11 +497,11 @@ sk:
           existencie ako etického digitálneho občana.
       RelayProgramming_2018:
         title: Štafetové programovanie
-        desc: Táto aktivita začne krátkym školením o hľadaní a opravovaní chýb a o
-          potrebe vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých,
-          pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
+        desc: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo
+          vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc
+          s časom, postupne po jednotlivých príkazoch vytvoria program.
       courseB_unplugged_MRF_2019:
-        title: Moji robotickí priatelia
+        title: Moji robotickí kamaráti
         desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
       BuildingAFoundation_2019:
         title: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.title'
@@ -527,16 +525,16 @@ sk:
         desc: 'chýba preklad: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programovanie na štvorčekový papier
-        desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
-          príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
+        desc: S pomocou preddefinovaných príkazov študenti napíšu algoritmus (sadu
+          inštrukcií), podľa ktorého ich spolužiaci nakreslia obrázok.
       RelayProgramming_2018_2019:
         title: Štafetové programovanie
-        desc: Táto aktivita začne krátkym školením o hľadaní a opravovaní chýb a o
-          potrebe vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých,
-          pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
+        desc: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo
+          vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc
+          s časom, postupne po jednotlivých príkazoch vytvoria program.
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktivita bez počítača
-        desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
+        desc: Dnes sa naučíte, čo to znamená byť občanom v digitálnom svete.
       BinaryImages_2019:
         title: Binárne obrázky
         desc: Hoci si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly,
@@ -570,7 +568,7 @@ sk:
           ktorú budú na základe inštrukcií opakovať.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Aktivita bez počítača
-        desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
+        desc: Dnes sa naučíte, čo robiť, ak sa niekto v online svete správa nepríjemne.
       BigEvent_2019:
         title: Veľká udalosť
         desc: Študenti sa oboznámia s úvodným konceptom programovania udalostí, ktoré
@@ -579,15 +577,14 @@ sk:
           je práve stlačené.
       BinaryBracelets_2019:
         title: Binárne náramky
-        desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich
-          krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené
-          viac ako jedným spôosobom.
+        desc: Študenti vytvoria náramky s binárnym zápisom svojej iniciály. Študenti
+          sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.
       PaperPlanes_2019:
         title: 'Algoritmy z reálneho života: Papierové lietadielká'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom
-          živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava
-          na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú
-          úlohu.
+          živote, konkrétne vytvorením papierového lietadielka. Zameriava sa tiež
+          na širšie súvislosti informatiky a podstatnú úlohu, ktorú v našom živote
+          hrajú algoritmy.
       PlantASeed_2019:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
         desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame
@@ -596,7 +593,7 @@ sk:
       UnplugHappyMaps_2019:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov.
+          postavu cez bludisko pomocou jediného príkazu.
       GoingPlacesSafely_2019:
         title: Bezpečné premiestňovanie
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
@@ -612,7 +609,7 @@ sk:
           "online", vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje
           následky.
       courseB_unplugged_CnC_2019:
-        title: Je super tvoriť a hrať férovo
+        title: Je skvelé tvoriť a hrať férovo
         desc: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže
           študentom lepšie porozumieť kreatívnemu procesu zdieľania myšlienok a využitia
           inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania

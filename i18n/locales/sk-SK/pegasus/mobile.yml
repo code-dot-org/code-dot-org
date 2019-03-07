@@ -873,7 +873,7 @@
   khanpl_name: "Úvod do JavaScriptu"
   tynker_name: "Vytvor si vlastnú hru"
   scratch_name: "Buď kreatívny s programovaním"
-  thinkersmith_name: "Moji robotickí priatelia"
+  thinkersmith_name: "Moji robotickí kamaráti"
   condcards_name: "Podmienky s kartami"
   codehs_name: "Nauč sa programovať so psom Karlom"
   codemonkey_name: "CodeMonkey"
@@ -1161,19 +1161,19 @@
   course4_shortdescription_congrats: "Ste pripravení ísť ďalej? Študenti preniknú hlbšie do témy programovania predstavenej v predchádzajúcich kurzoch s cieľom nájsť flexibilné riešenie zložitejších problémov. Do konca tohto kurzu študenti vytvoria interaktívne príbehy a hry, ktoré môžu zdieľať s kýmkoľvek. Doporučené pre druhý stupeň ZŠ."
   coursea_shortdescription_congrats: "Predstavenie informatiky pre predškolákov."
   courseb_shortdescription_congrats: "Predstavenie informatiky pre prvákov. (Podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)"
-  coursec_shortdescription_congrats: "Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry."
+  coursec_shortdescription_congrats: "Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry."
   coursed_shortdescription_congrats: "Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami, vnorenými cyklami, podmienkami a viac."
   coursee_shortdescription_congrats: "Rýchlo si zopakuj koncepty z kurzov C & D a potom pokračuj s funkciami."
   coursef_shortdescription_congrats: "Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru."
   coursea-2017_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
   courseb-2017_shortdescription_congrats: Predstavenie informatiky pre prvákov. (Podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
-  coursec-2017_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry.
+  coursec-2017_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
   coursed-2017_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami, vnorenými cyklami, podmienkami a viac.
   coursee-2017_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C & D a potom pokračuj s funkciami.
   coursef-2017_shortdescription_congrats: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
   coursea-2018_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
   courseb-2018_shortdescription_congrats: Predstavenie informatiky pre prvákov. (Podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
-  coursec-2018_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry.
+  coursec-2018_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
   coursed-2018_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami, vnorenými cyklami, podmienkami a viac.
   coursee-2018_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C & D a potom pokračuj s funkciami.
   coursef-2018_shortdescription_congrats: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
@@ -1189,7 +1189,7 @@
   tynker_longdescription: "Vytvor si svoje vlastné hry a zdieľaj ich s priateľmi! Rieš zábavné programovacie hádanky a na každej úrovni si osvoj základy programovania. Prispôsob si hry s animovanými postavičkami, s viacerými úrovňami a bohatými rekvizitami. Urob svoje hry realistickými s využitím fyziky. Zobraz si svoj program vo forme grafických blokov alebo v JavaScripte. Prenes svoje mobilné hry na iPady a tablety s Androidom. Vyber si z množstva zábavných aktivít!"
   scratch_longdescription: "V Scratchi môžeš vytvárať vlastné interaktívne hry, príbehy, animácie &mdash; a zdieľať ich s priateľmi. Začni s animáciami svojho mena, vytvorením pohľadnice a hry ping-pong."
   lightbot_longdescription: "Veď robota Lightbot-a, aby rozsvietil všetky modré dlaždice! Lightbot je logická hra, ktorá naučí hráčov porozumieť základom programovania. Naučte se vytvárať postupnosti príkazov, písať procedúry a využívať opakovanie k vyriešeniu jednotlivých úrovní. Ideálne pre všetky vekové kategórie."
-  thinkersmith_longdescription: "Žiaci, s použitím preddefinovaného \"robotického slovníka\", prídu na to ako sa navzájom navigovať pri plnení špecifických úloh bez toho, aby o nich najskôr diskutovali. Táto lekcia naučí deti prepojenie medzi symbolom a akciou, rovnako ako neoceniteľnú schopnosť odhaľovania chýb (debugging). Aktivita \"Moji robotickí priatelia\" sa najlepšie využije v skupine a obsahuje pracovný zošit pre učiteľa."
+  thinkersmith_longdescription: "Žiaci, s použitím preddefinovaného \"robotického slovníka\", prídu na to ako sa navzájom navigovať pri plnení špecifických úloh bez toho, aby o nich najskôr diskutovali. Táto lekcia naučí deti prepojenie medzi symbolom a akciou, rovnako ako neoceniteľnú schopnosť odhaľovania chýb (debugging). Aktivita \"Moji robotickí kamaráti\" sa najlepšie využije v skupine a obsahuje pracovný zošit pre učiteľa."
   condcards_longdescription: "Použi balíček kariet a nauč sa o algoritmoch a podmienkových príkazoch v tejto aktivite bez počítača (unplugged). Žiaci pracujú v tímoch a potrebujú jeden balíček kariet per tím."
   lightbotintl_longdescription: "Nauč sa základom logiky v programovaní, začínajúc od úplných základov programovania, pre vek od 4 rokov, na iOS a Androide (alebo v prehliadači). Nauč sa ako skladať príkazy, odhaľovať vzorce, používať procedúry a využiť opakovanie!"
   codehs_longdescription: "Zadávanie príkazov počítaču, čo je základ celého programovania, je podobné zadávaniu príkazov psovi. Nauč sa kódovať so psom Karolom&mdash;zábavný, prístupný a vizuálny vstup do programovania, ktorý učí úplných začiatočníkov základné pojmy ako sú príkazy a funkcie. Cvičenie si riadi žiak sám, ale učitelia sa môžu zaregistrovať, aby mali prístup ku nástrojom pre učiteľov a mohli sledovať pokrok žiaka!"

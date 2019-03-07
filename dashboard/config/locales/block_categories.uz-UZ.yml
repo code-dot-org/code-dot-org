@@ -24,12 +24,13 @@ uz:
       Comment: Izoh
       'Variables ': 'O''zgaruvchilar '
       everythingelse: hamma narsa
+      World: Dunyo
+      Location: Manzil
+      Behaviors: Hatti-harakatlar
       numbers: raqamlar
       Numbers: Raqamlar
-      World: Dunyo
       Dancers: Raqqoslar
       Groups: Guruhlar
-      Behaviors: Hatti-harakatlar
       Advanced: Rivojlangan
       Start: Boshlash
       Locations: Manzil

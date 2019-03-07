@@ -219,6 +219,13 @@ de:
           * Verwenden Sie den Block "Wenn Pfeiltaste nach links gedrückt", um den Roboter einen Tanzschritt tun zu lassen, wenn Sie sie drücken.
 
           *Dieser Level endet nach 8 Takten.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Die **Seelaternen**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Kannst du mit ihnen eine Bedingung verwenden, um das Ozeanmonument zu erreichen?\n\n"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Was für ein wunderschönes Korallenriff! Die blaue Koralle
+          ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links**
+          ist!
       Dance short test 2_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**

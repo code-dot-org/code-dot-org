@@ -1434,6 +1434,10 @@ hy:
               name: For Loop Fun
             The Artist:
               name: The Artist
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:

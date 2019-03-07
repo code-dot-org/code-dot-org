@@ -23,13 +23,14 @@ pl:
       Comment: Komentarz
       'Variables ': 'Zmienne '
       everythingelse: pozostałe
+      World: Świat
+      Location: Miejsce
+      Behaviors: Zachowanie
       numbers: liczby
       Numbers: Liczby
       Default: Domyślne
-      World: Świat
       Dancers: Tancerze
       Groups: Grupy
-      Behaviors: Zachowanie
       Advanced: Zaawansowane
       Start: Start
       Locations: Położenie

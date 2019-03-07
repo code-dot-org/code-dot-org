@@ -3092,7 +3092,7 @@ pt-BR:
           os escritórios do Minecraft.
       6:
         text: Mas, eu vou precisar de sua ajuda. Comece fazendo o tutorial, comece
-          aprendendo como codificar, e eu vou alcançar vocês após alguns níveis, ok?
+          aprendendo como programar, e eu vou alcançar vocês após alguns níveis, ok?
           Desejem-me sorte! Eu acho que é por este caminho. Ai! Cactus! Eu estou bem!
       7:
         text: Para completar o desafio da Hora do Código, você precisará escrever
@@ -3129,7 +3129,7 @@ pt-BR:
         text: Sinto que estou de volta ao Minecraft! Olá. Como vai você? Olá?
       4:
         text: |-
-          Oh, há um creeper. Você não faz nada, faz? Katie: Stacy? Stacy: Oi, Katie?
+          Oh, olha ali, têm um creeper. Você não faz nada, faz? Katie: Stacy? Stacy: Oi, Katie?
           Katie: Sim, bem-vindo(a) ao Minecraft!
       5:
         text: 'Stacy: Isto é incrível. Então você trabalha aqui todos os dias como
@@ -3143,24 +3143,23 @@ pt-BR:
           eles querem aprender a programar, então qual é uma das primeiras coisas
           que você precisa saber quando você está aprendendo?'
       6:
-        text: 'Katie: Bem, você precisa aprender a usar as repetições. Repetições
-          são coisas que os desenvolvedores escrevem para dar comandos para um computador
-          que podem ser executados várias vezes. Stacy: Entendi, então acho que, na
-          verdade, um pouco sobre isto está chegando nos próximos níveis, então vá
-          em frente e experimente as repetições.'
+        text: 'Katie: Bem, você precisa aprender a usar laços. Laços são coisas que
+          os desenvolvedores escrevem para dar comandos para um computador que podem
+          ser executados várias vezes. Stacy: Entendi, então acho que, na verdade,
+          um pouco sobre isto está chegando nos próximos níveis, então vá em frente
+          e experimente os laços.'
       7:
-        text: No próximo nível, você pode usar uma repetição para mover o Agente ao
-          longo do caminho. Arraste o bloco de repetição para a área de trabalho e
-          coloque o bloco de movimento para a frente dentro do bloco de repetição.
-          Isto diz ao computador para fazer a mesma coisa várias vezes seguidas sem
-          que seja necessário arrastar um monte de blocos para a área de trabalho.
-          Você pode escolher quantas vezes repetir colocando um número no bloco de
-          repetição.
+        text: No próximo nível, você pode usar um laço para mover o Agente ao longo
+          do caminho. Arraste o bloco repita para a área de trabalho e coloque o bloco
+          avance dentro do bloco repita. Isto diz ao computador para fazer a mesma
+          coisa várias vezes seguidas sem que seja necessário arrastar um monte de
+          blocos para a área de trabalho. Você pode escolher quantas vezes repetir
+          colocando um número no bloco repita.
       8:
-        text: Você pode colocar voltas e múltiplos comandos no bloco de repetição
-          também, mas por agora tente usar uma repetição para mover o Agente para
-          a frente quatro passos. Lembre-se, se você ficar preso em um quebra-cabeça
-          você sempre pode apertar o botão azul de redefinir e tentar novamente.
+        text: Você pode colocar vire e múltiplos outros comandos no bloco repita também,
+          mas por agora tente usar um laço repita para mover o Agente para a frente
+          quatro passos. Lembre-se, se você ficar preso em um quebra-cabeça você sempre
+          pode apertar o botão azul de redefinir e tentar novamente.
       9:
         text: 'Se você está pensando sobre ter um emprego legal como o de Katie, vá
           em frente e clique no botão mostrar código assim que terminar cada nível.
@@ -3176,7 +3175,7 @@ pt-BR:
           que eu sei como resolver o problema que estou tendo em meu jogo. Eu acho
           que posso usar uma função. Deixe-me apenas abrir isto.'
       3:
-        text: Então uma função é um conjunto específico de instruções para realizar
+        text: Então, uma função é um conjunto específico de instruções para realizar
           uma determinada tarefa, como se fosse uma receita. Nos próximos níveis,
           você terá acesso às funções que você pode usar para resolver os quebra-cabeças.
       4:
@@ -3199,7 +3198,7 @@ pt-BR:
       4:
         text: 'Stacy: Parabéns pessoal, vocês arrasaram! E agora que vocês completaram
           a Hora do Código, vocês podem começar a programar em Minecraft. Vocês aprenderam
-          sobre repetições, funções, e o que um Agente de software faz.'
+          sobre laços, funções, e o que um Agente de software faz.'
       5:
         text: Agora, é hora do nível de jogo livre, onde você é o desenvolvedor. Use
           qualquer tempo restante para escrever suas próprias funções para explorar,
@@ -3215,7 +3214,7 @@ pt-BR:
           construir uma escada fora destes blocos de terra queimada, agora nós podemos
           simplesmente usar esta escada para sair daqui. E, pessoal, não são apenas
           escadas. Eu posso dizer ao Agente para fazer qualquer coisa que eu quiser,
-          e ele irá fazê-lo por mim.'
+          e ele irá fazer por mim.'
       8:
         text: 'Stampy: Como você fez isto? Stacy: foi fácil, na verdade. Eu apenas
           usei código!'
@@ -3250,7 +3249,7 @@ pt-BR:
           estejam em sua mochila bem agora. Mas o que faz um computador ser um computador?
           O que realmente faz de um computador, um computador? E ainda como ele funciona?
       3:
-        text: Oi eu sou o Nat! Eu fui um dos desenhistas originais do Xbox. Tenho
+        text: Oi, eu sou o Nat! Eu fui um dos desenhistas originais do Xbox. Tenho
           trabalhado com computadores desde que eu tinha talvez sete anos de idade
           e agora eu trabalho em uma realidade virtual. Como humanos, nós sempre construímos
           ferramentas para nos ajudar a resolver problemas. Ferramentas como um carrinho
@@ -3290,9 +3289,9 @@ pt-BR:
           para ser retornada para a saída.
       9:
         text: Como um computador retorna a informação para a saída depende do que
-          o computador foi desenhado para fazer. Um monitor pode exibir texto, fotos,
-          vídeos, ou jogos interativos - até mesmo realidade virtual! A saída de um
-          computador pode até mesmo incluir sinais para controlar um robô.
+          o computador foi projetado para fazer. Um monitor pode exibir texto, fotos,
+          vídeos, ou jogos interativos -- até mesmo realidade virtual! A saída de
+          um computador pode até mesmo incluir sinais para controlar um robô.
       10:
         text: E quem sabe como os computadores de amanhã serão? Minha esperança é
           que você ajude a decidir como você quer que os computadores de amanhã sejam.
@@ -3303,7 +3302,7 @@ pt-BR:
     csd_concept_binary_data:
       1:
         text: Oi! Meu nome é Limor Fried, e eu sou uma engenheira aqui nas Industrias
-          Adafruit. E aqui é onde eu faço a engenharia e desenho, e eu desenho circuitos
+          Adafruit. E aqui é onde eu faço a engenharia e projetos, e eu projeto circuitos
           para moda e música e tecnologia.
       2:
         text: Meu nome é Frederico Gomez Suarez, e eu sou um desenvolvedor de software

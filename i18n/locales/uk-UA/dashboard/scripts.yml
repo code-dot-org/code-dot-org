@@ -264,10 +264,16 @@ uk:
           description: Вивчайте функціональне програмування через алгебру
           description_short: Вивчайте функціональне програмування через алгебру
           stages:
+            'Calc: Defining Variables':
+              name: Визначення змінних і вирази
+            'Calc: Evaluation Blocks':
+              name: Обчислювальні блоки і арифметичні вирази
             'Eval: Boolean Operators':
               name: Логічні оператори
             'Eval: Conditionals':
               name: Умови
+            'Eval: Defining Functions':
+              name: Композитні функції
             'Eval: Strings and Images':
               name: Рядки та зображення
             'Unplugged: Conditionals and Piecewise Functions':
@@ -1672,6 +1678,10 @@ uk:
               name: Ігри з циклами
             The Artist:
               name: Художник
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         dance-low:
           stages:
             Dance Party:

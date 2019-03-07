@@ -89,6 +89,10 @@ ku:
         text: رەنگێکی هەڕەمەکی
       gamelab_randomColor:
         text: رەنگێکی هەڕەمەکی
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
       gamelab_setPosition:
         options:
           POSITION:
