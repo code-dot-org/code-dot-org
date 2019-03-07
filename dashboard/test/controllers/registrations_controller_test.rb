@@ -186,7 +186,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
@@ -209,7 +209,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
