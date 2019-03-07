@@ -4,26 +4,20 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import DialogFooter from '../templates/teacherDashboard/DialogFooter';
 import Button from '../templates/Button';
 import i18n from '@cdo/locale';
+import {connect} from 'react-redux';
+import {actions} from './redux/applab';
 
-export default class RedirectDialog extends React.Component {
+class RedirectDialog extends React.Component {
   static propTypes = {
-    url: PropTypes.string.isRequired,
-    approved: PropTypes.bool,
-    isOpen: PropTypes.bool
-  };
-
-  state = {
-    isOpen: this.props.isOpen
-  };
-
-  closeDialog = () => {
-    this.setState({isOpen: false});
+    url: PropTypes.string,
+    isApproved: PropTypes.bool,
+    isOpen: PropTypes.bool,
+    handleClose: PropTypes.func
   };
 
   render() {
     let title, body, footer;
-
-    if (this.props.approved) {
+    if (this.props.isApproved) {
       title = i18n.redirectTitle();
       body = (
         <div>
@@ -41,7 +35,7 @@ export default class RedirectDialog extends React.Component {
       footer = (
         <DialogFooter>
           <Button
-            onClick={this.closeDialog}
+            onClick={this.props.handleClose}
             text={i18n.goBack()}
             color={Button.ButtonColor.gray}
           />
@@ -59,7 +53,7 @@ export default class RedirectDialog extends React.Component {
       footer = (
         <DialogFooter rightAlign>
           <Button
-            onClick={this.closeDialog}
+            onClick={this.props.handleClose}
             text={i18n.dialogOK()}
             color={Button.ButtonColor.gray}
           />
@@ -68,7 +62,7 @@ export default class RedirectDialog extends React.Component {
     }
 
     return (
-      <Dialog title={title} isOpen={this.state.isOpen}>
+      <Dialog title={title} isOpen={this.props.isOpen}>
         <Body>
           {body}
           {footer}
@@ -77,3 +71,16 @@ export default class RedirectDialog extends React.Component {
     );
   }
 }
+
+export default connect(
+  state => ({
+    isOpen: state.redirectDisplay.displaying,
+    isApproved: state.redirectDisplay.approved,
+    url: state.redirectDisplay.url
+  }),
+  dispatch => ({
+    handleClose() {
+      dispatch(actions.toggleRedirectNotice(false));
+    }
+  })
+)(RedirectDialog);

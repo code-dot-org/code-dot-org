@@ -11,6 +11,7 @@ import {reducer as maker} from '../../lib/kits/maker/redux';
 
 /** @enum {string} */
 const CHANGE_INTERFACE_MODE = 'applab/CHANGE_INTERFACE_MODE';
+const TOGGLE_REDIRECT_NOTICE = 'applab/TOGGLE_REDIRECT_NOTICE';
 
 /**
  * Change the interface mode between Design Mode and Code Mode
@@ -27,8 +28,23 @@ function changeInterfaceMode(interfaceMode) {
   };
 }
 
+/**
+ * Change the state of whether we are displaying a redirect notice or not.
+ * @param {!bool} displaying
+ * @returns {{type: string, displaying: bool}}
+ */
+function toggleRedirectNotice(displaying, approved, url) {
+  return {
+    type: TOGGLE_REDIRECT_NOTICE,
+    displaying: displaying,
+    approved: approved,
+    url: url
+  };
+}
+
 export const actions = {
-  changeInterfaceMode
+  changeInterfaceMode,
+  toggleRedirectNotice
 };
 
 // Reducers
@@ -44,10 +60,25 @@ function interfaceMode(state, action) {
   }
 }
 
+function redirectDisplay(state, action) {
+  state = state || {displaying: false, approved: false, url: ''};
+  switch (action.type) {
+    case TOGGLE_REDIRECT_NOTICE:
+      return {
+        displaying: action.displaying,
+        approved: action.approved,
+        url: action.url
+      };
+    default:
+      return state;
+  }
+}
+
 export const reducers = {
   ...jsDebuggerReducers,
   maker,
   data,
   interfaceMode,
+  redirectDisplay,
   screens
 };
