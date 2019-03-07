@@ -30,6 +30,9 @@ Feature: Using the assessments tab in the teacher dashboard
     And I wait until element "#uitest-course-dropdown" is visible
 
     # Assessments tab
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     Then I wait until element "div:contains(this survey is anonymous)" is visible
