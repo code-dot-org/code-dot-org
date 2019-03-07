@@ -58,9 +58,12 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   handleScholarshipStatusChange(enrollment, selection) {
-    let pendingScholarshipUpdates = this.state.pendingScholarshipUpdates;
-    pendingScholarshipUpdates.push(enrollment.id);
-    this.setState({pendingScholarshipUpdates});
+    this.setState({
+      pendingScholarshipUpdates: [
+        ...this.state.pendingScholarshipUpdates,
+        enrollment.id
+      ]
+    });
     $.ajax({
       method: 'POST',
       url: `/api/v1/pd/enrollment/${
@@ -68,17 +71,17 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
       }/scholarship_info?scholarship_status=${selection.value}`,
       dataType: 'json'
     }).done(data => {
-      let enrollments = this.state.enrollments;
-      const index = enrollments.findIndex(e => {
+      const index = this.state.enrollments.findIndex(e => {
         return e.id === data.id;
       });
-      enrollments.splice(index, 1, data);
-
-      let pendingScholarshipUpdates = this.state.pendingScholarshipUpdates;
-      pendingScholarshipUpdates = pendingScholarshipUpdates.filter(e => {
-        e !== enrollment.id;
+      this.setState({
+        enrollments: this.state.enrollments.splice(index, 1, data),
+        pendingScholarshipUpdates: this.state.pendingScholarshipUpdates.filter(
+          e => {
+            e !== enrollment.id;
+          }
+        )
       });
-      this.setState({enrollments, pendingScholarshipUpdates});
     });
   }
 
