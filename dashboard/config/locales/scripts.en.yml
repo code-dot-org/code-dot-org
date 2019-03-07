@@ -9911,6 +9911,8 @@ en:
               name: Crowdsourcing
             Digital Sharing:
               name: Digital Sharing
+            Running Simulations:
+              name: Running Simulations
         dance-low:
           stages:
             Dance Party:

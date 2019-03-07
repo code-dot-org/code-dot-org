@@ -1,7 +1,7 @@
 name 'courseE_aboutme_3_multi'
 title 'About Me Multiple Choice'
 
-content1 'https://images.code.org/dde27854b1b1418e4feaf7a94bfba080-image-1551910590500.png'
+content1 'https://images.code.org/a7ad0ae3e5509311e6a93ac4bd186a75-image-1551979796927.png'
 
 question 'Look at Rikki\'s code. She can\'t decide what to print next! Choose the information that is SAFE for her to share!'
 
@@ -9,3 +9,6 @@ wrong 'My phone number is...'
 wrong 'My last name is...'
 right 'My best friend\'s name is...'
 wrong 'My address is...'
+markdown <<MARKDOWN
+
+MARKDOWN
