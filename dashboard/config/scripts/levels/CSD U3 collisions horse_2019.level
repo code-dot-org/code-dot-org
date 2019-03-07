@@ -62,10 +62,21 @@
     "encrypted_examples": "zYD0J5k11KP2a4tlydOrmCxiLKWNqhGRno/9dric58Jbk5APpSADQTSnWaJu\nLRKK\n",
     "parent_level_id": 11333,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/game-lab/sprites/"
+    ],
+    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 17:12:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

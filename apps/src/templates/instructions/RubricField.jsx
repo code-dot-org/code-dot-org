@@ -5,6 +5,7 @@ import Radium from 'radium';
 import {CheckedRadioButton} from '../../lib/ui/CheckedRadioButton';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
+import i18n from '@cdo/locale';
 
 const styles = {
   detailsArea: {
@@ -46,10 +47,10 @@ const styles = {
 };
 
 const rubricLevelHeaders = {
-  exceeds: 'Exceeds',
-  meets: 'Meets',
-  approaches: 'Approaches',
-  noEvidence: 'No Evidence'
+  exceeds: i18n.rubricExceedsHeader(),
+  meets: i18n.rubricMeetsHeader(),
+  approaches: i18n.rubricApproachesHeader(),
+  noEvidence: i18n.rubricNoEvidenceHeader()
 };
 
 class RubricField extends Component {
