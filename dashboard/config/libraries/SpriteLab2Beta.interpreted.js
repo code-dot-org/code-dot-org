@@ -814,9 +814,9 @@ function runInputEvents() {
 
 function createCollisionHandler (collisionEvent) {
   return function (sprite1, sprite2) {
+    thisSprite = sprite1;
+    otherSprite = sprite2;
     if (!collisionEvent.touching || collisionEvent.keepFiring) {
-      thisSprite = sprite1;
-      otherSprite = sprite2;
       collisionEvent.event(sprite1, sprite2);
     }
   };
