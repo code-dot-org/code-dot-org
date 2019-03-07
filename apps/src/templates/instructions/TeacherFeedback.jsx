@@ -192,11 +192,17 @@ class TeacherFeedback extends Component {
       });
   };
 
-  feedbackIsUnchanged = () => {
+  latestFeedback = () => {
     const latestFeedback =
       this.state.latestFeedback.length > 0
         ? this.state.latestFeedback[0]
         : null;
+
+    return latestFeedback;
+  };
+
+  feedbackIsUnchanged = () => {
+    const latestFeedback = this.latestFeedback();
     const feedbackUnchanged =
       (latestFeedback &&
         (this.state.comment === latestFeedback.comment &&
@@ -208,10 +214,7 @@ class TeacherFeedback extends Component {
   };
 
   render() {
-    const latestFeedback =
-      this.state.latestFeedback.length > 0
-        ? this.state.latestFeedback[0]
-        : null;
+    const latestFeedback = this.latestFeedback();
     const feedbackUnchanged = this.feedbackIsUnchanged();
 
     const buttonDisabled =
