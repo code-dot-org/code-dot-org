@@ -312,11 +312,16 @@ class DeleteAccountsHelper
     # NOTE: Do not gate any deletion logic on `user.user_type`: A student
     # account may be a former teacher account, or vice-versa.
     @log.puts "Soft-deleting user"
+
+    # Cache user email here before destroying user; migrated users have their
+    # emails stored in primary_contact_info, which will be destroyed.
+    user_email = user.email
+
     user.destroy
 
     purge_teacher_feedbacks(user.id)
-    remove_census_submissions(user.email) if user.email&.present?
-    remove_email_preferences(user.email) if user.email&.present?
+    remove_census_submissions(user_email) if user_email&.present?
+    remove_email_preferences(user_email) if user_email&.present?
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
@@ -324,7 +329,7 @@ class DeleteAccountsHelper
     clean_and_destroy_pd_content(user.id)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
-    remove_poste_data(user.email) if user.email&.present?
+    remove_poste_data(user_email) if user_email&.present?
     remove_from_pardot_by_user_id(user.id)
     purge_unshared_studio_person(user)
     anonymize_user(user)
