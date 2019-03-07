@@ -11,7 +11,8 @@ import {reducer as maker} from '../../lib/kits/maker/redux';
 
 /** @enum {string} */
 const CHANGE_INTERFACE_MODE = 'applab/CHANGE_INTERFACE_MODE';
-const TOGGLE_REDIRECT_NOTICE = 'applab/TOGGLE_REDIRECT_NOTICE';
+const ADD_REDIRECT_NOTICE = 'applab/ADD_REDIRECT_NOTICE';
+const DISMISS_REDIRECT_NOTICE = 'applab/DISMISS_REDIRECT_NOTICE';
 
 /**
  * Change the interface mode between Design Mode and Code Mode
@@ -29,22 +30,33 @@ function changeInterfaceMode(interfaceMode) {
 }
 
 /**
- * Change the state of whether we are displaying a redirect notice or not.
- * @param {!bool} displaying
- * @returns {{type: string, displaying: bool}}
+ * Add a redirect notice to our stack
+ * @param {bool} approved
+ * @param {string} url
+ * @returns {{type: string, approved: bool, url: string}}
  */
-function toggleRedirectNotice(displaying, approved, url) {
+function addRedirectNotice(approved, url) {
   return {
-    type: TOGGLE_REDIRECT_NOTICE,
-    displaying: displaying,
+    type: ADD_REDIRECT_NOTICE,
     approved: approved,
     url: url
   };
 }
 
+/**
+ * Remove the first redirect notice from our stack
+ * @returns {{type: string}}
+ */
+function dismissRedirectNotice() {
+  return {
+    type: DISMISS_REDIRECT_NOTICE
+  };
+}
+
 export const actions = {
   changeInterfaceMode,
-  toggleRedirectNotice
+  addRedirectNotice,
+  dismissRedirectNotice
 };
 
 // Reducers
@@ -61,14 +73,23 @@ function interfaceMode(state, action) {
 }
 
 function redirectDisplay(state, action) {
-  state = state || {displaying: false, approved: false, url: ''};
+  state = state || [];
+
   switch (action.type) {
-    case TOGGLE_REDIRECT_NOTICE:
-      return {
-        displaying: action.displaying,
-        approved: action.approved,
-        url: action.url
-      };
+    case ADD_REDIRECT_NOTICE:
+      return [
+        {
+          displaying: action.displaying,
+          approved: action.approved,
+          url: action.url
+        }
+      ].concat(state);
+    case DISMISS_REDIRECT_NOTICE:
+      if (state.length > 0) {
+        return state.slice(1);
+      } else {
+        return state;
+      }
     default:
       return state;
   }
