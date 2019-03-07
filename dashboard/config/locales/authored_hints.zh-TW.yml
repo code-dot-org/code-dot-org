@@ -679,6 +679,104 @@ zh-TW:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
         mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+          * 確保舞者出現在螢幕上。
+
+          *此層級在 4 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+          * 選擇不同的歌曲播放。
+          * 選擇一個看起來像麋鹿的不同項目！
+          * 重新命名您的舞者。
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+          * 舞者需要在 4 小節後切換到新的動作。
+
+          *該層級在 8 個小節後結束。*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+
+          *該層級在 12 個小節後結束。*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+
+          *此層級在 10 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+
+          在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 您需要至少有兩個舞者。
+
+          *此層級在 6 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+
+          * 新增第三個舞者（或按需求盡量增加！）
+          * 讓所有舞者在歌曲的不同時間點執行不同的動作。
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 兩個舞者需要有 100 以外的尺寸。
+
+          *此層級在 6 個小節後結束。*
+        challenges: |-
+          **可選挑戰**
+
+          * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 變更至少一個舞者的色調。
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 兩個或更多的舞者屬性必須變更。
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 發揮創意即可！
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 發揮創意即可！
+
+          *此層級在 8 個小節後結束。*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 使用「按下左箭頭時」程式積木，讓機器人在您按下時進行舞蹈動作。
+
+          *此層級在 8 個小節後結束。*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
+          了嗎？如何有條件地使用它們以穿越海洋遺址？\n\n"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 真是美麗的珊瑚礁！藍色珊瑚應該要在**右**，還有紅色珊瑚應該要在**左**！
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       Dance short test 2_authored_hint:

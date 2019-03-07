@@ -1489,6 +1489,10 @@ pt:
               name: Diversão com laços for
             The Artist:
               name: O Artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Aberto ao público
         coursed-2019:
           stages:
             Relay Programming:

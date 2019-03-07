@@ -1593,6 +1593,10 @@ fi:
               name: Silmukkahupia
             The Artist:
               name: Taiteilija
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Joukkoistaminen
         coursed-2019:
           stages:
             Relay Programming:

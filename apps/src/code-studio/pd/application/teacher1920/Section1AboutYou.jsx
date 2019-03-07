@@ -17,6 +17,7 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
+import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
 import _ from 'lodash';
@@ -25,7 +26,6 @@ const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
-const REGIONAL_PARTNER_URL = '/pd/regional_partner_contact/new';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const INTERNATIONAL = 'Other country';
 const US = 'United States';
@@ -125,47 +125,11 @@ export default class Section1AboutYou extends LabeledFormComponent {
           </p>
         )}
 
-        <h3>What’s in this application and how long will it take?</h3>
         <p>
-          This application should take 10 - 15 minutes to complete. Fields
-          marked with a <span style={{color: 'red'}}>*</span> are required. Here
-          are the sections you will be asked to fill out:
+          Thanks for your interest in the Professional Learning Program! This
+          application should take 10 - 15 minutes to complete. Fields marked
+          with a <span style={{color: 'red'}}>*</span> are required.
         </p>
-        <ul>
-          <li>
-            <span style={styles.bold}>Section 1: About you</span>
-            &nbsp; (Your contact info)
-          </li>
-          <li>
-            <span style={styles.bold}>
-              Section 2: Teaching and school background
-            </span>
-            &nbsp; (Principal contact info, your subject areas, and what CS
-            courses are offered in your school)
-          </li>
-          <li>
-            <span style={styles.bold}>Section 3: Choose your program</span>
-            &nbsp; (Which program you want to join and how you plan on teaching
-            the course)
-          </li>
-          <li>
-            <span style={styles.bold}>
-              Section 4: Professional Learning Program commitments
-            </span>
-            &nbsp; (Your interest and ability to participate in the whole
-            program)
-          </li>
-          <li>
-            <span style={styles.bold}>
-              Section 5: Additional demographic information
-            </span>
-            &nbsp; (Optional: your gender identity and race)
-          </li>
-          <li>
-            <span style={styles.bold}>Section 6: Submission</span>
-            &nbsp; (Confirm and submit)
-          </li>
-        </ul>
 
         {!nominated && (
           <div>
@@ -211,11 +175,14 @@ export default class Section1AboutYou extends LabeledFormComponent {
           >
             check out our course and professional learning options.
           </a>{' '}
-          For additional questions regarding the program or application, please
-          <a href={REGIONAL_PARTNER_URL} target="_blank">
-            {' '}
-            contact your Regional Partner.
-          </a>
+          For additional questions regarding the program or application, please{' '}
+          <RegionalPartnerMiniContactPopupLink
+            sourcePageId="teacher-application-first-page"
+            notes="Please tell me more about the professional learning program!"
+          >
+            <span style={styles.linkLike}>contact your Regional Partner</span>
+          </RegionalPartnerMiniContactPopupLink>
+          .
         </p>
 
         <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>

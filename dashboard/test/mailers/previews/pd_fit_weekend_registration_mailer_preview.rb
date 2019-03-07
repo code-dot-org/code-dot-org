@@ -12,7 +12,7 @@ class Pd::FitWeekendRegistrationMailerPreview < ActionMailer::Preview
   private
 
   def build_registration(status)
-    user = build :teacher, email: 'facilitator@code.org'
+    user = build :teacher, email: 'facilitator_name@code.org'
     application = build :pd_facilitator1920_application, user: user
 
     workshop = application.find_fit_workshop(course: Pd::Workshop::COURSE_CSD, city: 'Phoenix', year: 2019) ||

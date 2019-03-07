@@ -1678,6 +1678,10 @@ et:
               name: For Loop Fun
             The Artist:
               name: Kunstnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
         dance-low:
           stages:
             Dance Party:
@@ -1696,6 +1700,8 @@ et:
               name: 'Unplugged: Binaar'
             Artist Binary:
               name: Kunstnik Binaar
+            Dance Party:
+              name: Tantsuõhtu
         coursee-2019:
           stages:
             Building a Foundation:

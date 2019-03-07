@@ -600,6 +600,15 @@ uk:
           зменшується від 7 до 5 на 1."
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: Спробуйте використати `for loop`.
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Подивись на **Морські ліхтарі** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Як їх можна використати для складання умови при переміщенні Монументом Океану?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Можна використати блок "якщо є шлях", щоб допомогти виконати поворот
+          праворуч.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Бачиш червоні та сині коралові блоки? Використай їх, як
+          ключові точки поворотів праворуч та ліворуч.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Обов'язково встановіть число для `dog_speed` на
           щось більше, ніж` cat_speed`.
@@ -1236,6 +1245,10 @@ uk:
       courseA_maze_seq_challenge1_2019_authored_hint:
         courseA_maze_seq_challenge1_a: Існує два рішення цієї загадки.
       courseA_playLab_events2_authored_hint:
+        courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
+      courseA_playLab_events2_2018_authored_hint:
+        courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
+      courseA_playLab_events2_2019_authored_hint:
         courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have

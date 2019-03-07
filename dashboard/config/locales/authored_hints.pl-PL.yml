@@ -909,6 +909,106 @@ pl:
         mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
         mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
         mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+
+          * Ten poziom kończy się po 4 taktach.
+        challenges: |-
+          **Dodatkowe wyzwania**
+          * Wybierz inny utwór do odtwarzania.
+          * Zmień imię swojego tancerza.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+
+          * Ten poziom kończy się po 11 taktach.
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+
+          * Ten poziom kończy się po 9 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz mieć co najmniej dwóch tancerzy.
+
+          * Ten poziom kończy się po 5 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+
+          * Ten poziom kończy się po 5 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Zmień odcień przynajmniej jednego tancerza.
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+
+          * Ten poziom kończy się po 7 taktach.
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Możesz użyć bloku "jeśli jest ścieżka", aby wykonać właściwy skręt.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest **
+          właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa`
           większą od `prędkość_kota`.

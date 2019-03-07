@@ -24,20 +24,21 @@ pt-BR:
       Comment: Comentário
       'Variables ': 'Variáveis '
       everythingelse: todoresto
+      World: Mundo
+      Sprites: Sprite
+      Location: Localização
+      Behaviors: Comportamentos
       numbers: números
       Numbers: Números
       Input: Entrada
       Default: Padrão
-      World: Mundo
-      Sprites: Sprite
-      Behaviors: Comportamentos
+      Dancers: Bailarinos
+      Groups: Grupos
       Advanced: Avançado
       Start: Começar
       Locations: Localizações
       Music: Música
       Dancing: Dança
-      Dancers: Bailarinos
-      Groups: Grupos
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Fazer Sprite

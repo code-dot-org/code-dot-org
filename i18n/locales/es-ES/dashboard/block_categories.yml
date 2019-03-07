@@ -24,18 +24,19 @@ es:
       Comment: Comentario
       'Variables ': 'Variables'
       everythingelse: todolodemás
+      World: Mundo
+      Location: Ubicación
+      Behaviors: Comportamientos
       numbers: Numeros
       Numbers: Numeros
       Default: Por defecto
-      World: Mundo
-      Behaviors: Comportamientos
+      Dancers: Bailarines
+      Groups: Grupos
       Advanced: Avanzado
       Start: Inicio
       Locations: Ubicaciones
       Music: Musica
       Dancing: Bailando
-      Dancers: Bailarines
-      Groups: Grupos
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Hacer sprite

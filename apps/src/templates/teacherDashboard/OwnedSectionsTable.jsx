@@ -9,7 +9,7 @@ import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from './shapes';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {pegasus} from '../../lib/util/urlHelpers';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '../../utils';
@@ -57,9 +57,8 @@ const styles = {
 
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
-  const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
   return (
-    <a style={tableLayoutStyles.link} href={pegasusUrl}>
+    <a style={tableLayoutStyles.link} href={teacherDashboardUrl(rowData.id)}>
       {rowData.name}
     </a>
   );
@@ -107,9 +106,7 @@ export const gradeFormatter = function(grade, {rowData}) {
 
 export const loginInfoFormatter = function(loginType, {rowData}) {
   let sectionCode = '';
-  let pegasusUrl = pegasus(
-    '/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards'
-  );
+
   // For managed logins, just show the provider name rather than the login code.
   if (rowData.loginType === OAuthSectionTypes.clever) {
     sectionCode = i18n.loginTypeClever();
@@ -119,25 +116,26 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
     sectionCode = rowData.code;
   }
   return (
-    <a style={tableLayoutStyles.link} href={pegasusUrl}>
+    <a
+      style={tableLayoutStyles.link}
+      href={teacherDashboardUrl(rowData.id, '/print_signin_cards')}
+    >
       {sectionCode}
     </a>
   );
 };
 
 export const studentsFormatter = function(studentCount, {rowData}) {
-  const pegasusUrl = pegasus(
-    '/teacher-dashboard#/sections/' + rowData.id + '/manage'
-  );
+  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
         text={i18n.addStudents()}
-        href={pegasusUrl}
+        href={manageStudentsUrl}
         color={Button.ButtonColor.gray}
       />
     ) : (
-      <a style={tableLayoutStyles.link} href={pegasusUrl}>
+      <a style={tableLayoutStyles.link} href={manageStudentsUrl}>
         {rowData.studentCount}
       </a>
     );

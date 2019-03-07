@@ -3,7 +3,7 @@ pt-BR:
   data:
     script:
       category:
-        csd_2018_category_name: Descobertas da Ciência da Computação (de 18 a 19 anos)
+        csd_2018_category_name: Descobertas da Ciência da Computação (2018-2019)
         csf_category_name: Conceitos básicos da CC
         csf_2018_category_name: Fundamentos da Ciência da Computação (2018)
         csf_international_category_name: Fundamentos da Ciencia da Computação International
@@ -11,7 +11,7 @@ pt-BR:
         csp_category_name: Princípios da CC - 15-16
         csp_2018_category_name: Princípios de Ciência da Computação (18-19)
         cspexams_category_name: Teste prático dos princípios da CC
-        csp17_category_name: Princípios da CC - 16-17
+        csp17_category_name: Princípios da CC (2017-2018)
         full_course_category_name: Cursos Completos
         hoc_category_name: Hora do Código
         math_category_name: Matemática
@@ -369,7 +369,6 @@ pt-BR:
         K5PD:
           title: Desenvolvimento profissional para o Ensino Fundamental
           description: Desenvolvimento profissional para cursos do Ensino Fundamental
-          description_short: Desenvolvimento profissional para cursos do Ensino Fundamental
           stages:
             Computer Science Pedagogy:
               name: Pedagogia em ciência da computação
@@ -1964,6 +1963,8 @@ pt-BR:
               name: A Necessidade de DNS
             Unit 1 Chapter 1 Assessment:
               name: Unidade 1 Capítulo 1 Avaliação
+            Unit 1 Chapter 2 Assessment:
+              name: Unidade 1 Capítulo 2 Avaliação
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp2-2017:
@@ -1994,6 +1995,10 @@ pt-BR:
               name: Desenvolvendo Visualização de Dados
             Text Compression:
               name: Compressão de texto
+            Unit 2 Chapter 1 Assessment:
+              name: Unidade 2 Capítulo 1 Avaliação
+            Unit 2 Chapter 2 Assessment:
+              name: Unidade 2 Capítulo 2 Avaliação
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp3-2017:
@@ -2098,6 +2103,10 @@ pt-BR:
               name: Lições Editadas ACIMA DA LINHA
             Make Your Own Multi-Screen App:
               name: Faça seu próprio aplicativo Multi-Screen
+            Unit 5 Assessment 1:
+              name: Unidade 5 Avaliação 1
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
             Unit 3 Chapter 1 Assessment 3:
               name: Unidade 3 Capítulo 1 Avaliação 3
             If statements:
@@ -2108,6 +2117,10 @@ pt-BR:
               name: Unidade 3 - Avaliação 4
             Possibly use later:
               name: Possivelmente usar mais tarde
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
             Multi-Screen Apps:
               name: Aplicativos Multiplas Telas
             Post-Course Survey:
@@ -2238,6 +2251,8 @@ pt-BR:
               name: Unidade 1 - Codificação de Números no Mundo Real
             Unit 1 - Sending Bits in the Real World:
               name: Unidade 1 - Enviando Bits no Mundo Real
+            Unit 1 - How Routers Learn:
+              name: Unidade 1 - Como Roteadores Aprendem
             Unit 4 - Hard Problems - The Traveling Salesperson Problem:
               name: Unidade 4 - Problemas Difíceis - O Problema do Vendedor Ambulante
             Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
@@ -2257,6 +2272,8 @@ pt-BR:
               name: Modo de Design
             Prototype Testing:
               name: Protótipo de Teste
+            App Testing:
+              name: Teste de App
             Improving and Iterating:
               name: Improvizando e Interagindo
         CSDU2-Draft:
@@ -2921,7 +2938,7 @@ pt-BR:
             Conditionals:
               name: Condições
             'Real Life Algorithms: Dice Race':
-              name: 'Algoritmos da via real: jogo de dados'
+              name: 'Algoritmos da vida real: Corrida de dados'
         csd6-2017:
           stages:
             Lists:
@@ -3173,7 +3190,7 @@ pt-BR:
           assignment_family_title: Curso B
           description_audience: 'Idades: 5-8'
           description_short: Uma introdução à ciência da computação para pré-leitores.
-            (Similar ao curso A, mas com mais variedade para os alunos mais velhos.)
+            (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
             No final deste curso, você irá irá seu próprio jogo ou história, que poderá
             ser compartilhada.
@@ -3191,8 +3208,8 @@ pt-BR:
               name: Laços aninhados
           title: Curso D
           assignment_family_title: Curso D
-          description_short: Rapidamente cobrem conceitos do curso C e em seguida,
-            ir mais longe com algoritmos, loops aninhados, condicionais e muito mais.
+          description_short: Abrange rapidamente conceitos do Curso C e, em seguida,
+            vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -3225,7 +3242,7 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
           title: Curso F
           assignment_family_title: Curso F
-          description_short: Aprenda todos os conceitos fundamentais da Ciência da
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
         csdnovice:
           stages:
@@ -3829,6 +3846,8 @@ pt-BR:
               name: Introdução
             'Functions: Songwriting':
               name: Composição
+            Functions in Artist:
+              name: Funções com Artista
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -3842,7 +3861,7 @@ pt-BR:
         coursef-2018:
           title: Curso F (2018)
           assignment_family_title: Curso F
-          description_short: Aprenda todos os conceitos fundamentais da Ciência da
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
           stages:
             'Programming: My Robotic Friends':
@@ -3889,6 +3908,8 @@ pt-BR:
               name: A Necessidade de DNS
             Practice PT - The Internet and Society:
               name: Prática PT - A Internet e a Sociedade
+            Unit 1 Chapter 2 Assessment:
+              name: Unidade 1 Capítulo 2 Avaliação
         csd1-2018:
           stages:
             Processing:
@@ -3915,6 +3936,8 @@ pt-BR:
               name: Codificação de imagens coloridas
             Lossy Compression and File Formats:
               name: Compressão com perdas e formatos de arquivo
+            Unit 2 Chapter 1 Assessment:
+              name: Unidade 2 Capítulo 1 Avaliação
             Finding Trends with Visualizations:
               name: Encontrar tendências com visualizações
             Check Your Assumptions:
@@ -3929,6 +3952,10 @@ pt-BR:
               name: Limpeza de dados
             Creating Summary Tables:
               name: Criando tabelas de resumo
+            Unit 2 Chapter 2 Assessment:
+              name: Unidade 2 Capítulo 2 Avaliação
+            Unit 2 Assessment:
+              name: Unidade 2 Avaliação
         csp3-2018:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -3975,24 +4002,34 @@ pt-BR:
               name: Encontrar tendências com visualizações
             Check Your Assumptions:
               name: Verifique suas suposições
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
         csp5-2018:
           stages:
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
             Controlling Memory with Variables:
               name: Controlando a memória com variáveis
+            Unit 5 Assessment 1:
+              name: Unidade 5 Avaliação 1
             User Input and Strings:
               name: Entradas de Usuário e Strings
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
             While Loops:
               name: Laços enquanto
             Loops and Simulations:
               name: Laços e Simulações
             Introduction to Arrays:
               name: Introdução a Arrays
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
             Processing Arrays:
               name: Processando Listas
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
             'Practice PT: Create':
               name: Tarefa para prática - Crie
         csppostap-2018:
@@ -4031,6 +4068,8 @@ pt-BR:
               name: Limpeza de dados
             Creating Summary Tables:
               name: Criando tabelas de resumo
+            Unit 2 Chapter 2 Assessment:
+              name: Unidade 2 Capítulo 2 Avaliação
         csd-novice-18:
           stages:
             Welcome:
@@ -4185,7 +4224,7 @@ pt-BR:
           title: Continue dançando
           description: Vá além da primeira hora com ideias de projeto estendido.
         coursef-2019:
-          description_short: Aprenda todos os conceitos fundamentais da Ciência da
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
           stages:
             'Programming: My Robotic Friends':
@@ -4202,6 +4241,14 @@ pt-BR:
               name: Diversão com laços for
             The Artist:
               name: O Artista
+            Copyright and Creativity:
+              name: Copyright e Direitos Autorais
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Sharing:
+              name: Compartilhamento Digital
         dance-low:
           stages:
             Dance Party:
@@ -4220,6 +4267,8 @@ pt-BR:
               name: 'Offline: binário'
             Artist Binary:
               name: 'Artista: binário'
+            Dance Party:
+              name: Festa dançante
         coursee-2019:
           stages:
             'Programming: My Robotic Friends':
@@ -4240,6 +4289,8 @@ pt-BR:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Compartilhamento Digital
         express-2019:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
             No final deste curso, você irá irá seu próprio jogo ou história, que poderá
@@ -4294,6 +4345,8 @@ pt-BR:
               name: 'Programando: Meus amigos robôs'
             'Loops: My Loopy Robotic Friends':
               name: 'Repetições: Meus amigos robôs esquisitos'
+            Graphing Data:
+              name: Gerando Gráficos a partir de dados
         gamelab:
           title: Laboratório de Jogos
         coursea-2019:
@@ -4500,6 +4553,8 @@ pt-BR:
               name: A Necessidade de DNS
             Practice PT - The Internet and Society:
               name: Prática PT - A Internet e a Sociedade
+            Unit 1 Chapter 2 Assessment:
+              name: Unidade 1 Capítulo 2 Avaliação
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -4510,6 +4565,8 @@ pt-BR:
               name: Codificações de imagem em preto e branco
             Encoding Color Images:
               name: Codificação de imagens coloridas
+            Unit 2 Assessment:
+              name: Unidade 2 Avaliação
         csp3-2019:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -4552,24 +4609,34 @@ pt-BR:
               name: O custo do livre
             Simple Encryption:
               name: Criptografia simples
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
         csp5-2019:
           stages:
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
             Controlling Memory with Variables:
               name: Controlando a memória com variáveis
+            Unit 5 Assessment 1:
+              name: Unidade 5 Avaliação 1
             User Input and Strings:
               name: Entradas de Usuário e Strings
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
             While Loops:
               name: Laços enquanto
             Loops and Simulations:
               name: Laços e Simulações
             Introduction to Arrays:
               name: Introdução a Arrays
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
             Processing Arrays:
               name: Processando Listas
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
         csppostap-2019:
           description_short: Aprenda a coletar e usar dados em aplicativos do App
             Lab.

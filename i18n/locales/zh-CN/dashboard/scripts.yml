@@ -350,6 +350,8 @@ zh-CN:
               name: 离线课程
             Writing computer programs:
               name: 编写计算机程序
+            new stage:
+              name: 新的阶段
         netsim:
           title: 互联网模拟器
           stages:
@@ -8453,6 +8455,14 @@ zh-CN:
               name: 新的阶段
             The Artist:
               name: 小艺术家
+            Copyright and Creativity:
+              name: 版权和创造力
+            Internet:
+              name: 互联网
+            Crowdsourcing:
+              name: 众包
+            Digital Sharing:
+              name: 数字共享
         dance-low:
           stages:
             Dance Party:
@@ -8504,6 +8514,8 @@ zh-CN:
               name: 小艺术家：二进制
             Build a Star Wars Game:
               name: 建立一个星球大战游戏!
+            Dance Party:
+              name: 舞蹈派对
         coursee-2019:
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
           description_short: 回顾课程 C 和 D 中的概念，然后继续学习函数。
@@ -8600,6 +8612,8 @@ zh-CN:
               name: 冰雪奇缘里的嵌套循环
             Conditionals in Minecraft:
               name: '《我的世界》中的条件'
+            Digital Sharing:
+              name: 数字共享
         express-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
@@ -9463,3 +9477,7 @@ zh-CN:
               name: 示例应用程序
             Final Project:
               name: 最终项目
+        csp1-pilot:
+          stages:
+            new stage:
+              name: 新的阶段

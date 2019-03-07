@@ -609,6 +609,7 @@ sk-SK:
     Mavericks
   watch_inspirational_videos: Skôr ako začneš, pozri si jedno z týchto inšpiratívnych
     videí
+  video_title_cs_is_everything: Informatika mení svet okolo nás
   video_title_inspire_girl: Inšpiruj dievča
   video_title_cs_intro: Úvod do Sveta Technológií
   video_title_schools_dont_teach: Čo väčšina škôl nevyučuje
@@ -1156,7 +1157,7 @@ sk-SK:
   khanpl_name: Úvod do JavaScriptu
   tynker_name: Vytvor si vlastnú hru
   scratch_name: Buď kreatívny s programovaním
-  thinkersmith_name: Moji robotickí priatelia
+  thinkersmith_name: Moji robotickí kamaráti
   condcards_name: Podmienky s kartami
   codehs_name: Nauč sa programovať so psom Karlom
   codemonkey_name: CodeMonkey
@@ -1479,7 +1480,7 @@ sk-SK:
   courseb_shortdescription_congrats: Predstavenie informatiky pre prvákov. (Podobný
     ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
   coursec_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné
-    umenie, príbehy a hry.
+    obrázky, príbehy a hry.
   coursed_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj
     s algoritmami, vnorenými cyklami, podmienkami a viac.
   coursee_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C & D a potom
@@ -1490,7 +1491,7 @@ sk-SK:
   courseb-2017_shortdescription_congrats: Predstavenie informatiky pre prvákov. (Podobný
     ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
   coursec-2017_shortdescription_congrats: Nauč sa základy informatiky a vytvor si
-    vlastné umenie, príbehy a hry.
+    vlastné obrázky, príbehy a hry.
   coursed-2017_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj
     s algoritmami, vnorenými cyklami, podmienkami a viac.
   coursee-2017_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C &
@@ -1501,7 +1502,7 @@ sk-SK:
   courseb-2018_shortdescription_congrats: Predstavenie informatiky pre prvákov. (Podobný
     ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
   coursec-2018_shortdescription_congrats: Nauč sa základy informatiky a vytvor si
-    vlastné umenie, príbehy a hry.
+    vlastné obrázky, príbehy a hry.
   coursed-2018_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj
     s algoritmami, vnorenými cyklami, podmienkami a viac.
   coursee-2018_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C &
@@ -1558,8 +1559,8 @@ sk-SK:
     prídu na to ako sa navzájom navigovať pri plnení špecifických úloh bez toho, aby
     o nich najskôr diskutovali. Táto lekcia naučí deti prepojenie medzi symbolom a
     akciou, rovnako ako neoceniteľnú schopnosť odhaľovania chýb (debugging). Aktivita
-    "Moji robotickí priatelia" sa najlepšie využije v skupine a obsahuje pracovný
-    zošit pre učiteľa.
+    "Moji robotickí kamaráti" sa najlepšie využije v skupine a obsahuje pracovný zošit
+    pre učiteľa.
   condcards_longdescription: Použi balíček kariet a nauč sa o algoritmoch a podmienkových
     príkazoch v tejto aktivite bez počítača (unplugged). Žiaci pracujú v tímoch a
     potrebujú jeden balíček kariet per tím.
@@ -2056,6 +2057,7 @@ sk-SK:
   hoc2018_mc_video_5min: 5 min
   hoc2018_mc_video_title_steph_curry: Hodina Kódu so Steph Curry
   hoc2018_mc_video_title_sports: Premôž sa. Každý sa dokáže naučiť.
+  hoc2018_mc_video_title_cs_is_everything: Informatika mení svet okolo nás
   hoc2018_mc_video_title_inspire_girl: Inšpiruj dievča
   hoc2018_mc_video_title_cs_intro: Úvod do Sveta Technológií
   hoc2018_mc_video_title_schools_dont_teach: Čo väčšina škôl nevyučuje

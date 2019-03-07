@@ -335,6 +335,7 @@ ro:
             The Design Recipe:
               name: Rețeta pentru design
         K5PD:
+          description_short: '[șir gol]'
           description_audience: '[șir gol]'
           stages:
             Computer Science Pedagogy:
@@ -3640,6 +3641,10 @@ ro:
               description_teacher: '[șir gol]'
             The Artist:
               name: Artistul
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         dance-low:
           description_audience: '[șir gol]'
           description: '[șir gol]'
@@ -4556,3 +4561,7 @@ ro:
             Final Project:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+        csp1-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

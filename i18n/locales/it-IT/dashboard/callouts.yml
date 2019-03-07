@@ -149,6 +149,17 @@ it:
         Course_4_Playlab_For_Loops_4b_2: In questo esercizio puoi solo cambiare il "passo" dei cicli `ripeti con counter`.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Questo blocco ti permette di personalizzare il colore come preferisci! Osserva cosa accade modificando i numeri...
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Aggiungi questo blocco al tuo programma!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Aggiungi questo blocco al tuo programma!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Aggiungi questo blocco al tuo programma!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Aggiungi qui il nuovo ballerino
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nuovo blocco!
+        dance_callout_11_b: Nuovo blocco!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Usa le frecce per muovere il personaggio
       CourseF_PlayLab_vars10_callout:

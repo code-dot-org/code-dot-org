@@ -150,7 +150,31 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
   end
 
-  test 'confirm_join_session upgrades student account if emails match' do
+  test 'confirm_join_session upgrades migrated student account if emails match' do
+    @workshop.start!
+    email = 'accidental_student@example.net'
+    student = create :student, email: email
+    student.migrate_to_multi_auth
+    student.reload
+
+    sign_in student
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session, params: {
+        session_code: @workshop.sessions.first.code,
+        pd_enrollment: enrollment_test_params(student).merge(
+          email: email,
+          email_confirmation: email
+        ),
+        school_info: school_info_params
+      }
+    end
+
+    assert student.reload.teacher?
+    assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
+  end
+
+  test 'confirm_join_session upgrades unmigrated student account if emails match' do
     @workshop.start!
     email = 'accidental_student@example.net'
     student = create :student, email: email

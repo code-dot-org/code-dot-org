@@ -2,7 +2,7 @@ es-MX:
   data:
     unplugged:
       Unplug1:
-        title: Introducción al Arte de las Ciencias de la Computación
+        title: Introducción a Ciencias de la Computación
         desc: Esta clase introducirá el concepto de “Ciencias de la computación” y explicará qué hace un “informático”. Los estudiantes tendrán la oportunidad de asumir el rol de un informático. Al finalizar la actividad, cada estudiante recibirá un recordatorio sobre qué aprendió durante la clase. Tal vez crea que no es conveniente enseñar a los niños más pequeños el complejo vocabulario asociado a estas clases, pero si se presenta de manera lúdica y divertida, ahora es mucho más productivo que esperar otras oportunidades.
         pdfs:
           - unplug1-es-ES
@@ -340,7 +340,7 @@ es-MX:
         title: Imágenes binarias
         desc: Aunque muchas personas piensan que el binario es estrictamente ceros y unos, nuestros cursos anteriores enseñaron a los alumnos que la información puede ser representada en una variedad de opciones binarias. Esta clase lleva ese concepto un paso más allá que ilustra cómo una computadora también puede almacenar información aún más compleja (por ejemplo, imágenes y colores) en binario.
       courseE_unplugged_privateInformation_2019:
-        title: 'traducción pendiente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        title: Información privada y personal
         desc: 'traducción pendiente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
       SongwritingParameters_2019:
         title: 'traducción pendiente: en-US.data.unplugged.SongwritingParameters_2018.title'
@@ -391,3 +391,6 @@ es-MX:
       courseB_unplugged_CnC_2019:
         title: Es estupendo crear y jugar limpio
         desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender el proceso creativo de compartir e de inspiración. Esto conlleva la promoción de la expresión creativas y la necesidad de ser justo con el trabajo creativo.
+      GraphingData_2019:
+        title: Datos de gráfico
+        desc: " En esta lección, los estudiantes recopilarán datos de un proyecto de Laboratorio de Juegos o escenario real del mundo y lo utilizarán para hacer predicciones."

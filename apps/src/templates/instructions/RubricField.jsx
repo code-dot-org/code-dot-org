@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
+import {CheckedRadioButton} from '../../lib/ui/CheckedRadioButton';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 
 const styles = {
   detailsArea: {
@@ -19,7 +22,7 @@ const styles = {
     flexDirection: 'row',
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
+      border: `solid 1px ${color.light_cyan}`,
       borderRadius: 10
     }
   },
@@ -31,9 +34,14 @@ const styles = {
     borderRadius: 10,
     padding: '4px 10px',
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
+      border: `solid 1px ${color.light_cyan}`,
       borderRadius: 10
     }
+  },
+  tooltip: {
+    maxWidth: 200,
+    lineHeight: '20px',
+    whiteSpace: 'normal'
   }
 };
 
@@ -54,35 +62,44 @@ class RubricField extends Component {
     currentlyChecked: PropTypes.bool
   };
 
-  handleRubricChange = event => {
-    this.props.onChange(event.target.value);
-  };
-
   render() {
     const performanceHeaderStyle = this.props.currentlyChecked
       ? styles.performanceLevelHeaderSelected
       : styles.performanceLevelHeader;
+
+    const tooltipId = _.uniqueId();
     return (
-      <div style={performanceHeaderStyle}>
-        {this.props.showFeedbackInputAreas && (
-          <input
-            type={'checkbox'}
-            //Concatenate because injecting the string seems to result in all of
-            //the input elements having the name id
-            id={'rubric-input-' + this.props.rubricLevel}
-            name="rubric"
-            value={this.props.rubricLevel}
-            checked={this.props.currentlyChecked}
-            onChange={this.handleRubricChange}
-            disabled={this.props.disabledMode}
-          />
-        )}
-        <details style={styles.detailsArea}>
-          <summary style={styles.rubricHeader}>
-            {rubricLevelHeaders[this.props.rubricLevel]}
-          </summary>
-          <p>{this.props.rubricValue}</p>
-        </details>
+      <div>
+        <div
+          style={performanceHeaderStyle}
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+        >
+          {this.props.showFeedbackInputAreas && (
+            <CheckedRadioButton
+              id={`rubric-input-${this.props.rubricLevel}`}
+              value={this.props.rubricLevel}
+              checked={this.props.currentlyChecked}
+              onRadioButtonChange={this.props.onChange}
+              disabledMode={this.props.disabledMode}
+            />
+          )}
+          <details style={styles.detailsArea}>
+            <summary style={styles.rubricHeader}>
+              {rubricLevelHeaders[this.props.rubricLevel]}
+            </summary>
+            <p>{this.props.rubricValue}</p>
+          </details>
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="div"
+          effect="solid"
+        >
+          <div style={styles.tooltip}>{this.props.rubricValue}</div>
+        </ReactTooltip>
       </div>
     );
   }

@@ -1741,6 +1741,10 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             The Artist:
               name: Der Künstler
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1757,6 +1761,8 @@ de:
               name: 'Offline: Binär'
             Artist Binary:
               name: Künstler Binär
+            Dance Party:
+              name: Tanzparty
         coursee-2019:
           stages:
             Building a Foundation:
