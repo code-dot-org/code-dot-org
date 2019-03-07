@@ -30,8 +30,8 @@ class SmsController < ApplicationController
       body: "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
     )
     head :ok
-  rescue Twilio::REST::RequestError => e
-    if e.message == "The message From/To pair violates a blacklist rule."
+  rescue Twilio::REST::RestError => e
+    if e.message =~ /The message From\/To pair violates a blacklist rule./
       # recipient unsubscribed from twilio, pretend it succeeded
       head :ok
     elsif e.message =~ /The \'To\' number .* is not a valid phone number\./
