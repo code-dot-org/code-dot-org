@@ -200,22 +200,7 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        taught_in_past: [
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'CS Discoveries',
-          'CS Principles (intro or AP-level)',
-          'AP CS A',
-          'Beauty and Joy of Computing',
-          'Code HS',
-          'Edhesive',
-          'Exploring Computer Science',
-          'Mobile CSP',
-          'NMSI',
-          'Project Lead the Way',
-          'Robotics',
-          'ScratchEd',
+        taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
           TEXT_FIELDS[:other_please_list],
           "I don't have experience teaching any of these courses"
         ],
